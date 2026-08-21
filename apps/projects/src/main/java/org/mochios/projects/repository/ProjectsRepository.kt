@@ -104,10 +104,8 @@ class ProjectsRepository @Inject constructor(
         api.probe(url).unwrap().project
 
     /**
-     * Subscribes to [project], optionally hinting its home [server].
-     *
-     * @return the id to route to: the fingerprint the server reports, falling
-     *   back to its full id, then to [project] when it names neither.
+     * Subscribes to [project]; returns the id to route to, preferring the
+     * server's fingerprint over what was asked for.
      */
     suspend fun subscribe(project: String, server: String? = null): String {
         val response = api.subscribe(SubscribeRequest(project = project, server = server)).unwrap()
@@ -382,13 +380,8 @@ class ProjectsRepository @Inject constructor(
         api.warmExport(projectId).unwrap()
 
     /**
-     * Downloads the project's backup — objects, links and attachments, zipped
-     * by the server — straight into [destination].
-     *
-     * Streamed rather than returned, so a big export never has to fit in
-     * memory on its way to the file.
-     *
-     * @return true when the whole zip reached the file.
+     * Streams the server-built backup zip into [destination]; returns true when
+     * all of it arrived.
      */
     suspend fun downloadExport(projectId: String, destination: Uri): Boolean {
         val body = api.exportData(projectId).unwrapRaw()

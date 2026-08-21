@@ -71,16 +71,10 @@ data class ObjectListResponse(
     val watched: List<String> = emptyList(),
 )
 /**
- * The single-object endpoint's payload. The object carries only its own
- * columns — class, parent, timestamps — while its field values ride alongside
- * as a sibling map, so the two are stitched back together on the way out.
- *
- * Deserialising this envelope straight into a [CrmObject] is what left the
- * detail sheet blank: nothing matched, so the object came back on its defaults
- * with no class, and a class with no fields renders no properties.
- *
- * The payload also carries `incoming`, `outgoing`, `watching` and
- * `comment_count`; the sheet fetches those through their own endpoints.
+ * `-/object` payload: the object's own columns, with its field values as a
+ * sibling map the repository stitches back in - deserialising this straight
+ * into a [CrmObject] matches nothing. `incoming`, `outgoing`, `watching` and
+ * `comment_count` also ride here but are fetched separately.
  */
 data class ObjectResponse(
     val `object`: CrmObject = CrmObject(),
@@ -133,12 +127,8 @@ data class SetValueRequest(val value: String)
 data class SubscribeRequest(val crm: String, val server: String? = null)
 
 /**
- * What `-/subscribe` names as the CRM it actually joined. The directory hit the
- * user tapped can carry a full entity id where the app routes by fingerprint,
- * so prefer what the server reports over what was asked for.
- *
- * @property fingerprint fingerprint of the CRM joined; the id to route to.
- * @property id full entity id, when the server sends one.
+ * What `-/subscribe` joined. Route by [fingerprint] rather than the id asked
+ * for: a directory hit can carry a full entity id.
  */
 data class SubscribeResponse(
 

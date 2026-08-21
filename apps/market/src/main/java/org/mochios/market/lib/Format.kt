@@ -15,24 +15,13 @@ import org.mochios.market.model.Currency
 import java.util.Locale
 
 /**
- * Market-specific formatting helpers.
- *
- * Money/fingerprint helpers live in `org.mochios.android.format.MoneyFormat`
- * in the shared lib module — see the re-exports below for thin
- * [Currency]-enum bridges that keep existing call sites working unchanged.
- * Location parsing (Gson-driven, market-only payload shape) stays here.
- *
- * Mirrors `apps/market/web/src/lib/format.ts`.
+ * Market formatting helpers; mirrors `apps/market/web/src/lib/format.ts`. Money
+ * helpers bridge to the shared lib `MoneyFormat`.
  */
 
 /** Decimal places for a given currency. Matches CURRENCIES_DATA on the web. */
 fun currencyDecimals(currency: Currency): Int = libCurrencyDecimals(currency.name)
 
-/**
- * Format a minor-unit amount as a localised currency string ("£12.34" /
- * "¥1234"). Bridges the market [Currency] enum to the lib helper, which
- * takes a free-form ISO 4217 string.
- */
 fun formatPrice(
     amount: Long,
     currency: Currency,
@@ -51,21 +40,15 @@ fun formatFingerprint(id: String): String =
     org.mochios.android.format.formatFingerprint(id)
 
 /**
- * Convert an aggregate seller rating to a 0–5 star value.
- *
- * The server stores denormalised seller ratings as integer hundredths
- * (`500` = 5.00, `233` = 2.33), so `Listing.seller_rating`,
- * `Account.rating`, and `AccountSummary.rating` must be divided by 100
- * before feeding `RatingStars`. Individual `Review.rating` values are
- * already on the 0–5 scale and need no scaling.
+ * Aggregate seller ratings (`Listing.seller_rating`, `Account.rating`,
+ * `AccountSummary.rating`) arrive as integer hundredths (`500` = 5.00);
+ * individual `Review.rating` is already 0-5.
  */
 fun ratingStars(hundredths: Double): Float = (hundredths / 100.0).toFloat()
 
 /**
- * Parsed location payload. The market server stores `location` as a JSON
- * blob with at minimum `name`, optionally `country` / `region` /
- * `lat` / `lon`. When the value isn't valid JSON we synthesise a
- * [ParsedLocation] with the raw string as `name`.
+ * The server's `location` JSON blob: `name` at minimum, optionally `country` /
+ * `region` / `lat` / `lon`.
  */
 data class ParsedLocation(
     val name: String = "",
@@ -76,11 +59,6 @@ data class ParsedLocation(
     val category: String = "",
 )
 
-/**
- * Best-effort parse of a location JSON blob. Returns `null` when the input
- * is blank; returns a synthesised wrapper around the raw string when the
- * input is non-empty but not valid JSON (matches the web fallback).
- */
 fun parseLocation(json: String): ParsedLocation? {
     if (json.isBlank()) return null
     return try {
@@ -98,13 +76,6 @@ fun parseLocation(json: String): ParsedLocation? {
     }
 }
 
-/**
- * Display string for a parsed location:
- *  - `"City, Country"` when both are set;
- *  - just `name` when only that's populated;
- *  - country alone when name is empty but country is set.
- * Returns the empty string for `null`.
- */
 fun locationName(parsed: ParsedLocation?): String {
     if (parsed == null) return ""
     val name = parsed.name.trim()
@@ -118,11 +89,6 @@ fun locationName(parsed: ParsedLocation?): String {
     }
 }
 
-/**
- * Convert a [ParsedLocation] to the shared [PlaceData] shape used by
- * `LocationMapView`. Returns `null` when the parsed location has no
- * lat/lon to anchor a pin on.
- */
 fun ParsedLocation.toPlaceData(): PlaceData? {
     if (lat == 0.0 && lon == 0.0) return null
     return PlaceData(

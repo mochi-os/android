@@ -8,14 +8,9 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A market listing.
- *
- * Mirrors `Listing` in `apps/market/web/src/types/listings.ts`. Money values
- * are minor units (pence/cents); `tags` / `location` arrive as JSON strings.
- *
- * Optional flat seller fields (`seller_name`, `seller_rating`, …) only appear
- * on search/list responses and are absent on the canonical create/update
- * payload — keep them nullable so Gson deserialises both shapes.
+ * Mirrors `Listing` in `apps/market/web/src/types/listings.ts`. Money in minor
+ * units; `tags` / `location` are JSON strings; the `seller_*` fields appear
+ * only on search/list responses.
  */
 data class Listing(
     val id: String = "",
@@ -52,10 +47,8 @@ data class Listing(
 )
 
 /**
- * Listing photo returned by `photos/list` / embedded in listings.
- *
- * Mirrors `Photo` in `apps/market/web/src/types/listings.ts`. `id` is the
- * comptroller-issued uid (string), not a numeric row id.
+ * Mirrors `Photo` in web `types/listings.ts`; `id` is a comptroller uid, not a
+ * row number.
  */
 data class Photo(
     val id: String = "",
@@ -69,11 +62,8 @@ data class Photo(
 )
 
 /**
- * A digital asset attached to a listing.
- *
- * Mirrors `Asset` in `apps/market/web/src/types/listings.ts`. `hosting` is
- * either `"mochi"` (file streamed via comptroller) or `"external"` (reference
- * URL stored in the asset row).
+ * Mirrors `Asset` in web `types/listings.ts`; `hosting` is `"mochi"` (streamed
+ * via the comptroller) or `"external"`.
  */
 data class Asset(
     val id: String = "",
@@ -86,10 +76,7 @@ data class Asset(
 )
 
 /**
- * Per-region shipping option configured by the seller for a physical listing.
- *
- * Mirrors `ShippingOption` in `apps/market/web/src/types/listings.ts`. `days`
- * is a free-text estimate (e.g. "3-5 working days"), not a parsed number.
+ * Mirrors `ShippingOption` in web `types/listings.ts`; `days` is free text.
  */
 data class ShippingOption(
     val id: String = "",
@@ -102,10 +89,8 @@ data class ShippingOption(
 )
 
 /**
- * Request DTO posted to `shipping/set`. Mirrors the inline `ShippingOptionInput`
- * type in `apps/market/web/src/api/shipping.ts`. Fields are stringly typed to
- * match what the Starlark handler reads via `a.input(...)`; the comptroller
- * coerces them to numbers before persisting.
+ * Request body for `shipping/set`; stringly typed because the Starlark handler
+ * reads `a.input(...)`.
  */
 data class ShippingOptionInput(
     val region: String = "",
@@ -116,11 +101,8 @@ data class ShippingOptionInput(
 )
 
 /**
- * Category entry from `categories/list`.
- *
- * Mirrors `Category` in `apps/market/web/src/types/listings.ts`. `digital` /
- * `physical` / `active` are 0/1 ints (Mochi server convention); `children` is
- * the count of direct sub-categories.
+ * Mirrors `Category` in web `types/listings.ts`; `children` is the count of
+ * direct sub-categories.
  */
 data class Category(
     val id: String = "",

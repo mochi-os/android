@@ -10,11 +10,6 @@ import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.people.R
 
-/**
- * "Are you sure?" prompt that confirms a friend removal. Stays default-styled
- * (per the destructive-styling rule in CLAUDE.md the *trigger* button never
- * turns red — only this confirm step does).
- */
 @Composable
 fun RemoveFriendConfirmDialog(
     friendName: String,

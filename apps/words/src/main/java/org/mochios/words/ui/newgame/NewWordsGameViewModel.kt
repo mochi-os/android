@@ -19,17 +19,6 @@ import org.mochios.words.model.NewGameFriend
 import org.mochios.words.repository.WordsRepository
 import javax.inject.Inject
 
-/**
- * State of the new-words-game screen.
- *
- * @property friends eligible opponents, fetched on first compose.
- * @property isLoadingFriends true while that fetch is in flight.
- * @property friendsError what went wrong fetching opponents, if anything.
- * @property isCreating true while the create request is in flight.
- * @property createError what went wrong on the last create attempt.
- * @property createdGameId set to the new game's id after a successful create
- *   so the screen can navigate into it; cleared once consumed.
- */
 data class NewWordsGameUiState(
     val friends: List<NewGameFriend> = emptyList(),
     val isLoadingFriends: Boolean = true,

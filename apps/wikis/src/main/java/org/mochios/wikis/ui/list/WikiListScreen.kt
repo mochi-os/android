@@ -83,26 +83,6 @@ import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.WikisSidebar
 import org.mochios.android.R as MochiR
 
-/**
- * Wikis app landing list — the surface the launcher icon opens. Mirrors
- * `apps/wikis/web/src/routes/_authenticated/index.tsx` `WikisListPage`:
- *
- *  - Top bar: hamburger opens the [WikisSidebar] drawer, RSS-feed overflow
- *    submenu copies a class-level RSS URL to the clipboard.
- *  - Card grid of owned + subscribed wikis, sorted naturally by name. Each
- *    card uses the [Icons.Default.Book] icon for owned wikis and
- *    [Icons.Default.Link] for subscribed wikis (the latter has a non-null
- *    `source`). Subscribed cards have a per-row overflow with a single
- *    Unsubscribe item that opens a [ConfirmDialog].
- *  - Empty state when the user has no wikis — a hint, a Create wiki button
- *    (opens [CreateWikiDialog]), an inline debounced directory search, and a
- *    "Recommended wikis" rail. Search results and recommendations both
- *    expose a Subscribe button; the ViewModel handles the 502
- *    retry-without-server-hint fallback.
- *  - Pull-to-refresh re-fetches both info and recommendations.
- *  - Snackbar host shows toast events from the ViewModel (subscribe /
- *    unsubscribe failures, RSS-copy confirmation).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WikiListScreen(

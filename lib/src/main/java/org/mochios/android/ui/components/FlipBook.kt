@@ -35,30 +35,10 @@ private const val LEAF_CAMERA_DISTANCE = 14f
 private const val LEAF_SHADE_MAX = 0.35f
 
 /**
- * Flipboard-style book-fold over a [VerticalPager]'s pages. Overlay this on
- * top of the pager (drawn after it, no pointer input of its own so drags
- * still reach the pager). It renders the fold ONLY while a transition is in
- * progress; at rest it draws nothing, so the pager's own live (interactive)
- * page shows through.
- *
- * The page is hinged at the mid-screen crease. Going from page A (front, the
- * lower index) to page B (next):
- *   - A's TOP half stays put (a static layer) — it never slides; it is simply
- *     covered at the end when B's top folds down over it.
- *   - B's BOTTOM half is a static layer behind the leaf, revealed as the leaf
- *     lifts off the bottom region.
- *   - A single rigid leaf, hinged at the crease, rotates 0° → 180° toward the
- *     viewer. Its FRONT face is A's bottom half (shown 0°–90°); its BACK face
- *     is B's top half (shown 90°–180°, pre-rotated 180° so it reads upright
- *     once the leaf lies over the top region). Back-face culling via the
- *     per-face alpha means each face only draws while pointing at the viewer.
- *
- * Driven entirely off [PagerState] so it stays in lock-step with the drag /
- * fling; reversing the swipe just plays the fold backwards.
- *
- * [page] renders the post at a given index. It is invoked for the two pages
- * involved in the current fold, so it must be cheap to call again with a
- * different index (it is the same content the pager renders).
+ * Flipboard-style fold over a [VerticalPager], drawn only mid-transition. A
+ * rigid leaf hinged at the mid-screen crease rotates 0°-180°, front face page
+ * A's bottom half and back face page B's top half (pre-rotated), over static
+ * A-top/B-bottom.
  */
 @Composable
 fun FlipBook(
@@ -69,13 +49,10 @@ fun FlipBook(
 ) {
     if (pageCount == 0) return
 
-    // Continuous scroll position across pages. position == an integer means a
-    // page is settled (no fold). The pair being folded is (front, front+1)
-    // with progress f ∈ (0,1). Rendering off the offset (rather than
-    // isScrollInProgress) keeps the fold smooth across the whole gesture —
-    // drag AND settle. The freeze guard lives at the call site: if the pager
-    // ever rests at a fractional offset, it is snapped to the nearest page so
-    // f returns to ~0 and this overlay clears.
+    // Continuous scroll position: an integer means settled. Rendering off the
+    // offset rather than isScrollInProgress keeps the fold smooth through drag
+    // and settle; the call site snaps a fractional rest position back to a
+    // page.
     val position = pagerState.currentPage + pagerState.currentPageOffsetFraction
     if (position <= 0f) return // first page / over-scroll below: no leaf
     val front = floor(position).toInt()

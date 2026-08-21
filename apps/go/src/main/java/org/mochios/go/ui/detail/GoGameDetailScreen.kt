@@ -89,22 +89,9 @@ import org.mochios.go.ui.detail.board.GoBoard
 import org.mochios.android.R as MochiR
 
 /**
- * Full Go game-detail surface. Mirrors `apps/go/web/src/features/go/index.tsx`:
- *
- *  - Above-the-fold header: opponent name + status line + my-turn dot +
- *    stone-colour pill + capture counters (active games only) + actions
- *    dropdown (Pass / Offer draw / Resign on active games; Rematch /
- *    Delete on finished games).
- *  - Board (left half on tablets ≥600 dp; full-width on phones with a
- *    chat-toggle action in the header opening a [MochiBottomSheet]).
- *  - Chat panel (right half on tablets; sheet on phones). Includes a
- *    [GameChatInput] composer.
- *  - Confirmation dialogs for Pass, Resign, and Delete. Pass uses a
- *    "game-end" variant whenever the opponent has already passed (i.e.
- *    `goGame.consecutivePasses == 1`).
- *
- * The WebSocket subscription is opened with [rememberGameWebSocket] using
- * `game.key` and bridged into the ViewModel through [GoGameViewModel.applyWsEvent].
+ * Game-detail screen: header, board, chat (side panel on tablets, bottom sheet
+ * on phones) and the pass / resign / delete confirmations. Mirrors
+ * `apps/go/web/src/features/go/index.tsx`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -145,9 +132,7 @@ fun GoGameDetailScreen(
                     snackbarHostState.showSnackbar(event.message)
                 is GoGameDetailEvent.OpenGame ->
                     navController.navigate(GoApp.gameDetail(event.gameId)) {
-                        // Replace the current detail screen — the user just
-                        // rematched, they don't want to land back on the old
-                        // finished game when they hit Back.
+                        // Rematch replaces the finished game in the back stack.
                         popUpTo(GoApp.HOME)
                     }
                 is GoGameDetailEvent.NavigateBack ->
@@ -527,9 +512,7 @@ fun GoGameDetailScreen(
 // ------------------------------------------------------------------
 
 /**
- * Localised status line for the [GameHeader]. Mirrors `useGoStatusText`
- * in `apps/go/web/src/features/go/index.tsx`. Composables can call this
- * directly because the only other Compose dependency is [stringResource].
+ * Status line for [GameHeader]; mirrors web's `useGoStatusText`.
  */
 @Composable
 private fun goStatusText(
@@ -576,11 +559,6 @@ private fun goStatusText(
     }
 }
 
-/**
- * Strip the trailing `.0` from whole scores so the user-facing text reads
- * `B:23 W:30.5` rather than `B:23.0 W:30.5`. Real fractional komi values
- * (6.5, etc.) keep their decimal.
- */
 private fun formatScore(value: Double): String {
     val whole = value.toLong()
     return if (whole.toDouble() == value) whole.toString() else value.toString()
@@ -692,12 +670,8 @@ private fun DefaultSystemMessage(message: GameChatMessage) {
 // ------------------------------------------------------------------
 
 /**
- * Returns the banner slot the [GameHeader] will render below the status
- * line, or `null` when there's nothing to show. Two variants:
- *
- *  - **Self-offered.** Render a muted "Draw offered — waiting for X" line.
- *  - **Opponent-offered.** Render Accept / Decline buttons. Mirrors
- *    `apps/go/web/src/features/go/components/draw-offer-banner.tsx`.
+ * Banner below the status line: a waiting note when I offered, Accept / Decline
+ * when the opponent did; null when there is no offer.
  */
 @Composable
 private fun drawOfferBanner(
@@ -783,12 +757,6 @@ private fun GameMessage.toChatMessage(): GameChatMessage = GameChatMessage(
     created = created,
 )
 
-/**
- * Convert a websocket frame into the [GameMessage] shape the chat panel
- * already understands. Returns null when we don't have enough fields to
- * meaningfully build a row (chat / move / system events all carry a body,
- * but raw connection-status pings don't).
- */
 private fun synthesiseMessage(
     type: String,
     body: String?,

@@ -56,11 +56,6 @@ import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.android.R as MochiR
 
-/**
- * CRM settings tabs, styled to match the projects settings screen: an icon
- * [TabRow] with the label below each glyph. Both tabs edit the CRM, so the whole
- * tabbed editor is manage-only.
- */
 private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     General(R.string.crm_settings_tab_general, Icons.Outlined.Settings),
     Access(R.string.crm_settings_tab_access, Icons.Outlined.Shield),
@@ -195,11 +190,6 @@ fun CrmSettingsScreen(
     }
 }
 
-/**
- * Read-only settings shown to a viewer who cannot manage the CRM: the CRM's
- * identity card and an unsubscribe action. Mirrors the projects, forum, and feed
- * subscriber views.
- */
 @Composable
 private fun SubscriberSettings(
     crm: Crm,

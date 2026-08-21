@@ -186,11 +186,6 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Re-fetch the feed list without surfacing a loading or refreshing
-     * indicator, so the drawer's unread badges reflect server state after an
-     * action elsewhere (e.g. marking a feed read).
-     */
     fun refreshSilently() {
         viewModelScope.launch { refreshFeedSilently() }
     }

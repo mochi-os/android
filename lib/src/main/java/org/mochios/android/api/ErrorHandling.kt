@@ -46,12 +46,8 @@ fun Throwable.toMochiError(): MochiError {
         is UnknownHostException -> MochiError.NetworkError(this)
         is SocketTimeoutException -> MochiError.NetworkError(this)
         is IOException -> MochiError.NetworkError(this)
-        // Any other throwable is a client-side fault — a Gson parse failure on a
-        // model/schema mismatch (e.g. a NumberFormatException when the server
-        // changes a field's type), an NPE, an IllegalState, etc. Its `message` is
-        // a raw Java/Gson string ("java.lang.NumberFormatException: ...") that
-        // must NEVER reach the screen. Log it for debugging and surface the
-        // generic localised fallback instead.
+        // A client-side fault: its message is a raw Java/Gson string and must
+        // not reach the screen, so log it and surface the localised fallback.
         else -> {
             Log.w("MochiError", "Unmapped client-side error: ${this.javaClass.name}: $message", this)
             MochiError.Unknown()
@@ -60,14 +56,8 @@ fun Throwable.toMochiError(): MochiError {
 }
 
 /**
- * Resolve a [MochiError] to a localised user-facing message.
- *
- * Server-supplied messages (in [MochiError.AuthError.message] etc.) are
- * returned as-is — the server is responsible for localising them via the
- * `respond_error` labels system. Only the fallback strings, when the server
- * didn't supply text, come from the Android resource catalog. The catalog
- * lookup uses [AppContext], whose locale was applied in
- * `Application.attachBaseContext`.
+ * Server-supplied messages are returned as-is - the server localises them
+ * through `respond_error`. Only the fallbacks come from the Android catalogue.
  */
 fun MochiError.userMessage(): String {
     val ctx = AppContext.get()

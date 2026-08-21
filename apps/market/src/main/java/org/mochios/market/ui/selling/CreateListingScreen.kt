@@ -37,11 +37,8 @@ import org.mochios.market.navigation.MarketApp
 import org.mochios.android.R as MochiR
 
 /**
- * Collects the title for a new listing before the editor opens. The editor
- * needs one to create the listing row with, and still creates that row lazily
- * on its first save.
- *
- * The top bar carries the back button and Create sits in the bottom bar.
+ * Collects the title for a new listing; the editor needs one before it creates
+ * the row on its first save.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

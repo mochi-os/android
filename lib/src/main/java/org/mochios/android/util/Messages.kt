@@ -6,22 +6,11 @@
 package org.mochios.android.util
 
 /**
- * Merge [incoming] game messages into [existing], dropping any whose [key] is
- * already present, and return the result ordered by [created].
+ * Merge [incoming] into [existing] by [key], ordered by [created].
  *
- * Exists because a game's chat arrives by two routes that cannot be reconciled
- * by id. The REST rows carry a server `mochi.uid()`; the WebSocket payload
- * carries no id at all, so each client synthesises one. Deduplicating on that
- * synthetic id fails both ways: it never matches the REST row, so an echo
- * arriving after a refetch renders twice, and it *does* collide between two
- * messages from one sender in the same second, silently dropping the second.
- *
- * So [key] should be a content key — created, body, name and type — which is
- * what the web client keys on, and for the same reason.
- *
- * Merging rather than replacing also preserves paged-in scrollback: a refresh
- * that assigns the newest page outright throws away everything the user
- * scrolled back to load.
+ * [key] must be a content key, not an id: a WebSocket frame carries no id, so a
+ * synthetic one never matches the REST row and collides between two messages
+ * from one sender in the same second.
  */
 fun <T> mergeMessages(
     existing: List<T>,
@@ -37,20 +26,10 @@ fun <T> mergeMessages(
 }
 
 /**
- * Append [incoming] to [existing], dropping anything whose [key] is already
- * present, and preserving the order both arrived in.
- *
- * The order-preserving sibling of [mergeMessages]. Paginated lists cannot sort
- * client-side: feeds orders by a server-side relevance score and forums by
- * pinned-then-score, so imposing any local order would discard the ordering the
- * request asked for.
- *
- * Needed because both servers return overlapping pages by construction. Feeds
- * pages by offset over a time-decaying score and schedules a rescore of that
- * very column when page 1 is fetched; forums pages on a `created` cursor while
- * ordering by score, so any earlier post below the cursor repeats — as does
- * every pinned post, on every page. Appended bare, those duplicates become
- * duplicate LazyColumn keys, and Compose throws rather than rendering.
+ * Append [incoming] to [existing], dropping duplicate [key]s and preserving
+ * arrival order: feeds and forums page over a server-side score, so a local
+ * sort would discard it, and both return overlapping pages, which Compose
+ * rejects as duplicate keys.
  */
 fun <T> appendDistinct(
     existing: List<T>,
@@ -64,21 +43,9 @@ fun <T> appendDistinct(
 }
 
 /**
- * Fold a freshly fetched newest page into what is already loaded, so a refresh
- * keeps the scrollback the user paged in.
- *
- * A chat refetches its newest page on every inbound message, reaction and
- * delete. Assigning that page outright throws away everything the reader
- * scrolled back to load — so one message arriving wipes minutes of scrolling,
- * and the list then jumps to the bottom.
- *
- * [incoming] wins for any id in both, which is what carries an edit, a reaction
- * change or a delete tombstone onto a row already on screen.
- *
- * The one case where replacing IS right: when the two sets do not overlap at
- * all, the client has been away long enough that more than a page arrived, and
- * stitching them would present a contiguous list with an invisible hole in it.
- * Losing the scrollback is the better failure, so that case replaces.
+ * Fold a freshly fetched newest page into what is loaded, keeping scrollback.
+ * [incoming] wins for an id in both, carrying edits, reactions and deletes.
+ * Disjoint sets replace instead: stitching would hide a gap in the list.
  */
 fun <T> mergeNewest(
     existing: List<T>,

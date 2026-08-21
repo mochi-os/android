@@ -6,28 +6,13 @@
 package org.mochios.go.engine
 
 /**
- * Kotlin port of `apps/go/web/src/lib/go-engine.ts`.
+ * Kotlin port of `apps/go/web/src/lib/go-engine.ts`; immutable - [place] and
+ * [pass] return new instances.
  *
- * Models a Go (Weiqi) position as an immutable value class — [place] and
- * [pass] return new instances rather than mutating in place, so callers can
- * branch on speculative moves (e.g. "what would the board look like if I
- * played here?") without copying defensively.
- *
- * ## Board encoding
- *
- * The board is serialised in a FEN-like form: rows joined by `/`, each cell
- * one of `.` (empty), `B` (black), `W` (white). After the board string
- * follows space-separated metadata:
- *
- *   `<rows> <turn> <capturesBlack> <capturesWhite> <koPoint> <consecutivePasses>`
- *
- * - `<turn>` is `b` or `w`
- * - `<koPoint>` is `r,c` if a ko point is set, `-` otherwise
- *
- * Example empty 9x9 board: `.../.../... b 0 0 - 0` (with full row strings).
- *
- * Mirrors the TS implementation exactly so the server-stored FEN can be
- * round-tripped between web (TS) and Android (Kotlin) clients.
+ * Board encoding, shared with the TS engine and stored by the server: rows
+ * joined by `/`, each cell `.`, `B` or `W`, then `<rows> <turn> <capturesBlack>
+ * <capturesWhite> <koPoint> <consecutivePasses>` - turn `b`/`w`, koPoint `r,c`
+ * or `-`.
  */
 class GoGame private constructor(
     val size: Int,
@@ -69,9 +54,8 @@ class GoGame private constructor(
     )
 
     /**
-     * Parse a FEN-like [board] string back into a game. [previousBoardFen]
-     * is an optional plain `rows-joined-by-slash` previous-position string
-     * used for ko-rule enforcement.
+     * Parse a [board] string; [previousBoardFen] is the previous position's
+     * rows (no metadata), for ko enforcement.
      */
     constructor(board: String, previousBoardFen: String? = null) : this(
         parseToTriple(board, previousBoardFen),
@@ -94,22 +78,9 @@ class GoGame private constructor(
     // ------------------------------------------------------------------
 
     /**
-     * Place a stone of the current turn at ([row], [col]).
-     *
-     * Throws [IllegalMoveException] when the move is illegal:
-     *   - the intersection is occupied
-     *   - the move retakes the ko point recorded by the previous capture
-     *   - the move would leave the placed stone's group with no liberties
-     *     (suicide — Chinese / area-scoring rules forbid it)
-     *
-     * Ko is enforced by the single recorded ko point, not by comparing whole
-     * positions: [isLegal] reads `koPoint` and nothing else. That is simple ko,
-     * not positional superko, and it matches the TypeScript engine the web
-     * client uses, so the two agree on legality.
-     *
-     * Returns a new [GoGame] reflecting the placement, any captured
-     * opponent stones removed, the capture counters incremented, the turn
-     * flipped, and `consecutivePasses` reset to 0.
+     * Place a stone of the current turn; throws [IllegalMoveException] for an
+     * occupied point, ko retake or suicide. Ko is the single recorded ko point
+     * (simple ko, not superko), matching the TS engine.
      */
     fun place(row: Int, col: Int): GoGame {
         if (!isLegal(row, col)) {
@@ -167,11 +138,6 @@ class GoGame private constructor(
         )
     }
 
-    /**
-     * Pass turn. Returns a new game with the turn flipped,
-     * `consecutivePasses` incremented, ko point cleared, and `lastMove`
-     * cleared (so the UI can stop drawing the last-move marker).
-     */
     fun pass(): GoGame =
         GoGame(
             size = size,
@@ -219,10 +185,8 @@ class GoGame private constructor(
     }
 
     /**
-     * Area-scoring result. `winner` is the colour whose total — stones plus
-     * its own territory, with [komi] added to White's — is strictly greater,
-     * or null when the two are equal (jigo). [komi] defaults to 6.5, which
-     * cannot tie; the new-game dialog's komi of 0 can.
+     * Area score; `winner` is null on a tie (jigo), which the default 6.5 komi
+     * cannot produce but the new-game dialog's komi of 0 can.
      */
     fun score(komi: Double = 6.5): Score {
         val territory = scoreTerritory(grid)
@@ -234,23 +198,16 @@ class GoGame private constructor(
             winner = when {
                 black > white -> Stone.BLACK
                 white > black -> Stone.WHITE
-                // Jigo. Previously this fell to White, which did not merely
-                // print the wrong result: passTurn resolves the winner to an
-                // identity, so a tie wrote a real player as winner into the
-                // canonical row and the P2P snapshot.
+                // Jigo must be null: passTurn resolves the winner to an
+                // identity and would record a real player.
                 else -> null
             },
         )
     }
 
     /**
-     * Per-cell territory ownership for finished-game overlay rendering.
-     *
-     * Returns a [size]x[size] array. Each cell is one of:
-     *  - [Territory.BLACK] / [Territory.WHITE] — empty intersection surrounded
-     *    solely by that colour (counts toward area score)
-     *  - [Territory.NEUTRAL] — dame: empty intersection touching both colours
-     *  - [Territory.OCCUPIED] — a stone is on the intersection
+     * Per-cell territory for the finished-game overlay: BLACK/WHITE for empty
+     * points surrounded by one colour, NEUTRAL for dame, OCCUPIED for a stone.
      */
     fun territory(): Array<Array<Territory>> {
         val result = Array(size) { Array(size) { Territory.OCCUPIED } }
@@ -329,10 +286,8 @@ class GoGame private constructor(
         private const val COORD_LETTERS = "ABCDEFGHJKLMNOPQRST"
 
         /**
-         * SGF / Q16-style coordinate label for ([row], [col]) on a board of
-         * the given [size]. Letters skip 'I'; rows are numbered from bottom
-         * (1 at row `size-1`) to top (`size` at row 0), matching the TS
-         * implementation.
+         * SGF-style coordinate label; rows count from the bottom, matching the
+         * TS implementation.
          */
         fun coordToLabel(row: Int, col: Int, size: Int): String {
             val letter = COORD_LETTERS.getOrElse(col) { '?' }

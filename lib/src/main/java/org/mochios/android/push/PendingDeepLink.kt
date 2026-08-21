@@ -9,19 +9,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 /**
- * Single-slot buffer for a notification-tap deep-link target. Written
- * by MainActivity when an `Intent` with the notification scheme arrives
- * (cold-start or warm), consumed by the per-app navigation once the
- * AppBootstrapHost has resolved.
- *
- * The buffer holds a *path* like `/feeds/<id>/posts/<post>` — the same
- * shape the server passes as the `url` argument to
- * `mochi.service.call("notifications", "send", ...)`. Each app's
- * navigation decides how to interpret it.
- *
- * Cold-start invariant: the intent is delivered to `onCreate` before
- * AppBootstrapHost has any state, so we must NOT consume it during
- * bootstrap. Navigation should take it after the Ready transition.
+ * Single-slot buffer for a notification-tap deep link, a path like
+ * `/feeds/<id>/posts/<post>`. MainActivity writes it in `onCreate` before
+ * bootstrap has state, so navigation must only consume it after the Ready
+ * transition.
  */
 object PendingDeepLink {
 

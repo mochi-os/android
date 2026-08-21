@@ -73,11 +73,9 @@ fun HtmlContent(
     // keeps only the URL). Used for the long-press-shows-alt-text affordance.
     val altByUrl = remember(html) { parseImageAlts(html) }
 
-    // Markdown is rendered into a platform TextView, which knows nothing about
-    // the Compose theme. Feed it onSurface so a body reads on either scheme —
-    // the old android.R.color.primary_text_light is a fixed near-black and left
-    // every post unreadable in dark mode. Applied in `update` as well as
-    // `factory`, since `factory` runs once and a theme switch recomposes.
+    // The platform TextView knows nothing about the Compose theme, so feed it
+    // onSurface. Applied in `update` as well as `factory`, since `factory` runs
+    // once and a theme switch only recomposes.
     val textColor = MaterialTheme.colorScheme.onSurface.toArgb()
 
     AndroidView(
@@ -100,12 +98,9 @@ fun HtmlContent(
             textView.setTextColor(textColor)
             val view = textView as ClickableLinkTextView
             view.clampToHeight = clampToBoundedHeight
-            // The clamped feeds body is a non-interactive preview, so drop text
-            // selection there — the platform ellipsis path through the Editor is
-            // moot now (we truncate the text ourselves in onMeasure), and a plain
-            // non-selectable view is the right behaviour for a preview anyway.
-            // Re-assert the movement method afterwards, since toggling selection
-            // clears it. Guarded so other callers keep selection and don't thrash.
+            // The clamped preview drops text selection. Toggling selection
+            // clears the movement method, so re-assert it; guarded so other
+            // callers keep selection and don't thrash.
             val wantSelectable = !clampToBoundedHeight
             if (textView.isTextSelectable != wantSelectable) {
                 textView.setTextIsSelectable(wantSelectable)
@@ -142,9 +137,8 @@ private val IMG_ALT = Regex("\\balt\\s*=\\s*[\"']([^\"']*)[\"']", RegexOption.IG
 private val MD_IMG = Regex("!\\[([^\\]]*)\\]\\(\\s*([^)\\s]+)(?:\\s+\"([^\"]*)\")?\\s*\\)")
 
 /**
- * Recover per-image alt/title text from the source HTML/markdown, keyed by
- * image URL (the rendered image span keeps only the URL). Prefers `title` (web
- * comics put the punchline there) and falls back to `alt`.
+ * Recover per-image alt/title text from the source, keyed by image URL - the
+ * rendered span keeps only the URL. Prefers `title`, falling back to `alt`.
  */
 private fun parseImageAlts(source: String): Map<String, String> {
     val map = HashMap<String, String>()

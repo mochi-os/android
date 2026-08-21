@@ -20,28 +20,12 @@ import org.mochios.wikis.model.TagPage
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for [TagPagesScreen]. Holds the page list filtered to the tag
- * argument, plus the standard loading / error fields.
- *
- * The server returns pages in undefined order; we sort client-side by
- * [NaturalCompare] on the page title so the surface presents a stable,
- * locale-aware ordering regardless of insertion order.
- */
 data class TagPagesUiState(
     val isLoading: Boolean = true,
     val pages: List<TagPage> = emptyList(),
     val error: MochiError? = null,
 )
 
-/**
- * ViewModel for [TagPagesScreen]. Reads `wikiId` + `tag` from
- * [SavedStateHandle] (set by `WikisApp.TAG_PAGES`) and exposes [uiState] for
- * the screen to observe.
- *
- * Mirrors web's `tag-pages.tsx` data flow: a single `/-/tag/<tag>` fetch on
- * init.
- */
 @HiltViewModel
 class TagPagesViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

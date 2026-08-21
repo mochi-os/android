@@ -41,12 +41,9 @@ interface NotificationsBellEntryPoint {
 }
 
 /**
- * Bell icon + unread badge for use in every feature's TopAppBar. The
- * underlying [NotificationsUnreadStore] is a `@Singleton`, so all four
- * features' bells consume the same counter.
- *
- * Pass an `onClick` that navigates the host's NavController to
- * `MainActivity.ROUTE_NOTIFICATIONS`.
+ * Bell icon and unread badge for a feature's TopAppBar.
+ * [NotificationsUnreadStore] is a `@Singleton`, so every feature's bell shows
+ * the same counter.
  */
 @Composable
 fun NotificationBell(onClick: () -> Unit) {

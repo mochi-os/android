@@ -44,14 +44,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
-/**
- * Full-screen create form for a group: a required name and an optional
- * description. The top bar carries the back button and Create sits in the
- * bottom bar.
- *
- * @param onBack leaves the screen without creating anything.
- * @param onCreated hands the new group's id to the caller so it can open it.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateGroupScreen(

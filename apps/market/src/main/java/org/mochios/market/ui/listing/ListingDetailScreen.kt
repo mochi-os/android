@@ -142,15 +142,6 @@ import org.mochios.market.ui.dialog.ReportListingDialog
 import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material.icons.outlined.Flag
 
-/**
- * Detail view for a single market listing. Mirrors
- * `apps/market/web/src/features/listing/listing-page.tsx`.
- *
- * The screen owns its lightbox / dialog / loading state and delegates every
- * network mutation to [ListingDetailViewModel]. Navigation requests bubble
- * back through the supplied [NavController] so the route taxonomy stays
- * centralised in [MarketApp].
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListingDetailScreen(
@@ -437,11 +428,6 @@ fun ListingDetailScreen(
     )
 }
 
-/**
- * Stateless body used by [ListingDetailScreen]. Pulled out so the loading /
- * error / not-found branches stay readable in the parent, and so the layout
- * can be previewed in isolation as the component library lands more pieces.
- */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ListingDetailContent(
@@ -898,9 +884,8 @@ private fun ListingDetailContent(
             )
         }
 
-        // Audit timeline (collapsible). Buyers without read access on the
-        // listing get an empty list back from the server — hide the toggle
-        // entirely in that case so we don't render a dead-end button.
+        // Buyers without read access get an empty audit list; hide the toggle
+        // rather than show a dead-end button.
         if (audit.isNotEmpty()) {
             TextButton(onClick = onToggleAudit) {
                 Text(
@@ -922,12 +907,6 @@ private fun ListingDetailContent(
     }
 }
 
-/**
- * Delivery-method chips for the badges row, mirroring the listing's fulfilment
- * setup: a digital listing shows "Download"; physical listings show "Shipping"
- * and/or "Pickup" depending on which the seller enabled. Static (non-clickable)
- * outlined pills with a leading icon, matching the web detail page.
- */
 @Composable
 private fun DeliveryMethodChips(listing: Listing) {
     if (listing.type == ListingType.DIGITAL) {
@@ -951,12 +930,6 @@ private fun DeliveryMethodChips(listing: Listing) {
     }
 }
 
-/**
- * Status chip — a soft pill at the shared [DetailBadgeChip] size with a
- * semantic light fill + dark label per [statusChipColors] and a neutral 1dp
- * border (the same `outlineVariant` the delivery chip uses). The "active"
- * green fill (#E2FBE8) and text (#2B6536) are sampled from the design.
- */
 @Composable
 private fun StatusChip(status: String) {
     val key = status.trim().lowercase()
@@ -1016,12 +989,6 @@ private fun DeliveryMethodChip(icon: ImageVector, label: String) {
     )
 }
 
-/**
- * Shared chip used for every badge in the detail row (condition, pricing,
- * delivery method) so they resolve to one uniform size/shape — 8dp corners,
- * h10/v5 padding, [labelMedium] text, optional 16dp leading icon. Only the
- * fill, content colour, and optional border vary per badge.
- */
 @Composable
 private fun DetailBadgeChip(
     label: String,
@@ -1172,13 +1139,6 @@ private fun parseTags(json: String): List<String> {
     }
 }
 
-/**
- * Absolute `/-/photo/{id}` URLs for the carousel, in display order.
- *
- * Prefers the full [photos] set fetched from `-/photos/list`; when that came
- * back empty (a transient failure, say) it falls back to the [listing]'s
- * embedded primary photo so the carousel still shows something.
- */
 private fun buildPhotoUrls(
     photos: List<Photo>,
     listing: Listing?,

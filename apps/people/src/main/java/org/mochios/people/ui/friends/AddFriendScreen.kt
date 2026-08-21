@@ -71,19 +71,6 @@ import org.mochios.people.model.RelationshipStatus
 import org.mochios.people.model.User
 import org.mochios.android.R as MochiR
 
-/**
- * Add-friend screen. Mirrors
- * `apps/people/web/src/features/friends/components/add-friend-dialog.tsx`: a
- * debounced search field over a paged list of matched users, whose row action
- * always routes through a profile-preview step (avatar + banner + bio + accent)
- * before the actual invite fires. From the preview the user confirms with
- * "Send invitation" / "Accept invite"; back returns to the list, and back again
- * leaves the screen.
- *
- * @param onBack leaves the screen with the friends list untouched.
- * @param onFriendsChanged leaves the screen after an accepted invite, so the
- *   caller can reload the list it will land on.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddFriendScreen(

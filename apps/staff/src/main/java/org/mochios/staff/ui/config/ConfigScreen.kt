@@ -52,25 +52,10 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.staff.R
 
 /**
- * Staff Configuration screen (admin only).
- *
- * Mirrors web's `apps/staff/web/src/features/config/config-page.tsx`:
- *
- *  - Four logical sections: Moderation, Payments, Reviews, Stripe.
- *  - Each field is a labelled input with an optional suffix; the Save button
- *    appears beside the field only when the local value diverges from the
- *    server value.
- *  - Stripe secret key uses a password-masked text field.
- *
- * Admin gating lives at the route level in [org.mochios.staff.navigation.staffNavGraph]
- * (mirroring web's `beforeLoad` redirect on `/_authenticated/config`): non-admins
- * are silently redirected to the dashboard before this screen ever renders, so
- * the body here may assume `me.role == "admin"`. The server enforces the same
- * gate independently.
- *
- * The thresholds (auto-approve / hold) route through the Comptroller's
- * dedicated thresholds endpoint; everything else uses `config/set`. The
- * ViewModel hides the difference behind a single `save(key)` call.
+ * Port of `apps/staff/web/src/features/config/config-page.tsx`. Admin gating is
+ * at the route level (staffNavGraph), so the body may assume `me.role ==
+ * "admin"`. Thresholds save through the moderation endpoints, everything else
+ * through `config/set`; the ViewModel hides the split.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

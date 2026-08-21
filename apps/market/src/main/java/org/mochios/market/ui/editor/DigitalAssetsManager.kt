@@ -55,11 +55,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.R
 import org.mochios.market.model.Asset
 
-/**
- * Digital-asset manager. Same upload + reorder UX as [PhotoManager] but for
- * arbitrary file types (zip, pdf, mp3, …) plus an inline "External URL" form
- * for assets hosted off-platform. Mirrors `digital-assets-manager.tsx` on web.
- */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun DigitalAssetsManager(

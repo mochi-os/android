@@ -47,12 +47,6 @@ data class DesignUiState(
     val importFailed: Boolean = false
 )
 
-/**
- * A design read off disk that may replace the current one, once confirmed.
- *
- * @property json the design payload read from the file.
- * @property label the file's name, shown in the confirmation.
- */
 data class PendingImport(val json: String, val label: String)
 
 @HiltViewModel

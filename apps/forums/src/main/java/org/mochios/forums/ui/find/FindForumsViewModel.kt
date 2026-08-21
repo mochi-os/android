@@ -26,15 +26,9 @@ import javax.inject.Inject
 /** Debounce before a typed query is sent to the directory, in milliseconds. */
 
 /**
- * One forum row in the discovery list, whichever source it came from — the
- * directory search, the recommendations, or a URL probe. Normalising them here
- * keeps the screen from branching three ways over near-identical shapes.
- *
- * @property id         Full entity id, used to subscribe.
- * @property key        Fingerprint when known, else [id] — the local tracking
- *                      key and the route argument once subscribed.
- * @property subtitle   Hyphenated fingerprint, shown under the name.
- * @property server     Home-server hint for a remote forum, or null.
+ * One discovery row from any source (search, recommendations, URL probe). [key]
+ * is the fingerprint when known, else [id] - the tracking key and the route
+ * argument once subscribed.
  */
 data class ForumDirectoryItem(
     val id: String,
@@ -99,11 +93,6 @@ class FindForumsViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Search as the user types, debounced by [SEARCH_DEBOUNCE] so a query is
-     * only sent once they pause. A query that looks like a URL is probed
-     * instead. Clearing the field restores the recommendations.
-     */
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
         searchJob?.cancel()
@@ -181,11 +170,8 @@ class FindForumsViewModel @Inject constructor(
     }
 
     /**
-     * Subscribe, then open the forum — only once the server has confirmed it.
-     *
-     * The entity's home server is tried first. A 502 means that hint was
-     * unreachable, so the call is retried without it and the local server falls
-     * back to general peer discovery. Mirrors web and [FindWikisViewModel].
+     * Subscribe, then open the forum once the server confirms it; a 502 from
+     * the home-server hint retries without it (see [subscribeOrNull]).
      */
     fun subscribe(item: ForumDirectoryItem) {
         val target = item.id.ifEmpty { item.key }

@@ -96,26 +96,6 @@ import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
 
-/**
- * Profile editor for the current user. Mirrors the web `<Profile>` page:
- *
- *  - Hero card at the top: banner background, avatar overlay, display name
- *    and short fingerprint underneath. Lives-updates as drafts change so the
- *    user sees the effect of their accent / avatar / banner choices before
- *    saving.
- *  - Display name: inline text field with a Save button.
- *  - Bio (the server calls it "profile"): multi-line text area with a length
- *    indicator and a Save button. Capped at 100 KB.
- *  - Accent: inline [AccentColorPicker] (presets, saturation/value field, hue
- *    slider, hex input) with Clear / Save.
- *  - Privacy: switch to toggle public / private (directory listing).
- *  - Three image slots: avatar, banner, favicon. Each picks a system image
- *    via [rememberImagePicker], resizes it, then uploads via the ViewModel.
- *
- * Loading state shows a centred spinner; the first error blocks the entire
- * screen with a retry button. Subsequent in-flight errors are surfaced via
- * a Snackbar to avoid losing the form state mid-edit.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
@@ -539,11 +519,6 @@ private fun PreviewCard(
     Spacer(Modifier.height(avatarSize / 2 + 8.dp))
 }
 
-/**
- * "Edit name" dialog — holds the name field locally so Cancel discards the
- * edit and only Save commits it. Mirrors the old inline name section, moved
- * behind the pencil affordance on the hero card.
- */
 @Composable
 private fun EditNameDialog(
     initialName: String,
@@ -779,12 +754,6 @@ private fun PrivacySection(
     }
 }
 
-/**
- * Fullscreen preview of the user's draft profile. Mirrors the web "Profile
- * preview" dialog: banner + avatar overlay, name (using accent tint), short
- * fingerprint, bio rendered as markdown. Reads the *draft* form values so the
- * user can see unsaved edits as they'll appear to others.
- */
 @Composable
 private fun ProfilePreviewDialog(
     state: ProfileUiState,
@@ -908,9 +877,8 @@ private fun imageUrl(id: String, slot: String, version: String?): String? {
 }
 
 /**
- * Server-relative avatar path for [EntityAvatar], which resolves the host
- * itself. Banner/favicon still use [imageUrl] since they feed `AsyncImage`,
- * which needs an absolute URL.
+ * Server-relative path for [EntityAvatar], which resolves the host; banner and
+ * favicon need [imageUrl]'s absolute URL for `AsyncImage`.
  */
 private fun avatarPath(id: String, version: String?): String? {
     if (id.isBlank() || version.isNullOrBlank()) return null

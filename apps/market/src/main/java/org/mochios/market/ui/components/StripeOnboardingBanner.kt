@@ -41,22 +41,6 @@ import kotlinx.coroutines.launch
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
-/**
- * Stripe Connect onboarding banner. Shown when the seller's Stripe
- * account does not yet have both `charges_enabled` and
- * `payouts_enabled`.
- *
- * Tapping "Continue setup" hits
- * [MarketRepository.stripeOnboarding] for a one-time onboarding URL and
- * opens it in a Custom Tab (top-level navigation — the iframe shell
- * sandbox can't host Stripe). Tapping "Check status" re-fetches
- * [MarketRepository.stripeStatus] and auto-hides the banner once both
- * flags flip to true.
- *
- * @param returnUrl Where Stripe should redirect after onboarding. The
- *                  caller chooses a per-app deep link or the market
- *                  selling-settings URL.
- */
 @Composable
 fun StripeOnboardingBanner(
     repository: MarketRepository,

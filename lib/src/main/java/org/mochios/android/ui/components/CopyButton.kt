@@ -28,16 +28,9 @@ import kotlinx.coroutines.delay
 import org.mochios.android.R
 
 /**
- * Small icon button that writes [value] to the system clipboard on tap and
- * shows a brief check-mark confirmation before reverting to the copy icon.
- * Mirrors web's `CopyButton` (used on every code block, DataChip, and any
- * one-tap "give me that token" affordance).
- *
- * @param value             Text to place on the clipboard.
- * @param contentDescription Accessibility label; defaults to the localised
- *                          "Copy" string. Pass a more specific label when the
- *                          button is one of several copy targets in the same
- *                          screen (e.g. "Copy peer ID").
+ * Small icon button that copies [value] and shows a brief check-mark. Pass
+ * [contentDescription] when a screen has several copy targets; it defaults to
+ * the localised "Copy".
  */
 @Composable
 fun CopyButton(

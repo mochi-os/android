@@ -14,24 +14,10 @@ import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
 
 /**
- * Register a composable as a drop target in a [DragState] scope. The target's
- * bounds in root coordinates are reported to the state on every layout pass;
- * the state matches them against the live drag pointer to pick the active
- * target and edge.
- *
- * @param itemId stable id used to identify this target. Must not collide with
- *   any draggable item id — the state automatically excludes a target whose
- *   id matches the source being dragged so a card cannot drop on itself.
- * @param orientation [DropOrientation.Vertical] for column-style lists,
- *   [DropOrientation.Horizontal] for row-style rails, [DropOrientation.OnOnly]
- *   for whole-area "on" drops (e.g. a kanban column accepting any card).
- * @param acceptedEdges which [DragEdge] values this target accepts; pointer
- *   positions resolving to other edges are ignored. Defaults to all edges
- *   matching [orientation].
- * @param accept optional predicate run on drop; return false to cancel the
- *   drop (e.g. cycle prevention in tree reparent).
- * @param onDrop fired when the user releases over this target with an
- *   accepted edge.
+ * Register a composable as a drop target in a [DragState] scope; its root
+ * bounds are reported each layout pass. [itemId] shares the namespace with
+ * draggable ids - a target matching the dragged source is skipped, so nothing
+ * drops on itself.
  */
 fun Modifier.dropTarget(
     state: DragState,

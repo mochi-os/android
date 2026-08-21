@@ -29,10 +29,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 
 /**
- * The five buyer-side refund reasons (mirrors `useDisputeReasons()` in
- * `apps/market/web/src/config/constants.ts`). Pairs wire value with the
- * Android string-resource id so the dropdown rows pick up the
- * translation from the locale catalog at render time.
+ * Mirrors `useDisputeReasons()` in `apps/market/web/src/config/constants.ts`.
  */
 internal val REFUND_REASONS: List<Pair<String, Int>> = listOf(
     "not_received" to R.string.market_refund_reason_not_received,
@@ -43,17 +40,8 @@ internal val REFUND_REASONS: List<Pair<String, Int>> = listOf(
 )
 
 /**
- * Buyer-facing dialog for opening a refund dispute.
- *
- * Carries a reason and a description and nothing else: the buyer asks, the
- * seller decides the sum. This posts to `orders/dispute`, which forwards only
- * `id`, `reason` and `description` — the amount belongs to `orders/refund`, the
- * seller's endpoint, reached from [IssueRefundDialog].
- *
- * It previously offered an amount field seeded with the formatted order total,
- * which parsed back to nothing and was discarded by the caller regardless. A
- * buyer could set it to any figure and be told nothing had changed, because
- * nothing had.
+ * Reason and description only: `orders/dispute` forwards nothing else. The
+ * amount belongs to the seller's `orders/refund` ([IssueRefundDialog]).
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

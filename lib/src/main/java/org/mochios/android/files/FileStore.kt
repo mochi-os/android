@@ -26,30 +26,9 @@ import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 
 /**
- * Everything the app does with files: reading and writing documents the system
- * picker hands back, staging picked content in the cache, and building the
- * multipart parts an upload is sent as. Backed by the platform
- * `ContentResolver` and the app cache dir.
- *
- * This is device plumbing, not a data source. Feature repositories depend on
- * it the way they depend on an API service, and they are the only things that
- * do — a ViewModel asks its own repository to save or read a file rather than
- * reaching for the store itself. [FileRepository] is the base class that hands
- * every feature repository the same file-facing surface.
- *
- * Every upload should go through here so each part carries the real filename
- * and MIME type: the server keeps both, and dropping them (e.g. a blanket
- * [DEFAULT_MIME], or a content-uri document id used as the name) is what
- * leaves an attachment unrecognisable and un-previewable later.
- *
- * The I/O calls suspend onto [Dispatchers.IO]. That matters most on the write
- * and cache paths: an export or a picked video runs to megabytes, and a
- * picker's callback lands on the main thread, so doing the work there stutters
- * the UI. Building a multipart part does no I/O — the body streams off disk
- * when the request is sent — so those stay plain calls.
- *
- * Picking the [Uri] stays in the UI, since only the composition can drive the
- * activity-result registry. Everything after the pick belongs here.
+ * Documents, cache staging and multipart building over `ContentResolver`. Every
+ * upload goes through here so each part keeps the real filename and MIME type:
+ * the server stores both, and losing them leaves an attachment unrecognisable.
  */
 @Singleton
 class FileStore @Inject constructor(
@@ -58,11 +37,6 @@ class FileStore @Inject constructor(
 
     // ---- Documents ----
 
-    /**
-     * Reads the document at [uri] as text.
-     *
-     * @return its contents, or null when the uri can't be opened or read.
-     */
     suspend fun readText(uri: Uri): String? = withContext(Dispatchers.IO) {
         try {
             context.contentResolver.openInputStream(uri)
@@ -73,11 +47,6 @@ class FileStore @Inject constructor(
         }
     }
 
-    /**
-     * Writes [text] to the document at [uri], replacing whatever is there.
-     *
-     * @return true when the whole write went through, false on any I/O failure.
-     */
     suspend fun writeText(uri: Uri, text: String): Boolean = withContext(Dispatchers.IO) {
         try {
             val stream = context.contentResolver.openOutputStream(uri)
@@ -90,16 +59,9 @@ class FileStore @Inject constructor(
     }
 
     /**
-     * Reads the document at [uri] as text, unwrapping it first when it is a
-     * zip.
-     *
-     * Backups are written zipped, so a file the user picks back is as likely
-     * to be the zip as the document inside it. Which one it is comes from the
-     * leading bytes rather than the name or the type the provider reports,
-     * since neither survives a trip through every file manager and mail app.
-     *
-     * @return the text, or null when the uri can't be opened, can't be read,
-     *   or is a zip holding nothing usable.
+     * Reads the document at [uri], unwrapping it first when it is a zip.
+     * Zip-ness is decided on the leading bytes: neither the name nor the
+     * provider's type survives a trip through every file manager and mail app.
      */
     suspend fun readTextOrZipped(uri: Uri): String? = withContext(Dispatchers.IO) {
         try {
@@ -113,13 +75,9 @@ class FileStore @Inject constructor(
     }
 
     /**
-     * Copies [source] into the document at [uri], replacing whatever is there.
-     *
-     * For a payload that arrives as bytes off the network — a server-built
-     * export zip — so it goes to disk as it downloads instead of being held in
-     * memory whole. Closing [source] is the caller's job.
-     *
-     * @return true when the whole write went through, false on any I/O failure.
+     * Copies [source] into the document at [uri] as it arrives, so a
+     * server-built export is never held in memory whole. Closing [source] is
+     * the caller's job.
      */
     suspend fun writeStream(uri: Uri, source: InputStream): Boolean =
         withContext(Dispatchers.IO) {
@@ -134,15 +92,8 @@ class FileStore @Inject constructor(
         }
 
     /**
-     * Names an export after the thing it came from, e.g.
-     * `acme-design-2026-07-28.json`.
-     *
-     * @param subject what the export belongs to; blank or null falls back to
-     *   `unknown`.
-     * @param kind what the file holds — `design`, `projects-backup`, ...
-     * @param extension the file's extension, without the dot.
-     * @param date stamped into the name; defaults to today.
-     * @return the suggested file name for the system save dialog.
+     * Names an export after its subject, e.g. `acme-design-2026-07-28.json`; a
+     * blank [subject] becomes `unknown`.
      */
     fun exportFileName(
         subject: String?,
@@ -160,19 +111,9 @@ class FileStore @Inject constructor(
     }
 
     /**
-     * Names an export after the thing it came from, keeping the subject as the
-     * user wrote it: `Crm Testing.csv`.
-     *
-     * Unlike [exportFileName] there is no slug, kind or date. A backup is a
-     * file you keep, so it says what it is and when it was taken; a
-     * spreadsheet is a file you open, so it is named the way the user named
-     * the thing it came from. Characters a file system won't take become
-     * spaces.
-     *
-     * @param subject what the export belongs to; blank or null falls back to
-     *   `unknown`.
-     * @param extension the file's extension, without the dot.
-     * @return the suggested file name for the system save dialog.
+     * Names an export as the user wrote the subject: `Crm Testing.csv`. No
+     * slug, kind or date - a spreadsheet is opened, not archived. Reserved
+     * characters become spaces.
      */
     fun exportDisplayName(subject: String?, extension: String): String {
         val name = subject
@@ -187,10 +128,9 @@ class FileStore @Inject constructor(
     // ---- Names and types ----
 
     /**
-     * Resolves a picked content [uri] to a real filename with an extension:
-     * prefers the provider's display name, falls back to the last path segment
-     * then [fallback], and appends an extension from the MIME type when
-     * missing. `:` and `/` are stripped so the result is a valid cache filename.
+     * A picked [uri]'s filename: the provider's display name, else the last
+     * path segment, else [fallback]. An extension is added from the MIME type,
+     * and `:` and `/` are stripped so the result is a valid cache filename.
      */
     suspend fun displayName(uri: Uri, fallback: String = "file"): String =
         withContext(Dispatchers.IO) { resolveName(uri, fallback) }
@@ -211,29 +151,18 @@ class FileStore @Inject constructor(
     // ---- Cache staging ----
 
     /**
-     * Copies the content behind [uri] into the app cache, named via
-     * [displayName] so it keeps a real filename and extension.
-     *
-     * This is the one copy every attachment picker should use: a hand-rolled
-     * copy that names the temp file from the uri's document id loses the
-     * extension, which then makes the upload's MIME type degrade to
-     * [DEFAULT_MIME].
-     *
-     * @return the temp file, or null when the uri can't be opened.
+     * Copies [uri] into the app cache under its real name. Use this rather than
+     * a hand-rolled copy: a temp file named from the document id loses the
+     * extension, and the upload's MIME type degrades to [DEFAULT_MIME].
      */
     suspend fun cacheFile(uri: Uri, fallbackName: String = "file"): File? =
         withContext(Dispatchers.IO) { copyToCache(uri, fallbackName) }
 
     /**
-     * Copies each of [uris] into the app cache via [cacheFile], preserving
-     * order. Callers own the returned files and must [deleteAll] them once the
-     * upload finishes. This is the streaming counterpart to reading each uri
-     * into memory — the request bodies built from these files upload straight
-     * off disk and survive request retries.
-     *
-     * @throws IOException when a uri can't be opened, so a picked attachment is
-     * never silently dropped from the upload; files cached before the failure
-     * are cleaned up.
+     * Copies each of [uris] into the cache in order; callers must [deleteAll]
+     * them after the upload. Throws when one cannot be opened, so a picked
+     * attachment is never silently dropped, and cleans up what was cached
+     * first.
      */
     suspend fun cacheFiles(uris: List<Uri>, fallbackName: String = "file"): List<File> =
         withContext(Dispatchers.IO) {
@@ -259,12 +188,8 @@ class FileStore @Inject constructor(
     // ---- Multipart ----
 
     /**
-     * A multipart part built from [file] under form field [field], carrying the
-     * file's name and MIME type.
-     *
-     * @param mimeType overrides the type inferred from the file's extension,
-     *   for when the server requires a specific one regardless of the file
-     *   (e.g. a re-encoded JPEG upload); null infers it.
+     * A multipart part from [file] under form field [field]. [mimeType]
+     * overrides the type inferred from the extension.
      */
     fun filePart(field: String, file: File, mimeType: String? = null): MultipartBody.Part {
         val type = mimeType ?: mimeType(file)
@@ -276,11 +201,6 @@ class FileStore @Inject constructor(
     fun fileParts(field: String, files: List<File>): List<MultipartBody.Part> =
         files.map { file -> filePart(field, file) }
 
-    /**
-     * A multipart part from in-memory [bytes] under form field [field],
-     * carrying [fileName] and [mimeType]. For callers that already hold the
-     * bytes and type (no [File] or content [Uri] to resolve from).
-     */
     fun bytesPart(
         field: String,
         fileName: String,
@@ -305,10 +225,8 @@ class FileStore @Inject constructor(
     }
 
     /**
-     * The text held in a zipped export: the JSON entry, or the first real file
-     * when nothing inside ends in `.json`. Directories and the `__MACOSX`
-     * folder a Mac adds when it re-zips are skipped, so a backup that has been
-     * through a desktop still reads.
+     * The text in a zipped export: the JSON entry, else the first real file.
+     * Directories and `__MACOSX` are skipped.
      */
     private fun unzipText(stream: InputStream): String? {
         val zip = ZipInputStream(stream)

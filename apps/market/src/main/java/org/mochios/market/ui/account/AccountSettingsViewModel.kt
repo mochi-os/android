@@ -27,11 +27,6 @@ import org.mochios.market.model.StripeStatus
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
-/**
- * UI state for [AccountSettingsScreen]. Holds the latest server-supplied
- * [Account] alongside the user's pending edits to biography / location so
- * the Save button can diff against the original without re-fetching.
- */
 data class AccountSettingsUiState(
     val account: Account? = null,
     val isLoading: Boolean = true,
@@ -55,22 +50,11 @@ data class AccountSettingsUiState(
     val error: MochiError? = null,
 )
 
-/**
- * One-shot events for the Account screen's snackbar host. `Saved` is a
- * positive confirmation so the screen can show a toast on success; errors
- * resolve via [MochiError.userMessage].
- */
 sealed interface AccountSettingsEvent {
     object Saved : AccountSettingsEvent
     data class Error(val error: MochiError) : AccountSettingsEvent
 }
 
-/**
- * ViewModel for the market Account screen. Single load on init pulls the
- * caller's own [Account]. If the account is onboarded, [refreshStripe]
- * fetches the connect-account capability flags. [save] posts the
- * biography + location (as JSON) to `accounts/update`.
- */
 @HiltViewModel
 class AccountSettingsViewModel @Inject constructor(
     private val repo: MarketRepository,
@@ -203,10 +187,8 @@ class AccountSettingsViewModel @Inject constructor(
     }
 
     /**
-     * Activate the seller account (if needed) then fetch a one-time Stripe
-     * onboarding URL and hand it back via [onUrl] for the screen to open in a
-     * Custom Tab. Stripe onboarding requires an activated account, so we run
-     * `accounts/activate` first when the caller isn't a seller yet.
+     * Stripe onboarding requires an activated seller account, so activate first
+     * when the caller is not one yet.
      */
     fun connectStripe(returnUrl: String, onUrl: (String) -> Unit) {
         if (_state.value.stripeConnecting) return
@@ -235,9 +217,8 @@ class AccountSettingsViewModel @Inject constructor(
     }
 
     /**
-     * Re-fetch the account plus Stripe capability flags so the seller card
-     * reflects onboarding completed off-device. Unlike [refreshStripe] this
-     * also reloads the account row (to pick up `seller` / `onboarded`).
+     * Reloads the account row as well as the Stripe flags, unlike
+     * [refreshStripe].
      */
     fun checkStripeStatus() {
         if (_state.value.stripeStatusLoading) return
@@ -274,11 +255,6 @@ class AccountSettingsViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Reset every editable draft from a freshly-loaded / saved [account] and
-     * store the canonical row. Used on both initial load and after a
-     * successful save so the form reflects the server's view.
-     */
     private fun AccountSettingsUiState.withDrafts(account: Account): AccountSettingsUiState =
         copy(
             account = account,
@@ -296,11 +272,6 @@ class AccountSettingsViewModel @Inject constructor(
             addressCountryDraft = account.addressCountry,
         )
 
-    /**
-     * Convert the server's `location` JSON blob into a [PlaceData] usable
-     * by [org.mochios.android.ui.components.PlacePicker]. Returns null
-     * when the blob is empty so the picker starts blank.
-     */
     private fun parseLocationToPlace(json: String): PlaceData? {
         val parsed: ParsedLocation = parseLocation(json) ?: return null
         return PlaceData(

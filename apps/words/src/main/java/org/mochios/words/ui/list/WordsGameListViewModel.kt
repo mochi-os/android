@@ -19,11 +19,6 @@ import org.mochios.words.model.GameListItem
 import org.mochios.words.repository.WordsRepository
 import javax.inject.Inject
 
-/**
- * UI state for the Words games-list screen + drawer. Holds the loaded
- * games array plus the new-game friends list (loaded lazily when the
- * dialog opens). The detail screen reuses the same VM for the drawer.
- */
 data class WordsGameListUiState(
     val games: List<GameListItem> = emptyList(),
     val isLoading: Boolean = false,
@@ -71,12 +66,8 @@ class WordsGameListViewModel @Inject constructor(
     }
 
     /**
-     * Read the user's primary identity once at construction so the
-     * sidebar's "other players" rendering can filter out the caller. The
-     * Words server tags every game row with the caller's player number,
-     * but the sidebar wants names — and games come back with raw entity
-     * IDs in the player columns, so we still need the identity to
-     * compare against.
+     * The sidebar filters the caller out of the player names, which arrive as
+     * raw entity IDs.
      */
     private fun captureIdentity() {
         viewModelScope.launch {

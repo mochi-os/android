@@ -29,15 +29,6 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.market.R
 import org.mochios.market.model.Warning as WarningModel
 
-/**
- * Prominent amber card listing staff-issued warnings attached to a
- * listing. Hidden when the list is empty.
- *
- * @param reasonLabel Maps raw warning reasons (e.g. `prohibited`,
- *                    `misleading`) to localised labels at the call site.
- *                    Defaults to the raw reason so unknown codes still
- *                    surface.
- */
 @Composable
 fun WarningsSection(
     warnings: List<WarningModel>,

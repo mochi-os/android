@@ -58,18 +58,8 @@ import org.mochios.chess.model.NewGameFriend
 import org.mochios.android.R as MochiR
 
 /**
- * Full screen for "Start a new chess game". Mirrors the web `NewGame` flow:
- *
- *  - Loading state — spinner while the friends list is fetched.
- *  - Error state — short error + retry.
- *  - Empty state — "No friends yet" with an "Add friends" button that fires
- *    [onAddFriends] (the host jumps to the People app's add-friend route).
- *  - Populated state — single-select friends list filling the screen.
- *
- * The top bar carries the back button and Start game sits in the bottom bar.
- *
- * @param onBack leaves the screen without starting a game.
- * @param onCreated receives the new game's UID so the host can open it.
+ * Opponent picker for a new game; [onAddFriends] fires from the no-friends
+ * empty state, [onCreated] receives the new game's id.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -20,13 +20,9 @@ packages = ../../packages/android
 
 all: apk
 
-# Build the signed release APK. Gradle handles incremental compilation, so this
-# is cheap when nothing changed; the signing config lives in app/build.gradle.kts.
-#
 # Every module's preBuild depends on the root checkLocaleCompleteness task, so
-# this FAILS on an incomplete or mis-filled string catalogue rather than shipping
-# one. `make locales` runs the same check on its own when you want the answer
-# without waiting for a build.
+# this fails on an incomplete string catalogue rather than shipping one. `make
+# locales` runs the same check alone.
 apk:
 	./gradlew :app:assembleRelease
 
@@ -44,33 +40,25 @@ clean:
 # --------------------------------------------------------------------------
 
 # Build the signed APK, stage it into the published packages tree with a
-# matching versions.json, then publish to yuzu, which serves the static tree.
-# Target the stable SSH alias (root@yuzu) with its pinned key in known_hosts —
-# NOT packages.mochi-os.org, whose A/AAAA have moved between hosts and present
-# a host key that fails strict checking.
+# matching versions.json, then publish to yuzu. Target the root@yuzu SSH alias
+# with its pinned key - NOT packages.mochi-os.org, whose address has moved
+# between hosts and presents a host key that fails strict checking.
 release: apk
 	mkdir -p $(packages)
-	# Two copies: the stable name for humans clicking a download link, and a
-	# version-stamped name for the in-app updater. The updater resumes a
-	# partial download with a Range request, sometimes across days, so its
-	# target must be immutable — appending the tail of a newly-published APK
-	# onto the partial of the previous one splices two files into a corrupt
-	# APK of exactly the expected length. Pruned to the current version.
-	#
-	# The stable name is a relative symlink to the stamped file, not a second
-	# copy, so the 42MB APK is uploaded once rather than twice. Relative and
-	# naming a file in this same directory: the server opens it through os.Root
-	# and refuses a link that leaves the served directory.
+	# The version-stamped name must be immutable: the updater resumes a partial
+	# download with a Range request, so appending a new APK's tail onto the
+	# previous one's partial splices a corrupt file of exactly the expected length.
+	# The stable name is a relative symlink to it, naming a file in this same
+	# directory - the server opens it through os.Root and refuses a link that
+	# leaves the tree.
 	rm -f $(packages)/mochi-*.apk
 	cp $(apk) $(packages)/mochi-$(version).apk
 	ln -sfn mochi-$(version).apk $(packages)/mochi.apk
 	@sha=`sha256sum $(apk) | cut -d' ' -f1`; size=`wc -c < $(apk) | tr -d ' '`; \
 	  printf '{"tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
 	  '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
-	# Two passes: rsync creates a symlink up front but transfers the file it
-	# points at minutes later, so a single pass would leave the download URL
-	# pointing at nothing for the whole upload. The first pass carries the new
-	# APK while the previous one stays in place and the existing link keeps
-	# resolving; the second repoints the link once its target is there.
+	# Two passes: rsync creates a symlink up front but transfers its target minutes
+	# later, so a single pass leaves the download URL pointing at nothing for the
+	# whole upload; the second repoints the link.
 	rsync -av --exclude=/mochi.apk $(packages)/ root@yuzu:/srv/packages/android/
 	rsync -av $(packages)/ root@yuzu:/srv/packages/android/

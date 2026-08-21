@@ -22,17 +22,14 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import org.mochios.android.R
 
 /**
- * The longest caption the editor accepts. Matches the bound the server's
- * attachment library holds peer captions to, so a caption that saves locally
- * is never silently truncated when it federates.
+ * Longest caption the editor accepts. Matches the server's bound, so a caption
+ * that saves locally is not truncated when it federates.
  */
 private const val CAPTION_MAXIMUM = 1000
 
 /**
- * The caption editor for one attachment. Saving an empty text removes the
- * caption; there is no separate control for that. Shared by the feeds and
- * forums compose screens and the wikis attachments browser, so the three
- * apps caption the same way.
+ * Caption editor for one attachment. Saving empty text removes the caption;
+ * there is no separate control for that.
  */
 @Composable
 fun AttachmentCaptionDialog(

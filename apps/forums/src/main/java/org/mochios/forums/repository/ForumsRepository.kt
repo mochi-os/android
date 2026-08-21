@@ -51,10 +51,10 @@ class ForumsRepository @Inject constructor(
     private val text = "text/plain".toMediaTypeOrNull()
 
     /**
-     * Emits the forum id a post was just created in. The forum screen listens so
-     * it can pull the post into its list as the composer closes over it. A
-     * back-stack result would be tidier, but `NavBackStackEntry.savedStateHandle`
-     * is a different handle from the one injected into the ViewModel.
+     * Forum id a post was just created in; the forum screen pulls the post in
+     * as the composer closes. Not a back-stack result:
+     * `NavBackStackEntry.savedStateHandle` is not the handle injected into the
+     * ViewModel.
      */
     private val _postCreated = MutableSharedFlow<String>(extraBufferCapacity = 1)
     val postCreated: SharedFlow<String> = _postCreated.asSharedFlow()
@@ -179,11 +179,6 @@ class ForumsRepository @Inject constructor(
         return response
     }
 
-    /**
-     * Create a post whose attachments come from content-provider [uris] (the
-     * system file picker) rather than files on disk. Each URI is cached to a
-     * temp file and streamed as an `attachments` part, in the order given.
-     */
     suspend fun createPostFromUris(
         forumId: String,
         title: String,
@@ -213,12 +208,9 @@ class ForumsRepository @Inject constructor(
     }
 
     /**
-     * Edit a post's title, body and attachments. [keptAttachmentIds] lists the
-     * existing attachments to retain, in the order they should appear; each file
-     * in [newFileUris] is read from the picker and appended. The `order` part
-     * ties the two together — kept ids followed by a `new:N` marker per new file
-     * — mirroring [editCommentFromUris]. Passing a null [keptAttachmentIds] with
-     * no new files omits `order` entirely, leaving the attachments untouched.
+     * Edit title, body and attachments. The `order` part is [keptAttachmentIds]
+     * followed by a `new:N` marker per new file; a null [keptAttachmentIds]
+     * with no new files omits it, leaving attachments untouched.
      */
     suspend fun editPostFromUris(
         forumId: String,
@@ -295,12 +287,9 @@ class ForumsRepository @Inject constructor(
 
     /**
      * Create a comment whose attachments come from content-provider [uris] (the
-     * system file picker) rather than files on disk.
-     */
-    /**
-     * [attachment] anchors a top-level comment to one of the post's own
-     * attachments (its id); the server refuses any other id. A reply inherits
-     * its parent's context and takes no anchor.
+     * system file picker) rather than files on disk. [attachment] anchors a
+     * top-level comment to one of the post's own attachment ids; the server
+     * refuses any other, and replies take no anchor.
      */
     suspend fun createCommentFromUris(
         forumId: String,

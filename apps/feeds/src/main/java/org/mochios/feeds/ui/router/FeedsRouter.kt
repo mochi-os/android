@@ -16,14 +16,8 @@ import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.ui.components.LastViewedStore
 
 /**
- * Start destination for the feeds nav graph. Reads the last-viewed feed
- * from [LastViewedStore] and immediately navigates the caller's
- * `onResolve` callback to the corresponding [FeedsApp.FEED] route, or to
- * the [LastViewedStore.ALL] aggregate view when no prior visit is
- * recorded (cold install, data clear, fresh login).
- *
- * Stays on screen for one frame only — a tiny [CircularProgressIndicator]
- * masks the navigation handoff so the user never sees a blank surface.
+ * Start destination: routes to the last-viewed feed, or the aggregate when none
+ * is recorded; the spinner masks the one-frame handoff.
  */
 @Composable
 fun FeedsRouter(onResolve: (feedId: String) -> Unit) {

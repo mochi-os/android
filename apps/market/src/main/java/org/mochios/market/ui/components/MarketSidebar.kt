@@ -50,29 +50,8 @@ import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 
 /**
- * Drawer body for the market app's left rail. Mirrors the wikis sidebar
- * pattern — top-level market screens wrap their body in [androidx.compose
- * .material3.ModalNavigationDrawer] with this composable as the drawer
- * content so the hamburger opens the same navigation choices everywhere.
- *
- * Sections (top → bottom):
- *   - Browse  : Home
- *   - Buying  : Saved (badge slot), Purchases, Bids, Subscriptions
- *   - Selling : Listings, Sales*, Subscribers*
- *               (* = seller-gated; only rendered when [isSeller] is true)
- *   - Messages: Inbox (unread-badge slot), Reviews
- *   - Settings: Account
- *
- * Active row is highlighted by matching the render route against
- * [currentRoute]. Navigation requests are emitted via [onNavigate] which
- * is wired to a `NavController.navigate(route)` call by the host screen —
- * the [navController] parameter is kept on the signature for callers that
- * prefer to route directly through it in later passes.
- *
- * Badge slots:
- *   - [savedBadge] for the count of saved listings with price drops or
- *     ending-soon auctions (zero hides the badge).
- *   - [inboxUnreadBadge] for unread message threads.
+ * Drawer body shared by the top-level market screens. [savedBadge] counts saved
+ * listings with price drops or ending-soon auctions; zero hides it.
  */
 @Composable
 fun MarketSidebar(

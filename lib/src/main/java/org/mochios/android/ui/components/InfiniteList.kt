@@ -39,13 +39,9 @@ fun <T> InfiniteList(
         return
     }
 
-    // Derive only the scroll position, which depends solely on the stably
-    // remembered listState. [hasMore] and [isLoading] are plain parameters, so
-    // reading them inside this unkeyed remember would capture the values from
-    // the composition that created it and never see another: the block is
-    // reached whenever the list is non-empty *or* loading, so a caller that
-    // passes its first-load flag composes here with isLoading = true, freezes
-    // it, and can never load a second page. Read them fresh as effect keys.
+    // Derive only the scroll position: [hasMore] and [isLoading] are plain
+    // parameters, and reading them inside this unkeyed remember would freeze
+    // the first composition's values forever. Read them fresh as effect keys.
     val reachedEnd by remember {
         derivedStateOf {
             val layoutInfo = listState.layoutInfo

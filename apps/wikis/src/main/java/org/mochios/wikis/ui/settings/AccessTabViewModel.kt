@@ -30,19 +30,8 @@ import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
 /**
- * UI state for [AccessTab]. The access rules list mirrors the response
- * from `GET {wiki}/-/access`. User-search and group-list results back the
- * Add Access dialog.
- */
-/**
- * One row in the access list: a subject and its derived access level.
- *
- * The server stores access as raw permission rules — a single `allow` rule
- * (operation = "view" / "edit") for granted subjects, or one `deny` rule per
- * operation for explicitly-blocked ("none") subjects. We group those raw rules
- * back to one row per subject and derive the level the same way web's
- * `AccessList` does: any deny rule means "none"; otherwise the granted
- * operation is the level.
+ * One row in the access list. The server stores raw rules: any deny rule for a
+ * subject means "none", otherwise the granted operation is the level.
  */
 data class AccessSubject(
     val subject: String,
@@ -59,13 +48,6 @@ data class AccessTabUiState(
     val groups: List<Group> = emptyList(),
 )
 
-/**
- * Group the raw access rules into one [AccessSubject] per subject and derive
- * each subject's level. Mirrors web's grouping in `access-list.tsx`:
- * `grant == 0` (a deny rule) collapses the whole subject to "none"; otherwise
- * the granted operation is the level. Subjects are sorted owners-first then
- * by display name.
- */
 internal fun groupAccessRules(rules: List<AccessRule>): List<AccessSubject> {
     val order = mutableListOf<String>()
     val grouped = linkedMapOf<String, MutableList<AccessRule>>()

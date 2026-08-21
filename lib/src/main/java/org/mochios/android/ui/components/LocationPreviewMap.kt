@@ -39,9 +39,8 @@ data class MapMarkerPoint(
 )
 
 /**
- * Read-only map preview showing one or more coloured markers, optionally joined
- * by a route line. Used to preview a post's chosen check-in or travelling
- * location. Points at (0, 0) are ignored.
+ * Read-only map preview: coloured markers, optionally joined by a route line.
+ * Points at (0, 0) are ignored.
  */
 @Composable
 fun LocationPreviewMap(

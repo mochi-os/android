@@ -57,10 +57,8 @@ import org.mochios.market.model.Interval
 import org.mochios.market.model.PricingModel
 
 /**
- * Stripe per-currency minimum charges in minor units. Mirrors the
- * `STRIPE_MINIMUMS` table in `apps/market/web/src/lib/format.ts`. Used to
- * display an inline validation warning when the seller enters a price below
- * what Stripe will accept (50 cents / 50 pence / 50 yen).
+ * Stripe per-currency minimum charges in minor units; mirrors `STRIPE_MINIMUMS`
+ * in `apps/market/web/src/lib/format.ts`.
  */
 val STRIPE_MINIMUMS: Map<Currency, Long> = mapOf(
     Currency.GBP to 50L,
@@ -69,12 +67,6 @@ val STRIPE_MINIMUMS: Map<Currency, Long> = mapOf(
     Currency.JPY to 50L,
 )
 
-/**
- * Pricing-model picker and the conditional fields each model surfaces. Mirrors
- * `pricing-model-selector.tsx` on web — a 4-way radio choice at the top
- * (Fixed / PWYW / Subscription / Auction) plus the model-specific fields
- * (currency, price, billing interval, reserve / instant-buy, duration).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PricingModelSelector(
@@ -347,9 +339,8 @@ private fun PriceField(
 }
 
 /**
- * Optional future auction start time. Tapping the calendar icon picks a date
- * then a time (combined in the device's local zone, matching web's
- * datetime-local). Clearing reverts to "start on publish" (opensAt = null).
+ * Date then time, combined in the device's local zone like web's
+ * datetime-local; cleared means start on publish.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

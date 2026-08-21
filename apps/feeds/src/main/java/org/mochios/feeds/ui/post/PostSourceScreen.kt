@@ -176,11 +176,8 @@ fun PostSourceScreen(
     BottomSheetScaffold(
         scaffoldState = scaffoldState,
         sheetPeekHeight = 72.dp,
-        // Default DragHandle wraps the pill in 22dp of vertical padding (44dp
-        // total) which both eats peek space (clipping the comment-count row)
-        // and centres the pill low in the visible area. Custom handle: pill
-        // pinned to the top with extra bottom padding, lifting it clear of
-        // the screen edge while keeping the peek thin.
+        // Custom handle: the default DragHandle pads the pill to 44dp, which
+        // eats the 72dp peek and clips the comment-count row.
         sheetDragHandle = {
             Box(
                 modifier = Modifier
@@ -241,11 +238,9 @@ fun PostSourceScreen(
                                 leadingIcon = { Icon(Icons.Outlined.OpenInBrowser, contentDescription = null) },
                             )
                             if (permissions.manage) {
-                                // Sources is manager-only, like the feed screen's
-                                // entry. post.source.url is the ingestion source
-                                // (RSS XML) URL — the key the Sources list scrolls
-                                // to — not the article URL in this screen's
-                                // sourceUrl parameter.
+                                // post.source.url is the ingestion (RSS XML)
+                                // URL the Sources list scrolls to, not this
+                                // screen's article sourceUrl.
                                 post?.source?.url?.takeIf { it.isNotEmpty() }?.let { ingestionUrl ->
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_tab_sources)) },
@@ -331,13 +326,10 @@ fun PostSourceScreen(
                         settings.builtInZoomControls = true
                         settings.displayZoomControls = false
                         settings.userAgentString = CHROME_USER_AGENT
-                        // The article is arbitrary third-party content on an
-                        // unrestricted URL, so an HTTPS page keeps the
-                        // guarantee it came with: no subresource loads over
-                        // plain HTTP, where anyone on the path could replace
-                        // it. The cost is a publisher still serving CDN images
-                        // over HTTP renders without them, which is a visibly
-                        // broken image rather than a silently substituted one.
+                        // Third-party content on an unrestricted URL: never let
+                        // an HTTPS page load subresources over plain HTTP.
+                        // Publishers still serving images over HTTP render them
+                        // broken.
                         settings.mixedContentMode =
                             android.webkit.WebSettings.MIXED_CONTENT_NEVER_ALLOW
                         webViewClient = object : WebViewClient() {

@@ -68,14 +68,6 @@ import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.`object`.FieldEditor
 import org.mochios.android.R as MochiR
 
-/**
- * Full-screen create form for a CRM object: the object's type, its parent when
- * the design calls for one, every field the type defines, and any files to
- * attach. The top bar carries the back button and Create sits in the bottom bar.
- *
- * @param onBack leaves the screen without creating anything.
- * @param onCreated hands the new object's id to the caller so it can open it.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateObjectScreen(
@@ -110,10 +102,7 @@ fun CreateObjectScreen(
             return parentClasses.isEmpty() ||
                 objects.any { obj -> obj.objectClass in parentClasses }
         }
-        // The view's own classes, but only ones the CRM still defines. A view
-        // that names a deleted class used to hand its id straight through:
-        // Create looked enabled, the type box was blank, no fields rendered,
-        // and the post failed on a class the server never had.
+        // Only classes the CRM still defines: a view may name a deleted class.
         val activeView = uiState.activeView
         val preferred = if (activeView != null && activeView.classes.isNotEmpty()) {
             activeView.classes.mapNotNull { id -> classes.find { cls -> cls.id == id } }
@@ -187,24 +176,14 @@ fun CreateObjectScreen(
         pendingFiles.addAll(uris)
     }
 
-    // Seed defaults whenever the selected class changes: clear prior values and
-    // auto-select the first option for any required enumerated field.
-    //
-    // The grouping field is deliberately not pre-filled. It used to be seeded to
-    // the first column option, but only on board views, so the same form set a
-    // stage on a board and left it empty on a table — and on a board it picked
-    // the first stage rather than anything the user had in view. A silently
-    // defaulted pipeline stage is worse than an empty one, so the field is left
-    // to the picker below, which renders it like any other enumerated field.
-    // Creating from a board column still sets its stage: that path opens this
-    // screen with the column in presetValues, seeded below.
+    // Seed defaults when the selected class changes: clear prior values, then
+    // auto-select the first option of required enumerated fields. The grouping
+    // field is deliberately not pre-filled - a board column's "+" sets it via
+    // presetValues.
     LaunchedEffect(selectedClassId) {
         fieldValues.clear()
-        // Whatever started the create gets first say — a board column's "+"
-        // puts its own stage here — and the required-field defaults below only
-        // fill what it left blank. Values the chosen class cannot take are
-        // dropped: options are defined per class, so on a board that mixes
-        // classes another class's option is invalid here.
+        // Presets first (a board column's "+" sets its stage); the
+        // required-field defaults below fill only what they left blank.
         viewModel.presetValues.forEach { (fieldId, value) ->
             if (viewModel.usableValue(selectedClassId, fieldId, value)) {
                 fieldValues[fieldId] = value
@@ -383,9 +362,8 @@ fun CreateObjectScreen(
                                             text = { Text(cls.name) },
                                             onClick = {
                                                 selectedClassId = cls.id
-                                                // Reset parent when class
-                                                // changes; the old selection may
-                                                // no longer be allowed.
+                                                // The old parent may not be
+                                                // allowed for the new class.
                                                 selectedParentId = null
                                                 classExpanded = false
                                             },
@@ -396,11 +374,8 @@ fun CreateObjectScreen(
                             Spacer(modifier = Modifier.height(16.dp))
                         }
 
-                        // Parent picker — only shown when the selected class has
-                        // allowed parent classes per crm.hierarchy. Every entry
-                        // is a real object: a class the design gives parent
-                        // classes is a child type, so creating one at the root
-                        // is not on offer.
+                        // Parent picker, only for classes the hierarchy gives
+                        // parents. No root entry: such a class is a child type.
                         if (parentCandidates.isNotEmpty()) {
                             val selectedParentLabel = selectedParentId?.let { id ->
                                 objects.firstOrNull { obj -> obj.id == id }

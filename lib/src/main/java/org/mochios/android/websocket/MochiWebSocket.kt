@@ -33,14 +33,9 @@ class MochiWebSocket @Inject constructor(
     // timer into opening a second socket for the same key.
     private val generation = ConcurrentHashMap<String, Int>()
 
-    // Derived client with WebSocket ping keepalive. The injected
-    // OkHttpClient is shared with regular HTTP requests where pings
-    // are pointless, so we layer pingInterval on top for our WS calls
-    // only. 5 minutes is a sweet spot — short enough to keep most
-    // carrier-NAT translation tables alive (typical TCP idle is
-    // 10-15 min) and to detect dead connections within a single
-    // ping cycle, long enough that battery cost is negligible
-    // (~30 bytes per ping per connection per 5min).
+    // Derived client so the ping keepalive applies to WebSockets only, not the
+    // shared HTTP client. 5 minutes stays inside typical carrier-NAT idle
+    // timeouts (10-15 min) at negligible battery cost.
     private val wsClient: OkHttpClient by lazy {
         okHttpClient.newBuilder()
             .pingInterval(5, TimeUnit.MINUTES)
@@ -101,12 +96,9 @@ class MochiWebSocket @Inject constructor(
     }
 
     /**
-     * Reconnects every subscribed key whose socket is down, right now. A socket
-     * that dropped while the app was in the background reconnects only through
-     * its backoff timer - up to five minutes out, and Doze stretches the wait
-     * further - so on returning to the foreground the app could sit with a
-     * dead socket and miss every event until the timer fired. Call this from
-     * onResume; it is a no-op for keys whose socket is already up.
+     * Reconnects every subscribed key whose socket is down, right now. Call
+     * from onResume: backoff alone can be five minutes out, longer under Doze.
+     * A no-op for keys whose socket is already up.
      */
     fun reconnectNow() {
         for ((key, callbacks) in subscribers) {
@@ -134,13 +126,10 @@ class MochiWebSocket @Inject constructor(
             .replace("http://", "ws://")
             .trimEnd('/')
         val storedToken = tokens[key]
-        // The token goes in a header, never the query. A browser cannot set one
-        // on a WebSocket handshake, which is why the server also accepts ?token=
-        // — but OkHttp can, and the URL form leaks: RealWebSocket.connect()
-        // preserves the client's application interceptors, so the unguarded
-        // HttpLoggingInterceptor writes the full URL, and with it a year-long
-        // credential, into logcat on release builds. The server accepts
-        // Authorization: Bearer at websockets.go:33-44.
+        // The token goes in a header, never the query: OkHttp's WebSocket call
+        // keeps the application interceptors, so the logging interceptor would
+        // write the credential to logcat. The server accepts Bearer and
+        // ?token=.
         val request = Request.Builder()
             .url(socketUrl(wsUrl, fingerprint))
             .apply { if (storedToken != null) header("Authorization", "Bearer $storedToken") }
@@ -148,11 +137,8 @@ class MochiWebSocket @Inject constructor(
 
         reconnecting[key] = true
 
-        // Create-and-store atomically. A raw reconnect thread and subscribe()
-        // (or two racing reconnects) can otherwise both open a socket for the
-        // same key, and only the last is retained — the orphan keeps failing
-        // and reconnecting, doubling the connection loop. computeIfAbsent makes
-        // this a no-op when a socket already exists for the key.
+        // Create-and-store atomically: two racing connects would otherwise both
+        // open a socket, and the unretained one keeps reconnecting forever.
         sockets.computeIfAbsent(key) { _ ->
             wsClient.newWebSocket(request, object : WebSocketListener() {
                 override fun onOpen(webSocket: WebSocket, response: Response) {
@@ -206,11 +192,8 @@ class MochiWebSocket @Inject constructor(
         if (reconnecting[key] != true) return
         if (subscribers[key].isNullOrEmpty()) return
 
-        // Exponential backoff with ±20% jitter, capped at 5 minutes.
-        // 1s → 2s → 4s → 8s → 16s → 32s → 64s → 128s → 256s → 300s (cap).
-        // Jitter spreads thundering herds when many clients reconnect
-        // after a server restart. Backoff prevents a tight loop when the
-        // server is genuinely down.
+        // Exponential backoff, 1s doubling to a 300s cap, with plus/minus 20%
+        // jitter to spread reconnects after a server restart.
         val attempt = backoffAttempts.compute(key) { _, prev -> (prev ?: 0) + 1 }!!
         val baseMs = min(1000L shl (attempt - 1).coerceIn(0, 8), 300_000L)
         val jitterMs = (baseMs * (Math.random() * 0.4 - 0.2)).toLong()
@@ -234,9 +217,8 @@ class MochiWebSocket @Inject constructor(
 }
 
 /**
- * Handshake URL for a subscription. Carries no credential: the token travels in
- * an Authorization header, because the URL is written to logcat by the client's
- * logging interceptor, which survives into the WebSocket call.
+ * Handshake URL for a subscription. Carries no credential: the logging
+ * interceptor writes the URL to logcat, so the token goes in a header.
  */
 internal fun socketUrl(wsBase: String, fingerprint: String): String =
     "$wsBase/_/websocket?key=$fingerprint"

@@ -57,14 +57,6 @@ import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.RatingStars
 
-/**
- * Two-tab reviews surface. Mirrors web's `apps/market/web/src/features/
- * reviews/ReviewsScreen`. The "Received" tab lists reviews where the
- * current identity is the subject (with an inline response composer if
- * none was filed yet); the "Sent" tab lists reviews the current identity
- * authored (with the seller's response when it's there). Both tabs use
- * [InfiniteList] for pagination.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReviewsScreen(

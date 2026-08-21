@@ -12,10 +12,6 @@ import org.mochios.android.push.notificationChannelFor
 
 class MochiPushDispatcher : MochiPushReceiver() {
 
-    // Shared with the FCM path. This used to be a ten-way `when` over the
-    // per-module channel constants, which are all just their own slug, so it
-    // was an elaborate identity that could — and did — drift from the FCM
-    // copy. It also had no arm for people or crm.
     override fun channelId(context: Context, instance: String, app: String, link: String): String =
         notificationChannelFor(app, link)
 

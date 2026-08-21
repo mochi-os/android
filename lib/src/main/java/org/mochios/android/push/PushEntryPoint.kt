@@ -14,11 +14,9 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.notifications.NotificationsRepository
 
 /**
- * Shared Hilt entry point for the push package. Its components are instantiated
- * by the Android framework ([MochiPushReceiver], [MochiFirebaseMessagingService])
- * or are DI-less objects ([FcmRegistrar], [PushTransport]), so they reach the
- * graph via [dagger.hilt.android.EntryPointAccessors] rather than constructor
- * injection. Callers use only the accessors they need.
+ * Hilt entry point for the push package: its classes are framework-instantiated
+ * or DI-less, so they reach the graph via EntryPointAccessors rather than
+ * injection.
  */
 @EntryPoint
 @InstallIn(SingletonComponent::class)

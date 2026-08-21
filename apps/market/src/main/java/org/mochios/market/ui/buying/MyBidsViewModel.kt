@@ -19,9 +19,7 @@ import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 /**
- * Tab filters for [MyBidsScreen]. The `wire` value is what the server's
- * `bids/mine` endpoint expects in the `status` param; `null` means "no
- * filter" and is sent as an absent query.
+ * `wire` is the `status` param for `bids/mine`; `null` sends none.
  */
 enum class BidsFilter(val wire: String?) {
     ALL(null),

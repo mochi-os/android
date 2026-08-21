@@ -9,10 +9,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * Game chat arrives by two routes. REST rows carry a server uid; WebSocket
- * frames carry no id, so the client synthesises one — and deduplicating on
- * that synthetic id both fails to match the REST row (duplicate) and collides
- * between two messages from one sender in the same second (silent loss).
+ * Game chat arrives by REST (server uid) and by WebSocket (no id, so the client
+ * synthesises one). A synthetic id neither matches the REST row nor stays
+ * unique within one second, so these key on content.
  */
 class MessagesTest {
 
@@ -38,11 +37,6 @@ class MessagesTest {
         assertEquals(listOf(fromRest), merge(listOf(fromRest), listOf(fromSocket)))
     }
 
-    /**
-     * The loss. Two messages from one sender in the same second synthesise the
-     * same id, so an id-keyed guard drops the second. Keyed on content they
-     * are distinct, because the bodies differ.
-     */
     @Test
     fun `two messages from one sender in one second both survive`() {
         val first = Message("ws-message-100-alice", 100, "hello", "Alice")
@@ -121,10 +115,8 @@ class MessagesTest {
         appendDistinct(existing, incoming, key = { it.id })
 
     /**
-     * Feeds pages by offset over a time-decaying score and schedules a rescore
-     * of that column when page 1 is fetched, so page 2 legitimately re-sends
-     * rows. Appended bare these become duplicate LazyColumn keys and Compose
-     * throws.
+     * Feeds pages by offset over a time-decaying score and rescores that column
+     * when page 1 is fetched, so page 2 legitimately re-sends rows.
      */
     @Test
     fun `an overlapping page contributes only its new rows`() {
@@ -204,9 +196,8 @@ class MessagesTest {
     }
 
     /**
-     * The case where replacing is correct: no overlap means more than a page
-     * arrived while away, so stitching would show a contiguous list with an
-     * invisible gap in it. Losing scrollback is the better failure.
+     * No overlap means more than a page arrived while away; losing scrollback
+     * beats a hidden gap.
      */
     @Test
     fun `a page with no overlap replaces rather than leaving a hole`() {

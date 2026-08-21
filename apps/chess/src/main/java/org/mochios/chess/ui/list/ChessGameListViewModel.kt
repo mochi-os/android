@@ -24,23 +24,8 @@ import org.mochios.chess.ui.components.ChessSidebarGame
 import javax.inject.Inject
 
 /**
- * UI state for the chess game-list landing screen. Mirrors the web
- * `ChessLayout` + the route `/index.tsx` view body:
- *
- *  - [games] is the raw `Game` list fetched from `-/list`. Both the empty
- *    state and the visible card grid derive from this single list (and
- *    [activeSidebar] / [completedSidebar] are pre-computed sidebar
- *    projections so the drawer doesn't redo the work on every recomposition).
- *  - [identity] is the caller's entity ID — needed to resolve "the
- *    opponent" on every row. Captured from [SessionManager.boundIdentity]
- *    at load time so it stays stable for a session.
- *  - [error] is non-null when the initial `-/list` call failed; the UI
- *    surfaces it with a retry button.
- *  - [newGameDialogOpen] / [creating] back the new-game dialog the screen
- *    embeds. The dialog itself has its own ViewModel for the friends
- *    fetch, but the open/close flag and the cross-screen "OpenGame" event
- *    live here so the dialog's success path can drive navigation through
- *    the same event channel that any future success path uses.
+ * List-screen state; [activeSidebar] / [completedSidebar] are projections of
+ * [games] computed once per load.
  */
 data class ChessGameListUiState(
     val isLoading: Boolean = false,
@@ -54,9 +39,7 @@ data class ChessGameListUiState(
 )
 
 /**
- * Side-effect events from the list ViewModel. Mirrors the pattern in
- * `WikiListViewModel` — toasts and navigation are one-shot and shouldn't
- * persist in the UI state across recompositions.
+ * One-shot side effects (toasts, navigation) kept out of the UI state.
  */
 sealed class ChessGameListEvent {
     /** Show a transient string (already localised) in a snackbar. */
@@ -86,11 +69,6 @@ class ChessGameListViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Fetch the full game list. On success, also re-project the active /
-     * completed sidebar lists from the new data so the drawer reflects the
-     * same source of truth without an extra `LaunchedEffect`.
-     */
     fun load() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)

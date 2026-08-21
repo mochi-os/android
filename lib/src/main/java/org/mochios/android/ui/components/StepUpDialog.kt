@@ -52,14 +52,9 @@ private fun oauthLabel(key: String): String =
     OAUTH_LABELS[key] ?: key.replaceFirstChar { it.uppercase() }
 
 /**
- * Re-verifies the user with the same factor(s) they log in with (email code /
- * authenticator / passkey / linked third-party login) before a sensitive
- * account-security change, then hands the caller a single-use proof token via
- * [onVerified]. Mirrors lib/web's StepUpDialog.
- *
- * Render only while a step-up is in flight; it loads the user's factors and,
- * when email is the sole offered factor, auto-sends the code on first
- * composition. [onVerified] should clear whatever flag controls rendering.
+ * Re-verifies the user with their login factors before a sensitive account
+ * change and hands [onVerified] a single-use proof token. Render only while a
+ * step-up is in flight; it auto-sends the code when email is the only factor.
  */
 @Composable
 fun StepUpDialog(

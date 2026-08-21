@@ -24,19 +24,10 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
 /**
- * A slim single-line outlined text field for inline edit rows.
- *
- * Unlike [androidx.compose.material3.OutlinedTextField], this omits the 56 dp minimum
- * height and the wide default content padding, so it sits flush with an adjacent label
- * and action buttons in a [androidx.compose.foundation.layout.Row].
- *
- * @param value current text.
- * @param onValueChange invoked when the user edits the text.
- * @param modifier applied to the field; callers typically pass `Modifier.weight(1f)`.
- * @param enabled whether the field accepts input.
- * @param placeholder text shown when [value] is empty.
- * @param keyboardOptions software-keyboard configuration.
- * @param keyboardActions actions for the software keyboard (e.g. Done).
+ * Slim single-line outlined text field for inline edit rows. Unlike
+ * [androidx.compose.material3.OutlinedTextField] it omits the 56 dp minimum
+ * height and the wide content padding, so it sits flush beside a label and
+ * buttons.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

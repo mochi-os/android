@@ -32,19 +32,8 @@ import org.mochios.staff.ui.accounts.PendingAccountAction
 import org.mochios.staff.ui.components.StaffAuditTimeline
 
 /**
- * Modal confirmation dialog for the four moderation actions on a marketplace
- * account (`SUSPEND`, `UNSUSPEND`, `BAN`, `UNBAN`). Mirrors the action-dialog
- * block in `apps/staff/web/src/features/accounts/accounts-page.tsx`:
- *
- *   - Title and confirm-button label reflect the action type.
- *   - Reason field is shown for SUSPEND and BAN (required server-side; the
- *     dialog blocks submission with a blank value) and optional for the
- *     UNSUSPEND / UNBAN counterparts.
- *   - Notes field is shown for every action (optional).
- *   - The per-account audit timeline lives inline via [StaffAuditTimeline]
- *     so the moderator sees prior actions before clicking through.
- *   - Submission is delegated to [onSubmit]; the parent ViewModel performs
- *     the API call and drives in-place row replacement on success.
+ * Confirmation dialog for the four account moderation actions. SUSPEND and BAN
+ * require a reason server-side.
  */
 @Composable
 fun AccountActionDialog(

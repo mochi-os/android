@@ -49,16 +49,8 @@ import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.model.ProjectView
 
 /**
- * Non-interactive preview of how the configured view would lay objects out.
- * Uses synthetic sample objects so the preview shows interesting variety
- * even on a project with no real data. Mirrors the web's
- * `apps/projects/web/src/features/editor/components/design-preview.tsx`
- * but compressed for phone screens: smaller cards, narrower columns, and
- * a single rendered view at a time.
- *
- * The preview is intentionally rebuilt from raw values (no shared hooks
- * with `BoardView` / `TreeView`), so it has no interactive state and is
- * cheap to recompose on every config edit.
+ * Non-interactive preview of the configured view, drawn from synthetic sample
+ * objects so it shows variety on an empty project.
  */
 @Composable
 fun DesignPreview(
@@ -504,11 +496,8 @@ private fun parsePreviewColor(hex: String): Color? {
 }
 
 /**
- * Build a small set of synthetic objects that exercise the configured view.
- * Targets ~5 objects, varied across the column field's options (so the
- * board has cards in multiple columns) and across the border field's
- * options (so border colour shows variety). One sample is given a parent
- * so tree previews show nesting.
+ * About five synthetic objects spread across the column and border options, one
+ * of them parented so tree previews nest.
  */
 private fun buildSampleObjects(
     project: ProjectDetails,

@@ -137,11 +137,8 @@ import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
- * Chat detail screen wrapped in a [FeatureListDrawer]. The drawer holds
- * the user's chat list (so swiping in from the left switches chats
- * directly without an intervening list page) plus actions (New chat,
- * Logout). When [chatId] is empty (first launch with no recorded
- * last-viewed), the drawer auto-opens over a "pick a chat" placeholder.
+ * Chat detail inside a [FeatureListDrawer] holding the chat list; an empty
+ * [chatId] opens the drawer over a placeholder.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -169,11 +166,8 @@ fun ChatScreen(
     LaunchedEffect(chatId) {
         if (chatId.isNotBlank()) {
             LastViewedStore.set(context, CHAT_FEATURE, chatId)
-            // Dismiss any system-tray push notifications targeting this
-            // chat. The server-side clear/object call inside chat.star's
-            // action_view marks the bell row read but doesn't reach the
-            // status bar; this closes that gap so opening a chat
-            // directly (without tapping the push) also clears the tray.
+            // The server's mark-read does not reach the status bar; clear this
+            // chat's tray notifications too.
             SystemNotifications.cancelFor(context, "chat", chatId)
         }
     }
@@ -732,11 +726,6 @@ private fun ChatContent(
     }
 }
 
-/**
- * Build an [AnnotatedString] of [text] with every case-insensitive occurrence
- * of [query] painted on a yellow background (black text for contrast), used to
- * highlight search hits inline. Returns the plain text when [query] is blank.
- */
 private fun highlightQuery(text: String, query: String): AnnotatedString {
     val needle = query.trim()
     if (needle.isEmpty()) return AnnotatedString(text)
@@ -760,9 +749,8 @@ private fun highlightQuery(text: String, query: String): AnnotatedString {
 }
 
 /**
- * The LazyColumn item index of a message id within the loaded list, accounting
- * for the leading "load older" item and date separators. Returns -1 when the
- * message isn't currently loaded (so we can't scroll to it).
+ * LazyColumn index of [messageId], counting the load-older row and date
+ * headers; -1 when not loaded.
  */
 private fun messageLazyIndex(
     grouped: List<MessageListEntry>,
@@ -778,9 +766,8 @@ private fun messageLazyIndex(
 }
 
 /**
- * The index of the last item the message list emits: the optional load-older
- * row, then one item per entry in [grouped] — which interleaves date headers
- * with messages. Zero when there is nothing to show.
+ * Index of the last emitted item: the load-older row plus every entry in
+ * [grouped].
  */
 internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): Int {
     val leading = if (hasMore) 1 else 0
@@ -788,15 +775,8 @@ internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): I
 }
 
 /**
- * In-conversation "find" app bar: an auto-focused query field over the loaded
- * messages, plus a match counter and up/down navigation that scroll to and
- * highlight each hit. The conversation stays visible behind it (no results
- * overlay), mirroring a find-in-page bar.
- *
- * @param matchPosition 1-based index of the active match (0 when none).
- * @param matchCount total number of matches.
- * @param onUp jump to the previous (older) match.
- * @param onDown jump to the next (newer) match.
+ * Find-in-conversation bar over the loaded messages; [matchPosition] is
+ * 1-based, 0 when nothing matches.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -1247,9 +1227,7 @@ private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
 }
 
 /**
- * Adapt the chat server's reaction shape — a `{reaction: count}` map plus the
- * viewer's own reaction — into the lib [ReactionBar]'s `List<ReactionCount>`,
- * ordered most-reacted first so the visible pills show the top reactions.
+ * Server `{reaction: count}` map to [ReactionBar] rows, most-reacted first.
  */
 private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): List<ReactionCount> =
     counts.mapNotNull { (key, count) ->
@@ -1264,10 +1242,8 @@ internal sealed class MessageListEntry {
 }
 
 /**
- * Forward bottom sheet: a filterable list of the user's other active chats and
- * of friends without an existing direct chat. Tapping a chat forwards the open
- * messages there; tapping a friend forwards into their 1-on-1 chat, which the
- * server creates or reuses atomically.
+ * Forward sheet: other active chats plus friends without a direct chat; a
+ * friend target uses their 1-on-1 chat, which the server creates or reuses.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -1382,12 +1358,9 @@ private fun ForwardSectionHeader(text: String) {
 }
 
 /**
- * Split [messages] into day buckets, inserting a header at each boundary.
- *
- * [zone] must be the one the header is rendered in — LocalFormat's, not the
- * device's. They differ by default, because the timezone preference starts at
- * UTC, so grouping by the device zone put messages either side of midnight
- * under a header showing the wrong date.
+ * Split [messages] into day buckets with a header at each boundary. [zone] must
+ * be the zone the header is rendered in (LocalFormat's, which defaults to UTC),
+ * not the device's.
  */
 internal fun groupMessagesByDate(
     messages: List<ChatMessage>,

@@ -64,12 +64,6 @@ import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * Confirm-then-revert screen mirroring
- * `apps/wikis/web/src/features/wiki/revert-page.tsx`. The user can edit the
- * revert comment before pressing the destructive confirm button. On success
- * we toast and navigate to the (new revision of the) page.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PageRevertScreen(
@@ -244,11 +238,6 @@ class PageRevertViewModel @Inject constructor(
     )
     val uiState: StateFlow<PageRevertUiState> = _uiState.asStateFlow()
 
-    /**
-     * Set the revert comment. The first call after the screen renders also
-     * marks the field as seeded so the [LaunchedEffect] doesn't re-seed
-     * once the user has started editing.
-     */
     fun setComment(value: String, seeded: Boolean = false) {
         _uiState.value = _uiState.value.copy(
             comment = value,

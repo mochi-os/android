@@ -29,24 +29,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.people.R
 
-/**
- * Top-level navigable sections in the People app sidebar. Mirrors the web
- * sidebar (`apps/people/web/src/components/layout/people-layout.tsx`):
- * Friends, Invitations, Groups, Profile.
- */
 enum class PeopleSidebarSection { FRIENDS, INVITATIONS, GROUPS, PROFILE }
 
-/**
- * Drawer body for the People app's persistent left rail. Each top-level
- * People screen wraps its body in [androidx.compose.material3.ModalNavigationDrawer]
- * with this composable as the drawer content, so a hamburger menu in the
- * top-bar opens the same navigation choices everywhere.
- *
- * Highlights the row matching [current] so the active section is obvious;
- * tapping a row calls [onSelect] (callers typically close the drawer and
- * navigate). Detail screens (Group / Person view) deliberately don't use the
- * sidebar — their back button stays the only nav affordance.
- */
 @Composable
 fun PeopleSidebar(
     current: PeopleSidebarSection,

@@ -19,19 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 /**
- * App-wide [ModalBottomSheet] wrapper that keeps a sheet clear of the system
- * bars.
- *
- * The app runs edge to edge, so a plain expanded `ModalBottomSheet` reaches the
- * very top of the window and slides its first row under the status bar. This
- * stops the sheet below the status bar and pads its content above the
- * navigation bar. Use it instead of `ModalBottomSheet` everywhere.
- *
- * @param onDismissRequest Called when the user swipes the sheet away or taps the scrim.
- * @param sheetState Sheet state; defaults to a collapsible sheet.
- * @param containerColor Sheet background.
- * @param dragHandle Handle drawn at the top; pass null for sheets that own their header.
- * @param content Sheet body.
+ * App-wide [ModalBottomSheet] wrapper. The app runs edge to edge, so a plain
+ * expanded sheet slides its first row under the status bar; this insets it and
+ * pads content above the navigation bar. Use it instead of `ModalBottomSheet`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

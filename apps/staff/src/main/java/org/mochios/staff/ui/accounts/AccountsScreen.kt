@@ -72,20 +72,7 @@ import org.mochios.staff.ui.dialog.AccountActionDialog
 import org.mochios.staff.ui.dialog.AccountAuditDialog
 
 /**
- * Staff "Accounts" moderation screen body.
- *
- * Android port of `apps/staff/web/src/features/accounts/accounts-page.tsx`.
- * Two filter dropdowns (status + seller) and a debounced search input narrow
- * the list; each row exposes History / Suspend / Unsuspend / Ban / Unban
- * actions whose visibility tracks the account's current `status` field
- * exactly the same way the web page does.
- *
- * Mutating actions route through the dialog at [AccountActionDialog];
- * History opens the read-only [AccountAuditDialog].
- *
- * The drawer + topbar live in `StaffLayout`; this screen renders only the
- * filter row, list, and a per-screen snackbar overlay (toast events come
- * from the screen's own VM).
+ * Port of `apps/staff/web/src/features/accounts/accounts-page.tsx`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -364,12 +351,8 @@ private fun AccountActionRow(
 }
 
 /**
- * Verification-level chip. Mirrors the `VerifiedBadge` component in
- * `apps/staff/web/src/features/accounts/accounts-page.tsx` — a shield icon
- * plus an "L{level}" label so the chip stays readable at a glance instead of
- * the older opaque "v3" shorthand. Hidden entirely when [level] is zero
- * (unverified accounts don't get a chip at all, matching how the web table
- * omits the badge in that case after this redesign).
+ * Mirrors `VerifiedBadge` in
+ * `apps/staff/web/src/features/accounts/accounts-page.tsx`.
  */
 @Composable
 private fun VerifiedChip(level: Int) {
@@ -402,11 +385,6 @@ private fun VerifiedChip(level: Int) {
     }
 }
 
-/**
- * Small inline rating widget — five-star precision is overkill in the table
- * row, so we display "★ 4.7 (12)" instead. The web table uses the same
- * abbreviated form. Empty/zero ratings render as a placeholder dash.
- */
 @Composable
 private fun RatingMini(rating: Double, reviews: Long) {
     val format = LocalFormat.current

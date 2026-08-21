@@ -9,11 +9,9 @@ import com.google.gson.annotations.SerializedName
 import org.mochios.android.model.Attachment
 
 /**
- * A point-in-time snapshot of a forum post, stored server-side for the "Saved"
- * (read-later) feature. The schema matches the web client's snapshot so a post
- * saved on one client renders on the other — saved data syncs across the user's
- * devices via the forums app's per-user replication. Only the fields needed for
- * a read-only card are captured; the card links back to the live thread.
+ * Point-in-time snapshot of a forum post for the Saved (read-later) feature.
+ * The schema matches the web client's, so a post saved on one client renders on
+ * the other.
  */
 data class SavedSnapshot(
     val id: String = "",

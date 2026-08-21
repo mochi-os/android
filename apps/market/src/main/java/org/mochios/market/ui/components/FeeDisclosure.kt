@@ -22,15 +22,8 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.R
 
 /**
- * Static disclosure card showing the Mochi platform fee with a pointer
- * to Stripe's dashboard for processor fees.
- *
- * Per `feedback_dont_quote_third_party_rates` the processor side stays
- * deliberately vague — we don't embed Stripe percentages here because
- * they go stale and turn into lies. The platform fee is ours to quote,
- * Stripe's isn't.
- *
- * @param platformFeePercent Numerical platform fee (e.g. `5.0` for 5%).
+ * Quotes the Mochi platform fee only - never embed Stripe's rates, they go
+ * stale.
  */
 @Composable
 fun FeeDisclosure(

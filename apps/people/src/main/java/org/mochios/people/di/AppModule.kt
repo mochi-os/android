@@ -19,12 +19,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
-/**
- * Qualifier for the Retrofit instance bound to the people-app HTTP base
- * (`<server>/people/`). Lets the module coexist with other apps' Retrofits
- * (each scoped to its own base URL + per-app JWT) inside a single
- * SingletonComponent without colliding.
- */
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class PeopleRetrofit

@@ -20,9 +20,7 @@ import javax.inject.Qualifier
 import javax.inject.Singleton
 
 /**
- * Qualifier for the chess-app Retrofit instance. Each app gets its own
- * baseUrl + Bearer token interceptor scoped to the matching JWT, so the
- * qualifier keeps the providers in the SingletonComponent unambiguous.
+ * Qualifier for the chess Retrofit instance (own baseUrl and app JWT).
  */
 @Qualifier
 @Retention(AnnotationRetention.BINARY)

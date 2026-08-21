@@ -11,16 +11,10 @@ import kotlin.math.pow
 import kotlin.math.sin
 
 /*
- * OKLCH → sRGB. The server states its theme anchors in OKLCH, the same space
- * the web client renders from, so matching the web means converting rather than
- * approximating.
- *
- * Hue angles do not carry between colour spaces: OKLCH 255° is a blue but HSL
- * 255° is a violet; OKLCH 45° is a rust orange but HSL 45° is a gold. Passing a
- * server hue straight to Color.hsl rotated every theme away from the web by
- * 10–45°, which is what this file exists to stop.
- *
- * Conversion matrices are Björn Ottosson's Oklab reference values.
+ * OKLCH to sRGB. Hue angles do not carry between colour spaces - OKLCH 255° is
+ * blue where HSL 255° is violet - so a server hue must be converted, never
+ * passed to Color.hsl. Conversion matrices are Björn Ottosson's Oklab reference
+ * values.
  */
 
 /** Iterations of the chroma bisection used to pull a colour into sRGB. */
@@ -30,17 +24,9 @@ private const val GAMUT_STEPS = 16
 private const val GAMUT_EPSILON = 1e-4
 
 /**
- * Builds an sRGB [Color] from OKLCH coordinates.
- *
- * A [chroma] the sRGB gamut cannot hold is reduced until it fits, holding
- * [lightness] and [hue] — the same trade CSS Color 4 gamut mapping makes, and
- * the reason a vivid anchor desaturates instead of clipping into a visibly
- * different colour.
- *
- * @param lightness perceptual lightness, 0 (black) to 1 (white).
- * @param chroma colourfulness; 0 is grey and sRGB tops out near 0.37.
- * @param hue hue angle in degrees; wrapped, so callers may pass e.g. hue + 60.
- * @return the closest in-gamut sRGB colour.
+ * Builds an sRGB [Color] from OKLCH coordinates. A [chroma] the sRGB gamut
+ * cannot hold is reduced until it fits, holding [lightness] and [hue]; [hue] is
+ * wrapped, so callers may pass hue + 60.
  */
 fun oklch(lightness: Float, chroma: Float, hue: Float): Color {
     val l = lightness.coerceIn(0f, 1f).toDouble()

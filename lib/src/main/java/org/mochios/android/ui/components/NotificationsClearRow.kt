@@ -13,13 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.R
 
-/**
- * Single button that clears the current entity's notification state.
- * Shared across feeds, forums, projects settings screens.
- *
- * Caller supplies the click handler that hits its app's
- * `notifications/clear` endpoint.
- */
 @Composable
 fun NotificationsClearRow(
     onClick: () -> Unit,

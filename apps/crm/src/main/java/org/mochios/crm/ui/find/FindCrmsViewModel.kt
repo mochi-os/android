@@ -52,9 +52,8 @@ class FindCrmsViewModel @Inject constructor(
     }
 
     /**
-     * Seeds the subscribed set from the CRMs the user already has, so a
-     * directory hit they're subscribed to shows as such instead of offering a
-     * subscribe that would be a no-op.
+     * Seeds the subscribed set from the user's own CRMs so directory hits they
+     * already have are not offered Subscribe.
      */
     private fun loadSubscribed() {
         viewModelScope.launch {

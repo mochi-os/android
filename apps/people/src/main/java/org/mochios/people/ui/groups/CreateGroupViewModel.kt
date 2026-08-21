@@ -17,14 +17,6 @@ import org.mochios.android.api.toMochiError
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
-/**
- * State of the create-group screen.
- *
- * @property isCreating true while the create request is in flight.
- * @property error what went wrong on the last create attempt, if anything.
- * @property createdGroupId set to the new group's id after a successful create
- *   so the screen can navigate into it; cleared once consumed.
- */
 data class CreateGroupUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,

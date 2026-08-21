@@ -25,14 +25,8 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.R as MochiR
 
 /**
- * A single comment row, shared by the post-detail comment list and the feed
- * card's inline preview: header (avatar · name · time · edited), body,
- * attachments, a [ReactionBar], and an icon action row (reply, plus edit/delete
- * when [canManage]). Nested replies ([depth] > 0) are indented and marked with a
- * colored vertical thread bar whose colour cycles by depth.
- *
- * @param horizontalPadding leading/trailing inset; pass 0 when the host already
- *   provides horizontal padding (e.g. the feed card content column).
+ * One comment row, shared by the post-detail list and the feed card's inline
+ * preview. [horizontalPadding] is 0 when the host already insets.
  */
 @Composable
 internal fun CommentItem(
@@ -120,9 +114,7 @@ internal fun CommentItem(
 }
 
 /**
- * Flattens a nested comment tree into a depth-tagged list for a flat
- * [androidx.compose.foundation.lazy.LazyColumn], preserving order: each comment
- * is immediately followed by its (deeper) replies.
+ * Depth-tagged pre-order flattening of a comment tree, for a LazyColumn.
  */
 internal fun flattenComments(comments: List<Comment>, depth: Int): List<Pair<Comment, Int>> {
     val result = mutableListOf<Pair<Comment, Int>>()
@@ -134,9 +126,7 @@ internal fun flattenComments(comments: List<Comment>, depth: Int): List<Pair<Com
 }
 
 /**
- * Strips the limited HTML a comment body carries (line breaks and common
- * entities) back to plain text — used to seed the edit field from the rendered
- * body.
+ * Plain text from a comment body's limited HTML, to seed the edit field.
  */
 internal fun stripHtml(html: String): String {
     return html

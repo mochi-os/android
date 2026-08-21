@@ -10,29 +10,14 @@ import android.content.Context
 import android.util.Log
 
 /**
- * Helpers for the on-device system-tray notification surface so feature
- * modules can dismiss tray rows when the user has otherwise seen the
- * content. Mochi's server-side `clear/object` already marks the matching
- * notification row read on the server (and propagates via WebSocket),
- * but Android's status bar doesn't know about that — without an explicit
- * cancel the tray entry sits there even after the user has opened the
- * chat / forum / post the entry was about.
- *
- * Tag format set by [MochiFirebaseMessagingService.postSystemNotification]
- * and [MochiPushReceiver]'s UnifiedPush counterpart mirrors the server's
- * `app + "-" + category + "-" + object` shape, with one tray row per tag.
- * We match prefix (`app-`) and suffix (`-object`) so any category that
- * relayed this app+object pair is included.
+ * Cancels tray rows when the user has seen the content elsewhere: the server's
+ * `clear/object` marks the row read but Android's tray knows nothing about it.
+ * Tags are `<app>-<category>-<object>`, matched by prefix and suffix.
  */
 object SystemNotifications {
 
     private const val TAG = "MochiSysNotifs"
 
-    /**
-     * Cancel every active system-tray notification whose tag identifies
-     * the same (app, object) pair. Safe to call even when nothing is
-     * shown; no-ops on permission failures.
-     */
     fun cancelFor(context: Context, app: String, objectId: String) {
         if (app.isBlank()) return
         val nm = context.getSystemService(NotificationManager::class.java) ?: return
@@ -69,14 +54,9 @@ object SystemNotifications {
     private const val ALERT_WINDOW_MILLIS = 5_000L
 
     /**
-     * Whether a post of [tag] should make sound/vibration, damping bursts:
-     * the server coalesces each (app, topic, object) into one notification
-     * and re-sends it per event, so a batch — an RSS poll ingesting several
-     * posts at once — arrives as a rapid run of re-posts of the same tag.
-     * The first post of a burst alerts; further posts within the window
-     * should set `setOnlyAlertOnce(true)` so they update the tray silently.
-     * (`setOnlyAlertOnce` only mutes when the notification is still showing,
-     * so a row the user dismissed mid-window still alerts on re-post.)
+     * Whether a post of [tag] should alert. The server re-sends one coalesced
+     * notification per event, so a batch arrives as a run of re-posts; the
+     * first alerts and the rest should set `setOnlyAlertOnce(true)`.
      */
     fun shouldAlert(tag: String): Boolean {
         val now = android.os.SystemClock.elapsedRealtime()

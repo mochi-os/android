@@ -8,13 +8,6 @@ package org.mochios.words.engine
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-/**
- * The drop handler used to accept a tile onto a square that already held one,
- * on the board or as a pending placement. These pin what the engine does with
- * such a draft, which is why that had to be rejected at the drop rather than
- * tidied up afterwards: the damage is in the scoring and the rack, and the
- * board renders placements keyed by cell so the player sees a single tile.
- */
 class DoublePlacementTest {
 
     private fun emptyRow() = ".".repeat(BOARD_SIZE)
@@ -34,11 +27,6 @@ class DoublePlacementTest {
         assertEquals(3, draft.result!!.tilesUsed.length)
     }
 
-    /**
-     * Two placements on one square. tilesUsed counts the placement list while
-     * the board keeps one letter, so the rack pays twice for one tile — and
-     * the count is what the submit path spends.
-     */
     @Test
     fun `two placements on one square consume two rack tiles for one letter`() {
         val doubled = firstMove() + Placement(7, 7, 'A', 'A')

@@ -61,10 +61,8 @@ class NewChatViewModel @Inject constructor(
                 val data = repository.getNewChatData()
                 val friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
 
-                // Deep-link entry (mochi://chat/with?friend=X): skip the picker
-                // and drop straight into the 1-on-1. Reuse the friend's existing
-                // chat if there is one, otherwise create it, then forward to the
-                // conversation. isLoading stays true so the picker never flashes
+                // Deep-link entry with a friend: open or create the 1-on-1
+                // directly. isLoading stays true so the picker never flashes
                 // before the screen navigates away.
                 val target = preselectFriend
                     .takeIf { it.isNotBlank() }

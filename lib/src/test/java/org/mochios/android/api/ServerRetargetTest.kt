@@ -18,11 +18,9 @@ import retrofit2.Retrofit
 import retrofit2.http.GET
 
 /**
- * Retrofit fixes its `baseUrl` when the instance is built, and every Retrofit in
- * this client is a `@Singleton` built from whatever server URL was stored at
- * first injection — for the core one, before the user has had any chance to
- * choose a server. These cover the retarget that lets the origin follow the
- * user's current server anyway.
+ * Retrofit fixes its `baseUrl` at build time, and every Retrofit here is a
+ * `@Singleton` built before the user has chosen a server. These cover the
+ * retarget that makes the origin follow the current server anyway.
  */
 class ServerRetargetTest {
 

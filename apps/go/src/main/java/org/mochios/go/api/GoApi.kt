@@ -28,18 +28,9 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Retrofit binding for every action declared in `apps/go/app.json`. Mirrors the
- * shape of [org.mochios.go.web `gamesApi`][apps/go/web/src/api/games.ts]
- * one-for-one.
- *
- * All endpoints follow the standard Mochi `{"data": ...}` envelope, so the
- * return types are `Response<ApiResponse<T>>` and the repository unwraps
- * one envelope layer to surface either the inner payload or a typed
- * `MochiError`.
- *
- * Move / pass / send / create use JSON request bodies via `@Body` to match
- * the web `client.post(payload)` callers — the Starlark side reads inputs
- * via `a.input(...)` which is content-type agnostic.
+ * Retrofit binding for every action in `apps/go/app.json`, mirroring web's
+ * `gamesApi`. Mutations send JSON `@Body` like the web client; `a.input(...)`
+ * is content-type agnostic.
  */
 interface GoApi {
 

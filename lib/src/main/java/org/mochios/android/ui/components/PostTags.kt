@@ -46,13 +46,9 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 
 /**
- * A post tag as the shared tag UI needs it, independent of each module's own
- * wire model.
- *
- * @property qid      Entity id behind the tag; non-null tags can be tuned in the
- *                    user's interest model. Free-text tags render as plain labels.
- * @property interest -100..100 interest weight, colouring the label. Null when
- *                    the tag has no interest signal.
+ * A post tag as the shared tag UI needs it. [qid] is the entity behind the tag,
+ * null for free text; [interest] is a -100..100 weight, null when there is
+ * none.
  */
 data class TagItem(
     val id: String,
@@ -62,14 +58,9 @@ data class TagItem(
 )
 
 /**
- * Tag icon + count that opens a popup listing the post's tags. Entity-backed
- * (`qid`) tags expose interest tuning, [onRemoveTag] adds a per-tag delete, and
- * [onAddTag] puts a text field at the foot of the popup so a tag can be typed
- * without a second dialog. Mirrors web's PostTagsTooltip; shared by feeds and
- * forums.
- *
- * Pass null for a callback to hide the affordance the viewer lacks permission
- * for.
+ * Tag icon and count that opens a popup listing the post's tags; entity-backed
+ * tags expose interest tuning. Pass null for a callback to hide the affordance
+ * the viewer lacks permission for.
  */
 @Composable
 fun PostTagsButton(
@@ -231,10 +222,8 @@ private fun TagMenuRow(
 }
 
 /**
- * Diverging interest scale: red (−) ↔ grey (0) ↔ green (+). Hue carries the
- * sign, saturation the strength, so a neutral interest reads as plain grey
- * rather than a colour you have to interpret. Keep in sync with
- * interestColor() in lib/web/src/components/post-tags.tsx.
+ * Diverging interest scale: red (-) to grey (0) to green (+), hue carrying the
+ * sign and saturation the strength. Keep in sync with web's interestColor().
  */
 private fun interestColor(interest: Float): Color {
     val magnitude = (kotlin.math.abs(interest) / 100f).coerceIn(0f, 1f)

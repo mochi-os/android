@@ -19,17 +19,9 @@ import java.util.Locale
 import java.util.TimeZone
 
 /**
- * Locale-aware formatters that consult the user's [UserPreferences].
- *
- * Mirror of web's `useFormat()` in `lib/web/src/hooks/use-format.ts`. The
- * formatters in this class are pure — they don't read any global state,
- * which means a single instance is safe to capture, copy, and reuse.
- *
- * Pure-string formatters ([formatDate], [formatTime], [formatDateTime],
- * [formatNumber], [formatFileSize]) do not require Composable scope. The
- * relative-time formatter [formatTimestamp] does, because it pulls
- * "X minutes ago" / "yesterday" from `stringResource`. Use [LocalFormat]
- * inside Composables; use [PreferencesManager.format] for ViewModels.
+ * Locale-aware formatters over [UserPreferences]. The plain formatters are pure
+ * and safe to reuse; only [formatTimestamp] needs Composable scope, since its
+ * relative strings come from `stringResource`.
  */
 class Format(val preferences: UserPreferences) {
 
@@ -89,12 +81,9 @@ class Format(val preferences: UserPreferences) {
     }
 
     /**
-     * The zone [formatDate] and [formatDateTime] render in.
-     *
-     * Exposed because anything that buckets timestamps into days has to bucket
-     * in the same zone it labels them in. [UserPreferences.timezone] defaults
-     * to UTC, so grouping by the device zone instead puts messages near
-     * midnight under a header showing a different date.
+     * The zone [formatDate] and [formatDateTime] render in. Anything bucketing
+     * timestamps into days must bucket in this zone, not the device's, or a
+     * message near midnight lands under a header showing a different date.
      */
     val timeZone: TimeZone get() = TimeZone.getTimeZone(preferences.timezone)
 
@@ -169,11 +158,8 @@ class Format(val preferences: UserPreferences) {
 }
 
 /**
- * Composable wrapper around the [Format.formatTimestamp] logic in web. Picks
- * relative or absolute display from [UserPreferences.timestampDisplay], and
- * draws the relative-time strings from `stringResource` so they're localised.
- *
- * Use this for any UI that wants "5m ago" / yesterday / fall-back-to-date.
+ * Relative or absolute timestamp per [UserPreferences.timestampDisplay]; the
+ * relative strings are localised.
  */
 @Composable
 fun Format.formatTimestamp(epochSeconds: Long): String {
@@ -209,16 +195,8 @@ fun Format.formatTimestamp(epochSeconds: Long): String {
 }
 
 /**
- * Compact relative timestamp ("5m", "2h", "3d", "2w") for tight UI surfaces.
- * Falls back to [Format.formatDate] for old timestamps. Mirrors web's
- * `formatRelativeTime` in `lib/web/src/lib/locale-format.ts`.
- *
- * Honours [UserPreferences.timestampDisplay]:
- * - RELATIVE — always compact relative form
- * - ABSOLUTE — always [formatDate] (the compact-UI counterpart of
- *   `formatDateTime`; we keep it date-only to stay within tight surfaces)
- * - AUTO — relative for the recent past (< 30d), date otherwise — same
- *   buckets as before.
+ * Compact relative timestamp ("5m", "2h", "3d") for tight surfaces; ABSOLUTE
+ * and old timestamps use [formatDate].
  */
 @Composable
 fun Format.formatRelativeTime(epochSeconds: Long): String {
@@ -242,17 +220,11 @@ fun Format.formatRelativeTime(epochSeconds: Long): String {
 }
 
 /**
- * The [Format] instance to use in Composables. The default is built from
- * [UserPreferences] defaults — any app that wants real preferences should
- * wrap its tree in [FormatProvider].
+ * The [Format] for Composables; defaults to [UserPreferences] defaults, so wrap
+ * the tree in [FormatProvider].
  */
 val LocalFormat = compositionLocalOf { Format(UserPreferences()) }
 
-/**
- * Compose entry point. Subscribes to [PreferencesManager.preferences] and
- * rebuilds the [Format] (and therefore everything that reads [LocalFormat])
- * every time the preferences change.
- */
 @Composable
 fun FormatProvider(
     manager: PreferencesManager,

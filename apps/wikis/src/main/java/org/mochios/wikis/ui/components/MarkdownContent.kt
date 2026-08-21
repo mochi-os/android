@@ -68,64 +68,16 @@ import org.mochios.android.util.webUri
 import java.text.Normalizer
 
 /**
- * A heading visible in the wiki page's table of contents.
- *
- * Mirrors web's `TocHeading` in
- * `apps/wikis/web/src/features/wiki/markdown-content.utils.ts`. Only
- * H2/H3/H4 are exposed (H1 is the page title, deeper levels are dropped),
- * matching the web extractor.
+ * A heading in the page's table of contents. Only H2..H4 are exposed - H1 is
+ * the page title, deeper levels are dropped.
  */
 data class TocHeading(val id: String, val text: String, val level: Int)
 
 /**
- * Wiki-flavoured markdown renderer.
- *
- * Wraps the lib-level [org.mochios.android.ui.components.HtmlContent]
- * Markwon stack and layers the wikis-specific behaviour on top:
- *
- *  1. **Heading anchor extraction** for the table of contents (H2..H4 only,
- *     deterministic slugify with `-2`, `-3`, ... suffixes on collisions).
- *  2. **Attachment URL rewriting** against [LocalWikiContext]'s `baseURL`
- *     so relative `attachments/<id>` / `-/attachments/<id>` /
- *     `/<entity>/-/attachments/<id>[/thumbnail]` references resolve to
- *     absolute downloads.
- *  3. **Missing-link red styling** — links whose target appears in
- *     [missingLinks] (after stripping `#fragment` and `?query`) are
- *     coloured red, Wikipedia-style.
- *  4. **Internal page-link routing** — relative links that look like wiki
- *     page slugs surface through [onInternalLink] instead of opening the
- *     browser.
- *  5. **Image taps open the in-app lightbox** ([LightboxScreen]) — for
- *     `[![](img)](other-img)` wrapped-image links. Bare `![alt](img)`
- *     tap-to-lightbox is a TODO (see notes at the bottom of this file).
- *  6. **External links** open in Chrome Custom Tabs.
- *
- * Code-block "language label + copy button" header strips and the trailing
- * external-link icon are *not* implemented yet (see TODOs below) — they
- * need a custom [io.noties.markwon.MarkwonVisitor] override that's worth
- * a follow-up pass. Plain ``` fenced blocks still render correctly via
- * Markwon's default code-block renderer.
- *
- * Reference: `apps/wikis/web/src/features/wiki/markdown-content.tsx`.
- *
- * @param content Markdown source.
- * @param missingLinks Slugs of wiki pages that don't exist yet — links
- *                     pointing at these are styled red. Anchor (`#...`) and
- *                     query (`?...`) suffixes on the link are stripped before
- *                     the lookup.
- * @param onHeadingsExtracted Invoked once after parsing with the H2..H4
- *                            heading list (in document order). Pass a lambda
- *                            from the TableOfContents host; pass `null` to
- *                            skip extraction entirely.
- * @param onHeadingPositions  Invoked from the TextView's layout pass with a
- *                            map of `headingId -> yOffsetPx` (relative to the
- *                            article's start) every time the layout changes.
- *                            Hosts use it to compute the active TOC row given
- *                            the current scroll position. Null to skip.
- * @param onInternalLink Invoked when the user taps a relative link that
- *                       looks like a wiki page slug (not http/https, not
- *                       anchor-only). Hosts route to
- *                       [org.mochios.wikis.navigation.WikisApp.pageView].
+ * Wiki-flavoured markdown renderer over the lib Markwon stack: TOC anchors
+ * (H2..H4), attachment URL rewriting against [LocalWikiContext], red styling
+ * for [missingLinks], internal page links through [onInternalLink], image taps
+ * into the lightbox, external links in a Custom Tab.
  */
 @Composable
 fun MarkdownContent(
@@ -173,11 +125,9 @@ fun MarkdownContent(
         rewriteAttachmentUrls(content) { url -> wiki.resolveAttachmentUrl(url) }
     }
 
-    // Split the rewritten source into a sequence of segments — alternating
-    // ordinary-markdown chunks and fenced-code-block chunks. This lets each
-    // code block render with its own Compose-native header strip (language
-    // label + CopyButton, mirroring web's `<pre>` wrapper) while the rest
-    // of the article stays a single Markwon-rendered TextView.
+    // Split into alternating prose / fenced-code segments so each code block
+    // can carry a Compose header strip while the prose stays one Markwon
+    // TextView.
     val segments = remember(rewritten) { splitIntoSegments(rewritten) }
 
     // Build the Markwon stack. Same plugins as `HtmlContent`, plus:
@@ -254,18 +204,9 @@ fun MarkdownContent(
             .build()
     }
 
-    // The Column lays out the article as a stack of (markdown TextView,
-    // code-block-with-header, markdown TextView, ...). Each TextView is
-    // OnPreDraw-listened to compute per-heading Y positions, and each
-    // code-block segment uses a pure-Compose surface so the language
-    // label + CopyButton can be Compose primitives.
-    //
-    // For active-heading scroll tracking we need every heading's absolute
-    // Y offset within this Column. We collect them per-segment-TextView
-    // (with each TextView's `top` measured from the layout pass) and
-    // re-merge as `headingId -> yOffsetPx` for the host. The host adds
-    // the Column's own offset (it lives inside a `verticalScroll`) when
-    // matching against the scroll position.
+    // Heading positions are measured per segment TextView and merged as
+    // `headingId -> yOffsetPx` relative to this Column; the host adds the
+    // Column's own scroll offset when matching.
     val segmentTops = remember(segments) { mutableMapOf<Int, Int>() }
     val segmentHeadingOffsets = remember(segments) { mutableMapOf<Int, Map<String, Int>>() }
 
@@ -280,12 +221,9 @@ fun MarkdownContent(
     }
 
     Column(modifier = modifier.fillMaxWidth()) {
-        // Walk the heading-id list as we encounter prose segments so each
-        // TextView gets a sub-slice of the ids in the order Markwon's spans
-        // will appear inside it. The web's extractor walks the AST in the
-        // same order, so this index-zipping stays correct as long as we
-        // include heading text only in prose segments (FencedCodeBlock
-        // can't contain Heading nodes).
+        // Hand each prose TextView the sub-slice of heading ids its spans will
+        // carry, in document order. Safe because a fenced code block cannot
+        // contain a heading.
         var headingCursor = 0
         for ((idx, seg) in segments.withIndex()) {
             when (seg) {
@@ -345,22 +283,13 @@ fun MarkdownContent(
         )
     }
 
-    // TODO: trailing external-link icon next to http(s) links. Web shows
-    // a ⤴ Lucide ExternalLink icon after each external link. Markwon
-    // doesn't make inline icon-after-text trivial — the simplest route is
-    // an ImageSpan inserted in afterSetText, but rendering a vector
-    // drawable as a span needs a one-time bitmap rasterisation. Deferred.
+    // TODO: trailing external-link icon after http(s) links. Needs an ImageSpan
+    // built from a rasterised vector drawable in afterSetText.
 }
 
 /**
- * A single prose run of markdown — anything that isn't a fenced code
- * block. Rendered as a Markwon `AndroidView` with:
- *
- *  - Per-heading Y-offset measurement (matches the i-th HeadingSpan in
- *    the rendered Spannable to `headingIds[i]`).
- *  - Bare-image tap-to-lightbox via the TextView's touch interceptor.
- *  - The same LinkResolver routing as before, since the Markwon instance
- *    is shared across all prose segments.
+ * One prose run - everything that is not a fenced code block - rendered by
+ * Markwon in an `AndroidView`.
  */
 @Composable
 private fun ProseSegment(
@@ -406,12 +335,8 @@ private fun ProseSegment(
                 onImageTap = onImageTap,
             )
 
-            // After layout we can read each HeadingSpan's character
-            // offset and translate it to a vertical pixel position via
-            // the TextView's layout. The OnPreDrawListener fires on
-            // every layout pass, which keeps the map fresh through
-            // text-size changes, configuration changes, or content
-            // updates.
+            // OnPreDraw fires on every layout pass, so heading offsets stay
+            // fresh through text-size, configuration and content changes.
             textView.viewTreeObserver.addOnPreDrawListener {
                 onTopMeasured(textView.top)
                 val layout = textView.layout
@@ -438,15 +363,9 @@ private fun ProseSegment(
 }
 
 /**
- * A fenced code block rendered with a Compose-native header strip
- * (language label on the left, CopyButton on the right) over a
- * Markwon-rendered code body. Mirrors web's `<pre>` wrapper in
- * `apps/wikis/web/src/features/wiki/markdown-content.tsx`.
- *
- * The body is Markwon-rendered (rather than a plain `Text`) so syntax
- * inside the code block — escaped backticks, embedded markdown that
- * happens to start a code fence — survives the round-trip identically
- * to what users would see in a non-split MarkdownContent.
+ * A fenced code block: Compose header strip (language + copy) over a
+ * Markwon-rendered body. Markwon renders the body so escaped fences and
+ * embedded markdown survive identically.
  */
 @Composable
 private fun CodeBlockSegment(
@@ -512,14 +431,8 @@ private fun CodeBlockSegment(
 }
 
 /**
- * Wire a touch listener on [textView] that, after a clean tap on text
- * NOT covered by a clickable link span, looks for an AsyncDrawableSpan
- * at the tap offset and opens the lightbox via [onImageTap].
- *
- * `[![](img)](href)` wrapped-image links keep working through the
- * existing LinkResolver because they're [LinkSpan]s; this fills in the
- * gap for plain `![alt](img)` taps which Markwon doesn't surface to
- * LinkResolver.
+ * Tap handling for bare `![alt](img)` images, which Markwon never surfaces to
+ * [LinkResolver]. Link spans are left alone.
  */
 private fun installImageTapInterceptor(
     textView: android.widget.TextView,
@@ -571,11 +484,6 @@ private data class ParsedDocument(
     val imageUrls: List<String>,
 )
 
-/**
- * One step of the article — either a prose run rendered by Markwon as a
- * single Spannable, or a fenced code block rendered with our own header
- * strip (language label + CopyButton) above a code-only Markwon body.
- */
 internal sealed class MarkdownSegment {
     data class Prose(val markdown: String) : MarkdownSegment()
     data class Code(
@@ -588,16 +496,9 @@ internal sealed class MarkdownSegment {
 }
 
 /**
- * Split [content] into alternating prose / fenced-code segments. Mirrors
- * the way the web renderer hands `<pre>` blocks to a dedicated component
- * with a header strip while the rest of the article walks through the
- * normal Markdown component.
- *
- * Recognises both ``` and ~~~ fences with the same fence character. The
- * opening fence may have an info string after it (e.g. ```kotlin); the
- * closing fence must use the same character and length and stand alone
- * on its line. Indented (non-fenced) code blocks are left in the prose
- * segment — they get the normal Markwon rendering, no header strip.
+ * Split [content] into alternating prose / fenced-code segments. Recognises ```
+ * and ~~~ fences; the closing fence must use the same character and at least
+ * the same length. Indented code blocks stay in the prose segment.
  */
 internal fun splitIntoSegments(content: String): List<MarkdownSegment> {
     val out = mutableListOf<MarkdownSegment>()
@@ -680,15 +581,8 @@ internal fun splitIntoSegments(content: String): List<MarkdownSegment> {
 }
 
 /**
- * Count H2..H4 headings in [markdown] (ATX `#` form), respecting fenced
- * code blocks. Used to slice the global heading-ids list across prose
- * segments so each TextView's HeadingSpans get the right ids.
- *
- * We rely on the same fence-detection rules as [splitIntoSegments] so
- * the counts add up to the total in the full document (fenced code
- * blocks already live in their own segments, so we never see a fenced
- * block inside a prose segment; this guard is defensive against future
- * changes to the splitter).
+ * Count H2..H4 headings in [markdown]; used to slice the global heading-id list
+ * per prose segment.
  */
 internal fun countH2H4Headings(markdown: String): Int {
     val parser = Parser.builder().build()
@@ -697,14 +591,8 @@ internal fun countH2H4Headings(markdown: String): Int {
 }
 
 /**
- * Walk the commonmark AST and emit H2..H4 headings in document order.
- *
- * Matches web's [`extractTocHeadings`]
- * (`apps/wikis/web/src/features/wiki/markdown-content.utils.ts`). Code
- * fences are skipped automatically — they're block nodes, not headings.
- *
- * Slug collisions are resolved by suffixing `-2`, `-3`, ... so the IDs are
- * stable for anchor links even when two headings share the same text.
+ * Emit H2..H4 headings in document order. Slug collisions get a `-2`, `-3`, ...
+ * suffix so anchor ids stay stable.
  */
 internal fun extractHeadings(root: Node): List<TocHeading> {
     val headings = mutableListOf<TocHeading>()
@@ -738,9 +626,7 @@ internal fun extractHeadings(root: Node): List<TocHeading> {
 }
 
 /**
- * Flatten a node's inline children to plain text. Mirrors web's
- * `getNodeText` / `stripInlineMarkdown` combo, but driven by the AST
- * instead of regex so emphasis / code / links flatten correctly.
+ * Flatten a node's inline children to plain text.
  */
 private fun nodeText(node: Node): String {
     val sb = StringBuilder()
@@ -753,14 +639,7 @@ private fun nodeText(node: Node): String {
 }
 
 /**
- * Canonical heading slug. Mirrors web's `slugifyHeading`:
- *
- *  - NFKD-normalise + strip combining marks (so `café` -> `cafe`)
- *  - lowercase
- *  - keep `[a-z0-9 -]`, drop the rest
- *  - collapse spaces / underscores to `-`
- *  - collapse runs of `-`
- *  - fall back to `section` when nothing's left
+ * Canonical heading slug; must match web's `slugifyHeading`.
  */
 internal fun slugifyHeading(text: String): String {
     val noAccents = Normalizer.normalize(text, Normalizer.Form.NFKD)
@@ -773,11 +652,6 @@ internal fun slugifyHeading(text: String): String {
     return cleaned.ifEmpty { "section" }
 }
 
-/**
- * Pull every `Image` node's destination out of the AST, in document order.
- * Used both for the lightbox media list and (after attachment-URL
- * resolution) for click-to-lightbox matching.
- */
 internal fun extractImageUrls(root: Node): List<String> {
     val urls = mutableListOf<String>()
     root.accept(object : AbstractVisitor() {
@@ -794,18 +668,9 @@ private fun stripThumbnail(url: String): String =
     if (url.endsWith("/thumbnail")) url.removeSuffix("/thumbnail") else url
 
 /**
- * Rewrite every `![alt](url)` and `[text](url)` whose `url` looks like a
- * wiki attachment path through [resolve]. Other URLs (http://..., external
- * links, anchor-only) are left as-is.
- *
- * Mirrors web's `resolveAttachmentUrl` being applied inline by `Markdown`
- * components — easier here to rewrite the source text once, before
- * Markwon parses it, than to hook the rendering pipeline twice.
- *
- * The regex is permissive about the `[text]` and `(url)` shapes — the
- * brackets-balanced edge cases that commonmark handles still fall back to
- * the original URL because [resolve] only modifies wiki-attachment
- * patterns and passes everything else through.
+ * Rewrite every `![alt](url)` / `[text](url)` through [resolve]; non-attachment
+ * URLs pass through. Rewriting the source once is cheaper than hooking
+ * Markwon's rendering twice.
  */
 internal fun rewriteAttachmentUrls(content: String, resolve: (String) -> String): String {
     val linkRe = Regex("(!?)\\[([^]]*)]\\(([^)\\s]+)(\\s+\"[^\"]*\")?\\)")
@@ -827,29 +692,15 @@ private fun isInternalRelative(href: String): Boolean {
     if (href.startsWith("//")) return false
     // Any other scheme (mailto:, tel:, ftp:, ...) is external too.
     if (Regex("^[a-zA-Z][a-zA-Z0-9+\\-.]*:").containsMatchIn(href)) return false
-    // Already-resolved attachment URLs (rewritten upstream to absolute
-    // baseURL/attachments/...) start with the server origin, which the
-    // http check above already rejects. Bare "attachments/..." would be
-    // rewritten before this function ever sees the link, so don't treat
-    // it as internal here.
+    // Attachment links are rewritten to absolute URLs before this runs, so an
+    // attachments path here is never an internal page link.
     if (href.startsWith("attachments/") || href.contains("/attachments/")) return false
     return true
 }
 
 /**
- * Routes link clicks based on what kind of URL it is. Installed once on
- * the Markwon configuration.
- *
- *  - Relative wiki-page links (no scheme, not anchor-only) call
- *    [onInternalLink] with the page slug so the host can navigate.
- *  - Wrapped-image links `[![](img)](other-img)` whose href matches an
- *    image in the document open the lightbox via [onImageLink]. Bare
- *    `![alt](img)` clicks don't reach `LinkResolver` — that's why
- *    `MarkdownContent` also wires a separate tap handler on the
- *    underlying `ClickableLinkTextView`.
- *  - Everything else opens in a Chrome Custom Tab so the user stays
- *    inside the Mochi-themed shell — consistent with how
- *    [org.mochios.android.ui.auth.AuthNavigation] handles OAuth.
+ * Routes link taps: relative slugs to [onInternalLink], attachment URLs to
+ * [onImageLink] for the lightbox, everything else to a Chrome Custom Tab.
  */
 private class WikiLinkResolver(
     private val wiki: WikiContextValue,
@@ -867,11 +718,9 @@ private class WikiLinkResolver(
 
         val resolved = wiki.resolveAttachmentUrl(link)
 
-        // `[![](img)](resolved)` — the inner image is what the user sees,
-        // but the click target on the LinkSpan is `resolved`. If that URL
-        // looks like an attachment, surface it through onImageLink so the
-        // host can match it against the document's image set and open the
-        // lightbox at that index.
+        // For `[![](img)](resolved)` the LinkSpan targets the outer URL; if it
+        // is an attachment, hand it to onImageLink so the host can open the
+        // lightbox at that image.
         if (resolved.contains("/attachments/")) {
             onImageLink(resolved)
             return

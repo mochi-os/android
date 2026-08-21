@@ -49,13 +49,9 @@ data class StatusTone(val background: Color, val foreground: Color) {
 enum class StatusBadgeSize { Compact, Regular }
 
 /**
- * Pill-shaped status badge: a pale fill under dark text, with an optional
- * leading icon. Mirrors the market listing chips, whose palette these tones are
- * sampled from, so a status reads the same wherever it appears.
- *
- * The tones are fixed rather than theme roles — a status colour carries meaning
- * (amber is waiting, red is stopped) that a server-driven scheme would override.
- * They are light-theme values by design, matching the market chips.
+ * Pill-shaped status badge with an optional leading icon, sampled from the
+ * market listing chips. The tones are fixed light-theme values, not theme
+ * roles: a status colour carries meaning a server-driven scheme would override.
  */
 @Composable
 fun StatusBadge(

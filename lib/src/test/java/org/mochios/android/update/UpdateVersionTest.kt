@@ -10,10 +10,9 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * The version compare decides whether the client downloads a ~40 MB APK and
- * offers it to the system installer, and it is the only gate on doing so. A
- * lexicographic slip here means either never updating past "0.9" or offering an
- * older build as if it were newer.
+ * The version compare is the only gate on offering an APK to the system
+ * installer, so a lexicographic slip either stalls at "0.9" or offers a
+ * downgrade.
  */
 class UpdateVersionTest {
 

@@ -26,26 +26,10 @@ import androidx.core.content.edit
 import org.mochios.android.R
 
 /**
- * One-time dialog asking the user to disable battery optimization for the
- * Mochi shell. Without this, OEMs (Samsung One UI in particular) silently
- * kill the foreground service ~10 minutes after the screen turns off,
- * which kills push notifications.
- *
- * Strategy:
- *  - On first launch, if the device is restricting battery (i.e. our app
- *    is not on the OS ignore-list), show the dialog.
- *  - "Allow background" opens the system's standard
- *    [Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS] confirm
- *    dialog — single tap, system handles localization.
- *  - On Samsung devices the OS ignore-list is necessary but not
- *    sufficient (the separate "Sleeping apps" list still kills FG
- *    services). We surface a short supplemental note pointing the user
- *    at Device care → Sleeping apps.
- *  - "Don't show again" persists in SharedPreferences so we don't nag.
- *
- * Drop this in at the top of the shell's Composable hierarchy. It only
- * shows for users on Android 6+ (when Doze first appeared) and only when
- * battery optimization is currently restricting us.
+ * One-time dialog asking the user to exempt the shell from battery
+ * optimization; OEMs (Samsung in particular) kill the foreground service ~10
+ * minutes after screen-off. On Samsung the ignore-list is not enough, so the
+ * dialog also names Sleeping apps.
  */
 @Composable
 fun OemBackgroundHintDialog() {

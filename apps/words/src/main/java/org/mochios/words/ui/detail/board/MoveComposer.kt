@@ -40,18 +40,6 @@ import org.mochios.words.engine.MoveDraft
 import org.mochios.words.engine.MoveError
 import org.mochios.words.ui.detail.ValidState
 
-/**
- * Action bar above the rack. Three height-states:
- *  1. Exchange mode active → `Cancel` + spacer + `Exchange (N)` button.
- *  2. Pending placements + not in exchange mode → `Recall` + word-chips +
- *     total score + `Submit` button.
- *  3. Otherwise (rest state) → 32dp blank row keeping the layout stable.
- *
- * Word chips render with a status icon (CheckCircle for VALID, Cancel for
- * INVALID, spinner for CHECKING) + uppercase word + `+score` muted. Chips
- * scroll horizontally so a wide play doesn't push the Submit button off
- * the right edge.
- */
 @Composable
 fun MoveComposer(
     pendingPlacements: Int,

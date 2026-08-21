@@ -8,15 +8,9 @@ package org.mochios.go.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A Go game record. Mirrors the `Game` type in
- * `apps/go/web/src/api/types/games.ts`. Snake-case wire keys are mapped to
- * camel-case Kotlin via [SerializedName]; fields the server stores in
- * snake_case shape (`board_size`, `identity_name`, …) stay snake-cased in
- * Kotlin too because that's how the rest of the codebase refers to them.
- *
- * `status` is one of `"active"`, `"finished"`, `"draw"`, `"resigned"`.
- * `winner` is the identity id of the winning player, or `null` while the
- * game is still active (or for a draw).
+ * A Go game record, mirroring `Game` in `apps/go/web/src/api/types/games.ts`.
+ * `status` is `active`, `finished`, `draw` or `resigned`; `winner` is the
+ * winning identity id, null while active or on a draw.
  */
 data class Game(
     val id: String = "",

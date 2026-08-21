@@ -42,9 +42,8 @@ data class MentionSuggestion(
 )
 
 /**
- * Text field with @mention autocomplete support.
- * When user types @, queries [onSearch] for matching users.
- * Selecting a suggestion inserts @[name] at the cursor.
+ * Text field with @mention autocomplete: typing @ queries [onSearch], and
+ * choosing a suggestion inserts @[name] at the cursor.
  */
 @OptIn(FlowPreview::class)
 @Composable

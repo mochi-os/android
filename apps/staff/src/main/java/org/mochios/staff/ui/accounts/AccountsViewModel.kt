@@ -26,17 +26,9 @@ import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
 /**
- * UI state for [AccountsScreen]. Mirrors the same axes as the web
- * `AccountsPage`:
- *
- *   - `status`  — account moderation filter (`active`, `suspended`,
- *                 `banned`) or null for "any".
- *   - `seller`  — seller filter (`yes` / `no`) or null for "any".
- *   - `query`   — substring search against biography / name; the screen
- *                 debounces user input by 300 ms before firing.
- *
- * Pagination is page-based; the repository's `listAccounts` accepts
- * `page` / `limit`, so the Android model mirrors that.
+ * Filters mirror the web `AccountsPage`: `status`
+ * (`active`/`suspended`/`banned`) and `seller` (`yes`/`no`), null for any;
+ * `query` is debounced 300 ms by the screen.
  */
 data class AccountsUiState(
     val status: String? = null,
@@ -192,9 +184,8 @@ class AccountsViewModel @Inject constructor(
     }
 
     /**
-     * Submit the currently-pending action. `reason` is required for
-     * SUSPEND / BAN on the wire; the dialog enforces presence so we
-     * just forward whatever was typed.
+     * `reason` is required by the server for suspend and ban; the dialog
+     * enforces it.
      */
     fun submitAction(reason: String, notes: String) {
         val pending = _state.value.pendingAction ?: return

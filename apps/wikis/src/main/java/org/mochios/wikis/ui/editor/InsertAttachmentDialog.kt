@@ -51,19 +51,10 @@ import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
 
 /**
- * Insert-attachment picker dialog. Lists the page's existing attachments
- * (4-column grid, thumbnails for images, file icon otherwise) and exposes
- * a "Upload new" trigger that opens the system multi-file picker.
- *
- * Reuses [PageEditorViewModel] because the editor already owns the wiki id,
- * slug, and attachment list. Tapping a tile builds a markdown snippet — an
- * image attachment becomes `![name](attachments/<id>/thumbnail)`, anything
- * else becomes `[name](attachments/<id>)` — and asks the ViewModel to
- * splice it in at [cursor]. The new cursor position is reported back to
- * the screen via [onInserted] so the body field's selection can move past
- * the inserted text.
- *
- * Mirrors the dialog body inside `apps/wikis/web/src/features/wiki/page-editor.tsx`.
+ * Attachment picker for the editor. Inserts
+ * `![name](attachments/<id>/thumbnail)` for images and
+ * `[name](attachments/<id>)` otherwise at [cursor], reporting the new cursor
+ * via [onInserted].
  */
 @Composable
 fun InsertAttachmentDialog(

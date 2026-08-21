@@ -45,16 +45,8 @@ import org.mochios.wikis.R
 import org.mochios.wikis.repository.WikisRepository
 
 /**
- * Rename-page dialog mirroring `apps/wikis/web/src/features/wiki/rename-page-dialog.tsx`.
- *
- * The dialog owns its own form state and runs the rename mutation via the
- * injected [WikisRepository] (resolved with a Hilt entry point so the dialog
- * doesn't require its own ViewModel scope — callers from PageView can just
- * drop it in next to other action-menu surfaces).
- *
- * @param onRenamed Fired on success with `(newSlug, renamedCount, updatedLinks)`
- *                  so the caller can navigate to the new URL and surface the
- *                  toast with the right plural copy.
+ * Rename-page dialog. Resolves [WikisRepository] through a Hilt entry point so
+ * it needs no ViewModel scope of its own.
  */
 @Composable
 fun RenamePageDialog(
@@ -179,11 +171,6 @@ fun RenamePageDialog(
     )
 }
 
-/**
- * Compose the post-rename success toast — "Renamed N pages, updated M links" —
- * with the same plural logic as web's `rename-page-dialog.tsx`. The "updated"
- * clause is omitted entirely when no links were rewritten, matching web.
- */
 @Composable
 fun rememberRenameSuccessMessage(renamedCount: Int, updatedLinks: Int): String {
     val pages = pluralStringResource(

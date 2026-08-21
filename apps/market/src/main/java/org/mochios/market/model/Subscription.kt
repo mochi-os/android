@@ -8,12 +8,8 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A recurring subscription against a subscription-type listing.
- *
- * Mirrors `Subscription` in `apps/market/web/src/types/subscriptions.ts`.
- * `amount` is the recurring charge in minor units; `interval` is `monthly`
- * or `yearly` (see [Interval] in `Enums.kt`). `cancelled` is the timestamp
- * the subscription was cancelled (0 if active).
+ * Mirrors `Subscription` in web `types/subscriptions.ts`. `amount` in minor
+ * units; `cancelled` is 0 while active.
  */
 data class Subscription(
     val id: String = "",
@@ -35,12 +31,9 @@ data class Subscription(
 )
 
 /**
- * Subscription lifecycle status. Source: `SubscriptionStatus` in
- * `apps/market/web/src/types/common.ts`.
- *
- * `pending` covers the brief window after Stripe Checkout completes but
- * before the first invoice has been settled; `past_due` indicates Stripe is
- * retrying a failed renewal charge.
+ * Source: `SubscriptionStatus` in web `types/common.ts`. `pending` is the
+ * window between Checkout and the first settled invoice; `past_due` means
+ * Stripe is retrying a failed renewal.
  */
 enum class SubscriptionStatus {
     @SerializedName("pending") PENDING,

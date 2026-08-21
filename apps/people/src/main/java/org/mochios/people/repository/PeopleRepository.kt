@@ -27,14 +27,6 @@ import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * Thin convenience wrapper around [PeopleApi]. Mirrors the structure of
- * `CrmsRepository`: each method calls `.unwrap()` on the wrapped
- * `ApiResponse<T>` to surface either the inner payload or a typed
- * `MochiError` for the ViewModels to render. No caching layer — the people
- * data set is small enough that we lean on TanStack-style stale-while-
- * revalidate in the ViewModel rather than pre-warming here.
- */
 @Singleton
 class PeopleRepository @Inject constructor(
     private val api: PeopleApi,
@@ -42,12 +34,8 @@ class PeopleRepository @Inject constructor(
 ) : FileRepository(fileStore) {
 
     /**
-     * Emits whenever a group is edited or deleted. The group list and the
-     * group detail live on separate back-stack entries with independent
-     * ViewModels, so the list can't observe the detail directly. This shared
-     * signal lets the list reload the moment a mutation succeeds, instead of
-     * relying on navigation-resume callbacks that don't fire across the app's
-     * multi-graph navigation.
+     * Fires when a group is edited or deleted, so the list screen (a separate
+     * ViewModel) can reload.
      */
     private val _groupsChanged = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     val groupsChanged: SharedFlow<Unit> = _groupsChanged.asSharedFlow()

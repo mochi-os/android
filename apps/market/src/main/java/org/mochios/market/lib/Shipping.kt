@@ -8,10 +8,9 @@ package org.mochios.market.lib
 import org.mochios.market.model.ShippingOption
 
 /**
- * Kotlin port of `apps/market/web/src/lib/shipping.ts`. Free-text
- * region-name → buyer-country matching used by the checkout shipping
- * picker. Heuristic, not a contract — the UI keeps the dropdown editable
- * so a wrong guess can be corrected.
+ * Port of `apps/market/web/src/lib/shipping.ts`: heuristic free-text region to
+ * buyer-country matching; the picker stays editable so a wrong guess can be
+ * corrected.
  */
 
 private val CATCH_ALL = setOf("worldwide", "international", "global", "anywhere")
@@ -130,12 +129,6 @@ private fun canonicalCountry(country: String): String {
     return COUNTRY_ALIASES[c] ?: c
 }
 
-/**
- * True if the buyer's [country] is covered by the seller's free-text
- * [region]. Case-insensitive; matches exact country names, the catch-all
- * "worldwide" / "global" / etc., and the region-group lookup table
- * (Europe, EU, Asia, etc.).
- */
 fun countryInRegion(country: String, region: String): Boolean {
     val c = canonicalCountry(country)
     val r = normalise(region)
@@ -145,12 +138,6 @@ fun countryInRegion(country: String, region: String): Boolean {
     return REGION_GROUPS[r]?.contains(c) == true
 }
 
-/**
- * Pick the cheapest [ShippingOption] whose region matches the buyer's
- * country, or `null` if none match. Convenience over [countryInRegion] so
- * the checkout summary can default-select without duplicating the
- * filter+sort logic in every screen.
- */
 fun cheapestMatchingZone(
     country: String,
     zones: List<ShippingOption>,

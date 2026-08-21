@@ -74,15 +74,9 @@ import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.android.R as MochiR
 
 /**
- * Kanban board for the active view.
- *
- * @param objects Every object in the project — the board needs the complete
- *   set so hierarchy, column grouping and drop ranks stay computed against the
- *   real list even while a filter hides part of it.
- * @param visibleIds Ids the search/filter state allows on screen, or null when
- *   nothing narrows the board. Cards outside the set are hidden, but they still
- *   count towards drop positions, so a drop on a filtered column lands where it
- *   would have without the filter.
+ * Kanban board. [objects] is every object in the project and [visibleIds] only
+ * hides cards: hierarchy, grouping and drop ranks are computed on the full
+ * list, so a drop on a filtered column lands where it would unfiltered.
  */
 @Composable
 fun BoardView(
@@ -456,11 +450,8 @@ private fun BoardColumn(
 
         // Column body
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
-            // Swimlane mode.
-            // Drop ranks are scoped to the column, not the lane: the server's
-            // rank_move_key lists every object sharing the target column value
-            // and knows nothing about rows, so a lane-local position would be
-            // applied as a column position.
+            // Swimlane mode. Drop ranks are column-scoped, not lane-scoped: the
+            // server's rank_move_key has no row dimension.
             val columnOrder = viewModel.sortObjects(objects)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
@@ -568,11 +559,8 @@ private fun BoardColumn(
                 }
             }
         } else {
-            // Simple list mode. The card list fills all remaining column
-            // height. Double-tapping the empty space below the last card
-            // creates a card (matching the web board's double-click-to-
-            // create); the tap zone sits behind the list so it only
-            // receives touches where there are no cards.
+            // List mode. Double-tapping empty space below the cards creates
+            // one; the tap zone sits behind the list so cards take precedence.
             val sortedObjects = viewModel.sortObjects(objects)
             val shownObjects = sortedObjects.visible(visibleIds)
             Box(

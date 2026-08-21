@@ -8,12 +8,8 @@ package org.mochios.android.i18n
 import android.content.Context
 
 /**
- * Synchronous, boot-safe storage for the user's `language` preference.
- *
- * Lives in SharedPreferences (not DataStore) because `attachBaseContext` —
- * where the locale needs to be applied — runs before Hilt graph construction
- * and before any coroutine machinery is available. SharedPreferences can be
- * read synchronously from any Context.
+ * Synchronous storage for the user's `language`. SharedPreferences, not
+ * DataStore: `attachBaseContext` runs before Hilt and any coroutine machinery.
  */
 object LanguageStore {
 

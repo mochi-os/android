@@ -59,20 +59,8 @@ import org.mochios.go.model.NewGameFriend
 import org.mochios.android.R as MochiR
 
 /**
- * Full screen for starting a go game. Carries what the dialog carried:
- *
- *  - opponent picker over the friends list, with a loading spinner, an
- *    empty state whose "Add friends" button routes to the People app, and
- *    a retry on a failed fetch
- *  - board size selector: three presets (9x9 / 13x13 / 19x19), 19x19 default
- *  - komi selector: three presets (6.5 / 7.5 / 0) plus a numeric field for
- *    a free-form value clamped to 0–10
- *
- * The top bar carries the back button and Start sits in the bottom bar.
- *
- * @param onBack leaves the screen without starting a game.
- * @param onCreated receives the new game's id so the host can open it.
- * @param onAddFriends jumps to the People app from the empty state.
+ * Screen for starting a go game: opponent picker, board-size and komi presets,
+ * Start in the bottom bar.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -77,11 +77,9 @@ private const val MAX_NESTING_DEPTH = 3
 fun BoardCard(
     obj: CrmObject,
     viewModel: CrmViewModel,
-    // Passed in rather than read off viewModel.uiState here: a direct .value
-    // read is a snapshot Compose does not subscribe to, so a card whose own
-    // parameters had not changed kept rendering stale class definitions. The
-    // screen already collects the state; this follows the same route its
-    // siblings do.
+    // Passed in, not read from viewModel.uiState.value: a direct read is not
+    // subscribed, so the card kept rendering stale class definitions when its
+    // own parameters had not changed.
     crmDetails: CrmDetails?,
     people: List<Person>,
     borderFieldId: String?,
@@ -320,11 +318,6 @@ fun BoardCard(
                                         // fall back to the raw value if unknown.
                                         val resolved = people.find { person -> person.id == value }
                                             ?.name?.takeIf { name -> name.isNotBlank() } ?: value
-                                        // Avatar then name, as the tree rows show
-                                        // it. The value is the person's entity id,
-                                        // which is the id the people app serves an
-                                        // avatar under; initials stand in when
-                                        // there is no photo to load.
                                         Row(verticalAlignment = Alignment.CenterVertically) {
                                             EntityAvatar(
                                                 name = resolved,
@@ -406,16 +399,10 @@ private fun countDeepChildren(parentId: String, childrenByParent: Map<String, Li
 }
 
 /**
- * The 1-based position to ask the server to place a dragged card at.
- *
- * [columnObjects] must be the whole COLUMN in rank order, not one swimlane of
- * it: the server scopes the slot to (field, value) — `rank_move_key` in crm.star
- * lists every object sharing the target column value — and has no lane
- * dimension. Passing a lane-local list made position 2 of a lane land as
- * position 2 of the column.
- *
- * A source already in this column is excluded from the count, because the
- * server sees the list with it removed.
+ * 1-based position to ask the server to place a dragged card at.
+ * [columnObjects] must be the whole column in rank order, not one swimlane: the
+ * server's slot is scoped to (field, value) with no lane dimension. The source
+ * is excluded from the count because the server ranks the list without it.
  */
 internal fun dropRank(
     columnObjects: List<String>,

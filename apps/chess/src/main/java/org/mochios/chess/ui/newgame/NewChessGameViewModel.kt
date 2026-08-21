@@ -19,18 +19,6 @@ import org.mochios.chess.model.NewGameFriend
 import org.mochios.chess.repository.ChessRepository
 import javax.inject.Inject
 
-/**
- * UI state for the new-chess-game dialog. Mirrors the web `NewGame`
- * (`apps/chess/web/src/features/chess/components/new-game.tsx`):
- *
- *  - [friends] is the eligible-opponent list fetched on first compose. Empty
- *    list + non-null [error] drives the empty / error branches. Sorted
- *    case- and accent-insensitively by display name.
- *  - [selectedId] is the currently-selected friend's entity ID — bound to
- *    the picker.
- *  - [isCreating] disables the Start Game button while the create POST is
- *    in flight, matching the web's `createGameMutation.isPending`.
- */
 data class NewChessGameUiState(
     val isLoadingFriends: Boolean = true,
     val friends: List<NewGameFriend> = emptyList(),
@@ -75,9 +63,8 @@ class NewChessGameViewModel @Inject constructor(
     }
 
     /**
-     * Submit the create. On success, [onCreated] receives the new game UID
-     * (the caller navigates the host into the detail screen). On failure
-     * [onError] receives an already-localised message string.
+     * [onCreated] receives the new game's id; [onError] an already-localised
+     * message.
      */
     fun create(onCreated: (String) -> Unit, onError: (String) -> Unit) {
         val state = _uiState.value

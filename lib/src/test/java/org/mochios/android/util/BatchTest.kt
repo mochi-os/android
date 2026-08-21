@@ -11,12 +11,6 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-/**
- * The bug this replaces: `list.all { runCatching { ... }.isSuccess }`, which
- * stops at the first failure. A batch of invitations containing one consumed
- * row (the server answers 400 forever) therefore never attempted anything
- * after it, on every retry.
- */
 class BatchTest {
 
     @Test

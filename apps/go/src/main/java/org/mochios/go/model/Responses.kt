@@ -8,9 +8,8 @@ package org.mochios.go.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Response wrappers for the Go app's HTTP actions. Each one corresponds to
- * the inner payload of the `{"data": ...}` envelope unwrapped by
- * `Response<ApiResponse<T>>.unwrap()`. Mirrors `apps/go/web/src/api/types/games.ts`.
+ * Payloads of the Go app's HTTP actions, mirroring
+ * `apps/go/web/src/api/types/games.ts`.
  */
 
 data class GameViewResponse(
@@ -32,11 +31,6 @@ data class CreateGameResponse(
     val black: String = "",
 )
 
-/**
- * Friend candidate returned by `-/new` for opening a new game. Mirrors the
- * `NewGameFriend` interface in the web types module. Note the field is
- * called `class` server-side; Kotlin requires the backtick escape.
- */
 data class NewGameFriend(
     val `class`: String = "person",
     val id: String = "",
@@ -68,11 +62,6 @@ data class DrawOfferResponse(
     val success: Boolean = true,
 )
 
-/**
- * Request body for the move endpoint. Mirrors `MoveRequest` in the web types.
- * Snake-case wire fields are forwarded via [SerializedName] so the same
- * `Game` instance can be sent back to the server without translation.
- */
 data class MoveRequest(
     val fen: String,
     @SerializedName("previous_fen")
@@ -89,9 +78,8 @@ data class MoveRequest(
 )
 
 /**
- * Request body for the pass endpoint. When the second consecutive pass ends
- * the game the caller fills in `status="finished"`, the computed winner, and
- * both scores so the server can record the final state in a single round trip.
+ * Pass body; when the second consecutive pass ends the game the caller also
+ * sends `status="finished"`, the winner and both scores.
  */
 data class PassRequest(
     val fen: String,

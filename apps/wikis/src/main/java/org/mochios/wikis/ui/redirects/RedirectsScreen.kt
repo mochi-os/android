@@ -64,15 +64,8 @@ import org.mochios.wikis.model.Redirect
 import org.mochios.android.R as MochiR
 
 /**
- * Standalone redirects management surface. Mirrors web's
- * `apps/wikis/web/src/features/wiki/redirects-page.tsx`: a list of
- * source → target rows with delete affordances and an "Add" trailing button
- * in the top bar that opens a create dialog.
- *
- * Reads `wikiId` via the ViewModel's [SavedStateHandle] and is wired by
- * `WikisApp.REDIRECTS` in the nav graph. The visible list + add dialog are
- * factored into [RedirectsBody] so the wiki settings screen's Redirects tab
- * can reuse the same UI without re-implementing it.
+ * Standalone redirects screen. The list and its dialogs live in
+ * [RedirectsBody], shared with the wiki-settings Redirects tab.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -130,19 +123,9 @@ fun RedirectsScreen(
 }
 
 /**
- * The visible redirects list (or empty state / loading spinner) plus the
- * "Add redirect" dialog and the "Delete redirect?" confirmation. Reused
- * by the standalone [RedirectsScreen] and the wiki-settings Redirects tab.
- *
- * The screen owns the TopAppBar / Scaffold; this composable just renders
- * the body inside whatever surface the caller provides.
- *
- * @param showAddDialog          Whether the Add dialog is currently open.
- * @param onShowAddDialogChange  Toggle the Add dialog visibility. The
- *                               settings-tab caller uses this to drive a
- *                               dialog opened by an inline "Add" button;
- *                               the standalone screen drives it from the
- *                               top-bar action.
+ * Redirects list, add dialog and delete confirmation, with no surrounding
+ * chrome - the caller supplies the Scaffold. Shared by [RedirectsScreen] and
+ * the settings tab.
  */
 @Composable
 fun RedirectsBody(

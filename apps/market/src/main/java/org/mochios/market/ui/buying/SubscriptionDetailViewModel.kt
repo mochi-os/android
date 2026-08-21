@@ -24,14 +24,6 @@ import org.mochios.market.model.Subscription
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
-/**
- * UI state for [SubscriptionDetailScreen]. Holds the resolved
- * [Subscription] alongside the listing projection used by the summary
- * card. The Comptroller doesn't expose a dedicated
- * `subscriptions/get` endpoint yet — we resolve a single id by walking
- * the `subscriptions/mine` pages until we find a match, mirroring the
- * web side's in-memory lookup.
- */
 data class SubscriptionDetailUiState(
     val isLoading: Boolean = true,
     val subscription: Subscription? = null,
@@ -65,13 +57,6 @@ class SubscriptionDetailViewModel @Inject constructor(
         load()
     }
 
-    /**
-     * Resolve the subscription by id and, when found, fetch its parent
-     * listing for the summary card's thumbnail + seller row. Walks
-     * [MarketRepository.mySubscriptions] until the id appears or the
-     * server reports no more pages, capped at a generous ceiling so a
-     * malformed id can't trigger an unbounded scan.
-     */
     fun load() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
@@ -101,10 +86,8 @@ class SubscriptionDetailViewModel @Inject constructor(
     fun cancel() = mutate { repository.cancelSubscription(subscriptionId) }
 
     /**
-     * Walk the buyer's subscriptions list page by page until the row
-     * with the requested id appears, or the cumulative total has been
-     * reached. Returns `null` when the id can't be resolved — the
-     * screen then renders the "not found" state.
+     * There is no `subscriptions/get` endpoint, so the id is resolved by paging
+     * `subscriptions/mine`.
      */
     private suspend fun findSubscription(id: String): Subscription? {
         if (id.isEmpty()) return null

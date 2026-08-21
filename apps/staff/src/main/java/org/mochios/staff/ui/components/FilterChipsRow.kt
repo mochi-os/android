@@ -23,29 +23,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.staff.R
 
-/**
- * One active filter the list screens surface as a removable chip. `label` is
- * the filter dimension ("Status", "Type") and `value` is the currently
- * selected option's user-facing string ("pending", "Listing", the raw
- * search query). [onRemove] resets the underlying filter to its default
- * (null for dropdowns, "" for the search query).
- */
 data class FilterChipSpec(
     val label: String,
     val value: String,
     val onRemove: () -> Unit,
 )
 
-/**
- * Horizontal row of removable filter chips. Renders nothing when [chips] is
- * empty so the list screens don't show an empty spacer band between the
- * dropdowns and the result list.
- *
- * Mirrors the web staff console's active-filter chip pattern in
- * `apps/staff/web/src/features/`: each chip combines the filter dimension
- * and its current value behind a trailing close icon that clears that one
- * filter without touching the others.
- */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun FilterChipsRow(

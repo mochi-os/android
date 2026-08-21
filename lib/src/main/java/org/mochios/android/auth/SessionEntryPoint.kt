@@ -10,12 +10,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
 /**
- * Lets non-Hilt call sites — notably composables in the shared UI layer — reach
- * the singleton [SessionManager] via
- * `EntryPointAccessors.fromApplication(context, SessionEntryPoint::class.java)`.
- * Used by [org.mochios.android.ui.components.rememberServerUrl] so avatar and
- * asset composables can resolve relative paths without every screen threading
- * the server URL through.
+ * Reaches the singleton [SessionManager] from non-Hilt call sites, chiefly
+ * composables.
  */
 @EntryPoint
 @InstallIn(SingletonComponent::class)

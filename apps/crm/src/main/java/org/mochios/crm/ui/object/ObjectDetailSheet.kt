@@ -68,9 +68,8 @@ fun ObjectDetailSheet(
     viewFieldIds: List<String> = emptyList(),
     onDismiss: () -> Unit,
     /**
-     * Delete this object. Imperative, not a past-tense notification: the sheet
-     * does not delete anything itself, and naming it `onObjectDeleted` is how
-     * a caller came to satisfy it by merely closing the sheet and refreshing.
+     * Deletes this object. The sheet never deletes anything itself, so this is
+     * a command, not a notification.
      */
     onDeleteObject: () -> Unit,
     onNavigateToObject: (String) -> Unit = {},
@@ -212,11 +211,9 @@ fun ObjectDetailSheet(
                         status = uiState.saveStatus,
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
                     )
-                    // Tabs match the web layout: Properties / Comments /
-                    // Activity. Attachments + links fold into Properties as
-                    // inline sections; watch/unwatch is the Eye icon in the
-                    // header above, and the title is edited in Properties with
-                    // the rest of the fields.
+                    // Tabs match the web layout: attachments and links are
+                    // inline sections of Properties, watch is the header Eye
+                    // icon.
                     val tabs = listOf(
                         stringResource(R.string.crm_object_tab_properties),
                         stringResource(R.string.crm_object_tab_comments),

@@ -30,9 +30,8 @@ enum class SystemUsersSort { USERNAME, STATUS, LAST }
 enum class SystemUsersOrder { ASC, DESC }
 
 /**
- * Localisable toast signals from the ViewModel. The screen resolves these to
- * stringResource(R.string.system_users_toast_*) so the VM stays free of
- * Android string ids.
+ * Toast signals the screen resolves to string resources, keeping the ViewModel
+ * free of Android string ids.
  */
 enum class SystemUsersToast {
     USER_CREATED,

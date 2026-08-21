@@ -50,35 +50,9 @@ import org.mochios.staff.ui.disputes.stripeReasonLabel
 import java.util.Locale
 
 /**
- * Modal dialog driving the moderator's "Review dispute" / "View
- * chargeback" flow.
- *
- * Android port of the dialog block in
- * `apps/staff/web/src/features/disputes/disputes-page.tsx`. Layout:
- *
- *   - Metadata card: listing, total, reason. For Stripe chargebacks
- *     also chargeback fee + refund state, plus the evidence-due
- *     deadline when status is `open`.
- *   - For USER disputes: read-only buyer description and seller
- *     response. If the seller hasn't responded, a "no response yet"
- *     placeholder is shown.
- *   - In edit mode: resolution dropdown (`resolved_buyer` /
- *     `resolved_seller`). When `resolved_buyer` is selected, a
- *     decimal-keyboard refund-amount field appears underneath; blank
- *     means full refund.
- *   - Notes textarea (optional).
- *   - Inline [StaffAuditTimeline] of the dispute history.
- *
- * Pass [readOnly] = true to render the same metadata + history
- * without the resolution / refund / notes fields — used for Stripe
- * chargebacks (must be answered on Stripe's portal) and for already
- * resolved disputes (`resolved_buyer` / `resolved_seller`). The
- * footer collapses to a single Close button and the title becomes
- * "Chargeback: <reason>" or "View dispute" accordingly.
- *
- * Refund parsing follows the web `parseRefundInput` rule: `jpy` is
- * minor=major (no decimal); everything else multiplies by 100. Both
- * the dot and comma are accepted as the decimal separator.
+ * Moderator dialog for reviewing a dispute. [readOnly] drops the resolution /
+ * refund / notes fields - used for Stripe chargebacks, which must be answered
+ * on Stripe's portal, and for already-resolved disputes.
  */
 @Composable
 fun DisputeReviewDialog(
@@ -388,13 +362,6 @@ private fun resolutionOptions(): List<Pair<String, String>> = listOf(
     "resolved_seller" to stringResource(R.string.staff_disputes_resolution_seller),
 )
 
-/**
- * Parse a free-text major-unit refund into minor currency units. Mirrors
- * the web `parseRefundInput` helper. `jpy` is decimal-free; everything
- * else multiplies by 100. Comma and dot are both accepted as the
- * decimal separator. Returns `null` for unparseable input — the
- * ViewModel treats `null` as "no validated amount supplied".
- */
 internal fun parseRefundMinor(input: String, currency: String): Long? {
     val trimmed = input.trim().replace(',', '.')
     if (trimmed.isEmpty()) return null

@@ -62,9 +62,9 @@ class NotificationsRepository @Inject constructor(
     }
 
     /**
-     * Remove the push account [id] the server minted for this device, so it
-     * stops delivering notifications there. Call while the session is still
-     * valid — the request is authenticated with the notifications app token.
+     * Remove the push account [id] the server minted for this device. Call
+     * while the session is still valid - the request needs the notifications
+     * app token.
      */
     suspend fun removeAccount(id: String) {
         try {

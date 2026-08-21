@@ -110,15 +110,6 @@ sealed class EditListingEvent {
     data object TitleRequired : EditListingEvent()
 }
 
-/**
- * Host view model for the listing editor. Holds the entire editable shape in
- * a single [EditUiState] and exposes per-field setters. The screen drives
- * auto-save via a 1-second debounce after the last edit, and an explicit
- * Publish button.
- *
- * Route parameter: `id` from `MarketApp.LISTING_EDIT` (numeric) or the literal
- * "new" / blank from `MarketApp.NEW_LISTING` to start a fresh draft.
- */
 @HiltViewModel
 class EditListingViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -265,13 +256,8 @@ class EditListingViewModel @Inject constructor(
     }
 
     /**
-     * Switching the pricing model preserves every user-entered field that isn't
-     * specific to the previous model — title, description, category, condition,
-     * tags, location, currency, photos, assets, zones and the headline price
-     * all stay put. Only the model-specific fields reset so a previously-typed
-     * auction reserve doesn't silently follow the user into a fixed-price
-     * listing. Web's `pricing-model-selector.tsx` does the same scrub when the
-     * selected radio changes.
+     * Only model-specific fields reset, so a typed auction reserve does not
+     * follow the seller into another model.
      */
     fun setPricing(value: PricingModel) = mutate {
         if (it.pricing == value) {
@@ -319,10 +305,8 @@ class EditListingViewModel @Inject constructor(
         viewModelScope.launch { saveNow() }
     }
 
-    // Persist the current state, creating the listing row on first save. The
-    // mutex serialises concurrent saves (debounced autosave vs. an awaited
-    // create from uploadPhoto/uploadAsset) so two in-flight first saves can't
-    // both take the create branch and produce duplicate listings; the state is
+    // The mutex keeps a debounced autosave and an upload's awaited create from
+    // both taking the create branch and making duplicate listings; state is
     // re-read inside the lock so the second saver sees the id the first set.
     private suspend fun saveNow() {
         saveMutex.withLock {
@@ -389,11 +373,9 @@ class EditListingViewModel @Inject constructor(
         }
         if (current.listingId.isEmpty()) {
             viewModelScope.launch {
-                // saveNow, not save: save() only launches the write and returns
-                // at its first suspension, so the listingId read on the next
-                // line was still empty and publish silently did nothing. The
-                // pending autosave then created the draft anyway, leaving the
-                // seller with a listing that exists and is unpublished.
+                // saveNow, not save(): save() only launches the write, so
+                // listingId would still be empty on the next line and publish
+                // would silently do nothing.
                 if (_state.value.title.isBlank()) {
                     // saveNow returns without saving on a blank title, so
                     // without this publish would be silent again.
@@ -635,11 +617,8 @@ class EditListingViewModel @Inject constructor(
 }
 
 /**
- * True when the price the seller has typed is a positive amount below Stripe's
- * minimum charge for the chosen currency. Auction listings use the reserve
- * field instead of the headline price (the editor stashes auction values in
- * [EditUiState.reserveText]). PWYW listings can sit at zero so an empty / zero
- * price is allowed for every model.
+ * Zero and empty pass for every model (pay-what-you-want may sit at zero);
+ * auctions check the reserve.
  */
 fun priceBelowStripeMinimum(state: EditUiState): Boolean {
     val text = if (state.pricing == PricingModel.AUCTION) state.reserveText else state.priceText

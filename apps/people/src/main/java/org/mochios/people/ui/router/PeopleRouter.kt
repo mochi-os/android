@@ -15,13 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.ui.components.LastViewedStore
 
-/**
- * Start destination for the people nav graph. Resolves the section the user
- * was last viewing (friends / invitations / groups / profile) from
- * [LastViewedStore] and emits a route token via [onResolve]; the nav graph
- * maps that token onto the matching screen. Empty / unrecognised values
- * fall through to the friends section.
- */
 @Composable
 fun PeopleRouter(onResolve: (section: String) -> Unit) {
     val context = LocalContext.current

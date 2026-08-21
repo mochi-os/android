@@ -31,9 +31,8 @@ data class Chat(
 )
 
 /**
- * The stable navigation key for a chat: its fingerprint, falling back to its
- * id when the fingerprint is blank. Matches the id used for drawer routing and
- * local pin storage so a chat resolves the same from list and conversation.
+ * Navigation key shared by drawer routing and pin storage: fingerprint, or id
+ * when blank.
  */
 fun Chat.chatKey(): String = fingerprint.ifEmpty { id }
 

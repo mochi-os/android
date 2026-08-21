@@ -64,18 +64,6 @@ import org.mochios.market.R
 import org.mochios.market.ui.components.FeeDisclosure
 import org.mochios.market.ui.components.formatPercent
 
-/**
- * Seller settings / activation screen. Mirrors web's
- * `apps/market/web/src/features/account/SellerSettingsPage`. Consolidates
- * seller activation and Stripe Connect onboarding into one place:
- *
- *  1. Status summary (account status / payments / fees).
- *  2. Setup card with a two-step indicator (activate → connect Stripe), the
- *     platform-fee disclosure, and the primary action for the current state.
- *
- * The TopAppBar title flips between "Seller settings" (already a seller) and
- * "Become a seller" (not yet activated).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SellerSettingsScreen(

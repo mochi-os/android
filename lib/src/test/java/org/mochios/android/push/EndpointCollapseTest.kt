@@ -9,10 +9,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * Whether a push endpoint is judged local decides how the server delivers it,
- * and getting it wrong in either direction loses the push: judged local, the
- * server delivers to itself rather than to the real endpoint; judged foreign,
- * it POSTs RFC 8030 back to its own still-stubbed inbound handler.
+ * A push endpoint judged local is delivered to the server itself; judged
+ * foreign, the server POSTs RFC 8030 to its own stubbed inbound handler. Either
+ * error loses the push.
  */
 class EndpointCollapseTest {
 
@@ -47,11 +46,6 @@ class EndpointCollapseTest {
         assertEquals(foreign, collapseLocalEndpoint(foreign, server))
     }
 
-    /**
-     * The bug this fixes. A host comparison alone accepted both of these as
-     * ours and collapsed them, so the server would have delivered locally and
-     * the real endpoint would never have received the push.
-     */
     @Test
     fun `same host on a different port or scheme is not ours`() {
         val otherPort = "https://mochi-os.org:8443/notifications/-/push/inbound/abc123"

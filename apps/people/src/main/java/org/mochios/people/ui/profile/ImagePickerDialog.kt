@@ -25,11 +25,7 @@ import kotlinx.coroutines.withContext
 import java.io.ByteArrayOutputStream
 
 /**
- * Caps + target dimensions per slot. Mirrors `SLOT_RESIZE` on the web (see
- * `apps/people/web/src/lib/resize-image.ts`), tuned for the mobile bandwidth
- * profile: avatars / favicons resize to a 256px square, banners to 1200px
- * wide. The byte cap is the spec we pass back to the ViewModel after
- * iterating JPEG quality.
+ * Per-slot resize target and byte cap; mirrors the web's `SLOT_RESIZE`.
  */
 data class ImageSlotSpec(val maxDimension: Int, val maxBytes: Int)
 
@@ -40,19 +36,8 @@ val SLOT_SPECS: Map<ImageSlot, ImageSlotSpec> = mapOf(
 )
 
 /**
- * Wraps an [ActivityResultContracts.GetContent] launcher so a screen-level
- * "Change avatar" / "Change banner" / "Upload favicon" button can resolve to
- * a resized JPEG [ByteArray] without any further composable plumbing.
- *
- * `trigger.launch()` opens the system image picker. After the user picks an
- * image we decode it on a background thread, scale it down to the slot's
- * `maxDimension`, then encode JPEG starting at quality 85 and step down by 15
- * until the result fits under `maxBytes` (floor 30). The resulting bytes go
- * to `onPicked`; errors land in `onError`.
- *
- * Note: the system picker IS the dialog — no Compose surface is shown here.
- * The name follows the spec (ImagePickerDialog) and the helpers used by the
- * screen mirror that affordance.
+ * Launches the system image picker and hands back the picked image resized to
+ * the slot's spec as JPEG bytes.
  */
 class ImagePicker(
     val launch: () -> Unit,

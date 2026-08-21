@@ -21,14 +21,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
 
 /**
- * Requests the Android 13+ POST_NOTIFICATIONS runtime permission once per
- * app launch. Drops in at the top of any Composable shell — the prompt
- * only fires if the permission isn't already granted, and only on the
- * SDK levels that need it.
- *
- * Without this, the manifest declaration alone is not enough on Android
- * 13+: the system refuses to post notifications until the user has
- * explicitly granted at the runtime prompt.
+ * Requests the Android 13+ POST_NOTIFICATIONS permission once per launch. Drop
+ * in at the top of a Composable shell; the manifest declaration alone does not
+ * allow posting.
  */
 @Composable
 fun RequestNotificationPermission() {

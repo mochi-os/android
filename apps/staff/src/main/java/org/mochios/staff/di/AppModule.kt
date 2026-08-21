@@ -41,13 +41,6 @@ object AppModule {
         sessionManager: SessionManager,
     ): Retrofit {
         val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
-        // Interceptor order matters here. OkHttp runs application
-        // interceptors in declaration order on the request and in reverse
-        // on the response. The Bearer interceptor must come FIRST so it
-        // attaches the staff JWT on the way out; StaffAuthInterceptor sits
-        // after it so the 401/403 it observes is the response to the
-        // authenticated request (rather than the unauthenticated one we'd
-        // otherwise be sending).
         val client = okHttpClient.newBuilder()
             .addInterceptor(Interceptor { chain ->
                 val token = sessionManager.getTokenBlocking("staff")

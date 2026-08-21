@@ -39,21 +39,10 @@ import org.mochios.android.R
 import org.mochios.android.model.AccessRule
 
 /**
- * Card rendering for a single access rule, shared across crm, feeds, forums,
- * and projects settings screens.
- *
- * `levelLabel` resolves the rule's `operation` string to a localised label —
- * each app passes its own mapper because the set of meaningful access levels
- * varies (forums has post/moderate; projects has owner/design/write; feeds
- * has react). The card has no opinion on which levels exist.
- *
- * When `onLevelChange` is supplied along with a non-empty `levels` list and the
- * rule is not the owner, the level chip becomes a dropdown that mirrors web's
- * inline level select: tapping it lists `levels` (each labelled via
- * `levelLabel`) and reports the chosen one. Owners always render a static chip.
- * Callers whose level label depends on more than the operation string (e.g.
- * grant-aware deny labels) should leave `onLevelChange` null and keep the
- * static chip.
+ * Card for one access rule, shared by the crm, feeds, forums and projects
+ * settings screens; each app supplies its own `levelLabel`. Passing
+ * `onLevelChange` with a non-empty `levels` turns the chip into a dropdown -
+ * leave it null when the label depends on more than the operation string.
  */
 @Composable
 fun AccessRuleCard(

@@ -20,13 +20,9 @@ import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 
 /**
- * The one piece of file handling that has to stay in the UI: driving the
- * system pickers. Only the composition can reach the activity-result
- * registry, so a ViewModel can't open a picker itself.
- *
- * Everything after the pick — reading, writing, caching, uploading — belongs
- * to `FileRepository`, which ViewModels inject. These helpers deliberately
- * hand back nothing but a [Uri].
+ * Driving the system pickers has to stay in the UI: only a composition can
+ * reach the activity-result registry. Everything after the pick - reading,
+ * writing, caching, uploading - belongs to `FileRepository`.
  */
 
 /** Mime type of a JSON export, and the save dialog's default. */
@@ -39,17 +35,8 @@ const val MIME_CSV = "text/csv"
 const val MIME_ZIP = "application/zip"
 
 /**
- * An export that still needs somewhere to go.
- *
- * Held in ViewModel state between the export being asked for and the user
- * picking a destination, so nothing large sits in composition.
- *
- * @property suggestedName name to offer in the system save dialog.
- * @property mimeType what the payload is, so a screen offering more than one
- *   kind of export knows which save dialog to open.
- * @property content the payload, for an export the app builds itself. Null
- *   means the server holds it: a backup is a zip that runs to megabytes, so it
- *   is streamed to the destination once there is one rather than parked here.
+ * An export waiting for a destination. A null [content] means the server holds
+ * the payload and it is streamed to the destination rather than parked here.
  */
 data class PendingExport(
     val suggestedName: String,
@@ -57,17 +44,6 @@ data class PendingExport(
     val content: String? = null,
 )
 
-/**
- * An export that has been written, and where it went.
- *
- * Held in ViewModel state so the screen can offer the finished file to the
- * share sheet. The destination is the document the user picked, which the app
- * holds a read grant for, so it can be passed on to whatever they share to.
- *
- * @property uri the document that was written.
- * @property mimeType what it holds, so the sheet offers sensible targets.
- * @property name the file's name, for the sheet's content preview.
- */
 data class SavedExport(
     val uri: Uri,
     val mimeType: String,
@@ -75,16 +51,9 @@ data class SavedExport(
 )
 
 /**
- * Opens the system share sheet with a finished export.
- *
- * The uri is the document the picker handed back, so the grant has to travel
- * with the intent for the receiving app to read it — as a flag, and as
- * [ClipData], which is what makes the grant stick on the targets that ignore
+ * Opens the share sheet with a finished export. The read grant travels both as
+ * a flag and as [ClipData], which is what makes it stick on targets that ignore
  * `EXTRA_STREAM` alone.
- *
- * @param context whatever the screen has to hand; the chooser is started with
- *   `NEW_TASK` so a non-activity context works too.
- * @param export the file that was written, from [SavedExport].
  */
 fun shareExportFile(context: Context, export: SavedExport) {
     val intent = Intent(Intent.ACTION_SEND).apply {
@@ -109,21 +78,9 @@ fun interface FileSaveLauncher {
 }
 
 /**
- * Remembers a save dialog for documents of [mimeType].
- *
- * Only the destination comes back through here — [onResult] hands the uri
- * straight to the caller, who writes to it through `FileRepository`. Nothing
- * is held in composition, so an export interrupted by process death loses
- * nothing that wasn't already lost.
- *
- * The type is fixed when the launcher is remembered, so a screen that exports
- * both JSON and CSV remembers one launcher per type. The dialog is hinted to
- * open on Downloads — see [CreateDocumentInDownloads] for how far that goes.
- *
- * @param mimeType what the file will hold — [MIME_JSON] or [MIME_CSV].
- * @param onResult called with the chosen destination, or with null when the
- *   user backs out. Callers must handle the null case: leaving a cancelled
- *   export pending would stall the next one.
+ * Remembers a save dialog for [mimeType]. The type is fixed when remembered, so
+ * a screen exporting both JSON and CSV remembers one launcher per type.
+ * [onResult] gets null when the user backs out, and callers must handle it.
  */
 @Composable
 fun rememberFileSaveLauncher(
@@ -140,13 +97,8 @@ fun rememberFileSaveLauncher(
 }
 
 /**
- * `CreateDocument` that opens on Downloads.
- *
- * The base contract sends only the suggested name, so the dialog lands
- * wherever the picker was last left — which for an export is rarely where the
- * user wants it. `EXTRA_INITIAL_URI` is a hint, not a setting: a picker that
- * remembers its own last location, or an OEM picker that ignores the extra,
- * still decides. The user can navigate anywhere from there either way.
+ * `CreateDocument` that opens on Downloads. `EXTRA_INITIAL_URI` is a hint: a
+ * picker that remembers its own last location, or an OEM one, still decides.
  */
 private class CreateDocumentInDownloads(
     mimeType: String,
@@ -158,13 +110,6 @@ private class CreateDocumentInDownloads(
         return intent
     }
 
-    /**
-     * The Downloads folder as a documents-provider uri.
-     *
-     * Only meaningful from API 26, where the external storage provider exposes
-     * it under a stable document id; below that the hint is skipped and the
-     * picker opens wherever it would have.
-     */
     private fun downloadsUri(): Uri? {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             return null
@@ -177,15 +122,8 @@ private class CreateDocumentInDownloads(
 }
 
 /**
- * The display name for a picked [uri], for labelling it in a draft chip.
- *
- * Resolving a name is a `ContentResolver` query, so it can't happen inline
- * during composition — [resolve] is a suspending call the caller routes to its
- * repository, and the label fills in once it returns.
- *
- * @param resolve looks the name up, e.g. `viewModel::fileName`.
- * @param fallback shown until the real name arrives.
- * @return the file's name, or [fallback] while the lookup is in flight.
+ * The display name for a picked [uri]; [resolve] is a suspending lookup, so
+ * [fallback] shows until it returns.
  */
 @Composable
 fun rememberFileLabel(

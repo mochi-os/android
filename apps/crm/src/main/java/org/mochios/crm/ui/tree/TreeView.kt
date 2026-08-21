@@ -122,11 +122,9 @@ fun TreeView(
 }
 
 /**
- * Resolve a tree drag-drop into [CrmViewModel.moveObject] /
- * [CrmViewModel.reparentObject] calls. Cycle prevention rejects drops
- * onto the source's own descendants. Sibling reorder ([DragEdge.Top] /
- * [DragEdge.Bottom]) issues a `moveObject` with `scope_parent` set to the
- * target's parent so the server renumbers ranks within that subtree only.
+ * Resolves a tree drop into reparent/move calls. Drops onto the source's own
+ * descendants are rejected; sibling reorders pass scope_parent so the server
+ * renumbers only that subtree.
  */
 private fun handleTreeDrop(
     sourceId: String,
@@ -153,24 +151,15 @@ private fun handleTreeDrop(
             // Insert as sibling of the target under target's parent.
             val newParent = targetNode.obj.parent
             if (sourceObj.parent != newParent) {
-                // Cross-parent move. Reparent only; the server appends to
-                // the new parent's children. We don't immediately follow
-                // up with a rank update because the two requests would
-                // race — by the time the rank update reaches the server,
-                // the reparent may not have applied yet, leading to a
-                // sibling-rank update against the wrong parent. Users
-                // wanting precise positioning can drag again after the
-                // reparent settles.
+                // Cross-parent: reparent only, the server appends. A follow-up
+                // rank update would race the reparent and land against the
+                // wrong parent.
                 viewModel.reparentObject(sourceId, newParent)
                 return
             }
-            // Same-parent: pure sibling reorder. Server's
-            // action_object_move treats `scope_parent` as falsy when empty
-            // (root level), so we can only reorder under a non-root
-            // parent here. Root-level sibling reorder via drag is a known
-            // limitation; the row's overflow menu's "Move" dialog still
-            // works, and "Move" → root-level happens to leave rank up to
-            // the server (which appends).
+            // Same-parent reorder. The server reads an empty scope_parent as
+            // unset, so root-level siblings cannot be reordered by drag; the
+            // Move dialog still works.
             if (newParent.isBlank()) return
             val siblings = allObjects
                 .filter { it.parent == newParent && it.id != sourceId }

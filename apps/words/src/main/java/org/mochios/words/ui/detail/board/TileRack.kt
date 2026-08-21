@@ -44,22 +44,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.mochios.words.engine.getLetterValue
 
-/**
- * Player's 7-tile rack. Tiles always render in 7 slots — empty slots stay
- * as faded dashed outlines so the row is stable in size as tiles flow on
- * and off (drag, place, recall).
- *
- * In normal mode each tile is a button:
- *  - Tap → toggle selection (the screen places the selected tile on the
- *    next board-cell tap, or opens the BlankTileDialog for blanks).
- *  - Long-press + drag → start a continuous drag from this slot. The screen
- *    renders a ghost tile under the finger and resolves the drop target on
- *    release (board cell / rack slot / cancel).
- *
- * In exchange mode each tile shows a tickable checkmark overlay instead;
- * tap toggles inclusion in the exchange-tiles set. Selection rings render
- * in destructive red so the user sees they're committing to discarding.
- */
 @Composable
 fun TileRack(
     tiles: List<Char>,

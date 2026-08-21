@@ -26,23 +26,8 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Retrofit interface for the chess app's HTTP actions. Endpoint paths mirror
- * `apps/chess/app.json` exactly:
- *
- *  - Class-level actions (`-/list`, `-/new`, `-/create`) have no game id.
- *  - Per-game actions take a `{game}` path segment (entity id or 9-char
- *    fingerprint) followed by `-/<action>`.
- *
- * Every payload is wrapped in the standard `{"data": ...}` envelope by the
- * Starlark side (`return {"data": ...}`), so each method returns
- * `Response<ApiResponse<T>>` where `T` is the inner payload shape. Callers
- * unwrap via `org.mochios.android.api.unwrap` (lib helper).
- *
- *  - `list` returns the array directly under `data` (the Starlark
- *    `action_list` does `{"data": games}`), so the inner type is
- *    `List<Game>` rather than a wrapper object.
- *  - `getNewGameFriends` returns `{"data": {"friends": [...]}}`, so the inner
- *    type is [GetNewGameResponse] with a nested `friends` field.
+ * Chess HTTP actions; paths mirror `apps/chess/app.json`, payloads arrive in
+ * the `{"data": ...}` envelope and are read with `unwrap`.
  */
 interface ChessApi {
 
@@ -82,10 +67,7 @@ interface ChessApi {
     ): Response<ApiResponse<SendMessageResponse>>
 
     /**
-     * Submit a move. The body is JSON (the server reads each field via
-     * `a.input(...)` which accepts both form fields and JSON payload keys,
-     * but JSON keeps the wire shape closest to the web's client which
-     * always posts JSON for moves).
+     * JSON body rather than form fields, matching the web client's move POST.
      */
     @POST("{game}/-/move")
     suspend fun move(

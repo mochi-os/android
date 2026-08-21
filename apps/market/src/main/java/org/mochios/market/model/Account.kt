@@ -8,12 +8,8 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Per-identity market account (profile + seller state).
- *
- * Mirrors `Account` in `apps/market/web/src/types/accounts.ts`. `business` /
- * `seller` / `onboarded` / `verified` are 0/1 ints (server convention).
- * `stripe` is the connected-account id; `stripe_testmode` indicates the
- * account is wired to Stripe's test environment.
+ * Market account; mirrors `Account` in `apps/market/web/src/types/accounts.ts`.
+ * `stripe` is the connected-account id.
  */
 data class Account(
     val id: String = "",
@@ -45,13 +41,9 @@ data class Account(
 )
 
 /**
- * Compact account projection used by the public seller card on listing
- * detail pages.
- *
- * Mirrors `AccountSummary` in `apps/market/web/src/types/accounts.ts`. Many
- * fields are nullable because the server omits them depending on caller
- * privileges (e.g. internal staff endpoints expose `status`, public ones
- * don't).
+ * Public seller-card projection; mirrors `AccountSummary` in web
+ * `types/accounts.ts`. Nullable fields are omitted by the server depending on
+ * caller privileges.
  */
 data class AccountSummary(
     val id: String = "",
@@ -78,12 +70,8 @@ enum class AccountStatus {
 }
 
 /**
- * Stripe Connect status for the current account.
- *
- * Mirrors the inline response shape in `accountsApi.stripeStatus` in
- * `apps/market/web/src/api/accounts.ts`. `charges_enabled` indicates the
- * account can accept payments; `payouts_enabled` indicates Stripe will
- * forward funds to the bank account.
+ * Stripe Connect status; mirrors `accountsApi.stripeStatus` in
+ * `apps/market/web/src/api/accounts.ts`.
  */
 data class StripeStatus(
     @SerializedName("charges_enabled") val chargesEnabled: Boolean = false,
@@ -91,22 +79,17 @@ data class StripeStatus(
 )
 
 /**
- * Platform-fee disclosure surfaced by `accounts/fees`.
- *
- * Mirrors `Fees` in `apps/market/web/src/types/accounts.ts`. `platform` is
- * the Mochi platform fee percentage (e.g. `5.0` for 5%); per-currency
- * Stripe minimums and chargeback fees are intentionally not embedded here
- * (web links users to the Stripe dashboard for those — see
- * `feedback_dont_quote_third_party_rates`).
+ * Platform-fee disclosure from `accounts/fees`; `platform` is a percentage.
+ * Stripe's own fees are deliberately not embedded - the UI links to the Stripe
+ * dashboard instead.
  */
 data class AccountFees(
     val platform: Double = 0.0,
 )
 
 /**
- * Itemised breakdown of how an order's `total` decomposes into item, postage,
- * platform fee, and seller payout. Used by the buying and selling detail
- * pages to render the receipt. Money values in minor units.
+ * How an order's `total` decomposes into item, postage, fee and payout; minor
+ * units.
  */
 data class FeeBreakdown(
     val item: Long = 0,

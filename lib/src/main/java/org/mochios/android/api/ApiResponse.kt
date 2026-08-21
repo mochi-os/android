@@ -20,21 +20,10 @@ data class ApiError(
 )
 
 /**
- * Build the throwable for a failed HTTP response.
- *
- * A JSON object body is the Mochi server's structured `{error, message}` error
- * (from `respond_error`) — wrapped in [ApiException] with the status code so
- * code-aware handling (401 re-auth, the wikis 502 "remote unreachable" branch,
- * etc.) keeps working.
- *
- * A non-JSON body, however, is NOT a Mochi API response: it's an HTML error page
- * from a reverse proxy / gateway / CDN (e.g. a "502 Bad Gateway" when the backend
- * is unreachable), the server's framework-level unhandled-error page, or a wrong
- * endpoint (app/server version skew). Previously the entire HTML document was
- * stuffed into the error message and rendered verbatim — an ugly web-page-like
- * error screen with red text. Since these mean "we're not talking to a healthy
- * Mochi server", they're surfaced as a [MochiError.NetworkError] so the user
- * gets the proper "can't reach the server" screen with a Retry button.
+ * A JSON body is the server's `{error, message}`, wrapped in [ApiException]
+ * with its status. Anything else came from a proxy or gateway rather than
+ * Mochi, so it becomes [MochiError.NetworkError] and the user gets the retry
+ * screen.
  */
 private fun errorForResponse(code: Int, errorBody: String?): Throwable {
     val body = errorBody?.trimStart()
@@ -62,11 +51,8 @@ fun <T> Response<T>.unwrapRaw(): T {
 }
 
 /**
- * [unwrapRaw] for an endpoint that answers with no content: map the server's
- * error the same way on failure, and ignore the body on success.
- *
- * A `Response<Unit>` whose body is empty deserialises to null, so [unwrapRaw]
- * would reject a perfectly good 200.
+ * [unwrapRaw] for a no-content endpoint: an empty body deserialises to null,
+ * which [unwrapRaw] rejects.
  */
 fun Response<*>.unwrapEmpty() {
     if (!isSuccessful) throw errorForResponse(code(), errorBody()?.string())

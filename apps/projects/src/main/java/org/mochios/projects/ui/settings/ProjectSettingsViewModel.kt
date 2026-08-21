@@ -62,10 +62,8 @@ class ProjectSettingsViewModel @Inject constructor(
     }
 
     /**
-     * Re-runs the initial load for the error state's retry button. Clears the
-     * error first: the screen selects its error branch on `error != null`, so
-     * leaving the previous one set would keep the retry on screen behind a
-     * successful reload.
+     * Retry for the error state. Clears the error first, or the screen keeps
+     * its error branch through a successful reload.
      */
     fun retry() {
         _uiState.value = _uiState.value.copy(error = null)
@@ -147,9 +145,8 @@ class ProjectSettingsViewModel @Inject constructor(
     }
 
     /**
-     * The canonical entity id for endpoints that reject a fingerprint. The app
-     * navigates by fingerprint, so [projectId] is usually one; prefer the id the
-     * loaded project carries and fall back only while it has not arrived yet.
+     * Canonical entity id for endpoints that reject a fingerprint; [projectId]
+     * is usually one.
      */
     private fun entityId(): String {
         val project = _uiState.value.project ?: return projectId

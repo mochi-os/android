@@ -27,11 +27,8 @@ import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
 /**
- * State + actions for the add-member screen. The search field is debounced
- * 300 ms before hitting `repository.searchLocalUsers(query)` to match the web
- * behaviour. We also mine `repository.listGroups()` so groups can be added as
- * nested members — the web exposes this via tabs; on mobile we interleave both
- * kinds in a single results list and tag them with the member-type pill.
+ * Add-member search over local users and groups, interleaved in one list where
+ * web uses tabs.
  */
 @HiltViewModel
 class AddMemberViewModel @Inject constructor(
@@ -42,32 +39,12 @@ class AddMemberViewModel @Inject constructor(
     /** The group the new member joins. */
     val groupId: String = savedStateHandle.get<String>("id").orEmpty()
 
-    /**
-     * One row in the results list. We unify the two web tabs (local users and
-     * groups) into a single list, distinguished by [type].
-     *
-     * @property id the user's or group's entity id.
-     * @property name what the row shows.
-     * @property type which of the two kinds this row is.
-     */
     data class SearchResult(
         val id: String,
         val name: String,
         val type: GroupMemberType,
     )
 
-    /**
-     * State of the add-member screen.
-     *
-     * @property searchQuery what the user has typed into the search field.
-     * @property searchLoading true while the debounced search is in flight.
-     * @property searchError what stopped the last search, if anything.
-     * @property searchResults users and groups matching [searchQuery].
-     * @property isSaving true while the add request is in flight.
-     * @property error what stopped the last add, if anything.
-     * @property added true once a member has joined, so the screen can leave
-     *   and the group behind it can reload.
-     */
     data class UiState(
         val searchQuery: String = "",
         val searchLoading: Boolean = false,
@@ -94,9 +71,8 @@ class AddMemberViewModel @Inject constructor(
     }
 
     /**
-     * Fetches the group's current members so the results can leave them out.
-     * A failure only costs the exclusion — the search still works, and the
-     * server rejects a duplicate member anyway.
+     * Loads the members to exclude from results; on failure search still works
+     * and the server rejects duplicates.
      */
     private fun loadExisting() {
         if (groupId.isBlank()) return

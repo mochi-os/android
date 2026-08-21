@@ -106,10 +106,9 @@ fun SessionsScreen(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    // Sessions are sorted accessed-desc by the ViewModel; the
-                    // top entry is the current session (matches web's
-                    // heuristic). The `(current)` suffix tells the user which
-                    // row revoking will sign them out of.
+                    // The ViewModel sorts by accessed descending, so the top
+                    // entry is the current session (web uses the same
+                    // heuristic).
                     itemsIndexed(state.sessions) { index, session ->
                         SessionRow(
                             session = session,

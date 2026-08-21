@@ -16,10 +16,8 @@ data class TokenResponse(
 )
 
 /**
- * Mints a per-app JWT via POST /_/token. Authorised by the session cookie on
- * the shared OkHttpClient's CookieJar — the same pattern the web shell uses to
- * issue tokens to its iframe SPAs. Kept separate from [AuthApi] because token
- * minting is a cross-cutting concern, not part of the login/passkey/OAuth flow.
+ * Mints a per-app JWT via POST /_/token, authorised by the session cookie on
+ * the shared CookieJar.
  */
 interface TokenApi {
 

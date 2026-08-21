@@ -55,17 +55,6 @@ import org.mochios.wikis.model.TagPage
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.android.R as MochiR
 
-/**
- * Pages-for-a-tag surface. Mirrors web's
- * `apps/wikis/web/src/features/wiki/tag-pages.tsx`: a header with the tag
- * name, a count subtitle, a LazyColumn of page rows showing title + last
- * updated, and an "All tags" action in the top bar that returns to the
- * tags index.
- *
- * Reads `wikiId` + `tag` via [TagPagesViewModel]'s
- * [androidx.lifecycle.SavedStateHandle] and is wired by `WikisApp.TAG_PAGES`
- * in the nav graph.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TagPagesScreen(

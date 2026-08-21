@@ -36,16 +36,9 @@ class PasskeyManager @Inject constructor(
     private val credentialManager = CredentialManager.create(context)
 
     /**
-     * Run the WebAuthn registration ceremony against the platform credential
-     * provider. Takes the `options` JSON returned by the server's
-     * `passkey/register/begin` action and returns the full credential JSON
-     * (registrationResponseJson) which the caller posts to
-     * `passkey/register/finish` as the `credential` field.
-     *
-     * Must be invoked from an Activity context (CredentialManager surfaces a
-     * system UI); the @ApplicationContext is sufficient on Android 14+ via the
-     * CredentialManager system service, but callers should prefer LocalActivity
-     * if they hit issues on older OEMs.
+     * WebAuthn registration ceremony. Takes the `passkey/register/begin`
+     * options JSON and returns the registrationResponseJson to post as
+     * `credential` to `passkey/register/finish`.
      */
     suspend fun register(options: JsonObject): String {
         val request = CreatePublicKeyCredentialRequest(requestJson = options.toString())
@@ -64,10 +57,8 @@ class PasskeyManager @Inject constructor(
     }
 
     /**
-     * Run the WebAuthn assertion ceremony and return the raw
-     * authenticationResponseJson (the navigator.credentials.get() result the
-     * server's step-up `passkey/verify/finish` expects as its `assertion`
-     * field, parsed by ParseCredentialRequestResponseBody).
+     * WebAuthn assertion ceremony; returns the authenticationResponseJson that
+     * step-up `passkey/verify/finish` takes as `assertion`.
      */
     suspend fun authenticateRaw(options: JsonObject): String {
         val response = getCredential(options)

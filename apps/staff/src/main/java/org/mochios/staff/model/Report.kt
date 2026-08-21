@@ -8,13 +8,9 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * One row from the staff reports queue (`reports/list`).
- *
- * Mirrors `Report` in `apps/staff/web/src/types/reports.ts`. `target` is
- * either a listing id (when `type == "listing"`) or an account fingerprint
- * (when `type == "user"`). `listing` is populated server-side for listing
- * reports — the small projection in [ReportListing] is rendered inline in
- * the queue without a second fetch.
+ * Mirrors `Report` in `apps/staff/web/src/types/reports.ts`. `target` is a
+ * listing id when `type == "listing"`, else an account fingerprint; `listing`
+ * is filled server-side for listing reports.
  */
 data class Report(
     val id: String = "",
@@ -45,12 +41,6 @@ data class ReportListing(
     val currency: String = "",
 )
 
-/**
- * Result of `reports/list`. Mirrors `ReportsResponse` in
- * `apps/staff/web/src/types/reports.ts`. Named `ReportsListResponse` here to
- * match the existing api file imports and the Android list-response naming
- * convention.
- */
 data class ReportsListResponse(
     val reports: List<Report> = emptyList(),
     val total: Long = 0,
@@ -65,13 +55,8 @@ enum class ReportType {
 }
 
 /**
- * Report lifecycle status. `pending` reports are queue items; staff transition
- * them to `actioned` (any of dismiss/warn/remove/suspend/ban created a
- * downstream effect) or `dismissed` (explicit no-action). Source:
- * `event_staff_reports_action` in `apps/comptroller/starlark/reports.star`.
- *
- * `REVIEWED` is kept for legacy compatibility (older Comptroller builds wrote
- * this value) and is treated as equivalent to `ACTIONED` by the UI.
+ * `reviewed` is a legacy value older Comptroller builds wrote; treat it as
+ * `actioned`.
  */
 enum class ReportStatus {
     @SerializedName("pending") PENDING,
@@ -81,15 +66,9 @@ enum class ReportStatus {
 }
 
 /**
- * Actions a moderator can take from the report action dialog. The action is
- * forwarded verbatim to `event_staff_reports_action`, which validates it
- * against this exact set (see `apps/comptroller/starlark/reports.star`).
- *
- * - [DISMISS] closes the report without effect.
- * - [WARN] adds a moderation warning to the targeted listing.
- * - [REMOVE] takes down the targeted listing.
- * - [SUSPEND] suspends the targeted account (listing target -> seller).
- * - [BAN] bans the targeted account (listing target -> seller).
+ * Validated by `event_staff_reports_action`. `warn`/`remove` act on the
+ * listing; `suspend`/`ban` act on the account (a listing target resolves to its
+ * seller).
  */
 enum class ReportAction {
     @SerializedName("dismiss") DISMISS,

@@ -52,10 +52,8 @@ import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 
 /**
- * A row of reaction pills with a trailing add/change affordance.
- *
- * @param emojiSize the font size of the pill emojis. The add-reaction icon is
- *   measured to the emoji's laid-out height so the icon and pills line up exactly.
+ * A row of reaction pills with a trailing add/change affordance. The add icon
+ * is measured to [emojiSize]'s laid-out height so it lines up with the pills.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -75,11 +73,8 @@ fun ReactionBar(
     // add-icon size measured to match the emoji's laid-out height.
     val (emojiStyle, iconSize) = rememberReactionSizing(emojiSize)
 
-    // The viewer's own reaction always sits at the right end of the bar — in the
-    // slot the add button would otherwise hold. Others render first, then the
-    // overflow chip, then the viewer's reaction (or the add button if they
-    // haven't reacted). When the viewer has reacted the add button is hidden;
-    // tapping their highlighted pill reopens the picker to change or clear it.
+    // The viewer's own reaction sits at the right end, in the slot the add
+    // button would hold; tapping it reopens the picker to change or clear it.
     val mine = reactions.firstOrNull { reaction -> reaction.isMine }
     val others = reactions.filter { reaction -> !reaction.isMine }
     val visibleOthers = maxVisible?.let { max ->
@@ -168,11 +163,6 @@ fun ReactionBar(
     }
 }
 
-/**
- * A single reaction pill — the emoji plus its count. The viewer's own reaction
- * is marked with a primary-coloured border so the bar shows which reaction is
- * theirs without recolouring the pill.
- */
 @Composable
 private fun ReactionPill(
     reaction: ReactionCount,
@@ -218,9 +208,9 @@ private const val REACTION_EMOJI_SAMPLE = "😀"
 private data class ReactionSizing(val emojiStyle: TextStyle, val iconSize: Dp)
 
 /**
- * The single source of truth for a reaction bar's sizing. Builds the emoji text
- * style from [emojiSize] and measures its laid-out height so the add-reaction
- * icon can be sized to match the pills exactly, regardless of font and density.
+ * The emoji text style for [emojiSize] plus an add-icon size measured from the
+ * emoji's laid-out height, so the icon matches the pills at any font and
+ * density.
  */
 @Composable
 private fun rememberReactionSizing(emojiSize: TextUnit): ReactionSizing {

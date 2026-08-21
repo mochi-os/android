@@ -97,34 +97,19 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var notificationsRepository: org.mochios.android.notifications.NotificationsRepository
     @Inject lateinit var webSocket: org.mochios.android.websocket.MochiWebSocket
 
-    // Latest alias / shortcut hint resolved from the launching intent.
-    // Updated on every onNewIntent so swapping launcher icons (e.g.
-    // Projects → Feeds) re-keys the NavHost below and lands the user
-    // directly on the new feature's home, rather than flashing whatever
-    // screen was on top of the previous feature's back stack. Compose's
-    // mutableStateOf (vs a Flow) makes the write Snapshot-tracked so the
-    // recomposition is scheduled inside the same Choreographer frame as
-    // the onResume call — no extra coroutine dispatch delay before the
-    // surface is repainted, which is what was leaving the old feature
-    // visible for a frame.
+    // Alias / shortcut hint from the launching intent, updated on every
+    // onNewIntent. mutableStateOf rather than a Flow: the write is
+    // Snapshot-tracked, so the new feature recomposes in the same frame as
+    // onResume instead of a frame later.
     private var targetApp by mutableStateOf<String?>(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        // No eager PushService.start here — push transport is server-driven.
-        // After the user authenticates, the LaunchedEffect on `identity`
-        // below calls PushTransport.configure() which either:
-        //   - if the server has Firebase config: initialises FCM and skips
-        //     PushService (no "listening for notifications" status notif)
-        //   - else: starts PushService for the UnifiedPush fallback
         handleMochiUri(intent)
-        // Surface any deep link that was pending across a process death (most
-        // commonly the post-install relaunch: notification tap → app launches
-        // → onResume fires the update installer → user accepts → process is
-        // killed → fresh launch via the default LAUNCHER intent carries no
-        // deep link, so without this restore the user lands at the home
-        // screen instead of the notification destination).
+        // Restore a deep link persisted across process death - the update
+        // installer kills the process between a notification tap and the
+        // relaunch.
         if (PendingDeepLink.link.value == null) {
             lastActiveAppPrefs().getString(KEY_PENDING_DEEP_LINK, null)
                 ?.let { PendingDeepLink.set(it) }
@@ -147,17 +132,11 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                     val startApp = targetApp
-                    // While the activity is backgrounded, cover its content with
-                    // the theme background so that a launcher-icon switch (this
-                    // singleTop instance is reused via onNewIntent) doesn't flash
-                    // the previous app's frozen last frame before the new app
-                    // draws. Set on ON_STOP — after the recents snapshot is taken,
-                    // so the thumbnail still shows real content. Nothing paints
-                    // while stopped, so the cover is actually drawn on the first
-                    // resume frame, which is exactly when it's needed to hide the
-                    // stale frame. (The previous version cleared it on ON_RESUME,
-                    // i.e. before the new app painted, so the cover was never
-                    // visible and the old frame still flashed.)
+                    // Cover the content with the theme background while
+                    // stopped, so a launcher-icon switch (singleTop reuse via
+                    // onNewIntent) never flashes the old app's last frame. Set
+                    // on ON_STOP, after the recents snapshot; lifted only once
+                    // the new app has painted.
                     var backgroundedCover by remember { mutableStateOf(false) }
                     // The feature on screen when we backgrounded — lets us tell a
                     // same-app resume from a switch to a different app.
@@ -169,12 +148,9 @@ class MainActivity : ComponentActivity() {
                                     backgroundedCover = true
                                     coveredFromApp = targetApp
                                 }
-                                // onNewIntent (which sets targetApp) runs before
-                                // onResume, so a switch already reads here as
-                                // targetApp != coveredFromApp — keep its cover and
-                                // let the effect below lift it once the new app
-                                // paints. A same-app resume lifts it immediately
-                                // (its frame is already on the surface).
+                                // onNewIntent runs before onResume, so a switch
+                                // already reads targetApp != coveredFromApp
+                                // here; the effect below lifts its cover.
                                 Lifecycle.Event.ON_RESUME ->
                                     if (targetApp == coveredFromApp) backgroundedCover = false
                                 else -> {}
@@ -183,10 +159,8 @@ class MainActivity : ComponentActivity() {
                         this@MainActivity.lifecycle.addObserver(observer)
                         onDispose { this@MainActivity.lifecycle.removeObserver(observer) }
                     }
-                    // Switch case: hold the cover until the new target app has
-                    // composed and painted one frame, then lift it — so the swap
-                    // reads old → theme background → new, never a frame of the old
-                    // app frozen on top of the new.
+                    // On a switch, lift the cover only after the new app has
+                    // painted one frame.
                     LaunchedEffect(startApp) {
                         if (backgroundedCover && startApp != coveredFromApp) {
                             withFrameNanos {}
@@ -203,20 +177,9 @@ class MainActivity : ComponentActivity() {
                         // single confirmation dialog covers them all.
                         var showLogoutConfirm by remember { mutableStateOf(false) }
                         val requestLogout: () -> Unit = { showLogoutConfirm = true }
-                        // Alias-switch transition. The previous attempt
-                        // (Snapshot-tracked mutableStateOf + key(startApp)
-                        // wrap) still left Android's surface showing the
-                        // last frame of the old feature until Compose
-                        // measured + drew the new NavHost. Wrapping the
-                        // NavHost in Crossfade explicitly animates both
-                        // pages during the swap, so the old feature
-                        // fades out while the new fades in instead of
-                        // staying frozen on screen. The 120ms tween is
-                        // imperceptible for an in-app switch but covers
-                        // the recomposition + first-draw window. The
-                        // outer Box paints the theme background so any
-                        // moment Crossfade hasn't drawn yet is the
-                        // theme colour, not the old pixels.
+                        // Alias switch: the Box paints the theme background
+                        // behind the swap so no frame shows the old app's
+                        // pixels; the 120ms fade covers the first draw.
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
@@ -224,13 +187,9 @@ class MainActivity : ComponentActivity() {
                         ) {
                             AnimatedContent(
                                 targetState = startApp,
-                                // The incoming app fades in over the theme
-                                // background; the outgoing app is removed
-                                // INSTANTLY (snap), not faded. A launcher-icon
-                                // swap reuses this singleTop instance via
-                                // onNewIntent, so a crossfade would keep the
-                                // previous app's content on screen for the whole
-                                // fade — snapping it out avoids that lingering.
+                                // Snap the outgoing app out rather than fading
+                                // it: a crossfade keeps the previous app's
+                                // content on screen for the whole fade.
                                 transitionSpec = {
                                     fadeIn(animationSpec = tween(durationMillis = 120)) togetherWith
                                         fadeOut(animationSpec = snap())
@@ -350,27 +309,18 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * The alias's `org.mochios.targetApp` meta-data (set on the per-feature
-     * activity-aliases) is the primary signal. For shortcut intents the
-     * component is `MainActivity` itself — no meta-data — so fall back to
-     * the `EXTRA_APP_HINT` set by the per-feature "Add to home screen" path.
+     * Alias meta-data first; shortcut intents target MainActivity itself (no
+     * meta-data), so fall back to [EXTRA_APP_HINT].
      */
     private fun resolveTargetApp(intent: Intent?): String? =
         resolveAliasTargetApp(intent?.component)
             ?: intent?.getStringExtra(EXTRA_APP_HINT)
 
     /**
-     * Cold-start target resolution. Differs from [resolveTargetApp] only in
-     * the post-install relaunch case: when the system installer hands the
-     * upgraded APK back to Android, Android relaunches the package via the
-     * default LAUNCHER intent — which picks one alias out of the five
-     * (settings, on our manifest), regardless of which feature the user was
-     * actually in when they tapped Update. We detect that by the running
-     * `versionName` differing from the one seen on the previous cold start and
-     * prefer the last-active feature saved by [onPause] instead, so the user
-     * lands back where they were. Keying on the version actually changing (not
-     * a `lastUpdateTime` time-window) makes this robust however long the user
-     * takes to reopen the app after accepting the update.
+     * Cold-start target. After an in-place upgrade Android relaunches via the
+     * default LAUNCHER alias whatever feature was active, so when the running
+     * versionName differs from the last cold start's, prefer the feature saved
+     * by [onPause].
      */
     private fun resolveStartTargetApp(intent: Intent?, savedInstanceState: Bundle?): String? {
         val resolved = resolveTargetApp(intent)
@@ -421,19 +371,13 @@ class MainActivity : ComponentActivity() {
         // means the user never sees the browser/file-picker chain.
         UpdateInstaller.promptIfPending(this)
 
-        // A socket that dropped in the background reconnects only through its
-        // backoff timer; bring every subscribed one back now rather than
-        // waiting out a delay the user is no longer absent for.
+        // A socket dropped in the background otherwise waits out its backoff
+        // timer.
         webSocket.reconnectNow()
 
-        // Re-run the push-transport setup on every resume. The LaunchedEffect
-        // in setContent only fires on isAuthenticated transitions (cold-start
-        // path), which leaves the server-side row stuck if it gets deleted
-        // out-of-band (e.g. the test-on-failure cleanup we added, the user
-        // removing it manually, or a server reset). configure() is idempotent
-        // — when transport is FCM, FcmRegistrar.connect's upsert just touches
-        // the existing row; only if the row is missing does it land a fresh
-        // one. Safe to call on every resume.
+        // The LaunchedEffect in setContent only fires on isAuthenticated
+        // transitions, so a registration row deleted out-of-band would never be
+        // re-landed. configure() is idempotent.
         lifecycleScope.launch {
             if (sessionManager.isAuthenticated.first()) {
                 PushTransport.configure(applicationContext, sessionManager, okHttpClient)
@@ -466,26 +410,10 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * Stripe Checkout success / cancel returns for the Android market app.
-     * The Comptroller mints these URIs when the order/subscription create
-     * carries `client_platform=android`; Stripe's hosted page redirects to
-     * `mochi://market/checkout/success` or `mochi://market/checkout/cancel`,
-     * the Custom Tab hands the URI to the OS, the app's broad mochi:// intent
-     * filter brings us back here, and we route the user to the right
-     * post-checkout screen.
-     *
-     * Real order/subscription state is established by the Comptroller's
-     * webhook handler (`checkout.session.completed`), not by these returns —
-     * the success deep link is purely a UX nudge to the buyer; the
-     * authoritative confirmation arrives via the purchases / subscriptions
-     * list refresh.
-     *
-     * Deliberately not nonce-gated, unlike the OAuth returns beside it: an
-     * injected one navigates to a screen and changes nothing, so there is no
-     * ceremony to burn and nothing to fabricate. (Unlike the OAuth LINK
-     * return, this one is genuinely reachable — the Comptroller hands the
-     * mochi:// URI straight to Stripe as the checkout session's return URL,
-     * with no redirect_local hop to drop the custom scheme.)
+     * Stripe Checkout return (`mochi://market/checkout/success|cancel`, minted
+     * by the Comptroller for `client_platform=android`). Order state comes from
+     * the webhook, not from this; it only navigates, so unlike the OAuth
+     * returns it is deliberately not nonce-gated.
      */
     private fun handleMarketCheckoutDeepLink(uri: Uri) {
         val outcome = uri.pathSegments.getOrNull(1) ?: return
@@ -509,14 +437,9 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * mochi:<intent>?<query> — opaque URI; parse the SSP manually.
-     *
-     * Android's Uri.getQueryParameter throws UnsupportedOperationException on
-     * opaque URIs (only HierarchicalUri implements it), so we split SSP into
-     * <name>?<query-string> and parse the params ourselves. Use the encoded
-     * form so percent-decoding is one pass per param value rather than once
-     * at the top (which can confuse splitting on '?' / '&' if a literal byte
-     * survives decoding).
+     * mochi:<intent>?<query> is opaque and Uri.getQueryParameter throws on
+     * opaque URIs, so split the encoded SSP by hand and decode each value once
+     * after splitting.
      */
     private fun handleSystemIntent(uri: Uri) {
         val ssp = uri.encodedSchemeSpecificPart ?: return
@@ -548,10 +471,8 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * Legacy `mochi://notification?...` / `mochi://oauth-return?...` shapes.
-     * Kept so OAuth callbacks issued by older server builds + shortcuts
-     * created by earlier app versions keep working through the manifest's
-     * new broad filter.
+     * Legacy `mochi://notification?...` / `mochi://oauth-return?...` shapes,
+     * still emitted by older servers and shortcuts.
      */
     private fun handleLegacySystemIntent(uri: Uri) {
         when (uri.authority) {
@@ -577,13 +498,9 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * mochi:/<entity>[/<sub>...] — entity in the current session.
-     *
-     * When the caller provides an `app` hint via Intent extras (e.g. the per-app
-     * "Add to home screen" shortcut intents), use it to short-circuit the
-     * entity → app lookup. Without a hint we'd need to query the current
-     * server's directory to figure out which app owns the entity — left as a
-     * follow-up; external entity URIs without a hint currently no-op.
+     * mochi:/<entity>[/<sub>...] - entity in the current session. Routing needs
+     * the owning app, which only the [EXTRA_APP_HINT] extra supplies; without
+     * it the URI is a no-op.
      */
     private fun handleEntityIntent(intent: Intent, uri: Uri) {
         val segments = uri.pathSegments
@@ -602,26 +519,18 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * mochi://<peer>/<entity>[/<sub>...] — entity on a specific libp2p peer.
-     * Cross-peer routing isn't implemented yet — scheme slot reserved for the
-     * eventual "share an entity from server A with a user on server B" flow.
+     * mochi://<peer>/<entity>[/<sub>...] - entity on another peer; not yet
+     * routed.
      */
     private fun handleCrossPeerEntityIntent(intent: Intent, uri: Uri) {
         Log.w(TAG, "Cross-peer URI not yet supported: $uri")
     }
 
     /**
-     * Handle a tapped system notification.
-     *
-     * This activity is exported — it has to be, to receive the `mochi:` scheme
-     * — so any app or web page can send it `mochi:notification?link=…&id=…`.
-     * Acting on that would let a caller mark any notification id it can guess
-     * as read, and plant a link of its choosing as pending navigation. Both
-     * halves are gated on consuming a nonce issued when we posted the
-     * notification, so only our own taps are honoured.
-     *
-     * A notification posted by a build before nonces existed no longer has a
-     * tap action; it is dropped rather than trusted.
+     * Tapped system notification. The activity is exported, so any app can send
+     * `mochi:notification?link=...&id=...`; both the mark-read and the pending
+     * link are gated on consuming the nonce issued when the notification was
+     * posted.
      */
     private fun setNotificationDeepLink(link: String?, id: String?, nonce: String?) {
         link ?: return
@@ -650,12 +559,9 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun applyOAuthReturn(code: String?, error: String?, nonce: String?) {
-        // Gated like the notification path above: this activity is exported and
-        // BROWSABLE, so any app or web page can deliver a mochi:oauth-return,
-        // and accepting an unsolicited one burns the ceremony — see
-        // shouldAcceptOAuthReturn.
-        // One snapshot: the verifier and the nonce must describe the SAME
-        // ceremony, and two reads can straddle a replacement.
+        // Exported and BROWSABLE, so an unsolicited mochi:oauth-return must not
+        // burn the ceremony (see shouldAcceptOAuthReturn). One snapshot:
+        // verifier and nonce must describe the same ceremony.
         val ceremony = runBlocking { sessionManager.oauthCeremony() }
         if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
             Log.w(TAG, "Ignoring mochi:oauth-return that matches no outstanding ceremony")
@@ -665,10 +571,8 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * The LINK ceremony's return, gated against the link ceremony rather than
-     * the sign-in one. Kept separate all the way down: a link return handed to
-     * the sign-in handler would be exchanged as a login, and a sign-in return
-     * handed to the link handler would burn the link's verifier.
+     * LINK ceremony return, gated against the link ceremony: handed to the
+     * sign-in handler it would be exchanged as a login.
      */
     private fun applyOAuthLinkReturn(code: String?, error: String?, nonce: String?) {
         val ceremony = runBlocking { sessionManager.oauthLinkCeremony() }
@@ -854,19 +758,14 @@ class MainActivity : ComponentActivity() {
         private const val KEY_LAST_ACTIVE_APP = "last_active_app"
 
         /**
-         * SharedPreferences key holding a notification-tap deep link that
-         * hasn't yet been consumed by the Compose nav. Persisted so the
-         * link survives the process death between tapping a notification
-         * and accepting the system update installer that may pop in
-         * onResume.
+         * Deep link not yet consumed by the nav, persisted so it survives the
+         * update installer's process death.
          */
         private const val KEY_PENDING_DEEP_LINK = "pending_deep_link"
 
         /**
-         * SharedPreferences key holding the app `versionName` observed on the
-         * previous cold start. When the next cold start sees a different running
-         * version, an in-place upgrade happened and we restore the last-active
-         * feature rather than the LAUNCHER alias the system picked.
+         * versionName seen on the previous cold start; a change means an
+         * in-place upgrade (see [resolveStartTargetApp]).
          */
         private const val KEY_LAST_SEEN_VERSION = "last_seen_version"
 
@@ -878,11 +777,8 @@ class MainActivity : ComponentActivity() {
         private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
 
         /**
-         * Every Mochi-app the Android client bundles. The bootstrap path mints
-         * a JWT for each so cross-feature navigation (notification deep-links,
-         * in-app routing) doesn't surface "app token required" on the first
-         * API call — only the cold-start alias's app would otherwise get its
-         * token minted.
+         * Every bundled app; the bootstrap mints a JWT for each so
+         * cross-feature navigation never hits "app token required".
          */
         private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "menu")
     }

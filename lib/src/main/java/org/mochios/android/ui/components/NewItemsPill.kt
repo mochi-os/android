@@ -27,14 +27,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 /**
- * A floating "N new posts" pill shown at the top of a timeline. Real-time posts
- * are queued behind it (see the per-screen view models) rather than injected
- * into the list while the user is reading; tapping the pill reveals them and
- * scrolls to the top. Mirrors the web client's shared NewItemsPill.
- *
- * Render this as an overlay anchored to the top of the list container (e.g. in a
- * Box above a LazyColumn/Pager), aligned [Alignment.TopCenter]. Hidden when
- * [count] is zero.
+ * A floating "N new posts" pill for the top of a timeline; render it as an
+ * overlay aligned [Alignment.TopCenter]. Real-time posts queue behind it rather
+ * than being injected into the list while the user is reading.
  */
 @Composable
 fun NewItemsPill(

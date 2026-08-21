@@ -27,16 +27,8 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.ShippingOption
 
 /**
- * Per-region shipping options for a listing, one outlined card each.
- *
- * Each card pairs the region (left) with its delivery estimate and price
- * (right); any free-text notes wrap onto a second line. Mirrors the web detail
- * page's card list rather than a dense table so the options stay readable on a
- * phone-width column.
- *
- * `option.currency` is a raw string on the wire (the comptroller doesn't
- * constrain it to the [Currency] enum here), so we tolerate unknown codes by
- * falling back to GBP for formatting.
+ * `option.currency` is an unconstrained wire string; unknown codes format as
+ * GBP.
  */
 @Composable
 fun ShippingOptionsTable(

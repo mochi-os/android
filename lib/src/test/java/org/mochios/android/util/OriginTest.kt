@@ -11,15 +11,9 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * Guards the shared origin check. Three call sites depend on it, each of which
- * got the comparison wrong independently before it was shared: whether the
- * Mochi session cookie is attached to a request and whether a reply may
- * overwrite it, which origin a pinned Retrofit request is retargeted to, and
- * whether a push endpoint is local to the user's server.
- *
- * Every case below is a host the client really does talk to while signed in —
- * the asset client behind Coil loads RSS post images from arbitrary publisher
- * domains.
+ * Guards the shared origin check used by the session cookie jar, the Retrofit
+ * retarget and the push receiver. Every host below is one the client really
+ * contacts while signed in - Coil loads RSS images from publisher domains.
  */
 class OriginTest {
 
@@ -50,11 +44,8 @@ class OriginTest {
     }
 
     /**
-     * The asset paths name the app in the first path segment, and both
-     * assetAuthHeaders and the asset client's interceptor read it to pick which
-     * per-app JWT to attach. A foreign URL shaped like one of ours must still
-     * be foreign — an RSS enclosure's address is used verbatim for video frame
-     * extraction, so this exact shape collected the user's Feeds JWT.
+     * The first path segment names the app, and the asset interceptor reads it
+     * to pick a per-app JWT. A foreign URL shaped like ours must stay foreign.
      */
     @Test
     fun `a foreign url shaped like an app path does not match`() {
@@ -91,12 +82,8 @@ class OriginTest {
     }
 
     /**
-     * Negative control. The bug being fixed was a jar that keyed on the host
-     * alone, so this reproduces that comparison and asserts the cases above
-     * discriminate between the two — without weakening the real function.
-     * If [isServerOrigin] ever regresses to a host match, the assertions in
-     * `scheme downgrade` and `different port` fail rather than passing
-     * vacuously.
+     * Negative control: reproduces the host-only comparison to show the cases
+     * above are not passing vacuously.
      */
     @Test
     fun `host-only comparison would have accepted the leaking cases`() {

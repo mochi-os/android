@@ -53,10 +53,8 @@ data class AccountUiState(
 )
 
 /**
- * The Account screen is identity-only (name, username, fingerprint, directory
- * visibility). Login factors — methods, passkeys, authenticator, recovery
- * codes, third-party login — live on the separate Login screen
- * ([org.mochios.settings.ui.login.LoginScreen]), mirroring the web split.
+ * Identity only (name, username, fingerprint, directory visibility); login
+ * factors live on [org.mochios.settings.ui.login.LoginScreen].
  */
 @HiltViewModel
 class AccountViewModel @Inject constructor(
@@ -68,10 +66,8 @@ class AccountViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(AccountUiState())
     val uiState: StateFlow<AccountUiState> = _uiState.asStateFlow()
 
-    /** Origin of the Mochi server the session is bound to, and the settings-app
-     *  bearer token. Captured here so the export download (handed to Android's
-     *  DownloadManager, which runs outside the app's interceptor stack) can
-     *  build an authenticated URL without the UI touching [SessionManager]. */
+    /** Captured for the export download: DownloadManager runs outside the app's interceptor
+     *  stack, so the URL must carry its own auth. */
     private val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
     private val token: String? = sessionManager.getTokenBlocking("settings")
 

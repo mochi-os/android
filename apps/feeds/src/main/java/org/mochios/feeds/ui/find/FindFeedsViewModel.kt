@@ -72,10 +72,8 @@ class FindFeedsViewModel @Inject constructor(
     }
 
     /**
-     * Seeds the subscribed set from the feeds the user already follows, so a
-     * directory hit they're on shows as subscribed instead of offering a
-     * subscribe that would be a no-op. Directory hits and the feed list are
-     * matched on both handles, since a hit can carry either one.
+     * Seed the subscribed set from the user's feeds, keyed on both fingerprint
+     * and id since a directory hit can carry either.
      */
     private fun loadSubscribed() {
         viewModelScope.launch {

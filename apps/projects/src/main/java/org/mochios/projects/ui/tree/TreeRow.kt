@@ -147,14 +147,8 @@ fun TreeRow(
             .alpha(0.9f)
     } else Modifier
 
-    // One card per object: title line, optional description, then a meta row of
-    // field values. Fields land in slots by type — enumerated renders as a
-    // colour dot plus label, a user field resolves to a member avatar, a date
-    // formats and turns red once it is past, and the first multi-line text
-    // field becomes the description.
-    // The class names the field its objects are titled by, and obj.readable is
-    // already that value — leaving it in the card fields would print the title
-    // a second time at the end of the meta row.
+    // The class's title field is dropped from the card body: obj.readable
+    // already carries it, so it would print twice.
     val titleFieldId = viewModel.getClassById(obj.objectClass)?.title.orEmpty()
     // objects/list doesn't always send a readable label, so fall back to the
     // class's own title field before giving up on the readable id.
@@ -194,13 +188,8 @@ fun TreeRow(
                 .fillMaxWidth()
                 .padding(12.dp)
         ) {
-            // Id line: expander ahead of the id, overflow menu on the trailing
-            // edge. Only rows with children draw the expander — nothing else
-            // shifts, so the title, description and meta stay on the card's
-            // 12dp inset.
-            // Title, description and meta line up under the id: on a row with
-            // children the expander pushes the id right, so the text below
-            // shifts by the same amount rather than sitting under the button.
+            // The expander pushes the id right on rows with children; the text
+            // below shifts by the same amount to line up under it.
             val bodyStart = if (node.hasChildren) 36.dp else 0.dp
 
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -368,12 +357,6 @@ fun TreeRow(
     }
 }
 
-/**
- * One field value in a card's meta row, styled by field type: an enumerated
- * option shows its colour dot and name, a user field shows the member avatar
- * and name, a date is formatted and turns red once it is past, and anything
- * else falls back to plain muted text.
- */
 @Composable
 private fun MetaValue(
     field: ProjectField,

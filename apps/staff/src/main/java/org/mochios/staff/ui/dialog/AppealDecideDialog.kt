@@ -42,17 +42,8 @@ import org.mochios.staff.model.Appeal
 import org.mochios.staff.ui.components.StaffAuditTimeline
 
 /**
- * Modal dialog driving the moderator's "Decide appeal" flow.
- *
- * Android port of the dialog block in
- * `apps/staff/web/src/features/appeals/appeals-page.tsx`. Layout:
- *
- *   - Listing title + id.
- *   - Read-only appeal-reason card.
- *   - Decision dropdown: `upheld` (approve listing) or `denied` (keep
- *     listing rejected).
- *   - Notes textarea (optional).
- *   - Inline [StaffAuditTimeline] of the listing history.
+ * Moderator dialog for deciding a listing appeal: `upheld` approves the
+ * listing, `denied` keeps it rejected.
  */
 @Composable
 fun AppealDecideDialog(
@@ -119,9 +110,8 @@ fun AppealDecideDialog(
 
                 Spacer(Modifier.height(4.dp))
                 StaffAuditTimeline(
-                    // The audit timeline is the LISTING's moderation history.
-                    // "appeal" is not a valid audit kind (403); web uses
-                    // kind='listing' with the appeal's listing id.
+                    // Audit kind is the LISTING's history: "appeal" is not a
+                    // valid kind and 403s.
                     kind = "listing",
                     objectId = appeal.listing.toString(),
                     modifier = Modifier.fillMaxWidth(),

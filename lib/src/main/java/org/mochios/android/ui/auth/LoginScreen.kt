@@ -53,15 +53,8 @@ import org.mochios.android.R
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CodeInputBoxes
 
-/**
- * Email-entry step of the sign-in flow (the "begin" screen).
- *
- * Driven by the global [AuthUiState.methods]
- * ([org.mochios.android.auth.MethodsResponse]): the email field, the passkey
- * button and one button per enabled OAuth provider. Submitting the email runs
- * the begin API; once a [org.mochios.android.auth.BeginResult] arrives the
- * navigation host advances to [AccountMethodsScreen].
- */
+/** Email-entry step of the sign-in flow: email field, passkey and the enabled OAuth
+ *  providers. */
 @Composable
 fun EmailEntryScreen(
     uiState: AuthUiState,
@@ -94,13 +87,8 @@ fun EmailEntryScreen(
 }
 
 /**
- * Per-account method step (the "methods" screen).
- *
- * The account's [org.mochios.android.auth.BeginResult.allowed] list drives the
- * email-code / authenticator / passkey options, with recovery gated on the
- * global `recovery` flag and previously-used OAuth providers shown when
- * `begin.oauth` is true. The MFA continuation (`mfaPartial != null`) replaces
- * the method list with its own section.
+ * Per-account method step: the account's `allowed` list drives the options, and
+ * an MFA continuation replaces them with its own section.
  */
 @Composable
 fun AccountMethodsScreen(
@@ -146,11 +134,6 @@ fun AccountMethodsScreen(
     }
 }
 
-/**
- * Recovery-code step: a dedicated screen reached from [AccountMethodsScreen]
- * when the account allows recovery. Verifying a code routes through the same
- * auth result as the other factors.
- */
 @Composable
 fun RecoveryScreen(
     uiState: AuthUiState,
@@ -172,12 +155,6 @@ fun RecoveryScreen(
     }
 }
 
-/**
- * Shared vertical-scroll, centred column chrome for the auth steps. A top app
- * bar is shown when either a [title] or an [onBack] affordance is supplied,
- * carrying the account email and the back navigation; otherwise the screen has
- * no app bar.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AuthScreenColumn(
@@ -529,9 +506,8 @@ private fun PrimaryButton(
 }
 
 /**
- * Outlined alternative-method button with a leading icon, matching the
- * "OR LOG IN WITH" rows. Supply exactly one of [iconRes] (vector drawable) or
- * [iconVector] (Material icon).
+ * Outlined alternative-method button. Supply exactly one of [iconRes] or
+ * [iconVector].
  */
 @Composable
 private fun MethodButton(
@@ -584,12 +560,8 @@ private fun providerIcon(name: String): Int? = when (name.lowercase()) {
     else -> null
 }
 
-/**
- * Banner-style error display for auth failures. Detects specific server
- * error codes (`suspended`, `signup_disabled`) and surfaces a heading +
- * detail message so users get a clearer story than the bare label. Other
- * errors fall back to a short error-coloured line.
- */
+/** Error banner for auth failures; `suspended` and `signup_disabled` get a heading and
+ *  detail, other errors a single line. */
 @Composable
 private fun AuthErrorBanner(error: org.mochios.android.api.MochiError) {
     val code = when (error) {

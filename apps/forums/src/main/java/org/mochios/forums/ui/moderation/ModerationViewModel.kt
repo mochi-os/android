@@ -74,9 +74,9 @@ class ModerationViewModel @Inject constructor(
     }
 
     /**
-     * Re-runs the current tab's load for the error state's retry button. Not
-     * refresh(): that reports through the pull-to-refresh indicator, which sits
-     * over content this screen does not have when the load is what failed.
+     * Retry for the error state. Not refresh(): that reports through the
+     * pull-to-refresh indicator, which has no content to sit over after a
+     * failed load.
      */
     fun retry() {
         loadTab(_uiState.value.selectedTab)
@@ -90,11 +90,10 @@ class ModerationViewModel @Inject constructor(
                 error = null,
             )
             try {
-                // Each fetch is awaited before the state it merges into is read.
-                // Inline as a copy() argument the receiver `_uiState.value` is
-                // captured before the suspend, so a tab whose response lands late
-                // writes back the snapshot it started from — discarding the newer
-                // tab's data and the `finally` block's isLoading = false.
+                // Await each fetch before reading the state to copy from: as a
+                // copy() argument the receiver `_uiState.value` is captured
+                // before the suspend, and a late response would write back a
+                // stale snapshot.
                 when (tab) {
                     ModerationTab.QUEUE -> {
                         val queue = repository.moderationQueue(forumId)

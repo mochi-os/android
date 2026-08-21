@@ -22,22 +22,10 @@ import javax.inject.Singleton
 annotation class AssetHttpClient
 
 /**
- * OkHttp client for fetching media assets. Requests to the user's own Mochi
- * server mirror the API clients' auth — the session cookie plus the per-app
- * bearer token — so Coil and ExoPlayer can load session-gated images (avatars,
- * chat / feed attachments, video frames) the same way the REST clients do.
- *
- * The app name is the URL's first path segment (`/chat/...` → "chat"), which is
- * the key [SessionManager.getTokenBlocking] expects, so a single client serves
- * every feature's assets. Deliberately omits the session-invalidation
- * interceptor: a transient image / video 401 must not sign the user out.
- *
- * Requests to any other host (publisher CDNs behind RSS post images) carry no
- * Mochi auth and are dressed as a browser instead: image CDNs behind bot
- * mitigation reject bare library fetches — Cloudflare 403s the Japan Times'
- * images without a Referer, whatever the user agent — so send the image's own
- * origin as Referer plus the browser UA / Accept pair the feeds source WebView
- * already impersonates for the same reason.
+ * Media-asset client. Own-server requests carry the session cookie and per-app
+ * token but no invalidation interceptor - an image 401 must not sign the user
+ * out. Foreign hosts get browser UA/Accept/Referer, which bot-mitigated CDNs
+ * require.
  */
 @Module
 @InstallIn(SingletonComponent::class)
@@ -58,12 +46,9 @@ object AssetHttpModule {
             .cookieJar(sessionManager.cookieJar)
             .addInterceptor { chain ->
                 val request = chain.request()
-                // Whole origin, not the host: on a host match alone
-                // `https://host:8443/feeds/…` and `http://host/feeds/…` were
-                // treated as ours and handed the Feeds JWT — and for an avatar
-                // path the token went into the query string too, so it would
-                // survive in logs and redirects. isServerOrigin also fails
-                // closed on an unset or unparseable server URL.
+                // Whole origin, not the host: a host-only match handed the app
+                // token
+                // to `http://host` and `host:8443`, and into the avatar query string.
                 if (!isServerOrigin(request.url, sessionManager.getServerUrlBlocking())) {
                     return@addInterceptor chain.proceed(
                         request.newBuilder()
@@ -110,15 +95,9 @@ interface AssetHttpEntryPoint {
 }
 
 /**
- * Auth headers for fetching a session-gated asset [url] outside OkHttp (e.g.
- * `MediaMetadataRetriever`). Mirrors [AssetHttpModule]: the per-app bearer
- * token (keyed on the URL's first path segment) plus the session cookie.
- *
- * Nothing is returned for a URL that is not on the user's server. The app name
- * is taken from the first path segment, so without this an attacker-chosen URL
- * shaped like `https://attacker.example/feeds/video.mp4` collected the user's
- * Feeds JWT — and feeds really does hand absolute URLs here, since an RSS
- * enclosure's own address is used verbatim for video frame extraction.
+ * Auth headers for a session-gated asset fetched outside OkHttp. Empty unless
+ * [url] is on the user's server - feeds passes absolute RSS URLs here, and
+ * `attacker.example/feeds/...` would otherwise collect the Feeds token.
  */
 fun assetAuthHeaders(sessionManager: SessionManager, url: String): Map<String, String> {
     val httpUrl = url.toHttpUrlOrNull() ?: return emptyMap()

@@ -41,13 +41,8 @@ import java.util.concurrent.atomic.AtomicReference
 import kotlin.math.min
 
 /**
- * Connection status reported by [GameWebSocketController].
- *
- * The model mirrors web's `WebsocketConnectionStatus` (idle / connecting /
- * ready / error) but uses Android-idiomatic names: CONNECTING + CONNECTED
- * for healthy progression, DISCONNECTED for a clean close, RECONNECTING
- * while we're sleeping between retries, FAILED for terminal errors (none
- * today — we retry indefinitely — kept for future caller-supplied limits).
+ * Connection status reported by [GameWebSocketController]. FAILED is unused:
+ * retries are unbounded.
  */
 enum class GameWsStatus {
     CONNECTING,
@@ -58,27 +53,10 @@ enum class GameWsStatus {
 }
 
 /**
- * A decoded WebSocket event from one of the game servers. Mirrors the
- * shape `mochi.websocket.write(game["key"], payload)` produces in
- * `chess.star` / `go.star` / `words.star`.
- *
- * Common fields are unpacked at the top level; game-specific fields stay
- * in [raw] for the caller to interpret.
- *
- * @param type    `"message"` for chat, `"move"` for a move payload,
- *                `"system"` for system notices.
- * @param created Epoch seconds the event happened (server clock).
- * @param member  Sender entity ID, when present.
- * @param name    Sender display name, when present.
- * @param body    Free-form body. For chat messages this is the text the
- *                user typed; for move messages it's the game-specific
- *                notation (SAN for chess, move coords for go, the placed
- *                word for words).
- * @param event   System-event subtype when [type] is `"system"` —
- *                `"resign"`, `"draw_offer"`, `"draw_decline"`, etc.
- * @param raw     The whole decoded payload as a `Map<String, Any?>` so
- *                game-specific code can pick out fields the typed columns
- *                don't carry (FEN, board state, scoring breakdown).
+ * A decoded `mochi.websocket.write` payload from chess.star / go.star /
+ * words.star. [type] is "message", "move" or "system"; for a move [body] is
+ * game-specific notation (SAN, coordinates, the placed word). [raw] carries
+ * what the typed fields do not.
  */
 data class GameWsEvent(
     val type: String,
@@ -91,17 +69,9 @@ data class GameWsEvent(
 )
 
 /**
- * Lightweight controller for a single game's WebSocket. Created once per
- * game-detail screen by [rememberGameWebSocket]; closed when the screen
- * leaves the composition.
- *
- * Holds the OkHttp socket, exponential-backoff state, and the flows the
- * UI subscribes to. Multiple subscribers can collect [events] and [status]
- * simultaneously.
- *
- * Implementation lives outside [GameWebSocket] so callers that need a
- * non-Compose entry point (ViewModels, background syncs) can construct
- * one directly.
+ * Controller for a single game's WebSocket, usually created by
+ * [rememberGameWebSocket] and closed when the screen leaves the composition.
+ * [events] and [status] tolerate multiple collectors.
  */
 class GameWebSocketController internal constructor(
     private val gameKey: String,
@@ -148,11 +118,9 @@ class GameWebSocketController internal constructor(
         if (closed) return
         _status.value = if (_retries.value > 0) GameWsStatus.RECONNECTING else GameWsStatus.CONNECTING
 
-        // Server URL → WebSocket URL: `wss://server/_/websocket?key=<gameKey>`.
-        // The key rides in the query because that is the only place the server
-        // reads it from; moving it to a header needs a core change (left open,
-        // 2026-08-08). No token or cookie is attached — the subscription key
-        // alone selects the stream.
+        // The subscription key rides in the query: it is the only place the
+        // server reads it from. No token or cookie - the key selects the
+        // stream.
         val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
         val wsBase = serverUrl
             .replace("https://", "wss://")
@@ -246,14 +214,6 @@ class GameWebSocketController internal constructor(
     }
 }
 
-/**
- * Non-Compose entry point for opening a game socket. The Compose helper
- * [rememberGameWebSocket] wraps this in a [DisposableEffect] so screens
- * don't have to manage the lifecycle by hand.
- *
- * Holds no state itself; each call to [open] returns a fresh
- * [GameWebSocketController].
- */
 class GameWebSocket(
     private val sessionManager: SessionManager,
     private val client: OkHttpClient,
@@ -276,9 +236,8 @@ class GameWebSocket(
 }
 
 /**
- * Hilt entry point so [rememberGameWebSocket] can pull the
- * Singleton-scoped HTTP/auth dependencies without forcing every screen
- * into the ViewModel pattern.
+ * Hilt entry point so [rememberGameWebSocket] can resolve singletons without a
+ * ViewModel.
  */
 @EntryPoint
 @InstallIn(SingletonComponent::class)
@@ -289,14 +248,9 @@ interface GameWebSocketEntryPoint {
 }
 
 /**
- * Open a game-scoped WebSocket for the duration this composable stays in
- * the composition. When `gameKey` is null the function returns null and
- * no socket is opened — useful while the caller is still resolving the
- * key. Changing `gameKey` closes the previous socket and opens a new one.
- *
- * The returned controller exposes [GameWebSocketController.events],
- * [GameWebSocketController.status] and [GameWebSocketController.retries]
- * for the screen to observe.
+ * Open a game-scoped WebSocket for as long as this composable is in the
+ * composition. A null or blank `gameKey` returns null and opens nothing;
+ * changing it closes the previous socket and opens a new one.
  */
 @Composable
 fun rememberGameWebSocket(gameKey: String?): GameWebSocketController? {

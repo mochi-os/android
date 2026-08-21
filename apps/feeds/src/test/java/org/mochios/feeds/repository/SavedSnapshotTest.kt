@@ -14,11 +14,8 @@ import org.mochios.feeds.model.Tag
 import org.junit.Test
 
 /**
- * The snapshot is what the Saved screen renders, here and on web, so its
- * field mapping has to survive the server's misleading names: `body` is the
- * raw source and `body_markdown` is the RENDERED HTML (feeds.star sets it to
- * markdown(body)). Storing them the other way round feeds raw source into an
- * HTML renderer.
+ * Server naming is misleading: `body` is raw source and `body_markdown` is the
+ * rendered HTML; the snapshot must not swap them.
  */
 class SavedSnapshotTest {
 

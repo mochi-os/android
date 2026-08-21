@@ -27,15 +27,6 @@ private fun JsonObject.jsonString(key: String): String? =
         ?.asString
         ?.takeIf { value -> value.isNotBlank() }
 
-/**
- * State of the create-CRM screen.
- *
- * @property isCreating true while the create request is in flight.
- * @property error what went wrong on the last create attempt, if anything.
- * @property backupPrefill what the screen reads back out of a picked backup file.
- * @property createdCrmId set to the new CRM's id after a successful create so
- *   the screen can navigate into it; cleared once consumed.
- */
 data class CreateCrmUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,
@@ -44,11 +35,8 @@ data class CreateCrmUiState(
 )
 
 /**
- * A backup file the user picked, ready to seed the create screen.
- *
- * @property json the whole backup payload, restored after the CRM is made.
- * @property fileName shown on the picker button so the choice is visible.
- * @property name CRM name recorded in the backup, if any.
+ * A picked backup file, ready to seed the create screen; [json] is restored
+ * after the CRM is made.
  */
 data class BackupPrefill(
     val json: String,
@@ -97,9 +85,7 @@ class CreateCrmViewModel @Inject constructor(
     }
 
     /**
-     * Creates a CRM, restoring the design held in [backupJson] when the user
-     * picked a backup to import. Without one the server's own CRM design is
-     * left as it is — every CRM is created with it.
+     * Creates a CRM, then restores [backupJson] into it when one was picked.
      */
     fun createCrm(name: String, privacy: String, backupJson: String?) {
         viewModelScope.launch {
@@ -132,9 +118,8 @@ class CreateCrmViewModel @Inject constructor(
     }
 
     /**
-     * Restores a picked backup into the new CRM: the design first, then the
-     * objects when the file carries any. A half-restored CRM is worse than
-     * none, so a failure deletes it and reports the error.
+     * Restores a backup into the new CRM: design, then objects. On failure the
+     * CRM is deleted and the error rethrown.
      */
     private suspend fun restoreBackup(created: Crm, backupJson: String) {
         val crmId = created.fingerprint.ifEmpty { created.id }

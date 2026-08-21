@@ -40,9 +40,7 @@ import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
 /**
- * AI settings tab: a row-based form to pick the AI processing mode, account, and
- * per-prompt source (default or custom). Only reachable when the account has at
- * least one AI-capable account.
+ * AI settings tab; only reachable when the account has an AI-capable account.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -178,15 +176,9 @@ private fun DropdownField(
 }
 
 /**
- * Prompt row with a Default/Custom dropdown.
- *
- * @param stored the saved custom prompt — empty when the feed uses the default.
- * @param template the server default, shown only as an editable starting point;
- *                 it is never persisted and never compared against [stored].
- *
- * Choosing Custom expands an inline editor (seeded with [stored] or [template]);
- * saving persists the edited text as the custom prompt. Choosing Default collapses
- * the editor and clears the custom prompt server-side.
+ * Prompt row with a Default/Custom dropdown. [stored] is the saved custom
+ * prompt (empty = default); [template] is the server default, an editing seed
+ * only - never persisted or compared against [stored].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

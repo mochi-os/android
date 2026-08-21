@@ -41,28 +41,8 @@ import org.mochios.wikis.R
 import org.mochios.wikis.ui.components.TocHeading
 
 /**
- * Phone-only collapsible table of contents shown above the rendered markdown.
- *
- * Mirrors the web `TableOfContents` (mobile variant) in
- * `apps/wikis/web/src/features/wiki/page-view.tsx` lines 33-100 — wrapped in a
- * `<details>` accordion with the same "On this page" header. The desktop
- * sticky-sidebar variant is intentionally absent: a phone screen never has
- * room for a 240dp right-rail next to the article body, so the collapsible is
- * the only sensible presentation.
- *
- * Headings indent by `(level - 2) * 16dp` — matching web's `ps-5` / `ps-8`
- * classes for level 3 / 4 — so the visual hierarchy survives the platform port.
- *
- * @param headings H2..H4 entries in document order (built by
- *                 [extractHeadings] inside MarkdownContent).
- * @param activeId Optional id of the currently-active heading. The row with
- *                 the matching id is rendered bold; pass `null` to leave every
- *                 row at default weight (e.g. while the active-heading tracker
- *                 hasn't run yet).
- * @param onHeadingTap Invoked with the heading id when the user taps a row.
- *                     The host typically scrolls the article to that id and
- *                     updates [activeId] in its own state.
- * @param modifier Layout modifier for the outer card.
+ * Collapsible table of contents above the article. Web's desktop sticky-sidebar
+ * variant is deliberately absent - a phone has no room for a side rail.
  */
 @Composable
 fun TableOfContents(

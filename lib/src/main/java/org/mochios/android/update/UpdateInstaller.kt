@@ -15,11 +15,9 @@ import android.util.Log
 import androidx.core.content.FileProvider
 
 /**
- * Hand a pre-downloaded APK off to the system installer. Called from the
- * host Activity's onResume. Android always shows a confirmation dialog
- * for sideloaded installs ("Update Mochi?"); we can't suppress it, but we
- * can pre-download in the background so the user sees only that single
- * dialog instead of the browser → file picker → installer chain.
+ * Hand a pre-downloaded APK to the system installer, from the host Activity's
+ * onResume. Android's own "Update Mochi?" confirmation for a sideloaded install
+ * cannot be suppressed.
  */
 object UpdateInstaller {
 
@@ -27,29 +25,18 @@ object UpdateInstaller {
     private const val FILE_PROVIDER_AUTHORITY_SUFFIX = ".updates"
 
     /**
-     * If a newer-than-current APK is staged in cacheDir/updates/, launches
-     * the system installer with it. Idempotent — called every onResume.
-     *
-     * Once the user has been prompted for a given staged version, we
-     * record that version in [KEY_PROMPTED_VERSION] and skip on subsequent
-     * resumes for the SAME version. If they declined the system "Update
-     * Mochi?" dialog, hammering them every time they unlock the phone is
-     * worse than waiting for the next version. When UpdateChecker stages
-     * a newer version, [KEY_PROMPTED_VERSION] will be stale relative to
-     * the new pending, and we re-prompt.
-     *
-     * The user can also trigger the prompt explicitly from the About
-     * dialog's "Check for updates" button via [forcePrompt].
+     * Launch the system installer for a staged APK newer than the running one.
+     * Idempotent, called every onResume: the prompted version is recorded so a
+     * declined update is not re-asked until a newer one is staged, or
+     * [forcePrompt].
      */
     fun promptIfPending(activity: Activity) {
         promptInternal(activity, force = false)
     }
 
     /**
-     * Trigger the install prompt regardless of whether the user has
-     * already been asked for this version. Called from the About dialog
-     * "Check for updates" flow when [UpdateChecker.checkNow] reports
-     * UpdateStaged — the user explicitly asked, so re-asking is expected.
+     * Prompt even when the user has already been asked for this version - for
+     * the About dialog, where they asked explicitly.
      */
     fun forcePrompt(activity: Activity) {
         promptInternal(activity, force = true)
@@ -86,11 +73,8 @@ object UpdateInstaller {
 
         val apk = UpdateChecker.apkFile(ctx, pending)
         // Length only, not the digest: this runs on the main thread from every
-        // onResume, and hashing 40 MB there would be felt. It still catches the
-        // damage that matters — a file that grew or shrank since it was staged
-        // — and UpdateChecker re-hashes it on the next check. Handing a bad APK
-        // to the installer costs the user a bare "the file is corrupt" with no
-        // way back, so err towards discarding it.
+        // onResume, and hashing 40 MB there would be felt. UpdateChecker
+        // re-hashes on the next check.
         val size = prefs.getLong(UpdateChecker.KEY_PENDING_SIZE, 0L)
         if (!apk.exists() || apk.length() == 0L || (size > 0L && apk.length() != size)) {
             Log.w(TAG, "Pending update $pending is ${apk.length()} bytes, expected $size; clearing")
@@ -98,12 +82,9 @@ object UpdateInstaller {
             return
         }
 
-        // Android 8+ requires per-app "install unknown apps" consent on top
-        // of the manifest REQUEST_INSTALL_PACKAGES permission. If we don't
-        // have it yet, the system installer just bounces the user with a
-        // generic "For your security…" dialog and no clear path forward.
-        // Send them straight to the toggle for this app instead and bail
-        // out — the next onResume after they grant it (and return) retries.
+        // Android 8+ needs per-app "install unknown apps" consent; without it
+        // the system installer bounces the user with a generic dialog. Send
+        // them to the toggle instead and bail out - the next onResume retries.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O &&
             !ctx.packageManager.canRequestPackageInstalls()) {
             try {

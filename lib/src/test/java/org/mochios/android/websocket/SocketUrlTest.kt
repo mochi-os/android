@@ -10,13 +10,9 @@ import org.junit.Assert.assertFalse
 import org.junit.Test
 
 /**
- * The subscription token used to ride in the handshake URL. That leaks: OkHttp's
- * RealWebSocket.connect() preserves the client's application interceptors, so
- * the logging interceptor — which is not gated on a debug build — writes the
- * full URL, and with it a year-long credential, into logcat on release.
- *
- * It travels in an Authorization header now. These assert the URL carries no
- * credential, so a regression that puts it back fails here.
+ * The subscription token must never appear in the handshake URL: OkHttp keeps
+ * the application interceptors for a WebSocket call, so the logging interceptor
+ * writes the URL, credential included, to logcat on release.
  */
 class SocketUrlTest {
 

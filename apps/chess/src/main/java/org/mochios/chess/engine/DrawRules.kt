@@ -11,17 +11,10 @@ import com.github.bhlangonijr.chesslib.PieceType
 import com.github.bhlangonijr.chesslib.Square
 
 /**
- * Positions where neither side can deliver mate by any sequence of legal moves.
- *
- * Deliberately not `Board.isInsufficientMaterial()`. chesslib counts king and
- * knight against king and knight, and king and knight against king and bishop,
- * as insufficient; chess.js — which the web client uses — does not, and neither
- * is a FIDE dead position, since mate is constructible in both. Because the
- * server accepts whatever terminal state a client reports, the broader rule let
- * Android end a game the web opponent was still playing.
- *
- * Matches chess.js: bare kings; king and one minor piece; and any number of
- * bishops provided every one of them stands on the same square colour.
+ * Dead positions per chess.js, which the web client uses: bare kings, king and
+ * one minor piece, or bishops all on one square colour. Not
+ * `Board.isInsufficientMaterial()`: chesslib also counts K+N v K+N and K+N v
+ * K+B, and the server accepts whatever terminal state a client reports.
  */
 internal fun isDeadPosition(board: Board): Boolean {
     val minorSquares = mutableListOf<Square>()
@@ -53,12 +46,9 @@ internal fun isDeadPosition(board: Board): Boolean {
 }
 
 /**
- * Whether the position after a move is drawn, excluding stalemate — the caller
- * tests that first and reports it as its own status.
- *
- * Threefold repetition is absent on purpose: the board is rebuilt from the FEN
- * each move, so its history never holds enough positions for chesslib to see a
- * repetition. The web has the same limitation.
+ * Drawn after a move, excluding stalemate (the caller reports that separately).
+ * No threefold repetition: the board is rebuilt from the FEN each move, so it
+ * has no history to repeat.
  */
 internal fun isDrawnPosition(board: Board): Boolean =
     board.halfMoveCounter >= 100 || isDeadPosition(board)

@@ -35,11 +35,6 @@ data class ReplicasTabSnackbar(
     val args: List<Any> = emptyList(),
 )
 
-/**
- * View model for [ReplicasTab]. Loads the list of remote replicas that have
- * subscribed to this wiki and exposes a "remove" mutation; the web tab uses
- * the same `replicas` / `replica/remove` endpoints.
- */
 @HiltViewModel
 class ReplicasTabViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

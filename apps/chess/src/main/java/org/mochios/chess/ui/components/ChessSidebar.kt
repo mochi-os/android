@@ -43,27 +43,8 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.chess.R
 
 /**
- * Drawer body for the chess app's left rail. Mirrors the web's `ChessLayout`
- * sidebar (`apps/chess/web/src/components/layout/chess-layout.tsx`):
- *
- *  - Two grouped sections — Active Games (`status == "active"`) and
- *    Completed (everything else) — both ordered by `updated` desc so the
- *    most-recently-touched game is on top, matching the web's
- *    `[...games].sort((a, b) => b.updated - a.updated)` and per-section
- *    filter.
- *  - Each row carries the opponent's avatar (loaded from the People app's
- *    avatar action) + their display name. Completed-game rows append a
- *    one-word status badge (`(checkmate)`, `(stalemate)`, etc.) the same
- *    way the web sidebar does.
- *  - A "New game" footer-style row at the bottom, separated by a divider,
- *    that fires [onOpenNewGame] (the host opens the dialog).
- *  - An optional [websocketStatusLabel] / [websocketStatusColor] pair drives
- *    a tiny status row underneath the new-game button when a game is open
- *    (the parallel game-detail agent wires this when its WS connects). Null
- *    by default — the empty list state has no socket to report on.
- *
- * Rows on selectable games invoke [onOpenGame] with the game id /
- * fingerprint; the host navigates to the detail screen.
+ * Drawer for the chess app: active and completed games (newest `updated`
+ * first), a New game row, and an optional socket status row.
  */
 @Composable
 fun ChessSidebar(
@@ -201,18 +182,8 @@ private fun SidebarGameRow(
 }
 
 /**
- * Sidebar row projection. Built by [org.mochios.chess.ui.list.ChessGameListViewModel]
- * from each [org.mochios.chess.model.Game] + the caller's identity. Kept
- * deliberately flat so the sidebar composable doesn't have to know about
- * the caller's identity or where opponent-name resolution happens.
- *
- *  - [id] is the game's fingerprint when present, else the row UID — used as
- *    the URL path segment when navigating to the detail screen.
- *  - [opponentId] is the entity ID of the other player (the side that isn't
- *    the caller).
- *  - [opponentName] is the resolved display name of [opponentId].
- *  - [updated] is the source row's `updated` timestamp, retained for the
- *    sort-stable secondary key.
+ * Flat sidebar row; [id] is the fingerprint when present, else the row id, and
+ * is the route segment.
  */
 data class ChessSidebarGame(
     val id: String,

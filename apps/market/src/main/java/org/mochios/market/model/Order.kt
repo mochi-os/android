@@ -8,16 +8,9 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A buyer-side or seller-side order row.
- *
- * Mirrors `Order` in `apps/market/web/src/types/orders.ts`. Money fields
- * (`item`, `postage`, `total`, `fee`, `payout`) are in minor units. The
- * timestamp fields default to `0` when the relevant lifecycle step has not
- * happened yet — never -1, never null.
- *
- * `title` / `listing_type` / `seller_name` / `buyer_name` are denormalised
- * helpers attached to list responses; they may be absent on a single-order
- * get from older server versions, so they stay nullable.
+ * Mirrors `Order` in `apps/market/web/src/types/orders.ts`. Money in minor
+ * units; lifecycle timestamps are 0 until the step happens; the denormalised
+ * name fields appear only on list responses.
  */
 data class Order(
     val id: String = "",
@@ -74,23 +67,14 @@ enum class OrderStatus {
 }
 
 /**
- * Shape of `orders/create` / `orders/auction` responses.
- *
- * Mirrors `OrderCreateResponse` in `apps/market/web/src/types/orders.ts`.
- * `checkout_url` is the Stripe Checkout URL the SPA should navigate to (or
- * the success URL if no payment is required).
+ * `orders/create` / `orders/auction` response; `checkout_url` is the Stripe
+ * Checkout URL, or the success URL when no payment is due.
  */
 data class OrderCreateResponse(
     val order: Order? = null,
     @SerializedName("checkout_url") val checkoutUrl: String = "",
 )
 
-/**
- * Shipping / tracking information attached to an order once the seller marks
- * it as shipped. Convenience projection of the `carrier` / `tracking` / `url`
- * fields on `Order` — used by the UI when only the tracking details are
- * needed without the whole order row.
- */
 data class Tracking(
     val carrier: String = "",
     val tracking: String = "",
@@ -98,13 +82,8 @@ data class Tracking(
 )
 
 /**
- * Refund record. Refunds in market are surfaced via the `refunded` flag on
- * `Order` plus the seller-issued `orders/refund` response; this struct exists
- * to model the staff-side refund row when surfaced separately (Stripe refund
- * id, partial amount, reason).
- *
- * `kind` is `"partial"` or `"full"` (server-classified). `description` is
- * the seller-supplied free-text note shown in the prior-refunds list.
+ * Staff-side refund row. `kind` is `"partial"` or `"full"`; `description` is
+ * the seller's note.
  */
 data class Refund(
     val id: String = "",

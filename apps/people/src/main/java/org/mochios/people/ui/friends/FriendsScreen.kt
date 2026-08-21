@@ -83,24 +83,9 @@ import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.android.R as MochiR
 
 /**
- * Friends list — the People app's main entry point. Mirrors the web
- * `apps/people/web/src/features/friends/index.tsx`:
- *
- *  - Searchable + sorted list of confirmed friends.
- *  - Per-row Message / Remove actions.
- *  - Empty state when filter / list is empty.
- *  - Loading spinner before the first response lands.
- *  - Top-bar hamburger opens the shared [PeopleSidebar] drawer for switching
- *    sections (Friends / Invitations / Groups / Profile) — matches the web
- *    sidebar.
- *  - Top-bar search icon + ellipsis menu (logout).
- *  - FAB to open [AddFriendScreen].
- *  - Pull-to-refresh.
- *  - One-shot welcome banner on first visit (dismissable, persists server-side).
- *
- *  Deep-link: when [initialAction] == "add" we open the add-friend screen on
- *  first composition. That lets `mochi://people?action=add` (or a notification
- *  PendingIntent) drop the user directly into the invite flow.
+ * Friends list, the People app's entry point. [initialAction] "add" (from
+ * `mochi://people?action=add`) opens the add-friend screen on first
+ * composition.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

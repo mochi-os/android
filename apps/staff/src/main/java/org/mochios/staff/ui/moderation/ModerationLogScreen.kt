@@ -58,15 +58,7 @@ import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffStatusBadge
 
 /**
- * Read-only moderation feed.
- *
- * Android port of `apps/staff/web/src/features/moderation/moderation-page.tsx`.
- * Shows the full Comptroller moderation log, optionally narrowed to a
- * single listing id. Each row links to the underlying market listing.
- *
- * The filter is a numeric field — the screen debounces 300 ms before
- * pushing the parsed id (or `null` when the field is empty) to the
- * ViewModel.
+ * Read-only moderation feed, optionally narrowed to a single listing id.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -211,9 +203,7 @@ private fun ModerationRow(
 }
 
 /**
- * Slice a fingerprint into `xxx-xxx-xxx` form. Mirrors the helper in
- * `apps/staff/web/src/lib/format.ts`; defined locally rather than shared
- * because the moderation module doesn't need anything else from there.
+ * Slice a fingerprint into `xxx-xxx-xxx` form.
  */
 internal fun formatFingerprintSafe(id: String): String {
     val fp = id.take(9)

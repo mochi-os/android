@@ -49,9 +49,8 @@ import org.mochios.wikis.R
 import org.mochios.wikis.model.Replica
 
 /**
- * Replicas tab body. Lists remote wikis that have replicated this wiki and
- * lets the owner remove a replica subscription. Hidden by the parent screen
- * when the wiki itself is a replica (no nested replicas).
+ * Lists remote wikis replicating this one, with remove. The parent screen hides
+ * this tab when the wiki is itself a replica.
  */
 @Composable
 fun ReplicasTab(

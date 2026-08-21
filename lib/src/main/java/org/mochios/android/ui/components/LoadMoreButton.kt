@@ -18,11 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 /**
- * Explicit "Load more" affordance for paginated lists, mirroring the web
- * load-more button (a tap fetches the next page rather than auto-loading on
- * scroll). While the next page is in flight the button shows a spinner and is
- * disabled. The caller supplies the localised [label] so each app keeps its
- * own string catalog.
+ * Explicit "Load more" affordance for paginated lists: a tap fetches the next
+ * page rather than auto-loading on scroll. [label] arrives already localised.
  */
 @Composable
 fun LoadMoreButton(

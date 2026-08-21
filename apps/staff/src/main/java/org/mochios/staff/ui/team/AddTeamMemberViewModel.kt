@@ -20,20 +20,6 @@ import org.mochios.staff.model.DirectorySearchResult
 import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
-/**
- * State of the add-team-member screen.
- *
- * @property search what the user has typed into the directory search field.
- * @property results people matching [search]; only queries of two characters
- *   or more reach the server.
- * @property searching true while the debounced search is in flight.
- * @property selectedId the person picked from the results, if any.
- * @property selectedName that person's display name.
- * @property role the role the new member takes, one of [ROLE_OPTIONS].
- * @property submitting true while the add request is in flight.
- * @property error what stopped the last add, if anything.
- * @property added true once the member has joined, so the screen can leave.
- */
 data class AddTeamMemberUiState(
     val search: String = "",
     val results: List<DirectorySearchResult> = emptyList(),

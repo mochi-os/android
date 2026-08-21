@@ -97,11 +97,8 @@ fun PropertiesTab(
     val canHaveChildren = remember(projectDetails.hierarchy, obj.objectClass) {
         projectDetails.hierarchy.any { (_, parents) -> obj.objectClass in parents }
     }
-    // Which fields the form shows: the active view's selection when it pins
-    // any, otherwise the whole class. Either way they run in rank order, the
-    // same ordering the board cards use. The title field is always kept — a
-    // view that leaves it out would otherwise make the object's name
-    // uneditable, since nothing else in the sheet edits it.
+    // The view's pinned fields, or all of them, in rank order. The title field
+    // is always kept: nothing else in the sheet edits the object's name.
     val visibleFields = remember(fields, viewFieldIds, titleFieldId) {
         val pinned = viewFieldIds.toSet()
         fields
@@ -179,11 +176,6 @@ fun PropertiesTab(
             }
         }
 
-        // "Add child" affordance — shown when this object's class is
-        // listed as an allowed parent in any other class's hierarchy,
-        // and the user has write access. Tap routes through ProjectScreen
-        // to open CreateObjectDialog with parent pre-selected to this
-        // object's id.
         if (canHaveChildren && canWrite) {
             Spacer(modifier = Modifier.height(8.dp))
             OutlinedButton(
@@ -237,10 +229,8 @@ internal fun canWriteAccess(access: String): Boolean =
 private val PROPERTY_LABEL_WIDTH = 96.dp
 
 /**
- * One row of the object-detail form: the property's name in a fixed-width
- * column on the left, its editor filling the rest — the same shape as the web
- * object-detail panel. The label is padded down so it sits against the middle
- * of a single-line text field rather than its top edge.
+ * Form row: fixed-width label, editor filling the rest. The label's top padding
+ * centres it on a single-line text field.
  */
 @Composable
 private fun PropertyRow(
@@ -386,9 +376,8 @@ internal fun FieldEditor(
     canWrite: Boolean,
     people: List<org.mochios.projects.model.Person>,
     /**
-     * Whether the editor draws the field's name itself. False in the
-     * object-detail form, where the name already sits in the label column of
-     * the enclosing row; true for the create dialog's stacked layout.
+     * False in the object-detail form, where the enclosing row already shows
+     * the field name.
      */
     showLabel: Boolean = true,
     onValueChange: (String) -> Unit,
@@ -752,10 +741,9 @@ private fun labelOrNull(showLabel: Boolean, name: String): String? =
     if (showLabel) name else null
 
 /**
- * Parse a date field value into epoch seconds. Accepts either epoch seconds (the
- * server's read format) or an ISO `yyyy-MM-dd` string, so a value just written as
- * ISO still displays correctly before the next refresh. Returns null when neither
- * form parses.
+ * Epoch seconds from a date value: epoch seconds (the server's read format) or
+ * ISO `yyyy-MM-dd` (as just written, before the next refresh). Null when
+ * neither parses.
  */
 private fun dateFieldSeconds(value: String): Long? {
     value.toLongOrNull()?.let { return it }

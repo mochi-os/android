@@ -17,14 +17,6 @@ import org.mochios.android.api.toMochiError
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
 
-/**
- * State of the create-forum screen.
- *
- * @property isCreating true while the create request is in flight.
- * @property error what went wrong on the last create attempt, if anything.
- * @property createdForumId set to the new forum's id after a successful create
- *   so the screen can navigate into it; cleared once consumed.
- */
 data class CreateForumUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,

@@ -27,17 +27,8 @@ import androidx.compose.ui.unit.dp
 
 /**
  * The shared empty state: a tinted circular badge over a title, an optional
- * subtitle, and an optional action.
- *
- * @param icon vector drawn inside the circular badge.
- * @param title primary message.
- * @param subtitle secondary hint shown beneath the title.
- * @param modifier applied before the column claims the space it is given, so a
- *   caller can inset or constrain it. Padding here insets the fill rather than
- *   being swallowed by it.
- * @param verticalArrangement how the content sits in that space. Centred by
- *   default; pass [Arrangement.Top] to anchor it under a caller's top padding.
- * @param action optional control rendered below the text.
+ * subtitle, and an optional action. [modifier] is applied before the column
+ * fills, so padding insets the fill rather than being swallowed by it.
  */
 @Composable
 fun EmptyState(

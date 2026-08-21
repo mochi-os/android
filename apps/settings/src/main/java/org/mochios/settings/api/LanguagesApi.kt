@@ -17,15 +17,8 @@ import javax.inject.Singleton
 data class LanguagesResponse(val languages: List<String> = emptyList())
 
 /**
- * The language tags this server actually has catalogues for.
- *
- * Core answers from the union of installed catalogues across all apps
- * (core/server/labels.go), which is why the picker must ask rather than carry
- * a list: a hardcoded one drifts the moment a locale is added, and the client's
- * copy had fallen 54 catalogues behind. Public, so no auth is needed.
- *
- * Web reads the same endpoint for the same picker
- * (apps/settings/web/src/features/user/preferences.tsx).
+ * Language tags the server has catalogues for. Always fetched, never hardcoded:
+ * the set grows as locales are added. Public endpoint.
  */
 interface LanguagesApi {
     @GET("_/languages")

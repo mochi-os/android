@@ -61,11 +61,6 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
-/**
- * Forum discovery: search the directory as the user types, paste a URL to probe
- * a remote forum, or pick from the recommendations. Subscribing opens the forum
- * once the server confirms it, so the user lands where they just joined.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FindForumsScreen(
@@ -151,12 +146,8 @@ fun FindForumsScreen(
                 uiState.searchQuery.isNotBlank() -> uiState.results
                 else -> uiState.recommended
             }
-            // A forum the user already has belongs in their own list, not in the
-            // directory, so it drops out of whichever section would have carried
-            // it rather than sitting there behind a dead "Subscribed" chip.
-            // Filtering the composed list — not each source — means the empty
-            // branches below test what actually renders, so a search whose every
-            // hit is already subscribed reads as no results, not a blank list.
+            // Drop forums the user already has; filter the composed list so the
+            // empty branches below reflect what actually renders.
             val displayForums = sourceForums.filter { item ->
                 item.key !in uiState.subscribed
             }
@@ -232,9 +223,8 @@ private fun EmptyMessage(text: String) {
 }
 
 /**
- * A discovery row: forum avatar, name over its fingerprint (or blurb), and a
- * Subscribe button. The screen only ever hands this forums the user has not
- * subscribed to, so there is no subscribed state to draw.
+ * A discovery row; only unsubscribed forums reach it, so there is no subscribed
+ * state.
  */
 @Composable
 private fun ForumDiscoveryCard(

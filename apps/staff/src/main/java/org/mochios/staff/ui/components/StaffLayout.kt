@@ -49,23 +49,11 @@ import org.mochios.staff.ws.StaffEventsBus
 import org.mochios.staff.ws.rememberStaffEventsSubscription
 
 /**
- * CompositionLocal exposing the caller's [Me] record to every staff
- * descendant composable. `null` while the layout is still loading or when
- * the caller is not staff (the staff launcher should be hidden in that
- * case, but we still tolerate the null defensively).
- *
- * Screens read role gating off `LocalStaffMe.current?.role` — for example,
- * the configuration screen toggles its "admin required" surface based on
- * this, and the team screen hides admin-only actions for moderators /
- * support.
+ * The caller's [Me], provided by [StaffLayout]; null while loading. Screens
+ * gate admin-only UI on `current?.role`.
  */
 val LocalStaffMe = compositionLocalOf<Me?> { null }
 
-/**
- * UI state for [StaffLayoutViewModel]. The layout loads `me` once on entry
- * so every descendant screen sees the same role without each VM having to
- * re-fetch it.
- */
 sealed class StaffLayoutUiState {
     object Loading : StaffLayoutUiState()
     data class Ready(val me: Me) : StaffLayoutUiState()
@@ -73,16 +61,8 @@ sealed class StaffLayoutUiState {
 }
 
 /**
- * One-shot ViewModel that fetches the caller's staff record via
- * [StaffRepository.getMe]. The Comptroller's `event_staff_me` always
- * succeeds for an authenticated identity (even non-staff get a row with
- * `role=""`) so a successful response with a blank role is legitimate
- * "you're signed in but not staff" — the launcher gate handles that
- * separately; here we just surface whatever the server returned.
- *
- * Holds a reference to the singleton [StaffEventsBus] so the layout can
- * mount the staff-events WebSocket subscription at the shell level (one
- * socket for the whole nav graph rather than per-screen).
+ * Loads the caller's [Me] once per layout; a blank role is a legitimate
+ * response (signed in, not staff).
  */
 @HiltViewModel
 class StaffLayoutViewModel @Inject constructor(
@@ -111,22 +91,9 @@ class StaffLayoutViewModel @Inject constructor(
 }
 
 /**
- * Common shell for every staff screen.
- *
- * Wires the [ModalNavigationDrawer] containing [StaffSidebar] (role-aware),
- * the [TopAppBar] (title + hamburger + caller-supplied [topBarActions]),
- * and the staff-events WebSocket subscription. The current screen's body
- * is the [content] slot.
- *
- * The layout owns the drawer state and the `me` lookup; descendant screens
- * read `LocalStaffMe.current` to drive their own admin-gating UI. Each
- * screen continues to own its own [androidx.compose.material3.SnackbarHost]
- * — screen-local toast events stay close to their producing ViewModel.
- *
- * While `me` is loading the layout renders lib's [LoadingState]; on error
- * it renders [ErrorState] with a retry button. The drawer + topbar are
- * still mounted in those states so the user can navigate away from a
- * stuck screen.
+ * Shell for every staff screen: drawer with [StaffSidebar], top bar, and the
+ * staff-events WebSocket. Provides [LocalStaffMe]; the drawer stays mounted in
+ * the loading and error states so the user can navigate away.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

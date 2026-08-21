@@ -33,10 +33,8 @@ import org.mochios.market.R
 import org.mochios.market.model.ReportReason
 
 /**
- * Reasons enumerated in the same order the web SPA's report dialog presents
- * them. The wire value (lowercase) is sent verbatim to `/market/-/reports/create`;
- * the label-resource id is resolved at render time so the visible text is
- * localised. Mirrors `useReportReasons` in `apps/market/web/src/config/constants.ts`.
+ * Same order as `useReportReasons` in
+ * `apps/market/web/src/config/constants.ts`.
  */
 private val REPORT_REASONS: List<Pair<ReportReason, Int>> = listOf(
     ReportReason.PROHIBITED to R.string.market_report_reason_prohibited,
@@ -50,19 +48,6 @@ private val REPORT_REASONS: List<Pair<ReportReason, Int>> = listOf(
 /** Wire (lowercase) value for a [ReportReason]. */
 private fun ReportReason.wire(): String = name.lowercase()
 
-/**
- * Report-listing dialog mirroring the inline report form on the web listing
- * page. Renders a dropdown over [ReportReason] and a free-text details field;
- * Submit calls back to the caller with the chosen reason and details.
- *
- * Persistence (writing to [org.mochios.market.lib.ReportedStore]) and the
- * API call happen in [org.mochios.market.ui.listing.ListingDetailViewModel.reportListing]
- * — the dialog only collects the form values and asks for confirmation.
- *
- * @param onSubmit Fires on Submit with `(reason, details)`. The reason is the
- *                 lowercase wire value (e.g. `"prohibited"`); details is the
- *                 trimmed free-text content (may be empty).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReportListingDialog(

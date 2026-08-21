@@ -28,13 +28,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.R
 import org.mochios.market.model.Asset
 
-/**
- * Vertical list of digital assets attached to a listing. Each row shows
- * filename + human size; the trailing icon button fires [onDownload].
- *
- * Hidden when [assets] is empty so the caller can drop the surrounding
- * section heading.
- */
 @Composable
 fun DigitalAssetsList(
     assets: List<Asset>,

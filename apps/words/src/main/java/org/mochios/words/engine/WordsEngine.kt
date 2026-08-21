@@ -29,10 +29,8 @@ package org.mochios.words.engine
 const val BOARD_SIZE = 15
 
 /**
- * Premium-square enum. `ST` is the centre star — acts as a `DW` on the
- * first move (and only on the first move, like every other premium it
- * only fires for newly placed tiles). Matches the `PremiumType` union in
- * the TS engine.
+ * `ST` is the centre star: scores as a `DW`, and like every premium only for
+ * newly placed tiles.
  */
 enum class PremiumType { NONE, DL, TL, DW, TW, ST }
 
@@ -72,19 +70,8 @@ fun getLetterValue(letter: Char): Int {
 // ─── Board representation ─────────────────────────────────────────────
 
 /**
- * A 15x15 grid of single-character cells. Wraps a `Array<CharArray>` so
- * mutation in place during draft scoring is allocation-free, with [serialise]
- * + [parseBoard] handling the wire form.
- *
- * This intentionally mirrors the TS engine's `string[][]` shape — every
- * cell is one of:
- *   - '.' (empty)
- *   - 'A'..'Z' (regular letter)
- *   - 'a'..'z' (blank played as that letter)
- *
- * Callers reach into `cells[row][col]` directly the same way the TS code
- * does `board[row][col]`. Two `Board` instances comparing structurally
- * is intentional — `equals`/`hashCode` walk the underlying CharArrays.
+ * 15x15 grid in the encoding above, mutated in place during draft scoring.
+ * [equals] / [hashCode] compare cell contents.
  */
 class Board(val cells: Array<CharArray>) {
     init {
@@ -119,10 +106,8 @@ class Board(val cells: Array<CharArray>) {
 fun emptyBoard(): Board = Board(Array(BOARD_SIZE) { CharArray(BOARD_SIZE) { '.' } })
 
 /**
- * Parse the server's wire form (rows joined by `/`) into a Board.
- * Malformed input (wrong row count, wrong row length) falls back to an
- * empty board — matches the TS engine's behaviour so callers never have
- * to special-case the boot state.
+ * Parse the wire form (rows joined by `/`). Malformed input yields an empty
+ * board, as in the TS engine.
  */
 fun parseBoard(boardStr: String): Board {
     if (boardStr.isEmpty()) return emptyBoard()
@@ -149,11 +134,8 @@ fun isBlankTile(cell: Char): Boolean = cell in 'a'..'z'
 // ─── Placement + result types ─────────────────────────────────────────
 
 /**
- * A single tile being placed in the current draft. [letter] is the display
- * letter on the board (uppercase 'A'..'Z'). [rackTile] is the corresponding
- * tile drawn from the rack: '_' for a blank (the player picked [letter] in
- * the blank-letter prompt) or an uppercase letter for a regular tile (in
- * which case `letter == rackTile`).
+ * [letter] is what shows on the board; [rackTile] is the tile spent - '_' for a
+ * blank played as [letter], otherwise the same letter.
  */
 data class Placement(
     val row: Int,
@@ -163,9 +145,8 @@ data class Placement(
 )
 
 /**
- * One word formed by a draft move. [tiles] lists the (row, col) coordinates
- * the word covers, in word-reading order; [score] is that single word's
- * contribution to the total (including any premium-square multipliers).
+ * One word formed by a draft move. [tiles] is in word-reading order; [score]
+ * includes premium multipliers.
  */
 data class WordResult(
     val word: String,
@@ -173,11 +154,6 @@ data class WordResult(
     val tiles: List<Pair<Int, Int>>,
 )
 
-/**
- * Full result of validating + scoring a draft move. The TS engine throws
- * on invalid moves; the Kotlin port wraps that in [MoveDraft] (see below)
- * so composables never have to try/catch.
- */
 data class DraftResult(
     val newBoard: Board,
     val wordsFormed: List<WordResult>,
@@ -188,18 +164,8 @@ data class DraftResult(
 enum class DraftStatus { INVALID_LOCAL, READY }
 
 /**
- * Top-level draft state surfaced to the composer. When the placements
- * make a legal move ([status] == [DraftStatus.READY]) the [result] is
- * populated. When they don't ([INVALID_LOCAL]) the [error] holds the reason
- * and [result] is null.
- *
- * An empty placements list yields INVALID_LOCAL with [MoveError.NO_TILES_PLACED].
- */
-/**
- * Why a draft is invalid. An enum rather than a message, because the engine
- * has no string resources: it used to throw English prose that MoveComposer
- * rendered verbatim, so every locale saw "Tiles must be contiguous (no gaps)"
- * in English. The composable resolves this to a translated string.
+ * Why a draft is invalid. The composable maps these to localised strings; the
+ * engine holds no prose.
  */
 enum class MoveError {
     NO_TILES_PLACED,
@@ -224,9 +190,8 @@ data class MoveDraft(
 private class MoveValidationException(val error: MoveError) : RuntimeException(error.name)
 
 /**
- * Public entry point used by the move composer. Returns a [MoveDraft] —
- * never throws — so the composer can render preview score / words while
- * the user is mid-placement.
+ * Entry point for the move composer: returns a [MoveDraft] rather than
+ * throwing.
  */
 fun deriveMoveDraft(
     board: Board,
@@ -244,29 +209,16 @@ fun deriveMoveDraft(
 }
 
 /**
- * Inner validate + score routine. Throws [MoveValidationException] with a
- * specific message on rule violations — only called by [deriveMoveDraft]
- * directly, which converts the throws into [MoveDraft] state.
- *
- * Rules (mirrors TS `validateAndScoreMove`):
- *  1. All placements in bounds + on empty squares.
- *  2. All placements share a single row or column.
- *  3. No gaps between placed tiles (existing tiles on the same line may
- *     fill the gap).
- *  4. First move: must cover (7,7) and place ≥2 tiles.
- *  5. Later moves: must connect orthogonally to ≥1 existing tile.
- *  6. Premium squares apply only to newly placed tiles.
- *  7. 50-point bingo bonus when all 7 tiles are used in one move.
+ * Validate and score a draft, throwing [MoveValidationException] on a rule
+ * violation. Premiums count only for newly placed tiles; all seven tiles in one
+ * move earn 50 points.
  */
 fun validateAndScoreMove(board: Board, placements: List<Placement>): DraftResult {
     if (placements.isEmpty()) throw MoveValidationException(MoveError.NO_TILES_PLACED)
 
-    // Two placements on one square. The rest of this function builds the board
-    // from the deduplicated square but counts tilesUsed from the list, so a
-    // duplicate spent two rack tiles for one letter, found and scored the
-    // square's cross-word twice, and let seven placements over six squares
-    // claim the bingo. Rejected here rather than only at the drop handler,
-    // because the engine is what decides whether a move is legal.
+    // Reject duplicate squares here rather than only in the drop handler: the
+    // board dedupes them but tilesUsed counts the list, so a duplicate
+    // double-scores the cross-word and can fake a bingo.
     if (placements.distinctBy { it.row to it.col }.size != placements.size) {
         throw MoveValidationException(MoveError.SQUARE_OCCUPIED)
     }
@@ -425,11 +377,6 @@ private fun cellKey(row: Int, col: Int): Long = row.toLong() * BOARD_SIZE + col
 
 // ─── Helpers used by the composer ─────────────────────────────────────
 
-/**
- * Unique uppercase set of every word the draft would form, in the order
- * they first appear. Used by the validation-debounce dedup so we don't
- * fire `validateWord` for the same string twice in one keystroke.
- */
 fun getUniqueDraftWords(wordsFormed: List<WordResult>): List<String> {
     val seen = LinkedHashSet<String>()
     for (entry in wordsFormed) {
@@ -439,11 +386,8 @@ fun getUniqueDraftWords(wordsFormed: List<WordResult>): List<String> {
 }
 
 /**
- * Stable signature for a (board, placement-set) pair, used by the
- * composer's debounced word-validation hook to drop late results whose
- * input no longer matches the current draft. Order-independent — the
- * placements are sorted by (row, col, letter, rackTile) before joining,
- * so [Placement] reordering by drag-and-drop doesn't invalidate.
+ * Stable signature for a (board, placements) pair; the composer drops debounced
+ * validation results whose signature no longer matches. Order-independent.
  */
 fun createDraftSignature(boardSerialised: String, placements: List<Placement>): String {
     val ordered = placements.sortedWith(

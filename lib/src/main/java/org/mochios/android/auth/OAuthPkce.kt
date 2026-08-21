@@ -10,15 +10,9 @@ import java.security.SecureRandom
 import java.util.Base64
 
 /**
- * PKCE for the mobile OAuth flow. The app generates a 64-char alphanumeric
- * verifier, sends `sha256(verifier)` (base64url, no padding) as the challenge
- * in `/_/auth/oauth/<provider>/begin`, and presents the verifier back to
- * `/_/auth/oauth/exchange` after the deep-link return. The server's check is
- * `RawURLEncoding(sha256(verifier)) == storedChallenge` — encoding mismatches
- * here surface as `errors.exchange_verifier_mismatch` ("PKCE verifier does
- * not match challenge"), so we use the JDK Base64 URL encoder directly to
- * match Go's `base64.RawURLEncoding` byte-for-byte instead of relying on
- * `android.util.Base64` flag combinations.
+ * PKCE for the mobile OAuth flow: the challenge is base64url(sha256(verifier))
+ * with no padding. Use the JDK encoder to match Go's `base64.RawURLEncoding`
+ * exactly; `android.util.Base64` flag combinations do not.
  */
 object OAuthPkce {
 

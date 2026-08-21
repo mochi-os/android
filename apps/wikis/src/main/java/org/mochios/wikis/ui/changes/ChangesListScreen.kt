@@ -57,15 +57,6 @@ import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.android.R as MochiR
 
-/**
- * Recent-changes surface for a wiki. Mirrors web's
- * `apps/wikis/web/src/features/wiki/changes-list.tsx`: a flat list of edits
- * across every page in the wiki, newest first, with author avatars and tap-
- * to-open-page rows.
- *
- * Reads `wikiId` via the ViewModel's [SavedStateHandle] and is wired by
- * `WikisApp.CHANGES` in the nav graph.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChangesListScreen(

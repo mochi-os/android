@@ -10,10 +10,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * A comment anchored to one of its post's attachments carries the anchor id
- * and its caption on the wire; an unanchored one carries "" or nothing at
- * all. Gson instantiates models via Unsafe, so an absent field lands as null
- * rather than the Kotlin default - the accessors must read either the same.
+ * An unanchored comment carries "" or omits the field. Gson instantiates via
+ * Unsafe, so an absent field lands as null rather than the Kotlin default - the
+ * accessors must treat both alike.
  */
 class CommentAnchorTest {
     private val gson = Gson()

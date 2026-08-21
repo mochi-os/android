@@ -122,12 +122,9 @@ fun FindProjectsScreen(
                 onRefresh = { viewModel.refresh() },
                 modifier = Modifier.fillMaxSize()
             ) {
-            // A project the user already has belongs in their own list, not in
-            // the directory, so it drops out of both sections rather than
-            // sitting there behind a dead "Subscribed" chip. Filtering here
-            // rather than in the view model keeps the branches below testing the
-            // same lists they render, so a search whose every hit is already
-            // subscribed lands on the empty state instead of an empty LazyColumn.
+            // Already-subscribed projects drop out of both lists. Filter here,
+            // not in the view model, so the branches below test the lists they
+            // render and an all-subscribed search hits the empty state.
             val searchResults = uiState.searchResults.filter { project ->
                 project.id.ifEmpty { project.fingerprint } !in uiState.subscribedIds
             }
@@ -221,9 +218,8 @@ fun FindProjectsScreen(
 }
 
 /**
- * A directory hit, with a subscribe button. The screen only ever hands this
- * projects the user has not subscribed to, so there is no subscribed state to
- * draw.
+ * Directory hit with a subscribe button; the screen never hands it an
+ * already-subscribed project.
  */
 @Composable
 private fun DiscoveredProjectCard(

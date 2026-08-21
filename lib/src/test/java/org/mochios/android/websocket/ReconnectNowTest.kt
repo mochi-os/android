@@ -18,13 +18,10 @@ import org.junit.Test
 import java.util.concurrent.TimeUnit
 
 /**
- * A socket that drops while the app is in the background comes back only
- * through its backoff timer - up to five minutes out. reconnectNow(), called
- * on resume, must open a fresh handshake at once, and the timer it superseded
- * must then stand down rather than open a competing socket.
- *
- * The server refuses every upgrade (a plain 503), so each connect fails
- * straight into backoff and the handshakes it receives count the attempts.
+ * reconnectNow() must open a handshake at once on resume, and the backoff timer
+ * it superseded must stand down. The server refuses every upgrade with 503, so
+ * each connect falls into backoff and the handshakes received count the
+ * attempts.
  */
 class ReconnectNowTest {
     private lateinit var server: MockWebServer

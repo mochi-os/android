@@ -56,10 +56,8 @@ import org.mochios.forums.model.Forum
 import org.mochios.android.R as MochiR
 
 /**
- * Forum settings, styled to match the feeds settings screen: an icon [TabRow]
- * over [Section] cards. Every tab edits the forum, so the whole tabbed editor is
- * for viewers who can manage; everyone else gets the read-only identity card.
- * The AI tab is added only when the account has an AI-capable account.
+ * Tabs of the manager-only settings editor; Ai is added only when the account
+ * has an AI-capable account.
  */
 private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     General(R.string.forums_tab_general, Icons.Outlined.Settings),

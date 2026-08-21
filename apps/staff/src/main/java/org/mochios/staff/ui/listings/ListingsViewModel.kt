@@ -28,17 +28,8 @@ import org.mochios.staff.ws.StaffEventsBus
 import javax.inject.Inject
 
 /**
- * UI state for [ListingsScreen]. Mirrors the same axes as the web
- * `ListingsPage`:
- *
- *   - `status`     — listing lifecycle filter (`active`, `draft`, …) or null
- *                    for "any".
- *   - `moderation` — moderation-state filter (`hold`, `review`, …) or null.
- *   - `query`      — substring searched against title + description; the
- *                    screen debounces user input by 300 ms before firing.
- *
- * Pagination is page-based; the repository's `listPendingListings` accepts
- * `page` / `limit`, so we mirror the same model on Android.
+ * UI state for [ListingsScreen]. `query` is matched server-side against title
+ * and description.
  */
 data class ListingsUiState(
     val status: String? = null,
@@ -91,10 +82,9 @@ class ListingsViewModel @Inject constructor(
     private var loadJob: Job? = null
 
     /**
-     * Pages actually fetched, which is what decides the next one to ask for.
-     * Deriving it from the rows held — (size / PAGE_SIZE) + 1 — breaks as soon
-     * as a row is optimistically removed: 20 loaded minus 1 gives page 1 again,
-     * so the first page is refetched and appended as 19 duplicates.
+     * Pages actually fetched. Deriving the next page from the row count breaks
+     * after an optimistic removal: the first page is refetched and appended as
+     * duplicates.
      */
     private var pagesLoaded = 0
 
@@ -205,9 +195,8 @@ class ListingsViewModel @Inject constructor(
     }
 
     /**
-     * Submit the currently-pending action. `reason` is required for
-     * REJECT / REMOVE on the wire; the dialog enforces presence so we
-     * just forward whatever was typed.
+     * Submit the pending action. The wire requires `reason` for REJECT and
+     * REMOVE; the dialog enforces it.
      */
     fun submitAction(reason: String, notes: String) {
         val pending = _state.value.pendingAction ?: return

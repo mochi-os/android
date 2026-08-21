@@ -53,35 +53,10 @@ import java.io.File
 import org.mochios.android.R as MochiR
 
 /**
- * Recursive composable that renders one [WikiComment] plus its descendant
- * thread. Mirrors `apps/wikis/web/src/features/wiki/wiki-comment-thread.tsx`:
- *
- *  - Avatar (left) keyed on the per-comment proxy path
- *    `/wikis/<id>/-/comment/<id>/asset/avatar` so remote authors render
- *    correctly. [EntityAvatar] resolves it against the session server URL.
- *  - Author name + relative time (`formatTimestamp` from lib).
- *  - "(edited)" pill when `comment.edited > 0`.
- *  - Body: server-rendered HTML via [HtmlContent] when available, otherwise
- *    the raw `body` falls back to a `<Text>` with `whitespace-pre-wrap`
- *    equivalent (Compose's `Text` preserves whitespace by default).
- *  - [CommentAttachments] below the body.
- *  - Action chips: Reply (always), Edit (`author == currentUserId`),
- *    Delete (`author == currentUserId || isOwner`). Delete opens
- *    [ConfirmDialog] before firing.
- *  - Each child is indented by `(depth + 1) * 16dp` and renders via the same
- *    composable, allowing arbitrary thread depth.
- *  - Collapse toggle on the avatar — when the user taps the avatar to
- *    collapse, the row degrades to a single line: "name • time • +N more
- *    replies" with a tap target to re-expand.
- *
- * Quote-on-select status: the simpler version. Reply always seeds blank.
- * Android's SelectionContainer doesn't expose the current selection back to
- * the caller in a way that survives without significant custom plumbing
- * (TextView's selection callback can be tapped, but the markdown body is
- * rendered as `Spanned` inside an AndroidView which complicates the bridge).
- * Web's `window.getSelection()` has no direct equivalent here. The ViewModel
- * still accepts a `selectedText` parameter so the bridge can be added later
- * without changing this composable's signature.
+ * Renders one [WikiComment] and its descendants, indenting each child by 16dp.
+ * Reply always seeds blank: Android has no equivalent of
+ * `window.getSelection()` over the Markwon-rendered body, so `selectedText` is
+ * always null.
  */
 @Composable
 fun WikiCommentThread(
@@ -382,11 +357,6 @@ fun WikiCommentThread(
     }
 }
 
-/**
- * Small text+icon chip used for the per-comment action row. Plain
- * [TextButton] without the filled background so the chips read as
- * lightweight affordances, matching web's underlined-text style.
- */
 @Composable
 private fun ActionChip(
     icon: androidx.compose.ui.graphics.vector.ImageVector,

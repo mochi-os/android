@@ -74,21 +74,8 @@ import org.mochios.market.model.ShippingOption
 import org.mochios.market.navigation.MarketApp
 
 /**
- * Checkout flow for a single listing.
- *
- * Mirrors `apps/market/web/src/features/buying/checkout-page.tsx`. The
- * screen branches by pricing model:
- *  - Subscription: a simple "Subscribe" button that creates a Stripe
- *    Checkout session and opens it.
- *  - Fixed / PWYW / Auction: the full delivery + shipping + summary
- *    layout below. PWYW exposes an "Your price" input; auction-completion
- *    (when the buyer is the winning bidder) hides the price input and
- *    posts to `orders/auction` so the won bid amount is honoured.
- *
- * The Pay with Stripe button uses [CustomTabsIntent] to open the
- * Stripe-hosted checkout. The `mochi://` URI scheme is already claimed
- * by MainActivity so the success / cancel return URLs route back without
- * any extra intent filter here.
+ * Checkout for one listing. Stripe opens in a Custom Tab; its `mochi://` return
+ * URLs are handled by MainActivity's intent filter, so none is needed here.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

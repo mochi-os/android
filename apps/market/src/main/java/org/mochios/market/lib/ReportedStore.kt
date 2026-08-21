@@ -18,25 +18,13 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * Backing DataStore for the [ReportedStore]. Kept separate from the saved
- * and recently-viewed stores because reports are an opt-in moderation
- * action — never bundle this set with the user's other browsing state.
- */
 private val Context.reportedDataStore: DataStore<Preferences> by preferencesDataStore(
     name = "market_reported",
 )
 
 /**
- * Local record of listing IDs the user has already reported. Read by the
- * listing detail and listing card overflow menus so the "Report" item is
- * hidden (and replaced with a "Reported" indicator) after submission.
- *
- * The server is the source of truth for moderation; this store is purely a
- * UX hint to stop users firing duplicate reports while their first is still
- * being reviewed. Loss of the underlying file is harmless — the worst case
- * is the Report button reappearing for a listing the user has already
- * flagged, which the server-side dedup will collapse.
+ * Listing ids the user has reported, so the Report menu item can be hidden. A
+ * UX hint only; the server deduplicates reports.
  */
 @Singleton
 class ReportedStore @Inject constructor(

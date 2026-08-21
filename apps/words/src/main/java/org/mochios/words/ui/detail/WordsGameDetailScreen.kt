@@ -105,22 +105,6 @@ import org.mochios.words.ui.detail.board.TileRack
 import org.mochios.words.ui.detail.board.WordsBoard
 import org.mochios.android.R as MochiR
 
-/**
- * Words game-detail screen. Renders the 15x15 board, the player's rack,
- * the move-composer action bar, and the chat panel side-by-side (or
- * behind a sheet on narrow screens).
- *
- * The screen reads everything from [WordsGameViewModel] — including the
- * board state, the per-cell pending placements, the rack, the drag
- * source, the live word-validation state map, and any in-flight server
- * call. A `rememberGameWebSocket` subscription drives refresh on
- * opponent moves and chat messages.
- *
- * Layout: on screens wide enough for the chat panel (≥600dp) the chat
- * lives on the right at a fixed 320dp width; the rest of the screen is
- * the board+rack+composer column. On narrow screens the chat is hidden
- * behind a bottom sheet opened from the GameHeader actions.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WordsGameDetailScreen(
@@ -319,13 +303,9 @@ private fun GameDetailContent(
 
     val header = buildHeaderModel(game, myIdentity)
 
-    // ─── Continuous drag-and-drop ─────────────────────────────────────
-    // Track the live drag pointer in root coordinates, the bounds of the
-    // board and rack in root coordinates, and a "ghost tile" descriptor
-    // for screen-level rendering. The board/rack composables report their
-    // bounds + slot rects via callbacks; the pointer is updated on every
-    // drag delta. Release dispatches to the appropriate ViewModel method
-    // based on which target rect the pointer is over.
+    // Continuous drag-and-drop: board and rack report their bounds in root
+    // coordinates, and release dispatches on whichever target rect holds the
+    // pointer.
     var boardBounds by remember { mutableStateOf<Rect?>(null) }
     var boardCellSize by remember { mutableStateOf(0f) }
     var rackBounds by remember { mutableStateOf<Rect?>(null) }
@@ -852,10 +832,6 @@ private fun GameChatColumn(
             text = chatDraft,
             onTextChange = { chatDraft = it },
             onSend = {
-                // Clear only once the send has actually succeeded. Clearing
-                // here used to happen before the coroutine started, so a failed
-                // send discarded the text, and isSending was set and unset in
-                // the same frame so the pending state never rendered.
                 if (chatDraft.isNotBlank() && !isSending) {
                     isSending = true
                     onSend(chatDraft) { sent ->
@@ -871,12 +847,9 @@ private fun GameChatColumn(
 
 @Composable
 private fun WordsMoveRow(msg: GameChatMessage, isSent: Boolean) {
-    // Passes and exchanges are stored as type "move" too, and the body the
-    // server stores is already a sentence ("Alice passed") in server English.
-    // Wrapping every row in "played" produced "You played Alice passed"; the
-    // event marker is what distinguishes them, exactly as the web does.
-    // Rows with no marker are legacy and keep the old rendering rather than
-    // being guessed at.
+    // Passes and exchanges are also type "move", and the server stores the body
+    // as a finished sentence, so only the event marker distinguishes them.
+    // Markerless rows are legacy and keep the played rendering.
     val actor = if (isSent) stringResource(R.string.words_detail_label_you) else msg.name
     val marker = msg.event
     val text = when {

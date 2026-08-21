@@ -85,9 +85,8 @@ class ObjectDetailViewModel @Inject constructor(
 
     private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
     /**
-     * Emits when a comment/attachment action fails while the sheet is open.
-     * uiState.error only renders when no object is loaded, so without this
-     * the failure is invisible — the input clears and nothing appears.
+     * Comment/attachment failures while the sheet is open; uiState.error only
+     * renders when no object is loaded.
      */
     val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
@@ -107,11 +106,8 @@ class ObjectDetailViewModel @Inject constructor(
     fun loadWithInitialObject(projectId: String, objectId: String, initialObject: ProjectObject?, access: String = "") {
         currentProjectId = projectId
         currentObjectId = objectId
-        // Carry over an object only when it's the one being opened. Otherwise a
-        // detail left over from the previous selection — its number, fields,
-        // comments, activity — would render until the fetch returns. That's most
-        // visible right after a create: the new object isn't in the list yet, so
-        // initialObject is null and the stale object would otherwise show through.
+        // Only carry over the object being opened; a previous selection's
+        // detail would otherwise render until the fetch returns.
         val carried = initialObject ?: _uiState.value.obj?.takeIf { current -> current.id == objectId }
         _uiState.value = ObjectDetailUiState(
             obj = carried,
@@ -119,11 +115,8 @@ class ObjectDetailViewModel @Inject constructor(
             isLoading = carried == null,
         )
         subscribeWebSocket(projectId)
-        // Cancel any fetch still in flight for the object we just left. Without
-        // this a slow response for A lands after the sheet has switched to B and
-        // overwrites its header, leaving one object's header above another's
-        // tabs — reachable in ordinary use, since tapping a linked object in the
-        // Links tab swaps the id under an in-flight fetch.
+        // Cancel the previous object's fetch, or its late response overwrites
+        // the header of the object now shown.
         loadJob?.cancel()
         loadJob = viewModelScope.launch {
             try {

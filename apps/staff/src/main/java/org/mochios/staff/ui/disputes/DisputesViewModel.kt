@@ -28,15 +28,8 @@ import org.mochios.staff.ws.StaffEventsBus
 import javax.inject.Inject
 
 /**
- * UI state for [DisputesScreen]. Mirrors the same axes as the web
- * `DisputesPage`:
- *
- *   - `status` — one of `open` / `responded` / `reviewing` /
- *                `resolved_buyer` / `resolved_seller` / `escalated`,
- *                or null for any.
- *
- * Pagination is page-based; the repository's `listDisputes` accepts
- * `page` / `limit`.
+ * UI state for [DisputesScreen]. `status` is open / responded / reviewing /
+ * resolved_buyer / resolved_seller / escalated, or null for any.
  */
 data class DisputesUiState(
     val status: String? = null,
@@ -87,10 +80,9 @@ class DisputesViewModel @Inject constructor(
     private var loadJob: Job? = null
 
     /**
-     * Pages actually fetched, which is what decides the next one to ask for.
-     * Deriving it from the rows held — (size / PAGE_SIZE) + 1 — breaks as soon
-     * as a row is optimistically removed: 20 loaded minus 1 gives page 1 again,
-     * so the first page is refetched and appended as 19 duplicates.
+     * Pages actually fetched. Deriving the next page from the row count breaks
+     * after an optimistic removal: the first page is refetched and appended as
+     * duplicates.
      */
     private var pagesLoaded = 0
 
@@ -170,13 +162,8 @@ class DisputesViewModel @Inject constructor(
     }
 
     /**
-     * Review a dispute. `resolution` is `resolved_buyer` or
-     * `resolved_seller`. `refundAmountMinor` is the optional partial
-     * refund in minor currency units; null means "full refund of
-     * dispute.total" (when resolving for the buyer). Validation:
-     *   - amount > 0 (rejected via [DisputesEvent.RefundMustBePositive]),
-     *   - amount <= remaining = total - order_refunded (rejected via
-     *     [DisputesEvent.RefundExceedsRemaining]).
+     * Review a dispute. A null [refundAmountMinor] means a full refund of the
+     * dispute total.
      */
     fun reviewDispute(
         status: String,

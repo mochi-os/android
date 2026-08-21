@@ -9,10 +9,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * An attachment's MIME type is attacker-controlled end to end — core reads it
- * from the multipart Content-Type with no allowlist and attachment.store copies
- * it from the peer unvalidated — and AttachmentOpener hands it to ACTION_VIEW
- * with REQUEST_INSTALL_PACKAGES held.
+ * An attachment's MIME type is peer-supplied and unvalidated, and
+ * AttachmentOpener hands it to ACTION_VIEW with REQUEST_INSTALL_PACKAGES held.
  */
 class MimeSafetyTest {
 

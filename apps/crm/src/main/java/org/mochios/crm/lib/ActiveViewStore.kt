@@ -12,14 +12,9 @@ import javax.inject.Singleton
 import androidx.core.content.edit
 
 /**
- * Remembers which view the user last opened in each CRM, so reopening a CRM
- * lands on the board (or list) they were working in rather than on whichever
- * view happens to come first.
- *
- * SharedPreferences rather than DataStore: the value is one short id per CRM,
- * written only when the user picks a view, and read synchronously while the
- * CRM loads — an async read would let the default view render first and then
- * jump.
+ * Last-opened view per CRM. SharedPreferences, not DataStore: the value is read
+ * synchronously while the CRM loads, so the default view never renders first
+ * and then jumps.
  */
 @Singleton
 class ActiveViewStore @Inject constructor(

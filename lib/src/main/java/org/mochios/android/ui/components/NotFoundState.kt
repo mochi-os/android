@@ -14,12 +14,8 @@ import androidx.compose.ui.res.stringResource
 import org.mochios.android.R
 
 /**
- * Rendered when a detail screen tries to load an entity (a forum, a chat,
- * a feed, a project, …) and gets a 404 from the server. The user typically
- * arrived here from a stale notification deep-link or home-screen shortcut.
- *
- * Caller supplies the localised title (e.g. "Forum not found"). The icon and
- * "Back" action are shared so the four apps render identically.
+ * Shown when a detail screen's entity 404s - typically a stale deep link or
+ * home-screen shortcut. Caller supplies the localised title.
  */
 @Composable
 fun NotFoundState(

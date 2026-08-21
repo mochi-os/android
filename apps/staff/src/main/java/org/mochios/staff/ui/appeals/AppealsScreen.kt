@@ -55,12 +55,7 @@ import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.AppealDecideDialog
 
 /**
- * Staff "Appeals" screen.
- *
- * Android port of `apps/staff/web/src/features/appeals/appeals-page.tsx`.
- * Lists pending listing appeals; each row's "Decide" button opens
- * [AppealDecideDialog]. Tapping the title links to the market listing
- * detail.
+ * Port of `apps/staff/web/src/features/appeals/appeals-page.tsx`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

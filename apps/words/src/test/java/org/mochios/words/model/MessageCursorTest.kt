@@ -13,15 +13,9 @@ import org.junit.Test
 import org.mochios.android.api.ApiClient
 
 /**
- * `nextCursor` is `"<created>:<id>"`, not a timestamp — `created` alone is not
- * unique, and paginating on it drops every row sharing the page boundary's
- * second.
- *
- * Typed `Long?`, Gson aborted the whole payload, and because the field is only
- * populated when `hasMore` is true the failure appeared only once a game passed
- * the page limit: the chat and move log went permanently empty with no error.
- * Parsed with the app's real Gson configuration so the test fails the same way
- * production did.
+ * `nextCursor` is `"<created>:<id>"`, a string; typed `Long?` Gson rejected the
+ * whole page once a game passed the page limit. Parsed with the app's real Gson
+ * configuration.
  */
 class MessageCursorTest {
 
@@ -47,9 +41,7 @@ class MessageCursorTest {
     }
 
     /**
-     * Control. The previous `Long?` typing is reproduced locally to prove this
-     * payload really is what broke — without it the assertions above would pass
-     * just as happily against the old declaration.
+     * Control: the old `Long?` typing must fail on the same payload.
      */
     private data class LegacyShape(val nextCursor: Long? = null)
 

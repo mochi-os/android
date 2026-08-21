@@ -33,24 +33,8 @@ import org.mochios.chess.repository.ChessRepository
 import javax.inject.Inject
 
 /**
- * UI state for the chess game-detail screen. Mirrors the web's `ChessGame`
- * (apps/chess/web/src/features/chess/index.tsx) view body.
- *
- *  - [game] is the authoritative game row (from `/-/view`). Refreshed on
- *    every successful mutation so we always reflect the server's idea of
- *    state.
- *  - [identity] is the caller's entity ID — captured from the view
- *    response (and cross-checked against [SessionManager.boundIdentity]).
- *  - [messages] is the chat / move / system message stream in display
- *    order (oldest-first, newest-last); [hasMore]/[nextCursor] drive the
- *    paginated load-older behaviour the same way the chat app does.
- *  - [lastMove] is the (from, to) pair of the most recent move; used to
- *    highlight those squares on the board until the next move is made.
- *  - [pendingMove] is set while a move request is in flight so the UI
- *    can disable further input without losing the optimistic state.
- *  - [error] holds the first surfaced failure for the initial load /
- *    refresh; per-mutation errors land in [transientToasts] so they
- *    surface as snackbars without sticking around.
+ * Detail-screen state. [error] holds only load and refresh failures; mutation
+ * failures surface as [ChessGameEvent.Toast].
  */
 data class ChessGameUiState(
     val game: Game? = null,
@@ -74,9 +58,7 @@ data class ChessGameUiState(
 )
 
 /**
- * Side-effect events emitted by the ViewModel. Toasts and one-shot
- * navigation actions live here so the screen can route them through a
- * snackbar / NavController without persisting them in [ChessGameUiState].
+ * One-shot side effects (toasts, navigation) kept out of [ChessGameUiState].
  */
 sealed class ChessGameEvent {
     /** Show a transient, already-localised string in a snackbar. */
@@ -146,11 +128,10 @@ class ChessGameViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     game = view.game,
                     identity = view.identity,
-                    // Merge, don't replace. refresh() runs on every websocket
-                    // frame, so assigning the newest page threw away whatever
-                    // loadMoreOlder had paged in the moment the opponent moved.
-                    // hasMore/nextCursor stay put for the same reason: they
-                    // describe how far back we have scrolled, not this page.
+                    // refresh() runs on every websocket frame: merge so
+                    // loadMoreOlder's pages survive, and leave
+                    // hasMore/nextCursor alone - they describe how far back we
+                    // have paged.
                     messages = mergeMessages(
                         _uiState.value.messages,
                         msgs.messages,
@@ -198,11 +179,8 @@ class ChessGameViewModel @Inject constructor(
     // ---- Move submission ----
 
     /**
-     * Submit a move. Computes post-move FEN/PGN/SAN locally via chesslib
-     * and POSTs to the server — same shape as the web client. Optimistically
-     * updates the local FEN so the board flips to the opponent's turn
-     * immediately; if the server rejects we re-fetch via [refresh] so the
-     * UI returns to authoritative state.
+     * Compute the post-move FEN/PGN/SAN locally, apply it optimistically and
+     * POST; a rejection triggers [refresh].
      */
     fun submitMove(from: String, to: String, promotion: String?) {
         val game = _uiState.value.game ?: return
@@ -394,11 +372,8 @@ class ChessGameViewModel @Inject constructor(
     }
 
     /**
-     * Called by the screen when a WS event arrives. We re-fetch the game +
-     * latest messages so the UI converges on the server view without
-     * trying to surgically apply every event type — chess events are
-     * infrequent (~1 per minute in an active game) so the extra
-     * round-trip is well within budget.
+     * Every websocket event re-fetches the game and messages rather than
+     * applying frames piecemeal.
      */
     fun onWebsocketEvent() {
         refresh()
@@ -412,14 +387,9 @@ class ChessGameViewModel @Inject constructor(
     }
 
     /**
-     * From/to of the game's last move, replayed from the stored [pgn].
-     *
-     * The SAN is only meaningful from the starting position, so the input has
-     * to be the complete game. It used to be the message list, which is a
-     * single page — so once a game passed the page size the replay started
-     * mid-game from the opening position, and either threw (highlight silently
-     * gone for the rest of the game) or, when the page happened to be legal
-     * from the start, produced entirely the wrong squares.
+     * From/to of the last move, replayed from the full [pgn]. SAN only replays
+     * from the starting position, so a single page of move messages would start
+     * mid-game and throw or mis-resolve.
      */
     private fun deriveLastMove(pgn: String): Pair<String, String>? {
         if (pgn.isBlank()) return null
@@ -442,12 +412,6 @@ class ChessGameViewModel @Inject constructor(
         else "${from.lowercase()}${to.lowercase()}${promotion.lowercase()}"
     }
 
-    /**
-     * Compute the SAN for a single move applied to [fenBefore]. We use a
-     * fresh [Board] and let chesslib's [Move] / [MoveList] machinery do
-     * the work: a [MoveList] backed by a starting FEN can convert its
-     * entries to SAN strings via [MoveList.toSanArray].
-     */
     private fun computeSan(fenBefore: String, move: Move): String {
         return try {
             val board = Board()
@@ -462,17 +426,12 @@ class ChessGameViewModel @Inject constructor(
     }
 
     /**
-     * Naively append the SAN of the latest move to the existing PGN. The
-     * server stores PGN as a flat concatenation of moves (no headers); each
-     * move pair carries `N.` numbering. We re-derive from the post-move
-     * board so the half-move counter stays correct.
+     * Append [san] to the server's header-less PGN, numbering each White move
+     * from the post-move board.
      */
     private fun appendMoveToPgn(existing: String, san: String, postMoveBoard: Board): String {
-        // halfMoveCounter resets on captures/pawn moves, so it isn't a
-        // reliable move-number source. Walk the side-to-move + fullmove
-        // number from the post-move board: after Black's move, postMove
-        // side-to-move is White and full-move number has been bumped. Use
-        // the full-move counter directly.
+        // halfMoveCounter resets on captures and pawn moves; the full-move
+        // counter is the move number.
         val fullMove = postMoveBoard.moveCounter
         val sideAfter = postMoveBoard.sideToMove
         val sep = if (existing.isEmpty()) "" else " "

@@ -34,33 +34,22 @@ class ClickableLinkTextView @JvmOverloads constructor(
     var imageAltByUrl: Map<String, String> = emptyMap()
 
     /**
-     * When true, no touch is consumed (onTouchEvent returns false) so the
-     * gesture passes to the Compose parent. The feeds magazine page uses this
-     * for the (uncapped, full-height) post body so a drag reaches the page's
-     * verticalScroll — which scrolls the post and, at its boundary, forwards to
-     * the pager to flip — instead of the text view swallowing the swipe. Taps
-     * fall through to the card's own clickable (open the post); links and image
-     * alt-text remain available in the detail view.
+     * When true, no touch is consumed (onTouchEvent returns false) so drags and
+     * taps pass to the Compose parent.
      */
     var passThroughTouches = false
 
     /**
-     * When true, the text is truncated to whatever fits the view's own bounded
-     * height with a literal "…" appended. The feeds magazine page gives the body
-     * a weighted slot sized to the free space, so the body "fills the screen" and
-     * ends in an ellipsis instead of overflowing into a scroll. We truncate the
-     * text ourselves rather than using maxLines + `ellipsize = END`, because the
-     * platform end-ellipsis does not render on Markwon `Spanned` content (it
-     * silently clips with no "…"). Set [fullText] alongside this so the
-     * un-truncated source is available to re-truncate against on each measure.
-     * Leave false for normal maxLines-driven behaviour.
+     * When true, the text is truncated to the view's bounded height with a
+     * literal "…" appended; `ellipsize = END` does not draw on Markwon
+     * `Spanned` content. Set [fullText] alongside so the un-truncated source
+     * stays available.
      */
     var clampToHeight = false
 
     /**
-     * The complete, un-truncated text to clamp from when [clampToHeight] is set.
-     * Kept separate from the view's (possibly already-truncated) `text` so the
-     * truncation is always computed from the full content and stays stable.
+     * The complete, un-truncated text to clamp from when [clampToHeight] is
+     * set. Separate from `text`, which may already be truncated.
      */
     var fullText: CharSequence? = null
 
@@ -113,12 +102,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
             .build()
 
     /**
-     * Return [source] truncated to fit [available] px tall at [width], ending in
-     * a literal ellipsis when it overflows (or [source] unchanged when it fits).
-     * Truncating the text ourselves works around `ellipsize = END` not drawing on
-     * Markwon `Spanned` content. `subSequence` on a Spanned keeps the spans, so
-     * formatting up to the cut survives; the candidate is re-measured so the
-     * appended "…" itself is guaranteed to fit.
+     * Return [source] truncated to fit [available] px tall at [width], ending
+     * in a literal ellipsis. `ellipsize = END` does not draw on Markwon
+     * `Spanned` content.
      */
     private fun truncateToHeight(source: CharSequence, width: Int, available: Int): CharSequence {
         val full = staticLayout(source, width)
@@ -241,11 +227,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
     }
 
     /**
-     * Markwon renders each table row as a TableRowSpan (a ReplacementSpan);
-     * links inside cells are ClickableSpans held in the cell's own text,
-     * invisible to this outer layout. Treat any tap on a table row as a link
-     * tap so the event reaches TableAwareMovementMethod, which dispatches into
-     * the cell and fires the link if one is there.
+     * Markwon renders a table row as a ReplacementSpan; links inside cells are
+     * invisible to this outer layout. Treat any tap on a row as a link tap so
+     * TableAwareMovementMethod can dispatch into the cell.
      */
     private fun tableRowAt(event: MotionEvent): Boolean {
         val spanned = text as? Spanned ?: return false

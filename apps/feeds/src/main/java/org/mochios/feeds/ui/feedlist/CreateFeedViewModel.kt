@@ -17,14 +17,6 @@ import org.mochios.android.api.toMochiError
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
 
-/**
- * State of the create-feed screen.
- *
- * @property isCreating true while the create request is in flight.
- * @property error what went wrong on the last create attempt, if anything.
- * @property createdFeedId set to the new feed's id after a successful create so
- *   the screen can navigate into it; cleared once consumed.
- */
 data class CreateFeedUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,

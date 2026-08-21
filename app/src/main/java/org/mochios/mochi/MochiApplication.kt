@@ -50,14 +50,9 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     @Inject lateinit var sessionManager: SessionManager
 
     /**
-     * Authenticate Coil image requests the same way the API clients do. Avatars
-     * and chat/feed/etc. attachments are served from per-app, session-gated
-     * routes; the default Coil loader sends neither the session cookie nor the
-     * per-app bearer token, so those images come back 401 and render blank. The
-     * shared [AssetHttpClient] adds both (see `AssetHttpModule`).
-     *
-     * [VideoFrameFetcher] adds cached video poster frames (range-extracted via
-     * MediaMetadataRetriever) for [VideoFrame] requests.
+     * Coil loader authenticated like the API clients: attachment and avatar
+     * routes are session-gated, and the default loader sends neither the cookie
+     * nor the bearer token, so images 401.
      */
     override fun newImageLoader(context: PlatformContext): ImageLoader =
         ImageLoader.Builder(context)
@@ -71,14 +66,6 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
             }
             .build()
 
-    /**
-     * Application-scoped coroutine scope. Used for long-lived observers that
-     * outlive any single Activity but should end when the process ends. A
-     * fresh SupervisorJob means a crash in one collector doesn't cascade to
-     * the others. Default dispatcher matches what
-     * [StaffAccessController.start] needs (background work + a `me()` round
-     * trip).
-     */
     private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
 
     override fun attachBaseContext(base: Context) {
@@ -103,11 +90,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
         setupStaffNotificationChannel(this)
         PushServiceWatchdog.schedule(this)
         UpdateChecker.schedule(this)
-        // Start watching the bound identity so the Mochi Staff launcher
-        // alias appears the moment a staff user signs in and disappears
-        // again on sign-out / role revocation. The applicationScope
-        // outlives any single Activity, so the observation survives
-        // configuration changes and Activity teardown.
+        // Shows and hides the Mochi Staff launcher alias as the bound
+        // identity's staff role changes.
         staffAccessController.start(applicationScope)
     }
 }

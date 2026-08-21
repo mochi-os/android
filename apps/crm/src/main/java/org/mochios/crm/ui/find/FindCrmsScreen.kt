@@ -121,12 +121,9 @@ fun FindCrmsScreen(
                 onRefresh = { viewModel.refresh() },
                 modifier = Modifier.fillMaxSize()
             ) {
-            // A CRM the user already has belongs in their own list, not in the
-            // directory, so it drops out of both sections rather than sitting
-            // there behind a dead "Subscribed" chip. Filtering here rather than
-            // in the view model keeps the branches below testing the same lists
-            // they render, so a search whose every hit is already subscribed
-            // lands on the empty state instead of an empty LazyColumn.
+            // Already-subscribed CRMs drop out of both sections. Filtered here,
+            // not in the view model, so the branches below test the lists they
+            // render and an all-subscribed search hits the empty state.
             val searchResults = uiState.searchResults.filter { crm ->
                 crm.id.ifEmpty { crm.fingerprint } !in uiState.subscribedIds
             }

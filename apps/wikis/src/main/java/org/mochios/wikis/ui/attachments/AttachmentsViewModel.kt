@@ -46,11 +46,6 @@ enum class AttachmentsFilter { ALL, IMAGES, DOCUMENTS }
  */
 enum class AttachmentsSort { DATE, NAME, SIZE }
 
-/**
- * UI state for [AttachmentsScreen]. Mirrors the local state held by web's
- * `AttachmentsPage` plus the loaded wiki info that backs the per-wiki
- * `baseURL` used in thumbnail / download URLs.
- */
 data class AttachmentsUiState(
     val isLoading: Boolean = true,
     val isRefreshing: Boolean = false,
@@ -74,11 +69,6 @@ data class AttachmentsUiState(
     val captioning: Attachment? = null,
 )
 
-/**
- * One-shot events surfaced to the screen — toast / snackbar messages for
- * success / failure feedback. Kept as a channel so the screen consumes each
- * event exactly once even across configuration changes.
- */
 sealed interface AttachmentsEvent {
     data class Toast(val message: String) : AttachmentsEvent
     data class Error(val error: MochiError) : AttachmentsEvent
@@ -86,23 +76,8 @@ sealed interface AttachmentsEvent {
 
 /**
  * ViewModel for [AttachmentsScreen]. Reads `wikiId` and `page` from
- * [SavedStateHandle] (the nav graph wires both as `NavType.StringType`) and
- * fires two parallel loads on init:
- *
- *  1. `loadInfo()` — `/-/info` for the wiki itself (needed for the
- *     `WikiContextValue.baseURL` that the screen passes to `AsyncImage`
- *     and `DownloadManager`).
- *  2. `loadAttachments()` — `/-/<slug>/attachments` for the list itself.
- *
- * Mutation methods (`uploadAttachments`, `deleteAttachment`) refresh the list
- * after every successful round-trip — web does the same via React Query's
- * invalidation. Errors emit an [AttachmentsEvent.Error] for the screen's
- * snackbar.
- *
- * Filter / sort / view-mode state lives on the ViewModel so configuration
- * changes (rotation, theme switch) preserve user intent without round-
- * tripping through the URL — Android navigation arguments are typed and
- * the list is too dynamic to encode there.
+ * [SavedStateHandle]; filter, sort and view mode live here so they survive
+ * configuration changes.
  */
 @HiltViewModel
 class AttachmentsViewModel @Inject constructor(
@@ -118,11 +93,8 @@ class AttachmentsViewModel @Inject constructor(
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     /**
-     * Bearer token for this app's session. Captured here so the screen can
-     * thread it into a `DownloadManager.Request.addRequestHeader` without
-     * touching [SessionManager] from the UI layer. `null` if the user is
-     * somehow on this screen without a token — the request will 401 and
-     * the system download notification will surface the failure.
+     * Bearer token for this session, so the screen can add it to a
+     * [DownloadManager] request without touching [SessionManager].
      */
     val token: String? = sessionManager.getTokenBlocking("wikis")
 
@@ -220,12 +192,8 @@ class AttachmentsViewModel @Inject constructor(
     // ---------------- Upload ----------------
 
     /**
-     * Upload one or more files picked by the system file picker. Mirrors
-     * `PageEditorViewModel.uploadAttachments` — copies each URI to a temp
-     * file under the cache dir so the repository call stays file-based
-     * (matches the comment-attachments and editor flows), then refreshes
-     * the list on success. The copy keeps the file's real name, which is
-     * what the server records.
+     * Upload files picked by the system picker. Staging keeps each file's real
+     * name, which is what the server records.
      */
     fun uploadAttachments(
         uris: List<Uri>,
@@ -302,11 +270,6 @@ class AttachmentsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(captioning = null)
     }
 
-    /**
-     * Save the editor's caption. An unchanged value is a no-op; an empty one
-     * clears the caption. The row updates in place on success, mirroring
-     * web's query invalidation without a full reload.
-     */
     fun saveCaption(caption: String, saveFailed: String) {
         val attachment = _uiState.value.captioning ?: return
         _uiState.value = _uiState.value.copy(captioning = null)
@@ -337,11 +300,6 @@ class AttachmentsViewModel @Inject constructor(
     }
 }
 
-/**
- * Map a [MochiError] to a user-facing string, preferring a server-supplied
- * message when present and falling back to the caller-supplied localised
- * default. Mirrors the helper in PageEditorViewModel.
- */
 private fun MochiError.messageOrFallback(fallback: String): String {
     return when (this) {
         is MochiError.AuthError -> message ?: fallback

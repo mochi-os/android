@@ -49,11 +49,6 @@ import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.android.R as MochiR
 
-/**
- * Owner "Settings" tab: editable identity, banner, and delete sections. Only
- * shown to viewers who can manage the feed; subscribers get the read-only
- * identity view in [FeedSettingsScreen] instead.
- */
 @Composable
 fun GeneralTab(
     viewModel: FeedSettingsViewModel,
@@ -167,12 +162,8 @@ fun GeneralTab(
 }
 
 /**
- * Identity card shared by the owner Settings tab and the subscriber view.
- * Shows the feed name (editable when [editable]), entity ID, fingerprint, and
- * server. Identifier values render as copyable [DataChip]s.
- *
- * @param onRename Invoked with the trimmed new name when the owner saves an
- *                 edit. Ignored when [editable] is false.
+ * Identity card shared by the owner Settings tab and the read-only subscriber
+ * view.
  */
 @Composable
 fun FeedIdentitySection(
@@ -209,9 +200,8 @@ fun FeedIdentitySection(
 }
 
 /**
- * Identity row with a fixed-width label so values align in a column. Matches
- * the account settings identity layout rather than the right-aligned shared
- * [org.mochios.android.ui.components.FieldRow].
+ * Fixed-width label so values align in a column, matching account settings; the
+ * shared [FieldRow] right-aligns instead.
  */
 @Composable
 private fun IdentityFieldRow(

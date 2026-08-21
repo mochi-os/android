@@ -175,12 +175,8 @@ fun FindFeedsContent(
         } else {
             recommendations
         }
-        // A feed the user already has belongs in their own list, not in the
-        // directory, so it drops out of whichever section would have carried it
-        // rather than sitting there behind a dead "Subscribed" chip. Filtering
-        // the composed list — not each source — means the empty branch below
-        // tests what actually renders, so "everything found is already
-        // subscribed" reads as no results rather than a blank list.
+        // Drop feeds the user already has; filter the composed list so the
+        // empty state below reflects what actually renders.
         val displayFeeds = sourceFeeds.filter { feed ->
             feed.fingerprint.ifEmpty { feed.id } !in subscribedFeeds
         }

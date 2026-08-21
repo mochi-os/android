@@ -75,9 +75,8 @@ class ForumListViewModel @Inject constructor(
     }
 
     /**
-     * Set the user's global default post sort (applied to forums with no
-     * per-forum override). Distinct from the per-forum override on the forum
-     * screen. Mirrors web's forums-list `setDefaultSort`.
+     * Set the user's global default post sort, applied to forums with no
+     * per-forum override.
      */
     fun setDefaultSort(sort: String) {
         _uiState.value = _uiState.value.copy(defaultSort = sort)

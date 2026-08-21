@@ -73,18 +73,6 @@ import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.VerifiedGreen
 
-/**
- * Public seller profile. Mirrors web's `apps/market/web/src/features/
- * account/PublicProfile`. The page scrolls as one list (header card + review
- * cards), paginating reviews as the user nears the bottom:
- *
- *  - A bordered header card: soft gradient banner, a squircle [EntityAvatar]
- *    overlapping it, display name + (when `verified >= 2`) a green check,
- *    sales count, and an inline rating-stars + review-count + joined-date row.
- *  - Optional biography / location cards (only when filled).
- *  - "Reviews" section: one bordered card per review (stars + timestamp +
- *    text, plus a "Seller response" block when the seller replied).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PublicProfileScreen(

@@ -81,23 +81,6 @@ import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import org.mochios.android.R as MochiR
 
-/**
- * Seller's own listings screen at [MarketApp.LISTINGS]. Mirrors web's
- * `/_authenticated/listings` page:
- *
- *  - Top: Stripe onboarding banner (hidden once Stripe is fully connected),
- *    fee disclosure card.
- *  - Filter row: status dropdown + free-form title search.
- *  - Grid of [ListingCard]s with a per-card overflow menu for edit / view /
- *    share / delete / relist / appeal flows.
- *  - FAB: New listing.
- *
- * Pagination uses the same idiom as [org.mochios.market.ui.browse.HomeScreen]
- * — when the grid scrolls close to the end, [MyListingsViewModel.loadMore] is
- * called to append the next page. Pull-to-refresh isn't wired here because the
- * grid is short-lived in practice (most sellers have dozens of listings, not
- * thousands).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyListingsScreen(

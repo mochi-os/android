@@ -55,17 +55,6 @@ import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Buyer-side order list.
- *
- * Top strip: pending-auction-completion CTAs (status = `"won"` bids
- * whose payment Stripe checkout hasn't run yet). Tapping opens the
- * checkout flow at the same [MarketApp.CHECKOUT] route with the
- * listing id; the checkout VM detects the won bid and posts to
- * `orders/auction`.
- *
- * Below: paginated list of orders. Tap → [MarketApp.purchaseDetail].
- */
 @Composable
 fun MyPurchasesScreen(
     navController: NavController,

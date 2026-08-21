@@ -8,17 +8,9 @@ package org.mochios.android.ui.components
 import android.content.Context
 
 /**
- * Persists the most recently opened item id per feature so the next launch
- * lands the user where they left off instead of on a list screen. Used by
- * the per-feature nav-graph router composable to pick its start destination.
- *
- * Each feature owns its own key — the value is opaque (could be a fingerprint,
- * an entity uid, or the special "__all__" pseudo-id where the feature has an
- * all-items aggregate view).
- *
- * SharedPreferences is fine here: the values are tiny opaque strings, written
- * on detail-screen entry (not on every scroll / interaction), and reads are
- * synchronous which avoids a recomposition-blocking suspend on cold start.
+ * Persists the most recently opened item id per feature, so the next launch
+ * lands there instead of on a list screen. Values are opaque; [ALL] is the
+ * aggregate view.
  */
 object LastViewedStore {
 

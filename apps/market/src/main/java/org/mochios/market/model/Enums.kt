@@ -8,11 +8,7 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Server-side enum string values. Each constant uses `@SerializedName` so Gson
- * round-trips the lowercase wire value while Kotlin keeps an idiomatic
- * UPPER_SNAKE_CASE name.
- *
- * Source of truth: `apps/market/web/src/types/common.ts`.
+ * Server enum wire values; source `apps/market/web/src/types/common.ts`.
  */
 enum class Currency {
     @SerializedName("gbp") GBP,

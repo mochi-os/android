@@ -57,15 +57,6 @@ import org.mochios.wikis.model.Tag
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.android.R as MochiR
 
-/**
- * All-tags index for a wiki. Mirrors web's
- * `apps/wikis/web/src/features/wiki/tags-list.tsx`: a header + description,
- * a [FlowRow] of clickable tag badges with a count pill, and a centred
- * [EmptyState] when the wiki has no tags yet.
- *
- * Reads `wikiId` via [TagsListViewModel]'s [androidx.lifecycle.SavedStateHandle]
- * and is wired by `WikisApp.TAGS` in the nav graph.
- */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun TagsListScreen(
@@ -161,12 +152,6 @@ private fun TagsBody(
     }
 }
 
-/**
- * Tag badge with a tag-name label and a trailing count pill. Mirrors web's
- * `Badge` + nested count span. The whole pill is clickable and uses a
- * rounded "secondary" surface so it reads as a navigable target without
- * looking like a primary action.
- */
 @Composable
 private fun TagBadge(
     tag: Tag,

@@ -49,10 +49,8 @@ sealed class SaleDetailEvent {
     data class Toast(val message: String) : SaleDetailEvent()
 
     /**
-     * A dialog's submit succeeded, so the screen closes it. Dialogs must not
-     * close on submit: each mutation writes its failure into state for the
-     * dialog to show, and a dialog closed on submit renders nothing, so a
-     * failure would reach the seller as silence.
+     * A dialog's submit succeeded; the screen closes it here, not on submit, so
+     * a failure stays visible in the dialog.
      */
     data class Completed(val dialog: SaleDialog) : SaleDetailEvent()
 }

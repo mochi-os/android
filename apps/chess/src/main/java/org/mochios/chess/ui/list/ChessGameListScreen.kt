@@ -78,23 +78,9 @@ import org.mochios.chess.ui.components.ChessSidebarGame
 import org.mochios.android.R as MochiR
 
 /**
- * Chess app landing screen. Mirrors the web's `ChessLayout` + the empty-state
- * branch of `ChessGame` (`apps/chess/web/src/features/chess/index.tsx`):
- *
- *  - Top bar with hamburger that opens [ChessSidebar] and a notifications
- *    icon (host-wired to the lib inbox).
- *  - Pull-to-refresh card list grouped by Active / Completed. Each card
- *    carries the opponent's avatar, name, and the lower-cased status
- *    badge on completed rows. Tapping a card navigates to
- *    [ChessApp.gameDetail].
- *  - Empty state when the user has no games — `GameEmptyState` parity:
- *    icon + "No games yet" + a primary "New game" button that opens the
- *    new-game screen.
- *  - Error state with retry when the initial fetch fails.
- *
- * Starting a game lives on its own screen ([ChessApp.NEW_GAME]); the list
- * reloads when it comes back to the foreground so a game started there is
- * present when the user backs out of its detail.
+ * Landing screen: drawer, pull-to-refresh Active / Completed cards, empty and
+ * error states. Reloads on foreground so a game started on [ChessApp.NEW_GAME]
+ * appears.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -70,16 +70,6 @@ import org.mochios.wikis.ui.components.MarkdownContent
 import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.android.R as MochiR
 
-/**
- * Single-revision viewer. Mirrors web's
- * `apps/wikis/web/src/features/wiki/revision-view.tsx`: a header card with
- * version badges, "Back to history" / "Revert to this version" buttons, a
- * meta row of timestamp + author fingerprint snippet, optional comment,
- * and the rendered markdown body of the revision.
- *
- * Reads `wikiId`, `page`, `version` via the ViewModel's [SavedStateHandle]
- * and is wired by `WikisApp.PAGE_REVISION` in the nav graph.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RevisionViewScreen(

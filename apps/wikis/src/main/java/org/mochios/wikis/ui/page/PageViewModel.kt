@@ -26,12 +26,6 @@ import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * One-shot side-effect events emitted by [PageViewModel] to the screen. Plain
- * navigation lives on the composable side (it owns the NavController), so this
- * channel is reserved for things the ViewModel completes asynchronously — RSS
- * URL ready for clipboard, unsubscribe finished, transient toast messages.
- */
 sealed class PageViewEvent {
     /** Copy this URL to the clipboard and show the "RSS URL copied" toast. */
     data class CopyRssUrl(val url: String) : PageViewEvent()
@@ -40,15 +34,6 @@ sealed class PageViewEvent {
     data class ShowError(val error: MochiError) : PageViewEvent()
 }
 
-/**
- * UI state for [PageViewScreen]. Mirrors the web `usePage` result + the
- * surrounding `WikiContext` so a single state value covers all branches —
- * loading, error, page found, page not found.
- *
- * Holding both the wiki info ([wiki] + [permissions]) and the page response on
- * one state simplifies the screen's `when` ladder: it can early-return on
- * loading / not-found / error before ever touching the page body.
- */
 data class PageViewUiState(
     val isLoading: Boolean = true,
     val page: WikiPage? = null,
@@ -60,22 +45,6 @@ data class PageViewUiState(
     val notFound: Boolean = false,
 )
 
-/**
- * ViewModel for the central wiki page-viewing experience.
- *
- * Reads `wikiId` and `page` from [SavedStateHandle] (set by the navigation
- * `NavType.StringType` args). On init, fires two parallel loads:
- *
- *  1. `loadInfo()` — `/-/info` for the wiki itself (name, home, permissions,
- *     subscription source). Powers the overflow menu's permission gates and
- *     unsubscribe affordance.
- *  2. `loadPage()` — `/-/<slug>` for the page body. Branches on the
- *     [PageFetchResponse] sealed type so the screen can show either the
- *     rendered body or the "Page not found" empty state.
- *
- * Action handlers (`unsubscribe`, `wikiRssToken`) are exposed for the overflow
- * menu's wired callbacks.
- */
 @HiltViewModel
 class PageViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -100,12 +69,6 @@ class PageViewModel @Inject constructor(
         loadPage()
     }
 
-    /**
-     * Fetch the wiki's `/-/info` response so the screen can apply the right
-     * permission gates and decide whether to show the Unsubscribe action.
-     * Errors here only surface as a banner — the page body still attempts to
-     * load so the user isn't blocked by a transient info-endpoint failure.
-     */
     fun loadInfo() {
         viewModelScope.launch {
             try {
@@ -123,12 +86,6 @@ class PageViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Fetch `/-/<slug>` and branch on the sealed response. The deserializer
-     * already mapped `{error: "not_found"}` into [PageFetchResponse.NotFound],
-     * so the screen just reads `state.notFound` instead of pattern-matching
-     * raw JSON.
-     */
     fun loadPage() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, notFound = false, error = null)
@@ -164,21 +121,10 @@ class PageViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Unsubscribe from this wiki. Used by the overflow menu's Unsubscribe row
-     * when the wiki is a subscription (has [WikiInfo.source]). The host
-     * composable observes [uiState] and pops the back stack when the call
-     * completes successfully.
-     */
     suspend fun unsubscribe() {
         repository.unsubscribeWiki(wikiId)
     }
 
-    /**
-     * Build the per-wiki RSS URL for the requested mode and emit it as a
-     * [PageViewEvent.CopyRssUrl] event for the composable to copy to
-     * clipboard + toast.
-     */
     fun copyRssUrl(mode: String) {
         viewModelScope.launch {
             try {
@@ -194,12 +140,6 @@ class PageViewModel @Inject constructor(
     /** Build the canonical share URL for this page on the bound server. */
     fun shareUrl(): String = "$serverUrl/wikis/$wikiId/$slug"
 
-    /**
-     * Replace the page's tag list in [uiState]. Called by the
-     * [org.mochios.wikis.ui.components.TagManager] composable after the
-     * server confirms an add / remove so the footer's chip row reflects the
-     * mutation immediately, without waiting for a full page reload.
-     */
     fun updatePageTags(tags: List<String>) {
         val current = _uiState.value.page ?: return
         _uiState.value = _uiState.value.copy(page = current.copy(tags = tags))

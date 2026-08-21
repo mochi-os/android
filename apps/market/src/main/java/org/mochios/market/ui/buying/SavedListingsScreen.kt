@@ -55,17 +55,6 @@ import org.mochios.market.repository.MarketRepository
 import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
-/**
- * Saved listings screen at [MarketApp.SAVED]. Mirrors the server-backed
- * [SavedRepository.saved] set — which already carries the full [Listing]
- * rows — into a 2-column [LazyVerticalGrid] of the shared
- * [org.mochios.market.ui.components.ListingCard]. Mirrors the web side's
- * "Saved" tab in `apps/market/web/src/routes/_authenticated/saved.tsx`.
- *
- * A "Clear all" action in the TopAppBar wipes the saved set. The Saved
- * screen is non-paginated — the set caps itself implicitly at whatever
- * the user has explicitly saved (typically dozens, not thousands).
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SavedListingsScreen(
@@ -167,8 +156,8 @@ class SavedListingsViewModel @Inject constructor(
         )
 
     /**
-     * One-shot save-toggle results for the screen to surface as a toast.
-     * `true` means the listing was just saved, `false` means it was removed.
+     * Save-toggle results for the screen's toast: `true` saved, `false`
+     * removed.
      */
     private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
     val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
@@ -196,11 +185,6 @@ class SavedListingsViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Toggle a listing's saved state. On this screen the listing is always
-     * currently saved, so this removes it; the [saveEvents] emission lets the
-     * screen confirm with a toast.
-     */
     fun toggleSave(listing: Listing) {
         viewModelScope.launch {
             try {

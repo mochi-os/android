@@ -61,16 +61,6 @@ import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.ReportActionDialog
 
-/**
- * Staff "Reports" screen.
- *
- * Android port of `apps/staff/web/src/features/reports/reports-page.tsx`.
- * Two filter dropdowns (type + status) narrow the list; each row's
- * "Action" / "View" button opens [ReportActionDialog].
- *
- * Navigation: tapping a listing-type report's target opens the market
- * listing detail at `market/listing/{id}`.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReportsScreen(
@@ -384,12 +374,6 @@ private fun reportStatusOptions(): List<Pair<String, String>> = listOf(
     "dismissed" to stringResource(R.string.staff_reports_status_dismissed),
 )
 
-/**
- * Removable chips for the active type / status filters. Renders nothing
- * when both filters are at the default `null` (All) value. Mirrors
- * `ActiveFilterChips` in [org.mochios.staff.ui.accounts.AccountsScreen]
- * and `apps/staff/web/src/features/reports/reports-page.tsx`.
- */
 @Composable
 private fun ActiveFilterChips(
     type: String?,

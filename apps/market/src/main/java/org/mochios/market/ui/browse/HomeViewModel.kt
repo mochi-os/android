@@ -27,15 +27,8 @@ import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
 /**
- * Backing ViewModel for [HomeScreen]. Drives the listing grid by paginating
- * through `listings/search` and merges in the saved/recently-viewed local
- * state stores so the UI can render the right Save toggle and recently-viewed
- * strip without a second round-trip.
- *
- * The search request fires whenever [query] or [filters] changes; the page
- * cursor resets to the first page each time and accumulates as the user
- * scrolls. We don't debounce inside the ViewModel itself — that's owned by
- * the screen, which lets us keep [setQuery] synchronous and easily testable.
+ * Search debounce lives in the screen, not here - [setQuery] runs the search
+ * synchronously.
  */
 @HiltViewModel
 class HomeViewModel @Inject constructor(
@@ -49,16 +42,14 @@ class HomeViewModel @Inject constructor(
     val state: StateFlow<HomeUiState> = _state.asStateFlow()
 
     /**
-     * One-shot save-toggle results for the screen to surface as a toast.
-     * `true` means the listing was just saved, `false` means it was removed.
+     * Save-toggle results for the screen's toast: `true` saved, `false`
+     * removed.
      */
     private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
     val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
 
     /**
-     * Cache of listings we've already fetched by ID. Used to render the
-     * recently-viewed strip without re-issuing a network request every time
-     * the home screen mounts.
+     * Listings by id, so the recently-viewed strip renders without refetching.
      */
     private val listingCache = mutableMapOf<String, Listing>()
 
@@ -159,11 +150,6 @@ class HomeViewModel @Inject constructor(
 
     // -- Onboarding -------------------------------------------------------
 
-    /**
-     * Trigger `accounts/activate` and, on success, flip [HomeUiState
-     * .accountActive] to true so the onboarding card disappears. Failures
-     * leave the card in place so the user can retry.
-     */
     fun activateAccount() {
         if (_state.value.activatingAccount) return
         viewModelScope.launch {
@@ -183,11 +169,6 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Hide the onboarding card without activating. Returning users see it
-     * for a single session — local-only so a fresh install or app data wipe
-     * brings it back, which is fine.
-     */
     fun dismissOnboarding() {
         _state.value = _state.value.copy(accountActive = true)
     }
@@ -195,11 +176,8 @@ class HomeViewModel @Inject constructor(
     // -- Internals --------------------------------------------------------
 
     /**
-     * Resolve the caller's market account so the home screen can decide
-     * whether to render the activation onboarding card. Treats the absence
-     * of an account row (404 / network failure) the same as `inactive` —
-     * better to nudge the user than to silently hide the card on a first
-     * visit when the call hadn't completed yet.
+     * A failed account load counts as inactive, so the activation card shows
+     * rather than hides.
      */
     private fun loadAccount() {
         viewModelScope.launch {
@@ -216,11 +194,8 @@ class HomeViewModel @Inject constructor(
     }
 
     /**
-     * `true` when the server's reported [org.mochios.market.model.Account
-     * .status] indicates a first-time / never-activated account. Empty
-     * statuses are also treated as inactive — server-side accounts that
-     * exist but haven't gone through `accounts/activate` come back with no
-     * `status` field set.
+     * An empty status is inactive too: accounts that never ran
+     * `accounts/activate` carry no `status`.
      */
     private fun isInactiveAccount(status: String): Boolean {
         val key = status.trim().lowercase()

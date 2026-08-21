@@ -30,22 +30,7 @@ import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
 
 /**
- * Drawer body for the wikis app's persistent left rail. Mirrors the People
- * app's [org.mochios.people.ui.components.PeopleSidebar] pattern — every
- * top-level wikis screen wraps its body in
- * [androidx.compose.material3.ModalNavigationDrawer] with this composable as
- * the drawer content, so the hamburger in the top-bar opens the same
- * navigation choices everywhere.
- *
- * The subscribed-wikis list is intentionally absent for now — it lands in a
- * later wave once `WikisRepository` exists and the host can pass a
- * `List<WikiInfo>` in. For this wave the drawer carries only the three
- * class-level entries (All / Find / Create).
- *
- * [currentRoute] is matched against the rendered entry's route so the active
- * row is highlighted; [onNavigate] is invoked with a [WikisApp] route
- * string for navigable rows. "Create wiki" fires [onCreateWiki] so the host
- * (typically `WikiListScreen`) can open the create screen.
+ * Drawer body for the wikis app: the class-level All / Find / Create entries.
  */
 @Composable
 fun WikisSidebar(

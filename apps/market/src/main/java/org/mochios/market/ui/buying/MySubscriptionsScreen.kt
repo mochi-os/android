@@ -62,17 +62,6 @@ import org.mochios.market.model.SubscriptionStatus
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Buyer-side list of active and past subscriptions.
- *
- * Mirrors `apps/market/web/src/features/buying/my-subscriptions-page.tsx`.
- * Each row shows the subscription title, the recurring amount with
- * interval suffix, the lifecycle [StatusBadge], and an overflow menu
- * with the available actions (pause / resume / reactivate / cancel).
- * Cancel routes through a [ConfirmDialog] before firing the API call so
- * a misclick on the small overflow target can't accidentally end the
- * subscription.
- */
 @Composable
 fun MySubscriptionsScreen(
     navController: NavController,

@@ -24,13 +24,6 @@ import org.mochios.wikis.model.PageFetchResponse
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * Editor state. Holds the form fields, derived flags, and the most-recent
- * cursor position inside the body textarea so an inline insert from
- * [InsertAttachmentDialog] knows where to splice the markdown snippet.
- *
- * Mirrors `apps/wikis/web/src/features/wiki/page-editor.tsx`'s local state.
- */
 data class PageEditorUiState(
     val isLoading: Boolean = false,
     val isSaving: Boolean = false,
@@ -62,17 +55,6 @@ sealed interface PageEditorEvent {
     data class Toast(val message: String) : PageEditorEvent
 }
 
-/**
- * ViewModel for [PageEditorScreen].
- *
- * Reads `wikiId` and the optional `page` slug from [SavedStateHandle] —
- * the new-page route omits the slug, the edit route supplies it.
- *
- * The "new" boolean is derived from the presence of the slug arg, matching
- * the web `isNew` prop in `page-editor.tsx`. The repository calls map onto
- * the existing [WikisRepository.editPage] / [WikisRepository.createPage] /
- * [WikisRepository.deletePage] flows.
- */
 @HiltViewModel
 class PageEditorViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -150,12 +132,6 @@ class PageEditorViewModel @Inject constructor(
     }
     fun clearError() { _uiState.value = _uiState.value.copy(error = null) }
 
-    /**
-     * Splice [snippet] at [cursor] in the current body content. Used after
-     * the insert-attachment dialog dismisses. Returns the new cursor
-     * position so the caller can move the text-field selection past the
-     * inserted text — mirrors the web `insertMarkdown` helper.
-     */
     fun insertAtCursor(snippet: String, cursor: Int): Int {
         val current = _uiState.value.content
         val safe = cursor.coerceIn(0, current.length)
@@ -166,11 +142,6 @@ class PageEditorViewModel @Inject constructor(
 
     // ---- Save / create / delete ----
 
-    /**
-     * Persist the current draft. Dispatches to [WikisRepository.editPage]
-     * or [WikisRepository.createPage] based on [isNew]. On success emits a
-     * [PageEditorEvent.Saved] for the screen to handle navigation.
-     */
     fun save(
         invalidTitle: String,
         invalidSlug: String,
@@ -216,11 +187,6 @@ class PageEditorViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Delete the page being edited. Only meaningful when [isNew] is false —
-     * the caller should hide the trigger otherwise. Emits
-     * [PageEditorEvent.Deleted] so the screen can navigate to wiki home.
-     */
     fun delete(deleteFailed: String) {
         if (isNew) return
         val slug = initialSlug ?: return
@@ -239,11 +205,6 @@ class PageEditorViewModel @Inject constructor(
 
     // ---- Attachments (for InsertAttachmentDialog) ----
 
-    /**
-     * List the page's existing attachments for the insert dialog. The
-     * web equivalent uses a React-Query hook; here we expose a one-shot
-     * load + refresh.
-     */
     fun loadAttachments() {
         val slug = _uiState.value.slug.ifEmpty { initialSlug ?: return }
         viewModelScope.launch {
@@ -262,12 +223,8 @@ class PageEditorViewModel @Inject constructor(
     }
 
     /**
-     * Upload one or more files picked by the system file picker, then
-     * refresh the attachments list. URIs are materialised into temp files;
-     * we deliberately copy the bytes rather than streaming straight to the
-     * multipart body so the repository stays file-based (matches the existing
-     * comment-attachments flow). The copy keeps the file's real name, which
-     * is what the server records and what the editor writes into the page.
+     * Uploads are staged as temp files so the repository stays file-based; the
+     * copy keeps the original filename, which is what the server records.
      */
     fun uploadAttachments(
         uris: List<Uri>,
@@ -305,12 +262,6 @@ class PageEditorViewModel @Inject constructor(
     }
 }
 
-/**
- * Map a [MochiError] to a user-facing string, preferring a server-supplied
- * message when present and falling back to the caller-supplied localised
- * default. Network errors always render the lib's generic network string,
- * matching the rest of the app's error UX.
- */
 private fun MochiError.messageOrFallback(fallback: String): String {
     return when (this) {
         is MochiError.AuthError -> message ?: fallback

@@ -11,15 +11,9 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * The server accepts whatever terminal state a client reports, so a client that
- * calls a position dead ends the game for both players. chesslib's own
- * `isInsufficientMaterial` is broader than the rules: it counts K+N vs K+N and
- * K+N vs K+B as dead, where mate is in fact constructible, so Android was
- * ending games the web opponent was still playing.
- *
- * Each case is asserted against a real position, and the two that motivated
- * the change also assert that chesslib disagrees — without that, a regression
- * to `board.isDraw` would still pass every other test here.
+ * Dead positions match chess.js, not chesslib's broader
+ * `isInsufficientMaterial`. The K+N v K+N and K+N v K+B cases also assert that
+ * chesslib disagrees, so a regression to `board.isDraw` fails.
  */
 class DrawRulesTest {
 

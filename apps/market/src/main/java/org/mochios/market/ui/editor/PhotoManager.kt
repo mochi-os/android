@@ -61,20 +61,8 @@ import org.mochios.market.R
 import org.mochios.market.model.Photo
 
 /**
- * Listing photo manager. Grid of square thumbnails with overlaid delete and
- * reorder controls. Mirrors the web `photo-manager.tsx` flow.
- *
- * Reorder uses up/down arrow buttons rather than the experimental
- * drag-and-drop because the listing editor on touch screens with thumbnails
- * smaller than the drag threshold is awkward to scrub. The arrow buttons
- * preserve the swap-with-neighbour semantics and remain accessible.
- *
- * @param photos        Current photo list (rank ascending).
- * @param onUpload      Invoked with selected URIs from [ActivityResultContracts.GetMultipleContents].
- * @param onDelete      Invoked with the comptroller-issued photo id.
- * @param onReorder     Invoked with the photos in the requested new order.
- * @param isUploading   True while a file upload is in flight; shows the
- *                      progress indicator under the grid.
+ * Photo grid with delete and up/down reorder arrows - drag reorder is too
+ * fiddly on small thumbnails.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

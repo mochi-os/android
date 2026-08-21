@@ -12,9 +12,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Fetches the user's `language` preference from the settings app and stores
- * it in [LanguageStore] for the next process launch. Apply the change in the
- * current process by calling [LocaleHelper.apply] and `Activity.recreate()`.
+ * Stores the user's `language` preference for the next launch; apply it now
+ * with [LocaleHelper.apply] and `Activity.recreate()`.
  */
 @Singleton
 class LanguageRepository @Inject internal constructor(

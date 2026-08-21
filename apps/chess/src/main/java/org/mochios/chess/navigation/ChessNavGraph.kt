@@ -14,22 +14,6 @@ import org.mochios.chess.ui.detail.ChessGameDetailScreen
 import org.mochios.chess.ui.list.ChessGameListScreen
 import org.mochios.chess.ui.newgame.NewChessGameScreen
 
-/**
- * Route constants and helpers for the chess Android module.
- *
- * Two top-level surfaces:
- *
- *  - [HOME] (`chess`) — class-level game list. Lands here when the chess
- *    launcher alias is tapped.
- *  - [GAME] (`chess/{gameId}`) — entity-context game detail. The detail
- *    screen pattern matches every other entity-context route in the
- *    Android client (e.g. `wikis/{wikiId}`).
- *
- * The detail screen itself is a stub in this wave — a separate agent owns
- * the board, engine integration, chat panel, and WebSocket wiring. The
- * stub gives the NavGraph something concrete to register so the rest of
- * the module builds cleanly.
- */
 object ChessApp {
     /** Launcher entry point — the game list. */
     const val HOME = "chess"
@@ -44,21 +28,6 @@ object ChessApp {
     fun gameDetail(gameId: String) = "chess/$gameId"
 }
 
-/**
- * Register the chess routes on the supplied [NavGraphBuilder]. Called from
- * `MainActivity.setContent`'s `NavHost`, alongside every other app's
- * `*NavGraph` extension. Callback contract mirrors the other apps so the
- * host can wire the same `onLogout` / `onOpenNotifications` / `onOpenLink`
- * handlers it already uses.
- *
- *  - [onLogout] reserved for future use (the list screen overflow currently
- *    leaves logout to the menu shell, matching the pattern of wikis and
- *    feeds). Accepted now to keep the call-site uniform.
- *  - [onOpenNotifications] is a one-arg navigator into the lib's
- *    notifications inbox surface.
- *  - [onOpenLink] handles cross-app deep links — e.g. the new-game dialog's
- *    "Add friends" empty-state button jumps to the People app.
- */
 fun NavGraphBuilder.chessNavGraph(
     navController: NavController,
     onLogout: () -> Unit,

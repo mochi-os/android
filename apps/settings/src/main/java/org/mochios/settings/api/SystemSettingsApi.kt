@@ -35,8 +35,7 @@ data class SystemSetting(
      */
     val secret: Boolean = false,
     /**
-     * True when a value is stored server-side. Computed before [value] is
-     * blanked (core/server/settings.go), so it is the only way to tell a
+     * True when a value is stored server-side - the only way to tell a
      * configured secret from an unset one.
      */
     val set: Boolean = false,

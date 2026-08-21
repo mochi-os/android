@@ -6,17 +6,10 @@
 package org.mochios.android.auth
 
 /**
- * Step-up re-authentication, mirroring lib/web's StepUpDialog + StepUpClient.
- *
- * A sensitive account-security change (adding a passkey, enabling an
- * authenticator, regenerating recovery codes, changing login methods) must
- * be re-verified with the same factor(s) the user logs in with. The shared
+ * Step-up re-authentication for sensitive account-security changes. The shared
  * [org.mochios.android.ui.components.StepUpDialog] drives the UI; the app
- * supplies a [StepUpClient] wired to its own re-authentication actions (a lib
- * component must not reference an app's action paths).
- *
- * Each verify returns a [StepUpResult]: a single-use proof token once every
- * required factor is satisfied, otherwise the factors still outstanding.
+ * supplies a [StepUpClient], since a lib component must not name an app's
+ * action paths.
  */
 data class StepUpResult(
     val token: String? = null,

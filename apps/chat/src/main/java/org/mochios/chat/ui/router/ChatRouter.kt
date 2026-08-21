@@ -16,11 +16,8 @@ import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.ui.components.LastViewedStore
 
 /**
- * Start destination for the chat nav graph. Reads the last-viewed chat
- * from [LastViewedStore] and immediately navigates to the matching detail
- * route. If no prior chat is recorded (fresh install / data clear), the
- * empty string is passed through so [ChatScreen] can render its
- * drawer-only "pick a chat" view with the drawer auto-opened.
+ * Start destination: resolves the last-viewed chat, or empty so [ChatScreen]
+ * opens its drawer over a placeholder.
  */
 @Composable
 fun ChatRouter(onResolve: (chatId: String) -> Unit) {

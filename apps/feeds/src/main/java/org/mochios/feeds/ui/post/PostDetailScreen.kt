@@ -173,12 +173,9 @@ fun PostDetailScreen(
                                 contentDescription = stringResource(MochiR.string.common_delete)
                             )
                         }
-                        // Sources is manager-only, like the feed screen's entry,
-                        // and only offered when the post was ingested from a
-                        // source (feed-to-feed and memories posts land here;
-                        // RSS posts open the source article screen instead).
-                        // The overflow menu itself only appears when it has
-                        // this entry to show.
+                        // The overflow menu's only entry is Sources, so it
+                        // appears only for posts ingested from a source; RSS
+                        // posts open the article screen instead.
                         post?.source?.url?.takeIf { it.isNotEmpty() }?.let { sourceUrl ->
                             Box {
                                 IconButton(onClick = { showOverflowMenu = true }) {
@@ -591,11 +588,9 @@ private fun PostContent(
             )
         }
 
-        // Post body. For RSS-source posts, taps open the original article.
-        // The body, embedded videos, RSS preview image and source link are
-        // suppressed when this content renders inside the source-view sheet —
-        // the WebView already shows the same article above the sheet.
-        // The link is RSS content authored by the feed's source: web only.
+        // RSS-source posts: a body tap opens the article. Body, videos, preview
+        // image and source link are hidden inside the source-view sheet, where
+        // the WebView already shows the article.
         val sourceArticleUrl = post.data?.rss?.link?.let { webUri(it) }
         val onBodyClick: (() -> Unit)? = sourceArticleUrl?.let { uri ->
             {

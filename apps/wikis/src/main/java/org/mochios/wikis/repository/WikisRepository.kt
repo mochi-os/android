@@ -43,11 +43,6 @@ import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * Repository result type for [WikisRepository.createWiki]. Surfaces the
- * fields the UI cares about (id + fingerprint for navigation, home for
- * an initial page redirect) without leaking the full response shape.
- */
 data class CreateWikiResult(
     val id: String,
     val fingerprint: String,
@@ -67,10 +62,8 @@ data class JoinWikiResult(
 )
 
 /**
- * Repository result type for [WikisRepository.renamePage]. Returns the
- * list of resulting slugs (the renamed page plus any child pages that
- * were swept along) and the count of pages whose markdown links were
- * rewritten to point at the new slugs.
+ * Result of [WikisRepository.renamePage]. [renamed] holds the new slugs of the
+ * page and any children swept along.
  */
 data class RenamePageResult(
     val renamed: List<String>,
@@ -78,15 +71,9 @@ data class RenamePageResult(
 )
 
 /**
- * Thin wrapper around [WikisApi]. Mirrors the structure of
- * `FeedsRepository`: every method calls `.unwrap()` on the Retrofit
- * response and re-throws any exception as a typed [org.mochios.android.api.MochiError]
- * via [toMochiError] so ViewModels can render localised messages.
- *
- * The wikis app only exposes entity-context routes (`{wiki}/-/...`) for
- * per-wiki operations — there is no class-context variant of the
- * per-wiki endpoints. The wiki id parameter is either an entity ID or a
- * fingerprint.
+ * Thin wrapper around [WikisApi]: every method unwraps the response and
+ * rethrows failures as [org.mochios.android.api.MochiError]. A wiki id is an
+ * entity id or a fingerprint.
  */
 @Singleton
 class WikisRepository @Inject constructor(

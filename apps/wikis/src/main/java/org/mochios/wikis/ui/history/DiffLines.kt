@@ -11,14 +11,9 @@ enum class DiffType { UNCHANGED, ADDED, REMOVED }
 data class DiffLine(val type: DiffType, val text: String)
 
 /**
- * Line-level diff of [oldText] against [newText], the Kotlin analogue of the
- * web revision view's `diffLines` from the `diff` package. Uses a longest-
- * common-subsequence walk so unchanged lines are preserved and only genuine
- * insertions/removals are marked. Wiki pages are small, so the O(n*m) table is
- * fine.
- *
- * A trailing newline is dropped before splitting (as web does) so a page that
- * ends in "\n" doesn't produce a spurious blank trailing line.
+ * Line diff by longest-common-subsequence; wiki pages are small, so the O(n*m)
+ * table is fine. A trailing newline is dropped before splitting so a page
+ * ending in "\n" gains no blank line.
  */
 fun diffLines(oldText: String, newText: String): List<DiffLine> {
     val a = oldText.removeSuffix("\n").split("\n")

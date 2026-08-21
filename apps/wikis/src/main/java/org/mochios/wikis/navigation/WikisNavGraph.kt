@@ -30,14 +30,6 @@ import org.mochios.wikis.ui.settings.WikiSettingsScreen
 import org.mochios.wikis.ui.tags.TagPagesScreen
 import org.mochios.wikis.ui.tags.TagsListScreen
 
-/**
- * Route constants and helpers for the wikis Android module.
- *
- * Every route is entity-context — each path carries a `wikiId` (entity id or
- * fingerprint) so the screens can resolve the owning wiki without any extra
- * lookup. Top-level [HOME], [FIND] and [JOIN] are class-level (no wiki yet)
- * and serve as landing surfaces. All routes assume a signed-in session.
- */
 object WikisApp {
     // ---- Class-level routes (no wikiId) ----
     const val HOME = "wikis"

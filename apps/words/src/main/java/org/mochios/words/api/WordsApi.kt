@@ -32,22 +32,7 @@ import retrofit2.http.Query
 import retrofit2.http.Streaming
 
 /**
- * Retrofit binding for every action declared in `apps/words/app.json`.
- * Mirrors the web `gamesApi` shape one-for-one
- * (`apps/words/web/src/api/games.ts`).
- *
- * All endpoints follow the standard Mochi `{"data": ...}` envelope, so
- * the return types are `Response<ApiResponse<T>>` and the repository
- * unwraps one envelope layer to surface either the inner payload or a
- * typed `MochiError`.
- *
- * Move / exchange / send / create use JSON request bodies via `@Body`
- * to match the web `client.post(payload)` callers — the Starlark side
- * reads inputs via `a.input(...)` which is content-type agnostic.
- *
- * The class-context list endpoint returns the games array as the `data`
- * value directly (`{"data": [game, ...]}`), so `listGames` unwraps to a
- * `List<GameListItem>` rather than a wrapper struct.
+ * Retrofit binding for the actions declared in `apps/words/app.json`.
  */
 interface WordsApi {
 
@@ -63,10 +48,8 @@ interface WordsApi {
     suspend fun createGame(@Body body: CreateGameRequest): Response<ApiResponse<CreateGameResponse>>
 
     /**
-     * Dictionary lookup used by the move composer to flag invalid words
-     * before submission. `language` is `"en_US"` or `"en_UK"`; the server
-     * returns `{"valid": true/false}` regardless of language (short words
-     * <2 / >15 chars always return false without touching the dictionary).
+     * [language] is "en_US" or "en_UK". Words under 2 or over 15 characters are
+     * always invalid, whatever the language.
      */
     @GET("-/validate")
     suspend fun validateWord(
@@ -115,16 +98,8 @@ interface WordsApi {
     suspend fun delete(@Path("gameId") gameId: String): Response<ApiResponse<DeleteResponse>>
 
     /**
-     * Stream a player avatar / banner / favicon for the chat panel.
-     * The server proxies the asset through to the person's owning peer
-     * via `mochi.remote.stream`, so this is location-transparent — the
-     * caller doesn't need to know where the player's identity lives.
-     *
-     * Exposed as `Response<ResponseBody>` (no envelope) because the
-     * action streams raw bytes with a `Content-Type` header rather than
-     * a JSON payload. Coil can also hit this URL directly via `model = "$serverUrl/words/$gameId/-/user/$user/asset/$asset"`
-     * with the standard Bearer interceptor — this helper is here for
-     * one-off byte fetches that don't go through Coil.
+     * Raw bytes, no `{"data": ...}` envelope; the server proxies to the
+     * player's owning peer. Coil can load the same URL directly.
      */
     @Streaming
     @GET("{gameId}/-/user/{user}/asset/{asset}")

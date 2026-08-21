@@ -19,14 +19,6 @@ import org.mochios.staff.R
 import org.mochios.staff.model.Account
 import org.mochios.staff.ui.components.StaffAuditTimeline
 
-/**
- * Read-only dialog showing the per-account audit history.
- *
- * Mirrors the second dialog in
- * `apps/staff/web/src/features/accounts/accounts-page.tsx`. The dialog body
- * delegates entirely to [StaffAuditTimeline]; the title shows the account's
- * display name (mirroring the web title slot).
- */
 @Composable
 fun AccountAuditDialog(
     account: Account,

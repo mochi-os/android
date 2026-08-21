@@ -10,11 +10,9 @@ import com.google.gson.annotations.SerializedName
 data class Comment(
     val id: String,
     val parent: String = "",
-    // Nullable because the field is often absent from the JSON, and Gson
-    // instantiates models via Unsafe (bypassing Kotlin defaults) — so an absent
-    // non-null field would arrive as null and crash on access. Feeds also
-    // identify the commenter with `user` rather than `author`; read identity
-    // via [authorId].
+    // Gson instantiates via Unsafe, bypassing Kotlin defaults, so an absent
+    // non-null field arrives as null and crashes on access. Feeds sends `user`,
+    // not `author`; read identity via [authorId].
     val author: String? = null,
     val user: String? = null,
     val name: String = "",
@@ -29,11 +27,9 @@ data class Comment(
     val attachments: List<Attachment> = emptyList(),
     @SerializedName("my_reaction") val myReaction: String = "",
     val reactions: List<Reaction> = emptyList(),
-    // Anchor: the id of one of the post's own attachments this comment is
-    // about, with its display name (caption, else file name) and its caption
-    // alone (empty when it has none). Empty when unanchored; replies inherit
-    // their parent's context and are not anchored themselves. Nullable for
-    // the same Gson reason as [author].
+    // The post attachment this comment is about: id, display name (caption,
+    // else file name), and caption alone. Empty when unanchored; replies are
+    // never anchored. Nullable for the Gson reason above.
     val attachment: String? = null,
     @SerializedName("attachment_name") val attachmentName: String? = null,
     @SerializedName("attachment_caption") val attachmentCaption: String? = null,

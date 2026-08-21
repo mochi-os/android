@@ -13,12 +13,8 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * The board composable used to guard only the FEN load, then call
- * isKingAttacked, legalMoves and getKingSquare on the result. A kingless
- * position parses without complaint and throws from those, so a peer could
- * write one into the shared row — the server's valid_fen never checks that
- * kings are present — and crash the opponent's client on every open, with the
- * resign and delete actions unreachable behind the crash.
+ * [loadPosition] must reject positions chesslib parses but then throws on, such
+ * as a kingless board the server's `valid_fen` accepts.
  */
 class PositionTest {
 
@@ -52,9 +48,8 @@ class PositionTest {
     }
 
     /**
-     * Control. Proves these FENs really are the crashing kind — without it the
-     * nulls above could be passing for some unrelated parse failure, and a
-     * regression to a load-only guard would still satisfy every other test.
+     * Control: these FENs parse but throw on access, so a load-only guard would
+     * accept them.
      */
     @Test
     fun `the rejected positions are exactly the ones chesslib throws on`() {

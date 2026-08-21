@@ -90,16 +90,9 @@ private fun prefixFromName(name: String): String =
         .trimEnd('-')
 
 /**
- * Two-step create form for a project, optionally seeded from a backup file.
- *
- * Step one takes the name, prefix, privacy and an optional backup; step two
- * picks a template. Both steps live in one destination so the typed fields
- * survive a trip to the template picker and back. A backup carries its own
- * design, so picking one skips step two and the button reads Create instead of
- * Next — same when the server offers no templates at all.
- *
- * @param onBack leaves the screen without creating anything.
- * @param onCreated hands the new project's id to the caller so it can open it.
+ * Two-step create form: details, then template. Both steps share one
+ * destination so typed fields survive; a backup carries its own design and
+ * skips the template step.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -397,9 +390,8 @@ private fun TemplateStep(
 }
 
 /**
- * A selectable template card: an icon tile, the template name, and its
- * description. Selection only recolours the border — the card keeps its
- * surface and border width so the list doesn't shift as picks change.
+ * Template card; selection changes only the border colour, never its width, so
+ * the list does not shift.
  */
 @Composable
 private fun TemplateCard(

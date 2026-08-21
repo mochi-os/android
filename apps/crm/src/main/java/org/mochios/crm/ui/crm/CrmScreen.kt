@@ -808,11 +808,8 @@ private fun CrmContent(
             }
         },
         floatingActionButton = {
-            // A board carries a "+" in every column, and those start the create
-            // with the column's own value already set. The FAB would be a second
-            // way in that knows nothing about where the object should land, so
-            // it stands down wherever the columns are there to take over. A
-            // board with no grouping field draws no columns, so the FAB stays.
+            // A board with columns offers a "+" per column that also sets the
+            // column value, so the FAB stands down there.
             val boardHasColumns = activeView?.viewtype == "board" &&
                 activeView.columns.isNotBlank()
             // A CRM with no class defined has nothing an object could be created
@@ -825,11 +822,8 @@ private fun CrmContent(
             }
         }
     ) { padding ->
-        // No-op vertical scrollable so the tabs/search header above the
-        // columns also dispatches pull-down gestures up to PullToRefreshBox.
-        // (Tabs and the search bar aren't scrollable on their own, so without
-        // this modifier pull-to-refresh wouldn't fire when the user pulls on
-        // the top section.)
+        // No-op scrollable so pull-to-refresh also fires on the tabs/search
+        // header, which is not scrollable on its own.
         val passThroughVerticalScroll = rememberScrollableState { 0f }
         PullToRefreshBox(
             isRefreshing = uiState.isRefreshing,
@@ -884,10 +878,6 @@ private fun CrmContent(
                                     view = activeView,
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
-                                    // Same form the FAB opens, seeded with the
-                                    // column tapped. It used to create outright,
-                                    // which produced a titleless object with no
-                                    // chance to fill anything in.
                                     onStartCreate = { initialValues ->
                                         onCreateObject(initialValues)
                                     }

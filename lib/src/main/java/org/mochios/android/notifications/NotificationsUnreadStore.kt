@@ -24,12 +24,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Process-wide unread-notifications counter, refreshed via the server's
- * notifications WS broadcasts. Every feature's TopAppBar bell binds the
- * same singleton so taps in any feature consume the same counter.
- *
- * Loads lazily on first access. Re-syncs from the server whenever
- * `refresh()` is called (e.g. after the user opens the inbox).
+ * Process-wide unread-notifications counter, refreshed by the notifications WS
+ * broadcasts. Every feature's bell binds this singleton, so they share one
+ * count.
  */
 @Singleton
 class NotificationsUnreadStore @Inject constructor(
@@ -61,11 +58,6 @@ class NotificationsUnreadStore @Inject constructor(
         }
     }
 
-    /**
-     * Tear everything down on sign-out: drop the websocket subscription (which
-     * stops its reconnect loop) and reset state so a later sign-in starts the
-     * poller and socket cleanly from [ensureStarted].
-     */
     fun stop() {
         subscriptionId?.let { id -> webSocket.unsubscribe(id) }
         subscriptionId = null
@@ -104,11 +96,8 @@ class NotificationsUnreadStore @Inject constructor(
     }
 
     /**
-     * Cancel the system-tray notification for a single `(app, topic, object)`
-     * tuple — fired when the user reads the matching row via the web bell.
-     * Tag format mirrors [MochiPushReceiver.postSystemNotification] /
-     * [MochiFirebaseMessagingService.postSystemNotification]:
-     * `"<app>-<topic>-<object>"`.
+     * Cancel the tray notification for one `(app, topic, object)` tuple. The
+     * tag must stay in step with what the push receivers post.
      */
     private fun cancelSystemNotification(event: WebSocketEvent) {
         val app = event.app ?: return
@@ -118,11 +107,6 @@ class NotificationsUnreadStore @Inject constructor(
         NotificationManagerCompat.from(context).cancel(tag, tag.hashCode())
     }
 
-    /**
-     * Cancel every system-tray notification whose tag matches `"<app>-*-<object>"`
-     * — fired when the calling app clears all of its notifications for one
-     * object (e.g. the user opens a chat thread).
-     */
     private fun cancelSystemNotificationsForObject(event: WebSocketEvent) {
         val app = event.app ?: return
         val obj = event.objectId ?: return
@@ -142,11 +126,6 @@ class NotificationsUnreadStore @Inject constructor(
         }
     }
 
-    /**
-     * Cancel every system-tray notification this app has posted. Fired on
-     * read_all / clear_all — both mean the user has handled the inbox
-     * elsewhere, so leaving anything in the tray would be stale.
-     */
     private fun cancelAllSystemNotifications() {
         NotificationManagerCompat.from(context).cancelAll()
     }

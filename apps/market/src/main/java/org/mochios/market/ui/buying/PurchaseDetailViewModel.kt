@@ -138,16 +138,10 @@ class PurchaseDetailViewModel @Inject constructor(
     }
 
     /**
-     * Fetch a purchased asset through the authenticated client.
-     *
-     * This used to emit an event the screen answered with a toast, while the
-     * repository call that does the work had no callers at all — so a buyer
-     * could not download what they had paid for. The other route, handing a URL
-     * to a Custom Tab, cannot work either: the action is not public and a
-     * Custom Tab carries no credentials.
-     *
-     * Saving needs a Context, so the file lands here and the screen only
-     * launches the viewer.
+     * Fetches through the authenticated client: the asset action is not public,
+     * so a Custom Tab (which carries no credentials) cannot download it. Saving
+     * needs a Context, so the bytes land here and the screen only launches the
+     * viewer.
      */
     fun requestDownload(assetId: String) {
         if (_uiState.value.downloading) return

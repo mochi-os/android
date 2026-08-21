@@ -19,12 +19,6 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.DocumentApi
 import javax.inject.Inject
 
-/**
- * Read-only view-model for the legal-document viewer: it loads and exposes one
- * document (privacy / rules / terms) for display. There is intentionally no
- * edit/save path here — operator editing lives in SystemDocumentsScreen (which
- * also carries the per-language dimension). See [DocumentApi].
- */
 data class DocumentUiState(
     val kind: String = "",
     val isLoading: Boolean = true,

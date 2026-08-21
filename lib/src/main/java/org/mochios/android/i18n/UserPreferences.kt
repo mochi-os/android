@@ -6,14 +6,10 @@
 package org.mochios.android.i18n
 
 /**
- * Format-related user preferences. Mirrors the schema in
- * `apps/settings/user/preferences.star` for keys that affect formatting.
- *
- * Each field is the resolved value — `auto` is replaced with whatever the
- * device suggests at fetch time, so consumers never have to redo detection.
- *
- * Defaults match web's [LocaleProvider.defaultResolved] so that an unauth
- * Android session formats the same way an unauth web session would.
+ * Format-related user preferences, mirroring
+ * `apps/settings/user/preferences.star`. Every field is already resolved:
+ * `auto` is replaced at fetch time. Defaults match an unauthenticated web
+ * session.
  */
 data class UserPreferences(
     val dateFormat: DateFormat = DateFormat.YYYY_MM_DD,

@@ -125,14 +125,9 @@ class AuthViewModel @Inject constructor(
     }
 
     /**
-     * Clear all per-user login input so the flow restarts at the email step.
-     *
-     * The AuthViewModel is activity-scoped and outlives the AuthNavigation
-     * composable, so after a logout it still holds the previous user's email
-     * and [BeginResult]. AuthNavigation calls this on (re)entry to wipe that
-     * stale state. Server-level config ([AuthUiState.serverValidated],
-     * [AuthUiState.methods]) is preserved so the user isn't bounced back
-     * through server setup.
+     * Clear per-user login input so the flow restarts at the email step; the
+     * activity-scoped ViewModel still holds the previous user's state after a
+     * logout. Server config is deliberately kept.
      */
     fun resetForLogin() {
         _uiState.value = _uiState.value.copy(
@@ -181,15 +176,9 @@ class AuthViewModel @Inject constructor(
             return
         }
 
-        // Parse before persisting. setServerUrl stores whatever it is given and
-        // the request that follows is retargeted from the stored value, so an
-        // unparseable entry left the origin untouched and quietly sent the
-        // validation request to the previously pinned server — the same
-        // "selected server is not the network destination" confusion the
-        // retarget exists to remove.
-        // Reuses the blank-entry string rather than adding a key: "Please enter
-        // a server URL" reads correctly for an unusable entry too, and a new
-        // key would owe 105 translations for a wording nuance.
+        // Parse before persisting: setServerUrl stores whatever it is given and
+        // the request is retargeted from it, so an unparseable entry would
+        // validate against the previously pinned server.
         if (url.toHttpUrlOrNull() == null) {
             _uiState.value = _uiState.value.copy(
                 error = MochiError.Unknown(AppContext.get().getString(R.string.error_enter_server_url))
@@ -399,11 +388,9 @@ class AuthViewModel @Inject constructor(
                 val verifier = OAuthPkce.generateVerifier()
                 val challenge = OAuthPkce.challengeFor(verifier)
                 val begun = authRepository.beginOAuth(provider, scheme, challenge)
-                // Both recorded only once the server has answered. Storing the
-                // verifier first would leave one behind if /begin failed, and a
-                // stale verifier is exactly what an injected return needs: it
-                // satisfies the outstanding-ceremony check with no nonce beside
-                // it to disagree.
+                // Record verifier and nonce only once the server answers: a
+                // verifier left by a failed /begin satisfies the ceremony check
+                // with no nonce to disagree.
                 sessionManager.saveOAuthVerifier(verifier, begun.nonce)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -423,14 +410,9 @@ class AuthViewModel @Inject constructor(
     }
 
     /**
-     * Reset transient one-shot signals that should not survive an
-     * AuthNavigation re-mount. Critical for logout + later re-entry: the
-     * AuthViewModel is scoped to the activity and outlives the AuthNavigation
-     * composable, so without consuming `authComplete` the next mount
-     * immediately calls onAuthenticated again and re-bootstraps the previous
-     * session — making the new logout appear to do nothing because the
-     * NeedsLogin → Bootstrapping → Ready cycle fires the moment AuthNavigation
-     * comes back on screen.
+     * Clear the one-shot auth signals before AuthNavigation re-mounts. The
+     * activity-scoped ViewModel outlives it, so a stale `authComplete` would
+     * immediately re-authenticate the session the user just left.
      */
     fun consumeAuthComplete() {
         _uiState.value = _uiState.value.copy(authComplete = false)

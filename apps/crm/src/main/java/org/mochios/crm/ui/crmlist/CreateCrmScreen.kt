@@ -56,13 +56,8 @@ import org.mochios.crm.R
 import org.mochios.android.R as MochiR
 
 /**
- * Full-screen create form for a CRM, optionally seeded from a backup file.
- * There is no template step: a CRM is always created with the CRM design, and
- * a picked backup supplies one instead. The top bar carries the back button and
- * Create sits in the bottom bar.
- *
- * @param onBack leaves the screen without creating anything.
- * @param onCreated hands the new CRM's id to the caller so it can open it.
+ * Full-screen create form for a CRM. No template step: a picked backup supplies
+ * the design instead.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

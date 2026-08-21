@@ -19,11 +19,8 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import javax.inject.Singleton
 
-// Mirrors web's use-system-settings.ts + use-system-update.ts. The status
-// page reads the full system settings list (filters server_version and
-// server_started — types live in SystemSettingsApi) and the update info
-// (current, latest, platform, pending). install=true triggers a Windows
-// self-install (no-op elsewhere).
+// install=true on `-/system/update` triggers a Windows self-install and is a
+// no-op elsewhere.
 
 data class SystemUpdateInfo(
     val available: Boolean = false,

@@ -181,9 +181,6 @@ fun NavGraphBuilder.forumsNavGraph(
                     popUpTo(ForumsApp.FORUM) { inclusive = true }
                 }
             },
-            // Leaving the forum leaves its screens too — the user is no longer a
-            // subscriber, so the forum behind settings is no longer theirs to
-            // return to.
             onUnsubscribed = {
                 navController.navigate(ForumsApp.ROUTER) {
                     popUpTo(ForumsApp.FORUM) { inclusive = true }

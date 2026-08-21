@@ -16,12 +16,9 @@ import org.mochios.settings.api.DomainsApi
 import javax.inject.Inject
 
 /**
- * Drives admin-gating of the settings home menu. The System group is
- * administrator-only and Domains needs domain access (administrator or a
- * delegation), matching web's `useFilteredSidebarData(isAdmin, hasDomainAccess)`.
- * Both flags come from the single domains endpoint, which returns `admin` plus
- * the caller's delegations — so non-admins simply don't see entries the server
- * would reject anyway.
+ * Home menu gating: System is administrator-only, Domains needs administrator
+ * or a delegation (web's `useFilteredSidebarData`). Both come from the domains
+ * endpoint.
  */
 data class SettingsHomeUiState(
     val isAdmin: Boolean = false,

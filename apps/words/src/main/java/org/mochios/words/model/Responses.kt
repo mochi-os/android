@@ -5,12 +5,6 @@
 
 package org.mochios.words.model
 
-/**
- * Response wrappers for the Words app's HTTP actions. Each one corresponds
- * to the inner payload of the `{"data": ...}` envelope unwrapped by
- * `Response<ApiResponse<T>>.unwrap()`. Mirrors `apps/words/web/src/api/types/games.ts`.
- */
-
 data class GameViewResponse(
     val game: Game = Game(),
     val identity: String = "",
@@ -28,12 +22,6 @@ data class CreateGameResponse(
     val id: String = "",
 )
 
-/**
- * Friend candidate returned by `-/new` for opening a new game. Mirrors the
- * `NewGameFriend` interface in the web types module. `class` is escaped
- * with backticks because it's a Kotlin reserved word; Gson maps the raw
- * `class` JSON key through the property name.
- */
 data class NewGameFriend(
     val `class`: String = "person",
     val id: String = "",
@@ -54,10 +42,8 @@ data class SendMessageResponse(
 )
 
 /**
- * Request body for `:game/-/move`. Mirrors `MoveRequest` in the web types.
- * `tiles_used` is the rack-tile string consumed (blanks as `_`); `words_formed`
- * is a comma-separated list of the words formed by the play (server runs
- * the validate-word check against each).
+ * Request body for `:game/-/move`. `tiles_used` is the rack string spent (`_`
+ * for blanks); `words_formed` is comma-separated.
  */
 data class MoveRequest(
     val board: String = "",
@@ -71,9 +57,8 @@ data class MoveResponse(
 )
 
 /**
- * Request body for `:game/-/exchange`. `tiles` is a rack-tile string of the
- * tiles being returned to the bag — same alphabet as `tiles_used` (`_` for
- * blanks, uppercase letters otherwise).
+ * Request body for `:game/-/exchange`. `tiles` is the rack string returned to
+ * the bag (`_` for blanks).
  */
 data class ExchangeRequest(
     val tiles: String = "",

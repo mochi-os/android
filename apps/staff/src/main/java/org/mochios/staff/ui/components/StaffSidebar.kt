@@ -47,29 +47,6 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.staff.R
 import org.mochios.staff.navigation.StaffApp
 
-/**
- * Drawer body for the staff app's left rail. Mirrors the market sidebar
- * pattern — top-level staff screens wrap their body in
- * [androidx.compose.material3.ModalNavigationDrawer] with this composable as
- * the drawer content so the hamburger opens the same navigation choices
- * everywhere.
- *
- * Sections (top → bottom):
- *   - Overview    : Dashboard
- *   - Market      : Listings, Appeals, Reports, Disputes, Reviews,
- *                   Moderation log, Categories
- *   - Management  : Accounts, Team
- *   - Settings    : Configuration (admin only)
- *
- * The Settings section is hidden when [userRole] is anything other than
- * `"admin"`; moderators and support staff never see the configuration entry.
- *
- * Active row is highlighted by matching the rendered route against
- * [currentRoute]. Navigation requests are emitted via [onNavigate] which the
- * host screen wires to a `NavController.navigate(route)` call; the
- * [navController] parameter is kept on the signature for callers that prefer
- * to route directly through it in later passes.
- */
 @Composable
 fun StaffSidebar(
     currentRoute: String?,

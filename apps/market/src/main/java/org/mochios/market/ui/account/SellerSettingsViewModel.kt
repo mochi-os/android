@@ -22,13 +22,6 @@ import org.mochios.market.model.StripeStatus
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
-/**
- * UI state for [SellerSettingsScreen]. Mirrors web's
- * `apps/market/web/src/features/account/SellerSettingsPage`. Holds the
- * caller's [Account], the platform [AccountFees], and (once onboarded) the
- * Stripe Connect capability flags so the page can render the seller-status
- * summary and drive the two-step activate → connect flow.
- */
 data class SellerSettingsUiState(
     val account: Account? = null,
     val fees: AccountFees? = null,
@@ -53,13 +46,6 @@ sealed interface SellerSettingsEvent {
     data class Error(val error: MochiError) : SellerSettingsEvent
 }
 
-/**
- * ViewModel for the market Seller Settings screen. Loads the caller's
- * [Account] plus the platform fee, and — when onboarded — the Stripe Connect
- * status. Drives [activate] (create seller profile), [connectStripe] (start
- * onboarding, returning the redirect URL for a Custom Tab), and
- * [checkStatus] (re-fetch Stripe capabilities and reload the account).
- */
 @HiltViewModel
 class SellerSettingsViewModel @Inject constructor(
     private val repo: MarketRepository,
@@ -77,9 +63,7 @@ class SellerSettingsViewModel @Inject constructor(
     }
 
     /**
-     * Re-runs the initial load for the error state's retry button. Passes
-     * initial = true so the error is cleared and the spinner returns, which is
-     * what the retry is asking for; the background variant leaves both alone.
+     * Re-runs the initial load for the error state's retry button.
      */
     fun retry() {
         load(initial = true)
@@ -138,11 +122,6 @@ class SellerSettingsViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Start Stripe Connect onboarding and hand the redirect URL back to the
-     * screen via [onUrl] so it can open a Custom Tab (the iframe shell sandbox
-     * can't host Stripe). Failures surface on the snackbar.
-     */
     fun connectStripe(returnUrl: String, onUrl: (String) -> Unit) {
         if (_state.value.connecting) return
         viewModelScope.launch {

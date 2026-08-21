@@ -16,26 +16,10 @@ import android.os.Process
 import org.mochios.android.R
 
 /**
- * Authenticator backing [MochiAccount].
- *
- * Deliberately minimal: AccountManager needs *some* registered authenticator
- * for our account type, but per-app JWTs are minted locally inside each app
- * (via `/_/token` using the session this authenticator hands out). Doing the
- * mint here would mean cross-process IPC into the device-elected owner's
- * process for something every app can already do itself — added latency, more
- * failure modes, no benefit. Apps fetch the session via [AccountManager.getPassword]
- * (signature-protected) and run their own `/_/token` calls with it.
- *
- * "Add account" routes to the host app's normal login UI; "get token" hands
- * back the raw session cookie value, and only for [MochiAccount.TOKEN_SESSION]
- * — the value is the full-account session, so a request for some other token
- * type should not silently receive it.
- *
- * The caller must be signed with our certificate. The framework has enforced
- * that for account visibility and token grants since API 23 (and minSdk is
- * above that), so this is defence-in-depth rather than the only gate — but
- * the value handed out is the full-account session, and a one-line signature
- * check is the standard posture for an authenticator holding one.
+ * Authenticator backing [MochiAccount]. Deliberately minimal: per-app JWTs are
+ * minted locally via `/_/token`, so this only hands out the account session,
+ * and only for [MochiAccount.TOKEN_SESSION] to a caller signed with our
+ * certificate.
  */
 class MochiAuthenticator(private val context: Context) :
     AbstractAccountAuthenticator(context) {
@@ -68,10 +52,8 @@ class MochiAuthenticator(private val context: Context) :
             )
             return result
         }
-        // The framework puts the requesting app's uid in the options bundle.
-        // Refuse anything not signed with our certificate — and refuse when
-        // the uid is absent, since a request the framework didn't stamp has
-        // no business receiving a session.
+        // The framework stamps the caller's uid into the options bundle. Refuse
+        // a caller not signed with our certificate, and refuse an absent uid.
         val caller = options?.getInt(AccountManager.KEY_CALLER_UID, -1) ?: -1
         val match = caller >= 0 &&
             context.packageManager.checkSignatures(caller, Process.myUid()) ==

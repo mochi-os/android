@@ -51,11 +51,6 @@ class FindProjectsViewModel @Inject constructor(
         loadSubscribed()
     }
 
-    /**
-     * Seeds the subscribed set from the projects the user already has, so a
-     * directory hit they're subscribed to shows as such instead of offering a
-     * subscribe that would be a no-op.
-     */
     private fun loadSubscribed() {
         viewModelScope.launch {
             try {

@@ -8,13 +8,8 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Per-currency revenue row inside [MetricsOverview].
- *
- * Mirrors `RevenueByCurrency` in `apps/staff/web/src/types/metrics.ts`.
- * `total` is the retained platform fee in that currency's minor units —
- * computed as `sum(fee - fee_refunded)` across all non-cancelled,
- * non-refunded orders (`event_staff_metrics_overview` in
- * `apps/comptroller/starlark/staff.star`).
+ * `total` is the retained platform fee in that currency's minor units (`sum(fee
+ * - fee_refunded)` in `event_staff_metrics_overview`).
  */
 data class RevenueByCurrency(
     val currency: String = "",
@@ -22,12 +17,9 @@ data class RevenueByCurrency(
 )
 
 /**
- * Marketplace overview metrics (`metrics/overview`).
- *
- * Mirrors `MetricsOverview` in `apps/staff/web/src/types/metrics.ts`. `revenue`
- * is per-currency because Stripe transactions stay in their original currency
- * (no server-side aggregation across currencies). `pendingModeration` counts
- * listings whose moderation is in (`hold`, `review`).
+ * Mirrors `MetricsOverview` in `apps/staff/web/src/types/metrics.ts`; `revenue`
+ * is per currency, never aggregated; `pendingModeration` counts listings in
+ * `hold` or `review`.
  */
 data class MetricsOverview(
     val listings: Long = 0,
@@ -73,9 +65,7 @@ data class ActivityListing(
 )
 
 /**
- * One row in the activity feed's `signups` tab. Mirrors `ActivitySignup` in
- * `apps/staff/web/src/types/metrics.ts`. `seller` is 0/1: 1 indicates the
- * account has gone through seller onboarding.
+ * `seller` is a 0/1 flag: 1 once seller onboarding is complete.
  */
 data class ActivitySignup(
     val id: String = "",
@@ -85,12 +75,8 @@ data class ActivitySignup(
 )
 
 /**
- * Combined activity feed payload (`metrics/activity`). Mirrors `ActivityData`
- * in `apps/staff/web/src/types/metrics.ts`.
- *
- * Only the requested tab's fields are populated; everything else is null.
- * When called without a `tab` query parameter the Comptroller returns every
- * tab in one response (used by the dashboard's combined view).
+ * Only the requested tab's fields are populated; with no `tab` the Comptroller
+ * returns every tab.
  */
 data class ActivityData(
     val orders: List<ActivityOrder>? = null,

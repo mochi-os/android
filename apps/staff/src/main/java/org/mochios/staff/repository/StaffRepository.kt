@@ -32,23 +32,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Thin wrapper around [StaffApi]. Mirrors the structure of
- * [org.mochios.market.repository.MarketRepository]: every method calls
- * `.unwrap()` on the Retrofit response and re-throws any exception as a
- * typed [org.mochios.android.api.MochiError] via [toMochiError] so
- * ViewModels can render localised messages.
- *
- * The staff app is a stateless proxy to the Comptroller — every action is
- * a class-context route (`-/<group>/<verb>`) with no entity scope. The
- * Comptroller enforces the staff-role gate (admin / moderator / support);
- * a non-staff caller gets 403 on most endpoints, with [getMe] always
- * succeeding so the layout can decide which admin-only items to surface.
- *
- * Row IDs (listings, categories, reports, disputes, reviews, appeals) are
- * opaque comptroller uids (String) — the migration to `mochi.uid()` text
- * ids (see `apps/comptroller/starlark/comptroller.star`) means the
- * `event_staff_*` handlers no longer parse them as integers; they are
- * forwarded verbatim on the wire.
+ * Wraps [StaffApi] like [org.mochios.market.repository.MarketRepository]:
+ * unwrap the response, rethrow as [MochiError]. Row ids are opaque Comptroller
+ * uids forwarded verbatim; [getMe] succeeds for any authenticated identity,
+ * everything else is 403 for non-staff.
  */
 @Singleton
 class StaffRepository @Inject constructor(

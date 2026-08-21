@@ -35,19 +35,8 @@ import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
 
 /**
- * Per-topic notification mute screen.
- *
- * Mirrors the 17 entries declared under `notifications.topic.*` in
- * `apps/market/labels/en.conf`, in the same order they appear in the
- * label file. Each row is a title + supporting line + Switch.
- *
- * Topic mute is currently a local-only stub backed by
- * [org.mochios.market.lib.NotificationPreferencesStore] — the
- * notifications app holds the canonical preference on the user's host
- * but doesn't expose a market-side API yet, and Mochi forbids
- * cross-app HTTP. The UI is fully wired so users can record their
- * choices today; client-side filters apply the mute at display time
- * until the server-side wrapper lands.
+ * Per-topic notification mute screen. Mutes are local-only - see
+ * [NotificationPreferencesViewModel].
  */
 @Composable
 fun NotificationPreferencesScreen(
@@ -134,10 +123,8 @@ private fun TopicRow(
 }
 
 /**
- * Map a dotted topic key to the matching `market_notifications_topic_*`
- * string resource. Keys are exactly the same as the labels declared
- * under `notifications.topic.*` in `apps/market/labels/en.conf`, with
- * `.` rewritten to `_` for the Android resource id.
+ * Keys match `notifications.topic.*` in `apps/market/labels/en.conf`, with `.`
+ * rewritten to `_`.
  */
 private fun topicTitleRes(topic: String): Int = when (topic) {
     "message" -> R.string.market_notifications_topic_message

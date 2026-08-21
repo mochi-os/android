@@ -81,12 +81,6 @@ import org.mochios.market.ui.dialog.IssueRefundDialog
 import org.mochios.market.ui.dialog.ShipOrderDialog
 import org.mochios.android.R as MochiR
 
-/**
- * Sale detail (seller view) at [MarketApp.SALE_DETAIL]. Lays out the order
- * receipt, fee breakdown, shipping actions for physical orders, refund
- * trigger, dispute timeline + response, review response, and the audit
- * timeline at the bottom.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SaleDetailScreen(
@@ -213,13 +207,8 @@ fun SaleDetailScreen(
                 submitting = state.disputeSubmitting,
                 errorMessage = state.disputeError,
                 onSubmit = { response, _ ->
-                    // The API uses a single body string; evidence uploads are
-                    // wired through the attachments library on the comptroller
-                    // when the staff-side surface lands. For the seller's
-                    // first-pass response we forward the text only and
-                    // surface evidence count as future work — the dialog
-                    // already collects the URIs so a follow-up wiring is
-                    // additive, not destructive.
+                    // Evidence URIs are collected but not sent: the API takes a
+                    // single body string and has no evidence upload yet.
                     viewModel.respondToDispute(response, disputeFailedFallback)
                 },
                 onDismiss = { disputeDialogOpen = false },

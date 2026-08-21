@@ -26,21 +26,6 @@ import org.mochios.crm.model.Person
 import org.mochios.crm.repository.CrmsRepository
 import javax.inject.Inject
 
-/**
- * State of the create-object screen.
- *
- * @property details the CRM's design — classes, hierarchy, fields and options.
- * @property objects every object in the CRM, for the parent picker.
- * @property people CRM members, for resolving user-type field pickers.
- * @property activeView the view the user last opened, which decides the class
- *   the form starts on; null when they have never picked one.
- * @property isLoading true while the CRM's design is being fetched.
- * @property loadError what stopped the design from loading, if anything.
- * @property isCreating true while the create request is in flight.
- * @property createError what went wrong on the last create attempt, if anything.
- * @property createdObjectId set to the new object's id after a successful
- *   create so the screen can open it; cleared once consumed.
- */
 data class CreateObjectUiState(
     val details: CrmDetails? = null,
     val objects: List<CrmObject> = emptyList(),
@@ -65,10 +50,8 @@ class CreateObjectViewModel @Inject constructor(
     val crmId: String = savedStateHandle.get<String>("crmId") ?: ""
 
     /**
-     * Field values the form opens pre-filled with, keyed by field id. Carries
-     * the column a board's "+" was tapped in; empty from the FAB. Only entries
-     * belonging to the selected class are applied, so switching class drops
-     * the rest.
+     * Field values the form opens with: the column a board's "+" was tapped in,
+     * empty from the FAB.
      */
     val presetValues: Map<String, String> = run {
         val field = savedStateHandle.get<String>("field").orEmpty()
@@ -121,11 +104,9 @@ class CreateObjectViewModel @Inject constructor(
     }
 
     /**
-     * Whether a preset field value can be applied when creating an object of
-     * [classId]: the field must exist on the class and, for enumerated fields,
-     * the value must be among that class's own options — a board that mixes
-     * classes hands the form the column it was tapped in, which can be an
-     * option belonging to another class, and the server rejects it.
+     * Whether a preset value applies to [classId]: the field must exist on it
+     * and an enumerated value must be one of its own options - a mixed-class
+     * board can hand over another class's.
      */
     fun usableValue(classId: String, fieldId: String, value: String): Boolean {
         if (value.isBlank()) return false
@@ -137,8 +118,7 @@ class CreateObjectViewModel @Inject constructor(
     }
 
     /**
-     * Live user search for FieldEditor's user-type fields. Mirrors
-     * ObjectDetailViewModel.searchPeople — the PersonPicker wants [User]s whose
+     * User search for user-type fields; PersonPicker wants [User]s whose
      * fingerprint is the person's entity id.
      */
     suspend fun searchPeople(query: String): List<User> {

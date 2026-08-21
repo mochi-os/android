@@ -27,14 +27,8 @@ import org.mochios.words.R
 import org.mochios.android.R as MochiR
 
 /**
- * Modal letter picker for the blank tile. 26 buttons in a 7-wide grid
- * (better than the web's 9-wide for narrow Android screens). Tapping a
- * button calls `onSelect(letter)`; tapping the dismiss area or the Cancel
- * button calls `onDismiss`. Letter is uppercase 'A'..'Z'.
- *
- * The displayed letter on the board is fixed by this dialog; the
- * underlying rack tile stays `'_'` so the engine can score it correctly
- * (blanks always score 0 regardless of the chosen letter).
+ * Letter picker for a blank tile. The chosen letter is display only - the rack
+ * tile stays `'_'` so the engine still scores it as zero.
  */
 @Composable
 fun BlankTileDialog(

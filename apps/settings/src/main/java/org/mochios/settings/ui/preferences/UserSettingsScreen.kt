@@ -156,11 +156,6 @@ private fun prefSchema(
     ),
 )
 
-/**
- * Time-zone options. We rely on Android's `java.util.TimeZone.getAvailableIDs()`
- * for the full IANA list and prepend "auto" so users can keep the device
- * default. Computed lazily at first read.
- */
 private val TIMEZONE_OPTIONS: List<String> by lazy {
     val zones = java.util.TimeZone.getAvailableIDs()
         .filter { it.contains('/') } // drop short aliases like "EST"
@@ -175,10 +170,8 @@ private fun timezoneOptions(): List<Pair<String, String>> =
         TIMEZONE_OPTIONS.map { it to it }
 
 /**
- * Display-name overrides, keyed by lower-cased BCP 47 tag, where the platform's
- * own name is not the wording Mochi wants. Mirrors the same map in
- * apps/settings/web/src/features/user/preferences.tsx so the two clients agree:
- * `en` is Mochi's neutral English source catalogue, neither UK nor US.
+ * Overrides where the platform's display name is not Mochi's wording; mirrors
+ * the map in apps/settings/web/src/features/user/preferences.tsx.
  */
 private val LANGUAGE_NAMES = mapOf(
     "en" to "English (international)",
@@ -200,9 +193,8 @@ private fun languageName(tag: String): String {
 }
 
 /**
- * Latin-script names first, then the rest, each bucket by native name. The
- * server returns tags alphabetically, which puts Arabic at the top — accurate
- * but not what a reader scanning for their own language expects.
+ * Latin-script names first, then the rest; plain alphabetical order puts Arabic
+ * at the top.
  */
 private fun scriptBucket(native: String): Int {
     val first = native.firstOrNull { it.isLetter() } ?: return 0
@@ -210,11 +202,8 @@ private fun scriptBucket(native: String): Int {
 }
 
 /**
- * The picker's options, built from the tags the server reports installed.
- *
- * [defaultLabel] is the "use the server default" row. [current] is kept even if
- * the server does not list it, so a value already saved never silently vanishes
- * from the picker that is meant to show it.
+ * [current] is included even if the server does not list it, so a saved value
+ * never vanishes from the picker.
  */
 internal fun languageOptions(
     tags: List<String>,

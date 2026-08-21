@@ -11,20 +11,10 @@ import android.content.Intent
 import android.util.Log
 
 /**
- * Restarts [PushService] after the device boots so the user doesn't have
- * to open the Mochi shell every reboot for notifications to resume.
- *
- * Wired only by the shell app's manifest (declares this receiver alongside
- * RECEIVE_BOOT_COMPLETED + LOCKED_BOOT_COMPLETED permissions). Per-app
- * apps deliberately do not declare it — only the distributor host needs
- * to wake on boot.
- *
- * Android 12+ restriction: a BroadcastReceiver cannot start a foreground
- * service from background. We start with [Context.startForegroundService]
- * during the BOOT_COMPLETED intent's `goAsync` window, which is one of
- * the explicit allowed contexts for FG service starts. If that proves
- * unreliable on some OEMs, fall back to a one-shot WorkManager job
- * (deferred — the simple direct-start path covers the common case).
+ * Restarts [PushService] after boot. Declared only by the shell app's manifest
+ * - only the distributor host wakes on boot. Android 12+ forbids a background
+ * receiver from starting a foreground service; the BOOT_COMPLETED window is an
+ * allowed context.
  */
 class BootReceiver : BroadcastReceiver() {
 

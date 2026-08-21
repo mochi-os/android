@@ -8,12 +8,8 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A buyer/seller conversation, optionally pinned to a specific listing/order.
- *
- * Mirrors `Thread` in `apps/market/web/src/types/threads.ts`. `order` is 0
- * for pre-purchase enquiry threads. `last_message` / `unread` /
- * `other_name` are denormalised onto thread-list rows so the UI can render
- * an inbox without an extra fetch per row.
+ * Mirrors `Thread` in web `types/threads.ts`. `order` is 0 for pre-purchase
+ * enquiries; the nullable fields are denormalised onto list rows.
  */
 data class MarketThread(
     val id: String = "",
@@ -31,10 +27,8 @@ data class MarketThread(
 )
 
 /**
- * A single message inside a [MarketThread].
- *
- * Mirrors `Message` in `apps/market/web/src/types/threads.ts`. `read` is 0
- * (unread) or the timestamp the recipient marked it read.
+ * Mirrors `Message` in web `types/threads.ts`; `read` is 0 or the timestamp it
+ * was read.
  */
 data class Message(
     val id: String = "",

@@ -34,13 +34,6 @@ data class NewPostUiState(
     val error: MochiError? = null
 )
 
-/**
- * Backs the shared compose-a-post screen for both new posts and edits. The
- * screen is in edit mode when a `postId` is present in the back-stack args, in
- * which case the existing title, body and attachments are loaded up front and
- * [submit] routes to an edit rather than a create. Mirrors feeds'
- * `CreatePostViewModel`.
- */
 @HiltViewModel
 class NewPostViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

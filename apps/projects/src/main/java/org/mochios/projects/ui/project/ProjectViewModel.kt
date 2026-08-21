@@ -42,9 +42,8 @@ data class ProjectUiState(
     val searchQuery: String = "",
     val watchedOnly: Boolean = false,
     /**
-     * Selected option ids per filterable field id. Values inside one field are
-     * OR-ed, separate fields are AND-ed — matching the web filter bar. An empty
-     * (or absent) set means the field places no constraint.
+     * Selected option ids per field: OR within a field, AND across fields;
+     * empty means unconstrained.
      */
     val fieldFilters: Map<String, Set<String>> = emptyMap(),
     /** Object ids the local user watches, from the server objects/list response. */
@@ -60,9 +59,8 @@ data class ProjectUiState(
     val exportFailed: Boolean = false,
     val selectedObjectId: String? = null,
     /**
-     * Sort field per view id. Field is one of "rank", "number", "created",
-     * "updated", or "field:<fieldId>" matching the web sort key scheme.
-     * Null entry => fall back to view.sort or "rank".
+     * Sort override per view id: "rank", "number", "created", "updated" or
+     * "field:<fieldId>".
      */
     val sortByView: Map<String, String> = emptyMap(),
     /** Sort direction per view id. "asc" or "desc". */
@@ -223,10 +221,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Stages the project's attachments, then asks the screen for somewhere to
-     * put the backup. Nothing is downloaded here — the server builds the zip
-     * and it runs to megabytes, so it is fetched straight into the file the
-     * user picks. See [writeExportTo].
+     * Warms the server-side export, then asks the screen for a destination; the
+     * zip is streamed into it by [writeExportTo].
      */
     fun exportProject() {
         if (_uiState.value.isExporting) {
@@ -330,9 +326,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Resets every filter axis and the sort override for the active view, so
-     * the list falls back to what the view itself defines. The search query is
-     * owned by the top bar and is left alone.
+     * Resets filters and the active view's sort override; the search query
+     * belongs to the top bar and stays.
      */
     fun clearFilters() {
         val viewId = _uiState.value.activeViewId
@@ -367,10 +362,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Fields the sheet can filter on: fields flagged "filter" on the active
-     * view's classes that carry a fixed value set — enumerated options, or the
-     * project's people for a user field. Free-text and date fields are left out;
-     * search covers the former and sort covers the latter.
+     * Filterable fields with their option sets: enumerated options, or the
+     * project's people for a user field.
      */
     fun getFilterableFields(): List<Pair<ProjectField, List<FieldOption>>> {
         val details = _uiState.value.projectDetails ?: return emptyList()
@@ -401,11 +394,6 @@ class ProjectViewModel @Inject constructor(
         return result
     }
 
-    /**
-     * Active sort field for the current view. Mirrors the web sort key scheme:
-     * "rank" | "number" | "created" | "updated" | "field:<fieldId>".
-     * Defaults to view.sort (when set) or "rank".
-     */
     fun getActiveSortField(): String {
         val viewId = _uiState.value.activeViewId ?: return "rank"
         val override = _uiState.value.sortByView[viewId]
@@ -423,10 +411,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Sort key to show as chosen in the sheet, or null when nothing has been
-     * chosen. The list still falls back to "rank" in that case, but the fallback
-     * isn't a selection — showing Manual highlighted would claim the user picked
-     * it. A sort stored on the view itself does count as chosen.
+     * Sort key to highlight in the sheet, or null: the "rank" fallback is not a
+     * selection, but a sort stored on the view is.
      */
     fun getSelectedSortField(): String? {
         val viewId = _uiState.value.activeViewId
@@ -464,11 +450,6 @@ class ProjectViewModel @Inject constructor(
         setSortDirection(if (getActiveSortDirection() == "asc") "desc" else "asc")
     }
 
-    /**
-     * Sort field options available for the current view. Matches the web bar:
-     * built-in fields plus class fields whose flags include "sort". When a view
-     * filters to specific classes, only those classes' fields are offered.
-     */
     fun getSortFieldOptions(): List<Pair<String, String>> {
         val details = _uiState.value.projectDetails ?: return emptyList()
         val view = getActiveView()
@@ -538,10 +519,9 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Reload the object list and wait for it. The list endpoint returns each
-     * object's field values, which the single-object endpoint omits — callers
-     * that need those values present (e.g. opening a just-created object's
-     * detail) must await this rather than firing [refreshObjects].
+     * Reloads the object list and waits. Only the list endpoint returns field
+     * values, so callers that need them must await this rather than fire
+     * [refreshObjects].
      */
     private suspend fun refreshObjectsNow() {
         try {
@@ -594,9 +574,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Field ids the active view pins. Empty when there is no active view or it
-     * pins none — callers then fall back to their own default (card flags for
-     * cards, every field of the class for the object detail form).
+     * Field ids the active view pins; empty when it pins none, and callers then
+     * use their own default.
      */
     fun getActiveViewFieldIds(): List<String> {
         val view = getActiveView() ?: return emptyList()
@@ -683,9 +662,7 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Persist a new column-option ordering after a drag-reorder. [order] is
-     * the full list of option ids in display order — the server replaces the
-     * stored ranks accordingly.
+     * Persists a drag-reorder: [order] is every option id in display order.
      */
     fun reorderColumnOptions(fieldId: String, order: List<String>) {
         val classId = findClassForField(fieldId) ?: return
@@ -700,9 +677,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Returns descendant ids of [objectId] in the current object set. Used
-     * for tree drag-drop cycle prevention — a row may not be reparented under
-     * itself or any of its own descendants.
+     * Descendant ids of [objectId], for refusing a drop that would reparent a
+     * row under itself.
      */
     fun collectDescendants(objectId: String): Set<String> {
         val byParent = _uiState.value.objects.groupBy { it.parent }
@@ -766,14 +742,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Ids the board may render, or null when nothing narrows the set — the
-     * board still receives every object so hierarchy, column grouping and
-     * drop ranks stay computed against the real list, and only hides what
-     * falls outside this set.
-     *
-     * Ancestors of a match are included: a board card is a container for its
-     * children, so a matching subtask keeps its parent card on the board
-     * instead of dropping the whole branch out of sight.
+     * Ids the board may show, or null when unfiltered. Ancestors of a match are
+     * included so a matching subtask keeps its parent card on the board.
      */
     fun getVisibleObjectIds(): Set<String>? {
         if (!hasActiveFilters()) return null
@@ -792,10 +762,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     /**
-     * Sort objects by the active sort field/direction. Mirrors the web logic
-     * in `web/src/features/board/components/board-container.tsx::sortObjects`
-     * — built-in numeric fields compare numerically, custom fields compare as
-     * strings (case-insensitive).
+     * Sorts by the active field and direction as the web's `sortObjects` does:
+     * built-in fields numerically, custom fields as case-insensitive strings.
      */
     fun sortObjects(objects: List<ProjectObject>): List<ProjectObject> {
         val field = getActiveSortField()

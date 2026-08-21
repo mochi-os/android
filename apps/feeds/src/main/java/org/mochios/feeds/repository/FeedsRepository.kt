@@ -49,9 +49,8 @@ data class FeedInfoResult(
 )
 
 /**
- * The class-level feeds overview returned by `-/info`: the subscribed feed
- * list and whether the server has any AI provider configured (which gates the
- * AI sort option).
+ * Class-level `-/info`: subscribed feeds and whether any AI provider is
+ * configured (gates the AI sort option).
  */
 data class FeedsInfoResult(
     val feeds: List<Feed>,
@@ -88,9 +87,8 @@ private data class PermissionRequiredBody(
 )
 
 /**
- * Thrown when `sources/add` returns `permission_required`: the app must first
- * be granted [permission] before the source can be added. Carries the
- * requesting [app] entity id so the caller can resolve a name and grant it.
+ * `sources/add` answered `permission_required`: [app] must be granted
+ * [permission] first.
  */
 class PermissionRequiredException(
     val app: String,
@@ -394,11 +392,9 @@ class FeedsRepository @Inject constructor(
     }
 
     /**
-     * The best image for an RSS post: the server fetches the article's
-     * og:image once (replacing a low-resolution feed thumbnail such as
-     * BBC's 240px media:thumbnail) and caches it on the post row, so
-     * repeat calls are cheap. Returns "" when the article offers nothing
-     * better (or the post is non-RSS).
+     * Best image for an RSS post: the server fetches and caches the article's
+     * og:image on the post row. "" when nothing better exists or the post is
+     * not RSS.
      */
     suspend fun getPostImage(feedId: String, postId: String): String {
         return try {
@@ -597,8 +593,7 @@ class FeedsRepository @Inject constructor(
 
     /**
      * [attachment] anchors a top-level comment to one of the post's own
-     * attachments (its id); the server refuses any other id. A reply inherits
-     * its parent's context and takes no anchor.
+     * attachment ids; the server refuses any other. Replies take no anchor.
      */
     suspend fun createComment(
         feedId: String,

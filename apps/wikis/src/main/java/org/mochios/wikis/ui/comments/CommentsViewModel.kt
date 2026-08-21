@@ -27,14 +27,8 @@ import java.io.File
 import javax.inject.Inject
 
 /**
- * UI state for [CommentsScreen]. Mirrors web's `PageComments`
- * (`apps/wikis/web/src/features/wiki/page-comments.tsx`) — a flat top-level
- * list of root comments (each with `children`), plus the wiki info needed to
- * gate the compose surface behind the `permissions.edit` flag.
- *
- * `replyingTo` / `replyDraft` live on the ViewModel rather than the screen so
- * the quote-on-select seeding flows through a single source of truth that the
- * recursive [WikiCommentThread] composables can read on the way down.
+ * UI state for [CommentsScreen]. `replyingTo` / `replyDraft` live here so the
+ * recursive thread composables read one source.
  */
 data class CommentsUiState(
     val isLoading: Boolean = true,
@@ -52,11 +46,6 @@ data class CommentsUiState(
     val replyDraft: String = "",
 )
 
-/**
- * One-shot events surfaced to the screen — snackbar toasts for success /
- * failure feedback. Kept as a channel so the screen consumes each event
- * exactly once even across configuration changes.
- */
 sealed interface CommentsEvent {
     data class Toast(val message: String) : CommentsEvent
     data class Error(val error: MochiError) : CommentsEvent
@@ -64,19 +53,7 @@ sealed interface CommentsEvent {
 
 /**
  * ViewModel for [CommentsScreen]. Reads `wikiId` and `page` from
- * [SavedStateHandle] (the nav graph wires both as `NavType.StringType`) and
- * fires three parallel loads on init:
- *
- *  1. `loadInfo()` — `/-/info` for the wiki itself (name, permissions,
- *     `WikiInfo.fingerprint`). Drives the title + the `permissions.edit`
- *     gate on the top-level compose form.
- *  2. `loadPage()` — `/-/<slug>` for the page title in the top-app-bar.
- *  3. `loadComments()` — `/-/<slug>/comments` for the thread itself.
- *
- * Mutation methods (`createComment`, `editComment`, `deleteComment`) refresh
- * the thread after every successful round-trip — web does the same via
- * React Query's invalidation. Errors emit a [CommentsEvent.Error] for the
- * screen's snackbar.
+ * [SavedStateHandle] and loads wiki info, page and comments in parallel.
  */
 @HiltViewModel
 class CommentsViewModel @Inject constructor(
@@ -166,13 +143,6 @@ class CommentsViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Create a new comment. When [parent] is null the comment is a top-level
-     * post; otherwise it's a reply to the existing comment with that id.
-     *
-     * Refreshes the thread on success so the new comment appears (and, for
-     * replies, the reply textarea closes via [cancelReply]).
-     */
     /** Stages any picked attachments, then posts the comment. */
     fun createComment(body: String, parent: String? = null, uris: List<Uri>? = null) {
         val trimmed = body.trim()
@@ -220,12 +190,6 @@ class CommentsViewModel @Inject constructor(
 
     // ---------------- reply textarea state ----------------
 
-    /**
-     * Open the reply textarea under [commentId]. If [selectedText] is non-null
-     * and non-blank the textarea is pre-seeded with each selected line
-     * prefixed by `"> "`, plus a trailing blank line, mirroring web's
-     * `window.getSelection()` quote-on-select behaviour in `page-comments.tsx`.
-     */
     fun requestStartReply(commentId: String, selectedText: String? = null) {
         val draft = selectedText?.trim()?.takeIf { it.isNotEmpty() }?.let { sel ->
             sel.lineSequence().joinToString("\n") { "> $it" } + "\n\n"

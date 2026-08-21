@@ -126,9 +126,8 @@ import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
- * Width reserved for a post card's action strip. Sized for the full set — save,
- * tags, like, dislike, comments — so hiding a zero-count entry never shifts the
- * byline that follows it.
+ * Width of a post card's action strip, sized for the full set so hiding a
+ * zero-count entry never shifts the byline.
  */
 private val ACTION_STRIP_WIDTH = 192.dp
 
@@ -147,11 +146,8 @@ private val SORT_OPTIONS = listOf(
 )
 
 /**
- * Forum detail screen wrapped in a [FeatureListDrawer]. The drawer holds
- * the user's forum list (so swiping in from the left switches forums
- * directly without an intervening list page) plus actions (Find forums,
- * Logout). When [forumId] is empty (first launch with no recorded
- * last-viewed), the drawer auto-opens over a "pick a forum" placeholder.
+ * Forum detail screen inside a [FeatureListDrawer]; an empty [forumId] opens
+ * the drawer over a placeholder.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -396,12 +392,9 @@ private fun ForumContent(
                 },
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
-                    // The aggregate spans forums, so there is no forum to post to.
-                    // Hide the button (rather than disable it) when posting isn't
-                    // available, matching feeds. `canPost` is null when the response
-                    // omits it, which reads as "unknown" and keeps the button — only
-                    // an explicit `false` hides it. Until the forum loads its id is
-                    // empty, so the button appears once posting is known to be allowed.
+                    // No forum to post to in the aggregate. Hidden, not
+                    // disabled, matching feeds; a null `canPost` (response
+                    // omitted it) keeps the button.
                     if (!isAll && uiState.forum.id.isNotEmpty() &&
                         uiState.forum.canPost != false) {
                         IconButton(onClick = { onNewPost(forumIdForCallbacks) }) {
@@ -866,13 +859,9 @@ private fun PostCard(
 }
 
 /**
- * An action icon with its count beside it, using the feeds post-card glyphs and
- * its borderless tap target. Hidden entirely while the count is zero, so a card
- * only shows what the post actually has — the save control is exempt and lives
- * at the head of the strip.
- *
- * Every entry carries the muted variant colour: the card highlights the viewer's
- * own vote by filling the glyph, not by tinting it.
+ * Action icon with its count, hidden while the count is zero (the save control
+ * is exempt). Always the muted colour: the viewer's own vote is shown by
+ * filling the glyph, not tinting it.
  */
 @Composable
 private fun CountedAction(

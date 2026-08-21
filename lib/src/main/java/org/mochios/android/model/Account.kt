@@ -8,10 +8,8 @@ package org.mochios.android.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * User account record as returned by `<app>/-/accounts/list[?capability=...]`.
- *
- * `default` is a SQL reserved word — server serialises it under the
- * unchanged field name so we mark the binding explicitly.
+ * User account record from `<app>/-/accounts/list[?capability=...]`. The server
+ * sends `default`, bound explicitly to [isDefault].
  */
 data class Account(
     val id: String = "",

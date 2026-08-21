@@ -67,12 +67,9 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.SystemSetting
 
-// Mirrors apps/settings/web/src/features/system/settings.tsx. Each row renders
-// per-pattern: a Switch for booleans, a segmented control for the
-// required/allowed/disabled enum family, a dropdown for other enums, a chip
-// for read-only values, and an OutlinedTextField for everything else. File
-// upload (pattern == "text") is not yet supported on Android — the row
-// degrades to a multi-line text field.
+// Mirrors apps/settings/web/src/features/system/settings.tsx. File upload
+// (pattern == "text") is not supported on Android; the row degrades to a
+// multi-line text field.
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -134,14 +131,8 @@ private fun isBoolean(setting: SystemSetting) = setting.pattern == "^(true|false
 private fun isFileUpload(setting: SystemSetting) = setting.pattern == "text"
 
 /**
- * Whether a value is stored server-side, and so whether the row offers to
- * clear it.
- *
- * A secret cannot be judged by its value: the server blanks it, so a configured
- * OAuth client secret arrives as `value == ""` with `default == ""` too — the
- * `value == default` test every other row uses reads "unset" no matter how the
- * server is configured, which is why the clear affordance used to vanish. `set`
- * is computed before the blanking and is the only signal that survives.
+ * Whether the row offers to clear the value. The server blanks a secret's
+ * value, so for secrets `set` (computed before blanking) is the only signal.
  */
 internal fun hasStoredValue(setting: SystemSetting): Boolean =
     if (setting.secret) setting.set else setting.value.isNotEmpty()
@@ -324,12 +315,8 @@ private fun SettingRow(
 
         when {
             setting.readOnly -> ReadOnlyValue(setting)
-            // Before the pattern branches: a secret is declared with
-            // Pattern:"line", so it would otherwise fall through to the plain
-            // text field below and an admin would type a live client secret in
-            // clear. The server blanks the value, so `set` is the only signal
-            // that one is stored — without it a configured OAuth secret looked
-            // identical to an unset one.
+            // Before the pattern branches: a secret's pattern is "line", which
+            // would otherwise land it in the plain text field.
             setting.secret -> Row(verticalAlignment = Alignment.CenterVertically) {
                 SecretField(
                     configured = setting.set,

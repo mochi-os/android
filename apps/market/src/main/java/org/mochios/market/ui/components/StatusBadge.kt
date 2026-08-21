@@ -18,17 +18,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.market.R
 
-/**
- * Pill-shaped status chip. Maps the raw server status string (orders,
- * disputes, subscriptions, listings, auctions all share a flat string
- * space) onto Material theme roles so the chip's colour reflects the
- * state without hardcoding palette values.
- *
- * The label rendered is either the explicit [localised] override or the
- * built-in English label for the known statuses; unknown statuses fall
- * back to the raw lowercased [status] so unexpected wire values still
- * appear (e.g. when staff add a new dispute status).
- */
 @Composable
 fun StatusBadge(
     status: String,

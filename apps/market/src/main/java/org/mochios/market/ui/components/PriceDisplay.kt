@@ -23,21 +23,6 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.Listing
 import org.mochios.market.model.PricingModel
 
-/**
- * Headline price for a listing.
- *
- * Renders four shapes depending on the listing's pricing model:
- *  - Fixed: `formatPrice(price, currency)` as the headline.
- *  - Auction: "High bid: £X" once `auction.bids > 0`, otherwise
- *    "Starting bid: £reserve"; an "instant buy: £Y" suffix appears below
- *    when `auction.instant > 0`.
- *  - PWYW: "from £listing.price" (so the suggested price acts as the
- *    floor when set, falling back to "from £0").
- *  - Subscription: "£X / month" or "£X / year" per [Listing.interval].
- *
- * Falls back to [Currency.GBP] when [Listing.currency] is null so old
- * server responses still render something sensible.
- */
 @Composable
 fun PriceDisplay(
     listing: Listing,
@@ -58,11 +43,9 @@ fun PriceDisplay(
                 val hasBids = auction != null && auction.bids > 0
                 val headlineAmount = when {
                     hasBids -> auction!!.bid
-                    // Not the reserve: the server redacts it to 0 for anyone
-                    // but the seller, so this rendered "£0.00" on every auction
-                    // with no bids. The starting bid is the listing price —
-                    // which is also what the server enforces as the minimum,
-                    // and what web shows.
+                    // Not auction.reserve: the server redacts it to 0 for
+                    // everyone but the seller. The starting bid is the listing
+                    // price, which the server enforces as the minimum.
                     else -> listing.price
                 }
                 val headlineKey = if (hasBids) {

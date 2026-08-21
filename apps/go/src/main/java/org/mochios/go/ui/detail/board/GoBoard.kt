@@ -34,9 +34,8 @@ import kotlin.math.min
 import kotlin.math.roundToInt
 
 /**
- * Static star-point (hoshi) coordinates for the three supported board sizes.
- * Mirrors `STAR_POINTS` in `apps/go/web/src/features/go/components/go-board.tsx`.
- * Indices are (row, col) in 0-based grid coordinates.
+ * Star-point (hoshi) coordinates as 0-based (row, col); mirrors web's
+ * `STAR_POINTS`.
  */
 private val STAR_POINTS: Map<Int, List<Pair<Int, Int>>> = mapOf(
     9 to listOf(2 to 2, 2 to 6, 4 to 4, 6 to 2, 6 to 6),
@@ -73,34 +72,10 @@ private val WhiteTerritory = Color(0x59FAFAFA)
 private const val COLUMN_LETTERS = "ABCDEFGHJKLMNOPQRST"
 
 /**
- * Compose `Canvas`-based rendering of a 9/13/19-line Go board.
- *
- * The board is square (`aspectRatio(1f)`) and sizes itself to the container
- * via [BoxWithConstraints], so the same composable adapts to both the
- * desktop side-by-side layout (large fixed-width column) and the phone
- * full-width layout (≤ ~480 dp wide).
- *
- * @param fen          Current position FEN (board + metadata, as serialised
- *                     by [GoGame]). The board parses this on each
- *                     recomposition; cheap for 19x19.
- * @param previousFen  Optional prior-position FEN for ko enforcement when
- *                     local-validating a tap.
- * @param boardSize    9, 13, or 19. Used to look up star-point positions
- *                     when the FEN can't be parsed (defensive fallback).
- * @param myColor      The local player's stone colour. Only used for the
- *                     hover/preview rendering on web; on touch we have no
- *                     hover, but kept on the API for parity with the web
- *                     `GoBoard` and to allow future ghost-stone affordance.
- * @param isMyTurn     True when it's the local player's turn. Combined with
- *                     [gameStatus] to decide whether to honour taps.
- * @param gameStatus   Server-reported game status (`"active"`, `"finished"`,
- *                     `"resigned"`, `"draw"`). Taps are ignored on
- *                     non-active games.
- * @param onPlace      Invoked with the tapped grid coordinates **after**
- *                     local legality has been validated. The caller still
- *                     owns the network round-trip.
- * @param lastMove     Optional (row, col) of the most recent stone — drawn
- *                     with a red dot on top of the stone for quick scan.
+ * Canvas rendering of a 9/13/19 board, square and sized to its container. Taps
+ * are honoured only when the game is active and it is the local player's turn,
+ * and [onPlace] fires only after local legality has been validated; the caller
+ * owns the network round trip.
  */
 @Composable
 fun GoBoard(
@@ -150,12 +125,9 @@ fun GoBoard(
         val boardPx = sidePx - padding * 2
         val cellPx = boardPx / (size - 1).coerceAtLeast(1)
 
-        // Tap handler is registered on the whole canvas; we map the tap
-        // offset back to the nearest grid intersection. Anything more than
-        // half a cell from any line is ignored (saves a stray edge tap from
-        // selecting a corner intersection).
-        // canPlay already implies game != null, but the smart-cast below
-        // needs the explicit null-check inside the branch.
+        // Map the tap to the nearest intersection; more than half a cell from a
+        // line is ignored. canPlay implies game != null, but the smart cast
+        // needs the explicit check inside the lambda.
         val tapModifier = if (canPlay) {
             Modifier.pointerInput(size, cellPx, padding, fen) {
                 detectTapGestures(onTap = { tap ->
@@ -168,11 +140,9 @@ fun GoBoard(
                     val dx = tap.x - (padding + col * cellPx)
                     val dy = tap.y - (padding + row * cellPx)
                     val tolerance = cellPx * 0.5f
-                    // Per-axis, not radial. roundToInt has already chosen the
-                    // nearest intersection, so the only job left is rejecting a
-                    // tap that landed outside the board. A radial test rejected
-                    // the corners of each cell too — the inscribed circle covers
-                    // pi/4 of a square, so about 21% of every cell was dead.
+                    // Per-axis, not radial: roundToInt already picked the
+                    // nearest intersection, and a radial test would leave the
+                    // corners of every cell dead.
                     if (abs(dx) > tolerance || abs(dy) > tolerance) return@detectTapGestures
                     val safeGame = game ?: return@detectTapGestures
                     if (!safeGame.isLegal(row, col)) return@detectTapGestures
@@ -285,11 +255,8 @@ fun GoBoard(
                     }
                 }
 
-                // Last-move marker: small red dot on top of the most recent
-                // stone. Red was chosen for legibility on both black and
-                // white stones — the web uses a coloured ring of the
-                // opposite stone tone, but the dot reads clearer at the
-                // tighter pixel densities phones produce.
+                // Last-move marker: a red dot reads on both stone colours (web
+                // uses a ring).
                 if (lastMove != null) {
                     val (lr, lc) = lastMove
                     // The stone check matters: lastMove is never cleared, so

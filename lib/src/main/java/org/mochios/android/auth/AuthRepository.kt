@@ -172,9 +172,8 @@ class AuthRepository @Inject constructor(
     }
 
     /**
-     * Begin a sign-in ceremony. Returns the provider URL to open and the
-     * return nonce to hold until the deep link comes back; the nonce is null
-     * against a server that does not send one.
+     * Begin a sign-in ceremony. Hold the returned nonce; it is null against a
+     * server that does not send one.
      */
     suspend fun beginOAuth(provider: String, scheme: String, challenge: String): OAuthBeginResponse {
         return authApi.oauthBegin(
@@ -184,16 +183,10 @@ class AuthRepository @Inject constructor(
     }
 
     /**
-     * Begin an OAuth flow that LINKS the provider identity to the
-     * already-authenticated user instead of starting a sign-in. The server
-     * needs a Bearer JWT for any of the user's apps; any settings/feeds/...
-     * token works since the JWT verification is core-level.
-     *
-     * The link is NOT written when the browser reaches the callback. Core
-     * stashes the provider profile and deep-links `mochi:oauth-link-return`;
-     * the link is written at [exchangeOAuthLink], against the verifier whose
-     * challenge is passed here plus this user's Bearer. Hold the verifier and
-     * the returned nonce until then.
+     * Begin an OAuth flow that links the provider identity to the current user.
+     * Any app's Bearer works - JWT verification is core-level. The link is
+     * written at [exchangeOAuthLink], not at the callback, so hold the verifier
+     * and nonce.
      */
     suspend fun beginOAuthLink(
         provider: String,
@@ -218,9 +211,8 @@ class AuthRepository @Inject constructor(
     }
 
     /**
-     * Complete a link ceremony: the verifier proves this is the app instance
-     * that began it, the Bearer proves which user it acts for, and the server
-     * attaches the identity only to that user. Returns the provider linked.
+     * Complete a link ceremony: the verifier proves the app instance, the
+     * Bearer the user. Returns the provider linked.
      */
     suspend fun exchangeOAuthLink(code: String, verifier: String, bearerToken: String): String {
         return authApi.oauthExchangeLink(

@@ -16,28 +16,10 @@ import androidx.work.WorkerParameters
 import java.util.concurrent.TimeUnit
 
 /**
- * Periodic safety net that restarts [PushService] if a hostile OEM
- * killed it.
- *
- * Background: Samsung One UI (and similar from Xiaomi / Huawei /
- * OnePlus / Oppo / Vivo) aggressively kills foreground services
- * ~10 min after the screen turns off, despite
- * FOREGROUND_SERVICE_TYPE_SPECIAL_USE. Empirically confirmed on
- * Samsung S24 Ultra: FOREGROUND_SERVICE_STOP fired 10 min after
- * the last user interaction. WorkManager is JobScheduler-backed
- * and OEMs honour it better than raw FG services, so this watchdog
- * fires on its 15-minute cadence (the platform minimum for
- * PeriodicWorkRequest) and re-launches PushService if needed.
- *
- * This raises the floor for non-whitelisted users but cannot
- * substitute for the OEM whitelist — under deep Doze the job
- * itself is deferred, so worst-case latency between an OEM kill
- * and our re-spawn is "next maintenance window," which can be
- * several hours.
- *
- * Idempotent: starting an already-running service is a no-op via
- * [PushService.start] (Context.startForegroundService just calls
- * onStartCommand again, which connect() guards with putIfAbsent).
+ * Periodic safety net that restarts [PushService] after an OEM kills it -
+ * Samsung and similar drop foreground services ~10 minutes after screen-off.
+ * WorkManager is honoured more reliably; 15 minutes is the platform minimum and
+ * deep Doze defers even that.
  */
 class PushServiceWatchdog(
     context: Context,
@@ -81,9 +63,7 @@ class PushServiceWatchdog(
         const val WORK_NAME = "mochi_push_watchdog"
 
         /**
-         * Schedule the watchdog. Call from the host Application's onCreate.
-         * Uses KEEP policy so reschedules from later Application starts
-         * don't reset the timer.
+         * Schedule the watchdog; call from the host Application's onCreate.
          */
         fun schedule(context: Context) {
             val request = PeriodicWorkRequestBuilder<PushServiceWatchdog>(

@@ -22,33 +22,9 @@ import com.github.bhlangonijr.chesslib.PieceType
 import com.github.bhlangonijr.chesslib.Side
 
 /**
- * One of the twelve chess piece glyphs ('K', 'Q', 'R', 'B', 'N', 'P' × white,
- * black) rendered as a single Unicode chess character.
- *
- * The web implementation hand-codes complex SVG bodies so the pieces stay
- * crisp at every zoom level; on Android the system font already includes the
- * Unicode chess range (U+2654..U+265F) at full vector quality, so a single
- * [Text] suffices. Using one [Text] keeps memory low — even a long game
- * keeps only 64 of these in the composition.
- *
- * For visibility on both light and dark board squares we pair each glyph
- * with a faint contrasting halo behind it. The white glyph (filled white
- * king/queen/etc.) is drawn over a dark halo so it stands out on light
- * squares; the black glyph gets a light halo for dark squares. This is the
- * Material-Symbols-style trick that the web SVGs achieve via stroke outlines.
- *
- * @param piece    The chesslib piece value (color + type). Pass
- *                 [Piece.NONE] only when you want the composable to render
- *                 nothing — it short-circuits.
- * @param fontSize Font size for the glyph. The board sizes this from the
- *                 square's measured dimensions so it always fills ~85% of
- *                 the square.
- * @param decorative When true, omit the accessibility content description.
- *                   Used by the captured-pieces strip where each glyph is
- *                   already announced as part of a parent semantics block.
- * @param contentDescription Explicit accessibility label; takes precedence
- *                           over the auto-generated "White pawn" / "Black
- *                           king" label.
+ * One piece as a Unicode chess glyph with a contrasting halo. [decorative]
+ * drops the content description (the captured strip announces its own);
+ * [contentDescription] overrides the default.
  */
 @Composable
 fun ChessPieceIcon(
@@ -63,14 +39,9 @@ fun ChessPieceIcon(
     val glyph = pieceGlyph(piece) ?: return
     val isWhite = piece.pieceSide == Side.WHITE
 
-    // The Unicode chess glyphs U+2654-2659 are white "outline" pieces and
-    // U+265A-265F are black "filled" pieces. Rendering both at the same
-    // typeface produces inconsistent weights on most Android fonts (the
-    // white pieces look skeletal next to the heavy black ones). We
-    // sidestep that by always rendering the *filled* black glyph and
-    // colouring it ourselves — white side gets a light fill with a dark
-    // border-style shadow, black side gets a dark fill with a light
-    // shadow.
+    // Always the filled (black) glyph, coloured per side: the outline white
+    // glyphs U+2654-2659 render far lighter than the filled ones on most
+    // Android fonts.
     val fillColor = if (isWhite) {
         Color(0xFFF8FAFC) // slate-50
     } else {
@@ -128,12 +99,8 @@ private fun pieceGlyph(piece: Piece): String? {
 }
 
 /**
- * Content description announced for an occupied square.
- *
- * The board passes neither `decorative` nor a description, so this is what a
- * TalkBack user hears for all sixty-four squares — and it used to build
- * "White pawn" from English literals, in every locale. Composed from the
- * translated piece nouns, matching the web's `White ${pieceName(type)}`.
+ * TalkBack label for an occupied square, composed from the translated piece
+ * nouns.
  */
 @Composable
 private fun defaultPieceContentDescription(piece: Piece): String {
@@ -146,11 +113,6 @@ private fun defaultPieceContentDescription(piece: Piece): String {
     return androidx.compose.ui.res.stringResource(template, name)
 }
 
-/**
- * Resolve a [PieceType] (color-agnostic) to its display label. Callers in a
- * composable scope should prefer this — it picks up the locale from
- * [androidx.compose.ui.res.stringResource].
- */
 @Composable
 fun pieceLabel(type: PieceType): String {
     // Inlined string resources for now — keep dependencies on the chess

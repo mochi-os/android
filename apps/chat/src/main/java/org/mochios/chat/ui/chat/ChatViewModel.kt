@@ -114,9 +114,8 @@ class ChatViewModel @Inject constructor(
     }
 
     /**
-     * Leave this chat (server-side; keeps it locally as a read-only tombstone),
-     * then reload so the conversation reflects its now-inactive state (composer
-     * disabled). Deleting locally stays a chat-settings action.
+     * Leave server-side (the chat stays locally as a read-only tombstone), then
+     * reload.
      */
     fun leaveChat() {
         viewModelScope.launch {
@@ -130,9 +129,8 @@ class ChatViewModel @Inject constructor(
     }
 
     /**
-     * Delete this chat from the local device (only offered once it's left/removed
-     * server-side). On success flag [ChatUiState.chatDeleted] so the screen can
-     * navigate away — the conversation no longer exists.
+     * Delete the local copy; only offered once the chat has been left or
+     * removed server-side.
      */
     fun deleteChat() {
         viewModelScope.launch {
@@ -169,10 +167,8 @@ class ChatViewModel @Inject constructor(
     }
 
     /**
-     * Move the read watermark to the latest message (server defaults `read` to
-     * the newest message's time). Fire-and-forget: the watermark is local-only,
-     * non-synced, and only moves forward, so failures are non-critical. Mirrors
-     * the web client marking a chat read on open / on each new message.
+     * Advance the read watermark to the newest message. Fire-and-forget: it
+     * only moves forward, so a failure is harmless.
      */
     private fun markRead() {
         viewModelScope.launch {
@@ -196,11 +192,9 @@ class ChatViewModel @Inject constructor(
                     id = { message -> message.id },
                     created = { message -> message.created },
                 )
-                // This runs on every inbound message, reaction and delete, so
-                // it must not discard the scrollback the reader paged in.
-                // Keep the older-end cursor too: it points below everything
-                // loaded, while the refetch's cursor points below only its own
-                // newest page, so adopting it would re-fetch pages already held.
+                // Runs on every inbound message, reaction and delete: keep the
+                // paged-in scrollback, and keep the older-end cursor - the
+                // refetch's only points below its own newest page.
                 val stitched = merged !== msgs.messages && held.isNotEmpty()
                 _uiState.value = _uiState.value.copy(
                     messages = merged,
@@ -300,9 +294,8 @@ class ChatViewModel @Inject constructor(
     }
 
     /**
-     * Debounced server-side message search (needs >=2 chars, matches web). The
-     * returned match ids drive the counter and up/down navigation; results are
-     * ordered newest-first so match 1 is the most recent hit.
+     * Debounced server-side search (2+ chars, as on web); match ids are
+     * newest-first so match 1 is the latest hit.
      */
     fun setSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query, searchMatchIndex = 0)

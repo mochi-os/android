@@ -50,19 +50,8 @@ import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
 
 /**
- * Renders the attachments shown beneath a comment body. Mirrors web's
- * `comment-attachments.tsx`:
- *
- *  - Image attachments: a [FlowRow] of 80dp-high thumbnails. Tapping any one
- *    opens an in-app fullscreen [LightboxScreen] swipeable across all images
- *    in the comment.
- *  - Non-image attachments: a vertical list of "icon - name (size)" rows.
- *    Tapping a row launches an `ACTION_VIEW` intent against the absolute
- *    download URL — the system picks an appropriate handler.
- *
- * Pulls the per-wiki `baseURL` from [LocalWikiContext] so attachment URLs are
- * always absolute even when this composable is rendered from a deep-link
- * route that hasn't loaded the wiki info yet.
+ * Attachments under a comment body: image thumbnails open the lightbox, other
+ * files open via `ACTION_VIEW`.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

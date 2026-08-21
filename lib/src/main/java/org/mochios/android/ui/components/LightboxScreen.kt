@@ -63,19 +63,9 @@ import coil3.compose.AsyncImagePainter
 import org.mochios.android.R
 
 /**
- * Fullscreen image lightbox: swipe between images, pinch-zoom each one,
- * swipe down (vertical pan when not zoomed in) to dismiss.
- *
- * Hosted in a `Dialog` so it sits above the whole UI without needing a
- * navigation entry. Use `onDismiss` to clear the surrounding open-state.
- *
- * The comments slot: given [comments], the top chrome carries a comments
- * button with the current image's [commentCount], and pressing it opens a
- * panel below the image showing whatever the caller composes for that
- * image - the app's own thread and composer, not something the lightbox
- * invents. Whether the panel is open is remembered per user across
- * lightboxes; [commentsInitiallyOpen] forces it open for one showing (a
- * comment's chip that opened the lightbox on its image).
+ * Fullscreen image lightbox: swipe between images, pinch-zoom, swipe down to
+ * dismiss. Hosted in a `Dialog`, so it needs no navigation entry. The comments
+ * panel's open state is remembered unless [commentsInitiallyOpen] forces it.
  */
 @Composable
 fun LightboxScreen(

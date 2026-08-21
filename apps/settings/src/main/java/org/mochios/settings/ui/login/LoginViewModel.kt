@@ -238,12 +238,8 @@ class LoginViewModel @Inject constructor(
     fun linkOAuth(provider: String) = requestStepUp { proof ->
         val token = sessionManager.getToken("settings")
             ?: throw RuntimeException("no settings token to authorise OAuth link")
-        // The verifier IS kept now, because the link has an exchange step to
-        // consume it: core stashes the provider profile at the callback and
-        // writes the link only when this app presents the verifier and its
-        // Bearer. Without holding it there is nothing tying the ceremony to
-        // this device, and the browser completing the callback could be
-        // anyone's - see core's oauth_mobile_link.
+        // The verifier is held for the exchange step: core writes the link only
+        // when this app presents it with its Bearer (core's oauth_mobile_link).
         val verifier = OAuthPkce.generateVerifier()
         val challenge = OAuthPkce.challengeFor(verifier)
         val begun = authRepository.beginOAuthLink(
@@ -261,11 +257,6 @@ class LoginViewModel @Inject constructor(
         _oauthLaunchUrl.value = begun.url
     }
 
-    /**
-     * Complete the link once the browser deep-links back. The exchange is
-     * where the link is actually written, so a return that never arrives
-     * leaves nothing attached - which is the point.
-     */
     private fun completeOAuthLink(code: String) {
         viewModelScope.launch {
             try {

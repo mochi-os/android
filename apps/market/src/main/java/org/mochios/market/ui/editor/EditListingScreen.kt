@@ -79,17 +79,6 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.ListingType
 import org.mochios.market.model.PricingModel
 
-/**
- * Listing editor — single screen handling both creation (route
- * `MarketApp.NEW_LISTING`, id = "new") and editing existing rows
- * (`MarketApp.LISTING_EDIT`).
- *
- * Mirrors `apps/market/web/src/features/listings/edit-listing.tsx`. Each
- * section is a [Section] card; the body is a vertically-scrolling column.
- * Auto-save is triggered by [EditListingViewModel] one second after the last
- * edit; the top app bar shows the save status (idle / saving / saved / error)
- * and an explicit Publish button is available at the foot.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EditListingScreen(
@@ -631,10 +620,9 @@ private fun SwitchRow(
 }
 
 /**
- * Stub for the shared `StripeOnboardingBanner` composable from `market/ui/
- * components/` while the parallel agent's version is in flight. Once the
- * shared composable lands, callers should drop this stub and import the
- * shared one (same signature: no parameters required).
+ * Local placeholder; the shared
+ * [org.mochios.market.ui.components.StripeOnboardingBanner] needs a repository
+ * and return URL this screen does not wire.
  */
 @Composable
 private fun StripeOnboardingBanner() {
@@ -659,10 +647,8 @@ private fun StripeOnboardingBanner() {
 }
 
 /**
- * Stub for the shared `FeePreview` composable. Renders a single-line
- * formatted price so the editor compiles before the shared composable
- * arrives. The real version (from the parallel agent) is signature-
- * compatible — no parameter rename required when the stub is removed.
+ * Local placeholder; the shared [org.mochios.market.ui.components.FeePreview]
+ * needs a repository this screen does not wire.
  */
 @Composable
 private fun FeePreview(
@@ -681,11 +667,6 @@ private fun FeePreview(
     )
 }
 
-/**
- * Decode the listing.location JSON blob into the [PlaceData] shape expected
- * by [PlacePicker]. Best-effort — returns null when the input is blank so
- * the picker shows its empty state.
- */
 private fun parseLocationToPlace(json: String): PlaceData? {
     if (json.isBlank()) return null
     return runCatching {

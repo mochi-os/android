@@ -62,41 +62,9 @@ import org.mochios.market.model.ListingType
 import org.mochios.market.model.PricingModel
 
 /**
- * Grid-cell card for a listing on browse / saved / search surfaces.
- *
- * Layout (top → bottom):
- *  - Square photo with overlays:
- *      - top row : [PricingPill] (non-fixed pricing model) on the left and
- *                  the colour-coded [ConditionOverlayBadge] on the right,
- *                  sharing one row — the condition stays full and the pill
- *                  ellipsizes into the remaining width so they never overlap.
- *      - bottom-left  : [OverlayIndicator] flagging a digital listing
- *                       (non-interactive — taps open the detail page).
- *      - bottom-right : save/bookmark toggle ([OverlayIconButton]).
- *  - Title (single line, ellipsis).
- *  - Price headline via [PriceDisplay].
- *  - A divider, then the seller row: [EntityAvatar] + name + an optional
- *    green verified tick.
- *  - Star rating with a `(N)` review count.
- *
- * Corner radius follows the user-configurable [LocalEntityRadius]. The card
- * is filled (no outline) so it lifts off the screen background the way the
- * web client's listing card does.
- *
- * @param saved         Whether this listing is in the saved list (drives the
- *                      bookmark icon's filled state).
- * @param sellerName    Display name; falls back to [Listing.sellerName].
- * @param sellerRating  0–5 rating; falls back to [Listing.sellerRating]
- *                      (stored as hundredths, normalised via [ratingStars]).
- * @param sellerReviews Review count; falls back to [Listing.sellerReviews].
- * @param sellerVerified Shows the green tick beside the seller; defaults on
- *                      when the listing reports the seller as onboarded.
- * @param category      Retained for source compatibility with existing call
- *                      sites; no longer rendered on the card face.
- * @param onClick       Tapped anywhere on the card — including the download
- *                      indicator, which is non-interactive and falls through
- *                      to here so a tap opens the listing detail.
- * @param onToggleSave  Tapped on the bookmark.
+ * Grid-cell listing card. Seller fields fall back to the [Listing]'s own values
+ * ([Listing.sellerRating] is in hundredths, normalised via [ratingStars]);
+ * [category] is unused.
  */
 @Composable
 fun ListingCard(
@@ -353,9 +321,8 @@ private fun ConditionOverlayBadge(condition: Condition, modifier: Modifier = Mod
 }
 
 /**
- * Material "extra small" icon-button footprint for the on-photo overlays
- * (32dp container / 20dp icon — material3 1.3.1 has no expressive size API,
- * so the dimensions are set explicitly).
+ * Material "extra small" icon button footprint; material3 1.3.1 has no size API
+ * for it.
  */
 private val OverlayButtonSize = 32.dp
 private val OverlayIconSize = 20.dp

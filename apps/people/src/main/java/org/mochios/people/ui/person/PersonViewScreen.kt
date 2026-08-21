@@ -65,19 +65,6 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
-/**
- * Read-only profile view of a person other than the current user.
- *
- * Banner + avatar + name + fingerprint + bio markdown render at the top; an
- * accent-tinted chip / banner edge applies the person's chosen accent colour.
- * The friendship-state pill drives the primary action set (Add / Accept-Decline
- * / "Friends" badge / "You" badge) and a Message button opens chat via
- * [onMessage].
- *
- * For private profiles where the current user isn't a mutual friend, the
- * body collapses to a single info card; the header (avatar + name) still
- * renders so the result doesn't look broken.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PersonViewScreen(

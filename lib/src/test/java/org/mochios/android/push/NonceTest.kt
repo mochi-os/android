@@ -11,11 +11,9 @@ import org.junit.Assert.assertNull
 import org.junit.Test
 
 /**
- * MainActivity is exported, so a `mochi:notification` intent can come from any
- * app or web page. What separates a real tap from a forged one is consuming a
- * nonce issued when the notification was posted, so these cover that the proof
- * is genuinely single use and cannot be satisfied by an absent or unknown
- * value.
+ * MainActivity is exported, so a `mochi:notification` intent can come from
+ * anywhere; the nonce issued when the notification was posted is what proves a
+ * real tap. These cover that it is single use.
  */
 class NonceTest {
 

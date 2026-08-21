@@ -30,24 +30,6 @@ import org.mochios.wikis.repository.JoinWikiResult
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for the wikis landing list. Mirrors the web `WikisListPage` body
- * in `apps/wikis/web/src/routes/_authenticated/index.tsx`:
- *
- *  - [wikis] is the user's mix of owned + subscribed wikis (owned has no
- *    [WikiInfo.source]; subscribed has a non-null source).
- *  - [recommendations] is the cold-start "Recommended wikis" rail driven by
- *    `-/recommendations`. We keep it loaded eagerly so the empty state can
- *    show it without an extra round-trip.
- *  - [searchQuery] / [searchResults] / [searchLoading] / [searchError] back
- *    the inline directory search exposed inside the empty state. Web debounces
- *    by 500 ms — the ViewModel does the same.
- *  - [subscribingId] / [unsubscribingId] disable per-row Subscribe /
- *    Unsubscribe buttons while a request is in flight, matching the web's
- *    `pendingWikiId` + mutation `isPending` flags.
- *  - Creating a wiki lives on its own screen ([CreateWikiScreen]); this
- *    ViewModel only lists and subscribes.
- */
 data class WikiListUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
@@ -67,12 +49,6 @@ data class WikiListUiState(
     val unsubscribeCandidate: WikiInfo? = null,
 )
 
-/**
- * Side-effect events emitted by the ViewModel. Mirrors People's `FriendsEvent`
- * pattern — the screen collects these and routes them to navigation /
- * snackbar / clipboard helpers without putting one-shot data into the
- * persistent UI state.
- */
 sealed class WikiListEvent {
     /** Show a transient string (already localised) in a snackbar. */
     data class Toast(val message: String) : WikiListEvent()
@@ -86,11 +62,6 @@ class WikiListViewModel @Inject constructor(
     sessionManager: SessionManager,
 ) : ViewModel() {
 
-    /**
-     * Server origin used to build RSS feed URLs (`${serverUrl}/wikis/-/rss?token=...`).
-     * Captured at construction time the same way People's `FriendsViewModel`
-     * captures `serverUrl` for avatar URLs.
-     */
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _uiState = MutableStateFlow(WikiListUiState())
@@ -187,14 +158,6 @@ class WikiListViewModel @Inject constructor(
 
     // ---------------- subscribe ----------------
 
-    /**
-     * Subscribe to a wiki referenced from a directory search hit.
-     *
-     * Web's `handleSubscribe` first tries with the server hint from the
-     * directory entry's `location`; if that fails with HTTP 502 (bad gateway
-     * — the requested server isn't reachable), it retries without the hint so
-     * the comptroller can pick a different replica. Mirrored here.
-     */
     fun subscribeFromSearch(entry: DirectoryEntry) {
         subscribe(target = entry.id.ifEmpty { entry.fingerprint }, server = entry.location)
     }
@@ -225,11 +188,8 @@ class WikiListViewModel @Inject constructor(
     }
 
     /**
-     * Two-pass subscribe: first with the caller-supplied server hint, then
-     * (only if we got back HTTP 502) with the hint stripped. Mirrors the web
-     * fallback in `find.tsx`'s `handleSubscribe` — a 502 means the directory's
-     * known server isn't currently reachable, so the comptroller (server=null)
-     * is asked to find any replica.
+     * Retries without the server hint on a 502: the directory's server is
+     * unreachable, so the local server falls back to peer discovery.
      */
     private suspend fun tryJoin(target: String, server: String?): Result<JoinWikiResult> {
         return try {
@@ -282,10 +242,8 @@ class WikiListViewModel @Inject constructor(
     // ---------------- RSS ----------------
 
     /**
-     * Mint a class-level RSS token for the requested [mode] (one of
-     * `"changes"`, `"comments"`, `"all"`) and return the absolute feed URL.
-     * Web's `handleCopyRssUrl` builds the same URL shape:
-     * `${origin}${appPath}/-/rss?token=...`.
+     * Mint a class-level RSS token and build its feed URL. [mode] is "changes",
+     * "comments" or "all".
      */
     suspend fun makeRssUrl(mode: String): Result<String> {
         return try {
@@ -296,13 +254,6 @@ class WikiListViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Set of wiki identifiers (both `id` and `fingerprint`) that the user is
-     * already subscribed to / owns. Used to filter the inline search results
-     * and the recommendations rail so we never offer a Subscribe button for a
-     * wiki that's already in the list. Mirrors `subscribedWikiIds` in
-     * `WikisListPage`.
-     */
     fun subscribedWikiIds(): Set<String> {
         val state = _uiState.value
         return state.wikis.flatMap { listOfNotNull(it.id.takeIf { v -> v.isNotEmpty() }, it.fingerprint) }

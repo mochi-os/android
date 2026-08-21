@@ -15,17 +15,6 @@ import org.mochios.words.ui.detail.WordsGameDetailScreen
 import org.mochios.words.ui.list.WordsGameListScreen
 import org.mochios.words.ui.newgame.NewWordsGameScreen
 
-/**
- * Route constants and helpers for the Words Android module.
- *
- * - [HOME] is the games-list landing page (`/words` in the web URL scheme).
- * - [GAME] is the detail screen for a single game (`/words/<gameId>`),
- *   where `gameId` is the game's `id`.
- *
- * Deep link `https://<host>/words/{gameId}` is registered so notification
- * payloads carrying a "/words/<id>" link route directly to the game
- * detail.
- */
 object WordsApp {
     const val HOME = "words"
     const val GAME = "words/{gameId}"

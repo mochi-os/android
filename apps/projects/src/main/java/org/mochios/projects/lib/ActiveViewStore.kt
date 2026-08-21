@@ -12,14 +12,9 @@ import javax.inject.Singleton
 import androidx.core.content.edit
 
 /**
- * Remembers which view the user last opened in each project, so reopening a
- * project lands on the board (or list) they were working in rather than on
- * whichever view happens to come first.
- *
- * SharedPreferences rather than DataStore: the value is one short id per
- * project, written only when the user picks a view, and read synchronously
- * while the project loads — an async read would let the default view render
- * first and then jump.
+ * Last-opened view per project. SharedPreferences, not DataStore: the read must
+ * be synchronous while the project loads, or the default view renders first and
+ * then jumps.
  */
 @Singleton
 class ActiveViewStore @Inject constructor(

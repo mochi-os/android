@@ -20,10 +20,8 @@ import javax.inject.Qualifier
 import javax.inject.Singleton
 
 /**
- * Qualifier for the Retrofit instance bound to the Go app's HTTP base
- * (`<server>/go/`). Mirrors the People / Chat / Wikis pattern so the module
- * coexists with other apps' Retrofits inside a single SingletonComponent
- * without colliding on base URL or per-app JWT.
+ * Qualifier for the Retrofit bound to `<server>/go/` with the go app's JWT, so
+ * it coexists with other apps' Retrofits.
  */
 @Qualifier
 @Retention(AnnotationRetention.BINARY)

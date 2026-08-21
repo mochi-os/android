@@ -49,18 +49,8 @@ import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.CategoryEditDialog
 
 /**
- * Staff Categories screen. Mirrors web's
- * `apps/staff/web/src/features/categories/categories-page.tsx`:
- *
- *  - Drawer-driven navigation via the parent [StaffLayout]'s [StaffSidebar].
- *  - Top-bar "Add" action (mounted at the StaffLayout level in StaffNavGraph)
- *    opens the create dialog.
- *  - Table-style list of every category with Name / Slug / Parent / Types /
- *    Position / Status columns, plus per-row Edit + Delete buttons.
- *  - Delete confirmation via lib's [ConfirmDialog].
- *
- * The dialog body itself lives in [CategoryEditDialog] (see the shared
- * dialog package) so both create and edit can be opened by the same shell.
+ * Port of `apps/staff/web/src/features/categories/categories-page.tsx`; the Add
+ * action is mounted at the route level in StaffNavGraph.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

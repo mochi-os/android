@@ -6,12 +6,8 @@
 package org.mochios.wikis.model
 
 /**
- * JSON body of `POST -/subscribe`.
- *
- * @property target Entity id or fingerprint of the wiki to subscribe to.
- * @property server Home-server hint from the directory hit. Omitted from the
- *   payload when null, which is what the two-pass subscribe retry (first with
- *   the hint, again without it on a 502) relies on for its second attempt.
+ * JSON body of `POST -/subscribe`. A null [server] is omitted from the payload
+ * - the retry after a 502 resends without the hint.
  */
 data class SubscribeRequest(
     val target: String,

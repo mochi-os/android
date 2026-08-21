@@ -34,19 +34,9 @@ import org.mochios.market.model.Auction
 import org.mochios.market.model.Currency
 
 /**
- * Place-bid dialog. Shows the current high bid (or starting price when
- * no bids exist yet), accepts a free-text amount, validates that it
- * exceeds the current high, then calls back with the minor-unit value.
- *
- * An optional "Maximum bid" field sets the proxy-bid ceiling: the
- * Comptroller automatically raises the bid by the smallest increment
- * needed to stay ahead, up to this maximum. When left blank, no ceiling
- * is sent and the bid is a plain one-shot bid.
- *
- * The dialog owns its own validation and submitting state; the network
- * call lives in [org.mochios.market.ui.listing.ListingDetailViewModel.placeBid].
- * An external error message ([errorMessage]) is rendered below the input
- * when the server rejects the bid (e.g. proxy-bid outbid, auction closed).
+ * The optional maximum is a proxy-bid ceiling: the Comptroller raises the bid
+ * by the smallest increment needed to stay ahead, up to it. Blank sends no
+ * ceiling.
  */
 @Composable
 fun PlaceBidDialog(

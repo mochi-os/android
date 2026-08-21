@@ -9,10 +9,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * The Mochi shell registers a UnifiedPush distributor itself, and the connector
- * returns installed distributors in PackageManager order with no preference for
- * the caller. Taking the first entry therefore routed a self-hosted user's
- * notifications through ntfy or NextPush whenever one of those sorted earlier.
+ * The UnifiedPush connector returns installed distributors in PackageManager
+ * order with no preference for the caller, so taking the first entry routes a
+ * self-hosted user through ntfy or NextPush when one sorts earlier.
  */
 class DistributorChoiceTest {
 

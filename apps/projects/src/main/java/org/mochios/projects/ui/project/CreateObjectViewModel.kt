@@ -23,22 +23,6 @@ import org.mochios.projects.model.ProjectView
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
 
-/**
- * State of the create-object screen.
- *
- * @property details the project's design — classes, hierarchy, fields and
- *   options.
- * @property objects every object in the project, for the parent picker.
- * @property activeView the view the user last opened, which decides the class
- *   the form starts on and whether a board column value is needed; null when
- *   they have never picked one.
- * @property isLoading true while the project's design is being fetched.
- * @property loadError what stopped the design from loading, if anything.
- * @property isCreating true while the create request is in flight.
- * @property createError what went wrong on the last create attempt, if anything.
- * @property createdObjectId set to the new object's id after a successful
- *   create so the screen can open it; cleared once consumed.
- */
 data class CreateObjectUiState(
     val details: ProjectDetails? = null,
     val objects: List<ProjectObject> = emptyList(),
@@ -62,10 +46,8 @@ class CreateObjectViewModel @Inject constructor(
     val projectId: String = savedStateHandle.get<String>("projectId") ?: ""
 
     /**
-     * Object the form opens with as the pre-selected parent, and whose class
-     * decides the class the form starts on. Set from an "Add child" affordance
-     * on an existing object; blank from the FAB, which leaves the picker to
-     * the user.
+     * Parent pre-selected by "Add child"; its class is the one the form starts
+     * on. Null from the FAB.
      */
     val presetParent: String? = savedStateHandle.get<String>("parent")
         ?.takeIf { id -> id.isNotBlank() }
@@ -123,11 +105,6 @@ class CreateObjectViewModel @Inject constructor(
         return details.options[classId]?.get(fieldId) ?: emptyList()
     }
 
-    /**
-     * Whether a preset field value can be applied when creating an object of
-     * [classId]: the field must exist on the class and, for enumerated fields,
-     * the value must be among that class's own options.
-     */
     fun usableValue(classId: String, fieldId: String, value: String): Boolean {
         val details = _uiState.value.details ?: return false
         val field = details.fields[classId]?.firstOrNull { candidate -> candidate.id == fieldId }

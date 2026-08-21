@@ -32,12 +32,8 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.crm.R
 
 /**
- * Inline attachments section, rendered inside PropertiesTab to match the
- * web's object-detail-panel layout (attachments embedded in Properties,
- * not a separate tab).
- *
- * Attachments are listed newest first, each rendered by [AttachmentGallery]
- * with a per-item delete affordance that opens a confirmation before removing.
+ * Inline attachments section inside PropertiesTab, matching the web's
+ * object-detail-panel (no separate tab).
  */
 @Composable
 fun AttachmentsSection(

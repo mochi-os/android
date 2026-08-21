@@ -20,12 +20,6 @@ import org.mochios.staff.model.StaffMember
 import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
-/**
- * UI state for [TeamScreen]. Mirrors web's `TeamPage` local state shape —
- * the loaded team list, the open Remove dialog state, and the per-member
- * "role updating" flag that gates the Select while the server processes the
- * change. Adding a member happens on [AddTeamMemberScreen].
- */
 data class TeamUiState(
     val members: List<StaffMember> = emptyList(),
     val isLoading: Boolean = false,
@@ -41,11 +35,6 @@ sealed interface TeamEvent {
     data class Error(val error: MochiError) : TeamEvent
 }
 
-/**
- * ViewModel for the Team screen. Owns the team list; role changes and
- * removals fire straight against [StaffRepository], and the screen renders
- * the optimistic pending flags.
- */
 @HiltViewModel
 class TeamViewModel @Inject constructor(
     private val repo: StaffRepository,

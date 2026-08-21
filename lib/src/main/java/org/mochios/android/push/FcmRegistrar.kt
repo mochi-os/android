@@ -23,17 +23,9 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
 /**
- * Per-server Firebase initialization. The Mochi server's admin pastes their
- * own Firebase project's config into system settings; the notifications app's
- * `push/setup` action returns it to the client; this class then initializes
- * the default [FirebaseApp] against it.
- *
- * We use the *default* FirebaseApp (rather than a named instance) because
- * FirebaseMessaging's per-instance accessor is package-private — the public
- * API only exposes FirebaseMessaging.getInstance() against the default
- * app. Switching to a different server tears down the existing FirebaseApp
- * and re-initializes with the new options, which is fine since a Mochi
- * user is only ever bound to one server at a time.
+ * Per-server Firebase initialization from the config `push/setup` returns. Uses
+ * the default [FirebaseApp] because FirebaseMessaging only exposes
+ * getInstance() against it; switching servers tears it down and re-initializes.
  */
 object FcmRegistrar {
 
@@ -46,15 +38,6 @@ object FcmRegistrar {
         val messagingSenderId: String,
     )
 
-    /**
-     * Initialize Firebase against the given config (no-op if already
-     * initialized with the same projectId), retrieve the FCM token, and
-     * register it with the Mochi server via the notifications app's
-     * push/register/fcm action.
-     *
-     * Returns true on success, false on any failure (caller can fall back
-     * to UnifiedPush).
-     */
     suspend fun connect(
         context: Context,
         client: OkHttpClient,
@@ -79,14 +62,9 @@ object FcmRegistrar {
     }
 
     /**
-     * Register (or refresh) the given FCM token with the Mochi server via the
-     * notifications app's push/register/fcm action. Resolves the Firebase
-     * Installations ID (the per-device dedup key) and device display name
-     * itself, so callers holding only a token — notably
-     * [MochiFirebaseMessagingService.onNewToken] — can reuse this path instead
-     * of duplicating the request.
-     *
-     * Returns true on success, false on any failure.
+     * Register or refresh an FCM token with the server, resolving the
+     * Installations ID and device name itself so
+     * [MochiFirebaseMessagingService.onNewToken] can reuse it.
      */
     suspend fun register(
         context: Context,
@@ -129,10 +107,8 @@ object FcmRegistrar {
     }
 
     /**
-     * Tear down on logout / server switch. The FCM token would remain
-     * deliverable on Google's side until explicitly deleted, so we both
-     * delete the token and tear down the default FirebaseApp so a later
-     * connect() to a different project starts clean.
+     * Tear down on logout / server switch. The token stays deliverable on
+     * Google's side until deleted, so drop it and the FirebaseApp too.
      */
     suspend fun disconnect(context: Context) {
         val app = try {

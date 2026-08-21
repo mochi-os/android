@@ -8,12 +8,8 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A buyer-on-seller (or seller-on-buyer) review attached to an order.
- *
- * Mirrors `Review` in `apps/market/web/src/types/reviews.ts`. `role` is
- * `"buyer"` or `"seller"` — the perspective of the reviewer. `response` is
- * the subject's reply (empty string if none). `visible` is 0/1 indicating
- * whether the review is publicly visible (moderation gate).
+ * Mirrors `Review` in web `types/reviews.ts`. `role` is the reviewer's side;
+ * `response` is the subject's reply; `visible` is the moderation gate.
  */
 data class Review(
     val id: String = "",

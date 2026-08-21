@@ -54,41 +54,10 @@ private val FILES = listOf("a", "b", "c", "d", "e", "f", "g", "h")
 private val RANKS = listOf("8", "7", "6", "5", "4", "3", "2", "1")
 
 /**
- * The 8×8 chess board. Mirrors `apps/chess/web/src/features/chess/components/chess-board.tsx`:
- *
- *  - Container-sized square — wrapped in [BoxWithConstraints] so the
- *    parent can pass in any rectangular bounds; the board fills the
- *    smaller of the two with a 1:1 aspect ratio.
- *  - Tap-to-select then tap-to-move input. Selecting your own piece
- *    highlights every legal target square; tapping a target submits
- *    [onMove]. Pawn-to-back-rank targets open a [PromotionDialog] first.
- *  - Orientation flips when [myColor] == `'b'` so Black plays with rank 1
- *    at the top.
- *  - Last-move highlight (faint yellow) on the `from`/`to` squares.
- *  - Check highlight (red) on the side-to-move's king square when in
- *    check — the side-to-move's king is the one actually under attack
- *    (chesslib's `isKingAttacked()` checks the side-to-move).
- *  - File/rank coordinate labels in the squares' corners — file letters
- *    along the bottom rank, rank numbers along the leftmost file. The
- *    labels respect [myColor] orientation.
- *
- * @param fen         Current position in FEN notation. The board is
- *                    re-derived from this on every render; chesslib's
- *                    `Board.loadFromFen` is cheap (~microseconds).
- * @param myColor     'w' or 'b' — which side the local player is. Drives
- *                    orientation, drag-source legality, and the
- *                    promotion-target row check.
- * @param isMyTurn    True iff `chess.turn() == myColor`. Disables square
- *                    taps when false (the player can't move on the
- *                    opponent's turn).
- * @param gameStatus  One of `"active" | "checkmate" | "stalemate" | "draw"
- *                    | "resigned"`. Only `"active"` accepts input.
- * @param onMove      Fired when the user has chosen a complete move
- *                    (selection + target, plus promotion code if it was
- *                    a back-rank pawn move).
- * @param lastMove    Most-recent move's from/to squares. Highlighted in
- *                    faint yellow so the user can see what the opponent
- *                    just played.
+ * 8x8 board, mirroring the web's `chess-board.tsx`: tap to select, tap to move,
+ * promotion via [PromotionDialog]; flipped for Black; last-move and check
+ * highlights. Input only when [isMyTurn] and [gameStatus] is `active`. The
+ * board is rebuilt from [fen] on every change.
  */
 @Composable
 fun ChessBoard(
@@ -379,11 +348,8 @@ private fun BoardSquare(
 }
 
 /**
- * Stand-in for a position that cannot be rendered. Deliberately a surface
- * rather than a thrown exception: the header's resign and delete actions sit
- * outside this composable, so leaving the rest of the screen alive is what lets
- * the user get out of a game whose row a peer has corrupted. The web makes the
- * same call, with a comment noting that throwing here crash-looped the view.
+ * Shown for a position that cannot be rendered. A surface, not a throw: the
+ * header's resign and delete actions stay reachable.
  */
 @Composable
 private fun CorruptPosition(modifier: Modifier = Modifier) {

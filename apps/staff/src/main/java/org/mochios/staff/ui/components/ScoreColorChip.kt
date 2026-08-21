@@ -17,22 +17,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 /**
- * Pill-shaped score chip used by the listings and moderation tables.
- *
- * Mirrors the web `scoreColor` helper in
- * `apps/staff/web/src/features/listings/listings-page.tsx`:
- *
- *   - `< 30`  -> green  (low score = safe)
- *   - `< 70`  -> yellow (review threshold)
- *   - `>= 70` -> red    (held for review / high-risk)
- *
- * The Comptroller's scoring is monotone (low = safe, high = risky), so a
- * higher number is *worse* and surfaces in the warmer half of the palette.
- *
- * Tones lean on `MaterialTheme.colorScheme` containers where possible so the
- * chip follows the active Mochi theme. The yellow band has no first-class
- * Material container, so it falls back to a hand-tuned amber that reads on
- * both light and dark surfaces.
+ * Score chip mirroring web's `scoreColor`: higher score = riskier. The middle
+ * band uses a fixed amber because Material has no matching container colour.
  */
 @Composable
 fun ScoreColorChip(score: Int, modifier: Modifier = Modifier) {

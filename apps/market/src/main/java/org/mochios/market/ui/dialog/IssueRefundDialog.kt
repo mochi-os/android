@@ -48,11 +48,8 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.Refund
 
 /**
- * Reason options the dialog presents in the dropdown. The first element
- * is the wire value; the second is a string resource id for the
- * localised label. Stripe's `requested_by_customer` / `fraudulent` /
- * `duplicate` are accepted by the comptroller for partial-refund
- * routing.
+ * The first three are Stripe's refund reason codes, passed through by the
+ * comptroller.
  */
 private val SELLER_REFUND_REASONS = listOf(
     "requested_by_customer" to R.string.market_refund_dialog_reason_requested,
@@ -61,18 +58,6 @@ private val SELLER_REFUND_REASONS = listOf(
     "other" to R.string.market_refund_dialog_reason_other,
 )
 
-/**
- * Issue-refund dialog. Reason dropdown, optional partial-amount field
- * (blank = full refund), description textarea. Submits via the host
- * screen's ViewModel.
- *
- * @param priorRefundedAmount If the order was already partially refunded,
- *                            shown as an informational note above the form.
- * @param priorRefunds Per-refund history (one row per past partial). When
- *                    non-empty a "Previous refunds" section renders above
- *                    the form with amount, kind, date and optional reason
- *                    / description for each row.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun IssueRefundDialog(
@@ -221,11 +206,6 @@ fun IssueRefundDialog(
     )
 }
 
-/**
- * "Previous refunds" section rendered above the form when prior partial
- * refunds exist on the order. One row per refund: amount + kind + date on
- * the top line, optional reason / description underneath.
- */
 @Composable
 private fun PriorRefundsSection(refunds: List<Refund>, currency: Currency) {
     val format = LocalFormat.current

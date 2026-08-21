@@ -46,10 +46,8 @@ data class ForumUiState(
 )
 
 /**
- * One-shot side effects emitted by [ForumViewModel]. Navigation stays on the
- * composable side, so this channel only carries results the ViewModel produces
- * asynchronously — an RSS URL ready for the clipboard, a finished unsubscribe,
- * and transient errors.
+ * One-shot side effects from [ForumViewModel]; navigation stays on the
+ * composable side.
  */
 sealed class ForumEvent {
 
@@ -113,13 +111,9 @@ class ForumViewModel @Inject constructor(
     }
 
     /**
-     * Pull the list in as soon as this user posts to the forum on screen, so the
-     * composer closes onto a list that already has the post.
-     *
-     * The create call can return before the post is visible to the list query,
-     * so [awaitingOwnPost] keeps the door open for the `post/create` socket event
-     * that follows — otherwise the author's own post sits behind the "new posts"
-     * pill, waiting for a tap.
+     * Refresh as soon as this user posts to the forum on screen. The create
+     * call can return before the list query sees the post, so [awaitingOwnPost]
+     * lets the following `post/create` event refresh instead of counting.
      */
     private fun observeOwnPosts() {
         viewModelScope.launch {
@@ -151,11 +145,8 @@ class ForumViewModel @Inject constructor(
         if (forumKey.isBlank() || subscriptionId != null) return
         val serverUrl = sessionManager.getServerUrlBlocking()
         subscriptionId = webSocket.subscribe(serverUrl, forumKey) { event ->
-            // A brand-new post is queued behind the "new posts" pill so the list
-            // doesn't shift under the reader; everything else (edits, deletes,
-            // comments, votes, tags) mutates already-visible items, so refresh
-            // silently. A refresh incorporates any queued posts and clears the
-            // pill (see refreshSilently).
+            // New posts queue behind the pill so the list doesn't shift;
+            // everything else mutates visible items, so refresh silently.
             if (event.type == "post/create") {
                 // The user's own post shouldn't hide behind a pill they'd have to
                 // tap. It arrives here when the create response beat the list
@@ -203,12 +194,6 @@ class ForumViewModel @Inject constructor(
         viewModelScope.launch { refreshSilently() }
     }
 
-    /**
-     * Silently reload the forum when the screen returns to the foreground — e.g.
-     * after saving a new banner in forum settings — so the change shows on
-     * return without a manual pull-to-refresh. The aggregate "all" view has no
-     * per-forum banner, so it's skipped.
-     */
     fun reloadOnForeground() {
         if (isAll || forumId.isBlank()) return
         viewModelScope.launch { refreshSilently() }
@@ -313,11 +298,10 @@ class ForumViewModel @Inject constructor(
             try {
                 val r = repository.viewForum(forumId, before = cursor, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
-                    // Pinned posts repeat on every page, and paging on a
-                    // `created` cursor while ordering by score repeats any
-                    // earlier post that falls below it. Appended bare those
-                    // become duplicate LazyColumn keys, which Compose throws
-                    // on rather than rendering.
+                    // Pinned posts repeat on every page and score ordering on a
+                    // `created` cursor repeats earlier posts; duplicate ids
+                    // would be duplicate LazyColumn keys, which Compose throws
+                    // on.
                     posts = appendDistinct(_uiState.value.posts, r.posts) { it.id },
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
@@ -330,12 +314,10 @@ class ForumViewModel @Inject constructor(
     }
 
     /**
-     * Persist the chosen [sort] server-side, then reload with it. The aggregate
-     * has no forum entity of its own, so it writes the class-level default
-     * (`-/sort/set`) that the `-/list` endpoint reads back; a single forum
-     * writes its own override. Persisting either way is what keeps the choice
-     * from resetting when the user switches forums in the drawer, since each
-     * forum gets a fresh ViewModel that re-reads the sort from the server.
+     * Persist [sort] server-side, then reload. The aggregate writes the
+     * class-level default that `-/list` reads back; a forum writes its own
+     * override. Each forum gets a fresh ViewModel that re-reads the sort, so an
+     * unpersisted choice would reset on switching.
      */
     fun setSort(sort: String) {
         viewModelScope.launch {
@@ -362,11 +344,10 @@ class ForumViewModel @Inject constructor(
         if (isAll) return
         viewModelScope.launch {
             try {
-                // Await the tags BEFORE reading the state to copy from. Inline as
-                // a copy() argument the receiver `_uiState.value` is evaluated
-                // first, so a tag fetch that lands after the post fetch writes
-                // back the pre-load snapshot and strands the screen on its
-                // loading spinner.
+                // Await before reading the state to copy from: as a copy()
+                // argument the receiver `_uiState.value` is captured before the
+                // suspend, and a late tag fetch would write back the pre-load
+                // snapshot.
                 val tags = repository.getForumTags(forumId)
                 _uiState.value = _uiState.value.copy(tags = tags)
             } catch (_: Exception) {
@@ -405,12 +386,9 @@ class ForumViewModel @Inject constructor(
     }
 
     /**
-     * Mint an RSS token in [mode] (`"posts"` for posts only, `"all"` for posts
-     * and comments) and emit the subscription URL for the screen to place on
-     * the clipboard. The "All forums" aggregate tokenises the `*` entity and
-     * uses the class-level feed; a single forum uses its own. The server
-     * returns the absolute URL; older servers only return the token, so fall
-     * back to assembling it against the bound server origin.
+     * Mint an RSS token in [mode] (`"posts"` or `"all"`) and emit the URL for
+     * the clipboard; the aggregate tokenises the `*` entity. Older servers
+     * return only the token, so fall back to assembling the URL.
      */
     fun copyRssUrl(mode: String) {
         if (forumId.isBlank()) return
@@ -431,9 +409,8 @@ class ForumViewModel @Inject constructor(
     }
 
     /**
-     * Fetch the forum's `mochi://<peer>/<forum>` link and hand it to the screen
-     * for the system share sheet. The server assembles the link, so the peer id
-     * never has to be resolved client-side.
+     * Fetch the forum's `mochi://<peer>/<forum>` share link; the server
+     * assembles it.
      */
     fun shareLink() {
         if (forumId.isBlank()) return

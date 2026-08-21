@@ -15,13 +15,8 @@ import javax.inject.Singleton
 import androidx.core.content.edit
 
 /**
- * Local-only record of which chats the user has pinned. The server has no pin
- * concept, so pins live entirely on this device: they persist across restarts
- * via SharedPreferences and surface reactively through [pinned].
- *
- * Chats are keyed by their navigation id (`fingerprint`, or `id` when the
- * fingerprint is blank) so the same key resolves from both the conversation
- * screen and the drawer chat list.
+ * Device-local pins (the server has no pin concept), keyed by [chatKey] so the
+ * list and the conversation agree.
  */
 @Singleton
 class PinnedChatsStore @Inject constructor(

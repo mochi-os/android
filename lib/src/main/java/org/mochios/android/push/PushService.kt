@@ -41,27 +41,10 @@ import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
 /**
- * Foreground service that hosts the Mochi UnifiedPush distributor on a
- * device that has chosen "Mochi" as its distributor.
- *
- * Lifecycle:
- *   - Started by the shell app (org.mochios.mochi) on launch and after
- *     boot via [BootReceiver].
- *   - Holds one [MochiWebSocket] subscription per active Mochi identity,
- *     keyed by the well-known channel "unifiedpush" (matches the Go-side
- *     fast-path in `account_deliver_unifiedpush`).
- *   - On incoming `{subId, payload}` events, looks up the matching
- *     subscription in [DistributorStore] and broadcasts a UnifiedPush
- *     MESSAGE intent to the registered App package.
- *
- * v1 limitations:
- *   - Subscribes to a single (first) identity. Multi-identity multiplexing
- *     across multiple Mochi servers is the natural next refinement —
- *     iterate `MochiAccount.all()` and subscribe per server, with
- *     `accountsFlow` rebinding when identities change.
- *   - Foreground notification text is fixed English; should be replaced
- *     with a localised string resource once the shell's strings.xml
- *     gains a `push_service_running` entry.
+ * Foreground service hosting the Mochi UnifiedPush distributor. Holds one
+ * WebSocket subscription per Mochi identity on the `unifiedpush` channel and
+ * broadcasts each incoming `{subId, payload}` as a MESSAGE intent to the
+ * registered app.
  */
 @AndroidEntryPoint
 class PushService : Service() {
@@ -75,12 +58,10 @@ class PushService : Service() {
 
     private val store by lazy { DistributorStore(applicationContext) }
 
-    // identity → subscriptionId. ConcurrentHashMap so reconcile() can claim
-    // a slot atomically via putIfAbsent — onStartCommand can fire reentrantly
-    // (Hilt re-init, system restarts, accountsFlow emissions) and we'd
-    // otherwise register the same callback twice and dispatch each push N
-    // times. Keyed by identity (not server) because two accounts can live on
-    // the same server with different user tokens.
+    // identity -> subscriptionId. ConcurrentHashMap so reconcile() can claim a
+    // slot with putIfAbsent: onStartCommand fires reentrantly and a double
+    // claim dispatches every push twice. Keyed by identity, since two accounts
+    // can share a server.
     private val subscriptions = java.util.concurrent.ConcurrentHashMap<String, String>()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private var accountsJob: Job? = null
@@ -91,17 +72,10 @@ class PushService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        // Always promote to the foreground first. Android requires
-        // startForeground() within ~5s of every startForegroundService() call —
-        // even on paths where we immediately stop — or it raises
-        // ForegroundServiceDidNotStartInTimeException. Then decide whether to stay:
-        //
-        // FCM users (and system-driven STICKY restarts, where intent is null so we
-        // can't gate off it — we read the cached PushTransport.current instead)
-        // don't want the UnifiedPush distributor running or its "listening for
-        // notifications" notification lingering, so we remove it and stop. A
-        // UnifiedPush start also races recordTransport(), so onStartCommand can
-        // legitimately still read transport=fcm here.
+        // Promote to the foreground first: Android raises
+        // ForegroundServiceDidNotStartInTimeException unless startForeground()
+        // follows every startForegroundService() within ~5s, even on paths that
+        // stop immediately.
         startForegroundCompat()
         if (PushTransport.current(applicationContext) == PushTransport.TRANSPORT_FCM) {
             Log.i(TAG, "onStartCommand: transport=fcm; stopping self")
@@ -135,14 +109,8 @@ class PushService : Service() {
     override fun onBind(intent: Intent?): IBinder? = null
 
     /**
-     * Multiplex subscriptions across the current set of Mochi identities.
-     *
-     * For each account not yet subscribed → connect.
-     * For each existing subscription whose identity has disappeared → drop.
-     *
-     * Safe to call concurrently and reentrantly: the per-identity slot
-     * claim uses putIfAbsent, so a second caller observing the same account
-     * set won't double-subscribe.
+     * Multiplex subscriptions across the current Mochi identities: connect new
+     * ones, drop vanished ones. Safe to call concurrently and reentrantly.
      */
     private fun reconcile(accounts: List<MochiAccount.Snapshot>) {
         if (accounts.isEmpty()) {
@@ -179,12 +147,9 @@ class PushService : Service() {
         scope.launch {
             var sid: String? = null
             try {
-                // The shell process has no SessionManager-backed login, so
-                // the OkHttpClient cookie jar is empty. Mint a JWT against
-                // the session cookie we read from the cross-app MochiAccount
-                // and pass it on the WebSocket URL — the server accepts a
-                // `token` query parameter as an alternative to the session
-                // cookie.
+                // The shell process has no login, so the cookie jar is empty.
+                // Mint a JWT from the cross-app MochiAccount session cookie and
+                // pass it as the WebSocket's `token` query parameter.
                 val token = mintToken(account.server, account.session)
                 if (token == null) {
                     Log.w(
@@ -203,11 +168,9 @@ class PushService : Service() {
                     token = token,
                 ) { event -> handleEvent(event, account.server, token) }
                 subscriptions[account.identity] = sid
-                // Drain anything queued while we were offline. The server queues
-                // events whenever the live WS push had no subscriber (phone
-                // killed, Doze drop, transient network). Drained events go
-                // through the same dispatch path as live ones so per-app
-                // receivers see them as ordinary pushes.
+                // Drain what the server queued while no subscriber was live
+                // (killed phone, Doze, network). Drained events take the live
+                // dispatch path.
                 drainPending(account.server, token)
             } finally {
                 // If we didn't get to a real subscription id, drop the
@@ -258,12 +221,9 @@ class PushService : Service() {
         val subId = event.subId ?: return
         val payload = event.payload ?: return
         dispatchPush(subId, payload)
-        // Ack so the matching push_pending row is removed server-side. The
-        // server includes `account` (the opaque accounts.id, a string uid) on
-        // the WS envelope specifically for this — subId alone is the random
-        // subscription token and can't identify the queue row. Without
-        // account we silently skip the ack and the row stays until the
-        // 7-day TTL sweep.
+        // Ack so the server drops the push_pending row. `account` identifies
+        // it; subId is only the subscription token. Without it the row waits
+        // for the TTL sweep.
         val account = event.account?.takeIf { it.isNotBlank() } ?: return
         val eventId = extractTag(payload) ?: return
         scope.launch { ackEvent(server, token, account, eventId) }
@@ -285,12 +245,9 @@ class PushService : Service() {
     }
 
     /**
-     * GET /notifications/-/push/drain → dispatch each queued event and ack in one batch.
-     *
-     * Fires once after every successful WS subscribe. The drain itself is
-     * read-only on the server, and the ack is a separate POST with the list
-     * of (account, event_id) pairs we delivered — so a crash mid-drain leaves
-     * the rows in place and we'll see them again on the next subscribe.
+     * Dispatch and ack everything queued at `/notifications/-/push/drain`, once
+     * per successful subscribe. The ack is a separate POST, so a crash
+     * mid-drain leaves the rows for the next subscribe.
      */
     private fun drainPending(server: String, token: String) {
         val url = server.trimEnd('/') + "/notifications/-/push/drain"
@@ -371,13 +328,10 @@ class PushService : Service() {
             android.app.PendingIntent.getActivity(this, 0, it, pendingFlags)
         }
 
-        // Hide action → opens this channel's notification settings (scoped to
-        // mochi_push_service only), so the user toggling 'Show notifications'
-        // off there silences just this listening notification and leaves the
-        // per-app push channels (Feeds / Chat / Forums / Projects) alone.
-        // Critical that users discover *this* path rather than swipe-to-dismiss,
-        // which on Samsung pops a "Turn off ALL notifications from this app?"
-        // dialog and would kill the per-app channels too.
+        // Hide action opens this channel's settings, so switching it off
+        // silences only this notification. Swipe-to-dismiss on Samsung offers
+        // to turn off all of the app's notifications, taking the per-app push
+        // channels with it.
         val hideIntent =
             android.content.Intent(android.provider.Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
                 .putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, packageName)
@@ -390,11 +344,9 @@ class PushService : Service() {
             .setContentTitle(getString(org.mochios.android.R.string.push_service_title))
             .setSmallIcon(org.mochios.android.R.drawable.ic_mochi_notification)
             .setPriority(androidx.core.app.NotificationCompat.PRIORITY_MIN)
-            // Mark this as a service-status notification so Android groups it
-            // with other background-activity notices in the shade and in DND
-            // / per-app filters — keeps it visually and semantically distinct
-            // from the per-app push channels (feeds / chat / forums / projects)
-            // so hiding it via the channel toggle doesn't ripple into them.
+            // CATEGORY_SERVICE groups this with other background-activity
+            // notices in the shade and in DND filters, apart from the per-app
+            // push channels.
             .setCategory(Notification.CATEGORY_SERVICE)
             .setOngoing(true)
             .apply {
@@ -419,15 +371,10 @@ class PushService : Service() {
 
     private fun ensureChannel() {
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-        // Group goes in first — channel.group references it. The pair surfaces
-        // the FG-service channel under a 'Background service' header in Android
-        // settings, well away from the per-app channels (Feeds / Chat / Forums
-        // / Projects) that live ungrouped. Disabling the FG channel is then
-        // visually clearly distinct from disabling a feature's notifications.
-        // Both calls are idempotent on (group_id, channel_id), and calling
-        // createNotificationChannel on an existing channel updates the
-        // non-user-locked fields (including `group`) — important for installs
-        // upgraded from a build that didn't have the group yet.
+        // Group first: the channel references it. Both calls are idempotent,
+        // and re-creating an existing channel updates its non-user-locked
+        // fields, so an install upgraded from a build without the group picks
+        // it up.
         nm.createNotificationChannelGroup(
             android.app.NotificationChannelGroup(
                 CHANNEL_GROUP_ID,
@@ -470,27 +417,17 @@ class PushService : Service() {
         }
 
         /**
-         * Stop the UP distributor service. Used by [PushTransport] when the
-         * server has FCM configured — we don't want the FG service running
-         * (and the "listening for notifications" status notification it
-         * implies) when FCM is doing the delivery.
+         * Stop the distributor service; [PushTransport] calls this when the
+         * server has FCM configured.
          */
         fun stop(context: android.content.Context) {
             context.stopService(Intent(context, PushService::class.java))
         }
 
         /**
-         * Drop the signed-in identity's push account server-side via
-         * `/notifications/-/accounts/remove`, so neither FCM nor UnifiedPush
-         * keeps delivering to this device after sign-out. The `id` it takes is
-         * the `accounts.id` uid the server handed back at registration — the
-         * identity is not accepted here.
-         *
-         * Call *before* clearing the session: the request carries the
-         * notifications app token, which can no longer be minted once
-         * [org.mochios.android.auth.SessionManager.clearAll] has run. A failure
-         * is logged and swallowed — a server that never got the removal must
-         * not wedge sign-out.
+         * Drop this device's push account server-side so delivery stops after
+         * sign-out. Call before clearing the session - the request needs a
+         * notifications app token. Failures are logged and swallowed.
          */
         suspend fun removeAccount(context: android.content.Context) {
             val deps = EntryPointAccessors.fromApplication(

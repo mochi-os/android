@@ -121,25 +121,9 @@ import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.android.R as MochiR
 
 /**
- * Per-page attachments management screen. Mirrors web's
- * `apps/wikis/web/src/features/wiki/attachments-page.tsx`:
- *
- *  - TopAppBar with back arrow, "Attachments" title, and "N files (X images,
- *    Y documents)" subtitle.
- *  - Action row with an Upload button that launches the system file picker.
- *  - Sticky toolbar with search, filter dropdown, sort dropdown, and a
- *    grid/list view toggle.
- *  - Filtered + sorted body rendered as either a 3-column [LazyVerticalGrid]
- *    or a vertical [LazyColumn].
- *  - Tap an image to open it in the shared [LightboxScreen] (paginated
- *    through every image in the filtered list). Tap a document to enqueue
- *    it with [DownloadManager] — Android handles the rest.
- *  - Long-press a grid cell to surface a per-tile action menu (Copy embed /
- *    Delete) because hover doesn't exist on touch.
- *
- * Wraps the body in a [LocalWikiContext] provider so the markdown content
- * helpers and download-URL builders can resolve `${baseURL}attachments/<id>`
- * without each one having to be threaded a `serverUrl + wikiId` pair.
+ * Per-page attachments screen: upload, search / filter / sort, grid or list.
+ * Provides [LocalWikiContext] so children can build
+ * `${baseURL}attachments/<id>` URLs.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -313,12 +297,6 @@ fun AttachmentsScreen(
     }
 }
 
-/**
- * Top bar with back arrow, "Attachments" title and a localised subtitle of
- * the form "N files (X images, Y documents)". Uses [pluralStringResource]
- * for each count so single/plural English forms and other-language forms
- * resolve correctly per locale.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AttachmentsTopBar(
@@ -367,11 +345,6 @@ private fun AttachmentsTopBar(
     )
 }
 
-/**
- * The main body once the wiki context is available. Holds the action row,
- * sticky toolbar, and the grid/list switch — plus the inline lightbox state
- * for tapping an image attachment.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AttachmentsBody(
@@ -531,12 +504,6 @@ private fun AttachmentsBody(
     }
 }
 
-/**
- * Search field, filter dropdown, sort dropdown, and grid/list toggle. Web's
- * equivalent flex-wraps everything onto a single line; on phones we keep the
- * search bar full-width on top and the three controls on a single row
- * underneath.
- */
 @Composable
 private fun AttachmentsToolbar(
     searchQuery: String,
@@ -718,11 +685,6 @@ private fun ViewModeToggle(
     }
 }
 
-/**
- * 3-column grid view. Each cell is an [AttachmentGridCell] — tap to open the
- * lightbox (images) or enqueue a download (documents); long-press to surface
- * the per-tile Copy embed / Delete menu.
- */
 @Composable
 private fun AttachmentsGrid(
     attachments: List<Attachment>,
@@ -811,11 +773,6 @@ private fun AttachmentsList(
     }
 }
 
-/**
- * A single grid cell: thumbnail (or file icon), name, size, and a small
- * actions menu surfaced via long-press. Tap opens (lightbox / download)
- * depending on type.
- */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun AttachmentGridCell(
@@ -1087,11 +1044,6 @@ private fun AttachmentListRow(
 /** Mirror of web's `isImage(type)` helper. */
 private fun isImage(mime: String): Boolean = mime.startsWith("image/")
 
-/**
- * Pick a sensible Material icon based on the attachment MIME type. Mirrors
- * the limited mapping web uses via `getFileIcon` — image / pdf / doc fall
- * through to the catch-all file icon when nothing else matches.
- */
 private fun iconForType(mime: String): ImageVector {
     val lower = mime.lowercase()
     return when {
@@ -1105,11 +1057,6 @@ private fun iconForType(mime: String): ImageVector {
     }
 }
 
-/**
- * Build the markdown snippet for a copy-embed action. Mirrors the snippet
- * built by web's `handleCopy` — images become `![name](attachments/id)` and
- * everything else becomes `[name](attachments/id)`.
- */
 private fun buildMarkdown(attachment: Attachment): String {
     val url = "attachments/${attachment.id}"
     return if (isImage(attachment.type)) {
@@ -1119,11 +1066,6 @@ private fun buildMarkdown(attachment: Attachment): String {
     }
 }
 
-/**
- * Apply the search filter, type filter, and sort-by from the toolbar to the
- * raw attachment list. Pure function so the screen can re-compute the
- * derived view with a single `remember` keyed on the inputs.
- */
 private fun filterAndSort(
     attachments: List<Attachment>,
     searchQuery: String,
@@ -1150,11 +1092,9 @@ private fun filterAndSort(
 }
 
 /**
- * Hand a non-image attachment off to Android's [DownloadManager]. Notification
- * is shown on completion; the Authorization header is set inline so the
- * server's wikis auth middleware accepts the request even though
- * DownloadManager runs outside the app process and has no access to the
- * normal interceptor stack.
+ * Hand an attachment to [DownloadManager]. The Authorization header is set
+ * inline: DownloadManager runs outside the app process and never sees the
+ * interceptor stack.
  */
 private fun startAttachmentDownload(
     context: Context,
@@ -1181,9 +1121,8 @@ private fun startAttachmentDownload(
 }
 
 /**
- * DownloadManager rejects names containing path separators or NULs. Replace
- * anything unsafe with an underscore so the destination filename always
- * lands directly under DIRECTORY_DOWNLOADS.
+ * DownloadManager rejects names with path separators, so replace anything
+ * unsafe with an underscore.
  */
 private fun sanitiseFilename(name: String): String {
     val trimmed = name.trim()

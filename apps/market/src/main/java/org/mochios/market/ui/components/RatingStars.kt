@@ -28,15 +28,6 @@ import org.mochios.market.R
 /** Gold fill for rating stars, shared across listing cards and review lists. */
 internal val RatingStarGold = Color(0xFFFBBF24)
 
-/**
- * Five-star rating display with half-star precision.
- *
- * @param rating  Float in `[0, 5]`. Rounded to the nearest half-star.
- * @param count   Number of reviews used in the optional `(N reviews)` suffix.
- * @param showCount Whether to append the count suffix.
- * @param size    Icon size for each star.
- * @param tint    Star colour; defaults to the theme primary.
- */
 @Composable
 fun RatingStars(
     rating: Float,

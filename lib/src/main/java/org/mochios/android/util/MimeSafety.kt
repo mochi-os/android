@@ -9,12 +9,9 @@ package org.mochios.android.util
 const val OPAQUE_MIME = "application/octet-stream"
 
 /**
- * Types we are willing to hand to `ACTION_VIEW` for a peer-supplied file.
- *
- * An allowlist rather than a blocklist: the set of handlers that will act on a
- * type is open-ended and platform-defined, so enumerating the dangerous ones is
- * a race we lose. Anything outside this becomes [OPAQUE_MIME], which still
- * opens a chooser for genuine documents but matches no installer.
+ * Types we will hand to `ACTION_VIEW` for a peer-supplied file. An allowlist:
+ * the set of handlers that act on a type is open-ended, so enumerating the
+ * dangerous ones cannot be complete.
  */
 private val SAFE_PREFIXES = listOf("image/", "video/", "audio/", "text/")
 
@@ -37,21 +34,10 @@ private val SAFE_TYPES = setOf(
 )
 
 /**
- * Reduce [candidate] to a type that is safe to view.
- *
- * The MIME of an attachment is attacker-controlled end to end: the server's
- * attachments library reads it from the multipart `Content-Type` header with
- * no allowlist, and its `attachment_store` copies it from the peer
- * length-bounded but type-unvalidated, so a file
- * shared into a chat, forum, feed, project or CRM board arrives carrying
- * whatever type its sender chose. Handed straight to `ACTION_VIEW`,
- * `application/vnd.android.package-archive` resolves to the system package
- * installer — and the app holds REQUEST_INSTALL_PACKAGES and has already
- * walked the user through granting the matching consent for its own updater.
- *
- * Applied to the filename-inferred type as well as the server's, because a
- * peer who leaves the type blank and names the file `x.apk` reaches the same
- * place by the other branch.
+ * Reduce [candidate] to a type safe to view - the server's and the
+ * filename-inferred type alike. Attachment MIME is peer-supplied, and with
+ * REQUEST_INSTALL_PACKAGES held an APK type reaching ACTION_VIEW opens the
+ * installer.
  */
 fun coerceMimeType(candidate: String): String {
     // Strip any parameters ("text/plain; charset=utf-8") and normalise before

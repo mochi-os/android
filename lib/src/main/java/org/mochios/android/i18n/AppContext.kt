@@ -8,13 +8,8 @@ package org.mochios.android.i18n
 import android.content.Context
 
 /**
- * Application-context holder for code paths that need `getString()` without
- * an explicit Context parameter — chiefly [org.mochios.android.api.userMessage].
- *
- * Set once in `Application.onCreate`; reads after that are safe.
- *
- * The held context inherits whatever locale was applied via [LocaleHelper.wrap]
- * in `attachBaseContext`, so `getString()` calls return the user's language.
+ * Application context for code that needs `getString()` without one. Set in
+ * `Application.onCreate`; it carries the locale applied in `attachBaseContext`.
  */
 object AppContext {
     @Volatile

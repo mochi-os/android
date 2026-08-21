@@ -48,16 +48,6 @@ import org.mochios.market.R
 import org.mochios.market.model.MarketThread
 import org.mochios.market.navigation.MarketApp
 
-/**
- * Inbox listing every conversation the signed-in identity participates in
- * (buyer or seller). Mirrors web's `apps/market/web/src/features/messages/
- * MessagesInbox`. Each row shows the counterpart's avatar + name, the
- * listing title, the last-message preview, the timestamp, and an unread
- * count badge when the local identity is on the receiving end.
- *
- * Tapping a row navigates to [MarketApp.messageThread]; the parent
- * NavGraph composable resolves both ids back from the route arguments.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MessagesInboxScreen(
@@ -225,13 +215,8 @@ private fun InboxRow(
 }
 
 /**
- * Resolve the entity id of the "other party" on this thread. The server
- * fills in `otherName` already, but the entity id we need for the avatar
- * URL is whichever of `buyer` / `seller` differs from the current
- * identity. As a stateless screen we can't read the current identity
- * synchronously, so the heuristic is: prefer the buyer when it's non-empty
- * and differs from the seller, else fall back to the seller. The avatar
- * URL is per-server caches anyway, so the worst case is a stale picture.
+ * Avatar entity for the row. The screen has no current identity to compare
+ * against, so it prefers the buyer; the worst case is the wrong avatar.
  */
 private fun MarketThread.otherEntityId(): String? {
     val b = buyer.takeIf { it.isNotEmpty() }

@@ -35,17 +35,8 @@ import org.mochios.market.ui.selling.MySubscribersScreen
 import org.mochios.market.ui.selling.SaleDetailScreen
 
 /**
- * Route constants and helpers for the market Android module.
- *
- * Market is a fully-featured C2C marketplace with auctions, subscriptions,
- * PWYW pricing, digital downloads, physical shipping, Stripe Connect payouts,
- * real-time messaging, disputes, reviews, reports/appeals, and moderation.
- *
- * Routes here are class-level (no entity prefix) because market is a global
- * surface rather than an entity-scoped feature. Detail routes carry an `id`
- * (listing / order / thread / account) within the market namespace.
- *
- * Every route assumes a signed-in session.
+ * Market routes. All class-level (no entity prefix) and all assume a signed-in
+ * session.
  */
 object MarketApp {
     // ---- Class-level routes ----
@@ -99,9 +90,8 @@ object MarketApp {
 }
 
 /**
- * Registers every market route on the given [NavGraphBuilder]. Detail screens
- * pull their path argument via SavedStateHandle in their ViewModel, so the
- * composable bodies only forward the NavController.
+ * Registers every market route; detail screens read their id from
+ * SavedStateHandle in the ViewModel.
  */
 fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     // ---- Class-level routes ----

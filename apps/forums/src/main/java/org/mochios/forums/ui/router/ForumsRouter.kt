@@ -16,9 +16,8 @@ import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.ui.components.LastViewedStore
 
 /**
- * Start destination for the forums nav graph. Reads the last-viewed
- * forum and navigates onward; empty string is the "no forum selected"
- * sentinel that [ForumScreen] handles by auto-opening the drawer.
+ * Start destination: routes to the last-viewed forum; empty string means none
+ * selected and [ForumScreen] opens the drawer.
  */
 @Composable
 fun ForumsRouter(onResolve: (forumId: String) -> Unit) {

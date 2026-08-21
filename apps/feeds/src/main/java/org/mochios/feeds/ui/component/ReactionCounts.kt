@@ -10,15 +10,9 @@ import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 
 /**
- * Map a feeds post/comment's reaction records into the [ReactionCount] list the
- * shared ReactionBar renders.
- *
- * The feeds API returns `reactions` WITHOUT the viewer's own reaction — that's
- * tracked separately in `my_reaction` (unlike chat, whose counts already
- * include the viewer). We fold the viewer's reaction back in so the owner's own
- * reaction shows as a pill and is included in the count. Shared by the feed
- * list card and the post-detail screen (posts and comments) so the count rule
- * stays in one place.
+ * [ReactionCount]s for the shared ReactionBar. The feeds API's `reactions` omit
+ * the viewer's own reaction (it arrives as `my_reaction`, unlike chat), so it
+ * is folded back in.
  */
 fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<ReactionCount> {
     val counts = LinkedHashMap<ReactionType, Int>()
@@ -37,9 +31,8 @@ fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<Reacti
 }
 
 /**
- * The viewer's current reaction as a [ReactionType], or null when they haven't
- * reacted (or the stored key is unknown). Pass to ReactionBar's `currentReaction`
- * so the add button shows the viewer's own reaction, like the chat bubble.
+ * The viewer's reaction as a [ReactionType] for ReactionBar's
+ * `currentReaction`; null when none or unknown.
  */
 fun currentReactionType(myReaction: String): ReactionType? =
     myReaction.takeIf { value -> value.isNotEmpty() }

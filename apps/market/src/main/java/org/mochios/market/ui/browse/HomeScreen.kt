@@ -88,21 +88,6 @@ import org.mochios.market.ui.components.MarketSidebar
 // listing volume grows. The category filter (filter sheet / pill) is unaffected.
 private const val SHOW_CATEGORY_BROWSER = false
 
-/**
- * Market landing / browse screen. Mirrors
- * `apps/market/web/src/routes/_authenticated/index.tsx` `BrowsePage`:
- *
- *  - TopAppBar with hamburger (opens [MarketSidebar] drawer) and a filter
- *    icon (opens [FilterSheet]).
- *  - Debounced search field below the bar.
- *  - Horizontal pill row of filter axes — tapping any pill opens the filter
- *    sheet focused on that section.
- *  - Active-filter chips (FlowRow) below the pills row, each removable.
- *  - When the user is in cold-start mode (no query, no filters) a 6-column
- *    category grid is rendered above the listings grid.
- *  - Recently-viewed strip rendered above the main grid when populated.
- *  - Adaptive 170dp listing grid that paginates by ViewModel cursor.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -520,11 +505,6 @@ private fun CategoryGrid(
     }
 }
 
-/**
- * Onboarding card shown when the caller hasn't activated their market
- * account yet. Tapping "Activate" fires the server-side activation flow;
- * "Maybe later" hides the card for this session without activating.
- */
 @Composable
 private fun OnboardingCard(
     activating: Boolean,

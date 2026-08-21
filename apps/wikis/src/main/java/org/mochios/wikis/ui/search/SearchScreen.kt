@@ -63,15 +63,6 @@ import org.mochios.wikis.model.SearchResult
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.android.R as MochiR
 
-/**
- * Search surface for a wiki. Mirrors web's
- * `apps/wikis/web/src/features/wiki/search-page.tsx`: an auto-focused search
- * field with a 300ms debounce, a results count line, and a list of result
- * cards rendered as title + excerpt + "Updated <time>".
- *
- * Reads `wikiId` (path) and `q` (query string) via the ViewModel's
- * [SavedStateHandle] and is wired by `WikisApp.SEARCH` in the nav graph.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchScreen(

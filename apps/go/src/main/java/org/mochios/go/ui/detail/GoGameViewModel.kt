@@ -33,27 +33,10 @@ import org.mochios.go.repository.GoRepository
 import javax.inject.Inject
 
 /**
- * UI state for [GoGameDetailScreen]. Mirrors the page-level state in
- * `apps/go/web/src/features/go/index.tsx` minus the React-Query plumbing:
- *
- *  - [game] — the canonical record from `-/view`, refreshed after every
- *    mutation so server-side bookkeeping (status transitions, ko clearance,
- *    capture counters) is what the UI renders. Null while the initial load
- *    is in flight.
- *  - [goGame] — the parsed [GoGame] engine instance derived from [Game.fen]
- *    and [Game.previousFen]. Held in state (not derived on every render)
- *    because [GoBoard] also parses it and we want one source of truth for
- *    legality checks the screen relies on.
- *  - [messages] — chat + move + system rows in created-ascending order
- *    (the panel anchors to the bottom). Replaced wholesale on refresh and
- *    appended to on WebSocket events.
- *  - [myIdentity] — the asking user's entity id; resolved from the
- *    `GameViewResponse` so the screen can decide which side the user is on.
- *  - [isMyTurn] — derived: True when [GoGame.turn] matches the user's
- *    colour. Cached so the action menu doesn't recompute on every recomp.
- *  - [score] — only populated when the game ended (status `"finished"`),
- *    using the same area-scoring algorithm web uses. Drives the
- *    "Black wins — B:… W:…" status line.
+ * UI state for [GoGameDetailScreen]. [game] is the server record, refetched
+ * after every mutation; [goGame] is the engine parsed from it, held in state so
+ * the screen and [GoBoard] share one legality source. [messages] are
+ * created-ascending; [score] is set only once the game is finished.
  */
 data class GoGameDetailUiState(
     val isLoading: Boolean = false,
@@ -66,9 +49,8 @@ data class GoGameDetailUiState(
     val hasMoreMessages: Boolean = false,
 
     /**
-     * The server's `"<created>:<id>"` cursor for the next older page. Held
-     * here rather than derived from [messages], because a bare `created` is
-     * the server's legacy path and drops rows sharing the boundary second.
+     * Server cursor for the next older page, `"<created>:<id>"` - a bare
+     * `created` drops rows sharing the boundary second.
      */
     val nextMessageCursor: String? = null,
     val messagesError: MochiError? = null,
@@ -95,11 +77,6 @@ data class GoGameDetailUiState(
     val isCreatingRematch: Boolean = false,
 )
 
-/**
- * Side-effect events emitted to [GoGameDetailScreen]. The web equivalent
- * uses `toast()` and `navigate()`; here we marshal both through one flow
- * to keep the ViewModel free of UI types.
- */
 sealed class GoGameDetailEvent {
     data class Toast(val message: String) : GoGameDetailEvent()
     data class OpenGame(val gameId: String) : GoGameDetailEvent()
@@ -107,14 +84,8 @@ sealed class GoGameDetailEvent {
 }
 
 /**
- * ViewModel for the Go game-detail screen. Loads the game + messages in
- * `init`, holds the engine instance and identity, and exposes the move /
- * pass / chat / resign / draw / rematch / delete mutations the screen
- * binds to its menu items, board, chat composer, and confirm dialogs.
- *
- * Mirrors the structure of `apps/go/web/src/features/go/index.tsx`
- * `GoGameView` — `useMoveMutation` ↔ [place], `usePassMutation` ↔
- * [passTurn], `useDrawOfferMutation` ↔ [offerDraw], etc.
+ * ViewModel for the game-detail screen; mirrors `GoGameView` in
+ * `apps/go/web/src/features/go/index.tsx`.
  */
 @HiltViewModel
 class GoGameViewModel @Inject constructor(
@@ -145,14 +116,9 @@ class GoGameViewModel @Inject constructor(
     // ------------------------------------------------------------------
 
     /**
-     * Refetch the game.
-     *
-     * Called from place, pass, resign, all three draw handlers and the
-     * websocket, so several can be in flight at once. Cancelling the previous
-     * one keeps them ordered: without it a slower earlier fetch could land
-     * after a later one and put a stale position back on the board. The writes
-     * themselves were never torn — viewModelScope is Main.immediate, so update
-     * bodies are serialised — the hazard is ordering alone.
+     * Refetch the game. Several callers can overlap; cancelling the previous
+     * fetch keeps them ordered so a slower earlier response cannot put a stale
+     * position back on the board.
      */
     fun loadGame() {
         loadJob?.cancel()
@@ -203,11 +169,8 @@ class GoGameViewModel @Inject constructor(
             _state.update { it.copy(isLoadingMessages = true, messagesError = null) }
             try {
                 val response = repository.getMessages(gameId)
-                // The endpoint returns oldest-first: action_messages selects
-                // `order by created desc` and then reverses before responding.
-                // The panel renders newest-last and pins to the last index, so
-                // this order is already what it wants. Sorted rather than taken
-                // on trust, matching chess.
+                // The endpoint answers oldest-first; sort rather than trust it,
+                // as chess does.
                 _state.update {
                     it.copy(
                         isLoadingMessages = false,
@@ -263,14 +226,6 @@ class GoGameViewModel @Inject constructor(
     // Mutations
     // ------------------------------------------------------------------
 
-    /**
-     * Place a stone at ([row], [col]). Runs the move through the local
-     * engine first so the network round-trip never carries an illegal move
-     * (and so the caller's pending UI flashes briefly with the new state),
-     * then posts the resulting FEN to the server. The server's `/view`
-     * response replaces our local snapshot — that's our source of truth
-     * for capture counters and ko enforcement after the move.
-     */
     fun place(row: Int, col: Int, failedMoveMessage: String) {
         val snapshot = _state.value
         val game = snapshot.game ?: return
@@ -326,12 +281,9 @@ class GoGameViewModel @Inject constructor(
                 // Re-fetch so server-side capture / ko bookkeeping replaces
                 // our optimistic state.
                 loadGame()
-                // Refresh the move/chat log so our own move row appears without
-                // waiting. Our own frame IS echoed back — core's
-                // websockets_send writes to every socket of the acting user on
-                // the key, with no originating-socket exclusion — so this
-                // races the echo, and the content-keyed merge is what keeps the
-                // row from appearing twice.
+                // Refresh the log so our own move row appears at once. The
+                // server echoes our own frame too, so this races the echo; the
+                // content-keyed merge keeps the row from appearing twice.
                 loadMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isMoving = false) }
@@ -345,10 +297,8 @@ class GoGameViewModel @Inject constructor(
     }
 
     /**
-     * Pass turn. When this is the second consecutive pass we compute the
-     * score locally via the engine and include it in the request so the
-     * server can record `status=finished`, the winner identity, and both
-     * scores in one round trip — matching the web `handlePass` flow.
+     * Pass. On the second consecutive pass the score is computed locally and
+     * sent so the server records the finish in one round trip.
      */
     fun passTurn(failedPassMessage: String) {
         val snapshot = _state.value
@@ -498,11 +448,6 @@ class GoGameViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Create a new game against the same opponent with the same settings.
-     * Web preserves [Game.boardSize] and [Game.komi]; we do the same and
-     * emit an [GoGameDetailEvent.OpenGame] so the screen can navigate.
-     */
     fun rematch(failedRematchMessage: String) {
         val game = _state.value.game ?: return
         val myIdentity = _state.value.myIdentity
@@ -551,25 +496,17 @@ class GoGameViewModel @Inject constructor(
     // ------------------------------------------------------------------
 
     /**
-     * Content key for deduplicating a chat row, matching the web client's
-     * created+body+name+type. Ids cannot be used: the WebSocket payload has
-     * none, so a synthesised one never equals the server uid the same row
-     * carries when it arrives over REST.
+     * Content key for deduplicating chat rows, as the web does. Ids cannot
+     * serve: websocket frames carry none, so a synthesised id never equals the
+     * server uid on the REST row.
      */
     private fun messageKey(message: GameMessage): String =
         "${message.created}|${message.body}|${message.name}|${message.type}"
 
     /**
-     * Apply a decoded WebSocket event to the state. The web app uses a
-     * react-query invalidate to refetch on every event; we follow the same
-     * pattern (server is source of truth) but also append the new message
-     * row locally so the chat panel updates without waiting for the round
-     * trip.
-     *
-     * The frame carries no id, so the screen synthesises one — which cannot
-     * match the server uid on the REST row, and *can* collide with another
-     * frame from the same member in the same second. Deduplicating on content
-     * instead, as the web does, fixes both.
+     * Apply a websocket event: merge the row into the chat (deduplicated on
+     * content, see [messageKey]) and refetch the game for anything that changes
+     * state.
      */
     fun applyWsEvent(rawType: String, message: GameMessage?) {
         if (message != null) {

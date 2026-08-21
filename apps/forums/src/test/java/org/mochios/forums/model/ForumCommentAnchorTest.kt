@@ -9,11 +9,6 @@ import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-/**
- * A forum comment anchored to one of its post's attachments carries the anchor
- * and caption on the wire; older or unanchored comments carry "" or nothing.
- * The lightbox count for an image is every comment in the anchored trees.
- */
 class ForumCommentAnchorTest {
     private val gson = Gson()
 

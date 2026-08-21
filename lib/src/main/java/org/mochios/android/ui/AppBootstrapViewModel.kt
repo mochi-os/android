@@ -36,21 +36,10 @@ import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
 /**
- * Each Mochi app passes through these stages exactly once per process.
- *
- *   Booting → (NeedsAccountChoice | NeedsLogin) → Bootstrapping → Ready
- *
- * The ViewModel owns the transitions; the host activity just renders the
- * stage. This eliminates the ad-hoc onCreate runBlocking dance and the
- * "tokenFetched" boolean that used to gate the main navigation.
- *
- * No state can be reached out of order — the JWT request is only issued
- * from [Bootstrapping], which is only entered after a session is committed
- * to local DataStore, so the main UI normally renders with the JWT in hand.
- * The one exception is deliberate: when the mint fails at the transport
- * level (offline, DNS, timeout), [Ready] is entered on the JWT cached from
- * a previous run and the mint retries in the background — an unreachable
- * server must never be treated as a dead session.
+ * Booting -> (NeedsAccountChoice | NeedsLogin) -> Bootstrapping -> Ready. The
+ * JWT is minted only from Bootstrapping, except after a transport-level
+ * failure: Ready is then entered on the cached JWT and the mint retries, since
+ * an unreachable server is not a dead session.
  */
 sealed class AuthStage {
     /** Initial; ViewModel is evaluating account state. */
@@ -66,24 +55,17 @@ sealed class AuthStage {
     data object Bootstrapping : AuthStage()
 
     /**
-     * The account is pending self-service closure (soft-deleted): the session
-     * is valid but every app action is refused server-side. The user lands on
-     * the reactivation interstitial to cancel the closure or sign out.
-     * [purge] is the unix-seconds deletion deadline (0 if unknown).
+     * Account pending self-service closure: the session is valid but every app
+     * action is refused. [purge] is the unix-seconds deletion deadline, 0 if
+     * unknown.
      */
     data class NeedsReactivation(val purge: Long) : AuthStage()
 
     /**
-     * Fully ready. [recreateForLocale] is true iff the language fetched
-     * during bootstrap differs from what the host activity was using; the
-     * activity should call `recreate()` once.
-     *
-     * [epoch] is monotonically incremented on each fresh transition into
-     * Ready so the host can `key()` the ready scope by it and force a clean
-     * NavController + back stack after every logout + re-login (otherwise
-     * rememberSaveable inside rememberNavController restores stale entries
-     * from the previous session and a per-app detail screen surfaces as
-     * NotFoundState against the new session).
+     * [recreateForLocale] is set when bootstrap fetched a different language
+     * and the activity should `recreate()` once. [epoch] increments on each
+     * fresh Ready so the host can `key()` the ready scope and clear saved nav
+     * state.
      */
     data class Ready(val epoch: Long, val recreateForLocale: Boolean = false) : AuthStage()
 }
@@ -110,11 +92,8 @@ class AppBootstrapViewModel @Inject constructor(
     private var remint: Job? = null
 
     init {
-        // The ViewModel survives Activity.recreate(), so a `clearAll` in the
-        // logout path doesn't naturally bring the host back to the login UI
-        // — _stage would stay Ready. Observing the canonical session flow
-        // bridges that: when the session goes null while we're Ready, the
-        // logout actually surfaced.
+        // The ViewModel survives Activity.recreate(), so logout's clearAll
+        // would leave _stage at Ready. Re-evaluate when the session goes null.
         viewModelScope.launch {
             sessionManager.currentToken.collect { session ->
                 if (session == null) {
@@ -125,11 +104,9 @@ class AppBootstrapViewModel @Inject constructor(
                 }
             }
         }
-        // Cross-app awareness: another Mochi app added or removed an account.
-        // Important: bootstrap()'s own publishAccount triggers an emission on
-        // this flow, so we'd loop if we re-entered evaluate() unconditionally.
-        // Restrict reaction to steady-state stages — never to Bootstrapping or
-        // Booting, which are transient states actively writing AccountManager.
+        // React to cross-app account changes only from steady-state stages:
+        // bootstrap's own publishAccount emits here, and re-entering evaluate()
+        // would loop.
         viewModelScope.launch {
             MochiAccount.accountsFlow(context).collect { accounts ->
                 when (val s = _stage.value) {
@@ -161,14 +138,10 @@ class AppBootstrapViewModel @Inject constructor(
         val same = this.appName == appName && this.prefetchApps == prefetchApps
         if (same && _stage.value !is AuthStage.Booting) return
 
-        // Pure alias switch within an already-bootstrapped session: same
-        // prefetch list, only the "primary" appName changed (user tapped a
-        // different launcher icon). The tokens for every entry in
-        // prefetchApps were minted on the original bootstrap, so we have
-        // nothing new to fetch — silently update appName so the inner
-        // NavHost re-keys without flipping the stage through
-        // Bootstrapping → Ready (which leaves the previous feature's Ready
-        // content visible for ~half a second of token re-mint).
+        // Pure alias switch inside a bootstrapped session: every prefetched
+        // app's token is already minted, so just update appName. Flipping
+        // through Bootstrapping would leave the previous feature on screen
+        // during a pointless re-mint.
         if (_stage.value is AuthStage.Ready &&
             this.prefetchApps == prefetchApps &&
             prefetchApps.contains(appName)
@@ -207,16 +180,10 @@ class AppBootstrapViewModel @Inject constructor(
     }
 
     /**
-     * User-initiated logout. Stage flips to NeedsLogin synchronously so the
-     * host swaps the ready scope out *before* clearAll's DataStore emission
-     * and MochiAccount.remove fire, sidestepping the observer races:
-     *  - `currentToken.collect` sees stage != Ready/Bootstrapping → skips evaluate.
-     *  - `accountsFlow.collect` for the NeedsLogin branch only auto-evaluates
-     *    when accounts are *added* (sibling sign-in), not removed.
-     * Without this, the in-flight evaluate() could race a sibling-app account
-     * lookup and momentarily bounce stage back through NeedsAccountChoice /
-     * Ready, restoring the navController's saved back stack from the previous
-     * session and surfacing a per-app NotFoundState against the new context.
+     * User-initiated logout. The stage flips to NeedsLogin synchronously,
+     * before clearAll and MochiAccount.remove emit, so the observers above
+     * cannot bounce it back through Ready and restore the previous session's
+     * back stack.
      */
     fun logout() {
         _stage.value = AuthStage.NeedsLogin
@@ -231,10 +198,9 @@ class AppBootstrapViewModel @Inject constructor(
             // still mint a notifications token — once clearAll() runs the call
             // would 401 and the server would keep pushing to this device.
             PushService.removeAccount(context)
-            // Clear the session next: tearDown() deletes the FCM token, which
-            // makes Firebase mint a fresh one and fire onNewToken. With no
-            // active session that callback skips re-registering, so this device
-            // stops receiving pushes for the account we're leaving.
+            // Clear the session before tearDown(): deleting the FCM token fires
+            // onNewToken, which only skips re-registering while no session is
+            // active.
             sessionManager.clearAll()
             PushTransport.tearDown(context)
         }
@@ -283,14 +249,10 @@ class AppBootstrapViewModel @Inject constructor(
         _stage.value = AuthStage.Bootstrapping
         remint?.cancel()
 
-        // Mint the per-app JWT. Only an authoritative 401 — the server saw our
-        // session cookie and rejected it — means the session is dead. Transport
-        // failures (offline, DNS, timeout) and server errors say nothing about
-        // the session, so keep it: continue on the JWT cached by a previous run
-        // (the auth interceptor reads it from DataStore) and re-mint in the
-        // background once the server is reachable. Clearing on any failure
-        // logged users out on every offline launch — and, via the
-        // AccountManager removal, out of every sibling Mochi app on the device.
+        // Only an authoritative 401 means the session is dead. Transport
+        // failures say nothing, so keep the session, run on the cached JWT and
+        // re-mint in the background - clearing on any failure logs the user out
+        // on every offline launch.
         val result = authRepository.fetchToken(appName)
         val failure = result.exceptionOrNull()
         if (failure is ApiException && failure.code == 401) {
@@ -304,35 +266,22 @@ class AppBootstrapViewModel @Inject constructor(
             remintWhenReachable(appName)
         }
 
-        // Single `_/identity` fetch reused for both the closing-account check
-        // below and publishAccount() further down — they used to hit the same
-        // endpoint twice per launch. Best-effort: a failed fetch shouldn't wedge
-        // the launch, so fall through to the normal Ready path. Skipped when the
-        // mint already failed at the transport level: every further round-trip
-        // would eat its own connect timeout before failing the same way, holding
-        // the user on the Bootstrapping spinner for no information.
+        // One `_/identity` fetch, shared with publishAccount below.
+        // Best-effort, and skipped when the mint was unreachable - further
+        // round-trips would only burn their connect timeouts on the spinner.
         val identityInfo = if (unreachable) null else runCatching { authRepository.getIdentityInfo() }
             .onFailure { e -> Log.w(TAG, "getIdentityInfo failed at bootstrap", e) }
             .getOrNull()
 
-        // A soft-deleted ("closing") account has a valid session but every app
-        // action is refused server-side. Route to the reactivation interstitial
-        // instead of into the app.
         if (identityInfo?.status?.status == "closing") {
             _stage.value = AuthStage.NeedsReactivation(identityInfo.status.purge)
             return
         }
 
 
-        // Prefetch tokens for the client's other Mochi-apps so navigating
-        // to them via the launchpad or a notification doesn't surface "app
-        // token required" on the first API call. Fired off the bootstrap
-        // coroutine into its own IO-dispatched job so the main app reaches
-        // Ready as soon as the cold-start app's JWT (above) is in hand,
-        // instead of stalling on N extra token round-trips. Best-effort per
-        // app: a mint failure (user lacks access to that app on this server,
-        // etc.) is swallowed; the cold-start app's mint above is the
-        // canonical session check.
+        // Prefetch the other apps' tokens so a launchpad or notification jump
+        // does not hit "app token required". Off the bootstrap path so Ready is
+        // not delayed; per-app failures are ignored.
         if (!unreachable) {
             prefetchApps
                 .filter { other -> other != appName }
@@ -343,11 +292,9 @@ class AppBootstrapViewModel @Inject constructor(
                 }
         }
 
-        // Reconcile AccountManager with our just-validated session. The local
-        // session is canonical "is logged in"; AccountManager is for sharing.
-        // Republishing every bootstrap means a missing record (legacy state,
-        // wiped authenticator, etc.) self-heals — only an explicit logout
-        // (clearAll) or runtime account-removed event takes us back to login.
+        // Republish every bootstrap so a missing AccountManager record
+        // self-heals. The local session is canonical; AccountManager only
+        // shares it.
         runCatching { publishAccount(identityInfo?.identity) }
 
         // Theme + preferences are best-effort warm-ups.
@@ -375,12 +322,8 @@ class AppBootstrapViewModel @Inject constructor(
     }
 
     /**
-     * Retry the primary app's token mint after a transport-level failure at
-     * bootstrap, backing off to once a minute. Ends on success, or on an
-     * authoritative 401 — the session really is dead — where clearAll()'s
-     * DataStore emission flips the stage back to login via the currentToken
-     * observer. Cancelled by the next bootstrap (which mints anyway) and by
-     * user logout.
+     * Retry the app's token mint after a transport failure, backing off to once
+     * a minute. A 401 clears the session, which flips the stage back to login.
      */
     private fun remintWhenReachable(app: String) {
         remint?.cancel()
@@ -400,30 +343,20 @@ class AppBootstrapViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Write/refresh our AccountManager record so cross-app sharing works.
-     * Best-effort — failure here doesn't block this app, just means a
-     * sibling install won't be able to silent-adopt this session.
-     */
+    /** Write/refresh the AccountManager record so sibling installs can adopt this
+     *  session. Best-effort. */
     private suspend fun publishAccount(identity: Identity?) {
         val session = sessionManager.currentToken.first() ?: return
         val server = sessionManager.serverUrl.first()
         if (identity == null || identity.identity.isBlank()) return
 
-        // Local binding is the canonical "who am I" and must be written
-        // independently of the best-effort AccountManager sharing below.
-        // Historically the upsert ran first, so an addAccountExplicitly
-        // SecurityException (e.g. a device where the authenticator isn't
-        // registered) aborted the whole function and left boundIdentity empty —
-        // which broke every screen that resolves the current person from it.
+        // Write the local binding before the best-effort AccountManager upsert:
+        // an addAccountExplicitly failure must not leave boundIdentity empty.
         sessionManager.setBoundAccount(identity.identity, server)
 
         val displayName = identity.name.takeIf { it.isNotBlank() }
             ?: identity.email.takeIf { it.isNotBlank() }
             ?: ""
-        // Cross-app session sharing. Best-effort: a failure here only means a
-        // sibling install can't silent-adopt this session, so it must not
-        // propagate and undo the local binding above.
         runCatching {
             MochiAccount.upsert(
                 context,

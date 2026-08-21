@@ -154,15 +154,9 @@ class InvitationsViewModel @Inject constructor(
         }
     }
 
-    // Batch actions. Each fans out over the full (unfiltered) list — matching
-    // web, which acts on all received/sent invites regardless of the search
-    // box — applying the existing per-invite call to each, then reports whether
-    // every one succeeded. Sequential to avoid racing concurrent friend-list
-    // mutations on the server; invite lists are short.
-    //
-    // attemptAll, not `list.all { runCatching { … }.isSuccess }`: `all` stops
-    // at the first false, so one invite the server keeps rejecting blocked
-    // every one after it, on every retry.
+    // Batch actions act on the full unfiltered list, as web does, one invite at
+    // a time. attemptAll rather than `all { }`: `all` stops at the first
+    // failure, so one rejected invite would block every one after it.
     fun acceptAll() {
         val list = _uiState.value.received
         if (list.isEmpty() || _uiState.value.batchInProgress) return

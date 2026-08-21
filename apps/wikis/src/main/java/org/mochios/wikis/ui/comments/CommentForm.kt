@@ -56,35 +56,8 @@ import org.mochios.wikis.R
 import java.io.File
 
 /**
- * Compose surface for new top-level comments AND in-thread replies. Mirrors
- * `apps/wikis/web/src/features/wiki/comment-form.tsx`:
- *
- *  - Multi-line text field (minimum 3 rows).
- *  - Below the field: file chips for each picked attachment, with image
- *    previews via Coil's [AsyncImage] from the content URI.
- *  - Footer row: paperclip (attach), optional Cancel (when [onCancel] is
- *    provided), and a send button that fires either via IME action or tap.
- *
- * The send button is disabled when [body] is blank — matches web's
- * `disabled={!body.trim()}` behaviour, but also remains enabled when files
- * are queued so attachment-only posts work (web's send is body-only).
- *
- * @param initialText Seed value for the text field. Used for the reply
- *                    textarea's quote-on-select pre-fill, which arrives from
- *                    [CommentsViewModel.requestStartReply] via
- *                    [CommentsUiState.replyDraft].
- * @param onSubmit Called with `(body, files?)` when the user taps Send. The
- *                 caller is responsible for clearing state on success — this
- *                 component resets [body] and [files] locally after each
- *                 submission so the UX matches web.
- * @param onCancel If non-null, a Cancel button is rendered to the left of
- *                 Send. Reply textareas pass a non-null cancel; the top-level
- *                 compose form passes null.
- * @param placeholder Placeholder shown when the field is empty.
- * @param autoFocus If true, the text field requests focus on first composition.
- * @param onTextChange Optional notifier so callers (the reply form) can mirror
- *                     the user's edits back into shared state. Top-level form
- *                     leaves this null.
+ * Compose surface for new comments and in-thread replies. Send stays enabled
+ * when files are queued, so attachment-only posts work.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

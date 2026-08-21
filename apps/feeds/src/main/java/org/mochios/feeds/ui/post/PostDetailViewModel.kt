@@ -276,10 +276,8 @@ class PostDetailViewModel @Inject constructor(
     }
 
     /**
-     * Mirror a successful interest adjustment into local state so the tag
-     * colour updates immediately (web does the same optimistic shift). Uses
-     * the server's own deltas — up +15, down -20, clamped to ±100; remove
-     * clears the weight.
+     * Optimistic local mirror of a server interest adjustment; the deltas and
+     * clamp match the server's.
      */
     private fun applyInterestLocally(qid: String?, direction: String) {
         if (qid.isNullOrEmpty()) return

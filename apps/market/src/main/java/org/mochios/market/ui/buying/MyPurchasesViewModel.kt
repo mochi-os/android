@@ -19,15 +19,6 @@ import org.mochios.market.model.Order
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
-/**
- * UI state for [MyPurchasesScreen]. Orders are paginated; the won-bid
- * strip is loaded once and rendered above the order list as a quick way
- * for the buyer to complete a pending auction purchase.
- *
- * Pagination state mirrors `useLoadMore` on the web — we track the
- * total count separately from the slice we've fetched so the loader can
- * decide whether to ask for more.
- */
 data class MyPurchasesUiState(
     val isInitialLoading: Boolean = true,
     val isLoadingMore: Boolean = false,

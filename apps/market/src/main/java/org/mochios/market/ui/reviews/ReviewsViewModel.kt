@@ -33,11 +33,6 @@ data class ReviewsTabState(
     val responseDrafts: Map<String, String> = emptyMap(),
 )
 
-/**
- * Aggregate state for [ReviewsScreen] — the two tabs plus the currently
- * selected one. Mirrors web's `apps/market/web/src/features/reviews/
- * ReviewsTabs` shape.
- */
 data class ReviewsUiState(
     val selectedTab: ReviewsTab = ReviewsTab.RECEIVED,
     val received: ReviewsTabState = ReviewsTabState(),
@@ -52,11 +47,6 @@ sealed interface ReviewsEvent {
     data class Error(val error: MochiError) : ReviewsEvent
 }
 
-/**
- * ViewModel for the My Reviews screen. Loads `inbox` and `sent` on demand
- * — the first page for the active tab fires on init; the second tab waits
- * until the user actually flips to it.
- */
 @HiltViewModel
 class ReviewsViewModel @Inject constructor(
     private val repo: MarketRepository,
@@ -75,11 +65,6 @@ class ReviewsViewModel @Inject constructor(
         loadFirstPage(ReviewsTab.RECEIVED)
     }
 
-    /**
-     * Re-runs the first page for the error state's retry button. Reloads the
-     * tab on screen rather than the one init started with, since either can be
-     * the one that failed.
-     */
     fun retry() {
         loadFirstPage(_state.value.selectedTab)
     }

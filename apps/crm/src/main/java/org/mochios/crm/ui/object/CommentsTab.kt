@@ -219,12 +219,6 @@ fun CommentsTab(
     }
 }
 
-/**
- * One comment rendered with the shared [SharedCommentItem] layout (avatar,
- * name, relative time, HTML body, compact attachments, and a coloured thread
- * bar for replies) — the same look as the feeds and forums comment lists. The
- * actions slot carries reply, edit, and delete; children recurse below.
- */
 @Composable
 private fun CommentItem(
     comment: Comment,

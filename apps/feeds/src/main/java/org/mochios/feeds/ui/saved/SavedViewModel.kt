@@ -17,11 +17,6 @@ import org.mochios.feeds.model.SavedItem
 import org.mochios.feeds.repository.SavedRepository
 import javax.inject.Inject
 
-/**
- * Backs the Saved (read-later) screen. The saved list is owned by the app-wide
- * [SavedRepository] so it stays in sync with the bookmark toggles on post
- * cards; this ViewModel just hydrates it on open and exposes a clear-all action.
- */
 @HiltViewModel
 class SavedViewModel @Inject constructor(
     private val savedRepository: SavedRepository,

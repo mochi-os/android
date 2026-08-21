@@ -61,18 +61,9 @@ import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffStatusBadge
 
 /**
- * Staff dashboard landing screen. Mirrors
- * `apps/staff/web/src/features/dashboard/dashboard-page.tsx`:
- *
- *  - KPI section: adaptive 180dp grid of [KpiCard]s — one per metric on
- *    [MetricsOverview], plus one extra card per currency for revenue.
- *  - Activity section: TabRow with 5 tabs (Orders / Listings / Signups /
- *    Moderation / Audit), each backed by a paginated table.
- *
- * The drawer + topbar live in `StaffLayout`; this composable renders only
- * the body. The selected tab is round-tripped through the ViewModel's
- * SavedStateHandle so deep-link `?tab=audit` style URLs and process-death
- * restoration both land on the right tab.
+ * Port of `apps/staff/web/src/features/dashboard/dashboard-page.tsx`. The
+ * selected tab is kept in the ViewModel's SavedStateHandle so `?tab=` deep
+ * links and process death restore it.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -97,11 +88,9 @@ private fun DashboardBody(
     onLoadMore: () -> Unit,
 ) {
     val listState = rememberLazyListState()
-    // Only the scroll position is derived: `state` is a plain parameter, so
-    // reading it inside this unkeyed remember would pin the tab, its exhausted
-    // flag and its in-flight flag to whatever they were when the block first
-    // composed — after a tab switch the sentinel would still be answering for
-    // the original tab.
+    // Derive only the scroll position: `state` read inside this unkeyed
+    // remember would be pinned to its first-composition value across tab
+    // switches.
     val reachedEnd by remember {
         derivedStateOf {
             val info = listState.layoutInfo
@@ -556,15 +545,9 @@ private fun AuditRow(entry: AuditEntry) {
 }
 
 /**
- * Pull a compact human-readable summary out of an [AuditEntry.data] JSON
- * blob. Mirrors the slice of `useFormatAuditDetail` /
- * `apps/staff/web/src/components/shared/audit-labels.ts` we display in
- * the dashboard table — full ICU coverage lives on the dedicated audit
- * screen.
- *
- * Lightweight regex parsing: the wire shape is `{"reason":"...","notes":
- * "..."}`-style flat objects, never nested. We pull the most likely keys
- * (`reason`, `notes`, `amount`, `currency`, `value`) and join them.
+ * Compact summary of an [AuditEntry.data] blob for the dashboard table; full
+ * labelling lives on the audit screen. `data` is a flat object, so regexes
+ * suffice.
  */
 private fun parseAuditDetail(@Suppress("UNUSED_PARAMETER") action: String, data: String): String {
     if (data.isBlank()) return ""

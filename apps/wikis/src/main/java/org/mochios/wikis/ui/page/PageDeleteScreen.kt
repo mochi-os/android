@@ -64,12 +64,6 @@ import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * Confirm-then-delete page mirroring `apps/wikis/web/src/features/wiki/delete-page.tsx`.
- * Loads the page header (title) so the confirm copy can name the page being
- * deleted, then offers Cancel / Delete actions. On success we toast and
- * jump back to the wiki home.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PageDeleteScreen(
@@ -226,11 +220,6 @@ class PageDeleteViewModel @Inject constructor(
 
     init { load() }
 
-    /**
-     * Fetch the page header so the confirm copy can show the page title.
-     * If the page is already missing we still let the user "confirm" — the
-     * server will respond accordingly.
-     */
     private fun load() {
         viewModelScope.launch {
             try {

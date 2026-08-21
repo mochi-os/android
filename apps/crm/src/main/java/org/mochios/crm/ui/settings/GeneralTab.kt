@@ -46,13 +46,6 @@ import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
-/**
- * Owner "General" tab: an editable identity [Section] over the read-only entity
- * chips, plus a delete [Section] whose action sits in the header. Styled to match
- * the projects settings screen. Only a viewer who can manage the CRM reaches this
- * tab; everyone else gets the read-only [CrmIdentitySection] and an unsubscribe
- * action from the settings screen, so there is no unsubscribe branch.
- */
 @Composable
 fun GeneralTab(
     uiState: CrmSettingsUiState,
@@ -141,11 +134,6 @@ fun GeneralTab(
     }
 }
 
-/**
- * Read-only identity card: the CRM's name, description, entity id, fingerprint,
- * and server. Shown to a viewer who cannot manage the CRM, mirroring the
- * projects, forum, and feed subscriber views.
- */
 @Composable
 fun CrmIdentitySection(
     crm: Crm,
@@ -202,12 +190,8 @@ private fun IdentityFieldRow(
 }
 
 /**
- * Editable identity row: shows the value with an edit pencil on the right; the
- * pencil swaps in an inline text field with confirm/cancel that saves the field
- * immediately. Mirrors the projects and forum inline editors.
- *
- * @param onSave    invoked with the trimmed value when the edit is confirmed.
- * @param allowBlank when false, the confirm action is disabled for a blank value.
+ * Identity row with a pencil that swaps in an inline editor; confirm saves the
+ * trimmed value at once.
  */
 @Composable
 private fun EditableIdentityRow(

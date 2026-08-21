@@ -59,16 +59,6 @@ import org.mochios.market.model.Currency
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Buyer-side list of bids placed across all auctions.
- *
- * TabRow filters: All / Active / Outbid / Won / Lost (matches web's
- * `apps/market/web/src/features/buying/my-bids-page.tsx`). Each row
- * shows the auction title, the buyer's bid amount, the current high
- * bid (if any), and the time remaining when the auction is still
- * active. Won-and-unpaid rows surface a "Complete purchase" CTA that
- * routes the buyer to the checkout flow at the same listing id.
- */
 @Composable
 fun MyBidsScreen(
     navController: NavController,
@@ -209,11 +199,6 @@ private fun BidRow(
     }
 }
 
-/**
- * Live countdown label for the active rows. Recomposes every second
- * while [closes] is in the future; renders the "Auction ended" label
- * once the deadline passes.
- */
 @Composable
 private fun remainingLabel(closes: Long): String {
     // closes is epoch seconds. Tick once per second via a state var so

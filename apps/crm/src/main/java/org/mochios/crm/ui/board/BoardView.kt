@@ -76,15 +76,9 @@ import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.android.R as MochiR
 
 /**
- * Kanban board for the active view.
- *
- * @param objects Every object in the crm — the board needs the complete set so
- *   hierarchy, column grouping and drop ranks stay computed against the real
- *   list even while a filter hides part of it.
- * @param visibleIds Ids the search/filter state allows on screen, or null when
- *   nothing narrows the board. Cards outside the set are hidden, but they still
- *   count towards drop positions, so a drop on a filtered column lands where it
- *   would have without the filter.
+ * Kanban board for the active view. [objects] is the whole crm, not the
+ * filtered set: cards outside [visibleIds] are hidden but still count towards
+ * drop positions.
  */
 @Composable
 fun BoardView(
@@ -96,12 +90,8 @@ fun BoardView(
     people: List<Person>,
     onObjectClick: (String) -> Unit,
     visibleIds: Set<String>? = null,
-    /**
-     * Starts a create from a column's "+", passing the field values that place
-     * the object in that column. The caller opens the same dialog the FAB does
-     * rather than creating outright, so a board object gets a title and its
-     * fields like any other.
-     */
+    // Column "+" handler: opens the create dialog seeded with the values that
+    // place the object in that column.
     onStartCreate: ((initialValues: Map<String, String>) -> Unit)? = null,
 ) {
     if (view == null || view.columns.isBlank()) {
@@ -115,14 +105,8 @@ fun BoardView(
         return
     }
 
-    // The class a column's "+" would create into: the view's own first, else
-    // the CRM's first. Null when the CRM defines no classes at all, which is
-    // what hides the button instead of letting it swallow the tap.
-    //
-    // The view's ids are checked against the CRM's classes rather than trusted.
-    // A view naming a deleted class used to pass that id straight to create,
-    // and the post failed on a class the server no longer had - a "+" that
-    // looked like it did nothing.
+    // Class a column's "+" creates into: the view's first class the CRM still
+    // defines, else the CRM's first. Null hides the button.
     val definedClassIds = crmDetails?.classes.orEmpty().map { cls -> cls.id }.toSet()
     val createClassId = view.classes.firstOrNull { id -> id in definedClassIds }
         ?: crmDetails?.classes?.firstOrNull()?.id?.takeIf { id -> id.isNotBlank() }
@@ -138,12 +122,9 @@ fun BoardView(
     } ?: emptyList()
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
 
-    // The objects the view admits. Everything below — nesting, top-level
-    // cards, drop ranks — is computed against this set rather than the whole
-    // crm, the way the tree does it. A deal parented to a company on a
-    // deals-only board is a card in its own right here: measuring its parent
-    // against the unfiltered list made it neither a top-level card nor a
-    // nested one, and emptied the board.
+    // Nesting, top-level cards and drop ranks are computed against the view's
+    // classes, not the whole crm: an object whose parent the view hides is a
+    // top-level card.
     val classObjects = objects.filter { obj ->
         view.classes.isEmpty() || obj.objectClass in view.classes
     }
@@ -269,10 +250,8 @@ fun BoardView(
             onDelete = if (isUnassigned) null else {
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
             },
-            // The class is resolved before the button is offered rather than
-            // inside its click handler. With no class to create into there is
-            // nothing the tap could do, and the handler used to swallow it
-            // silently — a "+" that looks live and does nothing.
+            // With no class to create into, offer no "+" rather than a handler
+            // that swallows the tap.
             onCreateInColumn = if (onStartCreate != null && !isUnassigned &&
                 createClassId != null
             ) {
@@ -403,10 +382,6 @@ private fun BoardColumn(
                 modifier = Modifier.weight(1f)
             )
             Spacer(modifier = Modifier.width(8.dp))
-            // Card-count pill — the standard kanban column count, in a tonal
-            // chip. Replaces the old washed-out primary-tinted header bar.
-            // While a filter is on, the pill reads "shown / total" so the
-            // column still tells you how much it really holds.
             val visibleCount = if (visibleIds == null) {
                 objects.size
             } else {
@@ -515,11 +490,8 @@ private fun BoardColumn(
 
         // Column body
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
-            // Swimlane mode.
-            // Drop ranks are scoped to the column, not the lane: the server's
-            // rank_move_key lists every object sharing the target column value
-            // and knows nothing about rows, so a lane-local position would be
-            // applied as a column position.
+            // Swimlane mode. Drop ranks are column-scoped, not lane-scoped: the
+            // server's rank_move_key has no row dimension.
             val columnOrder = viewModel.sortObjects(objects)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
@@ -634,11 +606,8 @@ private fun BoardColumn(
                 }
             }
         } else {
-            // Simple list mode. The card list fills all remaining column
-            // height. Double-tapping the empty space below the last card
-            // creates a card (matching the web board's double-click-to-
-            // create); the tap zone sits behind the list so it only
-            // receives touches where there are no cards.
+            // List mode. Double-tapping empty space below the cards creates
+            // one; the tap zone sits behind the list so cards take precedence.
             val sortedObjects = viewModel.sortObjects(objects)
             val shownObjects = sortedObjects.visible(visibleIds)
             Box(

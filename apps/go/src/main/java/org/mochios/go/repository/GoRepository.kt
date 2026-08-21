@@ -21,12 +21,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Thin convenience wrapper around [GoApi]. Mirrors the
- * `PeopleRepository` / `ChatRepository` pattern: each method calls
- * `.unwrap()` on the wrapped `ApiResponse<T>` to surface either the inner
- * payload or a typed `MochiError` for the ViewModels to render. No caching
- * layer — Go games are small in number and the next-wave game-detail screen
- * pulls via TanStack-style stale-while-revalidate inside the ViewModel.
+ * Thin wrapper around [GoApi]; each call unwraps the response into the payload
+ * or a typed `MochiError`.
  */
 @Singleton
 class GoRepository @Inject constructor(
@@ -42,11 +38,9 @@ class GoRepository @Inject constructor(
         api.viewGame(gameId).unwrap()
 
     /**
-     * In-game chat + move log. [before] is the previous response's `nextCursor`
-     * — a `"<created>:<id>"` pair, not a bare timestamp, because `created`
-     * alone is not unique and paging on it drops every row sharing the page
-     * boundary's second. [limit] is an optional page-size override (the server
-     * caps at 100).
+     * Chat + move log. [before] is the previous response's `nextCursor`, a
+     * `"<created>:<id>"` pair - paging on `created` alone drops rows sharing
+     * the boundary second. The server caps [limit] at 100.
      */
     suspend fun getMessages(
         gameId: String,
@@ -59,10 +53,8 @@ class GoRepository @Inject constructor(
         api.sendMessage(gameId, SendMessageRequest(body = body)).unwrap().id
 
     /**
-     * Create a new game against [opponent] on a [boardSize]x[boardSize] board
-     * with the given [komi] (compensation for White). Server assigns colours
-     * randomly; the response includes the new game id and the identity of the
-     * player chosen to play Black.
+     * Create a game. The server assigns colours randomly and returns the new id
+     * and who plays Black.
      */
     suspend fun createGame(
         opponent: String,
@@ -81,19 +73,13 @@ class GoRepository @Inject constructor(
     suspend fun getNewGameFriends(): List<NewGameFriend> =
         api.getNewGameFriends().unwrap().friends
 
-    /**
-     * Submit a move. [request] is composed by the caller (typically the game-
-     * detail screen) — it has already validated legality with the local
-     * [org.mochios.go.engine.GoGame] engine and serialised the new board into
-     * a FEN-like string. The repository only forwards the payload.
-     */
     suspend fun move(gameId: String, request: MoveRequest): String =
         api.move(gameId, request).unwrap().id
 
     /**
-     * Pass turn. When the second consecutive pass ends the game, the caller
-     * sets [PassRequest.status] = `"finished"` along with the computed winner
-     * and area scores so the server records the final state in one round trip.
+     * Pass. On the second consecutive pass the caller sends `status =
+     * "finished"` with winner and scores so the server records the end in one
+     * round trip.
      */
     suspend fun pass(gameId: String, request: PassRequest): String =
         api.pass(gameId, request).unwrap().id

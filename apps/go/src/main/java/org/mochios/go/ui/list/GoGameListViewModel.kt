@@ -22,19 +22,6 @@ import org.mochios.go.model.Game
 import org.mochios.go.repository.GoRepository
 import javax.inject.Inject
 
-/**
- * UI state for the Go landing list. Mirrors the web `GamesListPage`
- * (`apps/go/web/src/routes/_authenticated/index.tsx`) — a single list of
- * the user's games partitioned by status into Active vs Completed, plus
- * the New-game dialog state.
- *
- *  - [games] is the full list as returned by `-/list` (server sorts by
- *    `updated DESC`); the screen splits into active / completed on render
- *  - [newGameFriends] is loaded eagerly on first open so the dialog can
- *    show the picker without an extra round trip; null = not yet fetched
- *  - [creatingGame] disables the dialog's Start button while the create
- *    request is in flight
- */
 data class GoGameListUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
@@ -42,9 +29,9 @@ data class GoGameListUiState(
     val error: MochiError? = null,
 
     /**
-     * The signed-in entity ID, needed to tell which side of a game the user is
-     * on. `opponent_name` holds the invitee's name on both peers, so without
-     * this a game the user did not create names the user back to themselves.
+     * Signed-in entity id. `opponent_name` holds the invitee's name on both
+     * peers, so without it a game the user did not create names the user as
+     * their own opponent.
      */
     val identity: String? = null,
 )

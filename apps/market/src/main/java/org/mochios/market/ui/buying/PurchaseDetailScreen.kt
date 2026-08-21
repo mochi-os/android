@@ -81,18 +81,6 @@ import org.mochios.market.ui.components.AuditTimeline
 import org.mochios.market.ui.components.StatusBadge
 import org.mochios.market.ui.dialog.RequestRefundDialog
 
-/**
- * Buyer-side order detail screen.
- *
- * Layout:
- *  - Summary card: listing title + seller + dates + price breakdown.
- *  - Tracking row (when the seller has shipped).
- *  - Asset downloads (when the listing has digital files).
- *  - Action buttons: Confirm receipt, Message seller, Request refund.
- *  - Dispute section (if any).
- *  - Review form (when can_review) or submitted review (post-submit).
- *  - Collapsible AuditTimeline.
- */
 @Composable
 fun PurchaseDetailScreen(
     navController: NavController,

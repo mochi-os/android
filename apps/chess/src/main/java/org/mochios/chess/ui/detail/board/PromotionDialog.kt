@@ -32,22 +32,8 @@ import com.github.bhlangonijr.chesslib.Side
 import org.mochios.chess.R
 
 /**
- * Pawn-promotion picker. Mirrors `apps/chess/web/src/features/chess/components/promotion-dialog.tsx`:
- *
- *  - Tap a pawn-to-back-rank target square; the parent screen suspends the
- *    move and pops this dialog. The user picks queen / rook / bishop /
- *    knight and the parent forwards the choice to [onSelect].
- *  - Dismissing the dialog (back press, scrim tap) cancels — no move is
- *    submitted, the originating square stays selected so the user can
- *    pick a different target.
- *
- * @param myColor    The promoting side ('w' or 'b'). Drives which-colour
- *                   piece icons appear in the picker.
- * @param onSelect   Fired with the lowercase piece type code matching the
- *                   server's [org.mochios.chess.model.MoveRequest.promotion]
- *                   field — `"q"`, `"r"`, `"b"`, or `"n"`.
- * @param onDismiss  Fired when the user cancels — back press, outside tap,
- *                   or the explicit Cancel button.
+ * Pawn-promotion picker. [onSelect] receives `q | r | b | n` for
+ * [org.mochios.chess.model.MoveRequest.promotion]; dismissing submits no move.
  */
 @Composable
 fun PromotionDialog(

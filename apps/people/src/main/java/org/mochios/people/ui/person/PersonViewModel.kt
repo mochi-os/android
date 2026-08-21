@@ -23,17 +23,6 @@ import org.mochios.people.model.PersonInformation
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
-/**
- * Friendship state between the current user and the person on display. Resolved
- * from [PeopleRepository.listFriends] plus the bound identity at refresh time;
- * the screen renders different action affordances per branch.
- *
- *  - [Self]            — the displayed person *is* the current user
- *  - [Friend]          — already mutual friends
- *  - [InvitedByThem]   — they have sent us an invite that's pending acceptance
- *  - [InvitedThem]     — we have sent them an outgoing invite
- *  - [NotFriend]       — no relationship; can send a new invite
- */
 sealed class FriendState {
     object Self : FriendState()
     object Friend : FriendState()
@@ -56,11 +45,6 @@ data class PersonViewUiState(
     val error: MochiError? = null,
 )
 
-/**
- * Read-only public profile of a person other than the current user. Loads the
- * `:entity/-/information` response and the friends list in parallel on init so
- * the friendship-state pill can render without a follow-up round-trip.
- */
 @HiltViewModel
 class PersonViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

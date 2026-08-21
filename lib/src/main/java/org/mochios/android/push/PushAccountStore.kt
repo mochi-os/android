@@ -11,17 +11,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Local record of the push account the server minted for this device.
- *
- * Both transports create one server-side: UnifiedPush via
- * `/notifications/-/push/register` ([MochiPushReceiver.onNewEndpoint]) and FCM
- * via `/notifications/-/push/register/fcm` ([FcmRegistrar.register]). Each
- * returns an opaque `accounts.id` uid, and that id — not the identity — is what
- * `/notifications/-/accounts/remove` takes when we want the server to stop
- * delivering to this device ([PushService.removeAccount]).
- *
- * Entries are keyed by the UnifiedPush instance, which is the bound identity, so
- * two identities registered from the same device keep separate ids.
+ * Local record of the push account id the server minted for this device - the
+ * `accounts.id` uid `/notifications/-/accounts/remove` takes, not the identity.
+ * Keyed by UnifiedPush instance (the bound identity), so two identities keep
+ * separate ids.
  */
 @Singleton
 class PushAccountStore @Inject constructor(

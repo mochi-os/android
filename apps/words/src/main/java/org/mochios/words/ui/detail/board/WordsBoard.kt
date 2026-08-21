@@ -48,26 +48,6 @@ import org.mochios.words.engine.getPremium
 import org.mochios.words.engine.isBlankTile
 import org.mochios.words.ui.detail.DragSource
 
-/**
- * 15x15 board composable. Renders the bonus squares as a colored background
- * pattern, draws already-played tiles in cream, and pending placements in
- * amber so the user can see at a glance which tiles they're committing.
- *
- * Tap behaviour:
- *  - Empty cell + selected rack tile → places the tile (calls `onCellClick`).
- *    Blank tiles open the BlankTileDialog via the ViewModel.
- *  - Cell with a pending placement → removes it (calls `onRemovePlacement`).
- *
- * Drag-and-drop:
- *  - Pending tiles can be picked up by long-press and dragged. The board
- *    reports its bounds in root coordinates via [onBoundsChanged] so the
- *    screen-level overlay can render the ghost tile under the finger and
- *    map the release position back to a target cell (or rack slot).
- *  - During a drag-in-progress originated from the rack (or another board
- *    cell), the screen passes the live pointer position via [dragPointer];
- *    we use it to highlight the cell under the finger. The actual drop
- *    fires at release time from the screen-level pipeline.
- */
 @Composable
 fun WordsBoard(
     board: Board,
@@ -163,9 +143,6 @@ private fun BoardGrid(
         pendingPlacements.associateBy { it.row * BOARD_SIZE + it.col }
     }
 
-    // Compute which cell the live drag pointer is over, if any. Used to draw
-    // a hover ring on the current target cell so the user sees where they
-    // will drop.
     val hoverCell: Pair<Int, Int>? = remember(dragPointer, boardCoords) {
         val ptr = dragPointer ?: return@remember null
         val bounds = boardCoords?.boundsInRoot() ?: return@remember null

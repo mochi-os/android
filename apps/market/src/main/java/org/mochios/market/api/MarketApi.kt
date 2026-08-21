@@ -59,50 +59,12 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Retrofit interface for the market app.
- *
- * The market app is a stateless proxy in front of the Comptroller marketplace
- * backend — `apps/market/market.star` opens a P2P stream to the Comptroller
- * for every action and forwards the form / query inputs verbatim. This
- * interface mirrors the action paths declared in `apps/market/app.json`'s
- * `actions` block (the `-/...` entries) so the Android client speaks the
- * same wire format as the web SPA.
- *
- * URL composition: this interface is bound to a per-app Retrofit
- * (baseUrl `<server>/market/`) built in `di/AppModule.kt`, so every path
- * in this file is relative to the market namespace. Auth attaches the
- * market-scoped JWT via a Bearer interceptor in that module. Some
- * endpoints (`-/accounts/get`, `-/accounts/fees`, `-/categories/list`,
- * `-/listings/search`, `-/listings/get`, `-/photos/list`,
- * `-/reviews/account`, `-/user/:user/asset/:asset`,
- * `-/stripe/oauth/callback`) are declared `public` in app.json and may
- * succeed without a bearer token; the rest require an authenticated
- * session.
- *
- * Encoding conventions:
- *   - GET endpoints are used for pure read paths (search, mine, get,
- *     list-style and listing-of-things-I-care-about). Parameters land
- *     on the query string via `@Query`.
- *   - POST endpoints are used for mutations and command-style actions.
- *     The Starlark proxy reads inputs via `a.input(...)`, so the
- *     standard wire format is `application/x-www-form-urlencoded`
- *     (`@FormUrlEncoded` + `@Field`). For two photo/asset uploads we
- *     use `@Multipart` because the Starlark handler reads `a.file(...)`.
- *   - Path parameters that may already contain reserved characters
- *     (entity ids, fingerprints) are declared with `encoded = true`.
- *
- * Omissions: the static-asset routes declared in app.json are resolved
- * by Android via plain URL strings (built from the `MarketRetrofit`
- * baseUrl) rather than Retrofit calls, so they are not modelled here:
- *   - `""` (SPA mount point)
- *   - `"assets"` (built SPA bundle)
- *   - `"images"` (icon set)
- *   - `"-/photo/:id"` / `"-/photo/:id/thumbnail"` (binary photo streams —
- *     fetched directly as image URLs by Coil/Glide)
- *
- * The event handler `message_notify` in market.star is a P2P event
- * coming the other way (Comptroller -> market), not an HTTP action, so
- * it is also not part of this interface.
+ * Retrofit interface for the market app, mirroring the `-/...` actions in
+ * `apps/market/app.json`. Bound to a per-app Retrofit with baseUrl
+ * `<server>/market/`. Mutations post form-urlencoded because the Starlark proxy
+ * reads `a.input(...)`; photo and asset uploads are multipart because it reads
+ * `a.file(...)`. Static-asset and photo routes are fetched as plain URLs and
+ * are not modelled here.
  */
 interface MarketApi {
 
@@ -161,10 +123,8 @@ interface MarketApi {
     suspend fun getStripeStatus(): Response<ApiResponse<StripeStatus>>
 
     /**
-     * Stripe's OAuth landing page. The handler renders HTML that the
-     * browser follows; Android normally lets a Custom Tab handle the
-     * round-trip and never calls this directly, but the route is
-     * exposed for completeness.
+     * Stripe's OAuth landing page (HTML). A Custom Tab handles the round trip;
+     * Android never calls this directly.
      */
     @GET("-/stripe/oauth/callback")
     suspend fun stripeOauthCallback(
@@ -183,11 +143,8 @@ interface MarketApi {
     // ---- Person assets (avatar/banner/favicon/style/information) ----
 
     /**
-     * Proxy to a person entity's asset stream (avatar, banner, favicon,
-     * style, information). Server returns either the raw asset bytes or
-     * a JSON envelope; Android normally hits this as a URL via an image
-     * loader rather than via Retrofit, so the return type is the raw
-     * response body.
+     * Person-entity asset stream (avatar, banner, favicon, style, information).
+     * Normally loaded as an image URL, so the body is returned raw.
      */
     @GET("-/user/{user}/asset/{asset}")
     suspend fun getUserAsset(
@@ -198,9 +155,7 @@ interface MarketApi {
     // ---- Listings ----
 
     /**
-     * Create a draft listing. `tags` is the JSON-encoded array of tag
-     * strings (the Starlark handler runs `json.decode` on it before
-     * forwarding).
+     * Create a draft listing. `tags` is a JSON-encoded array of strings.
      */
     @FormUrlEncoded
     @POST("-/listings/create")
@@ -251,11 +206,6 @@ interface MarketApi {
         @Field("id") id: String,
     ): Response<ApiResponse<OkResponse>>
 
-    /**
-     * Preview side effects of removing a listing (active auction /
-     * bidders / subscribers) so the UI can tailor its confirmation
-     * dialog.
-     */
     @FormUrlEncoded
     @POST("-/listings/removal/check")
     suspend fun removalCheckListing(
@@ -263,9 +213,8 @@ interface MarketApi {
     ): Response<ApiResponse<RemovalCheck>>
 
     /**
-     * Publish a previously-created draft. `opens` / `closes` / `extend`
-     * / `extension` apply to auctions; `reserve` and `instant` are the
-     * auction reserve price and buy-now price.
+     * Publish a draft. The remaining fields apply to auctions; `reserve` is the
+     * reserve price and `instant` the buy-now price.
      */
     @FormUrlEncoded
     @POST("-/listings/publish")
@@ -287,11 +236,8 @@ interface MarketApi {
     ): Response<ApiResponse<RelistResponse>>
 
     /**
-     * Authenticated search across active listings. The Android client always
-     * has a session, so it uses the viewer route, which personalises results
-     * (my_subscription flags, own reserved listings); the public
-     * -/listings/search exists for anonymous web browsing and carries no
-     * personalisation.
+     * Search active listings via the viewer route, which personalises results;
+     * the public `-/listings/search` is for anonymous web browsing.
      */
     @GET("-/listings/viewer/search")
     suspend fun searchListings(
@@ -310,9 +256,8 @@ interface MarketApi {
     ): Response<ApiResponse<ListingsSearchResponse>>
 
     /**
-     * Authenticated single-listing fetch (includes seller, shipping, assets,
-     * my_order / my_reservation / my_subscription, and own-listing fields).
-     * Uses the viewer route for the same reason as searchListings.
+     * Single listing via the viewer route, for the same reason as
+     * [searchListings].
      */
     @GET("-/listings/viewer/get")
     suspend fun getListing(
@@ -368,9 +313,7 @@ interface MarketApi {
     // ---- Shipping ----
 
     /**
-     * Set the shipping options on a listing. `options` is the
-     * JSON-encoded array (the Starlark handler forwards it verbatim;
-     * the comptroller decodes it).
+     * Set a listing's shipping options. `options` is a JSON-encoded array.
      */
     @FormUrlEncoded
     @POST("-/shipping/set")
@@ -449,13 +392,8 @@ interface MarketApi {
     ): Response<ApiResponse<OkResponse>>
 
     /**
-     * Download a purchased digital asset.
-     *
-     * The handler answers either a JSON envelope
-     * (`{"data": {"hosting": "external", ...}}`) naming an external URL, or the
-     * file bytes with a Content-Type and Content-Disposition, depending on
-     * where the seller hosts it. The caller branches on Content-Type; see
-     * MarketRepository.downloadAsset.
+     * Download a purchased asset: either a JSON envelope naming an external URL
+     * or the file bytes; see [MarketRepository.downloadAsset].
      */
     @GET("-/assets/download")
     suspend fun downloadAsset(
@@ -756,8 +694,7 @@ interface MarketApi {
     // ---- Audit ----
 
     /**
-     * Per-object audit timeline (server enforces ownership / staff).
-     * Used for listing / order / dispute / subscription history views.
+     * Per-object audit timeline; the server enforces ownership / staff.
      */
     @GET("-/audit/object")
     suspend fun getObjectAudit(

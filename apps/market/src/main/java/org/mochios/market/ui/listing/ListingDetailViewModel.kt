@@ -40,12 +40,6 @@ import org.mochios.market.repository.MarketRepository
 import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
-/**
- * UI state for [ListingDetailScreen]. Mirrors the loader-driven shape the
- * web listing page uses: loading, the [ListingDetailResponse] payload, or
- * an error. The view model loads the listing once on entry and again on
- * mutation (relist) so a fresh server view is always rendered.
- */
 data class ListingDetailUiState(
     val isLoading: Boolean = true,
     val listing: ListingDetailResponse? = null,
@@ -58,29 +52,11 @@ data class ListingDetailUiState(
     val downloadingAsset: Boolean = false,
 )
 
-/**
- * One-shot snackbar message emitted by [ListingDetailViewModel]. Carries a
- * string-resource id (and optional positional args) so the composable can
- * resolve localised text at render time.
- */
 data class ListingDetailSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
 )
 
-/**
- * ViewModel for [ListingDetailScreen].
- *
- * Wraps [MarketRepository.getListing] for the initial load, exposes the
- * three on-device stores ([SavedRepository], [RecentlyViewedStore],
- * [ReportedStore]) the screen needs for the save / report / recently-viewed
- * affordances, and re-fetches the listing after a relist so the new status /
- * id surface in the UI.
- *
- * The repository raises typed [MochiError]s; every async path catches and
- * converts unexpected exceptions via [toMochiError] so the UI can render a
- * localised message instead of stack-trace text.
- */
 /** One-shot outcomes of a digital-asset download. */
 sealed interface ListingDetailEvent {
     data class Toast(val message: String) : ListingDetailEvent
@@ -106,12 +82,8 @@ class ListingDetailViewModel @Inject constructor(
     val events: SharedFlow<ListingDetailEvent> = _events.asSharedFlow()
 
     /**
-     * Fetch a digital asset through the authenticated client.
-     *
-     * The screen used to build a URL and hand it to a Custom Tab, which cannot
-     * work: the path form was wrong (the action takes ?id=, so the wrong shape
-     * fell through to the SPA), and the action is not public, so a browser tab
-     * carrying no token or cookie gets a 401 either way.
+     * Fetches through the authenticated client: the asset action is not public,
+     * so a Custom Tab (no token or cookie) gets a 401.
      */
     fun downloadAsset(assetId: String) {
         if (_state.value.downloadingAsset) return
@@ -179,11 +151,8 @@ class ListingDetailViewModel @Inject constructor(
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
                 val resp = repository.getListing(id)
-                // Photos are best-effort: the detail payload only embeds the
-                // primary `photo`, so the full set comes from the public
-                // `-/photos/list` endpoint. A failure just falls back to the
-                // embedded photo (or an empty carousel). Sorted by rank so the
-                // carousel order matches the seller's arrangement.
+                // The detail payload embeds only the primary photo; the full
+                // set is best-effort from `-/photos/list`.
                 val photos = runCatching {
                     repository.listPhotos(id).sortedBy { it.rank }
                 }.getOrDefault(emptyList())
@@ -192,11 +161,8 @@ class ListingDetailViewModel @Inject constructor(
                 val audit = runCatching {
                     repository.auditObject(kind = "listing", objectId = id).audit
                 }.getOrDefault(emptyList())
-                // Seller reviews are best-effort: a fetch failure (or a seller
-                // with no public reviews) just hides the section. `role` is the
-                // reviewer's perspective, so to show reviews *of* this seller we
-                // want the ones written by buyers (buyer -> seller), not the
-                // seller's own authored reviews.
+                // Best-effort. `role` is the reviewer's perspective: reviews of
+                // this seller are those written by buyers.
                 val reviews = runCatching {
                     val sellerId = resp.seller.id
                     if (sellerId.isBlank()) {

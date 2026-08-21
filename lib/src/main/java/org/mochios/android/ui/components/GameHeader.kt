@@ -39,33 +39,10 @@ import androidx.compose.ui.unit.dp
 enum class StoneColor { WHITE, BLACK }
 
 /**
- * Strip variant of the cross-app GameHeader. Mirrors the
- * `variant='strip'` mode of `lib/web/src/components/layout/game-header.tsx`:
- * a single horizontal row with optional avatar + title + stats + actions,
- * a small muted status line beneath, and an optional banner slot for
- * draw-offer-style prompts.
- *
- * On phones we squash to a single line; the stats area pushes against the
- * title which is allowed to ellipsise. Callers can render multiple
- * [GameHeaderStat] entries inside the `stats` slot.
- *
- * @param title              Opponent name (or game title for solo modes).
- * @param status             Short status text rendered as a muted second
- *                           line ("Black to move", "You won", "Draw"). Pass
- *                           an empty string to omit the line.
- * @param myTurn             When non-null, renders a coloured dot before
- *                           the status — green for true, dim for false. Use
- *                           null when the game is over.
- * @param opponentFingerprint Entity ID for the opponent avatar. When null
- *                            no avatar is shown.
- * @param opponentName       Display name for the avatar's initials fallback.
- * @param stats              Slot for [GameHeaderStat] entries (e.g. "You: ♟",
- *                           "Captures: 4", "Score: 23"). Each stat appears
- *                           as a small pill.
- * @param actions            Slot for trailing IconButtons (chat toggle,
- *                           overflow menu).
- * @param banner             Slot for a full-width prompt below the status —
- *                           e.g. draw offer / rematch invite.
+ * Game header strip: avatar, title, [stats] pills and [actions] on one row, a
+ * muted [status] line beneath, and an optional [banner] for draw-offer prompts.
+ * [myTurn] draws a coloured dot before the status; pass null once the game
+ * ends.
  */
 @Composable
 fun GameHeader(
@@ -152,17 +129,9 @@ fun GameHeader(
 }
 
 /**
- * Small rounded pill stat used inside [GameHeader]'s `stats` slot. Renders
- * an optional icon, label, and value side-by-side. Mirrors `GameHeaderStat`
- * from `lib/web/src/components/layout/game-header-stats.tsx`.
- *
- * @param isHighlighted Use a primary-tinted background — typically the
- *                      colour that's "to move".
- * @param isMe          Underline the label so the user can see at a glance
- *                      which side is them.
- * @param srLabel       Screen-reader-only label attached as a content
- *                      description. Used when the icon alone carries
- *                      meaning.
+ * Small rounded pill stat for [GameHeader]'s `stats` slot. [isHighlighted]
+ * tints the side to move, [isMe] underlines the viewer's own, and [srLabel]
+ * carries the meaning when the icon alone does.
  */
 @Composable
 fun RowScope.GameHeaderStat(
@@ -219,10 +188,8 @@ fun RowScope.GameHeaderStat(
 }
 
 /**
- * 8 dp filled circle for showing "white" vs "black" stone/piece colour.
- * The white dot gets a darker border so it remains visible against light
- * backgrounds; the black dot gets a faint border so it stands out in dark
- * theme.
+ * 8 dp filled circle for white vs black stones. Each dot carries a ring so it
+ * stays visible against a light or dark background.
  */
 @Composable
 fun GameHeaderStoneDot(color: StoneColor) {

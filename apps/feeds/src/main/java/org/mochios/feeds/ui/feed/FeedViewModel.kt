@@ -66,9 +66,8 @@ sealed interface FeedActionEvent {
 }
 
 /**
- * The post (and optional parent comment) the comment-composer bottom sheet is
- * targeting. [parentId] non-null means the sheet is composing a reply to that
- * comment; [parentName] is the author shown in the sheet's "Replying to…" line.
+ * Target of the comment-composer sheet; a non-null [parentId] means a reply to
+ * that comment.
  */
 data class CommentTarget(
     val feedId: String,
@@ -200,12 +199,10 @@ class FeedViewModel @Inject constructor(
     private val resolvingImages = mutableSetOf<String>()
 
     /**
-     * Upgrade an RSS post's preview image: feeds store the RSS item's
-     * `media:thumbnail`, which is often tiny (BBC ships 240px), while the
-     * server can fetch the article's og:image on demand and caches it into
-     * the post. Only posts that already show an image are upgraded — posts
-     * without one reserve no hero region, so a late image would shift the
-     * layout. Safe to call repeatedly; each post resolves once.
+     * Upgrade an RSS post's thumbnail to the article's og:image, which the
+     * server fetches and caches on demand. Only posts already showing an image
+     * are upgraded - a late image on a post with no hero region would shift the
+     * layout.
      */
     fun resolvePostImage(post: Post) {
         val rss = post.data?.rss ?: return
@@ -230,9 +227,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Generate an RSS feed URL for [mode] (`"posts"` or `"all"`) and hand it to
-     * the screen to copy to the clipboard. The "All feeds" aggregate uses the
-     * class-level RSS endpoint; a single feed uses its own.
+     * Mint an RSS URL for [mode] (`"posts"` or `"all"`) and hand it to the
+     * screen to copy.
      */
     fun copyRssUrl(mode: String) {
         viewModelScope.launch {
@@ -252,9 +248,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Fetch the feed's `mochi://<peer>/<feed>` link and hand it to the screen for
-     * the system share sheet. The server assembles the link, so the peer id never
-     * has to be resolved client-side.
+     * Fetch the feed's `mochi://<peer>/<feed>` share link; the server assembles
+     * it.
      */
     fun shareLink() {
         viewModelScope.launch {
@@ -423,11 +418,9 @@ class FeedViewModel @Inject constructor(
         nextCursor = result.nextCursor
     }
 
-    // Fetch one page for the current view. The "All feeds" aggregate hits the
-    // class-level all-subscribed-feeds endpoint; a single feed hits its own.
-    // Both paginate identically — a chronological `before` cursor (the last
-    // post's created timestamp, which the server filters `created < before`) or
-    // an `offset` for relevance sorts.
+    // One page for the current view. Pages by a `before` cursor (last post's
+    // created; server filters `created < before`) or by `offset` for relevance
+    // sorts.
     private suspend fun fetchPosts(before: String? = null, offset: Long? = null): PostListResult {
         return if (isAllFeeds) {
             repository.getAllPosts(
@@ -485,11 +478,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Re-fetch a single post and patch it in place, leaving the rest of the
-     * list and the reader's position untouched. Backs the top-bar refresh
-     * button, which refreshes only the post currently in view. [postFeedId] is
-     * the post's own feed — it differs per card in the all-feeds aggregate, so
-     * it must come from the post rather than [feedId].
+     * Re-fetch one post and patch it in place. [postFeedId] is the post's own
+     * feed - it differs per card in the all-feeds aggregate.
      */
     fun refreshPost(postFeedId: String, postId: String) {
         viewModelScope.launch {
@@ -559,11 +549,6 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Post the drafted comment for the open composer target — creating a new
-     * comment/reply, or saving an edit when [CommentTarget.editCommentId] is set
-     * — then refresh just that post so the card's preview reflects the change.
-     */
     fun sendComment() {
         val target = _commentTarget.value ?: return
         val body = _commentDraft.value.trim()
@@ -618,11 +603,6 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /**
-     * React to a comment shown in a feed card, then refresh just that post so
-     * the comment's reaction pills update in place. [postFeedId] is the post's
-     * own feed (cards span feeds in the all-feeds aggregate).
-     */
     fun reactToComment(postFeedId: String, postId: String, commentId: String, reaction: String) {
         viewModelScope.launch {
             try {
@@ -757,11 +737,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * [feed] is the post's own feed, not the screen's. Both endpoints are
-     * entity-scoped, so in the aggregate view the "__all__" sentinel resolves
-     * to no feed and the server answers 404 "Feed not found" — which the catch
-     * below then swallowed, so tagging simply did nothing there. Every other
-     * per-post action already routes this way.
+     * [feed] is the post's own feed, not the screen's: the endpoint is
+     * entity-scoped and the "__all__" sentinel 404s.
      */
     fun addTag(feed: String, postId: String, label: String, qid: String? = null) {
         val target = feed.takeIf { it.isNotBlank() && it != "__all__" } ?: return
@@ -780,11 +757,8 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    // Interest is user-global, but the action is entity-scoped to a feed, so it
-    // must route through a real feed entity. In the all-feeds view feedId is the
-    // "__all__" sentinel (not an entity, so the action 404s and silently does
-    // nothing), so the caller passes the post's own feed — always valid — as the
-    // routing context. Mirrors web, which routes interest through a subscribed feed.
+    // Interest is user-global but the action is entity-scoped, so [feed] must
+    // be a real feed - the post's own, never the "__all__" sentinel.
     fun adjustInterest(feed: String, tag: Tag, direction: String) {
         val target = feed.takeIf { it.isNotBlank() && it != "__all__" }
         if (target == null) {
@@ -808,11 +782,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Mirror a successful interest adjustment into local state so the tag
-     * colour updates immediately (web does the same optimistic shift). Uses
-     * the server's own deltas — up +15, down -20, clamped to ±100; remove
-     * clears the weight. Interest is global per qid, so every tag with the
-     * same qid updates, across all posts and the feed tag bar.
+     * Optimistic local mirror of a server interest adjustment; the deltas and
+     * clamp match the server's.
      */
     private fun applyInterestLocally(qid: String?, direction: String) {
         if (qid.isNullOrEmpty()) return
@@ -830,10 +801,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Called when the bottom of [postId] has been continuously visible for
-     * the threshold (currently 1s, enforced in the UI layer). Adds the post
-     * to a pending batch that flushes to the server after a short window so
-     * a fast scroll past several posts becomes one HTTP call.
+     * Called once [postId]'s bottom has been visible for the UI layer's
+     * threshold; ids batch so a fast scroll is one request.
      */
     fun onPostBottomViewed(postId: String) {
         if (_posts.value.find { it.id == postId }?.read != 0L) return
@@ -860,11 +829,6 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Delete a post from the feed list overflow menu. Removes the post
-     * from local state on success; refreshes the feed on failure to
-     * recover the canonical state.
-     */
     fun deletePost(postId: String) {
         viewModelScope.launch {
             try {
@@ -877,11 +841,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Lazy og:image fetch for an RSS post that arrived without an inline
-     * image. Idempotent — the repository's server-side handler caches the
-     * fetch outcome, and we skip the call entirely when image is already
-     * set, when there's no link to scrape, or when we've already attempted
-     * a fetch for this post in this session.
+     * Lazy og:image fetch for an RSS post that arrived without one; the server
+     * caches the outcome.
      */
     private val lazyImageAttempted = mutableSetOf<String>()
     fun loadPostImageIfMissing(postId: String) {
@@ -922,11 +883,9 @@ class FeedViewModel @Inject constructor(
                     repository.markAllRead(feedId)
                 }
                 val now = System.currentTimeMillis() / 1000
-                // In "unread only" mode every visible post just became read,
-                // so they should disappear from the list immediately rather
-                // than wait for the next reload. In "all" mode keep the
-                // posts but stamp them as read so any unread-badge UI drops
-                // to zero without a re-fetch.
+                // Unread-only mode: every visible post just became read, so
+                // drop them now; otherwise stamp them read so unread badges
+                // clear without a re-fetch.
                 _posts.value = if (_unreadOnly.value) {
                     emptyList()
                 } else {
@@ -1001,13 +960,10 @@ class FeedViewModel @Inject constructor(
             // Server event types are slash-namespaced (feeds.star commit hook
             // + handlers); the old underscore names never matched anything.
             when (event.type) {
-                // A brand-new post is queued behind the "new posts" pill so the
-                // pager doesn't shift under the reader; tapping it refreshes.
-                // The event can arrive for a post the list already shows: RSS
-                // ingestion inserts the row immediately but defers post/create
-                // until AI tagging completes, so a load in between sees the
-                // post before its event. Count only posts genuinely absent,
-                // once each.
+                // New posts queue behind the "new posts" pill. RSS ingestion
+                // defers post/create until AI tagging completes, so the event
+                // can arrive for a post already loaded - count only posts
+                // genuinely absent, once each.
                 "post/create" -> {
                     val postId = event.post
                     if (postId.isNullOrEmpty()) {
@@ -1056,9 +1012,8 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
-     * Silently re-fetch the feed's info (name, banner, permissions) so edits made
-     * elsewhere — e.g. saving a new banner in feed settings — show on return
-     * without a manual pull-to-refresh. Keeps the current sort untouched.
+     * Silently re-fetch feed info so edits made in settings (e.g. a new banner)
+     * show on return.
      */
     private suspend fun refreshFeedInfo() {
         if (isAllFeeds || feedId.isBlank()) return
@@ -1071,11 +1026,6 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Silently reload the feed when the screen returns to the foreground — e.g.
-     * after the user created a post here — so a newly added (or first) post
-     * shows without a manual pull-to-refresh.
-     */
     fun reloadOnForeground() {
         viewModelScope.launch {
             if (isAllFeeds) {

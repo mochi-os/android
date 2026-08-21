@@ -66,12 +66,8 @@ import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
 /**
- * Compose or edit a forum post: title, a markdown body with `@mention`
- * autocomplete, and file attachments. A single screen serves both — it is in
- * edit mode when the back-stack carries a `postId`, prefilling the fields and
- * showing the post's current attachments as keep/remove chips. Mirrors feeds'
- * `CreatePostScreen` — the submit action lives in the top bar and the
- * attachment chips can be reordered, since the server keeps the upload order.
+ * Compose or edit a forum post; edit mode when the back-stack carries a
+ * `postId`.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -368,9 +364,8 @@ private fun AttachmentChips(
 }
 
 /**
- * The post's current attachments while editing, as keep/remove chips. A
- * deselected chip is dropped on save; up/down controls reorder the kept set,
- * since the server keeps the order the ids arrive in.
+ * Existing attachments as keep/remove chips; order matters, since the server
+ * keeps the order the ids arrive in.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

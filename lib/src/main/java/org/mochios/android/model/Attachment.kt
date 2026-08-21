@@ -18,11 +18,6 @@ data class Attachment(
     @SerializedName("thumbnail_url") val thumbnailUrl: String? = null,
     @SerializedName("preview_url") val previewUrl: String? = null
 ) {
-    /**
-     * Coarse file category, from the MIME [type] first and the filename
-     * extension as a fallback. Drives both media routing (image/video viewers)
-     * and the icon shown for document attachments.
-     */
     val fileKind: FileKind
         get() {
             val ext = name.substringAfterLast('.', "").lowercase()

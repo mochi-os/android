@@ -31,9 +31,8 @@ import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
 /**
- * Standalone Sources page reachable from the feed's overflow menu.
- * Mirrors web's `/$feedId_/sources` route. The body is the same composable
- * the Settings tab used (now removed from there).
+ * Standalone Sources page from the feed's overflow menu; mirrors web's
+ * `/$feedId_/sources` route.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

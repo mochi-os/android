@@ -49,13 +49,6 @@ object PeopleApp {
     }
 }
 
-/**
- * Map a sidebar selection to its nav route. Used by every top-level People
- * screen to power the shared [PeopleSidebar] drawer — the sidebar is the
- * only navigation between sections, so each section call replaces the
- * current entry rather than stacking (otherwise four taps left four entries
- * in the back stack).
- */
 private fun NavController.openPeopleSection(section: PeopleSidebarSection) {
     val target = when (section) {
         PeopleSidebarSection.FRIENDS -> PeopleApp.friends()

@@ -18,10 +18,8 @@ data class PermissionNameResponse(val name: String = "")
 data class PermissionGrantResponse(val status: String = "")
 
 /**
- * The shell's `menu/` service, used here for the permission-request flow: when
- * `sources/add` returns `permission_required`, we resolve the permission key to
- * a human name and, on approval, grant it. Authorised by the session cookie on
- * the shared OkHttpClient (the same way the web shell calls these endpoints).
+ * The shell's `menu/` permission endpoints, for the `permission_required` flow
+ * from `sources/add`; authorised by the session cookie.
  */
 interface MenuApi {
 

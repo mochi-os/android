@@ -31,27 +31,9 @@ enum class AvatarSize(val px: Dp) {
 }
 
 /**
- * Avatar for the author of a wiki revision. Each revision is identified by a
- * `revisionId`, and the owning wiki proxies that author's avatar + style at
- * per-revision asset URLs so remote authors render correctly without the
- * client having to fetch from foreign peers.
- *
- * Web reference: `apps/wikis/web/src/features/wiki/page-history.tsx` and
- * `changes-list.tsx`, which both build:
- *   src      = `<baseURL>revision/<revisionId>/asset/avatar`
- *   styleUrl = `<baseURL>revision/<revisionId>/asset/style`
- *
- * `baseURL` here is the same per-entity prefix used for attachments — it's
- * pulled from [LocalWikiContext].
- *
- * @param revisionId Revision UID; the wiki proxies the author's avatar /
- *                   style at `revision/<revisionId>/asset/{avatar,style}`.
- * @param authorFingerprint Stable seed for the initials placeholder, used
- *                          when the avatar image hasn't loaded yet or fails.
- * @param authorName Display name; shown as the avatar `alt` and used to
- *                   derive initials for the placeholder.
- * @param size Tier from [AvatarSize]; defaults to [AvatarSize.XS] for the
- *             inline use in history / changes rows.
+ * Avatar for a revision's author. The wiki proxies the author's avatar and
+ * style at `revision/<id>/asset/{avatar,style}`, so remote authors render
+ * without fetching foreign peers.
  */
 @Composable
 fun AuthorAvatar(

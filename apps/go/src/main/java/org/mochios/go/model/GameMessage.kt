@@ -6,13 +6,9 @@
 package org.mochios.go.model
 
 /**
- * A row in the in-game chat / move log. Mirrors the `GameMessage` interface
- * in `apps/go/web/src/api/types/games.ts`.
- *
- *  - `type == "message"` — user-typed chat
- *  - `type == "move"`    — server-generated move log entry (`body` is the
- *                          short SGF-style move label)
- *  - `type == "system"`  — server-generated event (resign, game over)
+ * A row in the in-game chat / move log, mirroring web's `GameMessage`. `type`
+ * is `message` (chat), `move` (server move log; `body` is the SGF-style label)
+ * or `system` (resign, game over).
  */
 data class GameMessage(
     val id: String = "",
@@ -22,10 +18,8 @@ data class GameMessage(
     val body: String = "",
     val type: String = "message",
     /**
-     * For `type == "system"` rows, the structured event kind
-     * (`"resign" | "draw_offer" | "draw_accept" | "draw_decline"`) used to
-     * localise the notice per viewer. Empty for legacy rows / chat / move,
-     * in which case the renderer falls back to [body].
+     * For `system` rows: `resign | draw_offer | draw_accept | draw_decline`,
+     * used to localise the notice; empty rows fall back to [body].
      */
     val event: String = "",
     val created: Long = 0,

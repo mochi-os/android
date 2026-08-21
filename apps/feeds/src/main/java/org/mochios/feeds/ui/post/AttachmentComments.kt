@@ -33,16 +33,10 @@ import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 
 /**
- * The comment thread for one image, shown in the lightbox's comments panel.
- *
- * Comments are one thread per post; a comment may be ANCHORED to one of the
- * post's attachments. This panel renders the post's REAL thread - the same
- * [CommentItem] the post screen draws, with replies, reactions, editing and
- * deletion intact - filtered to the comments anchored to the image being
- * viewed, offers the rest of the thread behind a toggle, and writes new
- * comments in the same [CommentInputBar] as the screen - attachments and all
- * - anchored to this image without the writer having to say so. The draft is
- * the ViewModel's, so it is one draft whether written here or below the post.
+ * The comment thread for one image, in the lightbox's comments panel: the
+ * post's real thread filtered to comments anchored to this image (the rest
+ * behind a toggle), with new comments anchored to it automatically. The draft
+ * is the ViewModel's - one draft whether written here or below the post.
  */
 @Composable
 internal fun AttachmentComments(

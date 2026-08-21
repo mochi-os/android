@@ -24,10 +24,8 @@ import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 /**
- * UI state for [MessageThreadScreen]. Holds the thread metadata, the
- * embedded listing preview (for the top-bar chip), the running message
- * list (ordered oldest first; the screen flips it for reverseLayout),
- * the in-progress draft, and an error / send-in-flight flag.
+ * [messages] are oldest first; the screen reverses them for its reverseLayout
+ * list.
  */
 data class MessageThreadUiState(
     val thread: MarketThread? = null,
@@ -39,31 +37,11 @@ data class MessageThreadUiState(
     val error: MochiError? = null,
 )
 
-/**
- * One-shot events surfaced to the screen. Errors land in a snackbar; the
- * screen also listens for new-message events to keep the auto-scroll
- * anchored on the latest message.
- */
 sealed interface MessageThreadEvent {
     data class Error(val error: MochiError) : MessageThreadEvent
     data class Appended(val message: Message) : MessageThreadEvent
 }
 
-/**
- * ViewModel for a single buyer-seller conversation. Reads `listingId` and
- * `threadId` from [SavedStateHandle] (the nav graph wires both as
- * `NavType.StringType`), then:
- *
- *  1. fires [refresh] to load the thread + messages via
- *     [MarketRepository.getThread];
- *  2. calls [MarketRepository.markMessagesRead] once messages are loaded so
- *     the inbox unread count drops to zero;
- *  3. exposes [sendMessage] to append a new message (followed by an
- *     immediate optimistic update + a server-acked replacement on the
- *     response);
- *  4. accepts incoming WebSocket events via [ingestRemote] which the
- *     screen pumps in from the lib's `rememberGameWebSocket` helper.
- */
 @HiltViewModel
 class MessageThreadViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -73,11 +51,6 @@ class MessageThreadViewModel @Inject constructor(
     val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
     val threadId: String = savedStateHandle.get<String>("threadId").orEmpty()
 
-    /**
-     * Thread id used for every thread-scoped call. Seeded from the route arg;
-     * when the screen is opened from a listing the arg is the sentinel "new"
-     * (→ 0), and [refresh] fills this in via `threads/create` before loading.
-     */
     private var resolvedThreadId: String = threadId.takeIf { it.isNotBlank() && it != "new" } ?: ""
 
     private val _state = MutableStateFlow(MessageThreadUiState())
@@ -156,10 +129,8 @@ class MessageThreadViewModel @Inject constructor(
     }
 
     /**
-     * Ingest a message that arrived over the per-thread WebSocket. The
-     * server emits both directions on the same channel so both peers
-     * stay in sync; we dedup on message id since `sendMessage` already
-     * appended our own messages locally.
+     * The socket echoes our own sends too, so dedup on id against what
+     * [sendMessage] appended.
      */
     fun ingestRemote(message: Message) {
         val existing = _state.value.messages

@@ -659,11 +659,6 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
     }
 }
 
-/**
- * A dropdown that selects a route target from a server-provided list (apps or
- * entities), so the user picks a name rather than typing a raw id. Falls back to
- * a disabled-looking prompt when nothing is selected.
- */
 @Composable
 private fun TargetPicker(
     label: String,

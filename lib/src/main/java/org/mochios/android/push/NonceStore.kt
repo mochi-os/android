@@ -24,9 +24,7 @@ internal fun noncesAfterIssue(
 
 /**
  * Outstanding nonces after spending [nonce], or null when it was not
- * outstanding — which is the signal to ignore the tap. Returning a new list
- * rather than mutating is what makes single use testable: consuming the same
- * nonce against the result fails.
+ * outstanding - the signal to ignore the tap.
  */
 internal fun noncesAfterConsume(outstanding: List<String>, nonce: String?): List<String>? {
     if (nonce.isNullOrEmpty() || nonce !in outstanding) return null
@@ -35,17 +33,9 @@ internal fun noncesAfterConsume(outstanding: List<String>, nonce: String?): List
 
 /**
  * Single-use proofs that a `mochi:notification` tap came from a notification
- * this app posted.
- *
- * MainActivity is exported — it has to be, to receive the `mochi:` scheme at
- * all — so any app or web page can send it an intent, and extras on that intent
- * authenticate nothing. Every notification therefore carries an unguessable
- * nonce issued here, and the tap handler acts only if it can consume one.
- *
- * Persistent because notifications are posted while the app is dead, and
- * bounded because nonces for notifications the user never taps are never
- * consumed: past [MAXIMUM_NONCES] the oldest are dropped, which costs at worst
- * the tap action on a very stale tray entry.
+ * this app posted: MainActivity is exported, so intent extras authenticate
+ * nothing. Persistent, and bounded at [MAXIMUM_NONCES] - unspent nonces are
+ * dropped oldest first.
  */
 class NonceStore(context: Context) {
 

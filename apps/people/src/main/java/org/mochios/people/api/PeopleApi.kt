@@ -24,20 +24,9 @@ import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
 
-// ---------------------------------------------------------------------------
-// Response wrappers
-//
-// The people app's HTTP actions wrap their payloads in `{"data": ...}` (the
-// standard Mochi app envelope). The library's ApiResponse<T> already unwraps
-// that one level, so each wrapper here mirrors the *inner* shape returned
-// by the corresponding action.
+// Response wrappers: the inner shape of each action's `{"data": ...}` envelope,
+// which ApiResponse<T> already unwraps.
 
-/**
- * Result of `/-/friends`. Friends, received invites and sent invites all use
- * the same `Friend` record shape — direction is implied by which collection
- * the row appears in. Total / page / limit are optional pagination hints the
- * server may or may not emit depending on size.
- */
 data class FriendsListResponse(
     val friends: List<Friend> = emptyList(),
     val received: List<FriendInvite> = emptyList(),

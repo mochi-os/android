@@ -24,37 +24,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 /**
- * Titled card section with an optional description and trailing action button,
- * containing one or more [FieldRow] children. Mirrors web's `Section` (used
- * pervasively in wikis settings, user/account, and user/preferences) so the
- * port reads identically across platforms.
- *
- * Usage:
- * ```
- * Section(
- *     title = stringResource(R.string.wikis_about_section),
- *     description = stringResource(R.string.wikis_about_description),
- *     action = { OutlinedButton(onClick = { ... }) { Text("Edit") } },
- * ) {
- *     FieldRow(label = stringResource(R.string.wikis_entity_id)) {
- *         DataChip(value = wikiInfo.id, truncate = Truncate.MIDDLE)
- *     }
- *     FieldRow(label = stringResource(R.string.wikis_fingerprint)) {
- *         DataChip(value = fingerprint, truncate = Truncate.MIDDLE)
- *     }
- * }
- * ```
- *
- * @param title       Section heading, rendered as bold `titleMedium`.
- * @param description Optional one-line description in muted `bodyMedium` — read
- *                    once for orientation, so it sits under the rows it explains.
- * @param action      Optional trailing composable (typically a small button)
- *                    aligned to the end of the header row.
- * @param headerAlignment Vertical alignment of the title column and the
- *                    [action] within the header row. Defaults to
- *                    [Alignment.Top]; use [Alignment.CenterVertically] to
- *                    centre a lone action button against a single-line title.
- * @param content     The section body — typically a list of [FieldRow]s.
+ * Titled card section with an optional description and trailing action, holding
+ * [FieldRow] children. Mirrors web's `Section`. [headerAlignment] centres a
+ * lone action button against a single-line title.
  */
 @Composable
 fun Section(
@@ -104,15 +76,9 @@ fun Section(
 }
 
 /**
- * Labelled row inside a [Section]. The label is on the start in muted
- * `bodyMedium`; the value composable is on the end, right-aligned. An optional
- * [description] renders as a second line under the label in a smaller, more
- * muted style. Mirrors web's `FieldRow`.
- *
- * @param label       Field label, e.g. "Entity ID".
- * @param description Optional secondary line under the label.
- * @param value       The value composable — usually a [Text], [DataChip], or
- *                    small inline button.
+ * Labelled row inside a [Section]: muted label at the start, [value]
+ * right-aligned, with an optional [description] beneath the label. Mirrors
+ * web's `FieldRow`.
  */
 @Composable
 fun FieldRow(

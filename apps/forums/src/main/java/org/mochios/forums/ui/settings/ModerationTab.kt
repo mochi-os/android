@@ -53,21 +53,16 @@ import org.mochios.forums.ui.moderation.ModerationViewModel
 private const val SAVE_DEBOUNCE_MS = 700L
 
 /**
- * Size of the inline number boxes. Wide enough for the longest value these
- * settings hold — a four-digit window duration in seconds — since the label
- * beside them is what needs the room.
+ * Number boxes: wide enough for a four-digit seconds value, no more - the label
+ * beside them needs the room.
  */
 private val NUMBER_FIELD_WIDTH = 80.dp
 private val NUMBER_FIELD_HEIGHT = 44.dp
 
 /**
- * Moderation settings tab: pre-moderation toggles and rate limits. Backed by
- * [ModerationViewModel], which resolves the same `forumId` route argument the
- * settings screen was opened with. Edits save themselves — toggles on the spot,
- * typed numbers once the user pauses — and each save reports through [onMessage].
- *
- * @param onMessage receives a string resource to confirm a finished save; the
- *                  settings screen owns the snackbar that shows it.
+ * Moderation settings tab. Edits save themselves - toggles at once, typed
+ * numbers after [SAVE_DEBOUNCE_MS] - and each save reports a string resource
+ * through [onMessage]; the settings screen owns the snackbar.
  */
 @Composable
 fun ModerationTab(

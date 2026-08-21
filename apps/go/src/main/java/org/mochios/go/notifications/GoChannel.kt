@@ -10,11 +10,6 @@ import android.app.NotificationManager
 import android.content.Context
 import org.mochios.go.R
 
-/**
- * Notification channel id for Go game events (new game, move, message, draw,
- * resign, game-over). Mirrors the People / Wikis pattern — one channel per
- * app keeps OS-level toggles per feature.
- */
 const val GO_NOTIFICATION_CHANNEL_ID = "go"
 
 fun setupGoNotificationChannel(context: Context) {

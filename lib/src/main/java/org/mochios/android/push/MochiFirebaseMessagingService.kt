@@ -22,21 +22,9 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 /**
- * Receives FCM messages and posts the system notification on the matching
- * per-feature channel.
- *
- * Wire payload (set by the Mochi server in FCM v1 `message.data`) mirrors
- * the UnifiedPush envelope so the on-device side is transport-agnostic:
- *
- *     { "app": "forums", "link": "/forums/abc12def", "title": "...", "body": "...", "tag": "..." }
- *
- * `onNewToken` POSTs the refreshed token back to the notifications app's
- * `push/register/fcm` action so the server can replace any stale entry.
- *
- * The service is plumbed in the lib so all per-feature channels see the same
- * routing; channel IDs are the feature slugs shipped by the per-feature
- * modules' channel-setup helpers, and both transports resolve them through
- * [notificationChannelFor].
+ * Receives FCM messages and posts the system notification on the app's channel.
+ * The server sends the UnifiedPush envelope in `message.data`: `{app, link,
+ * title, body, tag, id}`, so both transports share [notificationChannelFor].
  */
 class MochiFirebaseMessagingService : FirebaseMessagingService() {
 
@@ -95,13 +83,10 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
     ) {
         val channelId = channelIdFor(app, link)
 
-        // mochi:notification?link=<encoded>[&id=<encoded>]&nonce=<encoded> —
-        // same opaque URI the UnifiedPush dispatcher uses; routed by
-        // MainActivity through claude/plans/mochi-uri-scheme.md. `id` lets
-        // MainActivity call the notifications app's -/read endpoint so the
-        // matching web row is cleared on tap, and the nonce is what proves the
-        // tap came from a notification we posted rather than from any app or
-        // web page that can send this exported activity an intent.
+        // mochi:notification?link=<encoded>[&id=<encoded>]&nonce=<encoded>, the
+        // same URI the UnifiedPush dispatcher uses. `id` marks the row read on
+        // tap; the nonce proves the tap came from our notification, since
+        // MainActivity is exported.
         val ssp = buildString {
             append("notification?link=").append(Uri.encode(link))
             if (id.isNotEmpty()) append("&id=").append(Uri.encode(id))

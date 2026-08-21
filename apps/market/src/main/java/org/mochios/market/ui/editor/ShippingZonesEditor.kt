@@ -51,10 +51,8 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.ShippingOption
 
 /**
- * Region option offered in the shipping-zone dialog. Mirrors the value/label
- * pairs used on web. The wire format on the server treats region codes
- * opaquely — ISO 3166 two-letter codes for countries, plus the group codes
- * `EU` and `WW` for the European Union and Worldwide buckets.
+ * Wire codes are ISO 3166 alpha-2 plus the `EU` and `WW` group buckets; the
+ * server treats them opaquely.
  */
 private data class RegionChoice(val wireCode: String, val labelRes: Int)
 
@@ -73,11 +71,6 @@ private val REGION_CHOICES: List<RegionChoice> = listOf(
     RegionChoice("JP", R.string.market_editor_zone_country_jp),
 )
 
-/**
- * Listing-level shipping-zones editor. Mirrors web's `shipping-zones-editor.tsx`:
- * a list of zones plus "Add zone" / "Edit" controls that pop a dialog with
- * region, price, days, and notes fields. Per-zone delete inline.
- */
 @Composable
 fun ShippingZonesEditor(
     zones: List<ShippingOption>,

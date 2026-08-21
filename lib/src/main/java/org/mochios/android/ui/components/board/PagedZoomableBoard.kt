@@ -38,44 +38,10 @@ import org.mochios.android.ui.components.dnd.DragState
 import kotlin.math.roundToInt
 
 /**
- * Trello-style kanban board layout for phones. Pages one column at a time
- * (with a peek of the neighbours) until the user long-presses a card
- * (driven by [DragState] from the dnd library), at which point the whole
- * board scales down so several columns are visible at once and the user
- * can drop the card on any of them.
- *
- * Edge auto-scroll: while a drag is active and the pointer is within
- * [edgeScrollThreshold] of the viewport edge, the board scrolls
- * horizontally so far-away columns can be reached without lifting the
- * finger.
- *
- * Coordinate-space note: the scale is applied via `Modifier.layout` (not
- * `Modifier.graphicsLayer`) so each page's layout size reported to the
- * `LazyRow` already accounts for the scale. Drop-target bounds inside
- * the page composable still resolve to window coordinates that match
- * what the user sees, so the dnd library's hit-testing keeps working
- * unchanged through the transition.
- *
- * @param pageCount number of columns to render (caller flattens any
- *   "unassigned" trailing column into this count).
- * @param cardDragState the dnd state for individual card drags. Drives
- *   the paged ↔ zoomed mode switch and the edge-scroll pointer.
- * @param columnDragState optional dnd state for column-reorder drags.
- *   When non-null, the board also zooms during column drags.
- * @param state the underlying LazyRow state. Caller may hoist this for
- *   `animateScrollToPage`-style navigation.
- * @param pagedPeekPadding horizontal padding reserved at each edge in
- *   paged mode, controlling how much of the next column "peeks" in.
- * @param pageSpacing gap between columns when snapped together.
- * @param zoomScale layout scale applied during a drag. 0.5 fits roughly
- *   2 columns per screen on a typical phone; smaller values fit more.
- * @param edgeScrollThreshold distance from the viewport's left/right
- *   edge that triggers auto-scroll during a drag.
- * @param edgeScrollSpeedPerFrameDp max horizontal scroll per ~16ms frame
- *   when the pointer is right at the edge. Falls off linearly toward
- *   zero as the pointer moves away from the edge.
- * @param page composable for one column. Caller looks up the right
- *   FieldOption / data row from the index and renders its column.
+ * Kanban board for phones: pages one column at a time, then scales down during
+ * a card drag so several columns are droppable, with edge auto-scroll. Scale
+ * goes through `Modifier.layout`, not `graphicsLayer`, to keep dnd hit-testing
+ * aligned.
  */
 @Composable
 fun PagedZoomableBoard(
@@ -155,14 +121,9 @@ fun PagedZoomableBoard(
             },
     ) {
         items(pageCount, key = { it }) { index ->
-            // fillParentMaxWidth() gives this item the LazyRow's full
-            // content area (minus contentPadding). The `.layout {}` then
-            // measures the page composable at that full width but
-            // reports a scaled size to the LazyRow + draws scaled via
-            // placeWithLayer's scaleX/scaleY. Because the scale is
-            // applied in the placement pass, `boundsInWindow` inside
-            // the page reflects the scaled position — dnd drop-target
-            // hit-testing aligns with what the user sees.
+            // The `.layout {}` measures at full width but reports a scaled size
+            // and places with a scaled layer, so `boundsInWindow` inside the
+            // page still matches what the user sees and dnd hit-testing lands.
             Box(
                 modifier = Modifier
                     .fillParentMaxWidth()

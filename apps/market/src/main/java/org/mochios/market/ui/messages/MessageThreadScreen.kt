@@ -67,24 +67,6 @@ import org.mochios.market.model.Currency
 import org.mochios.market.model.Message
 import org.mochios.market.navigation.MarketApp
 
-/**
- * One-conversation chat screen. Mirrors web's
- * `apps/market/web/src/features/messages/MessageThread`. Layout:
- *
- *  - TopAppBar shows the other party's display name plus a chip with the
- *    related listing's thumbnail + title (tap → listing detail).
- *  - LazyColumn (reverseLayout = true) renders messages with the latest at
- *    the bottom. My messages right-aligned in the primary tone, others left
- *    in the surfaceVariant tone.
- *  - Compose row at the bottom holds an OutlinedTextField + Send button.
- *
- * The WebSocket subscription uses lib's [rememberGameWebSocket] — the
- * helper is keyed by topic, so we pass `market-thread-<id>` as the key and
- * the underlying URL becomes `wss://server/_/websocket?key=...`. On every
- * incoming `Message` event we forward the parsed body up to the
- * ViewModel via [MessageThreadViewModel.ingestRemote]; the ViewModel
- * dedups on message id.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MessageThreadScreen(
@@ -95,11 +77,8 @@ fun MessageThreadScreen(
     val listState = rememberLazyListState()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    // Subscribe to the per-thread WebSocket once the thread id is known. When
-    // the screen is opened from a listing the route arg is "new", so we key on
-    // the resolved thread id from state rather than the raw arg — the socket
-    // attaches as soon as the thread is created/loaded. The helper closes the
-    // socket on dispose, so navigating away unwinds it for us.
+    // Key on the resolved thread id from state, not the route arg, which is
+    // "new" when opened from a listing.
     val threadId = state.thread?.id?.takeIf { it.isNotEmpty() }
     val socket = rememberGameWebSocket(
         gameKey = threadId?.let { "market-thread-$it" },
@@ -344,9 +323,7 @@ private fun ComposeRow(
 }
 
 /**
- * Map a generic [GameWsEvent] (the lib helper is named for chess but works
- * for any keyed topic) onto a market [Message]. Returns null for events
- * that aren't message payloads or that lack a body.
+ * [GameWsEvent] is the lib's generic keyed-topic event despite the name.
  */
 private fun GameWsEvent.toMessage(threadId: String): Message? {
     if (type != "message") return null

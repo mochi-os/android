@@ -19,17 +19,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 /**
- * Headline metric tile used by the staff dashboard. Mirrors the `StatCard`
- * helper in `apps/staff/web/src/features/dashboard/dashboard-page.tsx`:
- *
- *  - small uppercase caption (the metric label),
- *  - large headline value (the metric, e.g. "1,234" or a formatted price),
- *  - optional sub-label (e.g. "5 currencies" or "across 4 zones").
- *
- * Surface tone is [androidx.compose.material3.ColorScheme.surfaceVariant] so
- * the tile sits one level above the page background regardless of which
- * Mochi theme is active. Used 7+ times on the dashboard — the surrounding
- * grid (`LazyVerticalGrid(GridCells.Adaptive(180.dp))`) sizes each tile.
+ * Dashboard metric tile, mirroring `StatCard` in
+ * `apps/staff/web/src/features/dashboard/dashboard-page.tsx`.
  */
 @Composable
 fun KpiCard(

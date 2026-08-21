@@ -24,13 +24,6 @@ import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for [FindWikisScreen]. Mirrors web's `FindWikisPage`
- * (`apps/wikis/web/src/routes/_authenticated/find.tsx`) — a debounced
- * directory-search field on top, a recommendations list below, and a
- * subscribe button per row that handles the 502-retry-without-server-hint
- * dance.
- */
 data class FindWikisUiState(
     val searchQuery: String = "",
     val results: List<DirectoryEntry> = emptyList(),
@@ -43,9 +36,8 @@ data class FindWikisUiState(
     val pendingId: String? = null,
 
     /**
-     * Directory-search failure, shown as a snackbar and then cleared. Subscribe
-     * failures travel as [FindEvent.SubscribeFailed] instead, so they never land
-     * here.
+     * Directory-search failure only; subscribe failures travel as
+     * [FindEvent.SubscribeFailed].
      */
     val error: MochiError? = null,
 )
@@ -94,11 +86,6 @@ class FindWikisViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Seeds the subscribed set from the wikis the user already has, so a
-     * directory hit they're subscribed to shows as such instead of offering a
-     * subscribe that would be a no-op.
-     */
     private fun loadSubscribed() {
         viewModelScope.launch {
             try {
@@ -151,11 +138,6 @@ class FindWikisViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Subscribe to a directory result. Tries the entity's home server first;
-     * on a 502 (bad gateway — server hint unreachable) retries with no
-     * server hint so the local server falls back to general peer discovery.
-     */
     fun subscribeDirectoryEntry(entry: DirectoryEntry) {
         subscribe(
             target = entry.id.ifEmpty { entry.fingerprint },

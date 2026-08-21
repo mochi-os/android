@@ -61,22 +61,8 @@ import org.mochios.words.model.NewGameFriend
 import org.mochios.android.R as MochiR
 
 /**
- * "New game" screen ported from the dialog, which in turn came from
- * `apps/words/web/src/features/words/components/new-game.tsx`.
- *
- * Composition (top to bottom):
- *   - "Choose opponents (1-3)" label.
- *   - Multi-select checkbox list over the user's friends (the lib's
- *     `PersonPicker` is single-select, so the list is inlined here).
- *   - "(N+1 players)" preview line when at least one friend is selected.
- *   - Language toggle: English (UK) default / English (US).
- *   - Start game in the bottom bar, back button in the top bar.
- *
- * The empty-friends state mirrors the web: an icon + helper text + an
- * "Add friends" button that links to the People app via [onAddFriends].
- *
- * @param onBack leaves the screen without starting a game.
- * @param onCreated receives the new game's id so the host can open it.
+ * Opponent selection is inlined because the lib's `PersonPicker` is
+ * single-select.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

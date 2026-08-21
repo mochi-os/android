@@ -33,23 +33,8 @@ import org.mochios.market.model.PricingModel
 import org.mochios.market.repository.MarketRepository
 
 /**
- * Read-only preview of how Mochi will break down a sale at the given
- * [price]: item / Mochi fee / processor (Stripe) fee / your payout.
- *
- * Backed by the seller's `account/fees` percentage from
- * [MarketRepository.getFees]. The processor fee is intentionally
- * displayed as a delta to the payout rather than a separate Stripe
- * percentage — per `feedback_dont_quote_third_party_rates` we don't
- * embed Stripe's rates here.
- *
- * Debounces re-fetches by 300ms so a slider/text-field can drive the
- * input without spamming the server.
- *
- * @param price        Current price in minor units.
- * @param currency     Currency to format the breakdown in.
- * @param pricingModel Pricing model (subscription vs fixed); reserved
- *                     for future per-model fee rules and accepted now
- *                     so call sites don't need to change later.
+ * Fee breakdown at [price] (minor units). Shows the processor fee only as a
+ * delta to the payout - never embed Stripe's rates.
  */
 @Composable
 fun FeePreview(

@@ -59,18 +59,6 @@ import org.mochios.people.R
 import org.mochios.people.model.GroupMemberType
 import org.mochios.android.R as MochiR
 
-/**
- * Add-member screen: a debounced search across local users and groups.
- *
- * Mirrors the web `MemberDialog` two-step flow: tap a result to select it
- * (highlight only, no commit), then confirm in a second step showing the picked
- * user or group with an "Add to group" action. Back from the confirm step
- * returns to the search list, which still holds its query and results.
- *
- * @param onBack leaves the screen without adding anyone.
- * @param onAdded leaves the screen after a member joined, so the caller can
- *   reload the group it will land on.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddMemberScreen(

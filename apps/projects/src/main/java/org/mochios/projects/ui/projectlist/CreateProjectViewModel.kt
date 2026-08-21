@@ -29,16 +29,6 @@ private fun JsonObject.jsonString(key: String): String? =
         ?.asString
         ?.takeIf { value -> value.isNotBlank() }
 
-/**
- * State of the create-project screen.
- *
- * @property templates templates offered by the server, empty until they load.
- * @property isCreating true while the create request is in flight.
- * @property error what went wrong on the last create attempt, if anything.
- * @property backupPrefill what the screen reads back out of a picked backup file.
- * @property createdProjectId set to the new project's id after a successful
- *   create so the screen can navigate into it; cleared once consumed.
- */
 data class CreateProjectUiState(
     val templates: List<Template> = emptyList(),
     val isCreating: Boolean = false,
@@ -48,12 +38,8 @@ data class CreateProjectUiState(
 )
 
 /**
- * A backup file the user picked, ready to seed the create screen.
- *
- * @property json the whole backup payload, restored after the project is made.
- * @property fileName shown on the picker button so the choice is visible.
- * @property name project name recorded in the backup, if any.
- * @property prefix project prefix recorded in the backup, if any.
+ * A picked backup: [json] is restored after the project is created; [name] and
+ * [prefix] prefill the form.
  */
 data class BackupPrefill(
     val json: String,

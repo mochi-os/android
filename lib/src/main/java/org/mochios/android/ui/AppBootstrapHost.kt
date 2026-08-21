@@ -41,16 +41,8 @@ import org.mochios.android.account.MochiAccount
 import org.mochios.android.ui.auth.AuthNavigation
 
 /**
- * Single entry point for app rendering. The host activity wires this once
- * with its app name + a callback to navigate into its main UI when the
- * bootstrap reaches [AuthStage.Ready].
- *
- *   AppBootstrapHost(appName = "feeds", oauthScheme = "mochi-feeds") {
- *       FeedsNavigation(...)
- *   }
- *
- * No "isAuthenticated" branching, no "tokenFetched" flag — the stage drives
- * everything.
+ * Single entry point for app rendering: the host activity supplies its app name
+ * and the content to show once bootstrap reaches [AuthStage.Ready].
  */
 @Composable
 fun AppBootstrapHost(
@@ -94,13 +86,10 @@ fun AppBootstrapHost(
                 LaunchedEffect(Unit) { onLocaleChangeRequested() }
                 Loading()
             } else {
-                // Bump the composition key on every fresh Ready re-entry so
-                // any rememberSaveable inside the ready scope — notably
-                // rememberNavController's back stack saver — starts clean.
-                // Without this, a logout + re-login restores the previous
-                // session's nav state and the user lands on a stale entity
-                // detail screen that the new session can't access, surfacing
-                // as NotFoundState ("Forum not found", etc.).
+                // Re-key the ready scope on every fresh Ready so
+                // rememberSaveable state, notably the nav back stack, starts
+                // clean; otherwise a re-login restores the previous session's
+                // routes.
                 key(s.epoch) {
                     ready(viewModel::logout)
                 }
@@ -116,11 +105,8 @@ private fun Loading() {
     }
 }
 
-/**
- * Reactivation interstitial for a soft-deleted ("closing") account. Mirrors
- * the web /login/closing page: the user cancels the pending closure to restore
- * full access, or continues closing and signs out.
- */
+/** Reactivation interstitial for a soft-deleted ("closing") account, mirroring web's
+ *  /login/closing. */
 @Composable
 private fun ReactivationScreen(
     purge: Long,

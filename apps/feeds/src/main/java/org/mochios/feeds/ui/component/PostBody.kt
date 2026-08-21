@@ -32,19 +32,10 @@ import org.mochios.feeds.model.Post
 import org.mochios.android.R as MochiR
 
 /**
- * Renders a post's body.
- *
- * For RSS-source posts the stored body is `title \n\n description \n\n link`.
- * The leading title is rendered as its own bold, slightly-larger line and
- * stripped from the Markwon-rendered remainder. We do NOT wrap it in `**…**`:
- * Markwon parses that as CommonMark strong-emphasis, which only renders bold
- * when the markers satisfy the flanking rules — a title with a trailing space
- * or surrounding punctuation breaks them, so the asterisks render literally.
- * Bolding structurally avoids that and matches the web client, which shows the
- * RSS title as a separate `text-lg font-semibold` element.
- *
- * Long-pressing an image shows its alt/title text (e.g. a web comic's
- * punchline) in a dialog.
+ * Renders a post's body. An RSS body is `title \n\n description \n\n link`; the
+ * title is drawn as its own bold line and stripped from the Markwon remainder.
+ * Do not wrap it in `**`: CommonMark flanking rules make the asterisks render
+ * literally.
  */
 @Composable
 fun PostBody(
@@ -140,10 +131,8 @@ fun PostBody(
 }
 
 /**
- * The RSS title to render as a heading, or null when the body has no leading
- * title line (a plain, non-RSS post). The check mirrors [PostBody]: a title
- * counts only when the body actually starts with it, so we never duplicate or
- * mis-strip content.
+ * The RSS title to render as a heading, or null when the body does not start
+ * with it (a plain post).
  */
 fun rssDisplayTitle(post: Post): String? {
     val rawTitle = post.data?.rss?.title.orEmpty()
@@ -151,11 +140,6 @@ fun rssDisplayTitle(post: Post): String? {
     return if (title.isNotEmpty() && post.body.startsWith(rawTitle)) title else null
 }
 
-/**
- * The post title as a bold, slightly-larger heading line. Shared by [PostBody]
- * and callers that hoist the title out to control its placement (e.g. the feed
- * card, which shows it above the source/time byline).
- */
 @Composable
 fun PostTitle(
     title: String,

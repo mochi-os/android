@@ -46,10 +46,8 @@ class SessionManager @Inject constructor(
         private val KEY_OAUTH_NONCE = stringPreferencesKey("oauth_nonce")
         private val KEY_OAUTH_RETURN_CODE = stringPreferencesKey("oauth_return_code")
         private val KEY_OAUTH_RETURN_ERROR = stringPreferencesKey("oauth_return_error")
-        // A LINK ceremony keeps its own slots. Sharing the sign-in ones would
-        // let the login collector consume a link's return and try to
-        // establish a session from it, and a link begun while a sign-in was
-        // outstanding would overwrite the sign-in's verifier.
+        // A LINK ceremony keeps its own slots: shared ones would let the login
+        // collector consume a link return, or either overwrite the other.
         private val KEY_OAUTH_LINK_VERIFIER = stringPreferencesKey("oauth_link_verifier")
         private val KEY_OAUTH_LINK_NONCE = stringPreferencesKey("oauth_link_nonce")
         private val KEY_OAUTH_LINK_RETURN_CODE = stringPreferencesKey("oauth_link_return_code")
@@ -92,22 +90,10 @@ class SessionManager @Inject constructor(
     }
 
     /**
-     * Point the client at [url].
-     *
-     * Moving to a *different* server invalidates every credential we hold: the
-     * session cookie and the per-app JWTs were issued by the previous server,
-     * are meaningless to the new one, and — since the jar attaches the session
-     * to whichever origin is configured — would otherwise be handed straight to
-     * it. So they are dropped in the same transaction that stores the new URL.
-     *
-     * The two callers that adopt an account belonging to another server
-     * ([adoptSharedSessionIfMissing] and AppBootstrapViewModel.adopt) set the
-     * server first and write that account's session immediately after, so the
-     * clear never races credentials they are about to store.
-     *
-     * "Different" is an origin comparison, not a string one, so retyping the
-     * same server with a trailing slash, different case or an explicit :443
-     * does not sign the user out.
+     * Point the client at [url]. A different origin invalidates the session
+     * cookie and every per-app token, dropped in the same transaction.
+     * "Different" is an origin comparison, so a trailing slash or explicit :443
+     * is not a sign-out.
      */
     suspend fun setServerUrl(url: String) {
         val server = url.trimEnd('/')
@@ -124,10 +110,8 @@ class SessionManager @Inject constructor(
             }
             prefs.remove(KEY_TOKEN_NAMES)
             prefs.remove(KEY_SESSION_COOKIE)
-            // The binding names an identity on the OLD server, so it is as
-            // stale as the tokens above. Leaving it lets a surviving
-            // AccountManager row be adopted afterwards and setServerUrl called
-            // back to the previous server, silently undoing this change.
+            // The binding names an identity on the old server. Left in place, a
+            // surviving AccountManager row is adopted and points us back at it.
             prefs.remove(KEY_BOUND_IDENTITY)
             prefs.remove(KEY_BOUND_SERVER)
         }
@@ -178,22 +162,14 @@ class SessionManager @Inject constructor(
         dataStore.edit { prefs ->
             prefs.clear()
         }
-        // Drop the in-memory cookies too. Otherwise the stale `session` cookie
-        // still rides on the next request (e.g. an FCM token refresh fired by
-        // tearDown()), and the server's rolling Set-Cookie re-persists the very
-        // session we just cleared — flipping isAuthenticated back to true.
+        // Drop the in-memory cookies too, or the stale `session` rides the next
+        // request and the rolling Set-Cookie re-persists what was just cleared.
         cookieStore.clear()
         // Logout in this app shouldn't tear down OTHER apps' bindings —
         // remove only the account this app was bound to.
         if (identity != null) MochiAccount.remove(context, identity)
     }
 
-    /**
-     * If we have no local session, look for a sibling Mochi account whose
-     * server matches what this app is already bound to (or the most recently
-     * registered account, when this is a fresh install with no binding).
-     * Returns the snapshot if one was adopted, or null.
-     */
     suspend fun adoptSharedSessionIfMissing(): MochiAccount.Snapshot? {
         val prefs = dataStore.data.first()
         if (prefs[KEY_SESSION_COOKIE] != null) return null
@@ -209,14 +185,8 @@ class SessionManager @Inject constructor(
         return candidate
     }
 
-    /**
-     * Records an outstanding sign-in ceremony.
-     *
-     * [nonce] is the value the server echoes on the deep-link return. Written
-     * in the same edit as the verifier so the two cannot disagree: a return
-     * arriving between two writes would see a verifier with no nonce to check
-     * and be accepted unauthenticated. Null when the server sent none.
-     */
+    /** Records an outstanding sign-in ceremony. The nonce is written in the same edit
+     *  as the verifier, so a return can never see one without the other. */
     suspend fun saveOAuthVerifier(verifier: String, nonce: String? = null) {
         dataStore.edit { prefs ->
             prefs[KEY_OAUTH_VERIFIER] = verifier
@@ -225,21 +195,10 @@ class SessionManager @Inject constructor(
     }
 
     /**
-     * The outstanding ceremony's local evidence.
-     *
-     * [hasVerifier] is written at `/begin` and consumed at exchange, so its
-     * presence is what says a `mochi:oauth-return` belongs to us at all.
-     * [nonce] is the value the server echoes on that return, absent when the
-     * server does not send one.
-     *
-     * Both come from ONE snapshot, deliberately. Reading them separately lets a
-     * ceremony be replaced between the two reads, pairing one ceremony's nonce
-     * with another's verifier — a narrow race, but the whole point of the pair
-     * is that they describe the same ceremony.
-     *
-     * Read without consuming, so asking does not itself invalidate the
-     * ceremony: a check that consumed would let one injected return burn the
-     * marker and silently drop the genuine callback behind it.
+     * The outstanding ceremony's verifier presence and nonce, from one snapshot
+     * so they always describe the same ceremony. Reading does not consume: a
+     * consuming check would let an injected return drop the genuine callback
+     * behind it.
      */
     data class OAuthCeremony(val hasVerifier: Boolean, val nonce: String?)
 
@@ -283,17 +242,9 @@ class SessionManager @Inject constructor(
         }
     }
 
-    // ---- OAuth LINK ceremony -------------------------------------------
-    //
-    // The same shape as the sign-in ceremony above and for the same reasons:
-    // the verifier says a ceremony of ours is outstanding, the nonce says a
-    // return came from the server we started it with, and both are written
-    // and consumed together so the pair always describes one ceremony.
-    //
-    // The link's verifier is not decoration. The server writes the identity
-    // link only at the exchange, against this verifier plus our Bearer, so
-    // that a browser holding the callback cannot write it - see core's
-    // oauth_mobile_link.
+    // OAuth LINK ceremony: same shape as the sign-in one above. The server
+    // writes the identity link only at the exchange, against this verifier plus
+    // our Bearer, so a browser holding the callback cannot write it.
 
     suspend fun saveOAuthLinkVerifier(verifier: String, nonce: String? = null) {
         dataStore.edit { prefs ->
@@ -353,13 +304,10 @@ class SessionManager @Inject constructor(
     }
 
     /**
-     * In-memory per-origin cookie cache, cleared on [clearAll].
-     *
-     * Keyed by whole origin rather than host. Keyed by host, two different
-     * origins sharing a hostname shared a bucket, so a `session` cookie set by
-     * `http://host` or `host:8443` was replayed to `https://host` — and it also
-     * satisfied the "already has a session" test below, suppressing the real
-     * stored session in favour of whatever that other origin had set.
+     * In-memory per-origin cookie cache, cleared on [clearAll]. Keyed by whole
+     * origin:
+     * by host alone, a `session` set by `http://host` or `host:8443` reached
+     * `https://host`.
      */
     private val cookieStore = ConcurrentHashMap<String, MutableList<Cookie>>()
 
@@ -368,21 +316,10 @@ class SessionManager @Inject constructor(
         isServerOrigin(url, getServerUrlBlocking())
 
     /**
-     * Carries the Mochi session cookie to the user's own server, and nowhere
-     * else. Both directions are gated on [isServerOrigin], because this jar is
-     * shared by clients that deliberately fetch foreign hosts — the asset
-     * client behind Coil loads RSS post images from arbitrary publisher
-     * domains (see AssetHttpModule), and assetAuthHeaders reuses
-     * [loadForRequest] for MediaMetadataRetriever.
-     *
-     * Without the gate a hostile feed image leaked the live session cookie to
-     * its host (full account impersonation), and a `Set-Cookie: session=…` in
-     * that host's reply overwrote the stored session — logging the user out, or
-     * pinning the session to a value the host chose.
-     *
-     * Cookies a foreign host sets for itself are still cached and replayed to
-     * that same host; the cache is keyed by host, so that is ordinary
-     * per-origin behaviour and stays working for CDNs that need it.
+     * Carries the Mochi session cookie to the user's own server and nowhere
+     * else - this jar is shared with the asset client, which fetches arbitrary
+     * publisher hosts. Ungated, a hostile image both received the session and
+     * could replace it.
      */
     val cookieJar: CookieJar = object : CookieJar {
 
@@ -393,11 +330,9 @@ class SessionManager @Inject constructor(
             cookieStore[originOf(url)] = cookies.toMutableList()
             if (!isServerOrigin(url)) return
             val sessionCookie = cookies.find { it.name == "session" }
-            // Only *renew* an existing session — never resurrect one that
-            // sign-out or a 401 has cleared. Login establishes the session
-            // explicitly via AuthRepository.extractSessionCookie, so gating on
-            // an existing token here is safe and stops a stray authenticated
-            // call (e.g. an FCM token refresh) from flipping us back signed-in.
+            // Only renew an existing session, never resurrect one that sign-out
+            // or a 401 cleared: a stray authenticated call would flip us back
+            // signed-in.
             if (sessionCookie != null && getSessionCookieBlocking() != null) {
                 runBlocking { saveSession(sessionCookie.value) }
             }

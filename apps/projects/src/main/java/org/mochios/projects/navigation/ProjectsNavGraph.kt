@@ -49,10 +49,8 @@ object ProjectsApp {
         "projects/project/$projectId/diff/$repo?source=$source&target=$target"
 
     /**
-     * The create-object form for [projectId], optionally seeded with the parent
-     * an "Add child" started from and the one field value a board column's "+"
-     * carries. Object, field and option ids are opaque server strings, so each
-     * is encoded before it goes in the query.
+     * Create-object route; only the first [presetValues] entry survives, the
+     * one a board column's "+" carries.
      */
     fun createObject(
         projectId: String,
@@ -166,11 +164,9 @@ fun NavGraphBuilder.projectsNavGraph(
     composable(ProjectsApp.FIND_PROJECTS) {
         FindProjectsScreen(
             onBack = { navController.popBackStack() },
-            // Drop discovery from the back stack and open the project just
-            // joined. Popping back would land on the project entry that was
-            // already there, whose list view model still holds the projects
-            // fetched before the subscribe — so the new one wouldn't show until
-            // a manual refresh. Navigating builds a fresh entry that reloads.
+            // Navigate rather than pop back: the existing project entry's view
+            // model holds the list fetched before the subscribe, so the new
+            // project would not show.
             onProjectSubscribed = { projectId ->
                 navController.navigate(ProjectsApp.project(projectId)) {
                     popUpTo(ProjectsApp.FIND_PROJECTS) { inclusive = true }
@@ -182,11 +178,9 @@ fun NavGraphBuilder.projectsNavGraph(
     composable(ProjectsApp.CREATE_PROJECT) {
         CreateProjectScreen(
             onBack = { navController.popBackStack() },
-            // Drop the create screen and open the project just made. Popping back
-            // would land on the project entry that was already there, whose list
-            // view model still holds the projects fetched before the create — so
-            // the new one wouldn't show in the drawer until a manual refresh.
-            // Navigating builds a fresh entry that reloads.
+            // Navigate rather than pop back: the existing entry's view model
+            // holds the list fetched before the create, so the new project
+            // would not show.
             onCreated = { projectId ->
                 navController.navigate(ProjectsApp.project(projectId)) {
                     popUpTo(ProjectsApp.CREATE_PROJECT) { inclusive = true }
@@ -216,12 +210,9 @@ fun NavGraphBuilder.projectsNavGraph(
         val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
         CreateObjectScreen(
             onBack = { navController.popBackStack() },
-            // Drop the create screen and open the object just made, which is
-            // where the create dialog used to leave the user. Popping back would
-            // land on the project entry that was already there, whose view model
-            // still holds the objects fetched before the create — so the new one
-            // wouldn't show until a manual refresh. Navigating builds a fresh
-            // entry that reloads.
+            // Navigate rather than pop back: the existing entry's view model
+            // holds the objects fetched before the create, so the new one would
+            // not show.
             onCreated = { objectId ->
                 navController.navigate(ProjectsApp.projectObject(projectId, objectId)) {
                     popUpTo(ProjectsApp.CREATE_OBJECT) { inclusive = true }

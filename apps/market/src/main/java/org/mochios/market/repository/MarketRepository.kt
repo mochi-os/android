@@ -58,17 +58,8 @@ import javax.inject.Singleton
 import retrofit2.HttpException
 
 /**
- * Thin wrapper around [MarketApi]. Mirrors the structure of
- * `WikisRepository`: every method calls `.unwrap()` on the Retrofit
- * response and re-throws any exception as a typed
- * [org.mochios.android.api.MochiError] via [toMochiError] so ViewModels
- * can render localised messages.
- *
- * The market app is a stateless proxy to the Comptroller — every action
- * is a class-context route (`-/<group>/<verb>`) with no entity scope.
- * Listing / order / bid IDs are opaque comptroller uids (String); the wire
- * format is `application/x-www-form-urlencoded`, and the `.toString()` calls
- * below are identity no-ops retained to make the wire serialisation explicit.
+ * Thin wrapper around [MarketApi]: every call unwraps the response and rethrows
+ * failures as [MochiError].
  */
 @Singleton
 class MarketRepository @Inject constructor(
@@ -278,11 +269,9 @@ class MarketRepository @Inject constructor(
     }
 
     /**
-     * Resolve a batch of listings by ID. The Comptroller's `listings/search`
-     * does not accept an `ids=` parameter, so we fan the per-ID `listings/get`
-     * calls out in parallel via `coroutineScope { async }` rather than walking
-     * them sequentially. Individual failures (e.g. listing removed server-side)
-     * are dropped silently so the caller still gets the rows that did resolve.
+     * Resolve listings by id with parallel `listings/get` calls -
+     * `listings/search` has no `ids=` parameter. Ids that fail to resolve are
+     * dropped.
      */
     suspend fun getListingsByIds(ids: List<String>): List<Listing> = coroutineScope {
         ids.map { id ->
@@ -405,22 +394,10 @@ class MarketRepository @Inject constructor(
     }
 
     /**
-     * Triggers the download stream from the Comptroller. The actual file
-     * bytes are streamed; this repo call returns the ResponseBody for the
-     * caller to write to disk, or surface the external reference URL.
-     */
-    /**
-     * Fetch a purchased asset.
-     *
-     * The endpoint answers one of two shapes depending on where the seller
-     * hosts the file: a JSON envelope naming an external URL, or the file
-     * bytes themselves with a Content-Type and Content-Disposition. Only the
-     * response says which, so this returns whichever arrived rather than
-     * making the caller guess.
-     *
-     * It cannot be fetched by handing a URL to a browser: the action is not
-     * public, and a Custom Tab carries neither the bearer token nor the session
-     * cookie, so it answers 401 whatever the path form.
+     * Fetch a purchased asset: a JSON envelope naming an external URL or the
+     * file bytes, decided only by Content-Type. It cannot go through a Custom
+     * Tab - the action is not public and the tab carries neither bearer token
+     * nor session cookie.
      */
     suspend fun downloadAsset(id: String): AssetDownload {
         val response = try {

@@ -19,14 +19,6 @@ import org.mochios.android.api.toMochiError
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for [JoinWikiScreen] — the "enter an entity ID directly" form.
- * Mirrors web's `JoinWikiPage`
- * (`apps/wikis/web/src/routes/_authenticated/join.tsx`): a single text
- * field for the wiki entity id, plus a Replicate button that calls
- * `POST -/subscribe` with no server hint and navigates to the wiki on
- * success.
- */
 data class JoinWikiUiState(
     val target: String = "",
     val isSubmitting: Boolean = false,

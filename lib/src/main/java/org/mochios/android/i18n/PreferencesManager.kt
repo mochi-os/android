@@ -18,17 +18,8 @@ import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/** Subset of the `themes` array returned by `/settings/-/user/preferences/data`.
- *  Per-theme metadata for rendering theme-picker swatches.
- *
- *  @property id the theme's server id, which is what the `theme` preference
- *    stores and what the picker writes back.
- *  @property label what the picker shows for it. Falls back to [id] for a
- *    server that sends no label, so a theme is never nameless on screen.
- *  @property hue the OKLCH hue anchor the colour scheme is generated from.
- *  @property chroma the OKLCH chroma anchor.
- *  @property hueBg the hue anchor for background tones.
- */
+/** Per-theme metadata from the `themes` array of `/settings/-/user/preferences/data`.
+ *  [hue], [chroma] and [hueBg] are the OKLCH anchors the scheme is generated from. */
 data class ThemeInfo(
     val id: String,
     val label: String,
@@ -38,13 +29,9 @@ data class ThemeInfo(
 )
 
 /**
- * Mirror of web's `LocaleProvider`: holds a [StateFlow] of [UserPreferences]
- * resolved against the current device for any `auto` server values.
- *
- * Apps fetch on launch via [refresh]; the UI observes [preferences] and
- * rebuilds [Format] when it changes. There is no live-update path on Android
- * (no shell, no preference-change websocket event); the next launch picks up
- * any changes the user made on the web settings page.
+ * Holds the user's [UserPreferences], resolved against the device for any
+ * `auto` server value. No live-update path on Android: apps [refresh] on
+ * launch.
  */
 @Singleton
 class PreferencesManager @Inject internal constructor(
@@ -78,10 +65,8 @@ class PreferencesManager @Inject internal constructor(
     val format: Format get() = Format(_preferences.value)
 
     /**
-     * Persist a single preference to the server and refresh the local
-     * [preferences] state. An empty [value] resets the preference back to
-     * the server default. Throws on auth/network failure so the caller can
-     * surface an error.
+     * Persist one preference and refresh [preferences]. An empty [value] resets
+     * it to the server default. Throws on failure.
      */
     suspend fun setPreference(key: String, value: String) {
         val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
@@ -119,10 +104,6 @@ class PreferencesManager @Inject internal constructor(
             ?: authRepository.fetchToken("settings").getOrNull()
 
     suspend fun refresh() {
-        // Cached "settings" token first (saves a round trip when this app
-        // happens to be settings itself or has already minted one). Otherwise
-        // mint a fresh one from the host's session — every Mochi user has a
-        // settings app token available.
         val token = sessionManager.getToken("settings")
             ?: authRepository.fetchToken("settings").getOrNull()
             ?: return

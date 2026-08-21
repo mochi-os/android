@@ -11,23 +11,10 @@ import android.util.Log
 import org.json.JSONObject
 
 /**
- * Persistent registry of UnifiedPush subscriptions issued by this distributor.
- *
- * Each entry maps a per-App `token` (chosen by the App; usually a stable
- * identifier like the user's Mochi entity ID) to:
- *   - `appPackage`  — Application's package name; used to dispatch MESSAGE
- *                     intents back to the right App.
- *   - `subId`       — opaque server-allocated subscription id; appears in
- *                     the endpoint URL path as `/notifications/-/push/inbound/<subId>`.
- *   - `server`      — base URL of the Mochi server that issued the subId.
- *                     Lets us POST registration/unregistration from the
- *                     correct identity context.
- *   - `auth`/`p256dh` — Web Push subscription keys (base64url) generated on
- *                     the device; the matching p256dh private key is held
- *                     by the connector library for envelope decryption.
- *
- * Stored in a single SharedPreferences file `mochi_distributor`. Single-user
- * IPC is fine — the distributor service runs in the shell app's process.
+ * Persistent registry of UnifiedPush subscriptions, keyed by the per-App token.
+ * `subId` is the server-allocated id forming the endpoint path
+ * `/notifications/-/push/inbound/<subId>`; `auth`/`p256dh` are base64url Web
+ * Push keys.
  */
 class DistributorStore(context: Context) {
 

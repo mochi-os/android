@@ -47,11 +47,8 @@ import org.mochios.projects.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 /**
- * Owner "General" tab: an editable identity [Section] over the read-only entity
- * chips, plus a delete [Section] whose action sits in the header. Styled to match
- * the forums settings screen. Only a viewer who can manage the project reaches
- * this tab; everyone else gets the read-only [ProjectIdentitySection] and an
- * unsubscribe action from the settings screen, so there is no unsubscribe branch.
+ * Owner "General" tab: editable identity plus delete. Reached only by a viewer
+ * who can manage the project; others get [ProjectIdentitySection].
  */
 @Composable
 fun GeneralTab(
@@ -151,11 +148,6 @@ fun GeneralTab(
     }
 }
 
-/**
- * Read-only identity card: the project's name, description, prefix, entity id,
- * fingerprint, and server. Shown to a viewer who cannot manage the project,
- * mirroring the forum and feed subscriber views.
- */
 @Composable
 fun ProjectIdentitySection(
     project: Project,
@@ -216,15 +208,6 @@ private fun IdentityFieldRow(
     }
 }
 
-/**
- * Editable identity row: shows the value with an edit pencil on the right; the
- * pencil swaps in an inline text field with confirm/cancel that saves the field
- * immediately. Mirrors the forum title's inline editor.
- *
- * @param onSave    invoked with the trimmed value when the edit is confirmed.
- * @param allowBlank when false, the confirm action is disabled for a blank value.
- * @param transform applied to each keystroke — used to force the prefix uppercase.
- */
 @Composable
 private fun EditableIdentityRow(
     label: String,

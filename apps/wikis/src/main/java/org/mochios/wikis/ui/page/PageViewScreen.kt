@@ -87,27 +87,6 @@ import org.mochios.android.R as MochiR
 /** Feature key shared with the WikisRouter for [LastViewedStore.set] / .get(). */
 const val WIKIS_FEATURE = "wikis"
 
-/**
- * Central wiki page-viewing experience.
- *
- * Mirrors the web equivalent in
- * `apps/wikis/web/src/features/wiki/page-view.tsx` +
- * `wiki-page-content.tsx`:
- *
- *  - Sticky top bar with title, back arrow, overflow `MoreHoriz` menu.
- *  - Body: optional table-of-contents card (phone-only collapsible), then
- *    [MarkdownContent] for the page itself.
- *  - Footer: inline tag chips, version chip, "Updated …" timestamp.
- *  - Page-not-found empty state with a "Create this page" CTA gated on
- *    [WikiPermissions.edit].
- *  - Loading state and error state via the lib's [ErrorState] /
- *    skeleton-style placeholders.
- *
- * The screen reads `wikiId` and `page` from the [NavController]'s back-stack
- * arguments via [PageViewModel]'s [androidx.lifecycle.SavedStateHandle], so
- * the host nav-graph just routes `wikis/{wikiId}/{page}` to this composable
- * — no per-screen arg plumbing.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PageViewScreen(
@@ -123,11 +102,7 @@ fun PageViewScreen(
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
     val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
 
-    // Persist last-viewed page so a fresh launch lands the user back here.
-    // Mirrors web's `setLastLocation(wiki.id, slug)` in
-    // `apps/wikis/web/src/routes/_authenticated/$page/index.tsx`. The router
-    // composable consumes both values: the wiki id picks the entity to open,
-    // the slug rides through as the page within it.
+    // Persist the last-viewed wiki and page so a fresh launch lands back here.
     LaunchedEffect(viewModel.wikiId, viewModel.slug) {
         if (viewModel.wikiId.isNotBlank() && viewModel.slug.isNotBlank()) {
             LastViewedStore.set(context, WIKIS_FEATURE, viewModel.wikiId)
@@ -168,11 +143,8 @@ fun PageViewScreen(
 
     val canUnsubscribe = wikiInfo?.source?.isNotBlank() == true
 
-    // Build a WikiContextValue once info is loaded, so downstream components
-    // (MarkdownContent, AuthorAvatar, attachment galleries) can resolve URLs.
-    // While info is still loading we degrade to a synthetic context built
-    // from the wikiId alone — MarkdownContent doesn't need the real WikiInfo
-    // for its attachment-URL helper, just the wikiId + serverUrl.
+    // A placeholder WikiInfo stands in until the real one loads: the markdown
+    // attachment-URL helper needs only wikiId + serverUrl.
     val wikiContext = remember(viewModel.wikiId, viewModel.serverUrl, wikiInfo, state.permissions) {
         WikiContextValue(
             wikiId = viewModel.wikiId,
@@ -426,18 +398,6 @@ fun PageViewScreen(
     )
 }
 
-/**
- * Article body, table-of-contents card, and footer. Captures the H2..H4
- * heading list pushed up by [MarkdownContent] so the [TableOfContents] card
- * can render the entries.
- *
- * Mirrors web's scroll-driven active-heading tracker in
- * `apps/wikis/web/src/features/wiki/page-view.tsx` lines 115-180.
- * [MarkdownContent] reports per-heading Y offsets (relative to its own
- * top); we compare them against the current `scrollState.value` plus a
- * 120dp activation offset to pick the topmost-visible heading and
- * highlight that TOC row.
- */
 @Composable
 private fun PageBody(
     page: WikiPage,
@@ -453,11 +413,8 @@ private fun PageBody(
     val headings = remember { mutableStateOf(emptyList<TocHeading>()) }
     val scrollState = rememberScrollState()
     val tocScope = rememberCoroutineScope()
-    // Map of headingId -> Y in pixels, measured by MarkdownContent's
-    // per-segment TextViews from their layout pass. Positions are
-    // relative to MarkdownContent's own top — we add `markdownOffsetY`
-    // (below) to get the absolute Y in the outer scrolling Column's
-    // content space.
+    // headingId -> Y as measured inside MarkdownContent, relative to its own
+    // top. Add `markdownOffsetY` to get outer-scroll coordinates.
     var headingPositions by remember { mutableStateOf<Map<String, Int>>(emptyMap()) }
     // Y offset of MarkdownContent inside the outer scrolling Column.
     // Captured via `onGloballyPositioned` on the wrapper so we can shift
@@ -491,11 +448,6 @@ private fun PageBody(
                 onHeadingTap = { id ->
                     headingPositions[id]?.let { y ->
                         tocScope.launch {
-                            // The map is in MarkdownContent-relative
-                            // coordinates; add the markdown wrapper's Y
-                            // inside the outer scroll Column to get the
-                            // absolute target. Mirrors web's
-                            // `scrollIntoView({block:'start'})`.
                             scrollState.animateScrollTo(y + markdownOffsetY)
                         }
                     }
@@ -540,14 +492,8 @@ private fun PageBody(
 }
 
 /**
- * Pure function: pick the active TOC heading given current scroll offset
- * and the per-heading Y positions inside [MarkdownContent]. Mirrors web's
- * `updateActiveHeadingFromScroll`:
- *
- *  - Choose the heading whose top is at or above `(scrollY + activation)`.
- *  - Fall back to the first heading when the user is above all of them.
- *  - Returns `null` only if there are no headings at all (in which case
- *    the TOC card wouldn't render either).
+ * Active TOC heading: the last one whose top is at or above `scrollY +
+ * activation`, falling back to the first.
  */
 internal fun computeActiveHeading(
     headings: List<TocHeading>,
@@ -569,16 +515,6 @@ internal fun computeActiveHeading(
     return current
 }
 
-/**
- * Footer row: tag chips on the start, version chip + relative-updated
- * timestamp on the end. Mirrors page-view.tsx lines 248-262.
- *
- * The tag block is delegated to [TagManager] so the add / remove
- * affordances and per-tag navigation stay consistent with the rest of the
- * wiki surfaces. The version chip + updated timestamp render below the
- * tags so the right-aligned cluster doesn't fight the inline "+" / "Add
- * tag" chip for horizontal space.
- */
 @Composable
 private fun PageFooter(
     page: WikiPage,
@@ -666,11 +602,6 @@ private fun PageNotFoundBody(
     )
 }
 
-/**
- * Loading placeholder that matches the People app's pattern — a few thin
- * neutral bars in place of the eventual article. Mirrors web's
- * [PageViewSkeleton] in page-view.tsx lines 307-322.
- */
 @Composable
 private fun PageSkeleton() {
     Column(

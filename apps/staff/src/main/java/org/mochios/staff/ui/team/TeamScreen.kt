@@ -58,20 +58,8 @@ import org.mochios.staff.ui.components.LocalStaffMe
 import org.mochios.staff.ui.components.StaffStatusBadge
 
 /**
- * Staff Team management screen. Mirrors web's
- * `apps/staff/web/src/features/team/team-page.tsx`:
- *
- *  - Drawer-driven nav via the parent [StaffLayout]'s [StaffSidebar].
- *  - Top-bar "Add member" action (mounted at the StaffLayout level in
- *    StaffNavGraph, admin-only).
- *  - Table-style list of every team member: avatar + name, role
- *    (inline dropdown for admins, static badge otherwise), added timestamp,
- *    added-by avatar + name (or "System" when seeded by the server), and
- *    per-row Remove (admins only).
- *  - Remove confirmation via lib's [ConfirmDialog].
- *
- * Admin gating is purely cosmetic — the server still enforces it on every
- * action.
+ * Staff team management. Admin gating here is cosmetic; the server enforces it
+ * on every action.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

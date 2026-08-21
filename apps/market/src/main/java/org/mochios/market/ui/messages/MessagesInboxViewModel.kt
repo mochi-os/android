@@ -18,11 +18,6 @@ import org.mochios.market.model.MarketThread
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
-/**
- * UI state for [MessagesInboxScreen]. Holds the paginated inbox; list rows
- * build the other party's avatar URL as a server-relative path the avatar
- * component resolves against the session server.
- */
 data class MessagesInboxUiState(
     val threads: List<MarketThread> = emptyList(),
     val isLoading: Boolean = false,
@@ -30,13 +25,6 @@ data class MessagesInboxUiState(
     val error: MochiError? = null,
 )
 
-/**
- * ViewModel for the marketplace inbox. Paginates through
- * [MarketRepository.myThreads] (the repository wrapper around
- * `-/threads/mine`). Mirrors the structure of [HomeViewModel] —
- * page cursor accumulates, the UI calls [loadMore] from
- * [InfiniteList].
- */
 @HiltViewModel
 class MessagesInboxViewModel @Inject constructor(
     private val repo: MarketRepository,

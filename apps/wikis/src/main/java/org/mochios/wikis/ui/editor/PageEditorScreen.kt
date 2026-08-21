@@ -67,16 +67,8 @@ import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.MarkdownContent
 
 /**
- * Single screen powering both the "Edit page" and "Create new page" flows.
- *
- * Mirrors `apps/wikis/web/src/features/wiki/page-editor.tsx`. The bulk of the
- * branching lives on the `isNew` flag carried by [PageEditorViewModel] — for
- * a new page we expose the slug field and the "Create page" submit, for an
- * existing page we expose the edit-summary field, the preview toggle, and
- * (when permissions allow) the Delete action.
- *
- * Toast and navigation are driven from [PageEditorEvent] so the ViewModel
- * stays composable-free.
+ * Powers both "Edit page" and "Create page"; [PageEditorViewModel]'s `isNew`
+ * flag drives the differences.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

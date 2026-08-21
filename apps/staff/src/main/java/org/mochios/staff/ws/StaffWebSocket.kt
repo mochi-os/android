@@ -10,25 +10,9 @@ import androidx.compose.runtime.LaunchedEffect
 import org.mochios.android.ws.rememberGameWebSocket
 
 /**
- * Compose-level wrapper around lib's [rememberGameWebSocket] that opens
- * the `staff-events` WebSocket and forwards decoded payloads to
- * [eventsBus] as typed [StaffEvent]s.
- *
- * Mirrors web's `useStaffEvents()` hook: subscribes to
- * `wss://server/_/websocket?key=staff-events`, then routes incoming
- * `{topic, object}` payloads to the matching React Query invalidations
- * (here: ViewModel refreshes via the shared [StaffEventsBus]).
- *
- * Lifecycle: the lib helper closes the socket on dispose, so dropping the
- * Composable that owns this wrapper unwinds the connection. Mount it once
- * near the top of the staff app's nav graph (e.g. the StaffLayout shell)
- * so a single socket survives across screen changes.
- *
- * Payload shape: the server writes
- * `mochi.websocket.write("staff-events", {"topic": ..., "object": ...})`,
- * which arrives as a JSON map. Lib's [rememberGameWebSocket] decodes it
- * into a `GameWsEvent` whose `raw` map carries the full payload — we read
- * `topic` from there and map to the matching [StaffEvent].
+ * Opens the `staff-events` WebSocket and republishes decoded `{topic, object}`
+ * payloads to [eventsBus]. Mount once near the top of the nav graph - the
+ * socket closes on dispose.
  */
 @Composable
 fun rememberStaffEventsSubscription(eventsBus: StaffEventsBus) {

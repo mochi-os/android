@@ -40,20 +40,6 @@ import androidx.compose.ui.unit.dp
 import org.mochios.market.R
 import org.mochios.market.model.Review
 
-/**
- * Inline "leave a review" form for the purchase-detail screen.
- *
- * Star selector is tap-to-select (1..5). The submit button calls
- * [onSubmit] with the chosen rating and the (possibly empty) review
- * body; the parent VM is responsible for calling
- * [org.mochios.market.repository.MarketRepository.createReview] and
- * updating local state.
- *
- * Pass an existing [submitted] review to render the "your review"
- * confirmation state (stars only, body, optional seller response). This
- * keeps the parent layout simple — the same composable handles both the
- * before- and after-submit states.
- */
 @Composable
 fun WriteReviewForm(
     submitting: Boolean,

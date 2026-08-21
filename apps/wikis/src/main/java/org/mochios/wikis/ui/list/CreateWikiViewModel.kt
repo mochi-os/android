@@ -17,14 +17,6 @@ import org.mochios.android.api.toMochiError
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * State of the create-wiki screen.
- *
- * @property isCreating true while the create request is in flight.
- * @property error what went wrong on the last create attempt, if anything.
- * @property createdWikiId set to the new wiki's id after a successful create so
- *   the screen can navigate into it; cleared once consumed.
- */
 data class CreateWikiUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,

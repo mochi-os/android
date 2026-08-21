@@ -15,18 +15,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 
 /**
- * Cross-app session sharing for Mochi apps via Android's AccountManager.
- *
- * All Mochi apps register the same authenticator service with account type
- * [TYPE]. One device-elected app hosts the authenticator process; the others
- * read sessions via signature-protected IPC. Same signing key (debug or
- * release) is the only access guard.
- *
- * Account naming: [Account.name] is the user's identity entity ID — globally
- * unique across the Mochi network. Display name and server URL live in
- * [USER_DATA_NAME] / [USER_DATA_SERVER]. Multiple accounts (different
- * identities, different servers) coexist; helpers below expose the right
- * lookup primitives without collapsing the set.
+ * Cross-app session sharing via AccountManager: every Mochi app registers
+ * account type [TYPE], and the same signing key is the only access guard.
+ * [Account.name] is the identity entity ID; accounts on different servers
+ * coexist.
  */
 object MochiAccount {
 
@@ -48,11 +40,6 @@ object MochiAccount {
         val session: String
     )
 
-    /**
-     * Insert or update the account keyed by [identity]. Any existing account
-     * with the same identity is updated in place; other accounts are left
-     * untouched (multi-account support).
-     */
     fun upsert(
         context: Context,
         identity: String,
@@ -142,16 +129,9 @@ object MochiAccount {
     }
 
     /**
-     * A flow of Mochi account snapshots that emits whenever AccountManager
-     * fires an updated event. Useful for ViewModels that want to react to
-     * cross-app logins (an account appears) and logouts (an account vanishes)
-     * without juggling listeners + lifecycle by hand.
-     *
-     * The flow does NOT emit synchronously on collection — only on actual
-     * changes — so an app that boots into a stale "bound identity but no
-     * account" state isn't immediately taken as evidence of a cross-app
-     * logout (a missing record can mean "never written yet" too). The
-     * caller's own bootstrap is responsible for the startup state.
+     * Emits the account list on every AccountManager update. Does not emit on
+     * collection, so a missing account at startup is not evidence of a logout -
+     * the caller's own bootstrap owns the startup state.
      */
     fun accountsFlow(context: Context): Flow<List<Snapshot>> = callbackFlow {
         val am = AccountManager.get(context)

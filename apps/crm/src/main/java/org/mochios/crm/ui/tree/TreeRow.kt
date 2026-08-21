@@ -84,12 +84,9 @@ fun TreeRow(
     onReparent: ((newParentId: String) -> Unit)? = null,
     dragState: DragState? = null,
     onDragDrop: ((sourceId: String, edge: DragEdge) -> Unit)? = null,
-    // Passed in rather than read off viewModel.uiState here. A direct .value
-    // read is a snapshot Compose does not subscribe to, so a row whose own
-    // parameters had not changed kept rendering stale class definitions and
-    // people. Parameters also keep the subscription in the screen, which
-    // already collects: a row that collected for itself would recompose on
-    // every state change, including whole-list ones, for each row on screen.
+    // Passed in, not read off viewModel.uiState.value: that read is not a
+    // Compose subscription, so rows rendered stale definitions. Collecting per
+    // row would also recompose every row on every state change.
     crmDetails: CrmDetails?,
     people: List<Person>,
     // The UNFILTERED list: the reparent dialog must offer parents that the
@@ -159,13 +156,8 @@ fun TreeRow(
             .alpha(0.9f)
     } else Modifier
 
-    // One card per object: class line, title, optional description, then a meta
-    // row of field values. Fields land in slots by type — enumerated renders as
-    // a colour dot plus label, a user field resolves to a member avatar, a date
-    // formats and turns red once it is past, and the first multi-line text
-    // field becomes the description.
-    // The class names the field its objects are titled by, so leaving it in the
-    // card fields would print the title a second time at the end of the meta row.
+    // The class's title field is dropped from the card fields, or the title
+    // would print again in the meta row.
     val cls = crmDetails?.classes?.find { klass -> klass.id == obj.objectClass }
     val titleFieldId = cls?.title.orEmpty()
     val untitled = stringResource(R.string.crm_untitled)
@@ -204,13 +196,8 @@ fun TreeRow(
                 .fillMaxWidth()
                 .padding(12.dp)
         ) {
-            // Class line: expander ahead of the class name, overflow menu on the
-            // trailing edge. Only rows with children draw the expander — nothing
-            // else shifts, so the title, description and meta stay on the card's
-            // 12dp inset.
-            // Title, description and meta line up under the class name: on a row
-            // with children the expander pushes it right, so the text below
-            // shifts by the same amount rather than sitting under the button.
+            // Only rows with children draw the expander; the body text shifts
+            // by its width so it lines up under the class name.
             val bodyStart = if (node.hasChildren) 36.dp else 0.dp
 
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -391,12 +378,6 @@ fun TreeRow(
     }
 }
 
-/**
- * One field value in a card's meta row, styled by field type: an enumerated
- * option shows its colour dot and name, a user field shows the member avatar
- * and name, a date is formatted and turns red once it is past, and anything
- * else falls back to plain muted text.
- */
 @Composable
 private fun MetaValue(
     field: CrmField,

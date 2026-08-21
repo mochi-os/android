@@ -22,10 +22,9 @@ import javax.inject.Qualifier
 import javax.inject.Singleton
 
 /**
- * Lightweight client for the Nominatim geocoding API. Used by PlacePicker
- * for autocomplete search and reverse geocoding. Has its own OkHttpClient
- * so the Authorization/cookie interceptors used by the Mochi API don't
- * leak to OpenStreetMap.
+ * Nominatim geocoding client for PlacePicker search and reverse geocoding. Its
+ * own OkHttpClient, so Mochi's Authorization/cookie interceptors never reach
+ * OpenStreetMap.
  */
 
 @Qualifier

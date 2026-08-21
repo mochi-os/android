@@ -29,11 +29,9 @@ private data class PostBadge(
 )
 
 /**
- * The post's moderation [status] as a badge. Pinned and locked stay as title
- * icons — they describe the post, where a badge says the post is not live.
- *
- * An ordinary live post has no status and renders nothing at all, so callers can
- * place this unconditionally without leaving a gap behind.
+ * The post's moderation [status] as a badge; pinned and locked stay as title
+ * icons. A live post renders nothing, so callers can place this
+ * unconditionally.
  */
 @Composable
 internal fun PostBadges(

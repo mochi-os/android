@@ -50,18 +50,8 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 
 /**
- * Bottom sheet that lets the user adjust every filter axis on the browse
- * screen. Mirrors the web side's `FilterDrawer` in
- * `apps/market/web/src/components/browse/filter-drawer.tsx`.
- *
- *  - Category is a dropdown sourced from [HomeUiState.categories].
- *  - Type / Condition / Pricing / Delivery are chip groups with an "All"
- *    sentinel that maps to clearing the filter.
- *  - Price range is two number fields; the wire payload still uses whole
- *    currency strings, which the search endpoint converts to minor units.
- *  - Sort is a dropdown.
- *  - Apply just dismisses (filters are applied live as the user toggles
- *    them); Clear wipes every filter back to the empty state.
+ * Filters apply live as the user toggles them; Apply only dismisses, Clear
+ * resets every axis.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable

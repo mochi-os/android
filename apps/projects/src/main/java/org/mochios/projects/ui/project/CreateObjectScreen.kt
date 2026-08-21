@@ -51,14 +51,6 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.projects.R
 import org.mochios.android.R as MochiR
 
-/**
- * Full-screen create form for a project object: a title, the object's type, and
- * its parent when the design allows one. The top bar carries the back button
- * and Create sits in the bottom bar.
- *
- * @param onBack leaves the screen without creating anything.
- * @param onCreated hands the new object's id to the caller so it can open it.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateObjectScreen(
@@ -292,9 +284,8 @@ fun CreateObjectScreen(
                                             text = { Text(cls.name) },
                                             onClick = {
                                                 selectedClassId = cls.id
-                                                // Reset parent when class
-                                                // changes; the old selection may
-                                                // no longer be allowed.
+                                                // The old parent may not be
+                                                // allowed for the new class.
                                                 selectedParentId = null
                                                 classExpanded = false
                                             },

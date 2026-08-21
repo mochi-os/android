@@ -28,26 +28,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.go.R
 
-/**
- * Filter values surfaced in the Go sidebar. Both filters live inside the
- * list page (they don't push a new route) — they just toggle which set of
- * games the [org.mochios.go.ui.list.GoGameListScreen] renders.
- */
 enum class GoSidebarFilter { ACTIVE, COMPLETED }
 
-/**
- * Drawer body for the Go app's persistent left rail. Mirrors the pattern
- * used by the People / Wikis / Chess sidebars — every top-level Go screen
- * wraps its body in [androidx.compose.material3.ModalNavigationDrawer] with
- * this composable as the drawer content, so the hamburger in the top-bar
- * opens the same navigation choices everywhere.
- *
- * The two filter rows ([GoSidebarFilter.ACTIVE], [GoSidebarFilter.COMPLETED])
- * highlight the active section; [onSelectFilter] returns the chosen filter
- * (the caller typically closes the drawer and toggles its local filter
- * state). "New game" opens a dialog inside the list screen rather than a
- * route — its row is never `selected`.
- */
 @Composable
 fun GoSidebar(
     currentFilter: GoSidebarFilter,

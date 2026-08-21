@@ -74,16 +74,11 @@ data class OAuthBeginRequest(
     val mode: String = "mobile",
     val scheme: String,
     val challenge: String,
-    /** When true, server attaches the OAuth identity to the current session's
-     *  user instead of starting a sign-in. Requires an authenticated Bearer
-     *  token in the request (Authorization header) AND a step-up proof in
-     *  [token]: linking adds a way to sign in, so a session alone is not
-     *  enough. */
+    /** Attach the OAuth identity to the current session's user instead of signing
+     *  in. Requires a Bearer token and a step-up proof in [token]. */
     val link: Boolean = false,
-    /** Where the server should send the browser after a link. Currently
-     *  DISCARDED for a custom scheme: core runs it through redirect_local,
-     *  which keeps only paths starting with a single "/". No deep link comes
-     *  back, and this client no longer listens for one. */
+    /** Post-link browser redirect. Discarded for a custom scheme: core's
+     *  redirect_local keeps only paths starting with a single "/". */
     val target: String = "",
     /** Step-up re-authentication proof, required by the server when [link] is
      *  true and ignored otherwise (signing in is not a credential change). */
@@ -186,9 +181,8 @@ interface AuthApi {
     suspend fun oauthExchange(@Body body: OAuthExchangeRequest): Response<VerifyResponse>
 
     /**
-     * Exchange for a LINK ceremony. The Bearer is not optional here: the
-     * server writes the identity link only for the user the token names, and
-     * the browser that carried the callback proved nothing about who that is.
+     * Exchange for a LINK ceremony. The Bearer is required: the server writes
+     * the link only for the user it names.
      */
     @POST("_/auth/oauth/exchange")
     suspend fun oauthExchangeLink(

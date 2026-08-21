@@ -38,13 +38,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
-/**
- * Appeal-removal dialog. The seller types a reason explaining why the
- * removed listing should be reinstated. The dialog owns its own
- * submission flow (entry-point Hilt resolution → repository call →
- * toast on success/error) so the host My-listings screen doesn't need
- * a dedicated ViewModel slot just for this one mutation.
- */
 @Composable
 fun AppealRemovalDialog(
     open: Boolean,

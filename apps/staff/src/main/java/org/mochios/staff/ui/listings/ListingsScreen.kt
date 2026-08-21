@@ -71,21 +71,10 @@ import java.text.NumberFormat
 import java.util.Locale
 
 /**
- * Staff "Listings" moderation screen.
- *
- * Android port of `apps/staff/web/src/features/listings/listings-page.tsx`.
- * Two filter dropdowns (status + moderation) and a debounced search input
- * narrow the list; each row exposes Approve / Reject / Remove actions that
- * route through [ListingsViewModel] -> [ListingActionDialog].
- *
- * The Approve / Reject controls only show when the listing is `active` and
- * the moderation column is `hold` or `review`; Remove shows for any
- * `active` row. Both rules mirror the web `pendingModeration` helper.
- *
- * Navigation: tapping a row's title opens the market listing detail at
- * `market/listing/{id}`. We don't depend on `:apps:market` directly so the
- * route is constructed inline — keeping the staff module's compile
- * boundary unchanged.
+ * Staff listings moderation. Approve / Reject show only for `active` rows whose
+ * moderation is `hold` or `review`; Remove shows for any `active` row. The
+ * market listing route is built inline - the staff module does not depend on
+ * `:apps:market`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -484,13 +473,8 @@ internal fun formatFingerprint(id: String): String {
 }
 
 /**
- * Format a minor-unit price + free-form currency code as a localised
- * currency string. The wire `currency` is the lowercase ISO 4217 code
- * (`gbp`, `usd`, `eur`, `jpy`); when [NumberFormat] doesn't recognise it
- * we fall back to `"<symbol> <amount>"`.
- *
- * JPY uses 0 decimal places by convention; everything else assumes 2 —
- * matching the web `CURRENCIES_DATA` table in `staff/web`.
+ * Format a minor-unit price. The wire `currency` is the lowercase ISO 4217
+ * code; unrecognised codes fall back to "<code> <amount>".
  */
 internal fun formatPriceMinor(amountMinor: Long, currency: String): String {
     val iso = currency.uppercase(Locale.ROOT).ifBlank { "GBP" }

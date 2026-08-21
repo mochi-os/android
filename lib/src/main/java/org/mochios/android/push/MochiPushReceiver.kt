@@ -23,19 +23,10 @@ import org.unifiedpush.android.connector.data.PushEndpoint
 import org.unifiedpush.android.connector.data.PushMessage
 
 /**
- * If [endpointUrl] is on the same origin as [server] (the Mochi-distributor
- * case where our user's server allocated this endpoint), return just the path
- * component so the server detects the local-delivery fast-path. Otherwise
- * return the URL unchanged (the third-party-distributor case — e.g. ntfy.sh —
- * where the server must POST RFC 8030 to the absolute URL).
- *
- * Compares the whole origin rather than the host, because mislabelling in
- * either direction loses the push: judged local, the server delivers to itself
- * instead of to the real endpoint; judged foreign, it POSTs back to its own
- * still-stubbed inbound handler and gets a 501. A host match alone accepted
- * `https://host:8443/…` and `http://host/…` as ours.
- *
- * Top-level so EndpointCollapseTest can exercise it without a receiver.
+ * Path only when [endpointUrl] is on [server]'s own origin, so the server takes
+ * its local-delivery fast-path; any other endpoint is returned unchanged for
+ * RFC 8030. Compare the whole origin, not the host: a wrong verdict either way
+ * loses the push.
  */
 internal fun collapseLocalEndpoint(endpointUrl: String, server: String): String {
     val ep = endpointUrl.toHttpUrlOrNull() ?: return endpointUrl
@@ -48,30 +39,21 @@ internal fun collapseLocalEndpoint(endpointUrl: String, server: String): String 
 }
 
 /**
- * Bridges UnifiedPush callbacks into Mochi-shaped events. The Android
- * client subclasses this once with a single MochiPushDispatcher that routes by
- * the deep-link's first path segment; the base class handles the wire
- * decoding, server-side bookkeeping, and notification posting.
+ * Bridges UnifiedPush callbacks into Mochi events; subclasses supply the
+ * channel and deep-link routing.
  */
 abstract class MochiPushReceiver : MessagingReceiver() {
 
     /**
-     * Channel id for the system notification. The dispatcher picks the
-     * per-app channel from [app] when the server includes it in the payload,
-     * and falls back to parsing [link]'s first path segment when it doesn't
-     * (older server, system notifications without a link, etc.).
+     * Channel id for the notification: the payload's [app] slug, falling back
+     * to [link]'s first path segment.
      */
     abstract fun channelId(context: Context, instance: String, app: String, link: String): String
 
     /**
-     * Deep-link Uri for tapping the notification. When [id] is non-empty
-     * the dispatcher should include it on the URI so MainActivity can hit
-     * the notifications app's `-/read` endpoint after navigating.
-     *
-     * [nonce] is the single-use proof that the tap came from a notification we
-     * posted, and must be carried on the URI: MainActivity is exported, so it
-     * ignores any `mochi:notification` it cannot match against an outstanding
-     * nonce. See [NonceStore].
+     * Deep-link Uri for the notification tap. [id] marks the row read; [nonce]
+     * must be carried on the URI - MainActivity is exported and ignores taps it
+     * cannot match to an outstanding nonce (see [NonceStore]).
      */
     abstract fun deepLinkFor(
         context: Context,
@@ -165,13 +147,9 @@ abstract class MochiPushReceiver : MessagingReceiver() {
     }
 
     override fun onMessage(context: Context, message: PushMessage, instance: String) {
-        // The only authenticity gate on push content. The connector catches a
-        // decryption failure, logs "Could not decrypt message, trying with
-        // plain text", and calls this with decrypted = false anyway — so
-        // without the check anyone who learns the endpoint URL can post an
-        // arbitrary title, body and deep link. onNewEndpoint already refuses an
-        // endpoint that carries no keys; this is the same standard applied to
-        // the messages those keys exist to protect.
+        // The only authenticity gate on push content: the connector calls this
+        // with decrypted = false after a failed decrypt, so without the check
+        // anyone holding the endpoint URL can post an arbitrary notification.
         if (!message.decrypted) {
             Log.w(TAG, "Push payload was not decrypted; ignoring")
             return

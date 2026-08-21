@@ -59,13 +59,6 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
 
-/**
- * Access tab body. Lists access rules and lets the user add new ones or
- * revoke existing ones. The Add dialog mirrors the feeds settings AccessTab
- * — users searched live via the wikis backend's `users/search` proxy,
- * groups fetched once on first open. Hierarchical levels (edit > view >
- * none) match the web access-control vocabulary for wikis.
- */
 @Composable
 fun AccessTab(
     parentViewModel: WikiSettingsViewModel,
@@ -147,13 +140,6 @@ fun AccessTab(
     }
 }
 
-/**
- * A single grouped access row: the subject with its derived level, an inline
- * dropdown to change the level, and a revoke button. Mirrors web's
- * `AccessList` row (one row per subject, derived level, inline level Select).
- * The owner row is read-only — its level isn't editable and it can't be
- * revoked.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AccessSubjectCard(
@@ -242,11 +228,6 @@ private fun AccessSubjectCard(
     }
 }
 
-/**
- * Display label for an access subject. Maps the special wildcard subjects to
- * friendly names (mirroring web's `SUBJECT_LABELS`); otherwise prefers the
- * resolved name, falling back to the raw subject id.
- */
 @Composable
 private fun accessSubjectLabel(subject: AccessSubject): String = when (subject.subject) {
     "*" -> stringResource(R.string.wikis_access_subject_anyone)

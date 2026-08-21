@@ -56,19 +56,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
 
-/**
- * "Replicate wiki" form. Mirrors web's `JoinWikiPage`
- * (`apps/wikis/web/src/routes/_authenticated/join.tsx`):
- *
- *  - A "Search for wikis" outline button that routes to [onSearch] (the
- *    host wires this to `WikisApp.FIND`).
- *  - A divider with "Or enter ID directly".
- *  - A text field for the wiki entity ID + a "Replicate wiki" button.
- *
- * On submit, the ViewModel calls `joinWiki(target, server=null)`. On
- * success [onJoined] is invoked with the new wiki's landing id (fingerprint
- * if present, else id) so the host can navigate to its home.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun JoinWikiScreen(

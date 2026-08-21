@@ -41,18 +41,10 @@ import java.security.MessageDigest
 import java.util.concurrent.TimeUnit
 
 /**
- * Daily HTTPS poll of `packages.mochi-os.org/android/versions.json`. When a
- * newer `tracks.production` version is observed (numeric component-wise
- * compare against this APK's PackageInfo.versionName), the new APK is
- * pre-downloaded into `cacheDir/updates/` and a `pending_version` preference
- * is recorded. [UpdateInstaller.promptIfPending] (called from the host
- * Activity's onResume) then triggers the system installer on the user's
- * next foreground entry — no notification, no browser, no manual file
- * lookup. Android still shows its own "Update Mochi?" confirmation; that's
- * unavoidable for sideloaded apps.
- *
- * The check-and-stage logic is also exposed as [UpdateChecker.checkNow] so
- * the About dialog's "Check for updates" button can run it on demand.
+ * Daily poll of `packages.mochi-os.org/android/versions.json`. A newer
+ * production version is staged in `cacheDir/updates/` and recorded as
+ * `pending_version`, which [UpdateInstaller.promptIfPending] offers on the next
+ * foreground entry.
  */
 class UpdateChecker(
     context: Context,
@@ -93,26 +85,15 @@ class UpdateChecker(
         // simply wrong manifest can consume.
         private const val APK_MAXIMUM = 256L * 1024 * 1024
 
-        // The ~40 MB APK pull is the fragile step: on mobile data a single
-        // transfer often drops mid-stream (throttling, cell handoff, packet
-        // loss) or simply crawls. The periodic worker masks this by returning
-        // Result.retry(), but checkNow's on-demand caller (the About dialog) is
-        // one-shot — so retry the download here too, each attempt resuming from
-        // the partial. Budget is generous because a drop-prone link can need
-        // several rounds to finish the tail: 3 attempts once surfaced as a hard
-        // "download failed" at ~90% when a couple more would have completed it.
+        // The APK pull drops mid-stream on mobile data, so retry, each attempt
+        // resuming from the partial. The budget is deliberately generous: 3
+        // attempts surfaced a hard failure at ~90% on a drop-prone link.
         private const val DOWNLOAD_ATTEMPTS = 6
         private const val DOWNLOAD_RETRY_DELAY_MS = 2_000L
 
-        // The download belongs to the process, not to whichever dialog asked
-        // for it. It used to run in the About dialog's composition scope, so
-        // one stray tap outside the dialog cancelled that scope - while the
-        // transfer itself carried on regardless, because download() is blocking
-        // IO with no suspension point for cancellation to land on. The user got
-        // an invisible download, and a second "Check for updates" press started
-        // a SECOND writer appending to the same partial file. Interleaved
-        // appends produce an APK the length checks accept and the system
-        // installer rejects as corrupt.
+        // The download belongs to the process, not to the dialog that asked for
+        // it: download() is blocking IO that cancellation cannot land on, and a
+        // second writer appending to the same partial produces a corrupt APK.
         private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
         // One download at a time, whatever started it - the About dialog, a
@@ -122,9 +103,8 @@ class UpdateChecker(
         private val _state = MutableStateFlow<DownloadState>(DownloadState.Idle)
 
         /**
-         * Live state of the update download, shared across the process so any
-         * dialog that opens attaches to a transfer already in flight instead of
-         * starting its own.
+         * Live state of the update download, shared across the process so a
+         * dialog attaches to a transfer already in flight.
          */
         val state: StateFlow<DownloadState> = _state.asStateFlow()
 
@@ -134,11 +114,9 @@ class UpdateChecker(
         private var active: Job? = null
 
         /**
-         * Start the APK download, owned by the process, and return its job. A
-         * second call while one is running returns the SAME job rather than
-         * starting another. Callers may join the job to learn when it settles
-         * — cancelling that join (closing the dialog) does not touch the
-         * download, which belongs to this object's own scope.
+         * Start the APK download and return its job; a second call while one
+         * runs returns the same job. Cancelling a join does not touch the
+         * download.
          */
         @Synchronized
         fun startDownload(context: Context): Job {
@@ -160,12 +138,8 @@ class UpdateChecker(
         }
 
         /**
-         * Idempotent daily schedule. Call from the host Application's
-         * onCreate. Short-circuits and cancels any previously-scheduled
-         * work when the APK was installed from a known app store
-         * (Play / F-Droid / …) — the store will deliver updates and our
-         * self-installed APK from packages.mochi-os.org would likely fail
-         * the signature check anyway.
+         * Idempotent daily schedule; call from the host Application's onCreate.
+         * Cancels any existing work when the APK came from an app store.
          */
         fun schedule(context: Context) {
             if (InstallSource.isStoreInstalled(context)) {
@@ -183,14 +157,9 @@ class UpdateChecker(
         }
 
         /**
-         * Fast on-demand check for the About dialog's "Check for updates" button.
-         * Polls ONLY versions.json (never the ~40 MB APK, which would block the
-         * button) and reports whether a newer version exists. The actual download
-         * is left to the caller so it can run it in the FOREGROUND with live
-         * progress: a WorkManager background job's network is throttled as
-         * background data on many phones (slow even on fast wifi), so the dialog
-         * downloads inline via [checkNow] instead. On [UpdateStatus.Ready] the APK
-         * is already staged; on [UpdateStatus.Available] the caller downloads it.
+         * On-demand check that polls only versions.json, never the ~40 MB APK.
+         * The caller downloads, so it can run it in the foreground -
+         * WorkManager's network is throttled as background data on many phones.
          */
         suspend fun checkForUpdate(context: Context): UpdateStatus = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
@@ -215,11 +184,10 @@ class UpdateChecker(
         }
 
         /**
-         * Continue the APK download in the background (resuming any partial).
-         * The dialog calls this when it's dismissed mid-download: the in-process
-         * download survives the dialog, but not the process being killed, and a
-         * WorkManager request does — so the transfer resumes on the next app
-         * start rather than waiting for the daily poll.
+         * Continue the download in the background, resuming any partial. The
+         * in-process download survives the dialog but not the process; this
+         * does, so the transfer resumes on the next start rather than the daily
+         * poll.
          */
         fun enqueueBackgroundDownload(context: Context) {
             val request = OneTimeWorkRequestBuilder<UpdateChecker>()
@@ -234,18 +202,10 @@ class UpdateChecker(
         }
 
         /**
-         * Run one check-and-stage cycle inline (no WorkManager). The full path —
-         * version poll AND the resumable APK download — used by the periodic
-         * worker via [doWork] and by [startDownload], which the About dialog
-         * calls so the download runs in the foreground at full speed (a
-         * WorkManager background job's network is throttled as background data
-         * on many phones — slow even on fast wifi). Progress is published on
-         * [state] rather than returned, so every observer sees the one download.
-         *
-         * Heavy (blocking IO), so wrapped in Dispatchers.IO — callers can invoke
-         * from the main dispatcher without tripping NetworkOnMainThreadException;
-         * OkHttp's synchronous execute() is blocking. CoroutineWorker.doWork runs
-         * off-main on its own, but this entry point may not.
+         * Run one check-and-stage cycle inline: version poll plus the resumable
+         * download, publishing progress on [state]. Wrapped in Dispatchers.IO,
+         * as OkHttp's execute() blocks and callers may be on the main
+         * dispatcher.
          */
         suspend fun checkNow(context: Context): CheckOutcome = withContext(Dispatchers.IO) {
             val ctx = context.applicationContext
@@ -272,12 +232,10 @@ class UpdateChecker(
                 return@withContext CheckOutcome.UpToDate
             }
 
-            // Everything from here writes the APK file, so it runs under the
-            // gate: two callers appending to the same partial produce a file of
-            // the right length whose bytes are garbage, which the system
-            // installer then rejects as corrupt. Waiting here is cancellable,
-            // and the waiter re-checks below — normally finding the file already
-            // staged by whoever held the gate.
+            // Everything below writes the APK, so it runs under the gate: two
+            // callers appending to one partial produce a file of the right
+            // length and garbage bytes. The waiter re-checks, usually finding
+            // it already staged.
             gate.withLock {
                 val target = apkFile(ctx, latest)
                 if (staged(ctx, latest, manifest.release)) {
@@ -290,13 +248,9 @@ class UpdateChecker(
                 // accumulate APKs from every release the user ever skipped.
                 purgeStale(ctx, keep = latest)
 
-                // Resumable: each attempt continues from the partial file via a
-                // Range request rather than restarting, and the partial is KEPT on
-                // failure — so a connection that drops every few MB accumulates
-                // progress across attempts (and, because the file survives between
-                // checkNow calls, across daily polls / repeat button presses) until
-                // it completes, instead of forever re-downloading from zero. A
-                // newer version landing clears the old partial via purgeStale above.
+                // Resumable: each attempt continues from the partial via a
+                // Range request, and the partial is kept on failure so progress
+                // accumulates across attempts and across checkNow calls.
                 val release = manifest.release
                 if (release == null) {
                     // No integrity data means we cannot tell a good APK from a
@@ -352,15 +306,10 @@ class UpdateChecker(
         }
 
         /**
-         * True when [version]'s APK is on disk and still matches the size and
-         * digest it is supposed to have — [release] from the manifest when we
-         * have it, otherwise what was recorded at stage time. Re-checking
-         * matters because the staged file goes straight to the system installer,
-         * which will not tell us why it refused it: an APK damaged after it was
-         * verified otherwise stays pending for good, because every later check
-         * short-circuits on "pending == latest" and re-offers the same bad
-         * bytes. A mismatch discards the file and the preference so the next
-         * check downloads it again from scratch.
+         * True when [version]'s APK is on disk and still matches its declared
+         * size and digest. Damage after staging would otherwise be re-offered
+         * for good, since later checks short-circuit on pending == latest; a
+         * mismatch discards it.
          */
         private fun staged(ctx: Context, version: String, release: Release?): Boolean {
             val prefs = prefs(ctx)
@@ -383,11 +332,10 @@ class UpdateChecker(
         }
 
         /**
-         * Fetch and parse versions.json. Returns the production track's
-         * version together with the release entry describing its artifact:
-         * the exact file name, its size, and its SHA-256. A manifest without
-         * a matching release entry yields a null [Manifest.release], which
-         * [download] treats as "cannot verify" and refuses to stage.
+         * Fetch and parse versions.json: the production track's version and the
+         * release entry (file, size, SHA-256). A missing entry yields a null
+         * [Manifest.release], which refuses to stage rather than downloading
+         * blind.
          */
         private fun fetchManifest(): Manifest? {
             val req = Request.Builder().url(VERSIONS_URL).get().build()
@@ -420,18 +368,10 @@ class UpdateChecker(
         }
 
         /**
-         * Download (or resume) the APK to [target]. Sends a Range request from
-         * the current partial length so an interrupted transfer continues
-         * rather than restarting. Returns true once the file is complete AND
-         * its SHA-256 matches [release]; a mid-stream drop throws, leaving the
-         * partial in place for the next attempt to resume from.
-         *
-         * The URL carries the version, so the bytes a resume appends always
-         * belong to the same artifact as the bytes already on disk. Against the
-         * old unversioned path, a release landing mid-download appended the
-         * tail of the new APK onto the partial of the old one, producing a
-         * spliced file of exactly the expected length — accepted as complete
-         * here and then rejected by the system installer as a bad signature.
+         * Download or resume the APK to [target] with a Range request; true
+         * once it is complete and matches [release]'s SHA-256, a drop throws
+         * and keeps the partial. The versioned URL stops a resume splicing two
+         * different artifacts.
          */
         private fun download(
             target: File,
@@ -440,11 +380,8 @@ class UpdateChecker(
         ): Boolean {
             target.parentFile?.mkdirs()
             val have = if (target.exists()) target.length() else 0L
-            // Already at (or past) the declared length — there is nothing left
-            // to fetch, so check what is on disk instead of asking for a range
-            // beyond the end, which answers 416 and would fail every attempt.
-            // Reached whenever a previously staged file failed re-verification
-            // and has to be judged again from scratch.
+            // Already at the declared length: verify what is on disk rather
+            // than requesting a range beyond the end, which answers 416.
             if (have >= release.size) return verify(target, release)
             val builder = Request.Builder().url("$BASE_URL/${release.file}").get()
             if (have > 0) builder.header("Range", "bytes=$have-")
@@ -492,12 +429,10 @@ class UpdateChecker(
         }
 
         /**
-         * True when [target] is exactly the length the manifest declares and
-         * hashes to its digest. Hashes the finished file rather than the
-         * stream: a resumed download only streams the tail, so bytes written by
-         * earlier attempts would otherwise never be checked. A file that fails
-         * either test is deleted — no resume can repair it, and it must never
-         * reach the installer.
+         * True when [target] matches the manifest's length and digest. Hashes
+         * the finished file, not the stream: a resume only streams the tail. A
+         * failure deletes the file - no resume repairs it, and it must never be
+         * installed.
          */
         private fun verify(target: File, release: Release): Boolean {
             if (target.length() != release.size) {
@@ -529,29 +464,20 @@ class UpdateChecker(
             return digest.digest().joinToString("") { "%02x".format(it) }
         }
 
-        // versions.json poll. A tiny file, so cap the WHOLE call hard with
-        // callTimeout. readTimeout alone only bounds the gap between packets —
-        // a connection that establishes then stalls (common on mobile data,
-        // occasional on wifi) would block for the full readTimeout, leaving the
-        // "Check for updates" button spinning. callTimeout bounds connect +
-        // write + read + any retries, so the button fails fast and shows an
-        // error instead of hanging.
+        // versions.json poll. callTimeout caps the whole call: readTimeout
+        // alone only bounds the gap between packets, so a connection that
+        // stalls after connecting would leave the "Check for updates" button
+        // spinning.
         private fun metaClient(): OkHttpClient = OkHttpClient.Builder()
             .callTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(15, TimeUnit.SECONDS)
             .build()
 
-        // ~40 MB APK pull, downloaded resumably (see download()). readTimeout is
-        // the real guard: it aborts an attempt when the connection goes dead (no
-        // bytes for the window) so the retry loop can resume. callTimeout only
-        // stops a live-but-pathologically-slow attempt from running away, so it
-        // must be generous — a 40 MB pull over slow mobile data is a legitimately
-        // long transfer, and a tight cap (4 min) cut off attempts that were still
-        // making progress, stranding the download near the end. At 1 hour a
-        // single attempt completes even at ~11 KB/s; the cap never strands a real
-        // download, and it never makes the user wait on a dead one — readTimeout
-        // fails that within 60 s. Range resume carries progress across attempts.
+        // ~40 MB resumable APK pull. readTimeout is the real guard - it aborts
+        // a dead connection so the retry loop can resume - while callTimeout
+        // stays generous: a tight cap strands attempts that are still making
+        // progress.
         private fun downloadClient(): OkHttpClient = OkHttpClient.Builder()
             .callTimeout(1, TimeUnit.HOURS)
             .connectTimeout(15, TimeUnit.SECONDS)
@@ -612,16 +538,14 @@ class UpdateChecker(
 }
 
 /**
- * The production track's version, with the release entry describing its
- * artifact. [release] is null when the manifest carries no verifiable entry
- * for that version, which blocks the download rather than staging blind.
+ * The production track's version and the release describing its artifact. A
+ * null [release] blocks the download rather than staging blind.
  */
 internal data class Manifest(val version: String, val release: Release?)
 
 /**
- * One downloadable artifact, as declared in versions.json. [file] is a bare
- * file name relative to the platform directory, so the manifest names the
- * artifact instead of the client guessing it.
+ * One downloadable artifact from versions.json. [file] is a bare name relative
+ * to the platform directory.
  */
 internal data class Release(val file: String, val size: Long, val sha256: String)
 
@@ -638,9 +562,7 @@ enum class CheckOutcome {
 
 /**
  * State of the one APK download the process runs at a time, published on
- * [UpdateChecker.state]. It outlives the dialog that started it, so closing
- * the dialog does not lose the transfer and re-opening it shows the same
- * progress rather than offering to start again.
+ * [UpdateChecker.state]. It outlives the dialog that started it.
  */
 sealed interface DownloadState {
     /** Nothing downloading. */

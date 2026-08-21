@@ -71,13 +71,9 @@ import org.mochios.android.R as MochiR
 private val ACCESS_LEVEL_CHANGE_KEYS = listOf("comment", "react", "view", "none")
 
 /**
- * Access tab: an "Access Management" card listing each subject (owner, groups,
- * authenticated users, anyone, individual users) with its access level, plus a
- * "Members" section for filtering and removing subscribers. Subscription is
- * always subscriber-initiated, so there is no owner-side add — the owner only
- * controls who may subscribe (access rules) and can remove a subscriber. The
- * owner row is read-only; every other row exposes an inline level dropdown and
- * a remove button.
+ * Access tab: access rules with inline level dropdowns, plus a Members section.
+ * Subscription is subscriber-initiated, so there is no owner-side add - only
+ * removal.
  */
 @Composable
 fun AccessTab(
@@ -350,11 +346,6 @@ private fun feedsAccessLevelLabel(level: String): String = when (level) {
     else -> level.replaceFirstChar { char -> char.uppercase() }
 }
 
-/**
- * Add-access dialog. Step 1: pick the subject kind (User / Group / Other) via a
- * segmented control and select a concrete subject. Step 2: once a subject is
- * selected, choose the permission level and confirm with Add.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AddAccessDialog(

@@ -74,22 +74,8 @@ import org.mochios.go.ui.components.GoSidebarFilter
 import org.mochios.android.R as MochiR
 
 /**
- * Go landing list — the surface the launcher icon (and Mochi menu shortcut)
- * opens. Mirrors `apps/go/web/src/routes/_authenticated/index.tsx`
- * `GamesListPage`:
- *
- *  - Top bar: hamburger opens [GoSidebar] (Active / Completed filter +
- *    New game), notification bell, no overflow menu.
- *  - Body splits the user's games into Active vs Completed; the sidebar
- *    filter picks which section is rendered. Each card shows the opponent
- *    name, board size and last-updated hint; cards are tappable to open
- *    the detail screen.
- *  - Empty state matches the web "No games yet — start one" prompt.
- *  - Pull-to-refresh re-fetches the list.
- *  - The New-game button on the sidebar (and an empty-state CTA) opens the
- *    new-game screen ([GoApp.NEW_GAME]), which starts the game and navigates
- *    into it. The list reloads on resume so the game is there when the user
- *    backs out of the board.
+ * Go landing list; mirrors `GamesListPage` in
+ * `apps/go/web/src/routes/_authenticated/index.tsx`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -104,12 +104,6 @@ private fun subjectRank(rule: AccessRule): Int = when {
     else -> 3
 }
 
-/**
- * Access tab: an "Access management" [Section] listing every access rule with an
- * inline level dropdown and revoke, plus a merged "People" section listing every
- * person with access. Styled to match the forums Access tab — the section header
- * carries the add-rule action instead of a floating button.
- */
 @Composable
 fun AccessTab(
     uiState: ProjectSettingsUiState,
@@ -223,11 +217,6 @@ fun AccessTab(
     }
 }
 
-/**
- * One access rule: subject icon and name on the first line, with the owner label
- * or a revoke button trailing it, and a full-width level dropdown underneath for
- * every subject except the owner. Mirrors the forums Access tab row.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AccessRuleRow(
@@ -327,13 +316,8 @@ private fun subjectIcon(rule: AccessRule): ImageVector = when {
 }
 
 /**
- * Add-access dialog, styled to match the forums dialog. Step 1: pick the subject
- * kind (User / Group / Other) via a segmented control and select a concrete
- * subject. Step 2: once a subject is selected, choose the role and confirm.
- *
- * The Other segment carries the `*` and `+` wildcards as option rows. Users are
- * searched live; groups are fetched once on the first switch into the Group
- * segment.
+ * Add-access dialog: pick a user, a group, or the `*` / `+` wildcards under
+ * Other, then a level.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

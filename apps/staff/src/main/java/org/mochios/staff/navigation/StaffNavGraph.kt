@@ -44,15 +44,8 @@ import org.mochios.staff.ui.team.AddTeamMemberScreen
 import org.mochios.staff.ui.team.TeamScreen
 
 /**
- * Route constants and helpers for the staff Android module.
- *
- * Staff is the operator / moderator console. It backs onto the Comptroller
- * marketplace backend via the `apps/staff/` Starlark proxy and is gated by
- * `me.role` (admin / moderator / support). Routes are class-level — staff
- * surfaces are global, not entity-scoped.
- *
- * Every route assumes a signed-in session with a role of admin, moderator, or
- * support; the sidebar's "Configuration" entry is admin-only.
+ * Staff routes; all class-level (no entity scope) and assume a signed-in staff
+ * role.
  */
 object StaffApp {
     const val HOME = "staff"
@@ -69,13 +62,6 @@ object StaffApp {
     const val TEAM_ADD = "staff/team/add"
 }
 
-/**
- * Registers every staff route on the given [NavGraphBuilder]. Each route
- * wraps its screen body in [StaffLayout] so the drawer, topbar, role-aware
- * sidebar, and staff-events WebSocket subscription are mounted once per
- * navigation entry. Detail screens pull arguments via SavedStateHandle in
- * their ViewModels, so the composable bodies only forward the NavController.
- */
 fun NavGraphBuilder.staffNavGraph(navController: NavController) {
     composable(StaffApp.HOME) {
         StaffRoute(navController, StaffApp.HOME, R.string.staff_sidebar_dashboard) {
@@ -139,13 +125,9 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
             CategoriesScreen(navController = navController, viewModel = viewModel)
         }
     }
-    // Config is admin-only. The gate lives at the route level (mirroring
-    // web's `beforeLoad` redirect on `/_authenticated/config`): a non-admin
-    // landing here is silently sent to the dashboard, never seeing the
-    // ConfigScreen body. We still wrap in StaffLayout so the gate can read
-    // `LocalStaffMe` (which is only provided inside the layout), and so the
-    // user still sees the staff topbar/sidebar/loading state while `me`
-    // resolves.
+    // Admin gate at route level (web's `beforeLoad` redirect): non-admins are
+    // sent to the dashboard. Stays inside StaffLayout because `LocalStaffMe` is
+    // only provided there.
     composable(StaffApp.CONFIG) {
         StaffRoute(navController, StaffApp.CONFIG, R.string.staff_sidebar_config) {
             val me = LocalStaffMe.current
@@ -209,13 +191,6 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
     }
 }
 
-/**
- * Helper that resolves the title string resource against the current
- * locale and forwards everything to [StaffLayout]. Screens that need to
- * inject top-bar action buttons (e.g. Team's "Add member" or Categories'
- * "Add") still need bespoke wiring — but most just need the boilerplate
- * absorbed here.
- */
 @Composable
 private fun StaffRoute(
     navController: NavController,

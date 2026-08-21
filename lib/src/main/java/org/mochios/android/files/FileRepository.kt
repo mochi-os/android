@@ -9,33 +9,16 @@ import android.net.Uri
 import java.io.File
 
 /**
- * Base class for feature repositories that handle files, giving every one of
- * them the same set of file operations from a single definition.
- *
- * A ViewModel picks a [Uri] in the UI and hands it to its own repository —
- * it never reaches for a [FileStore] itself. This class is what makes that
- * cheap: subclasses inherit the whole file-facing surface instead of writing
- * their own passthroughs, and the store stays `protected` so it doesn't leak
- * past the repository layer.
- *
- * Deliberately narrow. Multipart building is an implementation detail of an
- * upload, so it isn't exposed here — subclasses reach [fileStore] directly for
- * `filePart` and friends when assembling a request.
- *
- * @param fileStore device plumbing every subclass shares.
+ * Base class giving every feature repository the same file operations.
+ * ViewModels hand a [Uri] to their repository rather than reaching for
+ * [FileStore], which stays protected; multipart building is left to subclasses.
  */
 abstract class FileRepository(protected val fileStore: FileStore) {
 
     /**
-     * Copies picked content into the cache so it can be uploaded straight off
-     * disk, keeping each file's real name and extension.
-     *
-     * All or nothing: one unreadable URI deletes everything already staged and
-     * throws, so the result always holds a file for every entry in [uris].
-     * Callers own the result and must [discardStaged] it once the upload
-     * finishes.
-     *
-     * @throws java.io.IOException when any [uris] entry can't be opened.
+     * Copies picked content into the cache, keeping real names and extensions.
+     * All or nothing: one unreadable URI deletes what was staged and throws.
+     * Callers must [discardStaged] the result.
      */
     suspend fun stageFiles(uris: List<Uri>, fallbackName: String = "file"): List<File> =
         fileStore.cacheFiles(uris, fallbackName)
@@ -49,29 +32,16 @@ abstract class FileRepository(protected val fileStore: FileStore) {
         fileStore.deleteAll(files)
     }
 
-    /**
-     * Reads a text document the user picked.
-     *
-     * @return its contents, or null when the file can't be read.
-     */
     suspend fun readTextFile(uri: Uri): String? =
         fileStore.readText(uri)
 
     /**
-     * Reads a document the user picked, unwrapping it when it is a zipped
-     * export rather than the bare file. Use this wherever a backup is read
-     * back: the user has both to hand and no reason to know which we want.
-     *
-     * @return its contents, or null when the file can't be read.
+     * Reads a picked document, unwrapping a zipped export. Use this for any
+     * backup read-back.
      */
     suspend fun readTextOrZippedFile(uri: Uri): String? =
         fileStore.readTextOrZipped(uri)
 
-    /**
-     * Writes [text] to the document the user picked.
-     *
-     * @return true when the file was written in full.
-     */
     suspend fun saveTextFile(uri: Uri, text: String): Boolean =
         fileStore.writeText(uri, text)
 

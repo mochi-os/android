@@ -27,10 +27,7 @@ import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 /**
- * Filter axis for [MyListingsScreen]. `null` (returned by the picker as a
- * sentinel) means "All". Each enum value maps to the wire string the
- * `-/listings/mine` endpoint expects (lowercase, matching
- * [ListingStatus]'s `@SerializedName`).
+ * [wire] is the status value `-/listings/mine` expects; null sends no filter.
  */
 enum class ListingsStatusFilter(val wire: String?) {
     ALL(null),

@@ -25,12 +25,8 @@ import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
 /**
- * UI state for [SearchScreen]. Holds the in-flight query (so the input box
- * can be controlled), the debounced query the server saw last (`results`
- * belong to this query, not the latest keystroke), and the result list.
- *
- * Errors are surfaced inline below the search field rather than as a toast
- * so they don't trample subsequent keystrokes.
+ * Search state. [results] belong to [debouncedQuery], not to the latest
+ * keystroke in [query].
  */
 data class SearchUiState(
     val query: String = "",
@@ -40,17 +36,6 @@ data class SearchUiState(
     val error: MochiError? = null,
 )
 
-/**
- * ViewModel for [SearchScreen]. Reads `wikiId` and the optional `q`
- * initial-query argument from [SavedStateHandle] (set by
- * `WikisApp.SEARCH`). Sets up a debounced flow on the search query (300ms,
- * matching web's `search-page.tsx`) and keeps the back-stack `q` argument in
- * sync so rotation / process death survives.
- *
- * The screen treats a blank `debouncedQuery` as the "enter a search term"
- * empty state — the ViewModel doesn't fire a request until the user types
- * something.
- */
 @OptIn(FlowPreview::class)
 @HiltViewModel
 class SearchViewModel @Inject constructor(
@@ -100,10 +85,9 @@ class SearchViewModel @Inject constructor(
     }
 
     /**
-     * Re-runs the current search for the error state's retry button. Calls
-     * runSearch directly rather than re-setting _queryFlow: that flow is
-     * distinctUntilChanged, so re-emitting the query the search just failed on
-     * would be dropped and the button would do nothing.
+     * Calls runSearch directly: _queryFlow is distinctUntilChanged, so
+     * re-emitting the query that just failed would be dropped and the button
+     * would do nothing.
      */
     fun retry() {
         viewModelScope.launch { runSearch(_uiState.value.debouncedQuery) }

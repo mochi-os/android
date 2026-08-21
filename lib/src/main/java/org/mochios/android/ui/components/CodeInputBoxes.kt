@@ -28,19 +28,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 
 /**
- * Segmented one-time-code input. Renders [length] equal-width boxes backed by a
- * single text value; typing fills the boxes left to right and the box past the
- * last entered digit is highlighted as the cursor.
- *
- * Only digits are kept and the value is clamped to [length]. [onFilled] fires
- * once the final digit is entered, letting callers auto-submit.
- *
- * @param value the current code (already digit-only, up to [length] chars)
- * @param onValueChange invoked with the sanitised, length-clamped value
- * @param modifier layout modifier for the row of boxes
- * @param length number of boxes / expected code length
- * @param enabled whether input is accepted
- * @param onFilled invoked with the value once it reaches [length] digits
+ * Segmented one-time-code input: [length] boxes over a single digit-only value.
+ * [onFilled] fires once the last digit is entered, letting callers auto-submit.
  */
 @Composable
 fun CodeInputBoxes(

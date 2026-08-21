@@ -191,9 +191,6 @@ fun InvitationsScreen(
                     .padding(horizontal = 16.dp, vertical = 8.dp),
             )
 
-            // Stacked sections (Received above Sent, both visible) matching
-            // the web layout. Previously this was a TabRow — the user
-            // explicitly asked for parity with web's two-section style.
             when {
                 uiState.isLoading && uiState.received.isEmpty() && uiState.sent.isEmpty() -> {
                     Box(

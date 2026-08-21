@@ -50,15 +50,9 @@ import org.mochios.android.R
 import org.mochios.android.api.AssetHttpEntryPoint
 
 /**
- * Compact inline player for audio attachments: a play/pause button on the left
- * and a seekable progress bar with elapsed / total duration on the right.
- *
- * Drives [ExoPlayer] directly (rather than Media3's video-oriented `PlayerView`)
- * so the layout is a plain Compose row that themes correctly inside a chat
- * bubble. Audio streams through the authenticated asset client, same as
- * [VideoPlayer].
- *
- * @param url absolute, session-gated audio URL.
+ * Compact inline player for audio attachments. Drives [ExoPlayer] directly
+ * rather than Media3's `PlayerView` so the row is plain Compose and themes
+ * inside a chat bubble. [url] must be absolute.
  */
 @OptIn(UnstableApi::class)
 @Composable

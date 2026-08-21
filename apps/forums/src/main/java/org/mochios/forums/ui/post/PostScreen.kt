@@ -677,9 +677,8 @@ private fun ReportDialog(
 }
 
 /**
- * One reaction counter on the post detail: icon plus its count, always shown
- * even at zero. Tappable when [onClick] is given — only the votes are, and only
- * when the viewer has vote rights.
+ * One reaction counter on the post detail, shown even at zero; tappable only
+ * when [onClick] is given.
  */
 @Composable
 private fun PostReaction(
@@ -1014,15 +1013,9 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
 }
 
 /**
- * The comment thread for one image, shown in the lightbox's comments panel.
- *
- * Comments are one thread per post; a comment may be ANCHORED to one of the
- * post's attachments. This panel renders the post's REAL comments - the same
- * [CommentCard] the post screen draws, with replies, votes, editing, deletion
- * and moderation intact - filtered to the ones anchored to the image being
- * viewed, offers the rest of the thread behind a toggle, and writes new
- * comments in the same [ComposerBar] as the screen - attachments and all -
- * anchored to this image without the writer having to say so.
+ * The comment thread for one image, in the lightbox's comments panel: the
+ * post's real thread filtered to comments anchored to this image (the rest
+ * behind a toggle), with new comments anchored to it automatically.
  */
 @Composable
 private fun AttachmentComments(
@@ -1105,9 +1098,8 @@ private fun AttachmentComments(
 }
 
 /**
- * A forum comment, rendered by the shared [CommentItem] so the header, threading
- * and attachments match feeds. Only the action row differs: up/down votes, a
- * reply button, and the moderation overflow.
+ * A forum comment via the shared [CommentItem]; only the action row (votes,
+ * reply, moderation overflow) differs from feeds.
  */
 @Composable
 private fun CommentCard(
@@ -1270,19 +1262,10 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
 
 
 /**
- * A comment's own words, with any quote it was itself citing dropped.
- *
- * A quote is stored as a leading "> " block in the body, so quoting such a
- * comment verbatim would nest the older quote inside the new one — and every
- * further round would drag the whole chain along. A post never needs this: its
- * body is the root of the thread and cites nothing.
- *
- * Only a *leading* block is dropped. A blockquote further down is something the
- * author wrote into their own text, and it stays.
- *
- * Falls back to the untouched body when the comment is nothing but a quote —
- * there are no original words to cite, so citing what they cited beats a menu
- * item that silently does nothing.
+ * A comment's own words with its leading "> " quote block dropped, so quoting
+ * it does not nest the older quote. Only a leading block is dropped - a
+ * blockquote further down is the author's own. Falls back to the whole body
+ * when the comment is nothing but a quote.
  */
 private fun withoutQuote(body: String): String {
     val lines = body.split("\n")
@@ -1293,12 +1276,6 @@ private fun withoutQuote(body: String): String {
     return own.ifBlank { body }
 }
 
-/**
- * Quote a post or comment body into the reply composer. Mirrors web's
- * thread-detail behaviour: prefix every non-empty line with "> " and append
- * a blank line so the user can start typing immediately. When the draft is
- * already non-empty, prepend the quote above existing text.
- */
 private fun quoteText(body: String, currentDraft: String): String {
     val trimmed = body.trim()
     if (trimmed.isEmpty()) return currentDraft

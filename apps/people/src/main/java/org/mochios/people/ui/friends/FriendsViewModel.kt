@@ -22,17 +22,6 @@ import org.mochios.people.model.Friend
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
-/**
- * UI state for the Friends list. Mirrors the web `Friends` page state — a
- * searchable list of confirmed friends with overlays for the add-friend
- * dialog (with its own search), the remove-friend confirm, and the optional
- * welcome banner shown on first visit.
- *
- * Errors are kept as typed [MochiError] so the composable can resolve them
- * to localised strings via `userMessage()`. Toast messages already pre-formatted
- * are emitted through [toasts] so the screen can render them via Snackbar
- * without owning more state.
- */
 /** How the friends list is ordered. Mirrors web's name/recent toggle. */
 enum class FriendSortBy { NAME, RECENT }
 
@@ -49,18 +38,12 @@ data class FriendsUiState(
     val isRemoving: Boolean = false,
 
     /**
-     * One-shot welcome banner shown on first visit. True only after
-     * `-/welcome` reports `seen == false`; flipped back to false (and persisted
-     * server-side via `-/welcome/seen`) when the user dismisses it.
+     * Welcome banner: set when `-/welcome` reports unseen, cleared and
+     * persisted via `-/welcome/seen` on dismiss.
      */
     val showWelcome: Boolean = false,
 )
 
-/**
- * Side-effect events emitted by the ViewModel. The screen collects these
- * and routes them to navigation / Toast / Intent helpers without putting
- * one-shot data into the persistent UI state.
- */
 sealed class FriendsEvent {
     /** Open chat with the given friend id (deep-link `mochi://chat/with?friend=X`). */
     data class MessageFriend(val friendId: String, val friendName: String) : FriendsEvent()

@@ -807,11 +807,8 @@ private fun ProjectContent(
             }
         },
     ) { padding ->
-        // No-op vertical scrollable so the tabs/search header above the
-        // columns also dispatches pull-down gestures up to PullToRefreshBox.
-        // (Tabs and the search bar aren't scrollable on their own, so without
-        // this modifier pull-to-refresh wouldn't fire when the user pulls on
-        // the top section.)
+        // No-op scrollable so pull-to-refresh also fires on the tabs/search
+        // header, which is not scrollable on its own.
         val passThroughVerticalScroll = rememberScrollableState { 0f }
         PullToRefreshBox(
             isRefreshing = uiState.isRefreshing,

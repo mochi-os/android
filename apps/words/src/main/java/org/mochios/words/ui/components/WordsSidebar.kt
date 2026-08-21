@@ -40,21 +40,6 @@ import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getPlayerNames
 import org.mochios.words.model.playerScore
 
-/**
- * Slide-in drawer for the Words app's game list, rendered when the user
- * taps the hamburger from either the list or the detail screen.
- *
- * Two sections in the same scroll: "Active games" first, then "Completed"
- * for any game whose status is `"finished"` or `"resigned"`. Each row
- * shows the other players' names and the running player1 / player2 …
- * scores so the user can spot which game is theirs to play next without
- * opening it. A "New game" affordance pinned at the bottom opens the
- * NewWordsGameDialog via the host screen's callback.
- *
- * The web app puts active/completed inside a single sidebar with section
- * headers (`apps/words/web/src/components/layout/words-layout.tsx`); we
- * mirror that here so the Android drawer reads the same way.
- */
 @Composable
 fun WordsSidebar(
     games: List<GameListItem>,

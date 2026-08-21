@@ -8,9 +8,7 @@ package org.mochios.people.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * One row in a group's member list. The `member` field is the id of the
- * referenced subject (numeric local user id or nested group id); [type]
- * distinguishes which kind.
+ * [member] is a local user id or a nested group id, per [type].
  */
 data class GroupMember(
     val member: String = "",

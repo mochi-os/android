@@ -198,16 +198,8 @@ fun FeedScreen(
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
 
-    // Persist the last-viewed feed so the next cold start lands here. The
-    // router composable reads this back via [LastViewedStore.get].
-    // Also dismiss any system-tray pushes for this feed — server-side
-    // clear/object marks the bell row read, but Android's tray only
-    // clears via AUTO_CANCEL on tap; opening the feed directly without
-    // tapping the push needs a manual cancel.
-
-    // Interest-thumb feedback: confirm boosted/reduced/removed, or surface the
-    // actual error — previously the result was silently swallowed, so taps
-    // looked dead even when the call failed.
+    // Interest-thumb feedback: confirm boosted/reduced/removed, or show the
+    // error.
     val interestBoosted = stringResource(R.string.feeds_interest_boosted)
     val interestReduced = stringResource(R.string.feeds_interest_reduced)
     val interestRemoved = stringResource(R.string.feeds_interest_removed)
@@ -346,18 +338,10 @@ fun FeedScreen(
         }
     }
 
-    // The pager addresses pages by integer index, but the posts list is
-    // replaced wholesale by background refreshes (the cache→network refresh on
-    // open, and websocket-driven refreshes), and relevance / AI / hot sorts
-    // re-rank server-side — so the same index can map to a different post after
-    // a refresh. Without anchoring that silently swaps the post under the reader
-    // about a second after it appears. To keep them on their post we capture the
-    // list as it was and, after a change, look up where the post they were
-    // viewing moved to — reading the LIVE currentPage against the PREVIOUS list,
-    // not a separately-tracked id. (That id lagged a fresh swipe: a "1 new post"
-    // re-emission landing mid-flip would see the stale id and yank the reader
-    // back to the post they'd just left.) `suppressAnchorRestore` lets a manual
-    // refresh opt out (it intentionally returns to the top).
+    // Refreshes replace and re-rank the posts list, so a pager index can point
+    // at a different post afterwards. Anchor by looking up the LIVE currentPage
+    // in the PREVIOUS list - a tracked id lags a swipe and yanks the reader
+    // back. suppressAnchorRestore opts a manual refresh out.
     var previousPosts by remember { mutableStateOf(posts) }
     var suppressAnchorRestore by remember { mutableStateOf(false) }
     // Set by the "new posts" pill: jump to the top once the refreshed list lands.
@@ -386,11 +370,8 @@ fun FeedScreen(
         }
     }
 
-    // Freeze guard for the page-flip overlay: if the pager ever comes to rest
-    // at a fractional offset (an interrupted/incomplete settle), snap it to the
-    // nearest page so the fold can't stay frozen mid-fold. Only fires once
-    // scrolling has stopped with a residual offset — a normal settle ends at
-    // ~0 and is left untouched.
+    // Freeze guard: a pager resting at a fractional offset (interrupted settle)
+    // would leave the fold stuck mid-flip, so snap it to the nearest page.
     LaunchedEffect(pagerState) {
         snapshotFlow { pagerState.isScrollInProgress }
             .collectLatest { inProgress ->
@@ -402,11 +383,8 @@ fun FeedScreen(
             }
     }
 
-    // Mark the current page's post as read as soon as the swipe settles on
-    // it — no debounce. The pager's currentPage only flips once the user
-    // has committed to that page (mid-swipe doesn't tick currentPage), so
-    // dropping the 1s delay still avoids spuriously marking pages the
-    // user flipped past.
+    // Mark read as soon as the swipe settles: currentPage only flips once the
+    // user commits to a page, so no debounce is needed.
     LaunchedEffect(pagerState, posts.size) {
         snapshotFlow { pagerState.currentPage }
             .distinctUntilChanged()
@@ -660,13 +638,10 @@ fun FeedScreen(
                                         },
                                         leadingIcon = { Icon(Icons.Outlined.DoneAll, contentDescription = null) },
                                     )
-                                    // Sources are only editable by managers, so
-                                    // hide the entry for plain subscribers. In the
-                                    // "All feeds" aggregate ("__all__" isn't a real
-                                    // feed) route through the feed of the post
-                                    // currently in view instead — the standard
-                                    // aggregate per-post routing — shown when the
-                                    // user owns that feed.
+                                    // Sources is manager-only. In the "All
+                                    // feeds" aggregate route through the feed
+                                    // of the post in view, shown when the user
+                                    // owns that feed.
                                     val sourcesPost = posts.getOrNull(pagerState.currentPage)
                                     val sourcesFeedId = if (viewModel.isAllFeeds) {
                                         sourcesPost?.let { it.feedFingerprint.ifEmpty { it.feed } } ?: ""
@@ -762,9 +737,8 @@ fun FeedScreen(
                 PullToRefreshBox(
                     isRefreshing = isRefreshing,
                     onRefresh = {
-                        // Pull-to-refresh is a deliberate "show me the latest" gesture
-                        // from the top — let the new list settle at the top rather than
-                        // anchor-restoring back to the previously-current post.
+                        // Pull-to-refresh settles at the top rather than
+                        // anchor-restoring to the current post.
                         suppressAnchorRestore = true
                         viewModel.refresh()
                     },
@@ -855,14 +829,10 @@ fun FeedScreen(
                                         }
                                     }
                                 } else {
-                                    // Magazine-style vertical pager: one post per page.
-                                    // The pager itself handles gestures/fling and
-                                    // renders the live (interactive) post. A FlipBook
-                                    // overlay paints the Flipboard book-fold during a
-                                    // transition (it draws nothing at rest, so the live
-                                    // page shows through). The fold is hinged at the
-                                    // mid-screen crease: the outgoing top half stays
-                                    // put while a single leaf turns toward the viewer.
+                                    // Vertical pager, one post per page.
+                                    // FlipBook overlays the book-fold only
+                                    // during a transition and draws nothing at
+                                    // rest, so the live page shows through.
                                     val renderPost: @Composable (Int) -> Unit = { index ->
                                         val post = posts[index]
                                         // Prefer the fingerprint, but fall back to the feed's
@@ -871,11 +841,10 @@ fun FeedScreen(
                                         // open-post all reach a real entity in the aggregate view.
                                         val routeFeedId = post.feedFingerprint.ifEmpty { post.feed }
                                             .ifEmpty { viewModel.feedId }
-                                        // post.source.url is the RSS feed (XML) URL —
-                                        // not the article URL. The article URL lives
-                                        // in rss.link; when present, tapping the card
-                                        // opens the in-app article (PostSourceScreen).
-                                        // Anything else falls through to post detail.
+                                        // post.source.url is the RSS feed URL,
+                                        // not the article; the article is
+                                        // rss.link and opens in-app
+                                        // (PostSourceScreen).
                                         val sourceUrl =
                                             post.data?.rss?.link?.takeIf { it.isNotEmpty() }
                                         // Upgrade the RSS thumbnail to the article's
@@ -950,19 +919,11 @@ fun FeedScreen(
                                             state = pagerState,
                                             modifier = Modifier.fillMaxSize(),
                                             key = { page -> posts[page].id },
-                                            // Default snap threshold is 50% of page;
-                                            // even 20% still felt like work on a tall
-                                            // phone where the thumb naturally moves
-                                            // 60-80dp. Drop to 8% so any deliberate
-                                            // upward gesture commits to the next post
-                                            // and the fold only rubber-bands back on a
-                                            // clear flick-and-release-back. Velocity-
-                                            // based fling continues to handle flicks.
-                                            //
-                                            // snapAnimationSpec: default spring micro-
-                                            // overshoots near the end and reads as a
-                                            // bounce. A short FastOutSlowIn tween
-                                            // settles cleanly, matching the eased fold.
+                                            // 8% snap threshold: the 50%
+                                            // default felt like work on tall
+                                            // phones. A short tween, not the
+                                            // default spring, which overshoots
+                                            // and reads as a bounce.
                                             flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
                                                 state = pagerState,
                                                 snapPositionalThreshold = 0.08f,
@@ -1175,13 +1136,9 @@ private fun PostImage(
     contentScale: ContentScale = ContentScale.Fit,
     onClick: (() -> Unit)? = null,
 ) {
-    // Layout-stable image: the caller fixes the container's size up front
-    // (height or aspect ratio) because posts carry no image dimensions, so
-    // the space is reserved before the bitmap arrives and the surrounding
-    // layout never shifts. A neutral tint marks the reserved space while
-    // loading; a broken-image icon takes it over if loading fails. The
-    // lightbox tap only arms once the image has actually loaded — there's
-    // nothing to show full-screen for a pending or failed URL.
+    // The caller fixes the container size: posts carry no image dimensions, so
+    // space is reserved before the bitmap arrives. The lightbox tap arms only
+    // once the image has loaded.
     var state by remember(url) {
         mutableStateOf<AsyncImagePainter.State>(AsyncImagePainter.State.Empty)
     }
@@ -1373,12 +1330,9 @@ private fun GalleryContent(
         attachment.url ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}"
     }
 
-    // Same zero-range verticalScroll wrapper as the article column: its only
-    // job is the nested-scroll handoff to the pager, so a swipe starting on a
-    // mosaic tile forwards to the page flip instead of being fought over —
-    // without it, gallery pages were noticeably harder to flip than articles.
-    // The inner column is pinned to the viewport height, so the scroll range
-    // stays zero and every drag delegates upward.
+    // Zero-range verticalScroll (inner column pinned to viewport height) exists
+    // only for the nested-scroll handoff to the pager; without it gallery pages
+    // are harder to flip.
     BoxWithConstraints(modifier = modifier) {
         val viewportHeight = this.maxHeight
         Column(
@@ -1663,17 +1617,10 @@ private fun PostCard(
     // dialog renders above the page. Matches web's per-card image-tap
     // behaviour (open lightbox, not navigate to post detail).
     var lightboxState by remember { mutableStateOf<LightboxRequest?>(null) }
-    // Magazine-style page: full-screen surface, no card chrome. The
-    // VerticalPager wrapper handles the 3D flip; the page itself is just
-    // content on the theme background. The action row is hoisted out of
-    // the scrollable content area below so it stays pinned at the bottom
-    // of the screen — easier thumb reach on tall phones, and matches the
-    // bottom-action-bar pattern Flipboard / Apple News use on full-screen
-    // article pages.
-    // Primary ("hero") image for this post: the first attachment image, else
-    // the RSS preview image. When present it's lifted out of the scrolling
-    // text column and shown full-bleed across the top half of the page; the
-    // text follows below. When absent, the text stays at the top as usual.
+    // Full-screen page, no card chrome; the action row is hoisted below the
+    // scrollable area so it stays pinned at the bottom. Hero image: first
+    // attachment image, else the RSS preview, shown full-bleed across the top
+    // half with the text below.
     val attachmentImages = post.attachments.filter { it.isImage }
     val otherAttachments = post.attachments.filter { !it.isImage }
     val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
@@ -1727,27 +1674,11 @@ private fun PostCard(
             )
         }
         if (!isGallery && heroUrl != null) {
-            // Square corners; the hero region has a FIXED height reserved
-            // from the first frame — the post data carries no image
-            // dimensions, so this is the only way a slow image load can't
-            // shift (and re-truncate) the text below it. The height depends
-            // only on screen geometry, never the bitmap: RSS heroes get a
-            // width-driven 16:9 region (news images are almost always
-            // landscape; reserving more just left a dead band between image
-            // and text on tall screens), while attachment heroes keep the
-            // half-screen region since user photos are often portrait.
-            // ContentScale.Fit shows a mismatched image whole with margins
-            // rather than cropped. Top-aligned so the image stays full-bleed
-            // against the screen edge. Tap opens the full-screen lightbox.
-            //
-            // The 16:9 region comes from aspectRatio, not a computed dp
-            // height: integer-dp arithmetic (screenWidthDp * 9 / 16) came
-            // out a fraction of a dp short of true 16:9, so Fit letterboxed
-            // an exactly-16:9 image by a pixel of background down each side
-            // — visible as thin light lines against dark artwork. The
-            // half-screen cap still applies for landscape/squarish windows;
-            // when it binds, aspectRatio falls back to the capped height and
-            // Fit's margins take over as before.
+            // The hero's height is fixed from the first frame (posts carry no
+            // image dimensions): half-screen for attachments, often portrait;
+            // 16:9 for RSS. Use aspectRatio, not a computed dp height - integer
+            // dp arithmetic came out short and Fit letterboxed a pixel line
+            // down each side.
             val configuration = LocalConfiguration.current
             val heroModifier = if (heroFromAttachment) {
                 Modifier
@@ -1773,11 +1704,9 @@ private fun PostCard(
                 },
             )
         }
-        // One post = one screen. The inner column is pinned to the viewport
-        // height, so its content fills the screen and the overflow is ellipsised
-        // rather than scrolled. The verticalScroll is kept ONLY for its
-        // nested-scroll handoff to the pager (its scroll range is zero) — a swipe
-        // forwards to the pager and flips to the next post.
+        // One post = one screen: the inner column is pinned to the viewport
+        // height and overflow is ellipsised. The verticalScroll is zero-range,
+        // kept only for the nested-scroll handoff to the pager.
         if (!isGallery) BoxWithConstraints(
             modifier = Modifier
                 .weight(1f)
@@ -1819,15 +1748,10 @@ private fun PostCard(
                     // then the compact metadata lines.
                     PostByline(post)
 
-                    // Post body — fillHeight gives it the weighted remainder of the
-                    // viewport-height column, so it fills the space under the header
-                    // and ellipsises the overflow ("enough to fill the screen", no
-                    // scroll through the whole article). passThroughTouches stays ON:
-                    // the body's TextView forwards vertical drags to the page's
-                    // (zero-range) verticalScroll, which hands off to the pager and
-                    // flips immediately, instead of swallowing them. Taps still open
-                    // detail via the card's clickable. For RSS posts the first line
-                    // is the article title — bolded for scannability.
+                    // fillHeight takes the weighted remainder and ellipsises
+                    // overflow. passThroughTouches must stay on: the body's
+                    // TextView forwards vertical drags to the zero-range
+                    // scroll, which hands them to the pager.
                     if (post.body.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(8.dp))
                         PostBody(
@@ -1838,11 +1762,10 @@ private fun PostCard(
                             includeTitle = false,
                             // Drop the trailing RSS link from the card preview.
                             stripTrailingLink = true,
-                            // The body TextView passes touches through (returns
-                            // false), so a tap on it never reaches onClick on its
-                            // own. Wrap it in a no-ripple clickable — so tapping the
-                            // body opens detail/source without a highlight background;
-                            // vertical drags still pass through to the page scroll/flip.
+                            // The TextView passes touches through, so a tap
+                            // never reaches onClick on its own; the no-ripple
+                            // clickable carries it while drags still flow to
+                            // the pager.
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .weight(1f)
@@ -2138,9 +2061,8 @@ private fun bannerContentHash(content: String): String {
 }
 
 /**
- * Dismissible markdown banner shown at the top of a feed, mirroring the forums
- * banner. Dismissal is persisted per feed keyed by a content hash, so a new
- * banner (different text) reappears even after a previous one was dismissed.
+ * Dismissible feed banner; dismissal is stored per feed keyed by a content
+ * hash, so changed text reappears.
  */
 @Composable
 private fun FeedBanner(banner: String, feedId: String) {
@@ -2196,11 +2118,6 @@ private fun shareLink(context: Context, link: String, title: String) {
     context.startActivity(chooser)
 }
 
-/**
- * One compact comment line - avatar, name, an anchored comment's image, the
- * message (taking the free width), then the time. The list card previews the
- * thread with these; the lightbox panel previews one image's comments.
- */
 @Composable
 private fun CommentPreviewRow(
     comment: Comment,
@@ -2256,11 +2173,6 @@ private fun CommentPreviewRow(
     }
 }
 
-/**
- * The lightbox comments panel for a list card: the image's comments, previewed
- * the way the card previews the thread, and a way into the post for the rest
- * (reading replies, reacting, writing).
- */
 @Composable
 private fun LightboxCommentsPreview(
     post: Post,

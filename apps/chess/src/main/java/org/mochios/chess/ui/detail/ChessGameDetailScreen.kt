@@ -96,25 +96,8 @@ import org.mochios.chess.ui.detail.board.capturedPiecesFromFen
 import org.mochios.android.R as MochiR
 
 /**
- * Per-game detail surface for `chess/{gameId}`. Mirrors the web's
- * `ChessGame` (apps/chess/web/src/features/chess/index.tsx) layout body:
- *
- *  - Two-pane on >= 600 dp: board on the left, chat panel on the right.
- *  - One-pane on phones: board fills the screen; chat lives behind a
- *    ModalBottomSheet reached via a Message icon in the [GameHeader]
- *    actions slot.
- *  - GameHeader strip — opponent name, turn-state status text, side dot
- *    stat, dropdown menu with offer-draw / resign (active) or rematch /
- *    delete (finished).
- *  - Draw-offer banner — muted "waiting for ..." when we offered, an
- *    Accept / Decline pair when the opponent offered to us.
- *  - CapturedPiecesStrip above (opponent's takes) and below (our takes)
- *    the board.
- *  - ChessBoard composable as the main play area.
- *
- * WebSocket events trigger a refresh — chess moves are infrequent enough
- * that a single `/-/view` + `/-/messages` round-trip per event keeps the
- * UI in sync without trying to surgically apply each frame.
+ * Game detail for `chess/{gameId}`: two-pane (board and chat) from 600 dp, chat
+ * in a bottom sheet below that. WebSocket events trigger a full refresh.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -722,12 +705,6 @@ private fun ChatPanel(
     }
 }
 
-/**
- * Renders a chess move chat message centred and muted. Web variant: see
- * `apps/chess/web/src/features/chess/components/chat-message-list.tsx`'s
- * move-row branch — "You played e4" / "Alice played e4", or "You took
- * Nxe5" / "Alice took Nxe5" when the SAN has a capture marker.
- */
 @Composable
 private fun ChessMoveRow(message: GameChatMessage, isSent: Boolean) {
     val san = message.body
@@ -782,10 +759,7 @@ private fun ChessSystemRow(message: GameChatMessage) {
 // ---------- Status text ----------
 
 /**
- * Localised game-status string. Mirrors `useChessStatusText` in
- * `apps/chess/web/src/features/chess/index.tsx`. We pick from the
- * `chess_status_*` string resources; the screen call-site supplies the
- * caller context so [stringResource] resolves to the right locale.
+ * Status line; mirrors the web's `useChessStatusText`.
  */
 @Composable
 private fun chessStatusText(

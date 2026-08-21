@@ -90,9 +90,8 @@ data class SubscribeRequest(
     val feed: String,
     val server: String? = null,
     /**
-     * A libp2p peer id from a `mochi://<peer>/<feed>` share link. The server
-     * prefers it over resolving [server] by hostname, and it is the only way to
-     * reach a feed the directory does not list.
+     * Peer id from a `mochi://<peer>/<feed>` share link; preferred over
+     * [server], and the only route to a feed the directory does not list.
      */
     val peer: String? = null
 )

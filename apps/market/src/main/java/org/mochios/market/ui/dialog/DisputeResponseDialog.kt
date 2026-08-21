@@ -58,17 +58,6 @@ import org.mochios.market.R
 import org.mochios.market.model.DisputeEvidence
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Dispute response dialog. The seller types a response, optionally
- * attaches evidence files, and submits. Evidence picking uses
- * [ActivityResultContracts.GetMultipleContents] — the parent screen
- * forwards the picked URIs to the ViewModel which uploads them and
- * threads them through to the comptroller's evidence-set call.
- *
- * The status badge in the title slot indicates whether the dispute is
- * still open, awaiting Stripe decision, or resolved — the host screen
- * supplies the canonical state string.
- */
 @Composable
 fun DisputeResponseDialog(
     open: Boolean,
@@ -185,10 +174,6 @@ fun DisputeResponseDialog(
     )
 }
 
-/**
- * "Submitted evidence" section listing previously-uploaded files attached
- * to the dispute. Tap a row to open the file URL in a Chrome Custom Tab.
- */
 @Composable
 private fun SubmittedEvidenceSection(evidence: List<DisputeEvidence>) {
     val context = LocalContext.current

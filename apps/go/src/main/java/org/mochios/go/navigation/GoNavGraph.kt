@@ -14,11 +14,6 @@ import org.mochios.go.ui.detail.GoGameDetailScreen
 import org.mochios.go.ui.list.GoGameListScreen
 import org.mochios.go.ui.newgame.NewGoGameScreen
 
-/**
- * Routes for the Go app module. The list page is the landing screen reached
- * from the launcher / Mochi menu, and each game expands to a detail screen
- * (board + chat + move log) keyed by game id.
- */
 object GoApp {
     /** Landing screen — the active + completed games list. */
     const val HOME = "go"
@@ -31,17 +26,8 @@ object GoApp {
 }
 
 /**
- * Wire the Go app's screens into a parent [NavGraphBuilder]. Pattern matches
- * the People / Wikis / Chess nav graphs.
- *
- * - [onLogout] — handler the host (MainActivity) plugs in to clear the
- *   session and return to the login flow when a screen surfaces that intent.
- * - [onOpenNotifications] — opens the cross-feature notifications screen
- *   (lives in the Settings module). Each top-level screen renders the
- *   notification bell in its top bar.
- * - [onOpenLink] — generic in-app deep-link handler. The Go module doesn't
- *   currently emit any (chat/new etc.) but the parameter mirrors People for
- *   consistency and future-proofs message-from-game links.
+ * Wire the Go screens into the parent graph; [onOpenLink] is unused by Go and
+ * mirrors People.
  */
 fun NavGraphBuilder.goNavGraph(
     navController: NavController,

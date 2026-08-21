@@ -25,10 +25,8 @@ import java.nio.charset.StandardCharsets
 
 object FeedsApp {
     /**
-     * HOME points at the router (resolves last-viewed feed or "__all__").
-     * The router immediately navigates to FEED with the resolved id and
-     * pops itself off the back stack so the user never sees the spinner
-     * for more than a frame.
+     * HOME is the router: it resolves the last-viewed feed (or "__all__"),
+     * navigates to FEED and pops itself off the back stack.
      */
     const val HOME = "feeds/router"
     const val ROUTER = "feeds/router"
@@ -230,11 +228,9 @@ fun NavGraphBuilder.feedsNavGraph(
         FeedSettingsScreen(
             onNavigateBack = { navController.popBackStack() },
             onFeedDeleted = {
-                // Feed deletion drops the user back to the router so the
-                // last-viewed lookup re-runs (the deleted feed shouldn't
-                // come back as the destination). Navigate rather than pop: the
-                // router removes itself from the stack once it resolves, so
-                // popping back to it found no entry and went nowhere.
+                // Back to the router so the last-viewed lookup re-runs.
+                // Navigate, not pop: the router removes itself from the stack
+                // once resolved.
                 navController.navigate(FeedsApp.ROUTER) {
                     popUpTo(FeedsApp.FEED) { inclusive = true }
                 }

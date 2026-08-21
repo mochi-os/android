@@ -74,14 +74,6 @@ import org.mochios.people.model.GroupMember
 import org.mochios.people.model.GroupMemberType
 import org.mochios.android.R as MochiR
 
-/**
- * Group detail screen — mirrors the web `group-detail.tsx` page.
- *
- * Top section shows group name + description, both tappable to open a
- * single-field editor dialog. The overflow menu houses "Delete group".
- * The member list lives below, with an "Add member" action prominent
- * in the top bar and an inline empty state when there are no members.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GroupDetailScreen(

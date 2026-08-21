@@ -17,13 +17,9 @@ import org.mochios.android.auth.StepUpClient
 import org.mochios.android.ui.components.StepUpDialog
 
 /**
- * Reusable step-up re-authentication plumbing, lifted from [LoginViewModel] so
- * the token / account screens can gate a sensitive mutation on re-verification
- * without each copying the dialog wiring.
- *
- * Embed one in a ViewModel, call [request] from a gated action (the run block
- * receives the proof token once the user re-verifies), render [StepUpHost] once
- * in the screen, and route errors through [onError].
+ * Step-up re-authentication for a ViewModel: call [request] from a gated action
+ * (the block receives the proof token), render [StepUpHost] once in the screen,
+ * errors go to [onError].
  */
 class StepUpController(
     val client: StepUpClient,

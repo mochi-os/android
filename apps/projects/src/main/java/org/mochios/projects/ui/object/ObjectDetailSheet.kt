@@ -67,19 +67,12 @@ fun ObjectDetailSheet(
     viewFieldIds: List<String> = emptyList(),
     onDismiss: () -> Unit,
     /**
-     * Delete this object. Imperative, not a past-tense notification: the sheet
-     * does not delete anything itself, and naming it `onObjectDeleted` is how
-     * a caller came to satisfy it by merely closing the sheet and refreshing.
+     * Deletes this object. The sheet never deletes anything itself, so this is
+     * a command, not a notification.
      */
     onDeleteObject: () -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onNavigateToObject: (String) -> Unit = {},
-    /**
-     * Invoked when the user taps "Add child" inside the PropertiesTab.
-     * The caller closes the sheet and opens CreateObjectDialog with the
-     * given parent pre-selected. Falls back to a no-op so embedded uses
-     * (e.g. tests) don't have to wire it.
-     */
     onAddChild: (parent: String) -> Unit = {},
     viewModel: ObjectDetailViewModel = hiltViewModel()
 ) {

@@ -56,11 +56,6 @@ import org.mochios.projects.R
 import org.mochios.projects.model.Project
 import org.mochios.android.R as MochiR
 
-/**
- * Project settings tabs, styled to match the feeds settings screen: an icon
- * [TabRow] with the label below each glyph. Both tabs edit the project, so the
- * whole tabbed editor is manage-only.
- */
 private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     General(R.string.projects_settings_tab_general, Icons.Outlined.Settings),
     Access(R.string.projects_settings_tab_access, Icons.Outlined.Shield),
@@ -192,11 +187,6 @@ fun ProjectSettingsScreen(
     }
 }
 
-/**
- * Read-only settings shown to a viewer who cannot manage the project: the
- * project's identity card and an unsubscribe action. Mirrors the forum and feed
- * subscriber views.
- */
 @Composable
 private fun SubscriberSettings(
     project: Project,

@@ -32,16 +32,8 @@ import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 
 /**
- * Auction bid history list. Each row shows the bidder's fingerprint,
- * the formatted bid amount, and the relative time the bid was placed.
- * The highest bid is rendered in primary-coloured text for emphasis.
- *
- * Pass [endsAt] (epoch seconds) to render a countdown banner at the
- * top. Renders nothing if [bids] is empty and there's no countdown to
- * show.
- *
- * @param fallbackCurrency Used when a [Bid.currency] is null (older
- *                        server responses).
+ * Bid rows with the high bid emphasised; [endsAt] (epoch seconds) adds a
+ * countdown banner.
  */
 @Composable
 fun AuctionBidHistory(

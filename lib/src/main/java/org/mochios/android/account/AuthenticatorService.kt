@@ -10,10 +10,9 @@ import android.content.Intent
 import android.os.IBinder
 
 /**
- * Bound service exposing [MochiAuthenticator] to AccountManager. Each Mochi
- * app declares this service in its manifest with the same intent filter and
- * the same xml metadata; Android picks one as the device-wide authenticator
- * owner. All apps (signed with the same key) can read the shared session via
+ * Exposes [MochiAuthenticator] to AccountManager. Every Mochi app declares this
+ * service identically; Android elects one as the device-wide owner, and apps
+ * signed with the same key read the shared session via
  * [AccountManager.getPassword].
  */
 class AuthenticatorService : Service() {

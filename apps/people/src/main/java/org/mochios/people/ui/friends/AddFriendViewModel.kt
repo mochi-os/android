@@ -24,20 +24,8 @@ import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
 /**
- * State of the add-friend screen: a debounced people search whose results lead
- * to a profile-preview step before any invite is sent.
- *
- * @property searchQuery what the user has typed into the search field.
- * @property searchLoading true while the debounced search is in flight.
- * @property searchError what stopped the last search, if anything.
- * @property searchResults users matching [searchQuery].
- * @property invitedUserIds users invited during this visit, so their rows read
- *   as sent without waiting for a fresh search.
- * @property addingUserId the user whose invite is in flight, if any.
- * @property preview the profile-preview step; null while the search list shows.
- * @property inviteError what stopped the last invite, if anything.
- * @property friendsChanged true once an accepted invite has changed the
- *   friends list, so leaving the screen can reload it.
+ * State of the add-friend screen. [invitedUserIds] marks rows invited this
+ * visit as sent without a fresh search.
  */
 data class AddFriendUiState(
     val searchQuery: String = "",
@@ -52,17 +40,8 @@ data class AddFriendUiState(
 )
 
 /**
- * Second stage of the add-friend flow. Carries the user the search row was
- * built from (so the screen still has display name / fingerprint while the
- * details fetch is in flight) plus the fetched [PersonInformation] (banner,
- * avatar, bio, accent). [isLoading] is true between tap and response; [error]
- * is set if the fetch failed so the user can either retry or go back to the
- * search list.
- *
- * @property targetUser the user the search row was built from.
- * @property information the fetched profile, once it arrives.
- * @property isLoading true between the tap and the response.
- * @property error what stopped the fetch, if anything.
+ * Profile-preview step; [targetUser] is the search row, shown until
+ * [information] arrives.
  */
 data class AddFriendPreview(
     val targetUser: User,
@@ -120,12 +99,8 @@ class AddFriendViewModel @Inject constructor(
     }
 
     /**
-     * Tap on a search result. Moves from the list step to the profile-preview
-     * step and kicks off a [PeopleRepository.getPersonInformation] fetch.
-     * Mirrors the web `startConnect` flow but without the "has-profile-content"
-     * short-circuit — Android always shows the preview so the user has a
-     * consistent confirmation step (the web's skip-on-empty is an optimisation
-     * for keyboard-heavy desktop use).
+     * Opens the profile preview for a tapped result and fetches its details.
+     * Unlike web, always shown, even for an empty profile.
      */
     fun openPreview(user: User) {
         previewJob?.cancel()
@@ -169,10 +144,7 @@ class AddFriendViewModel @Inject constructor(
     }
 
     /**
-     * Send an invite, or accept an incoming one when [user] has already invited
-     * the local user. Users who are already friends, already invited, or the
-     * local user themselves no-op — the buttons that reach here are disabled in
-     * those states.
+     * Sends an invite, or accepts one [user] already sent.
      */
     fun addFriend(user: User) {
         val status = if (user.id in _uiState.value.invitedUserIds) {

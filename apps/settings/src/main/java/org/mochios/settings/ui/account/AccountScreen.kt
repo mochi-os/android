@@ -217,10 +217,9 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
 }
 
 /**
- * Hand the built export bundle off to Android's [DownloadManager]. The download
- * action is public but resolves the owner from the session/bearer token, so the
- * Authorization header is set inline (DownloadManager runs out-of-process and
- * has no access to the app's interceptor stack).
+ * Hands the export to [DownloadManager], which runs out-of-process and bypasses
+ * the app's interceptors, so the bearer token goes in the request header
+ * directly.
  */
 private fun startExportDownload(context: Context, download: ExportDownload) {
     val dm = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager

@@ -60,15 +60,6 @@ import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.android.R as MochiR
 
-/**
- * History surface for a wiki page. Mirrors web's
- * `apps/wikis/web/src/features/wiki/page-history.tsx`: an `EmptyState`-friendly
- * table of revisions where each row carries view + revert affordances and
- * links straight to the per-revision viewer.
- *
- * Reads `wikiId` / `page` via the ViewModel's [SavedStateHandle] and is wired
- * by `WikisApp.PAGE_HISTORY` in the nav graph.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PageHistoryScreen(

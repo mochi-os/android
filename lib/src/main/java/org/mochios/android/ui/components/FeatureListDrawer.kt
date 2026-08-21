@@ -44,22 +44,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
 /**
- * Universal entry for an item rendered inside the feature drawer.
- *
- * Feature modules adapt their domain row type (Feed, Chat, Forum, Project)
- * into this shape so a single [FeatureListDrawer] composable can render every
- * feature's drawer. Keeps icon + unread badge + secondary subtitle as common
- * columns.
- *
- * Leading slot resolution: [avatarUrl] wins (async avatar image), else a
- * colour-seeded [EntityIconCircle] when both [seed] and [icon] are set, else
- * the plain [icon]. Features that don't set [avatarUrl]/[seed] keep the plain
- * icon look unchanged.
- *
- * @property avatarUrl optional avatar asset path (e.g. "/people/<id>/-/avatar");
- *   rendered as a circular image, falling back to initials on load failure.
- * @property seed stable id used to colour-seed the leading circle so the entity
- *   reads the same here as in its list row / top bar.
+ * Universal drawer entry each feature adapts its own row type into, so one
+ * [FeatureListDrawer] renders every feature's drawer. The leading slot resolves
+ * [avatarUrl] first, then a seeded [EntityIconCircle], then the plain [icon].
  */
 data class FeatureDrawerItem(
     val id: String,
@@ -73,24 +60,9 @@ data class FeatureDrawerItem(
 )
 
 /**
- * Slide-in left drawer for the per-feature item list (chats, feeds, forums,
- * projects). Matches the mobile-web pattern of hiding the list behind a
- * hamburger so the cold-start path lands directly on the last-viewed
- * detail screen.
- *
- * Drawer layout (top → bottom):
- *   - Header slot (optional: feature title, account picker, etc.)
- *   - Optional "All" pinned item rendered first when [allItem] is non-null.
- *   - Scrollable [items] list, divider above it.
- *   - Bottom [actions] slot for feature-level actions (Find, Add, Logout,
- *     Settings, RSS export, ...). Stays visible regardless of scroll.
- *
- * The caller owns the [drawerState] so the host screen can also wire the
- * hamburger button in its TopAppBar:
- *
- *   val drawerState = rememberDrawerState(DrawerValue.Closed)
- *   val scope = rememberCoroutineScope()
- *   IconButton(onClick = { scope.launch { drawerState.open() } }) { ... }
+ * Slide-in left drawer for a feature's item list: optional header, a pinned
+ * [allItem], the scrollable [items], and a bottom [actions] slot that stays
+ * put. The caller owns [drawerState] so the host's TopAppBar can open it too.
  */
 @Composable
 fun FeatureListDrawer(
@@ -152,16 +124,7 @@ fun FeatureListDrawer(
 }
 
 /**
- * Compact action row for the drawer's bottom [FeatureListDrawer.actions] slot
- * (Find, Create, Logout, ...). Unlike Material's [androidx.compose.material3.ListItem]
- * it carries no enforced min-height or wide content padding, so the actions sit
- * tight together and align with the drawer items above.
- */
-/**
- * The drawer's headline: the app's own name above the item list, in the
- * Material drawer-headline style. Every list app passes its title here so
- * the drawer says where you are — without it the first item sat flush
- * against the top of the screen.
+ * The drawer's headline: the app's own name above the item list.
  */
 @Composable
 fun DrawerTitle(title: String) {
@@ -173,6 +136,10 @@ fun DrawerTitle(title: String) {
     )
 }
 
+/**
+ * Compact action row for the drawer's bottom [FeatureListDrawer.actions] slot.
+ * No enforced min-height or wide padding, so actions sit tight together.
+ */
 @Composable
 fun DrawerActionRow(
     title: String,

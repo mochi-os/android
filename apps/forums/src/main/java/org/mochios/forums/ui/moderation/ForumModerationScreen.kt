@@ -351,12 +351,9 @@ private fun QueueByline(
 }
 
 /**
- * What a moderator can do with a queued item: reject it, let it through, or act
- * on whoever wrote it. All outlined, colour doing the work: Approve primary, the
- * rest neutral. The row wraps so four actions still fit a narrow screen.
- *
- * Muting and banning confirm first: they act on a person rather than a post, and
- * a mis-tap costs someone their access until a moderator undoes it by hand.
+ * Moderator actions for a queued item: Reject, Approve, Mute, Ban. Mute and Ban
+ * confirm first - a mis-tap costs someone their access until a moderator undoes
+ * it.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -679,11 +676,10 @@ private fun LogTab(log: List<ModerationLogEntry>) {
             ModerationCard {
                 Column(modifier = Modifier.padding(12.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Action and type share one weighted row so the slack is
-                        // theirs, not the timestamp's: a weighted Spacer beside a
-                        // `fill = false` text splits the free space between them
-                        // and strands the remainder past the time, which then
-                        // drifts off the edge as the type gets shorter.
+                        // Action and type share one weighted row so the slack
+                        // is theirs, not the timestamp's; a weighted Spacer
+                        // beside a `fill = false` text pushes the time off the
+                        // edge.
                         Row(
                             modifier = Modifier.weight(1f),
                             verticalAlignment = Alignment.CenterVertically,
@@ -778,10 +774,8 @@ private fun RestrictionsTab(
 }
 
 /**
- * One restricted user: avatar, who they are, and what they are under — with the
- * moderator who set it and how long it lasts underneath. Remove lifts it, behind
- * a confirm: it hands someone their access back, and the queue's Mute and Ban
- * ask before taking it away.
+ * One restricted user; Remove confirms first, matching the queue's Mute and
+ * Ban.
  */
 @Composable
 private fun RestrictionCard(

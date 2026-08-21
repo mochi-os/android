@@ -18,14 +18,9 @@ import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
 
 /**
- * Mark a composable as draggable in a [DragState] scope. Long-press starts
- * the drag; subsequent pointer movement updates [DragState.dragOffset];
- * release fires the active drop target's onDrop. Cancellation (e.g. parent
- * scroll claiming the gesture) clears state cleanly.
- *
- * Pass [enabled] = false to keep the modifier in place but suppress drag
- * detection — useful for screens that want to toggle drag-to-reorder on and
- * off without rebuilding the modifier chain.
+ * Mark a composable as draggable in a [DragState] scope; long-press starts the
+ * drag. [enabled] = false keeps the modifier in the chain but suppresses
+ * detection, so drag-to-reorder toggles without rebuilding it.
  */
 fun Modifier.draggableItem(
     state: DragState,

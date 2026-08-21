@@ -65,12 +65,6 @@ import org.mochios.android.ui.components.Section
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
-/**
- * Access tab: an "Access Management" [Section] listing every access rule with
- * an inline level dropdown and revoke, plus a merged "Members" section for
- * searching and removing forum members. Styled to match feeds' Access tab: the
- * section header carries the add-rule action.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AccessTab(viewModel: ForumSettingsViewModel) {
@@ -203,13 +197,6 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
     }
 }
 
-/**
- * One access rule: subject icon and name on the first line, with the owner label
- * or a revoke button trailing it, and a full-width level dropdown underneath for
- * every subject except the owner.
- *
- * @param levels selectable levels, highest first, as the server reported them.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AccessRuleRow(
@@ -340,14 +327,8 @@ private fun accessLevelLabel(operation: String): String = when (operation) {
 private val ACCESS_LEVEL_FALLBACK_KEYS = listOf("moderate", "post", "comment", "vote", "view")
 
 /**
- * Add-access dialog, styled to match feeds'. Step 1: pick the subject kind
- * (User / Group / Other) via a segmented control and select a concrete subject.
- * Step 2: once a subject is selected, choose the level and confirm with Add.
- *
- * The Other segment carries what web's `AccessDialog` calls the manual target —
- * the `*` and `+` wildcards as option rows. Users are searched live via the
- * forums `users/search` proxy; groups are fetched once on first switch into the
- * Group segment.
+ * Add-access dialog: pick a subject (User / Group / Other - the `*` and `+`
+ * wildcards), then a level. Groups load on first switch into the Group segment.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

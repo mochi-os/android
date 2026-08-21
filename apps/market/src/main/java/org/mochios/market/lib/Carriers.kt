@@ -6,14 +6,8 @@
 package org.mochios.market.lib
 
 /**
- * Common shipping carriers offered as picker options when a seller marks an
- * order as shipped. Free-form: when none of these match, the dialog falls
- * back to a text input so the seller can type whatever they use.
- *
- * Mirrors the carrier list on `apps/market/web/src/features/sale/
- * ship-order-dialog.tsx`. The list is intentionally short — exhaustive
- * worldwide carrier coverage isn't useful, so we keep the most common
- * picks and let everyone else type theirs in.
+ * Carrier picker options for marking an order shipped; anything else is typed
+ * free-form. Mirrors web's `ship-order-dialog.tsx`.
  */
 val COMMON_CARRIERS: List<String> = listOf(
     "DHL",

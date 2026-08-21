@@ -102,12 +102,8 @@ data class SetValueRequest(val value: String)
 data class SubscribeRequest(val project: String, val server: String? = null)
 
 /**
- * What `-/subscribe` names as the project it actually joined. The directory hit
- * the user tapped can carry a full entity id where the app routes by
- * fingerprint, so prefer what the server reports over what was asked for.
- *
- * @property fingerprint fingerprint of the project joined; the id to route to.
- * @property id full entity id, when the server sends one.
+ * The project `-/subscribe` joined. Route by [fingerprint]: the directory hit
+ * may have carried a full id.
  */
 data class SubscribeResponse(
 

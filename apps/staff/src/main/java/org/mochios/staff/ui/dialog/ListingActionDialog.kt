@@ -31,23 +31,8 @@ import org.mochios.staff.ui.listings.ListingActionType
 import org.mochios.staff.ui.listings.PendingListingAction
 
 /**
- * Modal confirmation dialog for approve / reject / remove listing
- * actions. Mirrors the dialog block in
- * `apps/staff/web/src/features/listings/listings-page.tsx`:
- *
- *   - Title reflects the action type.
- *   - Reason field is shown for REJECT and REMOVE only (required on web;
- *     the dialog blocks submission with a blank value).
- *   - Notes field is shown for every action (optional).
- *   - The per-listing audit timeline lives inline via
- *     [StaffAuditTimeline] so the moderator sees prior actions before
- *     clicking through.
- *   - Submission is delegated to [onSubmit]; the parent ViewModel performs
- *     the API call and drives optimistic removal from the list.
- *
- * The dialog uses Material's plain `AlertDialog` rather than the M3
- * `ModalBottomSheet` — the web dialog is a centred modal, and Android
- * dialogs render with the same affordance on phone form factors.
+ * Confirmation dialog for approve / reject / remove on a listing. REJECT and
+ * REMOVE require a reason.
  */
 @Composable
 fun ListingActionDialog(

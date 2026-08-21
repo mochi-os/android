@@ -8,16 +8,10 @@ package org.mochios.feeds.model
 import org.mochios.android.model.Attachment
 
 /**
- * A point-in-time snapshot of a post, stored server-side for the "Saved"
- * (read-later) feature. The schema deliberately matches the web client's
- * snapshot (camelCase `feedId`/`feedFingerprint`/`feedName`/`bodyHtml`) so a
- * post saved on one client renders on the other — saved data syncs across the
- * user's devices via the feeds app's per-user replication.
- *
- * Only the fields needed to render a read-only card are captured; the card
- * links back to the live post for everything else. [data] carries the RSS
- * title/image (and check-in/travelling) exactly as on a live [Post]; reaction
- * counts are ignored and defaulted when absent — graceful degradation either way.
+ * Point-in-time snapshot of a post for Saved. Field names match the web
+ * client's snapshot (camelCase `feedId`, `bodyHtml`, ...) so a post saved on
+ * one client renders on the other. Only what a read-only card needs is
+ * captured.
  */
 data class SavedSnapshot(
     val id: String = "",

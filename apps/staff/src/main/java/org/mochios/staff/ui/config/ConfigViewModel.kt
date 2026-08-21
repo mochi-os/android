@@ -20,16 +20,8 @@ import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
 /**
- * Backing model for the staff Configuration screen. Mirrors web's
- * `apps/staff/web/src/features/config/config-page.tsx` shape — one map per
- * "server-side value" and one map per "local edit", with a per-key
- * `submitting` flag so each field can save independently.
- *
- * The two moderation thresholds (`threshold_low` / `threshold_high`) are
- * stored alongside the free-form configuration values to keep the screen
- * single-source-of-truth — the Comptroller serves them via separate
- * endpoints (`moderation/thresholds` and `moderation/set_thresholds`), but
- * the UI treats them like every other key.
+ * `threshold_low`/`threshold_high` live in the same maps as the config keys
+ * even though the Comptroller serves them through the moderation endpoints.
  */
 data class ConfigUiState(
     /** Authoritative values from the server (keyed by config key). */

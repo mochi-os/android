@@ -57,22 +57,6 @@ import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.android.R as MochiR
 
-/**
- * Find-and-subscribe surface for wikis. Mirrors web's `FindWikisPage`
- * (`apps/wikis/web/src/routes/_authenticated/find.tsx`):
- *
- *  - Debounced directory search field at the top.
- *  - Search results below, each row offering "Subscribe".
- *  - Below results (or as the whole body when the query is empty), a
- *    "Recommended wikis" section fed from `/-/recommendations`.
- *  - Wikis the user already has stay in both lists, showing a disabled
- *    "Subscribed" chip instead of the button; tapping such a row opens the
- *    wiki. This matches the other directories (feeds, forums, projects, CRM) —
- *    hiding a wiki you searched for by name reads as "not found".
- *
- * Subscribe handles the 502 retry-without-server case in the ViewModel; on
- * success the screen navigates to the new wiki's home via [onSubscribed].
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FindWikisScreen(
@@ -163,12 +147,9 @@ fun FindWikisScreen(
 
             val showRecommendations = uiState.searchQuery.isBlank()
 
-            // A wiki the user already has belongs in their own list, not in the
-            // directory, so it drops out of both sections rather than sitting
-            // there behind a dead "Subscribed" chip. Filtering here rather than
-            // in the view model keeps the checks below testing the same lists
-            // they render, so a search whose every hit is already subscribed
-            // shows the no-results message instead of nothing at all.
+            // Already-subscribed wikis drop out of both lists. Filtering here
+            // rather than in the view model keeps the empty-state checks below
+            // reading the same lists they render.
             val results = uiState.results.filter { entry ->
                 entry.id.ifEmpty { entry.fingerprint } !in uiState.subscribedIds
             }

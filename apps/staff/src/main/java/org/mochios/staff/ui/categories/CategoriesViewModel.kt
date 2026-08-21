@@ -21,11 +21,8 @@ import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
 /**
- * Form model for [CategoryEditDialog]. Mirrors the web's `CategoryForm`
- * shape (`apps/staff/web/src/features/categories/categories-page.tsx`): all
- * fields are plain user input held as primitives so the dialog can read /
- * write each one independently. `position` is held as a string so the user
- * can clear the field — empty parses back to `null` (server default 0).
+ * `position` is a string so the field can be cleared; empty submits null
+ * (server default 0).
  */
 data class CategoryForm(
     val name: String = "",
@@ -60,12 +57,6 @@ sealed interface CategoriesEvent {
     data class Error(val error: MochiError) : CategoriesEvent
 }
 
-/**
- * ViewModel for the staff Categories screen. Holds the categories list, the
- * create/edit dialog state, and the delete-confirmation state. All
- * mutations route through [StaffRepository] which speaks the
- * `categories/create | update | delete` actions exposed by the Comptroller.
- */
 @HiltViewModel
 class CategoriesViewModel @Inject constructor(
     private val repo: StaffRepository,

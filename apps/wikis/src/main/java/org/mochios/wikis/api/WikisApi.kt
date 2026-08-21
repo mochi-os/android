@@ -60,27 +60,10 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Retrofit interface for the wikis app.
- *
- * Mirrors the entity-context URL shape exposed by `apps/wikis/app.json`
- * (`{wiki}/-/...`). Class-context routes (`-/info`, `-/create`,
- * `-/subscribe`, `-/directory/search`, `-/recommendations`,
- * `-/rss/token`) are class-level entry points that don't require a wiki
- * id — everything else is scoped to a specific wiki via the leading
- * `{wiki}` path segment (an entity ID or a fingerprint).
- *
- * URL composition: this interface is bound to a per-app Retrofit
- * (baseUrl `<server>/wikis/`) built in `di/AppModule.kt`, so paths
- * are relative to the wikis app's namespace. Auth attaches the
- * wikis-scoped JWT via a Bearer interceptor in that module.
- *
- * Path-segment encoding: wiki id and page slug both go through
- * `@Path(value=..., encoded=true)` so any pre-encoded characters in
- * the caller's value (e.g. a slug that already URL-encoded a colon)
- * are passed through verbatim rather than double-encoded.
- *
- * Every endpoint runs through the authenticated session — the wikis
- * app has no anonymous client paths.
+ * Retrofit interface for the wikis app, bound to a per-app Retrofit with
+ * baseUrl `<server>/wikis/`, so paths are relative: `-/...` is class-level,
+ * `{wiki}/-/...` is entity-scoped. Path segments use `encoded = true` so
+ * pre-encoded slugs are not double-encoded.
  */
 interface WikisApi {
 
@@ -439,9 +422,8 @@ interface WikisApi {
     // ---- RSS tokens ----
 
     /**
-     * RSS token. The endpoint is class-level; the `entity` field scopes the
-     * token — "*" covers the all-wikis feed, a wiki id/fingerprint scopes it to
-     * that wiki. There is no per-wiki token path; the server reads `entity`.
+     * RSS token. Class-level: the `entity` field scopes it - `*` for the
+     * all-wikis feed, else a wiki id or fingerprint.
      */
     @FormUrlEncoded
     @POST("-/rss/token")

@@ -223,11 +223,8 @@ interface AccountApi {
     @POST("settings/-/user/account/close")
     suspend fun closeAccount(@Field("token") token: String): Response<CloseResponse>
 
-    /** Build a complete, restorable backup bundle (user data plus the
-     *  passphrase-encrypted private keys). Gated on step-up re-authentication.
-     *  Returns the on-disk filename; the bundle bytes are fetched separately
-     *  via the public export/download action so multi-GB files are never
-     *  buffered in memory. */
+    /** Builds the restorable backup bundle; gated on step-up. Returns its filename - the
+     *  bytes come from the public export/download action. */
     @FormUrlEncoded
     @POST("settings/-/user/account/export")
     suspend fun exportData(

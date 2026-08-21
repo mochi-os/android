@@ -56,17 +56,6 @@ import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 
-/**
- * Settings tab body. Renders identity / subscription / home page / delete
- * sections matching web's `wiki-settings.tsx` SettingsTab. The wiki name,
- * fingerprint, and source come from [WikiSettingsViewModel] so the parent
- * screen and this tab agree on the displayed name. Per-wiki home / source
- * settings come from [SettingsTabViewModel].
- *
- * @param onWikiDeleted Invoked after a successful delete so the host screen
- *                      can navigate back to the wiki list. Snackbars are
- *                      delivered via the tab view model's flow.
- */
 @Composable
 fun SettingsTab(
     navController: NavController,

@@ -371,12 +371,8 @@ private fun ThemeCard(
 }
 
 /**
- * One dot of a theme's palette, built from the same anchors and the same OKLCH
- * conversion [ColorSchemeGenerator] uses, so the swatch is a preview of the
- * real thing rather than a lookalike.
- *
- * @param neutral shows the theme's background tint (`hue_bg` at low chroma)
- *   instead of its accent.
+ * Palette dot built with the same OKLCH conversion as [ColorSchemeGenerator];
+ * `neutral` shows the background tint (`hue_bg`) instead of the accent.
  */
 @Composable
 private fun ThemeSwatch(

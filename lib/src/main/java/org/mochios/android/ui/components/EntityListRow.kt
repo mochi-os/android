@@ -33,22 +33,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 /**
- * Canonical Mochi list row for entity collections (chat list, feed list,
- * forum list, project list, …). Uses Material3 [ListItem] for spacing /
- * typography defaults; the leading slot is a colour-seeded circle with the
- * app's representative [icon] centred inside, so every row shows a stable
- * identity colour without needing per-entity art.
- *
- * Slots:
- * - [name] — the headline. Renders semibold and truncates.
- * - [icon] — the per-app icon drawn inside the leading circle.
- * - [subtitle] — optional supporting line; pass null/empty to keep the row
- *   single-line.
- * - [trailing] — optional composable on the trailing edge (a badge, count,
- *   overflow menu, etc.). When null, the row is flush-right.
- *
- * Use [onClick] for tap (open the entity); [onLongClick] for long-press
- * affordances like "Add to home screen" / context menus.
+ * Canonical Mochi list row for entity collections (chats, feeds, forums,
+ * projects). The leading slot is a colour-seeded circle holding the app's
+ * [icon], so a row shows a stable identity colour without per-entity art.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -114,14 +101,8 @@ fun EntityListRow(
 }
 
 /**
- * Circle filled with a colour seeded from [seed], with [icon] drawn in white at
- * the centre. Same colour seeding as [EntityAvatar] so a single entity reads
- * consistently across surfaces (avatar vs list row vs top bar).
- *
- * @param seed stable identifier used to pick the deterministic circle colour.
- * @param icon glyph drawn centred inside the circle.
- * @param size circle diameter; the glyph scales to ~55% of it.
- * @param modifier applied to the circle.
+ * Circle filled with a colour seeded from [seed], with [icon] in white at the
+ * centre. Same seeding as [EntityAvatar], so one entity reads alike everywhere.
  */
 @Composable
 fun EntityIconCircle(

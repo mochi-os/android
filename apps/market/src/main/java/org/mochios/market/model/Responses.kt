@@ -8,14 +8,8 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Envelope types for endpoints that return a list + total alongside other
- * top-level fields, plus the assorted small wrappers each endpoint defines
- * inline on the web side.
- *
- * All shapes here mirror the inline anonymous types declared in
- * `apps/market/web/src/api/`. They cover the outer object below the
- * standard `{ data: ... }` wrapper that Retrofit / the request module
- * already unpacks.
+ * Response shapes mirroring the inline types in `apps/market/web/src/api/`,
+ * below the `{ data: ... }` envelope the request layer unwraps.
  */
 
 // ---- Generic helpers ----------------------------------------------------
@@ -24,9 +18,7 @@ import com.google.gson.annotations.SerializedName
 data class OkResponse(val ok: Boolean = true)
 
 /**
- * Standard `{ data: T }` envelope used by every market endpoint. Retrofit
- * usually unwraps this — exposed here for the cases where the caller wants
- * to inspect the envelope directly (rare).
+ * The `{ data: T }` envelope, for callers that unwrap by hand.
  */
 data class DataEnvelope<T>(val data: T? = null)
 
@@ -47,10 +39,9 @@ data class ListingsSearchResponse(
 typealias ListingsListResponse = ListingsMineResponse
 
 /**
- * Result of `listings/get`. Mirrors `ListingDetailResponse` in
- * `apps/market/web/src/api/listings.ts`. `my_order` / `my_reservation`
- * encode any active position the caller already holds (for hiding buy
- * controls / showing tracking link).
+ * `listings/get` result; mirrors `ListingDetailResponse` in web
+ * `api/listings.ts`. `my_order` / `my_reservation` are the caller's existing
+ * position.
  */
 data class ListingDetailResponse(
     val listing: Listing = Listing(),
@@ -86,9 +77,8 @@ data class ListingsMineResponse(
 )
 
 /**
- * Result of `listings/relist`. The original listing is duplicated as a new
- * draft; if the source was an auction, the auction settings are returned so
- * the UI can pre-populate the publish form.
+ * `listings/relist` result: the new draft plus the source auction's settings
+ * for pre-filling the publish form.
  */
 data class RelistResponse(
     val listing: Listing = Listing(),
@@ -109,9 +99,8 @@ data class RelistAuction(
 )
 
 /**
- * Result of `listings/removal_check`. Used by the SPA to tailor the removal
- * confirmation dialog (e.g. "this will end an active auction with 3
- * bidders"). Mirrors `RemovalCheck` in `api/listings.ts`.
+ * `listings/removal_check` result, for tailoring the removal confirmation;
+ * mirrors `RemovalCheck` in web `api/listings.ts`.
  */
 data class RemovalCheck(
     @SerializedName("has_active_auction") val hasActiveAuction: Boolean = false,
@@ -122,10 +111,8 @@ data class RemovalCheck(
 
 // ---- Saved --------------------------------------------------------------
 /**
- * Result of `saved/list`. Mirrors the inline shape in
- * `apps/market/web/src/api/saved.ts` (`{ saved: Listing[]; total: number }`).
- * The server stores a full Listing snapshot per saved row, so the list comes
- * back fully hydrated — no per-id refetch needed.
+ * `saved/list` result; rows are full Listing snapshots, so no per-id refetch is
+ * needed.
  */
 data class SavedListResponse(
     val saved: List<Listing> = emptyList(),
@@ -146,10 +133,8 @@ data class OrdersListResponse(
 )
 
 /**
- * Result of `orders/get`. Mirrors the inline anonymous shape in
- * `ordersApi.get` (`apps/market/web/src/api/orders.ts`). `can_review`
- * indicates whether the caller is allowed to leave a review on this order
- * right now (lifecycle + role + dedup).
+ * `orders/get` result; mirrors `ordersApi.get` in web `api/orders.ts`.
+ * `can_review` is the server's verdict on leaving a review now.
  */
 data class OrderDetailResponse(
     val order: Order = Order(),
@@ -189,9 +174,7 @@ typealias BidsListResponse = BidsMineResponse
 // ---- Photos -------------------------------------------------------------
 
 /**
- * Result of `photos/list`. Web returns a bare `Photo[]` (no envelope); the
- * Android API treats the array as the response so [MarketRepository.listPhotos]
- * returns `List<Photo>` directly.
+ * `photos/list` returns a bare array.
  */
 typealias PhotosListResponse = List<Photo>
 
@@ -254,9 +237,8 @@ data class ThreadListingPreview(
 // ---- Reviews ------------------------------------------------------------
 
 /**
- * Result of `reviews/account`, `reviews/inbox`, `reviews/sent`. All three
- * endpoints return the same shape; the `Review` rows carry different
- * denormalised fields depending on the caller's perspective.
+ * Result of `reviews/account`, `reviews/inbox` and `reviews/sent`; the rows'
+ * denormalised fields differ by perspective.
  */
 data class ReviewsListResponse(
     val reviews: List<Review> = emptyList(),
@@ -264,9 +246,7 @@ data class ReviewsListResponse(
 )
 
 /**
- * Result of `reviews/inbox`. Same shape as [ReviewsListResponse] but kept as a
- * separate alias for API clarity — the rows carry `listing_title` /
- * `reviewer_name` denormalised on inbox responses (see `Review` model).
+ * Result of `reviews/inbox`. Same shape as [ReviewsListResponse].
  */
 typealias InboxReviewListResponse = ReviewsListResponse
 
@@ -292,11 +272,8 @@ data class StripeOnboardingResponse(val url: String = "")
 // ---- Assets -------------------------------------------------------------
 
 /**
- * Result of `assets/download` when the asset is hosted externally. The
- * server returns the metadata payload (including the external reference
- * URL) instead of streaming bytes. Mochi-hosted downloads stream raw bytes
- * and never produce a JSON body — callers branch on the response
- * content-type.
+ * `assets/download` body when the asset is hosted externally; Mochi-hosted
+ * downloads stream bytes with no JSON body.
  */
 data class AssetDownloadMetadata(
     val hosting: String = "",
@@ -317,11 +294,8 @@ data class AssetDownloadEnvelope(
 )
 
 /**
- * What a purchased asset download turned out to be.
- *
- * The seller chooses where the file lives, so the endpoint answers either a
- * reference to somewhere else or the bytes themselves, and the caller can only
- * tell from the response.
+ * Result of an asset download: an external reference or the bytes, decided by
+ * the response.
  */
 sealed interface AssetDownload {
 

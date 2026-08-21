@@ -25,30 +25,13 @@ import java.io.File
 import java.util.UUID
 import javax.inject.Inject
 
-/**
- * Slot identifier — mirrors the web `slot: 'avatar' | 'banner' | 'favicon'`
- * argument. Used by the screen to drive the [ImagePickerDialog] resize/cap
- * heuristics and pick the matching upload mutator.
- */
 enum class ImageSlot { AVATAR, BANNER, FAVICON }
 
-/**
- * Which text field is currently being saved. Lets each section's Save control
- * show its own in-flight spinner instead of every button reacting to a single
- * shared flag.
- */
 enum class ProfileField { NAME, BIO, ACCENT, PRIVACY }
 
 /**
- * Reactive state for the Profile editor. Each `*Draft` field holds the
- * unsaved-but-being-edited value; `info` holds the last value we successfully
- * round-tripped through the server. The screen renders drafts everywhere
- * except the preview card's fingerprint / identity, which always shows the
- * canonical server value.
- *
- * `savingSlot` tracks per-slot image uploads and `savingField` tracks per-field
- * text saves, so the relevant control can show an in-flight indicator without
- * disabling the whole form.
+ * `*Draft` fields hold unsaved edits; [info] is the last server-confirmed
+ * profile.
  */
 data class ProfileUiState(
     val isLoading: Boolean = true,

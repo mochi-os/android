@@ -64,19 +64,8 @@ import org.mochios.staff.R
 import org.mochios.android.R as MochiR
 
 /**
- * Add-team-member screen. Mirrors the web's `Add team member` dialog in
- * `apps/staff/web/src/features/team/team-page.tsx`:
- *
- *  - Debounced search field (300 ms; two characters or more triggers
- *    `searchDirectory(q)` via the ViewModel).
- *  - Results list — each tap highlights the row as the selected person and
- *    lights up a check icon.
- *  - Role dropdown (Admin / Moderator / Support).
- *  - Add is disabled until both a person and a role have been chosen.
- *
- * @param onBack leaves the screen without adding anyone.
- * @param onAdded leaves the screen after a member joined, so the caller can
- *   reload the team it will land on.
+ * Add-team-member screen: debounced directory search, then a role choice.
+ * Search fires at two characters or more.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

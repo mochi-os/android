@@ -232,11 +232,6 @@ fun SourcesTab(
     }
 }
 
-/**
- * Permission-request dialog shown when adding a source returns
- * `permission_required`: the requesting app, the resolved permission name, and
- * Deny/Allow actions. Mirrors the web shell's permission prompt.
- */
 @Composable
 private fun PermissionRequestDialog(
     appId: String,

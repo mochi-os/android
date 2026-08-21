@@ -47,9 +47,8 @@ class UserSettingsViewModel @Inject constructor(
     }
 
     /**
-     * Ask the server which catalogues it has rather than shipping a list. The
-     * hardcoded one this replaces had drifted 54 locales behind, and any
-     * replacement list would drift again on the next locale added.
+     * Installed catalogues come from the server; a shipped list drifts as
+     * locales are added.
      */
     private fun loadLanguages() {
         viewModelScope.launch {

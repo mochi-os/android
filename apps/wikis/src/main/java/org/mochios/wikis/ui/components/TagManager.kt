@@ -63,23 +63,9 @@ import javax.inject.Inject
 import org.mochios.android.R as MochiR
 
 /**
- * Inline tag manager rendered in the wiki page footer. Mirrors web's
- * `apps/wikis/web/src/features/wiki/tag-manager.tsx`: a [FlowRow] of
- * tappable tag chips followed by a "+" chip when the user can edit. Tags
- * are tappable to navigate to the per-tag pages list; long-press on a chip
- * opens a removal confirmation dialog (edit mode only).
- *
- * The composable is wholly self-contained: it injects its own
- * [TagManagerViewModel] via [hiltViewModel] so it can call
- * `repo.addTag` / `repo.removeTag` without forcing the page screen to
- * thread the wiki repository through the state object. The page screen
- * keeps owning the list of tags and updates it via [onTagsChanged] so
- * downstream consumers (the page footer, accessibility readers, etc.)
- * stay in sync.
- *
- * Note: this composable expects the caller to host a [SnackbarHostState];
- * mutation success / failure messages are emitted through the snackbar
- * channel so they appear inline with the rest of the page-screen feedback.
+ * Tag chips and an add chip for the page footer. Injects its own
+ * [TagManagerViewModel] so the page screen need not thread the repository
+ * through; feedback goes to the caller's snackbar.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -136,11 +122,6 @@ fun TagManager(
                 },
                 trailingIcon = if (canEdit) {
                     {
-                        // Render a discrete close affordance so the user has
-                        // a visible "remove" target without needing to know
-                        // about long-press. Tapping the X opens the
-                        // confirmation dialog (the chip body still routes to
-                        // the per-tag pages list).
                         androidx.compose.material3.IconButton(
                             onClick = { pendingRemoval = tag },
                             modifier = Modifier.size(20.dp),
@@ -205,14 +186,8 @@ fun TagManager(
 }
 
 /**
- * Add-tag dialog rendered as a [AlertDialog]. Mirrors the popover from web's
- * `tag-manager.tsx` — single text field, Cancel + Add buttons. Validates
- * trim, lowercase, non-empty, and not already in [existingTags]; surfaces
- * the failure inline below the field.
- *
- * The host composable controls visibility via [open] / [onDismiss]; this
- * separation keeps the dialog's inner state (`newTag`, `inlineError`)
- * scoped to a single open/close cycle.
+ * Add-tag dialog. Tags are trimmed and lowercased; blanks and duplicates are
+ * refused inline.
  */
 @Composable
 fun AddTagDialog(
@@ -294,36 +269,15 @@ fun AddTagDialog(
     )
 }
 
-/**
- * One-shot snackbar message dispatched by [TagManagerViewModel]. Carries a
- * string-resource id (and optional positional args) so the composable can
- * resolve the localised text at render time via [stringResource].
- */
 data class TagManagerSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
 )
 
-/**
- * UI state for [TagManager]. Mostly empty — the source-of-truth tag list
- * is held by the page screen and passed in. The ViewModel only emits
- * [lastUpdated] when a mutation lands so the composable can propagate the
- * new list upward via `onTagsChanged`.
- */
 data class TagManagerUiState(
     val lastUpdated: List<String>? = null,
 )
 
-/**
- * ViewModel for the inline [TagManager] composable. Owns
- * [WikisRepository] mutations and pushes success / failure messages
- * through the [snackbar] channel; the host composable bridges these into
- * its [SnackbarHostState].
- *
- * Note: there is no [SavedStateHandle] dependency on `wikiId` / `slug`
- * because the composable lives inside the page footer and the page screen
- * already owns both values — they're passed in on each call instead.
- */
 @HiltViewModel
 class TagManagerViewModel @Inject constructor(
     @Suppress("UNUSED_PARAMETER") savedStateHandle: SavedStateHandle,

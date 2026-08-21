@@ -185,9 +185,8 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     /**
-     * The canonical entity id for endpoints that reject a fingerprint. The app
-     * navigates by fingerprint, so [feedId] is usually one; prefer the id the
-     * loaded feed carries and fall back only while it has not arrived yet.
+     * Canonical entity id for endpoints that reject a fingerprint; [feedId] is
+     * usually one.
      */
     private fun entityId(): String {
         val info = _feedInfo.value ?: return feedId
@@ -610,9 +609,8 @@ data class SuggestedCredibility(
 )
 
 /**
- * A pending `permission_required` prompt raised while adding a source: the
- * requesting [app] entity id, the [permission] key and its resolved [name],
- * and the [retryUrl]/[retryType] so the add can be retried once granted.
+ * A `permission_required` prompt raised while adding a source;
+ * [retryUrl]/[retryType] replay the add once granted.
  */
 data class PendingPermission(
     val app: String,

@@ -21,26 +21,10 @@ import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 
 /**
- * Server-driven transport selection. After auth, the client asks the user's
- * Mochi server which push transport it prefers via
- * `/notifications/-/push/setup`:
- *
- *   - `{transport: "fcm", firebase_config: {...}}` — server admin pasted
- *     Firebase config into system settings. [FcmRegistrar.connect]
- *     initialises Firebase Messaging against that project, fetches the
- *     device token, and POSTs it back via `/notifications/-/push/register/fcm`.
- *     `PushService` (the UnifiedPush FG-distributor + its "listening for
- *     notifications" status notification) is NOT started.
- *
- *   - `{transport: "unifiedpush"}` — server has no Firebase config. Fall
- *     back to the existing UnifiedPush flow: [PushService] runs as a FG
- *     service and [MochiPushClient.register] picks a distributor.
- *
- * The result is cached in SharedPreferences alongside the server it was
- * decided for, so later launches (and the boot receiver / watchdog) can honour
- * the choice without re-fetching every time. [current] compares that recorded
- * server before answering, because a transport chosen for one server says
- * nothing about another.
+ * Server-driven transport selection: `/notifications/-/push/setup` answers
+ * `{transport: "fcm", firebase_config: {...}}` or `{transport: "unifiedpush"}`.
+ * The choice is cached with the server it was made for, since it says nothing
+ * about another.
  */
 object PushTransport {
 
@@ -52,14 +36,9 @@ object PushTransport {
     const val TRANSPORT_FCM = "fcm"
     const val TRANSPORT_UNIFIEDPUSH = "unifiedpush"
 
-    /**
-     * Serialises configure() so MainActivity's LaunchedEffect(isAuthenticated)
-     * and onResume() (which both call configure() on cold start) can't race on
-     * FirebaseApp.initializeApp(). The race left one caller falling back to
-     * UnifiedPush and starting PushService — i.e. the "listening for
-     * notifications" status-bar entry appearing despite the server returning
-     * transport=fcm.
-     */
+    // Serialises configure(): MainActivity calls it from both LaunchedEffect
+    // and onResume on cold start, and concurrent callers race on
+    // FirebaseApp.initializeApp().
     private val configureMutex = kotlinx.coroutines.sync.Mutex()
 
     /**
@@ -107,15 +86,9 @@ object PushTransport {
         if (BuildConfig.DEBUG) Log.d(TAG, "configure() setup response: $setup")
 
         if (setup == null) {
-            // Offline / server unreachable / 401. We *don't* know whether
-            // FCM is configured, so falling back to UnifiedPush would be
-            // wrong — that's how a phone with bad reception ended up with
-            // the "listening for notifications" FG service running
-            // overnight despite FCM being the configured transport.
-            // Honour the last known transport instead: if cached FCM,
-            // leave PushService stopped; if cached UnifiedPush, start it.
-            // First launch with no cache: stay quiet (no UP service)
-            // until the next configure() succeeds.
+            // Transport unknown (offline / 401): falling back to UnifiedPush
+            // would start the FG distributor on an FCM server, so honour the
+            // cached transport, and stay quiet when there is none.
             when (current(context)) {
                 TRANSPORT_FCM -> {
                     runCatching { PushService.stop(context) }
@@ -147,9 +120,8 @@ object PushTransport {
                 )
             ) {
                 recordTransport(context, server, TRANSPORT_FCM)
-                // Stop the UnifiedPush FG distributor if it's running from
-                // a prior session — no "listening for notifications"
-                // notification while on FCM.
+                // No UnifiedPush distributor, and no status notification, while
+                // on FCM.
                 runCatching { PushService.stop(context) }
                 return
             }
@@ -164,22 +136,9 @@ object PushTransport {
     }
 
     /**
-     * Tear down all push on sign-out. Stops the UnifiedPush foreground
-     * distributor ([PushService]) and, via [FcmRegistrar.disconnect], deletes
-     * the FCM token from Firebase — so Google stops delivering to this device —
-     * and tears down the default `FirebaseApp` so a later [configure] against a
-     * different account/server starts clean.
-     *
-     * Serialised through [configureMutex] so a logout can't race an in-flight
-     * [configure] and leave the service running or the token re-registered.
-     * Both steps are wrapped in `runCatching` — a partial teardown must never
-     * wedge the sign-out flow.
-     *
-     * Callers must clear the session (so [SessionManager.isAuthenticated] is
-     * false) *before* invoking this: [FcmRegistrar.disconnect]'s deleteToken()
-     * makes Firebase mint a fresh token and fire
-     * [MochiFirebaseMessagingService.onNewToken], which skips re-registering
-     * only while there is no active session.
+     * Tear down all push on sign-out: stops [PushService] and deletes the FCM
+     * token. Clear the session first - deleteToken() fires onNewToken, which
+     * only skips re-registering while no session is active.
      */
     suspend fun tearDown(context: Context) = withContext(Dispatchers.IO) {
         configureMutex.withLock {
@@ -194,12 +153,9 @@ object PushTransport {
     private suspend fun startUnifiedPush(context: Context, sessionManager: SessionManager) {
         runCatching { FcmRegistrar.disconnect(context) }
         PushService.start(context)
-        // MochiPushClient.register requires a stable per-account instance.
-        // boundIdentity is set by publishAccount during bootstrap; if it
-        // isn't there yet (pre-supersession sessions etc.), skip the
-        // distributor register — PushService is already running so the
-        // user keeps any existing UP subscription, and the next bootstrap
-        // / fresh login will pick this back up via the regular path.
+        // MochiPushClient.register needs a stable instance; with no bound
+        // identity yet, skip it - PushService is running and the next bootstrap
+        // registers.
         val identity = sessionManager.getBoundIdentity().orEmpty()
         if (identity.isNotBlank()) {
             MochiPushClient.register(context, identity)
@@ -209,13 +165,9 @@ object PushTransport {
     }
 
     /**
-     * Last-known transport, or null when none was recorded for [server].
-     *
-     * [server] null means "whatever was recorded", which is the old behaviour
-     * and is right only for a caller that has no server in hand. Passing the
-     * current one matters after a server switch: the recorded transport belongs
-     * to the previous server, and honouring it can leave the client running the
-     * wrong push path until the next successful configure().
+     * Last-known transport, or null when none was recorded for [server]. A null
+     * [server] means "whatever was recorded"; pass the current one after a
+     * server switch or the previous server's choice is honoured.
      */
     fun current(context: Context, server: String? = null): String? {
         val prefs = context.applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)

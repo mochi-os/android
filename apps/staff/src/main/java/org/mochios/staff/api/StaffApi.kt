@@ -35,56 +35,18 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 /**
- * Retrofit interface for the staff app.
- *
- * The staff app is a stateless proxy in front of the Comptroller
- * marketplace backend — `apps/staff/staff.star` opens a P2P stream to
- * the Comptroller for every action and forwards the form / query inputs
- * verbatim. This interface mirrors the action paths declared in
- * `apps/staff/app.json`'s `actions` block (the `-/...` entries) so the
- * Android client speaks the same wire format as the staff SPA.
- *
- * URL composition: this interface is bound to a per-app Retrofit
- * (baseUrl `<server>/staff/`) built in `di/AppModule.kt`, so every path
- * in this file is relative to the staff namespace. Auth attaches the
- * staff-scoped JWT via a Bearer interceptor in that module — every
- * endpoint here requires an authenticated session that resolves to a
- * staff role server-side (admin / moderator / support); the Comptroller
- * itself enforces the per-role gates and returns 403 on shortfall.
- *
- * Encoding conventions:
- *   - GET endpoints are used for pure read paths (`me`, list / log /
- *     overview / thresholds-get / config-get). Filters land on the
- *     query string via `@Query`.
- *   - POST endpoints are used for mutations and command-style actions
- *     (suspend, ban, approve, reject, decide, ...). Inputs go on the
- *     wire as `application/x-www-form-urlencoded` (`@FormUrlEncoded` +
- *     `@Field`); the Starlark proxy reads them via `a.input(...)` which
- *     accepts both form-encoded and JSON bodies indistinguishably.
- *
- * Omissions: the static-asset routes declared in app.json are resolved
- * by Android via plain URL strings (built from the per-app Retrofit
- * baseUrl) rather than via Retrofit calls, so they are not modelled
- * here:
- *   - `""` (SPA mount point)
- *   - `"assets"` (built SPA bundle)
- *   - `"images"` (icon set)
- *   - `"-/user/:user/asset/:asset"` (person-entity asset proxy —
- *     avatar / banner / favicon / style / information, fetched directly
- *     as URLs by Coil/Glide)
- *
- * The P2P event `message_notify` in staff.star is a notification stream
- * coming the other way (Comptroller -> staff), not an HTTP action, so
- * it is also not part of this interface.
+ * Retrofit interface for the staff app, which proxies every action verbatim to
+ * the Comptroller. Paths mirror the `-/...` actions in `apps/staff/app.json`,
+ * relative to the per-app `<server>/staff/` base URL; mutations are
+ * form-encoded POSTs. Static asset routes are fetched as plain URLs, not
+ * modelled here.
  */
 interface StaffApi {
 
     // ---- Me ----
 
     /**
-     * Caller's own staff record (id + role). Used by the layout to
-     * decide which admin-only items to surface. Returns role="" for
-     * non-staff identities.
+     * Caller's staff record; `role` is "" for a non-staff identity.
      */
     @GET("-/me")
     suspend fun getMe(): Response<ApiResponse<Me>>
@@ -121,10 +83,8 @@ interface StaffApi {
     // ---- Directory ----
 
     /**
-     * Search the local directory for people. Used by the team add
-     * picker. Sandboxed apps can't call `/people/-/users/search`
-     * directly (their JWT is scoped to staff), so staff exposes a
-     * same-app proxy that delegates to `mochi.directory.*`.
+     * Search the directory for people (proxied by `action_directory_search` in
+     * staff.star).
      */
     @GET("-/directory/search")
     suspend fun searchDirectory(
@@ -134,10 +94,8 @@ interface StaffApi {
     // ---- Accounts ----
 
     /**
-     * List marketplace accounts with optional filters: `status`
-     * (`active`/`suspended`/`banned`), `seller` (only Stripe-onboarded
-     * sellers), `query` (substring match on biography / location /
-     * resolved name).
+     * `status` is `active`/`suspended`/`banned`; `seller` limits to onboarded
+     * sellers; `query` substring-matches biography, location and name.
      */
     @GET("-/accounts/list")
     suspend fun listAccounts(
@@ -192,9 +150,8 @@ interface StaffApi {
     suspend fun listCategories(): Response<ApiResponse<List<Category>>>
 
     /**
-     * Create a category. `digital` and `physical` are wire-level 0/1
-     * ints — pass `1` for true, `0` for false. `parent` is the uid
-     * of the parent category (omit for a top-level category).
+     * `digital` and `physical` are 0/1 on the wire; omit `parent` for a
+     * top-level category.
      */
     @FormUrlEncoded
     @POST("-/categories/create")
@@ -209,9 +166,8 @@ interface StaffApi {
     ): Response<ApiResponse<Category>>
 
     /**
-     * Update a category. `digital`, `physical`, `active` are wire-level
-     * 0/1 ints. All non-id fields are optional — only the provided
-     * fields are touched server-side.
+     * `digital`, `physical`, `active` are 0/1 on the wire; only the fields sent
+     * are changed.
      */
     @FormUrlEncoded
     @POST("-/categories/update")
@@ -237,10 +193,9 @@ interface StaffApi {
     // ---- Listings moderation ----
 
     /**
-     * Listings awaiting moderator action. Filters: `status`
-     * (`draft`/`pending`/`active`/`...`), `moderation`
-     * (`pending`/`auto_approved`/`held`/`approved`/`rejected`/`appealed`),
-     * `query` (substring on title).
+     * Listings awaiting moderation; `status` and `moderation` take the wire
+     * strings in [ListingStatus] and [ModerationState], `query`
+     * substring-matches the title.
      */
     @GET("-/listings/pending")
     suspend fun listPendingListings(
@@ -287,19 +242,9 @@ interface StaffApi {
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<ModerationLogResponse>>
 
-    /**
-     * Get current moderation score thresholds — listings scoring below
-     * `low` are auto-approved, listings scoring above `high` are held
-     * for review.
-     */
     @GET("-/moderation/thresholds")
     suspend fun getModerationThresholds(): Response<ApiResponse<Thresholds>>
 
-    /**
-     * Set moderation score thresholds. Wire field names are `low` and
-     * `high` (the Comptroller scoring is monotone: low score = safe,
-     * high score = risky).
-     */
     @FormUrlEncoded
     @POST("-/moderation/set_thresholds")
     suspend fun setModerationThresholds(
@@ -319,9 +264,8 @@ interface StaffApi {
     ): Response<ApiResponse<ReportsListResponse>>
 
     /**
-     * Take action on a report (`dismiss` / `warn` / `remove` /
-     * `suspend` / `ban`; staff.star forwards the action verbatim and
-     * the Comptroller validates it).
+     * `action` is one of [ReportAction]'s wire values; the Comptroller
+     * validates it.
      */
     @FormUrlEncoded
     @POST("-/reports/action")
@@ -341,12 +285,6 @@ interface StaffApi {
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<DisputesListResponse>>
 
-    /**
-     * Review a dispute. `resolution` is the resolution code; `notes`
-     * carries the staff-visible writeup; `refund_amount` is the
-     * (optional) partial-refund amount in minor currency units — the
-     * Comptroller forwards it as `amount` to its dispute engine.
-     */
     @FormUrlEncoded
     @POST("-/disputes/review")
     suspend fun reviewDispute(
@@ -367,10 +305,8 @@ interface StaffApi {
     suspend fun getMetricsOverview(): Response<ApiResponse<MetricsOverview>>
 
     /**
-     * Marketplace activity log feed. `tab` selects the activity view
-     * (`listings` / `orders` / `disputes` / `reports`); pagination is
-     * `page` / `limit` — staff.star forwards `["tab", "page", "limit"]`, so
-     * the offset field must be `page` (the handler ignores anything else).
+     * The offset must be sent as `page` - staff.star forwards only `tab`,
+     * `page`, `limit`.
      */
     @GET("-/metrics/activity")
     suspend fun getMetricsActivity(
@@ -382,10 +318,8 @@ interface StaffApi {
     // ---- Audit ----
 
     /**
-     * Filterable audit feed across apps. `app` / `kind` / `action`
-     * scope the row class; `actor` filters by acting entity; `since` /
-     * `until` are unix seconds; `dedupe` collapses identical
-     * consecutive rows when set to `1`.
+     * `since`/`until` are unix seconds; `dedupe=1` collapses identical
+     * consecutive rows.
      */
     @GET("-/audit/list")
     suspend fun listAudit(
@@ -400,10 +334,6 @@ interface StaffApi {
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<AuditListResponse>>
 
-    /**
-     * Per-object audit timeline. Used for the per-listing /
-     * per-order / per-dispute history drawers.
-     */
     @GET("-/audit/object")
     suspend fun getObjectAudit(
         @Query("kind") kind: String,
@@ -432,11 +362,8 @@ interface StaffApi {
     suspend fun listAppeals(): Response<ApiResponse<AppealsListResponse>>
 
     /**
-     * Decide on a listing appeal. `decision` is `approve` /
-     * `reject` / `escalate` (the Comptroller validates). The field is sent as
-     * `id` (the listing uid the appeal is filed against) — staff.star
-     * forwards `["id", "decision", "notes"]` verbatim, so it must be `id`, not
-     * `listing_id` (which the handler would silently drop).
+     * `decision` is `upheld` or `denied`. The listing uid is sent as `id` -
+     * staff.star forwards only `id`, `decision`, `notes`.
      */
     @FormUrlEncoded
     @POST("-/appeals/decide")

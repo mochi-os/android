@@ -48,11 +48,6 @@ import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Seller's order list at [MarketApp.SALES]. Each row shows the listing
- * title, buyer name, total, [StatusBadge] and a relative timestamp.
- * Tapping a row opens [MarketApp.saleDetail].
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MySalesScreen(

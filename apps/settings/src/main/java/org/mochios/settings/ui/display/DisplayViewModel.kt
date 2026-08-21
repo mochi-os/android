@@ -98,13 +98,9 @@ class DisplayViewModel @Inject constructor(
     }
 
     /**
-     * Writes the active theme's anchors to the session store, which is what
-     * `MochiTheme` builds its colour scheme from.
-     *
-     * Saving the `theme` preference only tells the server; the running app
-     * reads its colours from the cached anchors, so without this a picked theme
-     * moved the tick in the picker and changed nothing on screen until the next
-     * cold start re-ran `ThemeRepository.fetchAndCacheTheme()`.
+     * Writes the active theme's anchors to the session store, which
+     * `MochiTheme` reads; saving the `theme` preference alone only tells the
+     * server.
      */
     private suspend fun cacheActiveThemeAnchors() {
         val state = _uiState.value

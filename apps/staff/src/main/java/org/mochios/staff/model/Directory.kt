@@ -6,11 +6,8 @@
 package org.mochios.staff.model
 
 /**
- * One result row from the staff directory search proxy
- * (`directory/search`). Sandboxed apps can't call
- * `/people/-/users/search` directly (their JWT is scoped to staff), so the
- * staff app re-exposes `mochi.directory.*` via a same-app action — see
- * `action_directory_search` in `apps/staff/staff.star`.
+ * Row from the staff app's `directory/search` proxy (`action_directory_search`
+ * in `apps/staff/staff.star`).
  */
 data class DirectorySearchResult(
     val id: String = "",

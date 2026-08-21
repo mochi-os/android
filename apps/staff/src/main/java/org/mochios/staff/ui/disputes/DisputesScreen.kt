@@ -62,12 +62,8 @@ import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.DisputeReviewDialog
 
 /**
- * Staff "Disputes" screen.
- *
- * Android port of `apps/staff/web/src/features/disputes/disputes-page.tsx`.
- * One filter dropdown (status). Each row's "Review" / "View" button opens
- * [DisputeReviewDialog]. Stripe chargebacks (opener == "stripe") render
- * the dialog in read-only "View" mode regardless of status.
+ * Staff disputes list. Stripe chargebacks (`opener == "stripe"`) always open
+ * the dialog read-only.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -363,11 +359,6 @@ private fun disputeStatusOptions(): List<Pair<String, String>> = listOf(
     "escalated" to stringResource(R.string.staff_disputes_status_escalated),
 )
 
-/**
- * Removable chip for the active status filter. Renders nothing when the
- * filter is at the default `null` (All) value. Mirrors `ActiveFilterChips`
- * in [org.mochios.staff.ui.accounts.AccountsScreen].
- */
 @Composable
 private fun ActiveFilterChips(
     status: String?,

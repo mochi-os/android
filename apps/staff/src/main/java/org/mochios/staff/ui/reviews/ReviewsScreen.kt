@@ -69,23 +69,6 @@ import org.mochios.staff.ui.components.FilterChipSpec
 import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.StaffStatusBadge
 
-/**
- * Staff review moderation screen. Mirrors web's
- * `apps/staff/web/src/features/reviews/reviews-page.tsx`:
- *
- *  - Drawer-driven nav via the parent [StaffLayout]'s [StaffSidebar].
- *  - Status filter row (All / Published / Removed).
- *  - Table-style list of reviews with reviewer / subject / listing / rating /
- *    body / status / created columns.
- *  - Per-row overflow menu offering `Restore` (when removed) and `Remove`
- *    (when not already removed).
- *  - Remove flows through a [ConfirmDialog] with the
- *    `reviewer → subject on listing` summary; the action is destructive and
- *    cannot be undone.
- *
- * The screen owns the drawer state and a snackbar host; everything else lives
- * on [ReviewsViewModel].
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReviewsScreen(
@@ -256,12 +239,6 @@ private fun FilterBar(
     }
 }
 
-/**
- * Removable chip for the active status filter. Renders nothing when the
- * filter is [ReviewStatusFilter.ALL]. Mirrors `ActiveFilterChips` in
- * [org.mochios.staff.ui.accounts.AccountsScreen] — clicking the chip
- * resets the filter to ALL.
- */
 @Composable
 private fun ActiveFilterChips(
     filter: ReviewStatusFilter,
@@ -445,16 +422,8 @@ private fun roleLabel(role: String): String = when (role.lowercase()) {
 }
 
 /**
- * Small inline chip that surfaces whether the review was authored by the
- * Buyer or the Seller. Mirrors web's `reviews-page.tsx` where the role sits
- * next to the reviewer name as muted text — Android tightens this to a
- * pill so the buyer-vs-seller distinction is glanceable in a scrolling list
- * where the surrounding metadata is dense.
- *
- * `buyer` / `seller` aren't statuses [StaffStatusBadge] knows about (its
- * vocabulary is moderation states + account/role labels for the team
- * page), so this chip rolls its own subdued tone instead of stretching the
- * shared component.
+ * Buyer / seller chip. [StaffStatusBadge] has no vocabulary for these, so this
+ * rolls its own tone.
  */
 @Composable
 private fun ReviewerRoleChip(role: String) {

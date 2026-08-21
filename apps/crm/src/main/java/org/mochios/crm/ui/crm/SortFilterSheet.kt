@@ -41,17 +41,8 @@ import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.FieldOption
 
 /**
- * Bottom sheet holding every sort and filter axis for the object list. Mirrors
- * the projects module's `SortFilterSheet`: changes apply live as the user
- * toggles them, so the sheet has no Apply button — only Clear all and a dismiss.
- *
- * @param fieldSortOptions Sortable CRM fields, paired with their labels.
- * @param builtInSortOptions Sort keys every CRM has, paired with their labels.
- * @param activeSort Sort key the user (or the view) chose, or null when the list
- *   is on its implicit fallback and no chip should read as selected.
- * @param activeDirection "asc" or "desc".
- * @param filterFields Filterable fields paired with their selectable options.
- * @param activeFieldFilters Selected option ids per field id.
+ * Sort and filter sheet for the object list. Changes apply live, so there is no
+ * Apply button. [activeSort] null means no chip reads as selected.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable

@@ -34,23 +34,8 @@ import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiPermissions
 
 /**
- * Overflow menu rendered next to the wiki page's title.
- *
- * Mirrors the web overflow in
- * `apps/wikis/web/src/features/wiki/wiki-page-content.tsx` lines 228-338 with
- * two labelled sections — **Page** (gated by [permissions.edit] / [delete])
- * and **Wiki** (always visible, with extra rows gated by [permissions.edit] /
- * [manage] and the unsubscribe gate). The order of rows inside each section
- * matches web exactly so users moving between platforms see the same menu.
- *
- * Web uses a nested `DropdownMenuSub` for the RSS feed sub-menu; Material3
- * doesn't have a nested-DropdownMenu primitive, so this flattens the three
- * RSS choices as three labelled rows ("RSS: Changes", "RSS: Comments",
- * "RSS: Changes and comments"). The icon is repeated on each so the user
- * still gets the visual cue.
- *
- * Each callback fires after the row is tapped; the caller is responsible for
- * collapsing the menu (set `expanded = false`) in its handler.
+ * Material3 has no nested-DropdownMenu, so web's RSS sub-menu is flattened into
+ * three rows. Callbacks fire on tap; the caller collapses the menu itself.
  */
 @Suppress("UNUSED_PARAMETER")
 @Composable

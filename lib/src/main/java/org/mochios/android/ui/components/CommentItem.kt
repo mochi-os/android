@@ -45,26 +45,10 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.model.Attachment
 
 /**
- * A single comment row: header (avatar · name · time · edited), body,
- * attachments, and a trailing [actions] row. Nested replies ([depth] > 0) are
- * indented and marked with a coloured vertical thread bar whose colour cycles by
- * depth.
- *
- * The actions row is a slot because each feature reacts differently — feeds
- * renders an emoji `ReactionBar`, forums renders up/down votes — while the
- * header, body, and threading are identical everywhere.
- *
- * An anchored comment - one about a particular image of the post - carries a
- * chip after the time: the image's thumbnail, with its caption as text when it
- * has one (a bare file name is not shown; readers care what an image is,
- * rarely what it was called). Tapping the chip runs [onOpenAnchor], which the
- * host uses to open the lightbox on that image with the comments showing.
- *
- * @param seed              Stable value the avatar's fallback initials colour from.
- * @param horizontalPadding Leading/trailing inset; pass 0 when the host already
- *                          provides horizontal padding.
- * @param anchorThumbnailUrl The anchored image's thumbnail; null when unanchored.
- * @param anchorCaption      Its caption, shown as the chip's text when non-empty.
+ * A single comment row: header, body, attachments, and a trailing [actions]
+ * slot each feature fills differently. Nested replies ([depth] > 0) indent
+ * behind a depth-coloured thread bar; an anchored comment shows its image as a
+ * chip.
  */
 @Composable
 fun CommentItem(

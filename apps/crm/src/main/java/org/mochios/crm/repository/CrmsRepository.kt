@@ -100,10 +100,8 @@ class CrmsRepository @Inject constructor(
         api.probe(url).unwrap().crm
 
     /**
-     * Subscribes to [crm], optionally hinting its home [server].
-     *
-     * @return the id to route to: the fingerprint the server reports, falling
-     *   back to its full id, then to [crm] when it names neither.
+     * Subscribes to [crm]; returns the id to route to, preferring the
+     * fingerprint the server reports.
      */
     suspend fun subscribe(crm: String, server: String? = null): String {
         val response = api.subscribe(SubscribeRequest(crm = crm, server = server)).unwrap()
@@ -306,21 +304,15 @@ class CrmsRepository @Inject constructor(
     }
 
     /**
-     * Pulls the CRM's attachments into the export staging area.
-     *
-     * @return how much is still outstanding; call again while it is above zero.
+     * Stages the CRM's attachments for export; call again while the returned
+     * `remaining` is above zero.
      */
     suspend fun warmExport(crmId: String): WarmExportResponse =
         api.warmExport(crmId).unwrap()
 
     /**
-     * Downloads the CRM's backup — objects, links and attachments, zipped by
-     * the server — straight into [destination].
-     *
-     * Streamed rather than returned, so a big export never has to fit in
-     * memory on its way to the file.
-     *
-     * @return true when the whole zip reached the file.
+     * Streams the server-built backup zip into [destination]; true when the
+     * whole zip was written.
      */
     suspend fun downloadExport(crmId: String, destination: Uri): Boolean {
         val body = api.exportData(crmId).unwrapRaw()

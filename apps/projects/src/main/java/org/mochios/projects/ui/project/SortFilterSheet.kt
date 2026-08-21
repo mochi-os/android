@@ -41,17 +41,9 @@ import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
 
 /**
- * Bottom sheet holding every sort and filter axis for the object list. Follows
- * the market module's `FilterSheet`: changes apply live as the user toggles
- * them, so the sheet has no Apply button — only Clear all and a dismiss.
- *
- * @param fieldSortOptions Sortable project fields, paired with their labels.
- * @param builtInSortOptions Sort keys every project has, paired with their labels.
- * @param activeSort Sort key the user (or the view) chose, or null when the list
- *   is on its implicit fallback and no chip should read as selected.
- * @param activeDirection "asc" or "desc".
- * @param filterFields Filterable fields paired with their selectable options.
- * @param activeFieldFilters Selected option ids per field id.
+ * Sort and filter sheet; changes apply live, so there is no Apply button.
+ * [activeSort] is null when the list is on its implicit fallback and no chip
+ * should read as selected.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -129,9 +121,6 @@ fun SortFilterSheet(
                     )
                 }
             }
-            // The project's own sortable fields keep their own row, above the
-            // sort keys every project has — the split the old dropdown drew as
-            // a divider.
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (fieldSortOptions.isNotEmpty()) {
                     FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

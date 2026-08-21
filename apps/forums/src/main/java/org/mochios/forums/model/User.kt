@@ -6,9 +6,8 @@
 package org.mochios.forums.model
 
 /**
- * A person returned by the forums backend's `users/search` proxy (which calls
- * people.users/search). `id` is a full entity id — used directly as the access
- * subject, matching web's `selectedUser.id`.
+ * A person from the forums `users/search` proxy; [id] is a full entity id, used
+ * directly as an access subject.
  */
 data class User(
     val id: String = "",

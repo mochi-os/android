@@ -25,13 +25,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 
-/**
- * Markdown banner editor shared across feeds, forums (and other entity-
- * scoped settings that surface a "banner" field).
- *
- * `initialValue` seeds the local draft state; tapping Save invokes
- * `onSave(currentDraft)`, Clear invokes `onSave("")`.
- */
+/** Markdown banner editor shared by entity settings screens; Clear saves an empty
+ *  banner. */
 @Composable
 fun BannerEditor(
     initialValue: String,

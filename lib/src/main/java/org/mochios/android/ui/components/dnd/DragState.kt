@@ -15,20 +15,15 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 
 /**
- * Drag-and-drop state holder shared by [Modifier.draggableItem] and
- * [Modifier.dropTarget]. One instance is created per drag scope (e.g. a board
- * or a tree) via [rememberDragState]. Drop targets register themselves under a
- * stable item id; the draggable side updates the live cursor position and
- * picks the active target on each pointer event.
+ * Drag-and-drop state shared by [Modifier.draggableItem] and
+ * [Modifier.dropTarget], one per drag scope via [rememberDragState]. Targets
+ * register under a stable item id; the draggable side updates the pointer and
+ * picks the active target.
  */
 class DragState(
     /**
-     * Which drop modes a target accepts. Vertical lists usually allow
-     * [DragEdge.Top] / [DragEdge.Bottom] / [DragEdge.On]; horizontal rails
-     * remap to [DragEdge.Start] / [DragEdge.End]. [DragEdge.On] is computed by
-     * pointer position; the other edges by which half of the bounds the
-     * pointer is in. The fraction of the bounds claimed for the "on" zone (the
-     * remainder splits between the two edges) defaults to a third.
+     * Fraction of a target's bounds claimed for an [DragEdge.On] drop; the rest
+     * splits between the two edges by which half the pointer is in.
      */
     val onZoneFraction: Float = 1f / 3f,
 ) {
@@ -86,9 +81,8 @@ class DragState(
     }
 
     /**
-     * Pointer released. Dispatches to the active target's onDrop and clears
-     * drag state. Returns true if a drop fired, false if the drag was
-     * cancelled or hit no valid target.
+     * Pointer released: dispatch to the active target's onDrop. False if none
+     * fired.
      */
     fun endDrag(): Boolean {
         val source = draggingItemId

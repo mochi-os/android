@@ -21,10 +21,8 @@ plugins {
 }
 
 // Release signing reads its config from ~/.gradle/gradle.properties so the
-// keystore + passwords stay out of the repo. The signing key is the user-
-// visible identity of every published Mochi release — losing it means every
-// existing install has to be uninstalled before a new build can replace it.
-// See .claude/commands/android-release.md for the release flow.
+// keystore and passwords stay out of the repo. Losing the signing key means
+// every existing install must be uninstalled before a new build can replace it.
 val releaseStorePath: String? = providers.gradleProperty("MOCHI_RELEASE_STORE_FILE").orNull
 val releaseStoreFile: File? = releaseStorePath?.let(::File)?.takeIf { it.exists() }
 
@@ -36,11 +34,9 @@ android {
         applicationId = "org.mochios.mochi"
         minSdk = 26
         targetSdk = 35
-        // Derived from versionName so it rises with every release. It was
-        // pinned at 1 through every version to date, and Android's downgrade
-        // protection keys on versionCode alone: on a sideload channel an older
-        // signed APK installed straight over a newer one. "0.113" -> 113,
-        // "1.4" -> 10004, so the sequence keeps rising across a major bump.
+        // Android's downgrade protection keys on versionCode alone, so it is
+        // derived from versionName and must keep rising: "0.113" -> 113, "1.4"
+        // -> 10004 across a major bump.
         versionCode = versionNameToCode("0.123")
         versionName = "0.123"
     }

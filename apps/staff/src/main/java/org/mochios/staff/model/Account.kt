@@ -8,12 +8,9 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Marketplace account row as exposed by staff endpoints.
- *
- * Mirrors `Account` in `apps/staff/web/src/types/accounts.ts`. `business`,
- * `seller`, `onboarded`, `verified` are 0/1 ints (server convention); `status`
- * is one of the lowercase strings in [AccountStatus] (free-form string on the
- * wire — tolerate unknown values).
+ * Mirrors `Account` in `apps/staff/web/src/types/accounts.ts`; `business`,
+ * `seller`, `onboarded`, `verified` are 0/1 ints and `status` is free-form on
+ * the wire.
  */
 data class Account(
     val id: String = "",
@@ -45,11 +42,7 @@ data class AccountsListResponse(
 )
 
 /**
- * Narrow account projection returned by the suspend/unsuspend/ban/unban
- * mutations. The Comptroller responds with the updated account row but the
- * Android client only consumes the moderation-relevant fields; the wider
- * [Account] shape is also assignment-compatible if a future call site needs
- * everything.
+ * Subset of [Account] returned by the suspend/unsuspend/ban/unban mutations.
  */
 data class AccountSummary(
     val id: String = "",
@@ -66,9 +59,7 @@ data class AccountSummary(
 )
 
 /**
- * Account moderation status. The server treats `status` as an open string
- * set (see `apps/comptroller/starlark/staff.star`), but these are the values
- * the UI switches on; unknown statuses must be tolerated.
+ * Known `status` values; the wire string is free-form, so tolerate others.
  */
 enum class AccountStatus {
     @SerializedName("active") ACTIVE,

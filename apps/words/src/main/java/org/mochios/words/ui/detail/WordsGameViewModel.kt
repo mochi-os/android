@@ -39,39 +39,22 @@ import org.mochios.words.repository.WordsRepository
 import javax.inject.Inject
 
 /**
- * Per-word validation outcome surfaced to the move composer. Mirrors the
- * web `DraftWordValidationState` union — `CHECKING` while the request is
- * inflight, `VALID` / `INVALID` after the dictionary call settles, and
- * `UNKNOWN` when the validation request itself failed (server / network).
+ * Per-word validation outcome; UNKNOWN means the validation request itself
+ * failed.
  */
 enum class ValidState { CHECKING, VALID, INVALID, UNKNOWN }
 
-/**
- * Where the user picked up a tile they're now dragging. Used by both the
- * board and the rack to render the drop targets and decide whether a drop
- * is a place / move / reorder / return-to-rack.
- */
 sealed class DragSource {
     data class Rack(val index: Int) : DragSource()
     data class BoardCell(val row: Int, val col: Int) : DragSource()
 }
 
-/**
- * Drop targets the screen can resolve from a drag's final pointer position.
- * Used by the continuous-drag pipeline: the screen maps the release position
- * to one of these and dispatches to the matching ViewModel function.
- */
 sealed class DropTarget {
     data class BoardCell(val row: Int, val col: Int) : DropTarget()
     data class RackSlot(val index: Int) : DropTarget()
     object None : DropTarget()
 }
 
-/**
- * Snapshot of everything the game-detail screen renders. Reduced from the
- * web `index.tsx`'s scattered `useState` hooks — same names where they
- * carry over for easier cross-referencing.
- */
 data class WordsGameDetailUiState(
     val isLoading: Boolean = true,
     val isLoadingMessages: Boolean = false,
@@ -107,19 +90,6 @@ data class WordsGameDetailUiState(
     val transientToast: String? = null,
 )
 
-/**
- * ViewModel for the game-detail screen. Holds the (board + rack + pending
- * placements + drag state + validation map) tuple and exposes every
- * mutation the screen needs as a void function — composables stay free of
- * coroutine plumbing.
- *
- * Live word validation is debounced 350ms after `pendingPlacements`
- * changes, then fires `repo.validateWord` in parallel for every unique
- * word the engine reports. The result is gated on a signature derived
- * from the (board, placement-set) pair so stale responses from earlier
- * keystrokes can't overwrite a fresher state. Matches the web
- * `useEffect` block at `index.tsx` lines 200-272.
- */
 private const val TAG = "WordsGame"
 
 @HiltViewModel
@@ -167,29 +137,21 @@ class WordsGameViewModel @Inject constructor(
     }
 
     /**
-     * Refresh the game state without resetting local placement / rack
-     * state — used after a websocket event signals an opponent's move
-     * landed. The server returns the post-move rack already; we only
-     * overwrite the rack + board if no pending placements would be lost.
-     * If the player is mid-composition we keep the local state and let
-     * the next user action push us back to a consistent state.
+     * Refresh after a websocket event without discarding in-progress local
+     * state.
      */
     fun refresh() {
         viewModelScope.launch {
             try {
                 val response = repository.getGame(gameId)
                 _uiState.update { state ->
-                    // If there are pending placements, only update non-rack
-                    // game data so the user doesn't lose their work on an
-                    // opponent's chat message. Once the user's own move
-                    // succeeds, `submitMove` clears placements and a fresh
-                    // load supersedes this branch anyway.
+                    // Placements pending: update only non-rack data so an
+                    // opponent's message cannot discard the user's in-progress
+                    // move.
                     if (state.pendingPlacements.isEmpty() && !state.exchangeMode) {
                         // Re-seed the rack only when the server's tiles differ
-                        // as a multiset from what is on screen. Overwriting
-                        // unconditionally threw away the user's shuffle on every
-                        // opponent move and on every resume, which is the one
-                        // people notice. Web compares the value the same way.
+                        // as a multiset: overwriting discards the user's
+                        // shuffle every refresh.
                         val incoming = response.game.my_rack.toList()
                         val same = incoming.sorted() == state.rackTiles.sorted()
                         state.copy(
@@ -240,11 +202,6 @@ class WordsGameViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Page in older chat. GameChatPanel has always supported this; the screen
-     * passed hasMore = false and an empty onLoadMore, so the capability was
-     * switched off and a game's chat stopped at its first hundred messages.
-     */
     fun loadMoreMessages() {
         val current = _uiState.value
         if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
@@ -274,18 +231,10 @@ class WordsGameViewModel @Inject constructor(
 
     // ─── WebSocket bridge ──────────────────────────────────────────────
 
-    /**
-     * Bridge a `GameWsEvent` from the lib's controller into the local
-     * state. Move + system events trigger a game refresh + message list
-     * refresh; chat events append the new message to the in-memory list
-     * without a round-trip.
-     */
     fun onWebsocketEvent(type: String, message: GameMessage?) {
         when (type) {
             // "state" is the snapshot event_sync emits after a P2P convergence
-            // repair. It used to fall through this when with no else, so the
-            // board and scores sat on what the repair had replaced until the
-            // next move or resume.
+            // repair, so it needs the same refresh as a move.
             "move", "system", "state" -> {
                 // Refresh the game (board, rack, turn, scores) and message
                 // history — the move payload includes the post-move state.
@@ -294,11 +243,9 @@ class WordsGameViewModel @Inject constructor(
             }
             "message" -> {
                 if (message != null) {
-                    // The frame carries no id, so the screen synthesises one:
-                    // it never matches the server uid the same row arrives with
-                    // over REST, and two messages from one sender in the same
-                    // second synthesise the SAME id, so an id-keyed guard threw
-                    // the second away. Key on content, as the web does.
+                    // The frame carries no id, and a synthesised one both
+                    // misses the REST uid and collides within a second, so
+                    // dedupe on content.
                     _uiState.update { state ->
                         state.copy(
                             messages = mergeMessage(
@@ -339,11 +286,6 @@ class WordsGameViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Try to place the currently-selected rack tile at (row, col). If the
-     * selected tile is a blank ('_'), open the BlankTileDialog instead;
-     * the dialog's `selectBlankLetter` finishes the placement.
-     */
     fun placeAtCursor(row: Int, col: Int) {
         val state = _uiState.value
         val index = state.selectedRackIndex ?: return
@@ -456,19 +398,9 @@ class WordsGameViewModel @Inject constructor(
 
     /** Drop the currently-dragged tile on (row, col). */
     /**
-     * Whether a tile may be dropped on ([row], [col]).
-     *
-     * Rejects a square that already holds a board tile or a pending placement.
-     * Without this the same square could take two placements: the engine builds
-     * the board from the deduplicated square but counts tilesUsed from the
-     * placement list, so two rack tiles were consumed for one visible tile, the
-     * cross-word at that square was found and scored twice, and seven
-     * placements could fire the fifty-point bingo across six distinct squares.
-     * The board renders placements keyed by cell, so the second tile was
-     * invisible and the player only saw it missing from their rack.
-     *
-     * [from] is the drag's own source cell, which does not block its own drop —
-     * dragging a tile back where it started stays a no-op rather than an error.
+     * Whether a tile may be dropped on ([row], [col]). A second placement on
+     * one square spends two rack tiles and scores twice, so occupied squares
+     * and pending placements are rejected; [from] does not block its own drop.
      */
     private fun canDropOn(row: Int, col: Int, from: Pair<Int, Int>? = null): Boolean {
         val state = _uiState.value
@@ -713,11 +645,6 @@ class WordsGameViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Open a new game with the same opponents and language as the current
-     * one. Surfaces the new game ID through `createdRematchId` for the
-     * screen to navigate to.
-     */
     fun rematch() {
         val state = _uiState.value
         val game = state.game ?: return
@@ -754,10 +681,8 @@ class WordsGameViewModel @Inject constructor(
     // ─── Sending chat messages ────────────────────────────────────────
 
     /**
-     * [onFinished] reports whether the send succeeded, so the composer can
-     * clear the draft only once it has. It used to clear synchronously at the
-     * call site, before this coroutine had even started, so a failed send lost
-     * the typed text with no feedback.
+     * [onFinished] reports whether the send succeeded, so the composer clears
+     * the draft only then.
      */
     fun sendChatMessage(
         body: String,
@@ -784,10 +709,8 @@ class WordsGameViewModel @Inject constructor(
     // ─── Live word validation ─────────────────────────────────────────
 
     /**
-     * Debounced live validation of the draft's words. Cancels any in-flight
-     * job, then kicks off a 350ms delay before parallel-firing
-     * `validateWord` for each unique word. Late responses are dropped via
-     * a (board, placement-set) signature check matching the web behaviour.
+     * Debounced 350ms; late responses are dropped on a (board, placement-set)
+     * signature.
      */
     fun refreshWordValidation() {
         val state = _uiState.value

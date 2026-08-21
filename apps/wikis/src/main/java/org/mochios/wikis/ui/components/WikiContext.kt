@@ -10,20 +10,8 @@ import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 
 /**
- * Per-wiki context passed down the composition tree. Mirrors web's
- * `WikiBaseURLContext` + `WikiContext`
- * (`apps/wikis/web/src/context/wiki-base-url-context.tsx`,
- * `apps/wikis/web/src/context/wiki-context.tsx`).
- *
- * Web splits this in two because the markdown renderer needs a stable
- * `baseURL` whether or not the React-Query info hook has finished — on
- * Android the wikis nav graph holds onto the loaded [WikiInfo] and the
- * cached server URL, so a single immutable value is enough.
- *
- * The wikis nav graph provides this on every entity-context screen. Wave 2
- * screens (MarkdownContent, AttachmentsScreen, comment threads,
- * WikiSettings, ...) read it with
- * `val wiki = LocalWikiContext.current ?: error("no wiki context")`.
+ * Per-wiki context provided on every entity-context screen; children read it
+ * via `LocalWikiContext.current`.
  */
 data class WikiContextValue(
     /** Entity id or fingerprint, whichever the route uses. */
@@ -33,8 +21,7 @@ data class WikiContextValue(
     /** What the signed-in user is allowed to do in this wiki. */
     val permissions: WikiPermissions,
     /**
-     * Origin of the Mochi server the session is bound to.
-     * Sourced from `SessionManager.getServerUrlBlocking().trimEnd('/')`.
+     * Origin of the server the session is bound to, without a trailing slash.
      */
     val serverUrl: String,
 ) {
@@ -45,15 +32,10 @@ data class WikiContextValue(
     val baseURL: String get() = "$serverUrl/wikis/$wikiId/-/"
 
     /**
-     * Resolve a markdown-relative attachment URL to an absolute URL.
-     *
-     * Mirrors the web `resolveAttachmentUrl` in
-     * `apps/wikis/web/src/features/wiki/markdown-content.tsx` lines 28-40:
-     *  - `attachments/<id>` -> `<baseURL>attachments/<id>`
-     *  - `-/attachments/<id>` -> `<baseURL>attachments/<id>` (strip "-/")
-     *  - Full `/<entity>/-/attachments/<id>[/thumbnail]` -> rewrite under
-     *    this wiki's baseURL (regex extract id + optional `/thumbnail`)
-     *  - Anything else (absolute http/https or external) -> pass-through.
+     * Resolve a markdown-relative attachment URL against [baseURL]:
+     * `attachments/<id>`, `-/attachments/<id>` and
+     * `/<entity>/-/attachments/<id>[/thumbnail]` are rewritten under this wiki;
+     * absolute and external URLs pass through.
      */
     fun resolveAttachmentUrl(url: String): String {
         if (url.startsWith("attachments/")) {
@@ -78,8 +60,6 @@ data class WikiContextValue(
 }
 
 /**
- * Current wiki context, or `null` outside an entity-context wikis screen
- * (class-level routes like `WikisFeature.HOME` / `FIND` / `JOIN`). Consumers
- * inside entity-context screens may safely error if it's missing.
+ * Current wiki context; null on class-level routes that have no wiki.
  */
 val LocalWikiContext = compositionLocalOf<WikiContextValue?> { null }

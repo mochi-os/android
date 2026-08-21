@@ -111,9 +111,8 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     /**
-     * The canonical entity id for endpoints that reject a fingerprint. The app
-     * navigates by fingerprint, so [forumId] is usually one; prefer the id the
-     * loaded forum carries and fall back only while it has not arrived yet.
+     * Canonical entity id for endpoints that reject a fingerprint; [forumId] is
+     * usually one.
      */
     private fun entityId(): String {
         val forum = _uiState.value.forum

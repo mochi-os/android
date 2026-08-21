@@ -50,11 +50,6 @@ data class WikiHomeUiState(
     val error: MochiError? = null,
 )
 
-/**
- * ViewModel for [WikiHomeScreen]. Resolves `wikiId` from [SavedStateHandle]
- * and fetches `/-/info` so the screen can hand off to the wiki's
- * `wiki.home` slug.
- */
 @HiltViewModel
 class WikiHomeViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -89,20 +84,6 @@ class WikiHomeViewModel @Inject constructor(
     }
 }
 
-/**
- * Resolver-style landing for a single wiki — analogous to web's
- * `/$wikiId/index.tsx` which redirects to the wiki's home page.
- *
- * Loads the `/-/info` response, then immediately navigate-replaces to
- * [PageViewScreen] at `wiki.home`. While the load is in flight, renders a
- * lightweight skeleton matching the People-app loading pattern; on error,
- * shows the lib's [ErrorState] with a retry button.
- *
- * Navigation flow: when the load completes, this composable calls
- * `navController.navigate(WikisApp.pageView(wikiId, home))` with
- * `popUpTo(WikiHomeScreen)` so the back button from the page view goes
- * straight to the wiki list, not back through this transient screen.
- */
 @Composable
 fun WikiHomeScreen(
     navController: NavController,
@@ -139,11 +120,6 @@ fun WikiHomeScreen(
     }
 }
 
-/**
- * Brief loading placeholder shown while [WikiHomeViewModel] resolves the
- * wiki's home slug. Matches the People-app skeleton pattern — a few
- * neutral bars in place of the eventual content.
- */
 @Composable
 private fun WikiHomeSkeleton() {
     Column(

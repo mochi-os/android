@@ -5,15 +5,6 @@
 
 package org.mochios.words.model
 
-/**
- * Lightweight game record returned by `-/list`. Mirrors the `GameListItem`
- * interface in `apps/words/web/src/api/types/games.ts` — same fields, same
- * snake_case wire keys, but without the per-player rack info (`my_rack`,
- * `bag_count`) that only the `:game/-/view` endpoint exposes.
- *
- * The list response is `{"data": [game, ...]}`; `Response<ApiResponse<List<GameListItem>>>`
- * unwraps the envelope and the list itself flows up the call chain.
- */
 data class GameListItem(
     val id: String = "",
     val fingerprint: String? = null,
@@ -43,12 +34,8 @@ data class GameListItem(
 )
 
 /**
- * Full game record returned by `:game/-/view`. Adds the per-viewer fields
- * the server strips out of the list response: `my_rack` is the caller's
- * private rack contents (only filled for the player whose token is in the
- * Authorization header) and `bag_count` is the size of the remaining bag
- * (so the UI can show a "tiles left" indicator without ever seeing the bag
- * itself). `key` is the websocket key for real-time updates.
+ * Full game from `:game/-/view`. `my_rack` holds only the calling player's
+ * rack, `bag_count` the tiles left in the bag, `key` the websocket key.
  */
 data class Game(
     val id: String = "",
@@ -81,13 +68,6 @@ data class Game(
     val created: Long = 0,
 )
 
-/**
- * Return the comma-joined display names of all players *other than* the
- * caller. Mirrors the `getPlayerNames` helper in the web types module
- * (`apps/words/web/src/api/types/games.ts`). The web version is generic
- * over `Game | GameListItem`; Kotlin's `data class` lookup goes through a
- * small reflection-free helper that reads each indexed player slot.
- */
 fun getPlayerNames(game: GameListItem, myIdentity: String): String {
     val names = mutableListOf<String>()
     for (i in 1..game.player_count) {

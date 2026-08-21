@@ -14,24 +14,9 @@ import okhttp3.Interceptor
 import okhttp3.Response
 
 /**
- * OkHttp [Interceptor] that watches every staff API response for 401 / 403
- * and hides the launcher icon when one fires.
- *
- * Hooked into the per-app OkHttp builder in
- * [org.mochios.staff.di.AppModule] AFTER the Bearer interceptor — the
- * Bearer one attaches the staff JWT on the way out and this one inspects
- * the resulting status on the way back. Adding them in reverse order is a
- * common mistake; OkHttp invokes application interceptors in declaration
- * order on the request and in reverse on the response, so the Bearer
- * attachment must come first so its `chain.proceed` returns a response
- * with the right status for us to read.
- *
- * The disable call dispatches off the OkHttp thread via a SupervisorScope
- * so a launcher-toggle exception can't tear down an unrelated request that
- * happens to share the dispatcher. The controller reference is held via a
- * WeakReference on [StaffAccessController.instanceRef] so this file is
- * safe to instantiate before the Hilt graph is fully wired (e.g. during
- * cold-start before the first `boundIdentity` collect kicks off).
+ * Hides the launcher icon when a staff API call returns 401 or 403. Reaches the
+ * controller through [StaffAccessController.instanceRef], so it needs no Hilt
+ * graph at construction.
  */
 class StaffAuthInterceptor : Interceptor {
 

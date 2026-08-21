@@ -22,15 +22,6 @@ import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for [ChangesListScreen]. Mirrors web's `changes-list.tsx`: a flat
- * list of [Change] rows in newest-first order with author avatars and links
- * to the edited page.
- *
- * Wiki info + permissions are loaded in parallel so the screen can wrap its
- * body in a [org.mochios.wikis.ui.components.LocalWikiContext] (needed by
- * [org.mochios.wikis.ui.components.AuthorAvatar]).
- */
 data class ChangesUiState(
     val isLoading: Boolean = true,
     val isLoadingMore: Boolean = false,
@@ -45,11 +36,6 @@ data class ChangesUiState(
     val hasMore: Boolean get() = changes.size < total
 }
 
-/**
- * ViewModel for [ChangesListScreen]. Reads `wikiId` from [SavedStateHandle]
- * (set by `WikisApp.CHANGES`) and fires two parallel loads on init: wiki
- * info and the recent-changes feed (`/-/changes`).
- */
 @HiltViewModel
 class ChangesViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

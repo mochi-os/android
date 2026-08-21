@@ -24,10 +24,8 @@ import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
 /**
- * UI state for [SettingsTab]. Carries the wiki's stored settings (home page,
- * subscription source) plus transient state for the inline rename and home
- * page save flows. The wiki name itself lives on the parent view model so
- * the TopAppBar title and the rename row stay in sync.
+ * Tab state. The wiki name lives on [WikiSettingsViewModel] so the title and
+ * the rename row stay in sync.
  */
 data class SettingsTabUiState(
     val isLoading: Boolean = true,
@@ -40,22 +38,8 @@ data class SettingsTabUiState(
     val isDeleting: Boolean = false,
 )
 
-/**
- * Wiki name validation errors. Mirrors the rules enforced by the web client
- * (`apps/wikis/web/src/features/wiki/wiki-settings.tsx`):
- *
- *  - [REQUIRED]    name is empty or whitespace-only
- *  - [TOO_LONG]    name exceeds 100 characters
- *  - [INVALID_CHAR] name contains `<` or `>`
- */
 enum class NameValidationError { REQUIRED, TOO_LONG, INVALID_CHAR }
 
-/**
- * Snackbar messages dispatched by [SettingsTabViewModel]. Same shape as
- * [WikiSettingsSnackbar] — the tab collects on the parent view model in
- * practice, but a dedicated channel here keeps the tab's mutations
- * decoupled from the parent.
- */
 data class SettingsTabSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
@@ -104,11 +88,6 @@ class SettingsTabViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Validate a candidate wiki name without dispatching it. Used by the
-     * inline edit row to show a per-character error message under the
-     * input. Returns null when valid, the matching error enum otherwise.
-     */
     fun validateName(name: String): NameValidationError? {
         val trimmed = name.trim()
         return when {

@@ -11,21 +11,14 @@ import android.os.Build
 import android.os.PersistableBundle
 
 /**
- * The extra's literal name. [ClipDescription.EXTRA_IS_SENSITIVE] only exists
- * from API 33, and minSdk here is 26; an older platform simply ignores an extra
- * it doesn't know, so the flag is always set and the constant used where it is
- * available.
+ * [ClipDescription.EXTRA_IS_SENSITIVE] is API 33+ and minSdk is 26. An older
+ * platform ignores an extra it does not know, so the flag is always set.
  */
 private const val IS_SENSITIVE = "android.content.extra.IS_SENSITIVE"
 
 /**
- * A clip holding [secret] that the system will not show in its clipboard
- * preview.
- *
- * Android 13 and later render copied text in an overlay as it is placed on the
- * clipboard. That is fine for a fingerprint or a feed URL, and not for a TOTP
- * seed or a recovery code, which this marks so the preview shows a redaction
- * instead of the value.
+ * A clip holding [secret] that Android 13+ redacts in its clipboard preview
+ * overlay. Use it for a TOTP seed or recovery code, not a fingerprint or URL.
  */
 fun sensitiveClip(label: String, secret: String): ClipData {
     val clip = ClipData.newPlainText(label, secret)

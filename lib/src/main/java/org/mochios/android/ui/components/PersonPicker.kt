@@ -66,28 +66,9 @@ import org.mochios.android.model.User
 import org.mochios.android.util.SEARCH_DEBOUNCE
 
 /**
- * A single-select person field, shown as a bordered box that reads like the
- * other outlined fields.
- *
- * While nothing is chosen the box shows a "Select …" placeholder; tapping it
- * opens a popup anchored to the box's bottom edge with a search field over a
- * list. When a person is assigned the list starts with a "None" row to clear
- * it, and the assigned person is shown ticked. Typing filters the project
- * [members] under a "Project members" heading and folds in directory matches
- * from [onSearch] under a "Directory" heading; when nothing matches it shows
- * "No people". Choosing a person closes the popup and shows their name in the
- * box with an "×" to clear it.
- *
- * The popup is placed by [FieldPopupPositionProvider], flush against the box's
- * bottom and growing upward, so it stays clear of the keyboard the search field
- * raises.
- *
- * @param selectedId   the currently stored subject id ([User.fingerprint]); blank means unset.
- * @param selectedName resolved display name for [selectedId], or null when it cannot be resolved.
- * @param members      project members, offered under "Project members".
- * @param onSelect     invoked with the chosen user.
- * @param onClear      invoked when "None" or the "×" clears the current selection.
- * @param onSearch     suspend directory search, debounced and run once the query has 2+ chars.
+ * Single-select person field. Tapping it opens a search popup over the project
+ * [members] and directory matches from [onSearch]. The popup grows upward once
+ * the search field has focus, so the keyboard does not cover it.
  */
 @Composable
 fun PersonPicker(
@@ -409,10 +390,8 @@ private fun PersonRow(
 }
 
 /**
- * Places the picker popup at the anchor's left edge. It hangs below the field
- * ([anchorAbove] false); once the search field is focused ([anchorAbove] true)
- * it flips to grow upward with its bottom flush to the field's bottom, clearing
- * the keyboard the focus raises.
+ * Places the picker popup at the anchor's left edge, hanging below the field
+ * until [anchorAbove], when it grows upward to clear the keyboard.
  */
 private class FieldPopupPositionProvider(
     private val anchorAbove: Boolean

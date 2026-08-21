@@ -50,11 +50,6 @@ import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.android.R as MochiR
 
-/**
- * Owner "General" tab: identity, banner, AI, and delete sections. Mirrors the
- * feeds General tab layout. The AI section only appears when the account has at
- * least one AI-capable account (`/accounts/list?capability=ai`).
- */
 @Composable
 fun GeneralTab(
     viewModel: ForumSettingsViewModel,
@@ -167,13 +162,8 @@ fun GeneralTab(
 }
 
 /**
- * Identity card: forum name (inline editable when [editable]) plus copyable
- * entity id, fingerprint, and server chips. Mirrors feeds'
- * `FeedIdentitySection` — shared by the owner General tab and the read-only
- * view a non-manager gets.
- *
- * @param onRename invoked with the new name when the owner saves an edit;
- *                 ignored when [editable] is false.
+ * Identity card shared by the owner General tab and the read-only non-manager
+ * view.
  */
 @Composable
 fun ForumIdentitySection(

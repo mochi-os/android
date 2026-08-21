@@ -52,11 +52,6 @@ class GroupsViewModel @Inject constructor(
         observeGroupChanges()
     }
 
-    /**
-     * Reload the list whenever a group is edited or deleted on the detail
-     * screen, which runs on a separate ViewModel. Keeps this list in sync
-     * without depending on navigation-resume callbacks.
-     */
     private fun observeGroupChanges() {
         viewModelScope.launch {
             repository.groupsChanged.collect {
@@ -66,13 +61,8 @@ class GroupsViewModel @Inject constructor(
     }
 
     /**
-     * Fetch the group list.
-     *
-     * @param silent when `true`, updates the list in the background without
-     * toggling the loading indicator or surfacing a fetch error — used for
-     * cross-screen sync where the change was already confirmed elsewhere, so
-     * a spinner or error screen would only flicker. The current list is kept
-     * if a silent fetch fails.
+     * [silent] refreshes without the spinner and keeps the current list on
+     * failure, for reloads triggered from other screens.
      */
     private fun load(silent: Boolean = false) {
         viewModelScope.launch {

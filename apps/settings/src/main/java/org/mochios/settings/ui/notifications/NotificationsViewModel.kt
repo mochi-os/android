@@ -35,20 +35,13 @@ data class NotificationsUiState(
     val items: List<MochiNotification> = emptyList(),
     val unreadCount: Int = 0,
     val tab: NotificationsTab = NotificationsTab.UNREAD,
-    /**
-     * Categories a notification's topic can be moved to, and the topic rows
-     * that say which one it is in now. Empty when the settings app could not
-     * be read, which simply hides the picker - the list itself comes from the
-     * notifications app and must not fail with it.
-     */
     val categories: List<NotifCategory> = emptyList(),
     val topics: List<NotifTopic> = emptyList(),
     val error: MochiError? = null,
 ) {
     /**
-     * The topic row a notification belongs to, or null if the server has none.
-     * The set-category call requires an existing row - it does not create one -
-     * so a notification without one cannot be recategorised yet.
+     * Null when the server has no topic row; set-category requires an existing
+     * row, so such a notification cannot be recategorised.
      */
     fun topicFor(notification: MochiNotification): NotifTopic? = topics.firstOrNull {
         it.app == notification.app &&
@@ -111,10 +104,8 @@ class NotificationsViewModel @Inject constructor(
     }
 
     /**
-     * Categories and topic rows for the per-notification picker. Failure is
-     * swallowed on purpose: these come from the settings app, the list comes
-     * from the notifications app, and losing the picker must not put an error
-     * over a list that loaded perfectly well. The picker just does not appear.
+     * Failure is swallowed: the picker comes from the settings app and must not
+     * put an error over a list the notifications app loaded.
      */
     private suspend fun loadCategories() {
         try {
@@ -126,11 +117,6 @@ class NotificationsViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Move a notification's topic to [categoryId], or to no category when it is
-     * null. Applied locally first so the row updates immediately, then reverted
-     * if the server refuses.
-     */
     fun setCategory(topic: NotifTopic, categoryId: String?) {
         viewModelScope.launch {
             val before = _uiState.value.topics

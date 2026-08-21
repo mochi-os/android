@@ -18,15 +18,6 @@ import org.mochios.words.model.SendMessageRequest
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * Thin convenience wrapper around [WordsApi]. Each method calls `.unwrap()`
- * on the `Response<ApiResponse<T>>` to surface either the inner payload
- * (deserialised T) or a typed `MochiError` for the ViewModels to handle.
- *
- * The shape mirrors `apps/words/web/src/api/games.ts`. No caching layer —
- * the calling ViewModels lean on stale-while-revalidate via the websocket
- * push + an on-resume refetch rather than pre-warming here.
- */
 @Singleton
 class WordsRepository @Inject constructor(
     private val api: WordsApi,
@@ -41,10 +32,8 @@ class WordsRepository @Inject constructor(
         api.getNewGameFriends().unwrap().friends
 
     /**
-     * Open a new game. [opponents] must be 1-3 friends' entity IDs.
-     * [language] is `"en_US"` or `"en_UK"` (server rejects anything else
-     * with a 400). Sends the request as JSON with `opponents` as a
-     * comma-joined string (the server splits on `,` in `action_create`).
+     * [opponents] must be 1-3 friends' entity IDs, comma-joined for the server.
+     * [language] is `"en_US"` or `"en_UK"`; anything else is a 400.
      */
     suspend fun createGame(opponents: List<String>, language: String): String =
         api.createGame(
@@ -89,9 +78,8 @@ class WordsRepository @Inject constructor(
     // ---- Dictionary lookup ----
 
     /**
-     * Hit the server's dictionary for a single word. Used by the move
-     * composer's debounced check; returns false for words shorter than
-     * 2 or longer than 15 chars without touching the DB.
+     * Dictionary lookup. Words under 2 or over 15 characters return false
+     * without a DB hit.
      */
     suspend fun validateWord(word: String, language: String): Boolean =
         api.validateWord(word, language).unwrap().valid

@@ -10,13 +10,6 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.settings.api.SystemSetting
 
-/**
- * The trap this pins: core blanks a secret's value before sending it, so a
- * configured OAuth client secret arrives with `value == ""` — and its default
- * is `""` too. Every value-based test therefore reports "unset" no matter how
- * the server is configured, which is what hid configured secrets from the
- * administrator and removed the affordance to clear them.
- */
 class StoredValueTest {
 
     /** What core actually sends for a configured secret (settings.go). */
@@ -59,11 +52,6 @@ class StoredValueTest {
         assertFalse(hasStoredValue(plain.copy(value = "")))
     }
 
-    /**
-     * `set` is computed for every setting, not just secrets, but for an
-     * ordinary one the value is authoritative — a server that sent them out of
-     * step should not blank a value the user can see.
-     */
     @Test
     fun `an ordinary setting ignores set when it contradicts the value`() {
         val plain = SystemSetting(name = "hostname", value = "mochi.test", set = false)

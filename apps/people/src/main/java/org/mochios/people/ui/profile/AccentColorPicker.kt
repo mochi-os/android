@@ -31,18 +31,8 @@ import org.mochios.android.ui.components.ColorPicker
 import org.mochios.people.R
 
 /**
- * Inline accent colour picker backing the Profile editor's "Accent" section:
- * the shared [ColorPicker] plus the Clear / Save buttons this form needs.
- *
- * [hex] is the draft the ViewModel holds; edits flow out through [onHexChange]
- * (live, for the avatar preview) and are persisted by [onSave]. An empty hex
- * means "no accent".
- *
- * @param hex Current accent hex ("" when unset).
- * @param isSaving Disables Save and shows a spinner while a save is in flight.
- * @param onHexChange Fired on every change with the new `#rrggbb` hex.
- * @param onClear Clears the accent (the caller persists the empty value).
- * @param onSave Persists the current draft.
+ * Accent picker for the Profile editor; [hex] is the draft, "" meaning no
+ * accent.
  */
 @Composable
 fun AccentColorPicker(

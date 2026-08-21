@@ -16,25 +16,9 @@ import androidx.core.app.NotificationManagerCompat
 import java.util.concurrent.ConcurrentHashMap
 
 /**
- * Surfaces a "sign in again" system notification when the WebSocket /
- * token-mint path keeps getting 401s — the rare but real case where a
- * user's session has been invalidated server-side (admin revoke, DB
- * corruption, manual cleanup).
- *
- * No server-side refresh endpoint is needed: Mochi sessions are 1 year
- * with rolling renewal on every authenticated request (`web_auth` in
- * core/server/web.go re-sets the cookie), so an active user's session
- * never naturally expires. 401 means the session is genuinely dead and
- * only re-OAuth via a per-app app can recover it.
- *
- * Strategy:
- *   - PushService.mintToken calls [report401] on each 401 from /_/token
- *     and [reportSuccess] on each success.
- *   - After [THRESHOLD] consecutive 401s for a given server, post a
- *     dismissable system notification asking the user to sign in. Tap
- *     opens the shell's launchpad so they can choose any per-app app
- *     and re-OAuth there. The cross-app MochiAccount sync then flows
- *     the new session back to the shell's PushService automatically.
+ * Posts a "sign in again" notification after [THRESHOLD] consecutive 401s from
+ * /_/token for one server. Mochi sessions renew on every authenticated request,
+ * so a 401 means the session is genuinely dead and only re-OAuth recovers it.
  */
 object Reauth {
 

@@ -17,19 +17,16 @@ import org.mochios.android.api.assetAuthHeaders
 import org.mochios.android.auth.SessionManager
 
 /**
- * Coil model that routes a request to [VideoFrameFetcher]. Wrapping the URL in
- * a distinct type lets the fetcher claim only video-frame requests (chat /
- * feed attachment URLs are extension-less, so they can't be told apart from
- * images otherwise).
+ * Coil model routing a request to [VideoFrameFetcher]. Attachment URLs carry no
+ * extension, so a distinct type is the only way the fetcher can claim them.
  */
 data class VideoFrame(val url: String)
 
 /**
  * Decodes a video's opening frame with [MediaMetadataRetriever], which
- * range-requests only that frame rather than downloading the whole clip (what
- * Coil's `VideoFrameDecoder` would do). Because it returns through Coil, the
- * frame is held in the memory cache — so re-scrolling or reopening a
- * conversation is instant instead of re-extracting every time.
+ * range-requests only that frame rather than the whole clip as Coil's
+ * `VideoFrameDecoder` would. Returning through Coil keeps the frame in the
+ * memory cache.
  */
 class VideoFrameFetcher(
     private val data: VideoFrame,

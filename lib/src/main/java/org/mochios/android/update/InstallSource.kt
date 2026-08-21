@@ -11,27 +11,19 @@ import android.os.Build
 import android.util.Log
 
 /**
- * Detects whether the running app was installed from a known app store. Used
- * by [UpdateChecker] to short-circuit the daily self-update poll on devices
- * where the store will deliver updates instead — the store's package signature
- * and ours wouldn't necessarily match (F-Droid reproducible builds, Play Store
- * App Bundle splits), so trying to install a packages.mochi-os.org APK on top
- * would either fail with a signature mismatch or bypass the store user's
- * trust chain.
+ * Detects whether the app was installed from a known app store. [UpdateChecker]
+ * skips its self-update poll there: our packages.mochi-os.org APK need not
+ * match the store's signature, and would bypass the store user's trust chain.
  */
 object InstallSource {
 
     private const val TAG = "InstallSource"
 
     /**
-     * Package names of installers whose presence means "this device's app
-     * store will deliver updates for us — don't run our own update path".
-     *
-     * The system package installers (`com.android.packageinstaller` /
-     * `com.google.android.packageinstaller`) are deliberately NOT in this
-     * set: that's what's recorded when our own [UpdateInstaller] hands an
-     * APK off via `ACTION_VIEW`, and we want subsequent self-updates to
-     * keep working in that case.
+     * Installers whose presence means the device's store delivers our updates.
+     * The system package installers are deliberately absent: that is what our
+     * own [UpdateInstaller] records, and self-updates must keep working after
+     * it.
      */
     private val STORE_INSTALLERS = setOf(
         "com.android.vending",                  // Google Play
@@ -47,11 +39,8 @@ object InstallSource {
     )
 
     /**
-     * Returns the installer's package name, or null if it can't be
-     * determined (ADB sideload, very old Android, package manager error).
-     * Uses the API 30+ [InstallSourceInfo] when available so we get the
-     * authoritative answer; falls back to the deprecated single-string
-     * pre-30 API on older devices.
+     * The installer's package name, or null when it cannot be determined (ADB
+     * sideload, package manager error). Uses [InstallSourceInfo] on API 30+.
      */
     fun installerPackage(context: Context): String? = try {
         val pm = context.packageManager
@@ -67,10 +56,8 @@ object InstallSource {
     }
 
     /**
-     * True when the running APK was installed from a known app store and
-     * updates should therefore come from that store, not from us. Returns
-     * false for ADB sideload, our own self-install via [UpdateInstaller],
-     * and direct APK installs from a browser or files app.
+     * True when the APK came from a known app store, so updates come from
+     * there. False for sideloads and our own [UpdateInstaller].
      */
     fun isStoreInstalled(context: Context): Boolean {
         val installer = installerPackage(context) ?: return false

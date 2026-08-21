@@ -34,22 +34,10 @@ import org.mochios.android.R
 private const val MASK = "••••••••"
 
 /**
- * Masked, write-only credential input, for a secret the server stores and never
- * echoes back.
- *
- * [configured] says whether a value is already stored — the field never
- * receives the value itself, so a bullet placeholder is the only way to tell a
- * configured credential from an unset one. Save appears once a replacement is
- * typed.
- *
- * The Android counterpart of `lib/web/src/components/ui/secret-field.tsx`, and
- * shared for the same reason: secrets are entered the same way on the staff
- * config screen and the system settings screen, so the two cannot drift.
- *
- * One deliberate difference from web: web keeps the typed value when a save
- * fails so the user can retry, whereas this clears on submit — the caller
- * surfaces the failure, and a credential field should not hold a typed secret
- * any longer than it must.
+ * Masked, write-only credential input for a secret the server never echoes
+ * back. [configured] only says whether one is stored, so the bullet placeholder
+ * is the one signal that it is. The typed value is cleared on submit, not kept
+ * for retry.
  */
 @Composable
 fun SecretField(

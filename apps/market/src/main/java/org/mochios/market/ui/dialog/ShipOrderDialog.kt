@@ -33,12 +33,6 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.market.R
 import org.mochios.market.lib.COMMON_CARRIERS
 
-/**
- * Ship-order dialog. Carrier picker (common carriers + free-form Other),
- * tracking number, optional tracking URL. The dialog is purely visual —
- * the network call lives in the host screen's ViewModel so that screen's
- * UI state stays the source of truth for "is this order shipped yet".
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShipOrderDialog(

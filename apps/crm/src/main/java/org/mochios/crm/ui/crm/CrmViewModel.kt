@@ -56,9 +56,9 @@ data class CrmUiState(
     val error: MochiError? = null,
     val selectedObjectId: String? = null,
     /**
-     * Sort field per view id. Field is one of "rank", "created",
-     * "updated", or "field:<fieldId>" matching the web sort key scheme.
-     * Null entry => fall back to view.sort or "rank".
+     * Sort override per view id: "rank", "created", "updated" or
+     * "field:<fieldId>" (the web sort key scheme). Absent means view.sort, else
+     * "rank".
      */
     val sortByView: Map<String, String> = emptyMap(),
     /** Sort direction per view id. "asc" or "desc". */
@@ -212,14 +212,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * The view to open in a CRM the user has never picked a view in: the first
-     * one showing a class they can actually create. A design that lists its
-     * child classes first — Contacts ahead of Companies — otherwise opens an
-     * empty list whose "+" leads straight to "create the parent first", with
-     * the view that does work a menu away.
-     *
-     * A view naming no classes shows all of them, so it always qualifies.
-     * Falls back to the CRM's first view when nothing can be created yet.
+     * Default view for a CRM the user has never picked one in: the first whose
+     * classes include one that can be created now (a view naming no classes
+     * qualifies), else the CRM's first view.
      */
     private fun defaultViewId(details: CrmDetails, objects: List<CrmObject>): String? {
         val creatable = details.classes
@@ -275,9 +270,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Resets every filter axis and the sort override for the active view, so
-     * the list falls back to what the view itself defines. The search query is
-     * owned by the top bar and is left alone.
+     * Resets filters and the active view's sort override; the search query
+     * belongs to the top bar and stays.
      */
     fun clearFilters() {
         val viewId = _uiState.value.activeViewId
@@ -312,10 +306,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Fields the sheet can filter on: fields flagged "filter" on the active
-     * view's classes that carry a fixed value set — enumerated options, or the
-     * CRM's people for a user field. Free-text and date fields are left out;
-     * search covers the former and sort covers the latter.
+     * Filterable fields of the active view's classes with a fixed value set:
+     * enumerated options, or the CRM's people for user fields.
      */
     fun getFilterableFields(): List<Pair<CrmField, List<FieldOption>>> {
         val details = _uiState.value.crmDetails ?: return emptyList()
@@ -347,9 +339,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Active sort field for the current view. Mirrors the web sort key scheme:
-     * "rank" | "created" | "updated" | "field:<fieldId>".
-     * Defaults to view.sort (when set) or "rank".
+     * Active sort field ("rank" | "created" | "updated" | "field:<fieldId>");
+     * defaults to view.sort, else "rank".
      */
     fun getActiveSortField(): String {
         val viewId = _uiState.value.activeViewId ?: return "rank"
@@ -368,10 +359,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Sort key to show as chosen in the sheet, or null when nothing has been
-     * chosen. The list still falls back to "rank" in that case, but the fallback
-     * isn't a selection — showing Manual highlighted would claim the user picked
-     * it. A sort stored on the view itself does count as chosen.
+     * Sort key to highlight in the sheet, or null: the "rank" fallback is not a
+     * selection, but a sort stored on the view is.
      */
     fun getSelectedSortField(): String? {
         val viewId = _uiState.value.activeViewId
@@ -410,12 +399,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Sort field options available for the current view: every field flagged
-     * "sort", across all of the CRM's classes, matching the web sort menu.
-     *
-     * Order comes from the info response's own `fields` map — its keys, then
-     * each class's field list — not from the `classes` array, which arrives in
-     * a different order and put the wrong class's fields first.
+     * Sortable fields across all classes, for the sort sheet. Iterates the info
+     * response's `fields` map, not `classes`: the two arrive in different
+     * orders.
      */
     fun getSortFieldOptions(): List<Pair<String, String>> {
         val details = _uiState.value.crmDetails ?: return emptyList()
@@ -530,9 +516,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Field ids the active view pins. Empty when there is no active view or it
-     * pins none — callers then fall back to their own default (card flags for
-     * cards, every field of the class for the object detail form).
+     * Field ids the active view pins; empty when it pins none, and callers then
+     * use their own default.
      */
     fun getActiveViewFieldIds(): List<String> {
         val view = getActiveView() ?: return emptyList()
@@ -555,15 +540,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Every option [fieldId] can take across [classIds], in class order and
-     * deduplicated by option id.
-     *
-     * Options belong to a class, not to a field id, and classes share field
-     * ids — a board that mixes classes needs a column per distinct option,
-     * not just the ones whichever class came first in the response defines.
-     *
-     * @param classIds the classes to draw from; empty means every class the
-     *   CRM defines.
+     * Options for [fieldId] across [classIds] (empty = every class), in class
+     * order, deduplicated by id. Options are per class, and classes share field
+     * ids.
      */
     fun getOptionsForClasses(fieldId: String, classIds: List<String>): List<FieldOption> {
         val details = _uiState.value.crmDetails ?: return emptyList()
@@ -581,13 +560,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Options for [fieldId] as an object of [classId] can take them. An
-     * object's stored value is an id from its own class's set, so resolving
-     * it against another class's set is what renders a raw id in place of the
-     * option's name and colour.
-     *
-     * Falls back to every class's options when the class defines none of its
-     * own, which keeps a value set before the class was reshaped readable.
+     * Options for [fieldId] on an object of [classId]: its own class's set,
+     * since the stored value is an id from there; every class's when it defines
+     * none.
      */
     fun getOptionsForObject(classId: String, fieldId: String): List<FieldOption> {
         val own = getOptionsForField(classId, fieldId)
@@ -660,9 +635,7 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Persist a new column-option ordering after a drag-reorder. [order] is
-     * the full list of option ids in display order — the server replaces the
-     * stored ranks accordingly.
+     * Persists a drag-reorder: [order] is every option id in display order.
      */
     fun reorderColumnOptions(fieldId: String, order: List<String>) {
         val classId = findClassForField(fieldId) ?: return
@@ -677,9 +650,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Returns descendant ids of [objectId] in the current object set. Used
-     * for tree drag-drop cycle prevention — a row may not be reparented under
-     * itself or any of its own descendants.
+     * Descendant ids of [objectId], for refusing a drop that would reparent a
+     * row under itself.
      */
     fun collectDescendants(objectId: String): Set<String> {
         val byParent = _uiState.value.objects.groupBy { it.parent }
@@ -696,14 +668,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Ids the board may render, or null when nothing narrows the set — the
-     * board still receives every object so hierarchy, column grouping and
-     * drop ranks stay computed against the real list, and only hides what
-     * falls outside this set.
-     *
-     * Ancestors of a match are included: a board card is a container for its
-     * children, so a matching child keeps its parent card on the board
-     * instead of dropping the whole branch out of sight.
+     * Ids the board may show, or null when no filter is active. Ancestors of a
+     * match are included so a matching child keeps its parent card on the
+     * board.
      */
     fun getVisibleObjectIds(): Set<String>? {
         if (!hasActiveFilters()) return null
@@ -771,11 +738,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Sort objects by the active sort field/direction. Mirrors the web logic
-     * in `web/src/features/board/components/board-container.tsx::sortObjects`
-     * — built-in numeric fields compare numerically. Custom fields compare by
-     * their type: numbers as numbers, dates as dates, enumerated values by
-     * option rank, everything else as case-insensitive text.
+     * Sorts by the active sort field and direction, mirroring web
+     * board-container.tsx sortObjects: compare by field type, else
+     * case-insensitive text.
      */
     fun sortObjects(objects: List<CrmObject>): List<CrmObject> {
         val field = getActiveSortField()
@@ -869,12 +834,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Field id to read on [obj] when sorting by [sortField]. The sheet offers
-     * one chip per field name, so an object of another class carries its own
-     * same-named field — fall back to that twin rather than reading a blank
-     * and dumping every object of that class at the end of the list.
-     *
-     * @param fallbackId Used when the sort key names no field the CRM knows.
+     * Field id to read on [obj] for [sortField]: the object's own same-named
+     * field when its class lacks that id, since the sheet offers one chip per
+     * field name. [fallbackId] applies when the sort key names no known field.
      */
     private fun sortFieldIdFor(obj: CrmObject, sortField: CrmField?, fallbackId: String): String {
         if (sortField == null) return fallbackId
@@ -902,9 +864,8 @@ class CrmViewModel @Inject constructor(
     // ---- Export ----
 
     /**
-     * The handle the data endpoints want: the CRM's canonical id, falling back
-     * to its fingerprint and then to whatever the screen was routed with.
-     * Mirrors `CrmSettingsViewModel.entityId()`.
+     * Handle for the data endpoints: canonical id, else fingerprint, else the
+     * route's id.
      */
     private fun entityId(): String {
         val crm = _uiState.value.crmDetails?.crm ?: return crmId
@@ -912,13 +873,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Stages the CRM's attachments, then asks the screen for somewhere to put
-     * the backup. The export endpoint only includes what has been warmed, so
-     * this can take a while on a CRM with many files.
-     *
-     * Nothing is downloaded here. The server builds the zip and it runs to
-     * megabytes, so it is fetched straight into the file the user picks — see
-     * [writeExportTo].
+     * Warms the CRM's attachments (the export only includes what has been
+     * warmed), then asks the screen where to save. [writeExportTo] fetches the
+     * zip straight into the chosen file.
      */
     fun exportCrm() {
         if (_uiState.value.isExporting) {
@@ -951,10 +908,8 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Builds a spreadsheet of the objects the active view is showing — the
-     * same ones, in the same order, narrowed by the same filters — and parks
-     * it for the save dialog. Local work only: everything it needs is already
-     * loaded, so unlike [exportCrm] it never touches the server.
+     * Builds a CSV of the active view's objects as shown and parks it for the
+     * save dialog; local only, no server call.
      */
     fun exportCsv() {
         val csv = buildCsv()
@@ -969,30 +924,17 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * A CSV in the shape web exports: `ID`, `Class` and `Parent` in front,
-     * then one column for every field of every class in the CRM, in class
-     * order and deduped by field id so a field two classes share is written
-     * once.
-     *
-     * There is no separate title column. A class titles itself with one of its
-     * own fields, so a title column would repeat that field's column on every
-     * row — which is what the earlier shape did.
-     *
-     * Columns cover the whole CRM, but rows are the active view's objects, so
-     * what is filtered out on screen stays out of the file. Values are written
-     * as they read on screen — an option's name rather than its id, a person's
-     * name rather than their entity id.
+     * CSV in the web export's shape: `ID`, `Class`, `Parent`, then one column
+     * per field name across the CRM's classes. No title column - a class titles
+     * itself with one of its fields. Rows are the active view's filtered
+     * objects, values as displayed.
      */
     private fun buildCsv(): String {
         val details = _uiState.value.crmDetails
         val objects = getFilteredObjects()
-        // Columns are field names, not field ids. Each class defines its own
-        // fields, so the "Owner" on a task and the "Owner" on a deal are two
-        // ids wearing one label — web gives them a single column, and a
-        // spreadsheet reader expects that too.
-        // Both orders come from the design, by rank — the same order the
-        // classes and fields are listed in everywhere else in the app, and
-        // the one web lays the columns out in. Server order is not it.
+        // Columns are field names, not ids: classes define their own fields and
+        // web gives same-named ones one column. Order by design rank, not
+        // server order.
         val columns = mutableListOf<String>()
         val seen = mutableSetOf<String>()
         val orderedClasses = details?.classes.orEmpty().sortedBy { crmClass -> crmClass.rank }

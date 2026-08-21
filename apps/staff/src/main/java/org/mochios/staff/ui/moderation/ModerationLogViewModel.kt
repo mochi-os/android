@@ -23,15 +23,6 @@ import org.mochios.staff.ws.StaffEvent
 import org.mochios.staff.ws.StaffEventsBus
 import javax.inject.Inject
 
-/**
- * UI state for [ModerationLogScreen].
- *
- *   - `listingId` — when non-null, scopes the feed to a single listing
- *                   (matches the web `?listing=<id>` URL query).
- *
- * Pagination uses the same page-based contract as listings; the entry
- * count and page size mirror the web `useLoadMore` behaviour.
- */
 data class ModerationLogUiState(
     val listingId: String? = null,
     val isLoading: Boolean = true,

@@ -8,27 +8,10 @@ package org.mochios.chess.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * A chess game row. Mirrors `Game` in
- * `apps/chess/web/src/api/types/games.ts` and the `games` table in
- * `apps/chess/chess.star` (`action_list` selects every column on this record).
- *
- *  - [id] is the row UID (always present); [fingerprint] is the 9-char alias
- *    that fronts the per-entity URL — peers see and link to the fingerprint.
- *  - [identity] / [opponent] are the two players' entity IDs; the matching
- *    `_name` fields are denormalised display names captured at creation time
- *    so we can render the sidebar without an extra lookup per row.
- *  - [white] is the entity ID of whichever side plays white (resolved by the
- *    server when the game is created — random first-move colour assignment).
- *  - [status] is the same five-state enum the web uses:
- *    `"active" | "checkmate" | "stalemate" | "draw" | "resigned"`.
- *  - [winner] is the entity ID of the winning player, or `null` for an
- *    in-progress / drawn / stalemate game.
- *  - [drawOffer] holds the entity ID of the player who currently has an open
- *    draw offer to the opponent (or `null` when no offer is pending).
- *  - [fen] is the standard FEN string for the current position; [pgn] is the
- *    accumulated PGN move text. [key] is the WebSocket subscription key for
- *    the game.
- *  - [updated] / [created] are unix-seconds timestamps.
+ * A game row, mirroring `Game` in `apps/chess/web/src/api/types/games.ts`.
+ * [status] is one of `active | checkmate | stalemate | draw | resigned`;
+ * [drawOffer] is the offering player's entity id; [key] is the WebSocket
+ * subscription key; timestamps are unix seconds.
  */
 data class Game(
     val id: String = "",
@@ -48,10 +31,7 @@ data class Game(
     val created: Long = 0,
 ) {
     /**
-     * Resolve the opponent's display name from the caller's identity. Mirrors
-     * `getOpponentName` in `apps/chess/web/src/api/games.ts`. When the caller
-     * isn't either player (shouldn't happen — the server filters on identity
-     * / opponent), returns [opponentName] as a sensible fallback.
+     * Display name of the opponent, given the caller's identity.
      */
     fun opponentName(myIdentity: String): String =
         if (identity == myIdentity) opponentName else identityName
@@ -77,10 +57,8 @@ data class GameMessage(
     /** One of `"message" | "move" | "system"`. */
     val type: String = "message",
     /**
-     * For `type == "system"` rows, the structured event kind
-     * (`"resign" | "draw_offer" | "draw_accept" | "draw_decline"`) used to
-     * localise the notice per viewer. Empty for legacy rows / chat / move,
-     * in which case the renderer falls back to [body].
+     * For `system` rows: `resign | draw_offer | draw_accept | draw_decline`,
+     * used to localise the notice; empty rows fall back to [body].
      */
     val event: String = "",
     val created: Long = 0,
@@ -96,9 +74,7 @@ data class GetMessagesResponse(
 )
 
 /**
- * Reply for `-/create` — the new game's row UID and the entity ID assigned to
- * play white. The client uses the returned [id] to navigate straight into the
- * new game.
+ * Reply for `-/create`: the new game's id and the entity playing white.
  */
 data class CreateGameResponse(
     val id: String = "",
@@ -106,9 +82,8 @@ data class CreateGameResponse(
 )
 
 /**
- * A friend offered as a possible opponent on `-/new`. The shape matches what
- * `mochi.service.call("friends", "list", ...)` returns, so the same struct
- * also appears in the People app's friends call.
+ * A candidate opponent from `-/new`; same shape as the friends service's
+ * `list`.
  */
 data class NewGameFriend(
     @SerializedName("class") val klass: String = "",
@@ -123,19 +98,10 @@ data class GetNewGameResponse(
 )
 
 /**
- * Sent body for `:game/-/move`. Mirrors `MoveRequest` in
- * `apps/chess/web/src/api/types/games.ts`. The server validates each field
- * independently — see `action_move` in `chess.star`.
- *
- *  - [from] / [to] are 2-character square names (`"e2"` / `"e4"`).
- *  - [promotion] is optional and one of `"q" | "r" | "b" | "n"` when the move
- *    is a pawn promotion; otherwise empty/null.
- *  - [fen] / [pgn] / [san] reflect the post-move position the client
- *    computed locally (via chesslib) and resends so the server can stash
- *    them without re-deriving them from a starting position + move list.
- *  - [status] / [winner] are the optional terminal-state hints the client
- *    sets when chesslib reports check-mate / stale-mate / drawn-by-rule. The
- *    server validates them against the allowed values and clamps the rest.
+ * Body for `:game/-/move`, mirroring the web's `MoveRequest`. [fen] / [pgn] /
+ * [san] are the client-computed post-move position the server stores as-is;
+ * [promotion] is `q | r | b | n`; [status] / [winner] are optional
+ * terminal-state hints the server validates.
  */
 data class MoveRequest(
     val from: String,

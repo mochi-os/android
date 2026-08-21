@@ -32,16 +32,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.R
 import org.mochios.market.model.Review
 
-/**
- * "Seller reviews" list for the listing detail page. Renders each review as an
- * outlined card carrying the star rating, the absolute review timestamp, the
- * review body, and — when present — the seller's response in an indented block.
- *
- * Early-exits when there are no reviews so the caller can place it
- * unconditionally; the parent owns the section heading.
- *
- * @param reviews The seller's reviews, already ordered newest-first by the API.
- */
 @Composable
 fun SellerReviewsSection(
     reviews: List<Review>,

@@ -50,15 +50,9 @@ private sealed interface CheckUi {
 }
 
 /**
- * Simple "About" dialog shown from each feature's drawer footer. Reads the
- * installed Mochi client's versionName via PackageManager so a single
- * dialog works for every feature — no need to thread BuildConfig through.
- *
- * Also surfaces a "Check for updates" button. The download itself belongs to
- * [UpdateChecker], not to this dialog: closing the dialog leaves it running,
- * and re-opening attaches to the same transfer via [UpdateChecker.state]. Once
- * it is staged the dialog dismisses itself and calls
- * [UpdateInstaller.forcePrompt], which hands the APK to the system installer.
+ * "About" dialog with the client version and a "Check for updates" button. The
+ * download belongs to [UpdateChecker], so closing the dialog leaves it running
+ * and re-opening re-attaches.
  */
 @Composable
 fun AboutDialog(onDismiss: () -> Unit) {
@@ -108,9 +102,8 @@ fun AboutDialog(onDismiss: () -> Unit) {
 
     AlertDialog(
         onDismissRequest = {
-            // Closing mid-download no longer abandons it, but the process can
-            // still be killed — hand it to WorkManager so it resumes on the
-            // next start instead of waiting for tomorrow's poll.
+            // The process can still be killed mid-download, so hand it to
+            // WorkManager to resume on the next start.
             if (running != null) UpdateChecker.enqueueBackgroundDownload(context)
             onDismiss()
         },
@@ -139,16 +132,11 @@ fun AboutDialog(onDismiss: () -> Unit) {
                                     is UpdateStatus.Offline -> state = CheckUi.Offline
                                     is UpdateStatus.Ready -> promptInstall()
                                     is UpdateStatus.Available -> {
-                                        // Owned by UpdateChecker, not by this
-                                        // composition: it runs in the foreground for
-                                        // full network speed (a WorkManager background
-                                        // job's network is throttled as background data
-                                        // on many phones — slow even on fast wifi) and
-                                        // survives the dialog closing. Joining it is
-                                        // what gets cancelled if the dialog goes away;
-                                        // the download itself carries on, and the
-                                        // progress bar below tracks it from
-                                        // UpdateChecker.state either way.
+                                        // Owned by UpdateChecker so it survives
+                                        // the dialog closing and runs in the
+                                        // foreground - a WorkManager job's
+                                        // network is throttled as background
+                                        // data. Only the join is cancelled.
                                         UpdateChecker.startDownload(context).join()
                                         state = when (UpdateChecker.state.value) {
                                             // Staged is handled by the effect above,

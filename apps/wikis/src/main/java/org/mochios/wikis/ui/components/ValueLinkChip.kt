@@ -19,20 +19,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
-/**
- * Small tappable monospace pill that links to a page slug. Mirrors web's
- * `apps/wikis/web/src/components/value-link-chip.tsx`: a [DataChip]-shaped
- * surface with a subtle border, no copy-to-clipboard side effect, that
- * routes through [onClick] when tapped.
- *
- * Used by RedirectsScreen + WikiSettings Subscription pane (Source field).
- * The composable is intentionally lightweight — caller owns navigation, so
- * the chip itself just decorates the value and hands off to [onClick].
- *
- * @param value     The text to render in the pill. Single-line, end-ellipsis
- *                  if the surrounding row constrains the width.
- * @param onClick   Invoked on tap.
- */
 @Composable
 fun ValueLinkChip(
     value: String,

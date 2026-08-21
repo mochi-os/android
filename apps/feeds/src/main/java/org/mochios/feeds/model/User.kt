@@ -6,9 +6,8 @@
 package org.mochios.feeds.model
 
 /**
- * A person returned by the feeds backend's `users/search` proxy (which calls
- * people.users/search). `id` is a full entity id — used directly as the access
- * subject, matching web's `selectedUser.id`.
+ * A person from the feeds `users/search` proxy; [id] is a full entity id, used
+ * directly as an access subject.
  */
 data class User(
     val id: String = "",

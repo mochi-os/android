@@ -67,18 +67,7 @@ import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 
 /**
- * Seller account settings. Mirrors web's `apps/market/web/src/features/
- * account/AccountSettings`. Layout (top → bottom):
- *
- *  1. Suspension warning banner (only when `status == "suspended"` or
- *     `"banned"`), surfacing `account.reason` and a fixed restrictions
- *     blurb.
- *  2. Biography multiline text field (capped at
- *     [AccountSettingsViewModel.BIOGRAPHY_LIMIT] characters).
- *  3. Place picker (shared lib component, drives an inline map).
- *  4. Stripe card with the latest `charges_enabled` / `payouts_enabled`
- *     flags plus links to the dashboard and a "Refresh" button.
- *  5. Save button at the bottom.
+ * Seller account settings; mirrors web's `features/account/AccountSettings`.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -434,10 +423,8 @@ private fun LocationField(
 }
 
 /**
- * Compact seller-status card at the top of the Account screen. Mirrors web's
- * `SellerStatusCard` — nudges non-sellers to activate, points active sellers
- * at the seller-settings page, and flags incomplete Stripe onboarding. Hidden
- * for suspended / banned accounts (the suspension warning takes precedence).
+ * Seller-status card; mirrors web's `SellerStatusCard`. Hidden for suspended /
+ * banned accounts, where the suspension warning shows instead.
  */
 @Composable
 private fun SellerStatusCard(

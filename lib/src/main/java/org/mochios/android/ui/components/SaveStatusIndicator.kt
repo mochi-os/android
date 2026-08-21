@@ -24,17 +24,14 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 
 /**
- * Lifecycle of an auto-saved edit. Screens that persist field changes with
- * no explicit Save button drive a [SaveStatusIndicator] from this so the
- * user can tell whether their change actually reached the server.
+ * Lifecycle of an auto-saved edit, driving a [SaveStatusIndicator].
  */
 enum class SaveStatus { Idle, Saving, Saved, Error }
 
 /**
- * Subtle inline status line for auto-saved forms. Renders nothing while
- * [SaveStatus.Idle]; otherwise a small spinner/icon plus a label. Save
- * failures are also surfaced separately (a toast) — this is the persistent
- * at-a-glance indicator that stays until the next save settles.
+ * Subtle inline status line for auto-saved forms; nothing while
+ * [SaveStatus.Idle]. A failure is also toasted - this is the at-a-glance
+ * indicator that persists.
  */
 @Composable
 fun SaveStatusIndicator(

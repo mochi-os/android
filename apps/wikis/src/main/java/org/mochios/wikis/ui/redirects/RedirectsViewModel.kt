@@ -23,40 +23,17 @@ import org.mochios.wikis.model.Redirect
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for [RedirectsScreen]. Holds the redirects list and the in-flight
- * loading / error state. Mutations (set / delete) update the list optimistically
- * by reloading from the server once the call returns, matching how the web
- * page invalidates its React-Query cache.
- */
 data class RedirectsUiState(
     val isLoading: Boolean = true,
     val redirects: List<Redirect> = emptyList(),
     val error: MochiError? = null,
 )
 
-/**
- * Snackbar message dispatched by [RedirectsViewModel]. Carries a string-resource
- * id (and optional positional args) so the composable can resolve the localised
- * text at render time via [stringResource].
- */
 data class RedirectsSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
 )
 
-/**
- * ViewModel for [RedirectsScreen]. Reads `wikiId` from [SavedStateHandle] (set
- * by `WikisApp.REDIRECTS`) and exposes:
- *
- *  - [uiState] — the redirects list + loading/error
- *  - [snackbar] — one-shot success/failure messages routed to the screen's
- *    [SnackbarHostState]
- *
- * Mutations always reload the list from the server on success so a concurrent
- * change from another device or replica is reflected, rather than holding a
- * stale local edit.
- */
 @HiltViewModel
 class RedirectsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

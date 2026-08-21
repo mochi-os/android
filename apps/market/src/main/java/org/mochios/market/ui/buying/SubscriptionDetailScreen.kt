@@ -79,27 +79,6 @@ import org.mochios.market.model.SubscriptionStatus
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Per-subscription detail screen. Mirrors a thinned-down version of
- * `apps/market/web/src/features/buying/subscription-detail-page.tsx` —
- * the web side hasn't shipped this yet, so the Android layout is the
- * canonical reference for what we want once the web port arrives.
- *
- * Layout (top → bottom):
- *  - Summary card: listing thumbnail, listing title (clickable through to
- *    [org.mochios.market.ui.listing.ListingDetailScreen]), seller avatar
- *    and name, status badge, interval / amount line.
- *  - Billing info card: next billing date (`subscription.ends` while the
- *    sub is live), latest charge amount, cancellation date if a pending
- *    cancellation has been recorded.
- *  - Billing history list: the Comptroller exposes neither
- *    `subscription.charges` nor `subscription.payments` on the wire today
- *    so the list renders an empty-state placeholder; the section header
- *    stays visible so the user can see where future history will appear.
- *  - Action button row: Pause / Resume / Reactivate / Cancel, gated by
- *    the lifecycle status the same way [MySubscriptionsScreen]'s overflow
- *    menu does. Cancel goes through a [ConfirmDialog].
- */
 @Composable
 fun SubscriptionDetailScreen(
     navController: NavController,
@@ -477,11 +456,6 @@ private fun ListingThumbnail(thumbnailUrl: String?) {
     }
 }
 
-/**
- * Resolve the active session's server URL so we can build absolute
- * `/market/-/photo/{id}` URLs for the listing thumbnail. Mirrors the
- * helper in [org.mochios.market.ui.listing.ListingDetailScreen].
- */
 private fun baseUrlForContext(context: android.content.Context): String {
     return EntryPointAccessors.fromApplication(
         context.applicationContext,

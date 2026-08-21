@@ -42,16 +42,6 @@ import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.market.R
 
-/**
- * Photo carousel for listing detail. A full-width [HorizontalPager] over
- * the listing's photos with a thumbnails strip underneath; tapping any
- * thumbnail jumps the pager to that index and tapping the main image
- * fires [onPhotoTap] (the parent screen decides whether to open a
- * lightbox).
- *
- * @param photoUrls Absolute URLs for each photo, in display order.
- * @param onPhotoTap Invoked with the page index when the main image is tapped.
- */
 @Composable
 fun PhotoCarousel(
     photoUrls: List<String>,

@@ -384,16 +384,10 @@ private fun countDeepChildren(parentId: String, childrenByParent: Map<String, Li
 }
 
 /**
- * The 1-based position to ask the server to place a dragged card at.
- *
- * [columnObjects] must be the whole COLUMN in rank order, not one swimlane of
- * it: the server scopes the slot to (field, value) — `rank_move_key` in
- * projects.star lists every object sharing the target column value — and has no
- * lane dimension. Passing a lane-local list made position 2 of a lane land as
- * position 2 of the column.
- *
- * A source already in this column is excluded from the count, because the
- * server sees the list with it removed.
+ * 1-based server position for a dragged card. [columnObjects] must be the whole
+ * column in rank order, not one swimlane: the server ranks per (field, value)
+ * and has no lane dimension. The source is excluded because the server ranks
+ * without it.
  */
 internal fun dropRank(
     columnObjects: List<String>,

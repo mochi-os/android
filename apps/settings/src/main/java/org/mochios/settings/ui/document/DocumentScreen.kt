@@ -36,9 +36,8 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 
 /**
- * Read-only viewer for a single legal document (privacy / rules / terms).
- * Editing is intentionally absent here — operators edit documents (with the
- * per-language dimension) via SystemDocumentsScreen. See [DocumentApi].
+ * Read-only viewer for one legal document; editing lives in
+ * SystemDocumentsScreen.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

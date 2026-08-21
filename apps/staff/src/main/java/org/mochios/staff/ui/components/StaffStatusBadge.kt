@@ -19,19 +19,9 @@ import androidx.compose.ui.unit.dp
 import org.mochios.staff.R
 
 /**
- * Reusable pill-shaped status chip for the staff console.
- *
- * Mirrors `apps/staff/web/src/components/shared/status-badge.tsx`. The web
- * file accepts the union of every status string the staff app surfaces
- * (moderation states, listing/dispute/report/review statuses, account
- * statuses, role badges) and picks a tone for each one — Android does the
- * same here so the listings table, moderation log, account list, reports
- * board, disputes screen, and team management all share one chip.
- *
- * `status` is the raw wire string (`"active"`, `"resolved_buyer"`,
- * `"manual"`, `"admin"`...). Unknown values fall through to a neutral
- * surface chip rendering the raw lowercased string — staff still see the
- * value, just without a colour cue.
+ * Status chip for every wire status string the console shows, mirroring
+ * `apps/staff/web/src/components/shared/status-badge.tsx`; unknown values
+ * render neutrally with the raw string.
  */
 @Composable
 fun StaffStatusBadge(status: String, modifier: Modifier = Modifier) {

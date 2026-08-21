@@ -71,18 +71,6 @@ import org.mochios.words.model.playerScore
 import org.mochios.words.ui.components.WordsSidebar
 import org.mochios.android.R as MochiR
 
-/**
- * Landing screen for the Words app. Lists every game the user is in as
- * a card carrying the other players' names, the running score line, and
- * a small "your turn" badge if `current_turn` matches the caller's
- * player number.
- *
- * The hamburger opens [WordsSidebar] (same composable used by the
- * detail screen) so the user has a single navigation surface across
- * the app. The FAB and the sidebar's New Game button both open the
- * new-game screen; the list reloads on resume so a game started there is
- * present when the user backs out of the board.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WordsGameListScreen(
@@ -226,11 +214,6 @@ fun WordsGameListScreen(
     }
 }
 
-/**
- * One card per game in the landing list. Shows opponents' names as the
- * headline + score-line below. A "Your turn" badge tags games where it's
- * the caller's player slot to move.
- */
 @Composable
 private fun GameListCard(
     game: GameListItem,

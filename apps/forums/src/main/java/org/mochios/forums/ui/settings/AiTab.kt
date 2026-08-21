@@ -203,15 +203,9 @@ private fun DropdownField(
 }
 
 /**
- * Prompt row with a Default/Custom dropdown.
- *
- * @param stored the saved custom prompt — empty when the forum uses the default.
- * @param template the server default, shown only as an editable starting point;
- *                 it is never persisted and never compared against [stored].
- *
- * Choosing Custom expands an inline editor (seeded with [stored] or [template]);
- * saving persists the edited text as the custom prompt. Choosing Default collapses
- * the editor and clears the custom prompt server-side (saves an empty value).
+ * Prompt row with a Default/Custom dropdown. [stored] is the saved custom
+ * prompt (empty = default); [template] is the server default, an editing seed
+ * only - never persisted or compared against [stored].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

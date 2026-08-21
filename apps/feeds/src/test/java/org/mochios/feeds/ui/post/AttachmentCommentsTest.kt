@@ -11,11 +11,6 @@ import org.mochios.android.model.Comment
 import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.flattenComments
 
-/**
- * The lightbox count for an image is every comment in the trees anchored to
- * it, replies included - the same total the web shows - and the panel filters
- * on the top-level anchor, so a reply rides along with its parent.
- */
 class AttachmentCommentsTest {
     private fun comment(id: String, anchor: String = "", vararg children: Comment) =
         Comment(id = id, attachment = anchor, children = children.toList())

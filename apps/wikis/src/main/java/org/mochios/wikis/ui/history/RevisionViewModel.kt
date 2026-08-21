@@ -22,15 +22,6 @@ import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * UI state for [RevisionViewScreen]. Holds a single revision detail (with
- * markdown body) plus the page's current version so the screen can render
- * the "Current" badge and decide whether to surface the Revert action.
- *
- * Wiki info is loaded in parallel so the screen can wrap its body in a
- * [org.mochios.wikis.ui.components.LocalWikiContext] (needed by the markdown
- * renderer for attachment URL resolution).
- */
 data class RevisionViewUiState(
     val isLoading: Boolean = true,
     val revision: RevisionDetail? = null,
@@ -46,16 +37,6 @@ data class RevisionViewUiState(
     val previousLoading: Boolean = false,
 )
 
-/**
- * ViewModel for [RevisionViewScreen]. Reads `wikiId`, `page` and `version`
- * from [SavedStateHandle] (set by `WikisApp.PAGE_REVISION`).
- *
- * Fires two parallel loads on init: wiki info (for the wiki context) and the
- * revision content itself (`/-/<slug>/history/<version>`). The
- * `currentVersion` returned alongside the revision tells the screen whether
- * it's showing the active revision (hide Revert) or a historical one
- * (surface Revert).
- */
 @HiltViewModel
 class RevisionViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -112,12 +93,6 @@ class RevisionViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Toggle compare-changes mode. On first switch into diff mode (for a
-     * revision past version 1), lazily fetch the previous revision so its
-     * content can be diffed against this one — mirroring web, which fetches
-     * `version - 1` only when the diff is shown.
-     */
     fun toggleDiff() {
         val showing = !_uiState.value.showDiff
         _uiState.value = _uiState.value.copy(showDiff = showing)

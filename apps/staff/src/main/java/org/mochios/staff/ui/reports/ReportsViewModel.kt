@@ -28,15 +28,8 @@ import org.mochios.staff.ws.StaffEventsBus
 import javax.inject.Inject
 
 /**
- * UI state for [ReportsScreen]. Mirrors the same axes as the web
- * `ReportsPage`:
- *
- *   - `type`   — `"listing"` / `"user"` / null for any.
- *   - `status` — `"pending"` / `"reviewed"` / `"actioned"` / `"dismissed"`
- *                or null for any.
- *
- * Pagination is page-based; the repository's `listReports` accepts
- * `page` / `limit`, so we mirror the same model on Android.
+ * UI state for [ReportsScreen]. `type` is listing / user; `status` is pending /
+ * reviewed / actioned / dismissed; null means any.
  */
 data class ReportsUiState(
     val type: String? = null,
@@ -78,10 +71,9 @@ class ReportsViewModel @Inject constructor(
     private var loadJob: Job? = null
 
     /**
-     * Pages actually fetched, which is what decides the next one to ask for.
-     * Deriving it from the rows held — (size / PAGE_SIZE) + 1 — breaks as soon
-     * as a row is optimistically removed: 20 loaded minus 1 gives page 1 again,
-     * so the first page is refetched and appended as 19 duplicates.
+     * Pages actually fetched. Deriving the next page from the row count breaks
+     * after an optimistic removal: the first page is refetched and appended as
+     * duplicates.
      */
     private var pagesLoaded = 0
 
@@ -171,10 +163,8 @@ class ReportsViewModel @Inject constructor(
     }
 
     /**
-     * Submit a report action. `action` is one of `dismiss` / `warn` /
-     * `remove` / `suspend` / `ban`. Notes are optional. After a
-     * successful action, the row is optimistically dropped from the
-     * visible list (status moves out of `pending`).
+     * Submit a report action: dismiss / warn / remove / suspend / ban. The row
+     * drops from the list on success.
      */
     fun actionReport(action: String, notes: String) {
         val current = _state.value.actionDialog ?: return

@@ -76,21 +76,9 @@ private val HUE_HEIGHT = 12.dp
 private val HUE_THUMB_WIDTH = 10.dp
 
 /**
- * Colour picker mirroring the web `<ColourPicker>`: a wrapping grid of presets,
- * a 2D saturation/value field, a hue slider, and a hex field.
- *
- * Controlled by [hex] — every change flows out through [onHexChange] and comes
- * back in, so a caller that clears or overwrites the value moves the controls
- * with it. HSV drives the field and slider internally; a hex the picker cannot
- * parse is left in the text box without disturbing them, so a half-typed value
- * doesn't throw the swatch around.
- *
- * @param hex Current colour as `#rrggbb`, or "" when unset.
- * @param onHexChange Fired with the new `#rrggbb` whenever a control moves.
- * @param presets Swatches offered above the field.
- * @param hexPlaceholder Shown in the hex box while [hex] is empty.
- * @param trailing Extra controls on the preview row, after the hex box —
- *   Save / Clear buttons, or nothing when the surrounding form owns them.
+ * Colour picker mirroring the web `<ColourPicker>`, controlled by [hex] through
+ * [onHexChange]. A hex the picker cannot parse stays in the text box without
+ * moving the field and slider.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -328,9 +316,8 @@ fun ColorPicker(
 }
 
 /**
- * Parses a `#rgb` or `#rrggbb` colour, with or without the leading `#`.
- *
- * @return the colour, or null when the text is not a hex colour.
+ * Parses a `#rgb` or `#rrggbb` colour, with or without the leading `#`; null
+ * when the text is not a hex colour.
  */
 fun parseHexColor(hex: String): Color? {
     val value = hex.trim().removePrefix("#")

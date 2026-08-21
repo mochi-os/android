@@ -18,9 +18,8 @@ import org.mochios.chat.ui.settings.ChatSettingsScreen
 
 object ChatApp {
     /**
-     * HOME points at the router (resolves last-viewed chat); the router
-     * navigates onward to CHAT with the resolved id (or empty for first
-     * launch with no history) and pops itself off the back stack.
+     * HOME is the router: it resolves the last-viewed chat, navigates to CHAT
+     * and pops itself.
      */
     const val HOME = "chat/router"
     const val ROUTER = "chat/router"
@@ -114,11 +113,9 @@ fun NavGraphBuilder.chatNavGraph(
         ChatSettingsScreen(
             onBack = { navController.popBackStack() },
             onChatLeft = {
-                // Drop back to the router so last-viewed re-resolves (the
-                // left chat shouldn't reappear as the next destination).
-                // Navigate rather than pop, the same way onChatDeleted does:
-                // the router removes itself from the stack once it resolves,
-                // so popping back to it found no entry and went nowhere.
+                // Navigate to the router rather than pop back to it: it removes
+                // itself from the stack once it resolves, so there is no entry
+                // to pop to.
                 navController.navigate(ChatApp.ROUTER) {
                     popUpTo(ChatApp.CHAT) { inclusive = true }
                 }

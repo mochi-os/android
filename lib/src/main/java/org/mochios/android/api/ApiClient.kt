@@ -48,18 +48,10 @@ annotation class InvalidationInterceptor
 annotation class ServerInterceptor
 
 /**
- * Rewrite [url]'s origin — scheme, host and port — to the one named by
- * [serverUrl], leaving the path, query and fragment alone. Returns [url]
- * unchanged when it is already on that origin, or when [serverUrl] is
- * unparseable (nothing to retarget to, so leave the request as the caller
- * built it).
- *
- * Retrofit fixes its `baseUrl` when the instance is built, and every Retrofit
- * here is a `@Singleton` constructed from the server URL that happened to be
- * stored at first injection — for the core one that is before the user has had
- * a chance to choose a server at all. This lets the pinned `baseUrl` supply
- * only the path prefix (`/feeds/`, `/crm/`, …) while the origin follows the
- * user's current server.
+ * Rewrite [url]'s origin to [serverUrl], leaving path, query and fragment
+ * alone; returns [url] unchanged when already there or when [serverUrl] is
+ * unparseable. Retrofit pins its baseUrl at construction, so only the path
+ * prefix is its own.
  */
 internal fun retargetToServer(url: HttpUrl, serverUrl: String): HttpUrl {
     val server = serverUrl.toHttpUrlOrNull() ?: return url
@@ -72,9 +64,8 @@ internal fun retargetToServer(url: HttpUrl, serverUrl: String): HttpUrl {
 }
 
 /**
- * Interceptor form of [retargetToServer]. Takes the server as a supplier so it
- * is read per request rather than captured, and so ServerRetargetTest can drive
- * it without an Android context.
+ * Interceptor form of [retargetToServer]; the supplier is read per request
+ * rather than captured.
  */
 internal fun serverInterceptor(server: () -> String): Interceptor = Interceptor { chain ->
     val request = chain.request()
@@ -135,24 +126,10 @@ object ApiClient {
     }
 
     /**
-     * Watches every response for 401 (authentication failed). When seen we
-     * tear down the local session and the matching AccountManager record so
-     * the app falls back to the login screen — instead of looping forever
-     * with a dead cookie. 403 is *not* treated as session-dead: it can mean
-     * "authenticated but missing app token" (which the per-app JWT
-     * interceptors handle) or "authenticated but no permission" (legitimate).
-     *
-     * Three guards keep transient failures from signing the user out:
-     *  - the request must have carried the session we currently hold (the
-     *    cookie jar attaches exactly the stored value, so a null-at-send
-     *    session means the 401 indicts nothing);
-     *  - the stored session must be unchanged when the response arrives, so
-     *    an in-flight request from before a login/renewal can't clear the
-     *    new session it never rode;
-     *  - the response must be JSON — the client sends Accept:
-     *    application/json, so real Mochi 401s are JSON; an HTML 401 is a
-     *    captive portal or proxy answering for an unreachable server, which
-     *    says nothing about the session.
+     * Clears the session on a 401 that the session we still hold actually rode,
+     * and only for a JSON body - an HTML 401 is a captive portal or proxy. 403
+     * is left alone: it can mean a missing app token or a real permission
+     * failure.
      */
     @Provides
     @Singleton
@@ -190,25 +167,15 @@ object ApiClient {
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
-            // Outermost, so the auth, invalidation and logging interceptors
-            // below — and the cookie jar, which OkHttp consults in
-            // BridgeInterceptor after every application interceptor — all see
-            // the corrected origin rather than the one Retrofit was pinned to.
-            // Every module's client is built via okHttpClient.newBuilder(), so
-            // all sixteen Retrofit instances inherit this; the clients that
-            // deliberately fetch foreign hosts (AssetHttp, NominatimService,
-            // UpdateChecker) build from a fresh OkHttpClient.Builder() and must
-            // keep doing so, or an RSS image URL would be rewritten to the
-            // user's server.
+            // Outermost, so the auth and logging interceptors and the cookie
+            // jar all see the corrected origin. Clients that fetch foreign
+            // hosts (AssetHttp, NominatimService, UpdateChecker) must keep
+            // building from a fresh builder.
             .addInterceptor(serverInterceptor)
-            // Ask the server for JSON errors on every request. The Mochi server
-            // content-negotiates (Action.error in core/server/actions.go):
-            // without this header it serves an HTML error page, which the client
-            // then rendered as raw markup — the "ugly web-page error". With it,
-            // errors come back as structured {error, message} JSON with a
-            // localised message. Set here (ahead of the auth interceptor) so
-            // every module's client — each built via okHttpClient.newBuilder() —
-            // inherits it, which is why the per-module copies were removed.
+            // The server content-negotiates: without this header it returns an
+            // HTML error page instead of {error, message} JSON. Set here so
+            // every module's client, built via okHttpClient.newBuilder(),
+            // inherits it.
             .addInterceptor(Interceptor { chain ->
                 val request = chain.request().newBuilder()
                     .header("Accept", "application/json")
@@ -219,12 +186,9 @@ object ApiClient {
             .addInterceptor(invalidationInterceptor)
             .cookieJar(sessionManager.cookieJar)
 
-        // Debug builds only. BASIC still logs the full request URL, and OkHttp
-        // preserves application interceptors on WebSocket handshakes, so on a
-        // release build this wrote every URL - and any credential or capability
-        // carried in a query string - into logcat. MochiWebSocket already moved
-        // its token to a header for exactly this reason; that was the workaround,
-        // and this is the cause.
+        // Debug only: BASIC logs the full URL, including any credential in a
+        // query string, and OkHttp keeps application interceptors on WebSocket
+        // handshakes.
         if (BuildConfig.DEBUG) {
             val loggingInterceptor = HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BASIC

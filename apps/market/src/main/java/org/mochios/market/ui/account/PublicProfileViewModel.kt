@@ -20,12 +20,6 @@ import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
-/**
- * UI state for [PublicProfileScreen]. Holds the [Account] projection
- * returned by `accounts/get?id=<entity>`, the running reviews list (filed
- * against this account), the per-star count breakdown derived from the
- * reviews, and the pagination cursor.
- */
 data class PublicProfileUiState(
     val account: Account? = null,
     val reviews: List<Review> = emptyList(),
@@ -62,12 +56,6 @@ data class PublicProfileUiState(
     }
 }
 
-/**
- * ViewModel for [PublicProfileScreen]. Reads `accountId` from
- * [SavedStateHandle] (wired by the nav graph) and fires two parallel
- * loads: the account itself and the first page of reviews. Reviews paginate
- * via [loadMoreReviews] as the user scrolls.
- */
 @HiltViewModel
 class PublicProfileViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -161,11 +149,6 @@ class PublicProfileViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Tally up the 1–5 star buckets across the loaded review pages. Indexed
-     * by `rating - 1` so the array's index 0 is one-star, index 4 is five.
-     * Returns an all-zeros array when there are no reviews.
-     */
     private fun computeBreakdown(reviews: List<Review>): IntArray {
         val counts = IntArray(5)
         for (review in reviews) {

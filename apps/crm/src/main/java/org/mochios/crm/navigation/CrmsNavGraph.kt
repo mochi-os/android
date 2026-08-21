@@ -44,9 +44,8 @@ object CrmsApp {
     fun crmDesign(crmId: String) = "crm/crm/$crmId/design"
 
     /**
-     * The create-object form for [crmId], optionally seeded with the one field
-     * value a board column's "+" carries. Field ids and option ids are opaque
-     * server strings, so both are encoded before they go in the query.
+     * Create-object route for [crmId], seeded with the one field value a board
+     * column's "+" carries.
      */
     fun createObject(crmId: String, presetValues: Map<String, String>): String {
         val preset = presetValues.entries.firstOrNull()
@@ -144,11 +143,8 @@ fun NavGraphBuilder.crmsNavGraph(
     composable(CrmsApp.FIND_PROJECTS) {
         FindCrmsScreen(
             onBack = { navController.popBackStack() },
-            // Drop discovery from the back stack and open the CRM just joined.
-            // Popping back would land on the CRM entry that was already there,
-            // whose list view model still holds the CRMs fetched before the
-            // subscribe — so the new one wouldn't show until a manual refresh.
-            // Navigating builds a fresh entry that reloads.
+            // Navigate rather than pop: the existing CRM entry's view model
+            // still holds the pre-subscribe list.
             onCrmSubscribed = { crmId ->
                 navController.navigate(CrmsApp.crm(crmId)) {
                     popUpTo(CrmsApp.FIND_PROJECTS) { inclusive = true }
@@ -160,11 +156,8 @@ fun NavGraphBuilder.crmsNavGraph(
     composable(CrmsApp.CREATE_CRM) {
         CreateCrmScreen(
             onBack = { navController.popBackStack() },
-            // Drop the create screen and open the CRM just made. Popping back
-            // would land on the CRM entry that was already there, whose list
-            // view model still holds the CRMs fetched before the create — so
-            // the new one wouldn't show in the drawer until a manual refresh.
-            // Navigating builds a fresh entry that reloads.
+            // Navigate rather than pop: the existing CRM entry's view model
+            // still holds the pre-create list.
             onCreated = { crmId ->
                 navController.navigate(CrmsApp.crm(crmId)) {
                     popUpTo(CrmsApp.CREATE_CRM) { inclusive = true }
@@ -190,11 +183,8 @@ fun NavGraphBuilder.crmsNavGraph(
         val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
         CreateObjectScreen(
             onBack = { navController.popBackStack() },
-            // Drop the create screen and open the object just made. Popping back
-            // would land on the CRM entry that was already there, whose view
-            // model still holds the objects fetched before the create — so the
-            // new one wouldn't show until a manual refresh. Navigating builds a
-            // fresh entry that reloads.
+            // Navigate rather than pop: the existing CRM entry's view model
+            // still holds the pre-create objects.
             onCreated = { objectId ->
                 navController.navigate(CrmsApp.crmObject(crmId, objectId)) {
                     popUpTo(CrmsApp.CREATE_OBJECT) { inclusive = true }

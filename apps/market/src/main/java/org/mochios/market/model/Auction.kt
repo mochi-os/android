@@ -8,13 +8,9 @@ package org.mochios.market.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * An auction attached to a listing.
- *
- * Mirrors `Auction` in `apps/market/web/src/types/auctions.ts`. `bid` is the
- * current high bid in minor units, `bidder` is the high bidder entity id (or
- * null if no bids yet). `reserve` / `instant` are 0 when unset. `has_reserve`
- * / `reserve_met` / `mine` are computed flags only present on some response
- * shapes — keep nullable.
+ * Mirrors `Auction` in `apps/market/web/src/types/auctions.ts`. Money in minor
+ * units; `reserve` / `instant` are 0 when unset; the nullable flags appear only
+ * on some responses.
  */
 data class Auction(
     val id: String = "",
@@ -35,12 +31,8 @@ data class Auction(
 )
 
 /**
- * A bid placed against an auction.
- *
- * Mirrors `Bid` in `apps/market/web/src/types/auctions.ts`. `amount` /
- * `ceiling` are minor units (`ceiling` is the bidder's proxy max). Many
- * fields are denormalised onto the row when surfaced via `bids/mine` so the
- * UI can render a card without an extra listing fetch.
+ * Mirrors `Bid` in web `types/auctions.ts`. `ceiling` is the bidder's proxy
+ * maximum; the listing fields are denormalised onto `bids/mine` rows.
  */
 data class Bid(
     val id: String = "",
@@ -61,12 +53,9 @@ data class Bid(
 )
 
 /**
- * Shape of `bids/place` response.
- *
- * Mirrors `BidResponse` in `apps/market/web/src/types/auctions.ts`. `outbid`
- * means another active proxy bid topped this one; `instant` means the bid
- * matched the buy-it-now price and the auction closed in this bidder's
- * favour.
+ * `bids/place` response; mirrors `BidResponse` in web `types/auctions.ts`.
+ * `outbid`: another proxy bid topped this one; `instant`: the bid met the
+ * buy-now price and closed the auction.
  */
 data class BidResponse(
     val bid: Bid = Bid(),

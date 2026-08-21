@@ -46,19 +46,8 @@ import org.mochios.staff.ui.categories.CategoryDialogMode
 import org.mochios.staff.ui.categories.CategoryForm
 
 /**
- * Create/Edit dialog for staff Categories.
- *
- * Mirrors web's `<Dialog>` block in `apps/staff/web/src/features/categories/
- * categories-page.tsx`. Used by both flows:
- *
- *  - Create: dialog opens with an empty [CategoryForm]; the `active`
- *    checkbox is hidden because new categories default to active server-side.
- *  - Edit: dialog opens with [CategoryForm] pre-populated from the row; the
- *    `active` checkbox is visible.
- *
- * Submit is disabled until name + slug are both filled (mirrors web). The
- * parent dropdown lists every category except the one being edited (avoids
- * a category being its own parent).
+ * Create / edit dialog for a category. The parent dropdown excludes the
+ * category being edited.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

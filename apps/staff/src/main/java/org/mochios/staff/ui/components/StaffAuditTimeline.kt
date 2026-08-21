@@ -51,25 +51,10 @@ import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
 /**
- * Reusable per-object audit timeline.
- *
- * Renders a vertical dot-and-line history of the rows the Comptroller has
- * recorded against a given `(kind, objectId)` tuple. Mirrors the web
- * [audit-timeline](apps/staff/web/src/components/shared/audit-timeline.tsx)
- * component used by the listings / accounts / disputes / reports dialogs.
- *
- *   - `kind`     — audit-timeline kind ("listing", "order", "dispute",
- *                  "account", "review", "report", ...).
- *   - `objectId` — the underlying row id. Numeric ids are passed as decimal
- *                  strings; account ids as fingerprints.
- *
- * Empty state ("No audit history") is rendered inline. Error state is
- * surfaced as a small inline message — the timeline is decorative within
- * a host dialog, so we don't escalate to a fullscreen error.
- *
- * The composable owns a small Hilt-assisted ViewModel so callers don't
- * have to thread the repository through their own ViewModel. Embed it
- * anywhere — moderation dialogs, future detail drawers, etc.
+ * Per-object audit history, mirroring
+ * `apps/staff/web/src/components/shared/audit-timeline.tsx`. `objectId` is the
+ * row id as a string (account ids are fingerprints). Owns its own ViewModel, so
+ * it can be embedded in any dialog.
  */
 @Composable
 fun StaffAuditTimeline(
@@ -298,11 +283,6 @@ private fun actionLabel(action: String): String {
     }
 }
 
-/**
- * Extract a short human-readable detail from the audit entry's JSON `data`
- * blob. Keep this best-effort — the wire shape is open and varies per
- * action. Returns an empty string when no useful fields are present.
- */
 private fun auditDetail(entry: AuditEntry): String {
     if (entry.data.isBlank()) return ""
     val payload = try {

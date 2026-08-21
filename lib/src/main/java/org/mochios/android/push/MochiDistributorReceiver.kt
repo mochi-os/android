@@ -16,43 +16,10 @@ import org.mochios.android.account.MochiAccount
 import java.security.SecureRandom
 
 /**
- * Implements the *distributor* side of the UnifiedPush protocol. Wired by
- * the manifest fragment at `lib/android/src/distributor/AndroidManifest.xml`,
- * which is included only by builds that opt in to host the distributor (the
- * Mochi shell — `apps/menu/android/`).
- *
- * Wire protocol (UnifiedPush v3):
- *
- *   App → distributor:
- *     ACTION_REGISTER     (token, application, optional features/vapid/PI)
- *     ACTION_UNREGISTER   (token)
- *     ACTION_MESSAGE_ACK  (token)
- *
- *   Distributor → App (broadcast targeted at App's package):
- *     ACTION_NEW_ENDPOINT          (token, endpoint)
- *     ACTION_REGISTRATION_FAILED   (token, reason)
- *     ACTION_UNREGISTERED          (token)
- *     ACTION_MESSAGE               (token, bytesMessage)
- *
- * v1 scope of this receiver:
- *   - REGISTER allocates a sub_id, builds an endpoint URL on the user's
- *     active Mochi server (resolved via MochiAccount), persists the
- *     subscription via [DistributorStore], replies with NEW_ENDPOINT.
- *   - UNREGISTER drops the entry, replies with UNREGISTERED.
- *   - MESSAGE_ACK is a no-op.
- *
- * Deferred (TODO, blocked on PushService work):
- *   - Server-side push-account registration (POST to /notifications/-/push/register)
- *     so the user's Mochi server knows about the endpoint and starts
- *     directing notifications to it.
- *   - Web Push key generation (auth + p256dh keypair). Currently emits
- *     placeholder empty strings — the App-side connector library generates
- *     its own keys at register time and the distributor wouldn't normally
- *     need to know them. The placeholder fields here are for the Mochi
- *     server's records, populated when the server-side registration is
- *     wired up.
- *   - WebSocket message routing (server → distributor → MESSAGE intent).
- *     Lives in the planned PushService.
+ * Distributor side of the UnifiedPush v3 protocol, wired only by builds that
+ * host it (the Mochi shell). Apps send REGISTER / UNREGISTER / MESSAGE_ACK; the
+ * distributor broadcasts NEW_ENDPOINT, REGISTRATION_FAILED, UNREGISTERED and
+ * MESSAGE to the app.
  */
 class MochiDistributorReceiver : BroadcastReceiver() {
 
@@ -93,13 +60,6 @@ class MochiDistributorReceiver : BroadcastReceiver() {
         }
     }
 
-    /**
-     * True when [packageName] is this app, or another package signed with the
-     * same certificate. The manifest fragment describes this receiver as shared
-     * by every Mochi-signed app, so the check is by signature rather than by a
-     * single hardcoded id — today there is one APK, but a future per-app split
-     * should not have to revisit this.
-     */
     private fun isMochiSigned(context: Context, packageName: String): Boolean {
         if (packageName == context.packageName) return true
         return runCatching {

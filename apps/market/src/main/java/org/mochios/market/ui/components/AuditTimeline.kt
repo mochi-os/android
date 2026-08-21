@@ -27,16 +27,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.market.model.AuditEvent
 
-/**
- * Vertical timeline of audit events for an order, listing, or dispute.
- *
- * Per entry: dot + action key + actor name + relative timestamp. The
- * action key is rendered as-is (server-emitted `order.shipped`,
- * `dispute.opened`, …) — translating those to friendly labels happens at
- * the call site via the existing per-domain map (web's
- * `components/shared/audit-labels.ts`). Renders nothing when [events] is
- * empty so a parent screen can drop the surrounding heading.
- */
 @Composable
 fun AuditTimeline(
     events: List<AuditEvent>,

@@ -41,23 +41,6 @@ import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.android.R as MochiR
 
-/**
- * Top-level wiki settings screen. Hosts four tabs — Settings, Redirects,
- * Access, Replicas — and persists the active tab in the URL so back/forward
- * and process death restore the user to the tab they were viewing.
- *
- * Mirrors web's `apps/wikis/web/src/features/wiki/wiki-settings.tsx`. The
- * Replicas tab is hidden when the wiki is a replica itself (has a `source`).
- *
- * Tab content lives in dedicated composables:
- *  - [SettingsTab] — identity, subscription, home page, delete
- *  - [RedirectsTab] — wraps the standalone redirects body
- *  - [AccessTab] — access rules with add/revoke
- *  - [ReplicasTab] — list + remove replica subscriptions
- *
- * The screen owns the single SnackbarHost; tab view models relay messages
- * via [WikiSettingsViewModel.emit].
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WikiSettingsScreen(
@@ -87,12 +70,9 @@ fun WikiSettingsScreen(
         if (!isReplica) add(SettingsTabKey.Replicas)
     }
 
-    // Read the current tab from the URL via the live back-stack entry. A
-    // launchSingleTop navigation to the same route updates the arguments
-    // on the existing entry rather than creating a new one, and
-    // currentBackStackEntryAsState surfaces those updates as state so the
-    // tab strip re-renders. SavedStateHandle on the view model is frozen
-    // at construction time, so we deliberately don't read from it here.
+    // Read the active tab from the live back-stack entry: launchSingleTop
+    // updates the existing entry's arguments, which the view model's
+    // SavedStateHandle (frozen at construction) never sees.
     val currentEntry by navController.currentBackStackEntryAsState()
     val activeRoute = currentEntry?.arguments?.getString("tab")
         ?: viewModel.initialTab

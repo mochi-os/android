@@ -27,17 +27,8 @@ import org.mochios.staff.ws.StaffEventsBus
 import javax.inject.Inject
 
 /**
- * UI state for [AppealsScreen].
- *
- * The appeals listing has no filter axes — it always shows pending
- * appeals (the Comptroller treats every `moderation` row with
- * `action == "appealed"` and no later `upheld` / `denied` decision as
- * pending). Once a decision is taken, the row drops out of the list.
- *
- * Pagination piggybacks on the (page-less) `/appeals/list` endpoint —
- * the staff Comptroller currently returns the full set in one
- * response, but we expose [loadMore] so a future paginated server can
- * be wired in without re-shaping the screen.
+ * `appeals/list` has no filters and no server pagination; it returns every
+ * pending appeal in one response.
  */
 data class AppealsUiState(
     val isLoading: Boolean = true,
@@ -119,9 +110,7 @@ class AppealsViewModel @Inject constructor(
     }
 
     /**
-     * Submit a decision. `decision` is `upheld` (approve listing) or
-     * `denied` (keep rejected). After a successful decide, the row
-     * drops out of the visible list optimistically.
+     * `decision` is `upheld` or `denied`.
      */
     fun decideAppeal(decision: String, notes: String) {
         val current = _state.value.decideDialog ?: return

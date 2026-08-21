@@ -48,15 +48,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
-/**
- * Full-screen create form for a forum. The privacy choice is a single switch —
- * on means the forum is listed in the directory and anyone can search for it
- * (`public`), off keeps it out (`private`). The top bar carries the back button
- * and Create sits in the bottom bar.
- *
- * @param onBack leaves the screen without creating anything.
- * @param onCreated hands the new forum's id to the caller so it can open it.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateForumScreen(

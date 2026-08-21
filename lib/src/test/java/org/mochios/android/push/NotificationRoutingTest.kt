@@ -10,16 +10,9 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * Notification routing had drifted into three disagreeing lists: eleven
- * channels created at startup, ten routed by the UnifiedPush dispatcher (no
- * people, no crm), and four by the FCM service — everything else falling back
- * to Feeds, so on FCM most apps posted on the wrong channel with the wrong
- * name, importance and sound.
- *
- * Both transports now resolve through [notificationChannelFor]. These pin the
- * set against the launcher aliases so a new Mochi-app that gets a channel but
- * no alias, or the reverse, fails here rather than shipping a notification on
- * the Feeds channel or a badge on every icon.
+ * Both transports resolve a channel through [notificationChannelFor]. These pin
+ * the channel set against the launcher aliases: a channel with no alias badges
+ * every Mochi icon, and an app with no channel posts on Feeds.
  */
 class NotificationRoutingTest {
 
@@ -68,9 +61,8 @@ class NotificationRoutingTest {
     }
 
     /**
-     * A channel without an alias means the notification falls back to the
-     * implicit intent and the launcher badges every Mochi icon — which is what
-     * happened to eight apps.
+     * A channel with no alias falls back to the implicit intent, badging every
+     * Mochi icon.
      */
     @Test
     fun `every channel has a launcher alias`() {

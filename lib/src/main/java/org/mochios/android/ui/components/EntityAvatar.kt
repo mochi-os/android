@@ -39,53 +39,14 @@ import org.mochios.android.auth.SessionEntryPoint
 
 /**
  * The people app's avatar path for a person entity id, as an [EntityAvatar]
- * `src`. Null when the id is blank, which reads as "no image" and leaves the
- * initials placeholder in charge.
- *
- * One definition for every caller: a person shown in a board card, a tree row
- * and a field editor is the same person, and a path assembled separately at
- * each site is a path that can drift at each site. `RelativeAssetUrlMapper`
- * expands the leading slash against the session server.
- *
- * @param entityId The person's entity id, as stored in a user field's value.
- * @return The server-relative avatar path, or null when [entityId] is blank.
+ * `src`. Null when the id is blank, leaving the initials placeholder in charge.
  */
 fun personAvatarPath(entityId: String?): String? =
     entityId?.takeIf { id -> id.isNotBlank() }?.let { id -> "/people/$id/-/avatar" }
 
 /**
- * Circular avatar for a person entity. When `src` is provided the image is
- * loaded asynchronously and falls back to an initials circle on load failure.
- * Apps should typically point `src` at their own avatar proxy action
- * (e.g. "/feeds/<feed>/-/<post>/<comment>/asset/avatar"), keyed on a comment /
- * message / post / activity ID in that app's local DB.
- *
- * @param name   Person's display name (used for initials + content description).
- * @param src    Avatar image URL. May be absolute, or a server-relative path
- *               (e.g. "/people/<id>/-/avatar") which `RelativeAssetUrlMapper`
- *               expands against the session server. Null or a failing URL falls
- *               back to the initials placeholder.
- * @param seed   Stable identifier (usually the person's entity ID) used to pick
- *               a deterministic colour for the initials circle.
- * @param size   Avatar diameter.
- * @param shape  Avatar outline shape. Defaults to a full circle; pass a
- *               [RoundedCornerShape] for a squircle (e.g. seller profiles).
- * @param accent Optional hex colour ("#rrggbb"). When set, drawn as a 2dp ring
- *               in place of the default border.
- * @param containerColor Initials-circle fill. Defaults to a flat white avatar
- *               (the app-wide style); pass null to use the deterministic seeded
- *               colour instead.
- * @param contentColor Initials text colour. Defaults to black to pair with the
- *               white fill.
- * @param borderColor Hairline ring drawn around the avatar so it stays defined
- *               against the surface. Pass [Color.Transparent] to drop it; it is
- *               ignored when [accent] is set (the accent ring takes over).
- */
-/**
- * The session server URL (no trailing slash), pulled from `SessionManager` via
- * Hilt so composables can expand relative asset paths without each screen
- * threading the value through. Returns "" outside a Hilt application (e.g. a
- * `@Preview`), which leaves relative paths unresolved and falls back gracefully.
+ * The session server URL (no trailing slash), from `SessionManager` via Hilt.
+ * Returns "" outside a Hilt application (e.g. a `@Preview`).
  */
 @Composable
 fun rememberServerUrl(): String {
@@ -101,6 +62,11 @@ fun rememberServerUrl(): String {
     }
 }
 
+/**
+ * Circular avatar for a person entity. [src] may be absolute or server-relative
+ * ("/people/<id>/-/avatar"), which `RelativeAssetUrlMapper` expands against the
+ * session server; a blank or failing URL falls back to seeded initials.
+ */
 @Composable
 fun EntityAvatar(
     name: String,

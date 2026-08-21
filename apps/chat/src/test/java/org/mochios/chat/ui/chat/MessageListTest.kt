@@ -11,10 +11,7 @@ import org.mochios.chat.model.ChatMessage
 import java.util.TimeZone
 
 /**
- * The message list is not one item per message: it emits an optional
- * load-older row and a header at every day boundary. Both defects here came
- * from counting messages instead of the items actually emitted, and from
- * bucketing days in a different zone from the one the header is rendered in.
+ * The list emits a load-older row and day headers, not one item per message.
  */
 class MessageListTest {
 
@@ -63,11 +60,8 @@ class MessageListTest {
     }
 
     /**
-     * The zone decides where the boundary falls, which is the whole defect:
-     * these two messages are 40 minutes apart across midnight IN UTC
-     * (23:30 -> 00:10), so UTC sees two days where Sydney (10:30 -> 11:10)
-     * sees one. Group in the device zone and label in the preference zone —
-     * which defaults to UTC — and the header disagrees with the split.
+     * 23:30 -> 00:10 UTC spans midnight in UTC but not in Sydney, so the zone
+     * decides the header count.
      */
     @Test
     fun `the zone decides where a day boundary falls`() {

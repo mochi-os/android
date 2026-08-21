@@ -25,14 +25,6 @@ import org.mochios.people.model.GroupMember
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
-/**
- * State + actions for the Group detail screen. Mirrors the web
- * `group-detail.tsx` page: top section with name/description + edit
- * affordances, member list with add/remove, overflow → delete.
- *
- * Adding a member is [AddMemberViewModel]'s job — it runs on its own screen,
- * and the group reloads once a member has joined.
- */
 @HiltViewModel
 class GroupDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

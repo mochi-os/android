@@ -17,24 +17,14 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * Backing DataStore for the [RecentlyViewedStore]. Separate file from the
- * saved store so a "clear recently viewed" never touches the user's saved
- * set, and so the two stores can evolve their schemas independently.
- */
 private val Context.recentDataStore: DataStore<Preferences> by preferencesDataStore(
     name = "market_recent",
 )
 
 /**
- * Most-recent-first list of listing IDs the user has opened. Powers the
- * "Recently viewed" strip on the market home screen.
- *
- * The list is capped at [MAX] entries and de-duplicated on push: opening a
- * listing already in the list moves it to the head rather than producing a
- * second copy. Mirrors the web side's `useRecentListings` localStorage
- * helper — IDs are stored as comma-separated strings because DataStore has
- * no ordered-list preferences key (sets lose order).
+ * Most-recent-first listing ids the user has opened, capped at [MAX] and
+ * de-duplicated on push. Stored comma-separated because DataStore string sets
+ * lose order.
  */
 @Singleton
 class RecentlyViewedStore @Inject constructor(

@@ -18,14 +18,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * App-wide store for the user's saved ("read-later") posts. Saved posts live in
- * the feeds app's own per-user database on the user's node (so they persist and
- * sync across devices); this singleton keeps a synchronous in-memory mirror so
- * every post card can read [isSaved] without awaiting, while mutations apply
- * optimistically and reconcile with the server in the background.
- *
- * Mirrors the web client's lib/saved.ts. Call [load] once after entering the
- * feeds area (done by the router) to hydrate.
+ * In-memory mirror of the user's saved posts (server-side, per-user database)
+ * so cards read [isSaved] synchronously; mutations apply optimistically.
+ * Mirrors web lib/saved.ts. [load] once on entering feeds (the router does
+ * this).
  */
 @Singleton
 class SavedRepository @Inject constructor(
@@ -109,18 +105,10 @@ class SavedRepository @Inject constructor(
 }
 
 /**
- * Build the slim snapshot persisted for a post, matching the web schema so a
- * post saved on Android renders on web and vice versa.
- *
- * Despite the name, the server's `body_markdown` is the RENDERED HTML —
- * `feeds.star` sets it to `markdown(body)` — so it is what the snapshot's
- * [SavedSnapshot.bodyHtml] holds, while `body` stays the raw source. Web maps
- * the same way (`adapters.ts`: `bodyHtml: post.body_markdown`). Storing them
- * the other way round renders the raw source as HTML on the Saved screen,
- * here and on web.
- *
- * Feeds posts carry no separate author, so fall back to the external source
- * name or the feed's own name.
+ * Snapshot persisted for a post, in the web schema. The server's
+ * `body_markdown` is the rendered HTML (feeds.star sets it to
+ * `markdown(body)`), so it goes in [SavedSnapshot.bodyHtml] and `body` stays
+ * the raw source - web maps it the same way.
  */
 internal fun snapshotOf(post: Post): SavedSnapshot = SavedSnapshot(
     id = post.id,

@@ -26,9 +26,7 @@ import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
 /**
- * Valid `tab` query-string values for the activity feed. Mirrors the
- * `id` union in `useActivityTabs()` on the web (orders / listings /
- * signups / moderation / audit).
+ * Valid `tab` query-string values for the activity feed.
  */
 object DashboardTab {
     const val ORDERS = "orders"
@@ -45,19 +43,9 @@ object DashboardTab {
 }
 
 /**
- * Aggregate UI state for the staff dashboard screen.
- *
- * Per-tab item lists are kept in separate maps so switching tabs is free
- * once each tab's first page has loaded — matching the web behaviour where
- * navigating between tabs preserves scroll position and pagination cursor.
- *
- *  - [overview] is the marketplace KPI snapshot (top section).
- *  - [currentTab] is one of [DashboardTab] (defaults to `orders`).
- *  - [perTabOrders] / [perTabListings] / … hold the loaded rows.
- *  - [perTabTotal] holds the server-reported total per tab so the load-more
- *    sentinel knows when to stop. Missing key ⇒ tab not yet loaded.
- *  - [error] surfaces the first load failure to the screen as an inline
- *    error banner; subsequent successful loads clear it.
+ * Aggregate UI state for the staff dashboard. Per-tab row lists are separate
+ * maps so a tab switch needs no refetch once loaded; a missing [perTabTotal]
+ * key means the tab is unloaded.
  */
 data class DashboardUiState(
     val overviewLoading: Boolean = true,
@@ -100,19 +88,9 @@ data class DashboardUiState(
 private const val PAGE_SIZE = 20
 
 /**
- * Backs [DashboardScreen]. Owns one [MetricsOverview] fetch plus a
- * paginated activity feed per tab; each tab caches its own row buffer so
- * tab switches are instant once loaded.
- *
- * URL state: the `tab` query parameter is round-tripped via the
- * SavedStateHandle so deep links and process-death restoration land on the
- * same tab.
- *
- * The repository's `getMetricsActivity(tab, skip, limit)` returns the
- * combined [org.mochios.staff.model.ActivityData] payload but only the
- * requested tab's slot is populated. For the `audit` tab the server has
- * no first-class entry on `metrics/activity`; the screen falls back to
- * the dedicated `audit/list` endpoint in [loadAuditPage].
+ * Backs [DashboardScreen]: one metrics overview plus a paginated activity feed
+ * per tab. The `audit` tab has no slot on `metrics/activity` and falls back to
+ * `audit/list`.
  */
 @HiltViewModel
 class DashboardViewModel @Inject constructor(
@@ -135,11 +113,6 @@ class DashboardViewModel @Inject constructor(
         loadFirstPage(_state.value.currentTab)
     }
 
-    /**
-     * Switch to [tab]. Persists the choice in the SavedStateHandle so it
-     * survives process death, and kicks off the first page load when this
-     * tab hasn't been visited yet.
-     */
     fun setTab(tab: String) {
         val normalised = DashboardTab.normalise(tab)
         if (normalised == _state.value.currentTab) return

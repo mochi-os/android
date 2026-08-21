@@ -45,24 +45,9 @@ import org.mochios.staff.model.Report
 import org.mochios.staff.ui.components.StaffAuditTimeline
 
 /**
- * Modal dialog driving the moderator's "Take action on report" flow.
- *
- * Android port of the action-dialog block in
- * `apps/staff/web/src/features/reports/reports-page.tsx`.
- *
- *   - Metadata card up top: type, target (listing title or user
- *     fingerprint), seller / price for listing reports, reporter,
- *     reason, reporter's free-text details.
- *   - Action dropdown (`dismiss` / `warn` / `remove` / `suspend` /
- *     `ban`). Shown only in edit mode.
- *   - Notes textarea (optional).
- *   - Inline [StaffAuditTimeline] of the report history.
- *
- * Pass [readOnly] = true when the report is already resolved (the
- * caller checks `report.status != "pending"`) to render the same
- * metadata + history without the action picker / notes field — the
- * footer collapses to a single Close button and the title swaps to
- * the "View" variant.
+ * Moderator dialog for acting on a report. [readOnly] renders metadata and
+ * history without the action picker or notes field, for reports that are
+ * already resolved.
  */
 @Composable
 fun ReportActionDialog(

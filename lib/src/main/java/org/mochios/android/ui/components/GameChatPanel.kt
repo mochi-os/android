@@ -61,25 +61,9 @@ import java.util.Calendar
 import java.util.TimeZone
 
 /**
- * A single chat message in a game-scoped chat panel. Mirrors
- * `apps/chess/web/src/api/games.ts`'s `GameMessage` plus the chat-panel
- * polymorphism (system / move / message).
- *
- * @param id        Stable identifier (used as LazyColumn key).
- * @param game      Game ID this message belongs to.
- * @param member    Sender's entity ID. Compared against
- *                  `currentUserIdentity` to decide bubble side.
- * @param name      Sender display name.
- * @param body      Plain message body. For move messages this carries the
- *                  game-specific notation (SAN for chess, move coords for
- *                  go, the placed word for words).
- * @param type      `"message"` for regular chat bubbles, `"move"` for
- *                  centred move strips, `"system"` for italic muted notices.
- * @param event     For `"system"` rows, the structured event kind (e.g.
- *                  `"resign"`, `"draw_offer"`) used to localise the notice
- *                  per viewer. Empty for legacy rows / chat / move; the
- *                  default system renderer then falls back to [body].
- * @param created   Epoch seconds.
+ * A single chat message in a game-scoped chat panel. [type] is "message",
+ * "move" (body carries the game's notation) or "system"; [event] names the
+ * system event kind for localisation and is empty on legacy rows.
  */
 data class GameChatMessage(
     val id: String,
@@ -93,31 +77,9 @@ data class GameChatMessage(
 )
 
 /**
- * Chat panel for the three games (chess / go / words). Mirrors
- * `apps/chess/web/src/features/chess/components/chat-message-list.tsx` —
- * date-grouped, reverse-scroll-pinned, with renderer slots so each game can
- * customise its move and system rendering without duplicating the bubble
- * scaffold.
- *
- * @param messages              Newest-last (display order); the panel
- *                              auto-scrolls to the bottom on initial load
- *                              and on append.
- * @param currentUserIdentity   Identity of the logged-in user. Used to
- *                              decide bubble side for chat messages and
- *                              "You played …" framing for move messages.
- * @param hasMore               True when older pages are available; renders
- *                              the LoadMoreTrigger at the top.
- * @param isLoadingMore         True while an older page is being fetched.
- * @param onLoadMore            Called when the user nears the top.
- * @param onRetry               Called when the user taps the error-state
- *                              retry button.
- * @param moveMessageRenderer   Optional slot for game-specific move
- *                              rendering. Receives the message and an
- *                              `isSent` flag. When null, falls back to a
- *                              centred "<You|name> played <body>" line.
- * @param systemMessageRenderer Optional slot for game-specific system
- *                              messages. When null, renders `body` centred
- *                              and italic.
+ * Chat panel for chess / go / words: date-grouped, pinned to the bottom, with
+ * optional renderer slots so each game customises its move and system rows
+ * without duplicating the bubble scaffold. [messages] is newest-last.
  */
 @Composable
 fun GameChatPanel(
@@ -161,11 +123,9 @@ fun GameChatPanel(
     LaunchedEffect(grouped.size, lastIndex) {
         if (grouped.isNotEmpty() && grouped.size != lastSeen) {
             val wasInitial = lastSeen < 0
-            // For the initial paint, jump (no animation). For subsequent
-            // appends, smooth-scroll so the user sees the new message slide
-            // in. Only auto-scroll if the user was already near the bottom
-            // (within the last few items) — otherwise they're reading older
-            // history and we shouldn't yank them down.
+            // Jump on the initial paint, animate on append, and only when the
+            // user is already near the bottom - otherwise they are reading
+            // history.
             val near = listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index
                 ?.let { it >= grouped.size - 3 } ?: true
             if (wasInitial) {

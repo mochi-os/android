@@ -9,19 +9,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 
 /**
- * Cross-app leader election for which Mochi-signed app on the device
- * hosts the UnifiedPush distributor. See claude/plans/android-notifications.md
- * for the full architecture.
- *
- * Election rules:
- *  1. If `org.mochios.mochi` (the Mochi shell) is installed → it wins.
- *  2. Else, alphabetical-first installed Mochi package wins.
- *  3. Re-election when the leader is uninstalled / force-stopped /
- *     voluntarily hands over.
- *
- * State is persisted via [MochiAccount] user-data on a sentinel account
- * (cross-app, signature-protected). Implementation is deferred —
- * skeleton only for now.
+ * Which Mochi-signed app hosts the UnifiedPush distributor: the shell when
+ * installed, else the alphabetically first Mochi package.
  */
 object Election {
 
@@ -47,11 +36,6 @@ object Election {
         return installedFallbacks.firstOrNull()
     }
 
-    /**
-     * True iff the *running* app is the one that should host the
-     * distributor. Used by [PushService] to decide whether to start
-     * itself; non-leader apps see false and yield.
-     */
     fun isLeader(context: Context): Boolean {
         val elected = electedLeader(context) ?: return false
         return elected == context.packageName

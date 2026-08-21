@@ -11,13 +11,8 @@ import org.junit.Assert.assertNull
 import org.junit.Test
 
 /**
- * A tie used to score as a White win. That was not only a wrong status line:
- * passTurn resolves the winning colour to a player identity, so a jigo wrote a
- * real person as the winner of a game nobody won — into the canonical row and
- * the P2P snapshot the opponent receives.
- *
- * Reachable because the new-game dialog offers a komi of 0, and integer komi
- * makes equal totals possible.
+ * A tie (equal totals, reachable with komi 0) has no winning colour; passTurn
+ * resolves the winner colour to a player identity.
  */
 class ScoreTest {
 
@@ -48,12 +43,6 @@ class ScoreTest {
         assertEquals(Stone.WHITE, score.winner)
     }
 
-    /**
-     * Control for the fix: the old rule was `if (black > white) BLACK else
-     * WHITE`, so any equal total resolved to White. Assert the two totals are
-     * genuinely equal in the tie case, otherwise the null above could be
-     * passing for some unrelated reason.
-     */
     @Test
     fun `the tie case really is an equal score`() {
         val score = empty(13).score(komi = 0.0)

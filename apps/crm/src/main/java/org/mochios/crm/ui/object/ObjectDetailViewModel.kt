@@ -80,9 +80,8 @@ class ObjectDetailViewModel @Inject constructor(
 
     private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
     /**
-     * Emits when a comment/attachment action fails while the sheet is open.
-     * uiState.error only renders when no object is loaded, so without this
-     * the failure is invisible — the input clears and nothing appears.
+     * Comment/attachment failures while the sheet is open; uiState.error only
+     * renders when no object is loaded.
      */
     val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 

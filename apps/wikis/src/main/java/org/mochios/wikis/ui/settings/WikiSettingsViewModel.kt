@@ -23,11 +23,6 @@ import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
-/**
- * Top-level UI state for [WikiSettingsScreen]. Carries the [WikiInfo] and
- * the caller's permission set so the screen can hide tabs that the wiki
- * doesn't expose (subscribed wikis have no Replicas tab).
- */
 data class WikiSettingsUiState(
     val isLoading: Boolean = true,
     val wiki: WikiInfo? = null,
@@ -36,26 +31,11 @@ data class WikiSettingsUiState(
     val error: MochiError? = null,
 )
 
-/**
- * One-shot snackbar message dispatched by [WikiSettingsViewModel]. Tabs and
- * the host screen subscribe to the shared flow and resolve the resource id
- * at render time via `stringResource`.
- */
 data class WikiSettingsSnackbar(
     val messageRes: Int,
     val args: List<Any> = emptyList(),
 )
 
-/**
- * Host view model for the wiki settings screen. Loads the wiki info on init
- * so every tab sees the same name / fingerprint / source values, and offers
- * a shared snackbar channel + active-tab persistence.
- *
- * Per-tab data lives in dedicated tab view models ([SettingsTabViewModel],
- * [AccessTabViewModel], [ReplicasTabViewModel], plus the existing
- * [org.mochios.wikis.ui.redirects.RedirectsViewModel]) so the tabs can be
- * developed and tested in isolation.
- */
 @HiltViewModel
 class WikiSettingsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,

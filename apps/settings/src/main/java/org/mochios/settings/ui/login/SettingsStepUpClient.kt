@@ -17,10 +17,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Wires the shared StepUpDialog to the settings app's own re-authentication
- * actions (mochi.user.code.verify / totp.verify / passkey.verify /
- * oauth.verify). Mirrors apps/settings/web/src/lib/step-up-client.ts; a lib
- * component can't reference these action paths itself, so the app injects this.
+ * Settings' [StepUpClient]: the shared StepUpDialog cannot name app action
+ * paths, so the app supplies the verify calls (mirrors web's
+ * step-up-client.ts).
  */
 @Singleton
 class SettingsStepUpClient @Inject constructor(

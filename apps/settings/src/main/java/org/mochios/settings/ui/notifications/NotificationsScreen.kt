@@ -320,9 +320,8 @@ private fun NotificationCard(
 }
 
 /**
- * Moves every notification on this topic to another category, the same change
- * the Topics tab of notification preferences makes - this is the shortcut from
- * a notification you have just received.
+ * Moves the topic to another category - the same change as the Topics tab of
+ * notification preferences.
  */
 @Composable
 private fun CategoryPicker(

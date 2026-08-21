@@ -8,22 +8,10 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * One row from the staff disputes queue (`disputes/list`).
- *
- * Mirrors `Dispute` in `apps/staff/web/src/types/disputes.ts`. The `opener`
- * field is either the buyer's entity id (manual dispute opened from the
- * order detail page) or the literal string `"stripe"` when the dispute was
- * surfaced from a Stripe chargeback webhook. When `opener == "stripe"`,
- * `reason` carries Stripe's chargeback reason code (e.g.
- * `"product_not_received"`, `"fraudulent"`, `"unrecognized"`) and the
- * dispute is read-only in the staff UI — the seller must respond on Stripe
- * directly before the [evidenceDue] deadline.
- *
- * Money values are minor currency units; timestamps are unix seconds.
- *
- * [chargebackFee] and [chargebackReason] are convenience aliases for [fee]
- * and the Stripe-coded reason — exposed as nullable so the chargeback view
- * can render a "no fee charged" state cleanly when [fee] is 0.
+ * Mirrors `Dispute` in `apps/staff/web/src/types/disputes.ts`. `opener` is the
+ * buyer's entity id, or `"stripe"` for a chargeback - then `reason` is Stripe's
+ * reason code and the dispute is read-only here until [evidenceDue]. Money is
+ * in minor units, timestamps in unix seconds.
  */
 data class Dispute(
     val id: String = "",
@@ -55,37 +43,24 @@ data class Dispute(
     val title: String = "",
 ) {
     /**
-     * Convenience: chargeback fee in minor units when [opener] is `"stripe"`,
-     * else null. The chargeback view branches on this rather than checking
-     * [fee] directly so a non-chargeback dispute with a zero fee remains
-     * distinguishable from a chargeback that incurred no flat fee.
+     * [fee] for a chargeback, null otherwise - a zero-fee chargeback stays
+     * distinct from a manual dispute.
      */
     val chargebackFee: Long?
         get() = if (opener == "stripe") fee else null
 
-    /**
-     * Convenience: Stripe-coded chargeback reason (e.g. `"fraudulent"`,
-     * `"product_not_received"`) when this dispute came from a chargeback
-     * webhook, else null.
-     */
     val chargebackReason: String?
         get() = if (opener == "stripe") reason else null
 }
 
-/**
- * Result of `disputes/list`. Mirrors `DisputesResponse` in
- * `apps/staff/web/src/types/disputes.ts`. Named `DisputesListResponse` here
- * to match the existing api file imports.
- */
 data class DisputesListResponse(
     val disputes: List<Dispute> = emptyList(),
     val total: Long = 0,
 )
 
 /**
- * Dispute lifecycle status. Sourced from `event_staff_disputes_review` in
- * `apps/comptroller/starlark/disputes.star`. The status field is free-form
- * on the wire; these are the values the staff UI switches on.
+ * Known `status` values, written by `event_staff_disputes_review`; free-form on
+ * the wire.
  */
 enum class DisputeStatus {
     @SerializedName("open") OPEN,
@@ -95,13 +70,8 @@ enum class DisputeStatus {
 }
 
 /**
- * Resolution decision a moderator submits when reviewing a dispute. The
- * Comptroller validates against this exact set (see
- * `event_staff_disputes_review` in `apps/comptroller/starlark/disputes.star`);
- * the corresponding `status` is `resolved_buyer` or `resolved_seller`.
- *
- * - [BUYER] refunds the buyer (full or partial via `refund_amount`).
- * - [SELLER] resolves in the seller's favour; no refund issued.
+ * `resolved_buyer` refunds the buyer (partial via `amount`); `resolved_seller`
+ * issues no refund.
  */
 enum class DisputeResolution {
     @SerializedName("resolved_buyer") BUYER,

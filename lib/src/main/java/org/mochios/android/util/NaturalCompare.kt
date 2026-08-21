@@ -9,20 +9,9 @@ import java.text.Collator
 
 /**
  * Case-insensitive, accent-insensitive, numeric-aware comparator for in-memory
- * sorts of user-facing strings. Mirrors `naturalCompare(a, b)` from
- * `@mochi/web` and is the Android counterpart for the rule "don't sort by
- * user-facing strings in SQL — sort in the consumer".
- *
- *  - "café" sorts equal to "cafe" (accent-insensitive)
- *  - "Über" sorts equal to "uber" (case-insensitive)
- *  - "Sprint 2" sorts before "Sprint 10" (numeric-aware: digit runs compare
- *    by numeric value, not lexicographically)
- *  - Locale-undefined: uses [Collator] with [Collator.PRIMARY] strength, so
- *    behaviour is consistent regardless of viewer language.
- *
- * Use this anywhere code currently uses `compareBy(String.CASE_INSENSITIVE_ORDER)`
- * for a user-visible name/title/label sort. For mixed comparators, chain via
- * `compareBy(naturalCompare) { it.name }` or `.thenBy(NaturalCompare) { it.name }`.
+ * sorts of user-facing strings ("Sprint 2" before "Sprint 10"). Mirrors
+ * `naturalCompare` from `@mochi/web`; locale-undefined, so the order does not
+ * vary by viewer language.
  */
 object NaturalCompare : Comparator<String> {
     // PRIMARY strength compares only the base letter (a == A, é == e, ü == u).

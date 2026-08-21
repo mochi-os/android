@@ -32,31 +32,16 @@ import android.widget.Toast
 import org.mochios.android.R
 
 /**
- * How to truncate a value that's too long for the available width.
- *
- *  - [NONE]   render the full string; let the surrounding Row scroll/wrap
- *  - [MIDDLE] replace the middle with an ellipsis ("1abc…wxyz") — best for
- *             long identifiers where the head and tail are both meaningful
- *             (entity IDs, fingerprints)
- *  - [END]    standard end-truncation handled by [Text] (single line, ellipsis)
+ * How to truncate a value too long for the available width. [MIDDLE] keeps head
+ * and tail ("1abc…wxyz") for identifiers where both matter; [END] is [Text]'s
+ * own ellipsis; [NONE] renders in full.
  */
 enum class Truncate { NONE, MIDDLE, END }
 
 /**
- * Monospace pill rendering a copyable identifier (entity ID, fingerprint,
- * replica ID, hash, etc.). Tap to copy; long-press also copies and triggers
- * haptic feedback. Mirrors web's `DataChip`.
- *
- * Web measures the chip width with a JS resize observer to decide where to
- * truncate; on Android we use a simpler fixed-character rule because Compose
- * doesn't expose pre-layout text measurement at this level. The web rule is
- * "first 10 chars … last 10 chars" once the value exceeds 24 characters —
- * matched here.
- *
- * @param value     The full text. Always copied to the clipboard in full,
- *                  regardless of how it's displayed.
- * @param truncate  How to truncate the visible text. Defaults to [Truncate.NONE].
- * @param copyable  When true (default), tap/long-press copies and shows a toast.
+ * Monospace pill for a copyable identifier; tap or long-press copies. Middle
+ * truncation matches web's rule - first 10 and last 10 characters once the
+ * value exceeds 24 - and the clipboard always gets the full value.
  */
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)
 @Composable

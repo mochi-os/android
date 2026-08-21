@@ -49,12 +49,6 @@ import org.mochios.market.model.Subscription
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.StatusBadge
 
-/**
- * Seller's subscriber list at [MarketApp.SUBSCRIBERS]. Each row carries
- * the buyer name (tap → buyer profile), the listing title, the recurring
- * amount with interval suffix, a [StatusBadge], and a "Cancels on" hint
- * when the subscription has been scheduled to terminate.
- */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MySubscribersScreen(

@@ -21,11 +21,6 @@ import org.mochios.staff.model.Review
 import org.mochios.staff.repository.StaffRepository
 import javax.inject.Inject
 
-/**
- * Status filter for the reviews queue. Mirrors the web's `Select` options in
- * `apps/staff/web/src/features/reviews/reviews-page.tsx`. [ALL] sends no
- * `status` parameter so the Comptroller returns every status.
- */
 enum class ReviewStatusFilter { ALL, PUBLISHED, REMOVED }
 
 /** Wire value the Comptroller expects for the status query (or null for ALL). */
@@ -35,12 +30,6 @@ fun ReviewStatusFilter.wireValue(): String? = when (this) {
     ReviewStatusFilter.REMOVED -> "removed"
 }
 
-/**
- * UI state for [ReviewsScreen]. Mirrors web's `ReviewsPage` local state shape
- * — the active filter, the loaded reviews, the running pagination cursor,
- * and the per-row submitting flag (kept off the network model so the table
- * doesn't blink when a single row updates).
- */
 data class ReviewsUiState(
     val filter: ReviewStatusFilter = ReviewStatusFilter.ALL,
     val reviews: List<Review> = emptyList(),
@@ -60,13 +49,8 @@ sealed interface ReviewsEvent {
 }
 
 /**
- * Backing ViewModel for the staff reviews moderation screen. Loads the first
- * page on init, refetches on filter change, and exposes `restore` / `remove`
- * actions that map to the Comptroller's `reviews/action` endpoint.
- *
- * The reviews screen renders avatars via the Comptroller asset proxy
- * (`/staff/-/user/:user/asset/avatar`), built as a server-relative path at
- * the call site and resolved by the shared avatar composable.
+ * Backs the reviews moderation screen; `restore` / `remove` map to the
+ * Comptroller's `reviews/action` endpoint.
  */
 @HiltViewModel
 class ReviewsViewModel @Inject constructor(

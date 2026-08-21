@@ -19,12 +19,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
-/**
- * Qualifier for the Retrofit instance bound to the Words app's HTTP base
- * (`<server>/words/`). Mirrors the People / Chat / Go pattern so the
- * module coexists with other apps' Retrofits inside a single
- * SingletonComponent without colliding on base URL or per-app JWT.
- */
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class WordsRetrofit

@@ -31,16 +31,7 @@ import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 /**
- * UI state for [CheckoutScreen]. Holds everything the screen needs to
- * render a single checkout pass: the listing being purchased, the
- * available shipping zones, the auction context (when reached from a
- * "Complete purchase" CTA), and every editable form field.
- *
- * Money values held here are minor units; the free-text [amount] string
- * is converted on-submit via [toMinorUnits]. The selected zone is
- * carried as a [ShippingOption.id] string to match the dropdown's value
- * type — the auto-pick effect in [CheckoutViewModel.onCountryChanged]
- * fills it in for known countries.
+ * Money is in minor units; [amountText] is free text converted on submit.
  */
 data class CheckoutUiState(
     val isLoading: Boolean = true,
@@ -62,30 +53,12 @@ data class CheckoutUiState(
     val error: MochiError? = null,
 )
 
-/**
- * Side-effect events emitted by [CheckoutViewModel]. The screen collects
- * these inside a [androidx.compose.runtime.LaunchedEffect] so the
- * checkout URL can be opened in a [androidx.browser.customtabs.CustomTabsIntent]
- * once the order create succeeds.
- */
 sealed interface CheckoutEvent {
     data class OpenStripe(val url: String) : CheckoutEvent
     data class OrderComplete(val orderId: String) : CheckoutEvent
     data class ShowError(val message: String) : CheckoutEvent
 }
 
-/**
- * ViewModel for [CheckoutScreen]. Reads `listingId` from the
- * [SavedStateHandle] (set by the `MarketApp.CHECKOUT` route), loads the
- * listing detail in `init`, and tries to match the buyer's already-won
- * bid for this listing so the "Complete purchase" path skips the
- * shipping-amount UI and posts to `orders/auction` instead of
- * `orders/create`.
- *
- * Shipping address fields trigger a re-evaluation of
- * [cheapestMatchingZone] on every country change so the dropdown
- * pre-selects a covering zone without the user picking manually.
- */
 @HiltViewModel
 class CheckoutViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -119,11 +92,9 @@ class CheckoutViewModel @Inject constructor(
                     null
                 }
                 val delivery = preselectDelivery(detail.listing, detail.shipping)
-                // Seed the pay-what-you-want field with the listing's minimum so
-                // it shows a usable value rather than an empty box behind a
-                // "minimum X" label. Without this the buyer can submit an empty
-                // field, which bypasses the amount check below and surfaces a
-                // confusing "Amount must be at least X" error from the server.
+                // Seed the pay-what-you-want field with the listing minimum: an
+                // empty field skips the client-side amount check and the server
+                // rejects it.
                 val amountSeed =
                     if (detail.listing.pricing == org.mochios.market.model.PricingModel.PWYW &&
                         detail.listing.currency != null
@@ -193,14 +164,6 @@ class CheckoutViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(optionId = id)
     }
 
-    /**
-     * Submit either an `orders/create`, an `orders/auction`, or a
-     * `subscriptions/create` depending on the listing's pricing model.
-     * Subscriptions don't surface the shipping form — that branch is
-     * guarded by the screen, not here. Emits [CheckoutEvent.OpenStripe]
-     * (or [CheckoutEvent.OrderComplete] for free orders) on success and
-     * [CheckoutEvent.ShowError] on failure.
-     */
     fun submit() {
         val state = _uiState.value
         val listing = state.listing ?: return
@@ -290,9 +253,8 @@ class CheckoutViewModel @Inject constructor(
         private const val SUBSCRIBE_FAILED = "Could not start subscription"
 
         /**
-         * Tells the Comptroller to mint mochi:// return URLs for Stripe Checkout
-         * instead of https URLs. Without this, the Stripe-hosted page redirects
-         * to a mochi-os.org URL the Custom Tab can't hand back to the app.
+         * Makes the Comptroller mint `mochi://` return URLs for Stripe
+         * Checkout; https ones never route back to the app from a Custom Tab.
          */
         private const val ANDROID_PLATFORM = "android"
     }

@@ -11,28 +11,15 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 /**
- * Generates a Material 3 ColorScheme from the server's OKLCH theme anchors.
- *
- * The web drives its whole palette from `--hue`, `--hue-chroma` and `--hue-bg`
- * in OKLCH, so this builds every role in OKLCH too and converts to sRGB at the
- * end via [oklch]. Tones vary lightness and scale chroma while holding the hue,
- * which is what keeps a theme recognisably the same colour across the ramp.
- *
- * Accent roles (primary / secondary / tertiary) take `--hue`; the neutrals
- * (background / surface / outline) take `--hue-bg`, which a theme may set to a
- * different angle to tint its greys independently of its accent.
+ * Builds a Material 3 ColorScheme from the server's OKLCH theme anchors, the
+ * same space the web renders from. Accent roles take `--hue`; the neutrals take
+ * `--hue-bg`, which a theme may set to a different angle.
  */
 object ColorSchemeGenerator {
 
     /**
-     * Generate a full Material 3 ColorScheme from theme anchors.
-     *
-     * @param hue OKLCH hue (0-360), driving the accent families.
-     * @param chroma OKLCH chroma (typically 0.05-0.30). Passed through as-is —
-     *   sRGB cannot hold every lightness at every chroma, and [oklch] backs off
-     *   where it must rather than the palette pre-flattening everything.
-     * @param hueBg OKLCH hue for the neutrals.
-     * @param isDark whether to generate a dark color scheme.
+     * Generate a full Material 3 ColorScheme from theme anchors. [chroma] is
+     * passed through as-is; [oklch] backs it off where sRGB cannot hold it.
      */
     fun generate(hue: Float, chroma: Float, hueBg: Float, isDark: Boolean): ColorScheme =
         if (isDark) darkScheme(hue, hueBg, chroma) else lightScheme(hue, hueBg, chroma)

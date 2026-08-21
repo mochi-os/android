@@ -50,16 +50,8 @@ import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.android.R as MochiR
 
 /**
- * Comments surface for a single wiki page. Route: `wikis/{wikiId}/{page}/comments`.
- * Mirrors web's `PageComments` (`apps/wikis/web/src/features/wiki/page-comments.tsx`)
- * — a single column with the compose form on top (when the user can edit), an
- * empty state when no comments exist, or a thread-per-root rendered as a
- * [LazyColumn] of [WikiCommentThread] composables.
- *
- * Wraps the whole body in a [LocalWikiContext] provider so [WikiCommentThread],
- * [CommentForm], and [CommentAttachments] can resolve the per-wiki `baseURL`
- * for avatar / attachment URLs without each one having to be threaded a
- * `serverUrl + wikiId` pair.
+ * Comments for a single wiki page. Provides [LocalWikiContext] so children can
+ * build avatar and attachment URLs.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -221,12 +213,6 @@ private fun CommentsBody(
     }
 }
 
-/**
- * Loading placeholder shown while the wiki info + comment thread are
- * fetching in parallel. Mirrors web's `<PageCommentsSkeleton />` —
- * a centred spinner keeps the surface visually quiet without flashing
- * an empty state before the data arrives.
- */
 @Composable
 private fun CommentsSkeleton() {
     Box(

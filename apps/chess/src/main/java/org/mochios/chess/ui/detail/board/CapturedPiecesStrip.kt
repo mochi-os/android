@@ -32,10 +32,7 @@ import com.github.bhlangonijr.chesslib.Side
 import org.mochios.chess.R
 
 /**
- * Display order for captured pieces — least valuable first (pawn → queen).
- * Kings are omitted; they can never be captured. Mirrors
- * `CAPTURED_PIECE_ORDER` in
- * `apps/chess/web/src/features/chess/lib/chess-pieces.ts`.
+ * Least valuable first; mirrors the web's `CAPTURED_PIECE_ORDER`.
  */
 private val CAPTURED_ORDER = listOf(
     PieceType.PAWN,
@@ -45,10 +42,6 @@ private val CAPTURED_ORDER = listOf(
     PieceType.QUEEN,
 )
 
-/**
- * Per-side starting piece counts. Used to derive "captured = starting -
- * current" from any FEN. Pawn=8, rook/knight/bishop=2 each, queen=1.
- */
 private val STARTING_COUNTS: Map<PieceType, Int> = mapOf(
     PieceType.PAWN to 8,
     PieceType.KNIGHT to 2,
@@ -58,19 +51,13 @@ private val STARTING_COUNTS: Map<PieceType, Int> = mapOf(
 )
 
 /**
- * A captured-piece entry: piece type + count. The count is always >= 1.
- * When a side has captured zero of a given type, the entry is omitted
- * entirely — the strip renders a `--` placeholder instead.
+ * One captured type; [count] is at least 1, zero-count types are omitted.
  */
 data class CapturedPiece(val type: PieceType, val count: Int)
 
 /**
- * Derive the per-side captured-piece summary from the current FEN. Returns
- * (capturedByWhite, capturedByBlack) — i.e. what each colour has *taken
- * from the opponent*. Mirrors `getCapturedPiecesSummary` in
- * `apps/chess/web/src/features/chess/lib/captured-pieces.ts`, but operates
- * on the live position rather than the SAN move history (avoids needing
- * to re-derive the move list on every render).
+ * (captured by White, captured by Black), derived from the position as starting
+ * counts minus what remains, not from the move history.
  */
 fun capturedPiecesFromFen(fen: String): Pair<List<CapturedPiece>, List<CapturedPiece>> {
     return try {
@@ -111,23 +98,9 @@ fun capturedPiecesFromFen(fen: String): Pair<List<CapturedPiece>, List<CapturedP
 }
 
 /**
- * Strip showing each captured-piece type with its multiplier. Mirrors
- * `CapturedPiecesStrip` in
- * `apps/chess/web/src/features/chess/components/captured-pieces-strip.tsx`:
- * a single horizontal row of piece glyphs with small `×N` suffixes.
- *
- *  - When the side has captured nothing, renders a muted `--` placeholder
- *    so the strip's vertical space stays stable as the game progresses
- *    (avoids layout jitter the first time a piece is taken).
- *  - The piece glyphs are the colour *of the pieces captured* — i.e. the
- *    opponent's colour. The web flips with `capturedPieceColor`; this
- *    composable's `capturedByColor` parameter matches.
- *
- * @param capturedByColor Side that *did* the capturing (`'w'` or `'b'`).
- *                        Inverted internally to colour the piece glyphs.
- * @param pieces          List of captured pieces in display order.
- * @param glyphSize       Font size for each glyph; smaller in the
- *                        strip than on the board. Defaults to 16 sp.
+ * Row of captured-piece glyphs with `×N` suffixes, in the colour of the pieces
+ * taken (the opponent of [capturedByColor]). Renders a `--` placeholder when
+ * empty so the strip's height never jumps.
  */
 @Composable
 fun CapturedPiecesStrip(

@@ -18,12 +18,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * App-wide store for the user's saved ("read-later") forum posts. Saved posts
- * live in the forums app's own per-user database (so they persist and sync
- * across devices); this singleton keeps a synchronous in-memory mirror so every
- * post card can read [isSaved] without awaiting, while mutations apply
- * optimistically and reconcile with the server in the background. Mirrors the
- * web client's lib/saved.ts.
+ * App-wide store of saved (read-later) posts: a synchronous in-memory mirror so
+ * post cards can read [isSaved] without awaiting; mutations apply
+ * optimistically and reconcile with the server. Mirrors web's lib/saved.ts.
  */
 @Singleton
 class SavedRepository @Inject constructor(

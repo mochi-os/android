@@ -6,11 +6,8 @@
 package org.mochios.people.model
 
 /**
- * Public profile information for a person entity. The endpoint is location-
- * transparent — local entities are served from this server, remote ones go
- * out over P2P via `mochi.remote.stream`. The image slots (`avatar`,
- * `banner`, `favicon`) contain attachment ids; the client constructs URLs
- * to the streaming endpoints itself.
+ * Public profile of a person, local or remote. [avatar], [banner] and [favicon]
+ * are attachment ids, not URLs.
  */
 data class PersonInformation(
     val id: String = "",

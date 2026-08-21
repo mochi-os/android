@@ -19,15 +19,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Thin wrapper around [ChessApi] that unwraps the standard `{"data": ...}`
- * envelope and converts thrown [retrofit2.HttpException] / IO errors into
- * [org.mochios.android.api.MochiError] subclasses via `toMochiError`. Method
- * names mirror the web hooks in `apps/chess/web/src/hooks/useGames.ts` so it
- * stays easy to flip back and forth between layers.
- *
- * No caching layer — the chess data set is small (a user has at most a few
- * dozen active games) and TanStack-style stale-while-revalidate happens in
- * each ViewModel by re-issuing the query on resume / push event.
+ * Unwraps the `{"data": ...}` envelope and converts failures to
+ * [org.mochios.android.api.MochiError]; no cache.
  */
 @Singleton
 class ChessRepository @Inject constructor(
@@ -45,9 +38,8 @@ class ChessRepository @Inject constructor(
         try { api.getNewGameFriends().unwrap().friends } catch (e: Exception) { throw e.toMochiError() }
 
     /**
-     * Start a new game with [opponent] (entity ID). Returns the new game's
-     * row UID + the entity ID assigned to play white. The caller navigates
-     * straight into the game using the returned id.
+     * Start a game against [opponent] (entity id); returns the new game's id
+     * and who plays white.
      */
     suspend fun createGame(opponent: String): CreateGameResponse =
         try { api.createGame(opponent).unwrap() } catch (e: Exception) { throw e.toMochiError() }
@@ -55,19 +47,14 @@ class ChessRepository @Inject constructor(
     // ---- Entity-context ----
 
     /**
-     * Fetch the full state of a single game. The path segment accepts either
-     * the row UID or the 9-char fingerprint — both resolve to the same row
-     * server-side. Returns the game + the caller's identity so the UI can
-     * derive turn-state, draw-offer direction etc. without an extra call.
+     * Full state of one game, by id or fingerprint, plus the caller's identity.
      */
     suspend fun getGame(game: String): GameViewResponse =
         try { api.viewGame(game).unwrap() } catch (e: Exception) { throw e.toMochiError() }
 
     /**
-     * Cursor-paginated message list for a game. Pass `before = null` for the
-     * latest page; pass the previous response's `nextCursor` to walk
-     * backwards through history. The server clamps `limit` to [1, 100] and
-     * defaults to 30.
+     * Messages page ending before [before] (null for the newest); the server
+     * clamps [limit] to 1-100, default 30.
      */
     suspend fun getMessages(
         game: String,
@@ -90,10 +77,7 @@ class ChessRepository @Inject constructor(
     }
 
     /**
-     * Submit a fully-validated move. The client computes [MoveRequest.fen] /
-     * `pgn` / `san` locally via chesslib and resends them so the server can
-     * stash the post-move position without re-deriving anything. Returns the
-     * UID of the move message row inserted server-side.
+     * Submit a move; returns the id of the move message row.
      */
     suspend fun move(game: String, request: MoveRequest): String =
         try { api.move(game, request).unwrap().id } catch (e: Exception) { throw e.toMochiError() }
@@ -115,9 +99,7 @@ class ChessRepository @Inject constructor(
         try { api.drawDecline(game).unwrap().success } catch (e: Exception) { throw e.toMochiError() }
 
     /**
-     * Delete the game locally. Only allowed on completed (non-`active`) games
-     * — the server enforces the rule, so the UI should hide the menu item on
-     * active games but the repo doesn't second-guess.
+     * Delete the game locally; the server rejects this on active games.
      */
     suspend fun deleteGame(game: String): Boolean =
         try { api.deleteGame(game).unwrap().success } catch (e: Exception) { throw e.toMochiError() }
