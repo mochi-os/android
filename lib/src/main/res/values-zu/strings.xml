@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Kumafoni e-Samsung, hlola futhi ku-Izilungiselelo → Ukunakekelwa kwedivayisi → Izinhlelo zokusebenza ezilele, bese ususa i-Mochi uma ifakwe ohlwini.</string>
     <string name="oem_hint_allow">Vumela ngemuva</string>
     <string name="oem_hint_dismiss">Ungaphindi ukukhombise</string>
-    <string name="about_title">Iklayenti le-Mochi le-Android</string>
+    <string name="about_title">Iklayenti le-Mochi</string>
     <string name="about_version">Inguqulo %1$s</string>
     <string name="about_check_updates">Hlola izibuyekezo</string>
     <string name="about_up_to_date">Kusebenza kwesakamuva</string>

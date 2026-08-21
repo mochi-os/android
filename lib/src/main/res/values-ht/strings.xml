@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">Sou telefòn Samsung, tcheke tou Settings → Device care → Sleeping apps epi retire Mochi si li nan lis la.</string>
     <string name="oem_hint_allow">Pèmèt background</string>
     <string name="oem_hint_dismiss">Pa montre ankò</string>
-    <string name="about_title">Kliyan Mochi pou Android</string>
+    <string name="about_title">Kliyan Mochi</string>
     <string name="about_version">Vèsyon %1$s</string>
     <string name="about_check_updates">Tcheke pou mizajou</string>
     <string name="about_up_to_date">Ajou</string>

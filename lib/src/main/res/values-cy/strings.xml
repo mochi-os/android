@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">Caniatáu cefndir</string>
     <string name="oem_hint_dismiss">Peidiwch â dangos eto</string>
     <string name="about_label">Ynghylch</string>
-    <string name="about_title">Cleient Mochi ar gyfer Android</string>
+    <string name="about_title">Cleient Mochi</string>
     <string name="about_version">Fersiwn %1$s</string>
     <string name="about_check_updates">Gwirio am ddiweddariadau</string>
     <string name="about_up_to_date">Yn gyfredol</string>

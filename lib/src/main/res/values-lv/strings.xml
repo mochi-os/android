@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Atļaut fonā</string>
     <string name="oem_hint_dismiss">Vairs nerādīt</string>
     <string name="about_label">Par</string>
-    <string name="about_title">Mochi klients Android</string>
+    <string name="about_title">Mochi klients</string>
     <string name="about_version">Versija %1$s</string>
     <string name="about_check_updates">Pārbaudīt atjauninājumus</string>
     <string name="about_up_to_date">Aktuāls</string>

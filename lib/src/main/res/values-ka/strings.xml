@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung-ის ტელეფონებზე ასევე გადაამოწმეთ პარამეტრები → მოწყობილობის მოვლა → მძინარე აპლიკაციები და ამოშალეთ Mochi, თუ ჩამონათვალშია.</string>
     <string name="oem_hint_allow">ფონური რეჟიმის დაშვება</string>
     <string name="oem_hint_dismiss">აღარ მაჩვენო</string>
-    <string name="about_title">Mochi-ის კლიენტი Android-ისთვის</string>
+    <string name="about_title">Mochi-ის კლიენტი</string>
     <string name="about_version">ვერსია %1$s</string>
     <string name="about_check_updates">განახლებების შემოწმება</string>
     <string name="about_up_to_date">უახლესი ვერსიაა</string>

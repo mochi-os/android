@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">ڕێگەدان بە پاشبنەما</string>
     <string name="oem_hint_dismiss">جارێکی تر پیشان مەدە</string>
     <string name="about_label">دەربارە</string>
-    <string name="about_title">ڕاژەخوازی مۆچی بۆ ئەندرۆید</string>
+    <string name="about_title">ڕاژەخوازی مۆچی</string>
     <string name="about_version">وەشانی %1$s</string>
     <string name="about_check_updates">پشکنینی نوێکردنەوەکان</string>
     <string name="about_up_to_date">نوێترین وەشان</string>

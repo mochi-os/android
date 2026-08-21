@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">Разреши фонов режим</string>
     <string name="oem_hint_dismiss">Не показвай отново</string>
     <string name="about_label">Относно</string>
-    <string name="about_title">Mochi клиент за Android</string>
+    <string name="about_title">Mochi клиент</string>
     <string name="about_version">Версия %1$s</string>
     <string name="about_check_updates">Проверка за актуализации</string>
     <string name="about_up_to_date">Актуална версия</string>

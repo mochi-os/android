@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung फोनवर, सेटिंग्ज → डिव्हाइस केअर → स्लीपिंग ॲप्स देखील तपासा आणि सूचीबद्ध असल्यास Mochi काढून टाका.</string>
     <string name="oem_hint_allow">पार्श्वभूमीला परवानगी द्या</string>
     <string name="oem_hint_dismiss">पुन्हा दाखवू नका</string>
-    <string name="about_title">Android साठी Mochi क्लायंट</string>
+    <string name="about_title">Mochi क्लायंट</string>
     <string name="about_version">आवृत्ती %1$s</string>
     <string name="about_check_updates">अद्यतनांसाठी तपासा</string>
     <string name="about_up_to_date">अद्ययावत आहे</string>

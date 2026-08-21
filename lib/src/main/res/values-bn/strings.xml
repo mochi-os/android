@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">ব্যাকগ্রাউন্ড অনুমোদন করুন</string>
     <string name="oem_hint_dismiss">আর দেখাবেন না</string>
     <string name="about_label">সম্পর্কে</string>
-    <string name="about_title">Android-এর জন্য Mochi ক্লায়েন্ট</string>
+    <string name="about_title">Mochi ক্লায়েন্ট</string>
     <string name="about_version">সংস্করণ %1$s</string>
     <string name="about_check_updates">আপডেট খুঁজুন</string>
     <string name="about_up_to_date">হালনাগাদ আছে</string>

@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Á Samsung-símum skaltu einnig athuga Stillingar → Umhirða tækis → Sofandi forrit og fjarlægja Mochi ef það er á listanum.</string>
     <string name="oem_hint_allow">Leyfa bakgrunn</string>
     <string name="oem_hint_dismiss">Ekki sýna aftur</string>
-    <string name="about_title">Mochi-biðlari fyrir Android</string>
+    <string name="about_title">Mochi-biðlari</string>
     <string name="about_version">Útgáfa %1$s</string>
     <string name="about_check_updates">Leita að uppfærslum</string>
     <string name="about_up_to_date">Allt uppfært</string>

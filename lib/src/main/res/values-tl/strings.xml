@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Sa mga Samsung phone, tingnan din ang Settings → Device care → Sleeping apps at alisin ang Mochi kung nakalista.</string>
     <string name="oem_hint_allow">Payagan ang background</string>
     <string name="oem_hint_dismiss">Huwag nang ipakita muli</string>
-    <string name="about_title">Mochi Client para sa Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Bersyon %1$s</string>
     <string name="about_check_updates">Tingnan kung may update</string>
     <string name="about_up_to_date">Pinakabago na</string>

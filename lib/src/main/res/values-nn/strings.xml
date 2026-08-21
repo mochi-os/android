@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Tillat bakgrunn</string>
     <string name="oem_hint_dismiss">Ikkje vis igjen</string>
     <string name="about_label">Om</string>
-    <string name="about_title">Mochi-klient for Android</string>
+    <string name="about_title">Mochi-klient</string>
     <string name="about_version">Versjon %1$s</string>
     <string name="about_check_updates">Sjå etter oppdateringar</string>
     <string name="about_up_to_date">Oppdatert</string>

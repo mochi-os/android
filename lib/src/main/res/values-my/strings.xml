@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung ဖုန်းများတွင် Settings → Device care → Sleeping apps ကိုလည်း စစ်ဆေးပြီး Mochi ပါဝင်ပါက ဖယ်ရှားပါ။</string>
     <string name="oem_hint_allow">နောက်ခံကို ခွင့်ပြုပါ</string>
     <string name="oem_hint_dismiss">ထပ်မပြပါနှင့်</string>
-    <string name="about_title">Android အတွက် Mochi Client</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">ဗားရှင်း %1$s</string>
     <string name="about_check_updates">အပ်ဒိတ်များ စစ်ဆေးပါ</string>
     <string name="about_up_to_date">နောက်ဆုံးဗားရှင်းဖြစ်သည်</string>

@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">Air fònaichean Samsung, thoir sùil cuideachd air Roghainnean → Cùram an uidheim → Aplacaidean nan cadal agus thoir Mochi air falbh ma tha e air an liosta.</string>
     <string name="oem_hint_allow">Ceadaich an cùl</string>
     <string name="oem_hint_dismiss">Na seall a-rithist</string>
-    <string name="about_title">Cliant Mochi airson Android</string>
+    <string name="about_title">Cliant Mochi</string>
     <string name="about_version">Tionndadh %1$s</string>
     <string name="about_check_updates">Thoir sùil airson ùrachaidhean</string>
     <string name="about_up_to_date">Cho ùr \'s a ghabhas</string>

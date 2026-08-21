@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Lórí àwọn fóònù Samsung, tún yẹ Settings → Device care → Sleeping apps wò kí o sì yọ Mochi kúrò bí ó bá wà níbẹ̀.</string>
     <string name="oem_hint_allow">Gba ẹ̀yìn láàyè</string>
     <string name="oem_hint_dismiss">Má fi hàn mọ́</string>
-    <string name="about_title">Oníbàárà Mochi fún Android</string>
+    <string name="about_title">Oníbàárà Mochi</string>
     <string name="about_version">Ìtumọ̀ %1$s</string>
     <string name="about_check_updates">Yẹ àwọn ìmúdójúìwọ̀n wò</string>
     <string name="about_up_to_date">Ó ti wà ní tuntun</string>

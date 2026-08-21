@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung telefonlarda Sozlamalar → Qurilma parvarishi → Uxlayotgan ilovalar bo\'limini ham tekshiring va Mochi ro\'yxatda bo\'lsa, uni olib tashlang.</string>
     <string name="oem_hint_allow">Fon rejimiga ruxsat berish</string>
     <string name="oem_hint_dismiss">Boshqa ko\'rsatilmasin</string>
-    <string name="about_title">Android uchun Mochi mijozi</string>
+    <string name="about_title">Mochi mijozi</string>
     <string name="about_version">Versiya %1$s</string>
     <string name="about_check_updates">Yangilanishlarni tekshirish</string>
     <string name="about_up_to_date">Yangilangan</string>

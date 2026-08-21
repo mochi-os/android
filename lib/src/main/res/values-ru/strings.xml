@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Разрешить фоновый режим</string>
     <string name="oem_hint_dismiss">Больше не показывать</string>
     <string name="about_label">О приложении</string>
-    <string name="about_title">Клиент Mochi для Android</string>
+    <string name="about_title">Клиент Mochi</string>
     <string name="about_version">Версия %1$s</string>
     <string name="about_check_updates">Проверить обновления</string>
     <string name="about_up_to_date">Актуальная версия</string>

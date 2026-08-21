@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Dovoli ozadje</string>
     <string name="oem_hint_dismiss">Ne prikaži več</string>
     <string name="about_label">O aplikaciji</string>
-    <string name="about_title">Odjemalec Mochi za Android</string>
+    <string name="about_title">Odjemalec Mochi</string>
     <string name="about_version">Različica %1$s</string>
     <string name="about_check_updates">Preveri posodobitve</string>
     <string name="about_up_to_date">Posodobljeno</string>

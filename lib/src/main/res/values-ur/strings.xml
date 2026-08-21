@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">پس منظر کی اجازت دیں</string>
     <string name="oem_hint_dismiss">دوبارہ نہ دکھائیں</string>
     <string name="about_label">متعلق</string>
-    <string name="about_title">Mochi کلائنٹ برائے Android</string>
+    <string name="about_title">Mochi کلائنٹ</string>
     <string name="about_version">ورژن %1$s</string>
     <string name="about_check_updates">اپڈیٹس چیک کریں</string>
     <string name="about_up_to_date">تازہ ترین ہے</string>

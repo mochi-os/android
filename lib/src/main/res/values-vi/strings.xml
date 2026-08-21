@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Cho phép chạy nền</string>
     <string name="oem_hint_dismiss">Không hiển thị lại</string>
     <string name="about_label">Giới thiệu</string>
-    <string name="about_title">Ứng dụng Mochi cho Android</string>
+    <string name="about_title">Ứng dụng Mochi</string>
     <string name="about_version">Phiên bản %1$s</string>
     <string name="about_check_updates">Kiểm tra cập nhật</string>
     <string name="about_up_to_date">Đã là phiên bản mới nhất</string>

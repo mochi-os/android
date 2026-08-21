@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">백그라운드 허용</string>
     <string name="oem_hint_dismiss">다시 표시하지 않음</string>
     <string name="about_label">정보</string>
-    <string name="about_title">Android용 Mochi 클라이언트</string>
+    <string name="about_title">Mochi 클라이언트</string>
     <string name="about_version">버전 %1$s</string>
     <string name="about_check_updates">업데이트 확인</string>
     <string name="about_up_to_date">최신 버전입니다</string>

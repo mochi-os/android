@@ -193,7 +193,7 @@
     <string name="oem_hint_allow">允許背景執行</string>
     <string name="oem_hint_dismiss">唔好再顯示</string>
     <string name="about_label">關於</string>
-    <string name="about_title">Mochi Android 客戶端</string>
+    <string name="about_title">Mochi 客戶端</string>
     <string name="about_version">版本 %1$s</string>
     <string name="about_check_updates">檢查更新</string>
     <string name="about_up_to_date">已係最新版本</string>

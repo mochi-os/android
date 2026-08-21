@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Li ser telefonên Samsung, herwiha li Mîheng → Lênêrîna amûrê → Bernameyên xewê binêre û eger Mochi di lîsteyê de be jê derxe.</string>
     <string name="oem_hint_allow">Destûra paşxaneyê bide</string>
     <string name="oem_hint_dismiss">Careke din nîşan nede</string>
-    <string name="about_title">Mochi Client ji bo Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Guherto %1$s</string>
     <string name="about_check_updates">Li nûvekirinan bigere</string>
     <string name="about_up_to_date">Nûjen e</string>

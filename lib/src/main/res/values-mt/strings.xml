@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Fuq telefons Samsung, iċċekkja wkoll Settings → Device care → Sleeping apps u neħħi lil Mochi jekk hu mniżżel.</string>
     <string name="oem_hint_allow">Ippermetti l-isfond</string>
     <string name="oem_hint_dismiss">Terġax turi</string>
-    <string name="about_title">Klijent Mochi għal Android</string>
+    <string name="about_title">Klijent Mochi</string>
     <string name="about_version">Verżjoni %1$s</string>
     <string name="about_check_updates">Iċċekkja għal aġġornamenti</string>
     <string name="about_up_to_date">Aġġornat</string>

@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">बैकग्राउंड के अनुमति दीं</string>
     <string name="oem_hint_dismiss">फेर मत देखाईं</string>
     <string name="about_label">बारे में</string>
-    <string name="about_title">Android खातिर Mochi क्लाइंट</string>
+    <string name="about_title">Mochi क्लाइंट</string>
     <string name="about_version">संस्करण %1$s</string>
     <string name="about_check_updates">अपडेट खोजीं</string>
     <string name="about_up_to_date">अद्यतन बा</string>

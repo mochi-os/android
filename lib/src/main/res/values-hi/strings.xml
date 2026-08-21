@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">पृष्ठभूमि की अनुमति दें</string>
     <string name="oem_hint_dismiss">दोबारा न दिखाएँ</string>
     <string name="about_label">परिचय</string>
-    <string name="about_title">Android के लिए Mochi क्लाइंट</string>
+    <string name="about_title">Mochi क्लाइंट</string>
     <string name="about_version">संस्करण %1$s</string>
     <string name="about_check_updates">अपडेट देखें</string>
     <string name="about_up_to_date">अद्यतित है</string>

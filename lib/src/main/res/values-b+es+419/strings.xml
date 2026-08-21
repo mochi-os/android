@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">En teléfonos Samsung, también revisa Ajustes → Mantenimiento del dispositivo → Aplicaciones en suspensión y quita Mochi si aparece en la lista.</string>
     <string name="oem_hint_allow">Permitir en segundo plano</string>
     <string name="oem_hint_dismiss">No volver a mostrar</string>
-    <string name="about_title">Cliente de Mochi para Android</string>
+    <string name="about_title">Cliente de Mochi</string>
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Buscar actualizaciones</string>
     <string name="about_up_to_date">Actualizado</string>

@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">Povolit pozadí</string>
     <string name="oem_hint_dismiss">Příště nezobrazovat</string>
     <string name="about_label">O aplikaci</string>
-    <string name="about_title">Klient Mochi pro Android</string>
+    <string name="about_title">Klient Mochi</string>
     <string name="about_version">Verze %1$s</string>
     <string name="about_check_updates">Zkontrolovat aktualizace</string>
     <string name="about_up_to_date">Aktuální</string>

@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Zezwól na tło</string>
     <string name="oem_hint_dismiss">Nie pokazuj ponownie</string>
     <string name="about_label">Informacje</string>
-    <string name="about_title">Klient Mochi dla Androida</string>
+    <string name="about_title">Klient Mochi</string>
     <string name="about_version">Wersja %1$s</string>
     <string name="about_check_updates">Sprawdź aktualizacje</string>
     <string name="about_up_to_date">Aktualne</string>

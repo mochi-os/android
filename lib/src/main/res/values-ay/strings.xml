@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">Qhipankañ munt\'asiña</string>
     <string name="oem_hint_dismiss">Janiw uñstayañ wasitaxa</string>
     <string name="about_label">Akatxa</string>
-    <string name="about_title">Android Mochi Cliente</string>
+    <string name="about_title">Mochi Cliente</string>
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Machaqachawinak uñakipaña</string>
     <string name="about_up_to_date">Machaqakiwa</string>

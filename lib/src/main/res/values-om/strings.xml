@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Bilbila Samsung irratti, akkasumas Settings → Device care → Sleeping apps ilaali, yoo tarreeffame Mochi haquu.</string>
     <string name="oem_hint_allow">Duubaan hayyami</string>
     <string name="oem_hint_dismiss">Lammata hin agarsiisin</string>
-    <string name="about_title">Maamilticha Mochi Android</string>
+    <string name="about_title">Maamilticha Mochi</string>
     <string name="about_version">Verzhinii %1$s</string>
     <string name="about_check_updates">Haaromsa sakatta\'i</string>
     <string name="about_up_to_date">Haaromfameera</string>

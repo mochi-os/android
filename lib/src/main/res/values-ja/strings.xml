@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">バックグラウンドを許可</string>
     <string name="oem_hint_dismiss">次回から表示しない</string>
     <string name="about_label">情報</string>
-    <string name="about_title">Android 版 Mochi クライアント</string>
+    <string name="about_title">Mochi クライアント</string>
     <string name="about_version">バージョン %1$s</string>
     <string name="about_check_updates">アップデートを確認</string>
     <string name="about_up_to_date">最新です</string>

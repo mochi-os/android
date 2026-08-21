@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">A wayoyin Samsung, kuma ka duba Saituna → Kulawar na\'ura → Manhajojin barci ka cire Mochi idan tana cikin jeri.</string>
     <string name="oem_hint_allow">Ba da izinin bayan fage</string>
     <string name="oem_hint_dismiss">Kada a sake nunawa</string>
-    <string name="about_title">Mochi Client don Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Sigar %1$s</string>
     <string name="about_check_updates">Duba sabuntawa</string>
     <string name="about_up_to_date">Yana nan a kwanannan</string>

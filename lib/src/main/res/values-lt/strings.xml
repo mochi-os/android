@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Leisti fone</string>
     <string name="oem_hint_dismiss">Daugiau nerodyti</string>
     <string name="about_label">Apie</string>
-    <string name="about_title">Mochi klientas, skirtas Android</string>
+    <string name="about_title">Mochi klientas</string>
     <string name="about_version">Versija %1$s</string>
     <string name="about_check_updates">Tikrinti, ar yra naujinių</string>
     <string name="about_up_to_date">Naujausia versija</string>

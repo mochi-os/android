@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">Ar ghutháin Samsung, seiceáil freisin Socruithe → Cúram an ghléis → Aipeanna ina gcodladh agus bain Mochi as má tá sé liostaithe.</string>
     <string name="oem_hint_allow">Ceadaigh an cúlra</string>
     <string name="oem_hint_dismiss">Ná taispeáin arís</string>
-    <string name="about_title">Cliant Mochi le haghaidh Android</string>
+    <string name="about_title">Cliant Mochi</string>
     <string name="about_version">Leagan %1$s</string>
     <string name="about_check_updates">Seiceáil le haghaidh nuashonruithe</string>
     <string name="about_up_to_date">Cothrom le dáta</string>

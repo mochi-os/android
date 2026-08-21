@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">Samsung telefonoetan, egiaztatu Ezarpenak → Gailuaren mantenua → Lo dauden aplikazioak eta kendu Mochi zerrendan badago.</string>
     <string name="oem_hint_allow">Baimendu atzeko planoa</string>
     <string name="oem_hint_dismiss">Ez erakutsi berriro</string>
-    <string name="about_title">Mochi bezeroa Androiderako</string>
+    <string name="about_title">Mochi bezeroa</string>
     <string name="about_version">%1$s bertsioa</string>
     <string name="about_check_updates">Egiaztatu eguneraketak</string>
     <string name="about_up_to_date">Egunean</string>
