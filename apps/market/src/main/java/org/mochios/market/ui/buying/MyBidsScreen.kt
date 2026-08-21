@@ -22,7 +22,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -51,6 +50,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
@@ -196,7 +196,7 @@ private fun BidRow(
             StatusBadge(status = bid.status?.name?.lowercase() ?: "")
             if (bid.status == org.mochios.market.model.BidStatus.WON && bid.listing != null) {
                 Spacer(Modifier.height(6.dp))
-                Button(onClick = { onCompletePurchase(bid.listing) }) {
+                MochiButton(onClick = { onCompletePurchase(bid.listing) }) {
                     Icon(
                         Icons.Default.ShoppingCart,
                         contentDescription = null,

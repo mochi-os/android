@@ -24,7 +24,6 @@ import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -148,7 +147,7 @@ fun PostTagsButton(
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
                 keyboardActions = KeyboardActions(onDone = { submit() }),
                 trailingIcon = {
-                    IconButton(onClick = submit, enabled = newLabel.isNotBlank()) {
+                    MochiIconButton(onClick = submit, enabled = newLabel.isNotBlank()) {
                         Icon(
                             Icons.Default.Add,
                             contentDescription = stringResource(R.string.tags_add),
@@ -189,14 +188,14 @@ private fun TagMenuRow(
             modifier = Modifier.weight(1f)
         )
         if (tunable && qid != null && onAdjustInterest != null) {
-            IconButton(onClick = { onAdjustInterest(qid, "up") }, modifier = Modifier.size(36.dp)) {
+            MochiIconButton(onClick = { onAdjustInterest(qid, "up") }, modifier = Modifier.size(36.dp)) {
                 Icon(
                     Icons.Default.ThumbUp,
                     contentDescription = stringResource(R.string.tags_interest_up),
                     modifier = Modifier.size(16.dp)
                 )
             }
-            IconButton(
+            MochiIconButton(
                 onClick = { onAdjustInterest(qid, "down") },
                 modifier = Modifier.size(36.dp)
             ) {
@@ -206,7 +205,7 @@ private fun TagMenuRow(
                     modifier = Modifier.size(16.dp)
                 )
             }
-            IconButton(
+            MochiIconButton(
                 onClick = { onAdjustInterest(qid, "remove") },
                 modifier = Modifier.size(36.dp)
             ) {
@@ -218,7 +217,7 @@ private fun TagMenuRow(
             }
         }
         if (onRemove != null) {
-            IconButton(onClick = { onRemove(tag.id) }, modifier = Modifier.size(36.dp)) {
+            MochiIconButton(onClick = { onRemove(tag.id) }, modifier = Modifier.size(36.dp)) {
                 Icon(
                     Icons.Default.Delete,
                     contentDescription = stringResource(R.string.tags_delete),

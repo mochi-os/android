@@ -20,12 +20,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -39,6 +36,9 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
@@ -117,12 +117,10 @@ fun GeneralTab(
             title = stringResource(R.string.projects_settings_delete_project),
             headerAlignment = Alignment.CenterVertically,
             action = {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showDeleteConfirm = true },
                     enabled = !uiState.isDeleting,
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error
-                    )
+                    tone = MochiButtonTone.Destructive,
                 ) {
                     if (uiState.isDeleting) {
                         CircularProgressIndicator(
@@ -249,7 +247,7 @@ private fun EditableIdentityRow(
                 minLines = if (singleLine) 1 else 3,
                 modifier = Modifier.weight(1f)
             )
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     onSave(draft.trim())
                     isEditing = false
@@ -261,7 +259,7 @@ private fun EditableIdentityRow(
                     contentDescription = stringResource(MochiR.string.common_save)
                 )
             }
-            IconButton(onClick = {
+            MochiIconButton(onClick = {
                 draft = value
                 isEditing = false
             }) {
@@ -284,7 +282,7 @@ private fun EditableIdentityRow(
             } else {
                 Text(text = value, modifier = Modifier.weight(1f, fill = false))
             }
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     draft = value
                     isEditing = true

@@ -36,16 +36,13 @@ import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.outlined.Edit
@@ -86,9 +83,12 @@ import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
@@ -159,7 +159,7 @@ fun ProfileScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.people_profile_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.people_open_sidebar),
@@ -168,7 +168,7 @@ fun ProfileScreen(
                     },
                     actions = {
                         if (state.info != null) {
-                            IconButton(onClick = { showPreview = true }) {
+                            MochiIconButton(onClick = { showPreview = true }) {
                                 Icon(
                                     Icons.Filled.Visibility,
                                     contentDescription = stringResource(R.string.people_profile_preview),
@@ -224,7 +224,7 @@ private fun ErrorBlock(padding: PaddingValues, onRetry: () -> Unit) {
             color = MaterialTheme.colorScheme.error,
         )
         Spacer(Modifier.height(12.dp))
-        Button(onClick = onRetry) {
+        MochiButton(onClick = onRetry) {
             Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.people_profile_retry))
@@ -624,7 +624,7 @@ private fun BioSection(
                         else MaterialTheme.colorScheme.onSurfaceVariant,
             )
             val savingBio = state.savingField == ProfileField.BIO
-            Button(
+            MochiButton(
                 onClick = { viewModel.saveBio() },
                 enabled = dirty && !tooLong && !savingBio,
             ) {
@@ -707,7 +707,7 @@ private fun FaviconSection(
                     }
                 }
             }
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onUpload,
                 enabled = !uploading,
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
@@ -863,7 +863,7 @@ private fun ProfilePreviewDialog(
                 }
 
                 // ---- Close button (top-right X) ----
-                IconButton(
+                MochiIconButton(
                     onClick = onDismiss,
                     modifier = Modifier
                         .align(Alignment.TopEnd)

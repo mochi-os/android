@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ComposeBarAttachments
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.feeds.R
 
 /**
@@ -70,7 +70,7 @@ internal fun feedsReplyBanner(
                 color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = onCancelReply, modifier = Modifier.size(24.dp)) {
+            MochiIconButton(onClick = onCancelReply, modifier = Modifier.size(24.dp)) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.feeds_cancel_reply),

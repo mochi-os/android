@@ -18,7 +18,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.StarOutline
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -34,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
@@ -92,7 +92,7 @@ fun WriteReviewForm(
                 minLines = 3,
                 modifier = Modifier.fillMaxWidth(),
             )
-            Button(
+            MochiButton(
                 onClick = { onSubmit(rating, body) },
                 enabled = !submitting && rating in 1..5,
             ) {

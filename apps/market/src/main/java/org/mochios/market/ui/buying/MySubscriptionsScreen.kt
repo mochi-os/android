@@ -24,7 +24,6 @@ import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -53,6 +52,7 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
@@ -207,7 +207,7 @@ private fun SubscriptionRow(
         StatusBadge(status = sub.status?.name?.lowercase() ?: "")
         Box {
             var menu by remember { mutableStateOf(false) }
-            IconButton(onClick = { menu = true }, enabled = !mutating) {
+            MochiIconButton(onClick = { menu = true }, enabled = !mutating) {
                 Icon(
                     Icons.Default.MoreHoriz,
                     contentDescription = stringResource(R.string.market_subscriptions_actions_label),

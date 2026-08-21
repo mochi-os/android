@@ -37,19 +37,15 @@ import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -69,6 +65,10 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Category
@@ -134,7 +134,7 @@ fun HomeScreen(
         currentRoute = MarketApp.HOME,
         titleRes = R.string.market_title,
         actions = {
-            IconButton(onClick = { viewModel.openFilterSheet() }) {
+            MochiIconButton(onClick = { viewModel.openFilterSheet() }) {
                 Icon(
                     Icons.Default.FilterList,
                     contentDescription = stringResource(R.string.market_filter_open),
@@ -236,7 +236,7 @@ private fun HomeContent(
             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
             trailingIcon = if (searchInput.isNotEmpty()) {
                 {
-                    IconButton(onClick = onClearSearch) {
+                    MochiIconButton(onClick = onClearSearch) {
                         Icon(
                             Icons.Default.Close,
                             contentDescription = stringResource(R.string.market_search_clear),
@@ -280,7 +280,7 @@ private fun HomeContent(
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.weight(1f),
                             )
-                            TextButton(onClick = onClearRecent) {
+                            MochiTextButton(onClick = onClearRecent) {
                                 Text(stringResource(R.string.market_recently_viewed_clear))
                             }
                         }
@@ -361,7 +361,7 @@ private fun HomeContent(
                     title = stringResource(R.string.market_empty_title),
                     subtitle = stringResource(R.string.market_empty_subtitle),
                     action = {
-                        OutlinedButton(onClick = onClearAll) {
+                        MochiOutlinedButton(onClick = onClearAll) {
                             Text(stringResource(R.string.market_filter_clear))
                         }
                     },
@@ -518,7 +518,7 @@ private fun OnboardingCard(
             )
             Spacer(modifier = Modifier.height(12.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(onClick = onActivate, enabled = !activating) {
+                MochiButton(onClick = onActivate, enabled = !activating) {
                     Icon(
                         Icons.Default.Storefront,
                         contentDescription = null,
@@ -527,7 +527,7 @@ private fun OnboardingCard(
                     Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     Text(stringResource(R.string.market_onboarding_activate))
                 }
-                TextButton(onClick = onDismiss, enabled = !activating) {
+                MochiTextButton(onClick = onDismiss, enabled = !activating) {
                     Text(stringResource(R.string.market_onboarding_dismiss))
                 }
             }

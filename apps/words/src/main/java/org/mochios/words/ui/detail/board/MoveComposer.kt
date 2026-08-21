@@ -19,11 +19,9 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Cancel
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,6 +32,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.R
 import org.mochios.words.engine.MoveDraft
@@ -114,14 +114,14 @@ private fun RowScope.ExchangeRow(
     onExchangeCancel: () -> Unit,
     onExchangeConfirm: () -> Unit,
 ) {
-    OutlinedButton(
+    MochiOutlinedButton(
         onClick = onExchangeCancel,
         enabled = !isExchanging,
     ) {
         Text(stringResource(R.string.words_detail_cancel))
     }
     Spacer(modifier = Modifier.weight(1f, fill = true))
-    Button(
+    MochiButton(
         onClick = onExchangeConfirm,
         enabled = exchangeSelected > 0 && !isExchanging,
     ) {
@@ -155,7 +155,7 @@ private fun RowScope.ComposerRow(
     onRecall: () -> Unit,
     onSubmit: () -> Unit,
 ) {
-    OutlinedButton(
+    MochiOutlinedButton(
         onClick = onRecall,
         enabled = canRecallMove,
         contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 10.dp, vertical = 4.dp),
@@ -230,7 +230,7 @@ private fun RowScope.ComposerRow(
         }
     }
 
-    Button(
+    MochiButton(
         onClick = onSubmit,
         enabled = canSubmit,
         contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 12.dp, vertical = 4.dp),

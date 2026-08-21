@@ -19,13 +19,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
@@ -46,7 +44,9 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.android.R as MochiR
@@ -144,7 +144,7 @@ fun CreateObjectScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_create_object_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack, enabled = !uiState.isCreating) {
+                    MochiIconButton(onClick = onBack, enabled = !uiState.isCreating) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -171,7 +171,7 @@ fun CreateObjectScreen(
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                         }
-                        Button(
+                        MochiButton(
                             onClick = {
                                 // A preset from a mixed-class board can carry
                                 // another class's option; keep only values the

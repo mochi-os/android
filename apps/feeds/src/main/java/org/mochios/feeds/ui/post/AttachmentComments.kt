@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -28,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.ui.component.CommentItem
@@ -105,7 +105,7 @@ internal fun AttachmentComments(
             }
             if (others > 0) {
                 item(key = "toggle") {
-                    TextButton(
+                    MochiTextButton(
                         onClick = { showAll = !showAll },
                         modifier = Modifier.padding(horizontal = 8.dp)
                     ) {

@@ -33,9 +33,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -43,7 +41,6 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -68,6 +65,9 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
@@ -150,13 +150,13 @@ fun DesignScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_design_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
                     }
                 },
                 actions = {
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.projects_design_more_options))
                         }
                         MochiDropdownMenu(
@@ -392,7 +392,7 @@ private fun ImportDesignDialog(
                                             )
                                         }
                                     }
-                                    TextButton(onClick = { onSelectTemplate(template) }) {
+                                    MochiTextButton(onClick = { onSelectTemplate(template) }) {
                                         Text(stringResource(R.string.projects_design_use))
                                     }
                                 }
@@ -408,7 +408,7 @@ private fun ImportDesignDialog(
                     fontWeight = FontWeight.SemiBold
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { filePicker.launch("application/json") },
                     modifier = Modifier.fillMaxWidth()
                 ) {

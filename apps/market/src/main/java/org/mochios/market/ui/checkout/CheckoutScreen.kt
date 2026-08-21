@@ -25,7 +25,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -57,6 +56,7 @@ import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiScaffold
@@ -194,7 +194,7 @@ private fun SubscriptionBody(
                 }
             }
         }
-        Button(
+        MochiButton(
             onClick = onSubscribe,
             enabled = !submitting,
             modifier = Modifier.fillMaxWidth().height(48.dp),
@@ -295,7 +295,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
             deliveryIsShipping = state.delivery == DeliveryMethod.SHIPPING,
         )
 
-        Button(
+        MochiButton(
             onClick = { viewModel.submit() },
             enabled = state.delivery != null && !state.submitting && pwywAmountOk,
             modifier = Modifier.fillMaxWidth().height(48.dp),

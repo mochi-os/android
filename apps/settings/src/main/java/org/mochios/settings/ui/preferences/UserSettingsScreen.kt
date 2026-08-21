@@ -19,12 +19,10 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
@@ -44,6 +42,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.NaturalCompare
 import java.util.Locale
@@ -249,7 +249,7 @@ fun UserSettingsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.settings_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.common_back),
@@ -280,7 +280,7 @@ fun UserSettingsScreen(
             }
             item(key = "reset") {
                 Spacer(Modifier.height(16.dp))
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showResetConfirm = true },
                     modifier = Modifier.fillMaxWidth(),
                 ) {

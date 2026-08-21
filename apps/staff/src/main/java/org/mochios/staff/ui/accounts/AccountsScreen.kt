@@ -31,9 +31,7 @@ import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -62,6 +60,8 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Account
@@ -193,7 +193,7 @@ private fun AccountsBody(
             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
             trailingIcon = if (searchInput.isNotEmpty()) {
                 {
-                    IconButton(onClick = onClearSearch) {
+                    MochiIconButton(onClick = onClearSearch) {
                         Icon(
                             Icons.Default.Close,
                             contentDescription = stringResource(R.string.staff_accounts_search_clear),
@@ -334,7 +334,7 @@ private fun AccountActionRow(
 ) {
     val status = account.status.ifBlank { "active" }
     Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-        IconButton(onClick = onHistory) {
+        MochiIconButton(onClick = onHistory) {
             Icon(
                 Icons.Default.History,
                 contentDescription = stringResource(R.string.staff_accounts_history),
@@ -342,21 +342,21 @@ private fun AccountActionRow(
         }
         // Suspend appears only for active sellers (mirroring web).
         if (status == "active" && account.seller != 0) {
-            OutlinedButton(onClick = { onAction(AccountActionType.SUSPEND) }) {
+            MochiOutlinedButton(onClick = { onAction(AccountActionType.SUSPEND) }) {
                 Text(stringResource(R.string.staff_accounts_suspend))
             }
         }
         if (status == "suspended") {
-            OutlinedButton(onClick = { onAction(AccountActionType.UNSUSPEND) }) {
+            MochiOutlinedButton(onClick = { onAction(AccountActionType.UNSUSPEND) }) {
                 Text(stringResource(R.string.staff_accounts_unsuspend))
             }
         }
         if (status != "banned") {
-            OutlinedButton(onClick = { onAction(AccountActionType.BAN) }) {
+            MochiOutlinedButton(onClick = { onAction(AccountActionType.BAN) }) {
                 Text(stringResource(R.string.staff_accounts_ban))
             }
         } else {
-            OutlinedButton(onClick = { onAction(AccountActionType.UNBAN) }) {
+            MochiOutlinedButton(onClick = { onAction(AccountActionType.UNBAN) }) {
                 Text(stringResource(R.string.staff_accounts_unban))
             }
         }
@@ -488,7 +488,7 @@ private fun FilterDropdown(
     var expanded by remember { mutableStateOf(false) }
     val currentLabel = options.firstOrNull { it.first == current }?.second ?: anyLabel
     Box(modifier = modifier) {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { expanded = true },
             modifier = Modifier.fillMaxWidth(),
         ) {

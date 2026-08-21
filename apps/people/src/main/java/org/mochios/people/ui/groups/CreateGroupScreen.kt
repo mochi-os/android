@@ -18,11 +18,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -40,6 +38,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
@@ -77,7 +77,7 @@ fun CreateGroupScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.people_groups_create)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack, enabled = !uiState.isCreating) {
+                    MochiIconButton(onClick = onBack, enabled = !uiState.isCreating) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -103,7 +103,7 @@ fun CreateGroupScreen(
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(
+                    MochiButton(
                         onClick = { viewModel.createGroup(name, description) },
                         enabled = !nameInvalid && !uiState.isCreating,
                         modifier = Modifier.fillMaxWidth()

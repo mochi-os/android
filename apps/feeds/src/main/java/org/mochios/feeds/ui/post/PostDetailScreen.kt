@@ -44,14 +44,12 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -91,6 +89,8 @@ import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
 import org.mochios.android.ui.components.ReactionBar
@@ -151,7 +151,7 @@ fun PostDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.feeds_post), maxLines = 1) },
                 navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
+                    MochiIconButton(onClick = onNavigateBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -160,13 +160,13 @@ fun PostDetailScreen(
                 },
                 actions = {
                     if (permissions.manage) {
-                        IconButton(onClick = { onEditPost(viewModel.feedId, viewModel.postId) }) {
+                        MochiIconButton(onClick = { onEditPost(viewModel.feedId, viewModel.postId) }) {
                             Icon(
                                 Icons.Default.Edit,
                                 contentDescription = stringResource(MochiR.string.common_edit)
                             )
                         }
-                        IconButton(onClick = { showDeleteDialog = true }) {
+                        MochiIconButton(onClick = { showDeleteDialog = true }) {
                             Icon(
                                 Icons.Default.Delete,
                                 contentDescription = stringResource(MochiR.string.common_delete)
@@ -180,7 +180,7 @@ fun PostDetailScreen(
                         // this entry to show.
                         post?.source?.url?.takeIf { it.isNotEmpty() }?.let { sourceUrl ->
                             Box {
-                                IconButton(onClick = { showOverflowMenu = true }) {
+                                MochiIconButton(onClick = { showOverflowMenu = true }) {
                                     Icon(
                                         Icons.Default.MoreVert,
                                         contentDescription = stringResource(MochiR.string.common_more_options)
@@ -330,7 +330,7 @@ internal fun PostDetailContent(
                         color = MaterialTheme.colorScheme.error
                     )
                     Spacer(modifier = Modifier.height(16.dp))
-                    TextButton(onClick = { viewModel.loadPost() }) {
+                    MochiTextButton(onClick = { viewModel.loadPost() }) {
                         Text(stringResource(MochiR.string.common_retry))
                     }
                 }

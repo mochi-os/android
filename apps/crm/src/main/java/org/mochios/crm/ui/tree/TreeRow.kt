@@ -31,7 +31,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DriveFileMove
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -56,6 +55,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -214,7 +214,7 @@ fun TreeRow(
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (node.hasChildren) {
-                    IconButton(onClick = onToggleExpand, modifier = Modifier.size(32.dp)) {
+                    MochiIconButton(onClick = onToggleExpand, modifier = Modifier.size(32.dp)) {
                         Icon(
                             imageVector = if (node.isExpanded) {
                                 Icons.Default.ExpandLess
@@ -244,7 +244,7 @@ fun TreeRow(
                 Spacer(modifier = Modifier.weight(1f))
 
                 Box {
-                    IconButton(
+                    MochiIconButton(
                         onClick = { showContextMenu = true },
                         modifier = Modifier.size(32.dp)
                     ) {

@@ -34,7 +34,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -42,7 +41,6 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -67,6 +65,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -119,7 +119,7 @@ fun ConnectedAccountsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.accounts_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                     }
                 },
@@ -283,7 +283,7 @@ private fun AccountRow(
                 )
             }
             Box {
-                IconButton(onClick = { menu = true }) {
+                MochiIconButton(onClick = { menu = true }) {
                     Icon(Icons.Default.MoreHoriz, contentDescription = null)
                 }
                 MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
@@ -447,7 +447,7 @@ private fun VerifyDialog(
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                TextButton(onClick = onResend) {
+                MochiTextButton(onClick = onResend) {
                     Text(stringResource(R.string.accounts_verify_resend))
                 }
             }

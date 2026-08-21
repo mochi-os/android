@@ -23,7 +23,6 @@ import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -47,6 +46,7 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.model.Appeal
@@ -222,7 +222,7 @@ private fun AppealRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
             )
-            OutlinedButton(onClick = onDecideClick) {
+            MochiOutlinedButton(onClick = onDecideClick) {
                 Text(stringResource(R.string.staff_appeals_decide))
             }
         }

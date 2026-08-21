@@ -23,9 +23,7 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -42,6 +40,8 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -109,7 +109,7 @@ fun ShippingZonesEditor(
         }
 
         Spacer(Modifier.padding(top = 8.dp))
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { creating = true },
             modifier = Modifier.fillMaxWidth(),
         ) {
@@ -188,7 +188,7 @@ private fun ZoneRow(
                 )
             }
         }
-        IconButton(onClick = onEdit) {
+        MochiIconButton(onClick = onEdit) {
             Icon(
                 Icons.Default.Edit,
                 contentDescription = stringResource(R.string.market_editor_zone_edit),
@@ -196,7 +196,7 @@ private fun ZoneRow(
                 modifier = Modifier.size(20.dp),
             )
         }
-        IconButton(onClick = onDelete) {
+        MochiIconButton(onClick = onDelete) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.market_editor_zone_delete),

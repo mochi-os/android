@@ -23,12 +23,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -50,7 +48,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
@@ -127,7 +127,7 @@ fun FindWikisScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.wikis_find_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -377,7 +377,7 @@ private fun SubscribeControl(
     isPending: Boolean,
     onSubscribe: () -> Unit,
 ) {
-    Button(onClick = onSubscribe, enabled = !isPending) {
+    MochiButton(onClick = onSubscribe, enabled = !isPending) {
         if (isPending) {
             CircularProgressIndicator(
                 modifier = Modifier.size(18.dp),

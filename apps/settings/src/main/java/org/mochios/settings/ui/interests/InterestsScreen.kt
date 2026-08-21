@@ -30,7 +30,6 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
@@ -55,6 +54,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.theme.interestColor
 import org.mochios.settings.R
@@ -86,7 +86,7 @@ fun InterestsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.interests_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -163,7 +163,7 @@ private fun SummaryCard(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.weight(1f),
                 )
-                IconButton(onClick = onRegenerate, enabled = !isRegenerating) {
+                MochiIconButton(onClick = onRegenerate, enabled = !isRegenerating) {
                     if (isRegenerating) {
                         CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
                     } else {
@@ -278,7 +278,7 @@ private fun InterestRow(
                         .padding(horizontal = 8.dp, vertical = 2.dp),
                 )
                 Spacer(Modifier.width(8.dp))
-                IconButton(onClick = onRemove) {
+                MochiIconButton(onClick = onRemove) {
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.interests_remove),

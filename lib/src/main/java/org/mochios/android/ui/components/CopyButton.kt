@@ -10,7 +10,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -59,7 +58,7 @@ fun CopyButton(
 
     val label = contentDescription ?: stringResource(R.string.common_copy)
 
-    IconButton(
+    MochiIconButton(
         onClick = {
             clipboard.setText(AnnotatedString(value))
             copied = true

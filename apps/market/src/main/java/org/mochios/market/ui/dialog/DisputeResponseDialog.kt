@@ -29,7 +29,6 @@ import androidx.compose.material.icons.filled.VideoFile
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -50,6 +49,7 @@ import androidx.core.net.toUri
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.DisputeEvidence
@@ -121,7 +121,7 @@ fun DisputeResponseDialog(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         enabled = !submitting,
                         onClick = { pickFiles.launch("*/*") },
                     ) {

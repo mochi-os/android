@@ -27,7 +27,6 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -194,7 +193,7 @@ fun PersonPicker(
                 modifier = Modifier.weight(1f)
             )
             if (hasSelection) {
-                IconButton(
+                MochiIconButton(
                     onClick = {
                         lastSelected = null
                         onClear()

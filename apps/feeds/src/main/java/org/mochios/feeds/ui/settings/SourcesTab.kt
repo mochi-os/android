@@ -40,7 +40,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Slider
@@ -68,6 +67,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.mochiDialogCardColors
 import org.mochios.feeds.R
@@ -412,14 +412,14 @@ private fun SourceCard(
             // RSS and memories sources support an on-demand poll; Mochi feeds
             // sync on their own schedule, so the refresh action is hidden there.
             if (source.type == "rss" || source.type == "feed/memories") {
-                IconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
+                MochiIconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
                     Icon(Icons.Outlined.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
                 }
             }
-            IconButton(onClick = onEdit, modifier = Modifier.size(36.dp)) {
+            MochiIconButton(onClick = onEdit, modifier = Modifier.size(36.dp)) {
                 Icon(Icons.Outlined.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(20.dp))
             }
-            IconButton(onClick = onRemove, modifier = Modifier.size(36.dp)) {
+            MochiIconButton(onClick = onRemove, modifier = Modifier.size(36.dp)) {
                 Icon(
                     Icons.Outlined.Delete,
                     contentDescription = stringResource(R.string.feeds_remove),

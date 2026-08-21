@@ -36,9 +36,7 @@ import androidx.compose.material.icons.outlined.SwapHoriz
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -89,6 +87,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ws.rememberGameWebSocket
 import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
@@ -204,7 +204,7 @@ fun WordsGameDetailScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -273,7 +273,7 @@ fun WordsGameDetailScreen(
                             horizontalArrangement = Arrangement.spacedBy(4.dp),
                         ) {
                             for (letter in row) {
-                                OutlinedButton(
+                                MochiOutlinedButton(
                                     onClick = { viewModel.selectBlankLetter(letter) },
                                     modifier = Modifier.size(40.dp),
                                     contentPadding = PaddingValues(0.dp),
@@ -727,7 +727,7 @@ private fun WordsGameHeader(
         },
         actions = {
             if (onOpenChat != null) {
-                IconButton(onClick = onOpenChat) {
+                MochiIconButton(onClick = onOpenChat) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.Message,
                         contentDescription = stringResource(R.string.words_detail_action_open_chat),
@@ -737,7 +737,7 @@ private fun WordsGameHeader(
             }
             var menuOpen by remember { mutableStateOf(false) }
             Box {
-                IconButton(onClick = { menuOpen = true }) {
+                MochiIconButton(onClick = { menuOpen = true }) {
                     Icon(
                         imageVector = Icons.Filled.MoreHoriz,
                         contentDescription = stringResource(R.string.words_detail_action_more),

@@ -62,18 +62,14 @@ import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -148,11 +144,15 @@ import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -521,7 +521,7 @@ fun FeedScreen(
                     // Slightly shorter than the 64dp default to reclaim vertical space.
                     expandedHeight = 52.dp,
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.feeds_title)
@@ -529,7 +529,7 @@ fun FeedScreen(
                         }
                     },
                     actions = {
-                        IconButton(onClick = {
+                        MochiIconButton(onClick = {
                             // A manual refresh intentionally returns to the top, so
                             // don't let the anchor-restore effect pull the reader
                             // back to the post they were on when the new list lands.
@@ -546,7 +546,7 @@ fun FeedScreen(
                         }
                         NotificationBell(onClick = onOpenNotifications)
                         if (permissions.manage) {
-                            IconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
+                            MochiIconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
                                 Icon(
                                     Icons.Default.Add,
                                     contentDescription = stringResource(R.string.feeds_new_post)
@@ -554,7 +554,7 @@ fun FeedScreen(
                             }
                         }
                         Box {
-                            IconButton(onClick = { showOverflowMenu = true }) {
+                            MochiIconButton(onClick = { showOverflowMenu = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(MochiR.string.common_more_options)
@@ -823,7 +823,7 @@ fun FeedScreen(
                                             // Mirror the web's "All caught up" state: when the
                                             // unread filter has emptied the list, offer a way
                                             // back to every post instead of dead-ending.
-                                            OutlinedButton(onClick = { viewModel.setUnreadOnly(false) }) {
+                                            MochiOutlinedButton(onClick = { viewModel.setUnreadOnly(false) }) {
                                                 Icon(
                                                     Icons.AutoMirrored.Filled.ArrowForward,
                                                     contentDescription = null,
@@ -835,7 +835,7 @@ fun FeedScreen(
                                         } else if (permissions.manage) {
                                             // An owner of a genuinely empty feed can create
                                             // the first post straight from here.
-                                            Button(
+                                            MochiButton(
                                                 onClick = {
                                                     onNavigateToCreatePost(viewModel.feedId)
                                                 }
@@ -1121,7 +1121,7 @@ private fun CommentReplyPreview(
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        IconButton(onClick = onCancel) {
+        MochiIconButton(onClick = onCancel) {
             Icon(
                 Icons.Default.Close,
                 contentDescription = stringResource(R.string.feeds_cancel_reply),
@@ -2139,7 +2139,7 @@ private fun FeedBanner(banner: String, feedId: String) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             HtmlContent(html = banner, modifier = Modifier.weight(1f))
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     prefs.edit { putString(prefKey, contentHash) }
                     dismissed = true
@@ -2265,7 +2265,7 @@ private fun LightboxCommentsPreview(
                 modifier = Modifier.fillMaxWidth().noRippleClickable(onViewPost),
             )
         }
-        TextButton(onClick = onViewPost) {
+        MochiTextButton(onClick = onViewPost) {
             Text(stringResource(R.string.feeds_view_post))
         }
     }

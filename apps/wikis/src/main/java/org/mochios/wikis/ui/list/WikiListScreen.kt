@@ -29,21 +29,17 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.RssFeed
-import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -72,11 +68,15 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
@@ -174,7 +174,7 @@ fun WikiListScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.wikis_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.wikis_open_sidebar),
@@ -183,7 +183,7 @@ fun WikiListScreen(
                     },
                     actions = {
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(
                                     Icons.Default.MoreHoriz,
                                     contentDescription = stringResource(MochiR.string.common_more_options),
@@ -336,7 +336,7 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
                 color = MaterialTheme.colorScheme.error,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            TextButton(onClick = onRetry) {
+            MochiTextButton(onClick = onRetry) {
                 Text(stringResource(MochiR.string.common_retry))
             }
         }
@@ -426,7 +426,7 @@ private fun WikiCard(
             }
             if (isSubscribed) {
                 Box {
-                    IconButton(onClick = { showMenu = true }) {
+                    MochiIconButton(onClick = { showMenu = true }) {
                         Icon(
                             Icons.Default.MoreHoriz,
                             contentDescription = stringResource(MochiR.string.common_more_options),
@@ -505,7 +505,7 @@ private fun EmptyWikis(
         }
 
         item("create") {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onCreate,
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -624,7 +624,7 @@ private fun SubscribableRow(
                     )
                 }
             }
-            Button(
+            MochiButton(
                 onClick = onSubscribe,
                 enabled = !isSubscribing,
             ) {

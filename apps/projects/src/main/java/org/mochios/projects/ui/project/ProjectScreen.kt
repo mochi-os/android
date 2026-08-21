@@ -58,7 +58,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TextField
@@ -107,6 +106,7 @@ import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -266,7 +266,7 @@ private fun ProjectDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
                     }
                 }
@@ -308,7 +308,7 @@ private fun AllProjectsContent(
                 TopAppBar(
                     title = { Text(stringResource(R.string.projects_all_projects)) },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.projects_list_title)
@@ -317,7 +317,7 @@ private fun AllProjectsContent(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
-                        IconButton(onClick = { viewModel.toggleSearch() }) {
+                        MochiIconButton(onClick = { viewModel.toggleSearch() }) {
                             Icon(
                                 Icons.Default.Search,
                                 contentDescription = stringResource(R.string.projects_list_search)
@@ -412,7 +412,7 @@ private fun ProjectSearchBar(
     }
     TopAppBar(
         navigationIcon = {
-            IconButton(onClick = onClose) {
+            MochiIconButton(onClick = onClose) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = stringResource(MochiR.string.common_back)
@@ -428,7 +428,7 @@ private fun ProjectSearchBar(
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
                     if (query.isNotEmpty()) {
-                        IconButton(onClick = { onQueryChange("") }) {
+                        MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = stringResource(MochiR.string.common_close)
@@ -503,7 +503,7 @@ private fun ProjectRow(
                 }
             }
             Box {
-                IconButton(onClick = { showMenu = true }) {
+                MochiIconButton(onClick = { showMenu = true }) {
                     Icon(
                         Icons.Default.MoreHoriz,
                         contentDescription = stringResource(MochiR.string.common_more_options)
@@ -660,7 +660,7 @@ private fun ProjectContent(
                         )
                     },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.projects_list_title)
@@ -669,14 +669,14 @@ private fun ProjectContent(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
-                        IconButton(onClick = { showSearch = true }) {
+                        MochiIconButton(onClick = { showSearch = true }) {
                             Icon(
                                 Icons.Default.Search,
                                 contentDescription = stringResource(R.string.projects_search)
                             )
                         }
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(R.string.projects_more)

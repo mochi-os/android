@@ -39,9 +39,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -81,6 +79,8 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
@@ -136,14 +136,14 @@ fun FeedListScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.feeds_title)) },
                 actions = {
-                    IconButton(onClick = onNavigateToFindFeeds) {
+                    MochiIconButton(onClick = onNavigateToFindFeeds) {
                         Icon(Icons.Default.Search, contentDescription = stringResource(R.string.feeds_find_feeds))
                     }
-                    IconButton(onClick = onNavigateToCreateFeed) {
+                    MochiIconButton(onClick = onNavigateToCreateFeed) {
                         Icon(Icons.Default.Add, contentDescription = stringResource(R.string.feeds_create_feed))
                     }
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(MochiR.string.common_more_options))
                         }
                         MochiDropdownMenu(
@@ -305,7 +305,7 @@ private fun GlobalRssExportDialog(
                         maxLines = 3
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = {
                             clipboard.setClip(
                                 ClipData.newPlainText(clipboardLabel, globalRssUrl).toClipEntry(),
@@ -316,7 +316,7 @@ private fun GlobalRssExportDialog(
                         Text(stringResource(R.string.feeds_copy_url))
                     }
                 } else {
-                    OutlinedButton(onClick = { viewModel.generateGlobalRssUrl(mode) }) {
+                    MochiOutlinedButton(onClick = { viewModel.generateGlobalRssUrl(mode) }) {
                         Text(stringResource(R.string.feeds_generate_rss_url))
                     }
                 }

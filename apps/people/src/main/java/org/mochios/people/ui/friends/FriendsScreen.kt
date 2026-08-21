@@ -40,13 +40,11 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -73,9 +71,11 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.Friend
@@ -165,7 +165,7 @@ fun FriendsScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.people_friends_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.people_open_sidebar),
@@ -173,14 +173,14 @@ fun FriendsScreen(
                         }
                     },
                     actions = {
-                        IconButton(onClick = onOpenNotifications) {
+                        MochiIconButton(onClick = onOpenNotifications) {
                             Icon(
                                 Icons.Default.Notifications,
                                 contentDescription = stringResource(MochiR.string.common_notifications),
                             )
                         }
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(R.string.people_friends_more),
@@ -255,7 +255,7 @@ fun FriendsScreen(
                             horizontalArrangement = Arrangement.End,
                         ) {
                             Box {
-                                TextButton(onClick = { sortMenuOpen = true }) {
+                                MochiTextButton(onClick = { sortMenuOpen = true }) {
                                     Icon(
                                         Icons.Default.Sort,
                                         contentDescription = null,
@@ -358,7 +358,7 @@ private fun WelcomeBanner(onDismiss: () -> Unit) {
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
                 )
             }
-            IconButton(onClick = onDismiss) {
+            MochiIconButton(onClick = onDismiss) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.people_welcome_dismiss),
@@ -464,13 +464,13 @@ private fun FriendRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
-            IconButton(onClick = onMessage) {
+            MochiIconButton(onClick = onMessage) {
                 Icon(
                     Icons.AutoMirrored.Filled.Chat,
                     contentDescription = stringResource(R.string.people_friends_message),
                 )
             }
-            IconButton(onClick = onRemove) {
+            MochiIconButton(onClick = onRemove) {
                 Icon(
                     Icons.Default.PersonRemove,
                     contentDescription = stringResource(R.string.people_friends_remove),

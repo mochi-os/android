@@ -38,7 +38,6 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
@@ -59,6 +58,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
@@ -280,24 +280,24 @@ private fun ViewRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-        IconButton(onClick = onMoveUp, enabled = canMoveUp, modifier = Modifier.size(32.dp)) {
+        MochiIconButton(onClick = onMoveUp, enabled = canMoveUp, modifier = Modifier.size(32.dp)) {
             Icon(
                 Icons.Default.KeyboardArrowUp,
                 contentDescription = stringResource(R.string.crm_views_move_up),
                 modifier = Modifier.size(18.dp),
             )
         }
-        IconButton(onClick = onMoveDown, enabled = canMoveDown, modifier = Modifier.size(32.dp)) {
+        MochiIconButton(onClick = onMoveDown, enabled = canMoveDown, modifier = Modifier.size(32.dp)) {
             Icon(
                 Icons.Default.KeyboardArrowDown,
                 contentDescription = stringResource(R.string.crm_views_move_down),
                 modifier = Modifier.size(18.dp),
             )
         }
-        IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
+        MochiIconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
             Icon(Icons.Default.Edit, contentDescription = stringResource(MochiR.string.common_edit), modifier = Modifier.size(18.dp))
         }
-        IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+        MochiIconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),

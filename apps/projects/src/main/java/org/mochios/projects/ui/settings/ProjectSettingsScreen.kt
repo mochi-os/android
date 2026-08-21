@@ -20,9 +20,7 @@ import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -51,6 +49,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.Section
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
@@ -109,7 +109,7 @@ fun ProjectSettingsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_settings_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
                     }
                 },
@@ -216,7 +216,7 @@ private fun SubscriberSettings(
         Section(
             title = stringResource(R.string.projects_settings_unsubscribe_section),
             action = {
-                OutlinedButton(onClick = { showConfirm = true }) {
+                MochiOutlinedButton(onClick = { showConfirm = true }) {
                     Text(stringResource(R.string.projects_settings_unsubscribe))
                 }
             },

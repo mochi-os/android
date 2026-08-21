@@ -26,14 +26,12 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -52,6 +50,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
@@ -211,7 +211,7 @@ private fun AccessSubjectCard(
                             )
                         }
                 }
-                IconButton(onClick = onRevoke) {
+                MochiIconButton(onClick = onRevoke) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.access_revoke),
@@ -320,7 +320,7 @@ private fun AddAccessDialog(
                         ) {
                             Column {
                                 state.userSearchResults.take(5).forEach { user ->
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = {
                                             selectedSubject = user.fingerprint ?: user.id
                                             selectedName = user.name
@@ -353,7 +353,7 @@ private fun AddAccessDialog(
                         ) {
                             Column {
                                 state.groups.forEach { group ->
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = {
                                             // Groups are subjects prefixed with @.
                                             selectedSubject = "@${group.id}"

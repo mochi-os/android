@@ -29,7 +29,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Text
@@ -47,6 +46,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Link
@@ -156,7 +156,7 @@ fun LinksSection(
                 modifier = Modifier.weight(1f),
             )
             if (canWrite) {
-                IconButton(onClick = { showAddSheet = true }) {
+                MochiIconButton(onClick = { showAddSheet = true }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_links_add))
                 }
             }
@@ -228,7 +228,7 @@ private fun LinkRow(
             modifier = Modifier.weight(1f)
         )
         if (canWrite) {
-            IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.projects_links_remove),

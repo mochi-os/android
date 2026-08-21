@@ -24,11 +24,9 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TimePicker
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.material3.rememberTimePickerState
@@ -48,6 +46,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -377,14 +377,14 @@ private fun StartTimeField(
             trailingIcon = {
                 Row {
                     if (opensAt != null) {
-                        IconButton(onClick = { onChange(null) }) {
+                        MochiIconButton(onClick = { onChange(null) }) {
                             Icon(
                                 Icons.Default.Clear,
                                 contentDescription = stringResource(R.string.market_editor_start_time_clear),
                             )
                         }
                     }
-                    IconButton(onClick = { showDate = true }) {
+                    MochiIconButton(onClick = { showDate = true }) {
                         Icon(
                             Icons.Default.Event,
                             contentDescription = stringResource(R.string.market_editor_start_time),
@@ -409,7 +409,7 @@ private fun StartTimeField(
         DatePickerDialog(
             onDismissRequest = { showDate = false },
             confirmButton = {
-                TextButton(
+                MochiTextButton(
                     onClick = {
                         pickedDateMillis = dateState.selectedDateMillis
                         showDate = false
@@ -419,7 +419,7 @@ private fun StartTimeField(
                 ) { Text(stringResource(R.string.market_editor_start_time_next)) }
             },
             dismissButton = {
-                TextButton(onClick = { showDate = false }) {
+                MochiTextButton(onClick = { showDate = false }) {
                     Text(stringResource(MochiR.string.common_cancel))
                 }
             },

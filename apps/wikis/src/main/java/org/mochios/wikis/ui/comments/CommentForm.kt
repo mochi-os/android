@@ -8,7 +8,6 @@ package org.mochios.wikis.ui.comments
 import android.net.Uri
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -21,6 +20,7 @@ import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.wikis.R
 
 /**
@@ -123,7 +123,7 @@ fun CommentForm(
         windowInsets = windowInsets,
         trailingContent = onCancel?.let {
             {
-                TextButton(onClick = it) {
+                MochiTextButton(onClick = it) {
                     Text(stringResource(R.string.wikis_comment_action_cancel))
                 }
             }

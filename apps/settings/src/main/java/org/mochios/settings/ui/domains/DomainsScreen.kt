@@ -30,13 +30,10 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -57,6 +54,9 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -79,13 +79,13 @@ fun DomainsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.domain_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                     }
                 },
                 actions = {
                     if (state.isAdmin) {
-                        IconButton(onClick = { showAddDomain = true }) {
+                        MochiIconButton(onClick = { showAddDomain = true }) {
                             Icon(Icons.Default.Add, contentDescription = stringResource(R.string.domain_add))
                         }
                     }
@@ -205,7 +205,7 @@ private fun DomainCard(
                         else MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
-                IconButton(onClick = {
+                MochiIconButton(onClick = {
                     if (!expanded) onExpand()
                     expanded = !expanded
                 }) {
@@ -257,7 +257,7 @@ private fun DomainCard(
                             fontWeight = FontWeight.SemiBold,
                             modifier = Modifier.weight(1f),
                         )
-                        OutlinedButton(onClick = { onLoadRouteTargets(); showAddRoute = true }) {
+                        MochiOutlinedButton(onClick = { onLoadRouteTargets(); showAddRoute = true }) {
                             Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(Modifier.width(4.dp))
                             Text(stringResource(R.string.route_add))
@@ -296,7 +296,7 @@ private fun DomainCard(
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.weight(1f),
                             )
-                            OutlinedButton(onClick = { showAddDelegation = true }) {
+                            MochiOutlinedButton(onClick = { showAddDelegation = true }) {
                                 Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(Modifier.width(4.dp))
                                 Text(stringResource(R.string.domain_delegation_add))
@@ -323,7 +323,7 @@ private fun DomainCard(
                         Spacer(Modifier.height(12.dp))
                         HorizontalDivider()
                         Spacer(Modifier.height(8.dp))
-                        OutlinedButton(onClick = { showDeleteDomain = true }) {
+                        MochiOutlinedButton(onClick = { showDeleteDomain = true }) {
                             Icon(
                                 Icons.Default.Delete,
                                 contentDescription = null,
@@ -411,7 +411,7 @@ private fun VerificationBlock(domain: Domain, onVerify: () -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
             Spacer(Modifier.height(4.dp))
-            OutlinedButton(onClick = onVerify) {
+            MochiOutlinedButton(onClick = onVerify) {
                 Text(stringResource(R.string.domain_verify))
             }
         }
@@ -448,10 +448,10 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
                 )
             }
         }
-        IconButton(onClick = onEdit) {
+        MochiIconButton(onClick = onEdit) {
             Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.route_edit))
         }
-        IconButton(onClick = { confirm = true }) {
+        MochiIconButton(onClick = { confirm = true }) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.route_delete),
@@ -493,7 +493,7 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        IconButton(onClick = { confirm = true }) {
+        MochiIconButton(onClick = { confirm = true }) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.domain_delegation_delete),
@@ -628,7 +628,7 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
         else -> R.string.route_method_app
     }
     Box {
-        OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
+        MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.route_method) + ": " + stringResource(labelRes))
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
@@ -665,7 +665,7 @@ private fun TargetPicker(
 ) {
     var open by remember { mutableStateOf(false) }
     Box {
-        OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
+        MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(label + ": " + (selectedLabel ?: stringResource(R.string.route_target_select)))
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
@@ -720,7 +720,7 @@ private fun DelegationDialog(
                 if (selected == null && userResults.isNotEmpty()) {
                     Spacer(Modifier.height(4.dp))
                     userResults.forEach { user ->
-                        TextButton(
+                        MochiTextButton(
                             onClick = {
                                 selected = user
                                 query = user.username

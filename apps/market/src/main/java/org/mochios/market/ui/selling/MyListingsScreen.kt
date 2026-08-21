@@ -36,7 +36,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
@@ -64,6 +63,7 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
@@ -382,7 +382,7 @@ private fun ListingOverflow(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box(modifier = Modifier.padding(2.dp)) {
-        IconButton(onClick = { expanded = true }) {
+        MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 Icons.Default.MoreHoriz,
                 contentDescription = stringResource(MochiR.string.common_more_options),

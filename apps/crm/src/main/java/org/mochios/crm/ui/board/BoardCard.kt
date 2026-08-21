@@ -31,7 +31,6 @@ import androidx.compose.material.icons.outlined.SwapHoriz
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -56,6 +55,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -247,7 +247,7 @@ fun BoardCard(
                     if (!isNested) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Box {
-                            IconButton(
+                            MochiIconButton(
                                 onClick = { showOverflow = true },
                                 modifier = Modifier.size(20.dp)
                             ) {

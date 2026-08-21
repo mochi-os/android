@@ -30,13 +30,10 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -60,6 +57,9 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
@@ -154,7 +154,7 @@ fun PageEditorScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(org.mochios.android.R.string.common_back),
@@ -220,7 +220,7 @@ fun PageEditorScreen(
                         style = MaterialTheme.typography.bodyMedium,
                     )
                     Spacer(Modifier.height(8.dp))
-                    OutlinedButton(onClick = { viewModel.retry() }) {
+                    MochiOutlinedButton(onClick = { viewModel.retry() }) {
                         Text(stringResource(org.mochios.android.R.string.common_retry))
                     }
                 }
@@ -290,7 +290,7 @@ private fun EditorActions(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        OutlinedButton(onClick = onTogglePreview) {
+        MochiOutlinedButton(onClick = onTogglePreview) {
             Icon(
                 imageVector = if (showPreview) Icons.Filled.Edit else Icons.Filled.Visibility,
                 contentDescription = null,
@@ -303,7 +303,7 @@ private fun EditorActions(
                 )
             )
         }
-        OutlinedButton(onClick = onOpenInsert) {
+        MochiOutlinedButton(onClick = onOpenInsert) {
             Icon(
                 Icons.Filled.AddPhotoAlternate,
                 contentDescription = null,
@@ -313,7 +313,7 @@ private fun EditorActions(
             Text(stringResource(R.string.wikis_editor_insert))
         }
         if (!isNew) {
-            OutlinedButton(onClick = onOpenAttachments) {
+            MochiOutlinedButton(onClick = onOpenAttachments) {
                 Icon(
                     Icons.Filled.Image,
                     contentDescription = null,
@@ -323,7 +323,7 @@ private fun EditorActions(
                 Text(stringResource(R.string.wikis_editor_attachments))
             }
         }
-        OutlinedButton(onClick = onCancel) {
+        MochiOutlinedButton(onClick = onCancel) {
             Icon(
                 Icons.Filled.Close,
                 contentDescription = null,
@@ -333,7 +333,7 @@ private fun EditorActions(
             Text(stringResource(R.string.wikis_editor_cancel))
         }
         if (canDelete) {
-            OutlinedButton(onClick = onDelete, enabled = !isDeleting) {
+            MochiOutlinedButton(onClick = onDelete, enabled = !isDeleting) {
                 Icon(
                     Icons.Filled.Delete,
                     contentDescription = null,
@@ -343,7 +343,7 @@ private fun EditorActions(
                 Text(stringResource(R.string.wikis_editor_delete))
             }
         }
-        Button(onClick = onSave, enabled = !isSaving) {
+        MochiButton(onClick = onSave, enabled = !isSaving) {
             if (isSaving) {
                 CircularProgressIndicator(
                     modifier = Modifier.size(18.dp),

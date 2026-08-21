@@ -24,17 +24,14 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Restore
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
@@ -59,7 +56,10 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
@@ -85,7 +85,7 @@ fun SystemSettingsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.system_settings_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -339,7 +339,7 @@ private fun SettingRow(
                 )
                 if (hasStoredValue(setting)) {
                     Spacer(Modifier.size(8.dp))
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = { onSave("") },
                         enabled = !isSaving,
                     ) {
@@ -393,7 +393,7 @@ private fun SettingRow(
                 )
                 if (localValue.isNotBlank()) {
                     Spacer(Modifier.size(8.dp))
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = {
                             localValue = ""
                             onSave("")
@@ -420,7 +420,7 @@ private fun SettingRow(
                 )
                 Spacer(Modifier.size(8.dp))
                 when {
-                    hasChanged -> Button(
+                    hasChanged -> MochiButton(
                         onClick = { onSave(localValue) },
                         enabled = !isSaving,
                     ) {
@@ -480,13 +480,13 @@ private fun MethodStatePicker(
         METHOD_STATE_SLOTS.filter { it in slots }.forEach { slot ->
             val selected = value == slot
             if (selected) {
-                Button(
+                MochiButton(
                     onClick = {},
                     enabled = false,
                     modifier = Modifier.padding(end = 4.dp),
                 ) { Text(methodStateLabel(slot)) }
             } else {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { onPick(slot) },
                     enabled = !disabled,
                     modifier = Modifier.padding(end = 4.dp),
@@ -544,7 +544,7 @@ private fun ResetButton(
     onConfirm: () -> Unit,
 ) {
     var confirm by remember(setting.name) { mutableStateOf(false) }
-    IconButton(onClick = { confirm = true }, enabled = !disabled) {
+    MochiIconButton(onClick = { confirm = true }, enabled = !disabled) {
         Icon(
             Icons.Default.Restore,
             contentDescription = stringResource(R.string.system_settings_reset_to_default),

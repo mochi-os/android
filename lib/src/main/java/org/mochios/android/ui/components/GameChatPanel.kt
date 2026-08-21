@@ -28,7 +28,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -204,7 +203,7 @@ fun GameChatPanel(
                             strokeWidth = 2.dp,
                         )
                     } else {
-                        TextButton(onClick = onLoadMore) {
+                        MochiTextButton(onClick = onLoadMore) {
                             Text(
                                 text = stringResource(R.string.game_chat_load_more),
                                 style = MaterialTheme.typography.labelSmall,

@@ -25,19 +25,15 @@ import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -51,7 +47,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
@@ -125,7 +125,7 @@ fun FieldDetailScreen(
     ) {
         // Header
         Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(onClick = onBack) {
+            MochiIconButton(onClick = onBack) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
             }
             Text(
@@ -299,7 +299,7 @@ fun FieldDetailScreen(
                 || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
 
         if (hasChanges) {
-            TextButton(
+            MochiTextButton(
                 onClick = {
                     viewModel.updateField(
                         classId = classId,
@@ -334,7 +334,7 @@ fun FieldDetailScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(stringResource(R.string.projects_field_options), style = MaterialTheme.typography.titleSmall)
-                IconButton(onClick = { showAddOptionDialog = true }) {
+                MochiIconButton(onClick = { showAddOptionDialog = true }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_field_add_option))
                 }
             }
@@ -368,7 +368,7 @@ fun FieldDetailScreen(
                         style = MaterialTheme.typography.bodyMedium,
                         modifier = Modifier.weight(1f)
                     )
-                    IconButton(
+                    MochiIconButton(
                         onClick = { editingOption = option },
                         modifier = Modifier.size(32.dp)
                     ) {
@@ -378,7 +378,7 @@ fun FieldDetailScreen(
                             modifier = Modifier.size(18.dp)
                         )
                     }
-                    IconButton(
+                    MochiIconButton(
                         onClick = { viewModel.deleteOption(classId, field.id, option.id) },
                         modifier = Modifier.size(32.dp)
                     ) {
@@ -408,11 +408,9 @@ fun FieldDetailScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         // Delete field
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { showDeleteConfirm = true },
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.error
-            ),
+            tone = MochiButtonTone.Destructive,
             modifier = Modifier.fillMaxWidth()
         ) {
             Icon(Icons.Default.Delete, contentDescription = null)

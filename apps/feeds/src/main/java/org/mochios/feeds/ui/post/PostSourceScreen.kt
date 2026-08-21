@@ -50,14 +50,12 @@ import androidx.compose.material.icons.outlined.OpenInBrowser
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberBottomSheetScaffoldState
@@ -91,6 +89,8 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
@@ -203,7 +203,7 @@ fun PostSourceScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
+                    MochiIconButton(onClick = onNavigateBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -212,7 +212,7 @@ fun PostSourceScreen(
                 },
                 actions = {
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(
                                 Icons.Default.MoreVert,
                                 contentDescription = stringResource(MochiR.string.common_more_options)
@@ -488,7 +488,7 @@ private fun LoadErrorOverlay(
             )
             Spacer(modifier = Modifier.height(16.dp))
             Row {
-                TextButton(onClick = onRetry) {
+                MochiTextButton(onClick = onRetry) {
                     Icon(
                         Icons.Default.Refresh,
                         contentDescription = null,
@@ -498,7 +498,7 @@ private fun LoadErrorOverlay(
                     Text(stringResource(MochiR.string.common_retry))
                 }
                 Spacer(modifier = Modifier.width(8.dp))
-                TextButton(onClick = onOpenExternal) {
+                MochiTextButton(onClick = onOpenExternal) {
                     Icon(
                         Icons.Default.OpenInBrowser,
                         contentDescription = null,
@@ -508,7 +508,7 @@ private fun LoadErrorOverlay(
                     Text(stringResource(R.string.feeds_open_in_browser))
                 }
             }
-            TextButton(onClick = onViewPost) {
+            MochiTextButton(onClick = onViewPost) {
                 Text(stringResource(R.string.feeds_view_post))
             }
         }
@@ -551,7 +551,7 @@ private fun PostSourceSheet(
         ) {
             // Comment icon + count, right-aligned and styled like the former
             // "View post" action. Tapping it expands the sheet.
-            TextButton(onClick = onExpand) {
+            MochiTextButton(onClick = onExpand) {
                 Icon(
                     Icons.Default.ChatBubbleOutline,
                     contentDescription = null,

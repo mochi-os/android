@@ -29,14 +29,12 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -56,6 +54,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Redirect
@@ -97,7 +97,7 @@ fun RedirectsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.wikis_redirects_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -105,7 +105,7 @@ fun RedirectsScreen(
                     }
                 },
                 actions = {
-                    TextButton(onClick = { showAddDialog = true }) {
+                    MochiTextButton(onClick = { showAddDialog = true }) {
                         Icon(
                             Icons.Default.Add,
                             contentDescription = null,
@@ -261,7 +261,7 @@ private fun RedirectRow(
             modifier = Modifier.weight(1f, fill = false),
         )
         Spacer(Modifier.weight(1f))
-        IconButton(onClick = onDelete) {
+        MochiIconButton(onClick = onDelete) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),

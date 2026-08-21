@@ -60,11 +60,9 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
@@ -123,7 +121,9 @@ import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -257,7 +257,7 @@ private fun ChatDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.chat_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.chat_list_title))
                     }
                 }
@@ -414,7 +414,7 @@ private fun ChatContent(
                         }
                     },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.chat_list_title)
@@ -424,13 +424,13 @@ private fun ChatContent(
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
                         if (chatId.isNotEmpty()) {
-                            IconButton(onClick = { viewModel.openSearch() }) {
+                            MochiIconButton(onClick = { viewModel.openSearch() }) {
                                 Icon(
                                     Icons.Default.Search,
                                     contentDescription = stringResource(R.string.chat_list_search)
                                 )
                             }
-                            IconButton(onClick = { menuExpanded = true }) {
+                            MochiIconButton(onClick = { menuExpanded = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(MochiR.string.common_more_options)
@@ -576,7 +576,7 @@ private fun ChatContent(
                                     if (uiState.isLoadingMore) {
                                         CircularProgressIndicator(modifier = Modifier.padding(4.dp))
                                     } else {
-                                        TextButton(onClick = { viewModel.loadMoreOlder() }) {
+                                        MochiTextButton(onClick = { viewModel.loadMoreOlder() }) {
                                             Text(stringResource(R.string.chat_messages_load_more))
                                         }
                                     }
@@ -796,7 +796,7 @@ private fun ChatSearchBar(
     }
     TopAppBar(
         navigationIcon = {
-            IconButton(onClick = onClose) {
+            MochiIconButton(onClick = onClose) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = stringResource(MochiR.string.common_back),
@@ -812,7 +812,7 @@ private fun ChatSearchBar(
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
                     if (query.isNotEmpty()) {
-                        IconButton(onClick = { onQueryChange("") }) {
+                        MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = stringResource(MochiR.string.common_close),
@@ -840,13 +840,13 @@ private fun ChatSearchBar(
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                IconButton(onClick = onUp, enabled = matchPosition < matchCount) {
+                MochiIconButton(onClick = onUp, enabled = matchPosition < matchCount) {
                     Icon(
                         Icons.Default.KeyboardArrowUp,
                         contentDescription = stringResource(R.string.chat_search_prev),
                     )
                 }
-                IconButton(onClick = onDown, enabled = matchPosition > 1) {
+                MochiIconButton(onClick = onDown, enabled = matchPosition > 1) {
                     Icon(
                         Icons.Default.KeyboardArrowDown,
                         contentDescription = stringResource(R.string.chat_search_next),
@@ -1154,7 +1154,7 @@ private fun SelectionBar(
             .padding(horizontal = 4.dp, vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        IconButton(onClick = onClose) {
+        MochiIconButton(onClick = onClose) {
             Icon(Icons.Default.Close, contentDescription = null)
         }
         Text(
@@ -1162,19 +1162,19 @@ private fun SelectionBar(
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier.weight(1f),
         )
-        IconButton(onClick = onCopy, enabled = count > 0) {
+        MochiIconButton(onClick = onCopy, enabled = count > 0) {
             Icon(
                 Icons.Default.ContentCopy,
                 contentDescription = stringResource(MochiR.string.common_copy),
             )
         }
-        IconButton(onClick = onForward, enabled = count > 0) {
+        MochiIconButton(onClick = onForward, enabled = count > 0) {
             Icon(
                 Icons.AutoMirrored.Filled.Forward,
                 contentDescription = stringResource(R.string.chat_message_forward),
             )
         }
-        IconButton(onClick = onDelete, enabled = count > 0) {
+        MochiIconButton(onClick = onDelete, enabled = count > 0) {
             Icon(
                 Icons.Outlined.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),
@@ -1221,7 +1221,7 @@ private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        IconButton(onClick = onCancel) {
+        MochiIconButton(onClick = onCancel) {
             Icon(Icons.Default.Close, contentDescription = null)
         }
     }

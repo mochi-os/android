@@ -28,15 +28,12 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.outlined.Check
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -45,7 +42,6 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -65,8 +61,12 @@ import com.google.gson.Gson
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.Section
@@ -129,7 +129,7 @@ fun EditListingScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.market_editor_back),
@@ -138,7 +138,7 @@ fun EditListingScreen(
                 },
                 actions = {
                     SaveStatusBadge(state.saveStatus)
-                    TextButton(
+                    MochiTextButton(
                         onClick = { viewModel.save() },
                         enabled = state.saveStatus != SaveStatus.SAVING &&
                             state.title.isNotBlank() &&
@@ -363,7 +363,7 @@ fun EditListingScreen(
 
             // ---- Publish / Delete actions ----
             Spacer(Modifier.padding(top = 8.dp))
-            Button(
+            MochiButton(
                 onClick = { viewModel.publish() },
                 enabled = state.publishStatus != SaveStatus.SAVING &&
                     state.title.isNotBlank() &&
@@ -382,7 +382,7 @@ fun EditListingScreen(
                 }
             }
             if (!state.isNew) {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showDeleteConfirm = true },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -394,7 +394,7 @@ fun EditListingScreen(
                     Spacer(Modifier.width(6.dp))
                     Text(stringResource(R.string.market_editor_delete))
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showAppealDialog = true },
                     modifier = Modifier.fillMaxWidth(),
                 ) {

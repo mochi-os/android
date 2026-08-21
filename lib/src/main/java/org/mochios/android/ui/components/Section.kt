@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
  * Section(
  *     title = stringResource(R.string.wikis_about_section),
  *     description = stringResource(R.string.wikis_about_description),
- *     action = { OutlinedButton(onClick = { ... }) { Text("Edit") } },
+ *     action = { MochiOutlinedButton(onClick = { ... }) { Text("Edit") } },
  * ) {
  *     FieldRow(label = stringResource(R.string.wikis_entity_id)) {
  *         DataChip(value = wikiInfo.id, truncate = Truncate.MIDDLE)

@@ -7,7 +7,6 @@ package org.mochios.android.ui.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SearchOff
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
@@ -30,7 +29,7 @@ fun NotFoundState(
         icon = Icons.Default.SearchOff,
         title = title,
         action = {
-            OutlinedButton(onClick = onBack) {
+            MochiOutlinedButton(onClick = onBack) {
                 Text(stringResource(R.string.common_back))
             }
         },

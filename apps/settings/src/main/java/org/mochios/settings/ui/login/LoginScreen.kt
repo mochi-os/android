@@ -30,18 +30,14 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -64,7 +60,11 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
@@ -118,7 +118,7 @@ fun LoginScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.login_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -292,11 +292,11 @@ private fun MethodStatePicker(
             val selected = value == slot
             val enabled = !busy && !selected && slot !in unavailable
             if (selected) {
-                Button(onClick = {}, enabled = false, modifier = Modifier.padding(start = 4.dp)) {
+                MochiButton(onClick = {}, enabled = false, modifier = Modifier.padding(start = 4.dp)) {
                     Text(stateLabel(slot))
                 }
             } else {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { onPick(slot) },
                     enabled = enabled,
                     modifier = Modifier.padding(start = 4.dp),
@@ -329,7 +329,7 @@ private fun PasskeysSection(
         }
     }
     Spacer(Modifier.height(8.dp))
-    Button(onClick = { showRegister = true }) {
+    MochiButton(onClick = { showRegister = true }) {
         Icon(Icons.Default.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
         Spacer(Modifier.width(ButtonDefaults.IconSpacing))
         Text(stringResource(R.string.account_passkey_register))
@@ -394,18 +394,18 @@ private fun PasskeyRow(
                 }
             }
             if (renaming) {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     onRename(passkey.id, draft.trim())
                     renaming = false
                 }) { Text(stringResource(R.string.account_save)) }
-                TextButton(onClick = { renaming = false; draft = passkey.name }) {
+                MochiTextButton(onClick = { renaming = false; draft = passkey.name }) {
                     Text(stringResource(R.string.account_cancel))
                 }
             } else {
-                IconButton(onClick = { renaming = true }) {
+                MochiIconButton(onClick = { renaming = true }) {
                     Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.account_rename))
                 }
-                IconButton(onClick = { confirmDelete = true }) {
+                MochiIconButton(onClick = { confirmDelete = true }) {
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.account_delete),
@@ -451,12 +451,12 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
                 modifier = Modifier.weight(1f),
                 fontWeight = FontWeight.SemiBold,
             )
-            OutlinedButton(onClick = { confirmDisable = true }) {
+            MochiOutlinedButton(onClick = { confirmDisable = true }) {
                 Text(stringResource(R.string.account_disable))
             }
         }
     } else {
-        Button(onClick = onSetup) {
+        MochiButton(onClick = onSetup) {
             Icon(Icons.Default.Lock, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.account_totp_setup))
@@ -501,7 +501,7 @@ private fun TotpSetupDialog(
                         modifier = Modifier.weight(1f),
                         style = MaterialTheme.typography.bodyMedium,
                     )
-                    IconButton(
+                    MochiIconButton(
                         onClick = onCopySecret,
                         modifier = Modifier.size(36.dp),
                     ) {
@@ -543,7 +543,7 @@ private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
     )
     Spacer(Modifier.height(6.dp))
-    Button(onClick = {
+    MochiButton(onClick = {
         if (count > 0) confirm = true else onGenerate()
     }) {
         Text(
@@ -634,7 +634,7 @@ private fun OAuthSection(
                             )
                         }
                     }
-                    OutlinedButton(onClick = { confirm = true }) {
+                    MochiOutlinedButton(onClick = { confirm = true }) {
                         Text(stringResource(R.string.account_unlink))
                     }
                 }
@@ -660,7 +660,7 @@ private fun OAuthSection(
     val available = providers.filter { it !in linkedProviders }
     if (available.isNotEmpty()) {
         var showLink by remember { mutableStateOf(false) }
-        Button(onClick = { showLink = true }) {
+        MochiButton(onClick = { showLink = true }) {
             Icon(Icons.Default.Add, contentDescription = null)
             Spacer(Modifier.height(0.dp))
             Text(stringResource(R.string.account_oauth_link))
@@ -672,7 +672,7 @@ private fun OAuthSection(
                 content = {
                     Column {
                         available.forEach { provider ->
-                            TextButton(
+                            MochiTextButton(
                                 onClick = {
                                     showLink = false
                                     onLink(provider)

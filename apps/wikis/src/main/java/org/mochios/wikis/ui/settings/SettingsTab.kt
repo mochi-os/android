@@ -24,15 +24,11 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -50,6 +46,10 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.FieldRow
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
@@ -187,7 +187,7 @@ private fun IdentitySection(
                             enabled = !isRenaming,
                             modifier = Modifier.weight(1f),
                         )
-                        IconButton(
+                        MochiIconButton(
                             onClick = {
                                 onRename(editValue)
                                 // Editor closes when rename succeeds — but
@@ -203,7 +203,7 @@ private fun IdentitySection(
                                 contentDescription = stringResource(R.string.wikis_settings_name_save_cd),
                             )
                         }
-                        IconButton(
+                        MochiIconButton(
                             onClick = {
                                 editValue = wiki.name
                                 isEditing = false
@@ -236,7 +236,7 @@ private fun IdentitySection(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(wiki.name)
                     Spacer(modifier = Modifier.width(4.dp))
-                    IconButton(
+                    MochiIconButton(
                         onClick = {
                             editValue = wiki.name
                             isEditing = true
@@ -272,7 +272,7 @@ private fun SubscriptionSection(
     Section(
         title = stringResource(R.string.wikis_settings_section_subscription),
         action = {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onSync,
                 enabled = !isSyncing,
             ) {
@@ -287,7 +287,7 @@ private fun SubscriptionSection(
         },
     ) {
         FieldRow(label = stringResource(R.string.wikis_settings_field_source)) {
-            TextButton(onClick = onOpenSource) {
+            MochiTextButton(onClick = onOpenSource) {
                 Text(
                     text = source,
                     style = MaterialTheme.typography.bodyMedium,
@@ -325,7 +325,7 @@ private fun HomePageSection(
             )
             Spacer(modifier = Modifier.height(8.dp))
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                Button(
+                MochiButton(
                     onClick = { onSave(value) },
                     enabled = hasChanges && !isSaving,
                 ) {
@@ -352,7 +352,7 @@ private fun DeleteSection(
     Section(
         title = stringResource(R.string.wikis_settings_section_delete),
         action = {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { showConfirm = true },
                 enabled = !isDeleting,
             ) {

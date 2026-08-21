@@ -23,7 +23,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -53,6 +52,7 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
@@ -215,7 +215,7 @@ private fun MemberRow(
             }
         }
         if (isAdmin) {
-            OutlinedButton(onClick = { onAskRemove(member) }) {
+            MochiOutlinedButton(onClick = { onAskRemove(member) }) {
                 Text(stringResource(R.string.staff_team_action_remove))
             }
         }
@@ -269,7 +269,7 @@ private fun RoleDropdown(
     var expanded by remember { mutableStateOf(false) }
     val label = roleLabel(current)
     Box {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { expanded = true },
             enabled = enabled,
         ) {

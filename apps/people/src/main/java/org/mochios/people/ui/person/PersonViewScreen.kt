@@ -26,15 +26,12 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -62,6 +59,9 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
@@ -105,7 +105,7 @@ fun PersonViewScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -334,7 +334,7 @@ private fun ActionRow(
         when (friendState) {
             FriendState.Self -> Unit
             FriendState.Friend -> {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onMessage,
                     modifier = Modifier.weight(1f),
                 ) {
@@ -342,7 +342,7 @@ private fun ActionRow(
                 }
             }
             is FriendState.InvitedByThem -> {
-                Button(
+                MochiButton(
                     onClick = onAccept,
                     enabled = !isMutating,
                     modifier = Modifier.weight(1f),
@@ -351,7 +351,7 @@ private fun ActionRow(
                     Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     Text(stringResource(R.string.people_person_accept))
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onDecline,
                     enabled = !isMutating,
                     modifier = Modifier.weight(1f),
@@ -360,7 +360,7 @@ private fun ActionRow(
                 }
             }
             FriendState.InvitedThem -> {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onMessage,
                     modifier = Modifier.weight(1f),
                 ) {
@@ -368,7 +368,7 @@ private fun ActionRow(
                 }
             }
             FriendState.NotFriend -> {
-                Button(
+                MochiButton(
                     onClick = onAddFriend,
                     enabled = !isMutating,
                     modifier = Modifier.weight(1f),
@@ -383,7 +383,7 @@ private fun ActionRow(
                         Text(stringResource(R.string.people_person_add_friend))
                     }
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onMessage,
                     modifier = Modifier.weight(1f),
                 ) {

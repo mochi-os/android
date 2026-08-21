@@ -14,7 +14,6 @@ import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -39,6 +38,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
@@ -114,7 +114,7 @@ fun MarketLayout(
                 TopAppBar(
                     title = { Text(stringResource(titleRes)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.market_open_sidebar),

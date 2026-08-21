@@ -38,14 +38,11 @@ import androidx.compose.material.icons.outlined.ConfirmationNumber
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.GridView
-import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
@@ -69,7 +66,10 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
@@ -190,7 +190,7 @@ fun CreateProjectScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = goBack, enabled = !uiState.isCreating) {
+                    MochiIconButton(onClick = goBack, enabled = !uiState.isCreating) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -216,7 +216,7 @@ fun CreateProjectScreen(
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(
+                    MochiButton(
                         onClick = {
                             if (goesToTemplate) {
                                 step = STEP_TEMPLATE
@@ -355,7 +355,7 @@ private fun DetailsStep(
             style = MaterialTheme.typography.titleSmall
         )
         Spacer(modifier = Modifier.height(8.dp))
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = onPickBackup,
             enabled = enabled,
             modifier = Modifier.fillMaxWidth()

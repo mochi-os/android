@@ -30,21 +30,17 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Handshake
 import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -81,8 +77,12 @@ import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.GameWsStatus
@@ -175,7 +175,7 @@ fun ChessGameDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.chess_app_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -434,7 +434,7 @@ private fun BoardPane(
             },
             actions = {
                 if (onOpenMobileChat != null) {
-                    IconButton(onClick = onOpenMobileChat) {
+                    MochiIconButton(onClick = onOpenMobileChat) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.Message,
                             contentDescription = stringResource(R.string.chess_open_chat),
@@ -514,7 +514,7 @@ private fun GameActionsMenu(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box {
-        IconButton(onClick = { expanded = true }) {
+        MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 imageVector = Icons.Filled.MoreHoriz,
                 contentDescription = stringResource(R.string.chess_open_actions),
@@ -613,7 +613,7 @@ private fun drawBanner(
                         modifier = Modifier.weight(1f),
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = onDecline,
                         enabled = !declineInFlight,
                         contentPadding = androidx.compose.foundation.layout.PaddingValues(
@@ -623,10 +623,9 @@ private fun drawBanner(
                         Text(stringResource(R.string.chess_draw_decline))
                     }
                     Spacer(modifier = Modifier.width(6.dp))
-                    Button(
+                    MochiButton(
                         onClick = onAccept,
                         enabled = !acceptInFlight,
-                        colors = ButtonDefaults.buttonColors(),
                         contentPadding = androidx.compose.foundation.layout.PaddingValues(
                             horizontal = 12.dp, vertical = 4.dp,
                         ),
@@ -851,7 +850,7 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            TextButton(onClick = onRetry) {
+            MochiTextButton(onClick = onRetry) {
                 Text(stringResource(MochiR.string.common_retry))
             }
         }

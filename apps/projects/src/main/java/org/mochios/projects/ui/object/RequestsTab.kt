@@ -36,13 +36,11 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.SuggestionChipDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -62,6 +60,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Branch
@@ -171,7 +171,7 @@ private fun RequestItem(
             }
         }
         Box {
-            IconButton(onClick = { showOverflow = true }) {
+            MochiIconButton(onClick = { showOverflow = true }) {
                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
             }
             MochiDropdownMenu(
@@ -243,7 +243,7 @@ private fun RequestDetailView(
             .verticalScroll(rememberScrollState())
             .padding(16.dp)
     ) {
-        TextButton(onClick = onBack) {
+        MochiTextButton(onClick = onBack) {
             Text(stringResource(R.string.projects_request_back_to_list))
         }
 
@@ -350,20 +350,20 @@ private fun RequestDetailView(
         Spacer(modifier = Modifier.height(16.dp))
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            TextButton(onClick = {
+            MochiTextButton(onClick = {
                 onViewDiff(projectId, request.repository, request.source, request.target)
             }) {
                 Text(stringResource(R.string.projects_request_view_diff))
             }
 
             if (request.status == "open" && !request.draft && mergeCheck?.canMerge == true) {
-                TextButton(onClick = { showMergeDialog = true }) {
+                MochiTextButton(onClick = { showMergeDialog = true }) {
                     Text(stringResource(R.string.projects_request_merge), color = Color(0xFF4CAF50))
                 }
             }
 
             if (request.status == "open" && request.draft) {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     viewModel.updateRequest(request.id, null, null, null, false)
                 }) {
                     Text(stringResource(R.string.projects_request_mark_ready))
@@ -371,7 +371,7 @@ private fun RequestDetailView(
             }
 
             if (request.status == "open") {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     viewModel.updateRequest(request.id, null, null, "closed", null)
                 }) {
                     Text(stringResource(R.string.projects_request_close))

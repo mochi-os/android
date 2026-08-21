@@ -30,12 +30,10 @@ import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -62,8 +60,10 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -125,7 +125,7 @@ fun GroupDetailScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -135,14 +135,14 @@ fun GroupDetailScreen(
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
                     if (state.group != null) {
-                        IconButton(onClick = onAddMember) {
+                        MochiIconButton(onClick = onAddMember) {
                             Icon(
                                 Icons.Default.PersonAdd,
                                 contentDescription = stringResource(R.string.people_member_add),
                             )
                         }
                         Box {
-                            IconButton(onClick = { overflowOpen = true }) {
+                            MochiIconButton(onClick = { overflowOpen = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(R.string.people_group_actions),
@@ -345,7 +345,7 @@ private fun GroupDetailContent(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Spacer(Modifier.height(16.dp))
-                        Button(onClick = onAddMember) {
+                        MochiButton(onClick = onAddMember) {
                             Icon(
                                 Icons.Default.PersonAdd,
                                 contentDescription = null,
@@ -490,7 +490,7 @@ private fun MemberRow(
             },
         )
         Spacer(Modifier.width(4.dp))
-        IconButton(onClick = onRemove) {
+        MochiIconButton(onClick = onRemove) {
             Icon(
                 Icons.Default.Close,
                 contentDescription = stringResource(

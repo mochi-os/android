@@ -27,15 +27,12 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -60,7 +57,9 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
@@ -226,7 +225,7 @@ fun AccountSettingsScreen(
                         )
                     }
 
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = {
                             navController.navigate(MarketApp.NOTIFICATION_PREFERENCES)
                         },
@@ -235,7 +234,7 @@ fun AccountSettingsScreen(
                         Text(stringResource(R.string.market_notifications_title))
                     }
 
-                    Button(
+                    MochiButton(
                         onClick = viewModel::save,
                         enabled = !state.isSaving,
                         modifier = Modifier.fillMaxWidth(),
@@ -346,7 +345,7 @@ private fun ProfileCard(
         ) {
             BiographyField(value = biography, onChange = onBiographyChange)
             LocationField(place = place, onChange = onPlaceChange)
-            Button(
+            MochiButton(
                 onClick = onSave,
                 enabled = !isSaving,
                 shape = RoundedCornerShape(10.dp),
@@ -477,7 +476,7 @@ private fun SellerStatusCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 Spacer(modifier = Modifier.size(8.dp))
-                OutlinedButton(onClick = onNavigate) {
+                MochiOutlinedButton(onClick = onNavigate) {
                     Text(stringResource(actionRes))
                 }
             }
@@ -576,13 +575,13 @@ private fun StripeCard(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onDashboard,
                     modifier = Modifier.weight(1f),
                 ) {
                     Text(stringResource(R.string.market_account_stripe_dashboard))
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onRefresh,
                     enabled = !isLoading,
                     modifier = Modifier.weight(1f),

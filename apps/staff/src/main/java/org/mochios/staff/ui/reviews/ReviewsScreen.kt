@@ -29,11 +29,9 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -62,8 +60,10 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -234,7 +234,7 @@ private fun FilterBar(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box {
-            Button(onClick = { expanded = true }) {
+            MochiButton(onClick = { expanded = true }) {
                 Text(label)
                 Icon(Icons.Default.ArrowDropDown, contentDescription = null)
             }
@@ -379,7 +379,7 @@ private fun OverflowMenu(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box {
-        IconButton(onClick = { expanded = true }) {
+        MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 Icons.Default.MoreHoriz,
                 contentDescription = stringResource(R.string.staff_reviews_overflow_actions),

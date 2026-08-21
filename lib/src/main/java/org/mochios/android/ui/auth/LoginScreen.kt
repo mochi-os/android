@@ -26,17 +26,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.MailOutline
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -51,6 +47,10 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CodeInputBoxes
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 
 /**
@@ -196,7 +196,7 @@ private fun AuthScreenColumn(
                     },
                     navigationIcon = {
                         if (onBack != null) {
-                            IconButton(onClick = onBack) {
+                            MochiIconButton(onClick = onBack) {
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                     contentDescription = stringResource(R.string.auth_back)
@@ -426,7 +426,7 @@ private fun AccountMethods(
 
     if (hasRecovery) {
         Spacer(modifier = Modifier.height(16.dp))
-        TextButton(onClick = onShowRecovery) {
+        MochiTextButton(onClick = onShowRecovery) {
             Text(stringResource(R.string.auth_lost_access_recovery))
         }
     }
@@ -503,7 +503,7 @@ private fun PrimaryButton(
     onClick: () -> Unit,
     trailingIcon: ImageVector? = null
 ) {
-    Button(
+    MochiButton(
         onClick = onClick,
         enabled = !isLoading && enabled,
         modifier = Modifier.fillMaxWidth()
@@ -541,7 +541,7 @@ private fun MethodButton(
     iconRes: Int? = null,
     iconVector: ImageVector? = null
 ) {
-    OutlinedButton(
+    MochiOutlinedButton(
         onClick = onClick,
         enabled = enabled,
         modifier = Modifier.fillMaxWidth()

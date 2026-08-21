@@ -16,7 +16,6 @@ import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -47,6 +46,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.staff.R
@@ -193,7 +193,7 @@ fun StaffLayout(
                     TopAppBar(
                         title = { Text(stringResource(titleRes)) },
                         navigationIcon = {
-                            IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                            MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                                 Icon(
                                     Icons.Default.Menu,
                                     contentDescription = stringResource(R.string.staff_dashboard_open_sidebar),

@@ -33,9 +33,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -55,6 +53,8 @@ import org.mochios.android.R
 import org.mochios.android.i18n.ThemeInfo
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.theme.oklch
 import org.mochios.settings.ui.preferences.PrefRow
 import org.mochios.settings.ui.preferences.PrefSpec
@@ -154,7 +154,7 @@ fun DisplayScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.settings_display_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.common_back),
@@ -208,7 +208,7 @@ fun DisplayScreen(
 
             item(key = "reset") {
                 Spacer(Modifier.height(16.dp))
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showResetConfirm = true },
                     modifier = Modifier.fillMaxWidth(),
                 ) {

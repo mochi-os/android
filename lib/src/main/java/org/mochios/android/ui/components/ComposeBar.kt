@@ -36,7 +36,6 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -236,7 +235,7 @@ fun ComposeBar(
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (filePicker != null && attachments != null) {
-                    IconButton(onClick = { filePicker.launch("*/*") }, enabled = enabled) {
+                    MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = enabled) {
                         Icon(Icons.Default.AttachFile, contentDescription = attachments.addLabel)
                     }
                 }
@@ -285,7 +284,7 @@ fun ComposeBar(
 
                 trailingContent?.invoke(this)
                 Spacer(modifier = Modifier.width(8.dp))
-                IconButton(onClick = submit, enabled = canSend) {
+                MochiIconButton(onClick = submit, enabled = canSend) {
                     if (isSending) {
                         CircularProgressIndicator(modifier = Modifier.padding(4.dp))
                     } else {
@@ -391,7 +390,7 @@ private fun AttachmentChip(
             {
                 Row {
                     if (moveUpLabel != null) {
-                        IconButton(onClick = onMoveUp, modifier = Modifier.size(20.dp)) {
+                        MochiIconButton(onClick = onMoveUp, modifier = Modifier.size(20.dp)) {
                             Icon(
                                 Icons.Default.ExpandLess,
                                 contentDescription = moveUpLabel,
@@ -400,7 +399,7 @@ private fun AttachmentChip(
                         }
                     }
                     if (moveDownLabel != null) {
-                        IconButton(onClick = onMoveDown, modifier = Modifier.size(20.dp)) {
+                        MochiIconButton(onClick = onMoveDown, modifier = Modifier.size(20.dp)) {
                             Icon(
                                 Icons.Default.ExpandMore,
                                 contentDescription = moveDownLabel,

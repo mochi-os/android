@@ -31,9 +31,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -63,6 +61,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -123,7 +123,7 @@ fun NotificationPrefsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.notifprefs_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                     }
                 },
@@ -267,13 +267,13 @@ private fun CategoryCard(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.weight(1f),
                 )
-                IconButton(onClick = onTest) {
+                MochiIconButton(onClick = onTest) {
                     Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(R.string.notifprefs_test))
                 }
-                IconButton(onClick = onEdit) {
+                MochiIconButton(onClick = onEdit) {
                     Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.notifprefs_edit))
                 }
-                IconButton(onClick = onDelete) {
+                MochiIconButton(onClick = onDelete) {
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.notifprefs_delete),
@@ -391,7 +391,7 @@ private fun TopicRow(
                 }
             }
             Box {
-                OutlinedButton(onClick = { menu = true }) {
+                MochiOutlinedButton(onClick = { menu = true }) {
                     val current = categories.firstOrNull { it.id == topic.category }
                     Text(current?.label ?: stringResource(R.string.notifprefs_unassigned))
                 }
@@ -416,7 +416,7 @@ private fun TopicRow(
                     }
                 }
             }
-            IconButton(onClick = { onRemove(topic) }) {
+            MochiIconButton(onClick = { onRemove(topic) }) {
                 Icon(Icons.Default.Close, contentDescription = stringResource(R.string.notifprefs_remove))
             }
         }
@@ -468,7 +468,7 @@ private fun DeleteCategoryDialog(
                 Text(stringResource(R.string.notifprefs_reassign_label))
                 Spacer(Modifier.height(8.dp))
                 Box {
-                    OutlinedButton(onClick = { menu = true }) {
+                    MochiOutlinedButton(onClick = { menu = true }) {
                         val cur = others.firstOrNull { it.id == target }
                         Text(cur?.label ?: "")
                     }

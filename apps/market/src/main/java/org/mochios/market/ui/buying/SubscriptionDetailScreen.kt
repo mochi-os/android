@@ -25,12 +25,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ImageNotSupported
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -67,7 +65,10 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -397,7 +398,7 @@ private fun ActionRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         if (canPause) {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onPause,
                 enabled = !mutating,
                 modifier = Modifier.weight(1f),
@@ -406,7 +407,7 @@ private fun ActionRow(
             }
         }
         if (canResume) {
-            Button(
+            MochiButton(
                 onClick = onResume,
                 enabled = !mutating,
                 modifier = Modifier.weight(1f),
@@ -421,7 +422,7 @@ private fun ActionRow(
             }
         }
         if (canReactivate) {
-            Button(
+            MochiButton(
                 onClick = onReactivate,
                 enabled = !mutating,
                 modifier = Modifier.weight(1f),
@@ -436,12 +437,10 @@ private fun ActionRow(
             }
         }
         if (canCancel) {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onCancelRequested,
                 enabled = !mutating,
-                colors = ButtonDefaults.outlinedButtonColors(
-                    contentColor = MaterialTheme.colorScheme.error,
-                ),
+                tone = MochiButtonTone.Destructive,
                 modifier = Modifier.weight(1f),
             ) {
                 Text(stringResource(R.string.market_subscriptions_action_cancel))

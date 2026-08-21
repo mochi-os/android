@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -60,7 +59,7 @@ fun BannerEditor(
         )
         Spacer(modifier = Modifier.height(12.dp))
         Row {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { onSave(draft) },
                 enabled = draft != initialValue,
             ) {
@@ -68,7 +67,7 @@ fun BannerEditor(
             }
             Spacer(modifier = Modifier.width(8.dp))
             if (initialValue.isNotEmpty()) {
-                OutlinedButton(onClick = {
+                MochiOutlinedButton(onClick = {
                     draft = ""
                     onSave("")
                 }) {

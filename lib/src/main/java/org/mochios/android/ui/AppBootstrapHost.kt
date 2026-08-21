@@ -18,14 +18,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -39,6 +36,9 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.ui.auth.AuthNavigation
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 
 /**
  * Single entry point for app rendering. The host activity wires this once
@@ -150,12 +150,12 @@ private fun ReactivationScreen(
             }
             Text(text = body, style = MaterialTheme.typography.bodyMedium)
             Spacer(Modifier.height(8.dp))
-            Button(onClick = onReactivate, modifier = Modifier.fillMaxWidth()) {
+            MochiButton(onClick = onReactivate, modifier = Modifier.fillMaxWidth()) {
                 Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                 Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                 Text(stringResource(R.string.reactivation_reactivate))
             }
-            OutlinedButton(onClick = onSignOut, modifier = Modifier.fillMaxWidth()) {
+            MochiOutlinedButton(onClick = onSignOut, modifier = Modifier.fillMaxWidth()) {
                 Text(stringResource(R.string.reactivation_sign_out))
             }
         }
@@ -192,7 +192,7 @@ private fun SingleAccountConfirm(
         Spacer(modifier = Modifier.height(24.dp))
         AccountSummary(account)
         Spacer(modifier = Modifier.height(32.dp))
-        Button(
+        MochiButton(
             onClick = { onContinue(account) },
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -207,7 +207,7 @@ private fun SingleAccountConfirm(
             )
         }
         Spacer(modifier = Modifier.height(8.dp))
-        TextButton(onClick = onDifferent, modifier = Modifier.fillMaxWidth()) {
+        MochiTextButton(onClick = onDifferent, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.bootstrap_sign_in_differently))
         }
     }
@@ -229,7 +229,7 @@ private fun AccountPicker(
         Text(stringResource(R.string.bootstrap_choose_account), style = MaterialTheme.typography.headlineSmall)
         Spacer(modifier = Modifier.height(24.dp))
         accounts.forEach { account ->
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { onPick(account) },
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -245,7 +245,7 @@ private fun AccountPicker(
             Spacer(modifier = Modifier.height(8.dp))
         }
         Spacer(modifier = Modifier.height(16.dp))
-        TextButton(onClick = onDifferent, modifier = Modifier.fillMaxWidth()) {
+        MochiTextButton(onClick = onDifferent, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.bootstrap_sign_in_different_server))
         }
     }

@@ -31,10 +31,8 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -51,6 +49,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Asset
@@ -163,7 +163,7 @@ fun DigitalAssetsManager(
             LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
         }
 
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { pickFiles.launch("*/*") },
             modifier = Modifier.fillMaxWidth(),
         ) {
@@ -217,7 +217,7 @@ private fun AssetRow(
                 )
             }
         }
-        IconButton(onClick = onMoveUp, enabled = canMoveUp) {
+        MochiIconButton(onClick = onMoveUp, enabled = canMoveUp) {
             Icon(
                 Icons.Default.ArrowUpward,
                 contentDescription = null,
@@ -225,7 +225,7 @@ private fun AssetRow(
                 modifier = Modifier.size(20.dp),
             )
         }
-        IconButton(onClick = onMoveDown, enabled = canMoveDown) {
+        MochiIconButton(onClick = onMoveDown, enabled = canMoveDown) {
             Icon(
                 Icons.Default.ArrowDownward,
                 contentDescription = null,
@@ -233,7 +233,7 @@ private fun AssetRow(
                 modifier = Modifier.size(20.dp),
             )
         }
-        IconButton(onClick = onDelete) {
+        MochiIconButton(onClick = onDelete) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.market_editor_asset_delete),
@@ -280,7 +280,7 @@ private fun ExternalAssetForm(
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = {
                 if (filename.isNotBlank() && reference.isNotBlank()) {
                     onSubmit(filename.trim(), mime.trim(), reference.trim())

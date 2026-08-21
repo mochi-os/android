@@ -58,13 +58,11 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -106,6 +104,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
@@ -113,6 +112,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -285,7 +285,7 @@ private fun ForumDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.forums_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.forums_list_title)
@@ -385,7 +385,7 @@ private fun ForumContent(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.forums_list_title)
@@ -402,7 +402,7 @@ private fun ForumContent(
                     // empty, so the button appears once posting is known to be allowed.
                     if (!isAll && uiState.forum.id.isNotEmpty() &&
                         uiState.forum.canPost != false) {
-                        IconButton(onClick = { onNewPost(forumIdForCallbacks) }) {
+                        MochiIconButton(onClick = { onNewPost(forumIdForCallbacks) }) {
                             Icon(
                                 Icons.Default.Add,
                                 contentDescription = stringResource(R.string.forums_new_post)
@@ -410,7 +410,7 @@ private fun ForumContent(
                         }
                     }
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(
                                 Icons.Default.MoreVert,
                                 contentDescription = stringResource(
@@ -637,7 +637,7 @@ private fun ForumContent(
                                             if (uiState.isLoadingMore) {
                                                 CircularProgressIndicator()
                                             } else {
-                                                TextButton(onClick = { viewModel.loadMore() }) {
+                                                MochiTextButton(onClick = { viewModel.loadMore() }) {
                                                     Text(stringResource(R.string.forums_load_more))
                                                 }
                                             }
@@ -936,7 +936,7 @@ private fun ForumBanner(banner: String, forumId: String) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             HtmlContent(html = banner, modifier = Modifier.weight(1f))
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     prefs.edit { putString(prefKey, contentHash) }
                     dismissed = true

@@ -23,7 +23,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -53,6 +52,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.projects.R
 import org.mochios.projects.repository.ProjectsRepository
 import javax.inject.Inject
@@ -284,7 +284,7 @@ fun DiffViewerScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_diff_title, viewModel.source, viewModel.target)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
                     }
                 },

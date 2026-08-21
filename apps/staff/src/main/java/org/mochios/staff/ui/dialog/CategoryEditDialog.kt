@@ -37,6 +37,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
@@ -180,7 +181,7 @@ private fun ParentDropdown(
             modifier = Modifier.padding(bottom = 4.dp),
         )
         Box {
-            androidx.compose.material3.OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { expanded = true },
                 modifier = Modifier.fillMaxWidth(),
             ) {

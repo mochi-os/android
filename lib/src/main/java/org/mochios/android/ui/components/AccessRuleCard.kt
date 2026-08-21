@@ -20,7 +20,6 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -133,7 +132,7 @@ fun AccessRuleCard(
                 )
             }
             if (!rule.isOwner) {
-                IconButton(onClick = onRevoke) {
+                MochiIconButton(onClick = onRevoke) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(R.string.access_revoke),

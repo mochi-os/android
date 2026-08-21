@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -51,6 +50,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
@@ -285,7 +285,7 @@ private fun ReceivedReviewCard(
                 maxLines = 4,
             )
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                Button(
+                MochiButton(
                     onClick = onSubmit,
                     enabled = draft.isNotBlank(),
                 ) {

@@ -30,17 +30,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -51,6 +47,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
@@ -100,7 +100,7 @@ fun AccountScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.account_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -160,7 +160,7 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        OutlinedButton(onClick = { showDialog = true }) {
+        MochiOutlinedButton(onClick = { showDialog = true }) {
             Text(stringResource(R.string.account_data_download))
         }
     }
@@ -242,11 +242,9 @@ private fun CloseAccountSection(onClose: () -> Unit) {
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         SectionHeader(stringResource(R.string.account_close_section))
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { confirming = true },
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.error,
-            ),
+            tone = MochiButtonTone.Destructive,
         ) {
             Text(stringResource(R.string.account_close_action))
         }
@@ -290,11 +288,11 @@ private fun IdentitySection(
                     onValueChange = onNameDraftChange,
                     modifier = Modifier.weight(1f),
                 )
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     onSaveName()
                     editingName = false
                 }) { Text(stringResource(R.string.account_save)) }
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     onNameDraftChange(id.name)
                     editingName = false
                 }) { Text(stringResource(R.string.account_cancel)) }
@@ -305,7 +303,7 @@ private fun IdentitySection(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.weight(1f),
                 )
-                IconButton(
+                MochiIconButton(
                     onClick = { editingName = true },
                     modifier = Modifier.size(36.dp),
                 ) {
@@ -330,7 +328,7 @@ private fun IdentitySection(
                 monospace = true,
                 modifier = Modifier.weight(1f),
             )
-            IconButton(
+            MochiIconButton(
                 onClick = { clipboard.setClip(ClipData.newPlainText("fingerprint", id.fingerprint).toClipEntry()) },
                 enabled = id.fingerprint.isNotBlank(),
                 modifier = Modifier.size(36.dp),
@@ -344,7 +342,7 @@ private fun IdentitySection(
         }
         IdentityFieldRow(label = stringResource(R.string.account_identity_identity)) {
             ValueChip(text = id.entity, monospace = true, modifier = Modifier.weight(1f))
-            IconButton(
+            MochiIconButton(
                 onClick = { clipboard.setClip(ClipData.newPlainText("identity", id.entity).toClipEntry()) },
                 enabled = id.entity.isNotBlank(),
                 modifier = Modifier.size(36.dp),

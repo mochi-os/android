@@ -34,9 +34,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -62,6 +60,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.wikis.R
 import org.mochios.wikis.model.RevisionDetail
 import org.mochios.wikis.navigation.WikisApp
@@ -102,7 +102,7 @@ fun RevisionViewScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -239,7 +239,7 @@ private fun RevisionBody(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     if (hasPrevious) {
-                        OutlinedButton(onClick = onToggleDiff) {
+                        MochiOutlinedButton(onClick = onToggleDiff) {
                             Icon(
                                 Icons.Default.Difference,
                                 contentDescription = null,
@@ -254,7 +254,7 @@ private fun RevisionBody(
                             )
                         }
                     }
-                    OutlinedButton(onClick = onBackToHistory) {
+                    MochiOutlinedButton(onClick = onBackToHistory) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = null,
@@ -264,7 +264,7 @@ private fun RevisionBody(
                         Text(stringResource(R.string.wikis_revision_back_to_history))
                     }
                     if (!isCurrent) {
-                        OutlinedButton(onClick = onRevert) {
+                        MochiOutlinedButton(onClick = onRevert) {
                             Icon(
                                 Icons.Default.Restore,
                                 contentDescription = null,

@@ -33,7 +33,6 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
@@ -56,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
@@ -435,7 +435,7 @@ private fun BoardColumn(
                 )
             }
             if (onCreateInColumn != null) {
-                IconButton(onClick = onCreateInColumn, modifier = Modifier.size(32.dp)) {
+                MochiIconButton(onClick = onCreateInColumn, modifier = Modifier.size(32.dp)) {
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.crm_board_new),
@@ -447,7 +447,7 @@ private fun BoardColumn(
                 var showMenu by remember { mutableStateOf(false) }
                 var showRenameDialog by remember { mutableStateOf(false) }
                 Box {
-                    IconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
+                    MochiIconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                         Icon(
                             Icons.Default.MoreHoriz,
                             contentDescription = stringResource(MochiR.string.common_more_options),

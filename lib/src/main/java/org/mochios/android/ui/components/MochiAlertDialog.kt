@@ -18,7 +18,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -132,15 +131,13 @@ fun MochiAlertDialog(
         onDismissRequest = onDismissRequest,
         confirmButton = {
             if (confirmText != null) {
-                TextButton(
+                MochiTextButton(
                     onClick = onConfirm,
                     enabled = confirmEnabled && !confirmLoading,
-                    colors = if (destructive) {
-                        ButtonDefaults.textButtonColors(
-                            contentColor = MaterialTheme.colorScheme.error
-                        )
+                    tone = if (destructive) {
+                        MochiButtonTone.Destructive
                     } else {
-                        ButtonDefaults.textButtonColors()
+                        MochiButtonTone.Primary
                     },
                 ) {
                     if (confirmLoading) {
@@ -157,17 +154,13 @@ fun MochiAlertDialog(
         modifier = modifier,
         dismissButton = dismissText?.let {
             {
-                TextButton(
+                MochiTextButton(
                     onClick = onDismiss,
                     enabled = dismissEnabled,
-                    // Neutral on purpose. TextButton's default content colour is
-                    // the primary, which put the safe way out in the same tinted
-                    // weight as the confirm beside it - and beside a destructive
-                    // confirm, two saturated labels say nothing about which one
-                    // is which.
-                    colors = ButtonDefaults.textButtonColors(
-                        contentColor = MaterialTheme.colorScheme.onSurfaceVariant
-                    ),
+                    // Neutral on purpose, which is this button's default: beside a
+                    // tinted confirm - primary, or error on a destructive one - two
+                    // coloured labels would say nothing about which is which.
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     Text(it)
                 }

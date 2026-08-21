@@ -45,6 +45,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
@@ -249,10 +250,10 @@ fun WikiCommentThread(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.End,
                         ) {
-                            TextButton(onClick = { editing = false }) {
+                            MochiTextButton(onClick = { editing = false }) {
                                 Text(stringResource(R.string.wikis_comment_action_cancel))
                             }
-                            TextButton(
+                            MochiTextButton(
                                 onClick = {
                                     if (editBody.isNotBlank()) {
                                         onEdit?.invoke(comment.id, editBody.trim())
@@ -394,7 +395,7 @@ private fun ActionChip(
     label: String,
     onClick: () -> Unit,
 ) {
-    TextButton(
+    MochiTextButton(
         onClick = onClick,
         contentPadding = androidx.compose.foundation.layout.PaddingValues(
             horizontal = 8.dp,

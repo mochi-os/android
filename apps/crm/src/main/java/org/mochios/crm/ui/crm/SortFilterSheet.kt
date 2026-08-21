@@ -27,7 +27,6 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -36,6 +35,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.FieldOption
@@ -93,7 +93,7 @@ fun SortFilterSheet(
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.weight(1f),
                 )
-                TextButton(onClick = onClearAll) {
+                MochiTextButton(onClick = onClearAll) {
                     Text(stringResource(R.string.crm_filter_clear_all))
                 }
             }
@@ -110,7 +110,7 @@ fun SortFilterSheet(
                     text = stringResource(R.string.crm_sort_field),
                     modifier = Modifier.weight(1f),
                 )
-                TextButton(onClick = onToggleDirection) {
+                MochiTextButton(onClick = onToggleDirection) {
                     Icon(
                         imageVector = if (descending) {
                             Icons.Default.ArrowDownward

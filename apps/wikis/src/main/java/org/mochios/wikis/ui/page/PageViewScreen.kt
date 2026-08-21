@@ -25,11 +25,9 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.SearchOff
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -70,6 +68,8 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
@@ -193,7 +193,7 @@ fun PageViewScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -202,7 +202,7 @@ fun PageViewScreen(
                 },
                 actions = {
                     Box {
-                        IconButton(onClick = { menuExpanded = true }) {
+                        MochiIconButton(onClick = { menuExpanded = true }) {
                             Icon(
                                 Icons.Default.MoreHoriz,
                                 contentDescription = stringResource(R.string.wikis_pageview_page_actions),
@@ -636,7 +636,7 @@ private fun PageNotFoundBody(
         subtitle = stringResource(R.string.wikis_pageview_not_found_description, slug),
         action = {
             if (permissions.edit) {
-                Button(onClick = onCreate) {
+                MochiButton(onClick = onCreate) {
                     Icon(
                         Icons.Default.Edit,
                         contentDescription = null,

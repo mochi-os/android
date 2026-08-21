@@ -23,12 +23,8 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -43,6 +39,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
@@ -102,7 +102,7 @@ fun GeneralTab(
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     // Save only has something to do once the draft has moved off
                     // what is stored.
-                    Button(
+                    MochiButton(
                         onClick = {
                             viewModel.saveBanner(bannerDraft)
                             focusManager.clearFocus()
@@ -116,14 +116,11 @@ fun GeneralTab(
                     // undoes typing, it does not commit anything. Absent while
                     // the box is empty: there is nothing to clear.
                     if (bannerDraft.isNotEmpty()) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = {
                                 bannerDraft = ""
                                 focusManager.clearFocus()
                             },
-                            colors = ButtonDefaults.outlinedButtonColors(
-                                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                            ),
                         ) {
                             Text(stringResource(R.string.forums_clear))
                         }
@@ -137,11 +134,9 @@ fun GeneralTab(
             title = stringResource(R.string.forums_settings_delete),
             headerAlignment = Alignment.CenterVertically,
             action = {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showDeleteDialog = true },
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error,
-                    ),
+                    tone = MochiButtonTone.Destructive,
                 ) {
                     Text(stringResource(MochiR.string.common_delete))
                 }
@@ -257,7 +252,7 @@ private fun NameEditor(
                 singleLine = true,
                 trailingIcon = if (editValue.isNotEmpty()) {
                     {
-                        IconButton(onClick = { editValue = "" }) {
+                        MochiIconButton(onClick = { editValue = "" }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription =
@@ -270,7 +265,7 @@ private fun NameEditor(
                 },
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = {
+            MochiIconButton(onClick = {
                 onRename(editValue.trim())
                 isEditing = false
             }) {
@@ -279,7 +274,7 @@ private fun NameEditor(
                     contentDescription = stringResource(R.string.forums_settings_save_name),
                 )
             }
-            IconButton(onClick = {
+            MochiIconButton(onClick = {
                 editValue = currentName
                 isEditing = false
             }) {
@@ -294,7 +289,7 @@ private fun NameEditor(
             // fill = false keeps the pencil next to the name instead of pushed to
             // the far end, while the weight still lets a long name wrap.
             Text(currentName, modifier = Modifier.weight(1f, fill = false))
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     editValue = currentName
                     isEditing = true

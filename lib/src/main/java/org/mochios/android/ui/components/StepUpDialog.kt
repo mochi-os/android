@@ -14,9 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -214,7 +212,7 @@ fun StepUpDialog(
                                 ),
                                 modifier = Modifier.fillMaxWidth(),
                             )
-                            TextButton(
+                            MochiTextButton(
                                 onClick = {
                                     scope.launch {
                                         error = null
@@ -224,7 +222,7 @@ fun StepUpDialog(
                                 enabled = !busy,
                             ) { Text(stringResource(R.string.stepup_resend_email)) }
                         } else {
-                            OutlinedButton(
+                            MochiOutlinedButton(
                                 onClick = {
                                     scope.launch {
                                         error = null
@@ -252,14 +250,14 @@ fun StepUpDialog(
                         )
                     }
                     if (remaining.contains("passkey")) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = { usePasskey() },
                             enabled = !busy,
                             modifier = Modifier.fillMaxWidth(),
                         ) { Text(stringResource(R.string.stepup_use_passkey)) }
                     }
                     providers.forEach { provider ->
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = { useOauth(provider) },
                             enabled = !busy,
                             modifier = Modifier.fillMaxWidth(),

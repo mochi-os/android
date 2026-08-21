@@ -22,7 +22,6 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,6 +43,7 @@ import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Replica
@@ -161,7 +161,7 @@ private fun ReplicaCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            IconButton(
+            MochiIconButton(
                 onClick = onRemove,
                 enabled = !isRemoving,
             ) {

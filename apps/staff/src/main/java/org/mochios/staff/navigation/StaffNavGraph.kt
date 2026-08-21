@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -24,6 +23,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountsScreen
 import org.mochios.staff.ui.appeals.AppealsScreen
@@ -124,7 +124,7 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
             currentRoute = StaffApp.CATEGORIES,
             titleRes = R.string.staff_sidebar_categories,
             topBarActions = {
-                Button(
+                MochiButton(
                     onClick = { viewModel.openCreate() },
                     modifier = Modifier.padding(end = 8.dp),
                 ) {
@@ -174,7 +174,7 @@ fun NavGraphBuilder.staffNavGraph(navController: NavController) {
             topBarActions = {
                 val isAdmin = LocalStaffMe.current?.role == "admin"
                 if (isAdmin) {
-                    Button(
+                    MochiButton(
                         onClick = { navController.navigate(StaffApp.TEAM_ADD) },
                         modifier = Modifier.padding(end = 8.dp),
                     ) {

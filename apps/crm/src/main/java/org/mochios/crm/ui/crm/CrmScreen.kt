@@ -59,7 +59,6 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -111,6 +110,7 @@ import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -265,7 +265,7 @@ private fun CrmDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.crm_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.crm_list_title))
                     }
                 }
@@ -307,7 +307,7 @@ private fun AllCrmsContent(
                 TopAppBar(
                     title = { Text(stringResource(R.string.crm_all_crms)) },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.crm_list_title)
@@ -316,7 +316,7 @@ private fun AllCrmsContent(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
-                        IconButton(onClick = { viewModel.toggleSearch() }) {
+                        MochiIconButton(onClick = { viewModel.toggleSearch() }) {
                             Icon(
                                 Icons.Default.Search,
                                 contentDescription = stringResource(R.string.crm_list_search)
@@ -409,7 +409,7 @@ private fun CrmSearchBar(
     }
     TopAppBar(
         navigationIcon = {
-            IconButton(onClick = onClose) {
+            MochiIconButton(onClick = onClose) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = stringResource(MochiR.string.common_back)
@@ -425,7 +425,7 @@ private fun CrmSearchBar(
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
                     if (query.isNotEmpty()) {
-                        IconButton(onClick = { onQueryChange("") }) {
+                        MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = stringResource(MochiR.string.common_close)
@@ -500,7 +500,7 @@ private fun CrmRow(
                 }
             }
             Box {
-                IconButton(onClick = { showMenu = true }) {
+                MochiIconButton(onClick = { showMenu = true }) {
                     Icon(
                         Icons.Default.MoreHoriz,
                         contentDescription = stringResource(MochiR.string.common_more_options)
@@ -665,7 +665,7 @@ private fun CrmContent(
                         )
                     },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.crm_list_title)
@@ -674,14 +674,14 @@ private fun CrmContent(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
-                        IconButton(onClick = { showSearch = true }) {
+                        MochiIconButton(onClick = { showSearch = true }) {
                             Icon(
                                 Icons.Default.Search,
                                 contentDescription = stringResource(R.string.crm_search)
                             )
                         }
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(R.string.crm_more)

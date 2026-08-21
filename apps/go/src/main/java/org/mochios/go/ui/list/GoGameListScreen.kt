@@ -29,13 +29,11 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -65,9 +63,11 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.go.R
 import org.mochios.go.model.Game
@@ -161,7 +161,7 @@ fun GoGameListScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.go_app_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.go_open_sidebar),
@@ -171,7 +171,7 @@ fun GoGameListScreen(
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
                             }
                             MochiDropdownMenu(
@@ -259,7 +259,7 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
                 color = MaterialTheme.colorScheme.error,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            TextButton(onClick = onRetry) {
+            MochiTextButton(onClick = onRetry) {
                 Text(stringResource(MochiR.string.common_retry))
             }
         }
@@ -280,7 +280,7 @@ private fun EmptyState(filter: GoSidebarFilter, onNewGame: () -> Unit) {
             )
             if (filter == GoSidebarFilter.ACTIVE) {
                 Spacer(modifier = Modifier.height(12.dp))
-                TextButton(onClick = onNewGame) {
+                MochiTextButton(onClick = onNewGame) {
                     Text(stringResource(R.string.go_sidebar_new_game))
                 }
             }

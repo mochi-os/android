@@ -28,9 +28,7 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
@@ -54,6 +52,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.mochiDialogCardColors
@@ -102,7 +102,7 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
             action = {
                 // Outlined — the same shape as the delete action on the General
                 // tab, which tints itself error instead.
-                OutlinedButton(onClick = { showAdd = true }) {
+                MochiOutlinedButton(onClick = { showAdd = true }) {
                     // The shared "Add rule" label; the dialog keeps the longer
                     // "Add access rule" as its title.
                     Text(stringResource(MochiR.string.access_add_rule))
@@ -169,7 +169,7 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
                                 overflow = TextOverflow.Ellipsis,
                                 modifier = Modifier.weight(1f),
                             )
-                            IconButton(onClick = { viewModel.removeMember(member.id) }) {
+                            MochiIconButton(onClick = { viewModel.removeMember(member.id) }) {
                                 Icon(
                                     Icons.Default.Close,
                                     contentDescription = stringResource(
@@ -241,7 +241,7 @@ private fun AccessRuleRow(
                     modifier = Modifier.padding(end = 12.dp),
                 )
             } else {
-                IconButton(onClick = onRevoke) {
+                MochiIconButton(onClick = onRevoke) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.access_revoke),

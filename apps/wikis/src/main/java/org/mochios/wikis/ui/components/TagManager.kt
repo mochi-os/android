@@ -53,6 +53,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.repository.WikisRepository
@@ -138,7 +139,7 @@ fun TagManager(
                         // about long-press. Tapping the X opens the
                         // confirmation dialog (the chip body still routes to
                         // the per-tag pages list).
-                        androidx.compose.material3.IconButton(
+                        MochiIconButton(
                             onClick = { pendingRemoval = tag },
                             modifier = Modifier.size(20.dp),
                         ) {

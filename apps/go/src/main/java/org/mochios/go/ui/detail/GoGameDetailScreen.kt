@@ -30,15 +30,11 @@ import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Handshake
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.SkipNext
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -75,8 +71,11 @@ import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.rememberGameWebSocket
@@ -183,7 +182,7 @@ fun GoGameDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.go_app_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -289,7 +288,7 @@ fun GoGameDetailScreen(
                                 },
                                 actions = {
                                     if (!isWide) {
-                                        IconButton(onClick = { showMobileChat = true }) {
+                                        MochiIconButton(onClick = { showMobileChat = true }) {
                                             Icon(
                                                 imageVector = Icons.AutoMirrored.Filled.Message,
                                                 contentDescription = stringResource(R.string.go_action_open_chat),
@@ -297,7 +296,7 @@ fun GoGameDetailScreen(
                                         }
                                     }
                                     Box {
-                                        IconButton(onClick = { menuOpen = true }) {
+                                        MochiIconButton(onClick = { menuOpen = true }) {
                                             Icon(
                                                 imageVector = Icons.Default.MoreHoriz,
                                                 contentDescription = stringResource(R.string.go_action_more),
@@ -753,7 +752,7 @@ private fun drawOfferBanner(
                     fontWeight = FontWeight.Medium,
                     modifier = Modifier.weight(1f),
                 )
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onDecline,
                     enabled = !isAccepting && !isDeclining,
                     shape = RoundedCornerShape(8.dp),
@@ -768,12 +767,11 @@ private fun drawOfferBanner(
                         Text(stringResource(R.string.go_draw_decline))
                     }
                 }
-                Button(
+                MochiButton(
                     onClick = onAccept,
                     enabled = !isAccepting && !isDeclining,
                     shape = RoundedCornerShape(8.dp),
                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                    colors = ButtonDefaults.buttonColors(),
                 ) {
                     if (isAccepting) {
                         CircularProgressIndicator(

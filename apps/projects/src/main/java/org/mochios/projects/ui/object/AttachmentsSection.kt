@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,6 +31,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.projects.R
 import java.io.File
 
@@ -82,7 +82,7 @@ fun AttachmentsSection(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = { filePicker.launch("*/*") }) {
+            MochiIconButton(onClick = { filePicker.launch("*/*") }) {
                 Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_attachment_add))
             }
         }

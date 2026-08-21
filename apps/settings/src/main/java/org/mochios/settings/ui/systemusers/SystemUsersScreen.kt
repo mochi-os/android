@@ -40,15 +40,12 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -74,6 +71,9 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -123,7 +123,7 @@ fun SystemUsersScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -131,7 +131,7 @@ fun SystemUsersScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = { createOpen = true }) {
+                    MochiIconButton(onClick = { createOpen = true }) {
                         Icon(
                             Icons.Default.PersonAdd,
                             contentDescription = stringResource(R.string.system_users_add_user),
@@ -442,7 +442,7 @@ private fun UserCard(
                 )
             }
             Box {
-                IconButton(onClick = { menu = true }) {
+                MochiIconButton(onClick = { menu = true }) {
                     Icon(
                         Icons.Default.MoreVert,
                         contentDescription = stringResource(R.string.system_users_open_actions),
@@ -662,7 +662,7 @@ private fun SessionRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        TextButton(enabled = !disabled, onClick = onRevoke) {
+        MochiTextButton(enabled = !disabled, onClick = onRevoke) {
             Text(stringResource(R.string.system_users_revoke))
         }
     }
@@ -693,10 +693,10 @@ private fun PaginationBar(
         ) {
             PageSizeDropdown(limit = limit, onChange = onLimit)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedButton(onClick = onPrev, enabled = offset > 0) {
+                MochiOutlinedButton(onClick = onPrev, enabled = offset > 0) {
                     Text(stringResource(R.string.system_users_previous))
                 }
-                OutlinedButton(onClick = onNext, enabled = offset + limit < count) {
+                MochiOutlinedButton(onClick = onNext, enabled = offset + limit < count) {
                     Text(stringResource(R.string.system_users_next))
                 }
             }

@@ -35,23 +35,18 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Flight
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -80,8 +75,12 @@ import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
@@ -148,7 +147,7 @@ fun CreatePostScreen(
             TopAppBar(
                 title = { Text(stringResource(if (isEditing) R.string.feeds_edit_post else R.string.feeds_new_post)) },
                 navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
+                    MochiIconButton(onClick = onNavigateBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -156,7 +155,7 @@ fun CreatePostScreen(
                     }
                 },
                 actions = {
-                    TextButton(
+                    MochiTextButton(
                         onClick = { viewModel.createPost() },
                         enabled = !isPosting
                     ) {
@@ -259,11 +258,6 @@ fun CreatePostScreen(
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Neutral (variant) tint for the compose action buttons — not primary.
-            val actionButtonColors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-
             // Preview card of the chosen location, above the action buttons.
             if (checkin != null) {
                 LocationPreviewCard(
@@ -313,7 +307,7 @@ fun CreatePostScreen(
 
             // Location: each button opens a bottom sheet to search + confirm.
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                OutlinedButton(onClick = { showCheckinSheet = true }, colors = actionButtonColors) {
+                MochiOutlinedButton(onClick = { showCheckinSheet = true }) {
                     Icon(
                         Icons.Default.LocationOn,
                         contentDescription = null,
@@ -322,9 +316,8 @@ fun CreatePostScreen(
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(stringResource(R.string.feeds_check_in))
                 }
-                OutlinedButton(
-                    onClick = { showTravellingSheet = true },
-                    colors = actionButtonColors
+                MochiOutlinedButton(
+                    onClick = { showTravellingSheet = true }
                 ) {
                     Icon(
                         Icons.Default.Flight,
@@ -339,9 +332,8 @@ fun CreatePostScreen(
             Spacer(modifier = Modifier.height(12.dp))
 
             // Attachments
-            OutlinedButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                colors = actionButtonColors
+            MochiOutlinedButton(
+                onClick = { filePickerLauncher.launch("*/*") }
             ) {
                 Icon(
                     Icons.Default.AttachFile,
@@ -364,7 +356,7 @@ fun CreatePostScreen(
                             if (existingAttachments.size > 1) {
                                 Column {
                                     if (index > 0) {
-                                        IconButton(
+                                        MochiIconButton(
                                             onClick = {
                                                 viewModel.moveExistingAttachment(
                                                     attachment.id,
@@ -381,7 +373,7 @@ fun CreatePostScreen(
                                         }
                                     }
                                     if (index < existingAttachments.lastIndex) {
-                                        IconButton(
+                                        MochiIconButton(
                                             onClick = {
                                                 viewModel.moveExistingAttachment(
                                                     attachment.id,
@@ -417,7 +409,7 @@ fun CreatePostScreen(
                                 }
                             )
                             if ((attachment.isImage || attachment.isVideo) && !isRemoved) {
-                                IconButton(
+                                MochiIconButton(
                                     onClick = {
                                         captioning = CaptionTarget(
                                             existingId = attachment.id,
@@ -445,7 +437,7 @@ fun CreatePostScreen(
                             if (attachments.size > 1) {
                                 Column {
                                     if (index > 0) {
-                                        IconButton(
+                                        MochiIconButton(
                                             onClick = { viewModel.moveAttachment(uri, -1) },
                                             modifier = Modifier.size(20.dp)
                                         ) {
@@ -457,7 +449,7 @@ fun CreatePostScreen(
                                         }
                                     }
                                     if (index < attachments.lastIndex) {
-                                        IconButton(
+                                        MochiIconButton(
                                             onClick = { viewModel.moveAttachment(uri, 1) },
                                             modifier = Modifier.size(20.dp)
                                         ) {
@@ -495,7 +487,7 @@ fun CreatePostScreen(
                                 } == true
                             }
                             if (isMedia) {
-                                IconButton(
+                                MochiIconButton(
                                     onClick = {
                                         captioning = CaptionTarget(
                                             existingId = null,
@@ -606,7 +598,7 @@ private fun LocationPreviewCard(
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f)
                 )
-                IconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
+                MochiIconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.common_close),
@@ -656,7 +648,7 @@ private fun CheckinBottomSheet(
                     style = MaterialTheme.typography.titleLarge,
                     modifier = Modifier.weight(1f)
                 )
-                IconButton(onClick = onDismiss) {
+                MochiIconButton(onClick = onDismiss) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.common_close)
@@ -710,7 +702,7 @@ private fun TravellingBottomSheet(
                     style = MaterialTheme.typography.titleLarge,
                     modifier = Modifier.weight(1f)
                 )
-                IconButton(onClick = onDismiss) {
+                MochiIconButton(onClick = onDismiss) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.common_close)
@@ -743,10 +735,10 @@ private fun SheetActions(
     onConfirm: () -> Unit
 ) {
     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-        OutlinedButton(onClick = onCancel, modifier = Modifier.weight(1f)) {
+        MochiOutlinedButton(onClick = onCancel, modifier = Modifier.weight(1f)) {
             Text(cancelLabel)
         }
-        Button(onClick = onConfirm, modifier = Modifier.weight(1f)) {
+        MochiButton(onClick = onConfirm, modifier = Modifier.weight(1f)) {
             Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(18.dp))
             Spacer(modifier = Modifier.width(8.dp))
             Text(stringResource(MochiR.string.common_confirm))

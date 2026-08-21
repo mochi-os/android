@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -137,7 +136,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                 Text(stringResource(R.string.about_version, version))
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = {
                             state = CheckUi.Checking
                             scope.launch {

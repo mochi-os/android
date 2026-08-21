@@ -23,7 +23,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SecondaryScrollableTabRow
 import androidx.compose.material3.Tab
@@ -49,6 +48,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectDetails
@@ -185,7 +185,7 @@ fun ObjectDetailSheet(
                             }
                         }
 
-                        IconButton(onClick = { viewModel.toggleWatch() }) {
+                        MochiIconButton(onClick = { viewModel.toggleWatch() }) {
                             Icon(
                                 imageVector = if (uiState.isWatching) Icons.Default.Visibility else Icons.Default.VisibilityOff,
                                 contentDescription = if (uiState.isWatching) stringResource(R.string.projects_object_unwatch) else stringResource(R.string.projects_object_watch)
@@ -193,7 +193,7 @@ fun ObjectDetailSheet(
                         }
 
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
                             }
                             MochiDropdownMenu(

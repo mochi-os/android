@@ -30,14 +30,11 @@ import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.outlined.PersonRemove
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -64,6 +61,9 @@ import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
@@ -114,7 +114,7 @@ fun ChatSettingsScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -170,7 +170,7 @@ fun ChatSettingsScreen(
                                         onValueChange = { draft -> nameDraft = draft },
                                         modifier = Modifier.weight(1f),
                                     )
-                                    IconButton(
+                                    MochiIconButton(
                                         onClick = {
                                             if (nameDraft.isNotBlank() && nameDraft != uiState.chat.name) {
                                                 viewModel.rename(nameDraft)
@@ -186,7 +186,7 @@ fun ChatSettingsScreen(
                                             modifier = Modifier.size(18.dp),
                                         )
                                     }
-                                    IconButton(
+                                    MochiIconButton(
                                         onClick = {
                                             nameDraft = uiState.chat.name
                                             editingName = false
@@ -209,7 +209,7 @@ fun ChatSettingsScreen(
                                         modifier = Modifier.weight(1f, fill = false),
                                     )
                                     if (uiState.chat.status == ChatStatus.ACTIVE) {
-                                        IconButton(
+                                        MochiIconButton(
                                             onClick = {
                                                 nameDraft = uiState.chat.name
                                                 editingName = true
@@ -227,7 +227,7 @@ fun ChatSettingsScreen(
                             }
                             SettingsFieldRow(label = stringResource(R.string.chat_settings_id)) {
                                 DataChip(value = uiState.chat.id, truncate = Truncate.MIDDLE)
-                                IconButton(
+                                MochiIconButton(
                                     onClick = {
                                         clipboard.setText(AnnotatedString(uiState.chat.id))
                                         Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT)
@@ -255,7 +255,7 @@ fun ChatSettingsScreen(
                                 title = stringResource(R.string.chat_settings_members),
                                 action = if (uiState.chat.status == ChatStatus.ACTIVE) {
                                     {
-                                        OutlinedButton(onClick = {
+                                        MochiOutlinedButton(onClick = {
                                             viewModel.loadFriends()
                                             showAddMember = true
                                         }) {
@@ -289,7 +289,7 @@ fun ChatSettingsScreen(
 
                     if (uiState.chat.status != ChatStatus.ACTIVE) {
                         item {
-                            Button(
+                            MochiButton(
                                 onClick = { showDeleteDialog = true },
                                 colors = ButtonDefaults.buttonColors(
                                     containerColor = MaterialTheme.colorScheme.errorContainer,
@@ -504,7 +504,7 @@ private fun MemberRow(
             }
         }
         if (canRemove) {
-            IconButton(onClick = onRemove) {
+            MochiIconButton(onClick = onRemove) {
                 Icon(
                     Icons.Outlined.PersonRemove,
                     contentDescription = stringResource(R.string.chat_settings_remove_member),

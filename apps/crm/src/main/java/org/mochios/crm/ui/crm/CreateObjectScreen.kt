@@ -28,16 +28,13 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.UploadFile
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -61,7 +58,10 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmObject
@@ -248,7 +248,7 @@ fun CreateObjectScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.crm_create_object_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack, enabled = !uiState.isCreating) {
+                    MochiIconButton(onClick = onBack, enabled = !uiState.isCreating) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -275,7 +275,7 @@ fun CreateObjectScreen(
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                         }
-                        Button(
+                        MochiButton(
                             onClick = {
                                 val title = fieldValues[titleFieldId].orEmpty()
                                 val initialValues = fieldValues
@@ -476,7 +476,7 @@ fun CreateObjectScreen(
                                 style = MaterialTheme.typography.titleSmall,
                                 modifier = Modifier.weight(1f),
                             )
-                            OutlinedButton(
+                            MochiOutlinedButton(
                                 onClick = { filePicker.launch("*/*") },
                                 enabled = !uiState.isCreating,
                             ) {
@@ -508,7 +508,7 @@ fun CreateObjectScreen(
                                     overflow = TextOverflow.Ellipsis,
                                     modifier = Modifier.weight(1f),
                                 )
-                                IconButton(
+                                MochiIconButton(
                                     onClick = { pendingFiles.removeAt(index) },
                                     enabled = !uiState.isCreating,
                                 ) {

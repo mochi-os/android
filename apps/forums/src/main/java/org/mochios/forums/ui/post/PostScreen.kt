@@ -62,12 +62,10 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -111,6 +109,8 @@ import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton
@@ -260,7 +260,7 @@ fun PostScreen(
                     }
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -272,7 +272,7 @@ fun PostScreen(
                     // the title, leaving the card as pure content.
                     if (uiState.post.id.isNotEmpty()) {
                         Box {
-                            IconButton(onClick = { showPostMenu = true }) {
+                            MochiIconButton(onClick = { showPostMenu = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(
@@ -531,7 +531,7 @@ private fun EditCommentDialog(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                IconButton(onClick = { filePickerLauncher.launch("*/*") }) {
+                MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
                     Icon(
                         androidx.compose.material.icons.Icons.Default.MoreHoriz,
                         contentDescription = null,
@@ -1085,7 +1085,7 @@ private fun AttachmentComments(
             )
             if (others > 0) {
                 item(key = "toggle") {
-                    TextButton(onClick = { showAll = !showAll }) {
+                    MochiTextButton(onClick = { showAll = !showAll }) {
                         Text(
                             if (showAll) stringResource(MochiR.string.lightbox_comments_only)
                             else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, others)
@@ -1193,7 +1193,7 @@ private fun CommentCard(
             },
         )
         if (comment.canComment) {
-            IconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.AutoMirrored.Outlined.Reply,
                     contentDescription = stringResource(R.string.forums_comment_reply),
@@ -1203,7 +1203,7 @@ private fun CommentCard(
             }
         }
         Box {
-            IconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Default.MoreHoriz,
                     contentDescription = stringResource(MochiR.string.common_more_options),
@@ -1277,7 +1277,7 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
             style = MaterialTheme.typography.labelSmall,
             modifier = Modifier.weight(1f)
         )
-        IconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
+        MochiIconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
             Icon(
                 Icons.Default.Close,
                 contentDescription = stringResource(R.string.forums_comment_clear_reply),

@@ -26,13 +26,11 @@ import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -53,6 +51,8 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.forums.R
 import org.mochios.forums.model.SavedItem
 import org.mochios.android.R as MochiR
@@ -79,7 +79,7 @@ fun SavedScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.forums_saved_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
+                    MochiIconButton(onClick = onNavigateBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -88,7 +88,7 @@ fun SavedScreen(
                 },
                 actions = {
                     if (saved.isNotEmpty()) {
-                        TextButton(onClick = { showClearConfirm = true }) {
+                        MochiTextButton(onClick = { showClearConfirm = true }) {
                             Text(stringResource(R.string.forums_saved_clear_all))
                         }
                     }
@@ -209,7 +209,7 @@ private fun SavedPostCard(
                 }
                 Spacer(modifier = Modifier.width(12.dp))
                 // Unsave is implemented here in the Saved list screen (SavedScreen).
-                IconButton(onClick = onUnsave, modifier = Modifier.size(28.dp)) {
+                MochiIconButton(onClick = onUnsave, modifier = Modifier.size(28.dp)) {
                     Icon(
                         Icons.Filled.Bookmark,
                         contentDescription = stringResource(R.string.forums_saved_remove),

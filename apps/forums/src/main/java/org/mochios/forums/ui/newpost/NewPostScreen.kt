@@ -30,17 +30,13 @@ import androidx.compose.material.icons.filled.ClosedCaption
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -61,6 +57,9 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
@@ -116,7 +115,7 @@ fun NewPostScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -124,7 +123,7 @@ fun NewPostScreen(
                     }
                 },
                 actions = {
-                    TextButton(
+                    MochiTextButton(
                         onClick = { viewModel.submit() },
                         enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting
                     ) {
@@ -183,11 +182,8 @@ fun NewPostScreen(
             )
             Spacer(Modifier.height(16.dp))
 
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { filePickerLauncher.launch("*/*") },
-                colors = ButtonDefaults.outlinedButtonColors(
-                    contentColor = MaterialTheme.colorScheme.onSurfaceVariant
-                )
             ) {
                 Icon(
                     Icons.Default.AttachFile,
@@ -299,7 +295,7 @@ private fun AttachmentChips(
                 if (attachments.size > 1) {
                     Column {
                         if (index > 0) {
-                            IconButton(
+                            MochiIconButton(
                                 onClick = { onMove(uri, -1) },
                                 modifier = Modifier.size(20.dp)
                             ) {
@@ -311,7 +307,7 @@ private fun AttachmentChips(
                             }
                         }
                         if (index < attachments.lastIndex) {
-                            IconButton(
+                            MochiIconButton(
                                 onClick = { onMove(uri, 1) },
                                 modifier = Modifier.size(20.dp)
                             ) {
@@ -347,7 +343,7 @@ private fun AttachmentChips(
                     } == true
                 }
                 if (isMedia) {
-                    IconButton(
+                    MochiIconButton(
                         onClick = { onCaption(uri, name) },
                         modifier = Modifier.size(24.dp)
                     ) {
@@ -391,7 +387,7 @@ private fun ExistingAttachmentChips(
                 if (attachments.size > 1) {
                     Column {
                         if (index > 0) {
-                            IconButton(
+                            MochiIconButton(
                                 onClick = { onMove(attachment.id, -1) },
                                 modifier = Modifier.size(20.dp)
                             ) {
@@ -403,7 +399,7 @@ private fun ExistingAttachmentChips(
                             }
                         }
                         if (index < attachments.lastIndex) {
-                            IconButton(
+                            MochiIconButton(
                                 onClick = { onMove(attachment.id, 1) },
                                 modifier = Modifier.size(20.dp)
                             ) {
@@ -434,7 +430,7 @@ private fun ExistingAttachmentChips(
                     }
                 )
                 if ((attachment.isImage || attachment.isVideo) && attachment.id !in removedIds) {
-                    IconButton(
+                    MochiIconButton(
                         onClick = { onCaption(attachment) },
                         modifier = Modifier.size(24.dp)
                     ) {

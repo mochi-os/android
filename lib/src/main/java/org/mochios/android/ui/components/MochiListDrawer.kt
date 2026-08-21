@@ -109,7 +109,7 @@ data class DrawerItem(
  *
  *   val drawerState = rememberDrawerState(DrawerValue.Closed)
  *   val scope = rememberCoroutineScope()
- *   IconButton(onClick = { scope.launch { drawerState.open() } }) { ... }
+ *   MochiIconButton(onClick = { scope.launch { drawerState.open() } }) { ... }
  */
 @Composable
 fun MochiListDrawer(

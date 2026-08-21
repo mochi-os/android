@@ -25,7 +25,6 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -48,6 +47,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
@@ -93,7 +93,7 @@ fun GroupsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.people_groups_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                    MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.people_open_sidebar),
