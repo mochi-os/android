@@ -121,6 +121,7 @@ fun GeneralTab(
                                 bannerDraft = ""
                                 focusManager.clearFocus()
                             },
+                            tone = MochiButtonTone.Neutral,
                         ) {
                             Text(stringResource(R.string.forums_clear))
                         }

@@ -13,6 +13,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonElevation
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonColors
 import androidx.compose.material3.IconButtonDefaults
@@ -84,13 +85,18 @@ fun MochiButton(
  * stands alone in a section without claiming the whole screen.
  *
  * Drop-in for [androidx.compose.material3.OutlinedButton], with [tone] added.
+ * Tinted by default. Material 3's own outlined button went neutral in the
+ * expressive update — label `onSurfaceVariant`, border `outlineVariant` — which
+ * left the app with two weights, filled-blue or grey, and "Add rule" reading
+ * like something already disabled. Pass [MochiButtonTone.Neutral] for a button
+ * that genuinely must not compete, such as a Clear beside a Save.
  */
 @Composable
 fun MochiOutlinedButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    tone: MochiButtonTone = MochiButtonTone.Neutral,
+    tone: MochiButtonTone = MochiButtonTone.Primary,
     shape: Shape = ButtonDefaults.outlinedShape,
     colors: ButtonColors? = null,
     elevation: ButtonElevation? = null,
@@ -150,9 +156,11 @@ fun MochiTextButton(
 /**
  * The app's icon button.
  *
- * Drop-in for [androidx.compose.material3.IconButton], with [tone] added. The
- * tone colours the button, so the [androidx.compose.material3.Icon] inside can
- * be left untinted and cannot disagree with it.
+ * Drop-in for [androidx.compose.material3.IconButton], with [tone] added.
+ * [MochiButtonTone.Neutral] inherits the surrounding content colour, which is
+ * what an icon in a top bar or a list row wants; the other two colour the
+ * button, so the [androidx.compose.material3.Icon] inside can be left untinted
+ * and cannot disagree with it.
  */
 @Composable
 fun MochiIconButton(
@@ -171,6 +179,55 @@ fun MochiIconButton(
         colors = colors ?: iconColors(tone),
         interactionSource = interactionSource,
         content = content,
+    )
+}
+
+/**
+ * The app's tonal button: the middle weight, for a section's own action on a
+ * screen where several sections each have one and none of them is the screen's
+ * main action.
+ *
+ * Drop-in for [androidx.compose.material3.FilledTonalButton], with [tone]
+ * added.
+ */
+@Composable
+fun MochiTonalButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    tone: MochiButtonTone = MochiButtonTone.Primary,
+    shape: Shape = ButtonDefaults.filledTonalShape,
+    colors: ButtonColors? = null,
+    elevation: ButtonElevation? = ButtonDefaults.filledTonalButtonElevation(),
+    border: BorderStroke? = null,
+    contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
+    interactionSource: MutableInteractionSource? = null,
+    content: @Composable RowScope.() -> Unit,
+) {
+    FilledTonalButton(
+        onClick = onClick,
+        modifier = modifier,
+        enabled = enabled,
+        shape = shape,
+        colors = colors ?: tonalColors(tone),
+        elevation = elevation,
+        border = border,
+        contentPadding = contentPadding,
+        interactionSource = interactionSource,
+        content = content,
+    )
+}
+
+@Composable
+private fun tonalColors(tone: MochiButtonTone): ButtonColors = when (tone) {
+    MochiButtonTone.Primary -> ButtonDefaults.filledTonalButtonColors()
+    MochiButtonTone.Neutral -> ButtonDefaults.filledTonalButtonColors(
+        containerColor = MaterialTheme.colorScheme.surfaceContainerHighest,
+        contentColor = MaterialTheme.colorScheme.onSurface,
+    )
+    MochiButtonTone.Destructive -> ButtonDefaults.filledTonalButtonColors(
+        containerColor = MaterialTheme.colorScheme.errorContainer,
+        contentColor = MaterialTheme.colorScheme.onErrorContainer,
     )
 }
 

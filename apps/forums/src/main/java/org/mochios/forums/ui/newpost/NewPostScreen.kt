@@ -57,6 +57,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
@@ -184,6 +185,7 @@ fun NewPostScreen(
 
             MochiOutlinedButton(
                 onClick = { filePickerLauncher.launch("*/*") },
+                tone = MochiButtonTone.Neutral,
             ) {
                 Icon(
                     Icons.Default.AttachFile,

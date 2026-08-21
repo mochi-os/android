@@ -76,6 +76,7 @@ import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -307,7 +308,7 @@ fun CreatePostScreen(
 
             // Location: each button opens a bottom sheet to search + confirm.
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                MochiOutlinedButton(onClick = { showCheckinSheet = true }) {
+                MochiOutlinedButton(onClick = { showCheckinSheet = true }, tone = MochiButtonTone.Neutral) {
                     Icon(
                         Icons.Default.LocationOn,
                         contentDescription = null,
@@ -317,7 +318,8 @@ fun CreatePostScreen(
                     Text(stringResource(R.string.feeds_check_in))
                 }
                 MochiOutlinedButton(
-                    onClick = { showTravellingSheet = true }
+                    onClick = { showTravellingSheet = true },
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     Icon(
                         Icons.Default.Flight,
@@ -333,7 +335,8 @@ fun CreatePostScreen(
 
             // Attachments
             MochiOutlinedButton(
-                onClick = { filePickerLauncher.launch("*/*") }
+                onClick = { filePickerLauncher.launch("*/*") },
+                tone = MochiButtonTone.Neutral,
             ) {
                 Icon(
                     Icons.Default.AttachFile,

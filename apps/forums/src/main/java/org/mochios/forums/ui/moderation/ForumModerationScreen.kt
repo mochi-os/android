@@ -368,6 +368,7 @@ private fun QueueActions(
     FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         MochiOutlinedButton(
             onClick = onReject,
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.forums_moderation_reject))
         }
@@ -381,11 +382,13 @@ private fun QueueActions(
         }
         MochiOutlinedButton(
             onClick = { confirming = RestrictAction.MUTE },
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.forums_moderation_restriction_type_muted))
         }
         MochiOutlinedButton(
             onClick = { confirming = RestrictAction.BAN },
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.forums_moderation_restriction_type_banned))
         }
@@ -601,11 +604,13 @@ private fun ReportCard(
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     MochiOutlinedButton(
                         onClick = { onResolve("ignored") },
+                        tone = MochiButtonTone.Neutral,
                     ) {
                         Text(stringResource(R.string.forums_moderation_report_dismiss))
                     }
                     MochiOutlinedButton(
                         onClick = { onResolve("removed") },
+                        tone = MochiButtonTone.Neutral,
                     ) {
                         Text(stringResource(R.string.forums_post_remove))
                     }
@@ -818,6 +823,7 @@ private fun RestrictionCard(
                 Spacer(Modifier.width(8.dp))
                 MochiOutlinedButton(
                     onClick = { confirming = true },
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     Text(stringResource(R.string.forums_moderation_restriction_remove))
                 }
