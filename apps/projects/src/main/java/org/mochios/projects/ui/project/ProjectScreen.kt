@@ -52,6 +52,8 @@ import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
+import androidx.compose.material3.Badge
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -625,9 +627,10 @@ private fun ProjectContent(
     val details = uiState.projectDetails
     val activeView = viewModel.getActiveView()
 
-    // The top-bar icon carries a dot whenever the sheet holds something other
-    // than the view's own defaults. The search query is deliberately left out —
-    // it has its own visible affordance in the top bar.
+    // The overflow icon carries a dot whenever the sheet holds something other
+    // than the view's own defaults, so a filtered list still says so from the
+    // bar. The search query is deliberately left out — it has its own visible
+    // affordance in the top bar.
     val filtersActive = uiState.watchedOnly ||
         uiState.fieldFilters.isNotEmpty() ||
         viewModel.hasSortOverride()
@@ -677,10 +680,21 @@ private fun ProjectContent(
                         }
                         Box {
                             MochiIconButton(onClick = { showOverflow = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(R.string.projects_more)
-                                )
+                                BadgedBox(
+                                    badge = {
+                                        // Says only that something in
+                                        // the menu is on; the filter row inside
+                                        // carries the same dot to say what.
+                                        if (filtersActive) {
+                                            Badge(modifier = Modifier.size(6.dp))
+                                        }
+                                    }
+                                ) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(R.string.projects_more)
+                                    )
+                                }
                             }
                             MochiDropdownMenu(
                                 expanded = showOverflow,
@@ -697,9 +711,23 @@ private fun ProjectContent(
                                         showFilters = true
                                     },
                                     leadingIcon = {
-                                        Icon(Icons.Default.FilterList, contentDescription = null)
+                                        // The same dot as the bar's, on the row
+                                        // it belongs to. A check would read as
+                                        // "chosen", which is what the views
+                                        // below it mean by one.
+                                        BadgedBox(
+                                            badge = {
+                                                if (filtersActive) {
+                                                    Badge(modifier = Modifier.size(6.dp))
+                                                }
+                                            }
+                                        ) {
+                                            Icon(
+                                                Icons.Default.FilterList,
+                                                contentDescription = null
+                                            )
+                                        }
                                     },
-                                    selected = filtersActive,
                                 )
                                 MochiDropdownMenuDivider()
                                 // Views the project defines, checked one at a
