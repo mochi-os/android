@@ -27,13 +27,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -58,6 +55,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.android.R as MochiR
@@ -90,7 +90,7 @@ fun FindCrmsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.crm_find_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
                     }
                 }
@@ -103,7 +103,7 @@ fun FindCrmsScreen(
                 .fillMaxSize()
         ) {
             // Search bar
-            OutlinedTextField(
+            MochiTextField(
                 value = uiState.searchQuery,
                 onValueChange = viewModel::updateSearchQuery,
                 placeholder = { Text(stringResource(R.string.crm_find_search_placeholder)) },
@@ -297,7 +297,7 @@ private fun DiscoveredCrmCard(
             }
         }
         Spacer(Modifier.width(12.dp))
-        Button(onClick = onSubscribe, enabled = !isSubscribing) {
+        MochiButton(onClick = onSubscribe, enabled = !isSubscribing) {
             if (isSubscribing) {
                 CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
             } else {

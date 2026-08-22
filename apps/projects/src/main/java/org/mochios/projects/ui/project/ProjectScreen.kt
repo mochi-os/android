@@ -52,7 +52,6 @@ import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.outlined.ViewColumn
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
@@ -61,17 +60,13 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -107,15 +102,18 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ColorPicker
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
@@ -166,20 +164,20 @@ fun ProjectScreen(
 
     val drawerItems = remember(listUiState.projects) {
         listViewModel.filteredProjects().map { project ->
-            FeatureDrawerItem(
+            DrawerItem(
                 id = project.fingerprint.ifEmpty { project.id },
                 title = project.name,
                 icon = Icons.Default.FolderOpen,
             )
         }
     }
-    val drawerAll = FeatureDrawerItem(
+    val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.projects_all_projects),
         icon = Icons.Default.FolderOpen,
     )
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.projects_list_title)) },
         items = drawerItems,
@@ -270,7 +268,7 @@ private fun ProjectDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
                     }
                 }
@@ -312,7 +310,7 @@ private fun AllProjectsContent(
                 TopAppBar(
                     title = { Text(stringResource(R.string.projects_all_projects)) },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.projects_list_title)
@@ -321,7 +319,7 @@ private fun AllProjectsContent(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
-                        IconButton(onClick = { viewModel.toggleSearch() }) {
+                        MochiIconButton(onClick = { viewModel.toggleSearch() }) {
                             Icon(
                                 Icons.Default.Search,
                                 contentDescription = stringResource(R.string.projects_list_search)
@@ -416,7 +414,7 @@ private fun ProjectSearchBar(
     }
     TopAppBar(
         navigationIcon = {
-            IconButton(onClick = onClose) {
+            MochiIconButton(onClick = onClose) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = stringResource(MochiR.string.common_back)
@@ -432,7 +430,7 @@ private fun ProjectSearchBar(
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
                     if (query.isNotEmpty()) {
-                        IconButton(onClick = { onQueryChange("") }) {
+                        MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = stringResource(MochiR.string.common_close)
@@ -474,10 +472,10 @@ private fun ProjectRow(
     val cancelLabel = stringResource(MochiR.string.common_cancel)
     val description = project.description.takeIf { it.isNotBlank() }
 
-    OutlinedCard(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
+            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true }),
     ) {
         Row(
             modifier = Modifier.padding(16.dp),
@@ -507,7 +505,7 @@ private fun ProjectRow(
                 }
             }
             Box {
-                IconButton(onClick = { showMenu = true }) {
+                MochiIconButton(onClick = { showMenu = true }) {
                     Icon(
                         Icons.Default.MoreHoriz,
                         contentDescription = stringResource(MochiR.string.common_more_options)
@@ -554,17 +552,17 @@ private fun ProjectRow(
     }
 
     if (showUnsubscribeConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showUnsubscribeConfirm = false },
             title = unsubscribeTitle,
-            message = unsubscribeMessage,
-            confirmLabel = unsubscribeLabel,
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = unsubscribeMessage,
+            confirmText = unsubscribeLabel,
             onConfirm = {
                 showUnsubscribeConfirm = false
                 onUnsubscribe()
             },
-            onDismiss = { showUnsubscribeConfirm = false }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 }
@@ -629,9 +627,10 @@ private fun ProjectContent(
     val details = uiState.projectDetails
     val activeView = viewModel.getActiveView()
 
-    // The top-bar icon carries a dot whenever the sheet holds something other
-    // than the view's own defaults. The search query is deliberately left out —
-    // it has its own visible affordance in the top bar.
+    // The overflow icon carries a dot whenever the sheet holds something other
+    // than the view's own defaults, so a filtered list still says so from the
+    // bar. The search query is deliberately left out — it has its own visible
+    // affordance in the top bar.
     val filtersActive = uiState.watchedOnly ||
         uiState.fieldFilters.isNotEmpty() ||
         viewModel.hasSortOverride()
@@ -664,7 +663,7 @@ private fun ProjectContent(
                         )
                     },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.projects_list_title)
@@ -673,37 +672,64 @@ private fun ProjectContent(
                     },
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
-                        IconButton(onClick = { showSearch = true }) {
+                        MochiIconButton(onClick = { showSearch = true }) {
                             Icon(
                                 Icons.Default.Search,
                                 contentDescription = stringResource(R.string.projects_search)
                             )
                         }
-                        IconButton(onClick = { showFilters = !showFilters }) {
-                            BadgedBox(
-                                badge = {
-                                    if (filtersActive) {
-                                        Badge(modifier = Modifier.size(6.dp))
-                                    }
-                                }
-                            ) {
-                                Icon(
-                                    Icons.Default.FilterList,
-                                    contentDescription = stringResource(R.string.projects_filter)
-                                )
-                            }
-                        }
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(R.string.projects_more)
-                                )
+                            MochiIconButton(onClick = { showOverflow = true }) {
+                                BadgedBox(
+                                    badge = {
+                                        // Says only that something in
+                                        // the menu is on; the filter row inside
+                                        // carries the same dot to say what.
+                                        if (filtersActive) {
+                                            Badge(modifier = Modifier.size(6.dp))
+                                        }
+                                    }
+                                ) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(R.string.projects_more)
+                                    )
+                                }
                             }
                             MochiDropdownMenu(
                                 expanded = showOverflow,
                                 onDismissRequest = { showOverflow = false }
                             ) {
+                                // Filter and sort used to be a fifth control
+                                // in the bar. It opens a sheet either way, so it
+                                // costs one tap more from in here and gives the
+                                // bar back to the actions that act in place.
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.projects_filter)) },
+                                    onClick = {
+                                        showOverflow = false
+                                        showFilters = true
+                                    },
+                                    leadingIcon = {
+                                        // The same dot as the bar's, on the row
+                                        // it belongs to. A check would read as
+                                        // "chosen", which is what the views
+                                        // below it mean by one.
+                                        BadgedBox(
+                                            badge = {
+                                                if (filtersActive) {
+                                                    Badge(modifier = Modifier.size(6.dp))
+                                                }
+                                            }
+                                        ) {
+                                            Icon(
+                                                Icons.Default.FilterList,
+                                                contentDescription = null
+                                            )
+                                        }
+                                    },
+                                )
+                                MochiDropdownMenuDivider()
                                 // Views the project defines, checked one at a
                                 // time. Listed even when there is only one, so
                                 // the menu always says which view is on screen
@@ -961,15 +987,15 @@ private fun AddColumnDialog(
     var name by remember { mutableStateOf("") }
     var colour by remember { mutableStateOf("#3b82f6") }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_board_add_column)) },
-        text = {
+        title = stringResource(R.string.projects_board_add_column),
+        content = {
             // The picker is taller than the dialog on a short screen, so the
             // body scrolls. Its saturation field consumes its own drags, so
             // dragging inside it doesn't scroll the dialog out from under it.
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.projects_field_name)) },
@@ -988,19 +1014,10 @@ private fun AddColumnDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onAdd(name.trim(), colour.ifBlank { null }) },
-                enabled = name.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_add),
+        onConfirm = { onAdd(name.trim(), colour.ifBlank { null }) },
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

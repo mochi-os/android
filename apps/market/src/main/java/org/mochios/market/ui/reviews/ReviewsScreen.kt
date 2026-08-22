@@ -19,13 +19,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -52,7 +50,10 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.RatingStars
@@ -74,11 +75,11 @@ fun ReviewsScreen(
         }
     }
 
-    Scaffold(
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.REVIEWS,
+        titleRes = R.string.market_reviews_title,
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.market_reviews_title)) })
-        },
     ) { padding ->
         Column(
             modifier = Modifier
@@ -266,7 +267,7 @@ private fun ReceivedReviewCard(
             }
         } else {
             // Compose: response sub-form
-            OutlinedTextField(
+            MochiTextField(
                 value = draft,
                 onValueChange = onDraftChange,
                 placeholder = {
@@ -276,7 +277,7 @@ private fun ReceivedReviewCard(
                 maxLines = 4,
             )
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                Button(
+                MochiButton(
                     onClick = onSubmit,
                     enabled = draft.isNotBlank(),
                 ) {

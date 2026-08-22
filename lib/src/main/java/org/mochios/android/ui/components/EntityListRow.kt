@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalEntityRadius
 
 /**
  * Canonical Mochi list row for entity collections (chats, feeds, forums,
@@ -59,7 +60,7 @@ fun EntityListRow(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(LocalEntityRadius.current))
             .background(MaterialTheme.colorScheme.surfaceContainerLow)
             .then(clickable)
     ) {
@@ -111,7 +112,7 @@ fun EntityIconCircle(
     size: Dp = 40.dp,
     modifier: Modifier = Modifier,
 ) {
-    val bg = colourFromSeed(seed)
+    val bg = seededEntityColor(seed)
     Box(
         modifier = modifier
             .size(size)
@@ -126,29 +127,6 @@ fun EntityIconCircle(
             modifier = Modifier.size(size * 0.55f)
         )
     }
-}
-
-private fun colourFromSeed(seed: String): Color {
-    var h = 0
-    for (c in seed) h = h * 31 + c.code
-    val hue = ((h and 0x7fffffff) % 360).toFloat()
-    return hsvToColor(hue, 0.55f, 0.70f)
-}
-
-private fun hsvToColor(h: Float, s: Float, v: Float): Color {
-    val c = v * s
-    val hp = h / 60f
-    val x = c * (1f - kotlin.math.abs(hp % 2f - 1f))
-    val (r1, g1, b1) = when (hp.toInt()) {
-        0 -> Triple(c, x, 0f)
-        1 -> Triple(x, c, 0f)
-        2 -> Triple(0f, c, x)
-        3 -> Triple(0f, x, c)
-        4 -> Triple(x, 0f, c)
-        else -> Triple(c, 0f, x)
-    }
-    val m = v - c
-    return Color(r1 + m, g1 + m, b1 + m)
 }
 
 /** Convenience divider for stacked rows. Indents past the avatar so it

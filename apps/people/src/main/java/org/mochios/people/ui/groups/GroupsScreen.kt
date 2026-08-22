@@ -25,9 +25,7 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -46,13 +44,17 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
 import org.mochios.people.model.Group
-import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleDrawerItems
+import org.mochios.people.ui.components.peopleDrawerSection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -75,16 +77,15 @@ fun GroupsScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            PeopleSidebar(
-                current = PeopleSidebarSection.GROUPS,
-                onSelect = { section ->
-                    drawerScope.launch { drawerState.close() }
-                    if (section != PeopleSidebarSection.GROUPS) onSwitchSection(section)
-                },
-            )
+        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        items = peopleDrawerItems(),
+        selectedId = PeopleSidebarSection.GROUPS.name,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            val section = peopleDrawerSection(item.id)
+            if (section != PeopleSidebarSection.GROUPS) onSwitchSection(section)
         },
     ) {
     Scaffold(
@@ -92,7 +93,7 @@ fun GroupsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.people_groups_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                    MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.people_open_sidebar),

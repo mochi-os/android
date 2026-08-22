@@ -6,3 +6,4 @@ local.properties
 # tools/check-locales.py is a script, but importing it as a module - which is
 # how its checks get driven ad hoc - leaves bytecode beside it.
 __pycache__/
+/.idea/

@@ -7,10 +7,7 @@ package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -40,11 +37,11 @@ fun AttachmentCaptionDialog(
 ) {
     var value by rememberSaveable(name, initial) { mutableStateOf(initial) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.attachment_caption)) },
-        text = {
-            OutlinedTextField(
+        title = stringResource(R.string.attachment_caption),
+        content = {
+            MochiTextField(
                 value = value,
                 onValueChange = { value = it.take(CAPTION_MAXIMUM) },
                 label = { Text(name) },
@@ -55,15 +52,8 @@ fun AttachmentCaptionDialog(
                 modifier = Modifier.fillMaxWidth()
             )
         },
-        confirmButton = {
-            TextButton(onClick = { onSave(value.trim()) }) {
-                Text(stringResource(R.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(R.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(R.string.common_save),
+        onConfirm = { onSave(value.trim()) },
+        dismissText = stringResource(R.string.common_cancel),
     )
 }

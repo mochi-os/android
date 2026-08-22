@@ -189,7 +189,7 @@
     <string name="oem_hint_allow">Hintergrund erlauben</string>
     <string name="oem_hint_dismiss">Nicht mehr anzeigen</string>
     <string name="about_label">Über</string>
-    <string name="about_title">Mochi Client für Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_check_updates">Nach Aktualisierungen suchen</string>
     <string name="about_up_to_date">Aktuell</string>

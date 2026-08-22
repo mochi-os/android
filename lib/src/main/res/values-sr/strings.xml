@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Дозволи позадину</string>
     <string name="oem_hint_dismiss">Не приказуј поново</string>
     <string name="about_label">О апликацији</string>
-    <string name="about_title">Mochi клијент за Android</string>
+    <string name="about_title">Mochi клијент</string>
     <string name="about_version">Верзија %1$s</string>
     <string name="about_check_updates">Провери ажурирања</string>
     <string name="about_up_to_date">Ажурирано</string>

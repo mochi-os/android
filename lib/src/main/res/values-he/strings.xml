@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">אפשר רקע</string>
     <string name="oem_hint_dismiss">אל תציג שוב</string>
     <string name="about_label">אודות</string>
-    <string name="about_title">לקוח Mochi לאנדרואיד</string>
+    <string name="about_title">לקוח Mochi</string>
     <string name="about_version">גרסה %1$s</string>
     <string name="about_check_updates">בדוק עדכונים</string>
     <string name="about_up_to_date">מעודכן</string>

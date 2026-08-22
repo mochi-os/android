@@ -17,14 +17,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.OpenInNew
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -38,6 +35,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
@@ -73,7 +73,7 @@ fun StripeOnboardingBanner(
 
     if (charges && payouts) return
 
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.tertiaryContainer,
@@ -101,9 +101,9 @@ fun StripeOnboardingBanner(
             }
             Spacer(modifier = Modifier.padding(top = 4.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(
+                MochiButton(
                     onClick = {
-                        if (busy) return@Button
+                        if (busy) return@MochiButton
                         busy = true
                         error = null
                         scope.launch {
@@ -144,9 +144,9 @@ fun StripeOnboardingBanner(
                             stringResource(R.string.market_stripe_onboarding_action),
                     )
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = {
-                        if (busy) return@OutlinedButton
+                        if (busy) return@MochiOutlinedButton
                         busy = true
                         error = null
                         scope.launch {

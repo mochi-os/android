@@ -13,10 +13,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,6 +27,7 @@ import androidx.compose.foundation.layout.Column
 import com.github.bhlangonijr.chesslib.Piece
 import com.github.bhlangonijr.chesslib.PieceType
 import com.github.bhlangonijr.chesslib.Side
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.chess.R
 
 /**
@@ -49,12 +48,10 @@ fun PromotionDialog(
         PieceType.KNIGHT to "n",
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = {
-            Text(stringResource(R.string.chess_promotion_title))
-        },
-        text = {
+        title = stringResource(R.string.chess_promotion_title),
+        content = {
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically,
@@ -68,12 +65,7 @@ fun PromotionDialog(
                 }
             }
         },
-        confirmButton = {},
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(org.mochios.android.R.string.common_cancel))
-            }
-        },
+        dismissText = stringResource(org.mochios.android.R.string.common_cancel),
     )
 }
 

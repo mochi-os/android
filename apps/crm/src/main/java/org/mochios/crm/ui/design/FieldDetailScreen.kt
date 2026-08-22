@@ -25,21 +25,15 @@ import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -52,11 +46,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ColorPicker
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmField
-import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checklist")
@@ -126,7 +125,7 @@ fun FieldDetailScreen(
     ) {
         // Header
         Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(onClick = onBack) {
+            MochiIconButton(onClick = onBack) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
             }
             Text(
@@ -139,7 +138,7 @@ fun FieldDetailScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         // Name
-        OutlinedTextField(
+        MochiTextField(
             value = editName,
             onValueChange = { editName = it },
             label = { Text(stringResource(R.string.crm_field_name)) },
@@ -154,7 +153,7 @@ fun FieldDetailScreen(
             expanded = typeExpanded,
             onExpandedChange = { typeExpanded = it }
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = fieldTypeLabel(editFieldtype),
                 onValueChange = {},
                 readOnly = true,
@@ -208,7 +207,7 @@ fun FieldDetailScreen(
             expanded = posExpanded,
             onExpandedChange = { posExpanded = it }
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = positionLabel(editPosition),
                 onValueChange = {},
                 readOnly = true,
@@ -243,14 +242,14 @@ fun FieldDetailScreen(
 
         if (editFieldtype == "text") {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = editMinlength,
                     onValueChange = { editMinlength = it.filter { c -> c.isDigit() } },
                     label = { Text(stringResource(R.string.crm_field_min_length)) },
                     singleLine = true,
                     modifier = Modifier.weight(1f)
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = editMaxlength,
                     onValueChange = { editMaxlength = it.filter { c -> c.isDigit() } },
                     label = { Text(stringResource(R.string.crm_field_max_length)) },
@@ -259,7 +258,7 @@ fun FieldDetailScreen(
                 )
             }
             Spacer(modifier = Modifier.height(8.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = editPattern,
                 onValueChange = { editPattern = it },
                 label = { Text(stringResource(R.string.crm_field_pattern)) },
@@ -269,7 +268,7 @@ fun FieldDetailScreen(
             Spacer(modifier = Modifier.height(8.dp))
         }
 
-        OutlinedTextField(
+        MochiTextField(
             value = editRows,
             onValueChange = { editRows = it.filter { c -> c.isDigit() } },
             label = { Text(stringResource(R.string.crm_field_rows)) },
@@ -299,7 +298,7 @@ fun FieldDetailScreen(
                 || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
 
         if (hasChanges) {
-            TextButton(
+            MochiTextButton(
                 onClick = {
                     viewModel.updateField(
                         classId = classId,
@@ -334,7 +333,7 @@ fun FieldDetailScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(stringResource(R.string.crm_field_options), style = MaterialTheme.typography.titleSmall)
-                IconButton(onClick = { showAddOptionDialog = true }) {
+                MochiIconButton(onClick = { showAddOptionDialog = true }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_field_add_option))
                 }
             }
@@ -368,7 +367,7 @@ fun FieldDetailScreen(
                         style = MaterialTheme.typography.bodyMedium,
                         modifier = Modifier.weight(1f)
                     )
-                    IconButton(
+                    MochiIconButton(
                         onClick = { editingOption = option },
                         modifier = Modifier.size(32.dp)
                     ) {
@@ -378,7 +377,7 @@ fun FieldDetailScreen(
                             modifier = Modifier.size(18.dp)
                         )
                     }
-                    IconButton(
+                    MochiIconButton(
                         onClick = { viewModel.deleteOption(classId, field.id, option.id) },
                         modifier = Modifier.size(32.dp)
                     ) {
@@ -408,11 +407,9 @@ fun FieldDetailScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         // Delete field
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { showDeleteConfirm = true },
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.error
-            ),
+            tone = MochiButtonTone.Neutral,
             modifier = Modifier.fillMaxWidth()
         ) {
             Icon(Icons.Default.Delete, contentDescription = null)
@@ -450,15 +447,18 @@ fun FieldDetailScreen(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = stringResource(R.string.crm_field_delete_title),
-            message = stringResource(R.string.crm_field_delete_message, field.name),
+            text = stringResource(R.string.crm_field_delete_message, field.name),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteConfirm = false
                 viewModel.deleteField(classId, field.id)
                 onBack()
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -495,15 +495,15 @@ private fun OptionDialog(
     var colour by remember { mutableStateOf(initialColour) }
     var icon by remember { mutableStateOf(initialIcon) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             // The picker is taller than the dialog on a short screen, so the
             // body scrolls. Its saturation field consumes its own drags, so
             // dragging inside it doesn't scroll the dialog out from under it.
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { value -> name = value },
                     label = { Text(stringResource(R.string.crm_field_name)) },
@@ -523,7 +523,7 @@ private fun OptionDialog(
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(stringResource(R.string.crm_option_icon), style = MaterialTheme.typography.labelMedium)
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = icon,
                     onValueChange = { icon = it },
                     placeholder = { Text(stringResource(R.string.crm_option_icon_placeholder)) },
@@ -532,18 +532,9 @@ private fun OptionDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onSave(name, colour.ifBlank { null }, icon.ifBlank { null }) },
-                enabled = name.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onSave(name, colour.ifBlank { null }, icon.ifBlank { null }) },
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

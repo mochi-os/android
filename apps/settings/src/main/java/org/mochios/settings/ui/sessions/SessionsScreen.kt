@@ -20,19 +20,14 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -51,6 +46,9 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.settings.R
 import org.mochios.settings.api.Session
 import org.mochios.android.R as MochiR
@@ -79,7 +77,7 @@ fun SessionsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.sessions_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -126,7 +124,7 @@ fun SessionsScreen(
 private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Unit) {
     val format = LocalFormat.current
     var confirm by remember(session.id) { mutableStateOf(false) }
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -156,31 +154,27 @@ private fun SessionRow(session: Session, isCurrent: Boolean, onRevoke: () -> Uni
                     )
                 }
             }
-            IconButton(onClick = { confirm = true }) {
+            MochiIconButton(onClick = { confirm = true }) {
                 Icon(
                     Icons.AutoMirrored.Filled.Logout,
                     contentDescription = stringResource(R.string.sessions_revoke),
-                    tint = MaterialTheme.colorScheme.error,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
         }
     }
     if (confirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirm = false },
-            title = { Text(stringResource(R.string.sessions_revoke_title)) },
-            text = { Text(stringResource(R.string.sessions_revoke_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirm = false
-                    onRevoke()
-                }) { Text(stringResource(R.string.sessions_revoke), color = MaterialTheme.colorScheme.error) }
+            title = stringResource(R.string.sessions_revoke_title),
+            text = stringResource(R.string.sessions_revoke_message),
+            confirmText = stringResource(R.string.sessions_revoke),
+            onConfirm = {
+                confirm = false
+                onRevoke()
             },
-            dismissButton = {
-                TextButton(onClick = { confirm = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }

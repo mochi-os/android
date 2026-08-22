@@ -18,13 +18,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -35,8 +31,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Appeal
 import org.mochios.staff.ui.components.StaffAuditTimeline
@@ -55,10 +54,10 @@ fun AppealDecideDialog(
     var decision by rememberSaveable(appeal.id) { mutableStateOf("") }
     var notes by rememberSaveable(appeal.id) { mutableStateOf("") }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(stringResource(R.string.staff_appeals_dialog_title)) },
-        text = {
+        title = stringResource(R.string.staff_appeals_dialog_title),
+        content = {
             Column(
                 modifier = Modifier.verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -99,7 +98,7 @@ fun AppealDecideDialog(
                     onDecisionChange = { decision = it },
                 )
 
-                OutlinedTextField(
+                MochiTextField(
                     value = notes,
                     onValueChange = { notes = it },
                     label = { Text(stringResource(R.string.staff_appeals_notes_label)) },
@@ -118,25 +117,13 @@ fun AppealDecideDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = !submitting && decision.isNotBlank(),
-                onClick = { onSubmit(decision, notes) },
-            ) {
-                Text(
-                    if (submitting) stringResource(R.string.staff_appeals_submitting)
-                    else stringResource(R.string.staff_appeals_submit),
-                )
-            }
-        },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = onDismiss,
-            ) {
-                Text(stringResource(R.string.staff_appeals_cancel))
-            }
-        },
+        confirmText = if (submitting) stringResource(R.string.staff_appeals_submitting)
+            else stringResource(R.string.staff_appeals_submit),
+        onConfirm = { onSubmit(decision, notes) },
+        confirmEnabled = !submitting && decision.isNotBlank(),
+        dismissText = stringResource(R.string.staff_appeals_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !submitting,
     )
 }
 
@@ -156,7 +143,7 @@ private fun DecisionDropdown(
             style = MaterialTheme.typography.labelMedium,
         )
         Box {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { expanded = true },
                 modifier = Modifier.fillMaxWidth(),
             ) {

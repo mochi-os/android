@@ -25,21 +25,16 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Link
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -58,7 +53,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Redirect
 import org.mochios.android.R as MochiR
@@ -92,7 +90,7 @@ fun RedirectsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.wikis_redirects_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -100,7 +98,7 @@ fun RedirectsScreen(
                     }
                 },
                 actions = {
-                    TextButton(onClick = { showAddDialog = true }) {
+                    MochiTextButton(onClick = { showAddDialog = true }) {
                         Icon(
                             Icons.Default.Add,
                             contentDescription = null,
@@ -199,20 +197,21 @@ fun RedirectsBody(
 
     val toDelete = pendingDelete
     if (toDelete != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingDelete = null },
             title = stringResource(R.string.wikis_redirect_delete_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_redirect_delete_confirm_message,
                 toDelete.source,
                 toDelete.target,
             ),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 viewModel.delete(toDelete.source)
                 pendingDelete = null
             },
-            onDismiss = { pendingDelete = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -245,7 +244,7 @@ private fun RedirectRow(
             modifier = Modifier.weight(1f, fill = false),
         )
         Spacer(Modifier.weight(1f))
-        IconButton(onClick = onDelete) {
+        MochiIconButton(onClick = onDelete) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),
@@ -284,12 +283,12 @@ private fun AddRedirectDialog(
     var source by remember { mutableStateOf("") }
     var target by remember { mutableStateOf("") }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.wikis_redirect_create_title)) },
-        text = {
+        title = stringResource(R.string.wikis_redirect_create_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = source,
                     onValueChange = { source = it },
                     label = { Text(stringResource(R.string.wikis_redirect_source_label)) },
@@ -297,7 +296,7 @@ private fun AddRedirectDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = target,
                     onValueChange = { target = it },
                     label = { Text(stringResource(R.string.wikis_redirect_target_label)) },
@@ -306,18 +305,9 @@ private fun AddRedirectDialog(
                 )
             }
         },
-        confirmButton = {
-            Button(
-                onClick = { onCreate(source, target) },
-                enabled = source.isNotBlank() && target.isNotBlank(),
-            ) {
-                Text(stringResource(R.string.wikis_redirect_create_action))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.wikis_redirect_create_action),
+        onConfirm = { onCreate(source, target) },
+        confirmEnabled = source.isNotBlank() && target.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

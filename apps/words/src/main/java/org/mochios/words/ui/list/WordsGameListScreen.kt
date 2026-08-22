@@ -26,16 +26,13 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Badge
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -61,14 +58,19 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.words.R
 import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getPlayerNames
 import org.mochios.words.model.playerScore
-import org.mochios.words.ui.components.WordsSidebar
+import org.mochios.words.ui.components.wordsDrawerItems
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -96,21 +98,34 @@ fun WordsGameListScreen(
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            WordsSidebar(
-                games = uiState.games,
-                myIdentity = uiState.myIdentity,
-                selectedGameId = null,
-                onSelectGame = { game ->
-                    drawerScope.launch { drawerState.close() }
-                    onGameClick(game.fingerprint?.ifBlank { null } ?: game.id)
-                },
-                onNewGame = {
+        header = { DrawerTitle(stringResource(R.string.words_sidebar_header)) },
+        items = wordsDrawerItems(
+            games = uiState.games,
+            myIdentity = uiState.myIdentity,
+        ),
+        selectedId = null,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            onGameClick(item.id)
+        },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(R.string.words_sidebar_new_game),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNewGame()
                 },
+            )
+        },
+        emptyState = {
+            Text(
+                text = stringResource(R.string.words_sidebar_empty),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp),
             )
         },
     ) {
@@ -119,13 +134,13 @@ fun WordsGameListScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.words_list_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.words_list_menu))
                         }
                     },
                     actions = {
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
                             }
                             MochiDropdownMenu(
@@ -236,7 +251,7 @@ private fun GameListCard(
         else -> null
     }
 
-    Card(
+    MochiCard(
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLow),

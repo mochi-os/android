@@ -29,23 +29,17 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.MonitorHeart
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.VerifiedUser
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -66,8 +60,14 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.ConnectedAccount
@@ -119,7 +119,7 @@ fun ConnectedAccountsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.accounts_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                     }
                 },
@@ -138,7 +138,7 @@ fun ConnectedAccountsScreen(
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     item("add") {
-                        FilledTonalButton(onClick = { adding = true }, modifier = Modifier.fillMaxWidth()) {
+                        MochiOutlinedButton(onClick = { adding = true }, modifier = Modifier.fillMaxWidth()) {
                             Icon(Icons.Default.Add, contentDescription = null)
                             Spacer(Modifier.size(8.dp))
                             Text(stringResource(R.string.accounts_add))
@@ -211,19 +211,16 @@ fun ConnectedAccountsScreen(
         )
     }
     deleting?.let { acc ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { deleting = null },
-            title = { Text(stringResource(R.string.accounts_remove_title)) },
-            text = { Text(stringResource(R.string.accounts_remove_message, displayName(acc))) },
-            confirmButton = {
-                TextButton(onClick = {
-                    viewModel.remove(acc.id)
-                    deleting = null
-                }) { Text(stringResource(R.string.accounts_remove)) }
+            title = stringResource(R.string.accounts_remove_title),
+            text = stringResource(R.string.accounts_remove_message, displayName(acc)),
+            confirmText = stringResource(R.string.accounts_remove),
+            onConfirm = {
+                viewModel.remove(acc.id)
+                deleting = null
             },
-            dismissButton = {
-                TextButton(onClick = { deleting = null }) { Text(stringResource(MochiR.string.common_cancel)) }
-            },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -245,7 +242,7 @@ private fun AccountRow(
     val notifyCapable = provider?.capabilities?.contains("notify") == true
     var menu by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -286,7 +283,7 @@ private fun AccountRow(
                 )
             }
             Box {
-                IconButton(onClick = { menu = true }) {
+                MochiIconButton(onClick = { menu = true }) {
                     Icon(Icons.Default.MoreHoriz, contentDescription = null)
                 }
                 MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
@@ -346,10 +343,10 @@ private fun AddAccountDialog(
         else -> false
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.accounts_add_title)) },
-        text = {
+        title = stringResource(R.string.accounts_add_title),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.accounts_type_label), style = MaterialTheme.typography.labelMedium)
                 for (t in visibleTypes) {
@@ -366,7 +363,7 @@ private fun AddAccountDialog(
                 }
                 Spacer(Modifier.height(8.dp))
                 when (selectedType) {
-                    "email" -> OutlinedTextField(
+                    "email" -> MochiTextField(
                         value = address,
                         onValueChange = { address = it },
                         label = { Text(stringResource(R.string.accounts_field_email)) },
@@ -374,7 +371,7 @@ private fun AddAccountDialog(
                         modifier = Modifier.fillMaxWidth(),
                     )
                     "openai", "claude" -> {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = apiKey,
                             onValueChange = { apiKey = it },
                             label = { Text(stringResource(R.string.accounts_field_api_key)) },
@@ -385,7 +382,7 @@ private fun AddAccountDialog(
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                             modifier = Modifier.fillMaxWidth(),
                         )
-                        OutlinedTextField(
+                        MochiTextField(
                             value = model,
                             onValueChange = { model = it },
                             label = { Text(stringResource(R.string.accounts_field_model)) },
@@ -393,7 +390,7 @@ private fun AddAccountDialog(
                             modifier = Modifier.fillMaxWidth(),
                         )
                     }
-                    "mcp" -> OutlinedTextField(
+                    "mcp" -> MochiTextField(
                         value = url,
                         onValueChange = { url = it },
                         label = { Text(stringResource(R.string.accounts_field_url)) },
@@ -408,26 +405,21 @@ private fun AddAccountDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val fields = HashMap<String, String>()
-                    when (selectedType) {
-                        "email" -> fields["address"] = address.trim()
-                        "openai", "claude" -> {
-                            fields["api_key"] = apiKey.trim()
-                            if (model.isNotBlank()) fields["model"] = model.trim()
-                        }
-                        "mcp" -> fields["url"] = url.trim()
-                    }
-                    onSave(selectedType, fields)
-                },
-                enabled = canSave,
-            ) { Text(stringResource(MochiR.string.common_save)) }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = {
+            val fields = HashMap<String, String>()
+            when (selectedType) {
+                "email" -> fields["address"] = address.trim()
+                "openai", "claude" -> {
+                    fields["api_key"] = apiKey.trim()
+                    if (model.isNotBlank()) fields["model"] = model.trim()
+                }
+                "mcp" -> fields["url"] = url.trim()
+            }
+            onSave(selectedType, fields)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmEnabled = canSave,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -439,35 +431,31 @@ private fun VerifyDialog(
     onResend: () -> Unit,
 ) {
     var code by remember { mutableStateOf("") }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.accounts_verify)) },
-        text = {
+        title = stringResource(R.string.accounts_verify),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.accounts_verify_hint, account.identifier.ifBlank { account.label }),
                     style = MaterialTheme.typography.bodyMedium,
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = code,
                     onValueChange = { code = it },
                     label = { Text(stringResource(R.string.accounts_verify_code)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                TextButton(onClick = onResend) {
+                MochiTextButton(onClick = onResend) {
                     Text(stringResource(R.string.accounts_verify_resend))
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onVerify(code.trim()) }, enabled = code.trim().isNotEmpty()) {
-                Text(stringResource(R.string.accounts_verify))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(R.string.accounts_verify),
+        onConfirm = { onVerify(code.trim()) },
+        confirmEnabled = code.trim().isNotEmpty(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -485,12 +473,12 @@ private fun AccountSettingsDialog(
     var model by remember {
         mutableStateOf(if (account.identifier == "default") "" else account.identifier)
     }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.accounts_settings)) },
-        text = {
+        title = stringResource(R.string.accounts_settings),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = { Text(stringResource(R.string.accounts_field_name)) },
@@ -498,7 +486,7 @@ private fun AccountSettingsDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 if (isAi) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = model,
                         onValueChange = { model = it },
                         label = { Text(stringResource(R.string.accounts_field_model)) },
@@ -508,14 +496,9 @@ private fun AccountSettingsDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onSave(name.trim(), model.trim()) }) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onSave(name.trim(), model.trim()) },
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -526,7 +509,7 @@ private fun SnackBanner(message: String, onDismiss: () -> Unit) {
         onDismiss()
     }
     Box(modifier = Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.BottomCenter) {
-        Card(colors = CardDefaults.elevatedCardColors()) {
+        MochiCard(colors = CardDefaults.elevatedCardColors()) {
             Text(message, modifier = Modifier.padding(12.dp))
         }
     }

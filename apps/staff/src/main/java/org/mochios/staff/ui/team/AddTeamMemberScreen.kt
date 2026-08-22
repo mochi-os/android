@@ -28,14 +28,10 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.outlined.Check
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -58,8 +54,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.R as MochiR
 
@@ -86,7 +86,7 @@ fun AddTeamMemberScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.staff_team_dialog_add_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack, enabled = !state.submitting) {
+                    MochiIconButton(onClick = onBack, enabled = !state.submitting) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -114,7 +114,7 @@ fun AddTeamMemberScreen(
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(
+                    MochiButton(
                         onClick = viewModel::submit,
                         enabled = canSubmit,
                         modifier = Modifier.fillMaxWidth(),
@@ -143,7 +143,7 @@ fun AddTeamMemberScreen(
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            OutlinedTextField(
+            MochiTextField(
                 value = state.search,
                 onValueChange = viewModel::setSearch,
                 placeholder = {
@@ -261,7 +261,7 @@ private fun RoleDropdown(
         roleLabel(current)
     }
     Box {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { expanded = true },
             enabled = enabled,
             modifier = Modifier.fillMaxWidth(),

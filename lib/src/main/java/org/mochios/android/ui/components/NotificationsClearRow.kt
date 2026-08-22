@@ -6,7 +6,6 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,7 +17,7 @@ fun NotificationsClearRow(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    OutlinedButton(
+    MochiOutlinedButton(
         onClick = onClick,
         modifier = modifier.fillMaxWidth(),
     ) {

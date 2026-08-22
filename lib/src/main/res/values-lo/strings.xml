@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">ໃນໂທລະສັບ Samsung, ກວດເບິ່ງການຕັ້ງຄ່າ → ການດູແລອຸປະກອນ → ແອັບທີ່ນອນຫຼັບ ແລະລົບ Mochi ອອກຖ້າມີຢູ່ໃນລາຍການ.</string>
     <string name="oem_hint_allow">ອະນຸຍາດພື້ນຫຼັງ</string>
     <string name="oem_hint_dismiss">ບໍ່ຕ້ອງສະແດງອີກ</string>
-    <string name="about_title">Mochi Client ສຳລັບ Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">ເວີຊັນ %1$s</string>
     <string name="about_check_updates">ກວດຫາການອັບເດດ</string>
     <string name="about_up_to_date">ເປັນເວີຊັນລ່າສຸດແລ້ວ</string>

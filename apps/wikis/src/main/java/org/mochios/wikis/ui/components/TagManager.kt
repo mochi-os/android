@@ -19,16 +19,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.LocalOffer
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -56,7 +52,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
@@ -122,7 +120,12 @@ fun TagManager(
                 },
                 trailingIcon = if (canEdit) {
                     {
-                        androidx.compose.material3.IconButton(
+                        // Render a discrete close affordance so the user has
+                        // a visible "remove" target without needing to know
+                        // about long-press. Tapping the X opens the
+                        // confirmation dialog (the chip body still routes to
+                        // the per-tag pages list).
+                        MochiIconButton(
                             onClick = { pendingRemoval = tag },
                             modifier = Modifier.size(20.dp),
                         ) {
@@ -168,19 +171,20 @@ fun TagManager(
 
     val toRemove = pendingRemoval
     if (toRemove != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingRemoval = null },
             title = stringResource(R.string.wikis_tag_manager_remove_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_tag_manager_remove_confirm_message,
                 toRemove,
             ),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 viewModel.remove(wikiId, slug, tags, toRemove)
                 pendingRemoval = null
             },
-            onDismiss = { pendingRemoval = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -222,12 +226,12 @@ fun AddTagDialog(
         }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.wikis_tag_dialog_title)) },
-        text = {
+        title = stringResource(R.string.wikis_tag_dialog_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = newTag,
                     onValueChange = {
                         newTag = it
@@ -253,19 +257,10 @@ fun AddTagDialog(
                 }
             }
         },
-        confirmButton = {
-            Button(
-                onClick = submit,
-                enabled = newTag.trim().isNotEmpty(),
-            ) {
-                Text(stringResource(R.string.wikis_tag_dialog_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(R.string.wikis_tag_dialog_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.wikis_tag_dialog_add),
+        onConfirm = submit,
+        confirmEnabled = newTag.trim().isNotEmpty(),
+        dismissText = stringResource(R.string.wikis_tag_dialog_cancel),
     )
 }
 

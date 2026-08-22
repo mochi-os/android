@@ -14,7 +14,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -24,10 +24,10 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
 /**
- * Slim single-line outlined text field for inline edit rows. Unlike
- * [androidx.compose.material3.OutlinedTextField] it omits the 56 dp minimum
- * height and the wide content padding, so it sits flush beside a label and
- * buttons.
+ * Slim single-line text field for inline edit rows. Unlike [MochiTextField]
+ * it omits the 56 dp minimum height and the wide content padding, so it sits
+ * flush beside a label and buttons; it borrows [mochiTextFieldColors] so the
+ * inline row reads as the same tonal field as a full-size one.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,13 +56,14 @@ fun CompactTextField(
         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
         interactionSource = interactionSource,
         decorationBox = { innerTextField ->
-            OutlinedTextFieldDefaults.DecorationBox(
+            TextFieldDefaults.DecorationBox(
                 value = value,
                 innerTextField = innerTextField,
                 enabled = enabled,
                 singleLine = true,
                 visualTransformation = VisualTransformation.None,
                 interactionSource = interactionSource,
+                colors = mochiTextFieldColors(),
                 placeholder = placeholder?.let { text ->
                     {
                         Text(

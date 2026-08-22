@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -26,6 +25,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.market.R
 import org.mochios.market.model.Warning as WarningModel
 
@@ -36,7 +36,7 @@ fun WarningsSection(
     reasonLabel: (String) -> String = { it },
 ) {
     if (warnings.isEmpty()) return
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.errorContainer,

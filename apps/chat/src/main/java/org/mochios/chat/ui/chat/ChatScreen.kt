@@ -9,37 +9,36 @@ import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Forward
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Reply
-import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.automirrored.outlined.Forward
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
@@ -47,8 +46,6 @@ import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.PushPin
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -57,20 +54,15 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
@@ -108,27 +100,34 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
-import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
-import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
-import org.mochios.android.ui.components.LastViewedStore
-import org.mochios.android.ui.components.MochiBottomSheet
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarAttachments
+import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityIconCircle
+import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
-import org.mochios.android.files.rememberFileLabel
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -137,7 +136,7 @@ import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
- * Chat detail inside a [FeatureListDrawer] holding the chat list; an empty
+ * Chat detail inside a [MochiListDrawer] holding the chat list; an empty
  * [chatId] opens the drawer over a placeholder.
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -177,7 +176,7 @@ fun ChatScreen(
         listViewModel.filteredChats().map { chat ->
             val key = chat.fingerprint.ifEmpty { chat.id }
             val isDirect = chat.members == 2 && chat.other.isNotBlank()
-            FeatureDrawerItem(
+            DrawerItem(
                 id = key,
                 title = chat.name,
                 icon = if (chat.members > 2) Icons.Default.Groups else Icons.Default.ChatBubbleOutline,
@@ -188,7 +187,7 @@ fun ChatScreen(
         }
     }
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.chat_list_title)) },
         items = drawerItems,
@@ -252,7 +251,7 @@ private fun ChatDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.chat_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.chat_list_title))
                     }
                 }
@@ -409,7 +408,7 @@ private fun ChatContent(
                         }
                     },
                     navigationIcon = {
-                        IconButton(onClick = onOpenDrawer) {
+                        MochiIconButton(onClick = onOpenDrawer) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.chat_list_title)
@@ -419,13 +418,13 @@ private fun ChatContent(
                     actions = {
                         NotificationBell(onClick = onOpenNotifications)
                         if (chatId.isNotEmpty()) {
-                            IconButton(onClick = { viewModel.openSearch() }) {
+                            MochiIconButton(onClick = { viewModel.openSearch() }) {
                                 Icon(
                                     Icons.Default.Search,
                                     contentDescription = stringResource(R.string.chat_list_search)
                                 )
                             }
-                            IconButton(onClick = { menuExpanded = true }) {
+                            MochiIconButton(onClick = { menuExpanded = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(MochiR.string.common_more_options)
@@ -495,6 +494,10 @@ private fun ChatContent(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                // Consume as well as pad: the composer at the foot of this Box
+                // consumes the navigation-bar inset itself and would otherwise
+                // count it twice.
+                .consumeWindowInsets(padding)
                 .padding(padding)
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
@@ -567,7 +570,7 @@ private fun ChatContent(
                                     if (uiState.isLoadingMore) {
                                         CircularProgressIndicator(modifier = Modifier.padding(4.dp))
                                     } else {
-                                        TextButton(onClick = { viewModel.loadMoreOlder() }) {
+                                        MochiTextButton(onClick = { viewModel.loadMoreOlder() }) {
                                             Text(stringResource(R.string.chat_messages_load_more))
                                         }
                                     }
@@ -610,27 +613,38 @@ private fun ChatContent(
                 }
             }
 
-            uiState.replyingTo?.let { replied ->
-                ReplyComposerPreview(
-                    replied = replied,
-                    onCancel = { viewModel.cancelReply() },
-                )
-            }
-
-            ComposerBar(
+            ComposeBar(
                 value = draft,
                 onValueChange = { draft = it },
-                isSending = uiState.isSending,
-                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
-                pendingAttachments = uiState.pendingAttachments,
-                onAddAttachments = { viewModel.addAttachments(it) },
-                onRemoveAttachment = { viewModel.removeAttachment(it) },
-                onMoveAttachment = { uri, dir -> viewModel.moveAttachment(uri, dir) },
-                resolveFileName = viewModel::fileName,
                 onSend = {
                     viewModel.sendMessage(draft)
                     draft = ""
-                }
+                },
+                placeholder = stringResource(R.string.chat_message_placeholder),
+                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
+                isSending = uiState.isSending,
+                sendLabel = stringResource(R.string.chat_message_send),
+                windowInsets = ComposeBarDefaults.WindowInsets,
+                attachments = ComposeBarAttachments(
+                    pending = uiState.pendingAttachments,
+                    onAdd = { viewModel.addAttachments(it) },
+                    onRemove = { viewModel.removeAttachment(it) },
+                    resolveFileName = viewModel::fileName,
+                    addLabel = stringResource(R.string.chat_attachment_add),
+                    fallbackLabel = stringResource(R.string.chat_attachment_label),
+                    removeLabel = stringResource(R.string.chat_attachment_remove),
+                    onMove = { uri, dir -> viewModel.moveAttachment(uri, dir) },
+                    moveUpLabel = stringResource(R.string.chat_attachment_move_up),
+                    moveDownLabel = stringResource(R.string.chat_attachment_move_down),
+                ),
+                banner = uiState.replyingTo?.let { replied ->
+                    {
+                        ReplyComposerPreview(
+                            replied = replied,
+                            onCancel = { viewModel.cancelReply() },
+                        )
+                    }
+                },
             )
 
             if (uiState.forwardMessageIds.isNotEmpty()) {
@@ -645,80 +659,47 @@ private fun ChatContent(
             }
 
             pendingDelete?.let { ids ->
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { pendingDelete = null },
-                    title = { Text(stringResource(R.string.chat_delete_confirm_title)) },
-                    text = { Text(stringResource(R.string.chat_delete_confirm_body)) },
-                    confirmButton = {
-                        TextButton(
-                            onClick = {
-                                viewModel.deleteMessages(ids)
-                                pendingDelete = null
-                            }
-                        ) {
-                            Text(
-                                stringResource(MochiR.string.common_delete),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.chat_delete_confirm_title),
+                    text = stringResource(R.string.chat_delete_confirm_body),
+                    confirmText = stringResource(MochiR.string.common_delete),
+                    onConfirm = {
+                        viewModel.deleteMessages(ids)
+                        pendingDelete = null
                     },
-                    dismissButton = {
-                        TextButton(onClick = { pendingDelete = null }) {
-                            Text(stringResource(MochiR.string.common_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
 
             if (showLeaveDialog) {
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { showLeaveDialog = false },
-                    title = { Text(stringResource(R.string.chat_settings_leave_title)) },
-                    text = { Text(stringResource(R.string.chat_settings_leave_message)) },
-                    confirmButton = {
-                        TextButton(
-                            onClick = {
-                                showLeaveDialog = false
-                                viewModel.leaveChat()
-                            }
-                        ) {
-                            Text(
-                                stringResource(R.string.chat_settings_leave),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.chat_settings_leave_title),
+                    text = stringResource(R.string.chat_settings_leave_message),
+                    confirmText = stringResource(R.string.chat_settings_leave),
+                    onConfirm = {
+                        showLeaveDialog = false
+                        viewModel.leaveChat()
                     },
-                    dismissButton = {
-                        TextButton(onClick = { showLeaveDialog = false }) {
-                            Text(stringResource(MochiR.string.common_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
 
             if (showDeleteDialog) {
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { showDeleteDialog = false },
-                    title = { Text(stringResource(R.string.chat_settings_delete_title)) },
-                    text = { Text(stringResource(R.string.chat_settings_delete_message)) },
-                    confirmButton = {
-                        TextButton(
-                            onClick = {
-                                showDeleteDialog = false
-                                viewModel.deleteChat()
-                            }
-                        ) {
-                            Text(
-                                stringResource(R.string.chat_settings_delete),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.chat_settings_delete_title),
+                    text = stringResource(R.string.chat_settings_delete_message),
+                    confirmText = stringResource(R.string.chat_settings_delete),
+                    onConfirm = {
+                        showDeleteDialog = false
+                        viewModel.deleteChat()
                     },
-                    dismissButton = {
-                        TextButton(onClick = { showDeleteDialog = false }) {
-                            Text(stringResource(MochiR.string.common_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
             }
@@ -795,7 +776,7 @@ private fun ChatSearchBar(
     }
     TopAppBar(
         navigationIcon = {
-            IconButton(onClick = onClose) {
+            MochiIconButton(onClick = onClose) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = stringResource(MochiR.string.common_back),
@@ -811,7 +792,7 @@ private fun ChatSearchBar(
                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
                     if (query.isNotEmpty()) {
-                        IconButton(onClick = { onQueryChange("") }) {
+                        MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = stringResource(MochiR.string.common_close),
@@ -839,13 +820,13 @@ private fun ChatSearchBar(
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                IconButton(onClick = onUp, enabled = matchPosition < matchCount) {
+                MochiIconButton(onClick = onUp, enabled = matchPosition < matchCount) {
                     Icon(
                         Icons.Default.KeyboardArrowUp,
                         contentDescription = stringResource(R.string.chat_search_prev),
                     )
                 }
-                IconButton(onClick = onDown, enabled = matchPosition > 1) {
+                MochiIconButton(onClick = onDown, enabled = matchPosition > 1) {
                     Icon(
                         Icons.Default.KeyboardArrowDown,
                         contentDescription = stringResource(R.string.chat_search_next),
@@ -919,7 +900,7 @@ private fun MessageBubble(
             }
         }
         Box {
-            Card(
+            MochiCard(
                 shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(
                     containerColor = if (isOwn) {
@@ -1153,7 +1134,7 @@ private fun SelectionBar(
             .padding(horizontal = 4.dp, vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        IconButton(onClick = onClose) {
+        MochiIconButton(onClick = onClose) {
             Icon(Icons.Default.Close, contentDescription = null)
         }
         Text(
@@ -1161,19 +1142,19 @@ private fun SelectionBar(
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier.weight(1f),
         )
-        IconButton(onClick = onCopy, enabled = count > 0) {
+        MochiIconButton(onClick = onCopy, enabled = count > 0) {
             Icon(
                 Icons.Default.ContentCopy,
                 contentDescription = stringResource(MochiR.string.common_copy),
             )
         }
-        IconButton(onClick = onForward, enabled = count > 0) {
+        MochiIconButton(onClick = onForward, enabled = count > 0) {
             Icon(
                 Icons.AutoMirrored.Filled.Forward,
                 contentDescription = stringResource(R.string.chat_message_forward),
             )
         }
-        IconButton(onClick = onDelete, enabled = count > 0) {
+        MochiIconButton(onClick = onDelete, enabled = count > 0) {
             Icon(
                 Icons.Outlined.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),
@@ -1220,7 +1201,7 @@ private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        IconButton(onClick = onCancel) {
+        MochiIconButton(onClick = onCancel) {
             Icon(Icons.Default.Close, contentDescription = null)
         }
     }
@@ -1281,7 +1262,7 @@ private fun ChatForwardSheet(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 8.dp),
             )
-            OutlinedTextField(
+            MochiTextField(
                 value = filter,
                 onValueChange = { filter = it },
                 placeholder = { Text(stringResource(R.string.chat_forward_search)) },
@@ -1399,117 +1380,3 @@ private fun DateSeparator(epochSeconds: Long) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
-@Composable
-private fun ComposerBar(
-    value: String,
-    onValueChange: (String) -> Unit,
-    isSending: Boolean,
-    enabled: Boolean,
-    pendingAttachments: List<android.net.Uri>,
-    onAddAttachments: (List<android.net.Uri>) -> Unit,
-    onRemoveAttachment: (android.net.Uri) -> Unit,
-    onMoveAttachment: (android.net.Uri, Int) -> Unit,
-    resolveFileName: suspend (android.net.Uri) -> String,
-    onSend: () -> Unit,
-) {
-    val attachmentFallback = stringResource(R.string.chat_attachment_label)
-    val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
-        contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
-    ) { uris ->
-        onAddAttachments(uris)
-    }
-
-    Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp)) {
-        if (pendingAttachments.isNotEmpty()) {
-            androidx.compose.foundation.layout.FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                pendingAttachments.forEachIndexed { index, uri ->
-                    val label = rememberFileLabel(uri, resolveFileName, attachmentFallback)
-                    androidx.compose.material3.AssistChip(
-                        onClick = { onRemoveAttachment(uri) },
-                        label = {
-                            Text(
-                                label,
-                                style = MaterialTheme.typography.labelSmall,
-                            )
-                        },
-                        leadingIcon = if (pendingAttachments.size > 1) {
-                            {
-                                Row {
-                                    if (index > 0) {
-                                        IconButton(
-                                            onClick = { onMoveAttachment(uri, -1) },
-                                            modifier = Modifier.width(20.dp).height(20.dp),
-                                        ) {
-                                            Icon(
-                                                Icons.Default.ExpandLess,
-                                                contentDescription = stringResource(R.string.chat_attachment_move_up),
-                                                modifier = Modifier.width(14.dp).height(14.dp),
-                                            )
-                                        }
-                                    }
-                                    if (index < pendingAttachments.lastIndex) {
-                                        IconButton(
-                                            onClick = { onMoveAttachment(uri, 1) },
-                                            modifier = Modifier.width(20.dp).height(20.dp),
-                                        ) {
-                                            Icon(
-                                                Icons.Default.ExpandMore,
-                                                contentDescription = stringResource(R.string.chat_attachment_move_down),
-                                                modifier = Modifier.width(14.dp).height(14.dp),
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                        } else null,
-                        trailingIcon = {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(R.string.chat_attachment_remove),
-                                modifier = Modifier.width(14.dp).height(14.dp),
-                            )
-                        },
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(4.dp))
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            IconButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                enabled = enabled,
-            ) {
-                Icon(
-                    Icons.Default.AttachFile,
-                    contentDescription = stringResource(R.string.chat_attachment_add),
-                )
-            }
-            OutlinedTextField(
-                value = value,
-                onValueChange = onValueChange,
-                modifier = Modifier.weight(1f),
-                placeholder = { Text(stringResource(R.string.chat_message_placeholder)) },
-                enabled = enabled,
-                maxLines = 4,
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            IconButton(
-                onClick = onSend,
-                enabled = enabled && !isSending && (value.isNotBlank() || pendingAttachments.isNotEmpty()),
-            ) {
-                if (isSending) {
-                    CircularProgressIndicator(modifier = Modifier.padding(4.dp))
-                } else {
-                    Icon(
-                        Icons.AutoMirrored.Filled.Send,
-                        contentDescription = stringResource(R.string.chat_message_send),
-                    )
-                }
-            }
-        }
-    }
-}

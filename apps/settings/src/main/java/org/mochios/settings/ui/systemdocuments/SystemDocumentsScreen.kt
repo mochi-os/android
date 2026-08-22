@@ -22,17 +22,13 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -58,7 +54,11 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemDocument
@@ -95,7 +95,7 @@ fun SystemDocumentsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.system_documents_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -120,7 +120,7 @@ fun SystemDocumentsScreen(
                         color = MaterialTheme.colorScheme.error,
                     )
                     Spacer(Modifier.height(8.dp))
-                    OutlinedButton(onClick = viewModel::refresh) {
+                    MochiOutlinedButton(onClick = viewModel::refresh) {
                         Icon(Icons.Default.Refresh, contentDescription = null)
                         Spacer(Modifier.size(8.dp))
                         Text(stringResource(MochiR.string.common_retry))
@@ -242,7 +242,7 @@ private fun LanguagePicker(
             expanded = expanded,
             onExpandedChange = { expanded = it },
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = selected?.let { languageDisplayName(it) } ?: "",
                 onValueChange = {},
                 readOnly = true,
@@ -316,7 +316,7 @@ private fun DocumentEditor(
         }
     }
 
-    OutlinedTextField(
+    MochiTextField(
         value = body,
         onValueChange = { body = it },
         modifier = Modifier.fillMaxWidth(),
@@ -328,7 +328,7 @@ private fun DocumentEditor(
         horizontalArrangement = Arrangement.End,
     ) {
         if (body != document.default) {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { body = document.default },
                 enabled = !isSaving,
             ) {
@@ -336,7 +336,7 @@ private fun DocumentEditor(
             }
             Spacer(Modifier.size(8.dp))
         }
-        Button(
+        MochiButton(
             onClick = { onSave(body) },
             enabled = !isSaving && dirty,
         ) {

@@ -21,7 +21,6 @@ import androidx.compose.material.icons.filled.DeleteSweep
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -47,7 +46,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
@@ -72,29 +73,19 @@ fun SavedListingsScreen(
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
     }
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.market_saved_title)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(R.string.market_back),
-                        )
-                    }
-                },
-                actions = {
-                    if (state.listings.isNotEmpty()) {
-                        IconButton(onClick = viewModel::clearAll) {
-                            Icon(
-                                Icons.Default.DeleteSweep,
-                                contentDescription = stringResource(R.string.market_saved_clear),
-                            )
-                        }
-                    }
-                },
-            )
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.SAVED,
+        titleRes = R.string.market_saved_title,
+        actions = {
+            if (state.listings.isNotEmpty()) {
+                MochiIconButton(onClick = viewModel::clearAll) {
+                    Icon(
+                        Icons.Default.DeleteSweep,
+                        contentDescription = stringResource(R.string.market_saved_clear),
+                    )
+                }
+            }
         },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {

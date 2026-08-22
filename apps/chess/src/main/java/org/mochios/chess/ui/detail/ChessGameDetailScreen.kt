@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,21 +32,17 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Handshake
 import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -72,16 +70,21 @@ import com.github.bhlangonijr.chesslib.Side
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
-import org.mochios.android.ui.components.GameChatInput
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.GameWsEvent
 import org.mochios.android.ws.GameWsStatus
@@ -157,7 +160,7 @@ fun ChessGameDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.chess_app_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -170,6 +173,9 @@ fun ChessGameDetailScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                // The tablet layout's chat bar takes the navigation-bar inset
+                // itself; consume the Scaffold's so it is not counted twice.
+                .consumeWindowInsets(padding)
                 .padding(padding),
         ) {
             when {
@@ -210,30 +216,32 @@ fun ChessGameDetailScreen(
 
     if (showResignDialog) {
         val opponentName = state.game?.opponentName(state.identity).orEmpty()
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showResignDialog = false },
             title = stringResource(R.string.chess_resign_title),
-            message = stringResource(R.string.chess_resign_message, opponentName),
-            confirmLabel = stringResource(R.string.chess_resign_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.chess_resign_message, opponentName),
+            confirmText = stringResource(R.string.chess_resign_confirm),
             onConfirm = {
                 showResignDialog = false
                 viewModel.resign()
             },
-            onDismiss = { showResignDialog = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     if (showDeleteDialog) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteDialog = false },
             title = stringResource(R.string.chess_delete_title),
-            message = stringResource(R.string.chess_delete_message),
-            confirmLabel = stringResource(R.string.chess_delete_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.chess_delete_message),
+            confirmText = stringResource(R.string.chess_delete_confirm),
             onConfirm = {
                 showDeleteDialog = false
                 viewModel.deleteGame()
             },
-            onDismiss = { showDeleteDialog = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -331,6 +339,7 @@ private fun GameContent(
                         onSend = onSendChat,
                         onLoadMore = onLoadMoreChat,
                         modifier = Modifier.weight(1f),
+                        composerWindowInsets = ComposeBarDefaults.WindowInsets,
                     )
                 }
             }
@@ -414,7 +423,7 @@ private fun BoardPane(
             },
             actions = {
                 if (onOpenMobileChat != null) {
-                    IconButton(onClick = onOpenMobileChat) {
+                    MochiIconButton(onClick = onOpenMobileChat) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.Message,
                             contentDescription = stringResource(R.string.chess_open_chat),
@@ -494,7 +503,7 @@ private fun GameActionsMenu(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box {
-        IconButton(onClick = { expanded = true }) {
+        MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 imageVector = Icons.Filled.MoreHoriz,
                 contentDescription = stringResource(R.string.chess_open_actions),
@@ -593,7 +602,7 @@ private fun drawBanner(
                         modifier = Modifier.weight(1f),
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = onDecline,
                         enabled = !declineInFlight,
                         contentPadding = androidx.compose.foundation.layout.PaddingValues(
@@ -603,10 +612,9 @@ private fun drawBanner(
                         Text(stringResource(R.string.chess_draw_decline))
                     }
                     Spacer(modifier = Modifier.width(6.dp))
-                    Button(
+                    MochiButton(
                         onClick = onAccept,
                         enabled = !acceptInFlight,
-                        colors = ButtonDefaults.buttonColors(),
                         contentPadding = androidx.compose.foundation.layout.PaddingValues(
                             horizontal = 12.dp, vertical = 4.dp,
                         ),
@@ -660,6 +668,10 @@ private fun ChatPanel(
     onSend: (String) -> Unit,
     onLoadMore: () -> Unit,
     modifier: Modifier = Modifier,
+    // Which host is showing this panel decides who lifts the composer for the
+    // keyboard. The default suits the phone's sheet, which lifts its own
+    // content; the tablet's side panel sits in the screen body and has to ask.
+    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
 ) {
     var draft by rememberSaveable { mutableStateOf("") }
 
@@ -690,9 +702,9 @@ private fun ChatPanel(
             systemMessageRenderer = { msg -> { ChessSystemRow(msg) } },
         )
         HorizontalDivider()
-        GameChatInput(
-            text = draft,
-            onTextChange = { draft = it },
+        ComposeBar(
+            value = draft,
+            onValueChange = { draft = it },
             onSend = {
                 val toSend = draft.trim()
                 if (toSend.isNotEmpty()) {
@@ -701,6 +713,13 @@ private fun ChatPanel(
                 }
             },
             isSending = state.isSendingChat,
+            placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+            sendLabel = stringResource(MochiR.string.game_chat_send),
+            // One line, and the keyboard's action key sends: a game chat
+            // message is a sentence, not a comment body.
+            maxLines = 1,
+            sendOnImeAction = true,
+            windowInsets = composerWindowInsets,
         )
     }
 }
@@ -815,7 +834,7 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            TextButton(onClick = onRetry) {
+            MochiTextButton(onClick = onRetry) {
                 Text(stringResource(MochiR.string.common_retry))
             }
         }

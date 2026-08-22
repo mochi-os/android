@@ -24,19 +24,14 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -54,6 +49,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.go.R
 import org.mochios.go.model.NewGameFriend
 import org.mochios.android.R as MochiR
@@ -101,7 +101,7 @@ fun NewGoGameScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.go_new_game_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack, enabled = !isPending) {
+                    MochiIconButton(onClick = onBack, enabled = !isPending) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -127,10 +127,10 @@ fun NewGoGameScreen(
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(
+                    MochiButton(
                         onClick = {
-                            val opponent = selectedOpponent ?: return@Button
-                            val komi = komiValue ?: return@Button
+                            val opponent = selectedOpponent ?: return@MochiButton
+                            val komi = komiValue ?: return@MochiButton
                             viewModel.createGame(opponent.id, boardSize, komi)
                         },
                         enabled = canStart,
@@ -185,7 +185,7 @@ fun NewGoGameScreen(
                             color = MaterialTheme.colorScheme.error,
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                        TextButton(onClick = { viewModel.loadFriends() }, enabled = !isPending) {
+                        MochiTextButton(onClick = { viewModel.loadFriends() }, enabled = !isPending) {
                             Text(stringResource(MochiR.string.common_retry))
                         }
                     }
@@ -199,7 +199,7 @@ fun NewGoGameScreen(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                        OutlinedButton(onClick = onAddFriends, enabled = !isPending) {
+                        MochiOutlinedButton(onClick = onAddFriends, enabled = !isPending) {
                             Text(stringResource(R.string.go_new_game_add_friends))
                         }
                     }
@@ -250,7 +250,7 @@ fun NewGoGameScreen(
                 onSelect = { preset -> komiText = preset },
             )
             Spacer(modifier = Modifier.height(8.dp))
-            OutlinedTextField(
+            MochiTextField(
                 value = komiText,
                 onValueChange = { value -> komiText = value },
                 label = { Text(stringResource(R.string.go_new_game_komi_field_label)) },
@@ -325,13 +325,13 @@ private fun BoardSizeRow(
         listOf(9, 13, 19).forEach { size ->
             val isSelected = boardSize == size
             if (isSelected) {
-                Button(
+                MochiButton(
                     onClick = { onSelect(size) },
                     enabled = enabled,
                     modifier = Modifier.weight(1f),
                 ) { Text(stringResource(R.string.go_new_game_board_size_value, size, size)) }
             } else {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { onSelect(size) },
                     enabled = enabled,
                     modifier = Modifier.weight(1f),
@@ -357,13 +357,13 @@ private fun KomiPresetRow(
         listOf("6.5", "7.5", "0").forEach { preset ->
             val isSelected = komiText == preset
             if (isSelected) {
-                Button(
+                MochiButton(
                     onClick = { onSelect(preset) },
                     enabled = enabled,
                     modifier = Modifier.weight(1f),
                 ) { Text(preset) }
             } else {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { onSelect(preset) },
                     enabled = enabled,
                     modifier = Modifier.weight(1f),

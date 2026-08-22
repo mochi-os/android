@@ -26,21 +26,14 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -57,8 +50,14 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.Delegation
@@ -80,13 +79,13 @@ fun DomainsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.domain_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                     }
                 },
                 actions = {
                     if (state.isAdmin) {
-                        IconButton(onClick = { showAddDomain = true }) {
+                        MochiIconButton(onClick = { showAddDomain = true }) {
                             Icon(Icons.Default.Add, contentDescription = stringResource(R.string.domain_add))
                         }
                     }
@@ -188,7 +187,7 @@ private fun DomainCard(
     var editRoute by remember { mutableStateOf<Route?>(null) }
     var showAddDelegation by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
@@ -206,7 +205,7 @@ private fun DomainCard(
                         else MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
-                IconButton(onClick = {
+                MochiIconButton(onClick = {
                     if (!expanded) onExpand()
                     expanded = !expanded
                 }) {
@@ -258,7 +257,7 @@ private fun DomainCard(
                             fontWeight = FontWeight.SemiBold,
                             modifier = Modifier.weight(1f),
                         )
-                        OutlinedButton(onClick = { onLoadRouteTargets(); showAddRoute = true }) {
+                        MochiOutlinedButton(onClick = { onLoadRouteTargets(); showAddRoute = true }) {
                             Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(Modifier.width(4.dp))
                             Text(stringResource(R.string.route_add))
@@ -297,7 +296,7 @@ private fun DomainCard(
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.weight(1f),
                             )
-                            OutlinedButton(onClick = { showAddDelegation = true }) {
+                            MochiOutlinedButton(onClick = { showAddDelegation = true }) {
                                 Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(Modifier.width(4.dp))
                                 Text(stringResource(R.string.domain_delegation_add))
@@ -324,7 +323,7 @@ private fun DomainCard(
                         Spacer(Modifier.height(12.dp))
                         HorizontalDivider()
                         Spacer(Modifier.height(8.dp))
-                        OutlinedButton(onClick = { showDeleteDomain = true }) {
+                        MochiOutlinedButton(onClick = { showDeleteDomain = true }) {
                             Icon(
                                 Icons.Default.Delete,
                                 contentDescription = null,
@@ -341,15 +340,16 @@ private fun DomainCard(
     }
 
     if (showDeleteDomain) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteDomain = false },
             title = stringResource(R.string.domain_delete_title),
-            message = stringResource(R.string.domain_delete_message, domain.domain),
+            text = stringResource(R.string.domain_delete_message, domain.domain),
             confirmText = stringResource(R.string.domain_delete),
             onConfirm = {
                 showDeleteDomain = false
                 onDelete()
             },
-            onDismiss = { showDeleteDomain = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
     if (showAddRoute) {
@@ -392,7 +392,7 @@ private fun DomainCard(
 
 @Composable
 private fun VerificationBlock(domain: Domain, onVerify: () -> Unit) {
-    Card(colors = CardDefaults.outlinedCardColors()) {
+    MochiCard {
         Column(modifier = Modifier.padding(8.dp)) {
             Text(
                 text = stringResource(R.string.domain_dns_hint),
@@ -411,7 +411,7 @@ private fun VerificationBlock(domain: Domain, onVerify: () -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
             Spacer(Modifier.height(4.dp))
-            OutlinedButton(onClick = onVerify) {
+            MochiOutlinedButton(onClick = onVerify) {
                 Text(stringResource(R.string.domain_verify))
             }
         }
@@ -448,10 +448,10 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
                 )
             }
         }
-        IconButton(onClick = onEdit) {
+        MochiIconButton(onClick = onEdit) {
             Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.route_edit))
         }
-        IconButton(onClick = { confirm = true }) {
+        MochiIconButton(onClick = { confirm = true }) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.route_delete),
@@ -460,15 +460,16 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
         }
     }
     if (confirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { confirm = false },
             title = stringResource(R.string.route_delete_title),
-            message = stringResource(R.string.route_delete_message, route.path.ifBlank { "/" }),
+            text = stringResource(R.string.route_delete_message, route.path.ifBlank { "/" }),
             confirmText = stringResource(R.string.route_delete),
             onConfirm = {
                 confirm = false
                 onDelete()
             },
-            onDismiss = { confirm = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -492,7 +493,7 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        IconButton(onClick = { confirm = true }) {
+        MochiIconButton(onClick = { confirm = true }) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.domain_delegation_delete),
@@ -501,15 +502,16 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
         }
     }
     if (confirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { confirm = false },
             title = stringResource(R.string.domain_delegation_delete_title),
-            message = stringResource(R.string.domain_delegation_delete_message, delegation.username),
+            text = stringResource(R.string.domain_delegation_delete_message, delegation.username),
             confirmText = stringResource(R.string.domain_delegation_delete),
             onConfirm = {
                 confirm = false
                 onDelete()
             },
-            onDismiss = { confirm = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -517,11 +519,11 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
 @Composable
 private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) {
     var name by remember { mutableStateOf("") }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.domain_add_title)) },
-        text = {
-            OutlinedTextField(
+        title = stringResource(R.string.domain_add_title),
+        content = {
+            MochiTextField(
                 value = name,
                 onValueChange = { name = it },
                 singleLine = true,
@@ -529,15 +531,10 @@ private fun AddDomainDialog(onConfirm: (String) -> Unit, onDismiss: () -> Unit) 
                 modifier = Modifier.fillMaxWidth(),
             )
         },
-        confirmButton = {
-            TextButton(
-                onClick = { if (name.isNotBlank()) onConfirm(name.trim()) },
-                enabled = name.isNotBlank(),
-            ) { Text(stringResource(R.string.domain_add)) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = stringResource(R.string.domain_add),
+        onConfirm = { if (name.isNotBlank()) onConfirm(name.trim()) },
+        confirmEnabled = name.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -556,12 +553,12 @@ private fun RouteDialog(
     var enabled by remember { mutableStateOf((initial?.enabled ?: 1) == 1) }
     val editing = initial != null
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(if (editing) R.string.route_edit_title else R.string.route_add_title)) },
-        text = {
+        title = stringResource(if (editing) R.string.route_edit_title else R.string.route_add_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = path,
                     onValueChange = { path = it },
                     singleLine = true,
@@ -588,7 +585,7 @@ private fun RouteDialog(
                         options = entities.map { it.id to it.name },
                         onSelect = { target = it },
                     )
-                    else -> OutlinedTextField(
+                    else -> MochiTextField(
                         value = target,
                         onValueChange = { target = it },
                         singleLine = true,
@@ -597,7 +594,7 @@ private fun RouteDialog(
                     )
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = priority,
                     onValueChange = { priority = it.filter(Char::isDigit) },
                     singleLine = true,
@@ -613,17 +610,12 @@ private fun RouteDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    onConfirm(path.trim(), method, target.trim(), priority.toIntOrNull() ?: 0, enabled)
-                },
-                enabled = target.isNotBlank(),
-            ) { Text(stringResource(if (editing) R.string.route_save else R.string.route_add)) }
+        confirmText = stringResource(if (editing) R.string.route_save else R.string.route_add),
+        onConfirm = {
+            onConfirm(path.trim(), method, target.trim(), priority.toIntOrNull() ?: 0, enabled)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmEnabled = target.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -636,7 +628,7 @@ private fun MethodPicker(value: String, onChange: (String) -> Unit) {
         else -> R.string.route_method_app
     }
     Box {
-        OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
+        MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.route_method) + ": " + stringResource(labelRes))
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
@@ -668,7 +660,7 @@ private fun TargetPicker(
 ) {
     var open by remember { mutableStateOf(false) }
     Box {
-        OutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
+        MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
             Text(label + ": " + (selectedLabel ?: stringResource(R.string.route_target_select)))
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
@@ -703,12 +695,12 @@ private fun DelegationDialog(
     // dropdown; editing the query again re-opens the search.
     var selected by remember { mutableStateOf<org.mochios.settings.api.UserSearchResult?>(null) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.domain_delegation_add_title)) },
-        text = {
+        title = stringResource(R.string.domain_delegation_add_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = query,
                     onValueChange = {
                         query = it
@@ -723,7 +715,7 @@ private fun DelegationDialog(
                 if (selected == null && userResults.isNotEmpty()) {
                     Spacer(Modifier.height(4.dp))
                     userResults.forEach { user ->
-                        TextButton(
+                        MochiTextButton(
                             onClick = {
                                 selected = user
                                 query = user.username
@@ -738,7 +730,7 @@ private fun DelegationDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = path,
                     onValueChange = { path = it },
                     singleLine = true,
@@ -747,36 +739,12 @@ private fun DelegationDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val uid = selected?.uid ?: return@TextButton
-                    onConfirm(path.trim(), uid)
-                },
-                enabled = selected != null,
-            ) { Text(stringResource(R.string.domain_delegation_add)) }
+        confirmText = stringResource(R.string.domain_delegation_add),
+        onConfirm = {
+            val uid = selected?.uid ?: return@MochiAlertDialog
+            onConfirm(path.trim(), uid)
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
-    )
-}
-
-@Composable
-private fun ConfirmDialog(
-    title: String,
-    message: String,
-    confirmText: String,
-    onConfirm: () -> Unit,
-    onDismiss: () -> Unit,
-) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = { Text(message) },
-        confirmButton = { TextButton(onClick = onConfirm) { Text(confirmText) } },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmEnabled = selected != null,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

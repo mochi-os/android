@@ -29,16 +29,10 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -57,6 +51,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUpdateInfo
@@ -81,7 +79,7 @@ fun SystemStatusScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.system_status_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -89,7 +87,7 @@ fun SystemStatusScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = { viewModel.refresh() }) {
+                    MochiIconButton(onClick = { viewModel.refresh() }) {
                         Icon(
                             Icons.Default.Refresh,
                             contentDescription = stringResource(R.string.system_status_refresh),
@@ -246,7 +244,7 @@ fun SystemStatusScreen(
 
 @Composable
 private fun PeerCard(peer: org.mochios.settings.api.PeerEntry) {
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             PeerName(peer.name)
             Text(
@@ -389,10 +387,9 @@ private fun UpdateAction(
             command = "docker compose pull && docker compose up -d",
             onCopy = onCopy,
         )
-        "windows" -> Button(
+        "windows" -> MochiButton(
             onClick = onInstall,
             enabled = !isInstalling,
-            colors = ButtonDefaults.buttonColors(),
         ) {
             if (isInstalling) {
                 CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
@@ -441,7 +438,7 @@ private fun CommandHint(command: String, onCopy: (String) -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
         }
-        IconButton(
+        MochiIconButton(
             onClick = { onCopy(command) },
             modifier = Modifier.size(36.dp),
         ) {
@@ -456,7 +453,7 @@ private fun CommandHint(command: String, onCopy: (String) -> Unit) {
 
 @Composable
 private fun DownloadLink(label: String, url: String, onOpen: (String) -> Unit) {
-    OutlinedButton(onClick = { onOpen(url) }) {
+    MochiOutlinedButton(onClick = { onOpen(url) }) {
         Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(18.dp))
         Spacer(Modifier.width(6.dp))
         Text(label)

@@ -24,7 +24,6 @@ import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -44,16 +43,18 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiScaffold
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
@@ -80,9 +81,10 @@ fun MySubscriptionsScreen(
 
     var pendingCancel by remember { mutableStateOf<Subscription?>(null) }
 
-    MochiScaffold(
-        title = stringResource(R.string.market_subscriptions_title),
-        onBack = { navController.popBackStack() },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.SUBSCRIPTIONS,
+        titleRes = R.string.market_subscriptions_title,
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             SnackbarHost(snackbar, modifier = Modifier.align(Alignment.BottomCenter))
@@ -122,16 +124,17 @@ fun MySubscriptionsScreen(
     }
 
     pendingCancel?.let { sub ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingCancel = null },
             title = stringResource(R.string.market_subscriptions_cancel_title),
-            message = stringResource(R.string.market_subscriptions_cancel_body),
-            confirmLabel = stringResource(R.string.market_subscriptions_cancel_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.market_subscriptions_cancel_body),
+            confirmText = stringResource(R.string.market_subscriptions_cancel_confirm),
             onConfirm = {
                 viewModel.cancel(sub.id)
                 pendingCancel = null
             },
-            onDismiss = { pendingCancel = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -193,7 +196,7 @@ private fun SubscriptionRow(
         StatusBadge(status = sub.status?.name?.lowercase() ?: "")
         Box {
             var menu by remember { mutableStateOf(false) }
-            IconButton(onClick = { menu = true }, enabled = !mutating) {
+            MochiIconButton(onClick = { menu = true }, enabled = !mutating) {
                 Icon(
                     Icons.Default.MoreHoriz,
                     contentDescription = stringResource(R.string.market_subscriptions_actions_label),

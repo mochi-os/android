@@ -29,11 +29,9 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -54,15 +52,18 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -116,7 +117,7 @@ fun ReviewsScreen(
         )
     }
 
-    // Remove confirmation. Uses lib's ConfirmDialog with the
+    // Remove confirmation. Uses lib's MochiAlertDialog with the
     // "reviewer → subject on listing" body string the web version composes.
     val pending = state.pendingRemove
     if (pending != null) {
@@ -132,13 +133,14 @@ fun ReviewsScreen(
         } else {
             stringResource(R.string.staff_reviews_remove_desc_short, reviewerName, subjectName)
         }
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelRemove,
             title = stringResource(R.string.staff_reviews_remove_title),
-            message = message,
-            confirmLabel = stringResource(R.string.staff_reviews_remove_confirm),
-            isDestructive = true,
+            text = message,
+            confirmText = stringResource(R.string.staff_reviews_remove_confirm),
             onConfirm = viewModel::confirmRemove,
-            onDismiss = viewModel::cancelRemove,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -215,7 +217,7 @@ private fun FilterBar(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box {
-            Button(onClick = { expanded = true }) {
+            MochiButton(onClick = { expanded = true }) {
                 Text(label)
                 Icon(Icons.Default.ArrowDropDown, contentDescription = null)
             }
@@ -354,7 +356,7 @@ private fun OverflowMenu(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box {
-        IconButton(onClick = { expanded = true }) {
+        MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 Icons.Default.MoreHoriz,
                 contentDescription = stringResource(R.string.staff_reviews_overflow_actions),

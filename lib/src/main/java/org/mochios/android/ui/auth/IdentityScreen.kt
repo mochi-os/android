@@ -20,13 +20,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,6 +33,9 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 
 @Composable
 fun IdentityScreen(
@@ -70,7 +70,7 @@ fun IdentityScreen(
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        OutlinedTextField(
+        MochiTextField(
             value = uiState.identityName,
             onValueChange = onUpdateName,
             label = { Text(stringResource(R.string.auth_name)) },
@@ -117,7 +117,7 @@ fun IdentityScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        Button(
+        MochiButton(
             onClick = onCreate,
             enabled = !uiState.isLoading && uiState.identityName.isNotBlank(),
             modifier = Modifier.fillMaxWidth()
@@ -143,20 +143,20 @@ fun IdentityScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly,
         ) {
-            TextButton(onClick = { openExternal(context, "$server/login/rules") }) {
+            MochiTextButton(onClick = { openExternal(context, "$server/login/rules") }) {
                 Text(stringResource(R.string.auth_link_rules), style = MaterialTheme.typography.labelSmall)
             }
-            TextButton(onClick = { openExternal(context, "$server/login/terms") }) {
+            MochiTextButton(onClick = { openExternal(context, "$server/login/terms") }) {
                 Text(stringResource(R.string.auth_link_terms), style = MaterialTheme.typography.labelSmall)
             }
-            TextButton(onClick = { openExternal(context, "$server/login/privacy") }) {
+            MochiTextButton(onClick = { openExternal(context, "$server/login/privacy") }) {
                 Text(stringResource(R.string.auth_link_privacy), style = MaterialTheme.typography.labelSmall)
             }
         }
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        TextButton(onClick = onAbandon) {
+        MochiTextButton(onClick = onAbandon) {
             Text(
                 text = stringResource(R.string.auth_use_different_account),
                 style = MaterialTheme.typography.bodySmall,

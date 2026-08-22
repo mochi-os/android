@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung telefonlarda Sazlamalar → Enjam tertibi → Uklaýan goşundylar bölümini hem barlaň we Mochi sanawda bolsa aýyryň.</string>
     <string name="oem_hint_allow">Arkaplana rugsat ber</string>
     <string name="oem_hint_dismiss">Gaýtadan görkezme</string>
-    <string name="about_title">Android üçin Mochi müşderisi</string>
+    <string name="about_title">Mochi müşderisi</string>
     <string name="about_version">Wersiýa %1$s</string>
     <string name="about_check_updates">Täzelenmeleri barla</string>
     <string name="about_up_to_date">Iň soňky wersiýa</string>

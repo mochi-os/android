@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">อนุญาตให้ทำงานเบื้องหลัง</string>
     <string name="oem_hint_dismiss">ไม่ต้องแสดงอีก</string>
     <string name="about_label">เกี่ยวกับ</string>
-    <string name="about_title">Mochi Client สำหรับ Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">เวอร์ชัน %1$s</string>
     <string name="about_check_updates">ตรวจหาการอัปเดต</string>
     <string name="about_up_to_date">เป็นเวอร์ชันล่าสุดแล้ว</string>

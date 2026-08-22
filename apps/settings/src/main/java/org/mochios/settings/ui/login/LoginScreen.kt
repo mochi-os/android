@@ -30,22 +30,14 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -67,6 +59,13 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
@@ -119,7 +118,7 @@ fun LoginScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.login_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -293,11 +292,11 @@ private fun MethodStatePicker(
             val selected = value == slot
             val enabled = !busy && !selected && slot !in unavailable
             if (selected) {
-                Button(onClick = {}, enabled = false, modifier = Modifier.padding(start = 4.dp)) {
+                MochiButton(onClick = {}, enabled = false, modifier = Modifier.padding(start = 4.dp)) {
                     Text(stateLabel(slot))
                 }
             } else {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { onPick(slot) },
                     enabled = enabled,
                     modifier = Modifier.padding(start = 4.dp),
@@ -330,7 +329,7 @@ private fun PasskeysSection(
         }
     }
     Spacer(Modifier.height(8.dp))
-    Button(onClick = { showRegister = true }) {
+    MochiOutlinedButton(onClick = { showRegister = true }) {
         Icon(Icons.Default.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
         Spacer(Modifier.width(ButtonDefaults.IconSpacing))
         Text(stringResource(R.string.account_passkey_register))
@@ -338,17 +337,17 @@ private fun PasskeysSection(
 
     if (showRegister) {
         var draft by remember { mutableStateOf("") }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showRegister = false; draft = "" },
-            title = { Text(stringResource(R.string.account_passkey_register_title)) },
-            text = {
+            title = stringResource(R.string.account_passkey_register_title),
+            content = {
                 Column {
                     Text(
                         stringResource(R.string.account_passkey_register_message),
                         style = MaterialTheme.typography.bodySmall,
                     )
                     Spacer(Modifier.height(8.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = draft,
                         onValueChange = { draft = it },
                         label = { Text(stringResource(R.string.account_passkey_name_label)) },
@@ -356,18 +355,13 @@ private fun PasskeysSection(
                     )
                 }
             },
-            confirmButton = {
-                TextButton(onClick = {
-                    showRegister = false
-                    onRegister(draft)
-                    draft = ""
-                }) { Text(stringResource(R.string.account_passkey_register)) }
+            confirmText = stringResource(R.string.account_passkey_register),
+            onConfirm = {
+                showRegister = false
+                onRegister(draft)
+                draft = ""
             },
-            dismissButton = {
-                TextButton(onClick = { showRegister = false; draft = "" }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -382,14 +376,14 @@ private fun PasskeyRow(
     var draft by remember { mutableStateOf(passkey.name) }
     var confirmDelete by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 if (renaming) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = draft,
                         onValueChange = { draft = it },
                         singleLine = true,
@@ -400,18 +394,18 @@ private fun PasskeyRow(
                 }
             }
             if (renaming) {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     onRename(passkey.id, draft.trim())
                     renaming = false
                 }) { Text(stringResource(R.string.account_save)) }
-                TextButton(onClick = { renaming = false; draft = passkey.name }) {
+                MochiTextButton(onClick = { renaming = false; draft = passkey.name }) {
                     Text(stringResource(R.string.account_cancel))
                 }
             } else {
-                IconButton(onClick = { renaming = true }) {
+                MochiIconButton(onClick = { renaming = true }) {
                     Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.account_rename))
                 }
-                IconButton(onClick = { confirmDelete = true }) {
+                MochiIconButton(onClick = { confirmDelete = true }) {
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.account_delete),
@@ -423,26 +417,17 @@ private fun PasskeyRow(
     }
 
     if (confirmDelete) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirmDelete = false },
-            title = { Text(stringResource(R.string.account_passkey_delete_title)) },
-            text = { Text(stringResource(R.string.account_passkey_delete_message, passkey.name)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmDelete = false
-                    onDelete(passkey.id)
-                }) {
-                    Text(
-                        stringResource(R.string.account_delete),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+            title = stringResource(R.string.account_passkey_delete_title),
+            text = stringResource(R.string.account_passkey_delete_message, passkey.name),
+            confirmText = stringResource(R.string.account_delete),
+            onConfirm = {
+                confirmDelete = false
+                onDelete(passkey.id)
             },
-            dismissButton = {
-                TextButton(onClick = { confirmDelete = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -466,12 +451,12 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
                 modifier = Modifier.weight(1f),
                 fontWeight = FontWeight.SemiBold,
             )
-            OutlinedButton(onClick = { confirmDisable = true }) {
+            MochiOutlinedButton(onClick = { confirmDisable = true }) {
                 Text(stringResource(R.string.account_disable))
             }
         }
     } else {
-        Button(onClick = onSetup) {
+        MochiOutlinedButton(onClick = onSetup) {
             Icon(Icons.Default.Lock, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.account_totp_setup))
@@ -479,26 +464,17 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
     }
 
     if (confirmDisable) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirmDisable = false },
-            title = { Text(stringResource(R.string.account_totp_disable_title)) },
-            text = { Text(stringResource(R.string.account_totp_disable_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmDisable = false
-                    onDisable()
-                }) {
-                    Text(
-                        stringResource(R.string.account_disable),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+            title = stringResource(R.string.account_totp_disable_title),
+            text = stringResource(R.string.account_totp_disable_message),
+            confirmText = stringResource(R.string.account_disable),
+            onConfirm = {
+                confirmDisable = false
+                onDisable()
             },
-            dismissButton = {
-                TextButton(onClick = { confirmDisable = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
@@ -511,10 +487,10 @@ private fun TotpSetupDialog(
     onCopySecret: () -> Unit,
 ) {
     var code by remember { mutableStateOf("") }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onCancel,
-        title = { Text(stringResource(R.string.account_totp_setup_title)) },
-        text = {
+        title = stringResource(R.string.account_totp_setup_title),
+        content = {
             Column {
                 Text(stringResource(R.string.account_totp_setup_step1))
                 Spacer(Modifier.height(8.dp))
@@ -525,7 +501,7 @@ private fun TotpSetupDialog(
                         modifier = Modifier.weight(1f),
                         style = MaterialTheme.typography.bodyMedium,
                     )
-                    IconButton(
+                    MochiIconButton(
                         onClick = onCopySecret,
                         modifier = Modifier.size(36.dp),
                     ) {
@@ -539,7 +515,7 @@ private fun TotpSetupDialog(
                 Spacer(Modifier.height(8.dp))
                 Text(stringResource(R.string.account_totp_setup_step2))
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = code,
                     onValueChange = { code = it.filter { c -> c.isDigit() }.take(6) },
                     label = { Text(stringResource(R.string.account_totp_code)) },
@@ -547,14 +523,10 @@ private fun TotpSetupDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(onClick = { onVerify(code) }, enabled = code.length == 6) {
-                Text(stringResource(R.string.account_totp_verify))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onCancel) { Text(stringResource(R.string.account_cancel)) }
-        },
+        confirmText = stringResource(R.string.account_totp_verify),
+        onConfirm = { onVerify(code) },
+        confirmEnabled = code.length == 6,
+        dismissText = stringResource(R.string.account_cancel),
     )
 }
 
@@ -571,7 +543,7 @@ private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
     )
     Spacer(Modifier.height(6.dp))
-    Button(onClick = {
+    MochiOutlinedButton(onClick = {
         if (count > 0) confirm = true else onGenerate()
     }) {
         Text(
@@ -580,36 +552,27 @@ private fun RecoveryCodesSection(count: Int, onGenerate: () -> Unit) {
         )
     }
     if (confirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { confirm = false },
-            title = { Text(stringResource(R.string.account_recovery_regen_title)) },
-            text = { Text(stringResource(R.string.account_recovery_regen_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirm = false
-                    onGenerate()
-                }) {
-                    Text(
-                        stringResource(R.string.account_recovery_regenerate),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
+            title = stringResource(R.string.account_recovery_regen_title),
+            text = stringResource(R.string.account_recovery_regen_message),
+            confirmText = stringResource(R.string.account_recovery_regenerate),
+            onConfirm = {
+                confirm = false
+                onGenerate()
             },
-            dismissButton = {
-                TextButton(onClick = { confirm = false }) {
-                    Text(stringResource(R.string.account_cancel))
-                }
-            },
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
         )
     }
 }
 
 @Composable
 private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDone: () -> Unit) {
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDone,
-        title = { Text(stringResource(R.string.account_recovery_codes_title)) },
-        text = {
+        title = stringResource(R.string.account_recovery_codes_title),
+        content = {
             Column {
                 Box(
                     modifier = Modifier
@@ -634,12 +597,9 @@ private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDo
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = onCopyAll) { Text(stringResource(R.string.account_copy_all)) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDone) { Text(stringResource(R.string.account_done)) }
-        },
+        confirmText = stringResource(R.string.account_copy_all),
+        onConfirm = onCopyAll,
+        dismissText = stringResource(R.string.account_done),
     )
 }
 
@@ -662,7 +622,7 @@ private fun OAuthSection(
     } else {
         identities.forEach { id ->
             var confirm by remember(id.provider) { mutableStateOf(false) }
-            Card(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp), colors = CardDefaults.outlinedCardColors()) {
+            MochiCard(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                 Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(oauthProviderLabel(id.provider), fontWeight = FontWeight.SemiBold)
@@ -674,32 +634,23 @@ private fun OAuthSection(
                             )
                         }
                     }
-                    OutlinedButton(onClick = { confirm = true }) {
+                    MochiOutlinedButton(onClick = { confirm = true }) {
                         Text(stringResource(R.string.account_unlink))
                     }
                 }
             }
             if (confirm) {
-                AlertDialog(
+                MochiAlertDialog(
                     onDismissRequest = { confirm = false },
-                    title = { Text(stringResource(R.string.account_oauth_unlink_title)) },
-                    text = { Text(stringResource(R.string.account_oauth_unlink_message, id.provider)) },
-                    confirmButton = {
-                        TextButton(onClick = {
-                            confirm = false
-                            onUnlink(id.provider)
-                        }) {
-                            Text(
-                                stringResource(R.string.account_unlink),
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                        }
+                    title = stringResource(R.string.account_oauth_unlink_title),
+                    text = stringResource(R.string.account_oauth_unlink_message, id.provider),
+                    confirmText = stringResource(R.string.account_unlink),
+                    onConfirm = {
+                        confirm = false
+                        onUnlink(id.provider)
                     },
-                    dismissButton = {
-                        TextButton(onClick = { confirm = false }) {
-                            Text(stringResource(R.string.account_cancel))
-                        }
-                    },
+                    destructive = true,
+                    dismissText = stringResource(R.string.account_cancel),
                 )
             }
         }
@@ -709,19 +660,19 @@ private fun OAuthSection(
     val available = providers.filter { it !in linkedProviders }
     if (available.isNotEmpty()) {
         var showLink by remember { mutableStateOf(false) }
-        Button(onClick = { showLink = true }) {
+        MochiOutlinedButton(onClick = { showLink = true }) {
             Icon(Icons.Default.Add, contentDescription = null)
             Spacer(Modifier.height(0.dp))
             Text(stringResource(R.string.account_oauth_link))
         }
         if (showLink) {
-            AlertDialog(
+            MochiAlertDialog(
                 onDismissRequest = { showLink = false },
-                title = { Text(stringResource(R.string.account_oauth_link_title)) },
-                text = {
+                title = stringResource(R.string.account_oauth_link_title),
+                content = {
                     Column {
                         available.forEach { provider ->
-                            TextButton(
+                            MochiTextButton(
                                 onClick = {
                                     showLink = false
                                     onLink(provider)
@@ -733,11 +684,8 @@ private fun OAuthSection(
                         }
                     }
                 },
-                confirmButton = {
-                    TextButton(onClick = { showLink = false }) {
-                        Text(stringResource(R.string.account_cancel))
-                    }
-                },
+                confirmText = stringResource(R.string.account_cancel),
+                onConfirm = { showLink = false },
             )
         }
     }

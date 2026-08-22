@@ -32,10 +32,8 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -51,6 +49,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.Link
 import org.mochios.crm.model.CrmDetails
@@ -150,7 +150,7 @@ fun LinksSection(
                 modifier = Modifier.weight(1f),
             )
             if (canWrite) {
-                IconButton(onClick = { showAddSheet = true }) {
+                MochiIconButton(onClick = { showAddSheet = true }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_links_add))
                 }
             }
@@ -222,7 +222,7 @@ private fun LinkRow(
             modifier = Modifier.weight(1f)
         )
         if (canWrite) {
-            IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.crm_links_remove),
@@ -307,7 +307,7 @@ private fun AddLinkSheet(
                 expanded = typeExpanded,
                 onExpandedChange = { typeExpanded = it }
             ) {
-                OutlinedTextField(
+                MochiTextField(
                     value = linkTypes.find { it.first == selectedType }?.second ?: "",
                     onValueChange = {},
                     readOnly = true,
@@ -335,7 +335,7 @@ private fun AddLinkSheet(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            OutlinedTextField(
+            MochiTextField(
                 value = search,
                 onValueChange = { search = it },
                 label = { Text(stringResource(R.string.crm_links_search_placeholder)) },

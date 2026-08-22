@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">Samsung ફોન પર, Settings → Device care → Sleeping apps પણ તપાસો અને જો Mochi ત્યાં યાદીમાં હોય તો તેને દૂર કરો.</string>
     <string name="oem_hint_allow">બેકગ્રાઉન્ડની મંજૂરી આપો</string>
     <string name="oem_hint_dismiss">ફરીથી બતાવશો નહીં</string>
-    <string name="about_title">Android માટે Mochi ક્લાયન્ટ</string>
+    <string name="about_title">Mochi ક્લાયન્ટ</string>
     <string name="about_version">આવૃત્તિ %1$s</string>
     <string name="about_check_updates">અપડેટ્સ માટે તપાસો</string>
     <string name="about_up_to_date">અદ્યતન છે</string>

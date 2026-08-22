@@ -21,14 +21,11 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SearchBar
 import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
@@ -177,9 +174,9 @@ private fun EntityCard(
     onSubscribe: () -> Unit,
     onNavigate: () -> Unit
 ) {
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
-        onClick = onNavigate
+        onClick = onNavigate,
     ) {
         Row(
             modifier = Modifier
@@ -216,7 +213,7 @@ private fun EntityCard(
             Spacer(modifier = Modifier.width(12.dp))
 
             if (entity.isSubscribed) {
-                OutlinedButton(onClick = {}, enabled = false) {
+                MochiOutlinedButton(onClick = {}, enabled = false) {
                     Text(stringResource(R.string.discovery_subscribed))
                 }
             } else if (isSubscribing) {
@@ -225,7 +222,7 @@ private fun EntityCard(
                     strokeWidth = 2.dp
                 )
             } else {
-                Button(onClick = onSubscribe) {
+                MochiButton(onClick = onSubscribe) {
                     Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                     Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     Text(stringResource(R.string.common_subscribe))

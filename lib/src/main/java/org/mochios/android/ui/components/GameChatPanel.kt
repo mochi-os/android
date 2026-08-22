@@ -6,36 +6,28 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Message
-import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -47,18 +39,16 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import java.util.Calendar
+import java.util.TimeZone
 import kotlinx.coroutines.flow.distinctUntilChanged
 import org.mochios.android.R
 import org.mochios.android.api.MochiError
 import org.mochios.android.i18n.LocalFormat
-import java.util.Calendar
-import java.util.TimeZone
 
 /**
  * A single chat message in a game-scoped chat panel. [type] is "message",
@@ -173,7 +163,7 @@ fun GameChatPanel(
                             strokeWidth = 2.dp,
                         )
                     } else {
-                        TextButton(onClick = onLoadMore) {
+                        MochiTextButton(onClick = onLoadMore) {
                             Text(
                                 text = stringResource(R.string.game_chat_load_more),
                                 style = MaterialTheme.typography.labelSmall,
@@ -220,107 +210,6 @@ fun GameChatPanel(
                     }
                 }
             }
-        }
-    }
-}
-
-/**
- * Pill-style composer paired with [GameChatPanel]. No attachments — games
- * never carry them in chat.
- */
-@Composable
-fun GameChatInput(
-    text: String,
-    onTextChange: (String) -> Unit,
-    onSend: () -> Unit,
-    isSending: Boolean,
-    errorMessage: String? = null,
-    modifier: Modifier = Modifier,
-) {
-    val focusManager = LocalFocusManager.current
-    val canSend = text.isNotBlank() && !isSending
-
-    val send = {
-        if (canSend) {
-            onSend()
-            focusManager.clearFocus()
-        }
-    }
-
-    Column(modifier = modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 6.dp)) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(percent = 50))
-                .border(
-                    width = 1.dp,
-                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                    shape = RoundedCornerShape(percent = 50),
-                )
-                .background(MaterialTheme.colorScheme.surface)
-                .padding(horizontal = 12.dp, vertical = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Box(modifier = Modifier.weight(1f)) {
-                if (text.isEmpty()) {
-                    Text(
-                        text = stringResource(R.string.game_chat_input_placeholder),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                    )
-                }
-                BasicTextField(
-                    value = text,
-                    onValueChange = onTextChange,
-                    singleLine = true,
-                    textStyle = MaterialTheme.typography.bodySmall.copy(
-                        color = MaterialTheme.colorScheme.onSurface,
-                    ),
-                    cursorBrush = androidx.compose.ui.graphics.SolidColor(
-                        MaterialTheme.colorScheme.primary,
-                    ),
-                    keyboardOptions = KeyboardOptions.Default.copy(
-                        imeAction = androidx.compose.ui.text.input.ImeAction.Send,
-                    ),
-                    keyboardActions = KeyboardActions(onSend = { send() }),
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
-            Spacer(modifier = Modifier.width(6.dp))
-            IconButton(
-                onClick = send,
-                enabled = canSend,
-                modifier = Modifier.size(28.dp),
-                colors = IconButtonDefaults.iconButtonColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    contentColor = MaterialTheme.colorScheme.onPrimary,
-                    disabledContainerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f),
-                    disabledContentColor = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.7f),
-                ),
-            ) {
-                if (isSending) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(14.dp),
-                        strokeWidth = 1.5.dp,
-                        color = MaterialTheme.colorScheme.onPrimary,
-                    )
-                } else {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.Send,
-                        contentDescription = stringResource(R.string.game_chat_send),
-                        modifier = Modifier.size(14.dp),
-                    )
-                }
-            }
-        }
-        if (!errorMessage.isNullOrBlank()) {
-            Text(
-                text = errorMessage,
-                style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
-                color = MaterialTheme.colorScheme.error,
-                modifier = Modifier.fillMaxWidth().padding(top = 2.dp, end = 4.dp),
-                textAlign = TextAlign.End,
-            )
         }
     }
 }

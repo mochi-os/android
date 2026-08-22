@@ -25,11 +25,8 @@ import androidx.compose.material.icons.filled.Send
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -160,7 +157,7 @@ private fun CommentItem(
             }
 
             if (comment.author == currentUserId) {
-                IconButton(
+                MochiIconButton(
                     onClick = { showMenu = true },
                     modifier = Modifier.size(24.dp)
                 ) {
@@ -196,13 +193,13 @@ private fun CommentItem(
         }
 
         if (showEditField) {
-            OutlinedTextField(
+            MochiTextField(
                 value = editText,
                 onValueChange = { editText = it },
                 modifier = Modifier.fillMaxWidth(),
                 placeholder = { Text(stringResource(R.string.comment_edit_placeholder)) },
                 trailingIcon = {
-                    IconButton(onClick = {
+                    MochiIconButton(onClick = {
                         if (editText.isNotBlank()) {
                             onEdit(comment.id, editText)
                             showEditField = false
@@ -212,7 +209,7 @@ private fun CommentItem(
                     }
                 }
             )
-            TextButton(onClick = {
+            MochiTextButton(onClick = {
                 showEditField = false
                 editText = comment.bodyMarkdown.orEmpty().ifBlank { comment.text }
             }) {
@@ -238,7 +235,7 @@ private fun CommentItem(
             horizontalArrangement = Arrangement.spacedBy(4.dp)
         ) {
             if (canComment) {
-                TextButton(
+                MochiTextButton(
                     onClick = {
                         showReplyField = !showReplyField
                         showEditField = false
@@ -274,14 +271,14 @@ private fun CommentItem(
                     .fillMaxWidth()
                     .padding(top = 4.dp)
             ) {
-                OutlinedTextField(
+                MochiTextField(
                     value = replyText,
                     onValueChange = { replyText = it },
                     modifier = Modifier.weight(1f),
                     placeholder = { Text(stringResource(R.string.comment_reply_placeholder)) },
                     singleLine = true
                 )
-                IconButton(onClick = {
+                MochiIconButton(onClick = {
                     if (replyText.isNotBlank()) {
                         onReply(comment.id, replyText)
                         replyText = ""

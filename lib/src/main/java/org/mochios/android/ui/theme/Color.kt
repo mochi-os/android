@@ -31,6 +31,19 @@ val Neutral90 = Color(0xFFE3E2E6)
 val Neutral95 = Color(0xFFF1F0F4)
 val Neutral99 = Color(0xFFFDFBFF)
 
+// Container ramp for the fallback schemes, matching the tones
+// ColorSchemeGenerator derives for a server theme.
+val Neutral100 = Color(0xFFFFFFFF)
+val Neutral12 = Color(0xFF1F2124)
+val Neutral17 = Color(0xFF272A2D)
+val Neutral22 = Color(0xFF35363A)
+val Neutral24 = Color(0xFF3A3B3F)
+val Neutral87 = Color(0xFFDBDADE)
+val Neutral92 = Color(0xFFE9E7EC)
+val Neutral94 = Color(0xFFEFEDF1)
+val Neutral96 = Color(0xFFF4F3F7)
+val Neutral98 = Color(0xFFFAF8FC)
+
 val NeutralVariant20 = Color(0xFF2D3135)
 val NeutralVariant30 = Color(0xFF43474B)
 val NeutralVariant40 = Color(0xFF5B5E63)

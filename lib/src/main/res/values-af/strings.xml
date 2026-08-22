@@ -152,7 +152,7 @@
     <string name="oem_hint_allow">Laat agtergrond toe</string>
     <string name="oem_hint_dismiss">Moenie weer wys nie</string>
     <string name="about_label">Aangaande</string>
-    <string name="about_title">Mochi-kliënt vir Android</string>
+    <string name="about_title">Mochi-kliënt</string>
     <string name="about_version">Weergawe %1$s</string>
     <string name="about_check_updates">Kyk vir opdaterings</string>
     <string name="about_up_to_date">Op datum</string>

@@ -20,13 +20,9 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,8 +35,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.format.formatPrice
 import org.mochios.staff.model.Dispute
@@ -79,10 +78,10 @@ fun DisputeReviewDialog(
         else -> stringResource(R.string.staff_disputes_dialog_title_review)
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(
                 modifier = Modifier.verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -99,7 +98,7 @@ fun DisputeReviewDialog(
                         // refund (total minus anything already refunded), matching
                         // web's `remaining` and the clamp in the view model.
                         val remaining = (dispute.total - dispute.orderRefunded).coerceAtLeast(0)
-                        OutlinedTextField(
+                        MochiTextField(
                             value = refundInput,
                             onValueChange = { refundInput = it },
                             label = {
@@ -126,7 +125,7 @@ fun DisputeReviewDialog(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
-                    OutlinedTextField(
+                    MochiTextField(
                         value = notes,
                         onValueChange = { notes = it },
                         label = { Text(stringResource(R.string.staff_disputes_notes_label)) },
@@ -144,35 +143,24 @@ fun DisputeReviewDialog(
                 )
             }
         },
-        confirmButton = {
-            if (!readOnly) {
-                TextButton(
-                    enabled = !submitting && resolution.isNotBlank(),
-                    onClick = {
-                        val refund = if (resolution == "resolved_buyer" && refundInput.isNotBlank()) {
-                            parseRefundMinor(refundInput, dispute.currency)
-                        } else null
-                        onSubmit(resolution, notes, refund)
-                    },
-                ) {
-                    Text(
-                        if (submitting) stringResource(R.string.staff_disputes_resolving)
-                        else stringResource(R.string.staff_disputes_resolve),
-                    )
-                }
-            }
+        // A dispute that is already settled is read only, so it keeps only the close button.
+        confirmText = when {
+            readOnly -> null
+            submitting -> stringResource(R.string.staff_disputes_resolving)
+            else -> stringResource(R.string.staff_disputes_resolve)
         },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = onDismiss,
-            ) {
-                Text(
-                    if (readOnly) stringResource(R.string.staff_disputes_close)
-                    else stringResource(R.string.staff_disputes_cancel),
-                )
-            }
+        onConfirm = {
+            val refund = if (resolution == "resolved_buyer" && refundInput.isNotBlank()) {
+                parseRefundMinor(refundInput, dispute.currency)
+            } else null
+            onSubmit(resolution, notes, refund)
         },
+        confirmEnabled = resolution.isNotBlank(),
+        confirmLoading = submitting,
+        dismissText = if (readOnly) stringResource(R.string.staff_disputes_close)
+            else stringResource(R.string.staff_disputes_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !submitting,
     )
 }
 
@@ -330,7 +318,7 @@ private fun ResolutionDropdown(
             style = MaterialTheme.typography.labelMedium,
         )
         Box {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { expanded = true },
                 modifier = Modifier.fillMaxWidth(),
             ) {

@@ -52,7 +52,14 @@ private val LightColorScheme = lightColorScheme(
     surfaceVariant = Neutral95,
     onSurfaceVariant = NeutralVariant30,
     outline = NeutralVariant50,
-    outlineVariant = NeutralVariant80
+    outlineVariant = NeutralVariant80,
+    surfaceContainerLowest = Neutral100,
+    surfaceContainerLow = Neutral98,
+    surfaceContainer = Neutral96,
+    surfaceContainerHigh = Neutral94,
+    surfaceContainerHighest = Neutral92,
+    surfaceBright = Neutral99,
+    surfaceDim = Neutral87
 )
 
 private val DarkColorScheme = darkColorScheme(
@@ -79,16 +86,46 @@ private val DarkColorScheme = darkColorScheme(
     surfaceVariant = Neutral20,
     onSurfaceVariant = NeutralVariant80,
     outline = NeutralVariant60,
-    outlineVariant = NeutralVariant30
+    outlineVariant = NeutralVariant30,
+    surfaceContainerLowest = Neutral10,
+    surfaceContainerLow = Neutral12,
+    surfaceContainer = Neutral17,
+    surfaceContainerHigh = Neutral22,
+    surfaceContainerHighest = Neutral24,
+    surfaceBright = Neutral24,
+    surfaceDim = Neutral10
 )
 
 /** Per-user corner radius (dp) for cards/buttons/dialogs. Themed surfaces
  *  that want to honour the user's preference read this CompositionLocal —
- *  defaults to 12dp (matches Material 3's medium). */
-val LocalEntityRadius = compositionLocalOf { 12.dp }
+ *  defaults to 16dp. Material's own medium is 12dp, which reads tight now
+ *  that cards carry no outline: with the border gone the corner is most of
+ *  what states the card's edge, so it wants to be visible. The explicit
+ *  Radius preferences below are left as the reader set them. */
+val LocalEntityRadius = compositionLocalOf { 16.dp }
 
 /** Density multiplier applied by spacing-aware components. 1.0 = default. */
 val LocalDensityScale = compositionLocalOf { 1.0f }
+
+/**
+ * The accent hue and chroma the identity colours are struck from.
+ *
+ * @property hue OKLCH hue in degrees.
+ * @property chroma OKLCH chroma at which seeded colours are drawn.
+ */
+data class SeedPalette(val hue: Float, val chroma: Float)
+
+/**
+ * Palette for colour-seeded entity circles (avatars, list-row icons).
+ *
+ * Those colours used to come off a raw string hash spanning the whole 360°
+ * hue circle, so a warm theme showed magenta, green and violet rows inside
+ * it — the identity colours belonged to no palette at all. Reading the hue
+ * back off `colorScheme.primary` covers every route the scheme can arrive
+ * by: the server's anchors, dynamic colour from the wallpaper, and the
+ * hard-coded fallback all land here the same way.
+ */
+val LocalSeedPalette = compositionLocalOf { SeedPalette(hue = 250f, chroma = 0.13f) }
 
 @Composable
 fun MochiTheme(
@@ -136,13 +173,21 @@ fun MochiTheme(
         Radius.SMALL -> 6
         Radius.MEDIUM -> 12
         Radius.LARGE -> 28
-        Radius.THEME, null -> 12
+        Radius.THEME, null -> 16
     }
     val densityScale = preferences?.density?.scale ?: 1.0f
 
+    val seedPalette = remember(colorScheme.primary) {
+        val (_, chroma, hue) = oklchOf(colorScheme.primary)
+        // Hold a floor under the chroma so a near-grey accent still yields
+        // circles that read as colours rather than as smudges.
+        SeedPalette(hue = hue, chroma = chroma.coerceIn(0.09f, 0.16f))
+    }
+
     CompositionLocalProvider(
         LocalEntityRadius provides radiusDp.dp,
-        LocalDensityScale provides densityScale
+        LocalDensityScale provides densityScale,
+        LocalSeedPalette provides seedPalette
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
@@ -162,10 +207,14 @@ private fun applyFontPreferences(
         // fallback (clearer letterforms than Serif in most system fonts).
         FontPref.DYSLEXIA -> FontFamily.SansSerif
         FontPref.SERIF -> FontFamily.Serif
-        FontPref.SYSTEM, FontPref.THEME, null -> FontFamily.Default
+        // SYSTEM means the reader asked for their device font, so it has to
+        // opt out of Inter rather than collapse into it the way it used to
+        // when both branches returned Default.
+        FontPref.SYSTEM -> FontFamily.Default
+        FontPref.THEME, null -> InterFontFamily
     }
     val scale = fontSize?.scale ?: 1.0f
-    if (family == FontFamily.Default && scale == 1.0f) return base
+    if (family == InterFontFamily && scale == 1.0f) return base
     return Typography(
         displayLarge = base.displayLarge.copy(fontFamily = family, fontSize = base.displayLarge.fontSize * scale, lineHeight = base.displayLarge.lineHeight * scale),
         displayMedium = base.displayMedium.copy(fontFamily = family, fontSize = base.displayMedium.fontSize * scale, lineHeight = base.displayMedium.lineHeight * scale),

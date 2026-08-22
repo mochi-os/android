@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Consenti background</string>
     <string name="oem_hint_dismiss">Non mostrare più</string>
     <string name="about_label">Informazioni</string>
-    <string name="about_title">Mochi Client per Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Versione %1$s</string>
     <string name="about_check_updates">Verifica aggiornamenti</string>
     <string name="about_up_to_date">Aggiornato</string>

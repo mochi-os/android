@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Benarkan latar belakang</string>
     <string name="oem_hint_dismiss">Jangan tunjuk lagi</string>
     <string name="about_label">Perihal</string>
-    <string name="about_title">Klien Mochi untuk Android</string>
+    <string name="about_title">Klien Mochi</string>
     <string name="about_version">Versi %1$s</string>
     <string name="about_check_updates">Semak kemas kini</string>
     <string name="about_up_to_date">Terkini</string>

@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -27,8 +26,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.R as MochiR
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.crm.R
 
 /**
@@ -74,7 +76,7 @@ fun AttachmentsSection(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = { filePicker.launch("*/*") }) {
+            MochiIconButton(onClick = { filePicker.launch("*/*") }) {
                 Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_attachment_add))
             }
         }
@@ -98,14 +100,17 @@ fun AttachmentsSection(
 
     val toDelete = pendingDelete
     if (toDelete != null) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingDelete = null },
             title = stringResource(R.string.crm_attachment_delete_confirm_title),
-            message = stringResource(R.string.crm_attachment_delete_confirm_message),
+            text = stringResource(R.string.crm_attachment_delete_confirm_message),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 onDeleteAttachment(toDelete.id)
                 pendingDelete = null
             },
-            onDismiss = { pendingDelete = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

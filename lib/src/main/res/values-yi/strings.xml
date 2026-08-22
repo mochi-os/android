@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">אויף סאַמסונג טעלעפאָנען, קוקט אויך אונטער איינשטעלונגען → גערעט זאָרג → שלאָפנדע אַפּליקאַציעס און אַוועקנעמט מאָטשי אויב עס איז דאָרט.</string>
     <string name="oem_hint_allow">ערלויבט הינטערגרונט</string>
     <string name="oem_hint_dismiss">ווייַזט נישט נאָך אַ מאָל</string>
-    <string name="about_title">מאָטשי קליענט פאַר אַנדרויד</string>
+    <string name="about_title">מאָטשי קליענט</string>
     <string name="about_version">ווערסיע %1$s</string>
     <string name="about_check_updates">זוכט אויפדאַטירונגען</string>
     <string name="about_up_to_date">אויפן נייַעסטן</string>

@@ -25,18 +25,12 @@ import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.LocalShipping
 import androidx.compose.material.icons.filled.Send
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -65,6 +59,11 @@ import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
@@ -121,7 +120,7 @@ fun SaleDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.market_sale_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.market_back),
@@ -241,7 +240,7 @@ private fun SaleDetailBody(
     ) {
         // ---- Summary ----
         item("summary") {
-            Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+            MochiCard(modifier = Modifier.fillMaxWidth()) {
                 Row(
                     modifier = Modifier.padding(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
@@ -322,8 +321,7 @@ private fun SaleDetailBody(
             (order.status == OrderStatus.PENDING || order.status == OrderStatus.PAID)
         ) {
             item("shipping-actions") {
-                Card(
-                    colors = CardDefaults.outlinedCardColors(),
+                MochiCard(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
@@ -332,7 +330,7 @@ private fun SaleDetailBody(
                             style = MaterialTheme.typography.titleSmall,
                         )
                         Spacer(modifier = Modifier.size(8.dp))
-                        Button(
+                        MochiButton(
                             onClick = onOpenShip,
                             enabled = !state.shipSubmitting,
                             modifier = Modifier.fillMaxWidth(),
@@ -359,8 +357,7 @@ private fun SaleDetailBody(
             order.status == OrderStatus.DISPUTED
         ) {
             item("refund-action") {
-                Card(
-                    colors = CardDefaults.outlinedCardColors(),
+                MochiCard(
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
@@ -369,7 +366,7 @@ private fun SaleDetailBody(
                             style = MaterialTheme.typography.titleSmall,
                         )
                         Spacer(modifier = Modifier.size(8.dp))
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = onOpenRefund,
                             enabled = !state.refundSubmitting,
                             modifier = Modifier.fillMaxWidth(),
@@ -436,7 +433,7 @@ private fun SaleDetailBody(
         // ---- Message buyer ----
         item("message-buyer") {
             Spacer(modifier = Modifier.size(8.dp))
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onMessageBuyer,
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -450,7 +447,7 @@ private fun SaleDetailBody(
 
 @Composable
 private fun FeeBreakdownPanel(order: Order, currency: Currency) {
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_sale_section_fees),
@@ -507,7 +504,7 @@ private fun FeeRow(label: String, value: String, emphasised: Boolean = false) {
 
 @Composable
 private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -554,7 +551,7 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
                 )
             }
             Spacer(modifier = Modifier.size(8.dp))
-            Button(
+            MochiButton(
                 onClick = onRespond,
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -577,7 +574,7 @@ private fun ReviewPanel(
     errorMessage: String?,
     onRespond: (String) -> Unit,
 ) {
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_sale_section_review),
@@ -608,7 +605,7 @@ private fun ReviewPanel(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 Spacer(modifier = Modifier.size(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = draft,
                     onValueChange = { draft = it },
                     label = {
@@ -626,7 +623,7 @@ private fun ReviewPanel(
                     )
                 }
                 Spacer(modifier = Modifier.size(8.dp))
-                Button(
+                MochiButton(
                     enabled = !submitting && draft.isNotBlank(),
                     onClick = { onRespond(draft.trim()) },
                     modifier = Modifier.fillMaxWidth(),

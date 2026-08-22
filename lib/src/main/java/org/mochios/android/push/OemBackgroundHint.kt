@@ -11,9 +11,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.PowerManager
 import android.provider.Settings
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -24,6 +22,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.edit
 import org.mochios.android.R
+import org.mochios.android.ui.components.MochiAlertDialog
 
 /**
  * One-time dialog asking the user to exempt the shell from battery
@@ -42,10 +41,10 @@ fun OemBackgroundHintDialog() {
 
     if (!visible) return
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { visible = false },
-        title = { Text(stringResource(R.string.oem_hint_title)) },
-        text = {
+        title = stringResource(R.string.oem_hint_title),
+        content = {
             val isSamsung = Build.MANUFACTURER.equals("samsung", ignoreCase = true)
             val body = if (isSamsung) {
                 stringResource(R.string.oem_hint_body) + "\n\n" +
@@ -55,22 +54,16 @@ fun OemBackgroundHintDialog() {
             }
             Text(body)
         },
-        confirmButton = {
-            TextButton(onClick = {
-                openBatteryOptimizationDialog(context)
-                markShown(context)
-                visible = false
-            }) {
-                Text(stringResource(R.string.oem_hint_allow))
-            }
+        confirmText = stringResource(R.string.oem_hint_allow),
+        onConfirm = {
+            openBatteryOptimizationDialog(context)
+            markShown(context)
+            visible = false
         },
-        dismissButton = {
-            TextButton(onClick = {
-                markShown(context)
-                visible = false
-            }) {
-                Text(stringResource(R.string.oem_hint_dismiss))
-            }
+        dismissText = stringResource(R.string.oem_hint_dismiss),
+        onDismiss = {
+            markShown(context)
+            visible = false
         },
     )
 }

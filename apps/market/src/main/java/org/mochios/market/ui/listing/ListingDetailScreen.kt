@@ -46,22 +46,16 @@ import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedIconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -101,6 +95,11 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -248,7 +247,7 @@ fun ListingDetailScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.market_back),
@@ -587,7 +586,7 @@ private fun ListingDetailContent(
         // Primary info + actions card: title, price, location, listed date,
         // the buy CTA + secondary actions, and the seller row, grouped into one
         // card per the redesign.
-        OutlinedCard(
+        MochiCard(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
@@ -653,7 +652,7 @@ private fun ListingDetailContent(
                     // tap bids at the instant amount, which the server resolves
                     // as an instant win -> checkout.
                     if (listing.pricing == PricingModel.AUCTION && auction != null && auction.instant > 0 && !sellerSuspended) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = onBuyNow,
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(10.dp),
@@ -689,7 +688,7 @@ private fun ListingDetailContent(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = onMessageSeller,
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(10.dp),
@@ -709,7 +708,7 @@ private fun ListingDetailContent(
                             Spacer(Modifier.width(8.dp))
                             Text(stringResource(R.string.market_listing_detail_message))
                         }
-                        IconButton(
+                        MochiIconButton(
                             onClick = onToggleSave,
                         ) {
                             Icon(
@@ -741,7 +740,7 @@ private fun ListingDetailContent(
 
                     // Owner controls.
                     if (isOwner) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = onEdit,
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(10.dp),
@@ -758,7 +757,7 @@ private fun ListingDetailContent(
                     val showRelist = listing.status == ListingStatus.SOLD ||
                             listing.status == ListingStatus.EXPIRED
                     if (showRelist) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = onRelist,
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(10.dp),
@@ -779,7 +778,7 @@ private fun ListingDetailContent(
         // Seller card — a "Seller" heading over the avatar/name row, with the
         // rating and sales stacked beneath it (left-aligned to the card edge),
         // per the redesign.
-        OutlinedCard(
+        MochiCard(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
         ) {
@@ -887,7 +886,7 @@ private fun ListingDetailContent(
         // Buyers without read access get an empty audit list; hide the toggle
         // rather than show a dead-end button.
         if (audit.isNotEmpty()) {
-            TextButton(onClick = onToggleAudit) {
+            MochiTextButton(onClick = onToggleAudit) {
                 Text(
                     text = stringResource(
                         if (auditExpanded) R.string.market_listing_detail_audit_hide
@@ -1036,7 +1035,7 @@ private fun SellerStatusBanner(status: String) {
         if (status == "banned") R.string.market_listing_detail_seller_banned_banner
         else R.string.market_listing_detail_seller_suspended_banner,
     )
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(
@@ -1093,7 +1092,7 @@ private fun PrimaryCta(
         PricingModel.AUCTION, PricingModel.SUBSCRIPTION -> null
         else -> Icons.Default.ShoppingCart
     }
-    Button(
+    MochiButton(
         onClick = onClick,
         enabled = enabled,
         shape = RoundedCornerShape(10.dp),

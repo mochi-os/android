@@ -29,13 +29,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DriveFileMove
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -56,8 +52,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -174,7 +173,7 @@ fun TreeRow(
             metaOrder.indexOf(field.fieldtype).takeIf { rank -> rank >= 0 } ?: metaOrder.size
         }
 
-    OutlinedCard(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(start = indent, top = 3.dp, bottom = 3.dp)
@@ -194,7 +193,7 @@ fun TreeRow(
 
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (node.hasChildren) {
-                    IconButton(onClick = onToggleExpand, modifier = Modifier.size(32.dp)) {
+                    MochiIconButton(onClick = onToggleExpand, modifier = Modifier.size(32.dp)) {
                         Icon(
                             imageVector = if (node.isExpanded) {
                                 Icons.Default.ExpandLess
@@ -222,7 +221,7 @@ fun TreeRow(
                 Spacer(modifier = Modifier.weight(1f))
 
                 Box {
-                    IconButton(
+                    MochiIconButton(
                         onClick = { showContextMenu = true },
                         modifier = Modifier.size(32.dp)
                     ) {
@@ -309,10 +308,10 @@ fun TreeRow(
     if (showReparentDialog && onReparent != null) {
         val allObjects = uiState.objects
         val possibleParents = allObjects.filter { it.id != obj.id }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showReparentDialog = false },
-            title = { Text(stringResource(R.string.projects_tree_move_to_parent)) },
-            text = {
+            title = stringResource(R.string.projects_tree_move_to_parent),
+            content = {
                 LazyColumn {
                     item {
                         Row(
@@ -349,10 +348,7 @@ fun TreeRow(
                     }
                 }
             },
-            confirmButton = {},
-            dismissButton = {
-                TextButton(onClick = { showReparentDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
-            }
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

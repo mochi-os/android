@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Kwiifowuni zeSamsung, jonga kwakhona kwiSettings → Device care → Sleeping apps uze ususe uMochi ukuba udweliswe.</string>
     <string name="oem_hint_allow">Vumela ngasemva</string>
     <string name="oem_hint_dismiss">Ungaphindi ubonise</string>
-    <string name="about_title">UMxhasi weMochi we-Android</string>
+    <string name="about_title">UMxhasi weMochi</string>
     <string name="about_version">Inguqulelo %1$s</string>
     <string name="about_check_updates">Khangela uhlaziyo</string>
     <string name="about_up_to_date">Ihlaziyiwe</string>

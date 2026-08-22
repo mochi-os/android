@@ -11,12 +11,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Save
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -28,6 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.ColorPicker
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.people.R
 
 /**
@@ -59,7 +59,7 @@ fun AccentColorPicker(
     ) {
         val clearing = isSaving && pending == AccentAction.CLEAR
         val saving = isSaving && pending == AccentAction.SAVE
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = {
                 pending = AccentAction.CLEAR
                 onClear()
@@ -76,7 +76,7 @@ fun AccentColorPicker(
             }
             Text(stringResource(R.string.people_profile_clear))
         }
-        Button(
+        MochiButton(
             onClick = {
                 pending = AccentAction.SAVE
                 onSave()

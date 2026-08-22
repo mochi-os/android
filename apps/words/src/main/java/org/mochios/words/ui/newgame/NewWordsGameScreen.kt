@@ -27,15 +27,12 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonAddAlt
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -56,6 +53,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.words.R
 import org.mochios.words.model.NewGameFriend
 import org.mochios.android.R as MochiR
@@ -92,7 +92,7 @@ fun NewWordsGameScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.words_new_game_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack, enabled = !isCreating) {
+                    MochiIconButton(onClick = onBack, enabled = !isCreating) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -117,7 +117,7 @@ fun NewWordsGameScreen(
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(
+                    MochiButton(
                         onClick = { viewModel.createGame(selectedFriends.toList(), language) },
                         enabled = canSubmit,
                         modifier = Modifier.fillMaxWidth(),
@@ -318,7 +318,7 @@ private fun EmptyFriendsBlock(onAddFriends: () -> Unit) {
             modifier = Modifier.padding(horizontal = 8.dp),
         )
         Spacer(modifier = Modifier.size(12.dp))
-        Button(onClick = onAddFriends) {
+        MochiButton(onClick = onAddFriends) {
             Icon(
                 Icons.Default.PersonAdd,
                 contentDescription = null,
@@ -338,15 +338,14 @@ private fun LanguageButton(
     modifier: Modifier = Modifier,
 ) {
     if (selected) {
-        Button(
+        MochiButton(
             onClick = onClick,
             modifier = modifier,
-            colors = ButtonDefaults.buttonColors(),
         ) {
             Text(label)
         }
     } else {
-        OutlinedButton(onClick = onClick, modifier = modifier) {
+        MochiOutlinedButton(onClick = onClick, modifier = modifier) {
             Text(label)
         }
     }

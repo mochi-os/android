@@ -9,7 +9,6 @@ import android.net.Uri
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -39,15 +38,11 @@ import androidx.compose.material.icons.outlined.ConfirmationNumber
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.GridView
-import androidx.compose.material3.Button
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
@@ -71,6 +66,11 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
@@ -183,7 +183,7 @@ fun CreateProjectScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = goBack, enabled = !uiState.isCreating) {
+                    MochiIconButton(onClick = goBack, enabled = !uiState.isCreating) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -209,7 +209,7 @@ fun CreateProjectScreen(
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                     }
-                    Button(
+                    MochiButton(
                         onClick = {
                             if (goesToTemplate) {
                                 step = STEP_TEMPLATE
@@ -304,7 +304,7 @@ private fun DetailsStep(
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp, vertical = 16.dp)
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = name,
             onValueChange = onNameChange,
             label = { Text(stringResource(R.string.projects_create_name)) },
@@ -312,7 +312,7 @@ private fun DetailsStep(
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(16.dp))
-        OutlinedTextField(
+        MochiTextField(
             value = prefix,
             onValueChange = onPrefixChange,
             label = { Text(stringResource(R.string.projects_create_prefix)) },
@@ -348,7 +348,7 @@ private fun DetailsStep(
             style = MaterialTheme.typography.titleSmall
         )
         Spacer(modifier = Modifier.height(8.dp))
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = onPickBackup,
             enabled = enabled,
             modifier = Modifier.fillMaxWidth()
@@ -401,14 +401,21 @@ private fun TemplateCard(
     selected: Boolean,
     onClick: () -> Unit
 ) {
-    OutlinedCard(
-        border = BorderStroke(
-            width = 1.dp,
-            color = if (selected) {
-                MaterialTheme.colorScheme.primary
+    // Selection reads as a filled tone rather than a stroke: the chosen
+    // template takes the primary container, the rest sit on the plain card
+    // tone. A 1 dp outline was the only thing separating the two states.
+    MochiCard(
+        colors = CardDefaults.cardColors(
+            containerColor = if (selected) {
+                MaterialTheme.colorScheme.primaryContainer
             } else {
-                MaterialTheme.colorScheme.outlineVariant
-            }
+                MaterialTheme.colorScheme.surfaceContainerLow
+            },
+            contentColor = if (selected) {
+                MaterialTheme.colorScheme.onPrimaryContainer
+            } else {
+                MaterialTheme.colorScheme.onSurface
+            },
         ),
         modifier = Modifier
             .fillMaxWidth()

@@ -22,13 +22,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -41,8 +36,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.feeds.R
@@ -87,7 +87,7 @@ fun GeneralTab(
             Column(modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = bannerDraft,
                     onValueChange = { value -> bannerDraft = value },
                     placeholder = { Text(stringResource(R.string.feeds_banner_hint)) },
@@ -99,7 +99,7 @@ fun GeneralTab(
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     // Save only has something to do once the draft has moved off
                     // what is stored.
-                    Button(
+                    MochiButton(
                         onClick = {
                             viewModel.saveBanner(bannerDraft)
                             focusManager.clearFocus()
@@ -113,14 +113,12 @@ fun GeneralTab(
                     // undoes typing, it does not commit anything. Absent while
                     // the box is empty: there is nothing to clear.
                     if (bannerDraft.isNotEmpty()) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = {
                                 bannerDraft = ""
                                 focusManager.clearFocus()
                             },
-                            colors = ButtonDefaults.outlinedButtonColors(
-                                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                            ),
+                            tone = MochiButtonTone.Neutral,
                         ) {
                             Text(stringResource(R.string.feeds_clear))
                         }
@@ -133,11 +131,9 @@ fun GeneralTab(
         Section(
             title = stringResource(R.string.feeds_delete_feed),
             action = {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showDeleteDialog = true },
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error
-                    ),
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     Text(stringResource(MochiR.string.common_delete))
                 }
@@ -147,16 +143,17 @@ fun GeneralTab(
     }
 
     if (showDeleteDialog) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteDialog = false },
             title = stringResource(R.string.feeds_delete_feed),
-            message = stringResource(R.string.feeds_delete_feed_confirm),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            text = stringResource(R.string.feeds_delete_feed_confirm),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteDialog = false
                 viewModel.deleteFeed { onFeedDeleted() }
             },
-            onDismiss = { showDeleteDialog = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -239,13 +236,13 @@ private fun NameEditor(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(4.dp),
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = editValue,
                 onValueChange = { value -> editValue = value },
                 singleLine = true,
                 trailingIcon = if (editValue.isNotEmpty()) {
                     {
-                        IconButton(onClick = { editValue = "" }) {
+                        MochiIconButton(onClick = { editValue = "" }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = stringResource(R.string.feeds_clear),
@@ -257,7 +254,7 @@ private fun NameEditor(
                 },
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = {
+            MochiIconButton(onClick = {
                 onRename(editValue.trim())
                 isEditing = false
             }) {
@@ -266,7 +263,7 @@ private fun NameEditor(
                     contentDescription = stringResource(R.string.feeds_save_name),
                 )
             }
-            IconButton(onClick = {
+            MochiIconButton(onClick = {
                 editValue = currentName
                 isEditing = false
             }) {
@@ -281,7 +278,7 @@ private fun NameEditor(
             // fill = false keeps the pencil next to the name instead of pushed to
             // the far end, while the weight still lets a long name wrap.
             Text(currentName, modifier = Modifier.weight(1f, fill = false))
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     editValue = currentName
                     isEditing = true

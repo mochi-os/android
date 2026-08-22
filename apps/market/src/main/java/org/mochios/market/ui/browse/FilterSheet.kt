@@ -20,7 +20,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -31,8 +30,6 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -46,7 +43,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 
 /**
@@ -131,7 +131,7 @@ fun FilterSheet(
 
             SectionLabel(stringResource(R.string.market_filter_price_range))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.filters[Filter.PRICE_MIN].orEmpty(),
                     onValueChange = { onUpdate(Filter.PRICE_MIN, it.ifBlank { null }) },
                     label = { Text(stringResource(R.string.market_filter_price_min)) },
@@ -139,7 +139,7 @@ fun FilterSheet(
                     singleLine = true,
                     modifier = Modifier.weight(1f),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = state.filters[Filter.PRICE_MAX].orEmpty(),
                     onValueChange = { onUpdate(Filter.PRICE_MAX, it.ifBlank { null }) },
                     label = { Text(stringResource(R.string.market_filter_price_max)) },
@@ -161,13 +161,13 @@ fun FilterSheet(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth(),
             ) {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onClearAll,
                     modifier = Modifier.weight(1f),
                 ) {
                     Text(stringResource(R.string.market_filter_clear))
                 }
-                Button(
+                MochiButton(
                     onClick = onDismiss,
                     modifier = Modifier.weight(1f),
                 ) {
@@ -235,7 +235,7 @@ private fun CategoryDropdown(
             expanded = expanded,
             onExpandedChange = { expanded = it },
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = selectedLabel,
                 onValueChange = {},
                 readOnly = true,
@@ -292,7 +292,7 @@ private fun SortDropdown(
             expanded = expanded,
             onExpandedChange = { expanded = it },
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = selectedLabel,
                 onValueChange = {},
                 readOnly = true,

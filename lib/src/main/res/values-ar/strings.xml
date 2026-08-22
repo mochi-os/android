@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">السماح بالخلفية</string>
     <string name="oem_hint_dismiss">عدم الإظهار مرة أخرى</string>
     <string name="about_label">حول</string>
-    <string name="about_title">تطبيق Mochi لنظام Android</string>
+    <string name="about_title">تطبيق Mochi</string>
     <string name="about_version">الإصدار %1$s</string>
     <string name="about_check_updates">التحقق من التحديثات</string>
     <string name="about_up_to_date">محدّث</string>

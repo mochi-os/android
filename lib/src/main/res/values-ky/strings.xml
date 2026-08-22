@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung телефондорунда Жөндөөлөр → Түзмөктү тейлөө → Уктап жаткан колдонмолор бөлүмүн да текшерип, Mochi тизмеде болсо аны алып салыңыз.</string>
     <string name="oem_hint_allow">Фондо иштөөгө уруксат берүү</string>
     <string name="oem_hint_dismiss">Кайра көрсөтүлбөсүн</string>
-    <string name="about_title">Android үчүн Mochi кардары</string>
+    <string name="about_title">Mochi кардары</string>
     <string name="about_version">Версия %1$s</string>
     <string name="about_check_updates">Жаңыртууларды текшерүү</string>
     <string name="about_up_to_date">Жаңыртылган</string>

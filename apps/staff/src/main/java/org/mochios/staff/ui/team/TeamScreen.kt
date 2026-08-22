@@ -23,7 +23,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -43,15 +42,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
@@ -102,13 +103,14 @@ fun TeamScreen(
 
     val removeTarget = state.removeTarget
     if (removeTarget != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelRemove,
             title = stringResource(R.string.staff_team_remove_title),
-            message = stringResource(R.string.staff_team_remove_desc),
-            confirmLabel = stringResource(R.string.staff_team_remove_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.staff_team_remove_desc),
+            confirmText = stringResource(R.string.staff_team_remove_confirm),
             onConfirm = viewModel::confirmRemove,
-            onDismiss = viewModel::cancelRemove,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -201,7 +203,7 @@ private fun MemberRow(
             }
         }
         if (isAdmin) {
-            OutlinedButton(onClick = { onAskRemove(member) }) {
+            MochiOutlinedButton(onClick = { onAskRemove(member) }) {
                 Text(stringResource(R.string.staff_team_action_remove))
             }
         }
@@ -255,7 +257,7 @@ private fun RoleDropdown(
     var expanded by remember { mutableStateOf(false) }
     val label = roleLabel(current)
     Box {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { expanded = true },
             enabled = enabled,
         ) {

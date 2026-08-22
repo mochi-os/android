@@ -31,11 +31,8 @@ import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Key
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -43,16 +40,12 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -74,8 +67,14 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUser
@@ -124,7 +123,7 @@ fun SystemUsersScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -132,7 +131,7 @@ fun SystemUsersScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = { createOpen = true }) {
+                    MochiIconButton(onClick = { createOpen = true }) {
                         Icon(
                             Icons.Default.PersonAdd,
                             contentDescription = stringResource(R.string.system_users_add_user),
@@ -145,7 +144,7 @@ fun SystemUsersScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             Column(modifier = Modifier.fillMaxSize()) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.search,
                     onValueChange = viewModel::setSearch,
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
@@ -246,25 +245,18 @@ fun SystemUsersScreen(
     }
 
     deleteTarget?.let { user ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { deleteTarget = null },
-            title = { Text(stringResource(R.string.system_users_delete_title)) },
-            text = { Text(stringResource(R.string.system_users_delete_message, user.username)) },
-            confirmButton = {
-                TextButton(
-                    enabled = !state.mutating,
-                    onClick = {
-                        viewModel.delete(user.id) { ok ->
-                            if (ok) deleteTarget = null
-                        }
-                    },
-                ) { Text(stringResource(R.string.system_users_delete)) }
-            },
-            dismissButton = {
-                TextButton(onClick = { deleteTarget = null }) {
-                    Text(stringResource(MochiR.string.common_cancel))
+            title = stringResource(R.string.system_users_delete_title),
+            text = stringResource(R.string.system_users_delete_message, user.username),
+            confirmText = stringResource(R.string.system_users_delete),
+            onConfirm = {
+                viewModel.delete(user.id) { ok ->
+                    if (ok) deleteTarget = null
                 }
             },
+            confirmEnabled = !state.mutating,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -285,24 +277,17 @@ fun SystemUsersScreen(
 
     if (revokeAllConfirm) {
         val user = sessionsTarget
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { revokeAllConfirm = false },
-            title = { Text(stringResource(R.string.system_users_revoke_all_title)) },
-            text = { Text(stringResource(R.string.system_users_revoke_all_message)) },
-            confirmButton = {
-                TextButton(
-                    enabled = !state.mutating,
-                    onClick = {
-                        revokeAllConfirm = false
-                        if (user != null) viewModel.revokeSession(user.id, null)
-                    },
-                ) { Text(stringResource(R.string.system_users_revoke_all)) }
+            title = stringResource(R.string.system_users_revoke_all_title),
+            text = stringResource(R.string.system_users_revoke_all_message),
+            confirmText = stringResource(R.string.system_users_revoke_all),
+            onConfirm = {
+                revokeAllConfirm = false
+                if (user != null) viewModel.revokeSession(user.id, null)
             },
-            dismissButton = {
-                TextButton(onClick = { revokeAllConfirm = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
+            confirmEnabled = !state.mutating,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -402,7 +387,7 @@ private fun UserCard(
     val isSuspended = user.status == "suspended"
     var menu by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -457,7 +442,7 @@ private fun UserCard(
                 )
             }
             Box {
-                IconButton(onClick = { menu = true }) {
+                MochiIconButton(onClick = { menu = true }) {
                     Icon(
                         Icons.Default.MoreVert,
                         contentDescription = stringResource(R.string.system_users_open_actions),
@@ -524,12 +509,12 @@ private fun UserDialog(
     var role by remember { mutableStateOf(initialRole) }
     val canSubmit = username.isNotBlank() && (!requireEmail || username.contains('@'))
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = username,
                     onValueChange = { username = it },
                     label = { Text(stringResource(R.string.system_users_email_label)) },
@@ -539,15 +524,10 @@ private fun UserDialog(
                 RoleDropdown(role = role, onChange = { role = it })
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = canSubmit && !saving,
-                onClick = { onConfirm(username.trim(), role) },
-            ) { Text(confirmLabel) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(stringResource(MochiR.string.common_cancel)) }
-        },
+        confirmText = confirmLabel,
+        onConfirm = { onConfirm(username.trim(), role) },
+        confirmEnabled = canSubmit && !saving,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -566,7 +546,7 @@ private fun RoleDropdown(role: String, onChange: (String) -> Unit) {
         )
         Spacer(Modifier.height(4.dp))
         ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }) {
-            OutlinedTextField(
+            MochiTextField(
                 value = current,
                 onValueChange = {},
                 readOnly = true,
@@ -608,10 +588,10 @@ private fun SessionsDialog(
     onClose: () -> Unit,
 ) {
     val format = LocalFormat.current
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onClose,
-        title = { Text(stringResource(R.string.system_users_sessions_title, user.username)) },
-        text = {
+        title = stringResource(R.string.system_users_sessions_title, user.username),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.system_users_sessions_description),
@@ -644,20 +624,14 @@ private fun SessionsDialog(
                 }
             }
         },
-        confirmButton = {
-            if (sessions.isNotEmpty()) {
-                TextButton(enabled = !mutating, onClick = onRevokeAll) {
-                    Text(stringResource(R.string.system_users_revoke_all))
-                }
-            } else {
-                TextButton(onClick = onClose) { Text(stringResource(MochiR.string.common_close)) }
-            }
-        },
-        dismissButton = {
-            if (sessions.isNotEmpty()) {
-                TextButton(onClick = onClose) { Text(stringResource(MochiR.string.common_close)) }
-            }
-        },
+        // With no sessions to revoke there is nothing to confirm, so close takes
+        // the confirm slot rather than leaving the dialog with a lone dismiss.
+        confirmText = if (sessions.isNotEmpty()) stringResource(R.string.system_users_revoke_all)
+            else stringResource(MochiR.string.common_close),
+        onConfirm = if (sessions.isNotEmpty()) onRevokeAll else onClose,
+        confirmEnabled = sessions.isEmpty() || !mutating,
+        dismissText = if (sessions.isNotEmpty()) stringResource(MochiR.string.common_close) else null,
+        onDismiss = onClose,
     )
 }
 
@@ -688,7 +662,7 @@ private fun SessionRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        TextButton(enabled = !disabled, onClick = onRevoke) {
+        MochiTextButton(enabled = !disabled, onClick = onRevoke) {
             Text(stringResource(R.string.system_users_revoke))
         }
     }
@@ -719,10 +693,10 @@ private fun PaginationBar(
         ) {
             PageSizeDropdown(limit = limit, onChange = onLimit)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedButton(onClick = onPrev, enabled = offset > 0) {
+                MochiOutlinedButton(onClick = onPrev, enabled = offset > 0) {
                     Text(stringResource(R.string.system_users_previous))
                 }
-                OutlinedButton(onClick = onNext, enabled = offset + limit < count) {
+                MochiOutlinedButton(onClick = onNext, enabled = offset + limit < count) {
                     Text(stringResource(R.string.system_users_next))
                 }
             }
@@ -735,7 +709,7 @@ private fun PaginationBar(
 private fun PageSizeDropdown(limit: Int, onChange: (Int) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }) {
-        OutlinedTextField(
+        MochiTextField(
             value = limit.toString(),
             onValueChange = {},
             readOnly = true,

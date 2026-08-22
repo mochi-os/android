@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">Επιτρέπεται στο παρασκήνιο</string>
     <string name="oem_hint_dismiss">Να μην εμφανιστεί ξανά</string>
     <string name="about_label">Σχετικά</string>
-    <string name="about_title">Πελάτης Mochi για Android</string>
+    <string name="about_title">Πελάτης Mochi</string>
     <string name="about_version">Έκδοση %1$s</string>
     <string name="about_check_updates">Έλεγχος για ενημερώσεις</string>
     <string name="about_up_to_date">Ενημερωμένο</string>

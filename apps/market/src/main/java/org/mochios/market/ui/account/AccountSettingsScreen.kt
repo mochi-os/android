@@ -27,17 +27,12 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -62,8 +57,13 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.navigation.MarketApp
 
 /**
@@ -93,21 +93,11 @@ fun AccountSettingsScreen(
         }
     }
 
-    Scaffold(
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.ACCOUNT,
+        titleRes = R.string.market_account_title,
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.market_account_title)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
-                        )
-                    }
-                },
-            )
-        },
     ) { padding ->
         when {
             state.isLoading -> {
@@ -224,7 +214,7 @@ fun AccountSettingsScreen(
                         )
                     }
 
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = {
                             navController.navigate(MarketApp.NOTIFICATION_PREFERENCES)
                         },
@@ -233,7 +223,7 @@ fun AccountSettingsScreen(
                         Text(stringResource(R.string.market_notifications_title))
                     }
 
-                    Button(
+                    MochiButton(
                         onClick = viewModel::save,
                         enabled = !state.isSaving,
                         modifier = Modifier.fillMaxWidth(),
@@ -266,7 +256,7 @@ private fun SuspensionWarning(status: String, reason: String) {
     } else {
         R.string.market_account_status_suspended_title
     }
-    Card(
+    MochiCard(
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.errorContainer,
         ),
@@ -331,7 +321,7 @@ private fun ProfileCard(
     isSaving: Boolean,
     onSave: () -> Unit,
 ) {
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
@@ -344,7 +334,7 @@ private fun ProfileCard(
         ) {
             BiographyField(value = biography, onChange = onBiographyChange)
             LocationField(place = place, onChange = onPlaceChange)
-            Button(
+            MochiButton(
                 onClick = onSave,
                 enabled = !isSaving,
                 shape = RoundedCornerShape(10.dp),
@@ -380,7 +370,7 @@ private fun BiographyField(
             fontWeight = FontWeight.SemiBold,
         )
         Spacer(modifier = Modifier.size(8.dp))
-        OutlinedTextField(
+        MochiTextField(
             value = value,
             onValueChange = onChange,
             placeholder = {
@@ -449,7 +439,7 @@ private fun SellerStatusCard(
             R.string.market_account_seller_card_continue,
         )
     }
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.Top,
@@ -473,7 +463,7 @@ private fun SellerStatusCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 Spacer(modifier = Modifier.size(8.dp))
-                OutlinedButton(onClick = onNavigate) {
+                MochiOutlinedButton(onClick = onNavigate) {
                     Text(stringResource(actionRes))
                 }
             }
@@ -515,14 +505,14 @@ private fun BusinessDetailsSection(
             )
             Switch(checked = business, onCheckedChange = onBusinessChange)
         }
-        OutlinedTextField(
+        MochiTextField(
             value = company,
             onValueChange = onCompanyChange,
             label = { Text(stringResource(R.string.market_account_company_label)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = vat,
             onValueChange = onVatChange,
             label = { Text(stringResource(R.string.market_account_vat_label)) },
@@ -541,7 +531,7 @@ private fun StripeCard(
     onDashboard: () -> Unit,
     onRefresh: () -> Unit,
 ) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -572,13 +562,13 @@ private fun StripeCard(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onDashboard,
                     modifier = Modifier.weight(1f),
                 ) {
                     Text(stringResource(R.string.market_account_stripe_dashboard))
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onRefresh,
                     enabled = !isLoading,
                     modifier = Modifier.weight(1f),
@@ -639,49 +629,49 @@ private fun ShippingAddressSection(
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = name,
             onValueChange = onNameChange,
             label = { Text(stringResource(R.string.market_checkout_address_name)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = line1,
             onValueChange = onLine1Change,
             label = { Text(stringResource(R.string.market_checkout_address_line1)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = line2,
             onValueChange = onLine2Change,
             label = { Text(stringResource(R.string.market_checkout_address_line2)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = city,
             onValueChange = onCityChange,
             label = { Text(stringResource(R.string.market_checkout_address_city)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = region,
             onValueChange = onRegionChange,
             label = { Text(stringResource(R.string.market_checkout_address_region)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = postcode,
             onValueChange = onPostcodeChange,
             label = { Text(stringResource(R.string.market_checkout_address_postcode)) },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = country,
             onValueChange = onCountryChange,
             label = { Text(stringResource(R.string.market_checkout_address_country)) },

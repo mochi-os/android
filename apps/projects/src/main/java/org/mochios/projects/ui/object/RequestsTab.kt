@@ -27,8 +27,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
@@ -38,14 +36,11 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.SuggestionChipDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -61,8 +56,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Branch
 import org.mochios.projects.model.MergeCheck
@@ -171,7 +171,7 @@ private fun RequestItem(
             }
         }
         Box {
-            IconButton(onClick = { showOverflow = true }) {
+            MochiIconButton(onClick = { showOverflow = true }) {
                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
             }
             MochiDropdownMenu(
@@ -243,7 +243,7 @@ private fun RequestDetailView(
             .verticalScroll(rememberScrollState())
             .padding(16.dp)
     ) {
-        TextButton(onClick = onBack) {
+        MochiTextButton(onClick = onBack) {
             Text(stringResource(R.string.projects_request_back_to_list))
         }
 
@@ -270,7 +270,7 @@ private fun RequestDetailView(
             Spacer(modifier = Modifier.height(12.dp))
         }
 
-        Card(
+        MochiCard(
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
             ),
@@ -350,20 +350,20 @@ private fun RequestDetailView(
         Spacer(modifier = Modifier.height(16.dp))
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            TextButton(onClick = {
+            MochiTextButton(onClick = {
                 onViewDiff(projectId, request.repository, request.source, request.target)
             }) {
                 Text(stringResource(R.string.projects_request_view_diff))
             }
 
             if (request.status == "open" && !request.draft && mergeCheck?.canMerge == true) {
-                TextButton(onClick = { showMergeDialog = true }) {
+                MochiTextButton(onClick = { showMergeDialog = true }) {
                     Text(stringResource(R.string.projects_request_merge), color = Color(0xFF4CAF50))
                 }
             }
 
             if (request.status == "open" && request.draft) {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     viewModel.updateRequest(request.id, null, null, null, false)
                 }) {
                     Text(stringResource(R.string.projects_request_mark_ready))
@@ -371,7 +371,7 @@ private fun RequestDetailView(
             }
 
             if (request.status == "open") {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     viewModel.updateRequest(request.id, null, null, "closed", null)
                 }) {
                     Text(stringResource(R.string.projects_request_close))
@@ -411,12 +411,12 @@ private fun MergeDialog(
         "rebase" to stringResource(R.string.projects_request_method_rebase)
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_request_merge_dialog_title)) },
-        text = {
+        title = stringResource(R.string.projects_request_merge_dialog_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = message,
                     onValueChange = { message = it },
                     label = { Text(stringResource(R.string.projects_request_commit_message)) },
@@ -440,19 +440,10 @@ private fun MergeDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onMerge(message, method) },
-                enabled = message.isNotBlank()
-            ) {
-                Text(stringResource(R.string.projects_request_merge))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(R.string.projects_request_merge),
+        onConfirm = { onMerge(message, method) },
+        confirmEnabled = message.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -494,10 +485,10 @@ private fun CreateRequestDialog(
         selectedTarget = branches.firstOrNull { it.isDefault }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_request_create_title)) },
-        text = {
+        title = stringResource(R.string.projects_request_create_title),
+        content = {
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 RepositoryDropdown(
                     repositories = repositories,
@@ -521,7 +512,7 @@ private fun CreateRequestDialog(
                     onSelect = { selectedTarget = it }
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = title,
                     onValueChange = { title = it },
                     label = { Text(stringResource(R.string.projects_request_field_title)) },
@@ -529,7 +520,7 @@ private fun CreateRequestDialog(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = description,
                     onValueChange = { description = it },
                     label = { Text(stringResource(R.string.projects_request_field_description)) },
@@ -546,32 +537,23 @@ private fun CreateRequestDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val repo = selectedRepo ?: return@TextButton
-                    val source = selectedSource ?: return@TextButton
-                    val target = selectedTarget ?: return@TextButton
-                    onCreate(
-                        repo.id,
-                        source.name,
-                        target.name,
-                        title,
-                        description.ifBlank { null },
-                        draft
-                    )
-                },
-                enabled = title.isNotBlank() && selectedRepo != null &&
-                    selectedSource != null && selectedTarget != null
-            ) {
-                Text(stringResource(R.string.projects_request_create_action))
-            }
+        confirmText = stringResource(R.string.projects_request_create_action),
+        onConfirm = {
+            val repo = selectedRepo ?: return@MochiAlertDialog
+            val source = selectedSource ?: return@MochiAlertDialog
+            val target = selectedTarget ?: return@MochiAlertDialog
+            onCreate(
+                repo.id,
+                source.name,
+                target.name,
+                title,
+                description.ifBlank { null },
+                draft
+            )
         },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmEnabled = title.isNotBlank() && selectedRepo != null &&
+            selectedSource != null && selectedTarget != null,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -587,7 +569,7 @@ private fun RepositoryDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it }
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = selected?.name ?: "",
             onValueChange = {},
             readOnly = true,
@@ -630,7 +612,7 @@ private fun BranchDropdown(
         expanded = expanded && enabled,
         onExpandedChange = { if (enabled) expanded = it }
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = selected?.name ?: "",
             onValueChange = {},
             readOnly = true,

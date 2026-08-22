@@ -25,14 +25,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ImageNotSupported
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -62,12 +58,17 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
+import org.mochios.android.R as MochiR
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
@@ -155,16 +156,17 @@ fun SubscriptionDetailScreen(
     }
 
     if (pendingCancel) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingCancel = false },
             title = stringResource(R.string.market_subscriptions_cancel_title),
-            message = stringResource(R.string.market_subscriptions_cancel_body),
-            confirmLabel = stringResource(R.string.market_subscriptions_cancel_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.market_subscriptions_cancel_body),
+            confirmText = stringResource(R.string.market_subscriptions_cancel_confirm),
             onConfirm = {
                 viewModel.cancel()
                 pendingCancel = false
             },
-            onDismiss = { pendingCancel = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -182,7 +184,7 @@ private fun SummaryCard(
     val thumbUrl = listing?.photo?.id?.takeIf { it.isNotBlank() }
         ?.let { "$baseUrl/market/-/photo/$it" }
 
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 ListingThumbnail(thumbnailUrl = thumbUrl)
@@ -272,7 +274,7 @@ private fun SummaryCard(
 private fun BillingInfoCard(subscription: Subscription) {
     val format = LocalFormat.current
     val currency = subscription.currency ?: Currency.GBP
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_subscription_detail_billing_info),
@@ -333,7 +335,7 @@ private fun BillingHistorySection(@Suppress("UNUSED_PARAMETER") subscription: Su
     // `subscription.payments` on the wire today. We render the section
     // shell so the user understands where this content will appear once
     // the server side lands, and the layout doesn't shift when it does.
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = stringResource(R.string.market_subscription_detail_billing_history),
@@ -375,7 +377,7 @@ private fun ActionRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         if (canPause) {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onPause,
                 enabled = !mutating,
                 modifier = Modifier.weight(1f),
@@ -384,7 +386,7 @@ private fun ActionRow(
             }
         }
         if (canResume) {
-            Button(
+            MochiButton(
                 onClick = onResume,
                 enabled = !mutating,
                 modifier = Modifier.weight(1f),
@@ -399,7 +401,7 @@ private fun ActionRow(
             }
         }
         if (canReactivate) {
-            Button(
+            MochiButton(
                 onClick = onReactivate,
                 enabled = !mutating,
                 modifier = Modifier.weight(1f),
@@ -414,12 +416,10 @@ private fun ActionRow(
             }
         }
         if (canCancel) {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onCancelRequested,
                 enabled = !mutating,
-                colors = ButtonDefaults.outlinedButtonColors(
-                    contentColor = MaterialTheme.colorScheme.error,
-                ),
+                tone = MochiButtonTone.Neutral,
                 modifier = Modifier.weight(1f),
             ) {
                 Text(stringResource(R.string.market_subscriptions_action_cancel))

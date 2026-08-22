@@ -32,30 +32,20 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -63,7 +53,6 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -75,13 +64,17 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.MarketSidebar
+import org.mochios.market.ui.components.MarketLayout
 
 // The "Browse categories" grid is hidden for now: with few listings it takes a
 // lot of vertical space for little value. Flip to `true` to bring it back once
@@ -95,8 +88,6 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
-    val drawerState = rememberDrawerState(DrawerValue.Closed)
-    val drawerScope = rememberCoroutineScope()
 
     // Confirm each save/unsave with a short toast.
     val context = LocalContext.current
@@ -123,69 +114,44 @@ fun HomeScreen(
         if (searchInput != state.query) viewModel.setQuery(searchInput)
     }
 
-    ModalNavigationDrawer(
-        drawerState = drawerState,
-        drawerContent = {
-            MarketSidebar(
-                currentRoute = MarketApp.HOME,
-                navController = navController,
-                isSeller = state.isSeller,
-                onNavigate = { route ->
-                    drawerScope.launch { drawerState.close() }
-                    if (route != MarketApp.HOME) navController.navigate(route)
-                },
-            )
-        },
-    ) {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.market_title)) },
-                    navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = stringResource(R.string.market_open_sidebar),
-                            )
-                        }
-                    },
-                    actions = {
-                        IconButton(onClick = { viewModel.openFilterSheet() }) {
-                            Icon(
-                                Icons.Default.FilterList,
-                                contentDescription = stringResource(R.string.market_filter_open),
-                            )
-                        }
-                    },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.HOME,
+        titleRes = R.string.market_title,
+        actions = {
+            MochiIconButton(onClick = { viewModel.openFilterSheet() }) {
+                Icon(
+                    Icons.Default.FilterList,
+                    contentDescription = stringResource(R.string.market_filter_open),
                 )
+            }
+        },
+    ) { padding ->
+        HomeContent(
+            padding = padding,
+            state = state,
+            searchInput = searchInput,
+            onSearchInput = { searchInput = it },
+            onClearSearch = {
+                searchInput = ""
+                viewModel.setQuery("")
             },
-        ) { padding ->
-            HomeContent(
-                padding = padding,
-                state = state,
-                searchInput = searchInput,
-                onSearchInput = { searchInput = it },
-                onClearSearch = {
-                    searchInput = ""
-                    viewModel.setQuery("")
-                },
-                onOpenFilter = { viewModel.openFilterSheet(it) },
-                onRemoveFilter = { viewModel.setFilter(it, null) },
-                onClearAll = { viewModel.clearFilters() },
-                onLoadMore = viewModel::loadMore,
-                onListingClick = { listing ->
-                    viewModel.viewListing(listing)
-                    navController.navigate(MarketApp.listingDetail(listing.id.toString()))
-                },
-                onToggleSave = viewModel::toggleSave,
-                onCategoryClick = { category ->
-                    viewModel.setFilter(Filter.CATEGORY, category.id.toString())
-                },
-                onActivateAccount = viewModel::activateAccount,
-                onDismissOnboarding = viewModel::dismissOnboarding,
-                onClearRecent = viewModel::clearRecentlyViewed,
-            )
-        }
+            onOpenFilter = { viewModel.openFilterSheet(it) },
+            onRemoveFilter = { viewModel.setFilter(it, null) },
+            onClearAll = { viewModel.clearFilters() },
+            onLoadMore = viewModel::loadMore,
+            onListingClick = { listing ->
+                viewModel.viewListing(listing)
+                navController.navigate(MarketApp.listingDetail(listing.id.toString()))
+            },
+            onToggleSave = viewModel::toggleSave,
+            onCategoryClick = { category ->
+                viewModel.setFilter(Filter.CATEGORY, category.id.toString())
+            },
+            onActivateAccount = viewModel::activateAccount,
+            onDismissOnboarding = viewModel::dismissOnboarding,
+            onClearRecent = viewModel::clearRecentlyViewed,
+        )
     }
 
     if (state.filterSheetOpen) {
@@ -248,14 +214,14 @@ private fun HomeContent(
                 onDismiss = onDismissOnboarding,
             )
         }
-        OutlinedTextField(
+        MochiTextField(
             value = searchInput,
             onValueChange = onSearchInput,
             placeholder = { Text(stringResource(R.string.market_search_placeholder)) },
             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
             trailingIcon = if (searchInput.isNotEmpty()) {
                 {
-                    IconButton(onClick = onClearSearch) {
+                    MochiIconButton(onClick = onClearSearch) {
                         Icon(
                             Icons.Default.Close,
                             contentDescription = stringResource(R.string.market_search_clear),
@@ -299,7 +265,7 @@ private fun HomeContent(
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.weight(1f),
                             )
-                            TextButton(onClick = onClearRecent) {
+                            MochiTextButton(onClick = onClearRecent) {
                                 Text(stringResource(R.string.market_recently_viewed_clear))
                             }
                         }
@@ -380,7 +346,7 @@ private fun HomeContent(
                     title = stringResource(R.string.market_empty_title),
                     subtitle = stringResource(R.string.market_empty_subtitle),
                     action = {
-                        OutlinedButton(onClick = onClearAll) {
+                        MochiOutlinedButton(onClick = onClearAll) {
                             Text(stringResource(R.string.market_filter_clear))
                         }
                     },
@@ -532,7 +498,7 @@ private fun OnboardingCard(
             )
             Spacer(modifier = Modifier.height(12.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(onClick = onActivate, enabled = !activating) {
+                MochiButton(onClick = onActivate, enabled = !activating) {
                     Icon(
                         Icons.Default.Storefront,
                         contentDescription = null,
@@ -541,7 +507,7 @@ private fun OnboardingCard(
                     Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     Text(stringResource(R.string.market_onboarding_activate))
                 }
-                TextButton(onClick = onDismiss, enabled = !activating) {
+                MochiTextButton(onClick = onDismiss, enabled = !activating) {
                     Text(stringResource(R.string.market_onboarding_dismiss))
                 }
             }

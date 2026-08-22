@@ -31,7 +31,6 @@ import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -135,7 +134,7 @@ fun LightboxScreen(
                 ) {
                     if (hasComments) {
                         val count = commentCount?.invoke(pagerState.currentPage) ?: 0
-                        IconButton(onClick = toggleComments) {
+                        MochiIconButton(onClick = toggleComments) {
                             BadgedBox(
                                 badge = {
                                     if (count > 0) Badge { Text(count.toString()) }
@@ -149,7 +148,7 @@ fun LightboxScreen(
                             }
                         }
                     }
-                    IconButton(onClick = onDismiss) {
+                    MochiIconButton(onClick = onDismiss) {
                         Icon(
                             imageVector = Icons.Default.Close,
                             contentDescription = stringResource(R.string.common_close),
@@ -220,7 +219,7 @@ fun LightboxScreen(
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.weight(1f)
                             )
-                            IconButton(onClick = toggleComments) {
+                            MochiIconButton(onClick = toggleComments) {
                                 Icon(
                                     imageVector = Icons.Default.ExpandMore,
                                     contentDescription = stringResource(R.string.common_close)

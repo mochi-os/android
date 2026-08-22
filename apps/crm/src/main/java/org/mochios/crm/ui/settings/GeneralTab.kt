@@ -20,13 +20,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -39,11 +35,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
-import org.mochios.crm.ui.`object`.ConfirmDeleteDialog
 import org.mochios.android.R as MochiR
 
 @Composable
@@ -100,12 +100,10 @@ fun GeneralTab(
             title = stringResource(R.string.crm_settings_delete_crm),
             headerAlignment = Alignment.CenterVertically,
             action = {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showDeleteConfirm = true },
                     enabled = !uiState.isDeleting,
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.error
-                    )
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     if (uiState.isDeleting) {
                         CircularProgressIndicator(
@@ -122,14 +120,17 @@ fun GeneralTab(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDeleteDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = stringResource(R.string.crm_settings_delete_confirm_title),
-            message = stringResource(R.string.crm_settings_delete_confirm_message),
+            text = stringResource(R.string.crm_settings_delete_confirm_message),
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = {
                 showDeleteConfirm = false
                 viewModel.deleteCrm { onCrmDeleted() }
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -206,14 +207,14 @@ private fun EditableIdentityRow(
 
     IdentityFieldRow(label = label) {
         if (isEditing) {
-            OutlinedTextField(
+            MochiTextField(
                 value = draft,
                 onValueChange = { text -> draft = text },
                 singleLine = singleLine,
                 minLines = if (singleLine) 1 else 3,
                 modifier = Modifier.weight(1f)
             )
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     onSave(draft.trim())
                     isEditing = false
@@ -225,7 +226,7 @@ private fun EditableIdentityRow(
                     contentDescription = stringResource(MochiR.string.common_save)
                 )
             }
-            IconButton(onClick = {
+            MochiIconButton(onClick = {
                 draft = value
                 isEditing = false
             }) {
@@ -248,7 +249,7 @@ private fun EditableIdentityRow(
             } else {
                 Text(text = value, modifier = Modifier.weight(1f, fill = false))
             }
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     draft = value
                     isEditing = true

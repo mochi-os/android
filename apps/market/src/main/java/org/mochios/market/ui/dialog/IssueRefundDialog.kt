@@ -12,21 +12,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -40,7 +33,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -85,10 +81,10 @@ fun IssueRefundDialog(
         }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(stringResource(R.string.market_refund_dialog_title)) },
-        text = {
+        title = stringResource(R.string.market_refund_dialog_title),
+        content = {
             Column {
                 if (priorRefunds.isNotEmpty()) {
                     PriorRefundsSection(
@@ -112,7 +108,7 @@ fun IssueRefundDialog(
                     expanded = reasonOpen,
                     onExpandedChange = { reasonOpen = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = stringResource(reasonLabel),
                         onValueChange = {},
                         readOnly = true,
@@ -141,7 +137,7 @@ fun IssueRefundDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = amountInput,
                     onValueChange = { amountInput = it },
                     label = { Text(stringResource(R.string.market_refund_dialog_amount_label)) },
@@ -154,7 +150,7 @@ fun IssueRefundDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = description,
                     onValueChange = { description = it },
                     label = {
@@ -174,35 +170,19 @@ fun IssueRefundDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = {
-                    val minor = amountInput.trim().takeIf { it.isNotEmpty() }
-                        ?.let { toMinorUnits(it, currency) }
-                    onSubmit(minor, reason, description.trim())
-                },
-            ) {
-                if (submitting) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                    Spacer(Modifier.size(8.dp))
-                    Text(stringResource(R.string.market_refund_dialog_submitting))
-                } else {
-                    Text(stringResource(R.string.market_refund_dialog_submit))
-                }
-            }
+        confirmText = if (submitting) {
+            stringResource(R.string.market_refund_dialog_submitting)
+        } else {
+            stringResource(R.string.market_refund_dialog_submit)
         },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = { if (!submitting) onDismiss() },
-            ) {
-                Text(stringResource(R.string.market_refund_dialog_cancel))
-            }
+        onConfirm = {
+            val minor = amountInput.trim().takeIf { it.isNotEmpty() }
+                ?.let { toMinorUnits(it, currency) }
+            onSubmit(minor, reason, description.trim())
         },
+        confirmLoading = submitting,
+        dismissText = stringResource(R.string.market_refund_dialog_cancel),
+        dismissEnabled = !submitting,
     )
 }
 
@@ -215,7 +195,7 @@ private fun PriorRefundsSection(refunds: List<Refund>, currency: Currency) {
         fontWeight = FontWeight.SemiBold,
     )
     Spacer(Modifier.height(8.dp))
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column {
             refunds.forEachIndexed { index, refund ->
                 if (index > 0) HorizontalDivider()

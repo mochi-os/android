@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Arka plana izin ver</string>
     <string name="oem_hint_dismiss">Tekrar gösterme</string>
     <string name="about_label">Hakkında</string>
-    <string name="about_title">Android için Mochi İstemcisi</string>
+    <string name="about_title">Mochi İstemcisi</string>
     <string name="about_version">Sürüm %1$s</string>
     <string name="about_check_updates">Güncellemeleri denetle</string>
     <string name="about_up_to_date">Güncel</string>

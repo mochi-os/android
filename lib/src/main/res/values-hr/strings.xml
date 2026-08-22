@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">Dopusti pozadinski rad</string>
     <string name="oem_hint_dismiss">Ne prikazuj ponovno</string>
     <string name="about_label">O aplikaciji</string>
-    <string name="about_title">Mochi klijent za Android</string>
+    <string name="about_title">Mochi klijent</string>
     <string name="about_version">Verzija %1$s</string>
     <string name="about_check_updates">Provjeri ažuriranja</string>
     <string name="about_up_to_date">Ažurirano</string>

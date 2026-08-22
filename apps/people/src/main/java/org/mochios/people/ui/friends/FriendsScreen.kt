@@ -34,22 +34,17 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -71,15 +66,22 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.Friend
-import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleDrawerItems
+import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.android.R as MochiR
 
 /**
@@ -131,16 +133,15 @@ fun FriendsScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            PeopleSidebar(
-                current = PeopleSidebarSection.FRIENDS,
-                onSelect = { section ->
-                    drawerScope.launch { drawerState.close() }
-                    if (section != PeopleSidebarSection.FRIENDS) onSwitchSection(section)
-                },
-            )
+        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        items = peopleDrawerItems(),
+        selectedId = PeopleSidebarSection.FRIENDS.name,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            val section = peopleDrawerSection(item.id)
+            if (section != PeopleSidebarSection.FRIENDS) onSwitchSection(section)
         },
     ) {
         Scaffold(
@@ -149,7 +150,7 @@ fun FriendsScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.people_friends_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.people_open_sidebar),
@@ -157,14 +158,14 @@ fun FriendsScreen(
                         }
                     },
                     actions = {
-                        IconButton(onClick = onOpenNotifications) {
+                        MochiIconButton(onClick = onOpenNotifications) {
                             Icon(
                                 Icons.Default.Notifications,
                                 contentDescription = stringResource(MochiR.string.common_notifications),
                             )
                         }
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(R.string.people_friends_more),
@@ -215,7 +216,7 @@ fun FriendsScreen(
                     // Persistent search bar matching web (web shows it
                     // always in the header; we keep it inline below the
                     // top bar). Removed the icon toggle.
-                    OutlinedTextField(
+                    MochiTextField(
                         value = uiState.searchQuery,
                         onValueChange = viewModel::setSearchQuery,
                         placeholder = { Text(stringResource(R.string.people_friends_search_placeholder)) },
@@ -239,7 +240,7 @@ fun FriendsScreen(
                             horizontalArrangement = Arrangement.End,
                         ) {
                             Box {
-                                TextButton(onClick = { sortMenuOpen = true }) {
+                                MochiTextButton(onClick = { sortMenuOpen = true }) {
                                     Icon(
                                         Icons.Default.Sort,
                                         contentDescription = null,
@@ -313,7 +314,7 @@ fun FriendsScreen(
 
 @Composable
 private fun WelcomeBanner(onDismiss: () -> Unit) {
-    Card(
+    MochiCard(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -342,7 +343,7 @@ private fun WelcomeBanner(onDismiss: () -> Unit) {
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
                 )
             }
-            IconButton(onClick = onDismiss) {
+            MochiIconButton(onClick = onDismiss) {
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.people_welcome_dismiss),
@@ -420,7 +421,7 @@ private fun FriendRow(
 ) {
     val avatarUrl = "/people/${friend.id}/-/avatar"
 
-    Card(
+    MochiCard(
         onClick = onTap,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
@@ -448,13 +449,13 @@ private fun FriendRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
-            IconButton(onClick = onMessage) {
+            MochiIconButton(onClick = onMessage) {
                 Icon(
                     Icons.AutoMirrored.Filled.Chat,
                     contentDescription = stringResource(R.string.people_friends_message),
                 )
             }
-            IconButton(onClick = onRemove) {
+            MochiIconButton(onClick = onRemove) {
                 Icon(
                     Icons.Default.PersonRemove,
                     contentDescription = stringResource(R.string.people_friends_remove),

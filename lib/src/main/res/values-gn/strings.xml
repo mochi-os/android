@@ -245,7 +245,7 @@
     <string name="oem_hint_samsung_note">Samsung pumbyrýpe, ehecha avei Ñemboheko → Mba\'erepy ñangareko → Tembiporu oke → ha emboguete Mochi oĩramo upépe.</string>
     <string name="oem_hint_allow">Emoneĩ hapykuépe</string>
     <string name="oem_hint_dismiss">Ani ehechauka jey</string>
-    <string name="about_title">Mochi Client Android peg̃uarã</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Pyahuve %1$s</string>
     <string name="about_check_updates">Eheka pyahuve</string>
     <string name="about_up_to_date">Ipyahúma</string>

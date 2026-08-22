@@ -16,13 +16,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -35,7 +33,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -152,7 +152,7 @@ private fun DropdownField(
         expanded = expanded,
         onExpandedChange = { open -> expanded = open },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = value,
             onValueChange = { },
             readOnly = true,
@@ -206,7 +206,7 @@ private fun PromptField(
                 expanded = expanded,
                 onExpandedChange = { open -> expanded = open },
             ) {
-                OutlinedTextField(
+                MochiTextField(
                     value = valueLabel,
                     onValueChange = { },
                     readOnly = true,
@@ -237,7 +237,7 @@ private fun PromptField(
         }
 
         if (editing) {
-            OutlinedTextField(
+            MochiTextField(
                 value = draft,
                 onValueChange = { text -> draft = text },
                 minLines = 5,
@@ -248,7 +248,7 @@ private fun PromptField(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                Button(
+                MochiButton(
                     onClick = { onSaveCustom(draft) },
                     enabled = draft.isNotBlank() && draft != stored,
                 ) {

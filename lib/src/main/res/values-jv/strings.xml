@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Ing HP Samsung, priksa uga Setelan → Device care → Sleeping apps lan buang Mochi yèn ana ing dhaftar.</string>
     <string name="oem_hint_allow">Idini latar mburi</string>
     <string name="oem_hint_dismiss">Aja tampilake maneh</string>
-    <string name="about_title">Klien Mochi kanggo Android</string>
+    <string name="about_title">Klien Mochi</string>
     <string name="about_version">Versi %1$s</string>
     <string name="about_check_updates">Priksa nganyari</string>
     <string name="about_up_to_date">Wis paling anyar</string>

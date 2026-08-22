@@ -10,8 +10,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -26,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
@@ -59,9 +58,8 @@ fun FeePreview(
         }
     }
 
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),

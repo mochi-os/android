@@ -32,18 +32,13 @@ import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -65,6 +60,11 @@ import coil3.request.crossfade
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.RelationshipStatus
@@ -103,7 +103,7 @@ fun AddFriendScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { goBack() }) {
+                    MochiIconButton(onClick = { goBack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -177,7 +177,7 @@ private fun SearchBody(
             .fillMaxSize()
             .padding(horizontal = 16.dp, vertical = 16.dp),
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.searchQuery,
             onValueChange = onQueryChange,
             placeholder = { Text(stringResource(R.string.people_add_friend_search_placeholder)) },
@@ -219,7 +219,7 @@ private fun SearchBody(
                             style = MaterialTheme.typography.bodyMedium,
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                        TextButton(onClick = onRetry) {
+                        MochiTextButton(onClick = onRetry) {
                             Text(stringResource(MochiR.string.common_retry))
                         }
                     }
@@ -312,12 +312,12 @@ private fun AddFriendActionButton(
 
     when (status) {
         RelationshipStatus.SELF -> {
-            OutlinedButton(onClick = {}, enabled = false) {
+            MochiOutlinedButton(onClick = {}, enabled = false) {
                 Text(stringResource(R.string.people_friends_thats_you))
             }
         }
         RelationshipStatus.FRIEND -> {
-            OutlinedButton(onClick = {}, enabled = false) {
+            MochiOutlinedButton(onClick = {}, enabled = false) {
                 Icon(
                     Icons.Default.Check,
                     contentDescription = null,
@@ -328,7 +328,7 @@ private fun AddFriendActionButton(
             }
         }
         RelationshipStatus.INVITED -> {
-            OutlinedButton(onClick = {}, enabled = false) {
+            MochiOutlinedButton(onClick = {}, enabled = false) {
                 Icon(
                     Icons.AutoMirrored.Filled.Send,
                     contentDescription = null,
@@ -339,7 +339,7 @@ private fun AddFriendActionButton(
             }
         }
         RelationshipStatus.PENDING -> {
-            Button(onClick = onClick, enabled = enabled) {
+            MochiButton(onClick = onClick, enabled = enabled) {
                 if (pending) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(14.dp),
@@ -357,7 +357,7 @@ private fun AddFriendActionButton(
             }
         }
         RelationshipStatus.NONE -> {
-            Button(onClick = onClick, enabled = enabled) {
+            MochiButton(onClick = onClick, enabled = enabled) {
                 if (pending) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(14.dp),
@@ -413,7 +413,7 @@ private fun PreviewBody(
                         style = MaterialTheme.typography.bodyMedium,
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    TextButton(onClick = onRetry) {
+                    MochiTextButton(onClick = onRetry) {
                         Text(stringResource(MochiR.string.common_retry))
                     }
                 }
@@ -517,12 +517,12 @@ private fun PreviewConfirmButton(
 
     when (effectiveStatus) {
         RelationshipStatus.SELF -> {
-            Button(onClick = {}, enabled = false, modifier = fill) {
+            MochiButton(onClick = {}, enabled = false, modifier = fill) {
                 Text(stringResource(R.string.people_friends_thats_you))
             }
         }
         RelationshipStatus.FRIEND -> {
-            Button(onClick = {}, enabled = false, modifier = fill) {
+            MochiButton(onClick = {}, enabled = false, modifier = fill) {
                 Icon(
                     Icons.Default.Check,
                     contentDescription = null,
@@ -533,7 +533,7 @@ private fun PreviewConfirmButton(
             }
         }
         RelationshipStatus.INVITED -> {
-            Button(onClick = {}, enabled = false, modifier = fill) {
+            MochiButton(onClick = {}, enabled = false, modifier = fill) {
                 Icon(
                     Icons.AutoMirrored.Filled.Send,
                     contentDescription = null,
@@ -544,7 +544,7 @@ private fun PreviewConfirmButton(
             }
         }
         RelationshipStatus.PENDING -> {
-            Button(
+            MochiButton(
                 onClick = { onAddFriend(user) },
                 enabled = enabled,
                 modifier = fill,
@@ -566,7 +566,7 @@ private fun PreviewConfirmButton(
             }
         }
         RelationshipStatus.NONE -> {
-            Button(
+            MochiButton(
                 onClick = { onAddFriend(user) },
                 enabled = enabled,
                 modifier = fill,

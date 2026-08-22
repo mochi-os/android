@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Ruhusu nyuma</string>
     <string name="oem_hint_dismiss">Usionyeshe tena</string>
     <string name="about_label">Kuhusu</string>
-    <string name="about_title">Mochi Client kwa Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Toleo %1$s</string>
     <string name="about_check_updates">Angalia masasisho</string>
     <string name="about_up_to_date">Imesasishwa</string>

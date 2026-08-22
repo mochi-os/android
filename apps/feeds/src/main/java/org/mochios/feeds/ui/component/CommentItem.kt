@@ -12,7 +12,6 @@ import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,6 +20,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.R as MochiR
 
@@ -84,7 +84,7 @@ internal fun CommentItem(
             onRemoveReaction = { onReact(comment.myReaction) },
             currentReaction = currentReactionType(comment.myReaction)
         )
-        IconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
+        MochiIconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
             Icon(
                 Icons.AutoMirrored.Outlined.Reply,
                 contentDescription = stringResource(MochiR.string.comment_reply),
@@ -93,7 +93,7 @@ internal fun CommentItem(
             )
         }
         if (canManage || isMine) {
-            IconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Outlined.Edit,
                     contentDescription = stringResource(MochiR.string.common_edit),
@@ -101,7 +101,7 @@ internal fun CommentItem(
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-            IconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = onDelete, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Outlined.Delete,
                     contentDescription = stringResource(MochiR.string.common_delete),

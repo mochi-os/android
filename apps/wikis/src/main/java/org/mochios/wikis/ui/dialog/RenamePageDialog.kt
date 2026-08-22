@@ -13,14 +13,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -41,6 +36,8 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.launch
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.repository.WikisRepository
 
@@ -83,12 +80,12 @@ fun RenamePageDialog(
         }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!isSubmitting) onDismiss() },
-        title = { Text(stringResource(R.string.wikis_rename_page_title)) },
-        text = {
+        title = stringResource(R.string.wikis_rename_page_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = newSlug,
                     onValueChange = { newSlug = it },
                     label = { Text(stringResource(R.string.wikis_rename_page_label)) },
@@ -113,61 +110,45 @@ fun RenamePageDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = !isSubmitting,
-                onClick = {
-                    val trimmed = newSlug.trim()
-                    when {
-                        trimmed.isEmpty() -> {
-                            Toast.makeText(context, newSlugRequired, Toast.LENGTH_SHORT).show()
-                        }
-                        trimmed == currentSlug -> {
-                            Toast.makeText(context, differentRequired, Toast.LENGTH_SHORT).show()
-                        }
-                        else -> {
-                            scope.launch {
-                                isSubmitting = true
-                                try {
-                                    val r = repository.renamePage(
-                                        wiki = wikiId,
-                                        slug = currentSlug,
-                                        newSlug = trimmed,
-                                        createRedirect = createRedirect,
-                                    )
-                                    val renamedCount = r.renamed.size.coerceAtLeast(1)
-                                    onRenamed(trimmed, renamedCount, r.updatedLinks)
-                                } catch (e: Exception) {
-                                    val msg = e.toMochiError().userMessage().ifEmpty { failedFallback }
-                                    Toast.makeText(context, msg, Toast.LENGTH_LONG).show()
-                                } finally {
-                                    isSubmitting = false
-                                }
-                            }
+        confirmText = if (isSubmitting) {
+            stringResource(R.string.wikis_rename_page_renaming)
+        } else {
+            stringResource(R.string.wikis_rename_page_confirm)
+        },
+        onConfirm = {
+            val trimmed = newSlug.trim()
+            when {
+                trimmed.isEmpty() -> {
+                    Toast.makeText(context, newSlugRequired, Toast.LENGTH_SHORT).show()
+                }
+                trimmed == currentSlug -> {
+                    Toast.makeText(context, differentRequired, Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    scope.launch {
+                        isSubmitting = true
+                        try {
+                            val r = repository.renamePage(
+                                wiki = wikiId,
+                                slug = currentSlug,
+                                newSlug = trimmed,
+                                createRedirect = createRedirect,
+                            )
+                            val renamedCount = r.renamed.size.coerceAtLeast(1)
+                            onRenamed(trimmed, renamedCount, r.updatedLinks)
+                        } catch (e: Exception) {
+                            val msg = e.toMochiError().userMessage().ifEmpty { failedFallback }
+                            Toast.makeText(context, msg, Toast.LENGTH_LONG).show()
+                        } finally {
+                            isSubmitting = false
                         }
                     }
-                },
-            ) {
-                if (isSubmitting) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                    Spacer(Modifier.width(6.dp))
-                    Text(stringResource(R.string.wikis_rename_page_renaming))
-                } else {
-                    Text(stringResource(R.string.wikis_rename_page_confirm))
                 }
             }
         },
-        dismissButton = {
-            TextButton(
-                onClick = { if (!isSubmitting) onDismiss() },
-                enabled = !isSubmitting,
-            ) {
-                Text(stringResource(R.string.wikis_rename_page_cancel))
-            }
-        },
+        confirmLoading = isSubmitting,
+        dismissText = stringResource(R.string.wikis_rename_page_cancel),
+        dismissEnabled = !isSubmitting,
     )
 }
 

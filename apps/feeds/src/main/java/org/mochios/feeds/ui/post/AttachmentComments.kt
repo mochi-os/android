@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -26,6 +25,10 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Comment
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.flattenComments
@@ -62,10 +65,6 @@ internal fun AttachmentComments(
     val others = post.comments.size - anchored.size
     val shown = flattenComments(if (showAll) post.comments else anchored, 0)
 
-    val filePicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris -> uris.forEach { viewModel.addCommentAttachment(it) } }
-
     Column(modifier = Modifier.fillMaxWidth()) {
         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
             if (shown.isEmpty()) {
@@ -100,7 +99,7 @@ internal fun AttachmentComments(
             }
             if (others > 0) {
                 item(key = "toggle") {
-                    TextButton(
+                    MochiTextButton(
                         onClick = { showAll = !showAll },
                         modifier = Modifier.padding(horizontal = 8.dp)
                     ) {
@@ -113,21 +112,24 @@ internal fun AttachmentComments(
             }
         }
         if (canComment) {
-            CommentInputBar(
-                text = commentText,
-                onTextChange = { viewModel.setCommentText(it) },
-                attachments = commentAttachments,
-                onAddAttachment = { filePicker.launch("*/*") },
-                onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
-                resolveFileName = viewModel::fileName,
-                // A reply keeps its parent's context; only a fresh comment is
-                // anchored to the image.
+            ComposeBar(
+                value = commentText,
+                onValueChange = { viewModel.setCommentText(it) },
                 onSend = { viewModel.sendComment(anchor = attachmentId) },
-                isSending = isSendingComment,
-                replyingTo = replyingTo,
-                onCancelReply = { viewModel.setReplyingTo(null) },
-                onSearchMembers = { viewModel.searchMembers(it) },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                isSending = isSendingComment,
+                sendLabel = stringResource(R.string.feeds_send),
+                attachments = feedsCommentAttachments(
+                    attachments = commentAttachments,
+                    onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                    onRemove = { viewModel.removeCommentAttachment(it) },
+                    resolveFileName = viewModel::fileName,
+                ),
+                // A comment needs a body; attachments alone will not do.
+                requireText = true,
+                onSearchMentions = { viewModel.searchMembers(it) },
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
+                banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
             )
         }
     }

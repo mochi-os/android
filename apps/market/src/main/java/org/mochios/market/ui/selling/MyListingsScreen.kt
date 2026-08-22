@@ -36,10 +36,8 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -61,11 +59,14 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
 import org.mochios.market.navigation.MarketApp
@@ -116,10 +117,10 @@ fun MyListingsScreen(
         }
     }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.market_listings_title)) })
-        },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.LISTINGS,
+        titleRes = R.string.market_listings_title,
         floatingActionButton = {
             // Only sellers fully connected to Stripe can create listings.
             val stripe = state.stripeStatus
@@ -267,16 +268,17 @@ fun MyListingsScreen(
 
     // Delete confirmation.
     deleteCandidate?.let { candidate ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { deleteCandidate = null },
             title = stringResource(R.string.market_listings_delete_title),
-            message = stringResource(R.string.market_listings_delete_message),
-            confirmLabel = stringResource(R.string.market_listings_delete_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.market_listings_delete_message),
+            confirmText = stringResource(R.string.market_listings_delete_confirm),
             onConfirm = {
                 viewModel.deleteListing(candidate, deleteFailedFallback)
                 deleteCandidate = null
             },
-            onDismiss = { deleteCandidate = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -312,7 +314,7 @@ private fun FilterRow(
             onExpandedChange = { open = it },
             modifier = Modifier.weight(0.4f),
         ) {
-            OutlinedTextField(
+            MochiTextField(
                 value = stringResource(labelRes),
                 onValueChange = {},
                 readOnly = true,
@@ -338,7 +340,7 @@ private fun FilterRow(
                 }
             }
         }
-        OutlinedTextField(
+        MochiTextField(
             value = searchQuery,
             onValueChange = onSearchChange,
             placeholder = {
@@ -363,7 +365,7 @@ private fun ListingOverflow(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Box(modifier = Modifier.padding(2.dp)) {
-        IconButton(onClick = { expanded = true }) {
+        MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 Icons.Default.MoreHoriz,
                 contentDescription = stringResource(MochiR.string.common_more_options),

@@ -45,6 +45,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.MarketThread
 import org.mochios.market.navigation.MarketApp
 
@@ -56,12 +57,10 @@ fun MessagesInboxScreen(
 ) {
     val state by viewModel.state.collectAsState()
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.market_messages_inbox_title)) },
-            )
-        },
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.MESSAGES,
+        titleRes = R.string.market_messages_inbox_title,
     ) { padding ->
         Box(
             modifier = Modifier

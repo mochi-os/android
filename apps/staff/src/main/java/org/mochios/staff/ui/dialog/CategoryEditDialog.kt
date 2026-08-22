@@ -18,15 +18,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -38,8 +34,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
 import org.mochios.staff.ui.categories.CategoryDialogMode
@@ -68,24 +67,24 @@ fun CategoryEditDialog(
     val editingId = if (mode is CategoryDialogMode.Edit) mode.category.id else ""
     val canSubmit = form.name.isNotBlank() && form.slug.isNotBlank() && !submitting
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onCancel,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column(
                 modifier = Modifier
                     .verticalScroll(rememberScrollState())
                     .heightIn(min = 0.dp, max = 480.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                OutlinedTextField(
+                MochiTextField(
                     value = form.name,
                     onValueChange = { onFormChange(form.copy(name = it)) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_name)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = form.slug,
                     onValueChange = { onFormChange(form.copy(slug = it)) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_slug)) },
@@ -98,14 +97,14 @@ fun CategoryEditDialog(
                     excludeId = editingId,
                     onChange = { onFormChange(form.copy(parent = it)) },
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = form.icon,
                     onValueChange = { onFormChange(form.copy(icon = it)) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_icon)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                OutlinedTextField(
+                MochiTextField(
                     value = form.position,
                     onValueChange = { v -> onFormChange(form.copy(position = v.filter { it.isDigit() || it == '-' })) },
                     label = { Text(stringResource(R.string.staff_categories_dialog_position)) },
@@ -137,23 +136,15 @@ fun CategoryEditDialog(
                 }
             }
         },
-        confirmButton = {
-            Button(onClick = onSubmit, enabled = canSubmit) {
-                Text(
-                    text = when {
-                        submitting && isEdit -> stringResource(R.string.staff_categories_dialog_saving)
-                        submitting && !isEdit -> stringResource(R.string.staff_categories_dialog_creating)
-                        isEdit -> stringResource(R.string.staff_categories_dialog_save)
-                        else -> stringResource(R.string.staff_categories_create)
-                    },
-                )
-            }
+        confirmText = when {
+            submitting && isEdit -> stringResource(R.string.staff_categories_dialog_saving)
+            submitting && !isEdit -> stringResource(R.string.staff_categories_dialog_creating)
+            isEdit -> stringResource(R.string.staff_categories_dialog_save)
+            else -> stringResource(R.string.staff_categories_create)
         },
-        dismissButton = {
-            TextButton(onClick = onCancel) {
-                Text(stringResource(R.string.staff_categories_dialog_cancel))
-            }
-        },
+        onConfirm = onSubmit,
+        confirmEnabled = canSubmit,
+        dismissText = stringResource(R.string.staff_categories_dialog_cancel),
     )
 }
 
@@ -179,7 +170,7 @@ private fun ParentDropdown(
             modifier = Modifier.padding(bottom = 4.dp),
         )
         Box {
-            androidx.compose.material3.OutlinedButton(
+            MochiOutlinedButton(
                 onClick = { expanded = true },
                 modifier = Modifier.fillMaxWidth(),
             ) {

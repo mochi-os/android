@@ -56,10 +56,20 @@
           across taps within a task while letting each affinity host its
           own instance.
         -->
+        <!--
+          adjustResize is the other half of MainActivity's enableEdgeToEdge():
+          with it the window reports the keyboard as an inset and the content
+          pads itself (ComposeBar's windowInsets do exactly that). Left
+          unspecified the system falls back to panning the whole window, which
+          both scrolls the top bar off-screen and stacks on top of the padding
+          the composer already applied - the composer then floats a keyboard's
+          height above the keyboard.
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

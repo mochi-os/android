@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">اجازه اجرا در پس‌زمینه</string>
     <string name="oem_hint_dismiss">دیگر نشان داده نشود</string>
     <string name="about_label">درباره</string>
-    <string name="about_title">کلاینت Mochi برای اندروید</string>
+    <string name="about_title">کلاینت Mochi</string>
     <string name="about_version">نسخه %1$s</string>
     <string name="about_check_updates">بررسی به‌روزرسانی‌ها</string>
     <string name="about_up_to_date">به‌روز است</string>

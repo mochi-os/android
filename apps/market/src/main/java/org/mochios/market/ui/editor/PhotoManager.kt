@@ -36,10 +36,8 @@ import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -57,6 +55,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.market.R
 import org.mochios.market.model.Photo
 
@@ -199,7 +199,7 @@ private fun EmptyPhotos(onAdd: () -> Unit) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(bottom = 8.dp),
         )
-        OutlinedButton(onClick = onAdd) {
+        MochiOutlinedButton(onClick = onAdd) {
             Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(18.dp))
             androidx.compose.foundation.layout.Spacer(modifier = Modifier.padding(start = 6.dp))
             Text(stringResource(R.string.market_editor_photos_add))
@@ -236,7 +236,7 @@ private fun PhotoCell(
             )
 
             // Delete overlay (top-right)
-            IconButton(
+            MochiIconButton(
                 onClick = onDelete,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
@@ -264,7 +264,7 @@ private fun PhotoCell(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                IconButton(
+                MochiIconButton(
                     onClick = onMoveUp,
                     enabled = canMoveUp,
                     modifier = Modifier.size(28.dp),
@@ -275,7 +275,7 @@ private fun PhotoCell(
                         modifier = Modifier.size(16.dp),
                     )
                 }
-                IconButton(
+                MochiIconButton(
                     onClick = onMoveDown,
                     enabled = canMoveDown,
                     modifier = Modifier.size(28.dp),

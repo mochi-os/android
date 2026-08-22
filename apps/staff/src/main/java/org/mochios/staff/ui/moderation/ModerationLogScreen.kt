@@ -25,9 +25,7 @@ import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -52,6 +50,8 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.ui.components.ScoreColorChip
@@ -76,7 +76,7 @@ fun ModerationLogScreen(
     }
 
     Column(Modifier.fillMaxSize()) {
-        OutlinedTextField(
+        MochiTextField(
             value = listingInput,
             onValueChange = { v -> listingInput = v.filter { it.isDigit() } },
             placeholder = { Text(stringResource(R.string.staff_moderation_listing_filter_placeholder)) },
@@ -84,7 +84,7 @@ fun ModerationLogScreen(
             singleLine = true,
             trailingIcon = if (listingInput.isNotEmpty()) {
                 {
-                    IconButton(onClick = { listingInput = "" }) {
+                    MochiIconButton(onClick = { listingInput = "" }) {
                         Icon(
                             Icons.Default.Close,
                             contentDescription = stringResource(R.string.staff_moderation_filter_clear),

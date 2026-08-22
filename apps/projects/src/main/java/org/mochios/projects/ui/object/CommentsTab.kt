@@ -34,7 +34,6 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -53,6 +52,7 @@ import org.mochios.android.ui.components.CommentItem as SharedCommentItem
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.projects.R
 import java.io.File
 import org.mochios.android.R as MochiR
@@ -141,7 +141,7 @@ fun CommentsTab(
                         color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    IconButton(
+                    MochiIconButton(
                         onClick = {
                             replyToId = null
                             replyToName = null
@@ -195,7 +195,7 @@ fun CommentsTab(
                     modifier = Modifier.weight(1f)
                 )
                 Spacer(modifier = Modifier.width(4.dp))
-                IconButton(
+                MochiIconButton(
                     onClick = { filePicker.launch("*/*") }
                 ) {
                     Icon(
@@ -206,7 +206,7 @@ fun CommentsTab(
                 // Send appears only once there is something to send — an empty
                 // composer shows no button rather than a dead greyed-out one.
                 if (canSend) {
-                    IconButton(
+                    MochiIconButton(
                         onClick = {
                             onCreateComment(newComment, replyToId, pendingFiles.toList())
                             newComment = ""
@@ -263,7 +263,7 @@ private fun CommentItem(
         },
         onCancelEdit = { isEditing = false }
     ) {
-        IconButton(
+        MochiIconButton(
             onClick = { onReply(comment.id, comment.name) },
             modifier = Modifier.size(32.dp)
         ) {
@@ -274,7 +274,7 @@ private fun CommentItem(
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-        IconButton(
+        MochiIconButton(
             onClick = {
                 editText = comment.text
                 isEditing = true
@@ -288,7 +288,7 @@ private fun CommentItem(
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-        IconButton(
+        MochiIconButton(
             onClick = { onDelete(comment.id) },
             modifier = Modifier.size(32.dp)
         ) {

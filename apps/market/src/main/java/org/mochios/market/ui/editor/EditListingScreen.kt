@@ -28,17 +28,12 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.outlined.Check
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -47,7 +42,6 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -66,8 +60,14 @@ import androidx.navigation.NavController
 import com.google.gson.Gson
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.Section
 import org.mochios.market.R
@@ -118,7 +118,7 @@ fun EditListingScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.market_editor_back),
@@ -127,7 +127,7 @@ fun EditListingScreen(
                 },
                 actions = {
                     SaveStatusBadge(state.saveStatus)
-                    TextButton(
+                    MochiTextButton(
                         onClick = { viewModel.save() },
                         enabled = state.saveStatus != SaveStatus.SAVING &&
                             state.title.isNotBlank() &&
@@ -168,7 +168,7 @@ fun EditListingScreen(
 
             // ---- Basic info ----
             Section(title = stringResource(R.string.market_editor_section_basic)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.title,
                     onValueChange = viewModel::setTitle,
                     label = { Text(stringResource(R.string.market_editor_title)) },
@@ -176,7 +176,7 @@ fun EditListingScreen(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.padding(top = 8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = state.description,
                     onValueChange = viewModel::setDescription,
                     label = { Text(stringResource(R.string.market_editor_description)) },
@@ -198,7 +198,7 @@ fun EditListingScreen(
                 // sell a single unit). Unlimited toggle maps to quantity 0.
                 if (state.pricing != PricingModel.AUCTION) {
                     Spacer(Modifier.padding(top = 8.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = if (state.unlimitedStock) "" else state.quantityText,
                         onValueChange = viewModel::setQuantity,
                         label = { Text(stringResource(R.string.market_editor_stock)) },
@@ -327,7 +327,7 @@ fun EditListingScreen(
 
             // ---- Tags ----
             Section(title = stringResource(R.string.market_editor_section_tags)) {
-                OutlinedTextField(
+                MochiTextField(
                     value = state.tagsText,
                     onValueChange = viewModel::setTagsText,
                     label = { Text(stringResource(R.string.market_editor_tags_field)) },
@@ -352,7 +352,7 @@ fun EditListingScreen(
 
             // ---- Publish / Delete actions ----
             Spacer(Modifier.padding(top = 8.dp))
-            Button(
+            MochiButton(
                 onClick = { viewModel.publish() },
                 enabled = state.publishStatus != SaveStatus.SAVING &&
                     state.title.isNotBlank() &&
@@ -371,7 +371,7 @@ fun EditListingScreen(
                 }
             }
             if (!state.isNew) {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showDeleteConfirm = true },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -383,7 +383,7 @@ fun EditListingScreen(
                     Spacer(Modifier.width(6.dp))
                     Text(stringResource(R.string.market_editor_delete))
                 }
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { showAppealDialog = true },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -395,33 +395,26 @@ fun EditListingScreen(
     }
 
     if (showDeleteConfirm) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDeleteConfirm = false },
-            title = { Text(stringResource(R.string.market_editor_delete_confirm_title)) },
-            text = { Text(stringResource(R.string.market_editor_delete_confirm_message)) },
-            confirmButton = {
-                TextButton(onClick = {
-                    showDeleteConfirm = false
-                    viewModel.deleteListing()
-                }) {
-                    Text(stringResource(R.string.market_editor_delete))
-                }
+            title = stringResource(R.string.market_editor_delete_confirm_title),
+            text = stringResource(R.string.market_editor_delete_confirm_message),
+            confirmText = stringResource(R.string.market_editor_delete),
+            onConfirm = {
+                showDeleteConfirm = false
+                viewModel.deleteListing()
             },
-            dismissButton = {
-                TextButton(onClick = { showDeleteConfirm = false }) {
-                    Text(stringResource(R.string.market_editor_zone_cancel))
-                }
-            },
+            dismissText = stringResource(R.string.market_editor_zone_cancel),
         )
     }
 
     if (showAppealDialog) {
         var reason by remember { mutableStateOf("") }
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showAppealDialog = false },
-            title = { Text(stringResource(R.string.market_editor_appeal)) },
-            text = {
-                OutlinedTextField(
+            title = stringResource(R.string.market_editor_appeal),
+            content = {
+                MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },
                     label = { Text(stringResource(R.string.market_editor_appeal_reason)) },
@@ -429,22 +422,13 @@ fun EditListingScreen(
                     modifier = Modifier.fillMaxWidth(),
                 )
             },
-            confirmButton = {
-                TextButton(
-                    enabled = reason.isNotBlank(),
-                    onClick = {
-                        viewModel.appeal(reason)
-                        showAppealDialog = false
-                    },
-                ) {
-                    Text(stringResource(R.string.market_editor_appeal_submit))
-                }
+            confirmText = stringResource(R.string.market_editor_appeal_submit),
+            onConfirm = {
+                viewModel.appeal(reason)
+                showAppealDialog = false
             },
-            dismissButton = {
-                TextButton(onClick = { showAppealDialog = false }) {
-                    Text(stringResource(R.string.market_editor_zone_cancel))
-                }
-            },
+            confirmEnabled = reason.isNotBlank(),
+            dismissText = stringResource(R.string.market_editor_zone_cancel),
         )
     }
 }
@@ -498,7 +482,7 @@ private fun CategoryDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = label,
             onValueChange = {},
             readOnly = true,

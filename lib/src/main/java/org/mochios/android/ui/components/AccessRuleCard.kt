@@ -19,9 +19,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -53,7 +51,7 @@ fun AccessRuleCard(
     levels: List<String> = emptyList(),
     onLevelChange: ((operation: String) -> Unit)? = null,
 ) {
-    Card(modifier = modifier.fillMaxWidth()) {
+    MochiCard(modifier = modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -123,11 +121,11 @@ fun AccessRuleCard(
                 )
             }
             if (!rule.isOwner) {
-                IconButton(onClick = onRevoke) {
+                MochiIconButton(onClick = onRevoke) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(R.string.access_revoke),
-                        tint = MaterialTheme.colorScheme.error,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }

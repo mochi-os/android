@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">Permitir segundo plano</string>
     <string name="oem_hint_dismiss">No volver a mostrar</string>
     <string name="about_label">Acerca de</string>
-    <string name="about_title">Cliente Mochi para Android</string>
+    <string name="about_title">Cliente Mochi</string>
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Buscar actualizaciones</string>
     <string name="about_up_to_date">Actualizado</string>

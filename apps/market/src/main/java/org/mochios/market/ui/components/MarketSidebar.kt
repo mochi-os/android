@@ -5,13 +5,6 @@
 
 package org.mochios.market.ui.components
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Bookmark
@@ -25,27 +18,9 @@ import androidx.compose.material.icons.filled.Receipt
 import androidx.compose.material.icons.filled.Repeat
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Storefront
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Badge
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalDrawerSheet
-import androidx.compose.material3.NavigationDrawerItem
-import androidx.compose.material3.NavigationDrawerItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import org.mochios.android.R as MochiR
-import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerItem
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 
@@ -54,171 +29,120 @@ import org.mochios.market.navigation.MarketApp
  * listings with price drops or ending-soon auctions; zero hides it.
  */
 @Composable
-fun MarketSidebar(
-    currentRoute: String?,
-    @Suppress("UNUSED_PARAMETER") navController: NavController,
-    onNavigate: (String) -> Unit,
+fun marketDrawerItems(
     isSeller: Boolean = true,
     savedBadge: Int = 0,
     inboxUnreadBadge: Int = 0,
-) {
-    var showAbout by remember { mutableStateOf(false) }
-    ModalDrawerSheet(modifier = Modifier.fillMaxHeight()) {
-        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-            // Browse
-            SectionHeader(R.string.market_sidebar_browse)
-            SidebarRow(
-                route = MarketApp.HOME,
-                currentRoute = currentRoute,
+): List<DrawerItem> {
+    val browse = stringResource(R.string.market_sidebar_browse)
+    val buying = stringResource(R.string.market_sidebar_buying)
+    val selling = stringResource(R.string.market_sidebar_selling)
+    val messages = stringResource(R.string.market_sidebar_messages)
+    val settings = stringResource(R.string.market_sidebar_settings)
+    return buildList {
+        add(
+            DrawerItem(
+                id = MarketApp.HOME,
+                title = stringResource(R.string.market_sidebar_home),
                 icon = Icons.Default.Home,
-                labelRes = R.string.market_sidebar_home,
-                onClick = { onNavigate(MarketApp.HOME) },
+                section = browse,
             )
-
-            // Buying
-            HorizontalDivider()
-            SectionHeader(R.string.market_sidebar_buying)
-            SidebarRow(
-                route = MarketApp.SAVED,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.SAVED,
+                title = stringResource(R.string.market_sidebar_saved),
                 icon = Icons.Default.Bookmark,
-                labelRes = R.string.market_sidebar_saved,
-                badge = savedBadge,
-                onClick = { onNavigate(MarketApp.SAVED) },
+                unread = savedBadge,
+                section = buying,
             )
-            SidebarRow(
-                route = MarketApp.PURCHASES,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.PURCHASES,
+                title = stringResource(R.string.market_sidebar_purchases),
                 icon = Icons.Default.Receipt,
-                labelRes = R.string.market_sidebar_purchases,
-                onClick = { onNavigate(MarketApp.PURCHASES) },
+                section = buying,
             )
-            SidebarRow(
-                route = MarketApp.BIDS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.BIDS,
+                title = stringResource(R.string.market_sidebar_bids),
                 icon = Icons.Default.Gavel,
-                labelRes = R.string.market_sidebar_bids,
-                onClick = { onNavigate(MarketApp.BIDS) },
+                section = buying,
             )
-            SidebarRow(
-                route = MarketApp.SUBSCRIPTIONS,
-                currentRoute = currentRoute,
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.SUBSCRIPTIONS,
+                title = stringResource(R.string.market_sidebar_subscriptions),
                 icon = Icons.Default.Repeat,
-                labelRes = R.string.market_sidebar_subscriptions,
-                onClick = { onNavigate(MarketApp.SUBSCRIPTIONS) },
+                section = buying,
             )
-
-            // Selling (entire section gated behind seller status)
-            if (isSeller) {
-                HorizontalDivider()
-                SectionHeader(R.string.market_sidebar_selling)
-                SidebarRow(
-                    route = MarketApp.LISTINGS,
-                    currentRoute = currentRoute,
+        )
+        if (isSeller) {
+            add(
+                DrawerItem(
+                    id = MarketApp.LISTINGS,
+                    title = stringResource(R.string.market_sidebar_listings),
                     icon = Icons.Default.Inventory,
-                    labelRes = R.string.market_sidebar_listings,
-                    onClick = { onNavigate(MarketApp.LISTINGS) },
+                    section = selling,
                 )
-                SidebarRow(
-                    route = MarketApp.SALES,
-                    currentRoute = currentRoute,
+            )
+            add(
+                DrawerItem(
+                    id = MarketApp.SALES,
+                    title = stringResource(R.string.market_sidebar_sales),
                     icon = Icons.Default.PointOfSale,
-                    labelRes = R.string.market_sidebar_sales,
-                    onClick = { onNavigate(MarketApp.SALES) },
+                    section = selling,
                 )
-                SidebarRow(
-                    route = MarketApp.SUBSCRIBERS,
-                    currentRoute = currentRoute,
+            )
+            add(
+                DrawerItem(
+                    id = MarketApp.SUBSCRIBERS,
+                    title = stringResource(R.string.market_sidebar_subscribers),
                     icon = Icons.Default.Group,
-                    labelRes = R.string.market_sidebar_subscribers,
-                    onClick = { onNavigate(MarketApp.SUBSCRIBERS) },
+                    section = selling,
                 )
-            }
-
-            // Messages
-            HorizontalDivider()
-            SectionHeader(R.string.market_sidebar_messages)
-            SidebarRow(
-                route = MarketApp.MESSAGES,
-                currentRoute = currentRoute,
-                icon = Icons.Default.Email,
-                labelRes = R.string.market_sidebar_inbox,
-                badge = inboxUnreadBadge,
-                onClick = { onNavigate(MarketApp.MESSAGES) },
             )
-            SidebarRow(
-                route = MarketApp.REVIEWS,
-                currentRoute = currentRoute,
-                icon = Icons.Default.Star,
-                labelRes = R.string.market_sidebar_reviews,
-                onClick = { onNavigate(MarketApp.REVIEWS) },
-            )
-
-            // Settings
-            HorizontalDivider()
-            SectionHeader(R.string.market_sidebar_settings)
-            SidebarRow(
-                route = MarketApp.SELLER_SETTINGS,
-                currentRoute = currentRoute,
-                icon = Icons.Default.Storefront,
-                labelRes = if (isSeller) {
-                    R.string.market_sidebar_seller_settings
-                } else {
-                    R.string.market_sidebar_become_seller
-                },
-                onClick = { onNavigate(MarketApp.SELLER_SETTINGS) },
-            )
-            SidebarRow(
-                route = MarketApp.ACCOUNT,
-                currentRoute = currentRoute,
-                icon = Icons.Default.AccountCircle,
-                labelRes = R.string.market_sidebar_account,
-                onClick = { onNavigate(MarketApp.ACCOUNT) },
-            )
-            SidebarRow(
-                route = null,
-                currentRoute = currentRoute,
-                icon = Icons.Outlined.Info,
-                labelRes = MochiR.string.about_label,
-                onClick = { showAbout = true },
-            )
-            Spacer(modifier = Modifier.height(12.dp))
         }
+        add(
+            DrawerItem(
+                id = MarketApp.MESSAGES,
+                title = stringResource(R.string.market_sidebar_inbox),
+                icon = Icons.Default.Email,
+                unread = inboxUnreadBadge,
+                section = messages,
+            )
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.REVIEWS,
+                title = stringResource(R.string.market_sidebar_reviews),
+                icon = Icons.Default.Star,
+                section = messages,
+            )
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.SELLER_SETTINGS,
+                title = if (isSeller) {
+                    stringResource(R.string.market_sidebar_seller_settings)
+                } else {
+                    stringResource(R.string.market_sidebar_become_seller)
+                },
+                icon = Icons.Default.Storefront,
+                section = settings,
+            )
+        )
+        add(
+            DrawerItem(
+                id = MarketApp.ACCOUNT,
+                title = stringResource(R.string.market_sidebar_account),
+                icon = Icons.Default.AccountCircle,
+                section = settings,
+            )
+        )
     }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@Composable
-private fun SectionHeader(labelRes: Int) {
-    Text(
-        text = stringResource(labelRes),
-        style = MaterialTheme.typography.titleSmall,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(start = 28.dp, top = 20.dp, bottom = 8.dp),
-    )
-}
-
-@Composable
-private fun SidebarRow(
-    route: String?,
-    currentRoute: String?,
-    icon: ImageVector,
-    labelRes: Int,
-    badge: Int = 0,
-    onClick: () -> Unit,
-) {
-    NavigationDrawerItem(
-        icon = { Icon(icon, contentDescription = null) },
-        label = { Text(stringResource(labelRes)) },
-        badge = if (badge > 0) {
-            { Badge { Text(badge.toString()) } }
-        } else {
-            null
-        },
-        selected = route != null && route == currentRoute,
-        onClick = onClick,
-        modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding),
-    )
 }

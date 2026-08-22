@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -33,18 +35,15 @@ import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.Shuffle
 import androidx.compose.material.icons.outlined.SkipNext
 import androidx.compose.material.icons.outlined.SwapHoriz
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -79,16 +78,19 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlin.math.roundToInt
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ws.rememberGameWebSocket
 import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
@@ -99,7 +101,6 @@ import org.mochios.words.engine.getLetterValue
 import org.mochios.words.engine.parseBoard
 import org.mochios.words.model.Game
 import org.mochios.words.model.GameMessage
-import org.mochios.words.ui.detail.board.BlankTileDialog
 import org.mochios.words.ui.detail.board.MoveComposer
 import org.mochios.words.ui.detail.board.TileRack
 import org.mochios.words.ui.detail.board.WordsBoard
@@ -189,7 +190,7 @@ fun WordsGameDetailScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -202,6 +203,9 @@ fun WordsGameDetailScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                // The tablet layout's chat bar takes the navigation-bar inset
+                // itself; consume the Scaffold's so it is not counted twice.
+                .consumeWindowInsets(padding)
                 .padding(padding),
         ) {
             when {
@@ -230,37 +234,64 @@ fun WordsGameDetailScreen(
     }
 
     if (state.blankPromptOpen) {
-        BlankTileDialog(
-            onSelect = { letter -> viewModel.selectBlankLetter(letter) },
-            onDismiss = { viewModel.cancelBlankPrompt() },
+        // Letter picker for a blank tile: 26 buttons in a 7-wide grid, narrower
+        // than the web's 9-wide so a phone screen still fits a row. The chosen
+        // letter is what the board shows; the rack tile stays '_' so the engine
+        // still scores the blank as zero.
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.cancelBlankPrompt() },
+            title = stringResource(R.string.words_detail_blank_title),
+            // The grid is the subject here, so the heading sits under it in weight.
+            titleStyle = MaterialTheme.typography.titleMedium,
+            content = {
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    val rows = listOf(
+                        listOf('A', 'B', 'C', 'D', 'E', 'F', 'G'),
+                        listOf('H', 'I', 'J', 'K', 'L', 'M', 'N'),
+                        listOf('O', 'P', 'Q', 'R', 'S', 'T', 'U'),
+                        listOf('V', 'W', 'X', 'Y', 'Z'),
+                    )
+                    for ((rowIdx, row) in rows.withIndex()) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .let { base ->
+                                    if (rowIdx == 0) base
+                                    else base.then(Modifier.padding(top = 4.dp))
+                                },
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            for (letter in row) {
+                                MochiOutlinedButton(
+                                    onClick = { viewModel.selectBlankLetter(letter) },
+                                    modifier = Modifier.size(40.dp),
+                                    contentPadding = PaddingValues(0.dp),
+                                ) {
+                                    Text(
+                                        text = letter.toString(),
+                                        style = MaterialTheme.typography.titleSmall.copy(
+                                            fontWeight = FontWeight.Bold,
+                                        ),
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     if (state.showResignDialog) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { viewModel.dismissResignDialog() },
-            title = { Text(stringResource(R.string.words_detail_resign_title)) },
-            text = { Text(stringResource(R.string.words_detail_resign_message)) },
-            confirmButton = {
-                TextButton(
-                    onClick = { viewModel.confirmResign() },
-                    enabled = !state.isResigning,
-                ) {
-                    if (state.isResigning) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(14.dp),
-                            strokeWidth = 1.5.dp,
-                        )
-                        Spacer(modifier = Modifier.size(6.dp))
-                    }
-                    Text(stringResource(R.string.words_detail_action_resign))
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { viewModel.dismissResignDialog() }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
+            title = stringResource(R.string.words_detail_resign_title),
+            text = stringResource(R.string.words_detail_resign_message),
+            confirmText = stringResource(R.string.words_detail_action_resign),
+            onConfirm = { viewModel.confirmResign() },
+            confirmLoading = state.isResigning,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -520,6 +551,7 @@ private fun GameDetailContent(
                         isLoadingMore = state.isLoadingMoreMessages,
                         onLoadMore = { viewModel.loadMoreMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
+                        composerWindowInsets = ComposeBarDefaults.WindowInsets,
                     )
                 }
             }
@@ -626,16 +658,17 @@ private fun GameDetailContent(
         }
 
         if (showDeleteDialog) {
-            ConfirmDialog(
+            MochiAlertDialog(
+                onDismissRequest = { showDeleteDialog = false },
                 title = stringResource(R.string.words_detail_delete_title),
-                message = stringResource(R.string.words_detail_delete_message),
-                confirmLabel = stringResource(R.string.words_detail_delete_confirm),
-                isDestructive = true,
+                text = stringResource(R.string.words_detail_delete_message),
+                confirmText = stringResource(R.string.words_detail_delete_confirm),
                 onConfirm = {
                     showDeleteDialog = false
                     viewModel.deleteGame()
                 },
-                onDismiss = { showDeleteDialog = false },
+                destructive = true,
+                dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
     }
@@ -680,7 +713,7 @@ private fun WordsGameHeader(
         },
         actions = {
             if (onOpenChat != null) {
-                IconButton(onClick = onOpenChat) {
+                MochiIconButton(onClick = onOpenChat) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.Message,
                         contentDescription = stringResource(R.string.words_detail_action_open_chat),
@@ -690,7 +723,7 @@ private fun WordsGameHeader(
             }
             var menuOpen by remember { mutableStateOf(false) }
             Box {
-                IconButton(onClick = { menuOpen = true }) {
+                MochiIconButton(onClick = { menuOpen = true }) {
                     Icon(
                         imageVector = Icons.Filled.MoreHoriz,
                         contentDescription = stringResource(R.string.words_detail_action_more),
@@ -765,6 +798,10 @@ private fun GameChatColumn(
     isLoadingMore: Boolean,
     onLoadMore: () -> Unit,
     onSend: (String, (Boolean) -> Unit) -> Unit,
+    // Which host is showing this column decides who lifts the composer for the
+    // keyboard. The default suits the phone's sheet, which lifts its own
+    // content; the tablet's side panel sits in the screen body and has to ask.
+    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
 ) {
     val chatMessages = remember(messages) {
         messages.map { msg ->
@@ -828,9 +865,9 @@ private fun GameChatColumn(
                 modifier = Modifier.fillMaxSize(),
             )
         }
-        GameChatInput(
-            text = chatDraft,
-            onTextChange = { chatDraft = it },
+        ComposeBar(
+            value = chatDraft,
+            onValueChange = { chatDraft = it },
             onSend = {
                 if (chatDraft.isNotBlank() && !isSending) {
                     isSending = true
@@ -841,6 +878,13 @@ private fun GameChatColumn(
                 }
             },
             isSending = isSending,
+            placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+            sendLabel = stringResource(MochiR.string.game_chat_send),
+            // One line, and the keyboard's action key sends: a game chat
+            // message is a sentence, not a comment body.
+            maxLines = 1,
+            sendOnImeAction = true,
+            windowInsets = composerWindowInsets,
         )
     }
 }

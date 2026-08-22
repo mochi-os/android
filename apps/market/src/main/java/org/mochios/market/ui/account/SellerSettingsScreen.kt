@@ -26,17 +26,13 @@ import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
 import androidx.compose.material.icons.filled.Storefront
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -60,7 +56,12 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.market.R
+import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.FeeDisclosure
 import org.mochios.market.ui.components.formatPercent
 
@@ -89,21 +90,11 @@ fun SellerSettingsScreen(
         R.string.market_seller_become_title
     }
 
-    Scaffold(
+    MarketLayout(
+        navController = navController,
+        currentRoute = MarketApp.SELLER_SETTINGS,
+        titleRes = titleRes,
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(titleRes)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
-                        )
-                    }
-                },
-            )
-        },
     ) { padding ->
         when {
             state.isLoading && state.account == null -> {
@@ -185,7 +176,7 @@ fun SellerSettingsScreen(
 
 @Composable
 private fun FutureControlsCard() {
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant,
@@ -236,7 +227,7 @@ private fun StatusSummary(
         )
     } ?: stringResource(R.string.market_seller_fee_loading)
 
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -305,7 +296,7 @@ private fun SetupCard(
         else -> R.string.market_seller_setup_desc_connect
     }
 
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -345,7 +336,7 @@ private fun SetupCard(
             // Primary action varies with the seller / Stripe state.
             when {
                 !state.isSeller -> {
-                    Button(
+                    MochiButton(
                         onClick = onActivate,
                         enabled = !state.activating,
                         modifier = Modifier.fillMaxWidth(),
@@ -373,7 +364,7 @@ private fun SetupCard(
                     }
                 }
                 state.stripeLinked -> {
-                    Button(
+                    MochiButton(
                         onClick = onDashboard,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
@@ -393,7 +384,7 @@ private fun SetupCard(
                     }
                 }
                 else -> {
-                    Button(
+                    MochiButton(
                         onClick = onConnect,
                         enabled = !state.connecting,
                         modifier = Modifier.fillMaxWidth(),
@@ -423,7 +414,7 @@ private fun SetupCard(
             }
 
             if (state.isSeller) {
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onCheck,
                     enabled = !state.checking,
                     modifier = Modifier.fillMaxWidth(),

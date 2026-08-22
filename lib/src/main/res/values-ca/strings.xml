@@ -152,7 +152,7 @@
     <string name="oem_hint_allow">Permet el segon pla</string>
     <string name="oem_hint_dismiss">No ho tornis a mostrar</string>
     <string name="about_label">Quant a</string>
-    <string name="about_title">Client Mochi per a Android</string>
+    <string name="about_title">Client Mochi</string>
     <string name="about_version">Versió %1$s</string>
     <string name="about_check_updates">Comprova si hi ha actualitzacions</string>
     <string name="about_up_to_date">Al dia</string>

@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">د سامسنګ په موبایلونو کې، تنظیمات → د وسیلې پاملرنه → ویدې اپلیکیشنونه هم وګورئ او که موچي پکې لیست شوی وي، یې لرې کړئ.</string>
     <string name="oem_hint_allow">د شالید اجازه ورکړئ</string>
     <string name="oem_hint_dismiss">بیا یې مه ښکاره کوئ</string>
-    <string name="about_title">د اندرویډ لپاره د موچي پېرغوښتونکی</string>
+    <string name="about_title">د موچي پېرغوښتونکی</string>
     <string name="about_version">نسخه %1$s</string>
     <string name="about_check_updates">د تازه‌کونو لپاره وګورئ</string>
     <string name="about_up_to_date">تازه دی</string>

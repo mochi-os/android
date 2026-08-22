@@ -25,12 +25,10 @@ import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.outlined.DeleteSweep
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -59,10 +57,12 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
 
@@ -94,7 +94,7 @@ fun NotificationsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.notifications_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(R.string.common_back),
@@ -103,7 +103,7 @@ fun NotificationsScreen(
                 },
                 actions = {
                     if (uiState.unreadCount > 0) {
-                        IconButton(onClick = { viewModel.markAllRead() }) {
+                        MochiIconButton(onClick = { viewModel.markAllRead() }) {
                             Icon(
                                 Icons.Default.DoneAll,
                                 contentDescription = stringResource(R.string.notifications_mark_all_read),
@@ -111,7 +111,7 @@ fun NotificationsScreen(
                         }
                     }
                     Box {
-                        IconButton(onClick = { showOverflow = true }) {
+                        MochiIconButton(onClick = { showOverflow = true }) {
                             Icon(
                                 Icons.Default.MoreVert,
                                 contentDescription = stringResource(R.string.common_more_options),
@@ -223,17 +223,17 @@ fun NotificationsScreen(
     }
 
     if (showClearConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showClearConfirm = false },
             title = stringResource(R.string.notifications_clear_all_title),
-            message = stringResource(R.string.notifications_clear_all_message),
-            confirmLabel = stringResource(R.string.notifications_clear_all),
-            dismissLabel = stringResource(R.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.notifications_clear_all_message),
+            confirmText = stringResource(R.string.notifications_clear_all),
             onConfirm = {
                 showClearConfirm = false
                 viewModel.clearAll()
             },
-            onDismiss = { showClearConfirm = false },
+            destructive = true,
+            dismissText = stringResource(R.string.common_cancel),
         )
     }
 }
@@ -247,7 +247,7 @@ private fun NotificationCard(
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
@@ -339,7 +339,7 @@ private fun CategoryPicker(
         )
     }
     Box {
-        IconButton(onClick = { menu = true }) {
+        MochiIconButton(onClick = { menu = true }) {
             Icon(
                 Icons.Default.Tune,
                 contentDescription = stringResource(R.string.notifications_change_category),

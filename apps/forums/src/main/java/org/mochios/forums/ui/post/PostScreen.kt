@@ -15,40 +15,34 @@ import androidx.compose.material.icons.outlined.LockOpen
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Report
 import androidx.compose.material.icons.outlined.Restore
-import org.mochios.android.ui.components.CommentItem
-import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.TagItem
-import org.mochios.android.ui.components.PostTagsButton
-import androidx.compose.material.icons.automirrored.outlined.Reply
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.material3.AssistChip
-import androidx.compose.material.icons.filled.AttachFile
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.compose.rememberLauncherForActivityResult
 import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.automirrored.outlined.Reply
+import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
@@ -58,25 +52,20 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
-import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material.icons.outlined.ThumbDown
+import androidx.compose.material.icons.outlined.ThumbUp
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.ui.res.pluralStringResource
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -84,6 +73,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -91,7 +81,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
@@ -101,17 +93,29 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.CommentItem
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarAttachments
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.ui.components.PostTagsButton
 import org.mochios.android.ui.components.StatusBadgeSize
+import org.mochios.android.ui.components.TagItem
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
@@ -203,17 +207,12 @@ fun PostScreen(
             canComment = uiState.canComment && !uiState.post.locked,
             replyTo = uiState.replyTo,
             onClearReply = { viewModel.setReplyTo(null) },
-            draft = draft,
-            onDraftChange = { value -> draft = value },
             isSending = uiState.isSending,
             attachments = commentAttachments,
             onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
             onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
             resolveFileName = viewModel::fileName,
-            onSend = {
-                viewModel.submitComment(draft.text, anchor = att.id)
-                draft = TextFieldValue("")
-            },
+            onSend = { text -> viewModel.submitComment(text, anchor = att.id) },
         )
     }
     val attachmentCommentCount: (Attachment) -> Int = { att ->
@@ -261,7 +260,7 @@ fun PostScreen(
                     }
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -273,7 +272,7 @@ fun PostScreen(
                     // the title, leaving the card as pure content.
                     if (uiState.post.id.isNotEmpty()) {
                         Box {
-                            IconButton(onClick = { showPostMenu = true }) {
+                            MochiIconButton(onClick = { showPostMenu = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(
@@ -310,7 +309,15 @@ fun PostScreen(
             )
         }
     ) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+        // Consume as well as pad: the composer at the foot of this Column
+        // consumes the navigation-bar inset itself, and would double it if
+        // this padding did not mark it spent.
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .consumeWindowInsets(padding)
+                .padding(padding),
+        ) {
             when {
                 uiState.isLoading && uiState.post.id.isEmpty() -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -380,20 +387,29 @@ fun PostScreen(
                     }
                     if (uiState.canComment) {
                         ReplyBanner(uiState.replyTo, onClear = { viewModel.setReplyTo(null) })
-                        ComposerBar(
+                        ComposeBar(
                             value = draft,
                             onValueChange = { value -> draft = value },
-                            isSending = uiState.isSending,
-                            enabled = !uiState.post.locked,
-                            focusRequester = composerFocus,
-                            attachments = commentAttachments,
-                            onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
-                            onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
-                            resolveFileName = viewModel::fileName,
                             onSend = {
                                 viewModel.submitComment(draft.text)
                                 draft = TextFieldValue("")
-                            }
+                            },
+                            placeholder = stringResource(R.string.forums_write_comment),
+                            enabled = !uiState.post.locked,
+                            isSending = uiState.isSending,
+                            sendLabel = stringResource(R.string.forums_comment_send),
+                            windowInsets = ComposeBarDefaults.WindowInsets,
+                            attachments = ComposeBarAttachments(
+                                pending = commentAttachments,
+                                onAdd = { uris -> viewModel.addCommentAttachments(uris) },
+                                onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
+                                resolveFileName = viewModel::fileName,
+                                addLabel = stringResource(R.string.forums_post_attach),
+                                fallbackLabel = stringResource(R.string.forums_attachment_file),
+                                removeLabel = stringResource(R.string.forums_attachment_remove),
+                            ),
+                            requireText = true,
+                            focusRequester = composerFocus,
                         )
                     }
                 }
@@ -416,32 +432,32 @@ fun PostScreen(
     }
 
     if (showDeletePostConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeletePostConfirm = false },
             title = stringResource(R.string.forums_post_delete_title),
-            message = stringResource(R.string.forums_post_delete_message),
-            confirmLabel = stringResource(R.string.forums_post_delete),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_post_delete_message),
+            confirmText = stringResource(R.string.forums_post_delete),
             onConfirm = {
                 showDeletePostConfirm = false
                 viewModel.deletePost()
             },
-            onDismiss = { showDeletePostConfirm = false }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     commentToDelete?.let { c ->
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { commentToDelete = null },
             title = stringResource(R.string.forums_comment_delete_title),
-            message = stringResource(R.string.forums_comment_delete_message),
-            confirmLabel = stringResource(R.string.forums_comment_delete),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_comment_delete_message),
+            confirmText = stringResource(R.string.forums_comment_delete),
             onConfirm = {
                 viewModel.deleteComment(c.id)
                 commentToDelete = null
             },
-            onDismiss = { commentToDelete = null }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -501,12 +517,12 @@ private fun EditCommentDialog(
         contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
     ) { uris -> newUris.addAll(uris) }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.forums_comment_edit_title)) },
-        text = {
+        title = stringResource(R.string.forums_comment_edit_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = body,
                     onValueChange = { body = it },
                     label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
@@ -515,7 +531,7 @@ private fun EditCommentDialog(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                IconButton(onClick = { filePickerLauncher.launch("*/*") }) {
+                MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
                     Icon(
                         androidx.compose.material.icons.Icons.Default.MoreHoriz,
                         contentDescription = null,
@@ -576,19 +592,10 @@ private fun EditCommentDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(body, keptIds.toList(), newUris.toList()) },
-                enabled = body.isNotBlank()
-            ) {
-                Text(stringResource(MochiR.string.common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_save),
+        onConfirm = { onConfirm(body, keptIds.toList(), newUris.toList()) },
+        confirmEnabled = body.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -613,16 +620,16 @@ private fun ReportDialog(
     var reasonExpanded by remember { mutableStateOf(false) }
     val selectedLabel = reasons.firstOrNull { it.first == selectedReason }?.second ?: ""
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(title) },
-        text = {
+        title = title,
+        content = {
             Column {
                 ExposedDropdownMenuBox(
                     expanded = reasonExpanded,
                     onExpandedChange = { reasonExpanded = it }
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = selectedLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -650,7 +657,7 @@ private fun ReportDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = details,
                     onValueChange = { details = it },
                     label = { Text(stringResource(R.string.forums_report_details)) },
@@ -660,19 +667,10 @@ private fun ReportDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(selectedReason, details) },
-                enabled = selectedReason != "other" || details.isNotBlank()
-            ) {
-                Text(stringResource(R.string.forums_report_submit))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        confirmText = stringResource(R.string.forums_report_submit),
+        onConfirm = { onConfirm(selectedReason, details) },
+        confirmEnabled = selectedReason != "other" || details.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -959,10 +957,8 @@ private fun PostHeader(
     }
 }
 
-
-
 /** What a comment can do, wherever it is drawn: the thread and the lightbox panel share one set. */
-private class CommentActions(
+private data class CommentActions(
     val onVote: (String, String) -> Unit,
     val onReply: (ForumComment) -> Unit,
     val onEdit: (ForumComment) -> Unit,
@@ -1028,21 +1024,34 @@ private fun AttachmentComments(
     canComment: Boolean,
     replyTo: ForumComment?,
     onClearReply: () -> Unit,
-    draft: TextFieldValue,
-    onDraftChange: (TextFieldValue) -> Unit,
     isSending: Boolean,
     attachments: List<Uri>,
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
     resolveFileName: suspend (Uri) -> String,
-    onSend: () -> Unit,
+    onSend: (String) -> Unit,
 ) {
     var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
+    // The panel keeps its own draft. It used to share the post screen's, so a
+    // half-typed comment below the post reappeared in the lightbox and the two
+    // fields fought over one string. Keyed on the attachment: moving to another
+    // image starts a new comment, which is what the anchor means.
+    var draft by remember(attachmentId) { mutableStateOf(TextFieldValue("")) }
     // Anchors live on top-level comments; a reply inherits its parent's context.
     val anchored = comments.filter { it.anchor == attachmentId }
     val others = comments.size - anchored.size
     val shown = if (showAll) comments else anchored
     val composerFocus = remember { FocusRequester() }
+    // Everything else a comment can do is the same here as below the post;
+    // only Quote differs, because it writes into a draft and this panel's is
+    // no longer the post screen's.
+    val panelActions = actions.copy(
+        onQuote = { comment ->
+            val text = quoteText(withoutQuote(comment.body), draft.text)
+            draft = TextFieldValue(text = text, selection = TextRange(text.length))
+            composerFocus.requestFocus()
+        },
+    )
 
     Column(modifier = Modifier.fillMaxWidth()) {
         LazyColumn(
@@ -1065,11 +1074,11 @@ private fun AttachmentComments(
                 forumId = forumId,
                 currentIdentity = currentIdentity,
                 canModerate = canModerate,
-                actions = actions,
+                actions = panelActions,
             )
             if (others > 0) {
                 item(key = "toggle") {
-                    TextButton(onClick = { showAll = !showAll }) {
+                    MochiTextButton(onClick = { showAll = !showAll }) {
                         Text(
                             if (showAll) stringResource(MochiR.string.lightbox_comments_only)
                             else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, others)
@@ -1080,18 +1089,28 @@ private fun AttachmentComments(
         }
         if (canComment) {
             ReplyBanner(replyTo, onClear = onClearReply)
-            ComposerBar(
+            ComposeBar(
                 value = draft,
-                onValueChange = onDraftChange,
-                isSending = isSending,
-                enabled = true,
-                focusRequester = composerFocus,
-                attachments = attachments,
-                onAddAttachments = onAddAttachments,
-                onRemoveAttachment = onRemoveAttachment,
-                resolveFileName = resolveFileName,
-                onSend = onSend,
+                onValueChange = { draft = it },
+                onSend = {
+                    onSend(draft.text)
+                    draft = TextFieldValue("")
+                },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                isSending = isSending,
+                sendLabel = stringResource(R.string.forums_comment_send),
+                attachments = ComposeBarAttachments(
+                    pending = attachments,
+                    onAdd = onAddAttachments,
+                    onRemove = onRemoveAttachment,
+                    resolveFileName = resolveFileName,
+                    addLabel = stringResource(R.string.forums_post_attach),
+                    fallbackLabel = stringResource(R.string.forums_attachment_file),
+                    removeLabel = stringResource(R.string.forums_attachment_remove),
+                ),
+                requireText = true,
+                focusRequester = composerFocus,
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
             )
         }
     }
@@ -1166,7 +1185,7 @@ private fun CommentCard(
             },
         )
         if (comment.canComment) {
-            IconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = onReply, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.AutoMirrored.Outlined.Reply,
                     contentDescription = stringResource(R.string.forums_comment_reply),
@@ -1176,7 +1195,7 @@ private fun CommentCard(
             }
         }
         Box {
-            IconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
+            MochiIconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                 Icon(
                     Icons.Default.MoreHoriz,
                     contentDescription = stringResource(MochiR.string.common_more_options),
@@ -1250,7 +1269,7 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
             style = MaterialTheme.typography.labelSmall,
             modifier = Modifier.weight(1f)
         )
-        IconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
+        MochiIconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
             Icon(
                 Icons.Default.Close,
                 contentDescription = stringResource(R.string.forums_comment_clear_reply),
@@ -1259,7 +1278,6 @@ private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
         }
     }
 }
-
 
 /**
  * A comment's own words with its leading "> " quote block dropped, so quoting
@@ -1296,91 +1314,3 @@ private fun rememberFileName(
     resolve: suspend (Uri) -> String,
 ): String = rememberFileLabel(uri, resolve, fallback)
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
-@Composable
-private fun ComposerBar(
-    value: TextFieldValue,
-    onValueChange: (TextFieldValue) -> Unit,
-    isSending: Boolean,
-    enabled: Boolean,
-    focusRequester: FocusRequester,
-    attachments: List<Uri>,
-    onAddAttachments: (List<Uri>) -> Unit,
-    onRemoveAttachment: (Uri) -> Unit,
-    resolveFileName: suspend (Uri) -> String,
-    onSend: () -> Unit,
-    // The lightbox's comments panel names the image the comment is about.
-    placeholder: String = stringResource(R.string.forums_write_comment),
-) {
-    val filePickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris -> onAddAttachments(uris) }
-
-    Column(modifier = Modifier.fillMaxWidth()) {
-        if (attachments.isNotEmpty()) {
-            FlowRow(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                attachments.forEach { uri ->
-                    val fileLabel = stringResource(R.string.forums_attachment_file)
-                    AssistChip(
-                        onClick = { onRemoveAttachment(uri) },
-                        label = {
-                            Text(
-                                rememberFileName(uri, fileLabel, resolveFileName).takeLast(20),
-                                style = MaterialTheme.typography.labelSmall
-                            )
-                        },
-                        trailingIcon = {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(
-                                    R.string.forums_attachment_remove
-                                ),
-                                modifier = Modifier.size(14.dp)
-                            )
-                        }
-                    )
-                }
-            }
-        }
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(8.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            IconButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                enabled = enabled && !isSending,
-            ) {
-                Icon(
-                    Icons.Default.AttachFile,
-                    contentDescription = stringResource(R.string.forums_post_attach)
-                )
-            }
-            OutlinedTextField(
-                value = value,
-                onValueChange = onValueChange,
-                modifier = Modifier.weight(1f).focusRequester(focusRequester),
-                placeholder = { Text(placeholder) },
-                enabled = enabled,
-                maxLines = 4
-            )
-            Spacer(Modifier.width(8.dp))
-            IconButton(
-                onClick = onSend,
-                // A body is required even when files are attached (server 400s).
-                enabled = enabled && !isSending && value.text.isNotBlank()
-            ) {
-                if (isSending) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
-                } else {
-                    Icon(
-                        Icons.AutoMirrored.Filled.Send,
-                        contentDescription = stringResource(R.string.forums_comment_send)
-                    )
-                }
-            }
-        }
-    }
-}

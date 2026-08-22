@@ -29,15 +29,11 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.Upload
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -45,7 +41,6 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -66,8 +61,13 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
@@ -150,13 +150,13 @@ fun DesignScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.projects_design_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
                     }
                 },
                 actions = {
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.projects_design_more_options))
                         }
                         MochiDropdownMenu(
@@ -335,10 +335,10 @@ private fun ImportDesignDialog(
         }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_design_import_dialog_title)) },
-        text = {
+        title = stringResource(R.string.projects_design_import_dialog_title),
+        content = {
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 Text(
                     text = stringResource(R.string.projects_design_import_choose_template),
@@ -365,7 +365,7 @@ private fun ImportDesignDialog(
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         items(templates) { template ->
-                            Card(
+                            MochiCard(
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(8.dp),
                                 colors = CardDefaults.cardColors(
@@ -392,7 +392,7 @@ private fun ImportDesignDialog(
                                             )
                                         }
                                     }
-                                    TextButton(onClick = { onSelectTemplate(template) }) {
+                                    MochiTextButton(onClick = { onSelectTemplate(template) }) {
                                         Text(stringResource(R.string.projects_design_use))
                                     }
                                 }
@@ -408,7 +408,7 @@ private fun ImportDesignDialog(
                     fontWeight = FontWeight.SemiBold
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { filePicker.launch("application/json") },
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -422,11 +422,8 @@ private fun ImportDesignDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_close))
-            }
-        }
+        confirmText = stringResource(MochiR.string.common_close),
+        onConfirm = onDismiss,
     )
 }
 
@@ -436,23 +433,13 @@ private fun ConfirmReplaceDialog(
     onDismiss: () -> Unit,
     onConfirm: () -> Unit
 ) {
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.projects_design_replace_title)) },
-        text = {
-            Text(stringResource(R.string.projects_design_replace_message, label))
-        },
-        confirmButton = {
-            TextButton(
-                onClick = onConfirm
-            ) {
-                Text(stringResource(R.string.projects_design_replace), color = MaterialTheme.colorScheme.error)
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        }
+        title = stringResource(R.string.projects_design_replace_title),
+        text = stringResource(R.string.projects_design_replace_message, label),
+        confirmText = stringResource(R.string.projects_design_replace),
+        onConfirm = onConfirm,
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

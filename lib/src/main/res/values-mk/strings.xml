@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">На телефоните Samsung, проверете и Settings → Device care → Sleeping apps и отстранете го Mochi ако е наведен.</string>
     <string name="oem_hint_allow">Дозволи во заднина</string>
     <string name="oem_hint_dismiss">Не прикажувај повторно</string>
-    <string name="about_title">Mochi клиент за Android</string>
+    <string name="about_title">Mochi клиент</string>
     <string name="about_version">Верзија %1$s</string>
     <string name="about_check_updates">Провери за ажурирања</string>
     <string name="about_up_to_date">Ажурирано</string>

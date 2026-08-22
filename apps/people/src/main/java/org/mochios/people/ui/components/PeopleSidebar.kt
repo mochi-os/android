@@ -5,93 +5,42 @@
 
 package org.mochios.people.ui.components
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.Column
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.People
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalDrawerSheet
-import androidx.compose.material3.NavigationDrawerItem
-import androidx.compose.material3.NavigationDrawerItemDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.DrawerItem
 import org.mochios.people.R
 
 enum class PeopleSidebarSection { FRIENDS, INVITATIONS, GROUPS, PROFILE }
 
 @Composable
-fun PeopleSidebar(
-    current: PeopleSidebarSection,
-    onSelect: (PeopleSidebarSection) -> Unit,
-) {
-    ModalDrawerSheet(modifier = Modifier.fillMaxHeight()) {
-        Column {
-            // Header — matches the web sidebar's "People" group title.
-            Text(
-                text = stringResource(R.string.people_sidebar_header),
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(start = 28.dp, top = 24.dp, bottom = 12.dp),
-            )
-            HorizontalDivider()
-            Spacer(modifier = Modifier.height(8.dp))
+fun peopleDrawerItems(): List<DrawerItem> = listOf(
+    DrawerItem(
+        id = PeopleSidebarSection.FRIENDS.name,
+        title = stringResource(R.string.people_friends_title),
+        icon = Icons.Default.People,
+    ),
+    DrawerItem(
+        id = PeopleSidebarSection.INVITATIONS.name,
+        title = stringResource(R.string.people_invitations_title),
+        icon = Icons.Default.MailOutline,
+    ),
+    DrawerItem(
+        id = PeopleSidebarSection.GROUPS.name,
+        title = stringResource(R.string.people_groups_title),
+        icon = Icons.Default.Groups,
+    ),
+    DrawerItem(
+        id = PeopleSidebarSection.PROFILE.name,
+        title = stringResource(R.string.people_profile_title),
+        icon = Icons.Default.AccountCircle,
+    ),
+)
 
-            SidebarRow(
-                section = PeopleSidebarSection.FRIENDS,
-                current = current,
-                icon = Icons.Default.People,
-                labelRes = R.string.people_friends_title,
-                onSelect = onSelect,
-            )
-            SidebarRow(
-                section = PeopleSidebarSection.INVITATIONS,
-                current = current,
-                icon = Icons.Default.MailOutline,
-                labelRes = R.string.people_invitations_title,
-                onSelect = onSelect,
-            )
-            SidebarRow(
-                section = PeopleSidebarSection.GROUPS,
-                current = current,
-                icon = Icons.Default.Groups,
-                labelRes = R.string.people_groups_title,
-                onSelect = onSelect,
-            )
-            SidebarRow(
-                section = PeopleSidebarSection.PROFILE,
-                current = current,
-                icon = Icons.Default.AccountCircle,
-                labelRes = R.string.people_profile_title,
-                onSelect = onSelect,
-            )
-        }
-    }
-}
-
-@Composable
-private fun SidebarRow(
-    section: PeopleSidebarSection,
-    current: PeopleSidebarSection,
-    icon: ImageVector,
-    labelRes: Int,
-    onSelect: (PeopleSidebarSection) -> Unit,
-) {
-    NavigationDrawerItem(
-        icon = { Icon(icon, contentDescription = null) },
-        label = { Text(stringResource(labelRes)) },
-        selected = current == section,
-        onClick = { onSelect(section) },
-        modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding),
-    )
-}
+/** Resolves a [peopleDrawerItems] row id back to its section. */
+fun peopleDrawerSection(itemId: String): PeopleSidebarSection =
+    PeopleSidebarSection.valueOf(itemId)

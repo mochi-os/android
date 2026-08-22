@@ -12,13 +12,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -183,10 +179,10 @@ fun StepUpDialog(
         )
     val showFooterVerify = !loading && (remaining.contains("email") || remaining.contains("totp"))
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
-        title = { Text(stringResource(R.string.stepup_title)) },
-        text = {
+        title = stringResource(R.string.stepup_title),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(
                     stringResource(R.string.stepup_description),
@@ -198,7 +194,7 @@ fun StepUpDialog(
                 } else {
                     if (remaining.contains("email")) {
                         if (sent) {
-                            OutlinedTextField(
+                            MochiTextField(
                                 value = emailCode,
                                 onValueChange = { emailCode = it },
                                 label = { Text(stringResource(R.string.stepup_email_label)) },
@@ -211,7 +207,7 @@ fun StepUpDialog(
                                 ),
                                 modifier = Modifier.fillMaxWidth(),
                             )
-                            TextButton(
+                            MochiTextButton(
                                 onClick = {
                                     scope.launch {
                                         error = null
@@ -221,7 +217,7 @@ fun StepUpDialog(
                                 enabled = !busy,
                             ) { Text(stringResource(R.string.stepup_resend_email)) }
                         } else {
-                            OutlinedButton(
+                            MochiOutlinedButton(
                                 onClick = {
                                     scope.launch {
                                         error = null
@@ -234,7 +230,7 @@ fun StepUpDialog(
                         }
                     }
                     if (remaining.contains("totp")) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = totpCode,
                             onValueChange = { totpCode = it.filter { c -> c.isDigit() }.take(6) },
                             label = { Text(stringResource(R.string.stepup_totp_label)) },
@@ -249,14 +245,14 @@ fun StepUpDialog(
                         )
                     }
                     if (remaining.contains("passkey")) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = { usePasskey() },
                             enabled = !busy,
                             modifier = Modifier.fillMaxWidth(),
                         ) { Text(stringResource(R.string.stepup_use_passkey)) }
                     }
                     providers.forEach { provider ->
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = { useOauth(provider) },
                             enabled = !busy,
                             modifier = Modifier.fillMaxWidth(),
@@ -275,17 +271,12 @@ fun StepUpDialog(
                 }
             }
         },
-        confirmButton = {
-            if (showFooterVerify) {
-                TextButton(onClick = { submit() }, enabled = canVerify) {
-                    Text(stringResource(R.string.stepup_verify))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !busy) {
-                Text(stringResource(R.string.common_cancel))
-            }
-        },
+        // The verify button is absent until a code is actually being asked for.
+        confirmText = if (showFooterVerify) stringResource(R.string.stepup_verify) else null,
+        onConfirm = { submit() },
+        confirmEnabled = canVerify,
+        dismissText = stringResource(R.string.common_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !busy,
     )
 }

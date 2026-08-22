@@ -22,17 +22,11 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.History
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -59,6 +53,12 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.repository.WikisRepository
@@ -107,7 +107,7 @@ fun PageRevertScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.wikis_revert_page_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(org.mochios.android.R.string.common_back),
@@ -125,7 +125,7 @@ fun PageRevertScreen(
                 .padding(24.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
-            Card(
+            MochiCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 16.dp),
@@ -158,7 +158,7 @@ fun PageRevertScreen(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Spacer(Modifier.height(20.dp))
-                    OutlinedTextField(
+                    MochiTextField(
                         value = state.comment,
                         onValueChange = { viewModel.setComment(it) },
                         label = { Text(stringResource(R.string.wikis_revert_page_comment_label)) },
@@ -170,7 +170,7 @@ fun PageRevertScreen(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
                     ) {
-                        OutlinedButton(
+                        MochiOutlinedButton(
                             onClick = { navController.popBackStack() },
                             enabled = !state.isReverting,
                         ) {
@@ -182,13 +182,10 @@ fun PageRevertScreen(
                             Spacer(Modifier.width(6.dp))
                             Text(stringResource(R.string.wikis_revert_page_cancel))
                         }
-                        Button(
+                        MochiButton(
                             onClick = { viewModel.revert() },
                             enabled = !state.isReverting,
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = MaterialTheme.colorScheme.error,
-                                contentColor = MaterialTheme.colorScheme.onError,
-                            ),
+                            tone = MochiButtonTone.Destructive,
                         ) {
                             if (state.isReverting) {
                                 CircularProgressIndicator(

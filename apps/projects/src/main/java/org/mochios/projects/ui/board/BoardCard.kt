@@ -28,11 +28,9 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.foundation.border
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.outlined.SwapHoriz
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -54,8 +52,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
 import org.mochios.android.ui.components.dnd.DropOrientation
@@ -184,7 +184,7 @@ fun BoardCard(
             .alpha(0.9f)
     } else Modifier
 
-    Card(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .then(dragModifier)
@@ -244,7 +244,7 @@ fun BoardCard(
                     if (!isNested) {
                         Spacer(modifier = Modifier.width(4.dp))
                         Box {
-                            IconButton(
+                            MochiIconButton(
                                 onClick = { showOverflow = true },
                                 modifier = Modifier.size(20.dp)
                             ) {

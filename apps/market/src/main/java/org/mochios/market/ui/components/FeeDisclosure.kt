@@ -9,8 +9,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.market.R
 
 /**
@@ -30,9 +29,8 @@ fun FeeDisclosure(
     platformFeePercent: Double,
     modifier: Modifier = Modifier,
 ) {
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(

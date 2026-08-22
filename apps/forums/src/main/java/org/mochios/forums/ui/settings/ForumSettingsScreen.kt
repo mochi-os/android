@@ -21,9 +21,7 @@ import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -48,8 +46,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.Section
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
@@ -89,7 +89,7 @@ private fun SubscriberSettings(
         Section(
             title = stringResource(R.string.forums_settings_unsubscribe_section),
             action = {
-                OutlinedButton(onClick = { showConfirm = true }) {
+                MochiOutlinedButton(onClick = { showConfirm = true }) {
                     Text(stringResource(R.string.forums_settings_unsubscribe))
                 }
             },
@@ -99,17 +99,17 @@ private fun SubscriberSettings(
     }
 
     if (showConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showConfirm = false },
             title = stringResource(R.string.forums_list_unsubscribe_title),
-            message = stringResource(R.string.forums_list_unsubscribe_message),
-            confirmLabel = stringResource(R.string.forums_settings_unsubscribe),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_list_unsubscribe_message),
+            confirmText = stringResource(R.string.forums_settings_unsubscribe),
             onConfirm = {
                 showConfirm = false
                 onUnsubscribe()
             },
-            onDismiss = { showConfirm = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -178,7 +178,7 @@ fun ForumSettingsScreen(
             TopAppBar(
                 title = { Text(settingsTitle) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),

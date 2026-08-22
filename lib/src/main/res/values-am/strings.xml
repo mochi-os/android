@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">ጀርባን ይፍቀዱ</string>
     <string name="oem_hint_dismiss">እንደገና አታሳይ</string>
     <string name="about_label">ስለ</string>
-    <string name="about_title">ሞቺ ደንበኛ ለአንድሮይድ</string>
+    <string name="about_title">ሞቺ ደንበኛ</string>
     <string name="about_version">ስሪት %1$s</string>
     <string name="about_check_updates">ዝመናዎችን ይፈትሹ</string>
     <string name="about_up_to_date">ወቅታዊ ነው</string>

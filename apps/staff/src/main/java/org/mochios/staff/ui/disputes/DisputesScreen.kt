@@ -24,7 +24,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -52,6 +51,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
@@ -259,7 +259,7 @@ private fun DisputeRow(
                 modifier = Modifier.weight(1f),
             )
             if (showAction) {
-                OutlinedButton(onClick = onActionClick) {
+                MochiOutlinedButton(onClick = onActionClick) {
                     Text(
                         if (dispute.opener == "stripe") stringResource(R.string.staff_disputes_view)
                         else stringResource(R.string.staff_disputes_review),
@@ -316,7 +316,7 @@ private fun FilterDropdown(
     var expanded by remember { mutableStateOf(false) }
     val currentLabel = options.firstOrNull { it.first == current }?.second ?: anyLabel
     Box(modifier = modifier) {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { expanded = true },
             modifier = Modifier.fillMaxWidth(),
         ) {

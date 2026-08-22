@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Achtergrond toestaan</string>
     <string name="oem_hint_dismiss">Niet meer tonen</string>
     <string name="about_label">Over</string>
-    <string name="about_title">Mochi Client voor Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Versie %1$s</string>
     <string name="about_check_updates">Controleren op updates</string>
     <string name="about_up_to_date">Up-to-date</string>

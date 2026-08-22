@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">Дазволіць фон</string>
     <string name="oem_hint_dismiss">Больш не паказваць</string>
     <string name="about_label">Аб праграме</string>
-    <string name="about_title">Кліент Mochi для Android</string>
+    <string name="about_title">Кліент Mochi</string>
     <string name="about_version">Версія %1$s</string>
     <string name="about_check_updates">Праверыць абнаўленні</string>
     <string name="about_up_to_date">Усё актуальнае</string>

@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung telefonokunapi, Settings → Device care → Sleeping apps nisqamanpas qhaway, hinaspa Mochita hurquy sichus rikhurin chayqa.</string>
     <string name="oem_hint_allow">Qhipanchaypi saqiy</string>
     <string name="oem_hint_dismiss">Ama yapamanta rikhurichunchu</string>
-    <string name="about_title">Mochi Client Androidpaq</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Versión %1$s</string>
     <string name="about_check_updates">Musuqyaykunata maskay</string>
     <string name="about_up_to_date">Musuqchasqaña</string>

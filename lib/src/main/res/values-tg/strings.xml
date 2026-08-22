@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Иҷозат додан ба замина</string>
     <string name="oem_hint_dismiss">Дигар нишон надиҳед</string>
     <string name="about_label">Дар бораи</string>
-    <string name="about_title">Mochi Client барои Android</string>
+    <string name="about_title">Mochi Client</string>
     <string name="about_version">Версияи %1$s</string>
     <string name="about_check_updates">Санҷидани навсозиҳо</string>
     <string name="about_up_to_date">Навтарин нусха</string>

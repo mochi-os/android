@@ -26,22 +26,16 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.SportsKabaddi
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -68,13 +62,20 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
-import org.mochios.chess.ui.components.ChessSidebar
 import org.mochios.chess.ui.components.ChessSidebarGame
+import org.mochios.chess.ui.components.chessDrawerItems
 import org.mochios.android.R as MochiR
 
 /**
@@ -120,24 +121,26 @@ fun ChessGameListScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            ChessSidebar(
-                activeGames = uiState.activeSidebar,
-                completedGames = uiState.completedSidebar,
-                onOpenGame = { gameId ->
-                    drawerScope.launch { drawerState.close() }
-                    navController.navigate(ChessApp.gameDetail(gameId))
-                },
-                onOpenNewGame = {
+        header = { DrawerTitle(stringResource(R.string.chess_sidebar_header)) },
+        items = chessDrawerItems(
+            activeGames = uiState.activeSidebar,
+            completedGames = uiState.completedSidebar,
+        ),
+        selectedId = null,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            navController.navigate(ChessApp.gameDetail(item.id))
+        },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(R.string.chess_sidebar_new_game),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(ChessApp.NEW_GAME)
                 },
-                // websocketStatusLabel is null here — only the detail screen
-                // (a parallel agent's work) has an open WS to report on.
-                websocketStatusLabel = null,
-                websocketStatusColor = null,
             )
         },
     ) {
@@ -147,7 +150,7 @@ fun ChessGameListScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.chess_app_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.chess_open_sidebar),
@@ -155,14 +158,14 @@ fun ChessGameListScreen(
                         }
                     },
                     actions = {
-                        IconButton(onClick = onOpenNotifications) {
+                        MochiIconButton(onClick = onOpenNotifications) {
                             Icon(
                                 Icons.Default.Notifications,
                                 contentDescription = stringResource(MochiR.string.notifications_open),
                             )
                         }
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
                             }
                             MochiDropdownMenu(
@@ -234,7 +237,7 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
                 color = MaterialTheme.colorScheme.error,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            TextButton(onClick = onRetry) {
+            MochiTextButton(onClick = onRetry) {
                 Text(stringResource(MochiR.string.common_retry))
             }
         }
@@ -272,9 +275,8 @@ private fun EmptyState(onNewGame: () -> Unit) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         Spacer(modifier = Modifier.height(24.dp))
-        Button(
+        MochiButton(
             onClick = onNewGame,
-            colors = ButtonDefaults.buttonColors(),
         ) {
             Icon(Icons.Default.Add, contentDescription = null)
             Spacer(modifier = Modifier.size(8.dp))
@@ -319,7 +321,7 @@ private fun GameCardGrid(
         }
         item("new-game-footer") {
             Spacer(modifier = Modifier.height(12.dp))
-            Button(
+            MochiButton(
                 onClick = onNewGame,
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -351,7 +353,7 @@ private fun GameCard(
         "/people/${game.opponentId}/-/avatar"
     } else null
 
-    Card(
+    MochiCard(
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(

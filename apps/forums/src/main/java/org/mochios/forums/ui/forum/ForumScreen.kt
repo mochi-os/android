@@ -54,19 +54,15 @@ import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.outlined.Whatshot
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -82,7 +78,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
@@ -103,18 +98,21 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FeatureDrawerItem
-import org.mochios.android.ui.components.FeatureListDrawer
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -146,7 +144,7 @@ private val SORT_OPTIONS = listOf(
 )
 
 /**
- * Forum detail screen inside a [FeatureListDrawer]; an empty [forumId] opens
+ * Forum detail screen inside a [MochiListDrawer]; an empty [forumId] opens
  * the drawer over a placeholder.
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -182,20 +180,20 @@ fun ForumScreen(
 
     val drawerItems = remember(listUiState.forums) {
         listViewModel.filteredForums().map { forum ->
-            FeatureDrawerItem(
+            DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,
                 icon = Icons.Default.Forum,
             )
         }
     }
-    val drawerAll = FeatureDrawerItem(
+    val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.forums_all_forums),
         icon = Icons.Default.Forum,
     )
 
-    FeatureListDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.forums_list_title)) },
         items = drawerItems,
@@ -283,7 +281,7 @@ private fun ForumDrawerPlaceholder(onOpenDrawer: () -> Unit) {
             TopAppBar(
                 title = { Text(stringResource(R.string.forums_list_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.forums_list_title)
@@ -383,7 +381,7 @@ private fun ForumContent(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onOpenDrawer) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.forums_list_title)
@@ -397,7 +395,7 @@ private fun ForumContent(
                     // omitted it) keeps the button.
                     if (!isAll && uiState.forum.id.isNotEmpty() &&
                         uiState.forum.canPost != false) {
-                        IconButton(onClick = { onNewPost(forumIdForCallbacks) }) {
+                        MochiIconButton(onClick = { onNewPost(forumIdForCallbacks) }) {
                             Icon(
                                 Icons.Default.Add,
                                 contentDescription = stringResource(R.string.forums_new_post)
@@ -405,7 +403,7 @@ private fun ForumContent(
                         }
                     }
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(
                                 Icons.Default.MoreVert,
                                 contentDescription = stringResource(
@@ -632,7 +630,7 @@ private fun ForumContent(
                                             if (uiState.isLoadingMore) {
                                                 CircularProgressIndicator()
                                             } else {
-                                                TextButton(onClick = { viewModel.loadMore() }) {
+                                                MochiTextButton(onClick = { viewModel.loadMore() }) {
                                                     Text(stringResource(R.string.forums_load_more))
                                                 }
                                             }
@@ -659,17 +657,17 @@ private fun ForumContent(
     }
 
     if (showUnsubscribeConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showUnsubscribeConfirm = false },
             title = stringResource(R.string.forums_list_unsubscribe_title),
-            message = stringResource(R.string.forums_list_unsubscribe_message),
-            confirmLabel = stringResource(R.string.forums_list_unsubscribe),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
+            text = stringResource(R.string.forums_list_unsubscribe_message),
+            confirmText = stringResource(R.string.forums_list_unsubscribe),
             onConfirm = {
                 showUnsubscribeConfirm = false
                 viewModel.unsubscribe()
             },
-            onDismiss = { showUnsubscribeConfirm = false },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -701,14 +699,12 @@ private fun PostCard(
     showForumName: Boolean = false,
 ) {
     val format = LocalFormat.current
-    OutlinedCard(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = MaterialTheme.shapes.medium,
-        // Outline only — the card reads against the screen background rather
-        // than sitting on its own surface tint.
-        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
+        // A tone, not a border, and the same tone every other card carries.
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             // In the aggregate "All forums" view, label which forum each post
@@ -917,11 +913,10 @@ private fun ForumBanner(banner: String, forumId: String) {
     }
     if (dismissed) return
 
-    OutlinedCard(
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),
-        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
     ) {
         Row(
             modifier = Modifier
@@ -930,7 +925,7 @@ private fun ForumBanner(banner: String, forumId: String) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             HtmlContent(html = banner, modifier = Modifier.weight(1f))
-            IconButton(
+            MochiIconButton(
                 onClick = {
                     prefs.edit { putString(prefKey, contentHash) }
                     dismissed = true

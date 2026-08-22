@@ -15,7 +15,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.automirrored.filled.InsertDriveFile
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
 import org.mochios.market.model.Asset
 
@@ -71,7 +71,7 @@ fun DigitalAssetsList(
                         )
                     }
                 }
-                IconButton(onClick = { onDownload(asset) }) {
+                MochiIconButton(onClick = { onDownload(asset) }) {
                     Icon(
                         imageVector = Icons.Filled.Download,
                         contentDescription = stringResource(R.string.market_asset_download),

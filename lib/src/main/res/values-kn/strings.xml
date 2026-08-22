@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung ಫೋನ್‌ಗಳಲ್ಲಿ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು → ಸಾಧನ ಆರೈಕೆ → ನಿದ್ರಿಸುತ್ತಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು Mochi ಪಟ್ಟಿಯಲ್ಲಿದ್ದರೆ ಅದನ್ನು ತೆಗೆದುಹಾಕಿ.</string>
     <string name="oem_hint_allow">ಹಿನ್ನೆಲೆಯನ್ನು ಅನುಮತಿಸಿ</string>
     <string name="oem_hint_dismiss">ಮತ್ತೆ ತೋರಿಸಬೇಡ</string>
-    <string name="about_title">Android ಗಾಗಿ Mochi ಕ್ಲೈಂಟ್</string>
+    <string name="about_title">Mochi ಕ್ಲೈಂಟ್</string>
     <string name="about_version">ಆವೃತ್ತಿ %1$s</string>
     <string name="about_check_updates">ನವೀಕರಣಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸಿ</string>
     <string name="about_up_to_date">ನವೀಕೃತವಾಗಿದೆ</string>

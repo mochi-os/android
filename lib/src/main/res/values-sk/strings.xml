@@ -244,7 +244,7 @@
     <string name="oem_hint_allow">Povoliť pozadie</string>
     <string name="oem_hint_dismiss">Nezobrazovať znova</string>
     <string name="about_label">Informácie</string>
-    <string name="about_title">Mochi klient pre Android</string>
+    <string name="about_title">Mochi klient</string>
     <string name="about_version">Verzia %1$s</string>
     <string name="about_check_updates">Skontrolovať aktualizácie</string>
     <string name="about_up_to_date">Aktuálna verzia</string>

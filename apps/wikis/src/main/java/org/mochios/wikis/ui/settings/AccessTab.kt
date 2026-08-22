@@ -21,26 +21,17 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -55,7 +46,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.android.R as MochiR
 
@@ -150,7 +147,7 @@ private fun AccessSubjectCard(
     val levels = listOf("edit", "view", "none")
     var levelExpanded by remember { mutableStateOf(false) }
 
-    Card(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -183,28 +180,13 @@ private fun AccessSubjectCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             } else {
-                ExposedDropdownMenuBox(
+                MochiDropdownField(
+                    value = wikiAccessLevelLabel(subject.level),
                     expanded = levelExpanded,
                     onExpandedChange = { levelExpanded = it },
-                    modifier = Modifier.width(170.dp),
+                    label = stringResource(R.string.wikis_access_change_level),
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
-                    OutlinedTextField(
-                        value = wikiAccessLevelLabel(subject.level),
-                        onValueChange = {},
-                        readOnly = true,
-                        singleLine = true,
-                        label = { Text(stringResource(R.string.wikis_access_change_level)) },
-                        trailingIcon = {
-                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .menuAnchor(MenuAnchorType.PrimaryNotEditable),
-                    )
-                    ExposedDropdownMenu(
-                        expanded = levelExpanded,
-                        onDismissRequest = { levelExpanded = false },
-                    ) {
                         levels.forEach { lvl ->
                             MochiDropdownMenuItem(
                                 text = { Text(wikiAccessLevelLabel(lvl)) },
@@ -214,9 +196,8 @@ private fun AccessSubjectCard(
                                 },
                             )
                         }
-                    }
                 }
-                IconButton(onClick = onRevoke) {
+                MochiIconButton(onClick = onRevoke) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.access_revoke),
@@ -269,10 +250,10 @@ private fun AddAccessDialog(
 
     val levels = listOf("edit", "view", "none")
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(MochiR.string.access_add_rule_title)) },
-        text = {
+        title = stringResource(MochiR.string.access_add_rule_title),
+        content = {
             Column {
                 TabRow(selectedTabIndex = selectedTab) {
                     Tab(
@@ -298,7 +279,7 @@ private fun AddAccessDialog(
                 Spacer(modifier = Modifier.height(12.dp))
 
                 if (selectedTab == 0) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = if (selectedName.isNotEmpty()) selectedName else userQuery,
                         onValueChange = {
                             userQuery = it
@@ -312,7 +293,7 @@ private fun AddAccessDialog(
                     )
                     if (state.userSearchResults.isNotEmpty() && selectedSubject.isEmpty()) {
                         Spacer(modifier = Modifier.height(4.dp))
-                        Card(
+                        MochiCard(
                             modifier = Modifier.fillMaxWidth(),
                             colors = CardDefaults.cardColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceVariant,
@@ -320,7 +301,7 @@ private fun AddAccessDialog(
                         ) {
                             Column {
                                 state.userSearchResults.take(5).forEach { user ->
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = {
                                             selectedSubject = user.fingerprint ?: user.id
                                             selectedName = user.name
@@ -345,7 +326,7 @@ private fun AddAccessDialog(
                             modifier = Modifier.padding(vertical = 8.dp),
                         )
                     } else {
-                        Card(
+                        MochiCard(
                             modifier = Modifier.fillMaxWidth(),
                             colors = CardDefaults.cardColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceVariant,
@@ -353,7 +334,7 @@ private fun AddAccessDialog(
                         ) {
                             Column {
                                 state.groups.forEach { group ->
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = {
                                             // Groups are subjects prefixed with @.
                                             selectedSubject = "@${group.id}"
@@ -381,26 +362,13 @@ private fun AddAccessDialog(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                ExposedDropdownMenuBox(
+                MochiDropdownField(
+                    value = wikiAccessLevelLabel(level),
                     expanded = levelExpanded,
                     onExpandedChange = { levelExpanded = it },
+                    label = stringResource(R.string.wikis_access_level_label),
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
-                    OutlinedTextField(
-                        value = wikiAccessLevelLabel(level),
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text(stringResource(R.string.wikis_access_level_label)) },
-                        trailingIcon = {
-                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .menuAnchor(MenuAnchorType.PrimaryNotEditable),
-                    )
-                    ExposedDropdownMenu(
-                        expanded = levelExpanded,
-                        onDismissRequest = { levelExpanded = false },
-                    ) {
                         levels.forEach { lvl ->
                             MochiDropdownMenuItem(
                                 text = { Text(wikiAccessLevelLabel(lvl)) },
@@ -410,22 +378,12 @@ private fun AddAccessDialog(
                                 },
                             )
                         }
-                    }
                 }
             }
         },
-        confirmButton = {
-            Button(
-                onClick = { onAdd(selectedSubject, level) },
-                enabled = selectedSubject.isNotEmpty(),
-            ) {
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(MochiR.string.common_add),
+        onConfirm = { onAdd(selectedSubject, level) },
+        confirmEnabled = selectedSubject.isNotEmpty(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

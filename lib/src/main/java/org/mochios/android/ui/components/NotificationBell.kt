@@ -13,7 +13,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -58,7 +57,7 @@ fun NotificationBell(onClick: () -> Unit) {
     val count by store.count.collectAsState()
 
     Box {
-        IconButton(onClick = onClick) {
+        MochiIconButton(onClick = onClick) {
             Icon(
                 imageVector = Icons.Default.Notifications,
                 contentDescription = stringResource(R.string.notifications_open),

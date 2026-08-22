@@ -32,13 +32,9 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -56,8 +52,11 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
@@ -411,7 +410,7 @@ private fun BoardColumn(
                 )
             }
             if (onCreateInColumn != null) {
-                IconButton(onClick = onCreateInColumn, modifier = Modifier.size(32.dp)) {
+                MochiIconButton(onClick = onCreateInColumn, modifier = Modifier.size(32.dp)) {
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.crm_board_new),
@@ -423,7 +422,7 @@ private fun BoardColumn(
                 var showMenu by remember { mutableStateOf(false) }
                 var showRenameDialog by remember { mutableStateOf(false) }
                 Box {
-                    IconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
+                    MochiIconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                         Icon(
                             Icons.Default.MoreHoriz,
                             contentDescription = stringResource(MochiR.string.common_more_options),
@@ -458,29 +457,24 @@ private fun BoardColumn(
                 }
                 if (showRenameDialog && onRename != null) {
                     var newName by remember { mutableStateOf(option.name) }
-                    AlertDialog(
+                    MochiAlertDialog(
                         onDismissRequest = { showRenameDialog = false },
-                        title = { Text(stringResource(R.string.crm_board_rename_column)) },
-                        text = {
-                            OutlinedTextField(
+                        title = stringResource(R.string.crm_board_rename_column),
+                        content = {
+                            MochiTextField(
                                 value = newName,
                                 onValueChange = { newName = it },
                                 singleLine = true,
                                 modifier = Modifier.fillMaxWidth()
                             )
                         },
-                        confirmButton = {
-                            TextButton(
-                                onClick = {
-                                    onRename(newName)
-                                    showRenameDialog = false
-                                },
-                                enabled = newName.isNotBlank()
-                            ) { Text(stringResource(R.string.crm_board_rename)) }
+                        confirmText = stringResource(R.string.crm_board_rename),
+                        onConfirm = {
+                            onRename(newName)
+                            showRenameDialog = false
                         },
-                        dismissButton = {
-                            TextButton(onClick = { showRenameDialog = false }) { Text(stringResource(MochiR.string.common_cancel)) }
-                        }
+                        confirmEnabled = newName.isNotBlank(),
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
             }

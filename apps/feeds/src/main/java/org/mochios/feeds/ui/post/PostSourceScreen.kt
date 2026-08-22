@@ -18,6 +18,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,7 +26,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -37,29 +37,25 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material.icons.outlined.Link
-import androidx.compose.material.icons.outlined.OpenInBrowser
-import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.AlertDialog
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.OpenInBrowser
 import androidx.compose.material3.BottomSheetScaffold
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberBottomSheetScaffoldState
@@ -75,6 +71,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
@@ -87,8 +84,13 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
@@ -141,12 +143,6 @@ fun PostSourceScreen(
     )
     val scaffoldState = rememberBottomSheetScaffoldState(bottomSheetState = sheetState)
     val coroutineScope = rememberCoroutineScope()
-
-    val filePickerLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris ->
-        uris.forEach { viewModel.addCommentAttachment(it) }
-    }
 
     LaunchedEffect(actionError) {
         actionError?.let {
@@ -204,7 +200,7 @@ fun PostSourceScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
+                    MochiIconButton(onClick = onNavigateBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
@@ -213,7 +209,7 @@ fun PostSourceScreen(
                 },
                 actions = {
                     Box {
-                        IconButton(onClick = { showOverflowMenu = true }) {
+                        MochiIconButton(onClick = { showOverflowMenu = true }) {
                             Icon(
                                 Icons.Default.MoreVert,
                                 contentDescription = stringResource(MochiR.string.common_more_options)
@@ -284,7 +280,7 @@ fun PostSourceScreen(
                 commentText = commentText,
                 onCommentTextChange = { viewModel.setCommentText(it) },
                 commentAttachments = commentAttachments,
-                onAddAttachment = { filePickerLauncher.launch("*/*") },
+                onAddAttachments = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
                 onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
                 onSendComment = { viewModel.sendComment() },
                 isSendingComment = isSendingComment,
@@ -427,54 +423,32 @@ fun PostSourceScreen(
     }
 
     if (showDeleteDialog) {
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            title = { Text(stringResource(R.string.feeds_delete_post)) },
-            text = { Text(stringResource(R.string.feeds_delete_post_confirm)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showDeleteDialog = false
-                        viewModel.deletePost { onNavigateBack() }
-                    }
-                ) {
-                    Text(
-                        stringResource(MochiR.string.common_delete),
-                        color = MaterialTheme.colorScheme.error
-                    )
-                }
+            title = stringResource(R.string.feeds_delete_post),
+            text = stringResource(R.string.feeds_delete_post_confirm),
+            confirmText = stringResource(MochiR.string.common_delete),
+            onConfirm = {
+                showDeleteDialog = false
+                viewModel.deletePost { onNavigateBack() }
             },
-            dismissButton = {
-                TextButton(onClick = { showDeleteDialog = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     showDeleteCommentDialog?.let { commentId ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showDeleteCommentDialog = null },
-            title = { Text(stringResource(R.string.feeds_delete_comment)) },
-            text = { Text(stringResource(R.string.feeds_delete_comment_confirm)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showDeleteCommentDialog = null
-                        viewModel.deleteComment(commentId)
-                    }
-                ) {
-                    Text(
-                        stringResource(MochiR.string.common_delete),
-                        color = MaterialTheme.colorScheme.error
-                    )
-                }
+            title = stringResource(R.string.feeds_delete_comment),
+            text = stringResource(R.string.feeds_delete_comment_confirm),
+            confirmText = stringResource(MochiR.string.common_delete),
+            onConfirm = {
+                showDeleteCommentDialog = null
+                viewModel.deleteComment(commentId)
             },
-            dismissButton = {
-                TextButton(onClick = { showDeleteCommentDialog = null }) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            }
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -506,7 +480,7 @@ private fun LoadErrorOverlay(
             )
             Spacer(modifier = Modifier.height(16.dp))
             Row {
-                TextButton(onClick = onRetry) {
+                MochiTextButton(onClick = onRetry) {
                     Icon(
                         Icons.Default.Refresh,
                         contentDescription = null,
@@ -516,7 +490,7 @@ private fun LoadErrorOverlay(
                     Text(stringResource(MochiR.string.common_retry))
                 }
                 Spacer(modifier = Modifier.width(8.dp))
-                TextButton(onClick = onOpenExternal) {
+                MochiTextButton(onClick = onOpenExternal) {
                     Icon(
                         Icons.Default.OpenInBrowser,
                         contentDescription = null,
@@ -526,7 +500,7 @@ private fun LoadErrorOverlay(
                     Text(stringResource(R.string.feeds_open_in_browser))
                 }
             }
-            TextButton(onClick = onViewPost) {
+            MochiTextButton(onClick = onViewPost) {
                 Text(stringResource(R.string.feeds_view_post))
             }
         }
@@ -541,7 +515,7 @@ private fun PostSourceSheet(
     commentText: String,
     onCommentTextChange: (String) -> Unit,
     commentAttachments: List<android.net.Uri>,
-    onAddAttachment: () -> Unit,
+    onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (android.net.Uri) -> Unit,
     onSendComment: () -> Unit,
     isSendingComment: Boolean,
@@ -569,7 +543,7 @@ private fun PostSourceSheet(
         ) {
             // Comment icon + count, right-aligned and styled like the former
             // "View post" action. Tapping it expands the sheet.
-            TextButton(onClick = onExpand) {
+            MochiTextButton(onClick = onExpand) {
                 Icon(
                     Icons.Default.ChatBubbleOutline,
                     contentDescription = null,
@@ -617,18 +591,27 @@ private fun PostSourceSheet(
         }
 
         if (permissions.comment) {
-            CommentInputBar(
-                text = commentText,
-                onTextChange = onCommentTextChange,
-                attachments = commentAttachments,
-                onAddAttachment = onAddAttachment,
-                onRemoveAttachment = onRemoveAttachment,
-                resolveFileName = resolveFileName,
+            ComposeBar(
+                value = commentText,
+                onValueChange = onCommentTextChange,
                 onSend = onSendComment,
                 isSending = isSendingComment,
-                replyingTo = replyingTo,
-                onCancelReply = onCancelReply,
-                onSearchMembers = onSearchMembers
+                sendLabel = stringResource(R.string.feeds_send),
+                attachments = feedsCommentAttachments(
+                    attachments = commentAttachments,
+                    onAdd = onAddAttachments,
+                    onRemove = onRemoveAttachment,
+                    resolveFileName = resolveFileName,
+                ),
+                // A comment needs a body; attachments alone will not do.
+                requireText = true,
+                onSearchMentions = onSearchMembers,
+                // BottomSheetScaffold does not lift its sheet content for the
+                // keyboard the way ModalBottomSheet does, so this bar has to
+                // consume the inset itself - without it the keyboard covers
+                // the field completely.
+                windowInsets = ComposeBarDefaults.WindowInsets,
+                banner = feedsReplyBanner(replyingTo, onCancelReply),
             )
         }
     }

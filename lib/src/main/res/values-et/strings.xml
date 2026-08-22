@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">Luba taustal töötamine</string>
     <string name="oem_hint_dismiss">Ära näita uuesti</string>
     <string name="about_label">Teave</string>
-    <string name="about_title">Mochi klient Androidile</string>
+    <string name="about_title">Mochi klient</string>
     <string name="about_version">Versioon %1$s</string>
     <string name="about_check_updates">Otsi uuendusi</string>
     <string name="about_up_to_date">Ajakohane</string>

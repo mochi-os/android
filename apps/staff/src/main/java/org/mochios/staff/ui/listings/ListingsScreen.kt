@@ -28,10 +28,7 @@ import androidx.compose.material.icons.filled.ShieldMoon
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -60,6 +57,9 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -168,14 +168,14 @@ private fun ListingsBody(
             onStatusChange = onStatusChange,
             onModerationChange = onModerationChange,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = searchInput,
             onValueChange = onSearchInput,
             placeholder = { Text(stringResource(R.string.staff_listings_search_placeholder)) },
             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
             trailingIcon = if (searchInput.isNotEmpty()) {
                 {
-                    IconButton(onClick = onClearSearch) {
+                    MochiIconButton(onClick = onClearSearch) {
                         Icon(
                             Icons.Default.Close,
                             contentDescription = stringResource(R.string.staff_listings_search_clear),
@@ -318,15 +318,15 @@ private fun ListingRow(
             Spacer(Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 if (pending) {
-                    OutlinedButton(onClick = { onAction(ListingActionType.APPROVE) }) {
+                    MochiOutlinedButton(onClick = { onAction(ListingActionType.APPROVE) }) {
                         Text(stringResource(R.string.staff_listings_approve))
                     }
-                    OutlinedButton(onClick = { onAction(ListingActionType.REJECT) }) {
+                    MochiOutlinedButton(onClick = { onAction(ListingActionType.REJECT) }) {
                         Text(stringResource(R.string.staff_listings_reject))
                     }
                 }
                 if (canRemove) {
-                    OutlinedButton(onClick = { onAction(ListingActionType.REMOVE) }) {
+                    MochiOutlinedButton(onClick = { onAction(ListingActionType.REMOVE) }) {
                         Text(stringResource(R.string.staff_listings_remove))
                     }
                 }
@@ -379,7 +379,7 @@ private fun FilterDropdown(
     var expanded by remember { mutableStateOf(false) }
     val currentLabel = options.firstOrNull { it.first == current }?.second ?: anyLabel
     Box(modifier = modifier) {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { expanded = true },
             modifier = Modifier.fillMaxWidth(),
         ) {

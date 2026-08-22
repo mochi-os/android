@@ -20,32 +20,20 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -61,8 +49,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.AccessRule
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
+import org.mochios.android.ui.components.mochiDialogCardColors
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
@@ -111,9 +106,9 @@ fun AccessTab(
             title = stringResource(R.string.feeds_access_management),
             headerAlignment = Alignment.CenterVertically,
             action = {
-                // Outlined, primary-tinted — the same shape as the delete action
-                // on the General tab, which tints itself error instead.
-                OutlinedButton(onClick = { showAddDialog = true }) {
+                // Outlined — the same shape as the delete action on the General
+                // tab, which tints itself error instead.
+                MochiOutlinedButton(onClick = { showAddDialog = true }) {
                     Text(stringResource(MochiR.string.access_add_rule))
                 }
             },
@@ -164,7 +159,7 @@ fun AccessTab(
                         .fillMaxWidth()
                         .padding(top = 8.dp)
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = memberQuery,
                         onValueChange = { value -> memberQuery = value },
                         placeholder = { Text(stringResource(R.string.feeds_members_search)) },
@@ -201,7 +196,7 @@ fun AccessTab(
                                     overflow = TextOverflow.Ellipsis,
                                     modifier = Modifier.weight(1f),
                                 )
-                                IconButton(onClick = { viewModel.removeMember(member.id) }) {
+                                MochiIconButton(onClick = { viewModel.removeMember(member.id) }) {
                                     Icon(
                                         Icons.Default.Close,
                                         contentDescription = stringResource(R.string.feeds_remove),
@@ -266,7 +261,7 @@ private fun AccessRuleRow(
                     modifier = Modifier.padding(end = 12.dp),
                 )
             } else {
-                IconButton(onClick = onRevoke) {
+                MochiIconButton(onClick = onRevoke) {
                     Icon(
                         Icons.Default.Close,
                         contentDescription = stringResource(MochiR.string.access_revoke),
@@ -280,29 +275,12 @@ private fun AccessRuleRow(
         // matching the member filter field rather than indenting under the name.
         if (!rule.isOwner) {
             var expanded by remember { mutableStateOf(false) }
-            ExposedDropdownMenuBox(
+            MochiDropdownField(
+                value = feedsAccessLevelLabel(rule.operation),
                 expanded = expanded,
                 onExpandedChange = { expanded = it },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp),
+                modifier = Modifier.fillMaxWidth(),
             ) {
-                OutlinedTextField(
-                    value = feedsAccessLevelLabel(rule.operation),
-                    onValueChange = {},
-                    readOnly = true,
-                    singleLine = true,
-                    trailingIcon = {
-                        ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .menuAnchor(MenuAnchorType.PrimaryNotEditable),
-                )
-                ExposedDropdownMenu(
-                    expanded = expanded,
-                    onDismissRequest = { expanded = false },
-                ) {
                     ACCESS_LEVEL_CHANGE_KEYS.forEach { level ->
                         MochiDropdownMenuItem(
                             text = { Text(feedsAccessLevelLabel(level)) },
@@ -312,7 +290,6 @@ private fun AccessRuleRow(
                             },
                         )
                     }
-                }
             }
         }
     }
@@ -372,23 +349,11 @@ private fun AddAccessDialog(
         }
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = {
-            Column {
-                Text(
-                    text = stringResource(R.string.feeds_access_add_title),
-                    style = MaterialTheme.typography.headlineSmall,
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = stringResource(R.string.feeds_access_add_subtitle),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-        },
-        text = {
+        title = stringResource(R.string.feeds_access_add_title),
+        subtitle = stringResource(R.string.feeds_access_add_subtitle),
+        content = {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -427,7 +392,7 @@ private fun AddAccessDialog(
                             style = MaterialTheme.typography.labelLarge,
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                        OutlinedTextField(
+                        MochiTextField(
                             value = userQuery,
                             onValueChange = { value ->
                                 userQuery = value
@@ -441,7 +406,7 @@ private fun AddAccessDialog(
                         )
                         if (searchResults.isNotEmpty()) {
                             Spacer(modifier = Modifier.height(8.dp))
-                            OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                                 searchResults.take(6).forEach { user ->
                                     val subject = user.id
                                     SubjectOption(
@@ -473,7 +438,7 @@ private fun AddAccessDialog(
                                 modifier = Modifier.padding(vertical = 8.dp),
                             )
                         } else {
-                            OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                                 groups.forEach { group ->
                                     val subject = "@${group.id}"
                                     SubjectOption(
@@ -497,7 +462,7 @@ private fun AddAccessDialog(
                             style = MaterialTheme.typography.labelLarge,
                         )
                         Spacer(modifier = Modifier.height(8.dp))
-                        OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+                        MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                             SubjectOption(
                                 icon = Icons.Default.Group,
                                 title = authenticatedName,
@@ -532,26 +497,12 @@ private fun AddAccessDialog(
                         style = MaterialTheme.typography.bodyMedium,
                     )
                     Spacer(modifier = Modifier.height(8.dp))
-                    ExposedDropdownMenuBox(
+                    MochiDropdownField(
+                        value = feedsAccessLevelLabel(level),
                         expanded = levelExpanded,
                         onExpandedChange = { levelExpanded = it },
+                        modifier = Modifier.fillMaxWidth(),
                     ) {
-                        OutlinedTextField(
-                            value = feedsAccessLevelLabel(level),
-                            onValueChange = {},
-                            readOnly = true,
-                            singleLine = true,
-                            trailingIcon = {
-                                ExposedDropdownMenuDefaults.TrailingIcon(expanded = levelExpanded)
-                            },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .menuAnchor(MenuAnchorType.PrimaryNotEditable),
-                        )
-                        ExposedDropdownMenu(
-                            expanded = levelExpanded,
-                            onDismissRequest = { levelExpanded = false },
-                        ) {
                             ACCESS_LEVEL_CHANGE_KEYS.forEach { lvl ->
                                 MochiDropdownMenuItem(
                                     text = { Text(feedsAccessLevelLabel(lvl)) },
@@ -561,30 +512,14 @@ private fun AddAccessDialog(
                                     },
                                 )
                             }
-                        }
                     }
                 }
             }
         },
-        confirmButton = {
-            Button(
-                onClick = { onAdd(selectedSubject, level) },
-                enabled = selectedSubject.isNotEmpty(),
-            ) {
-                Icon(
-                    Icons.Default.Add,
-                    contentDescription = null,
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                )
-                Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
-                Text(stringResource(MochiR.string.common_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(MochiR.string.common_add),
+        onConfirm = { onAdd(selectedSubject, level) },
+        confirmEnabled = selectedSubject.isNotEmpty(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 

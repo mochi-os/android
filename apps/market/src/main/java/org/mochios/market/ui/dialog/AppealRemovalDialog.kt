@@ -10,13 +10,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.size
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -35,6 +30,8 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.launch
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
@@ -70,12 +67,12 @@ fun AppealRemovalDialog(
     val successText = stringResource(R.string.market_appeal_dialog_success)
     val failureFallback = stringResource(R.string.market_appeal_dialog_failed)
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = { Text(stringResource(R.string.market_appeal_dialog_title)) },
-        text = {
+        title = stringResource(R.string.market_appeal_dialog_title),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },
                     label = {
@@ -96,46 +93,31 @@ fun AppealRemovalDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = !submitting && reason.isNotBlank(),
-                onClick = {
-                    scope.launch {
-                        submitting = true
-                        errorMessage = null
-                        try {
-                            repo.appealListing(listingId, reason.trim())
-                            Toast.makeText(context, successText, Toast.LENGTH_SHORT).show()
-                            onSuccess()
-                            onDismiss()
-                        } catch (e: Exception) {
-                            errorMessage = e.toMochiError().userMessage().ifEmpty { failureFallback }
-                        } finally {
-                            submitting = false
-                        }
-                    }
-                },
-            ) {
-                if (submitting) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                    Spacer(Modifier.size(8.dp))
-                    Text(stringResource(R.string.market_appeal_dialog_submitting))
-                } else {
-                    Text(stringResource(R.string.market_appeal_dialog_submit))
+        confirmText = if (submitting) {
+            stringResource(R.string.market_appeal_dialog_submitting)
+        } else {
+            stringResource(R.string.market_appeal_dialog_submit)
+        },
+        onConfirm = {
+            scope.launch {
+                submitting = true
+                errorMessage = null
+                try {
+                    repo.appealListing(listingId, reason.trim())
+                    Toast.makeText(context, successText, Toast.LENGTH_SHORT).show()
+                    onSuccess()
+                    onDismiss()
+                } catch (e: Exception) {
+                    errorMessage = e.toMochiError().userMessage().ifEmpty { failureFallback }
+                } finally {
+                    submitting = false
                 }
             }
         },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = { if (!submitting) onDismiss() },
-            ) {
-                Text(stringResource(R.string.market_appeal_dialog_cancel))
-            }
-        },
+        confirmEnabled = reason.isNotBlank(),
+        confirmLoading = submitting,
+        dismissText = stringResource(R.string.market_appeal_dialog_cancel),
+        dismissEnabled = !submitting,
     )
 }
 

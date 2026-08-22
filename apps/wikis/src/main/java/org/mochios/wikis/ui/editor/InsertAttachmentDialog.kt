@@ -26,13 +26,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.UploadFile
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -46,6 +43,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -88,10 +87,10 @@ fun InsertAttachmentDialog(
         if (open) viewModel.loadAttachments()
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.wikis_insert_dialog_title)) },
-        text = {
+        title = stringResource(R.string.wikis_insert_dialog_title),
+        content = {
             Column {
                 Text(
                     text = stringResource(R.string.wikis_insert_dialog_subtitle),
@@ -100,7 +99,7 @@ fun InsertAttachmentDialog(
                 )
                 Box(modifier = Modifier.height(12.dp))
 
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { filePicker.launch("*/*") },
                     enabled = !state.isUploading,
                 ) {
@@ -166,11 +165,8 @@ fun InsertAttachmentDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(org.mochios.android.R.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(org.mochios.android.R.string.common_cancel),
+        onConfirm = onDismiss,
     )
 }
 

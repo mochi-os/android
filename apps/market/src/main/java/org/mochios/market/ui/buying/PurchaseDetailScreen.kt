@@ -29,20 +29,14 @@ import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material.icons.filled.LocalShipping
 import androidx.compose.material.icons.filled.OpenInNew
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -64,7 +58,12 @@ import kotlinx.coroutines.launch
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiScaffold
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.formatFingerprint
@@ -202,7 +201,7 @@ fun PurchaseDetailScreen(
 private fun OrderSummaryCard(order: Order, listing: Listing) {
     val format = LocalFormat.current
     val currency = order.currency ?: Currency.GBP
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -283,7 +282,7 @@ private fun SummaryRow(label: String, value: String, emphasised: Boolean = false
 @Composable
 private fun TrackingCard(order: Order) {
     val context = LocalContext.current
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Row(
             Modifier.padding(16.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -303,7 +302,7 @@ private fun TrackingCard(order: Order) {
                 }
             }
             if (order.url.isNotBlank()) {
-                TextButton(onClick = {
+                MochiTextButton(onClick = {
                     try {
                         CustomTabsIntent.Builder().build().launchUrl(context, order.url.toUri())
                     } catch (_: ActivityNotFoundException) { /* no-op */ }
@@ -319,7 +318,7 @@ private fun TrackingCard(order: Order) {
 
 @Composable
 private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 stringResource(R.string.market_purchase_download_section),
@@ -332,7 +331,7 @@ private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit)
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             assets.forEach { asset ->
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { onDownload(asset.id) },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
@@ -367,10 +366,10 @@ private fun PrimaryActionsCard(
         order.status != OrderStatus.DISPUTED &&
         order.refunded < order.total
 
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             if (showConfirm) {
-                Button(
+                MochiButton(
                     onClick = onConfirm,
                     enabled = !submitting,
                     modifier = Modifier.fillMaxWidth().height(44.dp),
@@ -384,11 +383,11 @@ private fun PrimaryActionsCard(
                     Text(stringResource(R.string.market_purchase_confirm_delivery))
                 }
             }
-            OutlinedButton(onClick = onMessageSeller, modifier = Modifier.fillMaxWidth()) {
+            MochiOutlinedButton(onClick = onMessageSeller, modifier = Modifier.fillMaxWidth()) {
                 Text(stringResource(R.string.market_purchase_message_seller))
             }
             if (canRequestRefund) {
-                TextButton(onClick = onRequestRefund, modifier = Modifier.fillMaxWidth()) {
+                MochiTextButton(onClick = onRequestRefund, modifier = Modifier.fillMaxWidth()) {
                     Text(stringResource(R.string.market_purchase_request_refund))
                 }
             }
@@ -400,7 +399,7 @@ private fun PrimaryActionsCard(
 private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) {
     val isChargeback = dispute.opener == "stripe"
     val reasonLabel = chargebackLabel(dispute.reason)
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -463,7 +462,7 @@ private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) 
 
 @Composable
 private fun PeerReviewCard(review: Review) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 stringResource(
@@ -486,7 +485,7 @@ private fun AuditCollapsible(
     onToggle: () -> Unit,
 ) {
     if (events.isEmpty()) return
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(8.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth().padding(8.dp),
@@ -499,7 +498,7 @@ private fun AuditCollapsible(
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.weight(1f),
                 )
-                IconButton(onClick = onToggle) {
+                MochiIconButton(onClick = onToggle) {
                     Icon(
                         imageVector = if (expanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
                         contentDescription = null,

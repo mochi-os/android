@@ -184,7 +184,7 @@
     <string name="oem_hint_samsung_note">如使用 Samsung 手機,請同時檢查設定 → 裝置維護 → 休眠應用程式,如有 Mochi 請將其移除。</string>
     <string name="oem_hint_allow">允許背景執行</string>
     <string name="oem_hint_dismiss">不再顯示</string>
-    <string name="about_title">Mochi Android 用戶端</string>
+    <string name="about_title">Mochi 用戶端</string>
     <string name="about_version">版本 %1$s</string>
     <string name="about_check_updates">檢查更新</string>
     <string name="about_up_to_date">已是最新版本</string>

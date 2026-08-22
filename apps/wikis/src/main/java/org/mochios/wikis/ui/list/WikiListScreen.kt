@@ -29,24 +29,17 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.RssFeed
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -72,15 +65,24 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
-import org.mochios.wikis.ui.components.WikisSidebar
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -116,18 +118,30 @@ fun WikiListScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            WikisSidebar(
-                currentRoute = WikisApp.HOME,
-                onNavigate = { route ->
+        header = { DrawerTitle(stringResource(R.string.wikis_sidebar_header)) },
+        items = emptyList(),
+        allItem = DrawerItem(
+            id = WikisApp.HOME,
+            title = stringResource(R.string.wikis_sidebar_all),
+            icon = Icons.Default.Book,
+        ),
+        selectedId = WikisApp.HOME,
+        onItemClick = { drawerScope.launch { drawerState.close() } },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(R.string.wikis_sidebar_find),
+                icon = Icons.Default.Search,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
-                    if (route != WikisApp.HOME) {
-                        navController.navigate(route)
-                    }
+                    navController.navigate(WikisApp.FIND)
                 },
-                onCreateWiki = {
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.wikis_sidebar_create),
+                icon = Icons.Default.Add,
+                onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(WikisApp.CREATE)
                 },
@@ -140,7 +154,7 @@ fun WikiListScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.wikis_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.wikis_open_sidebar),
@@ -149,7 +163,7 @@ fun WikiListScreen(
                     },
                     actions = {
                         Box {
-                            IconButton(onClick = { showOverflow = true }) {
+                            MochiIconButton(onClick = { showOverflow = true }) {
                                 Icon(
                                     Icons.Default.MoreHoriz,
                                     contentDescription = stringResource(MochiR.string.common_more_options),
@@ -252,13 +266,14 @@ fun WikiListScreen(
 
     val candidate = uiState.unsubscribeCandidate
     if (candidate != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.cancelUnsubscribe() },
             title = stringResource(R.string.wikis_unsubscribe_confirm_title),
-            message = stringResource(R.string.wikis_unsubscribe_confirm_message, candidate.name),
-            confirmLabel = stringResource(R.string.wikis_unsubscribe_action),
-            isDestructive = true,
+            text = stringResource(R.string.wikis_unsubscribe_confirm_message, candidate.name),
+            confirmText = stringResource(R.string.wikis_unsubscribe_action),
             onConfirm = { viewModel.confirmUnsubscribe() },
-            onDismiss = { viewModel.cancelUnsubscribe() },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
     if (showAbout) {
@@ -301,7 +316,7 @@ private fun ErrorState(message: String, onRetry: () -> Unit) {
                 color = MaterialTheme.colorScheme.error,
             )
             Spacer(modifier = Modifier.height(8.dp))
-            TextButton(onClick = onRetry) {
+            MochiTextButton(onClick = onRetry) {
                 Text(stringResource(MochiR.string.common_retry))
             }
         }
@@ -347,7 +362,7 @@ private fun WikiCard(
     }
     var showMenu by remember { mutableStateOf(false) }
 
-    Card(
+    MochiCard(
         onClick = onOpen,
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
@@ -391,7 +406,7 @@ private fun WikiCard(
             }
             if (isSubscribed) {
                 Box {
-                    IconButton(onClick = { showMenu = true }) {
+                    MochiIconButton(onClick = { showMenu = true }) {
                         Icon(
                             Icons.Default.MoreHoriz,
                             contentDescription = stringResource(MochiR.string.common_more_options),
@@ -459,7 +474,7 @@ private fun EmptyWikis(
         }
 
         item("search") {
-            OutlinedTextField(
+            MochiTextField(
                 value = state.searchQuery,
                 onValueChange = onQueryChange,
                 placeholder = { Text(stringResource(R.string.wikis_search_placeholder)) },
@@ -470,7 +485,7 @@ private fun EmptyWikis(
         }
 
         item("create") {
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onCreate,
                 modifier = Modifier.fillMaxWidth(),
             ) {
@@ -552,7 +567,7 @@ private fun SubscribableRow(
     isSubscribing: Boolean,
     onSubscribe: () -> Unit,
 ) {
-    Card(
+    MochiCard(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
@@ -589,7 +604,7 @@ private fun SubscribableRow(
                     )
                 }
             }
-            Button(
+            MochiButton(
                 onClick = onSubscribe,
                 enabled = !isSubscribing,
             ) {

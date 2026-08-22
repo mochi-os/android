@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung தொலைபேசிகளில், அமைப்புகள் → சாதன பராமரிப்பு → உறங்கும் பயன்பாடுகள் என்பதையும் சரிபார்த்து, பட்டியலிடப்பட்டிருந்தால் Mochi-ஐ அகற்றவும்.</string>
     <string name="oem_hint_allow">பின்னணியை அனுமதி</string>
     <string name="oem_hint_dismiss">மீண்டும் காட்ட வேண்டாம்</string>
-    <string name="about_title">Android-க்கான Mochi கிளையன்ட்</string>
+    <string name="about_title">Mochi கிளையன்ட்</string>
     <string name="about_version">பதிப்பு %1$s</string>
     <string name="about_check_updates">புதுப்பிப்புகளைச் சரிபார்க்கவும்</string>
     <string name="about_up_to_date">புதுப்பித்த நிலையில் உள்ளது</string>

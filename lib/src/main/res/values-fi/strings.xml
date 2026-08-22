@@ -245,7 +245,7 @@
     <string name="oem_hint_allow">Salli taustakäyttö</string>
     <string name="oem_hint_dismiss">Älä näytä uudelleen</string>
     <string name="about_label">Tietoja</string>
-    <string name="about_title">Mochi-asiakassovellus Androidille</string>
+    <string name="about_title">Mochi-asiakassovellus</string>
     <string name="about_version">Versio %1$s</string>
     <string name="about_check_updates">Tarkista päivitykset</string>
     <string name="about_up_to_date">Ajan tasalla</string>

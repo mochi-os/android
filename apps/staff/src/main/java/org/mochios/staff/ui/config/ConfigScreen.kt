@@ -20,15 +20,11 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -49,6 +45,9 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 
 /**
@@ -191,9 +190,8 @@ private fun ConfigBody(
 
 @Composable
 private fun ConfigCard(title: String, content: @Composable () -> Unit) {
-    Card(
+    MochiCard(
         shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -225,7 +223,7 @@ private fun NumberField(
         onSave = onSave,
         suffix = suffix,
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.local[key].orEmpty(),
             onValueChange = { v -> onLocalChange(key, v.filter { it.isDigit() || it == '-' || it == '.' }) },
             singleLine = true,
@@ -249,7 +247,7 @@ private fun TextField(
         state = state,
         onSave = onSave,
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.local[key].orEmpty(),
             onValueChange = { v -> onLocalChange(key, v) },
             singleLine = true,
@@ -272,7 +270,7 @@ private fun SecretField(
         state = state,
         onSave = onSave,
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = state.local[key].orEmpty(),
             onValueChange = { v -> onLocalChange(key, v) },
             singleLine = true,
@@ -320,7 +318,7 @@ private fun FieldRow(
         }
         if (changed) {
             Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
-                Button(onClick = { onSave(key) }, enabled = !isSaving) {
+                MochiButton(onClick = { onSave(key) }, enabled = !isSaving) {
                     if (isSaving) {
                         CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                     } else {

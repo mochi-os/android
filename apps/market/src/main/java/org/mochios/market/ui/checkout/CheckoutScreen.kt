@@ -25,10 +25,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -37,7 +34,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -60,8 +56,11 @@ import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiScaffold
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
@@ -158,7 +157,7 @@ private fun SubscriptionBody(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+        MochiCard(shape = RoundedCornerShape(10.dp)) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.market_checkout_subscribe_intro),
@@ -182,7 +181,7 @@ private fun SubscriptionBody(
                 }
             }
         }
-        Button(
+        MochiButton(
             onClick = onSubscribe,
             enabled = !submitting,
             modifier = Modifier.fillMaxWidth().height(48.dp),
@@ -283,7 +282,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
             deliveryIsShipping = state.delivery == DeliveryMethod.SHIPPING,
         )
 
-        Button(
+        MochiButton(
             onClick = { viewModel.submit() },
             enabled = state.delivery != null && !state.submitting && pwywAmountOk,
             modifier = Modifier.fillMaxWidth().height(48.dp),
@@ -320,7 +319,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
 
 @Composable
 private fun ListingSummaryCard(listing: Listing, itemPrice: Long, currency: Currency) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -370,7 +369,7 @@ private fun PwywAmountInput(
 ) {
     val decimals = currencyDecimals(currency)
     val label = stringResource(R.string.market_checkout_pwyw_label, formatPrice(minimumPrice, currency))
-    OutlinedTextField(
+    MochiTextField(
         value = value,
         onValueChange = { input ->
             // Accept digits + optional decimal mark; up to N decimals.
@@ -424,7 +423,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             stringResource(R.string.market_checkout_address_heading),
             style = MaterialTheme.typography.labelLarge,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = state.addressCountry,
             onValueChange = {
                 onChange(it, state.addressName, state.addressLine1, state.addressLine2,
@@ -434,7 +433,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = state.addressName,
             onValueChange = {
                 onChange(state.addressCountry, it, state.addressLine1, state.addressLine2,
@@ -444,7 +443,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = state.addressLine1,
             onValueChange = {
                 onChange(state.addressCountry, state.addressName, it, state.addressLine2,
@@ -454,7 +453,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        OutlinedTextField(
+        MochiTextField(
             value = state.addressLine2,
             onValueChange = {
                 onChange(state.addressCountry, state.addressName, state.addressLine1, it,
@@ -465,7 +464,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             modifier = Modifier.fillMaxWidth(),
         )
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedTextField(
+            MochiTextField(
                 value = state.addressCity,
                 onValueChange = {
                     onChange(state.addressCountry, state.addressName, state.addressLine1, state.addressLine2,
@@ -475,7 +474,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
                 singleLine = true,
                 modifier = Modifier.weight(1f),
             )
-            OutlinedTextField(
+            MochiTextField(
                 value = state.addressRegion,
                 onValueChange = {
                     onChange(state.addressCountry, state.addressName, state.addressLine1, state.addressLine2,
@@ -486,7 +485,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
                 modifier = Modifier.weight(1f),
             )
         }
-        OutlinedTextField(
+        MochiTextField(
             value = state.addressPostcode,
             onValueChange = {
                 onChange(state.addressCountry, state.addressName, state.addressLine1, state.addressLine2,
@@ -527,7 +526,7 @@ private fun ShippingZoneDropdown(
             style = MaterialTheme.typography.labelLarge,
         )
         ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }) {
-            OutlinedTextField(
+            MochiTextField(
                 value = display,
                 onValueChange = {},
                 readOnly = true,
@@ -577,7 +576,7 @@ private fun PricingSummary(
     currency: Currency,
     deliveryIsShipping: Boolean,
 ) {
-    Card(shape = RoundedCornerShape(10.dp), colors = CardDefaults.outlinedCardColors()) {
+    MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 stringResource(R.string.market_checkout_summary),

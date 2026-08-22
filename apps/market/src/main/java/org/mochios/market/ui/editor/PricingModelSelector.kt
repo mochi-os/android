@@ -18,19 +18,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Event
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TimePicker
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.material3.rememberTimePickerState
@@ -47,8 +43,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -188,7 +188,7 @@ private fun CurrencyDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = currency.name,
             onValueChange = {},
             readOnly = true,
@@ -231,7 +231,7 @@ private fun IntervalDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = label,
             onValueChange = {},
             readOnly = true,
@@ -270,7 +270,7 @@ private fun DurationDropdown(
         expanded = expanded,
         onExpandedChange = { expanded = it },
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = stringResource(R.string.market_editor_days, days),
             onValueChange = {},
             readOnly = true,
@@ -313,7 +313,7 @@ private fun PriceField(
         )
     } else null
     Column(modifier = Modifier.fillMaxWidth()) {
-        OutlinedTextField(
+        MochiTextField(
             value = value,
             onValueChange = onChange,
             label = { Text(label) },
@@ -360,7 +360,7 @@ private fun StartTimeField(
     } ?: ""
 
     Column(modifier = Modifier.fillMaxWidth()) {
-        OutlinedTextField(
+        MochiTextField(
             value = display,
             onValueChange = {},
             readOnly = true,
@@ -368,14 +368,14 @@ private fun StartTimeField(
             trailingIcon = {
                 Row {
                     if (opensAt != null) {
-                        IconButton(onClick = { onChange(null) }) {
+                        MochiIconButton(onClick = { onChange(null) }) {
                             Icon(
                                 Icons.Default.Clear,
                                 contentDescription = stringResource(R.string.market_editor_start_time_clear),
                             )
                         }
                     }
-                    IconButton(onClick = { showDate = true }) {
+                    MochiIconButton(onClick = { showDate = true }) {
                         Icon(
                             Icons.Default.Event,
                             contentDescription = stringResource(R.string.market_editor_start_time),
@@ -400,7 +400,7 @@ private fun StartTimeField(
         DatePickerDialog(
             onDismissRequest = { showDate = false },
             confirmButton = {
-                TextButton(
+                MochiTextButton(
                     onClick = {
                         pickedDateMillis = dateState.selectedDateMillis
                         showDate = false
@@ -410,7 +410,7 @@ private fun StartTimeField(
                 ) { Text(stringResource(R.string.market_editor_start_time_next)) }
             },
             dismissButton = {
-                TextButton(onClick = { showDate = false }) {
+                MochiTextButton(onClick = { showDate = false }) {
                     Text(stringResource(MochiR.string.common_cancel))
                 }
             },
@@ -423,41 +423,36 @@ private fun StartTimeField(
             initialHour = initial.get(java.util.Calendar.HOUR_OF_DAY),
             initialMinute = initial.get(java.util.Calendar.MINUTE),
         )
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showTime = false },
-            title = { Text(stringResource(R.string.market_editor_start_time)) },
-            text = { TimePicker(state = timeState) },
-            confirmButton = {
-                TextButton(onClick = {
-                    val dm = pickedDateMillis
-                    if (dm != null) {
-                        // DatePicker returns UTC-midnight millis; read the
-                        // calendar date in UTC, then rebuild in the local zone
-                        // with the picked time so the epoch matches the user's
-                        // local datetime (as web's datetime-local does).
-                        val utc = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
-                            .apply { timeInMillis = dm }
-                        val local = java.util.Calendar.getInstance().apply {
-                            set(
-                                utc.get(java.util.Calendar.YEAR),
-                                utc.get(java.util.Calendar.MONTH),
-                                utc.get(java.util.Calendar.DAY_OF_MONTH),
-                                timeState.hour,
-                                timeState.minute,
-                                0,
-                            )
-                            set(java.util.Calendar.MILLISECOND, 0)
-                        }
-                        onChange(local.timeInMillis / 1000L)
+            title = stringResource(R.string.market_editor_start_time),
+            content = { TimePicker(state = timeState) },
+            confirmText = stringResource(MochiR.string.common_save),
+            onConfirm = {
+                val dm = pickedDateMillis
+                if (dm != null) {
+                    // DatePicker returns UTC-midnight millis; read the
+                    // calendar date in UTC, then rebuild in the local zone
+                    // with the picked time so the epoch matches the user's
+                    // local datetime (as web's datetime-local does).
+                    val utc = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC"))
+                        .apply { timeInMillis = dm }
+                    val local = java.util.Calendar.getInstance().apply {
+                        set(
+                            utc.get(java.util.Calendar.YEAR),
+                            utc.get(java.util.Calendar.MONTH),
+                            utc.get(java.util.Calendar.DAY_OF_MONTH),
+                            timeState.hour,
+                            timeState.minute,
+                            0,
+                        )
+                        set(java.util.Calendar.MILLISECOND, 0)
                     }
-                    showTime = false
-                }) { Text(stringResource(MochiR.string.common_save)) }
-            },
-            dismissButton = {
-                TextButton(onClick = { showTime = false }) {
-                    Text(stringResource(MochiR.string.common_cancel))
+                    onChange(local.timeInMillis / 1000L)
                 }
+                showTime = false
             },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }

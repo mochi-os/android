@@ -20,11 +20,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,11 +36,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.Truncate
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Replica
@@ -98,19 +98,20 @@ fun ReplicasTab(
 
     val toRemove = pendingRemove
     if (toRemove != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { pendingRemove = null },
             title = stringResource(R.string.wikis_replicas_remove_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_replicas_remove_confirm_message,
                 toRemove.name ?: toRemove.id,
             ),
-            confirmLabel = stringResource(R.string.wikis_replicas_remove_confirm_action),
-            isDestructive = true,
+            confirmText = stringResource(R.string.wikis_replicas_remove_confirm_action),
             onConfirm = {
                 viewModel.remove(toRemove.id)
                 pendingRemove = null
             },
-            onDismiss = { pendingRemove = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -129,9 +130,8 @@ private fun ReplicaCard(
         stringResource(R.string.wikis_replicas_never_synced)
     }
 
-    Card(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
     ) {
         Row(
             modifier = Modifier
@@ -160,7 +160,7 @@ private fun ReplicaCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            IconButton(
+            MochiIconButton(
                 onClick = onRemove,
                 enabled = !isRemoving,
             ) {

@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung утсан дээр мөн Тохиргоо → Төхөөрөмжийн арчилгаа → Унтаа аппууд хэсгийг шалгаж, Mochi жагсаалтад байвал хасна уу.</string>
     <string name="oem_hint_allow">Дэвсгэрийг зөвшөөрөх</string>
     <string name="oem_hint_dismiss">Дахин харуулахгүй</string>
-    <string name="about_title">Mochi-н Android клиент</string>
+    <string name="about_title">Mochi-н клиент</string>
     <string name="about_version">Хувилбар %1$s</string>
     <string name="about_check_updates">Шинэчлэлт шалгах</string>
     <string name="about_up_to_date">Шинэчлэгдсэн</string>

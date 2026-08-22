@@ -26,17 +26,10 @@ import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.InsertDriveFile
 import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.VideoFile
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -54,6 +47,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.DisputeEvidence
 import org.mochios.market.ui.components.StatusBadge
@@ -86,25 +83,21 @@ fun DisputeResponseDialog(
         if (uris.isNotEmpty()) evidence.addAll(uris)
     }
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(stringResource(R.string.market_dispute_dialog_title))
-                Spacer(Modifier.size(8.dp))
+        title = stringResource(R.string.market_dispute_dialog_title),
+        content = {
+            Column {
                 if (disputeStatus.isNotBlank()) {
                     StatusBadge(status = disputeStatus)
+                    Spacer(Modifier.height(12.dp))
                 }
-            }
-        },
-        text = {
-            Column {
                 val fileEvidence = existingEvidence.filter { it.name.isNotBlank() || it.url.isNotBlank() }
                 if (fileEvidence.isNotEmpty()) {
                     SubmittedEvidenceSection(evidence = fileEvidence)
                     Spacer(Modifier.height(12.dp))
                 }
-                OutlinedTextField(
+                MochiTextField(
                     value = response,
                     onValueChange = { response = it },
                     label = { Text(stringResource(R.string.market_dispute_dialog_response_label)) },
@@ -117,7 +110,7 @@ fun DisputeResponseDialog(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         enabled = !submitting,
                         onClick = { pickFiles.launch("*/*") },
                     ) {
@@ -146,31 +139,16 @@ fun DisputeResponseDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                enabled = !submitting && response.isNotBlank(),
-                onClick = { onSubmit(response.trim(), evidence.toList()) },
-            ) {
-                if (submitting) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                    Spacer(Modifier.size(8.dp))
-                    Text(stringResource(R.string.market_dispute_dialog_submitting))
-                } else {
-                    Text(stringResource(R.string.market_dispute_dialog_submit))
-                }
-            }
+        confirmText = if (submitting) {
+            stringResource(R.string.market_dispute_dialog_submitting)
+        } else {
+            stringResource(R.string.market_dispute_dialog_submit)
         },
-        dismissButton = {
-            TextButton(
-                enabled = !submitting,
-                onClick = { if (!submitting) onDismiss() },
-            ) {
-                Text(stringResource(R.string.market_dispute_dialog_cancel))
-            }
-        },
+        onConfirm = { onSubmit(response.trim(), evidence.toList()) },
+        confirmEnabled = response.isNotBlank(),
+        confirmLoading = submitting,
+        dismissText = stringResource(R.string.market_dispute_dialog_cancel),
+        dismissEnabled = !submitting,
     )
 }
 
@@ -184,7 +162,7 @@ private fun SubmittedEvidenceSection(evidence: List<DisputeEvidence>) {
         fontWeight = FontWeight.SemiBold,
     )
     Spacer(Modifier.height(8.dp))
-    Card(colors = CardDefaults.outlinedCardColors(), modifier = Modifier.fillMaxWidth()) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column {
             evidence.forEachIndexed { index, item ->
                 if (index > 0) HorizontalDivider()

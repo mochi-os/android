@@ -28,28 +28,20 @@ import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Group
 import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Schedule
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedCard
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -61,7 +53,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -70,11 +61,16 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.AttachmentGallery
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.forums.R
@@ -131,7 +127,7 @@ fun ForumModerationScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.forums_moderation_title)) },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -196,14 +192,13 @@ fun ForumModerationScreen(
 }
 
 /**
- * The card every moderation entry sits in: bordered, with no fill, so a list
- * reads as entries on the page rather than a stack of filled blocks.
+ * The card every moderation entry sits in: no border, separated from the page
+ * by its own tone, like every other card.
  */
 @Composable
 private fun ModerationCard(content: @Composable ColumnScope.() -> Unit) {
-    OutlinedCard(
+    MochiCard(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(containerColor = Color.Transparent),
         content = content,
     )
 }
@@ -368,37 +363,29 @@ private fun QueueActions(
     val name = authorName.ifBlank { stringResource(R.string.forums_post_default_author) }
 
     FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = onReject,
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-            ),
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.forums_moderation_reject))
         }
         // Outlined with a primary tint, the way General settings tints Delete
         // error: same shape as its siblings, colour carrying the meaning.
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = onApprove,
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.primary,
-            ),
+            tone = MochiButtonTone.Primary,
         ) {
             Text(stringResource(R.string.forums_post_approve))
         }
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { confirming = RestrictAction.MUTE },
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-            ),
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.forums_moderation_restriction_type_muted))
         }
-        OutlinedButton(
+        MochiOutlinedButton(
             onClick = { confirming = RestrictAction.BAN },
-            colors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-            ),
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.forums_moderation_restriction_type_banned))
         }
@@ -406,27 +393,27 @@ private fun QueueActions(
 
     confirming?.let { action ->
         val mute = action == RestrictAction.MUTE
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { confirming = null },
             title = stringResource(
                 if (mute) R.string.forums_moderation_mute_title
                 else R.string.forums_moderation_ban_title,
                 name,
             ),
-            message = stringResource(
+            text = stringResource(
                 if (mute) R.string.forums_moderation_mute_message
                 else R.string.forums_moderation_ban_message
             ),
-            confirmLabel = stringResource(
+            confirmText = stringResource(
                 if (mute) R.string.forums_moderation_restriction_type_muted
                 else R.string.forums_moderation_restriction_type_banned
             ),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
-            isDestructive = true,
             onConfirm = {
                 confirming = null
                 if (mute) onMute() else onBan()
             },
-            onDismiss = { confirming = null },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -612,19 +599,15 @@ private fun ReportCard(
             if (report.status == "pending") {
                 Spacer(Modifier.height(8.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = { onResolve("ignored") },
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                        ),
+                        tone = MochiButtonTone.Neutral,
                     ) {
                         Text(stringResource(R.string.forums_moderation_report_dismiss))
                     }
-                    OutlinedButton(
+                    MochiOutlinedButton(
                         onClick = { onResolve("removed") },
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                        ),
+                        tone = MochiButtonTone.Neutral,
                     ) {
                         Text(stringResource(R.string.forums_post_remove))
                     }
@@ -832,11 +815,9 @@ private fun RestrictionCard(
                     )
                 }
                 Spacer(Modifier.width(8.dp))
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = { confirming = true },
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                    ),
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     Text(stringResource(R.string.forums_moderation_restriction_remove))
                 }
@@ -853,19 +834,19 @@ private fun RestrictionCard(
     }
 
     if (confirming) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { confirming = false },
             title = stringResource(
                 R.string.forums_moderation_restriction_remove_title,
                 title,
             ),
-            message = stringResource(R.string.forums_moderation_restriction_remove_message),
-            confirmLabel = stringResource(R.string.forums_moderation_restriction_remove),
-            dismissLabel = stringResource(MochiR.string.common_cancel),
+            text = stringResource(R.string.forums_moderation_restriction_remove_message),
+            confirmText = stringResource(R.string.forums_moderation_restriction_remove),
             onConfirm = {
                 confirming = false
                 onRemove()
             },
-            onDismiss = { confirming = false },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -905,12 +886,12 @@ private fun AddRestrictionDialog(
     )
     val typeLabel = typeLabels.firstOrNull { it.first == type }?.second ?: ""
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.forums_moderation_restriction_add)) },
-        text = {
+        title = stringResource(R.string.forums_moderation_restriction_add),
+        content = {
             Column {
-                OutlinedTextField(
+                MochiTextField(
                     value = user,
                     onValueChange = { user = it },
                     label = { Text(stringResource(R.string.forums_moderation_restriction_user)) },
@@ -922,7 +903,7 @@ private fun AddRestrictionDialog(
                     expanded = typeExpanded,
                     onExpandedChange = { typeExpanded = it },
                 ) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = typeLabel,
                         onValueChange = {},
                         readOnly = true,
@@ -946,7 +927,7 @@ private fun AddRestrictionDialog(
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },
                     label = { Text(stringResource(R.string.forums_report_details)) },
@@ -955,7 +936,7 @@ private fun AddRestrictionDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                OutlinedTextField(
+                MochiTextField(
                     value = duration,
                     onValueChange = { duration = it.filter { c -> c.isDigit() } },
                     label = { Text(stringResource(R.string.forums_moderation_restriction_duration_seconds)) },
@@ -964,18 +945,9 @@ private fun AddRestrictionDialog(
                 )
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onConfirm(user.trim(), type, reason, duration.toLongOrNull()) },
-                enabled = user.isNotBlank(),
-            ) {
-                Text(stringResource(R.string.forums_moderation_restriction_add))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text(stringResource(MochiR.string.common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.forums_moderation_restriction_add),
+        onConfirm = { onConfirm(user.trim(), type, reason, duration.toLongOrNull()) },
+        confirmEnabled = user.isNotBlank(),
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

@@ -23,7 +23,6 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -43,9 +42,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -213,7 +214,7 @@ fun WikiCommentThread(
                     // text. Compose's Text preserves whitespace so newlines in
                     // raw `body` render the same as web's `whitespace-pre-wrap`.
                     if (editing) {
-                        OutlinedTextField(
+                        MochiTextField(
                             value = editBody,
                             onValueChange = { editBody = it },
                             modifier = Modifier.fillMaxWidth(),
@@ -224,10 +225,10 @@ fun WikiCommentThread(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.End,
                         ) {
-                            TextButton(onClick = { editing = false }) {
+                            MochiTextButton(onClick = { editing = false }) {
                                 Text(stringResource(R.string.wikis_comment_action_cancel))
                             }
-                            TextButton(
+                            MochiTextButton(
                                 onClick = {
                                     if (editBody.isNotBlank()) {
                                         onEdit?.invoke(comment.id, editBody.trim())
@@ -342,16 +343,17 @@ fun WikiCommentThread(
         }
 
         if (deleting) {
-            ConfirmDialog(
+            MochiAlertDialog(
+                onDismissRequest = { deleting = false },
                 title = stringResource(R.string.wikis_comment_delete_confirm_title),
-                message = stringResource(R.string.wikis_comment_delete_confirm_message),
-                confirmLabel = stringResource(R.string.wikis_comment_action_delete),
-                isDestructive = true,
+                text = stringResource(R.string.wikis_comment_delete_confirm_message),
+                confirmText = stringResource(R.string.wikis_comment_action_delete),
                 onConfirm = {
                     deleting = false
                     onDelete?.invoke(comment.id)
                 },
-                onDismiss = { deleting = false },
+                destructive = true,
+                dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
     }
@@ -363,7 +365,7 @@ private fun ActionChip(
     label: String,
     onClick: () -> Unit,
 ) {
-    TextButton(
+    MochiTextButton(
         onClick = onClick,
         contentPadding = androidx.compose.foundation.layout.PaddingValues(
             horizontal = 8.dp,

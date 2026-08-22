@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.DropdownMenu
@@ -26,23 +25,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
-import org.mochios.android.ui.theme.LocalEntityRadius
 
 /** Narrowest a menu may be, so short labels still read as a panel rather than a chip. */
 private val MenuMinWidth = 200.dp
-
-/** Menus round harder than list entities do, but still follow the user's radius setting. */
-private val MenuMinRadius = 16.dp
 
 /** Roomier than [MenuDefaults.DropdownMenuItemContentPadding], which leaves rows cramped. */
 private val ItemPadding = PaddingValues(horizontal = 16.dp, vertical = 6.dp)
 
 
 /**
- * A [DropdownMenu] with the app's rounded, tinted, shadowless container.
- * Container tone, 0dp elevation, floored radius and 16dp row padding depart
- * from `MenuTokens` deliberately - the tone replaces the shadow, so never
- * restore one without the other.
+ * A [DropdownMenu] with the app's rounded, tinted container - see
+ * [mochiPopupContainerColor], [mochiPopupShape] and [MochiPopupElevation].
+ * Container tone, floored radius and 16dp row padding depart from
+ * `MenuTokens` deliberately. The tone alone could not say which of two
+ * surfaces was in front, so the shadow is the spec's own.
  */
 @Composable
 fun MochiDropdownMenu(
@@ -54,7 +50,6 @@ fun MochiDropdownMenu(
     properties: PopupProperties = PopupProperties(focusable = true),
     content: @Composable ColumnScope.() -> Unit
 ) {
-    val radius = LocalEntityRadius.current.coerceAtLeast(MenuMinRadius)
     DropdownMenu(
         expanded = expanded,
         onDismissRequest = onDismissRequest,
@@ -62,9 +57,9 @@ fun MochiDropdownMenu(
         offset = offset,
         scrollState = scrollState,
         properties = properties,
-        shape = RoundedCornerShape(radius),
-        containerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
-        shadowElevation = 0.dp,
+        shape = mochiPopupShape(),
+        containerColor = mochiPopupContainerColor(),
+        shadowElevation = MochiPopupElevation,
         content = content
     )
 }

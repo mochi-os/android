@@ -244,7 +244,7 @@
     <string name="oem_hint_samsung_note">Samsung فونن تي، Settings → Device care → Sleeping apps پڻ ڏسو ۽ جيڪڏھن Mochi لسٽ ٿيل آھي ته ان کي ھٽايو.</string>
     <string name="oem_hint_allow">پس منظر جي اجازت ڏيو</string>
     <string name="oem_hint_dismiss">ٻيھر نه ڏيکاريو</string>
-    <string name="about_title">Android لاءِ Mochi ڪلائنٽ</string>
+    <string name="about_title">Mochi ڪلائنٽ</string>
     <string name="about_version">ورجن %1$s</string>
     <string name="about_check_updates">تازه ڪاريون ڏسو</string>
     <string name="about_up_to_date">تازو آھي</string>

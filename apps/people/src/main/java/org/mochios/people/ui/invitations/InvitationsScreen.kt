@@ -30,23 +30,16 @@ import androidx.compose.material.icons.filled.PersonAddAlt
 import androidx.compose.material.icons.filled.PersonOff
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
@@ -65,14 +58,23 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
-import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleDrawerItems
+import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -117,16 +119,15 @@ fun InvitationsScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            PeopleSidebar(
-                current = PeopleSidebarSection.INVITATIONS,
-                onSelect = { section ->
-                    drawerScope.launch { drawerState.close() }
-                    if (section != PeopleSidebarSection.INVITATIONS) onSwitchSection(section)
-                },
-            )
+        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        items = peopleDrawerItems(),
+        selectedId = PeopleSidebarSection.INVITATIONS.name,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            val section = peopleDrawerSection(item.id)
+            if (section != PeopleSidebarSection.INVITATIONS) onSwitchSection(section)
         },
     ) {
     Scaffold(
@@ -135,7 +136,7 @@ fun InvitationsScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.people_invitations_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                    MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                         Icon(
                             Icons.Default.Menu,
                             contentDescription = stringResource(R.string.people_open_sidebar),
@@ -144,7 +145,7 @@ fun InvitationsScreen(
                 },
                 actions = {
                     Box {
-                        IconButton(onClick = { showOverflow = true }) {
+                        MochiIconButton(onClick = { showOverflow = true }) {
                             Icon(
                                 Icons.Default.MoreVert,
                                 contentDescription = stringResource(MochiR.string.common_more_options),
@@ -175,7 +176,7 @@ fun InvitationsScreen(
         ) {
             // Search bar — always visible to mirror the web, which keeps the
             // input pinned to the page header.
-            OutlinedTextField(
+            MochiTextField(
                 value = uiState.searchQuery,
                 onValueChange = viewModel::setSearchQuery,
                 placeholder = { Text(stringResource(R.string.people_friends_search_placeholder)) },
@@ -214,7 +215,7 @@ fun InvitationsScreen(
                                 style = MaterialTheme.typography.bodyLarge,
                                 color = MaterialTheme.colorScheme.error,
                             )
-                            TextButton(onClick = { viewModel.refresh() }) {
+                            MochiTextButton(onClick = { viewModel.refresh() }) {
                                 Text(stringResource(MochiR.string.common_retry))
                             }
                         }
@@ -234,11 +235,11 @@ fun InvitationsScreen(
                                 text = stringResource(R.string.people_friends_received_tab),
                                 count = received.size,
                                 action = {
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = viewModel::acceptAll,
                                         enabled = !uiState.batchInProgress,
                                     ) { Text(stringResource(R.string.people_invitations_accept_all)) }
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = viewModel::declineAll,
                                         enabled = !uiState.batchInProgress,
                                     ) { Text(stringResource(R.string.people_invitations_decline_all)) }
@@ -260,7 +261,7 @@ fun InvitationsScreen(
                                 text = stringResource(R.string.people_friends_sent_tab),
                                 count = sent.size,
                                 action = {
-                                    TextButton(
+                                    MochiTextButton(
                                         onClick = viewModel::cancelAll,
                                         enabled = !uiState.batchInProgress,
                                     ) { Text(stringResource(R.string.people_invitations_cancel_all)) }
@@ -366,7 +367,7 @@ private fun ReceivedRow(
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Medium,
         )
-        Button(onClick = onAccept) {
+        MochiButton(onClick = onAccept) {
             Icon(
                 Icons.Default.Check,
                 contentDescription = null,
@@ -374,7 +375,7 @@ private fun ReceivedRow(
             )
             Text(stringResource(R.string.people_invitations_accept))
         }
-        OutlinedButton(onClick = onDecline) {
+        MochiOutlinedButton(onClick = onDecline) {
             Icon(
                 Icons.Default.PersonOff,
                 contentDescription = null,
@@ -416,7 +417,7 @@ private fun SentRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        OutlinedButton(onClick = onCancel) {
+        MochiOutlinedButton(onClick = onCancel) {
             Icon(
                 Icons.Default.Close,
                 contentDescription = null,
@@ -478,10 +479,10 @@ private fun InviteSettingsDialog(
         ),
     )
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.people_invitations_incoming)) },
-        text = {
+        title = stringResource(R.string.people_invitations_incoming),
+        content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 for (option in options) {
                     Row(
@@ -512,27 +513,11 @@ private fun InviteSettingsDialog(
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onSave(selected) },
-                enabled = !isSaving,
-            ) {
-                if (isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier
-                            .height(16.dp)
-                            .padding(end = 8.dp),
-                        strokeWidth = 2.dp,
-                    )
-                }
-                Text(stringResource(R.string.people_common_save))
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !isSaving) {
-                Text(stringResource(R.string.people_common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.people_common_save),
+        onConfirm = { onSave(selected) },
+        confirmLoading = isSaving,
+        dismissText = stringResource(R.string.people_common_cancel),
+        dismissEnabled = !isSaving,
     )
 }
 

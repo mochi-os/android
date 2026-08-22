@@ -192,7 +192,7 @@
     <string name="oem_hint_allow">Autoriser l\'arrière-plan</string>
     <string name="oem_hint_dismiss">Ne plus afficher</string>
     <string name="about_label">À propos</string>
-    <string name="about_title">Client Mochi pour Android</string>
+    <string name="about_title">Client Mochi</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_check_updates">Vérifier les mises à jour</string>
     <string name="about_up_to_date">À jour</string>

@@ -243,7 +243,7 @@
     <string name="oem_hint_allow">Arxa fona icazə ver</string>
     <string name="oem_hint_dismiss">Bir daha göstərmə</string>
     <string name="about_label">Haqqında</string>
-    <string name="about_title">Android üçün Mochi Klienti</string>
+    <string name="about_title">Mochi Klienti</string>
     <string name="about_version">Versiya %1$s</string>
     <string name="about_check_updates">Yeniləmələri yoxla</string>
     <string name="about_up_to_date">Ən son versiyadır</string>

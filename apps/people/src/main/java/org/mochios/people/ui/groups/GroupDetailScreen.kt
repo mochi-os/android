@@ -28,22 +28,17 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -61,12 +56,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
@@ -119,7 +117,7 @@ fun GroupDetailScreen(
                     )
                 },
                 navigationIcon = {
-                    IconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -129,14 +127,14 @@ fun GroupDetailScreen(
                 actions = {
                     NotificationBell(onClick = onOpenNotifications)
                     if (state.group != null) {
-                        IconButton(onClick = onAddMember) {
+                        MochiIconButton(onClick = onAddMember) {
                             Icon(
                                 Icons.Default.PersonAdd,
                                 contentDescription = stringResource(R.string.people_member_add),
                             )
                         }
                         Box {
-                            IconButton(onClick = { overflowOpen = true }) {
+                            MochiIconButton(onClick = { overflowOpen = true }) {
                                 Icon(
                                     Icons.Default.MoreVert,
                                     contentDescription = stringResource(R.string.people_group_actions),
@@ -215,31 +213,33 @@ fun GroupDetailScreen(
     }
 
     if (state.deleteConfirmOpen) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::closeDeleteConfirm,
             title = stringResource(R.string.people_group_delete),
-            message = stringResource(
+            text = stringResource(
                 R.string.people_group_delete_confirm,
                 state.group?.name.orEmpty(),
             ),
-            confirmLabel = stringResource(R.string.people_common_delete),
-            isDestructive = true,
+            confirmText = stringResource(R.string.people_common_delete),
             onConfirm = { viewModel.delete() },
-            onDismiss = viewModel::closeDeleteConfirm,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
     val pendingRemoval = state.removeMemberTarget
     if (pendingRemoval != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelRemoveMember,
             title = stringResource(R.string.people_member_remove_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.people_member_remove_confirm,
                 pendingRemoval.name,
             ),
-            confirmLabel = stringResource(R.string.people_member_remove),
-            isDestructive = true,
+            confirmText = stringResource(R.string.people_member_remove),
             onConfirm = { viewModel.removeMember(pendingRemoval) },
-            onDismiss = viewModel::cancelRemoveMember,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -337,7 +337,7 @@ private fun GroupDetailContent(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                         Spacer(Modifier.height(16.dp))
-                        Button(onClick = onAddMember) {
+                        MochiButton(onClick = onAddMember) {
                             Icon(
                                 Icons.Default.PersonAdd,
                                 contentDescription = null,
@@ -482,7 +482,7 @@ private fun MemberRow(
             },
         )
         Spacer(Modifier.width(4.dp))
-        IconButton(onClick = onRemove) {
+        MochiIconButton(onClick = onRemove) {
             Icon(
                 Icons.Default.Close,
                 contentDescription = stringResource(
@@ -517,11 +517,11 @@ private fun SingleFieldDialog(
     onSave: (String) -> Unit,
 ) {
     var text by rememberSaveable(initial) { mutableStateOf(initial) }
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!saving) onDismiss() },
-        title = { Text(title) },
-        text = {
-            OutlinedTextField(
+        title = title,
+        content = {
+            MochiTextField(
                 value = text,
                 onValueChange = { text = it },
                 label = { Text(label) },
@@ -531,25 +531,11 @@ private fun SingleFieldDialog(
                 modifier = Modifier.fillMaxWidth(),
             )
         },
-        confirmButton = {
-            TextButton(
-                onClick = { onSave(text) },
-                enabled = !saving,
-            ) {
-                if (saving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Text(stringResource(R.string.people_common_save))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !saving) {
-                Text(stringResource(R.string.people_common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.people_common_save),
+        onConfirm = { onSave(text) },
+        confirmLoading = saving,
+        dismissText = stringResource(R.string.people_common_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !saving,
     )
 }

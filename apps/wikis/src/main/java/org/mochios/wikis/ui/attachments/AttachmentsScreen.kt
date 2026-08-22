@@ -63,20 +63,16 @@ import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Upload
 import androidx.compose.material.icons.filled.Videocam
-import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
@@ -105,12 +101,16 @@ import coil3.compose.AsyncImage
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.AttachmentCaptionDialog
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.FileStore
 import org.mochios.android.util.webUri
@@ -271,16 +271,17 @@ fun AttachmentsScreen(
     if (pending != null) {
         val deleteSuccess = stringResource(R.string.wikis_attachments_delete_success)
         val deleteFailed = stringResource(R.string.wikis_attachments_delete_failed)
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.cancelDelete() },
             title = stringResource(R.string.wikis_attachments_delete_confirm_title),
-            message = stringResource(
+            text = stringResource(
                 R.string.wikis_attachments_delete_confirm_message,
                 pending.name,
             ),
-            confirmLabel = stringResource(MochiR.string.common_delete),
-            isDestructive = true,
+            confirmText = stringResource(MochiR.string.common_delete),
             onConfirm = { viewModel.confirmDelete(deleteSuccess, deleteFailed) },
-            onDismiss = { viewModel.cancelDelete() },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 
@@ -335,7 +336,7 @@ private fun AttachmentsTopBar(
             }
         },
         navigationIcon = {
-            IconButton(onClick = onBack) {
+            MochiIconButton(onClick = onBack) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = stringResource(MochiR.string.common_back),
@@ -381,7 +382,7 @@ private fun AttachmentsBody(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.End,
         ) {
-            Button(
+            MochiButton(
                 onClick = onUpload,
                 enabled = !state.isUploading,
             ) {
@@ -435,7 +436,7 @@ private fun AttachmentsBody(
                         title = stringResource(R.string.wikis_attachments_empty_title),
                         subtitle = stringResource(R.string.wikis_attachments_empty_description),
                         action = {
-                            Button(onClick = onUpload, enabled = !state.isUploading) {
+                            MochiButton(onClick = onUpload, enabled = !state.isUploading) {
                                 Icon(
                                     Icons.Default.Upload,
                                     contentDescription = null,
@@ -453,7 +454,7 @@ private fun AttachmentsBody(
                         title = stringResource(R.string.wikis_attachments_no_results_title),
                         subtitle = stringResource(R.string.wikis_attachments_no_results_description),
                         action = {
-                            TextButton(onClick = onClearSearch) {
+                            MochiTextButton(onClick = onClearSearch) {
                                 Text(stringResource(R.string.wikis_attachments_search_clear))
                             }
                         },
@@ -522,14 +523,14 @@ private fun AttachmentsToolbar(
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        OutlinedTextField(
+        MochiTextField(
             value = searchQuery,
             onValueChange = onSearchChange,
             placeholder = { Text(stringResource(R.string.wikis_attachments_search_placeholder)) },
             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
             trailingIcon = if (searchQuery.isNotEmpty()) {
                 {
-                    IconButton(onClick = onClearSearch) {
+                    MochiIconButton(onClick = onClearSearch) {
                         Icon(
                             Icons.Default.Close,
                             contentDescription = stringResource(R.string.wikis_attachments_search_clear),
@@ -579,7 +580,7 @@ private fun FilterMenu(
     }
 
     Box(modifier = modifier) {
-        TextButton(
+        MochiTextButton(
             onClick = { expanded = true },
             modifier = Modifier.fillMaxWidth(),
         ) {
@@ -621,7 +622,7 @@ private fun SortMenu(
         AttachmentsSort.SIZE -> stringResource(R.string.wikis_attachments_sort_size)
     }
     Box(modifier = modifier) {
-        TextButton(
+        MochiTextButton(
             onClick = { expanded = true },
             modifier = Modifier.fillMaxWidth(),
         ) {
@@ -656,7 +657,7 @@ private fun ViewModeToggle(
     onChange: (AttachmentsViewMode) -> Unit,
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-        IconButton(
+        MochiIconButton(
             onClick = { onChange(AttachmentsViewMode.GRID) },
         ) {
             Icon(
@@ -669,7 +670,7 @@ private fun ViewModeToggle(
                 },
             )
         }
-        IconButton(
+        MochiIconButton(
             onClick = { onChange(AttachmentsViewMode.LIST) },
         ) {
             Icon(
@@ -972,7 +973,7 @@ private fun AttachmentListRow(
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        IconButton(onClick = onOpen) {
+        MochiIconButton(onClick = onOpen) {
             Icon(
                 Icons.Default.Download,
                 contentDescription = stringResource(R.string.wikis_attachments_open),
@@ -980,7 +981,7 @@ private fun AttachmentListRow(
             )
         }
         if (isImage(attachment.type)) {
-            IconButton(onClick = onRequestCaption) {
+            MochiIconButton(onClick = onRequestCaption) {
                 Icon(
                     Icons.Default.ClosedCaption,
                     contentDescription = stringResource(
@@ -992,7 +993,7 @@ private fun AttachmentListRow(
                 )
             }
         }
-        IconButton(
+        MochiIconButton(
             onClick = {
                 clipboard.setText(AnnotatedString(buildMarkdown(attachment)))
                 copied = true
@@ -1009,7 +1010,7 @@ private fun AttachmentListRow(
                 },
             )
         }
-        IconButton(
+        MochiIconButton(
             onClick = onRequestDelete,
             enabled = !isDeleting,
         ) {

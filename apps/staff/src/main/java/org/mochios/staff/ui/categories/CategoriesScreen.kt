@@ -21,7 +21,6 @@ import androidx.compose.material.icons.filled.Category
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -39,10 +38,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.staff.R
 import org.mochios.staff.model.Category
 import org.mochios.staff.ui.components.StaffStatusBadge
@@ -110,13 +111,14 @@ fun CategoriesScreen(
     // Delete confirmation
     val deleteTarget = state.deleteTarget
     if (deleteTarget != null) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = viewModel::cancelDelete,
             title = stringResource(R.string.staff_categories_delete_title),
-            message = stringResource(R.string.staff_categories_delete_desc, deleteTarget.name),
-            confirmLabel = stringResource(R.string.staff_categories_delete_confirm),
-            isDestructive = true,
+            text = stringResource(R.string.staff_categories_delete_desc, deleteTarget.name),
+            confirmText = stringResource(R.string.staff_categories_delete_confirm),
             onConfirm = viewModel::confirmDelete,
-            onDismiss = viewModel::cancelDelete,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -250,10 +252,10 @@ private fun CategoryRow(
         }
         Spacer(modifier = Modifier.padding(top = 6.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedButton(onClick = onEdit) {
+            MochiOutlinedButton(onClick = onEdit) {
                 Text(stringResource(R.string.staff_categories_action_edit))
             }
-            OutlinedButton(onClick = onDelete) {
+            MochiOutlinedButton(onClick = onDelete) {
                 Text(stringResource(R.string.staff_categories_action_delete))
             }
             Spacer(modifier = Modifier.width(0.dp))

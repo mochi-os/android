@@ -37,9 +37,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -65,11 +63,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.chat.R
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatStatus
@@ -107,7 +107,7 @@ fun ChatListScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.chat_list_title)) },
                 actions = {
-                    IconButton(onClick = { viewModel.toggleSearch() }) {
+                    MochiIconButton(onClick = { viewModel.toggleSearch() }) {
                         Icon(
                             if (uiState.showSearch) Icons.Default.Close else Icons.Default.Search,
                             contentDescription = if (uiState.showSearch) {
@@ -118,7 +118,7 @@ fun ChatListScreen(
                         )
                     }
                     Box {
-                        IconButton(onClick = { showOverflow = true }) {
+                        MochiIconButton(onClick = { showOverflow = true }) {
                             Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.chat_list_more))
                         }
                         MochiDropdownMenu(
@@ -161,7 +161,7 @@ fun ChatListScreen(
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
                 if (uiState.showSearch) {
-                    OutlinedTextField(
+                    MochiTextField(
                         value = uiState.searchQuery,
                         onValueChange = viewModel::updateSearchQuery,
                         placeholder = { Text(stringResource(R.string.chat_list_search_placeholder)) },
@@ -270,7 +270,7 @@ private fun ChatRow(
             onClick = onClick,
             onLongClick = { showMenu = true },
             trailing = {
-                IconButton(onClick = { showMenu = true }) {
+                MochiIconButton(onClick = { showMenu = true }) {
                     Icon(
                         Icons.Default.MoreHoriz,
                         contentDescription = stringResource(MochiR.string.common_more_options)
@@ -317,17 +317,17 @@ private fun ChatRow(
     }
 
     if (showDeleteConfirm) {
-        ConfirmDialog(
+        MochiAlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
             title = deleteTitle,
-            message = deleteMessage,
-            confirmLabel = deleteLabel,
-            dismissLabel = cancelLabel,
-            isDestructive = true,
+            text = deleteMessage,
+            confirmText = deleteLabel,
             onConfirm = {
                 showDeleteConfirm = false
                 onDeleteLocally()
             },
-            onDismiss = { showDeleteConfirm = false }
+            destructive = true,
+            dismissText = cancelLabel,
         )
     }
 }

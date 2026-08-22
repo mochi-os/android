@@ -36,23 +36,16 @@ import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalNavigationDrawer
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -61,7 +54,6 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -89,12 +81,20 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
-import org.mochios.people.ui.components.PeopleSidebar
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleDrawerItems
+import org.mochios.people.ui.components.peopleDrawerSection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -123,16 +123,15 @@ fun ProfileScreen(
         }
     }
 
-    ModalNavigationDrawer(
+    MochiListDrawer(
         drawerState = drawerState,
-        drawerContent = {
-            PeopleSidebar(
-                current = PeopleSidebarSection.PROFILE,
-                onSelect = { section ->
-                    drawerScope.launch { drawerState.close() }
-                    if (section != PeopleSidebarSection.PROFILE) onSwitchSection(section)
-                },
-            )
+        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        items = peopleDrawerItems(),
+        selectedId = PeopleSidebarSection.PROFILE.name,
+        onItemClick = { item ->
+            drawerScope.launch { drawerState.close() }
+            val section = peopleDrawerSection(item.id)
+            if (section != PeopleSidebarSection.PROFILE) onSwitchSection(section)
         },
     ) {
         Scaffold(
@@ -140,7 +139,7 @@ fun ProfileScreen(
                 TopAppBar(
                     title = { Text(stringResource(R.string.people_profile_title)) },
                     navigationIcon = {
-                        IconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
+                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
                                 contentDescription = stringResource(R.string.people_open_sidebar),
@@ -149,7 +148,7 @@ fun ProfileScreen(
                     },
                     actions = {
                         if (state.info != null) {
-                            IconButton(onClick = { showPreview = true }) {
+                            MochiIconButton(onClick = { showPreview = true }) {
                                 Icon(
                                     Icons.Filled.Visibility,
                                     contentDescription = stringResource(R.string.people_profile_preview),
@@ -205,7 +204,7 @@ private fun ErrorBlock(padding: PaddingValues, onRetry: () -> Unit) {
             color = MaterialTheme.colorScheme.error,
         )
         Spacer(Modifier.height(12.dp))
-        Button(onClick = onRetry) {
+        MochiButton(onClick = onRetry) {
             Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
             Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.people_profile_retry))
@@ -310,15 +309,12 @@ private fun Editor(
     }
 
     showSizeWarning?.let { msg ->
-        AlertDialog(
+        MochiAlertDialog(
             onDismissRequest = { showSizeWarning = null },
-            title = { Text(stringResource(R.string.people_profile_file_too_large)) },
-            text = { Text(msg) },
-            confirmButton = {
-                TextButton(onClick = { showSizeWarning = null }) {
-                    Text(stringResource(R.string.people_common_close))
-                }
-            },
+            title = stringResource(R.string.people_profile_file_too_large),
+            text = msg,
+            confirmText = stringResource(R.string.people_common_close),
+            onConfirm = { showSizeWarning = null },
         )
     }
 }
@@ -530,11 +526,11 @@ private fun EditNameDialog(
     val trimmed = name.trim()
     val valid = trimmed.isNotEmpty()
 
-    AlertDialog(
+    MochiAlertDialog(
         onDismissRequest = { if (!isSaving) onDismiss() },
-        title = { Text(stringResource(R.string.people_profile_edit_name)) },
-        text = {
-            OutlinedTextField(
+        title = stringResource(R.string.people_profile_edit_name),
+        content = {
+            MochiTextField(
                 value = name,
                 onValueChange = { value -> name = value },
                 singleLine = true,
@@ -546,23 +542,13 @@ private fun EditNameDialog(
                 modifier = Modifier.fillMaxWidth(),
             )
         },
-        confirmButton = {
-            TextButton(onClick = { onSave(trimmed) }, enabled = valid && !isSaving) {
-                if (isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(ButtonDefaults.IconSize),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Text(stringResource(R.string.people_profile_save))
-                }
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss, enabled = !isSaving) {
-                Text(stringResource(R.string.people_common_cancel))
-            }
-        },
+        confirmText = stringResource(R.string.people_profile_save),
+        onConfirm = { onSave(trimmed) },
+        confirmEnabled = valid,
+        confirmLoading = isSaving,
+        dismissText = stringResource(R.string.people_common_cancel),
+        onDismiss = onDismiss,
+        dismissEnabled = !isSaving,
     )
 }
 
@@ -583,17 +569,13 @@ private fun BioSection(
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        OutlinedTextField(
+        MochiTextField(
             value = state.bioDraft,
             onValueChange = viewModel::setBioDraft,
             placeholder = { Text(stringResource(R.string.people_profile_markdown_supported)) },
             minLines = 4,
             maxLines = 10,
             isError = tooLong,
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
-                unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
-            ),
             modifier = Modifier.fillMaxWidth(),
         )
         // Bottom row: inline progress track (left, flexible) + character count
@@ -617,7 +599,7 @@ private fun BioSection(
                         else MaterialTheme.colorScheme.onSurfaceVariant,
             )
             val savingBio = state.savingField == ProfileField.BIO
-            Button(
+            MochiButton(
                 onClick = { viewModel.saveBio() },
                 enabled = dirty && !tooLong && !savingBio,
             ) {
@@ -700,7 +682,7 @@ private fun FaviconSection(
                     }
                 }
             }
-            OutlinedButton(
+            MochiOutlinedButton(
                 onClick = onUpload,
                 enabled = !uploading,
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
@@ -850,7 +832,7 @@ private fun ProfilePreviewDialog(
                 }
 
                 // ---- Close button (top-right X) ----
-                IconButton(
+                MochiIconButton(
                     onClick = onDismiss,
                     modifier = Modifier
                         .align(Alignment.TopEnd)

@@ -27,11 +27,8 @@ import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.ImageNotSupported
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.outlined.BookmarkBorder
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -53,6 +50,8 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.market.R
 import org.mochios.market.lib.ratingStars
@@ -80,12 +79,11 @@ fun ListingCard(
     onClick: (Listing) -> Unit = {},
     onToggleSave: (Listing) -> Unit = {},
 ) {
-    Card(
+    MochiCard(
         modifier = modifier
             .fillMaxWidth()
             .clickable { onClick(listing) },
         shape = RoundedCornerShape(LocalEntityRadius.current),
-        colors = CardDefaults.cardColors(),
     ) {
         Box(
             modifier = Modifier
@@ -338,7 +336,7 @@ private fun OverlayIconButton(
     // Drop IconButton's 48dp minimum touch target so the overlay actually
     // renders at [OverlayButtonSize] instead of reserving the larger area.
     CompositionLocalProvider(LocalMinimumInteractiveComponentSize provides Dp.Unspecified) {
-        IconButton(
+        MochiIconButton(
             onClick = onClick,
             modifier = modifier
                 .size(OverlayButtonSize)

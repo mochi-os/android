@@ -18,13 +18,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.StarOutline
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -37,6 +33,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.model.Review
 
@@ -55,9 +54,8 @@ fun WriteReviewForm(
     var rating by remember { mutableIntStateOf(5) }
     var body by remember { mutableStateOf("") }
 
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -73,14 +71,14 @@ fun WriteReviewForm(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             StarSelector(rating = rating, onRating = { rating = it })
-            OutlinedTextField(
+            MochiTextField(
                 value = body,
                 onValueChange = { body = it },
                 label = { Text(stringResource(R.string.market_purchase_review_body)) },
                 minLines = 3,
                 modifier = Modifier.fillMaxWidth(),
             )
-            Button(
+            MochiButton(
                 onClick = { onSubmit(rating, body) },
                 enabled = !submitting && rating in 1..5,
             ) {
@@ -116,9 +114,8 @@ private fun StarSelector(rating: Int, onRating: (Int) -> Unit) {
 
 @Composable
 private fun SubmittedReviewCard(review: Review, modifier: Modifier) {
-    Card(
+    MochiCard(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.outlinedCardColors(),
     ) {
         Column(
             modifier = Modifier.padding(16.dp),

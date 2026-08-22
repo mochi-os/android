@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,15 +31,11 @@ import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Handshake
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.SkipNext
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -65,17 +62,21 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.ConfirmDialog
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.GameChatInput
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.ws.rememberGameWebSocket
@@ -167,7 +168,7 @@ fun GoGameDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.go_app_title)) },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
@@ -225,6 +226,10 @@ fun GoGameDetailScreen(
                 BoxWithConstraints(
                     modifier = Modifier
                         .fillMaxSize()
+                        // The wide layout's chat bar takes the navigation-bar
+                        // inset itself; consume what the Scaffold handed down
+                        // so it is not counted twice.
+                        .consumeWindowInsets(padding)
                         .padding(padding),
                 ) {
                     val isWide = maxWidth >= 600.dp
@@ -273,7 +278,7 @@ fun GoGameDetailScreen(
                                 },
                                 actions = {
                                     if (!isWide) {
-                                        IconButton(onClick = { showMobileChat = true }) {
+                                        MochiIconButton(onClick = { showMobileChat = true }) {
                                             Icon(
                                                 imageVector = Icons.AutoMirrored.Filled.Message,
                                                 contentDescription = stringResource(R.string.go_action_open_chat),
@@ -281,7 +286,7 @@ fun GoGameDetailScreen(
                                         }
                                     }
                                     Box {
-                                        IconButton(onClick = { menuOpen = true }) {
+                                        MochiIconButton(onClick = { menuOpen = true }) {
                                             Icon(
                                                 imageVector = Icons.Default.MoreHoriz,
                                                 contentDescription = stringResource(R.string.go_action_more),
@@ -399,9 +404,13 @@ fun GoGameDetailScreen(
                                     onRetry = { viewModel.loadMessages() },
                                     modifier = Modifier.weight(1f),
                                 )
-                                GameChatInput(
-                                    text = composer.value,
-                                    onTextChange = { composer.value = it },
+                                ComposeBar(
+                                    // The wide-layout side panel sits in the
+                                    // screen body, not the sheet, so this one
+                                    // consumes the keyboard inset itself.
+                                    windowInsets = ComposeBarDefaults.WindowInsets,
+                                    value = composer.value,
+                                    onValueChange = { composer.value = it },
                                     onSend = {
                                         val body = composer.value
                                         if (body.isNotBlank()) {
@@ -410,6 +419,12 @@ fun GoGameDetailScreen(
                                         }
                                     },
                                     isSending = state.isSendingMessage,
+                                    placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+                                    sendLabel = stringResource(MochiR.string.game_chat_send),
+                                    // One line, and the keyboard's action key sends: a game chat
+                                    // message is a sentence, not a comment body.
+                                    maxLines = 1,
+                                    sendOnImeAction = true,
                                 )
                             }
                         }
@@ -420,52 +435,55 @@ fun GoGameDetailScreen(
 
                 if (showPassDialog) {
                     val isEndGame = state.goGame?.consecutivePasses == 1
-                    ConfirmDialog(
+                    MochiAlertDialog(
+                        onDismissRequest = { showPassDialog = false },
                         title = stringResource(
                             if (isEndGame) R.string.go_pass_end_title else R.string.go_pass_title,
                         ),
-                        message = if (isEndGame) {
+                        text = if (isEndGame) {
                             stringResource(R.string.go_pass_end_message, opponentName)
                         } else {
                             stringResource(R.string.go_pass_message)
                         },
-                        confirmLabel = stringResource(
+                        confirmText = stringResource(
                             if (isEndGame) R.string.go_pass_end_confirm else R.string.go_pass_confirm,
                         ),
-                        isDestructive = isEndGame,
                         onConfirm = {
                             showPassDialog = false
                             viewModel.passTurn(errPass)
                         },
-                        onDismiss = { showPassDialog = false },
+                        destructive = isEndGame,
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
 
                 if (showResignDialog) {
-                    ConfirmDialog(
+                    MochiAlertDialog(
+                        onDismissRequest = { showResignDialog = false },
                         title = stringResource(R.string.go_resign_title),
-                        message = stringResource(R.string.go_resign_message, opponentName),
-                        confirmLabel = stringResource(R.string.go_resign_confirm),
-                        isDestructive = true,
+                        text = stringResource(R.string.go_resign_message, opponentName),
+                        confirmText = stringResource(R.string.go_resign_confirm),
                         onConfirm = {
                             showResignDialog = false
                             viewModel.resign(errResign)
                         },
-                        onDismiss = { showResignDialog = false },
+                        destructive = true,
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
 
                 if (showDeleteDialog) {
-                    ConfirmDialog(
+                    MochiAlertDialog(
+                        onDismissRequest = { showDeleteDialog = false },
                         title = stringResource(R.string.go_delete_title),
-                        message = stringResource(R.string.go_delete_message),
-                        confirmLabel = stringResource(R.string.go_delete_confirm),
-                        isDestructive = true,
+                        text = stringResource(R.string.go_delete_message),
+                        confirmText = stringResource(R.string.go_delete_confirm),
                         onConfirm = {
                             showDeleteDialog = false
                             viewModel.deleteGame(errDelete, msgDeleted)
                         },
-                        onDismiss = { showDeleteDialog = false },
+                        destructive = true,
+                        dismissText = stringResource(MochiR.string.common_cancel),
                     )
                 }
 
@@ -487,9 +505,9 @@ fun GoGameDetailScreen(
                                 onRetry = { viewModel.loadMessages() },
                                 modifier = Modifier.weight(1f),
                             )
-                            GameChatInput(
-                                text = composer.value,
-                                onTextChange = { composer.value = it },
+                            ComposeBar(
+                                value = composer.value,
+                                onValueChange = { composer.value = it },
                                 onSend = {
                                     val body = composer.value
                                     if (body.isNotBlank()) {
@@ -498,6 +516,13 @@ fun GoGameDetailScreen(
                                     }
                                 },
                                 isSending = state.isSendingMessage,
+                                placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
+                                sendLabel = stringResource(MochiR.string.game_chat_send),
+                                // One line, and the keyboard's action key sends: a game chat
+                                // message is a sentence, not a comment body.
+                                maxLines = 1,
+                                sendOnImeAction = true,
+                                windowInsets = ComposeBarDefaults.NoWindowInsets,
                             )
                         }
                     }
@@ -706,7 +731,7 @@ private fun drawOfferBanner(
                     fontWeight = FontWeight.Medium,
                     modifier = Modifier.weight(1f),
                 )
-                OutlinedButton(
+                MochiOutlinedButton(
                     onClick = onDecline,
                     enabled = !isAccepting && !isDeclining,
                     shape = RoundedCornerShape(8.dp),
@@ -721,12 +746,11 @@ private fun drawOfferBanner(
                         Text(stringResource(R.string.go_draw_decline))
                     }
                 }
-                Button(
+                MochiButton(
                     onClick = onAccept,
                     enabled = !isAccepting && !isDeclining,
                     shape = RoundedCornerShape(8.dp),
                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                    colors = ButtonDefaults.buttonColors(),
                 ) {
                     if (isAccepting) {
                         CircularProgressIndicator(
