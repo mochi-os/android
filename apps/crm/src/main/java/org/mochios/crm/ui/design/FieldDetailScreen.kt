@@ -409,7 +409,7 @@ fun FieldDetailScreen(
         // Delete field
         MochiOutlinedButton(
             onClick = { showDeleteConfirm = true },
-            tone = MochiButtonTone.Destructive,
+            tone = MochiButtonTone.Neutral,
             modifier = Modifier.fillMaxWidth()
         ) {
             Icon(Icons.Default.Delete, contentDescription = null)

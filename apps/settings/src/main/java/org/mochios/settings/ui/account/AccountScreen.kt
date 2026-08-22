@@ -244,7 +244,7 @@ private fun CloseAccountSection(onClose: () -> Unit) {
         SectionHeader(stringResource(R.string.account_close_section))
         MochiOutlinedButton(
             onClick = { confirming = true },
-            tone = MochiButtonTone.Destructive,
+            tone = MochiButtonTone.Neutral,
         ) {
             Text(stringResource(R.string.account_close_action))
         }

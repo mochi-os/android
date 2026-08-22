@@ -440,7 +440,7 @@ private fun ActionRow(
             MochiOutlinedButton(
                 onClick = onCancelRequested,
                 enabled = !mutating,
-                tone = MochiButtonTone.Destructive,
+                tone = MochiButtonTone.Neutral,
                 modifier = Modifier.weight(1f),
             ) {
                 Text(stringResource(R.string.market_subscriptions_action_cancel))

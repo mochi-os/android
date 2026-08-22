@@ -137,7 +137,7 @@ fun GeneralTab(
             action = {
                 MochiOutlinedButton(
                     onClick = { showDeleteDialog = true },
-                    tone = MochiButtonTone.Destructive,
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     Text(stringResource(MochiR.string.common_delete))
                 }

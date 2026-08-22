@@ -40,7 +40,15 @@ enum class MochiButtonTone {
     /** An action that must not compete with the primary one beside it. */
     Neutral,
 
-    /** Deletes, revokes, closes. Anything the reader cannot undo. */
+    /**
+     * The button that carries out a delete, a revoke, a close — the confirm
+     * inside the dialog, or the one on a screen that exists to confirm.
+     *
+     * A trigger that only opens that confirmation stays [Neutral]. A red
+     * "Delete account" in a settings section promises the tap destroys the
+     * account, when all it does is raise a dialog the reader can still cancel;
+     * the warning belongs on the button that means it.
+     */
     Destructive,
 }
 

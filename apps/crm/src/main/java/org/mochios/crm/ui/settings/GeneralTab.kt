@@ -110,7 +110,7 @@ fun GeneralTab(
                 MochiOutlinedButton(
                     onClick = { showDeleteConfirm = true },
                     enabled = !uiState.isDeleting,
-                    tone = MochiButtonTone.Destructive,
+                    tone = MochiButtonTone.Neutral,
                 ) {
                     if (uiState.isDeleting) {
                         CircularProgressIndicator(
