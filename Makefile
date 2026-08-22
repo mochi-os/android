@@ -4,10 +4,13 @@
 # This file is part of Mochi, licensed under the GNU AGPL v3 with the
 # Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-# versionName is the single source of truth — declared in app/build.gradle.kts
-# and read by Gradle at build time. Read it here too so versions.json always
-# matches the APK. Bump versionName there before `make release`.
-version = $(shell grep -oP 'versionName\s*=\s*"\K[^"]+' app/build.gradle.kts)
+# mochiVersion is the single source of truth — declared in app/build.gradle.kts,
+# where versionCode and versionName both read it. Read it here too so
+# versions.json always matches the APK. Bump it there before `make release`.
+# Match the declaration, not versionName: versionName is no longer a literal,
+# and a grep for it returns empty, which ships mochi-.apk and a versions.json
+# with no version in it.
+version = $(shell grep -oP 'val mochiVersion\s*=\s*"\K[^"]+' app/build.gradle.kts)
 
 # Signed release APK that `assembleRelease` produces.
 apk = app/build/outputs/apk/release/app-release.apk
