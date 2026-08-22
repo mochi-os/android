@@ -3,6 +3,11 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+// The one place the version is written. versionCode and versionName below both
+// read it, because when they were two literals the 0.124 bump moved only the
+// name and shipped a release carrying 0.123's code.
+val mochiVersion = "0.124"
+
 // "major.minor" -> a monotonically rising integer, major * 10000 + minor.
 // Minor is bounded at 9999 so a major bump always outranks everything before it.
 fun versionNameToCode(name: String): Int {
@@ -37,8 +42,8 @@ android {
         // Android's downgrade protection keys on versionCode alone, so it is
         // derived from versionName and must keep rising: "0.113" -> 113, "1.4"
         // -> 10004 across a major bump.
-        versionCode = versionNameToCode("0.123")
-        versionName = "0.124"
+        versionCode = versionNameToCode(mochiVersion)
+        versionName = mochiVersion
     }
 
     signingConfigs {
