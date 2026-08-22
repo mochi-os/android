@@ -38,7 +38,7 @@ android {
         // derived from versionName and must keep rising: "0.113" -> 113, "1.4"
         // -> 10004 across a major bump.
         versionCode = versionNameToCode("0.123")
-        versionName = "0.123"
+        versionName = "0.124"
     }
 
     signingConfigs {
