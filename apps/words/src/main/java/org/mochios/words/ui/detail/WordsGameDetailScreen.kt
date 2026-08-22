@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -217,6 +219,9 @@ fun WordsGameDetailScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                // The tablet layout's chat bar takes the navigation-bar inset
+                // itself; consume the Scaffold's so it is not counted twice.
+                .consumeWindowInsets(padding)
                 .padding(padding),
         ) {
             when {
@@ -566,6 +571,7 @@ private fun GameDetailContent(
                         isLoadingMore = state.isLoadingMoreMessages,
                         onLoadMore = { viewModel.loadMoreMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
+                        composerWindowInsets = ComposeBarDefaults.WindowInsets,
                     )
                 }
             }
@@ -812,6 +818,10 @@ private fun GameChatColumn(
     isLoadingMore: Boolean,
     onLoadMore: () -> Unit,
     onSend: (String, (Boolean) -> Unit) -> Unit,
+    // Which host is showing this column decides who lifts the composer for the
+    // keyboard. The default suits the phone's sheet, which lifts its own
+    // content; the tablet's side panel sits in the screen body and has to ask.
+    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
 ) {
     val chatMessages = remember(messages) {
         messages.map { msg ->
@@ -898,7 +908,7 @@ private fun GameChatColumn(
             // message is a sentence, not a comment body.
             maxLines = 1,
             sendOnImeAction = true,
-            windowInsets = ComposeBarDefaults.NoWindowInsets,
+            windowInsets = composerWindowInsets,
         )
     }
 }

@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -240,6 +241,10 @@ fun GoGameDetailScreen(
                 BoxWithConstraints(
                     modifier = Modifier
                         .fillMaxSize()
+                        // The wide layout's chat bar takes the navigation-bar
+                        // inset itself; consume what the Scaffold handed down
+                        // so it is not counted twice.
+                        .consumeWindowInsets(padding)
                         .padding(padding),
                 ) {
                     val isWide = maxWidth >= 600.dp

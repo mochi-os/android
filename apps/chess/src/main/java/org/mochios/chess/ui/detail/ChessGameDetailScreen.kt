@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -188,6 +190,9 @@ fun ChessGameDetailScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                // The tablet layout's chat bar takes the navigation-bar inset
+                // itself; consume the Scaffold's so it is not counted twice.
+                .consumeWindowInsets(padding)
                 .padding(padding),
         ) {
             when {
@@ -351,6 +356,7 @@ private fun GameContent(
                         onSend = onSendChat,
                         onLoadMore = onLoadMoreChat,
                         modifier = Modifier.weight(1f),
+                        composerWindowInsets = ComposeBarDefaults.WindowInsets,
                     )
                 }
             }
@@ -679,6 +685,10 @@ private fun ChatPanel(
     onSend: (String) -> Unit,
     onLoadMore: () -> Unit,
     modifier: Modifier = Modifier,
+    // Which host is showing this panel decides who lifts the composer for the
+    // keyboard. The default suits the phone's sheet, which lifts its own
+    // content; the tablet's side panel sits in the screen body and has to ask.
+    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
 ) {
     var draft by rememberSaveable { mutableStateOf("") }
 
@@ -726,7 +736,7 @@ private fun ChatPanel(
             // message is a sentence, not a comment body.
             maxLines = 1,
             sendOnImeAction = true,
-            windowInsets = ComposeBarDefaults.NoWindowInsets,
+            windowInsets = composerWindowInsets,
         )
     }
 }

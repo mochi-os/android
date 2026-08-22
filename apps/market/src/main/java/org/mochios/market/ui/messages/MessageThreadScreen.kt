@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -155,6 +156,10 @@ fun MessageThreadScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                // Consume as well as pad: the composer at the foot of this
+                // Column takes the navigation-bar inset itself and would
+                // otherwise count it twice.
+                .consumeWindowInsets(padding)
                 .padding(padding),
         ) {
             ListingChip(
