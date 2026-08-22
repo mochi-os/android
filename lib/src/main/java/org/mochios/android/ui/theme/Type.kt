@@ -7,8 +7,10 @@ package org.mochios.android.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.googlefonts.Font
 import androidx.compose.ui.text.googlefonts.GoogleFont
@@ -39,26 +41,56 @@ private fun interWeight(weight: FontWeight) = Font(
 )
 
 /**
- * Inter, fetched from Google Fonts rather than shipped in the APK.
+ * The same weight cut from the variable face in the APK.
  *
- * The four weights are downloaded and cached by the provider, so the app
- * carries no font asset. Two consequences worth holding on to:
+ * One file answers all four: InterVariable carries a wght axis over 100-900,
+ * so each weight is an instance of it rather than a font of its own, and a
+ * fifth weight would cost nothing but a line here. The axis has to be set
+ * explicitly - left off, every weight renders at the face's default 400 and
+ * the heavier ones come out faked by the renderer rather than drawn.
+ */
+private fun bundledInterWeight(weight: FontWeight) = Font(
+    resId = R.font.inter_variable,
+    weight = weight,
+    style = FontStyle.Normal,
+    variationSettings = FontVariation.Settings(FontVariation.weight(weight.weight)),
+)
+
+/**
+ * Inter, fetched from Google Fonts with the bundled face behind it.
  *
- *  - The first render on a cold install shows the platform font until the
- *    download lands, so type can visibly reflow once. There is no bundled
- *    face to fall back to, so what renders in the meantime is whatever the
- *    device calls its default.
- *  - A device with no Play Services - a de-Googled build, an emulator image
- *    without GMS - never resolves the provider at all and keeps that default
- *    for good. On those builds the type scale below still applies; only the
- *    letterforms come from the system. Bundling a face and listing it after
- *    the fetched weight here is what would close that gap.
+ * Each weight is listed twice, the downloadable cut first and the local one
+ * second, which is how a font list says "use that one, fall back to this".
+ * The provider is backed by Play Services, so the second entry is what a
+ * device without GMS - a de-Googled build, an emulator image with no Play -
+ * actually renders, and it renders Inter rather than whatever the device
+ * calls its default. It covers the cold install too: the first frames draw
+ * the bundled cut, so type no longer reflows once the download lands.
+ *
+ * The downloaded copy is still asked for first. The provider caches it across
+ * apps and updates it without us shipping a release, neither of which the
+ * file in the APK can do.
+ *
+ * The fallback itself needs no error path of ours. A downloadable font is an
+ * async one, and Compose's own resolver - FontListFontFamilyTypefaceAdapter -
+ * keeps the failure: it caches a load that failed as a permanent one, skips
+ * that entry on every resolve after, and takes the next match in the family,
+ * which is the bundled weight beneath it. The wait before that is capped at
+ * Font.MaximumAsyncTimeoutMillis, fifteen seconds, so a provider that will
+ * never answer stops being asked. Failures are swallowed rather than thrown,
+ * so a device without the provider gets Inter from the APK, not a crash and
+ * not a blank screen. Only a family with nothing left to try ends at the
+ * platform typeface, and this one no longer can.
  */
 val InterFontFamily = FontFamily(
     interWeight(FontWeight.Normal),
+    bundledInterWeight(FontWeight.Normal),
     interWeight(FontWeight.Medium),
+    bundledInterWeight(FontWeight.Medium),
     interWeight(FontWeight.SemiBold),
+    bundledInterWeight(FontWeight.SemiBold),
     interWeight(FontWeight.Bold),
+    bundledInterWeight(FontWeight.Bold),
 )
 
 /**
