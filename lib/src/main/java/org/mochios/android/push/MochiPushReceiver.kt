@@ -6,6 +6,7 @@
 package org.mochios.android.push
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.CoroutineScope
@@ -146,15 +147,59 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         Log.w(TAG, "onRegistrationFailed instance=$instance reason=$reason")
     }
 
+    /**
+     * Deliver a MESSAGE this distributor sent us directly, bypassing the
+     * connector's decrypt. The local fast path is cleartext by design, so it
+     * cannot satisfy [onMessage]'s decrypted gate; the sender's identity
+     * stands in for it. Every other action goes to the connector unchanged, so
+     * a third-party distributor still gets the RFC 8291 treatment.
+     */
+    override fun onReceive(context: Context, intent: Intent) {
+        if (intent.action != PushService.ACTION_LOCAL_MESSAGE) {
+            super.onReceive(context, intent)
+            return
+        }
+        val sender = senderPackage(intent)
+        val content = intent.getByteArrayExtra(PushService.EXTRA_BYTES_MESSAGE)
+        when (judgeLocalPush(sender, sender != null && mochiSigned(context, sender), content)) {
+            LocalPush.UNIDENTIFIED -> {
+                Log.w(TAG, "Local push carried no PendingIntent to identify the sender; ignoring")
+                return
+            }
+            LocalPush.UNTRUSTED -> {
+                Log.w(TAG, "Local push from unrelated package $sender; ignoring")
+                return
+            }
+            LocalPush.EMPTY -> {
+                Log.w(TAG, "Local push carried no payload; ignoring")
+                return
+            }
+            LocalPush.ACCEPT -> Unit
+        }
+        // The connector resolves an instance name from the token through its
+        // own private registration store, which we cannot read. Instance
+        // reaches only the notification tag's fallback (channelId and
+        // deepLinkFor both ignore it), and the token identifies the same
+        // registration, so it serves the same purpose here.
+        deliver(context, content!!, intent.getStringExtra(PushService.EXTRA_TOKEN).orEmpty())
+    }
+
     override fun onMessage(context: Context, message: PushMessage, instance: String) {
-        // The only authenticity gate on push content: the connector calls this
-        // with decrypted = false after a failed decrypt, so without the check
-        // anyone holding the endpoint URL can post an arbitrary notification.
+        // The only authenticity gate on push content from a third-party
+        // distributor: the connector calls this with decrypted = false after a
+        // failed decrypt, so without the check anyone holding the endpoint URL
+        // can post an arbitrary notification. Our own distributor does not
+        // reach here - see onReceive.
         if (!message.decrypted) {
             Log.w(TAG, "Push payload was not decrypted; ignoring")
             return
         }
-        val text = message.content.toString(Charsets.UTF_8)
+        deliver(context, message.content, instance)
+    }
+
+    /** Parse a delivered payload and raise the notification it describes. */
+    private fun deliver(context: Context, content: ByteArray, instance: String) {
+        val text = content.toString(Charsets.UTF_8)
         val payload = try {
             JSONObject(text)
         } catch (_: Exception) {
