@@ -6,7 +6,6 @@
 package org.mochios.market.ui.listing
 
 import android.content.Intent
-import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -101,6 +100,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.AttachmentOpener
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.locationName
@@ -196,8 +196,13 @@ fun ListingDetailScreen(
             when (event) {
                 is ListingDetailEvent.Toast -> snackbarHostState.showSnackbar(event.message)
                 is ListingDetailEvent.OpenUrl -> {
-                    val intent = CustomTabsIntent.Builder().build()
-                    runCatching { intent.launchUrl(snackbarContext, Uri.parse(event.url)) }
+                    // The asset reference comes from the seller via the
+                    // Comptroller and launchUrl degrades to ACTION_VIEW, so only
+                    // a web scheme may leave the app.
+                    webUri(event.url)?.let { target ->
+                        val intent = CustomTabsIntent.Builder().build()
+                        runCatching { intent.launchUrl(snackbarContext, target) }
+                    }
                 }
                 is ListingDetailEvent.OpenFile -> {
                     val outcome = AttachmentOpener.openCached(

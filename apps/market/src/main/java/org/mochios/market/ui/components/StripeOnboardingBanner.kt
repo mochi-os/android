@@ -5,7 +5,6 @@
 
 package org.mochios.market.ui.components
 
-import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -38,6 +37,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
@@ -109,9 +109,13 @@ fun StripeOnboardingBanner(
                         scope.launch {
                             try {
                                 val resp = repository.stripeOnboarding(returnUrl)
-                                if (resp.url.isNotBlank()) {
-                                    val intent = CustomTabsIntent.Builder().build()
-                                    intent.launchUrl(context, Uri.parse(resp.url))
+                                // The Comptroller supplies this URL and launchUrl
+                                // degrades to ACTION_VIEW, so only a web scheme
+                                // may leave the app. Also covers the empty URL
+                                // the server sends when its own allowlist refused.
+                                val target = webUri(resp.url)
+                                if (target != null) {
+                                    CustomTabsIntent.Builder().build().launchUrl(context, target)
                                 } else {
                                     error = failedToOpen
                                 }

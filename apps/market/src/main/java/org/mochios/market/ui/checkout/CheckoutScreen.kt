@@ -52,7 +52,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.ui.components.ErrorState
@@ -61,6 +60,7 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
@@ -86,16 +86,24 @@ fun CheckoutScreen(
     val context = LocalContext.current
     val snackbar = remember { SnackbarHostState() }
     val browserUnavailable = stringResource(R.string.market_checkout_browser_unavailable)
+    val stripeOpenFailed = stringResource(R.string.market_account_stripe_open_failed)
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
                 is CheckoutEvent.OpenStripe -> {
-                    try {
-                        CustomTabsIntent.Builder().build()
-                            .launchUrl(context, event.url.toUri())
-                    } catch (_: ActivityNotFoundException) {
-                        snackbar.showSnackbar(browserUnavailable)
+                    // The Comptroller supplies the checkout URL and launchUrl
+                    // degrades to ACTION_VIEW, so only a web scheme may leave
+                    // the app.
+                    val target = webUri(event.url)
+                    if (target == null) {
+                        snackbar.showSnackbar(stripeOpenFailed)
+                    } else {
+                        try {
+                            CustomTabsIntent.Builder().build().launchUrl(context, target)
+                        } catch (_: ActivityNotFoundException) {
+                            snackbar.showSnackbar(browserUnavailable)
+                        }
                     }
                 }
                 is CheckoutEvent.OrderComplete -> {

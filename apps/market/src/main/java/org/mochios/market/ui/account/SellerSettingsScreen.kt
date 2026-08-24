@@ -59,6 +59,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.MarketLayout
@@ -154,8 +155,11 @@ fun SellerSettingsScreen(
                         onActivate = viewModel::activate,
                         onConnect = {
                             viewModel.connectStripe(RETURN_URL) { url ->
-                                CustomTabsIntent.Builder().build()
-                                    .launchUrl(context, Uri.parse(url))
+                                // Comptroller-supplied; dashboardUrl below is a
+                                // local literal and needs no check.
+                                webUri(url)?.let {
+                                    CustomTabsIntent.Builder().build().launchUrl(context, it)
+                                }
                             }
                         },
                         onDashboard = {
