@@ -33,7 +33,7 @@
     <string name="crm_sort_created">Lurata</string>
     <string name="crm_sort_updated">Machaqachatawa</string>
     <string name="crm_create_object_title">Objeto luraña</string>
-    <string name="crm_create_object_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="crm_create_object_type">Kasta</string>
     <string name="crm_create_object_title_field">Suti campo</string>
     <string name="crm_create_object_parent">Awki</string>
     <string name="crm_settings_title">Configuración</string>
@@ -139,7 +139,7 @@
     <string name="crm_field_type_date">Uru</string>
     <string name="crm_field_type_checklist">Checklist</string>
     <string name="crm_field_name">Suti</string>
-    <string name="crm_field_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="crm_field_type">Kasta</string>
     <string name="crm_field_flags">Banderanaka</string>
     <string name="crm_field_required">Munaski</string>
     <string name="crm_field_position_default">Default</string>
@@ -156,7 +156,7 @@
     <string name="crm_views_add_dialog_title">Uñacht\'awi yapxataña</string>
     <string name="crm_views_edit_dialog_title">Uñjaña askichaña</string>
     <string name="crm_views_delete_title">Uñacht\'awi chhaqtayaña</string>
-    <string name="crm_views_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="crm_views_type">Kasta</string>
     <string name="crm_views_type_board">Tabla</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_direction">Dirección</string>

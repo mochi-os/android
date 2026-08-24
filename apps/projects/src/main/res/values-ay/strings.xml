@@ -32,7 +32,7 @@
     <string name="projects_sort_number">Jakhu</string>
     <string name="projects_sort_created">Lurata</string>
     <string name="projects_sort_updated">Machaqachatawa</string>
-    <string name="projects_create_object_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="projects_create_object_type">Kasta</string>
     <string name="projects_create_object_title_field">Suti campo</string>
     <string name="projects_create_object_parent">Awki</string>
     <string name="projects_settings_title">Configuración</string>
@@ -129,7 +129,7 @@
     <string name="projects_field_type_date">Uru</string>
     <string name="projects_field_type_checklist">Checklist</string>
     <string name="projects_field_name">Suti</string>
-    <string name="projects_field_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="projects_field_type">Kasta</string>
     <string name="projects_field_flags">Banderanaka</string>
     <string name="projects_field_required">Munaski</string>
     <string name="projects_field_position_default">Default</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_add_dialog_title">Uñacht\'awi yapxataña</string>
     <string name="projects_views_edit_dialog_title">Uñjaña askichaña</string>
     <string name="projects_views_delete_title">Uñacht\'awi chhaqtayaña</string>
-    <string name="projects_views_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="projects_views_type">Kasta</string>
     <string name="projects_views_type_board">Tabla</string>
     <string name="projects_views_type_list">Lista</string>
     <string name="projects_views_direction">Dirección</string>

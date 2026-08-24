@@ -126,7 +126,7 @@
     <string name="market_editor_back">Հետ դեպի CRM</string>
     <string name="market_editor_category">Կատեգորիան ստեղծված է</string>
     <string name="market_editor_category_none">Ընտրել կատեգորիա</string>
-    <string name="market_editor_condition">Կոնֆիգուրացիան թարմացված է</string>
+    <string name="market_editor_condition">Վիճակ</string>
     <string name="market_editor_condition_new">Նոր</string>
     <string name="market_editor_condition_refurbished">Վերանորոգված</string>
     <string name="market_editor_condition_used">Օգտագործված</string>
@@ -187,7 +187,7 @@
     <string name="market_filter_apply">Հաստատել</string>
     <string name="market_filter_category">Կատեգորիան ստեղծված է</string>
     <string name="market_filter_clear">Մաքրել որոնումը</string>
-    <string name="market_filter_condition">Կոնֆիգուրացիան թարմացված է</string>
+    <string name="market_filter_condition">Վիճակ</string>
     <string name="market_filter_condition_new">Նոր</string>
     <string name="market_filter_condition_refurbished">Վերանորոգված</string>
     <string name="market_filter_condition_used">Օգտագործված</string>

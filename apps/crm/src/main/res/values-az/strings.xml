@@ -34,7 +34,7 @@
     <string name="crm_sort_updated">Yenilənir...</string>
     <string name="crm_create_object_title">Obyekt yarat</string>
     <string name="crm_create_object_type">Mesaj yazın...</string>
-    <string name="crm_create_object_title_field">Başlıq tələb olunur</string>
+    <string name="crm_create_object_title_field">Başlıq</string>
     <string name="crm_create_object_parent">Əsas</string>
     <string name="crm_settings_title">Parametrlər</string>
     <string name="crm_settings_tab_general">Ümumi</string>
@@ -94,7 +94,7 @@
     <string name="crm_request_method_merge">Birləşdir</string>
     <string name="crm_request_field_repository">Repozitoriya</string>
     <string name="crm_request_field_source">Mənbə budağı</string>
-    <string name="crm_request_field_title">Başlıq tələb olunur</string>
+    <string name="crm_request_field_title">Başlıq</string>
     <string name="crm_request_field_description">Təsvir</string>
     <string name="crm_request_field_draft">Qaralama</string>
     <string name="crm_request_create_action">Yarat</string>

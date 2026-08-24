@@ -86,7 +86,7 @@
     <string name="forums_moderation_report_dismiss">Apaqaña</string>
     <string name="forums_moderation_restrictions_empty">Jan restriccionanak</string>
     <string name="forums_moderation_restriction_remove">Aparma</string>
-    <string name="forums_moderation_restriction_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="forums_moderation_restriction_type">Kasta</string>
     <string name="forums_moderation_restriction_type_muted">Amukt\'ayaña</string>
     <string name="forums_moderation_restriction_type_banned">Jark\'aña</string>
     <string name="forums_moderation_section_premoderation">Pre-moderación</string>

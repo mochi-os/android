@@ -211,7 +211,7 @@
     <string name="market_editor_stripe_banner_description">Bu elan üzrə ödənişlər almaq üçün Stripe hesabı qoşun.</string>
     <string name="market_editor_stripe_banner_title">Stripe qeydiyyatını tamamlayın</string>
     <string name="market_editor_tags_field">Etiketlər (vergüllə ayrılmış)</string>
-    <string name="market_editor_title">Başlıq tələb olunur</string>
+    <string name="market_editor_title">Başlıq</string>
     <string name="market_editor_title_edit">Elanı redaktə et</string>
     <string name="market_editor_title_new">Yeni elan</string>
     <string name="market_editor_title_required">Şəkil və ya fayl əlavə etməzdən əvvəl başlıq daxil edin</string>

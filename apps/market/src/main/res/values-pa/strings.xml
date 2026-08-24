@@ -5,7 +5,7 @@
     <string name="market_account_biography_label">ਜੀਵਨੀ</string>
     <string name="market_account_biography_placeholder">ਖਰੀਦਦਾਰਾਂ ਨੂੰ ਆਪਣੇ ਬਾਰੇ ਦੱਸੋ…</string>
     <string name="market_account_load_failed">ਖਾਤਾ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
-    <string name="market_account_location_label">ਸਫਲਤਾਪੂਰਵਕ ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="market_account_location_label">ਟਿਕਾਣਾ</string>
     <string name="market_account_save">ਸੰਭਾਲੋ</string>
     <string name="market_account_saved">ਬਦਲਾਅ ਸੇਵ ਕੀਤੇ ਗਏ</string>
     <string name="market_account_seller_title">ਵਿਕਰੇਤਾ ਬਣੋ</string>
@@ -151,7 +151,7 @@
     <string name="market_editor_section_assets">ਡਿਜੀਟਲ ਸੰਪਤੀਆਂ</string>
     <string name="market_editor_section_basic">ਬੁਨਿਆਦੀ ਜਾਣਕਾਰੀ</string>
     <string name="market_editor_section_delivery">ਡਿਲੀਵਰੀ</string>
-    <string name="market_editor_section_location">ਸਫਲਤਾਪੂਰਵਕ ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="market_editor_section_location">ਟਿਕਾਣਾ</string>
     <string name="market_editor_section_photos">ਫੋਟੋਆਂ</string>
     <string name="market_editor_section_pricing">ਪ੍ਰਾਈਸਿੰਗ</string>
     <string name="market_editor_section_tags">ਟੈਗ</string>
@@ -221,7 +221,7 @@
     <string name="market_listing_detail_information_heading">ਡਿਲੀਵਰੀ ਜਾਣਕਾਰੀ</string>
     <string name="market_listing_detail_load_failed">ਲਿਸਟਿੰਗ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_listing_detail_listed">ਸੂਚੀਬੱਧ %1$s</string>
-    <string name="market_listing_detail_location_heading">ਸਫਲਤਾਪੂਰਵਕ ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ</string>
+    <string name="market_listing_detail_location_heading">ਟਿਕਾਣਾ</string>
     <string name="market_listing_detail_message">ਸੁਨੇਹਾ</string>
     <string name="market_listing_detail_message_seller">ਵਿਕਰੇਤਾ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="market_listing_detail_not_found">ਟੈਮਪਲੇਟ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
