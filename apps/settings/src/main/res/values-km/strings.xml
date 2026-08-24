@@ -305,7 +305,7 @@
     <string name="domain_delegation_delete_message">%1$s នឹងលែងគ្រប់គ្រងផ្លូវនៅលើដែននេះទេ។</string>
     <string name="domain_delegation_delete_title">លុបការផ្ទេរសិទ្ធិ?</string>
     <string name="domain_delegation_path">ផ្លូវ</string>
-    <string name="domain_delegation_user">អត្តសញ្ញាណអ្នកប្រើ</string>
+    <string name="domain_delegation_user">អ្នកប្រើ</string>
     <string name="domain_delegations">ការផ្ទេរសិទ្ធិ</string>
     <string name="domain_delegations_empty">គ្មានការផ្ទេរសិទ្ធិដែលបានកំណត់ទេ។</string>
     <string name="domain_delete">លុបដែន</string>

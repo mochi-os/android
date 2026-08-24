@@ -132,7 +132,7 @@
     <string name="profile_privacy_private">Imantata</string>
     <string name="profile_fingerprint">Fingerprint</string>
     <string name="game_chat_empty">Janira mensajenak</string>
-    <string name="game_chat_input_placeholder">Apnaqirinak thaqhañatak qillqam</string>
+    <string name="game_chat_input_placeholder">Mä mensaje qillqam…</string>
     <string name="game_chat_send">Mensaje apayaña</string>
     <string name="game_chat_subject_you">Aka masimamp mä chat utjxiwa</string>
 

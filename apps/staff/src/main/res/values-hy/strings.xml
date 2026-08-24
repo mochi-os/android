@@ -137,7 +137,7 @@
     <string name="staff_audit_title">Պատմություն</string>
     <string name="staff_categories_action_delete">Ջնջել</string>
     <string name="staff_categories_action_edit">Խմբագրել</string>
-    <string name="staff_categories_add">Ավելացնել Mochi հոսք</string>
+    <string name="staff_categories_add">Ավելացնել</string>
     <string name="staff_categories_col_name">Անուն</string>
     <string name="staff_categories_col_parent">Ծնող</string>
     <string name="staff_categories_col_position">Դիրք</string>
@@ -344,7 +344,7 @@
     <string name="staff_moderation_listing_filter_placeholder">Ցուցակագրումը ստեղծվեց</string>
     <string name="staff_moderation_open_sidebar">Բացել կողագոտին</string>
     <string name="staff_moderation_system">Համակարգ</string>
-    <string name="staff_moderation_title">Մոդերացիայի շեմերը թարմացվեցին</string>
+    <string name="staff_moderation_title">Մոդերացիայի մատյան</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">Գործողություն կատարված է</string>
     <string name="staff_reports_action_ban">Բանկը չկարողացավ մշակել</string>
@@ -427,7 +427,7 @@
     <string name="staff_sidebar_listings">Բեռնվում է diff-ը...</string>
     <string name="staff_sidebar_management">Բոլորը նշել որպես կարդացված</string>
     <string name="staff_sidebar_market">Առավելագույն առաջարկ (ընտրովի)</string>
-    <string name="staff_sidebar_moderation">Մոդերացիայի շեմերը թարմացվեցին</string>
+    <string name="staff_sidebar_moderation">Մոդերացիայի մատյան</string>
     <string name="staff_sidebar_overview">Ակնարկ</string>
     <string name="staff_sidebar_reports">Հաղորդումներ</string>
     <string name="staff_sidebar_reviews">Կարծիքներ</string>
@@ -470,7 +470,7 @@
     <string name="staff_team_col_added_by">Ավելացրել է</string>
     <string name="staff_team_col_member">Անդամներ</string>
     <string name="staff_team_col_role">Դեր</string>
-    <string name="staff_team_dialog_add">Ավելացնել Mochi հոսք</string>
+    <string name="staff_team_dialog_add">Ավելացնել</string>
     <string name="staff_team_dialog_add_title">Ավելացնել թիմ/հավելված</string>
     <string name="staff_team_dialog_adding">Ավելացվում է…</string>
     <string name="staff_team_dialog_cancel">Չեղարկել մեկնաբանությունը</string>

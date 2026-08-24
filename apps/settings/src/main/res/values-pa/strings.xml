@@ -176,7 +176,7 @@
     <string name="system_users_title">ਉਪਭੋਗਤਾ</string>
     <string name="system_users_col_user">ਉਪਭੋਗਤਾ</string>
     <string name="system_users_col_status">ਸਥਿਤੀ</string>
-    <string name="system_users_col_last">ਰੂਟ ਪਾਥ ਲਈ ਖਾਲੀ ਛੱਡੋ</string>
+    <string name="system_users_col_last">ਆਖਰੀ ਲੌਗਇਨ</string>
     <string name="system_users_open_actions">ਯੂਜ਼ਰ ਐਕਸ਼ਨ ਖੋਲ੍ਹੋ</string>
     <string name="system_users_role_label">ਭੂਮਿਕਾ</string>
     <string name="system_users_role_administrator">ਐਡਮਿਨਿਸਟ੍ਰੇਟਰ</string>

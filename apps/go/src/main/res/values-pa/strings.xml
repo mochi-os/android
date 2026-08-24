@@ -36,8 +36,8 @@
     <string name="go_new_game_board_size_label">ਬੋਰਡ ਆਕਾਰ</string>
     <string name="go_new_game_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="go_new_game_friend_label">ਵਿਰੋਧੀ</string>
-    <string name="go_new_game_komi_field_label">ਟਿੱਪਣੀ ਛੱਡੋ...</string>
-    <string name="go_new_game_komi_label">ਟਿੱਪਣੀ ਛੱਡੋ...</string>
+    <string name="go_new_game_komi_field_label">ਕੋਮੀ</string>
+    <string name="go_new_game_komi_label">ਕੋਮੀ</string>
     <string name="go_new_game_komi_range_error">0 ਅਤੇ 10 ਦੇ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ</string>
     <string name="go_new_game_start">ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="go_pass_confirm">ਪਾਸ</string>

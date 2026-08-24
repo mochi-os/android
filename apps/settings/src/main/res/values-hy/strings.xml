@@ -58,7 +58,7 @@
     <string name="interests_title">Անվավեր նույնականացման կոդ</string>
     <string name="interests_summary_title">Ամփոփում</string>
     <string name="interests_remove">Հեռացնել հետաքրքրությունը</string>
-    <string name="interests_add">Ավելացնել Mochi հոսք</string>
+    <string name="interests_add">Ավելացնել</string>
     <string name="document_save">Պահպանել</string>
     <string name="document_saved">Պահպանված է</string>
     <string name="notifprefs_title">Ծանուցումների կարգավորումներ</string>
@@ -99,7 +99,7 @@
     <string name="accounts_empty">Կապակցված հաշիվներ չկան</string>
     <string name="accounts_type_label">Տեսակ</string>
     <string name="accounts_field_email">Էլ․ փոստ</string>
-    <string name="accounts_field_model">Մոդերացիայի մատյան</string>
+    <string name="accounts_field_model">Մոդել</string>
     <string name="accounts_field_name">Անուն</string>
     <string name="accounts_status_pending">Սպասվող</string>
     <string name="accounts_status_verified">Ստուգված</string>
@@ -299,7 +299,7 @@
     <string name="account_method_passkey_subtitle">Միացնելու համար ստորև գրանցեք անցաբանալի</string>
     <string name="domain_add">Ավելացնել դաշտ</string>
     <string name="domain_add_title">Ավելացնել դաշտ</string>
-    <string name="domain_delegation_add">Ավելացնել Mochi հոսք</string>
+    <string name="domain_delegation_add">Ավելացնել</string>
     <string name="domain_delegation_add_title">Ավելացնել տիրույթ</string>
     <string name="domain_delegation_delete">Ջնջել պատվիրակությունը</string>
     <string name="domain_delegation_delete_message">%1$s-ն այլևս չի կառավարի այս տիրույթի ուղիները։</string>

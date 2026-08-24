@@ -352,7 +352,7 @@
     <string name="market_purchases_complete_purchase">വാങ്ങൽ പൂർത്തിയാക്കുക</string>
     <string name="market_purchases_empty">വാങ്ങലുകളൊന്നുമില്ല</string>
     <string name="market_purchases_order_label">ഓർഡർ #%1$s</string>
-    <string name="market_purchases_title">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
+    <string name="market_purchases_title">വാങ്ങലുകൾ</string>
     <string name="market_rating_label">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
     <string name="market_rating_no_reviews">അവലോകനങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="market_rating_reviews">(%1$d അവലോകനം)</string>
@@ -443,7 +443,7 @@
     <string name="market_sidebar_inbox">ഇൻബോക്സ്</string>
     <string name="market_sidebar_listings">ലിസ്റ്റിംഗുകൾ</string>
     <string name="market_sidebar_messages">സന്ദേശങ്ങൾ</string>
-    <string name="market_sidebar_purchases">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
+    <string name="market_sidebar_purchases">വാങ്ങലുകൾ</string>
     <string name="market_sidebar_reviews">അവലോകനങ്ങൾ</string>
     <string name="market_sidebar_sales">വിൽപ്പനകൾ</string>
     <string name="market_sidebar_saved">സേവ് ചെയ്തു</string>

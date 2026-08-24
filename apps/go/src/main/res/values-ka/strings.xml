@@ -60,7 +60,7 @@
     <string name="go_status_resigned_opponent">%1$s-მა შემოგთავაზათ ფრე</string>
     <string name="go_status_resigned_self">თქვენ დათმეთ — %1$s იგებს</string>
     <string name="go_status_score">%1$s იგებს — შ:%2$s თ:%3$s</string>
-    <string name="go_status_you_win">თქვენ ამოგაშორეს ამ ჩატიდან</string>
+    <string name="go_status_you_win">თქვენ გაიმარჯვეთ!</string>
     <string name="go_status_your_move">თქვენი სვლა</string>
 
     <string name="go_channel_name">Go notifications</string>

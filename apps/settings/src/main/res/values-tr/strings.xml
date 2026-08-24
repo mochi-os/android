@@ -305,7 +305,7 @@
     <string name="domain_delegation_delete_message">%1$s artık bu alan adındaki rotaları yönetmeyecek.</string>
     <string name="domain_delegation_delete_title">Yetkilendirme silinsin mi?</string>
     <string name="domain_delegation_path">Yol</string>
-    <string name="domain_delegation_user">Kullanıcı kimliği</string>
+    <string name="domain_delegation_user">Kullanıcı</string>
     <string name="domain_delegations">Yetkilendirmeler</string>
     <string name="domain_delegations_empty">Yapılandırılmış yetki devri yok.</string>
     <string name="domain_delete">Alan adını sil</string>

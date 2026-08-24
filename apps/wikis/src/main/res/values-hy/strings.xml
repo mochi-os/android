@@ -126,7 +126,7 @@
     <string name="wikis_search_title">Որոնել</string>
     <string name="wikis_search_empty_query">Մուտքագրեք որոնման տերմին</string>
     <string name="wikis_redirects_title">Վերահղումներ</string>
-    <string name="wikis_redirects_add">Ավելացնել Mochi հոսք</string>
+    <string name="wikis_redirects_add">Ավելացնել</string>
     <string name="wikis_redirects_empty">Կարգավորված վերահղումներ չկան</string>
     <string name="wikis_redirect_create_title">Ստեղծել վերահղում հին URL-ից</string>
     <string name="wikis_redirect_create_action">Ստեղծել CRM</string>
@@ -148,7 +148,7 @@
     <string name="wikis_tag_dialog_label">Թեգ</string>
     <string name="wikis_tag_dialog_duplicate">Թեգն արդեն գոյություն ունի</string>
     <string name="wikis_tag_dialog_cancel">Չեղարկել մեկնաբանությունը</string>
-    <string name="wikis_tag_dialog_add">Ավելացնել Mochi հոսք</string>
+    <string name="wikis_tag_dialog_add">Ավելացնել</string>
     <string name="wikis_attachments_title">Աճուրդ</string>
     <string name="wikis_attachments_upload">Վերբեռնել ֆայլեր</string>
     <string name="wikis_attachments_uploading">Վերբեռնվում է…</string>
@@ -205,7 +205,7 @@
     <string name="wikis_settings_delete_confirm_message">Այս գործողությունը հնարավոր չէ չեղարկել: Սա մշտապես կջնջի wiki-ն և նրա ողջ բովանդակությունը:</string>
     <string name="wikis_settings_delete_success">Wiki-ն ջնջվեց</string>
     <string name="wikis_settings_delete_failed">Չհաջողվեց ջնջել wiki-ն</string>
-    <string name="wikis_access_add_action">Ավելացնել Mochi հոսք</string>
+    <string name="wikis_access_add_action">Ավելացնել</string>
     <string name="wikis_access_add_subject_label">Օգտատեր</string>
     <string name="wikis_access_level_edit">Խմբագրել և դիտել</string>
     <string name="wikis_access_level_view">Միայն դիտել</string>

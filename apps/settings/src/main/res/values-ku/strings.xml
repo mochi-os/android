@@ -305,7 +305,7 @@
     <string name="domain_delegation_delete_message">%1$s êdî riyên li ser vê domê rêvebir nake.</string>
     <string name="domain_delegation_delete_title">Wakîltiyê jê bibe?</string>
     <string name="domain_delegation_path">Rê</string>
-    <string name="domain_delegation_user">Nasnameya bikarhêner</string>
+    <string name="domain_delegation_user">Bikarhêner</string>
     <string name="domain_delegations">Wakîltî</string>
     <string name="domain_delegations_empty">Tu delegasyonên mîhengkirî nin.</string>
     <string name="domain_delete">Domainê jê bibe</string>

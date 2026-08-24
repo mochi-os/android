@@ -150,7 +150,7 @@
     <string name="wikis_tag_dialog_cancel">Ləğv et</string>
     <string name="wikis_tag_dialog_add">Əlavə et</string>
     <string name="wikis_attachments_title">Qoşmalar</string>
-    <string name="wikis_attachments_upload">Yeni versiyanı yüklə</string>
+    <string name="wikis_attachments_upload">Faylları yüklə</string>
     <string name="wikis_attachments_uploading">Fərqli hesabdan istifadə et</string>
     <string name="wikis_attachments_upload_failed">Faylları yükləmək alınmadı</string>
     <string name="wikis_attachments_search_clear">Axtarışı təmizlə</string>
