@@ -11,6 +11,11 @@ data class WikiInfo(
     val home: String = "",
     val fingerprint: String? = null,
     val source: String? = null,
+    /** Pages the wiki holds, and when one of them last changed. Both are 0 on
+     *  a response that doesn't carry them, which the card reads as "say nothing
+     *  about the time". */
+    val pages: Int = 0,
+    val updated: Long = 0,
 )
 
 data class WikiInfoResponse(

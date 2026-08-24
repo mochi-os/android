@@ -57,6 +57,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.toClipEntry
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -65,6 +66,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.MochiButton
@@ -335,13 +338,21 @@ private fun WikiCard(
     onUnsubscribe: () -> Unit,
 ) {
     val isSubscribed = wiki.source != null
-    val badge = if (isSubscribed) {
-        stringResource(R.string.wikis_subscribed_badge)
-    } else {
-        stringResource(R.string.wikis_owned_badge)
-    }
     val wikiId = wiki.fingerprint ?: wiki.id
     var showMenu by remember { mutableStateOf(false) }
+
+    // "12 pages · Updated <when>", dropping the second half for a wiki whose
+    // response carries no timestamp - a new wiki reads "0 pages" rather than
+    // claiming an edit at the epoch. Both strings are borrowed from the tags
+    // and search screens: their wording is exactly this, and a new key would
+    // have to be translated into 103 catalogues before `make locales` passed.
+    val pagesLabel = pluralStringResource(R.plurals.wikis_tags_count, wiki.pages, wiki.pages)
+    val subtitle = if (wiki.updated > 0) {
+        val whenLabel = LocalFormat.current.formatTimestamp(wiki.updated)
+        "$pagesLabel · " + stringResource(R.string.wikis_search_updated, whenLabel)
+    } else {
+        pagesLabel
+    }
 
     MochiCard(
         modifier = Modifier
@@ -362,7 +373,10 @@ private fun WikiCard(
                 icon = Icons.Default.Book,
             )
             Spacer(modifier = Modifier.width(12.dp))
-            Column(modifier = Modifier.weight(1f)) {
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
                 Text(
                     text = wiki.name,
                     style = MaterialTheme.typography.titleMedium,
@@ -371,7 +385,7 @@ private fun WikiCard(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = badge,
+                    text = subtitle,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
