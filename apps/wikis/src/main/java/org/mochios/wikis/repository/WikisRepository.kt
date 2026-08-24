@@ -6,6 +6,9 @@
 package org.mochios.wikis.repository
 
 import android.net.Uri
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -38,6 +41,7 @@ import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.Tag
 import org.mochios.wikis.model.TagPagesResponse
 import org.mochios.wikis.model.User
+import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiInfoResponse
 import java.io.File
 import javax.inject.Inject
@@ -85,9 +89,19 @@ class WikisRepository @Inject constructor(
 
     // ---- Wiki class-level ----
 
+    /**
+     * The wiki list as of the last [getClassInfo]. The sidebar rides on this
+     * rather than fetching per screen: it shows the same list everywhere, and
+     * a page-to-page hop inside one wiki would otherwise re-fetch it each time.
+     */
+    private val _wikiList = MutableStateFlow<List<WikiInfo>>(emptyList())
+    val wikiList: StateFlow<List<WikiInfo>> = _wikiList.asStateFlow()
+
     suspend fun getClassInfo(): WikiInfoResponse {
         return try {
-            api.getClassInfo().unwrap()
+            api.getClassInfo().unwrap().also { response ->
+                _wikiList.value = response.wikis.orEmpty()
+            }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -158,6 +172,9 @@ class WikisRepository @Inject constructor(
     suspend fun unsubscribeWiki(wiki: String) {
         try {
             api.unsubscribe(wiki).unwrap()
+            // Drop it from the cached list too, so a sidebar that isn't
+            // reloading doesn't keep offering a wiki the user just left.
+            _wikiList.value = _wikiList.value.filterNot { it.id == wiki || it.fingerprint == wiki }
         } catch (e: Exception) {
             throw e.toMochiError()
         }

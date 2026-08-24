@@ -6,6 +6,8 @@
 package org.mochios.wikis.ui.list
 
 import android.content.ClipData
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,13 +19,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Book
-import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
@@ -53,7 +55,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
@@ -65,13 +66,10 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
-import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -83,6 +81,7 @@ import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
+import org.mochios.wikis.ui.components.WikiDrawer
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -118,35 +117,16 @@ fun WikiListScreen(
         }
     }
 
-    MochiListDrawer(
+    WikiDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.wikis_sidebar_header)) },
-        items = emptyList(),
-        allItem = DrawerItem(
-            id = WikisApp.HOME,
-            title = stringResource(R.string.wikis_sidebar_all),
-            icon = Icons.Default.Book,
-        ),
+        wikis = uiState.wikis,
+        // This screen *is* the "All wikis" view, so the pinned row stays the
+        // selected one and tapping a wiki navigates away.
         selectedId = WikisApp.HOME,
-        onItemClick = { drawerScope.launch { drawerState.close() } },
-        actions = {
-            DrawerActionRow(
-                title = stringResource(R.string.wikis_sidebar_find),
-                icon = Icons.Default.Search,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    navController.navigate(WikisApp.FIND)
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(R.string.wikis_sidebar_create),
-                icon = Icons.Default.Add,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    navController.navigate(WikisApp.CREATE)
-                },
-            )
-        },
+        onSelectWiki = { wikiId -> navController.navigate(WikisApp.wikiHome(wikiId)) },
+        onSelectAll = { /* already here */ },
+        onFind = { navController.navigate(WikisApp.FIND) },
+        onCreate = { navController.navigate(WikisApp.CREATE) },
     ) {
         Scaffold(
             snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -332,8 +312,8 @@ private fun WikiCardGrid(
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         items(wikis, key = { it.id.ifEmpty { it.fingerprint ?: it.name } }) { wiki ->
             WikiCard(
@@ -346,6 +326,7 @@ private fun WikiCardGrid(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun WikiCard(
     wiki: WikiInfo,
@@ -354,44 +335,37 @@ private fun WikiCard(
     onUnsubscribe: () -> Unit,
 ) {
     val isSubscribed = wiki.source != null
-    val icon: ImageVector = if (isSubscribed) Icons.Default.Link else Icons.Default.Book
     val badge = if (isSubscribed) {
         stringResource(R.string.wikis_subscribed_badge)
     } else {
         stringResource(R.string.wikis_owned_badge)
     }
+    val wikiId = wiki.fingerprint ?: wiki.id
     var showMenu by remember { mutableStateOf(false) }
 
     MochiCard(
-        onClick = onOpen,
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
-        ),
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .combinedClickable(
+                onClick = onOpen,
+                // Only a subscribed wiki has anything in the menu, so an owned
+                // one's long press does nothing rather than opening an empty one.
+                onLongClick = { if (isSubscribed) showMenu = true },
+            ),
     ) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 10.dp),
+            modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Box(
-                modifier = Modifier
-                    .size(40.dp),
-                contentAlignment = Alignment.Center,
-            ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = badge,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
+            EntityIconCircle(
+                seed = wikiId.ifEmpty { wiki.name },
+                icon = Icons.Default.Book,
+            )
+            Spacer(modifier = Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = wiki.name,
-                    style = MaterialTheme.typography.bodyLarge,
+                    style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
