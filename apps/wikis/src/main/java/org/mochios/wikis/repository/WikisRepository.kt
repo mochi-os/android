@@ -123,6 +123,12 @@ class WikisRepository @Inject constructor(
     suspend fun joinWiki(target: String, server: String?): JoinWikiResult {
         return try {
             val r = api.joinWiki(SubscribeRequest(target = target, server = server)).unwrap()
+            // Refresh the cached list so the wiki the user just joined is in
+            // the sidebar and the list screen by the time either is looked at
+            // again - the join response carries no page count or timestamp to
+            // append one from. A failure here costs the caller nothing: the
+            // subscribe itself already succeeded.
+            runCatching { getClassInfo() }
             JoinWikiResult(
                 id = r.id,
                 fingerprint = r.fingerprint,

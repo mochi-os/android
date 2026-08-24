@@ -73,6 +73,17 @@ class WikiListViewModel @Inject constructor(
     private var searchJob: Job? = null
 
     init {
+        // The list is the repository's, not this ViewModel's copy of it: a
+        // subscribe from the find screen or an unsubscribe from anywhere
+        // reaches the cache, and this screen is showing it the moment the
+        // user comes back to it.
+        viewModelScope.launch {
+            repo.wikiList.collect { wikis ->
+                _uiState.value = _uiState.value.copy(
+                    wikis = wikis.sortedWith(compareBy(NaturalCompare) { it.name }),
+                )
+            }
+        }
         loadInfo()
         loadRecommendations()
     }
@@ -83,11 +94,8 @@ class WikiListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val info = repo.getClassInfo()
-                _uiState.value = _uiState.value.copy(
-                    wikis = (info.wikis.orEmpty()).sortedWith(compareBy(NaturalCompare) { it.name }),
-                    isLoading = false,
-                )
+                repo.getClassInfo()
+                _uiState.value = _uiState.value.copy(isLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -98,12 +106,8 @@ class WikiListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val info = repo.getClassInfo()
-                _uiState.value = _uiState.value.copy(
-                    wikis = (info.wikis.orEmpty()).sortedWith(compareBy(NaturalCompare) { it.name }),
-                    isRefreshing = false,
-                    error = null,
-                )
+                repo.getClassInfo()
+                _uiState.value = _uiState.value.copy(isRefreshing = false, error = null)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isRefreshing = false,
@@ -175,9 +179,6 @@ class WikiListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(subscribingId = null)
             if (result.isSuccess) {
                 val join = result.getOrThrow()
-                // Refresh local list so the new wiki shows up if the user
-                // backs out of the wiki home instead of taking the auto-nav.
-                refresh()
                 _events.emit(WikiListEvent.OpenWiki(join.fingerprint.ifBlank { join.id }, join.home))
             } else {
                 val message = result.exceptionOrNull()?.toMochiError()?.userMessage()
@@ -227,10 +228,7 @@ class WikiListViewModel @Inject constructor(
             )
             try {
                 repo.unsubscribeWiki(wiki.fingerprint ?: wiki.id)
-                _uiState.value = _uiState.value.copy(
-                    unsubscribingId = null,
-                    wikis = _uiState.value.wikis.filterNot { it.id == wiki.id },
-                )
+                _uiState.value = _uiState.value.copy(unsubscribingId = null)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(unsubscribingId = null)
                 val message = e.toMochiError().userMessage()
