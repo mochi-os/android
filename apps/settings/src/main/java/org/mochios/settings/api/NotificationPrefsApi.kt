@@ -102,7 +102,7 @@ interface NotificationPrefsApi {
     @POST("settings/-/notifications/categories/delete")
     suspend fun deleteCategory(
         @Field("id") id: String,
-        @Field("reassign_to") reassignTo: String,
+        @Field("reassign") reassign: String,
     ): Response<Unit>
 
     @FormUrlEncoded
