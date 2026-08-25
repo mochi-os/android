@@ -58,7 +58,9 @@ fun CreateWikiScreen(
     val uiState by viewModel.uiState.collectAsState()
 
     var name by remember { mutableStateOf("") }
-    var allowSearch by remember { mutableStateOf(false) }
+    // Public by default: a wiki nobody can find is the rarer intent, and the
+    // switch is right there for the person who wants it.
+    var allowSearch by remember { mutableStateOf(true) }
 
     LaunchedEffect(uiState.created) {
         uiState.created?.let { created ->
