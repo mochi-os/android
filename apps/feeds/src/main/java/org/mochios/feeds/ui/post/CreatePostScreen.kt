@@ -76,6 +76,7 @@ import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
 import org.mochios.android.ui.components.MarkdownToolbar
+import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
@@ -277,7 +278,18 @@ fun CreatePostScreen(
                     bodyField = updated
                     if (updated.text != body) viewModel.setBody(updated.text)
                 },
-            )
+            ) {
+                // Reaching for a file belongs with the body it attaches to,
+                // not adrift below the form.
+                MarkdownToolbarSeparator()
+                MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
+                    Icon(
+                        Icons.Default.AttachFile,
+                        contentDescription = stringResource(R.string.feeds_add_files),
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
+            }
             Spacer(modifier = Modifier.height(16.dp))
 
             // Preview card of the chosen location, above the action buttons.
@@ -353,20 +365,6 @@ fun CreatePostScreen(
             }
 
             Spacer(modifier = Modifier.height(12.dp))
-
-            // Attachments
-            MochiOutlinedButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                tone = MochiButtonTone.Neutral,
-            ) {
-                Icon(
-                    Icons.Default.AttachFile,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(stringResource(R.string.feeds_add_files))
-            }
 
             if (existingAttachments.isNotEmpty() || attachments.isNotEmpty()) {
                 Spacer(modifier = Modifier.height(8.dp))

@@ -58,11 +58,10 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.MarkdownToolbar
+import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
-import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.forums.R
@@ -197,21 +196,19 @@ fun NewPostScreen(
                     bodyField = updated
                     if (updated.text != body) viewModel.setBody(updated.text)
                 },
-            )
-            Spacer(Modifier.height(16.dp))
-
-            MochiOutlinedButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                tone = MochiButtonTone.Neutral,
             ) {
-                Icon(
-                    Icons.Default.AttachFile,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(Modifier.width(8.dp))
-                Text(stringResource(R.string.forums_post_attach))
+                // Reaching for a file belongs with the body it attaches to,
+                // not adrift below the form.
+                MarkdownToolbarSeparator()
+                MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
+                    Icon(
+                        Icons.Default.AttachFile,
+                        contentDescription = stringResource(R.string.forums_post_attach),
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
             }
+            Spacer(Modifier.height(16.dp))
 
             if (existingAttachments.isNotEmpty()) {
                 Spacer(Modifier.height(8.dp))
