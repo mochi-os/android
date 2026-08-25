@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wikisivulinkki</string>
     <string name="wikis_pageview_loading">Ladataan sivua…</string>
     <string name="wikis_page_action_share">Jaa sivulinkki</string>
-    <string name="wikis_page_action_rss_changes">RSS: Muutokset</string>
-    <string name="wikis_page_action_rss_comments">RSS: Kommentit</string>
-    <string name="wikis_page_action_rss_all">RSS: Muutokset ja kommentit</string>
     <string name="wikis_open_sidebar">Avaa sivupalkki</string>
     <string name="wikis_owned_badge">Omistettu</string>
     <string name="wikis_search_placeholder">Etsi wiki…</string>
     <string name="wikis_subscribing">Tilataan…</string>
     <string name="wikis_unsubscribe_confirm_message">Haluatko varmasti peruuttaa tilauksen %1$s?</string>
     <string name="wikis_subscribe_failed_502">Palvelinta ei voi tavoittaa. Yritetään uudelleen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wikin RSS-URL</string>
     <string name="wikis_find_search_placeholder">Etsi nimellä, ID:llä, sormenjäljellä tai URL:lla…</string>
     <string name="wikis_join_search_button">Etsi wikejä…</string>

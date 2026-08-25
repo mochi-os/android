@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki lehe link</string>
     <string name="wikis_pageview_loading">Lehte laadimine…</string>
     <string name="wikis_page_action_share">Jaga lehe linki</string>
-    <string name="wikis_page_action_rss_changes">RSS: Muudatused</string>
-    <string name="wikis_page_action_rss_comments">RSS: Kommentaarid</string>
-    <string name="wikis_page_action_rss_all">RSS: Muudatused ja kommentaarid</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>
     <string name="wikis_owned_badge">Omanik</string>
     <string name="wikis_search_placeholder">Otsi wikit…</string>
     <string name="wikis_subscribing">Tellitakse…</string>
     <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimust %1$s tühistada?</string>
     <string name="wikis_subscribe_failed_502">See server ei ole kättesaadav. Proovin uuesti…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Otsi nime, ID, sõrmejälje või URL järgi…</string>
     <string name="wikis_join_search_button">Otsi wikist…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Връзка към wiki страница</string>
     <string name="wikis_pageview_loading">Зареждане на страницата…</string>
     <string name="wikis_page_action_share">Сподели връзка към страница</string>
-    <string name="wikis_page_action_rss_changes">RSS: Промени</string>
-    <string name="wikis_page_action_rss_comments">RSS: Коментари</string>
-    <string name="wikis_page_action_rss_all">RSS: Промени и коментари</string>
     <string name="wikis_open_sidebar">Отвори страничната лента</string>
     <string name="wikis_owned_badge">Притежавано</string>
     <string name="wikis_search_placeholder">Търсене на wiki…</string>
     <string name="wikis_subscribing">Абониране…</string>
     <string name="wikis_unsubscribe_confirm_message">Сигурни ли сте, че искате да отмените абонамента от %1$s?</string>
     <string name="wikis_subscribe_failed_502">Този сървър е недостъпен. Опит отново…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">RSS URL на wiki</string>
     <string name="wikis_find_search_placeholder">Търсене по име, ID, отпечатък или URL…</string>
     <string name="wikis_join_search_button">Търсене на wiki…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki ಪುಟದ ಲಿಂಕ್</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">ಪುಟದ ಲಿಂಕ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: ಬದಲಾವಣೆಗಳು ಮತ್ತು ಕಾಮೆಂಟ್‌ಗಳು</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki ಹುಡುಕಿ…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ನೀವು %1$s ನಿಂದ ಅನ್‌ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಲು ಖಚಿತವೇ?</string>
     <string name="wikis_subscribe_failed_502">ಆ ಸರ್ವರ್ ತಲುಪಲಾಗುತ್ತಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿದೆ…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ URL ಮೂಲಕ ಹುಡುಕಿ…</string>
     <string name="wikis_join_search_button">wiki ಗಳನ್ನು ಹುಡುಕಿ…</string>

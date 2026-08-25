@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki पन्ना के लिंक</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">पन्ना के लिंक साझा करीं</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: बदलाव आ टिप्पणी</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">कवनो wiki खोजीं…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">का रउआ साँच में %1$s के सदस्यता छोड़े के चाहत बानी?</string>
     <string name="wikis_subscribe_failed_502">ऊ सर्वर तक ना पहुँचल जा सकत। फेर कोशिश कइल जा रहल बा…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">नाम, ID, फिंगरप्रिंट भा URL से खोजीं…</string>
     <string name="wikis_join_search_button">wiki खोजीं…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">የWiki ገጽ አገናኝ</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">የገጽ አገናኝ አጋራ</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS፦ ለውጦች እና አስተያየቶች</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki ይፈልጉ…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ከ%1$s መመዝገቢያ መሰረዝ እርግጠኛ ነዎት?</string>
     <string name="wikis_subscribe_failed_502">ያ አገልጋይ ሊደረስበት አይችልም። እንደገና እየሞከረ ነው…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">በስም፣ በID፣ በጣት አሻራ ወይም በURL ይፈልጉ…</string>
     <string name="wikis_join_search_button">wiki ዎችን ይፈልጉ…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Tautan kaca Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Bagikake tautan kaca</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Owahan lan komentar</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Golek wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Sampeyan yakin arep mbatalake langganan %1$s?</string>
     <string name="wikis_subscribe_failed_502">Server kasebut ora bisa digayuh. Nyoba maneh…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Golek miturut jeneng, ID, sidik jari, utawa URL…</string>
     <string name="wikis_join_search_button">Golek wiki…</string>

@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Lidhje e faqes wiki</string>
     <string name="wikis_pageview_loading">Po ngarkohet faqja…</string>
     <string name="wikis_page_action_share">Ndaj lidhjen e faqes</string>
-    <string name="wikis_page_action_rss_changes">RSS: Ndryshime</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komente</string>
-    <string name="wikis_page_action_rss_all">RSS: Ndryshime dhe komente</string>
     <string name="wikis_open_sidebar">Hap shiritin anësor</string>
     <string name="wikis_owned_badge">Pronar</string>
     <string name="wikis_search_placeholder">Kërko wiki…</string>
     <string name="wikis_subscribing">Duke u pajtuar…</string>
     <string name="wikis_unsubscribe_confirm_message">Je i sigurt që do të çpajtohesh nga %1$s?</string>
     <string name="wikis_subscribe_failed_502">Serveri nuk është i arritshëm. Po provohet përsëri…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS i wiki</string>
     <string name="wikis_find_search_placeholder">Kërko sipas emrit, ID, gjurmës së gishtit ose URL…</string>
     <string name="wikis_join_search_button">Kërko wiki…</string>

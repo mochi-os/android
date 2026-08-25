@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Веза wiki странице</string>
     <string name="wikis_pageview_loading">Учитавање странице…</string>
     <string name="wikis_page_action_share">Подели везу странице</string>
-    <string name="wikis_page_action_rss_changes">RSS: Промене</string>
-    <string name="wikis_page_action_rss_comments">RSS: Коментари</string>
-    <string name="wikis_page_action_rss_all">RSS: Промене и коментари</string>
     <string name="wikis_open_sidebar">Отвори бочну траку</string>
     <string name="wikis_owned_badge">Власништво</string>
     <string name="wikis_search_placeholder">Претражи wiki…</string>
     <string name="wikis_subscribing">Пријављивање…</string>
     <string name="wikis_unsubscribe_confirm_message">Сигурно желите да откажете претплату на %1$s?</string>
     <string name="wikis_subscribe_failed_502">Сервер није доступан. Покушавам поново…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Претражи по имену, ID, отиску или URL…</string>
     <string name="wikis_join_search_button">Претражи wikije…</string>

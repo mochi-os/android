@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">विकि पृष्ठ लिंक</string>
     <string name="wikis_pageview_loading">पृष्ठ लोड हो रहा है…</string>
     <string name="wikis_page_action_share">पृष्ठ लिंक साझा करें</string>
-    <string name="wikis_page_action_rss_changes">RSS: परिवर्तन</string>
-    <string name="wikis_page_action_rss_comments">RSS: टिप्पणियां</string>
-    <string name="wikis_page_action_rss_all">RSS: परिवर्तन और टिप्पणियां</string>
     <string name="wikis_open_sidebar">साइडबार खोलें</string>
     <string name="wikis_owned_badge">स्वामित्व</string>
     <string name="wikis_search_placeholder">एक विकि खोजें…</string>
     <string name="wikis_subscribing">सब्सक्राइब किया जा रहा है…</string>
     <string name="wikis_unsubscribe_confirm_message">क्या आप वाकई %1$s से सदस्यता समाप्त करना चाहते हैं?</string>
     <string name="wikis_subscribe_failed_502">वह सर्वर पहुंच से बाहर है। पुनः प्रयास किया जा रहा है…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">विकि RSS URL</string>
     <string name="wikis_find_search_placeholder">नाम, ID, फ़िंगरप्रिंट या URL से खोजें…</string>
     <string name="wikis_join_search_button">विकि खोजें…</string>

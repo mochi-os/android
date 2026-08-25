@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">קישור לדף ויקי</string>
     <string name="wikis_pageview_loading">טוען דף…</string>
     <string name="wikis_page_action_share">שתף קישור לדף</string>
-    <string name="wikis_page_action_rss_changes">RSS: שינויים</string>
-    <string name="wikis_page_action_rss_comments">RSS: תגובות</string>
-    <string name="wikis_page_action_rss_all">RSS: שינויים ותגובות</string>
     <string name="wikis_open_sidebar">פתח סרגל צד</string>
     <string name="wikis_owned_badge">בבעלותך</string>
     <string name="wikis_search_placeholder">חפש ויקי…</string>
     <string name="wikis_subscribing">נרשם…</string>
     <string name="wikis_unsubscribe_confirm_message">האם אתה בטוח שברצונך לבטל את הרשמתך מ-%1$s?</string>
     <string name="wikis_subscribe_failed_502">השרת אינו נגיש. מנסה שוב…</string>
-    <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">כתובת RSS של ויקי</string>
     <string name="wikis_find_search_placeholder">חיפוש לפי שם, מזהה, טביעת אצבע או URL…</string>
     <string name="wikis_join_search_button">חפש ויקי…</string>

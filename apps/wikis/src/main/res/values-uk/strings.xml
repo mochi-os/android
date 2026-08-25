@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Посилання на сторінку вікі</string>
     <string name="wikis_pageview_loading">Завантаження сторінки…</string>
     <string name="wikis_page_action_share">Поділитися посиланням на сторінку</string>
-    <string name="wikis_page_action_rss_changes">RSS: Зміни</string>
-    <string name="wikis_page_action_rss_comments">RSS: Коментарі</string>
-    <string name="wikis_page_action_rss_all">RSS: Зміни та коментарі</string>
     <string name="wikis_open_sidebar">Відкрити бічну панель</string>
     <string name="wikis_owned_badge">Власне</string>
     <string name="wikis_search_placeholder">Пошук вікі…</string>
     <string name="wikis_subscribing">Підписка…</string>
     <string name="wikis_unsubscribe_confirm_message">Ви впевнені, що хочете відписатися від %1$s?</string>
     <string name="wikis_subscribe_failed_502">Цей сервер недоступний. Повторна спроба…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">RSS URL вікі</string>
     <string name="wikis_find_search_placeholder">Пошук за іменем, ID, відбитком або URL…</string>
     <string name="wikis_join_search_button">Пошук вікі…</string>

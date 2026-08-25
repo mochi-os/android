@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki kuatiarogue juajuha</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Emoherakuã kuatiarogue juajuha</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Ñemoambue ha ñe’ẽmondo</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Eheka peteĩ wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">¿Añetehápe reipota resẽ %1$s-gui?</string>
     <string name="wikis_subscribe_failed_502">Pe servidor ndaikatúi jaike. Ojeha’ã jey…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Eheka téra, ID, kuã ra’anga térã URL rupive…</string>
     <string name="wikis_join_search_button">Eheka wikinguéra…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Пайванди саҳифаи Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Пайванди саҳифаро мубодила кунед</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Тағйирот ва шарҳҳо</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Ҷустуҷӯи wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед обунаи %1$s-ро бекор кунед?</string>
     <string name="wikis_subscribe_failed_502">Ин сервер дастнорас аст. Такрор кӯшиш карда мешавад…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Ҷустуҷӯ аз рӯи ном, ID, изи ангушт ё URL…</string>
     <string name="wikis_join_search_button">Ҷустуҷӯи wiki-ҳо…</string>

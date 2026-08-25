@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki 頁面連結</string>
     <string name="wikis_pageview_loading">正在載入頁面…</string>
     <string name="wikis_page_action_share">分享頁面連結</string>
-    <string name="wikis_page_action_rss_changes">RSS:變更</string>
-    <string name="wikis_page_action_rss_comments">RSS:評論</string>
-    <string name="wikis_page_action_rss_all">RSS:變更和評論</string>
     <string name="wikis_open_sidebar">開啟側邊欄</string>
     <string name="wikis_owned_badge">擁有</string>
     <string name="wikis_search_placeholder">搜尋 wiki…</string>
     <string name="wikis_subscribing">正在訂閱…</string>
     <string name="wikis_unsubscribe_confirm_message">確定要取消訂閱 %1$s 嗎?</string>
     <string name="wikis_subscribe_failed_502">該伺服器無法存取。重試中…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">依名稱、ID、指紋或 URL 搜尋…</string>
     <string name="wikis_join_search_button">搜尋 wikis…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Ọ̀nà ojú-ìwé Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Pín ọ̀nà ojú-ìwé</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Àwọn ìyípadà àti àsọyé</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wá wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Ṣé ó dá ọ lójú pé o fẹ́ fagilé ìforúkọsílẹ̀ sí %1$s?</string>
     <string name="wikis_subscribe_failed_502">A kò lè dé ọ̀dọ̀ olùpèsè yẹn. Ń gbìyànjú lẹ́ẹ̀kansí…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Wá nípa orúkọ, ID, àmì ìka tàbí URL…</string>
     <string name="wikis_join_search_button">Wá àwọn wiki…</string>

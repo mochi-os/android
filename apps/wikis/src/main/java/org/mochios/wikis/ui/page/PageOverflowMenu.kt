@@ -23,6 +23,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -30,12 +35,14 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiPermissions
 
 /**
- * Material3 has no nested-DropdownMenu, so web's RSS sub-menu is flattened into
- * three rows. Callbacks fire on tap; the caller collapses the menu itself.
+ * Material3 has no nested-DropdownMenu, so web's RSS fly-out becomes one row
+ * that expands its three modes in place — the same shape the wiki list's
+ * overflow uses. Callbacks fire on tap; the caller collapses the menu itself.
  */
 @Suppress("UNUSED_PARAMETER")
 @Composable
@@ -65,6 +72,11 @@ fun PageOverflowMenu(
     // [wikiId] and [slug] are accepted on the contract so callers can pass
     // the same set as web's overflow, but every callback is already pre-bound
     // by the host — the menu itself doesn't navigate from these arguments.
+
+    // Held outside the menu content, which is disposed on collapse, so the
+    // sub-menu is closed again the next time the overflow opens.
+    var rssExpanded by remember { mutableStateOf(false) }
+    LaunchedEffect(expanded) { if (!expanded) rssExpanded = false }
 
     MochiDropdownMenu(
         expanded = expanded,
@@ -129,22 +141,15 @@ fun PageOverflowMenu(
             onClick = onChanges,
         )
 
-        // Flattened RSS sub-menu (Material3 doesn't have nested DropdownMenus).
-        MenuRow(
-            icon = Icons.Default.RssFeed,
-            label = stringResource(R.string.wikis_page_action_rss_changes),
-            onClick = { onRssCopy("changes") },
-        )
-        MenuRow(
-            icon = Icons.Default.RssFeed,
-            label = stringResource(R.string.wikis_page_action_rss_comments),
-            onClick = { onRssCopy("comments") },
-        )
-        MenuRow(
-            icon = Icons.Default.RssFeed,
-            label = stringResource(R.string.wikis_page_action_rss_all),
-            onClick = { onRssCopy("all") },
-        )
+        // The RSS modes live behind one row rather than three of their own.
+        MochiDropdownSubmenu(
+            text = { Text(stringResource(R.string.wikis_rss_menu)) },
+            expanded = rssExpanded,
+            onExpandedChange = { rssExpanded = it },
+            leadingIcon = { Icon(Icons.Default.RssFeed, contentDescription = null) },
+        ) {
+            RssModes(onSelect = onRssCopy)
+        }
 
         if (permissions.edit) {
             MenuRow(
@@ -176,6 +181,23 @@ fun PageOverflowMenu(
             )
         }
     }
+}
+
+/** The three modes web offers, as the fly-out's own rows. */
+@Composable
+private fun RssModes(onSelect: (String) -> Unit) {
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_changes)) },
+        onClick = { onSelect("changes") },
+    )
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_comments)) },
+        onClick = { onSelect("comments") },
+    )
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_both)) },
+        onClick = { onSelect("all") },
+    )
 }
 
 @Composable

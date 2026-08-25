@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Lenkje til wikiside</string>
     <string name="wikis_pageview_loading">Lastar side…</string>
     <string name="wikis_page_action_share">Del lenkje til sida</string>
-    <string name="wikis_page_action_rss_changes">RSS: Endringar</string>
-    <string name="wikis_page_action_rss_comments">RSS: Kommentarar</string>
-    <string name="wikis_page_action_rss_all">RSS: Endringar og kommentarar</string>
     <string name="wikis_open_sidebar">Opne sidefelt</string>
     <string name="wikis_owned_badge">Eigd</string>
     <string name="wikis_search_placeholder">Søk etter wiki…</string>
     <string name="wikis_subscribing">Abonnerer…</string>
     <string name="wikis_unsubscribe_confirm_message">Er du sikker på at du vil seie opp abonnementet på %1$s?</string>
     <string name="wikis_subscribe_failed_502">Den tenaren er ikkje tilgjengeleg. Prøver igjen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Søk etter namn, ID, fingeravtrykk eller URL…</string>
     <string name="wikis_join_search_button">Søk etter wiki…</string>

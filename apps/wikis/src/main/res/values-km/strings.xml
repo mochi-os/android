@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">តំណទំព័រ Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">ចែករំលែកតំណទំព័រ</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS៖ ការផ្លាស់ប្តូរ និងមតិយោបល់</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">ស្វែងរក wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវ %1$s មែនទេ?</string>
     <string name="wikis_subscribe_failed_502">មិនអាចទាក់ទងម៉ាស៊ីនមេនោះបានទេ។ កំពុងព្យាយាមម្តងទៀត…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ស្វែងរកតាមឈ្មោះ ID ស្នាមម្រាមដៃ ឬ URL…</string>
     <string name="wikis_join_search_button">ស្វែងរក wiki…</string>

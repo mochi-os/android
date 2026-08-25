@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wikiaren orrialdearen esteka</string>
     <string name="wikis_pageview_loading">Orrialdea kargatzen…</string>
     <string name="wikis_page_action_share">Partekatu orrialdearen esteka</string>
-    <string name="wikis_page_action_rss_changes">RSS: Aldaketak</string>
-    <string name="wikis_page_action_rss_comments">RSS: Iruzkinak</string>
-    <string name="wikis_page_action_rss_all">RSS: Aldaketak eta iruzkinak</string>
     <string name="wikis_open_sidebar">Ireki alboko barra</string>
     <string name="wikis_owned_badge">Norbera</string>
     <string name="wikis_search_placeholder">Bilatu wikia…</string>
     <string name="wikis_subscribing">Harpidetzen…</string>
     <string name="wikis_unsubscribe_confirm_message">Ziur al zaude %1$s harpidetza utzi nahi duzula?</string>
     <string name="wikis_subscribe_failed_502">Zerbitzaria ezin da iritsi. Berriro saiatzen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wikiaren RSS URLa</string>
     <string name="wikis_find_search_placeholder">Bilatu izenez, IDz, hatz-markaz edo URLz…</string>
     <string name="wikis_join_search_button">Bilatu wikiak…</string>

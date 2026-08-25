@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Kiungo cha ukurasa wa Wiki</string>
     <string name="wikis_pageview_loading">Inapakia ukurasa…</string>
     <string name="wikis_page_action_share">Shiriki kiungo cha ukurasa</string>
-    <string name="wikis_page_action_rss_changes">RSS: Mabadiliko</string>
-    <string name="wikis_page_action_rss_comments">RSS: Maoni</string>
-    <string name="wikis_page_action_rss_all">RSS: Mabadiliko na maoni</string>
     <string name="wikis_open_sidebar">Fungua upau wa pembeni</string>
     <string name="wikis_owned_badge">Inamilikiwa</string>
     <string name="wikis_search_placeholder">Tafuta wiki…</string>
     <string name="wikis_subscribing">Inajiandikisha…</string>
     <string name="wikis_unsubscribe_confirm_message">Una uhakika unataka kujiondoa kutoka %1$s?</string>
     <string name="wikis_subscribe_failed_502">Seva hiyo haipatikani. Inajaribu tena…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL ya RSS ya Wiki</string>
     <string name="wikis_find_search_placeholder">Tafuta kwa jina, ID, alama ya kidole, au URL…</string>
     <string name="wikis_join_search_button">Tafuta wikis…</string>

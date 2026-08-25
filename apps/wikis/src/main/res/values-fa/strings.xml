@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">لینک صفحه ویکی</string>
     <string name="wikis_pageview_loading">بارگذاری صفحه…</string>
     <string name="wikis_page_action_share">اشتراک‌گذاری لینک صفحه</string>
-    <string name="wikis_page_action_rss_changes">RSS: تغییرات</string>
-    <string name="wikis_page_action_rss_comments">RSS: نظرات</string>
-    <string name="wikis_page_action_rss_all">RSS: تغییرات و نظرات</string>
     <string name="wikis_open_sidebar">باز کردن نوار کناری</string>
     <string name="wikis_owned_badge">متعلق به شما</string>
     <string name="wikis_search_placeholder">جستجوی ویکی…</string>
     <string name="wikis_subscribing">در حال اشتراک…</string>
     <string name="wikis_unsubscribe_confirm_message">آیا مطمئنید که می‌خواهید اشتراک از %1$s را لغو کنید؟</string>
     <string name="wikis_subscribe_failed_502">آن سرور قابل دسترسی نیست. تلاش مجدد…</string>
-    <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">URL RSS ویکی</string>
     <string name="wikis_find_search_placeholder">جستجو بر اساس نام، شناسه، اثر انگشت یا URL…</string>
     <string name="wikis_join_search_button">جستجوی ویکی‌ها…</string>

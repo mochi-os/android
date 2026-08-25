@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Enllaç de la pàgina wiki</string>
     <string name="wikis_pageview_loading">Carregant pàgina…</string>
     <string name="wikis_page_action_share">Comparteix l\'enllaç de la pàgina</string>
-    <string name="wikis_page_action_rss_changes">RSS: Canvis</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comentaris</string>
-    <string name="wikis_page_action_rss_all">RSS: Canvis i comentaris</string>
     <string name="wikis_open_sidebar">Obre la barra lateral</string>
     <string name="wikis_owned_badge">Propi</string>
     <string name="wikis_search_placeholder">Cerca un wiki…</string>
     <string name="wikis_subscribing">Subscrivint…</string>
     <string name="wikis_unsubscribe_confirm_message">Segur que vols cancel·lar la subscripció a %1$s?</string>
     <string name="wikis_subscribe_failed_502">Aquest servidor no és accessible. Tornant a provar…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Cerca per nom, ID, empremta o URL…</string>
     <string name="wikis_join_search_button">Cerca wikis…</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki lapas saite</string>
     <string name="wikis_pageview_loading">Ielādē lapu…</string>
     <string name="wikis_page_action_share">Kopīgot lapas saiti</string>
-    <string name="wikis_page_action_rss_changes">RSS: Izmaiņas</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komentāri</string>
-    <string name="wikis_page_action_rss_all">RSS: Izmaiņas un komentāri</string>
     <string name="wikis_open_sidebar">Atvērt sānu joslu</string>
     <string name="wikis_owned_badge">Pieder</string>
     <string name="wikis_search_placeholder">Meklēt wiki…</string>
     <string name="wikis_subscribing">Abonē…</string>
     <string name="wikis_unsubscribe_confirm_message">Vai tiešām vēlaties atteikties no %1$s?</string>
     <string name="wikis_subscribe_failed_502">Serveris nav pieejams. Mēģina vēlreiz…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Meklēt pēc nosaukuma, ID, pirkstu nospieduma vai URL…</string>
     <string name="wikis_join_search_button">Meklēt wiki…</string>

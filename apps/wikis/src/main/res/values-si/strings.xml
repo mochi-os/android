@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki පිටු සබැඳිය</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">පිටු සබැඳිය බෙදාගන්න</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: වෙනස්කම් සහ අදහස්</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki සොයන්න…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ඔබට %1$s වෙතින් දායකත්වය අවලංගු කිරීමට අවශ්‍ය බව විශ්වාසද?</string>
     <string name="wikis_subscribe_failed_502">එම සේවාදායකයට ළඟා විය නොහැක. නැවත උත්සාහ කරමින්…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">නම, ID, ඇඟිලි සලකුණ හෝ URL අනුව සොයන්න…</string>
     <string name="wikis_join_search_button">wiki සොයන්න…</string>

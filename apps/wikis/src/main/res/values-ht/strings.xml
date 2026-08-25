@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Lyen paj Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Pataje lyen paj la</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Chanjman ak kòmantè</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Chèche yon wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Èske ou sèten ou vle dezabòne nan %1$s?</string>
     <string name="wikis_subscribe_failed_502">Sèvè sa a pa aksesib. N ap eseye ankò…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Chèche pa non, ID, anprent oswa URL…</string>
     <string name="wikis_join_search_button">Chèche wiki yo…</string>

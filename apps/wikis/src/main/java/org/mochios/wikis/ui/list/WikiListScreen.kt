@@ -76,6 +76,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
@@ -159,18 +160,15 @@ fun WikiListScreen(
                                     rssSubmenuOpen = false
                                 },
                             ) {
-                                MochiDropdownMenuItem(
+                                MochiDropdownSubmenu(
                                     text = { Text(stringResource(R.string.wikis_rss_menu)) },
-                                    onClick = { rssSubmenuOpen = !rssSubmenuOpen },
+                                    expanded = rssSubmenuOpen,
+                                    onExpandedChange = { rssSubmenuOpen = it },
                                     leadingIcon = {
                                         Icon(Icons.Outlined.RssFeed, contentDescription = null)
                                     },
-                                    trailingIcon = {
-                                        Text(stringResource(R.string.wikis_rss_menu_trailing))
-                                    },
-                                )
-                                if (rssSubmenuOpen) {
-                                    RssSubmenu(
+                                ) {
+                                    RssModes(
                                         onSelect = { mode ->
                                             showOverflow = false
                                             rssSubmenuOpen = false
@@ -264,22 +262,21 @@ fun WikiListScreen(
     }
 }
 
+/** The three modes web offers, as the fly-out's own rows. */
 @Composable
-private fun RssSubmenu(onSelect: (String) -> Unit) {
-    Column(modifier = Modifier.padding(start = 16.dp)) {
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_rss_changes)) },
-            onClick = { onSelect("changes") },
-        )
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_rss_comments)) },
-            onClick = { onSelect("comments") },
-        )
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_rss_both)) },
-            onClick = { onSelect("all") },
-        )
-    }
+private fun RssModes(onSelect: (String) -> Unit) {
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_changes)) },
+        onClick = { onSelect("changes") },
+    )
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_comments)) },
+        onClick = { onSelect("comments") },
+    )
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_both)) },
+        onClick = { onSelect("all") },
+    )
 }
 
 @Composable

@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki পৃষ্ঠার লিঙ্ক</string>
     <string name="wikis_pageview_loading">পৃষ্ঠা লোড হচ্ছে…</string>
     <string name="wikis_page_action_share">পৃষ্ঠার লিঙ্ক শেয়ার করুন</string>
-    <string name="wikis_page_action_rss_changes">RSS: পরিবর্তন</string>
-    <string name="wikis_page_action_rss_comments">RSS: মন্তব্য</string>
-    <string name="wikis_page_action_rss_all">RSS: পরিবর্তন ও মন্তব্য</string>
     <string name="wikis_open_sidebar">সাইডবার খুলুন</string>
     <string name="wikis_owned_badge">মালিকানা</string>
     <string name="wikis_search_placeholder">একটি wiki খুঁজুন…</string>
     <string name="wikis_subscribing">সাবস্ক্রাইব হচ্ছে…</string>
     <string name="wikis_unsubscribe_confirm_message">আপনি কি নিশ্চিত যে %1$s থেকে সাবস্ক্রিপশন বাতিল করতে চান?</string>
     <string name="wikis_subscribe_failed_502">সেই সার্ভারে পৌঁছানো যাচ্ছে না। আবার চেষ্টা করছে…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">নাম, আইডি, ফিঙ্গারপ্রিন্ট বা URL দিয়ে খুঁজুন…</string>
     <string name="wikis_join_search_button">wikis খুঁজুন…</string>

@@ -50,9 +50,6 @@
     <string name="wikis_page_action_settings">Settings</string>
     <string name="wikis_page_action_share">Share page link</string>
     <string name="wikis_page_action_unsubscribe">Unsubscribe</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Changes and comments</string>
 
     <plurals name="wikis_page_action_comments">
         <item quantity="one">%d comment</item>
@@ -92,7 +89,6 @@
 
     <!-- RSS feed overflow -->
     <string name="wikis_rss_menu">RSS feed</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_rss_changes">Changes</string>
     <string name="wikis_rss_comments">Comments</string>
     <string name="wikis_rss_both">Changes and comments</string>

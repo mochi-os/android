@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki puslapio nuoroda</string>
     <string name="wikis_pageview_loading">Įkeliamas puslapis…</string>
     <string name="wikis_page_action_share">Dalintis puslapio nuoroda</string>
-    <string name="wikis_page_action_rss_changes">RSS: Pakeitimai</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komentarai</string>
-    <string name="wikis_page_action_rss_all">RSS: Pakeitimai ir komentarai</string>
     <string name="wikis_open_sidebar">Atidaryti šoninę juostą</string>
     <string name="wikis_owned_badge">Priklauso</string>
     <string name="wikis_search_placeholder">Ieškoti wiki…</string>
     <string name="wikis_subscribing">Prenumeruojama…</string>
     <string name="wikis_unsubscribe_confirm_message">Ar tikrai norite atsisakyti prenumeratos %1$s?</string>
     <string name="wikis_subscribe_failed_502">Serveris nepasiekiamas. Bandoma vėl…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Ieškoti pagal pavadinimą, ID, atspaudą arba URL…</string>
     <string name="wikis_join_search_button">Ieškoti wikis…</string>

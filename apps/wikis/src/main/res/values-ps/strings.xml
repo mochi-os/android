@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">د Wiki پاڼې لینک</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">د پاڼې لینک شریک کړئ</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: بدلونونه او څرګندونې</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">د wiki لټون…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s ګډون لغوه کړئ؟</string>
     <string name="wikis_subscribe_failed_502">هغه سرور ته لاسرسی نشته. بیا هڅه کیږي…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">د نوم، ID، ګوتنښې یا URL له مخې ولټوئ…</string>
     <string name="wikis_join_search_button">د wiki لټون…</string>

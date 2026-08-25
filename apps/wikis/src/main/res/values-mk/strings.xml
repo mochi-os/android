@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Врска на wiki страница</string>
     <string name="wikis_pageview_loading">Се вчитува страница…</string>
     <string name="wikis_page_action_share">Сподели врска на страница</string>
-    <string name="wikis_page_action_rss_changes">RSS: Промени</string>
-    <string name="wikis_page_action_rss_comments">RSS: Коментари</string>
-    <string name="wikis_page_action_rss_all">RSS: Промени и коментари</string>
     <string name="wikis_open_sidebar">Отвори странична лента</string>
     <string name="wikis_owned_badge">Сопственост</string>
     <string name="wikis_search_placeholder">Барај wiki…</string>
     <string name="wikis_subscribing">Се претплатувате…</string>
     <string name="wikis_unsubscribe_confirm_message">Дали сте сигурни дека сакате да се отпишете од %1$s?</string>
     <string name="wikis_subscribe_failed_502">Серверот не е достапен. Се обидува повторно…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Барај по име, ID, отпечаток или URL…</string>
     <string name="wikis_join_search_button">Барај wikis…</string>

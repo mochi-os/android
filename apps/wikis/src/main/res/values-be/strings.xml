@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Спасылка на старонку wiki</string>
     <string name="wikis_pageview_loading">Загрузка старонкі…</string>
     <string name="wikis_page_action_share">Падзяліцца спасылкай на старонку</string>
-    <string name="wikis_page_action_rss_changes">RSS: Змены</string>
-    <string name="wikis_page_action_rss_comments">RSS: Каментары</string>
-    <string name="wikis_page_action_rss_all">RSS: Змены і каментары</string>
     <string name="wikis_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="wikis_owned_badge">Уласны</string>
     <string name="wikis_search_placeholder">Пошук wiki…</string>
     <string name="wikis_subscribing">Падпіска…</string>
     <string name="wikis_unsubscribe_confirm_message">Вы ўпэўнены, што хочаце адпісацца ад %1$s?</string>
     <string name="wikis_subscribe_failed_502">Сервер недаступны. Паўторная спроба…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Пошук па імені, ID, адбітку або URL…</string>
     <string name="wikis_join_search_button">Пошук wiki…</string>

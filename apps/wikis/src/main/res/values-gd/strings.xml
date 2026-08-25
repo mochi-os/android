@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Ceangal duilleag Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Co-roinn ceangal na duilleige</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Atharraichean is beachdan</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Lorg wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">A bheil thu cinnteach gu bheil thu airson sgur de %1$s?</string>
     <string name="wikis_subscribe_failed_502">Cha ghabh am frithealaiche sin a ruigsinn. A’ feuchainn a-rithist…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Lorg a rèir ainm, ID, lorg-meòir no URL…</string>
     <string name="wikis_join_search_button">Lorg wikis…</string>

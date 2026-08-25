@@ -238,16 +238,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki صفحہ لنک</string>
     <string name="wikis_pageview_loading">صفحہ لوڈ ہو رہا ہے…</string>
     <string name="wikis_page_action_share">صفحہ لنک کا اشتراک کریں</string>
-    <string name="wikis_page_action_rss_changes">RSS: تبدیلیاں</string>
-    <string name="wikis_page_action_rss_comments">RSS: تبصرے</string>
-    <string name="wikis_page_action_rss_all">RSS: تبدیلیاں اور تبصرے</string>
     <string name="wikis_open_sidebar">سائیڈبار کھولیں</string>
     <string name="wikis_owned_badge">ملکیت</string>
     <string name="wikis_search_placeholder">وکی تلاش کریں…</string>
     <string name="wikis_subscribing">سبسکرائب کر رہے ہیں…</string>
     <string name="wikis_unsubscribe_confirm_message">کیا آپ یقیناً %1$s سے سبسکرپشن منسوخ کرنا چاہتے ہیں؟</string>
     <string name="wikis_subscribe_failed_502">سرور تک رسائی نہیں ہے۔ دوبارہ کوشش کر رہے ہیں…</string>
-    <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">نام، ID، فنگرپرنٹ یا URL سے تلاش کریں…</string>
     <string name="wikis_join_search_button">وکیز تلاش کریں…</string>

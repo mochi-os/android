@@ -76,9 +76,6 @@
     <string name="wikis_page_action_recent_changes">最近變更</string>
     <string name="wikis_page_action_new_page">新頁面</string>
     <string name="wikis_page_action_share">分享頁面連結</string>
-    <string name="wikis_page_action_rss_changes">RSS：變更</string>
-    <string name="wikis_page_action_rss_comments">RSS：留言</string>
-    <string name="wikis_page_action_rss_all">RSS：變更同留言</string>
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">開始你嘅第一個 wiki</string>
     <string name="wikis_empty_subtitle">搜尋 wiki 嚟訂閱,或者建立一個發佈你自己嘅文檔。</string>
@@ -95,7 +92,6 @@
     <string name="wikis_subscribe_failed_502">嗰個伺服器無法連接。重試緊…</string>
     <string name="wikis_subscribe_failed">訂閱失敗</string>
     <string name="wikis_rss_menu">RSS feed</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_rss_changes">變更</string>
     <string name="wikis_rss_comments">留言</string>
     <string name="wikis_rss_both">變更同留言</string>

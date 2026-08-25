@@ -76,9 +76,6 @@
     <string name="wikis_page_action_recent_changes">Modifications récentes</string>
     <string name="wikis_page_action_new_page">Nouvelle page</string>
     <string name="wikis_page_action_share">Partager le lien de la page</string>
-    <string name="wikis_page_action_rss_changes">RSS : Modifications</string>
-    <string name="wikis_page_action_rss_comments">RSS : Commentaires</string>
-    <string name="wikis_page_action_rss_all">RSS : Modifications et commentaires</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Commencez votre premier wiki</string>
     <string name="wikis_empty_subtitle">Recherchez un wiki pour vous y abonner, ou créez-en un pour publier votre propre documentation.</string>
@@ -95,7 +92,6 @@
     <string name="wikis_subscribe_failed_502">Ce serveur est inaccessible. Nouvel essai…</string>
     <string name="wikis_subscribe_failed">Échec de l\'abonnement</string>
     <string name="wikis_rss_menu">Fil RSS</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_rss_changes">Modifications</string>
     <string name="wikis_rss_comments">Commentaires</string>
     <string name="wikis_rss_both">Modifications et commentaires</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki صفحي جو لنڪ</string>
     <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">صفحي جو لنڪ شيئر ڪريو</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: تبديليون ۽ تبصرا</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki ڳوليو…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ڇا اوھان کي پڪ آھي ته %1$s کان سبسڪرپشن ختم ڪرڻ چاھيو ٿا؟</string>
     <string name="wikis_subscribe_failed_502">اھو سرور پھچ ۾ ناهي. ٻيهر ڪوشش ٿي رهي آھي…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">نالي، ID، فنگر پرنٽ يا URL ذريعي ڳوليو…</string>
     <string name="wikis_join_search_button">wiki ڳوليو…</string>

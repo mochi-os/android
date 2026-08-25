@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Link do strony wiki</string>
     <string name="wikis_pageview_loading">Ładowanie strony…</string>
     <string name="wikis_page_action_share">Udostępnij link do strony</string>
-    <string name="wikis_page_action_rss_changes">RSS: Zmiany</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komentarze</string>
-    <string name="wikis_page_action_rss_all">RSS: Zmiany i komentarze</string>
     <string name="wikis_open_sidebar">Otwórz panel boczny</string>
     <string name="wikis_owned_badge">Własne</string>
     <string name="wikis_search_placeholder">Szukaj wiki…</string>
     <string name="wikis_subscribing">Subskrybowanie…</string>
     <string name="wikis_unsubscribe_confirm_message">Czy na pewno chcesz anulować subskrypcję %1$s?</string>
     <string name="wikis_subscribe_failed_502">Ten serwer jest nieosiągalny. Ponawianie…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_find_search_placeholder">Szukaj według nazwy, ID, odcisku palca lub URL…</string>
     <string name="wikis_join_search_button">Szukaj wiki…</string>

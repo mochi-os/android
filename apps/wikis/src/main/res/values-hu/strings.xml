@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki oldal linkje</string>
     <string name="wikis_pageview_loading">Oldal betöltése…</string>
     <string name="wikis_page_action_share">Oldal linkjének megosztása</string>
-    <string name="wikis_page_action_rss_changes">RSS: Változások</string>
-    <string name="wikis_page_action_rss_comments">RSS: Megjegyzések</string>
-    <string name="wikis_page_action_rss_all">RSS: Változások és megjegyzések</string>
     <string name="wikis_open_sidebar">Oldalsáv megnyitása</string>
     <string name="wikis_owned_badge">Saját</string>
     <string name="wikis_search_placeholder">Wiki keresése…</string>
     <string name="wikis_subscribing">Feliratkozás…</string>
     <string name="wikis_unsubscribe_confirm_message">Biztosan le szeretne iratkozni a következőről: %1$s?</string>
     <string name="wikis_subscribe_failed_502">A szerver nem érhető el. Újrapróbálkozás…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Keresés név, ID, ujjlenyomat vagy URL alapján…</string>
     <string name="wikis_join_search_button">Wiki keresése…</string>

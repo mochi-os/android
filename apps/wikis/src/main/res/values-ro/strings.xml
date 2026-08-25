@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Link pagina wiki</string>
     <string name="wikis_pageview_loading">Se încarcă pagina…</string>
     <string name="wikis_page_action_share">Partajează link-ul paginii</string>
-    <string name="wikis_page_action_rss_changes">RSS: Modificări</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comentarii</string>
-    <string name="wikis_page_action_rss_all">RSS: Modificări și comentarii</string>
     <string name="wikis_open_sidebar">Deschide bara laterală</string>
     <string name="wikis_owned_badge">Propriu</string>
     <string name="wikis_search_placeholder">Caută un wiki…</string>
     <string name="wikis_subscribing">Se abonează…</string>
     <string name="wikis_unsubscribe_confirm_message">Sigur doriți să dezabonați de la %1$s?</string>
     <string name="wikis_subscribe_failed_502">Serverul nu poate fi accesat. Se reîncearcă…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_find_search_placeholder">Caută după nume, ID, amprentă sau URL…</string>
     <string name="wikis_join_search_button">Caută wiki…</string>

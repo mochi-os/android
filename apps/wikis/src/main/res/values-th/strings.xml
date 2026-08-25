@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">ลิงก์หน้าวิกิ</string>
     <string name="wikis_pageview_loading">กำลังโหลดหน้า…</string>
     <string name="wikis_page_action_share">แชร์ลิงก์หน้า</string>
-    <string name="wikis_page_action_rss_changes">RSS: การเปลี่ยนแปลง</string>
-    <string name="wikis_page_action_rss_comments">RSS: ความคิดเห็น</string>
-    <string name="wikis_page_action_rss_all">RSS: การเปลี่ยนแปลงและความคิดเห็น</string>
     <string name="wikis_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="wikis_owned_badge">เป็นเจ้าของ</string>
     <string name="wikis_search_placeholder">ค้นหาวิกิ…</string>
     <string name="wikis_subscribing">กำลังสมัครสมาชิก…</string>
     <string name="wikis_unsubscribe_confirm_message">คุณแน่ใจหรือไม่ที่จะยกเลิกการสมัครสมาชิกจาก %1$s?</string>
     <string name="wikis_subscribe_failed_502">เซิร์ฟเวอร์นั้นไม่สามารถเข้าถึงได้ กำลังลองใหม่…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS ของวิกิ</string>
     <string name="wikis_find_search_placeholder">ค้นหาตามชื่อ, ID, ลายนิ้วมือ หรือ URL…</string>
     <string name="wikis_join_search_button">ค้นหาวิกิ…</string>

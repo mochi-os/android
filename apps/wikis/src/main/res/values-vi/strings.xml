@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Liên kết trang wiki</string>
     <string name="wikis_pageview_loading">Đang tải trang…</string>
     <string name="wikis_page_action_share">Chia sẻ liên kết trang</string>
-    <string name="wikis_page_action_rss_changes">RSS: Thay đổi</string>
-    <string name="wikis_page_action_rss_comments">RSS: Bình luận</string>
-    <string name="wikis_page_action_rss_all">RSS: Thay đổi và bình luận</string>
     <string name="wikis_open_sidebar">Mở thanh bên</string>
     <string name="wikis_owned_badge">Sở hữu</string>
     <string name="wikis_search_placeholder">Tìm kiếm wiki…</string>
     <string name="wikis_subscribing">Đang đăng ký…</string>
     <string name="wikis_unsubscribe_confirm_message">Bạn có chắc muốn hủy đăng ký %1$s?</string>
     <string name="wikis_subscribe_failed_502">Máy chủ đó không thể truy cập. Đang thử lại…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS của wiki</string>
     <string name="wikis_find_search_placeholder">Tìm theo tên, ID, dấu vân tay hoặc URL…</string>
     <string name="wikis_join_search_button">Tìm kiếm wiki…</string>

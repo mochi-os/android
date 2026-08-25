@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Odkaz na wiki stránku</string>
     <string name="wikis_pageview_loading">Načítava sa stránka…</string>
     <string name="wikis_page_action_share">Zdieľať odkaz na stránku</string>
-    <string name="wikis_page_action_rss_changes">RSS: Zmeny</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komentáre</string>
-    <string name="wikis_page_action_rss_all">RSS: Zmeny a komentáre</string>
     <string name="wikis_open_sidebar">Otvoriť bočný panel</string>
     <string name="wikis_owned_badge">Vlastné</string>
     <string name="wikis_search_placeholder">Hľadať wiki…</string>
     <string name="wikis_subscribing">Prihlasovanie na odber…</string>
     <string name="wikis_unsubscribe_confirm_message">Naozaj chcete zrušiť odber %1$s?</string>
     <string name="wikis_subscribe_failed_502">Server nie je dostupný. Opakujem…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">RSS URL wiki</string>
     <string name="wikis_find_search_placeholder">Hľadať podľa názvu, ID, odtlačku alebo URL…</string>
     <string name="wikis_join_search_button">Hľadať wiki…</string>

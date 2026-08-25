@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wikisidlänk</string>
     <string name="wikis_pageview_loading">Laddar sida…</string>
     <string name="wikis_page_action_share">Dela sidlänk</string>
-    <string name="wikis_page_action_rss_changes">RSS: Ändringar</string>
-    <string name="wikis_page_action_rss_comments">RSS: Kommentarer</string>
-    <string name="wikis_page_action_rss_all">RSS: Ändringar och kommentarer</string>
     <string name="wikis_open_sidebar">Öppna sidofält</string>
     <string name="wikis_owned_badge">Egen</string>
     <string name="wikis_search_placeholder">Sök efter en wiki…</string>
     <string name="wikis_subscribing">Prenumererar…</string>
     <string name="wikis_unsubscribe_confirm_message">Är du säker på att du vill avsluta prenumerationen på %1$s?</string>
     <string name="wikis_subscribe_failed_502">Den servern är inte tillgänglig. Försöker igen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Sök efter namn, ID, fingeravtryck eller URL…</string>
     <string name="wikis_join_search_button">Sök efter wikis…</string>

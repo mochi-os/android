@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Veza wiki stranice</string>
     <string name="wikis_pageview_loading">Učitavanje stranice…</string>
     <string name="wikis_page_action_share">Podijeli vezu stranice</string>
-    <string name="wikis_page_action_rss_changes">RSS: Promjene</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komentari</string>
-    <string name="wikis_page_action_rss_all">RSS: Promjene i komentari</string>
     <string name="wikis_open_sidebar">Otvori bočnu traku</string>
     <string name="wikis_owned_badge">Vlasništvo</string>
     <string name="wikis_search_placeholder">Pretraži wiki…</string>
     <string name="wikis_subscribing">Pretplaćivanje…</string>
     <string name="wikis_unsubscribe_confirm_message">Sigurno želite otkazati pretplatu na %1$s?</string>
     <string name="wikis_subscribe_failed_502">Poslužitelj nije dostupan. Pokušavam ponovno…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Pretraži po imenu, ID, otisku ili URL…</string>
     <string name="wikis_join_search_button">Pretraži wikie…</string>

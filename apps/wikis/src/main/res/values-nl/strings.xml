@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki-paginalink</string>
     <string name="wikis_pageview_loading">Pagina laden…</string>
     <string name="wikis_page_action_share">Paginalink delen</string>
-    <string name="wikis_page_action_rss_changes">RSS: Wijzigingen</string>
-    <string name="wikis_page_action_rss_comments">RSS: Opmerkingen</string>
-    <string name="wikis_page_action_rss_all">RSS: Wijzigingen en opmerkingen</string>
     <string name="wikis_open_sidebar">Zijbalk openen</string>
     <string name="wikis_owned_badge">Eigen</string>
     <string name="wikis_search_placeholder">Zoek naar een wiki…</string>
     <string name="wikis_subscribing">Abonneren…</string>
     <string name="wikis_unsubscribe_confirm_message">Weet je zeker dat je %1$s wilt afzeggen?</string>
     <string name="wikis_subscribe_failed_502">Die server is onbereikbaar. Opnieuw proberen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Zoek op naam, ID, vingerafdruk of URL…</string>
     <string name="wikis_join_search_button">Wikis zoeken…</string>

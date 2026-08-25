@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">رابط صفحة الويكي</string>
     <string name="wikis_pageview_loading">جارٍ تحميل الصفحة…</string>
     <string name="wikis_page_action_share">مشاركة رابط الصفحة</string>
-    <string name="wikis_page_action_rss_changes">RSS: التغييرات</string>
-    <string name="wikis_page_action_rss_comments">RSS: التعليقات</string>
-    <string name="wikis_page_action_rss_all">RSS: التغييرات والتعليقات</string>
     <string name="wikis_open_sidebar">فتح الشريط الجانبي</string>
     <string name="wikis_owned_badge">مملوك</string>
     <string name="wikis_search_placeholder">ابحث عن ويكي…</string>
     <string name="wikis_subscribing">جارٍ الاشتراك…</string>
     <string name="wikis_unsubscribe_confirm_message">هل أنت متأكد من إلغاء الاشتراك من %1$s؟</string>
     <string name="wikis_subscribe_failed_502">الخادم غير متاح. إعادة المحاولة…</string>
-    <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">رابط RSS للويكي</string>
     <string name="wikis_find_search_placeholder">البحث بالاسم أو المعرف أو البصمة أو الرابط…</string>
     <string name="wikis_join_search_button">البحث عن ويكي…</string>

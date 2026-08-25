@@ -61,7 +61,6 @@
     <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_title">Wikis</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_replicas_col_id">ID</string>

@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">위키 페이지 링크</string>
     <string name="wikis_pageview_loading">페이지 로딩 중…</string>
     <string name="wikis_page_action_share">페이지 링크 공유</string>
-    <string name="wikis_page_action_rss_changes">RSS: 변경 사항</string>
-    <string name="wikis_page_action_rss_comments">RSS: 댓글</string>
-    <string name="wikis_page_action_rss_all">RSS: 변경 사항 및 댓글</string>
     <string name="wikis_open_sidebar">사이드바 열기</string>
     <string name="wikis_owned_badge">소유</string>
     <string name="wikis_search_placeholder">위키 검색…</string>
     <string name="wikis_subscribing">구독 중…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s 구독을 정말 취소하시겠습니까?</string>
     <string name="wikis_subscribe_failed_502">해당 서버에 연결할 수 없습니다. 재시도 중…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">위키 RSS URL</string>
     <string name="wikis_find_search_placeholder">이름, ID, 지문 또는 URL로 검색…</string>
     <string name="wikis_join_search_button">위키 검색…</string>

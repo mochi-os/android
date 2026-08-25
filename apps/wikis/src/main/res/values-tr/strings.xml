@@ -240,16 +240,12 @@
     <string name="wikis_pageview_clipboard_label_share">Wiki sayfa bağlantısı</string>
     <string name="wikis_pageview_loading">Sayfa yükleniyor…</string>
     <string name="wikis_page_action_share">Sayfa bağlantısını paylaş</string>
-    <string name="wikis_page_action_rss_changes">RSS: Değişiklikler</string>
-    <string name="wikis_page_action_rss_comments">RSS: Yorumlar</string>
-    <string name="wikis_page_action_rss_all">RSS: Değişiklikler ve yorumlar</string>
     <string name="wikis_open_sidebar">Kenar çubuğunu aç</string>
     <string name="wikis_owned_badge">Sahip</string>
     <string name="wikis_search_placeholder">Bir wiki ara…</string>
     <string name="wikis_subscribing">Abone olunuyor…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s aboneliğini iptal etmek istediğinize emin misiniz?</string>
     <string name="wikis_subscribe_failed_502">Bu sunucuya ulaşılamıyor. Yeniden deneniyor…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL\'si</string>
     <string name="wikis_find_search_placeholder">İsim, kimlik, parmak izi veya URL\'ye göre ara…</string>
     <string name="wikis_join_search_button">Wikis ara…</string>
