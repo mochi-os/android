@@ -9,12 +9,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.DrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
@@ -26,6 +29,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerTitle
@@ -36,6 +40,7 @@ import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
+import org.mochios.android.R as MochiR
 
 /**
  * Feeds [WikiDrawer] on screens that hold no wiki list of their own (the page
@@ -71,10 +76,14 @@ class WikiDrawerViewModel @Inject constructor(
 
 /**
  * The wikis app's sidebar: the pinned "All wikis" row above [wikis], with
- * find and create in the bottom action slot. Shared by the wiki list and the
- * page view so the same list is one gesture away from either, and presentation
- * only — the caller owns [drawerState] so its top bar can open the drawer, and
- * supplies [wikis] from whichever ViewModel it already has.
+ * find, create and about in the bottom action slot. Shared by the wiki list and
+ * the page view so the same list is one gesture away from either, and
+ * presentation only — the caller owns [drawerState] so its top bar can open the
+ * drawer, and supplies [wikis] from whichever ViewModel it already has.
+ *
+ * About is the one action the drawer owns outright, dialog and all: it says the
+ * same thing wherever it is opened from, so every host wiring up identical
+ * state would only be a way for them to drift apart.
  *
  * [selectedId] is the wiki being shown, or [WikisApp.HOME] on the list screen.
  */
@@ -90,6 +99,7 @@ fun WikiDrawer(
     content: @Composable () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
+    var showAbout by remember { mutableStateOf(false) }
     val items = remember(wikis) {
         wikis.map { wiki ->
             DrawerItem(
@@ -134,9 +144,21 @@ fun WikiDrawer(
                     onCreate()
                 },
             )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
+                    scope.launch { drawerState.close() }
+                    showAbout = true
+                },
+            )
         },
         content = content,
     )
+
+    if (showAbout) {
+        AboutDialog(onDismiss = { showAbout = false })
+    }
 }
 
 /**

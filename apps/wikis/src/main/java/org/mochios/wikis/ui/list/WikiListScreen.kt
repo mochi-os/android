@@ -29,7 +29,6 @@ import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -69,7 +68,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.MochiSearchTopBar
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
@@ -102,7 +100,6 @@ fun WikiListScreen(
     val clipboard = LocalClipboardManager.current
 
     var showOverflow by remember { mutableStateOf(false) }
-    var showAbout by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }
 
     val rssCopiedMessage = stringResource(R.string.wikis_rss_copied)
@@ -207,14 +204,6 @@ fun WikiListScreen(
                                             },
                                         )
                                     }
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(MochiR.string.about_label)) },
-                                        onClick = {
-                                            showOverflow = false
-                                            showAbout = true
-                                        },
-                                        leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
-                                    )
                                 }
                             }
                         },
@@ -281,9 +270,6 @@ fun WikiListScreen(
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
         )
-    }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 
