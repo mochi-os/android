@@ -86,6 +86,7 @@ import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.WikiDrawer
+import org.mochios.wikis.ui.components.WikiSearchTopBar
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -135,73 +136,90 @@ fun WikiListScreen(
         Scaffold(
             snackbarHost = { SnackbarHost(snackbarHostState) },
             topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.wikis_title)) },
-                    navigationIcon = {
-                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = stringResource(R.string.wikis_open_sidebar),
-                            )
-                        }
-                    },
-                    actions = {
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
+                if (uiState.showSearch) {
+                    WikiSearchTopBar(
+                        query = uiState.listQuery,
+                        placeholder = stringResource(R.string.wikis_search_placeholder),
+                        onQueryChange = viewModel::updateListQuery,
+                        onClose = { viewModel.toggleSearch() },
+                    )
+                } else {
+                    TopAppBar(
+                        title = { Text(stringResource(R.string.wikis_title)) },
+                        navigationIcon = {
+                            MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                                 Icon(
-                                    Icons.Default.MoreHoriz,
-                                    contentDescription = stringResource(MochiR.string.common_more_options),
+                                    Icons.Default.Menu,
+                                    contentDescription = stringResource(R.string.wikis_open_sidebar),
                                 )
                             }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = {
-                                    showOverflow = false
-                                    rssSubmenuOpen = false
-                                },
-                            ) {
-                                MochiDropdownSubmenu(
-                                    text = { Text(stringResource(R.string.wikis_rss_menu)) },
-                                    expanded = rssSubmenuOpen,
-                                    onExpandedChange = { rssSubmenuOpen = it },
-                                    leadingIcon = {
-                                        Icon(Icons.Outlined.RssFeed, contentDescription = null)
-                                    },
-                                ) {
-                                    RssModes(
-                                        onSelect = { mode ->
-                                            showOverflow = false
-                                            rssSubmenuOpen = false
-                                            drawerScope.launch {
-                                                val result = viewModel.makeRssUrl(mode)
-                                                result.fold(
-                                                    onSuccess = { url ->
-                                                        clipboard.setClip(
-                                                            ClipData.newPlainText(clipboardLabel, url)
-                                                                .toClipEntry(),
-                                                        )
-                                                        snackbarHostState.showSnackbar(rssCopiedMessage)
-                                                    },
-                                                    onFailure = {
-                                                        snackbarHostState.showSnackbar(rssFailedMessage)
-                                                    },
-                                                )
-                                            }
-                                        },
+                        },
+                        actions = {
+                            MochiIconButton(onClick = { viewModel.toggleSearch() }) {
+                                Icon(
+                                    Icons.Default.Search,
+                                    contentDescription = stringResource(
+                                        R.string.wikis_page_action_search
+                                    ),
+                                )
+                            }
+                            Box {
+                                MochiIconButton(onClick = { showOverflow = true }) {
+                                    Icon(
+                                        Icons.Default.MoreHoriz,
+                                        contentDescription = stringResource(MochiR.string.common_more_options),
                                     )
                                 }
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
+                                MochiDropdownMenu(
+                                    expanded = showOverflow,
+                                    onDismissRequest = {
                                         showOverflow = false
-                                        showAbout = true
+                                        rssSubmenuOpen = false
                                     },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
-                                )
+                                ) {
+                                    MochiDropdownSubmenu(
+                                        text = { Text(stringResource(R.string.wikis_rss_menu)) },
+                                        expanded = rssSubmenuOpen,
+                                        onExpandedChange = { rssSubmenuOpen = it },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.RssFeed, contentDescription = null)
+                                        },
+                                    ) {
+                                        RssModes(
+                                            onSelect = { mode ->
+                                                showOverflow = false
+                                                rssSubmenuOpen = false
+                                                drawerScope.launch {
+                                                    val result = viewModel.makeRssUrl(mode)
+                                                    result.fold(
+                                                        onSuccess = { url ->
+                                                            clipboard.setClip(
+                                                                ClipData.newPlainText(clipboardLabel, url)
+                                                                    .toClipEntry(),
+                                                            )
+                                                            snackbarHostState.showSnackbar(rssCopiedMessage)
+                                                        },
+                                                        onFailure = {
+                                                            snackbarHostState.showSnackbar(rssFailedMessage)
+                                                        },
+                                                    )
+                                                }
+                                            },
+                                        )
+                                    }
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(MochiR.string.about_label)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            showAbout = true
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
+                                    )
+                                }
                             }
-                        }
-                    },
-                )
+                        },
+                    )
+                }
             },
         ) { padding ->
             PullToRefreshBox(
@@ -231,14 +249,21 @@ fun WikiListScreen(
                         )
                     }
                     else -> {
-                        WikiCardGrid(
-                            wikis = uiState.wikis,
-                            unsubscribingId = uiState.unsubscribingId,
-                            onOpen = { wiki ->
-                                navController.navigate(WikisApp.wikiHome(wiki.fingerprint ?: wiki.id))
-                            },
-                            onUnsubscribe = viewModel::requestUnsubscribe,
-                        )
+                        val visible = viewModel.filteredWikis()
+                        if (visible.isEmpty()) {
+                            // Only reachable with a query on: an unfiltered
+                            // empty list is the EmptyWikis branch above.
+                            NoMatches()
+                        } else {
+                            WikiCardGrid(
+                                wikis = visible,
+                                unsubscribingId = uiState.unsubscribingId,
+                                onOpen = { wiki ->
+                                    navController.navigate(WikisApp.wikiHome(wiki.fingerprint ?: wiki.id))
+                                },
+                                onUnsubscribe = viewModel::requestUnsubscribe,
+                            )
+                        }
                     }
                 }
             }
@@ -277,6 +302,17 @@ private fun RssModes(onSelect: (String) -> Unit) {
         text = { Text(stringResource(R.string.wikis_rss_both)) },
         onClick = { onSelect("all") },
     )
+}
+
+@Composable
+private fun NoMatches() {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Text(
+            text = stringResource(R.string.wikis_find_no_results),
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
 }
 
 @Composable

@@ -37,6 +37,13 @@ data class WikiListUiState(
     val recommendations: List<Recommendation> = emptyList(),
     val error: MochiError? = null,
 
+    /**
+     * The top bar's filter over [wikis] — distinct from [searchQuery], which
+     * queries the directory for wikis the user has *not* joined yet.
+     */
+    val showSearch: Boolean = false,
+    val listQuery: String = "",
+
     val searchQuery: String = "",
     val searchResults: List<DirectoryEntry> = emptyList(),
     val searchLoading: Boolean = false,
@@ -130,6 +137,35 @@ class WikiListViewModel @Inject constructor(
     }
 
     // ---------------- inline directory search ----------------
+
+    fun toggleSearch() {
+        val current = _uiState.value
+        // Closing drops the query: a filter still applied to a list whose bar
+        // has gone would hide wikis with nothing on screen saying why.
+        _uiState.value = current.copy(
+            showSearch = !current.showSearch,
+            listQuery = if (current.showSearch) "" else current.listQuery,
+        )
+    }
+
+    fun updateListQuery(query: String) {
+        _uiState.value = _uiState.value.copy(listQuery = query)
+    }
+
+    /**
+     * [wikis] narrowed to the top bar's query — every wiki when it is blank.
+     *
+     * Name only: it is the one thing a card puts on screen, so a match the
+     * user cannot see the reason for never appears. Finding a wiki by ID or
+     * fingerprint is what the find screen is for.
+     */
+    fun filteredWikis(): List<WikiInfo> {
+        val query = _uiState.value.listQuery.trim().lowercase()
+        if (query.isBlank()) return _uiState.value.wikis
+        return _uiState.value.wikis.filter { wiki ->
+            wiki.name.lowercase().contains(query)
+        }
+    }
 
     fun setSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
