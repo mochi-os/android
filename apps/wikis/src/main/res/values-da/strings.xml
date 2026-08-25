@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Ændringer og kommentarer</string>
     <string name="wikis_rss_copied">RSS-URL kopieret til udklipsholderen</string>
     <string name="wikis_rss_failed">Kunne ikke hente RSS-token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Find wikier</string>
     <string name="wikis_find_no_results">Ingen wikier fundet</string>
     <string name="wikis_find_recommended_section">Anbefalede wikier</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Modifiche e commenti</string>
     <string name="wikis_rss_copied">URL RSS copiato negli appunti</string>
     <string name="wikis_rss_failed">Impossibile ottenere il token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Trova wiki</string>
     <string name="wikis_find_no_results">Nessun wiki trovato</string>
     <string name="wikis_find_recommended_section">Wiki consigliati</string>

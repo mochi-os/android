@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">تغییرات و نظرها</string>
     <string name="wikis_rss_copied">URL RSS در کلیپ‌بورد کپی شد</string>
     <string name="wikis_rss_failed">دریافت توکن RSS ناموفق بود</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">یافتن ویکی‌ها</string>
     <string name="wikis_find_no_results">ویکی‌ای یافت نشد</string>
     <string name="wikis_find_recommended_section">ویکی‌های توصیه‌شده</string>

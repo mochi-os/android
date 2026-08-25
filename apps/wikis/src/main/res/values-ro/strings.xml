@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Modificări și comentarii</string>
     <string name="wikis_rss_copied">URL RSS copiat în clipboard</string>
     <string name="wikis_rss_failed">Obținerea tokenului RSS a eșuat</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Găsește wiki-uri</string>
     <string name="wikis_find_no_results">Nu s-au găsit wiki-uri</string>
     <string name="wikis_find_recommended_section">Wiki-uri recomandate</string>

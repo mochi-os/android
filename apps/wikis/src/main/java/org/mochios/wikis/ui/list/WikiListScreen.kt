@@ -74,6 +74,7 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -104,6 +105,8 @@ fun WikiListScreen(
 
     val rssCopiedMessage = stringResource(R.string.wikis_rss_copied)
     val rssFailedMessage = stringResource(R.string.wikis_rss_failed)
+    val revokedMessage = stringResource(R.string.wikis_rss_revoked)
+    val revokeFailedMessage = stringResource(R.string.wikis_access_revoke_failed)
     val clipboardLabel = stringResource(R.string.wikis_clipboard_label_rss)
 
     // Side-effect events from the ViewModel: toast strings + open-wiki
@@ -202,6 +205,30 @@ fun WikiListScreen(
                                                     )
                                                 }
                                             },
+                                        )
+                                        MochiDropdownMenuDivider()
+                                        // Under the modes it undoes: the feed
+                                        // URLs handed out above are exactly
+                                        // what this takes back.
+                                        MochiDropdownMenuItem(
+                                            text = {
+                                                Text(stringResource(R.string.wikis_rss_revoke))
+                                            },
+                                            onClick = {
+                                                showOverflow = false
+                                                rssSubmenuOpen = false
+                                                drawerScope.launch {
+                                                    val result = viewModel.revokeRssAccess()
+                                                    snackbarHostState.showSnackbar(
+                                                        if (result.isSuccess) {
+                                                            revokedMessage
+                                                        } else {
+                                                            revokeFailedMessage
+                                                        },
+                                                    )
+                                                }
+                                            },
+                                            destructive = true,
                                         )
                                     }
                                 }

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Guhertin û şîrove</string>
     <string name="wikis_rss_copied">URL ya RSS hate kopîkirin</string>
     <string name="wikis_rss_failed">Wergirtina tokena RSS neserkeftî bû</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikiyan bibîne</string>
     <string name="wikis_find_no_results">Tu wiki nehatin dîtin</string>
     <string name="wikis_find_recommended_section">Wikiyên pêşniyarkirî</string>

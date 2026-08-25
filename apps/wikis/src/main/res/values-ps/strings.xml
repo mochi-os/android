@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">بدلونونه او تبصرې</string>
     <string name="wikis_rss_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="wikis_rss_failed">د RSS ټوکن ترلاسه کولو پاتې راغلل</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ویکیانه ومومئ</string>
     <string name="wikis_find_no_results">هیڅ wikis ونه موندل شوې</string>
     <string name="wikis_find_recommended_section">سپارښتل شوي wikis</string>

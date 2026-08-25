@@ -68,4 +68,6 @@
     <string name="wikis_access_subject_anyone">Cualquiera</string>
     <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>
 
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
 </resources>

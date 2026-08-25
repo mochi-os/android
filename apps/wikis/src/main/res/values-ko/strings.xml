@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">변경 사항 및 댓글</string>
     <string name="wikis_rss_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="wikis_rss_failed">RSS 토큰을 가져오지 못했어요</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">위키 찾기</string>
     <string name="wikis_find_no_results">위키를 찾을 수 없어요</string>
     <string name="wikis_find_recommended_section">추천 위키</string>

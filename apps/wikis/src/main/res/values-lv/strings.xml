@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Izmaiņas un komentāri</string>
     <string name="wikis_rss_copied">RSS URL nokopēts starpliktuvē</string>
     <string name="wikis_rss_failed">Neizdevās iegūt RSS pilnvaru</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Atrast wiki</string>
     <string name="wikis_find_no_results">Wiki nav atrastas</string>
     <string name="wikis_find_recommended_section">Ieteiktās wiki</string>

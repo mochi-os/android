@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">گۆڕانکاری و لێدوان</string>
     <string name="wikis_rss_copied">URLی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
     <string name="wikis_rss_failed">وەرگرتنی Token ـی RSS سەرکەوتوو نەبوو</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">دۆزینەوەی wikiەکان</string>
     <string name="wikis_find_no_results">هیچ ویکییەک نەدۆزرایەوە</string>
     <string name="wikis_find_recommended_section">ویکییە پێشنیازکراوەکان</string>

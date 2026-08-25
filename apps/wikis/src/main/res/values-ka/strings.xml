@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ცვლილებები და კომენტარები</string>
     <string name="wikis_rss_copied">RSS URL დაკოპირდა</string>
     <string name="wikis_rss_failed">RSS ტოკენის მიღება ვერ მოხერხდა</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ვიკების ძიება</string>
     <string name="wikis_find_no_results">ვიკიები ვერ მოიძებნა</string>
     <string name="wikis_find_recommended_section">რეკომენდებული ვიკიები</string>

@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">تبدیلیاں اور تبصرے</string>
     <string name="wikis_rss_copied">RSS URL clipboard پر copy ہو گیا</string>
     <string name="wikis_rss_failed">RSS ٹوکن حاصل کرنے میں ناکامی</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">وکیز تلاش کریں</string>
     <string name="wikis_find_no_results">کوئی wikis نہیں ملیں</string>
     <string name="wikis_find_recommended_section">تجویز کردہ wikis</string>

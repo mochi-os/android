@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Canje-canje da sharhi</string>
     <string name="wikis_rss_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="wikis_rss_failed">An gaza samun RSS token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Nemo wikis</string>
     <string name="wikis_find_no_results">Babu wikis da aka samu</string>
     <string name="wikis_find_recommended_section">Wikis da aka ba da shawara</string>

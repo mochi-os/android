@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Izinguquko nemibono</string>
     <string name="wikis_rss_copied">I-URL ye-RSS ikopishelwe kubhodi</string>
     <string name="wikis_rss_failed">Kuhlulekile ukuthola ithokeni ye-RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Thola amawiki</string>
     <string name="wikis_find_no_results">Awekho ama-wiki atholakele</string>
     <string name="wikis_find_recommended_section">Ama-wiki anconywayo</string>

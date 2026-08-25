@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ការផ្លាស់ប្តូរ និងមតិយោបល់</string>
     <string name="wikis_rss_copied">បានចម្លង RSS URL ទៅ clipboard</string>
     <string name="wikis_rss_failed">បរាជ័យក្នុងការទទួលយកថូខឹន RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ស្វែងរកវិគី</string>
     <string name="wikis_find_no_results">រកមិនឃើញ wiki</string>
     <string name="wikis_find_recommended_section">Wiki ដែលបានណែនាំ</string>

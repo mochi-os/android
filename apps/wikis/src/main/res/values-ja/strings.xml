@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">変更とコメント</string>
     <string name="wikis_rss_copied">RSS URL をクリップボードにコピーしました</string>
     <string name="wikis_rss_failed">RSS トークンの取得に失敗しました</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wiki を検索</string>
     <string name="wikis_find_no_results">Wiki が見つかりません</string>
     <string name="wikis_find_recommended_section">おすすめの Wiki</string>

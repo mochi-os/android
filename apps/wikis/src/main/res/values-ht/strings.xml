@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Chanjman ak kòmantè</string>
     <string name="wikis_rss_copied">URL RSS kopye nan clipboard</string>
     <string name="wikis_rss_failed">Echwe pou jwenn token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Jwenn wiki</string>
     <string name="wikis_find_no_results">Pa gen wiki ki jwenn</string>
     <string name="wikis_find_recommended_section">Wiki rekòmande</string>

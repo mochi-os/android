@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Muudatused ja kommentaarid</string>
     <string name="wikis_rss_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="wikis_rss_failed">RSS-tokeni hankimine ebaõnnestus</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Otsi wikisid</string>
     <string name="wikis_find_no_results">Vikisid ei leitud</string>
     <string name="wikis_find_recommended_section">Soovitatud vikid</string>

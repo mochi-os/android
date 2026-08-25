@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">การเปลี่ยนแปลงและความคิดเห็น</string>
     <string name="wikis_rss_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
     <string name="wikis_rss_failed">ไม่สามารถรับ RSS token ได้</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ค้นหาวิกิ</string>
     <string name="wikis_find_no_results">ไม่พบ wiki</string>
     <string name="wikis_find_recommended_section">wiki ที่แนะนำ</string>

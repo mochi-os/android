@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Izmjene i komentari</string>
     <string name="wikis_rss_copied">RSS URL kopiran u međuspremnik</string>
     <string name="wikis_rss_failed">Dohvatanje RSS tokena nije uspjelo</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Pronađi wikije</string>
     <string name="wikis_find_no_results">Nisu pronađeni wikiji</string>
     <string name="wikis_find_recommended_section">Preporučeni wikiji</string>

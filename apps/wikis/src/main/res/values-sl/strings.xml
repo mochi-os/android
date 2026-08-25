@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Spremembe in komentarji</string>
     <string name="wikis_rss_copied">RSS URL kopiran v odložišče</string>
     <string name="wikis_rss_failed">Neuspešno pridobivanje RSS žetona</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Najdi wikije</string>
     <string name="wikis_find_no_results">Wikijev ni mogoče najti</string>
     <string name="wikis_find_recommended_section">Priporočeni wikiji</string>

@@ -40,6 +40,7 @@ import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
 import org.mochios.wikis.model.SettingsSetResponse
+import org.mochios.wikis.model.RssRevokeRequest
 import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.TagAddResponse
 import org.mochios.wikis.model.TagPagesResponse
@@ -431,6 +432,16 @@ interface WikisApi {
         @Field("entity") entity: String,
         @Field("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
+
+    /**
+     * Invalidate the RSS tokens minted for [entity], so feed URLs already
+     * handed out stop resolving. Scoped the way [createRssToken] is - `*` for
+     * the all-wikis feed, else a wiki id or fingerprint.
+     */
+    @POST("-/rss/token/revoke")
+    suspend fun revokeRssTokens(
+        @Body body: RssRevokeRequest,
+    ): Response<ApiResponse<OkResponse>>
 
     // ---- Search ----
 

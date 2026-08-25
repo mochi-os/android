@@ -37,6 +37,7 @@ import org.mochios.wikis.model.Redirect
 import org.mochios.wikis.model.Replica
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
+import org.mochios.wikis.model.RssRevokeRequest
 import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.Tag
 import org.mochios.wikis.model.TagPagesResponse
@@ -166,6 +167,19 @@ class WikisRepository @Inject constructor(
     suspend fun globalRssToken(mode: String): String {
         return try {
             api.createRssToken("*", mode).unwrap().token
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /**
+     * Retire every token behind the all-wikis feed. Any URL the user has
+     * already shared stops working, which is the point - it is the only way
+     * back from a feed URL that reached someone it should not have.
+     */
+    suspend fun revokeGlobalRssTokens() {
+        try {
+            api.revokeRssTokens(RssRevokeRequest("*")).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">تبديليون ۽ تبصرا</string>
     <string name="wikis_rss_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="wikis_rss_failed">RSS ٽوڪن حاصل ڪرڻ ۾ ناڪام</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">وڪيز ڳوليو</string>
     <string name="wikis_find_no_results">ڪي wikis نه مليون</string>
     <string name="wikis_find_recommended_section">تجويز ڪيل wikis</string>

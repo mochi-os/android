@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Mbojere ha comentario</string>
     <string name="wikis_rss_copied">RSS URL oñekopia clipboard-pe</string>
     <string name="wikis_rss_failed">Ndaikatúi oguenohẽ RSS token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Eheka wikis</string>
     <string name="wikis_find_no_results">Ndojejuhúi wikis</string>
     <string name="wikis_find_recommended_section">Wikis ojeporavóva</string>

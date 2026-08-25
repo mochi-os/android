@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Üýtgeşmeler we teswirler</string>
     <string name="wikis_rss_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="wikis_rss_failed">RSS tokeni alynmady</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikileri tap</string>
     <string name="wikis_find_no_results">Wikiler tapylmady</string>
     <string name="wikis_find_recommended_section">Maslahat berilýän wikiler</string>

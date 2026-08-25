@@ -25,4 +25,6 @@
     <string name="wikis_access_subject_anyone">Jeder</string>
     <string name="wikis_access_subject_authenticated">Authentifizierte Benutzer</string>
 
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
 </resources>

@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Alterações e comentários</string>
     <string name="wikis_rss_copied">URL RSS copiada para a área de transferência</string>
     <string name="wikis_rss_failed">Falha ao obter token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Encontrar wikis</string>
     <string name="wikis_find_no_results">Nenhum wiki encontrado</string>
     <string name="wikis_find_recommended_section">Wikis recomendados</string>

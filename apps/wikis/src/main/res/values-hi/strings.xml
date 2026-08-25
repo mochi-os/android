@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">बदलाव और टिप्पणियाँ</string>
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्ड पर कॉपी हो गया</string>
     <string name="wikis_rss_failed">RSS टोकन प्राप्त करने में विफल</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">विकी खोजें</string>
     <string name="wikis_find_no_results">कोई विकी नहीं मिले</string>
     <string name="wikis_find_recommended_section">सुझाई गई विकीज़</string>

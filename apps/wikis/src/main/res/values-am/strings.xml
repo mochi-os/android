@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ለውጦችና አስተያየቶች</string>
     <string name="wikis_rss_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="wikis_rss_failed">የRSS ቶከን ማግኘት አልተሳካም</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ዊኪዎችን ፈልግ</string>
     <string name="wikis_find_no_results">ምንም ዊኪዎች አልተገኙም</string>
     <string name="wikis_find_recommended_section">የተመከሩ ዊኪዎች</string>

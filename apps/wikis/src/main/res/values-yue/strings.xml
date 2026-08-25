@@ -96,6 +96,8 @@
     <string name="wikis_rss_both">變更同留言</string>
     <string name="wikis_rss_copied">RSS 網址已複製到剪貼簿</string>
     <string name="wikis_rss_failed">無法取得 RSS 權杖</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS 網址</string>
     <string name="wikis_find_title">搵 wiki</string>
     <string name="wikis_find_search_placeholder">按名稱、ID、指紋或網址搜尋…</string>

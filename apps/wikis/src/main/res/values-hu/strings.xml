@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Változások és megjegyzések</string>
     <string name="wikis_rss_copied">RSS URL vágólapra másolva</string>
     <string name="wikis_rss_failed">Nem sikerült megszerezni az RSS tokent</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikik keresése</string>
     <string name="wikis_find_no_results">Nem találhatók wikik</string>
     <string name="wikis_find_recommended_section">Ajánlott wikik</string>

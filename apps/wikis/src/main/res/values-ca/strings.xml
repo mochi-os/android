@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Canvis i comentaris</string>
     <string name="wikis_rss_copied">URL RSS copiat al porta-retalls</string>
     <string name="wikis_rss_failed">No s\'ha pogut obtenir el testimoni RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Cerca wikis</string>
     <string name="wikis_find_no_results">No s\'ha trobat cap wiki</string>
     <string name="wikis_find_recommended_section">Wikis recomanats</string>

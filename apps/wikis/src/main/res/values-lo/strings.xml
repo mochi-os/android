@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ການປ່ຽນແປງ ແລະ ຄຳເຫັນ</string>
     <string name="wikis_rss_copied">ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ</string>
     <string name="wikis_rss_failed">ໄດ້ຮັບໂທເຄັນ RSS ລົ້ມເຫຼວ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ຄົ້ນຫາວິກິ</string>
     <string name="wikis_find_no_results">ບໍ່ພົບ wiki</string>
     <string name="wikis_find_recommended_section">Wiki ທີ່ແນະນຳ</string>

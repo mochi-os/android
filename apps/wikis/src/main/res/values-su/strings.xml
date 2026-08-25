@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Parobahan jeung koméntar</string>
     <string name="wikis_rss_copied">URL RSS disalin ka clipboard</string>
     <string name="wikis_rss_failed">Gagal meunangkeun token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Téangan wiki</string>
     <string name="wikis_find_no_results">Teu manggih wiki</string>
     <string name="wikis_find_recommended_section">Wiki direkomendasikeun</string>

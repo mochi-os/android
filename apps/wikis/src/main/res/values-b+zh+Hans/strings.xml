@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">更改和评论</string>
     <string name="wikis_rss_copied">RSS URL 已复制到剪贴板</string>
     <string name="wikis_rss_failed">获取 RSS 令牌失败</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">查找 wiki</string>
     <string name="wikis_find_no_results">未找到 Wiki</string>
     <string name="wikis_find_recommended_section">推荐的 Wiki</string>

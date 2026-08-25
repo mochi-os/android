@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Bidliet u kummenti</string>
     <string name="wikis_rss_copied">URL ta\' RSS ikkupjat fil-clipboard</string>
     <string name="wikis_rss_failed">Ma rnexxiex jinkiseb it-token tar-RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Sib wikis</string>
     <string name="wikis_find_no_results">Ma nstabu l-ebda wikis</string>
     <string name="wikis_find_recommended_section">Wikis rakkomandati</string>

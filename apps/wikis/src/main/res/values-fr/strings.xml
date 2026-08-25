@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Modifications et commentaires</string>
     <string name="wikis_rss_copied">URL RSS copiée dans le presse-papiers</string>
     <string name="wikis_rss_failed">Échec de la récupération du jeton RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Trouver des wikis</string>
     <string name="wikis_find_no_results">Aucun wiki trouvé</string>
     <string name="wikis_find_recommended_section">Wikis recommandés</string>

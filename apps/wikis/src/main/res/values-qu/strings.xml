@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Hukchaykuna hinaspa comentarios</string>
     <string name="wikis_rss_copied">RSS URL clipboardman copiasqa</string>
     <string name="wikis_rss_failed">Mana RSS tokenta chaskiyta atinchu</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikikunata tariy</string>
     <string name="wikis_find_no_results">Mana wikikuna tarisqachu</string>
     <string name="wikis_find_recommended_section">Munasqa wikikuna</string>

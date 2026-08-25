@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Өзгерістер мен пікірлер</string>
     <string name="wikis_rss_copied">RSS URL алмасу буферіне көшірілді</string>
     <string name="wikis_rss_failed">RSS токенін алу сәтсіз аяқталды</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Уикилерді табу</string>
     <string name="wikis_find_no_results">Wiki-лер табылмады</string>
     <string name="wikis_find_recommended_section">Ұсынылған wiki-лер</string>

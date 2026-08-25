@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Utshintsho nezimvo</string>
     <string name="wikis_rss_copied">I-URL ye-RSS ikhutshelwe ku-clipboard</string>
     <string name="wikis_rss_failed">Ayiphumelelanga ukufumana ithokheni ye-RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Fumana iiwiki</string>
     <string name="wikis_find_no_results">Akukho zi-wiki zifumanekileyo</string>
     <string name="wikis_find_recommended_section">Iindululo zee-wiki</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Zmeny a komentáre</string>
     <string name="wikis_rss_copied">URL RSS skopírovaná do schránky</string>
     <string name="wikis_rss_failed">Nepodarilo sa získať RSS token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Nájsť wiki</string>
     <string name="wikis_find_no_results">Nenašli sa žiadne wiki</string>
     <string name="wikis_find_recommended_section">Odporúčané wiki</string>

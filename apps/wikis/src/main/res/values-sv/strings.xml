@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Ändringar och kommentarer</string>
     <string name="wikis_rss_copied">RSS-URL kopierad till urklipp</string>
     <string name="wikis_rss_failed">Kunde inte hämta RSS-token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Hitta wikis</string>
     <string name="wikis_find_no_results">Inga wikis hittades</string>
     <string name="wikis_find_recommended_section">Rekommenderade wikis</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Зміни та коментарі</string>
     <string name="wikis_rss_copied">RSS URL скопійовано в буфер обміну</string>
     <string name="wikis_rss_failed">Не вдалося отримати RSS-токен</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Знайти вікі</string>
     <string name="wikis_find_no_results">Вікі не знайдено</string>
     <string name="wikis_find_recommended_section">Рекомендовані вікі</string>

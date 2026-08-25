@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Newidiadau a sylwadau</string>
     <string name="wikis_rss_copied">URL RSS wedi\'i gopïo i\'r clipfwrdd</string>
     <string name="wikis_rss_failed">Methwyd cael tocyn RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Dod o hyd i wicis</string>
     <string name="wikis_find_no_results">Heb ddod o hyd i wicis</string>
     <string name="wikis_find_recommended_section">Wicis a argymhellir</string>

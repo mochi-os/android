@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">變更與留言</string>
     <string name="wikis_rss_copied">已複製 RSS URL 至剪貼簿</string>
     <string name="wikis_rss_failed">取得 RSS 權杖失敗</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">尋找 wiki</string>
     <string name="wikis_find_no_results">找不到 Wiki</string>
     <string name="wikis_find_recommended_section">推薦的 Wiki</string>

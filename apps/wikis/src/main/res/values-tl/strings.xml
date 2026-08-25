@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Mga pagbabago at komento</string>
     <string name="wikis_rss_copied">Nakopya ang RSS URL sa clipboard</string>
     <string name="wikis_rss_failed">Nabigong makakuha ng RSS token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Maghanap ng mga wiki</string>
     <string name="wikis_find_no_results">Walang nakitang wiki</string>
     <string name="wikis_find_recommended_section">Mga inirerekomendang wiki</string>

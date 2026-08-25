@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Athruithe agus nótaí tráchta</string>
     <string name="wikis_rss_copied">Cóipeáladh URL RSS chuig an ngearrthaisce</string>
     <string name="wikis_rss_failed">Theip ar chomhartha RSS a fháil</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Aimsigh viceaí</string>
     <string name="wikis_find_no_results">Níor aimsíodh aon wiki</string>
     <string name="wikis_find_recommended_section">Wikis mholta</string>

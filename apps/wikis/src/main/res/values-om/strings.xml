@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Jijjiiramootaa fi yaadawwan</string>
     <string name="wikis_rss_copied">URL RSS kilipboordiitti garagalfame</string>
     <string name="wikis_rss_failed">Mallattoo RSS argachuu hin dandeenye</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikis argi</string>
     <string name="wikis_find_no_results">Wikiin hin argamne</string>
     <string name="wikis_find_recommended_section">Wikiwwan yaadachifaman</string>

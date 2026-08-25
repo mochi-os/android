@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">পরিবর্তন এবং মন্তব্য</string>
     <string name="wikis_rss_copied">RSS URL ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="wikis_rss_failed">RSS টোকেন পেতে ব্যর্থ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">উইকি খুঁজুন</string>
     <string name="wikis_find_no_results">কোনো উইকি পাওয়া যায়নি</string>
     <string name="wikis_find_recommended_section">সুপারিশকৃত উইকি</string>

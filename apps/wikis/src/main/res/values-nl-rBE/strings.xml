@@ -43,6 +43,8 @@
     <string name="wikis_rss_both">Wijzigingen en reacties</string>
     <string name="wikis_rss_copied">RSS-URL gekopieerd naar klembord</string>
     <string name="wikis_rss_failed">RSS-token ophalen mislukt</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wiki\'s zoeken</string>
     <string name="wikis_find_no_results">Geen wiki\'s gevonden</string>
     <string name="wikis_find_recommended_section">Aanbevolen wiki\'s</string>

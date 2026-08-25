@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ફેરફારો અને ટિપ્પણીઓ</string>
     <string name="wikis_rss_copied">RSS URL ક્લિપબોર્ડ પર કૉપિ થઈ</string>
     <string name="wikis_rss_failed">RSS ટોકન મેળવવામાં નિષ્ફળ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">વિકિઓ શોધો</string>
     <string name="wikis_find_no_results">કોઈ wikis મળ્યા નથી</string>
     <string name="wikis_find_recommended_section">ભલામણ કરેલ wikis</string>

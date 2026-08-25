@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Änderungen und Kommentare</string>
     <string name="wikis_rss_copied">RSS-URL in die Zwischenablage kopiert</string>
     <string name="wikis_rss_failed">RSS-Token konnte nicht abgerufen werden</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikis finden</string>
     <string name="wikis_find_no_results">Keine Wikis gefunden</string>
     <string name="wikis_find_recommended_section">Empfohlene Wikis</string>

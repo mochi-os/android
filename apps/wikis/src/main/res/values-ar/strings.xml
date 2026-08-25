@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">التغييرات والتعليقات</string>
     <string name="wikis_rss_copied">تم نسخ URL RSS إلى الحافظة</string>
     <string name="wikis_rss_failed">فشل الحصول على رمز RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">البحث عن الويكيات</string>
     <string name="wikis_find_no_results">لم يتم العثور على ويكي</string>
     <string name="wikis_find_recommended_section">ويكيات موصى بها</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Thay đổi và bình luận</string>
     <string name="wikis_rss_copied">Đã sao chép URL RSS vào clipboard</string>
     <string name="wikis_rss_failed">Không lấy token RSS được</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Tìm wiki</string>
     <string name="wikis_find_no_results">Không tìm thấy wiki nào</string>
     <string name="wikis_find_recommended_section">Wiki được đề xuất</string>

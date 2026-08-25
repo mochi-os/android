@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Veranderinge en kommentare</string>
     <string name="wikis_rss_copied">RSS-URL na knipbord gekopieer</string>
     <string name="wikis_rss_failed">Kon nie RSS-token kry nie</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Vind wikis</string>
     <string name="wikis_find_no_results">Geen wikis gevind nie</string>
     <string name="wikis_find_recommended_section">Aanbevole wikis</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Փոփոխությունները կհայտնվեն այստեղ էջերը խմբագրելիս։</string>
     <string name="wikis_rss_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
     <string name="wikis_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Գտնել wiki-ներ</string>
     <string name="wikis_find_no_results">Wiki-ներ չեն գտնվել</string>
     <string name="wikis_find_recommended_section">Առաջարկվող wiki-ներ</string>

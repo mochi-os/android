@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Pakeitimai ir komentarai</string>
     <string name="wikis_rss_copied">RSS URL nukopijuotas į iškarpinę</string>
     <string name="wikis_rss_failed">Nepavyko gauti RSS raktelio</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Rasti wiki</string>
     <string name="wikis_find_no_results">Wiki nerasta</string>
     <string name="wikis_find_recommended_section">Rekomenduojami wiki</string>

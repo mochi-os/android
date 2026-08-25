@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Промени и коментари</string>
     <string name="wikis_rss_copied">RSS URL е копиран во клипборд</string>
     <string name="wikis_rss_failed">Неуспешно добивање на RSS токен</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Најди wiki-а</string>
     <string name="wikis_find_no_results">Не се пронајдени wiki</string>
     <string name="wikis_find_recommended_section">Препорачани wiki</string>

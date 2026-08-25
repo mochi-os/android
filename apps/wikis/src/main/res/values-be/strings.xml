@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Змены і каментарыі</string>
     <string name="wikis_rss_copied">URL RSS скапіраваны ў буфер абмену</string>
     <string name="wikis_rss_failed">Не ўдалося атрымаць RSS токен</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Знайсці wikis</string>
     <string name="wikis_find_no_results">Wiki не знойдзены</string>
     <string name="wikis_find_recommended_section">Рэкамендаваныя wiki</string>

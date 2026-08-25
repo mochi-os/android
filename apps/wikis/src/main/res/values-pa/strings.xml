@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ਤਬਦੀਲੀਆਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
     <string name="wikis_rss_copied">RSS URL ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਹੋ ਗਿਆ</string>
     <string name="wikis_rss_failed">RSS ਟੋਕਨ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ਵਿੱਕੀ ਲੱਭੋ</string>
     <string name="wikis_find_no_results">ਕੋਈ ਵਿਕੀ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="wikis_find_recommended_section">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀਆਂ ਵਿਕੀਆਂ</string>

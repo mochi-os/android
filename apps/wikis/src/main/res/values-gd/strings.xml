@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Atharrachaidhean agus beachdan</string>
     <string name="wikis_rss_copied">Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd</string>
     <string name="wikis_rss_failed">Cha b\' urrainn tòcan RSS fhaighinn</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Lorg uicipeidean</string>
     <string name="wikis_find_no_results">Cha deach uicipèadan a lorg</string>
     <string name="wikis_find_recommended_section">Uicipèadan air am moladh</string>

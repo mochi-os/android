@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Αλλαγές και σχόλια</string>
     <string name="wikis_rss_copied">Το URL του RSS αντιγράφηκε στο πρόχειρο</string>
     <string name="wikis_rss_failed">Αποτυχία λήψης διακριτικού RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Εύρεση wiki</string>
     <string name="wikis_find_no_results">Δεν βρέθηκαν wikis</string>
     <string name="wikis_find_recommended_section">Συνιστώμενα wikis</string>

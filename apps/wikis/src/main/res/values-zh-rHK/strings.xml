@@ -55,4 +55,6 @@
         <item quantity="one">找到 %1$d 個結果,查詢「%2$s」</item>
         <item quantity="other">找到 %1$d 個結果,查詢「%2$s」</item>
     </plurals>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
 </resources>

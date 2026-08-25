@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Mabadiliko na maoni</string>
     <string name="wikis_rss_copied">URL ya RSS imenakiliwa kwenye ubao wa kunakili</string>
     <string name="wikis_rss_failed">Imeshindwa kupata tokeni ya RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Tafuta wikis</string>
     <string name="wikis_find_no_results">Hakuna wiki zilizopatikana</string>
     <string name="wikis_find_recommended_section">Wiki zinazopendekezwa</string>

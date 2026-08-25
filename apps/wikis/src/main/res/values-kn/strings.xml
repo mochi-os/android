@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ಬದಲಾವಣೆಗಳು ಮತ್ತು ಕಾಮೆಂಟ್‌ಗಳು</string>
     <string name="wikis_rss_copied">RSS URL ಅನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಕಾಪಿ ಮಾಡಲಾಗಿದೆ</string>
     <string name="wikis_rss_failed">RSS ಟೋಕನ್ ಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ವಿಕಿಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="wikis_find_no_results">ಯಾವುದೇ wiki ಗಳು ಸಿಗಲಿಲ್ಲ</string>
     <string name="wikis_find_recommended_section">ಶಿಫಾರಸು ಮಾಡಲಾದ wiki ಗಳು</string>

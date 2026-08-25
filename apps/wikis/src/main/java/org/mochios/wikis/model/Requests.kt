@@ -13,3 +13,12 @@ data class SubscribeRequest(
     val target: String,
     val server: String? = null,
 )
+
+/**
+ * JSON body of `POST -/rss/token/revoke`. [entity] scopes the revoke the way
+ * it scopes minting - `*` for the all-wikis feed, else a wiki id or
+ * fingerprint.
+ */
+data class RssRevokeRequest(
+    val entity: String,
+)

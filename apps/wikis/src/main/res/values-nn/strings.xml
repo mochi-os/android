@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Endringar og kommentarar</string>
     <string name="wikis_rss_copied">RSS-URL kopiert til utklippstavla</string>
     <string name="wikis_rss_failed">Klarte ikkje henta RSS-token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Finn wiki-ar</string>
     <string name="wikis_find_no_results">Ingen wikiar funne</string>
     <string name="wikis_find_recommended_section">Tilrådde wikiar</string>

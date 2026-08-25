@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Owah-owahan lan komentar</string>
     <string name="wikis_rss_copied">URL RSS disalin menyang clipboard</string>
     <string name="wikis_rss_failed">Gagal njupuk token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Golèk wiki</string>
     <string name="wikis_find_no_results">Ora ana wiki ditemokaké</string>
     <string name="wikis_find_recommended_section">Wiki disaranaké</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Oʻzgarishlar va izohlar</string>
     <string name="wikis_rss_copied">RSS URL klipboardga nusxalandi</string>
     <string name="wikis_rss_failed">RSS tokenini olib boʻlmadi</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wiki larni topish</string>
     <string name="wikis_find_no_results">Wikilar topilmadi</string>
     <string name="wikis_find_recommended_section">Tavsiya etilgan wikilar</string>

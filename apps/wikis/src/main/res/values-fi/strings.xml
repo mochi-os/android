@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Muutokset ja kommentit</string>
     <string name="wikis_rss_copied">RSS-URL kopioitu leikepöydälle</string>
     <string name="wikis_rss_failed">RSS-tunnisteen hakeminen epäonnistui</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Etsi wikejä</string>
     <string name="wikis_find_no_results">Wikejä ei löytynyt</string>
     <string name="wikis_find_recommended_section">Suositellut wikit</string>

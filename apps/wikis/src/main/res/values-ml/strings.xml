@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">മാറ്റങ്ങളും അഭിപ്രായങ്ങളും</string>
     <string name="wikis_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="wikis_rss_failed">RSS ടോക്കൺ നേടുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">വിക്കികൾ കണ്ടെത്തുക</string>
     <string name="wikis_find_no_results">വിക്കികളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="wikis_find_recommended_section">റിക്കവറി കോഡുകൾ</string>

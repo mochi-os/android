@@ -288,6 +288,19 @@ class WikiListViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Retire the tokens behind the all-wikis feed. Nothing to hand back - the
+     * caller only needs to know whether it took.
+     */
+    suspend fun revokeRssAccess(): Result<Unit> {
+        return try {
+            repo.revokeGlobalRssTokens()
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
     fun subscribedWikiIds(): Set<String> {
         val state = _uiState.value
         return state.wikis.flatMap { listOfNotNull(it.id.takeIf { v -> v.isNotEmpty() }, it.fingerprint) }

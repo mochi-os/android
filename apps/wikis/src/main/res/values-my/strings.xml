@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ပြောင်းလဲမှုများနှင့် မှတ်ချက်များ</string>
     <string name="wikis_rss_copied">RSS URL ကို clipboard သို့ ကူးယူပြီးပါပြီ</string>
     <string name="wikis_rss_failed">RSS တိုကင် ရယူ၍ မရပါ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ဝီကီများ ရှာ</string>
     <string name="wikis_find_no_results">wiki များ မတွေ့ပါ</string>
     <string name="wikis_find_recommended_section">အကြံပြု wiki များ</string>

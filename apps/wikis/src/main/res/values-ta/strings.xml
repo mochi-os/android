@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">மாற்றங்கள் மற்றும் கருத்துகள்</string>
     <string name="wikis_rss_copied">RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது</string>
     <string name="wikis_rss_failed">RSS டோக்கனைப் பெற முடியவில்லை</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">விக்கிகளைக் கண்டுபிடி</string>
     <string name="wikis_find_no_results">Wikiக்கள் எதுவும் கிடைக்கவில்லை</string>
     <string name="wikis_find_recommended_section">பரிந்துரைக்கப்பட்ட wikiக்கள்</string>

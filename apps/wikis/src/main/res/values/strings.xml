@@ -94,6 +94,8 @@
     <string name="wikis_rss_both">Changes and comments</string>
     <string name="wikis_rss_copied">RSS URL copied to clipboard</string>
     <string name="wikis_rss_failed">Failed to get RSS token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
 
     <!-- Find wikis screen -->

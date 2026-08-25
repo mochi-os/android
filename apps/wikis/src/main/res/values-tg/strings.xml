@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Тағйирот ва шарҳҳо</string>
     <string name="wikis_rss_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="wikis_rss_failed">Гирифтани токени RSS ба анҷом нарасид</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Викиҳоро ёбед</string>
     <string name="wikis_find_no_results">Ягон вики ёфт нашуд</string>
     <string name="wikis_find_recommended_section">Викиҳои тавсияшуда</string>

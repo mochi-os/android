@@ -96,6 +96,8 @@
     <string name="wikis_rss_both">Modifications et commentaires</string>
     <string name="wikis_rss_copied">URL du fil RSS copiée dans le presse-papiers</string>
     <string name="wikis_rss_failed">Échec de l\'obtention du jeton RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_clipboard_label_rss">URL du fil RSS du wiki</string>
     <string name="wikis_find_title">Rechercher des wikis</string>
     <string name="wikis_find_search_placeholder">Rechercher par nom, ID, empreinte ou URL…</string>

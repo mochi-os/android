@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Perubahan dan komen</string>
     <string name="wikis_rss_copied">URL RSS disalin ke papan keratan</string>
     <string name="wikis_rss_failed">Gagal mendapatkan token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Cari wiki</string>
     <string name="wikis_find_no_results">Tiada wiki dijumpai</string>
     <string name="wikis_find_recommended_section">Wiki disyorkan</string>
