@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">سمول</string>
     <string name="wikis_editor_insert">داخل کړئ</string>
     <string name="wikis_editor_attachments">ضمیمې</string>
-    <string name="wikis_editor_cancel">لغوه کول</string>
     <string name="wikis_editor_delete">پاڼه ړنګه کړئ</string>
     <string name="wikis_editor_save">خوندي کول</string>
     <string name="wikis_editor_saving">د خوندي کولو په حال کې…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">سرلیک</string>
     <string name="wikis_editor_slug_label">د پاڼې URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">منځپانګه</string>
     <string name="wikis_editor_summary_label">لنډیز سمول (اختیاري)</string>
     <string name="wikis_editor_summary_hint">په لنډه توګه خپل بدلونونه تشریح کړئ</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">خپله منځپانګه دلته د Markdown په کارولو ولیکئ…</string>
     <string name="wikis_insert_dialog_empty">تر اوسه ضمیمې نشته. د پیل کولو لپاره فایل پورته کړئ.</string>
     <string name="wikis_delete_page_message">تاسو د “%1$s” (%2$s) پاڼې ړنګولو ته چمتو یاست. دا کړنه له تاریخچې څخه د بیا رغولو له لارې بیرته اخیستل کیدی شي.</string>

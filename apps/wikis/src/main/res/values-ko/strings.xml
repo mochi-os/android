@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">편집</string>
     <string name="wikis_editor_insert">삽입</string>
     <string name="wikis_editor_attachments">첨부 파일</string>
-    <string name="wikis_editor_cancel">취소</string>
     <string name="wikis_editor_delete">페이지 삭제</string>
     <string name="wikis_editor_save">저장</string>
     <string name="wikis_editor_saving">저장 중…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">제목</string>
     <string name="wikis_editor_slug_label">페이지 URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">콘텐츠</string>
     <string name="wikis_editor_summary_label">편집 요약 (선택 사항)</string>
     <string name="wikis_editor_summary_hint">변경 사항을 간단히 설명해주세요</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">첨부 파일 제거</string>
     <string name="wikis_comment_collapse_toggle">스레드 접기</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">편집 중: %1$s</string>
     <string name="wikis_editor_content_placeholder">Markdown을 사용하여 여기에 내용을 작성하세요…</string>
     <string name="wikis_insert_dialog_empty">아직 첨부 파일이 없습니다. 파일을 업로드하여 시작하세요.</string>
     <string name="wikis_delete_page_message">「%1$s」 페이지(%2$s)를 삭제하려고 합니다. 이 작업은 기록에서 복원하여 취소할 수 있습니다.</string>

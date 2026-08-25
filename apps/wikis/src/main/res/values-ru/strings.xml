@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Изменить</string>
     <string name="wikis_editor_insert">Вставить</string>
     <string name="wikis_editor_attachments">Вложения</string>
-    <string name="wikis_editor_cancel">Отмена</string>
     <string name="wikis_editor_delete">Удалить страницу</string>
     <string name="wikis_editor_save">Сохранить</string>
     <string name="wikis_editor_saving">Сохранение…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Заголовок</string>
     <string name="wikis_editor_slug_label">URL страницы</string>
     <string name="wikis_editor_slug_hint">имя-моей-страницы</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Содержимое</string>
     <string name="wikis_editor_summary_label">Описание правки (необязательно)</string>
     <string name="wikis_editor_summary_hint">Кратко опишите ваши изменения</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Удалить вложение</string>
     <string name="wikis_comment_collapse_toggle">Свернуть обсуждение</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Редактирование: %1$s</string>
     <string name="wikis_editor_content_placeholder">Напишите ваше содержимое здесь, используя Markdown…</string>
     <string name="wikis_insert_dialog_empty">Пока нет вложений. Загрузите файл, чтобы начать.</string>
     <string name="wikis_delete_page_message">Вы собираетесь удалить страницу «%1$s» (%2$s). Это действие можно отменить, восстановив из истории.</string>

@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -24,7 +26,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AddPhotoAlternate
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Image
@@ -35,6 +36,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -52,6 +54,7 @@ import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -145,12 +148,16 @@ fun PageEditorScreen(
             TopAppBar(
                 title = {
                     Text(
+                        // Editing shows the page's own title: the bar already
+                        // sits above an editor, so saying so again spends the
+                        // width that the title itself needs.
                         text = if (viewModel.isNew) {
                             stringResource(R.string.wikis_editor_title_new)
                         } else {
-                            val name = state.originalTitle.ifEmpty { state.slug }
-                            stringResource(R.string.wikis_editor_title_edit, name)
-                        }
+                            state.originalTitle.ifEmpty { state.slug }
+                        },
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 },
                 navigationIcon = {
@@ -162,7 +169,55 @@ fun PageEditorScreen(
                     }
                 },
             )
-        }
+        },
+        bottomBar = {
+            // The primary action sits under the thumb rather than at the end of
+            // a row the user has to scroll sideways to reach - the same shape
+            // the create-wiki form uses.
+            Surface(color = MaterialTheme.colorScheme.surface) {
+                MochiButton(
+                    onClick = {
+                        viewModel.save(
+                            invalidTitle = titleRequiredMsg,
+                            invalidSlug = slugRequiredMsg,
+                            createFailed = createFailedMsg,
+                            editFailed = editFailedMsg,
+                        )
+                    },
+                    enabled = !state.isSaving,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .imePadding()
+                        .navigationBarsPadding()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                ) {
+                    if (state.isSaving) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            strokeWidth = 2.dp,
+                        )
+                    } else {
+                        Icon(
+                            Icons.Filled.Save,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
+                    Spacer(Modifier.width(6.dp))
+                    Text(
+                        stringResource(
+                            when {
+                                state.isSaving && viewModel.isNew ->
+                                    R.string.wikis_editor_creating
+                                state.isSaving -> R.string.wikis_editor_saving
+                                viewModel.isNew -> R.string.wikis_editor_create
+                                else -> R.string.wikis_editor_save
+                            }
+                        )
+                    )
+                }
+            }
+        },
     ) { padding ->
         Column(
             modifier = Modifier
@@ -171,12 +226,12 @@ fun PageEditorScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp),
         ) {
-            // Action row (preview/edit, insert, attachments, cancel, delete, save).
+            // Action row (preview/edit, insert, attachments, delete). Saving
+            // lives in the bottom bar; backing out is the top bar's arrow.
             EditorActions(
-                isNew = viewModel.isNew,
                 showPreview = state.showPreview,
-                isSaving = state.isSaving,
                 isDeleting = state.isDeleting,
+                hasSlug = state.slug.isNotBlank(),
                 canDelete = !viewModel.isNew && (wikiCtx?.permissions?.delete == true),
                 onTogglePreview = { viewModel.togglePreview() },
                 onOpenInsert = {
@@ -187,18 +242,9 @@ fun PageEditorScreen(
                     val slug = state.slug.ifEmpty { return@EditorActions }
                     navController.navigate(WikisApp.attachments(viewModel.wikiId, slug))
                 },
-                onCancel = { navController.popBackStack() },
                 onDelete = {
                     val slug = state.slug.ifEmpty { return@EditorActions }
                     navController.navigate(WikisApp.pageDelete(viewModel.wikiId, slug))
-                },
-                onSave = {
-                    viewModel.save(
-                        invalidTitle = titleRequiredMsg,
-                        invalidSlug = slugRequiredMsg,
-                        createFailed = createFailedMsg,
-                        editFailed = editFailedMsg,
-                    )
                 },
             )
 
@@ -272,17 +318,14 @@ fun PageEditorScreen(
 
 @Composable
 private fun EditorActions(
-    isNew: Boolean,
     showPreview: Boolean,
-    isSaving: Boolean,
     isDeleting: Boolean,
+    hasSlug: Boolean,
     canDelete: Boolean,
     onTogglePreview: () -> Unit,
     onOpenInsert: () -> Unit,
     onOpenAttachments: () -> Unit,
-    onCancel: () -> Unit,
     onDelete: () -> Unit,
-    onSave: () -> Unit,
 ) {
     val rowState = rememberScrollState()
     Row(
@@ -312,25 +355,17 @@ private fun EditorActions(
             Spacer(Modifier.width(6.dp))
             Text(stringResource(R.string.wikis_editor_insert))
         }
-        if (!isNew) {
-            MochiOutlinedButton(onClick = onOpenAttachments) {
-                Icon(
-                    Icons.Filled.Image,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp),
-                )
-                Spacer(Modifier.width(6.dp))
-                Text(stringResource(R.string.wikis_editor_attachments))
-            }
-        }
-        MochiOutlinedButton(onClick = onCancel) {
+        // Attachments hang off the wiki rather than the page - upload takes no
+        // slug at all - so a page still being written can use them too. The
+        // slug is only needed to build the route, hence the guard.
+        MochiOutlinedButton(onClick = onOpenAttachments, enabled = hasSlug) {
             Icon(
-                Icons.Filled.Close,
+                Icons.Filled.Image,
                 contentDescription = null,
                 modifier = Modifier.size(18.dp),
             )
             Spacer(Modifier.width(6.dp))
-            Text(stringResource(R.string.wikis_editor_cancel))
+            Text(stringResource(R.string.wikis_editor_attachments))
         }
         if (canDelete) {
             MochiOutlinedButton(onClick = onDelete, enabled = !isDeleting) {
@@ -342,31 +377,6 @@ private fun EditorActions(
                 Spacer(Modifier.width(6.dp))
                 Text(stringResource(R.string.wikis_editor_delete))
             }
-        }
-        MochiButton(onClick = onSave, enabled = !isSaving) {
-            if (isSaving) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(18.dp),
-                    strokeWidth = 2.dp,
-                )
-            } else {
-                Icon(
-                    Icons.Filled.Save,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp),
-                )
-            }
-            Spacer(Modifier.width(6.dp))
-            Text(
-                stringResource(
-                    when {
-                        isSaving && isNew -> R.string.wikis_editor_creating
-                        isSaving -> R.string.wikis_editor_saving
-                        isNew -> R.string.wikis_editor_create
-                        else -> R.string.wikis_editor_save
-                    }
-                )
-            )
         }
     }
 }
@@ -383,18 +393,8 @@ private fun EditFields(
     onCommentChange: (String) -> Unit,
     onBodyFieldChange: (TextFieldValue) -> Unit,
 ) {
-    if (isNew) {
-        MochiTextField(
-            value = slug,
-            onValueChange = onSlugChange,
-            label = { Text(stringResource(R.string.wikis_editor_slug_label)) },
-            placeholder = { Text(stringResource(R.string.wikis_editor_slug_hint)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Spacer(Modifier.height(12.dp))
-    }
-
+    // Title first: on a new page the address below is derived from it, so the
+    // field that leads has to be the one that is typed first.
     MochiTextField(
         value = title,
         onValueChange = onTitleChange,
@@ -403,6 +403,19 @@ private fun EditFields(
         modifier = Modifier.fillMaxWidth(),
     )
     Spacer(Modifier.height(12.dp))
+
+    if (isNew) {
+        MochiTextField(
+            value = slug,
+            onValueChange = onSlugChange,
+            label = { Text(stringResource(R.string.wikis_editor_slug_label)) },
+            placeholder = { Text(stringResource(R.string.wikis_editor_slug_hint)) },
+            singleLine = true,
+            supportingText = { Text(stringResource(R.string.wikis_editor_slug_help)) },
+            modifier = Modifier.fillMaxWidth(),
+        )
+        Spacer(Modifier.height(12.dp))
+    }
 
     MochiTextField(
         value = bodyField,

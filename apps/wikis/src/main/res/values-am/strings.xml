@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">አስተካክል</string>
     <string name="wikis_editor_insert">አስገባ</string>
     <string name="wikis_editor_attachments">አባሪዎች</string>
-    <string name="wikis_editor_cancel">ይቅር</string>
     <string name="wikis_editor_delete">ገጽ ሰርዝ</string>
     <string name="wikis_editor_save">ያስቀምጡ</string>
     <string name="wikis_editor_saving">በማስቀመጥ ላይ…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">ርዕስ</string>
     <string name="wikis_editor_slug_label">የገጽ ዩአርኤል</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">ይዘት</string>
     <string name="wikis_editor_summary_label">የአርትዖት ማጠቃለያ (አማራጭ)</string>
     <string name="wikis_editor_summary_hint">ለውጦችህን በአጭሩ ግለጽ</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">ይዘትዎን እዚህ Markdown በመጠቀም ይጻፉ…</string>
     <string name="wikis_insert_dialog_empty">እስካሁን አባሪዎች የሉም። ለመጀመር ፋይል ይስቀሉ።</string>
     <string name="wikis_delete_page_message">“%1$s” (%2$s) የተባለውን ገጽ ሊሰርዙ ነው። ይህ ድርጊት ከታሪክ በማስመለስ ሊቀለበስ ይችላል።</string>

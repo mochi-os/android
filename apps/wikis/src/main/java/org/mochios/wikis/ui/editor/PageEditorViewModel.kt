@@ -55,6 +55,13 @@ sealed interface PageEditorEvent {
     data class Toast(val message: String) : PageEditorEvent
 }
 
+/** Everything a page address may not contain, collapsed to a single hyphen. */
+private val NON_SLUG = Regex("[^a-z0-9]+")
+
+/** A title as a page address: lower case, digits and hyphens, nothing else. */
+private fun slugFrom(title: String): String =
+    title.lowercase().replace(NON_SLUG, "-").trim('-')
+
 @HiltViewModel
 class PageEditorViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -129,8 +136,31 @@ class PageEditorViewModel @Inject constructor(
 
     // ---- Form mutations ----
 
-    fun setTitle(value: String) { _uiState.value = _uiState.value.copy(title = value) }
-    fun setSlug(value: String) { _uiState.value = _uiState.value.copy(slug = value) }
+    /**
+     * Whether the address is the user's own rather than something derived. A
+     * slug the route suggested counts as set, so typing a title never
+     * overwrites the page the caller asked to create.
+     */
+    private var slugEdited: Boolean = suggestedSlug.isNotBlank()
+
+    fun setTitle(value: String) {
+        val current = _uiState.value
+        _uiState.value = current.copy(
+            title = value,
+            // A new page's address follows its title until the user takes the
+            // field over; an existing page's address never moves.
+            slug = if (isNew && !slugEdited) slugFrom(value) else current.slug,
+        )
+    }
+
+    fun setSlug(value: String) {
+        slugEdited = true
+        // Typed input is held to the same alphabet, but a trailing hyphen is
+        // left alone - it is a word separator the user has not finished yet.
+        _uiState.value = _uiState.value.copy(
+            slug = value.lowercase().replace(NON_SLUG, "-").trimStart('-'),
+        )
+    }
     fun setContent(value: String) { _uiState.value = _uiState.value.copy(content = value) }
     fun setComment(value: String) { _uiState.value = _uiState.value.copy(comment = value) }
     fun togglePreview() {

@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Таҳрир</string>
     <string name="wikis_editor_insert">Дохил кардан</string>
     <string name="wikis_editor_attachments">Замимаҳо</string>
-    <string name="wikis_editor_cancel">Бекор кардан</string>
     <string name="wikis_editor_delete">Нест кардани саҳифа</string>
     <string name="wikis_editor_save">Захира</string>
     <string name="wikis_editor_saving">Захира кардан…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Сарлавҳа</string>
     <string name="wikis_editor_slug_label">URL-и саҳифа</string>
     <string name="wikis_editor_slug_hint">номи-саҳифаи-ман</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Мундариҷа</string>
     <string name="wikis_editor_summary_label">Таҳрири мухтасар (ихтиёрӣ)</string>
     <string name="wikis_editor_summary_hint">Тағйиротатонро мухтасар тавсиф кунед</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Мундариҷаи худро дар ин ҷо бо Markdown нависед…</string>
     <string name="wikis_insert_dialog_empty">Ҳанӯз замима нест. Барои оғоз файл бор кунед.</string>
     <string name="wikis_delete_page_message">Шумо мехоҳед саҳифаи “%1$s” (%2$s)-ро нест кунед. Ин амалро бо барқарорсозӣ аз таърих бекор кардан мумкин аст.</string>

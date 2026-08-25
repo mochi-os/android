@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Խմբագրել</string>
     <string name="wikis_editor_insert">Տեղադրել</string>
     <string name="wikis_editor_attachments">Աճուրդ</string>
-    <string name="wikis_editor_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="wikis_editor_delete">Ջնջել էջը</string>
     <string name="wikis_editor_save">Պահպանել</string>
     <string name="wikis_editor_saving">Պահպանում…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Վերնագիր</string>
     <string name="wikis_editor_slug_label">Էջի URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Բովանդակություն</string>
     <string name="wikis_editor_summary_label">Խմբագրել ամփոփումը (ընտրովի)</string>
     <string name="wikis_editor_summary_hint">Համառոտ նկարագրեք ձեր փոփոխությունները</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Գրեք ձեր բովանդակությունն այստեղ Markdown-ով…</string>
     <string name="wikis_insert_dialog_empty">Դեռ կցորդներ չկան։ Վերբեռնեք ֆայլ՝ սկսելու համար։</string>
     <string name="wikis_delete_page_message">Դուք պատրաստվում եք ջնջել «%1$s» (%2$s) էջը։ Այս գործողությունը կարելի է հետարկել՝ պատմությունից վերականգնելով։</string>

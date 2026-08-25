@@ -8,7 +8,6 @@
     <string name="wikis_pageview_back">返回</string>
     <string name="wikis_create_cancel">取消</string>
     <string name="wikis_comment_action_cancel">取消</string>
-    <string name="wikis_editor_cancel">取消</string>
     <string name="wikis_delete_page_cancel">取消</string>
     <string name="wikis_revert_page_cancel">取消</string>
     <string name="wikis_rename_page_cancel">取消</string>
@@ -128,7 +127,6 @@
     <string name="wikis_comment_collapse_toggle">收埋討論串</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_title_new">建立新頁面</string>
-    <string name="wikis_editor_title_edit">編輯緊:%1$s</string>
     <string name="wikis_editor_preview">預覽</string>
     <string name="wikis_editor_preview_untitled">冇標題</string>
     <string name="wikis_editor_insert">插入</string>
@@ -139,6 +137,7 @@
     <string name="wikis_editor_creating">建立緊…</string>
     <string name="wikis_editor_slug_label">頁面網址</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">內容</string>
     <string name="wikis_editor_content_placeholder">喺呢度用 Markdown 寫低內容…</string>
     <string name="wikis_editor_summary_label">編輯摘要(可選)</string>

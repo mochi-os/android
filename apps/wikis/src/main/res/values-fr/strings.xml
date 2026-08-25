@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Modifier</string>
     <string name="wikis_editor_insert">Insérer</string>
     <string name="wikis_editor_attachments">Pièces jointes</string>
-    <string name="wikis_editor_cancel">Annuler</string>
     <string name="wikis_editor_delete">Supprimer la page</string>
     <string name="wikis_editor_save">Enregistrer</string>
     <string name="wikis_editor_saving">Enregistrement…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Titre</string>
     <string name="wikis_editor_slug_label">URL de la page</string>
     <string name="wikis_editor_slug_hint">nom-de-ma-page</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Contenu</string>
     <string name="wikis_editor_summary_label">Résumé de la modification (facultatif)</string>
     <string name="wikis_editor_summary_hint">Décrivez brièvement vos modifications</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Retirer la pièce jointe</string>
     <string name="wikis_comment_collapse_toggle">Réduire le fil</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Modification : %1$s</string>
     <string name="wikis_editor_content_placeholder">Écrivez votre contenu ici en Markdown…</string>
     <string name="wikis_insert_dialog_empty">Aucune pièce jointe pour le moment. Téléversez un fichier pour commencer.</string>
     <string name="wikis_delete_page_message">Vous êtes sur le point de supprimer la page « %1$s » (%2$s). Cette action peut être annulée en restaurant depuis l\'historique.</string>

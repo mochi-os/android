@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">רעדאַקטירן</string>
     <string name="wikis_editor_insert">אַרײַנשטעלן</string>
     <string name="wikis_editor_attachments">בײַלאַגעס</string>
-    <string name="wikis_editor_cancel">אָפּזאָגן</string>
     <string name="wikis_editor_delete">אויסמעקן זײַטל</string>
     <string name="wikis_editor_save">היט אויף</string>
     <string name="wikis_editor_saving">היטן…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">קעפּל</string>
     <string name="wikis_editor_slug_label">זײַטל URL</string>
     <string name="wikis_editor_slug_hint">מײַן־זײַטל־נאָמען</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">אינהאַלט</string>
     <string name="wikis_editor_summary_label">רעדאַקטירן רעזומע (אַלץ פֿרײַוויליק)</string>
     <string name="wikis_editor_summary_hint">באַשרײַבט בקיצור אײַער ענדערונגען</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">שרײַבט אײַער אינהאַלט דאָ מיט Markdown…</string>
     <string name="wikis_insert_dialog_empty">נאָך קיין בײַלאַגעס. לאָדט אַרויף אַ טעקע צו אָנהייבן.</string>
     <string name="wikis_delete_page_message">איר גייט אויסמעקן דעם בלאַט „%1$s“ (%2$s). מען קען דאָס צוריקדרייען דורך ווידער־אויפֿשטעלן פֿון דער געשיכטע.</string>

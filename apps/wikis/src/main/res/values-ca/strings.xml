@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Edita</string>
     <string name="wikis_editor_insert">Insereix</string>
     <string name="wikis_editor_attachments">Fitxers adjunts</string>
-    <string name="wikis_editor_cancel">Cancel·la</string>
     <string name="wikis_editor_delete">Suprimeix la pàgina</string>
     <string name="wikis_editor_save">Desa</string>
     <string name="wikis_editor_saving">Desant…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Títol</string>
     <string name="wikis_editor_slug_label">URL de la pàgina</string>
     <string name="wikis_editor_slug_hint">el-meu-nom-de-pagina</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Contingut</string>
     <string name="wikis_editor_summary_label">Edita el resum (opcional)</string>
     <string name="wikis_editor_summary_hint">Descriu breument els teus canvis</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Elimina l\'adjunt</string>
     <string name="wikis_comment_collapse_toggle">Plega fil</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editant: %1$s</string>
     <string name="wikis_editor_content_placeholder">Escriu el teu contingut aquí amb Markdown…</string>
     <string name="wikis_insert_dialog_empty">Encara no hi ha adjunts. Puja un fitxer per començar.</string>
     <string name="wikis_delete_page_message">Estàs a punt d\'eliminar la pàgina «%1$s» (%2$s). Aquesta acció es pot desfer restaurant des de l\'historial.</string>

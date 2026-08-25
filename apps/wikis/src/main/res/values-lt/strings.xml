@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Redaguoti</string>
     <string name="wikis_editor_insert">Įterpti</string>
     <string name="wikis_editor_attachments">Priedai</string>
-    <string name="wikis_editor_cancel">Atšaukti</string>
     <string name="wikis_editor_delete">Ištrinti puslapį</string>
     <string name="wikis_editor_save">Išsaugoti</string>
     <string name="wikis_editor_saving">Išsaugoma…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Pavadinimas</string>
     <string name="wikis_editor_slug_label">Puslapio URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Turinys</string>
     <string name="wikis_editor_summary_label">Redaguoti santrauką (neprivaloma)</string>
     <string name="wikis_editor_summary_hint">Trumpai aprašykite savo pakeitimus</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Pašalinti priedą</string>
     <string name="wikis_comment_collapse_toggle">Sutraukti giją</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Redagavimas: %1$s</string>
     <string name="wikis_editor_content_placeholder">Rašykite savo turinį čia naudodami Markdown…</string>
     <string name="wikis_insert_dialog_empty">Dar nėra priedų. Įkelkite failą, kad pradėtumėte.</string>
     <string name="wikis_delete_page_message">Ketinate ištrinti puslapį „%1$s\" (%2$s). Šis veiksmas gali būti atšauktas atkuriant iš istorijos.</string>

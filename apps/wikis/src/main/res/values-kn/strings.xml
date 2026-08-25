@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">ಸಂಪಾದಿಸಿ</string>
     <string name="wikis_editor_insert">ಸೇರಿಸಿ</string>
     <string name="wikis_editor_attachments">ಲಗತ್ತುಗಳು</string>
-    <string name="wikis_editor_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="wikis_editor_delete">ಪುಟ ಅಳಿಸಿ</string>
     <string name="wikis_editor_save">ಉಳಿಸಿ</string>
     <string name="wikis_editor_saving">ಉಳಿಸಲಾಗುತ್ತಿದೆ…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">ಶೀರ್ಷಿಕೆ</string>
     <string name="wikis_editor_slug_label">ಪುಟ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">ವಿಷಯ</string>
     <string name="wikis_editor_summary_label">ಸಂಪಾದನೆಯ ಸಾರಾಂಶ (ಐಚ್ಛಿಕ)</string>
     <string name="wikis_editor_summary_hint">ನಿಮ್ಮ ಬದಲಾವಣೆಗಳನ್ನು ಸಂಕ್ಷಿಪ್ತವಾಗಿ ವಿವರಿಸಿ</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">ನಿಮ್ಮ ವಿಷಯವನ್ನು ಇಲ್ಲಿ Markdown ಬಳಸಿ ಬರೆಯಿರಿ…</string>
     <string name="wikis_insert_dialog_empty">ಇನ್ನೂ ಲಗತ್ತುಗಳಿಲ್ಲ. ಪ್ರಾರಂಭಿಸಲು ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="wikis_delete_page_message">ನೀವು “%1$s” (%2$s) ಪುಟವನ್ನು ಅಳಿಸಲಿದ್ದೀರಿ. ಇತಿಹಾಸದಿಂದ ಮರುಸ್ಥಾಪಿಸುವ ಮೂಲಕ ಈ ಕ್ರಿಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಬಹುದು.</string>

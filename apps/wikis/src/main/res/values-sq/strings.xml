@@ -76,7 +76,6 @@
     <string name="wikis_editor_edit">Modifiko</string>
     <string name="wikis_editor_insert">Fut</string>
     <string name="wikis_editor_attachments">Bashkëngjitjet</string>
-    <string name="wikis_editor_cancel">Anulo</string>
     <string name="wikis_editor_delete">Fshi faqen</string>
     <string name="wikis_editor_save">Ruaj</string>
     <string name="wikis_editor_saving">Duke ruajtur…</string>
@@ -85,6 +84,7 @@
     <string name="wikis_editor_title_label">Titulli</string>
     <string name="wikis_editor_slug_label">URL e faqes</string>
     <string name="wikis_editor_slug_hint">emri-im-i-faqes</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Përmbajtja</string>
     <string name="wikis_editor_summary_label">Modifiko përmbledhjen (opsionale)</string>
     <string name="wikis_editor_summary_hint">Përshkruaj shkurtimisht ndryshimet e tua</string>
@@ -258,7 +258,6 @@
     <string name="wikis_comment_form_remove_attachment">Hiq bashkëngjitjen</string>
     <string name="wikis_comment_collapse_toggle">Shemb fillin</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Duke redaktuar: %1$s</string>
     <string name="wikis_editor_content_placeholder">Shkruaj përmbajtjen tënde këtu duke përdorur Markdown…</string>
     <string name="wikis_insert_dialog_empty">Asnjë bashkëngjitje ende. Ngarko një skedar për të filluar.</string>
     <string name="wikis_delete_page_message">Po fshin faqen „%1$s\" (%2$s). Ky veprim mund të zhbëhet duke rikuperuar nga historia.</string>

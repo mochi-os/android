@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="wikis_editor_insert">ചേർക്കുക</string>
     <string name="wikis_editor_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
-    <string name="wikis_editor_cancel">റദ്ദാക്കുക</string>
     <string name="wikis_editor_delete">പേജ് ഇല്ലാതാക്കുക</string>
     <string name="wikis_editor_save">സേവ് ചെയ്യുക</string>
     <string name="wikis_editor_saving">സംരക്ഷിക്കുന്നു…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">തലക്കെട്ട്</string>
     <string name="wikis_editor_slug_label">പേജ് URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">ഉള്ളടക്കം</string>
     <string name="wikis_editor_summary_label">എഡിറ്റ് സംക്ഷിപ്തം (ഐച്ഛികം)</string>
     <string name="wikis_editor_summary_hint">നിങ്ങളുടെ മാറ്റങ്ങൾ ഹ്രസ്വമായി വിവരിക്കുക</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">നിങ്ങളുടെ ഉള്ളടക്കം ഇവിടെ Markdown ഉപയോഗിച്ച് എഴുതുക…</string>
     <string name="wikis_insert_dialog_empty">ഇതുവരെ അറ്റാച്ച്‌മെന്റുകളില്ല. ആരംഭിക്കാൻ ഒരു ഫയൽ അപ്‌ലോഡ് ചെയ്യുക.</string>
     <string name="wikis_delete_page_message">നിങ്ങൾ “%1$s” (%2$s) പേജ് ഇല്ലാതാക്കാൻ പോകുന്നു. ചരിത്രത്തിൽ നിന്ന് പുനഃസ്ഥാപിച്ച് ഈ പ്രവർത്തനം പഴയപടിയാക്കാം.</string>

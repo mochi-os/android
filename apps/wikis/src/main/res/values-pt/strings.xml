@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Editar</string>
     <string name="wikis_editor_insert">Inserir</string>
     <string name="wikis_editor_attachments">Anexos</string>
-    <string name="wikis_editor_cancel">Cancelar</string>
     <string name="wikis_editor_delete">Eliminar página</string>
     <string name="wikis_editor_save">Guardar</string>
     <string name="wikis_editor_saving">A guardar…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Título</string>
     <string name="wikis_editor_slug_label">URL da página</string>
     <string name="wikis_editor_slug_hint">nome-da-minha-pagina</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Conteúdo</string>
     <string name="wikis_editor_summary_label">Resumo da edição (opcional)</string>
     <string name="wikis_editor_summary_hint">Descreva brevemente as suas alterações</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remover anexo</string>
     <string name="wikis_comment_collapse_toggle">Recolher conversa</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">A editar: %1$s</string>
     <string name="wikis_editor_content_placeholder">Escreve o teu conteúdo aqui usando Markdown…</string>
     <string name="wikis_insert_dialog_empty">Ainda sem anexos. Carrega um ficheiro para começar.</string>
     <string name="wikis_delete_page_message">Estás prestes a eliminar a página «%1$s» (%2$s). Esta ação pode ser desfeita restaurando do histórico.</string>

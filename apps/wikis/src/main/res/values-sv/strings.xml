@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Redigera</string>
     <string name="wikis_editor_insert">Infoga</string>
     <string name="wikis_editor_attachments">Bilagor</string>
-    <string name="wikis_editor_cancel">Avbryt</string>
     <string name="wikis_editor_delete">Ta bort sida</string>
     <string name="wikis_editor_save">Spara</string>
     <string name="wikis_editor_saving">Sparar…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Sid-URL</string>
     <string name="wikis_editor_slug_hint">min-sida</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Innehåll</string>
     <string name="wikis_editor_summary_label">Sammanfattning av ändring (valfritt)</string>
     <string name="wikis_editor_summary_hint">Beskriv dina ändringar kort</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Ta bort bilaga</string>
     <string name="wikis_comment_collapse_toggle">Fäll ihop tråd</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Redigerar: %1$s</string>
     <string name="wikis_editor_content_placeholder">Skriv ditt innehåll här med Markdown…</string>
     <string name="wikis_insert_dialog_empty">Inga bilagor än. Ladda upp en fil för att komma igång.</string>
     <string name="wikis_delete_page_message">Du är på väg att radera sidan \"%1$s\" (%2$s). Denna åtgärd kan ångras genom att återställa från historiken.</string>

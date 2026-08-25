@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">संपादित करा</string>
     <string name="wikis_editor_insert">घाला</string>
     <string name="wikis_editor_attachments">संलग्नके</string>
-    <string name="wikis_editor_cancel">रद्द करा</string>
     <string name="wikis_editor_delete">पान हटवा</string>
     <string name="wikis_editor_save">जतन करा</string>
     <string name="wikis_editor_saving">जतन करत आहे…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">शीर्षक</string>
     <string name="wikis_editor_slug_label">पेज URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">सामग्री</string>
     <string name="wikis_editor_summary_label">संपादन सारांश (पर्यायी)</string>
     <string name="wikis_editor_summary_hint">तुमच्या बदलांचे थोडक्यात वर्णन करा</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">तुमची सामग्री येथे Markdown वापरून लिहा…</string>
     <string name="wikis_insert_dialog_empty">अद्याप कोणतीही संलग्नके नाहीत. सुरू करण्यासाठी फाइल अपलोड करा.</string>
     <string name="wikis_delete_page_message">तुम्ही “%1$s” (%2$s) हे पृष्ठ हटवणार आहात. इतिहासातून पुनर्संचयित करून ही क्रिया पूर्ववत करता येते.</string>

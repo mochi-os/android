@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">सम्पादन</string>
     <string name="wikis_editor_insert">घुसाउनुहोस्</string>
     <string name="wikis_editor_attachments">एट्याचमेन्टहरू</string>
-    <string name="wikis_editor_cancel">रद्द गर्नुहोस्</string>
     <string name="wikis_editor_delete">पृष्ठ मेटाउनुहोस्</string>
     <string name="wikis_editor_save">सुरक्षित गर्नुहोस्</string>
     <string name="wikis_editor_saving">सुरक्षित गर्दै…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">शीर्षक</string>
     <string name="wikis_editor_slug_label">पृष्ठ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">सामग्री</string>
     <string name="wikis_editor_summary_label">सम्पादन सारांश (वैकल्पिक)</string>
     <string name="wikis_editor_summary_hint">तपाईंका परिवर्तनहरू संक्षेपमा वर्णन गर्नुहोस्</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">आफ्नो सामग्री यहाँ Markdown प्रयोग गरी लेख्नुहोस्…</string>
     <string name="wikis_insert_dialog_empty">अहिलेसम्म कुनै संलग्नक छैन। सुरु गर्न फाइल अपलोड गर्नुहोस्।</string>
     <string name="wikis_delete_page_message">तपाईं “%1$s” (%2$s) पृष्ठ मेट्न लाग्नुभएको छ। इतिहासबाट पुनर्स्थापना गरेर यो कार्य फिर्ता गर्न सकिन्छ।</string>

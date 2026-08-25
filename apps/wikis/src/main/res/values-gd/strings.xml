@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Deasaich</string>
     <string name="wikis_editor_insert">Cuir a-steach</string>
     <string name="wikis_editor_attachments">Ceanglachain</string>
-    <string name="wikis_editor_cancel">Sguir dheth</string>
     <string name="wikis_editor_delete">Sguab às duilleag</string>
     <string name="wikis_editor_save">Sàbhail</string>
     <string name="wikis_editor_saving">A\' sàbhaladh…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Tiotal</string>
     <string name="wikis_editor_slug_label">URL na duilleige</string>
     <string name="wikis_editor_slug_hint">ainm-mo-dhuilleige</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Susbaint</string>
     <string name="wikis_editor_summary_label">Deasaich an geàrr-chunntas (roghainneil)</string>
     <string name="wikis_editor_summary_hint">Mìnich na h-atharrachaidhean agad gu goirid</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Sgrìobh an t-susbaint agad an seo le Markdown…</string>
     <string name="wikis_insert_dialog_empty">Chan eil ceanglachain ann fhathast. Luchdaich suas faidhle gus tòiseachadh.</string>
     <string name="wikis_delete_page_message">Tha thu gu bhith a’ sguabadh às na duilleige “%1$s” (%2$s). Gabhaidh an gnìomh seo a neo-dhèanamh le bhith ag ath-nochdadh on eachdraidh.</string>

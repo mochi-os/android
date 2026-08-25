@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">සංස්කරණය කරන්න</string>
     <string name="wikis_editor_insert">ඇතුළු කරන්න</string>
     <string name="wikis_editor_attachments">ඇමුණුම්</string>
-    <string name="wikis_editor_cancel">අවලංගු කරන්න</string>
     <string name="wikis_editor_delete">පිටුව මකන්න</string>
     <string name="wikis_editor_save">සුරකින්න</string>
     <string name="wikis_editor_saving">සුරැකේ…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">මාතෘකාව</string>
     <string name="wikis_editor_slug_label">පිටු URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">අන්තර්ගතය</string>
     <string name="wikis_editor_summary_label">සංස්කරණ සාරාංශය (විකල්ප)</string>
     <string name="wikis_editor_summary_hint">ඔබේ වෙනස්කම් කෙටියෙන් විස්තර කරන්න</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">ඔබේ අන්තර්ගතය මෙහි Markdown භාවිතයෙන් ලියන්න…</string>
     <string name="wikis_insert_dialog_empty">තවම ඇමුණුම් නොමැත. ආරම්භ කිරීමට ගොනුවක් උඩුගත කරන්න.</string>
     <string name="wikis_delete_page_message">ඔබ “%1$s” (%2$s) පිටුව මැකීමට යයි. ඉතිහාසයෙන් ප්‍රතිසාධනය කිරීමෙන් මෙම ක්‍රියාව පසුගමනය කළ හැක.</string>

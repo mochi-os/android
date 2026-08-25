@@ -76,7 +76,6 @@
     <string name="wikis_editor_edit">Edit</string>
     <string name="wikis_editor_insert">Sisip</string>
     <string name="wikis_editor_attachments">Lampiran</string>
-    <string name="wikis_editor_cancel">Batal</string>
     <string name="wikis_editor_delete">Padam halaman</string>
     <string name="wikis_editor_save">Simpan</string>
     <string name="wikis_editor_saving">Menyimpan…</string>
@@ -85,6 +84,7 @@
     <string name="wikis_editor_title_label">Tajuk</string>
     <string name="wikis_editor_slug_label">URL Halaman</string>
     <string name="wikis_editor_slug_hint">nama-halaman-saya</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Kandungan</string>
     <string name="wikis_editor_summary_label">Ringkasan suntingan (pilihan)</string>
     <string name="wikis_editor_summary_hint">Terangkan perubahan anda secara ringkas</string>
@@ -258,7 +258,6 @@
     <string name="wikis_comment_form_remove_attachment">Buang lampiran</string>
     <string name="wikis_comment_collapse_toggle">Runtuhkan utas</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Menyunting: %1$s</string>
     <string name="wikis_editor_content_placeholder">Tulis kandungan anda di sini menggunakan Markdown…</string>
     <string name="wikis_insert_dialog_empty">Tiada lampiran lagi. Muat naik fail untuk mula.</string>
     <string name="wikis_delete_page_message">Anda akan memadam halaman „%1$s\" (%2$s). Tindakan ini boleh dibatalkan dengan memulihkan daripada sejarah.</string>

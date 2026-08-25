@@ -70,4 +70,5 @@
 
     <string name="wikis_rss_revoke">Revoke access</string>
     <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
 </resources>

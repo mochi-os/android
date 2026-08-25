@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Cuir in eagar</string>
     <string name="wikis_editor_insert">Cuir isteach</string>
     <string name="wikis_editor_attachments">Ceangaltáin</string>
-    <string name="wikis_editor_cancel">Cealaigh</string>
     <string name="wikis_editor_delete">Scrios leathanach</string>
     <string name="wikis_editor_save">Sábháil</string>
     <string name="wikis_editor_saving">Á shábháil…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Teideal</string>
     <string name="wikis_editor_slug_label">URL an leathanaigh</string>
     <string name="wikis_editor_slug_hint">m\'ainm-leathanaigh</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Ábhar</string>
     <string name="wikis_editor_summary_label">Cuir achoimre in eagar (roghnach)</string>
     <string name="wikis_editor_summary_hint">Déan cur síos gairid ar do chuid athruithe</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Scríobh d’ábhar anseo le Markdown…</string>
     <string name="wikis_insert_dialog_empty">Níl aon cheangaltán ann fós. Uaslódáil comhad chun tosú.</string>
     <string name="wikis_delete_page_message">Tá tú ar tí an leathanach “%1$s” (%2$s) a scriosadh. Is féidir an gníomh seo a chur ar ais tríd an stair a athchóiriú.</string>

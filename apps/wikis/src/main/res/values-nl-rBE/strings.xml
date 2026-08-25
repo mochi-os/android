@@ -75,7 +75,6 @@
     <string name="wikis_editor_edit">Bewerken</string>
     <string name="wikis_editor_insert">Invoegen</string>
     <string name="wikis_editor_attachments">Bijlagen</string>
-    <string name="wikis_editor_cancel">Annuleren</string>
     <string name="wikis_editor_delete">Pagina verwijderen</string>
     <string name="wikis_editor_save">Opslaan</string>
     <string name="wikis_editor_saving">Opslaan…</string>
@@ -84,6 +83,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Pagina-URL</string>
     <string name="wikis_editor_slug_hint">mijn-paginanaam</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Inhoud</string>
     <string name="wikis_editor_summary_label">Samenvatting van bewerking (optioneel)</string>
     <string name="wikis_editor_summary_hint">Beschrijf kort uw wijzigingen</string>

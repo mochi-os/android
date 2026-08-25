@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">编辑</string>
     <string name="wikis_editor_insert">插入</string>
     <string name="wikis_editor_attachments">附件</string>
-    <string name="wikis_editor_cancel">取消</string>
     <string name="wikis_editor_delete">删除页面</string>
     <string name="wikis_editor_save">保存</string>
     <string name="wikis_editor_saving">保存中…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">标题</string>
     <string name="wikis_editor_slug_label">页面 URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">内容</string>
     <string name="wikis_editor_summary_label">编辑摘要(可选)</string>
     <string name="wikis_editor_summary_hint">简要描述你的更改</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">移除附件</string>
     <string name="wikis_comment_collapse_toggle">折叠话题</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">编辑:%1$s</string>
     <string name="wikis_editor_content_placeholder">在此使用 Markdown 编写内容…</string>
     <string name="wikis_insert_dialog_empty">尚无附件。上传文件以开始。</string>
     <string name="wikis_delete_page_message">您即将删除页面\"%1$s\"(%2$s)。此操作可通过从历史记录恢复来撤销。</string>

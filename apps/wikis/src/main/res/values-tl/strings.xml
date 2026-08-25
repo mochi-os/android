@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">I-edit</string>
     <string name="wikis_editor_insert">I-insert</string>
     <string name="wikis_editor_attachments">Mga attachment</string>
-    <string name="wikis_editor_cancel">Kanselahin</string>
     <string name="wikis_editor_delete">I-delete ang page</string>
     <string name="wikis_editor_save">I-save</string>
     <string name="wikis_editor_saving">Nagse-save…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Pamagat</string>
     <string name="wikis_editor_slug_label">URL ng pahina</string>
     <string name="wikis_editor_slug_hint">pangalan-ng-pahina-ko</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Nilalaman</string>
     <string name="wikis_editor_summary_label">Buod ng pag-edit (opsyonal)</string>
     <string name="wikis_editor_summary_hint">Maikling ilarawan ang iyong mga pagbabago</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Isulat ang iyong nilalaman dito gamit ang Markdown…</string>
     <string name="wikis_insert_dialog_empty">Wala pang mga attachment. Mag-upload ng file para makapagsimula.</string>
     <string name="wikis_delete_page_message">Tatanggalin mo ang pahinang “%1$s” (%2$s). Maibabalik ang aksyong ito sa pamamagitan ng pag-restore mula sa kasaysayan.</string>

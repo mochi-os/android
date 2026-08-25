@@ -150,14 +150,12 @@
     </plurals>
 
     <!-- Page editor — top bar and action row -->
-    <string name="wikis_editor_title_new">Create new page</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
+    <string name="wikis_editor_title_new">New page</string>
     <string name="wikis_editor_preview">Preview</string>
     <string name="wikis_editor_preview_untitled">Untitled</string>
     <string name="wikis_editor_edit">Edit</string>
     <string name="wikis_editor_insert">Insert</string>
     <string name="wikis_editor_attachments">Attachments</string>
-    <string name="wikis_editor_cancel">Cancel</string>
     <string name="wikis_editor_delete">Delete page</string>
     <string name="wikis_editor_save">Save</string>
     <string name="wikis_editor_saving">Saving…</string>
@@ -168,6 +166,7 @@
     <string name="wikis_editor_title_label">Title</string>
     <string name="wikis_editor_slug_label">Page URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Content</string>
     <string name="wikis_editor_content_placeholder">Write your content here using Markdown…</string>
     <string name="wikis_editor_summary_label">Edit summary (optional)</string>

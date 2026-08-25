@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Wysig</string>
     <string name="wikis_editor_insert">Voeg in</string>
     <string name="wikis_editor_attachments">Aanhangsels</string>
-    <string name="wikis_editor_cancel">Kanselleer</string>
     <string name="wikis_editor_delete">Verwyder bladsy</string>
     <string name="wikis_editor_save">Stoor</string>
     <string name="wikis_editor_saving">Stoor…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Bladsy-URL</string>
     <string name="wikis_editor_slug_hint">my-bladsynaam</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Inhoud</string>
     <string name="wikis_editor_summary_label">Wysiging-opsomming (opsioneel)</string>
     <string name="wikis_editor_summary_hint">Beskryf jou veranderinge kortliks</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Skryf jou inhoud hier met Markdown…</string>
     <string name="wikis_insert_dialog_empty">Nog geen aanhegsels nie. Laai ’n lêer op om te begin.</string>
     <string name="wikis_delete_page_message">Jy is op die punt om die bladsy “%1$s” (%2$s) te skrap. Hierdie handeling kan ongedaan gemaak word deur uit die geskiedenis te herstel.</string>

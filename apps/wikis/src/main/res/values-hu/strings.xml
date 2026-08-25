@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Szerkesztés</string>
     <string name="wikis_editor_insert">Beszúrás</string>
     <string name="wikis_editor_attachments">Mellékletek</string>
-    <string name="wikis_editor_cancel">Mégse</string>
     <string name="wikis_editor_delete">Oldal törlése</string>
     <string name="wikis_editor_save">Mentés</string>
     <string name="wikis_editor_saving">Mentés…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Cím</string>
     <string name="wikis_editor_slug_label">Oldal URL</string>
     <string name="wikis_editor_slug_hint">oldalam-neve</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Tartalom</string>
     <string name="wikis_editor_summary_label">Szerkesztés összefoglalója (opcionális)</string>
     <string name="wikis_editor_summary_hint">Röviden írja le a módosításokat</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Melléklet eltávolítása</string>
     <string name="wikis_comment_collapse_toggle">Téma összecsukása</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Szerkesztés: %1$s</string>
     <string name="wikis_editor_content_placeholder">Írja ide tartalmát Markdown használatával…</string>
     <string name="wikis_insert_dialog_empty">Még nincsenek mellékletek. Töltsön fel egy fájlt a kezdéshez.</string>
     <string name="wikis_delete_page_message">A „%1$s\" oldalt (%2$s) készül törölni. Ez a művelet visszavonható az előzményekből történő visszaállítással.</string>

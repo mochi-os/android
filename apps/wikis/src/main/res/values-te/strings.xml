@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">సవరించండి</string>
     <string name="wikis_editor_insert">చొప్పించండి</string>
     <string name="wikis_editor_attachments">అటాచ్‌మెంట్‌లు</string>
-    <string name="wikis_editor_cancel">రద్దు చేయండి</string>
     <string name="wikis_editor_delete">పేజీని తొలగించండి</string>
     <string name="wikis_editor_save">సేవ్ చేయండి</string>
     <string name="wikis_editor_saving">సేవ్ చేస్తోంది…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">శీర్షిక</string>
     <string name="wikis_editor_slug_label">పేజీ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">కంటెంట్</string>
     <string name="wikis_editor_summary_label">సవరణ సారాంశం (ఐచ్ఛికం)</string>
     <string name="wikis_editor_summary_hint">మీ మార్పులను క్లుప్తంగా వివరించండి</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">మీ కంటెంట్‌ను ఇక్కడ Markdown ఉపయోగించి రాయండి…</string>
     <string name="wikis_insert_dialog_empty">ఇంకా అటాచ్‌మెంట్‌లు లేవు. ప్రారంభించడానికి ఫైల్‌ను అప్‌లోడ్ చేయండి.</string>
     <string name="wikis_delete_page_message">మీరు “%1$s” (%2$s) పేజీని తొలగించబోతున్నారు. చరిత్ర నుండి పునరుద్ధరించడం ద్వారా ఈ చర్యను రద్దు చేయవచ్చు.</string>

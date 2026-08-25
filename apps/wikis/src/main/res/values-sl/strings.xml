@@ -76,7 +76,6 @@
     <string name="wikis_editor_edit">Uredi</string>
     <string name="wikis_editor_insert">Vstavi</string>
     <string name="wikis_editor_attachments">Priloge</string>
-    <string name="wikis_editor_cancel">Prekliči</string>
     <string name="wikis_editor_delete">Izbriši stran</string>
     <string name="wikis_editor_save">Shrani</string>
     <string name="wikis_editor_saving">Shranjevanje…</string>
@@ -85,6 +84,7 @@
     <string name="wikis_editor_title_label">Naslov</string>
     <string name="wikis_editor_slug_label">URL strani</string>
     <string name="wikis_editor_slug_hint">ime-moje-strani</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Vsebina</string>
     <string name="wikis_editor_summary_label">Uredi povzetek (neobvezno)</string>
     <string name="wikis_editor_summary_hint">Na kratko opišite svoje spremembe</string>
@@ -258,7 +258,6 @@
     <string name="wikis_comment_form_remove_attachment">Odstrani prilogo</string>
     <string name="wikis_comment_collapse_toggle">Skrči nit</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Urejanje: %1$s</string>
     <string name="wikis_editor_content_placeholder">Tukaj napišite svojo vsebino z Markdown…</string>
     <string name="wikis_insert_dialog_empty">Še ni prilog. Naložite datoteko za začetek.</string>
     <string name="wikis_delete_page_message">Pripravljate se izbrisati stran „%1$s\" (%2$s). To dejanje lahko razveljavite z obnavljanjem iz zgodovine.</string>

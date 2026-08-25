@@ -77,7 +77,6 @@
     <string name="wikis_editor_edit">Muokkaa</string>
     <string name="wikis_editor_insert">Lisää</string>
     <string name="wikis_editor_attachments">Liitteet</string>
-    <string name="wikis_editor_cancel">Peruuta</string>
     <string name="wikis_editor_delete">Poista sivu</string>
     <string name="wikis_editor_save">Tallenna</string>
     <string name="wikis_editor_saving">Tallennetaan…</string>
@@ -86,6 +85,7 @@
     <string name="wikis_editor_title_label">Otsikko</string>
     <string name="wikis_editor_slug_label">Sivun URL</string>
     <string name="wikis_editor_slug_hint">oma-sivu</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Sisältö</string>
     <string name="wikis_editor_summary_label">Muokkauksen yhteenveto (valinnainen)</string>
     <string name="wikis_editor_summary_hint">Kuvaile muutoksesi lyhyesti</string>
@@ -260,7 +260,6 @@
     <string name="wikis_comment_form_remove_attachment">Poista liite</string>
     <string name="wikis_comment_collapse_toggle">Tiivistä keskustelu</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Muokataan: %1$s</string>
     <string name="wikis_editor_content_placeholder">Kirjoita sisältösi tähän Markdownin avulla…</string>
     <string name="wikis_insert_dialog_empty">Ei vielä liitteitä. Lataa tiedosto aloittaaksesi.</string>
     <string name="wikis_delete_page_message">Olet poistamassa sivua \"%1$s\" (%2$s). Tämä toimenpide voidaan kumota palauttamalla historiasta.</string>
