@@ -52,7 +52,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun CreateWikiScreen(
     onBack: () -> Unit,
-    onCreated: (String) -> Unit,
+    onCreated: (wikiId: String, home: String) -> Unit,
     viewModel: CreateWikiViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -60,9 +60,9 @@ fun CreateWikiScreen(
     var name by remember { mutableStateOf("") }
     var allowSearch by remember { mutableStateOf(false) }
 
-    LaunchedEffect(uiState.createdWikiId) {
-        uiState.createdWikiId?.let { newId ->
-            onCreated(newId)
+    LaunchedEffect(uiState.created) {
+        uiState.created?.let { created ->
+            onCreated(created.wikiId, created.home)
             viewModel.consumeCreatedWiki()
         }
     }

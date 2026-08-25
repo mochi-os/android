@@ -319,9 +319,23 @@ fun PageViewScreen(
                                 slug = viewModel.slug,
                                 permissions = state.permissions,
                                 onCreate = {
+                                    // The page does not exist yet, so this is a
+                                    // creation, not an edit - pageEdit would
+                                    // try to load it and land on "not found".
+                                    // The slug rides along so the editor opens
+                                    // ready to write the page the reader asked
+                                    // for.
                                     navController.navigate(
-                                        WikisApp.pageEdit(viewModel.wikiId, viewModel.slug)
-                                    )
+                                        WikisApp.newPage(viewModel.wikiId, viewModel.slug)
+                                    ) {
+                                        // Drop the empty page behind us. It
+                                        // cannot be refreshed into the saved one
+                                        // - a reused entry replays the state it
+                                        // was left in - so leaving it would put
+                                        // "page not found" behind a page that
+                                        // now exists.
+                                        popUpTo(WikisApp.PAGE_VIEW) { inclusive = true }
+                                    }
                                 },
                             )
                         }

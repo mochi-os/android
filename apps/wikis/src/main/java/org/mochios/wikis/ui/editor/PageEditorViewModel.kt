@@ -64,13 +64,19 @@ class PageEditorViewModel @Inject constructor(
     val wikiId: String = savedStateHandle["wikiId"] ?: ""
     private val initialSlug: String? = savedStateHandle["page"]
     val isNew: Boolean = initialSlug == null
+    /**
+     * A slug the route suggests for a new page — the wiki's home when this is
+     * the wiki's first page. The field stays editable; this only saves the
+     * user typing what the wiki already expects.
+     */
+    private val suggestedSlug: String = savedStateHandle["slug"] ?: ""
 
     private val _uiState = MutableStateFlow(
         PageEditorUiState(
             // For new pages we seed the slug field with an empty string;
             // the user types one. For edits we don't expose a slug field,
             // but stash the route slug so save calls have it on hand.
-            slug = initialSlug ?: "",
+            slug = initialSlug ?: suggestedSlug,
             isLoading = !isNew,
         )
     )

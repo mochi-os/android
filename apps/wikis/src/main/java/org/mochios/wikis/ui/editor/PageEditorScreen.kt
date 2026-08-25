@@ -116,7 +116,15 @@ fun PageEditorScreen(
                         Toast.LENGTH_SHORT,
                     ).show()
                     navController.navigate(WikisApp.pageView(viewModel.wikiId, event.slug)) {
-                        popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = false }
+                        if (viewModel.isNew) {
+                            // The page exists now, so there is no creation form
+                            // to go back to - drop it, and let Back reach
+                            // whatever opened the editor. Editing an existing
+                            // page keeps its own history untouched.
+                            popUpTo(WikisApp.NEW_PAGE) { inclusive = true }
+                        } else {
+                            popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = false }
+                        }
                     }
                 }
                 PageEditorEvent.Deleted -> {
