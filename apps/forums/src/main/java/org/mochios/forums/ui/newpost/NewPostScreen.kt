@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -36,6 +38,7 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -61,8 +64,8 @@ import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
@@ -129,31 +132,40 @@ fun NewPostScreen(
                         )
                     }
                 },
-                actions = {
-                    MochiTextButton(
-                        onClick = { viewModel.submit() },
-                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting
-                    ) {
-                        if (uiState.isPosting) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(20.dp),
-                                strokeWidth = 2.dp
-                            )
-                        } else {
-                            Text(
-                                stringResource(
-                                    if (isEditing) MochiR.string.common_save
-                                    else R.string.forums_post_create_action
-                                )
-                            )
-                        }
-                    }
-                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
             )
-        }
+        },
+        bottomBar = {
+            // Posting sits under the thumb rather than in the far corner of the
+            // bar, the way the wiki editor saves.
+            Surface(color = MaterialTheme.colorScheme.surface) {
+                MochiButton(
+                    onClick = { viewModel.submit() },
+                    enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .imePadding()
+                        .navigationBarsPadding()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                ) {
+                    if (uiState.isPosting) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            strokeWidth = 2.dp,
+                        )
+                    } else {
+                        Text(
+                            stringResource(
+                                if (isEditing) MochiR.string.common_save
+                                else R.string.forums_post_create_action
+                            )
+                        )
+                    }
+                }
+            }
+        },
     ) { padding ->
         Column(
             modifier = Modifier
