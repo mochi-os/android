@@ -8,11 +8,12 @@ package org.mochios.android.ui.components
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -25,6 +26,9 @@ import androidx.compose.ui.unit.dp
  * the cursor, the scroll position and the sight of what they were typing. A
  * sheet leaves all three where they were and closes with a swipe.
  *
+ * It opens at full height rather than half: a body is read top to bottom, and
+ * a sheet that starts half-drawn asks to be dragged before it can be.
+ *
  * The rendering is the caller's, because the same markdown is drawn by
  * different things - a wiki resolves its own attachments, a post does not.
  */
@@ -35,13 +39,15 @@ fun MarkdownPreviewSheet(
     modifier: Modifier = Modifier,
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    MochiBottomSheet(onDismissRequest = onDismiss, modifier = modifier) {
+    MochiBottomSheet(
+        onDismissRequest = onDismiss,
+        modifier = modifier,
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                // Tall enough that a short body still reads as a page, capped so
-                // a long one does not swallow the screen whole.
-                .heightIn(min = 200.dp)
+                .fillMaxHeight()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp, vertical = 8.dp),
             content = content,

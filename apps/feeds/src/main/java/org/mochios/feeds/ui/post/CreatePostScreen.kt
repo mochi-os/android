@@ -173,6 +173,19 @@ fun CreatePostScreen(
                         )
                     }
                 },
+                actions = {
+                    // In the bar, as in forums, so the same verb sits in the
+                    // same place across the two post screens.
+                    MochiIconButton(
+                        onClick = { showPreview = true },
+                        enabled = body.isNotBlank(),
+                    ) {
+                        Icon(
+                            Icons.Filled.Visibility,
+                            contentDescription = stringResource(MochiR.string.common_preview),
+                        )
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
@@ -302,16 +315,6 @@ fun CreatePostScreen(
                 // Reaching for a file belongs with the body it attaches to,
                 // not adrift below the form.
                 MarkdownToolbarSeparator()
-                MochiIconButton(
-                    onClick = { showPreview = true },
-                    enabled = body.isNotBlank(),
-                ) {
-                    Icon(
-                        Icons.Filled.Visibility,
-                        contentDescription = stringResource(MochiR.string.common_preview),
-                        modifier = Modifier.size(20.dp),
-                    )
-                }
                 MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
                     Icon(
                         Icons.Default.AttachFile,

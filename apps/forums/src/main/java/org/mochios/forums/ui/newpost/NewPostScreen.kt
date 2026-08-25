@@ -55,6 +55,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -133,6 +134,19 @@ fun NewPostScreen(
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back)
+                        )
+                    }
+                },
+                actions = {
+                    // In the bar rather than the markdown row: the preview shows
+                    // the title as well, which is not the toolbar's field.
+                    MochiIconButton(
+                        onClick = { showPreview = true },
+                        enabled = title.isNotBlank() || body.isNotBlank(),
+                    ) {
+                        Icon(
+                            Icons.Filled.Visibility,
+                            contentDescription = stringResource(MochiR.string.common_preview),
                         )
                     }
                 },
@@ -216,16 +230,6 @@ fun NewPostScreen(
                 // Reaching for a file belongs with the body it attaches to,
                 // not adrift below the form.
                 MarkdownToolbarSeparator()
-                MochiIconButton(
-                    onClick = { showPreview = true },
-                    enabled = body.isNotBlank(),
-                ) {
-                    Icon(
-                        Icons.Filled.Visibility,
-                        contentDescription = stringResource(MochiR.string.common_preview),
-                        modifier = Modifier.size(20.dp),
-                    )
-                }
                 MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
                     Icon(
                         Icons.Default.AttachFile,
@@ -299,6 +303,14 @@ fun NewPostScreen(
         // HtmlContent is Markwon underneath, so the same markdown the server
         // will render can be drawn here without asking it first.
         MarkdownPreviewSheet(onDismiss = { showPreview = false }) {
+            if (title.isNotBlank()) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Spacer(Modifier.height(12.dp))
+            }
             HtmlContent(html = body)
         }
     }
