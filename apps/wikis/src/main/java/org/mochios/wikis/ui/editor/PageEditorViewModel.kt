@@ -21,6 +21,8 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.PageFetchResponse
+import org.mochios.android.util.slugify
+import org.mochios.android.util.slugifyPartial
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
@@ -54,13 +56,6 @@ sealed interface PageEditorEvent {
     /** Show a toast with a localised message. */
     data class Toast(val message: String) : PageEditorEvent
 }
-
-/** Everything a page address may not contain, collapsed to a single hyphen. */
-private val NON_SLUG = Regex("[^a-z0-9]+")
-
-/** A title as a page address: lower case, digits and hyphens, nothing else. */
-private fun slugFrom(title: String): String =
-    title.lowercase().replace(NON_SLUG, "-").trim('-')
 
 @HiltViewModel
 class PageEditorViewModel @Inject constructor(
@@ -149,7 +144,7 @@ class PageEditorViewModel @Inject constructor(
             title = value,
             // A new page's address follows its title until the user takes the
             // field over; an existing page's address never moves.
-            slug = if (isNew && !slugEdited) slugFrom(value) else current.slug,
+            slug = if (isNew && !slugEdited) slugify(value) else current.slug,
         )
     }
 
@@ -157,9 +152,7 @@ class PageEditorViewModel @Inject constructor(
         slugEdited = true
         // Typed input is held to the same alphabet, but a trailing hyphen is
         // left alone - it is a word separator the user has not finished yet.
-        _uiState.value = _uiState.value.copy(
-            slug = value.lowercase().replace(NON_SLUG, "-").trimStart('-'),
-        )
+        _uiState.value = _uiState.value.copy(slug = slugifyPartial(value))
     }
     fun setContent(value: String) { _uiState.value = _uiState.value.copy(content = value) }
     fun setComment(value: String) { _uiState.value = _uiState.value.copy(comment = value) }

@@ -63,6 +63,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.util.slugify
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
@@ -79,15 +80,11 @@ import org.mochios.android.R as MochiR
 private const val STEP_DETAILS = 0
 private const val STEP_TEMPLATE = 1
 
-// Derive a URL-friendly prefix from the project name: lowercase, non-alphanumeric
-// runs collapsed to "-", capped at 20 chars (so a long name like
-// "Android project Testing Name" becomes "android-project-test").
-private fun prefixFromName(name: String): String =
-    name.lowercase()
-        .replace(Regex("[^a-z0-9]+"), "-")
-        .trim('-')
-        .take(20)
-        .trimEnd('-')
+// The server caps a prefix at 20 characters, so a long name like
+// "Android project Testing Name" becomes "android-project-test".
+private const val PREFIX_MAX = 20
+
+private fun prefixFromName(name: String): String = slugify(name, PREFIX_MAX)
 
 /**
  * Two-step create form: details, then template. Both steps share one
