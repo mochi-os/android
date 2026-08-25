@@ -3,8 +3,9 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-package org.mochios.wikis.ui.components
+package org.mochios.android.ui.components
 
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -28,27 +29,31 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.R as MochiR
+import org.mochios.android.R
 
 /**
- * A top bar that is itself the search field, the way a project's search bar is.
+ * A top bar that is itself the search field, for the screens whose bar gives
+ * way to a query rather than growing a field beneath it.
  *
- * The query sits in the bar rather than under a title repeating it, so the
- * results start at the top of the body. Opening it takes focus, which is the
- * point — the user tapped search to type.
+ * The query sits in the bar instead of under a title repeating it, so results
+ * start at the top of the body. Opening takes focus — the user tapped search
+ * to type, and a bar that waits for a second tap wastes the first.
  *
- * [onClose] both backs out and clears: a bar that closed holding a stale query
- * would filter a list the user can no longer see the reason for.
+ * [onClose] is expected to clear as well as close: a bar that goes away still
+ * holding a query leaves a list filtered with nothing on screen saying why.
+ *
+ * [actions] is for the few searches that need more than a field — stepping
+ * through matches, say. Most callers want the default.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WikiSearchTopBar(
+fun MochiSearchTopBar(
     query: String,
     placeholder: String,
     onQueryChange: (String) -> Unit,
     onClose: () -> Unit,
     modifier: Modifier = Modifier,
+    actions: @Composable RowScope.() -> Unit = {},
 ) {
     val focusRequester = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
@@ -60,7 +65,7 @@ fun WikiSearchTopBar(
             MochiIconButton(onClick = onClose) {
                 Icon(
                     Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(MochiR.string.common_back),
+                    contentDescription = stringResource(R.string.common_back),
                 )
             }
         },
@@ -76,12 +81,14 @@ fun WikiSearchTopBar(
                         MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
-                                contentDescription = stringResource(MochiR.string.common_close),
+                                contentDescription = stringResource(R.string.common_close),
                             )
                         }
                     }
                 },
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                // Submitting drops the keyboard rather than doing anything of
+                // its own: every caller filters as the user types.
                 keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
                 // The bar is already a surface; a field drawing its own container
                 // and indicator on top of it reads as a box inside a box.
@@ -97,5 +104,6 @@ fun WikiSearchTopBar(
                     .focusRequester(focusRequester),
             )
         },
+        actions = actions,
     )
 }

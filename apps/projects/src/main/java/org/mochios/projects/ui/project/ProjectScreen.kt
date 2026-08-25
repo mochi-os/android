@@ -29,9 +29,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
@@ -62,8 +60,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -80,13 +76,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -100,6 +92,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.DrawerActionRow
@@ -300,7 +293,7 @@ private fun AllProjectsContent(
     Scaffold(
         topBar = {
             if (uiState.showSearch) {
-                ProjectSearchBar(
+                MochiSearchTopBar(
                     query = uiState.searchQuery,
                     placeholder = stringResource(R.string.projects_list_search_placeholder),
                     onQueryChange = viewModel::updateSearchQuery,
@@ -400,59 +393,6 @@ private fun AllProjectsContent(
  * Search field that takes over the whole top bar. Shared by the All projects
  * list and the project detail screen — they differ only in [placeholder].
  */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ProjectSearchBar(
-    query: String,
-    placeholder: String,
-    onQueryChange: (String) -> Unit,
-    onClose: () -> Unit,
-) {
-    val focusRequester = remember { FocusRequester() }
-    LaunchedEffect(Unit) {
-        focusRequester.requestFocus()
-    }
-    TopAppBar(
-        navigationIcon = {
-            MochiIconButton(onClick = onClose) {
-                Icon(
-                    Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(MochiR.string.common_back)
-                )
-            }
-        },
-        title = {
-            TextField(
-                value = query,
-                onValueChange = onQueryChange,
-                placeholder = { Text(placeholder) },
-                singleLine = true,
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                trailingIcon = {
-                    if (query.isNotEmpty()) {
-                        MochiIconButton(onClick = { onQueryChange("") }) {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(MochiR.string.common_close)
-                            )
-                        }
-                    }
-                },
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .focusRequester(focusRequester)
-            )
-        }
-    )
-}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -638,7 +578,7 @@ private fun ProjectContent(
     Scaffold(
         topBar = {
             if (showSearch) {
-                ProjectSearchBar(
+                MochiSearchTopBar(
                     query = uiState.searchQuery,
                     placeholder = stringResource(R.string.projects_search_objects_placeholder),
                     onQueryChange = viewModel::updateSearchQuery,

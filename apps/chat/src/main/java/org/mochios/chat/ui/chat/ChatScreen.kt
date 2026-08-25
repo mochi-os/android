@@ -29,9 +29,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Forward
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Reply
@@ -63,8 +61,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -78,8 +74,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
@@ -90,7 +84,6 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
@@ -104,6 +97,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
@@ -358,15 +352,42 @@ private fun ChatContent(
                 }
             }
             if (uiState.searchOpen) {
-                ChatSearchBar(
+                val matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1
+                val matchCount = searchMatchIds.size
+                MochiSearchTopBar(
                     query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.chat_search_hint),
                     onQueryChange = { text -> viewModel.setSearchQuery(text) },
                     onClose = { viewModel.closeSearch() },
-                    matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1,
-                    matchCount = searchMatchIds.size,
-                    onUp = { viewModel.setSearchMatchIndex(searchMatchIndex + 1) },
-                    onDown = { viewModel.setSearchMatchIndex(searchMatchIndex - 1) },
-                )
+                ) {
+                    // Stepping through hits is chat's alone — the other searches
+                    // filter a list rather than walk one.
+                    if (uiState.searchQuery.isNotBlank()) {
+                        Text(
+                            text = "$matchPosition/$matchCount",
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        MochiIconButton(
+                            onClick = { viewModel.setSearchMatchIndex(searchMatchIndex + 1) },
+                            enabled = matchPosition < matchCount,
+                        ) {
+                            Icon(
+                                Icons.Default.KeyboardArrowUp,
+                                contentDescription = stringResource(R.string.chat_search_prev),
+                            )
+                        }
+                        MochiIconButton(
+                            onClick = { viewModel.setSearchMatchIndex(searchMatchIndex - 1) },
+                            enabled = matchPosition > 1,
+                        ) {
+                            Icon(
+                                Icons.Default.KeyboardArrowDown,
+                                contentDescription = stringResource(R.string.chat_search_next),
+                            )
+                        }
+                    }
+                }
             } else {
                 TopAppBar(
                     title = {
@@ -759,83 +780,6 @@ internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): I
  * Find-in-conversation bar over the loaded messages; [matchPosition] is
  * 1-based, 0 when nothing matches.
  */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ChatSearchBar(
-    query: String,
-    onQueryChange: (String) -> Unit,
-    onClose: () -> Unit,
-    matchPosition: Int,
-    matchCount: Int,
-    onUp: () -> Unit,
-    onDown: () -> Unit,
-) {
-    val focusRequester = remember { FocusRequester() }
-    LaunchedEffect(Unit) {
-        focusRequester.requestFocus()
-    }
-    TopAppBar(
-        navigationIcon = {
-            MochiIconButton(onClick = onClose) {
-                Icon(
-                    Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(MochiR.string.common_back),
-                )
-            }
-        },
-        title = {
-            TextField(
-                value = query,
-                onValueChange = onQueryChange,
-                placeholder = { Text(stringResource(R.string.chat_search_hint)) },
-                singleLine = true,
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                trailingIcon = {
-                    if (query.isNotEmpty()) {
-                        MochiIconButton(onClick = { onQueryChange("") }) {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(MochiR.string.common_close),
-                            )
-                        }
-                    }
-                },
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .focusRequester(focusRequester),
-            )
-        },
-        actions = {
-            if (query.isNotBlank()) {
-                Text(
-                    text = "$matchPosition/$matchCount",
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                MochiIconButton(onClick = onUp, enabled = matchPosition < matchCount) {
-                    Icon(
-                        Icons.Default.KeyboardArrowUp,
-                        contentDescription = stringResource(R.string.chat_search_prev),
-                    )
-                }
-                MochiIconButton(onClick = onDown, enabled = matchPosition > 1) {
-                    Icon(
-                        Icons.Default.KeyboardArrowDown,
-                        contentDescription = stringResource(R.string.chat_search_next),
-                    )
-                }
-            }
-        },
-    )
-}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

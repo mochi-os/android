@@ -44,9 +44,9 @@ import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.wikis.R
-import org.mochios.wikis.ui.components.WikiSearchTopBar
 import org.mochios.wikis.model.SearchResult
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.android.R as MochiR
@@ -61,7 +61,7 @@ fun SearchScreen(
 
     Scaffold(
         topBar = {
-            WikiSearchTopBar(
+            MochiSearchTopBar(
                 query = state.query,
                 placeholder = stringResource(R.string.wikis_search_pages_placeholder),
                 onQueryChange = viewModel::updateQuery,

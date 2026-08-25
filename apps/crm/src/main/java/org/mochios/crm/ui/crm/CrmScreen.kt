@@ -28,14 +28,11 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.FolderOpen
@@ -66,8 +63,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
@@ -81,13 +76,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -104,6 +95,7 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
@@ -299,7 +291,7 @@ private fun AllCrmsContent(
     Scaffold(
         topBar = {
             if (uiState.showSearch) {
-                CrmSearchBar(
+                MochiSearchTopBar(
                     query = uiState.searchQuery,
                     placeholder = stringResource(R.string.crm_list_search_placeholder),
                     onQueryChange = viewModel::updateSearchQuery,
@@ -397,59 +389,6 @@ private fun AllCrmsContent(
 /**
  * Search field that takes over the whole top bar, as on the All CRMs list.
  */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun CrmSearchBar(
-    query: String,
-    placeholder: String,
-    onQueryChange: (String) -> Unit,
-    onClose: () -> Unit,
-) {
-    val focusRequester = remember { FocusRequester() }
-    LaunchedEffect(Unit) {
-        focusRequester.requestFocus()
-    }
-    TopAppBar(
-        navigationIcon = {
-            MochiIconButton(onClick = onClose) {
-                Icon(
-                    Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(MochiR.string.common_back)
-                )
-            }
-        },
-        title = {
-            TextField(
-                value = query,
-                onValueChange = onQueryChange,
-                placeholder = { Text(placeholder) },
-                singleLine = true,
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                trailingIcon = {
-                    if (query.isNotEmpty()) {
-                        MochiIconButton(onClick = { onQueryChange("") }) {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(MochiR.string.common_close)
-                            )
-                        }
-                    }
-                },
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .focusRequester(focusRequester)
-            )
-        }
-    )
-}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -643,7 +582,7 @@ private fun CrmContent(
     Scaffold(
         topBar = {
             if (showSearch) {
-                CrmSearchBar(
+                MochiSearchTopBar(
                     query = uiState.searchQuery,
                     placeholder = stringResource(R.string.crm_search_objects_placeholder),
                     onQueryChange = viewModel::updateSearchQuery,

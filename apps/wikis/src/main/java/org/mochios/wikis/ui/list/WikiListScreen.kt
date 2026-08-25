@@ -68,6 +68,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.MochiButton
@@ -86,7 +87,6 @@ import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.WikiDrawer
-import org.mochios.wikis.ui.components.WikiSearchTopBar
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -137,7 +137,7 @@ fun WikiListScreen(
             snackbarHost = { SnackbarHost(snackbarHostState) },
             topBar = {
                 if (uiState.showSearch) {
-                    WikiSearchTopBar(
+                    MochiSearchTopBar(
                         query = uiState.listQuery,
                         placeholder = stringResource(R.string.wikis_search_placeholder),
                         onQueryChange = viewModel::updateListQuery,
