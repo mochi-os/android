@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Bistaratzeko izena</string>
     <string name="chat_auth_verification_failed">Egiaztatzeak huts egin du</string>
     <string name="chat_list_title">Txatak</string>
-    <string name="chat_list_close_search">Itxi bilaketa</string>
     <string name="chat_list_search">Bilatu</string>
     <string name="chat_list_logout">Amaitu saioa</string>
     <string name="chat_list_new">Txat berria</string>
-    <string name="chat_list_removed_chat">Kenduta</string>
     <string name="chat_new_title">Txat berria</string>
     <string name="chat_new_name">Taldearen izena</string>
     <string name="chat_new_friends">Lagunak</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Zu</string>
     <string name="chat_chat_not_found">Txata ez da aurkitu</string>
 
-    <string name="chat_list_more">Gehiago</string>
     <string name="chat_message_send">Bidali</string>
 
     <string name="notification_channel_chat">Txat-jakinarazpenak</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
     <string name="chat_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
     <string name="chat_auth_create_identity">Sortu zure identitatea</string>
-    <string name="chat_list_search_placeholder">Bilatu txatak</string>
-    <string name="chat_list_no_matching">Ez dago bat datorren txatik</string>
     <string name="chat_list_empty">Oraindik ez dago txatik</string>
-    <string name="chat_list_add_to_home">Gehitu hasierako pantailara</string>
-    <string name="chat_list_left_chat">Utzita</string>
     <string name="chat_new_existing_chat">Ireki lehendik dagoen txata</string>
     <string name="chat_new_start">Hasi txata</string>
     <string name="chat_new_start_group">Hasi talde-txata</string>

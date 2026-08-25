@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nome para mostrar</string>
     <string name="forums_auth_verification_failed">Verificación fallida</string>
     <string name="forums_list_title">Foros</string>
-    <string name="forums_list_close_search">Pechar busca</string>
-    <string name="forums_list_search">Buscar</string>
     <string name="forums_list_find">Buscar foros</string>
     <string name="forums_list_logout">Pechar sesión</string>
-    <string name="forums_list_create">Crear foro</string>
     <string name="forums_list_unsubscribe">Cancelar subscrición</string>
     <string name="forums_list_unsubscribe_title">Cancelar subscrición</string>
     <string name="forums_create_title">Crear foro</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foro non atopado</string>
     <string name="forums_post_not_found">Publicación non atopada</string>
 
-    <string name="forums_list_more">Máis</string>
     <string name="forums_comment_send">Enviar</string>
     <string name="forums_post_body_field">Corpo</string>
     <string name="forums_post_edit_body_field">Corpo</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">MFA aínda non é compatible na aplicación móbil</string>
     <string name="forums_auth_enter_code_sent">Introduce o código enviado a %1$s</string>
     <string name="forums_auth_create_identity">Crea a túa identidade</string>
-    <string name="forums_list_add_to_home">Engadir á pantalla de inicio</string>
     <string name="forums_tag_clear">Limpar o filtro</string>
     <string name="forums_post_tag_add">Engadir etiqueta</string>
     <string name="forums_write_comment">Escribe un comentario…</string>
 
     <string name="notification_channel_forums">Notificacións de foros</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Buscar foros</string>
-    <string name="forums_list_no_matching">Non hai foros coincidentes</string>
     <string name="forums_list_empty">Aínda non hai foros</string>
     <string name="forums_list_unsubscribe_message">Seguro que quere darse de baixa deste foro?</string>
     <string name="forums_find_search_placeholder">Buscar foros ou pegar URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Impulsar interese</string>
     <string name="forums_tag_interest_down">Reducir interese</string>
     <string name="forums_tag_interest_remove">Eliminar interese</string>
-    <string name="forums_list_default_sort">Orde predeterminada</string>
     <string name="forums_access_tab_users">Usuarios</string>
     <string name="forums_access_tab_groups">Grupos</string>
     <string name="forums_access_tab_manual">Manual</string>

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Kuvatav nimi</string>
     <string name="forums_auth_verification_failed">Kontrollimine ebaõnnestus</string>
     <string name="forums_list_title">Foorumid</string>
-    <string name="forums_list_close_search">Sulge otsing</string>
-    <string name="forums_list_search">Otsi</string>
     <string name="forums_list_find">Otsi foorumeid</string>
     <string name="forums_list_logout">Logi välja</string>
-    <string name="forums_list_create">Loo foorum</string>
     <string name="forums_list_unsubscribe">Tühista tellimus</string>
     <string name="forums_list_unsubscribe_title">Tühista tellimus</string>
     <string name="forums_create_title">Loo foorum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foorumit ei leitud</string>
     <string name="forums_post_not_found">Postitust ei leitud</string>
 
-    <string name="forums_list_more">Veel</string>
     <string name="forums_comment_send">Saada</string>
 
     <string name="notification_channel_forums">Foorumite teavitused</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA pole mobiilirakenduses veel toetatud</string>
     <string name="forums_auth_enter_code_sent">Sisesta kood, mis saadeti aadressile %1$s</string>
     <string name="forums_auth_create_identity">Loo oma identiteet</string>
-    <string name="forums_list_search_placeholder">Otsi foorumeid</string>
-    <string name="forums_list_no_matching">Sobivaid foorumeid pole</string>
     <string name="forums_list_empty">Foorumeid pole veel</string>
-    <string name="forums_list_add_to_home">Lisa avakuvale</string>
     <string name="forums_list_unsubscribe_message">Kas oled kindel, et soovid sellest foorumist lahti tellida?</string>
     <string name="forums_find_search_placeholder">Otsi foorumeid või kleebi URL</string>
     <string name="forums_find_search_hint">Otsi foorumeid, et tellida</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Tõsta huvi</string>
     <string name="forums_tag_interest_down">Vähenda huvi</string>
     <string name="forums_tag_interest_remove">Eemalda huvi</string>
-    <string name="forums_list_default_sort">Vaikimisi sortimine</string>
     <string name="forums_access_tab_users">Kasutajad</string>
     <string name="forums_access_tab_groups">Grupid</string>
     <string name="forums_access_tab_manual">Käsitsi</string>

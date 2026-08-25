@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Адлюстраванае імя</string>
     <string name="forums_auth_verification_failed">Праверка не атрымалася</string>
     <string name="forums_list_title">Форумы</string>
-    <string name="forums_list_close_search">Закрыць пошук</string>
-    <string name="forums_list_search">Пошук</string>
     <string name="forums_list_find">Знайсці форумы</string>
     <string name="forums_list_logout">Выйсці</string>
-    <string name="forums_list_create">Стварыць форум</string>
     <string name="forums_list_unsubscribe">Адпісацца</string>
     <string name="forums_list_unsubscribe_title">Адпісацца</string>
     <string name="forums_create_title">Стварыць форум</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форум не знойдзены</string>
     <string name="forums_post_not_found">Пост не знойдзены</string>
 
-    <string name="forums_list_more">Больш</string>
     <string name="forums_comment_send">Адправіць</string>
 
     <string name="notification_channel_forums">Апавяшчэнні форумаў</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA пакуль не падтрымліваецца ў мабільным дадатку</string>
     <string name="forums_auth_enter_code_sent">Увядзіце код, дасланы на %1$s</string>
     <string name="forums_auth_create_identity">Стварыце сваю ідэнтычнасць</string>
-    <string name="forums_list_search_placeholder">Пошук форумаў</string>
-    <string name="forums_list_no_matching">Няма адпаведных форумаў</string>
     <string name="forums_list_empty">Пакуль няма форумаў</string>
-    <string name="forums_list_add_to_home">Дадаць на галоўны экран</string>
     <string name="forums_list_unsubscribe_message">Вы ўпэўнены, што хочаце адпісацца ад гэтага форуму?</string>
     <string name="forums_find_search_placeholder">Шукайце форумы або ўстаўце URL</string>
     <string name="forums_find_search_hint">Шукайце форумы, на якія можна падпісацца</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Узмацніць цікавасць</string>
     <string name="forums_tag_interest_down">Зменшыць цікавасць</string>
     <string name="forums_tag_interest_remove">Выдаліць цікавасць</string>
-    <string name="forums_list_default_sort">Сартаванне па змаўчанні</string>
     <string name="forums_access_tab_users">Карыстальнікі</string>
     <string name="forums_access_tab_groups">Групы</string>
     <string name="forums_access_tab_manual">Уручную</string>

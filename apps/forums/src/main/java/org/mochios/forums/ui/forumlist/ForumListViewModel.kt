@@ -24,8 +24,6 @@ data class ForumListUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val searchQuery: String = "",
-    val showSearch: Boolean = false,
     // The user's global default post sort, from the list response's settings.
     // "" means no explicit default (server falls back to "new").
     val defaultSort: String = ""
@@ -87,24 +85,6 @@ class ForumListViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
-    }
-
-    fun toggleSearch() {
-        val current = _uiState.value
-        _uiState.value = current.copy(
-            showSearch = !current.showSearch,
-            searchQuery = if (current.showSearch) "" else current.searchQuery
-        )
-    }
-
-    fun updateSearchQuery(q: String) {
-        _uiState.value = _uiState.value.copy(searchQuery = q)
-    }
-
-    fun filteredForums(): List<Forum> {
-        val q = _uiState.value.searchQuery.lowercase().trim()
-        if (q.isEmpty()) return _uiState.value.forums
-        return _uiState.value.forums.filter { it.name.lowercase().contains(q) }
     }
 
     fun unsubscribe(forumId: String) {

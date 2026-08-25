@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Ցուցադրման անուն</string>
     <string name="chat_auth_verification_failed">Ստուգումը ձախողվեց</string>
     <string name="chat_list_title">Զրույցներ</string>
-    <string name="chat_list_close_search">Կոդը պատճենված է</string>
     <string name="chat_list_search">Որոնել</string>
     <string name="chat_list_logout">Դուրս է եկել հաջողությամբ</string>
     <string name="chat_list_new">Նոր զրույց</string>
-    <string name="chat_list_removed_chat">Հեռացված է</string>
     <string name="chat_new_title">Նոր զրույց</string>
     <string name="chat_new_name">Խմբի անուն</string>
     <string name="chat_new_friends">Ընկերներ</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Դուք</string>
     <string name="chat_chat_not_found">Զրույցը պատրաստ է</string>
 
-    <string name="chat_list_more">Ավելին</string>
     <string name="chat_message_send">Ուղարկել</string>
 
     <string name="notification_channel_chat">Զրույցի ծանուցումներ</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
     <string name="chat_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
     <string name="chat_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
-    <string name="chat_list_search_placeholder">Որոնել զրույցներ</string>
-    <string name="chat_list_no_matching">Համապատասխան զրույցներ չկան</string>
     <string name="chat_list_empty">Դեռ զրույցներ չկան</string>
-    <string name="chat_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
-    <string name="chat_list_left_chat">Լքված է</string>
     <string name="chat_new_existing_chat">Բացել առկա զրույցը</string>
     <string name="chat_new_start">Սկսել զրույց</string>
     <string name="chat_new_start_group">Սկսել խմբային զրույց</string>

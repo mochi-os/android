@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Display name</string>
     <string name="chat_auth_verification_failed">Nabigo ang beripikasyon</string>
     <string name="chat_list_title">Mga chat</string>
-    <string name="chat_list_close_search">Isara ang paghahanap</string>
     <string name="chat_list_search">Maghanap</string>
     <string name="chat_list_logout">Mag-log out</string>
     <string name="chat_list_new">Bagong chat</string>
-    <string name="chat_list_removed_chat">Naalis</string>
     <string name="chat_new_title">Bagong chat</string>
     <string name="chat_new_name">Pangalan ng group</string>
     <string name="chat_new_friends">Mga kaibigan</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Ikaw</string>
     <string name="chat_chat_not_found">Hindi nahanap ang chat</string>
 
-    <string name="chat_list_more">Higit pa</string>
     <string name="chat_message_send">Ipadala</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Hindi nag-login</string>
     <string name="chat_attachment_move_up">Ilipat pataas</string>
     <string name="chat_attachment_move_down">Ilipat pababa</string>
-    <string name="chat_list_add_to_home">Idagdag sa home screen</string>
 
     <string name="notification_channel_chat">Mga abiso ng chat</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">Hindi pa suportado ang MFA sa mobile app</string>
     <string name="chat_auth_enter_code_sent">Ilagay ang code na ipinadala sa %1$s</string>
     <string name="chat_auth_create_identity">Gumawa ng iyong identity</string>
-    <string name="chat_list_search_placeholder">Maghanap ng mga chat</string>
-    <string name="chat_list_no_matching">Walang tumutugmang chat</string>
     <string name="chat_list_empty">Wala pang chat</string>
-    <string name="chat_list_left_chat">Umalis</string>
     <string name="chat_new_existing_chat">Buksan ang umiiral na chat</string>
     <string name="chat_new_start">Simulan ang chat</string>
     <string name="chat_new_start_group">Simulan ang group chat</string>

@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Igama elibonisiweyo</string>
     <string name="chat_auth_verification_failed">Uqinisekiso lusilele</string>
     <string name="chat_list_title">Iincoko</string>
-    <string name="chat_list_close_search">Vala ukukhangela</string>
     <string name="chat_list_search">Khangela</string>
     <string name="chat_list_logout">Phuma</string>
     <string name="chat_list_new">Incoko entsha</string>
-    <string name="chat_list_removed_chat">Isusiwe</string>
     <string name="chat_new_title">Incoko entsha</string>
     <string name="chat_new_name">Igama leqela</string>
     <string name="chat_new_friends">Abahlobo</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Wena</string>
     <string name="chat_chat_not_found">Incoko ayifumanekanga</string>
 
-    <string name="chat_list_more">Okuninzi</string>
     <string name="chat_message_send">Thumela</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Ungene engaphumelelanga</string>
     <string name="chat_attachment_move_up">Hambisa phezulu</string>
     <string name="chat_attachment_move_down">Hambisa ezantsi</string>
-    <string name="chat_list_add_to_home">Yongeza kwiskrini yasekhaya</string>
 
     <string name="notification_channel_chat">Izaziso zencoko</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">I-MFA ayikaxhaswa kusetyenziso lwemfonomfono</string>
     <string name="chat_auth_enter_code_sent">Faka ikhowudi ethunyelwe ku-%1$s</string>
     <string name="chat_auth_create_identity">Dala isazisi sakho</string>
-    <string name="chat_list_search_placeholder">Khangela iincoko</string>
-    <string name="chat_list_no_matching">Akukho ncoko ihambelanayo</string>
     <string name="chat_list_empty">Akukho ncoko okwangoku</string>
-    <string name="chat_list_left_chat">Ushiyile</string>
     <string name="chat_new_existing_chat">Vula incoko ekhoyo</string>
     <string name="chat_new_start">Qala incoko</string>
     <string name="chat_new_start_group">Qala incoko yeqela</string>

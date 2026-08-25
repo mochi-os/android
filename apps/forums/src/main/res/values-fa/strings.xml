@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">نام نمایشی</string>
     <string name="forums_auth_verification_failed">تأیید ناموفق بود</string>
     <string name="forums_list_title">انجمن‌ها</string>
-    <string name="forums_list_close_search">بستن جست‌وجو</string>
-    <string name="forums_list_search">جست‌وجو</string>
     <string name="forums_list_find">یافتن انجمن‌ها</string>
     <string name="forums_list_logout">خروج</string>
-    <string name="forums_list_create">ساخت انجمن</string>
     <string name="forums_list_unsubscribe">لغو اشتراک</string>
     <string name="forums_list_unsubscribe_title">لغو اشتراک</string>
     <string name="forums_create_title">ساخت انجمن</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">انجمن یافت نشد</string>
     <string name="forums_post_not_found">پست یافت نشد</string>
 
-    <string name="forums_list_more">بیشتر</string>
     <string name="forums_comment_send">ارسال</string>
 
     <string name="notification_channel_forums">اعلان‌های انجمن‌ها</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
     <string name="forums_auth_enter_code_sent">کد ارسال‌شده به %1$s را وارد کنید</string>
     <string name="forums_auth_create_identity">هویت خود را ایجاد کنید</string>
-    <string name="forums_list_search_placeholder">جستجوی انجمن‌ها</string>
-    <string name="forums_list_no_matching">هیچ انجمن مطابقی یافت نشد</string>
     <string name="forums_list_empty">هنوز انجمنی وجود ندارد</string>
-    <string name="forums_list_add_to_home">افزودن به صفحه اصلی</string>
     <string name="forums_list_unsubscribe_message">آیا مطمئن هستید که می‌خواهید اشتراک این انجمن را لغو کنید؟</string>
     <string name="forums_find_search_placeholder">جستجوی انجمن‌ها یا چسباندن نشانی اینترنتی</string>
     <string name="forums_find_search_hint">برای اشتراک، انجمن‌ها را جستجو کنید</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">تقویت علاقه</string>
     <string name="forums_tag_interest_down">کاهش علاقه</string>
     <string name="forums_tag_interest_remove">حذف علاقه</string>
-    <string name="forums_list_default_sort">مرتب‌سازی پیش‌فرض</string>
     <string name="forums_access_tab_users">کاربران</string>
     <string name="forums_access_tab_groups">گروه‌ها</string>
     <string name="forums_access_tab_manual">دستی</string>

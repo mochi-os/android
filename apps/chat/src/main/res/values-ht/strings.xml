@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Non afichaj</string>
     <string name="chat_auth_verification_failed">Verifikasyon echwe</string>
     <string name="chat_list_title">Chat yo</string>
-    <string name="chat_list_close_search">Fèmen rechèch</string>
     <string name="chat_list_search">Chèche</string>
     <string name="chat_list_logout">Dekonekte</string>
     <string name="chat_list_new">Nouvo chat</string>
-    <string name="chat_list_removed_chat">Retire</string>
     <string name="chat_new_title">Nouvo chat</string>
     <string name="chat_new_name">Non gwoup</string>
     <string name="chat_new_friends">Zanmi</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Ou</string>
     <string name="chat_chat_not_found">Chat pa jwenn</string>
 
-    <string name="chat_list_more">Plis</string>
     <string name="chat_message_send">Voye</string>
 
     <string name="notification_channel_chat">Notifikasyon chat</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
     <string name="chat_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
     <string name="chat_auth_create_identity">Kreye idantite ou</string>
-    <string name="chat_list_search_placeholder">Chèche chat</string>
-    <string name="chat_list_no_matching">Pa gen chat ki koresponn</string>
     <string name="chat_list_empty">Poko gen chat</string>
-    <string name="chat_list_add_to_home">Ajoute sou ekran akèy la</string>
-    <string name="chat_list_left_chat">Kite</string>
     <string name="chat_new_existing_chat">Ouvri chat ki egziste</string>
     <string name="chat_new_start">Kòmanse chat</string>
     <string name="chat_new_start_group">Kòmanse chat gwoup</string>

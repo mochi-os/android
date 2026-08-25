@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Tên hiển thị</string>
     <string name="forums_auth_verification_failed">Xác minh thất bại</string>
     <string name="forums_list_title">Diễn đàn</string>
-    <string name="forums_list_close_search">Đóng tìm kiếm</string>
-    <string name="forums_list_search">Tìm kiếm</string>
     <string name="forums_list_find">Tìm diễn đàn</string>
     <string name="forums_list_logout">Đăng xuất</string>
-    <string name="forums_list_create">Tạo diễn đàn</string>
     <string name="forums_list_unsubscribe">Hủy đăng ký</string>
     <string name="forums_list_unsubscribe_title">Hủy đăng ký</string>
     <string name="forums_create_title">Tạo diễn đàn</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Không tìm thấy diễn đàn</string>
     <string name="forums_post_not_found">Không tìm thấy bài viết</string>
 
-    <string name="forums_list_more">Thêm</string>
     <string name="forums_comment_send">Gửi</string>
     <string name="forums_post_body_field">Nội dung</string>
     <string name="forums_post_edit_body_field">Nội dung</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Thêm thẻ</string>
     <string name="forums_write_comment">Viết bình luận…</string>
     <string name="forums_auth_login_failed">Đăng nhập thất bại</string>
-    <string name="forums_list_add_to_home">Thêm vào màn hình chính</string>
 
     <string name="notification_channel_forums">Thông báo diễn đàn</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA chưa được hỗ trợ trong ứng dụng di động</string>
     <string name="forums_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>
     <string name="forums_auth_create_identity">Tạo danh tính của bạn</string>
-    <string name="forums_list_search_placeholder">Tìm kiếm diễn đàn</string>
-    <string name="forums_list_no_matching">Không có diễn đàn phù hợp</string>
     <string name="forums_list_empty">Chưa có diễn đàn nào</string>
     <string name="forums_list_unsubscribe_message">Bạn có chắc chắn muốn hủy đăng ký diễn đàn này không?</string>
     <string name="forums_find_search_placeholder">Tìm kiếm diễn đàn hoặc dán URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Đẩy mạnh sở thích</string>
     <string name="forums_tag_interest_down">Giảm sự quan tâm</string>
     <string name="forums_tag_interest_remove">Xoá sở thích</string>
-    <string name="forums_list_default_sort">Sắp xếp mặc định</string>
     <string name="forums_access_tab_users">Người dùng</string>
     <string name="forums_access_tab_groups">Nhóm</string>
     <string name="forums_access_tab_manual">Thủ công</string>

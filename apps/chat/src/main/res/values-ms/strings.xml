@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nama paparan</string>
     <string name="chat_auth_verification_failed">Pengesahan gagal</string>
     <string name="chat_list_title">Sembang</string>
-    <string name="chat_list_close_search">Tutup carian</string>
     <string name="chat_list_search">Cari</string>
     <string name="chat_list_logout">Log keluar</string>
     <string name="chat_list_new">Sembang baharu</string>
-    <string name="chat_list_removed_chat">Dialih keluar</string>
     <string name="chat_new_title">Sembang baharu</string>
     <string name="chat_new_name">Nama kumpulan</string>
     <string name="chat_new_friends">Rakan</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Anda</string>
     <string name="chat_chat_not_found">Sembang tidak dijumpai</string>
 
-    <string name="chat_list_more">Lagi</string>
     <string name="chat_message_send">Hantar</string>
     <string name="chat_attachment_remove">Buang lampiran</string>
     <string name="chat_message_remove_attachment">Buang lampiran</string>
     <string name="chat_auth_login_failed">Log masuk gagal</string>
     <string name="chat_attachment_move_up">Alihkan ke atas</string>
     <string name="chat_attachment_move_down">Alihkan ke bawah</string>
-    <string name="chat_list_add_to_home">Tambah ke skrin utama</string>
 
     <string name="notification_channel_chat">Pemberitahuan sembang</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA belum disokong dalam aplikasi mudah alih</string>
     <string name="chat_auth_enter_code_sent">Masukkan kod yang dihantar ke %1$s</string>
     <string name="chat_auth_create_identity">Cipta identiti anda</string>
-    <string name="chat_list_search_placeholder">Cari sembang</string>
-    <string name="chat_list_no_matching">Tiada sembang yang sepadan</string>
     <string name="chat_list_empty">Belum ada sembang</string>
-    <string name="chat_list_left_chat">Keluar</string>
     <string name="chat_new_existing_chat">Buka sembang sedia ada</string>
     <string name="chat_new_start">Mulakan sembang</string>
     <string name="chat_new_start_group">Mulakan sembang kumpulan</string>

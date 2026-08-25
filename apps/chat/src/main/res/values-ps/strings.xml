@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">د ښوون نوم</string>
     <string name="chat_auth_verification_failed">تصدیق ناکام شو</string>
     <string name="chat_list_title">چټونه</string>
-    <string name="chat_list_close_search">لټون وتړئ</string>
     <string name="chat_list_search">لټون</string>
     <string name="chat_list_logout">لاګ آوټ</string>
     <string name="chat_list_new">نوې چټ</string>
-    <string name="chat_list_removed_chat">لرې شوی</string>
     <string name="chat_new_title">نوې چټ</string>
     <string name="chat_new_name">د ګروپ نوم</string>
     <string name="chat_new_friends">ملګري</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">تاسو</string>
     <string name="chat_chat_not_found">چټ ونه موندل شو</string>
 
-    <string name="chat_list_more">نور</string>
     <string name="chat_message_send">لیږل</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">ننوتل ناکام شو</string>
     <string name="chat_attachment_move_up">پورته یوسئ</string>
     <string name="chat_attachment_move_down">ښکته یوسئ</string>
-    <string name="chat_list_add_to_home">کور پاڼې ته اضافه کړئ</string>
 
     <string name="notification_channel_chat">د چټ خبرتیاوې</string>
     <string name="chat_auth_brand">Mochi چټ</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA لا تر اوسه په ګرځنده اپلیکیشن کې ملاتړ نه لري</string>
     <string name="chat_auth_enter_code_sent">هغه کوډ دننه کړئ چې %1$s ته لیږل شوی</string>
     <string name="chat_auth_create_identity">خپله پېژندنه جوړه کړئ</string>
-    <string name="chat_list_search_placeholder">د چټونو لټون</string>
-    <string name="chat_list_no_matching">هیڅ سمون لرونکی چټ نشته</string>
     <string name="chat_list_empty">تر اوسه هیڅ چټ نشته</string>
-    <string name="chat_list_left_chat">پریښودل شو</string>
     <string name="chat_new_existing_chat">موجود چټ خلاص کړئ</string>
     <string name="chat_new_start">چټ پیل کړئ</string>
     <string name="chat_new_start_group">ډله ییز چټ پیل کړئ</string>

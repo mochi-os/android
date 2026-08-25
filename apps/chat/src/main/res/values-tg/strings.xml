@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Номи намоишӣ</string>
     <string name="chat_auth_verification_failed">Тасдиқ ноком шуд</string>
     <string name="chat_list_title">Чатҳо</string>
-    <string name="chat_list_close_search">Пӯшидани ҷустуҷӯ</string>
     <string name="chat_list_search">Ҷустуҷӯ</string>
     <string name="chat_list_logout">Баромадан</string>
     <string name="chat_list_new">Чати нав</string>
-    <string name="chat_list_removed_chat">Хориҷшуда</string>
     <string name="chat_new_title">Чати нав</string>
     <string name="chat_new_name">Номи гурӯҳ</string>
     <string name="chat_new_friends">Дӯстон</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Шумо</string>
     <string name="chat_chat_not_found">Чат ёфт нашуд</string>
 
-    <string name="chat_list_more">Бештар</string>
     <string name="chat_message_send">Фиристодан</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Воридшавӣ ноком шуд</string>
     <string name="chat_attachment_move_up">Боло баровардан</string>
     <string name="chat_attachment_move_down">Поён баровардан</string>
-    <string name="chat_list_add_to_home">Ба экрани асосӣ илова кардан</string>
 
     <string name="notification_channel_chat">Огоҳиномаҳои чат</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA дар барномаи мобилӣ ҳанӯз дастгирӣ намешавад</string>
     <string name="chat_auth_enter_code_sent">Рамзи ба %1$s фиристодашударо ворид кунед</string>
     <string name="chat_auth_create_identity">Ҳувияти худро эҷод кунед</string>
-    <string name="chat_list_search_placeholder">Ҷустуҷӯи чатҳо</string>
-    <string name="chat_list_no_matching">Чатҳои мувофиқ нест</string>
     <string name="chat_list_empty">Ҳанӯз чате нест</string>
-    <string name="chat_list_left_chat">Тарк кардаед</string>
     <string name="chat_new_existing_chat">Кушодани чати мавҷуда</string>
     <string name="chat_new_start">Оғози чат</string>
     <string name="chat_new_start_group">Оғози чати гурӯҳӣ</string>

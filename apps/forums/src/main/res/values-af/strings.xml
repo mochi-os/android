@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Vertoonnaam</string>
     <string name="forums_auth_verification_failed">Verifikasie het misluk</string>
     <string name="forums_list_title">Forums</string>
-    <string name="forums_list_close_search">Sluit soektog</string>
-    <string name="forums_list_search">Soek</string>
     <string name="forums_list_find">Vind forums</string>
     <string name="forums_list_logout">Meld af</string>
-    <string name="forums_list_create">Skep forum</string>
     <string name="forums_list_unsubscribe">Teken uit</string>
     <string name="forums_list_unsubscribe_title">Teken uit</string>
     <string name="forums_create_title">Skep forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum nie gevind nie</string>
     <string name="forums_post_not_found">Plasing nie gevind nie</string>
 
-    <string name="forums_list_more">Meer</string>
     <string name="forums_comment_send">Stuur</string>
 
     <string name="notification_channel_forums">Forums-kennisgewings</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA word nog nie in die mobiele toepassing ondersteun nie</string>
     <string name="forums_auth_enter_code_sent">Voer die kode in wat na %1$s gestuur is</string>
     <string name="forums_auth_create_identity">Skep jou identiteit</string>
-    <string name="forums_list_search_placeholder">Soek forums</string>
-    <string name="forums_list_no_matching">Geen ooreenstemmende forums nie</string>
     <string name="forums_list_empty">Nog geen forums nie</string>
-    <string name="forums_list_add_to_home">Voeg by tuisskerm</string>
     <string name="forums_list_unsubscribe_message">Is jy seker jy wil van hierdie forum afteken?</string>
     <string name="forums_find_search_placeholder">Soek forums of plak URL</string>
     <string name="forums_find_search_hint">Soek forums om op in te teken</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Versterk belangstelling</string>
     <string name="forums_tag_interest_down">Verminder belangstelling</string>
     <string name="forums_tag_interest_remove">Verwyder belangstelling</string>
-    <string name="forums_list_default_sort">Verstek sortering</string>
     <string name="forums_access_tab_users">Gebruikers</string>
     <string name="forums_access_tab_groups">Groepe</string>
     <string name="forums_access_tab_manual">Handmatig</string>

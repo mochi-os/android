@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Görünen ad</string>
     <string name="forums_auth_verification_failed">Doğrulama başarısız</string>
     <string name="forums_list_title">Forumlar</string>
-    <string name="forums_list_close_search">Aramayı kapat</string>
-    <string name="forums_list_search">Ara</string>
     <string name="forums_list_find">Forum bul</string>
     <string name="forums_list_logout">Oturumu kapat</string>
-    <string name="forums_list_create">Forum oluştur</string>
     <string name="forums_list_unsubscribe">Aboneliği iptal et</string>
     <string name="forums_list_unsubscribe_title">Aboneliği iptal et</string>
     <string name="forums_create_title">Forum oluştur</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum bulunamadı</string>
     <string name="forums_post_not_found">Gönderi bulunamadı</string>
 
-    <string name="forums_list_more">Daha fazla</string>
     <string name="forums_comment_send">Gönder</string>
     <string name="forums_post_body_field">İçerik</string>
     <string name="forums_post_edit_body_field">İçerik</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Etiket ekle</string>
     <string name="forums_write_comment">Yorum yaz…</string>
     <string name="forums_auth_login_failed">Giriş başarısız</string>
-    <string name="forums_list_add_to_home">Ana ekrana ekle</string>
 
     <string name="notification_channel_forums">Forum bildirimleri</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA mobil uygulamada henüz desteklenmiyor</string>
     <string name="forums_auth_enter_code_sent">%1$s adresine gönderilen kodu girin</string>
     <string name="forums_auth_create_identity">Kimliğinizi oluşturun</string>
-    <string name="forums_list_search_placeholder">Forumlarda ara</string>
-    <string name="forums_list_no_matching">Eşleşen forum yok</string>
     <string name="forums_list_empty">Henüz forum yok</string>
     <string name="forums_list_unsubscribe_message">Bu forumun aboneliğinden çıkmak istediğinizden emin misiniz?</string>
     <string name="forums_find_search_placeholder">Forumlarda ara veya URL yapıştırın</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">İlgiyi artır</string>
     <string name="forums_tag_interest_down">İlgiyi azalt</string>
     <string name="forums_tag_interest_remove">İlgiyi kaldır</string>
-    <string name="forums_list_default_sort">Varsayılan sıralama</string>
     <string name="forums_access_tab_users">Kullanıcılar</string>
     <string name="forums_access_tab_groups">Gruplar</string>
     <string name="forums_access_tab_manual">Elle</string>

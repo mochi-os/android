@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nome a apresentar</string>
     <string name="chat_auth_verification_failed">Verificação falhou</string>
     <string name="chat_list_title">Conversas</string>
-    <string name="chat_list_close_search">Fechar pesquisa</string>
     <string name="chat_list_search">Pesquisar</string>
     <string name="chat_list_logout">Terminar sessão</string>
     <string name="chat_list_new">Nova conversa</string>
-    <string name="chat_list_removed_chat">Removido</string>
     <string name="chat_new_title">Nova conversa</string>
     <string name="chat_new_name">Nome do grupo</string>
     <string name="chat_new_friends">Amigos</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Você</string>
     <string name="chat_chat_not_found">Conversa não encontrada</string>
 
-    <string name="chat_list_more">Mais</string>
     <string name="chat_message_send">Enviar</string>
     <string name="chat_attachment_remove">Remover anexo</string>
     <string name="chat_message_remove_attachment">Remover anexo</string>
     <string name="chat_auth_login_failed">Início de sessão falhou</string>
     <string name="chat_attachment_move_up">Mover para cima</string>
     <string name="chat_attachment_move_down">Mover para baixo</string>
-    <string name="chat_list_add_to_home">Adicionar ao ecrã principal</string>
 
     <string name="notification_channel_chat">Notificações de chat</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA ainda não é compatível com o aplicativo móvel</string>
     <string name="chat_auth_enter_code_sent">Digite o código enviado para %1$s</string>
     <string name="chat_auth_create_identity">Crie a sua identidade</string>
-    <string name="chat_list_search_placeholder">Pesquisar chats</string>
-    <string name="chat_list_no_matching">Nenhum chat correspondente</string>
     <string name="chat_list_empty">Ainda não há chats</string>
-    <string name="chat_list_left_chat">Saiu</string>
     <string name="chat_new_existing_chat">Abrir chat existente</string>
     <string name="chat_new_start">Iniciar chat</string>
     <string name="chat_new_start_group">Iniciar chat em grupo</string>

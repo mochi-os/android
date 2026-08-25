@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">نام نمایشی</string>
     <string name="chat_auth_verification_failed">تأیید ناموفق بود</string>
     <string name="chat_list_title">گفت‌وگوها</string>
-    <string name="chat_list_close_search">بستن جست‌وجو</string>
     <string name="chat_list_search">جست‌وجو</string>
     <string name="chat_list_logout">خروج</string>
     <string name="chat_list_new">گفت‌وگوی جدید</string>
-    <string name="chat_list_removed_chat">حذف شد</string>
     <string name="chat_new_title">گفت‌وگوی جدید</string>
     <string name="chat_new_name">نام گروه</string>
     <string name="chat_new_friends">دوستان</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">شما</string>
     <string name="chat_chat_not_found">گفت‌وگو پیدا نشد</string>
 
-    <string name="chat_list_more">بیشتر</string>
     <string name="chat_message_send">ارسال</string>
 
     <string name="notification_channel_chat">اعلان‌های گفتگو</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
     <string name="chat_auth_enter_code_sent">کدی که به %1$s ارسال شد را وارد کنید</string>
     <string name="chat_auth_create_identity">هویت خود را ایجاد کنید</string>
-    <string name="chat_list_search_placeholder">جستجوی گفتگوها</string>
-    <string name="chat_list_no_matching">گفتگوی مطابقی یافت نشد</string>
     <string name="chat_list_empty">هنوز گفتگویی وجود ندارد</string>
-    <string name="chat_list_add_to_home">افزودن به صفحه اصلی</string>
-    <string name="chat_list_left_chat">ترک‌شده</string>
     <string name="chat_new_existing_chat">باز کردن گفتگوی موجود</string>
     <string name="chat_new_start">شروع گفتگو</string>
     <string name="chat_new_start_group">شروع گفتگوی گروهی</string>

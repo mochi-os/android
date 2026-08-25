@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ناوی پیشاندان</string>
     <string name="forums_auth_verification_failed">پشتڕاستکردنەوە سەرکەوتوو نەبوو</string>
     <string name="forums_list_title">Forumەکان</string>
-    <string name="forums_list_close_search">داخستنی گەڕان</string>
-    <string name="forums_list_search">گەڕان</string>
     <string name="forums_list_find">دۆزینەوەی Forumەکان</string>
     <string name="forums_list_logout">دەرچوون</string>
-    <string name="forums_list_create">دروستکردنی فۆڕەم</string>
     <string name="forums_list_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
     <string name="forums_list_unsubscribe_title">بەشداری هەڵبوەشێنەوە</string>
     <string name="forums_create_title">دروستکردنی فۆڕەم</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum نەدۆزرایەوە</string>
     <string name="forums_post_not_found">پۆست نەدۆزرایەوە</string>
 
-    <string name="forums_list_more">زیاتر</string>
     <string name="forums_comment_send">ناردن</string>
 
     <string name="notification_channel_forums">ئاگادارکردنەوەکانی فۆڕەمەکان</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA هێشتا لە ئەپی مۆبایلدا پشتگیری ناکرێت</string>
     <string name="forums_auth_enter_code_sent">ئەو کۆدە بنووسە کە نێردراوە بۆ %1$s</string>
     <string name="forums_auth_create_identity">ناسنامەکەت دروست بکە</string>
-    <string name="forums_list_search_placeholder">گەڕان لە فۆڕەمەکاندا</string>
-    <string name="forums_list_no_matching">هیچ فۆڕەمێکی هاوتا نییە</string>
     <string name="forums_list_empty">هێشتا هیچ فۆڕەمێک نییە</string>
-    <string name="forums_list_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
     <string name="forums_list_unsubscribe_message">دڵنیایت کە دەتەوێت بەشداری ئەم فۆڕەمە هەڵبوەشێنیتەوە؟</string>
     <string name="forums_find_search_placeholder">گەڕان لە فۆڕەمەکاندا یان URL بلکێنە</string>
     <string name="forums_find_search_hint">گەڕان بۆ فۆڕەمەکان بۆ بەشداریکردن</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">بەهێزکردنی بایەخ</string>
     <string name="forums_tag_interest_down">کەمکردنەوەی بەرژەوەندی</string>
     <string name="forums_tag_interest_remove">لابردنی بەرژەوەندی</string>
-    <string name="forums_list_default_sort">ڕیزکردنی بنەڕەت</string>
     <string name="forums_access_tab_users">بەکارهێنەران</string>
     <string name="forums_access_tab_groups">گرووپەکان</string>
     <string name="forums_access_tab_manual">دەستی</string>

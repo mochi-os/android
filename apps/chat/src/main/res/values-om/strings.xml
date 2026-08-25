@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Maqaa mul\'atu</string>
     <string name="chat_auth_verification_failed">Mirkaneessuun hin milkoofne</string>
     <string name="chat_list_title">Chaattota</string>
-    <string name="chat_list_close_search">Barbaadii cufi</string>
     <string name="chat_list_search">Barbaadi</string>
     <string name="chat_list_logout">Ba\'i</string>
     <string name="chat_list_new">Haasawa haaraa</string>
-    <string name="chat_list_removed_chat">Haqame</string>
     <string name="chat_new_title">Haasawa haaraa</string>
     <string name="chat_new_name">Maqaa garee</string>
     <string name="chat_new_friends">Hiriyoota</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Ati</string>
     <string name="chat_chat_not_found">Chaattiin hin argamne</string>
 
-    <string name="chat_list_more">Caalaa</string>
     <string name="chat_message_send">Ergi</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Galmaa\'uun hin milkoofne</string>
     <string name="chat_attachment_move_up">Gubbatti dabarsi</string>
     <string name="chat_attachment_move_down">Gadi dabarsi</string>
-    <string name="chat_list_add_to_home">Iskrii manaatti dabali</string>
 
     <string name="notification_channel_chat">Beeksisaalee marii</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA ammatti appii moobaayilii keessatti hin deggeramne</string>
     <string name="chat_auth_enter_code_sent">Koodii gara %1$s ergame galchi</string>
     <string name="chat_auth_create_identity">Eenyummaa kee uumi</string>
-    <string name="chat_list_search_placeholder">Marii barbaadi</string>
-    <string name="chat_list_no_matching">Mariin walsimu hin jiru</string>
     <string name="chat_list_empty">Mariin ammatti hin jiru</string>
-    <string name="chat_list_left_chat">Bahe</string>
     <string name="chat_new_existing_chat">Marii jiru bani</string>
     <string name="chat_new_start">Marii jalqabi</string>
     <string name="chat_new_start_group">Marii garee jalqabi</string>

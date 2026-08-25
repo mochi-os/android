@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Харагдах нэр</string>
     <string name="forums_auth_verification_failed">Баталгаажуулалт амжилтгүй</string>
     <string name="forums_list_title">Форумууд</string>
-    <string name="forums_list_close_search">Хайлтыг хаах</string>
-    <string name="forums_list_search">Хайх</string>
     <string name="forums_list_find">Форум хайх</string>
     <string name="forums_list_logout">Гарах</string>
-    <string name="forums_list_create">Форум үүсгэх</string>
     <string name="forums_list_unsubscribe">Захиалгаас гарах</string>
     <string name="forums_list_unsubscribe_title">Захиалгаас гарах</string>
     <string name="forums_create_title">Форум үүсгэх</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форум олдсонгүй</string>
     <string name="forums_post_not_found">Нийтлэл олдсонгүй</string>
 
-    <string name="forums_list_more">Илүү</string>
     <string name="forums_comment_send">Илгээх</string>
     <string name="forums_post_body_field">Агуулга</string>
     <string name="forums_post_edit_body_field">Агуулга</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Сэтгэгдэл бичих…</string>
     <string name="forums_auth_login_failed">Нэвтрэх амжилтгүй</string>
-    <string name="forums_list_add_to_home">Үндсэн дэлгэцэнд нэмэх</string>
 
     <string name="notification_channel_forums">Форумын мэдэгдэл</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA-г гар утасны аппад одоогоор дэмжихгүй</string>
     <string name="forums_auth_enter_code_sent">%1$s руу илгээсэн кодыг оруулна уу</string>
     <string name="forums_auth_create_identity">Танилтаа үүсгэх</string>
-    <string name="forums_list_search_placeholder">Форум хайх</string>
-    <string name="forums_list_no_matching">Тохирох форум алга</string>
     <string name="forums_list_empty">Одоохондоо форум алга</string>
     <string name="forums_list_unsubscribe_message">Энэ форумаас бүртгэлээ цуцлахдаа итгэлтэй байна уу?</string>
     <string name="forums_find_search_placeholder">Форум хайх эсвэл URL буулгана уу</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Сонирхлыг идэвхжүүлэх</string>
     <string name="forums_tag_interest_down">Хүүг бууруулах</string>
     <string name="forums_tag_interest_remove">Сонирхол хасах</string>
-    <string name="forums_list_default_sort">Үндсэн эрэмбэлэлт</string>
     <string name="forums_access_tab_users">Хэрэглэгчид</string>
     <string name="forums_access_tab_groups">Бүлгүүд</string>
     <string name="forums_access_tab_manual">Гар аргаар</string>

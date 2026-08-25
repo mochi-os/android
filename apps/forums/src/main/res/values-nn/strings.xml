@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Visingsnamn</string>
     <string name="forums_auth_verification_failed">Stadfesting mislukkast</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Lat att søket</string>
-    <string name="forums_list_search">Søk</string>
     <string name="forums_list_find">Finn forum</string>
     <string name="forums_list_logout">Logg ut</string>
-    <string name="forums_list_create">Opprett forum</string>
     <string name="forums_list_unsubscribe">Sei opp abonnement</string>
     <string name="forums_list_unsubscribe_title">Sei opp abonnement</string>
     <string name="forums_create_title">Opprett forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Fann ikkje forumet</string>
     <string name="forums_post_not_found">Innlegg ikkje funne</string>
 
-    <string name="forums_list_more">Meir</string>
     <string name="forums_comment_send">Send</string>
     <string name="forums_post_body_field">Innhald</string>
     <string name="forums_post_edit_body_field">Innhald</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Legg til etikett</string>
     <string name="forums_write_comment">Skriv ein kommentar…</string>
     <string name="forums_auth_login_failed">Innlogging mislukkast</string>
-    <string name="forums_list_add_to_home">Legg til på startskjermen</string>
 
     <string name="notification_channel_forums">Forum-varsel</string>
     <string name="forums_auth_brand">Mochi Forum</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA er ikkje støtta i mobilappen enno</string>
     <string name="forums_auth_enter_code_sent">Skriv inn koden som vart sendt til %1$s</string>
     <string name="forums_auth_create_identity">Opprett identiteten din</string>
-    <string name="forums_list_search_placeholder">Søk i forum</string>
-    <string name="forums_list_no_matching">Ingen forum samsvarar</string>
     <string name="forums_list_empty">Ingen forum enno</string>
     <string name="forums_list_unsubscribe_message">Er du sikker på at du vil melde deg av dette forumet?</string>
     <string name="forums_find_search_placeholder">Søk i forum eller lim inn URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Auk interesse</string>
     <string name="forums_tag_interest_down">Reduser interesse</string>
     <string name="forums_tag_interest_remove">Fjern interesse</string>
-    <string name="forums_list_default_sort">Standardsortering</string>
     <string name="forums_access_tab_users">Brukarar</string>
     <string name="forums_access_tab_groups">Grupper</string>
     <string name="forums_access_tab_manual">Manuell</string>

@@ -26,8 +26,6 @@ data class ChatListUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val searchQuery: String = "",
-    val showSearch: Boolean = false
 )
 
 @HiltViewModel
@@ -70,26 +68,8 @@ class ChatListViewModel @Inject constructor(
         }
     }
 
-    fun toggleSearch() {
-        val current = _uiState.value
-        _uiState.value = current.copy(
-            showSearch = !current.showSearch,
-            searchQuery = if (current.showSearch) "" else current.searchQuery
-        )
-    }
-
-    fun updateSearchQuery(query: String) {
-        _uiState.value = _uiState.value.copy(searchQuery = query)
-    }
-
     fun filteredChats(): List<Chat> {
-        val query = _uiState.value.searchQuery.lowercase().trim()
-        val base = _uiState.value.chats
-        val filtered = if (query.isEmpty()) {
-            base
-        } else {
-            base.filter { chat -> chat.name.lowercase().contains(query) }
-        }
+        val filtered = _uiState.value.chats
         val pinnedKeys = pinnedStore.pinned.value
         // Pinned chats first, then most recent activity; chats with no activity
         // yet (updated=0) sink to the bottom in name order so they remain

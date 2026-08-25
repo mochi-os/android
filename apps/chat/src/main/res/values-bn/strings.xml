@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">প্রদর্শনের নাম</string>
     <string name="chat_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
     <string name="chat_list_title">চ্যাট</string>
-    <string name="chat_list_close_search">অনুসন্ধান বন্ধ করুন</string>
     <string name="chat_list_search">অনুসন্ধান</string>
     <string name="chat_list_logout">লগ আউট করুন</string>
     <string name="chat_list_new">নতুন চ্যাট</string>
-    <string name="chat_list_removed_chat">সরানো হয়েছে</string>
     <string name="chat_new_title">নতুন চ্যাট</string>
     <string name="chat_new_name">গ্রুপের নাম</string>
     <string name="chat_new_friends">বন্ধুরা</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">আপনি</string>
     <string name="chat_chat_not_found">চ্যাট পাওয়া যায়নি</string>
 
-    <string name="chat_list_more">আরো</string>
     <string name="chat_message_send">পাঠান</string>
 
     <string name="notification_channel_chat">চ্যাট বিজ্ঞপ্তি</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">মোবাইল অ্যাপে MFA এখনও সমর্থিত নয়</string>
     <string name="chat_auth_enter_code_sent">%1$s-এ পাঠানো কোডটি লিখুন</string>
     <string name="chat_auth_create_identity">আপনার পরিচয় তৈরি করুন</string>
-    <string name="chat_list_search_placeholder">চ্যাট অনুসন্ধান করুন</string>
-    <string name="chat_list_no_matching">কোনো মিলযুক্ত চ্যাট নেই</string>
     <string name="chat_list_empty">এখনও কোনো চ্যাট নেই</string>
-    <string name="chat_list_add_to_home">হোম স্ক্রিনে যোগ করুন</string>
-    <string name="chat_list_left_chat">ত্যাগ করেছেন</string>
     <string name="chat_new_existing_chat">বিদ্যমান চ্যাট খুলুন</string>
     <string name="chat_new_start">চ্যাট শুরু করুন</string>
     <string name="chat_new_start_group">গ্রুপ চ্যাট শুরু করুন</string>

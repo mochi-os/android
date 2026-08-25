@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Jeneng tampilan</string>
     <string name="forums_auth_verification_failed">Verifikasi gagal</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Tutup panggolékan</string>
-    <string name="forums_list_search">Goleki</string>
     <string name="forums_list_find">Golèk forum</string>
     <string name="forums_list_logout">Metu</string>
-    <string name="forums_list_create">Gawé forum</string>
     <string name="forums_list_unsubscribe">Mbatalaké langganan</string>
     <string name="forums_list_unsubscribe_title">Mbatalaké langganan</string>
     <string name="forums_create_title">Gawé forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum ora ditemokaké</string>
     <string name="forums_post_not_found">Postingan ora ditemokaké</string>
 
-    <string name="forums_list_more">Liyane</string>
     <string name="forums_comment_send">Kirim</string>
     <string name="forums_post_body_field">Isi</string>
     <string name="forums_post_edit_body_field">Isi</string>
@@ -132,7 +128,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Tulis komentar…</string>
     <string name="forums_auth_login_failed">Login gagal</string>
-    <string name="forums_list_add_to_home">Tambah ing layar utama</string>
 
     <string name="notification_channel_forums">Notifikasi forum</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -140,8 +135,6 @@
     <string name="forums_auth_mfa_unsupported">MFA dereng dipun sengkuyung wonten ing aplikasi mobile</string>
     <string name="forums_auth_enter_code_sent">Lebetaken kode ingkang dipun kintun dhateng %1$s</string>
     <string name="forums_auth_create_identity">Damel identitas panjenengan</string>
-    <string name="forums_list_search_placeholder">Madosi forum</string>
-    <string name="forums_list_no_matching">Boten wonten forum ingkang cocog</string>
     <string name="forums_list_empty">Dereng wonten forum</string>
     <string name="forums_list_unsubscribe_message">Panjenengan saestu badhe mbatalaken langganan saking forum punika?</string>
     <string name="forums_find_search_placeholder">Madosi forum utawi tempelaken URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Tambah minat</string>
     <string name="forums_tag_interest_down">Kurangi minat</string>
     <string name="forums_tag_interest_remove">Cabut minat</string>
-    <string name="forums_list_default_sort">Urutan standar</string>
     <string name="forums_access_tab_users">Panganggo</string>
     <string name="forums_access_tab_groups">Grup</string>
     <string name="forums_access_tab_manual">Manual</string>

@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Koʻrsatish nomi</string>
     <string name="chat_auth_verification_failed">Tasdiqlash muvaffaqiyatsiz</string>
     <string name="chat_list_title">Suhbatlar</string>
-    <string name="chat_list_close_search">Qidiruvni yopish</string>
     <string name="chat_list_search">Qidirish</string>
     <string name="chat_list_logout">Chiqish</string>
     <string name="chat_list_new">Yangi suhbat</string>
-    <string name="chat_list_removed_chat">Olib tashlandi</string>
     <string name="chat_new_title">Yangi suhbat</string>
     <string name="chat_new_name">Guruh nomi</string>
     <string name="chat_new_friends">Doʻstlar</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Siz</string>
     <string name="chat_chat_not_found">Suhbat topilmadi</string>
 
-    <string name="chat_list_more">Ko‘proq</string>
     <string name="chat_message_send">Yuborish</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Kirish bajarilmadi</string>
     <string name="chat_attachment_move_up">Yuqoriga ko‘chirish</string>
     <string name="chat_attachment_move_down">Pastga ko‘chirish</string>
-    <string name="chat_list_add_to_home">Bosh ekranga qo‘shish</string>
 
     <string name="notification_channel_chat">Chat bildirishnomalari</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA mobil ilovada hali qo\'llab-quvvatlanmaydi</string>
     <string name="chat_auth_enter_code_sent">%1$s ga yuborilgan kodni kiriting</string>
     <string name="chat_auth_create_identity">Identifikatsiyangizni yarating</string>
-    <string name="chat_list_search_placeholder">Chatlarni qidirish</string>
-    <string name="chat_list_no_matching">Mos chatlar yo\'q</string>
     <string name="chat_list_empty">Hozircha chatlar yo\'q</string>
-    <string name="chat_list_left_chat">Chiqdi</string>
     <string name="chat_new_existing_chat">Mavjud chatni ochish</string>
     <string name="chat_new_start">Chatni boshlash</string>
     <string name="chat_new_start_group">Guruh chatini boshlash</string>

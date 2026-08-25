@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Адлюстраванае імя</string>
     <string name="chat_auth_verification_failed">Праверка не атрымалася</string>
     <string name="chat_list_title">Чаты</string>
-    <string name="chat_list_close_search">Закрыць пошук</string>
     <string name="chat_list_search">Пошук</string>
     <string name="chat_list_logout">Выйсці</string>
     <string name="chat_list_new">Новы чат</string>
-    <string name="chat_list_removed_chat">Выдалена</string>
     <string name="chat_new_title">Новы чат</string>
     <string name="chat_new_name">Назва групы</string>
     <string name="chat_new_friends">Сябры</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Вы</string>
     <string name="chat_chat_not_found">Чат не знойдзены</string>
 
-    <string name="chat_list_more">Больш</string>
     <string name="chat_message_send">Адправіць</string>
 
     <string name="notification_channel_chat">Апавяшчэнні чата</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA пакуль не падтрымліваецца ў мабільным дадатку</string>
     <string name="chat_auth_enter_code_sent">Увядзіце код, дасланы на %1$s</string>
     <string name="chat_auth_create_identity">Стварыце сваю ідэнтычнасць</string>
-    <string name="chat_list_search_placeholder">Пошук чатаў</string>
-    <string name="chat_list_no_matching">Няма адпаведных чатаў</string>
     <string name="chat_list_empty">Чатаў пакуль няма</string>
-    <string name="chat_list_add_to_home">Дадаць на галоўны экран</string>
-    <string name="chat_list_left_chat">Пакінуты</string>
     <string name="chat_new_existing_chat">Адкрыць існуючы чат</string>
     <string name="chat_new_start">Пачаць чат</string>
     <string name="chat_new_start_group">Пачаць групавы чат</string>

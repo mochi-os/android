@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">සංදර්ශන නාමය</string>
     <string name="chat_auth_verification_failed">සත්‍යාපනය අසාර්ථක විය</string>
     <string name="chat_list_title">චැට්</string>
-    <string name="chat_list_close_search">සෙවුම වසන්න</string>
     <string name="chat_list_search">සොයන්න</string>
     <string name="chat_list_logout">ඉවත් වන්න</string>
     <string name="chat_list_new">නව චැට්</string>
-    <string name="chat_list_removed_chat">ඉවත් කරන ලදී</string>
     <string name="chat_new_title">නව චැට්</string>
     <string name="chat_new_name">කණ්ඩායම් නාමය</string>
     <string name="chat_new_friends">මිතුරන්</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">ඔබ</string>
     <string name="chat_chat_not_found">චැට් එක සොයාගත නොහැක</string>
 
-    <string name="chat_list_more">තවත්</string>
     <string name="chat_message_send">යවන්න</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">පුරනය වීම අසාර්ථකයි</string>
     <string name="chat_attachment_move_up">ඉහළට ගෙනයන්න</string>
     <string name="chat_attachment_move_down">පහළට ගෙනයන්න</string>
-    <string name="chat_list_add_to_home">මුල් තිරයට එක් කරන්න</string>
 
     <string name="notification_channel_chat">කතාබස් දැනුම්දීම්</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA තවම ජංගම යෙදුමේ සහාය නොදක්වයි</string>
     <string name="chat_auth_enter_code_sent">%1$s වෙත යවන ලද කේතය ඇතුළත් කරන්න</string>
     <string name="chat_auth_create_identity">ඔබගේ අනන්‍යතාව සාදන්න</string>
-    <string name="chat_list_search_placeholder">කතාබස් සොයන්න</string>
-    <string name="chat_list_no_matching">ගැළපෙන කතාබස් නැත</string>
     <string name="chat_list_empty">තවම කතාබස් නැත</string>
-    <string name="chat_list_left_chat">ඉවත් විය</string>
     <string name="chat_new_existing_chat">පවතින කතාබස විවෘත කරන්න</string>
     <string name="chat_new_start">කතාබස ආරම්භ කරන්න</string>
     <string name="chat_new_start_group">කණ්ඩායම් කතාබස ආරම්භ කරන්න</string>

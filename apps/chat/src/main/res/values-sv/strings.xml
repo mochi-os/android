@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Visningsnamn</string>
     <string name="chat_auth_verification_failed">Verifiering misslyckades</string>
     <string name="chat_list_title">Chattar</string>
-    <string name="chat_list_close_search">Stäng sökning</string>
     <string name="chat_list_search">Sök</string>
     <string name="chat_list_logout">Logga ut</string>
     <string name="chat_list_new">Ny chatt</string>
-    <string name="chat_list_removed_chat">Borttagen</string>
     <string name="chat_new_title">Ny chatt</string>
     <string name="chat_new_name">Gruppnamn</string>
     <string name="chat_new_friends">Vänner</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Du</string>
     <string name="chat_chat_not_found">Chatt hittades inte</string>
 
-    <string name="chat_list_more">Mer</string>
     <string name="chat_message_send">Skicka</string>
     <string name="chat_attachment_remove">Ta bort bilaga</string>
     <string name="chat_message_remove_attachment">Ta bort bilaga</string>
     <string name="chat_auth_login_failed">Inloggning misslyckades</string>
     <string name="chat_attachment_move_up">Flytta upp</string>
     <string name="chat_attachment_move_down">Flytta ner</string>
-    <string name="chat_list_add_to_home">Lägg till på startskärmen</string>
 
     <string name="notification_channel_chat">Chattaviseringar</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA stöds ännu inte i mobilappen</string>
     <string name="chat_auth_enter_code_sent">Ange koden som skickats till %1$s</string>
     <string name="chat_auth_create_identity">Skapa din identitet</string>
-    <string name="chat_list_search_placeholder">Sök chattar</string>
-    <string name="chat_list_no_matching">Inga matchande chattar</string>
     <string name="chat_list_empty">Inga chattar ännu</string>
-    <string name="chat_list_left_chat">Lämnade</string>
     <string name="chat_new_existing_chat">Öppna befintlig chatt</string>
     <string name="chat_new_start">Starta chatt</string>
     <string name="chat_new_start_group">Starta gruppchatt</string>

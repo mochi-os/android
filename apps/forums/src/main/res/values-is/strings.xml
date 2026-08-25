@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Birtingarnafn</string>
     <string name="forums_auth_verification_failed">Sannprófun mistókst</string>
     <string name="forums_list_title">Spjallborð</string>
-    <string name="forums_list_close_search">Loka leit</string>
-    <string name="forums_list_search">Leita</string>
     <string name="forums_list_find">Finna spjallborð</string>
     <string name="forums_list_logout">Skrá út</string>
-    <string name="forums_list_create">Búa til spjallþráð</string>
     <string name="forums_list_unsubscribe">Afskrá áskrift</string>
     <string name="forums_list_unsubscribe_title">Afskrá áskrift</string>
     <string name="forums_create_title">Búa til spjallþráð</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Spjallborð fannst ekki</string>
     <string name="forums_post_not_found">Færsla fannst ekki</string>
 
-    <string name="forums_list_more">Meira</string>
     <string name="forums_comment_send">Senda</string>
     <string name="forums_post_body_field">Meginmál</string>
     <string name="forums_post_edit_body_field">Meginmál</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Skrifaðu athugasemd…</string>
     <string name="forums_auth_login_failed">Innskráning mistókst</string>
-    <string name="forums_list_add_to_home">Bæta við heimaskjá</string>
 
     <string name="notification_channel_forums">Tilkynningar fyrir spjallborð</string>
     <string name="forums_auth_brand">Mochi spjallborð</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA er ekki enn stutt í farsímaforritinu</string>
     <string name="forums_auth_enter_code_sent">Sláðu inn kóðann sem var sendur til %1$s</string>
     <string name="forums_auth_create_identity">Búðu til auðkenni þitt</string>
-    <string name="forums_list_search_placeholder">Leita að spjallborðum</string>
-    <string name="forums_list_no_matching">Engin samsvarandi spjallborð</string>
     <string name="forums_list_empty">Engin spjallborð ennþá</string>
     <string name="forums_list_unsubscribe_message">Ertu viss um að þú viljir segja upp áskrift að þessu spjallborði?</string>
     <string name="forums_find_search_placeholder">Leita að spjallborðum eða líma inn vefslóð</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Auka áhuga</string>
     <string name="forums_tag_interest_down">Minnka áhuga</string>
     <string name="forums_tag_interest_remove">Fjarlægja áhuga</string>
-    <string name="forums_list_default_sort">Sjálfgefin röðun</string>
     <string name="forums_access_tab_users">Notendur</string>
     <string name="forums_access_tab_groups">Hópar</string>
     <string name="forums_access_tab_manual">Handvirkt</string>

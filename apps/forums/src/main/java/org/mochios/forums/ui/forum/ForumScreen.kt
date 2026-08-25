@@ -178,7 +178,7 @@ fun ForumScreen(
     }
 
     val drawerItems = remember(listUiState.forums) {
-        listViewModel.filteredForums().map { forum ->
+        listUiState.forums.map { forum ->
             DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,

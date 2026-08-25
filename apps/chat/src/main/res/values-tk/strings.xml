@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Görkeziş ady</string>
     <string name="chat_auth_verification_failed">Tassyklama şowsuz boldy</string>
     <string name="chat_list_title">Söhbetdeşlikler</string>
-    <string name="chat_list_close_search">Gözlegi ýapmak</string>
     <string name="chat_list_search">Gözle</string>
     <string name="chat_list_logout">Çyk</string>
     <string name="chat_list_new">Täze söhbet</string>
-    <string name="chat_list_removed_chat">Aýryldy</string>
     <string name="chat_new_title">Täze söhbet</string>
     <string name="chat_new_name">Toparyň ady</string>
     <string name="chat_new_friends">Dostlar</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Sen</string>
     <string name="chat_chat_not_found">Söhbetdeşlik tapylmady</string>
 
-    <string name="chat_list_more">Has köp</string>
     <string name="chat_message_send">Iber</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Girmek başartmady</string>
     <string name="chat_attachment_move_up">Ýokarlat</string>
     <string name="chat_attachment_move_down">Aşaklat</string>
-    <string name="chat_list_add_to_home">Esasy ekrana goş</string>
 
     <string name="notification_channel_chat">Söhbet bildirişleri</string>
     <string name="chat_auth_brand">Mochi Söhbet</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA häzirlikçe ykjam goşundyda goldanylmaýar</string>
     <string name="chat_auth_enter_code_sent">%1$s salgysyna iberilen kody giriziň</string>
     <string name="chat_auth_create_identity">Şahsyýetiňizi dörediň</string>
-    <string name="chat_list_search_placeholder">Söhbetleri gözle</string>
-    <string name="chat_list_no_matching">Gabat gelýän söhbet ýok</string>
     <string name="chat_list_empty">Heniz söhbet ýok</string>
-    <string name="chat_list_left_chat">Çykyldy</string>
     <string name="chat_new_existing_chat">Bar bolan söhbeti aç</string>
     <string name="chat_new_start">Söhbete başla</string>
     <string name="chat_new_start_group">Topar söhbetine başla</string>

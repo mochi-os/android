@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nama tampilan</string>
     <string name="chat_auth_verification_failed">Verifikasi gagal</string>
     <string name="chat_list_title">Chat</string>
-    <string name="chat_list_close_search">Tutup pencarian</string>
     <string name="chat_list_search">Cari</string>
     <string name="chat_list_logout">Keluar</string>
     <string name="chat_list_new">Chat baru</string>
-    <string name="chat_list_removed_chat">Dihapus</string>
     <string name="chat_new_title">Chat baru</string>
     <string name="chat_new_name">Nama grup</string>
     <string name="chat_new_friends">Teman</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Anda</string>
     <string name="chat_chat_not_found">Chat tidak ditemukan</string>
 
-    <string name="chat_list_more">Lainnya</string>
     <string name="chat_message_send">Kirim</string>
     <string name="chat_attachment_remove">Hapus lampiran</string>
     <string name="chat_message_remove_attachment">Hapus lampiran</string>
     <string name="chat_auth_login_failed">Login gagal</string>
     <string name="chat_attachment_move_up">Pindahkan ke atas</string>
     <string name="chat_attachment_move_down">Pindahkan ke bawah</string>
-    <string name="chat_list_add_to_home">Tambahkan ke layar utama</string>
 
     <string name="notification_channel_chat">Notifikasi chat</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA belum didukung di aplikasi mobile</string>
     <string name="chat_auth_enter_code_sent">Masukkan kode yang dikirim ke %1$s</string>
     <string name="chat_auth_create_identity">Buat identitas Anda</string>
-    <string name="chat_list_search_placeholder">Cari chat</string>
-    <string name="chat_list_no_matching">Tidak ada chat yang cocok</string>
     <string name="chat_list_empty">Belum ada chat</string>
-    <string name="chat_list_left_chat">Keluar</string>
     <string name="chat_new_existing_chat">Buka chat yang ada</string>
     <string name="chat_new_start">Mulai chat</string>
     <string name="chat_new_start_group">Mulai chat grup</string>

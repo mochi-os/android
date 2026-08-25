@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Име за прикажување</string>
     <string name="chat_auth_verification_failed">Потврдата не успеа</string>
     <string name="chat_list_title">Разговори</string>
-    <string name="chat_list_close_search">Затвори пребарување</string>
     <string name="chat_list_search">Барај</string>
     <string name="chat_list_logout">Одјави се</string>
     <string name="chat_list_new">Нов разговор</string>
-    <string name="chat_list_removed_chat">Отстрането</string>
     <string name="chat_new_title">Нов разговор</string>
     <string name="chat_new_name">Име на група</string>
     <string name="chat_new_friends">Пријатели</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Вие</string>
     <string name="chat_chat_not_found">Разговорот не е пронајден</string>
 
-    <string name="chat_list_more">Повеќе</string>
     <string name="chat_message_send">Испрати</string>
     <string name="chat_attachment_remove">Отстрани прилог</string>
     <string name="chat_message_remove_attachment">Отстрани прилог</string>
     <string name="chat_auth_login_failed">Најавата не успеа</string>
     <string name="chat_attachment_move_up">Премести нагоре</string>
     <string name="chat_attachment_move_down">Премести надолу</string>
-    <string name="chat_list_add_to_home">Додај на почетен екран</string>
 
     <string name="notification_channel_chat">Известувања за разговор</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA сè уште не е поддржано во мобилната апликација</string>
     <string name="chat_auth_enter_code_sent">Внесете го кодот испратен на %1$s</string>
     <string name="chat_auth_create_identity">Создадете го вашиот идентитет</string>
-    <string name="chat_list_search_placeholder">Пребарајте разговори</string>
-    <string name="chat_list_no_matching">Нема разговори што се совпаѓаат</string>
     <string name="chat_list_empty">Сè уште нема разговори</string>
-    <string name="chat_list_left_chat">Напуштено</string>
     <string name="chat_new_existing_chat">Отвори постоечки разговор</string>
     <string name="chat_new_start">Започни разговор</string>
     <string name="chat_new_start_group">Започни групен разговор</string>

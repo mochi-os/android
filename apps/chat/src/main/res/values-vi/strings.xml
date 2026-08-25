@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Tên hiển thị</string>
     <string name="chat_auth_verification_failed">Xác minh thất bại</string>
     <string name="chat_list_title">Trò chuyện</string>
-    <string name="chat_list_close_search">Đóng tìm kiếm</string>
     <string name="chat_list_search">Tìm kiếm</string>
     <string name="chat_list_logout">Đăng xuất</string>
     <string name="chat_list_new">Trò chuyện mới</string>
-    <string name="chat_list_removed_chat">Đã xoá</string>
     <string name="chat_new_title">Trò chuyện mới</string>
     <string name="chat_new_name">Tên nhóm</string>
     <string name="chat_new_friends">Bạn bè</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Bạn</string>
     <string name="chat_chat_not_found">Không tìm thấy cuộc trò chuyện</string>
 
-    <string name="chat_list_more">Thêm</string>
     <string name="chat_message_send">Gửi</string>
     <string name="chat_attachment_remove">Xóa tệp đính kèm</string>
     <string name="chat_message_remove_attachment">Xóa tệp đính kèm</string>
     <string name="chat_auth_login_failed">Đăng nhập thất bại</string>
     <string name="chat_attachment_move_up">Di chuyển lên</string>
     <string name="chat_attachment_move_down">Di chuyển xuống</string>
-    <string name="chat_list_add_to_home">Thêm vào màn hình chính</string>
 
     <string name="notification_channel_chat">Thông báo trò chuyện</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">Ứng dụng di động chưa hỗ trợ MFA</string>
     <string name="chat_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>
     <string name="chat_auth_create_identity">Tạo danh tính của bạn</string>
-    <string name="chat_list_search_placeholder">Tìm kiếm cuộc trò chuyện</string>
-    <string name="chat_list_no_matching">Không có cuộc trò chuyện phù hợp</string>
     <string name="chat_list_empty">Chưa có cuộc trò chuyện nào</string>
-    <string name="chat_list_left_chat">Đã rời</string>
     <string name="chat_new_existing_chat">Mở cuộc trò chuyện hiện có</string>
     <string name="chat_new_start">Bắt đầu trò chuyện</string>
     <string name="chat_new_start_group">Bắt đầu trò chuyện nhóm</string>

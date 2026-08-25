@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nome para mostrar</string>
     <string name="chat_auth_verification_failed">Verificación fallida</string>
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_close_search">Pechar busca</string>
     <string name="chat_list_search">Buscar</string>
     <string name="chat_list_logout">Pechar sesión</string>
     <string name="chat_list_new">Novo chat</string>
-    <string name="chat_list_removed_chat">Eliminado</string>
     <string name="chat_new_title">Novo chat</string>
     <string name="chat_new_name">Nome do grupo</string>
     <string name="chat_new_friends">Amigos</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Ti</string>
     <string name="chat_chat_not_found">Chat non atopado</string>
 
-    <string name="chat_list_more">Máis</string>
     <string name="chat_message_send">Enviar</string>
 
     <string name="notification_channel_chat">Notificacións de chat</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA aínda non é compatible na aplicación móbil</string>
     <string name="chat_auth_enter_code_sent">Introduce o código enviado a %1$s</string>
     <string name="chat_auth_create_identity">Crea a túa identidade</string>
-    <string name="chat_list_search_placeholder">Buscar chats</string>
-    <string name="chat_list_no_matching">Non hai chats coincidentes</string>
     <string name="chat_list_empty">Aínda non hai chats</string>
-    <string name="chat_list_add_to_home">Engadir á pantalla de inicio</string>
-    <string name="chat_list_left_chat">Saíu</string>
     <string name="chat_new_existing_chat">Abrir chat existente</string>
     <string name="chat_new_start">Iniciar chat</string>
     <string name="chat_new_start_group">Iniciar chat de grupo</string>

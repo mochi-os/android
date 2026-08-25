@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Näyttönimi</string>
     <string name="chat_auth_verification_failed">Vahvistus epäonnistui</string>
     <string name="chat_list_title">Chatit</string>
-    <string name="chat_list_close_search">Sulje haku</string>
     <string name="chat_list_search">Haku</string>
     <string name="chat_list_logout">Kirjaudu ulos</string>
     <string name="chat_list_new">Uusi keskustelu</string>
-    <string name="chat_list_removed_chat">Poistettu</string>
     <string name="chat_new_title">Uusi keskustelu</string>
     <string name="chat_new_name">Ryhmän nimi</string>
     <string name="chat_new_friends">Kaverit</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Sinä</string>
     <string name="chat_chat_not_found">Chattia ei löydy</string>
 
-    <string name="chat_list_more">Lisää</string>
     <string name="chat_message_send">Lähetä</string>
 
     <string name="notification_channel_chat">Chat-ilmoitukset</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA:ta ei vielä tueta mobiilisovelluksessa</string>
     <string name="chat_auth_enter_code_sent">Syötä osoitteeseen %1$s lähetetty koodi</string>
     <string name="chat_auth_create_identity">Luo identiteettisi</string>
-    <string name="chat_list_search_placeholder">Hae keskusteluja</string>
-    <string name="chat_list_no_matching">Ei vastaavia keskusteluja</string>
     <string name="chat_list_empty">Ei vielä keskusteluja</string>
-    <string name="chat_list_add_to_home">Lisää aloitusnäytölle</string>
-    <string name="chat_list_left_chat">Poistuttu</string>
     <string name="chat_new_existing_chat">Avaa olemassa oleva keskustelu</string>
     <string name="chat_new_start">Aloita keskustelu</string>
     <string name="chat_new_start_group">Aloita ryhmäkeskustelu</string>

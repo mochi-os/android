@@ -14,8 +14,6 @@
     <string name="forums_access_level_vote">投票</string>
     <string name="forums_access_level_none">無</string>
     <string name="forums_settings">設定</string>
-    <string name="forums_list_search">搜尋</string>
-    <string name="forums_list_more">更多</string>
     <string name="forums_comment_send">傳送</string>
     <string name="forums_post_remove">移除</string>
     <string name="forums_comment_remove">移除</string>
@@ -72,8 +70,6 @@
     <string name="forums_post_restore">還原</string>
     <string name="forums_comment_restore">還原</string>
     <string name="forums_moderation_title">審核</string>
-    <string name="forums_list_close_search">關閉搜尋</string>
-    <string name="forums_list_add_to_home">加到主畫面</string>
     <string name="forums_members_empty">沒有成員</string>
 
     <string name="notification_channel_forums">論壇通知</string>
@@ -84,10 +80,7 @@
     <string name="forums_auth_enter_code_sent">請輸入傳送到 %1$s 嘅驗證碼</string>
     <string name="forums_auth_create_identity">建立你嘅身分</string>
     <string name="forums_list_title">論壇</string>
-    <string name="forums_list_search_placeholder">搜尋論壇</string>
     <string name="forums_list_find">尋找論壇</string>
-    <string name="forums_list_create">建立論壇</string>
-    <string name="forums_list_no_matching">冇符合嘅論壇</string>
     <string name="forums_list_empty">暫時未有論壇</string>
     <string name="forums_list_unsubscribe_message">你確定要取消訂閱呢個論壇?</string>
     <string name="forums_create_title">建立論壇</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">提升興趣</string>
     <string name="forums_tag_interest_down">降低興趣</string>
     <string name="forums_tag_interest_remove">移除興趣</string>
-    <string name="forums_list_default_sort">預設排序</string>
     <string name="forums_access_tab_users">用戶</string>
     <string name="forums_access_tab_groups">群組</string>
     <string name="forums_access_tab_manual">手動</string>

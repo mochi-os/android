@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Zobrazované jméno</string>
     <string name="chat_auth_verification_failed">Ověření selhalo</string>
     <string name="chat_list_title">Chaty</string>
-    <string name="chat_list_close_search">Zavřít hledání</string>
     <string name="chat_list_search">Hledat</string>
     <string name="chat_list_logout">Odhlásit se</string>
     <string name="chat_list_new">Nový chat</string>
-    <string name="chat_list_removed_chat">Odebráno</string>
     <string name="chat_new_title">Nový chat</string>
     <string name="chat_new_name">Název skupiny</string>
     <string name="chat_new_friends">Přátelé</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Vy</string>
     <string name="chat_chat_not_found">Chat nenalezen</string>
 
-    <string name="chat_list_more">Více</string>
     <string name="chat_message_send">Odeslat</string>
 
     <string name="notification_channel_chat">Oznámení chatu</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA zatím není v mobilní aplikaci podporováno</string>
     <string name="chat_auth_enter_code_sent">Zadejte kód odeslaný na %1$s</string>
     <string name="chat_auth_create_identity">Vytvořte si identitu</string>
-    <string name="chat_list_search_placeholder">Hledat chaty</string>
-    <string name="chat_list_no_matching">Žádné odpovídající chaty</string>
     <string name="chat_list_empty">Zatím žádné chaty</string>
-    <string name="chat_list_add_to_home">Přidat na domovskou obrazovku</string>
-    <string name="chat_list_left_chat">Opuštěno</string>
     <string name="chat_new_existing_chat">Otevřít stávající chat</string>
     <string name="chat_new_start">Zahájit chat</string>
     <string name="chat_new_start_group">Zahájit skupinový chat</string>

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">દર્શાવનાર નામ</string>
     <string name="forums_auth_verification_failed">ચકાસણી નિષ્ફળ</string>
     <string name="forums_list_title">ફોરમ્સ</string>
-    <string name="forums_list_close_search">શોધ બંધ કરો</string>
-    <string name="forums_list_search">શોધો</string>
     <string name="forums_list_find">ફોરમ્સ શોધો</string>
     <string name="forums_list_logout">લૉગ આઉટ કરો</string>
-    <string name="forums_list_create">ફોરમ બનાવો</string>
     <string name="forums_list_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_list_unsubscribe_title">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_create_title">ફોરમ બનાવો</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ફોરમ મળ્યું નહીં</string>
     <string name="forums_post_not_found">પોસ્ટ મળી નથી</string>
 
-    <string name="forums_list_more">વધુ</string>
     <string name="forums_comment_send">મોકલો</string>
     <string name="forums_post_body_field">સામગ્રી</string>
     <string name="forums_post_edit_body_field">સામગ્રી</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">મોબાઇલ ઍપમાં MFA હજુ સમર્થિત નથી</string>
     <string name="forums_auth_enter_code_sent">%1$s પર મોકલેલો કોડ દાખલ કરો</string>
     <string name="forums_auth_create_identity">તમારી ઓળખ બનાવો</string>
-    <string name="forums_list_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="forums_tag_clear">ફિલ્ટર સાફ કરો</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">ટિપ્પણી લખો…</string>
 
     <string name="notification_channel_forums">ફોરમ સૂચનાઓ</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">ફોરમ શોધો</string>
-    <string name="forums_list_no_matching">કોઈ મેળ ખાતા ફોરમ નથી</string>
     <string name="forums_list_empty">હજુ સુધી કોઈ ફોરમ નથી</string>
     <string name="forums_list_unsubscribe_message">શું તમે ખરેખર આ ફોરમમાંથી અનસબ્સ્ક્રાઇબ કરવા માંગો છો?</string>
     <string name="forums_find_search_placeholder">ફોરમ શોધો અથવા URL પેસ્ટ કરો</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">રુચિ વધારો</string>
     <string name="forums_tag_interest_down">રસ ઘટાડો</string>
     <string name="forums_tag_interest_remove">રસ દૂર કરો</string>
-    <string name="forums_list_default_sort">ડિફૉલ્ટ સૉર્ટ</string>
     <string name="forums_access_tab_users">વપરાશકર્તાઓ</string>
     <string name="forums_access_tab_groups">ગ્રુપ્સ</string>
     <string name="forums_access_tab_manual">મેન્યુઅલ</string>

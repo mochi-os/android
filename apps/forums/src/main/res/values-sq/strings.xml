@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Emri i shfaqur</string>
     <string name="forums_auth_verification_failed">Verifikimi dështoi</string>
     <string name="forums_list_title">Forumet</string>
-    <string name="forums_list_close_search">Mbyll kërkimin</string>
-    <string name="forums_list_search">Kërko</string>
     <string name="forums_list_find">Gjej forume</string>
     <string name="forums_list_logout">Dilni</string>
-    <string name="forums_list_create">Krijo forum</string>
     <string name="forums_list_unsubscribe">Çabonohu</string>
     <string name="forums_list_unsubscribe_title">Çabonohu</string>
     <string name="forums_create_title">Krijo forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forumi nuk u gjet</string>
     <string name="forums_post_not_found">Postimi s\'u gjet</string>
 
-    <string name="forums_list_more">Më shumë</string>
     <string name="forums_comment_send">Dërgo</string>
     <string name="forums_post_body_field">Përmbajtja</string>
     <string name="forums_post_edit_body_field">Përmbajtja</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Shto etiketë</string>
     <string name="forums_write_comment">Shkruaj një koment…</string>
     <string name="forums_auth_login_failed">Hyrja dështoi</string>
-    <string name="forums_list_add_to_home">Shto në ekranin kryesor</string>
 
     <string name="notification_channel_forums">Njoftime për forumet</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA-ja nuk mbështetet ende në aplikacionin mobil</string>
     <string name="forums_auth_enter_code_sent">Shkruani kodin e dërguar te %1$s</string>
     <string name="forums_auth_create_identity">Krijoni identitetin tuaj</string>
-    <string name="forums_list_search_placeholder">Kërkoni forume</string>
-    <string name="forums_list_no_matching">Nuk ka forume që përputhen</string>
     <string name="forums_list_empty">Ende nuk ka forume</string>
     <string name="forums_list_unsubscribe_message">Jeni i sigurt që doni të çabonoheni nga ky forum?</string>
     <string name="forums_find_search_placeholder">Kërkoni forume ose ngjitni një URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Rrit interesin</string>
     <string name="forums_tag_interest_down">Zvogëlo interesin</string>
     <string name="forums_tag_interest_remove">Hiq interesin</string>
-    <string name="forums_list_default_sort">Renditja e parazgjedhur</string>
     <string name="forums_access_tab_users">Përdoruesit</string>
     <string name="forums_access_tab_groups">Grupet</string>
     <string name="forums_access_tab_manual">Manual</string>

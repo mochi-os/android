@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">显示名称</string>
     <string name="chat_auth_verification_failed">验证失败</string>
     <string name="chat_list_title">聊天</string>
-    <string name="chat_list_close_search">关闭搜索</string>
     <string name="chat_list_search">搜索</string>
     <string name="chat_list_logout">退出登录</string>
     <string name="chat_list_new">新聊天</string>
-    <string name="chat_list_removed_chat">已移除</string>
     <string name="chat_new_title">新聊天</string>
     <string name="chat_new_name">群组名称</string>
     <string name="chat_new_friends">好友</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">您</string>
     <string name="chat_chat_not_found">未找到聊天</string>
 
-    <string name="chat_list_more">更多</string>
     <string name="chat_message_send">发送</string>
     <string name="chat_attachment_remove">移除附件</string>
     <string name="chat_message_remove_attachment">移除附件</string>
     <string name="chat_auth_login_failed">登录失败</string>
     <string name="chat_attachment_move_up">上移</string>
     <string name="chat_attachment_move_down">下移</string>
-    <string name="chat_list_add_to_home">添加到主屏幕</string>
 
     <string name="notification_channel_chat">聊天通知</string>
     <string name="chat_auth_brand">Mochi 聊天</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">移动应用暂不支持多重身份验证</string>
     <string name="chat_auth_enter_code_sent">请输入发送至 %1$s 的验证码</string>
     <string name="chat_auth_create_identity">创建您的身份</string>
-    <string name="chat_list_search_placeholder">搜索聊天</string>
-    <string name="chat_list_no_matching">没有匹配的聊天</string>
     <string name="chat_list_empty">暂无聊天</string>
-    <string name="chat_list_left_chat">已退出</string>
     <string name="chat_new_existing_chat">打开现有聊天</string>
     <string name="chat_new_start">开始聊天</string>
     <string name="chat_new_start_group">开始群聊</string>

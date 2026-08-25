@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_list_close_search">Cerrá la búsqueda</string>
-    <string name="forums_list_search">Buscá</string>
     <string name="forums_list_logout">Cerrá sesión</string>
-    <string name="forums_list_create">Creá un foro</string>
     <string name="forums_list_unsubscribe">Cancelá la suscripción</string>
     <string name="forums_list_unsubscribe_title">Cancelá la suscripción</string>
     <string name="forums_create_title">Creá un foro</string>
@@ -43,7 +40,6 @@
     <string name="forums_access_level_vote">Votar</string>
     <string name="forums_access_level_none">Ninguno</string>
     <string name="forums_settings">Configuración</string>
-    <string name="forums_list_more">Más</string>
     <string name="forums_comment_send">Enviar</string>
     <string name="forums_moderation_restriction_type">Tipo</string>
     <string name="forums_post_title_field">Título</string>
@@ -64,11 +60,8 @@
     <string name="forums_auth_enter_code_sent">Ingresá el código enviado a %1$s</string>
     <string name="forums_auth_create_identity">Creá tu identidad</string>
     <string name="forums_list_title">Foros</string>
-    <string name="forums_list_search_placeholder">Buscar foros</string>
     <string name="forums_list_find">Encontrar foros</string>
-    <string name="forums_list_no_matching">No hay foros coincidentes</string>
     <string name="forums_list_empty">Todavía no hay foros</string>
-    <string name="forums_list_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="forums_list_unsubscribe_message">¿Estás seguro de que querés cancelar la suscripción a este foro?</string>
     <string name="forums_create_private">Privado</string>
     <string name="forums_create_public">Público</string>
@@ -193,7 +186,6 @@
     <string name="forums_tag_interest_up">Aumentar interés</string>
     <string name="forums_tag_interest_down">Reducir interés</string>
     <string name="forums_tag_interest_remove">Eliminar interés</string>
-    <string name="forums_list_default_sort">Orden predeterminado</string>
     <string name="forums_access_tab_users">Usuarios</string>
     <string name="forums_access_tab_groups">Grupos</string>
     <string name="forums_access_tab_manual">Manual</string>

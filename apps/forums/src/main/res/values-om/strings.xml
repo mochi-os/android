@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Maqaa mul\'atu</string>
     <string name="forums_auth_verification_failed">Mirkaneessuun hin milkoofne</string>
     <string name="forums_list_title">Foramiiwwan</string>
-    <string name="forums_list_close_search">Barbaadii cufi</string>
-    <string name="forums_list_search">Barbaadi</string>
     <string name="forums_list_find">Foramiiwwan argi</string>
     <string name="forums_list_logout">Ba\'i</string>
-    <string name="forums_list_create">Marii uumi</string>
     <string name="forums_list_unsubscribe">Galaa\'uu kaasi</string>
     <string name="forums_list_unsubscribe_title">Galaa\'uu kaasi</string>
     <string name="forums_create_title">Marii uumi</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foramiin hin argamne</string>
     <string name="forums_post_not_found">Maxxansi hin argamne</string>
 
-    <string name="forums_list_more">Caalaa</string>
     <string name="forums_comment_send">Ergi</string>
     <string name="forums_post_body_field">Qabiyyee</string>
     <string name="forums_post_edit_body_field">Qabiyyee</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Yaada barreessi…</string>
     <string name="forums_auth_login_failed">Galmaa\'uun hin milkoofne</string>
-    <string name="forums_list_add_to_home">Iskrii manaatti dabali</string>
 
     <string name="notification_channel_forums">Beeksisawwan marii</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA ammaaf appii moobaayilii irratti hin deggeramne</string>
     <string name="forums_auth_enter_code_sent">Koodii gara %1$s ergame galchi</string>
     <string name="forums_auth_create_identity">Eenyummaa kee uumi</string>
-    <string name="forums_list_search_placeholder">Marii barbaadi</string>
-    <string name="forums_list_no_matching">Mariin walsimu hin jiru</string>
     <string name="forums_list_empty">Ammaaf mariin hin jiru</string>
     <string name="forums_list_unsubscribe_message">Marii kana irraa galmee haquu barbaaddaa?</string>
     <string name="forums_find_search_placeholder">Marii barbaadi yookaan URL maxxansi</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Fedhii cimsi</string>
     <string name="forums_tag_interest_down">Dantaa hir\'isi</string>
     <string name="forums_tag_interest_remove">Dantaa haqi</string>
-    <string name="forums_list_default_sort">Tartiiba idilee</string>
     <string name="forums_access_tab_users">Fayyadamtoota</string>
     <string name="forums_access_tab_groups">Garee</string>
     <string name="forums_access_tab_manual">Harkaan</string>

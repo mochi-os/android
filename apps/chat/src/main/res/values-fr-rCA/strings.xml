@@ -12,7 +12,6 @@
     <string name="chat_list_logout">Déconnexion</string>
     <string name="chat_members_you">Vous</string>
     <string name="chat_list_search">Rechercher</string>
-    <string name="chat_list_more">Plus</string>
     <string name="chat_message_send">Envoyer</string>
     <string name="chat_settings_remove_member">Supprimer</string>
 
@@ -25,14 +24,8 @@
     <string name="chat_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
     <string name="chat_auth_enter_code_sent">Entrez le code envoyé à %1$s</string>
     <string name="chat_auth_create_identity">Créez votre identité</string>
-    <string name="chat_list_search_placeholder">Rechercher des clavardages</string>
-    <string name="chat_list_close_search">Fermer la recherche</string>
     <string name="chat_list_new">Nouveau clavardage</string>
-    <string name="chat_list_no_matching">Aucun clavardage correspondant</string>
     <string name="chat_list_empty">Aucun clavardage pour l\'instant</string>
-    <string name="chat_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
-    <string name="chat_list_left_chat">Quitté</string>
-    <string name="chat_list_removed_chat">Retiré</string>
     <string name="chat_new_title">Nouveau clavardage</string>
     <string name="chat_new_name">Nom du groupe</string>
     <string name="chat_new_friends">Amis</string>

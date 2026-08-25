@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ಪ್ರದರ್ಶನ ಹೆಸರು</string>
     <string name="forums_auth_verification_failed">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="forums_list_title">ಫೋರಮ್‌ಗಳು</string>
-    <string name="forums_list_close_search">ಹುಡುಕಾಟ ಮುಚ್ಚಿ</string>
-    <string name="forums_list_search">ಹುಡುಕಿ</string>
     <string name="forums_list_find">ಫೋರಮ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="forums_list_logout">ಲಾಗ್ ಔಟ್</string>
-    <string name="forums_list_create">ಫೋರಮ್ ರಚಿಸಿ</string>
     <string name="forums_list_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_list_unsubscribe_title">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_create_title">ಫೋರಮ್ ರಚಿಸಿ</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ಫೋರಮ್ ಸಿಗಲಿಲ್ಲ</string>
     <string name="forums_post_not_found">ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ</string>
 
-    <string name="forums_list_more">ಇನ್ನಷ್ಟು</string>
     <string name="forums_comment_send">ಕಳುಹಿಸಿ</string>
     <string name="forums_post_body_field">ವಿಷಯ</string>
     <string name="forums_post_edit_body_field">ವಿಷಯ</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ…</string>
     <string name="forums_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
-    <string name="forums_list_add_to_home">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
 
     <string name="notification_channel_forums">ಫೋರಂಗಳ ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ MFA ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
     <string name="forums_auth_enter_code_sent">%1$s ಗೆ ಕಳುಹಿಸಿದ ಕೋಡ್ ಅನ್ನು ನಮೂದಿಸಿ</string>
     <string name="forums_auth_create_identity">ನಿಮ್ಮ ಗುರುತನ್ನು ರಚಿಸಿ</string>
-    <string name="forums_list_search_placeholder">ಫೋರಂಗಳನ್ನು ಹುಡುಕಿ</string>
-    <string name="forums_list_no_matching">ಹೊಂದಾಣಿಕೆಯ ಫೋರಂಗಳಿಲ್ಲ</string>
     <string name="forums_list_empty">ಇನ್ನೂ ಫೋರಂಗಳಿಲ್ಲ</string>
     <string name="forums_list_unsubscribe_message">ನೀವು ಈ ಫೋರಂನಿಂದ ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಲು ಖಚಿತವೇ?</string>
     <string name="forums_find_search_placeholder">ಫೋರಂಗಳನ್ನು ಹುಡುಕಿ ಅಥವಾ URL ಅಂಟಿಸಿ</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">ಆಸಕ್ತಿಯನ್ನು ಹೆಚ್ಚಿಸಿ</string>
     <string name="forums_tag_interest_down">ಆಸಕ್ತಿ ಕಡಿಮೆಗೊಳಿಸಿ</string>
     <string name="forums_tag_interest_remove">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಿ</string>
-    <string name="forums_list_default_sort">ಡೀಫಾಲ್ಟ್ ವಿಂಗಡಣೆ</string>
     <string name="forums_access_tab_users">ಬಳಕೆದಾರರು</string>
     <string name="forums_access_tab_groups">ಗುಂಪುಗಳು</string>
     <string name="forums_access_tab_manual">ಮ್ಯಾನುಯಲ್</string>

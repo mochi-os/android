@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Име за прикажување</string>
     <string name="forums_auth_verification_failed">Потврдата не успеа</string>
     <string name="forums_list_title">Форуми</string>
-    <string name="forums_list_close_search">Затвори пребарување</string>
-    <string name="forums_list_search">Барај</string>
     <string name="forums_list_find">Најди форуми</string>
     <string name="forums_list_logout">Одјави се</string>
-    <string name="forums_list_create">Создај форум</string>
     <string name="forums_list_unsubscribe">Откажи претплата</string>
     <string name="forums_list_unsubscribe_title">Откажи претплата</string>
     <string name="forums_create_title">Создај форум</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форумот не е најден</string>
     <string name="forums_post_not_found">Објавата не е пронајдена</string>
 
-    <string name="forums_list_more">Повеќе</string>
     <string name="forums_comment_send">Испрати</string>
     <string name="forums_post_body_field">Содржина</string>
     <string name="forums_post_edit_body_field">Содржина</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Додај ознака</string>
     <string name="forums_write_comment">Напишете коментар…</string>
     <string name="forums_auth_login_failed">Најавата не успеа</string>
-    <string name="forums_list_add_to_home">Додај на почетен екран</string>
 
     <string name="notification_channel_forums">Известувања од форуми</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA сè уште не е поддржано во мобилната апликација</string>
     <string name="forums_auth_enter_code_sent">Внесете го кодот испратен до %1$s</string>
     <string name="forums_auth_create_identity">Создајте свој идентитет</string>
-    <string name="forums_list_search_placeholder">Пребарај форуми</string>
-    <string name="forums_list_no_matching">Нема соодветни форуми</string>
     <string name="forums_list_empty">Сè уште нема форуми</string>
     <string name="forums_list_unsubscribe_message">Дали сте сигурни дека сакате да се отпишете од овој форум?</string>
     <string name="forums_find_search_placeholder">Пребарај форуми или залепи URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Поттикни интерес</string>
     <string name="forums_tag_interest_down">Намали интерес</string>
     <string name="forums_tag_interest_remove">Отстрани интерес</string>
-    <string name="forums_list_default_sort">Стандардно подредување</string>
     <string name="forums_access_tab_users">Корисници</string>
     <string name="forums_access_tab_groups">Групи</string>
     <string name="forums_access_tab_manual">Рачно</string>

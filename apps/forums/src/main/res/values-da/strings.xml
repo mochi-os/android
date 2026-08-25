@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Visningsnavn</string>
     <string name="forums_auth_verification_failed">Verifikation mislykkedes</string>
     <string name="forums_list_title">Fora</string>
-    <string name="forums_list_close_search">Luk søgning</string>
-    <string name="forums_list_search">Søg</string>
     <string name="forums_list_find">Find fora</string>
     <string name="forums_list_logout">Log ud</string>
-    <string name="forums_list_create">Opret forum</string>
     <string name="forums_list_unsubscribe">Afmeld</string>
     <string name="forums_list_unsubscribe_title">Afmeld</string>
     <string name="forums_create_title">Opret forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum ikke fundet</string>
     <string name="forums_post_not_found">Indlæg ikke fundet</string>
 
-    <string name="forums_list_more">Mere</string>
     <string name="forums_comment_send">Send</string>
 
     <string name="notification_channel_forums">Forum-notifikationer</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA understøttes endnu ikke i mobilappen</string>
     <string name="forums_auth_enter_code_sent">Indtast koden sendt til %1$s</string>
     <string name="forums_auth_create_identity">Opret din identitet</string>
-    <string name="forums_list_search_placeholder">Søg i fora</string>
-    <string name="forums_list_no_matching">Ingen matchende fora</string>
     <string name="forums_list_empty">Ingen fora endnu</string>
-    <string name="forums_list_add_to_home">Føj til startskærm</string>
     <string name="forums_list_unsubscribe_message">Er du sikker på, at du vil afmelde dig dette forum?</string>
     <string name="forums_find_search_placeholder">Søg i fora eller indsæt URL</string>
     <string name="forums_find_search_hint">Søg efter fora at abonnere på</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Fremhæv interesse</string>
     <string name="forums_tag_interest_down">Reducér interesse</string>
     <string name="forums_tag_interest_remove">Fjern interesse</string>
-    <string name="forums_list_default_sort">Standardsortering</string>
     <string name="forums_access_tab_users">Brugere</string>
     <string name="forums_access_tab_groups">Grupper</string>
     <string name="forums_access_tab_manual">Manuel</string>

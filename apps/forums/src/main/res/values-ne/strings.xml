@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">प्रदर्शन नाम</string>
     <string name="forums_auth_verification_failed">प्रमाणीकरण असफल भयो</string>
     <string name="forums_list_title">फोरमहरू</string>
-    <string name="forums_list_close_search">खोजी बन्द गर्नुहोस्</string>
-    <string name="forums_list_search">खोज्नुहोस्</string>
     <string name="forums_list_find">फोरमहरू खोज्नुहोस्</string>
     <string name="forums_list_logout">लग आउट</string>
-    <string name="forums_list_create">फोरम सिर्जना गर्नुहोस्</string>
     <string name="forums_list_unsubscribe">सदस्यता हटाउनुहोस्</string>
     <string name="forums_list_unsubscribe_title">सदस्यता हटाउनुहोस्</string>
     <string name="forums_create_title">फोरम सिर्जना गर्नुहोस्</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">फोरम फेला परेन</string>
     <string name="forums_post_not_found">पोस्ट भेटिएन</string>
 
-    <string name="forums_list_more">थप</string>
     <string name="forums_comment_send">पठाउनुहोस्</string>
     <string name="forums_post_body_field">मुख्य भाग</string>
     <string name="forums_post_edit_body_field">मुख्य भाग</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">टिप्पणी लेख्नुहोस्…</string>
     <string name="forums_auth_login_failed">लग इन असफल</string>
-    <string name="forums_list_add_to_home">गृह स्क्रिनमा थप्नुहोस्</string>
 
     <string name="notification_channel_forums">फोरम सूचनाहरू</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">मोबाइल एपमा MFA अझै समर्थित छैन</string>
     <string name="forums_auth_enter_code_sent">%1$s मा पठाइएको कोड प्रविष्ट गर्नुहोस्</string>
     <string name="forums_auth_create_identity">आफ्नो पहिचान सिर्जना गर्नुहोस्</string>
-    <string name="forums_list_search_placeholder">फोरमहरू खोज्नुहोस्</string>
-    <string name="forums_list_no_matching">कुनै मेल खाने फोरम छैन</string>
     <string name="forums_list_empty">अहिलेसम्म कुनै फोरम छैन</string>
     <string name="forums_list_unsubscribe_message">के तपाईं यो फोरमबाट सदस्यता हटाउन निश्चित हुनुहुन्छ?</string>
     <string name="forums_find_search_placeholder">फोरमहरू खोज्नुहोस् वा URL टाँस्नुहोस्</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">रुचि बढाउनुहोस्</string>
     <string name="forums_tag_interest_down">रुचि घटाउनुहोस्</string>
     <string name="forums_tag_interest_remove">रुचि हटाउनुहोस्</string>
-    <string name="forums_list_default_sort">पूर्वनिर्धारित क्रमबद्ध</string>
     <string name="forums_access_tab_users">प्रयोगकर्ताहरू</string>
     <string name="forums_access_tab_groups">समूहहरू</string>
     <string name="forums_access_tab_manual">म्यानुअल</string>

@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nazwa wyświetlana</string>
     <string name="chat_auth_verification_failed">Weryfikacja nie powiodła się</string>
     <string name="chat_list_title">Czaty</string>
-    <string name="chat_list_close_search">Zamknij wyszukiwanie</string>
     <string name="chat_list_search">Szukaj</string>
     <string name="chat_list_logout">Wyloguj się</string>
     <string name="chat_list_new">Nowy czat</string>
-    <string name="chat_list_removed_chat">Usunięto</string>
     <string name="chat_new_title">Nowy czat</string>
     <string name="chat_new_name">Nazwa grupy</string>
     <string name="chat_new_friends">Znajomi</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Ty</string>
     <string name="chat_chat_not_found">Nie znaleziono czatu</string>
 
-    <string name="chat_list_more">Więcej</string>
     <string name="chat_message_send">Wyślij</string>
     <string name="chat_attachment_remove">Usuń załącznik</string>
     <string name="chat_message_remove_attachment">Usuń załącznik</string>
     <string name="chat_auth_login_failed">Logowanie nieudane</string>
     <string name="chat_attachment_move_up">Przenieś w górę</string>
     <string name="chat_attachment_move_down">Przenieś w dół</string>
-    <string name="chat_list_add_to_home">Dodaj do ekranu głównego</string>
 
     <string name="notification_channel_chat">Powiadomienia czatu</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA nie jest jeszcze obsługiwane w aplikacji mobilnej</string>
     <string name="chat_auth_enter_code_sent">Wprowadź kod wysłany na %1$s</string>
     <string name="chat_auth_create_identity">Utwórz swoją tożsamość</string>
-    <string name="chat_list_search_placeholder">Szukaj czatów</string>
-    <string name="chat_list_no_matching">Brak pasujących czatów</string>
     <string name="chat_list_empty">Brak czatów</string>
-    <string name="chat_list_left_chat">Opuszczono</string>
     <string name="chat_new_existing_chat">Otwórz istniejący czat</string>
     <string name="chat_new_start">Rozpocznij czat</string>
     <string name="chat_new_start_group">Rozpocznij czat grupowy</string>

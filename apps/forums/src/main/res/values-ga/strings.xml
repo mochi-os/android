@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Ainm taispeána</string>
     <string name="forums_auth_verification_failed">Theip ar an bhfíorú</string>
     <string name="forums_list_title">Fóraim</string>
-    <string name="forums_list_close_search">Dún cuardach</string>
-    <string name="forums_list_search">Cuardach</string>
     <string name="forums_list_find">Aimsigh fóraim</string>
     <string name="forums_list_logout">Logáil amach</string>
-    <string name="forums_list_create">Cruthaigh fóram</string>
     <string name="forums_list_unsubscribe">Díliostáil</string>
     <string name="forums_list_unsubscribe_title">Díliostáil</string>
     <string name="forums_create_title">Cruthaigh fóram</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Níor aimsíodh an fóram</string>
     <string name="forums_post_not_found">Níor aimsíodh an phostáil</string>
 
-    <string name="forums_list_more">Tuilleadh</string>
     <string name="forums_comment_send">Seol</string>
     <string name="forums_post_body_field">Corp</string>
     <string name="forums_post_edit_body_field">Corp</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
     <string name="forums_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
     <string name="forums_auth_create_identity">Cruthaigh do chéannacht</string>
-    <string name="forums_list_add_to_home">Cuir leis an scáileán baile</string>
     <string name="forums_tag_clear">Glan scagaire</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Scríobh tuairim…</string>
 
     <string name="notification_channel_forums">Fógraí fóram</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Cuardaigh fóraim</string>
-    <string name="forums_list_no_matching">Níl aon fhóram comhoiriúnach</string>
     <string name="forums_list_empty">Níl aon fhóram ann fós</string>
     <string name="forums_list_unsubscribe_message">An bhfuil tú cinnte gur mhaith leat díliostáil ón bhfóram seo?</string>
     <string name="forums_find_search_placeholder">Cuardaigh fóraim nó greamaigh URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Spreag spéis</string>
     <string name="forums_tag_interest_down">Laghdaigh spéis</string>
     <string name="forums_tag_interest_remove">Bain spéis</string>
-    <string name="forums_list_default_sort">Sórtáil réamhshocraithe</string>
     <string name="forums_access_tab_users">Úsáideoirí</string>
     <string name="forums_access_tab_groups">Grúpaí</string>
     <string name="forums_access_tab_manual">Láimhe</string>

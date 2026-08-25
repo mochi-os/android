@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">显示名称</string>
     <string name="forums_auth_verification_failed">验证失败</string>
     <string name="forums_list_title">论坛</string>
-    <string name="forums_list_close_search">关闭搜索</string>
-    <string name="forums_list_search">搜索</string>
     <string name="forums_list_find">查找论坛</string>
     <string name="forums_list_logout">退出登录</string>
-    <string name="forums_list_create">创建论坛</string>
     <string name="forums_list_unsubscribe">取消订阅</string>
     <string name="forums_list_unsubscribe_title">取消订阅</string>
     <string name="forums_create_title">创建论坛</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">论坛未找到</string>
     <string name="forums_post_not_found">帖子未找到</string>
 
-    <string name="forums_list_more">更多</string>
     <string name="forums_comment_send">发送</string>
     <string name="forums_post_body_field">正文</string>
     <string name="forums_post_edit_body_field">正文</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">添加标签</string>
     <string name="forums_write_comment">写评论…</string>
     <string name="forums_auth_login_failed">登录失败</string>
-    <string name="forums_list_add_to_home">添加到主屏幕</string>
 
     <string name="notification_channel_forums">论坛通知</string>
     <string name="forums_auth_brand">Mochi 论坛</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">移动应用暂不支持多重身份验证</string>
     <string name="forums_auth_enter_code_sent">请输入发送至 %1$s 的验证码</string>
     <string name="forums_auth_create_identity">创建您的身份</string>
-    <string name="forums_list_search_placeholder">搜索论坛</string>
-    <string name="forums_list_no_matching">没有匹配的论坛</string>
     <string name="forums_list_empty">暂无论坛</string>
     <string name="forums_list_unsubscribe_message">确定要取消订阅此论坛吗?</string>
     <string name="forums_find_search_placeholder">搜索论坛或粘贴网址</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">提升兴趣</string>
     <string name="forums_tag_interest_down">降低兴趣</string>
     <string name="forums_tag_interest_remove">移除兴趣</string>
-    <string name="forums_list_default_sort">默认排序</string>
     <string name="forums_access_tab_users">用户</string>
     <string name="forums_access_tab_groups">群组</string>
     <string name="forums_access_tab_manual">手动</string>

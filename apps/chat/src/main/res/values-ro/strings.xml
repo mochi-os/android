@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nume afișat</string>
     <string name="chat_auth_verification_failed">Verificarea a eșuat</string>
     <string name="chat_list_title">Chaturi</string>
-    <string name="chat_list_close_search">Închide căutarea</string>
     <string name="chat_list_search">Caută</string>
     <string name="chat_list_logout">Deconectează-te</string>
     <string name="chat_list_new">Conversație nouă</string>
-    <string name="chat_list_removed_chat">Eliminat</string>
     <string name="chat_new_title">Conversație nouă</string>
     <string name="chat_new_name">Numele grupului</string>
     <string name="chat_new_friends">Prieteni</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Tu</string>
     <string name="chat_chat_not_found">Chatul nu a fost găsit</string>
 
-    <string name="chat_list_more">Mai mult</string>
     <string name="chat_message_send">Trimite</string>
     <string name="chat_attachment_remove">Elimină atașamentul</string>
     <string name="chat_message_remove_attachment">Elimină atașamentul</string>
     <string name="chat_auth_login_failed">Autentificare eșuată</string>
     <string name="chat_attachment_move_up">Mutați sus</string>
     <string name="chat_attachment_move_down">Mutați jos</string>
-    <string name="chat_list_add_to_home">Adaugă pe ecranul de pornire</string>
 
     <string name="notification_channel_chat">Notificări chat</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA nu este încă acceptat în aplicația mobilă</string>
     <string name="chat_auth_enter_code_sent">Introduceți codul trimis la %1$s</string>
     <string name="chat_auth_create_identity">Creați-vă identitatea</string>
-    <string name="chat_list_search_placeholder">Căutați chaturi</string>
-    <string name="chat_list_no_matching">Niciun chat corespunzător</string>
     <string name="chat_list_empty">Încă niciun chat</string>
-    <string name="chat_list_left_chat">Părăsit</string>
     <string name="chat_new_existing_chat">Deschideți chatul existent</string>
     <string name="chat_new_start">Începeți chatul</string>
     <string name="chat_new_start_group">Începeți chat de grup</string>

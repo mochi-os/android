@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Isem li jidher</string>
     <string name="forums_auth_verification_failed">Verifika falliet</string>
     <string name="forums_list_title">Forums</string>
-    <string name="forums_list_close_search">Agħlaq it-tiftix</string>
-    <string name="forums_list_search">Fittex</string>
     <string name="forums_list_find">Sib forums</string>
     <string name="forums_list_logout">Oħroġ</string>
-    <string name="forums_list_create">Oħloq forum</string>
     <string name="forums_list_unsubscribe">Iddiżabbona</string>
     <string name="forums_list_unsubscribe_title">Iddiżabbona</string>
     <string name="forums_create_title">Oħloq forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Il-forum ma nstabx</string>
     <string name="forums_post_not_found">Post mhux misjub</string>
 
-    <string name="forums_list_more">Aktar</string>
     <string name="forums_comment_send">Ibgħat</string>
     <string name="forums_post_body_field">Korp</string>
     <string name="forums_post_edit_body_field">Korp</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Ikteb kumment…</string>
     <string name="forums_auth_login_failed">Il-login falla</string>
-    <string name="forums_list_add_to_home">Żid mal-iskrin tad-dar</string>
 
     <string name="notification_channel_forums">Notifiki tal-forums</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">L-MFA għadu mhux appoġġjat fl-app mobbli</string>
     <string name="forums_auth_enter_code_sent">Daħħal il-kodiċi mibgħut lil %1$s</string>
     <string name="forums_auth_create_identity">Oħloq l-identità tiegħek</string>
-    <string name="forums_list_search_placeholder">Fittex il-forums</string>
-    <string name="forums_list_no_matching">L-ebda forum jaqbel</string>
     <string name="forums_list_empty">L-ebda forum s\'issa</string>
     <string name="forums_list_unsubscribe_message">Żgur li trid tneħħi l-abbonament minn dan il-forum?</string>
     <string name="forums_find_search_placeholder">Fittex il-forums jew waħħal URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Saħħaħ l-interess</string>
     <string name="forums_tag_interest_down">Naqqas l-interess</string>
     <string name="forums_tag_interest_remove">Neħħi interess</string>
-    <string name="forums_list_default_sort">Ssortjar default</string>
     <string name="forums_access_tab_users">Utenti</string>
     <string name="forums_access_tab_groups">Gruppi</string>
     <string name="forums_access_tab_manual">Manwali</string>

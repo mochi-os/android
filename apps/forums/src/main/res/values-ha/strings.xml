@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Sunan nunawa</string>
     <string name="forums_auth_verification_failed">Tabbatarwa ya gaza</string>
     <string name="forums_list_title">Forums</string>
-    <string name="forums_list_close_search">Rufe bincike</string>
-    <string name="forums_list_search">Bincika</string>
     <string name="forums_list_find">Nemo forums</string>
     <string name="forums_list_logout">Fita</string>
-    <string name="forums_list_create">Ƙirƙira forum</string>
     <string name="forums_list_unsubscribe">Cire subscribe</string>
     <string name="forums_list_unsubscribe_title">Cire subscribe</string>
     <string name="forums_create_title">Ƙirƙira forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Ba a samu forum ba</string>
     <string name="forums_post_not_found">Ba a sami post ba</string>
 
-    <string name="forums_list_more">Ƙari</string>
     <string name="forums_comment_send">Aika</string>
     <string name="forums_post_body_field">Jiki</string>
     <string name="forums_post_edit_body_field">Jiki</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">Ba a goyi bayan MFA tukuna a aikace-aikacen wayar hannu ba</string>
     <string name="forums_auth_enter_code_sent">Shigar da lambar da aka aiko zuwa %1$s</string>
     <string name="forums_auth_create_identity">Ƙirƙiri shaidarka</string>
-    <string name="forums_list_add_to_home">Ƙara a allon gida</string>
     <string name="forums_tag_clear">Share matatar</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Rubuta sharhi…</string>
 
     <string name="notification_channel_forums">Sanarwar tarukan tattaunawa</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Bincika tarukan tattaunawa</string>
-    <string name="forums_list_no_matching">Babu tarukan tattaunawa masu daidaita</string>
     <string name="forums_list_empty">Babu tarukan tattaunawa har yanzu</string>
     <string name="forums_list_unsubscribe_message">Kana da tabbacin kana son cire biyan kuɗi daga wannan taron tattaunawa?</string>
     <string name="forums_find_search_placeholder">Bincika tarukan tattaunawa ko liƙa URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Ƙara sha\'awa</string>
     <string name="forums_tag_interest_down">Rage sha\'awa</string>
     <string name="forums_tag_interest_remove">Cire sha\'awa</string>
-    <string name="forums_list_default_sort">Default sort</string>
     <string name="forums_access_tab_users">Masu amfani</string>
     <string name="forums_access_tab_groups">Groups</string>
     <string name="forums_access_tab_manual">Hannu</string>

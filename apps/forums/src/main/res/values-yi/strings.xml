@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ווײַז נאָמען</string>
     <string name="forums_auth_verification_failed">פֿאַריפֿיקאַציע דורכגעפֿאַלן</string>
     <string name="forums_list_title">פֿאָרומס</string>
-    <string name="forums_list_close_search">פֿאַרמאַכן זוכן</string>
-    <string name="forums_list_search">זוך</string>
     <string name="forums_list_find">געפֿינען פֿאָרומס</string>
     <string name="forums_list_logout">אַרויסקומען</string>
-    <string name="forums_list_create">באַשאַפֿן פֿאָרום</string>
     <string name="forums_list_unsubscribe">אַבאַבאָנירן</string>
     <string name="forums_list_unsubscribe_title">אַבאַבאָנירן</string>
     <string name="forums_create_title">באַשאַפֿן פֿאָרום</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">פֿאָרום ניט געפֿונען</string>
     <string name="forums_post_not_found">פּאָסט ניט געפֿונען</string>
 
-    <string name="forums_list_more">מער</string>
     <string name="forums_comment_send">שיקן</string>
     <string name="forums_post_body_field">גוף</string>
     <string name="forums_post_edit_body_field">גוף</string>
@@ -132,7 +128,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">שרײַבט אַ קאָמענטאַר…</string>
     <string name="forums_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
-    <string name="forums_list_add_to_home">לייגן צו היים עקראַן</string>
 
     <string name="notification_channel_forums">פֿאָרומס־מעלדונגען</string>
     <string name="forums_auth_brand">Mochi פֿאָרומס</string>
@@ -140,8 +135,6 @@
     <string name="forums_auth_mfa_unsupported">MFA איז נאָך נישט געשטיצט אין דער מאָבילער אַפּ</string>
     <string name="forums_auth_enter_code_sent">אַרײַנגעבן דעם קאָד וואָס איז געשיקט געוואָרן צו %1$s</string>
     <string name="forums_auth_create_identity">שאַפֿט אײַער אידענטיטעט</string>
-    <string name="forums_list_search_placeholder">זוכן פֿאָרומס</string>
-    <string name="forums_list_no_matching">קײן צופּאַסיקע פֿאָרומס</string>
     <string name="forums_list_empty">נאָך קײן פֿאָרומס</string>
     <string name="forums_list_unsubscribe_message">זײַט איר זיכער אַז איר ווילט זיך אָפּמעלדן פֿון דעם פֿאָרום?</string>
     <string name="forums_find_search_placeholder">זוכן פֿאָרומס אָדער אַרײַנקלעפּן URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">פֿאַרשטאַרקן אינטערעס</string>
     <string name="forums_tag_interest_down">פֿאַרמינער אינטערעס</string>
     <string name="forums_tag_interest_remove">אַראָפּנעמען אינטערעס</string>
-    <string name="forums_list_default_sort">פֿאַרשטאַנדלעך סאָרט</string>
     <string name="forums_access_tab_users">באַניצערס</string>
     <string name="forums_access_tab_groups">גרופּעס</string>
     <string name="forums_access_tab_manual">מאַנואַל</string>

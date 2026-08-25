@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Megjelenítendő név</string>
     <string name="chat_auth_verification_failed">Az ellenőrzés sikertelen</string>
     <string name="chat_list_title">Chatek</string>
-    <string name="chat_list_close_search">Keresés bezárása</string>
     <string name="chat_list_search">Keresés</string>
     <string name="chat_list_logout">Kijelentkezés</string>
     <string name="chat_list_new">Új csevegés</string>
-    <string name="chat_list_removed_chat">Eltávolítva</string>
     <string name="chat_new_title">Új csevegés</string>
     <string name="chat_new_name">Csoport neve</string>
     <string name="chat_new_friends">Barátok</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Ön</string>
     <string name="chat_chat_not_found">A chat nem található</string>
 
-    <string name="chat_list_more">Több</string>
     <string name="chat_message_send">Küldés</string>
 
     <string name="notification_channel_chat">Csevegési értesítések</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">Az MFA még nem támogatott a mobilalkalmazásban</string>
     <string name="chat_auth_enter_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
     <string name="chat_auth_create_identity">Hozza létre identitását</string>
-    <string name="chat_list_search_placeholder">Csevegések keresése</string>
-    <string name="chat_list_no_matching">Nincs találat a csevegések között</string>
     <string name="chat_list_empty">Még nincsenek csevegések</string>
-    <string name="chat_list_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
-    <string name="chat_list_left_chat">Elhagyva</string>
     <string name="chat_new_existing_chat">Meglévő csevegés megnyitása</string>
     <string name="chat_new_start">Csevegés indítása</string>
     <string name="chat_new_start_group">Csoportos csevegés indítása</string>

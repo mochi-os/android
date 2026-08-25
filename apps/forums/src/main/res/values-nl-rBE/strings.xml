@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Weergavenaam</string>
     <string name="forums_auth_verification_failed">Verificatie mislukt</string>
     <string name="forums_list_title">Forums</string>
-    <string name="forums_list_close_search">Zoekopdracht sluiten</string>
-    <string name="forums_list_search">Zoeken</string>
     <string name="forums_list_find">Forums zoeken</string>
     <string name="forums_list_logout">Uitloggen</string>
-    <string name="forums_list_create">Forum aanmaken</string>
     <string name="forums_list_unsubscribe">Uitschrijven</string>
     <string name="forums_list_unsubscribe_title">Uitschrijven</string>
     <string name="forums_create_title">Forum aanmaken</string>
@@ -124,14 +121,12 @@
     <string name="forums_forum_not_found">Forum niet gevonden</string>
     <string name="forums_post_not_found">Bericht niet gevonden</string>
 
-    <string name="forums_list_more">Meer</string>
     <string name="forums_comment_send">Verzenden</string>
     <string name="forums_post_body_field">Inhoud</string>
     <string name="forums_post_edit_body_field">Inhoud</string>
     <string name="forums_comment_edit_body_field">Inhoud</string>
     <string name="forums_tag_clear">Filter wissen</string>
     <string name="forums_auth_login_failed">Aanmelding mislukt</string>
-    <string name="forums_list_add_to_home">Toevoegen aan startscherm</string>
 
     <string name="notification_channel_forums">Forummeldingen</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -139,8 +134,6 @@
     <string name="forums_auth_mfa_unsupported">MFA wordt nog niet ondersteund in de mobiele app</string>
     <string name="forums_auth_enter_code_sent">Voer de code in die naar %1$s is verzonden</string>
     <string name="forums_auth_create_identity">Maak uw identiteit aan</string>
-    <string name="forums_list_search_placeholder">Forums zoeken</string>
-    <string name="forums_list_no_matching">Geen overeenkomende forums</string>
     <string name="forums_list_empty">Nog geen forums</string>
     <string name="forums_list_unsubscribe_message">Weet u zeker dat u zich wilt uitschrijven van dit forum?</string>
     <string name="forums_find_search_placeholder">Forums zoeken of URL plakken</string>
@@ -192,7 +185,6 @@
     <string name="forums_tag_interest_up">Interesse versterken</string>
     <string name="forums_tag_interest_down">Interesse verminderen</string>
     <string name="forums_tag_interest_remove">Interesse verwijderen</string>
-    <string name="forums_list_default_sort">Standaardsortering</string>
     <string name="forums_access_tab_users">Gebruikers</string>
     <string name="forums_access_tab_groups">Groepen</string>
     <string name="forums_access_tab_manual">Handmatig</string>

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nom visible</string>
     <string name="forums_auth_verification_failed">La verificació ha fallat</string>
     <string name="forums_list_title">Fòrums</string>
-    <string name="forums_list_close_search">Tanca la cerca</string>
-    <string name="forums_list_search">Cerca</string>
     <string name="forums_list_find">Cerca fòrums</string>
     <string name="forums_list_logout">Tanca la sessió</string>
-    <string name="forums_list_create">Crea un fòrum</string>
     <string name="forums_list_unsubscribe">Cancel·la la subscripció</string>
     <string name="forums_list_unsubscribe_title">Cancel·la la subscripció</string>
     <string name="forums_create_title">Crea un fòrum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">No s\'ha trobat el fòrum</string>
     <string name="forums_post_not_found">Publicació no trobada</string>
 
-    <string name="forums_list_more">Més</string>
     <string name="forums_comment_send">Envia</string>
 
     <string name="notification_channel_forums">Notificacions de fòrums</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">L\'MFA encara no és compatible a l\'aplicació mòbil</string>
     <string name="forums_auth_enter_code_sent">Introduïu el codi enviat a %1$s</string>
     <string name="forums_auth_create_identity">Creeu la vostra identitat</string>
-    <string name="forums_list_search_placeholder">Cerca fòrums</string>
-    <string name="forums_list_no_matching">No hi ha cap fòrum coincident</string>
     <string name="forums_list_empty">Encara no hi ha cap fòrum</string>
-    <string name="forums_list_add_to_home">Afegeix a la pantalla d\'inici</string>
     <string name="forums_list_unsubscribe_message">Segur que voleu cancel·lar la subscripció a aquest fòrum?</string>
     <string name="forums_find_search_placeholder">Cerca fòrums o enganxa un URL</string>
     <string name="forums_find_search_hint">Cerca fòrums als quals subscriure\'s</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Augmenta l\'interès</string>
     <string name="forums_tag_interest_down">Redueix l\'interès</string>
     <string name="forums_tag_interest_remove">Elimina l\'interès</string>
-    <string name="forums_list_default_sort">Ordre per defecte</string>
     <string name="forums_access_tab_users">Usuaris</string>
     <string name="forums_access_tab_groups">Grups</string>
     <string name="forums_access_tab_manual">Manual</string>

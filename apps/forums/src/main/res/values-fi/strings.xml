@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Näyttönimi</string>
     <string name="forums_auth_verification_failed">Vahvistus epäonnistui</string>
     <string name="forums_list_title">Foorumit</string>
-    <string name="forums_list_close_search">Sulje haku</string>
-    <string name="forums_list_search">Haku</string>
     <string name="forums_list_find">Etsi foorumeita</string>
     <string name="forums_list_logout">Kirjaudu ulos</string>
-    <string name="forums_list_create">Luo foorumi</string>
     <string name="forums_list_unsubscribe">Peru tilaus</string>
     <string name="forums_list_unsubscribe_title">Peru tilaus</string>
     <string name="forums_create_title">Luo foorumi</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foorumia ei löytynyt</string>
     <string name="forums_post_not_found">Julkaisua ei löytynyt</string>
 
-    <string name="forums_list_more">Lisää</string>
     <string name="forums_comment_send">Lähetä</string>
 
     <string name="notification_channel_forums">Foorumi-ilmoitukset</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA:ta ei vielä tueta mobiilisovelluksessa</string>
     <string name="forums_auth_enter_code_sent">Syötä osoitteeseen %1$s lähetetty koodi</string>
     <string name="forums_auth_create_identity">Luo identiteettisi</string>
-    <string name="forums_list_search_placeholder">Etsi foorumeita</string>
-    <string name="forums_list_no_matching">Ei vastaavia foorumeita</string>
     <string name="forums_list_empty">Ei vielä foorumeita</string>
-    <string name="forums_list_add_to_home">Lisää aloitusnäytölle</string>
     <string name="forums_list_unsubscribe_message">Haluatko varmasti perua tilauksen tästä foorumista?</string>
     <string name="forums_find_search_placeholder">Etsi foorumeita tai liitä URL</string>
     <string name="forums_find_search_hint">Etsi tilattavia foorumeita</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Korosta kiinnostusta</string>
     <string name="forums_tag_interest_down">Vähennä kiinnostusta</string>
     <string name="forums_tag_interest_remove">Poista kiinnostus</string>
-    <string name="forums_list_default_sort">Oletuslajittelu</string>
     <string name="forums_access_tab_users">Käyttäjät</string>
     <string name="forums_access_tab_groups">Ryhmät</string>
     <string name="forums_access_tab_manual">Manuaalinen</string>

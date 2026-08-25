@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Görünen ad</string>
     <string name="chat_auth_verification_failed">Doğrulama başarısız</string>
     <string name="chat_list_title">Sohbetler</string>
-    <string name="chat_list_close_search">Aramayı kapat</string>
     <string name="chat_list_search">Ara</string>
     <string name="chat_list_logout">Oturumu kapat</string>
     <string name="chat_list_new">Yeni sohbet</string>
-    <string name="chat_list_removed_chat">Kaldırıldı</string>
     <string name="chat_new_title">Yeni sohbet</string>
     <string name="chat_new_name">Grup adı</string>
     <string name="chat_new_friends">Arkadaşlar</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Sen</string>
     <string name="chat_chat_not_found">Sohbet bulunamadı</string>
 
-    <string name="chat_list_more">Daha fazla</string>
     <string name="chat_message_send">Gönder</string>
     <string name="chat_attachment_remove">Eki kaldır</string>
     <string name="chat_message_remove_attachment">Eki kaldır</string>
     <string name="chat_auth_login_failed">Giriş başarısız</string>
     <string name="chat_attachment_move_up">Yukarı taşı</string>
     <string name="chat_attachment_move_down">Aşağı taşı</string>
-    <string name="chat_list_add_to_home">Ana ekrana ekle</string>
 
     <string name="notification_channel_chat">Sohbet bildirimleri</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA mobil uygulamada henüz desteklenmiyor</string>
     <string name="chat_auth_enter_code_sent">%1$s adresine gönderilen kodu girin</string>
     <string name="chat_auth_create_identity">Kimliğinizi oluşturun</string>
-    <string name="chat_list_search_placeholder">Sohbetlerde ara</string>
-    <string name="chat_list_no_matching">Eşleşen sohbet yok</string>
     <string name="chat_list_empty">Henüz sohbet yok</string>
-    <string name="chat_list_left_chat">Ayrıldı</string>
     <string name="chat_new_existing_chat">Mevcut sohbeti aç</string>
     <string name="chat_new_start">Sohbet başlat</string>
     <string name="chat_new_start_group">Grup sohbeti başlat</string>

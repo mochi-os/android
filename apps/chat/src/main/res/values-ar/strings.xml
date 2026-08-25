@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">الاسم المعروض</string>
     <string name="chat_auth_verification_failed">فشل التحقق</string>
     <string name="chat_list_title">الدردشات</string>
-    <string name="chat_list_close_search">إغلاق البحث</string>
     <string name="chat_list_search">بحث</string>
     <string name="chat_list_logout">تسجيل الخروج</string>
     <string name="chat_list_new">محادثة جديدة</string>
-    <string name="chat_list_removed_chat">تمت الإزالة</string>
     <string name="chat_new_title">محادثة جديدة</string>
     <string name="chat_new_name">اسم المجموعة</string>
     <string name="chat_new_friends">الأصدقاء</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">أنت</string>
     <string name="chat_chat_not_found">الدردشة غير موجودة</string>
 
-    <string name="chat_list_more">المزيد</string>
     <string name="chat_message_send">إرسال</string>
 
     <string name="notification_channel_chat">إشعارات الدردشة</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">المصادقة متعددة العوامل غير مدعومة بعد في تطبيق الجوال</string>
     <string name="chat_auth_enter_code_sent">أدخل الرمز المرسل إلى %1$s</string>
     <string name="chat_auth_create_identity">أنشئ هويتك</string>
-    <string name="chat_list_search_placeholder">البحث في الدردشات</string>
-    <string name="chat_list_no_matching">لا توجد دردشات مطابقة</string>
     <string name="chat_list_empty">لا توجد دردشات بعد</string>
-    <string name="chat_list_add_to_home">إضافة إلى الشاشة الرئيسية</string>
-    <string name="chat_list_left_chat">غادرت</string>
     <string name="chat_new_existing_chat">فتح دردشة موجودة</string>
     <string name="chat_new_start">بدء دردشة</string>
     <string name="chat_new_start_group">بدء دردشة جماعية</string>
