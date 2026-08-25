@@ -110,6 +110,12 @@ class WikisRepository @Inject constructor(
     suspend fun createWiki(name: String, privacy: String): CreateWikiResult {
         return try {
             val r = api.createWiki(name, privacy).unwrap()
+            // Same refresh the join path does, for the same reason: the create
+            // response carries no page count or timestamp to append a list
+            // entry from, so the sidebar and list screen would not show the new
+            // wiki until something else reloaded them. A failure here costs the
+            // caller nothing - the wiki itself already exists.
+            runCatching { getClassInfo() }
             CreateWikiResult(
                 id = r.id,
                 fingerprint = r.fingerprint,
