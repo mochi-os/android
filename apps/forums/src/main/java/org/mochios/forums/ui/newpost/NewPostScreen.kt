@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ClosedCaption
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -60,6 +61,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MarkdownPreviewSheet
 import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MentionTextField
@@ -89,6 +92,7 @@ fun NewPostScreen(
     val existingCaptions by viewModel.existingCaptions.collectAsState()
     val title by viewModel.title.collectAsState()
     val body by viewModel.body.collectAsState()
+    var showPreview by remember { mutableStateOf(false) }
     // The toolbar marks up a selection, so the cursor has to live here rather
     // than inside the field.
     var bodyField by remember { mutableStateOf(TextFieldValue(body)) }
@@ -212,6 +216,16 @@ fun NewPostScreen(
                 // Reaching for a file belongs with the body it attaches to,
                 // not adrift below the form.
                 MarkdownToolbarSeparator()
+                MochiIconButton(
+                    onClick = { showPreview = true },
+                    enabled = body.isNotBlank(),
+                ) {
+                    Icon(
+                        Icons.Filled.Visibility,
+                        contentDescription = stringResource(MochiR.string.common_preview),
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
                 MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
                     Icon(
                         Icons.Default.AttachFile,
@@ -279,6 +293,14 @@ fun NewPostScreen(
             },
             onDismiss = { captioning = null }
         )
+    }
+
+    if (showPreview) {
+        // HtmlContent is Markwon underneath, so the same markdown the server
+        // will render can be drawn here without asking it first.
+        MarkdownPreviewSheet(onDismiss = { showPreview = false }) {
+            HtmlContent(html = body)
+        }
     }
 }
 

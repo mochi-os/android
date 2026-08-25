@@ -346,4 +346,5 @@
     <string name="format_heading">Heading</string>
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
 </resources>

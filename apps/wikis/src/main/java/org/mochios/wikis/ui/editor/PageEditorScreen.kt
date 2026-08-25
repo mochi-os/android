@@ -63,6 +63,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MarkdownPreviewSheet
 import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MochiIconButton
@@ -193,18 +194,8 @@ fun PageEditorScreen(
                     // stays one tap away and the icon says which mode is on.
                     MochiIconButton(onClick = { viewModel.togglePreview() }) {
                         Icon(
-                            imageVector = if (state.showPreview) {
-                                Icons.Filled.Edit
-                            } else {
-                                Icons.Filled.Visibility
-                            },
-                            contentDescription = stringResource(
-                                if (state.showPreview) {
-                                    R.string.wikis_editor_edit
-                                } else {
-                                    R.string.wikis_editor_preview
-                                }
-                            ),
+                            Icons.Filled.Visibility,
+                            contentDescription = stringResource(R.string.wikis_editor_preview),
                         )
                     }
                     if (canDeletePage) {
@@ -319,17 +310,6 @@ fun PageEditorScreen(
                             Text(stringResource(org.mochios.android.R.string.common_retry))
                         }
                     }
-                    state.showPreview -> {
-                        Text(
-                            text = state.title.ifEmpty {
-                                stringResource(R.string.wikis_editor_preview_untitled)
-                            },
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.SemiBold,
-                        )
-                        Spacer(Modifier.height(12.dp))
-                        MarkdownContent(content = state.content)
-                    }
                     else -> {
                         EditFields(
                             isNew = viewModel.isNew,
@@ -356,6 +336,27 @@ fun PageEditorScreen(
                     }
                 }
             }
+        }
+    }
+
+    if (state.showPreview) {
+        // The sheet is composed outside the Scaffold body, so it needs the wiki
+        // context handed to it directly - MarkdownContent resolves attachment
+        // URLs against it and raises without one.
+        CompositionLocalProvider(LocalWikiContext provides wikiCtx) {
+        MarkdownPreviewSheet(onDismiss = { viewModel.togglePreview() }) {
+            Text(
+                text = state.title.ifEmpty {
+                    stringResource(R.string.wikis_editor_preview_untitled)
+                },
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.SemiBold,
+            )
+            Spacer(Modifier.height(12.dp))
+            // The wiki's own renderer: it resolves attachment URLs against the
+            // context this screen provides.
+            MarkdownContent(content = state.content)
+        }
         }
     }
 
