@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Senaste ändringar</string>
     <string name="wikis_changes_subtitle">Senaste redigeringar på alla sidor i denna wiki.</string>
     <string name="wikis_changes_empty">Inga ändringar ännu</string>
-    <string name="wikis_search_title">Sök</string>
     <string name="wikis_search_empty_query">Ange en sökterm</string>
     <string name="wikis_redirects_title">Omdirigeringar</string>
     <string name="wikis_redirects_add">Lägg till</string>

@@ -31,7 +31,6 @@
     <string name="wikis_settings_title">設定</string>
     <string name="wikis_settings_tab_settings">設定</string>
     <string name="wikis_page_action_search">搜尋</string>
-    <string name="wikis_search_title">搜尋</string>
     <string name="wikis_comment_form_send">傳送</string>
     <string name="wikis_replicas_remove_confirm_action">移除</string>
     <string name="wikis_open_sidebar">開啟側欄</string>

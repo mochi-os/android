@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Son değişiklikler</string>
     <string name="wikis_changes_subtitle">Bu wiki\'deki tüm sayfalarda son düzenlemeler.</string>
     <string name="wikis_changes_empty">Henüz değişiklik yok</string>
-    <string name="wikis_search_title">Ara</string>
     <string name="wikis_search_empty_query">Bir arama terimi girin</string>
     <string name="wikis_redirects_title">Yönlendirmeler</string>
     <string name="wikis_redirects_add">Ekle</string>

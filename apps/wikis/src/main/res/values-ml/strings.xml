@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">ഈ വിക്കിയിലെ എല്ലാ പേജുകളിലുമുള്ള സമീപകാല എഡിറ്റുകൾ.</string>
     <string name="wikis_changes_subtitle">സമീപകാല ലിസ്റ്റിങ്ങുകൾ</string>
     <string name="wikis_changes_empty">മാറ്റങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
-    <string name="wikis_search_title">തിരയുക</string>
     <string name="wikis_search_empty_query">ഒരു തിരയൽ പദം നൽകുക</string>
     <string name="wikis_redirects_title">താൽപര്യം കുറയ്ക്കുക</string>
     <string name="wikis_redirects_add">ചേർക്കുക</string>

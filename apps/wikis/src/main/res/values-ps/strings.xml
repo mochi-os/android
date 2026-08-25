@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">وروستي بدلونونه</string>
     <string name="wikis_changes_subtitle">په دې wiki کې د ټولو پاڼو په اوږدو کې وروستي ترمیمونه.</string>
     <string name="wikis_changes_empty">تر اوسه هیڅ بدلونونه نشته</string>
-    <string name="wikis_search_title">لټون</string>
     <string name="wikis_search_empty_query">د لټون اصطلاح دننه کړئ</string>
     <string name="wikis_redirects_title">بیرته لارښوونې</string>
     <string name="wikis_redirects_add">اضافه کړئ</string>

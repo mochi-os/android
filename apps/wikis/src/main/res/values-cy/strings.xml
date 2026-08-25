@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Newidiadau diweddar</string>
     <string name="wikis_changes_subtitle">Golygiadau diweddar ar draws yr holl dudalennau yn y wici hwn.</string>
     <string name="wikis_changes_empty">Dim newidiadau eto</string>
-    <string name="wikis_search_title">Chwilio</string>
     <string name="wikis_search_empty_query">Rhowch derm chwilio</string>
     <string name="wikis_redirects_title">Ailgyfeiriadau</string>
     <string name="wikis_redirects_add">Ychwanegu</string>

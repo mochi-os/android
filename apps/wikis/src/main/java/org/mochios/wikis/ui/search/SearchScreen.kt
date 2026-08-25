@@ -21,16 +21,18 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FileCopy
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -41,6 +43,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -57,7 +60,6 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.SearchResult
 import org.mochios.wikis.navigation.WikisApp
@@ -80,7 +82,6 @@ fun SearchScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.wikis_search_title)) },
                 navigationIcon = {
                     MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
@@ -88,6 +89,50 @@ fun SearchScreen(
                             contentDescription = stringResource(MochiR.string.common_back),
                         )
                     }
+                },
+                // The query lives in the bar itself, the way a project's search
+                // does, rather than under a title row that only repeats it.
+                title = {
+                    TextField(
+                        value = state.query,
+                        onValueChange = viewModel::updateQuery,
+                        placeholder = {
+                            Text(stringResource(R.string.wikis_search_pages_placeholder))
+                        },
+                        singleLine = true,
+                        leadingIcon = {
+                            Icon(Icons.Default.Search, contentDescription = null)
+                        },
+                        trailingIcon = {
+                            if (state.query.isNotEmpty()) {
+                                MochiIconButton(onClick = { viewModel.updateQuery("") }) {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(
+                                            MochiR.string.common_close
+                                        ),
+                                    )
+                                }
+                            }
+                        },
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                        keyboardActions = KeyboardActions(
+                            onSearch = { focusManager.clearFocus() },
+                        ),
+                        // The bar is already a surface; a field drawing its own
+                        // container and indicator on top of it reads as a box
+                        // inside a box.
+                        colors = TextFieldDefaults.colors(
+                            focusedContainerColor = Color.Transparent,
+                            unfocusedContainerColor = Color.Transparent,
+                            disabledContainerColor = Color.Transparent,
+                            focusedIndicatorColor = Color.Transparent,
+                            unfocusedIndicatorColor = Color.Transparent,
+                        ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .focusRequester(focusRequester),
+                    )
                 },
             )
         },
@@ -97,29 +142,6 @@ fun SearchScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
-            // Search field
-            MochiTextField(
-                value = state.query,
-                onValueChange = viewModel::updateQuery,
-                placeholder = { Text(stringResource(R.string.wikis_search_pages_placeholder)) },
-                leadingIcon = {
-                    Icon(
-                        Icons.Default.Search,
-                        contentDescription = null,
-                    )
-                },
-                singleLine = true,
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() }),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
-                    .focusRequester(focusRequester),
-            )
-
-            HorizontalDivider()
-
-            // Body
             Box(modifier = Modifier.fillMaxSize()) {
                 when {
                     state.debouncedQuery.isBlank() -> {

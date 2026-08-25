@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">ការផ្លាស់ប្តូរថ្មីៗ</string>
     <string name="wikis_changes_subtitle">ការកែប្រែថ្មីៗកាត់ឆ្លងគ្រប់ទំព័រនៅក្នុង wiki នេះ។</string>
     <string name="wikis_changes_empty">មិនទាន់មានការផ្លាស់ប្តូរ</string>
-    <string name="wikis_search_title">ស្វែងរក</string>
     <string name="wikis_search_empty_query">បញ្ចូលពាក្យស្វែងរក</string>
     <string name="wikis_redirects_title">Redirects</string>
     <string name="wikis_redirects_add">បន្ថែម</string>

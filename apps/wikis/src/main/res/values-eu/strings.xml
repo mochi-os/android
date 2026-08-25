@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">Azken aldaketak</string>
     <string name="wikis_changes_subtitle">Wiki honetako orri guztietako azken edizioak.</string>
     <string name="wikis_changes_empty">Oraindik aldaketarik ez</string>
-    <string name="wikis_search_title">Bilatu</string>
     <string name="wikis_search_empty_query">Sartu bilaketa-termino bat</string>
     <string name="wikis_redirects_title">Birbideratzeak</string>
     <string name="wikis_redirects_add">Gehitu</string>

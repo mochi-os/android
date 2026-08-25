@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Недавне промене</string>
     <string name="wikis_changes_subtitle">Недавна уређивања на свим страницама овог wiki-ја.</string>
     <string name="wikis_changes_empty">Још нема промена</string>
-    <string name="wikis_search_title">Претражи</string>
     <string name="wikis_search_empty_query">Унесите појам за претрагу</string>
     <string name="wikis_redirects_title">Преусмерења</string>
     <string name="wikis_redirects_add">Додај</string>

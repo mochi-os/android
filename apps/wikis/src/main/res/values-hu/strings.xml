@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Friss változások</string>
     <string name="wikis_changes_subtitle">Friss szerkesztések a wiki összes oldalán.</string>
     <string name="wikis_changes_empty">Még nincsenek változások</string>
-    <string name="wikis_search_title">Keresés</string>
     <string name="wikis_search_empty_query">Adjon meg egy keresési kifejezést</string>
     <string name="wikis_redirects_title">Átirányítások</string>
     <string name="wikis_redirects_add">Hozzáadás</string>

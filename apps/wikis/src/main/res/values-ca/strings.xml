@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Canvis recents</string>
     <string name="wikis_changes_subtitle">Edicions recents a totes les pàgines d\'aquest wiki.</string>
     <string name="wikis_changes_empty">Encara no hi ha canvis</string>
-    <string name="wikis_search_title">Cerca</string>
     <string name="wikis_search_empty_query">Introdueix un terme de cerca</string>
     <string name="wikis_redirects_title">Redireccions</string>
     <string name="wikis_redirects_add">Afegeix</string>

@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">လတ်တလော ပြောင်းလဲမှုများ</string>
     <string name="wikis_changes_subtitle">ဤ wiki ရှိ စာမျက်နှာအားလုံး၏ လတ်တလော ပြင်ဆင်မှုများ။</string>
     <string name="wikis_changes_empty">ပြောင်းလဲမှုများ မရှိသေးပါ</string>
-    <string name="wikis_search_title">ရှာဖွေ</string>
     <string name="wikis_search_empty_query">ရှာဖွေရေး စကားလုံး ထည့်ပါ</string>
     <string name="wikis_redirects_title">Redirect များ</string>
     <string name="wikis_redirects_add">ထည့်မည်</string>

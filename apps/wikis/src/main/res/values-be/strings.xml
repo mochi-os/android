@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">Нядаўнія змены</string>
     <string name="wikis_changes_subtitle">Нядаўнія праўкі па ўсіх старонках гэтага wiki.</string>
     <string name="wikis_changes_empty">Пакуль няма змен</string>
-    <string name="wikis_search_title">Пошук</string>
     <string name="wikis_search_empty_query">Увядзіце пошукавы запыт</string>
     <string name="wikis_redirects_title">Перанакіраванні</string>
     <string name="wikis_redirects_add">Дадаць</string>

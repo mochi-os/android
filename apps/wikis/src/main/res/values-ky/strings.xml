@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Акыркы өзгөрүүлөр</string>
     <string name="wikis_changes_subtitle">Бул wiki-нин бардык барактарындагы акыркы оңдоолор.</string>
     <string name="wikis_changes_empty">Өзгөрүүлөр азырынча жок</string>
-    <string name="wikis_search_title">Издөө</string>
     <string name="wikis_search_empty_query">Издөө сөзүн киргизиңиз</string>
     <string name="wikis_redirects_title">Кайра багыттоолор</string>
     <string name="wikis_redirects_add">Кошуу</string>

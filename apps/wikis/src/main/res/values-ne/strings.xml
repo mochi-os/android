@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">हालैका परिवर्तनहरू</string>
     <string name="wikis_changes_subtitle">यो विकीका सबै पृष्ठहरूमा हालैका सम्पादनहरू।</string>
     <string name="wikis_changes_empty">अहिलेसम्म कुनै परिवर्तन छैन</string>
-    <string name="wikis_search_title">खोज्नुहोस्</string>
     <string name="wikis_search_empty_query">खोज शब्द लेख्नुहोस्</string>
     <string name="wikis_redirects_title">रिडाइरेक्टहरू</string>
     <string name="wikis_redirects_add">थप्नुहोस्</string>

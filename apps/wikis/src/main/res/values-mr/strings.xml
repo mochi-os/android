@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">अलीकडील बदल</string>
     <string name="wikis_changes_subtitle">या विकीतील सर्व पेजेसवरील अलीकडील संपादने.</string>
     <string name="wikis_changes_empty">अद्याप बदल नाहीत</string>
-    <string name="wikis_search_title">शोधा</string>
     <string name="wikis_search_empty_query">शोध शब्द टाका</string>
     <string name="wikis_redirects_title">रीडायरेक्ट्स</string>
     <string name="wikis_redirects_add">जोडा</string>

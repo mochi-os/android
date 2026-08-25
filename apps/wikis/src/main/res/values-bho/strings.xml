@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">हाल के बदलाव</string>
     <string name="wikis_changes_subtitle">ए विकी के सब पन्ना पर हाल के संपादन।</string>
     <string name="wikis_changes_empty">अबहीं तक कौनो बदलाव नइखे</string>
-    <string name="wikis_search_title">खोजीं</string>
     <string name="wikis_search_empty_query">खोज शब्द लिखीं</string>
     <string name="wikis_redirects_title">रीडायरेक्ट</string>
     <string name="wikis_redirects_add">जोड़ीं</string>

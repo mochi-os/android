@@ -121,7 +121,6 @@
     <string name="wikis_changes_title">Recente wijzigingen</string>
     <string name="wikis_changes_subtitle">Recente bewerkingen op alle pagina\'s in deze wiki.</string>
     <string name="wikis_changes_empty">Nog geen wijzigingen</string>
-    <string name="wikis_search_title">Zoeken</string>
     <string name="wikis_search_empty_query">Voer een zoekterm in</string>
     <string name="wikis_redirects_title">Redirects</string>
     <string name="wikis_redirects_add">Toevoegen</string>

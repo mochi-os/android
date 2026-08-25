@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Thay đổi gần đây</string>
     <string name="wikis_changes_subtitle">Các chỉnh sửa gần đây trên tất cả trang trong wiki này.</string>
     <string name="wikis_changes_empty">Chưa có thay đổi</string>
-    <string name="wikis_search_title">Tìm kiếm</string>
     <string name="wikis_search_empty_query">Nhập từ khoá tìm kiếm</string>
     <string name="wikis_redirects_title">Chuyển hướng</string>
     <string name="wikis_redirects_add">Thêm</string>

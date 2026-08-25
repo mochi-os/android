@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Onlangse veranderinge</string>
     <string name="wikis_changes_subtitle">Onlangse wysigings oor alle bladsye in hierdie wiki.</string>
     <string name="wikis_changes_empty">Nog geen veranderinge nie</string>
-    <string name="wikis_search_title">Soek</string>
     <string name="wikis_search_empty_query">Tik \'n soekterm in</string>
     <string name="wikis_redirects_title">Herleidings</string>
     <string name="wikis_redirects_add">Voeg by</string>

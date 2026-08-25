@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">የቅርብ ጊዜ ለውጦች</string>
     <string name="wikis_changes_subtitle">በዚህ ዊኪ ውስጥ ባሉ ሁሉም ገጾች ላይ የቅርብ ጊዜ ማስተካከያዎች።</string>
     <string name="wikis_changes_empty">እስካሁን ምንም ለውጦች የሉም</string>
-    <string name="wikis_search_title">ይፈልጉ</string>
     <string name="wikis_search_empty_query">የፍለጋ ቃል አስገባ</string>
     <string name="wikis_redirects_title">ድጋሚ ማዘዋወሮች</string>
     <string name="wikis_redirects_add">ጨምር</string>

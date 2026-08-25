@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">Nedavne spremembe</string>
     <string name="wikis_changes_subtitle">Nedavna urejanja vseh strani v tem wikiju.</string>
     <string name="wikis_changes_empty">Še ni sprememb</string>
-    <string name="wikis_search_title">Iskanje</string>
     <string name="wikis_search_empty_query">Vnesite iskalni izraz</string>
     <string name="wikis_redirects_title">Preusmeritve</string>
     <string name="wikis_redirects_add">Dodaj</string>

@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">તાજેતરના ફેરફારો</string>
     <string name="wikis_changes_subtitle">આ wiki ના તમામ પેજમાં તાજેતરના સંપાદનો.</string>
     <string name="wikis_changes_empty">હજુ સુધી કોઈ ફેરફારો નથી</string>
-    <string name="wikis_search_title">શોધો</string>
     <string name="wikis_search_empty_query">સર્ચ ટર્મ દાખલ કરો</string>
     <string name="wikis_redirects_title">રિડાયરેક્ટ્સ</string>
     <string name="wikis_redirects_add">ઉમેરો</string>

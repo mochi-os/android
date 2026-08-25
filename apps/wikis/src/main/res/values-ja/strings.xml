@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">最近の変更</string>
     <string name="wikis_changes_subtitle">この Wiki のすべてのページの最近の編集。</string>
     <string name="wikis_changes_empty">まだ変更はありません</string>
-    <string name="wikis_search_title">検索</string>
     <string name="wikis_search_empty_query">検索キーワードを入力</string>
     <string name="wikis_redirects_title">リダイレクト</string>
     <string name="wikis_redirects_add">追加</string>

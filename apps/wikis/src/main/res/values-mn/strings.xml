@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Сүүлийн өөрчлөлт</string>
     <string name="wikis_changes_subtitle">Энэ wiki-ийн бүх хуудаст хийсэн сүүлийн засваруудууд.</string>
     <string name="wikis_changes_empty">Өөрчлөлт алга</string>
-    <string name="wikis_search_title">Хайх</string>
     <string name="wikis_search_empty_query">Хайх үг оруулна уу</string>
     <string name="wikis_redirects_title">Дахин чиглүүлэлтүүд</string>
     <string name="wikis_redirects_add">Нэмэх</string>

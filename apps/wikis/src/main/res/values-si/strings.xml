@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">මෑත වෙනස්කම්</string>
     <string name="wikis_changes_subtitle">මෙම wiki එකේ සියලු පිටු හරහා මෑත සංස්කරණ.</string>
     <string name="wikis_changes_empty">තවම වෙනස්කම් නොමැත</string>
-    <string name="wikis_search_title">සොයන්න</string>
     <string name="wikis_search_empty_query">සෙවුම් පදයක් ඇතුළු කරන්න</string>
     <string name="wikis_redirects_title">redirects</string>
     <string name="wikis_redirects_add">එක් කරන්න</string>

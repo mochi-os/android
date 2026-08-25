@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Nedávne zmeny</string>
     <string name="wikis_changes_subtitle">Nedávne úpravy vo všetkých stránkach tejto wiki.</string>
     <string name="wikis_changes_empty">Zatiaľ žiadne zmeny</string>
-    <string name="wikis_search_title">Hľadať</string>
     <string name="wikis_search_empty_query">Zadajte hľadaný výraz</string>
     <string name="wikis_redirects_title">Presmerovania</string>
     <string name="wikis_redirects_add">Pridať</string>

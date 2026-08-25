@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">Perubahan terkini</string>
     <string name="wikis_changes_subtitle">Suntingan terkini di semua halaman dalam wiki ini.</string>
     <string name="wikis_changes_empty">Tiada perubahan lagi</string>
-    <string name="wikis_search_title">Cari</string>
     <string name="wikis_search_empty_query">Masukkan istilah carian</string>
     <string name="wikis_redirects_title">Lencongan</string>
     <string name="wikis_redirects_add">Tambah</string>

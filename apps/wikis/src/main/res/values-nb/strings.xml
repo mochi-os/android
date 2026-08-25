@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Nylige endringer</string>
     <string name="wikis_changes_subtitle">Nylige redigeringer på tvers av alle sider i denne wikien.</string>
     <string name="wikis_changes_empty">Ingen endringer ennå</string>
-    <string name="wikis_search_title">Søk</string>
     <string name="wikis_search_empty_query">Skriv inn et søkeord</string>
     <string name="wikis_redirects_title">Omdirigeringer</string>
     <string name="wikis_redirects_add">Legg til</string>

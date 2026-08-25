@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">การเปลี่ยนแปลงล่าสุด</string>
     <string name="wikis_changes_subtitle">การแก้ไขล่าสุดในทุกหน้าของ wiki นี้</string>
     <string name="wikis_changes_empty">ยังไม่มีการเปลี่ยนแปลง</string>
-    <string name="wikis_search_title">ค้นหา</string>
     <string name="wikis_search_empty_query">ป้อนคำค้นหา</string>
     <string name="wikis_redirects_title">การเปลี่ยนเส้นทาง</string>
     <string name="wikis_redirects_add">เพิ่ม</string>

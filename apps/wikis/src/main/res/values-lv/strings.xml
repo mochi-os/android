@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Nesenās izmaiņas</string>
     <string name="wikis_changes_subtitle">Nesenas izmaiņas visās šīs wiki lapās.</string>
     <string name="wikis_changes_empty">Vēl nav izmaiņu</string>
-    <string name="wikis_search_title">Meklēt</string>
     <string name="wikis_search_empty_query">Ievadiet meklēšanas vaicājumu</string>
     <string name="wikis_redirects_title">Pāradresācijas</string>
     <string name="wikis_redirects_add">Pievienot</string>

@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Nýlegar breytingar</string>
     <string name="wikis_changes_subtitle">Nýlegar breytingar á öllum síðum þessa wiki.</string>
     <string name="wikis_changes_empty">Engar breytingar ennþá</string>
-    <string name="wikis_search_title">Leita</string>
     <string name="wikis_search_empty_query">Sláðu inn leitarorð</string>
     <string name="wikis_redirects_title">Áframsendingar</string>
     <string name="wikis_redirects_add">Bæta við</string>

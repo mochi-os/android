@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">ბოლო ცვლილებები</string>
     <string name="wikis_changes_subtitle">ბოლო რედაქტირებები ამ ვიკის ყველა გვერდზე.</string>
     <string name="wikis_changes_empty">ცვლილებები ჯერ არ არის</string>
-    <string name="wikis_search_title">ძიება</string>
     <string name="wikis_search_empty_query">შეიყვანეთ საძიებო ტერმინი</string>
     <string name="wikis_redirects_title">გადამისამართებები</string>
     <string name="wikis_redirects_add">დამატება</string>

@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">সাম্প্রতিক পরিবর্তন</string>
     <string name="wikis_changes_subtitle">এই উইকির সমস্ত পৃষ্ঠা জুড়ে সাম্প্রতিক সম্পাদনা।</string>
     <string name="wikis_changes_empty">এখনও কোনো পরিবর্তন নেই</string>
-    <string name="wikis_search_title">অনুসন্ধান</string>
     <string name="wikis_search_empty_query">একটি অনুসন্ধান শব্দ লিখুন</string>
     <string name="wikis_redirects_title">রিডাইরেক্ট</string>
     <string name="wikis_redirects_add">যোগ করুন</string>

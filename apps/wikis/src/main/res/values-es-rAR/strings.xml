@@ -31,7 +31,6 @@
     <string name="wikis_rename_page_title">Renombrá la página</string>
     <string name="wikis_rename_page_redirects">Creá una redirección desde la URL vieja</string>
     <string name="wikis_rename_page_confirm">Renombrá</string>
-    <string name="wikis_search_title">Buscá</string>
     <string name="wikis_search_empty_query">Ingresá un término de búsqueda</string>
     <string name="wikis_redirects_add">Agregá</string>
     <string name="wikis_redirect_create_title">Creá una redirección</string>

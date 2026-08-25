@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">ການປ່ຽນແປງລ່າສຸດ</string>
     <string name="wikis_changes_subtitle">ການແກ້ໄຂລ່າສຸດໃນທຸກໜ້າຂອງ wiki ນີ້.</string>
     <string name="wikis_changes_empty">ຍັງບໍ່ມີການປ່ຽນແປງ</string>
-    <string name="wikis_search_title">ຄົ້ນຫາ</string>
     <string name="wikis_search_empty_query">ປ້ອນຄຳສຳລັບຄົ້ນຫາ</string>
     <string name="wikis_redirects_title">ການປ່ຽນເສັ້ນທາງ</string>
     <string name="wikis_redirects_add">ເພີ່ມ</string>

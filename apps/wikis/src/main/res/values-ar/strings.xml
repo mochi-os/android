@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">التغييرات الحديثة</string>
     <string name="wikis_changes_subtitle">التعديلات الحديثة عبر كل الصفحات في هذا الويكي.</string>
     <string name="wikis_changes_empty">لا توجد تغييرات بعد</string>
-    <string name="wikis_search_title">بحث</string>
     <string name="wikis_search_empty_query">أدخل كلمة بحث</string>
     <string name="wikis_redirects_title">عمليات إعادة التوجيه</string>
     <string name="wikis_redirects_add">إضافة</string>

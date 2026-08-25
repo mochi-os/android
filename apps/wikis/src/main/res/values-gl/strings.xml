@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">Cambios recentes</string>
     <string name="wikis_changes_subtitle">Edicións recentes en todas as páxinas desta wiki.</string>
     <string name="wikis_changes_empty">Aínda non hai cambios</string>
-    <string name="wikis_search_title">Buscar</string>
     <string name="wikis_search_empty_query">Introduce un termo de busca</string>
     <string name="wikis_redirects_title">Redireccións</string>
     <string name="wikis_redirects_add">Engadir</string>

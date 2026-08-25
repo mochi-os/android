@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Athruithe le déanaí</string>
     <string name="wikis_changes_subtitle">Eagarthóireachtaí le déanaí ar gach leathanach sa wiki seo.</string>
     <string name="wikis_changes_empty">Níl aon athrú fós</string>
-    <string name="wikis_search_title">Cuardach</string>
     <string name="wikis_search_empty_query">Iontráil téarma cuardaigh</string>
     <string name="wikis_redirects_title">Atreoruithe</string>
     <string name="wikis_redirects_add">Cuir leis</string>

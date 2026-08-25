@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Viimeaikaiset muutokset</string>
     <string name="wikis_changes_subtitle">Viimeaikaiset muokkaukset kaikilla tämän wikin sivuilla.</string>
     <string name="wikis_changes_empty">Ei vielä muutoksia</string>
-    <string name="wikis_search_title">Haku</string>
     <string name="wikis_search_empty_query">Anna hakusana</string>
     <string name="wikis_redirects_title">Uudelleenohjaukset</string>
     <string name="wikis_redirects_add">Lisää</string>

@@ -31,7 +31,6 @@
     <string name="wikis_settings_title">Paramètres</string>
     <string name="wikis_settings_tab_settings">Paramètres</string>
     <string name="wikis_page_action_search">Rechercher</string>
-    <string name="wikis_search_title">Rechercher</string>
     <string name="wikis_comment_form_send">Envoyer</string>
     <string name="wikis_replicas_remove_confirm_action">Supprimer</string>
     <string name="wikis_open_sidebar">Ouvrir la barre latérale</string>

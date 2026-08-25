@@ -16,7 +16,6 @@ import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.ModeComment
 import androidx.compose.material.icons.filled.RssFeed
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Icon
@@ -59,7 +58,6 @@ fun PageOverflowMenu(
     onHistory: () -> Unit,
     onComments: () -> Unit,
     onDelete: () -> Unit,
-    onSearch: () -> Unit,
     onTags: () -> Unit,
     onChanges: () -> Unit,
     onNewPage: () -> Unit,
@@ -125,11 +123,6 @@ fun PageOverflowMenu(
         // -------- Wiki section --------
         SectionLabel(stringResource(R.string.wikis_page_action_section_wiki))
 
-        MenuRow(
-            icon = Icons.Default.Search,
-            label = stringResource(R.string.wikis_page_action_search),
-            onClick = onSearch,
-        )
         MenuRow(
             icon = Icons.Default.LocalOffer,
             label = stringResource(R.string.wikis_page_action_tags),

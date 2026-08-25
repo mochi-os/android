@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">最近更改</string>
     <string name="wikis_changes_subtitle">本 Wiki 中所有页面的最近编辑。</string>
     <string name="wikis_changes_empty">暂无更改</string>
-    <string name="wikis_search_title">搜索</string>
     <string name="wikis_search_empty_query">请输入搜索词</string>
     <string name="wikis_redirects_title">重定向</string>
     <string name="wikis_redirects_add">添加</string>

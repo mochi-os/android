@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">تغییرات اخیر</string>
     <string name="wikis_changes_subtitle">ویرایش‌های اخیر در تمام صفحات این ویکی.</string>
     <string name="wikis_changes_empty">هنوز تغییری وجود ندارد</string>
-    <string name="wikis_search_title">جست‌وجو</string>
     <string name="wikis_search_empty_query">یک عبارت جستجو وارد کنید</string>
     <string name="wikis_redirects_title">تغییر مسیرها</string>
     <string name="wikis_redirects_add">افزودن</string>

@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Скорошни промени</string>
     <string name="wikis_changes_subtitle">Скорошни редакции на всички страници в тази wiki.</string>
     <string name="wikis_changes_empty">Все още няма промени</string>
-    <string name="wikis_search_title">Търсене</string>
     <string name="wikis_search_empty_query">Въведете дума за търсене</string>
     <string name="wikis_redirects_title">Пренасочвания</string>
     <string name="wikis_redirects_add">Добави</string>

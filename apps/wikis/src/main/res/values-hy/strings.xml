@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Վերջին փոփոխություններ</string>
     <string name="wikis_changes_subtitle">Վերջին փոփոխությունները այս wiki-ի բոլոր էջերում։</string>
     <string name="wikis_changes_empty">Դեռ փոփոխություններ չկան</string>
-    <string name="wikis_search_title">Որոնել</string>
     <string name="wikis_search_empty_query">Մուտքագրեք որոնման տերմին</string>
     <string name="wikis_redirects_title">Վերահղումներ</string>
     <string name="wikis_redirects_add">Ավելացնել Mochi հոսք</string>

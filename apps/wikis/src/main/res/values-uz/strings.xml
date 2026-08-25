@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Soʻnggi oʻzgarishlar</string>
     <string name="wikis_changes_subtitle">Bu wiki’dagi barcha sahifalardagi soʻnggi tahrirlar.</string>
     <string name="wikis_changes_empty">Hozircha oʻzgarishlar yoʻq</string>
-    <string name="wikis_search_title">Qidirish</string>
     <string name="wikis_search_empty_query">Qidiruv soʻzini kiriting</string>
     <string name="wikis_redirects_title">Yoʻnaltirishlar</string>
     <string name="wikis_redirects_add">Qoʻshish</string>

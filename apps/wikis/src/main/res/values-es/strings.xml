@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Cambios recientes</string>
     <string name="wikis_changes_subtitle">Ediciones recientes en todas las páginas de este wiki.</string>
     <string name="wikis_changes_empty">Aún no hay cambios</string>
-    <string name="wikis_search_title">Buscar</string>
     <string name="wikis_search_empty_query">Introduce un término de búsqueda</string>
     <string name="wikis_redirects_title">Redirecciones</string>
     <string name="wikis_redirects_add">Añadir</string>

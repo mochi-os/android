@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">ఇటీవలి మార్పులు</string>
     <string name="wikis_changes_subtitle">ఈ wikiలోని అన్ని పేజీలలో ఇటీవలి ఎడిట్‌లు.</string>
     <string name="wikis_changes_empty">ఇంకా మార్పులు లేవు</string>
-    <string name="wikis_search_title">శోధన</string>
     <string name="wikis_search_empty_query">శోధన పదాన్ని నమోదు చేయండి</string>
     <string name="wikis_redirects_title">రీడైరెక్ట్‌లు</string>
     <string name="wikis_redirects_add">జోడించండి</string>

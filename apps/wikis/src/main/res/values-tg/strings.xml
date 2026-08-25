@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Тағйиротҳои охирин</string>
     <string name="wikis_changes_subtitle">Таҳриротҳои охирин дар тамоми саҳифаҳои ин вики.</string>
     <string name="wikis_changes_empty">То ҳол ягон тағйирот нест</string>
-    <string name="wikis_search_title">Ҷустуҷӯ</string>
     <string name="wikis_search_empty_query">Истилоҳи ҷустуҷӯро ворид кунед</string>
     <string name="wikis_redirects_title">Тағйиротҳои масир</string>
     <string name="wikis_redirects_add">Илова кардан</string>

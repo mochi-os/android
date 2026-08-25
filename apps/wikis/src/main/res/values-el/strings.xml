@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Πρόσφατες αλλαγές</string>
     <string name="wikis_changes_subtitle">Πρόσφατες επεξεργασίες σε όλες τις σελίδες αυτού του wiki.</string>
     <string name="wikis_changes_empty">Δεν υπάρχουν ακόμη αλλαγές</string>
-    <string name="wikis_search_title">Αναζήτηση</string>
     <string name="wikis_search_empty_query">Εισαγάγετε όρο αναζήτησης</string>
     <string name="wikis_redirects_title">Ανακατευθύνσεις</string>
     <string name="wikis_redirects_add">Προσθήκη</string>

@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Modificări recente</string>
     <string name="wikis_changes_subtitle">Editări recente din toate paginile acestui wiki.</string>
     <string name="wikis_changes_empty">Încă nicio modificare</string>
-    <string name="wikis_search_title">Caută</string>
     <string name="wikis_search_empty_query">Introdu un termen de căutare</string>
     <string name="wikis_redirects_title">Redirecționări</string>
     <string name="wikis_redirects_add">Adaugă</string>

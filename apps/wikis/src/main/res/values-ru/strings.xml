@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Недавние изменения</string>
     <string name="wikis_changes_subtitle">Недавние правки по всем страницам этой wiki.</string>
     <string name="wikis_changes_empty">Изменений пока нет</string>
-    <string name="wikis_search_title">Поиск</string>
     <string name="wikis_search_empty_query">Введите поисковый запрос</string>
     <string name="wikis_redirects_title">Перенаправления</string>
     <string name="wikis_redirects_add">Добавить</string>

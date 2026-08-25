@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Naujausi pakeitimai</string>
     <string name="wikis_changes_subtitle">Naujausi šio wiki visų puslapių pakeitimai.</string>
     <string name="wikis_changes_empty">Dar nėra pakeitimų</string>
-    <string name="wikis_search_title">Ieškoti</string>
     <string name="wikis_search_empty_query">Įveskite paieškos terminą</string>
     <string name="wikis_redirects_title">Peradresavimai</string>
     <string name="wikis_redirects_add">Pridėti</string>

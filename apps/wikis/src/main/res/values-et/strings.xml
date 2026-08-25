@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Hiljutised muudatused</string>
     <string name="wikis_changes_subtitle">Hiljutised muudatused selle viki kõigil lehtedel.</string>
     <string name="wikis_changes_empty">Muudatusi veel pole</string>
-    <string name="wikis_search_title">Otsi</string>
     <string name="wikis_search_empty_query">Sisesta otsingusõna</string>
     <string name="wikis_redirects_title">Ümbersuunamised</string>
     <string name="wikis_redirects_add">Lisa</string>

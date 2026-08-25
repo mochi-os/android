@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">சமீபத்திய மாற்றங்கள்</string>
     <string name="wikis_changes_subtitle">இந்த wiki-இல் உள்ள அனைத்து பக்கங்களிலும் சமீபத்திய திருத்தங்கள்.</string>
     <string name="wikis_changes_empty">மாற்றங்கள் இன்னும் இல்லை</string>
-    <string name="wikis_search_title">தேடு</string>
     <string name="wikis_search_empty_query">ஒரு தேடல் சொல்லை உள்ளிடவும்</string>
     <string name="wikis_redirects_title">Redirectகள்</string>
     <string name="wikis_redirects_add">சேர்</string>

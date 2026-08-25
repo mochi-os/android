@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Останні зміни</string>
     <string name="wikis_changes_subtitle">Останні редагування на всіх сторінках цієї вікі.</string>
     <string name="wikis_changes_empty">Змін ще немає</string>
-    <string name="wikis_search_title">Пошук</string>
     <string name="wikis_search_empty_query">Введіть пошуковий запит</string>
     <string name="wikis_redirects_title">Перенаправлення</string>
     <string name="wikis_redirects_add">Додати</string>

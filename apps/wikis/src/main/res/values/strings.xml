@@ -249,7 +249,6 @@
     <string name="wikis_load_more">Load more</string>
 
     <!-- Wiki content search screen -->
-    <string name="wikis_search_title">Search</string>
     <string name="wikis_search_pages_placeholder">Search pages by title or content…</string>
     <string name="wikis_search_empty_query">Enter a search term</string>
     <string name="wikis_search_no_results">No pages found for \"%1$s\". Try different search terms.</string>

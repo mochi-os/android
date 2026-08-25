@@ -25,6 +25,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -206,6 +207,16 @@ fun PageViewScreen(
                         }
                     },
                     actions = {
+                        MochiIconButton(
+                            onClick = {
+                                navController.navigate(WikisApp.search(viewModel.wikiId))
+                            }
+                        ) {
+                            Icon(
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.wikis_page_action_search),
+                            )
+                        }
                         Box {
                             MochiIconButton(onClick = { menuExpanded = true }) {
                                 Icon(
@@ -248,10 +259,6 @@ fun PageViewScreen(
                                     navController.navigate(
                                         WikisApp.pageDelete(viewModel.wikiId, viewModel.slug)
                                     )
-                                },
-                                onSearch = {
-                                    menuExpanded = false
-                                    navController.navigate(WikisApp.search(viewModel.wikiId))
                                 },
                                 onTags = {
                                     menuExpanded = false

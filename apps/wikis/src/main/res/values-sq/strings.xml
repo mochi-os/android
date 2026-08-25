@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">Ndryshime të fundit</string>
     <string name="wikis_changes_subtitle">Ndryshime të fundit në të gjitha faqet e këtij wiki.</string>
     <string name="wikis_changes_empty">Ende pa ndryshime</string>
-    <string name="wikis_search_title">Kërko</string>
     <string name="wikis_search_empty_query">Shkruani një term kërkimi</string>
     <string name="wikis_redirects_title">Ridrejtimet</string>
     <string name="wikis_redirects_add">Shto</string>

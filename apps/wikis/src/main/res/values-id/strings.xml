@@ -123,7 +123,6 @@
     <string name="wikis_changes_title">Perubahan terbaru</string>
     <string name="wikis_changes_subtitle">Edit terbaru di semua halaman dalam wiki ini.</string>
     <string name="wikis_changes_empty">Belum ada perubahan</string>
-    <string name="wikis_search_title">Cari</string>
     <string name="wikis_search_empty_query">Masukkan kata pencarian</string>
     <string name="wikis_redirects_title">Pengalihan</string>
     <string name="wikis_redirects_add">Tambah</string>

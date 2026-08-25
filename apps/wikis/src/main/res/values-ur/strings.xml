@@ -122,7 +122,6 @@
     <string name="wikis_changes_title">حالیہ تبدیلیاں</string>
     <string name="wikis_changes_subtitle">اس wiki کے تمام صفحات میں حالیہ ترامیم۔</string>
     <string name="wikis_changes_empty">ابھی تک کوئی تبدیلیاں نہیں</string>
-    <string name="wikis_search_title">تلاش کریں</string>
     <string name="wikis_search_empty_query">تلاش کی اصطلاح درج کریں</string>
     <string name="wikis_redirects_title">redirects</string>
     <string name="wikis_redirects_add">شامل کریں</string>
