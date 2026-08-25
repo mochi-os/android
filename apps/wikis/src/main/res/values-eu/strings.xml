@@ -76,6 +76,12 @@
     <string name="wikis_editor_edit">Editatu</string>
     <string name="wikis_editor_insert">Txertatu</string>
     <string name="wikis_editor_attachments">Eranskinak</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Ezabatu orria</string>
     <string name="wikis_editor_save">Gorde</string>
     <string name="wikis_editor_saving">Gordetzen…</string>

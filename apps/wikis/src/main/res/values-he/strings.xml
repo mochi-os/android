@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">עריכה</string>
     <string name="wikis_editor_insert">הוסף</string>
     <string name="wikis_editor_attachments">קבצים מצורפים</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">מחק דף</string>
     <string name="wikis_editor_save">שמור</string>
     <string name="wikis_editor_saving">שומר…</string>

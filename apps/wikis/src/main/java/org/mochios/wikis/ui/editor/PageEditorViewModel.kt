@@ -19,8 +19,11 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.auth.SessionManager
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.PageFetchResponse
+import org.mochios.wikis.model.WikiInfo
+import org.mochios.wikis.model.WikiPermissions
 import org.mochios.android.util.slugify
 import org.mochios.android.util.slugifyPartial
 import org.mochios.wikis.repository.WikisRepository
@@ -39,6 +42,9 @@ data class PageEditorUiState(
     val comment: String = "",
     val showPreview: Boolean = false,
     val attachments: List<Attachment> = emptyList(),
+    /** The wiki the page belongs to, once `/-/info` has answered. */
+    val wiki: WikiInfo? = null,
+    val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
 )
 
@@ -61,9 +67,11 @@ sealed interface PageEditorEvent {
 class PageEditorViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: WikisRepository,
+    sessionManager: SessionManager,
 ) : ViewModel() {
 
     val wikiId: String = savedStateHandle["wikiId"] ?: ""
+    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
     private val initialSlug: String? = savedStateHandle["page"]
     val isNew: Boolean = initialSlug == null
     /**
@@ -88,8 +96,29 @@ class PageEditorViewModel @Inject constructor(
     val events = _events.receiveAsFlow()
 
     init {
+        loadWiki()
         if (!isNew) {
             loadPage()
+        }
+    }
+
+    /**
+     * The wiki behind the page, for the context the preview renders inside -
+     * markdown resolves attachment URLs against it - and for whether this user
+     * may delete. A failure leaves both at their defaults: the editor still
+     * writes and saves perfectly well without them.
+     */
+    private fun loadWiki() {
+        viewModelScope.launch {
+            try {
+                val response = repository.getInfo(wikiId)
+                _uiState.value = _uiState.value.copy(
+                    wiki = response.wiki,
+                    permissions = response.permissions ?: WikiPermissions(),
+                )
+            } catch (_: Exception) {
+                // Nothing to say: the page itself reports its own failures.
+            }
         }
     }
 

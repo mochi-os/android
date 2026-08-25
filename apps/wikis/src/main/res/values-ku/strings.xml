@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">Sererast bike</string>
     <string name="wikis_editor_insert">Têxe</string>
     <string name="wikis_editor_attachments">Pêvek</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Rûpelê jê bibe</string>
     <string name="wikis_editor_save">Tomar bike</string>
     <string name="wikis_editor_saving">Tê tomarkirin…</string>

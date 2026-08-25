@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">Redigér</string>
     <string name="wikis_editor_insert">Indsæt</string>
     <string name="wikis_editor_attachments">Vedhæftninger</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Slet side</string>
     <string name="wikis_editor_save">Gem</string>
     <string name="wikis_editor_saving">Gemmer…</string>

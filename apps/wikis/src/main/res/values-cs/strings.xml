@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">Upravit</string>
     <string name="wikis_editor_insert">Vložit</string>
     <string name="wikis_editor_attachments">Přílohy</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Smazat stránku</string>
     <string name="wikis_editor_save">Uložit</string>
     <string name="wikis_editor_saving">Ukládá se…</string>

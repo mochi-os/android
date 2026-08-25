@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">سمول</string>
     <string name="wikis_editor_insert">داخل کړئ</string>
     <string name="wikis_editor_attachments">ضمیمې</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">پاڼه ړنګه کړئ</string>
     <string name="wikis_editor_save">خوندي کول</string>
     <string name="wikis_editor_saving">د خوندي کولو په حال کې…</string>

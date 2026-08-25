@@ -76,6 +76,12 @@
     <string name="wikis_editor_edit">Edit</string>
     <string name="wikis_editor_insert">Sisip</string>
     <string name="wikis_editor_attachments">Lampiran</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Padam halaman</string>
     <string name="wikis_editor_save">Simpan</string>
     <string name="wikis_editor_saving">Menyimpan…</string>

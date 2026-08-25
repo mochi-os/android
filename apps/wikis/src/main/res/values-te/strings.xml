@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">సవరించండి</string>
     <string name="wikis_editor_insert">చొప్పించండి</string>
     <string name="wikis_editor_attachments">అటాచ్‌మెంట్‌లు</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">పేజీని తొలగించండి</string>
     <string name="wikis_editor_save">సేవ్ చేయండి</string>
     <string name="wikis_editor_saving">సేవ్ చేస్తోంది…</string>

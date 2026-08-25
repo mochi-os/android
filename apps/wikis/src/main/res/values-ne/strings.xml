@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">सम्पादन</string>
     <string name="wikis_editor_insert">घुसाउनुहोस्</string>
     <string name="wikis_editor_attachments">एट्याचमेन्टहरू</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">पृष्ठ मेटाउनुहोस्</string>
     <string name="wikis_editor_save">सुरक्षित गर्नुहोस्</string>
     <string name="wikis_editor_saving">सुरक्षित गर्दै…</string>

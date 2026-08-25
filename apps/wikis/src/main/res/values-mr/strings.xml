@@ -77,6 +77,12 @@
     <string name="wikis_editor_edit">संपादित करा</string>
     <string name="wikis_editor_insert">घाला</string>
     <string name="wikis_editor_attachments">संलग्नके</string>
+    <string name="wikis_editor_format_bold">Bold</string>
+    <string name="wikis_editor_format_italic">Italic</string>
+    <string name="wikis_editor_format_link">Link</string>
+    <string name="wikis_editor_format_heading">Heading</string>
+    <string name="wikis_editor_format_code">Code</string>
+    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">पान हटवा</string>
     <string name="wikis_editor_save">जतन करा</string>
     <string name="wikis_editor_saving">जतन करत आहे…</string>
