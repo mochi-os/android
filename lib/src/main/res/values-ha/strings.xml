@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Abin haɗe ba ya samuwa na ɗan lokaci</string>
     <string name="common_unavailable">Ba ya samuwa</string>
     <string name="common_not_found">Ba a samu ba</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

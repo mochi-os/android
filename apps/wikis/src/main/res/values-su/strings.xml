@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Édit</string>
     <string name="wikis_editor_insert">Sisipkeun</string>
     <string name="wikis_editor_attachments">Lampiran</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Hapus kaca</string>
     <string name="wikis_editor_save">Simpen</string>
     <string name="wikis_editor_saving">Nyimpen…</string>

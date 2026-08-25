@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Өңдеу</string>
     <string name="wikis_editor_insert">Кірістіру</string>
     <string name="wikis_editor_attachments">Тіркемелер</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Бетті жою</string>
     <string name="wikis_editor_save">Сақтау</string>
     <string name="wikis_editor_saving">Сақталуда…</string>

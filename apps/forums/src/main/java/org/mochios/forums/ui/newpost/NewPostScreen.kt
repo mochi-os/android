@@ -50,11 +50,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.MochiButtonTone
@@ -84,6 +87,14 @@ fun NewPostScreen(
     val existingCaptions by viewModel.existingCaptions.collectAsState()
     val title by viewModel.title.collectAsState()
     val body by viewModel.body.collectAsState()
+    // The toolbar marks up a selection, so the cursor has to live here rather
+    // than inside the field.
+    var bodyField by remember { mutableStateOf(TextFieldValue(body)) }
+    LaunchedEffect(body) {
+        if (body != bodyField.text) {
+            bodyField = TextFieldValue(body, TextRange(body.length))
+        }
+    }
     val isEditing = viewModel.isEditing
 
     // Which attachment's caption is being edited: a saved attachment's id or
@@ -167,8 +178,11 @@ fun NewPostScreen(
             )
             Spacer(Modifier.height(8.dp))
             MentionTextField(
-                value = body,
-                onValueChange = { value -> viewModel.setBody(value) },
+                value = bodyField,
+                onValueChange = { updated ->
+                    bodyField = updated
+                    if (updated.text != body) viewModel.setBody(updated.text)
+                },
                 onSearch = { query -> viewModel.searchMembers(query) },
                 placeholder = { Text(stringResource(R.string.forums_markdown_supported)) },
                 modifier = Modifier
@@ -176,6 +190,13 @@ fun NewPostScreen(
                     .height(250.dp),
                 maxLines = 20,
                 fillHeight = true
+            )
+            MarkdownToolbar(
+                body = bodyField,
+                onBodyChange = { updated ->
+                    bodyField = updated
+                    if (updated.text != body) viewModel.setBody(updated.text)
+                },
             )
             Spacer(Modifier.height(16.dp))
 

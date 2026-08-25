@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">සංස්කරණය කරන්න</string>
     <string name="wikis_editor_insert">ඇතුළු කරන්න</string>
     <string name="wikis_editor_attachments">ඇමුණුම්</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">පිටුව මකන්න</string>
     <string name="wikis_editor_save">සුරකින්න</string>
     <string name="wikis_editor_saving">සුරැකේ…</string>

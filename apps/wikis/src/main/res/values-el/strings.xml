@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Επεξεργασία</string>
     <string name="wikis_editor_insert">Εισαγωγή</string>
     <string name="wikis_editor_attachments">Συνημμένα</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Διαγραφή σελίδας</string>
     <string name="wikis_editor_save">Αποθήκευση</string>
     <string name="wikis_editor_saving">Αποθήκευση…</string>

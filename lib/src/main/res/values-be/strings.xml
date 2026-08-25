@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">Далучэнне часова недаступнае</string>
     <string name="common_unavailable">Недаступна</string>
     <string name="common_not_found">Не знойдзена</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

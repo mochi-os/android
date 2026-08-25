@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">附件暫時用唔到</string>
     <string name="common_unavailable">暫時用唔到</string>
     <string name="common_not_found">搵唔到</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

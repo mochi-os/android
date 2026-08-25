@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">កែសម្រួល</string>
     <string name="wikis_editor_insert">បញ្ចូល</string>
     <string name="wikis_editor_attachments">ឯកសារភ្ជាប់</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">លុបទំព័រ</string>
     <string name="wikis_editor_save">រក្សាទុក</string>
     <string name="wikis_editor_saving">កំពុងរក្សាទុក…</string>

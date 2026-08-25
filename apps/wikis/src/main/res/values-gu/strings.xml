@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">સંપાદિત કરો</string>
     <string name="wikis_editor_insert">ઇન્સર્ટ કરો</string>
     <string name="wikis_editor_attachments">જોડાણો</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">પૃષ્ઠ કાઢી નાખો</string>
     <string name="wikis_editor_save">સાચવો</string>
     <string name="wikis_editor_saving">સાચવી રહ્યાં છે…</string>

@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Deasaich</string>
     <string name="wikis_editor_insert">Cuir a-steach</string>
     <string name="wikis_editor_attachments">Ceanglachain</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Sguab às duilleag</string>
     <string name="wikis_editor_save">Sàbhail</string>
     <string name="wikis_editor_saving">A\' sàbhaladh…</string>

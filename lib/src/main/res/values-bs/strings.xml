@@ -336,4 +336,10 @@
     <string name="common_attachment_unavailable">Prilog je privremeno nedostupan</string>
     <string name="common_unavailable">Nedostupno</string>
     <string name="common_not_found">Nije pronađeno</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

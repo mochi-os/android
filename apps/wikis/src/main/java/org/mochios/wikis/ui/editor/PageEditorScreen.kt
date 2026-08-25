@@ -24,6 +24,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.AttachFile
+import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
@@ -61,6 +63,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MarkdownToolbar
+import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
@@ -425,11 +429,25 @@ private fun EditFields(
     MarkdownToolbar(
         body = bodyField,
         onBodyChange = onBodyFieldChange,
-        onInsertAttachment = onInsertAttachment,
-        onOpenAttachments = onOpenAttachments,
-        attachmentsEnabled = slug.isNotBlank(),
         modifier = Modifier.padding(top = 4.dp),
-    )
+    ) {
+        // A wiki's own errands: pull a file into the text, or go manage them.
+        MarkdownToolbarSeparator()
+        MochiIconButton(onClick = onInsertAttachment) {
+            Icon(
+                Icons.Filled.Image,
+                contentDescription = stringResource(R.string.wikis_editor_insert),
+                modifier = Modifier.size(20.dp),
+            )
+        }
+        MochiIconButton(onClick = onOpenAttachments, enabled = slug.isNotBlank()) {
+            Icon(
+                Icons.Filled.AttachFile,
+                contentDescription = stringResource(R.string.wikis_editor_attachments),
+                modifier = Modifier.size(20.dp),
+            )
+        }
+    }
 
     if (!isNew) {
         Spacer(Modifier.height(12.dp))

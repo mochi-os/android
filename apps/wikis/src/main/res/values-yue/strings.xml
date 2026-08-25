@@ -131,12 +131,6 @@
     <string name="wikis_editor_preview_untitled">冇標題</string>
     <string name="wikis_editor_insert">插入</string>
     <string name="wikis_editor_attachments">附件</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">刪除頁面</string>
     <string name="wikis_editor_saving">儲存緊…</string>
     <string name="wikis_editor_create">建立頁面</string>

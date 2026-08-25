@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">منسلکہ عارضی طور پر دستیاب نہیں</string>
     <string name="common_unavailable">ناقابل رسائی</string>
     <string name="common_not_found">نہیں ملا</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

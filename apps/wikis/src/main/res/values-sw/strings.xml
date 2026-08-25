@@ -76,12 +76,6 @@
     <string name="wikis_editor_edit">Hariri</string>
     <string name="wikis_editor_insert">Ingiza</string>
     <string name="wikis_editor_attachments">Viambatisho</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Futa ukurasa</string>
     <string name="wikis_editor_save">Hifadhi</string>
     <string name="wikis_editor_saving">Inahifadhi…</string>

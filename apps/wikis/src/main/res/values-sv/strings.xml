@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Redigera</string>
     <string name="wikis_editor_insert">Infoga</string>
     <string name="wikis_editor_attachments">Bilagor</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Ta bort sida</string>
     <string name="wikis_editor_save">Spara</string>
     <string name="wikis_editor_saving">Sparar…</string>

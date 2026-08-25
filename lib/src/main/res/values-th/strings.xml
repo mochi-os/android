@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">ไฟล์แนบไม่พร้อมใช้งานชั่วคราว</string>
     <string name="common_unavailable">ไม่พร้อมใช้งาน</string>
     <string name="common_not_found">ไม่พบ</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

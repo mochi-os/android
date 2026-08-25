@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">Ceanglachan nach eil ri fhaighinn an-dràsta</string>
     <string name="common_unavailable">Cha eil ri làimh</string>
     <string name="common_not_found">Cha deach a lorg</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Cuir in eagar</string>
     <string name="wikis_editor_insert">Cuir isteach</string>
     <string name="wikis_editor_attachments">Ceangaltáin</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Scrios leathanach</string>
     <string name="wikis_editor_save">Sábháil</string>
     <string name="wikis_editor_saving">Á shábháil…</string>

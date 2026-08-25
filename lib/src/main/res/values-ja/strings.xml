@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">添付ファイルは一時的に利用できません</string>
     <string name="common_unavailable">利用不可</string>
     <string name="common_not_found">見つかりません</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

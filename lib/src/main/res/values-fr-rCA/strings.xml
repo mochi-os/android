@@ -309,4 +309,10 @@
     <string name="notifications_category_unassigned">Non assigné</string>
     <string name="lightbox_comments">Commentaires</string>
     <string name="common_not_found">Introuvable</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

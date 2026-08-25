@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">ແກ້ໄຂ</string>
     <string name="wikis_editor_insert">ແຊກ</string>
     <string name="wikis_editor_attachments">ໄຟລ໌ແນບ</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">ລົບໜ້າ</string>
     <string name="wikis_editor_save">ບັນທຶກ</string>
     <string name="wikis_editor_saving">ກຳລັງບັນທຶກ…</string>

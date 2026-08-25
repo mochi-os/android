@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">संलग्नक अस्थायी रूपमा उपलब्ध छैन</string>
     <string name="common_unavailable">अनुपलब्ध</string>
     <string name="common_not_found">फेला परेन</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

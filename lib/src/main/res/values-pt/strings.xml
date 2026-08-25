@@ -335,4 +335,10 @@
     <string name="common_attachment_unavailable">Anexo temporariamente indisponível</string>
     <string name="common_unavailable">Indisponível</string>
     <string name="common_not_found">Não encontrado</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

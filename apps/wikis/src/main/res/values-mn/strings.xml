@@ -77,12 +77,6 @@
     <string name="wikis_editor_edit">Засах</string>
     <string name="wikis_editor_insert">Оруулах</string>
     <string name="wikis_editor_attachments">Хавсралтууд</string>
-    <string name="wikis_editor_format_bold">Bold</string>
-    <string name="wikis_editor_format_italic">Italic</string>
-    <string name="wikis_editor_format_link">Link</string>
-    <string name="wikis_editor_format_heading">Heading</string>
-    <string name="wikis_editor_format_code">Code</string>
-    <string name="wikis_editor_format_list">Bullet list</string>
     <string name="wikis_editor_delete">Хуудас устгах</string>
     <string name="wikis_editor_save">Хадгалах</string>
     <string name="wikis_editor_saving">Хадгалж байна…</string>

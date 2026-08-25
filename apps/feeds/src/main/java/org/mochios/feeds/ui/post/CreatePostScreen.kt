@@ -65,6 +65,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -73,6 +75,7 @@ import org.mochios.android.model.PlaceData
 import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
+import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
@@ -98,6 +101,14 @@ fun CreatePostScreen(
     val availableFeeds by viewModel.availableFeeds.collectAsState()
     val selectedFeed by viewModel.selectedFeed.collectAsState()
     val body by viewModel.body.collectAsState()
+    // The toolbar marks up a selection, so the cursor has to live here rather
+    // than inside the field.
+    var bodyField by remember { mutableStateOf(TextFieldValue(body)) }
+    LaunchedEffect(body) {
+        if (body != bodyField.text) {
+            bodyField = TextFieldValue(body, TextRange(body.length))
+        }
+    }
     val attachments by viewModel.attachments.collectAsState()
     val existingAttachments by viewModel.existingAttachments.collectAsState()
     val removedExistingIds by viewModel.removedExistingIds.collectAsState()
@@ -247,8 +258,11 @@ fun CreatePostScreen(
             )
             Spacer(modifier = Modifier.height(8.dp))
             MentionTextField(
-                value = body,
-                onValueChange = { text -> viewModel.setBody(text) },
+                value = bodyField,
+                onValueChange = { updated ->
+                    bodyField = updated
+                    if (updated.text != body) viewModel.setBody(updated.text)
+                },
                 onSearch = { query -> viewModel.searchMembers(query) },
                 placeholder = { Text(stringResource(R.string.feeds_markdown_supported)) },
                 modifier = Modifier
@@ -256,6 +270,13 @@ fun CreatePostScreen(
                     .height(250.dp),
                 maxLines = 20,
                 fillHeight = true
+            )
+            MarkdownToolbar(
+                body = bodyField,
+                onBodyChange = { updated ->
+                    bodyField = updated
+                    if (updated.text != body) viewModel.setBody(updated.text)
+                },
             )
             Spacer(modifier = Modifier.height(16.dp))
 

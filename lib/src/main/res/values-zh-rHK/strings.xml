@@ -310,4 +310,10 @@
     <string name="common_not_found">找不到</string>
     <string name="profile_save_name">儲存名稱</string>
     <string name="profile_fingerprint">指紋</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
 </resources>

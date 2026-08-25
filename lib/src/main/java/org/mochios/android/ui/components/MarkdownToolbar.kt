@@ -3,23 +3,22 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-package org.mochios.wikis.ui.editor
+package org.mochios.android.ui.components
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.FormatBold
 import androidx.compose.material.icons.filled.FormatItalic
 import androidx.compose.material.icons.filled.FormatListBulleted
-import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Title
 import androidx.compose.material3.Icon
@@ -31,25 +30,27 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.wikis.R
+import org.mochios.android.R
 
 /**
- * The strip under the content field: the markdown a page is written in, then
- * the two ways to bring a file into it.
+ * The strip under a markdown field: the marks a body is written in, applied to
+ * whatever the writer has selected.
  *
  * Every button acts on the cursor rather than the end of the text, so it marks
- * up what the user has selected and leaves them where they can keep typing.
- * The row scrolls sideways because a narrow phone will not hold all of it.
+ * up the selection and leaves the writer where they can keep typing. The row
+ * scrolls sideways because a narrow phone will not hold all of it.
+ *
+ * [actions] is for what a particular screen can do that the marks cannot - a
+ * wiki reaching for one of its attachments, say. Put a
+ * [MarkdownToolbarSeparator] first: the marks and the errand are different
+ * kinds of thing and should not read as one run of buttons.
  */
 @Composable
 fun MarkdownToolbar(
     body: TextFieldValue,
     onBodyChange: (TextFieldValue) -> Unit,
-    onInsertAttachment: () -> Unit,
-    onOpenAttachments: () -> Unit,
-    attachmentsEnabled: Boolean,
     modifier: Modifier = Modifier,
+    actions: @Composable RowScope.() -> Unit = {},
 ) {
     Row(
         modifier = modifier
@@ -58,44 +59,40 @@ fun MarkdownToolbar(
         horizontalArrangement = Arrangement.spacedBy(2.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        ToolButton(Icons.Filled.FormatBold, R.string.wikis_editor_format_bold) {
+        ToolButton(Icons.Filled.FormatBold, R.string.format_bold) {
             onBodyChange(body.wrappedIn("**"))
         }
-        ToolButton(Icons.Filled.FormatItalic, R.string.wikis_editor_format_italic) {
+        ToolButton(Icons.Filled.FormatItalic, R.string.format_italic) {
             onBodyChange(body.wrappedIn("_"))
         }
-        ToolButton(Icons.Filled.Link, R.string.wikis_editor_format_link) {
+        ToolButton(Icons.Filled.Link, R.string.format_link) {
             onBodyChange(body.linked())
         }
-        ToolButton(Icons.Filled.Title, R.string.wikis_editor_format_heading) {
+        ToolButton(Icons.Filled.Title, R.string.format_heading) {
             onBodyChange(body.linesPrefixed("## "))
         }
-        ToolButton(Icons.Filled.Code, R.string.wikis_editor_format_code) {
+        ToolButton(Icons.Filled.Code, R.string.format_code) {
             onBodyChange(body.wrappedIn("`"))
         }
-        ToolButton(Icons.Filled.FormatListBulleted, R.string.wikis_editor_format_list) {
+        ToolButton(Icons.Filled.FormatListBulleted, R.string.format_list) {
             onBodyChange(body.linesPrefixed("- "))
         }
-
-        // Marking up text and reaching for a file are different errands.
-        VerticalDivider(
-            modifier = Modifier
-                .padding(horizontal = 6.dp)
-                .height(20.dp),
-        )
-
-        ToolButton(Icons.Filled.Image, R.string.wikis_editor_insert, onClick = onInsertAttachment)
-        ToolButton(
-            Icons.Filled.AttachFile,
-            R.string.wikis_editor_attachments,
-            enabled = attachmentsEnabled,
-            onClick = onOpenAttachments,
-        )
+        actions()
     }
 }
 
+/** The rule between the marks and whatever a screen adds after them. */
 @Composable
-private fun ToolButton(
+fun MarkdownToolbarSeparator() {
+    VerticalDivider(
+        modifier = Modifier
+            .padding(horizontal = 6.dp)
+            .height(20.dp),
+    )
+}
+
+@Composable
+private fun RowScope.ToolButton(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     labelRes: Int,
     enabled: Boolean = true,
@@ -113,7 +110,7 @@ private fun ToolButton(
  * opens at the cursor and leaves it between them, so the next keystroke lands
  * inside the markers rather than after them.
  */
-internal fun TextFieldValue.wrappedIn(
+fun TextFieldValue.wrappedIn(
     prefix: String,
     suffix: String = prefix,
 ): TextFieldValue {
@@ -128,7 +125,7 @@ internal fun TextFieldValue.wrappedIn(
  * A markdown link, with the half the user still has to write left selected -
  * the address when they had text in hand, the text when they did not.
  */
-internal fun TextFieldValue.linked(): TextFieldValue {
+fun TextFieldValue.linked(): TextFieldValue {
     val start = selection.min
     val end = selection.max
     val selected = text.substring(start, end)
@@ -146,7 +143,7 @@ internal fun TextFieldValue.linked(): TextFieldValue {
  * Put [marker] at the head of every line the selection touches, skipping any
  * that already carries it so a second tap does not stack markers up.
  */
-internal fun TextFieldValue.linesPrefixed(marker: String): TextFieldValue {
+fun TextFieldValue.linesPrefixed(marker: String): TextFieldValue {
     val lineStart = if (selection.min == 0) {
         0
     } else {
