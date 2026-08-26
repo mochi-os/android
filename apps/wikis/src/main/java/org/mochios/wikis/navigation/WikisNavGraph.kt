@@ -20,7 +20,6 @@ import org.mochios.wikis.ui.history.RevisionViewScreen
 import org.mochios.wikis.ui.join.JoinWikiScreen
 import org.mochios.wikis.ui.list.CreateWikiScreen
 import org.mochios.wikis.ui.list.WikiListScreen
-import org.mochios.wikis.ui.page.PageDeleteScreen
 import org.mochios.wikis.ui.page.PageRevertScreen
 import org.mochios.wikis.ui.page.PageViewScreen
 import org.mochios.wikis.ui.page.WikiHomeScreen
@@ -46,7 +45,6 @@ object WikisApp {
     fun pageHistory(wikiId: String, page: String) = "wikis/$wikiId/$page/history"
     fun pageRevision(wikiId: String, page: String, version: Int) =
         "wikis/$wikiId/$page/history/$version"
-    fun pageDelete(wikiId: String, page: String) = "wikis/$wikiId/$page/delete"
     fun pageRevert(wikiId: String, page: String, version: Int) =
         "wikis/$wikiId/$page/revert?version=$version"
     fun comments(wikiId: String, page: String) = "wikis/$wikiId/$page/comments"
@@ -67,7 +65,6 @@ object WikisApp {
     const val NEW_PAGE = "wikis/{wikiId}/new?slug={slug}"
     const val PAGE_HISTORY = "wikis/{wikiId}/{page}/history"
     const val PAGE_REVISION = "wikis/{wikiId}/{page}/history/{version}"
-    const val PAGE_DELETE = "wikis/{wikiId}/{page}/delete"
     const val PAGE_REVERT = "wikis/{wikiId}/{page}/revert?version={version}"
     const val COMMENTS = "wikis/{wikiId}/{page}/comments"
     const val SETTINGS = "wikis/{wikiId}/settings?tab={tab}"
@@ -191,16 +188,6 @@ fun NavGraphBuilder.wikisNavGraph(
         ),
     ) {
         RevisionViewScreen(navController)
-    }
-
-    composable(
-        route = WikisApp.PAGE_DELETE,
-        arguments = listOf(
-            navArgument("wikiId") { type = NavType.StringType },
-            navArgument("page") { type = NavType.StringType },
-        ),
-    ) {
-        PageDeleteScreen(navController)
     }
 
     composable(

@@ -32,6 +32,9 @@ sealed class PageViewEvent {
 
     /** Display a transient error toast (already localised). */
     data class ShowError(val error: MochiError) : PageViewEvent()
+
+    /** The page is gone; the screen showing it has to leave. */
+    object Deleted : PageViewEvent()
 }
 
 data class PageViewUiState(
@@ -43,6 +46,7 @@ data class PageViewUiState(
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
     val notFound: Boolean = false,
+    val isDeleting: Boolean = false,
 )
 
 @HiltViewModel
@@ -117,6 +121,25 @@ class PageViewModel @Inject constructor(
                     isLoading = false,
                     error = e.toMochiError(),
                 )
+            }
+        }
+    }
+
+    /**
+     * Delete the page this screen is showing. Confirmed by the dialog first —
+     * this is the yes, not the question.
+     */
+    fun delete() {
+        if (_uiState.value.isDeleting) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isDeleting = true)
+            try {
+                repository.deletePage(wikiId, slug)
+                _uiState.value = _uiState.value.copy(isDeleting = false)
+                _events.emit(PageViewEvent.Deleted)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isDeleting = false)
+                _events.emit(PageViewEvent.ShowError(e.toMochiError()))
             }
         }
     }

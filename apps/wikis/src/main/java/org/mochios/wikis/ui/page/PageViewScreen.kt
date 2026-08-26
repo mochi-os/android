@@ -8,6 +8,7 @@ package org.mochios.wikis.ui.page
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -106,7 +107,12 @@ fun PageViewScreen(
     val snackbar = remember { SnackbarHostState() }
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
+    val deletedMsg = stringResource(R.string.wikis_delete_page_success)
     val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
+
+    // Declared ahead of the event collector below, which closes the dialog when
+    // the delete it confirmed comes back.
+    var showDeleteDialog by remember { mutableStateOf(false) }
 
     // Persist the last-viewed wiki and page so a fresh launch lands back here.
     LaunchedEffect(viewModel.wikiId, viewModel.slug) {
@@ -132,6 +138,15 @@ fun PageViewScreen(
                 }
                 is PageViewEvent.ShowError -> {
                     snackbar.showSnackbar(event.error.userMessage())
+                }
+                PageViewEvent.Deleted -> {
+                    showDeleteDialog = false
+                    // A toast, not the snackbar: this screen is on its way out
+                    // and would take a snackbar of its own down with it.
+                    Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                    navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
+                        popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = true }
+                    }
                 }
             }
         }
@@ -256,9 +271,7 @@ fun PageViewScreen(
                                 },
                                 onDelete = {
                                     menuExpanded = false
-                                    navController.navigate(
-                                        WikisApp.pageDelete(viewModel.wikiId, viewModel.slug)
-                                    )
+                                    showDeleteDialog = true
                                 },
                                 onTags = {
                                     menuExpanded = false
@@ -409,6 +422,28 @@ fun PageViewScreen(
             dismissText = stringResource(MochiR.string.common_cancel),
             onDismiss = { unsubscribeDialogOpen = false },
             dismissEnabled = !isUnsubscribing,
+        )
+    }
+
+    if (showDeleteDialog) {
+        // A confirmation is a question, not a place: it asks over the page the
+        // reader is already on, rather than sending them to a screen of its own.
+        MochiAlertDialog(
+            onDismissRequest = { if (!state.isDeleting) showDeleteDialog = false },
+            title = stringResource(R.string.wikis_delete_page_title),
+            text = stringResource(
+                R.string.wikis_delete_page_message,
+                // The slug names the page too, so a reader with two similarly
+                // titled pages can tell which one they are about to lose.
+                state.page?.title?.takeIf { it.isNotBlank() } ?: viewModel.slug,
+                viewModel.slug,
+            ),
+            confirmText = stringResource(R.string.wikis_delete_page_confirm),
+            onConfirm = { viewModel.delete() },
+            confirmLoading = state.isDeleting,
+            destructive = true,
+            dismissText = stringResource(R.string.wikis_delete_page_cancel),
+            dismissEnabled = !state.isDeleting,
         )
     }
 

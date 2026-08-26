@@ -60,6 +60,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -117,6 +118,7 @@ fun PageEditorScreen(
     var savedCursor by remember { mutableStateOf(0) }
     var insertDialogOpen by remember { mutableStateOf(false) }
     var menuOpen by remember { mutableStateOf(false) }
+    var showDeleteDialog by remember { mutableStateOf(false) }
     val canDeletePage = !viewModel.isNew && state.permissions.delete
 
     // Pre-resolve i18n strings so the ViewModel can build localised toasts
@@ -152,6 +154,7 @@ fun PageEditorScreen(
                     }
                 }
                 PageEditorEvent.Deleted -> {
+                    showDeleteDialog = false
                     Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
                     navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
                         popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = true }
@@ -216,16 +219,12 @@ fun PageEditorScreen(
                                     text = { Text(stringResource(R.string.wikis_editor_delete)) },
                                     onClick = {
                                         menuOpen = false
-                                        val slug = state.slug.ifEmpty { return@MochiDropdownMenuItem }
-                                        navController.navigate(
-                                            WikisApp.pageDelete(viewModel.wikiId, slug)
-                                        )
+                                        showDeleteDialog = true
                                     },
                                     leadingIcon = {
                                         Icon(Icons.Filled.Delete, contentDescription = null)
                                     },
                                     enabled = !state.isDeleting,
-                                    destructive = true,
                                 )
                             }
                         }
@@ -373,6 +372,27 @@ fun PageEditorScreen(
             )
         },
     )
+
+    if (showDeleteDialog) {
+        // Deleting asks over the editor rather than sending the writer to a
+        // screen of its own, which would have thrown away whatever they had
+        // typed on the way there.
+        MochiAlertDialog(
+            onDismissRequest = { if (!state.isDeleting) showDeleteDialog = false },
+            title = stringResource(R.string.wikis_delete_page_title),
+            text = stringResource(
+                R.string.wikis_delete_page_message,
+                state.originalTitle.ifEmpty { state.slug },
+                state.slug,
+            ),
+            confirmText = stringResource(R.string.wikis_delete_page_confirm),
+            onConfirm = { viewModel.delete(deleteFailedMsg) },
+            confirmLoading = state.isDeleting,
+            destructive = true,
+            dismissText = stringResource(R.string.wikis_delete_page_cancel),
+            dismissEnabled = !state.isDeleting,
+        )
+    }
 }
 
 
