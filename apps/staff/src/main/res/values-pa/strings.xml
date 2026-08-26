@@ -307,7 +307,7 @@
     <string name="staff_listings_reject">ਅਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="staff_listings_rejected_toast">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</string>
     <string name="staff_listings_remove">ਹਟਾਓ</string>
-    <string name="staff_listings_removed_toast">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string name="staff_listings_removed_toast">ਲਿਸਟਿੰਗ ਹਟਾਈ ਗਈ</string>
     <string name="staff_listings_search_clear">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>
     <string name="staff_listings_search_placeholder">ਸਿਰਲੇਖ ਜਾਂ ਵੇਰਵਾ ਖੋਜੋ</string>
     <string name="staff_listings_status_active">ਕਿਰਿਆਸ਼ੀਲ</string>

@@ -443,7 +443,7 @@
     <string name="market_sidebar_buying">Գնում</string>
     <string name="market_sidebar_home">Տուն</string>
     <string name="market_sidebar_inbox">Մուտքային</string>
-    <string name="market_sidebar_listings">Բեռնվում է diff-ը...</string>
+    <string name="market_sidebar_listings">Հայտարարություններ</string>
     <string name="market_sidebar_messages">Մետատվյալներ և կոնֆիգուրացիա</string>
     <string name="market_sidebar_purchases">Գնումներ</string>
     <string name="market_sidebar_reviews">Կարծիքներ</string>

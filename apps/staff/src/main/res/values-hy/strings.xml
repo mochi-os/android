@@ -234,7 +234,7 @@
     <string name="staff_dashboard_order_fallback">Պատվեր #%1$s</string>
     <string name="staff_dashboard_system">Համակարգ</string>
     <string name="staff_dashboard_tab_audit">Նույնականացման թոքեններ</string>
-    <string name="staff_dashboard_tab_listings">Բեռնվում է diff-ը...</string>
+    <string name="staff_dashboard_tab_listings">Հայտարարություններ</string>
     <string name="staff_dashboard_tab_moderation">Մոդերացիայի բաժիններ</string>
     <string name="staff_dashboard_tab_orders">Պատվերներ</string>
     <string name="staff_dashboard_tab_signups">Գրանցումներ</string>
@@ -325,7 +325,7 @@
     <string name="staff_listings_reject">Մերժել</string>
     <string name="staff_listings_rejected_toast">Բեռնել ավելին</string>
     <string name="staff_listings_remove">Հեռացնել</string>
-    <string name="staff_listings_removed_toast">Բեռնվում է հավելվածը...</string>
+    <string name="staff_listings_removed_toast">Հայտարարությունը հեռացվեց</string>
     <string name="staff_listings_search_clear">Մաքրել ընտրությունը</string>
     <string name="staff_listings_search_placeholder">Որոնել վերնագիր կամ նկարագրություն</string>
     <string name="staff_listings_seller_unknown">Անհայտ վաճառող</string>
@@ -337,7 +337,7 @@
     <string name="staff_listings_status_removed">Հեռացված է</string>
     <string name="staff_listings_status_sold">Վաճառված</string>
     <string name="staff_listings_submitting">Ուղարկվում է…</string>
-    <string name="staff_listings_title">Բեռնվում է diff-ը...</string>
+    <string name="staff_listings_title">Հայտարարություններ</string>
     <string name="staff_listings_total_count">Ընդամենը՝ %1$d</string>
     <string name="staff_moderation_empty">Մոդերացիայի գրառումներ չկան</string>
     <string name="staff_moderation_filter_clear">Մաքրել զտիչը</string>
@@ -424,7 +424,7 @@
     <string name="staff_sidebar_config">Կարգավորել դասի կարգավորումները</string>
     <string name="staff_sidebar_dashboard">Ամսաթիվ</string>
     <string name="staff_sidebar_disputes">Վեճեր</string>
-    <string name="staff_sidebar_listings">Բեռնվում է diff-ը...</string>
+    <string name="staff_sidebar_listings">Հայտարարություններ</string>
     <string name="staff_sidebar_management">Բոլորը նշել որպես կարդացված</string>
     <string name="staff_sidebar_market">Առավելագույն առաջարկ (ընտրովի)</string>
     <string name="staff_sidebar_moderation">Մոդերացիայի մատյան</string>
