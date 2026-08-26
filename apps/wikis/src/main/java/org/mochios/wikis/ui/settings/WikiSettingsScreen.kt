@@ -12,6 +12,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.SubdirectoryArrowRight
+import androidx.compose.material.icons.outlined.CloudSync
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -21,6 +25,8 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
+import androidx.compose.material3.TabRowDefaults
+import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -31,15 +37,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import org.mochios.android.R as MochiR
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -109,7 +117,10 @@ fun WikiSettingsScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
-            if (state.isLoading && state.wiki == null) {
+            val error = state.error
+            if (state.wiki == null && error != null) {
+                ErrorState(error = error, onRetry = viewModel::loadInfo)
+            } else if (state.wiki == null) {
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center,
@@ -120,6 +131,15 @@ fun WikiSettingsScreen(
                 TabRow(
                     selectedTabIndex = activeIndex,
                     modifier = Modifier.fillMaxWidth(),
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    // Primary colour is reserved for the selected tab's
+                    // divider; the labels stay neutral.
+                    indicator = { tabPositions ->
+                        TabRowDefaults.SecondaryIndicator(
+                            modifier = Modifier.tabIndicatorOffset(tabPositions[activeIndex]),
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                    },
                 ) {
                     tabKeys.forEach { tab ->
                         Tab(
@@ -134,6 +154,9 @@ fun WikiSettingsScreen(
                                     }
                                 }
                             },
+                            selectedContentColor = MaterialTheme.colorScheme.onSurface,
+                            unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                            icon = { Icon(tab.icon, contentDescription = null) },
                             text = {
                                 Text(
                                     text = stringResource(tab.titleRes),
@@ -165,11 +188,20 @@ fun WikiSettingsScreen(
 
 /**
  * Stable tab identity. The [routeKey] is the value embedded in the URL
- * (e.g. `?tab=access`), and the [titleRes] is the localised label.
+ * (e.g. `?tab=access`), the [titleRes] is the localised label, and [icon] is
+ * what the tab is recognised by before the label is read.
  */
-internal enum class SettingsTabKey(val routeKey: String, val titleRes: Int) {
-    Settings("settings", R.string.wikis_settings_tab_settings),
-    Redirects("redirects", R.string.wikis_settings_tab_redirects),
-    Access("access", R.string.wikis_settings_tab_access),
-    Replicas("replicas", R.string.wikis_settings_tab_replicas),
+internal enum class SettingsTabKey(
+    val routeKey: String,
+    val titleRes: Int,
+    val icon: ImageVector,
+) {
+    Settings("settings", R.string.wikis_settings_tab_settings, Icons.Outlined.Settings),
+    Redirects(
+        "redirects",
+        R.string.wikis_settings_tab_redirects,
+        Icons.Outlined.SubdirectoryArrowRight,
+    ),
+    Access("access", R.string.wikis_settings_tab_access, Icons.Outlined.Shield),
+    Replicas("replicas", R.string.wikis_settings_tab_replicas, Icons.Outlined.CloudSync),
 }
