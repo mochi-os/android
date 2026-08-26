@@ -1090,6 +1090,7 @@ private fun AttachmentComments(
         if (canComment) {
             ReplyBanner(replyTo, onClear = onClearReply)
             ComposeBar(
+                showDivider = false,
                 value = draft,
                 onValueChange = { draft = it },
                 onSend = {

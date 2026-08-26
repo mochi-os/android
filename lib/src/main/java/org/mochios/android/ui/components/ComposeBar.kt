@@ -36,6 +36,7 @@ import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -145,6 +146,10 @@ data class ComposeBarAttachments(
  * Mentions: supply [onSearchMentions] and the field becomes a
  * [MentionTextField]; otherwise it is a plain [MochiTextField].
  *
+ * @param showDivider draw a hairline along the bar's top edge, which separates
+ *   it from whatever it sits under. Pass false inside a bottom sheet or the
+ *   lightbox panel: those draw their own edge, and a second one reads as a
+ *   seam.
  * @param sendOnImeAction make the keyboard's action key send, and drop focus
  *   afterwards. Suits a single-line bar (the game chat pill); a multi-line
  *   comment field wants the return key to insert a newline instead.
@@ -179,6 +184,7 @@ fun ComposeBar(
     tonalElevation: Dp = 0.dp,
     shadowElevation: Dp = 0.dp,
     windowInsets: WindowInsets = ComposeBarDefaults.WindowInsets,
+    showDivider: Boolean = true,
     banner: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable RowScope.() -> Unit)? = null,
 ) {
@@ -209,116 +215,121 @@ fun ComposeBar(
         tonalElevation = tonalElevation,
         shadowElevation = shadowElevation,
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .windowInsetsPadding(appliedInsets)
-                .padding(horizontal = 8.dp, vertical = 8.dp),
-        ) {
-            banner?.invoke()
-
-            if (attachments != null && pending.isNotEmpty()) {
-                FlowRow(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    pending.forEachIndexed { index, uri ->
-                        val label = rememberFileLabel(
-                            uri,
-                            attachments.resolveFileName,
-                            attachments.fallbackLabel,
-                        )
-                        AttachmentChip(
-                            label = label,
-                            uri = uri,
-                            kind = rememberFileKind(uri, label),
-                            removeLabel = attachments.removeLabel,
-                            moveUpLabel = attachments.moveUpLabel.takeIf {
-                                attachments.onMove != null && index > 0
-                            },
-                            moveDownLabel = attachments.moveDownLabel.takeIf {
-                                attachments.onMove != null && index < pending.lastIndex
-                            },
-                            onMoveUp = { attachments.onMove?.invoke(uri, -1) },
-                            onMoveDown = { attachments.onMove?.invoke(uri, 1) },
-                            onRemove = { attachments.onRemove(uri) },
-                        )
-                    }
-                }
-                Spacer(modifier = Modifier.height(4.dp))
+        Column(modifier = Modifier.fillMaxWidth()) {
+            if (showDivider) {
+                HorizontalDivider()
             }
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .windowInsetsPadding(appliedInsets)
+                    .padding(horizontal = 8.dp, vertical = 8.dp),
+            ) {
+                banner?.invoke()
 
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                if (filePicker != null && attachments != null) {
-                    MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = enabled) {
-                        Icon(Icons.Default.AttachFile, contentDescription = attachments.addLabel)
+                if (attachments != null && pending.isNotEmpty()) {
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        pending.forEachIndexed { index, uri ->
+                            val label = rememberFileLabel(
+                                uri,
+                                attachments.resolveFileName,
+                                attachments.fallbackLabel,
+                            )
+                            AttachmentChip(
+                                label = label,
+                                uri = uri,
+                                kind = rememberFileKind(uri, label),
+                                removeLabel = attachments.removeLabel,
+                                moveUpLabel = attachments.moveUpLabel.takeIf {
+                                    attachments.onMove != null && index > 0
+                                },
+                                moveDownLabel = attachments.moveDownLabel.takeIf {
+                                    attachments.onMove != null && index < pending.lastIndex
+                                },
+                                onMoveUp = { attachments.onMove?.invoke(uri, -1) },
+                                onMoveDown = { attachments.onMove?.invoke(uri, 1) },
+                                onRemove = { attachments.onRemove(uri) },
+                            )
+                        }
                     }
+                    Spacer(modifier = Modifier.height(4.dp))
                 }
 
-                val fieldModifier = Modifier
-                    .weight(1f)
-                    // hasFocus, not isFocused: the mention field puts the focus
-                    // on a child of what this modifier is applied to.
-                    .onFocusChanged { fieldFocused = it.hasFocus }
-                    .then(focusRequester?.let { Modifier.focusRequester(it) } ?: Modifier)
-                val placeholderSlot: (@Composable () -> Unit)? =
-                    placeholder?.let { { Text(it) } }
-
-                val submit = {
-                    if (canSend) {
-                        onSend()
-                        if (sendOnImeAction) focusManager.clearFocus()
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (filePicker != null && attachments != null) {
+                        MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = enabled) {
+                            Icon(Icons.Default.AttachFile, contentDescription = attachments.addLabel)
+                        }
                     }
-                }
-                val keyboardOptions =
-                    if (sendOnImeAction) KeyboardOptions(imeAction = ImeAction.Send)
-                    else KeyboardOptions.Default
 
-                if (onSearchMentions != null) {
-                    // MentionTextField tracks its own selection, so the plain
-                    // text is all it can round-trip.
-                    MentionTextField(
-                        value = value.text,
-                        onValueChange = { onValueChange(TextFieldValue(it)) },
-                        onSearch = onSearchMentions,
-                        modifier = fieldModifier,
-                        placeholder = placeholderSlot,
-                        minLines = minLines,
-                        maxLines = maxLines,
-                    )
-                } else {
-                    MochiTextField(
-                        value = value,
-                        onValueChange = onValueChange,
-                        modifier = fieldModifier,
-                        placeholder = placeholderSlot,
-                        enabled = enabled,
-                        minLines = minLines,
-                        maxLines = maxLines,
-                        keyboardOptions = keyboardOptions,
-                        keyboardActions = KeyboardActions(onSend = { submit() }),
-                    )
-                }
+                    val fieldModifier = Modifier
+                        .weight(1f)
+                        // hasFocus, not isFocused: the mention field puts the focus
+                        // on a child of what this modifier is applied to.
+                        .onFocusChanged { fieldFocused = it.hasFocus }
+                        .then(focusRequester?.let { Modifier.focusRequester(it) } ?: Modifier)
+                    val placeholderSlot: (@Composable () -> Unit)? =
+                        placeholder?.let { { Text(it) } }
 
-                trailingContent?.invoke(this)
-                Spacer(modifier = Modifier.width(8.dp))
-                MochiIconButton(onClick = submit, enabled = canSend) {
-                    if (isSending) {
-                        CircularProgressIndicator(modifier = Modifier.padding(4.dp))
+                    val submit = {
+                        if (canSend) {
+                            onSend()
+                            if (sendOnImeAction) focusManager.clearFocus()
+                        }
+                    }
+                    val keyboardOptions =
+                        if (sendOnImeAction) KeyboardOptions(imeAction = ImeAction.Send)
+                        else KeyboardOptions.Default
+
+                    if (onSearchMentions != null) {
+                        // MentionTextField tracks its own selection, so the plain
+                        // text is all it can round-trip.
+                        MentionTextField(
+                            value = value.text,
+                            onValueChange = { onValueChange(TextFieldValue(it)) },
+                            onSearch = onSearchMentions,
+                            modifier = fieldModifier,
+                            placeholder = placeholderSlot,
+                            minLines = minLines,
+                            maxLines = maxLines,
+                        )
                     } else {
-                        Icon(Icons.AutoMirrored.Filled.Send, contentDescription = sendLabel)
+                        MochiTextField(
+                            value = value,
+                            onValueChange = onValueChange,
+                            modifier = fieldModifier,
+                            placeholder = placeholderSlot,
+                            enabled = enabled,
+                            minLines = minLines,
+                            maxLines = maxLines,
+                            keyboardOptions = keyboardOptions,
+                            keyboardActions = KeyboardActions(onSend = { submit() }),
+                        )
+                    }
+
+                    trailingContent?.invoke(this)
+                    Spacer(modifier = Modifier.width(8.dp))
+                    MochiIconButton(onClick = submit, enabled = canSend) {
+                        if (isSending) {
+                            CircularProgressIndicator(modifier = Modifier.padding(4.dp))
+                        } else {
+                            Icon(Icons.AutoMirrored.Filled.Send, contentDescription = sendLabel)
+                        }
                     }
                 }
-            }
 
-            if (errorMessage != null) {
-                Text(
-                    text = errorMessage,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.padding(start = 12.dp, top = 4.dp),
-                )
+                if (errorMessage != null) {
+                    Text(
+                        text = errorMessage,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                        modifier = Modifier.padding(start = 12.dp, top = 4.dp),
+                    )
+                }
             }
         }
     }
@@ -354,6 +365,7 @@ fun ComposeBar(
     tonalElevation: Dp = 0.dp,
     shadowElevation: Dp = 0.dp,
     windowInsets: WindowInsets = ComposeBarDefaults.WindowInsets,
+    showDivider: Boolean = true,
     banner: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable RowScope.() -> Unit)? = null,
 ) {
@@ -383,6 +395,7 @@ fun ComposeBar(
         tonalElevation = tonalElevation,
         shadowElevation = shadowElevation,
         windowInsets = windowInsets,
+        showDivider = showDivider,
         banner = banner,
         trailingContent = trailingContent,
     )

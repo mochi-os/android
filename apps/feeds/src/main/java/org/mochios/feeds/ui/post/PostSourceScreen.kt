@@ -592,6 +592,7 @@ private fun PostSourceSheet(
 
         if (permissions.comment) {
             ComposeBar(
+                showDivider = false,
                 value = commentText,
                 onValueChange = onCommentTextChange,
                 onSend = onSendComment,

@@ -1005,6 +1005,7 @@ fun FeedScreen(
                     // with @-mentions). The reply context is shown above, so the
                     // input bar's own indicator is suppressed.
                     ComposeBar(
+                        showDivider = false,
                         value = commentDraft,
                         onValueChange = { value -> viewModel.setCommentDraft(value) },
                         onSend = { viewModel.sendComment() },

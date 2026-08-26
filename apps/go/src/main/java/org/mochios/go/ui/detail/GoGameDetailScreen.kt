@@ -506,6 +506,7 @@ fun GoGameDetailScreen(
                                 modifier = Modifier.weight(1f),
                             )
                             ComposeBar(
+                                showDivider = false,
                                 value = composer.value,
                                 onValueChange = { composer.value = it },
                                 onSend = {

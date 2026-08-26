@@ -305,6 +305,7 @@ fun WikiCommentThread(
                         HorizontalDivider()
                         Spacer(Modifier.height(6.dp))
                         CommentForm(
+                            showDivider = false,
                             resolveFileName = resolveFileName,
                             initialText = replyDraft,
                             onSubmit = { _, files ->
