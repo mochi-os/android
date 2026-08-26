@@ -216,6 +216,11 @@
     <string name="wikis_access_owner_label">உரிமையாளர்</string>
     <string name="wikis_access_tab_users">பயனர்கள்</string>
     <string name="wikis_access_tab_groups">குழுக்கள்</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">குழுக்கள் கிடைக்கவில்லை</string>
     <string name="wikis_access_set_success">அணுகல் புதுப்பிக்கப்பட்டது</string>
     <string name="wikis_access_revoke_success">அணுகல் அகற்றப்பட்டது</string>

@@ -283,6 +283,11 @@
     <string name="wikis_access_tab_users">用戶</string>
     <string name="wikis_replicas_never_synced">從未</string>
     <string name="wikis_access_tab_groups">群組</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
 
     <string name="wikis_access_level_label">權限</string>
     <string name="wikis_access_level_edit">編輯同檢視</string>

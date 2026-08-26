@@ -216,6 +216,11 @@
     <string name="wikis_access_owner_label">Apuq</string>
     <string name="wikis_access_tab_users">Apaykachaqkuna</string>
     <string name="wikis_access_tab_groups">Huñukuna</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Mana grupokuna atikuq</string>
     <string name="wikis_access_set_success">Yaykuy musuqchasqa</string>
     <string name="wikis_access_revoke_success">Yaykuy hurqusqa</string>

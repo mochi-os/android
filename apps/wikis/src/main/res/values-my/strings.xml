@@ -216,6 +216,11 @@
     <string name="wikis_access_owner_label">ပိုင်ရှင်</string>
     <string name="wikis_access_tab_users">သုံးစွဲသူများ</string>
     <string name="wikis_access_tab_groups">အုပ်စုများ</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
     <string name="wikis_access_set_success">ဝင်ရောက်ခွင့် ပြောင်းပြီး</string>
     <string name="wikis_access_revoke_success">ဝင်ရောက်ခွင့် ဖယ်ရှားပြီး</string>

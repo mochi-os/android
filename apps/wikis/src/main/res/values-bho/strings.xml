@@ -216,6 +216,11 @@
     <string name="wikis_access_owner_label">मालिक</string>
     <string name="wikis_access_tab_users">उपयोगकर्ता सब</string>
     <string name="wikis_access_tab_groups">समूह</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">कौनो ग्रुप उपलब्ध नइखे</string>
     <string name="wikis_access_set_success">पहुंच अद्यतन कइल गइल</string>
     <string name="wikis_access_revoke_success">पहुंच हटा दिहल गइल</string>

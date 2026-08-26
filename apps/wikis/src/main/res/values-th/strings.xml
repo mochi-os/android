@@ -216,6 +216,11 @@
     <string name="wikis_access_owner_label">เจ้าของ</string>
     <string name="wikis_access_tab_users">ผู้ใช้</string>
     <string name="wikis_access_tab_groups">กลุ่ม</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">ไม่มีกลุ่มที่ใช้งานได้</string>
     <string name="wikis_access_set_success">อัปเดตการเข้าถึงแล้ว</string>
     <string name="wikis_access_revoke_success">ลบการเข้าถึงแล้ว</string>
