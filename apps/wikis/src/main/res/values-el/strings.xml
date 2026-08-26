@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Προβολή πλέγματος</string>
     <string name="wikis_attachments_view_list">Προβολή λίστας</string>
     <string name="wikis_attachments_copy_embed">Αντιγραφή συνδέσμου ενσωμάτωσης</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Ο σύνδεσμος ενσωμάτωσης αντιγράφηκε</string>
     <string name="wikis_attachments_delete">Διαγραφή</string>
     <string name="wikis_attachments_delete_confirm_title">Διαγραφή συνημμένου</string>

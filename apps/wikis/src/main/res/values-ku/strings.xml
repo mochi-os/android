@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Dîmena tor</string>
     <string name="wikis_attachments_view_list">Dîmena lîsteyê</string>
     <string name="wikis_attachments_copy_embed">Girêdana embed kopî bike</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Lînka veşartî hat kopîkirin</string>
     <string name="wikis_attachments_delete">Jê bibe</string>
     <string name="wikis_attachments_delete_confirm_title">Pêvekê jê bibe</string>

@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">תצוגת רשת</string>
     <string name="wikis_attachments_view_list">תצוגת רשימה</string>
     <string name="wikis_attachments_copy_embed">העתק קישור הטמעה</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">קישור ההטמעה הועתק</string>
     <string name="wikis_attachments_delete">מחק</string>
     <string name="wikis_attachments_delete_confirm_title">מחק קובץ מצורף</string>

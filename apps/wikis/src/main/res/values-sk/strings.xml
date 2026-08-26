@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Mriežkový pohľad</string>
     <string name="wikis_attachments_view_list">Zoznamový pohľad</string>
     <string name="wikis_attachments_copy_embed">Kopírovať odkaz na vloženie</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Odkaz na vloženie skopírovaný</string>
     <string name="wikis_attachments_delete">Odstrániť</string>
     <string name="wikis_attachments_delete_confirm_title">Odstrániť prílohu</string>

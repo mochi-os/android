@@ -9,20 +9,14 @@ import android.app.DownloadManager
 import android.content.Context
 import android.net.Uri
 import android.os.Environment
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.draganddrop.dragAndDropTarget
-import androidx.compose.material.icons.outlined.Check
-import androidx.compose.material.icons.outlined.ClosedCaption
-import androidx.compose.material.icons.outlined.ContentCopy
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.ui.draganddrop.DragAndDropEvent
-import androidx.compose.ui.draganddrop.DragAndDropTarget
-import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -42,24 +36,23 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Sort
 import androidx.compose.material.icons.automirrored.filled.ViewList
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ClosedCaption
-import androidx.compose.material.icons.filled.ContentCopy
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Upload
+import androidx.compose.material.icons.outlined.ClosedCaption
+import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -79,9 +72,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draganddrop.DragAndDropEvent
+import androidx.compose.ui.draganddrop.DragAndDropTarget
+import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -96,8 +93,13 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.model.Attachment as MochiAttachment
 import org.mochios.android.model.FileKind
 import org.mochios.android.model.fileKindOf
 import org.mochios.android.ui.components.AttachmentCaptionDialog
@@ -113,14 +115,13 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.VideoFrame
+import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.NaturalCompare
-import org.mochios.android.files.FileStore
 import org.mochios.android.util.webUri
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
-import org.mochios.android.R as MochiR
 
 /**
  * Per-page attachments screen: upload, search / filter / sort, grid or list.
@@ -733,6 +734,7 @@ private fun AttachmentsGrid(
     onRequestCaption: (Attachment) -> Unit,
 ) {
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
@@ -745,18 +747,21 @@ private fun AttachmentsGrid(
                 attachment = attachment,
                 baseURL = baseURL,
                 isDeleting = deletingId == attachment.id,
-                onTap = {
+                onOpen = {
                     if (isImage(attachment.type)) {
                         onOpenImageAt(attachment.id)
                     } else {
-                        startAttachmentDownload(
-                            context = context,
-                            url = "${baseURL}attachments/${attachment.id}",
-                            name = attachment.name,
-                            mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
-                            token = token,
-                        )
+                        previewInViewer(scope, context, baseURL, attachment)
                     }
+                },
+                onDownload = {
+                    startAttachmentDownload(
+                        context = context,
+                        url = "${baseURL}attachments/${attachment.id}",
+                        name = attachment.name,
+                        mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
+                        token = token,
+                    )
                 },
                 onRequestDelete = { onRequestDelete(attachment) },
                 onRequestCaption = { onRequestCaption(attachment) },
@@ -767,7 +772,7 @@ private fun AttachmentsGrid(
 
 /**
  * Vertical list view. Each row shows a thumbnail/icon, name, size · date,
- * and trailing icons for Open / Copy embed / Delete.
+ * and one overflow menu per row.
  */
 @Composable
 private fun AttachmentsList(
@@ -780,11 +785,23 @@ private fun AttachmentsList(
     onRequestCaption: (Attachment) -> Unit,
 ) {
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
     LazyColumn(
         contentPadding = PaddingValues(vertical = 4.dp),
         modifier = Modifier.fillMaxSize(),
     ) {
         items(attachments, key = { it.id }) { attachment ->
+            // Typed: the download call answers with an id this caller has no
+            // use for, and a callback that returns one is not a click handler.
+            val download: () -> Unit = {
+                startAttachmentDownload(
+                    context = context,
+                    url = "${baseURL}attachments/${attachment.id}",
+                    name = attachment.name,
+                    mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
+                    token = token,
+                )
+            }
             AttachmentListRow(
                 attachment = attachment,
                 baseURL = baseURL,
@@ -793,15 +810,10 @@ private fun AttachmentsList(
                     if (isImage(attachment.type)) {
                         onOpenImageAt(attachment.id)
                     } else {
-                        startAttachmentDownload(
-                            context = context,
-                            url = "${baseURL}attachments/${attachment.id}",
-                            name = attachment.name,
-                            mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
-                            token = token,
-                        )
+                        previewInViewer(scope, context, baseURL, attachment)
                     }
                 },
+                onDownload = download,
                 onRequestDelete = { onRequestDelete(attachment) },
                 onRequestCaption = { onRequestCaption(attachment) },
             )
@@ -810,36 +822,39 @@ private fun AttachmentsList(
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
+/**
+ * One tile in the grid: the picture (or the kind's icon) over the name and
+ * caption, with the same overflow menu the list rows carry, at the tile's top
+ * right. Tapping the tile opens the file - the lightbox for an image, the
+ * device's own viewer for anything else - as tapping a row does. Copying the
+ * embed markdown and saving the file are the menu's.
+ */
 @Composable
 private fun AttachmentGridCell(
     attachment: Attachment,
     baseURL: String,
     isDeleting: Boolean,
-    onTap: () -> Unit,
+    onOpen: () -> Unit,
+    onDownload: () -> Unit,
     onRequestDelete: () -> Unit,
     onRequestCaption: () -> Unit,
 ) {
+    val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
-    val copyLabel = stringResource(R.string.wikis_attachments_copy_embed)
-    val deleteLabel = stringResource(R.string.wikis_attachments_delete)
-    val captionLabel = stringResource(
-        if (attachment.caption.isEmpty()) MochiR.string.attachment_caption_add
-        else MochiR.string.attachment_caption_edit
-    )
-    var menuOpen by remember { mutableStateOf(false) }
-    var copied by remember { mutableStateOf(false) }
     val format = LocalFormat.current
+    val copiedMessage = stringResource(R.string.wikis_attachments_embed_copied)
+    var menuOpen by remember { mutableStateOf(false) }
+    val copyEmbed = {
+        clipboard.setText(AnnotatedString(buildMarkdown(attachment)))
+        Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+    }
 
     Surface(
         shape = RoundedCornerShape(10.dp),
         color = MaterialTheme.colorScheme.surfaceContainerLow,
         modifier = Modifier
             .fillMaxWidth()
-            .combinedClickable(
-                onClick = onTap,
-                onLongClick = { menuOpen = true },
-            ),
+            .clickable(onClick = onOpen),
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
             Box(
@@ -862,6 +877,32 @@ private fun AttachmentGridCell(
                             .align(Alignment.Center),
                     )
                 }
+                // The menu button rides over the picture, where a tile has no
+                // room of its own for it.
+                Box(modifier = Modifier.align(Alignment.TopEnd)) {
+                    MochiIconButton(
+                        onClick = { menuOpen = true },
+                        enabled = !isDeleting,
+                    ) {
+                        Icon(
+                            Icons.Default.MoreVert,
+                            contentDescription = stringResource(
+                                MochiR.string.common_more_options
+                            ),
+                            modifier = Modifier.size(22.dp),
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    AttachmentActionsMenu(
+                        attachment = attachment,
+                        expanded = menuOpen,
+                        onDismissRequest = { menuOpen = false },
+                        onCopyEmbed = copyEmbed,
+                        onDownload = onDownload,
+                        onRequestDelete = onRequestDelete,
+                        onRequestCaption = onRequestCaption,
+                    )
+                }
             }
             Column(modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)) {
                 Text(
@@ -879,57 +920,16 @@ private fun AttachmentGridCell(
                     overflow = TextOverflow.Ellipsis,
                 )
             }
-
-            // Long-press menu
-            MochiDropdownMenu(
-                expanded = menuOpen,
-                onDismissRequest = { menuOpen = false },
-            ) {
-                MochiDropdownMenuItem(
-                    text = { Text(copyLabel) },
-                    onClick = {
-                        val markdown = buildMarkdown(attachment)
-                        clipboard.setText(AnnotatedString(markdown))
-                        copied = true
-                        menuOpen = false
-                    },
-                    leadingIcon = { Icon(if (copied) Icons.Outlined.Check else Icons.Outlined.ContentCopy, contentDescription = null) },
-                )
-                if (isImage(attachment.type)) {
-                    MochiDropdownMenuItem(
-                        text = { Text(captionLabel) },
-                        onClick = {
-                            menuOpen = false
-                            onRequestCaption()
-                        },
-                        leadingIcon = { Icon(Icons.Outlined.ClosedCaption, contentDescription = null) },
-                    )
-                }
-                MochiDropdownMenuItem(
-                    text = { Text(deleteLabel) },
-                    onClick = {
-                        menuOpen = false
-                        onRequestDelete()
-                    },
-                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                    destructive = true,
-                )
-            }
-        }
-    }
-    // Reset copied indicator after a short window so a second copy gets the
-    // same Check feedback.
-    if (copied) {
-        LaunchedEffect(copied) {
-            kotlinx.coroutines.delay(1500)
-            copied = false
         }
     }
 }
 
 /**
  * A single list row: thumbnail/icon on the left, name + "size · date" centre,
- * trailing icons for Open / Copy embed / Delete.
+ * and one overflow menu at the top right for the rest of what a file offers.
+ *
+ * Tapping the row opens the file: an image in the lightbox, anything else in
+ * whatever app the device has for it.
  */
 @Composable
 private fun AttachmentListRow(
@@ -937,14 +937,21 @@ private fun AttachmentListRow(
     baseURL: String,
     isDeleting: Boolean,
     onOpen: () -> Unit,
+    onDownload: () -> Unit,
     onRequestDelete: () -> Unit,
     onRequestCaption: () -> Unit,
 ) {
+    val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
     val format = LocalFormat.current
     val createdLabel = if (attachment.created > 0) format.formatDate(attachment.created) else ""
     val sizeLabel = format.formatFileSize(attachment.size)
-    var copied by remember { mutableStateOf(false) }
+    val copiedMessage = stringResource(R.string.wikis_attachments_embed_copied)
+    var menuOpen by remember { mutableStateOf(false) }
+    val copyEmbed = {
+        clipboard.setText(AnnotatedString(buildMarkdown(attachment)))
+        Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+    }
 
     Row(
         modifier = Modifier
@@ -991,70 +998,109 @@ private fun AttachmentListRow(
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        MochiIconButton(onClick = onOpen) {
-            Icon(
-                Icons.Default.Download,
-                contentDescription = stringResource(R.string.wikis_attachments_open),
-                modifier = Modifier.size(20.dp),
-            )
-        }
-        if (isImage(attachment.type)) {
-            MochiIconButton(onClick = onRequestCaption) {
-                Icon(
-                    Icons.Default.ClosedCaption,
-                    contentDescription = stringResource(
-                        if (attachment.caption.isEmpty()) MochiR.string.attachment_caption_add
-                        else MochiR.string.attachment_caption_edit
-                    ),
-                    modifier = Modifier.size(20.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-        }
-        MochiIconButton(
-            onClick = {
-                clipboard.setText(AnnotatedString(buildMarkdown(attachment)))
-                copied = true
-            },
-        ) {
-            Icon(
-                if (copied) Icons.Default.Check else Icons.Default.ContentCopy,
-                contentDescription = stringResource(R.string.wikis_attachments_copy_embed),
-                modifier = Modifier.size(20.dp),
-                tint = if (copied) {
-                    MaterialTheme.colorScheme.primary
+        Box(modifier = Modifier.align(Alignment.Top)) {
+            MochiIconButton(
+                onClick = { menuOpen = true },
+                enabled = !isDeleting,
+            ) {
+                if (isDeleting) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(18.dp),
+                        strokeWidth = 2.dp,
+                    )
                 } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant
-                },
-            )
-        }
-        MochiIconButton(
-            onClick = onRequestDelete,
-            enabled = !isDeleting,
-        ) {
-            if (isDeleting) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(18.dp),
-                    strokeWidth = 2.dp,
-                )
-            } else {
-                Icon(
-                    Icons.Default.Delete,
-                    contentDescription = stringResource(R.string.wikis_attachments_delete),
-                    modifier = Modifier.size(20.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+                    Icon(
+                        Icons.Default.MoreVert,
+                        contentDescription = stringResource(MochiR.string.common_more_options),
+                        modifier = Modifier.size(22.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
-        }
-    }
-    if (copied) {
-        LaunchedEffect(copied) {
-            kotlinx.coroutines.delay(1500)
-            copied = false
+            AttachmentActionsMenu(
+                attachment = attachment,
+                expanded = menuOpen,
+                onDismissRequest = { menuOpen = false },
+                onCopyEmbed = copyEmbed,
+                onDownload = onDownload,
+                onRequestDelete = onRequestDelete,
+                onRequestCaption = onRequestCaption,
+            )
         }
     }
 }
 
+/**
+ * The actions one attachment offers beyond opening it, which is what tapping
+ * the attachment itself does. A caption belongs to a picture, so that entry is
+ * an image's alone.
+ *
+ * @param attachment The attachment the menu acts on.
+ * @param expanded Whether the menu is showing.
+ * @param onDismissRequest Called when the menu should close.
+ * @param onCopyEmbed Put the page markdown for this file on the clipboard.
+ * @param onDownload Save the file to the device.
+ * @param onRequestDelete Ask to delete the attachment.
+ * @param onRequestCaption Ask to write or rewrite the caption.
+ */
+@Composable
+private fun AttachmentActionsMenu(
+    attachment: Attachment,
+    expanded: Boolean,
+    onDismissRequest: () -> Unit,
+    onCopyEmbed: () -> Unit,
+    onDownload: () -> Unit,
+    onRequestDelete: () -> Unit,
+    onRequestCaption: () -> Unit,
+) {
+    MochiDropdownMenu(
+        expanded = expanded,
+        onDismissRequest = onDismissRequest,
+    ) {
+        MochiDropdownMenuItem(
+            text = { Text(stringResource(R.string.wikis_attachments_copy_embed)) },
+            onClick = {
+                onDismissRequest()
+                onCopyEmbed()
+            },
+            leadingIcon = { Icon(Icons.Outlined.ContentCopy, contentDescription = null) },
+        )
+        MochiDropdownMenuItem(
+            text = { Text(stringResource(R.string.wikis_attachments_download)) },
+            onClick = {
+                onDismissRequest()
+                onDownload()
+            },
+            leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
+        )
+        if (isImage(attachment.type)) {
+            MochiDropdownMenuItem(
+                text = {
+                    Text(
+                        stringResource(
+                            if (attachment.caption.isEmpty()) MochiR.string.attachment_caption_add
+                            else MochiR.string.attachment_caption_edit
+                        )
+                    )
+                },
+                onClick = {
+                    onDismissRequest()
+                    onRequestCaption()
+                },
+                leadingIcon = { Icon(Icons.Outlined.ClosedCaption, contentDescription = null) },
+            )
+        }
+        MochiDropdownMenuItem(
+            text = { Text(stringResource(R.string.wikis_attachments_delete)) },
+            onClick = {
+                onDismissRequest()
+                onRequestDelete()
+            },
+            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+            destructive = true,
+        )
+    }
+}
 
 /**
  * What an attachment looks like before it is opened: the picture itself for an
@@ -1173,6 +1219,53 @@ private fun startAttachmentDownload(
         req.addRequestHeader("Authorization", "Bearer $token")
     }
     return dm.enqueue(req)
+}
+
+/**
+ * Show a file the app has no viewer of its own for. The bytes are fetched
+ * through the authenticated asset client, cached, and handed to whatever app
+ * on the device can display them - the same route a file in a chat message
+ * takes. Downloading is the menu's own entry; this only borrows a viewer.
+ *
+ * @param scope Scope the fetch runs in, cancelled with the screen.
+ * @param context Context the viewer is launched from.
+ * @param baseURL The wiki's asset base, which the attachment id hangs off.
+ * @param attachment The file to show.
+ */
+private fun previewInViewer(
+    scope: CoroutineScope,
+    context: Context,
+    baseURL: String,
+    attachment: Attachment,
+) {
+    Toast.makeText(
+        context,
+        context.getString(MochiR.string.common_opening_file),
+        Toast.LENGTH_SHORT,
+    ).show()
+    scope.launch {
+        val result = AttachmentOpener.open(
+            context,
+            "${baseURL}attachments/${attachment.id}",
+            MochiAttachment(
+                id = attachment.id,
+                name = attachment.name,
+                size = attachment.size,
+                type = attachment.type,
+                created = attachment.created,
+                caption = attachment.caption,
+            ),
+        )
+        val message = when (result) {
+            AttachmentOpener.OpenResult.NO_APP -> MochiR.string.common_no_app_for_file
+            AttachmentOpener.OpenResult.FAILED -> MochiR.string.common_file_open_failed
+            AttachmentOpener.OpenResult.UNAVAILABLE -> MochiR.string.common_attachment_unavailable
+            AttachmentOpener.OpenResult.OPENED -> null
+        }
+        if (message != null) {
+            Toast.makeText(context, context.getString(message), Toast.LENGTH_SHORT).show()
+        }
+    }
 }
 
 /**

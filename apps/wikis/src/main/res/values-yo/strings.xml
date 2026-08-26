@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Wíwò grid</string>
     <string name="wikis_attachments_view_list">Wíwò àkójọ</string>
     <string name="wikis_attachments_copy_embed">Ṣe àdàkọ ọ̀nà embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">A ti dà ìjápọ̀ embed</string>
     <string name="wikis_attachments_delete">Pa rẹ́</string>
     <string name="wikis_attachments_delete_confirm_title">Pa ìsomọ́ rẹ́</string>

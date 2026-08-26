@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">గ్రిడ్ వీక్షణ</string>
     <string name="wikis_attachments_view_list">జాబితా వీక్షణ</string>
     <string name="wikis_attachments_copy_embed">ఎంబెడ్ లింక్‌ను కాపీ చేయండి</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ఎంబెడ్ లింక్ కాపీ చేయబడింది</string>
     <string name="wikis_attachments_delete">తొలగించండి</string>
     <string name="wikis_attachments_delete_confirm_title">అటాచ్‌మెంట్‌ను తొలగించండి</string>

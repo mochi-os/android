@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ग्रिड दृश्य</string>
     <string name="wikis_attachments_view_list">यादी दृश्य</string>
     <string name="wikis_attachments_copy_embed">एम्बेड लिंक कॉपी करा</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">एम्बेड लिंक कॉपी केली</string>
     <string name="wikis_attachments_delete">हटवा</string>
     <string name="wikis_attachments_delete_confirm_title">संलग्नक हटवा</string>

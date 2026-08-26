@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Cuadrícula uñjaña</string>
     <string name="wikis_attachments_view_list">Lista uñjaña</string>
     <string name="wikis_attachments_copy_embed">Embed link copiaña</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Embed enlace copiatawa</string>
     <string name="wikis_attachments_delete">Chhaqtayaña</string>
     <string name="wikis_attachments_delete_confirm_title">Apkatawi chhaqtayaña</string>

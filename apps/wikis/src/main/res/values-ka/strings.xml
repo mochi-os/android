@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ბადის ხედი</string>
     <string name="wikis_attachments_view_list">სიის ხედი</string>
     <string name="wikis_attachments_copy_embed">embed ბმულის კოპირება</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ჩასართავი ბმული დაკოპირდა</string>
     <string name="wikis_attachments_delete">წაშლა</string>
     <string name="wikis_attachments_delete_confirm_title">დანართის წაშლა</string>

@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Вид сеткой</string>
     <string name="wikis_attachments_view_list">Вид списком</string>
     <string name="wikis_attachments_copy_embed">Копировать ссылку для встраивания</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Ссылка для вставки скопирована</string>
     <string name="wikis_attachments_delete">Удалить</string>
     <string name="wikis_attachments_delete_confirm_title">Удалить вложение</string>

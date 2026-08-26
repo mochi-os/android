@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">بینینی Grid</string>
     <string name="wikis_attachments_view_list">بینینی لیست</string>
     <string name="wikis_attachments_copy_embed">کۆپیکردنی بەستەری Embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">بەستەری جێگیرکراو لەبەرگیرایەوە</string>
     <string name="wikis_attachments_delete">سڕینەوە</string>
     <string name="wikis_attachments_delete_confirm_title">سڕینەوەی هاوپێچ</string>

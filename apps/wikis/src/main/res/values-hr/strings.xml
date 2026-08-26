@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Prikaz mreže</string>
     <string name="wikis_attachments_view_list">Prikaz popisa</string>
     <string name="wikis_attachments_copy_embed">Kopiraj poveznicu za ugradnju</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Veza za ugradnju kopirana</string>
     <string name="wikis_attachments_delete">Obriši</string>
     <string name="wikis_attachments_delete_confirm_title">Obriši privitak</string>

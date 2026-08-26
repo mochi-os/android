@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Umbukiso wegridi</string>
     <string name="wikis_attachments_view_list">Umbukiso wohla</string>
     <string name="wikis_attachments_copy_embed">Kopisha isixhumanisi sokufakela</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Isixhumanisi sokufaka sikopishiwe</string>
     <string name="wikis_attachments_delete">Susa</string>
     <string name="wikis_attachments_delete_confirm_title">Susa okunamathiselwe</string>

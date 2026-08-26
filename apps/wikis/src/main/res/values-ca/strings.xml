@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Vista en quadrícula</string>
     <string name="wikis_attachments_view_list">Vista de llista</string>
     <string name="wikis_attachments_copy_embed">Copia l\'enllaç incrustat</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Enllaç d\'incrustació copiat</string>
     <string name="wikis_attachments_delete">Suprimeix</string>
     <string name="wikis_attachments_delete_confirm_title">Suprimeix el fitxer adjunt</string>

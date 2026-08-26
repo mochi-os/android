@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Veduta ta\' grilja</string>
     <string name="wikis_attachments_view_list">Veduta ta\' lista</string>
     <string name="wikis_attachments_copy_embed">Ikkupja l-link tal-embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Il-link tal-embed ġie ikkupjat</string>
     <string name="wikis_attachments_delete">Ħassar</string>
     <string name="wikis_attachments_delete_confirm_title">Ħassar mehmuż</string>

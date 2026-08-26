@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Rutenettvisning</string>
     <string name="wikis_attachments_view_list">Listevisning</string>
     <string name="wikis_attachments_copy_embed">Kopier innbyggingslenke</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Innebyggingslenke kopiert</string>
     <string name="wikis_attachments_delete">Slett</string>
     <string name="wikis_attachments_delete_confirm_title">Slett vedlegg</string>

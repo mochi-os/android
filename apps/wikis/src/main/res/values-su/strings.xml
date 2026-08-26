@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Tinggalan grid</string>
     <string name="wikis_attachments_view_list">Tinggalan daptar</string>
     <string name="wikis_attachments_copy_embed">Salin link embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Tautan sisipan disalin</string>
     <string name="wikis_attachments_delete">Hapus</string>
     <string name="wikis_attachments_delete_confirm_title">Hapus lampiran</string>

@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Rutnätsvy</string>
     <string name="wikis_attachments_view_list">Listvy</string>
     <string name="wikis_attachments_copy_embed">Kopiera inbäddningslänk</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Inbäddningslänk kopierad</string>
     <string name="wikis_attachments_delete">Ta bort</string>
     <string name="wikis_attachments_delete_confirm_title">Ta bort bilaga</string>

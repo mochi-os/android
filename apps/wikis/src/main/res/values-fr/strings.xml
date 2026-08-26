@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Vue en grille</string>
     <string name="wikis_attachments_view_list">Vue en liste</string>
     <string name="wikis_attachments_copy_embed">Copier le lien d\'intégration</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Lien d\'intégration copié</string>
     <string name="wikis_attachments_delete">Supprimer</string>
     <string name="wikis_attachments_delete_confirm_title">Supprimer la pièce jointe</string>

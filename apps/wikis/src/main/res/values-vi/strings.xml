@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Chế độ xem lưới</string>
     <string name="wikis_attachments_view_list">Chế độ xem danh sách</string>
     <string name="wikis_attachments_copy_embed">Sao chép liên kết nhúng</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Đã sao chép liên kết nhúng</string>
     <string name="wikis_attachments_delete">Xóa</string>
     <string name="wikis_attachments_delete_confirm_title">Xóa tệp đính kèm</string>

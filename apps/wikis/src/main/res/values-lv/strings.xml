@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Režģa skats</string>
     <string name="wikis_attachments_view_list">Saraksta skats</string>
     <string name="wikis_attachments_copy_embed">Kopēt iegultās saites</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Iegultais saites kopēta</string>
     <string name="wikis_attachments_delete">Dzēst</string>
     <string name="wikis_attachments_delete_confirm_title">Dzēst pielikumu</string>

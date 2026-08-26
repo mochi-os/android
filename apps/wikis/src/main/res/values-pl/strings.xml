@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Widok siatki</string>
     <string name="wikis_attachments_view_list">Widok listy</string>
     <string name="wikis_attachments_copy_embed">Kopiuj link osadzania</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Skopiowano link do osadzenia</string>
     <string name="wikis_attachments_delete">Usuń</string>
     <string name="wikis_attachments_delete_confirm_title">Usuń załącznik</string>

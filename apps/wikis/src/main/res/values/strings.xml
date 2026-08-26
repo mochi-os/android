@@ -339,6 +339,8 @@
     <string name="wikis_attachments_view_list">List view</string>
 
     <string name="wikis_attachments_copy_embed">Copy embed link</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Embed link copied</string>
     <string name="wikis_attachments_copy_failed">Failed to copy embed link</string>
 

@@ -165,6 +165,8 @@
     <string name="wikis_attachments_view_grid">Paparan grid</string>
     <string name="wikis_attachments_view_list">Paparan senarai</string>
     <string name="wikis_attachments_copy_embed">Salin pautan benam</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Pautan benam disalin</string>
     <string name="wikis_attachments_delete">Padam</string>
     <string name="wikis_attachments_delete_confirm_title">Padam lampiran</string>

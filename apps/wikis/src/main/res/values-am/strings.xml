@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ፍርግርግ እይታ</string>
     <string name="wikis_attachments_view_list">የዝርዝር እይታ</string>
     <string name="wikis_attachments_copy_embed">የማስገቢያ አገናኝ ቅዳ</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">የመክተቻ አገናኝ ተቀድቷል</string>
     <string name="wikis_attachments_delete">ሰርዝ</string>
     <string name="wikis_attachments_delete_confirm_title">አባሪ ሰርዝ</string>

@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Tarmoq koʻrinishi</string>
     <string name="wikis_attachments_view_list">Roʻyxat koʻrinishi</string>
     <string name="wikis_attachments_copy_embed">Embed havolani nusxalash</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Joylashtirish havolasi nusxalandi</string>
     <string name="wikis_attachments_delete">Oʻchirish</string>
     <string name="wikis_attachments_delete_confirm_title">Biriktirmani oʻchirish</string>

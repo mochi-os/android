@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Amharc greille</string>
     <string name="wikis_attachments_view_list">Amharc liosta</string>
     <string name="wikis_attachments_copy_embed">Cóipeáil nasc leabaithe</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Nasc leabaithe cóipeáilte</string>
     <string name="wikis_attachments_delete">Scrios</string>
     <string name="wikis_attachments_delete_confirm_title">Scrios ceangaltán</string>

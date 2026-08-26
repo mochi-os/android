@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Ցանցային տեսք</string>
     <string name="wikis_attachments_view_list">Ցանկի տեսք</string>
     <string name="wikis_attachments_copy_embed">Պատճենել ներդրման հղումը</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Ներդրման հղումը պատճենվեց</string>
     <string name="wikis_attachments_delete">Ջնջել</string>
     <string name="wikis_attachments_delete_confirm_title">Ջնջել կցորդը</string>

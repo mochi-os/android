@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">格狀檢視</string>
     <string name="wikis_attachments_view_list">清單檢視</string>
     <string name="wikis_attachments_copy_embed">複製嵌入連結</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">嵌入連結已複製</string>
     <string name="wikis_attachments_delete">刪除</string>
     <string name="wikis_attachments_delete_confirm_title">刪除附件</string>

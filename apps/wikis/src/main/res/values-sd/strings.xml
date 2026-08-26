@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">گرڊ ڏيک</string>
     <string name="wikis_attachments_view_list">لسٽ ڏيک</string>
     <string name="wikis_attachments_copy_embed">embed لنڪ ڪاپي ڪريو</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ايمبيڊ لنڪ نقل ٿي وئي</string>
     <string name="wikis_attachments_delete">ختم ڪريو</string>
     <string name="wikis_attachments_delete_confirm_title">ڳنڍيل فائل ختم ڪريو</string>

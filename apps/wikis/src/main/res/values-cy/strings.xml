@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Golwg grid</string>
     <string name="wikis_attachments_view_list">Golwg rhestr</string>
     <string name="wikis_attachments_copy_embed">Copïo dolen mewnosod</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Copïwyd y ddolen mewnosod</string>
     <string name="wikis_attachments_delete">Dileu</string>
     <string name="wikis_attachments_delete_confirm_title">Dileu atodiad</string>

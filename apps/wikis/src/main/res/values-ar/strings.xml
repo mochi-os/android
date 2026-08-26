@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">عرض الشبكة</string>
     <string name="wikis_attachments_view_list">عرض القائمة</string>
     <string name="wikis_attachments_copy_embed">نسخ رابط التضمين</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">تم نسخ رابط التضمين</string>
     <string name="wikis_attachments_delete">حذف</string>
     <string name="wikis_attachments_delete_confirm_title">حذف المرفق</string>

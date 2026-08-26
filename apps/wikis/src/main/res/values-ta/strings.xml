@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">கிரிட் காட்சி</string>
     <string name="wikis_attachments_view_list">பட்டியல் காட்சி</string>
     <string name="wikis_attachments_copy_embed">Embed இணைப்பை நகலெடு</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">உட்பொதி இணைப்பு நகலெடுக்கப்பட்டது</string>
     <string name="wikis_attachments_delete">நீக்கு</string>
     <string name="wikis_attachments_delete_confirm_title">இணைப்பை நீக்கு</string>

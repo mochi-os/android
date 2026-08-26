@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Тор көрінісі</string>
     <string name="wikis_attachments_view_list">Тізім көрінісі</string>
     <string name="wikis_attachments_copy_embed">Енгізу сілтемесін көшіру</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Енгізу сілтемесі көшірілді</string>
     <string name="wikis_attachments_delete">Жою</string>
     <string name="wikis_attachments_delete_confirm_title">Тіркемені жою</string>

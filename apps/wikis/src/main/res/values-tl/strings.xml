@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Grid view</string>
     <string name="wikis_attachments_view_list">List view</string>
     <string name="wikis_attachments_copy_embed">Kopyahin ang embed link</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Nakopya ang embed link</string>
     <string name="wikis_attachments_delete">I-delete</string>
     <string name="wikis_attachments_delete_confirm_title">I-delete ang attachment</string>

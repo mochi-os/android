@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Tinklelio rodinys</string>
     <string name="wikis_attachments_view_list">Sąrašo rodinys</string>
     <string name="wikis_attachments_copy_embed">Kopijuoti įterpimo nuorodą</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Įterpimo nuoroda nukopijuota</string>
     <string name="wikis_attachments_delete">Ištrinti</string>
     <string name="wikis_attachments_delete_confirm_title">Ištrinti priedą</string>

@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ಗ್ರಿಡ್ ವೀಕ್ಷಣೆ</string>
     <string name="wikis_attachments_view_list">ಪಟ್ಟಿ ವೀಕ್ಷಣೆ</string>
     <string name="wikis_attachments_copy_embed">ಎಂಬೆಡ್ ಲಿಂಕ್ ನಕಲಿಸಿ</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ಎಂಬೆಡ್ ಲಿಂಕ್ ನಕಲಿಸಲಾಗಿದೆ</string>
     <string name="wikis_attachments_delete">ಅಳಿಸಿ</string>
     <string name="wikis_attachments_delete_confirm_title">ಲಗತ್ತು ಅಳಿಸಿ</string>

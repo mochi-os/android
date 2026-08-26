@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Намуди шабака</string>
     <string name="wikis_attachments_view_list">Намуди рӯйхат</string>
     <string name="wikis_attachments_copy_embed">Нусхабардории пайванди ҷойгузин</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Пайванди ҷойгузорӣ нусхабардорӣ шуд</string>
     <string name="wikis_attachments_delete">Нест кардан</string>
     <string name="wikis_attachments_delete_confirm_title">Нест кардани замима</string>

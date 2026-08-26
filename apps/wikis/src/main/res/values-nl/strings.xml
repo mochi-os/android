@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Rasterweergave</string>
     <string name="wikis_attachments_view_list">Lijstweergave</string>
     <string name="wikis_attachments_copy_embed">Insluitlink kopiëren</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Embed-link gekopieerd</string>
     <string name="wikis_attachments_delete">Verwijderen</string>
     <string name="wikis_attachments_delete_confirm_title">Bijlage verwijderen</string>

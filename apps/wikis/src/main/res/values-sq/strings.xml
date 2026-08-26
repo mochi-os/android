@@ -165,6 +165,8 @@
     <string name="wikis_attachments_view_grid">Pamja rrjet</string>
     <string name="wikis_attachments_view_list">Pamja listë</string>
     <string name="wikis_attachments_copy_embed">Kopjo lidhjen e ngulitjes</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Lidhja e ngulitur u kopjua</string>
     <string name="wikis_attachments_delete">Fshi</string>
     <string name="wikis_attachments_delete_confirm_title">Fshi bashkëngjitjen</string>

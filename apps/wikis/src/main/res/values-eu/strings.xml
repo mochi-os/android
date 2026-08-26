@@ -165,6 +165,8 @@
     <string name="wikis_attachments_view_grid">Sareta-ikuspegia</string>
     <string name="wikis_attachments_view_list">Zerrenda-ikuspegia</string>
     <string name="wikis_attachments_copy_embed">Kopiatu txertatze esteka</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Txertatze-esteka kopiatuta</string>
     <string name="wikis_attachments_delete">Ezabatu</string>
     <string name="wikis_attachments_delete_confirm_title">Ezabatu eranskina</string>

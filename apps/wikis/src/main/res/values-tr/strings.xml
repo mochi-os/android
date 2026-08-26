@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Izgara görünümü</string>
     <string name="wikis_attachments_view_list">Liste görünümü</string>
     <string name="wikis_attachments_copy_embed">Gömme bağlantısını kopyala</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Yerleştirme bağlantısı kopyalandı</string>
     <string name="wikis_attachments_delete">Sil</string>
     <string name="wikis_attachments_delete_confirm_title">Eki sil</string>

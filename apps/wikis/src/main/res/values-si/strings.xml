@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ජාල දසුන</string>
     <string name="wikis_attachments_view_list">ලැයිස්තු දසුන</string>
     <string name="wikis_attachments_copy_embed">embed සබැඳිය පිටපත් කරන්න</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">කාවැද්දූ සබැඳිය පිටපත් කළා</string>
     <string name="wikis_attachments_delete">මකන්න</string>
     <string name="wikis_attachments_delete_confirm_title">ඇමුණුම මකන්න</string>

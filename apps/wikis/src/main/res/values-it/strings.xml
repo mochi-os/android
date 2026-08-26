@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Vista a griglia</string>
     <string name="wikis_attachments_view_list">Vista a elenco</string>
     <string name="wikis_attachments_copy_embed">Copia link di incorporamento</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Link di incorporamento copiato</string>
     <string name="wikis_attachments_delete">Elimina</string>
     <string name="wikis_attachments_delete_confirm_title">Elimina allegato</string>

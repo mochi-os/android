@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">グリッド表示</string>
     <string name="wikis_attachments_view_list">リスト表示</string>
     <string name="wikis_attachments_copy_embed">埋め込みリンクをコピー</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">埋め込みリンクをコピーしました</string>
     <string name="wikis_attachments_delete">削除</string>
     <string name="wikis_attachments_delete_confirm_title">添付を削除</string>

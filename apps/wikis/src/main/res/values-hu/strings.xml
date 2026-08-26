@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Rács nézet</string>
     <string name="wikis_attachments_view_list">Listanézet</string>
     <string name="wikis_attachments_copy_embed">Beágyazási hivatkozás másolása</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Beágyazási hivatkozás másolva</string>
     <string name="wikis_attachments_delete">Törlés</string>
     <string name="wikis_attachments_delete_confirm_title">Melléklet törlése</string>

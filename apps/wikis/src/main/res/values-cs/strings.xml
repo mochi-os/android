@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Mřížkové zobrazení</string>
     <string name="wikis_attachments_view_list">Zobrazení seznamu</string>
     <string name="wikis_attachments_copy_embed">Kopírovat embed odkaz</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Odkaz pro vložení zkopírován</string>
     <string name="wikis_attachments_delete">Smazat</string>
     <string name="wikis_attachments_delete_confirm_title">Smazat přílohu</string>

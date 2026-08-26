@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Grilla qhaway</string>
     <string name="wikis_attachments_view_list">Lista qhaway</string>
     <string name="wikis_attachments_copy_embed">Embed link copiay</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Embed enlace copiasqa</string>
     <string name="wikis_attachments_delete">Wischuy</string>
     <string name="wikis_attachments_delete_confirm_title">Yapasqa wischuy</string>

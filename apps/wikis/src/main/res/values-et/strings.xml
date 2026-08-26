@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Ruudustikuvaade</string>
     <string name="wikis_attachments_view_list">Loendivaade</string>
     <string name="wikis_attachments_copy_embed">Kopeeri manustamise link</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Manustamise link kopeeritud</string>
     <string name="wikis_attachments_delete">Kustuta</string>
     <string name="wikis_attachments_delete_confirm_title">Kustuta manus</string>

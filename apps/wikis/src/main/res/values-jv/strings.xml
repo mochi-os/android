@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Tampilan kothak</string>
     <string name="wikis_attachments_view_list">Tampilan daftar</string>
     <string name="wikis_attachments_copy_embed">Salin link embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Link embed wis disalin</string>
     <string name="wikis_attachments_delete">Busak</string>
     <string name="wikis_attachments_delete_confirm_title">Busak lampiran</string>

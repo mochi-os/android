@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ဇယားကွက် မြင်ကွင်း</string>
     <string name="wikis_attachments_view_list">စာရင်း မြင်ကွင်း</string>
     <string name="wikis_attachments_copy_embed">embed လင့်ခ် ကူးမည်</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ထည့်သွင်းလင့် ကူးယူပြီးပါပြီ</string>
     <string name="wikis_attachments_delete">ဖျက်မည်</string>
     <string name="wikis_attachments_delete_confirm_title">ပူးတွဲဖိုင် ဖျက်မည်</string>

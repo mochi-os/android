@@ -165,6 +165,8 @@
     <string name="wikis_attachments_view_grid">گرڈ منظر</string>
     <string name="wikis_attachments_view_list">فہرست منظر</string>
     <string name="wikis_attachments_copy_embed">Embed لنک کاپی کریں</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ایمبیڈ لنک کاپی ہو گیا</string>
     <string name="wikis_attachments_delete">حذف کریں</string>
     <string name="wikis_attachments_delete_confirm_title">اٹیچمنٹ حذف کریں</string>

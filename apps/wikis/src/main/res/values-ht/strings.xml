@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Vi grid</string>
     <string name="wikis_attachments_view_list">Vi lis</string>
     <string name="wikis_attachments_copy_embed">Kopye lyen entegre</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Lyen entegre kopye</string>
     <string name="wikis_attachments_delete">Efase</string>
     <string name="wikis_attachments_delete_confirm_title">Efase atachman</string>

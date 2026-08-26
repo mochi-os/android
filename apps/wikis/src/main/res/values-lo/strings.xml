@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ມຸມມອງຕາຕະລາງ</string>
     <string name="wikis_attachments_view_list">ມຸມມອງລາຍຊື່</string>
     <string name="wikis_attachments_copy_embed">ສຳເນົາລິ້ງຝັງ</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ສຳເນົາລິ້ງຝັງແລ້ວ</string>
     <string name="wikis_attachments_delete">ລົບ</string>
     <string name="wikis_attachments_delete_confirm_title">ລົບໄຟລ໌ແນບ</string>

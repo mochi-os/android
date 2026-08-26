@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Tor görnüşi</string>
     <string name="wikis_attachments_view_list">Sanaw görnüşi</string>
     <string name="wikis_attachments_copy_embed">Embed baglanyşygyny nusgalamak</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Goýma baglanyşygy göçürildi</string>
     <string name="wikis_attachments_delete">Pozmak</string>
     <string name="wikis_attachments_delete_confirm_title">Goşundy pozmak</string>

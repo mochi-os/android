@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Şəbəkə görünüşü</string>
     <string name="wikis_attachments_view_list">Siyahı görünüşü</string>
     <string name="wikis_attachments_copy_embed">Embed linkini kopyala</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Yerləşdirmə linki kopyalandı</string>
     <string name="wikis_attachments_delete">Sil</string>
     <string name="wikis_attachments_delete_confirm_title">Qoşmanı sil</string>

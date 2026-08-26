@@ -40,6 +40,8 @@
     <string name="wikis_tag_dialog_add">Agregá</string>
     <string name="wikis_attachments_upload">Subí archivos</string>
     <string name="wikis_attachments_copy_embed">Copiá el enlace para insertar</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_delete">Eliminá</string>
     <string name="wikis_attachments_delete_confirm_title">Eliminá el adjunto</string>
     <string name="wikis_attachments_no_results_description">Probá con otro término de búsqueda o filtro.</string>

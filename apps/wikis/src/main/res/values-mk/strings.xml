@@ -165,6 +165,8 @@
     <string name="wikis_attachments_view_grid">Преглед на мрежа</string>
     <string name="wikis_attachments_view_list">Преглед на листа</string>
     <string name="wikis_attachments_copy_embed">Копирај врска за вградување</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Линкот за вградување е копиран</string>
     <string name="wikis_attachments_delete">Избриши</string>
     <string name="wikis_attachments_delete_confirm_title">Избриши прилог</string>

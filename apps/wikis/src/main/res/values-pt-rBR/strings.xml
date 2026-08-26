@@ -164,6 +164,8 @@
     <string name="wikis_attachments_view_grid">Visualização em grade</string>
     <string name="wikis_attachments_view_list">Visualização em lista</string>
     <string name="wikis_attachments_copy_embed">Copiar link de incorporação</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Link de incorporação copiado</string>
     <string name="wikis_attachments_delete">Excluir</string>
     <string name="wikis_attachments_delete_confirm_title">Excluir anexo</string>

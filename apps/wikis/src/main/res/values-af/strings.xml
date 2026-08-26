@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Roosteraansig</string>
     <string name="wikis_attachments_view_list">Lysaansig</string>
     <string name="wikis_attachments_copy_embed">Kopieer inbedskakel</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Inbedskakel gekopieer</string>
     <string name="wikis_attachments_delete">Verwyder</string>
     <string name="wikis_attachments_delete_confirm_title">Verwyder aanhangsel</string>

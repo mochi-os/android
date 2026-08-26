@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Imbonakalo yegridi</string>
     <string name="wikis_attachments_view_list">Imbonakalo yoluhlu</string>
     <string name="wikis_attachments_copy_embed">Kotshela ikhonkco lokufakelela</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Ikhonkco lokufaka likhutshelwe</string>
     <string name="wikis_attachments_delete">Cima</string>
     <string name="wikis_attachments_delete_confirm_title">Cima isiqhotyoshelwa</string>

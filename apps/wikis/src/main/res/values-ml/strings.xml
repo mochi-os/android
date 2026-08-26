@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ഗ്രിഡ് വ്യൂ</string>
     <string name="wikis_attachments_view_list">ലിസ്റ്റ് വ്യൂ</string>
     <string name="wikis_attachments_copy_embed">എംബെഡ് ലിങ്ക് പകർത്തുക</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">എംബഡ് ലിങ്ക് പകർത്തി</string>
     <string name="wikis_attachments_delete">ഇല്ലാതാക്കുക</string>
     <string name="wikis_attachments_delete_confirm_title">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കുക</string>

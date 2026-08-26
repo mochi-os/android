@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">그리드 뷰</string>
     <string name="wikis_attachments_view_list">목록 뷰</string>
     <string name="wikis_attachments_copy_embed">임베드 링크 복사</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">임베드 링크가 복사되었어요</string>
     <string name="wikis_attachments_delete">삭제</string>
     <string name="wikis_attachments_delete_confirm_title">첨부 파일 삭제</string>

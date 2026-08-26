@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">ګریډ لید</string>
     <string name="wikis_attachments_view_list">د لیسټ لید</string>
     <string name="wikis_attachments_copy_embed">د ځای پر ځای کیدو لینک کاپي کړئ</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">د Embed لینک کاپي شو</string>
     <string name="wikis_attachments_delete">ړنګ کړئ</string>
     <string name="wikis_attachments_delete_confirm_title">ضمیمه ړنګه کړئ</string>

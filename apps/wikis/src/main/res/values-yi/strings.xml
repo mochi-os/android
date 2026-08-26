@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">נעץ־בליק</string>
     <string name="wikis_attachments_view_list">רשימה־בליק</string>
     <string name="wikis_attachments_copy_embed">קאָפּירן embed לינק</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">אײַנגעבעטענער לינק קאָפּירט</string>
     <string name="wikis_attachments_delete">אויסמעקן</string>
     <string name="wikis_attachments_delete_confirm_title">אויסמעקן בײַלאַגע</string>

@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Sealladh cliath</string>
     <string name="wikis_attachments_view_list">Sealladh liosta</string>
     <string name="wikis_attachments_copy_embed">Dèan lethbhreac den cheangal-leabachaidh</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Chaidh ceangal an leabaidh a chopaigeadh</string>
     <string name="wikis_attachments_delete">Sguab às</string>
     <string name="wikis_attachments_delete_confirm_title">Sguab às ceanglachan</string>

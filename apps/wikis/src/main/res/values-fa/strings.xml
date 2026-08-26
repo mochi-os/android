@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">نمای شبکه‌ای</string>
     <string name="wikis_attachments_view_list">نمای فهرست</string>
     <string name="wikis_attachments_copy_embed">کپی پیوند جاسازی</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">لینک جاسازی کپی شد</string>
     <string name="wikis_attachments_delete">حذف</string>
     <string name="wikis_attachments_delete_confirm_title">حذف پیوست</string>

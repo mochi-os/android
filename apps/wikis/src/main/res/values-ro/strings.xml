@@ -166,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Vizualizare grilă</string>
     <string name="wikis_attachments_view_list">Vizualizare listă</string>
     <string name="wikis_attachments_copy_embed">Copiază linkul de încorporare</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Link de încorporare copiat</string>
     <string name="wikis_attachments_delete">Șterge</string>
     <string name="wikis_attachments_delete_confirm_title">Șterge atașamentul</string>
