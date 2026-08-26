@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Gagal memadam halaman</string>
     <string name="wikis_revert_page_comment_label">Kembalikan komen</string>
     <string name="wikis_revert_page_confirm">Kembalikan</string>
-    <string name="wikis_revert_page_cancel">Batal</string>
     <string name="wikis_revert_page_failed">Gagal mengembalikan halaman</string>
     <string name="wikis_rename_page_title">Namakan semula halaman</string>
     <string name="wikis_rename_page_label">URL Baharu</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Lihat</string>
     <string name="wikis_history_revert_action">Kembalikan ke versi ini</string>
     <string name="wikis_revision_current_badge">Semasa</string>
-    <string name="wikis_revision_back_to_history">Kembali ke sejarah</string>
     <string name="wikis_revision_revert_to_this">Kembalikan ke versi ini</string>
     <string name="wikis_changes_title">Perubahan terkini</string>
     <string name="wikis_changes_subtitle">Suntingan terkini di semua halaman dalam wiki ini.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Sesiapa</string>
     <string name="wikis_access_subject_authenticated">Pengguna disahkan</string>
     <string name="wikis_revision_compare">Bandingkan perubahan</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Tunjukkan halaman</string>
     <string name="wikis_revision_compare_failed">Tidak dapat memuatkan versi terdahulu untuk perbandingan.</string>
     <string name="wikis_revision_changes_from">Perubahan daripada versi %1$d → %2$d</string>

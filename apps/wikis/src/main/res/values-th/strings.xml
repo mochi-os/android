@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">ไม่สามารถลบหน้าได้</string>
     <string name="wikis_revert_page_comment_label">ย้อนกลับความคิดเห็น</string>
     <string name="wikis_revert_page_confirm">ย้อนกลับ</string>
-    <string name="wikis_revert_page_cancel">ยกเลิก</string>
     <string name="wikis_revert_page_failed">ไม่สามารถย้อนกลับหน้าได้</string>
     <string name="wikis_rename_page_title">เปลี่ยนชื่อหน้า</string>
     <string name="wikis_rename_page_label">URL ใหม่</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ดู</string>
     <string name="wikis_history_revert_action">ย้อนกลับไปที่เวอร์ชันนี้</string>
     <string name="wikis_revision_current_badge">ปัจจุบัน</string>
-    <string name="wikis_revision_back_to_history">กลับไปยังประวัติ</string>
     <string name="wikis_revision_revert_to_this">ย้อนกลับไปที่เวอร์ชันนี้</string>
     <string name="wikis_changes_title">การเปลี่ยนแปลงล่าสุด</string>
     <string name="wikis_changes_subtitle">การแก้ไขล่าสุดในทุกหน้าของ wiki นี้</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
 
     <string name="wikis_revision_compare">เปรียบเทียบการเปลี่ยนแปลง</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">แสดงหน้า</string>
     <string name="wikis_revision_compare_failed">ไม่สามารถโหลดเวอร์ชันก่อนหน้าเพื่อเปรียบเทียบได้</string>
     <string name="wikis_revision_changes_from">การเปลี่ยนแปลงจากเวอร์ชัน %1$d → %2$d</string>

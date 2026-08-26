@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">No s\'ha pogut suprimir la pàgina</string>
     <string name="wikis_revert_page_comment_label">Reverteix el comentari</string>
     <string name="wikis_revert_page_confirm">Reverteix</string>
-    <string name="wikis_revert_page_cancel">Cancel·la</string>
     <string name="wikis_revert_page_failed">No s\'ha pogut revertir la pàgina</string>
     <string name="wikis_rename_page_title">Canvia el nom de la pàgina</string>
     <string name="wikis_rename_page_label">URL nou</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Visualitza</string>
     <string name="wikis_history_revert_action">Reverteix a aquesta versió</string>
     <string name="wikis_revision_current_badge">Actual</string>
-    <string name="wikis_revision_back_to_history">Torna a l\'historial</string>
     <string name="wikis_revision_revert_to_this">Reverteix a aquesta versió</string>
     <string name="wikis_changes_title">Canvis recents</string>
     <string name="wikis_changes_subtitle">Edicions recents a totes les pàgines d\'aquest wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Usuaris autenticats</string>
 
     <string name="wikis_revision_compare">Compara els canvis</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Mostra la pàgina</string>
     <string name="wikis_revision_compare_failed">No s\'ha pogut carregar la versió anterior per comparar.</string>
     <string name="wikis_revision_changes_from">Canvis de la versió %1$d → %2$d</string>

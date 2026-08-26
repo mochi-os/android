@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Sahypa pozulmady</string>
     <string name="wikis_revert_page_comment_label">Teswiri yzyna gaýtar</string>
     <string name="wikis_revert_page_confirm">Yzyna gaýtar</string>
-    <string name="wikis_revert_page_cancel">Ýatyrmak</string>
     <string name="wikis_revert_page_failed">Sahypa yzyna gaýtarylmady</string>
     <string name="wikis_rename_page_title">Sahypanyň adyny üýtget</string>
     <string name="wikis_rename_page_label">Täze URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Görkez</string>
     <string name="wikis_history_revert_action">Bu wersiýa yzyna gaýtar</string>
     <string name="wikis_revision_current_badge">Häzirki</string>
-    <string name="wikis_revision_back_to_history">Taryha yza</string>
     <string name="wikis_revision_revert_to_this">Bu wersiýa yzyna gaýtar</string>
     <string name="wikis_changes_title">Soňky üýtgeşiklikler</string>
     <string name="wikis_changes_subtitle">Bu wikidäki ähli sahypalardaky soňky redaktirlemeler.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Tassyklanan ulanyjylar</string>
 
     <string name="wikis_revision_compare">Üýtgeşmeleri deňeşdir</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Sahypany görkez</string>
     <string name="wikis_revision_compare_failed">Deňeşdirmek üçin öňki wersiýany ýükläp bolmady.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d wersiýasyndan üýtgeşmeler</string>

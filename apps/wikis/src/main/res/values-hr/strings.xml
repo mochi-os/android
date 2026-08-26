@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Brisanje stranice nije uspjelo</string>
     <string name="wikis_revert_page_comment_label">Vrati komentar</string>
     <string name="wikis_revert_page_confirm">Vrati</string>
-    <string name="wikis_revert_page_cancel">Odustani</string>
     <string name="wikis_revert_page_failed">Vraćanje stranice nije uspjelo</string>
     <string name="wikis_rename_page_title">Preimenuj stranicu</string>
     <string name="wikis_rename_page_label">Novi URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Pogled</string>
     <string name="wikis_history_revert_action">Vrati na ovu verziju</string>
     <string name="wikis_revision_current_badge">Trenutno</string>
-    <string name="wikis_revision_back_to_history">Natrag na povijest</string>
     <string name="wikis_revision_revert_to_this">Vrati na ovu verziju</string>
     <string name="wikis_changes_title">Nedavne promjene</string>
     <string name="wikis_changes_subtitle">Nedavne izmjene na svim stranicama u ovom wikiju.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autenticirani korisnici</string>
 
     <string name="wikis_revision_compare">Usporedi promjene</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Prikaži stranicu</string>
     <string name="wikis_revision_compare_failed">Nije moguće učitati prethodnu verziju za usporedbu.</string>
     <string name="wikis_revision_changes_from">Promjene od verzije %1$d → %2$d</string>

@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Nepodarilo sa zmazať stránku</string>
     <string name="wikis_revert_page_comment_label">Vrátiť komentár späť</string>
     <string name="wikis_revert_page_confirm">Vrátiť späť</string>
-    <string name="wikis_revert_page_cancel">Zrušiť</string>
     <string name="wikis_revert_page_failed">Nepodarilo sa vrátiť stránku</string>
     <string name="wikis_rename_page_title">Premenovať stránku</string>
     <string name="wikis_rename_page_label">Nová URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Zobraziť</string>
     <string name="wikis_history_revert_action">Vrátiť na túto verziu</string>
     <string name="wikis_revision_current_badge">Aktuálne</string>
-    <string name="wikis_revision_back_to_history">Späť na históriu</string>
     <string name="wikis_revision_revert_to_this">Vrátiť na túto verziu</string>
     <string name="wikis_changes_title">Nedávne zmeny</string>
     <string name="wikis_changes_subtitle">Nedávne úpravy vo všetkých stránkach tejto wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Overení používatelia</string>
 
     <string name="wikis_revision_compare">Porovnať zmeny</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Zobraziť stránku</string>
     <string name="wikis_revision_compare_failed">Predchádzajúcu verziu na porovnanie sa nepodarilo načítať.</string>
     <string name="wikis_revision_changes_from">Zmeny z verzie %1$d → %2$d</string>

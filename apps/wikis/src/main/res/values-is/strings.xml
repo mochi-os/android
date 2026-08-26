@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Tókst ekki að eyða síðu</string>
     <string name="wikis_revert_page_comment_label">Bakfæra athugasemd</string>
     <string name="wikis_revert_page_confirm">Snúa við</string>
-    <string name="wikis_revert_page_cancel">Hætta við</string>
     <string name="wikis_revert_page_failed">Tókst ekki að snúa við síðu</string>
     <string name="wikis_rename_page_title">Endurnefna síðu</string>
     <string name="wikis_rename_page_label">Ný vefslóð</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Skoða</string>
     <string name="wikis_history_revert_action">Bakfæra í þessa útgáfu</string>
     <string name="wikis_revision_current_badge">Núverandi</string>
-    <string name="wikis_revision_back_to_history">Til baka í sögu</string>
     <string name="wikis_revision_revert_to_this">Bakfæra í þessa útgáfu</string>
     <string name="wikis_changes_title">Nýlegar breytingar</string>
     <string name="wikis_changes_subtitle">Nýlegar breytingar á öllum síðum þessa wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Auðkenndir notendur</string>
 
     <string name="wikis_revision_compare">Bera saman breytingar</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Sýna síðu</string>
     <string name="wikis_revision_compare_failed">Ekki tókst að hlaða fyrri útgáfu til samanburðar.</string>
     <string name="wikis_revision_changes_from">Breytingar frá útgáfu %1$d → %2$d</string>

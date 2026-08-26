@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Неуспешно бришење на страница</string>
     <string name="wikis_revert_page_comment_label">Врати коментар</string>
     <string name="wikis_revert_page_confirm">Врати</string>
-    <string name="wikis_revert_page_cancel">Откажи</string>
     <string name="wikis_revert_page_failed">Неуспешно враќање на страница</string>
     <string name="wikis_rename_page_title">Преименувај страница</string>
     <string name="wikis_rename_page_label">Нов URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Прикажи</string>
     <string name="wikis_history_revert_action">Врати на оваа верзија</string>
     <string name="wikis_revision_current_badge">Тековно</string>
-    <string name="wikis_revision_back_to_history">Назад на историја</string>
     <string name="wikis_revision_revert_to_this">Врати на оваа верзија</string>
     <string name="wikis_changes_title">Неодамнешни промени</string>
     <string name="wikis_changes_subtitle">Неодамнешни уредувања на сите страници во ова wiki.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Секој</string>
     <string name="wikis_access_subject_authenticated">Автентицирани корисници</string>
     <string name="wikis_revision_compare">Спореди промени</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Прикажи страница</string>
     <string name="wikis_revision_compare_failed">Не може да се вчита претходната верзија за споредба.</string>
     <string name="wikis_revision_changes_from">Промени од верзијата %1$d → %2$d</string>

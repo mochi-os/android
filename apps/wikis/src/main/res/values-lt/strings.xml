@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Nepavyko ištrinti puslapio</string>
     <string name="wikis_revert_page_comment_label">Atstatyti komentarą</string>
     <string name="wikis_revert_page_confirm">Atstatyti</string>
-    <string name="wikis_revert_page_cancel">Atšaukti</string>
     <string name="wikis_revert_page_failed">Nepavyko grąžinti puslapio</string>
     <string name="wikis_rename_page_title">Pervadinti puslapį</string>
     <string name="wikis_rename_page_label">Naujas URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Peržiūrėti</string>
     <string name="wikis_history_revert_action">Atstatyti į šią versiją</string>
     <string name="wikis_revision_current_badge">Dabartinis</string>
-    <string name="wikis_revision_back_to_history">Atgal į istoriją</string>
     <string name="wikis_revision_revert_to_this">Atstatyti į šią versiją</string>
     <string name="wikis_changes_title">Naujausi pakeitimai</string>
     <string name="wikis_changes_subtitle">Naujausi šio wiki visų puslapių pakeitimai.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentifikuoti naudotojai</string>
 
     <string name="wikis_revision_compare">Palyginti pakeitimus</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Rodyti puslapį</string>
     <string name="wikis_revision_compare_failed">Nepavyko įkelti ankstesnės versijos palyginimui.</string>
     <string name="wikis_revision_changes_from">Pakeitimai nuo versijos %1$d → %2$d</string>

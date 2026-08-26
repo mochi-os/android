@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Kuhlulekile ukususa ikhasi</string>
     <string name="wikis_revert_page_comment_label">Buyisela amazwana</string>
     <string name="wikis_revert_page_confirm">Buyisela</string>
-    <string name="wikis_revert_page_cancel">Khansela</string>
     <string name="wikis_revert_page_failed">Kuhlulekile ukubuyisela ikhasi</string>
     <string name="wikis_rename_page_title">Qamba kabusha ikhasi</string>
     <string name="wikis_rename_page_label">I-URL Entsha</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Buka</string>
     <string name="wikis_history_revert_action">Buyisela kule nguqulo</string>
     <string name="wikis_revision_current_badge">Yamanje</string>
-    <string name="wikis_revision_back_to_history">Buyela emlandweni</string>
     <string name="wikis_revision_revert_to_this">Buyisela kule nguqulo</string>
     <string name="wikis_changes_title">Ukushintsha kwakamuva</string>
     <string name="wikis_changes_subtitle">Ukuhlelwa kwakamuva kuwo wonke amakhasi kule-wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Abasebenzisi abaqinisekisiwe</string>
 
     <string name="wikis_revision_compare">Qhathanisa izinguquko</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Bonisa ikhasi</string>
     <string name="wikis_revision_compare_failed">Ayikwazanga ukulayisha inguqulo edlule ukuze kuqhathaniswe.</string>
     <string name="wikis_revision_changes_from">Izinguquko ezisuka kunguqulo %1$d → %2$d</string>

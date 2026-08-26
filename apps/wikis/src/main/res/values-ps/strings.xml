@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">د پاڼې حذف کولو پاتې راغلل</string>
     <string name="wikis_revert_page_comment_label">تبصره بیرته راګرځول</string>
     <string name="wikis_revert_page_confirm">بیرته راګرځول</string>
-    <string name="wikis_revert_page_cancel">لغوه کول</string>
     <string name="wikis_revert_page_failed">د پاڼې د بیا راګرځولو پاتې راغلل</string>
     <string name="wikis_rename_page_title">د پاڼې نوم بدل کړئ</string>
     <string name="wikis_rename_page_label">نوی URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ولید</string>
     <string name="wikis_history_revert_action">دې نسخې ته بیرته راګرځول</string>
     <string name="wikis_revision_current_badge">اوسنی</string>
-    <string name="wikis_revision_back_to_history">بیرته تاریخچې ته</string>
     <string name="wikis_revision_revert_to_this">دې نسخې ته بیرته راګرځول</string>
     <string name="wikis_changes_title">وروستي بدلونونه</string>
     <string name="wikis_changes_subtitle">په دې wiki کې د ټولو پاڼو په اوږدو کې وروستي ترمیمونه.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">تصدیق شوي کاروونکي</string>
 
     <string name="wikis_revision_compare">بدلونونه پرتله کړئ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">پاڼه وښیه</string>
     <string name="wikis_revision_compare_failed">د پرتلې لپاره مخکینۍ نسخه نه شوه پورته کیدای.</string>
     <string name="wikis_revision_changes_from">د نسخې له %1$d → %2$d بدلونونه</string>

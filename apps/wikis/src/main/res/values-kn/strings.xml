@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">ಪುಟ ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="wikis_revert_page_comment_label">ಕಾಮೆಂಟ್ ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="wikis_revert_page_confirm">ಹಿಂದಿರುಗಿಸಿ</string>
-    <string name="wikis_revert_page_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="wikis_revert_page_failed">ಪುಟವನ್ನು ರಿವರ್ಟ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="wikis_rename_page_title">ಪುಟ ಮರುಹೆಸರಿಸಿ</string>
     <string name="wikis_rename_page_label">ಹೊಸ URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ವೀಕ್ಷಿಸಿ</string>
     <string name="wikis_history_revert_action">ಈ ಆವೃತ್ತಿಗೆ ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="wikis_revision_current_badge">ಪ್ರಸ್ತುತ</string>
-    <string name="wikis_revision_back_to_history">ಇತಿಹಾಸಕ್ಕೆ ಹಿಂದೆ</string>
     <string name="wikis_revision_revert_to_this">ಈ ಆವೃತ್ತಿಗೆ ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="wikis_changes_title">ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು</string>
     <string name="wikis_changes_subtitle">ಈ wiki ಯಲ್ಲಿನ ಎಲ್ಲಾ ಪುಟಗಳಲ್ಲಿನ ಇತ್ತೀಚಿನ ಎಡಿಟ್‌ಗಳು.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ದೃಢೀಕರಿಸಿದ ಬಳಕೆದಾರರು</string>
 
     <string name="wikis_revision_compare">ಬದಲಾವಣೆಗಳನ್ನು ಹೋಲಿಸಿ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">ಪುಟವನ್ನು ತೋರಿಸಿ</string>
     <string name="wikis_revision_compare_failed">ಹೋಲಿಕೆಗಾಗಿ ಹಿಂದಿನ ಆವೃತ್ತಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d ಆವೃತ್ತಿಯಿಂದ ಬದಲಾವಣೆಗಳು</string>

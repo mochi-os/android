@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Echwe pou efase paj</string>
     <string name="wikis_revert_page_comment_label">Retounen kòmantè</string>
     <string name="wikis_revert_page_confirm">Retounen</string>
-    <string name="wikis_revert_page_cancel">Anile</string>
     <string name="wikis_revert_page_failed">Echwe pou ranvèse paj</string>
     <string name="wikis_rename_page_title">Rebatize paj</string>
     <string name="wikis_rename_page_label">Nouvo URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Wè</string>
     <string name="wikis_history_revert_action">Retounen nan vèsyon sa a</string>
     <string name="wikis_revision_current_badge">Aktyèl</string>
-    <string name="wikis_revision_back_to_history">Retounen nan istwa</string>
     <string name="wikis_revision_revert_to_this">Retounen nan vèsyon sa a</string>
     <string name="wikis_changes_title">Chanjman resan</string>
     <string name="wikis_changes_subtitle">Modifikasyon resan nan tout paj nan wiki sa a.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Itilizatè otantifye</string>
 
     <string name="wikis_revision_compare">Konpare chanjman yo</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Montre paj la</string>
     <string name="wikis_revision_compare_failed">Pa t kapab chaje vèsyon anvan an pou konparezon.</string>
     <string name="wikis_revision_changes_from">Chanjman depi vèsyon %1$d → %2$d</string>

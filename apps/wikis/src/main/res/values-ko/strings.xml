@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">페이지 삭제에 실패했어요</string>
     <string name="wikis_revert_page_comment_label">댓글 되돌리기</string>
     <string name="wikis_revert_page_confirm">되돌리기</string>
-    <string name="wikis_revert_page_cancel">취소</string>
     <string name="wikis_revert_page_failed">페이지 되돌리기에 실패했어요</string>
     <string name="wikis_rename_page_title">페이지 이름 변경</string>
     <string name="wikis_rename_page_label">새 URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">보기</string>
     <string name="wikis_history_revert_action">이 버전으로 되돌리기</string>
     <string name="wikis_revision_current_badge">현재</string>
-    <string name="wikis_revision_back_to_history">내역으로 돌아가기</string>
     <string name="wikis_revision_revert_to_this">이 버전으로 되돌리기</string>
     <string name="wikis_changes_title">최근 변경 사항</string>
     <string name="wikis_changes_subtitle">이 위키의 모든 페이지에 걸친 최근 편집이에요.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">인증된 사용자</string>
 
     <string name="wikis_revision_compare">변경 사항 비교</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">페이지 표시</string>
     <string name="wikis_revision_compare_failed">비교할 이전 버전을 불러올 수 없습니다.</string>
     <string name="wikis_revision_changes_from">버전 %1$d → %2$d의 변경 사항</string>

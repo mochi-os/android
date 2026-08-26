@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Չհաջողվեց ջնջել էջը</string>
     <string name="wikis_revert_page_comment_label">Հետ վերադարձնել մեկնաբանությունը</string>
     <string name="wikis_revert_page_confirm">Հետ վերադարձնել</string>
-    <string name="wikis_revert_page_cancel">Չեղարկել մեկնաբանությունը</string>
     <string name="wikis_revert_page_failed">Չհաջողվեց վերականգնել էջը</string>
     <string name="wikis_rename_page_title">Վերանվանել էջը</string>
     <string name="wikis_rename_page_label">Նոր URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Դիտել</string>
     <string name="wikis_history_revert_action">Վերադարձնել այս տարբերակին</string>
     <string name="wikis_revision_current_badge">Ընթացիկ տարբերակ</string>
-    <string name="wikis_revision_back_to_history">Հետ դեպի էջ</string>
     <string name="wikis_revision_revert_to_this">Վերադարձնել այս տարբերակին</string>
     <string name="wikis_changes_title">Վերջին փոփոխություններ</string>
     <string name="wikis_changes_subtitle">Վերջին փոփոխությունները այս wiki-ի բոլոր էջերում։</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Վավերացված օգտվողներ</string>
 
     <string name="wikis_revision_compare">Համեմատել փոփոխությունները</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Ցույց տալ էջը</string>
     <string name="wikis_revision_compare_failed">Չհաջողվեց բեռնել նախորդ տարբերակը համեմատության համար։</string>
     <string name="wikis_revision_changes_from">Փոփոխությունները %1$d → %2$d տարբերակից</string>

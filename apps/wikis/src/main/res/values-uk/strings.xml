@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Не вдалося видалити сторінку</string>
     <string name="wikis_revert_page_comment_label">Відкотити коментар</string>
     <string name="wikis_revert_page_confirm">Відкотити</string>
-    <string name="wikis_revert_page_cancel">Скасувати</string>
     <string name="wikis_revert_page_failed">Не вдалося відкотити сторінку</string>
     <string name="wikis_rename_page_title">Перейменувати сторінку</string>
     <string name="wikis_rename_page_label">Новий URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Переглянути</string>
     <string name="wikis_history_revert_action">Відкотити до цієї версії</string>
     <string name="wikis_revision_current_badge">Поточний</string>
-    <string name="wikis_revision_back_to_history">Назад до історії</string>
     <string name="wikis_revision_revert_to_this">Відкотити до цієї версії</string>
     <string name="wikis_changes_title">Останні зміни</string>
     <string name="wikis_changes_subtitle">Останні редагування на всіх сторінках цієї вікі.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Автентифіковані користувачі</string>
 
     <string name="wikis_revision_compare">Порівняти зміни</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Показати сторінку</string>
     <string name="wikis_revision_compare_failed">Не вдалося завантажити попередню версію для порівняння.</string>
     <string name="wikis_revision_changes_from">Зміни з версії %1$d → %2$d</string>

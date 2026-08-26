@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">បរាជ័យក្នុងការលុបទំព័រ</string>
     <string name="wikis_revert_page_comment_label">ត្រឡប់មតិយោបល់វិញ</string>
     <string name="wikis_revert_page_confirm">ត្រឡប់វិញ</string>
-    <string name="wikis_revert_page_cancel">បោះបង់</string>
     <string name="wikis_revert_page_failed">បរាជ័យក្នុងការត្រឡប់ទំព័រវិញ</string>
     <string name="wikis_rename_page_title">ប្តូរឈ្មោះទំព័រ</string>
     <string name="wikis_rename_page_label">URL ថ្មី</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">មើល</string>
     <string name="wikis_history_revert_action">ត្រឡប់ទៅកំណែនេះ</string>
     <string name="wikis_revision_current_badge">បច្ចុប្បន្ន</string>
-    <string name="wikis_revision_back_to_history">ត្រឡប់ទៅប្រវត្តិ</string>
     <string name="wikis_revision_revert_to_this">ត្រឡប់ទៅកំណែនេះ</string>
     <string name="wikis_changes_title">ការផ្លាស់ប្តូរថ្មីៗ</string>
     <string name="wikis_changes_subtitle">ការកែប្រែថ្មីៗកាត់ឆ្លងគ្រប់ទំព័រនៅក្នុង wiki នេះ។</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>
 
     <string name="wikis_revision_compare">ប្រៀបធៀបការផ្លាស់ប្ដូរ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">បង្ហាញទំព័រ</string>
     <string name="wikis_revision_compare_failed">មិនអាចផ្ទុកកំណែមុនសម្រាប់ការប្រៀបធៀបបានទេ។</string>
     <string name="wikis_revision_changes_from">ការផ្លាស់ប្ដូរពីកំណែ %1$d → %2$d</string>

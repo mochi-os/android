@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Неуспешно изтриване на страница</string>
     <string name="wikis_revert_page_comment_label">Върни коментара</string>
     <string name="wikis_revert_page_confirm">Върни</string>
-    <string name="wikis_revert_page_cancel">Отказ</string>
     <string name="wikis_revert_page_failed">Неуспешно връщане на страница</string>
     <string name="wikis_rename_page_title">Преименувай страницата</string>
     <string name="wikis_rename_page_label">Нов URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Преглед</string>
     <string name="wikis_history_revert_action">Върни към тази версия</string>
     <string name="wikis_revision_current_badge">Текущо</string>
-    <string name="wikis_revision_back_to_history">Обратно към историята</string>
     <string name="wikis_revision_revert_to_this">Върни към тази версия</string>
     <string name="wikis_changes_title">Скорошни промени</string>
     <string name="wikis_changes_subtitle">Скорошни редакции на всички страници в тази wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Удостоверени потребители</string>
 
     <string name="wikis_revision_compare">Сравняване на промените</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Показване на страницата</string>
     <string name="wikis_revision_compare_failed">Предишната версия не можа да бъде заредена за сравнение.</string>
     <string name="wikis_revision_changes_from">Промени от версия %1$d → %2$d</string>

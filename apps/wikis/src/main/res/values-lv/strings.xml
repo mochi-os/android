@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Neizdevās dzēst lapu</string>
     <string name="wikis_revert_page_comment_label">Atsaukt komentāru</string>
     <string name="wikis_revert_page_confirm">Atsaukt</string>
-    <string name="wikis_revert_page_cancel">Atcelt</string>
     <string name="wikis_revert_page_failed">Neizdevās atjaunot lapu</string>
     <string name="wikis_rename_page_title">Pārdēvēt lapu</string>
     <string name="wikis_rename_page_label">Jauns URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Skatīt</string>
     <string name="wikis_history_revert_action">Atsaukt uz šo versiju</string>
     <string name="wikis_revision_current_badge">Pašreizējais</string>
-    <string name="wikis_revision_back_to_history">Atpakaļ uz vēsturi</string>
     <string name="wikis_revision_revert_to_this">Atsaukt uz šo versiju</string>
     <string name="wikis_changes_title">Nesenās izmaiņas</string>
     <string name="wikis_changes_subtitle">Nesenas izmaiņas visās šīs wiki lapās.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentificēti lietotāji</string>
 
     <string name="wikis_revision_compare">Salīdzināt izmaiņas</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Rādīt lapu</string>
     <string name="wikis_revision_compare_failed">Neizdevās ielādēt iepriekšējo versiju salīdzināšanai.</string>
     <string name="wikis_revision_changes_from">Izmaiņas no versijas %1$d → %2$d</string>

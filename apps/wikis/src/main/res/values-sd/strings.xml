@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">صفحو ختم ڪرڻ ۾ ناڪام</string>
     <string name="wikis_revert_page_comment_label">تبصرو واپس آڻيو</string>
     <string name="wikis_revert_page_confirm">واپس آڻيو</string>
-    <string name="wikis_revert_page_cancel">منسوخ ڪريو</string>
     <string name="wikis_revert_page_failed">صفحو واپس آڻڻ ۾ ناڪام</string>
     <string name="wikis_rename_page_title">صفحي جو نالو تبديل ڪريو</string>
     <string name="wikis_rename_page_label">نئون URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ڏسو</string>
     <string name="wikis_history_revert_action">هن ورزن تي واپس آڻيو</string>
     <string name="wikis_revision_current_badge">موجوده</string>
-    <string name="wikis_revision_back_to_history">تاريخ ڏانهن واپس</string>
     <string name="wikis_revision_revert_to_this">هن ورزن تي واپس آڻيو</string>
     <string name="wikis_changes_title">تازيون تبديليون</string>
     <string name="wikis_changes_subtitle">هن wiki جي سمورن صفحن تي تازيون ترميمون.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
 
     <string name="wikis_revision_compare">تبديليون ڀيٽيو</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">صفحو ڏيکاريو</string>
     <string name="wikis_revision_compare_failed">ڀيٽ لاءِ اڳوڻو نسخو لوڊ نه ٿي سگهيو.</string>
     <string name="wikis_revision_changes_from">نسخي %1$d → %2$d کان تبديليون</string>

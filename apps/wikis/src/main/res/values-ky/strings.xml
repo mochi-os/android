@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Бетти өчүрүү ишке ашкан жок</string>
     <string name="wikis_revert_page_comment_label">Комментарийди кайтаруу</string>
     <string name="wikis_revert_page_confirm">Кайтаруу</string>
-    <string name="wikis_revert_page_cancel">Жокко чыгаруу</string>
     <string name="wikis_revert_page_failed">Бетти кайтаруу ишке ашкан жок</string>
     <string name="wikis_rename_page_title">Барактын атын өзгөртүү</string>
     <string name="wikis_rename_page_label">Жаңы URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Көрүү</string>
     <string name="wikis_history_revert_action">Бул версияга кайтаруу</string>
     <string name="wikis_revision_current_badge">Учурдагы</string>
-    <string name="wikis_revision_back_to_history">Тарыхка кайтуу</string>
     <string name="wikis_revision_revert_to_this">Бул версияга кайтаруу</string>
     <string name="wikis_changes_title">Акыркы өзгөрүүлөр</string>
     <string name="wikis_changes_subtitle">Бул wiki-нин бардык барактарындагы акыркы оңдоолор.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Аныкталган колдонуучулар</string>
 
     <string name="wikis_revision_compare">Өзгөртүүлөрдү салыштыруу</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Баракты көрсөтүү</string>
     <string name="wikis_revision_compare_failed">Салыштыруу үчүн мурунку версияны жүктөө мүмкүн болгон жок.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d версиясынан өзгөртүүлөр</string>

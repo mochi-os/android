@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">पन्ना मेटावे में विफल</string>
     <string name="wikis_revert_page_comment_label">टिप्पणी वापस लीं</string>
     <string name="wikis_revert_page_confirm">वापस लीं</string>
-    <string name="wikis_revert_page_cancel">रद्द करीं</string>
     <string name="wikis_revert_page_failed">पन्ना वापस करे में विफल</string>
     <string name="wikis_rename_page_title">पन्ना के नाम बदलीं</string>
     <string name="wikis_rename_page_label">नया URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">देखीं</string>
     <string name="wikis_history_revert_action">ए संस्करण पर वापस जाईं</string>
     <string name="wikis_revision_current_badge">मौजूदा</string>
-    <string name="wikis_revision_back_to_history">इतिहास पर वापस</string>
     <string name="wikis_revision_revert_to_this">ए संस्करण पर वापस जाईं</string>
     <string name="wikis_changes_title">हाल के बदलाव</string>
     <string name="wikis_changes_subtitle">ए विकी के सब पन्ना पर हाल के संपादन।</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
 
     <string name="wikis_revision_compare">बदलाव के तुलना करीं</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">पन्ना देखाईं</string>
     <string name="wikis_revision_compare_failed">तुलना खातिर पिछला संस्करण लोड ना हो सकल।</string>
     <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d से बदलाव</string>

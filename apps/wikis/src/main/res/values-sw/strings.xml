@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Imeshindwa kufuta ukurasa</string>
     <string name="wikis_revert_page_comment_label">Rejesha maoni</string>
     <string name="wikis_revert_page_confirm">Rejesha</string>
-    <string name="wikis_revert_page_cancel">Ghairi</string>
     <string name="wikis_revert_page_failed">Imeshindwa kurejesha ukurasa</string>
     <string name="wikis_rename_page_title">Badilisha jina la ukurasa</string>
     <string name="wikis_rename_page_label">URL Mpya</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Tazama</string>
     <string name="wikis_history_revert_action">Rejesha kwenye toleo hili</string>
     <string name="wikis_revision_current_badge">Ya sasa</string>
-    <string name="wikis_revision_back_to_history">Rudi kwa historia</string>
     <string name="wikis_revision_revert_to_this">Rejesha kwenye toleo hili</string>
     <string name="wikis_changes_title">Mabadiliko ya hivi karibuni</string>
     <string name="wikis_changes_subtitle">Mabadiliko ya hivi karibuni katika kurasa zote za wiki hii.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Mtu yeyote</string>
     <string name="wikis_access_subject_authenticated">Watumiaji waliothibitishwa</string>
     <string name="wikis_revision_compare">Linganisha mabadiliko</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Onyesha ukurasa</string>
     <string name="wikis_revision_compare_failed">Haikuweza kupakia toleo la awali kwa ajili ya kulinganisha.</string>
     <string name="wikis_revision_changes_from">Mabadiliko kutoka toleo %1$d → %2$d</string>

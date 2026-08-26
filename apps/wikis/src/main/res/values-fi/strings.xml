@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Sivun poistaminen epäonnistui</string>
     <string name="wikis_revert_page_comment_label">Palauta kommentti</string>
     <string name="wikis_revert_page_confirm">Palauta</string>
-    <string name="wikis_revert_page_cancel">Peruuta</string>
     <string name="wikis_revert_page_failed">Sivun palauttaminen epäonnistui</string>
     <string name="wikis_rename_page_title">Nimeä sivu uudelleen</string>
     <string name="wikis_rename_page_label">Uusi URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Näytä</string>
     <string name="wikis_history_revert_action">Palauta tähän versioon</string>
     <string name="wikis_revision_current_badge">Nykyinen</string>
-    <string name="wikis_revision_back_to_history">Takaisin historiaan</string>
     <string name="wikis_revision_revert_to_this">Palauta tähän versioon</string>
     <string name="wikis_changes_title">Viimeaikaiset muutokset</string>
     <string name="wikis_changes_subtitle">Viimeaikaiset muokkaukset kaikilla tämän wikin sivuilla.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Todennetut käyttäjät</string>
 
     <string name="wikis_revision_compare">Vertaa muutoksia</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Näytä sivu</string>
     <string name="wikis_revision_compare_failed">Aiempaa versiota ei voitu ladata vertailua varten.</string>
     <string name="wikis_revision_changes_from">Muutokset versiosta %1$d → %2$d</string>

@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Fshirja e faqes dështoi</string>
     <string name="wikis_revert_page_comment_label">Kthe komentin pas</string>
     <string name="wikis_revert_page_confirm">Kthe pas</string>
-    <string name="wikis_revert_page_cancel">Anulo</string>
     <string name="wikis_revert_page_failed">Kthimi i faqes dështoi</string>
     <string name="wikis_rename_page_title">Riemërto faqen</string>
     <string name="wikis_rename_page_label">URL e re</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Shiko</string>
     <string name="wikis_history_revert_action">Kthe në këtë version</string>
     <string name="wikis_revision_current_badge">Aktual</string>
-    <string name="wikis_revision_back_to_history">Mbrapa te historiku</string>
     <string name="wikis_revision_revert_to_this">Kthe në këtë version</string>
     <string name="wikis_changes_title">Ndryshime të fundit</string>
     <string name="wikis_changes_subtitle">Ndryshime të fundit në të gjitha faqet e këtij wiki.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Kushdo</string>
     <string name="wikis_access_subject_authenticated">Përdorues të vërtetuar</string>
     <string name="wikis_revision_compare">Krahaso ndryshimet</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Shfaq faqen</string>
     <string name="wikis_revision_compare_failed">Versioni i mëparshëm nuk mund të ngarkohej për krahasim.</string>
     <string name="wikis_revision_changes_from">Ndryshimet nga versioni %1$d → %2$d</string>

@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Sahifani oʻchirib boʻlmadi</string>
     <string name="wikis_revert_page_comment_label">Izohni qaytarish</string>
     <string name="wikis_revert_page_confirm">Qaytarish</string>
-    <string name="wikis_revert_page_cancel">Bekor qilish</string>
     <string name="wikis_revert_page_failed">Sahifani qaytarib boʻlmadi</string>
     <string name="wikis_rename_page_title">Sahifa nomini oʻzgartirish</string>
     <string name="wikis_rename_page_label">Yangi URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Koʻrish</string>
     <string name="wikis_history_revert_action">Bu versiyaga qaytarish</string>
     <string name="wikis_revision_current_badge">Joriy</string>
-    <string name="wikis_revision_back_to_history">Tarixga qaytish</string>
     <string name="wikis_revision_revert_to_this">Bu versiyaga qaytarish</string>
     <string name="wikis_changes_title">Soʻnggi oʻzgarishlar</string>
     <string name="wikis_changes_subtitle">Bu wiki’dagi barcha sahifalardagi soʻnggi tahrirlar.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
 
     <string name="wikis_revision_compare">O‘zgarishlarni solishtirish</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Sahifani ko‘rsatish</string>
     <string name="wikis_revision_compare_failed">Solishtirish uchun oldingi versiyani yuklab bo‘lmadi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d versiyadagi o‘zgarishlar</string>

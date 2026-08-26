@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Kunne ikke slette side</string>
     <string name="wikis_revert_page_comment_label">Tilbakestill kommentar</string>
     <string name="wikis_revert_page_confirm">Tilbakestill</string>
-    <string name="wikis_revert_page_cancel">Avbryt</string>
     <string name="wikis_revert_page_failed">Kunne ikke tilbakestille side</string>
     <string name="wikis_rename_page_title">Gi siden nytt navn</string>
     <string name="wikis_rename_page_label">Ny URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Vis</string>
     <string name="wikis_history_revert_action">Tilbakestill til denne versjonen</string>
     <string name="wikis_revision_current_badge">Nåværende</string>
-    <string name="wikis_revision_back_to_history">Tilbake til historikk</string>
     <string name="wikis_revision_revert_to_this">Tilbakestill til denne versjonen</string>
     <string name="wikis_changes_title">Nylige endringer</string>
     <string name="wikis_changes_subtitle">Nylige redigeringer på tvers av alle sider i denne wikien.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentiserte brukere</string>
 
     <string name="wikis_revision_compare">Sammenlign endringer</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Vis side</string>
     <string name="wikis_revision_compare_failed">Kunne ikke laste inn forrige versjon for sammenligning.</string>
     <string name="wikis_revision_changes_from">Endringer fra versjon %1$d → %2$d</string>

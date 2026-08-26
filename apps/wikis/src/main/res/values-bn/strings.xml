@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">পেজ মুছতে ব্যর্থ</string>
     <string name="wikis_revert_page_comment_label">মন্তব্য প্রত্যাবর্তন করুন</string>
     <string name="wikis_revert_page_confirm">ফিরিয়ে আনুন</string>
-    <string name="wikis_revert_page_cancel">বাতিল করুন</string>
     <string name="wikis_revert_page_failed">পেজ রিভার্ট করতে ব্যর্থ</string>
     <string name="wikis_rename_page_title">পৃষ্ঠা পুনঃনামকরণ করুন</string>
     <string name="wikis_rename_page_label">নতুন URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">দেখুন</string>
     <string name="wikis_history_revert_action">এই সংস্করণে ফিরে যান</string>
     <string name="wikis_revision_current_badge">বর্তমান</string>
-    <string name="wikis_revision_back_to_history">ইতিহাসে ফিরে যান</string>
     <string name="wikis_revision_revert_to_this">এই সংস্করণে ফিরে যান</string>
     <string name="wikis_changes_title">সাম্প্রতিক পরিবর্তন</string>
     <string name="wikis_changes_subtitle">এই উইকির সমস্ত পৃষ্ঠা জুড়ে সাম্প্রতিক সম্পাদনা।</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">যে কেউ</string>
     <string name="wikis_access_subject_authenticated">প্রমাণীকৃত ব্যবহারকারী</string>
     <string name="wikis_revision_compare">পরিবর্তন তুলনা করুন</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">পৃষ্ঠা দেখান</string>
     <string name="wikis_revision_compare_failed">তুলনার জন্য পূর্ববর্তী সংস্করণ লোড করা যায়নি।</string>
     <string name="wikis_revision_changes_from">সংস্করণ %1$d → %2$d থেকে পরিবর্তনসমূহ</string>

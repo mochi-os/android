@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Klarte ikkje sletta side</string>
     <string name="wikis_revert_page_comment_label">Tilbakerull kommentar</string>
     <string name="wikis_revert_page_confirm">Tilbakerull</string>
-    <string name="wikis_revert_page_cancel">Avbryt</string>
     <string name="wikis_revert_page_failed">Klarte ikkje tilbakestilla side</string>
     <string name="wikis_rename_page_title">Døyp om side</string>
     <string name="wikis_rename_page_label">Ny URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Vis</string>
     <string name="wikis_history_revert_action">Tilbakerull til denne versjonen</string>
     <string name="wikis_revision_current_badge">Noverande</string>
-    <string name="wikis_revision_back_to_history">Tilbake til historikken</string>
     <string name="wikis_revision_revert_to_this">Tilbakerull til denne versjonen</string>
     <string name="wikis_changes_title">Nylege endringar</string>
     <string name="wikis_changes_subtitle">Nylege redigeringar på alle sider i denne wikien.</string>
@@ -350,6 +348,7 @@
         <item quantity="other">Fann %1$d resultat for "%2$s"</item>
     </plurals>
     <string name="wikis_revision_compare">Samanlikn endringar</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_compare_failed">Klarte ikkje å laste førre versjon for samanlikning.</string>
     <string name="wikis_revision_show_page">Vis sida</string>
     <string name="wikis_revision_changes_from">Endringar frå versjon %1$d → %2$d</string>

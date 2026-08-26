@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">పేజీని తొలగించడంలో విఫలమైంది</string>
     <string name="wikis_revert_page_comment_label">వ్యాఖ్యను వెనక్కి తీసుకురండి</string>
     <string name="wikis_revert_page_confirm">తిరగదీయు</string>
-    <string name="wikis_revert_page_cancel">రద్దు చేయండి</string>
     <string name="wikis_revert_page_failed">పేజీని వెనక్కి తీసుకురావడంలో విఫలమైంది</string>
     <string name="wikis_rename_page_title">పేజీ పేరును మార్చండి</string>
     <string name="wikis_rename_page_label">కొత్త URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">వీక్షించండి</string>
     <string name="wikis_history_revert_action">ఈ వెర్షన్‌కు వెనక్కి తీసుకురండి</string>
     <string name="wikis_revision_current_badge">ప్రస్తుత</string>
-    <string name="wikis_revision_back_to_history">చరిత్రకు తిరిగి</string>
     <string name="wikis_revision_revert_to_this">ఈ వెర్షన్‌కు వెనక్కి తీసుకురండి</string>
     <string name="wikis_changes_title">ఇటీవలి మార్పులు</string>
     <string name="wikis_changes_subtitle">ఈ wikiలోని అన్ని పేజీలలో ఇటీవలి ఎడిట్‌లు.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ప్రామాణీకరించిన వినియోగదారులు</string>
 
     <string name="wikis_revision_compare">మార్పులను పోల్చండి</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">పేజీని చూపించు</string>
     <string name="wikis_revision_compare_failed">పోలిక కోసం మునుపటి వెర్షన్‌ను లోడ్ చేయడం సాధ్యం కాలేదు.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d వెర్షన్ నుండి మార్పులు</string>

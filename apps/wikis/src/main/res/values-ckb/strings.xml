@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">سڕینەوەی پەڕە سەرکەوتوو نەبوو</string>
     <string name="wikis_revert_page_comment_label">گەڕاندنەوەی بۆچوون</string>
     <string name="wikis_revert_page_confirm">گەڕاندنەوە</string>
-    <string name="wikis_revert_page_cancel">هەڵوەشاندنەوە</string>
     <string name="wikis_revert_page_failed">گەڕاندنەوەی پەڕە سەرکەوتوو نەبوو</string>
     <string name="wikis_rename_page_title">ناوگۆڕکردنی پەڕە</string>
     <string name="wikis_rename_page_label">URLی نوێ</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">بینین</string>
     <string name="wikis_history_revert_action">گەڕاندنەوە بۆ ئەم وەشانە</string>
     <string name="wikis_revision_current_badge">ئێستا</string>
-    <string name="wikis_revision_back_to_history">گەڕانەوە بۆ مێژوو</string>
     <string name="wikis_revision_revert_to_this">گەڕاندنەوە بۆ ئەم وەشانە</string>
     <string name="wikis_changes_title">گۆڕانکارییە نوێیەکان</string>
     <string name="wikis_changes_subtitle">دەستکارییە نوێیەکان لە سەرتاسەری هەموو پەڕەکانی ئەم ویکییە.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">بەکارهێنەرە پشتڕاستکراوەکان</string>
 
     <string name="wikis_revision_compare">بەراوردکردنی گۆڕانکارییەکان</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">پیشاندانی لاپەڕە</string>
     <string name="wikis_revision_compare_failed">نەتوانرا وەشانی پێشوو بۆ بەراوردکردن بار بکرێت.</string>
     <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$d → %2$d</string>

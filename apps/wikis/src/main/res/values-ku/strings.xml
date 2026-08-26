@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Jêbirina rûpelê neserkeftî bû</string>
     <string name="wikis_revert_page_comment_label">Şîroveyê vegerîne</string>
     <string name="wikis_revert_page_confirm">Vegerîne</string>
-    <string name="wikis_revert_page_cancel">Betal bike</string>
     <string name="wikis_revert_page_failed">Vegerandina rûpelê neserkeftî bû</string>
     <string name="wikis_rename_page_title">Navê rûpelê biguhere</string>
     <string name="wikis_rename_page_label">URL ya nû</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Bibîne</string>
     <string name="wikis_history_revert_action">Vegere vê guhertoyê</string>
     <string name="wikis_revision_current_badge">Niha</string>
-    <string name="wikis_revision_back_to_history">Vegere dîrokê</string>
     <string name="wikis_revision_revert_to_this">Vegere vê guhertoyê</string>
     <string name="wikis_changes_title">Guhertinên dawîn</string>
     <string name="wikis_changes_subtitle">Edîtkirinên dawîn li hemû rûpelên vê wikiyê.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Bikarhênerên erêkirî</string>
 
     <string name="wikis_revision_compare">Guhertinan bidin ber hev</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Rûpelê nîşan bide</string>
     <string name="wikis_revision_compare_failed">Ji bo berhevkirinê guhertoya berê nehat barkirin.</string>
     <string name="wikis_revision_changes_from">Guhertin ji guhertoya %1$d → %2$d</string>

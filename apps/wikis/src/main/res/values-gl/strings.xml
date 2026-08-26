@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Non se puido eliminar a páxina</string>
     <string name="wikis_revert_page_comment_label">Reverter comentario</string>
     <string name="wikis_revert_page_confirm">Reverter</string>
-    <string name="wikis_revert_page_cancel">Cancelar</string>
     <string name="wikis_revert_page_failed">Non se puido reverter a páxina</string>
     <string name="wikis_rename_page_title">Renomear páxina</string>
     <string name="wikis_rename_page_label">Novo URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Ver</string>
     <string name="wikis_history_revert_action">Reverter a esta versión</string>
     <string name="wikis_revision_current_badge">Actual</string>
-    <string name="wikis_revision_back_to_history">Volver ao historial</string>
     <string name="wikis_revision_revert_to_this">Reverter a esta versión</string>
     <string name="wikis_changes_title">Cambios recentes</string>
     <string name="wikis_changes_subtitle">Edicións recentes en todas as páxinas desta wiki.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Calquera</string>
     <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>
     <string name="wikis_revision_compare">Comparar cambios</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Amosar a páxina</string>
     <string name="wikis_revision_compare_failed">Non se puido cargar a versión anterior para comparala.</string>
     <string name="wikis_revision_changes_from">Cambios da versión %1$d → %2$d</string>

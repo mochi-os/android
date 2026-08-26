@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Səhifəni silmək alınmadı</string>
     <string name="wikis_revert_page_comment_label">Şərhi geri qaytar</string>
     <string name="wikis_revert_page_confirm">Geri qaytar</string>
-    <string name="wikis_revert_page_cancel">Ləğv et</string>
     <string name="wikis_revert_page_failed">Səhifəni geri qaytarmaq alınmadı</string>
     <string name="wikis_rename_page_title">Səhifə adını dəyiş</string>
     <string name="wikis_rename_page_label">Yeni URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Bax</string>
     <string name="wikis_history_revert_action">Bu versiyaya geri qaytar</string>
     <string name="wikis_revision_current_badge">Cari</string>
-    <string name="wikis_revision_back_to_history">Tarixçəyə geri</string>
     <string name="wikis_revision_revert_to_this">Bu versiyaya geri qaytar</string>
     <string name="wikis_changes_title">Son dəyişikliklər</string>
     <string name="wikis_changes_subtitle">Bu wiki-dəki bütün səhifələrdə son redaktələr.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>
 
     <string name="wikis_revision_compare">Dəyişiklikləri müqayisə et</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Səhifəni göstər</string>
     <string name="wikis_revision_compare_failed">Müqayisə üçün əvvəlki versiya yüklənə bilmədi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d versiyasından dəyişikliklər</string>

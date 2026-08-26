@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">စာမျက်နှာ ဖျက်၍ မရပါ</string>
     <string name="wikis_revert_page_comment_label">comment ပြန်ပြင်</string>
     <string name="wikis_revert_page_confirm">ပြန်ပြင်</string>
-    <string name="wikis_revert_page_cancel">မလုပ်တော့ပါ</string>
     <string name="wikis_revert_page_failed">စာမျက်နှာ ပြန်ပြောင်း၍ မရပါ</string>
     <string name="wikis_rename_page_title">စာမျက်နှာ အမည်ပြောင်း</string>
     <string name="wikis_rename_page_label">URL အသစ်</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ကြည့်ရှုမည်</string>
     <string name="wikis_history_revert_action">ဤ version သို့ ပြန်ပြင်</string>
     <string name="wikis_revision_current_badge">လက်ရှိ</string>
-    <string name="wikis_revision_back_to_history">မှတ်တမ်းသို့ ပြန်သွားမည်</string>
     <string name="wikis_revision_revert_to_this">ဤ version သို့ ပြန်ပြင်</string>
     <string name="wikis_changes_title">လတ်တလော ပြောင်းလဲမှုများ</string>
     <string name="wikis_changes_subtitle">ဤ wiki ရှိ စာမျက်နှာအားလုံး၏ လတ်တလော ပြင်ဆင်မှုများ။</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
 
     <string name="wikis_revision_compare">ပြောင်းလဲမှုများကို နှိုင်းယှဉ်ပါ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">စာမျက်နှာ ပြပါ</string>
     <string name="wikis_revision_compare_failed">နှိုင်းယှဉ်ရန် ယခင်ဗားရှင်းကို ဖွင့်၍မရပါ။</string>
     <string name="wikis_revision_changes_from">ဗားရှင်း %1$d → %2$d မှ ပြောင်းလဲမှုများ</string>

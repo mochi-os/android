@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Gagal mupus kaca</string>
     <string name="wikis_revert_page_comment_label">Balikkeun koméntar</string>
     <string name="wikis_revert_page_confirm">Balikkeun</string>
-    <string name="wikis_revert_page_cancel">Batalkeun</string>
     <string name="wikis_revert_page_failed">Gagal mulangkeun kaca</string>
     <string name="wikis_rename_page_title">Ganti ngaran kaca</string>
     <string name="wikis_rename_page_label">URL Anyar</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Tingali</string>
     <string name="wikis_history_revert_action">Balikkeun ka versi ieu</string>
     <string name="wikis_revision_current_badge">Ayeuna</string>
-    <string name="wikis_revision_back_to_history">Balik ka riwayat</string>
     <string name="wikis_revision_revert_to_this">Balikkeun ka versi ieu</string>
     <string name="wikis_changes_title">Parobahan panganyarna</string>
     <string name="wikis_changes_subtitle">Édit panganyarna dina sakabéh kaca dina wiki ieu.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Pangguna anu disahkeun</string>
 
     <string name="wikis_revision_compare">Bandingkeun parobahan</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Témbongkeun kaca</string>
     <string name="wikis_revision_compare_failed">Teu bisa ngamuat versi saméméhna pikeun dibandingkeun.</string>
     <string name="wikis_revision_changes_from">Parobahan ti versi %1$d → %2$d</string>

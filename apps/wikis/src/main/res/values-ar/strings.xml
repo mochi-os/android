@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">فشل حذف الصفحة</string>
     <string name="wikis_revert_page_comment_label">إرجاع التعليق</string>
     <string name="wikis_revert_page_confirm">التراجع</string>
-    <string name="wikis_revert_page_cancel">إلغاء</string>
     <string name="wikis_revert_page_failed">فشل التراجع عن الصفحة</string>
     <string name="wikis_rename_page_title">إعادة تسمية الصفحة</string>
     <string name="wikis_rename_page_label">URL جديد</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">عرض</string>
     <string name="wikis_history_revert_action">الإرجاع إلى هذا الإصدار</string>
     <string name="wikis_revision_current_badge">الحالي</string>
-    <string name="wikis_revision_back_to_history">العودة إلى السجل</string>
     <string name="wikis_revision_revert_to_this">الإرجاع إلى هذا الإصدار</string>
     <string name="wikis_changes_title">التغييرات الحديثة</string>
     <string name="wikis_changes_subtitle">التعديلات الحديثة عبر كل الصفحات في هذا الويكي.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">المستخدمون المُوثَّقون</string>
 
     <string name="wikis_revision_compare">مقارنة التغييرات</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">عرض الصفحة</string>
     <string name="wikis_revision_compare_failed">تعذّر تحميل الإصدار السابق للمقارنة.</string>
     <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$d → %2$d</string>

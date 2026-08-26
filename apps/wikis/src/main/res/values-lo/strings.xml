@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">ລຶບໜ້າລົ້ມເຫຼວ</string>
     <string name="wikis_revert_page_comment_label">ກັບຄືນຄຳເຫັນ</string>
     <string name="wikis_revert_page_confirm">ກັບຄືນ</string>
-    <string name="wikis_revert_page_cancel">ຍົກເລີກ</string>
     <string name="wikis_revert_page_failed">ກັບຄືນໜ້າລົ້ມເຫຼວ</string>
     <string name="wikis_rename_page_title">ປ່ຽນຊື່ໜ້າ</string>
     <string name="wikis_rename_page_label">URL ໃໝ່</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ເບິ່ງ</string>
     <string name="wikis_history_revert_action">ກັບຄືນເປັນເວີຊັນນີ້</string>
     <string name="wikis_revision_current_badge">ປັດຈຸບັນ</string>
-    <string name="wikis_revision_back_to_history">ກັບຄືນຫາປະຫວັດ</string>
     <string name="wikis_revision_revert_to_this">ກັບຄືນເປັນເວີຊັນນີ້</string>
     <string name="wikis_changes_title">ການປ່ຽນແປງລ່າສຸດ</string>
     <string name="wikis_changes_subtitle">ການແກ້ໄຂລ່າສຸດໃນທຸກໜ້າຂອງ wiki ນີ້.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>
 
     <string name="wikis_revision_compare">ປຽບທຽບການປ່ຽນແປງ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">ສະແດງໜ້າ</string>
     <string name="wikis_revision_compare_failed">ບໍ່ສາມາດໂຫຼດລຸ້ນກ່ອນໜ້າເພື່ອປຽບທຽບໄດ້.</string>
     <string name="wikis_revision_changes_from">ການປ່ຽນແປງຈາກລຸ້ນ %1$d → %2$d</string>

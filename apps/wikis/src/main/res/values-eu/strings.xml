@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Ezin izan da orria ezabatu</string>
     <string name="wikis_revert_page_comment_label">Itzuli iruzkina</string>
     <string name="wikis_revert_page_confirm">Itzuli</string>
-    <string name="wikis_revert_page_cancel">Utzi</string>
     <string name="wikis_revert_page_failed">Ezin izan da orria atzera bota</string>
     <string name="wikis_rename_page_title">Aldatu orriaren izena</string>
     <string name="wikis_rename_page_label">URL berria</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Ikusi</string>
     <string name="wikis_history_revert_action">Itzuli bertsio honetara</string>
     <string name="wikis_revision_current_badge">Unekoa</string>
-    <string name="wikis_revision_back_to_history">Itzuli historiara</string>
     <string name="wikis_revision_revert_to_this">Itzuli bertsio honetara</string>
     <string name="wikis_changes_title">Azken aldaketak</string>
     <string name="wikis_changes_subtitle">Wiki honetako orri guztietako azken edizioak.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Edonor</string>
     <string name="wikis_access_subject_authenticated">Autentifikatutako erabiltzaileak</string>
     <string name="wikis_revision_compare">Konparatu aldaketak</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Erakutsi orria</string>
     <string name="wikis_revision_compare_failed">Ezin izan da aurreko bertsioa kargatu konparatzeko.</string>
     <string name="wikis_revision_changes_from">Aldaketak %1$d → %2$d bertsiotik</string>

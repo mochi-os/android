@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Не удалось удалить страницу</string>
     <string name="wikis_revert_page_comment_label">Откатить комментарий</string>
     <string name="wikis_revert_page_confirm">Откатить</string>
-    <string name="wikis_revert_page_cancel">Отмена</string>
     <string name="wikis_revert_page_failed">Не удалось откатить страницу</string>
     <string name="wikis_rename_page_title">Переименовать страницу</string>
     <string name="wikis_rename_page_label">Новый URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Просмотр</string>
     <string name="wikis_history_revert_action">Откатить к этой версии</string>
     <string name="wikis_revision_current_badge">Текущая</string>
-    <string name="wikis_revision_back_to_history">Назад к истории</string>
     <string name="wikis_revision_revert_to_this">Откатить к этой версии</string>
     <string name="wikis_changes_title">Недавние изменения</string>
     <string name="wikis_changes_subtitle">Недавние правки по всем страницам этой wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Аутентифицированные пользователи</string>
 
     <string name="wikis_revision_compare">Сравнить изменения</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Показать страницу</string>
     <string name="wikis_revision_compare_failed">Не удалось загрузить предыдущую версию для сравнения.</string>
     <string name="wikis_revision_changes_from">Изменения с версии %1$d → %2$d</string>

@@ -199,7 +199,6 @@
     <string name="wikis_revert_page_comment_label">Revert comment</string>
     <string name="wikis_revert_page_default_comment">Reverted to version %1$d</string>
     <string name="wikis_revert_page_confirm">Revert</string>
-    <string name="wikis_revert_page_cancel">Cancel</string>
     <string name="wikis_revert_page_success">Reverted to version %1$d</string>
     <string name="wikis_revert_page_failed">Failed to revert page</string>
 
@@ -234,9 +233,9 @@
     <!-- Revision view screen -->
     <string name="wikis_revision_version_badge">Version %1$d</string>
     <string name="wikis_revision_current_badge">Current</string>
-    <string name="wikis_revision_back_to_history">Back to history</string>
     <string name="wikis_revision_revert_to_this">Revert to this version</string>
     <string name="wikis_revision_compare">Compare changes</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Show page</string>
     <string name="wikis_revision_changes_from">Changes from version %1$d → %2$d</string>
     <string name="wikis_revision_compare_failed">Could not load previous version for comparison.</string>

@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Ma rnexxiex titħassar il-paġna</string>
     <string name="wikis_revert_page_comment_label">Revert tal-kumment</string>
     <string name="wikis_revert_page_confirm">Revert</string>
-    <string name="wikis_revert_page_cancel">Ikkanċella</string>
     <string name="wikis_revert_page_failed">Ma rnexxiex tiġi riverżjata l-paġna</string>
     <string name="wikis_rename_page_title">Irrinomina paġna</string>
     <string name="wikis_rename_page_label">URL ġdid</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Ara</string>
     <string name="wikis_history_revert_action">Revert għal din il-verżjoni</string>
     <string name="wikis_revision_current_badge">Attwali</string>
-    <string name="wikis_revision_back_to_history">Lura għall-istorja</string>
     <string name="wikis_revision_revert_to_this">Revert għal din il-verżjoni</string>
     <string name="wikis_changes_title">Bidliet reċenti</string>
     <string name="wikis_changes_subtitle">Edits reċenti fil-paġni kollha f\'dan il-wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Utenti awtentikati</string>
 
     <string name="wikis_revision_compare">Qabbel il-bidliet</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Uri l-paġna</string>
     <string name="wikis_revision_compare_failed">Ma setgħetx tittella\' l-verżjoni preċedenti għall-paragun.</string>
     <string name="wikis_revision_changes_from">Bidliet mill-verżjoni %1$d → %2$d</string>

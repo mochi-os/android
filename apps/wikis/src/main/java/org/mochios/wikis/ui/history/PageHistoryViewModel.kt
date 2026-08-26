@@ -32,6 +32,12 @@ data class PageHistoryUiState(
     val wiki: WikiInfo? = null,
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
+    /** A revert asked for from the list, and how it went. The failure is its
+     *  own field: [error] stands for a history that would not load, and the
+     *  screen reads the two differently. */
+    val isReverting: Boolean = false,
+    val reverted: Boolean = false,
+    val revertError: MochiError? = null,
 ) {
     /** True when more revisions remain on the server beyond what's loaded. */
     val hasMore: Boolean get() = revisions.size < total
@@ -56,6 +62,32 @@ class PageHistoryViewModel @Inject constructor(
     init {
         loadInfo()
         loadHistory()
+    }
+
+    /**
+     * Put one revision back as the page's current version.
+     *
+     * @param version The revision to restore.
+     * @param comment The edit comment recorded against the revert.
+     */
+    fun revert(version: Int, comment: String) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isReverting = true, revertError = null)
+            try {
+                repository.revertPage(wikiId, slug, version, comment.trim())
+                _uiState.value = _uiState.value.copy(isReverting = false, reverted = true)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isReverting = false,
+                    revertError = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    /** Clear a revert failure once the screen has said so. */
+    fun clearRevertError() {
+        _uiState.value = _uiState.value.copy(revertError = null)
     }
 
     fun loadInfo() {

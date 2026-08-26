@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Không xoá trang được</string>
     <string name="wikis_revert_page_comment_label">Hoàn nguyên bình luận</string>
     <string name="wikis_revert_page_confirm">Hoàn nguyên</string>
-    <string name="wikis_revert_page_cancel">Hủy</string>
     <string name="wikis_revert_page_failed">Không hoàn tác trang được</string>
     <string name="wikis_rename_page_title">Đổi tên trang</string>
     <string name="wikis_rename_page_label">URL mới</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Xem</string>
     <string name="wikis_history_revert_action">Hoàn nguyên về phiên bản này</string>
     <string name="wikis_revision_current_badge">Hiện tại</string>
-    <string name="wikis_revision_back_to_history">Quay lại lịch sử</string>
     <string name="wikis_revision_revert_to_this">Hoàn nguyên về phiên bản này</string>
     <string name="wikis_changes_title">Thay đổi gần đây</string>
     <string name="wikis_changes_subtitle">Các chỉnh sửa gần đây trên tất cả trang trong wiki này.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Người dùng đã xác thực</string>
 
     <string name="wikis_revision_compare">So sánh thay đổi</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Hiển thị trang</string>
     <string name="wikis_revision_compare_failed">Không thể tải phiên bản trước để so sánh.</string>
     <string name="wikis_revision_changes_from">Thay đổi từ phiên bản %1$d → %2$d</string>

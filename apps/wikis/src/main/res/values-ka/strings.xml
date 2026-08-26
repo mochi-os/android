@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">გვერდის წაშლა ვერ მოხერხდა</string>
     <string name="wikis_revert_page_comment_label">კომენტარის დაბრუნება</string>
     <string name="wikis_revert_page_confirm">დაბრუნება</string>
-    <string name="wikis_revert_page_cancel">გაუქმება</string>
     <string name="wikis_revert_page_failed">გვერდის დაბრუნება ვერ მოხერხდა</string>
     <string name="wikis_rename_page_title">გვერდის სახელის შეცვლა</string>
     <string name="wikis_rename_page_label">ახალი URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ვიდეოს ესკიზი</string>
     <string name="wikis_history_revert_action">ამ ვერსიაზე დაბრუნება</string>
     <string name="wikis_revision_current_badge">მიმდინარე</string>
-    <string name="wikis_revision_back_to_history">უკან ისტორიაში</string>
     <string name="wikis_revision_revert_to_this">ამ ვერსიაზე დაბრუნება</string>
     <string name="wikis_changes_title">ბოლო ცვლილებები</string>
     <string name="wikis_changes_subtitle">ბოლო რედაქტირებები ამ ვიკის ყველა გვერდზე.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ავთენტიფიცირებული მომხმარებლები</string>
 
     <string name="wikis_revision_compare">ცვლილებების შედარება</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">გვერდის ჩვენება</string>
     <string name="wikis_revision_compare_failed">შესადარებლად წინა ვერსიის ჩატვირთვა ვერ მოხერხდა.</string>
     <string name="wikis_revision_changes_from">ცვლილებები ვერსიიდან %1$d → %2$d</string>

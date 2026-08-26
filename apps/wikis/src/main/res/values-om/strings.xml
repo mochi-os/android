@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Fuula haquu hin dandeenye</string>
     <string name="wikis_revert_page_comment_label">Yaada deebisi</string>
     <string name="wikis_revert_page_confirm">Deebisi</string>
-    <string name="wikis_revert_page_cancel">Haquu</string>
     <string name="wikis_revert_page_failed">Fuula deebi\'ee taasisuu hin dandeenye</string>
     <string name="wikis_rename_page_title">Maqaa fuulaa jijjiiri</string>
     <string name="wikis_rename_page_label">URL Haaraa</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Daawwadhu</string>
     <string name="wikis_history_revert_action">Gara versii kanaatti deebisi</string>
     <string name="wikis_revision_current_badge">Yeroo amma</string>
-    <string name="wikis_revision_back_to_history">Gara seenaatti deebi\'i</string>
     <string name="wikis_revision_revert_to_this">Gara versii kanaatti deebisi</string>
     <string name="wikis_changes_title">Jijjiiramoota dhiyeenya</string>
     <string name="wikis_changes_subtitle">Gulaalliiwwan dhiyeenyaa wikii kana keessa fuula hunda irraa.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Fayyadamtoota mirkanaa\'an</string>
 
     <string name="wikis_revision_compare">Jijjiirama wal bira qabi</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Fuula agarsiisi</string>
     <string name="wikis_revision_compare_failed">Gosa duraanii wal bira qabuuf fe\'uu hin dandeenye.</string>
     <string name="wikis_revision_changes_from">Jijjiirama gosa %1$d → %2$d irraa</string>

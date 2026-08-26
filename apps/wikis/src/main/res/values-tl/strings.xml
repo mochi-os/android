@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Nabigong magdelete ng page</string>
     <string name="wikis_revert_page_comment_label">I-revert ang komento</string>
     <string name="wikis_revert_page_confirm">Ibalik</string>
-    <string name="wikis_revert_page_cancel">Kanselahin</string>
     <string name="wikis_revert_page_failed">Nabigong i-revert ang page</string>
     <string name="wikis_rename_page_title">Palitan ang pangalan ng pahina</string>
     <string name="wikis_rename_page_label">Bagong URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Tingnan</string>
     <string name="wikis_history_revert_action">I-revert sa bersyong ito</string>
     <string name="wikis_revision_current_badge">Kasalukuyan</string>
-    <string name="wikis_revision_back_to_history">Bumalik sa kasaysayan</string>
     <string name="wikis_revision_revert_to_this">I-revert sa bersyong ito</string>
     <string name="wikis_changes_title">Mga kamakailang pagbabago</string>
     <string name="wikis_changes_subtitle">Mga kamakailang pag-edit sa lahat ng pahina sa wiki na ito.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Mga napatotohanang user</string>
 
     <string name="wikis_revision_compare">Ihambing ang mga pagbabago</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Ipakita ang pahina</string>
     <string name="wikis_revision_compare_failed">Hindi ma-load ang nakaraang bersyon para sa paghahambing.</string>
     <string name="wikis_revision_changes_from">Mga pagbabago mula sa bersyon %1$d → %2$d</string>

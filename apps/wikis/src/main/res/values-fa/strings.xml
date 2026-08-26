@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">حذف صفحه ناموفق بود</string>
     <string name="wikis_revert_page_comment_label">بازگشت نظر</string>
     <string name="wikis_revert_page_confirm">بازگشت</string>
-    <string name="wikis_revert_page_cancel">لغو</string>
     <string name="wikis_revert_page_failed">بازگرداندن صفحه ناموفق بود</string>
     <string name="wikis_rename_page_title">تغییر نام صفحه</string>
     <string name="wikis_rename_page_label">URL جدید</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">نمایش</string>
     <string name="wikis_history_revert_action">بازگشت به این نسخه</string>
     <string name="wikis_revision_current_badge">فعلی</string>
-    <string name="wikis_revision_back_to_history">بازگشت به تاریخچه</string>
     <string name="wikis_revision_revert_to_this">بازگشت به این نسخه</string>
     <string name="wikis_changes_title">تغییرات اخیر</string>
     <string name="wikis_changes_subtitle">ویرایش‌های اخیر در تمام صفحات این ویکی.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">کاربران احراز هویت‌شده</string>
 
     <string name="wikis_revision_compare">مقایسهٔ تغییرات</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">نمایش صفحه</string>
     <string name="wikis_revision_compare_failed">بارگذاری نسخهٔ پیشین برای مقایسه ممکن نشد.</string>
     <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$d → %2$d</string>

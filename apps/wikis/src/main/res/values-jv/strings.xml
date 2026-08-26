@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Gagal mbusak halaman</string>
     <string name="wikis_revert_page_comment_label">Bali komentar</string>
     <string name="wikis_revert_page_confirm">Bali</string>
-    <string name="wikis_revert_page_cancel">Batal</string>
     <string name="wikis_revert_page_failed">Gagal mbalèkaké halaman</string>
     <string name="wikis_rename_page_title">Owahi jeneng kaca</string>
     <string name="wikis_rename_page_label">URL Anyar</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Deleng</string>
     <string name="wikis_history_revert_action">Bali menyang versi iki</string>
     <string name="wikis_revision_current_badge">Saiki</string>
-    <string name="wikis_revision_back_to_history">Bali menyang riwayat</string>
     <string name="wikis_revision_revert_to_this">Bali menyang versi iki</string>
     <string name="wikis_changes_title">Owahan anyar</string>
     <string name="wikis_changes_subtitle">Owahan paling anyar ing kabèh kaca ing wiki iki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Pangguna sing wis dipriksa</string>
 
     <string name="wikis_revision_compare">Bandhingake owahan</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Tampilake kaca</string>
     <string name="wikis_revision_compare_failed">Ora bisa ngemot versi sadurunge kanggo dibandhingake.</string>
     <string name="wikis_revision_changes_from">Owahan saka versi %1$d → %2$d</string>

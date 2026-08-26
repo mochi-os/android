@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">صفحہ حذف کرنے میں ناکامی</string>
     <string name="wikis_revert_page_comment_label">تبصرہ واپس لائیں</string>
     <string name="wikis_revert_page_confirm">واپس کریں</string>
-    <string name="wikis_revert_page_cancel">منسوخ کریں</string>
     <string name="wikis_revert_page_failed">صفحہ واپس کرنے میں ناکامی</string>
     <string name="wikis_rename_page_title">صفحے کا نام تبدیل کریں</string>
     <string name="wikis_rename_page_label">نیا URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">دیکھیں</string>
     <string name="wikis_history_revert_action">اس ورژن پر واپس جائیں</string>
     <string name="wikis_revision_current_badge">موجودہ</string>
-    <string name="wikis_revision_back_to_history">تاریخ پر واپس</string>
     <string name="wikis_revision_revert_to_this">اس ورژن پر واپس جائیں</string>
     <string name="wikis_changes_title">حالیہ تبدیلیاں</string>
     <string name="wikis_changes_subtitle">اس wiki کے تمام صفحات میں حالیہ ترامیم۔</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">کوئی بھی</string>
     <string name="wikis_access_subject_authenticated">تصدیق شدہ صارفین</string>
     <string name="wikis_revision_compare">تبدیلیوں کا موازنہ کریں</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
     <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
     <string name="wikis_revision_changes_from">ورژن %1$d → %2$d سے تبدیلیاں</string>

@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">પેજ કાઢી નાખવામાં નિષ્ફળ</string>
     <string name="wikis_revert_page_comment_label">ટિપ્પણી પાછી લાવો</string>
     <string name="wikis_revert_page_confirm">પાછું લાવો</string>
-    <string name="wikis_revert_page_cancel">રદ કરો</string>
     <string name="wikis_revert_page_failed">પેજ રિવર્ટ કરવામાં નિષ્ફળ</string>
     <string name="wikis_rename_page_title">પેજનું નામ બદલો</string>
     <string name="wikis_rename_page_label">નવી URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">જુઓ</string>
     <string name="wikis_history_revert_action">આ સંસ્કરણ પર પાછા જાઓ</string>
     <string name="wikis_revision_current_badge">વર્તમાન</string>
-    <string name="wikis_revision_back_to_history">ઇતિહાસ પર પાછા</string>
     <string name="wikis_revision_revert_to_this">આ સંસ્કરણ પર પાછા જાઓ</string>
     <string name="wikis_changes_title">તાજેતરના ફેરફારો</string>
     <string name="wikis_changes_subtitle">આ wiki ના તમામ પેજમાં તાજેતરના સંપાદનો.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">પ્રમાણિત વપરાશકર્તાઓ</string>
 
     <string name="wikis_revision_compare">ફેરફારોની સરખામણી કરો</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">પૃષ્ઠ બતાવો</string>
     <string name="wikis_revision_compare_failed">સરખામણી માટે અગાઉની આવૃત્તિ લોડ કરી શકાઈ નહીં.</string>
     <string name="wikis_revision_changes_from">આવૃત્તિ %1$d → %2$d થી ફેરફારો</string>

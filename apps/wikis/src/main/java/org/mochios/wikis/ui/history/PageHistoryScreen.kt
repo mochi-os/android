@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.history
 
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -35,16 +36,22 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -58,7 +65,6 @@ import org.mochios.wikis.ui.components.AuthorAvatar
 import org.mochios.wikis.ui.components.AvatarSize
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -68,6 +74,40 @@ fun PageHistoryScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val wikiInfo = state.wiki
+    val context = LocalContext.current
+    // The version the reader has asked to restore, and so the question that is
+    // standing over the list.
+    var revertTarget by remember { mutableStateOf<Int?>(null) }
+
+    val revertFailedMsg = stringResource(R.string.wikis_revert_page_failed)
+    val revertedMsg = stringResource(
+        R.string.wikis_revert_page_success,
+        revertTarget ?: 0,
+    )
+
+    // A revert makes the page the thing worth looking at, not its history.
+    LaunchedEffect(state.reverted) {
+        if (state.reverted) {
+            revertTarget = null
+            Toast.makeText(context, revertedMsg, Toast.LENGTH_SHORT).show()
+            navController.navigate(WikisApp.pageView(viewModel.wikiId, viewModel.slug)) {
+                popUpTo(WikisApp.pageView(viewModel.wikiId, viewModel.slug)) { inclusive = true }
+            }
+        }
+    }
+
+    LaunchedEffect(state.revertError) {
+        val failure = state.revertError
+        if (failure != null) {
+            revertTarget = null
+            Toast.makeText(
+                context,
+                failure.userMessage().ifEmpty { revertFailedMsg },
+                Toast.LENGTH_LONG,
+            ).show()
+            viewModel.clearRevertError()
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -127,16 +167,23 @@ fun PageHistoryScreen(
                                     WikisApp.pageRevision(viewModel.wikiId, viewModel.slug, version)
                                 )
                             },
-                            onRevert = { version ->
-                                navController.navigate(
-                                    WikisApp.pageRevert(viewModel.wikiId, viewModel.slug, version)
-                                )
-                            },
+                            onRevert = { version -> revertTarget = version },
                         )
                     }
                 }
             }
         }
+    }
+
+    val target = revertTarget
+    if (target != null) {
+        RevertDialog(
+            slug = viewModel.slug,
+            version = target,
+            isReverting = state.isReverting,
+            onConfirm = { comment -> viewModel.revert(target, comment) },
+            onDismiss = { revertTarget = null },
+        )
     }
 }
 

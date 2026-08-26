@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Pagina verwijderen mislukt</string>
     <string name="wikis_revert_page_comment_label">Reactie terugdraaien</string>
     <string name="wikis_revert_page_confirm">Terugzetten</string>
-    <string name="wikis_revert_page_cancel">Annuleren</string>
     <string name="wikis_revert_page_failed">Pagina terugzetten mislukt</string>
     <string name="wikis_rename_page_title">Pagina hernoemen</string>
     <string name="wikis_rename_page_label">Nieuwe URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Bekijken</string>
     <string name="wikis_history_revert_action">Terugzetten naar deze versie</string>
     <string name="wikis_revision_current_badge">Huidig</string>
-    <string name="wikis_revision_back_to_history">Terug naar geschiedenis</string>
     <string name="wikis_revision_revert_to_this">Terugzetten naar deze versie</string>
     <string name="wikis_changes_title">Recente wijzigingen</string>
     <string name="wikis_changes_subtitle">Recente bewerkingen op alle pagina\'s in deze wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>
 
     <string name="wikis_revision_compare">Wijzigingen vergelijken</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Pagina tonen</string>
     <string name="wikis_revision_compare_failed">Kon de vorige versie niet laden ter vergelijking.</string>
     <string name="wikis_revision_changes_from">Wijzigingen van versie %1$d → %2$d</string>

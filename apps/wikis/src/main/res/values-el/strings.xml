@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Αποτυχία διαγραφής σελίδας</string>
     <string name="wikis_revert_page_comment_label">Επαναφορά σχολίου</string>
     <string name="wikis_revert_page_confirm">Επαναφορά</string>
-    <string name="wikis_revert_page_cancel">Ακύρωση</string>
     <string name="wikis_revert_page_failed">Αποτυχία αναίρεσης σελίδας</string>
     <string name="wikis_rename_page_title">Μετονομασία σελίδας</string>
     <string name="wikis_rename_page_label">Νέο URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Προβολή</string>
     <string name="wikis_history_revert_action">Επαναφορά σε αυτήν την έκδοση</string>
     <string name="wikis_revision_current_badge">Τρέχον</string>
-    <string name="wikis_revision_back_to_history">Πίσω στο ιστορικό</string>
     <string name="wikis_revision_revert_to_this">Επαναφορά σε αυτήν την έκδοση</string>
     <string name="wikis_changes_title">Πρόσφατες αλλαγές</string>
     <string name="wikis_changes_subtitle">Πρόσφατες επεξεργασίες σε όλες τις σελίδες αυτού του wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Πιστοποιημένοι χρήστες</string>
 
     <string name="wikis_revision_compare">Σύγκριση αλλαγών</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Εμφάνιση σελίδας</string>
     <string name="wikis_revision_compare_failed">Δεν ήταν δυνατή η φόρτωση της προηγούμενης έκδοσης για σύγκριση.</string>
     <string name="wikis_revision_changes_from">Αλλαγές από την έκδοση %1$d → %2$d</string>

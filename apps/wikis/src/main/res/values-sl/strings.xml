@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Neuspešno brisanje strani</string>
     <string name="wikis_revert_page_comment_label">Razveljavi komentar</string>
     <string name="wikis_revert_page_confirm">Razveljavi</string>
-    <string name="wikis_revert_page_cancel">Prekliči</string>
     <string name="wikis_revert_page_failed">Neuspešna povrnitev strani</string>
     <string name="wikis_rename_page_title">Preimenuj stran</string>
     <string name="wikis_rename_page_label">Nov URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Pogled</string>
     <string name="wikis_history_revert_action">Vrni na to različico</string>
     <string name="wikis_revision_current_badge">Trenutno</string>
-    <string name="wikis_revision_back_to_history">Nazaj na zgodovino</string>
     <string name="wikis_revision_revert_to_this">Vrni na to različico</string>
     <string name="wikis_changes_title">Nedavne spremembe</string>
     <string name="wikis_changes_subtitle">Nedavna urejanja vseh strani v tem wikiju.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Kdor koli</string>
     <string name="wikis_access_subject_authenticated">Overjeni uporabniki</string>
     <string name="wikis_revision_compare">Primerjaj spremembe</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Pokaži stran</string>
     <string name="wikis_revision_compare_failed">Prejšnje različice za primerjavo ni bilo mogoče naložiti.</string>
     <string name="wikis_revision_changes_from">Spremembe iz različice %1$d → %2$d</string>

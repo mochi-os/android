@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">पृष्ठ मेटाउन असफल</string>
     <string name="wikis_revert_page_comment_label">टिप्पणी फिर्ता गर्नुहोस्</string>
     <string name="wikis_revert_page_confirm">पूर्ववत गर्नुहोस्</string>
-    <string name="wikis_revert_page_cancel">रद्द गर्नुहोस्</string>
     <string name="wikis_revert_page_failed">पृष्ठ रिभर्ट गर्न असफल</string>
     <string name="wikis_rename_page_title">पृष्ठको नाम परिवर्तन गर्नुहोस्</string>
     <string name="wikis_rename_page_label">नयाँ URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">हेर्नुहोस्</string>
     <string name="wikis_history_revert_action">यो संस्करणमा फिर्ता जानुहोस्</string>
     <string name="wikis_revision_current_badge">हालको</string>
-    <string name="wikis_revision_back_to_history">इतिहासमा फर्कनुहोस्</string>
     <string name="wikis_revision_revert_to_this">यो संस्करणमा फिर्ता जानुहोस्</string>
     <string name="wikis_changes_title">हालैका परिवर्तनहरू</string>
     <string name="wikis_changes_subtitle">यो विकीका सबै पृष्ठहरूमा हालैका सम्पादनहरू।</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">प्रमाणित प्रयोगकर्ता</string>
 
     <string name="wikis_revision_compare">परिवर्तनहरू तुलना गर्नुहोस्</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">पृष्ठ देखाउनुहोस्</string>
     <string name="wikis_revision_compare_failed">तुलनाका लागि अघिल्लो संस्करण लोड गर्न सकिएन।</string>
     <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d बाटका परिवर्तनहरू</string>

@@ -9,7 +9,6 @@
     <string name="wikis_create_cancel">Annuler</string>
     <string name="wikis_comment_action_cancel">Annuler</string>
     <string name="wikis_delete_page_cancel">Annuler</string>
-    <string name="wikis_revert_page_cancel">Annuler</string>
     <string name="wikis_rename_page_cancel">Annuler</string>
     <string name="wikis_tag_dialog_cancel">Annuler</string>
     <string name="wikis_comment_action_save">Enregistrer</string>
@@ -179,7 +178,6 @@
     <string name="wikis_history_revert_action">Restaurer à cette version</string>
     <string name="wikis_revision_version_badge">Version %1$d</string>
     <string name="wikis_revision_current_badge">Actuelle</string>
-    <string name="wikis_revision_back_to_history">Retour à l\'historique</string>
     <string name="wikis_revision_revert_to_this">Restaurer à cette version</string>
     <string name="wikis_changes_title">Modifications récentes</string>
     <string name="wikis_changes_subtitle">Modifications récentes dans toutes les pages de ce wiki.</string>

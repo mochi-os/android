@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Janiw página chhaqtayaña atinkti</string>
     <string name="wikis_revert_page_comment_label">Comentario kutintayama</string>
     <string name="wikis_revert_page_confirm">Kutintayama</string>
-    <string name="wikis_revert_page_cancel">Jaytaña</string>
     <string name="wikis_revert_page_failed">Janiw página kutt\'ayaña atinkti</string>
     <string name="wikis_rename_page_title">Página suti machaqachama</string>
     <string name="wikis_rename_page_label">Machaqa URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Taqi uñjaña</string>
     <string name="wikis_history_revert_action">Aka versión ukar kutintayama</string>
     <string name="wikis_revision_current_badge">Jichha</string>
-    <string name="wikis_revision_back_to_history">Sarawir kutta</string>
     <string name="wikis_revision_revert_to_this">Aka versión ukar kutintayama</string>
     <string name="wikis_changes_title">Jichhüru mayjt\'awinaka</string>
     <string name="wikis_changes_subtitle">Jichhüru editonak taqi páginanak aka wiki taypi.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Yatiyat apnaqirinaka</string>
 
     <string name="wikis_revision_compare">Mayjt\'awinaka uñakipt\'aña</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Janar uñacht\'ayaña</string>
     <string name="wikis_revision_compare_failed">Uñakipt\'añataki nayra versión janiw apsuñjamäkiti.</string>
     <string name="wikis_revision_changes_from">Versión %1$d → %2$d mayjt\'awinaka</string>

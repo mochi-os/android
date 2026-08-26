@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Kunde inte radera sida</string>
     <string name="wikis_revert_page_comment_label">Återställ kommentar</string>
     <string name="wikis_revert_page_confirm">Återställ</string>
-    <string name="wikis_revert_page_cancel">Avbryt</string>
     <string name="wikis_revert_page_failed">Kunde inte återställa sida</string>
     <string name="wikis_rename_page_title">Byt namn på sida</string>
     <string name="wikis_rename_page_label">Ny URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Visa</string>
     <string name="wikis_history_revert_action">Återställ till den här versionen</string>
     <string name="wikis_revision_current_badge">Aktuell</string>
-    <string name="wikis_revision_back_to_history">Tillbaka till historik</string>
     <string name="wikis_revision_revert_to_this">Återställ till den här versionen</string>
     <string name="wikis_changes_title">Senaste ändringar</string>
     <string name="wikis_changes_subtitle">Senaste redigeringar på alla sidor i denna wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentiserade användare</string>
 
     <string name="wikis_revision_compare">Jämför ändringar</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Visa sida</string>
     <string name="wikis_revision_compare_failed">Det gick inte att läsa in den tidigare versionen för jämförelse.</string>
     <string name="wikis_revision_changes_from">Ändringar från version %1$d → %2$d</string>

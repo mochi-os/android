@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Error al eliminar la página</string>
     <string name="wikis_revert_page_comment_label">Revertir comentario</string>
     <string name="wikis_revert_page_confirm">Revertir</string>
-    <string name="wikis_revert_page_cancel">Cancelar</string>
     <string name="wikis_revert_page_failed">Error al revertir la página</string>
     <string name="wikis_rename_page_title">Renombrar página</string>
     <string name="wikis_rename_page_label">Nueva URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Ver</string>
     <string name="wikis_history_revert_action">Revertir a esta versión</string>
     <string name="wikis_revision_current_badge">Actual</string>
-    <string name="wikis_revision_back_to_history">Volver al historial</string>
     <string name="wikis_revision_revert_to_this">Revertir a esta versión</string>
     <string name="wikis_changes_title">Cambios recientes</string>
     <string name="wikis_changes_subtitle">Ediciones recientes en todas las páginas de esta wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>
 
     <string name="wikis_revision_compare">Comparar cambios</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Mostrar página</string>
     <string name="wikis_revision_compare_failed">No se pudo cargar la versión anterior para la comparación.</string>
     <string name="wikis_revision_changes_from">Cambios de la versión %1$d → %2$d</string>

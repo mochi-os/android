@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Ștergerea paginii a eșuat</string>
     <string name="wikis_revert_page_comment_label">Anulează modificarea comentariului</string>
     <string name="wikis_revert_page_confirm">Anulează modificarea</string>
-    <string name="wikis_revert_page_cancel">Anulează</string>
     <string name="wikis_revert_page_failed">Restabilirea paginii a eșuat</string>
     <string name="wikis_rename_page_title">Redenumește pagina</string>
     <string name="wikis_rename_page_label">URL nou</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Vizualizează</string>
     <string name="wikis_history_revert_action">Revino la această versiune</string>
     <string name="wikis_revision_current_badge">Curent</string>
-    <string name="wikis_revision_back_to_history">Înapoi la istoric</string>
     <string name="wikis_revision_revert_to_this">Revino la această versiune</string>
     <string name="wikis_changes_title">Modificări recente</string>
     <string name="wikis_changes_subtitle">Editări recente din toate paginile acestui wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Utilizatori autentificați</string>
 
     <string name="wikis_revision_compare">Compară modificările</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Afișează pagina</string>
     <string name="wikis_revision_compare_failed">Versiunea anterioară nu a putut fi încărcată pentru comparație.</string>
     <string name="wikis_revision_changes_from">Modificări de la versiunea %1$d → %2$d</string>

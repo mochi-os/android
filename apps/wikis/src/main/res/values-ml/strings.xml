@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">പേജ് ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_revert_page_comment_label">കമന്റ് റിവേർട്ട് ചെയ്യുക</string>
     <string name="wikis_revert_page_confirm">പുനഃസ്ഥാപിക്കുക</string>
-    <string name="wikis_revert_page_cancel">റദ്ദാക്കുക</string>
     <string name="wikis_revert_page_failed">പേജ് തിരികെ കൊണ്ടുവരുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_rename_page_title">ഈ board കോളം പുനർനാമകരണം ചെയ്യുക</string>
     <string name="wikis_rename_page_label">പുതിയ URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">കാണുക</string>
     <string name="wikis_history_revert_action">ഈ പതിപ്പിലേക്ക് റിവേർട്ട് ചെയ്യുക</string>
     <string name="wikis_revision_current_badge">നിലവിലുള്ളത്</string>
-    <string name="wikis_revision_back_to_history">ചരിത്രത്തിലേക്ക് തിരികെ</string>
     <string name="wikis_revision_revert_to_this">ഈ പതിപ്പിലേക്ക് റിവേർട്ട് ചെയ്യുക</string>
     <string name="wikis_changes_title">ഈ വിക്കിയിലെ എല്ലാ പേജുകളിലുമുള്ള സമീപകാല എഡിറ്റുകൾ.</string>
     <string name="wikis_changes_subtitle">സമീപകാല ലിസ്റ്റിങ്ങുകൾ</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>
 
     <string name="wikis_revision_compare">മാറ്റങ്ങൾ താരതമ്യം ചെയ്യുക</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">പേജ് കാണിക്കുക</string>
     <string name="wikis_revision_compare_failed">താരതമ്യത്തിനായി മുൻ പതിപ്പ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.</string>
     <string name="wikis_revision_changes_from">പതിപ്പ് %1$d → %2$d മുതലുള്ള മാറ്റങ്ങൾ</string>

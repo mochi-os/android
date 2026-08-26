@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Ndaikatúi ojejuka kuatiarogue</string>
     <string name="wikis_revert_page_comment_label">Embojevy comentario</string>
     <string name="wikis_revert_page_confirm">Embojevy</string>
-    <string name="wikis_revert_page_cancel">Heja</string>
     <string name="wikis_revert_page_failed">Ndaikatúi oñemboheja jey kuatiarogue</string>
     <string name="wikis_rename_page_title">Embohera jey kuatiarogue</string>
     <string name="wikis_rename_page_label">URL Pyahu</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Ehecha</string>
     <string name="wikis_history_revert_action">Embojevy ko versiónpe</string>
     <string name="wikis_revision_current_badge">Ko\'ãnga</string>
-    <string name="wikis_revision_back_to_history">Tapykuépe rembiasakue</string>
     <string name="wikis_revision_revert_to_this">Embojevy ko versiónpe</string>
     <string name="wikis_changes_title">Ñemoambue ramoguáva</string>
     <string name="wikis_changes_subtitle">Edits ramoguáva opa kuatiarogue ko wiki-pe.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Puruhára jeikuaapyre</string>
 
     <string name="wikis_revision_compare">Embojoja umi moambue</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Ehechauka kuatiarogue</string>
     <string name="wikis_revision_compare_failed">Ndaikatúi oñembohenda pe versión ymaguare ojojoja hag̃ua.</string>
     <string name="wikis_revision_changes_from">Moambue versión %1$d → %2$d guive</string>

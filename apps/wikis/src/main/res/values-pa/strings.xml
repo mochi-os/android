@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">ਪੇਜ ਮਿਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_revert_page_comment_label">ਟਿੱਪਣੀ ਵਾਪਸ ਕਰੋ</string>
     <string name="wikis_revert_page_confirm">ਵਾਪਸ ਕਰੋ</string>
-    <string name="wikis_revert_page_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="wikis_revert_page_failed">ਪੇਜ ਨੂੰ ਵਾਪਸ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_rename_page_title">ਪੇਜ ਦਾ ਨਾਮ ਬਦਲੋ</string>
     <string name="wikis_rename_page_label">ਨਵਾਂ URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">ਦੇਖੋ</string>
     <string name="wikis_history_revert_action">ਇਸ ਸੰਸਕਰਣ \'ਤੇ ਵਾਪਸ ਜਾਓ</string>
     <string name="wikis_revision_current_badge">ਮੌਜੂਦਾ</string>
-    <string name="wikis_revision_back_to_history">ਇਤਿਹਾਸ ਵਿੱਚ ਵਾਪਸ</string>
     <string name="wikis_revision_revert_to_this">ਇਸ ਸੰਸਕਰਣ \'ਤੇ ਵਾਪਸ ਜਾਓ</string>
     <string name="wikis_changes_title">ਹਾਲੀਆ ਬਦਲਾਅ</string>
     <string name="wikis_changes_subtitle">ਇਸ ਵਿਕੀ ਦੇ ਸਾਰੇ ਪੇਜਾਂ ਵਿੱਚ ਹਾਲੀਆ ਸੋਧਾਂ।</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>
 
     <string name="wikis_revision_compare">ਤਬਦੀਲੀਆਂ ਦੀ ਤੁਲਨਾ ਕਰੋ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">ਪੰਨਾ ਦਿਖਾਓ</string>
     <string name="wikis_revision_compare_failed">ਤੁਲਨਾ ਲਈ ਪਿਛਲਾ ਵਰਜਨ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।</string>
     <string name="wikis_revision_changes_from">ਵਰਜਨ %1$d → %2$d ਤੋਂ ਤਬਦੀਲੀਆਂ</string>

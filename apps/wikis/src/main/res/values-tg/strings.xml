@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Ҳазфи саҳифа ба анҷом нарасид</string>
     <string name="wikis_revert_page_comment_label">Бекор кардани шарҳ</string>
     <string name="wikis_revert_page_confirm">Бекор кардан</string>
-    <string name="wikis_revert_page_cancel">Бекор кардан</string>
     <string name="wikis_revert_page_failed">Бозгардонии саҳифа ба анҷом нарасид</string>
     <string name="wikis_rename_page_title">Тағйири номи саҳифа</string>
     <string name="wikis_rename_page_label">URL-и нав</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Намоиш</string>
     <string name="wikis_history_revert_action">Бекор кардан ба ин версия</string>
     <string name="wikis_revision_current_badge">Ҷорӣ</string>
-    <string name="wikis_revision_back_to_history">Бозгашт ба таърих</string>
     <string name="wikis_revision_revert_to_this">Бекор кардан ба ин версия</string>
     <string name="wikis_changes_title">Тағйиротҳои охирин</string>
     <string name="wikis_changes_subtitle">Таҳриротҳои охирин дар тамоми саҳифаҳои ин вики.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Корбарони тасдиқшуда</string>
 
     <string name="wikis_revision_compare">Муқоисаи тағйирот</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Нишон додани саҳифа</string>
     <string name="wikis_revision_compare_failed">Версияи қаблиро барои муқоиса бор кардан имконнопазир буд.</string>
     <string name="wikis_revision_changes_from">Тағйирот аз версияи %1$d → %2$d</string>

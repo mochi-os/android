@@ -104,7 +104,6 @@
     <string name="wikis_delete_page_failed">Не ўдалося выдаліць старонку</string>
     <string name="wikis_revert_page_comment_label">Адмяніць каментар</string>
     <string name="wikis_revert_page_confirm">Адмяніць</string>
-    <string name="wikis_revert_page_cancel">Адмена</string>
     <string name="wikis_revert_page_failed">Не ўдалося адкаціць старонку</string>
     <string name="wikis_rename_page_title">Перайменаваць старонку</string>
     <string name="wikis_rename_page_label">Новы URL</string>
@@ -119,7 +118,6 @@
     <string name="wikis_history_view_action">Прагляд</string>
     <string name="wikis_history_revert_action">Вярнуць да гэтай версіі</string>
     <string name="wikis_revision_current_badge">Бягучы</string>
-    <string name="wikis_revision_back_to_history">Назад у гісторыю</string>
     <string name="wikis_revision_revert_to_this">Вярнуць да гэтай версіі</string>
     <string name="wikis_changes_title">Нядаўнія змены</string>
     <string name="wikis_changes_subtitle">Нядаўнія праўкі па ўсіх старонках гэтага wiki.</string>
@@ -310,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Любы</string>
     <string name="wikis_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
     <string name="wikis_revision_compare">Параўнаць змены</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Паказаць старонку</string>
     <string name="wikis_revision_compare_failed">Не ўдалося загрузіць папярэднюю версію для параўнання.</string>
     <string name="wikis_revision_changes_from">Змены з версіі %1$d → %2$d</string>

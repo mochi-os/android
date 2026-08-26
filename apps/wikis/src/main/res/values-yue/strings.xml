@@ -9,7 +9,6 @@
     <string name="wikis_create_cancel">取消</string>
     <string name="wikis_comment_action_cancel">取消</string>
     <string name="wikis_delete_page_cancel">取消</string>
-    <string name="wikis_revert_page_cancel">取消</string>
     <string name="wikis_rename_page_cancel">取消</string>
     <string name="wikis_tag_dialog_cancel">取消</string>
     <string name="wikis_comment_action_save">儲存</string>
@@ -179,7 +178,6 @@
     <string name="wikis_history_revert_action">還原到呢個版本</string>
     <string name="wikis_revision_version_badge">版本 %1$d</string>
     <string name="wikis_revision_current_badge">目前</string>
-    <string name="wikis_revision_back_to_history">返回歷史記錄</string>
     <string name="wikis_revision_revert_to_this">還原到呢個版本</string>
     <string name="wikis_changes_title">最近變更</string>
     <string name="wikis_changes_subtitle">呢個 wiki 入面所有頁面嘅最近編輯。</string>
@@ -345,6 +343,7 @@
     </plurals>
     <string name="wikis_revision_changes_from">由版本 %1$d → %2$d 嘅變更</string>
     <string name="wikis_revision_compare">比較變更</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_compare_failed">載入唔到上一個版本嚟比較。</string>
     <string name="wikis_revision_show_page">顯示頁面</string>
     <string name="wikis_attachments_caption_save_failed">無法儲存說明文字</string>

@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">ניט געלונגען צו מעקן בלאַט</string>
     <string name="wikis_revert_page_comment_label">אומקערן באַמערקונג</string>
     <string name="wikis_revert_page_confirm">אומקערן</string>
-    <string name="wikis_revert_page_cancel">אָפּזאָגן</string>
     <string name="wikis_revert_page_failed">ניט געלונגען צו אומקערן בלאַט</string>
     <string name="wikis_rename_page_title">איבערטויפֿן זײַטל</string>
     <string name="wikis_rename_page_label">נײַער URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">בליק</string>
     <string name="wikis_history_revert_action">אומקערן צו דער ווערסיע</string>
     <string name="wikis_revision_current_badge">איצטיק</string>
-    <string name="wikis_revision_back_to_history">צוריק צו געשיכטע</string>
     <string name="wikis_revision_revert_to_this">אומקערן צו דער ווערסיע</string>
     <string name="wikis_changes_title">לעצטיקע ענדערונגען</string>
     <string name="wikis_changes_subtitle">לעצטיקע רעדאַקציעס איבער אַלע זײַטלעך אין דעם וויקי.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
 
     <string name="wikis_revision_compare">פֿאַרגלײַך ענדערונגען</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">ווײַז בלאַט</string>
     <string name="wikis_revision_compare_failed">מע האָט נישט געקענט לאָדן די פֿריִערדיקע ווערסיע פֿאַר פֿאַרגלײַך.</string>
     <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$d → %2$d</string>

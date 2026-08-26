@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">பக்கத்தை நீக்க முடியவில்லை</string>
     <string name="wikis_revert_page_comment_label">கருத்தை மீட்டமை</string>
     <string name="wikis_revert_page_confirm">மீட்டெடு</string>
-    <string name="wikis_revert_page_cancel">ரத்துசெய்</string>
     <string name="wikis_revert_page_failed">பக்கத்தை மாற்றியமைக்க முடியவில்லை</string>
     <string name="wikis_rename_page_title">பக்கத்தின் பெயரை மாற்று</string>
     <string name="wikis_rename_page_label">புதிய URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">காட்டு</string>
     <string name="wikis_history_revert_action">இந்த பதிப்பிற்கு மீட்டமை</string>
     <string name="wikis_revision_current_badge">தற்போதைய</string>
-    <string name="wikis_revision_back_to_history">வரலாற்றுக்கு திரும்பு</string>
     <string name="wikis_revision_revert_to_this">இந்த பதிப்பிற்கு மீட்டமை</string>
     <string name="wikis_changes_title">சமீபத்திய மாற்றங்கள்</string>
     <string name="wikis_changes_subtitle">இந்த wiki-இல் உள்ள அனைத்து பக்கங்களிலும் சமீபத்திய திருத்தங்கள்.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">அங்கீகரிக்கப்பட்ட பயனர்கள்</string>
 
     <string name="wikis_revision_compare">மாற்றங்களை ஒப்பிடுக</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">பக்கத்தைக் காட்டு</string>
     <string name="wikis_revision_compare_failed">ஒப்பிடுவதற்கு முந்தைய பதிப்பை ஏற்ற முடியவில்லை.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d பதிப்பிலிருந்து மாற்றங்கள்</string>

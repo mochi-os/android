@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">Sayfa silinemedi</string>
     <string name="wikis_revert_page_comment_label">Yorumu geri al</string>
     <string name="wikis_revert_page_confirm">Geri al</string>
-    <string name="wikis_revert_page_cancel">İptal</string>
     <string name="wikis_revert_page_failed">Sayfa geri alınamadı</string>
     <string name="wikis_rename_page_title">Sayfayı yeniden adlandır</string>
     <string name="wikis_rename_page_label">Yeni URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Görüntüle</string>
     <string name="wikis_history_revert_action">Bu sürüme geri dön</string>
     <string name="wikis_revision_current_badge">Mevcut</string>
-    <string name="wikis_revision_back_to_history">Geçmişe dön</string>
     <string name="wikis_revision_revert_to_this">Bu sürüme geri dön</string>
     <string name="wikis_changes_title">Son değişiklikler</string>
     <string name="wikis_changes_subtitle">Bu wiki\'deki tüm sayfalarda son düzenlemeler.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Kimliği doğrulanmış kullanıcılar</string>
 
     <string name="wikis_revision_compare">Değişiklikleri karşılaştır</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Sayfayı göster</string>
     <string name="wikis_revision_compare_failed">Karşılaştırma için önceki sürüm yüklenemedi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d sürümünden değişiklikler</string>

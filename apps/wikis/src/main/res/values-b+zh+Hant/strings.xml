@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">刪除頁面失敗</string>
     <string name="wikis_revert_page_comment_label">還原留言</string>
     <string name="wikis_revert_page_confirm">還原</string>
-    <string name="wikis_revert_page_cancel">取消</string>
     <string name="wikis_revert_page_failed">還原頁面失敗</string>
     <string name="wikis_rename_page_title">重新命名頁面</string>
     <string name="wikis_rename_page_label">新 URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">檢視</string>
     <string name="wikis_history_revert_action">還原至此版本</string>
     <string name="wikis_revision_current_badge">目前</string>
-    <string name="wikis_revision_back_to_history">返回歷史記錄</string>
     <string name="wikis_revision_revert_to_this">還原至此版本</string>
     <string name="wikis_changes_title">近期變更</string>
     <string name="wikis_changes_subtitle">此 Wiki 中所有頁面的近期編輯。</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">已驗證使用者</string>
 
     <string name="wikis_revision_compare">比較變更</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">顯示頁面</string>
     <string name="wikis_revision_compare_failed">無法載入先前版本進行比較。</string>
     <string name="wikis_revision_changes_from">從版本 %1$d → %2$d 的變更</string>

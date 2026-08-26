@@ -105,7 +105,6 @@
     <string name="wikis_delete_page_failed">An gaza share shafi</string>
     <string name="wikis_revert_page_comment_label">Mayar da sharhi</string>
     <string name="wikis_revert_page_confirm">Mayar</string>
-    <string name="wikis_revert_page_cancel">Soke</string>
     <string name="wikis_revert_page_failed">An gaza mayar da shafi</string>
     <string name="wikis_rename_page_title">Sake suna shafi</string>
     <string name="wikis_rename_page_label">Sabon URL</string>
@@ -120,7 +119,6 @@
     <string name="wikis_history_view_action">Kalla</string>
     <string name="wikis_history_revert_action">Mayar zuwa wannan sigar</string>
     <string name="wikis_revision_current_badge">Na yanzu</string>
-    <string name="wikis_revision_back_to_history">Komawa ga tarihi</string>
     <string name="wikis_revision_revert_to_this">Mayar zuwa wannan sigar</string>
     <string name="wikis_changes_title">Canje-canje na kwanan nan</string>
     <string name="wikis_changes_subtitle">Gyare-gyare na kwanan nan a duk shafuka na wannan wiki.</string>
@@ -313,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Masu amfani da aka tabbatar</string>
 
     <string name="wikis_revision_compare">Kwatanta canje-canje</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Nuna shafin</string>
     <string name="wikis_revision_compare_failed">An kasa loda sigar baya don kwatanta.</string>
     <string name="wikis_revision_changes_from">Canje daga sigar %1$d → %2$d</string>
