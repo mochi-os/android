@@ -46,14 +46,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.R as MochiR
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
+import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.crm.R
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -155,10 +157,16 @@ fun CommentsTab(
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     pendingFiles.forEach { uri ->
+                        val label = rememberFileLabel(uri, resolveFileName, defaultName)
                         AssistChip(
                             onClick = { pendingFiles.remove(uri) },
-                            label = {
-                                Text(rememberFileLabel(uri, resolveFileName, defaultName))
+                            label = { Text(label) },
+                            leadingIcon = {
+                                FileKindPreview(
+                                    kind = rememberFileKind(uri, label),
+                                    model = uri,
+                                    modifier = Modifier.size(AssistChipDefaults.IconSize)
+                                )
                             },
                             trailingIcon = {
                                 Icon(

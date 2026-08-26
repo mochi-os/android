@@ -21,11 +21,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AttachFile
-import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.Image
-import androidx.compose.material.icons.filled.InsertDriveFile
-import androidx.compose.material.icons.filled.PictureAsPdf
-import androidx.compose.material.icons.filled.VideoFile
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -39,7 +34,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -47,6 +41,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -183,10 +178,11 @@ private fun SubmittedEvidenceSection(evidence: List<DisputeEvidence>) {
                     modifier = rowModifier,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Icon(
-                        imageVector = evidenceFileIcon(item),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    FileKindPreview(
+                        type = item.mime,
+                        name = item.name,
+                        model = item.url.ifBlank { null },
+                        modifier = Modifier.size(24.dp),
                     )
                     Spacer(Modifier.width(12.dp))
                     Column(modifier = Modifier.fillMaxWidth()) {
@@ -242,26 +238,5 @@ private fun evidenceSubmitter(item: DisputeEvidence): String {
         "seller" -> stringResource(R.string.market_dispute_dialog_evidence_role_seller)
         "staff" -> stringResource(R.string.market_dispute_dialog_evidence_role_staff)
         else -> item.actorName.ifBlank { item.actor }
-    }
-}
-
-/**
- * File-type icon for an evidence row. Cheap heuristic: prefer the MIME
- * prefix, fall back to the filename extension.
- */
-private fun evidenceFileIcon(item: DisputeEvidence): ImageVector {
-    val mime = item.mime.lowercase()
-    if (mime.startsWith("image/")) return Icons.Default.Image
-    if (mime.startsWith("video/")) return Icons.Default.VideoFile
-    if (mime == "application/pdf") return Icons.Default.PictureAsPdf
-    if (mime.startsWith("text/")) return Icons.Default.Description
-
-    val ext = item.name.substringAfterLast('.', missingDelimiterValue = "").lowercase()
-    return when (ext) {
-        "jpg", "jpeg", "png", "gif", "webp", "bmp", "heic", "heif" -> Icons.Default.Image
-        "mp4", "mov", "webm", "mkv", "avi" -> Icons.Default.VideoFile
-        "pdf" -> Icons.Default.PictureAsPdf
-        "txt", "md", "log" -> Icons.Default.Description
-        else -> Icons.Default.InsertDriveFile
     }
 }

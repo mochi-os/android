@@ -344,10 +344,8 @@ private fun FileChip(
                     modifier = Modifier.size(28.dp)
                 )
             } else {
-                Icon(
-                    imageVector = fileKindIcon(attachment.fileKind),
-                    contentDescription = null,
-                    tint = fileKindTint(attachment.fileKind),
+                FileKindIcon(
+                    kind = attachment.fileKind,
                     modifier = Modifier.size(28.dp)
                 )
             }
@@ -397,10 +395,11 @@ private fun DeleteIcon(onClick: () -> Unit) {
 /**
  * Resolve a possibly-relative attachment path against [serverUrl]. Coil maps
  * relative image URLs itself, but the video decoder, ExoPlayer and downloader
- * do not.
+ * do not. Anything that already names a scheme - an absolute URL, or a
+ * `content://` file picked on the device - is left as it is.
  */
-private fun resolveAttachmentUrl(serverUrl: String, path: String): String {
-    if (path.startsWith("http://") || path.startsWith("https://")) return path
+internal fun resolveAttachmentUrl(serverUrl: String, path: String): String {
+    if (path.contains("://")) return path
     val base = serverUrl.trimEnd('/')
     return if (path.startsWith("/")) "$base$path" else "$base/$path"
 }

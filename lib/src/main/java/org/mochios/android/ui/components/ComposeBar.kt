@@ -57,6 +57,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.model.FileKind
 
 /**
  * Defaults for [ComposeBar], chiefly the keyboard-inset choice.
@@ -223,12 +224,15 @@ fun ComposeBar(
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     pending.forEachIndexed { index, uri ->
+                        val label = rememberFileLabel(
+                            uri,
+                            attachments.resolveFileName,
+                            attachments.fallbackLabel,
+                        )
                         AttachmentChip(
-                            label = rememberFileLabel(
-                                uri,
-                                attachments.resolveFileName,
-                                attachments.fallbackLabel,
-                            ),
+                            label = label,
+                            uri = uri,
+                            kind = rememberFileKind(uri, label),
                             removeLabel = attachments.removeLabel,
                             moveUpLabel = attachments.moveUpLabel.takeIf {
                                 attachments.onMove != null && index > 0
@@ -385,12 +389,16 @@ fun ComposeBar(
 }
 
 /**
- * One pending attachment. Tapping the chip removes it; the reorder arrows are
- * their own buttons so they don't trigger the removal underneath.
+ * One pending attachment, drawn as itself before it is uploaded: a picked
+ * image shows its own thumbnail, and any other file the icon its kind gets
+ * everywhere else. Tapping the chip removes it; the reorder arrows are their
+ * own buttons so they don't trigger the removal underneath.
  */
 @Composable
 private fun AttachmentChip(
     label: String,
+    uri: Uri,
+    kind: FileKind,
     removeLabel: String,
     moveUpLabel: String?,
     moveDownLabel: String?,
@@ -401,30 +409,33 @@ private fun AttachmentChip(
     AssistChip(
         onClick = onRemove,
         label = { Text(label, style = MaterialTheme.typography.labelSmall) },
-        leadingIcon = if (moveUpLabel != null || moveDownLabel != null) {
-            {
-                Row {
-                    if (moveUpLabel != null) {
-                        MochiIconButton(onClick = onMoveUp, modifier = Modifier.size(20.dp)) {
-                            Icon(
-                                Icons.Default.ExpandLess,
-                                contentDescription = moveUpLabel,
-                                modifier = Modifier.size(14.dp),
-                            )
-                        }
-                    }
-                    if (moveDownLabel != null) {
-                        MochiIconButton(onClick = onMoveDown, modifier = Modifier.size(20.dp)) {
-                            Icon(
-                                Icons.Default.ExpandMore,
-                                contentDescription = moveDownLabel,
-                                modifier = Modifier.size(14.dp),
-                            )
-                        }
+        leadingIcon = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (moveUpLabel != null) {
+                    MochiIconButton(onClick = onMoveUp, modifier = Modifier.size(20.dp)) {
+                        Icon(
+                            Icons.Default.ExpandLess,
+                            contentDescription = moveUpLabel,
+                            modifier = Modifier.size(14.dp),
+                        )
                     }
                 }
+                if (moveDownLabel != null) {
+                    MochiIconButton(onClick = onMoveDown, modifier = Modifier.size(20.dp)) {
+                        Icon(
+                            Icons.Default.ExpandMore,
+                            contentDescription = moveDownLabel,
+                            modifier = Modifier.size(14.dp),
+                        )
+                    }
+                }
+                FileKindPreview(
+                    kind = kind,
+                    model = uri,
+                    modifier = Modifier.size(16.dp),
+                )
             }
-        } else null,
+        },
         trailingIcon = {
             Icon(
                 Icons.Default.Close,

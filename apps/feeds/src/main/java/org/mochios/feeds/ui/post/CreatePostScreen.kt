@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -53,6 +54,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -60,8 +62,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -74,9 +74,12 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.PlaceData
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LocationPreviewMap
 import org.mochios.android.ui.components.MapMarkerPoint
@@ -94,9 +97,8 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
-import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.feeds.R
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -455,6 +457,22 @@ fun CreatePostScreen(
                                         style = MaterialTheme.typography.labelSmall
                                     )
                                 },
+                                leadingIcon = {
+                                    FileKindPreview(
+                                        kind = attachment.fileKind,
+                                        model = attachment.thumbnailUrl ?: thumbnailUrl(
+                                            selectedFeed,
+                                            attachment.id
+                                        ),
+                                        // No thumbnail route for a video: the
+                                        // frame is decoded from the clip.
+                                        videoModel = attachment.url ?: attachmentUrl(
+                                            selectedFeed,
+                                            attachment.id
+                                        ),
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                },
                                 trailingIcon = {
                                     Icon(
                                         Icons.Default.Close,
@@ -525,6 +543,13 @@ fun CreatePostScreen(
                                     Text(
                                         label,
                                         style = MaterialTheme.typography.labelSmall
+                                    )
+                                },
+                                leadingIcon = {
+                                    FileKindPreview(
+                                        kind = rememberFileKind(uri, label),
+                                        model = uri,
+                                        modifier = Modifier.size(16.dp)
                                     )
                                 },
                                 trailingIcon = {
@@ -808,3 +833,11 @@ private fun SheetActions(
         }
     }
 }
+
+/** The server's route for an attachment already on a post. */
+private fun attachmentUrl(feedId: String, attachmentId: String): String =
+    "/feeds/$feedId/-/attachments/$attachmentId"
+
+/** The thumbnail variant of [attachmentUrl]. */
+private fun thumbnailUrl(feedId: String, attachmentId: String): String =
+    "${attachmentUrl(feedId, attachmentId)}/thumbnail"

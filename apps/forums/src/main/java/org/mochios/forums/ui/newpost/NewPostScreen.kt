@@ -59,20 +59,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MarkdownPreviewSheet
 import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MentionTextField
-import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.forums.R
-import org.mochios.android.R as MochiR
 
 /**
  * Compose or edit a forum post; edit mode when the back-stack carries a
@@ -244,6 +246,7 @@ fun NewPostScreen(
                 Spacer(Modifier.height(8.dp))
                 ExistingAttachmentChips(
                     attachments = existingAttachments,
+                    forumId = viewModel.forumId,
                     removedIds = removedExistingIds,
                     captions = existingCaptions,
                     onMove = { id, direction -> viewModel.moveExistingAttachment(id, direction) },
@@ -391,6 +394,13 @@ private fun AttachmentChips(
                             style = MaterialTheme.typography.labelSmall
                         )
                     },
+                    leadingIcon = {
+                        FileKindPreview(
+                            kind = rememberFileKind(uri, name),
+                            model = uri,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    },
                     trailingIcon = {
                         Icon(
                             Icons.Default.Close,
@@ -433,6 +443,7 @@ private fun AttachmentChips(
 @Composable
 private fun ExistingAttachmentChips(
     attachments: List<Attachment>,
+    forumId: String,
     removedIds: Set<String>,
     captions: Map<String, String>,
     onMove: (String, Int) -> Unit,
@@ -480,6 +491,18 @@ private fun ExistingAttachmentChips(
                         Text(
                             attachment.name.takeLast(25),
                             style = MaterialTheme.typography.labelSmall
+                        )
+                    },
+                    leadingIcon = {
+                        FileKindPreview(
+                            kind = attachment.fileKind,
+                            model = attachment.thumbnailUrl
+                                ?: "/forums/$forumId/-/attachments/${attachment.id}/thumbnail",
+                            // No thumbnail route for a video: the frame is
+                            // decoded from the clip itself.
+                            videoModel = attachment.url
+                                ?: "/forums/$forumId/-/attachments/${attachment.id}",
+                            modifier = Modifier.size(16.dp)
                         )
                     },
                     trailingIcon = {

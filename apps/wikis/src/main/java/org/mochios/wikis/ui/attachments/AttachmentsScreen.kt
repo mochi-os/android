@@ -103,6 +103,7 @@ import org.mochios.android.model.fileKindOf
 import org.mochios.android.ui.components.AttachmentCaptionDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FileKindIcon
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
@@ -112,8 +113,6 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.VideoFrame
-import org.mochios.android.ui.components.fileKindIcon
-import org.mochios.android.ui.components.fileKindTint
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.FileStore
 import org.mochios.android.util.webUri
@@ -1098,10 +1097,8 @@ private fun AttachmentPreview(
                 modifier = Modifier.size(playBadgeSize),
             )
         }
-        else -> Icon(
-            imageVector = fileKindIcon(kind),
-            contentDescription = null,
-            tint = fileKindTint(kind),
+        else -> FileKindIcon(
+            kind = kind,
             modifier = Modifier.size(iconSize),
         )
     }
