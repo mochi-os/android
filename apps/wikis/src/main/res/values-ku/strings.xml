@@ -349,4 +349,6 @@
         <item quantity="other">%1$d encam ji bo "%2$s" hat dîtin</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Binnivîs nehat tomarkirin</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

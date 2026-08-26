@@ -33,6 +33,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -201,6 +202,16 @@ fun AttachmentsScreen(
                 onBack = { navController.popBackStack() },
             )
         },
+        bottomBar = {
+            // Held back until the wiki has loaded, so the bar does not offer an
+            // upload over a spinner or an error the retry has yet to clear.
+            if (state.wiki != null) {
+                UploadBar(
+                    isUploading = state.isUploading,
+                    onUpload = { filePicker.launch("*/*") },
+                )
+            }
+        },
     ) { padding ->
         Box(
             modifier = Modifier
@@ -251,7 +262,6 @@ fun AttachmentsScreen(
                             state = state,
                             baseURL = wikiCtx.baseURL,
                             token = viewModel.token,
-                            onUpload = { filePicker.launch("*/*") },
                             onSearchChange = viewModel::setSearchQuery,
                             onClearSearch = viewModel::clearSearch,
                             onFilterChange = viewModel::setFilter,
@@ -297,6 +307,70 @@ fun AttachmentsScreen(
             onSave = { caption -> viewModel.saveCaption(caption, saveFailed) },
             onDismiss = { viewModel.cancelCaption() },
         )
+    }
+}
+
+/**
+ * Upload, under the thumb, with the guidance a reader needs before the picker
+ * opens rather than after the server has refused the file. The bar is the
+ * screen's one upload: the empty state points at it instead of offering a
+ * second button of its own.
+ */
+@Composable
+private fun UploadBar(
+    isUploading: Boolean,
+    onUpload: () -> Unit,
+) {
+    Surface(color = MaterialTheme.colorScheme.surface) {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            // The list scrolls behind the bar, so it needs a line of its own to
+            // sit behind - the same one the toolbar above the list draws.
+            HorizontalDivider()
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .navigationBarsPadding()
+                    .padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                Text(
+                    text = stringResource(R.string.wikis_attachments_upload_types),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Text(
+                    text = stringResource(R.string.wikis_attachments_upload_limits),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Spacer(Modifier.height(4.dp))
+                MochiButton(
+                    onClick = onUpload,
+                    enabled = !isUploading,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    if (isUploading) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            strokeWidth = 2.dp,
+                        )
+                    } else {
+                        Icon(
+                            Icons.Default.Upload,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
+                    Spacer(Modifier.width(6.dp))
+                    Text(
+                        stringResource(
+                            if (isUploading) R.string.wikis_attachments_uploading
+                            else R.string.wikis_attachments_upload
+                        )
+                    )
+                }
+            }
+        }
     }
 }
 
@@ -354,7 +428,6 @@ private fun AttachmentsBody(
     state: AttachmentsUiState,
     baseURL: String,
     token: String?,
-    onUpload: () -> Unit,
     onSearchChange: (String) -> Unit,
     onClearSearch: () -> Unit,
     onFilterChange: (AttachmentsFilter) -> Unit,
@@ -376,35 +449,6 @@ private fun AttachmentsBody(
     var lightboxIndex by remember { mutableStateOf<Int?>(null) }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // Upload action row
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.End,
-        ) {
-            MochiButton(
-                onClick = onUpload,
-                enabled = !state.isUploading,
-            ) {
-                if (state.isUploading) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(16.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Icon(
-                        Icons.Default.Upload,
-                        contentDescription = null,
-                        modifier = Modifier.size(18.dp),
-                    )
-                }
-                Spacer(Modifier.width(6.dp))
-                Text(stringResource(R.string.wikis_attachments_upload))
-            }
-        }
-
         // Sticky toolbar (search + filter/sort/view-mode)
         AttachmentsToolbar(
             searchQuery = state.searchQuery,
@@ -433,21 +477,12 @@ private fun AttachmentsBody(
                     ErrorState(error = state.error, onRetry = onRetry)
                 }
                 filtered.isEmpty() && state.attachments.isEmpty() -> {
+                    // No action of its own: the upload bar is already under
+                    // the thumb, and its subtitle is what points at it.
                     EmptyState(
                         icon = Icons.Default.Image,
                         title = stringResource(R.string.wikis_attachments_empty_title),
                         subtitle = stringResource(R.string.wikis_attachments_empty_description),
-                        action = {
-                            MochiButton(onClick = onUpload, enabled = !state.isUploading) {
-                                Icon(
-                                    Icons.Default.Upload,
-                                    contentDescription = null,
-                                    modifier = Modifier.size(18.dp),
-                                )
-                                Spacer(Modifier.width(6.dp))
-                                Text(stringResource(R.string.wikis_attachments_upload))
-                            }
-                        },
                     )
                 }
                 filtered.isEmpty() -> {

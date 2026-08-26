@@ -320,6 +320,8 @@
     <string name="wikis_attachments_upload">Upload files</string>
     <string name="wikis_attachments_uploading">Uploading…</string>
     <string name="wikis_attachments_upload_failed">Failed to upload files</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
     <string name="wikis_attachments_search_clear">Clear search</string>

@@ -349,4 +349,6 @@
         <item quantity="other">«%2$s» के लिए %1$d परिणाम मिले</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">कैप्शन सहेजा नहीं जा सका</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

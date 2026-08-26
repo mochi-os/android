@@ -339,4 +339,6 @@
         <item quantity="other">"%2$s" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">စာတန်းကို သိမ်းဆည်း၍မရပါ</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

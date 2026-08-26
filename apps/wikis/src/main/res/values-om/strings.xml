@@ -349,4 +349,6 @@
         <item quantity="other">bu\'aalee %1$d "%2$s" argi</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ibsa olkaa\'uun hin milkoofne</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

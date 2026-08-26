@@ -238,4 +238,6 @@
     <string name="wikis_revision_compare_failed">Kon de vorige versie niet laden ter vergelijking.</string>
     <string name="wikis_revision_changes_from">Wijzigingen van versie %1$d → %2$d</string>
     <string name="wikis_attachments_caption_save_failed">Bijschrift kan niet worden opgeslagen</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

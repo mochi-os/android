@@ -307,4 +307,6 @@
     <string name="wikis_revision_compare_failed">Não foi possível carregar a versão anterior para comparação.</string>
     <string name="wikis_revision_changes_from">Alterações da versão %1$d → %2$d</string>
     <string name="wikis_attachments_caption_save_failed">Não foi possível salvar a legenda</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

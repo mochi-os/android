@@ -389,4 +389,6 @@
         <item quantity="other">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Methwyd cadw\'r capsiwn</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

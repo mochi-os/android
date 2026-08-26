@@ -349,4 +349,6 @@
         <item quantity="other">Nakahanap ng %1$d resulta para sa «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Hindi na-save ang caption</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

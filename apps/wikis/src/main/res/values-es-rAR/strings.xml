@@ -71,4 +71,6 @@
     <string name="wikis_rss_revoke">Revoke access</string>
     <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

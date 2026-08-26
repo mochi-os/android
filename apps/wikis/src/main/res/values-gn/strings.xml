@@ -349,4 +349,6 @@
         <item quantity="other">Oñetopa %1$d ojejuhu "%2$s" peguarã</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ndaikatúi oñeñongatu ñemyesakã</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

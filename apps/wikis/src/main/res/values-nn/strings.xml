@@ -346,4 +346,6 @@
     <string name="wikis_revision_show_page">Vis sida</string>
     <string name="wikis_revision_changes_from">Endringar frå versjon %1$d → %2$d</string>
     <string name="wikis_attachments_caption_save_failed">Klarte ikkje lagre bileteksten</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

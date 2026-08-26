@@ -349,4 +349,6 @@
         <item quantity="other">«%2$s» కోసం %1$d ఫలితాలు కనుగొనబడింది</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">క్యాప్షన్ సేవ్ చేయడం సాధ్యపడలేదు</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

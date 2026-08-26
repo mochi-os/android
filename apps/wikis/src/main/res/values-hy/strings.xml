@@ -349,4 +349,6 @@
         <item quantity="other">Գտնվեց %1$d արդյունք «%2$s»-ի համար</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Չհաջողվեց պահպանել մակագրությունը</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

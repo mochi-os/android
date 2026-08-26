@@ -349,4 +349,6 @@
         <item quantity="other">«%2$s»-க்கு %1$d முடிவுகள் கண்டுபிடிக்கப்பட்டது</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">படக்குறிப்பைச் சேமிக்க முடியவில்லை</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

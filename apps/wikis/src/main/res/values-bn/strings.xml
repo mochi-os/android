@@ -346,4 +346,6 @@
         <item quantity="other">«%2$s»-এর জন্য %1$d ফলাফল পাওয়া গেছে</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ক্যাপশন সংরক্ষণ করা যায়নি</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>
