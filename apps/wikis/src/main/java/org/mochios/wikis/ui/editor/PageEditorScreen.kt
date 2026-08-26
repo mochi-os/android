@@ -156,8 +156,15 @@ fun PageEditorScreen(
                 PageEditorEvent.Deleted -> {
                     showDeleteDialog = false
                     Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                    // Both this editor and the page view it was opened from are
+                    // now showing a page that no longer exists, so both come off
+                    // the stack - popping to the page view takes the editor above
+                    // it with them. It is the page view and not the wiki-home
+                    // route that has to be named here: WikiHomeScreen pops itself
+                    // the moment it has resolved the home page, so it is never on
+                    // the stack to be popped back to.
                     navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
-                        popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = true }
+                        popUpTo(WikisApp.PAGE_VIEW) { inclusive = true }
                     }
                 }
                 is PageEditorEvent.Toast -> {

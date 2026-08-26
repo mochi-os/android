@@ -144,8 +144,12 @@ fun PageViewScreen(
                     // A toast, not the snackbar: this screen is on its way out
                     // and would take a snackbar of its own down with it.
                     Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                    // This screen goes with the page it was showing, so Back
+                    // cannot return to it. Popping to the wiki-home route would
+                    // leave it standing: WikiHomeScreen pops itself as soon as
+                    // it has resolved the home page, so it is never on the stack.
                     navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
-                        popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = true }
+                        popUpTo(WikisApp.PAGE_VIEW) { inclusive = true }
                     }
                 }
             }
