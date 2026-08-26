@@ -263,8 +263,15 @@ class PageEditorViewModel @Inject constructor(
 
     // ---- Attachments (for InsertAttachmentDialog) ----
 
+    /**
+     * The wiki's files, for the insert dialog to pick from. Attachments belong
+     * to the wiki, not to one page - the list route takes a page only to keep
+     * the shape the web client uses, and ignores it - so a page that has no
+     * address yet still has files to insert. Bailing out on an empty slug left
+     * the dialog empty the first time it was opened on a page being written.
+     */
     fun loadAttachments() {
-        val slug = _uiState.value.slug.ifEmpty { initialSlug ?: return }
+        val slug = _uiState.value.slug.ifEmpty { initialSlug.orEmpty() }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isAttachmentsLoading = true)
             try {
@@ -283,15 +290,17 @@ class PageEditorViewModel @Inject constructor(
     /**
      * Uploads are staged as temp files so the repository stays file-based; the
      * copy keeps the original filename, which is what the server records.
+     *
+     * The upload route names a wiki and no page, so a page still being written
+     * uploads as well as a saved one does. Turning the pick away on an empty
+     * slug left the dialog's own upload button doing nothing at all, with
+     * nothing said about why.
      */
     fun uploadAttachments(
         uris: List<Uri>,
         uploadFailed: String,
     ) {
         if (uris.isEmpty()) return
-        // Attachments are wiki-scoped on the server, but the editor only allows
-        // uploads once the page exists (matching web), so guard on a known slug.
-        if (_uiState.value.slug.isEmpty() && initialSlug == null) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
             val tempFiles = repository.stageFiles(uris)
