@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import java.time.LocalDate
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
@@ -24,6 +25,7 @@ import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
+import org.mochios.android.util.NaturalCompare
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
@@ -68,6 +70,71 @@ data class ProjectUiState(
     /** Project members, for resolving user-field display names on cards. */
     val people: List<org.mochios.projects.model.Person> = emptyList(),
 )
+
+/** Seconds in a day, for turning an ISO date into an epoch-second sort key. */
+private const val SECONDS_PER_DAY = 86_400L
+
+/** Seconds for a date value, or null when it is neither an epoch nor an ISO
+ * date. */
+private fun dateSortKey(value: String): Long? {
+    value.toLongOrNull()?.let { seconds -> return seconds }
+    return try {
+        LocalDate.parse(value).toEpochDay() * SECONDS_PER_DAY
+    } catch (_: Exception) {
+        null
+    }
+}
+
+/**
+ * Order two custom-field values. Text compares with NaturalCompare, so the
+ * order is accent- and case-blind and "Sprint 2" precedes "Sprint 10"; a
+ * number compares numerically and a date by its epoch key, so neither sorts
+ * as text. An enumerated value is an opaque option id, so the options
+ * themselves are compared on the rank the designer gave them - the board's
+ * column order, which beats alphabetising a pipeline.
+ *
+ * Empty values sink to the bottom whichever way the sort runs: flipping to
+ * descending is meant to bring the far end of the data into view, not a wall
+ * of objects that never filled the field in. That is why the blank branch
+ * returns before the multiplier is applied.
+ */
+internal fun compareFieldValues(
+    av: String,
+    bv: String,
+    fieldtype: String?,
+    aOption: FieldOption?,
+    bOption: FieldOption?,
+    multiplier: Int,
+): Int {
+    if (av.isBlank() || bv.isBlank()) {
+        return when {
+            av.isBlank() && bv.isBlank() -> 0
+            av.isBlank() -> 1
+            else -> -1
+        }
+    }
+    val comparison = when (fieldtype) {
+        "number" -> {
+            val an = av.toDoubleOrNull()
+            val bn = bv.toDoubleOrNull()
+            if (an != null && bn != null) an.compareTo(bn) else NaturalCompare.compare(av, bv)
+        }
+        "date" -> {
+            val ad = dateSortKey(av)
+            val bd = dateSortKey(bv)
+            if (ad != null && bd != null) ad.compareTo(bd) else NaturalCompare.compare(av, bv)
+        }
+        "enumerated" -> {
+            if (aOption != null && bOption != null) {
+                aOption.rank.compareTo(bOption.rank)
+            } else {
+                NaturalCompare.compare(aOption?.name ?: av, bOption?.name ?: bv)
+            }
+        }
+        else -> NaturalCompare.compare(av, bv)
+    }
+    return comparison * multiplier
+}
 
 @HiltViewModel
 class ProjectViewModel @Inject constructor(
@@ -592,6 +659,15 @@ class ProjectViewModel @Inject constructor(
         return null
     }
 
+    /** Options a class declares for a field, falling back to any class's set.
+     * Two classes may share a field id and hold their own options under it, so
+     * an object's value only means anything against its own class's set. */
+    fun getOptionsForObject(classId: String, fieldId: String): List<FieldOption> {
+        val own = _uiState.value.projectDetails?.options?.get(classId)?.get(fieldId)
+        if (!own.isNullOrEmpty()) return own
+        return getAllOptionsForField(fieldId)
+    }
+
     fun getAllOptionsForField(fieldId: String): List<FieldOption> {
         val details = _uiState.value.projectDetails ?: return emptyList()
         for ((_, classOptions) in details.options) {
@@ -793,12 +869,42 @@ class ProjectViewModel @Inject constructor(
             })
         } else {
             val fieldId = if (field.startsWith("field:")) field.substring(6) else field
+            val sortField = getFieldById(fieldId)
+            // Keyed by class as well as field: two classes sharing a field id
+            // hold their own options under it, and an object's value only
+            // means anything against its own class's set.
+            val optionsCache = mutableMapOf<Pair<String, String>, List<FieldOption>>()
+            val optionFor = { obj: ProjectObject, id: String, value: String ->
+                optionsCache.getOrPut(obj.objectClass to id) {
+                    getOptionsForObject(obj.objectClass, id)
+                }.find { option -> option.id == value }
+            }
             objects.sortedWith(Comparator { a, b ->
-                val av = a.stringValue(fieldId).lowercase()
-                val bv = b.stringValue(fieldId).lowercase()
-                av.compareTo(bv) * multiplier
+                val aId = sortFieldIdFor(a, sortField, fieldId)
+                val bId = sortFieldIdFor(b, sortField, fieldId)
+                val av = a.stringValue(aId)
+                val bv = b.stringValue(bId)
+                compareFieldValues(
+                    av, bv,
+                    sortField?.fieldtype,
+                    optionFor(a, aId, av), optionFor(b, bId, bv),
+                    multiplier,
+                )
             })
         }
+    }
+
+    /** The field id to read this object's value under. A sort field chosen on
+     * one class may exist under a different id on another, so fall back to the
+     * twin that carries the same name. */
+    private fun sortFieldIdFor(obj: ProjectObject, sortField: ProjectField?, fallbackId: String): String {
+        if (sortField == null) return fallbackId
+        if (obj.values.containsKey(sortField.id)) return sortField.id
+        val fields = _uiState.value.projectDetails?.fields?.get(obj.objectClass) ?: return sortField.id
+        val twin = fields.find { candidate ->
+            candidate.name.equals(sortField.name, ignoreCase = true)
+        }
+        return twin?.id ?: sortField.id
     }
 
     fun getCardFields(classId: String): List<ProjectField> {
