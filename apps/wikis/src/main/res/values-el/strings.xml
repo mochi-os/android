@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Δημιουργία</string>
     <string name="wikis_redirect_source_label">Πηγή</string>
     <string name="wikis_redirect_target_label">Στόχος</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Απαιτούνται τόσο η πηγή όσο και ο στόχος</string>
     <string name="wikis_redirect_created_success">Η ανακατεύθυνση δημιουργήθηκε</string>
     <string name="wikis_redirect_create_failed">Αποτυχία δημιουργίας ανακατεύθυνσης</string>

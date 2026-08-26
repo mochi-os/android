@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Vytvoriť</string>
     <string name="wikis_redirect_source_label">Zdroj</string>
     <string name="wikis_redirect_target_label">Cieľ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Zdroj aj cieľ sú povinné</string>
     <string name="wikis_redirect_created_success">Presmerovanie vytvorené</string>
     <string name="wikis_redirect_create_failed">Nepodarilo sa vytvoriť presmerovanie</string>

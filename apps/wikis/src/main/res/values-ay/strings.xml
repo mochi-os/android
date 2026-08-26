@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Luraña</string>
     <string name="wikis_redirect_source_label">Origen</string>
     <string name="wikis_redirect_target_label">Apayaña</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Vertiente ukat target munataw</string>
     <string name="wikis_redirect_created_success">Redirect luratäwi</string>
     <string name="wikis_redirect_create_failed">Janiw redirect lurña atinkti</string>

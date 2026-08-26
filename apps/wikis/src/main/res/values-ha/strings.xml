@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Ƙirƙira</string>
     <string name="wikis_redirect_source_label">Tushe</string>
     <string name="wikis_redirect_target_label">Manufa</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Ana buƙatar tushe da target duka</string>
     <string name="wikis_redirect_created_success">An ƙirƙiri redirect</string>
     <string name="wikis_redirect_create_failed">An gaza ƙirƙirar redirect</string>

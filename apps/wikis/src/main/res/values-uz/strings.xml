@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Yaratish</string>
     <string name="wikis_redirect_source_label">Manba</string>
     <string name="wikis_redirect_target_label">Maqsad</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Manba va maqsad ikkalasi ham talab qilinadi</string>
     <string name="wikis_redirect_created_success">Yoʻnaltirish yaratildi</string>
     <string name="wikis_redirect_create_failed">Yoʻnaltirishni yaratib boʻlmadi</string>

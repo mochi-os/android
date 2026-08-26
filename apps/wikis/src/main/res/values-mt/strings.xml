@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Oħloq</string>
     <string name="wikis_redirect_source_label">Sors</string>
     <string name="wikis_redirect_target_label">Mira</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Kemm is-sors u kemm il-mira huma meħtieġa</string>
     <string name="wikis_redirect_created_success">Redirect inħoloq</string>
     <string name="wikis_redirect_create_failed">Ma rnexxiex jinħoloq ir-redirect</string>

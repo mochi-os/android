@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">جوړ کړئ</string>
     <string name="wikis_redirect_source_label">سرچینه</string>
     <string name="wikis_redirect_target_label">هدف</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">دواړه سرچینه او هدف اړین دي</string>
     <string name="wikis_redirect_created_success">بیرته لارښوونه جوړه شوه</string>
     <string name="wikis_redirect_create_failed">د بیا لارښوونې جوړولو پاتې راغلل</string>

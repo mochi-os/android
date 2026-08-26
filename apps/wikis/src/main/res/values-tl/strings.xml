@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Gumawa</string>
     <string name="wikis_redirect_source_label">Pinagmulan</string>
     <string name="wikis_redirect_target_label">Target</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Kailangan parehong source at target</string>
     <string name="wikis_redirect_created_success">Nagawa ang redirect</string>
     <string name="wikis_redirect_create_failed">Nabigong gumawa ng redirect</string>

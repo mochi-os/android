@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Crear</string>
     <string name="wikis_redirect_source_label">Fuente</string>
     <string name="wikis_redirect_target_label">Destino</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Tanto el origen como el destino son obligatorios</string>
     <string name="wikis_redirect_created_success">Redirección creada</string>
     <string name="wikis_redirect_create_failed">Error al crear la redirección</string>

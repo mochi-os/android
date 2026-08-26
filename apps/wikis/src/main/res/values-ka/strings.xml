@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">შექმნა</string>
     <string name="wikis_redirect_source_label">წყარო</string>
     <string name="wikis_redirect_target_label">სამიზნე</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">წყაროც და სამიზნეც აუცილებელია</string>
     <string name="wikis_redirect_created_success">გადამისამართება შეიქმნა</string>
     <string name="wikis_redirect_create_failed">გადამისამართების შექმნა ვერ მოხერხდა</string>

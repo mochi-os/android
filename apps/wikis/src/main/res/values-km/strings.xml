@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">បង្កើត</string>
     <string name="wikis_redirect_source_label">ប្រភព</string>
     <string name="wikis_redirect_target_label">គោលដៅ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ទាំងប្រភព និងគោលដៅគឺត្រូវការ</string>
     <string name="wikis_redirect_created_success">បានបង្កើត redirect</string>
     <string name="wikis_redirect_create_failed">បរាជ័យក្នុងការបង្កើតការបញ្ជូនបន្ត</string>

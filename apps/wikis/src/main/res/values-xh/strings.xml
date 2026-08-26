@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Yenza</string>
     <string name="wikis_redirect_source_label">Umthombo</string>
     <string name="wikis_redirect_target_label">Injongo</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Kufuneka zombini umthombo nethagethi</string>
     <string name="wikis_redirect_created_success">Uhambiso ludaliwe</string>
     <string name="wikis_redirect_create_failed">Ayiphumelelanga ukudala ukuthumela kwakhona</string>

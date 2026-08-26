@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Sukurti</string>
     <string name="wikis_redirect_source_label">Šaltinis</string>
     <string name="wikis_redirect_target_label">Tikslas</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Reikalingi ir šaltinis, ir tikslas</string>
     <string name="wikis_redirect_created_success">Peradresavimas sukurtas</string>
     <string name="wikis_redirect_create_failed">Nepavyko sukurti peradresavimo</string>

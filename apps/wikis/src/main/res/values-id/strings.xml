@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Buat</string>
     <string name="wikis_redirect_source_label">Sumber</string>
     <string name="wikis_redirect_target_label">Target</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Sumber dan target keduanya diperlukan</string>
     <string name="wikis_redirect_created_success">Pengalihan dibuat</string>
     <string name="wikis_redirect_create_failed">Gagal membuat pengalihan</string>

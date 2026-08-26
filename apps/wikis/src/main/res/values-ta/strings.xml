@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">உருவாக்கு</string>
     <string name="wikis_redirect_source_label">மூலம்</string>
     <string name="wikis_redirect_target_label">இலக்கு</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ஆதாரமும் இலக்கும் இரண்டும் தேவை</string>
     <string name="wikis_redirect_created_success">Redirect உருவாக்கப்பட்டது</string>
     <string name="wikis_redirect_create_failed">திருப்பியனுப்பலை உருவாக்க முடியவில்லை</string>

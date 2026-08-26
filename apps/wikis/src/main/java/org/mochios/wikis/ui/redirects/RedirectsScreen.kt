@@ -53,13 +53,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Redirect
-import org.mochios.android.R as MochiR
 
 /**
  * Standalone redirects screen. The list and its dialogs live in
@@ -169,16 +171,20 @@ fun RedirectsBody(
                 }
             }
             else -> {
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(vertical = 4.dp),
-                ) {
-                    items(state.redirects, key = { it.source }) { redirect ->
-                        RedirectRow(
-                            redirect = redirect,
-                            onDelete = { pendingDelete = redirect },
-                        )
-                        HorizontalDivider()
+                Column(modifier = Modifier.fillMaxSize()) {
+                    RedirectsHeader()
+                    HorizontalDivider()
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(vertical = 4.dp),
+                    ) {
+                        items(state.redirects, key = { it.source }) { redirect ->
+                            RedirectRow(
+                                redirect = redirect,
+                                onDelete = { pendingDelete = redirect },
+                            )
+                            HorizontalDivider()
+                        }
                     }
                 }
             }
@@ -216,6 +222,53 @@ fun RedirectsBody(
     }
 }
 
+// The table's columns, shared by the heading and every row so that a heading
+// stands over what it names. The arrow and the delete button head nothing, as
+// they do not on the web.
+private const val SOURCE_WEIGHT = 1f
+private const val TARGET_WEIGHT = 1f
+private const val CREATED_WEIGHT = 0.9f
+private val ARROW_COLUMN = 32.dp
+private val ACTION_COLUMN = 48.dp
+
+/** The table heading: Source, Target, Created, as the web lists them. */
+@Composable
+private fun RedirectsHeader() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        HeaderLabel(
+            text = stringResource(R.string.wikis_redirect_source_label),
+            modifier = Modifier.weight(SOURCE_WEIGHT),
+        )
+        Spacer(Modifier.width(ARROW_COLUMN))
+        HeaderLabel(
+            text = stringResource(R.string.wikis_redirect_target_label),
+            modifier = Modifier.weight(TARGET_WEIGHT),
+        )
+        HeaderLabel(
+            text = stringResource(R.string.wikis_redirect_created_label),
+            modifier = Modifier.weight(CREATED_WEIGHT),
+        )
+        Spacer(Modifier.width(ACTION_COLUMN))
+    }
+}
+
+@Composable
+private fun HeaderLabel(text: String, modifier: Modifier = Modifier) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+        modifier = modifier,
+    )
+}
+
 @Composable
 private fun RedirectRow(
     redirect: Redirect,
@@ -224,27 +277,44 @@ private fun RedirectRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        ValueChip(
-            value = redirect.source,
-            modifier = Modifier.weight(1f, fill = false),
+        Box(modifier = Modifier.weight(SOURCE_WEIGHT)) {
+            ValueChip(value = redirect.source)
+        }
+        Box(
+            modifier = Modifier.width(ARROW_COLUMN),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                Icons.AutoMirrored.Filled.ArrowForward,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(16.dp),
+            )
+        }
+        Box(modifier = Modifier.weight(TARGET_WEIGHT)) {
+            ValueChip(value = redirect.target)
+        }
+        Text(
+            // Empty for a redirect the server sent no timestamp for, which
+            // leaves the column standing rather than shifting the row.
+            text = if (redirect.created > 0) {
+                LocalFormat.current.formatRelativeTime(redirect.created)
+            } else {
+                ""
+            },
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(CREATED_WEIGHT),
         )
-        Spacer(Modifier.width(8.dp))
-        Icon(
-            Icons.AutoMirrored.Filled.ArrowForward,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(16.dp),
-        )
-        Spacer(Modifier.width(8.dp))
-        ValueChip(
-            value = redirect.target,
-            modifier = Modifier.weight(1f, fill = false),
-        )
-        Spacer(Modifier.weight(1f))
-        MochiIconButton(onClick = onDelete) {
+        MochiIconButton(
+            onClick = onDelete,
+            modifier = Modifier.width(ACTION_COLUMN),
+        ) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Çêbike</string>
     <string name="wikis_redirect_source_label">Çavkanî</string>
     <string name="wikis_redirect_target_label">Armanc</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Hem çavkanî hem jî hedef pêwîst in</string>
     <string name="wikis_redirect_created_success">Beralîkirin hate afirandin</string>
     <string name="wikis_redirect_create_failed">Çêkirina rêveguhêziyê neserkeftî bû</string>

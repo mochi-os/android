@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">ساختن</string>
     <string name="wikis_redirect_source_label">منبع</string>
     <string name="wikis_redirect_target_label">هدف</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">هم مبدأ و هم مقصد الزامی هستند</string>
     <string name="wikis_redirect_created_success">تغییر مسیر ایجاد شد</string>
     <string name="wikis_redirect_create_failed">ایجاد تغییر مسیر ناموفق بود</string>

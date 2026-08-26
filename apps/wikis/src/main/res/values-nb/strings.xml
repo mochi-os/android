@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Opprett</string>
     <string name="wikis_redirect_source_label">Kilde</string>
     <string name="wikis_redirect_target_label">Mål</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Både kilde og mål er påkrevd</string>
     <string name="wikis_redirect_created_success">Omdirigering opprettet</string>
     <string name="wikis_redirect_create_failed">Kunne ikke opprette omdirigering</string>

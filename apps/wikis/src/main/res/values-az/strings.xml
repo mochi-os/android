@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Yarat</string>
     <string name="wikis_redirect_source_label">Mənbə</string>
     <string name="wikis_redirect_target_label">Hədəf</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Mənbə və hədəfin hər ikisi tələb olunur</string>
     <string name="wikis_redirect_created_success">Yönləndirmə yaradıldı</string>
     <string name="wikis_redirect_create_failed">Yönləndirmə yaratmaq alınmadı</string>

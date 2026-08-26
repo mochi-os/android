@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Създай</string>
     <string name="wikis_redirect_source_label">Източник</string>
     <string name="wikis_redirect_target_label">Цел</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Източникът и целта са задължителни</string>
     <string name="wikis_redirect_created_success">Пренасочването е създадено</string>
     <string name="wikis_redirect_create_failed">Неуспешно създаване на пренасочване</string>

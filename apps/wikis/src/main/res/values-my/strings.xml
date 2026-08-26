@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">ဖန်တီးမည်</string>
     <string name="wikis_redirect_source_label">မူရင်း</string>
     <string name="wikis_redirect_target_label">ဦးတည်ရာ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">အရင်းအမြစ်နှင့် ပစ်မှတ် နှစ်ခုလုံး လိုအပ်သည်</string>
     <string name="wikis_redirect_created_success">Redirect ဖန်တီးပြီးပါပြီ</string>
     <string name="wikis_redirect_create_failed">ပြန်ညွှန်းမှု ဖန်တီး၍ မရပါ</string>

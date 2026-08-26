@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Aanmaken</string>
     <string name="wikis_redirect_source_label">Bron</string>
     <string name="wikis_redirect_target_label">Doel</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Zowel bron als doel zijn vereist</string>
     <string name="wikis_redirect_created_success">Redirect aangemaakt</string>
     <string name="wikis_redirect_create_failed">Redirect aanmaken mislukt</string>

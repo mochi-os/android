@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">సృష్టించండి</string>
     <string name="wikis_redirect_source_label">మూలం</string>
     <string name="wikis_redirect_target_label">లక్ష్యం</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">మూలం మరియు లక్ష్యం రెండూ అవసరం</string>
     <string name="wikis_redirect_created_success">రీడైరెక్ట్ సృష్టించబడింది</string>
     <string name="wikis_redirect_create_failed">రీడైరెక్ట్‌ను సృష్టించడంలో విఫలమైంది</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">באַשאַפֿן</string>
     <string name="wikis_redirect_source_label">מקור</string>
     <string name="wikis_redirect_target_label">ציל</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">אי מקור און אי ציל זענען נייטיק</string>
     <string name="wikis_redirect_created_success">רעדירעקט באַשאַפֿן</string>
     <string name="wikis_redirect_create_failed">ניט געלונגען צו שאַפֿן ווײַטערלייטונג</string>

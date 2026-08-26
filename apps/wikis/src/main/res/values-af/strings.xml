@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Skep</string>
     <string name="wikis_redirect_source_label">Bron</string>
     <string name="wikis_redirect_target_label">Teiken</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Beide bron en teiken word vereis</string>
     <string name="wikis_redirect_created_success">Herleiding geskep</string>
     <string name="wikis_redirect_create_failed">Kon nie herleiding skep nie</string>

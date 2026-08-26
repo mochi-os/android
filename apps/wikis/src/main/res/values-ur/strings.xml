@@ -132,6 +132,7 @@
     <string name="wikis_redirect_create_action">بنائیں</string>
     <string name="wikis_redirect_source_label">سورس</string>
     <string name="wikis_redirect_target_label">ٹارگٹ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ذریعہ اور ہدف دونوں ضروری ہیں</string>
     <string name="wikis_redirect_created_success">redirect بن گیا</string>
     <string name="wikis_redirect_create_failed">ری ڈائریکٹ بنانے میں ناکامی</string>

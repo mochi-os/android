@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">സൃഷ്ടിക്കുക</string>
     <string name="wikis_redirect_source_label">സ്രോതസ്സ്</string>
     <string name="wikis_redirect_target_label">ലക്ഷ്യം</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ഉറവിടവും ലക്ഷ്യവും ആവശ്യമാണ്</string>
     <string name="wikis_redirect_created_success">ലോഗിനിലേക്ക് redirect ചെയ്യുന്നു.</string>
     <string name="wikis_redirect_create_failed">റീഡയറക്ട് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>

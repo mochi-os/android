@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Gawé</string>
     <string name="wikis_redirect_source_label">Sumber</string>
     <string name="wikis_redirect_target_label">Target</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Sumber lan target loro-loroné dibutuhaké</string>
     <string name="wikis_redirect_created_success">Redirect digawé</string>
     <string name="wikis_redirect_create_failed">Gagal nggawé pengalihan</string>

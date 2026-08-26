@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Эҷод кардан</string>
     <string name="wikis_redirect_source_label">Манбаъ</string>
     <string name="wikis_redirect_target_label">Ҳадаф</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Ҳам манбаъ ва ҳам ҳадаф зарур аст</string>
     <string name="wikis_redirect_created_success">Тағйири масир эҷод шуд</string>
     <string name="wikis_redirect_create_failed">Эҷоди ивазкунӣ ба анҷом нарасид</string>

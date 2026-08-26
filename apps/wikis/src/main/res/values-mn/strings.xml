@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Үүсгэх</string>
     <string name="wikis_redirect_source_label">Эх сурвалж</string>
     <string name="wikis_redirect_target_label">Зорилт</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Эх сурвалж ба зорилго хоёулаа шаардлагатай</string>
     <string name="wikis_redirect_created_success">Дахин чиглүүлэлт үүсгэгдсэн</string>
     <string name="wikis_redirect_create_failed">Чиглүүлэлт үүсгэж чадсангүй</string>

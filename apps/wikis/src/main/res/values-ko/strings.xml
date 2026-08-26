@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">생성</string>
     <string name="wikis_redirect_source_label">소스</string>
     <string name="wikis_redirect_target_label">대상</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">출발지와 대상 모두 필요해요</string>
     <string name="wikis_redirect_created_success">리디렉션이 만들어졌어요</string>
     <string name="wikis_redirect_create_failed">리디렉션 생성에 실패했어요</string>

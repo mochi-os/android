@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">ರಚಿಸಿ</string>
     <string name="wikis_redirect_source_label">ಮೂಲ</string>
     <string name="wikis_redirect_target_label">ಗುರಿ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ಮೂಲ ಮತ್ತು ಗುರಿ ಎರಡೂ ಅಗತ್ಯವಿದೆ</string>
     <string name="wikis_redirect_created_success">ರಿಡೈರೆಕ್ಟ್ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="wikis_redirect_create_failed">ರೀಡೈರೆಕ್ಟ್ ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Erstellen</string>
     <string name="wikis_redirect_source_label">Quelle</string>
     <string name="wikis_redirect_target_label">Ziel</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Quelle und Ziel sind beide erforderlich</string>
     <string name="wikis_redirect_created_success">Weiterleitung erstellt</string>
     <string name="wikis_redirect_create_failed">Weiterleitung konnte nicht erstellt werden</string>

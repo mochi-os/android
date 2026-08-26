@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Tạo</string>
     <string name="wikis_redirect_source_label">Nguồn</string>
     <string name="wikis_redirect_target_label">Mục tiêu</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Bắt buộc cả nguồn và đích</string>
     <string name="wikis_redirect_created_success">Đã tạo chuyển hướng</string>
     <string name="wikis_redirect_create_failed">Không tạo chuyển hướng được</string>

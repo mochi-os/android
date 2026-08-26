@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Створити</string>
     <string name="wikis_redirect_source_label">Джерело</string>
     <string name="wikis_redirect_target_label">Ціль</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Потрібні як джерело, так і ціль</string>
     <string name="wikis_redirect_created_success">Перенаправлення створено</string>
     <string name="wikis_redirect_create_failed">Не вдалося створити перенаправлення</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Creu</string>
     <string name="wikis_redirect_source_label">Ffynhonnell</string>
     <string name="wikis_redirect_target_label">Targed</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Mae angen ffynhonnell a tharged</string>
     <string name="wikis_redirect_created_success">Ailgyfeiriad wedi\'i greu</string>
     <string name="wikis_redirect_create_failed">Methwyd creu ailgyfeiriad</string>

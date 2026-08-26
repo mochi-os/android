@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Kamariy</string>
     <string name="wikis_redirect_source_label">Pukyu</string>
     <string name="wikis_redirect_target_label">Chayana</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Pukyu hinaspa chayana iskay kanan</string>
     <string name="wikis_redirect_created_success">Redirige kamarisqa</string>
     <string name="wikis_redirect_create_failed">Mana redirectta paqarichiyta atinchu</string>

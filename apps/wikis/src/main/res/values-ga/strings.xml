@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Cruthaigh</string>
     <string name="wikis_redirect_source_label">Foinse</string>
     <string name="wikis_redirect_target_label">Sprioc</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Tá foinse agus sprioc araon riachtanach</string>
     <string name="wikis_redirect_created_success">Atreorú cruthaithe</string>
     <string name="wikis_redirect_create_failed">Theip ar atreorú a chruthú</string>

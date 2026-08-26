@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">צור</string>
     <string name="wikis_redirect_source_label">מקור</string>
     <string name="wikis_redirect_target_label">יעד</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">נדרשים גם מקור וגם יעד</string>
     <string name="wikis_redirect_created_success">ההפניה נוצרה</string>
     <string name="wikis_redirect_create_failed">יצירת ההפניה נכשלה</string>

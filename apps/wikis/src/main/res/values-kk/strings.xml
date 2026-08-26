@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Құру</string>
     <string name="wikis_redirect_source_label">Дереккөз</string>
     <string name="wikis_redirect_target_label">Мақсат</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Дереккөз де, мақсат та қажет</string>
     <string name="wikis_redirect_created_success">Қайта бағыттау жасалды</string>
     <string name="wikis_redirect_create_failed">Қайта бағыттауды жасау сәтсіз аяқталды</string>

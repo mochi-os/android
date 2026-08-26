@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Döretmek</string>
     <string name="wikis_redirect_source_label">Çeşme</string>
     <string name="wikis_redirect_target_label">Maksat</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Çeşme we maksat hökmany</string>
     <string name="wikis_redirect_created_success">Gönükdirme döredildi</string>
     <string name="wikis_redirect_create_failed">Gönükdirme döredilmedi</string>

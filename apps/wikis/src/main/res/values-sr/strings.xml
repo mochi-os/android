@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Креирај</string>
     <string name="wikis_redirect_source_label">Извор</string>
     <string name="wikis_redirect_target_label">Циљ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Извор и одредиште су обавезни</string>
     <string name="wikis_redirect_created_success">Преусмерење креирано</string>
     <string name="wikis_redirect_create_failed">Креирање преусмерења није успело</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">ٺاهيو</string>
     <string name="wikis_redirect_source_label">ماخذ</string>
     <string name="wikis_redirect_target_label">ھدف</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ذريعو ۽ هدف ٻئي گهربل آهن</string>
     <string name="wikis_redirect_created_success">ريڊائريڪٽ ٺاهيو ويو</string>
     <string name="wikis_redirect_create_failed">ريڊائريڪٽ ٺاهڻ ۾ ناڪام</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Ստեղծել CRM</string>
     <string name="wikis_redirect_source_label">Աղբյուր</string>
     <string name="wikis_redirect_target_label">Թիրախ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Պահանջվում են և՛ աղբյուրը, և՛ նպատակակետը</string>
     <string name="wikis_redirect_created_success">Վերահղումը ստեղծվեց</string>
     <string name="wikis_redirect_create_failed">Չհաջողվեց ստեղծել վերահղումը</string>

@@ -193,6 +193,7 @@
     <string name="wikis_redirect_create_title">Créer une redirection</string>
     <string name="wikis_redirect_source_label">Source</string>
     <string name="wikis_redirect_target_label">Cible</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">La source et la cible sont obligatoires</string>
     <string name="wikis_redirect_created_success">Redirection créée</string>
     <string name="wikis_redirect_create_failed">Échec de la création de la redirection</string>

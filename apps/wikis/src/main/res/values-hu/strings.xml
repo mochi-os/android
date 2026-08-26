@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Létrehozás</string>
     <string name="wikis_redirect_source_label">Forrás</string>
     <string name="wikis_redirect_target_label">Cél</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">A forrás és a cél is kötelező</string>
     <string name="wikis_redirect_created_success">Átirányítás létrehozva</string>
     <string name="wikis_redirect_create_failed">Nem sikerült létrehozni az átirányítást</string>

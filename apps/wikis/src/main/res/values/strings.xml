@@ -263,6 +263,7 @@
     <string name="wikis_redirect_create_action">Create</string>
     <string name="wikis_redirect_source_label">Source</string>
     <string name="wikis_redirect_target_label">Target</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Both source and target are required</string>
     <string name="wikis_redirect_created_success">Redirect created</string>
     <string name="wikis_redirect_create_failed">Failed to create redirect</string>

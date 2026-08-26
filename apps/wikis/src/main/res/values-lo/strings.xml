@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">ສ້າງ</string>
     <string name="wikis_redirect_source_label">ແຫຼ່ງ</string>
     <string name="wikis_redirect_target_label">ເປົ້າໝາຍ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ຕ້ອງການທັງແຫຼ່ງ ແລະ ເປົ້າໝາຍ</string>
     <string name="wikis_redirect_created_success">ສ້າງການປ່ຽນເສັ້ນທາງແລ້ວ</string>
     <string name="wikis_redirect_create_failed">ສ້າງການປ່ຽນເສັ້ນທາງລົ້ມເຫຼວ</string>

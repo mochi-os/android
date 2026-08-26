@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Loo</string>
     <string name="wikis_redirect_source_label">Allikas</string>
     <string name="wikis_redirect_target_label">Siht</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Nii allikas kui sihtkoht on kohustuslikud</string>
     <string name="wikis_redirect_created_success">Ümbersuunamine loodud</string>
     <string name="wikis_redirect_create_failed">Ümbersuunamise loomine ebaõnnestus</string>

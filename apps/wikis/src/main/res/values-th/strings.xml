@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">สร้าง</string>
     <string name="wikis_redirect_source_label">แหล่งที่มา</string>
     <string name="wikis_redirect_target_label">เป้าหมาย</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ต้องระบุทั้งต้นทางและปลายทาง</string>
     <string name="wikis_redirect_created_success">สร้างการเปลี่ยนเส้นทางแล้ว</string>
     <string name="wikis_redirect_create_failed">ไม่สามารถสร้าง redirect ได้</string>

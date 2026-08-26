@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Dá</string>
     <string name="wikis_redirect_source_label">Orísun</string>
     <string name="wikis_redirect_target_label">Ibi àfojúsùn</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Orísun àti afojúsùn nílò méjèèjì</string>
     <string name="wikis_redirect_created_success">A ti dá redirect</string>
     <string name="wikis_redirect_create_failed">Kò lè dá redirect</string>

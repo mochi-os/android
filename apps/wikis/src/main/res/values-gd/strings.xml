@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Cruthaich</string>
     <string name="wikis_redirect_source_label">Tùs</string>
     <string name="wikis_redirect_target_label">Targaid</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Tha feum air an dà chuid an tùs agus an targaid</string>
     <string name="wikis_redirect_created_success">Chaidh an t-ath-stiùireadh a chruthachadh</string>
     <string name="wikis_redirect_create_failed">Cha b\' urrainn ath-stiùireadh a chruthachadh</string>

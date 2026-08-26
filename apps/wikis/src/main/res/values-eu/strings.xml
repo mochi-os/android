@@ -132,6 +132,7 @@
     <string name="wikis_redirect_create_action">Sortu</string>
     <string name="wikis_redirect_source_label">Iturria</string>
     <string name="wikis_redirect_target_label">Helburua</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Iturria eta helburua biak beharrezkoak dira</string>
     <string name="wikis_redirect_created_success">Birbideratzea sortu da</string>
     <string name="wikis_redirect_create_failed">Ezin izan da birbideratzea sortu</string>

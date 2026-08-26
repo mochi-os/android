@@ -132,6 +132,7 @@
     <string name="wikis_redirect_create_action">তৈরি করুন</string>
     <string name="wikis_redirect_source_label">উৎস</string>
     <string name="wikis_redirect_target_label">টার্গেট</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">উৎস এবং লক্ষ্য উভয়ই প্রয়োজন</string>
     <string name="wikis_redirect_created_success">রিডাইরেক্ট তৈরি করা হয়েছে</string>
     <string name="wikis_redirect_create_failed">রিডাইরেক্ট তৈরি করতে ব্যর্থ</string>

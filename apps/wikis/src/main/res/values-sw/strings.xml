@@ -132,6 +132,7 @@
     <string name="wikis_redirect_create_action">Unda</string>
     <string name="wikis_redirect_source_label">Chanzo</string>
     <string name="wikis_redirect_target_label">Lengo</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Chanzo na lengo vyote vinahitajika</string>
     <string name="wikis_redirect_created_success">Uelekezaji umeundwa</string>
     <string name="wikis_redirect_create_failed">Imeshindwa kuunda uelekezaji</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">तयार करा</string>
     <string name="wikis_redirect_source_label">स्त्रोत</string>
     <string name="wikis_redirect_target_label">लक्ष्य</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">स्रोत आणि लक्ष्य दोन्ही आवश्यक आहेत</string>
     <string name="wikis_redirect_created_success">रीडायरेक्ट तयार केले</string>
     <string name="wikis_redirect_create_failed">रीडायरेक्ट तयार करण्यात अयशस्वी</string>

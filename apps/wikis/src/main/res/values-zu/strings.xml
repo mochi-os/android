@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Dala</string>
     <string name="wikis_redirect_source_label">Umthombo</string>
     <string name="wikis_redirect_target_label">Okuqondiwe</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Kudingeka kokubili umthombo nokuqondisiwe</string>
     <string name="wikis_redirect_created_success">Ukuqondisa kabusha kudaliwe</string>
     <string name="wikis_redirect_create_failed">Kuhlulekile ukudala uqondiso lubuyiselwe</string>

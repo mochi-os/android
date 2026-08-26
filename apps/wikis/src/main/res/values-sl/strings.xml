@@ -132,6 +132,7 @@
     <string name="wikis_redirect_create_action">Ustvari</string>
     <string name="wikis_redirect_source_label">Vir</string>
     <string name="wikis_redirect_target_label">Cilj</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Tako vir kot cilj sta obvezna</string>
     <string name="wikis_redirect_created_success">Preusmeritev ustvarjena</string>
     <string name="wikis_redirect_create_failed">Neuspešno ustvarjanje preusmeritve</string>

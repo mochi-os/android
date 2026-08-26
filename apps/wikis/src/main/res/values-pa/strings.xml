@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">ਬਣਾਓ</string>
     <string name="wikis_redirect_source_label">ਸਰੋਤ</string>
     <string name="wikis_redirect_target_label">ਟੀਚਾ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ਸਰੋਤ ਅਤੇ ਟੀਚਾ ਦੋਵੇਂ ਲੋੜੀਂਦੇ ਹਨ</string>
     <string name="wikis_redirect_created_success">ਰੀਡਾਇਰੈਕਟ ਬਣਾਇਆ ਗਿਆ</string>
     <string name="wikis_redirect_create_failed">ਰੀਡਾਇਰੈਕਟ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>

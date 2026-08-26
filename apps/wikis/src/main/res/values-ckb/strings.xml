@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">دروستکردن</string>
     <string name="wikis_redirect_source_label">سەرچاوە</string>
     <string name="wikis_redirect_target_label">ئامانج</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">هەردوو سەرچاوە و ئامانج پێویستن</string>
     <string name="wikis_redirect_created_success">ڕەوانەکردنەوە دروستکرا</string>
     <string name="wikis_redirect_create_failed">دروستکردنی ڕەوانەکردن سەرکەوتوو نەبوو</string>

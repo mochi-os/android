@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Izveidot</string>
     <string name="wikis_redirect_source_label">Avots</string>
     <string name="wikis_redirect_target_label">Mērķis</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Nepieciešami gan avots, gan mērķis</string>
     <string name="wikis_redirect_created_success">Pāradresācija izveidota</string>
     <string name="wikis_redirect_create_failed">Neizdevās izveidot pāradresāciju</string>

@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Uumi</string>
     <string name="wikis_redirect_source_label">Madda</string>
     <string name="wikis_redirect_target_label">Galma</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Madda fi galmi barbaachisoo dha</string>
     <string name="wikis_redirect_created_success">Deebi\'iinsi uumame</string>
     <string name="wikis_redirect_create_failed">Deebi\'ii ergamuu uumuu hin dandeenye</string>

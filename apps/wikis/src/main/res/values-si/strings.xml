@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">නිර්මාණය කරන්න</string>
     <string name="wikis_redirect_source_label">මූලාරම්භය</string>
     <string name="wikis_redirect_target_label">ඉලක්කය</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ප්‍රභවය සහ ඉලක්කය යන දෙකම අවශ්‍යය</string>
     <string name="wikis_redirect_created_success">redirect සාදන ලදී</string>
     <string name="wikis_redirect_create_failed">යළි-යොමුවීමක් සෑදීමට අසමත් විය</string>

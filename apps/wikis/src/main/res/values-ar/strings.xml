@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">إنشاء</string>
     <string name="wikis_redirect_source_label">المصدر</string>
     <string name="wikis_redirect_target_label">الهدف</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">كل من المصدر والوجهة مطلوبان</string>
     <string name="wikis_redirect_created_success">تم إنشاء إعادة التوجيه</string>
     <string name="wikis_redirect_create_failed">فشل إنشاء التحويل</string>

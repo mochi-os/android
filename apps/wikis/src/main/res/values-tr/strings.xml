@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Oluştur</string>
     <string name="wikis_redirect_source_label">Kaynak</string>
     <string name="wikis_redirect_target_label">Hedef</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Hem kaynak hem hedef gereklidir</string>
     <string name="wikis_redirect_created_success">Yönlendirme oluşturuldu</string>
     <string name="wikis_redirect_create_failed">Yönlendirme oluşturulamadı</string>

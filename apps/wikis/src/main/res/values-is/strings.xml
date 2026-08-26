@@ -133,6 +133,7 @@
     <string name="wikis_redirect_create_action">Búa til</string>
     <string name="wikis_redirect_source_label">Uppruni</string>
     <string name="wikis_redirect_target_label">Markmið</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Bæði uppruni og áfangastaður eru áskilin</string>
     <string name="wikis_redirect_created_success">Áframsending búin til</string>
     <string name="wikis_redirect_create_failed">Tókst ekki að búa til endurbeiningu</string>
