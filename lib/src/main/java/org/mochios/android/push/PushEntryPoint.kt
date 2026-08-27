@@ -26,4 +26,5 @@ interface PushEntryPoint {
     fun authRepository(): AuthRepository
     fun notificationsRepository(): NotificationsRepository
     fun pushAccountStore(): PushAccountStore
+    fun deviceStore(): DeviceStore
 }

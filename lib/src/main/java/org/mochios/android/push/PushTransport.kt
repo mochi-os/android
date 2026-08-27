@@ -69,6 +69,11 @@ object PushTransport {
             return
         }
 
+        // This device first, so the push account either transport registers
+        // below binds to it; on every configure, so a renamed phone updates
+        // itself and the server's last-seen time moves.
+        DeviceRegistrar.register(context, client, server)
+
         val authRepository = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
             .authRepository()

@@ -99,6 +99,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                     auth = keys.auth,
                     p256dh = keys.pubKey,
                     endpoint = endpointToSend,
+                    device = deps.deviceStore().id(),
                 )
                 if (accountId != null) {
                     deps.pushAccountStore().store(instance, accountId)
@@ -230,6 +231,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         auth: String,
         p256dh: String,
         endpoint: String,
+        device: String,
     ): String? {
         val token =
             authRepository.fetchToken("notifications").getOrNull() ?: return null
@@ -240,9 +242,12 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             .add("p256dh", p256dh)
             .add("endpoint", endpoint)
             .build()
+        // The Device header binds the push account to this device, so a later
+        // registration from the same phone replaces it rather than adding to it.
         val request = Request.Builder()
             .url(url)
             .header("Authorization", "Bearer $token")
+            .header("Device", device)
             .post(form)
             .build()
         client.newCall(request).execute().use { resp ->

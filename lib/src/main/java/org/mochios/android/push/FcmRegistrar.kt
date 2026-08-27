@@ -89,7 +89,8 @@ object FcmRegistrar {
                 server,
                 token,
                 installId,
-                DeviceName.resolve(context)
+                label = DeviceName.resolve(context),
+                device = deps.deviceStore().id(),
             )
             // Keep the account id: sign-out hands it to
             // `/notifications/-/accounts/remove` so the server stops pushing to
@@ -172,6 +173,7 @@ object FcmRegistrar {
         server: String,
         token: String,
         installId: String,
+        label: String,
         device: String,
     ): String? {
         val appToken = authRepository.fetchToken("notifications").getOrNull()
@@ -180,12 +182,15 @@ object FcmRegistrar {
         val body = JSONObject()
             .put("token", token)
             .put("install_id", installId)
-            .put("device", device)
+            .put("label", label)
             .toString()
             .toRequestBody("application/json".toMediaType())
+        // The Device header binds the push account to this device, so a later
+        // registration from the same phone replaces it rather than adding to it.
         val request = Request.Builder()
             .url(url)
             .header("Authorization", "Bearer $appToken")
+            .header("Device", device)
             .post(body)
             .build()
         client.newCall(request).execute().use { resp ->
