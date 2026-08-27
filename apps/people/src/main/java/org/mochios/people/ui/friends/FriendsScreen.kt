@@ -66,6 +66,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
@@ -143,6 +144,16 @@ fun FriendsScreen(
             val section = peopleDrawerSection(item.id)
             if (section != PeopleSidebarSection.FRIENDS) onSwitchSection(section)
         },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+            )
+        },
     ) {
         Scaffold(
             snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -182,14 +193,6 @@ fun FriendsScreen(
                                         onLogout()
                                     },
                                     leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                )
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        showAbout = true
-                                    },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
                                 )
                             }
                         }

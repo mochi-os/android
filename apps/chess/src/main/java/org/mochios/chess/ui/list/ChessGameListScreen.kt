@@ -22,7 +22,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.SportsKabaddi
 import androidx.compose.material.icons.outlined.Info
@@ -69,8 +68,6 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
@@ -96,7 +93,6 @@ fun ChessGameListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
-    var showOverflow by remember { mutableStateOf(false) }
     var showAbout by remember { mutableStateOf(false) }
 
     // Reload when the screen returns to the foreground, most importantly after
@@ -142,6 +138,14 @@ fun ChessGameListScreen(
                     navController.navigate(ChessApp.NEW_GAME)
                 },
             )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+            )
         },
     ) {
         Scaffold(
@@ -163,24 +167,6 @@ fun ChessGameListScreen(
                                 Icons.Default.Notifications,
                                 contentDescription = stringResource(MochiR.string.notifications_open),
                             )
-                        }
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
-                                Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
-                            }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = { showOverflow = false },
-                            ) {
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        showAbout = true
-                                    },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
-                                )
-                            }
                         }
                     },
                 )

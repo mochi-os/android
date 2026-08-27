@@ -119,6 +119,14 @@ fun WordsGameListScreen(
                     onNewGame()
                 },
             )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+            )
         },
         emptyState = {
             Text(
@@ -154,14 +162,6 @@ fun WordsGameListScreen(
                                         onLogout()
                                     },
                                     leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                )
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        showAbout = true
-                                    },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
                                 )
                             }
                         }
