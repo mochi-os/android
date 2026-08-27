@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Ndaikatúi oñe-sincroniza wiki</string>
     <string name="wikis_settings_section_home">Óga kuatiarogue</string>
     <string name="wikis_settings_field_home_label">Eipuru oga ramo</string>
-    <string name="wikis_settings_home_save">Ñongatu ñemoambue</string>
     <string name="wikis_settings_home_saved">Ñemboheko oñembyaty</string>
     <string name="wikis_settings_home_save_failed">Ndaikatúi oñongatu configuraciones</string>
     <string name="wikis_settings_section_delete">Hundi wiki</string>

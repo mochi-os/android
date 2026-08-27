@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">همگام‌سازی ویکی ناموفق بود</string>
     <string name="wikis_settings_section_home">صفحه اصلی</string>
     <string name="wikis_settings_field_home_label">استفاده به‌عنوان خانه</string>
-    <string name="wikis_settings_home_save">ذخیره تغییرات</string>
     <string name="wikis_settings_home_saved">تنظیمات ذخیره شد</string>
     <string name="wikis_settings_home_save_failed">ذخیره تنظیمات ناموفق بود</string>
     <string name="wikis_settings_section_delete">حذف ویکی</string>

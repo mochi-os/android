@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Kunne ikke synkronisere wiki</string>
     <string name="wikis_settings_section_home">Startside</string>
     <string name="wikis_settings_field_home_label">Brug som hjem</string>
-    <string name="wikis_settings_home_save">Gem ændringer</string>
     <string name="wikis_settings_home_saved">Indstillinger gemt</string>
     <string name="wikis_settings_home_save_failed">Kunne ikke gemme indstillinger</string>
     <string name="wikis_settings_section_delete">Slet wiki</string>

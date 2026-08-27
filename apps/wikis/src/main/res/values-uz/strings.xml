@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki ni sinxronlab boʻlmadi</string>
     <string name="wikis_settings_section_home">Bosh sahifa</string>
     <string name="wikis_settings_field_home_label">Asosiy sifatida ishlatish</string>
-    <string name="wikis_settings_home_save">Oʻzgarishlarni saqlash</string>
     <string name="wikis_settings_home_saved">Sozlamalar saqlandi</string>
     <string name="wikis_settings_home_save_failed">Sozlamalarni saqlab boʻlmadi</string>
     <string name="wikis_settings_section_delete">Wikini oʻchirish</string>

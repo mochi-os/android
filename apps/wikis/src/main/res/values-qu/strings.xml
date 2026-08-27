@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Mana wikita sincronizayta atinchu</string>
     <string name="wikis_settings_section_home">Wasi pagina</string>
     <string name="wikis_settings_field_home_label">Wasi hina apaykachay</string>
-    <string name="wikis_settings_home_save">Cambiokunata waqaychay</string>
     <string name="wikis_settings_home_saved">Wakichiykuna waqaychasqa</string>
     <string name="wikis_settings_home_save_failed">Mana configuracionkunata waqaychayta atinchu</string>
     <string name="wikis_settings_section_delete">Wiki wischuy</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ዊኪን ማመሳሰል አልተሳካም</string>
     <string name="wikis_settings_section_home">የመነሻ ገጽ</string>
     <string name="wikis_settings_field_home_label">እንደ ቤት ይጠቀሙ</string>
-    <string name="wikis_settings_home_save">ለውጦችን ያስቀምጡ</string>
     <string name="wikis_settings_home_saved">ቅንብሮች ተቀምጠዋል</string>
     <string name="wikis_settings_home_save_failed">ቅንብሮችን ማስቀመጥ አልተሳካም</string>
     <string name="wikis_settings_section_delete">ዊኪ ሰርዝ</string>

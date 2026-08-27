@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ניט געלונגען צו סינכראָניזירן וויקי</string>
     <string name="wikis_settings_section_home">היים־בלאַט</string>
     <string name="wikis_settings_field_home_label">ניצט ווי היים</string>
-    <string name="wikis_settings_home_save">היט ענדערונגען</string>
     <string name="wikis_settings_home_saved">אײַנשטעלונגען אויפֿגעהיט</string>
     <string name="wikis_settings_home_save_failed">ניט געלונגען אויפֿצוהיטן הגדרות</string>
     <string name="wikis_settings_section_delete">אויסמעקן וויקי</string>

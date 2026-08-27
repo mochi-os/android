@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Ҳамоҳангсозии вики ба анҷом нарасид</string>
     <string name="wikis_settings_section_home">Саҳифаи асосӣ</string>
     <string name="wikis_settings_field_home_label">Ҳамчун хона истифода баред</string>
-    <string name="wikis_settings_home_save">Захираи тағйиротҳо</string>
     <string name="wikis_settings_home_saved">Танзимот захира шуд</string>
     <string name="wikis_settings_home_save_failed">Захира кардани танзимот ба анҷом нарасид</string>
     <string name="wikis_settings_section_delete">Нест кардани вики</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki sinkronayseessuu hin dandeenye</string>
     <string name="wikis_settings_section_home">Fuula manaa</string>
     <string name="wikis_settings_field_home_label">Akka mana fayyadami</string>
-    <string name="wikis_settings_home_save">Jijjiiramoota olkaa\'i</string>
     <string name="wikis_settings_home_saved">Qindaa\'inoonni olkaa\'amaniiru</string>
     <string name="wikis_settings_home_save_failed">Filannoo olkaa\'uu hin dandeenye</string>
     <string name="wikis_settings_section_delete">Wikii haqi</string>

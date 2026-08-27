@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">উইকি সিঙ্ক করতে ব্যর্থ</string>
     <string name="wikis_settings_section_home">হোম পেজ</string>
     <string name="wikis_settings_field_home_label">হোম হিসাবে ব্যবহার করুন</string>
-    <string name="wikis_settings_home_save">পরিবর্তন সংরক্ষণ করুন</string>
     <string name="wikis_settings_home_saved">সেটিংস সংরক্ষিত হয়েছে</string>
     <string name="wikis_settings_home_save_failed">সেটিংস সংরক্ষণ করতে ব্যর্থ</string>
     <string name="wikis_settings_section_delete">wiki মুছুন</string>

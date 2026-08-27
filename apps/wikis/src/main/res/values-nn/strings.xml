@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Klarte ikkje synkronisera wiki</string>
     <string name="wikis_settings_section_home">Heimeside</string>
     <string name="wikis_settings_field_home_label">Bruk som heim</string>
-    <string name="wikis_settings_home_save">Lagre endringar</string>
     <string name="wikis_settings_home_saved">Innstillingar lagra</string>
     <string name="wikis_settings_home_save_failed">Klarte ikkje lagra innstillingar</string>
     <string name="wikis_settings_section_delete">Slett wiki</string>

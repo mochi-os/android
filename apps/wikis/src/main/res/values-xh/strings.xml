@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Ayiphumelelanga ukulungelelanisa iwiki</string>
     <string name="wikis_settings_section_home">Iphepha lasekhaya</string>
     <string name="wikis_settings_field_home_label">Sebenzisa njengekhaya</string>
-    <string name="wikis_settings_home_save">Gcina utshintsho</string>
     <string name="wikis_settings_home_saved">Iisetingi zigciniwe</string>
     <string name="wikis_settings_home_save_failed">Ayiphumelelanga ukugcina iisetingi</string>
     <string name="wikis_settings_section_delete">Cima iwiki</string>

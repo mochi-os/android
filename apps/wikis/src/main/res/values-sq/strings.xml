@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Sinkronizimi i wiki dështoi</string>
     <string name="wikis_settings_section_home">Faqja kryesore</string>
     <string name="wikis_settings_field_home_label">Përdor si shtëpi</string>
-    <string name="wikis_settings_home_save">Ruaj ndryshimet</string>
     <string name="wikis_settings_home_saved">Cilësimet u ruajtën</string>
     <string name="wikis_settings_home_save_failed">Ruajtja e cilësimeve dështoi</string>
     <string name="wikis_settings_section_delete">Fshi wiki-n</string>

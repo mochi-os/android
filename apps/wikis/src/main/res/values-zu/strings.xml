@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Kuhlulekile ukuvumelanisa iwiki</string>
     <string name="wikis_settings_section_home">Ikhasi lekhaya</string>
     <string name="wikis_settings_field_home_label">Sebenzisa njengekhaya</string>
-    <string name="wikis_settings_home_save">Londoloza izinguquko</string>
     <string name="wikis_settings_home_saved">Izilungiselelo zilondoloziwe</string>
     <string name="wikis_settings_home_save_failed">Kuhlulekile ukulondoloza izilungiselelo</string>
     <string name="wikis_settings_section_delete">Susa i-wiki</string>

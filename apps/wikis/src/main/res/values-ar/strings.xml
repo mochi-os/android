@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">فشل مزامنة الويكي</string>
     <string name="wikis_settings_section_home">الصفحة الرئيسية</string>
     <string name="wikis_settings_field_home_label">استخدم كصفحة رئيسية</string>
-    <string name="wikis_settings_home_save">حفظ التغييرات</string>
     <string name="wikis_settings_home_saved">تم حفظ الإعدادات</string>
     <string name="wikis_settings_home_save_failed">فشل حفظ الإعدادات</string>
     <string name="wikis_settings_section_delete">حذف الويكي</string>

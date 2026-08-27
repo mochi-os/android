@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki синхрондоо ишке ашкан жок</string>
     <string name="wikis_settings_section_home">Башкы бет</string>
     <string name="wikis_settings_field_home_label">Башкы катары колдонуу</string>
-    <string name="wikis_settings_home_save">Өзгөрүүлөрдү сактоо</string>
     <string name="wikis_settings_home_saved">Жөндөөлөр сакталды</string>
     <string name="wikis_settings_home_save_failed">Жөндөөлөрдү сактоо ишке ашкан жок</string>
     <string name="wikis_settings_section_delete">Wikiди жок кылуу</string>

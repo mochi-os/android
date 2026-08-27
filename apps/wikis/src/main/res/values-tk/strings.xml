@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki sinhronlaşdyrylmady</string>
     <string name="wikis_settings_section_home">Baş sahypa</string>
     <string name="wikis_settings_field_home_label">Esasy hökmünde ulan</string>
-    <string name="wikis_settings_home_save">Üýtgeşiklikleri saklaýyş</string>
     <string name="wikis_settings_home_saved">Sazlamalar saklandy</string>
     <string name="wikis_settings_home_save_failed">Sazlamalar saklanyp galynmady</string>
     <string name="wikis_settings_section_delete">Wikiňi pozmak</string>

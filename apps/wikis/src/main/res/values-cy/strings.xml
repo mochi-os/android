@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Methwyd cysoni\'r wici</string>
     <string name="wikis_settings_section_home">Tudalen gartref</string>
     <string name="wikis_settings_field_home_label">Defnyddio fel cartref</string>
-    <string name="wikis_settings_home_save">Cadw newidiadau</string>
     <string name="wikis_settings_home_saved">Gosodiadau wedi\'u cadw</string>
     <string name="wikis_settings_home_save_failed">Methwyd cadw\'r gosodiadau</string>
     <string name="wikis_settings_section_delete">Dileu wici</string>

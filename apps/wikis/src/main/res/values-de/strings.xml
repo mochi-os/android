@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki konnte nicht synchronisiert werden</string>
     <string name="wikis_settings_section_home">Startseite</string>
     <string name="wikis_settings_field_home_label">Als Startseite verwenden</string>
-    <string name="wikis_settings_home_save">Änderungen speichern</string>
     <string name="wikis_settings_home_saved">Einstellungen gespeichert</string>
     <string name="wikis_settings_home_save_failed">Einstellungen konnten nicht gespeichert werden</string>
     <string name="wikis_settings_section_delete">Wiki löschen</string>

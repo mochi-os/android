@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ਵਿੱਕੀ ਸਿੰਕ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_settings_section_home">ਮੁੱਖ ਪੇਜ</string>
     <string name="wikis_settings_field_home_label">ਘਰ ਵਜੋਂ ਵਰਤੋ</string>
-    <string name="wikis_settings_home_save">ਤਬਦੀਲੀਆਂ ਸੰਭਾਲੋ</string>
     <string name="wikis_settings_home_saved">ਸੈਟਿੰਗਾਂ ਸੰਭਾਲੀਆਂ ਗਈਆਂ</string>
     <string name="wikis_settings_home_save_failed">ਸੈਟਿੰਗਾਂ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_settings_section_delete">ਵਿਕੀ ਮਿਟਾਓ</string>

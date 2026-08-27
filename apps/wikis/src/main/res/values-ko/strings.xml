@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">위키 동기화에 실패했어요</string>
     <string name="wikis_settings_section_home">홈 페이지</string>
     <string name="wikis_settings_field_home_label">홈으로 사용</string>
-    <string name="wikis_settings_home_save">변경 사항 저장</string>
     <string name="wikis_settings_home_saved">설정이 저장되었어요</string>
     <string name="wikis_settings_home_save_failed">설정 저장에 실패했어요</string>
     <string name="wikis_settings_section_delete">위키 삭제</string>

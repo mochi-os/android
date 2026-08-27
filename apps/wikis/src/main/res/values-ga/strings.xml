@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Theip ar shioncronú viceaí</string>
     <string name="wikis_settings_section_home">Leathanach baile</string>
     <string name="wikis_settings_field_home_label">Úsáid mar bhaile</string>
-    <string name="wikis_settings_home_save">Sábháil athruithe</string>
     <string name="wikis_settings_home_saved">Socruithe sábháilte</string>
     <string name="wikis_settings_home_save_failed">Theip ar shábháil socruithe</string>
     <string name="wikis_settings_section_delete">Scrios wiki</string>

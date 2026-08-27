@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Nepavyko sinchronizuoti wiki</string>
     <string name="wikis_settings_section_home">Pradžios puslapis</string>
     <string name="wikis_settings_field_home_label">Naudoti kaip pradžią</string>
-    <string name="wikis_settings_home_save">Išsaugoti pakeitimus</string>
     <string name="wikis_settings_home_saved">Nustatymai išsaugoti</string>
     <string name="wikis_settings_home_save_failed">Nepavyko išsaugoti nustatymų</string>
     <string name="wikis_settings_section_delete">Ištrinti wiki</string>

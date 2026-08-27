@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">បរាជ័យក្នុងការធ្វើសមកាលកម្មវិគី</string>
     <string name="wikis_settings_section_home">ទំព័រដើម</string>
     <string name="wikis_settings_field_home_label">ប្រើជាគេហដ្ឋាន</string>
-    <string name="wikis_settings_home_save">រក្សាទុកការផ្លាស់ប្តូរ</string>
     <string name="wikis_settings_home_saved">បានរក្សាទុកការកំណត់</string>
     <string name="wikis_settings_home_save_failed">បរាជ័យក្នុងការរក្សាទុកការកំណត់</string>
     <string name="wikis_settings_section_delete">លុបវិគី</string>

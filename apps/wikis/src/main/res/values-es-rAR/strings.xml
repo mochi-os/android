@@ -48,7 +48,6 @@
     <string name="wikis_attachments_delete_confirm_title">Eliminá el adjunto</string>
     <string name="wikis_attachments_no_results_description">Probá con otro término de búsqueda o filtro.</string>
     <string name="wikis_settings_name_edit_cd">Editá el nombre</string>
-    <string name="wikis_settings_home_save">Guardá los cambios</string>
     <string name="wikis_settings_section_delete">Eliminá la wiki</string>
     <string name="wikis_settings_delete_action">Eliminá la wiki</string>
     <string name="wikis_settings_delete_confirm_title">¿Estás absolutamente seguro?</string>

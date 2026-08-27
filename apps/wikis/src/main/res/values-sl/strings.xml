@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Neuspešna sinhronizacija wikija</string>
     <string name="wikis_settings_section_home">Domača stran</string>
     <string name="wikis_settings_field_home_label">Uporabi kot domačo</string>
-    <string name="wikis_settings_home_save">Shrani spremembe</string>
     <string name="wikis_settings_home_saved">Nastavitve shranjene</string>
     <string name="wikis_settings_home_save_failed">Neuspešno shranjevanje nastavitev</string>
     <string name="wikis_settings_section_delete">Izbriši wiki</string>

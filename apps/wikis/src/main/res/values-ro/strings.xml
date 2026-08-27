@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Sincronizarea wiki-ului a eșuat</string>
     <string name="wikis_settings_section_home">Pagina principală</string>
     <string name="wikis_settings_field_home_label">Folosește ca pagină principală</string>
-    <string name="wikis_settings_home_save">Salvează modificările</string>
     <string name="wikis_settings_home_saved">Setări salvate</string>
     <string name="wikis_settings_home_save_failed">Salvarea setărilor a eșuat</string>
     <string name="wikis_settings_section_delete">Șterge wiki-ul</string>

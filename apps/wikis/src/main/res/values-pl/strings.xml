@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Nie udało się zsynchronizować wiki</string>
     <string name="wikis_settings_section_home">Strona główna</string>
     <string name="wikis_settings_field_home_label">Użyj jako stronę główną</string>
-    <string name="wikis_settings_home_save">Zapisz zmiany</string>
     <string name="wikis_settings_home_saved">Ustawienia zapisane</string>
     <string name="wikis_settings_home_save_failed">Nie udało się zapisać ustawień</string>
     <string name="wikis_settings_section_delete">Usuń wiki</string>

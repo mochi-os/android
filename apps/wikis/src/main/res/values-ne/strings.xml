@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">विकी सिङ्क गर्न असफल</string>
     <string name="wikis_settings_section_home">होम पृष्ठ</string>
     <string name="wikis_settings_field_home_label">घरको रूपमा प्रयोग गर्नुहोस्</string>
-    <string name="wikis_settings_home_save">परिवर्तनहरू सुरक्षित गर्नुहोस्</string>
     <string name="wikis_settings_home_saved">सेटिङहरू सुरक्षित गरियो</string>
     <string name="wikis_settings_home_save_failed">सेटिङहरू सुरक्षित गर्न असफल</string>
     <string name="wikis_settings_section_delete">wiki मेटाउनुहोस्</string>

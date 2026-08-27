@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">විකිය සමමුහුර්ත කිරීමට අසමත් විය</string>
     <string name="wikis_settings_section_home">මුල් පිටුව</string>
     <string name="wikis_settings_field_home_label">home එක ලෙස භාවිතා කරන්න</string>
-    <string name="wikis_settings_home_save">වෙනස්කම් සුරකින්න</string>
     <string name="wikis_settings_home_saved">සැකසුම් සුරකින ලදී</string>
     <string name="wikis_settings_home_save_failed">සැකසුම් සුරැකීමට අසමත් විය</string>
     <string name="wikis_settings_section_delete">wiki එක මකන්න</string>

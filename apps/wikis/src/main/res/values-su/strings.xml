@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Gagal nyingkronkeun wiki</string>
     <string name="wikis_settings_section_home">Kaca imah</string>
     <string name="wikis_settings_field_home_label">Paké salaku imah</string>
-    <string name="wikis_settings_home_save">Simpen parobahan</string>
     <string name="wikis_settings_home_saved">Setélan disimpen</string>
     <string name="wikis_settings_home_save_failed">Gagal nyimpen setélan</string>
     <string name="wikis_settings_section_delete">Hapus wiki</string>

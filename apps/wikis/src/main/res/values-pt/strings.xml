@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Falha ao sincronizar wiki</string>
     <string name="wikis_settings_section_home">Página inicial</string>
     <string name="wikis_settings_field_home_label">Utilizar como página inicial</string>
-    <string name="wikis_settings_home_save">Guardar alterações</string>
     <string name="wikis_settings_home_saved">Definições guardadas</string>
     <string name="wikis_settings_home_save_failed">Falha ao guardar definições</string>
     <string name="wikis_settings_section_delete">Eliminar wiki</string>

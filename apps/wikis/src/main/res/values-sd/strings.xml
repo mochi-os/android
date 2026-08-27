@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">وڪي سِنڪ ڪرڻ ۾ ناڪام</string>
     <string name="wikis_settings_section_home">گهر جو صفحو</string>
     <string name="wikis_settings_field_home_label">گھر طور استعمال ڪريو</string>
-    <string name="wikis_settings_home_save">تبديليون محفوظ ڪريو</string>
     <string name="wikis_settings_home_saved">سيٽنگون محفوظ ٿي ويون</string>
     <string name="wikis_settings_home_save_failed">سيٽنگون محفوظ ڪرڻ ۾ ناڪام</string>
     <string name="wikis_settings_section_delete">wiki ختم ڪريو</string>

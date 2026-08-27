@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Kunde inte synkronisera wiki</string>
     <string name="wikis_settings_section_home">Startsida</string>
     <string name="wikis_settings_field_home_label">Använd som hem</string>
-    <string name="wikis_settings_home_save">Spara ändringar</string>
     <string name="wikis_settings_home_saved">Inställningar sparade</string>
     <string name="wikis_settings_home_save_failed">Kunde inte spara inställningar</string>
     <string name="wikis_settings_section_delete">Ta bort wiki</string>

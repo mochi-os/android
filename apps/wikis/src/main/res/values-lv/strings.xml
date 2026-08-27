@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Neizdevās sinhronizēt wiki</string>
     <string name="wikis_settings_section_home">Sākumlapa</string>
     <string name="wikis_settings_field_home_label">Izmantot kā mājas</string>
-    <string name="wikis_settings_home_save">Saglabāt izmaiņas</string>
     <string name="wikis_settings_home_saved">Iestatījumi saglabāti</string>
     <string name="wikis_settings_home_save_failed">Neizdevās saglabāt iestatījumus</string>
     <string name="wikis_settings_section_delete">Dzēst wiki</string>

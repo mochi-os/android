@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Αποτυχία συγχρονισμού wiki</string>
     <string name="wikis_settings_section_home">Αρχική σελίδα</string>
     <string name="wikis_settings_field_home_label">Χρήση ως αρχική</string>
-    <string name="wikis_settings_home_save">Αποθήκευση αλλαγών</string>
     <string name="wikis_settings_home_saved">Οι ρυθμίσεις αποθηκεύτηκαν</string>
     <string name="wikis_settings_home_save_failed">Αποτυχία αποθήκευσης ρυθμίσεων</string>
     <string name="wikis_settings_section_delete">Διαγραφή wiki</string>

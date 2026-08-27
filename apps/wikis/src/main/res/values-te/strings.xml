@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">వికీని సింక్ చేయడంలో విఫలమైంది</string>
     <string name="wikis_settings_section_home">హోమ్ పేజీ</string>
     <string name="wikis_settings_field_home_label">హోమ్‌గా ఉపయోగించండి</string>
-    <string name="wikis_settings_home_save">మార్పులను సేవ్ చేయండి</string>
     <string name="wikis_settings_home_saved">సెట్టింగ్‌లు సేవ్ చేయబడ్డాయి</string>
     <string name="wikis_settings_home_save_failed">సెట్టింగ్‌లను సేవ్ చేయడంలో విఫలమైంది</string>
     <string name="wikis_settings_section_delete">వికీని తొలగించండి</string>

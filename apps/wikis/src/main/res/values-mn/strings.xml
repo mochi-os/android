@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki синхрончилж чадсангүй</string>
     <string name="wikis_settings_section_home">Нүүр хуудас</string>
     <string name="wikis_settings_field_home_label">Нүүр хуудас болгон ашиглах</string>
-    <string name="wikis_settings_home_save">Өөрчлөлт хадгалах</string>
     <string name="wikis_settings_home_saved">Тохиргоо хадгалагдсан</string>
     <string name="wikis_settings_home_save_failed">Тохиргоонууд хадгалж чадсангүй</string>
     <string name="wikis_settings_section_delete">Wiki устгах</string>

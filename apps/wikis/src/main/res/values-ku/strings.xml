@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Hevdemkirina wikiyê neserkeftî bû</string>
     <string name="wikis_settings_section_home">Rûpelê malê</string>
     <string name="wikis_settings_field_home_label">Wek malper bi kar bîne</string>
-    <string name="wikis_settings_home_save">Guhertinan tomar bike</string>
     <string name="wikis_settings_home_saved">Mîheng tomar bûn</string>
     <string name="wikis_settings_home_save_failed">Tomarkirina mîhengan neserkeftî bû</string>
     <string name="wikis_settings_section_delete">Wikiyê jê bibe</string>

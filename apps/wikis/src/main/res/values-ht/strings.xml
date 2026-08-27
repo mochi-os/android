@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Echwe pou senkronize wiki</string>
     <string name="wikis_settings_section_home">Paj akèy</string>
     <string name="wikis_settings_field_home_label">Itilize kòm akèy</string>
-    <string name="wikis_settings_home_save">Sove chanjman</string>
     <string name="wikis_settings_home_saved">Paramèt sove</string>
     <string name="wikis_settings_home_save_failed">Echwe pou sove paramèt yo</string>
     <string name="wikis_settings_section_delete">Efase wiki</string>

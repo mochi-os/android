@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Kò lè ṣe sync wiki</string>
     <string name="wikis_settings_section_home">Ojú-ewé ilé</string>
     <string name="wikis_settings_field_home_label">Lo gẹ́gẹ́ bí ilé</string>
-    <string name="wikis_settings_home_save">Fi àwọn àyípadà pamọ́</string>
     <string name="wikis_settings_home_saved">Àwọn ìṣètò ti fi pamọ́</string>
     <string name="wikis_settings_home_save_failed">Kò lè fi àwọn ètò pamọ́</string>
     <string name="wikis_settings_section_delete">Pa wiki rẹ́</string>

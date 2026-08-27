@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">No s\'ha pogut sincronitzar el wiki</string>
     <string name="wikis_settings_section_home">Pàgina d\'inici</string>
     <string name="wikis_settings_field_home_label">Utilitza com a inici</string>
-    <string name="wikis_settings_home_save">Desa els canvis</string>
     <string name="wikis_settings_home_saved">Configuració desada</string>
     <string name="wikis_settings_home_save_failed">No s\'ha pogut desar la configuració</string>
     <string name="wikis_settings_section_delete">Suprimeix la wiki</string>

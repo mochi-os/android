@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Nepodařilo se synchronizovat wiki</string>
     <string name="wikis_settings_section_home">Domovská stránka</string>
     <string name="wikis_settings_field_home_label">Použít jako domov</string>
-    <string name="wikis_settings_home_save">Uložit změny</string>
     <string name="wikis_settings_home_saved">Nastavení uloženo</string>
     <string name="wikis_settings_home_save_failed">Nepodařilo se uložit nastavení</string>
     <string name="wikis_settings_section_delete">Smazat wiki</string>

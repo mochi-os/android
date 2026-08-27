@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">د ویکي همغږۍ پاتې راغلل</string>
     <string name="wikis_settings_section_home">کور پاڼه</string>
     <string name="wikis_settings_field_home_label">د کور په توګه وکاروئ</string>
-    <string name="wikis_settings_home_save">بدلونونه خوندي کړئ</string>
     <string name="wikis_settings_home_saved">ترتیبات خوندي شول</string>
     <string name="wikis_settings_home_save_failed">د تنظیماتو د خوندي کولو پاتې راغلل</string>
     <string name="wikis_settings_section_delete">ویکي ړنګ کړئ</string>

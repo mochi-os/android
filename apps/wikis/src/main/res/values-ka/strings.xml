@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ვიკის სინქრონიზაცია ვერ მოხერხდა</string>
     <string name="wikis_settings_section_home">მთავარი გვერდი</string>
     <string name="wikis_settings_field_home_label">მთავარ გვერდად გამოყენება</string>
-    <string name="wikis_settings_home_save">ცვლილებების შენახვა</string>
     <string name="wikis_settings_home_saved">პარამეტრები შენახულია</string>
     <string name="wikis_settings_home_save_failed">პარამეტრების შენახვა ვერ მოხერხდა</string>
     <string name="wikis_settings_section_delete">wiki-ის წაშლა</string>

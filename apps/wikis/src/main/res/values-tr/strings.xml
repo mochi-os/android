@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki eşitlenemedi</string>
     <string name="wikis_settings_section_home">Ana sayfa</string>
     <string name="wikis_settings_field_home_label">Ana sayfa olarak kullan</string>
-    <string name="wikis_settings_home_save">Değişiklikleri kaydet</string>
     <string name="wikis_settings_home_saved">Ayarlar kaydedildi</string>
     <string name="wikis_settings_home_save_failed">Ayarlar kaydedilemedi</string>
     <string name="wikis_settings_section_delete">Wiki\'yi sil</string>

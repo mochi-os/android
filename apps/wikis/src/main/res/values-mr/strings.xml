@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">विकी सिंक करण्यात अयशस्वी</string>
     <string name="wikis_settings_section_home">मुख्यपृष्ठ</string>
     <string name="wikis_settings_field_home_label">होम म्हणून वापरा</string>
-    <string name="wikis_settings_home_save">बदल जतन करा</string>
     <string name="wikis_settings_home_saved">सेटिंग्ज जतन केल्या</string>
     <string name="wikis_settings_home_save_failed">सेटिंग्ज सेव्ह करण्यात अयशस्वी</string>
     <string name="wikis_settings_section_delete">विकी हटवा</string>

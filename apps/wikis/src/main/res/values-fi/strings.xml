@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wikin synkronointi epäonnistui</string>
     <string name="wikis_settings_section_home">Kotisivu</string>
     <string name="wikis_settings_field_home_label">Käytä aloitussivuna</string>
-    <string name="wikis_settings_home_save">Tallenna muutokset</string>
     <string name="wikis_settings_home_saved">Asetukset tallennettu</string>
     <string name="wikis_settings_home_save_failed">Asetusten tallennus epäonnistui</string>
     <string name="wikis_settings_section_delete">Poista wiki</string>

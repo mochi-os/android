@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Gagal menyegerakkan wiki</string>
     <string name="wikis_settings_section_home">Halaman utama</string>
     <string name="wikis_settings_field_home_label">Gunakan sebagai laman utama</string>
-    <string name="wikis_settings_home_save">Simpan perubahan</string>
     <string name="wikis_settings_home_saved">Tetapan disimpan</string>
     <string name="wikis_settings_home_save_failed">Gagal menyimpan tetapan</string>
     <string name="wikis_settings_section_delete">Padam wiki</string>

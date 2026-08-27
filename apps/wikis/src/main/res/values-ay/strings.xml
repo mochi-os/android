@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Janiw wiki sincronizaña atinkti</string>
     <string name="wikis_settings_section_home">Uta página</string>
     <string name="wikis_settings_field_home_label">Sistema predeterminada apnaqaña</string>
-    <string name="wikis_settings_home_save">Mayjt\'awinak imaña</string>
     <string name="wikis_settings_home_saved">Configuración imata</string>
     <string name="wikis_settings_home_save_failed">Janiw configuracionanak imaña atinkti</string>
     <string name="wikis_settings_section_delete">Wiki chhaqtayaña</string>

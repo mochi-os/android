@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Уикиді синхрондау сәтсіз аяқталды</string>
     <string name="wikis_settings_section_home">Басты бет</string>
     <string name="wikis_settings_field_home_label">Үй ретінде пайдалану</string>
-    <string name="wikis_settings_home_save">Өзгерістерді сақтау</string>
     <string name="wikis_settings_home_saved">Параметрлер сақталды</string>
     <string name="wikis_settings_home_save_failed">Параметрлерді сақтау сәтсіз аяқталды</string>
     <string name="wikis_settings_section_delete">Wiki жою</string>

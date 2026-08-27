@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Ezin izan da wiki sinkronizatu</string>
     <string name="wikis_settings_section_home">Hasiera-orria</string>
     <string name="wikis_settings_field_home_label">Erabili hasiera gisa</string>
-    <string name="wikis_settings_home_save">Gorde aldaketak</string>
     <string name="wikis_settings_home_saved">Ezarpenak gorde dira</string>
     <string name="wikis_settings_home_save_failed">Ezin izan dira ezarpenak gorde</string>
     <string name="wikis_settings_section_delete">Ezabatu wikia</string>

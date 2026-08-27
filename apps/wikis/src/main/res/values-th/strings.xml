@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ไม่สามารถซิงค์วิกิได้</string>
     <string name="wikis_settings_section_home">หน้าหลัก</string>
     <string name="wikis_settings_field_home_label">ใช้เป็นหน้าหลัก</string>
-    <string name="wikis_settings_home_save">บันทึกการเปลี่ยนแปลง</string>
     <string name="wikis_settings_home_saved">บันทึกการตั้งค่าแล้ว</string>
     <string name="wikis_settings_home_save_failed">ไม่สามารถบันทึกการตั้งค่าได้</string>
     <string name="wikis_settings_section_delete">ลบ wiki</string>

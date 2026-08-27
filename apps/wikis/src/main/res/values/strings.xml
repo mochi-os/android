@@ -405,7 +405,6 @@
     <!-- Settings tab — home page -->
     <string name="wikis_settings_section_home">Home page</string>
     <string name="wikis_settings_field_home_label">Use as home</string>
-    <string name="wikis_settings_home_save">Save changes</string>
     <string name="wikis_settings_home_saved">Settings saved</string>
     <string name="wikis_settings_home_save_failed">Failed to save settings</string>
 

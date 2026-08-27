@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Non se puido sincronizar o wiki</string>
     <string name="wikis_settings_section_home">Páxina de inicio</string>
     <string name="wikis_settings_field_home_label">Usar como inicio</string>
-    <string name="wikis_settings_home_save">Gardar cambios</string>
     <string name="wikis_settings_home_saved">Axustes gardados</string>
     <string name="wikis_settings_home_save_failed">Non se puido gardar a configuración</string>
     <string name="wikis_settings_section_delete">Eliminar wiki</string>

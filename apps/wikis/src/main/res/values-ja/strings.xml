@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki の同期に失敗しました</string>
     <string name="wikis_settings_section_home">ホームページ</string>
     <string name="wikis_settings_field_home_label">ホームとして使用</string>
-    <string name="wikis_settings_home_save">変更を保存</string>
     <string name="wikis_settings_home_saved">設定を保存しました</string>
     <string name="wikis_settings_home_save_failed">設定の保存に失敗しました</string>
     <string name="wikis_settings_section_delete">Wiki を削除</string>

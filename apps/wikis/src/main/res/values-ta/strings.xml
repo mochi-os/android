@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">விக்கியை ஒத்திசைக்க முடியவில்லை</string>
     <string name="wikis_settings_section_home">முகப்புப் பக்கம்</string>
     <string name="wikis_settings_field_home_label">ஹோமாக பயன்படுத்து</string>
-    <string name="wikis_settings_home_save">மாற்றங்களை சேமி</string>
     <string name="wikis_settings_home_saved">அமைப்புகள் சேமிக்கப்பட்டன</string>
     <string name="wikis_settings_home_save_failed">அமைப்புகளை சேமிக்க முடியவில்லை</string>
     <string name="wikis_settings_section_delete">Wiki-ஐ நீக்கு</string>

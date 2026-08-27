@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ຊິງຄ໌ວິກິລົ້ມເຫຼວ</string>
     <string name="wikis_settings_section_home">ໜ້າຫຼັກ</string>
     <string name="wikis_settings_field_home_label">ໃຊ້ເປັນໜ້າຫຼັກ</string>
-    <string name="wikis_settings_home_save">ບັນທຶກການປ່ຽນແປງ</string>
     <string name="wikis_settings_home_saved">ການຕັ້ງຄ່າຖືກບັນທຶກແລ້ວ</string>
     <string name="wikis_settings_home_save_failed">ບັນທຶກການຕັ້ງຄ່າລົ້ມເຫຼວ</string>
     <string name="wikis_settings_section_delete">ລົບ wiki</string>

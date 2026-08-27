@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ဝီကီ ထပ်တူပြု၍ မရပါ</string>
     <string name="wikis_settings_section_home">ပင်မ စာမျက်နှာ</string>
     <string name="wikis_settings_field_home_label">ပင်မအဖြစ် သုံးမည်</string>
-    <string name="wikis_settings_home_save">ပြောင်းလဲမှုများ သိမ်းမည်</string>
     <string name="wikis_settings_home_saved">ဆက်တင်များ သိမ်းပြီး</string>
     <string name="wikis_settings_home_save_failed">ဆက်တင်များ သိမ်း၍ မရပါ</string>
     <string name="wikis_settings_section_delete">wiki ဖျက်မည်</string>

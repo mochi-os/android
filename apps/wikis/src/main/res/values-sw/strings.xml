@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Imeshindwa kusawazisha wiki</string>
     <string name="wikis_settings_section_home">Ukurasa wa nyumbani</string>
     <string name="wikis_settings_field_home_label">Tumia kama nyumbani</string>
-    <string name="wikis_settings_home_save">Hifadhi mabadiliko</string>
     <string name="wikis_settings_home_saved">Mipangilio imehifadhiwa</string>
     <string name="wikis_settings_home_save_failed">Imeshindwa kuhifadhi mipangilio</string>
     <string name="wikis_settings_section_delete">Futa wiki</string>

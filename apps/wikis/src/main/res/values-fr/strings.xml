@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Échec de la synchronisation du wiki</string>
     <string name="wikis_settings_section_home">Page d\'accueil</string>
     <string name="wikis_settings_field_home_label">Utiliser comme page d\'accueil</string>
-    <string name="wikis_settings_home_save">Enregistrer les modifications</string>
     <string name="wikis_settings_home_saved">Paramètres enregistrés</string>
     <string name="wikis_settings_home_save_failed">Échec de l\'enregistrement des paramètres</string>
     <string name="wikis_settings_section_delete">Supprimer le wiki</string>

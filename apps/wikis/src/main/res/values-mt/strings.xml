@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Ma rnexxiex tiġi sinkronizzata l-wiki</string>
     <string name="wikis_settings_section_home">Paġna home</string>
     <string name="wikis_settings_field_home_label">Uża bħala home</string>
-    <string name="wikis_settings_home_save">Issejvja l-bidliet</string>
     <string name="wikis_settings_home_saved">Settings issejvjati</string>
     <string name="wikis_settings_home_save_failed">Ma rnexxiex jiġu ssejvjati s-settings</string>
     <string name="wikis_settings_section_delete">Ħassar wiki</string>

@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wikini sinxronlaşdırmaq alınmadı</string>
     <string name="wikis_settings_section_home">Ana səhifə</string>
     <string name="wikis_settings_field_home_label">Tətbiqlərdən istifadə et</string>
-    <string name="wikis_settings_home_save">Dəyişiklikləri saxla</string>
     <string name="wikis_settings_home_saved">Parametrlər saxlanıldı</string>
     <string name="wikis_settings_home_save_failed">Parametrləri saxlamaq alınmadı</string>
     <string name="wikis_settings_section_delete">Vikini sil</string>

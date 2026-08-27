@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Nem sikerült szinkronizálni a wikit</string>
     <string name="wikis_settings_section_home">Kezdőoldal</string>
     <string name="wikis_settings_field_home_label">Beállítás kezdőlapként</string>
-    <string name="wikis_settings_home_save">Módosítások mentése</string>
     <string name="wikis_settings_home_saved">Beállítások mentve</string>
     <string name="wikis_settings_home_save_failed">Nem sikerült menteni a beállításokat</string>
     <string name="wikis_settings_section_delete">Wiki törlése</string>

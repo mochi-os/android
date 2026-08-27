@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">هاوکاتکردنی wiki سەرکەوتوو نەبوو</string>
     <string name="wikis_settings_section_home">پەڕەی ماڵەوە</string>
     <string name="wikis_settings_field_home_label">وەک ماڵەوە بەکاربێنە</string>
-    <string name="wikis_settings_home_save">پاشەکەوتکردنی گۆڕانکارییەکان</string>
     <string name="wikis_settings_home_saved">ڕێکخستنەکان پاشەکەوتکران</string>
     <string name="wikis_settings_home_save_failed">پاشەکەوتکردنی ڕێکخستنەکان سەرکەوتوو نەبوو</string>
     <string name="wikis_settings_section_delete">سڕینەوەی wiki</string>

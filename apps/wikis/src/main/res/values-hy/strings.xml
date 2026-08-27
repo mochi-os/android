@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Չհաջողվեց համաժամացնել wiki-ն</string>
     <string name="wikis_settings_section_home">Գլխավոր էջ</string>
     <string name="wikis_settings_field_home_label">Օգտագործել որպես տուն</string>
-    <string name="wikis_settings_home_save">Պահպանել փոփոխությունները</string>
     <string name="wikis_settings_home_saved">Կարգավորումները պահպանվեցին</string>
     <string name="wikis_settings_home_save_failed">Չհաջողվեց պահպանել կարգավորումները</string>
     <string name="wikis_settings_section_delete">Ջնջել wiki-ն</string>

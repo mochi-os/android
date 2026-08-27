@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,8 +24,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -44,7 +43,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.DataChip
-import org.mochios.android.ui.components.FieldRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
@@ -159,9 +157,9 @@ private fun IdentitySection(
     var editValue by remember(wiki.name) { mutableStateOf(wiki.name) }
 
     Section(title = stringResource(R.string.wikis_settings_section_identity)) {
-        FieldRow(label = stringResource(R.string.wikis_settings_field_name)) {
+        IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_name)) {
             if (isEditing) {
-                Column(modifier = Modifier.fillMaxWidth()) {
+                Column(modifier = Modifier.weight(1f)) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(4.dp),
@@ -240,14 +238,36 @@ private fun IdentitySection(
                 }
             }
         }
-        FieldRow(label = stringResource(R.string.wikis_settings_field_entity_id)) {
+        IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_entity_id)) {
             DataChip(value = wiki.id, truncate = Truncate.MIDDLE)
         }
         if (!fingerprint.isNullOrBlank()) {
-            FieldRow(label = stringResource(R.string.wikis_settings_field_fingerprint)) {
+            IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_fingerprint)) {
                 DataChip(value = fingerprint, truncate = Truncate.MIDDLE)
             }
         }
+    }
+}
+
+/** Identity row with a fixed-width label so values line up in a column. */
+@Composable
+private fun IdentityFieldRow(
+    label: String,
+    content: @Composable RowScope.() -> Unit,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.width(120.dp),
+        )
+        content()
     }
 }
 
@@ -265,17 +285,11 @@ private fun SubscriptionSection(
                 onClick = onSync,
                 enabled = !isSyncing,
             ) {
-                Icon(
-                    Icons.Default.Refresh,
-                    contentDescription = null,
-                    modifier = Modifier.size(16.dp),
-                )
-                Spacer(modifier = Modifier.width(4.dp))
                 Text(stringResource(R.string.wikis_settings_action_sync))
             }
         },
     ) {
-        FieldRow(label = stringResource(R.string.wikis_settings_field_source)) {
+        IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_source)) {
             MochiTextButton(onClick = onOpenSource) {
                 Text(
                     text = source,
@@ -313,19 +327,11 @@ private fun HomePageSection(
                 modifier = Modifier.fillMaxWidth(),
             )
             Spacer(modifier = Modifier.height(8.dp))
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                MochiButton(
-                    onClick = { onSave(value) },
-                    enabled = hasChanges && !isSaving,
-                ) {
-                    if (isSaving) {
-                        CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
-                    } else {
-                        Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                    }
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.wikis_settings_home_save))
-                }
+            MochiButton(
+                onClick = { onSave(value) },
+                enabled = hasChanges && !isSaving,
+            ) {
+                Text(stringResource(MochiR.string.common_save))
             }
         }
     }

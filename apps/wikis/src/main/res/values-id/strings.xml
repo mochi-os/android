@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Gagal menyinkronkan wiki</string>
     <string name="wikis_settings_section_home">Halaman beranda</string>
     <string name="wikis_settings_field_home_label">Gunakan sebagai beranda</string>
-    <string name="wikis_settings_home_save">Simpan perubahan</string>
     <string name="wikis_settings_home_saved">Pengaturan disimpan</string>
     <string name="wikis_settings_home_save_failed">Gagal menyimpan pengaturan</string>
     <string name="wikis_settings_section_delete">Hapus wiki</string>

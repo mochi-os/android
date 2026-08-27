@@ -199,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Неуспешна синхронизација на wiki</string>
     <string name="wikis_settings_section_home">Почетна страница</string>
     <string name="wikis_settings_field_home_label">Користи како почетна</string>
-    <string name="wikis_settings_home_save">Зачувај промени</string>
     <string name="wikis_settings_home_saved">Поставките се зачувани</string>
     <string name="wikis_settings_home_save_failed">Неуспешно зачувување на поставки</string>
     <string name="wikis_settings_section_delete">Избриши вики</string>

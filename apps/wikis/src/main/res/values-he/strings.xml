@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">סנכרון הוויקי נכשל</string>
     <string name="wikis_settings_section_home">דף הבית</string>
     <string name="wikis_settings_field_home_label">השתמש כדף הבית</string>
-    <string name="wikis_settings_home_save">שמור שינויים</string>
     <string name="wikis_settings_home_saved">ההגדרות נשמרו</string>
     <string name="wikis_settings_home_save_failed">שמירת ההגדרות נכשלה</string>
     <string name="wikis_settings_section_delete">מחק wiki</string>

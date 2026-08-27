@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki sünkroonimine ebaõnnestus</string>
     <string name="wikis_settings_section_home">Avaleht</string>
     <string name="wikis_settings_field_home_label">Kasuta avalehena</string>
-    <string name="wikis_settings_home_save">Salvesta muudatused</string>
     <string name="wikis_settings_home_saved">Seaded salvestatud</string>
     <string name="wikis_settings_home_save_failed">Seadete salvestamine ebaõnnestus</string>
     <string name="wikis_settings_section_delete">Kustuta wiki</string>

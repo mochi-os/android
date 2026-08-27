@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ವಿಕಿ ಸಿಂಕ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="wikis_settings_section_home">ಮುಖಪುಟ</string>
     <string name="wikis_settings_field_home_label">ಹೋಮ್ ಆಗಿ ಬಳಸಿ</string>
-    <string name="wikis_settings_home_save">ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ</string>
     <string name="wikis_settings_home_saved">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="wikis_settings_home_save_failed">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="wikis_settings_section_delete">ವಿಕಿ ಅಳಿಸಿ</string>

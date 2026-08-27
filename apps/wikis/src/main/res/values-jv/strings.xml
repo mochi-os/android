@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Gagal nyinkronaké wiki</string>
     <string name="wikis_settings_section_home">Halaman ngarep</string>
     <string name="wikis_settings_field_home_label">Gunakaké minangka omah</string>
-    <string name="wikis_settings_home_save">Simpen owahan</string>
     <string name="wikis_settings_home_saved">Setelan disimpen</string>
     <string name="wikis_settings_home_save_failed">Gagal nyimpen setélan</string>
     <string name="wikis_settings_section_delete">Busak wiki</string>

@@ -270,7 +270,6 @@
     <string name="wikis_settings_sync_failed">同步 wiki 失敗</string>
     <string name="wikis_settings_section_home">主頁</string>
     <string name="wikis_settings_field_home_label">用作主頁</string>
-    <string name="wikis_settings_home_save">儲存變更</string>
     <string name="wikis_settings_home_saved">已儲存設定</string>
     <string name="wikis_settings_home_save_failed">儲存設定失敗</string>
     <string name="wikis_settings_section_delete">刪除 wiki</string>

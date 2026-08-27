@@ -200,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Tókst ekki að samstilla wiki</string>
     <string name="wikis_settings_section_home">Forsíða</string>
     <string name="wikis_settings_field_home_label">Nota sem heim</string>
-    <string name="wikis_settings_home_save">Vista breytingar</string>
     <string name="wikis_settings_home_saved">Stillingar vistaðar</string>
     <string name="wikis_settings_home_save_failed">Tókst ekki að vista stillingar</string>
     <string name="wikis_settings_section_delete">Eyða wiki</string>
