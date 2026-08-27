@@ -138,7 +138,6 @@
     <string name="people_person_accept">Hyväksy</string>
     <string name="people_person_decline">Hylkää</string>
 
-    <string name="people_friends_more">Lisää</string>
 
     <string name="notification_channel_people">Ihmiset-ilmoitukset</string>
     <string name="people_screen_friends_todo">Kaverit — TODO</string>

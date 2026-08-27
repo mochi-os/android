@@ -26,7 +26,6 @@ import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
@@ -104,7 +103,6 @@ fun FriendsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
-    var showOverflow by remember { mutableStateOf(false) }
     var showAbout by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
@@ -146,6 +144,14 @@ fun FriendsScreen(
         },
         actions = {
             DrawerActionRow(
+                title = stringResource(MochiR.string.common_logout),
+                icon = Icons.AutoMirrored.Outlined.Logout,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+            )
+            DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
                 icon = Icons.Outlined.Info,
                 onClick = {
@@ -174,27 +180,6 @@ fun FriendsScreen(
                                 Icons.Default.Notifications,
                                 contentDescription = stringResource(MochiR.string.common_notifications),
                             )
-                        }
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(R.string.people_friends_more),
-                                )
-                            }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = { showOverflow = false },
-                            ) {
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.common_logout)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        onLogout()
-                                    },
-                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                )
-                            }
                         }
                     },
                 )

@@ -138,7 +138,6 @@
     <string name="people_person_accept">Annehmen</string>
     <string name="people_person_decline">Ablehnen</string>
 
-    <string name="people_friends_more">Mehr</string>
 
     <string name="notification_channel_people">Personen-Benachrichtigungen</string>
     <string name="people_screen_friends_todo">Freunde — TODO</string>
