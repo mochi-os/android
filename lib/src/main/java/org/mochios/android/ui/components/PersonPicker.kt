@@ -6,8 +6,9 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,7 +20,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Check
@@ -31,6 +31,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -39,7 +40,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -128,72 +128,79 @@ fun PersonPicker(
     // heading.
     val showHeaders = memberMatches.isNotEmpty() && directoryMatches.isNotEmpty()
 
+    // A read-only field has no onClick, so the field's own press interaction
+    // opens the popup. Tapping it then feels like the enumerated pickers
+    // beside it — ripple and all — rather than like a transparent overlay.
+    val interactionSource = remember { MutableInteractionSource() }
+    LaunchedEffect(interactionSource) {
+        interactionSource.interactions.collect { interaction ->
+            if (interaction is PressInteraction.Release) {
+                query = ""
+                directory = emptyList()
+                expanded = true
+            }
+        }
+    }
+
     Box(modifier = modifier) {
-        Row(
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(min = 56.dp)
-                .clip(RoundedCornerShape(4.dp))
-                .border(
-                    width = 1.dp,
-                    color = MaterialTheme.colorScheme.outline,
-                    shape = RoundedCornerShape(4.dp)
-                )
-                .clickable {
-                    query = ""
-                    directory = emptyList()
-                    expanded = true
-                }
                 .onGloballyPositioned { coordinates ->
                     anchorWidth = coordinates.size.width
                     anchorBottom = coordinates.positionInWindow().y.toInt() +
                         coordinates.size.height
                 }
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically
         ) {
-            if (hasSelection) {
-                EntityAvatar(
-                    name = displayName.orEmpty(),
-                    src = personAvatarPath(selectedId),
-                    seed = selectedId,
-                    size = 28.dp
-                )
-                Spacer(modifier = Modifier.size(12.dp))
-            }
-            Text(
-                text = displayName ?: stringResource(R.string.person_picker_select),
-                style = MaterialTheme.typography.bodyLarge,
-                color = if (displayName != null) {
-                    MaterialTheme.colorScheme.onSurface
+            MochiTextField(
+                value = displayName.orEmpty(),
+                onValueChange = {},
+                readOnly = true,
+                singleLine = true,
+                placeholder = { Text(stringResource(R.string.person_picker_select)) },
+                leadingIcon = if (hasSelection) {
+                    {
+                        EntityAvatar(
+                            name = displayName.orEmpty(),
+                            src = personAvatarPath(selectedId),
+                            seed = selectedId,
+                            size = 24.dp
+                        )
+                    }
                 } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant
+                    null
                 },
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f)
+                // Clearing sits where the arrow would; an icon button in this
+                // slot takes its own taps, so it clears without also opening.
+                trailingIcon = if (hasSelection) {
+                    {
+                        MochiIconButton(
+                            onClick = {
+                                lastSelected = null
+                                onClear()
+                            },
+                            modifier = Modifier.size(24.dp)
+                        ) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription =
+                                    stringResource(R.string.person_picker_clear),
+                                modifier = Modifier.size(18.dp)
+                            )
+                        }
+                    }
+                } else {
+                    {
+                        Icon(
+                            Icons.Default.ArrowDropDown,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                },
+                interactionSource = interactionSource,
+                modifier = Modifier.fillMaxWidth()
             )
-            if (hasSelection) {
-                MochiIconButton(
-                    onClick = {
-                        lastSelected = null
-                        onClear()
-                    },
-                    modifier = Modifier.size(24.dp)
-                ) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(R.string.person_picker_clear),
-                        modifier = Modifier.size(18.dp)
-                    )
-                }
-            } else {
-                Icon(
-                    Icons.Default.ArrowDropDown,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
         }
 
         if (expanded) {
