@@ -6,22 +6,11 @@
 package org.mochios.feeds.ui.post
 
 import android.net.Uri
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
+import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.ComposeBarAttachments
-import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.feeds.R
 
 /**
@@ -51,32 +40,42 @@ internal fun feedsCommentAttachments(
 /**
  * The "replying to…" strip, for the composer's banner slot. Null when the
  * composer is not a reply, which is what the slot expects.
+ *
+ * @param replyingTo The comment being answered, resolved from the thread.
+ * @param onCancelReply Drops the reply and returns the composer to the post.
+ * @return The banner, or null when nothing is being replied to.
  */
 @Composable
 internal fun feedsReplyBanner(
-    replyingTo: String?,
+    replyingTo: Comment?,
     onCancelReply: () -> Unit,
-): (@Composable () -> Unit)? = replyingTo?.let {
+): (@Composable () -> Unit)? = replyingTo?.let { replied ->
     {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 8.dp, vertical = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(
-                text = stringResource(R.string.feeds_replying_to_comment),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.weight(1f),
-            )
-            MochiIconButton(onClick = onCancelReply, modifier = Modifier.size(24.dp)) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.feeds_cancel_reply),
-                    modifier = Modifier.size(16.dp),
-                )
-            }
-        }
+        ReplyComposerBanner(
+            label = stringResource(
+                R.string.feeds_replying_to_author,
+                replied.name.ifBlank { replied.authorId },
+            ),
+            preview = replied.markdownSource.ifBlank { replied.text },
+            cancelLabel = stringResource(R.string.feeds_cancel_reply),
+            onCancel = onCancelReply,
+        )
     }
+}
+
+/**
+ * The comment with this id, wherever it sits in the thread.
+ *
+ * @param comments The thread roots to search.
+ * @param id The comment being looked for, or null.
+ * @return The comment, or null when there is no id or it has gone.
+ */
+internal fun findComment(comments: List<Comment>, id: String?): Comment? {
+    if (id == null) return null
+    for (comment in comments) {
+        if (comment.id == id) return comment
+        val found = findComment(comment.children, id)
+        if (found != null) return found
+    }
+    return null
 }

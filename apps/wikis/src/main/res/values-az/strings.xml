@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Hələ şərh yoxdur</string>
     <string name="wikis_comments_empty_subtitle">Bu səhifəyə ilk şərh yazan siz olun.</string>
     <string name="wikis_comment_action_reply">Cavabla</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Redaktə et</string>
     <string name="wikis_comment_action_delete">Sil</string>
     <string name="wikis_comment_action_save">Saxla</string>

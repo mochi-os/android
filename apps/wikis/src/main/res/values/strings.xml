@@ -128,6 +128,8 @@
     <string name="wikis_comments_empty_title">No comments yet</string>
     <string name="wikis_comments_empty_subtitle">Be the first to comment on this page.</string>
     <string name="wikis_comment_action_reply">Reply</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Edit</string>
     <string name="wikis_comment_action_delete">Delete</string>
     <string name="wikis_comment_action_save">Save</string>

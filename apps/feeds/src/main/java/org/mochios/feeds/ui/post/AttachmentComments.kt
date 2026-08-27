@@ -130,7 +130,10 @@ internal fun AttachmentComments(
                 requireText = true,
                 onSearchMentions = { viewModel.searchMembers(it) },
                 windowInsets = ComposeBarDefaults.NoWindowInsets,
-                banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
+                banner = feedsReplyBanner(
+                    findComment(anchored, replyingTo),
+                    { viewModel.setReplyingTo(null) },
+                ),
             )
         }
     }

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Hanga ammaatti yaadni hin jiru</string>
     <string name="wikis_comments_empty_subtitle">Fuula kana irratti yaada kennuu kan jalqaba ta\'i.</string>
     <string name="wikis_comment_action_reply">Deebii</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Sirreessi</string>
     <string name="wikis_comment_action_delete">Haqi</string>
     <string name="wikis_comment_action_save">Olkaa\'i</string>

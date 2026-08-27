@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Inga kommentarer ännu</string>
     <string name="wikis_comments_empty_subtitle">Var först med att kommentera denna sida.</string>
     <string name="wikis_comment_action_reply">Svara</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Redigera</string>
     <string name="wikis_comment_action_delete">Ta bort</string>
     <string name="wikis_comment_action_save">Spara</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Комментариев пока нет</string>
     <string name="wikis_comments_empty_subtitle">Будьте первым, кто прокомментирует эту страницу.</string>
     <string name="wikis_comment_action_reply">Ответить</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Изменить</string>
     <string name="wikis_comment_action_delete">Удалить</string>
     <string name="wikis_comment_action_save">Сохранить</string>

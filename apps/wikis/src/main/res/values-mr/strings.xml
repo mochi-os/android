@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">अद्याप कमेंट्स नाहीत</string>
     <string name="wikis_comments_empty_subtitle">या पानावर पहिले टिप्पणी करणारे व्हा.</string>
     <string name="wikis_comment_action_reply">प्रत्युत्तर द्या</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">संपादित करा</string>
     <string name="wikis_comment_action_delete">हटवा</string>
     <string name="wikis_comment_action_save">जतन करा</string>

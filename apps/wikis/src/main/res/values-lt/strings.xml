@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Dar nėra komentarų</string>
     <string name="wikis_comments_empty_subtitle">Būkite pirmas, komentuojantis šį puslapį.</string>
     <string name="wikis_comment_action_reply">Atsakyti</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Redaguoti</string>
     <string name="wikis_comment_action_delete">Ištrinti</string>
     <string name="wikis_comment_action_save">Išsaugoti</string>

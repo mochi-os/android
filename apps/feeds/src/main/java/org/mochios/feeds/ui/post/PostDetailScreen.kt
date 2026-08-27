@@ -223,7 +223,10 @@ fun PostDetailScreen(
                     // A comment needs a body; attachments alone will not do.
                     requireText = true,
                     onSearchMentions = { viewModel.searchMembers(it) },
-                    banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
+                    banner = feedsReplyBanner(
+                        findComment(post?.comments.orEmpty(), replyingTo),
+                        { viewModel.setReplyingTo(null) },
+                    ),
                 )
             }
         }

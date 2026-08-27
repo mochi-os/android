@@ -60,6 +60,8 @@
     <string name="wikis_comments_empty_title">Nog geen reacties</string>
     <string name="wikis_comments_empty_subtitle">Wees de eerste die op deze pagina reageert.</string>
     <string name="wikis_comment_action_reply">Antwoord</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Bewerken</string>
     <string name="wikis_comment_action_delete">Verwijderen</string>
     <string name="wikis_comment_action_save">Opslaan</string>

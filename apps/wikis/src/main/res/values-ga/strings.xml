@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Níl aon trácht fós</string>
     <string name="wikis_comments_empty_subtitle">Bí ar an gcéad duine chun nóta tráchta a fhágáil ar an leathanach seo.</string>
     <string name="wikis_comment_action_reply">Freagair</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Cuir in eagar</string>
     <string name="wikis_comment_action_delete">Scrios</string>
     <string name="wikis_comment_action_save">Sábháil</string>

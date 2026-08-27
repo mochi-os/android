@@ -10,18 +10,22 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -32,6 +36,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -46,7 +51,9 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.wikis.R
+import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
 
@@ -193,29 +200,71 @@ private fun CommentsBody(
                             slug = state.pageTitle.ifBlank { comment.page },
                             currentUserId = state.currentUserId,
                             isOwner = isOwner,
-                            replyingTo = state.replyingTo,
-                            replyDraft = state.replyDraft,
                             onStartReply = onStartReply,
-                            onCancelReply = onCancelReply,
-                            onReplyDraftChange = onReplyDraftChange,
-                            onSubmitReply = onSubmitReply,
-                            resolveFileName = resolveFileName,
                             onEdit = onEdit,
                             onDelete = onDelete,
                         )
                     }
                 }
-        }
+            }
         }
 
         if (canCompose) {
-            CommentForm(
-                onSubmit = onCreate,
-                resolveFileName = resolveFileName,
-                windowInsets = ComposeBarDefaults.WindowInsets,
-            )
+            val replyingTo = state.replyingTo
+            val target = replyingTo?.let { id -> findComment(state.comments, id) }
+            key(replyingTo) {
+                CommentForm(
+                    onSubmit = { body, files ->
+                        if (replyingTo != null) {
+                            onSubmitReply(replyingTo, files)
+                        } else {
+                            onCreate(body, files)
+                        }
+                    },
+                    resolveFileName = resolveFileName,
+                    initialText = if (replyingTo != null) state.replyDraft else "",
+                    onTextChange = if (replyingTo != null) onReplyDraftChange else null,
+                    placeholder = stringResource(
+                        if (replyingTo != null) R.string.wikis_comment_form_placeholder_reply
+                        else R.string.wikis_comment_form_placeholder_new
+                    ),
+                    autoFocus = replyingTo != null,
+                    banner = target?.let { comment ->
+                        {
+                            ReplyComposerBanner(
+                                label = stringResource(
+                                    R.string.wikis_comment_replying_to,
+                                    comment.name.ifBlank { comment.author },
+                                ),
+                                preview = comment.bodyMarkdown.ifBlank { comment.body },
+                                cancelLabel = stringResource(
+                                    R.string.wikis_comment_clear_reply
+                                ),
+                                onCancel = onCancelReply,
+                            )
+                        }
+                    },
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                )
+            }
         }
     }
+}
+
+/**
+ * The comment with this id, wherever it sits in the thread.
+ *
+ * @param comments The thread roots to search.
+ * @param id The comment being looked for.
+ * @return The comment, or null when it is no longer in the thread.
+ */
+private fun findComment(comments: List<WikiComment>, id: String): WikiComment? {
+    for (comment in comments) {
+        if (comment.id == id) return comment
+        val found = findComment(comment.children, id)
+        if (found != null) return found
+    }
+    return null
 }
 
 @Composable

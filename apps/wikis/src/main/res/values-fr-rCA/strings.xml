@@ -115,6 +115,8 @@
     <string name="wikis_comments_empty_title">Aucun commentaire pour le moment</string>
     <string name="wikis_comments_empty_subtitle">Soyez le premier à commenter cette page.</string>
     <string name="wikis_comment_action_reply">Répondre</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_edited">(modifié)</string>
     <string name="wikis_comment_delete_confirm_title">Supprimer le commentaire</string>
     <string name="wikis_comment_delete_confirm_message">Voulez-vous vraiment supprimer ce commentaire? Toutes les réponses seront également supprimées. Cette action ne peut pas être annulée.</string>

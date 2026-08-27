@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">Vähem sellist</string>
     <string name="feeds_no_tags">Silte pole</string>
     <string name="feeds_anonymous">Anonüümne</string>
-    <string name="feeds_replying_to_comment">Vastab kommentaarile</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Lisa fail</string>
     <string name="feeds_tag_label">Sildi nimetus</string>
     <string name="feeds_select_feed">Vali voog</string>

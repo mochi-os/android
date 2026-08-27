@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">Bu tip daha az</string>
     <string name="feeds_no_tags">Etiket yoxdur</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_comment">Şərhə cavab verilir</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Fayl əlavə et</string>
     <string name="feeds_write_a_comment">Şərh yazın…</string>
     <string name="feeds_tag_label">Etiket adı</string>

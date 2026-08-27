@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Aún no hay comentarios</string>
     <string name="wikis_comments_empty_subtitle">Sé el primero en comentar esta página.</string>
     <string name="wikis_comment_action_reply">Responder</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Editar</string>
     <string name="wikis_comment_action_delete">Eliminar</string>
     <string name="wikis_comment_action_save">Guardar</string>

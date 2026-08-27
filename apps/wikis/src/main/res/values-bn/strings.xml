@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">এখনও কোনো মন্তব্য নেই</string>
     <string name="wikis_comments_empty_subtitle">এই পেজে প্রথম মন্তব্য করুন।</string>
     <string name="wikis_comment_action_reply">উত্তর দিন</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">সম্পাদনা</string>
     <string name="wikis_comment_action_delete">মুছুন</string>
     <string name="wikis_comment_action_save">সংরক্ষণ করুন</string>

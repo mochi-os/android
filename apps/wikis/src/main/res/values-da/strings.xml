@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Ingen kommentarer endnu</string>
     <string name="wikis_comments_empty_subtitle">Vær den første til at kommentere på denne side.</string>
     <string name="wikis_comment_action_reply">Svar</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Redigér</string>
     <string name="wikis_comment_action_delete">Slet</string>
     <string name="wikis_comment_action_save">Gem</string>

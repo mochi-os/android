@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">تر اوسه هیڅ تبصرې نشته</string>
     <string name="wikis_comments_empty_subtitle">په دې پاڼه لومړی تبصره وکړئ.</string>
     <string name="wikis_comment_action_reply">ځواب</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">سمول</string>
     <string name="wikis_comment_action_delete">ړنګ کړئ</string>
     <string name="wikis_comment_action_save">خوندي کول</string>

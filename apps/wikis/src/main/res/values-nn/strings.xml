@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">Ingen kommentarar enno</string>
     <string name="wikis_comments_empty_subtitle">Ver den fyrste til å kommentere denne sida.</string>
     <string name="wikis_comment_action_reply">Svar</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Rediger</string>
     <string name="wikis_comment_action_delete">Slett</string>
     <string name="wikis_comment_action_save">Lagre</string>

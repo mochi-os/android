@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Mindre av detta</string>
     <string name="feeds_no_tags">Inga taggar</string>
     <string name="feeds_anonymous">Anonym</string>
-    <string name="feeds_replying_to_comment">Svarar på kommentar</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Bifoga fil</string>
     <string name="feeds_tag_label">Taggetikett</string>
     <string name="feeds_file">Fil</string>

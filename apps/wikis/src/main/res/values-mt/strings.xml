@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">L-ebda kummenti s\'issa</string>
     <string name="wikis_comments_empty_subtitle">Kun l-ewwel li tikkummenta fuq din il-paġna.</string>
     <string name="wikis_comment_action_reply">Wieġeb</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Editja</string>
     <string name="wikis_comment_action_delete">Ħassar</string>
     <string name="wikis_comment_action_save">Issejvja</string>

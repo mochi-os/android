@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">Hakuna maoni bado</string>
     <string name="wikis_comments_empty_subtitle">Kuwa wa kwanza kutoa maoni kwenye ukurasa huu.</string>
     <string name="wikis_comment_action_reply">Jibu</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Hariri</string>
     <string name="wikis_comment_action_delete">Futa</string>
     <string name="wikis_comment_action_save">Hifadhi</string>

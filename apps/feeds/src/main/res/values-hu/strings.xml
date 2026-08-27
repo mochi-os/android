@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Kevesebb ilyet</string>
     <string name="feeds_no_tags">Nincsenek címkék</string>
     <string name="feeds_anonymous">Névtelen</string>
-    <string name="feeds_replying_to_comment">Válasz hozzászólásra</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Fájl csatolása</string>
     <string name="feeds_tag_label">Címke felirata</string>
     <string name="feeds_select_feed">Válasszon hírforrást</string>

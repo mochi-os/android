@@ -612,7 +612,10 @@ private fun PostSourceSheet(
                 // consume the inset itself - without it the keyboard covers
                 // the field completely.
                 windowInsets = ComposeBarDefaults.WindowInsets,
-                banner = feedsReplyBanner(replyingTo, onCancelReply),
+                banner = feedsReplyBanner(
+                    findComment(post?.comments.orEmpty(), replyingTo),
+                    onCancelReply,
+                ),
             )
         }
     }

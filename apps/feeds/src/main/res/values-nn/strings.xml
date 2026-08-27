@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Mindre som dette</string>
     <string name="feeds_no_tags">Ingen merkelappar</string>
     <string name="feeds_anonymous">Anonym</string>
-    <string name="feeds_replying_to_comment">Svarar på kommentar</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Legg ved fil</string>
     <string name="feeds_tag_label">Merkelapp</string>
     <string name="feeds_file">Fil</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Dim sylwadau eto</string>
     <string name="wikis_comments_empty_subtitle">Byddwch y cyntaf i sylwi ar y dudalen hon.</string>
     <string name="wikis_comment_action_reply">Ymateb</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Golygu</string>
     <string name="wikis_comment_action_delete">Dileu</string>
     <string name="wikis_comment_action_save">Cadw</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_comments_empty_subtitle">ഈ പേജിൽ ആദ്യം അഭിപ്രായം പറയുന്നയാളാകുക.</string>
     <string name="wikis_comment_action_reply">റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="wikis_comment_action_delete">ഇല്ലാതാക്കുക</string>
     <string name="wikis_comment_action_save">സേവ് ചെയ്യുക</string>

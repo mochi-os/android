@@ -6,33 +6,18 @@
 package org.mochios.projects.ui.`object`
 
 import android.net.Uri
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.automirrored.outlined.Reply
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -46,20 +31,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import java.io.File
 import org.mochios.android.R as MochiR
-import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.Comment
+import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
-import org.mochios.android.ui.components.FileKindPreview
+import org.mochios.android.ui.components.ComposeBar
+import org.mochios.android.ui.components.ComposeBarAttachments
+import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MentionSuggestion
-import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.rememberFileKind
+import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.projects.R
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun CommentsTab(
     comments: List<Comment>,
@@ -77,19 +62,8 @@ fun CommentsTab(
     val context = LocalContext.current
     var newComment by remember { mutableStateOf("") }
     var replyToId by remember { mutableStateOf<String?>(null) }
-    var replyToName by remember { mutableStateOf<String?>(null) }
     val pendingFiles = remember { mutableStateListOf<Uri>() }
     val defaultName = stringResource(R.string.projects_attachment_default_name)
-
-    val filePicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetMultipleContents()
-    ) { uris: List<Uri> ->
-        for (uri in uris) {
-            // Copies with the real display name + extension so the upload keeps a
-            // filename and MIME type the server can recognise (and preview) later.
-            pendingFiles.add(uri)
-        }
-    }
 
     Column(modifier = Modifier.fillMaxSize()) {
         // Comment list — takes the remaining height so the composer stays pinned
@@ -120,10 +94,7 @@ fun CommentsTab(
                         depth = 0,
                         projectId = projectId,
                         avatarUrlBuilder = avatarUrlBuilder,
-                        onReply = { id, name ->
-                            replyToId = id
-                            replyToName = name
-                        },
+                        onReply = { id, _ -> replyToId = id },
                         onEdit = onUpdateComment,
                         onDelete = onDeleteComment
                     )
@@ -131,107 +102,61 @@ fun CommentsTab(
             }
         }
 
-        HorizontalDivider()
-
-        // Comment input, pinned below the list
-        Column(modifier = Modifier.padding(16.dp)) {
-            if (replyToName != null) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = stringResource(R.string.projects_comment_replying_to, replyToName!!),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    MochiIconButton(
-                        onClick = {
-                            replyToId = null
-                            replyToName = null
-                        },
-                        modifier = Modifier.size(16.dp)
-                    ) {
-                        Text(
-                            "x",
-                            style = MaterialTheme.typography.labelSmall
-                        )
-                    }
-                }
-                Spacer(modifier = Modifier.height(4.dp))
-            }
-            if (pendingFiles.isNotEmpty()) {
-                FlowRow(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    pendingFiles.forEach { uri ->
-                        val label = rememberFileLabel(uri, resolveFileName, defaultName)
-                        AssistChip(
-                            onClick = { pendingFiles.remove(uri) },
-                            label = { Text(label) },
-                            leadingIcon = {
-                                FileKindPreview(
-                                    kind = rememberFileKind(uri, label),
-                                    model = uri,
-                                    modifier = Modifier.size(AssistChipDefaults.IconSize)
-                                )
-                            },
-                            trailingIcon = {
-                                Icon(
-                                    Icons.Default.Close,
-                                    contentDescription = stringResource(R.string.projects_comment_remove_attachment),
-                                    modifier = Modifier.size(AssistChipDefaults.IconSize)
-                                )
-                            }
-                        )
-                    }
-                }
-                Spacer(modifier = Modifier.height(4.dp))
-            }
-            // Attachments ride along with a comment rather than standing in for
-            // one, so text is what makes a comment sendable.
-            val canSend = newComment.isNotBlank()
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                MentionTextField(
-                    value = newComment,
-                    onValueChange = { value -> newComment = value },
-                    onSearch = onSearchUsers ?: { emptyList() },
-                    placeholder = { Text(stringResource(R.string.projects_comment_placeholder)) },
-                    maxLines = 4,
-                    modifier = Modifier.weight(1f)
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-                MochiIconButton(
-                    onClick = { filePicker.launch("*/*") }
-                ) {
-                    Icon(
-                        Icons.Default.AttachFile,
-                        contentDescription = stringResource(R.string.projects_comment_attach)
+        val replyTarget = replyToId?.let { id -> findComment(comments, id) }
+        ComposeBar(
+            value = newComment,
+            onValueChange = { value -> newComment = value },
+            onSend = {
+                onCreateComment(newComment, replyToId, pendingFiles.toList())
+                newComment = ""
+                replyToId = null
+                pendingFiles.clear()
+            },
+            placeholder = stringResource(R.string.projects_comment_placeholder),
+            sendLabel = stringResource(R.string.projects_comment_send),
+            requireText = true,
+            attachments = ComposeBarAttachments(
+                pending = pendingFiles.toList(),
+                onAdd = { uris -> pendingFiles.addAll(uris) },
+                onRemove = { uri -> pendingFiles.remove(uri) },
+                resolveFileName = resolveFileName,
+                addLabel = stringResource(R.string.projects_comment_attach),
+                fallbackLabel = defaultName,
+                removeLabel = stringResource(R.string.projects_comment_remove_attachment),
+            ),
+            onSearchMentions = onSearchUsers,
+            banner = replyTarget?.let { comment ->
+                {
+                    ReplyComposerBanner(
+                        label = stringResource(
+                            R.string.projects_comment_replying_to,
+                            comment.name.ifBlank { comment.authorId },
+                        ),
+                        preview = comment.markdownSource.ifBlank { comment.text },
+                        cancelLabel = stringResource(R.string.projects_comment_clear_reply),
+                        onCancel = { replyToId = null },
                     )
                 }
-                // Send appears only once there is something to send — an empty
-                // composer shows no button rather than a dead greyed-out one.
-                if (canSend) {
-                    MochiIconButton(
-                        onClick = {
-                            onCreateComment(newComment, replyToId, pendingFiles.toList())
-                            newComment = ""
-                            replyToId = null
-                            replyToName = null
-                            pendingFiles.clear()
-                        }
-                    ) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.Send,
-                            contentDescription = stringResource(R.string.projects_comment_send)
-                        )
-                    }
-                }
-            }
-        }
+            },
+            windowInsets = ComposeBarDefaults.NoWindowInsets,
+        )
     }
+}
+
+/**
+ * The comment with this id, wherever it sits in the thread.
+ *
+ * @param comments The thread roots to search.
+ * @param id The comment being looked for.
+ * @return The comment, or null when it is no longer in the thread.
+ */
+private fun findComment(comments: List<Comment>, id: String): Comment? {
+    for (comment in comments) {
+        if (comment.id == id) return comment
+        val found = findComment(comment.children, id)
+        if (found != null) return found
+    }
+    return null
 }
 
 @Composable
@@ -271,42 +196,14 @@ private fun CommentItem(
         },
         onCancelEdit = { isEditing = false }
     ) {
-        MochiIconButton(
-            onClick = { onReply(comment.id, comment.name) },
-            modifier = Modifier.size(32.dp)
-        ) {
-            Icon(
-                Icons.AutoMirrored.Outlined.Reply,
-                contentDescription = stringResource(MochiR.string.comment_reply),
-                modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        MochiIconButton(
-            onClick = {
+        CommentActions(
+            onReply = { onReply(comment.id, comment.name) },
+            onEdit = {
                 editText = comment.text
                 isEditing = true
             },
-            modifier = Modifier.size(32.dp)
-        ) {
-            Icon(
-                Icons.Outlined.Edit,
-                contentDescription = stringResource(MochiR.string.common_edit),
-                modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        MochiIconButton(
-            onClick = { onDelete(comment.id) },
-            modifier = Modifier.size(32.dp)
-        ) {
-            Icon(
-                Icons.Outlined.Delete,
-                contentDescription = stringResource(MochiR.string.common_delete),
-                modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
+            onDelete = { onDelete(comment.id) },
+        )
     }
 
     comment.children.forEach { child ->

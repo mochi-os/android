@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">هن جهڙا گهٽ</string>
     <string name="feeds_no_tags">ڪو ٽيگ ناهي</string>
     <string name="feeds_anonymous">گمنام</string>
-    <string name="feeds_replying_to_comment">تبصري جو جواب ڏيو</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">فائل لڳايو</string>
     <string name="feeds_tag_label">ٽيگ ليبل</string>
     <string name="feeds_file">فائل</string>

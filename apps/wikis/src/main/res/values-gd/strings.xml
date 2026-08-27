@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Chan eil beachdan ann fhathast</string>
     <string name="wikis_comments_empty_subtitle">Bi-sa a\' chiad neach a chuireas beachd air an duilleag seo.</string>
     <string name="wikis_comment_action_reply">Freagair</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Deasaich</string>
     <string name="wikis_comment_action_delete">Sguab às</string>
     <string name="wikis_comment_action_save">Sàbhail</string>

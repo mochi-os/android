@@ -115,6 +115,8 @@
     <string name="wikis_comments_empty_title">重未有留言</string>
     <string name="wikis_comments_empty_subtitle">做第一個喺呢個頁面留言嘅人。</string>
     <string name="wikis_comment_action_reply">回覆</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_edited">(已編輯)</string>
     <string name="wikis_comment_delete_confirm_title">刪除留言</string>
     <string name="wikis_comment_delete_confirm_message">你確定要刪除呢條留言?咁樣會連埋所有回覆一齊刪除。呢個動作無法復原。</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">ਅਜੇ ਕੋਈ ਟਿੱਪਣੀ ਨਹੀਂ</string>
     <string name="wikis_comments_empty_subtitle">ਇਸ ਪੰਨੇ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰਨ ਵਾਲੇ ਪਹਿਲੇ ਬਣੋ।</string>
     <string name="wikis_comment_action_reply">ਜਵਾਬ</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="wikis_comment_action_delete">ਮਿਟਾਓ</string>
     <string name="wikis_comment_action_save">ਸੰਭਾਲੋ</string>

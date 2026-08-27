@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Chưa có bình luận</string>
     <string name="wikis_comments_empty_subtitle">Hãy là người đầu tiên bình luận trên trang này.</string>
     <string name="wikis_comment_action_reply">Trả lời</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Sửa</string>
     <string name="wikis_comment_action_delete">Xóa</string>
     <string name="wikis_comment_action_save">Lưu</string>

@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Níos lú mar seo</string>
     <string name="feeds_no_tags">Gan chlibeanna</string>
     <string name="feeds_anonymous">Gan ainm</string>
-    <string name="feeds_replying_to_comment">Ag freagairt trácht</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Ceangail comhad</string>
     <string name="feeds_tag_label">Lipéad cliba</string>
     <string name="feeds_select_feed">Roghnaigh fotha</string>

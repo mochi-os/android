@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">Ende pa komente</string>
     <string name="wikis_comments_empty_subtitle">Bëhu i pari që komenton në këtë faqe.</string>
     <string name="wikis_comment_action_reply">Përgjigju</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Modifiko</string>
     <string name="wikis_comment_action_delete">Fshi</string>
     <string name="wikis_comment_action_save">Ruaj</string>

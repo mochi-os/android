@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">Пакуль няма каментароў</string>
     <string name="wikis_comments_empty_subtitle">Будзьце першым, хто пракаментаваў гэту старонку.</string>
     <string name="wikis_comment_action_reply">Адказаць</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Рэдагаваць</string>
     <string name="wikis_comment_action_delete">Выдаліць</string>
     <string name="wikis_comment_action_save">Захаваць</string>

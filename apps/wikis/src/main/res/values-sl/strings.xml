@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">Še ni komentarjev</string>
     <string name="wikis_comments_empty_subtitle">Bodite prvi, ki komentirate to stran.</string>
     <string name="wikis_comment_action_reply">Odgovori</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Uredi</string>
     <string name="wikis_comment_action_delete">Izbriši</string>
     <string name="wikis_comment_action_save">Shrani</string>

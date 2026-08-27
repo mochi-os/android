@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">கருத்துகள் இன்னும் இல்லை</string>
     <string name="wikis_comments_empty_subtitle">இந்த பக்கத்தில் முதலில் கருத்து தெரிவியுங்கள்.</string>
     <string name="wikis_comment_action_reply">பதில்</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">திருத்து</string>
     <string name="wikis_comment_action_delete">நீக்கு</string>
     <string name="wikis_comment_action_save">சேமி</string>

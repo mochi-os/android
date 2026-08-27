@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Heniz teswirler ýok</string>
     <string name="wikis_comments_empty_subtitle">Bu sahypa ilkinji teswir ýazyň.</string>
     <string name="wikis_comment_action_reply">Jogap</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Düzet</string>
     <string name="wikis_comment_action_delete">Pozmak</string>
     <string name="wikis_comment_action_save">Saklaýyş</string>

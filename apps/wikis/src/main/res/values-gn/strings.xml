@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Ndaipóri comentario gueteri</string>
     <string name="wikis_comments_empty_subtitle">Eñepyrũ rembojere ko kuatiagui.</string>
     <string name="wikis_comment_action_reply">Embohovái</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Embojuruja</string>
     <string name="wikis_comment_action_delete">Hundi</string>
     <string name="wikis_comment_action_save">Ñongatu</string>

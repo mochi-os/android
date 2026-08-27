@@ -42,6 +42,7 @@ fun CommentForm(
     // would just push it around. See ComposeBarDefaults.
     windowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
     showDivider: Boolean = true,
+    banner: (@Composable () -> Unit)? = null,
 ) {
     val focusRequester = remember { FocusRequester() }
 
@@ -89,6 +90,7 @@ fun CommentForm(
         focusRequester = focusRequester,
         windowInsets = windowInsets,
         showDivider = showDivider,
+        banner = banner,
         trailingContent = onCancel?.let {
             {
                 MochiTextButton(onClick = it) {

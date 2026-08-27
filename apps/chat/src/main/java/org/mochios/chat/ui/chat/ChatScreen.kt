@@ -8,8 +8,8 @@ package org.mochios.chat.ui.chat
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,10 +40,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
-import androidx.compose.material.icons.outlined.CheckBox
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.DoneAll
-import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -51,6 +47,10 @@ import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.CheckBox
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.DoneAll
+import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -90,14 +90,14 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.push.SystemNotifications
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
-import org.mochios.android.ui.components.MochiSearchTopBar
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
@@ -117,17 +117,18 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.router.CHAT_FEATURE
-import org.mochios.android.R as MochiR
 
 /**
  * Chat detail inside a [MochiListDrawer] holding the chat list; an empty
@@ -660,8 +661,12 @@ private fun ChatContent(
                 ),
                 banner = uiState.replyingTo?.let { replied ->
                     {
-                        ReplyComposerPreview(
-                            replied = replied,
+                        ReplyComposerBanner(
+                            label = stringResource(R.string.chat_replying_to, replied.name),
+                            preview = replied.body.ifBlank {
+                                stringResource(R.string.chat_reply_attachment)
+                            },
+                            cancelLabel = stringResource(MochiR.string.common_cancel),
                             onCancel = { viewModel.cancelReply() },
                         )
                     }
@@ -1104,49 +1109,6 @@ private fun SelectionBar(
                 contentDescription = stringResource(MochiR.string.common_delete),
                 tint = MaterialTheme.colorScheme.error,
             )
-        }
-    }
-}
-
-/**
- * Strip above the composer showing the message being replied to, with a button
- * to cancel the reply.
- */
-@Composable
-private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
-    val preview = replied.body.ifBlank { stringResource(R.string.chat_reply_attachment) }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surfaceVariant)
-            .padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            Icons.AutoMirrored.Filled.Reply,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.size(18.dp),
-        )
-        Spacer(Modifier.width(8.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = stringResource(R.string.chat_replying_to, replied.name),
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.primary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                text = preview,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        MochiIconButton(onClick = onCancel) {
-            Icon(Icons.Default.Close, contentDescription = null)
         }
     }
 }

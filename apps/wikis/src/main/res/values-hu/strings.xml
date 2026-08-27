@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Még nincsenek hozzászólások</string>
     <string name="wikis_comments_empty_subtitle">Legyen Ön az első, aki megjegyzést fűz az oldalhoz.</string>
     <string name="wikis_comment_action_reply">Válasz</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Szerkesztés</string>
     <string name="wikis_comment_action_delete">Törlés</string>
     <string name="wikis_comment_action_save">Mentés</string>

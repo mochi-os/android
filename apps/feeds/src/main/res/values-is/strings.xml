@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Minna af svona</string>
     <string name="feeds_no_tags">Engin merki</string>
     <string name="feeds_anonymous">Nafnlaust</string>
-    <string name="feeds_replying_to_comment">Svara athugasemd</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Hengja við skrá</string>
     <string name="feeds_tag_label">Merkimiði</string>
     <string name="feeds_file">Skrá</string>

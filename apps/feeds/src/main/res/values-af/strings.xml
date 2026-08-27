@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">Minder soos hierdie</string>
     <string name="feeds_no_tags">Geen etikette nie</string>
     <string name="feeds_anonymous">Anoniem</string>
-    <string name="feeds_replying_to_comment">Antwoord op kommentaar</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Heg lêer aan</string>
     <string name="feeds_write_a_comment">Skryf \'n kommentaar…</string>
     <string name="feeds_tag_label">Etiketnaam</string>

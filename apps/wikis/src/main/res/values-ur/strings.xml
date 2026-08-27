@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">ابھی تک کوئی تبصرے نہیں</string>
     <string name="wikis_comments_empty_subtitle">اس صفحے پر تبصرہ کرنے والے پہلے فرد بنیں۔</string>
     <string name="wikis_comment_action_reply">جواب</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">ترمیم</string>
     <string name="wikis_comment_action_delete">حذف کریں</string>
     <string name="wikis_comment_action_save">محفوظ کریں</string>

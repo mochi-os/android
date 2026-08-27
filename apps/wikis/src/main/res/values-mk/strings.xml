@@ -61,6 +61,8 @@
     <string name="wikis_comments_empty_title">Сè уште нема коментари</string>
     <string name="wikis_comments_empty_subtitle">Биди прв што ќе коментира на оваа страница.</string>
     <string name="wikis_comment_action_reply">Одговори</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Уреди</string>
     <string name="wikis_comment_action_delete">Избриши</string>
     <string name="wikis_comment_action_save">Зачувај</string>

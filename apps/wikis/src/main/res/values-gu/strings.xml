@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">હજુ સુધી કોઈ કૉમેન્ટ્સ નથી</string>
     <string name="wikis_comments_empty_subtitle">આ પૃષ્ઠ પર ટિપ્પણી કરનાર પ્રથમ બનો.</string>
     <string name="wikis_comment_action_reply">જવાબ આપો</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">સંપાદિત કરો</string>
     <string name="wikis_comment_action_delete">કાઢી નાખો</string>
     <string name="wikis_comment_action_save">સાચવો</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">Belum ada komentar</string>
     <string name="wikis_comments_empty_subtitle">Jadilah yang pertama berkomentar di halaman ini.</string>
     <string name="wikis_comment_action_reply">Balas</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Edit</string>
     <string name="wikis_comment_action_delete">Hapus</string>
     <string name="wikis_comment_action_save">Simpan</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">තවම අදහස් නැත</string>
     <string name="wikis_comments_empty_subtitle">මෙම පිටුවේ අදහස් දැක්වීමට පළමුවැන්නා වන්න.</string>
     <string name="wikis_comment_action_reply">පිළිතුර</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">සංස්කරණය කරන්න</string>
     <string name="wikis_comment_action_delete">මකන්න</string>
     <string name="wikis_comment_action_save">සුරකින්න</string>

@@ -62,6 +62,8 @@
     <string name="wikis_comments_empty_title">暂无评论</string>
     <string name="wikis_comments_empty_subtitle">成为第一个对该页面发表评论的人。</string>
     <string name="wikis_comment_action_reply">回复</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">编辑</string>
     <string name="wikis_comment_action_delete">删除</string>
     <string name="wikis_comment_action_save">保存</string>

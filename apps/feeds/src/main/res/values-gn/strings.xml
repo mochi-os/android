@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Sa\'ive kóicha</string>
     <string name="feeds_no_tags">Ndaipóri techaukaha</string>
     <string name="feeds_anonymous">Hérỹva</string>
-    <string name="feeds_replying_to_comment">Embohovái ñe\'ẽmbohováipe</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Emboja marandurenda</string>
     <string name="feeds_tag_label">Techaukaha réra</string>
     <string name="feeds_select_feed">Eiporavo peteĩ marandu</string>
