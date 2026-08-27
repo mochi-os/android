@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Deasaich an roinn-seòrsa</string>
     <string name="notifprefs_name_label">Ainm</string>
     <string name="notifprefs_destinations">Cinn-uidhe</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Brabhsair-lìn</string>
     <string name="notifprefs_test">Deuchainn</string>
     <string name="notifprefs_edit">Deasaich</string>
     <string name="notifprefs_delete">Sguab às</string>

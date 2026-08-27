@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Editează categoria</string>
     <string name="notifprefs_name_label">Nume</string>
     <string name="notifprefs_destinations">Destinații</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Browser web</string>
     <string name="notifprefs_test">Testează</string>
     <string name="notifprefs_edit">Editează</string>
     <string name="notifprefs_delete">Șterge</string>

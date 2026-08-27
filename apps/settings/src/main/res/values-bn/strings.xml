@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ক্যাটাগরি সম্পাদনা করুন</string>
     <string name="notifprefs_name_label">নাম</string>
     <string name="notifprefs_destinations">গন্তব্য</string>
-    <string name="notifprefs_dest_web">Mochi ওয়েব</string>
+    <string name="notifprefs_dest_web">ওয়েব ব্রাউজার</string>
     <string name="notifprefs_test">টেস্ট</string>
     <string name="notifprefs_edit">সম্পাদনা</string>
     <string name="notifprefs_delete">মুছুন</string>

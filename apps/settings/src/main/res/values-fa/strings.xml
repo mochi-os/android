@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ویرایش دسته</string>
     <string name="notifprefs_name_label">نام</string>
     <string name="notifprefs_destinations">مقصدها</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">مرورگر وب</string>
     <string name="notifprefs_test">آزمون</string>
     <string name="notifprefs_edit">ویرایش</string>
     <string name="notifprefs_delete">حذف</string>

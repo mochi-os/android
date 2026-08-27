@@ -68,7 +68,7 @@
     <string name="notifprefs_edit_category">Editar categoria</string>
     <string name="notifprefs_name_label">Nome</string>
     <string name="notifprefs_destinations">Destinos</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Navegador web</string>
     <string name="notifprefs_test">Testar</string>
     <string name="notifprefs_edit">Editar</string>
     <string name="notifprefs_delete">Excluir</string>

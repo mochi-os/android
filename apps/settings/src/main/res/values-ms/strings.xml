@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Edit kategori</string>
     <string name="notifprefs_name_label">Nama</string>
     <string name="notifprefs_destinations">Destinasi</string>
-    <string name="notifprefs_dest_web">Web Mochi</string>
+    <string name="notifprefs_dest_web">Pelayar web</string>
     <string name="notifprefs_test">Uji</string>
     <string name="notifprefs_edit">Edit</string>
     <string name="notifprefs_delete">Padam</string>

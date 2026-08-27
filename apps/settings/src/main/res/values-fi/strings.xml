@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Muokkaa kategoriaa</string>
     <string name="notifprefs_name_label">Nimi</string>
     <string name="notifprefs_destinations">Kohteet</string>
-    <string name="notifprefs_dest_web">Mochi-verkko</string>
+    <string name="notifprefs_dest_web">Verkkoselain</string>
     <string name="notifprefs_test">Testi</string>
     <string name="notifprefs_edit">Muokkaa</string>
     <string name="notifprefs_delete">Poista</string>

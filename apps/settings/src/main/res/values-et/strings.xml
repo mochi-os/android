@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Muuda kategooriat</string>
     <string name="notifprefs_name_label">Nimi</string>
     <string name="notifprefs_destinations">Sihtkohad</string>
-    <string name="notifprefs_dest_web">Mochi veeb</string>
+    <string name="notifprefs_dest_web">Veebibrauser</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Muuda</string>
     <string name="notifprefs_delete">Kustuta</string>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Санатты өңдеу</string>
     <string name="notifprefs_name_label">Аты</string>
     <string name="notifprefs_destinations">Бағыттар</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Веб-браузер</string>
     <string name="notifprefs_test">Тест</string>
     <string name="notifprefs_edit">Өңдеу</string>
     <string name="notifprefs_delete">Жою</string>

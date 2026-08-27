@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">კატეგორიის რედაქტირება</string>
     <string name="notifprefs_name_label">სახელი</string>
     <string name="notifprefs_destinations">დანიშნულებები</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">ვებ ბრაუზერი</string>
     <string name="notifprefs_test">ტესტი</string>
     <string name="notifprefs_edit">რედაქტირება</string>
     <string name="notifprefs_delete">წაშლა</string>

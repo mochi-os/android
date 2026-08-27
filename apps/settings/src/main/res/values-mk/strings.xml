@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Уреди категорија</string>
     <string name="notifprefs_name_label">Име</string>
     <string name="notifprefs_destinations">Дестинации</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Веб-прелистувач</string>
     <string name="notifprefs_test">Тест</string>
     <string name="notifprefs_edit">Уреди</string>
     <string name="notifprefs_delete">Избриши</string>

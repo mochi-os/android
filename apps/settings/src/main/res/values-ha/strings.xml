@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Gyara category</string>
     <string name="notifprefs_name_label">Suna</string>
     <string name="notifprefs_destinations">Wuraren da za a je</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">Gwaji</string>
     <string name="notifprefs_edit">Gyara</string>
     <string name="notifprefs_delete">Goge</string>

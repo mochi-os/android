@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">แก้ไขหมวดหมู่</string>
     <string name="notifprefs_name_label">ชื่อ</string>
     <string name="notifprefs_destinations">ปลายทาง</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">เว็บเบราว์เซอร์</string>
     <string name="notifprefs_test">ทดสอบ</string>
     <string name="notifprefs_edit">แก้ไข</string>
     <string name="notifprefs_delete">ลบ</string>

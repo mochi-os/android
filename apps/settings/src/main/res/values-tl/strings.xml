@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">I-edit ang category</string>
     <string name="notifprefs_name_label">Pangalan</string>
     <string name="notifprefs_destinations">Mga destinasyon</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">I-edit</string>
     <string name="notifprefs_delete">I-delete</string>

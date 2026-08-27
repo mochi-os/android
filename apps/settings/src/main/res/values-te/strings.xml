@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">విభాగాన్ని సవరించండి</string>
     <string name="notifprefs_name_label">పేరు</string>
     <string name="notifprefs_destinations">గమ్యస్థానాలు</string>
-    <string name="notifprefs_dest_web">Mochi వెబ్</string>
+    <string name="notifprefs_dest_web">వెబ్ బ్రౌజర్</string>
     <string name="notifprefs_test">టెస్ట్</string>
     <string name="notifprefs_edit">సవరించండి</string>
     <string name="notifprefs_delete">తొలగించండి</string>

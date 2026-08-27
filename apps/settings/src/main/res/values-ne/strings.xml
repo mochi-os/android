@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">वर्ग सम्पादन गर्नुहोस्</string>
     <string name="notifprefs_name_label">नाम</string>
     <string name="notifprefs_destinations">गन्तव्यहरू</string>
-    <string name="notifprefs_dest_web">Mochi वेब</string>
+    <string name="notifprefs_dest_web">वेब ब्राउजर</string>
     <string name="notifprefs_test">परीक्षण</string>
     <string name="notifprefs_edit">सम्पादन</string>
     <string name="notifprefs_delete">मेटाउनुहोस्</string>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Rediger kategori</string>
     <string name="notifprefs_name_label">Navn</string>
     <string name="notifprefs_destinations">Destinasjoner</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Nettleser</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Rediger</string>
     <string name="notifprefs_delete">Slett</string>

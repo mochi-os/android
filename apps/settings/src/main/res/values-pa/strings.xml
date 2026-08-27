@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ਸ਼੍ਰੇਣੀ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="notifprefs_name_label">ਨਾਮ</string>
     <string name="notifprefs_destinations">ਮੰਜ਼ਿਲਾਂ</string>
-    <string name="notifprefs_dest_web">Mochi ਵੈੱਬ</string>
+    <string name="notifprefs_dest_web">ਵੈੱਬ ਬ੍ਰਾਊਜ਼ਰ</string>
     <string name="notifprefs_test">ਟੈਸਟ</string>
     <string name="notifprefs_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="notifprefs_delete">ਮਿਟਾਓ</string>

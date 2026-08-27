@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Categoríata hukchay</string>
     <string name="notifprefs_name_label">Sutin</string>
     <string name="notifprefs_destinations">Chayanakuna</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">Pruebay</string>
     <string name="notifprefs_edit">Hukchay</string>
     <string name="notifprefs_delete">Wischuy</string>

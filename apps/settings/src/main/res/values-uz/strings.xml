@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Toifani tahrirlash</string>
     <string name="notifprefs_name_label">Nomi</string>
     <string name="notifprefs_destinations">Manzillar</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Veb-brauzer</string>
     <string name="notifprefs_test">Sinov</string>
     <string name="notifprefs_edit">Tahrirlash</string>
     <string name="notifprefs_delete">Oʻchirish</string>

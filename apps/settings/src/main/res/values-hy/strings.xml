@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Խմբագրել կատեգորիան</string>
     <string name="notifprefs_name_label">Անուն</string>
     <string name="notifprefs_destinations">Նպատակակետեր</string>
-    <string name="notifprefs_dest_web">Mochi վեբ</string>
+    <string name="notifprefs_dest_web">Վեբ բրաուզեր</string>
     <string name="notifprefs_test">Թեստ</string>
     <string name="notifprefs_edit">Խմբագրել</string>
     <string name="notifprefs_delete">Ջնջել</string>

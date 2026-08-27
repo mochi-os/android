@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Rediģēt kategoriju</string>
     <string name="notifprefs_name_label">Nosaukums</string>
     <string name="notifprefs_destinations">Mērķi</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Tīmekļa pārlūks</string>
     <string name="notifprefs_test">Tests</string>
     <string name="notifprefs_edit">Rediģēt</string>
     <string name="notifprefs_delete">Dzēst</string>

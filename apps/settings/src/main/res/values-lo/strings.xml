@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ແກ້ໄຂໝວດໝູ່</string>
     <string name="notifprefs_name_label">ຊື່</string>
     <string name="notifprefs_destinations">ປາຍທາງ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">ຕົວທ່ອງເວັບ</string>
     <string name="notifprefs_test">ທົດສອບ</string>
     <string name="notifprefs_edit">ແກ້ໄຂ</string>
     <string name="notifprefs_delete">ລົບ</string>

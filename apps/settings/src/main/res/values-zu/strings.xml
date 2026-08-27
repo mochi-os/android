@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Hlela isigaba</string>
     <string name="notifprefs_name_label">Igama</string>
     <string name="notifprefs_destinations">Izindawo eziyiphokophelo</string>
-    <string name="notifprefs_dest_web">Iwebhu ye-Mochi</string>
+    <string name="notifprefs_dest_web">Ibhrawuza ye-web</string>
     <string name="notifprefs_test">Hlola</string>
     <string name="notifprefs_edit">Hlela</string>
     <string name="notifprefs_delete">Susa</string>

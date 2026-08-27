@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ವರ್ಗ ಸಂಪಾದಿಸಿ</string>
     <string name="notifprefs_name_label">ಹೆಸರು</string>
     <string name="notifprefs_destinations">ಗಮ್ಯಸ್ಥಾನಗಳು</string>
-    <string name="notifprefs_dest_web">Mochi ವೆಬ್</string>
+    <string name="notifprefs_dest_web">ವೆಬ್ ಬ್ರೌಸರ್</string>
     <string name="notifprefs_test">ಪರೀಕ್ಷೆ</string>
     <string name="notifprefs_edit">ಸಂಪಾದಿಸಿ</string>
     <string name="notifprefs_delete">ಅಳಿಸಿ</string>

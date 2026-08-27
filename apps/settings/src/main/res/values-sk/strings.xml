@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Upraviť kategóriu</string>
     <string name="notifprefs_name_label">Názov</string>
     <string name="notifprefs_destinations">Ciele</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Webový prehliadač</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Upraviť</string>
     <string name="notifprefs_delete">Odstrániť</string>

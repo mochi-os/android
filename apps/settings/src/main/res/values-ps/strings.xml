@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">د کټګورۍ سمول</string>
     <string name="notifprefs_name_label">نوم</string>
     <string name="notifprefs_destinations">منزلونه</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">ویب براوزر</string>
     <string name="notifprefs_test">ازموینه</string>
     <string name="notifprefs_edit">سمول</string>
     <string name="notifprefs_delete">ړنګ کړئ</string>

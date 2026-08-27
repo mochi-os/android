@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">വിഭാഗം എഡിറ്റ് ചെയ്യുക</string>
     <string name="notifprefs_name_label">പേര്</string>
     <string name="notifprefs_destinations">ലക്ഷ്യസ്ഥാനങ്ങൾ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">വെബ് ബ്രൗസർ</string>
     <string name="notifprefs_test">ടെസ്റ്റ്</string>
     <string name="notifprefs_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="notifprefs_delete">ഇല്ലാതാക്കുക</string>

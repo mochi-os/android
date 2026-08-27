@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Uredi kategorijo</string>
     <string name="notifprefs_name_label">Ime</string>
     <string name="notifprefs_destinations">Cilji</string>
-    <string name="notifprefs_dest_web">Mochi splet</string>
+    <string name="notifprefs_dest_web">Spletni brskalnik</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Uredi</string>
     <string name="notifprefs_delete">Izbriši</string>

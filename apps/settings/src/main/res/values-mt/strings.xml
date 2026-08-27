@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Editja l-kategorija</string>
     <string name="notifprefs_name_label">Isem</string>
     <string name="notifprefs_destinations">Destinazzjonijiet</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Browser tal-web</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Editja</string>
     <string name="notifprefs_delete">Ħassar</string>

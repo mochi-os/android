@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">வகையைத் திருத்து</string>
     <string name="notifprefs_name_label">பெயர்</string>
     <string name="notifprefs_destinations">இலக்குகள்</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">வலை உலாவி</string>
     <string name="notifprefs_test">சோதனை</string>
     <string name="notifprefs_edit">திருத்து</string>
     <string name="notifprefs_delete">நீக்கு</string>

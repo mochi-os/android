@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Ангилал засах</string>
     <string name="notifprefs_name_label">Нэр</string>
     <string name="notifprefs_destinations">Хүргэх газрууд</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Веб хөтөч</string>
     <string name="notifprefs_test">Тест</string>
     <string name="notifprefs_edit">Засах</string>
     <string name="notifprefs_delete">Устгах</string>

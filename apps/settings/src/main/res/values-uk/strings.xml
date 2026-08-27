@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Редагувати категорію</string>
     <string name="notifprefs_name_label">Ім\'я</string>
     <string name="notifprefs_destinations">Призначення</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Веббраузер</string>
     <string name="notifprefs_test">Тест</string>
     <string name="notifprefs_edit">Редагувати</string>
     <string name="notifprefs_delete">Видалити</string>

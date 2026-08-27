@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">카테고리 편집</string>
     <string name="notifprefs_name_label">이름</string>
     <string name="notifprefs_destinations">목적지</string>
-    <string name="notifprefs_dest_web">Mochi 웹</string>
+    <string name="notifprefs_dest_web">웹 브라우저</string>
     <string name="notifprefs_test">테스트</string>
     <string name="notifprefs_edit">편집</string>
     <string name="notifprefs_delete">삭제</string>

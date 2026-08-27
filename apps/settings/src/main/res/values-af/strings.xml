@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Wysig kategorie</string>
     <string name="notifprefs_name_label">Naam</string>
     <string name="notifprefs_destinations">Bestemmings</string>
-    <string name="notifprefs_dest_web">Mochi-web</string>
+    <string name="notifprefs_dest_web">Webblaaier</string>
     <string name="notifprefs_test">Toets</string>
     <string name="notifprefs_edit">Wysig</string>
     <string name="notifprefs_delete">Verwyder</string>

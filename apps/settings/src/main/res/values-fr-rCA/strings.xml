@@ -130,7 +130,7 @@
     <string name="notifprefs_new_category">Nouvelle catégorie</string>
     <string name="notifprefs_edit_category">Modifier la catégorie</string>
     <string name="notifprefs_destinations">Destinations</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Navigateur web</string>
     <string name="notifprefs_test">Tester</string>
     <string name="notifprefs_delete_title">Supprimer \"%1$s\"?</string>
     <string name="notifprefs_reassign_label">Modifier les notifications actuelles vers</string>

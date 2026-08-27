@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kateqoriyanı redaktə et</string>
     <string name="notifprefs_name_label">Ad</string>
     <string name="notifprefs_destinations">Təyinatlar</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Veb-brauzer</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Redaktə et</string>
     <string name="notifprefs_delete">Sil</string>

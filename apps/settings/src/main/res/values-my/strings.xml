@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">အမျိုးအစား တည်းဖြတ်</string>
     <string name="notifprefs_name_label">အမည်</string>
     <string name="notifprefs_destinations">ပစ်မှတ်များ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">စမ်းသပ်မည်</string>
     <string name="notifprefs_edit">တည်းဖြတ်</string>
     <string name="notifprefs_delete">ဖျက်မည်</string>

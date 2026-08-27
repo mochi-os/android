@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kategoriýany düzet</string>
     <string name="notifprefs_name_label">At</string>
     <string name="notifprefs_destinations">Maksatlar</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web brauzer</string>
     <string name="notifprefs_test">Synag</string>
     <string name="notifprefs_edit">Düzet</string>
     <string name="notifprefs_delete">Pozmak</string>

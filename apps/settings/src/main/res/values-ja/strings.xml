@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">カテゴリを編集</string>
     <string name="notifprefs_name_label">名前</string>
     <string name="notifprefs_destinations">宛先</string>
-    <string name="notifprefs_dest_web">Mochiウェブ</string>
+    <string name="notifprefs_dest_web">ウェブブラウザ</string>
     <string name="notifprefs_test">テスト</string>
     <string name="notifprefs_edit">編集</string>
     <string name="notifprefs_delete">削除</string>

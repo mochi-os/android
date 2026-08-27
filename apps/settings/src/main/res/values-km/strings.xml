@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">កែសម្រួលប្រភេទ</string>
     <string name="notifprefs_name_label">ឈ្មោះ</string>
     <string name="notifprefs_destinations">គោលដៅ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">កម្មវិធីរុករកគេហទំព័រ</string>
     <string name="notifprefs_test">សាកល្បង</string>
     <string name="notifprefs_edit">កែសម្រួល</string>
     <string name="notifprefs_delete">លុប</string>
