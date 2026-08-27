@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Ukuhlola kuhlulekile</string>
     <string name="accounts_test_sent">Ukuhlolwa kuthunyelwe</string>
     <string name="account_oauth_link_failed">Akukwazanga ukuxhuma i-akhawunti</string>
+    <string name="notifprefs_dest_app">Ku-app</string>
+    <string name="notifprefs_dest_push">Ukuphusha</string>
+    <string name="notifprefs_dest_device">Idivayisi</string>
 </resources>

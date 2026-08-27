@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">테스트에 실패했어요</string>
     <string name="accounts_test_sent">테스트를 보냈습니다</string>
     <string name="account_oauth_link_failed">계정을 연결할 수 없었어요</string>
+    <string name="notifprefs_dest_app">앱 내</string>
+    <string name="notifprefs_dest_push">푸시</string>
+    <string name="notifprefs_dest_device">기기</string>
 </resources>

@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Ehecha ndoiporãi</string>
     <string name="accounts_test_sent">Ojehepyme\'ẽma jehecha</string>
     <string name="account_oauth_link_failed">Ndaikatúi embojuaju tetãygua</string>
+    <string name="notifprefs_dest_app">Aplicación-pe</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Mba\'e</string>
 </resources>

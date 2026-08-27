@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Тестот не успеа</string>
     <string name="accounts_test_sent">Тестот е испратен</string>
     <string name="account_oauth_link_failed">Сметката не можеше да се поврзе</string>
+    <string name="notifprefs_dest_app">Во апликацијата</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Уред</string>
 </resources>

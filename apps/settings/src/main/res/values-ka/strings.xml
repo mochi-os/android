@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">ტესტი ვერ შესრულდა</string>
     <string name="accounts_test_sent">ტესტი გაიგზავნა</string>
     <string name="account_oauth_link_failed">ანგარიშის დაკავშირება ვერ მოხერხდა</string>
+    <string name="notifprefs_dest_app">აპლიკაციაში</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">მოწყობილობა</string>
 </resources>

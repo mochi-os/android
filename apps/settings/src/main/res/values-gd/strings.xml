@@ -390,4 +390,7 @@
     <string name="accounts_test_failed">Dh\'fhàillig an deuchainn</string>
     <string name="accounts_test_sent">Chaidh an deuchainn a chur</string>
     <string name="account_oauth_link_failed">Cha b\' urrainn an cunntas a cheangal</string>
+    <string name="notifprefs_dest_app">San aplacaid</string>
+    <string name="notifprefs_dest_push">Putadh</string>
+    <string name="notifprefs_dest_device">Inneal</string>
 </resources>

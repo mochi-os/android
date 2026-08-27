@@ -384,4 +384,7 @@
     <string name="accounts_test_failed">ການທົດສອບລົ້ມເຫຼວ</string>
     <string name="accounts_test_sent">ສົ່ງການທົດສອບແລ້ວ</string>
     <string name="account_oauth_link_failed">ບໍ່ສາມາດເຊື່ອມຕໍ່ບັນຊີໄດ້</string>
+    <string name="notifprefs_dest_app">ໃນແອັບ</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">ອຸປະກອນ</string>
 </resources>

@@ -390,4 +390,7 @@
     <string name="accounts_test_failed">הבדיקה נכשלה</string>
     <string name="accounts_test_sent">הבדיקה נשלחה</string>
     <string name="account_oauth_link_failed">לא ניתן היה לקשר חשבון</string>
+    <string name="notifprefs_dest_app">באפליקציה</string>
+    <string name="notifprefs_dest_push">פוש</string>
+    <string name="notifprefs_dest_device">מכשיר</string>
 </resources>

@@ -390,4 +390,7 @@
     <string name="accounts_test_failed">Test nie powiódł się</string>
     <string name="accounts_test_sent">Test wysłany</string>
     <string name="account_oauth_link_failed">Nie można połączyć konta</string>
+    <string name="notifprefs_dest_app">W aplikacji</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Urządzenie</string>
 </resources>

@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">टेस्ट अयशस्वी</string>
     <string name="accounts_test_sent">चाचणी पाठवली</string>
     <string name="account_oauth_link_failed">खाते लिंक करता आले नाही</string>
+    <string name="notifprefs_dest_app">ॲपमध्ये</string>
+    <string name="notifprefs_dest_push">पुश</string>
+    <string name="notifprefs_dest_device">डिव्हाइस</string>
 </resources>

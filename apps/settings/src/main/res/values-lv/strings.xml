@@ -388,4 +388,7 @@
     <string name="accounts_test_failed">Tests neizdevās</string>
     <string name="accounts_test_sent">Tests nosūtīts</string>
     <string name="account_oauth_link_failed">Nevarēja saistīt kontu</string>
+    <string name="notifprefs_dest_app">Lietotnē</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Ierīce</string>
 </resources>

@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Тест ишке ашкан жок</string>
     <string name="accounts_test_sent">Сыноо жөнөтүлдү</string>
     <string name="account_oauth_link_failed">Аккаунтту байланыштыруу мүмкүн болбоду</string>
+    <string name="notifprefs_dest_app">Колдонмодо</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Түзмөк</string>
 </resources>

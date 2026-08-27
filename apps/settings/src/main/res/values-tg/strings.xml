@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Санҷиш ноком шуд</string>
     <string name="accounts_test_sent">Санҷиш фиристода шуд</string>
     <string name="account_oauth_link_failed">Ҳисобро пайваст карда натавонист</string>
+    <string name="notifprefs_dest_app">Дар барнома</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Дастгоҳ</string>
 </resources>

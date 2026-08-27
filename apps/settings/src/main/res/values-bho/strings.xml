@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">परीक्षण विफल</string>
     <string name="accounts_test_sent">टेस्ट भेजल गइल</string>
     <string name="account_oauth_link_failed">खाता ना जुड़ सकल</string>
+    <string name="notifprefs_dest_app">ऐप में</string>
+    <string name="notifprefs_dest_push">पुश</string>
+    <string name="notifprefs_dest_device">उपकरण</string>
 </resources>

@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">சோதனை தோல்வியடைந்தது</string>
     <string name="accounts_test_sent">சோதனை அனுப்பப்பட்டது</string>
     <string name="account_oauth_link_failed">கணக்கை இணைக்க முடியவில்லை</string>
+    <string name="notifprefs_dest_app">செயலியில்</string>
+    <string name="notifprefs_dest_push">புஷ்</string>
+    <string name="notifprefs_dest_device">சாதனம்</string>
 </resources>

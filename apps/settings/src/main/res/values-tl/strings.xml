@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Nabigo ang test</string>
     <string name="accounts_test_sent">Naipadala ang pagsubok</string>
     <string name="account_oauth_link_failed">Hindi na-link ang account</string>
+    <string name="notifprefs_dest_app">Sa app</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Device</string>
 </resources>

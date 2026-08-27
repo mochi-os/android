@@ -388,4 +388,7 @@
     <string name="accounts_test_failed">Test mislukkast</string>
     <string name="accounts_test_sent">Test sendt</string>
     <string name="account_oauth_link_failed">Kunne ikkje kople til konto</string>
+    <string name="notifprefs_dest_app">I appen</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Eining</string>
 </resources>

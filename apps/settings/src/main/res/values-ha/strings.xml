@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Gwaji ya gaza</string>
     <string name="accounts_test_sent">An aika gwaji</string>
     <string name="account_oauth_link_failed">Ba a iya haɗa asusu ba</string>
+    <string name="notifprefs_dest_app">A cikin manhaja</string>
+    <string name="notifprefs_dest_push">Tura</string>
+    <string name="notifprefs_dest_device">Na\'ura</string>
 </resources>

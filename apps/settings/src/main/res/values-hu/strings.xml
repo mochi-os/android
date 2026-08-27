@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">A teszt sikertelen</string>
     <string name="accounts_test_sent">Teszt elküldve</string>
     <string name="account_oauth_link_failed">A fiók összekapcsolása sikertelen</string>
+    <string name="notifprefs_dest_app">Az alkalmazásban</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Eszköz</string>
 </resources>

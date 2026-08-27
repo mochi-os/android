@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Ìdánwò kùnà</string>
     <string name="accounts_test_sent">A ti fi ìdánwò ránṣẹ́</string>
     <string name="account_oauth_link_failed">Kò lè so àkáǹtì pọ̀</string>
+    <string name="notifprefs_dest_app">Nínú àpù</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Ẹ̀rọ</string>
 </resources>

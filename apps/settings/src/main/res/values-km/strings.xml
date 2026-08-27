@@ -384,4 +384,7 @@
     <string name="accounts_test_failed">ការសាកល្បងបរាជ័យ</string>
     <string name="accounts_test_sent">បានផ្ញើការសាកល្បង</string>
     <string name="account_oauth_link_failed">មិនអាចភ្ជាប់គណនី</string>
+    <string name="notifprefs_dest_app">ក្នុងកម្មវិធី</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">ឧបករណ៍</string>
 </resources>

@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">ሙከራ አልተሳካም</string>
     <string name="accounts_test_sent">ሙከራ ተልኳል</string>
     <string name="account_oauth_link_failed">መለያ ሊገናኝ አልቻለም</string>
+    <string name="notifprefs_dest_app">በመተግበሪያ ውስጥ</string>
+    <string name="notifprefs_dest_push">ግፊት</string>
+    <string name="notifprefs_dest_device">መሳሪያ</string>
 </resources>

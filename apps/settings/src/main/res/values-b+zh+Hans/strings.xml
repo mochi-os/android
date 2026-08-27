@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">测试失败</string>
     <string name="accounts_test_sent">测试已发送</string>
     <string name="account_oauth_link_failed">无法关联账户</string>
+    <string name="notifprefs_dest_app">应用内</string>
+    <string name="notifprefs_dest_push">推送</string>
+    <string name="notifprefs_dest_device">设备</string>
 </resources>

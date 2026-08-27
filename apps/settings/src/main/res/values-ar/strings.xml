@@ -394,4 +394,7 @@
     <string name="accounts_test_failed">فشل الاختبار</string>
     <string name="accounts_test_sent">تم إرسال الاختبار</string>
     <string name="account_oauth_link_failed">تعذّر ربط الحساب</string>
+    <string name="notifprefs_dest_app">داخل التطبيق</string>
+    <string name="notifprefs_dest_push">دفع</string>
+    <string name="notifprefs_dest_device">جهاز</string>
 </resources>

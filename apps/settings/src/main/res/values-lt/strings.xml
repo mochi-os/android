@@ -390,4 +390,7 @@
     <string name="accounts_test_failed">Bandymas nepavyko</string>
     <string name="accounts_test_sent">Bandymas išsiųstas</string>
     <string name="account_oauth_link_failed">Nepavyko susieti paskyros</string>
+    <string name="notifprefs_dest_app">Programėlėje</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Įrenginys</string>
 </resources>

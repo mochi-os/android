@@ -178,6 +178,9 @@
     <string name="notifprefs_name_label">Name</string>
     <string name="notifprefs_destinations">Destinations</string>
     <string name="notifprefs_dest_web">Web browser</string>
+    <string name="notifprefs_dest_app">In app</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Device</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Edit</string>
     <string name="notifprefs_delete">Delete</string>

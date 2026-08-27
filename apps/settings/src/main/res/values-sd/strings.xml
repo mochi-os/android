@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">ٽيسٽ ناڪام ٿيو</string>
     <string name="accounts_test_sent">ٽيسٽ موڪلي وئي</string>
     <string name="account_oauth_link_failed">اڪائونٽ ڳنڍي نه سگهيو</string>
+    <string name="notifprefs_dest_app">ايپ ۾</string>
+    <string name="notifprefs_dest_push">پش</string>
+    <string name="notifprefs_dest_device">ڊوائيس</string>
 </resources>

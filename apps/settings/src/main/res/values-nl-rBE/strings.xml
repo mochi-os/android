@@ -380,4 +380,7 @@
     <string name="accounts_verify_sent">Verificatiecode verzonden</string>
     <string name="accounts_test_failed">Test mislukt</string>
     <string name="account_oauth_link_failed">Kon account niet koppelen</string>
+    <string name="notifprefs_dest_app">In de app</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Apparaat</string>
 </resources>

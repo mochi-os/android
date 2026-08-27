@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Yant\'awix jan walt\'awiyat</string>
     <string name="accounts_test_sent">Yant\'awi apayata</string>
     <string name="account_oauth_link_failed">Janiw cuenta chinjañ atkiti</string>
+    <string name="notifprefs_dest_app">Aplicación manqhana</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Dispositivo</string>
 </resources>

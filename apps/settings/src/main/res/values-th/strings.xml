@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">ทดสอบไม่สำเร็จ</string>
     <string name="accounts_test_sent">ส่งการทดสอบแล้ว</string>
     <string name="account_oauth_link_failed">ไม่สามารถเชื่อมโยงบัญชีได้</string>
+    <string name="notifprefs_dest_app">ในแอป</string>
+    <string name="notifprefs_dest_push">พุช</string>
+    <string name="notifprefs_dest_device">อุปกรณ์</string>
 </resources>

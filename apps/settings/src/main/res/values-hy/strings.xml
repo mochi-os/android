@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Թեստը ձախողվեց</string>
     <string name="accounts_test_sent">Փորձնական հաղորդագրությունն ուղարկվեց</string>
     <string name="account_oauth_link_failed">Չհաջողվեց բեռնել այս փաստաթուղթը։ Խնդրում ենք փորձել ավելի ուշ։</string>
+    <string name="notifprefs_dest_app">Հավելվածում</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Սարք</string>
 </resources>

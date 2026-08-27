@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Sinov muvaffaqiyatsiz</string>
     <string name="accounts_test_sent">Sinov yuborildi</string>
     <string name="account_oauth_link_failed">Hisobni bogʻlab boʻlmadi</string>
+    <string name="notifprefs_dest_app">Ilovada</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Qurilma</string>
 </resources>

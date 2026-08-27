@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Jaribio limeshindwa</string>
     <string name="accounts_test_sent">Jaribio limetumwa</string>
     <string name="account_oauth_link_failed">Haikuweza kuunganisha akaunti</string>
+    <string name="notifprefs_dest_app">Ndani ya programu</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Kifaa</string>
 </resources>

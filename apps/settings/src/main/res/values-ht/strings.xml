@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Tès echwe</string>
     <string name="accounts_test_sent">Tès voye</string>
     <string name="account_oauth_link_failed">Pa t kapab lye kont</string>
+    <string name="notifprefs_dest_app">Nan aplikasyon an</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Aparèy</string>
 </resources>

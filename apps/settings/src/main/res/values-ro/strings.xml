@@ -388,4 +388,7 @@
     <string name="accounts_test_failed">Testul a eșuat</string>
     <string name="accounts_test_sent">Test trimis</string>
     <string name="account_oauth_link_failed">Nu s-a putut conecta contul</string>
+    <string name="notifprefs_dest_app">În aplicație</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Dispozitiv</string>
 </resources>

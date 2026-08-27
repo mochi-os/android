@@ -390,4 +390,7 @@
     <string name="accounts_test_failed">Тест не пройшов</string>
     <string name="accounts_test_sent">Тест надіслано</string>
     <string name="account_oauth_link_failed">Не вдалося прив\'язати обліковий запис</string>
+    <string name="notifprefs_dest_app">У застосунку</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Пристрій</string>
 </resources>

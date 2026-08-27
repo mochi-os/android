@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Qoraannoon hin milkoofne</string>
     <string name="accounts_test_sent">Qormaanni ergameera</string>
     <string name="account_oauth_link_failed">Akkaawuntii walitti hidhuu hin dandeenye</string>
+    <string name="notifprefs_dest_app">Appii keessatti</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Meeshaa</string>
 </resources>

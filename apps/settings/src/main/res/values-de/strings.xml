@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Test fehlgeschlagen</string>
     <string name="accounts_test_sent">Test gesendet</string>
     <string name="account_oauth_link_failed">Konto konnte nicht verknüpft werden</string>
+    <string name="notifprefs_dest_app">In der App</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Gerät</string>
 </resources>

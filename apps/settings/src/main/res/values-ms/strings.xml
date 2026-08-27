@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Ujian gagal</string>
     <string name="accounts_test_sent">Ujian dihantar</string>
     <string name="account_oauth_link_failed">Tidak dapat memautkan akaun</string>
+    <string name="notifprefs_dest_app">Dalam aplikasi</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Peranti</string>
 </resources>

@@ -394,4 +394,7 @@
     <string name="accounts_test_failed">Prawf wedi methu</string>
     <string name="accounts_test_sent">Prawf wedi\'i anfon</string>
     <string name="account_oauth_link_failed">Methwyd cysylltu cyfrif</string>
+    <string name="notifprefs_dest_app">Yn yr ap</string>
+    <string name="notifprefs_dest_push">Gwthio</string>
+    <string name="notifprefs_dest_device">Dyfais</string>
 </resources>

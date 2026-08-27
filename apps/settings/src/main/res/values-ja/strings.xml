@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">テストに失敗しました</string>
     <string name="accounts_test_sent">テストを送信しました</string>
     <string name="account_oauth_link_failed">アカウントをリンクできませんでした</string>
+    <string name="notifprefs_dest_app">アプリ内</string>
+    <string name="notifprefs_dest_push">プッシュ</string>
+    <string name="notifprefs_dest_device">デバイス</string>
 </resources>

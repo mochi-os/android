@@ -389,4 +389,7 @@
     <string name="accounts_test_failed">Test selhal</string>
     <string name="accounts_test_sent">Test odeslán</string>
     <string name="account_oauth_link_failed">Nelze propojit účet</string>
+    <string name="notifprefs_dest_app">V aplikaci</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Zařízení</string>
 </resources>

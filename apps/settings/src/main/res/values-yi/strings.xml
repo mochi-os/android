@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">טעסט דורכגעפֿאַלן</string>
     <string name="accounts_test_sent">טעסט געשיקט</string>
     <string name="account_oauth_link_failed">האָט נישט געקאָנט פֿאַרבינדן קאָנטע</string>
+    <string name="notifprefs_dest_app">אין דער אַפּ</string>
+    <string name="notifprefs_dest_push">פּוש</string>
+    <string name="notifprefs_dest_device">מיטל</string>
 </resources>

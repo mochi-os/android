@@ -301,32 +301,65 @@ private fun DestinationRows(
     available: DestinationsAvailable,
     onToggle: (DestinationRow, Boolean) -> Unit,
 ) {
-    val rows = buildList {
-        add(DestinationRow(type = "web", target = ""))
-        for (acc in available.accounts) {
-            add(DestinationRow(type = "account", target = acc.id))
-        }
-        for (feed in available.feeds) {
-            add(DestinationRow(type = "rss", target = feed.id))
-        }
-    }
     val checked = category.destinations.map { it.type to it.target }.toSet()
-    for (row in rows) {
-        val label = when (row.type) {
-            "web" -> stringResource(R.string.notifprefs_dest_web)
-            "account" -> available.accounts.firstOrNull { it.id == row.target }
-                ?.let { if (it.label.isNotBlank()) it.label else if (it.identifier.isNotBlank()) it.identifier else it.type }
-                ?: row.target
-            "rss" -> available.feeds.firstOrNull { it.id == row.target }?.name ?: row.target
-            else -> row.target
-        }
-        val isChecked = (row.type to row.target) in checked
+
+    @Composable
+    fun destination(row: DestinationRow, label: String) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Checkbox(
-                checked = isChecked,
+                checked = (row.type to row.target) in checked,
                 onCheckedChange = { onToggle(row, it) },
             )
             Text(label, style = MaterialTheme.typography.bodyMedium)
+        }
+    }
+
+    @Composable
+    fun heading(label: String) {
+        Text(
+            label,
+            style = MaterialTheme.typography.labelLarge,
+            modifier = Modifier.padding(top = 8.dp),
+        )
+    }
+
+    // A destination is either a surface - where the notification is shown - or
+    // a push target. The browser and each device group their own: the browser
+    // has its bell, a phone has its list and the push account registered from
+    // it. Accounts bound to no device, and feeds, are listed on their own.
+    heading(stringResource(R.string.notifprefs_dest_web))
+    Column(modifier = Modifier.padding(start = 16.dp)) {
+        destination(DestinationRow(type = "web", target = ""), stringResource(R.string.notifprefs_dest_app))
+    }
+    val devices = available.devices.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label })
+    val bound = devices.map { it.id }.toSet()
+    for (device in devices) {
+        heading(device.label.ifBlank { stringResource(R.string.notifprefs_dest_device) })
+        Column(modifier = Modifier.padding(start = 16.dp)) {
+            destination(DestinationRow(type = "device", target = device.id), stringResource(R.string.notifprefs_dest_app))
+            for (acc in available.accounts) {
+                if (acc.device == device.id) {
+                    destination(DestinationRow(type = "account", target = acc.id), stringResource(R.string.notifprefs_dest_push))
+                }
+            }
+        }
+    }
+    val others = buildList {
+        for (acc in available.accounts) {
+            if (acc.device.isNotBlank() && acc.device in bound) continue
+            val name = if (acc.label.isNotBlank()) acc.label else if (acc.identifier.isNotBlank()) acc.identifier else acc.type
+            // A push account bound to no device names its transport, so two
+            // that share a phone's name can still be told apart.
+            val push = acc.type == "browser" || acc.type == "unifiedpush" || acc.type == "fcm"
+            add(DestinationRow(type = "account", target = acc.id) to (if (push && name != acc.type) "$name · ${acc.type}" else name))
+        }
+        for (feed in available.feeds) {
+            add(DestinationRow(type = "rss", target = feed.id) to feed.name)
+        }
+    }.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.second })
+    if (others.isNotEmpty()) {
+        Column(modifier = Modifier.padding(top = 8.dp)) {
+            for ((row, label) in others) destination(row, label)
         }
     }
 }

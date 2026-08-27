@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">ٹیسٹ ناکام</string>
     <string name="accounts_test_sent">ٹیسٹ بھیج دیا گیا</string>
     <string name="account_oauth_link_failed">اکاؤنٹ لنک نہیں ہو سکا</string>
+    <string name="notifprefs_dest_app">ایپ میں</string>
+    <string name="notifprefs_dest_push">پش</string>
+    <string name="notifprefs_dest_device">ڈیوائس</string>
 </resources>

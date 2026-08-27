@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">টেস্ট ব্যর্থ হয়েছে</string>
     <string name="accounts_test_sent">পরীক্ষা পাঠানো হয়েছে</string>
     <string name="account_oauth_link_failed">অ্যাকাউন্ট লিঙ্ক করা যায়নি</string>
+    <string name="notifprefs_dest_app">অ্যাপে</string>
+    <string name="notifprefs_dest_push">পুশ</string>
+    <string name="notifprefs_dest_device">ডিভাইস</string>
 </resources>

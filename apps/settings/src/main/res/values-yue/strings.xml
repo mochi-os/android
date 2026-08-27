@@ -129,6 +129,9 @@
     <string name="notifprefs_edit_category">編輯類別</string>
     <string name="notifprefs_destinations">目的地</string>
     <string name="notifprefs_dest_web">網頁瀏覽器</string>
+    <string name="notifprefs_dest_app">應用程式內</string>
+    <string name="notifprefs_dest_push">推播</string>
+    <string name="notifprefs_dest_device">裝置</string>
     <string name="notifprefs_test">測試</string>
     <string name="notifprefs_delete_title">刪除「%1$s」?</string>
     <string name="notifprefs_reassign_label">將目前嘅通知改為</string>

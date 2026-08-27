@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">టెస్ట్ విఫలమైంది</string>
     <string name="accounts_test_sent">పరీక్ష పంపబడింది</string>
     <string name="account_oauth_link_failed">ఖాతాను లింక్ చేయలేకపోయింది</string>
+    <string name="notifprefs_dest_app">యాప్‌లో</string>
+    <string name="notifprefs_dest_push">పుష్</string>
+    <string name="notifprefs_dest_device">పరికరం</string>
 </resources>

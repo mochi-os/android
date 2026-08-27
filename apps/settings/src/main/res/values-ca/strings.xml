@@ -387,4 +387,7 @@
     <string name="accounts_test_failed">La prova ha fallat</string>
     <string name="accounts_test_sent">Prova enviada</string>
     <string name="account_oauth_link_failed">No s\'ha pogut vincular el compte</string>
+    <string name="notifprefs_dest_app">A l\'aplicació</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Dispositiu</string>
 </resources>

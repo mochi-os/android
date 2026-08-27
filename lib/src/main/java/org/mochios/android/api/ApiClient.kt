@@ -120,10 +120,13 @@ object ApiClient {
                 if (token != null) {
                     builder.header("Authorization", "Bearer $token")
                 }
-                // Every Mochi request says which device it comes from, so the
-                // server can key what this device shows itself.
-                builder.header("Device", deviceStore.id())
             }
+            // Every request says which device it comes from, so the server can
+            // key what this device shows itself. Unconditional: the module
+            // clients all derive from this one and set their own Authorization,
+            // and the server interceptor sends every request here to the bound
+            // server, so the id cannot reach another host.
+            builder.header("Device", deviceStore.id())
 
             builder.build().let { chain.proceed(it) }
         }

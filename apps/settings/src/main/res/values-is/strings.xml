@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Prófun mistókst</string>
     <string name="accounts_test_sent">Prófun send</string>
     <string name="account_oauth_link_failed">Tókst ekki að tengja reikning</string>
+    <string name="notifprefs_dest_app">Í forritinu</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Tæki</string>
 </resources>

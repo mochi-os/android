@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">ಪರೀಕ್ಷೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="accounts_test_sent">ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</string>
     <string name="account_oauth_link_failed">ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
+    <string name="notifprefs_dest_app">ಆ್ಯಪ್‌ನಲ್ಲಿ</string>
+    <string name="notifprefs_dest_push">ಪುಶ್</string>
+    <string name="notifprefs_dest_device">ಸಾಧನ</string>
 </resources>

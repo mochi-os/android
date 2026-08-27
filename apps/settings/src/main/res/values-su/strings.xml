@@ -385,4 +385,7 @@
     <string name="accounts_test_failed">Tés gagal</string>
     <string name="accounts_test_sent">Tés dikirim</string>
     <string name="account_oauth_link_failed">Teu bisa ngahubungkeun akun</string>
+    <string name="notifprefs_dest_app">Dina aplikasi</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Pakakas</string>
 </resources>

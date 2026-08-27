@@ -383,4 +383,7 @@
     <string name="accounts_verify_sent">Código de verificação enviado</string>
     <string name="accounts_test_failed">Falha no teste</string>
     <string name="account_oauth_link_failed">Não foi possível vincular a conta</string>
+    <string name="notifprefs_dest_app">No aplicativo</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Dispositivo</string>
 </resources>

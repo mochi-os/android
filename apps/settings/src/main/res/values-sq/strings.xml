@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Testi dështoi</string>
     <string name="accounts_test_sent">Testi u dërgua</string>
     <string name="account_oauth_link_failed">Nuk mund të lidhej llogaria</string>
+    <string name="notifprefs_dest_app">Në aplikacion</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Pajisja</string>
 </resources>

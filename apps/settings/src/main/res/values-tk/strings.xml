@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Synag şowsuz boldy</string>
     <string name="accounts_test_sent">Synag iberildi</string>
     <string name="account_oauth_link_failed">Hasap baglanyp bolmady</string>
+    <string name="notifprefs_dest_app">Programmada</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Enjam</string>
 </resources>

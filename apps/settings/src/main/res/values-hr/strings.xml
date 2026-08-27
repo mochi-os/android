@@ -388,4 +388,7 @@
     <string name="accounts_test_failed">Test nije uspio</string>
     <string name="accounts_test_sent">Test poslan</string>
     <string name="account_oauth_link_failed">Nije moguće povezati račun</string>
+    <string name="notifprefs_dest_app">U aplikaciji</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Uređaj</string>
 </resources>

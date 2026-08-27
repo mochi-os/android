@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">Test têk çû</string>
     <string name="accounts_test_sent">Test hate şandin</string>
     <string name="account_oauth_link_failed">Hesab nikarîbû were girêdan</string>
+    <string name="notifprefs_dest_app">Di sepanê de</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Cîhaz</string>
 </resources>

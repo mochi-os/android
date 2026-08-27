@@ -386,4 +386,7 @@
     <string name="accounts_test_failed">تاقیکردنەوە سەرکەوتوو نەبوو</string>
     <string name="accounts_test_sent">تاقیکردنەوە نێردرا</string>
     <string name="account_oauth_link_failed">نەکرا هەژمار پەیوەست بکرێت</string>
+    <string name="notifprefs_dest_app">لە ئەپدا</string>
+    <string name="notifprefs_dest_push">پاڵ</string>
+    <string name="notifprefs_dest_device">ئامێر</string>
 </resources>
