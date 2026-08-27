@@ -13,7 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuDefaults
@@ -79,7 +79,7 @@ fun MochiDropdownSubmenu(
             modifier = modifier,
             leadingIcon = leadingIcon,
             trailingIcon = {
-                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = null)
+                Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, contentDescription = null)
             },
             colors = if (expanded) {
                 MenuDefaults.itemColors(

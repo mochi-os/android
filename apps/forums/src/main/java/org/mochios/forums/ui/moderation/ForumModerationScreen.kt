@@ -23,7 +23,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.Group
+import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Group
 import androidx.compose.material.icons.outlined.History
@@ -185,7 +188,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
     val queue = uiState.queue ?: return
     if (queue.counts.total == 0) {
         EmptyState(
-            icon = Icons.Outlined.Schedule,
+            icon = Icons.Default.Schedule,
             title = stringResource(R.string.forums_moderation_queue_empty),
             subtitle = stringResource(R.string.forums_moderation_queue_empty_subtitle),
         )
@@ -412,7 +415,7 @@ private fun ReportsTab(uiState: ModerationUiState, viewModel: ModerationViewMode
         // whole tab — level with the other tabs' empty states.
         Box(modifier = Modifier.fillMaxSize()) {
             EmptyState(
-                icon = Icons.Outlined.Flag,
+                icon = Icons.Default.Flag,
                 title = stringResource(R.string.forums_moderation_reports_empty),
                 subtitle = stringResource(R.string.forums_moderation_reports_empty_subtitle),
             )
@@ -620,7 +623,7 @@ private fun ReportStatusBadge(status: String) {
 private fun LogTab(log: List<ModerationLogEntry>) {
     if (log.isEmpty()) {
         EmptyState(
-            icon = Icons.Outlined.History,
+            icon = Icons.Default.History,
             title = stringResource(R.string.forums_moderation_log_empty),
             subtitle = stringResource(R.string.forums_moderation_log_empty_subtitle),
         )
@@ -696,7 +699,7 @@ private fun RestrictionsTab(
     Column(modifier = Modifier.fillMaxSize()) {
         if (restrictions.isEmpty()) {
             EmptyState(
-                icon = Icons.Outlined.Group,
+                icon = Icons.Default.Group,
                 title = stringResource(R.string.forums_moderation_restrictions_empty),
                 subtitle = stringResource(R.string.forums_moderation_restrictions_empty_subtitle),
             )

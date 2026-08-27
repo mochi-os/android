@@ -26,11 +26,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Image
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -229,7 +228,7 @@ fun PageEditorScreen(
                                         showDeleteDialog = true
                                     },
                                     leadingIcon = {
-                                        Icon(Icons.Filled.Delete, contentDescription = null)
+                                        Icon(Icons.Outlined.Delete, contentDescription = null)
                                     },
                                     enabled = !state.isDeleting,
                                 )

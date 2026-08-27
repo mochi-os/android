@@ -6,8 +6,8 @@
 package org.mochios.go.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
@@ -20,12 +20,12 @@ fun goDrawerItems(): List<DrawerItem> = listOf(
     DrawerItem(
         id = GoSidebarFilter.ACTIVE.name,
         title = stringResource(R.string.go_sidebar_active),
-        icon = Icons.Default.PlayArrow,
+        icon = Icons.Outlined.PlayArrow,
     ),
     DrawerItem(
         id = GoSidebarFilter.COMPLETED.name,
         title = stringResource(R.string.go_sidebar_completed),
-        icon = Icons.Default.CheckCircle,
+        icon = Icons.Outlined.CheckCircle,
     ),
 )
 

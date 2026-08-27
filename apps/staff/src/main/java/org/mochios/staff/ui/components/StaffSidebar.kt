@@ -6,17 +6,17 @@
 package org.mochios.staff.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Category
-import androidx.compose.material.icons.filled.Flag
-import androidx.compose.material.icons.filled.Gavel
-import androidx.compose.material.icons.filled.Group
-import androidx.compose.material.icons.filled.History
-import androidx.compose.material.icons.filled.Inventory
-import androidx.compose.material.icons.filled.People
-import androidx.compose.material.icons.filled.Report
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.SpaceDashboard
-import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Category
+import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.Inventory
+import androidx.compose.material.icons.outlined.People
+import androidx.compose.material.icons.outlined.Report
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.SpaceDashboard
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
@@ -34,7 +34,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.HOME,
                 title = stringResource(R.string.staff_sidebar_dashboard),
-                icon = Icons.Default.SpaceDashboard,
+                icon = Icons.Outlined.SpaceDashboard,
                 section = overview,
             )
         )
@@ -42,7 +42,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.LISTINGS,
                 title = stringResource(R.string.staff_sidebar_listings),
-                icon = Icons.Default.Inventory,
+                icon = Icons.Outlined.Inventory,
                 section = market,
             )
         )
@@ -50,7 +50,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.APPEALS,
                 title = stringResource(R.string.staff_sidebar_appeals),
-                icon = Icons.Default.Gavel,
+                icon = Icons.Outlined.Gavel,
                 section = market,
             )
         )
@@ -58,7 +58,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.REPORTS,
                 title = stringResource(R.string.staff_sidebar_reports),
-                icon = Icons.Default.Flag,
+                icon = Icons.Outlined.Flag,
                 section = market,
             )
         )
@@ -66,7 +66,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.DISPUTES,
                 title = stringResource(R.string.staff_sidebar_disputes),
-                icon = Icons.Default.Report,
+                icon = Icons.Outlined.Report,
                 section = market,
             )
         )
@@ -74,7 +74,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.REVIEWS,
                 title = stringResource(R.string.staff_sidebar_reviews),
-                icon = Icons.Default.Star,
+                icon = Icons.Outlined.Star,
                 section = market,
             )
         )
@@ -82,7 +82,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.MODERATION,
                 title = stringResource(R.string.staff_sidebar_moderation),
-                icon = Icons.Default.History,
+                icon = Icons.Outlined.History,
                 section = market,
             )
         )
@@ -90,7 +90,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.CATEGORIES,
                 title = stringResource(R.string.staff_sidebar_categories),
-                icon = Icons.Default.Category,
+                icon = Icons.Outlined.Category,
                 section = market,
             )
         )
@@ -98,7 +98,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.ACCOUNTS,
                 title = stringResource(R.string.staff_sidebar_accounts),
-                icon = Icons.Default.People,
+                icon = Icons.Outlined.People,
                 section = management,
             )
         )
@@ -106,7 +106,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
             DrawerItem(
                 id = StaffApp.TEAM,
                 title = stringResource(R.string.staff_sidebar_team),
-                icon = Icons.Default.Group,
+                icon = Icons.Outlined.Group,
                 section = management,
             )
         )
@@ -115,7 +115,7 @@ fun staffDrawerItems(userRole: String?): List<DrawerItem> {
                 DrawerItem(
                     id = StaffApp.CONFIG,
                     title = stringResource(R.string.staff_sidebar_config),
-                    icon = Icons.Default.Settings,
+                    icon = Icons.Outlined.Settings,
                     section = settings,
                 )
             )

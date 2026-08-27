@@ -6,10 +6,10 @@
 package org.mochios.people.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Groups
-import androidx.compose.material.icons.filled.MailOutline
-import androidx.compose.material.icons.filled.People
+import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.Groups
+import androidx.compose.material.icons.outlined.MailOutline
+import androidx.compose.material.icons.outlined.People
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
@@ -22,22 +22,22 @@ fun peopleDrawerItems(): List<DrawerItem> = listOf(
     DrawerItem(
         id = PeopleSidebarSection.FRIENDS.name,
         title = stringResource(R.string.people_friends_title),
-        icon = Icons.Default.People,
+        icon = Icons.Outlined.People,
     ),
     DrawerItem(
         id = PeopleSidebarSection.INVITATIONS.name,
         title = stringResource(R.string.people_invitations_title),
-        icon = Icons.Default.MailOutline,
+        icon = Icons.Outlined.MailOutline,
     ),
     DrawerItem(
         id = PeopleSidebarSection.GROUPS.name,
         title = stringResource(R.string.people_groups_title),
-        icon = Icons.Default.Groups,
+        icon = Icons.Outlined.Groups,
     ),
     DrawerItem(
         id = PeopleSidebarSection.PROFILE.name,
         title = stringResource(R.string.people_profile_title),
-        icon = Icons.Default.AccountCircle,
+        icon = Icons.Outlined.AccountCircle,
     ),
 )
 

@@ -6,18 +6,18 @@
 package org.mochios.market.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Gavel
-import androidx.compose.material.icons.filled.Group
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Inventory
-import androidx.compose.material.icons.filled.PointOfSale
-import androidx.compose.material.icons.filled.Receipt
-import androidx.compose.material.icons.filled.Repeat
-import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.Storefront
+import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.Bookmark
+import androidx.compose.material.icons.outlined.Email
+import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Inventory
+import androidx.compose.material.icons.outlined.PointOfSale
+import androidx.compose.material.icons.outlined.Receipt
+import androidx.compose.material.icons.outlined.Repeat
+import androidx.compose.material.icons.outlined.Star
+import androidx.compose.material.icons.outlined.Storefront
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
@@ -44,7 +44,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.HOME,
                 title = stringResource(R.string.market_sidebar_home),
-                icon = Icons.Default.Home,
+                icon = Icons.Outlined.Home,
                 section = browse,
             )
         )
@@ -52,7 +52,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.SAVED,
                 title = stringResource(R.string.market_sidebar_saved),
-                icon = Icons.Default.Bookmark,
+                icon = Icons.Outlined.Bookmark,
                 unread = savedBadge,
                 section = buying,
             )
@@ -61,7 +61,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.PURCHASES,
                 title = stringResource(R.string.market_sidebar_purchases),
-                icon = Icons.Default.Receipt,
+                icon = Icons.Outlined.Receipt,
                 section = buying,
             )
         )
@@ -69,7 +69,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.BIDS,
                 title = stringResource(R.string.market_sidebar_bids),
-                icon = Icons.Default.Gavel,
+                icon = Icons.Outlined.Gavel,
                 section = buying,
             )
         )
@@ -77,7 +77,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.SUBSCRIPTIONS,
                 title = stringResource(R.string.market_sidebar_subscriptions),
-                icon = Icons.Default.Repeat,
+                icon = Icons.Outlined.Repeat,
                 section = buying,
             )
         )
@@ -86,7 +86,7 @@ fun marketDrawerItems(
                 DrawerItem(
                     id = MarketApp.LISTINGS,
                     title = stringResource(R.string.market_sidebar_listings),
-                    icon = Icons.Default.Inventory,
+                    icon = Icons.Outlined.Inventory,
                     section = selling,
                 )
             )
@@ -94,7 +94,7 @@ fun marketDrawerItems(
                 DrawerItem(
                     id = MarketApp.SALES,
                     title = stringResource(R.string.market_sidebar_sales),
-                    icon = Icons.Default.PointOfSale,
+                    icon = Icons.Outlined.PointOfSale,
                     section = selling,
                 )
             )
@@ -102,7 +102,7 @@ fun marketDrawerItems(
                 DrawerItem(
                     id = MarketApp.SUBSCRIBERS,
                     title = stringResource(R.string.market_sidebar_subscribers),
-                    icon = Icons.Default.Group,
+                    icon = Icons.Outlined.Group,
                     section = selling,
                 )
             )
@@ -111,7 +111,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.MESSAGES,
                 title = stringResource(R.string.market_sidebar_inbox),
-                icon = Icons.Default.Email,
+                icon = Icons.Outlined.Email,
                 unread = inboxUnreadBadge,
                 section = messages,
             )
@@ -120,7 +120,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.REVIEWS,
                 title = stringResource(R.string.market_sidebar_reviews),
-                icon = Icons.Default.Star,
+                icon = Icons.Outlined.Star,
                 section = messages,
             )
         )
@@ -132,7 +132,7 @@ fun marketDrawerItems(
                 } else {
                     stringResource(R.string.market_sidebar_become_seller)
                 },
-                icon = Icons.Default.Storefront,
+                icon = Icons.Outlined.Storefront,
                 section = settings,
             )
         )
@@ -140,7 +140,7 @@ fun marketDrawerItems(
             DrawerItem(
                 id = MarketApp.ACCOUNT,
                 title = stringResource(R.string.market_sidebar_account),
-                icon = Icons.Default.AccountCircle,
+                icon = Icons.Outlined.AccountCircle,
                 section = settings,
             )
         )

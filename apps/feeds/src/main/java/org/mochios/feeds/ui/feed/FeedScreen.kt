@@ -36,7 +36,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
-import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
@@ -48,17 +47,19 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.DoneAll
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.RssFeed
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -415,7 +416,7 @@ fun FeedScreen(
                 id = feed.fingerprint.ifEmpty { feed.id },
                 title = feed.name,
                 unread = feed.unread,
-                icon = Icons.Default.RssFeed,
+                icon = Icons.Outlined.RssFeed,
             )
         }
     }
@@ -423,7 +424,7 @@ fun FeedScreen(
         id = allId,
         title = allLabel,
         unread = totalUnread,
-        icon = Icons.Default.RssFeed,
+        icon = Icons.Outlined.RssFeed,
     )
     val currentDrawerId = if (viewModel.feedId == allId) allId else viewModel.feedId
 
@@ -440,7 +441,7 @@ fun FeedScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.feeds_saved_menu),
-                icon = Icons.Default.BookmarkBorder,
+                icon = Icons.Outlined.BookmarkBorder,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToSaved()
@@ -448,7 +449,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.feeds_find_feeds),
-                icon = Icons.Default.Search,
+                icon = Icons.Outlined.Search,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToFindFeeds()
@@ -456,7 +457,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.feeds_create_feed),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToCreateFeed()
@@ -464,7 +465,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.feeds_logout),
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
@@ -472,7 +473,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
-                icon = Icons.Default.Info,
+                icon = Icons.Outlined.Info,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true

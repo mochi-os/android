@@ -6,10 +6,10 @@
 package org.mochios.wikis.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.DrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -105,7 +105,7 @@ fun WikiDrawer(
             DrawerItem(
                 id = wiki.fingerprint ?: wiki.id,
                 title = wiki.name,
-                icon = Icons.Default.MenuBook,
+                icon = Icons.Outlined.MenuBook,
             )
         }
     }
@@ -117,7 +117,7 @@ fun WikiDrawer(
         allItem = DrawerItem(
             id = WikisApp.HOME,
             title = stringResource(R.string.wikis_sidebar_all),
-            icon = Icons.Default.MenuBook,
+            icon = Icons.Outlined.MenuBook,
         ),
         selectedId = selectedId,
         onItemClick = { item ->
@@ -130,7 +130,7 @@ fun WikiDrawer(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.wikis_sidebar_find),
-                icon = Icons.Default.Search,
+                icon = Icons.Outlined.Search,
                 onClick = {
                     scope.launch { drawerState.close() }
                     onFind()
@@ -138,7 +138,7 @@ fun WikiDrawer(
             )
             DrawerActionRow(
                 title = stringResource(R.string.wikis_sidebar_create),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     scope.launch { drawerState.close() }
                     onCreate()

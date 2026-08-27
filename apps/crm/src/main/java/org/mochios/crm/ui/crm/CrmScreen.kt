@@ -31,22 +31,24 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Folder
-import androidx.compose.material.icons.filled.FolderOpen
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.FileDownload
+import androidx.compose.material.icons.outlined.FolderOpen
 import androidx.compose.material.icons.outlined.FormatListBulleted
 import androidx.compose.material.icons.outlined.HomeMax
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.TableChart
 import androidx.compose.material.icons.outlined.Tune
@@ -159,14 +161,14 @@ fun CrmScreen(
             DrawerItem(
                 id = crm.fingerprint.ifEmpty { crm.id },
                 title = crm.name,
-                icon = Icons.Default.FolderOpen,
+                icon = Icons.Outlined.FolderOpen,
             )
         }
     }
     val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.crm_all_crms),
-        icon = Icons.Default.FolderOpen,
+        icon = Icons.Outlined.FolderOpen,
     )
 
     MochiListDrawer(
@@ -185,7 +187,7 @@ fun CrmScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.crm_list_find),
-                icon = Icons.Default.Search,
+                icon = Icons.Outlined.Search,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindCrms()
@@ -193,7 +195,7 @@ fun CrmScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.crm_list_create),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onCreateCrm()
@@ -201,7 +203,7 @@ fun CrmScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.crm_list_logout),
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
@@ -209,7 +211,7 @@ fun CrmScreen(
             )
             DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
-                icon = Icons.Default.Info,
+                icon = Icons.Outlined.Info,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true

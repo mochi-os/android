@@ -25,28 +25,29 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Forum
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.EmojiEvents
+import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
@@ -182,14 +183,14 @@ fun ForumScreen(
             DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,
-                icon = Icons.Default.Forum,
+                icon = Icons.Outlined.Forum,
             )
         }
     }
     val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.forums_all_forums),
-        icon = Icons.Default.Forum,
+        icon = Icons.Outlined.Forum,
     )
 
     MochiListDrawer(
@@ -205,7 +206,7 @@ fun ForumScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.forums_saved_title),
-                icon = Icons.Default.BookmarkBorder,
+                icon = Icons.Outlined.BookmarkBorder,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToSaved()
@@ -213,7 +214,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.forums_list_find),
-                icon = Icons.Default.Search,
+                icon = Icons.Outlined.Search,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindForums()
@@ -221,7 +222,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.forums_create_title),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onCreateForum()
@@ -229,7 +230,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.forums_list_logout),
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
@@ -237,7 +238,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
-                icon = Icons.Default.Info,
+                icon = Icons.Outlined.Info,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true
@@ -777,7 +778,7 @@ private fun PostCard(
                             .size(18.dp),
                     )
                     CountedAction(
-                        icon = Icons.Filled.LocalOffer,
+                        icon = Icons.Default.LocalOffer,
                         contentDescription = stringResource(R.string.forums_post_tag_label),
                         count = post.tags.size,
                         onClick = onClick,
@@ -799,7 +800,7 @@ private fun PostCard(
                         onClick = onClick,
                     )
                     CountedAction(
-                        icon = Icons.Filled.ChatBubble,
+                        icon = Icons.Default.ChatBubble,
                         contentDescription = stringResource(R.string.forums_post_comments),
                         count = post.comments,
                         onClick = onClick,

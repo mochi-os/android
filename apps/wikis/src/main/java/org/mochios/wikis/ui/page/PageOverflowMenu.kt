@@ -7,17 +7,17 @@ package org.mochios.wikis.ui.page
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material.icons.automirrored.filled.NoteAdd
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.DriveFileRenameOutline
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.History
-import androidx.compose.material.icons.filled.LocalOffer
-import androidx.compose.material.icons.filled.ModeComment
-import androidx.compose.material.icons.filled.RssFeed
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.automirrored.outlined.Logout
+import androidx.compose.material.icons.automirrored.outlined.NoteAdd
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.DriveFileRenameOutline
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.LocalOffer
+import androidx.compose.material.icons.outlined.ModeComment
+import androidx.compose.material.icons.outlined.RssFeed
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -86,23 +86,23 @@ fun PageOverflowMenu(
 
         if (permissions.edit) {
             MenuRow(
-                icon = Icons.Default.Edit,
+                icon = Icons.Outlined.Edit,
                 label = stringResource(R.string.wikis_page_action_edit),
                 onClick = onEdit,
             )
             MenuRow(
-                icon = Icons.Default.DriveFileRenameOutline,
+                icon = Icons.Outlined.DriveFileRenameOutline,
                 label = stringResource(R.string.wikis_page_action_rename),
                 onClick = onRename,
             )
         }
         MenuRow(
-            icon = Icons.Default.History,
+            icon = Icons.Outlined.History,
             label = stringResource(R.string.wikis_page_action_history),
             onClick = onHistory,
         )
         MenuRow(
-            icon = Icons.Default.ModeComment,
+            icon = Icons.Outlined.ModeComment,
             label = pluralStringResource(
                 id = R.plurals.wikis_page_action_comments,
                 count = commentCount,
@@ -112,7 +112,7 @@ fun PageOverflowMenu(
         )
         if (permissions.delete) {
             MenuRow(
-                icon = Icons.Default.Delete,
+                icon = Icons.Outlined.Delete,
                 label = stringResource(R.string.wikis_page_action_delete),
                 onClick = onDelete,
             )
@@ -124,12 +124,12 @@ fun PageOverflowMenu(
         SectionLabel(stringResource(R.string.wikis_page_action_section_wiki))
 
         MenuRow(
-            icon = Icons.Default.LocalOffer,
+            icon = Icons.Outlined.LocalOffer,
             label = stringResource(R.string.wikis_page_action_tags),
             onClick = onTags,
         )
         MenuRow(
-            icon = Icons.Default.History,
+            icon = Icons.Outlined.History,
             label = stringResource(R.string.wikis_page_action_recent_changes),
             onClick = onChanges,
         )
@@ -139,28 +139,28 @@ fun PageOverflowMenu(
             text = { Text(stringResource(R.string.wikis_rss_menu)) },
             expanded = rssExpanded,
             onExpandedChange = { rssExpanded = it },
-            leadingIcon = { Icon(Icons.Default.RssFeed, contentDescription = null) },
+            leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
         ) {
             RssModes(onSelect = onRssCopy)
         }
 
         if (permissions.edit) {
             MenuRow(
-                icon = Icons.AutoMirrored.Filled.NoteAdd,
+                icon = Icons.AutoMirrored.Outlined.NoteAdd,
                 label = stringResource(R.string.wikis_page_action_new_page),
                 onClick = onNewPage,
             )
         }
         if (permissions.manage) {
             MenuRow(
-                icon = Icons.Default.Settings,
+                icon = Icons.Outlined.Settings,
                 label = stringResource(R.string.wikis_page_action_settings),
                 onClick = onSettings,
             )
         }
 
         MenuRow(
-            icon = Icons.Default.Share,
+            icon = Icons.Outlined.Share,
             label = stringResource(R.string.wikis_page_action_share),
             onClick = onShare,
         )
@@ -168,7 +168,7 @@ fun PageOverflowMenu(
         if (canUnsubscribe) {
             MochiDropdownMenuDivider()
             MenuRow(
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 label = stringResource(R.string.wikis_page_action_unsubscribe),
                 onClick = onUnsubscribe,
             )
