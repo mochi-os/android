@@ -90,7 +90,7 @@ internal fun AttachmentComments(
                     onSaveEdit = { viewModel.saveEditComment() },
                     onCancelEdit = { viewModel.cancelEditComment() },
                     onReply = { viewModel.setReplyingTo(comment.id) },
-                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.body)) },
+                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.text)) },
                     onDelete = { onDeleteComment(comment.id) },
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
                     canManage = permissions.manage,

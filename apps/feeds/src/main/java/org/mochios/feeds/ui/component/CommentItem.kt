@@ -46,7 +46,7 @@ internal fun CommentItem(
     val anchor = comment.anchor
     SharedCommentItem(
         name = comment.name,
-        body = comment.body,
+        body = comment.text,
         created = comment.created,
         edited = comment.edited,
         depth = depth,

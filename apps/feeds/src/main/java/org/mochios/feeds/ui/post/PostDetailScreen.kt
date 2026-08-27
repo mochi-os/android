@@ -400,7 +400,7 @@ internal fun PostDetailContent(
                             onEdit = {
                                 viewModel.startEditComment(
                                     comment.id,
-                                    stripHtml(comment.body)
+                                    stripHtml(comment.text)
                                 )
                             },
                             onDelete = { showDeleteCommentDialog(comment.id) },

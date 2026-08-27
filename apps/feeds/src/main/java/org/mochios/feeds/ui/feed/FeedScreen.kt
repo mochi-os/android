@@ -2123,7 +2123,7 @@ private fun CommentPreviewRow(
         }
         Spacer(modifier = Modifier.width(6.dp))
         Text(
-            text = stripHtml(comment.body),
+            text = stripHtml(comment.text),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.weight(1f),

@@ -216,6 +216,7 @@ fun ComposeBar(
         shadowElevation = shadowElevation,
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
+            banner?.invoke()
             if (showDivider) {
                 HorizontalDivider()
             }
@@ -225,8 +226,6 @@ fun ComposeBar(
                     .windowInsetsPadding(appliedInsets)
                     .padding(horizontal = 8.dp, vertical = 8.dp),
             ) {
-                banner?.invoke()
-
                 if (attachments != null && pending.isNotEmpty()) {
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
