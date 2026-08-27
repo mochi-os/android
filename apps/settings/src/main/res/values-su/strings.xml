@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Dina aplikasi</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Pakakas</string>
+    <string name="accounts_devices">Pakakas</string>
+    <string name="accounts_forget">Poho</string>
+    <string name="accounts_forget_title">Poho pakakas?</string>
+    <string name="accounts_forget_message">Ieu bakal mopohokeun pakakas \"%1$s\" sarta ngeureunkeun béwara ka dinya.</string>
+    <string name="accounts_device_seen">Pamungkas katémbong %1$s</string>
 </resources>

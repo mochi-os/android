@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Nan aplikasyon an</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Aparèy</string>
+    <string name="accounts_devices">Aparèy yo</string>
+    <string name="accounts_forget">Bliye</string>
+    <string name="accounts_forget_title">Bliye aparèy la?</string>
+    <string name="accounts_forget_message">Sa a pral bliye aparèy \"%1$s\" la epi sispann voye notifikasyon ba li.</string>
+    <string name="accounts_device_seen">Dènye fwa yo wè l %1$s</string>
 </resources>

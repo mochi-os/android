@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Di aplikasi</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Perangkat</string>
+    <string name="accounts_devices">Perangkat</string>
+    <string name="accounts_forget">Lupakan</string>
+    <string name="accounts_forget_title">Lupakan perangkat?</string>
+    <string name="accounts_forget_message">Ini akan melupakan perangkat \"%1$s\" dan menghentikan notifikasi ke sana.</string>
+    <string name="accounts_device_seen">Terakhir terlihat %1$s</string>
 </resources>

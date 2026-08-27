@@ -393,4 +393,9 @@
     <string name="notifprefs_dest_app">San aplacaid</string>
     <string name="notifprefs_dest_push">Putadh</string>
     <string name="notifprefs_dest_device">Inneal</string>
+    <string name="accounts_devices">Innealan</string>
+    <string name="accounts_forget">Dìochuimhnich</string>
+    <string name="accounts_forget_title">A bheil thu airson an t-inneal a dhìochuimhneachadh?</string>
+    <string name="accounts_forget_message">Dìochuimhnichidh seo an t-inneal \"%1$s\" agus cuiridh e stad air brathan thuige.</string>
+    <string name="accounts_device_seen">Air fhaicinn mu dheireadh %1$s</string>
 </resources>

@@ -393,4 +393,9 @@
     <string name="notifprefs_dest_app">באפליקציה</string>
     <string name="notifprefs_dest_push">פוש</string>
     <string name="notifprefs_dest_device">מכשיר</string>
+    <string name="accounts_devices">מכשירים</string>
+    <string name="accounts_forget">שכח</string>
+    <string name="accounts_forget_title">לשכוח את המכשיר?</string>
+    <string name="accounts_forget_message">פעולה זו תשכח את המכשיר \"%1$s\" ותפסיק את ההתראות אליו.</string>
+    <string name="accounts_device_seen">נראה לאחרונה %1$s</string>
 </resources>

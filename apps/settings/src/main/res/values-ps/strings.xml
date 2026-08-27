@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">په اپ کې</string>
     <string name="notifprefs_dest_push">پوش</string>
     <string name="notifprefs_dest_device">وسیله</string>
+    <string name="accounts_devices">وسیلې</string>
+    <string name="accounts_forget">هېرول</string>
+    <string name="accounts_forget_title">وسیله هېره کړئ؟</string>
+    <string name="accounts_forget_message">دا به \"%1$s\" وسیله هېره کړي او هغې ته خبرتیاوې ودروي.</string>
+    <string name="accounts_device_seen">وروستی ځل لیدل شوی %1$s</string>
 </resources>

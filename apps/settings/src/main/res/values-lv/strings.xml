@@ -391,4 +391,9 @@
     <string name="notifprefs_dest_app">Lietotnē</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Ierīce</string>
+    <string name="accounts_devices">Ierīces</string>
+    <string name="accounts_forget">Aizmirst</string>
+    <string name="accounts_forget_title">Aizmirst ierīci?</string>
+    <string name="accounts_forget_message">Tas aizmirsīs ierīci \"%1$s\" un pārtrauks paziņojumus uz to.</string>
+    <string name="accounts_device_seen">Pēdējoreiz redzēts %1$s</string>
 </resources>

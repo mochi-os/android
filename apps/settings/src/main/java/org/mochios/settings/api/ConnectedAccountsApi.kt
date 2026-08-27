@@ -31,6 +31,16 @@ data class ConnectedAccount(
     val verified: Int = 0,
     val enabled: Int = 0,
     val default: String = "",
+    // The device a push account was registered from, or "" for none.
+    val device: String = "",
+)
+
+// A phone or tablet the user runs Mochi on; its push account hangs off it.
+data class Device(
+    val id: String = "",
+    val label: String = "",
+    val created: Long = 0,
+    val seen: Long = 0,
 )
 
 data class ProviderField(
@@ -60,6 +70,13 @@ interface ConnectedAccountsApi {
 
     @GET("settings/-/accounts/list")
     suspend fun list(): Response<List<ConnectedAccount>>
+
+    @GET("settings/-/notifications/devices")
+    suspend fun devices(): Response<List<Device>>
+
+    @FormUrlEncoded
+    @POST("settings/-/notifications/devices/remove")
+    suspend fun forgetDevice(@Field("id") id: String): Response<Unit>
 
     @FormUrlEncoded
     @POST("settings/-/accounts/add")

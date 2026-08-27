@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">ایپ میں</string>
     <string name="notifprefs_dest_push">پش</string>
     <string name="notifprefs_dest_device">ڈیوائس</string>
+    <string name="accounts_devices">ڈیوائسز</string>
+    <string name="accounts_forget">بھول جائیں</string>
+    <string name="accounts_forget_title">ڈیوائس بھول جائیں؟</string>
+    <string name="accounts_forget_message">یہ \"%1$s\" ڈیوائس کو بھول جائے گا اور اس پر اطلاعات بند کر دے گا۔</string>
+    <string name="accounts_device_seen">آخری بار دیکھا گیا %1$s</string>
 </resources>

@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Ku-app</string>
     <string name="notifprefs_dest_push">Ukuphusha</string>
     <string name="notifprefs_dest_device">Idivayisi</string>
+    <string name="accounts_devices">Amadivayisi</string>
+    <string name="accounts_forget">Khohlwa</string>
+    <string name="accounts_forget_title">Khohlwa idivayisi?</string>
+    <string name="accounts_forget_message">Lokhu kuzokhohlwa idivayisi \"%1$s\" futhi kumise izaziso kuyo.</string>
+    <string name="accounts_device_seen">Igcine ukubonwa %1$s</string>
 </resources>

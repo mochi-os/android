@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">앱 내</string>
     <string name="notifprefs_dest_push">푸시</string>
     <string name="notifprefs_dest_device">기기</string>
+    <string name="accounts_devices">기기</string>
+    <string name="accounts_forget">삭제</string>
+    <string name="accounts_forget_title">기기를 삭제할까요?</string>
+    <string name="accounts_forget_message">\"%1$s\" 기기를 삭제하고 해당 기기로의 알림을 중단합니다.</string>
+    <string name="accounts_device_seen">마지막 확인 %1$s</string>
 </resources>

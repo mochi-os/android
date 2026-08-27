@@ -70,7 +70,10 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
 import org.mochios.settings.api.ConnectedAccount
+import org.mochios.settings.api.Device
 import org.mochios.settings.api.Provider
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -89,6 +92,7 @@ fun ConnectedAccountsScreen(
     var verifying by remember { mutableStateOf<ConnectedAccount?>(null) }
     var settingsOf by remember { mutableStateOf<ConnectedAccount?>(null) }
     var deleting by remember { mutableStateOf<ConnectedAccount?>(null) }
+    var forgetting by remember { mutableStateOf<Device?>(null) }
 
     val snackbar = remember { SnackbarHostState() }
 
@@ -144,7 +148,30 @@ fun ConnectedAccountsScreen(
                             Text(stringResource(R.string.accounts_add))
                         }
                     }
-                    if (state.accounts.isEmpty()) {
+                    // An account bound to a listed device is that device's,
+                    // shown in its row; forgetting the device removes it.
+                    val deviceIds = state.devices.map { it.id }.toSet()
+                    val visible = state.accounts.filter { it.device.isBlank() || it.device !in deviceIds }
+                    if (state.devices.isNotEmpty()) {
+                        item("devices") {
+                            Text(
+                                stringResource(R.string.accounts_devices),
+                                style = MaterialTheme.typography.titleSmall,
+                                fontWeight = FontWeight.SemiBold,
+                            )
+                        }
+                        items(
+                            state.devices.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label }),
+                            key = { "device:" + it.id },
+                        ) { device ->
+                            DeviceRow(
+                                device = device,
+                                accounts = state.accounts.filter { it.device == device.id },
+                                onForget = { forgetting = device },
+                            )
+                        }
+                    }
+                    if (visible.isEmpty()) {
                         item("empty") {
                             Text(
                                 stringResource(R.string.accounts_empty),
@@ -153,7 +180,7 @@ fun ConnectedAccountsScreen(
                             )
                         }
                     } else {
-                        items(state.accounts, key = { it.id }) { account ->
+                        items(visible, key = { it.id }) { account ->
                             AccountRow(
                                 account = account,
                                 providers = state.providers,
@@ -222,6 +249,60 @@ fun ConnectedAccountsScreen(
             },
             dismissText = stringResource(MochiR.string.common_cancel),
         )
+    }
+    forgetting?.let { device ->
+        MochiAlertDialog(
+            onDismissRequest = { forgetting = null },
+            title = stringResource(R.string.accounts_forget_title),
+            text = stringResource(R.string.accounts_forget_message, device.label.ifBlank { stringResource(R.string.notifprefs_dest_device) }),
+            confirmText = stringResource(R.string.accounts_forget),
+            onConfirm = {
+                viewModel.forgetDevice(device.id)
+                forgetting = null
+            },
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
+}
+
+// A device with the transport of the push account registered from it, and a
+// Forget action that takes that account with the device.
+@Composable
+private fun DeviceRow(
+    device: Device,
+    accounts: List<ConnectedAccount>,
+    onForget: () -> Unit,
+) {
+    val format = LocalFormat.current
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = device.label.ifBlank { stringResource(R.string.notifprefs_dest_device) },
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Medium,
+                )
+                val transports = accounts.map { providerTypeLabel(it.type) }
+                if (transports.isNotEmpty()) {
+                    Text(
+                        transports.joinToString(", "),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    stringResource(R.string.accounts_device_seen, format.formatTimestamp(device.seen)),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            MochiOutlinedButton(onClick = onForget) {
+                Text(stringResource(R.string.accounts_forget))
+            }
+        }
     }
 }
 

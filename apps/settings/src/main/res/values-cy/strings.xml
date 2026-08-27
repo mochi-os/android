@@ -397,4 +397,9 @@
     <string name="notifprefs_dest_app">Yn yr ap</string>
     <string name="notifprefs_dest_push">Gwthio</string>
     <string name="notifprefs_dest_device">Dyfais</string>
+    <string name="accounts_devices">Dyfeisiau</string>
+    <string name="accounts_forget">Anghofio</string>
+    <string name="accounts_forget_title">Anghofio\'r ddyfais?</string>
+    <string name="accounts_forget_message">Bydd hyn yn anghofio\'r ddyfais \"%1$s\" ac yn atal hysbysiadau iddi.</string>
+    <string name="accounts_device_seen">Gwelwyd ddiwethaf %1$s</string>
 </resources>

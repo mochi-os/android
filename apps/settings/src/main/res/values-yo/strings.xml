@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Nínú àpù</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Ẹ̀rọ</string>
+    <string name="accounts_devices">Àwọn ẹ̀rọ</string>
+    <string name="accounts_forget">Gbàgbé</string>
+    <string name="accounts_forget_title">Gbàgbé ẹ̀rọ náà?</string>
+    <string name="accounts_forget_message">Èyí yóò gbàgbé ẹ̀rọ \"%1$s\" yóò sì dá àwọn ìfitónilétí sí i dúró.</string>
+    <string name="accounts_device_seen">Tí a rí kẹ́yìn %1$s</string>
 </resources>

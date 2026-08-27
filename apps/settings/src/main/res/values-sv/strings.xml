@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">I appen</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Enhet</string>
+    <string name="accounts_devices">Enheter</string>
+    <string name="accounts_forget">Glöm</string>
+    <string name="accounts_forget_title">Glöm enhet?</string>
+    <string name="accounts_forget_message">Detta glömmer enheten \"%1$s\" och stoppar aviseringar till den.</string>
+    <string name="accounts_device_seen">Senast sedd %1$s</string>
 </resources>

@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Kwi-app</string>
     <string name="notifprefs_dest_push">Ukutyhala</string>
     <string name="notifprefs_dest_device">Isixhobo</string>
+    <string name="accounts_devices">Izixhobo</string>
+    <string name="accounts_forget">Libala</string>
+    <string name="accounts_forget_title">Libala isixhobo?</string>
+    <string name="accounts_forget_message">Oku kuya kulibala isixhobo \"%1$s\" kuze kuyeke izaziso kuso.</string>
+    <string name="accounts_device_seen">Igqibele ukubonwa %1$s</string>
 </resources>

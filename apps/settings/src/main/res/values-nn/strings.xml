@@ -391,4 +391,9 @@
     <string name="notifprefs_dest_app">I appen</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Eining</string>
+    <string name="accounts_devices">Einingar</string>
+    <string name="accounts_forget">Gløym</string>
+    <string name="accounts_forget_title">Gløyme eining?</string>
+    <string name="accounts_forget_message">Dette vil gløyme eininga \"%1$s\" og stoppe varsel til henne.</string>
+    <string name="accounts_device_seen">Sist sett %1$s</string>
 </resources>

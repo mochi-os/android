@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Az alkalmazásban</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Eszköz</string>
+    <string name="accounts_devices">Eszközök</string>
+    <string name="accounts_forget">Elfelejtés</string>
+    <string name="accounts_forget_title">Elfelejti az eszközt?</string>
+    <string name="accounts_forget_message">Ez elfelejti a(z) \"%1$s\" eszközt, és leállítja az értesítéseket hozzá.</string>
+    <string name="accounts_device_seen">Utoljára látva %1$s</string>
 </resources>

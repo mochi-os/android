@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Í forritinu</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Tæki</string>
+    <string name="accounts_devices">Tæki</string>
+    <string name="accounts_forget">Gleyma</string>
+    <string name="accounts_forget_title">Gleyma tæki?</string>
+    <string name="accounts_forget_message">Þetta mun gleyma tækinu \"%1$s\" og stöðva tilkynningar til þess.</string>
+    <string name="accounts_device_seen">Síðast séð %1$s</string>
 </resources>

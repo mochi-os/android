@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Appii keessatti</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Meeshaa</string>
+    <string name="accounts_devices">Meeshaalee</string>
+    <string name="accounts_forget">Dagadhu</string>
+    <string name="accounts_forget_title">Meeshaa dagachuu?</string>
+    <string name="accounts_forget_message">Kun meeshaa \"%1$s\" ni dagata, beeksisas gara isaatti ergamuu ni dhaaba.</string>
+    <string name="accounts_device_seen">Yeroo dhumaaf mul\'ate %1$s</string>
 </resources>

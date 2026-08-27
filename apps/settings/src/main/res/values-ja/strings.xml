@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">アプリ内</string>
     <string name="notifprefs_dest_push">プッシュ</string>
     <string name="notifprefs_dest_device">デバイス</string>
+    <string name="accounts_devices">デバイス</string>
+    <string name="accounts_forget">削除</string>
+    <string name="accounts_forget_title">デバイスを削除しますか？</string>
+    <string name="accounts_forget_message">デバイス「%1$s」を削除し、そのデバイスへの通知を停止します。</string>
+    <string name="accounts_device_seen">最終確認 %1$s</string>
 </resources>

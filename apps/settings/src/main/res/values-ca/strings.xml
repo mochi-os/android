@@ -390,4 +390,9 @@
     <string name="notifprefs_dest_app">A l\'aplicació</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Dispositiu</string>
+    <string name="accounts_devices">Dispositius</string>
+    <string name="accounts_forget">Oblida</string>
+    <string name="accounts_forget_title">Voleu oblidar el dispositiu?</string>
+    <string name="accounts_forget_message">Això oblidarà el dispositiu \"%1$s\" i hi aturarà les notificacions.</string>
+    <string name="accounts_device_seen">Vist per última vegada %1$s</string>
 </resources>

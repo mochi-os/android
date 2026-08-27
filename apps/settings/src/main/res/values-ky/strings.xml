@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Колдонмодо</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Түзмөк</string>
+    <string name="accounts_devices">Түзмөктөр</string>
+    <string name="accounts_forget">Унутуу</string>
+    <string name="accounts_forget_title">Түзмөк унутулсунбу?</string>
+    <string name="accounts_forget_message">Бул \"%1$s\" түзмөгүн унутат жана ага билдирмелерди токтотот.</string>
+    <string name="accounts_device_seen">Акыркы жолу көрүлгөн %1$s</string>
 </resources>

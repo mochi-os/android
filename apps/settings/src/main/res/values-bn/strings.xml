@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">অ্যাপে</string>
     <string name="notifprefs_dest_push">পুশ</string>
     <string name="notifprefs_dest_device">ডিভাইস</string>
+    <string name="accounts_devices">ডিভাইস</string>
+    <string name="accounts_forget">ভুলে যান</string>
+    <string name="accounts_forget_title">ডিভাইস ভুলে যাবেন?</string>
+    <string name="accounts_forget_message">এটি \"%1$s\" ডিভাইসটি ভুলে যাবে এবং এতে নোটিফিকেশন পাঠানো বন্ধ করবে।</string>
+    <string name="accounts_device_seen">সর্বশেষ দেখা %1$s</string>
 </resources>

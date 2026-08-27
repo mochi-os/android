@@ -397,4 +397,9 @@
     <string name="notifprefs_dest_app">داخل التطبيق</string>
     <string name="notifprefs_dest_push">دفع</string>
     <string name="notifprefs_dest_device">جهاز</string>
+    <string name="accounts_devices">الأجهزة</string>
+    <string name="accounts_forget">نسيان</string>
+    <string name="accounts_forget_title">نسيان الجهاز؟</string>
+    <string name="accounts_forget_message">سيؤدي هذا إلى نسيان الجهاز \"%1$s\" وإيقاف الإشعارات إليه.</string>
+    <string name="accounts_device_seen">آخر ظهور %1$s</string>
 </resources>

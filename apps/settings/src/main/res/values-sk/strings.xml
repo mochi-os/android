@@ -393,4 +393,9 @@
     <string name="notifprefs_dest_app">V aplikácii</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Zariadenie</string>
+    <string name="accounts_devices">Zariadenia</string>
+    <string name="accounts_forget">Zabudnúť</string>
+    <string name="accounts_forget_title">Zabudnúť zariadenie?</string>
+    <string name="accounts_forget_message">Tým sa zabudne zariadenie \"%1$s\" a zastavia sa oznámenia naň.</string>
+    <string name="accounts_device_seen">Naposledy videný %1$s</string>
 </resources>

@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Rakenduses</string>
     <string name="notifprefs_dest_push">Tõuketeade</string>
     <string name="notifprefs_dest_device">Seade</string>
+    <string name="accounts_devices">Seadmed</string>
+    <string name="accounts_forget">Unusta</string>
+    <string name="accounts_forget_title">Kas unustada seade?</string>
+    <string name="accounts_forget_message">See unustab seadme \"%1$s\" ja lõpetab sellele teavituste saatmise.</string>
+    <string name="accounts_device_seen">Viimati nähtud %1$s</string>
 </resources>

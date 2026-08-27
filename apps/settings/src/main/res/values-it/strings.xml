@@ -390,4 +390,9 @@
     <string name="notifprefs_dest_app">Nell\'app</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Dispositivo</string>
+    <string name="accounts_devices">Dispositivi</string>
+    <string name="accounts_forget">Dimentica</string>
+    <string name="accounts_forget_title">Dimenticare il dispositivo?</string>
+    <string name="accounts_forget_message">Questo dimenticherà il dispositivo \"%1$s\" e interromperà le notifiche verso di esso.</string>
+    <string name="accounts_device_seen">Visto l\'ultima volta %1$s</string>
 </resources>

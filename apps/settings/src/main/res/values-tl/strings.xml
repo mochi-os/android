@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Sa app</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Device</string>
+    <string name="accounts_devices">Mga device</string>
+    <string name="accounts_forget">Kalimutan</string>
+    <string name="accounts_forget_title">Kalimutan ang device?</string>
+    <string name="accounts_forget_message">Kakalimutan nito ang device na \"%1$s\" at ititigil ang mga notification dito.</string>
+    <string name="accounts_device_seen">Huling nakita %1$s</string>
 </resources>

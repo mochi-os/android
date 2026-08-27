@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">A cikin manhaja</string>
     <string name="notifprefs_dest_push">Tura</string>
     <string name="notifprefs_dest_device">Na\'ura</string>
+    <string name="accounts_devices">Na\'urori</string>
+    <string name="accounts_forget">Manta</string>
+    <string name="accounts_forget_title">Manta da na\'urar?</string>
+    <string name="accounts_forget_message">Wannan zai manta da na\'urar \"%1$s\" kuma ya daina aika sanarwa zuwa gare ta.</string>
+    <string name="accounts_device_seen">Ganin ƙarshe %1$s</string>
 </resources>

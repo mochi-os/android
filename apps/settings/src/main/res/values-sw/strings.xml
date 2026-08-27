@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Ndani ya programu</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Kifaa</string>
+    <string name="accounts_devices">Vifaa</string>
+    <string name="accounts_forget">Sahau</string>
+    <string name="accounts_forget_title">Sahau kifaa?</string>
+    <string name="accounts_forget_message">Hii itasahau kifaa \"%1$s\" na kusimamisha arifa kwake.</string>
+    <string name="accounts_device_seen">Ilionekana mara ya mwisho %1$s</string>
 </resources>

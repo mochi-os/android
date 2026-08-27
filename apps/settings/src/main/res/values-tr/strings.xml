@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Uygulamada</string>
     <string name="notifprefs_dest_push">Anlık bildirim</string>
     <string name="notifprefs_dest_device">Cihaz</string>
+    <string name="accounts_devices">Cihazlar</string>
+    <string name="accounts_forget">Unut</string>
+    <string name="accounts_forget_title">Cihaz unutulsun mu?</string>
+    <string name="accounts_forget_message">Bu, \"%1$s\" cihazını unutur ve ona bildirim gönderilmesini durdurur.</string>
+    <string name="accounts_device_seen">Son görülme %1$s</string>
 </resources>

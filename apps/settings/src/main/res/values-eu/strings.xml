@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Aplikazioan</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Gailua</string>
+    <string name="accounts_devices">Gailuak</string>
+    <string name="accounts_forget">Ahaztu</string>
+    <string name="accounts_forget_title">Gailua ahaztu?</string>
+    <string name="accounts_forget_message">Honek \"%1$s\" gailua ahaztuko du eta jakinarazpenak bidaltzeari utziko dio.</string>
+    <string name="accounts_device_seen">Azkenekoz ikusia %1$s</string>
 </resources>

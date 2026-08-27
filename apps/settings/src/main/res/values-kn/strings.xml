@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">ಆ್ಯಪ್‌ನಲ್ಲಿ</string>
     <string name="notifprefs_dest_push">ಪುಶ್</string>
     <string name="notifprefs_dest_device">ಸಾಧನ</string>
+    <string name="accounts_devices">ಸಾಧನಗಳು</string>
+    <string name="accounts_forget">ಮರೆತುಬಿಡಿ</string>
+    <string name="accounts_forget_title">ಸಾಧನವನ್ನು ಮರೆಯುವುದೇ?</string>
+    <string name="accounts_forget_message">ಇದು \"%1$s\" ಸಾಧನವನ್ನು ಮರೆತು ಅದಕ್ಕೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ.</string>
+    <string name="accounts_device_seen">ಕೊನೆಯದಾಗಿ ಕಂಡದ್ದು %1$s</string>
 </resources>

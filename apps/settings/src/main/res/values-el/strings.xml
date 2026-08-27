@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Στην εφαρμογή</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Συσκευή</string>
+    <string name="accounts_devices">Συσκευές</string>
+    <string name="accounts_forget">Αφαίρεση</string>
+    <string name="accounts_forget_title">Αφαίρεση συσκευής;</string>
+    <string name="accounts_forget_message">Αυτό θα αφαιρέσει τη συσκευή \"%1$s\" και θα σταματήσει τις ειδοποιήσεις προς αυτήν.</string>
+    <string name="accounts_device_seen">Τελευταία εμφάνιση %1$s</string>
 </resources>

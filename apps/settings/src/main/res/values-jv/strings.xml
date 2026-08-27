@@ -387,4 +387,9 @@
     <string name="notifprefs_dest_app">Ing aplikasi</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Piranti</string>
+    <string name="accounts_devices">Piranti</string>
+    <string name="accounts_forget">Lalekake</string>
+    <string name="accounts_forget_title">Lalekake piranti?</string>
+    <string name="accounts_forget_message">Iki bakal nglalekake piranti \"%1$s\" lan mandhegake notifikasi menyang piranti kasebut.</string>
+    <string name="accounts_device_seen">Pungkasan katon %1$s</string>
 </resources>

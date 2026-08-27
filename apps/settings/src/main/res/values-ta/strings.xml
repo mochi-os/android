@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">செயலியில்</string>
     <string name="notifprefs_dest_push">புஷ்</string>
     <string name="notifprefs_dest_device">சாதனம்</string>
+    <string name="accounts_devices">சாதனங்கள்</string>
+    <string name="accounts_forget">மற</string>
+    <string name="accounts_forget_title">சாதனத்தை மறக்கவா?</string>
+    <string name="accounts_forget_message">இது \"%1$s\" சாதனத்தை மறந்து, அதற்கான அறிவிப்புகளை நிறுத்தும்.</string>
+    <string name="accounts_device_seen">கடைசியாகக் காணப்பட்டது %1$s</string>
 </resources>

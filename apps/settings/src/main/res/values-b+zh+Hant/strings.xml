@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">應用程式內</string>
     <string name="notifprefs_dest_push">推播</string>
     <string name="notifprefs_dest_device">裝置</string>
+    <string name="accounts_devices">裝置</string>
+    <string name="accounts_forget">忘記</string>
+    <string name="accounts_forget_title">忘記此裝置？</string>
+    <string name="accounts_forget_message">這將忘記裝置「%1$s」並停止向其發送通知。</string>
+    <string name="accounts_device_seen">最後看到 %1$s</string>
 </resources>

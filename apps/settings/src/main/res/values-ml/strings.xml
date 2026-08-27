@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">ആപ്പിൽ</string>
     <string name="notifprefs_dest_push">പുഷ്</string>
     <string name="notifprefs_dest_device">ഡിവൈസ്</string>
+    <string name="accounts_devices">ഡിവൈസുകൾ</string>
+    <string name="accounts_forget">മറക്കുക</string>
+    <string name="accounts_forget_title">ഡിവൈസ് മറക്കണോ?</string>
+    <string name="accounts_forget_message">ഇത് \"%1$s\" ഡിവൈസ് മറക്കുകയും അതിലേക്കുള്ള അറിയിപ്പുകൾ നിർത്തുകയും ചെയ്യും.</string>
+    <string name="accounts_device_seen">അവസാനം കണ്ടത് %1$s</string>
 </resources>

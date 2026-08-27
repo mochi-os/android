@@ -391,4 +391,9 @@
     <string name="notifprefs_dest_app">În aplicație</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Dispozitiv</string>
+    <string name="accounts_devices">Dispozitive</string>
+    <string name="accounts_forget">Uită</string>
+    <string name="accounts_forget_title">Uiți dispozitivul?</string>
+    <string name="accounts_forget_message">Aceasta va uita dispozitivul \"%1$s\" și va opri notificările către el.</string>
+    <string name="accounts_device_seen">Văzut ultima dată %1$s</string>
 </resources>

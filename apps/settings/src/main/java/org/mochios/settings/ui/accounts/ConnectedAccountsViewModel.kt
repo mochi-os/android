@@ -23,6 +23,7 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.R
 import org.mochios.settings.api.ConnectedAccount
 import org.mochios.settings.api.ConnectedAccountsApi
+import org.mochios.settings.api.Device
 import org.mochios.settings.api.Provider
 import javax.inject.Inject
 
@@ -30,6 +31,7 @@ data class ConnectedAccountsUiState(
     val isLoading: Boolean = true,
     val accounts: List<ConnectedAccount> = emptyList(),
     val providers: List<Provider> = emptyList(),
+    val devices: List<Device> = emptyList(),
     val error: MochiError? = null,
 )
 
@@ -52,10 +54,12 @@ class ConnectedAccountsViewModel @Inject constructor(
             try {
                 val provs = api.providers().unwrapRaw()
                 val accs = api.list().unwrapRaw()
+                val devs = api.devices().unwrapRaw()
                 _uiState.value = ConnectedAccountsUiState(
                     isLoading = false,
                     providers = provs,
                     accounts = accs,
+                    devices = devs,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
@@ -71,6 +75,9 @@ class ConnectedAccountsViewModel @Inject constructor(
     }
 
     fun remove(id: String) = mutate { api.remove(id).unwrapEmpty() }
+
+    /** Forget a device: the server drops its push account with it. */
+    fun forgetDevice(id: String) = mutate { api.forgetDevice(id).unwrapEmpty() }
 
     fun update(id: String, fields: Map<String, String>) = mutate {
         val payload = HashMap<String, String>(fields.size + 1)

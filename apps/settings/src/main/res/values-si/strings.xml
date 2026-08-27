@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">යෙදුම තුළ</string>
     <string name="notifprefs_dest_push">තල්ලු</string>
     <string name="notifprefs_dest_device">උපාංගය</string>
+    <string name="accounts_devices">උපාංග</string>
+    <string name="accounts_forget">අමතක කරන්න</string>
+    <string name="accounts_forget_title">උපාංගය අමතක කරන්නද?</string>
+    <string name="accounts_forget_message">මෙය \"%1$s\" උපාංගය අමතක කර ඒ වෙත දැනුම්දීම් නවත්වයි.</string>
+    <string name="accounts_device_seen">අවසන් වරට දුටුවේ %1$s</string>
 </resources>

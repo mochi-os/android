@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">ايپ ۾</string>
     <string name="notifprefs_dest_push">پش</string>
     <string name="notifprefs_dest_device">ڊوائيس</string>
+    <string name="accounts_devices">ڊوائيسون</string>
+    <string name="accounts_forget">وساريو</string>
+    <string name="accounts_forget_title">ڊوائيس وساريو؟</string>
+    <string name="accounts_forget_message">هي \"%1$s\" ڊوائيس کي وساري ڇڏيندو ۽ ان ڏانهن اطلاع بند ڪري ڇڏيندو.</string>
+    <string name="accounts_device_seen">آخري ڀيرو ڏٺو ويو %1$s</string>
 </resources>

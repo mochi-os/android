@@ -387,4 +387,9 @@
     <string name="notifprefs_dest_app">ໃນແອັບ</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">ອຸປະກອນ</string>
+    <string name="accounts_devices">ອຸປະກອນ</string>
+    <string name="accounts_forget">ລືມ</string>
+    <string name="accounts_forget_title">ລືມອຸປະກອນບໍ?</string>
+    <string name="accounts_forget_message">ນີ້ຈະລືມອຸປະກອນ \"%1$s\" ແລະຢຸດການແຈ້ງເຕືອນໄປຫາມັນ.</string>
+    <string name="accounts_device_seen">ເຫັນຫຼ້າສຸດ %1$s</string>
 </resources>

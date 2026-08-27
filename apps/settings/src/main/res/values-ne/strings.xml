@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">एपमा</string>
     <string name="notifprefs_dest_push">पुश</string>
     <string name="notifprefs_dest_device">उपकरण</string>
+    <string name="accounts_devices">उपकरणहरू</string>
+    <string name="accounts_forget">बिर्सनुहोस्</string>
+    <string name="accounts_forget_title">उपकरण बिर्सने?</string>
+    <string name="accounts_forget_message">यसले \"%1$s\" उपकरण बिर्सनेछ र यसमा सूचनाहरू पठाउन बन्द गर्नेछ।</string>
+    <string name="accounts_device_seen">पछिल्लो पटक देखिएको %1$s</string>
 </resources>

@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">በመተግበሪያ ውስጥ</string>
     <string name="notifprefs_dest_push">ግፊት</string>
     <string name="notifprefs_dest_device">መሳሪያ</string>
+    <string name="accounts_devices">መሳሪያዎች</string>
+    <string name="accounts_forget">እርሳ</string>
+    <string name="accounts_forget_title">መሳሪያውን ይረሱ?</string>
+    <string name="accounts_forget_message">ይህ መሳሪያውን \"%1$s\" ይረሳል እና ወደ እሱ የሚላኩ ማሳወቂያዎችን ያቆማል።</string>
+    <string name="accounts_device_seen">መጨረሻ የታየው %1$s</string>
 </resources>

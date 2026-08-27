@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Në aplikacion</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Pajisja</string>
+    <string name="accounts_devices">Pajisjet</string>
+    <string name="accounts_forget">Harro</string>
+    <string name="accounts_forget_title">Të harrohet pajisja?</string>
+    <string name="accounts_forget_message">Kjo do ta harrojë pajisjen \"%1$s\" dhe do të ndalojë njoftimet drejt saj.</string>
+    <string name="accounts_device_seen">Parë për herë të fundit %1$s</string>
 </resources>

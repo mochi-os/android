@@ -393,4 +393,9 @@
     <string name="notifprefs_dest_app">У застосунку</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Пристрій</string>
+    <string name="accounts_devices">Пристрої</string>
+    <string name="accounts_forget">Забути</string>
+    <string name="accounts_forget_title">Забути пристрій?</string>
+    <string name="accounts_forget_message">Це забуде пристрій \"%1$s\" і припинить сповіщення на нього.</string>
+    <string name="accounts_device_seen">Востаннє бачено %1$s</string>
 </resources>

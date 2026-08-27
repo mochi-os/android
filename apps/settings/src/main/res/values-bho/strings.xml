@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">ऐप में</string>
     <string name="notifprefs_dest_push">पुश</string>
     <string name="notifprefs_dest_device">उपकरण</string>
+    <string name="accounts_devices">उपकरण</string>
+    <string name="accounts_forget">भुला दीं</string>
+    <string name="accounts_forget_title">उपकरण भुला दीं?</string>
+    <string name="accounts_forget_message">ई \"%1$s\" उपकरण के भुला दी आ ओकरा सूचना भेजल बंद कर दी।</string>
+    <string name="accounts_device_seen">आखिरी बेर देखल गइल %1$s</string>
 </resources>

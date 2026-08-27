@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">لە ئەپدا</string>
     <string name="notifprefs_dest_push">پاڵ</string>
     <string name="notifprefs_dest_device">ئامێر</string>
+    <string name="accounts_devices">ئامێرەکان</string>
+    <string name="accounts_forget">لەبیرکردن</string>
+    <string name="accounts_forget_title">ئامێرەکە لەبیر بکرێت؟</string>
+    <string name="accounts_forget_message">ئەمە ئامێری \"%1$s\" لەبیر دەکات و ئاگادارکردنەوەکانی بۆ دەوەستێنێت.</string>
+    <string name="accounts_device_seen">دوایین جار بینرا %1$s</string>
 </resources>

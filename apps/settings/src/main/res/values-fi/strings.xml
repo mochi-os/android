@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Sovelluksessa</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Laite</string>
+    <string name="accounts_devices">Laitteet</string>
+    <string name="accounts_forget">Unohda</string>
+    <string name="accounts_forget_title">Unohdetaanko laite?</string>
+    <string name="accounts_forget_message">Tämä unohtaa laitteen \"%1$s\" ja lopettaa ilmoitukset siihen.</string>
+    <string name="accounts_device_seen">Viimeksi nähty %1$s</string>
 </resources>

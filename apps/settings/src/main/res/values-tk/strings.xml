@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Programmada</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Enjam</string>
+    <string name="accounts_devices">Enjamlar</string>
+    <string name="accounts_forget">Unut</string>
+    <string name="accounts_forget_title">Enjam unudylsynmy?</string>
+    <string name="accounts_forget_message">Bu \"%1$s\" enjamyny unudar we oňa bildirişleri togtadar.</string>
+    <string name="accounts_device_seen">Soňky gezek görüldi %1$s</string>
 </resources>

@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Aplicacionpi</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Mañana</string>
+    <string name="accounts_devices">Mañanakuna</string>
+    <string name="accounts_forget">Qunqay</string>
+    <string name="accounts_forget_title">Mañanata qunqaychu?</string>
+    <string name="accounts_forget_message">Kayqa \"%1$s\" mañanata qunqanqa, willakuykunatapas chayman mana apachinqachu.</string>
+    <string name="accounts_device_seen">Qhipa kaq rikusqa %1$s</string>
 </resources>

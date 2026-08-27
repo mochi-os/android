@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Aplicación-pe</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Mba\'e</string>
+    <string name="accounts_devices">Mba\'ekuéra</string>
+    <string name="accounts_forget">Hesarái</string>
+    <string name="accounts_forget_title">Hesarái mba\'e rehe?</string>
+    <string name="accounts_forget_message">Kóva ohesaráita \"%1$s\" mba\'égui ha omboykéta marandu chupe.</string>
+    <string name="accounts_device_seen">Ojehechahague paha %1$s</string>
 </resources>

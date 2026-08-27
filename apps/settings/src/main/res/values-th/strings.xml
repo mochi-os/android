@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">ในแอป</string>
     <string name="notifprefs_dest_push">พุช</string>
     <string name="notifprefs_dest_device">อุปกรณ์</string>
+    <string name="accounts_devices">อุปกรณ์</string>
+    <string name="accounts_forget">ลืม</string>
+    <string name="accounts_forget_title">ลืมอุปกรณ์นี้หรือไม่</string>
+    <string name="accounts_forget_message">การดำเนินการนี้จะลืมอุปกรณ์ \"%1$s\" และหยุดการแจ้งเตือนไปยังอุปกรณ์นี้</string>
+    <string name="accounts_device_seen">เห็นล่าสุด %1$s</string>
 </resources>

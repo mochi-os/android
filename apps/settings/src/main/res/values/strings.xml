@@ -255,6 +255,11 @@
     <string name="accounts_remove">Remove</string>
     <string name="accounts_remove_title">Remove account?</string>
     <string name="accounts_remove_message">This will remove the connected account \"%1$s\".</string>
+    <string name="accounts_devices">Devices</string>
+    <string name="accounts_device_seen">Last seen %1$s</string>
+    <string name="accounts_forget">Forget</string>
+    <string name="accounts_forget_title">Forget device?</string>
+    <string name="accounts_forget_message">This will forget the device \"%1$s\" and stop notifications to it.</string>
 
     <!-- System documents -->
     <string name="system_documents_title">Documents</string>

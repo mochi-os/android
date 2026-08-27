@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">యాప్‌లో</string>
     <string name="notifprefs_dest_push">పుష్</string>
     <string name="notifprefs_dest_device">పరికరం</string>
+    <string name="accounts_devices">పరికరాలు</string>
+    <string name="accounts_forget">మర్చిపో</string>
+    <string name="accounts_forget_title">పరికరాన్ని మర్చిపోవాలా?</string>
+    <string name="accounts_forget_message">ఇది \"%1$s\" పరికరాన్ని మర్చిపోయి దానికి నోటిఫికేషన్‌లను ఆపివేస్తుంది.</string>
+    <string name="accounts_device_seen">చివరిసారి కనిపించింది %1$s</string>
 </resources>

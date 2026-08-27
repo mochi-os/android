@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">In die app</string>
     <string name="notifprefs_dest_push">Stoot</string>
     <string name="notifprefs_dest_device">Toestel</string>
+    <string name="accounts_devices">Toestelle</string>
+    <string name="accounts_forget">Vergeet</string>
+    <string name="accounts_forget_title">Vergeet toestel?</string>
+    <string name="accounts_forget_message">Dit sal die toestel \"%1$s\" vergeet en kennisgewings daarheen stop.</string>
+    <string name="accounts_device_seen">Laas gesien %1$s</string>
 </resources>

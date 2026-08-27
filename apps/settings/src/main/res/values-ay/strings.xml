@@ -388,4 +388,9 @@
     <string name="notifprefs_dest_app">Aplicación manqhana</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Dispositivo</string>
+    <string name="accounts_devices">Dispositivonaka</string>
+    <string name="accounts_forget">Armtaña</string>
+    <string name="accounts_forget_title">Dispositivo armtañati?</string>
+    <string name="accounts_forget_message">Akax \"%1$s\" dispositivo armtani, yatiyäwinakasa jan ukar puriñapataki.</string>
+    <string name="accounts_device_seen">Qhipa uñjata %1$s</string>
 </resources>

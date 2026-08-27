@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Во апликацијата</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Уред</string>
+    <string name="accounts_devices">Уреди</string>
+    <string name="accounts_forget">Заборави</string>
+    <string name="accounts_forget_title">Да се заборави уредот?</string>
+    <string name="accounts_forget_message">Ова ќе го заборави уредот \"%1$s\" и ќе ги запре известувањата до него.</string>
+    <string name="accounts_device_seen">Последен пат виден %1$s</string>
 </resources>

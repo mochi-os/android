@@ -387,4 +387,9 @@
     <string name="notifprefs_dest_app">အက်ပ်အတွင်း</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">ကိရိယာ</string>
+    <string name="accounts_devices">ကိရိယာများ</string>
+    <string name="accounts_forget">မေ့ပစ်ရန်</string>
+    <string name="accounts_forget_title">ကိရိယာကို မေ့ပစ်မလား?</string>
+    <string name="accounts_forget_message">ဤသည်က \"%1$s\" ကိရိယာကို မေ့ပစ်ပြီး ၎င်းသို့ အကြောင်းကြားချက်များ ပို့ခြင်းကို ရပ်ပါမည်။</string>
+    <string name="accounts_device_seen">နောက်ဆုံးတွေ့ %1$s</string>
 </resources>

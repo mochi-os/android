@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">Հավելվածում</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Սարք</string>
+    <string name="accounts_devices">Սարքեր</string>
+    <string name="accounts_forget">Մոռանալ</string>
+    <string name="accounts_forget_title">Մոռանա՞լ սարքը</string>
+    <string name="accounts_forget_message">Սա կմոռանա \"%1$s\" սարքը և կդադարեցնի ծանուցումները դրան:</string>
+    <string name="accounts_device_seen">Վերջին անգամ տեսնված %1$s</string>
 </resources>

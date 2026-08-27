@@ -389,4 +389,9 @@
     <string name="notifprefs_dest_app">In der App</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Gerät</string>
+    <string name="accounts_devices">Geräte</string>
+    <string name="accounts_forget">Vergessen</string>
+    <string name="accounts_forget_title">Gerät vergessen?</string>
+    <string name="accounts_forget_message">Dadurch wird das Gerät \"%1$s\" vergessen und es erhält keine Benachrichtigungen mehr.</string>
+    <string name="accounts_device_seen">Zuletzt gesehen %1$s</string>
 </resources>

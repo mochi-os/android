@@ -390,4 +390,9 @@
     <string name="notifprefs_dest_app">Dans l\'application</string>
     <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Appareil</string>
+    <string name="accounts_devices">Appareils</string>
+    <string name="accounts_forget">Oublier</string>
+    <string name="accounts_forget_title">Oublier l\'appareil ?</string>
+    <string name="accounts_forget_message">Cela oubliera l\'appareil « %1$s » et arrêtera les notifications vers celui-ci.</string>
+    <string name="accounts_device_seen">Vu pour la dernière fois %1$s</string>
 </resources>
