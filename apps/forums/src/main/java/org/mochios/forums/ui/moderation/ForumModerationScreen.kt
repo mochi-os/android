@@ -37,10 +37,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
-import androidx.compose.material3.TabRowDefaults
-import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -70,6 +66,8 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
@@ -138,34 +136,13 @@ fun ForumModerationScreen(
         },
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-            TabRow(
-                selectedTabIndex = selectedIndex,
-                containerColor = MaterialTheme.colorScheme.surface,
-                // Primary colour is reserved for the selected tab's divider;
-                // the labels stay neutral. Mirrors the forum settings tabs.
-                indicator = { tabPositions ->
-                    TabRowDefaults.SecondaryIndicator(
-                        modifier = Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
-                        color = MaterialTheme.colorScheme.primary,
-                    )
+            MochiTabRow(
+                tabs = TABS.map { entry ->
+                    MochiTab(stringResource(entry.titleRes), entry.icon)
                 },
-            ) {
-                TABS.forEachIndexed { index, entry ->
-                    Tab(
-                        selected = selectedIndex == index,
-                        onClick = { viewModel.selectTab(entry.tab) },
-                        selectedContentColor = MaterialTheme.colorScheme.onSurface,
-                        unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                        icon = { Icon(entry.icon, contentDescription = null) },
-                        text = {
-                            Text(
-                                stringResource(entry.titleRes),
-                                style = MaterialTheme.typography.labelMedium,
-                            )
-                        },
-                    )
-                }
-            }
+                selectedIndex = selectedIndex,
+                onSelect = { index -> viewModel.selectTab(TABS[index].tab) },
+            )
 
             when {
                 uiState.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

@@ -24,10 +24,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
-import androidx.compose.material3.TabRowDefaults
-import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -51,6 +47,8 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.Section
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
@@ -140,35 +138,13 @@ fun ProjectSettingsScreen(
                 )
 
                 else -> {
-                    TabRow(
-                        selectedTabIndex = selectedIndex,
-                        modifier = Modifier.fillMaxWidth(),
-                        containerColor = MaterialTheme.colorScheme.surface,
-                        // Primary colour is reserved for the selected tab's
-                        // divider; the labels stay neutral.
-                        indicator = { tabPositions ->
-                            TabRowDefaults.SecondaryIndicator(
-                                modifier = Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
-                                color = MaterialTheme.colorScheme.primary
-                            )
-                        }
-                    ) {
-                        tabs.forEachIndexed { index, tab ->
-                            Tab(
-                                selected = selectedIndex == index,
-                                onClick = { selectedTabKey = tab.name },
-                                selectedContentColor = MaterialTheme.colorScheme.onSurface,
-                                unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                                icon = { Icon(tab.icon, contentDescription = null) },
-                                text = {
-                                    Text(
-                                        stringResource(tab.titleRes),
-                                        style = MaterialTheme.typography.labelMedium
-                                    )
-                                }
-                            )
-                        }
-                    }
+                    MochiTabRow(
+                        tabs = tabs.map { tab ->
+                            MochiTab(stringResource(tab.titleRes), tab.icon)
+                        },
+                        selectedIndex = selectedIndex,
+                        onSelect = { index -> selectedTabKey = tabs[index].name },
+                    )
 
                     when (selectedTab) {
                         SettingsTab.General -> GeneralTab(

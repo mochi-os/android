@@ -27,8 +27,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -51,6 +49,8 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
@@ -86,18 +86,14 @@ fun ReviewsScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
-            TabRow(selectedTabIndex = state.selectedTab.ordinal) {
-                Tab(
-                    selected = state.selectedTab == ReviewsTab.RECEIVED,
-                    onClick = { viewModel.selectTab(ReviewsTab.RECEIVED) },
-                    text = { Text(stringResource(R.string.market_reviews_tab_received)) },
-                )
-                Tab(
-                    selected = state.selectedTab == ReviewsTab.SENT,
-                    onClick = { viewModel.selectTab(ReviewsTab.SENT) },
-                    text = { Text(stringResource(R.string.market_reviews_tab_sent)) },
-                )
-            }
+            MochiTabRow(
+                tabs = listOf(
+                    MochiTab(stringResource(R.string.market_reviews_tab_received)),
+                    MochiTab(stringResource(R.string.market_reviews_tab_sent)),
+                ),
+                selectedIndex = state.selectedTab.ordinal,
+                onSelect = { index -> viewModel.selectTab(ReviewsTab.entries[index]) },
+            )
             Box(modifier = Modifier.weight(1f)) {
                 when (state.selectedTab) {
                     ReviewsTab.RECEIVED -> {

@@ -26,8 +26,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -51,6 +49,8 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
@@ -116,15 +116,11 @@ private fun BidsTabRow(active: BidsFilter, onSelected: (BidsFilter) -> Unit) {
         BidsFilter.LOST to R.string.market_bids_tab_lost,
     )
     val activeIndex = tabs.indexOfFirst { it.first == active }.coerceAtLeast(0)
-    TabRow(selectedTabIndex = activeIndex) {
-        tabs.forEachIndexed { index, (filter, labelRes) ->
-            Tab(
-                selected = index == activeIndex,
-                onClick = { onSelected(filter) },
-                text = { Text(stringResource(labelRes)) },
-            )
-        }
-    }
+    MochiTabRow(
+        tabs = tabs.map { (_, labelRes) -> MochiTab(stringResource(labelRes)) },
+        selectedIndex = activeIndex,
+        onSelect = { index -> onSelected(tabs[index].first) },
+    )
 }
 
 @Composable

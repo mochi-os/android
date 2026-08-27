@@ -37,8 +37,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -67,6 +65,8 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
@@ -252,15 +252,11 @@ fun DesignScreen(
                                 stringResource(R.string.projects_design_tab_classes),
                                 stringResource(R.string.projects_design_tab_views)
                             )
-                            TabRow(selectedTabIndex = selectedTab) {
-                                tabs.forEachIndexed { index, title ->
-                                    Tab(
-                                        selected = selectedTab == index,
-                                        onClick = { selectedTab = index },
-                                        text = { Text(title) }
-                                    )
-                                }
-                            }
+                            MochiTabRow(
+                                tabs = tabs.map { title -> MochiTab(title) },
+                                selectedIndex = selectedTab,
+                                onSelect = { index -> selectedTab = index },
+                            )
 
                             when (selectedTab) {
                                 0 -> ClassesTab(

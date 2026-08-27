@@ -34,8 +34,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -62,6 +60,8 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -131,18 +131,14 @@ fun NotificationPrefsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             Column(modifier = Modifier.fillMaxSize()) {
-                TabRow(selectedTabIndex = if (state.tab == NotifTab.CATEGORIES) 0 else 1) {
-                    Tab(
-                        selected = state.tab == NotifTab.CATEGORIES,
-                        onClick = { viewModel.setTab(NotifTab.CATEGORIES) },
-                        text = { Text(stringResource(R.string.notifprefs_tab_categories)) },
-                    )
-                    Tab(
-                        selected = state.tab == NotifTab.TOPICS,
-                        onClick = { viewModel.setTab(NotifTab.TOPICS) },
-                        text = { Text(stringResource(R.string.notifprefs_tab_topics)) },
-                    )
-                }
+                MochiTabRow(
+                    tabs = listOf(
+                        MochiTab(stringResource(R.string.notifprefs_tab_categories)),
+                        MochiTab(stringResource(R.string.notifprefs_tab_topics)),
+                    ),
+                    selectedIndex = state.tab.ordinal,
+                    onSelect = { index -> viewModel.setTab(NotifTab.entries[index]) },
+                )
                 when {
                     state.isLoading -> Box(Modifier.fillMaxSize()) {
                         CircularProgressIndicator(Modifier.align(Alignment.Center))

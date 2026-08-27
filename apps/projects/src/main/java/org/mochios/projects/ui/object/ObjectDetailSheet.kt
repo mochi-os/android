@@ -24,7 +24,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SecondaryScrollableTabRow
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -49,6 +48,8 @@ import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectDetails
@@ -219,24 +220,12 @@ fun ObjectDetailSheet(
                         stringResource(R.string.projects_object_tab_activity),
                         stringResource(R.string.projects_object_tab_requests),
                     )
-                    // Scrollable, not fixed: a fixed row splits the width into
-                    // equal columns, and a quarter of a phone is too narrow for
-                    // "Properties"/"Comments", which then wrap to two lines.
-                    // Sizing each tab to its label keeps every one on one line.
-                    SecondaryScrollableTabRow(
-                        modifier = Modifier.fillMaxWidth(),
+                    MochiTabRow(
+                        tabs = tabs.map { title -> MochiTab(title) },
+                        selectedIndex = uiState.selectedTab,
+                        onSelect = { index -> viewModel.selectTab(index) },
                         containerColor = Color.Transparent,
-                        selectedTabIndex = uiState.selectedTab,
-                        edgePadding = 0.dp
-                    ) {
-                        tabs.forEachIndexed { index, title ->
-                            Tab(
-                                selected = uiState.selectedTab == index,
-                                onClick = { viewModel.selectTab(index) },
-                                text = { Text(title, maxLines = 1) }
-                            )
-                        }
-                    }
+                    )
 
 
                     Spacer(modifier = Modifier.height(8.dp))

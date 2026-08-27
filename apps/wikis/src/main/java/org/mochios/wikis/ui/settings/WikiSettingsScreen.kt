@@ -23,10 +23,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
-import androidx.compose.material3.TabRowDefaults
-import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -46,6 +42,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
 
@@ -128,44 +126,23 @@ fun WikiSettingsScreen(
                     CircularProgressIndicator()
                 }
             } else {
-                TabRow(
-                    selectedTabIndex = activeIndex,
-                    modifier = Modifier.fillMaxWidth(),
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    // Primary colour is reserved for the selected tab's
-                    // divider; the labels stay neutral.
-                    indicator = { tabPositions ->
-                        TabRowDefaults.SecondaryIndicator(
-                            modifier = Modifier.tabIndicatorOffset(tabPositions[activeIndex]),
-                            color = MaterialTheme.colorScheme.primary,
-                        )
+                MochiTabRow(
+                    tabs = tabKeys.map { tab ->
+                        MochiTab(stringResource(tab.titleRes), tab.icon)
                     },
-                ) {
-                    tabKeys.forEach { tab ->
-                        Tab(
-                            selected = activeTabKey == tab,
-                            onClick = {
-                                // Don't push a new entry for the active tab.
-                                if (tab != activeTabKey) {
-                                    navController.navigate(
-                                        WikisApp.settings(wikiId, tab.routeKey),
-                                    ) {
-                                        launchSingleTop = true
-                                    }
-                                }
-                            },
-                            selectedContentColor = MaterialTheme.colorScheme.onSurface,
-                            unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                            icon = { Icon(tab.icon, contentDescription = null) },
-                            text = {
-                                Text(
-                                    text = stringResource(tab.titleRes),
-                                    style = MaterialTheme.typography.labelMedium,
-                                )
-                            },
-                        )
-                    }
-                }
+                    selectedIndex = activeIndex,
+                    onSelect = { index ->
+                        val tab = tabKeys[index]
+                        // Don't push a new entry for the active tab.
+                        if (tab != activeTabKey) {
+                            navController.navigate(
+                                WikisApp.settings(wikiId, tab.routeKey),
+                            ) {
+                                launchSingleTop = true
+                            }
+                        }
+                    },
+                )
 
                 when (activeTabKey) {
                     SettingsTabKey.Settings -> SettingsTab(
