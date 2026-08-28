@@ -46,6 +46,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiButton
@@ -73,7 +74,6 @@ fun FindWikisScreen(
     // Snackbar feedback messages — collected once before LaunchedEffect so
     // they can be passed into the coroutine, since stringResource() is only
     // valid inside a composable.
-    val successMsg = stringResource(R.string.wikis_subscribe_success)
     val retryMsg = stringResource(R.string.wikis_subscribe_502_retry)
     val failedFallback = stringResource(R.string.wikis_subscribe_failed)
 
@@ -81,11 +81,10 @@ fun FindWikisScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is FindEvent.SubscribeSuccess -> {
-                    snackbarHostState.showSnackbar(successMsg)
                     onSubscribed(event.wikiId)
                 }
                 is FindEvent.SubscribeRetried -> {
-                    snackbarHostState.showSnackbar(retryMsg)
+                    launch { snackbarHostState.showSnackbar(retryMsg) }
                 }
                 is FindEvent.SubscribeFailed -> {
                     val msg = event.error.userMessage().ifBlank { failedFallback }

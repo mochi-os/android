@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">이름, ID, 지문 또는 URL로 검색…</string>
     <string name="wikis_join_search_button">위키 검색…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">위키 구독 완료</string>
     <string name="wikis_subscribe_502_retry">추천 서버 없이 재시도 중…</string>
     <string name="wikis_comments_title_template">%1$s - 댓글</string>
     <string name="wikis_comment_form_placeholder_new">댓글 작성…</string>

@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື ຫຼື URL…</string>
     <string name="wikis_join_search_button">ຄົ້ນຫາ wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">ສະໝັກຮັບ wiki ແລ້ວ</string>
     <string name="wikis_subscribe_502_retry">ກຳລັງລອງໃໝ່ໂດຍບໍ່ໃຊ້ເຊີບເວີທີ່ແນະນຳ…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">ຂຽນຄຳເຫັນ…</string>

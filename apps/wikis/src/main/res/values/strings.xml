@@ -120,7 +120,6 @@
     <string name="wikis_create_cancel">Cancel</string>
 
     <!-- Subscribe feedback -->
-    <string name="wikis_subscribe_success">Subscribed to wiki</string>
     <string name="wikis_subscribe_502_retry">Retrying without the suggested server…</string>
 
     <!-- Comments screen -->

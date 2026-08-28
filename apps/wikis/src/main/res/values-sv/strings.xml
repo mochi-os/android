@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Sök efter namn, ID, fingeravtryck eller URL…</string>
     <string name="wikis_join_search_button">Sök efter wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Prenumererar på wiki</string>
     <string name="wikis_subscribe_502_retry">Försöker igen utan den föreslagna servern…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentarer</string>
     <string name="wikis_comment_form_placeholder_new">Skriv en kommentar…</string>

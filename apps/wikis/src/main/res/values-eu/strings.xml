@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">Bilatu izenez, IDz, hatz-markaz edo URLz…</string>
     <string name="wikis_join_search_button">Bilatu wikiak…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wikira harpidetua</string>
     <string name="wikis_subscribe_502_retry">Berriro saiatzen iradokitako zerbitzaririk gabe…</string>
     <string name="wikis_comments_title_template">%1$s - Iruzkinak</string>
     <string name="wikis_comment_form_placeholder_new">Idatzi iruzkina…</string>

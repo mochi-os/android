@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Zoek op naam, ID, vingerafdruk of URL…</string>
     <string name="wikis_join_search_button">Wikis zoeken…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Geabonneerd op wiki</string>
     <string name="wikis_subscribe_502_retry">Opnieuw proberen zonder de voorgestelde server…</string>
     <string name="wikis_comments_title_template">%1$s - Opmerkingen</string>
     <string name="wikis_comment_form_placeholder_new">Schrijf een opmerking…</string>

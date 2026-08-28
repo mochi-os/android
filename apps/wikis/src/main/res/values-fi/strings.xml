@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Etsi nimellä, ID:llä, sormenjäljellä tai URL:lla…</string>
     <string name="wikis_join_search_button">Etsi wikejä…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Tilattu wiki</string>
     <string name="wikis_subscribe_502_retry">Yritetään uudelleen ilman ehdotettua palvelinta…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentit</string>
     <string name="wikis_comment_form_placeholder_new">Kirjoita kommentti…</string>

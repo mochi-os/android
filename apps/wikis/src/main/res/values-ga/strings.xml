@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Cuardaigh de réir ainm, ID, méarloirg nó URL…</string>
     <string name="wikis_join_search_button">Cuardaigh wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Liostáilte leis an wiki</string>
     <string name="wikis_subscribe_502_retry">Ag atriail gan an freastalaí molta…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Scríobh tuairim…</string>

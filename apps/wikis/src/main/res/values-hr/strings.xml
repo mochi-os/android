@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Pretraži po imenu, ID, otisku ili URL…</string>
     <string name="wikis_join_search_button">Pretraži wikie…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Pretplaćeni na wiki</string>
     <string name="wikis_subscribe_502_retry">Pokušavam ponovno bez predloženog poslužitelja…</string>
     <string name="wikis_comments_title_template">%1$s - Komentari</string>
     <string name="wikis_comment_form_placeholder_new">Napišite komentar…</string>

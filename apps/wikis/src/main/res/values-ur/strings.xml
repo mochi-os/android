@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">نام، ID، فنگرپرنٹ یا URL سے تلاش کریں…</string>
     <string name="wikis_join_search_button">وکیز تلاش کریں…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">وکی سبسکرائب کیا</string>
     <string name="wikis_subscribe_502_retry">تجویز کردہ سرور کے بغیر دوبارہ کوشش کر رہے ہیں…</string>
     <string name="wikis_comments_title_template">%1$s - تبصرے</string>
     <string name="wikis_comment_form_placeholder_new">تبصرہ لکھیں…</string>

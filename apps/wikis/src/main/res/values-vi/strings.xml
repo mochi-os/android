@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Tìm theo tên, ID, dấu vân tay hoặc URL…</string>
     <string name="wikis_join_search_button">Tìm kiếm wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Đã đăng ký wiki</string>
     <string name="wikis_subscribe_502_retry">Đang thử lại không dùng máy chủ được đề xuất…</string>
     <string name="wikis_comments_title_template">%1$s - Bình luận</string>
     <string name="wikis_comment_form_placeholder_new">Viết bình luận…</string>

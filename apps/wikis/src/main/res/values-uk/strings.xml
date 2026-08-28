@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Пошук за іменем, ID, відбитком або URL…</string>
     <string name="wikis_join_search_button">Пошук вікі…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Підписано на вікі</string>
     <string name="wikis_subscribe_502_retry">Повторна спроба без запропонованого сервера…</string>
     <string name="wikis_comments_title_template">%1$s - Коментарі</string>
     <string name="wikis_comment_form_placeholder_new">Напишіть коментар…</string>

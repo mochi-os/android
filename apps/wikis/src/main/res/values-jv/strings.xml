@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Golek miturut jeneng, ID, sidik jari, utawa URL…</string>
     <string name="wikis_join_search_button">Golek wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wis langganan wiki</string>
     <string name="wikis_subscribe_502_retry">Nyoba maneh tanpa server sing disaranake…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Tulis komentar…</string>

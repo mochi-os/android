@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">依名稱、ID、指紋或 URL 搜尋…</string>
     <string name="wikis_join_search_button">搜尋 wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">已訂閱 wiki</string>
     <string name="wikis_subscribe_502_retry">不使用建議的伺服器重試…</string>
     <string name="wikis_comments_title_template">%1$s - 評論</string>
     <string name="wikis_comment_form_placeholder_new">撰寫評論…</string>

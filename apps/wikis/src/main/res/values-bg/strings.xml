@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Търсене по име, ID, отпечатък или URL…</string>
     <string name="wikis_join_search_button">Търсене на wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Абониран за wiki</string>
     <string name="wikis_subscribe_502_retry">Опит отново без предложения сървър…</string>
     <string name="wikis_comments_title_template">%1$s - Коментари</string>
     <string name="wikis_comment_form_placeholder_new">Напишете коментар…</string>

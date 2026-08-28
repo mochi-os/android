@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Bi nav, ID, şopa tiliyê an URL bigere…</string>
     <string name="wikis_join_search_button">Li wikiyan bigere…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Abone bû ji wiki</string>
     <string name="wikis_subscribe_502_retry">Bêyî rajekarê pêşniyarkirî ji nû ve tê ceribandin…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Şîroveyekê binivîse…</string>

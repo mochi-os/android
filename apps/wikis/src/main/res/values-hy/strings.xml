@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Որոնել ըստ անվան, ID-ի, մատնահետքի կամ URL-ի…</string>
     <string name="wikis_join_search_button">Որոնել wiki-ներ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Բաժանորդագրվել եք wiki-ին</string>
     <string name="wikis_subscribe_502_retry">Կրկին փորձում ենք առանց առաջարկված սերվերի…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Գրեք մեկնաբանություն…</string>

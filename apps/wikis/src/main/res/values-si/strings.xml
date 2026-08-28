@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">නම, ID, ඇඟිලි සලකුණ හෝ URL අනුව සොයන්න…</string>
     <string name="wikis_join_search_button">wiki සොයන්න…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki වෙත දායක විය</string>
     <string name="wikis_subscribe_502_retry">යෝජිත සේවාදායකය නොමැතිව නැවත උත්සාහ කරමින්…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">අදහසක් ලියන්න…</string>

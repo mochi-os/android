@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">নাম, আইডি, ফিঙ্গারপ্রিন্ট বা URL দিয়ে খুঁজুন…</string>
     <string name="wikis_join_search_button">wikis খুঁজুন…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki সাবস্ক্রাইব করা হয়েছে</string>
     <string name="wikis_subscribe_502_retry">সাজেস্টেড সার্ভার ছাড়া আবার চেষ্টা করছে…</string>
     <string name="wikis_comments_title_template">%1$s - মন্তব্য</string>
     <string name="wikis_comment_form_placeholder_new">একটি মন্তব্য লিখুন…</string>

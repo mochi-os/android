@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">البحث بالاسم أو المعرف أو البصمة أو الرابط…</string>
     <string name="wikis_join_search_button">البحث عن ويكي…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">تم الاشتراك في الويكي</string>
     <string name="wikis_subscribe_502_retry">إعادة المحاولة بدون الخادم المقترح…</string>
     <string name="wikis_comments_title_template">%1$s - التعليقات</string>
     <string name="wikis_comment_form_placeholder_new">اكتب تعليقاً…</string>

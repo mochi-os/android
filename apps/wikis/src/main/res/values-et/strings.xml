@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Otsi nime, ID, sõrmejälje või URL järgi…</string>
     <string name="wikis_join_search_button">Otsi wikist…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Tellitud wikist</string>
     <string name="wikis_subscribe_502_retry">Proovin uuesti ilma soovitatud serverita…</string>
     <string name="wikis_comments_title_template">%1$s - Kommentaarid</string>
     <string name="wikis_comment_form_placeholder_new">Kirjuta kommentaar…</string>

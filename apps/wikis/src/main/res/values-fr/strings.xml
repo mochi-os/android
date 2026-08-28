@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Rechercher par nom, ID, empreinte ou URL…</string>
     <string name="wikis_join_search_button">Rechercher des wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Abonné au wiki</string>
     <string name="wikis_subscribe_502_retry">Nouvelle tentative sans le serveur suggéré…</string>
     <string name="wikis_comments_title_template">%1$s - Commentaires</string>
     <string name="wikis_comment_form_placeholder_new">Écrire un commentaire…</string>

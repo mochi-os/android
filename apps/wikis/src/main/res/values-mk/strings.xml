@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">Барај по име, ID, отпечаток или URL…</string>
     <string name="wikis_join_search_button">Барај wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Претплатени на wiki</string>
     <string name="wikis_subscribe_502_retry">Се обидува повторно без предложениот сервер…</string>
     <string name="wikis_comments_title_template">%1$s - Коментари</string>
     <string name="wikis_comment_form_placeholder_new">Напишете коментар…</string>

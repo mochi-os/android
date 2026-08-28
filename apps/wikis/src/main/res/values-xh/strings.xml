@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Khangela ngegama, i-ID, umnwe okanye i-URL…</string>
     <string name="wikis_join_search_button">Khangela ii-wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Ubhalisele i-wiki</string>
     <string name="wikis_subscribe_502_retry">Kuzanywa kwakhona ngaphandle kweseva ecetyisiweyo…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Bhala igqabantshintshi…</string>

@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Hľadať podľa názvu, ID, odtlačku alebo URL…</string>
     <string name="wikis_join_search_button">Hľadať wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wiki odberá sa</string>
     <string name="wikis_subscribe_502_retry">Opakujem bez navrhnutého servera…</string>
     <string name="wikis_comments_title_template">%1$s - Komentáre</string>
     <string name="wikis_comment_form_placeholder_new">Napíšte komentár…</string>

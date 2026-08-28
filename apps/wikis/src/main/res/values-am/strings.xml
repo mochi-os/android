@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">በስም፣ በID፣ በጣት አሻራ ወይም በURL ይፈልጉ…</string>
     <string name="wikis_join_search_button">wiki ዎችን ይፈልጉ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">ለwiki ተመዝግቧል</string>
     <string name="wikis_subscribe_502_retry">የተጠቆመውን አገልጋይ ሳይጠቀም እንደገና እየሞከረ ነው…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">አስተያየት ይጻፉ…</string>

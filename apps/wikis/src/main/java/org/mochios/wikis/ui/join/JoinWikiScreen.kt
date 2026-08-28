@@ -71,14 +71,12 @@ fun JoinWikiScreen(
     // join result lands in — drop it before the request goes out.
     val keyboardController = LocalSoftwareKeyboardController.current
 
-    val successMsg = stringResource(R.string.wikis_subscribe_success)
     val failedFallback = stringResource(R.string.wikis_subscribe_failed)
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
                 is JoinEvent.Success -> {
-                    snackbarHostState.showSnackbar(successMsg)
                     onJoined(event.wikiId)
                 }
                 is JoinEvent.Failed -> {

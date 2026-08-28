@@ -184,7 +184,6 @@ class FindWikisViewModel @Inject constructor(
             )
             val landingId = result.fingerprint.ifEmpty { result.id }
             _uiState.value = _uiState.value.copy(
-                pendingId = null,
                 subscribedIds = _uiState.value.subscribedIds + setOfNotNull(
                     result.id.takeIf { it.isNotEmpty() },
                     result.fingerprint.takeIf { it.isNotEmpty() },

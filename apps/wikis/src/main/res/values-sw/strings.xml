@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">Tafuta kwa jina, ID, alama ya kidole, au URL…</string>
     <string name="wikis_join_search_button">Tafuta wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Umejiandikisha kwenye wiki</string>
     <string name="wikis_subscribe_502_retry">Inajaribu tena bila seva iliyopendekezwa…</string>
     <string name="wikis_comments_title_template">%1$s - Maoni</string>
     <string name="wikis_comment_form_placeholder_new">Andika maoni…</string>

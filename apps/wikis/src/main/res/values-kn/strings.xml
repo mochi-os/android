@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅಥವಾ URL ಮೂಲಕ ಹುಡುಕಿ…</string>
     <string name="wikis_join_search_button">wiki ಗಳನ್ನು ಹುಡುಕಿ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki ಗೆ ಚಂದಾದಾರರಾಗಿದ್ದೀರಿ</string>
     <string name="wikis_subscribe_502_retry">ಸೂಚಿಸಿದ ಸರ್ವರ್ ಇಲ್ಲದೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ…</string>

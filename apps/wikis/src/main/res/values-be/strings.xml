@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">Пошук па імені, ID, адбітку або URL…</string>
     <string name="wikis_join_search_button">Пошук wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Падпісаны на wiki</string>
     <string name="wikis_subscribe_502_retry">Паўторная спроба без прапанаванага сервера…</string>
     <string name="wikis_comments_title_template">%1$s - Каментары</string>
     <string name="wikis_comment_form_placeholder_new">Напішыце каментар…</string>

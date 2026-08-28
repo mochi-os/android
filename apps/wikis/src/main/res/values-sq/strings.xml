@@ -256,7 +256,6 @@
     <string name="wikis_find_search_placeholder">Kërko sipas emrit, ID, gjurmës së gishtit ose URL…</string>
     <string name="wikis_join_search_button">Kërko wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">U pajtove në wiki</string>
     <string name="wikis_subscribe_502_retry">Po provohet përsëri pa serverin e propozuar…</string>
     <string name="wikis_comments_title_template">%1$s - Komente</string>
     <string name="wikis_comment_form_placeholder_new">Shkruaj një koment…</string>

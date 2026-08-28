@@ -109,7 +109,6 @@
     <string name="wikis_join_submit">Répliquer le wiki</string>
     <string name="wikis_create_title">Créer un wiki</string>
     <string name="wikis_create_privacy_label">Permettre à quiconque de rechercher le wiki</string>
-    <string name="wikis_subscribe_success">Abonné au wiki</string>
     <string name="wikis_subscribe_502_retry">Nouvel essai sans le serveur suggéré…</string>
     <string name="wikis_comments_title_template">%1$s - Commentaires</string>
     <string name="wikis_comments_empty_title">Aucun commentaire pour le moment</string>

@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Chwilio yn ôl enw, ID, olion bysedd neu URL…</string>
     <string name="wikis_join_search_button">Chwilio am wicis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wedi tanysgrifio i’r wiki</string>
     <string name="wikis_subscribe_502_retry">Yn ceisio eto heb y gweinydd a awgrymwyd…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Ysgrifennu sylw…</string>

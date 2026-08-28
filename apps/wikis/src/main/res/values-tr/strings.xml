@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">İsim, kimlik, parmak izi veya URL\'ye göre ara…</string>
     <string name="wikis_join_search_button">Wikis ara…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wiki\'ye abone olundu</string>
     <string name="wikis_subscribe_502_retry">Önerilen sunucu olmadan yeniden deneniyor…</string>
     <string name="wikis_comments_title_template">%1$s - Yorumlar</string>
     <string name="wikis_comment_form_placeholder_new">Yorum yaz…</string>

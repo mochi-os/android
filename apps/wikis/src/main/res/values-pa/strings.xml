@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">ਨਾਮ, ID, ਫਿੰਗਰਪ੍ਰਿੰਟ ਜਾਂ URL ਦੁਆਰਾ ਖੋਜੋ…</string>
     <string name="wikis_join_search_button">wiki ਖੋਜੋ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki ਲਈ ਸਬਸਕ੍ਰਾਈਬ ਕੀਤਾ</string>
     <string name="wikis_subscribe_502_retry">ਸੁਝਾਏ ਸਰਵਰ ਤੋਂ ਬਿਨਾਂ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">ਟਿੱਪਣੀ ਲਿਖੋ…</string>

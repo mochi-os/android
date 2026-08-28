@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Leita eftir nafni, auðkenni, fingrafari eða vefslóð…</string>
     <string name="wikis_join_search_button">Leita að wiki-um…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Áskrifandi að wiki</string>
     <string name="wikis_subscribe_502_retry">Reyni aftur án ráðlagða netþjónsins…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Skrifaðu athugasemd…</string>

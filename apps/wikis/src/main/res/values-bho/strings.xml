@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">नाम, ID, फिंगरप्रिंट भा URL से खोजीं…</string>
     <string name="wikis_join_search_button">wiki खोजीं…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki के सदस्यता ले लिहल</string>
     <string name="wikis_subscribe_502_retry">सुझावल सर्वर के बिना फेर कोशिश कइल जा रहल बा…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">एगो टिप्पणी लिखीं…</string>

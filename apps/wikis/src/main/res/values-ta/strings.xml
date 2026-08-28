@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">பெயர், ID, கைரேகை அல்லது URL மூலம் தேடு…</string>
     <string name="wikis_join_search_button">wiki-கள் தேடு…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki-க்கு சந்தா செலுத்தப்பட்டது</string>
     <string name="wikis_subscribe_502_retry">பரிந்துரைக்கப்பட்ட சேவையகம் இல்லாமல் மீண்டும் முயற்சிக்கிறது…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">கருத்து எழுது…</string>

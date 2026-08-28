@@ -109,7 +109,6 @@
     <string name="wikis_join_submit">複製 wiki</string>
     <string name="wikis_create_title">建立 wiki</string>
     <string name="wikis_create_privacy_label">畀任何人搜尋呢個 wiki</string>
-    <string name="wikis_subscribe_success">已訂閱 wiki</string>
     <string name="wikis_subscribe_502_retry">唔用建議嘅伺服器重試緊…</string>
     <string name="wikis_comments_title_template">%1$s - 留言</string>
     <string name="wikis_comments_empty_title">重未有留言</string>

@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">חיפוש לפי שם, מזהה, טביעת אצבע או URL…</string>
     <string name="wikis_join_search_button">חפש ויקי…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">נרשמת לויקי</string>
     <string name="wikis_subscribe_502_retry">מנסה שוב ללא השרת המוצע…</string>
     <string name="wikis_comments_title_template">%1$s - תגובות</string>
     <string name="wikis_comment_form_placeholder_new">כתוב תגובה…</string>

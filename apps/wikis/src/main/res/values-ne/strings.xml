@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">नाम, ID, फिंगरप्रिन्ट वा URL अनुसार खोज्नुहोस्…</string>
     <string name="wikis_join_search_button">wiki हरू खोज्नुहोस्…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki मा सदस्यता लिइयो</string>
     <string name="wikis_subscribe_502_retry">सुझाइएको सर्भरविना पुनः प्रयास गर्दै…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">टिप्पणी लेख्नुहोस्…</string>

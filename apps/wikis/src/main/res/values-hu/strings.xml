@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Keresés név, ID, ujjlenyomat vagy URL alapján…</string>
     <string name="wikis_join_search_button">Wiki keresése…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Feliratkozva a wiki-re</string>
     <string name="wikis_subscribe_502_retry">Újrapróbálkozás a javasolt szerver nélkül…</string>
     <string name="wikis_comments_title_template">%1$s - Megjegyzések</string>
     <string name="wikis_comment_form_placeholder_new">Megjegyzés írása…</string>

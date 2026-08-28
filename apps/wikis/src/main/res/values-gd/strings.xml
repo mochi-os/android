@@ -258,7 +258,6 @@
     <string name="wikis_find_search_placeholder">Lorg a rèir ainm, ID, lorg-meòir no URL…</string>
     <string name="wikis_join_search_button">Lorg wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Fo-sgrìobhte ris an wiki</string>
     <string name="wikis_subscribe_502_retry">A’ feuchainn a-rithist às aonais an fhrithealaiche a mholadh…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Sgrìobh beachd…</string>
