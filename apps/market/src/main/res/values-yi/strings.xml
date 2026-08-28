@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">מאַקסימום געבאָט (אָפּציאָנעל)</string>
     <string name="market_asset_no_app">קיין אַפּ קען נישט עפֿענען די טעקע</string>
     <string name="market_asset_download_failed">מ׳האָט נישט געקענט אַראָפּלאָדן די טעקע</string>
+    <string name="market_listing_checkout_in_progress">איר האָט אַ באַצאָלונג אין פּראָגרעס פֿאַר דעם רשימה.</string>
+    <string name="market_listing_checkout_cancel">באַשטעטיק אָפּ</string>
+    <string name="market_listing_checkout_cancelled">באַצאָלן אָפּגעשטעלט</string>
+    <string name="market_listing_checkout_cancel_failed">ניט געקענט אָפּשטעלן באַצאָלן</string>
 </resources>

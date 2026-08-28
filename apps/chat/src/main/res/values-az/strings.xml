@@ -104,4 +104,5 @@
     <string name="chat_search_next">Növbəti uyğunluq</string>
     <string name="chat_search_prev">Əvvəlki uyğunluq</string>
     <string name="chat_settings_id">Söhbət ID-si</string>
+    <string name="chat_message_edited">(redaktə edildi)</string>
 </resources>

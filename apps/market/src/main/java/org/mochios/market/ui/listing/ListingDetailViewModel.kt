@@ -50,6 +50,8 @@ data class ListingDetailUiState(
     val error: MochiError? = null,
     /** True while a digital asset is being fetched. */
     val downloadingAsset: Boolean = false,
+    /** True while the caller's reservation on this listing is being released. */
+    val cancellingReservation: Boolean = false,
 )
 
 data class ListingDetailSnackbar(
@@ -282,6 +284,37 @@ class ListingDetailViewModel @Inject constructor(
                         org.mochios.market.R.string.market_bid_dialog_failed,
                     )
                 )
+            }
+        }
+    }
+
+    /**
+     * Release the caller's in-progress checkout, so the listing offers Buy now
+     * again. Reloads on success: the reservation is part of the detail payload,
+     * so the button has to disappear with it.
+     */
+    fun cancelReservation() {
+        val id = currentId
+        if (id.isEmpty()) return
+        viewModelScope.launch {
+            _state.value = _state.value.copy(cancellingReservation = true)
+            try {
+                repository.cancelReservation(id)
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_listing_checkout_cancelled,
+                    )
+                )
+                load(id)
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(error = e.toMochiError())
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_listing_checkout_cancel_failed,
+                    )
+                )
+            } finally {
+                _state.value = _state.value.copy(cancellingReservation = false)
             }
         }
     }

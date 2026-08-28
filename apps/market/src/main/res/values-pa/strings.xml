@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">ਵੱਧ ਤੋਂ ਵੱਧ ਬੋਲੀ (ਵਿਕਲਪਿਕ)</string>
     <string name="market_asset_no_app">ਕੋਈ ਐਪ ਇਸ ਫਾਈਲ ਨੂੰ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੀ</string>
     <string name="market_asset_download_failed">ਫਾਈਲ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋ ਸਕੀ</string>
+    <string name="market_listing_checkout_in_progress">ਤੁਹਾਡੇ ਕੋਲ ਇਸ ਸੂਚੀ ਲਈ ਚੱਲ ਰਿਹਾ ਭੁਗਤਾਨ ਹੈ।</string>
+    <string name="market_listing_checkout_cancel">ਚੈੱਕਆਊਟ ਰੱਦ ਕਰੋ</string>
+    <string name="market_listing_checkout_cancelled">ਚੈੱਕਆਊਟ ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
+    <string name="market_listing_checkout_cancel_failed">ਚੈੱਕਆਊਟ ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 </resources>

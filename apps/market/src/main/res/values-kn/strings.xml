@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">ಗರಿಷ್ಠ ಬಿಡ್ (ಐಚ್ಛಿಕ)</string>
     <string name="market_asset_no_app">ಈ ಫೈಲ್ ಅನ್ನು ಯಾವುದೇ ಆ್ಯಪ್ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="market_asset_download_failed">ಫೈಲ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ</string>
+    <string name="market_listing_checkout_in_progress">ಈ ಪಟ್ಟಿಗಾಗಿ ನಿಮ್ಮಲ್ಲಿ ಪಾವತಿ ಪ್ರಗತಿಯಲ್ಲಿದೆ.</string>
+    <string name="market_listing_checkout_cancel">ಚೆಕ್‌ಔಟ್ ರದ್ದುಮಾಡಿ</string>
+    <string name="market_listing_checkout_cancelled">ಚೆಕ್‌ಔಟ್ ರದ್ದಾಗಿದೆ</string>
+    <string name="market_listing_checkout_cancel_failed">ಚೆಕ್‌ಔಟ್ ರದ್ದುಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
 </resources>

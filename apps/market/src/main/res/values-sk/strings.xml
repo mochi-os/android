@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Maximálna ponuka (voliteľné)</string>
     <string name="market_asset_no_app">Tento súbor nemožno otvoriť žiadnou aplikáciou</string>
     <string name="market_asset_download_failed">Súbor sa nepodarilo stiahnuť</string>
+    <string name="market_listing_checkout_in_progress">Máte rozpracovanú platbu pre tento inzerát.</string>
+    <string name="market_listing_checkout_cancel">Zrušiť platbu</string>
+    <string name="market_listing_checkout_cancelled">Platba bola zrušená</string>
+    <string name="market_listing_checkout_cancel_failed">Platbu sa nepodarilo zrušiť</string>
 </resources>

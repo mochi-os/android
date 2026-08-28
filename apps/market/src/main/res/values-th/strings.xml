@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">ราคาเสนอสูงสุด (ไม่บังคับ)</string>
     <string name="market_asset_no_app">ไม่มีแอปที่เปิดไฟล์นี้ได้</string>
     <string name="market_asset_download_failed">ดาวน์โหลดไฟล์ไม่สำเร็จ</string>
+    <string name="market_listing_checkout_in_progress">คุณมีการชำระเงินที่กำลังดำเนินการสำหรับรายการนี้</string>
+    <string name="market_listing_checkout_cancel">ยกเลิกการชำระเงิน</string>
+    <string name="market_listing_checkout_cancelled">ยกเลิกการชำระเงินแล้ว</string>
+    <string name="market_listing_checkout_cancel_failed">ไม่สามารถยกเลิกการชำระเงินได้</string>
 </resources>

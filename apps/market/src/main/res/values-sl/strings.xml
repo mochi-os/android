@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Najvišja ponudba (izbirno)</string>
     <string name="market_asset_no_app">Te datoteke ni mogoče odpreti z nobeno aplikacijo</string>
     <string name="market_asset_download_failed">Datoteke ni bilo mogoče prenesti</string>
+    <string name="market_listing_checkout_in_progress">Za to objavo imate plačilo v teku.</string>
+    <string name="market_listing_checkout_cancel">Prekliči nakup</string>
+    <string name="market_listing_checkout_cancelled">Nakup je preklican</string>
+    <string name="market_listing_checkout_cancel_failed">Nakupa ni bilo mogoče preklicati</string>
 </resources>

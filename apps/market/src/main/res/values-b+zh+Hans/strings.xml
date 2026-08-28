@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">最高出价（可选）</string>
     <string name="market_asset_no_app">没有可打开此文件的应用</string>
     <string name="market_asset_download_failed">无法下载该文件</string>
+    <string name="market_listing_checkout_in_progress">您有一项针对此商品的支付正在进行中。</string>
+    <string name="market_listing_checkout_cancel">取消结账</string>
+    <string name="market_listing_checkout_cancelled">已取消结账</string>
+    <string name="market_listing_checkout_cancel_failed">取消结账失败</string>
 </resources>

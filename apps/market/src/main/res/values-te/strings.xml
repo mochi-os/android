@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">గరిష్ట బిడ్ (ఐచ్ఛికం)</string>
     <string name="market_asset_no_app">ఈ ఫైల్‌ను తెరవగల యాప్ ఏదీ లేదు</string>
     <string name="market_asset_download_failed">ఫైల్‌ను డౌన్‌లోడ్ చేయలేకపోయాము</string>
+    <string name="market_listing_checkout_in_progress">ఈ జాబితా కోసం మీకు చెల్లింపు ప్రగతిలో ఉంది.</string>
+    <string name="market_listing_checkout_cancel">చెక్‌అవుట్‌ను రద్దు చేయండి</string>
+    <string name="market_listing_checkout_cancelled">చెక్‌అవుట్ రద్దు చేయబడింది</string>
+    <string name="market_listing_checkout_cancel_failed">చెక్‌అవుట్‌ను రద్దు చేయడం విఫలమైంది</string>
 </resources>

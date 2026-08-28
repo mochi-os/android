@@ -58,6 +58,8 @@ data class ChatUiState(
     val forwardFriends: List<Friend> = emptyList(),
     val forwardLoading: Boolean = false,
     val replyingTo: ChatMessage? = null,
+    /** The message being edited; the composer pre-fills and Send becomes Save. */
+    val editing: ChatMessage? = null,
     val selectionMode: Boolean = false,
     val selectedIds: Set<String> = emptySet(),
     val isPinned: Boolean = false,
@@ -417,6 +419,44 @@ class ChatViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(replyingTo = null)
     }
 
+    // ---------------- edit ----------------
+
+    /**
+     * Start editing [message]. Editing and replying are mutually exclusive:
+     * the composer has one body, and a reply-to on an edit would be discarded
+     * by the server anyway.
+     */
+    fun startEdit(message: ChatMessage) {
+        _uiState.value = _uiState.value.copy(editing = message, replyingTo = null)
+    }
+
+    fun cancelEdit() {
+        _uiState.value = _uiState.value.copy(editing = null)
+    }
+
+    /**
+     * Save the edit. The server stamps `edited` and fans the new body out to
+     * the other members; refresh so this client shows what they will see
+     * rather than a locally-guessed row.
+     */
+    fun saveEdit(body: String) {
+        val message = _uiState.value.editing ?: return
+        val trimmed = body.trim()
+        if (trimmed.isEmpty() || trimmed == message.body) {
+            cancelEdit()
+            return
+        }
+        viewModelScope.launch {
+            try {
+                repository.editMessage(chatId, message.id, trimmed)
+                _uiState.value = _uiState.value.copy(editing = null)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
     // ---------------- selection ----------------
 
     /** Enter multi-select mode with [messageId] selected. */
@@ -539,6 +579,12 @@ class ChatViewModel @Inject constructor(
                     }
                     ev == "delete" -> {
                         // A message was tombstoned — refresh to render "deleted".
+                        refresh()
+                    }
+                    ev == "edit" -> {
+                        // An author rewrote a message. Without this the body
+                        // changes under the reader on the next unrelated
+                        // refresh, with no marker to explain it.
                         refresh()
                     }
                     ev == "reaction" -> {

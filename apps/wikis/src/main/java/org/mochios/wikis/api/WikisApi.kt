@@ -8,6 +8,7 @@ package org.mochios.wikis.api
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
+import org.mochios.wikis.model.ProbeResponse
 import org.mochios.wikis.model.AccessListResponse
 import org.mochios.wikis.model.AttachmentDeleteResponse
 import org.mochios.wikis.model.AttachmentUpdateResponse
@@ -89,6 +90,13 @@ interface WikisApi {
         @Field("privacy") privacy: String,
     ): Response<ApiResponse<CreateWikiResponse>>
 
+
+    /** Resolve a pasted mochi:// share link to the wiki it names. */
+    @FormUrlEncoded
+    @POST("-/probe")
+    suspend fun probeUrl(
+        @Field("url") url: String,
+    ): Response<ApiResponse<ProbeResponse>>
 
     @POST("-/subscribe")
     suspend fun joinWiki(

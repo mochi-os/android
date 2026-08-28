@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Mafi girman tayi (na zaɓi)</string>
     <string name="market_asset_no_app">Babu manhajar da za ta iya buɗe wannan fayil</string>
     <string name="market_asset_download_failed">An kasa sauke fayil ɗin</string>
+    <string name="market_listing_checkout_in_progress">Kana da biya da ke gudana don wannan jeri.</string>
+    <string name="market_listing_checkout_cancel">Soke biya</string>
+    <string name="market_listing_checkout_cancelled">An soke biya</string>
+    <string name="market_listing_checkout_cancel_failed">An kasa soke biya</string>
 </resources>

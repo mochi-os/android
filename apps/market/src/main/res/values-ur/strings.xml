@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">زیادہ سے زیادہ بولی (اختیاری)</string>
     <string name="market_asset_no_app">کوئی ایپ اس فائل کو نہیں کھول سکتی</string>
     <string name="market_asset_download_failed">فائل ڈاؤن لوڈ نہیں ہو سکی</string>
+    <string name="market_listing_checkout_in_progress">آپ کے پاس اس فہرست کے لیے ایک ادائیگی جاری ہے۔</string>
+    <string name="market_listing_checkout_cancel">چیک آؤٹ منسوخ کریں</string>
+    <string name="market_listing_checkout_cancelled">چیک آؤٹ منسوخ ہو گیا</string>
+    <string name="market_listing_checkout_cancel_failed">چیک آؤٹ منسوخ کرنے میں ناکامی</string>
 </resources>

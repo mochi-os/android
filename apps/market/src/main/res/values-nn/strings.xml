@@ -748,4 +748,8 @@
     <string name="market_listing_detail_seller_reviews_heading">Vurderingar av seljaren</string>
     <string name="market_asset_no_app">Ingen app kan opne denne fila</string>
     <string name="market_asset_download_failed">Kunne ikkje lasta ned fila</string>
+    <string name="market_listing_checkout_in_progress">Du har ein utsjekk i gang for denne annonsen.</string>
+    <string name="market_listing_checkout_cancel">Avbryt utsjekk</string>
+    <string name="market_listing_checkout_cancelled">Utsjekken vart avbroten</string>
+    <string name="market_listing_checkout_cancel_failed">Klarte ikkje å avbryte utsjekken</string>
 </resources>

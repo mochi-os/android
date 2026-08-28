@@ -104,4 +104,5 @@
     <string name="chat_search_next">Qatiq tupay</string>
     <string name="chat_search_prev">Ñawpaq tupay</string>
     <string name="chat_settings_id">Rimanakuy ID</string>
+    <string name="chat_message_edited">(hukchasqa)</string>
 </resources>

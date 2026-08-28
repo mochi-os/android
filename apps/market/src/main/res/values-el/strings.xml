@@ -748,4 +748,8 @@
     <string name="market_bid_dialog_ceiling_label">Μέγιστη προσφορά (προαιρετικό)</string>
     <string name="market_asset_no_app">Καμία εφαρμογή δεν μπορεί να ανοίξει αυτό το αρχείο</string>
     <string name="market_asset_download_failed">Δεν ήταν δυνατή η λήψη του αρχείου</string>
+    <string name="market_listing_checkout_in_progress">Έχετε μια πληρωμή σε εξέλιξη για αυτή την καταχώριση.</string>
+    <string name="market_listing_checkout_cancel">Ακύρωση ολοκλήρωσης αγοράς</string>
+    <string name="market_listing_checkout_cancelled">Η ολοκλήρωση αγοράς ακυρώθηκε</string>
+    <string name="market_listing_checkout_cancel_failed">Αποτυχία ακύρωσης της ολοκλήρωσης αγοράς</string>
 </resources>

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Oferta maksimale (opsionale)</string>
     <string name="market_asset_no_app">Asnjë aplikacion nuk mund ta hapë këtë skedar</string>
     <string name="market_asset_download_failed">Skedari nuk u shkarkua dot</string>
+    <string name="market_listing_checkout_in_progress">Keni një pagesë në vazhdim për këtë listim.</string>
+    <string name="market_listing_checkout_cancel">Anulo arkëtimin</string>
+    <string name="market_listing_checkout_cancelled">Arkëtimi u anulua</string>
+    <string name="market_listing_checkout_cancel_failed">Anulimi i arkëtimit dështoi</string>
 </resources>

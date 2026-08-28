@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Pinakamataas na alok (opsyonal)</string>
     <string name="market_asset_no_app">Walang app na makakapagbukas ng file na ito</string>
     <string name="market_asset_download_failed">Hindi ma-download ang file</string>
+    <string name="market_listing_checkout_in_progress">May kasalukuyang pagbabayad ka para sa listahang ito.</string>
+    <string name="market_listing_checkout_cancel">Kanselahin ang checkout</string>
+    <string name="market_listing_checkout_cancelled">Nakansela ang checkout</string>
+    <string name="market_listing_checkout_cancel_failed">Hindi makansela ang checkout</string>
 </resources>

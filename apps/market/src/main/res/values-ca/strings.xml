@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Puja màxima (opcional)</string>
     <string name="market_asset_no_app">Cap aplicació pot obrir aquest fitxer</string>
     <string name="market_asset_download_failed">No s\'ha pogut baixar el fitxer</string>
+    <string name="market_listing_checkout_in_progress">Tens un pagament en curs per a aquest anunci.</string>
+    <string name="market_listing_checkout_cancel">Cancel·la la compra</string>
+    <string name="market_listing_checkout_cancelled">Compra cancel·lada</string>
+    <string name="market_listing_checkout_cancel_failed">No s\'ha pogut cancel·lar la compra</string>
 </resources>

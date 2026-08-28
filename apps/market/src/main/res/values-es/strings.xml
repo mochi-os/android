@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Puja máxima (opcional)</string>
     <string name="market_asset_no_app">Ninguna app puede abrir este archivo</string>
     <string name="market_asset_download_failed">No se pudo descargar el archivo</string>
+    <string name="market_listing_checkout_in_progress">Tienes un pago en curso para este anuncio.</string>
+    <string name="market_listing_checkout_cancel">Cancelar el pago</string>
+    <string name="market_listing_checkout_cancelled">Pago cancelado</string>
+    <string name="market_listing_checkout_cancel_failed">No se pudo cancelar el pago</string>
 </resources>

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">அதிகபட்ச ஏலம் (விருப்பத்தேர்வு)</string>
     <string name="market_asset_no_app">இந்தக் கோப்பைத் திறக்கக்கூடிய பயன்பாடு எதுவும் இல்லை</string>
     <string name="market_asset_download_failed">கோப்பைப் பதிவிறக்க முடியவில்லை</string>
+    <string name="market_listing_checkout_in_progress">இந்த பட்டியலுக்கான செலுத்துதல் நடைபெற்று வருகிறது.</string>
+    <string name="market_listing_checkout_cancel">செக்அவுட்டை ரத்துசெய்</string>
+    <string name="market_listing_checkout_cancelled">செக்அவுட் ரத்துசெய்யப்பட்டது</string>
+    <string name="market_listing_checkout_cancel_failed">செக்அவுட்டை ரத்துசெய்ய முடியவில்லை</string>
 </resources>

@@ -42,8 +42,10 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.Groups
@@ -282,6 +284,11 @@ private fun ChatContent(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     var draft by remember { mutableStateOf("") }
+    // Editing pre-fills the composer with the current body and clears it again
+    // on cancel, so a cancelled edit never leaks the old text into a new message.
+    LaunchedEffect(uiState.editing?.id) {
+        draft = uiState.editing?.body ?: ""
+    }
     val listState = rememberLazyListState()
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
@@ -601,6 +608,7 @@ private fun ChatContent(
                                             onStartSelect = { viewModel.enterSelection(entry.message.id) },
                                             onToggleSelect = { viewModel.toggleSelection(entry.message.id) },
                                             onReply = { viewModel.startReply(entry.message) },
+                                            onEdit = { viewModel.startEdit(entry.message) },
                                             onDelete = { pendingDelete = listOf(entry.message.id) },
                                             onReact = { reaction -> viewModel.react(entry.message.id, reaction) },
                                             onForward = { viewModel.openForward(entry.message.id) },
@@ -617,13 +625,21 @@ private fun ChatContent(
                 value = draft,
                 onValueChange = { draft = it },
                 onSend = {
-                    viewModel.sendMessage(draft)
+                    if (uiState.editing != null) {
+                        viewModel.saveEdit(draft)
+                    } else {
+                        viewModel.sendMessage(draft)
+                    }
                     draft = ""
                 },
                 placeholder = stringResource(R.string.chat_message_placeholder),
                 enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
                 isSending = uiState.isSending,
-                sendLabel = stringResource(R.string.chat_message_send),
+                sendLabel = if (uiState.editing != null) {
+                    stringResource(MochiR.string.common_save)
+                } else {
+                    stringResource(R.string.chat_message_send)
+                },
                 windowInsets = ComposeBarDefaults.WindowInsets,
                 attachments = ComposeBarAttachments(
                     pending = uiState.pendingAttachments,
@@ -637,7 +653,11 @@ private fun ChatContent(
                     moveUpLabel = stringResource(R.string.chat_attachment_move_up),
                     moveDownLabel = stringResource(R.string.chat_attachment_move_down),
                 ),
-                banner = uiState.replyingTo?.let { replied ->
+                banner = uiState.editing?.let {
+                    {
+                        EditComposerPreview(onCancel = { viewModel.cancelEdit() })
+                    }
+                } ?: uiState.replyingTo?.let { replied ->
                     {
                         ReplyComposerPreview(
                             replied = replied,
@@ -750,6 +770,17 @@ private fun messageLazyIndex(
  * Index of the last emitted item: the load-older row plus every entry in
  * [grouped].
  */
+/**
+ * Whether to offer Edit on [message].
+ *
+ * The server is the authority - it authorises on the author and refuses a
+ * tombstone - so this only decides what to show. An attachment-only message
+ * has no body to edit, and editing one would blank nothing and stamp it as
+ * edited for every member.
+ */
+internal fun canEditMessage(message: ChatMessage, isOwn: Boolean): Boolean =
+    isOwn && !message.deleted && message.body.isNotBlank()
+
 internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): Int {
     val leading = if (hasMore) 1 else 0
     return (leading + grouped.size - 1).coerceAtLeast(0)
@@ -855,6 +886,7 @@ private fun MessageBubble(
     onDelete: () -> Unit,
     onReact: (String) -> Unit,
     onForward: () -> Unit,
+    onEdit: () -> Unit,
 ) {
     val format = LocalFormat.current
     var menuExpanded by remember { mutableStateOf(false) }
@@ -862,6 +894,7 @@ private fun MessageBubble(
     // Non-deleted messages get a context menu (reply / forward / select, plus
     // delete on your own). Tombstones have no actions.
     val canDelete = !message.deleted && isOwn
+    val canEdit = canEditMessage(message, isOwn)
     val hasMenu = !message.deleted
 
     Column(
@@ -987,7 +1020,12 @@ private fun MessageBubble(
                     }
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = format.formatTimestamp(message.created),
+                        text = if (message.edited > 0) {
+                            format.formatTimestamp(message.created) +
+                                " " + stringResource(R.string.chat_message_edited)
+                        } else {
+                            format.formatTimestamp(message.created)
+                        },
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -1022,6 +1060,16 @@ private fun MessageBubble(
                         },
                         leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Forward, contentDescription = null) },
                     )
+                    if (canEdit) {
+                        MochiDropdownMenuItem(
+                            text = { Text(stringResource(MochiR.string.common_edit)) },
+                            onClick = {
+                                menuExpanded = false
+                                onEdit()
+                            },
+                            leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
+                        )
+                    }
                     if (canDelete) {
                         MochiDropdownMenuItem(
                             text = {
@@ -1168,6 +1216,36 @@ private fun SelectionBar(
  * Strip above the composer showing the message being replied to, with a button
  * to cancel the reply.
  */
+@Composable
+private fun EditComposerPreview(onCancel: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            Icons.Default.Edit,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.size(18.dp),
+        )
+        Spacer(Modifier.width(8.dp))
+        Text(
+            text = stringResource(MochiR.string.common_edit),
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.weight(1f),
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+        MochiIconButton(onClick = onCancel) {
+            Icon(Icons.Default.Close, contentDescription = null)
+        }
+    }
+}
+
 @Composable
 private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
     val preview = replied.body.ifBlank { stringResource(R.string.chat_reply_attachment) }

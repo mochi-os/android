@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">ការដេញថ្លៃអតិបរមា (ស្រេចចិត្ត)</string>
     <string name="market_asset_no_app">គ្មានកម្មវិធីណាអាចបើកឯកសារនេះបានទេ</string>
     <string name="market_asset_download_failed">មិនអាចទាញយកឯកសារបានទេ</string>
+    <string name="market_listing_checkout_in_progress">អ្នកមានការទូទាត់កំពុងដំណើរការសម្រាប់បញ្ជីនេះ។</string>
+    <string name="market_listing_checkout_cancel">បោះបង់ការទូទាត់</string>
+    <string name="market_listing_checkout_cancelled">បានបោះបង់ការទូទាត់</string>
+    <string name="market_listing_checkout_cancel_failed">បរាជ័យក្នុងការបោះបង់ការទូទាត់</string>
 </resources>

@@ -104,4 +104,5 @@
     <string name="chat_search_next">Padanan seterusnya</string>
     <string name="chat_search_prev">Padanan sebelumnya</string>
     <string name="chat_settings_id">ID sembang</string>
+    <string name="chat_message_edited">(disunting)</string>
 </resources>

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Ìdíyelé tó pọ̀ jù (àṣàyàn)</string>
     <string name="market_asset_no_app">Kò sí app tó lè ṣí fáìlì yìí</string>
     <string name="market_asset_download_failed">A kò lè gba fáìlì náà</string>
+    <string name="market_listing_checkout_in_progress">O ní ìsanwó tí ń lọ lọ́wọ́ fún àkọsílẹ̀ yìí.</string>
+    <string name="market_listing_checkout_cancel">Fa sisanwo pẹ́yìn</string>
+    <string name="market_listing_checkout_cancelled">Sisanwo ti fagilé</string>
+    <string name="market_listing_checkout_cancel_failed">Kò ṣeé fa sisanwo pẹ́yìn</string>
 </resources>

@@ -741,4 +741,8 @@
     <string name="market_listings_create">Criar</string>
     <string name="market_bid_dialog_ceiling_label">Lance máximo (opcional)</string>
     <string name="market_asset_no_app">Nenhum aplicativo pode abrir este arquivo</string>
+    <string name="market_listing_checkout_in_progress">Você tem um pagamento em andamento para este anúncio.</string>
+    <string name="market_listing_checkout_cancel">Cancelar checkout</string>
+    <string name="market_listing_checkout_cancelled">Checkout cancelado</string>
+    <string name="market_listing_checkout_cancel_failed">Falha ao cancelar o checkout</string>
 </resources>

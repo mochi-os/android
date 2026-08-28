@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">أقصى مزايدة (اختياري)</string>
     <string name="market_asset_no_app">لا يوجد تطبيق يمكنه فتح هذا الملف</string>
     <string name="market_asset_download_failed">تعذّر تنزيل الملف</string>
+    <string name="market_listing_checkout_in_progress">لديك عملية دفع قيد التنفيذ لهذا الإعلان.</string>
+    <string name="market_listing_checkout_cancel">إلغاء الدفع</string>
+    <string name="market_listing_checkout_cancelled">تم إلغاء الدفع</string>
+    <string name="market_listing_checkout_cancel_failed">فشل إلغاء الدفع</string>
 </resources>

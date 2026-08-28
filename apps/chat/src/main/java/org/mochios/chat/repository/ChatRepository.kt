@@ -117,6 +117,19 @@ class ChatRepository @Inject constructor(
     }
 
     // message_ids goes over the wire as a JSON array string (server json.decodes it).
+    /**
+     * Edit one of the caller's own messages. The server is the authority on
+     * whether the caller may: it authorises on the author and refuses a
+     * deleted message.
+     */
+    suspend fun editMessage(chatId: String, messageId: String, body: String): Long =
+        api.editMessage(
+            chatId = chatId,
+            chat = chatId,
+            message = messageId,
+            body = body,
+        ).unwrap().edited
+
     suspend fun forwardMessages(chatId: String, messageIds: List<String>, toChat: String): ForwardResponse =
         api.forwardMessages(chatId, Gson().toJson(messageIds), toChat).unwrap()
 

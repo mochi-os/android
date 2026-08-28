@@ -105,4 +105,5 @@
     <string name="chat_search_next">Il-korrispondenza li jmiss</string>
     <string name="chat_search_prev">Il-korrispondenza preċedenti</string>
     <string name="chat_settings_id">ID tal-chat</string>
+    <string name="chat_message_edited">(editjat)</string>
 </resources>

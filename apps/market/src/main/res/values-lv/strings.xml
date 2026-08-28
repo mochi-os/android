@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimālais solījums (neobligāts)</string>
     <string name="market_asset_no_app">Neviena lietotne nevar atvērt šo failu</string>
     <string name="market_asset_download_failed">Neizdevās lejupielādēt failu</string>
+    <string name="market_listing_checkout_in_progress">Jums ir norises maksājums šim sludinājumam.</string>
+    <string name="market_listing_checkout_cancel">Atcelt apmaksu</string>
+    <string name="market_listing_checkout_cancelled">Apmaksa atcelta</string>
+    <string name="market_listing_checkout_cancel_failed">Neizdevās atcelt apmaksu</string>
 </resources>

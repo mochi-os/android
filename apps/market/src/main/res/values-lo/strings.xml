@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">ການປະມູນສູງສຸດ (ທາງເລືອກ)</string>
     <string name="market_asset_no_app">ບໍ່ມີແອັບໃດສາມາດເປີດໄຟລ໌ນີ້ໄດ້</string>
     <string name="market_asset_download_failed">ບໍ່ສາມາດດາວໂຫຼດໄຟລ໌ໄດ້</string>
+    <string name="market_listing_checkout_in_progress">ທ່ານມີການຊໍາລະທີ່ກໍາລັງດໍາເນີນຢູ່ສໍາລັບລາຍການນີ້.</string>
+    <string name="market_listing_checkout_cancel">ຍົກເລີກການຊຳລະເງິນ</string>
+    <string name="market_listing_checkout_cancelled">ຍົກເລີກການຊຳລະເງິນແລ້ວ</string>
+    <string name="market_listing_checkout_cancel_failed">ບໍ່ສາມາດຍົກເລີກການຊຳລະເງິນໄດ້</string>
 </resources>

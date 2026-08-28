@@ -14,6 +14,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.wikis.api.WikisApi
+import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.ChangesResponse
@@ -106,9 +107,28 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun joinWiki(target: String, server: String?): JoinWikiResult {
+    /**
+     * Resolve a pasted mochi:// share link. The directory only knows wikis this
+     * server has already learned about, so this is the only route to one on an
+     * unknown server.
+     */
+    suspend fun probeUrl(url: String): DirectoryEntry {
         return try {
-            val r = api.joinWiki(SubscribeRequest(target = target, server = server)).unwrap()
+            val r = api.probeUrl(url).unwrap()
+            DirectoryEntry(
+                id = r.id,
+                name = r.name,
+                fingerprint = r.fingerprint,
+                peer = r.peer.ifBlank { null },
+            )
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun joinWiki(target: String, server: String?, peer: String? = null): JoinWikiResult {
+        return try {
+            val r = api.joinWiki(SubscribeRequest(target = target, server = server, peer = peer)).unwrap()
             JoinWikiResult(
                 id = r.id,
                 fingerprint = r.fingerprint,

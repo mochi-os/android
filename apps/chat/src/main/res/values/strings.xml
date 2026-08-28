@@ -43,6 +43,7 @@
     <string name="chat_messages_empty">No messages yet — say hi!</string>
     <string name="chat_messages_load_more">Load older messages</string>
     <string name="chat_message_placeholder">Message</string>
+    <string name="chat_message_edited">(edited)</string>
     <string name="chat_message_send">Send</string>
     <string name="chat_attachment_add">Attach files</string>
     <string name="chat_attachment_remove">Remove attachment</string>

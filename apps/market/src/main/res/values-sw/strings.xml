@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Zabuni ya juu (si lazima)</string>
     <string name="market_asset_no_app">Hakuna programu inayoweza kufungua faili hili</string>
     <string name="market_asset_download_failed">Faili haikuweza kupakuliwa</string>
+    <string name="market_listing_checkout_in_progress">Una malipo yanayoendelea kwa orodha hii.</string>
+    <string name="market_listing_checkout_cancel">Ghairi malipo</string>
+    <string name="market_listing_checkout_cancelled">Malipo yameghairiwa</string>
+    <string name="market_listing_checkout_cancel_failed">Imeshindwa kughairi malipo</string>
 </resources>

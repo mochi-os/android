@@ -745,4 +745,8 @@
     <string name="market_bid_dialog_ceiling_label">ከፍተኛ ጨረታ (አማራጭ)</string>
     <string name="market_asset_no_app">ይህን ፋይል መክፈት የሚችል መተግበሪያ የለም</string>
     <string name="market_asset_download_failed">ፋይሉን ማውረድ አልተቻለም</string>
+    <string name="market_listing_checkout_in_progress">ለዚህ ዝርዝር በሂደት ላይ ያለ ክፍያ አለዎት።</string>
+    <string name="market_listing_checkout_cancel">ክፍያን ሰርዝ</string>
+    <string name="market_listing_checkout_cancelled">ክፍያ ተሰርዟል</string>
+    <string name="market_listing_checkout_cancel_failed">ክፍያን መሰረዝ አልተሳካም</string>
 </resources>

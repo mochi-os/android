@@ -142,7 +142,14 @@ class WikiListViewModel @Inject constructor(
             delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(searchLoading = true, searchError = null)
             try {
-                val results = repo.directorySearch(query).results
+                // A pasted share link names a wiki on a server this instance
+                // may never have heard of, so the directory cannot answer it.
+                // Probe the peer the link names instead.
+                val results = if (isShareLink(query)) {
+                    listOf(repo.probeUrl(query.trim()))
+                } else {
+                    repo.directorySearch(query).results
+                }
                 _uiState.value = _uiState.value.copy(
                     searchResults = results,
                     searchLoading = false,
@@ -159,7 +166,11 @@ class WikiListViewModel @Inject constructor(
     // ---------------- subscribe ----------------
 
     fun subscribeFromSearch(entry: DirectoryEntry) {
-        subscribe(target = entry.id.ifEmpty { entry.fingerprint }, server = entry.location)
+        subscribe(
+            target = entry.id.ifEmpty { entry.fingerprint },
+            server = entry.location,
+            peer = entry.peer,
+        )
     }
 
     /** Subscribe to a recommendation. Recommendations always include a server hint. */
@@ -167,11 +178,11 @@ class WikiListViewModel @Inject constructor(
         subscribe(target = rec.id.ifEmpty { rec.fingerprint }, server = rec.server.ifBlank { null })
     }
 
-    private fun subscribe(target: String, server: String?) {
+    private fun subscribe(target: String, server: String?, peer: String? = null) {
         if (_uiState.value.subscribingId == target) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = target)
-            val result = tryJoin(target, server)
+            val result = tryJoin(target, server, peer)
             _uiState.value = _uiState.value.copy(subscribingId = null)
             if (result.isSuccess) {
                 val join = result.getOrThrow()
@@ -191,14 +202,18 @@ class WikiListViewModel @Inject constructor(
      * Retries without the server hint on a 502: the directory's server is
      * unreachable, so the local server falls back to peer discovery.
      */
-    private suspend fun tryJoin(target: String, server: String?): Result<JoinWikiResult> {
+    private suspend fun tryJoin(
+        target: String,
+        server: String?,
+        peer: String? = null,
+    ): Result<JoinWikiResult> {
         return try {
-            Result.success(repo.joinWiki(target, server))
+            Result.success(repo.joinWiki(target, server, peer))
         } catch (e: Exception) {
             val err = e.toMochiError()
             if (server != null && err is MochiError.ServerError && err.code == 502) {
                 try {
-                    Result.success(repo.joinWiki(target, null))
+                    Result.success(repo.joinWiki(target, null, peer))
                 } catch (retry: Exception) {
                     Result.failure(retry)
                 }
@@ -260,3 +275,16 @@ class WikiListViewModel @Inject constructor(
             .toSet()
     }
 }
+
+/** What a wiki share link starts with; anything else is a directory search. */
+private const val SHARE_LINK_PREFIX = "mochi://"
+
+/**
+ * Whether [query] is a pasted share link rather than a search term.
+ *
+ * A link names a wiki on a server this instance may never have heard of, so
+ * the directory cannot answer it and the peer must be probed instead. Pasting
+ * routinely carries surrounding whitespace, hence the trim.
+ */
+internal fun isShareLink(query: String): Boolean =
+    query.trim().startsWith(SHARE_LINK_PREFIX)

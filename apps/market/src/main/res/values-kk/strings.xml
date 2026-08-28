@@ -745,4 +745,8 @@
     <string name="market_bid_dialog_ceiling_label">Максималды ұсыныс (міндетті емес)</string>
     <string name="market_asset_no_app">Бұл файлды ашатын қолданба жоқ</string>
     <string name="market_asset_download_failed">Файлды жүктеп алу мүмкін болмады</string>
+    <string name="market_listing_checkout_in_progress">Бұл хабарландыру үшін жүріп жатқан төлеміңіз бар.</string>
+    <string name="market_listing_checkout_cancel">Төлемнен бас тарту</string>
+    <string name="market_listing_checkout_cancelled">Төлемнен бас тартылды</string>
+    <string name="market_listing_checkout_cancel_failed">Төлемнен бас тарту мүмкін болмады</string>
 </resources>

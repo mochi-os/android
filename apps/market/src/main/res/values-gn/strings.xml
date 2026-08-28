@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Ñemuhague tuichavéva (eiporavokuaáva)</string>
     <string name="market_asset_no_app">Ndaipóri tembiporu ojuruja hag̃ua ko archivo</string>
     <string name="market_asset_download_failed">Ndaikatúi oñemboguejy pe ñongatupyre</string>
+    <string name="market_listing_checkout_in_progress">Reguereko peteĩ jehepyme’ẽ oikóva ko ñemuha rehe.</string>
+    <string name="market_listing_checkout_cancel">Heja ñehepyme\'ẽ</string>
+    <string name="market_listing_checkout_cancelled">Ñehepyme\'ẽ ojejokóma</string>
+    <string name="market_listing_checkout_cancel_failed">Ndaikatúi ojejoko ñehepyme\'ẽ</string>
 </resources>

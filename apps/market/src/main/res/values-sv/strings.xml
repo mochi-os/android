@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Högsta bud (valfritt)</string>
     <string name="market_asset_no_app">Ingen app kan öppna den här filen</string>
     <string name="market_asset_download_failed">Filen kunde inte hämtas</string>
+    <string name="market_listing_checkout_in_progress">Du har en pågående betalning för den här annonsen.</string>
+    <string name="market_listing_checkout_cancel">Avbryt kassan</string>
+    <string name="market_listing_checkout_cancelled">Kassan avbröts</string>
+    <string name="market_listing_checkout_cancel_failed">Det gick inte att avbryta kassan</string>
 </resources>

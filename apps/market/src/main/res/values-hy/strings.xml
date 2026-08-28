@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Առավելագույն հայտ (ըստ ցանկության)</string>
     <string name="market_asset_no_app">Ոչ մի հավելված չի կարող բացել այս ֆայլը</string>
     <string name="market_asset_download_failed">Չհաջողվեց ներբեռնել ֆայլը</string>
+    <string name="market_listing_checkout_in_progress">Դուք ունեք ընթացքի մեջ գտնվող վճարում այս հայտարարության համար։</string>
+    <string name="market_listing_checkout_cancel">Չեղարկել վճարումը</string>
+    <string name="market_listing_checkout_cancelled">Վճարումը չեղարկվեց</string>
+    <string name="market_listing_checkout_cancel_failed">Չհաջողվեց չեղարկել վճարումը</string>
 </resources>

@@ -12,4 +12,10 @@ package org.mochios.wikis.model
 data class SubscribeRequest(
     val target: String,
     val server: String? = null,
+    /**
+     * The peer a mochi:// share link named. action_join pins the sync to it,
+     * which is the only way to reach a wiki on a server this instance has not
+     * already learned about.
+     */
+    val peer: String? = null,
 )

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimal taklif (ixtiyoriy)</string>
     <string name="market_asset_no_app">Bu faylni hech qaysi ilova ocha olmaydi</string>
     <string name="market_asset_download_failed">Faylni yuklab bo\'lmadi</string>
+    <string name="market_listing_checkout_in_progress">Ushbu e\'lon uchun davom etayotgan to\'lov mavjud.</string>
+    <string name="market_listing_checkout_cancel">Toʻlovni bekor qilish</string>
+    <string name="market_listing_checkout_cancelled">Toʻlov bekor qilindi</string>
+    <string name="market_listing_checkout_cancel_failed">Toʻlovni bekor qilib boʻlmadi</string>
 </resources>

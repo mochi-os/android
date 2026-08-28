@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Tairgse as àirde (roghainneil)</string>
     <string name="market_asset_no_app">Chan eil aplacaid ann as urrainn am faidhle seo fhosgladh</string>
     <string name="market_asset_download_failed">Cha b\' urrainn am faidhle a luchdachadh a-nuas</string>
+    <string name="market_listing_checkout_in_progress">Tha pàigheadh agad an gnìomh airson an liostadh seo.</string>
+    <string name="market_listing_checkout_cancel">Sguir dhen t-seic a-mach</string>
+    <string name="market_listing_checkout_cancelled">Chaidh sgur dhen t-seic a-mach</string>
+    <string name="market_listing_checkout_cancel_failed">Cha b\' urrainn sgur dhen t-seic a-mach</string>
 </resources>

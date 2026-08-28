@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">പരമാവധി ലേലം (ഓപ്ഷണൽ)</string>
     <string name="market_asset_no_app">ഈ ഫയൽ തുറക്കാൻ കഴിയുന്ന ആപ്പ് ഇല്ല</string>
     <string name="market_asset_download_failed">ഫയൽ ഡൗൺലോഡ് ചെയ്യാനായില്ല</string>
+    <string name="market_listing_checkout_in_progress">ഈ ലിസ്റ്റിംഗിനായി നിങ്ങൾക്ക് നടന്നുകൊണ്ടിരിക്കുന്ന ഒരു പേയ്മെന്റ് ഉണ്ട്.</string>
+    <string name="market_listing_checkout_cancel">ചെക്ക്ഔട്ട് റദ്ദാക്കുക</string>
+    <string name="market_listing_checkout_cancelled">ചെക്ക്ഔട്ട് റദ്ദാക്കി</string>
+    <string name="market_listing_checkout_cancel_failed">ചെക്ക്ഔട്ട് റദ്ദാക്കാൻ കഴിഞ്ഞില്ല</string>
 </resources>

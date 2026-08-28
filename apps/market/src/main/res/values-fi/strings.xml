@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Enimmäistarjous (valinnainen)</string>
     <string name="market_asset_no_app">Mikään sovellus ei voi avata tätä tiedostoa</string>
     <string name="market_asset_download_failed">Tiedostoa ei voitu ladata</string>
+    <string name="market_listing_checkout_in_progress">Sinulla on kassatoiminto käynnissä tälle ilmoitukselle.</string>
+    <string name="market_listing_checkout_cancel">Peruuta kassa</string>
+    <string name="market_listing_checkout_cancelled">Kassa peruutettu</string>
+    <string name="market_listing_checkout_cancel_failed">Kassan peruuttaminen epäonnistui</string>
 </resources>

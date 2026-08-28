@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">حداکثر پیشنهاد (اختیاری)</string>
     <string name="market_asset_no_app">هیچ برنامه‌ای نمی‌تواند این فایل را باز کند</string>
     <string name="market_asset_download_failed">دانلود فایل ممکن نشد</string>
+    <string name="market_listing_checkout_in_progress">شما یک پرداخت در حال انجام برای این آگهی دارید.</string>
+    <string name="market_listing_checkout_cancel">لغو پرداخت</string>
+    <string name="market_listing_checkout_cancelled">پرداخت لغو شد</string>
+    <string name="market_listing_checkout_cancel_failed">لغو پرداخت انجام نشد</string>
 </resources>

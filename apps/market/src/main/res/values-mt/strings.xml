@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Offerta massima (mhux obbligatorja)</string>
     <string name="market_asset_no_app">L-ebda app ma tista\' tiftaħ dan il-fajl</string>
     <string name="market_asset_download_failed">Ma setax jitniżżel il-fajl</string>
+    <string name="market_listing_checkout_in_progress">Għandek ħlas għaddej għal din il-listjar.</string>
+    <string name="market_listing_checkout_cancel">Ikkanċella l-ħlas</string>
+    <string name="market_listing_checkout_cancelled">Il-ħlas ġie kkanċellat</string>
+    <string name="market_listing_checkout_cancel_failed">Ma rnexxiex jiġi kkanċellat il-ħlas</string>
 </resources>

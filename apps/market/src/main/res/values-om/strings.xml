@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Gaaffii ol\'aanaa (filannoo)</string>
     <string name="market_asset_no_app">Appiin faayilii kana banu hin jiru</string>
     <string name="market_asset_download_failed">Faayilii buusuun hin danda\'amne</string>
+    <string name="market_listing_checkout_in_progress">Kanaaf tarreeffama kanaaf kaffaltii adeemsifamaa qabda.</string>
+    <string name="market_listing_checkout_cancel">Kaffaltii haquu</string>
+    <string name="market_listing_checkout_cancelled">Kaffaltiin haqameera</string>
+    <string name="market_listing_checkout_cancel_failed">Kaffaltii haquun hin milkoofne</string>
 </resources>

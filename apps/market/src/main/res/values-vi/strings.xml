@@ -748,4 +748,8 @@
     <string name="market_bid_dialog_ceiling_label">Giá đặt tối đa (tùy chọn)</string>
     <string name="market_asset_no_app">Không có ứng dụng nào có thể mở tệp này</string>
     <string name="market_asset_download_failed">Không thể tải xuống tệp</string>
+    <string name="market_listing_checkout_in_progress">Bạn có một thanh toán đang được xử lý cho danh sách này.</string>
+    <string name="market_listing_checkout_cancel">Hủy thanh toán</string>
+    <string name="market_listing_checkout_cancelled">Đã hủy thanh toán</string>
+    <string name="market_listing_checkout_cancel_failed">Không thể hủy thanh toán</string>
 </resources>

@@ -47,4 +47,6 @@ dependencies {
 
     // Custom Tabs for external wiki links.
     implementation(libs.browser)
+
+    testImplementation(libs.junit)
 }

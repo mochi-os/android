@@ -745,4 +745,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimum təklif (isteğe bağlı)</string>
     <string name="market_asset_no_app">Bu faylı aça biləcək tətbiq yoxdur</string>
     <string name="market_asset_download_failed">Fayl endirilə bilmədi</string>
+    <string name="market_listing_checkout_in_progress">Bu elan üçün davam edən bir ödəmə var.</string>
+    <string name="market_listing_checkout_cancel">Ödənişi ləğv et</string>
+    <string name="market_listing_checkout_cancelled">Ödəniş ləğv edildi</string>
+    <string name="market_listing_checkout_cancel_failed">Ödənişi ləğv etmək alınmadı</string>
 </resources>

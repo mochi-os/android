@@ -13,6 +13,11 @@ data class DirectoryEntry(
     val fingerprint: String = "",
     @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val location: String? = null,
+    /**
+     * Set only for an entry resolved from a mochi:// share link: the peer that
+     * answered the probe. The join pins the sync to it.
+     */
+    val peer: String? = null,
 )
 
 data class DirectorySearchResponse(

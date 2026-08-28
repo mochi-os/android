@@ -372,6 +372,8 @@ fun ListingDetailScreen(
                             navController.navigate(MarketApp.listingEdit(listing.id.toString()))
                         },
                         onRelist = { viewModel.relistListing() },
+                        onCancelReservation = { viewModel.cancelReservation() },
+                        cancellingReservation = state.cancellingReservation,
                         // Through the authenticated client, not a browser: the
                         // action is not public, so a Custom Tab carrying no
                         // token and no cookie could never authenticate to it.
@@ -464,6 +466,8 @@ private fun ListingDetailContent(
     onBuyNow: () -> Unit,
     onEdit: () -> Unit,
     onRelist: () -> Unit,
+    onCancelReservation: () -> Unit,
+    cancellingReservation: Boolean,
     onAssetDownload: (Asset) -> Unit,
     currentUserId: String?,
 ) {
@@ -645,6 +649,26 @@ private fun ListingDetailContent(
                 }
 
                 Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    // A reservation the caller already holds blocks their own
+                    // Buy now until it expires, and nothing else on the screen
+                    // says so. Offer the release the web client offers.
+                    val reservation = detail.myReservation
+                    if (reservation != null) {
+                        Text(
+                            text = stringResource(R.string.market_listing_checkout_in_progress),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        MochiOutlinedButton(
+                            onClick = onCancelReservation,
+                            enabled = !cancellingReservation,
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Text(stringResource(R.string.market_listing_checkout_cancel))
+                        }
+                    }
+
                     PrimaryCta(
                         pricing = listing.pricing,
                         onClick = onPrimaryCta,

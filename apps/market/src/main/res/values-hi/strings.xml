@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">अधिकतम बोली (वैकल्पिक)</string>
     <string name="market_asset_no_app">इस फ़ाइल को खोलने वाला कोई ऐप नहीं है</string>
     <string name="market_asset_download_failed">फ़ाइल डाउनलोड नहीं हो सकी</string>
+    <string name="market_listing_checkout_in_progress">इस लिस्टिंग के लिए आपका भुगतान प्रगति में है।</string>
+    <string name="market_listing_checkout_cancel">चेकआउट रद्द करें</string>
+    <string name="market_listing_checkout_cancelled">चेकआउट रद्द किया गया</string>
+    <string name="market_listing_checkout_cancel_failed">चेकआउट रद्द करने में विफल</string>
 </resources>

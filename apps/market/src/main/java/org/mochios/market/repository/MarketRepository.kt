@@ -197,6 +197,15 @@ class MarketRepository @Inject constructor(
         }
     }
 
+    /** Release the caller's in-progress checkout on a listing. */
+    suspend fun cancelReservation(listing: String) {
+        try {
+            api.cancelReservation(listing).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun deleteListing(id: String) {
         try {
             api.deleteListing(id.toString()).unwrap()

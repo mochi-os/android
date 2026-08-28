@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">მაქსიმალური შეთავაზება (არასავალდებულო)</string>
     <string name="market_asset_no_app">ამ ფაილის გასახსნელი აპი არ არის</string>
     <string name="market_asset_download_failed">ფაილის ჩამოტვირთვა ვერ მოხერხდა</string>
+    <string name="market_listing_checkout_in_progress">თქვენ გაქვთ მიმდინარე გადახდა ამ განცხადებისთვის.</string>
+    <string name="market_listing_checkout_cancel">შეკვეთის გაუქმება</string>
+    <string name="market_listing_checkout_cancelled">შეკვეთა გაუქმდა</string>
+    <string name="market_listing_checkout_cancel_failed">შეკვეთის გაუქმება ვერ მოხერხდა</string>
 </resources>

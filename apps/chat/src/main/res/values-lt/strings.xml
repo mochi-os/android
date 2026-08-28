@@ -104,4 +104,5 @@
     <string name="chat_search_next">Kitas atitikmuo</string>
     <string name="chat_search_prev">Ankstesnis atitikmuo</string>
     <string name="chat_settings_id">Pokalbio ID</string>
+    <string name="chat_message_edited">(redaguota)</string>
 </resources>
