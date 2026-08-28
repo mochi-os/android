@@ -60,6 +60,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -68,7 +69,6 @@ import org.mochios.android.ui.components.MarkdownPreviewSheet
 import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
@@ -269,81 +269,82 @@ fun PageEditorScreen(
         bottomBar = {
             // The primary action sits under the thumb rather than at the end of
             // a row the user has to scroll sideways to reach - the same shape
-            // the create-wiki form uses.
-            Surface(color = MaterialTheme.colorScheme.surface) {
-                MochiButton(
-                    onClick = {
-                        viewModel.save(
-                            invalidTitle = titleRequiredMsg,
-                            invalidSlug = slugRequiredMsg,
-                            createFailed = createFailedMsg,
-                            editFailed = editFailedMsg,
-                        )
-                    },
-                    enabled = !state.isSaving,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .imePadding()
-                        .navigationBarsPadding()
-                        .padding(horizontal = 16.dp, vertical = 12.dp),
-                ) {
-                    if (state.isSaving) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(18.dp),
-                            strokeWidth = 2.dp,
-                        )
-                    } else {
-                        Icon(
-                            Icons.Filled.Save,
-                            contentDescription = null,
-                            modifier = Modifier.size(18.dp),
+            // the create-wiki form uses. It goes with the form: there is
+            // nothing to save behind the error state.
+            if (state.error == null) {
+                Surface(color = MaterialTheme.colorScheme.surface) {
+                    MochiButton(
+                        onClick = {
+                            viewModel.save(
+                                invalidTitle = titleRequiredMsg,
+                                invalidSlug = slugRequiredMsg,
+                                createFailed = createFailedMsg,
+                                editFailed = editFailedMsg,
+                            )
+                        },
+                        enabled = !state.isSaving,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .imePadding()
+                            .navigationBarsPadding()
+                            .padding(horizontal = 16.dp, vertical = 12.dp),
+                    ) {
+                        if (state.isSaving) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(18.dp),
+                                strokeWidth = 2.dp,
+                            )
+                        } else {
+                            Icon(
+                                Icons.Filled.Save,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp),
+                            )
+                        }
+                        Spacer(Modifier.width(6.dp))
+                        Text(
+                            stringResource(
+                                when {
+                                    state.isSaving && viewModel.isNew ->
+                                        R.string.wikis_editor_creating
+                                    state.isSaving -> R.string.wikis_editor_saving
+                                    viewModel.isNew -> R.string.wikis_editor_create
+                                    else -> R.string.wikis_editor_save
+                                }
+                            )
                         )
                     }
-                    Spacer(Modifier.width(6.dp))
-                    Text(
-                        stringResource(
-                            when {
-                                state.isSaving && viewModel.isNew ->
-                                    R.string.wikis_editor_creating
-                                state.isSaving -> R.string.wikis_editor_saving
-                                viewModel.isNew -> R.string.wikis_editor_create
-                                else -> R.string.wikis_editor_save
-                            }
-                        )
-                    )
                 }
             }
         },
     ) { padding ->
         CompositionLocalProvider(LocalWikiContext provides wikiCtx) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .verticalScroll(rememberScrollState())
-                    .padding(16.dp),
-            ) {
-                when {
-                    state.isLoading -> {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 32.dp),
-                            contentAlignment = Alignment.Center,
-                        ) { CircularProgressIndicator() }
+            when {
+                state.isLoading -> {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(padding),
+                        contentAlignment = Alignment.Center,
+                    ) { CircularProgressIndicator() }
+                }
+                state.error != null -> {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(padding),
+                    ) {
+                        ErrorState(error = state.error!!, onRetry = { viewModel.retry() })
                     }
-                    state.error != null -> {
-                        Text(
-                            text = state.error!!.userMessage(),
-                            color = MaterialTheme.colorScheme.error,
-                            style = MaterialTheme.typography.bodyMedium,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        MochiOutlinedButton(onClick = { viewModel.retry() }) {
-                            Text(stringResource(org.mochios.android.R.string.common_retry))
-                        }
-                    }
-                    else -> {
+                }
+                else -> {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(padding)
+                            .verticalScroll(rememberScrollState())
+                            .padding(16.dp),
+                    ) {
                         EditFields(
                             isNew = viewModel.isNew,
                             title = state.title,
