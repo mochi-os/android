@@ -30,7 +30,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -38,7 +41,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.currentBackStackEntryAsState
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
@@ -65,7 +67,6 @@ fun WikiSettingsScreen(
         }
     }
 
-    val wikiId = viewModel.wikiId
     val isReplica = state.wiki?.source != null
 
     // Visible tabs. Replicas hidden for replica wikis (web does the same).
@@ -76,13 +77,12 @@ fun WikiSettingsScreen(
         if (!isReplica) add(SettingsTabKey.Replicas)
     }
 
-    // Read the active tab from the live back-stack entry: launchSingleTop
-    // updates the existing entry's arguments, which the view model's
-    // SavedStateHandle (frozen at construction) never sees.
-    val currentEntry by navController.currentBackStackEntryAsState()
-    val activeRoute = currentEntry?.arguments?.getString("tab")
-        ?: viewModel.initialTab
-    val activeTabKey = tabKeys.firstOrNull { it.routeKey == activeRoute }
+    // The tab is screen state, not a destination of its own. Navigating to the
+    // route for each tab tore this screen down and built it again - the blink
+    // between tabs - and took every tab's loaded state with it. The route's
+    // `tab` argument still picks the one that opens.
+    var activeRoute by rememberSaveable { mutableStateOf(viewModel.initialTab) }
+    val activeTabKey = tabKeys.firstOrNull { tab -> tab.routeKey == activeRoute }
         ?: SettingsTabKey.Settings
     val activeIndex = tabKeys.indexOf(activeTabKey).coerceAtLeast(0)
 
@@ -131,17 +131,7 @@ fun WikiSettingsScreen(
                         MochiTab(stringResource(tab.titleRes), tab.icon)
                     },
                     selectedIndex = activeIndex,
-                    onSelect = { index ->
-                        val tab = tabKeys[index]
-                        // Don't push a new entry for the active tab.
-                        if (tab != activeTabKey) {
-                            navController.navigate(
-                                WikisApp.settings(wikiId, tab.routeKey),
-                            ) {
-                                launchSingleTop = true
-                            }
-                        }
-                    },
+                    onSelect = { index -> activeRoute = tabKeys[index].routeKey },
                 )
 
                 when (activeTabKey) {
