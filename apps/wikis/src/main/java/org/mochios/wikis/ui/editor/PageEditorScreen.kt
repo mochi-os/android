@@ -6,6 +6,7 @@
 package org.mochios.wikis.ui.editor
 
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -112,6 +113,33 @@ fun PageEditorScreen(
             bodyField = TextFieldValue(state.content, TextRange(state.content.length))
         }
     }
+    /**
+     * Where leaving the editor goes. Abandoning a page that was never written
+     * lands on the wiki's home with its drawer, wiki still selected - there is
+     * no page behind the editor worth returning to. The home page is opened by
+     * slug rather than through the wiki-home resolver, which would blink its
+     * skeleton on the way, and popped back to when it is already underneath.
+     * Editing an existing page goes back to that page.
+     */
+    val leaveEditor: () -> Unit = {
+        val home = state.wiki?.home?.takeIf { slug -> slug.isNotBlank() }
+        val previous = navController.previousBackStackEntry
+        val cameFromHome = previous?.destination?.route == WikisApp.PAGE_VIEW &&
+            previous.arguments?.getString("page") == home
+        when {
+            !viewModel.isNew || cameFromHome -> navController.popBackStack()
+            home != null -> navController.navigate(
+                WikisApp.pageView(viewModel.wikiId, home),
+            ) {
+                popUpTo(WikisApp.HOME)
+            }
+            else -> navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
+                popUpTo(WikisApp.HOME)
+            }
+        }
+    }
+    BackHandler(enabled = viewModel.isNew) { leaveEditor() }
+
     var savedCursor by remember { mutableStateOf(0) }
     var insertDialogOpen by remember { mutableStateOf(false) }
     var menuOpen by remember { mutableStateOf(false) }
@@ -139,7 +167,9 @@ fun PageEditorScreen(
                         Toast.LENGTH_SHORT,
                     ).show()
                     navController.navigate(WikisApp.pageView(viewModel.wikiId, event.slug)) {
-                        if (viewModel.isNew) {
+                        if (viewModel.isFirstPage) {
+                            popUpTo(WikisApp.HOME)
+                        } else if (viewModel.isNew) {
                             // The page exists now, so there is no creation form
                             // to go back to - drop it, and let Back reach
                             // whatever opened the editor. Editing an existing
@@ -189,7 +219,7 @@ fun PageEditorScreen(
                     )
                 },
                 navigationIcon = {
-                    MochiIconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = leaveEditor) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(org.mochios.android.R.string.common_back),
