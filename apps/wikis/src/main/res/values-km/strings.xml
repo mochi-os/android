@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">ទំព័រ “%1$s” មិនទាន់មានទេ។</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">ចែករំលែកតំណទំព័រ</string>
+    <string name="wikis_pageview_share_chooser">តំណវិគី</string>
     <string name="wikis_pageview_share_link_copied">តំណទំព័របានចម្លងទៅឃ្លីបបត</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">តំណទំព័រ Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">ចែករំលែកតំណទំព័រ</string>
+    <string name="wikis_page_action_share">តំណ</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">ស្វែងរក wiki…</string>

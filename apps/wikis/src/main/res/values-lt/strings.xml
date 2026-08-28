@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Atnaujinta %1$s</string>
     <string name="wikis_pageview_not_found_description">Puslapis „%1$s\" dar neegzistuoja.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Dalintis puslapio nuoroda</string>
+    <string name="wikis_pageview_share_chooser">Wiki nuoroda</string>
     <string name="wikis_pageview_share_link_copied">Puslapio nuoroda nukopijuota į iškarpinę</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki puslapio nuoroda</string>
     <string name="wikis_pageview_loading">Įkeliamas puslapis…</string>
-    <string name="wikis_page_action_share">Dalintis puslapio nuoroda</string>
+    <string name="wikis_page_action_share">Nuoroda</string>
     <string name="wikis_open_sidebar">Atidaryti šoninę juostą</string>
     <string name="wikis_owned_badge">Priklauso</string>
     <string name="wikis_search_placeholder">Ieškoti wiki…</string>

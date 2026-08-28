@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Përditësuar %1$s</string>
     <string name="wikis_pageview_not_found_description">Faqja „%1$s\" nuk ekziston ende.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Ndaj lidhjen e faqes</string>
+    <string name="wikis_pageview_share_chooser">Lidhja e wiki-t</string>
     <string name="wikis_pageview_share_link_copied">Lidhja e faqes u kopjua në kujtesë</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS i wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Lidhje e faqes wiki</string>
     <string name="wikis_pageview_loading">Po ngarkohet faqja…</string>
-    <string name="wikis_page_action_share">Ndaj lidhjen e faqes</string>
+    <string name="wikis_page_action_share">Lidhje</string>
     <string name="wikis_open_sidebar">Hap shiritin anësor</string>
     <string name="wikis_owned_badge">Pronar</string>
     <string name="wikis_search_placeholder">Kërko wiki…</string>

@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Абноўлена %1$s</string>
     <string name="wikis_pageview_not_found_description">Старонка „%1$s\" яшчэ не існуе.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Падзяліцца спасылкай на старонку</string>
+    <string name="wikis_pageview_share_chooser">Спасылка на вікі</string>
     <string name="wikis_pageview_share_link_copied">Спасылка на старонку скапіравана ў буфер абмену</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Спасылка на старонку wiki</string>
     <string name="wikis_pageview_loading">Загрузка старонкі…</string>
-    <string name="wikis_page_action_share">Падзяліцца спасылкай на старонку</string>
+    <string name="wikis_page_action_share">Спасылка</string>
     <string name="wikis_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="wikis_owned_badge">Уласны</string>
     <string name="wikis_search_placeholder">Пошук wiki…</string>

@@ -58,7 +58,7 @@
     <string name="wikis_pageview_not_found_description">La page « %1$s » n\'existe pas encore.</string>
     <string name="wikis_pageview_create_this_page">Créer cette page</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Partager le lien de la page</string>
+    <string name="wikis_pageview_share_chooser">Lien du wiki</string>
     <string name="wikis_pageview_rss_copied">URL du fil RSS copiée dans le presse-papiers</string>
     <string name="wikis_pageview_share_link_copied">Lien de la page copié dans le presse-papiers</string>
     <string name="wikis_pageview_clipboard_label_rss">URL du fil RSS du wiki</string>
@@ -72,7 +72,7 @@
     <string name="wikis_page_action_tags">Étiquettes</string>
     <string name="wikis_page_action_recent_changes">Modifications récentes</string>
     <string name="wikis_page_action_new_page">Nouvelle page</string>
-    <string name="wikis_page_action_share">Partager le lien de la page</string>
+    <string name="wikis_page_action_share">Lien</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Commencez votre premier wiki</string>
     <string name="wikis_empty_subtitle">Recherchez un wiki pour vous y abonner, ou créez-en un pour publier votre propre documentation.</string>

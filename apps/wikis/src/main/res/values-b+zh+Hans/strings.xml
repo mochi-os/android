@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">更新于 %1$s</string>
     <string name="wikis_pageview_not_found_description">页面\"%1$s\"尚不存在。</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">分享页面链接</string>
+    <string name="wikis_pageview_share_chooser">Wiki 链接</string>
     <string name="wikis_pageview_share_link_copied">页面链接已复制到剪贴板</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki 页面链接</string>
     <string name="wikis_pageview_loading">正在加载页面…</string>
-    <string name="wikis_page_action_share">分享页面链接</string>
+    <string name="wikis_page_action_share">链接</string>
     <string name="wikis_open_sidebar">打开侧边栏</string>
     <string name="wikis_owned_badge">拥有</string>
     <string name="wikis_search_placeholder">搜索 wiki…</string>

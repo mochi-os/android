@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">업데이트 %1$s</string>
     <string name="wikis_pageview_not_found_description">「%1$s」 페이지가 아직 존재하지 않습니다.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">페이지 링크 공유</string>
+    <string name="wikis_pageview_share_chooser">위키 링크</string>
     <string name="wikis_pageview_share_link_copied">페이지 링크가 클립보드에 복사되었습니다</string>
     <string name="wikis_pageview_clipboard_label_rss">위키 RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">위키 페이지 링크</string>
     <string name="wikis_pageview_loading">페이지 로딩 중…</string>
-    <string name="wikis_page_action_share">페이지 링크 공유</string>
+    <string name="wikis_page_action_share">링크</string>
     <string name="wikis_open_sidebar">사이드바 열기</string>
     <string name="wikis_owned_badge">소유</string>
     <string name="wikis_search_placeholder">위키 검색…</string>

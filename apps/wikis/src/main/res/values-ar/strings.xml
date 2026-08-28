@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">تم التحديث %1$s</string>
     <string name="wikis_pageview_not_found_description">الصفحة «%1$s» غير موجودة بعد.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">مشاركة رابط الصفحة</string>
+    <string name="wikis_pageview_share_chooser">رابط الويكي</string>
     <string name="wikis_pageview_share_link_copied">تم نسخ رابط الصفحة إلى الحافظة</string>
     <string name="wikis_pageview_clipboard_label_rss">رابط RSS للويكي</string>
     <string name="wikis_pageview_clipboard_label_share">رابط صفحة الويكي</string>
     <string name="wikis_pageview_loading">جارٍ تحميل الصفحة…</string>
-    <string name="wikis_page_action_share">مشاركة رابط الصفحة</string>
+    <string name="wikis_page_action_share">رابط</string>
     <string name="wikis_open_sidebar">فتح الشريط الجانبي</string>
     <string name="wikis_owned_badge">مملوك</string>
     <string name="wikis_search_placeholder">ابحث عن ويكي…</string>

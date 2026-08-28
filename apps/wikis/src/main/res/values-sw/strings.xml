@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Imesasishwa %1$s</string>
     <string name="wikis_pageview_not_found_description">Ukurasa „%1$s\" haupo bado.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Shiriki kiungo cha ukurasa</string>
+    <string name="wikis_pageview_share_chooser">Kiungo cha wiki</string>
     <string name="wikis_pageview_share_link_copied">Kiungo cha ukurasa kimenakiliwa kwenye ubao wa kunakili</string>
     <string name="wikis_pageview_clipboard_label_rss">URL ya RSS ya Wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Kiungo cha ukurasa wa Wiki</string>
     <string name="wikis_pageview_loading">Inapakia ukurasa…</string>
-    <string name="wikis_page_action_share">Shiriki kiungo cha ukurasa</string>
+    <string name="wikis_page_action_share">Kiungo</string>
     <string name="wikis_open_sidebar">Fungua upau wa pembeni</string>
     <string name="wikis_owned_badge">Inamilikiwa</string>
     <string name="wikis_search_placeholder">Tafuta wiki…</string>

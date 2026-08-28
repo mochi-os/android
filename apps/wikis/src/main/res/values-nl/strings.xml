@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Bijgewerkt %1$s</string>
     <string name="wikis_pageview_not_found_description">De pagina \"%1$s\" bestaat nog niet.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Paginalink delen</string>
+    <string name="wikis_pageview_share_chooser">Wikilink</string>
     <string name="wikis_pageview_share_link_copied">Paginalink gekopieerd naar klembord</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki-paginalink</string>
     <string name="wikis_pageview_loading">Pagina laden…</string>
-    <string name="wikis_page_action_share">Paginalink delen</string>
+    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Zijbalk openen</string>
     <string name="wikis_owned_badge">Eigen</string>
     <string name="wikis_search_placeholder">Zoek naar een wiki…</string>

@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Eguneratua %1$s</string>
     <string name="wikis_pageview_not_found_description">«%1$s» orria ez da existitzen oraindik.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Partekatu orrialdearen esteka</string>
+    <string name="wikis_pageview_share_chooser">Wikiaren esteka</string>
     <string name="wikis_pageview_share_link_copied">Orrialdearen esteka arbelean kopiatua</string>
     <string name="wikis_pageview_clipboard_label_rss">Wikiaren RSS URLa</string>
     <string name="wikis_pageview_clipboard_label_share">Wikiaren orrialdearen esteka</string>
     <string name="wikis_pageview_loading">Orrialdea kargatzen…</string>
-    <string name="wikis_page_action_share">Partekatu orrialdearen esteka</string>
+    <string name="wikis_page_action_share">Esteka</string>
     <string name="wikis_open_sidebar">Ireki alboko barra</string>
     <string name="wikis_owned_badge">Norbera</string>
     <string name="wikis_search_placeholder">Bilatu wikia…</string>

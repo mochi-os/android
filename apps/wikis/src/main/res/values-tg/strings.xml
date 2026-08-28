@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Саҳифаи “%1$s” ҳанӯз вуҷуд надорад.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Пайванди саҳифаро мубодила кунед</string>
+    <string name="wikis_pageview_share_chooser">Пайванди вики</string>
     <string name="wikis_pageview_share_link_copied">Пайванди саҳифа ба ҳофиза нусхабардорӣ шуд</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Пайванди саҳифаи Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Пайванди саҳифаро мубодила кунед</string>
+    <string name="wikis_page_action_share">Пайванд</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Ҷустуҷӯи wiki…</string>

@@ -40,6 +40,7 @@ import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
 import org.mochios.wikis.model.SettingsSetResponse
+import org.mochios.wikis.model.ShareResponse
 import org.mochios.wikis.model.RssRevokeRequest
 import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.TagAddResponse
@@ -101,6 +102,12 @@ interface WikisApi {
     suspend fun unsubscribe(
         @Path(value = "wiki", encoded = true) wiki: String,
     ): Response<ApiResponse<OkResponse>>
+
+    /** The wiki's shareable `mochi://` link, assembled by the server. */
+    @POST("{wiki}/-/share")
+    suspend fun share(
+        @Path(value = "wiki", encoded = true) wiki: String,
+    ): Response<ApiResponse<ShareResponse>>
 
     
     @POST("{wiki}/-/sync")

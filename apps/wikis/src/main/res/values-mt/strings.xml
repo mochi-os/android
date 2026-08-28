@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Il-paġna “%1$s” għadha ma teżistix.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Aqsam il-link tal-paġna</string>
+    <string name="wikis_pageview_share_chooser">Link tal-wiki</string>
     <string name="wikis_pageview_share_link_copied">Il-link tal-paġna ġie kkupjat fil-klipbord</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Link tal-paġna Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Aqsam il-link tal-paġna</string>
+    <string name="wikis_page_action_share">Ħolqa</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Fittex wiki…</string>

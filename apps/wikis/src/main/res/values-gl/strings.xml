@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Actualizado %1$s</string>
     <string name="wikis_pageview_not_found_description">A páxina «%1$s» aínda non existe.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Compartir ligazón da páxina</string>
+    <string name="wikis_pageview_share_chooser">Ligazón do wiki</string>
     <string name="wikis_pageview_share_link_copied">Ligazón da páxina copiada no portapapeis</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS da wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Ligazón da páxina wiki</string>
     <string name="wikis_pageview_loading">Cargando páxina…</string>
-    <string name="wikis_page_action_share">Compartir ligazón da páxina</string>
+    <string name="wikis_page_action_share">Ligazón</string>
     <string name="wikis_open_sidebar">Abrir barra lateral</string>
     <string name="wikis_owned_badge">Propio</string>
     <string name="wikis_search_placeholder">Buscar unha wiki…</string>

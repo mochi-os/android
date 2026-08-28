@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Актуализирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страницата „%1$s\" все още не съществува.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Сподели връзка към страница</string>
+    <string name="wikis_pageview_share_chooser">Връзка към уикито</string>
     <string name="wikis_pageview_share_link_copied">Връзката към страницата е копирана в клипборда</string>
     <string name="wikis_pageview_clipboard_label_rss">RSS URL на wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Връзка към wiki страница</string>
     <string name="wikis_pageview_loading">Зареждане на страницата…</string>
-    <string name="wikis_page_action_share">Сподели връзка към страница</string>
+    <string name="wikis_page_action_share">Връзка</string>
     <string name="wikis_open_sidebar">Отвори страничната лента</string>
     <string name="wikis_owned_badge">Притежавано</string>
     <string name="wikis_search_placeholder">Търсене на wiki…</string>

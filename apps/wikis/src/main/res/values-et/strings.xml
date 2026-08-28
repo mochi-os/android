@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Uuendatud %1$s</string>
     <string name="wikis_pageview_not_found_description">Lehte „%1$s\" ei ole veel olemas.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Jaga lehe linki</string>
+    <string name="wikis_pageview_share_chooser">Wiki link</string>
     <string name="wikis_pageview_share_link_copied">Lehe link kopeeritud lõikepuhvrisse</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki lehe link</string>
     <string name="wikis_pageview_loading">Lehte laadimine…</string>
-    <string name="wikis_page_action_share">Jaga lehe linki</string>
+    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>
     <string name="wikis_owned_badge">Omanik</string>
     <string name="wikis_search_placeholder">Otsi wikit…</string>

@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">עודכן %1$s</string>
     <string name="wikis_pageview_not_found_description">הדף „%1$s\" עדיין לא קיים.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">שתף קישור לדף</string>
+    <string name="wikis_pageview_share_chooser">קישור לוויקי</string>
     <string name="wikis_pageview_share_link_copied">קישור לדף הועתק ללוח</string>
     <string name="wikis_pageview_clipboard_label_rss">כתובת RSS של ויקי</string>
     <string name="wikis_pageview_clipboard_label_share">קישור לדף ויקי</string>
     <string name="wikis_pageview_loading">טוען דף…</string>
-    <string name="wikis_page_action_share">שתף קישור לדף</string>
+    <string name="wikis_page_action_share">קישור</string>
     <string name="wikis_open_sidebar">פתח סרגל צד</string>
     <string name="wikis_owned_badge">בבעלותך</string>
     <string name="wikis_search_placeholder">חפש ויקי…</string>

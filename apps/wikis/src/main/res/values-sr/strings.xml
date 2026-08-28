@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страница „%1$s\" још не постоји.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Подели везу странице</string>
+    <string name="wikis_pageview_share_chooser">Веза до викија</string>
     <string name="wikis_pageview_share_link_copied">Веза странице копирана у међумеморију</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Веза wiki странице</string>
     <string name="wikis_pageview_loading">Учитавање странице…</string>
-    <string name="wikis_page_action_share">Подели везу странице</string>
+    <string name="wikis_page_action_share">Веза</string>
     <string name="wikis_open_sidebar">Отвори бочну траку</string>
     <string name="wikis_owned_badge">Власништво</string>
     <string name="wikis_search_placeholder">Претражи wiki…</string>

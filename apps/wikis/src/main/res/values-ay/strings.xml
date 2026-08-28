@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” laphix janïr utjkiti.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Laphi chinu ch’axwt’aña</string>
+    <string name="wikis_pageview_share_chooser">Wiki chinu</string>
     <string name="wikis_pageview_share_link_copied">Laphi chinux clipboard ukar qillqxatatawa</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki laphi chinu</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Laphi chinu ch’axwt’aña</string>
+    <string name="wikis_page_action_share">Enlace</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Mä wiki thaqaña…</string>

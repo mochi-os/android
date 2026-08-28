@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Обновлено %1$s</string>
     <string name="wikis_pageview_not_found_description">Страница «%1$s» ещё не существует.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Поделиться ссылкой на страницу</string>
+    <string name="wikis_pageview_share_chooser">Ссылка на вики</string>
     <string name="wikis_pageview_share_link_copied">Ссылка на страницу скопирована в буфер обмена</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS вики</string>
     <string name="wikis_pageview_clipboard_label_share">Ссылка на страницу вики</string>
     <string name="wikis_pageview_loading">Загрузка страницы…</string>
-    <string name="wikis_page_action_share">Поделиться ссылкой на страницу</string>
+    <string name="wikis_page_action_share">Ссылка</string>
     <string name="wikis_open_sidebar">Открыть боковую панель</string>
     <string name="wikis_owned_badge">Свой</string>
     <string name="wikis_search_placeholder">Поиск вики…</string>

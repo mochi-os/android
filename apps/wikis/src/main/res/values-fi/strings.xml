@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Päivitetty %1$s</string>
     <string name="wikis_pageview_not_found_description">Sivua \"%1$s\" ei vielä ole olemassa.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Jaa sivulinkki</string>
+    <string name="wikis_pageview_share_chooser">Wikin linkki</string>
     <string name="wikis_pageview_share_link_copied">Sivulinkki kopioitu leikepöydälle</string>
     <string name="wikis_pageview_clipboard_label_rss">Wikin RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wikisivulinkki</string>
     <string name="wikis_pageview_loading">Ladataan sivua…</string>
-    <string name="wikis_page_action_share">Jaa sivulinkki</string>
+    <string name="wikis_page_action_share">Linkki</string>
     <string name="wikis_open_sidebar">Avaa sivupalkki</string>
     <string name="wikis_owned_badge">Omistettu</string>
     <string name="wikis_search_placeholder">Etsi wiki…</string>

@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">به‌روزرسانی شده %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحه «%1$s» هنوز وجود ندارد.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">اشتراک‌گذاری لینک صفحه</string>
+    <string name="wikis_pageview_share_chooser">لینک ویکی</string>
     <string name="wikis_pageview_share_link_copied">لینک صفحه در کلیپ‌بورد کپی شد</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ویکی</string>
     <string name="wikis_pageview_clipboard_label_share">لینک صفحه ویکی</string>
     <string name="wikis_pageview_loading">بارگذاری صفحه…</string>
-    <string name="wikis_page_action_share">اشتراک‌گذاری لینک صفحه</string>
+    <string name="wikis_page_action_share">پیوند</string>
     <string name="wikis_open_sidebar">باز کردن نوار کناری</string>
     <string name="wikis_owned_badge">متعلق به شما</string>
     <string name="wikis_search_placeholder">جستجوی ویکی…</string>

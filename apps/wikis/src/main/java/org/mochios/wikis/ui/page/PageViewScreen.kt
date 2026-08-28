@@ -50,6 +50,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -109,6 +110,8 @@ fun PageViewScreen(
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
     val deletedMsg = stringResource(R.string.wikis_delete_page_success)
     val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
+    val shareChooserTitle = stringResource(R.string.wikis_pageview_share_chooser)
+    val currentShareSubject by rememberUpdatedState(shareSubject)
 
     // Declared ahead of the event collector below, which closes the dialog when
     // the delete it confirmed comes back.
@@ -135,6 +138,14 @@ fun PageViewScreen(
                         ClipData.newPlainText(clipboardLabelRss, event.url).toClipEntry(),
                     )
                     snackbar.showSnackbar(rssCopiedMsg)
+                }
+                is PageViewEvent.ShareLink -> {
+                    sharePageLink(
+                        context = context,
+                        subject = currentShareSubject,
+                        url = event.link,
+                        chooserTitle = shareChooserTitle,
+                    )
                 }
                 is PageViewEvent.ShowError -> {
                     snackbar.showSnackbar(event.error.userMessage())
@@ -295,14 +306,7 @@ fun PageViewScreen(
                                 },
                                 onShare = {
                                     menuExpanded = false
-                                    sharePageLink(
-                                        context = context,
-                                        subject = shareSubject,
-                                        url = viewModel.shareUrl(),
-                                        chooserTitle = context.getString(
-                                            R.string.wikis_pageview_share_chooser
-                                        ),
-                                    )
+                                    viewModel.shareLink()
                                 },
                                 onUnsubscribe = {
                                     menuExpanded = false
@@ -719,6 +723,9 @@ private fun sharePageLink(
         type = "text/plain"
         putExtra(Intent.EXTRA_SUBJECT, subject)
         putExtra(Intent.EXTRA_TEXT, url)
+        putExtra(Intent.EXTRA_TITLE, subject.ifBlank { chooserTitle })
     }
-    context.startActivity(Intent.createChooser(send, chooserTitle))
+    val chooser = Intent.createChooser(send, chooserTitle)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }

@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Oppdatert %1$s</string>
     <string name="wikis_pageview_not_found_description">Siden \"%1$s\" finnes ikke ennå.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Del sidelink</string>
+    <string name="wikis_pageview_share_chooser">Wiki-lenke</string>
     <string name="wikis_pageview_share_link_copied">Sidelink kopiert til utklippstavlen</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wikisidelink</string>
     <string name="wikis_pageview_loading">Laster side…</string>
-    <string name="wikis_page_action_share">Del sidelink</string>
+    <string name="wikis_page_action_share">Lenke</string>
     <string name="wikis_open_sidebar">Åpne sidefelt</string>
     <string name="wikis_owned_badge">Egen</string>
     <string name="wikis_search_placeholder">Søk etter en wiki…</string>

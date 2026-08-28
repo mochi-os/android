@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Aktualisiert %1$s</string>
     <string name="wikis_pageview_not_found_description">Die Seite „%1$s\" existiert noch nicht.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Seitenlink teilen</string>
+    <string name="wikis_pageview_share_chooser">Wiki-Link</string>
     <string name="wikis_pageview_share_link_copied">Seitenlink in die Zwischenablage kopiert</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki-RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki-Seitenlink</string>
     <string name="wikis_pageview_loading">Seite wird geladen…</string>
-    <string name="wikis_page_action_share">Seitenlink teilen</string>
+    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Seitenleiste öffnen</string>
     <string name="wikis_owned_badge">Eigenes</string>
     <string name="wikis_search_placeholder">Wiki suchen…</string>

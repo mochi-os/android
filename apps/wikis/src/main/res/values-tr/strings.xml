@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Güncellendi %1$s</string>
     <string name="wikis_pageview_not_found_description">\"%1$s\" sayfası henüz mevcut değil.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Sayfa bağlantısını paylaş</string>
+    <string name="wikis_pageview_share_chooser">Wiki bağlantısı</string>
     <string name="wikis_pageview_share_link_copied">Sayfa bağlantısı panoya kopyalandı</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL\'si</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki sayfa bağlantısı</string>
     <string name="wikis_pageview_loading">Sayfa yükleniyor…</string>
-    <string name="wikis_page_action_share">Sayfa bağlantısını paylaş</string>
+    <string name="wikis_page_action_share">Bağlantı</string>
     <string name="wikis_open_sidebar">Kenar çubuğunu aç</string>
     <string name="wikis_owned_badge">Sahip</string>
     <string name="wikis_search_placeholder">Bir wiki ara…</string>

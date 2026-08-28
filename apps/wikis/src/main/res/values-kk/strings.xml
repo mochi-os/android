@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” беті әлі жоқ.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Бет сілтемесін бөлісу</string>
+    <string name="wikis_pageview_share_chooser">Уики сілтемесі</string>
     <string name="wikis_pageview_share_link_copied">Бет сілтемесі алмасу буферіне көшірілді</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki бет сілтемесі</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Бет сілтемесін бөлісу</string>
+    <string name="wikis_page_action_share">Сілтеме</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki іздеу…</string>

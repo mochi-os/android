@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Ikhasi “%1$s” alikho okwamanje.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Yabelana ngesixhumanisi sekhasi</string>
+    <string name="wikis_pageview_share_chooser">Isixhumanisi se-wiki</string>
     <string name="wikis_pageview_share_link_copied">Isixhumanisi sekhasi sikopishelwe kubhodi lokunamathisela</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Isixhumanisi sekhasi le-Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Yabelana ngesixhumanisi sekhasi</string>
+    <string name="wikis_page_action_share">Isixhumanisi</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Sesha i-wiki…</string>

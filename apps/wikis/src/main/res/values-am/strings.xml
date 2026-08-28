@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” የተባለው ገጽ እስካሁን የለም።</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">የገጽ አገናኝ አጋራ</string>
+    <string name="wikis_pageview_share_chooser">የዊኪ አገናኝ</string>
     <string name="wikis_pageview_share_link_copied">የገጽ አገናኝ ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">የWiki ገጽ አገናኝ</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">የገጽ አገናኝ አጋራ</string>
+    <string name="wikis_page_action_share">አገናኝ</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki ይፈልጉ…</string>

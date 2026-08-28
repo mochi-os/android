@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Aktualizované %1$s</string>
     <string name="wikis_pageview_not_found_description">Stránka „%1$s\" zatiaľ neexistuje.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Zdieľať odkaz na stránku</string>
+    <string name="wikis_pageview_share_chooser">Odkaz na wiki</string>
     <string name="wikis_pageview_share_link_copied">Odkaz na stránku skopírovaný do schránky</string>
     <string name="wikis_pageview_clipboard_label_rss">RSS URL wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Odkaz na wiki stránku</string>
     <string name="wikis_pageview_loading">Načítava sa stránka…</string>
-    <string name="wikis_page_action_share">Zdieľať odkaz na stránku</string>
+    <string name="wikis_page_action_share">Odkaz</string>
     <string name="wikis_open_sidebar">Otvoriť bočný panel</string>
     <string name="wikis_owned_badge">Vlastné</string>
     <string name="wikis_search_placeholder">Hľadať wiki…</string>

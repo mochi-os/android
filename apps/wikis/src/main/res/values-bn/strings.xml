@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">আপডেট হয়েছে %1$s</string>
     <string name="wikis_pageview_not_found_description">পৃষ্ঠা „%1$s\" এখনো নেই।</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">পৃষ্ঠার লিঙ্ক শেয়ার করুন</string>
+    <string name="wikis_pageview_share_chooser">উইকি লিঙ্ক</string>
     <string name="wikis_pageview_share_link_copied">পৃষ্ঠার লিঙ্ক ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki পৃষ্ঠার লিঙ্ক</string>
     <string name="wikis_pageview_loading">পৃষ্ঠা লোড হচ্ছে…</string>
-    <string name="wikis_page_action_share">পৃষ্ঠার লিঙ্ক শেয়ার করুন</string>
+    <string name="wikis_page_action_share">লিঙ্ক</string>
     <string name="wikis_open_sidebar">সাইডবার খুলুন</string>
     <string name="wikis_owned_badge">মালিকানা</string>
     <string name="wikis_search_placeholder">একটি wiki খুঁজুন…</string>

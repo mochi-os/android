@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">อัปเดต %1$s</string>
     <string name="wikis_pageview_not_found_description">หน้า \"%1$s\" ยังไม่มี</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">แชร์ลิงก์หน้า</string>
+    <string name="wikis_pageview_share_chooser">ลิงก์วิกิ</string>
     <string name="wikis_pageview_share_link_copied">คัดลอกลิงก์หน้าไปยังคลิปบอร์ดแล้ว</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ของวิกิ</string>
     <string name="wikis_pageview_clipboard_label_share">ลิงก์หน้าวิกิ</string>
     <string name="wikis_pageview_loading">กำลังโหลดหน้า…</string>
-    <string name="wikis_page_action_share">แชร์ลิงก์หน้า</string>
+    <string name="wikis_page_action_share">ลิงก์</string>
     <string name="wikis_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="wikis_owned_badge">เป็นเจ้าของ</string>
     <string name="wikis_search_placeholder">ค้นหาวิกิ…</string>

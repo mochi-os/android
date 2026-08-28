@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Ενημερώθηκε %1$s</string>
     <string name="wikis_pageview_not_found_description">Η σελίδα «%1$s» δεν υπάρχει ακόμη.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Κοινοποίηση συνδέσμου σελίδας</string>
+    <string name="wikis_pageview_share_chooser">Σύνδεσμος wiki</string>
     <string name="wikis_pageview_share_link_copied">Ο σύνδεσμος σελίδας αντιγράφηκε στο πρόχειρο</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS του wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Σύνδεσμος σελίδας wiki</string>
     <string name="wikis_pageview_loading">Φόρτωση σελίδας…</string>
-    <string name="wikis_page_action_share">Κοινοποίηση συνδέσμου σελίδας</string>
+    <string name="wikis_page_action_share">Σύνδεσμος</string>
     <string name="wikis_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
     <string name="wikis_owned_badge">Ιδιοκτησία</string>
     <string name="wikis_search_placeholder">Αναζήτηση για wiki…</string>

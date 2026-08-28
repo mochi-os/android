@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Oppdatert %1$s</string>
     <string name="wikis_pageview_not_found_description">Sida „%1$s\" finst ikkje enno.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Del lenkje til sida</string>
+    <string name="wikis_pageview_share_chooser">Wiki-lenkje</string>
     <string name="wikis_pageview_share_link_copied">Lenkje til sida kopiert til utklippstavla</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Lenkje til wikiside</string>
     <string name="wikis_pageview_loading">Lastar side…</string>
-    <string name="wikis_page_action_share">Del lenkje til sida</string>
+    <string name="wikis_page_action_share">Lenkje</string>
     <string name="wikis_open_sidebar">Opne sidefelt</string>
     <string name="wikis_owned_badge">Eigd</string>
     <string name="wikis_search_placeholder">Søk etter wiki…</string>

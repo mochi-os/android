@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Posodobljeno %1$s</string>
     <string name="wikis_pageview_not_found_description">Stran „%1$s\" še ne obstaja.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Deli povezavo strani</string>
+    <string name="wikis_pageview_share_chooser">Povezava wikija</string>
     <string name="wikis_pageview_share_link_copied">Povezava strani kopirana v odložišče</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Povezava wiki strani</string>
     <string name="wikis_pageview_loading">Nalaganje strani…</string>
-    <string name="wikis_page_action_share">Deli povezavo strani</string>
+    <string name="wikis_page_action_share">Povezava</string>
     <string name="wikis_open_sidebar">Odpri stransko vrstico</string>
     <string name="wikis_owned_badge">V lasti</string>
     <string name="wikis_search_placeholder">Iskanje wiki…</string>

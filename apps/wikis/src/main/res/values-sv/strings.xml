@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Uppdaterad %1$s</string>
     <string name="wikis_pageview_not_found_description">Sidan \"%1$s\" finns inte än.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Dela sidlänk</string>
+    <string name="wikis_pageview_share_chooser">Wiki-länk</string>
     <string name="wikis_pageview_share_link_copied">Sidlänk kopierad till urklipp</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wikisidlänk</string>
     <string name="wikis_pageview_loading">Laddar sida…</string>
-    <string name="wikis_page_action_share">Dela sidlänk</string>
+    <string name="wikis_page_action_share">Länk</string>
     <string name="wikis_open_sidebar">Öppna sidofält</string>
     <string name="wikis_owned_badge">Egen</string>
     <string name="wikis_search_placeholder">Sök efter en wiki…</string>

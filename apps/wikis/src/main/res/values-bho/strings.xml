@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” पन्ना अबले नइखे।</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">पन्ना के लिंक साझा करीं</string>
+    <string name="wikis_pageview_share_chooser">विकी लिंक</string>
     <string name="wikis_pageview_share_link_copied">पन्ना के लिंक क्लिपबोर्ड पर कॉपी भइल</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki पन्ना के लिंक</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">पन्ना के लिंक साझा करीं</string>
+    <string name="wikis_page_action_share">लिंक</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">कवनो wiki खोजीं…</string>

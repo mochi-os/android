@@ -58,7 +58,7 @@
     <string name="wikis_pageview_not_found_description">頁面「%1$s」仲未存在。</string>
     <string name="wikis_pageview_create_this_page">建立呢個頁面</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">分享頁面連結</string>
+    <string name="wikis_pageview_share_chooser">Wiki 連結</string>
     <string name="wikis_pageview_rss_copied">RSS 網址已複製到剪貼簿</string>
     <string name="wikis_pageview_share_link_copied">頁面連結已複製到剪貼簿</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS 網址</string>
@@ -72,7 +72,7 @@
     <string name="wikis_page_action_tags">標籤</string>
     <string name="wikis_page_action_recent_changes">最近變更</string>
     <string name="wikis_page_action_new_page">新頁面</string>
-    <string name="wikis_page_action_share">分享頁面連結</string>
+    <string name="wikis_page_action_share">連結</string>
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">開始你嘅第一個 wiki</string>
     <string name="wikis_empty_subtitle">搜尋 wiki 嚟訂閱,或者建立一個發佈你自己嘅文檔。</string>

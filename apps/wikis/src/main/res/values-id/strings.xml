@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Diperbarui %1$s</string>
     <string name="wikis_pageview_not_found_description">Halaman \"%1$s\" belum ada.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Bagikan tautan halaman</string>
+    <string name="wikis_pageview_share_chooser">Tautan wiki</string>
     <string name="wikis_pageview_share_link_copied">Tautan halaman disalin ke papan klip</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Tautan halaman wiki</string>
     <string name="wikis_pageview_loading">Memuat halaman…</string>
-    <string name="wikis_page_action_share">Bagikan tautan halaman</string>
+    <string name="wikis_page_action_share">Tautan</string>
     <string name="wikis_open_sidebar">Buka bilah samping</string>
     <string name="wikis_owned_badge">Milik</string>
     <string name="wikis_search_placeholder">Cari wiki…</string>

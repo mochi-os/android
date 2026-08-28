@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Actualizat %1$s</string>
     <string name="wikis_pageview_not_found_description">Pagina „%1$s\" încă nu există.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Partajează link-ul paginii</string>
+    <string name="wikis_pageview_share_chooser">Link-ul wiki</string>
     <string name="wikis_pageview_share_link_copied">Link-ul paginii copiat în clipboard</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Link pagina wiki</string>
     <string name="wikis_pageview_loading">Se încarcă pagina…</string>
-    <string name="wikis_page_action_share">Partajează link-ul paginii</string>
+    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Deschide bara laterală</string>
     <string name="wikis_owned_badge">Propriu</string>
     <string name="wikis_search_placeholder">Caută un wiki…</string>

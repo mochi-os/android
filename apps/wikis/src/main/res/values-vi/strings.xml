@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Cập nhật %1$s</string>
     <string name="wikis_pageview_not_found_description">Trang \"%1$s\" chưa tồn tại.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Chia sẻ liên kết trang</string>
+    <string name="wikis_pageview_share_chooser">Liên kết wiki</string>
     <string name="wikis_pageview_share_link_copied">Đã sao chép liên kết trang vào bộ nhớ tạm</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS của wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Liên kết trang wiki</string>
     <string name="wikis_pageview_loading">Đang tải trang…</string>
-    <string name="wikis_page_action_share">Chia sẻ liên kết trang</string>
+    <string name="wikis_page_action_share">Liên kết</string>
     <string name="wikis_open_sidebar">Mở thanh bên</string>
     <string name="wikis_owned_badge">Sở hữu</string>
     <string name="wikis_search_placeholder">Tìm kiếm wiki…</string>

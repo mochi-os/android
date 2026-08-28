@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страницата „%1$s\" сè уште не постои.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Сподели врска на страница</string>
+    <string name="wikis_pageview_share_chooser">Врска до викито</string>
     <string name="wikis_pageview_share_link_copied">Врска на страница копирана во клипборд</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Врска на wiki страница</string>
     <string name="wikis_pageview_loading">Се вчитува страница…</string>
-    <string name="wikis_page_action_share">Сподели врска на страница</string>
+    <string name="wikis_page_action_share">Врска</string>
     <string name="wikis_open_sidebar">Отвори странична лента</string>
     <string name="wikis_owned_badge">Сопственост</string>
     <string name="wikis_search_placeholder">Барај wiki…</string>

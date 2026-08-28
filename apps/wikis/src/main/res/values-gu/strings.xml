@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” પૃષ્ઠ હજી અસ્તિત્વમાં નથી.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">પૃષ્ઠ લિંક શેર કરો</string>
+    <string name="wikis_pageview_share_chooser">વિકિ લિંક</string>
     <string name="wikis_pageview_share_link_copied">પૃષ્ઠ લિંક ક્લિપબોર્ડ પર કૉપિ થઈ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki પૃષ્ઠ લિંક</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">પૃષ્ઠ લિંક શેર કરો</string>
+    <string name="wikis_page_action_share">લિંક</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki શોધો…</string>

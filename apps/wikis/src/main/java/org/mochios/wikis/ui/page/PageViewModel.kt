@@ -30,6 +30,9 @@ sealed class PageViewEvent {
     /** Copy this URL to the clipboard and show the "RSS URL copied" toast. */
     data class CopyRssUrl(val url: String) : PageViewEvent()
 
+    /** Hand this server-built link to the system share sheet. */
+    data class ShareLink(val link: String) : PageViewEvent()
+
     /** Display a transient error toast (already localised). */
     data class ShowError(val error: MochiError) : PageViewEvent()
 
@@ -160,8 +163,18 @@ class PageViewModel @Inject constructor(
         }
     }
 
-    /** Build the canonical share URL for this page on the bound server. */
-    fun shareUrl(): String = "$serverUrl/wikis/$wikiId/$slug"
+    /** Fetch the wiki's share link from the server, then offer it to the share sheet. */
+    fun shareLink() {
+        if (wikiId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                val link = repository.shareWiki(wikiId)
+                _events.emit(PageViewEvent.ShareLink(link))
+            } catch (e: Exception) {
+                _events.emit(PageViewEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
 
     fun updatePageTags(tags: List<String>) {
         val current = _uiState.value.page ?: return

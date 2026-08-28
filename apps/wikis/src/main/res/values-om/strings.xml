@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Fuulli “%1$s” amma hin jiru.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Hidhaa fuulaa qoodi</string>
+    <string name="wikis_pageview_share_chooser">Hidhaa wiki</string>
     <string name="wikis_pageview_share_link_copied">Hidhaan fuulaa gara muraatti garagalfameera</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Hidhaa fuula Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Hidhaa fuulaa qoodi</string>
+    <string name="wikis_page_action_share">Geessituu</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki barbaadi…</string>

@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Оновлено %1$s</string>
     <string name="wikis_pageview_not_found_description">Сторінка „%1$s\" ще не існує.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Поділитися посиланням на сторінку</string>
+    <string name="wikis_pageview_share_chooser">Посилання на вікі</string>
     <string name="wikis_pageview_share_link_copied">Посилання на сторінку скопійовано до буфера обміну</string>
     <string name="wikis_pageview_clipboard_label_rss">RSS URL вікі</string>
     <string name="wikis_pageview_clipboard_label_share">Посилання на сторінку вікі</string>
     <string name="wikis_pageview_loading">Завантаження сторінки…</string>
-    <string name="wikis_page_action_share">Поділитися посиланням на сторінку</string>
+    <string name="wikis_page_action_share">Посилання</string>
     <string name="wikis_open_sidebar">Відкрити бічну панель</string>
     <string name="wikis_owned_badge">Власне</string>
     <string name="wikis_search_placeholder">Пошук вікі…</string>

@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” පිටුව තවම නොපවතී.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">පිටු සබැඳිය බෙදාගන්න</string>
+    <string name="wikis_pageview_share_chooser">විකි සබැඳිය</string>
     <string name="wikis_pageview_share_link_copied">පිටු සබැඳිය පසුරු පුවරුවට පිටපත් විය</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki පිටු සබැඳිය</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">පිටු සබැඳිය බෙදාගන්න</string>
+    <string name="wikis_page_action_share">සබැඳිය</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki සොයන්න…</string>

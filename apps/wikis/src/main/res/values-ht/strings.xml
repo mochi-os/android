@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Paj “%1$s” la poko egziste.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Pataje lyen paj la</string>
+    <string name="wikis_pageview_share_chooser">Lyen wiki a</string>
     <string name="wikis_pageview_share_link_copied">Lyen paj la kopye nan tablo tanporè</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Lyen paj Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Pataje lyen paj la</string>
+    <string name="wikis_page_action_share">Lyen</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Chèche yon wiki…</string>

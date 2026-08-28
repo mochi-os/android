@@ -206,6 +206,15 @@ class WikisRepository @Inject constructor(
         }
     }
 
+    /** The wiki's shareable link, built by the server. */
+    suspend fun shareWiki(wiki: String): String {
+        return try {
+            api.share(wiki).unwrap().link
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun syncWiki(wiki: String) {
         try {
             api.sync(wiki).unwrap()

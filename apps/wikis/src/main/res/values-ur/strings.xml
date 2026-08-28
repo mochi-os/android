@@ -240,12 +240,12 @@
     <string name="wikis_pageview_updated">اپ ڈیٹ %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحہ „%1$s\" ابھی موجود نہیں ہے۔</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">صفحہ لنک کا اشتراک کریں</string>
+    <string name="wikis_pageview_share_chooser">ویکی لنک</string>
     <string name="wikis_pageview_share_link_copied">صفحہ لنک کلپ بورڈ پر کاپی ہو گیا</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki صفحہ لنک</string>
     <string name="wikis_pageview_loading">صفحہ لوڈ ہو رہا ہے…</string>
-    <string name="wikis_page_action_share">صفحہ لنک کا اشتراک کریں</string>
+    <string name="wikis_page_action_share">لنک</string>
     <string name="wikis_open_sidebar">سائیڈبار کھولیں</string>
     <string name="wikis_owned_badge">ملکیت</string>
     <string name="wikis_search_placeholder">وکی تلاش کریں…</string>

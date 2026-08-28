@@ -242,12 +242,12 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">لاپەڕەی “%1$s” هێشتا بوونی نییە.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">بەستەری لاپەڕە هاوبەش بکە</string>
+    <string name="wikis_pageview_share_chooser">بەستەری ویکی</string>
     <string name="wikis_pageview_share_link_copied">بەستەری لاپەڕە لەبەرگیرایەوە</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">بەستەری لاپەڕەی Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">بەستەری لاپەڕە هاوبەش بکە</string>
+    <string name="wikis_page_action_share">بەستەر</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">گەڕان بۆ wiki…</string>
