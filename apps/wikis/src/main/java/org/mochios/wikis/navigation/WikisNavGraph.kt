@@ -39,21 +39,8 @@ object WikisApp {
     fun wikiHome(wikiId: String) = "wikis/$wikiId"
     fun pageView(wikiId: String, page: String) = "wikis/$wikiId/$page"
     fun pageEdit(wikiId: String, page: String) = "wikis/$wikiId/$page/edit"
-    fun newPage(wikiId: String, slug: String? = null, first: Boolean = false): String {
-        val query = buildList {
-            if (!slug.isNullOrBlank()) {
-                add("slug=$slug")
-            }
-            if (first) {
-                add("first=true")
-            }
-        }
-        return if (query.isEmpty()) {
-            "wikis/$wikiId/new"
-        } else {
-            "wikis/$wikiId/new?${query.joinToString("&")}"
-        }
-    }
+    fun newPage(wikiId: String, slug: String? = null) =
+        if (slug.isNullOrBlank()) "wikis/$wikiId/new" else "wikis/$wikiId/new?slug=$slug"
     fun pageHistory(wikiId: String, page: String) = "wikis/$wikiId/$page/history"
     fun pageRevision(wikiId: String, page: String, version: Int) =
         "wikis/$wikiId/$page/history/$version"
@@ -72,7 +59,7 @@ object WikisApp {
     const val WIKI_HOME = "wikis/{wikiId}"
     const val PAGE_VIEW = "wikis/{wikiId}/{page}"
     const val PAGE_EDIT = "wikis/{wikiId}/{page}/edit"
-    const val NEW_PAGE = "wikis/{wikiId}/new?slug={slug}&first={first}"
+    const val NEW_PAGE = "wikis/{wikiId}/new?slug={slug}"
     const val PAGE_HISTORY = "wikis/{wikiId}/{page}/history"
     const val PAGE_REVISION = "wikis/{wikiId}/{page}/history/{version}"
     const val COMMENTS = "wikis/{wikiId}/{page}/comments"
@@ -115,7 +102,7 @@ fun NavGraphBuilder.wikisNavGraph(
             // create screen on the way, so Back from the editor returns to the
             // wiki list rather than the form.
             onCreated = { wikiId, home ->
-                navController.navigate(WikisApp.newPage(wikiId, home, first = true)) {
+                navController.navigate(WikisApp.newPage(wikiId, home)) {
                     popUpTo(WikisApp.CREATE) { inclusive = true }
                 }
             },
@@ -172,10 +159,6 @@ fun NavGraphBuilder.wikisNavGraph(
                 type = NavType.StringType
                 defaultValue = ""
                 nullable = false
-            },
-            navArgument("first") {
-                type = NavType.BoolType
-                defaultValue = false
             },
         ),
     ) {

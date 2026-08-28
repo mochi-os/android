@@ -81,13 +81,6 @@ class PageEditorViewModel @Inject constructor(
      */
     private val suggestedSlug: String = savedStateHandle["slug"] ?: ""
 
-    /**
-     * True when the editor was opened on the heels of creating the wiki, to
-     * write its first page. Saving then lands on that page as the wiki's root
-     * rather than stacking it on whatever the wiki was created from.
-     */
-    val isFirstPage: Boolean = isNew && (savedStateHandle.get<Boolean>("first") ?: false)
-
     private val _uiState = MutableStateFlow(
         PageEditorUiState(
             // For new pages we seed the slug field with an empty string;
