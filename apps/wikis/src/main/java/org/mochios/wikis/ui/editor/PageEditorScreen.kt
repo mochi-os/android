@@ -104,14 +104,12 @@ fun PageEditorScreen(
 
     // Body field uses TextFieldValue so we can capture the cursor position
     // and splice inserted markdown at the right spot from the dialog.
-    var bodyField by remember(state.content.length == 0 && !state.isLoading) {
-        mutableStateOf(TextFieldValue(state.content))
-    }
+    var bodyField by remember { mutableStateOf(TextFieldValue(state.content)) }
     // Keep TextFieldValue in sync when the ViewModel mutates content (e.g.
     // from the insert dialog or the initial page load).
     LaunchedEffect(state.content) {
         if (state.content != bodyField.text) {
-            bodyField = bodyField.copy(text = state.content)
+            bodyField = TextFieldValue(state.content, TextRange(state.content.length))
         }
     }
     var savedCursor by remember { mutableStateOf(0) }
