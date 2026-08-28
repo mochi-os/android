@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Хавсралт түр хугацаанд боломжгүй байна</string>
     <string name="common_unavailable">Боломжгүй</string>
     <string name="common_not_found">Олдсонгүй</string>
+    <string name="rss_revoke_confirm">Цуцлах</string>
+    <string name="rss_revoke">Хандалтыг цуцлах</string>
+    <string name="rss_revoke_title">RSS хандалтыг цуцлах уу?</string>
+    <string name="rss_revoke_message">Энэ хангамжид бүртгүүлсэн бүх зүйл хүлээн авахаа болино. Дараа нь та шинэ URL хуулж болно.</string>
+    <string name="rss_revoked">RSS хандалтыг цуцаллаа</string>
+    <string name="rss_revoke_failed">RSS хандалтыг цуцалж чадсангүй</string>
 </resources>

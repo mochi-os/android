@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">ዓባሪ ለጊዜው አይገኝም</string>
     <string name="common_unavailable">የማይገኝ</string>
     <string name="common_not_found">አልተገኘም</string>
+    <string name="rss_revoke_confirm">ይሻሩ</string>
+    <string name="rss_revoke">መዳረሻን ሻር</string>
+    <string name="rss_revoke_title">የRSS መዳረሻ ይሻር?</string>
+    <string name="rss_revoke_message">በዚህ ምግብ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።</string>
+    <string name="rss_revoked">የRSS መዳረሻ ተሽሯል</string>
+    <string name="rss_revoke_failed">የRSS መዳረሻን መሻር አልተቻለም</string>
 </resources>

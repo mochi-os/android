@@ -81,6 +81,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
@@ -190,25 +191,11 @@ private fun LoadingBlock(padding: PaddingValues) {
 
 @Composable
 private fun ErrorBlock(padding: PaddingValues, onRetry: () -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(padding)
-            .padding(24.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Text(
-            text = stringResource(R.string.people_profile_save_failed),
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.error,
+    Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+        ErrorState(
+            message = stringResource(R.string.people_profile_save_failed),
+            onRetry = onRetry,
         )
-        Spacer(Modifier.height(12.dp))
-        MochiButton(onClick = onRetry) {
-            Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-            Text(stringResource(R.string.people_profile_retry))
-        }
     }
 }
 

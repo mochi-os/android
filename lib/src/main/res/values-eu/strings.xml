@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Eranskina aldi baterako ez dago erabilgarri</string>
     <string name="common_unavailable">Ez dago erabilgarri</string>
     <string name="common_not_found">Ez da aurkitu</string>
+    <string name="rss_revoke_confirm">Indargabetu</string>
+    <string name="rss_revoke">Ezeztatu sarbidea</string>
+    <string name="rss_revoke_title">RSS sarbidea baliogabetu?</string>
+    <string name="rss_revoke_message">Jario honetara harpidetutako guztiak jasotzeari utziko dio. Ondoren URL berri bat kopia dezakezu.</string>
+    <string name="rss_revoked">RSS sarbidea ezeztatuta</string>
+    <string name="rss_revoke_failed">Ezin izan da RSS sarbidea ezeztatu</string>
 </resources>

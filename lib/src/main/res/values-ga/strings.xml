@@ -340,4 +340,10 @@
     <string name="common_attachment_unavailable">Ceangaltán níl ar fáil go sealadach</string>
     <string name="common_unavailable">Níl ar fáil</string>
     <string name="common_not_found">Gan aimsiú</string>
+    <string name="rss_revoke_confirm">Cúlghair</string>
+    <string name="rss_revoke">Cúlghair rochtain</string>
+    <string name="rss_revoke_title">Cúlghair rochtain RSS?</string>
+    <string name="rss_revoke_message">Stopfaidh aon rud atá liostáilte leis an bhfotha seo á fháil. Is féidir leat URL nua a chóipeáil ina dhiaidh sin.</string>
+    <string name="rss_revoked">Rochtain RSS cúlghairthe</string>
+    <string name="rss_revoke_failed">Theip ar rochtain RSS a chúlghairm</string>
 </resources>

@@ -70,6 +70,7 @@ import com.github.bhlangonijr.chesslib.Side
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.GameChatMessage
@@ -822,24 +823,6 @@ private fun LoadingState() {
     }
 }
 
-@Composable
-private fun ErrorState(message: String, onRetry: () -> Unit) {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(
-                text = message,
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.error,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            MochiTextButton(onClick = onRetry) {
-                Text(stringResource(MochiR.string.common_retry))
-            }
-        }
-    }
-}
 
 @Composable
 private fun EmptyState() {

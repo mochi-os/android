@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Adjunto temporalmente no disponible</string>
     <string name="common_unavailable">No disponible</string>
     <string name="common_not_found">No encontrado</string>
+    <string name="rss_revoke_confirm">Revocar</string>
+    <string name="rss_revoke">Revocar acceso</string>
+    <string name="rss_revoke_title">¿Revocar el acceso RSS?</string>
+    <string name="rss_revoke_message">Todo lo suscrito a este canal dejará de recibirlo. Después puedes copiar una URL nueva.</string>
+    <string name="rss_revoked">Acceso RSS revocado</string>
+    <string name="rss_revoke_failed">No se pudo revocar el acceso RSS</string>
 </resources>

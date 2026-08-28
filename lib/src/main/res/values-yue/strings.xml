@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">附件暫時用唔到</string>
     <string name="common_unavailable">暫時用唔到</string>
     <string name="common_not_found">搵唔到</string>
+    <string name="rss_revoke_confirm">撤銷</string>
+    <string name="rss_revoke">撤銷存取權</string>
+    <string name="rss_revoke_title">撤銷 RSS 存取權？</string>
+    <string name="rss_revoke_message">任何訂閱咗呢個資訊來源嘅程式都會收唔到更新。之後你可以複製一條新網址。</string>
+    <string name="rss_revoked">已撤銷 RSS 存取權</string>
+    <string name="rss_revoke_failed">撤銷 RSS 存取權失敗</string>
 </resources>

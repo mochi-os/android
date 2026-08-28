@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">Далучэнне часова недаступнае</string>
     <string name="common_unavailable">Недаступна</string>
     <string name="common_not_found">Не знойдзена</string>
+    <string name="rss_revoke_confirm">Адклікаць</string>
+    <string name="rss_revoke">Адклікаць доступ</string>
+    <string name="rss_revoke_title">Адклікаць доступ RSS?</string>
+    <string name="rss_revoke_message">Усё, што падпісана на гэтую стужку, перастане яе атрымліваць. Пасля вы можаце скапіяваць новы URL.</string>
+    <string name="rss_revoked">Доступ RSS адкліканы</string>
+    <string name="rss_revoke_failed">Не ўдалося адклікаць доступ RSS</string>
 </resources>

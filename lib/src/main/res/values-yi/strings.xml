@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">צוגאב איז דערווייל נישט פאראן</string>
     <string name="common_unavailable">נישט פֿאַראַן</string>
     <string name="common_not_found">ניט געפֿונען</string>
+    <string name="rss_revoke_confirm">אָפּזאָגן</string>
+    <string name="rss_revoke">רופֿט צוריק צוטריט</string>
+    <string name="rss_revoke_title">אַנולירן RSS צוטריט?</string>
+    <string name="rss_revoke_message">אַלץ וואָס איז אַבאָנירט אויף דעם פֿיד וועט אויפֿהערן עס צו באַקומען. איר קענט קאָפּירן אַ נייַעם URL דערנאָך.</string>
+    <string name="rss_revoked">RSS צוטריט צוריקגערופֿן</string>
+    <string name="rss_revoke_failed">דורכפֿאַל צו רופֿן צוריק RSS צוטריט</string>
 </resources>

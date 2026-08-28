@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Isincamathiselo asifumaneki okwethutyana</string>
     <string name="common_unavailable">Ayifumaneki</string>
     <string name="common_not_found">Akufumanekanga</string>
+    <string name="rss_revoke_confirm">Rhoxisa</string>
+    <string name="rss_revoke">Rhoxisa ufikelelo</string>
+    <string name="rss_revoke_title">Rhoxisa ufikelelo lwe-RSS?</string>
+    <string name="rss_revoke_message">Nantoni na ebhalisele olu suselo iya kuyeka ukulufumana. Ungakhuphela i-URL entsha emva koko.</string>
+    <string name="rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
+    <string name="rss_revoke_failed">Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS</string>
 </resources>

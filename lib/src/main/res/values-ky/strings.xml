@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Тиркеме убактылуу жеткиликсиз</string>
     <string name="common_unavailable">Жеткиликсиз</string>
     <string name="common_not_found">Табылган жок</string>
+    <string name="rss_revoke_confirm">Кайтарып алуу</string>
+    <string name="rss_revoke">Мүмкүнчүлүктү кайтарып алуу</string>
+    <string name="rss_revoke_title">RSS кирүүсү жокко чыгарылсынбы?</string>
+    <string name="rss_revoke_message">Бул тасмага жазылган нерселердин баары аны алууну токтотот. Андан кийин жаңы URL көчүрө аласыз.</string>
+    <string name="rss_revoked">RSS мүмкүнчүлүгү кайтарылды</string>
+    <string name="rss_revoke_failed">RSS мүмкүнчүлүгүн кайтарып алуу ишке ашкан жок</string>
 </resources>

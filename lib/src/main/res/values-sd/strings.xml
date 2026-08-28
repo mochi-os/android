@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">منسلڪ عارضي طور دستياب ناهي</string>
     <string name="common_unavailable">دستياب نه آھي</string>
     <string name="common_not_found">نه مليو</string>
+    <string name="rss_revoke_confirm">رد ڪريو</string>
+    <string name="rss_revoke">رسائي واپس وٺو</string>
+    <string name="rss_revoke_title">RSS رسائي منسوخ ڪجي؟</string>
+    <string name="rss_revoke_message">هن فيڊ جي رڪنيت وٺندڙ سڀ ڪجهه ان کي حاصل ڪرڻ بند ڪري ڇڏيندو. بعد ۾ توهان نئون URL ڪاپي ڪري سگهو ٿا.</string>
+    <string name="rss_revoked">RSS رسائي واپس ورتي وئي</string>
+    <string name="rss_revoke_failed">RSS رسائي واپس وٺڻ ۾ ناڪام</string>
 </resources>

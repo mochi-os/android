@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">Priloga je začasno nedosegljiva</string>
     <string name="common_unavailable">Ni na voljo</string>
     <string name="common_not_found">Ni najdeno</string>
+    <string name="rss_revoke_confirm">Prekliči</string>
+    <string name="rss_revoke">Prekliči dostop</string>
+    <string name="rss_revoke_title">Ali želite preklicati dostop RSS?</string>
+    <string name="rss_revoke_message">Vse, kar je naročeno na ta vir, ga ne bo več prejemalo. Nato lahko kopirate nov URL.</string>
+    <string name="rss_revoked">Dostop RSS preklican</string>
+    <string name="rss_revoke_failed">Preklic dostopa RSS ni uspel</string>
 </resources>

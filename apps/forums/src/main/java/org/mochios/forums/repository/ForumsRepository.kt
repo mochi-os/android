@@ -467,6 +467,11 @@ class ForumsRepository @Inject constructor(
     suspend fun getRssToken(entity: String, mode: String = "posts"): RssTokenResponse =
         api.getRssToken(entity, mode).unwrap()
 
+    /** Clears the entity's RSS token, so its published URLs stop working. */
+    suspend fun revokeRssToken(entity: String) {
+        api.revokeRssToken(entity).unwrap()
+    }
+
     /** The forum's shareable `mochi://<peer>/<forum>` link, built by the server. */
     suspend fun shareForum(forumId: String): String =
         api.shareForum(forumId).unwrap().link

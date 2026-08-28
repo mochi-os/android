@@ -87,12 +87,14 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         // same URI the UnifiedPush dispatcher uses. `id` marks the row read on
         // tap; the nonce proves the tap came from our notification, since
         // MainActivity is exported.
+        val nonce = NonceStore(context).issue()
         val ssp = buildString {
             append("notification?link=").append(Uri.encode(link))
             if (id.isNotEmpty()) append("&id=").append(Uri.encode(id))
-            append("&nonce=").append(Uri.encode(NonceStore(context).issue()))
+            append("&nonce=").append(Uri.encode(nonce))
         }
         val deepLink = Uri.parse("mochi:$ssp")
+        // launch-ok: deepLink is the mochi: URI this file builds from the push payload's link
         val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             // Pin the PendingIntent to the matching launcher alias so badge-
@@ -114,6 +116,8 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
             // the first alerts, the rest update the tray silently.
             .setOnlyAlertOnce(!SystemNotifications.shouldAlert(tag.ifBlank { "mochi" }))
             .setContentIntent(pending)
+            // Retire the nonce on swipe-away; see the UnifiedPush twin.
+            .setDeleteIntent(dismissIntent(context, nonce))
 
         val nm = NotificationManagerCompat.from(context)
         if (nm.areNotificationsEnabled()) {

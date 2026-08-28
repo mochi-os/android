@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">Příloha je dočasně nedostupná</string>
     <string name="common_unavailable">Nedostupné</string>
     <string name="common_not_found">Nenalezeno</string>
+    <string name="rss_revoke_confirm">Odvolat</string>
+    <string name="rss_revoke">Zrušit přístup</string>
+    <string name="rss_revoke_title">Odvolat přístup RSS?</string>
+    <string name="rss_revoke_message">Vše, co je k tomuto kanálu přihlášeno, jej přestane dostávat. Poté můžete zkopírovat novou adresu URL.</string>
+    <string name="rss_revoked">Přístup RSS zrušen</string>
+    <string name="rss_revoke_failed">Zrušení přístupu RSS se nezdařilo</string>
 </resources>

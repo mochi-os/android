@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">જોડાણ અસ્થાયી રૂપે અનુપલબ્ધ છે</string>
     <string name="common_unavailable">અનુપલબ્ધ</string>
     <string name="common_not_found">મળ્યું નથી</string>
+    <string name="rss_revoke_confirm">રદ કરો</string>
+    <string name="rss_revoke">ઍક્સેસ રદ કરો</string>
+    <string name="rss_revoke_title">RSS ઍક્સેસ રદ કરવો છે?</string>
+    <string name="rss_revoke_message">આ ફીડ પર સબ્સ્ક્રાઇબ થયેલું બધું તે મળવાનું બંધ કરશે. પછી તમે નવું URL કૉપિ કરી શકો છો.</string>
+    <string name="rss_revoked">RSS ઍક્સેસ રદ કરી</string>
+    <string name="rss_revoke_failed">RSS ઍક્સેસ રદ કરવામાં નિષ્ફળ</string>
 </resources>

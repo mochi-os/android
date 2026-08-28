@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Vedlegg er mellombels utilgjengeleg</string>
     <string name="common_unavailable">Ikkje tilgjengeleg</string>
     <string name="common_not_found">Ikkje funnen</string>
+    <string name="rss_revoke_confirm">Trekk tilbake</string>
+    <string name="rss_revoke">Trekk tilbake tilgang</string>
+    <string name="rss_revoke_title">Oppheve RSS-tilgang?</string>
+    <string name="rss_revoke_message">Alt som abonnerer på denne straumen sluttar å ta imot han. Du kan kopiere ei ny nettadresse etterpå.</string>
+    <string name="rss_revoked">RSS-tilgang trekt tilbake</string>
+    <string name="rss_revoke_failed">Klarte ikkje trekkje tilbake RSS-tilgang</string>
 </resources>

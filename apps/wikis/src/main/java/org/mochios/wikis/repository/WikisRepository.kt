@@ -137,6 +137,11 @@ class WikisRepository @Inject constructor(
         }
     }
 
+    /** Clears the entity's RSS token, so its published URLs stop working. */
+    suspend fun revokeRssToken(entity: String) {
+        api.revokeRssToken(entity).unwrap()
+    }
+
     suspend fun globalRssToken(mode: String): String {
         return try {
             api.createRssToken("*", mode).unwrap().token

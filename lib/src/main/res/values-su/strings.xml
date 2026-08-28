@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Lampiran samentawis teu sayogi</string>
     <string name="common_unavailable">Teu sayogi</string>
     <string name="common_not_found">Teu kapendak</string>
+    <string name="rss_revoke_confirm">Cabut</string>
+    <string name="rss_revoke">Cabut aksés</string>
+    <string name="rss_revoke_title">Batalkeun aksés RSS?</string>
+    <string name="rss_revoke_message">Sagala nu ngalanggan feed ieu bakal eureun narima. Anjeun bisa nyalin URL anyar sanggeusna.</string>
+    <string name="rss_revoked">Aksés RSS dicabut</string>
+    <string name="rss_revoke_failed">Gagal nyabut aksés RSS</string>
 </resources>

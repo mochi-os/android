@@ -294,8 +294,10 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         id: String,
     ) {
         val channelId = channelId(context, instance, app, link)
-        val deepLink = deepLinkFor(context, instance, link, id, NonceStore(context).issue())
+        val nonce = NonceStore(context).issue()
+        val deepLink = deepLinkFor(context, instance, link, id, nonce)
 
+        // launch-ok: deepLink is the mochi: URI this file builds from the push payload's link
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
                     android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -319,6 +321,10 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             // the first alerts, the rest update the tray silently.
             .setOnlyAlertOnce(!SystemNotifications.shouldAlert(tag.ifBlank { instance }))
             .setContentIntent(pending)
+            // Retire the nonce when the notification is swiped away. Without
+            // this only a tap spent one, so the store filled with nonces no tap
+            // would ever present and evicted live ones to make room.
+            .setDeleteIntent(dismissIntent(context, nonce))
 
         val nm = androidx.core.app.NotificationManagerCompat.from(context)
         if (nm.areNotificationsEnabled()) {

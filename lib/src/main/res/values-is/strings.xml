@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Viðhengi er tímabundið ófáanlegt</string>
     <string name="common_unavailable">Ekki tiltækt</string>
     <string name="common_not_found">Fannst ekki</string>
+    <string name="rss_revoke_confirm">Afturkalla</string>
+    <string name="rss_revoke">Afturkalla aðgang</string>
+    <string name="rss_revoke_title">Afturkalla RSS-aðgang?</string>
+    <string name="rss_revoke_message">Allt sem er áskrifandi að þessari veitu hættir að fá hana. Þú getur afritað nýja vefslóð á eftir.</string>
+    <string name="rss_revoked">RSS-aðgangur afturkallaður</string>
+    <string name="rss_revoke_failed">Ekki tókst að afturkalla RSS-aðgang</string>
 </resources>

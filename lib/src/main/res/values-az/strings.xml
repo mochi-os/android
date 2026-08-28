@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Qoşma müvəqqəti əlçatan deyil</string>
     <string name="common_unavailable">Hesabın banını götür</string>
     <string name="common_not_found">Tapılmadı</string>
+    <string name="rss_revoke_confirm">Geri çağır</string>
+    <string name="rss_revoke">Girişi ləğv et</string>
+    <string name="rss_revoke_title">RSS girişi ləğv edilsin?</string>
+    <string name="rss_revoke_message">Bu lentə abunə olan hər şey onu almağı dayandıracaq. Sonra yeni URL kopyalaya bilərsiniz.</string>
+    <string name="rss_revoked">RSS girişi ləğv edildi</string>
+    <string name="rss_revoke_failed">RSS girişini ləğv etmək alınmadı</string>
 </resources>

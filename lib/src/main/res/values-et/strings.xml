@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Manus pole ajutiselt saadaval</string>
     <string name="common_unavailable">Pole saadaval</string>
     <string name="common_not_found">Ei leitud</string>
+    <string name="rss_revoke_confirm">Tühista</string>
+    <string name="rss_revoke">Tühista juurdepääs</string>
+    <string name="rss_revoke_title">Kas tühistada RSS-i juurdepääs?</string>
+    <string name="rss_revoke_message">Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i.</string>
+    <string name="rss_revoked">RSS-juurdepääs tühistatud</string>
+    <string name="rss_revoke_failed">RSS-juurdepääsu tühistamine ebaõnnestus</string>
 </resources>

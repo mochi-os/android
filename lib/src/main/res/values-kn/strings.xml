@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">ಲಗತ್ತು ತಾತ್ಕಾಲಿಕವಾಗಿ ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="common_unavailable">ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="common_not_found">ಕಂಡುಬಂದಿಲ್ಲ</string>
+    <string name="rss_revoke_confirm">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="rss_revoke">ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಿರಿ</string>
+    <string name="rss_revoke_title">RSS ಪ್ರವೇಶವನ್ನು ರದ್ದುಗೊಳಿಸುವುದೇ?</string>
+    <string name="rss_revoke_message">ಈ ಫೀಡ್‌ಗೆ ಚಂದಾದಾರರಾದ ಎಲ್ಲವೂ ಅದನ್ನು ಸ್ವೀಕರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ. ನಂತರ ನೀವು ಹೊಸ URL ಅನ್ನು ನಕಲಿಸಬಹುದು.</string>
+    <string name="rss_revoked">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
+    <string name="rss_revoke_failed">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
 </resources>

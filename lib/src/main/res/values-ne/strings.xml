@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">संलग्नक अस्थायी रूपमा उपलब्ध छैन</string>
     <string name="common_unavailable">अनुपलब्ध</string>
     <string name="common_not_found">फेला परेन</string>
+    <string name="rss_revoke_confirm">रद्द गर्नुहोस्</string>
+    <string name="rss_revoke">पहुँच रद्द गर्नुहोस्</string>
+    <string name="rss_revoke_title">RSS पहुँच रद्द गर्ने?</string>
+    <string name="rss_revoke_message">यो फिड सदस्यता लिएका सबैले यो प्राप्त गर्न बन्द गर्नेछन्। त्यसपछि तपाईं नयाँ URL प्रतिलिपि गर्न सक्नुहुन्छ।</string>
+    <string name="rss_revoked">RSS पहुँच रद्द गरियो</string>
+    <string name="rss_revoke_failed">RSS पहुँच रद्द गर्न असफल</string>
 </resources>

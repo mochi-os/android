@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Το συνημμένο δεν είναι προσωρινά διαθέσιμο</string>
     <string name="common_unavailable">Μη διαθέσιμο</string>
     <string name="common_not_found">Δεν βρέθηκε</string>
+    <string name="rss_revoke_confirm">Ανάκληση</string>
+    <string name="rss_revoke">Ανάκληση πρόσβασης</string>
+    <string name="rss_revoke_title">Ανάκληση πρόσβασης RSS;</string>
+    <string name="rss_revoke_message">Ό,τι είναι εγγεγραμμένο σε αυτήν τη ροή θα σταματήσει να τη λαμβάνει. Μπορείτε να αντιγράψετε μια νέα διεύθυνση URL στη συνέχεια.</string>
+    <string name="rss_revoked">Η πρόσβαση RSS ανακλήθηκε</string>
+    <string name="rss_revoke_failed">Αποτυχία ανάκλησης πρόσβασης RSS</string>
 </resources>

@@ -40,6 +40,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
@@ -90,11 +91,9 @@ private fun AuditTimelineBody(
             CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
         }
 
-        state.error != null -> Text(
-            text = state.error.userMessage(),
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.error,
-            modifier = modifier.padding(vertical = 4.dp),
+        state.error != null -> InlineErrorState(
+            error = state.error,
+            modifier = modifier,
         )
 
         state.entries.isEmpty() -> Text(

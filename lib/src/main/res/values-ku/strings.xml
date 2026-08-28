@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Pêvek demkî ne berdest e</string>
     <string name="common_unavailable">Ne berdest</string>
     <string name="common_not_found">Nehat dîtin</string>
+    <string name="rss_revoke_confirm">Vekişîne</string>
+    <string name="rss_revoke">Gihîştinê betal bike</string>
+    <string name="rss_revoke_title">Gihîştina RSS were vekişandin?</string>
+    <string name="rss_revoke_message">Her tiştê ku li vê xwarinê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
+    <string name="rss_revoked">Gihîştina RSS betal kirin</string>
+    <string name="rss_revoke_failed">Betalkirina gihîştina RSS bi ser neket</string>
 </resources>

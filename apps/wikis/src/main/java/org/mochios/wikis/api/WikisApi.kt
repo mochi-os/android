@@ -432,6 +432,12 @@ interface WikisApi {
         @Field("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
 
+    @FormUrlEncoded
+    @POST("-/rss/token/revoke")
+    suspend fun revokeRssToken(
+        @Field("entity") entity: String,
+    ): Response<ApiResponse<OkResponse>>
+
     // ---- Search ----
 
     

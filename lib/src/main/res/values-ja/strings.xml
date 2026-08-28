@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">添付ファイルは一時的に利用できません</string>
     <string name="common_unavailable">利用不可</string>
     <string name="common_not_found">見つかりません</string>
+    <string name="rss_revoke_confirm">取り消し</string>
+    <string name="rss_revoke">アクセスを取り消す</string>
+    <string name="rss_revoke_title">RSS アクセスを取り消しますか？</string>
+    <string name="rss_revoke_message">このフィードを購読しているものはすべて受信しなくなります。あとで新しい URL をコピーできます。</string>
+    <string name="rss_revoked">RSSアクセスを取り消しました</string>
+    <string name="rss_revoke_failed">RSSアクセスの取り消しに失敗しました</string>
 </resources>

@@ -149,8 +149,9 @@ class PushService : Service() {
             var sid: String? = null
             try {
                 // The shell process has no login, so the cookie jar is empty.
-                // Mint a JWT from the cross-app MochiAccount session cookie and
-                // pass it as the WebSocket's `token` query parameter.
+                // Mint a JWT from the cross-app MochiAccount session cookie.
+                // MochiWebSocket sends it as a header, not a query parameter,
+                // to keep it out of anything that logs URLs.
                 val token = mintToken(account.server, account.session)
                 if (token == null) {
                     Log.w(

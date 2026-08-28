@@ -343,4 +343,10 @@
     <string name="common_attachment_unavailable">Atodiad ddim ar gael dros dro</string>
     <string name="common_unavailable">Ddim ar gael</string>
     <string name="common_not_found">Heb ei ganfod</string>
+    <string name="rss_revoke_confirm">Dirymu</string>
+    <string name="rss_revoke">Dirymu mynediad</string>
+    <string name="rss_revoke_title">Dirymu mynediad RSS?</string>
+    <string name="rss_revoke_message">Bydd unrhyw beth sydd wedi tanysgrifio i\'r porthiant hwn yn peidio â\'i dderbyn. Gallwch gopïo URL newydd wedyn.</string>
+    <string name="rss_revoked">Mynediad RSS wedi\'i ddirymu</string>
+    <string name="rss_revoke_failed">Methwyd â dirymu mynediad RSS</string>
 </resources>

@@ -31,6 +31,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import org.mochios.android.util.webUri
 import org.mochios.android.R
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiButton
@@ -191,7 +192,8 @@ private fun PrivacyOption(
 }
 
 private fun openExternal(context: android.content.Context, url: String) {
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+    val target = webUri(url) ?: return
+    val intent = Intent(Intent.ACTION_VIEW, target).apply {
         flags = Intent.FLAG_ACTIVITY_NEW_TASK
     }
     context.startActivity(intent)

@@ -5,6 +5,15 @@
 
     <application>
         <!--
+          Retires a notification's tap nonce when the user swipes the
+          notification away. Not exported: a forged dismissal that spent
+          someone else's nonce would deny that tap just as effectively.
+        -->
+        <receiver
+            android:name="org.mochios.android.push.NonceDismissReceiver"
+            android:exported="false" />
+
+        <!--
           File provider that hands a downloaded attachment (PDF, text, office
           document, …) to the system viewer. Cached files live in
           cacheDir/attachments/ and are exposed read-only via attachment_paths.xml;

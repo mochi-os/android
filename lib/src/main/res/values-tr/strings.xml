@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Ek geçici olarak kullanılamıyor</string>
     <string name="common_unavailable">Kullanılamıyor</string>
     <string name="common_not_found">Bulunamadı</string>
+    <string name="rss_revoke_confirm">İptal et</string>
+    <string name="rss_revoke">Erişimi iptal et</string>
+    <string name="rss_revoke_title">RSS erişimi iptal edilsin mi?</string>
+    <string name="rss_revoke_message">Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz.</string>
+    <string name="rss_revoked">RSS erişimi iptal edildi</string>
+    <string name="rss_revoke_failed">RSS erişimi iptal edilemedi</string>
 </resources>

@@ -284,6 +284,7 @@ private fun ForumRow(
                     // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
                     // The "app" extra is a hint the dispatcher uses to skip the
                     // entity → app directory lookup.
+                    // launch-ok: mochi: deep link this app builds from its own id, not an external URL
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("mochi:/$forumId")).apply {
                         setPackage(context.packageName)
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK or

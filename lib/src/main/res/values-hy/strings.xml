@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Կցորդը ժամանակավորապես հասանելի չէ</string>
     <string name="common_unavailable">Անհասանելի</string>
     <string name="common_not_found">Չի գտնվել</string>
+    <string name="rss_revoke_confirm">Հետ վերցնել</string>
+    <string name="rss_revoke">Չեղարկել մուտքը</string>
+    <string name="rss_revoke_title">Չեղարկե՞լ RSS մուտքը</string>
+    <string name="rss_revoke_message">Այս հոսքին բաժանորդագրված ամեն ինչ կդադարի ստանալ այն։ Դրանից հետո կարող եք պատճենել նոր URL։</string>
+    <string name="rss_revoked">RSS մուտքը չեղարկվել է</string>
+    <string name="rss_revoke_failed">RSS մուտքի չեղարկումը ձախողվեց</string>
 </resources>

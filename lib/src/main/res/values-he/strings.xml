@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">הקובץ המצורף אינו זמין באופן זמני</string>
     <string name="common_unavailable">לא זמין</string>
     <string name="common_not_found">לא נמצא</string>
+    <string name="rss_revoke_confirm">בטל</string>
+    <string name="rss_revoke">בטל גישה</string>
+    <string name="rss_revoke_title">לבטל את הגישה ל-RSS?</string>
+    <string name="rss_revoke_message">כל מה שרשום להזנה הזו יפסיק לקבל אותה. אפשר להעתיק כתובת חדשה לאחר מכן.</string>
+    <string name="rss_revoked">גישת RSS בוטלה</string>
+    <string name="rss_revoke_failed">ביטול גישת RSS נכשל</string>
 </resources>

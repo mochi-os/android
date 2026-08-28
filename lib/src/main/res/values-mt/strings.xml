@@ -341,4 +341,10 @@
     <string name="common_attachment_unavailable">Anness mhux disponibbli temporanjament</string>
     <string name="common_unavailable">Mhux disponibbli</string>
     <string name="common_not_found">Ma nstabx</string>
+    <string name="rss_revoke_confirm">Irrevoka</string>
+    <string name="rss_revoke">Irrevoka l-aċċess</string>
+    <string name="rss_revoke_title">Tirrevoka l-aċċess RSS?</string>
+    <string name="rss_revoke_message">Kull ma huwa abbonat għal din il-feed se jieqaf jirċeviha. Wara tista\' tikkopja URL ġdid.</string>
+    <string name="rss_revoked">L-aċċess RSS ġie rrevokat</string>
+    <string name="rss_revoke_failed">Ma rnexxiex jiġi rrevokat l-aċċess RSS</string>
 </resources>

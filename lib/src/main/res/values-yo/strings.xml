@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Àmúso kò sí fún ìgbà díẹ̀</string>
     <string name="common_unavailable">Kò sí</string>
     <string name="common_not_found">Kò sí</string>
+    <string name="rss_revoke_confirm">Fagi lé</string>
+    <string name="rss_revoke">Fagilé ìwọlé</string>
+    <string name="rss_revoke_title">Fagilé àǹfààní RSS?</string>
+    <string name="rss_revoke_message">Gbogbo ohun tí ó forúkọsílẹ̀ sí ìjẹun yìí yóò dáwọ́ gbígbà rẹ̀ dúró. O lè ṣe àdàkọ URL tuntun lẹ́yìn náà.</string>
+    <string name="rss_revoked">Ìwọlé RSS ti fagilé</string>
+    <string name="rss_revoke_failed">Ìkùnà láti fagilé ìwọlé RSS</string>
 </resources>

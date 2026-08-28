@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Miiltoon yeroof hin argamu</string>
     <string name="common_unavailable">Hin argamu</string>
     <string name="common_not_found">Hin argamne</string>
+    <string name="rss_revoke_confirm">Haqi</string>
+    <string name="rss_revoke">Argama haqi</string>
+    <string name="rss_revoke_title">Argaa RSS haqamuu?</string>
+    <string name="rss_revoke_message">Wanti kamiyyuu nyaata kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa.</string>
+    <string name="rss_revoked">Argamni RSS haqameera</string>
+    <string name="rss_revoke_failed">Argama RSS haquun hin milkoofne</string>
 </resources>

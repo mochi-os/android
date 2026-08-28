@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">अटैचमेंट अभी उपलब्ध नइखे</string>
     <string name="common_unavailable">अनुपलब्ध</string>
     <string name="common_not_found">ना मिलल</string>
+    <string name="rss_revoke_confirm">वापस लीं</string>
+    <string name="rss_revoke">पहुँच रद्द करीं</string>
+    <string name="rss_revoke_title">RSS पहुँच रद्द करीं?</string>
+    <string name="rss_revoke_message">एह फीड के सब्सक्राइब कइल कवनो चीज़ ओकरा के मिलल बंद हो जाई। बाद में रउआ नया URL कॉपी कर सकीलें।</string>
+    <string name="rss_revoked">RSS पहुँच रद्द भइल</string>
+    <string name="rss_revoke_failed">RSS पहुँच रद्द करे में विफल</string>
 </resources>

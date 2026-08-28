@@ -326,4 +326,10 @@
     <string name="common_attachment_unavailable">Anexo temporariamente indisponível</string>
     <string name="common_unavailable">Indisponível</string>
     <string name="common_not_found">Não encontrado</string>
+    <string name="rss_revoke_confirm">Revogar</string>
+    <string name="rss_revoke">Revogar acesso</string>
+    <string name="rss_revoke_title">Revogar o acesso RSS?</string>
+    <string name="rss_revoke_message">Tudo que estiver inscrito neste feed deixará de recebê-lo. Você pode copiar uma nova URL depois.</string>
+    <string name="rss_revoked">Acesso RSS revogado</string>
+    <string name="rss_revoke_failed">Falha ao revogar o acesso RSS</string>
 </resources>

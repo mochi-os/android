@@ -520,6 +520,7 @@ private fun ProjectRow(
                         onClick = {
                             showMenu = false
                             // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                            // launch-ok: mochi: deep link this app builds from its own id, not an external URL
                             val intent = Intent(Intent.ACTION_VIEW, "mochi:/$projectId".toUri()).apply {
                                 setPackage(context.packageName)
                                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or

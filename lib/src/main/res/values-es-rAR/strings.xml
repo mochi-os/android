@@ -304,4 +304,5 @@
     <string name="lightbox_comments">Comentarios</string>
     <string name="common_not_found">No encontrado</string>
     <string name="profile_save_name">Guardá el nombre</string>
+    <string name="rss_revoke_confirm">Revocar</string>
 </resources>

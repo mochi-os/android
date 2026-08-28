@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Tệp đính kèm tạm thời không khả dụng</string>
     <string name="common_unavailable">Không khả dụng</string>
     <string name="common_not_found">Không tìm thấy</string>
+    <string name="rss_revoke_confirm">Thu hồi</string>
+    <string name="rss_revoke">Thu hồi quyền truy cập</string>
+    <string name="rss_revoke_title">Thu hồi quyền truy cập RSS?</string>
+    <string name="rss_revoke_message">Mọi thứ đã đăng ký nguồn cấp này sẽ ngừng nhận. Bạn có thể sao chép URL mới sau đó.</string>
+    <string name="rss_revoked">Đã thu hồi quyền truy cập RSS</string>
+    <string name="rss_revoke_failed">Không thể thu hồi quyền truy cập RSS</string>
 </resources>

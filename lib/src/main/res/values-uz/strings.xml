@@ -335,4 +335,10 @@
     <string name="common_attachment_unavailable">Biriktirma vaqtincha mavjud emas</string>
     <string name="common_unavailable">Mavjud emas</string>
     <string name="common_not_found">Topilmadi</string>
+    <string name="rss_revoke_confirm">Bekor qilish</string>
+    <string name="rss_revoke">Kirishni bekor qilish</string>
+    <string name="rss_revoke_title">RSS kirishi bekor qilinsinmi?</string>
+    <string name="rss_revoke_message">Bu tasmaga obuna boʻlgan hamma narsa uni olishni toʻxtatadi. Keyin yangi URL nusxalashingiz mumkin.</string>
+    <string name="rss_revoked">RSS kirishi bekor qilindi</string>
+    <string name="rss_revoke_failed">RSS kirishini bekor qilib bo\'lmadi</string>
 </resources>

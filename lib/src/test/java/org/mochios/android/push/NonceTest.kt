@@ -54,6 +54,45 @@ class NonceTest {
         assertNotNull(noncesAfterConsume(remaining!!, "two"))
     }
 
+    /**
+     * The reported failure: a tap on a notification died once enough newer
+     * ones had been posted, because issuing evicted its nonce. The store has
+     * to outlast an ordinary run of notifications between a user seeing one
+     * and acting on it.
+     */
+    @Test
+    fun `a tap survives a long run of newer notifications`() {
+        var outstanding = noncesAfterIssue(emptyList(), "old")
+        repeat(200) { index -> outstanding = noncesAfterIssue(outstanding, "later$index") }
+        assertNotNull(
+            "the older notification is still tappable",
+            noncesAfterConsume(outstanding, "old"),
+        )
+    }
+
+    /**
+     * Dismissal retires a nonce through the same consume path as a tap, so a
+     * notification the user swipes away stops holding a slot. Without that,
+     * only taps ever freed one and the cap was reached by ordinary use - which
+     * is what made a tap on an older notification die.
+     */
+    @Test
+    fun `dismissing a notification frees its slot`() {
+        var outstanding = emptyList<String>()
+        repeat(MAXIMUM_NONCES) { index ->
+            outstanding = noncesAfterIssue(outstanding, "nonce$index")
+        }
+        // The user swipes away the newest without tapping it.
+        outstanding = noncesAfterConsume(outstanding, "nonce${MAXIMUM_NONCES - 1}")!!
+        assertEquals(MAXIMUM_NONCES - 1, outstanding.size)
+
+        // The next notification therefore evicts nothing.
+        outstanding = noncesAfterIssue(outstanding, "fresh")
+        assertEquals(MAXIMUM_NONCES, outstanding.size)
+        assertNotNull("the oldest is still tappable", noncesAfterConsume(outstanding, "nonce0"))
+        assertNotNull("and so is the new one", noncesAfterConsume(outstanding, "fresh"))
+    }
+
     /** Untapped notifications must not grow the store without bound. */
     @Test
     fun `issuing past the cap drops the oldest`() {

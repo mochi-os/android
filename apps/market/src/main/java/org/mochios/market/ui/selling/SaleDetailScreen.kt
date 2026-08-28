@@ -59,6 +59,7 @@ import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -137,11 +138,10 @@ fun SaleDetailScreen(
                 state.isLoading && detail == null -> CircularProgressIndicator(
                     modifier = Modifier.align(Alignment.Center),
                 )
-                state.error != null && detail == null -> Text(
-                    text = state.error!!.userMessage()
+                state.error != null && detail == null -> ErrorState(
+                    message = state.error!!.userMessage()
                         .ifEmpty { stringResource(R.string.market_sale_load_failed) },
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.align(Alignment.Center).padding(24.dp),
+                    onRetry = viewModel::load,
                 )
                 detail != null -> SaleDetailBody(
                     detail = detail,

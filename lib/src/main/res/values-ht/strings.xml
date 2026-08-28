@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Atachman pa disponib pou kounye a</string>
     <string name="common_unavailable">Pa disponib</string>
     <string name="common_not_found">Pa jwenn</string>
+    <string name="rss_revoke_confirm">Revoke</string>
+    <string name="rss_revoke">Revoke aksè</string>
+    <string name="rss_revoke_title">Revoke aksè RSS la?</string>
+    <string name="rss_revoke_message">Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre.</string>
+    <string name="rss_revoked">Aksè RSS revoke</string>
+    <string name="rss_revoke_failed">Echwe pou revoke aksè RSS</string>
 </resources>

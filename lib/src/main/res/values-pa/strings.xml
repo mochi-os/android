@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">ਅਟੈਚਮੈਂਟ ਅਸਥਾਈ ਤੌਰ \'ਤੇ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="common_unavailable">ਅਣਉਪਲਬਧ</string>
     <string name="common_not_found">ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string name="rss_revoke_confirm">ਰੱਦ ਕਰੋ</string>
+    <string name="rss_revoke">ਪਹੁੰਚ ਰੱਦ ਕਰੋ</string>
+    <string name="rss_revoke_title">RSS ਪਹੁੰਚ ਰੱਦ ਕਰਨੀ ਹੈ?</string>
+    <string name="rss_revoke_message">ਇਸ ਫੀਡ ਦੀ ਗਾਹਕੀ ਲੈਣ ਵਾਲਾ ਸਭ ਕੁਝ ਇਸਨੂੰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ। ਬਾਅਦ ਵਿੱਚ ਤੁਸੀਂ ਨਵਾਂ URL ਕਾਪੀ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="rss_revoked">RSS ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="rss_revoke_failed">RSS ਪਹੁੰਚ ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 </resources>

@@ -338,4 +338,10 @@
     <string name="common_attachment_unavailable">Priedas laikinai nepasiekiamas</string>
     <string name="common_unavailable">Neprieinama</string>
     <string name="common_not_found">Nerasta</string>
+    <string name="rss_revoke_confirm">Atšaukti</string>
+    <string name="rss_revoke">Atšaukti prieigą</string>
+    <string name="rss_revoke_title">Atšaukti RSS prieigą?</string>
+    <string name="rss_revoke_message">Viskas, kas prenumeruoja šį srautą, nustos jį gauti. Vėliau galėsite nukopijuoti naują URL.</string>
+    <string name="rss_revoked">RSS prieiga atšaukta</string>
+    <string name="rss_revoke_failed">Nepavyko atšaukti RSS prieigos</string>
 </resources>

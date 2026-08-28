@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">A melléklet átmenetileg nem érhető el</string>
     <string name="common_unavailable">Nem elérhető</string>
     <string name="common_not_found">Nem található</string>
+    <string name="rss_revoke_confirm">Visszavonás</string>
+    <string name="rss_revoke">Hozzáférés visszavonása</string>
+    <string name="rss_revoke_title">Visszavonja az RSS-hozzáférést?</string>
+    <string name="rss_revoke_message">Minden, ami feliratkozott erre a hírcsatornára, nem kapja meg többé. Utána másolhat egy új URL-t.</string>
+    <string name="rss_revoked">RSS-hozzáférés visszavonva</string>
+    <string name="rss_revoke_failed">Az RSS-hozzáférés visszavonása sikertelen</string>
 </resources>

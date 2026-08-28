@@ -97,6 +97,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.RssRevokeDialog
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
@@ -324,6 +325,8 @@ private fun ForumContent(
     val isAll = viewModel.isAll
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showRssSubmenu by remember { mutableStateOf(false) }
+    var revokeRssOpen by remember { mutableStateOf(false) }
+    val rssRevokedMessage = stringResource(MochiR.string.rss_revoked)
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
@@ -360,6 +363,7 @@ private fun ForumContent(
                 is ForumEvent.ShareLink -> shareLink(context, event.link, shareLinkTitle)
 
                 is ForumEvent.Unsubscribed -> onUnsubscribed()
+                is ForumEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMessage)
                 is ForumEvent.ShowError -> snackbar.showSnackbar(event.error.userMessage())
             }
         }
@@ -440,6 +444,15 @@ private fun ForumContent(
                                             )) },
                                     onClick = {
                                         viewModel.copyRssUrl("all")
+                                        showRssSubmenu = false
+                                        showOverflowMenu = false
+                                    },
+                                )
+                                MochiDropdownMenuDivider()
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(MochiR.string.rss_revoke)) },
+                                    onClick = {
+                                        revokeRssOpen = true
                                         showRssSubmenu = false
                                         showOverflowMenu = false
                                     },
@@ -654,6 +667,16 @@ private fun ForumContent(
                 }
             }
         }
+    }
+
+    if (revokeRssOpen) {
+        RssRevokeDialog(
+            onConfirm = {
+                revokeRssOpen = false
+                viewModel.revokeRssToken()
+            },
+            onDismiss = { revokeRssOpen = false },
+        )
     }
 
     if (showUnsubscribeConfirm) {

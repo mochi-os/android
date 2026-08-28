@@ -60,6 +60,9 @@ sealed class ForumEvent {
     /** The user is no longer subscribed; the screen navigates away. */
     data object Unsubscribed : ForumEvent()
 
+    /** The forum's RSS token was cleared; confirm with a snackbar. */
+    data object RssRevoked : ForumEvent()
+
     /** Show a transient error snackbar. */
     data class ShowError(val error: MochiError) : ForumEvent()
 }
@@ -402,6 +405,23 @@ class ForumViewModel @Inject constructor(
                     "$serverUrl/$path?token=${response.token}"
                 }
                 _events.emit(ForumEvent.CopyRssUrl(url))
+            } catch (e: Exception) {
+                _events.emit(ForumEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Clear the forum's RSS token, so every URL already handed out stops
+     * working. Also the only way to rotate one: minting returns the existing
+     * token unchanged.
+     */
+    fun revokeRssToken() {
+        if (forumId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                repository.revokeRssToken(if (isAll) "*" else forumId)
+                _events.emit(ForumEvent.RssRevoked)
             } catch (e: Exception) {
                 _events.emit(ForumEvent.ShowError(e.toMochiError()))
             }

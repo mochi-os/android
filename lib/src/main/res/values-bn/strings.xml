@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">সংযুক্তি সাময়িকভাবে অনুপলব্ধ</string>
     <string name="common_unavailable">অনুপলব্ধ</string>
     <string name="common_not_found">পাওয়া যায়নি</string>
+    <string name="rss_revoke_confirm">প্রত্যাহার করুন</string>
+    <string name="rss_revoke">অ্যাক্সেস প্রত্যাহার করুন</string>
+    <string name="rss_revoke_title">RSS অ্যাক্সেস প্রত্যাহার করবেন?</string>
+    <string name="rss_revoke_message">এই ফিডে সাবস্ক্রাইব করা সবকিছু এটি পাওয়া বন্ধ করবে। পরে আপনি একটি নতুন URL কপি করতে পারেন।</string>
+    <string name="rss_revoked">RSS অ্যাক্সেস প্রত্যাহার করা হয়েছে</string>
+    <string name="rss_revoke_failed">RSS অ্যাক্সেস প্রত্যাহার করা ব্যর্থ হয়েছে</string>
 </resources>

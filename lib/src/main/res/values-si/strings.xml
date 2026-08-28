@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">ඇමුණුම තාවකාලිකව නොමැත</string>
     <string name="common_unavailable">ලබා ගත නොහැක</string>
     <string name="common_not_found">හමු නොවීය</string>
+    <string name="rss_revoke_confirm">අවලංගු කරන්න</string>
+    <string name="rss_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
+    <string name="rss_revoke_title">RSS ප්‍රවේශය අවලංගු කරන්නද?</string>
+    <string name="rss_revoke_message">මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය.</string>
+    <string name="rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
+    <string name="rss_revoke_failed">RSS ප්‍රවේශය අවලංගු කිරීමට අසමත් විය</string>
 </resources>

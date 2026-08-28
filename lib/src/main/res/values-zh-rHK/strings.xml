@@ -310,4 +310,10 @@
     <string name="common_not_found">找不到</string>
     <string name="profile_save_name">儲存名稱</string>
     <string name="profile_fingerprint">指紋</string>
+    <string name="rss_revoke_confirm">撤銷</string>
+    <string name="rss_revoke">撤銷存取權</string>
+    <string name="rss_revoke_title">撤銷 RSS 存取權？</string>
+    <string name="rss_revoke_message">任何訂閱此資訊來源的程式將無法再接收更新。你之後可以複製新的網址。</string>
+    <string name="rss_revoked">已撤銷 RSS 存取權</string>
+    <string name="rss_revoke_failed">撤銷 RSS 存取權失敗</string>
 </resources>

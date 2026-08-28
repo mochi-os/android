@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">ឯកសារភ្ជាប់មិនអាចប្រើបានបណ្ដោះអាសន្ន</string>
     <string name="common_unavailable">មិនអាចប្រើបាន</string>
     <string name="common_not_found">រកមិនឃើញ</string>
+    <string name="rss_revoke_confirm">ដកសិទ្ធិ</string>
+    <string name="rss_revoke">ដកហូតការចូលប្រើ</string>
+    <string name="rss_revoke_title">ដកសិទ្ធិចូល RSS ឬ?</string>
+    <string name="rss_revoke_message">អ្វីៗដែលបានជាវព័ត៌មាននេះនឹងឈប់ទទួលបាន។ បន្ទាប់មកអ្នកអាចចម្លង URL ថ្មី។</string>
+    <string name="rss_revoked">បានដកហូតការចូលប្រើ RSS</string>
+    <string name="rss_revoke_failed">បរាជ័យក្នុងការដកហូតការចូលប្រើ RSS</string>
 </resources>

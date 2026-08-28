@@ -701,6 +701,12 @@ interface ForumsApi {
         @Query("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
 
+    @FormUrlEncoded
+    @POST("-/rss/token/revoke")
+    suspend fun revokeRssToken(
+        @Field("entity") entity: String,
+    ): Response<ApiResponse<SuccessResponse>>
+
     @POST("{forumId}/-/share")
     suspend fun shareForum(
         @Path("forumId") forumId: String,

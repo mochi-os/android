@@ -336,4 +336,10 @@
     <string name="common_attachment_unavailable">L\'adjunt no està disponible temporalment</string>
     <string name="common_unavailable">No disponible</string>
     <string name="common_not_found">No s\'ha trobat</string>
+    <string name="rss_revoke_confirm">Revoca</string>
+    <string name="rss_revoke">Revoca l\'accés</string>
+    <string name="rss_revoke_title">Voleu revocar l\'accés RSS?</string>
+    <string name="rss_revoke_message">Tot allò subscrit a aquest canal deixarà de rebre\'l. Després en podreu copiar un URL nou.</string>
+    <string name="rss_revoked">Accés RSS revocat</string>
+    <string name="rss_revoke_failed">No s\'ha pogut revocar l\'accés RSS</string>
 </resources>

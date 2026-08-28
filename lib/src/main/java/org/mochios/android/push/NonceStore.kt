@@ -9,8 +9,17 @@ import android.content.Context
 import android.util.Base64
 import java.security.SecureRandom
 
-/** Most nonces to keep outstanding; see [NonceStore]. */
-internal const val MAXIMUM_NONCES = 64
+/**
+ * Most nonces to keep outstanding; see [NonceStore].
+ *
+ * Well past the ~50 notifications Android will hold for one app, because
+ * eviction here is a backstop rather than the mechanism: a nonce is retired
+ * when its notification is tapped or dismissed, so the outstanding set tracks
+ * the tray. At 64 it did not - dismissal retired nothing, so a busy feed
+ * evicted nonces whose notifications were still on screen, and tapping one of
+ * those did nothing at all.
+ */
+internal const val MAXIMUM_NONCES = 256
 
 /**
  * Outstanding nonces after issuing [nonce]. Oldest first, so dropping from the

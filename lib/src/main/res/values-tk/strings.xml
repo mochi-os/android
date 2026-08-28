@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Goşundy wagtlaýyn elýeterli däl</string>
     <string name="common_unavailable">Elýeterli däl</string>
     <string name="common_not_found">Tapylmady</string>
+    <string name="rss_revoke_confirm">Ýatyr</string>
+    <string name="rss_revoke">Elýeterliligi ýatyr</string>
+    <string name="rss_revoke_title">RSS elýeterliligi ýatyrylsynmy?</string>
+    <string name="rss_revoke_message">Bu akyma ýazylan ähli zat ony almagy bes eder. Soňra täze URL göçürip bilersiňiz.</string>
+    <string name="rss_revoked">RSS elýeterliligi ýatyryldy</string>
+    <string name="rss_revoke_failed">RSS elýeterliligini ýatyrmak başartmady</string>
 </resources>

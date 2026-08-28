@@ -336,4 +336,10 @@
     <string name="common_attachment_unavailable">Atașamentul este temporar indisponibil</string>
     <string name="common_unavailable">Indisponibil</string>
     <string name="common_not_found">Nu a fost găsit</string>
+    <string name="rss_revoke_confirm">Revocă</string>
+    <string name="rss_revoke">Revocă accesul</string>
+    <string name="rss_revoke_title">Revocați accesul RSS?</string>
+    <string name="rss_revoke_message">Tot ce este abonat la acest flux va înceta să îl primească. Puteți copia un URL nou după aceea.</string>
+    <string name="rss_revoked">Acces RSS revocat</string>
+    <string name="rss_revoke_failed">Revocarea accesului RSS a eșuat</string>
 </resources>

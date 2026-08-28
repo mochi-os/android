@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">منسلکہ عارضی طور پر دستیاب نہیں</string>
     <string name="common_unavailable">ناقابل رسائی</string>
     <string name="common_not_found">نہیں ملا</string>
+    <string name="rss_revoke_confirm">منسوخ کریں</string>
+    <string name="rss_revoke">رسائی منسوخ کریں</string>
+    <string name="rss_revoke_title">RSS رسائی منسوخ کریں؟</string>
+    <string name="rss_revoke_message">اس فیڈ کو سبسکرائب کرنے والی ہر چیز اسے وصول کرنا بند کر دے گی۔ بعد میں آپ نیا URL کاپی کر سکتے ہیں۔</string>
+    <string name="rss_revoked">RSS رسائی منسوخ کر دی گئی</string>
+    <string name="rss_revoke_failed">RSS رسائی منسوخ کرنے میں ناکام</string>
 </resources>

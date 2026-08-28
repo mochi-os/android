@@ -9,7 +9,6 @@ import android.app.DownloadManager
 import android.content.ClipData
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -46,6 +45,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.destination
+import org.mochios.android.util.webUri
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiIconButton
@@ -217,11 +218,15 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
 private fun startExportDownload(context: Context, download: ExportDownload) {
     val dm = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
     val name = sanitiseFilename(download.filename)
-    val req = DownloadManager.Request(Uri.parse(download.url))
+    // Origin-pinned by construction (built from serverUrl), but gate the scheme
+    // anyway: DownloadManager throws on a non-web URI, and the Bearer header
+    // below must never ride on anything but a web request. Same as the wikis twin.
+    val uri = webUri(download.url) ?: return
+    val req = DownloadManager.Request(uri)
         .setTitle(name)
         .setMimeType("application/zip")
         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, name)
+        .destination(context, name)
     if (!download.token.isNullOrBlank()) {
         req.addRequestHeader("Authorization", "Bearer ${download.token}")
     }

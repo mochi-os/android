@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Vedlegg er midlertidig utilgjengelig</string>
     <string name="common_unavailable">Utilgjengelig</string>
     <string name="common_not_found">Ikke funnet</string>
+    <string name="rss_revoke_confirm">Tilbakekall</string>
+    <string name="rss_revoke">Tilbakekall tilgang</string>
+    <string name="rss_revoke_title">Tilbakekall RSS-tilgang?</string>
+    <string name="rss_revoke_message">Alt som abonnerer på denne strømmen slutter å motta den. Du kan kopiere en ny URL etterpå.</string>
+    <string name="rss_revoked">RSS-tilgang tilbakekalt</string>
+    <string name="rss_revoke_failed">Kunne ikke tilbakekalle RSS-tilgang</string>
 </resources>

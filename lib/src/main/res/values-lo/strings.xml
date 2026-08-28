@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">ໄຟລ໌ແນບບໍ່ສາມາດໃຊ້ໄດ້ຊົ່ວຄາວ</string>
     <string name="common_unavailable">ບໍ່ມີໃຫ້ບໍລິການ</string>
     <string name="common_not_found">ບໍ່ພົບ</string>
+    <string name="rss_revoke_confirm">ຖອນ</string>
+    <string name="rss_revoke">ຖອນການເຂົ້າເຖິງ</string>
+    <string name="rss_revoke_title">ຖອນສິດເຂົ້າເຖິງ RSS ບໍ?</string>
+    <string name="rss_revoke_message">ທຸກຢ່າງທີ່ສະໝັກຮັບຟີດນີ້ຈະຢຸດຮັບມັນ. ທ່ານສາມາດສຳເນົາ URL ໃໝ່ໄດ້ຫຼັງຈາກນັ້ນ.</string>
+    <string name="rss_revoked">ຖອນການເຂົ້າເຖິງ RSS ແລ້ວ</string>
+    <string name="rss_revoke_failed">ຖອນການເຂົ້າເຖິງ RSS ບໍ່ສຳເລັດ</string>
 </resources>

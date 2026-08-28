@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Mbojoapy noĩri ko\'ág̃a g̃uarã</string>
     <string name="common_unavailable">Ndaipóri</string>
     <string name="common_not_found">Ndojejuhúi</string>
+    <string name="rss_revoke_confirm">Embogue</string>
+    <string name="rss_revoke">Emboyke jeike</string>
+    <string name="rss_revoke_title">¿Emboyke RSS jeike?</string>
+    <string name="rss_revoke_message">Opa mba\'e osuscribíva ko feed-pe ndohupytyvéima. Upéi ikatu embokopia peteĩ URL pyahu.</string>
+    <string name="rss_revoked">RSS jeike oñemboyke</string>
+    <string name="rss_revoke_failed">Ndaikatúi omboyke RSS jeike</string>
 </resources>

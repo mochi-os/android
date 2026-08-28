@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Bashkëngjitja është përkohësisht e padisponueshme</string>
     <string name="common_unavailable">I padisponueshëm</string>
     <string name="common_not_found">Nuk u gjet</string>
+    <string name="rss_revoke_confirm">Revoko</string>
+    <string name="rss_revoke">Anulo aksesin</string>
+    <string name="rss_revoke_title">Të revokohet qasja RSS?</string>
+    <string name="rss_revoke_message">Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri.</string>
+    <string name="rss_revoked">Aksesi RSS u anulua</string>
+    <string name="rss_revoke_failed">Anulimi i aksesit RSS dështoi</string>
 </resources>

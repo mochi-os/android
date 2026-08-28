@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Bijlage tijdelijk niet beschikbaar</string>
     <string name="common_unavailable">Niet beschikbaar</string>
     <string name="common_not_found">Niet gevonden</string>
+    <string name="rss_revoke_confirm">Intrekken</string>
+    <string name="rss_revoke">Toegang intrekken</string>
+    <string name="rss_revoke_title">RSS-toegang intrekken?</string>
+    <string name="rss_revoke_message">Alles wat op deze feed is geabonneerd, ontvangt deze niet meer. Je kunt daarna een nieuwe URL kopiëren.</string>
+    <string name="rss_revoked">RSS-toegang ingetrokken</string>
+    <string name="rss_revoke_failed">Kan RSS-toegang niet intrekken</string>
 </resources>

@@ -336,4 +336,10 @@
     <string name="common_attachment_unavailable">Aanhegsel tydelik nie beskikbaar nie</string>
     <string name="common_unavailable">Nie beskikbaar nie</string>
     <string name="common_not_found">Nie gevind nie</string>
+    <string name="rss_revoke_confirm">Herroep</string>
+    <string name="rss_revoke">Herroep toegang</string>
+    <string name="rss_revoke_title">RSS-toegang herroep?</string>
+    <string name="rss_revoke_message">Enigiets wat op hierdie voer ingeteken is, sal dit nie meer ontvang nie. Jy kan daarna \'n nuwe URL kopieer.</string>
+    <string name="rss_revoked">RSS-toegang herroep</string>
+    <string name="rss_revoke_failed">Kon nie RSS-toegang herroep nie</string>
 </resources>

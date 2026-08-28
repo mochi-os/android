@@ -336,4 +336,10 @@
     <string name="common_attachment_unavailable">Pielikums īslaicīgi nav pieejams</string>
     <string name="common_unavailable">Nav pieejams</string>
     <string name="common_not_found">Nav atrasts</string>
+    <string name="rss_revoke_confirm">Atsaukt</string>
+    <string name="rss_revoke">Atsaukt piekļuvi</string>
+    <string name="rss_revoke_title">Vai atsaukt RSS piekļuvi?</string>
+    <string name="rss_revoke_message">Viss, kas ir abonējis šo plūsmu, pārstās to saņemt. Pēc tam varēsiet kopēt jaunu URL.</string>
+    <string name="rss_revoked">RSS piekļuve atsaukta</string>
+    <string name="rss_revoke_failed">Neizdevās atsaukt RSS piekļuvi</string>
 </resources>

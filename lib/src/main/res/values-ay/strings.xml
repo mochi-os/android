@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Chimpu jan jichhakama utjkiti</string>
     <string name="common_unavailable">Banx apaqaña</string>
     <string name="common_not_found">Janiw jikxatasiti</string>
+    <string name="rss_revoke_confirm">Aparma</string>
+    <string name="rss_revoke">Mantaña jarq\'aña</string>
+    <string name="rss_revoke_title">¿RSS mantaña apsuña?</string>
+    <string name="rss_revoke_message">Aka feed suscripción luriri taqi kunas janiw katuqxaniti. Ukat machaq URL copiaña atkasmawa.</string>
+    <string name="rss_revoked">RSS mantaña jarq\'atawa</string>
+    <string name="rss_revoke_failed">RSS mantaña jarq\'añax jan walikiti</string>
 </resources>

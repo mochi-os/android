@@ -57,6 +57,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -206,15 +207,10 @@ fun PageEditorScreen(
                     ) { CircularProgressIndicator() }
                 }
                 state.error != null -> {
-                    Text(
-                        text = state.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        style = MaterialTheme.typography.bodyMedium,
+                    InlineErrorState(
+                        error = state.error!!,
+                        onRetry = { viewModel.retry() },
                     )
-                    Spacer(Modifier.height(8.dp))
-                    MochiOutlinedButton(onClick = { viewModel.retry() }) {
-                        Text(stringResource(org.mochios.android.R.string.common_retry))
-                    }
                 }
                 state.showPreview -> {
                     Text(

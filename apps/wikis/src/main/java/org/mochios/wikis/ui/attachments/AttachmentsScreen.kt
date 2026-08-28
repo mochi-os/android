@@ -8,7 +8,6 @@ package org.mochios.wikis.ui.attachments
 import android.app.DownloadManager
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.BorderStroke
@@ -112,6 +111,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.destination
 import org.mochios.android.files.FileStore
 import org.mochios.android.util.webUri
 import org.mochios.wikis.R
@@ -1114,7 +1114,7 @@ private fun startAttachmentDownload(
         .setDescription(context.getString(R.string.wikis_attachments_downloading))
         .setMimeType(mimeType.ifBlank { FileStore.DEFAULT_MIME })
         .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, sanitiseFilename(name))
+        .destination(context, sanitiseFilename(name))
     if (!token.isNullOrBlank()) {
         req.addRequestHeader("Authorization", "Bearer $token")
     }

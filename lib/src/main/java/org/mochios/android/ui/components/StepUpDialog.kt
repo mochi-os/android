@@ -31,6 +31,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.mochios.android.util.webUri
 import org.mochios.android.R
 import org.mochios.android.auth.StepUpClient
 import org.mochios.android.auth.StepUpResult
@@ -146,12 +147,16 @@ fun StepUpDialog(
             error = null
             try {
                 val url = client.oauthBegin(provider)
-                runCatching {
-                    context.startActivity(
-                        Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
-                            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        },
-                    )
+                // The provider URL is the server's, and ACTION_VIEW dispatches
+                // on the scheme, so only a web scheme may leave the app.
+                webUri(url)?.let { target ->
+                    runCatching {
+                        context.startActivity(
+                            Intent(Intent.ACTION_VIEW, target).apply {
+                                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            },
+                        )
+                    }
                 }
                 // Poll for the proof the provider callback stores server-side,
                 // keyed by the verifier the client holds. Mirrors the web popup

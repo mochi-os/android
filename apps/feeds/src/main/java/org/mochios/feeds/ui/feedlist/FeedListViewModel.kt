@@ -149,6 +149,24 @@ class FeedListViewModel @Inject constructor(
         _globalRssUrl.value = null
     }
 
+    /**
+     * Clear the app-wide RSS token. Every URL already handed out stops working,
+     * and the next generate mints a fresh one - minting alone returns the
+     * existing token unchanged, so this is also the only way to rotate.
+     */
+    fun revokeGlobalRssToken(onDone: (Boolean) -> Unit) {
+        viewModelScope.launch {
+            try {
+                repository.revokeRssToken("*")
+                _globalRssUrl.value = null
+                onDone(true)
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+                onDone(false)
+            }
+        }
+    }
+
     fun setRssCopiedMessage(message: String) {
         _rssCopiedMessage.value = message
     }

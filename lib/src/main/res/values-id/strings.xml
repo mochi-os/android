@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Lampiran untuk sementara tidak tersedia</string>
     <string name="common_unavailable">Tidak tersedia</string>
     <string name="common_not_found">Tidak ditemukan</string>
+    <string name="rss_revoke_confirm">Cabut</string>
+    <string name="rss_revoke">Cabut akses</string>
+    <string name="rss_revoke_title">Cabut akses RSS?</string>
+    <string name="rss_revoke_message">Apa pun yang berlangganan umpan ini akan berhenti menerimanya. Anda dapat menyalin URL baru setelahnya.</string>
+    <string name="rss_revoked">Akses RSS dicabut</string>
+    <string name="rss_revoke_failed">Gagal mencabut akses RSS</string>
 </resources>

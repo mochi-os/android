@@ -333,4 +333,10 @@
     <string name="common_attachment_unavailable">ပူးတွဲဖိုင် ယာယီမရနိုင်ပါ</string>
     <string name="common_unavailable">မရရှိနိုင်ပါ</string>
     <string name="common_not_found">မတွေ့ပါ</string>
+    <string name="rss_revoke_confirm">ရုပ်သိမ်း</string>
+    <string name="rss_revoke">အသုံးပြုခွင့် ရုပ်သိမ်းရန်</string>
+    <string name="rss_revoke_title">RSS ဝင်ရောက်ခွင့် ရုပ်သိမ်းမလား။</string>
+    <string name="rss_revoke_message">ဤဖိဒ်ကို စာရင်းသွင်းထားသည့် အရာအားလုံး လက်ခံရရှိမှု ရပ်တန့်ပါမည်။ ထို့နောက် URL အသစ်ကို ကူးယူနိုင်ပါသည်။</string>
+    <string name="rss_revoked">RSS အသုံးပြုခွင့် ရုပ်သိမ်းပြီး</string>
+    <string name="rss_revoke_failed">RSS အသုံးပြုခွင့် ရုပ်သိမ်း၍ မရပါ</string>
 </resources>

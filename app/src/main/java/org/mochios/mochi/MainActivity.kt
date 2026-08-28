@@ -43,7 +43,6 @@ import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.OAuthReturnKind
 import org.mochios.android.auth.oauthReturnKind
@@ -560,15 +559,20 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun applyOAuthReturn(code: String?, error: String?, nonce: String?) {
-        // Exported and BROWSABLE, so an unsolicited mochi:oauth-return must not
-        // burn the ceremony (see shouldAcceptOAuthReturn). One snapshot:
-        // verifier and nonce must describe the same ceremony.
-        val ceremony = runBlocking { sessionManager.oauthCeremony() }
-        if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
-            Log.w(TAG, "Ignoring mochi:oauth-return that matches no outstanding ceremony")
-            return
+        // Both halves read and write DataStore, so they run off the main thread.
+        // Nothing here is consumed synchronously - the sign-in screen observes
+        // the ceremony state as a flow - so the launch is not raced.
+        lifecycleScope.launch {
+            // Exported and BROWSABLE, so an unsolicited mochi:oauth-return must not
+            // burn the ceremony (see shouldAcceptOAuthReturn). One snapshot:
+            // verifier and nonce must describe the same ceremony.
+            val ceremony = sessionManager.oauthCeremony()
+            if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
+                Log.w(TAG, "Ignoring mochi:oauth-return that matches no outstanding ceremony")
+                return@launch
+            }
+            sessionManager.setOAuthReturn(code, error)
         }
-        runBlocking { sessionManager.setOAuthReturn(code, error) }
     }
 
     /**
@@ -576,12 +580,14 @@ class MainActivity : ComponentActivity() {
      * sign-in handler it would be exchanged as a login.
      */
     private fun applyOAuthLinkReturn(code: String?, error: String?, nonce: String?) {
-        val ceremony = runBlocking { sessionManager.oauthLinkCeremony() }
-        if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
-            Log.w(TAG, "Ignoring mochi:oauth-link-return that matches no outstanding ceremony")
-            return
+        lifecycleScope.launch {
+            val ceremony = sessionManager.oauthLinkCeremony()
+            if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
+                Log.w(TAG, "Ignoring mochi:oauth-link-return that matches no outstanding ceremony")
+                return@launch
+            }
+            sessionManager.setOAuthLinkReturn(code, error)
         }
-        runBlocking { sessionManager.setOAuthLinkReturn(code, error) }
     }
 
     private fun navigateToLink(navController: NavController, link: String) {

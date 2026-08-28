@@ -15,6 +15,19 @@ const val OPAQUE_MIME = "application/octet-stream"
  */
 private val SAFE_PREFIXES = listOf("image/", "video/", "audio/", "text/")
 
+/**
+ * Markup types that a browser RENDERS rather than displays. They match a safe
+ * prefix but are not safe: the attachment is peer-supplied, so handing one to a
+ * browser puts attacker-authored HTML inside chrome the user reads as Mochi's.
+ * The opaque origin stops it reaching app data; it does not stop it asking for
+ * a password.
+ */
+private val RENDERED_TYPES = setOf(
+    "text/html",
+    "text/xml",
+    "application/xhtml+xml",
+)
+
 private val SAFE_TYPES = setOf(
     "application/pdf",
     "application/json",
@@ -47,6 +60,7 @@ fun coerceMimeType(candidate: String): String {
     // A wildcard would let the chooser offer every handler, installer included.
     if (type.contains('*')) return OPAQUE_MIME
     if (type in SAFE_TYPES) return type
+    if (type in RENDERED_TYPES) return OPAQUE_MIME
     if (SAFE_PREFIXES.any { type.startsWith(it) }) return type
     return OPAQUE_MIME
 }

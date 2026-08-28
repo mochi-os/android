@@ -336,4 +336,10 @@
     <string name="common_attachment_unavailable">Prilog je privremeno nedostupan</string>
     <string name="common_unavailable">Nedostupno</string>
     <string name="common_not_found">Nije pronađeno</string>
+    <string name="rss_revoke_confirm">Opozovi</string>
+    <string name="rss_revoke">Opozovi pristup</string>
+    <string name="rss_revoke_title">Opozvati RSS pristup?</string>
+    <string name="rss_revoke_message">Sve što je pretplaćeno na ovaj kanal prestat će ga primati. Nakon toga možete kopirati novi URL.</string>
+    <string name="rss_revoked">RSS pristup opozvan</string>
+    <string name="rss_revoke_failed">Neuspješno opozivanje RSS pristupa</string>
 </resources>

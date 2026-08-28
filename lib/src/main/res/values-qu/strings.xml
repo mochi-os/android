@@ -334,4 +334,10 @@
     <string name="common_attachment_unavailable">Ratapasqa kunanpaq mana tarikunchu</string>
     <string name="common_unavailable">Mana atikuq</string>
     <string name="common_not_found">Mana tarisqachu</string>
+    <string name="rss_revoke_confirm">Qichuy</string>
+    <string name="rss_revoke">Yaykuyta chinkachiy</string>
+    <string name="rss_revoke_title">¿RSS yaykuyta qichuy?</string>
+    <string name="rss_revoke_message">Kay feed-ta suscribisqa tukuy imapas manaña chaskinqachu. Chaymanta musuq URL-ta copiayta atinki.</string>
+    <string name="rss_revoked">RSS yaykuy chinkachisqa</string>
+    <string name="rss_revoke_failed">Mana atikunchu RSS yaykuyta chinkachiy</string>
 </resources>
