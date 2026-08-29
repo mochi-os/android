@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Edit kategori</string>
     <string name="notifprefs_name_label">Nama</string>
     <string name="notifprefs_destinations">Destinasi</string>
-    <string name="notifprefs_dest_web">Web Mochi</string>
+    <string name="notifprefs_dest_web">Pelayar web</string>
     <string name="notifprefs_test">Uji</string>
     <string name="notifprefs_edit">Edit</string>
     <string name="notifprefs_delete">Padam</string>
@@ -385,4 +385,12 @@
     <string name="accounts_test_failed">Ujian gagal</string>
     <string name="accounts_test_sent">Ujian dihantar</string>
     <string name="account_oauth_link_failed">Tidak dapat memautkan akaun</string>
+    <string name="notifprefs_dest_app">Dalam aplikasi</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Peranti</string>
+    <string name="accounts_devices">Peranti</string>
+    <string name="accounts_forget">Lupakan</string>
+    <string name="accounts_forget_title">Lupakan peranti?</string>
+    <string name="accounts_forget_message">Ini akan melupakan peranti \"%1$s\" dan menghentikan pemberitahuan kepadanya.</string>
+    <string name="accounts_device_seen">Kali terakhir dilihat %1$s</string>
 </resources>

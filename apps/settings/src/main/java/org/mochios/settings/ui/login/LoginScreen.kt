@@ -58,6 +58,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
+import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
@@ -66,6 +67,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.SecureWindow
 import org.mochios.android.ui.components.StepUpDialog
 import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
@@ -103,12 +105,16 @@ fun LoginScreen(
 
     LaunchedEffect(launchUrl) {
         val url = launchUrl ?: return@LaunchedEffect
-        runCatching {
-            context.startActivity(
-                Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                },
-            )
+        // The provider URL is the server's, and ACTION_VIEW dispatches on the
+        // scheme, so only a web scheme may leave the app.
+        webUri(url)?.let { target ->
+            runCatching {
+                context.startActivity(
+                    Intent(Intent.ACTION_VIEW, target).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    },
+                )
+            }
         }
         viewModel.consumeOAuthLaunchUrl()
     }
@@ -491,6 +497,7 @@ private fun TotpSetupDialog(
         onDismissRequest = onCancel,
         title = stringResource(R.string.account_totp_setup_title),
         content = {
+            SecureWindow()
             Column {
                 Text(stringResource(R.string.account_totp_setup_step1))
                 Spacer(Modifier.height(8.dp))
@@ -573,6 +580,7 @@ private fun RecoveryCodesDialog(codes: List<String>, onCopyAll: () -> Unit, onDo
         onDismissRequest = onDone,
         title = stringResource(R.string.account_recovery_codes_title),
         content = {
+            SecureWindow()
             Column {
                 Box(
                     modifier = Modifier

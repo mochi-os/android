@@ -342,4 +342,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Revogar</string>
+    <string name="rss_revoke">Revogar acesso</string>
+    <string name="rss_revoke_title">Revogar o acesso RSS?</string>
+    <string name="rss_revoke_message">Tudo o que estiver subscrito a este feed deixará de o receber. Pode copiar um novo URL depois.</string>
+    <string name="rss_revoked">Acesso RSS revogado</string>
+    <string name="rss_revoke_failed">Falha ao revogar o acesso RSS</string>
 </resources>

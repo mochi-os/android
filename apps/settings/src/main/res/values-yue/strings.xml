@@ -128,7 +128,10 @@
     <string name="notifprefs_new_category">新類別</string>
     <string name="notifprefs_edit_category">編輯類別</string>
     <string name="notifprefs_destinations">目的地</string>
-    <string name="notifprefs_dest_web">Mochi 網頁</string>
+    <string name="notifprefs_dest_web">網頁瀏覽器</string>
+    <string name="notifprefs_dest_app">應用程式內</string>
+    <string name="notifprefs_dest_push">推播</string>
+    <string name="notifprefs_dest_device">裝置</string>
     <string name="notifprefs_test">測試</string>
     <string name="notifprefs_delete_title">刪除「%1$s」?</string>
     <string name="notifprefs_reassign_label">將目前嘅通知改為</string>
@@ -171,6 +174,11 @@
     <string name="accounts_verify_hint">請輸入傳送到 %1$s 嘅驗證碼。</string>
     <string name="accounts_remove_title">移除帳戶?</string>
     <string name="accounts_remove_message">呢個動作會移除已連結帳戶「%1$s」。</string>
+    <string name="accounts_devices">裝置</string>
+    <string name="accounts_device_seen">最後看到 %1$s</string>
+    <string name="accounts_forget">忘記</string>
+    <string name="accounts_forget_title">忘記此裝置？</string>
+    <string name="accounts_forget_message">這將忘記裝置「%1$s」並停止向其發送通知。</string>
     <string name="system_documents_title">文件</string>
     <string name="system_documents_description">向用戶顯示嘅伺服器規則、條款同私隱通知</string>
     <string name="system_documents_tab_rules">伺服器規則</string>

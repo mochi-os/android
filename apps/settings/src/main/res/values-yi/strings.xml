@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">רעדאַקטירן קאַטעגאָריע</string>
     <string name="notifprefs_name_label">נאָמען</string>
     <string name="notifprefs_destinations">ציל ערטער</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">וועב בראָוזער</string>
     <string name="notifprefs_test">טעסט</string>
     <string name="notifprefs_edit">רעדאַקטירן</string>
     <string name="notifprefs_delete">אויסמעקן</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">טעסט דורכגעפֿאַלן</string>
     <string name="accounts_test_sent">טעסט געשיקט</string>
     <string name="account_oauth_link_failed">האָט נישט געקאָנט פֿאַרבינדן קאָנטע</string>
+    <string name="notifprefs_dest_app">אין דער אַפּ</string>
+    <string name="notifprefs_dest_push">פּוש</string>
+    <string name="notifprefs_dest_device">מיטל</string>
+    <string name="accounts_devices">מיטלען</string>
+    <string name="accounts_forget">פֿאַרגעסן</string>
+    <string name="accounts_forget_title">פֿאַרגעסן דעם מיטל?</string>
+    <string name="accounts_forget_message">דאָס וועט פֿאַרגעסן דעם מיטל \"%1$s\" און אָפּשטעלן נאָטיפֿיקאַציעס צו אים.</string>
+    <string name="accounts_device_seen">לעצט געזען %1$s</string>
 </resources>

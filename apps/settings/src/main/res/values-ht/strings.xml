@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Modifye kategori</string>
     <string name="notifprefs_name_label">Non</string>
     <string name="notifprefs_destinations">Destinasyon</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Navigatè web</string>
     <string name="notifprefs_test">Tès</string>
     <string name="notifprefs_edit">Modifye</string>
     <string name="notifprefs_delete">Efase</string>
@@ -385,4 +385,12 @@
     <string name="accounts_test_failed">Tès echwe</string>
     <string name="accounts_test_sent">Tès voye</string>
     <string name="account_oauth_link_failed">Pa t kapab lye kont</string>
+    <string name="notifprefs_dest_app">Nan aplikasyon an</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Aparèy</string>
+    <string name="accounts_devices">Aparèy yo</string>
+    <string name="accounts_forget">Bliye</string>
+    <string name="accounts_forget_title">Bliye aparèy la?</string>
+    <string name="accounts_forget_message">Sa a pral bliye aparèy \"%1$s\" la epi sispann voye notifikasyon ba li.</string>
+    <string name="accounts_device_seen">Dènye fwa yo wè l %1$s</string>
 </resources>

@@ -84,7 +84,7 @@
     <string name="wikis_editor_saving">Saxlanılır…</string>
     <string name="wikis_editor_create">Səhifə yarat</string>
     <string name="wikis_editor_creating">Yaradılır…</string>
-    <string name="wikis_editor_title_label">Başlıq tələb olunur</string>
+    <string name="wikis_editor_title_label">Başlıq</string>
     <string name="wikis_editor_slug_label">Səhifə URL-i</string>
     <string name="wikis_editor_slug_hint">sehife-adim</string>
     <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
@@ -152,7 +152,7 @@
     <string name="wikis_tag_dialog_cancel">Ləğv et</string>
     <string name="wikis_tag_dialog_add">Əlavə et</string>
     <string name="wikis_attachments_title">Qoşmalar</string>
-    <string name="wikis_attachments_upload">Yeni versiyanı yüklə</string>
+    <string name="wikis_attachments_upload">Faylları yüklə</string>
     <string name="wikis_attachments_uploading">Fərqli hesabdan istifadə et</string>
     <string name="wikis_attachments_upload_failed">Faylları yükləmək alınmadı</string>
     <string name="wikis_attachments_search_clear">Axtarışı təmizlə</string>

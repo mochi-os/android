@@ -343,4 +343,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Tilbagekald</string>
+    <string name="rss_revoke">Tilbagekald adgang</string>
+    <string name="rss_revoke_title">Tilbagekald RSS-adgang?</string>
+    <string name="rss_revoke_message">Alt, der abonnerer på dette feed, holder op med at modtage det. Du kan kopiere en ny URL bagefter.</string>
+    <string name="rss_revoked">RSS-adgang tilbagekaldt</string>
+    <string name="rss_revoke_failed">Kunne ikke tilbagekalde RSS-adgang</string>
 </resources>

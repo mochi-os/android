@@ -311,4 +311,5 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Revocar</string>
 </resources>

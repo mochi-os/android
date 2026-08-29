@@ -98,4 +98,5 @@
     <string name="chat_search_next">Kết quả khớp tiếp theo</string>
     <string name="chat_search_prev">Kết quả khớp trước</string>
     <string name="chat_settings_id">ID trò chuyện</string>
+    <string name="chat_message_edited">(đã chỉnh sửa)</string>
 </resources>

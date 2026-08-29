@@ -132,7 +132,7 @@
     <string name="profile_privacy_private">Imantata</string>
     <string name="profile_fingerprint">Fingerprint</string>
     <string name="game_chat_empty">Janira mensajenak</string>
-    <string name="game_chat_input_placeholder">Apnaqirinak thaqhañatak qillqam</string>
+    <string name="game_chat_input_placeholder">Mä mensaje qillqam…</string>
     <string name="game_chat_send">Mensaje apayaña</string>
     <string name="game_chat_subject_you">Aka masimamp mä chat utjxiwa</string>
 
@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Aparma</string>
+    <string name="rss_revoke">Mantaña jarq\'aña</string>
+    <string name="rss_revoke_title">¿RSS mantaña apsuña?</string>
+    <string name="rss_revoke_message">Aka feed suscripción luriri taqi kunas janiw katuqxaniti. Ukat machaq URL copiaña atkasmawa.</string>
+    <string name="rss_revoked">RSS mantaña jarq\'atawa</string>
+    <string name="rss_revoke_failed">RSS mantaña jarq\'añax jan walikiti</string>
 </resources>

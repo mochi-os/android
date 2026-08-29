@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Breyta flokki</string>
     <string name="notifprefs_name_label">Nafn</string>
     <string name="notifprefs_destinations">Áfangastaðir</string>
-    <string name="notifprefs_dest_web">Mochi-vefur</string>
+    <string name="notifprefs_dest_web">Vefvafri</string>
     <string name="notifprefs_test">Prófa</string>
     <string name="notifprefs_edit">Breyta</string>
     <string name="notifprefs_delete">Eyða</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Prófun mistókst</string>
     <string name="accounts_test_sent">Prófun send</string>
     <string name="account_oauth_link_failed">Tókst ekki að tengja reikning</string>
+    <string name="notifprefs_dest_app">Í forritinu</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Tæki</string>
+    <string name="accounts_devices">Tæki</string>
+    <string name="accounts_forget">Gleyma</string>
+    <string name="accounts_forget_title">Gleyma tæki?</string>
+    <string name="accounts_forget_message">Þetta mun gleyma tækinu \"%1$s\" og stöðva tilkynningar til þess.</string>
+    <string name="accounts_device_seen">Síðast séð %1$s</string>
 </resources>

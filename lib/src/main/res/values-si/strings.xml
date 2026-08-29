@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">අවලංගු කරන්න</string>
+    <string name="rss_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
+    <string name="rss_revoke_title">RSS ප්‍රවේශය අවලංගු කරන්නද?</string>
+    <string name="rss_revoke_message">මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය.</string>
+    <string name="rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
+    <string name="rss_revoke_failed">RSS ප්‍රවේශය අවලංගු කිරීමට අසමත් විය</string>
 </resources>

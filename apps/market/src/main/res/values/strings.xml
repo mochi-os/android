@@ -744,4 +744,9 @@
     <string name="market_warnings_title">Warnings</string>
     <string name="market_asset_no_app">No app can open this file</string>
     <string name="market_asset_download_failed">Couldn\'t download the file</string>
+    <!-- An in-progress checkout the buyer can release themselves. -->
+    <string name="market_listing_checkout_in_progress">You have a checkout in progress for this listing.</string>
+    <string name="market_listing_checkout_cancel">Cancel checkout</string>
+    <string name="market_listing_checkout_cancelled">Checkout cancelled</string>
+    <string name="market_listing_checkout_cancel_failed">Failed to cancel checkout</string>
 </resources>

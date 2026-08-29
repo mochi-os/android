@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Visszavonás</string>
+    <string name="rss_revoke">Hozzáférés visszavonása</string>
+    <string name="rss_revoke_title">Visszavonja az RSS-hozzáférést?</string>
+    <string name="rss_revoke_message">Minden, ami feliratkozott erre a hírcsatornára, nem kapja meg többé. Utána másolhat egy új URL-t.</string>
+    <string name="rss_revoked">RSS-hozzáférés visszavonva</string>
+    <string name="rss_revoke_failed">Az RSS-hozzáférés visszavonása sikertelen</string>
 </resources>

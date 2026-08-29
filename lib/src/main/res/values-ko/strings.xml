@@ -340,4 +340,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">취소</string>
+    <string name="rss_revoke">액세스 취소</string>
+    <string name="rss_revoke_title">RSS 액세스를 해지할까요?</string>
+    <string name="rss_revoke_message">이 피드를 구독 중인 모든 것이 수신을 중단합니다. 이후에 새 URL을 복사할 수 있습니다.</string>
+    <string name="rss_revoked">RSS 액세스가 취소되었습니다</string>
+    <string name="rss_revoke_failed">RSS 액세스 취소에 실패했습니다</string>
 </resources>

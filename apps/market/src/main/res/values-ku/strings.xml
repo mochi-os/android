@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Pêşniyara herî zêde (bijarte)</string>
     <string name="market_asset_no_app">Tu sepan nikare vê dosyeyê veke</string>
     <string name="market_asset_download_failed">Nekarî pel were daxistin</string>
+    <string name="market_listing_checkout_in_progress">Te ji bo vê navnîşê pereyek bidestxistinê heye.</string>
+    <string name="market_listing_checkout_cancel">Dawîlêkirina dravdanê betal bike</string>
+    <string name="market_listing_checkout_cancelled">Dravdan hate betalkirin</string>
+    <string name="market_listing_checkout_cancel_failed">Betalkirina dravdanê serneket</string>
 </resources>

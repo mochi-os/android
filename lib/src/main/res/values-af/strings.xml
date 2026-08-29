@@ -343,4 +343,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Herroep</string>
+    <string name="rss_revoke">Herroep toegang</string>
+    <string name="rss_revoke_title">RSS-toegang herroep?</string>
+    <string name="rss_revoke_message">Enigiets wat op hierdie voer ingeteken is, sal dit nie meer ontvang nie. Jy kan daarna \'n nuwe URL kopieer.</string>
+    <string name="rss_revoked">RSS-toegang herroep</string>
+    <string name="rss_revoke_failed">Kon nie RSS-toegang herroep nie</string>
 </resources>

@@ -74,6 +74,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.MochiError
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.RssRevokeDialog
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -265,6 +267,10 @@ private fun GlobalRssExportDialog(
     var mode by remember { mutableStateOf("posts") }
     val clipboardLabel = stringResource(R.string.feeds_clipboard_label_rss)
     val copiedMessage = stringResource(R.string.feeds_rss_url_copied)
+    val revokedMessage = stringResource(MochiR.string.rss_revoked)
+    val revokeFailedMessage = stringResource(MochiR.string.rss_revoke_failed)
+    var revoking by remember { mutableStateOf(false) }
+    var revokePending by remember { mutableStateOf(false) }
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
@@ -320,11 +326,30 @@ private fun GlobalRssExportDialog(
                         Text(stringResource(R.string.feeds_generate_rss_url))
                     }
                 }
+                Spacer(modifier = Modifier.height(8.dp))
+                MochiTextButton(onClick = { revoking = true }) {
+                    Text(stringResource(MochiR.string.rss_revoke))
+                }
             }
         },
         confirmText = stringResource(MochiR.string.common_close),
         onConfirm = onDismiss,
     )
+
+    if (revoking) {
+        RssRevokeDialog(
+            pending = revokePending,
+            onConfirm = {
+                revokePending = true
+                viewModel.revokeGlobalRssToken { ok ->
+                    revokePending = false
+                    revoking = false
+                    viewModel.setRssCopiedMessage(if (ok) revokedMessage else revokeFailedMessage)
+                }
+            },
+            onDismiss = { revoking = false },
+        )
+    }
 }
 
 @Composable
@@ -365,6 +390,7 @@ private fun FeedRow(
                 onClick = {
                     showMenu = false
                     // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
+                    // launch-ok: mochi: deep link this app builds from its own id, not an external URL
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("mochi:/$feedId")).apply {
                         setPackage(context.packageName)
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK or

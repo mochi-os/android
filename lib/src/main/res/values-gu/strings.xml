@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">રદ કરો</string>
+    <string name="rss_revoke">ઍક્સેસ રદ કરો</string>
+    <string name="rss_revoke_title">RSS ઍક્સેસ રદ કરવો છે?</string>
+    <string name="rss_revoke_message">આ ફીડ પર સબ્સ્ક્રાઇબ થયેલું બધું તે મળવાનું બંધ કરશે. પછી તમે નવું URL કૉપિ કરી શકો છો.</string>
+    <string name="rss_revoked">RSS ઍક્સેસ રદ કરી</string>
+    <string name="rss_revoke_failed">RSS ઍક્સેસ રદ કરવામાં નિષ્ફળ</string>
 </resources>

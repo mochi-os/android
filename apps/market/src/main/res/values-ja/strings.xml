@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">上限入札額（任意）</string>
     <string name="market_asset_no_app">このファイルを開けるアプリがありません</string>
     <string name="market_asset_download_failed">ファイルをダウンロードできませんでした</string>
+    <string name="market_listing_checkout_in_progress">この出品に対して進行中の決済があります。</string>
+    <string name="market_listing_checkout_cancel">購入手続きをキャンセル</string>
+    <string name="market_listing_checkout_cancelled">購入手続きをキャンセルしました</string>
+    <string name="market_listing_checkout_cancel_failed">購入手続きのキャンセルに失敗しました</string>
 </resources>

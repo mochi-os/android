@@ -66,6 +66,8 @@ data class ChatMessage(
     val created: Long = 0,
     val attachments: List<Attachment> = emptyList(),
     val deleted: Boolean = false,
+    /** Last-edit timestamp; 0 means never edited. Drives the "edited" marker. */
+    val edited: Long = 0,
     @SerializedName("reaction_counts") val reactionCounts: Map<String, Int> = emptyMap(),
     @SerializedName("my_reaction") val myReaction: String? = null,
     @SerializedName("reply_to") val replyTo: String? = null

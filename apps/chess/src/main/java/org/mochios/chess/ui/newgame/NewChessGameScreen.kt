@@ -48,6 +48,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -137,7 +138,7 @@ fun NewChessGameScreen(
             Spacer(modifier = Modifier.height(8.dp))
             when {
                 state.isLoadingFriends -> LoadingBox()
-                state.friendsError != null -> ErrorBox(
+                state.friendsError != null -> InlineErrorState(
                     message = state.friendsError?.userMessage()
                         ?: stringResource(MochiR.string.error_unexpected),
                     onRetry = { viewModel.loadFriends() },
@@ -162,25 +163,6 @@ private fun LoadingBox() {
         contentAlignment = Alignment.Center,
     ) {
         CircularProgressIndicator(modifier = Modifier.size(28.dp))
-    }
-}
-
-@Composable
-private fun ErrorBox(message: String, onRetry: () -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-    ) {
-        Text(
-            text = message,
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.error,
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        MochiTextButton(onClick = onRetry) {
-            Text(stringResource(MochiR.string.common_retry))
-        }
     }
 }
 

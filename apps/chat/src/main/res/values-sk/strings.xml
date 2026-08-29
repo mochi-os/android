@@ -97,4 +97,5 @@
     <string name="chat_search_next">Ďalšia zhoda</string>
     <string name="chat_search_prev">Predchádzajúca zhoda</string>
     <string name="chat_settings_id">ID četu</string>
+    <string name="chat_message_edited">(upravené)</string>
 </resources>

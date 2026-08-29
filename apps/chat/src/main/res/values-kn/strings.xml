@@ -97,4 +97,5 @@
     <string name="chat_search_next">ಮುಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
     <string name="chat_search_prev">ಹಿಂದಿನ ಹೊಂದಾಣಿಕೆ</string>
     <string name="chat_settings_id">ಚಾಟ್ ಐಡಿ</string>
+    <string name="chat_message_edited">(ಸಂಪಾದಿಸಲಾಗಿದೆ)</string>
 </resources>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Upravit kategorii</string>
     <string name="notifprefs_name_label">Název</string>
     <string name="notifprefs_destinations">Cíle</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Webový prohlížeč</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Upravit</string>
     <string name="notifprefs_delete">Smazat</string>
@@ -389,4 +389,12 @@
     <string name="accounts_test_failed">Test selhal</string>
     <string name="accounts_test_sent">Test odeslán</string>
     <string name="account_oauth_link_failed">Nelze propojit účet</string>
+    <string name="notifprefs_dest_app">V aplikaci</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Zařízení</string>
+    <string name="accounts_devices">Zařízení</string>
+    <string name="accounts_forget">Zapomenout</string>
+    <string name="accounts_forget_title">Zapomenout zařízení?</string>
+    <string name="accounts_forget_message">Tím se zapomene zařízení \"%1$s\" a zastaví se oznámení na něj.</string>
+    <string name="accounts_device_seen">Naposledy viděn %1$s</string>
 </resources>

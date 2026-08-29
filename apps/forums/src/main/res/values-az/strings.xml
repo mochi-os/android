@@ -28,12 +28,12 @@
     <string name="forums_sort_hot">İsti</string>
     <string name="forums_sort_top">Mövzular</string>
     <string name="forums_sort_interests">Maraqlar</string>
-    <string name="forums_post_title_field">Başlıq tələb olunur</string>
+    <string name="forums_post_title_field">Başlıq</string>
     <string name="forums_post_attach">Faylları qoş</string>
     <string name="forums_post_create_action">Post</string>
     <string name="forums_post_edit">Postu redaktə et</string>
     <string name="forums_post_edit_title">Postu redaktə et</string>
-    <string name="forums_post_edit_title_field">Başlıq tələb olunur</string>
+    <string name="forums_post_edit_title_field">Başlıq</string>
     <string name="forums_post_save">Saxla</string>
     <string name="forums_post_delete">Yazını sil</string>
     <string name="forums_post_delete_title">Yazını sil</string>

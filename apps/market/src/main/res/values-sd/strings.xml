@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">وڌ ۾ وڌ بولي (اختياري)</string>
     <string name="market_asset_no_app">ڪابه ايپ هي فائل نه ٿي کولي سگهي</string>
     <string name="market_asset_download_failed">فائل ڊائون لوڊ نه ٿي سگهي</string>
+    <string name="market_listing_checkout_in_progress">اوهان وٽ هن لسٽنگ لاءِ هڪ پروسيس ۾ ادائيگي آهي.</string>
+    <string name="market_listing_checkout_cancel">چيڪ آئوٽ منسوخ ڪريو</string>
+    <string name="market_listing_checkout_cancelled">چيڪ آئوٽ منسوخ ٿي ويو</string>
+    <string name="market_listing_checkout_cancel_failed">چيڪ آئوٽ منسوخ ڪرڻ ۾ ناڪامي</string>
 </resources>

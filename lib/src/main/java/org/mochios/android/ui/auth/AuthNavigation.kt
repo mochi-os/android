@@ -14,6 +14,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import org.mochios.android.util.webUri
 
 @Composable
 fun AuthNavigation(
@@ -34,8 +35,16 @@ fun AuthNavigation(
 
     LaunchedEffect(uiState.oauthLaunchUrl) {
         val url = uiState.oauthLaunchUrl ?: return@LaunchedEffect
-        val intent = androidx.browser.customtabs.CustomTabsIntent.Builder().build()
-        intent.launchUrl(context, android.net.Uri.parse(url))
+        // The begin response builds this URL, so it is not a local literal, and
+        // launchUrl degrades to a plain ACTION_VIEW when no Custom Tabs provider
+        // is installed - a non-web scheme would then be dispatched to whatever
+        // app claims it, with Mochi as the sender. Consume it either way so a
+        // refused URL cannot wedge the flow by relaunching on every recomposition.
+        val target = webUri(url)
+        if (target != null) {
+            val intent = androidx.browser.customtabs.CustomTabsIntent.Builder().build()
+            intent.launchUrl(context, target)
+        }
         viewModel.consumeOAuthLaunchUrl()
     }
 

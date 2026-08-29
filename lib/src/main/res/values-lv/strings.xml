@@ -343,4 +343,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Atsaukt</string>
+    <string name="rss_revoke">Atsaukt piekļuvi</string>
+    <string name="rss_revoke_title">Vai atsaukt RSS piekļuvi?</string>
+    <string name="rss_revoke_message">Viss, kas ir abonējis šo plūsmu, pārstās to saņemt. Pēc tam varēsiet kopēt jaunu URL.</string>
+    <string name="rss_revoked">RSS piekļuve atsaukta</string>
+    <string name="rss_revoke_failed">Neizdevās atsaukt RSS piekļuvi</string>
 </resources>

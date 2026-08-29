@@ -333,4 +333,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Intrekken</string>
+    <string name="rss_revoke">Toegang intrekken</string>
+    <string name="rss_revoke_title">RSS-toegang intrekken?</string>
+    <string name="rss_revoke_message">Alles wat op deze feed is geabonneerd, ontvangt deze niet meer. Je kunt daarna een nieuwe URL kopiëren.</string>
+    <string name="rss_revoked">RSS-toegang ingetrokken</string>
+    <string name="rss_revoke_failed">Kan RSS-toegang niet intrekken</string>
 </resources>

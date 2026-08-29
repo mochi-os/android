@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Максимална понуда (опционално)</string>
     <string name="market_asset_no_app">Ниједна апликација не може да отвори ову датотеку</string>
     <string name="market_asset_download_failed">Датотеку није могуће преузети</string>
+    <string name="market_listing_checkout_in_progress">Имате плаћање у току за овај оглас.</string>
+    <string name="market_listing_checkout_cancel">Откажи плаћање</string>
+    <string name="market_listing_checkout_cancelled">Плаћање је отказано</string>
+    <string name="market_listing_checkout_cancel_failed">Отказивање плаћања није успело</string>
 </resources>

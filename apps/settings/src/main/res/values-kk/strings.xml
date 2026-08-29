@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Санатты өңдеу</string>
     <string name="notifprefs_name_label">Аты</string>
     <string name="notifprefs_destinations">Бағыттар</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Веб-браузер</string>
     <string name="notifprefs_test">Тест</string>
     <string name="notifprefs_edit">Өңдеу</string>
     <string name="notifprefs_delete">Жою</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Тест сәтсіз</string>
     <string name="accounts_test_sent">Сынақ жіберілді</string>
     <string name="account_oauth_link_failed">Тіркелгіні байланыстыру мүмкін болмады</string>
+    <string name="notifprefs_dest_app">Қолданбада</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Құрылғы</string>
+    <string name="accounts_devices">Құрылғылар</string>
+    <string name="accounts_forget">Ұмыту</string>
+    <string name="accounts_forget_title">Құрылғыны ұмыту керек пе?</string>
+    <string name="accounts_forget_message">Бұл \"%1$s\" құрылғысын ұмытады және оған хабарландыруларды тоқтатады.</string>
+    <string name="accounts_device_seen">Соңғы рет көрінді %1$s</string>
 </resources>

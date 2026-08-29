@@ -120,6 +120,7 @@ object UpdateInstaller {
                 ctx.packageName + FILE_PROVIDER_AUTHORITY_SUFFIX,
                 apk,
             )
+            // launch-ok: package installer, on a content: FileProvider URI for the downloaded APK
             val install = Intent(Intent.ACTION_VIEW).apply {
                 setDataAndType(uri, "application/vnd.android.package-archive")
                 addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)

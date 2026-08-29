@@ -97,4 +97,5 @@
     <string name="chat_search_next">ការផ្គូផ្គងបន្ទាប់</string>
     <string name="chat_search_prev">ការផ្គូផ្គងមុន</string>
     <string name="chat_settings_id">លេខសម្គាល់ជជែក</string>
+    <string name="chat_message_edited">(បានកែ)</string>
 </resources>

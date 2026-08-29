@@ -745,4 +745,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimum bod (opsioneel)</string>
     <string name="market_asset_no_app">Geen app kan hierdie lêer oopmaak nie</string>
     <string name="market_asset_download_failed">Kon nie die lêer aflaai nie</string>
+    <string name="market_listing_checkout_in_progress">Jy het \'n betaling aan die gang vir hierdie lys.</string>
+    <string name="market_listing_checkout_cancel">Kanselleer afhandeling</string>
+    <string name="market_listing_checkout_cancelled">Afhandeling gekanselleer</string>
+    <string name="market_listing_checkout_cancel_failed">Kon nie afhandeling kanselleer nie</string>
 </resources>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Таҳрири категория</string>
     <string name="notifprefs_name_label">Ном</string>
     <string name="notifprefs_destinations">Ҳадафҳо</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Браузери веб</string>
     <string name="notifprefs_test">Санҷиш</string>
     <string name="notifprefs_edit">Таҳрир</string>
     <string name="notifprefs_delete">Нест кардан</string>
@@ -385,4 +385,12 @@
     <string name="accounts_test_failed">Санҷиш ноком шуд</string>
     <string name="accounts_test_sent">Санҷиш фиристода шуд</string>
     <string name="account_oauth_link_failed">Ҳисобро пайваст карда натавонист</string>
+    <string name="notifprefs_dest_app">Дар барнома</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Дастгоҳ</string>
+    <string name="accounts_devices">Дастгоҳҳо</string>
+    <string name="accounts_forget">Фаромӯш кардан</string>
+    <string name="accounts_forget_title">Дастгоҳ фаромӯш карда шавад?</string>
+    <string name="accounts_forget_message">Ин дастгоҳи \"%1$s\"-ро фаромӯш мекунад ва огоҳиномаҳоро ба он қатъ мекунад.</string>
+    <string name="accounts_device_seen">Бори охир дида шуд %1$s</string>
 </resources>

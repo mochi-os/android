@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Категорияны түзөтүү</string>
     <string name="notifprefs_name_label">Аты</string>
     <string name="notifprefs_destinations">Багыттар</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Веб-браузер</string>
     <string name="notifprefs_test">Тест</string>
     <string name="notifprefs_edit">Түзөтүү</string>
     <string name="notifprefs_delete">Жок кылуу</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Тест ишке ашкан жок</string>
     <string name="accounts_test_sent">Сыноо жөнөтүлдү</string>
     <string name="account_oauth_link_failed">Аккаунтту байланыштыруу мүмкүн болбоду</string>
+    <string name="notifprefs_dest_app">Колдонмодо</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Түзмөк</string>
+    <string name="accounts_devices">Түзмөктөр</string>
+    <string name="accounts_forget">Унутуу</string>
+    <string name="accounts_forget_title">Түзмөк унутулсунбу?</string>
+    <string name="accounts_forget_message">Бул \"%1$s\" түзмөгүн унутат жана ага билдирмелерди токтотот.</string>
+    <string name="accounts_device_seen">Акыркы жолу көрүлгөн %1$s</string>
 </resources>

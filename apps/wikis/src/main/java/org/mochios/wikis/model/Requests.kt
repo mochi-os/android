@@ -12,13 +12,10 @@ package org.mochios.wikis.model
 data class SubscribeRequest(
     val target: String,
     val server: String? = null,
-)
-
-/**
- * JSON body of `POST -/rss/token/revoke`. [entity] scopes the revoke the way
- * it scopes minting - `*` for the all-wikis feed, else a wiki id or
- * fingerprint.
- */
-data class RssRevokeRequest(
-    val entity: String,
+    /**
+     * The peer a mochi:// share link named. action_join pins the sync to it,
+     * which is the only way to reach a wiki on a server this instance has not
+     * already learned about.
+     */
+    val peer: String? = null,
 )

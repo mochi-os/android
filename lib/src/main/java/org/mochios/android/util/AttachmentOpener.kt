@@ -124,6 +124,7 @@ object AttachmentOpener {
             context.packageName + AUTHORITY_SUFFIX,
             file,
         )
+        // launch-ok: content: FileProvider URI, with the type held to the MimeSafety allowlist
         val view = Intent(Intent.ACTION_VIEW).apply {
             setDataAndType(uri, mime)
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)

@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Peruuta</string>
+    <string name="rss_revoke">Peruuta käyttöoikeus</string>
+    <string name="rss_revoke_title">Kumotaanko RSS-käyttöoikeus?</string>
+    <string name="rss_revoke_message">Kaikki tätä syötettä tilaavat lakkaavat vastaanottamasta sitä. Voit kopioida uuden URL-osoitteen jälkeenpäin.</string>
+    <string name="rss_revoked">RSS-käyttöoikeus peruutettu</string>
+    <string name="rss_revoke_failed">RSS-käyttöoikeuden peruuttaminen epäonnistui</string>
 </resources>

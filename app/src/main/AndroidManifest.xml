@@ -323,6 +323,14 @@
                 <action android:name="org.unifiedpush.android.connector.UNREGISTERED" />
                 <action android:name="org.unifiedpush.android.connector.NEW_ENDPOINT" />
                 <action android:name="org.unifiedpush.android.connector.REGISTRATION_FAILED" />
+                <!--
+                  Mochi's own distributor delivers on this action instead of
+                  the connector's MESSAGE, because the local payload is
+                  cleartext and the connector would mark it undecrypted and
+                  drop it. MochiPushReceiver.onReceive gates it on the
+                  sender's PendingIntent creator.
+                -->
+                <action android:name="org.mochios.android.push.MESSAGE" />
             </intent-filter>
         </receiver>
 

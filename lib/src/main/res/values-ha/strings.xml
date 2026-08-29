@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Janyewa</string>
+    <string name="rss_revoke">Soke damar shiga</string>
+    <string name="rss_revoke_title">A janye damar RSS?</string>
+    <string name="rss_revoke_message">Duk abin da ya biyan kuɗin wannan ciyarwar zai daina karɓarta. Za ka iya kwafi sabon URL bayan haka.</string>
+    <string name="rss_revoked">An soke damar shiga RSS</string>
+    <string name="rss_revoke_failed">An kasa soke damar shiga RSS</string>
 </resources>

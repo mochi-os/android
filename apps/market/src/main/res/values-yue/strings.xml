@@ -747,4 +747,8 @@
     <string name="market_listing_detail_seller_reviews_heading">賣家評價</string>
     <string name="market_asset_no_app">冇應用程式可以開呢個檔案</string>
     <string name="market_asset_download_failed">下載唔到個檔案</string>
+    <string name="market_listing_checkout_in_progress">你有一單結帳仲未完成。</string>
+    <string name="market_listing_checkout_cancel">取消結帳</string>
+    <string name="market_listing_checkout_cancelled">已取消結帳</string>
+    <string name="market_listing_checkout_cancel_failed">取消結帳失敗</string>
 </resources>

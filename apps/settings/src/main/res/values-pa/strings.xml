@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ਸ਼੍ਰੇਣੀ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="notifprefs_name_label">ਨਾਮ</string>
     <string name="notifprefs_destinations">ਮੰਜ਼ਿਲਾਂ</string>
-    <string name="notifprefs_dest_web">Mochi ਵੈੱਬ</string>
+    <string name="notifprefs_dest_web">ਵੈੱਬ ਬ੍ਰਾਊਜ਼ਰ</string>
     <string name="notifprefs_test">ਟੈਸਟ</string>
     <string name="notifprefs_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="notifprefs_delete">ਮਿਟਾਓ</string>
@@ -176,7 +176,7 @@
     <string name="system_users_title">ਉਪਭੋਗਤਾ</string>
     <string name="system_users_col_user">ਉਪਭੋਗਤਾ</string>
     <string name="system_users_col_status">ਸਥਿਤੀ</string>
-    <string name="system_users_col_last">ਰੂਟ ਪਾਥ ਲਈ ਖਾਲੀ ਛੱਡੋ</string>
+    <string name="system_users_col_last">ਆਖਰੀ ਲੌਗਇਨ</string>
     <string name="system_users_open_actions">ਯੂਜ਼ਰ ਐਕਸ਼ਨ ਖੋਲ੍ਹੋ</string>
     <string name="system_users_role_label">ਭੂਮਿਕਾ</string>
     <string name="system_users_role_administrator">ਐਡਮਿਨਿਸਟ੍ਰੇਟਰ</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">ਟੈਸਟ ਅਸਫਲ</string>
     <string name="accounts_test_sent">ਟੈਸਟ ਭੇਜਿਆ ਗਿਆ</string>
     <string name="account_oauth_link_failed">ਖਾਤਾ ਲਿੰਕ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</string>
+    <string name="notifprefs_dest_app">ਐਪ ਵਿੱਚ</string>
+    <string name="notifprefs_dest_push">ਪੁਸ਼</string>
+    <string name="notifprefs_dest_device">ਡਿਵਾਈਸ</string>
+    <string name="accounts_devices">ਡਿਵਾਈਸਾਂ</string>
+    <string name="accounts_forget">ਭੁੱਲ ਜਾਓ</string>
+    <string name="accounts_forget_title">ਡਿਵਾਈਸ ਭੁੱਲ ਜਾਣੀ ਹੈ?</string>
+    <string name="accounts_forget_message">ਇਹ \"%1$s\" ਡਿਵਾਈਸ ਨੂੰ ਭੁੱਲ ਜਾਵੇਗਾ ਅਤੇ ਉਸ ਨੂੰ ਸੂਚਨਾਵਾਂ ਭੇਜਣਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।</string>
+    <string name="accounts_device_seen">ਆਖਰੀ ਵਾਰ ਦੇਖਿਆ %1$s</string>
 </resources>

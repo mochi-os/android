@@ -33,6 +33,9 @@ sealed class PageViewEvent {
     /** Hand this server-built link to the system share sheet. */
     data class ShareLink(val link: String) : PageViewEvent()
 
+    /** The wiki's RSS token was cleared; confirm with a snackbar. */
+    data object RssRevoked : PageViewEvent()
+
     /** Display a transient error toast (already localised). */
     data class ShowError(val error: MochiError) : PageViewEvent()
 
@@ -170,6 +173,22 @@ class PageViewModel @Inject constructor(
             try {
                 val link = repository.shareWiki(wikiId)
                 _events.emit(PageViewEvent.ShareLink(link))
+            } catch (e: Exception) {
+                _events.emit(PageViewEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Clear the wiki's RSS token, so every URL already handed out stops
+     * working. Also the only way to rotate one: minting returns the existing
+     * token unchanged.
+     */
+    fun revokeRssToken() {
+        viewModelScope.launch {
+            try {
+                repository.revokeRssToken(wikiId)
+                _events.emit(PageViewEvent.RssRevoked)
             } catch (e: Exception) {
                 _events.emit(PageViewEvent.ShowError(e.toMochiError()))
             }

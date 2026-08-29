@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">بەرزترین نرخ (ئارەزوومەندانە)</string>
     <string name="market_asset_no_app">هیچ ئەپێک ناتوانێت ئەم پەڕگەیە بکاتەوە</string>
     <string name="market_asset_download_failed">نەتوانرا فایلەکە دابەزێنرێت</string>
+    <string name="market_listing_checkout_in_progress">تۆ پارەدانێکت بۆ ئەم لیستەیە لە بەردەوامبووندایە.</string>
+    <string name="market_listing_checkout_cancel">هەڵوەشاندنەوەی پارەدان</string>
+    <string name="market_listing_checkout_cancelled">پارەدان هەڵوەشێندرایەوە</string>
+    <string name="market_listing_checkout_cancel_failed">هەڵوەشاندنەوەی پارەدان سەرکەوتوو نەبوو</string>
 </resources>

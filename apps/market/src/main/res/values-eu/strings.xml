@@ -745,4 +745,8 @@
     <string name="market_bid_dialog_ceiling_label">Gehieneko eskaintza (aukerakoa)</string>
     <string name="market_asset_no_app">Ezin du aplikaziorik fitxategi hau ireki</string>
     <string name="market_asset_download_failed">Ezin izan da fitxategia deskargatu</string>
+    <string name="market_listing_checkout_in_progress">Iragarki honetarako ordainketa bat duzu martxan.</string>
+    <string name="market_listing_checkout_cancel">Utzi ordainketa</string>
+    <string name="market_listing_checkout_cancelled">Ordainketa bertan behera utzi da</string>
+    <string name="market_listing_checkout_cancel_failed">Ezin izan da ordainketa bertan behera utzi</string>
 </resources>

@@ -18,7 +18,7 @@
     <string name="words_new_game_no_friends_title">მეგობრები ჯერ არ არის</string>
     <string name="words_new_game_add_friends">მეგობრების დამატება</string>
     <string name="words_detail_status_your_move">თქვენი სვლა</string>
-    <string name="words_detail_status_you_win">თქვენ ამოგაშორეს ამ ჩატიდან</string>
+    <string name="words_detail_status_you_win">თქვენ გაიმარჯვეთ!</string>
     <string name="words_detail_status_game_over">თამაში დასრულდა</string>
     <string name="words_detail_status_opponent_resigned">მოწინააღმდეგემ ჩააბარა — თქვენ მოიგეთ!</string>
     <string name="words_detail_status_you_resigned">თქვენ დატოვეთ ეს ჩატი</string>

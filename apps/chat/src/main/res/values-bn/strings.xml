@@ -97,4 +97,5 @@
     <string name="chat_search_next">পরবর্তী মিল</string>
     <string name="chat_search_prev">পূর্ববর্তী মিল</string>
     <string name="chat_settings_id">চ্যাট আইডি</string>
+    <string name="chat_message_edited">(সম্পাদিত)</string>
 </resources>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Editja l-kategorija</string>
     <string name="notifprefs_name_label">Isem</string>
     <string name="notifprefs_destinations">Destinazzjonijiet</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Browser tal-web</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Editja</string>
     <string name="notifprefs_delete">Ħassar</string>
@@ -392,4 +392,12 @@
     <string name="accounts_test_failed">Test falla</string>
     <string name="accounts_test_sent">It-test intbagħat</string>
     <string name="account_oauth_link_failed">Ma setax jillinkja l-kont</string>
+    <string name="notifprefs_dest_app">Fl-app</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Apparat</string>
+    <string name="accounts_devices">Apparati</string>
+    <string name="accounts_forget">Insa</string>
+    <string name="accounts_forget_title">Tinsa l-apparat?</string>
+    <string name="accounts_forget_message">Dan se jinsa l-apparat \"%1$s\" u jwaqqaf in-notifiki lilu.</string>
+    <string name="accounts_device_seen">L-aħħar li deher %1$s</string>
 </resources>

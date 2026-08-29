@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">ແກ້ໄຂໝວດໝູ່</string>
     <string name="notifprefs_name_label">ຊື່</string>
     <string name="notifprefs_destinations">ປາຍທາງ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">ຕົວທ່ອງເວັບ</string>
     <string name="notifprefs_test">ທົດສອບ</string>
     <string name="notifprefs_edit">ແກ້ໄຂ</string>
     <string name="notifprefs_delete">ລົບ</string>
@@ -384,4 +384,12 @@
     <string name="accounts_test_failed">ການທົດສອບລົ້ມເຫຼວ</string>
     <string name="accounts_test_sent">ສົ່ງການທົດສອບແລ້ວ</string>
     <string name="account_oauth_link_failed">ບໍ່ສາມາດເຊື່ອມຕໍ່ບັນຊີໄດ້</string>
+    <string name="notifprefs_dest_app">ໃນແອັບ</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">ອຸປະກອນ</string>
+    <string name="accounts_devices">ອຸປະກອນ</string>
+    <string name="accounts_forget">ລືມ</string>
+    <string name="accounts_forget_title">ລືມອຸປະກອນບໍ?</string>
+    <string name="accounts_forget_message">ນີ້ຈະລືມອຸປະກອນ \"%1$s\" ແລະຢຸດການແຈ້ງເຕືອນໄປຫາມັນ.</string>
+    <string name="accounts_device_seen">ເຫັນຫຼ້າສຸດ %1$s</string>
 </resources>

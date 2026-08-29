@@ -6,7 +6,6 @@
 package org.mochios.market.ui.listing
 
 import android.content.Intent
-import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -101,6 +100,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.AttachmentOpener
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.locationName
@@ -196,8 +196,13 @@ fun ListingDetailScreen(
             when (event) {
                 is ListingDetailEvent.Toast -> snackbarHostState.showSnackbar(event.message)
                 is ListingDetailEvent.OpenUrl -> {
-                    val intent = CustomTabsIntent.Builder().build()
-                    runCatching { intent.launchUrl(snackbarContext, Uri.parse(event.url)) }
+                    // The asset reference comes from the seller via the
+                    // Comptroller and launchUrl degrades to ACTION_VIEW, so only
+                    // a web scheme may leave the app.
+                    webUri(event.url)?.let { target ->
+                        val intent = CustomTabsIntent.Builder().build()
+                        runCatching { intent.launchUrl(snackbarContext, target) }
+                    }
                 }
                 is ListingDetailEvent.OpenFile -> {
                     val outcome = AttachmentOpener.openCached(
@@ -367,6 +372,8 @@ fun ListingDetailScreen(
                             navController.navigate(MarketApp.listingEdit(listing.id.toString()))
                         },
                         onRelist = { viewModel.relistListing() },
+                        onCancelReservation = { viewModel.cancelReservation() },
+                        cancellingReservation = state.cancellingReservation,
                         // Through the authenticated client, not a browser: the
                         // action is not public, so a Custom Tab carrying no
                         // token and no cookie could never authenticate to it.
@@ -459,6 +466,8 @@ private fun ListingDetailContent(
     onBuyNow: () -> Unit,
     onEdit: () -> Unit,
     onRelist: () -> Unit,
+    onCancelReservation: () -> Unit,
+    cancellingReservation: Boolean,
     onAssetDownload: (Asset) -> Unit,
     currentUserId: String?,
 ) {
@@ -640,6 +649,26 @@ private fun ListingDetailContent(
                 }
 
                 Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    // A reservation the caller already holds blocks their own
+                    // Buy now until it expires, and nothing else on the screen
+                    // says so. Offer the release the web client offers.
+                    val reservation = detail.myReservation
+                    if (reservation != null) {
+                        Text(
+                            text = stringResource(R.string.market_listing_checkout_in_progress),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        MochiOutlinedButton(
+                            onClick = onCancelReservation,
+                            enabled = !cancellingReservation,
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(10.dp),
+                        ) {
+                            Text(stringResource(R.string.market_listing_checkout_cancel))
+                        }
+                    }
+
                     PrimaryCta(
                         pricing = listing.pricing,
                         onClick = onPrimaryCta,

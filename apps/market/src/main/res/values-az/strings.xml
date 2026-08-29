@@ -211,7 +211,7 @@
     <string name="market_editor_stripe_banner_description">Bu elan üzrə ödənişlər almaq üçün Stripe hesabı qoşun.</string>
     <string name="market_editor_stripe_banner_title">Stripe qeydiyyatını tamamlayın</string>
     <string name="market_editor_tags_field">Etiketlər (vergüllə ayrılmış)</string>
-    <string name="market_editor_title">Başlıq tələb olunur</string>
+    <string name="market_editor_title">Başlıq</string>
     <string name="market_editor_title_edit">Elanı redaktə et</string>
     <string name="market_editor_title_new">Yeni elan</string>
     <string name="market_editor_title_required">Şəkil və ya fayl əlavə etməzdən əvvəl başlıq daxil edin</string>
@@ -745,4 +745,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimum təklif (isteğe bağlı)</string>
     <string name="market_asset_no_app">Bu faylı aça biləcək tətbiq yoxdur</string>
     <string name="market_asset_download_failed">Fayl endirilə bilmədi</string>
+    <string name="market_listing_checkout_in_progress">Bu elan üçün davam edən bir ödəmə var.</string>
+    <string name="market_listing_checkout_cancel">Ödənişi ləğv et</string>
+    <string name="market_listing_checkout_cancelled">Ödəniş ləğv edildi</string>
+    <string name="market_listing_checkout_cancel_failed">Ödənişi ləğv etmək alınmadı</string>
 </resources>

@@ -42,6 +42,8 @@ data class DestinationAccount(
     val label: String = "",
     val identifier: String = "",
     val enabled: Int = 0,
+    // The device a push account was registered from, or "" for none.
+    val device: String = "",
 )
 
 data class DestinationFeed(
@@ -50,9 +52,17 @@ data class DestinationFeed(
     val enabled: Int = 0,
 )
 
+data class DestinationDevice(
+    val id: String = "",
+    val label: String = "",
+    val created: Long = 0,
+    val seen: Long = 0,
+)
+
 data class DestinationsAvailable(
     val accounts: List<DestinationAccount> = emptyList(),
     val feeds: List<DestinationFeed> = emptyList(),
+    val devices: List<DestinationDevice> = emptyList(),
 )
 
 data class NotifTopic(
@@ -102,7 +112,7 @@ interface NotificationPrefsApi {
     @POST("settings/-/notifications/categories/delete")
     suspend fun deleteCategory(
         @Field("id") id: String,
-        @Field("reassign_to") reassignTo: String,
+        @Field("reassign") reassign: String,
     ): Response<Unit>
 
     @FormUrlEncoded

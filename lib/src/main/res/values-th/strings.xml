@@ -340,4 +340,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">เพิกถอน</string>
+    <string name="rss_revoke">เพิกถอนการเข้าถึง</string>
+    <string name="rss_revoke_title">เพิกถอนการเข้าถึง RSS หรือไม่</string>
+    <string name="rss_revoke_message">ทุกอย่างที่สมัครรับฟีดนี้จะหยุดรับ คุณสามารถคัดลอก URL ใหม่ได้ภายหลัง</string>
+    <string name="rss_revoked">เพิกถอนการเข้าถึง RSS แล้ว</string>
+    <string name="rss_revoke_failed">ไม่สามารถเพิกถอนการเข้าถึง RSS ได้</string>
 </resources>

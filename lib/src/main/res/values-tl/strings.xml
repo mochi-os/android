@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Bawiin</string>
+    <string name="rss_revoke">Bawiin ang access</string>
+    <string name="rss_revoke_title">Bawiin ang access sa RSS?</string>
+    <string name="rss_revoke_message">Titigil sa pagtanggap nito ang lahat ng naka-subscribe sa feed na ito. Maaari kang kumopya ng bagong URL pagkatapos.</string>
+    <string name="rss_revoked">Nabawi ang RSS access</string>
+    <string name="rss_revoke_failed">Nabigong bawiin ang RSS access</string>
 </resources>

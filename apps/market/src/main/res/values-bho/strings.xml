@@ -748,4 +748,8 @@
     <string name="market_bid_dialog_ceiling_label">अधिकतम बोली (वैकल्पिक)</string>
     <string name="market_asset_no_app">ई फाइल खोले वाला कवनो ऐप नइखे</string>
     <string name="market_asset_download_failed">फाइल डाउनलोड ना हो सकल</string>
+    <string name="market_listing_checkout_in_progress">एह लिस्टिंग खातिर रउआ के एगो चेकआउट प्रगति में बा।</string>
+    <string name="market_listing_checkout_cancel">चेकआउट रद्द करीं</string>
+    <string name="market_listing_checkout_cancelled">चेकआउट रद्द भइल</string>
+    <string name="market_listing_checkout_cancel_failed">चेकआउट रद्द करे में विफल</string>
 </resources>

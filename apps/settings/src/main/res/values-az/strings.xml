@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kateqoriyanı redaktə et</string>
     <string name="notifprefs_name_label">Ad</string>
     <string name="notifprefs_destinations">Təyinatlar</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Veb-brauzer</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Redaktə et</string>
     <string name="notifprefs_delete">Sil</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Test uğursuz oldu</string>
     <string name="accounts_test_sent">Test göndərildi</string>
     <string name="account_oauth_link_failed">Hesab əlaqələndirilə bilmədi</string>
+    <string name="notifprefs_dest_app">Tətbiqdə</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Cihaz</string>
+    <string name="accounts_devices">Cihazlar</string>
+    <string name="accounts_forget">Unut</string>
+    <string name="accounts_forget_title">Cihaz unudulsun?</string>
+    <string name="accounts_forget_message">Bu, \"%1$s\" cihazını unudacaq və ona bildirişləri dayandıracaq.</string>
+    <string name="accounts_device_seen">Son görülmə %1$s</string>
 </resources>

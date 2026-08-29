@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Haqi</string>
+    <string name="rss_revoke">Argama haqi</string>
+    <string name="rss_revoke_title">Argaa RSS haqamuu?</string>
+    <string name="rss_revoke_message">Wanti kamiyyuu nyaata kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa.</string>
+    <string name="rss_revoked">Argamni RSS haqameera</string>
+    <string name="rss_revoke_failed">Argama RSS haquun hin milkoofne</string>
 </resources>

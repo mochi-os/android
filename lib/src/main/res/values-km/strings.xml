@@ -340,4 +340,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">ដកសិទ្ធិ</string>
+    <string name="rss_revoke">ដកហូតការចូលប្រើ</string>
+    <string name="rss_revoke_title">ដកសិទ្ធិចូល RSS ឬ?</string>
+    <string name="rss_revoke_message">អ្វីៗដែលបានជាវព័ត៌មាននេះនឹងឈប់ទទួលបាន។ បន្ទាប់មកអ្នកអាចចម្លង URL ថ្មី។</string>
+    <string name="rss_revoked">បានដកហូតការចូលប្រើ RSS</string>
+    <string name="rss_revoke_failed">បរាជ័យក្នុងការដកហូតការចូលប្រើ RSS</string>
 </resources>

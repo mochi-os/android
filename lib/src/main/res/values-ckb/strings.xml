@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">ڕاگرتن</string>
+    <string name="rss_revoke">ڕەتکردنەوەی دەستپێگەیشتن</string>
+    <string name="rss_revoke_title">دەستڕاگەیشتنی RSS هەڵبوەشێنرێتەوە؟</string>
+    <string name="rss_revoke_message">هەر شتێک بەم لێدوانە بەشداری کردبێت وەرگرتنی ڕادەگرێت. دواتر دەتوانیت URLی نوێ لەبەربگریت.</string>
+    <string name="rss_revoked">دەستپێگەیشتنی RSS ڕەتکرایەوە</string>
+    <string name="rss_revoke_failed">ڕەتکردنەوەی دەستپێگەیشتنی RSS سەرکەوتوو نەبوو</string>
 </resources>

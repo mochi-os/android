@@ -403,4 +403,11 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <!-- RSS token revocation, shared by feeds, forums and wikis. -->
+    <string name="rss_revoke">Revoke access</string>
+    <string name="rss_revoke_title">Revoke RSS access?</string>
+    <string name="rss_revoke_message">Anything subscribed to this feed will stop receiving it. You can copy a new URL afterwards.</string>
+    <string name="rss_revoke_confirm">Revoke</string>
+    <string name="rss_revoked">RSS access revoked</string>
+    <string name="rss_revoke_failed">Failed to revoke RSS access</string>
 </resources>

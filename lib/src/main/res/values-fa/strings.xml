@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">لغو</string>
+    <string name="rss_revoke">لغو دسترسی</string>
+    <string name="rss_revoke_title">دسترسی RSS لغو شود؟</string>
+    <string name="rss_revoke_message">هر چیزی که مشترک این خوراک است دیگر آن را دریافت نمی‌کند. پس از آن می‌توانید نشانی جدیدی کپی کنید.</string>
+    <string name="rss_revoked">دسترسی RSS لغو شد</string>
+    <string name="rss_revoke_failed">لغو دسترسی RSS ناموفق بود</string>
 </resources>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Categorie bewerken</string>
     <string name="notifprefs_name_label">Naam</string>
     <string name="notifprefs_destinations">Bestemmingen</string>
-    <string name="notifprefs_dest_web">Mochi-web</string>
+    <string name="notifprefs_dest_web">Webbrowser</string>
     <string name="notifprefs_test">Testen</string>
     <string name="notifprefs_edit">Bewerken</string>
     <string name="notifprefs_delete">Verwijderen</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Test mislukt</string>
     <string name="accounts_test_sent">Test verzonden</string>
     <string name="account_oauth_link_failed">Account koppelen mislukt</string>
+    <string name="notifprefs_dest_app">In de app</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Apparaat</string>
+    <string name="accounts_devices">Apparaten</string>
+    <string name="accounts_forget">Vergeten</string>
+    <string name="accounts_forget_title">Apparaat vergeten?</string>
+    <string name="accounts_forget_message">Hiermee wordt het apparaat \"%1$s\" vergeten en ontvangt het geen meldingen meer.</string>
+    <string name="accounts_device_seen">Laatst gezien %1$s</string>
 </resources>

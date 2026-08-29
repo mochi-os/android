@@ -33,7 +33,7 @@
     <string name="projects_sort_created">Yaradıldı</string>
     <string name="projects_sort_updated">Yenilənir...</string>
     <string name="projects_create_object_type">Mesaj yazın...</string>
-    <string name="projects_create_object_title_field">Başlıq tələb olunur</string>
+    <string name="projects_create_object_title_field">Başlıq</string>
     <string name="projects_create_object_parent">Əsas</string>
     <string name="projects_settings_title">Parametrlər</string>
     <string name="projects_settings_tab_general">Ümumi</string>
@@ -88,7 +88,7 @@
     <string name="projects_request_method_merge">Birləşdir</string>
     <string name="projects_request_field_repository">Repozitoriya</string>
     <string name="projects_request_field_source">Mənbə budağı</string>
-    <string name="projects_request_field_title">Başlıq tələb olunur</string>
+    <string name="projects_request_field_title">Başlıq</string>
     <string name="projects_request_field_description">Təsvir</string>
     <string name="projects_request_field_draft">Qaralama</string>
     <string name="projects_request_create_action">Yarat</string>

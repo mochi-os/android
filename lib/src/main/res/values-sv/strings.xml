@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Återkalla</string>
+    <string name="rss_revoke">Återkalla åtkomst</string>
+    <string name="rss_revoke_title">Återkalla RSS-åtkomst?</string>
+    <string name="rss_revoke_message">Allt som prenumererar på det här flödet slutar ta emot det. Du kan kopiera en ny webbadress efteråt.</string>
+    <string name="rss_revoked">RSS-åtkomst återkallad</string>
+    <string name="rss_revoke_failed">Det gick inte att återkalla RSS-åtkomst</string>
 </resources>

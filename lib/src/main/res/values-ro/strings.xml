@@ -343,4 +343,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Revocă</string>
+    <string name="rss_revoke">Revocă accesul</string>
+    <string name="rss_revoke_title">Revocați accesul RSS?</string>
+    <string name="rss_revoke_message">Tot ce este abonat la acest flux va înceta să îl primească. Puteți copia un URL nou după aceea.</string>
+    <string name="rss_revoked">Acces RSS revocat</string>
+    <string name="rss_revoke_failed">Revocarea accesului RSS a eșuat</string>
 </resources>

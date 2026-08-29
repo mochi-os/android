@@ -748,4 +748,8 @@
     <string name="market_bid_dialog_ceiling_label">সর্বোচ্চ দর (ঐচ্ছিক)</string>
     <string name="market_asset_no_app">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
     <string name="market_asset_download_failed">ফাইলটি ডাউনলোড করা যায়নি</string>
+    <string name="market_listing_checkout_in_progress">এই তালিকার জন্য আপনার একটি চেকআউট চলমান রয়েছে।</string>
+    <string name="market_listing_checkout_cancel">চেকআউট বাতিল করুন</string>
+    <string name="market_listing_checkout_cancelled">চেকআউট বাতিল হয়েছে</string>
+    <string name="market_listing_checkout_cancel_failed">চেকআউট বাতিল করতে ব্যর্থ</string>
 </resources>

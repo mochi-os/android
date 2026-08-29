@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Redaguoti kategoriją</string>
     <string name="notifprefs_name_label">Pavadinimas</string>
     <string name="notifprefs_destinations">Tikslai</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Interneto naršyklė</string>
     <string name="notifprefs_test">Bandymas</string>
     <string name="notifprefs_edit">Redaguoti</string>
     <string name="notifprefs_delete">Ištrinti</string>
@@ -390,4 +390,12 @@
     <string name="accounts_test_failed">Bandymas nepavyko</string>
     <string name="accounts_test_sent">Bandymas išsiųstas</string>
     <string name="account_oauth_link_failed">Nepavyko susieti paskyros</string>
+    <string name="notifprefs_dest_app">Programėlėje</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Įrenginys</string>
+    <string name="accounts_devices">Įrenginiai</string>
+    <string name="accounts_forget">Pamiršti</string>
+    <string name="accounts_forget_title">Pamiršti įrenginį?</string>
+    <string name="accounts_forget_message">Tai pamirš įrenginį \"%1$s\" ir sustabdys pranešimus į jį.</string>
+    <string name="accounts_device_seen">Paskutinį kartą matytas %1$s</string>
 </resources>

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">הצעה מרבית (אופציונלי)</string>
     <string name="market_asset_no_app">אין אפליקציה שיכולה לפתוח קובץ זה</string>
     <string name="market_asset_download_failed">לא ניתן היה להוריד את הקובץ</string>
+    <string name="market_listing_checkout_in_progress">יש לך תשלום בתהליך עבור פריט זה.</string>
+    <string name="market_listing_checkout_cancel">ביטול התשלום</string>
+    <string name="market_listing_checkout_cancelled">התשלום בוטל</string>
+    <string name="market_listing_checkout_cancel_failed">ביטול התשלום נכשל</string>
 </resources>

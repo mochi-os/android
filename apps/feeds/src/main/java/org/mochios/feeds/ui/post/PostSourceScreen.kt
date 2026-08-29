@@ -360,7 +360,7 @@ fun PostSourceScreen(
                                 // image) shouldn't replace the whole page.
                                 if (request?.isForMainFrame == true) {
                                     loadError = error?.description?.toString()
-                                        ?: "Unable to load page"
+                                        ?: ctx.getString(R.string.feeds_unable_to_load)
                                 }
                             }
                         }

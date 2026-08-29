@@ -78,6 +78,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
 import org.mochios.android.model.Attachment
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
 import org.mochios.android.ui.components.ComposeBar
@@ -323,17 +324,7 @@ internal fun PostDetailContent(
 
         error != null && post == null -> {
             Box(modifier = modifier, contentAlignment = Alignment.Center) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(
-                        text = error!!.userMessage(),
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.error
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                    MochiTextButton(onClick = { viewModel.loadPost() }) {
-                        Text(stringResource(MochiR.string.common_retry))
-                    }
-                }
+                ErrorState(error = error!!, onRetry = { viewModel.loadPost() })
             }
         }
 

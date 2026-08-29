@@ -40,6 +40,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
+import org.mochios.android.util.webUri
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -165,8 +166,12 @@ private fun SubmittedEvidenceSection(evidence: List<DisputeEvidence>) {
                     Modifier
                         .fillMaxWidth()
                         .clickable {
-                            CustomTabsIntent.Builder().build()
-                                .launchUrl(context, item.url.toUri())
+                            // Evidence URLs come from Comptroller, and launchUrl
+                            // degrades to ACTION_VIEW, so only a web scheme may
+                            // leave the app.
+                            webUri(item.url)?.let { target ->
+                                CustomTabsIntent.Builder().build().launchUrl(context, target)
+                            }
                         }
                         .padding(horizontal = 12.dp, vertical = 8.dp)
                 } else {

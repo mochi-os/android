@@ -6,6 +6,7 @@
 package org.mochios.android.push
 
 import android.app.Notification
+import android.app.PendingIntent
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
@@ -148,8 +149,9 @@ class PushService : Service() {
             var sid: String? = null
             try {
                 // The shell process has no login, so the cookie jar is empty.
-                // Mint a JWT from the cross-app MochiAccount session cookie and
-                // pass it as the WebSocket's `token` query parameter.
+                // Mint a JWT from the cross-app MochiAccount session cookie.
+                // MochiWebSocket sends it as a header, not a query parameter,
+                // to keep it out of anything that logs URLs.
                 val token = mintToken(account.server, account.session)
                 if (token == null) {
                     Log.w(
@@ -236,10 +238,26 @@ class PushService : Service() {
             return
         }
         Log.i(TAG, "Dispatching push subId=$subId → ${entry.appPackage}")
-        val out = Intent(ACTION_MESSAGE).apply {
+        // Our own action, not the connector's. The connector decrypts every
+        // MESSAGE it receives and marks a payload that fails as undecrypted,
+        // and this one is cleartext by design - the server sends it that way
+        // over the user's authenticated WebSocket rather than encrypting to a
+        // Web Push key (core/server/accounts.go, account_deliver_unifiedpush).
+        // Broadcast on the connector's action and the receiver correctly drops
+        // it, which is what left self-hosted push inert.
+        //
+        // The PendingIntent is what replaces the decrypt as the authenticity
+        // check: it carries no action of its own and is never sent, it exists
+        // so the receiver can read creatorPackage and know the broadcast came
+        // from this distributor rather than any app that guessed the action.
+        val identity = PendingIntent.getBroadcast(
+            applicationContext, 0, Intent(), PendingIntent.FLAG_IMMUTABLE,
+        )
+        val out = Intent(ACTION_LOCAL_MESSAGE).apply {
             setPackage(entry.appPackage)
             putExtra(EXTRA_TOKEN, entry.token)
             putExtra(EXTRA_BYTES_MESSAGE, payload.toByteArray(Charsets.UTF_8))
+            putExtra(MochiDistributorReceiver.EXTRA_PI, identity)
         }
         applicationContext.sendBroadcast(out)
     }
@@ -402,6 +420,11 @@ class PushService : Service() {
 
         // UnifiedPush v3 wire constants for the App-bound MESSAGE broadcast.
         const val ACTION_MESSAGE = "org.unifiedpush.android.connector.MESSAGE"
+
+        // Mochi's own delivery action. A third-party distributor still uses
+        // ACTION_MESSAGE above and its payload is genuinely encrypted; this one
+        // is for the local fast path, whose payload is not.
+        const val ACTION_LOCAL_MESSAGE = "org.mochios.android.push.MESSAGE"
         const val EXTRA_TOKEN = "token"
         const val EXTRA_BYTES_MESSAGE = "bytesMessage"
 

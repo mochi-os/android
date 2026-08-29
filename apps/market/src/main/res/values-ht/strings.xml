@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Òf maksimòm (opsyonèl)</string>
     <string name="market_asset_no_app">Pa gen okenn app ki ka ouvri fichye sa a</string>
     <string name="market_asset_download_failed">Nou pa t kapab telechaje fichye a</string>
+    <string name="market_listing_checkout_in_progress">Ou gen yon peman ki ap fèt pou lis sa a.</string>
+    <string name="market_listing_checkout_cancel">Anile peman an</string>
+    <string name="market_listing_checkout_cancelled">Peman an anile</string>
+    <string name="market_listing_checkout_cancel_failed">Nou pa t kapab anile peman an</string>
 </resources>

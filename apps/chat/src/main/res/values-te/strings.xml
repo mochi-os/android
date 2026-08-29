@@ -97,4 +97,5 @@
     <string name="chat_search_next">తదుపరి సరిపోలిక</string>
     <string name="chat_search_prev">మునుపటి సరిపోలిక</string>
     <string name="chat_settings_id">చాట్ ఐడీ</string>
+    <string name="chat_message_edited">(సవరించబడింది)</string>
 </resources>

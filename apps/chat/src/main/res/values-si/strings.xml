@@ -97,4 +97,5 @@
     <string name="chat_search_next">ඊළඟ ගැළපීම</string>
     <string name="chat_search_prev">පෙර ගැළපීම</string>
     <string name="chat_settings_id">කතාබස් හැඳුනුම</string>
+    <string name="chat_message_edited">(සංස්කරණය කළා)</string>
 </resources>

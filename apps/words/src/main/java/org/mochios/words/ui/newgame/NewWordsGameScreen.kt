@@ -53,6 +53,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -178,12 +179,9 @@ fun NewWordsGameScreen(
                 }
 
                 uiState.friendsError != null -> {
-                    Text(
-                        text = uiState.friendsError?.userMessage()
+                    InlineErrorState(
+                        message = uiState.friendsError?.userMessage()
                             ?: stringResource(MochiR.string.error_unexpected),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(vertical = 8.dp),
                     )
                 }
 

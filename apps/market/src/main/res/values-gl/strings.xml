@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Poxa máxima (opcional)</string>
     <string name="market_asset_no_app">Ningunha aplicación pode abrir este ficheiro</string>
     <string name="market_asset_download_failed">Non se puido descargar o ficheiro</string>
+    <string name="market_listing_checkout_in_progress">Tes un pago en curso para este anuncio.</string>
+    <string name="market_listing_checkout_cancel">Cancelar a compra</string>
+    <string name="market_listing_checkout_cancelled">Compra cancelada</string>
+    <string name="market_listing_checkout_cancel_failed">Non se puido cancelar a compra</string>
 </resources>

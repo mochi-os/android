@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Hlela udidi</string>
     <string name="notifprefs_name_label">Igama</string>
     <string name="notifprefs_destinations">Iindawo zokuya</string>
-    <string name="notifprefs_dest_web">Iwebhu ye-Mochi</string>
+    <string name="notifprefs_dest_web">Ibhrawuza yewebhu</string>
     <string name="notifprefs_test">Vavanya</string>
     <string name="notifprefs_edit">Hlela</string>
     <string name="notifprefs_delete">Cima</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Uvavanyo lusilele</string>
     <string name="accounts_test_sent">Uvavanyo luthunyelwe</string>
     <string name="account_oauth_link_failed">Ayikwazanga ukudibanisa i-akhawunti</string>
+    <string name="notifprefs_dest_app">Kwi-app</string>
+    <string name="notifprefs_dest_push">Ukutyhala</string>
+    <string name="notifprefs_dest_device">Isixhobo</string>
+    <string name="accounts_devices">Izixhobo</string>
+    <string name="accounts_forget">Libala</string>
+    <string name="accounts_forget_title">Libala isixhobo?</string>
+    <string name="accounts_forget_message">Oku kuya kulibala isixhobo \"%1$s\" kuze kuyeke izaziso kuso.</string>
+    <string name="accounts_device_seen">Igqibele ukubonwa %1$s</string>
 </resources>

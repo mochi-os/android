@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Offerta massima (facoltativo)</string>
     <string name="market_asset_no_app">Nessuna app può aprire questo file</string>
     <string name="market_asset_download_failed">Impossibile scaricare il file</string>
+    <string name="market_listing_checkout_in_progress">Hai un pagamento in corso per questo annuncio.</string>
+    <string name="market_listing_checkout_cancel">Annulla il pagamento</string>
+    <string name="market_listing_checkout_cancelled">Pagamento annullato</string>
+    <string name="market_listing_checkout_cancel_failed">Impossibile annullare il pagamento</string>
 </resources>

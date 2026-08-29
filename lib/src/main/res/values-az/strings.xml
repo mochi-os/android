@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Geri çağır</string>
+    <string name="rss_revoke">Girişi ləğv et</string>
+    <string name="rss_revoke_title">RSS girişi ləğv edilsin?</string>
+    <string name="rss_revoke_message">Bu lentə abunə olan hər şey onu almağı dayandıracaq. Sonra yeni URL kopyalaya bilərsiniz.</string>
+    <string name="rss_revoked">RSS girişi ləğv edildi</string>
+    <string name="rss_revoke_failed">RSS girişini ləğv etmək alınmadı</string>
 </resources>

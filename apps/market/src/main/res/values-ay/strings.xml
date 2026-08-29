@@ -226,7 +226,7 @@
     <string name="market_filter_sort_price_low">Chani: jisk\'a jach\'aru</string>
     <string name="market_filter_sort_recent">Sinti machaqa</string>
     <string name="market_filter_title">Filtronaka</string>
-    <string name="market_filter_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="market_filter_type">Kasta</string>
     <string name="market_filter_type_digital">Digital</string>
     <string name="market_filter_type_physical">Físico</string>
     <string name="market_listing_detail_already_reported">Reportata</string>
@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Jach\'a jakhu (munañani)</string>
     <string name="market_asset_no_app">Janiw aka archivo jist\'arañ app utjkiti</string>
     <string name="market_asset_download_failed">Janiw qillqata apsuñjamäkiti</string>
+    <string name="market_listing_checkout_in_progress">Aka uñstayaña apnaqaña qillqatxa mä pagu lurawi utji.</string>
+    <string name="market_listing_checkout_cancel">Alaña jaytaña</string>
+    <string name="market_listing_checkout_cancelled">Alaña jaytatawa</string>
+    <string name="market_listing_checkout_cancel_failed">Janiw alaña jaytañ atkati</string>
 </resources>

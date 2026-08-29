@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">İptal et</string>
+    <string name="rss_revoke">Erişimi iptal et</string>
+    <string name="rss_revoke_title">RSS erişimi iptal edilsin mi?</string>
+    <string name="rss_revoke_message">Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz.</string>
+    <string name="rss_revoked">RSS erişimi iptal edildi</string>
+    <string name="rss_revoke_failed">RSS erişimi iptal edilemedi</string>
 </resources>

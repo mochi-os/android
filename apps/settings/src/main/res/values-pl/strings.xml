@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Edytuj kategorię</string>
     <string name="notifprefs_name_label">Nazwa</string>
     <string name="notifprefs_destinations">Miejsca docelowe</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Przeglądarka internetowa</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Edytuj</string>
     <string name="notifprefs_delete">Usuń</string>
@@ -390,4 +390,12 @@
     <string name="accounts_test_failed">Test nie powiódł się</string>
     <string name="accounts_test_sent">Test wysłany</string>
     <string name="account_oauth_link_failed">Nie można połączyć konta</string>
+    <string name="notifprefs_dest_app">W aplikacji</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Urządzenie</string>
+    <string name="accounts_devices">Urządzenia</string>
+    <string name="accounts_forget">Zapomnij</string>
+    <string name="accounts_forget_title">Zapomnieć urządzenie?</string>
+    <string name="accounts_forget_message">Spowoduje to zapomnienie urządzenia \"%1$s\" i zatrzymanie powiadomień do niego.</string>
+    <string name="accounts_device_seen">Ostatnio widziany %1$s</string>
 </resources>

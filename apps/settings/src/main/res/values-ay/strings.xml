@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Categoría askichaña</string>
     <string name="notifprefs_name_label">Suti</string>
     <string name="notifprefs_destinations">Destinonaka</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">Yant\'aña</string>
     <string name="notifprefs_edit">Askichaña</string>
     <string name="notifprefs_delete">Chhaqtayaña</string>
@@ -97,7 +97,7 @@
     <string name="accounts_add">Cuenta yapxataña</string>
     <string name="accounts_add_title">Cuenta yapxataña</string>
     <string name="accounts_empty">Jan cuenta connectatati</string>
-    <string name="accounts_type_label">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="accounts_type_label">Kasta</string>
     <string name="accounts_field_email">Email</string>
     <string name="accounts_field_model">Modelo</string>
     <string name="accounts_field_name">Suti</string>
@@ -385,4 +385,12 @@
     <string name="accounts_test_failed">Yant\'awix jan walt\'awiyat</string>
     <string name="accounts_test_sent">Yant\'awi apayata</string>
     <string name="account_oauth_link_failed">Janiw cuenta chinjañ atkiti</string>
+    <string name="notifprefs_dest_app">Aplicación manqhana</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Dispositivo</string>
+    <string name="accounts_devices">Dispositivonaka</string>
+    <string name="accounts_forget">Armtaña</string>
+    <string name="accounts_forget_title">Dispositivo armtañati?</string>
+    <string name="accounts_forget_message">Akax \"%1$s\" dispositivo armtani, yatiyäwinakasa jan ukar puriñapataki.</string>
+    <string name="accounts_device_seen">Qhipa uñjata %1$s</string>
 </resources>

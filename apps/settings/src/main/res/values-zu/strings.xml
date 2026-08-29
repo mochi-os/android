@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Hlela isigaba</string>
     <string name="notifprefs_name_label">Igama</string>
     <string name="notifprefs_destinations">Izindawo eziyiphokophelo</string>
-    <string name="notifprefs_dest_web">Iwebhu ye-Mochi</string>
+    <string name="notifprefs_dest_web">Ibhrawuza ye-web</string>
     <string name="notifprefs_test">Hlola</string>
     <string name="notifprefs_edit">Hlela</string>
     <string name="notifprefs_delete">Susa</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Ukuhlola kuhlulekile</string>
     <string name="accounts_test_sent">Ukuhlolwa kuthunyelwe</string>
     <string name="account_oauth_link_failed">Akukwazanga ukuxhuma i-akhawunti</string>
+    <string name="notifprefs_dest_app">Ku-app</string>
+    <string name="notifprefs_dest_push">Ukuphusha</string>
+    <string name="notifprefs_dest_device">Idivayisi</string>
+    <string name="accounts_devices">Amadivayisi</string>
+    <string name="accounts_forget">Khohlwa</string>
+    <string name="accounts_forget_title">Khohlwa idivayisi?</string>
+    <string name="accounts_forget_message">Lokhu kuzokhohlwa idivayisi \"%1$s\" futhi kumise izaziso kuyo.</string>
+    <string name="accounts_device_seen">Igcine ukubonwa %1$s</string>
 </resources>

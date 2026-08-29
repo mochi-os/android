@@ -8,6 +8,7 @@ package org.mochios.wikis.api
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
+import org.mochios.wikis.model.ProbeResponse
 import org.mochios.wikis.model.AccessListResponse
 import org.mochios.wikis.model.AttachmentDeleteResponse
 import org.mochios.wikis.model.AttachmentUpdateResponse
@@ -41,7 +42,6 @@ import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
 import org.mochios.wikis.model.SettingsSetResponse
 import org.mochios.wikis.model.ShareResponse
-import org.mochios.wikis.model.RssRevokeRequest
 import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.TagAddResponse
 import org.mochios.wikis.model.TagPagesResponse
@@ -91,6 +91,13 @@ interface WikisApi {
         @Field("privacy") privacy: String,
     ): Response<ApiResponse<CreateWikiResponse>>
 
+
+    /** Resolve a pasted mochi:// share link to the wiki it names. */
+    @FormUrlEncoded
+    @POST("-/probe")
+    suspend fun probeUrl(
+        @Field("url") url: String,
+    ): Response<ApiResponse<ProbeResponse>>
 
     @POST("-/subscribe")
     suspend fun joinWiki(
@@ -445,9 +452,10 @@ interface WikisApi {
      * handed out stop resolving. Scoped the way [createRssToken] is - `*` for
      * the all-wikis feed, else a wiki id or fingerprint.
      */
+    @FormUrlEncoded
     @POST("-/rss/token/revoke")
-    suspend fun revokeRssTokens(
-        @Body body: RssRevokeRequest,
+    suspend fun revokeRssToken(
+        @Field("entity") entity: String,
     ): Response<ApiResponse<OkResponse>>
 
     // ---- Search ----

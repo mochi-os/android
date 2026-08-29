@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Editar categoría</string>
     <string name="notifprefs_name_label">Nome</string>
     <string name="notifprefs_destinations">Destinos</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Navegador web</string>
     <string name="notifprefs_test">Probar</string>
     <string name="notifprefs_edit">Editar</string>
     <string name="notifprefs_delete">Eliminar</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">A proba fallou</string>
     <string name="accounts_test_sent">Proba enviada</string>
     <string name="account_oauth_link_failed">Non se puido vincular a conta</string>
+    <string name="notifprefs_dest_app">Na aplicación</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Dispositivo</string>
+    <string name="accounts_devices">Dispositivos</string>
+    <string name="accounts_forget">Esquecer</string>
+    <string name="accounts_forget_title">Esquecer o dispositivo?</string>
+    <string name="accounts_forget_message">Isto esquecerá o dispositivo \"%1$s\" e deixará de enviarlle notificacións.</string>
+    <string name="accounts_device_seen">Visto por última vez %1$s</string>
 </resources>

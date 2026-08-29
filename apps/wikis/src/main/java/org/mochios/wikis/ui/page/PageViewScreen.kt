@@ -70,6 +70,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.RssRevokeDialog
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LastViewedStore
@@ -109,6 +110,7 @@ fun PageViewScreen(
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
     val deletedMsg = stringResource(R.string.wikis_delete_page_success)
+    val rssRevokedMsg = stringResource(MochiR.string.rss_revoked)
     val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
     val shareChooserTitle = stringResource(R.string.wikis_pageview_share_chooser)
     val currentShareSubject by rememberUpdatedState(shareSubject)
@@ -147,6 +149,8 @@ fun PageViewScreen(
                         chooserTitle = shareChooserTitle,
                     )
                 }
+
+                is PageViewEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMsg)
                 is PageViewEvent.ShowError -> {
                     snackbar.showSnackbar(event.error.userMessage())
                 }
@@ -175,6 +179,7 @@ fun PageViewScreen(
     var menuExpanded by remember { mutableStateOf(false) }
     var showRenameDialog by remember { mutableStateOf(false) }
     var unsubscribeDialogOpen by remember { mutableStateOf(false) }
+    var revokeRssOpen by remember { mutableStateOf(false) }
     var isUnsubscribing by remember { mutableStateOf(false) }
 
     val canUnsubscribe = wikiInfo?.source?.isNotBlank() == true
@@ -316,6 +321,10 @@ fun PageViewScreen(
                                     menuExpanded = false
                                     viewModel.copyRssUrl(mode)
                                 },
+                                onRssRevoke = {
+                                    menuExpanded = false
+                                    revokeRssOpen = true
+                                },
                             )
                         }
                     },
@@ -393,6 +402,16 @@ fun PageViewScreen(
                 }
             }
         }
+    }
+
+    if (revokeRssOpen) {
+        RssRevokeDialog(
+            onConfirm = {
+                revokeRssOpen = false
+                viewModel.revokeRssToken()
+            },
+            onDismiss = { revokeRssOpen = false },
+        )
     }
 
     if (unsubscribeDialogOpen) {

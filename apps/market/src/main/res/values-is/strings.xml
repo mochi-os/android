@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Hámarksboð (valfrjálst)</string>
     <string name="market_asset_no_app">Ekkert forrit getur opnað þessa skrá</string>
     <string name="market_asset_download_failed">Ekki tókst að sækja skrána</string>
+    <string name="market_listing_checkout_in_progress">Þú ert með greiðslu í gangi fyrir þessa skráningu.</string>
+    <string name="market_listing_checkout_cancel">Hætta við greiðslu</string>
+    <string name="market_listing_checkout_cancelled">Hætt við greiðslu</string>
+    <string name="market_listing_checkout_cancel_failed">Mistókst að hætta við greiðslu</string>
 </resources>

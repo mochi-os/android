@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
@@ -202,24 +203,7 @@ fun InvitationsScreen(
                     }
                 }
                 uiState.error != null && uiState.received.isEmpty() && uiState.sent.isEmpty() -> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.spacedBy(12.dp),
-                        ) {
-                            Text(
-                                text = uiState.error!!.userMessage(),
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.error,
-                            )
-                            MochiTextButton(onClick = { viewModel.refresh() }) {
-                                Text(stringResource(MochiR.string.common_retry))
-                            }
-                        }
-                    }
+                    ErrorState(error = uiState.error!!, onRetry = { viewModel.refresh() })
                 }
                 received.isEmpty() && sent.isEmpty() -> InvitationsEmptyState(
                     isSearching = uiState.searchQuery.isNotBlank(),

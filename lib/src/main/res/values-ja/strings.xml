@@ -340,4 +340,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">取り消し</string>
+    <string name="rss_revoke">アクセスを取り消す</string>
+    <string name="rss_revoke_title">RSS アクセスを取り消しますか？</string>
+    <string name="rss_revoke_message">このフィードを購読しているものはすべて受信しなくなります。あとで新しい URL をコピーできます。</string>
+    <string name="rss_revoked">RSSアクセスを取り消しました</string>
+    <string name="rss_revoke_failed">RSSアクセスの取り消しに失敗しました</string>
 </resources>

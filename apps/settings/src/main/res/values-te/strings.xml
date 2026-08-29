@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">విభాగాన్ని సవరించండి</string>
     <string name="notifprefs_name_label">పేరు</string>
     <string name="notifprefs_destinations">గమ్యస్థానాలు</string>
-    <string name="notifprefs_dest_web">Mochi వెబ్</string>
+    <string name="notifprefs_dest_web">వెబ్ బ్రౌజర్</string>
     <string name="notifprefs_test">టెస్ట్</string>
     <string name="notifprefs_edit">సవరించండి</string>
     <string name="notifprefs_delete">తొలగించండి</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">టెస్ట్ విఫలమైంది</string>
     <string name="accounts_test_sent">పరీక్ష పంపబడింది</string>
     <string name="account_oauth_link_failed">ఖాతాను లింక్ చేయలేకపోయింది</string>
+    <string name="notifprefs_dest_app">యాప్‌లో</string>
+    <string name="notifprefs_dest_push">పుష్</string>
+    <string name="notifprefs_dest_device">పరికరం</string>
+    <string name="accounts_devices">పరికరాలు</string>
+    <string name="accounts_forget">మర్చిపో</string>
+    <string name="accounts_forget_title">పరికరాన్ని మర్చిపోవాలా?</string>
+    <string name="accounts_forget_message">ఇది \"%1$s\" పరికరాన్ని మర్చిపోయి దానికి నోటిఫికేషన్‌లను ఆపివేస్తుంది.</string>
+    <string name="accounts_device_seen">చివరిసారి కనిపించింది %1$s</string>
 </resources>

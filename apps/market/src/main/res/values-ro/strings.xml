@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Ofertă maximă (opțional)</string>
     <string name="market_asset_no_app">Nicio aplicație nu poate deschide acest fișier</string>
     <string name="market_asset_download_failed">Fișierul nu a putut fi descărcat</string>
+    <string name="market_listing_checkout_in_progress">Ai o plată în curs pentru acest anunț.</string>
+    <string name="market_listing_checkout_cancel">Anulează finalizarea comenzii</string>
+    <string name="market_listing_checkout_cancelled">Finalizarea comenzii a fost anulată</string>
+    <string name="market_listing_checkout_cancel_failed">Anularea finalizării comenzii a eșuat</string>
 </resources>

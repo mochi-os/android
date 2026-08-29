@@ -37,6 +37,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiPermissions
+import org.mochios.android.R as MochiR
 
 /**
  * Material3 has no nested-DropdownMenu, so web's RSS fly-out becomes one row
@@ -65,6 +66,7 @@ fun PageOverflowMenu(
     onShare: () -> Unit,
     onUnsubscribe: () -> Unit,
     onRssCopy: (mode: String) -> Unit,
+    onRssRevoke: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     // [wikiId] and [slug] are accepted on the contract so callers can pass
@@ -142,6 +144,11 @@ fun PageOverflowMenu(
             leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
         ) {
             RssModes(onSelect = onRssCopy)
+            MochiDropdownMenuDivider()
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(MochiR.string.rss_revoke)) },
+                onClick = onRssRevoke,
+            )
         }
 
         if (permissions.edit) {

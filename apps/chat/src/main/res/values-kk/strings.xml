@@ -98,4 +98,5 @@
     <string name="chat_search_next">Келесі сәйкестік</string>
     <string name="chat_search_prev">Алдыңғы сәйкестік</string>
     <string name="chat_settings_id">Чат идентификаторы</string>
+    <string name="chat_message_edited">(өңделді)</string>
 </resources>

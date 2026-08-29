@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kategorie bearbeiten</string>
     <string name="notifprefs_name_label">Name</string>
     <string name="notifprefs_destinations">Ziele</string>
-    <string name="notifprefs_dest_web">Mochi Web</string>
+    <string name="notifprefs_dest_web">Webbrowser</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Bearbeiten</string>
     <string name="notifprefs_delete">Löschen</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Test fehlgeschlagen</string>
     <string name="accounts_test_sent">Test gesendet</string>
     <string name="account_oauth_link_failed">Konto konnte nicht verknüpft werden</string>
+    <string name="notifprefs_dest_app">In der App</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Gerät</string>
+    <string name="accounts_devices">Geräte</string>
+    <string name="accounts_forget">Vergessen</string>
+    <string name="accounts_forget_title">Gerät vergessen?</string>
+    <string name="accounts_forget_message">Dadurch wird das Gerät \"%1$s\" vergessen und es erhält keine Benachrichtigungen mehr.</string>
+    <string name="accounts_device_seen">Zuletzt gesehen %1$s</string>
 </resources>

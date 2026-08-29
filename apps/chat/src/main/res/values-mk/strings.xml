@@ -97,4 +97,5 @@
     <string name="chat_search_next">Следно совпаѓање</string>
     <string name="chat_search_prev">Претходно совпаѓање</string>
     <string name="chat_settings_id">ИД на разговорот</string>
+    <string name="chat_message_edited">(изменето)</string>
 </resources>

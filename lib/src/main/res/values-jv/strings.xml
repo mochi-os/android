@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Cabut</string>
+    <string name="rss_revoke">Batalake akses</string>
+    <string name="rss_revoke_title">Batalake akses RSS?</string>
+    <string name="rss_revoke_message">Kabeh sing langganan feed iki bakal mandheg nampa. Sampeyan bisa nyalin URL anyar sawise iku.</string>
+    <string name="rss_revoked">Akses RSS dibatalake</string>
+    <string name="rss_revoke_failed">Gagal mbatalake akses RSS</string>
 </resources>

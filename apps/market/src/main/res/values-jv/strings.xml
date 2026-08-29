@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Tawaran maksimum (opsional)</string>
     <string name="market_asset_no_app">Ora ana app sing bisa mbukak berkas iki</string>
     <string name="market_asset_download_failed">Ora bisa ngundhuh berkas</string>
+    <string name="market_listing_checkout_in_progress">Sampeyan duwe pembayaran sing lagi mlaku kanggo dhaftar iki.</string>
+    <string name="market_listing_checkout_cancel">Batalake checkout</string>
+    <string name="market_listing_checkout_cancelled">Checkout dibatalake</string>
+    <string name="market_listing_checkout_cancel_failed">Gagal mbatalake checkout</string>
 </resources>

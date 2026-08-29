@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Iň ýokary teklip (hökman däl)</string>
     <string name="market_asset_no_app">Bu faýly açyp biljek programma ýok</string>
     <string name="market_asset_download_failed">Faýly ýükläp bolmady</string>
+    <string name="market_listing_checkout_in_progress">Bu mahabat üçin dowam edýän tölegiňiz bar.</string>
+    <string name="market_listing_checkout_cancel">Tölegi ýatyr</string>
+    <string name="market_listing_checkout_cancelled">Töleg ýatyryldy</string>
+    <string name="market_listing_checkout_cancel_failed">Tölegi ýatyrmak başartmady</string>
 </resources>

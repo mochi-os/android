@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">لغوه کول</string>
+    <string name="rss_revoke">لاسرسی لغوه کړئ</string>
+    <string name="rss_revoke_title">د RSS لاسرسی لغوه شي؟</string>
+    <string name="rss_revoke_message">هر څه چې دې فیډ ته ګډون کړی، ترلاسه کول به ودروي. وروسته تاسو کولی شئ نوی URL کاپي کړئ.</string>
+    <string name="rss_revoked">د RSS لاسرسی لغوه شو</string>
+    <string name="rss_revoke_failed">د RSS لاسرسي لغوه کول ناکام شول</string>
 </resources>

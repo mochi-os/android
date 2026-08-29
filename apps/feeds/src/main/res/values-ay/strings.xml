@@ -63,7 +63,7 @@
     <string name="feeds_no_sources">Jan fuentenaka</string>
     <string name="feeds_edit_source">Fuente askichaña</string>
     <string name="feeds_source_url">Ukar redirigita URL</string>
-    <string name="feeds_source_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="feeds_source_type">Kasta</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
     <string name="feeds_source_type_feed_memories">Memorianaka</string>

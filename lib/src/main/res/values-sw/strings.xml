@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Batilisha</string>
+    <string name="rss_revoke">Batilisha ufikiaji</string>
+    <string name="rss_revoke_title">Ubatilishe ufikiaji wa RSS?</string>
+    <string name="rss_revoke_message">Chochote kilichojiandikisha kwenye mlisho huu kitaacha kuupokea. Unaweza kunakili URL mpya baadaye.</string>
+    <string name="rss_revoked">Ufikiaji wa RSS umebatilishwa</string>
+    <string name="rss_revoke_failed">Imeshindwa kubatilisha ufikiaji wa RSS</string>
 </resources>

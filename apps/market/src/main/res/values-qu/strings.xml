@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Aswan hatun rantiy (munaspa)</string>
     <string name="market_asset_no_app">Mana app kay archivota kichayta atinchu</string>
     <string name="market_asset_download_failed">Manam willañiqta uraykachiyta atinchu</string>
+    <string name="market_listing_checkout_in_progress">Kay willakuypaq qullqi qupuyniyki purichkan.</string>
+    <string name="market_listing_checkout_cancel">Qullqi churayta saqiy</string>
+    <string name="market_listing_checkout_cancelled">Qullqi churay saqisqa</string>
+    <string name="market_listing_checkout_cancel_failed">Qullqi churay saqiy mana atikurqachu</string>
 </resources>

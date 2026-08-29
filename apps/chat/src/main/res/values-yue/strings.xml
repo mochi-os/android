@@ -5,6 +5,7 @@
     <string name="chat_list_logout">登出</string>
     <string name="chat_members_you">你</string>
     <string name="chat_list_search">搜尋</string>
+    <string name="chat_message_edited">(已編輯)</string>
     <string name="chat_message_send">傳送</string>
     <string name="chat_settings_remove_member">移除</string>
     <string name="chat_settings_members">成員</string>

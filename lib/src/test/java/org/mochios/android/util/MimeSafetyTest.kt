@@ -65,6 +65,25 @@ class MimeSafetyTest {
         }
     }
 
+    /**
+     * text/html and its relatives sit under the text/ prefix, so the prefix
+     * test alone let them through. A viewer handed one renders it: an
+     * attachment a peer chose the bytes of becomes script running against
+     * whatever origin the viewer assigns it.
+     */
+    @Test
+    fun `types a viewer would render are opaque despite the text prefix`() {
+        assertEquals(OPAQUE_MIME, coerceMimeType("text/html"))
+        assertEquals(OPAQUE_MIME, coerceMimeType("text/xml"))
+        assertEquals(OPAQUE_MIME, coerceMimeType("application/xhtml+xml"))
+    }
+
+    @Test
+    fun `the rendered-type refusal survives case and parameters`() {
+        assertEquals(OPAQUE_MIME, coerceMimeType("TEXT/HTML"))
+        assertEquals(OPAQUE_MIME, coerceMimeType("text/html; charset=utf-8"))
+    }
+
     @Test
     fun `parameters are dropped from an accepted type`() {
         assertEquals("text/plain", coerceMimeType("text/plain; charset=utf-8"))

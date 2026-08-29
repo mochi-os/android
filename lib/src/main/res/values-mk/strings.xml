@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Отповикај</string>
+    <string name="rss_revoke">Отповикај пристап</string>
+    <string name="rss_revoke_title">Да се отповика пристапот до RSS?</string>
+    <string name="rss_revoke_message">Сè што е претплатено на овој канал ќе престане да го прима. Потоа можете да копирате нов URL.</string>
+    <string name="rss_revoked">RSS пристапот е отповикан</string>
+    <string name="rss_revoke_failed">Неуспешно отповикување на RSS пристапот</string>
 </resources>

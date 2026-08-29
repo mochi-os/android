@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">اعظمي وړاندیز (اختیاري)</string>
     <string name="market_asset_no_app">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
     <string name="market_asset_download_failed">فایل ښکته نه شو</string>
+    <string name="market_listing_checkout_in_progress">تاسو د دې لیست لپاره روان تادیه لرئ.</string>
+    <string name="market_listing_checkout_cancel">تادیه لغوه کړئ</string>
+    <string name="market_listing_checkout_cancelled">تادیه لغوه شوه</string>
+    <string name="market_listing_checkout_cancel_failed">د تادیې لغوه کول ناکام شول</string>
 </resources>

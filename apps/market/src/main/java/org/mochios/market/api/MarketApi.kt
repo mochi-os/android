@@ -199,6 +199,16 @@ interface MarketApi {
         @Field("tags") tagsJson: String? = null,
     ): Response<ApiResponse<Listing>>
 
+    /**
+     * Release the caller's in-progress checkout on a listing, so it offers
+     * Buy now again. Comptroller clears the reservation row.
+     */
+    @FormUrlEncoded
+    @POST("-/reservations/cancel")
+    suspend fun cancelReservation(
+        @Field("listing") listing: String,
+    ): Response<ApiResponse<OkResponse>>
+
     /** Delete a listing by id. */
     @FormUrlEncoded
     @POST("-/listings/delete")

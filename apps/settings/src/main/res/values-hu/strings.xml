@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kategória szerkesztése</string>
     <string name="notifprefs_name_label">Név</string>
     <string name="notifprefs_destinations">Célhelyek</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Webböngésző</string>
     <string name="notifprefs_test">Teszt</string>
     <string name="notifprefs_edit">Szerkesztés</string>
     <string name="notifprefs_delete">Törlés</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">A teszt sikertelen</string>
     <string name="accounts_test_sent">Teszt elküldve</string>
     <string name="account_oauth_link_failed">A fiók összekapcsolása sikertelen</string>
+    <string name="notifprefs_dest_app">Az alkalmazásban</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Eszköz</string>
+    <string name="accounts_devices">Eszközök</string>
+    <string name="accounts_forget">Elfelejtés</string>
+    <string name="accounts_forget_title">Elfelejti az eszközt?</string>
+    <string name="accounts_forget_message">Ez elfelejti a(z) \"%1$s\" eszközt, és leállítja az értesítéseket hozzá.</string>
+    <string name="accounts_device_seen">Utoljára látva %1$s</string>
 </resources>

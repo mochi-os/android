@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">திரும்பப் பெறு</string>
+    <string name="rss_revoke">அணுகலை நீக்கு</string>
+    <string name="rss_revoke_title">RSS அணுகலை ரத்துசெய்யவா?</string>
+    <string name="rss_revoke_message">இந்த ஊட்டத்திற்கு குழுசேர்ந்த அனைத்தும் அதைப் பெறுவதை நிறுத்தும். பிறகு நீங்கள் புதிய URL ஐ நகலெடுக்கலாம்.</string>
+    <string name="rss_revoked">RSS அணுகல் நீக்கப்பட்டது</string>
+    <string name="rss_revoke_failed">RSS அணுகலை நீக்க முடியவில்லை</string>
 </resources>

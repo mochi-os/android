@@ -97,4 +97,5 @@
     <string name="chat_search_next">مورد بعدی</string>
     <string name="chat_search_prev">مورد قبلی</string>
     <string name="chat_settings_id">شناسه گفتگو</string>
+    <string name="chat_message_edited">(ویرایش‌شده)</string>
 </resources>

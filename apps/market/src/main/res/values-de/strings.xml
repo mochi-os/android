@@ -748,4 +748,8 @@
     <string name="market_bid_dialog_ceiling_label">Höchstgebot (optional)</string>
     <string name="market_asset_no_app">Keine App kann diese Datei öffnen</string>
     <string name="market_asset_download_failed">Die Datei konnte nicht heruntergeladen werden</string>
+    <string name="market_listing_checkout_in_progress">Sie haben einen laufenden Bezahlvorgang für dieses Angebot.</string>
+    <string name="market_listing_checkout_cancel">Bezahlvorgang abbrechen</string>
+    <string name="market_listing_checkout_cancelled">Bezahlvorgang abgebrochen</string>
+    <string name="market_listing_checkout_cancel_failed">Bezahlvorgang konnte nicht abgebrochen werden</string>
 </resources>

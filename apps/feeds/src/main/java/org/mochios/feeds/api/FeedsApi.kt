@@ -235,6 +235,12 @@ interface FeedsApi {
         @Field("mode") mode: String
     ): Response<ApiResponse<RssTokenResponse>>
 
+    @FormUrlEncoded
+    @POST("-/rss/token/revoke")
+    suspend fun revokeRssToken(
+        @Field("entity") entity: String
+    ): Response<ApiResponse<SuccessResponse>>
+
     @POST("{feedId}/-/share")
     suspend fun shareFeed(
         @Path("feedId") feedId: String

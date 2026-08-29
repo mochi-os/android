@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Owahi kategori</string>
     <string name="notifprefs_name_label">Jeneng</string>
     <string name="notifprefs_destinations">Tujuan</string>
-    <string name="notifprefs_dest_web">Web Mochi</string>
+    <string name="notifprefs_dest_web">Browser web</string>
     <string name="notifprefs_test">Tes</string>
     <string name="notifprefs_edit">Owahi</string>
     <string name="notifprefs_delete">Busak</string>
@@ -384,4 +384,12 @@
     <string name="accounts_test_failed">Tes gagal</string>
     <string name="accounts_test_sent">Tes wis dikirim</string>
     <string name="account_oauth_link_failed">Ora bisa nyambungaké akun</string>
+    <string name="notifprefs_dest_app">Ing aplikasi</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Piranti</string>
+    <string name="accounts_devices">Piranti</string>
+    <string name="accounts_forget">Lalekake</string>
+    <string name="accounts_forget_title">Lalekake piranti?</string>
+    <string name="accounts_forget_message">Iki bakal nglalekake piranti \"%1$s\" lan mandhegake notifikasi menyang piranti kasebut.</string>
+    <string name="accounts_device_seen">Pungkasan katon %1$s</string>
 </resources>

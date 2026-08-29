@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Ibhidi ephezulu (ongakhetha)</string>
     <string name="market_asset_no_app">Alikho i-app elingavula leli fayela</string>
     <string name="market_asset_download_failed">Ayikwazanga ukulanda ifayela</string>
+    <string name="market_listing_checkout_in_progress">Unenkokhelo eqhubekayo kwalolu hlu.</string>
+    <string name="market_listing_checkout_cancel">Khansela ukukhokha</string>
+    <string name="market_listing_checkout_cancelled">Ukukhokha kukhanseliwe</string>
+    <string name="market_listing_checkout_cancel_failed">Yehlulekile ukukhansela ukukhokha</string>
 </resources>

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimaalne pakkumine (valikuline)</string>
     <string name="market_asset_no_app">Ükski rakendus ei saa seda faili avada</string>
     <string name="market_asset_download_failed">Faili allalaadimine ebaõnnestus</string>
+    <string name="market_listing_checkout_in_progress">Teil on selle kuulutuse jaoks pooleliolev makse.</string>
+    <string name="market_listing_checkout_cancel">Tühista ostu vormistamine</string>
+    <string name="market_listing_checkout_cancelled">Ostu vormistamine tühistatud</string>
+    <string name="market_listing_checkout_cancel_failed">Ostu vormistamise tühistamine ebaõnnestus</string>
 </resources>

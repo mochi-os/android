@@ -212,7 +212,7 @@
     <string name="staff_dashboard_col_score">Xal</string>
     <string name="staff_dashboard_col_seller">Satıcı</string>
     <string name="staff_dashboard_col_status">Status</string>
-    <string name="staff_dashboard_col_title">Başlıq tələb olunur</string>
+    <string name="staff_dashboard_col_title">Başlıq</string>
     <string name="staff_dashboard_col_total">İz</string>
     <string name="staff_dashboard_empty_audit">Audit qeydləri yoxdur</string>
     <string name="staff_dashboard_empty_listings">Son elanlar yoxdur</string>

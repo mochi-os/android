@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Cuir catagóir in eagar</string>
     <string name="notifprefs_name_label">Ainm</string>
     <string name="notifprefs_destinations">Cinn scríbe</string>
-    <string name="notifprefs_dest_web">Mochi gréasáin</string>
+    <string name="notifprefs_dest_web">Brabhsálaí gréasáin</string>
     <string name="notifprefs_test">Tástáil</string>
     <string name="notifprefs_edit">Cuir in eagar</string>
     <string name="notifprefs_delete">Scrios</string>
@@ -392,4 +392,12 @@
     <string name="accounts_test_failed">Theip ar an tástáil</string>
     <string name="accounts_test_sent">Tástáil seolta</string>
     <string name="account_oauth_link_failed">Níorbh fhéidir an cuntas a nascadh</string>
+    <string name="notifprefs_dest_app">San aip</string>
+    <string name="notifprefs_dest_push">Brú</string>
+    <string name="notifprefs_dest_device">Gléas</string>
+    <string name="accounts_devices">Gléasanna</string>
+    <string name="accounts_forget">Déan dearmad</string>
+    <string name="accounts_forget_title">Déan dearmad ar an ngléas?</string>
+    <string name="accounts_forget_message">Déanfaidh sé seo dearmad ar an ngléas \"%1$s\" agus cuirfidh sé stop le fógraí chuige.</string>
+    <string name="accounts_device_seen">Feicthe go deireanach %1$s</string>
 </resources>

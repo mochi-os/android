@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Sửa danh mục</string>
     <string name="notifprefs_name_label">Tên</string>
     <string name="notifprefs_destinations">Đích đến</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Trình duyệt web</string>
     <string name="notifprefs_test">Kiểm tra</string>
     <string name="notifprefs_edit">Sửa</string>
     <string name="notifprefs_delete">Xóa</string>
@@ -385,4 +385,12 @@
     <string name="accounts_test_failed">Kiểm tra thất bại</string>
     <string name="accounts_test_sent">Đã gửi thử nghiệm</string>
     <string name="account_oauth_link_failed">Không thể liên kết tài khoản</string>
+    <string name="notifprefs_dest_app">Trong ứng dụng</string>
+    <string name="notifprefs_dest_push">Đẩy</string>
+    <string name="notifprefs_dest_device">Thiết bị</string>
+    <string name="accounts_devices">Thiết bị</string>
+    <string name="accounts_forget">Quên</string>
+    <string name="accounts_forget_title">Quên thiết bị?</string>
+    <string name="accounts_forget_message">Thao tác này sẽ quên thiết bị \"%1$s\" và dừng thông báo đến thiết bị đó.</string>
+    <string name="accounts_device_seen">Lần cuối nhìn thấy %1$s</string>
 </resources>

@@ -345,4 +345,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Cùl-ghairm</string>
+    <string name="rss_revoke">Cùl-ghairm inntrigeadh</string>
+    <string name="rss_revoke_title">A bheil thu airson inntrigeadh RSS a chùl-ghairm?</string>
+    <string name="rss_revoke_message">Sguiridh rud sam bith a tha air fo-sgrìobhadh ris an inbhir seo ga fhaighinn. \'S urrainn dhut URL ùr a chopaigeadh às a dhèidh.</string>
+    <string name="rss_revoked">Chaidh inntrigeadh RSS a chùl-ghairm</string>
+    <string name="rss_revoke_failed">Cha b\' urrainn inntrigeadh RSS a chùl-ghairm</string>
 </resources>

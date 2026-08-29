@@ -339,14 +339,14 @@
     <string name="staff_reports_dialog_title_view">Reporte</string>
     <string name="staff_reports_empty">Jan reportenak</string>
     <string name="staff_reports_filter_status_label">Estado</string>
-    <string name="staff_reports_filter_type_label">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="staff_reports_filter_type_label">Kasta</string>
     <string name="staff_reports_history">Reporte historia</string>
     <string name="staff_reports_meta_price">Chanipa</string>
     <string name="staff_reports_meta_reason">Layku</string>
     <string name="staff_reports_meta_reporter">Reportador</string>
     <string name="staff_reports_meta_seller">Aljiri</string>
     <string name="staff_reports_meta_target">Apayaña</string>
-    <string name="staff_reports_meta_type">Mä comando qillqam jan ukax thaqham...</string>
+    <string name="staff_reports_meta_type">Kasta</string>
     <string name="staff_reports_notes_label">Notanaka</string>
     <string name="staff_reports_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="staff_reports_reason_counterfeit">K\'arichata jan ukax luntatata</string>

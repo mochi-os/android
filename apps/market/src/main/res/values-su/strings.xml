@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Panawaran maksimum (opsional)</string>
     <string name="market_asset_no_app">Teu aya aplikasi anu tiasa muka berkas ieu</string>
     <string name="market_asset_download_failed">Teu bisa ngaunduh berkas</string>
+    <string name="market_listing_checkout_in_progress">Anjeun gaduh pamayaran nu nuju lumangsung pikeun listing ieu.</string>
+    <string name="market_listing_checkout_cancel">Batalkeun pamayaran</string>
+    <string name="market_listing_checkout_cancelled">Pamayaran dibatalkeun</string>
+    <string name="market_listing_checkout_cancel_failed">Gagal ngabatalkeun pamayaran</string>
 </resources>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">အမျိုးအစား တည်းဖြတ်</string>
     <string name="notifprefs_name_label">အမည်</string>
     <string name="notifprefs_destinations">ပစ်မှတ်များ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">စမ်းသပ်မည်</string>
     <string name="notifprefs_edit">တည်းဖြတ်</string>
     <string name="notifprefs_delete">ဖျက်မည်</string>
@@ -384,4 +384,12 @@
     <string name="accounts_test_failed">စမ်းသပ်မှု မအောင်မြင်ပါ</string>
     <string name="accounts_test_sent">စမ်းသပ်မှု ပို့ပြီးပါပြီ</string>
     <string name="account_oauth_link_failed">အကောင့် ချိတ်ဆက်၍ မရပါ</string>
+    <string name="notifprefs_dest_app">အက်ပ်အတွင်း</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">ကိရိယာ</string>
+    <string name="accounts_devices">ကိရိယာများ</string>
+    <string name="accounts_forget">မေ့ပစ်ရန်</string>
+    <string name="accounts_forget_title">ကိရိယာကို မေ့ပစ်မလား?</string>
+    <string name="accounts_forget_message">ဤသည်က \"%1$s\" ကိရိယာကို မေ့ပစ်ပြီး ၎င်းသို့ အကြောင်းကြားချက်များ ပို့ခြင်းကို ရပ်ပါမည်။</string>
+    <string name="accounts_device_seen">နောက်ဆုံးတွေ့ %1$s</string>
 </resources>

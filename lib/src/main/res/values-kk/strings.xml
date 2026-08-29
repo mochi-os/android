@@ -342,4 +342,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Қайтарып алу</string>
+    <string name="rss_revoke">Кіруді қайтарып алу</string>
+    <string name="rss_revoke_title">RSS қатынасы қайтарылсын ба?</string>
+    <string name="rss_revoke_message">Осы арнаға жазылған барлық нәрсе оны алуды тоқтатады. Содан кейін жаңа URL мекенжайын көшіре аласыз.</string>
+    <string name="rss_revoked">RSS кіру құқығы қайтарылды</string>
+    <string name="rss_revoke_failed">RSS кіру құқығын қайтарып алу сәтсіз аяқталды</string>
 </resources>

@@ -208,6 +208,7 @@ fun AccountSettingsScreen(
                                     "https://dashboard.stripe.com"
                                 }
                                 CustomTabsIntent.Builder().build()
+                                    // launch-ok: both branches above are literal Stripe dashboard URLs, not server-supplied
                                     .launchUrl(context, Uri.parse(url))
                             },
                             onRefresh = viewModel::refreshStripe,

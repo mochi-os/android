@@ -345,4 +345,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Odwołaj</string>
+    <string name="rss_revoke">Cofnij dostęp</string>
+    <string name="rss_revoke_title">Unieważnić dostęp RSS?</string>
+    <string name="rss_revoke_message">Wszystko, co subskrybuje ten kanał, przestanie go otrzymywać. Potem możesz skopiować nowy adres URL.</string>
+    <string name="rss_revoked">Dostęp RSS cofnięty</string>
+    <string name="rss_revoke_failed">Nie udało się cofnąć dostępu RSS</string>
 </resources>

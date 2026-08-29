@@ -349,4 +349,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">إلغاء</string>
+    <string name="rss_revoke">إلغاء الوصول</string>
+    <string name="rss_revoke_title">إلغاء وصول RSS؟</string>
+    <string name="rss_revoke_message">سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك.</string>
+    <string name="rss_revoked">تم إلغاء وصول RSS</string>
+    <string name="rss_revoke_failed">فشل إلغاء وصول RSS</string>
 </resources>

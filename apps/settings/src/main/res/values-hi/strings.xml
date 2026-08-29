@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">श्रेणी संपादित करें</string>
     <string name="notifprefs_name_label">नाम</string>
     <string name="notifprefs_destinations">गंतव्य</string>
-    <string name="notifprefs_dest_web">Mochi वेब</string>
+    <string name="notifprefs_dest_web">वेब ब्राउज़र</string>
     <string name="notifprefs_test">टेस्ट</string>
     <string name="notifprefs_edit">संपादित करें</string>
     <string name="notifprefs_delete">हटाएँ</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">टेस्ट विफल</string>
     <string name="accounts_test_sent">परीक्षण भेजा गया</string>
     <string name="account_oauth_link_failed">अकाउंट लिंक नहीं किया जा सका</string>
+    <string name="notifprefs_dest_app">ऐप में</string>
+    <string name="notifprefs_dest_push">पुश</string>
+    <string name="notifprefs_dest_device">डिवाइस</string>
+    <string name="accounts_devices">डिवाइस</string>
+    <string name="accounts_forget">भूल जाएँ</string>
+    <string name="accounts_forget_title">डिवाइस भूल जाएँ?</string>
+    <string name="accounts_forget_message">यह \"%1$s\" डिवाइस को भूल जाएगा और उस पर सूचनाएँ भेजना बंद कर देगा।</string>
+    <string name="accounts_device_seen">अंतिम बार देखा गया %1$s</string>
 </resources>

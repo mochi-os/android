@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Rediger kategori</string>
     <string name="notifprefs_name_label">Navn</string>
     <string name="notifprefs_destinations">Destinasjoner</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Nettleser</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Rediger</string>
     <string name="notifprefs_delete">Slett</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Testen mislyktes</string>
     <string name="accounts_test_sent">Test sendt</string>
     <string name="account_oauth_link_failed">Kunne ikke koble til konto</string>
+    <string name="notifprefs_dest_app">I appen</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Enhet</string>
+    <string name="accounts_devices">Enheter</string>
+    <string name="accounts_forget">Glem</string>
+    <string name="accounts_forget_title">Glem enhet?</string>
+    <string name="accounts_forget_message">Dette vil glemme enheten \"%1$s\" og stoppe varsler til den.</string>
+    <string name="accounts_device_seen">Sist sett %1$s</string>
 </resources>

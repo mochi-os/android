@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Rhoxisa</string>
+    <string name="rss_revoke">Rhoxisa ufikelelo</string>
+    <string name="rss_revoke_title">Rhoxisa ufikelelo lwe-RSS?</string>
+    <string name="rss_revoke_message">Nantoni na ebhalisele olu suselo iya kuyeka ukulufumana. Ungakhuphela i-URL entsha emva koko.</string>
+    <string name="rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
+    <string name="rss_revoke_failed">Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS</string>
 </resources>

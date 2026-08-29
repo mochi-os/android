@@ -124,7 +124,7 @@
     <string name="notifprefs_new_category">Neue Kategorie</string>
     <string name="notifprefs_edit_category">Kategorie bearbeiten</string>
     <string name="notifprefs_destinations">Ziele</string>
-    <string name="notifprefs_dest_web">Mochi Web</string>
+    <string name="notifprefs_dest_web">Webbrowser</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_delete_title">\"%1$s\" löschen?</string>
     <string name="notifprefs_reassign_label">Aktuelle Benachrichtigungen ändern zu</string>

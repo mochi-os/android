@@ -51,7 +51,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
@@ -65,6 +64,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.AttachmentOpener
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatFingerprint
 import org.mochios.market.lib.formatPrice
@@ -301,10 +301,14 @@ private fun TrackingCard(order: Order) {
                     )
                 }
             }
-            if (order.url.isNotBlank()) {
+            if (webUri(order.url) != null) {
                 MochiTextButton(onClick = {
+                    // The seller supplies this tracking URL and launchUrl
+                    // degrades to ACTION_VIEW, so only a web scheme may leave
+                    // the app.
+                    val target = webUri(order.url) ?: return@MochiTextButton
                     try {
-                        CustomTabsIntent.Builder().build().launchUrl(context, order.url.toUri())
+                        CustomTabsIntent.Builder().build().launchUrl(context, target)
                     } catch (_: ActivityNotFoundException) { /* no-op */ }
                 }) {
                     Text(stringResource(R.string.market_purchase_track))
@@ -540,8 +544,11 @@ private fun openUrl(
     snackbar: SnackbarHostState,
     scope: kotlinx.coroutines.CoroutineScope,
 ) {
+    // The asset reference comes from the seller via the Comptroller and
+    // launchUrl degrades to ACTION_VIEW, so only a web scheme may leave the app.
+    val target = webUri(url) ?: return
     try {
-        CustomTabsIntent.Builder().build().launchUrl(context, url.toUri())
+        CustomTabsIntent.Builder().build().launchUrl(context, target)
     } catch (_: ActivityNotFoundException) {
         scope.launch { snackbar.showSnackbar("No browser available") }
     }

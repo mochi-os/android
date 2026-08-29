@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Ýatyr</string>
+    <string name="rss_revoke">Elýeterliligi ýatyr</string>
+    <string name="rss_revoke_title">RSS elýeterliligi ýatyrylsynmy?</string>
+    <string name="rss_revoke_message">Bu akyma ýazylan ähli zat ony almagy bes eder. Soňra täze URL göçürip bilersiňiz.</string>
+    <string name="rss_revoked">RSS elýeterliligi ýatyryldy</string>
+    <string name="rss_revoke_failed">RSS elýeterliligini ýatyrmak başartmady</string>
 </resources>

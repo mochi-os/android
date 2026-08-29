@@ -343,4 +343,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Опозови</string>
+    <string name="rss_revoke">Опозови приступ</string>
+    <string name="rss_revoke_title">Опозвати RSS приступ?</string>
+    <string name="rss_revoke_message">Све што је претплаћено на овај извор престаће да га прима. Затим можете копирати нови URL.</string>
+    <string name="rss_revoked">RSS приступ опозван</string>
+    <string name="rss_revoke_failed">Опозивање RSS приступа није успело</string>
 </resources>

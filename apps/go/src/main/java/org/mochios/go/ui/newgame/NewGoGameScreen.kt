@@ -49,6 +49,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -177,18 +178,11 @@ fun NewGoGameScreen(
                 }
 
                 uiState.friendsError != null -> {
-                    Column(modifier = Modifier.fillMaxWidth()) {
-                        Text(
-                            text = uiState.friendsError?.userMessage()
-                                ?: stringResource(MochiR.string.error_unexpected),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.error,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        MochiTextButton(onClick = { viewModel.loadFriends() }, enabled = !isPending) {
-                            Text(stringResource(MochiR.string.common_retry))
-                        }
-                    }
+                    InlineErrorState(
+                        message = uiState.friendsError?.userMessage()
+                            ?: stringResource(MochiR.string.error_unexpected),
+                        onRetry = { viewModel.loadFriends() }.takeIf { !isPending },
+                    )
                 }
 
                 uiState.friends.isEmpty() -> {

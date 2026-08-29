@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Azami teklif (isteğe bağlı)</string>
     <string name="market_asset_no_app">Bu dosyayı açabilecek uygulama yok</string>
     <string name="market_asset_download_failed">Dosya indirilemedi</string>
+    <string name="market_listing_checkout_in_progress">Bu ilan için devam eden bir ödemeniz var.</string>
+    <string name="market_listing_checkout_cancel">Ödemeyi iptal et</string>
+    <string name="market_listing_checkout_cancelled">Ödeme iptal edildi</string>
+    <string name="market_listing_checkout_cancel_failed">Ödeme iptal edilemedi</string>
 </resources>

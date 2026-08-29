@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Bidaan maksimum (pilihan)</string>
     <string name="market_asset_no_app">Tiada apl yang boleh membuka fail ini</string>
     <string name="market_asset_download_failed">Gagal memuat turun fail</string>
+    <string name="market_listing_checkout_in_progress">Anda mempunyai pembayaran sedang berjalan untuk penyenaraian ini.</string>
+    <string name="market_listing_checkout_cancel">Batalkan pembayaran</string>
+    <string name="market_listing_checkout_cancelled">Pembayaran dibatalkan</string>
+    <string name="market_listing_checkout_cancel_failed">Gagal membatalkan pembayaran</string>
 </resources>

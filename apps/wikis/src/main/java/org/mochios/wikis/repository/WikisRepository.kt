@@ -17,6 +17,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.wikis.api.WikisApi
+import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.ChangesResponse
@@ -37,7 +38,6 @@ import org.mochios.wikis.model.Redirect
 import org.mochios.wikis.model.Replica
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
-import org.mochios.wikis.model.RssRevokeRequest
 import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.Tag
 import org.mochios.wikis.model.TagPagesResponse
@@ -127,9 +127,30 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun joinWiki(target: String, server: String?): JoinWikiResult {
+    /**
+     * Resolve a pasted mochi:// share link. The directory only knows wikis this
+     * server has already learned about, so this is the only route to one on an
+     * unknown server.
+     */
+    suspend fun probeUrl(url: String): DirectoryEntry {
         return try {
-            val r = api.joinWiki(SubscribeRequest(target = target, server = server)).unwrap()
+            val r = api.probeUrl(url).unwrap()
+            DirectoryEntry(
+                id = r.id,
+                name = r.name,
+                fingerprint = r.fingerprint,
+                peer = r.peer.ifBlank { null },
+            )
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun joinWiki(target: String, server: String?, peer: String? = null): JoinWikiResult {
+        return try {
+            val r = api.joinWiki(
+                SubscribeRequest(target = target, server = server, peer = peer)
+            ).unwrap()
             // Refresh the cached list so the wiki the user just joined is in
             // the sidebar and the list screen by the time either is looked at
             // again - the join response carries no page count or timestamp to
@@ -164,6 +185,11 @@ class WikisRepository @Inject constructor(
         }
     }
 
+    /** Clears the entity's RSS token, so its published URLs stop working. */
+    suspend fun revokeRssToken(entity: String) {
+        api.revokeRssToken(entity).unwrap()
+    }
+
     suspend fun globalRssToken(mode: String): String {
         return try {
             api.createRssToken("*", mode).unwrap().token
@@ -179,7 +205,7 @@ class WikisRepository @Inject constructor(
      */
     suspend fun revokeGlobalRssTokens() {
         try {
-            api.revokeRssTokens(RssRevokeRequest("*")).unwrap()
+            revokeRssToken("*")
         } catch (e: Exception) {
             throw e.toMochiError()
         }

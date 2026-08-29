@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">రద్దు చేయండి</string>
+    <string name="rss_revoke">యాక్సెస్ ఉపసంహరించు</string>
+    <string name="rss_revoke_title">RSS యాక్సెస్‌ను ఉపసంహరించాలా?</string>
+    <string name="rss_revoke_message">ఈ ఫీడ్‌కు సభ్యత్వం పొందిన ప్రతిదీ దాన్ని స్వీకరించడం ఆపేస్తుంది. ఆ తర్వాత మీరు కొత్త URLని కాపీ చేయవచ్చు.</string>
+    <string name="rss_revoked">RSS యాక్సెస్ ఉపసంహరించబడింది</string>
+    <string name="rss_revoke_failed">RSS యాక్సెస్ ఉపసంహరించడంలో విఫలమైంది</string>
 </resources>

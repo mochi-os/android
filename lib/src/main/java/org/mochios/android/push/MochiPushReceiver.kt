@@ -6,6 +6,7 @@
 package org.mochios.android.push
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.CoroutineScope
@@ -98,6 +99,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                     auth = keys.auth,
                     p256dh = keys.pubKey,
                     endpoint = endpointToSend,
+                    device = deps.deviceStore().id(),
                 )
                 if (accountId != null) {
                     deps.pushAccountStore().store(instance, accountId)
@@ -146,15 +148,59 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         Log.w(TAG, "onRegistrationFailed instance=$instance reason=$reason")
     }
 
+    /**
+     * Deliver a MESSAGE this distributor sent us directly, bypassing the
+     * connector's decrypt. The local fast path is cleartext by design, so it
+     * cannot satisfy [onMessage]'s decrypted gate; the sender's identity
+     * stands in for it. Every other action goes to the connector unchanged, so
+     * a third-party distributor still gets the RFC 8291 treatment.
+     */
+    override fun onReceive(context: Context, intent: Intent) {
+        if (intent.action != PushService.ACTION_LOCAL_MESSAGE) {
+            super.onReceive(context, intent)
+            return
+        }
+        val sender = senderPackage(intent)
+        val content = intent.getByteArrayExtra(PushService.EXTRA_BYTES_MESSAGE)
+        when (judgeLocalPush(sender, sender != null && mochiSigned(context, sender), content)) {
+            LocalPush.UNIDENTIFIED -> {
+                Log.w(TAG, "Local push carried no PendingIntent to identify the sender; ignoring")
+                return
+            }
+            LocalPush.UNTRUSTED -> {
+                Log.w(TAG, "Local push from unrelated package $sender; ignoring")
+                return
+            }
+            LocalPush.EMPTY -> {
+                Log.w(TAG, "Local push carried no payload; ignoring")
+                return
+            }
+            LocalPush.ACCEPT -> Unit
+        }
+        // The connector resolves an instance name from the token through its
+        // own private registration store, which we cannot read. Instance
+        // reaches only the notification tag's fallback (channelId and
+        // deepLinkFor both ignore it), and the token identifies the same
+        // registration, so it serves the same purpose here.
+        deliver(context, content!!, intent.getStringExtra(PushService.EXTRA_TOKEN).orEmpty())
+    }
+
     override fun onMessage(context: Context, message: PushMessage, instance: String) {
-        // The only authenticity gate on push content: the connector calls this
-        // with decrypted = false after a failed decrypt, so without the check
-        // anyone holding the endpoint URL can post an arbitrary notification.
+        // The only authenticity gate on push content from a third-party
+        // distributor: the connector calls this with decrypted = false after a
+        // failed decrypt, so without the check anyone holding the endpoint URL
+        // can post an arbitrary notification. Our own distributor does not
+        // reach here - see onReceive.
         if (!message.decrypted) {
             Log.w(TAG, "Push payload was not decrypted; ignoring")
             return
         }
-        val text = message.content.toString(Charsets.UTF_8)
+        deliver(context, message.content, instance)
+    }
+
+    /** Parse a delivered payload and raise the notification it describes. */
+    private fun deliver(context: Context, content: ByteArray, instance: String) {
+        val text = content.toString(Charsets.UTF_8)
         val payload = try {
             JSONObject(text)
         } catch (_: Exception) {
@@ -185,6 +231,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         auth: String,
         p256dh: String,
         endpoint: String,
+        device: String,
     ): String? {
         val token =
             authRepository.fetchToken("notifications").getOrNull() ?: return null
@@ -195,9 +242,12 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             .add("p256dh", p256dh)
             .add("endpoint", endpoint)
             .build()
+        // The Device header binds the push account to this device, so a later
+        // registration from the same phone replaces it rather than adding to it.
         val request = Request.Builder()
             .url(url)
             .header("Authorization", "Bearer $token")
+            .header("Device", device)
             .post(form)
             .build()
         client.newCall(request).execute().use { resp ->
@@ -244,8 +294,10 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         id: String,
     ) {
         val channelId = channelId(context, instance, app, link)
-        val deepLink = deepLinkFor(context, instance, link, id, NonceStore(context).issue())
+        val nonce = NonceStore(context).issue()
+        val deepLink = deepLinkFor(context, instance, link, id, nonce)
 
+        // launch-ok: deepLink is the mochi: URI this file builds from the push payload's link
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
                     android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -269,6 +321,10 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             // the first alerts, the rest update the tray silently.
             .setOnlyAlertOnce(!SystemNotifications.shouldAlert(tag.ifBlank { instance }))
             .setContentIntent(pending)
+            // Retire the nonce when the notification is swiped away. Without
+            // this only a tap spent one, so the store filled with nonces no tap
+            // would ever present and evicted live ones to make room.
+            .setDeleteIntent(dismissIntent(context, nonce))
 
         val nm = androidx.core.app.NotificationManagerCompat.from(context)
         if (nm.areNotificationsEnabled()) {

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Maksimalt bud (valgfrit)</string>
     <string name="market_asset_no_app">Ingen app kan åbne denne fil</string>
     <string name="market_asset_download_failed">Filen kunne ikke hentes</string>
+    <string name="market_listing_checkout_in_progress">Du har en betaling i gang for denne annonce.</string>
+    <string name="market_listing_checkout_cancel">Annuller betaling</string>
+    <string name="market_listing_checkout_cancelled">Betaling annulleret</string>
+    <string name="market_listing_checkout_cancel_failed">Kunne ikke annullere betalingen</string>
 </resources>

@@ -52,6 +52,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -111,20 +112,8 @@ fun SystemDocumentsScreen(
                 state.isLoading -> CircularProgressIndicator(
                     modifier = Modifier.align(Alignment.Center),
                 )
-                state.error != null -> Column(
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Text(
-                        text = state.error!!.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                    Spacer(Modifier.height(8.dp))
-                    MochiOutlinedButton(onClick = viewModel::refresh) {
-                        Icon(Icons.Default.Refresh, contentDescription = null)
-                        Spacer(Modifier.size(8.dp))
-                        Text(stringResource(MochiR.string.common_retry))
-                    }
+                state.error != null -> Box(modifier = Modifier.align(Alignment.Center)) {
+                    ErrorState(error = state.error!!, onRetry = viewModel::refresh)
                 }
                 else -> Content(
                     state = state,

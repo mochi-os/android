@@ -341,4 +341,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Бекор кардан</string>
+    <string name="rss_revoke">Дастрасиро бекор кунед</string>
+    <string name="rss_revoke_title">Дастрасии RSS бекор карда шавад?</string>
+    <string name="rss_revoke_message">Ҳама чизе, ки ба ин ҷараён обуна шудааст, гирифтани онро қатъ мекунад. Пас аз он шумо метавонед URL-и навро нусха бардоред.</string>
+    <string name="rss_revoked">Дастрасии RSS бекор карда шуд</string>
+    <string name="rss_revoke_failed">Бекор кардани дастрасии RSS ноком шуд</string>
 </resources>

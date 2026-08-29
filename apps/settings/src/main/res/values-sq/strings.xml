@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Modifiko kategorinë</string>
     <string name="notifprefs_name_label">Emri</string>
     <string name="notifprefs_destinations">Destinacionet</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Shfletuesi i web-it</string>
     <string name="notifprefs_test">Provo</string>
     <string name="notifprefs_edit">Modifiko</string>
     <string name="notifprefs_delete">Fshi</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Testi dështoi</string>
     <string name="accounts_test_sent">Testi u dërgua</string>
     <string name="account_oauth_link_failed">Nuk mund të lidhej llogaria</string>
+    <string name="notifprefs_dest_app">Në aplikacion</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Pajisja</string>
+    <string name="accounts_devices">Pajisjet</string>
+    <string name="accounts_forget">Harro</string>
+    <string name="accounts_forget_title">Të harrohet pajisja?</string>
+    <string name="accounts_forget_message">Kjo do ta harrojë pajisjen \"%1$s\" dhe do të ndalojë njoftimet drejt saj.</string>
+    <string name="accounts_device_seen">Parë për herë të fundit %1$s</string>
 </resources>

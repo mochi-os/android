@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kategoriyi düzenle</string>
     <string name="notifprefs_name_label">Ad</string>
     <string name="notifprefs_destinations">Hedefler</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web tarayıcısı</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Düzenle</string>
     <string name="notifprefs_delete">Sil</string>
@@ -305,7 +305,7 @@
     <string name="domain_delegation_delete_message">%1$s artık bu alan adındaki rotaları yönetmeyecek.</string>
     <string name="domain_delegation_delete_title">Yetkilendirme silinsin mi?</string>
     <string name="domain_delegation_path">Yol</string>
-    <string name="domain_delegation_user">Kullanıcı kimliği</string>
+    <string name="domain_delegation_user">Kullanıcı</string>
     <string name="domain_delegations">Yetkilendirmeler</string>
     <string name="domain_delegations_empty">Yapılandırılmış yetki devri yok.</string>
     <string name="domain_delete">Alan adını sil</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Test başarısız</string>
     <string name="accounts_test_sent">Test gönderildi</string>
     <string name="account_oauth_link_failed">Hesap bağlanamadı</string>
+    <string name="notifprefs_dest_app">Uygulamada</string>
+    <string name="notifprefs_dest_push">Anlık bildirim</string>
+    <string name="notifprefs_dest_device">Cihaz</string>
+    <string name="accounts_devices">Cihazlar</string>
+    <string name="accounts_forget">Unut</string>
+    <string name="accounts_forget_title">Cihaz unutulsun mu?</string>
+    <string name="accounts_forget_message">Bu, \"%1$s\" cihazını unutur ve ona bildirim gönderilmesini durdurur.</string>
+    <string name="accounts_device_seen">Son görülme %1$s</string>
 </resources>

@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Kategorîyê sererast bike</string>
     <string name="notifprefs_name_label">Nav</string>
     <string name="notifprefs_destinations">Mebest</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Geroka webê</string>
     <string name="notifprefs_test">Test</string>
     <string name="notifprefs_edit">Sererast bike</string>
     <string name="notifprefs_delete">Jê bibe</string>
@@ -305,7 +305,7 @@
     <string name="domain_delegation_delete_message">%1$s êdî riyên li ser vê domê rêvebir nake.</string>
     <string name="domain_delegation_delete_title">Wakîltiyê jê bibe?</string>
     <string name="domain_delegation_path">Rê</string>
-    <string name="domain_delegation_user">Nasnameya bikarhêner</string>
+    <string name="domain_delegation_user">Bikarhêner</string>
     <string name="domain_delegations">Wakîltî</string>
     <string name="domain_delegations_empty">Tu delegasyonên mîhengkirî nin.</string>
     <string name="domain_delete">Domainê jê bibe</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">Test têk çû</string>
     <string name="accounts_test_sent">Test hate şandin</string>
     <string name="account_oauth_link_failed">Hesab nikarîbû were girêdan</string>
+    <string name="notifprefs_dest_app">Di sepanê de</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Cîhaz</string>
+    <string name="accounts_devices">Cîhaz</string>
+    <string name="accounts_forget">Ji bîr bike</string>
+    <string name="accounts_forget_title">Cîhaz ji bîr bibe?</string>
+    <string name="accounts_forget_message">Ev ê cîhaza \"%1$s\" ji bîr bike û agahdariyên bo wê rawestîne.</string>
+    <string name="accounts_device_seen">Cara dawî hat dîtin %1$s</string>
 </resources>

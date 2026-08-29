@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">വിഭാഗം എഡിറ്റ് ചെയ്യുക</string>
     <string name="notifprefs_name_label">പേര്</string>
     <string name="notifprefs_destinations">ലക്ഷ്യസ്ഥാനങ്ങൾ</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">വെബ് ബ്രൗസർ</string>
     <string name="notifprefs_test">ടെസ്റ്റ്</string>
     <string name="notifprefs_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="notifprefs_delete">ഇല്ലാതാക്കുക</string>
@@ -386,4 +386,12 @@
     <string name="accounts_test_failed">ടെസ്റ്റ് പരാജയപ്പെട്ടു</string>
     <string name="accounts_test_sent">പരിശോധന അയച്ചു</string>
     <string name="account_oauth_link_failed">അക്കൗണ്ട് ലിങ്ക് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
+    <string name="notifprefs_dest_app">ആപ്പിൽ</string>
+    <string name="notifprefs_dest_push">പുഷ്</string>
+    <string name="notifprefs_dest_device">ഡിവൈസ്</string>
+    <string name="accounts_devices">ഡിവൈസുകൾ</string>
+    <string name="accounts_forget">മറക്കുക</string>
+    <string name="accounts_forget_title">ഡിവൈസ് മറക്കണോ?</string>
+    <string name="accounts_forget_message">ഇത് \"%1$s\" ഡിവൈസ് മറക്കുകയും അതിലേക്കുള്ള അറിയിപ്പുകൾ നിർത്തുകയും ചെയ്യും.</string>
+    <string name="accounts_device_seen">അവസാനം കണ്ടത് %1$s</string>
 </resources>

@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Пешниҳоди ҳадди аксар (ихтиёрӣ)</string>
     <string name="market_asset_no_app">Ягон барнома ин файлро кушода наметавонад</string>
     <string name="market_asset_download_failed">Файлро зеркашӣ кардан нашуд</string>
+    <string name="market_listing_checkout_in_progress">Шумо барои ин эълон пардохти ҷорӣ доред.</string>
+    <string name="market_listing_checkout_cancel">Бекор кардани пардохт</string>
+    <string name="market_listing_checkout_cancelled">Пардохт бекор карда шуд</string>
+    <string name="market_listing_checkout_cancel_failed">Бекор кардани пардохт ноком шуд</string>
 </resources>

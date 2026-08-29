@@ -100,7 +100,7 @@ interface SystemUsersApi {
     @POST("settings/-/system/users/sessions/revoke")
     suspend fun revokeSessions(
         @Field("uid") uid: Long,
-        @Field("session_id") sessionId: String?,
+        @Field("session") session: String?,
     ): Response<RevokeSessionsResponse>
 }
 

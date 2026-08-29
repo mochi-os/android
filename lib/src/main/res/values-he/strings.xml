@@ -345,4 +345,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">בטל</string>
+    <string name="rss_revoke">בטל גישה</string>
+    <string name="rss_revoke_title">לבטל את הגישה ל-RSS?</string>
+    <string name="rss_revoke_message">כל מה שרשום להזנה הזו יפסיק לקבל אותה. אפשר להעתיק כתובת חדשה לאחר מכן.</string>
+    <string name="rss_revoked">גישת RSS בוטלה</string>
+    <string name="rss_revoke_failed">ביטול גישת RSS נכשל</string>
 </resources>

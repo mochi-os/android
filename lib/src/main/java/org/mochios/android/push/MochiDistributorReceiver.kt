@@ -5,11 +5,9 @@
 
 package org.mochios.android.push
 
-import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.util.Base64
 import android.util.Log
 import org.mochios.android.account.MochiAccount
@@ -29,16 +27,11 @@ class MochiDistributorReceiver : BroadcastReceiver() {
             Log.w(TAG, "Rejecting over-long token (${token.length} characters)")
             return
         }
-        val pi: PendingIntent? = if (android.os.Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra(EXTRA_PI, PendingIntent::class.java)
-        } else {
-            @Suppress("DEPRECATION") intent.getParcelableExtra(EXTRA_PI)
-        }
         // Identify the caller only from the PendingIntent, whose creator the
         // system records and a sender cannot forge. The protocol's
         // "application" extra is a plain string the caller chooses, so it
         // attests nothing and is deliberately not consulted.
-        val appPackage = pi?.creatorPackage
+        val appPackage = senderPackage(intent)
         if (appPackage == null) {
             Log.w(TAG, "Rejecting ${intent.action}: no PendingIntent to identify the caller")
             return
@@ -47,7 +40,7 @@ class MochiDistributorReceiver : BroadcastReceiver() {
         // comment); no third-party UnifiedPush app is meant to use it. Refuse
         // anything not signed with our certificate, and stay silent rather than
         // answering, so a probing app learns nothing about what is registered.
-        if (!isMochiSigned(context, appPackage)) {
+        if (!mochiSigned(context, appPackage)) {
             Log.w(TAG, "Rejecting ${intent.action} from unrelated package $appPackage")
             return
         }
@@ -58,14 +51,6 @@ class MochiDistributorReceiver : BroadcastReceiver() {
             ACTION_MESSAGE_ACK -> { /* no-op for v1 */ }
             else -> Log.w(TAG, "Unexpected action ${intent.action}")
         }
-    }
-
-    private fun isMochiSigned(context: Context, packageName: String): Boolean {
-        if (packageName == context.packageName) return true
-        return runCatching {
-            context.packageManager.checkSignatures(context.packageName, packageName) ==
-                PackageManager.SIGNATURE_MATCH
-        }.getOrDefault(false)
     }
 
     private fun handleRegister(context: Context, token: String, appPackage: String) {
@@ -160,7 +145,7 @@ class MochiDistributorReceiver : BroadcastReceiver() {
         return "$base/notifications/-/push/inbound/$subId"
     }
 
-    private companion object {
+    internal companion object {
         const val TAG = "MochiDistributor"
 
         // The connector's tokens are UUIDs; the bound is only so a caller

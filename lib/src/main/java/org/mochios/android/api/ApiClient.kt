@@ -24,6 +24,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.push.DeviceStore
 import org.mochios.android.util.isServerOrigin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -107,7 +108,7 @@ object ApiClient {
     @Provides
     @Singleton
     @AuthInterceptor
-    fun provideAuthInterceptor(sessionManager: SessionManager): Interceptor {
+    fun provideAuthInterceptor(sessionManager: SessionManager, deviceStore: DeviceStore): Interceptor {
         return Interceptor { chain ->
             val original = chain.request()
             val appName = original.header("X-Mochi-App")
@@ -120,6 +121,12 @@ object ApiClient {
                     builder.header("Authorization", "Bearer $token")
                 }
             }
+            // Every request says which device it comes from, so the server can
+            // key what this device shows itself. Unconditional: the module
+            // clients all derive from this one and set their own Authorization,
+            // and the server interceptor sends every request here to the bound
+            // server, so the id cannot reach another host.
+            builder.header("Device", deviceStore.id())
 
             builder.build().let { chain.proceed(it) }
         }

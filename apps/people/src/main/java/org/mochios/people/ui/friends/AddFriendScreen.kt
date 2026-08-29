@@ -58,6 +58,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiButton
@@ -207,22 +208,7 @@ private fun SearchBody(
                     }
                 }
                 state.searchError != null -> {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 16.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                    ) {
-                        Text(
-                            text = state.searchError.userMessage(),
-                            color = MaterialTheme.colorScheme.error,
-                            style = MaterialTheme.typography.bodyMedium,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        MochiTextButton(onClick = onRetry) {
-                            Text(stringResource(MochiR.string.common_retry))
-                        }
-                    }
+                    InlineErrorState(error = state.searchError, onRetry = onRetry)
                 }
                 state.searchResults.isEmpty() -> {
                     EmptyHint(
@@ -401,22 +387,7 @@ private fun PreviewBody(
                 }
             }
             preview.error != null && preview.information == null -> {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Text(
-                        text = preview.error.userMessage(),
-                        color = MaterialTheme.colorScheme.error,
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    MochiTextButton(onClick = onRetry) {
-                        Text(stringResource(MochiR.string.common_retry))
-                    }
-                }
+                InlineErrorState(error = preview.error, onRetry = onRetry)
             }
             preview.information != null -> {
                 PreviewProfile(

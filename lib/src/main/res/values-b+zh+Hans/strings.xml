@@ -340,4 +340,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">撤销</string>
+    <string name="rss_revoke">撤销访问权限</string>
+    <string name="rss_revoke_title">撤销 RSS 访问权限吗？</string>
+    <string name="rss_revoke_message">订阅此源的一切都将停止接收。之后你可以复制新的网址。</string>
+    <string name="rss_revoked">已撤销 RSS 访问权限</string>
+    <string name="rss_revoke_failed">撤销 RSS 访问权限失败</string>
 </resources>

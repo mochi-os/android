@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">Максимальна ставка (необов\'язково)</string>
     <string name="market_asset_no_app">Немає застосунку для відкриття цього файлу</string>
     <string name="market_asset_download_failed">Не вдалося завантажити файл</string>
+    <string name="market_listing_checkout_in_progress">У вас є оплата в процесі для цього оголошення.</string>
+    <string name="market_listing_checkout_cancel">Скасувати оформлення</string>
+    <string name="market_listing_checkout_cancelled">Оформлення скасовано</string>
+    <string name="market_listing_checkout_cancel_failed">Не вдалося скасувати оформлення</string>
 </resources>

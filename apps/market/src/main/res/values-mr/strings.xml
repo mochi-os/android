@@ -746,4 +746,8 @@
     <string name="market_bid_dialog_ceiling_label">कमाल बोली (पर्यायी)</string>
     <string name="market_asset_no_app">ही फाइल उघडू शकेल असे कोणतेही अॅप नाही</string>
     <string name="market_asset_download_failed">फाइल डाउनलोड करता आली नाही</string>
+    <string name="market_listing_checkout_in_progress">या यादीसाठी तुमचे पेमेंट प्रगतीपथावर आहे.</string>
+    <string name="market_listing_checkout_cancel">चेकआउट रद्द करा</string>
+    <string name="market_listing_checkout_cancelled">चेकआउट रद्द केले</string>
+    <string name="market_listing_checkout_cancel_failed">चेकआउट रद्द करता आले नाही</string>
 </resources>

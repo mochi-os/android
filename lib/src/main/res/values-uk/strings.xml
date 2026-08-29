@@ -345,4 +345,10 @@
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
     <string name="common_preview">Preview</string>
+    <string name="rss_revoke_confirm">Відкликати</string>
+    <string name="rss_revoke">Відкликати доступ</string>
+    <string name="rss_revoke_title">Відкликати доступ RSS?</string>
+    <string name="rss_revoke_message">Усе, що підписане на цей канал, перестане його отримувати. Після цього ви зможете скопіювати нову URL-адресу.</string>
+    <string name="rss_revoked">Доступ RSS відкликано</string>
+    <string name="rss_revoke_failed">Не вдалося відкликати доступ RSS</string>
 </resources>

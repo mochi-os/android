@@ -87,7 +87,7 @@ class NotificationPrefsViewModel @Inject constructor(
     }
 
     fun deleteCategory(id: String, reassignTo: String) = mutate {
-        api.deleteCategory(id = id, reassignTo = reassignTo).unwrapEmpty()
+        api.deleteCategory(id = id, reassign = reassignTo).unwrapEmpty()
     }
 
     fun toggleDestination(category: NotifCategory, row: DestinationRow, checked: Boolean) = mutate {

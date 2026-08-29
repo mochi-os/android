@@ -58,6 +58,12 @@ data class MemberAddResponse(
 
 data class SuccessResponse(val success: Boolean = false)
 
+/** What messages/edit answers: the id it edited and the stamp it recorded. */
+data class EditMessageResponse(
+    val id: String = "",
+    val edited: Long = 0,
+)
+
 data class ForwardResponse(
     val forwarded: List<String> = emptyList(),
     @SerializedName("to_chat") val toChat: String = ""
@@ -183,6 +189,17 @@ interface ChatApi {
         @Path("chatId") chatId: String,
         @Field("member") member: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    // Edit your own message. The server authorises on the author, refuses a
+    // deleted message, and broadcasts message/edit to the other members.
+    @FormUrlEncoded
+    @POST("{chatId}/-/messages/edit")
+    suspend fun editMessage(
+        @Path("chatId") chatId: String,
+        @Field("chat") chat: String,
+        @Field("message") message: String,
+        @Field("body") body: String,
+    ): Response<ApiResponse<EditMessageResponse>>
 
     // message_ids is a JSON-encoded array string (e.g. ["id1","id2"]), matching
     // the web client's URLSearchParams({ message_ids: JSON.stringify(...) }).

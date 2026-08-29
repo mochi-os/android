@@ -69,7 +69,7 @@
     <string name="notifprefs_edit_category">Categoríata hukchay</string>
     <string name="notifprefs_name_label">Sutin</string>
     <string name="notifprefs_destinations">Chayanakuna</string>
-    <string name="notifprefs_dest_web">Mochi web</string>
+    <string name="notifprefs_dest_web">Web browser</string>
     <string name="notifprefs_test">Pruebay</string>
     <string name="notifprefs_edit">Hukchay</string>
     <string name="notifprefs_delete">Wischuy</string>
@@ -385,4 +385,12 @@
     <string name="accounts_test_failed">Prueba mana atikurqanchu</string>
     <string name="accounts_test_sent">Yanapa apachisqa</string>
     <string name="account_oauth_link_failed">Cuenta tinkichiyta mana atirqachu</string>
+    <string name="notifprefs_dest_app">Aplicacionpi</string>
+    <string name="notifprefs_dest_push">Push</string>
+    <string name="notifprefs_dest_device">Mañana</string>
+    <string name="accounts_devices">Mañanakuna</string>
+    <string name="accounts_forget">Qunqay</string>
+    <string name="accounts_forget_title">Mañanata qunqaychu?</string>
+    <string name="accounts_forget_message">Kayqa \"%1$s\" mañanata qunqanqa, willakuykunatapas chayman mana apachinqachu.</string>
+    <string name="accounts_device_seen">Qhipa kaq rikusqa %1$s</string>
 </resources>
