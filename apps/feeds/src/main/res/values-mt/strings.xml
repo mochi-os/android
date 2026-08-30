@@ -152,7 +152,7 @@
     <string name="feeds_less_like_this">Inqas bħal dan</string>
     <string name="feeds_no_tags">L-ebda tikketta</string>
     <string name="feeds_anonymous">Anonimu</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Qed twieġeb lil %1$s</string>
     <string name="feeds_attach_file">Waħħal fajl</string>
     <string name="feeds_tag_label">Tikketta</string>
     <string name="feeds_file">Fajl</string>

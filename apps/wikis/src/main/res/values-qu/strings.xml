@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Hukchaykuna hinaspa comentarios</string>
     <string name="wikis_rss_copied">RSS URL clipboardman copiasqa</string>
     <string name="wikis_rss_failed">Mana RSS tokenta chaskiyta atinchu</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Yaykuyta chinkachiy</string>
+    <string name="wikis_rss_revoked">RSS yaykuy chinkachisqa</string>
     <string name="wikis_find_title">Wikikunata tariy</string>
     <string name="wikis_find_no_results">Mana wikikuna tarisqachu</string>
     <string name="wikis_find_recommended_section">Munasqa wikikuna</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Manaraq comentariokuna</string>
     <string name="wikis_comments_empty_subtitle">Kay paginapi qallariq comentariohina kay.</string>
     <string name="wikis_comment_action_reply">Kutichiy</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s runaman kutichichkan</string>
+    <string name="wikis_comment_clear_reply">Kutichiy mana ruway</string>
     <string name="wikis_comment_action_edit">Hukchay</string>
     <string name="wikis_comment_action_delete">Wischuy</string>
     <string name="wikis_comment_action_save">Waqaychay</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Kay comentario-ta wischuyta munanki? Kayqa kutichikunatapas wischunqa. Kay ruway mana kutichipuy atinmanchu.</string>
     <string name="wikis_comment_form_attach">Archivos churay</string>
     <string name="wikis_comment_expand">(kichay)</string>
-    <string name="wikis_editor_title_new">Musuq pagina kamariy</string>
+    <string name="wikis_editor_title_new">Musuq página</string>
     <string name="wikis_editor_preview">Ñawpaq qhaway</string>
     <string name="wikis_editor_preview_untitled">Mana sutinchayniyuq</string>
     <string name="wikis_editor_edit">Hukchay</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Sutinchay</string>
     <string name="wikis_editor_slug_label">Página URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Kayqa páginapaq ñan kanqa. Huch\'uy letrakunata, numerokunata, guionkunatawan apaykachay.</string>
     <string name="wikis_editor_content_label">Imayna</string>
     <string name="wikis_editor_summary_label">Pisi willakuyta hukchay (akllayllapaq)</string>
     <string name="wikis_editor_summary_hint">Pisillapi hukchayniykita willay</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Kamariy</string>
     <string name="wikis_redirect_source_label">Pukyu</string>
     <string name="wikis_redirect_target_label">Chayana</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Kamarisqa</string>
     <string name="wikis_redirect_required_fields">Pukyu hinaspa chayana iskay kanan</string>
     <string name="wikis_redirect_created_success">Redirige kamarisqa</string>
     <string name="wikis_redirect_create_failed">Mana redirectta paqarichiyta atinchu</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Grilla qhaway</string>
     <string name="wikis_attachments_view_list">Lista qhaway</string>
     <string name="wikis_attachments_copy_embed">Embed link copiay</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Embed enlace copiasqa</string>
+    <string name="wikis_attachments_download">Uray chaskiy</string>
     <string name="wikis_attachments_copy_success">Embed enlace copiasqa</string>
     <string name="wikis_attachments_delete">Wischuy</string>
     <string name="wikis_attachments_delete_confirm_title">Yapasqa wischuy</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Apuq</string>
     <string name="wikis_access_tab_users">Apaykachaqkuna</string>
     <string name="wikis_access_tab_groups">Huñukuna</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Huk</string>
+    <string name="wikis_access_select_rule">Huk kamachiyta akllay</string>
+    <string name="wikis_access_authenticated_desc">Pipas yaykusqa</string>
+    <string name="wikis_access_anyone_desc">Mana riqsisqa ruraqkunawan</string>
+    <string name="wikis_access_selected">Akllasqa: %1$s</string>
     <string name="wikis_access_no_groups">Mana grupokuna atikuq</string>
     <string name="wikis_access_set_success">Yaykuy musuqchasqa</string>
     <string name="wikis_access_revoke_success">Yaykuy hurqusqa</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Riqsichisqa ruraqkuna</string>
 
     <string name="wikis_revision_compare">Hukchasqakunata tupachiy</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s-rayku</string>
     <string name="wikis_revision_show_page">Pankata rikuchiy</string>
     <string name="wikis_revision_compare_failed">Tupachinapaq ñawpaq mit\'a mana chaskichikurqachu.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d mit\'amanta hukchasqakuna</string>
@@ -356,6 +356,6 @@
         <item quantity="other">%1$d resultadokuna "%2$s"-paq tarisqa</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Sut\'inchayta waqaychayta mana atikunchu</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Yanapasqa willañiqikuna: siq\'ikuna, PDF, DOC, DOCX, TXT, MD ima.</string>
+    <string name="wikis_attachments_upload_limits">Hatun apaykachaykunaqa servidorniykipa utaq proxyniykipa allichaynin hark\'asqa kanman.</string>
 </resources>

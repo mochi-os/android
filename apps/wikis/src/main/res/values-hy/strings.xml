@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Փոփոխություններ և մեկնաբանություններ</string>
     <string name="wikis_rss_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
     <string name="wikis_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Չեղարկել մուտքը</string>
+    <string name="wikis_rss_revoked">RSS մուտքը չեղարկվել է</string>
     <string name="wikis_find_title">Գտնել wiki-ներ</string>
     <string name="wikis_find_no_results">Wiki-ներ չեն գտնվել</string>
     <string name="wikis_find_recommended_section">Առաջարկվող wiki-ներ</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Դեռ մեկնաբանություններ չկան</string>
     <string name="wikis_comments_empty_subtitle">Եղեք առաջինը՝ մեկնաբանեք այս էջը։</string>
     <string name="wikis_comment_action_reply">Պատասխանել</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Պատասխանում եք %1$s-ին</string>
+    <string name="wikis_comment_clear_reply">Չեղարկել պատասխանը</string>
     <string name="wikis_comment_action_edit">Խմբագրել</string>
     <string name="wikis_comment_action_delete">Ջնջել</string>
     <string name="wikis_comment_action_save">Պահպանել</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Վստա՞հ եք, որ ուզում եք ջնջել այս կետը։ Այս գործողությունն անդառնալի է։</string>
     <string name="wikis_comment_form_attach">Կցել պատասխանի ֆայլեր</string>
     <string name="wikis_comment_expand">(ընդարձակել)</string>
-    <string name="wikis_editor_title_new">Ստեղծել օբյեկտ</string>
+    <string name="wikis_editor_title_new">Նոր էջ</string>
     <string name="wikis_editor_preview">Նախադիտում</string>
     <string name="wikis_editor_preview_untitled">Անվերնագիր</string>
     <string name="wikis_editor_edit">Խմբագրել</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Վերնագիր</string>
     <string name="wikis_editor_slug_label">Էջի URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Սա կլինի էջի ուղին: Օգտագործեք փոքրատառեր, թվեր և գծիկներ:</string>
     <string name="wikis_editor_content_label">Բովանդակություն</string>
     <string name="wikis_editor_summary_label">Խմբագրել ամփոփումը (ընտրովի)</string>
     <string name="wikis_editor_summary_hint">Համառոտ նկարագրեք ձեր փոփոխությունները</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Ստեղծել</string>
     <string name="wikis_redirect_source_label">Աղբյուր</string>
     <string name="wikis_redirect_target_label">Թիրախ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Ստեղծված</string>
     <string name="wikis_redirect_required_fields">Պահանջվում են և՛ աղբյուրը, և՛ նպատակակետը</string>
     <string name="wikis_redirect_created_success">Վերահղումը ստեղծվեց</string>
     <string name="wikis_redirect_create_failed">Չհաջողվեց ստեղծել վերահղումը</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Ցանցային տեսք</string>
     <string name="wikis_attachments_view_list">Ցանկի տեսք</string>
     <string name="wikis_attachments_copy_embed">Պատճենել ներդրման հղումը</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Ներդրման հղումը պատճենվեց</string>
+    <string name="wikis_attachments_download">Ներբեռնել</string>
     <string name="wikis_attachments_copy_success">Ներդրման հղումը պատճենվեց</string>
     <string name="wikis_attachments_delete">Ջնջել</string>
     <string name="wikis_attachments_delete_confirm_title">Ջնջել կցորդը</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Սեփականատեր</string>
     <string name="wikis_access_tab_users">Օգտատերեր</string>
     <string name="wikis_access_tab_groups">Խմբեր</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Այլ</string>
+    <string name="wikis_access_select_rule">Ընտրեք կանոն</string>
+    <string name="wikis_access_authenticated_desc">Ցանկացած մուտք գործած անձ</string>
+    <string name="wikis_access_anyone_desc">Ներառյալ անանուն օգտատերերը</string>
+    <string name="wikis_access_selected">Ընտրված է՝ %1$s</string>
     <string name="wikis_access_no_groups">Հասանելի խմբեր չկան</string>
     <string name="wikis_access_set_success">Մուտքը թարմացված է</string>
     <string name="wikis_access_revoke_success">Մուտքը հանված է</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Նույնականացված օգտատերեր</string>
 
     <string name="wikis_revision_compare">Համեմատել փոփոխությունները</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">ըստ %1$s</string>
     <string name="wikis_revision_show_page">Ցույց տալ էջը</string>
     <string name="wikis_revision_compare_failed">Չհաջողվեց բեռնել նախորդ տարբերակը համեմատության համար։</string>
     <string name="wikis_revision_changes_from">Փոփոխությունները %1$d → %2$d տարբերակից</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Գտնվեց %1$d արդյունք «%2$s»-ի համար</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Չհաջողվեց պահպանել մակագրությունը</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Աջակցվող ֆայլեր՝ պատկերներ, PDF, DOC, DOCX, TXT և MD։</string>
+    <string name="wikis_attachments_upload_limits">Մեծ վերբեռնումները կարող են սահմանափակվել ձեր սերվերի կամ վստահված սերվերի կարգավորմամբ։</string>
 </resources>

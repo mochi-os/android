@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Bidliet u kummenti</string>
     <string name="wikis_rss_copied">URL ta\' RSS ikkupjat fil-clipboard</string>
     <string name="wikis_rss_failed">Ma rnexxiex jinkiseb it-token tar-RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Irrevoka l-aċċess</string>
+    <string name="wikis_rss_revoked">L-aċċess RSS ġie rrevokat</string>
     <string name="wikis_find_title">Sib wikis</string>
     <string name="wikis_find_no_results">Ma nstabu l-ebda wikis</string>
     <string name="wikis_find_recommended_section">Wikis rakkomandati</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">L-ebda kummenti s\'issa</string>
     <string name="wikis_comments_empty_subtitle">Kun l-ewwel li tikkummenta fuq din il-paġna.</string>
     <string name="wikis_comment_action_reply">Wieġeb</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Qed twieġeb lil %1$s</string>
+    <string name="wikis_comment_clear_reply">Ikkanċella r-risposta</string>
     <string name="wikis_comment_action_edit">Editja</string>
     <string name="wikis_comment_action_delete">Ħassar</string>
     <string name="wikis_comment_action_save">Issejvja</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Żgur trid tħassar dan il-kumment? Dan iħassar ukoll ir-risposti kollha. Din l-azzjoni ma tistax tiġi ndirizzata.</string>
     <string name="wikis_comment_form_attach">Ehmeż files</string>
     <string name="wikis_comment_expand">(espandi)</string>
-    <string name="wikis_editor_title_new">Oħloq paġna ġdida</string>
+    <string name="wikis_editor_title_new">Paġna ġdida</string>
     <string name="wikis_editor_preview">Anteprima</string>
     <string name="wikis_editor_preview_untitled">Bla titlu</string>
     <string name="wikis_editor_edit">Editja</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Titlu</string>
     <string name="wikis_editor_slug_label">URL tal-paġna</string>
     <string name="wikis_editor_slug_hint">isem-paġna-tiegħi</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Dan se jkun il-path għall-paġna. Uża ittri żgħar, numri, u sing.</string>
     <string name="wikis_editor_content_label">Kontenut</string>
     <string name="wikis_editor_summary_label">Editja s-sommarju (mhux obbligatorju)</string>
     <string name="wikis_editor_summary_hint">Iddeskrivi fil-qosor il-bidliet tiegħek</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Oħloq</string>
     <string name="wikis_redirect_source_label">Sors</string>
     <string name="wikis_redirect_target_label">Mira</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Maħluq</string>
     <string name="wikis_redirect_required_fields">Kemm is-sors u kemm il-mira huma meħtieġa</string>
     <string name="wikis_redirect_created_success">Redirect inħoloq</string>
     <string name="wikis_redirect_create_failed">Ma rnexxiex jinħoloq ir-redirect</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Veduta ta\' grilja</string>
     <string name="wikis_attachments_view_list">Veduta ta\' lista</string>
     <string name="wikis_attachments_copy_embed">Ikkupja l-link tal-embed</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Il-link tal-embed ġie ikkupjat</string>
+    <string name="wikis_attachments_download">Niżżel</string>
     <string name="wikis_attachments_copy_success">Il-link tal-embed ġie ikkupjat</string>
     <string name="wikis_attachments_delete">Ħassar</string>
     <string name="wikis_attachments_delete_confirm_title">Ħassar mehmuż</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Sid</string>
     <string name="wikis_access_tab_users">Utenti</string>
     <string name="wikis_access_tab_groups">Gruppi</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Oħra</string>
+    <string name="wikis_access_select_rule">Agħżel regola</string>
+    <string name="wikis_access_authenticated_desc">Kull min hu llogjat</string>
+    <string name="wikis_access_anyone_desc">Inklużi utenti anonimi</string>
+    <string name="wikis_access_selected">Magħżul: %1$s</string>
     <string name="wikis_access_no_groups">L-ebda gruppi disponibbli</string>
     <string name="wikis_access_set_success">Aċċess aġġornat</string>
     <string name="wikis_access_revoke_success">Aċċess imneħħi</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Utenti awtentikati</string>
 
     <string name="wikis_revision_compare">Qabbel il-bidliet</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">minn %1$s</string>
     <string name="wikis_revision_show_page">Uri l-paġna</string>
     <string name="wikis_revision_compare_failed">Ma setgħetx tittella\' l-verżjoni preċedenti għall-paragun.</string>
     <string name="wikis_revision_changes_from">Bidliet mill-verżjoni %1$d → %2$d</string>
@@ -386,6 +386,6 @@
         <item quantity="other">Instabu %1$d riżultati għal "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Id-didaskalija ma setgħetx tiġi salvata</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Fajls appoġġjati: stampi, PDF, DOC, DOCX, TXT, u MD.</string>
+    <string name="wikis_attachments_upload_limits">Uploads kbar jistgħu jiġu limitati mill-konfigurazzjoni tas-server jew tal-proxy tiegħek.</string>
 </resources>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">更改和评论</string>
     <string name="wikis_rss_copied">RSS URL 已复制到剪贴板</string>
     <string name="wikis_rss_failed">获取 RSS 令牌失败</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">撤销访问权限</string>
+    <string name="wikis_rss_revoked">已撤销 RSS 访问权限</string>
     <string name="wikis_find_title">查找 wiki</string>
     <string name="wikis_find_no_results">未找到 Wiki</string>
     <string name="wikis_find_recommended_section">推荐的 Wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">暂无评论</string>
     <string name="wikis_comments_empty_subtitle">成为第一个对该页面发表评论的人。</string>
     <string name="wikis_comment_action_reply">回复</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">正在回复 %1$s</string>
+    <string name="wikis_comment_clear_reply">取消回复</string>
     <string name="wikis_comment_action_edit">编辑</string>
     <string name="wikis_comment_action_delete">删除</string>
     <string name="wikis_comment_action_save">保存</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">确定要删除此评论吗?这将同时删除所有回复。此操作无法撤销。</string>
     <string name="wikis_comment_form_attach">附加文件</string>
     <string name="wikis_comment_expand">(展开)</string>
-    <string name="wikis_editor_title_new">创建新页面</string>
+    <string name="wikis_editor_title_new">新页面</string>
     <string name="wikis_editor_preview">预览</string>
     <string name="wikis_editor_preview_untitled">未命名</string>
     <string name="wikis_editor_edit">编辑</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">标题</string>
     <string name="wikis_editor_slug_label">页面 URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">这将是页面的路径。请使用小写字母、数字和连字符。</string>
     <string name="wikis_editor_content_label">内容</string>
     <string name="wikis_editor_summary_label">编辑摘要(可选)</string>
     <string name="wikis_editor_summary_hint">简要描述你的更改</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">创建</string>
     <string name="wikis_redirect_source_label">来源</string>
     <string name="wikis_redirect_target_label">目标</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">已创建</string>
     <string name="wikis_redirect_required_fields">源和目标均为必填项</string>
     <string name="wikis_redirect_created_success">已创建重定向</string>
     <string name="wikis_redirect_create_failed">创建重定向失败</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">网格视图</string>
     <string name="wikis_attachments_view_list">列表视图</string>
     <string name="wikis_attachments_copy_embed">复制嵌入链接</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">嵌入链接已复制</string>
+    <string name="wikis_attachments_download">下载</string>
     <string name="wikis_attachments_copy_success">嵌入链接已复制</string>
     <string name="wikis_attachments_delete">删除</string>
     <string name="wikis_attachments_delete_confirm_title">删除附件</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">所有者</string>
     <string name="wikis_access_tab_users">用户</string>
     <string name="wikis_access_tab_groups">群组</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">其他</string>
+    <string name="wikis_access_select_rule">选择一条规则</string>
+    <string name="wikis_access_authenticated_desc">任何已登录的人</string>
+    <string name="wikis_access_anyone_desc">包括匿名用户</string>
+    <string name="wikis_access_selected">已选择：%1$s</string>
     <string name="wikis_access_no_groups">无可用群组</string>
     <string name="wikis_access_set_success">访问权限已更新</string>
     <string name="wikis_access_revoke_success">访问权限已移除</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">已认证用户</string>
 
     <string name="wikis_revision_compare">比较更改</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">按 %1$s</string>
     <string name="wikis_revision_show_page">显示页面</string>
     <string name="wikis_revision_compare_failed">无法加载先前版本进行比较。</string>
     <string name="wikis_revision_changes_from">从版本 %1$d → %2$d 的更改</string>
@@ -353,6 +353,6 @@
         <item quantity="other">找到 %1$d 个结果,查询「%2$s」</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">无法保存说明文字</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">支持的文件：图片、PDF、DOC、DOCX、TXT 和 MD。</string>
+    <string name="wikis_attachments_upload_limits">大文件上传可能受服务器或代理配置的限制。</string>
 </resources>

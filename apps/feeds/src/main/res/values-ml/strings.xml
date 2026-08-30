@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">ഇതുപോലുള്ളവ കുറവ്</string>
     <string name="feeds_no_tags">ടാഗുകളൊന്നുമില്ല</string>
     <string name="feeds_anonymous">അജ്ഞാതം</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s നു മറുപടി നൽകുന്നു</string>
     <string name="feeds_attach_file">ഫയൽ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="feeds_tag_label">ടാഗ് ലേബൽ</string>
     <string name="feeds_file">ഫയൽ</string>

@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">এর মতো কম</string>
     <string name="feeds_no_tags">কোনো ট্যাগ নেই</string>
     <string name="feeds_anonymous">বেনামী</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s-কে উত্তর দিচ্ছেন</string>
     <string name="feeds_attach_file">ফাইল সংযুক্ত করুন</string>
     <string name="feeds_write_a_comment">একটি মন্তব্য লিখুন…</string>
     <string name="feeds_tag_label">ট্যাগ লেবেল</string>

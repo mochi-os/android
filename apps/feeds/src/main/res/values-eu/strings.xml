@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">Honelako gutxiago</string>
     <string name="feeds_no_tags">Etiketarik ez</string>
     <string name="feeds_anonymous">Anonimoa</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s(r)i erantzuten</string>
     <string name="feeds_attach_file">Erantsi fitxategia</string>
     <string name="feeds_tag_label">Etiketaren izena</string>
     <string name="feeds_select_feed">Hautatu jario bat</string>

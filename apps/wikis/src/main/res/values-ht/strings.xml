@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Chanjman ak kòmantè</string>
     <string name="wikis_rss_copied">URL RSS kopye nan clipboard</string>
     <string name="wikis_rss_failed">Echwe pou jwenn token RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Revoke aksè</string>
+    <string name="wikis_rss_revoked">Aksè RSS revoke</string>
     <string name="wikis_find_title">Jwenn wiki</string>
     <string name="wikis_find_no_results">Pa gen wiki ki jwenn</string>
     <string name="wikis_find_recommended_section">Wiki rekòmande</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Poko gen kòmantè</string>
     <string name="wikis_comments_empty_subtitle">Se ou ki premye komante sou paj sa a.</string>
     <string name="wikis_comment_action_reply">Reponn</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">W ap reponn %1$s</string>
+    <string name="wikis_comment_clear_reply">Anile repons</string>
     <string name="wikis_comment_action_edit">Modifye</string>
     <string name="wikis_comment_action_delete">Efase</string>
     <string name="wikis_comment_action_save">Sove</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Èske ou sèten ou vle efase kòmantè sa a? Sa a pral efase tout repons yo tou. Aksyon sa a pa ka anile.</string>
     <string name="wikis_comment_form_attach">Tache fichye</string>
     <string name="wikis_comment_expand">(elaji)</string>
-    <string name="wikis_editor_title_new">Kreye nouvo paj</string>
+    <string name="wikis_editor_title_new">Nouvo paj</string>
     <string name="wikis_editor_preview">Apèsi</string>
     <string name="wikis_editor_preview_untitled">San tit</string>
     <string name="wikis_editor_edit">Modifye</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Tit</string>
     <string name="wikis_editor_slug_label">URL paj</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Sa pral chemen pou paj la. Itilize lèt minuskil, chif, ak tirè.</string>
     <string name="wikis_editor_content_label">Kontni</string>
     <string name="wikis_editor_summary_label">Modifye rezime (opsyonèl)</string>
     <string name="wikis_editor_summary_hint">Dekri chanjman ou yo brèvman</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Kreye</string>
     <string name="wikis_redirect_source_label">Sous</string>
     <string name="wikis_redirect_target_label">Sib</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Kreye</string>
     <string name="wikis_redirect_required_fields">Ni sous ni sib obligatwa</string>
     <string name="wikis_redirect_created_success">Redireksyon kreye</string>
     <string name="wikis_redirect_create_failed">Echwe pou kreye redireksyon</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Vi grid</string>
     <string name="wikis_attachments_view_list">Vi lis</string>
     <string name="wikis_attachments_copy_embed">Kopye lyen entegre</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Lyen entegre kopye</string>
+    <string name="wikis_attachments_download">Telechaje</string>
     <string name="wikis_attachments_copy_success">Lyen entegre kopye</string>
     <string name="wikis_attachments_delete">Efase</string>
     <string name="wikis_attachments_delete_confirm_title">Efase atachman</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Pwopriyetè</string>
     <string name="wikis_access_tab_users">Itilizatè</string>
     <string name="wikis_access_tab_groups">Gwoup</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Lòt</string>
+    <string name="wikis_access_select_rule">Chwazi yon règ</string>
+    <string name="wikis_access_authenticated_desc">Nenpòt moun ki konekte</string>
+    <string name="wikis_access_anyone_desc">Ansanm ak itilizatè anonim</string>
+    <string name="wikis_access_selected">Chwazi: %1$s</string>
     <string name="wikis_access_no_groups">Pa gen gwoup disponib</string>
     <string name="wikis_access_set_success">Aksè mete ajou</string>
     <string name="wikis_access_revoke_success">Aksè retire</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Itilizatè otantifye</string>
 
     <string name="wikis_revision_compare">Konpare chanjman yo</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">pa %1$s</string>
     <string name="wikis_revision_show_page">Montre paj la</string>
     <string name="wikis_revision_compare_failed">Pa t kapab chaje vèsyon anvan an pou konparezon.</string>
     <string name="wikis_revision_changes_from">Chanjman depi vèsyon %1$d → %2$d</string>
@@ -346,6 +346,6 @@
         <item quantity="other">Jwenn %1$d rezilta pou "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nou pa t ka anrejistre lejand lan</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Fichye ki sipòte: imaj, PDF, DOC, DOCX, TXT, ak MD.</string>
+    <string name="wikis_attachments_upload_limits">Gwo telechajman yo ka limite pa konfigirasyon sèvè ou oswa pwoksi ou a.</string>
 </resources>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Oʻzgarishlar va izohlar</string>
     <string name="wikis_rss_copied">RSS URL klipboardga nusxalandi</string>
     <string name="wikis_rss_failed">RSS tokenini olib boʻlmadi</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Kirishni bekor qilish</string>
+    <string name="wikis_rss_revoked">RSS kirishi bekor qilindi</string>
     <string name="wikis_find_title">Wiki larni topish</string>
     <string name="wikis_find_no_results">Wikilar topilmadi</string>
     <string name="wikis_find_recommended_section">Tavsiya etilgan wikilar</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Hozircha izohlar yoʻq</string>
     <string name="wikis_comments_empty_subtitle">Bu sahifaga birinchi boʻlib izoh qoldiring.</string>
     <string name="wikis_comment_action_reply">Javob</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s ga javob berilmoqda</string>
+    <string name="wikis_comment_clear_reply">Javobni bekor qilish</string>
     <string name="wikis_comment_action_edit">Tahrirlash</string>
     <string name="wikis_comment_action_delete">Oʻchirish</string>
     <string name="wikis_comment_action_save">Saqlash</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Bu izohni oʻchirmoqchimisiz? Bu barcha javoblarni ham oʻchiradi. Bu amalni qaytarib boʻlmaydi.</string>
     <string name="wikis_comment_form_attach">Fayl biriktirish</string>
     <string name="wikis_comment_expand">(yoyish)</string>
-    <string name="wikis_editor_title_new">Yangi sahifa yaratish</string>
+    <string name="wikis_editor_title_new">Yangi sahifa</string>
     <string name="wikis_editor_preview">Oldindan koʻrish</string>
     <string name="wikis_editor_preview_untitled">Sarlavhasiz</string>
     <string name="wikis_editor_edit">Tahrirlash</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Sarlavha</string>
     <string name="wikis_editor_slug_label">Sahifa URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Bu sahifaning yoʻli boʻladi. Kichik harflar, raqamlar va chiziqchalardan foydalaning.</string>
     <string name="wikis_editor_content_label">Mazmun</string>
     <string name="wikis_editor_summary_label">Xulosani tahrirlash (ixtiyoriy)</string>
     <string name="wikis_editor_summary_hint">Oʻzgartirishlaringizni qisqacha tasvirlang</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Yaratish</string>
     <string name="wikis_redirect_source_label">Manba</string>
     <string name="wikis_redirect_target_label">Maqsad</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Yaratildi</string>
     <string name="wikis_redirect_required_fields">Manba va maqsad ikkalasi ham talab qilinadi</string>
     <string name="wikis_redirect_created_success">Yoʻnaltirish yaratildi</string>
     <string name="wikis_redirect_create_failed">Yoʻnaltirishni yaratib boʻlmadi</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Tarmoq koʻrinishi</string>
     <string name="wikis_attachments_view_list">Roʻyxat koʻrinishi</string>
     <string name="wikis_attachments_copy_embed">Embed havolani nusxalash</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Joylashtirish havolasi nusxalandi</string>
+    <string name="wikis_attachments_download">Yuklab olish</string>
     <string name="wikis_attachments_copy_success">Joylashtirish havolasi nusxalandi</string>
     <string name="wikis_attachments_delete">Oʻchirish</string>
     <string name="wikis_attachments_delete_confirm_title">Biriktirmani oʻchirish</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Egasi</string>
     <string name="wikis_access_tab_users">Foydalanuvchilar</string>
     <string name="wikis_access_tab_groups">Guruhlar</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Boshqa</string>
+    <string name="wikis_access_select_rule">Qoidani tanlang</string>
+    <string name="wikis_access_authenticated_desc">Tizimga kirgan har kim</string>
+    <string name="wikis_access_anyone_desc">Anonim foydalanuvchilar bilan birga</string>
+    <string name="wikis_access_selected">Tanlangan: %1$s</string>
     <string name="wikis_access_no_groups">Mavjud guruhlar yoʻq</string>
     <string name="wikis_access_set_success">Kirish yangilandi</string>
     <string name="wikis_access_revoke_success">Kirish olib tashlandi</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Tasdiqlangan foydalanuvchilar</string>
 
     <string name="wikis_revision_compare">O‘zgarishlarni solishtirish</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s bo\'yicha</string>
     <string name="wikis_revision_show_page">Sahifani ko‘rsatish</string>
     <string name="wikis_revision_compare_failed">Solishtirish uchun oldingi versiyani yuklab bo‘lmadi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d versiyadagi o‘zgarishlar</string>
@@ -356,6 +356,6 @@
         <item quantity="other">"%2$s" uchun %1$d natijalar topildi</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Izohni saqlab boʻlmadi</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Qo‘llab-quvvatlanadigan fayllar: tasvirlar, PDF, DOC, DOCX, TXT va MD.</string>
+    <string name="wikis_attachments_upload_limits">Katta yuklamalar serveringiz yoki proksi sozlamalari bilan cheklangan bo‘lishi mumkin.</string>
 </resources>

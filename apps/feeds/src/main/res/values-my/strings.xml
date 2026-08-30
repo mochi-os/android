@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">ဤကဲ့သို့ လျှော့ပြပါ</string>
     <string name="feeds_no_tags">တဂ်များ မရှိပါ</string>
     <string name="feeds_anonymous">အမည်မသိ</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s ကို ပြန်ကြားနေသည်</string>
     <string name="feeds_attach_file">ဖိုင် ပူးတွဲပါ</string>
     <string name="feeds_tag_label">တဂ် အညွှန်း</string>
     <string name="feeds_file">ဖိုင်</string>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">ပြောင်းလဲမှုများနှင့် မှတ်ချက်များ</string>
     <string name="wikis_rss_copied">RSS URL ကို clipboard သို့ ကူးယူပြီးပါပြီ</string>
     <string name="wikis_rss_failed">RSS တိုကင် ရယူ၍ မရပါ</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">အသုံးပြုခွင့် ရုပ်သိမ်းရန်</string>
+    <string name="wikis_rss_revoked">RSS အသုံးပြုခွင့် ရုပ်သိမ်းပြီး</string>
     <string name="wikis_find_title">ဝီကီများ ရှာ</string>
     <string name="wikis_find_no_results">wiki များ မတွေ့ပါ</string>
     <string name="wikis_find_recommended_section">အကြံပြု wiki များ</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">comment များ မရှိသေးပါ</string>
     <string name="wikis_comments_empty_subtitle">ဤစာမျက်နှာတွင် ပထမဆုံး မှတ်ချက်ပြုသူဖြစ်ပါစေ။</string>
     <string name="wikis_comment_action_reply">ပြန်ကြား</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s ကို ပြန်ကြားနေသည်</string>
+    <string name="wikis_comment_clear_reply">အကြောင်းပြန်ချက် မလုပ်တော့ပါ</string>
     <string name="wikis_comment_action_edit">တည်းဖြတ်</string>
     <string name="wikis_comment_action_delete">ဖျက်မည်</string>
     <string name="wikis_comment_action_save">သိမ်းမည်</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ဤမှတ်ချက်ကို ဖျက်မှာသေချာပါသလား? ဤသည် အကြောင်းပြန်ချက်များအားလုံးကိုပါ ဖျက်မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</string>
     <string name="wikis_comment_form_attach">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="wikis_comment_expand">(ချဲ့ရန်)</string>
-    <string name="wikis_editor_title_new">စာမျက်နှာအသစ် ဖန်တီးမည်</string>
+    <string name="wikis_editor_title_new">စာမျက်နှာ အသစ်</string>
     <string name="wikis_editor_preview">ကြိုကြည့်ရန်</string>
     <string name="wikis_editor_preview_untitled">ခေါင်းစဉ်မရှိ</string>
     <string name="wikis_editor_edit">တည်းဖြတ်</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">ခေါင်းစဉ်</string>
     <string name="wikis_editor_slug_label">စာမျက်နှာ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">၎င်းသည် စာမျက်နှာအတွက် လမ်းကြောင်း ဖြစ်ပါမည်။ စာလုံးသေး၊ ဂဏန်းနှင့် hyphen များ သုံးပါ။</string>
     <string name="wikis_editor_content_label">အကြောင်းအရာ</string>
     <string name="wikis_editor_summary_label">အကျဉ်းချုပ် တည်းဖြတ် (ရွေးချယ်)</string>
     <string name="wikis_editor_summary_hint">သင့်ပြောင်းလဲမှုများကို အတိုချုံးဖော်ပြပါ</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">ဖန်တီးမည်</string>
     <string name="wikis_redirect_source_label">မူရင်း</string>
     <string name="wikis_redirect_target_label">ဦးတည်ရာ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">ဖန်တီးပြီး</string>
     <string name="wikis_redirect_required_fields">အရင်းအမြစ်နှင့် ပစ်မှတ် နှစ်ခုလုံး လိုအပ်သည်</string>
     <string name="wikis_redirect_created_success">Redirect ဖန်တီးပြီးပါပြီ</string>
     <string name="wikis_redirect_create_failed">ပြန်ညွှန်းမှု ဖန်တီး၍ မရပါ</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ဇယားကွက် မြင်ကွင်း</string>
     <string name="wikis_attachments_view_list">စာရင်း မြင်ကွင်း</string>
     <string name="wikis_attachments_copy_embed">embed လင့်ခ် ကူးမည်</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">ထည့်သွင်းလင့် ကူးယူပြီးပါပြီ</string>
+    <string name="wikis_attachments_download">ဒေါင်းလုဒ်</string>
     <string name="wikis_attachments_copy_success">ထည့်သွင်းလင့် ကူးယူပြီးပါပြီ</string>
     <string name="wikis_attachments_delete">ဖျက်မည်</string>
     <string name="wikis_attachments_delete_confirm_title">ပူးတွဲဖိုင် ဖျက်မည်</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">ပိုင်ရှင်</string>
     <string name="wikis_access_tab_users">သုံးစွဲသူများ</string>
     <string name="wikis_access_tab_groups">အုပ်စုများ</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">အခြား</string>
+    <string name="wikis_access_select_rule">စည်းမျဉ်းတစ်ခု ရွေးပါ</string>
+    <string name="wikis_access_authenticated_desc">ဝင်ရောက်ထားသူ မည်သူမဆို</string>
+    <string name="wikis_access_anyone_desc">အမည်မသိအသုံးပြုသူများအပါအဝင်</string>
+    <string name="wikis_access_selected">ရွေးချယ်ထား: %1$s</string>
     <string name="wikis_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
     <string name="wikis_access_set_success">ဝင်ရောက်ခွင့် ပြောင်းပြီး</string>
     <string name="wikis_access_revoke_success">ဝင်ရောက်ခွင့် ဖယ်ရှားပြီး</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">အတည်ပြုထားသော အသုံးပြုသူများ</string>
 
     <string name="wikis_revision_compare">ပြောင်းလဲမှုများကို နှိုင်းယှဉ်ပါ</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s ဖြင့်</string>
     <string name="wikis_revision_show_page">စာမျက်နှာ ပြပါ</string>
     <string name="wikis_revision_compare_failed">နှိုင်းယှဉ်ရန် ယခင်ဗားရှင်းကို ဖွင့်၍မရပါ။</string>
     <string name="wikis_revision_changes_from">ဗားရှင်း %1$d → %2$d မှ ပြောင်းလဲမှုများ</string>
@@ -346,6 +346,6 @@
         <item quantity="other">"%2$s" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">စာတန်းကို သိမ်းဆည်း၍မရပါ</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">ပံ့ပိုးထားသော ဖိုင်များ - ပုံများ၊ PDF၊ DOC၊ DOCX၊ TXT နှင့် MD။</string>
+    <string name="wikis_attachments_upload_limits">ကြီးမားသော အပ်လုဒ်များကို သင့်ဆာဗာ သို့မဟုတ် ပရောက်စီ ဖွဲ့စည်းမှုက ကန့်သတ်နိုင်ပါသည်။</string>
 </resources>

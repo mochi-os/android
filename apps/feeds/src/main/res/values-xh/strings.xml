@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Ezimbalwa ezinjengale</string>
     <string name="feeds_no_tags">Akukho maphawu</string>
     <string name="feeds_anonymous">Ongaziwayo</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Uphendula u-%1$s</string>
     <string name="feeds_attach_file">Ncamathisela ifayile</string>
     <string name="feeds_tag_label">Ilebhile yephawu</string>
     <string name="feeds_file">Ifayile</string>

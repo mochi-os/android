@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">Méně podobného</string>
     <string name="feeds_no_tags">Žádné štítky</string>
     <string name="feeds_anonymous">Anonymní</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Odpověď uživateli %1$s</string>
     <string name="feeds_attach_file">Připojit soubor</string>
     <string name="feeds_write_a_comment">Napsat komentář…</string>
     <string name="feeds_tag_label">Název štítku</string>

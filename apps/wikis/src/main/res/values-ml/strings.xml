@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">മാറ്റങ്ങളും അഭിപ്രായങ്ങളും</string>
     <string name="wikis_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="wikis_rss_failed">RSS ടോക്കൺ നേടുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">ആക്‌സസ് പിൻവലിക്കുക</string>
+    <string name="wikis_rss_revoked">RSS ആക്‌സസ് പിൻവലിച്ചു</string>
     <string name="wikis_find_title">വിക്കികൾ കണ്ടെത്തുക</string>
     <string name="wikis_find_no_results">വിക്കികളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="wikis_find_recommended_section">റിക്കവറി കോഡുകൾ</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_comments_empty_subtitle">ഈ പേജിൽ ആദ്യം അഭിപ്രായം പറയുന്നയാളാകുക.</string>
     <string name="wikis_comment_action_reply">റിപ്പോർട്ട് ചെയ്യുക</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s നു മറുപടി നൽകുന്നു</string>
+    <string name="wikis_comment_clear_reply">മറുപടി റദ്ദാക്കുക</string>
     <string name="wikis_comment_action_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="wikis_comment_action_delete">ഇല്ലാതാക്കുക</string>
     <string name="wikis_comment_action_save">സേവ് ചെയ്യുക</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ഈ അഭിപ്രായം ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഇത് എല്ലാ മറുപടികളും ഇല്ലാതാക്കും. ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="wikis_comment_form_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="wikis_comment_expand">(വിപുലീകരിക്കുക)</string>
-    <string name="wikis_editor_title_new">പുതിയ പേജ് സൃഷ്ടിക്കുക</string>
+    <string name="wikis_editor_title_new">പുതിയ പേജ്</string>
     <string name="wikis_editor_preview">സ്കോർ പ്രിവ്യൂ</string>
     <string name="wikis_editor_preview_untitled">ശീർഷകമില്ലാത്തത്</string>
     <string name="wikis_editor_edit">എഡിറ്റ് ചെയ്യുക</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">തലക്കെട്ട്</string>
     <string name="wikis_editor_slug_label">പേജ് URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">ഇത് പേജിന്റെ പാത്ത് ആയിരിക്കും. ചെറിയ അക്ഷരങ്ങൾ, അക്കങ്ങൾ, ഹൈഫനുകൾ ഉപയോഗിക്കുക.</string>
     <string name="wikis_editor_content_label">ഉള്ളടക്കം</string>
     <string name="wikis_editor_summary_label">എഡിറ്റ് സംക്ഷിപ്തം (ഐച്ഛികം)</string>
     <string name="wikis_editor_summary_hint">നിങ്ങളുടെ മാറ്റങ്ങൾ ഹ്രസ്വമായി വിവരിക്കുക</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">സൃഷ്ടിക്കുക</string>
     <string name="wikis_redirect_source_label">സ്രോതസ്സ്</string>
     <string name="wikis_redirect_target_label">ലക്ഷ്യം</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">സൃഷ്ടിച്ചു</string>
     <string name="wikis_redirect_required_fields">ഉറവിടവും ലക്ഷ്യവും ആവശ്യമാണ്</string>
     <string name="wikis_redirect_created_success">ലോഗിനിലേക്ക് redirect ചെയ്യുന്നു.</string>
     <string name="wikis_redirect_create_failed">റീഡയറക്ട് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ഗ്രിഡ് വ്യൂ</string>
     <string name="wikis_attachments_view_list">ലിസ്റ്റ് വ്യൂ</string>
     <string name="wikis_attachments_copy_embed">എംബെഡ് ലിങ്ക് പകർത്തുക</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">എംബഡ് ലിങ്ക് പകർത്തി</string>
+    <string name="wikis_attachments_download">ഡൗൺലോഡ്</string>
     <string name="wikis_attachments_copy_success">എംബഡ് ലിങ്ക് പകർത്തി</string>
     <string name="wikis_attachments_delete">ഇല്ലാതാക്കുക</string>
     <string name="wikis_attachments_delete_confirm_title">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കുക</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">ഉടമ</string>
     <string name="wikis_access_tab_users">ഉപയോക്താക്കൾ</string>
     <string name="wikis_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">മറ്റുള്ളവ</string>
+    <string name="wikis_access_select_rule">ഒരു നിയമം തിരഞ്ഞെടുക്കുക</string>
+    <string name="wikis_access_authenticated_desc">ലോഗിൻ ചെയ്ത ആരും</string>
+    <string name="wikis_access_anyone_desc">അജ്ഞാത ഉപയോക്താക്കൾ ഉൾപ്പെടെ</string>
+    <string name="wikis_access_selected">തിരഞ്ഞെടുത്തത്: %1$s</string>
     <string name="wikis_access_no_groups">ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല</string>
     <string name="wikis_access_set_success">ആക്സസ് അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="wikis_access_revoke_success">ആക്സസ് നീക്കം ചെയ്തു</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">പ്രാമാണീകരിച്ച ഉപയോക്താക്കൾ</string>
 
     <string name="wikis_revision_compare">മാറ്റങ്ങൾ താരതമ്യം ചെയ്യുക</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s പ്രകാരം</string>
     <string name="wikis_revision_show_page">പേജ് കാണിക്കുക</string>
     <string name="wikis_revision_compare_failed">താരതമ്യത്തിനായി മുൻ പതിപ്പ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.</string>
     <string name="wikis_revision_changes_from">പതിപ്പ് %1$d → %2$d മുതലുള്ള മാറ്റങ്ങൾ</string>
@@ -356,6 +356,6 @@
         <item quantity="other">«%2$s» എന്നതിന് %1$d ഫലങ്ങൾ കണ്ടെത്തി</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">അടിക്കുറിപ്പ് സംരക്ഷിക്കാനായില്ല</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">പിന്തുണയ്ക്കുന്ന ഫയലുകൾ: ചിത്രങ്ങൾ, PDF, DOC, DOCX, TXT, എന്നിവയും MD യും.</string>
+    <string name="wikis_attachments_upload_limits">വലിയ അപ്‌ലോഡുകൾ നിങ്ങളുടെ സെർവർ അല്ലെങ്കിൽ പ്രോക്സി കോൺഫിഗറേഷൻ പരിമിതപ്പെടുത്തിയേക്കാം.</string>
 </resources>

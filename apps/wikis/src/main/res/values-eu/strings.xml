@@ -44,8 +44,8 @@
     <string name="wikis_rss_both">Aldaketak eta iruzkinak</string>
     <string name="wikis_rss_copied">RSS URLa arbelera kopiatu da</string>
     <string name="wikis_rss_failed">Ezin izan da RSS tokena lortu</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Ezeztatu sarbidea</string>
+    <string name="wikis_rss_revoked">RSS sarbidea ezeztatuta</string>
     <string name="wikis_find_title">Aurkitu wikiak</string>
     <string name="wikis_find_no_results">Ez da wikirik aurkitu</string>
     <string name="wikis_find_recommended_section">Gomendatutako wikiak</string>
@@ -61,8 +61,8 @@
     <string name="wikis_comments_empty_title">Oraindik iruzkinik ez</string>
     <string name="wikis_comments_empty_subtitle">Izan zaitez orri honetan iruzkin egiten lehena.</string>
     <string name="wikis_comment_action_reply">Erantzun</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s(r)i erantzuten</string>
+    <string name="wikis_comment_clear_reply">Utzi erantzuna</string>
     <string name="wikis_comment_action_edit">Editatu</string>
     <string name="wikis_comment_action_delete">Ezabatu</string>
     <string name="wikis_comment_action_save">Gorde</string>
@@ -72,7 +72,7 @@
     <string name="wikis_comment_delete_confirm_message">Ziur al zaude iruzkin hau ezabatu nahi duzula? Honek erantzun guztiak ere ezabatuko ditu. Ekintza hau ezin da desegin.</string>
     <string name="wikis_comment_form_attach">Erantsi fitxategiak</string>
     <string name="wikis_comment_expand">(zabaldu)</string>
-    <string name="wikis_editor_title_new">Sortu orri berria</string>
+    <string name="wikis_editor_title_new">Orri berria</string>
     <string name="wikis_editor_preview">Aurrebista</string>
     <string name="wikis_editor_preview_untitled">Izengabea</string>
     <string name="wikis_editor_edit">Editatu</string>
@@ -86,7 +86,7 @@
     <string name="wikis_editor_title_label">Izenburua</string>
     <string name="wikis_editor_slug_label">Orriaren URLa</string>
     <string name="wikis_editor_slug_hint">nire-orri-izena</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Hau orriaren bidea izango da. Erabili letra xeheak, zenbakiak eta marratxoak.</string>
     <string name="wikis_editor_content_label">Edukia</string>
     <string name="wikis_editor_summary_label">Editatu laburpena (aukerakoa)</string>
     <string name="wikis_editor_summary_hint">Deskribatu laburki zure aldaketak</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_create_action">Sortu</string>
     <string name="wikis_redirect_source_label">Iturria</string>
     <string name="wikis_redirect_target_label">Helburua</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Sortua</string>
     <string name="wikis_redirect_required_fields">Iturria eta helburua biak beharrezkoak dira</string>
     <string name="wikis_redirect_created_success">Birbideratzea sortu da</string>
     <string name="wikis_redirect_create_failed">Ezin izan da birbideratzea sortu</string>
@@ -166,8 +166,8 @@
     <string name="wikis_attachments_view_grid">Sareta-ikuspegia</string>
     <string name="wikis_attachments_view_list">Zerrenda-ikuspegia</string>
     <string name="wikis_attachments_copy_embed">Kopiatu txertatze esteka</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Txertatze-esteka kopiatuta</string>
+    <string name="wikis_attachments_download">Deskargatu</string>
     <string name="wikis_attachments_copy_success">Txertatze-esteka kopiatuta</string>
     <string name="wikis_attachments_delete">Ezabatu</string>
     <string name="wikis_attachments_delete_confirm_title">Ezabatu eranskina</string>
@@ -215,11 +215,11 @@
     <string name="wikis_access_owner_label">Jabea</string>
     <string name="wikis_access_tab_users">Erabiltzaileak</string>
     <string name="wikis_access_tab_groups">Taldeak</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Bestelakoa</string>
+    <string name="wikis_access_select_rule">Hautatu arau bat</string>
+    <string name="wikis_access_authenticated_desc">Saioa hasi duen edonor</string>
+    <string name="wikis_access_anyone_desc">Erabiltzaile anonimoak barne</string>
+    <string name="wikis_access_selected">Hautatuta: %1$s</string>
     <string name="wikis_access_no_groups">Ez dago talde erabilgarririk</string>
     <string name="wikis_access_set_success">Sarbidea eguneratua</string>
     <string name="wikis_access_revoke_success">Sarbidea kendua</string>
@@ -308,7 +308,7 @@
     <string name="wikis_access_subject_anyone">Edonor</string>
     <string name="wikis_access_subject_authenticated">Autentifikatutako erabiltzaileak</string>
     <string name="wikis_revision_compare">Konparatu aldaketak</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s arabera</string>
     <string name="wikis_revision_show_page">Erakutsi orria</string>
     <string name="wikis_revision_compare_failed">Ezin izan da aurreko bertsioa kargatu konparatzeko.</string>
     <string name="wikis_revision_changes_from">Aldaketak %1$d → %2$d bertsiotik</string>
@@ -353,6 +353,6 @@
         <item quantity="other">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ezin izan da epigrafea gorde</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Onartutako fitxategiak: irudiak, PDF, DOC, DOCX, TXT eta MD.</string>
+    <string name="wikis_attachments_upload_limits">Igoera handiak zure zerbitzariaren edo proxyaren konfigurazioak muga ditzake.</string>
 </resources>

@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Помалку вакви</string>
     <string name="feeds_no_tags">Нема ознаки</string>
     <string name="feeds_anonymous">Анонимно</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Одговор до %1$s</string>
     <string name="feeds_attach_file">Прикачи датотека</string>
     <string name="feeds_tag_label">Ознака</string>
     <string name="feeds_file">Датотека</string>

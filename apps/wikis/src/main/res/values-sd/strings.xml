@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">تبديليون ۽ تبصرا</string>
     <string name="wikis_rss_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="wikis_rss_failed">RSS ٽوڪن حاصل ڪرڻ ۾ ناڪام</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">رسائي واپس وٺو</string>
+    <string name="wikis_rss_revoked">RSS رسائي واپس ورتي وئي</string>
     <string name="wikis_find_title">وڪيز ڳوليو</string>
     <string name="wikis_find_no_results">ڪي wikis نه مليون</string>
     <string name="wikis_find_recommended_section">تجويز ڪيل wikis</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">اڃا ڪو تبصرو نه آهي</string>
     <string name="wikis_comments_empty_subtitle">هن صفحي تي پهريون تبصرو ڪندڙ ٿيو.</string>
     <string name="wikis_comment_action_reply">جواب</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s کي جواب پيو ڏجي</string>
+    <string name="wikis_comment_clear_reply">جواب منسوخ ڪريو</string>
     <string name="wikis_comment_action_edit">ترميم</string>
     <string name="wikis_comment_action_delete">ختم ڪريو</string>
     <string name="wikis_comment_action_save">محفوظ ڪريو</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ڇا توهان پڪ سان هي تبصرو ختم ڪرڻ چاهيو ٿا؟ هي سڀ جواب پڻ ختم ڪندو. هي عمل واپس نه ٿو ٿي سگهي.</string>
     <string name="wikis_comment_form_attach">فائلون ڳنڍيو</string>
     <string name="wikis_comment_expand">(وڌايو)</string>
-    <string name="wikis_editor_title_new">نئون صفحو ٺاهيو</string>
+    <string name="wikis_editor_title_new">نئون صفحو</string>
     <string name="wikis_editor_preview">پيش نظر</string>
     <string name="wikis_editor_preview_untitled">بي عنوان</string>
     <string name="wikis_editor_edit">ترميم</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">عنوان</string>
     <string name="wikis_editor_slug_label">صفحي جو URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">ھي صفحي لاءِ رستو ھوندو. ننڍا اکر، نمبر، ۽ ھائيفن استعمال ڪريو.</string>
     <string name="wikis_editor_content_label">مواد</string>
     <string name="wikis_editor_summary_label">خلاصي ۾ ترميم ڪريو (اختياري)</string>
     <string name="wikis_editor_summary_hint">پنهنجي تبديلن جو مختصر تفصيل ڏيو</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">ٺاهيو</string>
     <string name="wikis_redirect_source_label">ماخذ</string>
     <string name="wikis_redirect_target_label">ھدف</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">ٺاهيو ويو</string>
     <string name="wikis_redirect_required_fields">ذريعو ۽ هدف ٻئي گهربل آهن</string>
     <string name="wikis_redirect_created_success">ريڊائريڪٽ ٺاهيو ويو</string>
     <string name="wikis_redirect_create_failed">ريڊائريڪٽ ٺاهڻ ۾ ناڪام</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">گرڊ ڏيک</string>
     <string name="wikis_attachments_view_list">لسٽ ڏيک</string>
     <string name="wikis_attachments_copy_embed">embed لنڪ ڪاپي ڪريو</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">ايمبيڊ لنڪ نقل ٿي وئي</string>
+    <string name="wikis_attachments_download">ڊائون لوڊ</string>
     <string name="wikis_attachments_copy_success">ايمبيڊ لنڪ نقل ٿي وئي</string>
     <string name="wikis_attachments_delete">ختم ڪريو</string>
     <string name="wikis_attachments_delete_confirm_title">ڳنڍيل فائل ختم ڪريو</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">مالڪ</string>
     <string name="wikis_access_tab_users">صارف</string>
     <string name="wikis_access_tab_groups">گروپ</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">ٻيو</string>
+    <string name="wikis_access_select_rule">هڪ قاعدو چونڊيو</string>
+    <string name="wikis_access_authenticated_desc">ڪو به جيڪو لاگ ان آهي</string>
+    <string name="wikis_access_anyone_desc">گمنام صارفن سميت</string>
+    <string name="wikis_access_selected">چونڊيل: %1$s</string>
     <string name="wikis_access_no_groups">ڪو گروپ دستياب ناهي</string>
     <string name="wikis_access_set_success">رسائي اپڊيٽ ڪئي وئي</string>
     <string name="wikis_access_revoke_success">رسائي هٽائي وئي</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">تصديق ٿيل استعمال ڪندڙ</string>
 
     <string name="wikis_revision_compare">تبديليون ڀيٽيو</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s جي ذريعي</string>
     <string name="wikis_revision_show_page">صفحو ڏيکاريو</string>
     <string name="wikis_revision_compare_failed">ڀيٽ لاءِ اڳوڻو نسخو لوڊ نه ٿي سگهيو.</string>
     <string name="wikis_revision_changes_from">نسخي %1$d → %2$d کان تبديليون</string>
@@ -356,6 +356,6 @@
         <item quantity="other">"%2$s" لاءِ %1$d نتيجا مليا</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ڪيپشن محفوظ نه ٿي سگهيو</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">سهڪاري فائلون: تصويرون، PDF، DOC، DOCX، TXT، ۽ MD.</string>
+    <string name="wikis_attachments_upload_limits">وڏين فائلن جو اپلوڊ توهان جي سرور يا پراڪسي ترتيب جي ڪري محدود ٿي سگهي ٿو.</string>
 </resources>

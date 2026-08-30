@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">Moins de ce type</string>
     <string name="feeds_no_tags">Aucune étiquette</string>
     <string name="feeds_anonymous">Anonyme</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Réponse à %1$s</string>
     <string name="feeds_attach_file">Joindre un fichier</string>
     <string name="feeds_tag_label">Libellé de l\'étiquette</string>
     <string name="feeds_select_feed">Sélectionner un flux</string>

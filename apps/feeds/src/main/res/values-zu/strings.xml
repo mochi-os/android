@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Okuncane okufana nalokhu</string>
     <string name="feeds_no_tags">Awekho amathegi</string>
     <string name="feeds_anonymous">Ongaziwa</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Uphendula u-%1$s</string>
     <string name="feeds_attach_file">Namathisela ifayela</string>
     <string name="feeds_tag_label">Ilebula yethegi</string>
     <string name="feeds_file">Ifayela</string>

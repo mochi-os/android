@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Ændringer og kommentarer</string>
     <string name="wikis_rss_copied">RSS-URL kopieret til udklipsholderen</string>
     <string name="wikis_rss_failed">Kunne ikke hente RSS-token</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Tilbagekald adgang</string>
+    <string name="wikis_rss_revoked">RSS-adgang tilbagekaldt</string>
     <string name="wikis_find_title">Find wikier</string>
     <string name="wikis_find_no_results">Ingen wikier fundet</string>
     <string name="wikis_find_recommended_section">Anbefalede wikier</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Ingen kommentarer endnu</string>
     <string name="wikis_comments_empty_subtitle">Vær den første til at kommentere på denne side.</string>
     <string name="wikis_comment_action_reply">Svar</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Svarer %1$s</string>
+    <string name="wikis_comment_clear_reply">Annuller svar</string>
     <string name="wikis_comment_action_edit">Redigér</string>
     <string name="wikis_comment_action_delete">Slet</string>
     <string name="wikis_comment_action_save">Gem</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Er du sikker på, at du vil slette denne kommentar? Dette vil også slette alle svar. Denne handling kan ikke fortrydes.</string>
     <string name="wikis_comment_form_attach">Vedhæft filer</string>
     <string name="wikis_comment_expand">(udvid)</string>
-    <string name="wikis_editor_title_new">Opret ny side</string>
+    <string name="wikis_editor_title_new">Ny side</string>
     <string name="wikis_editor_preview">Forhåndsvisning</string>
     <string name="wikis_editor_preview_untitled">Uden titel</string>
     <string name="wikis_editor_edit">Redigér</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Side-URL</string>
     <string name="wikis_editor_slug_hint">min-side</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Dette bliver sidens sti. Brug små bogstaver, tal og bindestreger.</string>
     <string name="wikis_editor_content_label">Indhold</string>
     <string name="wikis_editor_summary_label">Resumé af redigering (valgfrit)</string>
     <string name="wikis_editor_summary_hint">Beskriv kort dine ændringer</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Opret</string>
     <string name="wikis_redirect_source_label">Kilde</string>
     <string name="wikis_redirect_target_label">Mål</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Oprettet</string>
     <string name="wikis_redirect_required_fields">Både kilde og mål er påkrævet</string>
     <string name="wikis_redirect_created_success">Omdirigering oprettet</string>
     <string name="wikis_redirect_create_failed">Kunne ikke oprette omdirigering</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Gittervisning</string>
     <string name="wikis_attachments_view_list">Listevisning</string>
     <string name="wikis_attachments_copy_embed">Kopier indlejringslink</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Indlejringslink kopieret</string>
+    <string name="wikis_attachments_download">Hent</string>
     <string name="wikis_attachments_copy_success">Indlejringslink kopieret</string>
     <string name="wikis_attachments_delete">Slet</string>
     <string name="wikis_attachments_delete_confirm_title">Slet vedhæftning</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Ejer</string>
     <string name="wikis_access_tab_users">Brugere</string>
     <string name="wikis_access_tab_groups">Grupper</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Andet</string>
+    <string name="wikis_access_select_rule">Vælg en regel</string>
+    <string name="wikis_access_authenticated_desc">Alle, der er logget ind</string>
+    <string name="wikis_access_anyone_desc">Inklusive anonyme brugere</string>
+    <string name="wikis_access_selected">Valgt: %1$s</string>
     <string name="wikis_access_no_groups">Ingen grupper tilgængelige</string>
     <string name="wikis_access_set_success">Adgang opdateret</string>
     <string name="wikis_access_revoke_success">Adgang fjernet</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Godkendte brugere</string>
 
     <string name="wikis_revision_compare">Sammenlign ændringer</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">efter %1$s</string>
     <string name="wikis_revision_show_page">Vis side</string>
     <string name="wikis_revision_compare_failed">Kunne ikke indlæse den forrige version til sammenligning.</string>
     <string name="wikis_revision_changes_from">Ændringer fra version %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Fandt %1$d resultater for «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Billedteksten kunne ikke gemmes</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Understøttede filer: billeder, PDF, DOC, DOCX, TXT og MD.</string>
+    <string name="wikis_attachments_upload_limits">Store uploads kan være begrænset af din server- eller proxykonfiguration.</string>
 </resources>

@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">Weniger davon</string>
     <string name="feeds_no_tags">Keine Tags</string>
     <string name="feeds_anonymous">Anonym</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Antwort an %1$s</string>
     <string name="feeds_attach_file">Datei anhängen</string>
     <string name="feeds_tag_label">Tag-Bezeichnung</string>
     <string name="feeds_select_feed">Feed auswählen</string>

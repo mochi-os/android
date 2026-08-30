@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Guhertin û şîrove</string>
     <string name="wikis_rss_copied">URL ya RSS hate kopîkirin</string>
     <string name="wikis_rss_failed">Wergirtina tokena RSS neserkeftî bû</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Gihîştinê betal bike</string>
+    <string name="wikis_rss_revoked">Gihîştina RSS betal kirin</string>
     <string name="wikis_find_title">Wikiyan bibîne</string>
     <string name="wikis_find_no_results">Tu wiki nehatin dîtin</string>
     <string name="wikis_find_recommended_section">Wikiyên pêşniyarkirî</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Hêj tu şîrove tune</string>
     <string name="wikis_comments_empty_subtitle">Yê yekem be ku li ser vê rûpelê şîroveyê bike.</string>
     <string name="wikis_comment_action_reply">Bersiv</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Bersiva %1$s tê dayîn</string>
+    <string name="wikis_comment_clear_reply">Bersivê betal bike</string>
     <string name="wikis_comment_action_edit">Sererast bike</string>
     <string name="wikis_comment_action_delete">Jê bibe</string>
     <string name="wikis_comment_action_save">Tomar bike</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Tu bawer î ku dixwazî vê şîroveyê jê bibî? Hemû bersiv jî dê werin jêbirin. Ev kar nikare were vegerandin.</string>
     <string name="wikis_comment_form_attach">Pelan pêve bike</string>
     <string name="wikis_comment_expand">(berfireh bike)</string>
-    <string name="wikis_editor_title_new">Rûpela nû çêbike</string>
+    <string name="wikis_editor_title_new">Rûpela nû</string>
     <string name="wikis_editor_preview">Pêşbînî</string>
     <string name="wikis_editor_preview_untitled">Bê sernav</string>
     <string name="wikis_editor_edit">Sererast bike</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Sernav</string>
     <string name="wikis_editor_slug_label">URL ya rûpelê</string>
     <string name="wikis_editor_slug_hint">navê-rûpela-min</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Ev dê rê ji bo rûpelê be. Tîpên biçûk, hejmar û dunîşan bi kar bîne.</string>
     <string name="wikis_editor_content_label">Naverok</string>
     <string name="wikis_editor_summary_label">Kurtenivîsê sererast bike (vebijarkî)</string>
     <string name="wikis_editor_summary_hint">Guhertinên xwe bi kurtî şîrove bike</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Çêbike</string>
     <string name="wikis_redirect_source_label">Çavkanî</string>
     <string name="wikis_redirect_target_label">Armanc</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Hat çêkirin</string>
     <string name="wikis_redirect_required_fields">Hem çavkanî hem jî hedef pêwîst in</string>
     <string name="wikis_redirect_created_success">Beralîkirin hate afirandin</string>
     <string name="wikis_redirect_create_failed">Çêkirina rêveguhêziyê neserkeftî bû</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Dîmena tor</string>
     <string name="wikis_attachments_view_list">Dîmena lîsteyê</string>
     <string name="wikis_attachments_copy_embed">Girêdana embed kopî bike</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Lînka veşartî hat kopîkirin</string>
+    <string name="wikis_attachments_download">Daxe</string>
     <string name="wikis_attachments_copy_success">Lînka veşartî hat kopîkirin</string>
     <string name="wikis_attachments_delete">Jê bibe</string>
     <string name="wikis_attachments_delete_confirm_title">Pêvekê jê bibe</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Xwedî</string>
     <string name="wikis_access_tab_users">Bikarhêner</string>
     <string name="wikis_access_tab_groups">Kom</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Yên din</string>
+    <string name="wikis_access_select_rule">Rêzikekê hilbijêre</string>
+    <string name="wikis_access_authenticated_desc">Her kesê ku têketiye</string>
+    <string name="wikis_access_anyone_desc">Bi bikarhênerên nenas re</string>
+    <string name="wikis_access_selected">Hilbijartî: %1$s</string>
     <string name="wikis_access_no_groups">Tu kom berdest nîn in</string>
     <string name="wikis_access_set_success">Gihîştin hat nûkirin</string>
     <string name="wikis_access_revoke_success">Gihîştin hat rakirin</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Bikarhênerên erêkirî</string>
 
     <string name="wikis_revision_compare">Guhertinan bidin ber hev</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">ji aliyê %1$s</string>
     <string name="wikis_revision_show_page">Rûpelê nîşan bide</string>
     <string name="wikis_revision_compare_failed">Ji bo berhevkirinê guhertoya berê nehat barkirin.</string>
     <string name="wikis_revision_changes_from">Guhertin ji guhertoya %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">%1$d encam ji bo "%2$s" hat dîtin</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Binnivîs nehat tomarkirin</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Pelên piştgirîkirî: wêne, PDF, DOC, DOCX, TXT, û MD.</string>
+    <string name="wikis_attachments_upload_limits">Barkirinên mezin dibe ku bi mîhengkirina rajekar an proksiya we sînordar bibin.</string>
 </resources>

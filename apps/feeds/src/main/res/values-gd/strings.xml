@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Nas lugha dhen leithid seo</string>
     <string name="feeds_no_tags">Gun tagaichean</string>
     <string name="feeds_anonymous">Gun ainm</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">A\' freagairt %1$s</string>
     <string name="feeds_attach_file">Ceangail faidhle ris</string>
     <string name="feeds_tag_label">Leubail an taga</string>
     <string name="feeds_select_feed">Tagh inbhir</string>

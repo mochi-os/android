@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">변경 사항 및 댓글</string>
     <string name="wikis_rss_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="wikis_rss_failed">RSS 토큰을 가져오지 못했어요</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">액세스 취소</string>
+    <string name="wikis_rss_revoked">RSS 액세스가 취소되었습니다</string>
     <string name="wikis_find_title">위키 찾기</string>
     <string name="wikis_find_no_results">위키를 찾을 수 없어요</string>
     <string name="wikis_find_recommended_section">추천 위키</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">아직 댓글이 없어요</string>
     <string name="wikis_comments_empty_subtitle">이 페이지에 첫 번째 댓글을 남겨보세요.</string>
     <string name="wikis_comment_action_reply">답글</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s님에게 답장</string>
+    <string name="wikis_comment_clear_reply">답글 취소</string>
     <string name="wikis_comment_action_edit">편집</string>
     <string name="wikis_comment_action_delete">삭제</string>
     <string name="wikis_comment_action_save">저장</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">이 댓글을 삭제할까요? 모든 답글도 함께 삭제돼요. 이 작업은 되돌릴 수 없어요.</string>
     <string name="wikis_comment_form_attach">파일 첨부</string>
     <string name="wikis_comment_expand">(확장)</string>
-    <string name="wikis_editor_title_new">새 페이지 만들기</string>
+    <string name="wikis_editor_title_new">새 페이지</string>
     <string name="wikis_editor_preview">미리보기</string>
     <string name="wikis_editor_preview_untitled">제목 없음</string>
     <string name="wikis_editor_edit">편집</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">제목</string>
     <string name="wikis_editor_slug_label">페이지 URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">이것이 페이지의 경로가 됩니다. 소문자, 숫자, 하이픈을 사용하세요.</string>
     <string name="wikis_editor_content_label">콘텐츠</string>
     <string name="wikis_editor_summary_label">편집 요약 (선택 사항)</string>
     <string name="wikis_editor_summary_hint">변경 사항을 간단히 설명해주세요</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">생성</string>
     <string name="wikis_redirect_source_label">소스</string>
     <string name="wikis_redirect_target_label">대상</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">생성됨</string>
     <string name="wikis_redirect_required_fields">출발지와 대상 모두 필요해요</string>
     <string name="wikis_redirect_created_success">리디렉션이 만들어졌어요</string>
     <string name="wikis_redirect_create_failed">리디렉션 생성에 실패했어요</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">그리드 뷰</string>
     <string name="wikis_attachments_view_list">목록 뷰</string>
     <string name="wikis_attachments_copy_embed">임베드 링크 복사</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">임베드 링크가 복사되었어요</string>
+    <string name="wikis_attachments_download">다운로드</string>
     <string name="wikis_attachments_copy_success">임베드 링크가 복사되었어요</string>
     <string name="wikis_attachments_delete">삭제</string>
     <string name="wikis_attachments_delete_confirm_title">첨부 파일 삭제</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">소유자</string>
     <string name="wikis_access_tab_users">사용자</string>
     <string name="wikis_access_tab_groups">그룹</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">기타</string>
+    <string name="wikis_access_select_rule">규칙 선택</string>
+    <string name="wikis_access_authenticated_desc">로그인한 모든 사람</string>
+    <string name="wikis_access_anyone_desc">익명 사용자 포함</string>
+    <string name="wikis_access_selected">선택됨: %1$s</string>
     <string name="wikis_access_no_groups">이용 가능한 그룹이 없어요</string>
     <string name="wikis_access_set_success">접근이 업데이트되었어요</string>
     <string name="wikis_access_revoke_success">접근이 제거되었어요</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">인증된 사용자</string>
 
     <string name="wikis_revision_compare">변경 사항 비교</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s 기준</string>
     <string name="wikis_revision_show_page">페이지 표시</string>
     <string name="wikis_revision_compare_failed">비교할 이전 버전을 불러올 수 없습니다.</string>
     <string name="wikis_revision_changes_from">버전 %1$d → %2$d의 변경 사항</string>
@@ -353,6 +353,6 @@
         <item quantity="other">「%2$s」에 대해 결과 %1$d개을(를) 찾았습니다</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">캡션을 저장하지 못했습니다</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">지원되는 파일: 이미지, PDF, DOC, DOCX, TXT 및 MD.</string>
+    <string name="wikis_attachments_upload_limits">대용량 업로드는 서버 또는 프록시 구성에 의해 제한될 수 있습니다.</string>
 </resources>

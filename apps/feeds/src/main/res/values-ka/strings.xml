@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">ნაკლები ამის მსგავსი</string>
     <string name="feeds_no_tags">ტეგები არ არის</string>
     <string name="feeds_anonymous">ანონიმური</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">პასუხი %1$s-ს</string>
     <string name="feeds_attach_file">ფაილის მიმაგრება</string>
     <string name="feeds_tag_label">ტეგის ეტიკეტი</string>
     <string name="feeds_file">ფაილი</string>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">変更とコメント</string>
     <string name="wikis_rss_copied">RSS URL をクリップボードにコピーしました</string>
     <string name="wikis_rss_failed">RSS トークンの取得に失敗しました</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">アクセスを取り消す</string>
+    <string name="wikis_rss_revoked">RSSアクセスを取り消しました</string>
     <string name="wikis_find_title">Wiki を検索</string>
     <string name="wikis_find_no_results">Wiki が見つかりません</string>
     <string name="wikis_find_recommended_section">おすすめの Wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">まだコメントがありません</string>
     <string name="wikis_comments_empty_subtitle">このページに最初のコメントを追加しましょう。</string>
     <string name="wikis_comment_action_reply">返信</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s に返信</string>
+    <string name="wikis_comment_clear_reply">返信をキャンセル</string>
     <string name="wikis_comment_action_edit">編集</string>
     <string name="wikis_comment_action_delete">削除</string>
     <string name="wikis_comment_action_save">保存</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">このコメントを削除しますか？すべての返信も削除されます。この操作は取り消せません。</string>
     <string name="wikis_comment_form_attach">ファイルを添付</string>
     <string name="wikis_comment_expand">(展開)</string>
-    <string name="wikis_editor_title_new">新しいページを作成</string>
+    <string name="wikis_editor_title_new">新しいページ</string>
     <string name="wikis_editor_preview">プレビュー</string>
     <string name="wikis_editor_preview_untitled">無題</string>
     <string name="wikis_editor_edit">編集</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">タイトル</string>
     <string name="wikis_editor_slug_label">ページ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">これがページのパスになります。小文字、数字、ハイフンを使用してください。</string>
     <string name="wikis_editor_content_label">コンテンツ</string>
     <string name="wikis_editor_summary_label">編集の要約 (オプション)</string>
     <string name="wikis_editor_summary_hint">変更内容を簡潔に説明してください</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">作成</string>
     <string name="wikis_redirect_source_label">ソース</string>
     <string name="wikis_redirect_target_label">ターゲット</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">作成日</string>
     <string name="wikis_redirect_required_fields">ソースとターゲットの両方が必要です</string>
     <string name="wikis_redirect_created_success">リダイレクトを作成しました</string>
     <string name="wikis_redirect_create_failed">リダイレクトの作成に失敗しました</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">グリッド表示</string>
     <string name="wikis_attachments_view_list">リスト表示</string>
     <string name="wikis_attachments_copy_embed">埋め込みリンクをコピー</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">埋め込みリンクをコピーしました</string>
+    <string name="wikis_attachments_download">ダウンロード</string>
     <string name="wikis_attachments_copy_success">埋め込みリンクをコピーしました</string>
     <string name="wikis_attachments_delete">削除</string>
     <string name="wikis_attachments_delete_confirm_title">添付を削除</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">オーナー</string>
     <string name="wikis_access_tab_users">ユーザー</string>
     <string name="wikis_access_tab_groups">グループ</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">その他</string>
+    <string name="wikis_access_select_rule">ルールを選択</string>
+    <string name="wikis_access_authenticated_desc">ログインしている全員</string>
+    <string name="wikis_access_anyone_desc">匿名ユーザーを含む</string>
+    <string name="wikis_access_selected">選択中: %1$s</string>
     <string name="wikis_access_no_groups">利用可能なグループがありません</string>
     <string name="wikis_access_set_success">アクセスを更新しました</string>
     <string name="wikis_access_revoke_success">アクセスを削除しました</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">認証済みユーザー</string>
 
     <string name="wikis_revision_compare">変更点を比較</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s 別</string>
     <string name="wikis_revision_show_page">ページを表示</string>
     <string name="wikis_revision_compare_failed">比較用に以前のバージョンを読み込めませんでした。</string>
     <string name="wikis_revision_changes_from">バージョン %1$d → %2$d からの変更点</string>
@@ -353,6 +353,6 @@
         <item quantity="other">「%2$s」に対して %1$d件の結果 が見つかりました</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">キャプションを保存できませんでした</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">対応ファイル: 画像、PDF、DOC、DOCX、TXT、MD。</string>
+    <string name="wikis_attachments_upload_limits">大きなアップロードは、サーバーまたはプロキシの設定によって制限される場合があります。</string>
 </resources>

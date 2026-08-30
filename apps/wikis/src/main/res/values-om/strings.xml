@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Jijjiiramootaa fi yaadawwan</string>
     <string name="wikis_rss_copied">URL RSS kilipboordiitti garagalfame</string>
     <string name="wikis_rss_failed">Mallattoo RSS argachuu hin dandeenye</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Argama haqi</string>
+    <string name="wikis_rss_revoked">Argamni RSS haqameera</string>
     <string name="wikis_find_title">Wikis argi</string>
     <string name="wikis_find_no_results">Wikiin hin argamne</string>
     <string name="wikis_find_recommended_section">Wikiwwan yaadachifaman</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Hanga ammaatti yaadni hin jiru</string>
     <string name="wikis_comments_empty_subtitle">Fuula kana irratti yaada kennuu kan jalqaba ta\'i.</string>
     <string name="wikis_comment_action_reply">Deebii</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s\'f deebisaa jirta</string>
+    <string name="wikis_comment_clear_reply">Deebii haquu</string>
     <string name="wikis_comment_action_edit">Sirreessi</string>
     <string name="wikis_comment_action_delete">Haqi</string>
     <string name="wikis_comment_action_save">Olkaa\'i</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Yaada kana haquu mirkanaa\'oo dha? Kun deebii hundi haqama. Tarkaanfiin kun deebi\'uu hin danda\'u.</string>
     <string name="wikis_comment_form_attach">Faayilii hidhi</string>
     <string name="wikis_comment_expand">(babal\'isi)</string>
-    <string name="wikis_editor_title_new">Fuula haaraa uumi</string>
+    <string name="wikis_editor_title_new">Fuula haaraa</string>
     <string name="wikis_editor_preview">Dursanii ilaaluu</string>
     <string name="wikis_editor_preview_untitled">Mata dureen hin qabne</string>
     <string name="wikis_editor_edit">Sirreessi</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Mata duree</string>
     <string name="wikis_editor_slug_label">URL fuulaa</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Kun karaa fuulaa ta\'a. Qubeewwan xixiqqoo, lakkoofsa, fi sararaa fayyadamuu qabda.</string>
     <string name="wikis_editor_content_label">Qabiyyee</string>
     <string name="wikis_editor_summary_label">Cuunfaa sirreessi (filannoo)</string>
     <string name="wikis_editor_summary_hint">Jijjiirama kee gabaabaadhumaan ibsi</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Uumi</string>
     <string name="wikis_redirect_source_label">Madda</string>
     <string name="wikis_redirect_target_label">Galma</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Uumame</string>
     <string name="wikis_redirect_required_fields">Madda fi galmi barbaachisoo dha</string>
     <string name="wikis_redirect_created_success">Deebi\'iinsi uumame</string>
     <string name="wikis_redirect_create_failed">Deebi\'ii ergamuu uumuu hin dandeenye</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Mul\'annoo girid</string>
     <string name="wikis_attachments_view_list">Mul\'annoo tarree</string>
     <string name="wikis_attachments_copy_embed">Hidhaa weebii baatu garagalchi</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Hidhaan saagame garagalfame</string>
+    <string name="wikis_attachments_download">Buufadhu</string>
     <string name="wikis_attachments_copy_success">Hidhaan saagame garagalfame</string>
     <string name="wikis_attachments_delete">Haqi</string>
     <string name="wikis_attachments_delete_confirm_title">Maxxansa haqi</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Abbaa qabeenyaa</string>
     <string name="wikis_access_tab_users">Fayyadamtoota</string>
     <string name="wikis_access_tab_groups">Garee</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Biraa</string>
+    <string name="wikis_access_select_rule">Seera filadhu</string>
+    <string name="wikis_access_authenticated_desc">Namni seene kamiyyuu</string>
+    <string name="wikis_access_anyone_desc">Fayyadamtoota maqaa hin qabne dabalatee</string>
+    <string name="wikis_access_selected">Filatame: %1$s</string>
     <string name="wikis_access_no_groups">Garreen hin jiran</string>
     <string name="wikis_access_set_success">Seensi haaromfame</string>
     <string name="wikis_access_revoke_success">Seensi haqame</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Fayyadamtoota mirkanaa\'an</string>
 
     <string name="wikis_revision_compare">Jijjiirama wal bira qabi</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s tiin</string>
     <string name="wikis_revision_show_page">Fuula agarsiisi</string>
     <string name="wikis_revision_compare_failed">Gosa duraanii wal bira qabuuf fe\'uu hin dandeenye.</string>
     <string name="wikis_revision_changes_from">Jijjiirama gosa %1$d → %2$d irraa</string>
@@ -356,6 +356,6 @@
         <item quantity="other">bu\'aalee %1$d "%2$s" argi</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ibsa olkaa\'uun hin milkoofne</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Faayiloota deeggaraman: suuraawwan, PDF, DOC, DOCX, TXT, fi MD.</string>
+    <string name="wikis_attachments_upload_limits">Ol-kaa\'umsi guddaan qindaa\'ina sarvarii ykn proxy keetiin daangeffamuu danda\'a.</string>
 </resources>

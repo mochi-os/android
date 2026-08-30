@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Kayman rikch\'akuqkunata pisi</string>
     <string name="feeds_no_tags">Mana etiquetakunachu</string>
     <string name="feeds_anonymous">Mana sutiyuq</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s runaman kutichichkan</string>
     <string name="feeds_attach_file">Kawsayta watay</string>
     <string name="feeds_tag_label">Etiqueta suti</string>
     <string name="feeds_file">Kawsay</string>

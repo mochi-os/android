@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Thay đổi và bình luận</string>
     <string name="wikis_rss_copied">Đã sao chép URL RSS vào clipboard</string>
     <string name="wikis_rss_failed">Không lấy token RSS được</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Thu hồi quyền truy cập</string>
+    <string name="wikis_rss_revoked">Đã thu hồi quyền truy cập RSS</string>
     <string name="wikis_find_title">Tìm wiki</string>
     <string name="wikis_find_no_results">Không tìm thấy wiki nào</string>
     <string name="wikis_find_recommended_section">Wiki được đề xuất</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Chưa có bình luận</string>
     <string name="wikis_comments_empty_subtitle">Hãy là người đầu tiên bình luận trên trang này.</string>
     <string name="wikis_comment_action_reply">Trả lời</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Đang trả lời %1$s</string>
+    <string name="wikis_comment_clear_reply">Hủy phản hồi</string>
     <string name="wikis_comment_action_edit">Sửa</string>
     <string name="wikis_comment_action_delete">Xóa</string>
     <string name="wikis_comment_action_save">Lưu</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Bạn có chắc muốn xóa bình luận này? Tất cả phản hồi cũng sẽ bị xóa. Hành động này không thể hoàn tác.</string>
     <string name="wikis_comment_form_attach">Đính kèm tệp</string>
     <string name="wikis_comment_expand">(mở rộng)</string>
-    <string name="wikis_editor_title_new">Tạo trang mới</string>
+    <string name="wikis_editor_title_new">Trang mới</string>
     <string name="wikis_editor_preview">Xem trước</string>
     <string name="wikis_editor_preview_untitled">Không có tiêu đề</string>
     <string name="wikis_editor_edit">Sửa</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Tiêu đề</string>
     <string name="wikis_editor_slug_label">URL trang</string>
     <string name="wikis_editor_slug_hint">ten-trang-cua-toi</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Đây sẽ là đường dẫn trang. Dùng chữ thường, số và dấu gạch ngang.</string>
     <string name="wikis_editor_content_label">Nội dung</string>
     <string name="wikis_editor_summary_label">Tóm tắt chỉnh sửa (tuỳ chọn)</string>
     <string name="wikis_editor_summary_hint">Mô tả ngắn gọn về thay đổi của bạn</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Tạo</string>
     <string name="wikis_redirect_source_label">Nguồn</string>
     <string name="wikis_redirect_target_label">Mục tiêu</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Đã tạo</string>
     <string name="wikis_redirect_required_fields">Bắt buộc cả nguồn và đích</string>
     <string name="wikis_redirect_created_success">Đã tạo chuyển hướng</string>
     <string name="wikis_redirect_create_failed">Không tạo chuyển hướng được</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Chế độ xem lưới</string>
     <string name="wikis_attachments_view_list">Chế độ xem danh sách</string>
     <string name="wikis_attachments_copy_embed">Sao chép liên kết nhúng</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Đã sao chép liên kết nhúng</string>
+    <string name="wikis_attachments_download">Tải xuống</string>
     <string name="wikis_attachments_copy_success">Đã sao chép liên kết nhúng</string>
     <string name="wikis_attachments_delete">Xóa</string>
     <string name="wikis_attachments_delete_confirm_title">Xóa tệp đính kèm</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Chủ sở hữu</string>
     <string name="wikis_access_tab_users">Người dùng</string>
     <string name="wikis_access_tab_groups">Nhóm</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Khác</string>
+    <string name="wikis_access_select_rule">Chọn một quy tắc</string>
+    <string name="wikis_access_authenticated_desc">Bất kỳ ai đã đăng nhập</string>
+    <string name="wikis_access_anyone_desc">Bao gồm người dùng ẩn danh</string>
+    <string name="wikis_access_selected">Đã chọn: %1$s</string>
     <string name="wikis_access_no_groups">Không có nhóm nào</string>
     <string name="wikis_access_set_success">Đã cập nhật truy cập</string>
     <string name="wikis_access_revoke_success">Đã gỡ truy cập</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Người dùng đã xác thực</string>
 
     <string name="wikis_revision_compare">So sánh thay đổi</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">theo %1$s</string>
     <string name="wikis_revision_show_page">Hiển thị trang</string>
     <string name="wikis_revision_compare_failed">Không thể tải phiên bản trước để so sánh.</string>
     <string name="wikis_revision_changes_from">Thay đổi từ phiên bản %1$d → %2$d</string>
@@ -353,6 +353,6 @@
         <item quantity="other">Tìm thấy %1$d kết quả cho «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Không thể lưu chú thích</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Tệp được hỗ trợ: hình ảnh, PDF, DOC, DOCX, TXT và MD.</string>
+    <string name="wikis_attachments_upload_limits">Các tệp tải lên lớn có thể bị giới hạn bởi cấu hình máy chủ hoặc proxy của bạn.</string>
 </resources>

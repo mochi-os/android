@@ -44,8 +44,8 @@
     <string name="wikis_rss_both">Mabadiliko na maoni</string>
     <string name="wikis_rss_copied">URL ya RSS imenakiliwa kwenye ubao wa kunakili</string>
     <string name="wikis_rss_failed">Imeshindwa kupata tokeni ya RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Batilisha ufikiaji</string>
+    <string name="wikis_rss_revoked">Ufikiaji wa RSS umebatilishwa</string>
     <string name="wikis_find_title">Tafuta wikis</string>
     <string name="wikis_find_no_results">Hakuna wiki zilizopatikana</string>
     <string name="wikis_find_recommended_section">Wiki zinazopendekezwa</string>
@@ -61,8 +61,8 @@
     <string name="wikis_comments_empty_title">Hakuna maoni bado</string>
     <string name="wikis_comments_empty_subtitle">Kuwa wa kwanza kutoa maoni kwenye ukurasa huu.</string>
     <string name="wikis_comment_action_reply">Jibu</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Unamjibu %1$s</string>
+    <string name="wikis_comment_clear_reply">Ghairi jibu</string>
     <string name="wikis_comment_action_edit">Hariri</string>
     <string name="wikis_comment_action_delete">Futa</string>
     <string name="wikis_comment_action_save">Hifadhi</string>
@@ -72,7 +72,7 @@
     <string name="wikis_comment_delete_confirm_message">Una uhakika unataka kufuta maoni haya? Hii pia itafuta majibu yote. Kitendo hiki hakiwezi kutenduliwa.</string>
     <string name="wikis_comment_form_attach">Ambatisha faili</string>
     <string name="wikis_comment_expand">(panua)</string>
-    <string name="wikis_editor_title_new">Tengeneza ukurasa mpya</string>
+    <string name="wikis_editor_title_new">Ukurasa mpya</string>
     <string name="wikis_editor_preview">Hakiki</string>
     <string name="wikis_editor_preview_untitled">Bila kichwa</string>
     <string name="wikis_editor_edit">Hariri</string>
@@ -86,7 +86,7 @@
     <string name="wikis_editor_title_label">Kichwa</string>
     <string name="wikis_editor_slug_label">URL ya ukurasa</string>
     <string name="wikis_editor_slug_hint">jina-la-ukurasa-wangu</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Hii itakuwa njia ya ukurasa. Tumia herufi ndogo, nambari, na vistari.</string>
     <string name="wikis_editor_content_label">Maudhui</string>
     <string name="wikis_editor_summary_label">Muhtasari wa uhariri (hiari)</string>
     <string name="wikis_editor_summary_hint">Eleza kwa ufupi mabadiliko yako</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_create_action">Unda</string>
     <string name="wikis_redirect_source_label">Chanzo</string>
     <string name="wikis_redirect_target_label">Lengo</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Imeundwa</string>
     <string name="wikis_redirect_required_fields">Chanzo na lengo vyote vinahitajika</string>
     <string name="wikis_redirect_created_success">Uelekezaji umeundwa</string>
     <string name="wikis_redirect_create_failed">Imeshindwa kuunda uelekezaji</string>
@@ -166,8 +166,8 @@
     <string name="wikis_attachments_view_grid">Mwonekano wa gridi</string>
     <string name="wikis_attachments_view_list">Mwonekano wa orodha</string>
     <string name="wikis_attachments_copy_embed">Nakili kiungo cha kupachika</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Kiungo cha kupachika kimenakiliwa</string>
+    <string name="wikis_attachments_download">Pakua</string>
     <string name="wikis_attachments_copy_success">Kiungo cha kupachika kimenakiliwa</string>
     <string name="wikis_attachments_delete">Futa</string>
     <string name="wikis_attachments_delete_confirm_title">Futa kiambatisho</string>
@@ -215,11 +215,11 @@
     <string name="wikis_access_owner_label">Mmiliki</string>
     <string name="wikis_access_tab_users">Watumiaji</string>
     <string name="wikis_access_tab_groups">Vikundi</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Nyingine</string>
+    <string name="wikis_access_select_rule">Chagua sheria</string>
+    <string name="wikis_access_authenticated_desc">Yeyote aliyeingia</string>
+    <string name="wikis_access_anyone_desc">Ikijumuisha watumiaji wasiojulikana</string>
+    <string name="wikis_access_selected">Imechaguliwa: %1$s</string>
     <string name="wikis_access_no_groups">Hakuna vikundi vinavyopatikana</string>
     <string name="wikis_access_set_success">Ufikiaji umesasishwa</string>
     <string name="wikis_access_revoke_success">Ufikiaji umeondolewa</string>
@@ -308,7 +308,7 @@
     <string name="wikis_access_subject_anyone">Mtu yeyote</string>
     <string name="wikis_access_subject_authenticated">Watumiaji waliothibitishwa</string>
     <string name="wikis_revision_compare">Linganisha mabadiliko</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">kwa %1$s</string>
     <string name="wikis_revision_show_page">Onyesha ukurasa</string>
     <string name="wikis_revision_compare_failed">Haikuweza kupakia toleo la awali kwa ajili ya kulinganisha.</string>
     <string name="wikis_revision_changes_from">Mabadiliko kutoka toleo %1$d → %2$d</string>
@@ -353,6 +353,6 @@
         <item quantity="other">Imepatikana Matokeo %1$d kwa «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Imeshindwa kuhifadhi maelezo mafupi</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Faili zinazotumika: picha, PDF, DOC, DOCX, TXT, na MD.</string>
+    <string name="wikis_attachments_upload_limits">Upakiaji mkubwa unaweza kupunguzwa na usanidi wa seva yako au proksi.</string>
 </resources>

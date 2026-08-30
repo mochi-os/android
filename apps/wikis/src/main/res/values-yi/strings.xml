@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">ענדערונגען און קאָמענטאַרן</string>
     <string name="wikis_rss_copied">RSS URL קאָפּירט צו קלעמברעט</string>
     <string name="wikis_rss_failed">ניט געלונגען צו באַקומען RSS־טאָקען</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">רופֿט צוריק צוטריט</string>
+    <string name="wikis_rss_revoked">RSS צוטריט צוריקגערופֿן</string>
     <string name="wikis_find_title">געפֿינען וויקיס</string>
     <string name="wikis_find_no_results">קיין וויקיס ניט געפֿונען</string>
     <string name="wikis_find_recommended_section">רעקאָמענדירטע וויקיס</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">נאָך קיין באַמערקונגען</string>
     <string name="wikis_comments_empty_subtitle">זײַט דער ערשטער צו קאָמענטירן אויף דעם זײַטל.</string>
     <string name="wikis_comment_action_reply">ענטפֿער</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">ענטפֿערט אויף %1$s</string>
+    <string name="wikis_comment_clear_reply">אָפּזאָגן ענטפֿער</string>
     <string name="wikis_comment_action_edit">רעדאַקטירן</string>
     <string name="wikis_comment_action_delete">אויסמעקן</string>
     <string name="wikis_comment_action_save">היט אויף</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">זענט איר זיכער איר ווילט אויסמעקן דעם קאָמענטאַר? דאָס וועט אויך אויסמעקן אַלע ענטפֿערס. די אַקציע קען נישט ווערן אומגעקערט.</string>
     <string name="wikis_comment_form_attach">צוהענקען פֿײַלן</string>
     <string name="wikis_comment_expand">(פאַרברייטערן)</string>
-    <string name="wikis_editor_title_new">באַשאַפֿן נײַעם זײַטל</string>
+    <string name="wikis_editor_title_new">נײַע זײַטל</string>
     <string name="wikis_editor_preview">פֿאָרזע</string>
     <string name="wikis_editor_preview_untitled">אָן קעפּל</string>
     <string name="wikis_editor_edit">רעדאַקטירן</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">קעפּל</string>
     <string name="wikis_editor_slug_label">זײַטל URL</string>
     <string name="wikis_editor_slug_hint">מײַן־זײַטל־נאָמען</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">דאָס וועט זײַן דער שטעג פֿאַרן זײַטל. ניצט קליינע אותיות, ציפֿערן, און ביינדלעך.</string>
     <string name="wikis_editor_content_label">אינהאַלט</string>
     <string name="wikis_editor_summary_label">רעדאַקטירן רעזומע (אַלץ פֿרײַוויליק)</string>
     <string name="wikis_editor_summary_hint">באַשרײַבט בקיצור אײַער ענדערונגען</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">באַשאַפֿן</string>
     <string name="wikis_redirect_source_label">מקור</string>
     <string name="wikis_redirect_target_label">ציל</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">באַשאַפֿן</string>
     <string name="wikis_redirect_required_fields">אי מקור און אי ציל זענען נייטיק</string>
     <string name="wikis_redirect_created_success">רעדירעקט באַשאַפֿן</string>
     <string name="wikis_redirect_create_failed">ניט געלונגען צו שאַפֿן ווײַטערלייטונג</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">נעץ־בליק</string>
     <string name="wikis_attachments_view_list">רשימה־בליק</string>
     <string name="wikis_attachments_copy_embed">קאָפּירן embed לינק</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">אײַנגעבעטענער לינק קאָפּירט</string>
+    <string name="wikis_attachments_download">אַראָפּלאָדן</string>
     <string name="wikis_attachments_copy_success">אײַנגעבעטענער לינק קאָפּירט</string>
     <string name="wikis_attachments_delete">אויסמעקן</string>
     <string name="wikis_attachments_delete_confirm_title">אויסמעקן בײַלאַגע</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">אייגנטימער</string>
     <string name="wikis_access_tab_users">באַניצערס</string>
     <string name="wikis_access_tab_groups">גרופּעס</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">אַנדער</string>
+    <string name="wikis_access_select_rule">קלייַבט אויס אַ כּלל</string>
+    <string name="wikis_access_authenticated_desc">װער עס איז אײַנגעלאָגט</string>
+    <string name="wikis_access_anyone_desc">אַרײַנגערעכנט אַנאָנימע באַניצער</string>
+    <string name="wikis_access_selected">אויסגעקליבן: %1$s</string>
     <string name="wikis_access_no_groups">קיין גרופּעס פֿאַראַן</string>
     <string name="wikis_access_set_success">צוטריט באַנײַט</string>
     <string name="wikis_access_revoke_success">צוטריט אַראָפּגענומען</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">אַטענטיפֿיצירטע באַניצער</string>
 
     <string name="wikis_revision_compare">פֿאַרגלײַך ענדערונגען</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">לױט %1$s</string>
     <string name="wikis_revision_show_page">ווײַז בלאַט</string>
     <string name="wikis_revision_compare_failed">מע האָט נישט געקענט לאָדן די פֿריִערדיקע ווערסיע פֿאַר פֿאַרגלײַך.</string>
     <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">געפֿונען %1$d רעזולטאַטן פֿאַר „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">מען האָט נישט געקענט אָפּהיטן די אונטערשריפֿט</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">געשטיצטע טעקעס: בילדער, PDF, DOC, DOCX, TXT, און MD.</string>
+    <string name="wikis_attachments_upload_limits">גרויסע אַרויפֿלאָדונגען קענען זײַן באַגרענעצט דורך אײַער סערווער- אָדער פּראָקסי־קאָנפֿיגוראַציע.</string>
 </resources>

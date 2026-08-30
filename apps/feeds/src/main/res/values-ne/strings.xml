@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">यस्तै कम</string>
     <string name="feeds_no_tags">कुनै ट्याग छैन</string>
     <string name="feeds_anonymous">अज्ञात</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s लाई जवाफ दिँदै</string>
     <string name="feeds_attach_file">फाइल संलग्न गर्नुहोस्</string>
     <string name="feeds_tag_label">ट्याग लेबल</string>
     <string name="feeds_file">फाइल</string>

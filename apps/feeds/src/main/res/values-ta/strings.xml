@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">இது போன்றவை குறைவாக</string>
     <string name="feeds_no_tags">குறிச்சொற்கள் இல்லை</string>
     <string name="feeds_anonymous">அநாமதேய</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s-க்கு பதிலளிக்கிறீர்கள்</string>
     <string name="feeds_attach_file">கோப்பை இணைக்கவும்</string>
     <string name="feeds_tag_label">குறிச்சொல் பெயர்</string>
     <string name="feeds_file">கோப்பு</string>

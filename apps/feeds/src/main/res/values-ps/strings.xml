@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">د دې په څیر لږ</string>
     <string name="feeds_no_tags">هیڅ ټګونه نشته</string>
     <string name="feeds_anonymous">ناپېژندل شوی</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s ته ځواب ورکول</string>
     <string name="feeds_attach_file">فایل ضمیمه کړئ</string>
     <string name="feeds_tag_label">د ټګ نوم</string>
     <string name="feeds_file">فایل</string>

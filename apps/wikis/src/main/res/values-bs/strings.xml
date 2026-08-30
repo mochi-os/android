@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Izmjene i komentari</string>
     <string name="wikis_rss_copied">RSS URL kopiran u međuspremnik</string>
     <string name="wikis_rss_failed">Dohvatanje RSS tokena nije uspjelo</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Opozovi pristup</string>
+    <string name="wikis_rss_revoked">RSS pristup opozvan</string>
     <string name="wikis_find_title">Pronađi wikije</string>
     <string name="wikis_find_no_results">Nisu pronađeni wikiji</string>
     <string name="wikis_find_recommended_section">Preporučeni wikiji</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Još nema komentara</string>
     <string name="wikis_comments_empty_subtitle">Budite prvi koji će komentirati ovu stranicu.</string>
     <string name="wikis_comment_action_reply">Odgovori</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Odgovarate %1$s</string>
+    <string name="wikis_comment_clear_reply">Otkaži odgovor</string>
     <string name="wikis_comment_action_edit">Uredi</string>
     <string name="wikis_comment_action_delete">Obriši</string>
     <string name="wikis_comment_action_save">Sačuvaj</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Jeste li sigurni da želite obrisati ovaj komentar? Ovo će također obrisati sve odgovore. Ova radnja se ne može poništiti.</string>
     <string name="wikis_comment_form_attach">Priloži fajlove</string>
     <string name="wikis_comment_expand">(proširi)</string>
-    <string name="wikis_editor_title_new">Kreiraj novu stranicu</string>
+    <string name="wikis_editor_title_new">Nova stranica</string>
     <string name="wikis_editor_preview">Pregled</string>
     <string name="wikis_editor_preview_untitled">Bez naslova</string>
     <string name="wikis_editor_edit">Uredi</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Naslov</string>
     <string name="wikis_editor_slug_label">URL stranice</string>
     <string name="wikis_editor_slug_hint">moja-stranica</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Ovo će biti putanja za stranicu. Koristi mala slova, brojeve i crtice.</string>
     <string name="wikis_editor_content_label">Sadržaj</string>
     <string name="wikis_editor_summary_label">Uredi sažetak (opcionalno)</string>
     <string name="wikis_editor_summary_hint">Ukratko opišite vaše izmjene</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Kreiraj</string>
     <string name="wikis_redirect_source_label">Izvor</string>
     <string name="wikis_redirect_target_label">Cilj</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Kreirano</string>
     <string name="wikis_redirect_required_fields">Izvor i odredište su obavezni</string>
     <string name="wikis_redirect_created_success">Preusmjerenje kreirano</string>
     <string name="wikis_redirect_create_failed">Kreiranje preusmjerenja nije uspjelo</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Pregled mreže</string>
     <string name="wikis_attachments_view_list">Pregled liste</string>
     <string name="wikis_attachments_copy_embed">Kopiraj embed link</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Link za ugradnju kopiran</string>
+    <string name="wikis_attachments_download">Preuzmi</string>
     <string name="wikis_attachments_copy_success">Link za ugradnju kopiran</string>
     <string name="wikis_attachments_delete">Obriši</string>
     <string name="wikis_attachments_delete_confirm_title">Obriši prilog</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Vlasnik</string>
     <string name="wikis_access_tab_users">Korisnici</string>
     <string name="wikis_access_tab_groups">Grupe</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Drugo</string>
+    <string name="wikis_access_select_rule">Odaberite pravilo</string>
+    <string name="wikis_access_authenticated_desc">Svako ko je prijavljen</string>
+    <string name="wikis_access_anyone_desc">Uključujući anonimne korisnike</string>
+    <string name="wikis_access_selected">Odabrano: %1$s</string>
     <string name="wikis_access_no_groups">Nema dostupnih grupa</string>
     <string name="wikis_access_set_success">Pristup ažuriran</string>
     <string name="wikis_access_revoke_success">Pristup uklonjen</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentificirani korisnici</string>
 
     <string name="wikis_revision_compare">Usporedi promjene</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">po %1$s</string>
     <string name="wikis_revision_show_page">Prikaži stranicu</string>
     <string name="wikis_revision_compare_failed">Nije moguće učitati prethodnu verziju za usporedbu.</string>
     <string name="wikis_revision_changes_from">Promjene od verzije %1$d → %2$d</string>
@@ -366,6 +366,6 @@
         <item quantity="other">Pronađeno %1$d rezultata za "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Spremanje opisa nije uspjelo</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Podržane datoteke: slike, PDF, DOC, DOCX, TXT i MD.</string>
+    <string name="wikis_attachments_upload_limits">Velika učitavanja mogu biti ograničena konfiguracijom vašeg poslužitelja ili proxyja.</string>
 </resources>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">بدلونونه او تبصرې</string>
     <string name="wikis_rss_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="wikis_rss_failed">د RSS ټوکن ترلاسه کولو پاتې راغلل</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">لاسرسی لغوه کړئ</string>
+    <string name="wikis_rss_revoked">د RSS لاسرسی لغوه شو</string>
     <string name="wikis_find_title">ویکیانه ومومئ</string>
     <string name="wikis_find_no_results">هیڅ wikis ونه موندل شوې</string>
     <string name="wikis_find_recommended_section">سپارښتل شوي wikis</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">تر اوسه هیڅ تبصرې نشته</string>
     <string name="wikis_comments_empty_subtitle">په دې پاڼه لومړی تبصره وکړئ.</string>
     <string name="wikis_comment_action_reply">ځواب</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s ته ځواب ورکول</string>
+    <string name="wikis_comment_clear_reply">ځواب لغوه کړه</string>
     <string name="wikis_comment_action_edit">سمول</string>
     <string name="wikis_comment_action_delete">ړنګ کړئ</string>
     <string name="wikis_comment_action_save">خوندي کول</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ایا تاسو ډاډه یاست چې غواړئ دا تبصره ړنګه کړئ؟ دا به ټول ځوابونه هم ړنګ کړي. دا کړنه نشي بیرته اخیستل کیدلی.</string>
     <string name="wikis_comment_form_attach">فایلونه ضمیمه کړئ</string>
     <string name="wikis_comment_expand">(پراخول)</string>
-    <string name="wikis_editor_title_new">نوې پاڼه جوړ کړئ</string>
+    <string name="wikis_editor_title_new">نوې پاڼه</string>
     <string name="wikis_editor_preview">مخکتنه</string>
     <string name="wikis_editor_preview_untitled">بې سرلیکه</string>
     <string name="wikis_editor_edit">سمول</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">سرلیک</string>
     <string name="wikis_editor_slug_label">د پاڼې URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">دا به د پاڼې لاره وي. کوچني توري، شمېرې، او خط (-) وکاروئ.</string>
     <string name="wikis_editor_content_label">منځپانګه</string>
     <string name="wikis_editor_summary_label">لنډیز سمول (اختیاري)</string>
     <string name="wikis_editor_summary_hint">په لنډه توګه خپل بدلونونه تشریح کړئ</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">جوړ کړئ</string>
     <string name="wikis_redirect_source_label">سرچینه</string>
     <string name="wikis_redirect_target_label">هدف</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">جوړ شو</string>
     <string name="wikis_redirect_required_fields">دواړه سرچینه او هدف اړین دي</string>
     <string name="wikis_redirect_created_success">بیرته لارښوونه جوړه شوه</string>
     <string name="wikis_redirect_create_failed">د بیا لارښوونې جوړولو پاتې راغلل</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ګریډ لید</string>
     <string name="wikis_attachments_view_list">د لیسټ لید</string>
     <string name="wikis_attachments_copy_embed">د ځای پر ځای کیدو لینک کاپي کړئ</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">د Embed لینک کاپي شو</string>
+    <string name="wikis_attachments_download">ډاونلوډ</string>
     <string name="wikis_attachments_copy_success">د Embed لینک کاپي شو</string>
     <string name="wikis_attachments_delete">ړنګ کړئ</string>
     <string name="wikis_attachments_delete_confirm_title">ضمیمه ړنګه کړئ</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">مالک</string>
     <string name="wikis_access_tab_users">کاروونکي</string>
     <string name="wikis_access_tab_groups">ګروپونه</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">نور</string>
+    <string name="wikis_access_select_rule">یو قانون وټاکئ</string>
+    <string name="wikis_access_authenticated_desc">هر څوک چې ننوتی وي</string>
+    <string name="wikis_access_anyone_desc">د ناڅرګندو کارنانو په ګډون</string>
+    <string name="wikis_access_selected">ټاکل شوي: %1$s</string>
     <string name="wikis_access_no_groups">هیڅ ډلې شتون نلري</string>
     <string name="wikis_access_set_success">لاسرسی نوی شو</string>
     <string name="wikis_access_revoke_success">لاسرسی لرې شو</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">تصدیق شوي کاروونکي</string>
 
     <string name="wikis_revision_compare">بدلونونه پرتله کړئ</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">د %1$s له خوا</string>
     <string name="wikis_revision_show_page">پاڼه وښیه</string>
     <string name="wikis_revision_compare_failed">د پرتلې لپاره مخکینۍ نسخه نه شوه پورته کیدای.</string>
     <string name="wikis_revision_changes_from">د نسخې له %1$d → %2$d بدلونونه</string>
@@ -356,6 +356,6 @@
         <item quantity="other">د "%2$s" لپاره %1$d پایلې وموندل شو</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">تشریح خوندي نشوه</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">ملاتړ شوي فایلونه: انځورونه، PDF، DOC، DOCX، TXT، او MD.</string>
+    <string name="wikis_attachments_upload_limits">د لویو فایلونو پورته کول ممکن ستاسو د سرور یا پراکسي تنظیماتو له خوا محدود شي.</string>
 </resources>

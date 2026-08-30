@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Mwens konsa</string>
     <string name="feeds_no_tags">Pa gen etikèt</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">W ap reponn %1$s</string>
     <string name="feeds_attach_file">Atache fichye</string>
     <string name="feeds_tag_label">Etikèt</string>
     <string name="feeds_select_feed">Chwazi yon fil</string>

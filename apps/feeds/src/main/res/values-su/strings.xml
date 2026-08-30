@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Kurangan nu sarupa kieu</string>
     <string name="feeds_no_tags">Taya tag</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Ngabales ka %1$s</string>
     <string name="feeds_attach_file">Lampirkeun berkas</string>
     <string name="feeds_tag_label">Labél tag</string>
     <string name="feeds_file">Berkas</string>

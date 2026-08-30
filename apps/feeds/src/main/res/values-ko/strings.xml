@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">비슷한 항목 덜 보기</string>
     <string name="feeds_no_tags">태그 없음</string>
     <string name="feeds_anonymous">익명</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s님에게 답장</string>
     <string name="feeds_attach_file">파일 첨부</string>
     <string name="feeds_tag_label">태그 레이블</string>
     <string name="feeds_file">파일</string>

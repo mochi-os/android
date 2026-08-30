@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Canje-canje da sharhi</string>
     <string name="wikis_rss_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="wikis_rss_failed">An gaza samun RSS token</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Soke damar shiga</string>
+    <string name="wikis_rss_revoked">An soke damar shiga RSS</string>
     <string name="wikis_find_title">Nemo wikis</string>
     <string name="wikis_find_no_results">Babu wikis da aka samu</string>
     <string name="wikis_find_recommended_section">Wikis da aka ba da shawara</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Babu sharhi tukuna</string>
     <string name="wikis_comments_empty_subtitle">Ka zama na farko da ya yi sharhi a wannan shafi.</string>
     <string name="wikis_comment_action_reply">Amsa</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Ana amsa wa %1$s</string>
+    <string name="wikis_comment_clear_reply">Soke amsa</string>
     <string name="wikis_comment_action_edit">Gyara</string>
     <string name="wikis_comment_action_delete">Goge</string>
     <string name="wikis_comment_action_save">Adana</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Ka tabbata kana son goge wannan sharhi? Wannan zai goge duk amsoshi kuma. Ba za a iya juya wannan aiki ba.</string>
     <string name="wikis_comment_form_attach">Haɗa fayiloli</string>
     <string name="wikis_comment_expand">(faɗaɗa)</string>
-    <string name="wikis_editor_title_new">Ƙirƙiri sabon shafi</string>
+    <string name="wikis_editor_title_new">Sabon shafi</string>
     <string name="wikis_editor_preview">Duba</string>
     <string name="wikis_editor_preview_untitled">Ba shi da suna</string>
     <string name="wikis_editor_edit">Gyara</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Take</string>
     <string name="wikis_editor_slug_label">URL ɗin shafi</string>
     <string name="wikis_editor_slug_hint">sunan-shafi-na</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Wannan zai zama hanyar shafin. Yi amfani da ƙananan haruffa, lambobi, da haɗawa.</string>
     <string name="wikis_editor_content_label">Abun ciki</string>
     <string name="wikis_editor_summary_label">Taƙaitaccen gyara (zaɓi)</string>
     <string name="wikis_editor_summary_hint">Bayyana canje-canjenka a taƙaice</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Ƙirƙira</string>
     <string name="wikis_redirect_source_label">Tushe</string>
     <string name="wikis_redirect_target_label">Manufa</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">An ƙirƙira</string>
     <string name="wikis_redirect_required_fields">Ana buƙatar tushe da target duka</string>
     <string name="wikis_redirect_created_success">An ƙirƙiri redirect</string>
     <string name="wikis_redirect_create_failed">An gaza ƙirƙirar redirect</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Grid view</string>
     <string name="wikis_attachments_view_list">List view</string>
     <string name="wikis_attachments_copy_embed">Kwafi link na embed</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">An kwafe embed link</string>
+    <string name="wikis_attachments_download">Sauke</string>
     <string name="wikis_attachments_copy_success">An kwafe embed link</string>
     <string name="wikis_attachments_delete">Goge</string>
     <string name="wikis_attachments_delete_confirm_title">Goge haɗawa</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Mai shi</string>
     <string name="wikis_access_tab_users">Masu amfani</string>
     <string name="wikis_access_tab_groups">Groups</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Sauran</string>
+    <string name="wikis_access_select_rule">Zaɓi doka</string>
+    <string name="wikis_access_authenticated_desc">Duk wanda ya shiga</string>
+    <string name="wikis_access_anyone_desc">Haɗe da masu amfani da ba a san su ba</string>
+    <string name="wikis_access_selected">An zaɓa: %1$s</string>
     <string name="wikis_access_no_groups">Babu ƙungiyoyi</string>
     <string name="wikis_access_set_success">An sabunta damar shiga</string>
     <string name="wikis_access_revoke_success">An cire damar shiga</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Masu amfani da aka tabbatar</string>
 
     <string name="wikis_revision_compare">Kwatanta canje-canje</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">ta %1$s</string>
     <string name="wikis_revision_show_page">Nuna shafin</string>
     <string name="wikis_revision_compare_failed">An kasa loda sigar baya don kwatanta.</string>
     <string name="wikis_revision_changes_from">Canje daga sigar %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">An sami Sakamako %1$d don «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">An kasa adana bayanin hoto</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Fayilolin da ake tallafawa: hotuna, PDF, DOC, DOCX, TXT, da MD.</string>
+    <string name="wikis_attachments_upload_limits">Saitin uwar garken ka ko na proxy na iya iyakance manyan loda.</string>
 </resources>

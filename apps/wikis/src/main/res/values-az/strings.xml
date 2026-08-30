@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Dəyişikliklər və şərhlər</string>
     <string name="wikis_rss_copied">RSS URL panelə kopyalandı</string>
     <string name="wikis_rss_failed">RSS tokenini almaq alınmadı</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Girişi ləğv et</string>
+    <string name="wikis_rss_revoked">RSS girişi ləğv edildi</string>
     <string name="wikis_find_title">Wikiləri tap</string>
     <string name="wikis_find_no_results">Wiki tapılmadı</string>
     <string name="wikis_find_recommended_section">Tövsiyə olunan wiki-lər</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Hələ şərh yoxdur</string>
     <string name="wikis_comments_empty_subtitle">Bu səhifəyə ilk şərh yazan siz olun.</string>
     <string name="wikis_comment_action_reply">Cavabla</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s istifadəçisinə cavab verilir</string>
+    <string name="wikis_comment_clear_reply">Cavabı ləğv et</string>
     <string name="wikis_comment_action_edit">Redaktə et</string>
     <string name="wikis_comment_action_delete">Sil</string>
     <string name="wikis_comment_action_save">Saxla</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Bu şərhi silmək istədiyinizə əminsiniz? Bu, bütün cavabları da siləcək. Bu əməliyyat geri qaytarıla bilməz.</string>
     <string name="wikis_comment_form_attach">Faylları qoş</string>
     <string name="wikis_comment_expand">(genişləndir)</string>
-    <string name="wikis_editor_title_new">Yeni səhifə yarat</string>
+    <string name="wikis_editor_title_new">Yeni səhifə</string>
     <string name="wikis_editor_preview">Önbaxış</string>
     <string name="wikis_editor_preview_untitled">Təsdiqlənməyib</string>
     <string name="wikis_editor_edit">Redaktə et</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Başlıq</string>
     <string name="wikis_editor_slug_label">Səhifə URL-i</string>
     <string name="wikis_editor_slug_hint">sehife-adim</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Bu hərrac ləğv ediləcək. Elan alıcılardan gizlədiləcək; sonra yeni qaralama kimi yenidən elan edə bilərsiniz.</string>
     <string name="wikis_editor_content_label">Məzmun</string>
     <string name="wikis_editor_summary_label">Xülasəni redaktə et (istəyə bağlı)</string>
     <string name="wikis_editor_summary_hint">Dəyişikliklərinizi qısaca təsvir edin</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Yarat</string>
     <string name="wikis_redirect_source_label">Mənbə</string>
     <string name="wikis_redirect_target_label">Hədəf</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Yaradıldı</string>
     <string name="wikis_redirect_required_fields">Mənbə və hədəfin hər ikisi tələb olunur</string>
     <string name="wikis_redirect_created_success">Yönləndirmə yaradıldı</string>
     <string name="wikis_redirect_create_failed">Yönləndirmə yaratmaq alınmadı</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Şəbəkə görünüşü</string>
     <string name="wikis_attachments_view_list">Siyahı görünüşü</string>
     <string name="wikis_attachments_copy_embed">Embed linkini kopyala</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Yerləşdirmə linki kopyalandı</string>
+    <string name="wikis_attachments_download">Yüklə</string>
     <string name="wikis_attachments_copy_success">Yerləşdirmə linki kopyalandı</string>
     <string name="wikis_attachments_delete">Sil</string>
     <string name="wikis_attachments_delete_confirm_title">Qoşmanı sil</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Sahibi</string>
     <string name="wikis_access_tab_users">İstifadəçilər</string>
     <string name="wikis_access_tab_groups">Qruplar</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Digər</string>
+    <string name="wikis_access_select_rule">Qayda seçin</string>
+    <string name="wikis_access_authenticated_desc">Daxil olmuş hər kəs</string>
+    <string name="wikis_access_anyone_desc">Anonim istifadəçilər daxil</string>
+    <string name="wikis_access_selected">Seçilmiş: %1$s</string>
     <string name="wikis_access_no_groups">Mövcud qrup yoxdur</string>
     <string name="wikis_access_set_success">Giriş yeniləndi</string>
     <string name="wikis_access_revoke_success">Giriş silindi</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>
 
     <string name="wikis_revision_compare">Dəyişiklikləri müqayisə et</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s üzrə</string>
     <string name="wikis_revision_show_page">Səhifəni göstər</string>
     <string name="wikis_revision_compare_failed">Müqayisə üçün əvvəlki versiya yüklənə bilmədi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d versiyasından dəyişikliklər</string>
@@ -356,6 +356,6 @@
         <item quantity="other">"%2$s" üçün %1$d seçildi tapıldı</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">İzahı saxlamaq mümkün olmadı</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Dəstəklənən fayllar: şəkillər, PDF, DOC, DOCX, TXT və MD.</string>
+    <string name="wikis_attachments_upload_limits">Böyük yükləmələr serveriniz və ya proksi konfiqurasiyanız tərəfindən məhdudlaşdırıla bilər.</string>
 </resources>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">ცვლილებები და კომენტარები</string>
     <string name="wikis_rss_copied">RSS URL დაკოპირდა</string>
     <string name="wikis_rss_failed">RSS ტოკენის მიღება ვერ მოხერხდა</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">წვდომის გაუქმება</string>
+    <string name="wikis_rss_revoked">RSS წვდომა გაუქმდა</string>
     <string name="wikis_find_title">ვიკების ძიება</string>
     <string name="wikis_find_no_results">ვიკიები ვერ მოიძებნა</string>
     <string name="wikis_find_recommended_section">რეკომენდებული ვიკიები</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">კომენტარები ჯერ არ არის</string>
     <string name="wikis_comments_empty_subtitle">იყავით პირველი ვინც დააკომენტარებს ამ გვერდს.</string>
     <string name="wikis_comment_action_reply">პასუხი</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">პასუხი %1$s-ს</string>
+    <string name="wikis_comment_clear_reply">პასუხის გაუქმება</string>
     <string name="wikis_comment_action_edit">რედაქტირება</string>
     <string name="wikis_comment_action_delete">წაშლა</string>
     <string name="wikis_comment_action_save">შენახვა</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">დარწმუნებული ხართ, რომ გსურთ ამ კომენტარის წაშლა? ეს ასევე წაშლის ყველა პასუხს. მოქმედება შეუქცევადია.</string>
     <string name="wikis_comment_form_attach">ფაილების მიმაგრება</string>
     <string name="wikis_comment_expand">(გაშლა)</string>
-    <string name="wikis_editor_title_new">ახალი გვერდის შექმნა</string>
+    <string name="wikis_editor_title_new">ახალი გვერდი</string>
     <string name="wikis_editor_preview">გადახედვა</string>
     <string name="wikis_editor_preview_untitled">შეჩერება მოხსნილია</string>
     <string name="wikis_editor_edit">რედაქტირება</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">სათაური</string>
     <string name="wikis_editor_slug_label">გვერდის URL</string>
     <string name="wikis_editor_slug_hint">დაჩუმებული</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">ეს იქნება გვერდის გზა. გამოიყენეთ პატარა ასოები, რიცხვები და დეფისები.</string>
     <string name="wikis_editor_content_label">შიგთავსი</string>
     <string name="wikis_editor_summary_label">რეზიუმეს რედაქტირება (არასავალდებულო)</string>
     <string name="wikis_editor_summary_hint">მოკლედ აღწერეთ თქვენი ცვლილებები</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">შექმნა</string>
     <string name="wikis_redirect_source_label">წყარო</string>
     <string name="wikis_redirect_target_label">სამიზნე</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">შექმნილია</string>
     <string name="wikis_redirect_required_fields">წყაროც და სამიზნეც აუცილებელია</string>
     <string name="wikis_redirect_created_success">გადამისამართება შეიქმნა</string>
     <string name="wikis_redirect_create_failed">გადამისამართების შექმნა ვერ მოხერხდა</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ბადის ხედი</string>
     <string name="wikis_attachments_view_list">სიის ხედი</string>
     <string name="wikis_attachments_copy_embed">embed ბმულის კოპირება</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">ჩასართავი ბმული დაკოპირდა</string>
+    <string name="wikis_attachments_download">ჩამოტვირთვა</string>
     <string name="wikis_attachments_copy_success">ჩასართავი ბმული დაკოპირდა</string>
     <string name="wikis_attachments_delete">წაშლა</string>
     <string name="wikis_attachments_delete_confirm_title">დანართის წაშლა</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">მფლობელი</string>
     <string name="wikis_access_tab_users">მომხმარებლის სახელი</string>
     <string name="wikis_access_tab_groups">ჯგუფები</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">სხვა</string>
+    <string name="wikis_access_select_rule">აირჩიეთ წესი</string>
+    <string name="wikis_access_authenticated_desc">ნებისმიერი, ვინც შესულია</string>
+    <string name="wikis_access_anyone_desc">ანონიმური მომხმარებლების ჩათვლით</string>
+    <string name="wikis_access_selected">არჩეული: %1$s</string>
     <string name="wikis_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
     <string name="wikis_access_set_success">წვდომა განახლდა</string>
     <string name="wikis_access_revoke_success">წვდომა წაიშალა</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">ავთენტიფიცირებული მომხმარებლები</string>
 
     <string name="wikis_revision_compare">ცვლილებების შედარება</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s-ის მიხედვით</string>
     <string name="wikis_revision_show_page">გვერდის ჩვენება</string>
     <string name="wikis_revision_compare_failed">შესადარებლად წინა ვერსიის ჩატვირთვა ვერ მოხერხდა.</string>
     <string name="wikis_revision_changes_from">ცვლილებები ვერსიიდან %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">ნაპოვნია %1$d პოსტი „%2$s“-ისთვის</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">წარწერის შენახვა ვერ მოხერხდა</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">მხარდაჭერილი ფაილები: სურათები, PDF, DOC, DOCX, TXT და MD.</string>
+    <string name="wikis_attachments_upload_limits">დიდი ატვირთვები შეიძლება შეიზღუდოს თქვენი სერვერის ან პროქსის კონფიგურაციით.</string>
 </resources>

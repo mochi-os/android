@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">Manje ovakvog</string>
     <string name="feeds_no_tags">Nema oznaka</string>
     <string name="feeds_anonymous">Anonimno</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Odgovarate %1$s</string>
     <string name="feeds_attach_file">Priložite datoteku</string>
     <string name="feeds_write_a_comment">Napišite komentar…</string>
     <string name="feeds_tag_label">Naziv oznake</string>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Utshintsho nezimvo</string>
     <string name="wikis_rss_copied">I-URL ye-RSS ikhutshelwe ku-clipboard</string>
     <string name="wikis_rss_failed">Ayiphumelelanga ukufumana ithokheni ye-RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Rhoxisa ufikelelo</string>
+    <string name="wikis_rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
     <string name="wikis_find_title">Fumana iiwiki</string>
     <string name="wikis_find_no_results">Akukho zi-wiki zifumanekileyo</string>
     <string name="wikis_find_recommended_section">Iindululo zee-wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Akukho zimvo okwangoku</string>
     <string name="wikis_comments_empty_subtitle">Yiba ngowokuqala ukuphawula kweli phepha.</string>
     <string name="wikis_comment_action_reply">Phendula</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Uphendula u-%1$s</string>
+    <string name="wikis_comment_clear_reply">Rhoxisa impendulo</string>
     <string name="wikis_comment_action_edit">Hlela</string>
     <string name="wikis_comment_action_delete">Cima</string>
     <string name="wikis_comment_action_save">Gcina</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Uqinisekile ufuna ukucima esi siphawuli? Oku kuya kucima zonke iimpendulo. Esi senzo asinakubuyiswa.</string>
     <string name="wikis_comment_form_attach">Qhoboshela iifayile</string>
     <string name="wikis_comment_expand">(yandlala)</string>
-    <string name="wikis_editor_title_new">Yenza iphepha elitsha</string>
+    <string name="wikis_editor_title_new">Iphepha elitsha</string>
     <string name="wikis_editor_preview">Phicotha</string>
     <string name="wikis_editor_preview_untitled">Akukho sihloko</string>
     <string name="wikis_editor_edit">Hlela</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Isihloko</string>
     <string name="wikis_editor_slug_label">I-URL yephepha</string>
     <string name="wikis_editor_slug_hint">igama-lephepha-lam</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Le iya kuba yindlela yephepha. Sebenzisa oonobumba abancinci, amanani, neepoto.</string>
     <string name="wikis_editor_content_label">Umxholo</string>
     <string name="wikis_editor_summary_label">Isishwankathelo solwakhiwo (ekhethekayo)</string>
     <string name="wikis_editor_summary_hint">Chaza ngokufutshane utshintsho lwakho</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Yenza</string>
     <string name="wikis_redirect_source_label">Umthombo</string>
     <string name="wikis_redirect_target_label">Injongo</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Yenziwe</string>
     <string name="wikis_redirect_required_fields">Kufuneka zombini umthombo nethagethi</string>
     <string name="wikis_redirect_created_success">Uhambiso ludaliwe</string>
     <string name="wikis_redirect_create_failed">Ayiphumelelanga ukudala ukuthumela kwakhona</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Imbonakalo yegridi</string>
     <string name="wikis_attachments_view_list">Imbonakalo yoluhlu</string>
     <string name="wikis_attachments_copy_embed">Kotshela ikhonkco lokufakelela</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Ikhonkco lokufaka likhutshelwe</string>
+    <string name="wikis_attachments_download">Khuphela</string>
     <string name="wikis_attachments_copy_success">Ikhonkco lokufaka likhutshelwe</string>
     <string name="wikis_attachments_delete">Cima</string>
     <string name="wikis_attachments_delete_confirm_title">Cima isiqhotyoshelwa</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Umnini</string>
     <string name="wikis_access_tab_users">Abasebenzisi</string>
     <string name="wikis_access_tab_groups">Amaqela</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Okunye</string>
+    <string name="wikis_access_select_rule">Khetha umthetho</string>
+    <string name="wikis_access_authenticated_desc">Nabani na ongenileyo</string>
+    <string name="wikis_access_anyone_desc">Kuquka abasebenzisi abangaziwayo</string>
+    <string name="wikis_access_selected">Ekhethiweyo: %1$s</string>
     <string name="wikis_access_no_groups">Akukho maqela afumanekayo</string>
     <string name="wikis_access_set_success">Ufikelelo luhlaziyiwe</string>
     <string name="wikis_access_revoke_success">Ufikelelo lususiwe</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Abasebenzisi abaqinisekisiweyo</string>
 
     <string name="wikis_revision_compare">Thelekisa iinguqu</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">ngo-%1$s</string>
     <string name="wikis_revision_show_page">Bonisa iphepha</string>
     <string name="wikis_revision_compare_failed">Ayikwazanga ukulayisha inguqulelo yangaphambili ukuze kuthelekiswe.</string>
     <string name="wikis_revision_changes_from">Iinguqu ukusuka kwinguqulelo %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ayikwazanga ukugcina umbhalo</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Iifayile ezixhaswayo: imifanekiso, i-PDF, i-DOC, i-DOCX, i-TXT, kunye ne-MD.</string>
+    <string name="wikis_attachments_upload_limits">Ukulayishwa okukhulu kunokunqunyelwa lulungelelwaniso lweseva okanye iproxy yakho.</string>
 </resources>

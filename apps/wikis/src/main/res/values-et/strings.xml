@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Muudatused ja kommentaarid</string>
     <string name="wikis_rss_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="wikis_rss_failed">RSS-tokeni hankimine ebaõnnestus</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Tühista juurdepääs</string>
+    <string name="wikis_rss_revoked">RSS-juurdepääs tühistatud</string>
     <string name="wikis_find_title">Otsi wikisid</string>
     <string name="wikis_find_no_results">Vikisid ei leitud</string>
     <string name="wikis_find_recommended_section">Soovitatud vikid</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Kommentaare veel pole</string>
     <string name="wikis_comments_empty_subtitle">Ole esimene, kes kommenteerib seda lehte.</string>
     <string name="wikis_comment_action_reply">Vasta</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Vastad kasutajale %1$s</string>
+    <string name="wikis_comment_clear_reply">Tühista vastus</string>
     <string name="wikis_comment_action_edit">Muuda</string>
     <string name="wikis_comment_action_delete">Kustuta</string>
     <string name="wikis_comment_action_save">Salvesta</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Kas oled kindel, et soovid selle kommentaari kustutada? See kustutab ka kõik vastused. Seda toimingut ei saa tagasi võtta.</string>
     <string name="wikis_comment_form_attach">Lisa failid</string>
     <string name="wikis_comment_expand">(laienda)</string>
-    <string name="wikis_editor_title_new">Loo uus leht</string>
+    <string name="wikis_editor_title_new">Uus leht</string>
     <string name="wikis_editor_preview">Eelvaade</string>
     <string name="wikis_editor_preview_untitled">Pealkirjata</string>
     <string name="wikis_editor_edit">Muuda</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Pealkiri</string>
     <string name="wikis_editor_slug_label">Lehe URL</string>
     <string name="wikis_editor_slug_hint">minu-lehe-nimi</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">See on lehe tee. Kasuta väiketähti, numbreid ja sidekriipse.</string>
     <string name="wikis_editor_content_label">Sisu</string>
     <string name="wikis_editor_summary_label">Muuda kokkuvõtet (valikuline)</string>
     <string name="wikis_editor_summary_hint">Kirjelda lühidalt oma muudatusi</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Loo</string>
     <string name="wikis_redirect_source_label">Allikas</string>
     <string name="wikis_redirect_target_label">Siht</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Loodud</string>
     <string name="wikis_redirect_required_fields">Nii allikas kui sihtkoht on kohustuslikud</string>
     <string name="wikis_redirect_created_success">Ümbersuunamine loodud</string>
     <string name="wikis_redirect_create_failed">Ümbersuunamise loomine ebaõnnestus</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Ruudustikuvaade</string>
     <string name="wikis_attachments_view_list">Loendivaade</string>
     <string name="wikis_attachments_copy_embed">Kopeeri manustamise link</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Manustamise link kopeeritud</string>
+    <string name="wikis_attachments_download">Laadi alla</string>
     <string name="wikis_attachments_copy_success">Manustamise link kopeeritud</string>
     <string name="wikis_attachments_delete">Kustuta</string>
     <string name="wikis_attachments_delete_confirm_title">Kustuta manus</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Omanik</string>
     <string name="wikis_access_tab_users">Kasutajad</string>
     <string name="wikis_access_tab_groups">Grupid</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Muu</string>
+    <string name="wikis_access_select_rule">Valige reegel</string>
+    <string name="wikis_access_authenticated_desc">Kõik, kes on sisse logitud</string>
+    <string name="wikis_access_anyone_desc">Kaasa arvatud anonüümsed kasutajad</string>
+    <string name="wikis_access_selected">Valitud: %1$s</string>
     <string name="wikis_access_no_groups">Saadaolevaid gruppe pole</string>
     <string name="wikis_access_set_success">Juurdepääs uuendatud</string>
     <string name="wikis_access_revoke_success">Juurdepääs eemaldatud</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autenditud kasutajad</string>
 
     <string name="wikis_revision_compare">Võrdle muudatusi</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s järgi</string>
     <string name="wikis_revision_show_page">Näita lehte</string>
     <string name="wikis_revision_compare_failed">Eelmist versiooni ei õnnestunud võrdlemiseks laadida.</string>
     <string name="wikis_revision_changes_from">Muudatused versioonist %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Leiti %1$d tulemust päringule „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Pealdise salvestamine ebaõnnestus</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Toetatud failid: pildid, PDF, DOC, DOCX, TXT ja MD.</string>
+    <string name="wikis_attachments_upload_limits">Suurte üleslaadimiste suurust võib piirata sinu serveri või puhverserveri seadistus.</string>
 </resources>

@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">اس جیسی کم</string>
     <string name="feeds_no_tags">کوئی ٹیگ نہیں</string>
     <string name="feeds_anonymous">گمنام</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s کو جواب دیا جا رہا ہے</string>
     <string name="feeds_attach_file">فائل منسلک کریں</string>
     <string name="feeds_tag_label">ٹیگ کا لیبل</string>
     <string name="feeds_file">فائل</string>

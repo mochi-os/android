@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">ການປ່ຽນແປງ ແລະ ຄຳເຫັນ</string>
     <string name="wikis_rss_copied">ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ</string>
     <string name="wikis_rss_failed">ໄດ້ຮັບໂທເຄັນ RSS ລົ້ມເຫຼວ</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">ຖອນການເຂົ້າເຖິງ</string>
+    <string name="wikis_rss_revoked">ຖອນການເຂົ້າເຖິງ RSS ແລ້ວ</string>
     <string name="wikis_find_title">ຄົ້ນຫາວິກິ</string>
     <string name="wikis_find_no_results">ບໍ່ພົບ wiki</string>
     <string name="wikis_find_recommended_section">Wiki ທີ່ແນະນຳ</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">ຍັງບໍ່ມີຄຳເຫັນ</string>
     <string name="wikis_comments_empty_subtitle">ເປັນຄົນທຳອິດທີ່ໃຫ້ຄຳເຫັນໃນໜ້ານີ້.</string>
     <string name="wikis_comment_action_reply">ຕອບ</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">ກຳລັງຕອບກັບ %1$s</string>
+    <string name="wikis_comment_clear_reply">ຍົກເລີກການຕອບກັບ</string>
     <string name="wikis_comment_action_edit">ແກ້ໄຂ</string>
     <string name="wikis_comment_action_delete">ລົບ</string>
     <string name="wikis_comment_action_save">ບັນທຶກ</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບຄຳເຫັນນີ້? ນີ້ຈະລົບການຕອບກັບທັງໝົດດ້ວຍ. ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
     <string name="wikis_comment_form_attach">ແນບໄຟລ໌</string>
     <string name="wikis_comment_expand">(ຂະຫຍາຍ)</string>
-    <string name="wikis_editor_title_new">ສ້າງໜ້າໃໝ່</string>
+    <string name="wikis_editor_title_new">ໜ້າໃໝ່</string>
     <string name="wikis_editor_preview">ຕົວຢ່າງ</string>
     <string name="wikis_editor_preview_untitled">ບໍ່ມີຊື່</string>
     <string name="wikis_editor_edit">ແກ້ໄຂ</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">ຊື່ເລື່ອງ</string>
     <string name="wikis_editor_slug_label">URL ໜ້າ</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">ນີ້ຈະເປັນເສັ້ນທາງສຳລັບໜ້າ. ໃຊ້ຕົວອັກສອນພິມນ້ອຍ, ຕົວເລກ, ແລະ hyphens.</string>
     <string name="wikis_editor_content_label">ເນື້ອຫາ</string>
     <string name="wikis_editor_summary_label">ແກ້ໄຂສະຫຼຸບ (ທາງເລືອກ)</string>
     <string name="wikis_editor_summary_hint">ອະທິບາຍການປ່ຽນແປງຂອງທ່ານສັ້ນໆ</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">ສ້າງ</string>
     <string name="wikis_redirect_source_label">ແຫຼ່ງ</string>
     <string name="wikis_redirect_target_label">ເປົ້າໝາຍ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">ສ້າງແລ້ວ</string>
     <string name="wikis_redirect_required_fields">ຕ້ອງການທັງແຫຼ່ງ ແລະ ເປົ້າໝາຍ</string>
     <string name="wikis_redirect_created_success">ສ້າງການປ່ຽນເສັ້ນທາງແລ້ວ</string>
     <string name="wikis_redirect_create_failed">ສ້າງການປ່ຽນເສັ້ນທາງລົ້ມເຫຼວ</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ມຸມມອງຕາຕະລາງ</string>
     <string name="wikis_attachments_view_list">ມຸມມອງລາຍຊື່</string>
     <string name="wikis_attachments_copy_embed">ສຳເນົາລິ້ງຝັງ</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">ສຳເນົາລິ້ງຝັງແລ້ວ</string>
+    <string name="wikis_attachments_download">ດາວໂຫຼດ</string>
     <string name="wikis_attachments_copy_success">ສຳເນົາລິ້ງຝັງແລ້ວ</string>
     <string name="wikis_attachments_delete">ລົບ</string>
     <string name="wikis_attachments_delete_confirm_title">ລົບໄຟລ໌ແນບ</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">ເຈົ້າຂອງ</string>
     <string name="wikis_access_tab_users">ຜູ້ໃຊ້</string>
     <string name="wikis_access_tab_groups">ກຸ່ມ</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">ອື່ນໆ</string>
+    <string name="wikis_access_select_rule">ເລືອກກົດ</string>
+    <string name="wikis_access_authenticated_desc">ໃຜກໍໄດ້ທີ່ເຂົ້າສູ່ລະບົບ</string>
+    <string name="wikis_access_anyone_desc">ລວມທັງຜູ້ໃຊ້ນິລະນາມ</string>
+    <string name="wikis_access_selected">ເລືອກແລ້ວ: %1$s</string>
     <string name="wikis_access_no_groups">ບໍ່ມີກຸ່ມທີ່ມີຢູ່</string>
     <string name="wikis_access_set_success">ອັບເດດການເຂົ້າເຖິງແລ້ວ</string>
     <string name="wikis_access_revoke_success">ລົບການເຂົ້າເຖິງແລ້ວ</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>
 
     <string name="wikis_revision_compare">ປຽບທຽບການປ່ຽນແປງ</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">ໂດຍ %1$s</string>
     <string name="wikis_revision_show_page">ສະແດງໜ້າ</string>
     <string name="wikis_revision_compare_failed">ບໍ່ສາມາດໂຫຼດລຸ້ນກ່ອນໜ້າເພື່ອປຽບທຽບໄດ້.</string>
     <string name="wikis_revision_changes_from">ການປ່ຽນແປງຈາກລຸ້ນ %1$d → %2$d</string>
@@ -346,6 +346,6 @@
         <item quantity="other">ພົບ %1$d ຜົນ ສຳລັບ "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ບໍ່ສາມາດບັນທຶກຄຳບັນຍາຍໄດ້</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">ໄຟລ໌ທີ່ຮອງຮັບ: ຮູບພາບ, PDF, DOC, DOCX, TXT, ແລະ MD.</string>
+    <string name="wikis_attachments_upload_limits">ການອັບໂຫຼດຂະໜາດໃຫຍ່ອາດຖືກຈຳກັດໂດຍການຕັ້ງຄ່າເຊີບເວີ ຫຼື ພຣັອກຊີຂອງທ່ານ.</string>
 </resources>

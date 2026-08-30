@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Newidiadau a sylwadau</string>
     <string name="wikis_rss_copied">URL RSS wedi\'i gopïo i\'r clipfwrdd</string>
     <string name="wikis_rss_failed">Methwyd cael tocyn RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Dirymu mynediad</string>
+    <string name="wikis_rss_revoked">Mynediad RSS wedi\'i ddirymu</string>
     <string name="wikis_find_title">Dod o hyd i wicis</string>
     <string name="wikis_find_no_results">Heb ddod o hyd i wicis</string>
     <string name="wikis_find_recommended_section">Wicis a argymhellir</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Dim sylwadau eto</string>
     <string name="wikis_comments_empty_subtitle">Byddwch y cyntaf i sylwi ar y dudalen hon.</string>
     <string name="wikis_comment_action_reply">Ymateb</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Ateb i %1$s</string>
+    <string name="wikis_comment_clear_reply">Canslo ateb</string>
     <string name="wikis_comment_action_edit">Golygu</string>
     <string name="wikis_comment_action_delete">Dileu</string>
     <string name="wikis_comment_action_save">Cadw</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Ydych chi\'n siŵr eich bod am ddileu\'r sylw hwn? Bydd hyn hefyd yn dileu pob ateb. Ni ellir dadwneud y weithred hon.</string>
     <string name="wikis_comment_form_attach">Atodi ffeiliau</string>
     <string name="wikis_comment_expand">(ehangu)</string>
-    <string name="wikis_editor_title_new">Creu tudalen newydd</string>
+    <string name="wikis_editor_title_new">Tudalen newydd</string>
     <string name="wikis_editor_preview">Rhagolwg</string>
     <string name="wikis_editor_preview_untitled">Heb deitl</string>
     <string name="wikis_editor_edit">Golygu</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Teitl</string>
     <string name="wikis_editor_slug_label">URL y dudalen</string>
     <string name="wikis_editor_slug_hint">fy-enw-tudalen</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Hwn fydd y llwybr ar gyfer y dudalen. Defnyddiwch lythrennau bach, rhifau, a chysylltnodau.</string>
     <string name="wikis_editor_content_label">Cynnwys</string>
     <string name="wikis_editor_summary_label">Golygu crynodeb (dewisol)</string>
     <string name="wikis_editor_summary_hint">Disgrifiwch eich newidiadau yn fyr</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Creu</string>
     <string name="wikis_redirect_source_label">Ffynhonnell</string>
     <string name="wikis_redirect_target_label">Targed</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Wedi\'i greu</string>
     <string name="wikis_redirect_required_fields">Mae angen ffynhonnell a tharged</string>
     <string name="wikis_redirect_created_success">Ailgyfeiriad wedi\'i greu</string>
     <string name="wikis_redirect_create_failed">Methwyd creu ailgyfeiriad</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Golwg grid</string>
     <string name="wikis_attachments_view_list">Golwg rhestr</string>
     <string name="wikis_attachments_copy_embed">Copïo dolen mewnosod</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Copïwyd y ddolen mewnosod</string>
+    <string name="wikis_attachments_download">Lawrlwytho</string>
     <string name="wikis_attachments_copy_success">Copïwyd y ddolen mewnosod</string>
     <string name="wikis_attachments_delete">Dileu</string>
     <string name="wikis_attachments_delete_confirm_title">Dileu atodiad</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Perchennog</string>
     <string name="wikis_access_tab_users">Defnyddwyr</string>
     <string name="wikis_access_tab_groups">Grwpiau</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Arall</string>
+    <string name="wikis_access_select_rule">Dewiswch reol</string>
+    <string name="wikis_access_authenticated_desc">Unrhyw un sydd wedi mewngofnodi</string>
+    <string name="wikis_access_anyone_desc">Gan gynnwys defnyddwyr dienw</string>
+    <string name="wikis_access_selected">Wedi\'i ddewis: %1$s</string>
     <string name="wikis_access_no_groups">Dim grwpiau ar gael</string>
     <string name="wikis_access_set_success">Mynediad wedi\'i ddiweddaru</string>
     <string name="wikis_access_revoke_success">Mynediad wedi\'i dynnu</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Defnyddwyr dilys</string>
 
     <string name="wikis_revision_compare">Cymharu newidiadau</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">yn ôl %1$s</string>
     <string name="wikis_revision_show_page">Dangos y dudalen</string>
     <string name="wikis_revision_compare_failed">Methwyd â llwytho\'r fersiwn flaenorol i\'w chymharu.</string>
     <string name="wikis_revision_changes_from">Newidiadau o fersiwn %1$d → %2$d</string>
@@ -396,6 +396,6 @@
         <item quantity="other">Daethpwyd o hyd i %1$d canlyniad ar gyfer "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Methwyd cadw\'r capsiwn</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Ffeiliau a gefnogir: delweddau, PDF, DOC, DOCX, TXT, ac MD.</string>
+    <string name="wikis_attachments_upload_limits">Gall lanlwythiadau mawr gael eu cyfyngu gan ffurfweddiad eich gweinydd neu ddirprwy.</string>
 </resources>

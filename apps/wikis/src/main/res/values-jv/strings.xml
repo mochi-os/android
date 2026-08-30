@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Owah-owahan lan komentar</string>
     <string name="wikis_rss_copied">URL RSS disalin menyang clipboard</string>
     <string name="wikis_rss_failed">Gagal njupuk token RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Batalake akses</string>
+    <string name="wikis_rss_revoked">Akses RSS dibatalake</string>
     <string name="wikis_find_title">Golèk wiki</string>
     <string name="wikis_find_no_results">Ora ana wiki ditemokaké</string>
     <string name="wikis_find_recommended_section">Wiki disaranaké</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Durung ana komentar</string>
     <string name="wikis_comments_empty_subtitle">Dadi sing pertama mènèhi komentar ing kaca iki.</string>
     <string name="wikis_comment_action_reply">Bales</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Mbales %1$s</string>
+    <string name="wikis_comment_clear_reply">Batal balesan</string>
     <string name="wikis_comment_action_edit">Owahi</string>
     <string name="wikis_comment_action_delete">Busak</string>
     <string name="wikis_comment_action_save">Simpen</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Sampéyan yakin arep mbusak komentar iki? Iki uga bakal mbusak kabèh balesan. Tindakan iki ora bisa dibatalaké.</string>
     <string name="wikis_comment_form_attach">Lampirké berkas</string>
     <string name="wikis_comment_expand">(jèngkèlèkaké)</string>
-    <string name="wikis_editor_title_new">Gawé kaca anyar</string>
+    <string name="wikis_editor_title_new">Kaca anyar</string>
     <string name="wikis_editor_preview">Pratampilan</string>
     <string name="wikis_editor_preview_untitled">Tanpa judul</string>
     <string name="wikis_editor_edit">Owahi</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Judul</string>
     <string name="wikis_editor_slug_label">URL Kaca</string>
     <string name="wikis_editor_slug_hint">jeneng-halaman-ku</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Iki bakal dadi path kanggo halaman. Gunakaké huruf cilik, angka, lan tanda hubung.</string>
     <string name="wikis_editor_content_label">Isi</string>
     <string name="wikis_editor_summary_label">Owahi ringkesan (opsional)</string>
     <string name="wikis_editor_summary_hint">Katerangaké owah-owahan sampéyan kanthi cendhak</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Gawé</string>
     <string name="wikis_redirect_source_label">Sumber</string>
     <string name="wikis_redirect_target_label">Target</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Digawé</string>
     <string name="wikis_redirect_required_fields">Sumber lan target loro-loroné dibutuhaké</string>
     <string name="wikis_redirect_created_success">Redirect digawé</string>
     <string name="wikis_redirect_create_failed">Gagal nggawé pengalihan</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Tampilan kothak</string>
     <string name="wikis_attachments_view_list">Tampilan daftar</string>
     <string name="wikis_attachments_copy_embed">Salin link embed</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Link embed wis disalin</string>
+    <string name="wikis_attachments_download">Undhuh</string>
     <string name="wikis_attachments_copy_success">Link embed wis disalin</string>
     <string name="wikis_attachments_delete">Busak</string>
     <string name="wikis_attachments_delete_confirm_title">Busak lampiran</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Sing duwé</string>
     <string name="wikis_access_tab_users">Panganggo</string>
     <string name="wikis_access_tab_groups">Grup</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Liyané</string>
+    <string name="wikis_access_select_rule">Pilih aturan</string>
+    <string name="wikis_access_authenticated_desc">Sapa wae sing wis mlebu</string>
+    <string name="wikis_access_anyone_desc">Kalebu panganggo anonim</string>
+    <string name="wikis_access_selected">Dipilih: %1$s</string>
     <string name="wikis_access_no_groups">Ora ana grup kasedhiya</string>
     <string name="wikis_access_set_success">Akses dianyari</string>
     <string name="wikis_access_revoke_success">Akses dibusak</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Pangguna sing wis dipriksa</string>
 
     <string name="wikis_revision_compare">Bandhingake owahan</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">miturut %1$s</string>
     <string name="wikis_revision_show_page">Tampilake kaca</string>
     <string name="wikis_revision_compare_failed">Ora bisa ngemot versi sadurunge kanggo dibandhingake.</string>
     <string name="wikis_revision_changes_from">Owahan saka versi %1$d → %2$d</string>
@@ -346,6 +346,6 @@
         <item quantity="other">Ditemokaké %1$d asil kanggo "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ora bisa nyimpen katrangan</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">File sing didhukung: gambar, PDF, DOC, DOCX, TXT, lan MD.</string>
+    <string name="wikis_attachments_upload_limits">Unggahan gedhe bisa diwatesi dening konfigurasi server utawa proxy sampeyan.</string>
 </resources>

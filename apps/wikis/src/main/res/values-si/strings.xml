@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">වෙනස්කම් සහ අදහස්</string>
     <string name="wikis_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="wikis_rss_failed">RSS ටෝකනය ලබා ගැනීමට අසමත් විය</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
+    <string name="wikis_rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
     <string name="wikis_find_title">විකි සොයන්න</string>
     <string name="wikis_find_no_results">wikis හමු නොවීය</string>
     <string name="wikis_find_recommended_section">නිර්දේශිත wikis</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">තවම අදහස් නැත</string>
     <string name="wikis_comments_empty_subtitle">මෙම පිටුවේ අදහස් දැක්වීමට පළමුවැන්නා වන්න.</string>
     <string name="wikis_comment_action_reply">පිළිතුර</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s ට පිළිතුරු දෙමින්</string>
+    <string name="wikis_comment_clear_reply">පිළිතුර අවලංගු කරන්න</string>
     <string name="wikis_comment_action_edit">සංස්කරණය කරන්න</string>
     <string name="wikis_comment_action_delete">මකන්න</string>
     <string name="wikis_comment_action_save">සුරකින්න</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ඔබට මෙම අදහස මැකීමට අවශ්‍ය බව විශ්වාසද? මෙය සියලු පිළිතුරු ද මකා දමයි. මෙම ක්‍රියාව අහෝසි කළ නොහැක.</string>
     <string name="wikis_comment_form_attach">ගොනු අමුණන්න</string>
     <string name="wikis_comment_expand">(පුළුල් කරන්න)</string>
-    <string name="wikis_editor_title_new">නව පිටුව සාදන්න</string>
+    <string name="wikis_editor_title_new">නව පිටුව</string>
     <string name="wikis_editor_preview">පෙරදසුන</string>
     <string name="wikis_editor_preview_untitled">මාතෘකා රහිත</string>
     <string name="wikis_editor_edit">සංස්කරණය කරන්න</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">මාතෘකාව</string>
     <string name="wikis_editor_slug_label">පිටු URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">මෙය පිටුවේ මාර්ගය වනු ඇත. කුඩා අකුරු, ඉලක්කම් සහ ඉරි භාවිත කරන්න.</string>
     <string name="wikis_editor_content_label">අන්තර්ගතය</string>
     <string name="wikis_editor_summary_label">සංස්කරණ සාරාංශය (විකල්ප)</string>
     <string name="wikis_editor_summary_hint">ඔබේ වෙනස්කම් කෙටියෙන් විස්තර කරන්න</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">නිර්මාණය කරන්න</string>
     <string name="wikis_redirect_source_label">මූලාරම්භය</string>
     <string name="wikis_redirect_target_label">ඉලක්කය</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">නිර්මාණය කරන ලදී</string>
     <string name="wikis_redirect_required_fields">ප්‍රභවය සහ ඉලක්කය යන දෙකම අවශ්‍යය</string>
     <string name="wikis_redirect_created_success">redirect සාදන ලදී</string>
     <string name="wikis_redirect_create_failed">යළි-යොමුවීමක් සෑදීමට අසමත් විය</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ජාල දසුන</string>
     <string name="wikis_attachments_view_list">ලැයිස්තු දසුන</string>
     <string name="wikis_attachments_copy_embed">embed සබැඳිය පිටපත් කරන්න</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">කාවැද්දූ සබැඳිය පිටපත් කළා</string>
+    <string name="wikis_attachments_download">බාගත කරන්න</string>
     <string name="wikis_attachments_copy_success">කාවැද්දූ සබැඳිය පිටපත් කළා</string>
     <string name="wikis_attachments_delete">මකන්න</string>
     <string name="wikis_attachments_delete_confirm_title">ඇමුණුම මකන්න</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">හිමිකරු</string>
     <string name="wikis_access_tab_users">පරිශීලකයන්</string>
     <string name="wikis_access_tab_groups">කණ්ඩායම්</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">වෙනත්</string>
+    <string name="wikis_access_select_rule">නීතියක් තෝරන්න</string>
+    <string name="wikis_access_authenticated_desc">පිවිසී සිටින ඕනෑම කෙනෙක්</string>
+    <string name="wikis_access_anyone_desc">නිර්නාමික පරිශීලකයන් ඇතුළුව</string>
+    <string name="wikis_access_selected">තෝරාගත්: %1$s</string>
     <string name="wikis_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
     <string name="wikis_access_set_success">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
     <string name="wikis_access_revoke_success">ප්‍රවේශය ඉවත් කරන ලදී</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
 
     <string name="wikis_revision_compare">වෙනස්කම් සංසන්දනය කරන්න</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s අනුව</string>
     <string name="wikis_revision_show_page">පිටුව පෙන්වන්න</string>
     <string name="wikis_revision_compare_failed">සංසන්දනය සඳහා පෙර අනුවාදය පූරණය කළ නොහැකි විය.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d අනුවාදයේ වෙනස්කම්</string>
@@ -356,6 +356,6 @@
         <item quantity="other">«%2$s» සඳහා %1$d ප්‍රතිඵල සොයා ගත්තා</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">සිරස්තලය සුරැකීමට නොහැකි විය</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">සහාය දක්වන ගොනු: රූප, PDF, DOC, DOCX, TXT, සහ MD.</string>
+    <string name="wikis_attachments_upload_limits">විශාල උඩුගත කිරීම් ඔබේ සේවාදායකය හෝ ප්‍රොක්සි වින්‍යාසය මගින් සීමා විය හැක.</string>
 </resources>

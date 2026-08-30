@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Буга окшогондор азыраак</string>
     <string name="feeds_no_tags">Тегдер жок</string>
     <string name="feeds_anonymous">Анонимдүү</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s билдирүүсүнө жооп берүүдө</string>
     <string name="feeds_attach_file">Файл тиркөө</string>
     <string name="feeds_tag_label">Тег белгиси</string>
     <string name="feeds_file">Файл</string>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Изменения и комментарии</string>
     <string name="wikis_rss_copied">URL RSS скопирован в буфер обмена</string>
     <string name="wikis_rss_failed">Не удалось получить RSS-токен</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Отозвать доступ</string>
+    <string name="wikis_rss_revoked">Доступ RSS отозван</string>
     <string name="wikis_find_title">Найти вики</string>
     <string name="wikis_find_no_results">Wiki не найдены</string>
     <string name="wikis_find_recommended_section">Рекомендуемые wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Комментариев пока нет</string>
     <string name="wikis_comments_empty_subtitle">Будьте первым, кто прокомментирует эту страницу.</string>
     <string name="wikis_comment_action_reply">Ответить</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Ответ %1$s</string>
+    <string name="wikis_comment_clear_reply">Отменить ответ</string>
     <string name="wikis_comment_action_edit">Изменить</string>
     <string name="wikis_comment_action_delete">Удалить</string>
     <string name="wikis_comment_action_save">Сохранить</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Вы уверены, что хотите удалить этот комментарий? Это также удалит все ответы. Это действие необратимо.</string>
     <string name="wikis_comment_form_attach">Прикрепить файлы</string>
     <string name="wikis_comment_expand">(развернуть)</string>
-    <string name="wikis_editor_title_new">Создать новую страницу</string>
+    <string name="wikis_editor_title_new">Новая страница</string>
     <string name="wikis_editor_preview">Предпросмотр</string>
     <string name="wikis_editor_preview_untitled">Без названия</string>
     <string name="wikis_editor_edit">Изменить</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Заголовок</string>
     <string name="wikis_editor_slug_label">URL страницы</string>
     <string name="wikis_editor_slug_hint">имя-моей-страницы</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Это будет путь к странице. Используйте строчные буквы, цифры и дефисы.</string>
     <string name="wikis_editor_content_label">Содержимое</string>
     <string name="wikis_editor_summary_label">Описание правки (необязательно)</string>
     <string name="wikis_editor_summary_hint">Кратко опишите ваши изменения</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Создать</string>
     <string name="wikis_redirect_source_label">Источник</string>
     <string name="wikis_redirect_target_label">Цель</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Создано</string>
     <string name="wikis_redirect_required_fields">Источник и цель обязательны</string>
     <string name="wikis_redirect_created_success">Перенаправление создано</string>
     <string name="wikis_redirect_create_failed">Не удалось создать перенаправление</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Вид сеткой</string>
     <string name="wikis_attachments_view_list">Вид списком</string>
     <string name="wikis_attachments_copy_embed">Копировать ссылку для встраивания</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Ссылка для вставки скопирована</string>
+    <string name="wikis_attachments_download">Скачать</string>
     <string name="wikis_attachments_copy_success">Ссылка для вставки скопирована</string>
     <string name="wikis_attachments_delete">Удалить</string>
     <string name="wikis_attachments_delete_confirm_title">Удалить вложение</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Владелец</string>
     <string name="wikis_access_tab_users">Пользователи</string>
     <string name="wikis_access_tab_groups">Группы</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Другое</string>
+    <string name="wikis_access_select_rule">Выберите правило</string>
+    <string name="wikis_access_authenticated_desc">Любой вошедший в систему</string>
+    <string name="wikis_access_anyone_desc">Включая анонимных пользователей</string>
+    <string name="wikis_access_selected">Выбрано: %1$s</string>
     <string name="wikis_access_no_groups">Нет доступных групп</string>
     <string name="wikis_access_set_success">Доступ обновлён</string>
     <string name="wikis_access_revoke_success">Доступ удалён</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Аутентифицированные пользователи</string>
 
     <string name="wikis_revision_compare">Сравнить изменения</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">по %1$s</string>
     <string name="wikis_revision_show_page">Показать страницу</string>
     <string name="wikis_revision_compare_failed">Не удалось загрузить предыдущую версию для сравнения.</string>
     <string name="wikis_revision_changes_from">Изменения с версии %1$d → %2$d</string>
@@ -376,6 +376,6 @@
         <item quantity="other">Найдено %1$d результатов по запросу «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Не удалось сохранить подпись</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Поддерживаемые файлы: изображения, PDF, DOC, DOCX, TXT и MD.</string>
+    <string name="wikis_attachments_upload_limits">Загрузка больших файлов может быть ограничена конфигурацией вашего сервера или прокси.</string>
 </resources>

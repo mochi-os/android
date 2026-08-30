@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">أقل مثل هذا</string>
     <string name="feeds_no_tags">لا توجد وسوم</string>
     <string name="feeds_anonymous">مجهول</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">الرد على %1$s</string>
     <string name="feeds_attach_file">إرفاق ملف</string>
     <string name="feeds_write_a_comment">اكتب تعليقًا…</string>
     <string name="feeds_tag_label">تسمية الوسم</string>

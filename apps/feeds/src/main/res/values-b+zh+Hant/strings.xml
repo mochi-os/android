@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">少顯示類似內容</string>
     <string name="feeds_no_tags">無標籤</string>
     <string name="feeds_anonymous">匿名</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">正在回覆 %1$s</string>
     <string name="feeds_attach_file">附加檔案</string>
     <string name="feeds_tag_label">標籤名稱</string>
     <string name="feeds_file">檔案</string>

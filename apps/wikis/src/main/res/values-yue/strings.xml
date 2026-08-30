@@ -94,8 +94,8 @@
     <string name="wikis_rss_both">變更同留言</string>
     <string name="wikis_rss_copied">RSS 網址已複製到剪貼簿</string>
     <string name="wikis_rss_failed">無法取得 RSS 權杖</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">撤銷存取權</string>
+    <string name="wikis_rss_revoked">已撤銷 RSS 存取權</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS 網址</string>
     <string name="wikis_find_title">搵 wiki</string>
     <string name="wikis_find_search_placeholder">按名稱、ID、指紋或網址搜尋…</string>
@@ -114,8 +114,8 @@
     <string name="wikis_comments_empty_title">重未有留言</string>
     <string name="wikis_comments_empty_subtitle">做第一個喺呢個頁面留言嘅人。</string>
     <string name="wikis_comment_action_reply">回覆</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">回覆緊 %1$s</string>
+    <string name="wikis_comment_clear_reply">取消回覆</string>
     <string name="wikis_comment_edited">(已編輯)</string>
     <string name="wikis_comment_delete_confirm_title">刪除留言</string>
     <string name="wikis_comment_delete_confirm_message">你確定要刪除呢條留言?咁樣會連埋所有回覆一齊刪除。呢個動作無法復原。</string>
@@ -137,7 +137,7 @@
     <string name="wikis_editor_creating">建立緊…</string>
     <string name="wikis_editor_slug_label">頁面網址</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">這將是頁面的路徑。請使用小寫字母、數字和連字號。</string>
     <string name="wikis_editor_content_label">內容</string>
     <string name="wikis_editor_content_placeholder">喺呢度用 Markdown 寫低內容…</string>
     <string name="wikis_editor_summary_label">編輯摘要(可選)</string>
@@ -192,7 +192,7 @@
     <string name="wikis_redirect_create_title">建立轉址</string>
     <string name="wikis_redirect_source_label">來源</string>
     <string name="wikis_redirect_target_label">目標</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">已建立</string>
     <string name="wikis_redirect_required_fields">必須輸入來源同目標</string>
     <string name="wikis_redirect_created_success">轉址已建立</string>
     <string name="wikis_redirect_create_failed">無法建立轉址</string>
@@ -235,8 +235,8 @@
     <string name="wikis_attachments_view_grid">格仔檢視</string>
     <string name="wikis_attachments_view_list">清單檢視</string>
     <string name="wikis_attachments_copy_embed">複製嵌入連結</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">已複製嵌入連結</string>
+    <string name="wikis_attachments_download">下載</string>
     <string name="wikis_attachments_copy_success">已複製嵌入連結</string>
     <string name="wikis_attachments_copy_failed">複製嵌入連結失敗</string>
     <string name="wikis_attachments_delete_confirm_title">刪除附件</string>
@@ -282,11 +282,11 @@
     <string name="wikis_access_tab_users">用戶</string>
     <string name="wikis_replicas_never_synced">從未</string>
     <string name="wikis_access_tab_groups">群組</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">其他</string>
+    <string name="wikis_access_select_rule">選擇一條規則</string>
+    <string name="wikis_access_authenticated_desc">任何已登入嘅人</string>
+    <string name="wikis_access_anyone_desc">包括匿名用戶</string>
+    <string name="wikis_access_selected">已選擇：%1$s</string>
 
     <string name="wikis_access_level_label">權限</string>
     <string name="wikis_access_level_edit">編輯同檢視</string>
@@ -343,10 +343,10 @@
     </plurals>
     <string name="wikis_revision_changes_from">由版本 %1$d → %2$d 嘅變更</string>
     <string name="wikis_revision_compare">比較變更</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">按 %1$s</string>
     <string name="wikis_revision_compare_failed">載入唔到上一個版本嚟比較。</string>
     <string name="wikis_revision_show_page">顯示頁面</string>
     <string name="wikis_attachments_caption_save_failed">無法儲存說明文字</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">支援的檔案：圖片、PDF、DOC、DOCX、TXT 和 MD。</string>
+    <string name="wikis_attachments_upload_limits">大型上傳可能受伺服器或代理設定的限制。</string>
 </resources>

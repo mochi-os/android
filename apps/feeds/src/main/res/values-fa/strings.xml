@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">موارد مشابه کمتر</string>
     <string name="feeds_no_tags">بدون برچسب</string>
     <string name="feeds_anonymous">ناشناس</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">در پاسخ به %1$s</string>
     <string name="feeds_attach_file">پیوست پرونده</string>
     <string name="feeds_tag_label">برچسب</string>
     <string name="feeds_select_feed">یک خوراک انتخاب کنید</string>

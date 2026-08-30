@@ -12,7 +12,6 @@
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_load_more">載入更多</string>
     <string name="wikis_access_change_level">更改存取層級</string>
@@ -56,8 +55,16 @@
         <item quantity="one">找到 %1$d 個結果,查詢「%2$s」</item>
         <item quantity="other">找到 %1$d 個結果,查詢「%2$s」</item>
     </plurals>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_rss_revoke">撤銷存取權</string>
+    <string name="wikis_rss_revoked">已撤銷 RSS 存取權</string>
+    <string name="wikis_comment_replying_to">正在回覆 %1$s</string>
+    <string name="wikis_comment_clear_reply">取消回覆</string>
+    <string name="wikis_revision_author">依 %1$s</string>
+    <string name="wikis_redirect_created_label">已建立</string>
+    <string name="wikis_attachments_download">下載</string>
+    <string name="wikis_access_tab_other">其他</string>
+    <string name="wikis_access_select_rule">選擇一條規則</string>
+    <string name="wikis_access_authenticated_desc">任何已登入的用戶</string>
+    <string name="wikis_access_anyone_desc">包括匿名用戶</string>
+    <string name="wikis_access_selected">已選擇:%1$s</string>
 </resources>

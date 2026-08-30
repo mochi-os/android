@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Veranderinge en kommentare</string>
     <string name="wikis_rss_copied">RSS-URL na knipbord gekopieer</string>
     <string name="wikis_rss_failed">Kon nie RSS-token kry nie</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Herroep toegang</string>
+    <string name="wikis_rss_revoked">RSS-toegang herroep</string>
     <string name="wikis_find_title">Vind wikis</string>
     <string name="wikis_find_no_results">Geen wikis gevind nie</string>
     <string name="wikis_find_recommended_section">Aanbevole wikis</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Nog geen kommentaar nie</string>
     <string name="wikis_comments_empty_subtitle">Wees die eerste om op hierdie bladsy kommentaar te lewer.</string>
     <string name="wikis_comment_action_reply">Antwoord</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Antwoord op %1$s</string>
+    <string name="wikis_comment_clear_reply">Kanselleer antwoord</string>
     <string name="wikis_comment_action_edit">Wysig</string>
     <string name="wikis_comment_action_delete">Verwyder</string>
     <string name="wikis_comment_action_save">Stoor</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Is jy seker jy wil hierdie kommentaar verwyder? Dit sal ook alle antwoorde verwyder. Hierdie aksie kan nie ongedaan gemaak word nie.</string>
     <string name="wikis_comment_form_attach">Heg lêers aan</string>
     <string name="wikis_comment_expand">(uitbrei)</string>
-    <string name="wikis_editor_title_new">Skep nuwe bladsy</string>
+    <string name="wikis_editor_title_new">Nuwe bladsy</string>
     <string name="wikis_editor_preview">Voorskou</string>
     <string name="wikis_editor_preview_untitled">Sonder titel</string>
     <string name="wikis_editor_edit">Wysig</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Bladsy-URL</string>
     <string name="wikis_editor_slug_hint">my-bladsynaam</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Dit sal die pad vir die bladsy wees. Gebruik kleinletters, syfers en koppeltekens.</string>
     <string name="wikis_editor_content_label">Inhoud</string>
     <string name="wikis_editor_summary_label">Wysiging-opsomming (opsioneel)</string>
     <string name="wikis_editor_summary_hint">Beskryf jou veranderinge kortliks</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Skep</string>
     <string name="wikis_redirect_source_label">Bron</string>
     <string name="wikis_redirect_target_label">Teiken</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Geskep</string>
     <string name="wikis_redirect_required_fields">Beide bron en teiken word vereis</string>
     <string name="wikis_redirect_created_success">Herleiding geskep</string>
     <string name="wikis_redirect_create_failed">Kon nie herleiding skep nie</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Roosteraansig</string>
     <string name="wikis_attachments_view_list">Lysaansig</string>
     <string name="wikis_attachments_copy_embed">Kopieer inbedskakel</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Inbedskakel gekopieer</string>
+    <string name="wikis_attachments_download">Laai af</string>
     <string name="wikis_attachments_copy_success">Inbedskakel gekopieer</string>
     <string name="wikis_attachments_delete">Verwyder</string>
     <string name="wikis_attachments_delete_confirm_title">Verwyder aanhangsel</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Eienaar</string>
     <string name="wikis_access_tab_users">Gebruikers</string>
     <string name="wikis_access_tab_groups">Groepe</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Ander</string>
+    <string name="wikis_access_select_rule">Kies \'n reël</string>
+    <string name="wikis_access_authenticated_desc">Enigiemand wat aangemeld is</string>
+    <string name="wikis_access_anyone_desc">Insluitend anonieme gebruikers</string>
+    <string name="wikis_access_selected">Gekies: %1$s</string>
     <string name="wikis_access_no_groups">Geen groepe beskikbaar nie</string>
     <string name="wikis_access_set_success">Toegang opgedateer</string>
     <string name="wikis_access_revoke_success">Toegang verwyder</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>
 
     <string name="wikis_revision_compare">Vergelyk veranderinge</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">volgens %1$s</string>
     <string name="wikis_revision_show_page">Wys bladsy</string>
     <string name="wikis_revision_compare_failed">Kon nie die vorige weergawe vir vergelyking laai nie.</string>
     <string name="wikis_revision_changes_from">Veranderinge van weergawe %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">%1$d resultate gevind vir «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kon nie byskrif stoor nie</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Ondersteunde lêers: beelde, PDF, DOC, DOCX, TXT en MD.</string>
+    <string name="wikis_attachments_upload_limits">Groot oplaaie kan deur jou bediener- of instaanbedienerkonfigurasie beperk word.</string>
 </resources>

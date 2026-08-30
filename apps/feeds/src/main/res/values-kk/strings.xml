@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Осыған ұқсас азырақ</string>
     <string name="feeds_no_tags">Тегтер жоқ</string>
     <string name="feeds_anonymous">Анонимді</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s пайдаланушысына жауап беру</string>
     <string name="feeds_attach_file">Файл тіркеу</string>
     <string name="feeds_tag_label">Тег атауы</string>
     <string name="feeds_file">Файл</string>

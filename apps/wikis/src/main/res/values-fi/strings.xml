@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Muutokset ja kommentit</string>
     <string name="wikis_rss_copied">RSS-URL kopioitu leikepöydälle</string>
     <string name="wikis_rss_failed">RSS-tunnisteen hakeminen epäonnistui</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Peruuta käyttöoikeus</string>
+    <string name="wikis_rss_revoked">RSS-käyttöoikeus peruutettu</string>
     <string name="wikis_find_title">Etsi wikejä</string>
     <string name="wikis_find_no_results">Wikejä ei löytynyt</string>
     <string name="wikis_find_recommended_section">Suositellut wikit</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Ei vielä kommentteja</string>
     <string name="wikis_comments_empty_subtitle">Ole ensimmäinen, joka kommentoi tätä sivua.</string>
     <string name="wikis_comment_action_reply">Vastaa</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Vastaus käyttäjälle %1$s</string>
+    <string name="wikis_comment_clear_reply">Peruuta vastaus</string>
     <string name="wikis_comment_action_edit">Muokkaa</string>
     <string name="wikis_comment_action_delete">Poista</string>
     <string name="wikis_comment_action_save">Tallenna</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Haluatko varmasti poistaa tämän kommentin? Tämä poistaa myös kaikki vastaukset. Tätä toimintoa ei voi kumota.</string>
     <string name="wikis_comment_form_attach">Liitä tiedostoja</string>
     <string name="wikis_comment_expand">(laajenna)</string>
-    <string name="wikis_editor_title_new">Luo uusi sivu</string>
+    <string name="wikis_editor_title_new">Uusi sivu</string>
     <string name="wikis_editor_preview">Esikatselu</string>
     <string name="wikis_editor_preview_untitled">Nimetön</string>
     <string name="wikis_editor_edit">Muokkaa</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Otsikko</string>
     <string name="wikis_editor_slug_label">Sivun URL</string>
     <string name="wikis_editor_slug_hint">oma-sivu</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Tämä on sivun polku. Käytä pieniä kirjaimia, numeroita ja yhdysmerkkejä.</string>
     <string name="wikis_editor_content_label">Sisältö</string>
     <string name="wikis_editor_summary_label">Muokkauksen yhteenveto (valinnainen)</string>
     <string name="wikis_editor_summary_hint">Kuvaile muutoksesi lyhyesti</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Luo</string>
     <string name="wikis_redirect_source_label">Lähde</string>
     <string name="wikis_redirect_target_label">Kohde</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Luotu</string>
     <string name="wikis_redirect_required_fields">Sekä lähde että kohde ovat pakollisia</string>
     <string name="wikis_redirect_created_success">Uudelleenohjaus luotu</string>
     <string name="wikis_redirect_create_failed">Uudelleenohjauksen luominen epäonnistui</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Ruudukkonäkymä</string>
     <string name="wikis_attachments_view_list">Luettelonäkymä</string>
     <string name="wikis_attachments_copy_embed">Kopioi upotuslinkki</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Upotuslinkki kopioitu</string>
+    <string name="wikis_attachments_download">Lataa</string>
     <string name="wikis_attachments_copy_success">Upotuslinkki kopioitu</string>
     <string name="wikis_attachments_delete">Poista</string>
     <string name="wikis_attachments_delete_confirm_title">Poista liite</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Omistaja</string>
     <string name="wikis_access_tab_users">Käyttäjät</string>
     <string name="wikis_access_tab_groups">Ryhmät</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Muu</string>
+    <string name="wikis_access_select_rule">Valitse sääntö</string>
+    <string name="wikis_access_authenticated_desc">Kuka tahansa kirjautunut</string>
+    <string name="wikis_access_anyone_desc">Mukaan lukien anonyymit käyttäjät</string>
+    <string name="wikis_access_selected">Valittu: %1$s</string>
     <string name="wikis_access_no_groups">Ei saatavilla olevia ryhmiä</string>
     <string name="wikis_access_set_success">Käyttöoikeus päivitetty</string>
     <string name="wikis_access_revoke_success">Käyttöoikeus poistettu</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Todennetut käyttäjät</string>
 
     <string name="wikis_revision_compare">Vertaa muutoksia</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">tekijältä %1$s</string>
     <string name="wikis_revision_show_page">Näytä sivu</string>
     <string name="wikis_revision_compare_failed">Aiempaa versiota ei voitu ladata vertailua varten.</string>
     <string name="wikis_revision_changes_from">Muutokset versiosta %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Löytyi %1$d tulosta hakusanalle «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kuvatekstin tallentaminen epäonnistui</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Tuetut tiedostot: kuvat, PDF, DOC, DOCX, TXT ja MD.</string>
+    <string name="wikis_attachments_upload_limits">Palvelimesi tai välityspalvelimesi asetukset voivat rajoittaa suuria latauksia.</string>
 </resources>

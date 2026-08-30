@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Üýtgeşmeler we teswirler</string>
     <string name="wikis_rss_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="wikis_rss_failed">RSS tokeni alynmady</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Elýeterliligi ýatyr</string>
+    <string name="wikis_rss_revoked">RSS elýeterliligi ýatyryldy</string>
     <string name="wikis_find_title">Wikileri tap</string>
     <string name="wikis_find_no_results">Wikiler tapylmady</string>
     <string name="wikis_find_recommended_section">Maslahat berilýän wikiler</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Heniz teswirler ýok</string>
     <string name="wikis_comments_empty_subtitle">Bu sahypa ilkinji teswir ýazyň.</string>
     <string name="wikis_comment_action_reply">Jogap</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s habaryna jogap berilýär</string>
+    <string name="wikis_comment_clear_reply">Jogaby ýatyrmak</string>
     <string name="wikis_comment_action_edit">Düzet</string>
     <string name="wikis_comment_action_delete">Pozmak</string>
     <string name="wikis_comment_action_save">Saklaýyş</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Bu teswiri pozmak isleýärsiňizmi? Bu ähli jogaplary hem pozar. Bu hereket yzyna gaýtarylyp bilinmez.</string>
     <string name="wikis_comment_form_attach">Faýllar goşmak</string>
     <string name="wikis_comment_expand">(giňelt)</string>
-    <string name="wikis_editor_title_new">Täze sahypa döretmek</string>
+    <string name="wikis_editor_title_new">Täze sahypa</string>
     <string name="wikis_editor_preview">Öňünden gör</string>
     <string name="wikis_editor_preview_untitled">Atsyz</string>
     <string name="wikis_editor_edit">Düzet</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">At</string>
     <string name="wikis_editor_slug_label">Sahypa URL-i</string>
     <string name="wikis_editor_slug_hint">meniň-sahypa-adym</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Bu sahypa üçin ýol bolar. Kiçi harplary, sanlary we defisleri ulan.</string>
     <string name="wikis_editor_content_label">Mazmun</string>
     <string name="wikis_editor_summary_label">Gysgaça mazmuny düzet (hökmany däl)</string>
     <string name="wikis_editor_summary_hint">Üýtgeşmeleriňizi gysgaça beýan ediň</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Döretmek</string>
     <string name="wikis_redirect_source_label">Çeşme</string>
     <string name="wikis_redirect_target_label">Maksat</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Döredildi</string>
     <string name="wikis_redirect_required_fields">Çeşme we maksat hökmany</string>
     <string name="wikis_redirect_created_success">Gönükdirme döredildi</string>
     <string name="wikis_redirect_create_failed">Gönükdirme döredilmedi</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Tor görnüşi</string>
     <string name="wikis_attachments_view_list">Sanaw görnüşi</string>
     <string name="wikis_attachments_copy_embed">Embed baglanyşygyny nusgalamak</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Goýma baglanyşygy göçürildi</string>
+    <string name="wikis_attachments_download">Ýükläp al</string>
     <string name="wikis_attachments_copy_success">Goýma baglanyşygy göçürildi</string>
     <string name="wikis_attachments_delete">Pozmak</string>
     <string name="wikis_attachments_delete_confirm_title">Goşundy pozmak</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Eýesi</string>
     <string name="wikis_access_tab_users">Ulanyjylar</string>
     <string name="wikis_access_tab_groups">Toparlar</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Beýleki</string>
+    <string name="wikis_access_select_rule">Düzgün saýlaň</string>
+    <string name="wikis_access_authenticated_desc">Giren islendik adam</string>
+    <string name="wikis_access_anyone_desc">Anonim ulanyjylary hem goşmak bilen</string>
+    <string name="wikis_access_selected">Saýlanan: %1$s</string>
     <string name="wikis_access_no_groups">Elýeterli toparlar ýok</string>
     <string name="wikis_access_set_success">Giriş täzelendi</string>
     <string name="wikis_access_revoke_success">Giriş aýryldy</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Tassyklanan ulanyjylar</string>
 
     <string name="wikis_revision_compare">Üýtgeşmeleri deňeşdir</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s boýunça</string>
     <string name="wikis_revision_show_page">Sahypany görkez</string>
     <string name="wikis_revision_compare_failed">Deňeşdirmek üçin öňki wersiýany ýükläp bolmady.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d wersiýasyndan üýtgeşmeler</string>
@@ -356,6 +356,6 @@
         <item quantity="other">"%2$s" üçin %1$d netije tapyldy</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Düşündirişi ýatda saklap bolmady</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Goldanýan faýllar: suratlar, PDF, DOC, DOCX, TXT we MD.</string>
+    <string name="wikis_attachments_upload_limits">Uly ýüklemeler serweriňiziň ýa-da proksi sazlamalaryňyz tarapyndan çäklendirilip bilner.</string>
 </resources>

@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">ተመሳሳይ ጥቂት</string>
     <string name="feeds_no_tags">ምንም መለያዎች የሉም</string>
     <string name="feeds_anonymous">ስም የለሽ</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">ለ%1$s መልስ በመስጠት ላይ</string>
     <string name="feeds_attach_file">ፋይል አያይዝ</string>
     <string name="feeds_write_a_comment">አስተያየት ይጻፉ…</string>
     <string name="feeds_tag_label">የመለያ ስም</string>

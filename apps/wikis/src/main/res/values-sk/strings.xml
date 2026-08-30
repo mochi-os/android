@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Zmeny a komentáre</string>
     <string name="wikis_rss_copied">URL RSS skopírovaná do schránky</string>
     <string name="wikis_rss_failed">Nepodarilo sa získať RSS token</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Zrušiť prístup</string>
+    <string name="wikis_rss_revoked">Prístup RSS zrušený</string>
     <string name="wikis_find_title">Nájsť wiki</string>
     <string name="wikis_find_no_results">Nenašli sa žiadne wiki</string>
     <string name="wikis_find_recommended_section">Odporúčané wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Zatiaľ žiadne komentáre</string>
     <string name="wikis_comments_empty_subtitle">Buďte prvý, kto okomentuje túto stránku.</string>
     <string name="wikis_comment_action_reply">Odpovedať</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Odpoveď pre %1$s</string>
+    <string name="wikis_comment_clear_reply">Zrušiť odpoveď</string>
     <string name="wikis_comment_action_edit">Upraviť</string>
     <string name="wikis_comment_action_delete">Odstrániť</string>
     <string name="wikis_comment_action_save">Uložiť</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Naozaj chcete odstrániť tento komentár? Odstránia sa aj všetky odpovede. Túto akciu nemožno vrátiť späť.</string>
     <string name="wikis_comment_form_attach">Pripojiť súbory</string>
     <string name="wikis_comment_expand">(rozbaliť)</string>
-    <string name="wikis_editor_title_new">Vytvoriť novú stránku</string>
+    <string name="wikis_editor_title_new">Nová stránka</string>
     <string name="wikis_editor_preview">Náhľad</string>
     <string name="wikis_editor_preview_untitled">Bez názvu</string>
     <string name="wikis_editor_edit">Upraviť</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Názov</string>
     <string name="wikis_editor_slug_label">URL stránky</string>
     <string name="wikis_editor_slug_hint">moja-stranka</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Toto bude cesta pre stránku. Použite malé písmená, čísla a pomlčky.</string>
     <string name="wikis_editor_content_label">Obsah</string>
     <string name="wikis_editor_summary_label">Upraviť súhrn (voliteľné)</string>
     <string name="wikis_editor_summary_hint">Stručne opíšte svoje zmeny</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Vytvoriť</string>
     <string name="wikis_redirect_source_label">Zdroj</string>
     <string name="wikis_redirect_target_label">Cieľ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Vytvorené</string>
     <string name="wikis_redirect_required_fields">Zdroj aj cieľ sú povinné</string>
     <string name="wikis_redirect_created_success">Presmerovanie vytvorené</string>
     <string name="wikis_redirect_create_failed">Nepodarilo sa vytvoriť presmerovanie</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Mriežkový pohľad</string>
     <string name="wikis_attachments_view_list">Zoznamový pohľad</string>
     <string name="wikis_attachments_copy_embed">Kopírovať odkaz na vloženie</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Odkaz na vloženie skopírovaný</string>
+    <string name="wikis_attachments_download">Stiahnuť</string>
     <string name="wikis_attachments_copy_success">Odkaz na vloženie skopírovaný</string>
     <string name="wikis_attachments_delete">Odstrániť</string>
     <string name="wikis_attachments_delete_confirm_title">Odstrániť prílohu</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Vlastník</string>
     <string name="wikis_access_tab_users">Používatelia</string>
     <string name="wikis_access_tab_groups">Skupiny</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Iné</string>
+    <string name="wikis_access_select_rule">Vyberte pravidlo</string>
+    <string name="wikis_access_authenticated_desc">Ktokoľvek, kto je prihlásený</string>
+    <string name="wikis_access_anyone_desc">Vrátane anonymných používateľov</string>
+    <string name="wikis_access_selected">Vybraté: %1$s</string>
     <string name="wikis_access_no_groups">Nie sú dostupné žiadne skupiny</string>
     <string name="wikis_access_set_success">Prístup aktualizovaný</string>
     <string name="wikis_access_revoke_success">Prístup odstránený</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Overení používatelia</string>
 
     <string name="wikis_revision_compare">Porovnať zmeny</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">podľa %1$s</string>
     <string name="wikis_revision_show_page">Zobraziť stránku</string>
     <string name="wikis_revision_compare_failed">Predchádzajúcu verziu na porovnanie sa nepodarilo načítať.</string>
     <string name="wikis_revision_changes_from">Zmeny z verzie %1$d → %2$d</string>
@@ -376,6 +376,6 @@
         <item quantity="other">Nájdené %1$d výsledkov pre „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Popis sa nepodarilo uložiť</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Podporované súbory: obrázky, PDF, DOC, DOCX, TXT a MD.</string>
+    <string name="wikis_attachments_upload_limits">Veľké nahrávania môžu byť obmedzené konfiguráciou vášho servera alebo proxy.</string>
 </resources>

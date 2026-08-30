@@ -44,8 +44,8 @@
     <string name="wikis_rss_both">Alterações e comentários</string>
     <string name="wikis_rss_copied">URL RSS copiada para a área de transferência</string>
     <string name="wikis_rss_failed">Falha ao obter token RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Revogar acesso</string>
+    <string name="wikis_rss_revoked">Acesso RSS revogado</string>
     <string name="wikis_find_title">Encontrar wikis</string>
     <string name="wikis_find_no_results">Nenhum wiki encontrado</string>
     <string name="wikis_find_recommended_section">Wikis recomendados</string>
@@ -61,8 +61,8 @@
     <string name="wikis_comments_empty_title">Ainda não há comentários</string>
     <string name="wikis_comments_empty_subtitle">Seja o primeiro a comentar nesta página.</string>
     <string name="wikis_comment_action_reply">Responder</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Respondendo a %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancelar resposta</string>
     <string name="wikis_comment_action_edit">Editar</string>
     <string name="wikis_comment_action_delete">Excluir</string>
     <string name="wikis_comment_action_save">Salvar</string>
@@ -72,7 +72,7 @@
     <string name="wikis_comment_delete_confirm_message">Tem certeza de que deseja excluir este comentário? Isto também excluirá todas as respostas. Esta ação não pode ser desfeita.</string>
     <string name="wikis_comment_form_attach">Anexar arquivos</string>
     <string name="wikis_comment_expand">(expandir)</string>
-    <string name="wikis_editor_title_new">Criar nova página</string>
+    <string name="wikis_editor_title_new">Nova página</string>
     <string name="wikis_editor_preview">Pré-visualizar</string>
     <string name="wikis_editor_preview_untitled">Sem título</string>
     <string name="wikis_editor_edit">Editar</string>
@@ -86,7 +86,7 @@
     <string name="wikis_editor_title_label">Título</string>
     <string name="wikis_editor_slug_label">URL da página</string>
     <string name="wikis_editor_slug_hint">nome-da-minha-pagina</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Este será o caminho da página. Use letras minúsculas, números e hífens.</string>
     <string name="wikis_editor_content_label">Conteúdo</string>
     <string name="wikis_editor_summary_label">Resumo da edição (opcional)</string>
     <string name="wikis_editor_summary_hint">Descreva brevemente suas alterações</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_create_action">Criar</string>
     <string name="wikis_redirect_source_label">Fonte</string>
     <string name="wikis_redirect_target_label">Destino</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Criado</string>
     <string name="wikis_redirect_required_fields">Origem e destino são obrigatórios</string>
     <string name="wikis_redirect_created_success">Redirecionamento criado</string>
     <string name="wikis_redirect_create_failed">Falha ao criar redirecionamento</string>
@@ -165,8 +165,8 @@
     <string name="wikis_attachments_view_grid">Visualização em grade</string>
     <string name="wikis_attachments_view_list">Visualização em lista</string>
     <string name="wikis_attachments_copy_embed">Copiar link de incorporação</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Link de incorporação copiado</string>
+    <string name="wikis_attachments_download">Baixar</string>
     <string name="wikis_attachments_copy_success">Link de incorporação copiado</string>
     <string name="wikis_attachments_delete">Excluir</string>
     <string name="wikis_attachments_delete_confirm_title">Excluir anexo</string>
@@ -214,11 +214,11 @@
     <string name="wikis_access_owner_label">Proprietário</string>
     <string name="wikis_access_tab_users">Usuários</string>
     <string name="wikis_access_tab_groups">Grupos</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Outro</string>
+    <string name="wikis_access_select_rule">Selecione uma regra</string>
+    <string name="wikis_access_authenticated_desc">Qualquer pessoa logada</string>
+    <string name="wikis_access_anyone_desc">Incluindo usuários anônimos</string>
+    <string name="wikis_access_selected">Selecionado: %1$s</string>
     <string name="wikis_access_no_groups">Nenhum grupo disponível</string>
     <string name="wikis_access_set_success">Acesso atualizado</string>
     <string name="wikis_access_revoke_success">Acesso removido</string>
@@ -309,11 +309,11 @@
     <string name="wikis_access_subject_authenticated">Usuários autenticados</string>
 
     <string name="wikis_revision_compare">Comparar alterações</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">por %1$s</string>
     <string name="wikis_revision_show_page">Mostrar página</string>
     <string name="wikis_revision_compare_failed">Não foi possível carregar a versão anterior para comparação.</string>
     <string name="wikis_revision_changes_from">Alterações da versão %1$d → %2$d</string>
     <string name="wikis_attachments_caption_save_failed">Não foi possível salvar a legenda</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Arquivos suportados: imagens, PDF, DOC, DOCX, TXT e MD.</string>
+    <string name="wikis_attachments_upload_limits">O envio de arquivos grandes pode ser limitado pela configuração do seu servidor ou proxy.</string>
 </resources>

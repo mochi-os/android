@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">ការផ្លាស់ប្តូរ និងមតិយោបល់</string>
     <string name="wikis_rss_copied">បានចម្លង RSS URL ទៅ clipboard</string>
     <string name="wikis_rss_failed">បរាជ័យក្នុងការទទួលយកថូខឹន RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">ដកហូតការចូលប្រើ</string>
+    <string name="wikis_rss_revoked">បានដកហូតការចូលប្រើ RSS</string>
     <string name="wikis_find_title">ស្វែងរកវិគី</string>
     <string name="wikis_find_no_results">រកមិនឃើញ wiki</string>
     <string name="wikis_find_recommended_section">Wiki ដែលបានណែនាំ</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">មិនទាន់មានមតិយោបល់</string>
     <string name="wikis_comments_empty_subtitle">ក្លាយជាមនុស្សដំបូងដែលផ្តល់មតិយោបល់លើទំព័រនេះ។</string>
     <string name="wikis_comment_action_reply">ឆ្លើយតប</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">កំពុងឆ្លើយតបទៅ %1$s</string>
+    <string name="wikis_comment_clear_reply">បោះបង់ការឆ្លើយតប</string>
     <string name="wikis_comment_action_edit">កែសម្រួល</string>
     <string name="wikis_comment_action_delete">លុប</string>
     <string name="wikis_comment_action_save">រក្សាទុក</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">តើអ្នកប្រាកដថាចង់លុបមតិយោបល់នេះមែនទេ? វានឹងលុបការឆ្លើយតបទាំងអស់ផងដែរ។ សកម្មភាពនេះមិនអាចបញ្ច្រាសបានទេ។</string>
     <string name="wikis_comment_form_attach">ភ្ជាប់ឯកសារ</string>
     <string name="wikis_comment_expand">(ពង្រីក)</string>
-    <string name="wikis_editor_title_new">បង្កើតទំព័រថ្មី</string>
+    <string name="wikis_editor_title_new">ទំព័រថ្មី</string>
     <string name="wikis_editor_preview">មើលជាមុន</string>
     <string name="wikis_editor_preview_untitled">គ្មានចំណងជើង</string>
     <string name="wikis_editor_edit">កែសម្រួល</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">ចំណងជើង</string>
     <string name="wikis_editor_slug_label">URL ទំព័រ</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">នេះនឹងជាផ្លូវសម្រាប់ទំព័រ។ ប្រើអក្សរតូច លេខ និងសហសញ្ញា។</string>
     <string name="wikis_editor_content_label">មាតិកា</string>
     <string name="wikis_editor_summary_label">កែសម្រួលសេចក្ដីសង្ខេប (ស្រេចចិត្ត)</string>
     <string name="wikis_editor_summary_hint">ពណ៌នាសង្ខេបពីការផ្លាស់ប្តូររបស់អ្នក</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">បង្កើត</string>
     <string name="wikis_redirect_source_label">ប្រភព</string>
     <string name="wikis_redirect_target_label">គោលដៅ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">បានបង្កើត</string>
     <string name="wikis_redirect_required_fields">ទាំងប្រភព និងគោលដៅគឺត្រូវការ</string>
     <string name="wikis_redirect_created_success">បានបង្កើត redirect</string>
     <string name="wikis_redirect_create_failed">បរាជ័យក្នុងការបង្កើតការបញ្ជូនបន្ត</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ទិដ្ឋភាពក្រឡា</string>
     <string name="wikis_attachments_view_list">ទិដ្ឋភាពបញ្ជី</string>
     <string name="wikis_attachments_copy_embed">ចម្លងតំណបង្កប់</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">បានចម្លងតំណបង្កប់</string>
+    <string name="wikis_attachments_download">ទាញយក</string>
     <string name="wikis_attachments_copy_success">បានចម្លងតំណបង្កប់</string>
     <string name="wikis_attachments_delete">លុប</string>
     <string name="wikis_attachments_delete_confirm_title">លុបឯកសារភ្ជាប់</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">ម្ចាស់</string>
     <string name="wikis_access_tab_users">អ្នកប្រើប្រាស់</string>
     <string name="wikis_access_tab_groups">ក្រុម</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">ផ្សេងទៀត</string>
+    <string name="wikis_access_select_rule">ជ្រើសរើសច្បាប់</string>
+    <string name="wikis_access_authenticated_desc">នរណាម្នាក់ដែលបានចូល</string>
+    <string name="wikis_access_anyone_desc">រួមទាំងអ្នកប្រើអនាមិក</string>
+    <string name="wikis_access_selected">បានជ្រើសរើស៖ %1$s</string>
     <string name="wikis_access_no_groups">មិនមានក្រុម</string>
     <string name="wikis_access_set_success">បានធ្វើបច្ចុប្បន្នភាពការចូលប្រើ</string>
     <string name="wikis_access_revoke_success">បានដកការចូលប្រើ</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">អ្នកប្រើដែលបានផ្ទៀងផ្ទាត់</string>
 
     <string name="wikis_revision_compare">ប្រៀបធៀបការផ្លាស់ប្ដូរ</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">ដោយ %1$s</string>
     <string name="wikis_revision_show_page">បង្ហាញទំព័រ</string>
     <string name="wikis_revision_compare_failed">មិនអាចផ្ទុកកំណែមុនសម្រាប់ការប្រៀបធៀបបានទេ។</string>
     <string name="wikis_revision_changes_from">ការផ្លាស់ប្ដូរពីកំណែ %1$d → %2$d</string>
@@ -346,6 +346,6 @@
         <item quantity="other">បានរកឃើញ %1$d លទ្ធផល សម្រាប់ "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">មិនអាចរក្សាទុកចំណងជើងបានទេ</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">ឯកសារដែលគាំទ្រ៖ រូបភាព, PDF, DOC, DOCX, TXT និង MD។</string>
+    <string name="wikis_attachments_upload_limits">ការផ្ទុកឡើងធំៗអាចត្រូវបានកំណត់ដោយការកំណត់រចនាសម្ព័ន្ធម៉ាស៊ីនមេ ឬប្រូកស៊ីរបស់អ្នក។</string>
 </resources>

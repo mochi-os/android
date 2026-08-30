@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">Vähemmän tällaisia</string>
     <string name="feeds_no_tags">Ei tunnisteita</string>
     <string name="feeds_anonymous">Anonyymi</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Vastaus käyttäjälle %1$s</string>
     <string name="feeds_attach_file">Liitä tiedosto</string>
     <string name="feeds_tag_label">Tunnisteen nimi</string>
     <string name="feeds_select_feed">Valitse syöte</string>

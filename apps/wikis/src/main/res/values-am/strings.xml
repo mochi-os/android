@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">ለውጦችና አስተያየቶች</string>
     <string name="wikis_rss_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="wikis_rss_failed">የRSS ቶከን ማግኘት አልተሳካም</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">መዳረሻን ሻር</string>
+    <string name="wikis_rss_revoked">የRSS መዳረሻ ተሽሯል</string>
     <string name="wikis_find_title">ዊኪዎችን ፈልግ</string>
     <string name="wikis_find_no_results">ምንም ዊኪዎች አልተገኙም</string>
     <string name="wikis_find_recommended_section">የተመከሩ ዊኪዎች</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">እስካሁን አስተያየቶች የሉም</string>
     <string name="wikis_comments_empty_subtitle">በዚህ ገጽ ላይ የመጀመሪያው አስተያየት ሰጪ ሁን።</string>
     <string name="wikis_comment_action_reply">ምላሽ ስጥ</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">ለ%1$s መልስ በመስጠት ላይ</string>
+    <string name="wikis_comment_clear_reply">ምላሽ ሰርዝ</string>
     <string name="wikis_comment_action_edit">አስተካክል</string>
     <string name="wikis_comment_action_delete">ሰርዝ</string>
     <string name="wikis_comment_action_save">ያስቀምጡ</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">ይህን አስተያየት መሰረዝ እንደምትፈልግ እርግጠኛ ነህ? ይህ ሁሉንም ምላሾችም ይሰርዛል። ይህ እርምጃ ሊቀለበስ አይችልም።</string>
     <string name="wikis_comment_form_attach">ፋይሎችን አያይዝ</string>
     <string name="wikis_comment_expand">(አስፋ)</string>
-    <string name="wikis_editor_title_new">አዲስ ገጽ ፍጠር</string>
+    <string name="wikis_editor_title_new">አዲስ ገጽ</string>
     <string name="wikis_editor_preview">ቅድመ ዕይታ</string>
     <string name="wikis_editor_preview_untitled">ርዕስ የለሽ</string>
     <string name="wikis_editor_edit">አስተካክል</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">ርዕስ</string>
     <string name="wikis_editor_slug_label">የገጽ ዩአርኤል</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">ይህ የገጹ መንገድ ይሆናል። ትናንሽ ፊደላት፣ ቁጥሮች፣ እና ጭረቶችን ተጠቀም።</string>
     <string name="wikis_editor_content_label">ይዘት</string>
     <string name="wikis_editor_summary_label">የአርትዖት ማጠቃለያ (አማራጭ)</string>
     <string name="wikis_editor_summary_hint">ለውጦችህን በአጭሩ ግለጽ</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">ፍጠር</string>
     <string name="wikis_redirect_source_label">ምንጭ</string>
     <string name="wikis_redirect_target_label">ዒላማ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">ተፈጥሯል</string>
     <string name="wikis_redirect_required_fields">ሁለቱም ምንጭና ኢላማ ያስፈልጋሉ</string>
     <string name="wikis_redirect_created_success">ድጋሚ ማዘዋወር ተፈጥሯል</string>
     <string name="wikis_redirect_create_failed">ማዘዋወሪያ መፍጠር አልተሳካም</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ፍርግርግ እይታ</string>
     <string name="wikis_attachments_view_list">የዝርዝር እይታ</string>
     <string name="wikis_attachments_copy_embed">የማስገቢያ አገናኝ ቅዳ</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">የመክተቻ አገናኝ ተቀድቷል</string>
+    <string name="wikis_attachments_download">አውርድ</string>
     <string name="wikis_attachments_copy_success">የመክተቻ አገናኝ ተቀድቷል</string>
     <string name="wikis_attachments_delete">ሰርዝ</string>
     <string name="wikis_attachments_delete_confirm_title">አባሪ ሰርዝ</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">ባለቤት</string>
     <string name="wikis_access_tab_users">ተጠቃሚዎች</string>
     <string name="wikis_access_tab_groups">ቡድኖች</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">ሌላ</string>
+    <string name="wikis_access_select_rule">ደንብ ይምረጡ</string>
+    <string name="wikis_access_authenticated_desc">የገባ ማንኛውም ሰው</string>
+    <string name="wikis_access_anyone_desc">ማንነታቸው ያልታወቁ ተጠቃሚዎችን ጨምሮ</string>
+    <string name="wikis_access_selected">የተመረጠ: %1$s</string>
     <string name="wikis_access_no_groups">ምንም ቡድኖች የሉም</string>
     <string name="wikis_access_set_success">መዳረሻ ተዘምኗል</string>
     <string name="wikis_access_revoke_success">መዳረሻ ተወግዷል</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">የተረጋገጡ ተጠቃሚዎች</string>
 
     <string name="wikis_revision_compare">ለውጦችን አወዳድር</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">በ%1$s</string>
     <string name="wikis_revision_show_page">ገጽ አሳይ</string>
     <string name="wikis_revision_compare_failed">ለማነጻጸር ቀዳሚውን ስሪት መጫን አልተቻለም።</string>
     <string name="wikis_revision_changes_from">ከስሪት %1$d → %2$d ለውጦች</string>
@@ -356,6 +356,6 @@
         <item quantity="other">ለ«%2$s» %1$d ውጤቶች ተገኘ</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">መግለጫ ጽሑፍን ማስቀመጥ አልተቻለም</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">የሚደገፉ ፋይሎች፦ ምስሎች፣ PDF፣ DOC፣ DOCX፣ TXT እና MD።</string>
+    <string name="wikis_attachments_upload_limits">ትላልቅ ስቀላዎች በአገልጋይዎ ወይም በተኪ ውቅረትዎ ሊገደቡ ይችላሉ።</string>
 </resources>

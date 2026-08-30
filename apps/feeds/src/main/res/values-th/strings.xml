@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">น้อยลงแบบนี้</string>
     <string name="feeds_no_tags">ไม่มีแท็ก</string>
     <string name="feeds_anonymous">ไม่ระบุชื่อ</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">กำลังตอบกลับ %1$s</string>
     <string name="feeds_attach_file">แนบไฟล์</string>
     <string name="feeds_tag_label">ป้ายแท็ก</string>
     <string name="feeds_file">ไฟล์</string>

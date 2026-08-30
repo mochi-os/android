@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Тағйирот ва шарҳҳо</string>
     <string name="wikis_rss_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="wikis_rss_failed">Гирифтани токени RSS ба анҷом нарасид</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Дастрасиро бекор кунед</string>
+    <string name="wikis_rss_revoked">Дастрасии RSS бекор карда шуд</string>
     <string name="wikis_find_title">Викиҳоро ёбед</string>
     <string name="wikis_find_no_results">Ягон вики ёфт нашуд</string>
     <string name="wikis_find_recommended_section">Викиҳои тавсияшуда</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">То ҳол ягон шарҳ нест</string>
     <string name="wikis_comments_empty_subtitle">Аввалин шуда дар ин саҳифа шарҳ нависед.</string>
     <string name="wikis_comment_action_reply">Ҷавоб</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Ҷавоб ба %1$s</string>
+    <string name="wikis_comment_clear_reply">Бекор кардани ҷавоб</string>
     <string name="wikis_comment_action_edit">Таҳрир</string>
     <string name="wikis_comment_action_delete">Нест кардан</string>
     <string name="wikis_comment_action_save">Захира</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед ин шарҳро нест кунед? Ин ҳамчунин ҳама ҷавобҳоро нест мекунад. Ин амалро бекор кардан мумкин нест.</string>
     <string name="wikis_comment_form_attach">Замимаи файлҳо</string>
     <string name="wikis_comment_expand">(васеъ кардан)</string>
-    <string name="wikis_editor_title_new">Эҷоди саҳифаи нав</string>
+    <string name="wikis_editor_title_new">Саҳифаи нав</string>
     <string name="wikis_editor_preview">Пешнамоиш</string>
     <string name="wikis_editor_preview_untitled">Беном</string>
     <string name="wikis_editor_edit">Таҳрир</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Сарлавҳа</string>
     <string name="wikis_editor_slug_label">URL-и саҳифа</string>
     <string name="wikis_editor_slug_hint">номи-саҳифаи-ман</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Ин роҳи саҳифа хоҳад шуд. Ҳарфҳои хурд, рақамҳо ва тираҳоро истифода баред.</string>
     <string name="wikis_editor_content_label">Мундариҷа</string>
     <string name="wikis_editor_summary_label">Таҳрири мухтасар (ихтиёрӣ)</string>
     <string name="wikis_editor_summary_hint">Тағйиротатонро мухтасар тавсиф кунед</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Эҷод кардан</string>
     <string name="wikis_redirect_source_label">Манбаъ</string>
     <string name="wikis_redirect_target_label">Ҳадаф</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Эҷодшуда</string>
     <string name="wikis_redirect_required_fields">Ҳам манбаъ ва ҳам ҳадаф зарур аст</string>
     <string name="wikis_redirect_created_success">Тағйири масир эҷод шуд</string>
     <string name="wikis_redirect_create_failed">Эҷоди ивазкунӣ ба анҷом нарасид</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Намуди шабака</string>
     <string name="wikis_attachments_view_list">Намуди рӯйхат</string>
     <string name="wikis_attachments_copy_embed">Нусхабардории пайванди ҷойгузин</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Пайванди ҷойгузорӣ нусхабардорӣ шуд</string>
+    <string name="wikis_attachments_download">Боргирӣ</string>
     <string name="wikis_attachments_copy_success">Пайванди ҷойгузорӣ нусхабардорӣ шуд</string>
     <string name="wikis_attachments_delete">Нест кардан</string>
     <string name="wikis_attachments_delete_confirm_title">Нест кардани замима</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Соҳиб</string>
     <string name="wikis_access_tab_users">Корбарон</string>
     <string name="wikis_access_tab_groups">Гурӯҳҳо</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Дигар</string>
+    <string name="wikis_access_select_rule">Қоидаро интихоб кунед</string>
+    <string name="wikis_access_authenticated_desc">Ҳар касе ки ворид шудааст</string>
+    <string name="wikis_access_anyone_desc">Аз ҷумла корбарони номаълум</string>
+    <string name="wikis_access_selected">Интихобшуда: %1$s</string>
     <string name="wikis_access_no_groups">Ягон гурӯҳ дастрас нест</string>
     <string name="wikis_access_set_success">Дастрасӣ навсозӣ шуд</string>
     <string name="wikis_access_revoke_success">Дастрасӣ хориҷ карда шуд</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Корбарони тасдиқшуда</string>
 
     <string name="wikis_revision_compare">Муқоисаи тағйирот</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">аз рӯи %1$s</string>
     <string name="wikis_revision_show_page">Нишон додани саҳифа</string>
     <string name="wikis_revision_compare_failed">Версияи қаблиро барои муқоиса бор кардан имконнопазир буд.</string>
     <string name="wikis_revision_changes_from">Тағйирот аз версияи %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">%1$d натиҷа барои "%2$s" ёфт шуд</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Зернавис захира нашуд</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Файлҳои дастгиришаванда: тасвирҳо, PDF, DOC, DOCX, TXT ва MD.</string>
+    <string name="wikis_attachments_upload_limits">Боргузориҳои калон метавонанд аз ҷониби танзимоти сервер ё проксии шумо маҳдуд карда шаванд.</string>
 </resources>

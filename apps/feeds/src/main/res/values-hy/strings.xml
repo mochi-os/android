@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Ավելի քիչ սրա նման</string>
     <string name="feeds_no_tags">Պիտակներ չկան</string>
     <string name="feeds_anonymous">Անանուն</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Պատասխանում եք %1$s-ին</string>
     <string name="feeds_attach_file">Կցել ֆայլ</string>
     <string name="feeds_tag_label">Պիտակի անվանում</string>
     <string name="feeds_select_feed">Ընտրեք հոսք</string>

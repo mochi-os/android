@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Minder zoals dit</string>
     <string name="feeds_no_tags">Geen tags</string>
     <string name="feeds_anonymous">Anoniem</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Antwoorden op %1$s</string>
     <string name="feeds_attach_file">Bestand bijvoegen</string>
     <string name="feeds_tag_label">Taglabel</string>
     <string name="feeds_file">Bestand</string>

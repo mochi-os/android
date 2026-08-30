@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Mas kaunti na katulad nito</string>
     <string name="feeds_no_tags">Walang tag</string>
     <string name="feeds_anonymous">Anonimo</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Tumutugon kay %1$s</string>
     <string name="feeds_attach_file">Maglakip ng file</string>
     <string name="feeds_tag_label">Label ng tag</string>
     <string name="feeds_file">File</string>

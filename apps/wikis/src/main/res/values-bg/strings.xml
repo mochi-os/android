@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Промени и коментари</string>
     <string name="wikis_rss_copied">RSS URL е копиран в клипборда</string>
     <string name="wikis_rss_failed">Неуспешно получаване на RSS токен</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Отмяна на достъпа</string>
+    <string name="wikis_rss_revoked">Достъпът до RSS е отменен</string>
     <string name="wikis_find_title">Намери wiki-та</string>
     <string name="wikis_find_no_results">Не са намерени wiki</string>
     <string name="wikis_find_recommended_section">Препоръчани wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Все още няма коментари</string>
     <string name="wikis_comments_empty_subtitle">Бъдете първият, който коментира тази страница.</string>
     <string name="wikis_comment_action_reply">Отговор</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Отговор до %1$s</string>
+    <string name="wikis_comment_clear_reply">Отказ от отговора</string>
     <string name="wikis_comment_action_edit">Редактиране</string>
     <string name="wikis_comment_action_delete">Изтрий</string>
     <string name="wikis_comment_action_save">Запази</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Сигурни ли сте, че искате да изтриете този коментар? Това ще изтрие и всички отговори. Действието не може да бъде отменено.</string>
     <string name="wikis_comment_form_attach">Прикачи файлове</string>
     <string name="wikis_comment_expand">(разгъване)</string>
-    <string name="wikis_editor_title_new">Създай нова страница</string>
+    <string name="wikis_editor_title_new">Нова страница</string>
     <string name="wikis_editor_preview">Преглед</string>
     <string name="wikis_editor_preview_untitled">Без заглавие</string>
     <string name="wikis_editor_edit">Редактиране</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Заглавие</string>
     <string name="wikis_editor_slug_label">URL на страницата</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Това ще бъде пътят за страницата. Използвайте малки букви, цифри и тирета.</string>
     <string name="wikis_editor_content_label">Съдържание</string>
     <string name="wikis_editor_summary_label">Редактиране на резюмето (по избор)</string>
     <string name="wikis_editor_summary_hint">Опишете накратко промените си</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Създай</string>
     <string name="wikis_redirect_source_label">Източник</string>
     <string name="wikis_redirect_target_label">Цел</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Създадено</string>
     <string name="wikis_redirect_required_fields">Източникът и целта са задължителни</string>
     <string name="wikis_redirect_created_success">Пренасочването е създадено</string>
     <string name="wikis_redirect_create_failed">Неуспешно създаване на пренасочване</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Изглед на мрежа</string>
     <string name="wikis_attachments_view_list">Изглед на списък</string>
     <string name="wikis_attachments_copy_embed">Копирай връзката за вграждане</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Връзката за вграждане е копирана</string>
+    <string name="wikis_attachments_download">Изтегляне</string>
     <string name="wikis_attachments_copy_success">Връзката за вграждане е копирана</string>
     <string name="wikis_attachments_delete">Изтрий</string>
     <string name="wikis_attachments_delete_confirm_title">Изтрий прикачения файл</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Собственик</string>
     <string name="wikis_access_tab_users">Потребители</string>
     <string name="wikis_access_tab_groups">Групи</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Друго</string>
+    <string name="wikis_access_select_rule">Изберете правило</string>
+    <string name="wikis_access_authenticated_desc">Всеки, който е влязъл</string>
+    <string name="wikis_access_anyone_desc">Включително анонимни потребители</string>
+    <string name="wikis_access_selected">Избрано: %1$s</string>
     <string name="wikis_access_no_groups">Няма налични групи</string>
     <string name="wikis_access_set_success">Достъпът е обновен</string>
     <string name="wikis_access_revoke_success">Достъпът е премахнат</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Удостоверени потребители</string>
 
     <string name="wikis_revision_compare">Сравняване на промените</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">по %1$s</string>
     <string name="wikis_revision_show_page">Показване на страницата</string>
     <string name="wikis_revision_compare_failed">Предишната версия не можа да бъде заредена за сравнение.</string>
     <string name="wikis_revision_changes_from">Промени от версия %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Намерени %1$d резултата за „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Надписът не можа да бъде запазен</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Поддържани файлове: изображения, PDF, DOC, DOCX, TXT и MD.</string>
+    <string name="wikis_attachments_upload_limits">Големите качвания може да са ограничени от конфигурацията на вашия сървър или прокси.</string>
 </resources>

@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Menos como isto</string>
     <string name="feeds_no_tags">Sem etiquetas</string>
     <string name="feeds_anonymous">Anónimo</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">A responder a %1$s</string>
     <string name="feeds_attach_file">Anexar ficheiro</string>
     <string name="feeds_tag_label">Etiqueta</string>
     <string name="feeds_file">Ficheiro</string>

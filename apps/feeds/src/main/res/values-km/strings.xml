@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">តិចបែបនេះ</string>
     <string name="feeds_no_tags">មិនមានស្លាក</string>
     <string name="feeds_anonymous">អនាមិក</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">កំពុងឆ្លើយតបទៅ %1$s</string>
     <string name="feeds_attach_file">ភ្ជាប់ឯកសារ</string>
     <string name="feeds_tag_label">ស្លាក</string>
     <string name="feeds_file">ឯកសារ</string>

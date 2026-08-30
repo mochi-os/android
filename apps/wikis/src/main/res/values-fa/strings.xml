@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">تغییرات و نظرها</string>
     <string name="wikis_rss_copied">URL RSS در کلیپ‌بورد کپی شد</string>
     <string name="wikis_rss_failed">دریافت توکن RSS ناموفق بود</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">لغو دسترسی</string>
+    <string name="wikis_rss_revoked">دسترسی RSS لغو شد</string>
     <string name="wikis_find_title">یافتن ویکی‌ها</string>
     <string name="wikis_find_no_results">ویکی‌ای یافت نشد</string>
     <string name="wikis_find_recommended_section">ویکی‌های توصیه‌شده</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">هنوز نظری وجود ندارد</string>
     <string name="wikis_comments_empty_subtitle">اولین کسی باشید که در این صفحه نظر می‌دهد.</string>
     <string name="wikis_comment_action_reply">پاسخ</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">در پاسخ به %1$s</string>
+    <string name="wikis_comment_clear_reply">لغو پاسخ</string>
     <string name="wikis_comment_action_edit">ویرایش</string>
     <string name="wikis_comment_action_delete">حذف</string>
     <string name="wikis_comment_action_save">ذخیره</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">آیا از حذف این نظر مطمئن هستید؟ همهٔ پاسخ‌ها نیز حذف خواهند شد. این عمل قابل بازگشت نیست.</string>
     <string name="wikis_comment_form_attach">پیوست فایل‌ها</string>
     <string name="wikis_comment_expand">(باز کردن)</string>
-    <string name="wikis_editor_title_new">ساخت صفحهٔ جدید</string>
+    <string name="wikis_editor_title_new">صفحه جدید</string>
     <string name="wikis_editor_preview">پیش‌نمایش</string>
     <string name="wikis_editor_preview_untitled">بدون عنوان</string>
     <string name="wikis_editor_edit">ویرایش</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">عنوان</string>
     <string name="wikis_editor_slug_label">URL صفحه</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">این مسیر صفحه خواهد بود. از حروف کوچک، اعداد و خط تیره استفاده کنید.</string>
     <string name="wikis_editor_content_label">محتوا</string>
     <string name="wikis_editor_summary_label">ویرایش خلاصه (اختیاری)</string>
     <string name="wikis_editor_summary_hint">تغییرات خود را به‌طور خلاصه توضیح دهید</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">ساختن</string>
     <string name="wikis_redirect_source_label">منبع</string>
     <string name="wikis_redirect_target_label">هدف</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">ساخته شد</string>
     <string name="wikis_redirect_required_fields">هم مبدأ و هم مقصد الزامی هستند</string>
     <string name="wikis_redirect_created_success">تغییر مسیر ایجاد شد</string>
     <string name="wikis_redirect_create_failed">ایجاد تغییر مسیر ناموفق بود</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">نمای شبکه‌ای</string>
     <string name="wikis_attachments_view_list">نمای فهرست</string>
     <string name="wikis_attachments_copy_embed">کپی پیوند جاسازی</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">لینک جاسازی کپی شد</string>
+    <string name="wikis_attachments_download">دانلود</string>
     <string name="wikis_attachments_copy_success">لینک جاسازی کپی شد</string>
     <string name="wikis_attachments_delete">حذف</string>
     <string name="wikis_attachments_delete_confirm_title">حذف پیوست</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">مالک</string>
     <string name="wikis_access_tab_users">کاربران</string>
     <string name="wikis_access_tab_groups">گروه‌ها</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">سایر</string>
+    <string name="wikis_access_select_rule">یک قانون انتخاب کنید</string>
+    <string name="wikis_access_authenticated_desc">هر کسی که وارد شده باشد</string>
+    <string name="wikis_access_anyone_desc">شامل کاربران ناشناس</string>
+    <string name="wikis_access_selected">انتخاب‌شده: %1$s</string>
     <string name="wikis_access_no_groups">هیچ گروهی در دسترس نیست</string>
     <string name="wikis_access_set_success">دسترسی به‌روزرسانی شد</string>
     <string name="wikis_access_revoke_success">دسترسی حذف شد</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">کاربران احراز هویت‌شده</string>
 
     <string name="wikis_revision_compare">مقایسهٔ تغییرات</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">بر اساس %1$s</string>
     <string name="wikis_revision_show_page">نمایش صفحه</string>
     <string name="wikis_revision_compare_failed">بارگذاری نسخهٔ پیشین برای مقایسه ممکن نشد.</string>
     <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">%1$d نتیجه برای «%2$s» یافت شد</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ذخیرهٔ شرح انجام نشد</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">فایل‌های پشتیبانی‌شده: تصاویر، PDF، DOC، DOCX، TXT و MD.</string>
+    <string name="wikis_attachments_upload_limits">بارگذاری‌های بزرگ ممکن است با پیکربندی سرور یا پروکسی شما محدود شوند.</string>
 </resources>

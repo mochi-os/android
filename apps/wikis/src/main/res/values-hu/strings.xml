@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Változások és megjegyzések</string>
     <string name="wikis_rss_copied">RSS URL vágólapra másolva</string>
     <string name="wikis_rss_failed">Nem sikerült megszerezni az RSS tokent</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Hozzáférés visszavonása</string>
+    <string name="wikis_rss_revoked">RSS-hozzáférés visszavonva</string>
     <string name="wikis_find_title">Wikik keresése</string>
     <string name="wikis_find_no_results">Nem találhatók wikik</string>
     <string name="wikis_find_recommended_section">Ajánlott wikik</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Még nincsenek hozzászólások</string>
     <string name="wikis_comments_empty_subtitle">Legyen Ön az első, aki megjegyzést fűz az oldalhoz.</string>
     <string name="wikis_comment_action_reply">Válasz</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Válasz neki: %1$s</string>
+    <string name="wikis_comment_clear_reply">Válasz elvetése</string>
     <string name="wikis_comment_action_edit">Szerkesztés</string>
     <string name="wikis_comment_action_delete">Törlés</string>
     <string name="wikis_comment_action_save">Mentés</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Biztosan törli ezt a megjegyzést? Ez az összes választ is törli. A művelet nem vonható vissza.</string>
     <string name="wikis_comment_form_attach">Fájlok csatolása</string>
     <string name="wikis_comment_expand">(kibontás)</string>
-    <string name="wikis_editor_title_new">Új oldal létrehozása</string>
+    <string name="wikis_editor_title_new">Új oldal</string>
     <string name="wikis_editor_preview">Előnézet</string>
     <string name="wikis_editor_preview_untitled">Cím nélküli</string>
     <string name="wikis_editor_edit">Szerkesztés</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Cím</string>
     <string name="wikis_editor_slug_label">Oldal URL</string>
     <string name="wikis_editor_slug_hint">oldalam-neve</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Ez lesz az oldal elérési útja. Használj kisbetűket, számokat és kötőjeleket.</string>
     <string name="wikis_editor_content_label">Tartalom</string>
     <string name="wikis_editor_summary_label">Szerkesztés összefoglalója (opcionális)</string>
     <string name="wikis_editor_summary_hint">Röviden írja le a módosításokat</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Létrehozás</string>
     <string name="wikis_redirect_source_label">Forrás</string>
     <string name="wikis_redirect_target_label">Cél</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Létrehozva</string>
     <string name="wikis_redirect_required_fields">A forrás és a cél is kötelező</string>
     <string name="wikis_redirect_created_success">Átirányítás létrehozva</string>
     <string name="wikis_redirect_create_failed">Nem sikerült létrehozni az átirányítást</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Rács nézet</string>
     <string name="wikis_attachments_view_list">Listanézet</string>
     <string name="wikis_attachments_copy_embed">Beágyazási hivatkozás másolása</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Beágyazási hivatkozás másolva</string>
+    <string name="wikis_attachments_download">Letöltés</string>
     <string name="wikis_attachments_copy_success">Beágyazási hivatkozás másolva</string>
     <string name="wikis_attachments_delete">Törlés</string>
     <string name="wikis_attachments_delete_confirm_title">Melléklet törlése</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Tulajdonos</string>
     <string name="wikis_access_tab_users">Felhasználók</string>
     <string name="wikis_access_tab_groups">Csoportok</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Egyéb</string>
+    <string name="wikis_access_select_rule">Válasszon szabályt</string>
+    <string name="wikis_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
+    <string name="wikis_access_anyone_desc">Beleértve a névtelen felhasználókat</string>
+    <string name="wikis_access_selected">Kiválasztva: %1$s</string>
     <string name="wikis_access_no_groups">Nincsenek elérhető csoportok</string>
     <string name="wikis_access_set_success">Hozzáférés frissítve</string>
     <string name="wikis_access_revoke_success">Hozzáférés eltávolítva</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Hitelesített felhasználók</string>
 
     <string name="wikis_revision_compare">Változások összehasonlítása</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s szerint</string>
     <string name="wikis_revision_show_page">Oldal megjelenítése</string>
     <string name="wikis_revision_compare_failed">Az előző verziót nem sikerült betölteni az összehasonlításhoz.</string>
     <string name="wikis_revision_changes_from">Változások a(z) %1$d → %2$d verzióhoz képest</string>
@@ -356,6 +356,6 @@
         <item quantity="other">%1$d találat találat «%2$s» kifejezésre</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nem sikerült menteni a képaláírást</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Támogatott fájlok: képek, PDF, DOC, DOCX, TXT és MD.</string>
+    <string name="wikis_attachments_upload_limits">A nagy feltöltéseket a kiszolgáló vagy a proxy beállításai korlátozhatják.</string>
 </resources>

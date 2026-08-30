@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Ändringar och kommentarer</string>
     <string name="wikis_rss_copied">RSS-URL kopierad till urklipp</string>
     <string name="wikis_rss_failed">Kunde inte hämta RSS-token</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Återkalla åtkomst</string>
+    <string name="wikis_rss_revoked">RSS-åtkomst återkallad</string>
     <string name="wikis_find_title">Hitta wikis</string>
     <string name="wikis_find_no_results">Inga wikis hittades</string>
     <string name="wikis_find_recommended_section">Rekommenderade wikis</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Inga kommentarer ännu</string>
     <string name="wikis_comments_empty_subtitle">Var först med att kommentera denna sida.</string>
     <string name="wikis_comment_action_reply">Svara</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Svarar %1$s</string>
+    <string name="wikis_comment_clear_reply">Avbryt svar</string>
     <string name="wikis_comment_action_edit">Redigera</string>
     <string name="wikis_comment_action_delete">Ta bort</string>
     <string name="wikis_comment_action_save">Spara</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Är du säker på att du vill ta bort denna kommentar? Detta tar även bort alla svar. Denna åtgärd kan inte ångras.</string>
     <string name="wikis_comment_form_attach">Bifoga filer</string>
     <string name="wikis_comment_expand">(visa mer)</string>
-    <string name="wikis_editor_title_new">Skapa ny sida</string>
+    <string name="wikis_editor_title_new">Ny sida</string>
     <string name="wikis_editor_preview">Förhandsgranska</string>
     <string name="wikis_editor_preview_untitled">Namnlös</string>
     <string name="wikis_editor_edit">Redigera</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Sid-URL</string>
     <string name="wikis_editor_slug_hint">min-sida</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Detta blir sidans sökväg. Använd små bokstäver, siffror och bindestreck.</string>
     <string name="wikis_editor_content_label">Innehåll</string>
     <string name="wikis_editor_summary_label">Sammanfattning av ändring (valfritt)</string>
     <string name="wikis_editor_summary_hint">Beskriv dina ändringar kort</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Skapa</string>
     <string name="wikis_redirect_source_label">Källa</string>
     <string name="wikis_redirect_target_label">Mål</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Skapad</string>
     <string name="wikis_redirect_required_fields">Både källa och mål krävs</string>
     <string name="wikis_redirect_created_success">Omdirigering skapad</string>
     <string name="wikis_redirect_create_failed">Kunde inte skapa omdirigering</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Rutnätsvy</string>
     <string name="wikis_attachments_view_list">Listvy</string>
     <string name="wikis_attachments_copy_embed">Kopiera inbäddningslänk</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Inbäddningslänk kopierad</string>
+    <string name="wikis_attachments_download">Ladda ner</string>
     <string name="wikis_attachments_copy_success">Inbäddningslänk kopierad</string>
     <string name="wikis_attachments_delete">Ta bort</string>
     <string name="wikis_attachments_delete_confirm_title">Ta bort bilaga</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Ägare</string>
     <string name="wikis_access_tab_users">Användare</string>
     <string name="wikis_access_tab_groups">Grupper</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Övrigt</string>
+    <string name="wikis_access_select_rule">Välj en regel</string>
+    <string name="wikis_access_authenticated_desc">Alla som är inloggade</string>
+    <string name="wikis_access_anyone_desc">Inklusive anonyma användare</string>
+    <string name="wikis_access_selected">Valt: %1$s</string>
     <string name="wikis_access_no_groups">Inga grupper tillgängliga</string>
     <string name="wikis_access_set_success">Åtkomst uppdaterad</string>
     <string name="wikis_access_revoke_success">Åtkomst borttagen</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentiserade användare</string>
 
     <string name="wikis_revision_compare">Jämför ändringar</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">av %1$s</string>
     <string name="wikis_revision_show_page">Visa sida</string>
     <string name="wikis_revision_compare_failed">Det gick inte att läsa in den tidigare versionen för jämförelse.</string>
     <string name="wikis_revision_changes_from">Ändringar från version %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Hittade %1$d resultat för ”%2$s”</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Det gick inte att spara bildtexten</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Filer som stöds: bilder, PDF, DOC, DOCX, TXT och MD.</string>
+    <string name="wikis_attachments_upload_limits">Stora uppladdningar kan begränsas av din server- eller proxykonfiguration.</string>
 </resources>

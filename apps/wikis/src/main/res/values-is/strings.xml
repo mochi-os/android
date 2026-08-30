@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Breytingar og athugasemdir</string>
     <string name="wikis_rss_copied">RSS-vefslóð afrituð á klippiborð</string>
     <string name="wikis_rss_failed">Tókst ekki að fá RSS-tóka</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Afturkalla aðgang</string>
+    <string name="wikis_rss_revoked">RSS-aðgangur afturkallaður</string>
     <string name="wikis_find_title">Finna wiki</string>
     <string name="wikis_find_no_results">Engin wiki fundust</string>
     <string name="wikis_find_recommended_section">Wiki sem mælt er með</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Engar athugasemdir ennþá</string>
     <string name="wikis_comments_empty_subtitle">Vertu fyrst/ur til að gera athugasemd við þessa síðu.</string>
     <string name="wikis_comment_action_reply">Svara</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Svar til %1$s</string>
+    <string name="wikis_comment_clear_reply">Hætta við svar</string>
     <string name="wikis_comment_action_edit">Breyta</string>
     <string name="wikis_comment_action_delete">Eyða</string>
     <string name="wikis_comment_action_save">Vista</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Ertu viss um að þú viljir eyða þessari athugasemd? Þetta mun einnig eyða öllum svörum. Þessari aðgerð er ekki hægt að afturkalla.</string>
     <string name="wikis_comment_form_attach">Hengja við skrár</string>
     <string name="wikis_comment_expand">(útvíkka)</string>
-    <string name="wikis_editor_title_new">Búa til nýja síðu</string>
+    <string name="wikis_editor_title_new">Ný síða</string>
     <string name="wikis_editor_preview">Forskoðun</string>
     <string name="wikis_editor_preview_untitled">Án titils</string>
     <string name="wikis_editor_edit">Breyta</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Titill</string>
     <string name="wikis_editor_slug_label">Vefslóð síðu</string>
     <string name="wikis_editor_slug_hint">minn-sida-nafn</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Þetta verður slóð síðunnar. Notaðu lágstafi, tölur og bandstrik.</string>
     <string name="wikis_editor_content_label">Efni</string>
     <string name="wikis_editor_summary_label">Samantekt breytinga (valfrjálst)</string>
     <string name="wikis_editor_summary_hint">Lýstu breytingum þínum stuttlega</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Búa til</string>
     <string name="wikis_redirect_source_label">Uppruni</string>
     <string name="wikis_redirect_target_label">Markmið</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Búið til</string>
     <string name="wikis_redirect_required_fields">Bæði uppruni og áfangastaður eru áskilin</string>
     <string name="wikis_redirect_created_success">Áframsending búin til</string>
     <string name="wikis_redirect_create_failed">Tókst ekki að búa til endurbeiningu</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Reitaskoðun</string>
     <string name="wikis_attachments_view_list">Listaskoðun</string>
     <string name="wikis_attachments_copy_embed">Afrita ívefjartengil</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Innfelldur tengill afritaður</string>
+    <string name="wikis_attachments_download">Hlaða niður</string>
     <string name="wikis_attachments_copy_success">Innfelldur tengill afritaður</string>
     <string name="wikis_attachments_delete">Eyða</string>
     <string name="wikis_attachments_delete_confirm_title">Eyða viðhengi</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Eigandi</string>
     <string name="wikis_access_tab_users">Notendur</string>
     <string name="wikis_access_tab_groups">Hópar</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Annað</string>
+    <string name="wikis_access_select_rule">Veldu reglu</string>
+    <string name="wikis_access_authenticated_desc">Allir sem eru skráðir inn</string>
+    <string name="wikis_access_anyone_desc">Þar á meðal nafnlausir notendur</string>
+    <string name="wikis_access_selected">Valið: %1$s</string>
     <string name="wikis_access_no_groups">Engir hópar tiltækir</string>
     <string name="wikis_access_set_success">Aðgangur uppfærður</string>
     <string name="wikis_access_revoke_success">Aðgangur fjarlægður</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Auðkenndir notendur</string>
 
     <string name="wikis_revision_compare">Bera saman breytingar</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">eftir %1$s</string>
     <string name="wikis_revision_show_page">Sýna síðu</string>
     <string name="wikis_revision_compare_failed">Ekki tókst að hlaða fyrri útgáfu til samanburðar.</string>
     <string name="wikis_revision_changes_from">Breytingar frá útgáfu %1$d → %2$d</string>
@@ -356,6 +356,6 @@
         <item quantity="other">Fann %1$d niðurstöður fyrir «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ekki tókst að vista myndatextann</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Studdar skrár: myndir, PDF, DOC, DOCX, TXT og MD.</string>
+    <string name="wikis_attachments_upload_limits">Stórar innhleðslur kunna að vera takmarkaðar af stillingum netþjóns eða staðgengils.</string>
 </resources>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">التغييرات والتعليقات</string>
     <string name="wikis_rss_copied">تم نسخ URL RSS إلى الحافظة</string>
     <string name="wikis_rss_failed">فشل الحصول على رمز RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">إلغاء الوصول</string>
+    <string name="wikis_rss_revoked">تم إلغاء وصول RSS</string>
     <string name="wikis_find_title">البحث عن الويكيات</string>
     <string name="wikis_find_no_results">لم يتم العثور على ويكي</string>
     <string name="wikis_find_recommended_section">ويكيات موصى بها</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">لا توجد تعليقات بعد</string>
     <string name="wikis_comments_empty_subtitle">كن أول من يعلق على هذه الصفحة.</string>
     <string name="wikis_comment_action_reply">رد</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">الرد على %1$s</string>
+    <string name="wikis_comment_clear_reply">إلغاء الرد</string>
     <string name="wikis_comment_action_edit">تعديل</string>
     <string name="wikis_comment_action_delete">حذف</string>
     <string name="wikis_comment_action_save">حفظ</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">هل أنت متأكد من حذف هذا التعليق؟ سيؤدي ذلك أيضًا إلى حذف جميع الردود. لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="wikis_comment_form_attach">إرفاق ملفات</string>
     <string name="wikis_comment_expand">(توسيع)</string>
-    <string name="wikis_editor_title_new">إنشاء صفحة جديدة</string>
+    <string name="wikis_editor_title_new">صفحة جديدة</string>
     <string name="wikis_editor_preview">معاينة</string>
     <string name="wikis_editor_preview_untitled">بدون عنوان</string>
     <string name="wikis_editor_edit">تعديل</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">العنوان</string>
     <string name="wikis_editor_slug_label">URL الصفحة</string>
     <string name="wikis_editor_slug_hint">اسم-صفحتي</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">سيكون هذا مسار الصفحة. استخدم الأحرف الصغيرة والأرقام والشرطات.</string>
     <string name="wikis_editor_content_label">المحتوى</string>
     <string name="wikis_editor_summary_label">ملخص التعديل (اختياري)</string>
     <string name="wikis_editor_summary_hint">صف تغييراتك باختصار</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">إنشاء</string>
     <string name="wikis_redirect_source_label">المصدر</string>
     <string name="wikis_redirect_target_label">الهدف</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">تم الإنشاء</string>
     <string name="wikis_redirect_required_fields">كل من المصدر والوجهة مطلوبان</string>
     <string name="wikis_redirect_created_success">تم إنشاء إعادة التوجيه</string>
     <string name="wikis_redirect_create_failed">فشل إنشاء التحويل</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">عرض الشبكة</string>
     <string name="wikis_attachments_view_list">عرض القائمة</string>
     <string name="wikis_attachments_copy_embed">نسخ رابط التضمين</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">تم نسخ رابط التضمين</string>
+    <string name="wikis_attachments_download">تنزيل</string>
     <string name="wikis_attachments_copy_success">تم نسخ رابط التضمين</string>
     <string name="wikis_attachments_delete">حذف</string>
     <string name="wikis_attachments_delete_confirm_title">حذف المرفق</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">المالك</string>
     <string name="wikis_access_tab_users">المستخدمون</string>
     <string name="wikis_access_tab_groups">المجموعات</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">أخرى</string>
+    <string name="wikis_access_select_rule">اختر قاعدة</string>
+    <string name="wikis_access_authenticated_desc">أي شخص مسجّل الدخول</string>
+    <string name="wikis_access_anyone_desc">بما في ذلك المستخدمون المجهولون</string>
+    <string name="wikis_access_selected">المحدد: %1$s</string>
     <string name="wikis_access_no_groups">لا توجد مجموعات متاحة</string>
     <string name="wikis_access_set_success">تم تحديث الوصول</string>
     <string name="wikis_access_revoke_success">تمت إزالة الوصول</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">المستخدمون المُوثَّقون</string>
 
     <string name="wikis_revision_compare">مقارنة التغييرات</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">حسب %1$s</string>
     <string name="wikis_revision_show_page">عرض الصفحة</string>
     <string name="wikis_revision_compare_failed">تعذّر تحميل الإصدار السابق للمقارنة.</string>
     <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$d → %2$d</string>
@@ -396,6 +396,6 @@
         <item quantity="other">تم العثور على %1$d نتائج لـ «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">تعذّر حفظ التسمية التوضيحية</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">الملفات المدعومة: الصور، PDF، DOC، DOCX، TXT، وMD.</string>
+    <string name="wikis_attachments_upload_limits">قد تكون عمليات الرفع الكبيرة محدودة بإعدادات الخادم أو الوكيل لديك.</string>
 </resources>

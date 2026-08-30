@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">આના જેવું ઓછું</string>
     <string name="feeds_no_tags">કોઈ ટૅગ નથી</string>
     <string name="feeds_anonymous">અનામી</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s ને જવાબ આપી રહ્યાં છો</string>
     <string name="feeds_attach_file">ફાઇલ જોડો</string>
     <string name="feeds_tag_label">ટૅગ લેબલ</string>
     <string name="feeds_select_feed">ફીડ પસંદ કરો</string>

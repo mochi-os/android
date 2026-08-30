@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Perubahan dan komentar</string>
     <string name="wikis_rss_copied">URL RSS disalin ke clipboard</string>
     <string name="wikis_rss_failed">Gagal mendapatkan token RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Cabut akses</string>
+    <string name="wikis_rss_revoked">Akses RSS dicabut</string>
     <string name="wikis_find_title">Cari wiki</string>
     <string name="wikis_find_no_results">Tidak ada wiki yang ditemukan</string>
     <string name="wikis_find_recommended_section">Wiki yang direkomendasikan</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Belum ada komentar</string>
     <string name="wikis_comments_empty_subtitle">Jadilah yang pertama berkomentar di halaman ini.</string>
     <string name="wikis_comment_action_reply">Balas</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Membalas %1$s</string>
+    <string name="wikis_comment_clear_reply">Batalkan balasan</string>
     <string name="wikis_comment_action_edit">Edit</string>
     <string name="wikis_comment_action_delete">Hapus</string>
     <string name="wikis_comment_action_save">Simpan</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Apakah Anda yakin ingin menghapus komentar ini? Ini juga akan menghapus semua balasan. Tindakan ini tidak dapat dibatalkan.</string>
     <string name="wikis_comment_form_attach">Lampirkan file</string>
     <string name="wikis_comment_expand">(perluas)</string>
-    <string name="wikis_editor_title_new">Buat halaman baru</string>
+    <string name="wikis_editor_title_new">Halaman baru</string>
     <string name="wikis_editor_preview">Pratinjau</string>
     <string name="wikis_editor_preview_untitled">Tanpa judul</string>
     <string name="wikis_editor_edit">Edit</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Judul</string>
     <string name="wikis_editor_slug_label">URL Halaman</string>
     <string name="wikis_editor_slug_hint">nama-halaman-saya</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Ini akan menjadi jalur halaman. Gunakan huruf kecil, angka, dan tanda hubung.</string>
     <string name="wikis_editor_content_label">Konten</string>
     <string name="wikis_editor_summary_label">Ringkasan suntingan (opsional)</string>
     <string name="wikis_editor_summary_hint">Jelaskan perubahan Anda secara singkat</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Buat</string>
     <string name="wikis_redirect_source_label">Sumber</string>
     <string name="wikis_redirect_target_label">Target</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Dibuat</string>
     <string name="wikis_redirect_required_fields">Sumber dan target keduanya diperlukan</string>
     <string name="wikis_redirect_created_success">Pengalihan dibuat</string>
     <string name="wikis_redirect_create_failed">Gagal membuat pengalihan</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Tampilan kisi</string>
     <string name="wikis_attachments_view_list">Tampilan daftar</string>
     <string name="wikis_attachments_copy_embed">Salin tautan sematan</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Tautan sematan disalin</string>
+    <string name="wikis_attachments_download">Unduh</string>
     <string name="wikis_attachments_copy_success">Tautan sematan disalin</string>
     <string name="wikis_attachments_delete">Hapus</string>
     <string name="wikis_attachments_delete_confirm_title">Hapus lampiran</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Pemilik</string>
     <string name="wikis_access_tab_users">Pengguna</string>
     <string name="wikis_access_tab_groups">Grup</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Lainnya</string>
+    <string name="wikis_access_select_rule">Pilih aturan</string>
+    <string name="wikis_access_authenticated_desc">Siapa pun yang masuk</string>
+    <string name="wikis_access_anyone_desc">Termasuk pengguna anonim</string>
+    <string name="wikis_access_selected">Dipilih: %1$s</string>
     <string name="wikis_access_no_groups">Tidak ada grup yang tersedia</string>
     <string name="wikis_access_set_success">Akses diperbarui</string>
     <string name="wikis_access_revoke_success">Akses dihapus</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Pengguna terautentikasi</string>
 
     <string name="wikis_revision_compare">Bandingkan perubahan</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">oleh %1$s</string>
     <string name="wikis_revision_show_page">Tampilkan halaman</string>
     <string name="wikis_revision_compare_failed">Tidak dapat memuat versi sebelumnya untuk perbandingan.</string>
     <string name="wikis_revision_changes_from">Perubahan dari versi %1$d → %2$d</string>
@@ -353,6 +353,6 @@
         <item quantity="other">Ditemukan %1$d hasil untuk «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Gagal menyimpan keterangan</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Berkas yang didukung: gambar, PDF, DOC, DOCX, TXT, dan MD.</string>
+    <string name="wikis_attachments_upload_limits">Unggahan besar mungkin dibatasi oleh konfigurasi server atau proksi Anda.</string>
 </resources>

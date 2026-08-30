@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">Izmaiņas un komentāri</string>
     <string name="wikis_rss_copied">RSS URL nokopēts starpliktuvē</string>
     <string name="wikis_rss_failed">Neizdevās iegūt RSS pilnvaru</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">Atsaukt piekļuvi</string>
+    <string name="wikis_rss_revoked">RSS piekļuve atsaukta</string>
     <string name="wikis_find_title">Atrast wiki</string>
     <string name="wikis_find_no_results">Wiki nav atrastas</string>
     <string name="wikis_find_recommended_section">Ieteiktās wiki</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">Vēl nav komentāru</string>
     <string name="wikis_comments_empty_subtitle">Esi pirmais, kas komentē šo lapu.</string>
     <string name="wikis_comment_action_reply">Atbildēt</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Atbild %1$s</string>
+    <string name="wikis_comment_clear_reply">Atcelt atbildi</string>
     <string name="wikis_comment_action_edit">Rediģēt</string>
     <string name="wikis_comment_action_delete">Dzēst</string>
     <string name="wikis_comment_action_save">Saglabāt</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">Vai tiešām vēlies dzēst šo komentāru? Tas dzēsīs arī visas atbildes. Šo darbību nevar atsaukt.</string>
     <string name="wikis_comment_form_attach">Pievienot failus</string>
     <string name="wikis_comment_expand">(izvērst)</string>
-    <string name="wikis_editor_title_new">Izveidot jaunu lapu</string>
+    <string name="wikis_editor_title_new">Jauna lapa</string>
     <string name="wikis_editor_preview">Priekšskatījums</string>
     <string name="wikis_editor_preview_untitled">Bez nosaukuma</string>
     <string name="wikis_editor_edit">Rediģēt</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">Virsraksts</string>
     <string name="wikis_editor_slug_label">Lapas URL</string>
     <string name="wikis_editor_slug_hint">manas-lapas-nosaukums</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">Šis būs lapas ceļš. Izmantojiet mazos burtus, ciparus un defises.</string>
     <string name="wikis_editor_content_label">Saturs</string>
     <string name="wikis_editor_summary_label">Rediģēt kopsavilkumu (nav obligāts)</string>
     <string name="wikis_editor_summary_hint">Īsi apraksti savas izmaiņas</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">Izveidot</string>
     <string name="wikis_redirect_source_label">Avots</string>
     <string name="wikis_redirect_target_label">Mērķis</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Izveidots</string>
     <string name="wikis_redirect_required_fields">Nepieciešami gan avots, gan mērķis</string>
     <string name="wikis_redirect_created_success">Pāradresācija izveidota</string>
     <string name="wikis_redirect_create_failed">Neizdevās izveidot pāradresāciju</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">Režģa skats</string>
     <string name="wikis_attachments_view_list">Saraksta skats</string>
     <string name="wikis_attachments_copy_embed">Kopēt iegultās saites</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Iegultais saites kopēta</string>
+    <string name="wikis_attachments_download">Lejupielādēt</string>
     <string name="wikis_attachments_copy_success">Iegultais saites kopēta</string>
     <string name="wikis_attachments_delete">Dzēst</string>
     <string name="wikis_attachments_delete_confirm_title">Dzēst pielikumu</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">Īpašnieks</string>
     <string name="wikis_access_tab_users">Lietotāji</string>
     <string name="wikis_access_tab_groups">Grupas</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Cits</string>
+    <string name="wikis_access_select_rule">Izvēlieties noteikumu</string>
+    <string name="wikis_access_authenticated_desc">Jebkurš, kas ir pieteicies</string>
+    <string name="wikis_access_anyone_desc">Ieskaitot anonīmos lietotājus</string>
+    <string name="wikis_access_selected">Atlasīts: %1$s</string>
     <string name="wikis_access_no_groups">Nav pieejamu grupu</string>
     <string name="wikis_access_set_success">Piekļuve atjaunināta</string>
     <string name="wikis_access_revoke_success">Piekļuve noņemta</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentificēti lietotāji</string>
 
     <string name="wikis_revision_compare">Salīdzināt izmaiņas</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">pēc %1$s</string>
     <string name="wikis_revision_show_page">Rādīt lapu</string>
     <string name="wikis_revision_compare_failed">Neizdevās ielādēt iepriekšējo versiju salīdzināšanai.</string>
     <string name="wikis_revision_changes_from">Izmaiņas no versijas %1$d → %2$d</string>
@@ -366,6 +366,6 @@
         <item quantity="other">Atrasti %1$d rezultāti priekš "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Neizdevās saglabāt parakstu</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">Atbalstītie faili: attēli, PDF, DOC, DOCX, TXT un MD.</string>
+    <string name="wikis_attachments_upload_limits">Lielas augšupielādes var ierobežot jūsu servera vai starpniekservera konfigurācija.</string>
 </resources>

@@ -94,8 +94,6 @@
     <string name="wikis_rss_both">Modifications et commentaires</string>
     <string name="wikis_rss_copied">URL du fil RSS copiée dans le presse-papiers</string>
     <string name="wikis_rss_failed">Échec de l\'obtention du jeton RSS</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_clipboard_label_rss">URL du fil RSS du wiki</string>
     <string name="wikis_find_title">Rechercher des wikis</string>
     <string name="wikis_find_search_placeholder">Rechercher par nom, ID, empreinte ou URL…</string>
@@ -114,8 +112,8 @@
     <string name="wikis_comments_empty_title">Aucun commentaire pour le moment</string>
     <string name="wikis_comments_empty_subtitle">Soyez le premier à commenter cette page.</string>
     <string name="wikis_comment_action_reply">Répondre</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">En réponse à %1$s</string>
+    <string name="wikis_comment_clear_reply">Annuler la réponse</string>
     <string name="wikis_comment_edited">(modifié)</string>
     <string name="wikis_comment_delete_confirm_title">Supprimer le commentaire</string>
     <string name="wikis_comment_delete_confirm_message">Voulez-vous vraiment supprimer ce commentaire? Toutes les réponses seront également supprimées. Cette action ne peut pas être annulée.</string>
@@ -137,7 +135,6 @@
     <string name="wikis_editor_creating">Création…</string>
     <string name="wikis_editor_slug_label">URL de la page</string>
     <string name="wikis_editor_slug_hint">nom-de-ma-page</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Contenu</string>
     <string name="wikis_editor_content_placeholder">Rédigez votre contenu ici en Markdown…</string>
     <string name="wikis_editor_summary_label">Résumé de la modification (facultatif)</string>
@@ -192,7 +189,7 @@
     <string name="wikis_redirect_create_title">Créer une redirection</string>
     <string name="wikis_redirect_source_label">Source</string>
     <string name="wikis_redirect_target_label">Cible</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">Créé</string>
     <string name="wikis_redirect_required_fields">La source et la cible sont obligatoires</string>
     <string name="wikis_redirect_created_success">Redirection créée</string>
     <string name="wikis_redirect_create_failed">Échec de la création de la redirection</string>
@@ -235,8 +232,8 @@
     <string name="wikis_attachments_view_grid">Affichage en grille</string>
     <string name="wikis_attachments_view_list">Affichage en liste</string>
     <string name="wikis_attachments_copy_embed">Copier le lien d\'intégration</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">Lien d\'intégration copié</string>
+    <string name="wikis_attachments_download">Télécharger</string>
     <string name="wikis_attachments_copy_success">Lien d\'intégration copié</string>
     <string name="wikis_attachments_copy_failed">Échec de la copie du lien d\'intégration</string>
     <string name="wikis_attachments_delete_confirm_title">Supprimer la pièce jointe</string>
@@ -283,11 +280,11 @@
     <string name="wikis_access_owner_label">Propriétaire</string>
     <string name="wikis_access_tab_users">Utilisateurs</string>
     <string name="wikis_access_tab_groups">Groupes</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">Autre</string>
+    <string name="wikis_access_select_rule">Sélectionnez une règle</string>
+    <string name="wikis_access_authenticated_desc">Toute personne connectée</string>
+    <string name="wikis_access_anyone_desc">Y compris les utilisateurs anonymes</string>
+    <string name="wikis_access_selected">Sélectionné : %1$s</string>
     <string name="wikis_access_no_groups">Aucun groupe disponible</string>
     <string name="wikis_access_set_success">Accès mis à jour</string>
     <string name="wikis_access_set_failed">Échec de la mise à jour de l\'accès</string>
@@ -308,6 +305,5 @@
     <string name="wikis_access_subject_anyone">Tout le monde</string>
     <string name="wikis_access_subject_authenticated">Utilisateurs authentifiés</string>
 
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_revision_author">par %1$s</string>
 </resources>

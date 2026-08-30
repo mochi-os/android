@@ -114,7 +114,7 @@
     <string name="feeds_less_like_this">Moins de ce genre</string>
     <string name="feeds_no_tags">Aucune étiquette</string>
     <string name="feeds_anonymous">Anonyme</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">En réponse à %1$s</string>
     <string name="feeds_cancel_reply">Annuler la réponse</string>
     <string name="feeds_attach_file">Joindre un fichier</string>
     <string name="feeds_tag_label">Étiquette</string>

@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">פחות כאלה</string>
     <string name="feeds_no_tags">אין תגיות</string>
     <string name="feeds_anonymous">אנונימי</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">בתגובה אל %1$s</string>
     <string name="feeds_attach_file">צרף קובץ</string>
     <string name="feeds_tag_label">תווית תגית</string>
     <string name="feeds_select_feed">בחר פיד</string>

@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">बदल आणि टिप्पण्या</string>
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्डवर कॉपी केले</string>
     <string name="wikis_rss_failed">RSS टोकन मिळवण्यात अयशस्वी</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">प्रवेश रद्द करा</string>
+    <string name="wikis_rss_revoked">RSS प्रवेश रद्द केला</string>
     <string name="wikis_find_title">विकीज शोधा</string>
     <string name="wikis_find_no_results">विकीज सापडले नाहीत</string>
     <string name="wikis_find_recommended_section">शिफारस केलेले विकीज</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">अद्याप कमेंट्स नाहीत</string>
     <string name="wikis_comments_empty_subtitle">या पानावर पहिले टिप्पणी करणारे व्हा.</string>
     <string name="wikis_comment_action_reply">प्रत्युत्तर द्या</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s ला प्रत्युत्तर देत आहे</string>
+    <string name="wikis_comment_clear_reply">उत्तर रद्द करा</string>
     <string name="wikis_comment_action_edit">संपादित करा</string>
     <string name="wikis_comment_action_delete">हटवा</string>
     <string name="wikis_comment_action_save">जतन करा</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">तुम्हाला खरोखरच ही टिप्पणी हटवायची आहे का? यामुळे सर्व उत्तरे देखील हटतील. ही क्रिया परत करता येणार नाही.</string>
     <string name="wikis_comment_form_attach">फाइल्स संलग्न करा</string>
     <string name="wikis_comment_expand">(विस्तार करा)</string>
-    <string name="wikis_editor_title_new">नवीन पान तयार करा</string>
+    <string name="wikis_editor_title_new">नवीन पेज</string>
     <string name="wikis_editor_preview">पूर्वावलोकन</string>
     <string name="wikis_editor_preview_untitled">शीर्षकविरहित</string>
     <string name="wikis_editor_edit">संपादित करा</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">शीर्षक</string>
     <string name="wikis_editor_slug_label">पेज URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">हा पानाचा मार्ग असेल. लोअरकेस अक्षरे, अंक, आणि हायफन वापरा.</string>
     <string name="wikis_editor_content_label">सामग्री</string>
     <string name="wikis_editor_summary_label">संपादन सारांश (पर्यायी)</string>
     <string name="wikis_editor_summary_hint">तुमच्या बदलांचे थोडक्यात वर्णन करा</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">तयार करा</string>
     <string name="wikis_redirect_source_label">स्त्रोत</string>
     <string name="wikis_redirect_target_label">लक्ष्य</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">तयार केले</string>
     <string name="wikis_redirect_required_fields">स्रोत आणि लक्ष्य दोन्ही आवश्यक आहेत</string>
     <string name="wikis_redirect_created_success">रीडायरेक्ट तयार केले</string>
     <string name="wikis_redirect_create_failed">रीडायरेक्ट तयार करण्यात अयशस्वी</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">ग्रिड दृश्य</string>
     <string name="wikis_attachments_view_list">यादी दृश्य</string>
     <string name="wikis_attachments_copy_embed">एम्बेड लिंक कॉपी करा</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">एम्बेड लिंक कॉपी केली</string>
+    <string name="wikis_attachments_download">डाउनलोड</string>
     <string name="wikis_attachments_copy_success">एम्बेड लिंक कॉपी केली</string>
     <string name="wikis_attachments_delete">हटवा</string>
     <string name="wikis_attachments_delete_confirm_title">संलग्नक हटवा</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">मालक</string>
     <string name="wikis_access_tab_users">वापरकर्ते</string>
     <string name="wikis_access_tab_groups">गट</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">इतर</string>
+    <string name="wikis_access_select_rule">एक नियम निवडा</string>
+    <string name="wikis_access_authenticated_desc">लॉग इन असलेले कोणीही</string>
+    <string name="wikis_access_anyone_desc">निनावी वापरकर्त्यांसह</string>
+    <string name="wikis_access_selected">निवडलेले: %1$s</string>
     <string name="wikis_access_no_groups">गट उपलब्ध नाहीत</string>
     <string name="wikis_access_set_success">प्रवेश अद्ययावत केला</string>
     <string name="wikis_access_revoke_success">प्रवेश काढून टाकला</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">प्रमाणित वापरकर्ते</string>
 
     <string name="wikis_revision_compare">बदलांची तुलना करा</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">%1$s नुसार</string>
     <string name="wikis_revision_show_page">पृष्ठ दाखवा</string>
     <string name="wikis_revision_compare_failed">तुलनेसाठी मागील आवृत्ती लोड करता आली नाही.</string>
     <string name="wikis_revision_changes_from">आवृत्ती %1$d → %2$d पासूनचे बदल</string>
@@ -356,6 +356,6 @@
         <item quantity="other">«%2$s» साठी %1$d निकाल सापडले</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">कॅप्शन जतन करता आले नाही</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">समर्थित फायली: प्रतिमा, PDF, DOC, DOCX, TXT, आणि MD.</string>
+    <string name="wikis_attachments_upload_limits">मोठ्या अपलोड्स तुमच्या सर्व्हर किंवा प्रॉक्सी कॉन्फिगरेशनद्वारे मर्यादित असू शकतात.</string>
 </resources>

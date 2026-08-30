@@ -44,8 +44,8 @@
     <string name="wikis_rss_both">تبدیلیاں اور تبصرے</string>
     <string name="wikis_rss_copied">RSS URL clipboard پر copy ہو گیا</string>
     <string name="wikis_rss_failed">RSS ٹوکن حاصل کرنے میں ناکامی</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">رسائی منسوخ کریں</string>
+    <string name="wikis_rss_revoked">RSS رسائی منسوخ کر دی گئی</string>
     <string name="wikis_find_title">وکیز تلاش کریں</string>
     <string name="wikis_find_no_results">کوئی wikis نہیں ملیں</string>
     <string name="wikis_find_recommended_section">تجویز کردہ wikis</string>
@@ -61,8 +61,8 @@
     <string name="wikis_comments_empty_title">ابھی تک کوئی تبصرے نہیں</string>
     <string name="wikis_comments_empty_subtitle">اس صفحے پر تبصرہ کرنے والے پہلے فرد بنیں۔</string>
     <string name="wikis_comment_action_reply">جواب</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">%1$s کو جواب دیا جا رہا ہے</string>
+    <string name="wikis_comment_clear_reply">جواب منسوخ کریں</string>
     <string name="wikis_comment_action_edit">ترمیم</string>
     <string name="wikis_comment_action_delete">حذف کریں</string>
     <string name="wikis_comment_action_save">محفوظ کریں</string>
@@ -72,7 +72,7 @@
     <string name="wikis_comment_delete_confirm_message">کیا آپ واقعی اس تبصرے کو حذف کرنا چاہتے ہیں؟ یہ تمام جوابات کو بھی حذف کر دے گا۔ یہ عمل واپس نہیں لیا جا سکتا۔</string>
     <string name="wikis_comment_form_attach">فائلیں منسلک کریں</string>
     <string name="wikis_comment_expand">(پھیلائیں)</string>
-    <string name="wikis_editor_title_new">نیا صفحہ بنائیں</string>
+    <string name="wikis_editor_title_new">نیا صفحہ</string>
     <string name="wikis_editor_preview">preview</string>
     <string name="wikis_editor_preview_untitled">بے عنوان</string>
     <string name="wikis_editor_edit">ترمیم</string>
@@ -86,7 +86,7 @@
     <string name="wikis_editor_title_label">عنوان</string>
     <string name="wikis_editor_slug_label">صفحہ URL</string>
     <string name="wikis_editor_slug_hint">میرا-صفحہ-نام</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">یہ صفحے کا راستہ ہوگا۔ چھوٹے حروف، اعداد اور ہائیفنز استعمال کریں۔</string>
     <string name="wikis_editor_content_label">مواد</string>
     <string name="wikis_editor_summary_label">ترمیم کا خلاصہ (اختیاری)</string>
     <string name="wikis_editor_summary_hint">اپنی تبدیلیوں کو مختصر بیان کریں</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_create_action">بنائیں</string>
     <string name="wikis_redirect_source_label">سورس</string>
     <string name="wikis_redirect_target_label">ٹارگٹ</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">بنایا گیا</string>
     <string name="wikis_redirect_required_fields">ذریعہ اور ہدف دونوں ضروری ہیں</string>
     <string name="wikis_redirect_created_success">redirect بن گیا</string>
     <string name="wikis_redirect_create_failed">ری ڈائریکٹ بنانے میں ناکامی</string>
@@ -166,8 +166,8 @@
     <string name="wikis_attachments_view_grid">گرڈ منظر</string>
     <string name="wikis_attachments_view_list">فہرست منظر</string>
     <string name="wikis_attachments_copy_embed">Embed لنک کاپی کریں</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">ایمبیڈ لنک کاپی ہو گیا</string>
+    <string name="wikis_attachments_download">ڈاؤن لوڈ</string>
     <string name="wikis_attachments_copy_success">ایمبیڈ لنک کاپی ہو گیا</string>
     <string name="wikis_attachments_delete">حذف کریں</string>
     <string name="wikis_attachments_delete_confirm_title">اٹیچمنٹ حذف کریں</string>
@@ -215,11 +215,11 @@
     <string name="wikis_access_owner_label">مالک</string>
     <string name="wikis_access_tab_users">صارفین</string>
     <string name="wikis_access_tab_groups">گروپس</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">دیگر</string>
+    <string name="wikis_access_select_rule">ایک اصول منتخب کریں</string>
+    <string name="wikis_access_authenticated_desc">کوئی بھی جو لاگ ان ہو</string>
+    <string name="wikis_access_anyone_desc">گمنام صارفین سمیت</string>
+    <string name="wikis_access_selected">منتخب شدہ: %1$s</string>
     <string name="wikis_access_no_groups">کوئی گروپ دستیاب نہیں</string>
     <string name="wikis_access_set_success">رسائی اپ ڈیٹ ہو گئی</string>
     <string name="wikis_access_revoke_success">رسائی ہٹا دی گئی</string>
@@ -308,7 +308,7 @@
     <string name="wikis_access_subject_anyone">کوئی بھی</string>
     <string name="wikis_access_subject_authenticated">تصدیق شدہ صارفین</string>
     <string name="wikis_revision_compare">تبدیلیوں کا موازنہ کریں</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">بذریعہ %1$s</string>
     <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
     <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
     <string name="wikis_revision_changes_from">ورژن %1$d → %2$d سے تبدیلیاں</string>
@@ -353,6 +353,6 @@
         <item quantity="other">«%2$s» کے لیے %1$d نتائج ملے</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">کیپشن محفوظ نہیں ہو سکا</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">تعاون یافتہ فائلیں: تصاویر، PDF، DOC، DOCX، TXT، اور MD۔</string>
+    <string name="wikis_attachments_upload_limits">بڑی اپ لوڈز آپ کے سرور یا پراکسی کنفیگریشن سے محدود ہو سکتی ہیں۔</string>
 </resources>

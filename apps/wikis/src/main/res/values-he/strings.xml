@@ -45,8 +45,8 @@
     <string name="wikis_rss_both">שינויים ותגובות</string>
     <string name="wikis_rss_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
     <string name="wikis_rss_failed">קבלת טוקן RSS נכשלה</string>
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_rss_revoke">בטל גישה</string>
+    <string name="wikis_rss_revoked">גישת RSS בוטלה</string>
     <string name="wikis_find_title">חפש ויקיים</string>
     <string name="wikis_find_no_results">לא נמצאו ויקיים</string>
     <string name="wikis_find_recommended_section">ויקיים מומלצים</string>
@@ -62,8 +62,8 @@
     <string name="wikis_comments_empty_title">עדיין אין תגובות</string>
     <string name="wikis_comments_empty_subtitle">היה הראשון להגיב על דף זה.</string>
     <string name="wikis_comment_action_reply">השב</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">בתגובה אל %1$s</string>
+    <string name="wikis_comment_clear_reply">בטל תשובה</string>
     <string name="wikis_comment_action_edit">עריכה</string>
     <string name="wikis_comment_action_delete">מחק</string>
     <string name="wikis_comment_action_save">שמור</string>
@@ -73,7 +73,7 @@
     <string name="wikis_comment_delete_confirm_message">האם אתה בטוח שברצונך למחוק תגובה זו? פעולה זו תמחק גם את כל התשובות. לא ניתן לבטל פעולה זו.</string>
     <string name="wikis_comment_form_attach">צרף קבצים</string>
     <string name="wikis_comment_expand">(הרחב)</string>
-    <string name="wikis_editor_title_new">צור עמוד חדש</string>
+    <string name="wikis_editor_title_new">דף חדש</string>
     <string name="wikis_editor_preview">תצוגה מקדימה</string>
     <string name="wikis_editor_preview_untitled">ללא כותרת</string>
     <string name="wikis_editor_edit">עריכה</string>
@@ -87,7 +87,7 @@
     <string name="wikis_editor_title_label">כותרת</string>
     <string name="wikis_editor_slug_label">כתובת URL של הדף</string>
     <string name="wikis_editor_slug_hint">שם-העמוד-שלי</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_editor_slug_help">זה יהיה הנתיב לעמוד. השתמש באותיות קטנות, מספרים ומקפים.</string>
     <string name="wikis_editor_content_label">תוכן</string>
     <string name="wikis_editor_summary_label">תקציר העריכה (אופציונלי)</string>
     <string name="wikis_editor_summary_hint">תאר בקצרה את השינויים שלך</string>
@@ -133,7 +133,7 @@
     <string name="wikis_redirect_create_action">צור</string>
     <string name="wikis_redirect_source_label">מקור</string>
     <string name="wikis_redirect_target_label">יעד</string>
-    <string name="wikis_redirect_created_label">Created</string>
+    <string name="wikis_redirect_created_label">נוצר</string>
     <string name="wikis_redirect_required_fields">נדרשים גם מקור וגם יעד</string>
     <string name="wikis_redirect_created_success">ההפניה נוצרה</string>
     <string name="wikis_redirect_create_failed">יצירת ההפניה נכשלה</string>
@@ -167,8 +167,8 @@
     <string name="wikis_attachments_view_grid">תצוגת רשת</string>
     <string name="wikis_attachments_view_list">תצוגת רשימה</string>
     <string name="wikis_attachments_copy_embed">העתק קישור הטמעה</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_embed_copied">קישור ההטמעה הועתק</string>
+    <string name="wikis_attachments_download">הורדה</string>
     <string name="wikis_attachments_copy_success">קישור ההטמעה הועתק</string>
     <string name="wikis_attachments_delete">מחק</string>
     <string name="wikis_attachments_delete_confirm_title">מחק קובץ מצורף</string>
@@ -216,11 +216,11 @@
     <string name="wikis_access_owner_label">בעלים</string>
     <string name="wikis_access_tab_users">משתמשים</string>
     <string name="wikis_access_tab_groups">קבוצות</string>
-    <string name="wikis_access_tab_other">Other</string>
-    <string name="wikis_access_select_rule">Select a rule</string>
-    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
-    <string name="wikis_access_anyone_desc">Including anonymous users</string>
-    <string name="wikis_access_selected">Selected: %1$s</string>
+    <string name="wikis_access_tab_other">אחר</string>
+    <string name="wikis_access_select_rule">בחר כלל</string>
+    <string name="wikis_access_authenticated_desc">כל מי שמחובר</string>
+    <string name="wikis_access_anyone_desc">כולל משתמשים אנונימיים</string>
+    <string name="wikis_access_selected">נבחר: %1$s</string>
     <string name="wikis_access_no_groups">אין קבוצות זמינות</string>
     <string name="wikis_access_set_success">הגישה עודכנה</string>
     <string name="wikis_access_revoke_success">הגישה הוסרה</string>
@@ -311,7 +311,7 @@
     <string name="wikis_access_subject_authenticated">משתמשים מאומתים</string>
 
     <string name="wikis_revision_compare">השוואת שינויים</string>
-    <string name="wikis_revision_author">by %1$s</string>
+    <string name="wikis_revision_author">לפי %1$s</string>
     <string name="wikis_revision_show_page">הצגת הדף</string>
     <string name="wikis_revision_compare_failed">לא ניתן לטעון את הגרסה הקודמת להשוואה.</string>
     <string name="wikis_revision_changes_from">שינויים מגרסה %1$d → %2$d</string>
@@ -376,6 +376,6 @@
         <item quantity="other">נמצאו %1$d תוצאות עבור «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">שמירת הכיתוב נכשלה</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_attachments_upload_types">קבצים נתמכים: תמונות, PDF, DOC, DOCX, TXT ו־MD.</string>
+    <string name="wikis_attachments_upload_limits">העלאות גדולות עשויות להיות מוגבלות על ידי תצורת השרת או ה־proxy שלך.</string>
 </resources>

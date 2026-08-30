@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Меньше подобного</string>
     <string name="feeds_no_tags">Нет тегов</string>
     <string name="feeds_anonymous">Аноним</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">Ответ %1$s</string>
     <string name="feeds_attach_file">Прикрепить файл</string>
     <string name="feeds_tag_label">Название тега</string>
     <string name="feeds_file">Файл</string>

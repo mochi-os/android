@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Buna benzer daha az</string>
     <string name="feeds_no_tags">Etiket yok</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s yanıtlanıyor</string>
     <string name="feeds_attach_file">Dosya ekle</string>
     <string name="feeds_tag_label">Etiket adı</string>
     <string name="feeds_file">Dosya</string>

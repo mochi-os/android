@@ -15,8 +15,8 @@
     <string name="wikis_create_title">Creá una wiki</string>
     <string name="wikis_create_privacy_label">Permití que cualquiera busque la wiki</string>
     <string name="wikis_comment_action_reply">Respondé</string>
-    <string name="wikis_comment_replying_to">Replying to %1$s</string>
-    <string name="wikis_comment_clear_reply">Cancel reply</string>
+    <string name="wikis_comment_replying_to">Respondiendo a %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancelá la respuesta</string>
     <string name="wikis_comment_action_delete">Eliminá</string>
     <string name="wikis_comment_action_save">Guardá</string>
     <string name="wikis_comment_delete_confirm_title">Eliminá el comentario</string>
@@ -42,8 +42,7 @@
     <string name="wikis_tag_dialog_add">Agregá</string>
     <string name="wikis_attachments_upload">Subí archivos</string>
     <string name="wikis_attachments_copy_embed">Copiá el enlace para insertar</string>
-    <string name="wikis_attachments_embed_copied">Embed link copied</string>
-    <string name="wikis_attachments_download">Download</string>
+    <string name="wikis_attachments_download">Descargá</string>
     <string name="wikis_attachments_delete">Eliminá</string>
     <string name="wikis_attachments_delete_confirm_title">Eliminá el adjunto</string>
     <string name="wikis_attachments_no_results_description">Probá con otro término de búsqueda o filtro.</string>
@@ -71,9 +70,11 @@
     <string name="wikis_access_subject_anyone">Cualquiera</string>
     <string name="wikis_access_subject_authenticated">Usuarios autenticados</string>
 
-    <string name="wikis_rss_revoke">Revoke access</string>
-    <string name="wikis_rss_revoked">RSS access revoked</string>
-    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
-    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
-    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
+    <string name="wikis_revision_author">por %1$s</string>
+    <string name="wikis_redirect_created_label">Creado</string>
+    <string name="wikis_access_tab_other">Otro</string>
+    <string name="wikis_access_select_rule">Selecciona una regla</string>
+    <string name="wikis_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
+    <string name="wikis_access_anyone_desc">Incluidos los usuarios anónimos</string>
+    <string name="wikis_access_selected">Seleccionado: %1$s</string>
 </resources>

@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">Akjam juk\'a</string>
     <string name="feeds_no_tags">Janiw sutinakax utjkiti</string>
     <string name="feeds_anonymous">Jan sutini</string>
-    <string name="feeds_replying_to_author">Replying to %1$s</string>
+    <string name="feeds_replying_to_author">%1$s tuqir kutiyaski</string>
     <string name="feeds_attach_file">Qillqa apxataña</string>
     <string name="feeds_write_a_comment">Mä arxat qillqam…</string>
     <string name="feeds_tag_label">Sutich\'awi</string>
