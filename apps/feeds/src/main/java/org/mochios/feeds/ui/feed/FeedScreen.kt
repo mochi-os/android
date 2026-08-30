@@ -906,14 +906,16 @@ fun FeedScreen(
                                             state = pagerState,
                                             modifier = Modifier.fillMaxSize(),
                                             key = { page -> posts[page].id },
-                                            // 8% snap threshold: the 50%
+                                            // 5% snap threshold: the 50%
                                             // default felt like work on tall
-                                            // phones. A short tween, not the
+                                            // phones, where even a tenth of the
+                                            // screen is a long way for a thumb
+                                            // to travel. A short tween, not the
                                             // default spring, which overshoots
                                             // and reads as a bounce.
                                             flingBehavior = androidx.compose.foundation.pager.PagerDefaults.flingBehavior(
                                                 state = pagerState,
-                                                snapPositionalThreshold = 0.08f,
+                                                snapPositionalThreshold = 0.05f,
                                                 snapAnimationSpec = androidx.compose.animation.core.tween(
                                                     durationMillis = 220,
                                                     easing = androidx.compose.animation.core.FastOutSlowInEasing,
