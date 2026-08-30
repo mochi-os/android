@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">الاسم المعروض</string>
     <string name="forums_auth_verification_failed">فشل التحقق</string>
     <string name="forums_list_title">المنتديات</string>
-    <string name="forums_list_close_search">إغلاق البحث</string>
-    <string name="forums_list_search">بحث</string>
     <string name="forums_list_find">البحث عن المنتديات</string>
     <string name="forums_list_logout">تسجيل الخروج</string>
-    <string name="forums_list_create">إنشاء منتدى</string>
     <string name="forums_list_unsubscribe">إلغاء الاشتراك</string>
     <string name="forums_list_unsubscribe_title">إلغاء الاشتراك</string>
     <string name="forums_create_title">إنشاء منتدى</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">المنتدى غير موجود</string>
     <string name="forums_post_not_found">المنشور غير موجود</string>
 
-    <string name="forums_list_more">المزيد</string>
     <string name="forums_comment_send">إرسال</string>
 
     <string name="notification_channel_forums">إشعارات المنتديات</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">المصادقة متعددة العوامل غير مدعومة بعد في تطبيق الجوال</string>
     <string name="forums_auth_enter_code_sent">أدخل الرمز المرسل إلى %1$s</string>
     <string name="forums_auth_create_identity">أنشئ هويتك</string>
-    <string name="forums_list_search_placeholder">البحث في المنتديات</string>
-    <string name="forums_list_no_matching">لا توجد منتديات مطابقة</string>
     <string name="forums_list_empty">لا توجد منتديات بعد</string>
-    <string name="forums_list_add_to_home">إضافة إلى الشاشة الرئيسية</string>
     <string name="forums_list_unsubscribe_message">هل أنت متأكد من أنك تريد إلغاء الاشتراك في هذا المنتدى؟</string>
     <string name="forums_find_search_placeholder">ابحث في المنتديات أو الصق عنوان URL</string>
     <string name="forums_find_search_hint">ابحث عن منتديات للاشتراك فيها</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">تعزيز الاهتمام</string>
     <string name="forums_tag_interest_down">تقليل الاهتمام</string>
     <string name="forums_tag_interest_remove">إزالة الاهتمام</string>
-    <string name="forums_list_default_sort">الترتيب الافتراضي</string>
     <string name="forums_access_tab_users">المستخدمون</string>
     <string name="forums_access_tab_groups">المجموعات</string>
     <string name="forums_access_tab_manual">يدوي</string>

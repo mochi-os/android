@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">प्रदर्शन नाम</string>
     <string name="chat_auth_verification_failed">सत्यापन विफल भइल</string>
     <string name="chat_list_title">चैट</string>
-    <string name="chat_list_close_search">खोज बंद करीं</string>
     <string name="chat_list_search">खोजीं</string>
     <string name="chat_list_logout">लॉग आउट</string>
     <string name="chat_list_new">नया चैट</string>
-    <string name="chat_list_removed_chat">हटावल गइल</string>
     <string name="chat_new_title">नया चैट</string>
     <string name="chat_new_name">समूह के नाम</string>
     <string name="chat_new_friends">दोस्त</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">आप</string>
     <string name="chat_chat_not_found">चैट ना मिलल</string>
 
-    <string name="chat_list_more">और</string>
     <string name="chat_message_send">भेजीं</string>
 
     <string name="notification_channel_chat">चैट सूचना</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">मोबाइल ऐप में MFA अबहीं ना समर्थित बा</string>
     <string name="chat_auth_enter_code_sent">%1$s पर भेजल कोड डालीं</string>
     <string name="chat_auth_create_identity">आपन पहचान बनाईं</string>
-    <string name="chat_list_search_placeholder">चैट खोजीं</string>
-    <string name="chat_list_no_matching">कवनो मेल खात चैट नइखे</string>
     <string name="chat_list_empty">अबहीं कवनो चैट नइखे</string>
-    <string name="chat_list_add_to_home">होम स्क्रीन पर जोड़ीं</string>
-    <string name="chat_list_left_chat">छोड़ दिहल</string>
     <string name="chat_new_existing_chat">मौजूदा चैट खोलीं</string>
     <string name="chat_new_start">चैट शुरू करीं</string>
     <string name="chat_new_start_group">ग्रुप चैट शुरू करीं</string>

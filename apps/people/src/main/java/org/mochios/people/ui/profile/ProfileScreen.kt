@@ -46,6 +46,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -72,6 +73,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -84,6 +86,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
@@ -556,14 +559,32 @@ private fun BioSection(
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        // The toolbar marks up a selection, so the cursor lives here rather
+        // than inside the field.
+        var bioField by remember { mutableStateOf(TextFieldValue(state.bioDraft)) }
+        LaunchedEffect(state.bioDraft) {
+            if (state.bioDraft != bioField.text) {
+                bioField = TextFieldValue(state.bioDraft, TextRange(state.bioDraft.length))
+            }
+        }
         MochiTextField(
-            value = state.bioDraft,
-            onValueChange = viewModel::setBioDraft,
+            value = bioField,
+            onValueChange = { updated ->
+                bioField = updated
+                if (updated.text != state.bioDraft) viewModel.setBioDraft(updated.text)
+            },
             placeholder = { Text(stringResource(R.string.people_profile_markdown_supported)) },
             minLines = 4,
             maxLines = 10,
             isError = tooLong,
             modifier = Modifier.fillMaxWidth(),
+        )
+        MarkdownToolbar(
+            body = bioField,
+            onBodyChange = { updated ->
+                bioField = updated
+                if (updated.text != state.bioDraft) viewModel.setBioDraft(updated.text)
+            },
         )
         // Bottom row: inline progress track (left, flexible) + character count
         // + Save button, matching the web profile editor layout.

@@ -338,6 +338,13 @@
     <string name="common_attachment_unavailable">Príloha je dočasne nedostupná</string>
     <string name="common_unavailable">Nedostupné</string>
     <string name="common_not_found">Nenájdené</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Odvolať</string>
     <string name="rss_revoke">Zrušiť prístup</string>
     <string name="rss_revoke_title">Odvolať prístup RSS?</string>

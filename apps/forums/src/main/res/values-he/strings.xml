@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">שם תצוגה</string>
     <string name="forums_auth_verification_failed">האימות נכשל</string>
     <string name="forums_list_title">פורומים</string>
-    <string name="forums_list_close_search">סגור חיפוש</string>
-    <string name="forums_list_search">חיפוש</string>
     <string name="forums_list_find">חפש פורומים</string>
     <string name="forums_list_logout">התנתק</string>
-    <string name="forums_list_create">צור פורום</string>
     <string name="forums_list_unsubscribe">בטל הרשמה</string>
     <string name="forums_list_unsubscribe_title">בטל הרשמה</string>
     <string name="forums_create_title">צור פורום</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">הפורום לא נמצא</string>
     <string name="forums_post_not_found">הפוסט לא נמצא</string>
 
-    <string name="forums_list_more">עוד</string>
     <string name="forums_comment_send">שלח</string>
     <string name="forums_post_body_field">גוף</string>
     <string name="forums_post_edit_body_field">גוף</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">אימות רב-שלבי אינו נתמך עדיין באפליקציה לנייד</string>
     <string name="forums_auth_enter_code_sent">הזינו את הקוד שנשלח אל %1$s</string>
     <string name="forums_auth_create_identity">יצירת הזהות שלכם</string>
-    <string name="forums_list_add_to_home">הוספה למסך הבית</string>
     <string name="forums_tag_clear">ניקוי מסנן</string>
     <string name="forums_post_tag_add">הוסף תג</string>
     <string name="forums_write_comment">כתוב תגובה…</string>
 
     <string name="notification_channel_forums">התראות פורומים</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">חיפוש פורומים</string>
-    <string name="forums_list_no_matching">לא נמצאו פורומים תואמים</string>
     <string name="forums_list_empty">אין עדיין פורומים</string>
     <string name="forums_list_unsubscribe_message">האם אתה בטוח שברצונך לבטל את ההרשמה לפורום זה?</string>
     <string name="forums_find_search_placeholder">חיפוש פורומים או הדבקת כתובת URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">הגבר עניין</string>
     <string name="forums_tag_interest_down">הפחת עניין</string>
     <string name="forums_tag_interest_remove">הסר עניין</string>
-    <string name="forums_list_default_sort">מיון ברירת מחדל</string>
     <string name="forums_access_tab_users">משתמשים</string>
     <string name="forums_access_tab_groups">קבוצות</string>
     <string name="forums_access_tab_manual">ידני</string>

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Koʻrsatish nomi</string>
     <string name="forums_auth_verification_failed">Tasdiqlash muvaffaqiyatsiz</string>
     <string name="forums_list_title">Forumlar</string>
-    <string name="forums_list_close_search">Qidiruvni yopish</string>
-    <string name="forums_list_search">Qidirish</string>
     <string name="forums_list_find">Forumlarni topish</string>
     <string name="forums_list_logout">Chiqish</string>
-    <string name="forums_list_create">Forum yaratish</string>
     <string name="forums_list_unsubscribe">Obunadan chiqish</string>
     <string name="forums_list_unsubscribe_title">Obunadan chiqish</string>
     <string name="forums_create_title">Forum yaratish</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum topilmadi</string>
     <string name="forums_post_not_found">Post topilmadi</string>
 
-    <string name="forums_list_more">Ko‘proq</string>
     <string name="forums_comment_send">Yuborish</string>
     <string name="forums_post_body_field">Matn</string>
     <string name="forums_post_edit_body_field">Matn</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Izoh yozing…</string>
     <string name="forums_auth_login_failed">Kirish bajarilmadi</string>
-    <string name="forums_list_add_to_home">Bosh ekranga qo‘shish</string>
 
     <string name="notification_channel_forums">Forum bildirishnomalari</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA mobil ilovada hali qoʻllab-quvvatlanmaydi</string>
     <string name="forums_auth_enter_code_sent">%1$s ga yuborilgan kodni kiriting</string>
     <string name="forums_auth_create_identity">Identifikatsiyangizni yarating</string>
-    <string name="forums_list_search_placeholder">Forumlarni qidirish</string>
-    <string name="forums_list_no_matching">Mos forumlar yoʻq</string>
     <string name="forums_list_empty">Hali forumlar yoʻq</string>
     <string name="forums_list_unsubscribe_message">Ushbu forumdan obunani bekor qilishni xohlaysizmi?</string>
     <string name="forums_find_search_placeholder">Forumlarni qidiring yoki URL kiriting</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Qiziqishni kuchaytirish</string>
     <string name="forums_tag_interest_down">Qiziqishni kamaytirish</string>
     <string name="forums_tag_interest_remove">Qiziqishni olib tashlash</string>
-    <string name="forums_list_default_sort">Standart saralash</string>
     <string name="forums_access_tab_users">Foydalanuvchilar</string>
     <string name="forums_access_tab_groups">Guruhlar</string>
     <string name="forums_access_tab_manual">Qoʻlda</string>

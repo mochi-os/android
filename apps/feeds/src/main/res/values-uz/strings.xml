@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Shunga o\'xshashlarni kamroq</string>
     <string name="feeds_no_tags">Teglar yo\'q</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_comment">Izohga javob berilmoqda</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Fayl biriktirish</string>
     <string name="feeds_tag_label">Teg nomi</string>
     <string name="feeds_file">Fayl</string>

@@ -25,6 +25,9 @@ import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -336,7 +339,7 @@ private fun AddAccessDialog(
                         selected = tab == 0,
                         onClick = { tab = 0; selectedSubject = ""; selectedName = "" },
                         shape = SegmentedButtonDefaults.itemShape(index = 0, count = 3),
-                        icon = { Icon(Icons.Default.Person, null, Modifier.size(18.dp)) },
+                        icon = { Icon(Icons.Outlined.Person, null, Modifier.size(18.dp)) },
                         label = { Text(stringResource(R.string.crm_access_tab_users)) }
                     )
                     SegmentedButton(
@@ -381,7 +384,7 @@ private fun AddAccessDialog(
                             MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                                 uiState.userSearchResults.take(6).forEach { user ->
                                     SubjectOption(
-                                        icon = Icons.Default.Person,
+                                        icon = Icons.Outlined.Person,
                                         title = user.name.ifBlank { user.id },
                                         subtitle = null,
                                         selected = selectedSubject == user.id,
@@ -414,7 +417,7 @@ private fun AddAccessDialog(
                                     // Groups are subjects prefixed with @.
                                     val subject = "@${group.id}"
                                     SubjectOption(
-                                        icon = Icons.Default.Group,
+                                        icon = Icons.Outlined.Group,
                                         title = group.name,
                                         subtitle = group.id,
                                         selected = selectedSubject == subject,
@@ -436,7 +439,7 @@ private fun AddAccessDialog(
                         Spacer(Modifier.height(8.dp))
                         MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                             SubjectOption(
-                                icon = Icons.Default.Group,
+                                icon = Icons.Outlined.Group,
                                 title = authenticatedName,
                                 subtitle = stringResource(R.string.crm_access_authenticated_desc),
                                 selected = selectedSubject == "+",
@@ -446,7 +449,7 @@ private fun AddAccessDialog(
                                 }
                             )
                             SubjectOption(
-                                icon = Icons.Default.Public,
+                                icon = Icons.Outlined.Public,
                                 title = anyoneName,
                                 subtitle = stringResource(R.string.crm_access_anyone_desc),
                                 selected = selectedSubject == "*",

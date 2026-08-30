@@ -8,8 +8,8 @@ package org.mochios.chat.ui.chat
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,32 +29,28 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Forward
-import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material.icons.automirrored.filled.Reply
 import androidx.compose.material.icons.automirrored.outlined.Forward
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.automirrored.outlined.Reply
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.outlined.CheckBox
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material.icons.outlined.DoneAll
-import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.filled.Groups
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.CheckBox
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.DoneAll
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -65,8 +61,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -80,8 +74,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
@@ -92,20 +84,20 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.push.SystemNotifications
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
@@ -125,17 +117,18 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.router.CHAT_FEATURE
-import org.mochios.android.R as MochiR
 
 /**
  * Chat detail inside a [MochiListDrawer] holding the chat list; an empty
@@ -201,7 +194,7 @@ fun ChatScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.chat_list_new),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNewChat()
@@ -209,7 +202,7 @@ fun ChatScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.chat_list_logout),
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
@@ -217,7 +210,7 @@ fun ChatScreen(
             )
             DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
-                icon = Icons.Default.Info,
+                icon = Icons.Outlined.Info,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true
@@ -365,15 +358,42 @@ private fun ChatContent(
                 }
             }
             if (uiState.searchOpen) {
-                ChatSearchBar(
+                val matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1
+                val matchCount = searchMatchIds.size
+                MochiSearchTopBar(
                     query = uiState.searchQuery,
+                    placeholder = stringResource(R.string.chat_search_hint),
                     onQueryChange = { text -> viewModel.setSearchQuery(text) },
                     onClose = { viewModel.closeSearch() },
-                    matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1,
-                    matchCount = searchMatchIds.size,
-                    onUp = { viewModel.setSearchMatchIndex(searchMatchIndex + 1) },
-                    onDown = { viewModel.setSearchMatchIndex(searchMatchIndex - 1) },
-                )
+                ) {
+                    // Stepping through hits is chat's alone — the other searches
+                    // filter a list rather than walk one.
+                    if (uiState.searchQuery.isNotBlank()) {
+                        Text(
+                            text = "$matchPosition/$matchCount",
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                        MochiIconButton(
+                            onClick = { viewModel.setSearchMatchIndex(searchMatchIndex + 1) },
+                            enabled = matchPosition < matchCount,
+                        ) {
+                            Icon(
+                                Icons.Default.KeyboardArrowUp,
+                                contentDescription = stringResource(R.string.chat_search_prev),
+                            )
+                        }
+                        MochiIconButton(
+                            onClick = { viewModel.setSearchMatchIndex(searchMatchIndex - 1) },
+                            enabled = matchPosition > 1,
+                        ) {
+                            Icon(
+                                Icons.Default.KeyboardArrowDown,
+                                contentDescription = stringResource(R.string.chat_search_next),
+                            )
+                        }
+                    }
+                }
             } else {
                 TopAppBar(
                     title = {
@@ -659,8 +679,12 @@ private fun ChatContent(
                     }
                 } ?: uiState.replyingTo?.let { replied ->
                     {
-                        ReplyComposerPreview(
-                            replied = replied,
+                        ReplyComposerBanner(
+                            label = stringResource(R.string.chat_replying_to, replied.name),
+                            preview = replied.body.ifBlank {
+                                stringResource(R.string.chat_reply_attachment)
+                            },
+                            cancelLabel = stringResource(MochiR.string.common_cancel),
                             onCancel = { viewModel.cancelReply() },
                         )
                     }
@@ -790,83 +814,6 @@ internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): I
  * Find-in-conversation bar over the loaded messages; [matchPosition] is
  * 1-based, 0 when nothing matches.
  */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ChatSearchBar(
-    query: String,
-    onQueryChange: (String) -> Unit,
-    onClose: () -> Unit,
-    matchPosition: Int,
-    matchCount: Int,
-    onUp: () -> Unit,
-    onDown: () -> Unit,
-) {
-    val focusRequester = remember { FocusRequester() }
-    LaunchedEffect(Unit) {
-        focusRequester.requestFocus()
-    }
-    TopAppBar(
-        navigationIcon = {
-            MochiIconButton(onClick = onClose) {
-                Icon(
-                    Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(MochiR.string.common_back),
-                )
-            }
-        },
-        title = {
-            TextField(
-                value = query,
-                onValueChange = onQueryChange,
-                placeholder = { Text(stringResource(R.string.chat_search_hint)) },
-                singleLine = true,
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                trailingIcon = {
-                    if (query.isNotEmpty()) {
-                        MochiIconButton(onClick = { onQueryChange("") }) {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(MochiR.string.common_close),
-                            )
-                        }
-                    }
-                },
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                colors = TextFieldDefaults.colors(
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    disabledContainerColor = Color.Transparent,
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .focusRequester(focusRequester),
-            )
-        },
-        actions = {
-            if (query.isNotBlank()) {
-                Text(
-                    text = "$matchPosition/$matchCount",
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                MochiIconButton(onClick = onUp, enabled = matchPosition < matchCount) {
-                    Icon(
-                        Icons.Default.KeyboardArrowUp,
-                        contentDescription = stringResource(R.string.chat_search_prev),
-                    )
-                }
-                MochiIconButton(onClick = onDown, enabled = matchPosition > 1) {
-                    Icon(
-                        Icons.Default.KeyboardArrowDown,
-                        contentDescription = stringResource(R.string.chat_search_next),
-                    )
-                }
-            }
-        },
-    )
-}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -1213,8 +1160,8 @@ private fun SelectionBar(
 }
 
 /**
- * Strip above the composer showing the message being replied to, with a button
- * to cancel the reply.
+ * Strip above the composer showing that a message is being edited, with a
+ * button to cancel the edit.
  */
 @Composable
 private fun EditComposerPreview(onCancel: () -> Unit) {
@@ -1240,45 +1187,6 @@ private fun EditComposerPreview(onCancel: () -> Unit) {
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
-        MochiIconButton(onClick = onCancel) {
-            Icon(Icons.Default.Close, contentDescription = null)
-        }
-    }
-}
-
-@Composable
-private fun ReplyComposerPreview(replied: ChatMessage, onCancel: () -> Unit) {
-    val preview = replied.body.ifBlank { stringResource(R.string.chat_reply_attachment) }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surfaceVariant)
-            .padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            Icons.AutoMirrored.Filled.Reply,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.size(18.dp),
-        )
-        Spacer(Modifier.width(8.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = stringResource(R.string.chat_replying_to, replied.name),
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.primary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                text = preview,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
         MochiIconButton(onClick = onCancel) {
             Icon(Icons.Default.Close, contentDescription = null)
         }

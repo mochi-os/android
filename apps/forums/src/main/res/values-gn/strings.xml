@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Hechauka téra</string>
     <string name="forums_auth_verification_failed">Verificación ndoiporãi</string>
     <string name="forums_list_title">Foros</string>
-    <string name="forums_list_close_search">Mboty jeheka</string>
-    <string name="forums_list_search">Eheka</string>
     <string name="forums_list_find">Eheka foros</string>
     <string name="forums_list_logout">Esẽ</string>
-    <string name="forums_list_create">Embojeguáva forum</string>
     <string name="forums_list_unsubscribe">Eñemboaty\'ỹ</string>
     <string name="forums_list_unsubscribe_title">Eñemboaty\'ỹ</string>
     <string name="forums_create_title">Embojeguáva forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foro nojetopái</string>
     <string name="forums_post_not_found">Marandu ndojejuhúi</string>
 
-    <string name="forums_list_more">Hetave</string>
     <string name="forums_comment_send">Mondo</string>
     <string name="forums_post_body_field">Tete</string>
     <string name="forums_post_edit_body_field">Tete</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">MFA ndoikói gueteri tembiporu pumbyrýpe</string>
     <string name="forums_auth_enter_code_sent">Emoinge papapy oñemondo\'akue %1$s-pe</string>
     <string name="forums_auth_create_identity">Ejapo ne teratee</string>
-    <string name="forums_list_add_to_home">Embojuaju óga rovetãme</string>
     <string name="forums_tag_clear">Embogue mboguahávo</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Ehai ñe’ẽmondo…</string>
 
     <string name="notification_channel_forums">Marandu foro-pegua</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Eheka foro</string>
-    <string name="forums_list_no_matching">Ndaipóri foro ojojoguáva</string>
     <string name="forums_list_empty">Gueteri ndaipóri foro</string>
     <string name="forums_list_unsubscribe_message">Añetehápe piko reipota resẽ ko foro-gui?</string>
     <string name="forums_find_search_placeholder">Eheka foro térã embojuaju URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Boost mba\'erekohápe</string>
     <string name="forums_tag_interest_down">Embogue ñembyeko\'ói</string>
     <string name="forums_tag_interest_remove">Embogue ñembyeko\'ói</string>
-    <string name="forums_list_default_sort">Default sort</string>
     <string name="forums_access_tab_users">Mboapurevaharakuéra</string>
     <string name="forums_access_tab_groups">Atypykuéra</string>
     <string name="forums_access_tab_manual">Manual</string>

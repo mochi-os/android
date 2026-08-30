@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Змены і каментарыі</string>
     <string name="wikis_rss_copied">URL RSS скапіраваны ў буфер абмену</string>
     <string name="wikis_rss_failed">Не ўдалося атрымаць RSS токен</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Знайсці wikis</string>
     <string name="wikis_find_no_results">Wiki не знойдзены</string>
     <string name="wikis_find_recommended_section">Рэкамендаваныя wiki</string>
@@ -59,6 +61,8 @@
     <string name="wikis_comments_empty_title">Пакуль няма каментароў</string>
     <string name="wikis_comments_empty_subtitle">Будзьце першым, хто пракаментаваў гэту старонку.</string>
     <string name="wikis_comment_action_reply">Адказаць</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Рэдагаваць</string>
     <string name="wikis_comment_action_delete">Выдаліць</string>
     <string name="wikis_comment_action_save">Захаваць</string>
@@ -74,7 +78,6 @@
     <string name="wikis_editor_edit">Рэдагаваць</string>
     <string name="wikis_editor_insert">Уставіць</string>
     <string name="wikis_editor_attachments">Укладанні</string>
-    <string name="wikis_editor_cancel">Адмена</string>
     <string name="wikis_editor_delete">Выдаліць старонку</string>
     <string name="wikis_editor_save">Захаваць</string>
     <string name="wikis_editor_saving">Захаванне…</string>
@@ -83,6 +86,7 @@
     <string name="wikis_editor_title_label">Назва</string>
     <string name="wikis_editor_slug_label">URL старонкі</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Змесціва</string>
     <string name="wikis_editor_summary_label">Рэдагаваць апісанне (неабавязкова)</string>
     <string name="wikis_editor_summary_hint">Коратка апішыце свае змены</string>
@@ -102,7 +106,6 @@
     <string name="wikis_delete_page_failed">Не ўдалося выдаліць старонку</string>
     <string name="wikis_revert_page_comment_label">Адмяніць каментар</string>
     <string name="wikis_revert_page_confirm">Адмяніць</string>
-    <string name="wikis_revert_page_cancel">Адмена</string>
     <string name="wikis_revert_page_failed">Не ўдалося адкаціць старонку</string>
     <string name="wikis_rename_page_title">Перайменаваць старонку</string>
     <string name="wikis_rename_page_label">Новы URL</string>
@@ -117,12 +120,10 @@
     <string name="wikis_history_view_action">Прагляд</string>
     <string name="wikis_history_revert_action">Вярнуць да гэтай версіі</string>
     <string name="wikis_revision_current_badge">Бягучы</string>
-    <string name="wikis_revision_back_to_history">Назад у гісторыю</string>
     <string name="wikis_revision_revert_to_this">Вярнуць да гэтай версіі</string>
     <string name="wikis_changes_title">Нядаўнія змены</string>
     <string name="wikis_changes_subtitle">Нядаўнія праўкі па ўсіх старонках гэтага wiki.</string>
     <string name="wikis_changes_empty">Пакуль няма змен</string>
-    <string name="wikis_search_title">Пошук</string>
     <string name="wikis_search_empty_query">Увядзіце пошукавы запыт</string>
     <string name="wikis_redirects_title">Перанакіраванні</string>
     <string name="wikis_redirects_add">Дадаць</string>
@@ -131,6 +132,7 @@
     <string name="wikis_redirect_create_action">Стварыць</string>
     <string name="wikis_redirect_source_label">Крыніца</string>
     <string name="wikis_redirect_target_label">Мэта</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Патрабуюцца і крыніца, і мэта</string>
     <string name="wikis_redirect_created_success">Перанакіраванне створана</string>
     <string name="wikis_redirect_create_failed">Не ўдалося стварыць перанакіраванне</string>
@@ -164,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Сетка</string>
     <string name="wikis_attachments_view_list">Выгляд спіса</string>
     <string name="wikis_attachments_copy_embed">Капіраваць спасылку для ўбудавання</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Спасылка для ўбудавання скапіявана</string>
     <string name="wikis_attachments_delete">Выдаліць</string>
     <string name="wikis_attachments_delete_confirm_title">Выдаліць укладанне</string>
@@ -195,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Не ўдалося сінхранізаваць wiki</string>
     <string name="wikis_settings_section_home">Галоўная старонка</string>
     <string name="wikis_settings_field_home_label">Выкарыстаць як галоўную</string>
-    <string name="wikis_settings_home_save">Захаваць змены</string>
     <string name="wikis_settings_home_saved">Налады захаваны</string>
     <string name="wikis_settings_home_save_failed">Не ўдалося захаваць налады</string>
     <string name="wikis_settings_section_delete">Выдаліць вікі</string>
@@ -212,6 +215,11 @@
     <string name="wikis_access_owner_label">Уладальнік</string>
     <string name="wikis_access_tab_users">Карыстальнікі</string>
     <string name="wikis_access_tab_groups">Групы</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Групы недаступны</string>
     <string name="wikis_access_set_success">Доступ абноўлены</string>
     <string name="wikis_access_revoke_success">Доступ выдалены</string>
@@ -232,27 +240,22 @@
     <string name="wikis_pageview_updated">Абноўлена %1$s</string>
     <string name="wikis_pageview_not_found_description">Старонка „%1$s\" яшчэ не існуе.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Падзяліцца спасылкай на старонку</string>
+    <string name="wikis_pageview_share_chooser">Спасылка на вікі</string>
     <string name="wikis_pageview_share_link_copied">Спасылка на старонку скапіравана ў буфер абмену</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Спасылка на старонку wiki</string>
     <string name="wikis_pageview_loading">Загрузка старонкі…</string>
-    <string name="wikis_page_action_share">Падзяліцца спасылкай на старонку</string>
-    <string name="wikis_page_action_rss_changes">RSS: Змены</string>
-    <string name="wikis_page_action_rss_comments">RSS: Каментары</string>
-    <string name="wikis_page_action_rss_all">RSS: Змены і каментары</string>
+    <string name="wikis_page_action_share">Спасылка</string>
     <string name="wikis_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="wikis_owned_badge">Уласны</string>
     <string name="wikis_search_placeholder">Пошук wiki…</string>
     <string name="wikis_subscribing">Падпіска…</string>
     <string name="wikis_unsubscribe_confirm_message">Вы ўпэўнены, што хочаце адпісацца ад %1$s?</string>
     <string name="wikis_subscribe_failed_502">Сервер недаступны. Паўторная спроба…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Пошук па імені, ID, адбітку або URL…</string>
     <string name="wikis_join_search_button">Пошук wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Падпісаны на wiki</string>
     <string name="wikis_subscribe_502_retry">Паўторная спроба без прапанаванага сервера…</string>
     <string name="wikis_comments_title_template">%1$s - Каментары</string>
     <string name="wikis_comment_form_placeholder_new">Напішыце каментар…</string>
@@ -261,7 +264,6 @@
     <string name="wikis_comment_form_remove_attachment">Выдаліць укладанне</string>
     <string name="wikis_comment_collapse_toggle">Згарнуць тэму</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Рэдагаванне: %1$s</string>
     <string name="wikis_editor_content_placeholder">Напішыце ваш кантэнт тут з дапамогай Markdown…</string>
     <string name="wikis_insert_dialog_empty">Пакуль няма ўкладанняў. Загрузіце файл, каб пачаць.</string>
     <string name="wikis_delete_page_message">Вы збіраецеся выдаліць старонку „%1$s\" (%2$s). Гэту дзеянне можна адмяніць, аднавіўшы з гісторыі.</string>
@@ -306,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Любы</string>
     <string name="wikis_access_subject_authenticated">Аўтэнтыфікаваныя карыстальнікі</string>
     <string name="wikis_revision_compare">Параўнаць змены</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Паказаць старонку</string>
     <string name="wikis_revision_compare_failed">Не ўдалося загрузіць папярэднюю версію для параўнання.</string>
     <string name="wikis_revision_changes_from">Змены з версіі %1$d → %2$d</string>
@@ -370,4 +373,6 @@
         <item quantity="other">Знойдзена %1$d выніку для «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Не ўдалося захаваць подпіс</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

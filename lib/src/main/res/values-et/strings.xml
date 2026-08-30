@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">Manus pole ajutiselt saadaval</string>
     <string name="common_unavailable">Pole saadaval</string>
     <string name="common_not_found">Ei leitud</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Tühista</string>
     <string name="rss_revoke">Tühista juurdepääs</string>
     <string name="rss_revoke_title">Kas tühistada RSS-i juurdepääs?</string>

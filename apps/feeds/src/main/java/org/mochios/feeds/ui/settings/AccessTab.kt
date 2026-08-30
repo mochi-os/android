@@ -25,6 +25,9 @@ import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -410,7 +413,7 @@ private fun AddAccessDialog(
                                 searchResults.take(6).forEach { user ->
                                     val subject = user.id
                                     SubjectOption(
-                                        icon = Icons.Default.Person,
+                                        icon = Icons.Outlined.Person,
                                         title = user.name,
                                         subtitle = null,
                                         selected = selectedSubject == subject,
@@ -442,7 +445,7 @@ private fun AddAccessDialog(
                                 groups.forEach { group ->
                                     val subject = "@${group.id}"
                                     SubjectOption(
-                                        icon = Icons.Default.Group,
+                                        icon = Icons.Outlined.Group,
                                         title = group.name,
                                         subtitle = group.id.toString(),
                                         selected = selectedSubject == subject,
@@ -464,7 +467,7 @@ private fun AddAccessDialog(
                         Spacer(modifier = Modifier.height(8.dp))
                         MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
                             SubjectOption(
-                                icon = Icons.Default.Group,
+                                icon = Icons.Outlined.Group,
                                 title = authenticatedName,
                                 subtitle = stringResource(R.string.feeds_access_authenticated_desc),
                                 selected = selectedSubject == "+",
@@ -474,7 +477,7 @@ private fun AddAccessDialog(
                                 },
                             )
                             SubjectOption(
-                                icon = Icons.Default.Public,
+                                icon = Icons.Outlined.Public,
                                 title = anyoneName,
                                 subtitle = stringResource(R.string.feeds_access_anyone_desc),
                                 selected = selectedSubject == "*",

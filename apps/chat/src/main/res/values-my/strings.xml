@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ဖော်ပြချက် အမည်</string>
     <string name="chat_auth_verification_failed">အတည်ပြုခြင်း မအောင်မြင်ပါ</string>
     <string name="chat_list_title">စကားပြောခန်းများ</string>
-    <string name="chat_list_close_search">ရှာဖွေမှု ပိတ်မည်</string>
     <string name="chat_list_search">ရှာဖွေ</string>
     <string name="chat_list_logout">ထွက်</string>
     <string name="chat_list_new">ချတ်အသစ်</string>
-    <string name="chat_list_removed_chat">ဖယ်ရှားပြီး</string>
     <string name="chat_new_title">ချတ်အသစ်</string>
     <string name="chat_new_name">အုပ်စု အမည်</string>
     <string name="chat_new_friends">သူငယ်ချင်းများ</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">သင်</string>
     <string name="chat_chat_not_found">စကားပြောခန်း မတွေ့ရှိပါ</string>
 
-    <string name="chat_list_more">နောက်ထပ်</string>
     <string name="chat_message_send">ပို့</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">လော့ဂ်အင် မအောင်မြင်ပါ</string>
     <string name="chat_attachment_move_up">အပေါ်သို့ ရွှေ့</string>
     <string name="chat_attachment_move_down">အောက်သို့ ရွှေ့</string>
-    <string name="chat_list_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
 
     <string name="notification_channel_chat">ချတ် အကြောင်းကြားချက်များ</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA ကို မိုဘိုင်းအက်ပ်တွင် ယခုထိ မပံ့ပိုးသေးပါ</string>
     <string name="chat_auth_enter_code_sent">%1$s သို့ ပို့ထားသော ကုဒ်ကို ထည့်ပါ</string>
     <string name="chat_auth_create_identity">သင်၏ အထောက်အထား ဖန်တီးပါ</string>
-    <string name="chat_list_search_placeholder">ချတ်များ ရှာဖွေပါ</string>
-    <string name="chat_list_no_matching">ကိုက်ညီသော ချတ်များ မရှိပါ</string>
     <string name="chat_list_empty">ချတ်များ မရှိသေးပါ</string>
-    <string name="chat_list_left_chat">ထွက်ခွာပြီး</string>
     <string name="chat_new_existing_chat">ရှိပြီးသား ချတ်ကို ဖွင့်ပါ</string>
     <string name="chat_new_start">ချတ် စတင်ပါ</string>
     <string name="chat_new_start_group">အုပ်စု ချတ် စတင်ပါ</string>

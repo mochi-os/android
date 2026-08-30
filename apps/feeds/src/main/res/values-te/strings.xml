@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">ఇలాంటివి తక్కువ</string>
     <string name="feeds_no_tags">ట్యాగ్‌లు లేవు</string>
     <string name="feeds_anonymous">అనామకుడు</string>
-    <string name="feeds_replying_to_comment">వ్యాఖ్యకు ప్రత్యుత్తరం ఇస్తోంది</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">ఫైల్ జత చేయండి</string>
     <string name="feeds_tag_label">ట్యాగ్ లేబుల్</string>
     <string name="feeds_file">ఫైల్</string>

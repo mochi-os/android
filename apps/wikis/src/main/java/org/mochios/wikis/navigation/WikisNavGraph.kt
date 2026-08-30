@@ -20,8 +20,6 @@ import org.mochios.wikis.ui.history.RevisionViewScreen
 import org.mochios.wikis.ui.join.JoinWikiScreen
 import org.mochios.wikis.ui.list.CreateWikiScreen
 import org.mochios.wikis.ui.list.WikiListScreen
-import org.mochios.wikis.ui.page.PageDeleteScreen
-import org.mochios.wikis.ui.page.PageRevertScreen
 import org.mochios.wikis.ui.page.PageViewScreen
 import org.mochios.wikis.ui.page.WikiHomeScreen
 import org.mochios.wikis.ui.redirects.RedirectsScreen
@@ -41,13 +39,11 @@ object WikisApp {
     fun wikiHome(wikiId: String) = "wikis/$wikiId"
     fun pageView(wikiId: String, page: String) = "wikis/$wikiId/$page"
     fun pageEdit(wikiId: String, page: String) = "wikis/$wikiId/$page/edit"
-    fun newPage(wikiId: String) = "wikis/$wikiId/new"
+    fun newPage(wikiId: String, slug: String? = null) =
+        if (slug.isNullOrBlank()) "wikis/$wikiId/new" else "wikis/$wikiId/new?slug=$slug"
     fun pageHistory(wikiId: String, page: String) = "wikis/$wikiId/$page/history"
     fun pageRevision(wikiId: String, page: String, version: Int) =
         "wikis/$wikiId/$page/history/$version"
-    fun pageDelete(wikiId: String, page: String) = "wikis/$wikiId/$page/delete"
-    fun pageRevert(wikiId: String, page: String, version: Int) =
-        "wikis/$wikiId/$page/revert?version=$version"
     fun comments(wikiId: String, page: String) = "wikis/$wikiId/$page/comments"
     fun settings(wikiId: String, tab: String = "settings") =
         "wikis/$wikiId/settings?tab=$tab"
@@ -63,11 +59,9 @@ object WikisApp {
     const val WIKI_HOME = "wikis/{wikiId}"
     const val PAGE_VIEW = "wikis/{wikiId}/{page}"
     const val PAGE_EDIT = "wikis/{wikiId}/{page}/edit"
-    const val NEW_PAGE = "wikis/{wikiId}/new"
+    const val NEW_PAGE = "wikis/{wikiId}/new?slug={slug}"
     const val PAGE_HISTORY = "wikis/{wikiId}/{page}/history"
     const val PAGE_REVISION = "wikis/{wikiId}/{page}/history/{version}"
-    const val PAGE_DELETE = "wikis/{wikiId}/{page}/delete"
-    const val PAGE_REVERT = "wikis/{wikiId}/{page}/revert?version={version}"
     const val COMMENTS = "wikis/{wikiId}/{page}/comments"
     const val SETTINGS = "wikis/{wikiId}/settings?tab={tab}"
     const val REDIRECTS = "wikis/{wikiId}/redirects"
@@ -102,10 +96,13 @@ fun NavGraphBuilder.wikisNavGraph(
     composable(WikisApp.CREATE) {
         CreateWikiScreen(
             onBack = { navController.popBackStack() },
-            // Drop the create screen and open the new wiki's home, so Back from
-            // there returns to the wiki list rather than the form.
-            onCreated = { wikiId ->
-                navController.navigate(WikisApp.wikiHome(wikiId)) {
+            // Straight into the editor for the new wiki's home page. A wiki
+            // is created empty, so opening its home would land on "page not
+            // found" and make the first act of a new wiki a dead end. Drop the
+            // create screen on the way, so Back from the editor returns to the
+            // wiki list rather than the form.
+            onCreated = { wikiId, home ->
+                navController.navigate(WikisApp.newPage(wikiId, home)) {
                     popUpTo(WikisApp.CREATE) { inclusive = true }
                 }
             },
@@ -153,7 +150,17 @@ fun NavGraphBuilder.wikisNavGraph(
 
     composable(
         route = WikisApp.NEW_PAGE,
-        arguments = listOf(navArgument("wikiId") { type = NavType.StringType }),
+        arguments = listOf(
+            navArgument("wikiId") { type = NavType.StringType },
+            // A suggested slug the editor seeds its field with — the wiki's
+            // home when this is the wiki's first page. Empty for a plain
+            // "New page", where the user names it themselves.
+            navArgument("slug") {
+                type = NavType.StringType
+                defaultValue = ""
+                nullable = false
+            },
+        ),
     ) {
         PageEditorScreen(navController)
     }
@@ -177,27 +184,6 @@ fun NavGraphBuilder.wikisNavGraph(
         ),
     ) {
         RevisionViewScreen(navController)
-    }
-
-    composable(
-        route = WikisApp.PAGE_DELETE,
-        arguments = listOf(
-            navArgument("wikiId") { type = NavType.StringType },
-            navArgument("page") { type = NavType.StringType },
-        ),
-    ) {
-        PageDeleteScreen(navController)
-    }
-
-    composable(
-        route = WikisApp.PAGE_REVERT,
-        arguments = listOf(
-            navArgument("wikiId") { type = NavType.StringType },
-            navArgument("page") { type = NavType.StringType },
-            navArgument("version") { type = NavType.IntType },
-        ),
-    ) {
-        PageRevertScreen(navController)
     }
 
     composable(

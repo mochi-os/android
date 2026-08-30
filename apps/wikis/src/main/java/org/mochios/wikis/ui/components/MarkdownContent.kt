@@ -50,6 +50,7 @@ import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
 import io.noties.markwon.ext.tables.TableAwareMovementMethod
 import io.noties.markwon.ext.tables.TablePlugin
 import io.noties.markwon.ext.tasklist.TaskListPlugin
+import io.noties.markwon.SoftBreakAddsNewLinePlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.image.AsyncDrawableSpan
 import io.noties.markwon.image.ImagesPlugin
@@ -145,6 +146,10 @@ fun MarkdownContent(
 
     val markwon = remember(context, wiki.baseURL, missingLinksKey, onInternalLink) {
         Markwon.builder(context)
+            // CommonMark folds a single newline into the paragraph around it and
+            // renders it as a space, so a page typed as two lines came out as
+            // one. Matches HtmlContent, which every other body is drawn with.
+            .usePlugin(SoftBreakAddsNewLinePlugin.create())
             .usePlugin(HtmlPlugin.create())
             .usePlugin(ImagesPlugin.create())
             .usePlugin(TablePlugin.create(context))

@@ -41,6 +41,7 @@ import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.SearchResponse
 import org.mochios.wikis.model.SettingsResponse
 import org.mochios.wikis.model.SettingsSetResponse
+import org.mochios.wikis.model.ShareResponse
 import org.mochios.wikis.model.SubscribeRequest
 import org.mochios.wikis.model.TagAddResponse
 import org.mochios.wikis.model.TagPagesResponse
@@ -108,6 +109,12 @@ interface WikisApi {
     suspend fun unsubscribe(
         @Path(value = "wiki", encoded = true) wiki: String,
     ): Response<ApiResponse<OkResponse>>
+
+    /** The wiki's shareable `mochi://` link, assembled by the server. */
+    @POST("{wiki}/-/share")
+    suspend fun share(
+        @Path(value = "wiki", encoded = true) wiki: String,
+    ): Response<ApiResponse<ShareResponse>>
 
     
     @POST("{wiki}/-/sync")
@@ -440,6 +447,11 @@ interface WikisApi {
         @Field("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
 
+    /**
+     * Invalidate the RSS tokens minted for [entity], so feed URLs already
+     * handed out stop resolving. Scoped the way [createRssToken] is - `*` for
+     * the all-wikis feed, else a wiki id or fingerprint.
+     */
     @FormUrlEncoded
     @POST("-/rss/token/revoke")
     suspend fun revokeRssToken(

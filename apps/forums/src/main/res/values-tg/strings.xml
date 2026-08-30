@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Номи намоишӣ</string>
     <string name="forums_auth_verification_failed">Тасдиқ ноком шуд</string>
     <string name="forums_list_title">Форумҳо</string>
-    <string name="forums_list_close_search">Пӯшидани ҷустуҷӯ</string>
-    <string name="forums_list_search">Ҷустуҷӯ</string>
     <string name="forums_list_find">Форумҳоро ёбед</string>
     <string name="forums_list_logout">Баромадан</string>
-    <string name="forums_list_create">Эҷоди форум</string>
     <string name="forums_list_unsubscribe">Аз обуна баромадан</string>
     <string name="forums_list_unsubscribe_title">Аз обуна баромадан</string>
     <string name="forums_create_title">Эҷоди форум</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форум ёфт нашуд</string>
     <string name="forums_post_not_found">Пост ёфт нашуд</string>
 
-    <string name="forums_list_more">Бештар</string>
     <string name="forums_comment_send">Фиристодан</string>
     <string name="forums_post_body_field">Матн</string>
     <string name="forums_post_edit_body_field">Матн</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Шарҳ нависед…</string>
     <string name="forums_auth_login_failed">Воридшавӣ ноком шуд</string>
-    <string name="forums_list_add_to_home">Ба экрани асосӣ илова кардан</string>
 
     <string name="notification_channel_forums">Огоҳномаҳои форумҳо</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA дар барномаи мобилӣ ҳоло дастгирӣ намешавад</string>
     <string name="forums_auth_enter_code_sent">Рамзи ба %1$s фиристодашударо ворид кунед</string>
     <string name="forums_auth_create_identity">Шахсияти худро эҷод кунед</string>
-    <string name="forums_list_search_placeholder">Ҷустуҷӯи форумҳо</string>
-    <string name="forums_list_no_matching">Ягон форуми мувофиқ нест</string>
     <string name="forums_list_empty">Ҳанӯз ягон форум нест</string>
     <string name="forums_list_unsubscribe_message">Шумо мутмаин ҳастед, ки мехоҳед обунаатонро аз ин форум бекор кунед?</string>
     <string name="forums_find_search_placeholder">Форумҳоро ҷустуҷӯ кунед ё URL гузоред</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Афзоиши таваҷҷуҳ</string>
     <string name="forums_tag_interest_down">Кам кардани шавқу ҳавас</string>
     <string name="forums_tag_interest_remove">Хориҷ кардани шавқу ҳавас</string>
-    <string name="forums_list_default_sort">Ҷобаҷогузории пешфарз</string>
     <string name="forums_access_tab_users">Корбарон</string>
     <string name="forums_access_tab_groups">Гурӯҳҳо</string>
     <string name="forums_access_tab_manual">Дастӣ</string>

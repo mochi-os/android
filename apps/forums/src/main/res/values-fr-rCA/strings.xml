@@ -14,8 +14,6 @@
     <string name="forums_access_level_vote">Voter</string>
     <string name="forums_access_level_none">Aucun</string>
     <string name="forums_settings">Paramètres</string>
-    <string name="forums_list_search">Rechercher</string>
-    <string name="forums_list_more">Plus</string>
     <string name="forums_comment_send">Envoyer</string>
     <string name="forums_post_remove">Supprimer</string>
     <string name="forums_comment_remove">Supprimer</string>
@@ -42,13 +40,8 @@
     <string name="forums_auth_enter_code_sent">Saisissez le code envoyé à %1$s</string>
     <string name="forums_auth_create_identity">Créer votre identité</string>
     <string name="forums_list_title">Forums</string>
-    <string name="forums_list_search_placeholder">Rechercher des forums</string>
-    <string name="forums_list_close_search">Fermer la recherche</string>
     <string name="forums_list_find">Trouver des forums</string>
-    <string name="forums_list_create">Créer un forum</string>
-    <string name="forums_list_no_matching">Aucun forum correspondant</string>
     <string name="forums_list_empty">Aucun forum pour l\'instant</string>
-    <string name="forums_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="forums_list_unsubscribe_message">Voulez-vous vraiment vous désabonner de ce forum?</string>
     <string name="forums_create_title">Créer un forum</string>
     <string name="forums_create_private">Privé</string>
@@ -195,7 +188,6 @@
     <string name="forums_tag_interest_up">Augmenter l\'intérêt</string>
     <string name="forums_tag_interest_down">Réduire l\'intérêt</string>
     <string name="forums_tag_interest_remove">Supprimer l\'intérêt</string>
-    <string name="forums_list_default_sort">Tri par défaut</string>
     <string name="forums_access_tab_users">Utilisateurs</string>
     <string name="forums_access_tab_groups">Groupes</string>
     <string name="forums_access_tab_manual">Manuelle</string>

@@ -41,8 +41,11 @@ data class MentionSuggestion(
 /**
  * Text field with @mention autocomplete: typing @ queries [onSearch], and
  * choosing a suggestion inserts @[name] at the cursor.
+ *
+ * The caller keeps only the text; the cursor is this field's own business.
+ * Where a caller needs to place the cursor itself - a markdown toolbar marking
+ * up a selection - it holds the [TextFieldValue] overload instead.
  */
-@OptIn(FlowPreview::class)
 @Composable
 fun MentionTextField(
     value: String,
@@ -54,21 +57,53 @@ fun MentionTextField(
     maxLines: Int = Int.MAX_VALUE,
     minLines: Int = 1,
     singleLine: Boolean = false,
+    fillHeight: Boolean = false
+) {
+    var field by remember { mutableStateOf(TextFieldValue(value)) }
+    // An edit from elsewhere lands with the cursor at the end - there is no
+    // better guess when only the text came across.
+    LaunchedEffect(value) {
+        if (value != field.text) field = TextFieldValue(value, TextRange(value.length))
+    }
+    MentionTextField(
+        value = field,
+        onValueChange = { updated ->
+            field = updated
+            if (updated.text != value) onValueChange(updated.text)
+        },
+        onSearch = onSearch,
+        modifier = modifier,
+        label = label,
+        placeholder = placeholder,
+        maxLines = maxLines,
+        minLines = minLines,
+        singleLine = singleLine,
+        fillHeight = fillHeight,
+    )
+}
+
+/**
+ * [MentionTextField] for a caller that drives the cursor as well as the text.
+ */
+@OptIn(FlowPreview::class)
+@Composable
+fun MentionTextField(
+    value: TextFieldValue,
+    onValueChange: (TextFieldValue) -> Unit,
+    onSearch: suspend (query: String) -> List<MentionSuggestion>,
+    modifier: Modifier = Modifier,
+    label: @Composable (() -> Unit)? = null,
+    placeholder: @Composable (() -> Unit)? = null,
+    maxLines: Int = Int.MAX_VALUE,
+    minLines: Int = 1,
+    singleLine: Boolean = false,
     // When true the field stretches to fill a height-constrained [modifier], so
     // its border spans the full box rather than wrapping the text.
     fillHeight: Boolean = false
 ) {
-    var textFieldValue by remember { mutableStateOf(TextFieldValue(value)) }
     var suggestions by remember { mutableStateOf<List<MentionSuggestion>>(emptyList()) }
     var mentionQuery by remember { mutableStateOf<String?>(null) }
     var mentionStart by remember { mutableStateOf(-1) }
-
-    // Sync external value changes
-    LaunchedEffect(value) {
-        if (value != textFieldValue.text) {
-            textFieldValue = TextFieldValue(value, TextRange(value.length))
-        }
-    }
 
     // Debounce mention search
     LaunchedEffect(mentionQuery) {
@@ -86,10 +121,9 @@ fun MentionTextField(
 
     Column(modifier = modifier) {
         MochiTextField(
-            value = textFieldValue,
+            value = value,
             onValueChange = { newValue ->
-                textFieldValue = newValue
-                onValueChange(newValue.text)
+                onValueChange(newValue)
 
                 // Detect @mention trigger
                 val cursor = newValue.selection.start
@@ -147,7 +181,7 @@ fun MentionTextField(
                                 .fillMaxWidth()
                                 .clickable {
                                     // Replace @query with @[name]
-                                    val text = textFieldValue.text
+                                    val text = value.text
                                     val replacement = "@[${suggestion.name}] "
                                     val before = text.substring(0, mentionStart)
                                     val after = text.substring(
@@ -156,8 +190,9 @@ fun MentionTextField(
                                     )
                                     val newText = before + replacement + after
                                     val newCursor = before.length + replacement.length
-                                    textFieldValue = TextFieldValue(newText, TextRange(newCursor))
-                                    onValueChange(newText)
+                                    onValueChange(
+                                        TextFieldValue(newText, TextRange(newCursor))
+                                    )
                                     mentionQuery = null
                                     suggestions = emptyList()
                                 }

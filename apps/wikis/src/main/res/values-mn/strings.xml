@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Өөрчлөлтүүд ба сэтгэгдлүүд</string>
     <string name="wikis_rss_copied">RSS URL clipboard руу хуулагдсан</string>
     <string name="wikis_rss_failed">RSS token авч чадсангүй</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wiki хайх</string>
     <string name="wikis_find_no_results">Wiki олдсонгүй</string>
     <string name="wikis_find_recommended_section">Зөвлөмжтэй wiki</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Сэтгэгдэл алга</string>
     <string name="wikis_comments_empty_subtitle">Энэ хуудсанд хамгийн анхны сэтгэгдлийг үлдээгээрэй.</string>
     <string name="wikis_comment_action_reply">Хариу</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Засах</string>
     <string name="wikis_comment_action_delete">Устгах</string>
     <string name="wikis_comment_action_save">Хадгалах</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Засах</string>
     <string name="wikis_editor_insert">Оруулах</string>
     <string name="wikis_editor_attachments">Хавсралтууд</string>
-    <string name="wikis_editor_cancel">Цуцлах</string>
     <string name="wikis_editor_delete">Хуудас устгах</string>
     <string name="wikis_editor_save">Хадгалах</string>
     <string name="wikis_editor_saving">Хадгалж байна…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Гарчиг</string>
     <string name="wikis_editor_slug_label">Хуудасны URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Агуулга</string>
     <string name="wikis_editor_summary_label">Хураангуй засах (заавал биш)</string>
     <string name="wikis_editor_summary_hint">Өөрийн өөрчлөлтийн товч тайлбар</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Хуудас устгаж чадсангүй</string>
     <string name="wikis_revert_page_comment_label">Сэтгэгдэл буцаах</string>
     <string name="wikis_revert_page_confirm">Буцаах</string>
-    <string name="wikis_revert_page_cancel">Цуцлах</string>
     <string name="wikis_revert_page_failed">Хуудсыг буцааж чадсангүй</string>
     <string name="wikis_rename_page_title">Хуудас нэр өөрчлөх</string>
     <string name="wikis_rename_page_label">Шинэ URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Үзэх</string>
     <string name="wikis_history_revert_action">Энэ хувилбарт буцаах</string>
     <string name="wikis_revision_current_badge">Одоогийн</string>
-    <string name="wikis_revision_back_to_history">Түүх рүү буцах</string>
     <string name="wikis_revision_revert_to_this">Энэ хувилбарт буцаах</string>
     <string name="wikis_changes_title">Сүүлийн өөрчлөлт</string>
     <string name="wikis_changes_subtitle">Энэ wiki-ийн бүх хуудаст хийсэн сүүлийн засваруудууд.</string>
     <string name="wikis_changes_empty">Өөрчлөлт алга</string>
-    <string name="wikis_search_title">Хайх</string>
     <string name="wikis_search_empty_query">Хайх үг оруулна уу</string>
     <string name="wikis_redirects_title">Дахин чиглүүлэлтүүд</string>
     <string name="wikis_redirects_add">Нэмэх</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Үүсгэх</string>
     <string name="wikis_redirect_source_label">Эх сурвалж</string>
     <string name="wikis_redirect_target_label">Зорилт</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Эх сурвалж ба зорилго хоёулаа шаардлагатай</string>
     <string name="wikis_redirect_created_success">Дахин чиглүүлэлт үүсгэгдсэн</string>
     <string name="wikis_redirect_create_failed">Чиглүүлэлт үүсгэж чадсангүй</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Сүлжээний харагдац</string>
     <string name="wikis_attachments_view_list">Жагсаалтын харагдац</string>
     <string name="wikis_attachments_copy_embed">Embed холбоосыг хуулах</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Шигтгээ холбоос хуулагдлаа</string>
     <string name="wikis_attachments_delete">Устгах</string>
     <string name="wikis_attachments_delete_confirm_title">Хавсралт устгах</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki синхрончилж чадсангүй</string>
     <string name="wikis_settings_section_home">Нүүр хуудас</string>
     <string name="wikis_settings_field_home_label">Нүүр хуудас болгон ашиглах</string>
-    <string name="wikis_settings_home_save">Өөрчлөлт хадгалах</string>
     <string name="wikis_settings_home_saved">Тохиргоо хадгалагдсан</string>
     <string name="wikis_settings_home_save_failed">Тохиргоонууд хадгалж чадсангүй</string>
     <string name="wikis_settings_section_delete">Wiki устгах</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Эзэмшигч</string>
     <string name="wikis_access_tab_users">Хэрэглэгчид</string>
     <string name="wikis_access_tab_groups">Бүлгүүд</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Боломжит групп байхгүй</string>
     <string name="wikis_access_set_success">Хандалт шинэчлэгдсэн</string>
     <string name="wikis_access_revoke_success">Хандалтыг хассан</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” хуудас хараахан байхгүй байна.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Хуудасны холбоосыг хуваалцах</string>
+    <string name="wikis_pageview_share_chooser">Викиийн холбоос</string>
     <string name="wikis_pageview_share_link_copied">Хуудасны холбоосыг санах ойд хууллаа</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki хуудасны холбоос</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Хуудасны холбоосыг хуваалцах</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Өөрчлөлт ба сэтгэгдэл</string>
+    <string name="wikis_page_action_share">Холбоос</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki хайх…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Та %1$s-ийн захиалгыг цуцлахдаа итгэлтэй байна уу?</string>
     <string name="wikis_subscribe_failed_502">Тэр сервер хүрэхгүй байна. Дахин оролдож байна…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Нэр, ID, хурууны хээ эсвэл URL-ээр хайх…</string>
     <string name="wikis_join_search_button">wiki хайх…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki-д захиалсан</string>
     <string name="wikis_subscribe_502_retry">Санал болгосон сервергүйгээр дахин оролдож байна…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Сэтгэгдэл бичих…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Агуулгаа энд Markdown ашиглан бичнэ үү…</string>
     <string name="wikis_insert_dialog_empty">Одоогоор хавсралт байхгүй. Эхлэхийн тулд файл байршуулна уу.</string>
     <string name="wikis_delete_page_message">Та “%1$s” (%2$s) хуудсыг устгах гэж байна. Энэ үйлдлийг түүхээс сэргээж буцаах боломжтой.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Баталгаажсан хэрэглэгчид</string>
 
     <string name="wikis_revision_compare">Өөрчлөлтийг харьцуулах</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Хуудсыг харуулах</string>
     <string name="wikis_revision_compare_failed">Харьцуулахын тулд өмнөх хувилбарыг ачаалж чадсангүй.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d хувилбараас гарсан өөрчлөлтүүд</string>
@@ -353,4 +356,6 @@
         <item quantity="other">"%2$s"-н хувьд %1$d үр дүн олдлоо</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Тайлбарыг хадгалж чадсангүй</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

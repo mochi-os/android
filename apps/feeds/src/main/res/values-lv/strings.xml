@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Mazāk līdzīga</string>
     <string name="feeds_no_tags">Nav birku</string>
     <string name="feeds_anonymous">Anonīms</string>
-    <string name="feeds_replying_to_comment">Atbild uz komentāru</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Pievienot failu</string>
     <string name="feeds_tag_label">Birkas nosaukums</string>
     <string name="feeds_file">Fails</string>

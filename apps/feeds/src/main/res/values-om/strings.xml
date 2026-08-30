@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Kana fakkaatu xinneessii</string>
     <string name="feeds_no_tags">Mallattoon hin jiru</string>
     <string name="feeds_anonymous">Maqaa malee</string>
-    <string name="feeds_replying_to_comment">Yaada deebisuu</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Faayilii maxxansi</string>
     <string name="feeds_tag_label">Maqaa mallattoo</string>
     <string name="feeds_file">Faayilii</string>

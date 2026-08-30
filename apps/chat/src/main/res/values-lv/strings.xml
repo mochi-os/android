@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Parādāmais vārds</string>
     <string name="chat_auth_verification_failed">Verifikācija neizdevās</string>
     <string name="chat_list_title">Sarunas</string>
-    <string name="chat_list_close_search">Aizvērt meklēšanu</string>
     <string name="chat_list_search">Meklēt</string>
     <string name="chat_list_logout">Izrakstīties</string>
     <string name="chat_list_new">Jauns čats</string>
-    <string name="chat_list_removed_chat">Noņemts</string>
     <string name="chat_new_title">Jauns čats</string>
     <string name="chat_new_name">Grupas nosaukums</string>
     <string name="chat_new_friends">Draugi</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Jūs</string>
     <string name="chat_chat_not_found">Saruna nav atrasta</string>
 
-    <string name="chat_list_more">Vairāk</string>
     <string name="chat_message_send">Sūtīt</string>
     <string name="chat_attachment_remove">Noņemt pielikumu</string>
     <string name="chat_message_remove_attachment">Noņemt pielikumu</string>
     <string name="chat_auth_login_failed">Pieteikšanās neizdevās</string>
     <string name="chat_attachment_move_up">Pārvietot uz augšu</string>
     <string name="chat_attachment_move_down">Pārvietot uz leju</string>
-    <string name="chat_list_add_to_home">Pievienot sākuma ekrānam</string>
 
     <string name="notification_channel_chat">Tērzēšanas paziņojumi</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA mobilajā lietotnē vēl netiek atbalstīta</string>
     <string name="chat_auth_enter_code_sent">Ievadiet kodu, kas nosūtīts uz %1$s</string>
     <string name="chat_auth_create_identity">Izveidojiet savu identitāti</string>
-    <string name="chat_list_search_placeholder">Meklēt tērzēšanas</string>
-    <string name="chat_list_no_matching">Nav atbilstošu tērzēšanu</string>
     <string name="chat_list_empty">Vēl nav nevienas tērzēšanas</string>
-    <string name="chat_list_left_chat">Pamesta</string>
     <string name="chat_new_existing_chat">Atvērt esošu tērzēšanu</string>
     <string name="chat_new_start">Sākt tērzēšanu</string>
     <string name="chat_new_start_group">Sākt grupas tērzēšanu</string>

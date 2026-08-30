@@ -41,6 +41,8 @@ fun CommentForm(
     // consumes nothing. Padding a mid-screen form by the keyboard height
     // would just push it around. See ComposeBarDefaults.
     windowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
+    showDivider: Boolean = true,
+    banner: (@Composable () -> Unit)? = null,
 ) {
     val focusRequester = remember { FocusRequester() }
 
@@ -86,11 +88,9 @@ fun CommentForm(
             removeLabel = stringResource(R.string.wikis_comment_form_remove_attachment),
         ),
         focusRequester = focusRequester,
-        // A comment box, not a chat line: room to write, and the return key
-        // makes a paragraph rather than posting.
-        minLines = 3,
-        maxLines = 8,
         windowInsets = windowInsets,
+        showDivider = showDivider,
+        banner = banner,
         trailingContent = onCancel?.let {
             {
                 MochiTextButton(onClick = it) {

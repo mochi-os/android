@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ຊື່ສະແດງ</string>
     <string name="forums_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
     <string name="forums_list_title">ກະດານສົນທະນາ</string>
-    <string name="forums_list_close_search">ປິດການຄົ້ນຫາ</string>
-    <string name="forums_list_search">ຄົ້ນຫາ</string>
     <string name="forums_list_find">ຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_list_logout">ອອກຈາກລະບົບ</string>
-    <string name="forums_list_create">ສ້າງກະດານສົນທະນາ</string>
     <string name="forums_list_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="forums_list_unsubscribe_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="forums_create_title">ສ້າງກະດານສົນທະນາ</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ບໍ່ພົບກະດານສົນທະນາ</string>
     <string name="forums_post_not_found">ບໍ່ພົບໂພສ</string>
 
-    <string name="forums_list_more">ເພີ່ມເຕີມ</string>
     <string name="forums_comment_send">ສົ່ງ</string>
     <string name="forums_post_body_field">ເນື້ອຫາ</string>
     <string name="forums_post_edit_body_field">ເນື້ອຫາ</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">ຂຽນຄຳເຫັນ…</string>
     <string name="forums_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
-    <string name="forums_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
 
     <string name="notification_channel_forums">ການແຈ້ງເຕືອນຂອງກະດານສົນທະນາ</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">ຍັງບໍ່ຮອງຮັບ MFA ໃນແອັບມືຖື</string>
     <string name="forums_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
     <string name="forums_auth_create_identity">ສ້າງຕົວຕົນຂອງທ່ານ</string>
-    <string name="forums_list_search_placeholder">ຄົ້ນຫາກະດານສົນທະນາ</string>
-    <string name="forums_list_no_matching">ບໍ່ມີກະດານສົນທະນາທີ່ກົງກັນ</string>
     <string name="forums_list_empty">ຍັງບໍ່ມີກະດານສົນທະນາ</string>
     <string name="forums_list_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການຍົກເລີກການຕິດຕາມກະດານສົນທະນານີ້?</string>
     <string name="forums_find_search_placeholder">ຄົ້ນຫາກະດານສົນທະນາ ຫຼື ວາງ URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">ເພີ່ມຄວາມສົນໃຈ</string>
     <string name="forums_tag_interest_down">ຫຼຸດດອກເບ້ຍ</string>
     <string name="forums_tag_interest_remove">ລຶບຄວາມສົນໃຈ</string>
-    <string name="forums_list_default_sort">ການຈັດລຽງເລີ່ມຕົ້ນ</string>
     <string name="forums_access_tab_users">ຜູ້ໃຊ້</string>
     <string name="forums_access_tab_groups">ກຸ່ມ</string>
     <string name="forums_access_tab_manual">ດ້ວຍຕົນເອງ</string>

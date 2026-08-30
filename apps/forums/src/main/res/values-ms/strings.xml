@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nama paparan</string>
     <string name="forums_auth_verification_failed">Pengesahan gagal</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Tutup carian</string>
-    <string name="forums_list_search">Cari</string>
     <string name="forums_list_find">Cari forum</string>
     <string name="forums_list_logout">Log keluar</string>
-    <string name="forums_list_create">Cipta forum</string>
     <string name="forums_list_unsubscribe">Berhenti melanggan</string>
     <string name="forums_list_unsubscribe_title">Berhenti melanggan</string>
     <string name="forums_create_title">Cipta forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum tidak ditemui</string>
     <string name="forums_post_not_found">Hantaran tidak dijumpai</string>
 
-    <string name="forums_list_more">Lagi</string>
     <string name="forums_comment_send">Hantar</string>
     <string name="forums_post_body_field">Kandungan</string>
     <string name="forums_post_edit_body_field">Kandungan</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Tambah tag</string>
     <string name="forums_write_comment">Tulis komen…</string>
     <string name="forums_auth_login_failed">Log masuk gagal</string>
-    <string name="forums_list_add_to_home">Tambah ke skrin utama</string>
 
     <string name="notification_channel_forums">Pemberitahuan forum</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA belum disokong dalam aplikasi mudah alih</string>
     <string name="forums_auth_enter_code_sent">Masukkan kod yang dihantar ke %1$s</string>
     <string name="forums_auth_create_identity">Cipta identiti anda</string>
-    <string name="forums_list_search_placeholder">Cari forum</string>
-    <string name="forums_list_no_matching">Tiada forum yang sepadan</string>
     <string name="forums_list_empty">Belum ada forum</string>
     <string name="forums_list_unsubscribe_message">Adakah anda pasti mahu berhenti melanggan forum ini?</string>
     <string name="forums_find_search_placeholder">Cari forum atau tampal URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Tingkatkan minat</string>
     <string name="forums_tag_interest_down">Kurangkan minat</string>
     <string name="forums_tag_interest_remove">Alih keluar minat</string>
-    <string name="forums_list_default_sort">Susunan lalai</string>
     <string name="forums_access_tab_users">Pengguna</string>
     <string name="forums_access_tab_groups">Kumpulan</string>
     <string name="forums_access_tab_manual">Manual</string>

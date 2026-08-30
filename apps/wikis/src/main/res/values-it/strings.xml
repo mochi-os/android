@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Modifiche e commenti</string>
     <string name="wikis_rss_copied">URL RSS copiato negli appunti</string>
     <string name="wikis_rss_failed">Impossibile ottenere il token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Trova wiki</string>
     <string name="wikis_find_no_results">Nessun wiki trovato</string>
     <string name="wikis_find_recommended_section">Wiki consigliati</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Ancora nessun commento</string>
     <string name="wikis_comments_empty_subtitle">Sii il primo a commentare questa pagina.</string>
     <string name="wikis_comment_action_reply">Rispondi</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Modifica</string>
     <string name="wikis_comment_action_delete">Elimina</string>
     <string name="wikis_comment_action_save">Salva</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Modifica</string>
     <string name="wikis_editor_insert">Inserisci</string>
     <string name="wikis_editor_attachments">Allegati</string>
-    <string name="wikis_editor_cancel">Annulla</string>
     <string name="wikis_editor_delete">Elimina pagina</string>
     <string name="wikis_editor_save">Salva</string>
     <string name="wikis_editor_saving">Salvataggio…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Titolo</string>
     <string name="wikis_editor_slug_label">URL pagina</string>
     <string name="wikis_editor_slug_hint">nome-mia-pagina</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Contenuto</string>
     <string name="wikis_editor_summary_label">Riepilogo della modifica (facoltativo)</string>
     <string name="wikis_editor_summary_hint">Descrivi brevemente le tue modifiche</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Impossibile eliminare la pagina</string>
     <string name="wikis_revert_page_comment_label">Ripristina commento</string>
     <string name="wikis_revert_page_confirm">Ripristina</string>
-    <string name="wikis_revert_page_cancel">Annulla</string>
     <string name="wikis_revert_page_failed">Impossibile ripristinare la pagina</string>
     <string name="wikis_rename_page_title">Rinomina pagina</string>
     <string name="wikis_rename_page_label">Nuovo URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Visualizza</string>
     <string name="wikis_history_revert_action">Ripristina questa versione</string>
     <string name="wikis_revision_current_badge">Corrente</string>
-    <string name="wikis_revision_back_to_history">Torna alla cronologia</string>
     <string name="wikis_revision_revert_to_this">Ripristina questa versione</string>
     <string name="wikis_changes_title">Modifiche recenti</string>
     <string name="wikis_changes_subtitle">Modifiche recenti su tutte le pagine di questo wiki.</string>
     <string name="wikis_changes_empty">Ancora nessuna modifica</string>
-    <string name="wikis_search_title">Cerca</string>
     <string name="wikis_search_empty_query">Inserisci un termine di ricerca</string>
     <string name="wikis_redirects_title">Reindirizzamenti</string>
     <string name="wikis_redirects_add">Aggiungi</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Crea</string>
     <string name="wikis_redirect_source_label">Sorgente</string>
     <string name="wikis_redirect_target_label">Destinazione</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Sono richiesti sia la sorgente che la destinazione</string>
     <string name="wikis_redirect_created_success">Reindirizzamento creato</string>
     <string name="wikis_redirect_create_failed">Impossibile creare il reindirizzamento</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Vista a griglia</string>
     <string name="wikis_attachments_view_list">Vista a elenco</string>
     <string name="wikis_attachments_copy_embed">Copia link di incorporamento</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Link di incorporamento copiato</string>
     <string name="wikis_attachments_delete">Elimina</string>
     <string name="wikis_attachments_delete_confirm_title">Elimina allegato</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Impossibile sincronizzare il wiki</string>
     <string name="wikis_settings_section_home">Pagina iniziale</string>
     <string name="wikis_settings_field_home_label">Usa come home</string>
-    <string name="wikis_settings_home_save">Salva modifiche</string>
     <string name="wikis_settings_home_saved">Impostazioni salvate</string>
     <string name="wikis_settings_home_save_failed">Impossibile salvare le impostazioni</string>
     <string name="wikis_settings_section_delete">Elimina wiki</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Proprietario</string>
     <string name="wikis_access_tab_users">Utenti</string>
     <string name="wikis_access_tab_groups">Gruppi</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Nessun gruppo disponibile</string>
     <string name="wikis_access_set_success">Accesso aggiornato</string>
     <string name="wikis_access_revoke_success">Accesso rimosso</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Aggiornato %1$s</string>
     <string name="wikis_pageview_not_found_description">La pagina «%1$s» non esiste ancora.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Condividi link della pagina</string>
+    <string name="wikis_pageview_share_chooser">Link del wiki</string>
     <string name="wikis_pageview_share_link_copied">Link della pagina copiato negli appunti</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Link della pagina wiki</string>
     <string name="wikis_pageview_loading">Caricamento pagina…</string>
-    <string name="wikis_page_action_share">Condividi link della pagina</string>
-    <string name="wikis_page_action_rss_changes">RSS: Modifiche</string>
-    <string name="wikis_page_action_rss_comments">RSS: Commenti</string>
-    <string name="wikis_page_action_rss_all">RSS: Modifiche e commenti</string>
+    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Apri barra laterale</string>
     <string name="wikis_owned_badge">Posseduto</string>
     <string name="wikis_search_placeholder">Cerca un wiki…</string>
     <string name="wikis_subscribing">Iscrizione in corso…</string>
     <string name="wikis_unsubscribe_confirm_message">Sei sicuro di voler annullare l\'iscrizione a %1$s?</string>
     <string name="wikis_subscribe_failed_502">Quel server non è raggiungibile. Nuovo tentativo…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Cerca per nome, ID, fingerprint o URL…</string>
     <string name="wikis_join_search_button">Cerca wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Iscritto al wiki</string>
     <string name="wikis_subscribe_502_retry">Nuovo tentativo senza il server suggerito…</string>
     <string name="wikis_comments_title_template">%1$s - Commenti</string>
     <string name="wikis_comment_form_placeholder_new">Scrivi un commento…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Rimuovi allegato</string>
     <string name="wikis_comment_collapse_toggle">Comprimi discussione</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Modifica: %1$s</string>
     <string name="wikis_editor_content_placeholder">Scrivi qui i tuoi contenuti usando Markdown…</string>
     <string name="wikis_insert_dialog_empty">Nessun allegato ancora. Carica un file per iniziare.</string>
     <string name="wikis_delete_page_message">Stai per eliminare la pagina «%1$s» (%2$s). Questa azione può essere annullata ripristinando dalla cronologia.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Utenti autenticati</string>
 
     <string name="wikis_revision_compare">Confronta le modifiche</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Mostra la pagina</string>
     <string name="wikis_revision_compare_failed">Impossibile caricare la versione precedente per il confronto.</string>
     <string name="wikis_revision_changes_from">Modifiche dalla versione %1$d → %2$d</string>
@@ -353,4 +356,6 @@
         <item quantity="other">%1$d risultati per «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Impossibile salvare la didascalia</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

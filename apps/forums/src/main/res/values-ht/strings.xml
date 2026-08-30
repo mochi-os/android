@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Non afichaj</string>
     <string name="forums_auth_verification_failed">Verifikasyon echwe</string>
     <string name="forums_list_title">Fowòm</string>
-    <string name="forums_list_close_search">Fèmen rechèch</string>
-    <string name="forums_list_search">Chèche</string>
     <string name="forums_list_find">Jwenn fowòm</string>
     <string name="forums_list_logout">Dekonekte</string>
-    <string name="forums_list_create">Kreye fowòm</string>
     <string name="forums_list_unsubscribe">Dezabòne</string>
     <string name="forums_list_unsubscribe_title">Dezabòne</string>
     <string name="forums_create_title">Kreye fowòm</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Fowòm pa jwenn</string>
     <string name="forums_post_not_found">Pòs pa jwenn</string>
 
-    <string name="forums_list_more">Plis</string>
     <string name="forums_comment_send">Voye</string>
     <string name="forums_post_body_field">Kontni</string>
     <string name="forums_post_edit_body_field">Kontni</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
     <string name="forums_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
     <string name="forums_auth_create_identity">Kreye idantite ou</string>
-    <string name="forums_list_add_to_home">Ajoute sou ekran akèy la</string>
     <string name="forums_tag_clear">Netwaye filt la</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Ekri yon kòmantè…</string>
 
     <string name="notification_channel_forums">Notifikasyon fowòm</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Chèche fowòm</string>
-    <string name="forums_list_no_matching">Pa gen fowòm ki koresponn</string>
     <string name="forums_list_empty">Poko gen fowòm</string>
     <string name="forums_list_unsubscribe_message">Èske ou sèten ou vle dezabòne nan fowòm sa a?</string>
     <string name="forums_find_search_placeholder">Chèche fowòm oswa kole URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Ogmante enterè</string>
     <string name="forums_tag_interest_down">Diminye enterè</string>
     <string name="forums_tag_interest_remove">Retire enterè</string>
-    <string name="forums_list_default_sort">Klasman defo</string>
     <string name="forums_access_tab_users">Itilizatè</string>
     <string name="forums_access_tab_groups">Gwoup</string>
     <string name="forums_access_tab_manual">Manyèl</string>

@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ڏيکاري وارو نالو</string>
     <string name="chat_auth_verification_failed">تصديق ناڪام ٿي</string>
     <string name="chat_list_title">چيٽ</string>
-    <string name="chat_list_close_search">ڳولا بند ڪريو</string>
     <string name="chat_list_search">ڳوليو</string>
     <string name="chat_list_logout">لاگ آئوٽ</string>
     <string name="chat_list_new">نئين چيٽ</string>
-    <string name="chat_list_removed_chat">هٽايو ويو</string>
     <string name="chat_new_title">نئين چيٽ</string>
     <string name="chat_new_name">گروپ نالو</string>
     <string name="chat_new_friends">دوست</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">توھان</string>
     <string name="chat_chat_not_found">چيٽ نه ملي</string>
 
-    <string name="chat_list_more">وڌيڪ</string>
     <string name="chat_message_send">موڪليو</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">لاگ ان ناڪام</string>
     <string name="chat_attachment_move_up">مٿي منتقل ڪريو</string>
     <string name="chat_attachment_move_down">هيٺ منتقل ڪريو</string>
-    <string name="chat_list_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
 
     <string name="notification_channel_chat">چيٽ جون اطلاعون</string>
     <string name="chat_auth_brand">Mochi چيٽ</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA اڃا موبائل ايپ ۾ سپورٽ ٿيل ناهي</string>
     <string name="chat_auth_enter_code_sent">%1$s ڏانهن موڪليل ڪوڊ داخل ڪريو</string>
     <string name="chat_auth_create_identity">پنهنجي سڃاڻپ ٺاهيو</string>
-    <string name="chat_list_search_placeholder">چيٽ ڳوليو</string>
-    <string name="chat_list_no_matching">ڪابه ملندڙ چيٽ ناهي</string>
     <string name="chat_list_empty">اڃا تائين ڪابه چيٽ ناهي</string>
-    <string name="chat_list_left_chat">ڇڏي ڏنو</string>
     <string name="chat_new_existing_chat">موجوده چيٽ کوليو</string>
     <string name="chat_new_start">چيٽ شروع ڪريو</string>
     <string name="chat_new_start_group">گروپ چيٽ شروع ڪريو</string>

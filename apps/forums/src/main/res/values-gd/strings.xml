@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Ainm taisbeanaidh</string>
     <string name="forums_auth_verification_failed">Dh\'fhàillig an dearbhadh</string>
     <string name="forums_list_title">Fòraman</string>
-    <string name="forums_list_close_search">Dùin an lorg</string>
-    <string name="forums_list_search">Lorg</string>
     <string name="forums_list_find">Lorg fòraman</string>
     <string name="forums_list_logout">Clàraich a-mach</string>
-    <string name="forums_list_create">Cruthaich fòram</string>
     <string name="forums_list_unsubscribe">Dì-fho-sgrìobh</string>
     <string name="forums_list_unsubscribe_title">Dì-fho-sgrìobh</string>
     <string name="forums_create_title">Cruthaich fòram</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Cha deach am fòram a lorg</string>
     <string name="forums_post_not_found">Cha deach am post a lorg</string>
 
-    <string name="forums_list_more">Barrachd</string>
     <string name="forums_comment_send">Cuir</string>
     <string name="forums_post_body_field">Bodhaig</string>
     <string name="forums_post_edit_body_field">Bodhaig</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">Chan eil MFA ri fhaighinn fhathast san aplacaid mhobile</string>
     <string name="forums_auth_enter_code_sent">Cuir a-steach an còd a chaidh a chur gu %1$s</string>
     <string name="forums_auth_create_identity">Cruthaich do dhearbh-aithne</string>
-    <string name="forums_list_add_to_home">Cuir ris an sgrìn-dachaigh</string>
     <string name="forums_tag_clear">Glan a\' chriathrag</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Sgrìobh beachd…</string>
 
     <string name="notification_channel_forums">Brathan nam fòraman</string>
     <string name="forums_auth_brand">Fòraman Mochi</string>
-    <string name="forums_list_search_placeholder">Lorg fòraman</string>
-    <string name="forums_list_no_matching">Chan eil fòram a\' freagairt</string>
     <string name="forums_list_empty">Chan eil fòram ann fhathast</string>
     <string name="forums_list_unsubscribe_message">A bheil thu cinnteach gu bheil thu airson sgur a fho-sgrìobhadh ris an fhòram seo?</string>
     <string name="forums_find_search_placeholder">Lorg fòraman no cuir URL ann</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Brosnaich ùidh</string>
     <string name="forums_tag_interest_down">Lùghdaich an ùidh</string>
     <string name="forums_tag_interest_remove">Thoir an ùidh air falbh</string>
-    <string name="forums_list_default_sort">Seòrsachadh bunaiteach</string>
     <string name="forums_access_tab_users">Cleachdaichean</string>
     <string name="forums_access_tab_groups">Buidhnean</string>
     <string name="forums_access_tab_manual">Le làimh</string>

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nome visualizzato</string>
     <string name="forums_auth_verification_failed">Verifica non riuscita</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Chiudi ricerca</string>
-    <string name="forums_list_search">Cerca</string>
     <string name="forums_list_find">Trova forum</string>
     <string name="forums_list_logout">Esci</string>
-    <string name="forums_list_create">Crea forum</string>
     <string name="forums_list_unsubscribe">Annulla iscrizione</string>
     <string name="forums_list_unsubscribe_title">Annulla iscrizione</string>
     <string name="forums_create_title">Crea forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum non trovato</string>
     <string name="forums_post_not_found">Post non trovato</string>
 
-    <string name="forums_list_more">Altro</string>
     <string name="forums_comment_send">Invia</string>
     <string name="forums_post_body_field">Testo</string>
     <string name="forums_post_edit_body_field">Testo</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Aggiungi tag</string>
     <string name="forums_write_comment">Scrivi un commento…</string>
     <string name="forums_auth_login_failed">Accesso non riuscito</string>
-    <string name="forums_list_add_to_home">Aggiungi alla schermata Home</string>
 
     <string name="notification_channel_forums">Notifiche dei forum</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA non ancora supportata nell\'app mobile</string>
     <string name="forums_auth_enter_code_sent">Inserisci il codice inviato a %1$s</string>
     <string name="forums_auth_create_identity">Crea la tua identità</string>
-    <string name="forums_list_search_placeholder">Cerca forum</string>
-    <string name="forums_list_no_matching">Nessun forum corrispondente</string>
     <string name="forums_list_empty">Nessun forum ancora</string>
     <string name="forums_list_unsubscribe_message">Vuoi davvero annullare l\'iscrizione a questo forum?</string>
     <string name="forums_find_search_placeholder">Cerca forum o incolla URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Aumenta l\'interesse</string>
     <string name="forums_tag_interest_down">Riduci interesse</string>
     <string name="forums_tag_interest_remove">Rimuovi interesse</string>
-    <string name="forums_list_default_sort">Ordinamento predefinito</string>
     <string name="forums_access_tab_users">Utenti</string>
     <string name="forums_access_tab_groups">Gruppi</string>
     <string name="forums_access_tab_manual">Manuale</string>

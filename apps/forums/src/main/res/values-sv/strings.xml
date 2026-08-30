@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Visningsnamn</string>
     <string name="forums_auth_verification_failed">Verifiering misslyckades</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Stäng sökning</string>
-    <string name="forums_list_search">Sök</string>
     <string name="forums_list_find">Hitta forum</string>
     <string name="forums_list_logout">Logga ut</string>
-    <string name="forums_list_create">Skapa forum</string>
     <string name="forums_list_unsubscribe">Avsluta prenumeration</string>
     <string name="forums_list_unsubscribe_title">Avsluta prenumeration</string>
     <string name="forums_create_title">Skapa forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum hittades inte</string>
     <string name="forums_post_not_found">Inlägget hittades inte</string>
 
-    <string name="forums_list_more">Mer</string>
     <string name="forums_comment_send">Skicka</string>
     <string name="forums_post_body_field">Innehåll</string>
     <string name="forums_post_edit_body_field">Innehåll</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Lägg till tagg</string>
     <string name="forums_write_comment">Skriv en kommentar…</string>
     <string name="forums_auth_login_failed">Inloggning misslyckades</string>
-    <string name="forums_list_add_to_home">Lägg till på startskärmen</string>
 
     <string name="notification_channel_forums">Forum-aviseringar</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA stöds inte ännu i mobilappen</string>
     <string name="forums_auth_enter_code_sent">Ange koden som skickats till %1$s</string>
     <string name="forums_auth_create_identity">Skapa din identitet</string>
-    <string name="forums_list_search_placeholder">Sök forum</string>
-    <string name="forums_list_no_matching">Inga matchande forum</string>
     <string name="forums_list_empty">Inga forum ännu</string>
     <string name="forums_list_unsubscribe_message">Är du säker på att du vill avprenumerera från det här forumet?</string>
     <string name="forums_find_search_placeholder">Sök forum eller klistra in URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Öka intresse</string>
     <string name="forums_tag_interest_down">Minska intresse</string>
     <string name="forums_tag_interest_remove">Ta bort intresse</string>
-    <string name="forums_list_default_sort">Standardsortering</string>
     <string name="forums_access_tab_users">Användare</string>
     <string name="forums_access_tab_groups">Grupper</string>
     <string name="forums_access_tab_manual">Manuell</string>

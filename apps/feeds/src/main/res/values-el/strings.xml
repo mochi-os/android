@@ -148,7 +148,7 @@
     <string name="feeds_less_like_this">Λιγότερα σαν αυτό</string>
     <string name="feeds_no_tags">Χωρίς ετικέτες</string>
     <string name="feeds_anonymous">Ανώνυμος</string>
-    <string name="feeds_replying_to_comment">Απάντηση σε σχόλιο</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Επισύναψη αρχείου</string>
     <string name="feeds_tag_label">Ετικέτα</string>
     <string name="feeds_select_feed">Επιλέξτε μια ροή</string>

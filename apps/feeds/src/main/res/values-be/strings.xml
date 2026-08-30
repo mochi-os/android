@@ -162,7 +162,7 @@
     <string name="feeds_less_like_this">Менш падобнага</string>
     <string name="feeds_no_tags">Тэгаў няма</string>
     <string name="feeds_anonymous">Ананімна</string>
-    <string name="feeds_replying_to_comment">Адказ на каментарый</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Прымацаваць файл</string>
     <string name="feeds_tag_label">Назва тэга</string>
     <string name="feeds_select_feed">Выберыце стужку</string>

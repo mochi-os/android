@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">మార్పులు మరియు వ్యాఖ్యలు</string>
     <string name="wikis_rss_copied">RSS URL క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది</string>
     <string name="wikis_rss_failed">RSS టోకెన్‌ను పొందడంలో విఫలమైంది</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">వికీలను కనుగొనండి</string>
     <string name="wikis_find_no_results">wikiలు ఏవీ కనుగొనబడలేదు</string>
     <string name="wikis_find_recommended_section">రికమెండ్ చేయబడిన wikiలు</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">ఇంకా కామెంట్‌లు లేవు</string>
     <string name="wikis_comments_empty_subtitle">ఈ పేజీపై మొదట వ్యాఖ్యానించండి.</string>
     <string name="wikis_comment_action_reply">రిప్లై</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">సవరించండి</string>
     <string name="wikis_comment_action_delete">తొలగించండి</string>
     <string name="wikis_comment_action_save">సేవ్ చేయండి</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">సవరించండి</string>
     <string name="wikis_editor_insert">చొప్పించండి</string>
     <string name="wikis_editor_attachments">అటాచ్‌మెంట్‌లు</string>
-    <string name="wikis_editor_cancel">రద్దు చేయండి</string>
     <string name="wikis_editor_delete">పేజీని తొలగించండి</string>
     <string name="wikis_editor_save">సేవ్ చేయండి</string>
     <string name="wikis_editor_saving">సేవ్ చేస్తోంది…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">శీర్షిక</string>
     <string name="wikis_editor_slug_label">పేజీ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">కంటెంట్</string>
     <string name="wikis_editor_summary_label">సవరణ సారాంశం (ఐచ్ఛికం)</string>
     <string name="wikis_editor_summary_hint">మీ మార్పులను క్లుప్తంగా వివరించండి</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">పేజీని తొలగించడంలో విఫలమైంది</string>
     <string name="wikis_revert_page_comment_label">వ్యాఖ్యను వెనక్కి తీసుకురండి</string>
     <string name="wikis_revert_page_confirm">తిరగదీయు</string>
-    <string name="wikis_revert_page_cancel">రద్దు చేయండి</string>
     <string name="wikis_revert_page_failed">పేజీని వెనక్కి తీసుకురావడంలో విఫలమైంది</string>
     <string name="wikis_rename_page_title">పేజీ పేరును మార్చండి</string>
     <string name="wikis_rename_page_label">కొత్త URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">వీక్షించండి</string>
     <string name="wikis_history_revert_action">ఈ వెర్షన్‌కు వెనక్కి తీసుకురండి</string>
     <string name="wikis_revision_current_badge">ప్రస్తుత</string>
-    <string name="wikis_revision_back_to_history">చరిత్రకు తిరిగి</string>
     <string name="wikis_revision_revert_to_this">ఈ వెర్షన్‌కు వెనక్కి తీసుకురండి</string>
     <string name="wikis_changes_title">ఇటీవలి మార్పులు</string>
     <string name="wikis_changes_subtitle">ఈ wikiలోని అన్ని పేజీలలో ఇటీవలి ఎడిట్‌లు.</string>
     <string name="wikis_changes_empty">ఇంకా మార్పులు లేవు</string>
-    <string name="wikis_search_title">శోధన</string>
     <string name="wikis_search_empty_query">శోధన పదాన్ని నమోదు చేయండి</string>
     <string name="wikis_redirects_title">రీడైరెక్ట్‌లు</string>
     <string name="wikis_redirects_add">జోడించండి</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">సృష్టించండి</string>
     <string name="wikis_redirect_source_label">మూలం</string>
     <string name="wikis_redirect_target_label">లక్ష్యం</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">మూలం మరియు లక్ష్యం రెండూ అవసరం</string>
     <string name="wikis_redirect_created_success">రీడైరెక్ట్ సృష్టించబడింది</string>
     <string name="wikis_redirect_create_failed">రీడైరెక్ట్‌ను సృష్టించడంలో విఫలమైంది</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">గ్రిడ్ వీక్షణ</string>
     <string name="wikis_attachments_view_list">జాబితా వీక్షణ</string>
     <string name="wikis_attachments_copy_embed">ఎంబెడ్ లింక్‌ను కాపీ చేయండి</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ఎంబెడ్ లింక్ కాపీ చేయబడింది</string>
     <string name="wikis_attachments_delete">తొలగించండి</string>
     <string name="wikis_attachments_delete_confirm_title">అటాచ్‌మెంట్‌ను తొలగించండి</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">వికీని సింక్ చేయడంలో విఫలమైంది</string>
     <string name="wikis_settings_section_home">హోమ్ పేజీ</string>
     <string name="wikis_settings_field_home_label">హోమ్‌గా ఉపయోగించండి</string>
-    <string name="wikis_settings_home_save">మార్పులను సేవ్ చేయండి</string>
     <string name="wikis_settings_home_saved">సెట్టింగ్‌లు సేవ్ చేయబడ్డాయి</string>
     <string name="wikis_settings_home_save_failed">సెట్టింగ్‌లను సేవ్ చేయడంలో విఫలమైంది</string>
     <string name="wikis_settings_section_delete">వికీని తొలగించండి</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">ఓనర్</string>
     <string name="wikis_access_tab_users">యూజర్‌లు</string>
     <string name="wikis_access_tab_groups">గ్రూపులు</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">గ్రూపులు అందుబాటులో లేవు</string>
     <string name="wikis_access_set_success">యాక్సెస్ నవీకరించబడింది</string>
     <string name="wikis_access_revoke_success">యాక్సెస్ తీసివేయబడింది</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” పేజీ ఇంకా లేదు.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">పేజీ లింక్‌ను భాగస్వామ్యం చేయండి</string>
+    <string name="wikis_pageview_share_chooser">వికీ లింక్</string>
     <string name="wikis_pageview_share_link_copied">పేజీ లింక్ క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki పేజీ లింక్</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">పేజీ లింక్‌ను భాగస్వామ్యం చేయండి</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: మార్పులు మరియు వ్యాఖ్యలు</string>
+    <string name="wikis_page_action_share">లింక్</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki వెతకండి…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">మీరు %1$s నుండి అన్‌సబ్‌స్క్రైబ్ చేయాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
     <string name="wikis_subscribe_failed_502">ఆ సర్వర్‌ను చేరుకోలేకపోతున్నాం. మళ్లీ ప్రయత్నిస్తోంది…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">పేరు, ID, ఫింగర్‌ప్రింట్ లేదా URL ద్వారా వెతకండి…</string>
     <string name="wikis_join_search_button">wiki లను వెతకండి…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki కు సబ్‌స్క్రైబ్ చేయబడింది</string>
     <string name="wikis_subscribe_502_retry">సూచించిన సర్వర్ లేకుండా మళ్లీ ప్రయత్నిస్తోంది…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">వ్యాఖ్య రాయండి…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">మీ కంటెంట్‌ను ఇక్కడ Markdown ఉపయోగించి రాయండి…</string>
     <string name="wikis_insert_dialog_empty">ఇంకా అటాచ్‌మెంట్‌లు లేవు. ప్రారంభించడానికి ఫైల్‌ను అప్‌లోడ్ చేయండి.</string>
     <string name="wikis_delete_page_message">మీరు “%1$s” (%2$s) పేజీని తొలగించబోతున్నారు. చరిత్ర నుండి పునరుద్ధరించడం ద్వారా ఈ చర్యను రద్దు చేయవచ్చు.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ప్రామాణీకరించిన వినియోగదారులు</string>
 
     <string name="wikis_revision_compare">మార్పులను పోల్చండి</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">పేజీని చూపించు</string>
     <string name="wikis_revision_compare_failed">పోలిక కోసం మునుపటి వెర్షన్‌ను లోడ్ చేయడం సాధ్యం కాలేదు.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d వెర్షన్ నుండి మార్పులు</string>
@@ -353,4 +356,6 @@
         <item quantity="other">«%2$s» కోసం %1$d ఫలితాలు కనుగొనబడింది</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">క్యాప్షన్ సేవ్ చేయడం సాధ్యపడలేదు</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

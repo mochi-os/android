@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Megjelenítendő név</string>
     <string name="forums_auth_verification_failed">Az ellenőrzés sikertelen</string>
     <string name="forums_list_title">Fórumok</string>
-    <string name="forums_list_close_search">Keresés bezárása</string>
-    <string name="forums_list_search">Keresés</string>
     <string name="forums_list_find">Fórumok keresése</string>
     <string name="forums_list_logout">Kijelentkezés</string>
-    <string name="forums_list_create">Fórum létrehozása</string>
     <string name="forums_list_unsubscribe">Leiratkozás</string>
     <string name="forums_list_unsubscribe_title">Leiratkozás</string>
     <string name="forums_create_title">Fórum létrehozása</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Fórum nem található</string>
     <string name="forums_post_not_found">A bejegyzés nem található</string>
 
-    <string name="forums_list_more">Több</string>
     <string name="forums_comment_send">Küldés</string>
     <string name="forums_post_body_field">Szöveg</string>
     <string name="forums_post_edit_body_field">Szöveg</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">Az MFA még nem támogatott a mobilalkalmazásban</string>
     <string name="forums_auth_enter_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
     <string name="forums_auth_create_identity">Hozza létre identitását</string>
-    <string name="forums_list_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
     <string name="forums_tag_clear">Szűrő törlése</string>
     <string name="forums_post_tag_add">Címke hozzáadása</string>
     <string name="forums_write_comment">Megjegyzés írása…</string>
 
     <string name="notification_channel_forums">Fórum értesítések</string>
     <string name="forums_auth_brand">Mochi Fórumok</string>
-    <string name="forums_list_search_placeholder">Fórumok keresése</string>
-    <string name="forums_list_no_matching">Nincs megfelelő fórum</string>
     <string name="forums_list_empty">Még nincsenek fórumok</string>
     <string name="forums_list_unsubscribe_message">Biztosan le szeretne iratkozni erről a fórumról?</string>
     <string name="forums_find_search_placeholder">Fórumok keresése vagy URL beillesztése</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Érdeklődés növelése</string>
     <string name="forums_tag_interest_down">Érdeklődés csökkentése</string>
     <string name="forums_tag_interest_remove">Érdeklődés eltávolítása</string>
-    <string name="forums_list_default_sort">Alapértelmezett rendezés</string>
     <string name="forums_access_tab_users">Felhasználók</string>
     <string name="forums_access_tab_groups">Csoportok</string>
     <string name="forums_access_tab_manual">Kézikönyv</string>

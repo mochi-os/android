@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">變更與留言</string>
     <string name="wikis_rss_copied">已複製 RSS URL 至剪貼簿</string>
     <string name="wikis_rss_failed">取得 RSS 權杖失敗</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">尋找 wiki</string>
     <string name="wikis_find_no_results">找不到 Wiki</string>
     <string name="wikis_find_recommended_section">推薦的 Wiki</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">尚無留言</string>
     <string name="wikis_comments_empty_subtitle">成為第一個在此頁面留言的人。</string>
     <string name="wikis_comment_action_reply">回覆</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">編輯</string>
     <string name="wikis_comment_action_delete">刪除</string>
     <string name="wikis_comment_action_save">儲存</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">編輯</string>
     <string name="wikis_editor_insert">插入</string>
     <string name="wikis_editor_attachments">附件</string>
-    <string name="wikis_editor_cancel">取消</string>
     <string name="wikis_editor_delete">刪除頁面</string>
     <string name="wikis_editor_save">儲存</string>
     <string name="wikis_editor_saving">儲存中…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">標題</string>
     <string name="wikis_editor_slug_label">頁面 URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">內容</string>
     <string name="wikis_editor_summary_label">編輯摘要(選填)</string>
     <string name="wikis_editor_summary_hint">簡要描述您的變更</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">刪除頁面失敗</string>
     <string name="wikis_revert_page_comment_label">還原留言</string>
     <string name="wikis_revert_page_confirm">還原</string>
-    <string name="wikis_revert_page_cancel">取消</string>
     <string name="wikis_revert_page_failed">還原頁面失敗</string>
     <string name="wikis_rename_page_title">重新命名頁面</string>
     <string name="wikis_rename_page_label">新 URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">檢視</string>
     <string name="wikis_history_revert_action">還原至此版本</string>
     <string name="wikis_revision_current_badge">目前</string>
-    <string name="wikis_revision_back_to_history">返回歷史記錄</string>
     <string name="wikis_revision_revert_to_this">還原至此版本</string>
     <string name="wikis_changes_title">近期變更</string>
     <string name="wikis_changes_subtitle">此 Wiki 中所有頁面的近期編輯。</string>
     <string name="wikis_changes_empty">尚無變更</string>
-    <string name="wikis_search_title">搜尋</string>
     <string name="wikis_search_empty_query">請輸入搜尋字詞</string>
     <string name="wikis_redirects_title">重新導向</string>
     <string name="wikis_redirects_add">新增</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">建立</string>
     <string name="wikis_redirect_source_label">來源</string>
     <string name="wikis_redirect_target_label">目標</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">來源與目標皆為必填</string>
     <string name="wikis_redirect_created_success">已建立重新導向</string>
     <string name="wikis_redirect_create_failed">建立重新導向失敗</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">格狀檢視</string>
     <string name="wikis_attachments_view_list">清單檢視</string>
     <string name="wikis_attachments_copy_embed">複製嵌入連結</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">嵌入連結已複製</string>
     <string name="wikis_attachments_delete">刪除</string>
     <string name="wikis_attachments_delete_confirm_title">刪除附件</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">同步 wiki 失敗</string>
     <string name="wikis_settings_section_home">首頁</string>
     <string name="wikis_settings_field_home_label">設為首頁</string>
-    <string name="wikis_settings_home_save">儲存變更</string>
     <string name="wikis_settings_home_saved">設定已儲存</string>
     <string name="wikis_settings_home_save_failed">儲存設定失敗</string>
     <string name="wikis_settings_section_delete">刪除維基</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">擁有者</string>
     <string name="wikis_access_tab_users">使用者</string>
     <string name="wikis_access_tab_groups">群組</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">無可用的群組</string>
     <string name="wikis_access_set_success">存取已更新</string>
     <string name="wikis_access_revoke_success">存取已移除</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">更新於 %1$s</string>
     <string name="wikis_pageview_not_found_description">頁面「%1$s」尚不存在。</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">分享頁面連結</string>
+    <string name="wikis_pageview_share_chooser">Wiki 連結</string>
     <string name="wikis_pageview_share_link_copied">頁面連結已複製到剪貼簿</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki 頁面連結</string>
     <string name="wikis_pageview_loading">正在載入頁面…</string>
-    <string name="wikis_page_action_share">分享頁面連結</string>
-    <string name="wikis_page_action_rss_changes">RSS:變更</string>
-    <string name="wikis_page_action_rss_comments">RSS:評論</string>
-    <string name="wikis_page_action_rss_all">RSS:變更和評論</string>
+    <string name="wikis_page_action_share">連結</string>
     <string name="wikis_open_sidebar">開啟側邊欄</string>
     <string name="wikis_owned_badge">擁有</string>
     <string name="wikis_search_placeholder">搜尋 wiki…</string>
     <string name="wikis_subscribing">正在訂閱…</string>
     <string name="wikis_unsubscribe_confirm_message">確定要取消訂閱 %1$s 嗎?</string>
     <string name="wikis_subscribe_failed_502">該伺服器無法存取。重試中…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">依名稱、ID、指紋或 URL 搜尋…</string>
     <string name="wikis_join_search_button">搜尋 wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">已訂閱 wiki</string>
     <string name="wikis_subscribe_502_retry">不使用建議的伺服器重試…</string>
     <string name="wikis_comments_title_template">%1$s - 評論</string>
     <string name="wikis_comment_form_placeholder_new">撰寫評論…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">移除附件</string>
     <string name="wikis_comment_collapse_toggle">摺疊話題</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">編輯:%1$s</string>
     <string name="wikis_editor_content_placeholder">在此使用 Markdown 撰寫內容…</string>
     <string name="wikis_insert_dialog_empty">尚無附件。上傳檔案以開始。</string>
     <string name="wikis_delete_page_message">您即將刪除頁面「%1$s」(%2$s)。此操作可透過從歷史紀錄還原來復原。</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">已驗證使用者</string>
 
     <string name="wikis_revision_compare">比較變更</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">顯示頁面</string>
     <string name="wikis_revision_compare_failed">無法載入先前版本進行比較。</string>
     <string name="wikis_revision_changes_from">從版本 %1$d → %2$d 的變更</string>
@@ -350,4 +353,6 @@
         <item quantity="other">找到 %1$d 個結果,查詢「%2$s」</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">無法儲存說明文字</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

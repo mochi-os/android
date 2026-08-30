@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Weergavenaam</string>
     <string name="chat_auth_verification_failed">Verificatie mislukt</string>
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_close_search">Zoekopdracht sluiten</string>
     <string name="chat_list_search">Zoeken</string>
     <string name="chat_list_logout">Uitloggen</string>
     <string name="chat_list_new">Nieuwe chat</string>
-    <string name="chat_list_removed_chat">Verwijderd</string>
     <string name="chat_new_title">Nieuwe chat</string>
     <string name="chat_new_name">Groepsnaam</string>
     <string name="chat_new_friends">Vrienden</string>
@@ -30,12 +28,10 @@
     <string name="chat_members_you">U</string>
     <string name="chat_chat_not_found">Chat niet gevonden</string>
 
-    <string name="chat_list_more">Meer</string>
     <string name="chat_message_send">Verzenden</string>
     <string name="chat_auth_login_failed">Aanmelding mislukt</string>
     <string name="chat_attachment_move_up">Omhoog verplaatsen</string>
     <string name="chat_attachment_move_down">Omlaag verplaatsen</string>
-    <string name="chat_list_add_to_home">Toevoegen aan startscherm</string>
 
     <string name="notification_channel_chat">Chatmeldingen</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -43,10 +39,7 @@
     <string name="chat_auth_mfa_unsupported">MFA wordt nog niet ondersteund in de mobiele app</string>
     <string name="chat_auth_enter_code_sent">Voer de code in die naar %1$s is verzonden</string>
     <string name="chat_auth_create_identity">Maak uw identiteit aan</string>
-    <string name="chat_list_search_placeholder">Chats zoeken</string>
-    <string name="chat_list_no_matching">Geen overeenkomende chats</string>
     <string name="chat_list_empty">Nog geen chats</string>
-    <string name="chat_list_left_chat">Verlaten</string>
     <string name="chat_new_existing_chat">Bestaande chat openen</string>
     <string name="chat_new_start">Chat starten</string>
     <string name="chat_new_start_group">Groepschat starten</string>

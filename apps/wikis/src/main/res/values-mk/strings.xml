@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Промени и коментари</string>
     <string name="wikis_rss_copied">RSS URL е копиран во клипборд</string>
     <string name="wikis_rss_failed">Неуспешно добивање на RSS токен</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Најди wiki-а</string>
     <string name="wikis_find_no_results">Не се пронајдени wiki</string>
     <string name="wikis_find_recommended_section">Препорачани wiki</string>
@@ -59,6 +61,8 @@
     <string name="wikis_comments_empty_title">Сè уште нема коментари</string>
     <string name="wikis_comments_empty_subtitle">Биди прв што ќе коментира на оваа страница.</string>
     <string name="wikis_comment_action_reply">Одговори</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Уреди</string>
     <string name="wikis_comment_action_delete">Избриши</string>
     <string name="wikis_comment_action_save">Зачувај</string>
@@ -74,7 +78,6 @@
     <string name="wikis_editor_edit">Уреди</string>
     <string name="wikis_editor_insert">Вметни</string>
     <string name="wikis_editor_attachments">Прилози</string>
-    <string name="wikis_editor_cancel">Откажи</string>
     <string name="wikis_editor_delete">Избриши страница</string>
     <string name="wikis_editor_save">Зачувај</string>
     <string name="wikis_editor_saving">Зачувување…</string>
@@ -83,6 +86,7 @@
     <string name="wikis_editor_title_label">Наслов</string>
     <string name="wikis_editor_slug_label">URL на страницата</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Содржина</string>
     <string name="wikis_editor_summary_label">Уреди резиме (изборно)</string>
     <string name="wikis_editor_summary_hint">Накратко опиши ги твоите промени</string>
@@ -102,7 +106,6 @@
     <string name="wikis_delete_page_failed">Неуспешно бришење на страница</string>
     <string name="wikis_revert_page_comment_label">Врати коментар</string>
     <string name="wikis_revert_page_confirm">Врати</string>
-    <string name="wikis_revert_page_cancel">Откажи</string>
     <string name="wikis_revert_page_failed">Неуспешно враќање на страница</string>
     <string name="wikis_rename_page_title">Преименувај страница</string>
     <string name="wikis_rename_page_label">Нов URL</string>
@@ -117,12 +120,10 @@
     <string name="wikis_history_view_action">Прикажи</string>
     <string name="wikis_history_revert_action">Врати на оваа верзија</string>
     <string name="wikis_revision_current_badge">Тековно</string>
-    <string name="wikis_revision_back_to_history">Назад на историја</string>
     <string name="wikis_revision_revert_to_this">Врати на оваа верзија</string>
     <string name="wikis_changes_title">Неодамнешни промени</string>
     <string name="wikis_changes_subtitle">Неодамнешни уредувања на сите страници во ова wiki.</string>
     <string name="wikis_changes_empty">Сè уште нема промени</string>
-    <string name="wikis_search_title">Барај</string>
     <string name="wikis_search_empty_query">Внесете поим за пребарување</string>
     <string name="wikis_redirects_title">Пренасочувања</string>
     <string name="wikis_redirects_add">Додај</string>
@@ -131,6 +132,7 @@
     <string name="wikis_redirect_create_action">Создај</string>
     <string name="wikis_redirect_source_label">Извор</string>
     <string name="wikis_redirect_target_label">Цел</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">И изворот и целта се задолжителни</string>
     <string name="wikis_redirect_created_success">Пренасочувањето е креирано</string>
     <string name="wikis_redirect_create_failed">Неуспешно креирање на пренасочување</string>
@@ -164,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Преглед на мрежа</string>
     <string name="wikis_attachments_view_list">Преглед на листа</string>
     <string name="wikis_attachments_copy_embed">Копирај врска за вградување</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Линкот за вградување е копиран</string>
     <string name="wikis_attachments_delete">Избриши</string>
     <string name="wikis_attachments_delete_confirm_title">Избриши прилог</string>
@@ -195,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Неуспешна синхронизација на wiki</string>
     <string name="wikis_settings_section_home">Почетна страница</string>
     <string name="wikis_settings_field_home_label">Користи како почетна</string>
-    <string name="wikis_settings_home_save">Зачувај промени</string>
     <string name="wikis_settings_home_saved">Поставките се зачувани</string>
     <string name="wikis_settings_home_save_failed">Неуспешно зачувување на поставки</string>
     <string name="wikis_settings_section_delete">Избриши вики</string>
@@ -212,6 +215,11 @@
     <string name="wikis_access_owner_label">Сопственик</string>
     <string name="wikis_access_tab_users">Корисници</string>
     <string name="wikis_access_tab_groups">Групи</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Нема достапни групи</string>
     <string name="wikis_access_set_success">Пристапот е ажуриран</string>
     <string name="wikis_access_revoke_success">Пристапот е отстранет</string>
@@ -232,27 +240,22 @@
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страницата „%1$s\" сè уште не постои.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Сподели врска на страница</string>
+    <string name="wikis_pageview_share_chooser">Врска до викито</string>
     <string name="wikis_pageview_share_link_copied">Врска на страница копирана во клипборд</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Врска на wiki страница</string>
     <string name="wikis_pageview_loading">Се вчитува страница…</string>
-    <string name="wikis_page_action_share">Сподели врска на страница</string>
-    <string name="wikis_page_action_rss_changes">RSS: Промени</string>
-    <string name="wikis_page_action_rss_comments">RSS: Коментари</string>
-    <string name="wikis_page_action_rss_all">RSS: Промени и коментари</string>
+    <string name="wikis_page_action_share">Врска</string>
     <string name="wikis_open_sidebar">Отвори странична лента</string>
     <string name="wikis_owned_badge">Сопственост</string>
     <string name="wikis_search_placeholder">Барај wiki…</string>
     <string name="wikis_subscribing">Се претплатувате…</string>
     <string name="wikis_unsubscribe_confirm_message">Дали сте сигурни дека сакате да се отпишете од %1$s?</string>
     <string name="wikis_subscribe_failed_502">Серверот не е достапен. Се обидува повторно…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Барај по име, ID, отпечаток или URL…</string>
     <string name="wikis_join_search_button">Барај wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Претплатени на wiki</string>
     <string name="wikis_subscribe_502_retry">Се обидува повторно без предложениот сервер…</string>
     <string name="wikis_comments_title_template">%1$s - Коментари</string>
     <string name="wikis_comment_form_placeholder_new">Напишете коментар…</string>
@@ -261,7 +264,6 @@
     <string name="wikis_comment_form_remove_attachment">Отстрани прилог</string>
     <string name="wikis_comment_collapse_toggle">Собери нишка</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Уредување: %1$s</string>
     <string name="wikis_editor_content_placeholder">Напишете ја вашата содржина овде користејќи Markdown…</string>
     <string name="wikis_insert_dialog_empty">Сè уште нема прилози. Прикачете датотека за да започнете.</string>
     <string name="wikis_delete_page_message">Се подготвувате да ја избришете страницата „%1$s\" (%2$s). Оваа акција може да се поништи со враќање од историјата.</string>
@@ -306,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Секој</string>
     <string name="wikis_access_subject_authenticated">Автентицирани корисници</string>
     <string name="wikis_revision_compare">Спореди промени</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Прикажи страница</string>
     <string name="wikis_revision_compare_failed">Не може да се вчита претходната верзија за споредба.</string>
     <string name="wikis_revision_changes_from">Промени од верзијата %1$d → %2$d</string>
@@ -350,4 +353,6 @@
         <item quantity="other">Пронајдени се %1$d резултати за „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Натписот не можеше да се зачува</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

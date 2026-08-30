@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Zobrazované jméno</string>
     <string name="forums_auth_verification_failed">Ověření selhalo</string>
     <string name="forums_list_title">Fóra</string>
-    <string name="forums_list_close_search">Zavřít hledání</string>
-    <string name="forums_list_search">Hledat</string>
     <string name="forums_list_find">Najít fóra</string>
     <string name="forums_list_logout">Odhlásit se</string>
-    <string name="forums_list_create">Vytvořit fórum</string>
     <string name="forums_list_unsubscribe">Zrušit odběr</string>
     <string name="forums_list_unsubscribe_title">Zrušit odběr</string>
     <string name="forums_create_title">Vytvořit fórum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Fórum nenalezeno</string>
     <string name="forums_post_not_found">Příspěvek nenalezen</string>
 
-    <string name="forums_list_more">Více</string>
     <string name="forums_comment_send">Odeslat</string>
 
     <string name="notification_channel_forums">Oznámení Fór</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA zatím není v mobilní aplikaci podporováno</string>
     <string name="forums_auth_enter_code_sent">Zadejte kód odeslaný na %1$s</string>
     <string name="forums_auth_create_identity">Vytvořte si identitu</string>
-    <string name="forums_list_search_placeholder">Hledat fóra</string>
-    <string name="forums_list_no_matching">Žádná odpovídající fóra</string>
     <string name="forums_list_empty">Zatím žádná fóra</string>
-    <string name="forums_list_add_to_home">Přidat na domovskou obrazovku</string>
     <string name="forums_list_unsubscribe_message">Opravdu se chcete odhlásit z odběru tohoto fóra?</string>
     <string name="forums_find_search_placeholder">Hledat fóra nebo vložit URL</string>
     <string name="forums_find_search_hint">Vyhledejte fóra, která chcete odebírat</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Zvýšit zájem</string>
     <string name="forums_tag_interest_down">Snížit zájem</string>
     <string name="forums_tag_interest_remove">Odebrat zájem</string>
-    <string name="forums_list_default_sort">Výchozí řazení</string>
     <string name="forums_access_tab_users">Uživatelé</string>
     <string name="forums_access_tab_groups">Skupiny</string>
     <string name="forums_access_tab_manual">Ručně</string>

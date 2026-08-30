@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nume afișat</string>
     <string name="forums_auth_verification_failed">Verificarea a eșuat</string>
     <string name="forums_list_title">Forumuri</string>
-    <string name="forums_list_close_search">Închide căutarea</string>
-    <string name="forums_list_search">Caută</string>
     <string name="forums_list_find">Găsește forumuri</string>
     <string name="forums_list_logout">Deconectează-te</string>
-    <string name="forums_list_create">Creează forum</string>
     <string name="forums_list_unsubscribe">Dezabonează-te</string>
     <string name="forums_list_unsubscribe_title">Dezabonează-te</string>
     <string name="forums_create_title">Creează forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum negăsit</string>
     <string name="forums_post_not_found">Postarea nu a fost găsită</string>
 
-    <string name="forums_list_more">Mai mult</string>
     <string name="forums_comment_send">Trimite</string>
     <string name="forums_post_body_field">Conținut</string>
     <string name="forums_post_edit_body_field">Conținut</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Adaugă etichetă</string>
     <string name="forums_write_comment">Scrie un comentariu…</string>
     <string name="forums_auth_login_failed">Autentificare eșuată</string>
-    <string name="forums_list_add_to_home">Adaugă pe ecranul de pornire</string>
 
     <string name="notification_channel_forums">Notificări forumuri</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA nu este încă acceptat în aplicația mobilă</string>
     <string name="forums_auth_enter_code_sent">Introduceți codul trimis la %1$s</string>
     <string name="forums_auth_create_identity">Creați-vă identitatea</string>
-    <string name="forums_list_search_placeholder">Căutați forumuri</string>
-    <string name="forums_list_no_matching">Niciun forum corespunzător</string>
     <string name="forums_list_empty">Încă niciun forum</string>
     <string name="forums_list_unsubscribe_message">Sigur doriți să vă dezabonați de la acest forum?</string>
     <string name="forums_find_search_placeholder">Căutați forumuri sau lipiți URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Promovează interesul</string>
     <string name="forums_tag_interest_down">Reduce interesul</string>
     <string name="forums_tag_interest_remove">Elimină interesul</string>
-    <string name="forums_list_default_sort">Sortare implicită</string>
     <string name="forums_access_tab_users">Utilizatori</string>
     <string name="forums_access_tab_groups">Grupuri</string>
     <string name="forums_access_tab_manual">Manual</string>

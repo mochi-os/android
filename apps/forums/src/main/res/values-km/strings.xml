@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ឈ្មោះបង្ហាញ</string>
     <string name="forums_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
     <string name="forums_list_title">វេទិកា</string>
-    <string name="forums_list_close_search">បិទការស្វែងរក</string>
-    <string name="forums_list_search">ស្វែងរក</string>
     <string name="forums_list_find">ស្វែងរកវេទិកា</string>
     <string name="forums_list_logout">ចាកចេញ</string>
-    <string name="forums_list_create">បង្កើតវេទិកា</string>
     <string name="forums_list_unsubscribe">ឈប់ជាវ</string>
     <string name="forums_list_unsubscribe_title">ឈប់ជាវ</string>
     <string name="forums_create_title">បង្កើតវេទិកា</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">រកមិនឃើញវេទិកា</string>
     <string name="forums_post_not_found">រកមិនឃើញប្រកាស</string>
 
-    <string name="forums_list_more">បន្ថែម</string>
     <string name="forums_comment_send">ផ្ញើ</string>
     <string name="forums_post_body_field">តួអត្ថបទ</string>
     <string name="forums_post_edit_body_field">តួអត្ថបទ</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">សរសេរមតិយោបល់…</string>
     <string name="forums_auth_login_failed">ការចូលបានបរាជ័យ</string>
-    <string name="forums_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
 
     <string name="notification_channel_forums">ការជូនដំណឹងវេទិកា</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA មិនទាន់គាំទ្រនៅក្នុងកម្មវិធីទូរស័ព្ទនៅឡើយទេ</string>
     <string name="forums_auth_enter_code_sent">បញ្ចូលលេខកូដដែលបានផ្ញើទៅ %1$s</string>
     <string name="forums_auth_create_identity">បង្កើតអត្តសញ្ញាណរបស់អ្នក</string>
-    <string name="forums_list_search_placeholder">ស្វែងរកវេទិកា</string>
-    <string name="forums_list_no_matching">គ្មានវេទិកាដែលត្រូវគ្នាទេ</string>
     <string name="forums_list_empty">មិនទាន់មានវេទិកាទេ</string>
     <string name="forums_list_unsubscribe_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវវេទិកានេះមែនទេ?</string>
     <string name="forums_find_search_placeholder">ស្វែងរកវេទិកា ឬបិទភ្ជាប់ URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">បង្កើនចំណាប់អារម្មណ៍</string>
     <string name="forums_tag_interest_down">កាត់បន្ថយចំណាប់អារម្មណ៍</string>
     <string name="forums_tag_interest_remove">យកចំណាប់អារម្មណ៍ចេញ</string>
-    <string name="forums_list_default_sort">ការតម្រៀបលំនាំដើម</string>
     <string name="forums_access_tab_users">អ្នកប្រើប្រាស់</string>
     <string name="forums_access_tab_groups">ក្រុម</string>
     <string name="forums_access_tab_manual">សៀវភៅណែនាំ</string>

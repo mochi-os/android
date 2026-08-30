@@ -26,7 +26,6 @@ import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
@@ -66,6 +65,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
@@ -103,7 +103,6 @@ fun FriendsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
-    var showOverflow by remember { mutableStateOf(false) }
     var showAbout by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
@@ -143,6 +142,24 @@ fun FriendsScreen(
             val section = peopleDrawerSection(item.id)
             if (section != PeopleSidebarSection.FRIENDS) onSwitchSection(section)
         },
+        actions = {
+            DrawerActionRow(
+                title = stringResource(MochiR.string.common_logout),
+                icon = Icons.AutoMirrored.Outlined.Logout,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
+                },
+            )
+        },
     ) {
         Scaffold(
             snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -163,35 +180,6 @@ fun FriendsScreen(
                                 Icons.Default.Notifications,
                                 contentDescription = stringResource(MochiR.string.common_notifications),
                             )
-                        }
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(R.string.people_friends_more),
-                                )
-                            }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = { showOverflow = false },
-                            ) {
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.common_logout)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        onLogout()
-                                    },
-                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                )
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        showAbout = true
-                                    },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
-                                )
-                            }
                         }
                     },
                 )

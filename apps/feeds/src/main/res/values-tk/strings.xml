@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Şuňa meňzeşleri azrak</string>
     <string name="feeds_no_tags">Bellik ýok</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_comment">Teswire jogap berilýär</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Faýl goşmak</string>
     <string name="feeds_tag_label">Bellik ady</string>
     <string name="feeds_file">Faýl</string>

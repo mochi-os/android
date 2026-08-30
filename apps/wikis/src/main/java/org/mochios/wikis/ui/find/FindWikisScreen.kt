@@ -21,7 +21,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -46,6 +46,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiButton
@@ -73,7 +74,6 @@ fun FindWikisScreen(
     // Snackbar feedback messages — collected once before LaunchedEffect so
     // they can be passed into the coroutine, since stringResource() is only
     // valid inside a composable.
-    val successMsg = stringResource(R.string.wikis_subscribe_success)
     val retryMsg = stringResource(R.string.wikis_subscribe_502_retry)
     val failedFallback = stringResource(R.string.wikis_subscribe_failed)
 
@@ -81,11 +81,10 @@ fun FindWikisScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is FindEvent.SubscribeSuccess -> {
-                    snackbarHostState.showSnackbar(successMsg)
                     onSubscribed(event.wikiId)
                 }
                 is FindEvent.SubscribeRetried -> {
-                    snackbarHostState.showSnackbar(retryMsg)
+                    launch { snackbarHostState.showSnackbar(retryMsg) }
                 }
                 is FindEvent.SubscribeFailed -> {
                     val msg = event.error.userMessage().ifBlank { failedFallback }
@@ -251,7 +250,7 @@ private fun DirectoryEntryRow(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Icon(
-                Icons.Default.MenuBook,
+                Icons.Default.Book,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(24.dp),
@@ -308,7 +307,7 @@ private fun RecommendationRow(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Icon(
-                Icons.Default.MenuBook,
+                Icons.Default.Book,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(24.dp),

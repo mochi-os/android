@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Rodomas vardas</string>
     <string name="chat_auth_verification_failed">Patvirtinimas nepavyko</string>
     <string name="chat_list_title">Pokalbiai</string>
-    <string name="chat_list_close_search">Uždaryti paiešką</string>
     <string name="chat_list_search">Ieškoti</string>
     <string name="chat_list_logout">Atsijungti</string>
     <string name="chat_list_new">Naujas pokalbis</string>
-    <string name="chat_list_removed_chat">Pašalinta</string>
     <string name="chat_new_title">Naujas pokalbis</string>
     <string name="chat_new_name">Grupės pavadinimas</string>
     <string name="chat_new_friends">Draugai</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Jūs</string>
     <string name="chat_chat_not_found">Pokalbis nerastas</string>
 
-    <string name="chat_list_more">Daugiau</string>
     <string name="chat_message_send">Siųsti</string>
     <string name="chat_attachment_remove">Pašalinti priedą</string>
     <string name="chat_message_remove_attachment">Pašalinti priedą</string>
     <string name="chat_auth_login_failed">Prisijungti nepavyko</string>
     <string name="chat_attachment_move_up">Perkelti į viršų</string>
     <string name="chat_attachment_move_down">Perkelti į apačią</string>
-    <string name="chat_list_add_to_home">Pridėti į pradinį ekraną</string>
 
     <string name="notification_channel_chat">Pokalbių pranešimai</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA dar nepalaikoma mobiliojoje programėlėje</string>
     <string name="chat_auth_enter_code_sent">Įveskite kodą, išsiųstą į %1$s</string>
     <string name="chat_auth_create_identity">Sukurkite savo tapatybę</string>
-    <string name="chat_list_search_placeholder">Ieškoti pokalbių</string>
-    <string name="chat_list_no_matching">Nėra atitinkančių pokalbių</string>
     <string name="chat_list_empty">Pokalbių dar nėra</string>
-    <string name="chat_list_left_chat">Išėjo</string>
     <string name="chat_new_existing_chat">Atidaryti esamą pokalbį</string>
     <string name="chat_new_start">Pradėti pokalbį</string>
     <string name="chat_new_start_group">Pradėti grupinį pokalbį</string>

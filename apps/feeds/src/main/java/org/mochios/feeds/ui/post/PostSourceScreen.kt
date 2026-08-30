@@ -581,7 +581,7 @@ private fun PostSourceSheet(
                     onSaveEdit = { viewModel.saveEditComment() },
                     onCancelEdit = { viewModel.cancelEditComment() },
                     onReply = { viewModel.setReplyingTo(comment.id) },
-                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.body)) },
+                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.text)) },
                     onDelete = { showDeleteCommentDialog(comment.id) },
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
                     canManage = permissions.manage,
@@ -592,6 +592,7 @@ private fun PostSourceSheet(
 
         if (permissions.comment) {
             ComposeBar(
+                showDivider = false,
                 value = commentText,
                 onValueChange = onCommentTextChange,
                 onSend = onSendComment,
@@ -611,7 +612,10 @@ private fun PostSourceSheet(
                 // consume the inset itself - without it the keyboard covers
                 // the field completely.
                 windowInsets = ComposeBarDefaults.WindowInsets,
-                banner = feedsReplyBanner(replyingTo, onCancelReply),
+                banner = feedsReplyBanner(
+                    findComment(post?.comments.orEmpty(), replyingTo),
+                    onCancelReply,
+                ),
             )
         }
     }

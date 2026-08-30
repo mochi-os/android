@@ -8,6 +8,7 @@ package org.mochios.wikis.ui.page
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,8 +24,11 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -36,6 +40,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -45,6 +50,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -81,6 +87,8 @@ import org.mochios.wikis.ui.components.MarkdownContent
 import org.mochios.wikis.ui.components.TagManager
 import org.mochios.wikis.ui.components.TocHeading
 import org.mochios.wikis.ui.components.WikiContextValue
+import org.mochios.wikis.ui.components.WikiDrawerViewModel
+import org.mochios.wikis.ui.components.WikiNavDrawer
 import org.mochios.wikis.ui.dialog.RenamePageDialog
 import org.mochios.android.R as MochiR
 
@@ -92,6 +100,7 @@ const val WIKIS_FEATURE = "wikis"
 fun PageViewScreen(
     navController: NavController,
     viewModel: PageViewModel = hiltViewModel(),
+    drawerViewModel: WikiDrawerViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
@@ -100,8 +109,15 @@ fun PageViewScreen(
     val snackbar = remember { SnackbarHostState() }
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
+    val deletedMsg = stringResource(R.string.wikis_delete_page_success)
     val rssRevokedMsg = stringResource(MochiR.string.rss_revoked)
     val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
+    val shareChooserTitle = stringResource(R.string.wikis_pageview_share_chooser)
+    val currentShareSubject by rememberUpdatedState(shareSubject)
+
+    // Declared ahead of the event collector below, which closes the dialog when
+    // the delete it confirmed comes back.
+    var showDeleteDialog by remember { mutableStateOf(false) }
 
     // Persist the last-viewed wiki and page so a fresh launch lands back here.
     LaunchedEffect(viewModel.wikiId, viewModel.slug) {
@@ -125,9 +141,31 @@ fun PageViewScreen(
                     )
                     snackbar.showSnackbar(rssCopiedMsg)
                 }
+                is PageViewEvent.ShareLink -> {
+                    sharePageLink(
+                        context = context,
+                        subject = currentShareSubject,
+                        url = event.link,
+                        chooserTitle = shareChooserTitle,
+                    )
+                }
+
                 is PageViewEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMsg)
                 is PageViewEvent.ShowError -> {
                     snackbar.showSnackbar(event.error.userMessage())
+                }
+                PageViewEvent.Deleted -> {
+                    showDeleteDialog = false
+                    // A toast, not the snackbar: this screen is on its way out
+                    // and would take a snackbar of its own down with it.
+                    Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                    // This screen goes with the page it was showing, so Back
+                    // cannot return to it. Popping to the wiki-home route would
+                    // leave it standing: WikiHomeScreen pops itself as soon as
+                    // it has resolved the home page, so it is never on the stack.
+                    navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
+                        popUpTo(WikisApp.PAGE_VIEW) { inclusive = true }
+                    }
                 }
             }
         }
@@ -157,170 +195,209 @@ fun PageViewScreen(
         )
     }
 
-    Scaffold(
-        snackbarHost = { SnackbarHost(snackbar) },
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        text = title,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                    )
-                },
-                navigationIcon = {
-                    MochiIconButton(onClick = { navController.popBackStack() }) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
+
+    // The nav icon is the drawer's only when there is nothing to go back to
+    // inside this wiki. Entering a wiki lands on its home page directly on
+    // top of the wiki list (WikiHomeScreen pops itself), so a previous entry
+    // that is the list — or no previous entry at all, on a deep link — means
+    // this page is the wiki's root and the back arrow would only leave it.
+    val atWikiRoot = remember(navController.previousBackStackEntry) {
+        val previous = navController.previousBackStackEntry?.destination?.route
+        previous == null || previous == WikisApp.HOME
+    }
+
+    WikiNavDrawer(
+        navController = navController,
+        wikiId = viewModel.wikiId,
+        drawerState = drawerState,
+        viewModel = drawerViewModel,
+    ) {
+        Scaffold(
+            snackbarHost = { SnackbarHost(snackbar) },
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = title,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
                         )
-                    }
-                },
-                actions = {
-                    Box {
-                        MochiIconButton(onClick = { menuExpanded = true }) {
+                    },
+                    navigationIcon = {
+                        if (atWikiRoot) {
+                            MochiIconButton(onClick = { scope.launch { drawerState.open() } }) {
+                                Icon(
+                                    Icons.Default.Menu,
+                                    contentDescription = stringResource(R.string.wikis_open_sidebar),
+                                )
+                            }
+                        } else {
+                            MochiIconButton(onClick = { navController.popBackStack() }) {
+                                Icon(
+                                    Icons.AutoMirrored.Filled.ArrowBack,
+                                    contentDescription = stringResource(MochiR.string.common_back),
+                                )
+                            }
+                        }
+                    },
+                    actions = {
+                        MochiIconButton(
+                            onClick = {
+                                navController.navigate(WikisApp.search(viewModel.wikiId))
+                            }
+                        ) {
                             Icon(
-                                Icons.Default.MoreHoriz,
-                                contentDescription = stringResource(R.string.wikis_pageview_page_actions),
+                                Icons.Default.Search,
+                                contentDescription = stringResource(R.string.wikis_page_action_search),
                             )
                         }
-                        PageOverflowMenu(
-                            expanded = menuExpanded,
-                            onDismiss = { menuExpanded = false },
-                            wikiId = viewModel.wikiId,
-                            slug = viewModel.slug,
-                            permissions = state.permissions,
-                            commentCount = state.commentCount,
-                            canUnsubscribe = canUnsubscribe,
-                            onEdit = {
-                                menuExpanded = false
-                                navController.navigate(
-                                    WikisApp.pageEdit(viewModel.wikiId, viewModel.slug)
+                        Box {
+                            MochiIconButton(onClick = { menuExpanded = true }) {
+                                Icon(
+                                    Icons.Default.MoreHoriz,
+                                    contentDescription = stringResource(R.string.wikis_pageview_page_actions),
                                 )
-                            },
-                            onRename = {
-                                menuExpanded = false
-                                showRenameDialog = true
-                            },
-                            onHistory = {
-                                menuExpanded = false
-                                navController.navigate(
-                                    WikisApp.pageHistory(viewModel.wikiId, viewModel.slug)
-                                )
-                            },
-                            onComments = {
-                                menuExpanded = false
-                                navController.navigate(
-                                    WikisApp.comments(viewModel.wikiId, viewModel.slug)
-                                )
-                            },
-                            onDelete = {
-                                menuExpanded = false
-                                navController.navigate(
-                                    WikisApp.pageDelete(viewModel.wikiId, viewModel.slug)
-                                )
-                            },
-                            onSearch = {
-                                menuExpanded = false
-                                navController.navigate(WikisApp.search(viewModel.wikiId))
-                            },
-                            onTags = {
-                                menuExpanded = false
-                                navController.navigate(WikisApp.tags(viewModel.wikiId))
-                            },
-                            onChanges = {
-                                menuExpanded = false
-                                navController.navigate(WikisApp.changes(viewModel.wikiId))
-                            },
-                            onNewPage = {
-                                menuExpanded = false
-                                navController.navigate(WikisApp.newPage(viewModel.wikiId))
-                            },
-                            onSettings = {
-                                menuExpanded = false
-                                navController.navigate(WikisApp.settings(viewModel.wikiId))
-                            },
-                            onShare = {
-                                menuExpanded = false
-                                sharePageLink(
-                                    context = context,
-                                    subject = shareSubject,
-                                    url = viewModel.shareUrl(),
-                                    chooserTitle = context.getString(
-                                        R.string.wikis_pageview_share_chooser
-                                    ),
-                                )
-                            },
-                            onUnsubscribe = {
-                                menuExpanded = false
-                                unsubscribeDialogOpen = true
-                            },
-                            onRssCopy = { mode ->
-                                menuExpanded = false
-                                viewModel.copyRssUrl(mode)
-                            },
-                            onRssRevoke = {
-                                menuExpanded = false
-                                revokeRssOpen = true
-                            },
-                        )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surface,
-                ),
-            )
-        },
-    ) { padding ->
-        CompositionLocalProvider(LocalWikiContext provides wikiContext) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding),
-            ) {
-                when {
-                    state.isLoading && state.page == null && !state.notFound -> {
-                        PageSkeleton()
-                    }
-                    state.notFound -> {
-                        PageNotFoundBody(
-                            slug = viewModel.slug,
-                            permissions = state.permissions,
-                            onCreate = {
-                                navController.navigate(
-                                    WikisApp.pageEdit(viewModel.wikiId, viewModel.slug)
-                                )
-                            },
-                        )
-                    }
-                    state.error != null && state.page == null -> {
-                        ErrorState(
-                            error = state.error!!,
-                            onRetry = { viewModel.loadPage() },
-                        )
-                    }
-                    state.page != null -> {
-                        PageBody(
-                            page = state.page!!,
-                            wikiId = viewModel.wikiId,
-                            slug = viewModel.slug,
-                            canEdit = state.permissions.edit,
-                            snackbarHost = snackbar,
-                            missingLinks = state.missingLinks,
-                            onInternalLink = { slug ->
-                                navController.navigate(
-                                    WikisApp.pageView(viewModel.wikiId, slug)
-                                )
-                            },
-                            onTagTap = { tag ->
-                                navController.navigate(
-                                    WikisApp.tagPages(viewModel.wikiId, tag)
-                                )
-                            },
-                            onTagsChanged = { newTags ->
-                                viewModel.updatePageTags(newTags)
-                            },
-                        )
+                            }
+                            PageOverflowMenu(
+                                expanded = menuExpanded,
+                                onDismiss = { menuExpanded = false },
+                                wikiId = viewModel.wikiId,
+                                slug = viewModel.slug,
+                                permissions = state.permissions,
+                                commentCount = state.commentCount,
+                                canUnsubscribe = canUnsubscribe,
+                                onEdit = {
+                                    menuExpanded = false
+                                    navController.navigate(
+                                        WikisApp.pageEdit(viewModel.wikiId, viewModel.slug)
+                                    )
+                                },
+                                onRename = {
+                                    menuExpanded = false
+                                    showRenameDialog = true
+                                },
+                                onHistory = {
+                                    menuExpanded = false
+                                    navController.navigate(
+                                        WikisApp.pageHistory(viewModel.wikiId, viewModel.slug)
+                                    )
+                                },
+                                onComments = {
+                                    menuExpanded = false
+                                    navController.navigate(
+                                        WikisApp.comments(viewModel.wikiId, viewModel.slug)
+                                    )
+                                },
+                                onDelete = {
+                                    menuExpanded = false
+                                    showDeleteDialog = true
+                                },
+                                onTags = {
+                                    menuExpanded = false
+                                    navController.navigate(WikisApp.tags(viewModel.wikiId))
+                                },
+                                onChanges = {
+                                    menuExpanded = false
+                                    navController.navigate(WikisApp.changes(viewModel.wikiId))
+                                },
+                                onNewPage = {
+                                    menuExpanded = false
+                                    navController.navigate(WikisApp.newPage(viewModel.wikiId))
+                                },
+                                onSettings = {
+                                    menuExpanded = false
+                                    navController.navigate(WikisApp.settings(viewModel.wikiId))
+                                },
+                                onShare = {
+                                    menuExpanded = false
+                                    viewModel.shareLink()
+                                },
+                                onUnsubscribe = {
+                                    menuExpanded = false
+                                    unsubscribeDialogOpen = true
+                                },
+                                onRssCopy = { mode ->
+                                    menuExpanded = false
+                                    viewModel.copyRssUrl(mode)
+                                },
+                                onRssRevoke = {
+                                    menuExpanded = false
+                                    revokeRssOpen = true
+                                },
+                            )
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.surface,
+                    ),
+                )
+            },
+        ) { padding ->
+            CompositionLocalProvider(LocalWikiContext provides wikiContext) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding),
+                ) {
+                    when {
+                        state.isLoading && state.page == null && !state.notFound -> {
+                            PageSkeleton()
+                        }
+                        state.notFound -> {
+                            PageNotFoundBody(
+                                slug = viewModel.slug,
+                                permissions = state.permissions,
+                                onCreate = {
+                                    // The page does not exist yet, so this is a
+                                    // creation, not an edit - pageEdit would
+                                    // try to load it and land on "not found".
+                                    // The slug rides along so the editor opens
+                                    // ready to write the page the reader asked
+                                    // for.
+                                    navController.navigate(
+                                        WikisApp.newPage(viewModel.wikiId, viewModel.slug)
+                                    ) {
+                                        // Drop the empty page behind us. It
+                                        // cannot be refreshed into the saved one
+                                        // - a reused entry replays the state it
+                                        // was left in - so leaving it would put
+                                        // "page not found" behind a page that
+                                        // now exists.
+                                        popUpTo(WikisApp.PAGE_VIEW) { inclusive = true }
+                                    }
+                                },
+                            )
+                        }
+                        state.error != null && state.page == null -> {
+                            ErrorState(
+                                error = state.error!!,
+                                onRetry = { viewModel.loadPage() },
+                            )
+                        }
+                        state.page != null -> {
+                            PageBody(
+                                page = state.page!!,
+                                wikiId = viewModel.wikiId,
+                                slug = viewModel.slug,
+                                canEdit = state.permissions.edit,
+                                snackbarHost = snackbar,
+                                missingLinks = state.missingLinks,
+                                onInternalLink = { slug ->
+                                    navController.navigate(
+                                        WikisApp.pageView(viewModel.wikiId, slug)
+                                    )
+                                },
+                                onTagTap = { tag ->
+                                    navController.navigate(
+                                        WikisApp.tagPages(viewModel.wikiId, tag)
+                                    )
+                                },
+                                onTagsChanged = { newTags ->
+                                    viewModel.updatePageTags(newTags)
+                                },
+                            )
+                        }
                     }
                 }
             }
@@ -372,6 +449,28 @@ fun PageViewScreen(
             dismissText = stringResource(MochiR.string.common_cancel),
             onDismiss = { unsubscribeDialogOpen = false },
             dismissEnabled = !isUnsubscribing,
+        )
+    }
+
+    if (showDeleteDialog) {
+        // A confirmation is a question, not a place: it asks over the page the
+        // reader is already on, rather than sending them to a screen of its own.
+        MochiAlertDialog(
+            onDismissRequest = { if (!state.isDeleting) showDeleteDialog = false },
+            title = stringResource(R.string.wikis_delete_page_title),
+            text = stringResource(
+                R.string.wikis_delete_page_message,
+                // The slug names the page too, so a reader with two similarly
+                // titled pages can tell which one they are about to lose.
+                state.page?.title?.takeIf { it.isNotBlank() } ?: viewModel.slug,
+                viewModel.slug,
+            ),
+            confirmText = stringResource(R.string.wikis_delete_page_confirm),
+            onConfirm = { viewModel.delete() },
+            confirmLoading = state.isDeleting,
+            destructive = true,
+            dismissText = stringResource(R.string.wikis_delete_page_cancel),
+            dismissEnabled = !state.isDeleting,
         )
     }
 
@@ -643,6 +742,9 @@ private fun sharePageLink(
         type = "text/plain"
         putExtra(Intent.EXTRA_SUBJECT, subject)
         putExtra(Intent.EXTRA_TEXT, url)
+        putExtra(Intent.EXTRA_TITLE, subject.ifBlank { chooserTitle })
     }
-    context.startActivity(Intent.createChooser(send, chooserTitle))
+    val chooser = Intent.createChooser(send, chooserTitle)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }

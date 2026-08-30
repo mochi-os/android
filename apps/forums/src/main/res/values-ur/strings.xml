@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ڈسپلے نام</string>
     <string name="forums_auth_verification_failed">تصدیق ناکام</string>
     <string name="forums_list_title">فورمز</string>
-    <string name="forums_list_close_search">تلاش بند کریں</string>
-    <string name="forums_list_search">تلاش کریں</string>
     <string name="forums_list_find">فورمز تلاش کریں</string>
     <string name="forums_list_logout">لاگ آؤٹ</string>
-    <string name="forums_list_create">فورم بنائیں</string>
     <string name="forums_list_unsubscribe">ان سبسکرائب کریں</string>
     <string name="forums_list_unsubscribe_title">ان سبسکرائب کریں</string>
     <string name="forums_create_title">فورم بنائیں</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">فورم نہیں ملا</string>
     <string name="forums_post_not_found">پوسٹ نہیں ملی</string>
 
-    <string name="forums_list_more">مزید</string>
     <string name="forums_comment_send">بھیجیں</string>
     <string name="forums_post_body_field">متن</string>
     <string name="forums_post_edit_body_field">متن</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">ٹیگ شامل کریں</string>
     <string name="forums_write_comment">تبصرہ لکھیں…</string>
     <string name="forums_auth_login_failed">لاگ ان ناکام</string>
-    <string name="forums_list_add_to_home">ہوم اسکرین میں شامل کریں</string>
 
     <string name="notification_channel_forums">فورمز کی اطلاعات</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA ابھی موبائل ایپ میں معاون نہیں ہے</string>
     <string name="forums_auth_enter_code_sent">%1$s پر بھیجا گیا کوڈ درج کریں</string>
     <string name="forums_auth_create_identity">اپنی شناخت بنائیں</string>
-    <string name="forums_list_search_placeholder">فورمز تلاش کریں</string>
-    <string name="forums_list_no_matching">کوئی مماثل فورم نہیں</string>
     <string name="forums_list_empty">ابھی تک کوئی فورم نہیں</string>
     <string name="forums_list_unsubscribe_message">کیا آپ واقعی اس فورم سے رکنیت ختم کرنا چاہتے ہیں؟</string>
     <string name="forums_find_search_placeholder">فورمز تلاش کریں یا URL چسپاں کریں</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">دلچسپی بڑھائیں</string>
     <string name="forums_tag_interest_down">دلچسپی کم کریں</string>
     <string name="forums_tag_interest_remove">دلچسپی ہٹائیں</string>
-    <string name="forums_list_default_sort">ڈیفالٹ ترتیب</string>
     <string name="forums_access_tab_users">صارفین</string>
     <string name="forums_access_tab_groups">گروپس</string>
     <string name="forums_access_tab_manual">دستی</string>

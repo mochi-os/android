@@ -15,8 +15,8 @@ data class Comment(
     // not `author`; read identity via [authorId].
     val author: String? = null,
     val user: String? = null,
-    val name: String = "",
-    val body: String = "",
+    @SerializedName("name") val authorName: String? = null,
+    val body: String? = null,
     val content: String? = null,
     @SerializedName("body_markdown") val bodyMarkdown: String? = null,
     val format: String = "",
@@ -37,12 +37,15 @@ data class Comment(
     /** The anchored attachment's id, or "" when the comment is not about one. */
     val anchor: String get() = attachment.orEmpty()
 
+    /** Commenter's display name, or "" when the server omits it. */
+    val name: String get() = authorName.orEmpty()
+
     /** Returns body text — projects uses 'content', feeds uses 'body'. */
-    val text: String get() = content.orEmpty().ifBlank { body }
+    val text: String get() = content.orEmpty().ifBlank { body.orEmpty() }
 
     /** Commenter's entity id, regardless of which field the module populates. */
     val authorId: String get() = author.orEmpty().ifBlank { user.orEmpty() }
 
     /** Plain-text source for editing: markdown when present, else the body. */
-    val markdownSource: String get() = bodyMarkdown.orEmpty().ifBlank { body }
+    val markdownSource: String get() = bodyMarkdown.orEmpty().ifBlank { body.orEmpty() }
 }

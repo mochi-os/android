@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">ਅਟੈਚਮੈਂਟ ਅਸਥਾਈ ਤੌਰ \'ਤੇ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="common_unavailable">ਅਣਉਪਲਬਧ</string>
     <string name="common_not_found">ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">ਰੱਦ ਕਰੋ</string>
     <string name="rss_revoke">ਪਹੁੰਚ ਰੱਦ ਕਰੋ</string>
     <string name="rss_revoke_title">RSS ਪਹੁੰਚ ਰੱਦ ਕਰਨੀ ਹੈ?</string>

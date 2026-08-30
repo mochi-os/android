@@ -146,7 +146,7 @@
     <string name="feeds_less_like_this">Manje ovakvog sadržaja</string>
     <string name="feeds_no_tags">Bez oznaka</string>
     <string name="feeds_anonymous">Anonimno</string>
-    <string name="feeds_replying_to_comment">Odgovor na komentar</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Priloži datoteku</string>
     <string name="feeds_tag_label">Naziv oznake</string>
     <string name="feeds_select_feed">Odaberite feed</string>

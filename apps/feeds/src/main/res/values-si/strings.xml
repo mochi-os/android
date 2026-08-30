@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">මේ වැනි අඩුවෙන්</string>
     <string name="feeds_no_tags">ටැග් නැත</string>
     <string name="feeds_anonymous">නිර්නාමික</string>
-    <string name="feeds_replying_to_comment">අදහසට පිළිතුරු දෙමින්</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">ගොනුව අමුණන්න</string>
     <string name="feeds_tag_label">ටැග් ලේබලය</string>
     <string name="feeds_file">ගොනුව</string>

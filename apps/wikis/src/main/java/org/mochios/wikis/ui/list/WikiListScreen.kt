@@ -6,6 +6,8 @@
 package org.mochios.wikis.ui.list
 
 import android.content.ClipData
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,17 +19,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Book
-import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -53,9 +54,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.toClipEntry
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -64,19 +65,20 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
-import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
@@ -85,6 +87,7 @@ import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.navigation.WikisApp
+import org.mochios.wikis.ui.components.WikiDrawer
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -100,11 +103,12 @@ fun WikiListScreen(
     val clipboard = LocalClipboardManager.current
 
     var showOverflow by remember { mutableStateOf(false) }
-    var showAbout by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }
 
     val rssCopiedMessage = stringResource(R.string.wikis_rss_copied)
     val rssFailedMessage = stringResource(R.string.wikis_rss_failed)
+    val revokedMessage = stringResource(R.string.wikis_rss_revoked)
+    val revokeFailedMessage = stringResource(R.string.wikis_access_revoke_failed)
     val clipboardLabel = stringResource(R.string.wikis_clipboard_label_rss)
 
     // Side-effect events from the ViewModel: toast strings + open-wiki
@@ -120,109 +124,120 @@ fun WikiListScreen(
         }
     }
 
-    MochiListDrawer(
+    WikiDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.wikis_sidebar_header)) },
-        items = emptyList(),
-        allItem = DrawerItem(
-            id = WikisApp.HOME,
-            title = stringResource(R.string.wikis_sidebar_all),
-            icon = Icons.Default.Book,
-        ),
+        wikis = uiState.wikis,
+        // This screen *is* the "All wikis" view, so the pinned row stays the
+        // selected one and tapping a wiki navigates away.
         selectedId = WikisApp.HOME,
-        onItemClick = { drawerScope.launch { drawerState.close() } },
-        actions = {
-            DrawerActionRow(
-                title = stringResource(R.string.wikis_sidebar_find),
-                icon = Icons.Default.Search,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    navController.navigate(WikisApp.FIND)
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(R.string.wikis_sidebar_create),
-                icon = Icons.Default.Add,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    navController.navigate(WikisApp.CREATE)
-                },
-            )
-        },
+        onSelectWiki = { wikiId -> navController.navigate(WikisApp.wikiHome(wikiId)) },
+        onSelectAll = { /* already here */ },
+        onFind = { navController.navigate(WikisApp.FIND) },
+        onCreate = { navController.navigate(WikisApp.CREATE) },
     ) {
         Scaffold(
             snackbarHost = { SnackbarHost(snackbarHostState) },
             topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.wikis_title)) },
-                    navigationIcon = {
-                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = stringResource(R.string.wikis_open_sidebar),
-                            )
-                        }
-                    },
-                    actions = {
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
+                if (uiState.showSearch) {
+                    MochiSearchTopBar(
+                        query = uiState.listQuery,
+                        placeholder = stringResource(R.string.wikis_search_placeholder),
+                        onQueryChange = viewModel::updateListQuery,
+                        onClose = { viewModel.toggleSearch() },
+                    )
+                } else {
+                    TopAppBar(
+                        title = { Text(stringResource(R.string.wikis_title)) },
+                        navigationIcon = {
+                            MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                                 Icon(
-                                    Icons.Default.MoreHoriz,
-                                    contentDescription = stringResource(MochiR.string.common_more_options),
+                                    Icons.Default.Menu,
+                                    contentDescription = stringResource(R.string.wikis_open_sidebar),
                                 )
                             }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = {
-                                    showOverflow = false
-                                    rssSubmenuOpen = false
-                                },
-                            ) {
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.wikis_rss_menu)) },
-                                    onClick = { rssSubmenuOpen = !rssSubmenuOpen },
-                                    leadingIcon = {
-                                        Icon(Icons.Outlined.RssFeed, contentDescription = null)
-                                    },
-                                    trailingIcon = {
-                                        Text(stringResource(R.string.wikis_rss_menu_trailing))
-                                    },
+                        },
+                        actions = {
+                            MochiIconButton(onClick = { viewModel.toggleSearch() }) {
+                                Icon(
+                                    Icons.Default.Search,
+                                    contentDescription = stringResource(
+                                        R.string.wikis_page_action_search
+                                    ),
                                 )
-                                if (rssSubmenuOpen) {
-                                    RssSubmenu(
-                                        onSelect = { mode ->
-                                            showOverflow = false
-                                            rssSubmenuOpen = false
-                                            drawerScope.launch {
-                                                val result = viewModel.makeRssUrl(mode)
-                                                result.fold(
-                                                    onSuccess = { url ->
-                                                        clipboard.setClip(
-                                                            ClipData.newPlainText(clipboardLabel, url)
-                                                                .toClipEntry(),
-                                                        )
-                                                        snackbarHostState.showSnackbar(rssCopiedMessage)
-                                                    },
-                                                    onFailure = {
-                                                        snackbarHostState.showSnackbar(rssFailedMessage)
-                                                    },
-                                                )
-                                            }
-                                        },
+                            }
+                            Box {
+                                MochiIconButton(onClick = { showOverflow = true }) {
+                                    Icon(
+                                        Icons.Default.MoreHoriz,
+                                        contentDescription = stringResource(MochiR.string.common_more_options),
                                     )
                                 }
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
+                                MochiDropdownMenu(
+                                    expanded = showOverflow,
+                                    onDismissRequest = {
                                         showOverflow = false
-                                        showAbout = true
+                                        rssSubmenuOpen = false
                                     },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
-                                )
+                                ) {
+                                    MochiDropdownSubmenu(
+                                        text = { Text(stringResource(R.string.wikis_rss_menu)) },
+                                        expanded = rssSubmenuOpen,
+                                        onExpandedChange = { rssSubmenuOpen = it },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.RssFeed, contentDescription = null)
+                                        },
+                                    ) {
+                                        RssModes(
+                                            onSelect = { mode ->
+                                                showOverflow = false
+                                                rssSubmenuOpen = false
+                                                drawerScope.launch {
+                                                    val result = viewModel.makeRssUrl(mode)
+                                                    result.fold(
+                                                        onSuccess = { url ->
+                                                            clipboard.setClip(
+                                                                ClipData.newPlainText(clipboardLabel, url)
+                                                                    .toClipEntry(),
+                                                            )
+                                                            snackbarHostState.showSnackbar(rssCopiedMessage)
+                                                        },
+                                                        onFailure = {
+                                                            snackbarHostState.showSnackbar(rssFailedMessage)
+                                                        },
+                                                    )
+                                                }
+                                            },
+                                        )
+                                        MochiDropdownMenuDivider()
+                                        // Under the modes it undoes: the feed
+                                        // URLs handed out above are exactly
+                                        // what this takes back.
+                                        MochiDropdownMenuItem(
+                                            text = {
+                                                Text(stringResource(R.string.wikis_rss_revoke))
+                                            },
+                                            onClick = {
+                                                showOverflow = false
+                                                rssSubmenuOpen = false
+                                                drawerScope.launch {
+                                                    val result = viewModel.revokeRssAccess()
+                                                    snackbarHostState.showSnackbar(
+                                                        if (result.isSuccess) {
+                                                            revokedMessage
+                                                        } else {
+                                                            revokeFailedMessage
+                                                        },
+                                                    )
+                                                }
+                                            },
+                                            destructive = true,
+                                        )
+                                    }
+                                }
                             }
-                        }
-                    },
-                )
+                        },
+                    )
+                }
             },
         ) { padding ->
             PullToRefreshBox(
@@ -252,14 +267,21 @@ fun WikiListScreen(
                         )
                     }
                     else -> {
-                        WikiCardGrid(
-                            wikis = uiState.wikis,
-                            unsubscribingId = uiState.unsubscribingId,
-                            onOpen = { wiki ->
-                                navController.navigate(WikisApp.wikiHome(wiki.fingerprint ?: wiki.id))
-                            },
-                            onUnsubscribe = viewModel::requestUnsubscribe,
-                        )
+                        val visible = viewModel.filteredWikis()
+                        if (visible.isEmpty()) {
+                            // Only reachable with a query on: an unfiltered
+                            // empty list is the EmptyWikis branch above.
+                            NoMatches()
+                        } else {
+                            WikiCardGrid(
+                                wikis = visible,
+                                unsubscribingId = uiState.unsubscribingId,
+                                onOpen = { wiki ->
+                                    navController.navigate(WikisApp.wikiHome(wiki.fingerprint ?: wiki.id))
+                                },
+                                onUnsubscribe = viewModel::requestUnsubscribe,
+                            )
+                        }
                     }
                 }
             }
@@ -278,25 +300,32 @@ fun WikiListScreen(
             dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
+}
+
+/** The three modes web offers, as the fly-out's own rows. */
+@Composable
+private fun RssModes(onSelect: (String) -> Unit) {
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_changes)) },
+        onClick = { onSelect("changes") },
+    )
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_comments)) },
+        onClick = { onSelect("comments") },
+    )
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.wikis_rss_both)) },
+        onClick = { onSelect("all") },
+    )
 }
 
 @Composable
-private fun RssSubmenu(onSelect: (String) -> Unit) {
-    Column(modifier = Modifier.padding(start = 16.dp)) {
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_rss_changes)) },
-            onClick = { onSelect("changes") },
-        )
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_rss_comments)) },
-            onClick = { onSelect("comments") },
-        )
-        MochiDropdownMenuItem(
-            text = { Text(stringResource(R.string.wikis_rss_both)) },
-            onClick = { onSelect("all") },
+private fun NoMatches() {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Text(
+            text = stringResource(R.string.wikis_find_no_results),
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
 }
@@ -318,8 +347,8 @@ private fun WikiCardGrid(
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         items(wikis, key = { it.id.ifEmpty { it.fingerprint ?: it.name } }) { wiki ->
             WikiCard(
@@ -332,6 +361,7 @@ private fun WikiCardGrid(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun WikiCard(
     wiki: WikiInfo,
@@ -340,50 +370,54 @@ private fun WikiCard(
     onUnsubscribe: () -> Unit,
 ) {
     val isSubscribed = wiki.source != null
-    val icon: ImageVector = if (isSubscribed) Icons.Default.Link else Icons.Default.Book
-    val badge = if (isSubscribed) {
-        stringResource(R.string.wikis_subscribed_badge)
-    } else {
-        stringResource(R.string.wikis_owned_badge)
-    }
+    val wikiId = wiki.fingerprint ?: wiki.id
     var showMenu by remember { mutableStateOf(false) }
 
+    // "12 pages · Updated <when>", dropping the second half for a wiki whose
+    // response carries no timestamp - a new wiki reads "0 pages" rather than
+    // claiming an edit at the epoch. Both strings are borrowed from the tags
+    // and search screens: their wording is exactly this, and a new key would
+    // have to be translated into 103 catalogues before `make locales` passed.
+    val pagesLabel = pluralStringResource(R.plurals.wikis_tags_count, wiki.pages, wiki.pages)
+    val subtitle = if (wiki.updated > 0) {
+        val whenLabel = LocalFormat.current.formatTimestamp(wiki.updated)
+        "$pagesLabel · " + stringResource(R.string.wikis_search_updated, whenLabel)
+    } else {
+        pagesLabel
+    }
+
     MochiCard(
-        onClick = onOpen,
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
-        ),
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .combinedClickable(
+                onClick = onOpen,
+                // Only a subscribed wiki has anything in the menu, so an owned
+                // one's long press does nothing rather than opening an empty one.
+                onLongClick = { if (isSubscribed) showMenu = true },
+            ),
     ) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 10.dp),
+            modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Box(
-                modifier = Modifier
-                    .size(40.dp),
-                contentAlignment = Alignment.Center,
+            EntityIconCircle(
+                seed = wikiId.ifEmpty { wiki.name },
+                icon = Icons.Default.Book,
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = badge,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = wiki.name,
-                    style = MaterialTheme.typography.bodyLarge,
+                    style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = badge,
+                    text = subtitle,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">การเปลี่ยนแปลงและความคิดเห็น</string>
     <string name="wikis_rss_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
     <string name="wikis_rss_failed">ไม่สามารถรับ RSS token ได้</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ค้นหาวิกิ</string>
     <string name="wikis_find_no_results">ไม่พบ wiki</string>
     <string name="wikis_find_recommended_section">wiki ที่แนะนำ</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">ยังไม่มีความคิดเห็น</string>
     <string name="wikis_comments_empty_subtitle">เป็นคนแรกที่แสดงความคิดเห็นในหน้านี้</string>
     <string name="wikis_comment_action_reply">ตอบกลับ</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">แก้ไข</string>
     <string name="wikis_comment_action_delete">ลบ</string>
     <string name="wikis_comment_action_save">บันทึก</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">แก้ไข</string>
     <string name="wikis_editor_insert">แทรก</string>
     <string name="wikis_editor_attachments">ไฟล์แนบ</string>
-    <string name="wikis_editor_cancel">ยกเลิก</string>
     <string name="wikis_editor_delete">ลบหน้า</string>
     <string name="wikis_editor_save">บันทึก</string>
     <string name="wikis_editor_saving">กำลังบันทึก…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">ชื่อ</string>
     <string name="wikis_editor_slug_label">URL ของหน้า</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">เนื้อหา</string>
     <string name="wikis_editor_summary_label">สรุปการแก้ไข (ไม่บังคับ)</string>
     <string name="wikis_editor_summary_hint">อธิบายการเปลี่ยนแปลงของคุณโดยย่อ</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">ไม่สามารถลบหน้าได้</string>
     <string name="wikis_revert_page_comment_label">ย้อนกลับความคิดเห็น</string>
     <string name="wikis_revert_page_confirm">ย้อนกลับ</string>
-    <string name="wikis_revert_page_cancel">ยกเลิก</string>
     <string name="wikis_revert_page_failed">ไม่สามารถย้อนกลับหน้าได้</string>
     <string name="wikis_rename_page_title">เปลี่ยนชื่อหน้า</string>
     <string name="wikis_rename_page_label">URL ใหม่</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">ดู</string>
     <string name="wikis_history_revert_action">ย้อนกลับไปที่เวอร์ชันนี้</string>
     <string name="wikis_revision_current_badge">ปัจจุบัน</string>
-    <string name="wikis_revision_back_to_history">กลับไปยังประวัติ</string>
     <string name="wikis_revision_revert_to_this">ย้อนกลับไปที่เวอร์ชันนี้</string>
     <string name="wikis_changes_title">การเปลี่ยนแปลงล่าสุด</string>
     <string name="wikis_changes_subtitle">การแก้ไขล่าสุดในทุกหน้าของ wiki นี้</string>
     <string name="wikis_changes_empty">ยังไม่มีการเปลี่ยนแปลง</string>
-    <string name="wikis_search_title">ค้นหา</string>
     <string name="wikis_search_empty_query">ป้อนคำค้นหา</string>
     <string name="wikis_redirects_title">การเปลี่ยนเส้นทาง</string>
     <string name="wikis_redirects_add">เพิ่ม</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">สร้าง</string>
     <string name="wikis_redirect_source_label">แหล่งที่มา</string>
     <string name="wikis_redirect_target_label">เป้าหมาย</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ต้องระบุทั้งต้นทางและปลายทาง</string>
     <string name="wikis_redirect_created_success">สร้างการเปลี่ยนเส้นทางแล้ว</string>
     <string name="wikis_redirect_create_failed">ไม่สามารถสร้าง redirect ได้</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">มุมมองตาราง</string>
     <string name="wikis_attachments_view_list">มุมมองรายการ</string>
     <string name="wikis_attachments_copy_embed">คัดลอกลิงก์ฝัง</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">คัดลอกลิงก์ฝังแล้ว</string>
     <string name="wikis_attachments_delete">ลบ</string>
     <string name="wikis_attachments_delete_confirm_title">ลบไฟล์แนบ</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ไม่สามารถซิงค์วิกิได้</string>
     <string name="wikis_settings_section_home">หน้าหลัก</string>
     <string name="wikis_settings_field_home_label">ใช้เป็นหน้าหลัก</string>
-    <string name="wikis_settings_home_save">บันทึกการเปลี่ยนแปลง</string>
     <string name="wikis_settings_home_saved">บันทึกการตั้งค่าแล้ว</string>
     <string name="wikis_settings_home_save_failed">ไม่สามารถบันทึกการตั้งค่าได้</string>
     <string name="wikis_settings_section_delete">ลบ wiki</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">เจ้าของ</string>
     <string name="wikis_access_tab_users">ผู้ใช้</string>
     <string name="wikis_access_tab_groups">กลุ่ม</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">ไม่มีกลุ่มที่ใช้งานได้</string>
     <string name="wikis_access_set_success">อัปเดตการเข้าถึงแล้ว</string>
     <string name="wikis_access_revoke_success">ลบการเข้าถึงแล้ว</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">อัปเดต %1$s</string>
     <string name="wikis_pageview_not_found_description">หน้า \"%1$s\" ยังไม่มี</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">แชร์ลิงก์หน้า</string>
+    <string name="wikis_pageview_share_chooser">ลิงก์วิกิ</string>
     <string name="wikis_pageview_share_link_copied">คัดลอกลิงก์หน้าไปยังคลิปบอร์ดแล้ว</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ของวิกิ</string>
     <string name="wikis_pageview_clipboard_label_share">ลิงก์หน้าวิกิ</string>
     <string name="wikis_pageview_loading">กำลังโหลดหน้า…</string>
-    <string name="wikis_page_action_share">แชร์ลิงก์หน้า</string>
-    <string name="wikis_page_action_rss_changes">RSS: การเปลี่ยนแปลง</string>
-    <string name="wikis_page_action_rss_comments">RSS: ความคิดเห็น</string>
-    <string name="wikis_page_action_rss_all">RSS: การเปลี่ยนแปลงและความคิดเห็น</string>
+    <string name="wikis_page_action_share">ลิงก์</string>
     <string name="wikis_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="wikis_owned_badge">เป็นเจ้าของ</string>
     <string name="wikis_search_placeholder">ค้นหาวิกิ…</string>
     <string name="wikis_subscribing">กำลังสมัครสมาชิก…</string>
     <string name="wikis_unsubscribe_confirm_message">คุณแน่ใจหรือไม่ที่จะยกเลิกการสมัครสมาชิกจาก %1$s?</string>
     <string name="wikis_subscribe_failed_502">เซิร์ฟเวอร์นั้นไม่สามารถเข้าถึงได้ กำลังลองใหม่…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS ของวิกิ</string>
     <string name="wikis_find_search_placeholder">ค้นหาตามชื่อ, ID, ลายนิ้วมือ หรือ URL…</string>
     <string name="wikis_join_search_button">ค้นหาวิกิ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">สมัครสมาชิกวิกิแล้ว</string>
     <string name="wikis_subscribe_502_retry">กำลังลองใหม่โดยไม่มีเซิร์ฟเวอร์ที่แนะนำ…</string>
     <string name="wikis_comments_title_template">%1$s - ความคิดเห็น</string>
     <string name="wikis_comment_form_placeholder_new">เขียนความคิดเห็น…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">ลบไฟล์แนบ</string>
     <string name="wikis_comment_collapse_toggle">ยุบกระทู้</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">กำลังแก้ไข: %1$s</string>
     <string name="wikis_editor_content_placeholder">เขียนเนื้อหาของคุณที่นี่โดยใช้ Markdown…</string>
     <string name="wikis_insert_dialog_empty">ยังไม่มีไฟล์แนบ อัปโหลดไฟล์เพื่อเริ่มต้น</string>
     <string name="wikis_delete_page_message">คุณกำลังจะลบหน้า \"%1$s\" (%2$s) การกระทำนี้สามารถยกเลิกได้โดยการคืนค่าจากประวัติ</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ผู้ใช้ที่ยืนยันตัวตนแล้ว</string>
 
     <string name="wikis_revision_compare">เปรียบเทียบการเปลี่ยนแปลง</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">แสดงหน้า</string>
     <string name="wikis_revision_compare_failed">ไม่สามารถโหลดเวอร์ชันก่อนหน้าเพื่อเปรียบเทียบได้</string>
     <string name="wikis_revision_changes_from">การเปลี่ยนแปลงจากเวอร์ชัน %1$d → %2$d</string>
@@ -350,4 +353,6 @@
         <item quantity="other">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ไม่สามารถบันทึกคำบรรยายภาพได้</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

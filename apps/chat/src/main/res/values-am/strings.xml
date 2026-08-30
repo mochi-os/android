@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">የማሳያ ስም</string>
     <string name="chat_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
     <string name="chat_list_title">ውይይቶች</string>
-    <string name="chat_list_close_search">ፍለጋን ዝጋ</string>
     <string name="chat_list_search">ይፈልጉ</string>
     <string name="chat_list_logout">ውጣ</string>
     <string name="chat_list_new">አዲስ ውይይት</string>
-    <string name="chat_list_removed_chat">ተወግዷል</string>
     <string name="chat_new_title">አዲስ ውይይት</string>
     <string name="chat_new_name">የቡድን ስም</string>
     <string name="chat_new_friends">ጓደኞች</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">እርስዎ</string>
     <string name="chat_chat_not_found">ውይይት አልተገኘም</string>
 
-    <string name="chat_list_more">ተጨማሪ</string>
     <string name="chat_message_send">ላክ</string>
 
     <string name="notification_channel_chat">የውይይት ማሳወቂያዎች</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA በሞባይል መተግበሪያ ላይ ገና አይደገፍም</string>
     <string name="chat_auth_enter_code_sent">ወደ %1$s የተላከውን ኮድ ያስገቡ</string>
     <string name="chat_auth_create_identity">ማንነትዎን ይፍጠሩ</string>
-    <string name="chat_list_search_placeholder">ውይይቶችን ይፈልጉ</string>
-    <string name="chat_list_no_matching">ተዛማጅ ውይይቶች የሉም</string>
     <string name="chat_list_empty">እስካሁን ውይይቶች የሉም</string>
-    <string name="chat_list_add_to_home">ወደ መነሻ ስክሪን ያክሉ</string>
-    <string name="chat_list_left_chat">ወጥቷል</string>
     <string name="chat_new_existing_chat">ነባር ውይይት ይክፈቱ</string>
     <string name="chat_new_start">ውይይት ይጀምሩ</string>
     <string name="chat_new_start_group">የቡድን ውይይት ይጀምሩ</string>

@@ -5,16 +5,6 @@
 
 package org.mochios.forums.ui.post
 
-import androidx.compose.material.icons.outlined.Block
-import androidx.compose.material.icons.outlined.Check
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material.icons.outlined.FormatQuote
-import androidx.compose.material.icons.outlined.Lock
-import androidx.compose.material.icons.outlined.LockOpen
-import androidx.compose.material.icons.outlined.PushPin
-import androidx.compose.material.icons.outlined.Report
-import androidx.compose.material.icons.outlined.Restore
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -52,7 +42,17 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.FormatQuote
 import androidx.compose.material.icons.outlined.LocalOffer
+import androidx.compose.material.icons.outlined.Lock
+import androidx.compose.material.icons.outlined.LockOpen
+import androidx.compose.material.icons.outlined.PushPin
+import androidx.compose.material.icons.outlined.Report
+import androidx.compose.material.icons.outlined.Restore
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material3.AssistChip
@@ -91,8 +91,10 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
@@ -114,16 +116,15 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton
+import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.TagItem
-import org.mochios.android.files.rememberFileLabel
 import org.mochios.forums.R
 import org.mochios.forums.model.ForumComment
-import org.mochios.forums.model.countComments
 import org.mochios.forums.model.Post
-import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.model.Tag
-import org.mochios.android.R as MochiR
+import org.mochios.forums.model.countComments
+import org.mochios.forums.ui.components.PostBadges
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -386,7 +387,6 @@ fun PostScreen(
                         }
                     }
                     if (uiState.canComment) {
-                        ReplyBanner(uiState.replyTo, onClear = { viewModel.setReplyTo(null) })
                         ComposeBar(
                             value = draft,
                             onValueChange = { value -> draft = value },
@@ -399,6 +399,21 @@ fun PostScreen(
                             isSending = uiState.isSending,
                             sendLabel = stringResource(R.string.forums_comment_send),
                             windowInsets = ComposeBarDefaults.WindowInsets,
+                            banner = uiState.replyTo?.let { replied ->
+                                {
+                                    ReplyComposerBanner(
+                                        label = stringResource(
+                                            R.string.forums_comment_replying_to,
+                                            replied.name,
+                                        ),
+                                        preview = replied.body,
+                                        cancelLabel = stringResource(
+                                            R.string.forums_comment_clear_reply,
+                                        ),
+                                        onCancel = { viewModel.setReplyTo(null) },
+                                    )
+                                }
+                            },
                             attachments = ComposeBarAttachments(
                                 pending = commentAttachments,
                                 onAdd = { uris -> viewModel.addCommentAttachments(uris) },
@@ -1088,8 +1103,21 @@ private fun AttachmentComments(
             }
         }
         if (canComment) {
-            ReplyBanner(replyTo, onClear = onClearReply)
             ComposeBar(
+                showDivider = false,
+                banner = replyTo?.let { replied ->
+                    {
+                        ReplyComposerBanner(
+                            label = stringResource(
+                                R.string.forums_comment_replying_to,
+                                replied.name,
+                            ),
+                            preview = replied.body,
+                            cancelLabel = stringResource(R.string.forums_comment_clear_reply),
+                            onCancel = onClearReply,
+                        )
+                    }
+                },
                 value = draft,
                 onValueChange = { draft = it },
                 onSend = {
@@ -1257,27 +1285,6 @@ private fun CommentCard(
     }
 }
 
-@Composable
-private fun ReplyBanner(replyTo: ForumComment?, onClear: () -> Unit) {
-    if (replyTo == null) return
-    Row(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = stringResource(R.string.forums_comment_replying_to, replyTo.name),
-            style = MaterialTheme.typography.labelSmall,
-            modifier = Modifier.weight(1f)
-        )
-        MochiIconButton(onClick = onClear, modifier = Modifier.size(24.dp)) {
-            Icon(
-                Icons.Default.Close,
-                contentDescription = stringResource(R.string.forums_comment_clear_reply),
-                modifier = Modifier.size(16.dp)
-            )
-        }
-    }
-}
 
 /**
  * A comment's own words with its leading "> " quote block dropped, so quoting

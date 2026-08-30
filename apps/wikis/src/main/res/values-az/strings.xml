@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Dəyişikliklər və şərhlər</string>
     <string name="wikis_rss_copied">RSS URL panelə kopyalandı</string>
     <string name="wikis_rss_failed">RSS tokenini almaq alınmadı</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wikiləri tap</string>
     <string name="wikis_find_no_results">Wiki tapılmadı</string>
     <string name="wikis_find_recommended_section">Tövsiyə olunan wiki-lər</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Hələ şərh yoxdur</string>
     <string name="wikis_comments_empty_subtitle">Bu səhifəyə ilk şərh yazan siz olun.</string>
     <string name="wikis_comment_action_reply">Cavabla</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Redaktə et</string>
     <string name="wikis_comment_action_delete">Sil</string>
     <string name="wikis_comment_action_save">Saxla</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Redaktə et</string>
     <string name="wikis_editor_insert">Daxil et</string>
     <string name="wikis_editor_attachments">Qoşmalar</string>
-    <string name="wikis_editor_cancel">Ləğv et</string>
     <string name="wikis_editor_delete">Səhifəni sil</string>
     <string name="wikis_editor_save">Saxla</string>
     <string name="wikis_editor_saving">Saxlanılır…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Başlıq</string>
     <string name="wikis_editor_slug_label">Səhifə URL-i</string>
     <string name="wikis_editor_slug_hint">sehife-adim</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Məzmun</string>
     <string name="wikis_editor_summary_label">Xülasəni redaktə et (istəyə bağlı)</string>
     <string name="wikis_editor_summary_hint">Dəyişikliklərinizi qısaca təsvir edin</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Səhifəni silmək alınmadı</string>
     <string name="wikis_revert_page_comment_label">Şərhi geri qaytar</string>
     <string name="wikis_revert_page_confirm">Geri qaytar</string>
-    <string name="wikis_revert_page_cancel">Ləğv et</string>
     <string name="wikis_revert_page_failed">Səhifəni geri qaytarmaq alınmadı</string>
     <string name="wikis_rename_page_title">Səhifə adını dəyiş</string>
     <string name="wikis_rename_page_label">Yeni URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Bax</string>
     <string name="wikis_history_revert_action">Bu versiyaya geri qaytar</string>
     <string name="wikis_revision_current_badge">Cari</string>
-    <string name="wikis_revision_back_to_history">Tarixçəyə geri</string>
     <string name="wikis_revision_revert_to_this">Bu versiyaya geri qaytar</string>
     <string name="wikis_changes_title">Son dəyişikliklər</string>
     <string name="wikis_changes_subtitle">Bu wiki-dəki bütün səhifələrdə son redaktələr.</string>
     <string name="wikis_changes_empty">Hələ dəyişiklik yoxdur</string>
-    <string name="wikis_search_title">Axtar</string>
     <string name="wikis_search_empty_query">Axtarış termini daxil edin</string>
     <string name="wikis_redirects_title">Yönləndirmələr</string>
     <string name="wikis_redirects_add">Əlavə et</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Yarat</string>
     <string name="wikis_redirect_source_label">Mənbə</string>
     <string name="wikis_redirect_target_label">Hədəf</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Mənbə və hədəfin hər ikisi tələb olunur</string>
     <string name="wikis_redirect_created_success">Yönləndirmə yaradıldı</string>
     <string name="wikis_redirect_create_failed">Yönləndirmə yaratmaq alınmadı</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Şəbəkə görünüşü</string>
     <string name="wikis_attachments_view_list">Siyahı görünüşü</string>
     <string name="wikis_attachments_copy_embed">Embed linkini kopyala</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Yerləşdirmə linki kopyalandı</string>
     <string name="wikis_attachments_delete">Sil</string>
     <string name="wikis_attachments_delete_confirm_title">Qoşmanı sil</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wikini sinxronlaşdırmaq alınmadı</string>
     <string name="wikis_settings_section_home">Ana səhifə</string>
     <string name="wikis_settings_field_home_label">Tətbiqlərdən istifadə et</string>
-    <string name="wikis_settings_home_save">Dəyişiklikləri saxla</string>
     <string name="wikis_settings_home_saved">Parametrlər saxlanıldı</string>
     <string name="wikis_settings_home_save_failed">Parametrləri saxlamaq alınmadı</string>
     <string name="wikis_settings_section_delete">Vikini sil</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Sahibi</string>
     <string name="wikis_access_tab_users">İstifadəçilər</string>
     <string name="wikis_access_tab_groups">Qruplar</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Mövcud qrup yoxdur</string>
     <string name="wikis_access_set_success">Giriş yeniləndi</string>
     <string name="wikis_access_revoke_success">Giriş silindi</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” səhifəsi hələ mövcud deyil.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Səhifə keçidini paylaş</string>
+    <string name="wikis_pageview_share_chooser">Viki keçidi</string>
     <string name="wikis_pageview_share_link_copied">Səhifə keçidi mübadilə buferinə kopyalandı</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki səhifə keçidi</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Səhifə keçidini paylaş</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Dəyişikliklər və şərhlər</string>
+    <string name="wikis_page_action_share">Keçid</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki axtar…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s abunəliyindən çıxmaq istədiyinizə əminsiniz?</string>
     <string name="wikis_subscribe_failed_502">Həmin server əlçatmazdır. Yenidən cəhd edilir…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Ad, ID, barmaq izi və ya URL üzrə axtar…</string>
     <string name="wikis_join_search_button">Wiki-ləri axtar…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wiki-yə abunə olundu</string>
     <string name="wikis_subscribe_502_retry">Təklif olunan server olmadan yenidən cəhd edilir…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Şərh yazın…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Məzmununuzu burada Markdown ilə yazın…</string>
     <string name="wikis_insert_dialog_empty">Hələ qoşma yoxdur. Başlamaq üçün fayl yükləyin.</string>
     <string name="wikis_delete_page_message">“%1$s” (%2$s) səhifəsini silmək üzrəsiniz. Bu əməliyyat tarixçədən bərpa etməklə geri qaytarıla bilər.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Kimliyi təsdiqlənmiş istifadəçilər</string>
 
     <string name="wikis_revision_compare">Dəyişiklikləri müqayisə et</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Səhifəni göstər</string>
     <string name="wikis_revision_compare_failed">Müqayisə üçün əvvəlki versiya yüklənə bilmədi.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d versiyasından dəyişikliklər</string>
@@ -353,4 +356,6 @@
         <item quantity="other">"%2$s" üçün %1$d seçildi tapıldı</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">İzahı saxlamaq mümkün olmadı</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

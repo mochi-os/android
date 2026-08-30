@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Ít nội dung tương tự</string>
     <string name="feeds_no_tags">Không có thẻ</string>
     <string name="feeds_anonymous">Ẩn danh</string>
-    <string name="feeds_replying_to_comment">Đang trả lời bình luận</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Đính kèm tệp</string>
     <string name="feeds_tag_label">Nhãn thẻ</string>
     <string name="feeds_file">Tệp</string>

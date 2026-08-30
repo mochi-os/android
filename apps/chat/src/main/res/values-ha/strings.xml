@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Sunan nunawa</string>
     <string name="chat_auth_verification_failed">Tabbatarwa ya gaza</string>
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_close_search">Rufe bincike</string>
     <string name="chat_list_search">Bincika</string>
     <string name="chat_list_logout">Fita</string>
     <string name="chat_list_new">Sabon chat</string>
-    <string name="chat_list_removed_chat">An cire</string>
     <string name="chat_new_title">Sabon chat</string>
     <string name="chat_new_name">Sunan group</string>
     <string name="chat_new_friends">Abokai</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Kai</string>
     <string name="chat_chat_not_found">Ba a sami chat ba</string>
 
-    <string name="chat_list_more">Ƙari</string>
     <string name="chat_message_send">Aika</string>
 
     <string name="notification_channel_chat">Sanarwar tattaunawa</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">Ba a goyi bayan MFA tukuna a aikace-aikacen wayar hannu ba</string>
     <string name="chat_auth_enter_code_sent">Shigar da lambar da aka aiko zuwa %1$s</string>
     <string name="chat_auth_create_identity">Ƙirƙiri shaidarka</string>
-    <string name="chat_list_search_placeholder">Nemo tattaunawa</string>
-    <string name="chat_list_no_matching">Babu tattaunawa da ta dace</string>
     <string name="chat_list_empty">Babu tattaunawa tukuna</string>
-    <string name="chat_list_add_to_home">Ƙara a allon gida</string>
-    <string name="chat_list_left_chat">An fita</string>
     <string name="chat_new_existing_chat">Buɗe tattaunawa da ke akwai</string>
     <string name="chat_new_start">Fara tattaunawa</string>
     <string name="chat_new_start_group">Fara tattaunawar rukuni</string>

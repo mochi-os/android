@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">似た投稿を減らす</string>
     <string name="feeds_no_tags">タグなし</string>
     <string name="feeds_anonymous">匿名</string>
-    <string name="feeds_replying_to_comment">コメントに返信中</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">ファイルを添付</string>
     <string name="feeds_tag_label">タグラベル</string>
     <string name="feeds_file">ファイル</string>

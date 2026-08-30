@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">अनुलग्नक अस्थायी रूप से अनुपलब्ध है</string>
     <string name="common_unavailable">उपलब्ध नहीं</string>
     <string name="common_not_found">नहीं मिला</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">रद्द करें</string>
     <string name="rss_revoke">पहुँच रद्द करें</string>
     <string name="rss_revoke_title">RSS पहुँच रद्द करें?</string>

@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">Tệp đính kèm tạm thời không khả dụng</string>
     <string name="common_unavailable">Không khả dụng</string>
     <string name="common_not_found">Không tìm thấy</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Thu hồi</string>
     <string name="rss_revoke">Thu hồi quyền truy cập</string>
     <string name="rss_revoke_title">Thu hồi quyền truy cập RSS?</string>

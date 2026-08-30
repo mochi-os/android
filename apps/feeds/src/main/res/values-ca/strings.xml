@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">Menys com aquesta</string>
     <string name="feeds_no_tags">Sense etiquetes</string>
     <string name="feeds_anonymous">Anònim</string>
-    <string name="feeds_replying_to_comment">S\'està responent al comentari</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Adjunta un fitxer</string>
     <string name="feeds_write_a_comment">Escriviu un comentari…</string>
     <string name="feeds_tag_label">Etiqueta</string>

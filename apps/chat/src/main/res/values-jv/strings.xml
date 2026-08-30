@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Jeneng tampilan</string>
     <string name="chat_auth_verification_failed">Verifikasi gagal</string>
     <string name="chat_list_title">Chat</string>
-    <string name="chat_list_close_search">Tutup panggolékan</string>
     <string name="chat_list_search">Goleki</string>
     <string name="chat_list_logout">Metu</string>
     <string name="chat_list_new">Chat anyar</string>
-    <string name="chat_list_removed_chat">Wis dicabut</string>
     <string name="chat_new_title">Chat anyar</string>
     <string name="chat_new_name">Jeneng grup</string>
     <string name="chat_new_friends">Kanca</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Sampéyan</string>
     <string name="chat_chat_not_found">Chat ora ketemu</string>
 
-    <string name="chat_list_more">Liyane</string>
     <string name="chat_message_send">Kirim</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Login gagal</string>
     <string name="chat_attachment_move_up">Pindhah munggah</string>
     <string name="chat_attachment_move_down">Pindhah mudhun</string>
-    <string name="chat_list_add_to_home">Tambah ing layar utama</string>
 
     <string name="notification_channel_chat">Notifikasi obrolan</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA durung didhukung ing aplikasi seluler</string>
     <string name="chat_auth_enter_code_sent">Ketik kode sing dikirim menyang %1$s</string>
     <string name="chat_auth_create_identity">Gawe identitas panjenengan</string>
-    <string name="chat_list_search_placeholder">Goleki obrolan</string>
-    <string name="chat_list_no_matching">Ora ana obrolan sing cocog</string>
     <string name="chat_list_empty">Durung ana obrolan</string>
-    <string name="chat_list_left_chat">Metu</string>
     <string name="chat_new_existing_chat">Bukak obrolan sing wis ana</string>
     <string name="chat_new_start">Wiwiti obrolan</string>
     <string name="chat_new_start_group">Wiwiti obrolan grup</string>

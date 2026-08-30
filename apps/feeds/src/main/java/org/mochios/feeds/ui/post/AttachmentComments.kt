@@ -90,7 +90,7 @@ internal fun AttachmentComments(
                     onSaveEdit = { viewModel.saveEditComment() },
                     onCancelEdit = { viewModel.cancelEditComment() },
                     onReply = { viewModel.setReplyingTo(comment.id) },
-                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.body)) },
+                    onEdit = { viewModel.startEditComment(comment.id, stripHtml(comment.text)) },
                     onDelete = { onDeleteComment(comment.id) },
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
                     canManage = permissions.manage,
@@ -113,6 +113,7 @@ internal fun AttachmentComments(
         }
         if (canComment) {
             ComposeBar(
+                showDivider = false,
                 value = commentText,
                 onValueChange = { viewModel.setCommentText(it) },
                 onSend = { viewModel.sendComment(anchor = attachmentId) },
@@ -129,7 +130,10 @@ internal fun AttachmentComments(
                 requireText = true,
                 onSearchMentions = { viewModel.searchMembers(it) },
                 windowInsets = ComposeBarDefaults.NoWindowInsets,
-                banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
+                banner = feedsReplyBanner(
+                    findComment(anchored, replyingTo),
+                    { viewModel.setReplyingTo(null) },
+                ),
             )
         }
     }

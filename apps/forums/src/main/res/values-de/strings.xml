@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Anzeigename</string>
     <string name="forums_auth_verification_failed">Verifizierung fehlgeschlagen</string>
     <string name="forums_list_title">Foren</string>
-    <string name="forums_list_close_search">Suche schließen</string>
-    <string name="forums_list_search">Suchen</string>
     <string name="forums_list_find">Foren finden</string>
     <string name="forums_list_logout">Abmelden</string>
-    <string name="forums_list_create">Forum erstellen</string>
     <string name="forums_list_unsubscribe">Abbestellen</string>
     <string name="forums_list_unsubscribe_title">Abbestellen</string>
     <string name="forums_create_title">Forum erstellen</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum nicht gefunden</string>
     <string name="forums_post_not_found">Beitrag nicht gefunden</string>
 
-    <string name="forums_list_more">Mehr</string>
     <string name="forums_comment_send">Senden</string>
 
     <string name="notification_channel_forums">Forum-Benachrichtigungen</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA wird in der mobilen App noch nicht unterstützt</string>
     <string name="forums_auth_enter_code_sent">Geben Sie den an %1$s gesendeten Code ein</string>
     <string name="forums_auth_create_identity">Identität erstellen</string>
-    <string name="forums_list_search_placeholder">Foren suchen</string>
-    <string name="forums_list_no_matching">Keine passenden Foren</string>
     <string name="forums_list_empty">Noch keine Foren</string>
-    <string name="forums_list_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="forums_list_unsubscribe_message">Möchten Sie dieses Forum wirklich abbestellen?</string>
     <string name="forums_find_search_placeholder">Foren suchen oder URL einfügen</string>
     <string name="forums_find_search_hint">Nach Foren zum Abonnieren suchen</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Interesse hervorheben</string>
     <string name="forums_tag_interest_down">Interesse reduzieren</string>
     <string name="forums_tag_interest_remove">Interesse entfernen</string>
-    <string name="forums_list_default_sort">Standardsortierung</string>
     <string name="forums_access_tab_users">Benutzer</string>
     <string name="forums_access_tab_groups">Gruppen</string>
     <string name="forums_access_tab_manual">Manuell</string>

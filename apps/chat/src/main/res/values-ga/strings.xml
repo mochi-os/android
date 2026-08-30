@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Ainm taispeána</string>
     <string name="chat_auth_verification_failed">Theip ar an bhfíorú</string>
     <string name="chat_list_title">Comhráite</string>
-    <string name="chat_list_close_search">Dún cuardach</string>
     <string name="chat_list_search">Cuardach</string>
     <string name="chat_list_logout">Logáil amach</string>
     <string name="chat_list_new">Comhrá nua</string>
-    <string name="chat_list_removed_chat">Bainte</string>
     <string name="chat_new_title">Comhrá nua</string>
     <string name="chat_new_name">Ainm an ghrúpa</string>
     <string name="chat_new_friends">Cairde</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Tusa</string>
     <string name="chat_chat_not_found">Comhrá gan aimsiú</string>
 
-    <string name="chat_list_more">Tuilleadh</string>
     <string name="chat_message_send">Seol</string>
 
     <string name="notification_channel_chat">Fógraí comhrá</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
     <string name="chat_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
     <string name="chat_auth_create_identity">Cruthaigh do chéannacht</string>
-    <string name="chat_list_search_placeholder">Cuardaigh comhráite</string>
-    <string name="chat_list_no_matching">Níl aon chomhrá comhoiriúnach ann</string>
     <string name="chat_list_empty">Níl aon chomhrá ann go fóill</string>
-    <string name="chat_list_add_to_home">Cuir leis an scáileán baile</string>
-    <string name="chat_list_left_chat">D\'fhág</string>
     <string name="chat_new_existing_chat">Oscail comhrá atá ann</string>
     <string name="chat_new_start">Tosaigh comhrá</string>
     <string name="chat_new_start_group">Tosaigh comhrá grúpa</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Wijzigingen en reacties</string>
     <string name="wikis_rss_copied">RSS-URL gekopieerd naar het klembord</string>
     <string name="wikis_rss_failed">RSS-token ophalen mislukt</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Wiki\'s zoeken</string>
     <string name="wikis_find_no_results">Geen wiki\'s gevonden</string>
     <string name="wikis_find_recommended_section">Aanbevolen wiki\'s</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Nog geen reacties</string>
     <string name="wikis_comments_empty_subtitle">Wees de eerste die reageert op deze pagina.</string>
     <string name="wikis_comment_action_reply">Antwoorden</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Bewerken</string>
     <string name="wikis_comment_action_delete">Verwijderen</string>
     <string name="wikis_comment_action_save">Opslaan</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Bewerken</string>
     <string name="wikis_editor_insert">Invoegen</string>
     <string name="wikis_editor_attachments">Bijlagen</string>
-    <string name="wikis_editor_cancel">Annuleren</string>
     <string name="wikis_editor_delete">Pagina verwijderen</string>
     <string name="wikis_editor_save">Opslaan</string>
     <string name="wikis_editor_saving">Opslaan…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Pagina-URL</string>
     <string name="wikis_editor_slug_hint">mijn-paginanaam</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Inhoud</string>
     <string name="wikis_editor_summary_label">Samenvatting van bewerking (optioneel)</string>
     <string name="wikis_editor_summary_hint">Beschrijf je wijzigingen kort</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Pagina verwijderen mislukt</string>
     <string name="wikis_revert_page_comment_label">Reactie terugdraaien</string>
     <string name="wikis_revert_page_confirm">Terugzetten</string>
-    <string name="wikis_revert_page_cancel">Annuleren</string>
     <string name="wikis_revert_page_failed">Pagina terugzetten mislukt</string>
     <string name="wikis_rename_page_title">Pagina hernoemen</string>
     <string name="wikis_rename_page_label">Nieuwe URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Bekijken</string>
     <string name="wikis_history_revert_action">Terugzetten naar deze versie</string>
     <string name="wikis_revision_current_badge">Huidig</string>
-    <string name="wikis_revision_back_to_history">Terug naar geschiedenis</string>
     <string name="wikis_revision_revert_to_this">Terugzetten naar deze versie</string>
     <string name="wikis_changes_title">Recente wijzigingen</string>
     <string name="wikis_changes_subtitle">Recente bewerkingen op alle pagina\'s in deze wiki.</string>
     <string name="wikis_changes_empty">Nog geen wijzigingen</string>
-    <string name="wikis_search_title">Zoeken</string>
     <string name="wikis_search_empty_query">Voer een zoekterm in</string>
     <string name="wikis_redirects_title">Redirects</string>
     <string name="wikis_redirects_add">Toevoegen</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Aanmaken</string>
     <string name="wikis_redirect_source_label">Bron</string>
     <string name="wikis_redirect_target_label">Doel</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Zowel bron als doel zijn vereist</string>
     <string name="wikis_redirect_created_success">Redirect aangemaakt</string>
     <string name="wikis_redirect_create_failed">Redirect aanmaken mislukt</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Rasterweergave</string>
     <string name="wikis_attachments_view_list">Lijstweergave</string>
     <string name="wikis_attachments_copy_embed">Insluitlink kopiëren</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Embed-link gekopieerd</string>
     <string name="wikis_attachments_delete">Verwijderen</string>
     <string name="wikis_attachments_delete_confirm_title">Bijlage verwijderen</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Wiki synchroniseren mislukt</string>
     <string name="wikis_settings_section_home">Startpagina</string>
     <string name="wikis_settings_field_home_label">Als startpagina gebruiken</string>
-    <string name="wikis_settings_home_save">Wijzigingen opslaan</string>
     <string name="wikis_settings_home_saved">Instellingen opgeslagen</string>
     <string name="wikis_settings_home_save_failed">Instellingen opslaan mislukt</string>
     <string name="wikis_settings_section_delete">Wiki verwijderen</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Eigenaar</string>
     <string name="wikis_access_tab_users">Gebruikers</string>
     <string name="wikis_access_tab_groups">Groepen</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Geen groepen beschikbaar</string>
     <string name="wikis_access_set_success">Toegang bijgewerkt</string>
     <string name="wikis_access_revoke_success">Toegang verwijderd</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Bijgewerkt %1$s</string>
     <string name="wikis_pageview_not_found_description">De pagina \"%1$s\" bestaat nog niet.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Paginalink delen</string>
+    <string name="wikis_pageview_share_chooser">Wikilink</string>
     <string name="wikis_pageview_share_link_copied">Paginalink gekopieerd naar klembord</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki-paginalink</string>
     <string name="wikis_pageview_loading">Pagina laden…</string>
-    <string name="wikis_page_action_share">Paginalink delen</string>
-    <string name="wikis_page_action_rss_changes">RSS: Wijzigingen</string>
-    <string name="wikis_page_action_rss_comments">RSS: Opmerkingen</string>
-    <string name="wikis_page_action_rss_all">RSS: Wijzigingen en opmerkingen</string>
+    <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Zijbalk openen</string>
     <string name="wikis_owned_badge">Eigen</string>
     <string name="wikis_search_placeholder">Zoek naar een wiki…</string>
     <string name="wikis_subscribing">Abonneren…</string>
     <string name="wikis_unsubscribe_confirm_message">Weet je zeker dat je %1$s wilt afzeggen?</string>
     <string name="wikis_subscribe_failed_502">Die server is onbereikbaar. Opnieuw proberen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Zoek op naam, ID, vingerafdruk of URL…</string>
     <string name="wikis_join_search_button">Wikis zoeken…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Geabonneerd op wiki</string>
     <string name="wikis_subscribe_502_retry">Opnieuw proberen zonder de voorgestelde server…</string>
     <string name="wikis_comments_title_template">%1$s - Opmerkingen</string>
     <string name="wikis_comment_form_placeholder_new">Schrijf een opmerking…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Bijlage verwijderen</string>
     <string name="wikis_comment_collapse_toggle">Discussie inklappen</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Bewerken: %1$s</string>
     <string name="wikis_editor_content_placeholder">Schrijf hier je inhoud met Markdown…</string>
     <string name="wikis_insert_dialog_empty">Nog geen bijlagen. Upload een bestand om te beginnen.</string>
     <string name="wikis_delete_page_message">Je staat op het punt de pagina \"%1$s\" (%2$s) te verwijderen. Deze actie kan ongedaan worden gemaakt door te herstellen uit de geschiedenis.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>
 
     <string name="wikis_revision_compare">Wijzigingen vergelijken</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Pagina tonen</string>
     <string name="wikis_revision_compare_failed">Kon de vorige versie niet laden ter vergelijking.</string>
     <string name="wikis_revision_changes_from">Wijzigingen van versie %1$d → %2$d</string>
@@ -353,4 +356,6 @@
         <item quantity="other">%1$d resultaten gevonden voor "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Bijschrift kan niet worden opgeslagen</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

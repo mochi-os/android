@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ווײַז נאָמען</string>
     <string name="chat_auth_verification_failed">פֿאַריפֿיקאַציע דורכגעפֿאַלן</string>
     <string name="chat_list_title">שמועסן</string>
-    <string name="chat_list_close_search">פֿאַרמאַכן זוכן</string>
     <string name="chat_list_search">זוך</string>
     <string name="chat_list_logout">אַרויסקומען</string>
     <string name="chat_list_new">נײַער שמועס</string>
-    <string name="chat_list_removed_chat">אַראָפּגענומען</string>
     <string name="chat_new_title">נײַער שמועס</string>
     <string name="chat_new_name">גרופּע־נאָמען</string>
     <string name="chat_new_friends">חברים</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">איר</string>
     <string name="chat_chat_not_found">שמועס נישט געפֿונען</string>
 
-    <string name="chat_list_more">מער</string>
     <string name="chat_message_send">שיקן</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
     <string name="chat_attachment_move_up">באַוועגן אַרויף</string>
     <string name="chat_attachment_move_down">באַוועגן אַראָפּ</string>
-    <string name="chat_list_add_to_home">לייגן צו היים עקראַן</string>
 
     <string name="notification_channel_chat">שמועס־נאָטיפֿיקאַציעס</string>
     <string name="chat_auth_brand">Mochi שמועס</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA איז נאָך נישט געשטיצט אין דער מאָבילער אַפּ</string>
     <string name="chat_auth_enter_code_sent">אַרײַנגעבן דעם קאָד וואָס איז געשיקט געוואָרן צו %1$s</string>
     <string name="chat_auth_create_identity">שאַפֿט אײַער אידענטיטעט</string>
-    <string name="chat_list_search_placeholder">זוכן שמועסן</string>
-    <string name="chat_list_no_matching">קיין פּאַסיקע שמועסן</string>
     <string name="chat_list_empty">נאָך קיין שמועסן</string>
-    <string name="chat_list_left_chat">אַוועקגעגאַנגען</string>
     <string name="chat_new_existing_chat">עפֿענען בנימצא שמועס</string>
     <string name="chat_new_start">אָנהייבן שמועס</string>
     <string name="chat_new_start_group">אָנהייבן גרופּע־שמועס</string>

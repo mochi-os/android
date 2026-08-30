@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -29,6 +31,7 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.ClosedCaption
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -36,6 +39,7 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -50,20 +54,27 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.FileKindPreview
+import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MarkdownPreviewSheet
+import org.mochios.android.ui.components.MarkdownToolbar
+import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MentionTextField
-import org.mochios.android.files.rememberFileLabel
-import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.forums.R
-import org.mochios.android.R as MochiR
 
 /**
  * Compose or edit a forum post; edit mode when the back-stack carries a
@@ -84,6 +95,15 @@ fun NewPostScreen(
     val existingCaptions by viewModel.existingCaptions.collectAsState()
     val title by viewModel.title.collectAsState()
     val body by viewModel.body.collectAsState()
+    var showPreview by remember { mutableStateOf(false) }
+    // The toolbar marks up a selection, so the cursor has to live here rather
+    // than inside the field.
+    var bodyField by remember { mutableStateOf(TextFieldValue(body)) }
+    LaunchedEffect(body) {
+        if (body != bodyField.text) {
+            bodyField = TextFieldValue(body, TextRange(body.length))
+        }
+    }
     val isEditing = viewModel.isEditing
 
     // Which attachment's caption is being edited: a saved attachment's id or
@@ -120,30 +140,52 @@ fun NewPostScreen(
                     }
                 },
                 actions = {
-                    MochiTextButton(
-                        onClick = { viewModel.submit() },
-                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting
+                    // In the bar rather than the markdown row: the preview shows
+                    // the title as well, which is not the toolbar's field.
+                    MochiIconButton(
+                        onClick = { showPreview = true },
+                        enabled = title.isNotBlank() || body.isNotBlank(),
                     ) {
-                        if (uiState.isPosting) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(20.dp),
-                                strokeWidth = 2.dp
-                            )
-                        } else {
-                            Text(
-                                stringResource(
-                                    if (isEditing) MochiR.string.common_save
-                                    else R.string.forums_post_create_action
-                                )
-                            )
-                        }
+                        Icon(
+                            Icons.Filled.Visibility,
+                            contentDescription = stringResource(MochiR.string.common_preview),
+                        )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 )
             )
-        }
+        },
+        bottomBar = {
+            // Posting sits under the thumb rather than in the far corner of the
+            // bar, the way the wiki editor saves.
+            Surface(color = MaterialTheme.colorScheme.surface) {
+                MochiButton(
+                    onClick = { viewModel.submit() },
+                    enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .imePadding()
+                        .navigationBarsPadding()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                ) {
+                    if (uiState.isPosting) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            strokeWidth = 2.dp,
+                        )
+                    } else {
+                        Text(
+                            stringResource(
+                                if (isEditing) MochiR.string.common_save
+                                else R.string.forums_post_create_action
+                            )
+                        )
+                    }
+                }
+            }
+        },
     ) { padding ->
         Column(
             modifier = Modifier
@@ -167,8 +209,11 @@ fun NewPostScreen(
             )
             Spacer(Modifier.height(8.dp))
             MentionTextField(
-                value = body,
-                onValueChange = { value -> viewModel.setBody(value) },
+                value = bodyField,
+                onValueChange = { updated ->
+                    bodyField = updated
+                    if (updated.text != body) viewModel.setBody(updated.text)
+                },
                 onSearch = { query -> viewModel.searchMembers(query) },
                 placeholder = { Text(stringResource(R.string.forums_markdown_supported)) },
                 modifier = Modifier
@@ -177,25 +222,31 @@ fun NewPostScreen(
                 maxLines = 20,
                 fillHeight = true
             )
-            Spacer(Modifier.height(16.dp))
-
-            MochiOutlinedButton(
-                onClick = { filePickerLauncher.launch("*/*") },
-                tone = MochiButtonTone.Neutral,
+            MarkdownToolbar(
+                body = bodyField,
+                onBodyChange = { updated ->
+                    bodyField = updated
+                    if (updated.text != body) viewModel.setBody(updated.text)
+                },
             ) {
-                Icon(
-                    Icons.Default.AttachFile,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(Modifier.width(8.dp))
-                Text(stringResource(R.string.forums_post_attach))
+                // Reaching for a file belongs with the body it attaches to,
+                // not adrift below the form.
+                MarkdownToolbarSeparator()
+                MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
+                    Icon(
+                        Icons.Default.AttachFile,
+                        contentDescription = stringResource(R.string.forums_post_attach),
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
             }
+            Spacer(Modifier.height(16.dp))
 
             if (existingAttachments.isNotEmpty()) {
                 Spacer(Modifier.height(8.dp))
                 ExistingAttachmentChips(
                     attachments = existingAttachments,
+                    forumId = viewModel.forumId,
                     removedIds = removedExistingIds,
                     captions = existingCaptions,
                     onMove = { id, direction -> viewModel.moveExistingAttachment(id, direction) },
@@ -249,6 +300,22 @@ fun NewPostScreen(
             },
             onDismiss = { captioning = null }
         )
+    }
+
+    if (showPreview) {
+        // HtmlContent is Markwon underneath, so the same markdown the server
+        // will render can be drawn here without asking it first.
+        MarkdownPreviewSheet(onDismiss = { showPreview = false }) {
+            if (title.isNotBlank()) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Spacer(Modifier.height(12.dp))
+            }
+            HtmlContent(html = body)
+        }
     }
 }
 
@@ -327,6 +394,13 @@ private fun AttachmentChips(
                             style = MaterialTheme.typography.labelSmall
                         )
                     },
+                    leadingIcon = {
+                        FileKindPreview(
+                            kind = rememberFileKind(uri, name),
+                            model = uri,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    },
                     trailingIcon = {
                         Icon(
                             Icons.Default.Close,
@@ -369,6 +443,7 @@ private fun AttachmentChips(
 @Composable
 private fun ExistingAttachmentChips(
     attachments: List<Attachment>,
+    forumId: String,
     removedIds: Set<String>,
     captions: Map<String, String>,
     onMove: (String, Int) -> Unit,
@@ -416,6 +491,18 @@ private fun ExistingAttachmentChips(
                         Text(
                             attachment.name.takeLast(25),
                             style = MaterialTheme.typography.labelSmall
+                        )
+                    },
+                    leadingIcon = {
+                        FileKindPreview(
+                            kind = attachment.fileKind,
+                            model = attachment.thumbnailUrl
+                                ?: "/forums/$forumId/-/attachments/${attachment.id}/thumbnail",
+                            // No thumbnail route for a video: the frame is
+                            // decoded from the clip itself.
+                            videoModel = attachment.url
+                                ?: "/forums/$forumId/-/attachments/${attachment.id}",
+                            modifier = Modifier.size(16.dp)
                         )
                     },
                     trailingIcon = {

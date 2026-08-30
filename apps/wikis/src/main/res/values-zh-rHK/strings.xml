@@ -8,11 +8,11 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_load_more">載入更多</string>
     <string name="wikis_access_change_level">更改存取層級</string>
@@ -56,4 +56,8 @@
         <item quantity="one">找到 %1$d 個結果,查詢「%2$s」</item>
         <item quantity="other">找到 %1$d 個結果,查詢「%2$s」</item>
     </plurals>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

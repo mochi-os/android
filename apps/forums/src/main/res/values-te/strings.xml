@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ప్రదర్శన పేరు</string>
     <string name="forums_auth_verification_failed">ధృవీకరణ విఫలమైంది</string>
     <string name="forums_list_title">ఫోరమ్‌లు</string>
-    <string name="forums_list_close_search">శోధనను మూసివేయండి</string>
-    <string name="forums_list_search">శోధన</string>
     <string name="forums_list_find">ఫోరమ్‌లను కనుగొనండి</string>
     <string name="forums_list_logout">లాగ్ అవుట్</string>
-    <string name="forums_list_create">ఫోరమ్‌ను సృష్టించండి</string>
     <string name="forums_list_unsubscribe">చందా మానివేయండి</string>
     <string name="forums_list_unsubscribe_title">చందా మానివేయండి</string>
     <string name="forums_create_title">ఫోరమ్‌ను సృష్టించండి</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ఫోరమ్ కనుగొనబడలేదు</string>
     <string name="forums_post_not_found">పోస్ట్ కనుగొనబడలేదు</string>
 
-    <string name="forums_list_more">మరిన్ని</string>
     <string name="forums_comment_send">పంపండి</string>
     <string name="forums_post_body_field">కంటెంట్</string>
     <string name="forums_post_edit_body_field">కంటెంట్</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">వ్యాఖ్య రాయండి…</string>
     <string name="forums_auth_login_failed">లాగిన్ విఫలమైంది</string>
-    <string name="forums_list_add_to_home">హోమ్ స్క్రీన్‌కు జోడించండి</string>
 
     <string name="notification_channel_forums">ఫోరమ్‌ల నోటిఫికేషన్‌లు</string>
     <string name="forums_auth_brand">Mochi ఫోరమ్‌లు</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">మొబైల్ యాప్‌లో MFA ఇంకా మద్దతు ఇవ్వబడలేదు</string>
     <string name="forums_auth_enter_code_sent">%1$sకి పంపిన కోడ్‌ను నమోదు చేయండి</string>
     <string name="forums_auth_create_identity">మీ గుర్తింపును సృష్టించండి</string>
-    <string name="forums_list_search_placeholder">ఫోరమ్‌లను శోధించండి</string>
-    <string name="forums_list_no_matching">సరిపోలే ఫోరమ్‌లు లేవు</string>
     <string name="forums_list_empty">ఇంకా ఫోరమ్‌లు లేవు</string>
     <string name="forums_list_unsubscribe_message">మీరు ఈ ఫోరమ్ నుండి సభ్యత్వాన్ని రద్దు చేసుకోవాలనుకుంటున్నారా?</string>
     <string name="forums_find_search_placeholder">ఫోరమ్‌లను శోధించండి లేదా URLని అతికించండి</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">ఆసక్తిని పెంచండి</string>
     <string name="forums_tag_interest_down">ఆసక్తిని తగ్గించండి</string>
     <string name="forums_tag_interest_remove">ఆసక్తిని తొలగించండి</string>
-    <string name="forums_list_default_sort">డిఫాల్ట్ క్రమబద్ధీకరణ</string>
     <string name="forums_access_tab_users">యూజర్‌లు</string>
     <string name="forums_access_tab_groups">గ్రూపులు</string>
     <string name="forums_access_tab_manual">మాన్యువల్</string>

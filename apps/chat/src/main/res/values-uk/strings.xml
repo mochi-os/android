@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Відображуване ім\'я</string>
     <string name="chat_auth_verification_failed">Перевірка не вдалася</string>
     <string name="chat_list_title">Чати</string>
-    <string name="chat_list_close_search">Закрити пошук</string>
     <string name="chat_list_search">Пошук</string>
     <string name="chat_list_logout">Вийти</string>
     <string name="chat_list_new">Новий чат</string>
-    <string name="chat_list_removed_chat">Видалено</string>
     <string name="chat_new_title">Новий чат</string>
     <string name="chat_new_name">Назва групи</string>
     <string name="chat_new_friends">Друзі</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Ви</string>
     <string name="chat_chat_not_found">Чат не знайдено</string>
 
-    <string name="chat_list_more">Більше</string>
     <string name="chat_message_send">Надіслати</string>
     <string name="chat_attachment_remove">Видалити вкладення</string>
     <string name="chat_message_remove_attachment">Видалити вкладення</string>
     <string name="chat_auth_login_failed">Не вдалося увійти</string>
     <string name="chat_attachment_move_up">Перемістити вгору</string>
     <string name="chat_attachment_move_down">Перемістити вниз</string>
-    <string name="chat_list_add_to_home">Додати на головний екран</string>
 
     <string name="notification_channel_chat">Сповіщення чату</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA поки що не підтримується в мобільному застосунку</string>
     <string name="chat_auth_enter_code_sent">Введіть код, надісланий на %1$s</string>
     <string name="chat_auth_create_identity">Створіть свою особу</string>
-    <string name="chat_list_search_placeholder">Пошук чатів</string>
-    <string name="chat_list_no_matching">Немає відповідних чатів</string>
     <string name="chat_list_empty">Чатів ще немає</string>
-    <string name="chat_list_left_chat">Вийшли</string>
     <string name="chat_new_existing_chat">Відкрити наявний чат</string>
     <string name="chat_new_start">Почати чат</string>
     <string name="chat_new_start_group">Почати груповий чат</string>

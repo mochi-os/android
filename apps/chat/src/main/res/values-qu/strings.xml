@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Qhaway suti</string>
     <string name="chat_auth_verification_failed">Qhawariy mana atikurqanchu</string>
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_close_search">Maskhay wichq\'ay</string>
     <string name="chat_list_search">Maskay</string>
     <string name="chat_list_logout">Lluqsiy</string>
     <string name="chat_list_new">Musuq chat</string>
-    <string name="chat_list_removed_chat">Qichusqa</string>
     <string name="chat_new_title">Musuq chat</string>
     <string name="chat_new_name">Huñu suti</string>
     <string name="chat_new_friends">Masikuna</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Qan</string>
     <string name="chat_chat_not_found">Chat mana tarisqa</string>
 
-    <string name="chat_list_more">Astawan</string>
     <string name="chat_message_send">Apachiy</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Mana yaykuyta atispachu</string>
     <string name="chat_attachment_move_up">Patamanta apay</string>
     <string name="chat_attachment_move_down">Uramanta apay</string>
-    <string name="chat_list_add_to_home">Wasi pantallaman yapay</string>
 
     <string name="notification_channel_chat">Rimanakuy willaykuna</string>
     <string name="chat_auth_brand">Mochi Rimanakuy</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA manaraqmi mobile app nisqapi atikunchu</string>
     <string name="chat_auth_enter_code_sent">%1$s nisqaman apachisqa kuditata churay</string>
     <string name="chat_auth_create_identity">Kikinkaykita paqarichiy</string>
-    <string name="chat_list_search_placeholder">Rimanakuykunata maskay</string>
-    <string name="chat_list_no_matching">Mana tupaq rimanakuykunapas kanchu</string>
     <string name="chat_list_empty">Manaraqmi rimanakuykuna kanchu</string>
-    <string name="chat_list_left_chat">Lluqsirqa</string>
     <string name="chat_new_existing_chat">Kaq rimanakuyta kichay</string>
     <string name="chat_new_start">Rimanakuyta qallariy</string>
     <string name="chat_new_start_group">Huñu rimanakuyta qallariy</string>

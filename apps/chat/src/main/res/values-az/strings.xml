@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Göstərilən ad</string>
     <string name="chat_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="chat_list_title">Söhbətlər</string>
-    <string name="chat_list_close_search">Axtarışı bağla</string>
     <string name="chat_list_search">Axtar</string>
     <string name="chat_list_logout">Çıx</string>
     <string name="chat_list_new">Yeni söhbət</string>
-    <string name="chat_list_removed_chat">Silindi</string>
     <string name="chat_new_title">Yeni söhbət</string>
     <string name="chat_new_name">Qrup adı</string>
     <string name="chat_new_friends">Dostlar</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Artıq söhbətiniz olanlar:</string>
     <string name="chat_chat_not_found">Söhbət tapılmadı</string>
 
-    <string name="chat_list_more">Daha çox</string>
     <string name="chat_message_send">Göndər</string>
 
     <string name="notification_channel_chat">Söhbət bildirişləri</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA mobil tətbiqdə hələ dəstəklənmir</string>
     <string name="chat_auth_enter_code_sent">%1$s ünvanına göndərilən kodu daxil edin</string>
     <string name="chat_auth_create_identity">Kimliyinizi yaradın</string>
-    <string name="chat_list_search_placeholder">Söhbətləri axtarın</string>
-    <string name="chat_list_no_matching">Uyğun söhbət yoxdur</string>
     <string name="chat_list_empty">Hələ söhbət yoxdur</string>
-    <string name="chat_list_add_to_home">Əsas ekrana əlavə edin</string>
-    <string name="chat_list_left_chat">Tərk edildi</string>
     <string name="chat_new_existing_chat">Mövcud söhbəti açın</string>
     <string name="chat_new_start">Söhbətə başlayın</string>
     <string name="chat_new_start_group">Qrup söhbətinə başlayın</string>

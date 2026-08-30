@@ -138,7 +138,6 @@
     <string name="people_person_accept">গ্রহণ করুন</string>
     <string name="people_person_decline">প্রত্যাখ্যান করুন</string>
 
-    <string name="people_friends_more">আরো</string>
 
     <string name="notification_channel_people">মানুষ সম্পর্কিত বিজ্ঞপ্তি</string>
     <string name="people_screen_friends_todo">বন্ধু — TODO</string>

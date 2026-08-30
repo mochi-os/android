@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nom d\'affichage</string>
     <string name="forums_auth_verification_failed">Échec de la vérification</string>
     <string name="forums_list_title">Forums</string>
-    <string name="forums_list_close_search">Fermer la recherche</string>
-    <string name="forums_list_search">Rechercher</string>
     <string name="forums_list_find">Trouver des forums</string>
     <string name="forums_list_logout">Se déconnecter</string>
-    <string name="forums_list_create">Créer le forum</string>
     <string name="forums_list_unsubscribe">Se désabonner</string>
     <string name="forums_list_unsubscribe_title">Se désabonner</string>
     <string name="forums_create_title">Créer le forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum introuvable</string>
     <string name="forums_post_not_found">Message introuvable</string>
 
-    <string name="forums_list_more">Plus</string>
     <string name="forums_comment_send">Envoyer</string>
 
     <string name="notification_channel_forums">Notifications des forums</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA pas encore prise en charge dans l\'application mobile</string>
     <string name="forums_auth_enter_code_sent">Saisissez le code envoyé à %1$s</string>
     <string name="forums_auth_create_identity">Créez votre identité</string>
-    <string name="forums_list_search_placeholder">Rechercher des forums</string>
-    <string name="forums_list_no_matching">Aucun forum correspondant</string>
     <string name="forums_list_empty">Aucun forum pour le moment</string>
-    <string name="forums_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="forums_list_unsubscribe_message">Voulez-vous vraiment vous désabonner de ce forum ?</string>
     <string name="forums_find_search_placeholder">Rechercher des forums ou coller une URL</string>
     <string name="forums_find_search_hint">Recherchez des forums auxquels vous abonner</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Augmenter l\'intérêt</string>
     <string name="forums_tag_interest_down">Réduire l\'intérêt</string>
     <string name="forums_tag_interest_remove">Supprimer l\'intérêt</string>
-    <string name="forums_list_default_sort">Tri par défaut</string>
     <string name="forums_access_tab_users">Utilisateurs</string>
     <string name="forums_access_tab_groups">Groupes</string>
     <string name="forums_access_tab_manual">Manuel</string>

@@ -22,14 +22,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Article
-import androidx.compose.material.icons.automirrored.filled.TextSnippet
-import androidx.compose.material.icons.filled.Audiotrack
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.PictureAsPdf
 import androidx.compose.material.icons.filled.PlayCircle
-import androidx.compose.material.icons.filled.TableChart
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -47,7 +41,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -59,7 +52,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment
-import org.mochios.android.model.FileKind
 import org.mochios.android.util.AttachmentOpener
 
 /** Fixed thumbnail height for [AttachmentGallery]'s compact (comment) layout. */
@@ -352,10 +344,8 @@ private fun FileChip(
                     modifier = Modifier.size(28.dp)
                 )
             } else {
-                Icon(
-                    imageVector = fileKindIcon(attachment.fileKind),
-                    contentDescription = null,
-                    tint = fileKindTint(attachment.fileKind),
+                FileKindIcon(
+                    kind = attachment.fileKind,
                     modifier = Modifier.size(28.dp)
                 )
             }
@@ -402,34 +392,14 @@ private fun DeleteIcon(onClick: () -> Unit) {
     )
 }
 
-/** Representative icon for a non-media file kind. */
-private fun fileKindIcon(kind: FileKind): ImageVector = when (kind) {
-    FileKind.PDF -> Icons.Default.PictureAsPdf
-    FileKind.WORD -> Icons.AutoMirrored.Filled.Article
-    FileKind.EXCEL -> Icons.Default.TableChart
-    FileKind.TEXT -> Icons.AutoMirrored.Filled.TextSnippet
-    FileKind.AUDIO -> Icons.Default.Audiotrack
-    else -> Icons.Default.Description
-}
-
-/** Drive-style accent colour for a file kind's icon. */
-@Composable
-private fun fileKindTint(kind: FileKind): Color = when (kind) {
-    FileKind.PDF -> Color(0xFFE53935)    // red
-    FileKind.WORD -> Color(0xFF1E88E5)   // blue
-    FileKind.EXCEL -> Color(0xFF2E9E50)  // green
-    FileKind.TEXT -> Color(0xFF607D8B)   // blue-grey
-    FileKind.AUDIO -> Color(0xFF8E24AA)  // purple
-    else -> MaterialTheme.colorScheme.onSurfaceVariant
-}
-
 /**
  * Resolve a possibly-relative attachment path against [serverUrl]. Coil maps
  * relative image URLs itself, but the video decoder, ExoPlayer and downloader
- * do not.
+ * do not. Anything that already names a scheme - an absolute URL, or a
+ * `content://` file picked on the device - is left as it is.
  */
-private fun resolveAttachmentUrl(serverUrl: String, path: String): String {
-    if (path.startsWith("http://") || path.startsWith("https://")) return path
+internal fun resolveAttachmentUrl(serverUrl: String, path: String): String {
+    if (path.contains("://")) return path
     val base = serverUrl.trimEnd('/')
     return if (path.startsWith("/")) "$base$path" else "$base/$path"
 }

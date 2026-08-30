@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Көрсөтүү аты</string>
     <string name="chat_auth_verification_failed">Текшерүү ишке ашкан жок</string>
     <string name="chat_list_title">Чаттар</string>
-    <string name="chat_list_close_search">Издөөнү жабуу</string>
     <string name="chat_list_search">Издөө</string>
     <string name="chat_list_logout">Чыгуу</string>
     <string name="chat_list_new">Жаңы чат</string>
-    <string name="chat_list_removed_chat">Алынды</string>
     <string name="chat_new_title">Жаңы чат</string>
     <string name="chat_new_name">Топ аты</string>
     <string name="chat_new_friends">Достор</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Сиз</string>
     <string name="chat_chat_not_found">Чат табылган жок</string>
 
-    <string name="chat_list_more">Көбүрөөк</string>
     <string name="chat_message_send">Жөнөтүү</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Кирүү ишке ашпады</string>
     <string name="chat_attachment_move_up">Жогору жылдыруу</string>
     <string name="chat_attachment_move_down">Төмөн жылдыруу</string>
-    <string name="chat_list_add_to_home">Башкы экранга кошуу</string>
 
     <string name="notification_channel_chat">Чат билдирмелери</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA мобилдик колдонмодо азырынча колдоого алынбайт</string>
     <string name="chat_auth_enter_code_sent">%1$s дарегине жөнөтүлгөн кодду киргизиңиз</string>
     <string name="chat_auth_create_identity">Иденттүүлүгүңүздү түзүңүз</string>
-    <string name="chat_list_search_placeholder">Чаттарды издөө</string>
-    <string name="chat_list_no_matching">Дал келген чаттар жок</string>
     <string name="chat_list_empty">Азырынча чаттар жок</string>
-    <string name="chat_list_left_chat">Чыгып кетти</string>
     <string name="chat_new_existing_chat">Учурдагы чатты ачуу</string>
     <string name="chat_new_start">Чатты баштоо</string>
     <string name="chat_new_start_group">Топтук чатты баштоо</string>

@@ -22,6 +22,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CardDefaults
@@ -70,14 +71,12 @@ fun JoinWikiScreen(
     // join result lands in — drop it before the request goes out.
     val keyboardController = LocalSoftwareKeyboardController.current
 
-    val successMsg = stringResource(R.string.wikis_subscribe_success)
     val failedFallback = stringResource(R.string.wikis_subscribe_failed)
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
                 is JoinEvent.Success -> {
-                    snackbarHostState.showSnackbar(successMsg)
                     onJoined(event.wikiId)
                 }
                 is JoinEvent.Failed -> {
@@ -125,7 +124,7 @@ fun JoinWikiScreen(
                     // Header
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
-                            Icons.Default.Link,
+                            Icons.Default.Book,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.onSurfaceVariant,
                         )

@@ -23,7 +23,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.Group
+import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Group
 import androidx.compose.material.icons.outlined.History
@@ -37,10 +40,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
-import androidx.compose.material3.TabRowDefaults
-import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -70,6 +69,8 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
@@ -138,34 +139,13 @@ fun ForumModerationScreen(
         },
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-            TabRow(
-                selectedTabIndex = selectedIndex,
-                containerColor = MaterialTheme.colorScheme.surface,
-                // Primary colour is reserved for the selected tab's divider;
-                // the labels stay neutral. Mirrors the forum settings tabs.
-                indicator = { tabPositions ->
-                    TabRowDefaults.SecondaryIndicator(
-                        modifier = Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
-                        color = MaterialTheme.colorScheme.primary,
-                    )
+            MochiTabRow(
+                tabs = TABS.map { entry ->
+                    MochiTab(stringResource(entry.titleRes), entry.icon)
                 },
-            ) {
-                TABS.forEachIndexed { index, entry ->
-                    Tab(
-                        selected = selectedIndex == index,
-                        onClick = { viewModel.selectTab(entry.tab) },
-                        selectedContentColor = MaterialTheme.colorScheme.onSurface,
-                        unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                        icon = { Icon(entry.icon, contentDescription = null) },
-                        text = {
-                            Text(
-                                stringResource(entry.titleRes),
-                                style = MaterialTheme.typography.labelMedium,
-                            )
-                        },
-                    )
-                }
-            }
+                selectedIndex = selectedIndex,
+                onSelect = { index -> viewModel.selectTab(TABS[index].tab) },
+            )
 
             when {
                 uiState.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -208,7 +188,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
     val queue = uiState.queue ?: return
     if (queue.counts.total == 0) {
         EmptyState(
-            icon = Icons.Outlined.Schedule,
+            icon = Icons.Default.Schedule,
             title = stringResource(R.string.forums_moderation_queue_empty),
             subtitle = stringResource(R.string.forums_moderation_queue_empty_subtitle),
         )
@@ -435,7 +415,7 @@ private fun ReportsTab(uiState: ModerationUiState, viewModel: ModerationViewMode
         // whole tab — level with the other tabs' empty states.
         Box(modifier = Modifier.fillMaxSize()) {
             EmptyState(
-                icon = Icons.Outlined.Flag,
+                icon = Icons.Default.Flag,
                 title = stringResource(R.string.forums_moderation_reports_empty),
                 subtitle = stringResource(R.string.forums_moderation_reports_empty_subtitle),
             )
@@ -643,7 +623,7 @@ private fun ReportStatusBadge(status: String) {
 private fun LogTab(log: List<ModerationLogEntry>) {
     if (log.isEmpty()) {
         EmptyState(
-            icon = Icons.Outlined.History,
+            icon = Icons.Default.History,
             title = stringResource(R.string.forums_moderation_log_empty),
             subtitle = stringResource(R.string.forums_moderation_log_empty_subtitle),
         )
@@ -719,7 +699,7 @@ private fun RestrictionsTab(
     Column(modifier = Modifier.fillMaxSize()) {
         if (restrictions.isEmpty()) {
             EmptyState(
-                icon = Icons.Outlined.Group,
+                icon = Icons.Default.Group,
                 title = stringResource(R.string.forums_moderation_restrictions_empty),
                 subtitle = stringResource(R.string.forums_moderation_restrictions_empty_subtitle),
             )

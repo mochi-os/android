@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ڏيکاري وارو نالو</string>
     <string name="forums_auth_verification_failed">تصديق ناڪام ٿي</string>
     <string name="forums_list_title">فورمَ</string>
-    <string name="forums_list_close_search">ڳولا بند ڪريو</string>
-    <string name="forums_list_search">ڳوليو</string>
     <string name="forums_list_find">فورمَ ڳوليو</string>
     <string name="forums_list_logout">لاگ آئوٽ</string>
-    <string name="forums_list_create">فورم ٺاهيو</string>
     <string name="forums_list_unsubscribe">ان سبسڪرائب ڪريو</string>
     <string name="forums_list_unsubscribe_title">ان سبسڪرائب ڪريو</string>
     <string name="forums_create_title">فورم ٺاهيو</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">فورم نه مليو</string>
     <string name="forums_post_not_found">پوسٽ نه ملي</string>
 
-    <string name="forums_list_more">وڌيڪ</string>
     <string name="forums_comment_send">موڪليو</string>
     <string name="forums_post_body_field">مواد</string>
     <string name="forums_post_edit_body_field">مواد</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">تبصرو لکو…</string>
     <string name="forums_auth_login_failed">لاگ ان ناڪام</string>
-    <string name="forums_list_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
 
     <string name="notification_channel_forums">فورمس جون اطلاعون</string>
     <string name="forums_auth_brand">Mochi فورمس</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">موبائيل ايپ ۾ MFA اڃا تائين سپورٽ ٿيل ناهي</string>
     <string name="forums_auth_enter_code_sent">%1$s ڏانهن موڪليل ڪوڊ داخل ڪريو</string>
     <string name="forums_auth_create_identity">پنهنجي سڃاڻپ ٺاهيو</string>
-    <string name="forums_list_search_placeholder">فورمس ڳوليو</string>
-    <string name="forums_list_no_matching">ڪوبه ملندڙ فورم ناهي</string>
     <string name="forums_list_empty">اڃا تائين ڪوبه فورم ناهي</string>
     <string name="forums_list_unsubscribe_message">ڇا توهان پڪ سان هن فورم مان رڪنيت ختم ڪرڻ چاهيو ٿا؟</string>
     <string name="forums_find_search_placeholder">فورمس ڳوليو يا URL پيسٽ ڪريو</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">دلچسپي وڌايو</string>
     <string name="forums_tag_interest_down">دلچسپي گهٽايو</string>
     <string name="forums_tag_interest_remove">دلچسپي هٽايو</string>
-    <string name="forums_list_default_sort">ڊفالٽ ترتيب</string>
     <string name="forums_access_tab_users">صارف</string>
     <string name="forums_access_tab_groups">گروپ</string>
     <string name="forums_access_tab_manual">دستي</string>

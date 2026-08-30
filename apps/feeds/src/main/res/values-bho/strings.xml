@@ -141,7 +141,7 @@
     <string name="feeds_less_like_this">एकरा जइसन कम</string>
     <string name="feeds_no_tags">कवनो टैग नइखे</string>
     <string name="feeds_anonymous">अनाम</string>
-    <string name="feeds_replying_to_comment">टिप्पणी के जवाब दे रहल बानी</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">फाइल लगाईं</string>
     <string name="feeds_write_a_comment">एगो टिप्पणी लिखीं…</string>
     <string name="feeds_tag_label">टैग नाम</string>

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Display name</string>
     <string name="forums_auth_verification_failed">Nabigo ang beripikasyon</string>
     <string name="forums_list_title">Mga forum</string>
-    <string name="forums_list_close_search">Isara ang paghahanap</string>
-    <string name="forums_list_search">Maghanap</string>
     <string name="forums_list_find">Maghanap ng mga forum</string>
     <string name="forums_list_logout">Mag-log out</string>
-    <string name="forums_list_create">Gumawa ng forum</string>
     <string name="forums_list_unsubscribe">Mag-unsubscribe</string>
     <string name="forums_list_unsubscribe_title">Mag-unsubscribe</string>
     <string name="forums_create_title">Gumawa ng forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Hindi nahanap ang forum</string>
     <string name="forums_post_not_found">Hindi nahanap ang post</string>
 
-    <string name="forums_list_more">Higit pa</string>
     <string name="forums_comment_send">Ipadala</string>
     <string name="forums_post_body_field">Nilalaman</string>
     <string name="forums_post_edit_body_field">Nilalaman</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Magsulat ng komento…</string>
     <string name="forums_auth_login_failed">Hindi nag-login</string>
-    <string name="forums_list_add_to_home">Idagdag sa home screen</string>
 
     <string name="notification_channel_forums">Mga abiso sa mga forum</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">Hindi pa suportado ang MFA sa mobile app</string>
     <string name="forums_auth_enter_code_sent">Ilagay ang code na ipinadala sa %1$s</string>
     <string name="forums_auth_create_identity">Gumawa ng iyong pagkakakilanlan</string>
-    <string name="forums_list_search_placeholder">Maghanap ng mga forum</string>
-    <string name="forums_list_no_matching">Walang tumutugmang forum</string>
     <string name="forums_list_empty">Wala pang forum</string>
     <string name="forums_list_unsubscribe_message">Sigurado ka bang gusto mong mag-unsubscribe sa forum na ito?</string>
     <string name="forums_find_search_placeholder">Maghanap ng mga forum o i-paste ang URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Palakasin ang interes</string>
     <string name="forums_tag_interest_down">Bawasan ang interes</string>
     <string name="forums_tag_interest_remove">Alisin ang interes</string>
-    <string name="forums_list_default_sort">Default na sort</string>
     <string name="forums_access_tab_users">Mga user</string>
     <string name="forums_access_tab_groups">Mga group</string>
     <string name="forums_access_tab_manual">Manwal</string>

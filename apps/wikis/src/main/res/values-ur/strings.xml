@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">تبدیلیاں اور تبصرے</string>
     <string name="wikis_rss_copied">RSS URL clipboard پر copy ہو گیا</string>
     <string name="wikis_rss_failed">RSS ٹوکن حاصل کرنے میں ناکامی</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">وکیز تلاش کریں</string>
     <string name="wikis_find_no_results">کوئی wikis نہیں ملیں</string>
     <string name="wikis_find_recommended_section">تجویز کردہ wikis</string>
@@ -59,6 +61,8 @@
     <string name="wikis_comments_empty_title">ابھی تک کوئی تبصرے نہیں</string>
     <string name="wikis_comments_empty_subtitle">اس صفحے پر تبصرہ کرنے والے پہلے فرد بنیں۔</string>
     <string name="wikis_comment_action_reply">جواب</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">ترمیم</string>
     <string name="wikis_comment_action_delete">حذف کریں</string>
     <string name="wikis_comment_action_save">محفوظ کریں</string>
@@ -74,7 +78,6 @@
     <string name="wikis_editor_edit">ترمیم</string>
     <string name="wikis_editor_insert">داخل کریں</string>
     <string name="wikis_editor_attachments">اٹیچمنٹس</string>
-    <string name="wikis_editor_cancel">منسوخ کریں</string>
     <string name="wikis_editor_delete">صفحہ حذف کریں</string>
     <string name="wikis_editor_save">محفوظ کریں</string>
     <string name="wikis_editor_saving">محفوظ کیا جا رہا ہے…</string>
@@ -83,6 +86,7 @@
     <string name="wikis_editor_title_label">عنوان</string>
     <string name="wikis_editor_slug_label">صفحہ URL</string>
     <string name="wikis_editor_slug_hint">میرا-صفحہ-نام</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">مواد</string>
     <string name="wikis_editor_summary_label">ترمیم کا خلاصہ (اختیاری)</string>
     <string name="wikis_editor_summary_hint">اپنی تبدیلیوں کو مختصر بیان کریں</string>
@@ -102,7 +106,6 @@
     <string name="wikis_delete_page_failed">صفحہ حذف کرنے میں ناکامی</string>
     <string name="wikis_revert_page_comment_label">تبصرہ واپس لائیں</string>
     <string name="wikis_revert_page_confirm">واپس کریں</string>
-    <string name="wikis_revert_page_cancel">منسوخ کریں</string>
     <string name="wikis_revert_page_failed">صفحہ واپس کرنے میں ناکامی</string>
     <string name="wikis_rename_page_title">صفحے کا نام تبدیل کریں</string>
     <string name="wikis_rename_page_label">نیا URL</string>
@@ -117,12 +120,10 @@
     <string name="wikis_history_view_action">دیکھیں</string>
     <string name="wikis_history_revert_action">اس ورژن پر واپس جائیں</string>
     <string name="wikis_revision_current_badge">موجودہ</string>
-    <string name="wikis_revision_back_to_history">تاریخ پر واپس</string>
     <string name="wikis_revision_revert_to_this">اس ورژن پر واپس جائیں</string>
     <string name="wikis_changes_title">حالیہ تبدیلیاں</string>
     <string name="wikis_changes_subtitle">اس wiki کے تمام صفحات میں حالیہ ترامیم۔</string>
     <string name="wikis_changes_empty">ابھی تک کوئی تبدیلیاں نہیں</string>
-    <string name="wikis_search_title">تلاش کریں</string>
     <string name="wikis_search_empty_query">تلاش کی اصطلاح درج کریں</string>
     <string name="wikis_redirects_title">redirects</string>
     <string name="wikis_redirects_add">شامل کریں</string>
@@ -131,6 +132,7 @@
     <string name="wikis_redirect_create_action">بنائیں</string>
     <string name="wikis_redirect_source_label">سورس</string>
     <string name="wikis_redirect_target_label">ٹارگٹ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ذریعہ اور ہدف دونوں ضروری ہیں</string>
     <string name="wikis_redirect_created_success">redirect بن گیا</string>
     <string name="wikis_redirect_create_failed">ری ڈائریکٹ بنانے میں ناکامی</string>
@@ -164,6 +166,8 @@
     <string name="wikis_attachments_view_grid">گرڈ منظر</string>
     <string name="wikis_attachments_view_list">فہرست منظر</string>
     <string name="wikis_attachments_copy_embed">Embed لنک کاپی کریں</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ایمبیڈ لنک کاپی ہو گیا</string>
     <string name="wikis_attachments_delete">حذف کریں</string>
     <string name="wikis_attachments_delete_confirm_title">اٹیچمنٹ حذف کریں</string>
@@ -195,7 +199,6 @@
     <string name="wikis_settings_sync_failed">وکی سنک کرنے میں ناکامی</string>
     <string name="wikis_settings_section_home">ہوم پیج</string>
     <string name="wikis_settings_field_home_label">ہوم کے طور پر استعمال کریں</string>
-    <string name="wikis_settings_home_save">تبدیلیاں محفوظ کریں</string>
     <string name="wikis_settings_home_saved">سیٹنگز محفوظ ہو گئیں</string>
     <string name="wikis_settings_home_save_failed">ترتیبات محفوظ کرنے میں ناکامی</string>
     <string name="wikis_settings_section_delete">wiki حذف کریں</string>
@@ -212,6 +215,11 @@
     <string name="wikis_access_owner_label">مالک</string>
     <string name="wikis_access_tab_users">صارفین</string>
     <string name="wikis_access_tab_groups">گروپس</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">کوئی گروپ دستیاب نہیں</string>
     <string name="wikis_access_set_success">رسائی اپ ڈیٹ ہو گئی</string>
     <string name="wikis_access_revoke_success">رسائی ہٹا دی گئی</string>
@@ -232,27 +240,22 @@
     <string name="wikis_pageview_updated">اپ ڈیٹ %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحہ „%1$s\" ابھی موجود نہیں ہے۔</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">صفحہ لنک کا اشتراک کریں</string>
+    <string name="wikis_pageview_share_chooser">ویکی لنک</string>
     <string name="wikis_pageview_share_link_copied">صفحہ لنک کلپ بورڈ پر کاپی ہو گیا</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki صفحہ لنک</string>
     <string name="wikis_pageview_loading">صفحہ لوڈ ہو رہا ہے…</string>
-    <string name="wikis_page_action_share">صفحہ لنک کا اشتراک کریں</string>
-    <string name="wikis_page_action_rss_changes">RSS: تبدیلیاں</string>
-    <string name="wikis_page_action_rss_comments">RSS: تبصرے</string>
-    <string name="wikis_page_action_rss_all">RSS: تبدیلیاں اور تبصرے</string>
+    <string name="wikis_page_action_share">لنک</string>
     <string name="wikis_open_sidebar">سائیڈبار کھولیں</string>
     <string name="wikis_owned_badge">ملکیت</string>
     <string name="wikis_search_placeholder">وکی تلاش کریں…</string>
     <string name="wikis_subscribing">سبسکرائب کر رہے ہیں…</string>
     <string name="wikis_unsubscribe_confirm_message">کیا آپ یقیناً %1$s سے سبسکرپشن منسوخ کرنا چاہتے ہیں؟</string>
     <string name="wikis_subscribe_failed_502">سرور تک رسائی نہیں ہے۔ دوبارہ کوشش کر رہے ہیں…</string>
-    <string name="wikis_rss_menu_trailing">‹</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">نام، ID، فنگرپرنٹ یا URL سے تلاش کریں…</string>
     <string name="wikis_join_search_button">وکیز تلاش کریں…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">وکی سبسکرائب کیا</string>
     <string name="wikis_subscribe_502_retry">تجویز کردہ سرور کے بغیر دوبارہ کوشش کر رہے ہیں…</string>
     <string name="wikis_comments_title_template">%1$s - تبصرے</string>
     <string name="wikis_comment_form_placeholder_new">تبصرہ لکھیں…</string>
@@ -261,7 +264,6 @@
     <string name="wikis_comment_form_remove_attachment">اٹیچمنٹ ہٹائیں</string>
     <string name="wikis_comment_collapse_toggle">تھریڈ بند کریں</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">ترمیم: %1$s</string>
     <string name="wikis_editor_content_placeholder">Markdown استعمال کر کے یہاں اپنا مواد لکھیں…</string>
     <string name="wikis_insert_dialog_empty">ابھی کوئی اٹیچمنٹ نہیں ہے۔ شروع کرنے کے لیے فائل اپ لوڈ کریں۔</string>
     <string name="wikis_delete_page_message">آپ صفحہ „%1$s\" (%2$s) حذف کرنے والے ہیں۔ یہ عمل ہسٹری سے بحال کر کے کالعدم کیا جا سکتا ہے۔</string>
@@ -306,6 +308,7 @@
     <string name="wikis_access_subject_anyone">کوئی بھی</string>
     <string name="wikis_access_subject_authenticated">تصدیق شدہ صارفین</string>
     <string name="wikis_revision_compare">تبدیلیوں کا موازنہ کریں</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
     <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
     <string name="wikis_revision_changes_from">ورژن %1$d → %2$d سے تبدیلیاں</string>
@@ -350,4 +353,6 @@
         <item quantity="other">«%2$s» کے لیے %1$d نتائج ملے</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">کیپشن محفوظ نہیں ہو سکا</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

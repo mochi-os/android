@@ -15,16 +15,9 @@
     <!-- Forum list -->
     <string name="forums_list_title">Forums</string>
     <string name="forums_all_forums">All forums</string>
-    <string name="forums_list_search_placeholder">Search forums</string>
-    <string name="forums_list_close_search">Close search</string>
-    <string name="forums_list_search">Search</string>
     <string name="forums_list_find">Find forums</string>
-    <string name="forums_list_more">More</string>
     <string name="forums_list_logout">Log out</string>
-    <string name="forums_list_create">Create forum</string>
-    <string name="forums_list_no_matching">No matching forums</string>
     <string name="forums_list_empty">No forums yet</string>
-    <string name="forums_list_add_to_home">Add to home screen</string>
     <string name="forums_list_unsubscribe">Unsubscribe</string>
     <string name="forums_list_unsubscribe_title">Unsubscribe</string>
     <string name="forums_list_unsubscribe_message">Are you sure you want to unsubscribe from this forum?</string>
@@ -70,7 +63,6 @@
     <string name="forums_sort_hot">Hot</string>
     <string name="forums_sort_top">Top</string>
     <string name="forums_sort_interests">Interests</string>
-    <string name="forums_list_default_sort">Default sort</string>
 
     <!-- Post -->
     <string name="forums_post_title_field">Title</string>

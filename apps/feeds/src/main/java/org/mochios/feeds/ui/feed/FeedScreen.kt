@@ -36,9 +36,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
-import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material.icons.automirrored.outlined.ArrowBack
-import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
@@ -50,17 +47,19 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.DoneAll
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.RssFeed
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -149,6 +148,7 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -416,7 +416,7 @@ fun FeedScreen(
                 id = feed.fingerprint.ifEmpty { feed.id },
                 title = feed.name,
                 unread = feed.unread,
-                icon = Icons.Default.RssFeed,
+                icon = Icons.Outlined.RssFeed,
             )
         }
     }
@@ -424,7 +424,7 @@ fun FeedScreen(
         id = allId,
         title = allLabel,
         unread = totalUnread,
-        icon = Icons.Default.RssFeed,
+        icon = Icons.Outlined.RssFeed,
     )
     val currentDrawerId = if (viewModel.feedId == allId) allId else viewModel.feedId
 
@@ -441,7 +441,7 @@ fun FeedScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.feeds_saved_menu),
-                icon = Icons.Default.BookmarkBorder,
+                icon = Icons.Outlined.BookmarkBorder,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToSaved()
@@ -449,7 +449,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.feeds_find_feeds),
-                icon = Icons.Default.Search,
+                icon = Icons.Outlined.Search,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToFindFeeds()
@@ -457,7 +457,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.feeds_create_feed),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToCreateFeed()
@@ -465,7 +465,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.feeds_logout),
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
@@ -473,7 +473,7 @@ fun FeedScreen(
             )
             DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
-                icon = Icons.Default.Info,
+                icon = Icons.Outlined.Info,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true
@@ -545,14 +545,121 @@ fun FeedScreen(
                                     showRssSubmenu = false
                                 }
                             ) {
-                                if (showRssSubmenu) {
-                                    // Header row taps back to the main menu.
+                                // Sort options — listed inline (no nested menu)
+                                // with a check next to the active one. Each tap
+                                // picks the sort and dismisses the menu.
+                                Text(
+                                    text = stringResource(R.string.feeds_sort_label),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp)
+                                )
+                                val sortOptions = listOf(
+                                    "ai" to R.string.feeds_sort_ai,
+                                    "interests" to R.string.feeds_sort_interests,
+                                    "new" to R.string.feeds_sort_new,
+                                    "hot" to R.string.feeds_sort_hot,
+                                    "top" to R.string.feeds_sort_top,
+                                )
+                                sortOptions.forEach { (value, labelRes) ->
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_rss_feed)) },
-                                        onClick = { showRssSubmenu = false },
-                                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.ArrowBack, contentDescription = null) },
+                                        text = { Text(stringResource(labelRes)) },
+                                        onClick = {
+                                            viewModel.setSort(value)
+                                            showOverflowMenu = false
+                                        },
+                                        leadingIcon = {
+                                            if (currentSort == value) {
+                                                Icon(Icons.Outlined.Check, contentDescription = null)
+                                            } else {
+                                                Spacer(Modifier.size(24.dp))
+                                            }
+                                        },
                                     )
-                                    MochiDropdownMenuDivider()
+                                }
+
+                                MochiDropdownMenuDivider()
+
+                                // Unread-only toggle. Tapping flips state; the
+                                // leading checkmark indicates the current value.
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.feeds_unread_only)) },
+                                    onClick = {
+                                        viewModel.setUnreadOnly(!unreadOnly)
+                                        showOverflowMenu = false
+                                    },
+                                    leadingIcon = {
+                                        if (unreadOnly) {
+                                            Icon(Icons.Outlined.Check, contentDescription = null)
+                                        } else {
+                                            Spacer(Modifier.size(24.dp))
+                                        }
+                                    },
+                                )
+
+                                MochiDropdownMenuDivider()
+
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.feeds_mark_all_read)) },
+                                    onClick = {
+                                        viewModel.markAllRead { feedListViewModel.refreshSilently() }
+                                        showOverflowMenu = false
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.DoneAll, contentDescription = null) },
+                                )
+                                // Sources is manager-only. In the "All
+                                // feeds" aggregate route through the feed
+                                // of the post in view, shown when the user
+                                // owns that feed.
+                                val sourcesPost = posts.getOrNull(pagerState.currentPage)
+                                val sourcesFeedId = if (viewModel.isAllFeeds) {
+                                    sourcesPost?.let { it.feedFingerprint.ifEmpty { it.feed } } ?: ""
+                                } else {
+                                    viewModel.feedId
+                                }
+                                val sourcesAllowed = if (viewModel.isAllFeeds) {
+                                    drawerFeeds.any { f ->
+                                        f.owner == 1 && (f.id == sourcesPost?.feed ||
+                                            (f.fingerprint.isNotEmpty() && f.fingerprint == sourcesPost?.feedFingerprint))
+                                    }
+                                } else {
+                                    permissions.manage
+                                }
+                                if (sourcesAllowed && sourcesFeedId.isNotEmpty()) {
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                        onClick = {
+                                            // Open the Sources list scrolled to the
+                                            // source of the post currently in view.
+                                            onNavigateToSources(
+                                                sourcesFeedId,
+                                                sourcesPost?.source?.url,
+                                            )
+                                            showOverflowMenu = false
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                    )
+                                }
+                                // Per-feed settings stay hidden on the
+                                // aggregate, which has no feed to configure.
+                                // Subscribers get in too: their view is the
+                                // read-only identity card plus unsubscribe.
+                                if (!viewModel.isAllFeeds) {
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.feeds_settings)) },
+                                        onClick = {
+                                            onNavigateToSettings(viewModel.feedId)
+                                            showOverflowMenu = false
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
+                                    )
+                                }
+                                MochiDropdownSubmenu(
+                                    text = { Text(stringResource(R.string.feeds_rss_feed)) },
+                                    expanded = showRssSubmenu,
+                                    onExpandedChange = { showRssSubmenu = it },
+                                    leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
+                                ) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.feeds_rss_mode_posts)) },
                                         onClick = {
@@ -562,156 +669,40 @@ fun FeedScreen(
                                         },
                                     )
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(
-                                                    R.string.feeds_rss_mode_posts_comments
-                                                )) },
+                                        text = {
+                                            Text(stringResource(R.string.feeds_rss_mode_posts_comments))
+                                        },
                                         onClick = {
                                             viewModel.copyRssUrl("all")
                                             showRssSubmenu = false
                                             showOverflowMenu = false
                                         },
                                     )
-                                } else {
-                                    // Sort options — listed inline (no nested menu)
-                                    // with a check next to the active one. Each tap
-                                    // picks the sort and dismisses the menu.
-                                    Text(
-                                        text = stringResource(R.string.feeds_sort_label),
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp)
-                                    )
-                                    val sortOptions = listOf(
-                                        "ai" to R.string.feeds_sort_ai,
-                                        "interests" to R.string.feeds_sort_interests,
-                                        "new" to R.string.feeds_sort_new,
-                                        "hot" to R.string.feeds_sort_hot,
-                                        "top" to R.string.feeds_sort_top,
-                                    )
-                                    sortOptions.forEach { (value, labelRes) ->
-                                        MochiDropdownMenuItem(
-                                            text = { Text(stringResource(labelRes)) },
-                                            onClick = {
-                                                viewModel.setSort(value)
-                                                showOverflowMenu = false
-                                            },
-                                            leadingIcon = {
-                                                if (currentSort == value) {
-                                                    Icon(Icons.Outlined.Check, contentDescription = null)
-                                                } else {
-                                                    Spacer(Modifier.size(24.dp))
-                                                }
-                                            },
-                                        )
-                                    }
-
-                                    MochiDropdownMenuDivider()
-
-                                    // Unread-only toggle. Tapping flips state; the
-                                    // leading checkmark indicates the current value.
+                                }
+                                // Sharing a feed is an owner's call, so this
+                                // sits behind the same gate as Settings. The
+                                // aggregate has no single feed to share.
+                                if (!viewModel.isAllFeeds && permissions.manage) {
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_unread_only)) },
+                                        text = { Text(stringResource(R.string.feeds_link)) },
                                         onClick = {
-                                            viewModel.setUnreadOnly(!unreadOnly)
+                                            viewModel.shareLink()
                                             showOverflowMenu = false
                                         },
-                                        leadingIcon = {
-                                            if (unreadOnly) {
-                                                Icon(Icons.Outlined.Check, contentDescription = null)
-                                            } else {
-                                                Spacer(Modifier.size(24.dp))
-                                            }
-                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                     )
-
-                                    MochiDropdownMenuDivider()
-
+                                }
+                                // Unsubscribe only for member feeds — owners/admins
+                                // manage (and delete) the feed instead.
+                                if (!viewModel.isAllFeeds && !permissions.manage) {
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_mark_all_read)) },
+                                        text = { Text(stringResource(R.string.feeds_unsubscribe)) },
                                         onClick = {
-                                            viewModel.markAllRead { feedListViewModel.refreshSilently() }
+                                            pendingUnsubscribe = true
                                             showOverflowMenu = false
                                         },
-                                        leadingIcon = { Icon(Icons.Outlined.DoneAll, contentDescription = null) },
+                                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                     )
-                                    // Sources is manager-only. In the "All
-                                    // feeds" aggregate route through the feed
-                                    // of the post in view, shown when the user
-                                    // owns that feed.
-                                    val sourcesPost = posts.getOrNull(pagerState.currentPage)
-                                    val sourcesFeedId = if (viewModel.isAllFeeds) {
-                                        sourcesPost?.let { it.feedFingerprint.ifEmpty { it.feed } } ?: ""
-                                    } else {
-                                        viewModel.feedId
-                                    }
-                                    val sourcesAllowed = if (viewModel.isAllFeeds) {
-                                        drawerFeeds.any { f ->
-                                            f.owner == 1 && (f.id == sourcesPost?.feed ||
-                                                (f.fingerprint.isNotEmpty() && f.fingerprint == sourcesPost?.feedFingerprint))
-                                        }
-                                    } else {
-                                        permissions.manage
-                                    }
-                                    if (sourcesAllowed && sourcesFeedId.isNotEmpty()) {
-                                        MochiDropdownMenuItem(
-                                            text = { Text(stringResource(R.string.feeds_tab_sources)) },
-                                            onClick = {
-                                                // Open the Sources list scrolled to the
-                                                // source of the post currently in view.
-                                                onNavigateToSources(
-                                                    sourcesFeedId,
-                                                    sourcesPost?.source?.url,
-                                                )
-                                                showOverflowMenu = false
-                                            },
-                                            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
-                                        )
-                                    }
-                                    // Per-feed settings stay hidden on the
-                                    // aggregate, which has no feed to configure.
-                                    // Subscribers get in too: their view is the
-                                    // read-only identity card plus unsubscribe.
-                                    if (!viewModel.isAllFeeds) {
-                                        MochiDropdownMenuItem(
-                                            text = { Text(stringResource(R.string.feeds_settings)) },
-                                            onClick = {
-                                                onNavigateToSettings(viewModel.feedId)
-                                                showOverflowMenu = false
-                                            },
-                                            leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
-                                        )
-                                    }
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_rss_feed)) },
-                                        onClick = { showRssSubmenu = true },
-                                        leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
-                                        trailingIcon = { Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, contentDescription = null) },
-                                    )
-                                    // Sharing a feed is an owner's call, so this
-                                    // sits behind the same gate as Settings. The
-                                    // aggregate has no single feed to share.
-                                    if (!viewModel.isAllFeeds && permissions.manage) {
-                                        MochiDropdownMenuItem(
-                                            text = { Text(stringResource(R.string.feeds_link)) },
-                                            onClick = {
-                                                viewModel.shareLink()
-                                                showOverflowMenu = false
-                                            },
-                                            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
-                                        )
-                                    }
-                                    // Unsubscribe only for member feeds — owners/admins
-                                    // manage (and delete) the feed instead.
-                                    if (!viewModel.isAllFeeds && !permissions.manage) {
-                                        MochiDropdownMenuItem(
-                                            text = { Text(stringResource(R.string.feeds_unsubscribe)) },
-                                            onClick = {
-                                                pendingUnsubscribe = true
-                                                showOverflowMenu = false
-                                            },
-                                            leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                        )
-                                    }
                                 }
                             }
                         }
@@ -1015,6 +1006,7 @@ fun FeedScreen(
                     // with @-mentions). The reply context is shown above, so the
                     // input bar's own indicator is suppressed.
                     ComposeBar(
+                        showDivider = false,
                         value = commentDraft,
                         onValueChange = { value -> viewModel.setCommentDraft(value) },
                         onSend = { viewModel.sendComment() },
@@ -2132,7 +2124,7 @@ private fun CommentPreviewRow(
         }
         Spacer(modifier = Modifier.width(6.dp))
         Text(
-            text = stripHtml(comment.body),
+            text = stripHtml(comment.text),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.weight(1f),

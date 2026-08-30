@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Kuvatav nimi</string>
     <string name="chat_auth_verification_failed">Kontrollimine ebaõnnestus</string>
     <string name="chat_list_title">Vestlused</string>
-    <string name="chat_list_close_search">Sulge otsing</string>
     <string name="chat_list_search">Otsi</string>
     <string name="chat_list_logout">Logi välja</string>
     <string name="chat_list_new">Uus vestlus</string>
-    <string name="chat_list_removed_chat">Eemaldatud</string>
     <string name="chat_new_title">Uus vestlus</string>
     <string name="chat_new_name">Grupi nimi</string>
     <string name="chat_new_friends">Sõbrad</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Sina</string>
     <string name="chat_chat_not_found">Vestlust ei leitud</string>
 
-    <string name="chat_list_more">Veel</string>
     <string name="chat_message_send">Saada</string>
 
     <string name="notification_channel_chat">Vestluse teavitused</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA-d ei toetata mobiilirakenduses veel</string>
     <string name="chat_auth_enter_code_sent">Sisesta kood, mis saadeti aadressile %1$s</string>
     <string name="chat_auth_create_identity">Loo oma identiteet</string>
-    <string name="chat_list_search_placeholder">Otsi vestlusi</string>
-    <string name="chat_list_no_matching">Sobivaid vestlusi pole</string>
     <string name="chat_list_empty">Vestlusi veel pole</string>
-    <string name="chat_list_add_to_home">Lisa avakuvale</string>
-    <string name="chat_list_left_chat">Lahkutud</string>
     <string name="chat_new_existing_chat">Ava olemasolev vestlus</string>
     <string name="chat_new_start">Alusta vestlust</string>
     <string name="chat_new_start_group">Alusta grupivestlust</string>

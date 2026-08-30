@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Pakeitimai ir komentarai</string>
     <string name="wikis_rss_copied">RSS URL nukopijuotas į iškarpinę</string>
     <string name="wikis_rss_failed">Nepavyko gauti RSS raktelio</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Rasti wiki</string>
     <string name="wikis_find_no_results">Wiki nerasta</string>
     <string name="wikis_find_recommended_section">Rekomenduojami wiki</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Dar nėra komentarų</string>
     <string name="wikis_comments_empty_subtitle">Būkite pirmas, komentuojantis šį puslapį.</string>
     <string name="wikis_comment_action_reply">Atsakyti</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Redaguoti</string>
     <string name="wikis_comment_action_delete">Ištrinti</string>
     <string name="wikis_comment_action_save">Išsaugoti</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Redaguoti</string>
     <string name="wikis_editor_insert">Įterpti</string>
     <string name="wikis_editor_attachments">Priedai</string>
-    <string name="wikis_editor_cancel">Atšaukti</string>
     <string name="wikis_editor_delete">Ištrinti puslapį</string>
     <string name="wikis_editor_save">Išsaugoti</string>
     <string name="wikis_editor_saving">Išsaugoma…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Pavadinimas</string>
     <string name="wikis_editor_slug_label">Puslapio URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Turinys</string>
     <string name="wikis_editor_summary_label">Redaguoti santrauką (neprivaloma)</string>
     <string name="wikis_editor_summary_hint">Trumpai aprašykite savo pakeitimus</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Nepavyko ištrinti puslapio</string>
     <string name="wikis_revert_page_comment_label">Atstatyti komentarą</string>
     <string name="wikis_revert_page_confirm">Atstatyti</string>
-    <string name="wikis_revert_page_cancel">Atšaukti</string>
     <string name="wikis_revert_page_failed">Nepavyko grąžinti puslapio</string>
     <string name="wikis_rename_page_title">Pervadinti puslapį</string>
     <string name="wikis_rename_page_label">Naujas URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Peržiūrėti</string>
     <string name="wikis_history_revert_action">Atstatyti į šią versiją</string>
     <string name="wikis_revision_current_badge">Dabartinis</string>
-    <string name="wikis_revision_back_to_history">Atgal į istoriją</string>
     <string name="wikis_revision_revert_to_this">Atstatyti į šią versiją</string>
     <string name="wikis_changes_title">Naujausi pakeitimai</string>
     <string name="wikis_changes_subtitle">Naujausi šio wiki visų puslapių pakeitimai.</string>
     <string name="wikis_changes_empty">Dar nėra pakeitimų</string>
-    <string name="wikis_search_title">Ieškoti</string>
     <string name="wikis_search_empty_query">Įveskite paieškos terminą</string>
     <string name="wikis_redirects_title">Peradresavimai</string>
     <string name="wikis_redirects_add">Pridėti</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Sukurti</string>
     <string name="wikis_redirect_source_label">Šaltinis</string>
     <string name="wikis_redirect_target_label">Tikslas</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Reikalingi ir šaltinis, ir tikslas</string>
     <string name="wikis_redirect_created_success">Peradresavimas sukurtas</string>
     <string name="wikis_redirect_create_failed">Nepavyko sukurti peradresavimo</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Tinklelio rodinys</string>
     <string name="wikis_attachments_view_list">Sąrašo rodinys</string>
     <string name="wikis_attachments_copy_embed">Kopijuoti įterpimo nuorodą</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Įterpimo nuoroda nukopijuota</string>
     <string name="wikis_attachments_delete">Ištrinti</string>
     <string name="wikis_attachments_delete_confirm_title">Ištrinti priedą</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Nepavyko sinchronizuoti wiki</string>
     <string name="wikis_settings_section_home">Pradžios puslapis</string>
     <string name="wikis_settings_field_home_label">Naudoti kaip pradžią</string>
-    <string name="wikis_settings_home_save">Išsaugoti pakeitimus</string>
     <string name="wikis_settings_home_saved">Nustatymai išsaugoti</string>
     <string name="wikis_settings_home_save_failed">Nepavyko išsaugoti nustatymų</string>
     <string name="wikis_settings_section_delete">Ištrinti wiki</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Savininkas</string>
     <string name="wikis_access_tab_users">Vartotojai</string>
     <string name="wikis_access_tab_groups">Grupės</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Grupių nėra</string>
     <string name="wikis_access_set_success">Prieiga atnaujinta</string>
     <string name="wikis_access_revoke_success">Prieiga pašalinta</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Atnaujinta %1$s</string>
     <string name="wikis_pageview_not_found_description">Puslapis „%1$s\" dar neegzistuoja.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Dalintis puslapio nuoroda</string>
+    <string name="wikis_pageview_share_chooser">Wiki nuoroda</string>
     <string name="wikis_pageview_share_link_copied">Puslapio nuoroda nukopijuota į iškarpinę</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki puslapio nuoroda</string>
     <string name="wikis_pageview_loading">Įkeliamas puslapis…</string>
-    <string name="wikis_page_action_share">Dalintis puslapio nuoroda</string>
-    <string name="wikis_page_action_rss_changes">RSS: Pakeitimai</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komentarai</string>
-    <string name="wikis_page_action_rss_all">RSS: Pakeitimai ir komentarai</string>
+    <string name="wikis_page_action_share">Nuoroda</string>
     <string name="wikis_open_sidebar">Atidaryti šoninę juostą</string>
     <string name="wikis_owned_badge">Priklauso</string>
     <string name="wikis_search_placeholder">Ieškoti wiki…</string>
     <string name="wikis_subscribing">Prenumeruojama…</string>
     <string name="wikis_unsubscribe_confirm_message">Ar tikrai norite atsisakyti prenumeratos %1$s?</string>
     <string name="wikis_subscribe_failed_502">Serveris nepasiekiamas. Bandoma vėl…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Ieškoti pagal pavadinimą, ID, atspaudą arba URL…</string>
     <string name="wikis_join_search_button">Ieškoti wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Prenumeruojate wiki</string>
     <string name="wikis_subscribe_502_retry">Bandoma vėl be siūlomo serverio…</string>
     <string name="wikis_comments_title_template">%1$s - Komentarai</string>
     <string name="wikis_comment_form_placeholder_new">Parašykite komentarą…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Pašalinti priedą</string>
     <string name="wikis_comment_collapse_toggle">Sutraukti giją</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Redagavimas: %1$s</string>
     <string name="wikis_editor_content_placeholder">Rašykite savo turinį čia naudodami Markdown…</string>
     <string name="wikis_insert_dialog_empty">Dar nėra priedų. Įkelkite failą, kad pradėtumėte.</string>
     <string name="wikis_delete_page_message">Ketinate ištrinti puslapį „%1$s\" (%2$s). Šis veiksmas gali būti atšauktas atkuriant iš istorijos.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Autentifikuoti naudotojai</string>
 
     <string name="wikis_revision_compare">Palyginti pakeitimus</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Rodyti puslapį</string>
     <string name="wikis_revision_compare_failed">Nepavyko įkelti ankstesnės versijos palyginimui.</string>
     <string name="wikis_revision_changes_from">Pakeitimai nuo versijos %1$d → %2$d</string>
@@ -373,4 +376,6 @@
         <item quantity="other">Rasta %1$d rezultatų užklausai „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nepavyko išsaugoti antraštės</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

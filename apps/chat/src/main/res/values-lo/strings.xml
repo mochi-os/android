@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ຊື່ສະແດງ</string>
     <string name="chat_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
     <string name="chat_list_title">ແຊັດ</string>
-    <string name="chat_list_close_search">ປິດການຄົ້ນຫາ</string>
     <string name="chat_list_search">ຄົ້ນຫາ</string>
     <string name="chat_list_logout">ອອກຈາກລະບົບ</string>
     <string name="chat_list_new">ສົນທະນາໃໝ່</string>
-    <string name="chat_list_removed_chat">ລຶບແລ້ວ</string>
     <string name="chat_new_title">ສົນທະນາໃໝ່</string>
     <string name="chat_new_name">ຊື່ກຸ່ມ</string>
     <string name="chat_new_friends">ໝູ່</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">ທ່ານ</string>
     <string name="chat_chat_not_found">ບໍ່ພົບແຊັດ</string>
 
-    <string name="chat_list_more">ເພີ່ມເຕີມ</string>
     <string name="chat_message_send">ສົ່ງ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
     <string name="chat_attachment_move_up">ຍ້າຍຂຶ້ນ</string>
     <string name="chat_attachment_move_down">ຍ້າຍລົງ</string>
-    <string name="chat_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
 
     <string name="notification_channel_chat">ການແຈ້ງເຕືອນການສົນທະນາ</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">ຍັງບໍ່ຮອງຮັບ MFA ໃນແອັບມືຖື</string>
     <string name="chat_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
     <string name="chat_auth_create_identity">ສ້າງຕົວຕົນຂອງທ່ານ</string>
-    <string name="chat_list_search_placeholder">ຄົ້ນຫາການສົນທະນາ</string>
-    <string name="chat_list_no_matching">ບໍ່ມີການສົນທະນາທີ່ກົງກັນ</string>
     <string name="chat_list_empty">ຍັງບໍ່ມີການສົນທະນາ</string>
-    <string name="chat_list_left_chat">ອອກແລ້ວ</string>
     <string name="chat_new_existing_chat">ເປີດການສົນທະນາທີ່ມີຢູ່</string>
     <string name="chat_new_start">ເລີ່ມການສົນທະນາ</string>
     <string name="chat_new_start_group">ເລີ່ມການສົນທະນາກຸ່ມ</string>

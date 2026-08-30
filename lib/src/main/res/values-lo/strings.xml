@@ -333,6 +333,13 @@
     <string name="common_attachment_unavailable">ໄຟລ໌ແນບບໍ່ສາມາດໃຊ້ໄດ້ຊົ່ວຄາວ</string>
     <string name="common_unavailable">ບໍ່ມີໃຫ້ບໍລິການ</string>
     <string name="common_not_found">ບໍ່ພົບ</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">ຖອນ</string>
     <string name="rss_revoke">ຖອນການເຂົ້າເຖິງ</string>
     <string name="rss_revoke_title">ຖອນສິດເຂົ້າເຖິງ RSS ບໍ?</string>

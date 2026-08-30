@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ნაჩვენები სახელი</string>
     <string name="chat_auth_verification_failed">შემოწმების კოდი გაიგზავნა</string>
     <string name="chat_list_title">ჩატები</string>
-    <string name="chat_list_close_search">ძიების დახურვა</string>
     <string name="chat_list_search">ძიება</string>
     <string name="chat_list_logout">გასვლა</string>
     <string name="chat_list_new">ახალი ჩატი</string>
-    <string name="chat_list_removed_chat">წაშლილი</string>
     <string name="chat_new_title">ახალი ჩატი</string>
     <string name="chat_new_name">ჯგუფის სახელი</string>
     <string name="chat_new_friends">მეგობრები</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">დიახ, ძალით</string>
     <string name="chat_chat_not_found">ჩატი ვერ მოიძებნა</string>
 
-    <string name="chat_list_more">მეტი</string>
     <string name="chat_message_send">გაგზავნა</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">შესვლა ვერ მოხერხდა</string>
     <string name="chat_attachment_move_up">აწევა</string>
     <string name="chat_attachment_move_down">ჩამოწევა</string>
-    <string name="chat_list_add_to_home">მთავარ ეკრანზე დამატება</string>
 
     <string name="notification_channel_chat">ჩატის შეტყობინებები</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA ჯერ არ არის მხარდაჭერილი მობილურ აპში</string>
     <string name="chat_auth_enter_code_sent">შეიყვანეთ %1$s-ზე გამოგზავნილი კოდი</string>
     <string name="chat_auth_create_identity">შექმენით თქვენი იდენტობა</string>
-    <string name="chat_list_search_placeholder">ჩატების ძიება</string>
-    <string name="chat_list_no_matching">შესაბამისი ჩატები არ მოიძებნა</string>
     <string name="chat_list_empty">ჯერ ჩატები არ არის</string>
-    <string name="chat_list_left_chat">დატოვებული</string>
     <string name="chat_new_existing_chat">არსებული ჩატის გახსნა</string>
     <string name="chat_new_start">ჩატის დაწყება</string>
     <string name="chat_new_start_group">ჯგუფური ჩატის დაწყება</string>

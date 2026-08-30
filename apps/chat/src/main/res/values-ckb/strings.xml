@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ناوی پیشاندان</string>
     <string name="chat_auth_verification_failed">پشتڕاستکردنەوە سەرکەوتوو نەبوو</string>
     <string name="chat_list_title">گفتوگۆکان</string>
-    <string name="chat_list_close_search">داخستنی گەڕان</string>
     <string name="chat_list_search">گەڕان</string>
     <string name="chat_list_logout">دەرچوون</string>
     <string name="chat_list_new">گفتوگۆی نوێ</string>
-    <string name="chat_list_removed_chat">لابرا</string>
     <string name="chat_new_title">گفتوگۆی نوێ</string>
     <string name="chat_new_name">ناوی گرووپ</string>
     <string name="chat_new_friends">هاوڕێکان</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">تۆ</string>
     <string name="chat_chat_not_found">گفتوگۆ نەدۆزرایەوە</string>
 
-    <string name="chat_list_more">زیاتر</string>
     <string name="chat_message_send">ناردن</string>
 
     <string name="notification_channel_chat">ئاگادارکردنەوەکانی گفتوگۆ</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA لە ئەپی مۆبایلدا هێشتا پشتگیری نەکراوە</string>
     <string name="chat_auth_enter_code_sent">ئەو کۆدە بنووسە کە بۆ %1$s نێردراوە</string>
     <string name="chat_auth_create_identity">ناسنامەکەت دروست بکە</string>
-    <string name="chat_list_search_placeholder">گەڕان لە گفتوگۆکاندا</string>
-    <string name="chat_list_no_matching">هیچ گفتوگۆیەکی هاوتا نییە</string>
     <string name="chat_list_empty">هێشتا هیچ گفتوگۆیەک نییە</string>
-    <string name="chat_list_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
-    <string name="chat_list_left_chat">بەجێهێڵرا</string>
     <string name="chat_new_existing_chat">کردنەوەی گفتوگۆی هەبوو</string>
     <string name="chat_new_start">دەستپێکردنی گفتوگۆ</string>
     <string name="chat_new_start_group">دەستپێکردنی گفتوگۆی گرووپی</string>

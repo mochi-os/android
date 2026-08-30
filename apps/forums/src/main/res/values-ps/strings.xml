@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">د ښوون نوم</string>
     <string name="forums_auth_verification_failed">تصدیق ناکام شو</string>
     <string name="forums_list_title">فورمونه</string>
-    <string name="forums_list_close_search">لټون وتړئ</string>
-    <string name="forums_list_search">لټون</string>
     <string name="forums_list_find">فورمونه ومومئ</string>
     <string name="forums_list_logout">لاګ آوټ</string>
-    <string name="forums_list_create">فورم جوړ کړئ</string>
     <string name="forums_list_unsubscribe">ګډون لغوه کول</string>
     <string name="forums_list_unsubscribe_title">ګډون لغوه کول</string>
     <string name="forums_create_title">فورم جوړ کړئ</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">فورم ونه موندل شو</string>
     <string name="forums_post_not_found">لیکنه ونه موندل شوه</string>
 
-    <string name="forums_list_more">نور</string>
     <string name="forums_comment_send">لیږل</string>
     <string name="forums_post_body_field">متن</string>
     <string name="forums_post_edit_body_field">متن</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">څرګندونه ولیکئ…</string>
     <string name="forums_auth_login_failed">ننوتل ناکام شو</string>
-    <string name="forums_list_add_to_home">کور پاڼې ته اضافه کړئ</string>
 
     <string name="notification_channel_forums">د فورمونو خبرتیاوې</string>
     <string name="forums_auth_brand">موچي فورمونه</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA لا تر اوسه په ګرځنده اپلیکیشن کې نه ملاتړ کیږي</string>
     <string name="forums_auth_enter_code_sent">هغه کوډ دننه کړئ چې %1$s ته لیږل شوی</string>
     <string name="forums_auth_create_identity">خپله پېژندنه جوړه کړئ</string>
-    <string name="forums_list_search_placeholder">د فورمونو لټون</string>
-    <string name="forums_list_no_matching">هیڅ سمون لرونکی فورم نشته</string>
     <string name="forums_list_empty">تر اوسه هیڅ فورمونه نشته</string>
     <string name="forums_list_unsubscribe_message">ایا تاسو ډاډه یاست چې له دې فورم څخه غواړئ ګډون لغوه کړئ؟</string>
     <string name="forums_find_search_placeholder">د فورمونو لټون یا URL پیسټ کړئ</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">دلچسپي ډیره کړه</string>
     <string name="forums_tag_interest_down">د سود کمول</string>
     <string name="forums_tag_interest_remove">علاقه لرې کړئ</string>
-    <string name="forums_list_default_sort">ډیفالټ ترتیب</string>
     <string name="forums_access_tab_users">کاروونکي</string>
     <string name="forums_access_tab_groups">ګروپونه</string>
     <string name="forums_access_tab_manual">لاسي</string>

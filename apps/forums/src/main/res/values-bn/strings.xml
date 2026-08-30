@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">প্রদর্শনের নাম</string>
     <string name="forums_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
     <string name="forums_list_title">ফোরামসমূহ</string>
-    <string name="forums_list_close_search">অনুসন্ধান বন্ধ করুন</string>
-    <string name="forums_list_search">অনুসন্ধান</string>
     <string name="forums_list_find">ফোরাম খুঁজুন</string>
     <string name="forums_list_logout">লগ আউট করুন</string>
-    <string name="forums_list_create">ফোরাম তৈরি করুন</string>
     <string name="forums_list_unsubscribe">আনসাবস্ক্রাইব করুন</string>
     <string name="forums_list_unsubscribe_title">আনসাবস্ক্রাইব করুন</string>
     <string name="forums_create_title">ফোরাম তৈরি করুন</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ফোরাম পাওয়া যায়নি</string>
     <string name="forums_post_not_found">পোস্ট পাওয়া যায়নি</string>
 
-    <string name="forums_list_more">আরো</string>
     <string name="forums_comment_send">পাঠান</string>
 
     <string name="notification_channel_forums">ফোরাম বিজ্ঞপ্তি</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">মোবাইল অ্যাপে MFA এখনও সমর্থিত নয়</string>
     <string name="forums_auth_enter_code_sent">%1$s-এ পাঠানো কোডটি লিখুন</string>
     <string name="forums_auth_create_identity">আপনার পরিচয় তৈরি করুন</string>
-    <string name="forums_list_search_placeholder">ফোরাম অনুসন্ধান করুন</string>
-    <string name="forums_list_no_matching">কোনো মিল পাওয়া যায়নি</string>
     <string name="forums_list_empty">এখনও কোনো ফোরাম নেই</string>
-    <string name="forums_list_add_to_home">হোম স্ক্রিনে যোগ করুন</string>
     <string name="forums_list_unsubscribe_message">আপনি কি নিশ্চিতভাবে এই ফোরাম থেকে সদস্যতা প্রত্যাহার করতে চান?</string>
     <string name="forums_find_search_placeholder">ফোরাম অনুসন্ধান করুন বা URL পেস্ট করুন</string>
     <string name="forums_find_search_hint">সদস্যতা নেওয়ার জন্য ফোরাম অনুসন্ধান করুন</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">আগ্রহ বৃদ্ধি করুন</string>
     <string name="forums_tag_interest_down">আগ্রহ কমান</string>
     <string name="forums_tag_interest_remove">আগ্রহ সরান</string>
-    <string name="forums_list_default_sort">ডিফল্ট সাজানো</string>
     <string name="forums_access_tab_users">ব্যবহারকারী</string>
     <string name="forums_access_tab_groups">গ্রুপসমূহ</string>
     <string name="forums_access_tab_manual">ম্যানুয়াল</string>

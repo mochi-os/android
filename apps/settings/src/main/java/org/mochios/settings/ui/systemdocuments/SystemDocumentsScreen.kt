@@ -32,8 +32,6 @@ import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -59,6 +57,8 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
@@ -135,15 +135,13 @@ private fun Content(
     onSave: (name: String, language: String, body: String) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
-        TabRow(selectedTabIndex = state.tab.ordinal) {
-            DocumentKind.values().forEach { kind ->
-                Tab(
-                    selected = state.tab == kind,
-                    onClick = { onTabChange(kind) },
-                    text = { Text(stringResource(tabLabelRes(kind))) },
-                )
-            }
-        }
+        MochiTabRow(
+            tabs = DocumentKind.entries.map { kind ->
+                MochiTab(stringResource(tabLabelRes(kind)))
+            },
+            selectedIndex = state.tab.ordinal,
+            onSelect = { index -> onTabChange(DocumentKind.entries[index]) },
+        )
 
         // Languages available for the active tab. Latin-script bucket first
         // (mirrors web's sortedLanguages); we then sort each bucket case-insensitively.

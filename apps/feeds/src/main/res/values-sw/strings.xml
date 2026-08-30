@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Kidogo kama hii</string>
     <string name="feeds_no_tags">Hakuna lebo</string>
     <string name="feeds_anonymous">Asiyejulikana</string>
-    <string name="feeds_replying_to_comment">Inajibu maoni</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Ambatisha faili</string>
     <string name="feeds_tag_label">Lebo</string>
     <string name="feeds_file">Faili</string>

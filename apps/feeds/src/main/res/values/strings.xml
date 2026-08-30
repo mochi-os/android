@@ -124,7 +124,7 @@
     <string name="feeds_remove">Remove</string>
     <string name="feeds_no_tags">No tags</string>
     <string name="feeds_anonymous">Anonymous</string>
-    <string name="feeds_replying_to_comment">Replying to comment</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_cancel_reply">Cancel reply</string>
     <string name="feeds_attach_file">Attach file</string>
     <string name="feeds_send">Send</string>

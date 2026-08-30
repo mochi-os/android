@@ -25,7 +25,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.CircularProgressIndicator
@@ -54,19 +53,21 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.ui.`object`.FieldEditor
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -470,14 +471,15 @@ fun CreateObjectScreen(
                                 verticalAlignment = Alignment.CenterVertically,
                                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                             ) {
-                                Icon(
-                                    Icons.Default.AttachFile,
-                                    contentDescription = null,
+                                val label =
+                                    rememberFileLabel(uri, viewModel::fileName, defaultName)
+                                FileKindPreview(
+                                    kind = rememberFileKind(uri, label),
+                                    model = uri,
                                     modifier = Modifier.size(18.dp),
-                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                                 Text(
-                                    text = rememberFileLabel(uri, viewModel::fileName, defaultName),
+                                    text = label,
                                     style = MaterialTheme.typography.bodySmall,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis,

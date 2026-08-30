@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">Isinamathiselo asitholakali okwesikhashana</string>
     <string name="common_unavailable">Akutholakali</string>
     <string name="common_not_found">Akutholakali</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Hoxisa</string>
     <string name="rss_revoke">Buyisela ukufinyelela</string>
     <string name="rss_revoke_title">Hoxisa ukufinyelela kwe-RSS?</string>

@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Canje-canje da sharhi</string>
     <string name="wikis_rss_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="wikis_rss_failed">An gaza samun RSS token</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Nemo wikis</string>
     <string name="wikis_find_no_results">Babu wikis da aka samu</string>
     <string name="wikis_find_recommended_section">Wikis da aka ba da shawara</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Babu sharhi tukuna</string>
     <string name="wikis_comments_empty_subtitle">Ka zama na farko da ya yi sharhi a wannan shafi.</string>
     <string name="wikis_comment_action_reply">Amsa</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Gyara</string>
     <string name="wikis_comment_action_delete">Goge</string>
     <string name="wikis_comment_action_save">Adana</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Gyara</string>
     <string name="wikis_editor_insert">Saka</string>
     <string name="wikis_editor_attachments">Haɗawa</string>
-    <string name="wikis_editor_cancel">Soke</string>
     <string name="wikis_editor_delete">Goge shafi</string>
     <string name="wikis_editor_save">Adana</string>
     <string name="wikis_editor_saving">Ana ajiyewa…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Take</string>
     <string name="wikis_editor_slug_label">URL ɗin shafi</string>
     <string name="wikis_editor_slug_hint">sunan-shafi-na</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Abun ciki</string>
     <string name="wikis_editor_summary_label">Taƙaitaccen gyara (zaɓi)</string>
     <string name="wikis_editor_summary_hint">Bayyana canje-canjenka a taƙaice</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">An gaza share shafi</string>
     <string name="wikis_revert_page_comment_label">Mayar da sharhi</string>
     <string name="wikis_revert_page_confirm">Mayar</string>
-    <string name="wikis_revert_page_cancel">Soke</string>
     <string name="wikis_revert_page_failed">An gaza mayar da shafi</string>
     <string name="wikis_rename_page_title">Sake suna shafi</string>
     <string name="wikis_rename_page_label">Sabon URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Kalla</string>
     <string name="wikis_history_revert_action">Mayar zuwa wannan sigar</string>
     <string name="wikis_revision_current_badge">Na yanzu</string>
-    <string name="wikis_revision_back_to_history">Komawa ga tarihi</string>
     <string name="wikis_revision_revert_to_this">Mayar zuwa wannan sigar</string>
     <string name="wikis_changes_title">Canje-canje na kwanan nan</string>
     <string name="wikis_changes_subtitle">Gyare-gyare na kwanan nan a duk shafuka na wannan wiki.</string>
     <string name="wikis_changes_empty">Babu canje-canje tukuna</string>
-    <string name="wikis_search_title">Bincika</string>
     <string name="wikis_search_empty_query">Shigar da kalmar bincike</string>
     <string name="wikis_redirects_title">Redirects</string>
     <string name="wikis_redirects_add">Ƙara</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Ƙirƙira</string>
     <string name="wikis_redirect_source_label">Tushe</string>
     <string name="wikis_redirect_target_label">Manufa</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Ana buƙatar tushe da target duka</string>
     <string name="wikis_redirect_created_success">An ƙirƙiri redirect</string>
     <string name="wikis_redirect_create_failed">An gaza ƙirƙirar redirect</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Grid view</string>
     <string name="wikis_attachments_view_list">List view</string>
     <string name="wikis_attachments_copy_embed">Kwafi link na embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">An kwafe embed link</string>
     <string name="wikis_attachments_delete">Goge</string>
     <string name="wikis_attachments_delete_confirm_title">Goge haɗawa</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">An gaza sync wiki</string>
     <string name="wikis_settings_section_home">Shafin gida</string>
     <string name="wikis_settings_field_home_label">Yi amfani a matsayin home</string>
-    <string name="wikis_settings_home_save">Adana canje-canje</string>
     <string name="wikis_settings_home_saved">An adana saituna</string>
     <string name="wikis_settings_home_save_failed">An gaza ajiye saituna</string>
     <string name="wikis_settings_section_delete">Goge wiki</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Mai shi</string>
     <string name="wikis_access_tab_users">Masu amfani</string>
     <string name="wikis_access_tab_groups">Groups</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Babu ƙungiyoyi</string>
     <string name="wikis_access_set_success">An sabunta damar shiga</string>
     <string name="wikis_access_revoke_success">An cire damar shiga</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Shafin “%1$s” bai wanzu ba tukuna.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Raba hanyar haɗin shafi</string>
+    <string name="wikis_pageview_share_chooser">Hanyar haɗin wiki</string>
     <string name="wikis_pageview_share_link_copied">An kwafi hanyar haɗin shafi zuwa allo</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Hanyar haɗin shafin Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Raba hanyar haɗin shafi</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Canje-canje da sharhi</string>
+    <string name="wikis_page_action_share">Hanyar haɗi</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Nemi wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Ka tabbata kana son dakatar da biyan kuɗin %1$s?</string>
     <string name="wikis_subscribe_failed_502">Ba za a iya isa ga wannan uwar garken ba. Ana sake gwadawa…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Nemi ta suna, ID, sawun yatsa, ko URL…</string>
     <string name="wikis_join_search_button">Nemi wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">An biya kuɗin wiki</string>
     <string name="wikis_subscribe_502_retry">Ana sake gwadawa ba tare da uwar garken da aka ba da shawara ba…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Rubuta sharhi…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Rubuta abun cikinka a nan ta amfani da Markdown…</string>
     <string name="wikis_insert_dialog_empty">Babu abin haɗe tukuna. Loda fayil don farawa.</string>
     <string name="wikis_delete_page_message">Kana gab da share shafin “%1$s” (%2$s). Ana iya soke wannan aikin ta hanyar dawo da shi daga tarihi.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Masu amfani da aka tabbatar</string>
 
     <string name="wikis_revision_compare">Kwatanta canje-canje</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Nuna shafin</string>
     <string name="wikis_revision_compare_failed">An kasa loda sigar baya don kwatanta.</string>
     <string name="wikis_revision_changes_from">Canje daga sigar %1$d → %2$d</string>
@@ -353,4 +356,6 @@
         <item quantity="other">An sami Sakamako %1$d don «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">An kasa adana bayanin hoto</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

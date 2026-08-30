@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nome de exibição</string>
     <string name="forums_auth_verification_failed">Falha na verificação</string>
     <string name="forums_list_title">Fóruns</string>
-    <string name="forums_list_close_search">Fechar pesquisa</string>
-    <string name="forums_list_search">Pesquisar</string>
     <string name="forums_list_find">Encontrar fóruns</string>
     <string name="forums_list_logout">Sair</string>
-    <string name="forums_list_create">Criar fórum</string>
     <string name="forums_list_unsubscribe">Cancelar inscrição</string>
     <string name="forums_list_unsubscribe_title">Cancelar inscrição</string>
     <string name="forums_create_title">Criar fórum</string>
@@ -122,7 +119,6 @@
     <string name="forums_forum_not_found">Fórum não encontrado</string>
     <string name="forums_post_not_found">Postagem não encontrada</string>
 
-    <string name="forums_list_more">Mais</string>
     <string name="forums_comment_send">Enviar</string>
     <string name="forums_post_body_field">Conteúdo</string>
     <string name="forums_post_edit_body_field">Conteúdo</string>
@@ -131,7 +127,6 @@
     <string name="forums_post_tag_add">Adicionar etiqueta</string>
     <string name="forums_write_comment">Escreva um comentário…</string>
     <string name="forums_auth_login_failed">Falha no login</string>
-    <string name="forums_list_add_to_home">Adicionar à tela inicial</string>
 
     <string name="notification_channel_forums">Notificações de fóruns</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -139,8 +134,6 @@
     <string name="forums_auth_mfa_unsupported">MFA ainda não é compatível no aplicativo móvel</string>
     <string name="forums_auth_enter_code_sent">Digite o código enviado para %1$s</string>
     <string name="forums_auth_create_identity">Crie sua identidade</string>
-    <string name="forums_list_search_placeholder">Pesquisar fóruns</string>
-    <string name="forums_list_no_matching">Nenhum fórum correspondente</string>
     <string name="forums_list_empty">Nenhum fórum ainda</string>
     <string name="forums_list_unsubscribe_message">Tem certeza de que deseja cancelar a inscrição neste fórum?</string>
     <string name="forums_find_search_placeholder">Pesquisar fóruns ou colar URL</string>
@@ -192,7 +185,6 @@
     <string name="forums_tag_interest_up">Aumentar interesse</string>
     <string name="forums_tag_interest_down">Reduzir interesse</string>
     <string name="forums_tag_interest_remove">Remover interesse</string>
-    <string name="forums_list_default_sort">Ordenação padrão</string>
     <string name="forums_access_tab_users">Usuários</string>
     <string name="forums_access_tab_groups">Grupos</string>
     <string name="forums_access_tab_manual">Manual</string>

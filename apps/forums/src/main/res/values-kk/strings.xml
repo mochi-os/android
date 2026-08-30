@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Көрсетілетін атау</string>
     <string name="forums_auth_verification_failed">Тексеру сәтсіз</string>
     <string name="forums_list_title">Форумдар</string>
-    <string name="forums_list_close_search">Іздеуді жабу</string>
-    <string name="forums_list_search">Іздеу</string>
     <string name="forums_list_find">Форумдарды табу</string>
     <string name="forums_list_logout">Шығу</string>
-    <string name="forums_list_create">Форум құру</string>
     <string name="forums_list_unsubscribe">Жазылудан бас тарту</string>
     <string name="forums_list_unsubscribe_title">Жазылудан бас тарту</string>
     <string name="forums_create_title">Форум құру</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форум табылмады</string>
     <string name="forums_post_not_found">Жазба табылмады</string>
 
-    <string name="forums_list_more">Көбірек</string>
     <string name="forums_comment_send">Жіберу</string>
     <string name="forums_post_body_field">Мәтін</string>
     <string name="forums_post_edit_body_field">Мәтін</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Пікір жазыңыз…</string>
     <string name="forums_auth_login_failed">Кіру сәтсіз аяқталды</string>
-    <string name="forums_list_add_to_home">Негізгі экранға қосу</string>
 
     <string name="notification_channel_forums">Форум хабарландырулары</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA мобильді қолданбада әзірге қолдау таппайды</string>
     <string name="forums_auth_enter_code_sent">%1$s мекенжайына жіберілген кодты енгізіңіз</string>
     <string name="forums_auth_create_identity">Бірегейлігіңізді жасаңыз</string>
-    <string name="forums_list_search_placeholder">Форумдарды іздеу</string>
-    <string name="forums_list_no_matching">Сәйкес форумдар жоқ</string>
     <string name="forums_list_empty">Әзірге форумдар жоқ</string>
     <string name="forums_list_unsubscribe_message">Бұл форумнан жазылудан бас тартқыңыз келетініне сенімдісіз бе?</string>
     <string name="forums_find_search_placeholder">Форумдарды іздеу немесе URL қойыңыз</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Қызығушылықты арттыру</string>
     <string name="forums_tag_interest_down">Қызығушылықты азайту</string>
     <string name="forums_tag_interest_remove">Қызығушылықты жою</string>
-    <string name="forums_list_default_sort">Әдепкі сұрыптау</string>
     <string name="forums_access_tab_users">Пайдаланушылар</string>
     <string name="forums_access_tab_groups">Топтар</string>
     <string name="forums_access_tab_manual">Қолмен</string>

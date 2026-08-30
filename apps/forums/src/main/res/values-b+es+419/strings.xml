@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Nombre para mostrar</string>
     <string name="forums_auth_verification_failed">Verificación fallida</string>
     <string name="forums_list_title">Foros</string>
-    <string name="forums_list_close_search">Cerrar búsqueda</string>
-    <string name="forums_list_search">Buscar</string>
     <string name="forums_list_find">Buscar foros</string>
     <string name="forums_list_logout">Cerrar sesión</string>
-    <string name="forums_list_create">Crear foro</string>
     <string name="forums_list_unsubscribe">Cancelar suscripción</string>
     <string name="forums_list_unsubscribe_title">Cancelar suscripción</string>
     <string name="forums_create_title">Crear foro</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foro no encontrado</string>
     <string name="forums_post_not_found">Publicación no encontrada</string>
 
-    <string name="forums_list_more">Más</string>
     <string name="forums_comment_send">Enviar</string>
 
     <string name="notification_channel_forums">Notificaciones de foros</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA aún no es compatible en la aplicación móvil</string>
     <string name="forums_auth_enter_code_sent">Ingresa el código enviado a %1$s</string>
     <string name="forums_auth_create_identity">Crea tu identidad</string>
-    <string name="forums_list_search_placeholder">Buscar foros</string>
-    <string name="forums_list_no_matching">No hay foros coincidentes</string>
     <string name="forums_list_empty">Aún no hay foros</string>
-    <string name="forums_list_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="forums_list_unsubscribe_message">¿Seguro que quieres cancelar la suscripción a este foro?</string>
     <string name="forums_find_search_placeholder">Buscar foros o pegar URL</string>
     <string name="forums_find_search_hint">Busca foros a los que suscribirte</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Impulsar interés</string>
     <string name="forums_tag_interest_down">Reducir interés</string>
     <string name="forums_tag_interest_remove">Eliminar interés</string>
-    <string name="forums_list_default_sort">Orden predeterminado</string>
     <string name="forums_access_tab_users">Usuarios</string>
     <string name="forums_access_tab_groups">Grupos</string>
     <string name="forums_access_tab_manual">Manual</string>

@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Më pak si kjo</string>
     <string name="feeds_no_tags">Asnjë etiketë</string>
     <string name="feeds_anonymous">Anonim</string>
-    <string name="feeds_replying_to_comment">Po i përgjigjeni komentit</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Bashkëngjit skedar</string>
     <string name="feeds_tag_label">Etiketë</string>
     <string name="feeds_file">Skedar</string>

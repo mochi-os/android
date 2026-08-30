@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">পরিবর্তন এবং মন্তব্য</string>
     <string name="wikis_rss_copied">RSS URL ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="wikis_rss_failed">RSS টোকেন পেতে ব্যর্থ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">উইকি খুঁজুন</string>
     <string name="wikis_find_no_results">কোনো উইকি পাওয়া যায়নি</string>
     <string name="wikis_find_recommended_section">সুপারিশকৃত উইকি</string>
@@ -59,6 +61,8 @@
     <string name="wikis_comments_empty_title">এখনও কোনো মন্তব্য নেই</string>
     <string name="wikis_comments_empty_subtitle">এই পেজে প্রথম মন্তব্য করুন।</string>
     <string name="wikis_comment_action_reply">উত্তর দিন</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">সম্পাদনা</string>
     <string name="wikis_comment_action_delete">মুছুন</string>
     <string name="wikis_comment_action_save">সংরক্ষণ করুন</string>
@@ -74,7 +78,6 @@
     <string name="wikis_editor_edit">সম্পাদনা</string>
     <string name="wikis_editor_insert">সন্নিবেশ করুন</string>
     <string name="wikis_editor_attachments">অ্যাটাচমেন্ট</string>
-    <string name="wikis_editor_cancel">বাতিল করুন</string>
     <string name="wikis_editor_delete">পেজ মুছুন</string>
     <string name="wikis_editor_save">সংরক্ষণ করুন</string>
     <string name="wikis_editor_saving">সংরক্ষণ করা হচ্ছে…</string>
@@ -83,6 +86,7 @@
     <string name="wikis_editor_title_label">শিরোনাম</string>
     <string name="wikis_editor_slug_label">পৃষ্ঠার URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">কন্টেন্ট</string>
     <string name="wikis_editor_summary_label">সম্পাদনা সারসংক্ষেপ (ঐচ্ছিক)</string>
     <string name="wikis_editor_summary_hint">সংক্ষেপে আপনার পরিবর্তনগুলি বর্ণনা করুন</string>
@@ -102,7 +106,6 @@
     <string name="wikis_delete_page_failed">পেজ মুছতে ব্যর্থ</string>
     <string name="wikis_revert_page_comment_label">মন্তব্য প্রত্যাবর্তন করুন</string>
     <string name="wikis_revert_page_confirm">ফিরিয়ে আনুন</string>
-    <string name="wikis_revert_page_cancel">বাতিল করুন</string>
     <string name="wikis_revert_page_failed">পেজ রিভার্ট করতে ব্যর্থ</string>
     <string name="wikis_rename_page_title">পৃষ্ঠা পুনঃনামকরণ করুন</string>
     <string name="wikis_rename_page_label">নতুন URL</string>
@@ -117,12 +120,10 @@
     <string name="wikis_history_view_action">দেখুন</string>
     <string name="wikis_history_revert_action">এই সংস্করণে ফিরে যান</string>
     <string name="wikis_revision_current_badge">বর্তমান</string>
-    <string name="wikis_revision_back_to_history">ইতিহাসে ফিরে যান</string>
     <string name="wikis_revision_revert_to_this">এই সংস্করণে ফিরে যান</string>
     <string name="wikis_changes_title">সাম্প্রতিক পরিবর্তন</string>
     <string name="wikis_changes_subtitle">এই উইকির সমস্ত পৃষ্ঠা জুড়ে সাম্প্রতিক সম্পাদনা।</string>
     <string name="wikis_changes_empty">এখনও কোনো পরিবর্তন নেই</string>
-    <string name="wikis_search_title">অনুসন্ধান</string>
     <string name="wikis_search_empty_query">একটি অনুসন্ধান শব্দ লিখুন</string>
     <string name="wikis_redirects_title">রিডাইরেক্ট</string>
     <string name="wikis_redirects_add">যোগ করুন</string>
@@ -131,6 +132,7 @@
     <string name="wikis_redirect_create_action">তৈরি করুন</string>
     <string name="wikis_redirect_source_label">উৎস</string>
     <string name="wikis_redirect_target_label">টার্গেট</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">উৎস এবং লক্ষ্য উভয়ই প্রয়োজন</string>
     <string name="wikis_redirect_created_success">রিডাইরেক্ট তৈরি করা হয়েছে</string>
     <string name="wikis_redirect_create_failed">রিডাইরেক্ট তৈরি করতে ব্যর্থ</string>
@@ -164,6 +166,8 @@
     <string name="wikis_attachments_view_grid">গ্রিড ভিউ</string>
     <string name="wikis_attachments_view_list">তালিকা ভিউ</string>
     <string name="wikis_attachments_copy_embed">এম্বেড লিঙ্ক কপি করুন</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">এমবেড লিঙ্ক কপি করা হয়েছে</string>
     <string name="wikis_attachments_delete">মুছুন</string>
     <string name="wikis_attachments_delete_confirm_title">অ্যাটাচমেন্ট মুছুন</string>
@@ -195,7 +199,6 @@
     <string name="wikis_settings_sync_failed">উইকি সিঙ্ক করতে ব্যর্থ</string>
     <string name="wikis_settings_section_home">হোম পেজ</string>
     <string name="wikis_settings_field_home_label">হোম হিসাবে ব্যবহার করুন</string>
-    <string name="wikis_settings_home_save">পরিবর্তন সংরক্ষণ করুন</string>
     <string name="wikis_settings_home_saved">সেটিংস সংরক্ষিত হয়েছে</string>
     <string name="wikis_settings_home_save_failed">সেটিংস সংরক্ষণ করতে ব্যর্থ</string>
     <string name="wikis_settings_section_delete">wiki মুছুন</string>
@@ -212,6 +215,11 @@
     <string name="wikis_access_owner_label">মালিক</string>
     <string name="wikis_access_tab_users">ব্যবহারকারী</string>
     <string name="wikis_access_tab_groups">গ্রুপসমূহ</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">কোনো গ্রুপ উপলব্ধ নেই</string>
     <string name="wikis_access_set_success">অ্যাক্সেস আপডেট হয়েছে</string>
     <string name="wikis_access_revoke_success">অ্যাক্সেস সরানো হয়েছে</string>
@@ -232,27 +240,22 @@
     <string name="wikis_pageview_updated">আপডেট হয়েছে %1$s</string>
     <string name="wikis_pageview_not_found_description">পৃষ্ঠা „%1$s\" এখনো নেই।</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">পৃষ্ঠার লিঙ্ক শেয়ার করুন</string>
+    <string name="wikis_pageview_share_chooser">উইকি লিঙ্ক</string>
     <string name="wikis_pageview_share_link_copied">পৃষ্ঠার লিঙ্ক ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki পৃষ্ঠার লিঙ্ক</string>
     <string name="wikis_pageview_loading">পৃষ্ঠা লোড হচ্ছে…</string>
-    <string name="wikis_page_action_share">পৃষ্ঠার লিঙ্ক শেয়ার করুন</string>
-    <string name="wikis_page_action_rss_changes">RSS: পরিবর্তন</string>
-    <string name="wikis_page_action_rss_comments">RSS: মন্তব্য</string>
-    <string name="wikis_page_action_rss_all">RSS: পরিবর্তন ও মন্তব্য</string>
+    <string name="wikis_page_action_share">লিঙ্ক</string>
     <string name="wikis_open_sidebar">সাইডবার খুলুন</string>
     <string name="wikis_owned_badge">মালিকানা</string>
     <string name="wikis_search_placeholder">একটি wiki খুঁজুন…</string>
     <string name="wikis_subscribing">সাবস্ক্রাইব হচ্ছে…</string>
     <string name="wikis_unsubscribe_confirm_message">আপনি কি নিশ্চিত যে %1$s থেকে সাবস্ক্রিপশন বাতিল করতে চান?</string>
     <string name="wikis_subscribe_failed_502">সেই সার্ভারে পৌঁছানো যাচ্ছে না। আবার চেষ্টা করছে…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">নাম, আইডি, ফিঙ্গারপ্রিন্ট বা URL দিয়ে খুঁজুন…</string>
     <string name="wikis_join_search_button">wikis খুঁজুন…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki সাবস্ক্রাইব করা হয়েছে</string>
     <string name="wikis_subscribe_502_retry">সাজেস্টেড সার্ভার ছাড়া আবার চেষ্টা করছে…</string>
     <string name="wikis_comments_title_template">%1$s - মন্তব্য</string>
     <string name="wikis_comment_form_placeholder_new">একটি মন্তব্য লিখুন…</string>
@@ -261,7 +264,6 @@
     <string name="wikis_comment_form_remove_attachment">সংযুক্তি সরান</string>
     <string name="wikis_comment_collapse_toggle">থ্রেড সংকুচিত করুন</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">সম্পাদনা: %1$s</string>
     <string name="wikis_editor_content_placeholder">Markdown ব্যবহার করে এখানে আপনার বিষয়বস্তু লিখুন…</string>
     <string name="wikis_insert_dialog_empty">এখনো কোনো সংযুক্তি নেই। শুরু করতে একটি ফাইল আপলোড করুন।</string>
     <string name="wikis_delete_page_message">আপনি পৃষ্ঠা „%1$s\" (%2$s) মুছে ফেলতে চলেছেন। এই ক্রিয়াটি ইতিহাস থেকে পুনরুদ্ধার করে পূর্বাবস্থায় ফেরানো যেতে পারে।</string>
@@ -306,6 +308,7 @@
     <string name="wikis_access_subject_anyone">যে কেউ</string>
     <string name="wikis_access_subject_authenticated">প্রমাণীকৃত ব্যবহারকারী</string>
     <string name="wikis_revision_compare">পরিবর্তন তুলনা করুন</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">পৃষ্ঠা দেখান</string>
     <string name="wikis_revision_compare_failed">তুলনার জন্য পূর্ববর্তী সংস্করণ লোড করা যায়নি।</string>
     <string name="wikis_revision_changes_from">সংস্করণ %1$d → %2$d থেকে পরিবর্তনসমূহ</string>
@@ -350,4 +353,6 @@
         <item quantity="other">«%2$s»-এর জন্য %1$d ফলাফল পাওয়া গেছে</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ক্যাপশন সংরক্ষণ করা যায়নি</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

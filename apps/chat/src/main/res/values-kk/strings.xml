@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Көрсетілетін атау</string>
     <string name="chat_auth_verification_failed">Тексеру сәтсіз</string>
     <string name="chat_list_title">Чаттар</string>
-    <string name="chat_list_close_search">Іздеуді жабу</string>
     <string name="chat_list_search">Іздеу</string>
     <string name="chat_list_logout">Шығу</string>
     <string name="chat_list_new">Жаңа чат</string>
-    <string name="chat_list_removed_chat">Жойылды</string>
     <string name="chat_new_title">Жаңа чат</string>
     <string name="chat_new_name">Топ атауы</string>
     <string name="chat_new_friends">Достар</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Сіз</string>
     <string name="chat_chat_not_found">Чат табылмады</string>
 
-    <string name="chat_list_more">Көбірек</string>
     <string name="chat_message_send">Жіберу</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Кіру сәтсіз аяқталды</string>
     <string name="chat_attachment_move_up">Жоғары жылжыту</string>
     <string name="chat_attachment_move_down">Төмен жылжыту</string>
-    <string name="chat_list_add_to_home">Негізгі экранға қосу</string>
 
     <string name="notification_channel_chat">Чат хабарландырулары</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA мобильді қолданбада әлі қолдау таппайды</string>
     <string name="chat_auth_enter_code_sent">%1$s мекенжайына жіберілген кодты енгізіңіз</string>
     <string name="chat_auth_create_identity">Сәйкестігіңізді жасаңыз</string>
-    <string name="chat_list_search_placeholder">Чаттарды іздеу</string>
-    <string name="chat_list_no_matching">Сәйкес чаттар жоқ</string>
     <string name="chat_list_empty">Әзірге чаттар жоқ</string>
-    <string name="chat_list_left_chat">Шықты</string>
     <string name="chat_new_existing_chat">Бар чатты ашу</string>
     <string name="chat_new_start">Чат бастау</string>
     <string name="chat_new_start_group">Топтық чат бастау</string>

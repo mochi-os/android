@@ -25,30 +25,29 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material.icons.automirrored.outlined.ArrowBack
-import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Forum
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocalOffer
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PushPin
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.EmojiEvents
+import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
@@ -113,6 +112,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
@@ -180,18 +180,18 @@ fun ForumScreen(
     }
 
     val drawerItems = remember(listUiState.forums) {
-        listViewModel.filteredForums().map { forum ->
+        listUiState.forums.map { forum ->
             DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,
-                icon = Icons.Default.Forum,
+                icon = Icons.Outlined.Forum,
             )
         }
     }
     val drawerAll = DrawerItem(
         id = LastViewedStore.ALL,
         title = stringResource(R.string.forums_all_forums),
-        icon = Icons.Default.Forum,
+        icon = Icons.Outlined.Forum,
     )
 
     MochiListDrawer(
@@ -207,7 +207,7 @@ fun ForumScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.forums_saved_title),
-                icon = Icons.Default.BookmarkBorder,
+                icon = Icons.Outlined.BookmarkBorder,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToSaved()
@@ -215,7 +215,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.forums_list_find),
-                icon = Icons.Default.Search,
+                icon = Icons.Outlined.Search,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onFindForums()
@@ -223,7 +223,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.forums_create_title),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onCreateForum()
@@ -231,7 +231,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(R.string.forums_list_logout),
-                icon = Icons.AutoMirrored.Filled.Logout,
+                icon = Icons.AutoMirrored.Outlined.Logout,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onLogout()
@@ -239,7 +239,7 @@ fun ForumScreen(
             )
             DrawerActionRow(
                 title = stringResource(MochiR.string.about_label),
-                icon = Icons.Default.Info,
+                icon = Icons.Outlined.Info,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showAbout = true
@@ -422,127 +422,118 @@ private fun ForumContent(
                                 showRssSubmenu = false
                             }
                         ) {
-                            if (showRssSubmenu) {
-                                // Header row taps back to the main menu.
+                            // Sort options listed inline, each with its own
+                            // icon and a trailing check on the active one.
+                            Text(
+                                text = stringResource(R.string.forums_sort_label),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(
+                                    start = 16.dp, top = 8.dp, bottom = 4.dp
+                                ),
+                            )
+                            SORT_OPTIONS.forEach { option ->
                                 MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_rss_feed)) },
-                                    onClick = { showRssSubmenu = false },
-                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.ArrowBack, contentDescription = null) },
-                                )
-                                MochiDropdownMenuDivider()
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.forums_rss_mode_posts)) },
+                                    text = { Text(stringResource(option.labelRes)) },
                                     onClick = {
-                                        viewModel.copyRssUrl("posts")
-                                        showRssSubmenu = false
                                         showOverflowMenu = false
+                                        viewModel.setSort(option.key)
                                     },
+                                    leadingIcon = { Icon(option.icon, contentDescription = null) },
+                                    selected = uiState.sort == option.key,
                                 )
+                            }
+
+                            MochiDropdownMenuDivider()
+
+                            // Moderation is a moderator's tool — a wider gate
+                            // than Settings, which is managers only.
+                            if (!isAll && uiState.canModerate && uiState.forum.id.isNotEmpty()) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_moderation_title)) },
+                                    onClick = {
+                                        showOverflowMenu = false
+                                        onModeration(forumIdForCallbacks)
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Gavel, contentDescription = null) },
+                                )
+                            }
+                            // The aggregate exports a class-level RSS feed
+                            // but has no single forum to unsubscribe from.
+                            if (isAll || uiState.forum.id.isNotEmpty()) {
+                                MochiDropdownSubmenu(
+                                    text = { Text(stringResource(R.string.forums_rss_feed)) },
+                                    expanded = showRssSubmenu,
+                                    onExpandedChange = { showRssSubmenu = it },
+                                    leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
+                                ) {
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.forums_rss_mode_posts)) },
+                                        onClick = {
+                                            viewModel.copyRssUrl("posts")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        },
+                                    )
+                                    MochiDropdownMenuItem(
+                                        text = {
+                                            Text(stringResource(R.string.forums_rss_mode_posts_comments))
+                                        },
+                                        onClick = {
+                                            viewModel.copyRssUrl("all")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        },
+                                    )
+                                    MochiDropdownMenuDivider()
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(MochiR.string.rss_revoke)) },
+                                        onClick = {
+                                            revokeRssOpen = true
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        },
+                                    )
+                                }
+                            }
+                            // Sharing a forum is a manager's call, so this
+                            // sits behind the same gate as Settings. The
+                            // aggregate has no single forum to share.
+                            if (!isAll && uiState.canManage && uiState.forum.id.isNotEmpty()) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_link)) },
+                                    onClick = {
+                                        showOverflowMenu = false
+                                        viewModel.shareLink()
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                )
+                            }
+                            // Subscribers reach settings too — their view is
+                            // the read-only identity card plus unsubscribe.
+                            if (!isAll && uiState.forum.id.isNotEmpty()) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_settings)) },
+                                    onClick = {
+                                        showOverflowMenu = false
+                                        onSettings(forumIdForCallbacks)
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
+                                )
+                            }
+                            // Managers delete the forum from settings rather
+                            // than unsubscribing from something they own.
+                            if (!isAll && !uiState.canManage && uiState.forum.id.isNotEmpty()) {
                                 MochiDropdownMenuItem(
                                     text = { Text(stringResource(
-                                                R.string.forums_rss_mode_posts_comments
+                                                R.string.forums_list_unsubscribe
                                             )) },
                                     onClick = {
-                                        viewModel.copyRssUrl("all")
-                                        showRssSubmenu = false
                                         showOverflowMenu = false
+                                        showUnsubscribeConfirm = true
                                     },
+                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                 )
-                                MochiDropdownMenuDivider()
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.rss_revoke)) },
-                                    onClick = {
-                                        revokeRssOpen = true
-                                        showRssSubmenu = false
-                                        showOverflowMenu = false
-                                    },
-                                )
-                            } else {
-                                // Sort options listed inline, each with its own
-                                // icon and a trailing check on the active one.
-                                Text(
-                                    text = stringResource(R.string.forums_sort_label),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.padding(
-                                        start = 16.dp, top = 8.dp, bottom = 4.dp
-                                    ),
-                                )
-                                SORT_OPTIONS.forEach { option ->
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(option.labelRes)) },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            viewModel.setSort(option.key)
-                                        },
-                                        leadingIcon = { Icon(option.icon, contentDescription = null) },
-                                        selected = uiState.sort == option.key,
-                                    )
-                                }
-
-                                MochiDropdownMenuDivider()
-
-                                // Moderation is a moderator's tool — a wider gate
-                                // than Settings, which is managers only.
-                                if (!isAll && uiState.canModerate && uiState.forum.id.isNotEmpty()) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.forums_moderation_title)) },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            onModeration(forumIdForCallbacks)
-                                        },
-                                        leadingIcon = { Icon(Icons.Outlined.Gavel, contentDescription = null) },
-                                    )
-                                }
-                                // The aggregate exports a class-level RSS feed
-                                // but has no single forum to unsubscribe from.
-                                if (isAll || uiState.forum.id.isNotEmpty()) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.forums_rss_feed)) },
-                                        onClick = { showRssSubmenu = true },
-                                        leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
-                                        trailingIcon = { Icon(Icons.AutoMirrored.Outlined.KeyboardArrowRight, contentDescription = null) },
-                                    )
-                                }
-                                // Sharing a forum is a manager's call, so this
-                                // sits behind the same gate as Settings. The
-                                // aggregate has no single forum to share.
-                                if (!isAll && uiState.canManage && uiState.forum.id.isNotEmpty()) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.forums_link)) },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            viewModel.shareLink()
-                                        },
-                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
-                                    )
-                                }
-                                // Subscribers reach settings too — their view is
-                                // the read-only identity card plus unsubscribe.
-                                if (!isAll && uiState.forum.id.isNotEmpty()) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.forums_settings)) },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            onSettings(forumIdForCallbacks)
-                                        },
-                                        leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
-                                    )
-                                }
-                                // Managers delete the forum from settings rather
-                                // than unsubscribing from something they own.
-                                if (!isAll && !uiState.canManage && uiState.forum.id.isNotEmpty()) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(
-                                                    R.string.forums_list_unsubscribe
-                                                )) },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            showUnsubscribeConfirm = true
-                                        },
-                                        leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                    )
-                                }
                             }
                         }
                     }
@@ -810,7 +801,7 @@ private fun PostCard(
                             .size(18.dp),
                     )
                     CountedAction(
-                        icon = Icons.Filled.LocalOffer,
+                        icon = Icons.Default.LocalOffer,
                         contentDescription = stringResource(R.string.forums_post_tag_label),
                         count = post.tags.size,
                         onClick = onClick,
@@ -832,7 +823,7 @@ private fun PostCard(
                         onClick = onClick,
                     )
                     CountedAction(
-                        icon = Icons.Filled.ChatBubble,
+                        icon = Icons.Default.ChatBubble,
                         contentDescription = stringResource(R.string.forums_post_comments),
                         count = post.comments,
                         onClick = onClick,

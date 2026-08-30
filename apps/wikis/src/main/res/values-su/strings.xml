@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Parobahan jeung koméntar</string>
     <string name="wikis_rss_copied">URL RSS disalin ka clipboard</string>
     <string name="wikis_rss_failed">Gagal meunangkeun token RSS</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Téangan wiki</string>
     <string name="wikis_find_no_results">Teu manggih wiki</string>
     <string name="wikis_find_recommended_section">Wiki direkomendasikeun</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Tacan aya koméntar</string>
     <string name="wikis_comments_empty_subtitle">Jadi nu pangheulana koméntar dina kaca ieu.</string>
     <string name="wikis_comment_action_reply">Bales</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Édit</string>
     <string name="wikis_comment_action_delete">Hapus</string>
     <string name="wikis_comment_action_save">Simpen</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Édit</string>
     <string name="wikis_editor_insert">Sisipkeun</string>
     <string name="wikis_editor_attachments">Lampiran</string>
-    <string name="wikis_editor_cancel">Batalkeun</string>
     <string name="wikis_editor_delete">Hapus kaca</string>
     <string name="wikis_editor_save">Simpen</string>
     <string name="wikis_editor_saving">Nyimpen…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Judul</string>
     <string name="wikis_editor_slug_label">URL kaca</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Eusi</string>
     <string name="wikis_editor_summary_label">Édit ringkesan (opsional)</string>
     <string name="wikis_editor_summary_hint">Pedaran singket parobahan anjeun</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Gagal mupus kaca</string>
     <string name="wikis_revert_page_comment_label">Balikkeun koméntar</string>
     <string name="wikis_revert_page_confirm">Balikkeun</string>
-    <string name="wikis_revert_page_cancel">Batalkeun</string>
     <string name="wikis_revert_page_failed">Gagal mulangkeun kaca</string>
     <string name="wikis_rename_page_title">Ganti ngaran kaca</string>
     <string name="wikis_rename_page_label">URL Anyar</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Tingali</string>
     <string name="wikis_history_revert_action">Balikkeun ka versi ieu</string>
     <string name="wikis_revision_current_badge">Ayeuna</string>
-    <string name="wikis_revision_back_to_history">Balik ka riwayat</string>
     <string name="wikis_revision_revert_to_this">Balikkeun ka versi ieu</string>
     <string name="wikis_changes_title">Parobahan panganyarna</string>
     <string name="wikis_changes_subtitle">Édit panganyarna dina sakabéh kaca dina wiki ieu.</string>
     <string name="wikis_changes_empty">Tacan aya parobahan</string>
-    <string name="wikis_search_title">Paluruh</string>
     <string name="wikis_search_empty_query">Asupkeun istilah panéangan</string>
     <string name="wikis_redirects_title">Redirects</string>
     <string name="wikis_redirects_add">Tambah</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Jieun</string>
     <string name="wikis_redirect_source_label">Sumber</string>
     <string name="wikis_redirect_target_label">Target</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Sumber jeung target duanana diperlukeun</string>
     <string name="wikis_redirect_created_success">Redirect dijieun</string>
     <string name="wikis_redirect_create_failed">Gagal nyieun pangalihan</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Tinggalan grid</string>
     <string name="wikis_attachments_view_list">Tinggalan daptar</string>
     <string name="wikis_attachments_copy_embed">Salin link embed</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Tautan sisipan disalin</string>
     <string name="wikis_attachments_delete">Hapus</string>
     <string name="wikis_attachments_delete_confirm_title">Hapus lampiran</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Gagal nyingkronkeun wiki</string>
     <string name="wikis_settings_section_home">Kaca imah</string>
     <string name="wikis_settings_field_home_label">Paké salaku imah</string>
-    <string name="wikis_settings_home_save">Simpen parobahan</string>
     <string name="wikis_settings_home_saved">Setélan disimpen</string>
     <string name="wikis_settings_home_save_failed">Gagal nyimpen setélan</string>
     <string name="wikis_settings_section_delete">Hapus wiki</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Nu boga</string>
     <string name="wikis_access_tab_users">Pamaké</string>
     <string name="wikis_access_tab_groups">Grup</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Teu aya grup</string>
     <string name="wikis_access_set_success">Aksés diropéa</string>
     <string name="wikis_access_revoke_success">Aksés dipiceun</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Kaca “%1$s” can aya.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Bagikeun tautan kaca</string>
+    <string name="wikis_pageview_share_chooser">Tautan wiki</string>
     <string name="wikis_pageview_share_link_copied">Tautan kaca disalin ka papan klip</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Tautan kaca Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Bagikeun tautan kaca</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Parobahan jeung koméntar</string>
+    <string name="wikis_page_action_share">Tumbu</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Sungsi wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Yakin hoyong ngeureunkeun langganan ti %1$s?</string>
     <string name="wikis_subscribe_failed_502">Éta server teu kahontal. Nyobian deui…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Sungsi dumasar ngaran, ID, sidik ramo, atawa URL…</string>
     <string name="wikis_join_search_button">Sungsi wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Geus ngalanggan wiki</string>
     <string name="wikis_subscribe_502_retry">Nyobian deui tanpa server anu disarankeun…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Tulis koméntar…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Tulis eusi anjeun di dieu nganggo Markdown…</string>
     <string name="wikis_insert_dialog_empty">Can aya lampiran. Unggah koropak pikeun ngamimitian.</string>
     <string name="wikis_delete_page_message">Anjeun bade mupus kaca “%1$s” (%2$s). Tindakan ieu tiasa dibolaykeun ku cara mulangkeun tina sajarah.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Pangguna anu disahkeun</string>
 
     <string name="wikis_revision_compare">Bandingkeun parobahan</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Témbongkeun kaca</string>
     <string name="wikis_revision_compare_failed">Teu bisa ngamuat versi saméméhna pikeun dibandingkeun.</string>
     <string name="wikis_revision_changes_from">Parobahan ti versi %1$d → %2$d</string>
@@ -353,4 +356,6 @@
         <item quantity="other">Manggih %1$d hasil pikeun "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Katerangan teu tiasa disimpen</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

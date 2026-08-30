@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">यासारखे कमी</string>
     <string name="feeds_no_tags">टॅग्स नाहीत</string>
     <string name="feeds_anonymous">निनावी</string>
-    <string name="feeds_replying_to_comment">टिप्पणीला उत्तर देत आहे</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">फाइल जोडा</string>
     <string name="feeds_tag_label">टॅग लेबल</string>
     <string name="feeds_file">फाइल</string>

@@ -37,6 +37,13 @@ data class WikiListUiState(
     val recommendations: List<Recommendation> = emptyList(),
     val error: MochiError? = null,
 
+    /**
+     * The top bar's filter over [wikis] — distinct from [searchQuery], which
+     * queries the directory for wikis the user has *not* joined yet.
+     */
+    val showSearch: Boolean = false,
+    val listQuery: String = "",
+
     val searchQuery: String = "",
     val searchResults: List<DirectoryEntry> = emptyList(),
     val searchLoading: Boolean = false,
@@ -73,6 +80,17 @@ class WikiListViewModel @Inject constructor(
     private var searchJob: Job? = null
 
     init {
+        // The list is the repository's, not this ViewModel's copy of it: a
+        // subscribe from the find screen or an unsubscribe from anywhere
+        // reaches the cache, and this screen is showing it the moment the
+        // user comes back to it.
+        viewModelScope.launch {
+            repo.wikiList.collect { wikis ->
+                _uiState.value = _uiState.value.copy(
+                    wikis = wikis.sortedWith(compareBy(NaturalCompare) { it.name }),
+                )
+            }
+        }
         loadInfo()
         loadRecommendations()
     }
@@ -83,11 +101,8 @@ class WikiListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val info = repo.getClassInfo()
-                _uiState.value = _uiState.value.copy(
-                    wikis = (info.wikis.orEmpty()).sortedWith(compareBy(NaturalCompare) { it.name }),
-                    isLoading = false,
-                )
+                repo.getClassInfo()
+                _uiState.value = _uiState.value.copy(isLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -98,12 +113,8 @@ class WikiListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val info = repo.getClassInfo()
-                _uiState.value = _uiState.value.copy(
-                    wikis = (info.wikis.orEmpty()).sortedWith(compareBy(NaturalCompare) { it.name }),
-                    isRefreshing = false,
-                    error = null,
-                )
+                repo.getClassInfo()
+                _uiState.value = _uiState.value.copy(isRefreshing = false, error = null)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isRefreshing = false,
@@ -126,6 +137,35 @@ class WikiListViewModel @Inject constructor(
     }
 
     // ---------------- inline directory search ----------------
+
+    fun toggleSearch() {
+        val current = _uiState.value
+        // Closing drops the query: a filter still applied to a list whose bar
+        // has gone would hide wikis with nothing on screen saying why.
+        _uiState.value = current.copy(
+            showSearch = !current.showSearch,
+            listQuery = if (current.showSearch) "" else current.listQuery,
+        )
+    }
+
+    fun updateListQuery(query: String) {
+        _uiState.value = _uiState.value.copy(listQuery = query)
+    }
+
+    /**
+     * [wikis] narrowed to the top bar's query — every wiki when it is blank.
+     *
+     * Name only: it is the one thing a card puts on screen, so a match the
+     * user cannot see the reason for never appears. Finding a wiki by ID or
+     * fingerprint is what the find screen is for.
+     */
+    fun filteredWikis(): List<WikiInfo> {
+        val query = _uiState.value.listQuery.trim().lowercase()
+        if (query.isBlank()) return _uiState.value.wikis
+        return _uiState.value.wikis.filter { wiki ->
+            wiki.name.lowercase().contains(query)
+        }
+    }
 
     fun setSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
@@ -186,9 +226,6 @@ class WikiListViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(subscribingId = null)
             if (result.isSuccess) {
                 val join = result.getOrThrow()
-                // Refresh local list so the new wiki shows up if the user
-                // backs out of the wiki home instead of taking the auto-nav.
-                refresh()
                 _events.emit(WikiListEvent.OpenWiki(join.fingerprint.ifBlank { join.id }, join.home))
             } else {
                 val message = result.exceptionOrNull()?.toMochiError()?.userMessage()
@@ -242,10 +279,7 @@ class WikiListViewModel @Inject constructor(
             )
             try {
                 repo.unsubscribeWiki(wiki.fingerprint ?: wiki.id)
-                _uiState.value = _uiState.value.copy(
-                    unsubscribingId = null,
-                    wikis = _uiState.value.wikis.filterNot { it.id == wiki.id },
-                )
+                _uiState.value = _uiState.value.copy(unsubscribingId = null)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(unsubscribingId = null)
                 val message = e.toMochiError().userMessage()
@@ -264,6 +298,19 @@ class WikiListViewModel @Inject constructor(
         return try {
             val token = repo.globalRssToken(mode)
             Result.success("$serverUrl/wikis/-/rss?token=$token")
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    /**
+     * Retire the tokens behind the all-wikis feed. Nothing to hand back - the
+     * caller only needs to know whether it took.
+     */
+    suspend fun revokeRssAccess(): Result<Unit> {
+        return try {
+            repo.revokeGlobalRssTokens()
+            Result.success(Unit)
         } catch (e: Exception) {
             Result.failure(e)
         }

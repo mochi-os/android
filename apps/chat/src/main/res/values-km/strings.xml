@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ឈ្មោះបង្ហាញ</string>
     <string name="chat_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
     <string name="chat_list_title">ការជជែក</string>
-    <string name="chat_list_close_search">បិទការស្វែងរក</string>
     <string name="chat_list_search">ស្វែងរក</string>
     <string name="chat_list_logout">ចាកចេញ</string>
     <string name="chat_list_new">ការសន្ទនាថ្មី</string>
-    <string name="chat_list_removed_chat">បានយកចេញ</string>
     <string name="chat_new_title">ការសន្ទនាថ្មី</string>
     <string name="chat_new_name">ឈ្មោះក្រុម</string>
     <string name="chat_new_friends">មិត្ត</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">អ្នក</string>
     <string name="chat_chat_not_found">រកមិនឃើញការជជែក</string>
 
-    <string name="chat_list_more">បន្ថែម</string>
     <string name="chat_message_send">ផ្ញើ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">ការចូលបានបរាជ័យ</string>
     <string name="chat_attachment_move_up">ផ្លាស់ទីឡើងលើ</string>
     <string name="chat_attachment_move_down">ផ្លាស់ទីចុះក្រោម</string>
-    <string name="chat_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
 
     <string name="notification_channel_chat">ការជូនដំណឹងជជែក</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA មិនទាន់គាំទ្រនៅក្នុងកម្មវិធីទូរស័ព្ទចល័ត</string>
     <string name="chat_auth_enter_code_sent">បញ្ចូលលេខកូដដែលបានផ្ញើទៅ %1$s</string>
     <string name="chat_auth_create_identity">បង្កើតអត្តសញ្ញាណរបស់អ្នក</string>
-    <string name="chat_list_search_placeholder">ស្វែងរកការជជែក</string>
-    <string name="chat_list_no_matching">មិនមានការជជែកត្រូវគ្នាទេ</string>
     <string name="chat_list_empty">មិនទាន់មានការជជែកទេ</string>
-    <string name="chat_list_left_chat">បានចាកចេញ</string>
     <string name="chat_new_existing_chat">បើកការជជែកដែលមានស្រាប់</string>
     <string name="chat_new_start">ចាប់ផ្ដើមការជជែក</string>
     <string name="chat_new_start_group">ចាប់ផ្ដើមការជជែកជាក្រុម</string>

@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">ಪ್ರದರ್ಶನ ಹೆಸರು</string>
     <string name="chat_auth_verification_failed">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="chat_list_title">ಚಾಟ್‌ಗಳು</string>
-    <string name="chat_list_close_search">ಹುಡುಕಾಟ ಮುಚ್ಚಿ</string>
     <string name="chat_list_search">ಹುಡುಕಿ</string>
     <string name="chat_list_logout">ಲಾಗ್ ಔಟ್</string>
     <string name="chat_list_new">ಹೊಸ ಚಾಟ್</string>
-    <string name="chat_list_removed_chat">ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
     <string name="chat_new_title">ಹೊಸ ಚಾಟ್</string>
     <string name="chat_new_name">ಗುಂಪು ಹೆಸರು</string>
     <string name="chat_new_friends">ಸ್ನೇಹಿತರು</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">ನೀವು</string>
     <string name="chat_chat_not_found">ಚಾಟ್ ಸಿಗಲಿಲ್ಲ</string>
 
-    <string name="chat_list_more">ಇನ್ನಷ್ಟು</string>
     <string name="chat_message_send">ಕಳುಹಿಸಿ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
     <string name="chat_attachment_move_up">ಮೇಲೆ ಸರಿಸಿ</string>
     <string name="chat_attachment_move_down">ಕೆಳಗೆ ಸರಿಸಿ</string>
-    <string name="chat_list_add_to_home">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
 
     <string name="notification_channel_chat">ಚಾಟ್ ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ MFA ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
     <string name="chat_auth_enter_code_sent">%1$s ಗೆ ಕಳುಹಿಸಿದ ಕೋಡ್ ಅನ್ನು ನಮೂದಿಸಿ</string>
     <string name="chat_auth_create_identity">ನಿಮ್ಮ ಗುರುತನ್ನು ರಚಿಸಿ</string>
-    <string name="chat_list_search_placeholder">ಚಾಟ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
-    <string name="chat_list_no_matching">ಹೊಂದಾಣಿಕೆಯಾಗುವ ಚಾಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="chat_list_empty">ಇನ್ನೂ ಯಾವುದೇ ಚಾಟ್‌ಗಳಿಲ್ಲ</string>
-    <string name="chat_list_left_chat">ಬಿಟ್ಟಿದ್ದೀರಿ</string>
     <string name="chat_new_existing_chat">ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಚಾಟ್ ತೆರೆಯಿರಿ</string>
     <string name="chat_new_start">ಚಾಟ್ ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="chat_new_start_group">ಗುಂಪು ಚಾಟ್ ಪ್ರಾರಂಭಿಸಿ</string>

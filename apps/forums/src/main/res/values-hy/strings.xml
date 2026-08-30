@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Ցուցադրման անուն</string>
     <string name="forums_auth_verification_failed">Ստուգումը ձախողվեց</string>
     <string name="forums_list_title">Ֆորումներ</string>
-    <string name="forums_list_close_search">Փակել որոնումը</string>
-    <string name="forums_list_search">Որոնել</string>
     <string name="forums_list_find">Գտնել ֆորումներ</string>
     <string name="forums_list_logout">Դուրս գալ</string>
-    <string name="forums_list_create">Ստեղծել ֆորում</string>
     <string name="forums_list_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
     <string name="forums_list_unsubscribe_title">Բաժանորդագրությունից հրաժարվել</string>
     <string name="forums_create_title">Ստեղծել ֆորում</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Ֆորումը չի գտնվել</string>
     <string name="forums_post_not_found">Գրառումը չի գտնվել</string>
 
-    <string name="forums_list_more">Ավելին</string>
     <string name="forums_comment_send">Ուղարկել</string>
     <string name="forums_post_body_field">Բովանդակություն</string>
     <string name="forums_post_edit_body_field">Բովանդակություն</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
     <string name="forums_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
     <string name="forums_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
-    <string name="forums_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
     <string name="forums_tag_clear">Մաքրել զտիչը</string>
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Գրեք մեկնաբանություն…</string>
 
     <string name="notification_channel_forums">Ֆորումների ծանուցումներ</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Որոնել ֆորումներ</string>
-    <string name="forums_list_no_matching">Համապատասխան ֆորումներ չկան</string>
     <string name="forums_list_empty">Դեռ ֆորումներ չկան</string>
     <string name="forums_list_unsubscribe_message">Վստա՞հ եք, որ ցանկանում եք չեղարկել բաժանորդագրությունը այս ֆորումից:</string>
     <string name="forums_find_search_placeholder">Որոնել ֆորումներ կամ տեղադրել URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Բարձրացնել հետաքրքրությունը</string>
     <string name="forums_tag_interest_down">Նվազեցնել հետաքրքրությունը</string>
     <string name="forums_tag_interest_remove">Հեռացնել հետաքրքրությունը</string>
-    <string name="forums_list_default_sort">Լռելյայն տեսակավորում</string>
     <string name="forums_access_tab_users">Օգտատերեր</string>
     <string name="forums_access_tab_groups">Խմբեր</string>
     <string name="forums_access_tab_manual">Ձեռքով</string>

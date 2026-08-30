@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Navê xuyabûnê</string>
     <string name="forums_auth_verification_failed">Verifîkasyon têk çû</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Lêgerînê bigire</string>
-    <string name="forums_list_search">Lêger</string>
     <string name="forums_list_find">Foruman bibîne</string>
     <string name="forums_list_logout">Derkeve</string>
-    <string name="forums_list_create">Forum çêbike</string>
     <string name="forums_list_unsubscribe">Abone yî nebe</string>
     <string name="forums_list_unsubscribe_title">Abone yî nebe</string>
     <string name="forums_create_title">Forum çêbike</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum nehat dîtin</string>
     <string name="forums_post_not_found">Poste nehat dîtin</string>
 
-    <string name="forums_list_more">Zêdetir</string>
     <string name="forums_comment_send">Bişîne</string>
     <string name="forums_post_body_field">Naverok</string>
     <string name="forums_post_edit_body_field">Naverok</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Şîroveyekê binivîse…</string>
     <string name="forums_auth_login_failed">Têketin têk çû</string>
-    <string name="forums_list_add_to_home">Li ekrana malê zêde bike</string>
 
     <string name="notification_channel_forums">Agahdariyên foruman</string>
     <string name="forums_auth_brand">Mochi Forum</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA hêj di sepana mobîl de nayê piştgirîkirin</string>
     <string name="forums_auth_enter_code_sent">Koda ku ji %1$s re hat şandin binivîse</string>
     <string name="forums_auth_create_identity">Nasnameya xwe çêbike</string>
-    <string name="forums_list_search_placeholder">Li foruman bigere</string>
-    <string name="forums_list_no_matching">Tu foruma lihevhatî tune</string>
     <string name="forums_list_empty">Hêj forum tune</string>
     <string name="forums_list_unsubscribe_message">Bi rastî dixwazî ji vê forumê betal bibî?</string>
     <string name="forums_find_search_placeholder">Li foruman bigere an URL bixe</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Berjewendiyê zêde bike</string>
     <string name="forums_tag_interest_down">Balkêşî kêm bike</string>
     <string name="forums_tag_interest_remove">Balkêşiyê rake</string>
-    <string name="forums_list_default_sort">Rêzkirina standard</string>
     <string name="forums_access_tab_users">Bikarhêner</string>
     <string name="forums_access_tab_groups">Kom</string>
     <string name="forums_access_tab_manual">Destî</string>

@@ -138,7 +138,6 @@
     <string name="people_person_accept">Nõustu</string>
     <string name="people_person_decline">Keeldu</string>
 
-    <string name="people_friends_more">Veel</string>
 
     <string name="notification_channel_people">Inimeste teavitused</string>
     <string name="people_screen_friends_todo">Sõbrad — TODO</string>

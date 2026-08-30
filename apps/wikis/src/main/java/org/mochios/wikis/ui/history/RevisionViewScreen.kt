@@ -5,14 +5,15 @@
 
 package org.mochios.wikis.ui.history
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -41,13 +42,17 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
@@ -56,19 +61,21 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.RevisionDetail
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.MarkdownContent
 import org.mochios.wikis.ui.components.WikiContextValue
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -78,6 +85,36 @@ fun RevisionViewScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val wikiInfo = state.wiki
+    val context = LocalContext.current
+    var showRevertDialog by remember { mutableStateOf(false) }
+
+    val revertedMsg = stringResource(R.string.wikis_revert_page_success, viewModel.version)
+    val revertFailedMsg = stringResource(R.string.wikis_revert_page_failed)
+
+    // A revert leaves this revision behind: the page it restored is what the
+    // reader wants to see, and the history entry they came from is stale.
+    LaunchedEffect(state.reverted) {
+        if (state.reverted) {
+            showRevertDialog = false
+            Toast.makeText(context, revertedMsg, Toast.LENGTH_SHORT).show()
+            navController.navigate(WikisApp.pageView(viewModel.wikiId, viewModel.slug)) {
+                popUpTo(WikisApp.pageView(viewModel.wikiId, viewModel.slug)) { inclusive = true }
+            }
+        }
+    }
+
+    LaunchedEffect(state.revertError) {
+        val failure = state.revertError
+        if (failure != null) {
+            showRevertDialog = false
+            Toast.makeText(
+                context,
+                failure.userMessage().ifEmpty { revertFailedMsg },
+                Toast.LENGTH_LONG,
+            ).show()
+            viewModel.clearRevertError()
+        }
+    }
     val revision = state.revision
 
     Scaffold(
@@ -140,26 +177,22 @@ fun RevisionViewScreen(
                             previousRevision = state.previousRevision,
                             previousLoading = state.previousLoading,
                             onToggleDiff = viewModel::toggleDiff,
-                            onBackToHistory = {
-                                navController.navigate(
-                                    WikisApp.pageHistory(viewModel.wikiId, viewModel.slug)
-                                ) {
-                                    popUpTo(
-                                        WikisApp.pageHistory(viewModel.wikiId, viewModel.slug),
-                                    ) { inclusive = false }
-                                    launchSingleTop = true
-                                }
-                            },
-                            onRevert = {
-                                navController.navigate(
-                                    WikisApp.pageRevert(viewModel.wikiId, viewModel.slug, revision.version)
-                                )
-                            },
+                            onRevert = { showRevertDialog = true },
                         )
                     }
                 }
             }
         }
+    }
+
+    if (showRevertDialog) {
+        RevertDialog(
+            slug = viewModel.slug,
+            version = viewModel.version,
+            isReverting = state.isReverting,
+            onConfirm = { comment -> viewModel.revert(comment) },
+            onDismiss = { showRevertDialog = false },
+        )
     }
 }
 
@@ -173,7 +206,6 @@ private fun RevisionBody(
     previousRevision: RevisionDetail?,
     previousLoading: Boolean,
     onToggleDiff: () -> Unit,
-    onBackToHistory: () -> Unit,
     onRevert: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -244,15 +276,6 @@ private fun RevisionBody(
                             )
                         }
                     }
-                    MochiOutlinedButton(onClick = onBackToHistory) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = null,
-                            modifier = Modifier.size(16.dp),
-                        )
-                        Spacer(Modifier.width(6.dp))
-                        Text(stringResource(R.string.wikis_revision_back_to_history))
-                    }
                     if (!isCurrent) {
                         MochiOutlinedButton(onClick = onRevert) {
                             Icon(
@@ -287,12 +310,31 @@ private fun RevisionBody(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
-                    val fp = revision.author
-                    val shown = if (fp.length > 16) "${fp.substring(0, 16)}…" else fp
+                    // The name the server resolved for the author, as the
+                    // history list shows it. A fingerprint is what is left
+                    // when there is no name, and reads as one: monospace, and
+                    // cut short rather than run across the row.
+                    val fingerprint = revision.author
+                    val hasName = revision.name.isNotBlank()
+                    val shown = if (hasName) {
+                        revision.name
+                    } else if (fingerprint.length > 16) {
+                        "${fingerprint.substring(0, 16)}…"
+                    } else {
+                        fingerprint
+                    }
                     Text(
-                        text = "by $shown",
-                        style = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace),
+                        text = stringResource(R.string.wikis_revision_author, shown),
+                        style = if (hasName) {
+                            MaterialTheme.typography.bodySmall
+                        } else {
+                            MaterialTheme.typography.bodySmall.copy(
+                                fontFamily = FontFamily.Monospace,
+                            )
+                        },
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 }
 

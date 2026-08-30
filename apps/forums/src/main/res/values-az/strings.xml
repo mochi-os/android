@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Göstərilən ad</string>
     <string name="forums_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="forums_list_title">Forumlar</string>
-    <string name="forums_list_close_search">Axtarışı bağla</string>
-    <string name="forums_list_search">Axtar</string>
     <string name="forums_list_find">Forumları tap</string>
     <string name="forums_list_logout">Çıx</string>
-    <string name="forums_list_create">Forum yarat</string>
     <string name="forums_list_unsubscribe">CRM-dən abunəlikdən çıx</string>
     <string name="forums_list_unsubscribe_title">CRM-dən abunəlikdən çıx</string>
     <string name="forums_create_title">Forum yarat</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum tapılmadı</string>
     <string name="forums_post_not_found">Post tapılmadı</string>
 
-    <string name="forums_list_more">Daha çox</string>
     <string name="forums_comment_send">Göndər</string>
 
     <string name="notification_channel_forums">Forum bildirişləri</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA hələ mobil tətbiqdə dəstəklənmir</string>
     <string name="forums_auth_enter_code_sent">%1$s ünvanına göndərilən kodu daxil edin</string>
     <string name="forums_auth_create_identity">Şəxsiyyətinizi yaradın</string>
-    <string name="forums_list_search_placeholder">Forumları axtar</string>
-    <string name="forums_list_no_matching">Uyğun forum yoxdur</string>
     <string name="forums_list_empty">Hələ forum yoxdur</string>
-    <string name="forums_list_add_to_home">Əsas ekrana əlavə et</string>
     <string name="forums_list_unsubscribe_message">Bu forumdan abunəliyi ləğv etmək istədiyinizə əminsiniz?</string>
     <string name="forums_find_search_placeholder">Forumları axtar və ya URL yapışdır</string>
     <string name="forums_find_search_hint">Abunə olmaq üçün forum axtarın</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Marağı artır</string>
     <string name="forums_tag_interest_down">Marağı azalt</string>
     <string name="forums_tag_interest_remove">Marağı sil</string>
-    <string name="forums_list_default_sort">Default sıralama</string>
     <string name="forums_access_tab_users">İstifadəçilər</string>
     <string name="forums_access_tab_groups">Qruplar</string>
     <string name="forums_access_tab_manual">Manual</string>

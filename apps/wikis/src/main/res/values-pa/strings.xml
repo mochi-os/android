@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">ਤਬਦੀਲੀਆਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
     <string name="wikis_rss_copied">RSS URL ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਹੋ ਗਿਆ</string>
     <string name="wikis_rss_failed">RSS ਟੋਕਨ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">ਵਿੱਕੀ ਲੱਭੋ</string>
     <string name="wikis_find_no_results">ਕੋਈ ਵਿਕੀ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="wikis_find_recommended_section">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀਆਂ ਵਿਕੀਆਂ</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">ਅਜੇ ਕੋਈ ਟਿੱਪਣੀ ਨਹੀਂ</string>
     <string name="wikis_comments_empty_subtitle">ਇਸ ਪੰਨੇ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰਨ ਵਾਲੇ ਪਹਿਲੇ ਬਣੋ।</string>
     <string name="wikis_comment_action_reply">ਜਵਾਬ</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="wikis_comment_action_delete">ਮਿਟਾਓ</string>
     <string name="wikis_comment_action_save">ਸੰਭਾਲੋ</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="wikis_editor_insert">ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="wikis_editor_attachments">ਅਟੈਚਮੈਂਟਾਂ</string>
-    <string name="wikis_editor_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="wikis_editor_delete">ਪੰਨਾ ਮਿਟਾਓ</string>
     <string name="wikis_editor_save">ਸੰਭਾਲੋ</string>
     <string name="wikis_editor_saving">ਸੰਭਾਲ ਰਿਹਾ ਹੈ…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">ਸਿਰਲੇਖ</string>
     <string name="wikis_editor_slug_label">ਪੇਜ URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">ਸਮੱਗਰੀ</string>
     <string name="wikis_editor_summary_label">ਸੰਪਾਦਨ ਸਾਰ (ਵਿਕਲਪਿਕ)</string>
     <string name="wikis_editor_summary_hint">ਸੰਖੇਪ ਵਿੱਚ ਆਪਣੀਆਂ ਤਬਦੀਲੀਆਂ ਦਾ ਵੇਰਵਾ ਦਿਓ</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">ਪੇਜ ਮਿਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_revert_page_comment_label">ਟਿੱਪਣੀ ਵਾਪਸ ਕਰੋ</string>
     <string name="wikis_revert_page_confirm">ਵਾਪਸ ਕਰੋ</string>
-    <string name="wikis_revert_page_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="wikis_revert_page_failed">ਪੇਜ ਨੂੰ ਵਾਪਸ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_rename_page_title">ਪੇਜ ਦਾ ਨਾਮ ਬਦਲੋ</string>
     <string name="wikis_rename_page_label">ਨਵਾਂ URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">ਦੇਖੋ</string>
     <string name="wikis_history_revert_action">ਇਸ ਸੰਸਕਰਣ \'ਤੇ ਵਾਪਸ ਜਾਓ</string>
     <string name="wikis_revision_current_badge">ਮੌਜੂਦਾ</string>
-    <string name="wikis_revision_back_to_history">ਇਤਿਹਾਸ ਵਿੱਚ ਵਾਪਸ</string>
     <string name="wikis_revision_revert_to_this">ਇਸ ਸੰਸਕਰਣ \'ਤੇ ਵਾਪਸ ਜਾਓ</string>
     <string name="wikis_changes_title">ਹਾਲੀਆ ਬਦਲਾਅ</string>
     <string name="wikis_changes_subtitle">ਇਸ ਵਿਕੀ ਦੇ ਸਾਰੇ ਪੇਜਾਂ ਵਿੱਚ ਹਾਲੀਆ ਸੋਧਾਂ।</string>
     <string name="wikis_changes_empty">ਅਜੇ ਕੋਈ ਬਦਲਾਅ ਨਹੀਂ</string>
-    <string name="wikis_search_title">ਖੋਜ</string>
     <string name="wikis_search_empty_query">ਖੋਜ ਸ਼ਬਦ ਦਰਜ ਕਰੋ</string>
     <string name="wikis_redirects_title">ਰੀਡਾਇਰੈਕਟ</string>
     <string name="wikis_redirects_add">ਜੋੜੋ</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">ਬਣਾਓ</string>
     <string name="wikis_redirect_source_label">ਸਰੋਤ</string>
     <string name="wikis_redirect_target_label">ਟੀਚਾ</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ਸਰੋਤ ਅਤੇ ਟੀਚਾ ਦੋਵੇਂ ਲੋੜੀਂਦੇ ਹਨ</string>
     <string name="wikis_redirect_created_success">ਰੀਡਾਇਰੈਕਟ ਬਣਾਇਆ ਗਿਆ</string>
     <string name="wikis_redirect_create_failed">ਰੀਡਾਇਰੈਕਟ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">ਗ੍ਰਿੱਡ ਵਿਊ</string>
     <string name="wikis_attachments_view_list">ਲਿਸਟਿੰਗ ਹਟਾਈ ਗਈ</string>
     <string name="wikis_attachments_copy_embed">ਐਮਬੈੱਡ ਲਿੰਕ ਕਾਪੀ ਕਰੋ</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">ਏਮਬੈੱਡ ਲਿੰਕ ਕਾਪੀ ਕੀਤਾ</string>
     <string name="wikis_attachments_delete">ਮਿਟਾਓ</string>
     <string name="wikis_attachments_delete_confirm_title">ਅਟੈਚਮੈਂਟ ਮਿਟਾਓ</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">ਵਿੱਕੀ ਸਿੰਕ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_settings_section_home">ਮੁੱਖ ਪੇਜ</string>
     <string name="wikis_settings_field_home_label">ਘਰ ਵਜੋਂ ਵਰਤੋ</string>
-    <string name="wikis_settings_home_save">ਤਬਦੀਲੀਆਂ ਸੰਭਾਲੋ</string>
     <string name="wikis_settings_home_saved">ਸੈਟਿੰਗਾਂ ਸੰਭਾਲੀਆਂ ਗਈਆਂ</string>
     <string name="wikis_settings_home_save_failed">ਸੈਟਿੰਗਾਂ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="wikis_settings_section_delete">ਵਿਕੀ ਮਿਟਾਓ</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">ਮਾਲਕ</string>
     <string name="wikis_access_tab_users">ਉਪਭੋਗਤਾ</string>
     <string name="wikis_access_tab_groups">ਗਰੁੱਪ</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">ਕੋਈ ਗਰੁੱਪ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="wikis_access_set_success">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
     <string name="wikis_access_revoke_success">ਪਹੁੰਚ ਹਟਾਈ ਗਈ</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” ਪੰਨਾ ਹਾਲੇ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">ਪੰਨਾ ਲਿੰਕ ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="wikis_pageview_share_chooser">ਵਿਕੀ ਲਿੰਕ</string>
     <string name="wikis_pageview_share_link_copied">ਪੰਨਾ ਲਿੰਕ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਪੀ ਹੋਇਆ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki ਪੰਨਾ ਲਿੰਕ</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">ਪੰਨਾ ਲਿੰਕ ਸਾਂਝਾ ਕਰੋ</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: ਤਬਦੀਲੀਆਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
+    <string name="wikis_page_action_share">ਲਿੰਕ</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki ਖੋਜੋ…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ %1$s ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="wikis_subscribe_failed_502">ਉਹ ਸਰਵਰ ਪਹੁੰਚ ਤੋਂ ਬਾਹਰ ਹੈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ਨਾਮ, ID, ਫਿੰਗਰਪ੍ਰਿੰਟ ਜਾਂ URL ਦੁਆਰਾ ਖੋਜੋ…</string>
     <string name="wikis_join_search_button">wiki ਖੋਜੋ…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki ਲਈ ਸਬਸਕ੍ਰਾਈਬ ਕੀਤਾ</string>
     <string name="wikis_subscribe_502_retry">ਸੁਝਾਏ ਸਰਵਰ ਤੋਂ ਬਿਨਾਂ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">ਟਿੱਪਣੀ ਲਿਖੋ…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">ਆਪਣੀ ਸਮੱਗਰੀ ਇੱਥੇ Markdown ਵਰਤ ਕੇ ਲਿਖੋ…</string>
     <string name="wikis_insert_dialog_empty">ਹਾਲੇ ਕੋਈ ਅਟੈਚਮੈਂਟ ਨਹੀਂ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ।</string>
     <string name="wikis_delete_page_message">ਤੁਸੀਂ “%1$s” (%2$s) ਪੰਨਾ ਮਿਟਾਉਣ ਵਾਲੇ ਹੋ। ਇਤਿਹਾਸ ਤੋਂ ਬਹਾਲ ਕਰਕੇ ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>
 
     <string name="wikis_revision_compare">ਤਬਦੀਲੀਆਂ ਦੀ ਤੁਲਨਾ ਕਰੋ</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">ਪੰਨਾ ਦਿਖਾਓ</string>
     <string name="wikis_revision_compare_failed">ਤੁਲਨਾ ਲਈ ਪਿਛਲਾ ਵਰਜਨ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।</string>
     <string name="wikis_revision_changes_from">ਵਰਜਨ %1$d → %2$d ਤੋਂ ਤਬਦੀਲੀਆਂ</string>
@@ -353,4 +356,6 @@
         <item quantity="other">«%2$s» ਲਈ %1$d ਨਤੀਜੇ ਮਿਲਿਆ</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ਕੈਪਸ਼ਨ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

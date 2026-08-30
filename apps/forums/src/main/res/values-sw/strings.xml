@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Jina la kuonyesha</string>
     <string name="forums_auth_verification_failed">Uthibitishaji umeshindwa</string>
     <string name="forums_list_title">Makongamano</string>
-    <string name="forums_list_close_search">Funga utafutaji</string>
-    <string name="forums_list_search">Tafuta</string>
     <string name="forums_list_find">Tafuta makongamano</string>
     <string name="forums_list_logout">Toka</string>
-    <string name="forums_list_create">Unda jukwaa</string>
     <string name="forums_list_unsubscribe">Jiondoe</string>
     <string name="forums_list_unsubscribe_title">Jiondoe</string>
     <string name="forums_create_title">Unda jukwaa</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Kongamano halikupatikana</string>
     <string name="forums_post_not_found">Chapisho halikupatikana</string>
 
-    <string name="forums_list_more">Zaidi</string>
     <string name="forums_comment_send">Tuma</string>
     <string name="forums_post_body_field">Mwili</string>
     <string name="forums_post_edit_body_field">Mwili</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Ongeza lebo</string>
     <string name="forums_write_comment">Andika maoni…</string>
     <string name="forums_auth_login_failed">Kuingia kumeshindwa</string>
-    <string name="forums_list_add_to_home">Ongeza kwenye skrini ya nyumbani</string>
 
     <string name="notification_channel_forums">Arifa za majukwaa</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA bado haitumiki katika programu ya simu</string>
     <string name="forums_auth_enter_code_sent">Weka msimbo uliotumwa kwa %1$s</string>
     <string name="forums_auth_create_identity">Unda utambulisho wako</string>
-    <string name="forums_list_search_placeholder">Tafuta majukwaa</string>
-    <string name="forums_list_no_matching">Hakuna majukwaa yanayolingana</string>
     <string name="forums_list_empty">Hakuna majukwaa bado</string>
     <string name="forums_list_unsubscribe_message">Una uhakika unataka kujiondoa kwenye jukwaa hili?</string>
     <string name="forums_find_search_placeholder">Tafuta majukwaa au bandika URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Ongeza mvuto</string>
     <string name="forums_tag_interest_down">Punguza shauku</string>
     <string name="forums_tag_interest_remove">Ondoa shauku</string>
-    <string name="forums_list_default_sort">Mpangilio chaguo-msingi</string>
     <string name="forums_access_tab_users">Watumiaji</string>
     <string name="forums_access_tab_groups">Vikundi</string>
     <string name="forums_access_tab_manual">Mwongozo</string>

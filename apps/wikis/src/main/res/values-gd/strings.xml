@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Atharrachaidhean agus beachdan</string>
     <string name="wikis_rss_copied">Chaidh URL RSS a lethbhreacadh dhan stòr-bhòrd</string>
     <string name="wikis_rss_failed">Cha b\' urrainn tòcan RSS fhaighinn</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Lorg uicipeidean</string>
     <string name="wikis_find_no_results">Cha deach uicipèadan a lorg</string>
     <string name="wikis_find_recommended_section">Uicipèadan air am moladh</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Chan eil beachdan ann fhathast</string>
     <string name="wikis_comments_empty_subtitle">Bi-sa a\' chiad neach a chuireas beachd air an duilleag seo.</string>
     <string name="wikis_comment_action_reply">Freagair</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Deasaich</string>
     <string name="wikis_comment_action_delete">Sguab às</string>
     <string name="wikis_comment_action_save">Sàbhail</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Deasaich</string>
     <string name="wikis_editor_insert">Cuir a-steach</string>
     <string name="wikis_editor_attachments">Ceanglachain</string>
-    <string name="wikis_editor_cancel">Sguir dheth</string>
     <string name="wikis_editor_delete">Sguab às duilleag</string>
     <string name="wikis_editor_save">Sàbhail</string>
     <string name="wikis_editor_saving">A\' sàbhaladh…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Tiotal</string>
     <string name="wikis_editor_slug_label">URL na duilleige</string>
     <string name="wikis_editor_slug_hint">ainm-mo-dhuilleige</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Susbaint</string>
     <string name="wikis_editor_summary_label">Deasaich an geàrr-chunntas (roghainneil)</string>
     <string name="wikis_editor_summary_hint">Mìnich na h-atharrachaidhean agad gu goirid</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Cha b\' urrainn duilleag a sguabadh às</string>
     <string name="wikis_revert_page_comment_label">Aisig am beachd</string>
     <string name="wikis_revert_page_confirm">Aisig</string>
-    <string name="wikis_revert_page_cancel">Sguir dheth</string>
     <string name="wikis_revert_page_failed">Cha b\' urrainn an duilleag a thilleadh</string>
     <string name="wikis_rename_page_title">Cuir ainm ùr air an duilleig</string>
     <string name="wikis_rename_page_label">URL Ùr</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Seall</string>
     <string name="wikis_history_revert_action">Aisig chun an tionndaidh seo</string>
     <string name="wikis_revision_current_badge">Làithreach</string>
-    <string name="wikis_revision_back_to_history">Air ais gu eachdraidh</string>
     <string name="wikis_revision_revert_to_this">Aisig chun an tionndaidh seo</string>
     <string name="wikis_changes_title">Atharrachaidhean o chionn ghoirid</string>
     <string name="wikis_changes_subtitle">Deasachaidhean o chionn ghoirid air feadh nan duilleagan uile san uicipèad seo.</string>
     <string name="wikis_changes_empty">Chan eil atharrachaidhean ann fhathast</string>
-    <string name="wikis_search_title">Lorg</string>
     <string name="wikis_search_empty_query">Cuir a-steach faclan luirg</string>
     <string name="wikis_redirects_title">Ath-stiùiridhean</string>
     <string name="wikis_redirects_add">Cuir ris</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Cruthaich</string>
     <string name="wikis_redirect_source_label">Tùs</string>
     <string name="wikis_redirect_target_label">Targaid</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Tha feum air an dà chuid an tùs agus an targaid</string>
     <string name="wikis_redirect_created_success">Chaidh an t-ath-stiùireadh a chruthachadh</string>
     <string name="wikis_redirect_create_failed">Cha b\' urrainn ath-stiùireadh a chruthachadh</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Sealladh cliath</string>
     <string name="wikis_attachments_view_list">Sealladh liosta</string>
     <string name="wikis_attachments_copy_embed">Dèan lethbhreac den cheangal-leabachaidh</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Chaidh ceangal an leabaidh a chopaigeadh</string>
     <string name="wikis_attachments_delete">Sguab às</string>
     <string name="wikis_attachments_delete_confirm_title">Sguab às ceanglachan</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Cha b\' urrainn an uicipeid a shioncronachadh</string>
     <string name="wikis_settings_section_home">Duilleag-dhachaigh</string>
     <string name="wikis_settings_field_home_label">Cleachd mar dhachaigh</string>
-    <string name="wikis_settings_home_save">Sàbhail na h-atharrachaidhean</string>
     <string name="wikis_settings_home_saved">Roghainnean air an sàbhaladh</string>
     <string name="wikis_settings_home_save_failed">Cha b\' urrainn na roghainnean a shàbhaladh</string>
     <string name="wikis_settings_section_delete">Sguab às uicipeid</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Sealbhadair</string>
     <string name="wikis_access_tab_users">Cleachdaichean</string>
     <string name="wikis_access_tab_groups">Buidhnean</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Chan eil buidhnean rim faotainn</string>
     <string name="wikis_access_set_success">Inntrigeadh air ùrachadh</string>
     <string name="wikis_access_revoke_success">Inntrigeadh air a thoirt air falbh</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Chan eil an duilleag “%1$s” ann fhathast.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Co-roinn ceangal na duilleige</string>
+    <string name="wikis_pageview_share_chooser">Ceangal na wiki</string>
     <string name="wikis_pageview_share_link_copied">Chaidh ceangal na duilleige a chur air an stòr-bhòrd</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Ceangal duilleag Wiki</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Co-roinn ceangal na duilleige</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Atharraichean is beachdan</string>
+    <string name="wikis_page_action_share">Ceangal</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Lorg wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">A bheil thu cinnteach gu bheil thu airson sgur de %1$s?</string>
     <string name="wikis_subscribe_failed_502">Cha ghabh am frithealaiche sin a ruigsinn. A’ feuchainn a-rithist…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Lorg a rèir ainm, ID, lorg-meòir no URL…</string>
     <string name="wikis_join_search_button">Lorg wikis…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Fo-sgrìobhte ris an wiki</string>
     <string name="wikis_subscribe_502_retry">A’ feuchainn a-rithist às aonais an fhrithealaiche a mholadh…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Sgrìobh beachd…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Sgrìobh an t-susbaint agad an seo le Markdown…</string>
     <string name="wikis_insert_dialog_empty">Chan eil ceanglachain ann fhathast. Luchdaich suas faidhle gus tòiseachadh.</string>
     <string name="wikis_delete_page_message">Tha thu gu bhith a’ sguabadh às na duilleige “%1$s” (%2$s). Gabhaidh an gnìomh seo a neo-dhèanamh le bhith ag ath-nochdadh on eachdraidh.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Cleachdaichean dearbhte</string>
 
     <string name="wikis_revision_compare">Dèan coimeas eadar atharraichidhean</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Seall an duilleag</string>
     <string name="wikis_revision_compare_failed">Cha b\' urrainn an tionndadh roimhe a luchdadh airson coimeas.</string>
     <string name="wikis_revision_changes_from">Atharraichidhean bho thionndadh %1$d → %2$d</string>
@@ -373,4 +376,6 @@
         <item quantity="other">Fhuaras %1$d toraidhean airson "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Cha b\' urrainn dhuinn an caipsean a shàbhaladh</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

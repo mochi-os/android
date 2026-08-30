@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Igama lokubonisa</string>
     <string name="forums_auth_verification_failed">Ukuqinisekiswa kuhlulekile</string>
     <string name="forums_list_title">Izinkundla</string>
-    <string name="forums_list_close_search">Vala usesho</string>
-    <string name="forums_list_search">Sesha</string>
     <string name="forums_list_find">Thola izinkundla</string>
     <string name="forums_list_logout">Phuma</string>
-    <string name="forums_list_create">Dala i-forum</string>
     <string name="forums_list_unsubscribe">Susa ukubhalisa</string>
     <string name="forums_list_unsubscribe_title">Susa ukubhalisa</string>
     <string name="forums_create_title">Dala i-forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Inkundla ayitholakalanga</string>
     <string name="forums_post_not_found">Okwabiwayo akutholakali</string>
 
-    <string name="forums_list_more">Okwengeziwe</string>
     <string name="forums_comment_send">Thumela</string>
     <string name="forums_post_body_field">Umzimba</string>
     <string name="forums_post_edit_body_field">Umzimba</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Bhala amazwana…</string>
     <string name="forums_auth_login_failed">Ukungena akuphumelelanga</string>
-    <string name="forums_list_add_to_home">Engeza kwisikrini sasekhaya</string>
 
     <string name="notification_channel_forums">Izaziso zezinkundla</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">I-MFA ayikasekelwa kuhlelo lokusebenza lwefoni</string>
     <string name="forums_auth_enter_code_sent">Faka ikhodi ethunyelwe ku-%1$s</string>
     <string name="forums_auth_create_identity">Dala ubunikazi bakho</string>
-    <string name="forums_list_search_placeholder">Sesha izinkundla</string>
-    <string name="forums_list_no_matching">Azikho izinkundla ezifanayo</string>
     <string name="forums_list_empty">Azikho izinkundla okwamanje</string>
     <string name="forums_list_unsubscribe_message">Uqinisekile ukuthi ufuna ukukhansela ukubhalisa kule nkundla?</string>
     <string name="forums_find_search_placeholder">Sesha izinkundla noma namathisela i-URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Khulisa intshisekelo</string>
     <string name="forums_tag_interest_down">Yehlisa intshisekelo</string>
     <string name="forums_tag_interest_remove">Khipha intshisekelo</string>
-    <string name="forums_list_default_sort">Ukuhlunga okuzenzakalelayo</string>
     <string name="forums_access_tab_users">Abasebenzisi</string>
     <string name="forums_access_tab_groups">Amaqembu</string>
     <string name="forums_access_tab_manual">Mathupha</string>

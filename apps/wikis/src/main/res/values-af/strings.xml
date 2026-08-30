@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">Veranderinge en kommentare</string>
     <string name="wikis_rss_copied">RSS-URL na knipbord gekopieer</string>
     <string name="wikis_rss_failed">Kon nie RSS-token kry nie</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Vind wikis</string>
     <string name="wikis_find_no_results">Geen wikis gevind nie</string>
     <string name="wikis_find_recommended_section">Aanbevole wikis</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">Nog geen kommentaar nie</string>
     <string name="wikis_comments_empty_subtitle">Wees die eerste om op hierdie bladsy kommentaar te lewer.</string>
     <string name="wikis_comment_action_reply">Antwoord</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Wysig</string>
     <string name="wikis_comment_action_delete">Verwyder</string>
     <string name="wikis_comment_action_save">Stoor</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">Wysig</string>
     <string name="wikis_editor_insert">Voeg in</string>
     <string name="wikis_editor_attachments">Aanhangsels</string>
-    <string name="wikis_editor_cancel">Kanselleer</string>
     <string name="wikis_editor_delete">Verwyder bladsy</string>
     <string name="wikis_editor_save">Stoor</string>
     <string name="wikis_editor_saving">Stoor…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">Titel</string>
     <string name="wikis_editor_slug_label">Bladsy-URL</string>
     <string name="wikis_editor_slug_hint">my-bladsynaam</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Inhoud</string>
     <string name="wikis_editor_summary_label">Wysiging-opsomming (opsioneel)</string>
     <string name="wikis_editor_summary_hint">Beskryf jou veranderinge kortliks</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">Kon nie bladsy verwyder nie</string>
     <string name="wikis_revert_page_comment_label">Keer kommentaar om</string>
     <string name="wikis_revert_page_confirm">Herstel</string>
-    <string name="wikis_revert_page_cancel">Kanselleer</string>
     <string name="wikis_revert_page_failed">Kon nie bladsy terugstel nie</string>
     <string name="wikis_rename_page_title">Hernoem bladsy</string>
     <string name="wikis_rename_page_label">Nuwe URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">Bekyk</string>
     <string name="wikis_history_revert_action">Keer terug na hierdie weergawe</string>
     <string name="wikis_revision_current_badge">Huidig</string>
-    <string name="wikis_revision_back_to_history">Terug na geskiedenis</string>
     <string name="wikis_revision_revert_to_this">Keer terug na hierdie weergawe</string>
     <string name="wikis_changes_title">Onlangse veranderinge</string>
     <string name="wikis_changes_subtitle">Onlangse wysigings oor alle bladsye in hierdie wiki.</string>
     <string name="wikis_changes_empty">Nog geen veranderinge nie</string>
-    <string name="wikis_search_title">Soek</string>
     <string name="wikis_search_empty_query">Tik \'n soekterm in</string>
     <string name="wikis_redirects_title">Herleidings</string>
     <string name="wikis_redirects_add">Voeg by</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">Skep</string>
     <string name="wikis_redirect_source_label">Bron</string>
     <string name="wikis_redirect_target_label">Teiken</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Beide bron en teiken word vereis</string>
     <string name="wikis_redirect_created_success">Herleiding geskep</string>
     <string name="wikis_redirect_create_failed">Kon nie herleiding skep nie</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">Roosteraansig</string>
     <string name="wikis_attachments_view_list">Lysaansig</string>
     <string name="wikis_attachments_copy_embed">Kopieer inbedskakel</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Inbedskakel gekopieer</string>
     <string name="wikis_attachments_delete">Verwyder</string>
     <string name="wikis_attachments_delete_confirm_title">Verwyder aanhangsel</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">Kon nie wiki sinkroniseer nie</string>
     <string name="wikis_settings_section_home">Tuisbladsy</string>
     <string name="wikis_settings_field_home_label">Gebruik as tuiste</string>
-    <string name="wikis_settings_home_save">Stoor veranderinge</string>
     <string name="wikis_settings_home_saved">Instellings gestoor</string>
     <string name="wikis_settings_home_save_failed">Kon nie instellings stoor nie</string>
     <string name="wikis_settings_section_delete">Verwyder wiki</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">Eienaar</string>
     <string name="wikis_access_tab_users">Gebruikers</string>
     <string name="wikis_access_tab_groups">Groepe</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Geen groepe beskikbaar nie</string>
     <string name="wikis_access_set_success">Toegang opgedateer</string>
     <string name="wikis_access_revoke_success">Toegang verwyder</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Die bladsy “%1$s” bestaan nog nie.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Deel bladsyskakel</string>
+    <string name="wikis_pageview_share_chooser">Wiki-skakel</string>
     <string name="wikis_pageview_share_link_copied">Bladsyskakel na knipbord gekopieer</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki-bladsyskakel</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">Deel bladsyskakel</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: Veranderinge en kommentaar</string>
+    <string name="wikis_page_action_share">Skakel</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Soek ’n wiki…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Is jy seker jy wil van %1$s uitteken?</string>
     <string name="wikis_subscribe_failed_502">Daardie bediener is onbereikbaar. Probeer weer…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Soek op naam, ID, vingerafdruk of URL…</string>
     <string name="wikis_join_search_button">Soek wiki’s…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Op wiki ingeteken</string>
     <string name="wikis_subscribe_502_retry">Probeer weer sonder die voorgestelde bediener…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Skryf \'n kommentaar…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">Skryf jou inhoud hier met Markdown…</string>
     <string name="wikis_insert_dialog_empty">Nog geen aanhegsels nie. Laai ’n lêer op om te begin.</string>
     <string name="wikis_delete_page_message">Jy is op die punt om die bladsy “%1$s” (%2$s) te skrap. Hierdie handeling kan ongedaan gemaak word deur uit die geskiedenis te herstel.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">Geverifieerde gebruikers</string>
 
     <string name="wikis_revision_compare">Vergelyk veranderinge</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Wys bladsy</string>
     <string name="wikis_revision_compare_failed">Kon nie die vorige weergawe vir vergelyking laai nie.</string>
     <string name="wikis_revision_changes_from">Veranderinge van weergawe %1$d → %2$d</string>
@@ -353,4 +356,6 @@
         <item quantity="other">%1$d resultate gevind vir «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kon nie byskrif stoor nie</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

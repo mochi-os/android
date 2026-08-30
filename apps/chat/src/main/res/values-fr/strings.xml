@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Nom d\'affichage</string>
     <string name="chat_auth_verification_failed">Échec de la vérification</string>
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_close_search">Fermer la recherche</string>
     <string name="chat_list_search">Rechercher</string>
     <string name="chat_list_logout">Se déconnecter</string>
     <string name="chat_list_new">Nouveau chat</string>
-    <string name="chat_list_removed_chat">Supprimé</string>
     <string name="chat_new_title">Nouveau chat</string>
     <string name="chat_new_name">Nom du groupe</string>
     <string name="chat_new_friends">Amis</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Vous</string>
     <string name="chat_chat_not_found">Chat introuvable</string>
 
-    <string name="chat_list_more">Plus</string>
     <string name="chat_message_send">Envoyer</string>
 
     <string name="notification_channel_chat">Notifications de messagerie</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
     <string name="chat_auth_enter_code_sent">Saisissez le code envoyé à %1$s</string>
     <string name="chat_auth_create_identity">Créez votre identité</string>
-    <string name="chat_list_search_placeholder">Rechercher des conversations</string>
-    <string name="chat_list_no_matching">Aucune conversation correspondante</string>
     <string name="chat_list_empty">Aucune conversation pour le moment</string>
-    <string name="chat_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
-    <string name="chat_list_left_chat">Quitté</string>
     <string name="chat_new_existing_chat">Ouvrir la conversation existante</string>
     <string name="chat_new_start">Démarrer la conversation</string>
     <string name="chat_new_start_group">Démarrer une conversation de groupe</string>

@@ -6,6 +6,7 @@
 package org.mochios.wikis.ui.editor
 
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,28 +14,29 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.AddPhotoAlternate
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -52,19 +54,28 @@ import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MarkdownPreviewSheet
+import org.mochios.android.ui.components.MarkdownToolbar
+import org.mochios.android.ui.components.MarkdownToolbarSeparator
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.navigation.WikisApp
+import androidx.compose.runtime.CompositionLocalProvider
+import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.wikis.ui.components.MarkdownContent
 
 /**
@@ -79,22 +90,61 @@ fun PageEditorScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
-    val wikiCtx = LocalWikiContext.current
+    // This screen is a wiki route in its own right, reached straight from the
+    // nav graph, so it provides the context rather than expecting an ancestor
+    // to have done it - without which the preview's markdown cannot resolve an
+    // attachment and raises.
+    val wikiCtx = remember(viewModel.wikiId, viewModel.serverUrl, state.wiki, state.permissions) {
+        WikiContextValue(
+            wikiId = viewModel.wikiId,
+            info = state.wiki ?: WikiInfo(id = viewModel.wikiId),
+            permissions = state.permissions,
+            serverUrl = viewModel.serverUrl,
+        )
+    }
 
     // Body field uses TextFieldValue so we can capture the cursor position
     // and splice inserted markdown at the right spot from the dialog.
-    var bodyField by remember(state.content.length == 0 && !state.isLoading) {
-        mutableStateOf(TextFieldValue(state.content))
-    }
+    var bodyField by remember { mutableStateOf(TextFieldValue(state.content)) }
     // Keep TextFieldValue in sync when the ViewModel mutates content (e.g.
     // from the insert dialog or the initial page load).
     LaunchedEffect(state.content) {
         if (state.content != bodyField.text) {
-            bodyField = bodyField.copy(text = state.content)
+            bodyField = TextFieldValue(state.content, TextRange(state.content.length))
         }
     }
+    /**
+     * Where leaving the editor goes. Abandoning a page that was never written
+     * lands on the wiki's home with its drawer, wiki still selected - there is
+     * no page behind the editor worth returning to. The home page is opened by
+     * slug rather than through the wiki-home resolver, which would blink its
+     * skeleton on the way, and popped back to when it is already underneath.
+     * Editing an existing page goes back to that page.
+     */
+    val leaveEditor: () -> Unit = {
+        val home = state.wiki?.home?.takeIf { slug -> slug.isNotBlank() }
+        val previous = navController.previousBackStackEntry
+        val cameFromHome = previous?.destination?.route == WikisApp.PAGE_VIEW &&
+            previous.arguments?.getString("page") == home
+        when {
+            !viewModel.isNew || cameFromHome -> navController.popBackStack()
+            home != null -> navController.navigate(
+                WikisApp.pageView(viewModel.wikiId, home),
+            ) {
+                popUpTo(WikisApp.HOME)
+            }
+            else -> navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
+                popUpTo(WikisApp.HOME)
+            }
+        }
+    }
+    BackHandler(enabled = viewModel.isNew) { leaveEditor() }
+
     var savedCursor by remember { mutableStateOf(0) }
     var insertDialogOpen by remember { mutableStateOf(false) }
+    var menuOpen by remember { mutableStateOf(false) }
+    var showDeleteDialog by remember { mutableStateOf(false) }
+    val canDeletePage = !viewModel.isNew && state.permissions.delete
 
     // Pre-resolve i18n strings so the ViewModel can build localised toasts
     // for error fallbacks without dipping into Android resources directly.
@@ -117,13 +167,21 @@ fun PageEditorScreen(
                         Toast.LENGTH_SHORT,
                     ).show()
                     navController.navigate(WikisApp.pageView(viewModel.wikiId, event.slug)) {
-                        popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = false }
+                        popUpTo(WikisApp.HOME)
                     }
                 }
                 PageEditorEvent.Deleted -> {
+                    showDeleteDialog = false
                     Toast.makeText(context, deletedMsg, Toast.LENGTH_SHORT).show()
+                    // Both this editor and the page view it was opened from are
+                    // now showing a page that no longer exists, so both come off
+                    // the stack - popping to the page view takes the editor above
+                    // it with them. It is the page view and not the wiki-home
+                    // route that has to be named here: WikiHomeScreen pops itself
+                    // the moment it has resolved the home page, so it is never on
+                    // the stack to be popped back to.
                     navController.navigate(WikisApp.wikiHome(viewModel.wikiId)) {
-                        popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = true }
+                        popUpTo(WikisApp.PAGE_VIEW) { inclusive = true }
                     }
                 }
                 is PageEditorEvent.Toast -> {
@@ -138,108 +196,191 @@ fun PageEditorScreen(
             TopAppBar(
                 title = {
                     Text(
+                        // Editing shows the page's own title: the bar already
+                        // sits above an editor, so saying so again spends the
+                        // width that the title itself needs.
                         text = if (viewModel.isNew) {
                             stringResource(R.string.wikis_editor_title_new)
                         } else {
-                            val name = state.originalTitle.ifEmpty { state.slug }
-                            stringResource(R.string.wikis_editor_title_edit, name)
-                        }
+                            state.originalTitle.ifEmpty { state.slug }
+                        },
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
                     )
                 },
                 navigationIcon = {
-                    MochiIconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = leaveEditor) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(org.mochios.android.R.string.common_back),
                         )
                     }
                 },
+                actions = {
+                    // Preview is a mode the writer flicks in and out of, so it
+                    // stays one tap away and the icon says which mode is on.
+                    MochiIconButton(onClick = { viewModel.togglePreview() }) {
+                        Icon(
+                            Icons.Filled.Visibility,
+                            contentDescription = stringResource(R.string.wikis_editor_preview),
+                        )
+                    }
+                    if (canDeletePage) {
+                        Box {
+                            MochiIconButton(onClick = { menuOpen = true }) {
+                                Icon(
+                                    Icons.Filled.MoreVert,
+                                    contentDescription = stringResource(
+                                        org.mochios.android.R.string.common_more_options
+                                    ),
+                                )
+                            }
+                            MochiDropdownMenu(
+                                expanded = menuOpen,
+                                onDismissRequest = { menuOpen = false },
+                            ) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.wikis_editor_delete)) },
+                                    onClick = {
+                                        menuOpen = false
+                                        showDeleteDialog = true
+                                    },
+                                    leadingIcon = {
+                                        Icon(Icons.Outlined.Delete, contentDescription = null)
+                                    },
+                                    enabled = !state.isDeleting,
+                                )
+                            }
+                        }
+                    }
+                },
             )
-        }
+        },
+        bottomBar = {
+            // The primary action sits under the thumb rather than at the end of
+            // a row the user has to scroll sideways to reach - the same shape
+            // the create-wiki form uses. It goes with the form: there is
+            // nothing to save behind the error state.
+            if (state.error == null) {
+                Surface(color = MaterialTheme.colorScheme.surface) {
+                    MochiButton(
+                        onClick = {
+                            viewModel.save(
+                                invalidTitle = titleRequiredMsg,
+                                invalidSlug = slugRequiredMsg,
+                                createFailed = createFailedMsg,
+                                editFailed = editFailedMsg,
+                            )
+                        },
+                        enabled = !state.isSaving,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .imePadding()
+                            .navigationBarsPadding()
+                            .padding(horizontal = 16.dp, vertical = 12.dp),
+                    ) {
+                        if (state.isSaving) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(18.dp),
+                                strokeWidth = 2.dp,
+                            )
+                        } else {
+                            Icon(
+                                Icons.Filled.Save,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp),
+                            )
+                        }
+                        Spacer(Modifier.width(6.dp))
+                        Text(
+                            stringResource(
+                                when {
+                                    state.isSaving && viewModel.isNew ->
+                                        R.string.wikis_editor_creating
+                                    state.isSaving -> R.string.wikis_editor_saving
+                                    viewModel.isNew -> R.string.wikis_editor_create
+                                    else -> R.string.wikis_editor_save
+                                }
+                            )
+                        )
+                    }
+                }
+            }
+        },
     ) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-        ) {
-            // Action row (preview/edit, insert, attachments, cancel, delete, save).
-            EditorActions(
-                isNew = viewModel.isNew,
-                showPreview = state.showPreview,
-                isSaving = state.isSaving,
-                isDeleting = state.isDeleting,
-                canDelete = !viewModel.isNew && (wikiCtx?.permissions?.delete == true),
-                onTogglePreview = { viewModel.togglePreview() },
-                onOpenInsert = {
-                    savedCursor = bodyField.selection.end
-                    insertDialogOpen = true
-                },
-                onOpenAttachments = {
-                    val slug = state.slug.ifEmpty { return@EditorActions }
-                    navController.navigate(WikisApp.attachments(viewModel.wikiId, slug))
-                },
-                onCancel = { navController.popBackStack() },
-                onDelete = {
-                    val slug = state.slug.ifEmpty { return@EditorActions }
-                    navController.navigate(WikisApp.pageDelete(viewModel.wikiId, slug))
-                },
-                onSave = {
-                    viewModel.save(
-                        invalidTitle = titleRequiredMsg,
-                        invalidSlug = slugRequiredMsg,
-                        createFailed = createFailedMsg,
-                        editFailed = editFailedMsg,
-                    )
-                },
-            )
-
-            Spacer(Modifier.height(16.dp))
-
+        CompositionLocalProvider(LocalWikiContext provides wikiCtx) {
             when {
                 state.isLoading -> {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 32.dp),
+                            .fillMaxSize()
+                            .padding(padding),
                         contentAlignment = Alignment.Center,
                     ) { CircularProgressIndicator() }
                 }
                 state.error != null -> {
-                    InlineErrorState(
-                        error = state.error!!,
-                        onRetry = { viewModel.retry() },
-                    )
-                }
-                state.showPreview -> {
-                    Text(
-                        text = state.title.ifEmpty {
-                            stringResource(R.string.wikis_editor_preview_untitled)
-                        },
-                        style = MaterialTheme.typography.headlineSmall,
-                        fontWeight = FontWeight.SemiBold,
-                    )
-                    Spacer(Modifier.height(12.dp))
-                    MarkdownContent(content = state.content)
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(padding),
+                    ) {
+                        ErrorState(error = state.error!!, onRetry = { viewModel.retry() })
+                    }
                 }
                 else -> {
-                    EditFields(
-                        isNew = viewModel.isNew,
-                        title = state.title,
-                        slug = state.slug,
-                        comment = state.comment,
-                        bodyField = bodyField,
-                        onTitleChange = viewModel::setTitle,
-                        onSlugChange = viewModel::setSlug,
-                        onCommentChange = viewModel::setComment,
-                        onBodyFieldChange = { tfv ->
-                            bodyField = tfv
-                            if (tfv.text != state.content) viewModel.setContent(tfv.text)
-                        },
-                    )
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(padding)
+                            .verticalScroll(rememberScrollState())
+                            .padding(16.dp),
+                    ) {
+                        EditFields(
+                            isNew = viewModel.isNew,
+                            title = state.title,
+                            slug = state.slug,
+                            comment = state.comment,
+                            bodyField = bodyField,
+                            onTitleChange = viewModel::setTitle,
+                            onSlugChange = viewModel::setSlug,
+                            onCommentChange = viewModel::setComment,
+                            onBodyFieldChange = { tfv ->
+                                bodyField = tfv
+                                if (tfv.text != state.content) viewModel.setContent(tfv.text)
+                            },
+                            onInsertAttachment = {
+                                savedCursor = bodyField.selection.end
+                                insertDialogOpen = true
+                            },
+                            onOpenAttachments = {
+                                val slug = state.slug.ifEmpty { return@EditFields }
+                                navController.navigate(WikisApp.attachments(viewModel.wikiId, slug))
+                            },
+                        )
+                    }
                 }
             }
+        }
+    }
+
+    if (state.showPreview) {
+        // The sheet is composed outside the Scaffold body, so it needs the wiki
+        // context handed to it directly - MarkdownContent resolves attachment
+        // URLs against it and raises without one.
+        CompositionLocalProvider(LocalWikiContext provides wikiCtx) {
+        MarkdownPreviewSheet(onDismiss = { viewModel.togglePreview() }) {
+            Text(
+                text = state.title.ifEmpty {
+                    stringResource(R.string.wikis_editor_preview_untitled)
+                },
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.SemiBold,
+            )
+            Spacer(Modifier.height(12.dp))
+            // The wiki's own renderer: it resolves attachment URLs against the
+            // context this screen provides.
+            MarkdownContent(content = state.content)
+        }
         }
     }
 
@@ -256,108 +397,29 @@ fun PageEditorScreen(
             )
         },
     )
-}
 
-@Composable
-private fun EditorActions(
-    isNew: Boolean,
-    showPreview: Boolean,
-    isSaving: Boolean,
-    isDeleting: Boolean,
-    canDelete: Boolean,
-    onTogglePreview: () -> Unit,
-    onOpenInsert: () -> Unit,
-    onOpenAttachments: () -> Unit,
-    onCancel: () -> Unit,
-    onDelete: () -> Unit,
-    onSave: () -> Unit,
-) {
-    val rowState = rememberScrollState()
-    Row(
-        modifier = Modifier.fillMaxWidth().horizontalScroll(rowState),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        MochiOutlinedButton(onClick = onTogglePreview) {
-            Icon(
-                imageVector = if (showPreview) Icons.Filled.Edit else Icons.Filled.Visibility,
-                contentDescription = null,
-                modifier = Modifier.size(18.dp),
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(
-                stringResource(
-                    if (showPreview) R.string.wikis_editor_edit else R.string.wikis_editor_preview,
-                )
-            )
-        }
-        MochiOutlinedButton(onClick = onOpenInsert) {
-            Icon(
-                Icons.Filled.AddPhotoAlternate,
-                contentDescription = null,
-                modifier = Modifier.size(18.dp),
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(stringResource(R.string.wikis_editor_insert))
-        }
-        if (!isNew) {
-            MochiOutlinedButton(onClick = onOpenAttachments) {
-                Icon(
-                    Icons.Filled.Image,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp),
-                )
-                Spacer(Modifier.width(6.dp))
-                Text(stringResource(R.string.wikis_editor_attachments))
-            }
-        }
-        MochiOutlinedButton(onClick = onCancel) {
-            Icon(
-                Icons.Filled.Close,
-                contentDescription = null,
-                modifier = Modifier.size(18.dp),
-            )
-            Spacer(Modifier.width(6.dp))
-            Text(stringResource(R.string.wikis_editor_cancel))
-        }
-        if (canDelete) {
-            MochiOutlinedButton(onClick = onDelete, enabled = !isDeleting) {
-                Icon(
-                    Icons.Filled.Delete,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp),
-                )
-                Spacer(Modifier.width(6.dp))
-                Text(stringResource(R.string.wikis_editor_delete))
-            }
-        }
-        MochiButton(onClick = onSave, enabled = !isSaving) {
-            if (isSaving) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(18.dp),
-                    strokeWidth = 2.dp,
-                )
-            } else {
-                Icon(
-                    Icons.Filled.Save,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp),
-                )
-            }
-            Spacer(Modifier.width(6.dp))
-            Text(
-                stringResource(
-                    when {
-                        isSaving && isNew -> R.string.wikis_editor_creating
-                        isSaving -> R.string.wikis_editor_saving
-                        isNew -> R.string.wikis_editor_create
-                        else -> R.string.wikis_editor_save
-                    }
-                )
-            )
-        }
+    if (showDeleteDialog) {
+        // Deleting asks over the editor rather than sending the writer to a
+        // screen of its own, which would have thrown away whatever they had
+        // typed on the way there.
+        MochiAlertDialog(
+            onDismissRequest = { if (!state.isDeleting) showDeleteDialog = false },
+            title = stringResource(R.string.wikis_delete_page_title),
+            text = stringResource(
+                R.string.wikis_delete_page_message,
+                state.originalTitle.ifEmpty { state.slug },
+                state.slug,
+            ),
+            confirmText = stringResource(R.string.wikis_delete_page_confirm),
+            onConfirm = { viewModel.delete(deleteFailedMsg) },
+            confirmLoading = state.isDeleting,
+            destructive = true,
+            dismissText = stringResource(R.string.wikis_delete_page_cancel),
+            dismissEnabled = !state.isDeleting,
+        )
     }
 }
+
 
 @Composable
 private fun EditFields(
@@ -370,19 +432,11 @@ private fun EditFields(
     onSlugChange: (String) -> Unit,
     onCommentChange: (String) -> Unit,
     onBodyFieldChange: (TextFieldValue) -> Unit,
+    onInsertAttachment: () -> Unit,
+    onOpenAttachments: () -> Unit,
 ) {
-    if (isNew) {
-        MochiTextField(
-            value = slug,
-            onValueChange = onSlugChange,
-            label = { Text(stringResource(R.string.wikis_editor_slug_label)) },
-            placeholder = { Text(stringResource(R.string.wikis_editor_slug_hint)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Spacer(Modifier.height(12.dp))
-    }
-
+    // Title first: on a new page the address below is derived from it, so the
+    // field that leads has to be the one that is typed first.
     MochiTextField(
         value = title,
         onValueChange = onTitleChange,
@@ -391,6 +445,19 @@ private fun EditFields(
         modifier = Modifier.fillMaxWidth(),
     )
     Spacer(Modifier.height(12.dp))
+
+    if (isNew) {
+        MochiTextField(
+            value = slug,
+            onValueChange = onSlugChange,
+            label = { Text(stringResource(R.string.wikis_editor_slug_label)) },
+            placeholder = { Text(stringResource(R.string.wikis_editor_slug_hint)) },
+            singleLine = true,
+            supportingText = { Text(stringResource(R.string.wikis_editor_slug_help)) },
+            modifier = Modifier.fillMaxWidth(),
+        )
+        Spacer(Modifier.height(12.dp))
+    }
 
     MochiTextField(
         value = bodyField,
@@ -402,6 +469,31 @@ private fun EditFields(
         textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
         keyboardOptions = KeyboardOptions.Default,
     )
+
+    // Docked under the box it writes into, so the markup lands where the eye
+    // already is.
+    MarkdownToolbar(
+        body = bodyField,
+        onBodyChange = onBodyFieldChange,
+        modifier = Modifier.padding(top = 4.dp),
+    ) {
+        // A wiki's own errands: pull a file into the text, or go manage them.
+        MarkdownToolbarSeparator()
+        MochiIconButton(onClick = onInsertAttachment) {
+            Icon(
+                Icons.Filled.Image,
+                contentDescription = stringResource(R.string.wikis_editor_insert),
+                modifier = Modifier.size(20.dp),
+            )
+        }
+        MochiIconButton(onClick = onOpenAttachments, enabled = slug.isNotBlank()) {
+            Icon(
+                Icons.Filled.AttachFile,
+                contentDescription = stringResource(R.string.wikis_editor_attachments),
+                modifier = Modifier.size(20.dp),
+            )
+        }
+    }
 
     if (!isNew) {
         Spacer(Modifier.height(12.dp))

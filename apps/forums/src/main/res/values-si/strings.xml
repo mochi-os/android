@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">සංදර්ශන නාමය</string>
     <string name="forums_auth_verification_failed">සත්‍යාපනය අසාර්ථක විය</string>
     <string name="forums_list_title">සභා</string>
-    <string name="forums_list_close_search">සෙවුම වසන්න</string>
-    <string name="forums_list_search">සොයන්න</string>
     <string name="forums_list_find">සභා සොයන්න</string>
     <string name="forums_list_logout">ඉවත් වන්න</string>
-    <string name="forums_list_create">සංසදයක් නිර්මාණය කරන්න</string>
     <string name="forums_list_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_list_unsubscribe_title">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_create_title">සංසදයක් නිර්මාණය කරන්න</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">සභාව හමු නොවීය</string>
     <string name="forums_post_not_found">පළ කිරීම හමු නොවීය</string>
 
-    <string name="forums_list_more">තවත්</string>
     <string name="forums_comment_send">යවන්න</string>
     <string name="forums_post_body_field">අන්තර්ගතය</string>
     <string name="forums_post_edit_body_field">අන්තර්ගතය</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">අදහසක් ලියන්න…</string>
     <string name="forums_auth_login_failed">පුරනය වීම අසාර්ථකයි</string>
-    <string name="forums_list_add_to_home">මුල් තිරයට එක් කරන්න</string>
 
     <string name="notification_channel_forums">සංසද දැනුම්දීම්</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA තවම ජංගම යෙදුමේ සහාය නොදක්වයි</string>
     <string name="forums_auth_enter_code_sent">%1$s වෙත යවන ලද කේතය ඇතුළත් කරන්න</string>
     <string name="forums_auth_create_identity">ඔබේ අනන්‍යතාව සාදන්න</string>
-    <string name="forums_list_search_placeholder">සංසද සොයන්න</string>
-    <string name="forums_list_no_matching">ගැළපෙන සංසද නොමැත</string>
     <string name="forums_list_empty">තවම සංසද නොමැත</string>
     <string name="forums_list_unsubscribe_message">මෙම සංසදයෙන් දායකත්වය ඉවත් කිරීමට අවශ්‍ය බව ඔබට විශ්වාසද?</string>
     <string name="forums_find_search_placeholder">සංසද සොයන්න හෝ URL අලවන්න</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">කැමැත්ත වැඩි කරන්න</string>
     <string name="forums_tag_interest_down">උනන්දුව අඩු කරන්න</string>
     <string name="forums_tag_interest_remove">උනන්දුව ඉවත් කරන්න</string>
-    <string name="forums_list_default_sort">පෙරනිමි වර්ග කිරීම</string>
     <string name="forums_access_tab_users">පරිශීලකයන්</string>
     <string name="forums_access_tab_groups">කණ්ඩායම්</string>
     <string name="forums_access_tab_manual">අතින්</string>

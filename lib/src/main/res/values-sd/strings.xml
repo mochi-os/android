@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">منسلڪ عارضي طور دستياب ناهي</string>
     <string name="common_unavailable">دستياب نه آھي</string>
     <string name="common_not_found">نه مليو</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">رد ڪريو</string>
     <string name="rss_revoke">رسائي واپس وٺو</string>
     <string name="rss_revoke_title">RSS رسائي منسوخ ڪجي؟</string>

@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">प्रदर्शन नाम</string>
     <string name="chat_auth_verification_failed">वेरिफ़िकेशन विफल</string>
     <string name="chat_list_title">चैट्स</string>
-    <string name="chat_list_close_search">खोज बंद करें</string>
     <string name="chat_list_search">खोजें</string>
     <string name="chat_list_logout">लॉग आउट</string>
     <string name="chat_list_new">नया चैट</string>
-    <string name="chat_list_removed_chat">हटाया गया</string>
     <string name="chat_new_title">नया चैट</string>
     <string name="chat_new_name">ग्रुप नाम</string>
     <string name="chat_new_friends">मित्र</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">आप</string>
     <string name="chat_chat_not_found">चैट नहीं मिली</string>
 
-    <string name="chat_list_more">और</string>
     <string name="chat_message_send">भेजें</string>
     <string name="chat_attachment_remove">अनुलग्नक हटाएं</string>
     <string name="chat_message_remove_attachment">अनुलग्नक हटाएं</string>
     <string name="chat_auth_login_failed">लॉगिन विफल</string>
     <string name="chat_attachment_move_up">ऊपर ले जाएं</string>
     <string name="chat_attachment_move_down">नीचे ले जाएं</string>
-    <string name="chat_list_add_to_home">होम स्क्रीन पर जोड़ें</string>
 
     <string name="notification_channel_chat">चैट सूचनाएँ</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">मोबाइल ऐप में MFA अभी समर्थित नहीं है</string>
     <string name="chat_auth_enter_code_sent">%1$s पर भेजा गया कोड दर्ज करें</string>
     <string name="chat_auth_create_identity">अपनी पहचान बनाएँ</string>
-    <string name="chat_list_search_placeholder">चैट खोजें</string>
-    <string name="chat_list_no_matching">कोई मेल खाती चैट नहीं</string>
     <string name="chat_list_empty">अभी कोई चैट नहीं</string>
-    <string name="chat_list_left_chat">छोड़ा</string>
     <string name="chat_new_existing_chat">मौजूदा चैट खोलें</string>
     <string name="chat_new_start">चैट शुरू करें</string>
     <string name="chat_new_start_group">समूह चैट शुरू करें</string>

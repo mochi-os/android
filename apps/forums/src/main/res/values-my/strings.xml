@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">ဖော်ပြချက် အမည်</string>
     <string name="forums_auth_verification_failed">အတည်ပြုခြင်း မအောင်မြင်ပါ</string>
     <string name="forums_list_title">ဖိုရမ်များ</string>
-    <string name="forums_list_close_search">ရှာဖွေမှု ပိတ်မည်</string>
-    <string name="forums_list_search">ရှာဖွေ</string>
     <string name="forums_list_find">ဖိုရမ်များ ရှာ</string>
     <string name="forums_list_logout">ထွက်</string>
-    <string name="forums_list_create">forum ဖန်တီးမည်</string>
     <string name="forums_list_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="forums_list_unsubscribe_title">Subscribe ဖြုတ်မည်</string>
     <string name="forums_create_title">forum ဖန်တီးမည်</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ဖိုရမ် မတွေ့ပါ</string>
     <string name="forums_post_not_found">ပို့စ် မတွေ့ပါ</string>
 
-    <string name="forums_list_more">နောက်ထပ်</string>
     <string name="forums_comment_send">ပို့</string>
     <string name="forums_post_body_field">အကြောင်းအရာ</string>
     <string name="forums_post_edit_body_field">အကြောင်းအရာ</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">မှတ်ချက်ရေးရန်…</string>
     <string name="forums_auth_login_failed">လော့ဂ်အင် မအောင်မြင်ပါ</string>
-    <string name="forums_list_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
 
     <string name="notification_channel_forums">ဖိုရမ် အကြောင်းကြားချက်များ</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">မိုဘိုင်း အက်ပ်တွင် MFA ကို မပံ့ပိုးသေးပါ</string>
     <string name="forums_auth_enter_code_sent">%1$s သို့ ပို့လိုက်သော ကုဒ်ကို ထည့်ပါ</string>
     <string name="forums_auth_create_identity">သင်၏ အထောက်အထားကို ဖန်တီးပါ</string>
-    <string name="forums_list_search_placeholder">ဖိုရမ်များကို ရှာဖွေပါ</string>
-    <string name="forums_list_no_matching">ကိုက်ညီသော ဖိုရမ်မရှိပါ</string>
     <string name="forums_list_empty">ဖိုရမ် မရှိသေးပါ</string>
     <string name="forums_list_unsubscribe_message">ဤဖိုရမ်မှ စာရင်းသွင်းမှု ဖျက်လိုသည်မှာ သေချာပါသလား?</string>
     <string name="forums_find_search_placeholder">ဖိုရမ်များ ရှာဖွေပါ သို့မဟုတ် URL ကို ကူးထည့်ပါ</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">စိတ်ဝင်စားမှု မြှင့်တင်မည်</string>
     <string name="forums_tag_interest_down">စိတ်ဝင်စားမှု လျှော့ချ</string>
     <string name="forums_tag_interest_remove">စိတ်ဝင်စားမှု ဖယ်ရှား</string>
-    <string name="forums_list_default_sort">မူရင်း sort</string>
     <string name="forums_access_tab_users">သုံးစွဲသူများ</string>
     <string name="forums_access_tab_groups">အုပ်စုများ</string>
     <string name="forums_access_tab_manual">ကိုယ်တိုင်</string>

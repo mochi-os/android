@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Visingsnamn</string>
     <string name="chat_auth_verification_failed">Stadfesting mislukkast</string>
     <string name="chat_list_title">Prat</string>
-    <string name="chat_list_close_search">Lat att søket</string>
     <string name="chat_list_search">Søk</string>
     <string name="chat_list_logout">Logg ut</string>
     <string name="chat_list_new">Ny prat</string>
-    <string name="chat_list_removed_chat">Fjerna</string>
     <string name="chat_new_title">Ny prat</string>
     <string name="chat_new_name">Gruppenamn</string>
     <string name="chat_new_friends">Vener</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Du</string>
     <string name="chat_chat_not_found">Fann ikkje praten</string>
 
-    <string name="chat_list_more">Meir</string>
     <string name="chat_message_send">Send</string>
     <string name="chat_attachment_remove">Fjern vedlegg</string>
     <string name="chat_message_remove_attachment">Fjern vedlegg</string>
     <string name="chat_auth_login_failed">Innlogging mislukkast</string>
     <string name="chat_attachment_move_up">Flytt opp</string>
     <string name="chat_attachment_move_down">Flytt ned</string>
-    <string name="chat_list_add_to_home">Legg til på startskjermen</string>
 
     <string name="notification_channel_chat">Chatvarsel</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA er ikkje støtta i mobilappen enno</string>
     <string name="chat_auth_enter_code_sent">Skriv inn koden som vart send til %1$s</string>
     <string name="chat_auth_create_identity">Opprett identiteten din</string>
-    <string name="chat_list_search_placeholder">Søk i chattar</string>
-    <string name="chat_list_no_matching">Ingen samsvarande chattar</string>
     <string name="chat_list_empty">Ingen chattar enno</string>
-    <string name="chat_list_left_chat">Forlate</string>
     <string name="chat_new_existing_chat">Opne eksisterande chat</string>
     <string name="chat_new_start">Start chat</string>
     <string name="chat_new_start_group">Start gruppechat</string>

@@ -28,8 +28,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -47,6 +45,8 @@ import androidx.navigation.NavController
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.staff.R
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
@@ -222,18 +222,12 @@ private fun ActivityTabs(current: String, onSelect: (String) -> Unit) {
         DashboardTab.AUDIT to stringResource(R.string.staff_dashboard_tab_audit),
     )
     val selectedIndex = tabs.indexOfFirst { it.first == current }.coerceAtLeast(0)
-    TabRow(
-        selectedTabIndex = selectedIndex,
+    MochiTabRow(
+        tabs = tabs.map { (_, label) -> MochiTab(label) },
+        selectedIndex = selectedIndex,
+        onSelect = { index -> onSelect(tabs[index].first) },
         modifier = Modifier.padding(horizontal = 8.dp),
-    ) {
-        tabs.forEachIndexed { idx, (id, label) ->
-            Tab(
-                selected = idx == selectedIndex,
-                onClick = { onSelect(id) },
-                text = { Text(label, maxLines = 1) },
-            )
-        }
-    }
+    )
 }
 
 private fun androidx.compose.foundation.lazy.LazyListScope.renderTabRows(state: DashboardUiState) {

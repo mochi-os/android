@@ -5,7 +5,9 @@
 
 package org.mochios.android.ui.components
 
+import android.content.Context
 import android.media.MediaMetadataRetriever
+import androidx.core.net.toUri
 import coil3.ImageLoader
 import coil3.asImage
 import coil3.decode.DataSource
@@ -19,6 +21,7 @@ import org.mochios.android.auth.SessionManager
 /**
  * Coil model routing a request to [VideoFrameFetcher]. Attachment URLs carry no
  * extension, so a distinct type is the only way the fetcher can claim them.
+ * The url may be a server URL or a `content://` clip picked on the device.
  */
 data class VideoFrame(val url: String)
 
@@ -31,18 +34,27 @@ data class VideoFrame(val url: String)
 class VideoFrameFetcher(
     private val data: VideoFrame,
     private val sessionManager: SessionManager,
+    private val context: Context,
 ) : Fetcher {
 
     override suspend fun fetch(): FetchResult? {
         val retriever = MediaMetadataRetriever()
         return try {
-            retriever.setDataSource(data.url, assetAuthHeaders(sessionManager, data.url))
+            // A clip picked on the device is read through the resolver that
+            // handed it over; one on the server is a URL, and needs the asset
+            // headers to get past auth.
+            val local = data.url.startsWith("content://") || data.url.startsWith("file://")
+            if (local) {
+                retriever.setDataSource(context, data.url.toUri())
+            } else {
+                retriever.setDataSource(data.url, assetAuthHeaders(sessionManager, data.url))
+            }
             val bitmap = retriever.getFrameAtTime(0L, MediaMetadataRetriever.OPTION_CLOSEST_SYNC)
                 ?: return null
             ImageFetchResult(
                 image = bitmap.asImage(),
                 isSampled = false,
-                dataSource = DataSource.NETWORK,
+                dataSource = if (local) DataSource.DISK else DataSource.NETWORK,
             )
         } catch (_: Exception) {
             null
@@ -56,6 +68,6 @@ class VideoFrameFetcher(
             data: VideoFrame,
             options: Options,
             imageLoader: ImageLoader,
-        ): Fetcher = VideoFrameFetcher(data, sessionManager)
+        ): Fetcher = VideoFrameFetcher(data, sessionManager, options.context)
     }
 }

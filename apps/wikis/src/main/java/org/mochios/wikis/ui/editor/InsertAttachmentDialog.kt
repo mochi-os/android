@@ -24,7 +24,6 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -43,6 +42,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import org.mochios.android.ui.components.FileKindIcon
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.wikis.R
@@ -200,10 +200,9 @@ private fun AttachmentTile(
                     modifier = Modifier.fillMaxSize(),
                 )
             } else {
-                Icon(
-                    imageVector = Icons.Filled.AttachFile,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                FileKindIcon(
+                    type = attachment.type,
+                    name = attachment.name,
                     modifier = Modifier.size(28.dp),
                 )
             }

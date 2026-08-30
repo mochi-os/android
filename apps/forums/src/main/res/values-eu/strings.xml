@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Bistaratzeko izena</string>
     <string name="forums_auth_verification_failed">Egiaztatzeak huts egin du</string>
     <string name="forums_list_title">Foroak</string>
-    <string name="forums_list_close_search">Itxi bilaketa</string>
-    <string name="forums_list_search">Bilatu</string>
     <string name="forums_list_find">Aurkitu foroak</string>
     <string name="forums_list_logout">Amaitu saioa</string>
-    <string name="forums_list_create">Sortu foroa</string>
     <string name="forums_list_unsubscribe">Harpidetza kendu</string>
     <string name="forums_list_unsubscribe_title">Harpidetza kendu</string>
     <string name="forums_create_title">Sortu foroa</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Foroa ez da aurkitu</string>
     <string name="forums_post_not_found">Ez da argitalpena aurkitu</string>
 
-    <string name="forums_list_more">Gehiago</string>
     <string name="forums_comment_send">Bidali</string>
 
     <string name="notification_channel_forums">Foroen jakinarazpenak</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA ez da oraindik onartzen mugikorreko aplikazioan</string>
     <string name="forums_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
     <string name="forums_auth_create_identity">Sortu zure identitatea</string>
-    <string name="forums_list_search_placeholder">Bilatu foroak</string>
-    <string name="forums_list_no_matching">Ez dago bat datorren fororik</string>
     <string name="forums_list_empty">Oraindik ez dago fororik</string>
-    <string name="forums_list_add_to_home">Gehitu hasierako pantailara</string>
     <string name="forums_list_unsubscribe_message">Ziur foro honetatik harpidetza kendu nahi duzula?</string>
     <string name="forums_find_search_placeholder">Bilatu foroak edo itsatsi URLa</string>
     <string name="forums_find_search_hint">Bilatu foroak harpidetzeko</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Bultzatu interesa</string>
     <string name="forums_tag_interest_down">Murriztu interesa</string>
     <string name="forums_tag_interest_remove">Kendu interesa</string>
-    <string name="forums_list_default_sort">Lehenetsitako ordena</string>
     <string name="forums_access_tab_users">Erabiltzaileak</string>
     <string name="forums_access_tab_groups">Taldeak</string>
     <string name="forums_access_tab_manual">Eskuz</string>

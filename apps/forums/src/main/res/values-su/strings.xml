@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Ngaran tampilan</string>
     <string name="forums_auth_verification_failed">Verifikasi gagal</string>
     <string name="forums_list_title">Forum</string>
-    <string name="forums_list_close_search">Tutup panéangan</string>
-    <string name="forums_list_search">Paluruh</string>
     <string name="forums_list_find">Téangan forum</string>
     <string name="forums_list_logout">Kaluar</string>
-    <string name="forums_list_create">Jieun forum</string>
     <string name="forums_list_unsubscribe">Hentikeun langganan</string>
     <string name="forums_list_unsubscribe_title">Hentikeun langganan</string>
     <string name="forums_create_title">Jieun forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum teu kapanggih</string>
     <string name="forums_post_not_found">Pos teu kapanggih</string>
 
-    <string name="forums_list_more">Lianna</string>
     <string name="forums_comment_send">Kirim</string>
     <string name="forums_post_body_field">Eusi</string>
     <string name="forums_post_edit_body_field">Eusi</string>
@@ -132,7 +128,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Tulis koméntar…</string>
     <string name="forums_auth_login_failed">Login gagal</string>
-    <string name="forums_list_add_to_home">Tambihkeun ka layar imah</string>
 
     <string name="notification_channel_forums">Béwara forum</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -140,8 +135,6 @@
     <string name="forums_auth_mfa_unsupported">MFA can acan didukung dina aplikasi mobile</string>
     <string name="forums_auth_enter_code_sent">Asupkeun kode anu dikirim ka %1$s</string>
     <string name="forums_auth_create_identity">Jieun idéntitas anjeun</string>
-    <string name="forums_list_search_placeholder">Téangan forum</string>
-    <string name="forums_list_no_matching">Teu aya forum anu cocog</string>
     <string name="forums_list_empty">Acan aya forum</string>
     <string name="forums_list_unsubscribe_message">Anjeun yakin hoyong ngabatalkeun langganan tina forum ieu?</string>
     <string name="forums_find_search_placeholder">Téangan forum atawa témpélkeun URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Tingkatkeun minat</string>
     <string name="forums_tag_interest_down">Kurangan minat</string>
     <string name="forums_tag_interest_remove">Cabut minat</string>
-    <string name="forums_list_default_sort">Urutan standar</string>
     <string name="forums_access_tab_users">Pamaké</string>
     <string name="forums_access_tab_groups">Grup</string>
     <string name="forums_access_tab_manual">Manual</string>

@@ -162,7 +162,7 @@
     <string name="feeds_less_like_this">کەمتر لەمە</string>
     <string name="feeds_no_tags">هیچ تاگێک نییە</string>
     <string name="feeds_anonymous">نەناسراو</string>
-    <string name="feeds_replying_to_comment">وەڵامدانەوەی لێدوان</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">هاوپێچکردنی پەڕگە</string>
     <string name="feeds_tag_label">ناونیشانی تاگ</string>
     <string name="feeds_select_feed">هەواڵدەرێک هەڵبژێرە</string>

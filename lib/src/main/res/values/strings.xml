@@ -396,6 +396,13 @@
     <string name="reactivation_sign_out">Continue closing and sign out</string>
 
     <string name="account_token_label">Mochi session</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <!-- RSS token revocation, shared by feeds, forums and wikis. -->
     <string name="rss_revoke">Revoke access</string>
     <string name="rss_revoke_title">Revoke RSS access?</string>

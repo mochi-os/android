@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Відображуване ім\'я</string>
     <string name="forums_auth_verification_failed">Перевірка не вдалася</string>
     <string name="forums_list_title">Форуми</string>
-    <string name="forums_list_close_search">Закрити пошук</string>
-    <string name="forums_list_search">Пошук</string>
     <string name="forums_list_find">Знайти форуми</string>
     <string name="forums_list_logout">Вийти</string>
-    <string name="forums_list_create">Створити форум</string>
     <string name="forums_list_unsubscribe">Відписатися</string>
     <string name="forums_list_unsubscribe_title">Відписатися</string>
     <string name="forums_create_title">Створити форум</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форум не знайдено</string>
     <string name="forums_post_not_found">Допис не знайдено</string>
 
-    <string name="forums_list_more">Більше</string>
     <string name="forums_comment_send">Надіслати</string>
     <string name="forums_post_body_field">Текст</string>
     <string name="forums_post_edit_body_field">Текст</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Додати тег</string>
     <string name="forums_write_comment">Напишіть коментар…</string>
     <string name="forums_auth_login_failed">Не вдалося увійти</string>
-    <string name="forums_list_add_to_home">Додати на головний екран</string>
 
     <string name="notification_channel_forums">Сповіщення форумів</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA ще не підтримується у мобільному застосунку</string>
     <string name="forums_auth_enter_code_sent">Введіть код, надісланий на %1$s</string>
     <string name="forums_auth_create_identity">Створіть свою особистість</string>
-    <string name="forums_list_search_placeholder">Шукати форуми</string>
-    <string name="forums_list_no_matching">Немає відповідних форумів</string>
     <string name="forums_list_empty">Поки немає форумів</string>
     <string name="forums_list_unsubscribe_message">Ви впевнені, що хочете відписатися від цього форуму?</string>
     <string name="forums_find_search_placeholder">Шукати форуми або вставте URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Підвищити інтерес</string>
     <string name="forums_tag_interest_down">Зменшити інтерес</string>
     <string name="forums_tag_interest_remove">Видалити інтерес</string>
-    <string name="forums_list_default_sort">Сортування за замовчуванням</string>
     <string name="forums_access_tab_users">Користувачі</string>
     <string name="forums_access_tab_groups">Групи</string>
     <string name="forums_access_tab_manual">Вручну</string>

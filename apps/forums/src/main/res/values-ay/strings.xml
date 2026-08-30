@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Uñacht\'awi suti</string>
     <string name="forums_auth_verification_failed">Verificata</string>
     <string name="forums_list_title">Foronaka</string>
-    <string name="forums_list_close_search">Thaqaña jist\'antaña</string>
-    <string name="forums_list_search">Thaqhama</string>
     <string name="forums_list_find">Foronak jikxataña</string>
     <string name="forums_list_logout">Mistuña</string>
-    <string name="forums_list_create">Forum luraña</string>
     <string name="forums_list_unsubscribe">CRM ukatpach suscripción jaytaña?</string>
     <string name="forums_list_unsubscribe_title">CRM ukatpach suscripción jaytaña?</string>
     <string name="forums_create_title">Forum luraña</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Janiw foro jikxatkti</string>
     <string name="forums_post_not_found">Qillqata jan jikxatasiti</string>
 
-    <string name="forums_list_more">Juk\'ampi</string>
     <string name="forums_comment_send">Apayaña</string>
 
     <string name="notification_channel_forums">Foros yatiyawinaka</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA janiw celular app ukan yanapt\'atäkiti</string>
     <string name="forums_auth_enter_code_sent">%1$s ukar apayatat código uka mantayam</string>
     <string name="forums_auth_create_identity">Uñt\'awim lurañam</string>
-    <string name="forums_list_search_placeholder">Foronak thaqhaña</string>
-    <string name="forums_list_no_matching">Janiw kuna foro uñstkiti</string>
     <string name="forums_list_empty">Janirakiw foronaka utjkiti</string>
-    <string name="forums_list_add_to_home">Qalltaña uñtawir yapxataña</string>
     <string name="forums_list_unsubscribe_message">¿Chiqapunit aka forot mistsuñ munta?</string>
     <string name="forums_find_search_placeholder">Foronak thaqham jan ukax URL liq\'iñtam</string>
     <string name="forums_find_search_hint">Foronak thaqham yatxatañataki</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Munawi jiltayaña</string>
     <string name="forums_tag_interest_down">Interés pisi tukuyma</string>
     <string name="forums_tag_interest_remove">Interés aparma</string>
-    <string name="forums_list_default_sort">Default ch\'ulluwi</string>
     <string name="forums_access_tab_users">Apnaqirinaka</string>
     <string name="forums_access_tab_groups">Gruponaka</string>
     <string name="forums_access_tab_manual">Manual</string>

@@ -15,17 +15,10 @@
 
     <!-- Chat list -->
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_search_placeholder">Search chats</string>
-    <string name="chat_list_close_search">Close search</string>
     <string name="chat_list_search">Search</string>
-    <string name="chat_list_more">More</string>
     <string name="chat_list_logout">Log out</string>
     <string name="chat_list_new">New chat</string>
-    <string name="chat_list_no_matching">No matching chats</string>
     <string name="chat_list_empty">No chats yet</string>
-    <string name="chat_list_add_to_home">Add to home screen</string>
-    <string name="chat_list_left_chat">Left</string>
-    <string name="chat_list_removed_chat">Removed</string>
 
     <!-- New chat -->
     <string name="chat_new_title">New chat</string>

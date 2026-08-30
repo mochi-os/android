@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Zobrazované meno</string>
     <string name="chat_auth_verification_failed">Overenie zlyhalo</string>
     <string name="chat_list_title">Chaty</string>
-    <string name="chat_list_close_search">Zavrieť vyhľadávanie</string>
     <string name="chat_list_search">Hľadať</string>
     <string name="chat_list_logout">Odhlásiť sa</string>
     <string name="chat_list_new">Nový chat</string>
-    <string name="chat_list_removed_chat">Odstránené</string>
     <string name="chat_new_title">Nový chat</string>
     <string name="chat_new_name">Názov skupiny</string>
     <string name="chat_new_friends">Priatelia</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Vy</string>
     <string name="chat_chat_not_found">Chat sa nenašiel</string>
 
-    <string name="chat_list_more">Viac</string>
     <string name="chat_message_send">Odoslať</string>
     <string name="chat_attachment_remove">Odstrániť prílohu</string>
     <string name="chat_message_remove_attachment">Odstrániť prílohu</string>
     <string name="chat_auth_login_failed">Prihlásenie zlyhalo</string>
     <string name="chat_attachment_move_up">Posunúť nahor</string>
     <string name="chat_attachment_move_down">Posunúť nadol</string>
-    <string name="chat_list_add_to_home">Pridať na domovskú obrazovku</string>
 
     <string name="notification_channel_chat">Upozornenia chatu</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">Viacfaktorové overenie zatiaľ nie je v mobilnej aplikácii podporované</string>
     <string name="chat_auth_enter_code_sent">Zadajte kód odoslaný na %1$s</string>
     <string name="chat_auth_create_identity">Vytvorte si identitu</string>
-    <string name="chat_list_search_placeholder">Hľadať chaty</string>
-    <string name="chat_list_no_matching">Žiadne zodpovedajúce chaty</string>
     <string name="chat_list_empty">Zatiaľ žiadne chaty</string>
-    <string name="chat_list_left_chat">Opustené</string>
     <string name="chat_new_existing_chat">Otvoriť existujúci chat</string>
     <string name="chat_new_start">Začať chat</string>
     <string name="chat_new_start_group">Začať skupinový chat</string>

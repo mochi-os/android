@@ -224,7 +224,10 @@ fun PostDetailScreen(
                     // A comment needs a body; attachments alone will not do.
                     requireText = true,
                     onSearchMentions = { viewModel.searchMembers(it) },
-                    banner = feedsReplyBanner(replyingTo, { viewModel.setReplyingTo(null) }),
+                    banner = feedsReplyBanner(
+                        findComment(post?.comments.orEmpty(), replyingTo),
+                        { viewModel.setReplyingTo(null) },
+                    ),
                 )
             }
         }
@@ -388,7 +391,7 @@ internal fun PostDetailContent(
                             onEdit = {
                                 viewModel.startEditComment(
                                     comment.id,
-                                    stripHtml(comment.body)
+                                    stripHtml(comment.text)
                                 )
                             },
                             onDelete = { showDeleteCommentDialog(comment.id) },

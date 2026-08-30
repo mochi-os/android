@@ -5,11 +5,9 @@
     <string name="chat_list_logout">登出</string>
     <string name="chat_members_you">你</string>
     <string name="chat_list_search">搜尋</string>
-    <string name="chat_list_more">更多</string>
     <string name="chat_message_edited">(已編輯)</string>
     <string name="chat_message_send">傳送</string>
     <string name="chat_settings_remove_member">移除</string>
-    <string name="chat_list_removed_chat">已移除</string>
     <string name="chat_settings_members">成員</string>
     <string name="chat_attachment_add">附加檔案</string>
     <string name="chat_attachment_remove">移除附件</string>
@@ -19,8 +17,6 @@
     <string name="chat_auth_login_failed">登入失敗</string>
     <string name="chat_attachment_move_up">上移</string>
     <string name="chat_attachment_move_down">下移</string>
-    <string name="chat_list_close_search">關閉搜尋</string>
-    <string name="chat_list_add_to_home">加到主畫面</string>
     <string name="chat_settings_add_member">加入成員</string>
     <string name="chat_members_empty">沒有成員</string>
 
@@ -32,11 +28,8 @@
     <string name="chat_auth_enter_code_sent">請輸入發送到 %1$s 嘅驗證碼</string>
     <string name="chat_auth_create_identity">建立你嘅身份</string>
     <string name="chat_list_title">傾偈</string>
-    <string name="chat_list_search_placeholder">搜尋對話</string>
     <string name="chat_list_new">新對話</string>
-    <string name="chat_list_no_matching">搵唔到相符嘅對話</string>
     <string name="chat_list_empty">未有任何對話</string>
-    <string name="chat_list_left_chat">已離開</string>
     <string name="chat_new_title">新對話</string>
     <string name="chat_new_name">群組名稱</string>
     <string name="chat_new_friends">朋友</string>

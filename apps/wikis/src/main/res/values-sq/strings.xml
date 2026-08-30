@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Ndryshimet dhe komentet</string>
     <string name="wikis_rss_copied">URL e RSS u kopjua në clipboard</string>
     <string name="wikis_rss_failed">Marrja e token RSS dështoi</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Gjej wikis</string>
     <string name="wikis_find_no_results">S\'u gjet asnjë wiki</string>
     <string name="wikis_find_recommended_section">Wiki të rekomanduara</string>
@@ -59,6 +61,8 @@
     <string name="wikis_comments_empty_title">Ende pa komente</string>
     <string name="wikis_comments_empty_subtitle">Bëhu i pari që komenton në këtë faqe.</string>
     <string name="wikis_comment_action_reply">Përgjigju</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Modifiko</string>
     <string name="wikis_comment_action_delete">Fshi</string>
     <string name="wikis_comment_action_save">Ruaj</string>
@@ -74,7 +78,6 @@
     <string name="wikis_editor_edit">Modifiko</string>
     <string name="wikis_editor_insert">Fut</string>
     <string name="wikis_editor_attachments">Bashkëngjitjet</string>
-    <string name="wikis_editor_cancel">Anulo</string>
     <string name="wikis_editor_delete">Fshi faqen</string>
     <string name="wikis_editor_save">Ruaj</string>
     <string name="wikis_editor_saving">Duke ruajtur…</string>
@@ -83,6 +86,7 @@
     <string name="wikis_editor_title_label">Titulli</string>
     <string name="wikis_editor_slug_label">URL e faqes</string>
     <string name="wikis_editor_slug_hint">emri-im-i-faqes</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Përmbajtja</string>
     <string name="wikis_editor_summary_label">Modifiko përmbledhjen (opsionale)</string>
     <string name="wikis_editor_summary_hint">Përshkruaj shkurtimisht ndryshimet e tua</string>
@@ -102,7 +106,6 @@
     <string name="wikis_delete_page_failed">Fshirja e faqes dështoi</string>
     <string name="wikis_revert_page_comment_label">Kthe komentin pas</string>
     <string name="wikis_revert_page_confirm">Kthe pas</string>
-    <string name="wikis_revert_page_cancel">Anulo</string>
     <string name="wikis_revert_page_failed">Kthimi i faqes dështoi</string>
     <string name="wikis_rename_page_title">Riemërto faqen</string>
     <string name="wikis_rename_page_label">URL e re</string>
@@ -117,12 +120,10 @@
     <string name="wikis_history_view_action">Shiko</string>
     <string name="wikis_history_revert_action">Kthe në këtë version</string>
     <string name="wikis_revision_current_badge">Aktual</string>
-    <string name="wikis_revision_back_to_history">Mbrapa te historiku</string>
     <string name="wikis_revision_revert_to_this">Kthe në këtë version</string>
     <string name="wikis_changes_title">Ndryshime të fundit</string>
     <string name="wikis_changes_subtitle">Ndryshime të fundit në të gjitha faqet e këtij wiki.</string>
     <string name="wikis_changes_empty">Ende pa ndryshime</string>
-    <string name="wikis_search_title">Kërko</string>
     <string name="wikis_search_empty_query">Shkruani një term kërkimi</string>
     <string name="wikis_redirects_title">Ridrejtimet</string>
     <string name="wikis_redirects_add">Shto</string>
@@ -131,6 +132,7 @@
     <string name="wikis_redirect_create_action">Krijo</string>
     <string name="wikis_redirect_source_label">Burimi</string>
     <string name="wikis_redirect_target_label">Objektivi</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Burimi dhe destinacioni janë të dyja të nevojshme</string>
     <string name="wikis_redirect_created_success">Ridrejtimi u krijua</string>
     <string name="wikis_redirect_create_failed">Krijimi i ridrejtimit dështoi</string>
@@ -164,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Pamja rrjet</string>
     <string name="wikis_attachments_view_list">Pamja listë</string>
     <string name="wikis_attachments_copy_embed">Kopjo lidhjen e ngulitjes</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Lidhja e ngulitur u kopjua</string>
     <string name="wikis_attachments_delete">Fshi</string>
     <string name="wikis_attachments_delete_confirm_title">Fshi bashkëngjitjen</string>
@@ -195,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Sinkronizimi i wiki dështoi</string>
     <string name="wikis_settings_section_home">Faqja kryesore</string>
     <string name="wikis_settings_field_home_label">Përdor si shtëpi</string>
-    <string name="wikis_settings_home_save">Ruaj ndryshimet</string>
     <string name="wikis_settings_home_saved">Cilësimet u ruajtën</string>
     <string name="wikis_settings_home_save_failed">Ruajtja e cilësimeve dështoi</string>
     <string name="wikis_settings_section_delete">Fshi wiki-n</string>
@@ -212,6 +215,11 @@
     <string name="wikis_access_owner_label">Pronari</string>
     <string name="wikis_access_tab_users">Përdoruesit</string>
     <string name="wikis_access_tab_groups">Grupet</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Asnjë grup i disponueshëm</string>
     <string name="wikis_access_set_success">Qasja u përditësua</string>
     <string name="wikis_access_revoke_success">Qasja u hoq</string>
@@ -232,27 +240,22 @@
     <string name="wikis_pageview_updated">Përditësuar %1$s</string>
     <string name="wikis_pageview_not_found_description">Faqja „%1$s\" nuk ekziston ende.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Ndaj lidhjen e faqes</string>
+    <string name="wikis_pageview_share_chooser">Lidhja e wiki-t</string>
     <string name="wikis_pageview_share_link_copied">Lidhja e faqes u kopjua në kujtesë</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS i wiki</string>
     <string name="wikis_pageview_clipboard_label_share">Lidhje e faqes wiki</string>
     <string name="wikis_pageview_loading">Po ngarkohet faqja…</string>
-    <string name="wikis_page_action_share">Ndaj lidhjen e faqes</string>
-    <string name="wikis_page_action_rss_changes">RSS: Ndryshime</string>
-    <string name="wikis_page_action_rss_comments">RSS: Komente</string>
-    <string name="wikis_page_action_rss_all">RSS: Ndryshime dhe komente</string>
+    <string name="wikis_page_action_share">Lidhje</string>
     <string name="wikis_open_sidebar">Hap shiritin anësor</string>
     <string name="wikis_owned_badge">Pronar</string>
     <string name="wikis_search_placeholder">Kërko wiki…</string>
     <string name="wikis_subscribing">Duke u pajtuar…</string>
     <string name="wikis_unsubscribe_confirm_message">Je i sigurt që do të çpajtohesh nga %1$s?</string>
     <string name="wikis_subscribe_failed_502">Serveri nuk është i arritshëm. Po provohet përsëri…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">URL RSS i wiki</string>
     <string name="wikis_find_search_placeholder">Kërko sipas emrit, ID, gjurmës së gishtit ose URL…</string>
     <string name="wikis_join_search_button">Kërko wiki…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">U pajtove në wiki</string>
     <string name="wikis_subscribe_502_retry">Po provohet përsëri pa serverin e propozuar…</string>
     <string name="wikis_comments_title_template">%1$s - Komente</string>
     <string name="wikis_comment_form_placeholder_new">Shkruaj një koment…</string>
@@ -261,7 +264,6 @@
     <string name="wikis_comment_form_remove_attachment">Hiq bashkëngjitjen</string>
     <string name="wikis_comment_collapse_toggle">Shemb fillin</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Duke redaktuar: %1$s</string>
     <string name="wikis_editor_content_placeholder">Shkruaj përmbajtjen tënde këtu duke përdorur Markdown…</string>
     <string name="wikis_insert_dialog_empty">Asnjë bashkëngjitje ende. Ngarko një skedar për të filluar.</string>
     <string name="wikis_delete_page_message">Po fshin faqen „%1$s\" (%2$s). Ky veprim mund të zhbëhet duke rikuperuar nga historia.</string>
@@ -306,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Kushdo</string>
     <string name="wikis_access_subject_authenticated">Përdorues të vërtetuar</string>
     <string name="wikis_revision_compare">Krahaso ndryshimet</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Shfaq faqen</string>
     <string name="wikis_revision_compare_failed">Versioni i mëparshëm nuk mund të ngarkohej për krahasim.</string>
     <string name="wikis_revision_changes_from">Ndryshimet nga versioni %1$d → %2$d</string>
@@ -350,4 +353,6 @@
         <item quantity="other">U gjetën %1$d rezultate për "%2$s"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Legjenda nuk u ruajt dot</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

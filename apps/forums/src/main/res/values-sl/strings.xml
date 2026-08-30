@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Prikazno ime</string>
     <string name="forums_auth_verification_failed">Preverjanje ni uspelo</string>
     <string name="forums_list_title">Forumi</string>
-    <string name="forums_list_close_search">Zapri iskanje</string>
-    <string name="forums_list_search">Iskanje</string>
     <string name="forums_list_find">Najdi forume</string>
     <string name="forums_list_logout">Odjava</string>
-    <string name="forums_list_create">Ustvari forum</string>
     <string name="forums_list_unsubscribe">Odjavi se</string>
     <string name="forums_list_unsubscribe_title">Odjavi se</string>
     <string name="forums_create_title">Ustvari forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum ni najden</string>
     <string name="forums_post_not_found">Objave ni mogoče najti</string>
 
-    <string name="forums_list_more">Več</string>
     <string name="forums_comment_send">Pošlji</string>
     <string name="forums_post_body_field">Vsebina</string>
     <string name="forums_post_edit_body_field">Vsebina</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Dodaj oznako</string>
     <string name="forums_write_comment">Napišite komentar…</string>
     <string name="forums_auth_login_failed">Prijava neuspešna</string>
-    <string name="forums_list_add_to_home">Dodaj na začetni zaslon</string>
 
     <string name="notification_channel_forums">Obvestila forumov</string>
     <string name="forums_auth_brand">Mochi Forums</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">Večstopenjsko preverjanje pristnosti še ni podprto v mobilni aplikaciji</string>
     <string name="forums_auth_enter_code_sent">Vnesite kodo, poslano na %1$s</string>
     <string name="forums_auth_create_identity">Ustvarite svojo identiteto</string>
-    <string name="forums_list_search_placeholder">Iskanje forumov</string>
-    <string name="forums_list_no_matching">Ni ujemajočih se forumov</string>
     <string name="forums_list_empty">Še ni forumov</string>
     <string name="forums_list_unsubscribe_message">Ali se res želite odjaviti od tega foruma?</string>
     <string name="forums_find_search_placeholder">Iskanje forumov ali prilepite URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Povečaj zanimanje</string>
     <string name="forums_tag_interest_down">Zmanjšaj zanimanje</string>
     <string name="forums_tag_interest_remove">Odstrani interes</string>
-    <string name="forums_list_default_sort">Privzeto razvrščanje</string>
     <string name="forums_access_tab_users">Uporabniki</string>
     <string name="forums_access_tab_groups">Skupine</string>
     <string name="forums_access_tab_manual">Ročno</string>

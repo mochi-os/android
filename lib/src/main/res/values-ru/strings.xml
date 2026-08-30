@@ -338,6 +338,13 @@
     <string name="common_attachment_unavailable">Вложение временно недоступно</string>
     <string name="common_unavailable">Недоступно</string>
     <string name="common_not_found">Не найдено</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Отозвать</string>
     <string name="rss_revoke">Отозвать доступ</string>
     <string name="rss_revoke_title">Отозвать доступ по RSS?</string>

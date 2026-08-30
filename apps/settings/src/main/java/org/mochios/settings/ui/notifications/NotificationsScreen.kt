@@ -33,8 +33,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -63,6 +61,8 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiTab
+import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
 
@@ -149,26 +149,20 @@ fun NotificationsScreen(
                 .fillMaxSize()
                 .padding(padding)
         ) {
-            TabRow(selectedTabIndex = uiState.tab.ordinal) {
-                Tab(
-                    selected = uiState.tab == NotificationsTab.UNREAD,
-                    onClick = { viewModel.setTab(NotificationsTab.UNREAD) },
-                    text = {
-                        Text(
-                            if (unreadCount > 0) {
-                                stringResource(R.string.notifications_tab_unread_count, unreadCount)
-                            } else {
-                                stringResource(R.string.notifications_tab_unread)
-                            },
-                        )
-                    },
-                )
-                Tab(
-                    selected = uiState.tab == NotificationsTab.ALL,
-                    onClick = { viewModel.setTab(NotificationsTab.ALL) },
-                    text = { Text(stringResource(R.string.notifications_tab_all)) },
-                )
-            }
+            MochiTabRow(
+                tabs = listOf(
+                    MochiTab(
+                        if (unreadCount > 0) {
+                            stringResource(R.string.notifications_tab_unread_count, unreadCount)
+                        } else {
+                            stringResource(R.string.notifications_tab_unread)
+                        },
+                    ),
+                    MochiTab(stringResource(R.string.notifications_tab_all)),
+                ),
+                selectedIndex = uiState.tab.ordinal,
+                onSelect = { index -> viewModel.setTab(NotificationsTab.entries[index]) },
+            )
 
             when {
                 uiState.isLoading && uiState.items.isEmpty() -> {

@@ -145,7 +145,7 @@
     <string name="feeds_less_like_this">Kurang seperti ini</string>
     <string name="feeds_no_tags">Tiada tag</string>
     <string name="feeds_anonymous">Tanpa nama</string>
-    <string name="feeds_replying_to_comment">Membalas komen</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Lampirkan fail</string>
     <string name="feeds_tag_label">Label tag</string>
     <string name="feeds_file">Fail</string>

@@ -11,7 +11,6 @@
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_page_action_tags">Tags</string>
     <string name="wikis_title">Wikis</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_create_name_label">Name</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
@@ -26,4 +25,9 @@
     <string name="wikis_access_subject_anyone">Jeder</string>
     <string name="wikis_access_subject_authenticated">Authentifizierte Benutzer</string>
 
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

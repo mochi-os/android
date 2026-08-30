@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">દર્શાવનાર નામ</string>
     <string name="chat_auth_verification_failed">ચકાસણી નિષ્ફળ</string>
     <string name="chat_list_title">ચેટ્સ</string>
-    <string name="chat_list_close_search">શોધ બંધ કરો</string>
     <string name="chat_list_search">શોધો</string>
     <string name="chat_list_logout">લૉગ આઉટ કરો</string>
     <string name="chat_list_new">નવી ચેટ</string>
-    <string name="chat_list_removed_chat">દૂર કર્યું</string>
     <string name="chat_new_title">નવી ચેટ</string>
     <string name="chat_new_name">ગ્રુપનું નામ</string>
     <string name="chat_new_friends">મિત્રો</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">તમે</string>
     <string name="chat_chat_not_found">ચેટ મળી નહીં</string>
 
-    <string name="chat_list_more">વધુ</string>
     <string name="chat_message_send">મોકલો</string>
 
     <string name="notification_channel_chat">ચેટ સૂચનાઓ</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">મોબાઇલ ઍપમાં MFA હજુ સમર્થિત નથી</string>
     <string name="chat_auth_enter_code_sent">%1$s પર મોકલેલો કોડ દાખલ કરો</string>
     <string name="chat_auth_create_identity">તમારી ઓળખ બનાવો</string>
-    <string name="chat_list_search_placeholder">ચેટ શોધો</string>
-    <string name="chat_list_no_matching">કોઈ મેળ ખાતી ચેટ નથી</string>
     <string name="chat_list_empty">હજુ સુધી કોઈ ચેટ નથી</string>
-    <string name="chat_list_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
-    <string name="chat_list_left_chat">છોડી દીધી</string>
     <string name="chat_new_existing_chat">હાલની ચેટ ખોલો</string>
     <string name="chat_new_start">ચેટ શરૂ કરો</string>
     <string name="chat_new_start_group">જૂથ ચેટ શરૂ કરો</string>

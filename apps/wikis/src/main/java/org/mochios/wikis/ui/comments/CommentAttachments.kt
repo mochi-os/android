@@ -21,9 +21,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AttachFile
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,6 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.FileKindIcon
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.util.webUri
 import org.mochios.wikis.R
@@ -122,10 +120,9 @@ fun CommentAttachments(
                             }
                             .padding(vertical = 2.dp),
                     ) {
-                        Icon(
-                            Icons.Default.AttachFile,
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        FileKindIcon(
+                            type = file.type,
+                            name = file.name,
                             modifier = Modifier.size(14.dp),
                         )
                         Spacer(Modifier.width(6.dp))

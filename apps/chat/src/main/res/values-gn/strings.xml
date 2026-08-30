@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Hechauka téra</string>
     <string name="chat_auth_verification_failed">Verificación ndoiporãi</string>
     <string name="chat_list_title">Chats</string>
-    <string name="chat_list_close_search">Mboty jeheka</string>
     <string name="chat_list_search">Eheka</string>
     <string name="chat_list_logout">Esẽ</string>
     <string name="chat_list_new">Ñe\'ẽ pyahu</string>
-    <string name="chat_list_removed_chat">Oñembogueta</string>
     <string name="chat_new_title">Ñe\'ẽ pyahu</string>
     <string name="chat_new_name">Atypy téra</string>
     <string name="chat_new_friends">Iru</string>
@@ -30,7 +28,6 @@
     <string name="chat_members_you">Nde</string>
     <string name="chat_chat_not_found">Chat ndojejuhúi</string>
 
-    <string name="chat_list_more">Hetave</string>
     <string name="chat_message_send">Mondo</string>
 
     <string name="notification_channel_chat">Marandu ñomongeta</string>
@@ -40,11 +37,7 @@
     <string name="chat_auth_mfa_unsupported">MFA ndoikói gueteri tembiporu pumbyrýpe</string>
     <string name="chat_auth_enter_code_sent">Emoinge papapy oñemondo\'akue %1$s-pe</string>
     <string name="chat_auth_create_identity">Ejapo ne teratee</string>
-    <string name="chat_list_search_placeholder">Eheka ñomongeta</string>
-    <string name="chat_list_no_matching">Ndaipóri ñomongeta ojokupytýva</string>
     <string name="chat_list_empty">Ndaipóri gueteri ñomongeta</string>
-    <string name="chat_list_add_to_home">Embojuaju óga rovetãme</string>
-    <string name="chat_list_left_chat">Osẽmava</string>
     <string name="chat_new_existing_chat">Embojuruja ñomongeta oĩmava</string>
     <string name="chat_new_start">Eñepyrũ ñomongeta</string>
     <string name="chat_new_start_group">Eñepyrũ ñomongeta aty</string>

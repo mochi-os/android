@@ -218,7 +218,6 @@
     <string name="people_welcome_dismiss">Dismiss</string>
 
     <!-- Friends list extras -->
-    <string name="people_friends_more">More</string>
     <string name="people_friends_message">Message</string>
     <string name="people_friends_close_search">Close search</string>
     <string name="people_friends_invitation_sent_title">Invitation sent</string>

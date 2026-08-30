@@ -35,6 +35,12 @@ data class RevisionViewUiState(
     val showDiff: Boolean = false,
     val previousRevision: RevisionDetail? = null,
     val previousLoading: Boolean = false,
+    /** A revert asked for from this screen, and how it went. The failure is
+     *  its own field: [error] stands for a revision that would not load, and
+     *  the screen reads the two differently. */
+    val isReverting: Boolean = false,
+    val reverted: Boolean = false,
+    val revertError: MochiError? = null,
 )
 
 @HiltViewModel
@@ -91,6 +97,32 @@ class RevisionViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * Put this revision back as the page's current version. The page is the
+     * one being viewed, so the caller sends the reader there once it lands.
+     *
+     * @param comment The edit comment recorded against the revert.
+     */
+    fun revert(comment: String) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isReverting = true, revertError = null)
+            try {
+                repository.revertPage(wikiId, slug, version, comment.trim())
+                _uiState.value = _uiState.value.copy(isReverting = false, reverted = true)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isReverting = false,
+                    revertError = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    /** Clear a revert failure once the screen has said so. */
+    fun clearRevertError() {
+        _uiState.value = _uiState.value.copy(revertError = null)
     }
 
     fun toggleDiff() {

@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">የማሳያ ስም</string>
     <string name="forums_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
     <string name="forums_list_title">ፎረሞች</string>
-    <string name="forums_list_close_search">ፍለጋን ዝጋ</string>
-    <string name="forums_list_search">ይፈልጉ</string>
     <string name="forums_list_find">ፎረሞችን ፈልግ</string>
     <string name="forums_list_logout">ውጣ</string>
-    <string name="forums_list_create">መድረክ ፍጠር</string>
     <string name="forums_list_unsubscribe">ምዝገባ ያቋርጡ</string>
     <string name="forums_list_unsubscribe_title">ምዝገባ ያቋርጡ</string>
     <string name="forums_create_title">መድረክ ፍጠር</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">ፎረም አልተገኘም</string>
     <string name="forums_post_not_found">ልጥፍ አልተገኘም</string>
 
-    <string name="forums_list_more">ተጨማሪ</string>
     <string name="forums_comment_send">ላክ</string>
 
     <string name="notification_channel_forums">የመድረኮች ማሳወቂያዎች</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA በሞባይል መተግበሪያ ላይ ገና አይደገፍም</string>
     <string name="forums_auth_enter_code_sent">ወደ %1$s የተላከውን ኮድ ያስገቡ</string>
     <string name="forums_auth_create_identity">ማንነትዎን ይፍጠሩ</string>
-    <string name="forums_list_search_placeholder">መድረኮችን ይፈልጉ</string>
-    <string name="forums_list_no_matching">የሚዛመድ መድረክ የለም</string>
     <string name="forums_list_empty">እስካሁን ምንም መድረክ የለም</string>
-    <string name="forums_list_add_to_home">ወደ መነሻ ማያ ይጨምሩ</string>
     <string name="forums_list_unsubscribe_message">ከዚህ መድረክ መመዝገብ መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት?</string>
     <string name="forums_find_search_placeholder">መድረኮችን ይፈልጉ ወይም URL ይለጥፉ</string>
     <string name="forums_find_search_hint">ለመመዝገብ መድረኮችን ይፈልጉ</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">ፍላጎትን አሳድግ</string>
     <string name="forums_tag_interest_down">ፍላጎትን ቀንስ</string>
     <string name="forums_tag_interest_remove">ፍላጎት አስወግድ</string>
-    <string name="forums_list_default_sort">ነባሪ ቅደም ተከተል</string>
     <string name="forums_access_tab_users">ተጠቃሚዎች</string>
     <string name="forums_access_tab_groups">ቡድኖች</string>
     <string name="forums_access_tab_manual">በእጅ</string>

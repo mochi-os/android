@@ -23,7 +23,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Badge
 import androidx.compose.material3.CardDefaults
@@ -64,8 +64,6 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.words.R
 import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getPlayerNames
@@ -86,7 +84,6 @@ fun WordsGameListScreen(
     val uiState by viewModel.uiState.collectAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
-    var showOverflow by remember { mutableStateOf(false) }
     var showAbout by remember { mutableStateOf(false) }
 
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -113,10 +110,26 @@ fun WordsGameListScreen(
         actions = {
             DrawerActionRow(
                 title = stringResource(R.string.words_sidebar_new_game),
-                icon = Icons.Default.Add,
+                icon = Icons.Outlined.Add,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNewGame()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.words_list_logout),
+                icon = Icons.AutoMirrored.Outlined.Logout,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.about_label),
+                icon = Icons.Outlined.Info,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showAbout = true
                 },
             )
         },
@@ -136,34 +149,6 @@ fun WordsGameListScreen(
                     navigationIcon = {
                         MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
                             Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.words_list_menu))
-                        }
-                    },
-                    actions = {
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
-                                Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
-                            }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = { showOverflow = false },
-                            ) {
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.words_list_logout)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        onLogout()
-                                    },
-                                    leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
-                                )
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.about_label)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        showAbout = true
-                                    },
-                                    leadingIcon = { Icon(Icons.Outlined.Info, contentDescription = null) },
-                                )
-                            }
                         }
                     },
                 )

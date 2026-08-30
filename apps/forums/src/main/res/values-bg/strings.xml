@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Показвано име</string>
     <string name="forums_auth_verification_failed">Потвърждението не успя</string>
     <string name="forums_list_title">Форуми</string>
-    <string name="forums_list_close_search">Затвори търсенето</string>
-    <string name="forums_list_search">Търсене</string>
     <string name="forums_list_find">Намери форуми</string>
     <string name="forums_list_logout">Изход</string>
-    <string name="forums_list_create">Създай форум</string>
     <string name="forums_list_unsubscribe">Отпиши се</string>
     <string name="forums_list_unsubscribe_title">Отпиши се</string>
     <string name="forums_create_title">Създай форум</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Форумът не е намерен</string>
     <string name="forums_post_not_found">Публикацията не е намерена</string>
 
-    <string name="forums_list_more">Още</string>
     <string name="forums_comment_send">Изпрати</string>
 
     <string name="notification_channel_forums">Известия от форуми</string>
@@ -134,10 +130,7 @@
     <string name="forums_auth_mfa_unsupported">MFA все още не се поддържа в мобилното приложение</string>
     <string name="forums_auth_enter_code_sent">Въведете кода, изпратен до %1$s</string>
     <string name="forums_auth_create_identity">Създайте своята самоличност</string>
-    <string name="forums_list_search_placeholder">Търсене във форуми</string>
-    <string name="forums_list_no_matching">Няма съвпадащи форуми</string>
     <string name="forums_list_empty">Все още няма форуми</string>
-    <string name="forums_list_add_to_home">Добавяне към началния екран</string>
     <string name="forums_list_unsubscribe_message">Сигурни ли сте, че искате да се отпишете от този форум?</string>
     <string name="forums_find_search_placeholder">Търсене във форуми или поставяне на URL</string>
     <string name="forums_find_search_hint">Търсене на форуми за абониране</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Усили интереса</string>
     <string name="forums_tag_interest_down">Намали лихвата</string>
     <string name="forums_tag_interest_remove">Премахни интерес</string>
-    <string name="forums_list_default_sort">Сортиране по подразбиране</string>
     <string name="forums_access_tab_users">Потребители</string>
     <string name="forums_access_tab_groups">Групи</string>
     <string name="forums_access_tab_manual">Ръчно</string>

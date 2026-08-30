@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Görkeziş ady</string>
     <string name="forums_auth_verification_failed">Tassyklama şowsuz boldy</string>
     <string name="forums_list_title">Forumlar</string>
-    <string name="forums_list_close_search">Gözlegi ýapmak</string>
-    <string name="forums_list_search">Gözle</string>
     <string name="forums_list_find">Forumlary tap</string>
     <string name="forums_list_logout">Çyk</string>
-    <string name="forums_list_create">Forum döretmek</string>
     <string name="forums_list_unsubscribe">Abunadan çyk</string>
     <string name="forums_list_unsubscribe_title">Abunadan çyk</string>
     <string name="forums_create_title">Forum döretmek</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum tapylmady</string>
     <string name="forums_post_not_found">Post tapylmady</string>
 
-    <string name="forums_list_more">Has köp</string>
     <string name="forums_comment_send">Iber</string>
     <string name="forums_post_body_field">Tekst</string>
     <string name="forums_post_edit_body_field">Tekst</string>
@@ -133,7 +129,6 @@
     <string name="forums_post_tag_add">Add tag</string>
     <string name="forums_write_comment">Teswir ýaz…</string>
     <string name="forums_auth_login_failed">Girmek başartmady</string>
-    <string name="forums_list_add_to_home">Esasy ekrana goş</string>
 
     <string name="notification_channel_forums">Forum bildirişleri</string>
     <string name="forums_auth_brand">Mochi Forumlary</string>
@@ -141,8 +136,6 @@
     <string name="forums_auth_mfa_unsupported">MFA henizem mobil programmada goldanylanok</string>
     <string name="forums_auth_enter_code_sent">%1$s salgysyna iberilen kody giriziň</string>
     <string name="forums_auth_create_identity">Şahsyýetiňizi dörediň</string>
-    <string name="forums_list_search_placeholder">Forumlarda gözleg</string>
-    <string name="forums_list_no_matching">Gabat gelýän forum ýok</string>
     <string name="forums_list_empty">Heniz forum ýok</string>
     <string name="forums_list_unsubscribe_message">Bu forumdan ýazylyşygyňyzy ýatyrmak isleýändigiňize ynamlymy?</string>
     <string name="forums_find_search_placeholder">Forumlarda gözläň ýa-da URL goýuň</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Gyzyklanmany ýokarlandyrmak</string>
     <string name="forums_tag_interest_down">Gyzyklanmany azalt</string>
     <string name="forums_tag_interest_remove">Gyzyklanmany aýyr</string>
-    <string name="forums_list_default_sort">Adaty tertipleşdirme</string>
     <string name="forums_access_tab_users">Ulanyjylar</string>
     <string name="forums_access_tab_groups">Toparlar</string>
     <string name="forums_access_tab_manual">El bilen</string>

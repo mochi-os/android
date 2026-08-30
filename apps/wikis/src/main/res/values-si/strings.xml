@@ -45,6 +45,8 @@
     <string name="wikis_rss_both">වෙනස්කම් සහ අදහස්</string>
     <string name="wikis_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="wikis_rss_failed">RSS ටෝකනය ලබා ගැනීමට අසමත් විය</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">විකි සොයන්න</string>
     <string name="wikis_find_no_results">wikis හමු නොවීය</string>
     <string name="wikis_find_recommended_section">නිර්දේශිත wikis</string>
@@ -60,6 +62,8 @@
     <string name="wikis_comments_empty_title">තවම අදහස් නැත</string>
     <string name="wikis_comments_empty_subtitle">මෙම පිටුවේ අදහස් දැක්වීමට පළමුවැන්නා වන්න.</string>
     <string name="wikis_comment_action_reply">පිළිතුර</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">සංස්කරණය කරන්න</string>
     <string name="wikis_comment_action_delete">මකන්න</string>
     <string name="wikis_comment_action_save">සුරකින්න</string>
@@ -75,7 +79,6 @@
     <string name="wikis_editor_edit">සංස්කරණය කරන්න</string>
     <string name="wikis_editor_insert">ඇතුළු කරන්න</string>
     <string name="wikis_editor_attachments">ඇමුණුම්</string>
-    <string name="wikis_editor_cancel">අවලංගු කරන්න</string>
     <string name="wikis_editor_delete">පිටුව මකන්න</string>
     <string name="wikis_editor_save">සුරකින්න</string>
     <string name="wikis_editor_saving">සුරැකේ…</string>
@@ -84,6 +87,7 @@
     <string name="wikis_editor_title_label">මාතෘකාව</string>
     <string name="wikis_editor_slug_label">පිටු URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">අන්තර්ගතය</string>
     <string name="wikis_editor_summary_label">සංස්කරණ සාරාංශය (විකල්ප)</string>
     <string name="wikis_editor_summary_hint">ඔබේ වෙනස්කම් කෙටියෙන් විස්තර කරන්න</string>
@@ -103,7 +107,6 @@
     <string name="wikis_delete_page_failed">පිටුව මැකීමට අසමත් විය</string>
     <string name="wikis_revert_page_comment_label">අදහස ආපසු හරවන්න</string>
     <string name="wikis_revert_page_confirm">ආපසු හරවන්න</string>
-    <string name="wikis_revert_page_cancel">අවලංගු කරන්න</string>
     <string name="wikis_revert_page_failed">පිටුව ආපසු හැරවීමට අසමත් විය</string>
     <string name="wikis_rename_page_title">පිටුව නැවත නම් කරන්න</string>
     <string name="wikis_rename_page_label">නව URL</string>
@@ -118,12 +121,10 @@
     <string name="wikis_history_view_action">බලන්න</string>
     <string name="wikis_history_revert_action">මෙම අනුවාදයට ආපසු හරවන්න</string>
     <string name="wikis_revision_current_badge">වත්මන්</string>
-    <string name="wikis_revision_back_to_history">ඉතිහාසය වෙත ආපසු</string>
     <string name="wikis_revision_revert_to_this">මෙම අනුවාදයට ආපසු හරවන්න</string>
     <string name="wikis_changes_title">මෑත වෙනස්කම්</string>
     <string name="wikis_changes_subtitle">මෙම wiki එකේ සියලු පිටු හරහා මෑත සංස්කරණ.</string>
     <string name="wikis_changes_empty">තවම වෙනස්කම් නොමැත</string>
-    <string name="wikis_search_title">සොයන්න</string>
     <string name="wikis_search_empty_query">සෙවුම් පදයක් ඇතුළු කරන්න</string>
     <string name="wikis_redirects_title">redirects</string>
     <string name="wikis_redirects_add">එක් කරන්න</string>
@@ -132,6 +133,7 @@
     <string name="wikis_redirect_create_action">නිර්මාණය කරන්න</string>
     <string name="wikis_redirect_source_label">මූලාරම්භය</string>
     <string name="wikis_redirect_target_label">ඉලක්කය</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">ප්‍රභවය සහ ඉලක්කය යන දෙකම අවශ්‍යය</string>
     <string name="wikis_redirect_created_success">redirect සාදන ලදී</string>
     <string name="wikis_redirect_create_failed">යළි-යොමුවීමක් සෑදීමට අසමත් විය</string>
@@ -165,6 +167,8 @@
     <string name="wikis_attachments_view_grid">ජාල දසුන</string>
     <string name="wikis_attachments_view_list">ලැයිස්තු දසුන</string>
     <string name="wikis_attachments_copy_embed">embed සබැඳිය පිටපත් කරන්න</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">කාවැද්දූ සබැඳිය පිටපත් කළා</string>
     <string name="wikis_attachments_delete">මකන්න</string>
     <string name="wikis_attachments_delete_confirm_title">ඇමුණුම මකන්න</string>
@@ -196,7 +200,6 @@
     <string name="wikis_settings_sync_failed">විකිය සමමුහුර්ත කිරීමට අසමත් විය</string>
     <string name="wikis_settings_section_home">මුල් පිටුව</string>
     <string name="wikis_settings_field_home_label">home එක ලෙස භාවිතා කරන්න</string>
-    <string name="wikis_settings_home_save">වෙනස්කම් සුරකින්න</string>
     <string name="wikis_settings_home_saved">සැකසුම් සුරකින ලදී</string>
     <string name="wikis_settings_home_save_failed">සැකසුම් සුරැකීමට අසමත් විය</string>
     <string name="wikis_settings_section_delete">wiki එක මකන්න</string>
@@ -213,6 +216,11 @@
     <string name="wikis_access_owner_label">හිමිකරු</string>
     <string name="wikis_access_tab_users">පරිශීලකයන්</string>
     <string name="wikis_access_tab_groups">කණ්ඩායම්</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
     <string name="wikis_access_set_success">ප්‍රවේශය යාවත්කාලීන කරන ලදී</string>
     <string name="wikis_access_revoke_success">ප්‍රවේශය ඉවත් කරන ලදී</string>
@@ -234,27 +242,22 @@
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” පිටුව තවම නොපවතී.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">පිටු සබැඳිය බෙදාගන්න</string>
+    <string name="wikis_pageview_share_chooser">විකි සබැඳිය</string>
     <string name="wikis_pageview_share_link_copied">පිටු සබැඳිය පසුරු පුවරුවට පිටපත් විය</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_pageview_clipboard_label_share">Wiki පිටු සබැඳිය</string>
     <string name="wikis_pageview_loading">Loading page…</string>
-    <string name="wikis_page_action_share">පිටු සබැඳිය බෙදාගන්න</string>
-    <string name="wikis_page_action_rss_changes">RSS: Changes</string>
-    <string name="wikis_page_action_rss_comments">RSS: Comments</string>
-    <string name="wikis_page_action_rss_all">RSS: වෙනස්කම් සහ අදහස්</string>
+    <string name="wikis_page_action_share">සබැඳිය</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
     <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki සොයන්න…</string>
     <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ඔබට %1$s වෙතින් දායකත්වය අවලංගු කිරීමට අවශ්‍ය බව විශ්වාසද?</string>
     <string name="wikis_subscribe_failed_502">එම සේවාදායකයට ළඟා විය නොහැක. නැවත උත්සාහ කරමින්…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">නම, ID, ඇඟිලි සලකුණ හෝ URL අනුව සොයන්න…</string>
     <string name="wikis_join_search_button">wiki සොයන්න…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">wiki වෙත දායක විය</string>
     <string name="wikis_subscribe_502_retry">යෝජිත සේවාදායකය නොමැතිව නැවත උත්සාහ කරමින්…</string>
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">අදහසක් ලියන්න…</string>
@@ -263,7 +266,6 @@
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editing: %1$s</string>
     <string name="wikis_editor_content_placeholder">ඔබේ අන්තර්ගතය මෙහි Markdown භාවිතයෙන් ලියන්න…</string>
     <string name="wikis_insert_dialog_empty">තවම ඇමුණුම් නොමැත. ආරම්භ කිරීමට ගොනුවක් උඩුගත කරන්න.</string>
     <string name="wikis_delete_page_message">ඔබ “%1$s” (%2$s) පිටුව මැකීමට යයි. ඉතිහාසයෙන් ප්‍රතිසාධනය කිරීමෙන් මෙම ක්‍රියාව පසුගමනය කළ හැක.</string>
@@ -309,6 +311,7 @@
     <string name="wikis_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
 
     <string name="wikis_revision_compare">වෙනස්කම් සංසන්දනය කරන්න</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">පිටුව පෙන්වන්න</string>
     <string name="wikis_revision_compare_failed">සංසන්දනය සඳහා පෙර අනුවාදය පූරණය කළ නොහැකි විය.</string>
     <string name="wikis_revision_changes_from">%1$d → %2$d අනුවාදයේ වෙනස්කම්</string>
@@ -353,4 +356,6 @@
         <item quantity="other">«%2$s» සඳහා %1$d ප්‍රතිඵල සොයා ගත්තා</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">සිරස්තලය සුරැකීමට නොහැකි විය</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

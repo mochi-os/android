@@ -44,6 +44,8 @@
     <string name="wikis_rss_both">Aldaketak eta iruzkinak</string>
     <string name="wikis_rss_copied">RSS URLa arbelera kopiatu da</string>
     <string name="wikis_rss_failed">Ezin izan da RSS tokena lortu</string>
+    <string name="wikis_rss_revoke">Revoke access</string>
+    <string name="wikis_rss_revoked">RSS access revoked</string>
     <string name="wikis_find_title">Aurkitu wikiak</string>
     <string name="wikis_find_no_results">Ez da wikirik aurkitu</string>
     <string name="wikis_find_recommended_section">Gomendatutako wikiak</string>
@@ -59,6 +61,8 @@
     <string name="wikis_comments_empty_title">Oraindik iruzkinik ez</string>
     <string name="wikis_comments_empty_subtitle">Izan zaitez orri honetan iruzkin egiten lehena.</string>
     <string name="wikis_comment_action_reply">Erantzun</string>
+    <string name="wikis_comment_replying_to">Replying to %1$s</string>
+    <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_edit">Editatu</string>
     <string name="wikis_comment_action_delete">Ezabatu</string>
     <string name="wikis_comment_action_save">Gorde</string>
@@ -74,7 +78,6 @@
     <string name="wikis_editor_edit">Editatu</string>
     <string name="wikis_editor_insert">Txertatu</string>
     <string name="wikis_editor_attachments">Eranskinak</string>
-    <string name="wikis_editor_cancel">Utzi</string>
     <string name="wikis_editor_delete">Ezabatu orria</string>
     <string name="wikis_editor_save">Gorde</string>
     <string name="wikis_editor_saving">Gordetzen…</string>
@@ -83,6 +86,7 @@
     <string name="wikis_editor_title_label">Izenburua</string>
     <string name="wikis_editor_slug_label">Orriaren URLa</string>
     <string name="wikis_editor_slug_hint">nire-orri-izena</string>
+    <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Edukia</string>
     <string name="wikis_editor_summary_label">Editatu laburpena (aukerakoa)</string>
     <string name="wikis_editor_summary_hint">Deskribatu laburki zure aldaketak</string>
@@ -102,7 +106,6 @@
     <string name="wikis_delete_page_failed">Ezin izan da orria ezabatu</string>
     <string name="wikis_revert_page_comment_label">Itzuli iruzkina</string>
     <string name="wikis_revert_page_confirm">Itzuli</string>
-    <string name="wikis_revert_page_cancel">Utzi</string>
     <string name="wikis_revert_page_failed">Ezin izan da orria atzera bota</string>
     <string name="wikis_rename_page_title">Aldatu orriaren izena</string>
     <string name="wikis_rename_page_label">URL berria</string>
@@ -117,12 +120,10 @@
     <string name="wikis_history_view_action">Ikusi</string>
     <string name="wikis_history_revert_action">Itzuli bertsio honetara</string>
     <string name="wikis_revision_current_badge">Unekoa</string>
-    <string name="wikis_revision_back_to_history">Itzuli historiara</string>
     <string name="wikis_revision_revert_to_this">Itzuli bertsio honetara</string>
     <string name="wikis_changes_title">Azken aldaketak</string>
     <string name="wikis_changes_subtitle">Wiki honetako orri guztietako azken edizioak.</string>
     <string name="wikis_changes_empty">Oraindik aldaketarik ez</string>
-    <string name="wikis_search_title">Bilatu</string>
     <string name="wikis_search_empty_query">Sartu bilaketa-termino bat</string>
     <string name="wikis_redirects_title">Birbideratzeak</string>
     <string name="wikis_redirects_add">Gehitu</string>
@@ -131,6 +132,7 @@
     <string name="wikis_redirect_create_action">Sortu</string>
     <string name="wikis_redirect_source_label">Iturria</string>
     <string name="wikis_redirect_target_label">Helburua</string>
+    <string name="wikis_redirect_created_label">Created</string>
     <string name="wikis_redirect_required_fields">Iturria eta helburua biak beharrezkoak dira</string>
     <string name="wikis_redirect_created_success">Birbideratzea sortu da</string>
     <string name="wikis_redirect_create_failed">Ezin izan da birbideratzea sortu</string>
@@ -164,6 +166,8 @@
     <string name="wikis_attachments_view_grid">Sareta-ikuspegia</string>
     <string name="wikis_attachments_view_list">Zerrenda-ikuspegia</string>
     <string name="wikis_attachments_copy_embed">Kopiatu txertatze esteka</string>
+    <string name="wikis_attachments_embed_copied">Embed link copied</string>
+    <string name="wikis_attachments_download">Download</string>
     <string name="wikis_attachments_copy_success">Txertatze-esteka kopiatuta</string>
     <string name="wikis_attachments_delete">Ezabatu</string>
     <string name="wikis_attachments_delete_confirm_title">Ezabatu eranskina</string>
@@ -195,7 +199,6 @@
     <string name="wikis_settings_sync_failed">Ezin izan da wiki sinkronizatu</string>
     <string name="wikis_settings_section_home">Hasiera-orria</string>
     <string name="wikis_settings_field_home_label">Erabili hasiera gisa</string>
-    <string name="wikis_settings_home_save">Gorde aldaketak</string>
     <string name="wikis_settings_home_saved">Ezarpenak gorde dira</string>
     <string name="wikis_settings_home_save_failed">Ezin izan dira ezarpenak gorde</string>
     <string name="wikis_settings_section_delete">Ezabatu wikia</string>
@@ -212,6 +215,11 @@
     <string name="wikis_access_owner_label">Jabea</string>
     <string name="wikis_access_tab_users">Erabiltzaileak</string>
     <string name="wikis_access_tab_groups">Taldeak</string>
+    <string name="wikis_access_tab_other">Other</string>
+    <string name="wikis_access_select_rule">Select a rule</string>
+    <string name="wikis_access_authenticated_desc">Anyone who is logged in</string>
+    <string name="wikis_access_anyone_desc">Including anonymous users</string>
+    <string name="wikis_access_selected">Selected: %1$s</string>
     <string name="wikis_access_no_groups">Ez dago talde erabilgarririk</string>
     <string name="wikis_access_set_success">Sarbidea eguneratua</string>
     <string name="wikis_access_revoke_success">Sarbidea kendua</string>
@@ -232,27 +240,22 @@
     <string name="wikis_pageview_updated">Eguneratua %1$s</string>
     <string name="wikis_pageview_not_found_description">«%1$s» orria ez da existitzen oraindik.</string>
     <string name="wikis_pageview_share_subject">%1$s</string>
-    <string name="wikis_pageview_share_chooser">Partekatu orrialdearen esteka</string>
+    <string name="wikis_pageview_share_chooser">Wikiaren esteka</string>
     <string name="wikis_pageview_share_link_copied">Orrialdearen esteka arbelean kopiatua</string>
     <string name="wikis_pageview_clipboard_label_rss">Wikiaren RSS URLa</string>
     <string name="wikis_pageview_clipboard_label_share">Wikiaren orrialdearen esteka</string>
     <string name="wikis_pageview_loading">Orrialdea kargatzen…</string>
-    <string name="wikis_page_action_share">Partekatu orrialdearen esteka</string>
-    <string name="wikis_page_action_rss_changes">RSS: Aldaketak</string>
-    <string name="wikis_page_action_rss_comments">RSS: Iruzkinak</string>
-    <string name="wikis_page_action_rss_all">RSS: Aldaketak eta iruzkinak</string>
+    <string name="wikis_page_action_share">Esteka</string>
     <string name="wikis_open_sidebar">Ireki alboko barra</string>
     <string name="wikis_owned_badge">Norbera</string>
     <string name="wikis_search_placeholder">Bilatu wikia…</string>
     <string name="wikis_subscribing">Harpidetzen…</string>
     <string name="wikis_unsubscribe_confirm_message">Ziur al zaude %1$s harpidetza utzi nahi duzula?</string>
     <string name="wikis_subscribe_failed_502">Zerbitzaria ezin da iritsi. Berriro saiatzen…</string>
-    <string name="wikis_rss_menu_trailing">›</string>
     <string name="wikis_clipboard_label_rss">Wikiaren RSS URLa</string>
     <string name="wikis_find_search_placeholder">Bilatu izenez, IDz, hatz-markaz edo URLz…</string>
     <string name="wikis_join_search_button">Bilatu wikiak…</string>
     <string name="wikis_join_id_hint">abc123…</string>
-    <string name="wikis_subscribe_success">Wikira harpidetua</string>
     <string name="wikis_subscribe_502_retry">Berriro saiatzen iradokitako zerbitzaririk gabe…</string>
     <string name="wikis_comments_title_template">%1$s - Iruzkinak</string>
     <string name="wikis_comment_form_placeholder_new">Idatzi iruzkina…</string>
@@ -261,7 +264,6 @@
     <string name="wikis_comment_form_remove_attachment">Kendu eranskina</string>
     <string name="wikis_comment_collapse_toggle">Tolestu hari</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_edit">Editatzen: %1$s</string>
     <string name="wikis_editor_content_placeholder">Idatzi zure edukia hemen Markdown erabiliz…</string>
     <string name="wikis_insert_dialog_empty">Eranskinik ez oraindik. Igo fitxategi bat hasteko.</string>
     <string name="wikis_delete_page_message">«%1$s» orria (%2$s) ezabatzera zoaz. Ekintza hau historian zehar leheneratuta desegin daiteke.</string>
@@ -306,6 +308,7 @@
     <string name="wikis_access_subject_anyone">Edonor</string>
     <string name="wikis_access_subject_authenticated">Autentifikatutako erabiltzaileak</string>
     <string name="wikis_revision_compare">Konparatu aldaketak</string>
+    <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Erakutsi orria</string>
     <string name="wikis_revision_compare_failed">Ezin izan da aurreko bertsioa kargatu konparatzeko.</string>
     <string name="wikis_revision_changes_from">Aldaketak %1$d → %2$d bertsiotik</string>
@@ -350,4 +353,6 @@
         <item quantity="other">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ezin izan da epigrafea gorde</string>
+    <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
+    <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 </resources>

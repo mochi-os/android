@@ -30,11 +30,17 @@ sealed class PageViewEvent {
     /** Copy this URL to the clipboard and show the "RSS URL copied" toast. */
     data class CopyRssUrl(val url: String) : PageViewEvent()
 
+    /** Hand this server-built link to the system share sheet. */
+    data class ShareLink(val link: String) : PageViewEvent()
+
     /** The wiki's RSS token was cleared; confirm with a snackbar. */
     data object RssRevoked : PageViewEvent()
 
     /** Display a transient error toast (already localised). */
     data class ShowError(val error: MochiError) : PageViewEvent()
+
+    /** The page is gone; the screen showing it has to leave. */
+    object Deleted : PageViewEvent()
 }
 
 data class PageViewUiState(
@@ -46,6 +52,7 @@ data class PageViewUiState(
     val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
     val notFound: Boolean = false,
+    val isDeleting: Boolean = false,
 )
 
 @HiltViewModel
@@ -124,6 +131,25 @@ class PageViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Delete the page this screen is showing. Confirmed by the dialog first —
+     * this is the yes, not the question.
+     */
+    fun delete() {
+        if (_uiState.value.isDeleting) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isDeleting = true)
+            try {
+                repository.deletePage(wikiId, slug)
+                _uiState.value = _uiState.value.copy(isDeleting = false)
+                _events.emit(PageViewEvent.Deleted)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isDeleting = false)
+                _events.emit(PageViewEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
     suspend fun unsubscribe() {
         repository.unsubscribeWiki(wikiId)
     }
@@ -134,6 +160,19 @@ class PageViewModel @Inject constructor(
                 val token = repository.wikiRssToken(wikiId, mode)
                 val url = "$serverUrl/wikis/$wikiId/-/rss?token=$token"
                 _events.emit(PageViewEvent.CopyRssUrl(url))
+            } catch (e: Exception) {
+                _events.emit(PageViewEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Fetch the wiki's share link from the server, then offer it to the share sheet. */
+    fun shareLink() {
+        if (wikiId.isBlank()) return
+        viewModelScope.launch {
+            try {
+                val link = repository.shareWiki(wikiId)
+                _events.emit(PageViewEvent.ShareLink(link))
             } catch (e: Exception) {
                 _events.emit(PageViewEvent.ShowError(e.toMochiError()))
             }
@@ -155,9 +194,6 @@ class PageViewModel @Inject constructor(
             }
         }
     }
-
-    /** Build the canonical share URL for this page on the bound server. */
-    fun shareUrl(): String = "$serverUrl/wikis/$wikiId/$slug"
 
     fun updatePageTags(tags: List<String>) {
         val current = _uiState.value.page ?: return

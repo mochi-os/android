@@ -19,8 +19,13 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.auth.SessionManager
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.PageFetchResponse
+import org.mochios.wikis.model.WikiInfo
+import org.mochios.wikis.model.WikiPermissions
+import org.mochios.android.util.slugify
+import org.mochios.android.util.slugifyPartial
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
@@ -37,6 +42,9 @@ data class PageEditorUiState(
     val comment: String = "",
     val showPreview: Boolean = false,
     val attachments: List<Attachment> = emptyList(),
+    /** The wiki the page belongs to, once `/-/info` has answered. */
+    val wiki: WikiInfo? = null,
+    val permissions: WikiPermissions = WikiPermissions(),
     val error: MochiError? = null,
 )
 
@@ -59,18 +67,26 @@ sealed interface PageEditorEvent {
 class PageEditorViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: WikisRepository,
+    sessionManager: SessionManager,
 ) : ViewModel() {
 
     val wikiId: String = savedStateHandle["wikiId"] ?: ""
+    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
     private val initialSlug: String? = savedStateHandle["page"]
     val isNew: Boolean = initialSlug == null
+    /**
+     * A slug the route suggests for a new page — the wiki's home when this is
+     * the wiki's first page. The field stays editable; this only saves the
+     * user typing what the wiki already expects.
+     */
+    private val suggestedSlug: String = savedStateHandle["slug"] ?: ""
 
     private val _uiState = MutableStateFlow(
         PageEditorUiState(
             // For new pages we seed the slug field with an empty string;
             // the user types one. For edits we don't expose a slug field,
             // but stash the route slug so save calls have it on hand.
-            slug = initialSlug ?: "",
+            slug = initialSlug ?: suggestedSlug,
             isLoading = !isNew,
         )
     )
@@ -80,8 +96,29 @@ class PageEditorViewModel @Inject constructor(
     val events = _events.receiveAsFlow()
 
     init {
+        loadWiki()
         if (!isNew) {
             loadPage()
+        }
+    }
+
+    /**
+     * The wiki behind the page, for the context the preview renders inside -
+     * markdown resolves attachment URLs against it - and for whether this user
+     * may delete. A failure leaves both at their defaults: the editor still
+     * writes and saves perfectly well without them.
+     */
+    private fun loadWiki() {
+        viewModelScope.launch {
+            try {
+                val response = repository.getInfo(wikiId)
+                _uiState.value = _uiState.value.copy(
+                    wiki = response.wiki,
+                    permissions = response.permissions ?: WikiPermissions(),
+                )
+            } catch (_: Exception) {
+                // Nothing to say: the page itself reports its own failures.
+            }
         }
     }
 
@@ -123,8 +160,29 @@ class PageEditorViewModel @Inject constructor(
 
     // ---- Form mutations ----
 
-    fun setTitle(value: String) { _uiState.value = _uiState.value.copy(title = value) }
-    fun setSlug(value: String) { _uiState.value = _uiState.value.copy(slug = value) }
+    /**
+     * Whether the address is the user's own rather than something derived. A
+     * slug the route suggested counts as set, so typing a title never
+     * overwrites the page the caller asked to create.
+     */
+    private var slugEdited: Boolean = suggestedSlug.isNotBlank()
+
+    fun setTitle(value: String) {
+        val current = _uiState.value
+        _uiState.value = current.copy(
+            title = value,
+            // A new page's address follows its title until the user takes the
+            // field over; an existing page's address never moves.
+            slug = if (isNew && !slugEdited) slugify(value) else current.slug,
+        )
+    }
+
+    fun setSlug(value: String) {
+        slugEdited = true
+        // Typed input is held to the same alphabet, but a trailing hyphen is
+        // left alone - it is a word separator the user has not finished yet.
+        _uiState.value = _uiState.value.copy(slug = slugifyPartial(value))
+    }
     fun setContent(value: String) { _uiState.value = _uiState.value.copy(content = value) }
     fun setComment(value: String) { _uiState.value = _uiState.value.copy(comment = value) }
     fun togglePreview() {
@@ -205,8 +263,15 @@ class PageEditorViewModel @Inject constructor(
 
     // ---- Attachments (for InsertAttachmentDialog) ----
 
+    /**
+     * The wiki's files, for the insert dialog to pick from. Attachments belong
+     * to the wiki, not to one page - the list route takes a page only to keep
+     * the shape the web client uses, and ignores it - so a page that has no
+     * address yet still has files to insert. Bailing out on an empty slug left
+     * the dialog empty the first time it was opened on a page being written.
+     */
     fun loadAttachments() {
-        val slug = _uiState.value.slug.ifEmpty { initialSlug ?: return }
+        val slug = _uiState.value.slug.ifEmpty { initialSlug.orEmpty() }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isAttachmentsLoading = true)
             try {
@@ -225,15 +290,17 @@ class PageEditorViewModel @Inject constructor(
     /**
      * Uploads are staged as temp files so the repository stays file-based; the
      * copy keeps the original filename, which is what the server records.
+     *
+     * The upload route names a wiki and no page, so a page still being written
+     * uploads as well as a saved one does. Turning the pick away on an empty
+     * slug left the dialog's own upload button doing nothing at all, with
+     * nothing said about why.
      */
     fun uploadAttachments(
         uris: List<Uri>,
         uploadFailed: String,
     ) {
         if (uris.isEmpty()) return
-        // Attachments are wiki-scoped on the server, but the editor only allows
-        // uploads once the page exists (matching web), so guard on a known slug.
-        if (_uiState.value.slug.isEmpty() && initialSlug == null) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
             val tempFiles = repository.stageFiles(uris)

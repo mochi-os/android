@@ -307,5 +307,12 @@
     <string name="lightbox_comments">Kommentare</string>
     <string name="common_not_found">Nicht gefunden</string>
     <string name="profile_save_name">Namen speichern</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Widerrufen</string>
 </resources>

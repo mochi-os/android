@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">జోడింపు తాత్కాలికంగా అందుబాటులో లేదు</string>
     <string name="common_unavailable">అందుబాటులో లేదు</string>
     <string name="common_not_found">కనుగొనబడలేదు</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">రద్దు చేయండి</string>
     <string name="rss_revoke">యాక్సెస్ ఉపసంహరించు</string>
     <string name="rss_revoke_title">RSS యాక్సెస్‌ను ఉపసంహరించాలా?</string>

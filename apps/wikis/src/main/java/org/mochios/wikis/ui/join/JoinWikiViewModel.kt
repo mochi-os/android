@@ -53,7 +53,6 @@ class JoinWikiViewModel @Inject constructor(
             try {
                 val result = repository.joinWiki(target = target, server = null)
                 val landingId = result.fingerprint.ifEmpty { result.id }
-                _uiState.value = _uiState.value.copy(isSubmitting = false)
                 _events.send(JoinEvent.Success(landingId))
             } catch (e: Exception) {
                 val mochiError = e.toMochiError()

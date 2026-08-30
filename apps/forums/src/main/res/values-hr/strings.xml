@@ -4,11 +4,8 @@
     <string name="forums_auth_display_name">Ime za prikaz</string>
     <string name="forums_auth_verification_failed">Provjera nije uspjela</string>
     <string name="forums_list_title">Forumi</string>
-    <string name="forums_list_close_search">Zatvori pretragu</string>
-    <string name="forums_list_search">Pretraži</string>
     <string name="forums_list_find">Pronađi forume</string>
     <string name="forums_list_logout">Odjavi se</string>
-    <string name="forums_list_create">Stvori forum</string>
     <string name="forums_list_unsubscribe">Otkaži pretplatu</string>
     <string name="forums_list_unsubscribe_title">Otkaži pretplatu</string>
     <string name="forums_create_title">Stvori forum</string>
@@ -124,7 +121,6 @@
     <string name="forums_forum_not_found">Forum nije pronađen</string>
     <string name="forums_post_not_found">Objava nije pronađena</string>
 
-    <string name="forums_list_more">Više</string>
     <string name="forums_comment_send">Pošalji</string>
     <string name="forums_post_body_field">Tekst</string>
     <string name="forums_post_edit_body_field">Tekst</string>
@@ -134,15 +130,12 @@
     <string name="forums_auth_mfa_unsupported">MFA još nije podržan u mobilnoj aplikaciji</string>
     <string name="forums_auth_enter_code_sent">Unesite kod poslan na %1$s</string>
     <string name="forums_auth_create_identity">Stvorite svoj identitet</string>
-    <string name="forums_list_add_to_home">Dodaj na početni zaslon</string>
     <string name="forums_tag_clear">Očisti filtar</string>
     <string name="forums_post_tag_add">Dodaj oznaku</string>
     <string name="forums_write_comment">Napišite komentar…</string>
 
     <string name="notification_channel_forums">Obavijesti foruma</string>
     <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_list_search_placeholder">Pretraži forume</string>
-    <string name="forums_list_no_matching">Nema odgovarajućih foruma</string>
     <string name="forums_list_empty">Još nema foruma</string>
     <string name="forums_list_unsubscribe_message">Jeste li sigurni da se želite odjaviti s ovog foruma?</string>
     <string name="forums_find_search_placeholder">Pretražite forume ili zalijepite URL</string>
@@ -194,7 +187,6 @@
     <string name="forums_tag_interest_up">Pojačaj interes</string>
     <string name="forums_tag_interest_down">Smanji interes</string>
     <string name="forums_tag_interest_remove">Ukloni interes</string>
-    <string name="forums_list_default_sort">Zadano sortiranje</string>
     <string name="forums_access_tab_users">Korisnici</string>
     <string name="forums_access_tab_groups">Grupe</string>
     <string name="forums_access_tab_manual">Ručno</string>

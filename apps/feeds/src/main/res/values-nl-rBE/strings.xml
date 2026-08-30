@@ -132,7 +132,7 @@
     <string name="feeds_less_like_this">Minder zoals dit</string>
     <string name="feeds_no_tags">Geen labels</string>
     <string name="feeds_anonymous">Anoniem</string>
-    <string name="feeds_replying_to_comment">Antwoord op reactie</string>
+    <string name="feeds_replying_to_author">Replying to %1$s</string>
     <string name="feeds_attach_file">Bestand toevoegen</string>
     <string name="feeds_tag_label">Label</string>
     <string name="feeds_file">Bestand</string>

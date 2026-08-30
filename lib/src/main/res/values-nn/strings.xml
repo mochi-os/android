@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">Vedlegg er mellombels utilgjengeleg</string>
     <string name="common_unavailable">Ikkje tilgjengeleg</string>
     <string name="common_not_found">Ikkje funnen</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Trekk tilbake</string>
     <string name="rss_revoke">Trekk tilbake tilgang</string>
     <string name="rss_revoke_title">Oppheve RSS-tilgang?</string>

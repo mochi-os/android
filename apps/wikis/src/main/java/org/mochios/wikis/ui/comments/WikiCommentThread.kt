@@ -5,7 +5,7 @@
 
 package org.mochios.wikis.ui.comments
 
-import android.net.Uri
+import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,32 +16,25 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Reply
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import android.widget.TextView
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -50,8 +43,6 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
-import java.io.File
-import org.mochios.android.R as MochiR
 
 /**
  * Renders one [WikiComment] and its descendants, indenting each child by 16dp.
@@ -65,13 +56,7 @@ fun WikiCommentThread(
     slug: String,
     currentUserId: String?,
     isOwner: Boolean,
-    replyingTo: String?,
-    replyDraft: String,
     onStartReply: (commentId: String, selectedText: String?) -> Unit,
-    onCancelReply: () -> Unit,
-    onReplyDraftChange: (String) -> Unit,
-    onSubmitReply: (commentId: String, files: List<Uri>?) -> Unit,
-    resolveFileName: suspend (Uri) -> String,
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
     depth: Int = 0,
@@ -90,7 +75,6 @@ fun WikiCommentThread(
     val canEdit = currentUserId != null && comment.author == currentUserId
     val canDelete = (currentUserId != null && comment.author == currentUserId) || isOwner
     val hasChildren = comment.children.isNotEmpty()
-    val isReplying = replyingTo == comment.id
 
     val timeAgo = format.formatTimestamp(comment.created)
     val displayName = comment.name.ifBlank { comment.author.orEmpty() }
@@ -258,64 +242,35 @@ fun WikiCommentThread(
                         CommentAttachments(attachments = comment.attachments)
                     }
 
-                    // Action chips
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.padding(top = 2.dp),
-                    ) {
-                        ActionChip(
-                            icon = Icons.AutoMirrored.Filled.Reply,
-                            label = stringResource(R.string.wikis_comment_action_reply),
-                            onClick = {
-                                // Read the active text selection from the rendered comment
-                                // body so we can seed the reply with `> `-quoted lines.
-                                // Mirrors web's `window.getSelection()` quote-on-select.
-                                val tv = bodyTextView
-                                val sel = tv?.let {
-                                    val start = it.selectionStart.coerceAtLeast(0)
-                                    val end = it.selectionEnd.coerceAtLeast(0)
-                                    if (end > start) it.text.subSequence(start, end).toString() else null
+                    CommentActions(
+                        onReply = {
+                            val tv = bodyTextView
+                            val sel = tv?.let { view ->
+                                val from = view.selectionStart.coerceAtLeast(0)
+                                val to = view.selectionEnd.coerceAtLeast(0)
+                                if (to > from) {
+                                    view.text.subSequence(from, to).toString()
+                                } else {
+                                    null
                                 }
-                                onStartReply(comment.id, sel)
-                            },
-                        )
-                        if (canEdit && onEdit != null) {
-                            Spacer(Modifier.width(4.dp))
-                            ActionChip(
-                                icon = Icons.Default.Edit,
-                                label = stringResource(R.string.wikis_comment_action_edit),
-                                onClick = {
-                                    editing = true
-                                    editBody = comment.body
-                                },
-                            )
-                        }
-                        if (canDelete && onDelete != null) {
-                            Spacer(Modifier.width(4.dp))
-                            ActionChip(
-                                icon = Icons.Default.Delete,
-                                label = stringResource(R.string.wikis_comment_action_delete),
-                                onClick = { deleting = true },
-                            )
-                        }
-                    }
-
-                    if (isReplying) {
-                        Spacer(Modifier.height(6.dp))
-                        HorizontalDivider()
-                        Spacer(Modifier.height(6.dp))
-                        CommentForm(
-                            resolveFileName = resolveFileName,
-                            initialText = replyDraft,
-                            onSubmit = { _, files ->
-                                onSubmitReply(comment.id, files)
-                            },
-                            onCancel = onCancelReply,
-                            placeholder = stringResource(R.string.wikis_comment_form_placeholder_reply),
-                            autoFocus = true,
-                            onTextChange = onReplyDraftChange,
-                        )
-                    }
+                            }
+                            onStartReply(comment.id, sel)
+                        },
+                        onEdit = if (canEdit && onEdit != null) {
+                            {
+                                editing = true
+                                editBody = comment.body
+                            }
+                        } else {
+                            null
+                        },
+                        onDelete = if (canDelete && onDelete != null) {
+                            { deleting = true }
+                        } else {
+                            null
+                        },
+                        modifier = Modifier.padding(top = 2.dp),
+                    )
                 }
             }
 
@@ -327,13 +282,7 @@ fun WikiCommentThread(
                         slug = slug,
                         currentUserId = currentUserId,
                         isOwner = isOwner,
-                        replyingTo = replyingTo,
-                        replyDraft = replyDraft,
                         onStartReply = onStartReply,
-                        onCancelReply = onCancelReply,
-                        onReplyDraftChange = onReplyDraftChange,
-                        onSubmitReply = onSubmitReply,
-                        resolveFileName = resolveFileName,
                         onEdit = onEdit,
                         onDelete = onDelete,
                         depth = depth + 1,
@@ -356,34 +305,6 @@ fun WikiCommentThread(
                 dismissText = stringResource(MochiR.string.common_cancel),
             )
         }
-    }
-}
-
-@Composable
-private fun ActionChip(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    label: String,
-    onClick: () -> Unit,
-) {
-    MochiTextButton(
-        onClick = onClick,
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(
-            horizontal = 8.dp,
-            vertical = 0.dp,
-        ),
-    ) {
-        Icon(
-            imageVector = icon,
-            contentDescription = null,
-            modifier = Modifier.size(14.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Spacer(Modifier.width(4.dp))
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
     }
 }
 

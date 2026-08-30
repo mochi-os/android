@@ -334,6 +334,13 @@
     <string name="common_attachment_unavailable">Το συνημμένο δεν είναι προσωρινά διαθέσιμο</string>
     <string name="common_unavailable">Μη διαθέσιμο</string>
     <string name="common_not_found">Δεν βρέθηκε</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_link">Link</string>
+    <string name="format_heading">Heading</string>
+    <string name="format_code">Code</string>
+    <string name="format_list">Bullet list</string>
+    <string name="common_preview">Preview</string>
     <string name="rss_revoke_confirm">Ανάκληση</string>
     <string name="rss_revoke">Ανάκληση πρόσβασης</string>
     <string name="rss_revoke_title">Ανάκληση πρόσβασης RSS;</string>

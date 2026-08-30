@@ -4,11 +4,9 @@
     <string name="chat_auth_display_name">Birtingarnafn</string>
     <string name="chat_auth_verification_failed">Sannprófun mistókst</string>
     <string name="chat_list_title">Spjöll</string>
-    <string name="chat_list_close_search">Loka leit</string>
     <string name="chat_list_search">Leita</string>
     <string name="chat_list_logout">Skrá út</string>
     <string name="chat_list_new">Nýtt spjall</string>
-    <string name="chat_list_removed_chat">Fjarlægt</string>
     <string name="chat_new_title">Nýtt spjall</string>
     <string name="chat_new_name">Nafn hóps</string>
     <string name="chat_new_friends">Vinir</string>
@@ -30,14 +28,12 @@
     <string name="chat_members_you">Þú</string>
     <string name="chat_chat_not_found">Spjall fannst ekki</string>
 
-    <string name="chat_list_more">Meira</string>
     <string name="chat_message_send">Senda</string>
     <string name="chat_attachment_remove">Remove attachment</string>
     <string name="chat_message_remove_attachment">Remove attachment</string>
     <string name="chat_auth_login_failed">Innskráning mistókst</string>
     <string name="chat_attachment_move_up">Færa upp</string>
     <string name="chat_attachment_move_down">Færa niður</string>
-    <string name="chat_list_add_to_home">Bæta við heimaskjá</string>
 
     <string name="notification_channel_chat">Spjalltilkynningar</string>
     <string name="chat_auth_brand">Mochi Chat</string>
@@ -45,10 +41,7 @@
     <string name="chat_auth_mfa_unsupported">MFA er ekki enn stutt í farsímaforritinu</string>
     <string name="chat_auth_enter_code_sent">Sláðu inn kóðann sem var sendur á %1$s</string>
     <string name="chat_auth_create_identity">Búðu til auðkenni þitt</string>
-    <string name="chat_list_search_placeholder">Leita í spjalli</string>
-    <string name="chat_list_no_matching">Engin spjöll fundust</string>
     <string name="chat_list_empty">Engin spjöll enn</string>
-    <string name="chat_list_left_chat">Farin</string>
     <string name="chat_new_existing_chat">Opna fyrirliggjandi spjall</string>
     <string name="chat_new_start">Hefja spjall</string>
     <string name="chat_new_start_group">Hefja hópspjall</string>
