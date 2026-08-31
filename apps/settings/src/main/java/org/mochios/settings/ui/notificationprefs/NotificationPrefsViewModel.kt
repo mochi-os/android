@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -31,6 +32,7 @@ enum class NotifTab { CATEGORIES, TOPICS }
 
 data class NotificationPrefsUiState(
     val isLoading: Boolean = true,
+    val topicsLoaded: Boolean = false,
     val tab: NotifTab = NotifTab.CATEGORIES,
     val categories: List<NotifCategory> = emptyList(),
     val topics: List<NotifTopic> = emptyList(),
@@ -47,6 +49,8 @@ class NotificationPrefsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(NotificationPrefsUiState())
     val uiState: StateFlow<NotificationPrefsUiState> = _uiState.asStateFlow()
 
+    private var topicsJob: Job? = null
+
     // The destination count, not a finished sentence. The wording lives in the
     // Compose layer, where a <plurals> resource can inflect it for the reader's
     // language; a String built here can only ever be English.
@@ -57,6 +61,9 @@ class NotificationPrefsViewModel @Inject constructor(
 
     fun setTab(tab: NotifTab) {
         _uiState.value = _uiState.value.copy(tab = tab)
+        if (tab == NotifTab.TOPICS && !_uiState.value.topicsLoaded) {
+            loadTopics()
+        }
     }
 
     fun refresh() {
@@ -64,13 +71,29 @@ class NotificationPrefsViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val cats = api.getCategories().unwrapRaw()
-                val topics = api.getTopics().unwrapRaw()
                 val dests = api.getDestinations().unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     categories = cats,
-                    topics = topics,
                     available = dests,
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Fetch the topic list, which the topics tab asks for the first time it is opened. */
+    fun loadTopics() {
+        if (topicsJob?.isActive == true) return
+        topicsJob = viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            try {
+                val topics = api.getTopics().unwrapRaw()
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    topicsLoaded = true,
+                    topics = topics,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
@@ -131,6 +154,9 @@ class NotificationPrefsViewModel @Inject constructor(
             try {
                 block()
                 refresh()
+                if (_uiState.value.topicsLoaded) {
+                    loadTopics()
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

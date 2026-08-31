@@ -145,7 +145,12 @@ fun NotificationPrefsScreen(
                     }
                     state.error != null && state.categories.isEmpty() && state.topics.isEmpty() -> ErrorState(
                         error = state.error!!,
-                        onRetry = viewModel::refresh,
+                        onRetry = {
+                            viewModel.refresh()
+                            if (state.tab == NotifTab.TOPICS) {
+                                viewModel.loadTopics()
+                            }
+                        },
                     )
                     state.tab == NotifTab.CATEGORIES -> CategoriesList(
                         categories = state.categories,
