@@ -43,6 +43,7 @@ class NotificationsUnreadStore @Inject constructor(
     val count: StateFlow<Int> = _count.asStateFlow()
 
     private var subscriptionId: String? = null
+    private var connectionId: String? = null
     private var started = false
 
     fun ensureStarted() {
@@ -63,6 +64,8 @@ class NotificationsUnreadStore @Inject constructor(
     fun stop() {
         subscriptionId?.let { id -> webSocket.unsubscribe(id) }
         subscriptionId = null
+        connectionId?.let { id -> webSocket.unsubscribeConnected(id) }
+        connectionId = null
         started = false
         _count.value = 0
     }
@@ -86,6 +89,13 @@ class NotificationsUnreadStore @Inject constructor(
         val token = authRepository.fetchToken("notifications").getOrNull()
             ?: sessionManager.getToken("notifications")
             ?: return
+        // A reconnect replays nothing: whatever was broadcast while the socket
+        // was down is gone. Re-fetch the count every time the socket comes up -
+        // MainActivity's onResume forces the reconnect on a foreground return,
+        // which makes this the foreground refresh as well.
+        connectionId = webSocket.subscribeConnected(server, "notifications") {
+            scope.launch { refresh() }
+        }
         subscriptionId = webSocket.subscribe(server, "notifications", token) { event ->
             when (event.type) {
                 "new" -> scope.launch { refresh() }

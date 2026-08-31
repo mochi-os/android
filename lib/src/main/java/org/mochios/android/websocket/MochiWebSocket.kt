@@ -26,6 +26,11 @@ class MochiWebSocket @Inject constructor(
 ) {
     private val sockets = ConcurrentHashMap<String, WebSocket>()
     private val subscribers = ConcurrentHashMap<String, MutableMap<String, (WebSocketEvent) -> Unit>>()
+    // Invoked whenever a key's socket opens, first connect and reconnects
+    // alike. A reconnect replays nothing - whatever was broadcast while the
+    // socket was down is gone - so a subscriber whose state mirrors server
+    // data re-fetches from here to absorb what it missed.
+    private val connectListeners = ConcurrentHashMap<String, MutableMap<String, () -> Unit>>()
     private val reconnecting = ConcurrentHashMap<String, Boolean>()
     private val backoffAttempts = ConcurrentHashMap<String, Int>()
     // Bumped by reconnectNow(); a sleeping backoff thread that wakes to a
@@ -66,6 +71,24 @@ class MochiWebSocket @Inject constructor(
         }
 
         return subscriptionId
+    }
+
+    /** Register for socket-open notifications on this key; see [connectListeners]. */
+    fun subscribeConnected(
+        serverUrl: String,
+        fingerprint: String,
+        onConnected: () -> Unit,
+    ): String {
+        val subscriptionId = UUID.randomUUID().toString()
+        val listeners = connectListeners.getOrPut(keyOf(serverUrl, fingerprint)) { ConcurrentHashMap() }
+        listeners[subscriptionId] = onConnected
+        return subscriptionId
+    }
+
+    fun unsubscribeConnected(subscriptionId: String) {
+        for ((_, listeners) in connectListeners) {
+            listeners.remove(subscriptionId)
+        }
     }
 
     fun unsubscribe(subscriptionId: String) {
@@ -145,6 +168,15 @@ class MochiWebSocket @Inject constructor(
                     // Reset backoff on successful connect so the next failure
                     // starts at the short-end again.
                     backoffAttempts.remove(key)
+                    connectListeners[key]?.let { listeners ->
+                        for ((_, listener) in listeners) {
+                            try {
+                                listener()
+                            } catch (e: Exception) {
+                                // Swallow listener errors to avoid crashing the websocket
+                            }
+                        }
+                    }
                 }
 
                 override fun onMessage(webSocket: WebSocket, text: String) {
