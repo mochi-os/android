@@ -392,6 +392,6 @@
     <string name="accounts_forget_title">ਡਿਵਾਈਸ ਭੁੱਲ ਜਾਣੀ ਹੈ?</string>
     <string name="accounts_forget_message">ਇਹ \"%1$s\" ਡਿਵਾਈਸ ਨੂੰ ਭੁੱਲ ਜਾਵੇਗਾ ਅਤੇ ਉਸ ਨੂੰ ਸੂਚਨਾਵਾਂ ਭੇਜਣਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।</string>
     <string name="accounts_device_seen">ਆਖਰੀ ਵਾਰ ਦੇਖਿਆ %1$s</string>
-    <string name="notifprefs_device_app">%1$s ਐਪ</string>
-    <string name="notifprefs_device_push">%1$s ਪੁਸ਼</string>
+    <string name="notifprefs_device_app">%1$s · ਐਪ</string>
+    <string name="notifprefs_device_push">%1$s · ਪੁਸ਼</string>
 </resources>

@@ -64,10 +64,8 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownField
-import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextButton
@@ -382,14 +380,55 @@ private fun TopicsList(
         }
         return
     }
+    val byApp = topics
+        .groupBy { topic -> topic.appName }
+        .toSortedMap(String.CASE_INSENSITIVE_ORDER)
+    var isFirstGroup = true
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        items(topics, key = { "${it.app}/${it.topic}/${it.`object`}" }) { topic ->
-            TopicRow(topic = topic, categories = categories, onSetCategory = onSetCategory, onRemove = onRemove)
+        for ((appName, appTopics) in byApp) {
+            val leadsWithSpace = !isFirstGroup
+            isFirstGroup = false
+            if (appName.isNotBlank()) {
+                item("app/$appName") {
+                    Column(modifier = Modifier.fillMaxWidth()) {
+                        if (leadsWithSpace) {
+                            Spacer(Modifier.height(16.dp))
+                        }
+                        Text(
+                            text = appName,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                        )
+                        Spacer(Modifier.height(4.dp))
+                    }
+                }
+            }
+            val sorted = appTopics.sortedWith(
+                compareBy(String.CASE_INSENSITIVE_ORDER) { topic -> topicTitle(topic) }
+            )
+            items(sorted, key = { topic -> "${topic.app}/${topic.topic}/${topic.`object`}" }) { topic ->
+                TopicRow(
+                    topic = topic,
+                    categories = categories,
+                    onSetCategory = onSetCategory,
+                    onRemove = onRemove,
+                )
+            }
         }
     }
+}
+
+/** The "No notifications" pseudo-category is listed last, never among the real ones. */
+private fun List<NotifCategory>.noNotificationsLast(): List<NotifCategory> =
+    sortedBy { category -> if (category.id == "0") 1 else 0 }
+
+/** A topic reads as "what happened: which thing", falling back to the raw key. */
+private fun topicTitle(topic: NotifTopic): String {
+    val label = topic.label.ifBlank { topic.topic }
+    return if (topic.name.isNotBlank()) "$label: ${topic.name}" else label
 }
 
 @Composable
@@ -400,57 +439,46 @@ private fun TopicRow(
     onRemove: (NotifTopic) -> Unit,
 ) {
     var menu by remember { mutableStateOf(false) }
+    val current = categories.firstOrNull { category -> category.id == topic.category }
+    val unassigned = stringResource(R.string.notifprefs_unassigned)
     MochiCard(modifier = Modifier.fillMaxWidth()) {
-        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Column(modifier = Modifier.weight(1f)) {
+        Column(modifier = Modifier.padding(12.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = topic.label.ifBlank { topic.topic },
+                    text = topicTitle(topic),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
+                    modifier = Modifier.weight(1f),
                 )
-                if (topic.objectName.isNotBlank()) {
-                    Text(
-                        topic.objectName,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-                if (topic.appName.isNotBlank()) {
-                    Text(
-                        topic.appName,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
+                MochiIconButton(onClick = { onRemove(topic) }) {
+                    Icon(Icons.Default.Close, contentDescription = stringResource(R.string.notifprefs_remove))
                 }
             }
-            Box {
-                MochiOutlinedButton(onClick = { menu = true }) {
-                    val current = categories.firstOrNull { it.id == topic.category }
-                    Text(current?.label ?: stringResource(R.string.notifprefs_unassigned))
-                }
-                MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+            Spacer(Modifier.height(8.dp))
+            MochiDropdownField(
+                value = current?.label ?: unassigned,
+                expanded = menu,
+                onExpandedChange = { open -> menu = open },
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                MochiDropdownMenuItem(
+                    text = { Text(unassigned) },
+                    onClick = {
+                        menu = false
+                        onSetCategory(topic, null)
+                    },
+                    selected = topic.category.isNullOrEmpty(),
+                )
+                for (category in categories.noNotificationsLast()) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.notifprefs_unassigned)) },
+                        text = { Text(category.label) },
                         onClick = {
                             menu = false
-                            onSetCategory(topic, null)
+                            onSetCategory(topic, category.id)
                         },
-                        selected = topic.category == null,
+                        selected = topic.category == category.id,
                     )
-                    for (cat in categories) {
-                        MochiDropdownMenuItem(
-                            text = { Text(cat.label) },
-                            onClick = {
-                                menu = false
-                                onSetCategory(topic, cat.id)
-                            },
-                            selected = topic.category == cat.id,
-                        )
-                    }
                 }
-            }
-            MochiIconButton(onClick = { onRemove(topic) }) {
-                Icon(Icons.Default.Close, contentDescription = stringResource(R.string.notifprefs_remove))
             }
         }
     }
@@ -479,7 +507,7 @@ private fun DeleteCategoryDialog(
                     onExpandedChange = { open -> menu = open },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
-                    for (other in others) {
+                    for (other in others.noNotificationsLast()) {
                         MochiDropdownMenuItem(
                             text = { Text(other.label) },
                             onClick = {

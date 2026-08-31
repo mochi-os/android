@@ -392,6 +392,6 @@
     <string name="accounts_forget_title">Gerät vergessen?</string>
     <string name="accounts_forget_message">Dadurch wird das Gerät \"%1$s\" vergessen und es erhält keine Benachrichtigungen mehr.</string>
     <string name="accounts_device_seen">Zuletzt gesehen %1$s</string>
-    <string name="notifprefs_device_app">%1$s App</string>
-    <string name="notifprefs_device_push">%1$s Push</string>
+    <string name="notifprefs_device_app">%1$s · App</string>
+    <string name="notifprefs_device_push">%1$s · Push</string>
 </resources>

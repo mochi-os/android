@@ -71,7 +71,7 @@ data class NotifTopic(
     @SerializedName("app_name") val appName: String = "",
     val topic: String = "",
     val `object`: String = "",
-    @SerializedName("object_name") val objectName: String = "",
+    val name: String = "",
     val label: String = "",
     val category: String? = null,
     val created: Long = 0,

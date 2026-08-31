@@ -392,6 +392,6 @@
     <string name="accounts_forget_title">Libala isixhobo?</string>
     <string name="accounts_forget_message">Oku kuya kulibala isixhobo \"%1$s\" kuze kuyeke izaziso kuso.</string>
     <string name="accounts_device_seen">Igqibele ukubonwa %1$s</string>
-    <string name="notifprefs_device_app">%1$s i-app</string>
-    <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_device_app">%1$s · i-app</string>
+    <string name="notifprefs_device_push">%1$s · push</string>
 </resources>

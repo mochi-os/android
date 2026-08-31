@@ -392,6 +392,6 @@
     <string name="accounts_forget_title">መሳሪያውን ይረሱ?</string>
     <string name="accounts_forget_message">ይህ መሳሪያውን \"%1$s\" ይረሳል እና ወደ እሱ የሚላኩ ማሳወቂያዎችን ያቆማል።</string>
     <string name="accounts_device_seen">መጨረሻ የታየው %1$s</string>
-    <string name="notifprefs_device_app">%1$s መተግበሪያ</string>
-    <string name="notifprefs_device_push">%1$s ግፋ</string>
+    <string name="notifprefs_device_app">%1$s · መተግበሪያ</string>
+    <string name="notifprefs_device_push">%1$s · ግፋ</string>
 </resources>

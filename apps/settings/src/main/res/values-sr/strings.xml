@@ -394,6 +394,6 @@
     <string name="accounts_forget_title">Заборавити уређај?</string>
     <string name="accounts_forget_message">Ово ће заборавити уређај \"%1$s\" и зауставити обавештења на њега.</string>
     <string name="accounts_device_seen">Последњи пут виђен %1$s</string>
-    <string name="notifprefs_device_app">%1$s апликација</string>
-    <string name="notifprefs_device_push">%1$s пуш</string>
+    <string name="notifprefs_device_app">%1$s · апликација</string>
+    <string name="notifprefs_device_push">%1$s · пуш</string>
 </resources>

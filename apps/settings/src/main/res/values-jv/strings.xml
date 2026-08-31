@@ -390,6 +390,6 @@
     <string name="accounts_forget_title">Lalekake piranti?</string>
     <string name="accounts_forget_message">Iki bakal nglalekake piranti \"%1$s\" lan mandhegake notifikasi menyang piranti kasebut.</string>
     <string name="accounts_device_seen">Pungkasan katon %1$s</string>
-    <string name="notifprefs_device_app">%1$s aplikasi</string>
-    <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_device_app">%1$s · aplikasi</string>
+    <string name="notifprefs_device_push">%1$s · push</string>
 </resources>
