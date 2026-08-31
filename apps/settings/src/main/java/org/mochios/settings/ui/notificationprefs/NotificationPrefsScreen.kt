@@ -5,6 +5,9 @@
 
 package org.mochios.settings.ui.notificationprefs
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,6 +21,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
@@ -25,8 +29,9 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -46,9 +51,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
@@ -56,16 +63,16 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
+import org.mochios.android.ui.components.MochiDropdownField
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
-import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
-import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
@@ -74,6 +81,9 @@ import org.mochios.settings.api.NotifTopic
 @Composable
 fun NotificationPrefsScreen(
     onBack: () -> Unit,
+    onAddCategory: () -> Unit,
+    onEditCategory: (String) -> Unit,
+    savedSignal: Long = 0L,
     viewModel: NotificationPrefsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -87,13 +97,23 @@ fun NotificationPrefsScreen(
             viewModel.testSent.collect { sent = it }
         }
     }
-    val snack = sent?.let { pluralStringResource(R.plurals.notifprefs_test_sent, it, it) }
+    val snack = sent?.let { count ->
+        if (count == 0) {
+            stringResource(R.string.notifprefs_no_destinations_configured)
+        } else {
+            pluralStringResource(R.plurals.notifprefs_test_sent, count, count)
+        }
+    }
 
-    var creating by remember { mutableStateOf(false) }
-    var editing by remember { mutableStateOf<NotifCategory?>(null) }
     var deleting by remember { mutableStateOf<NotifCategory?>(null) }
 
     val snackbar = remember { SnackbarHostState() }
+
+    LaunchedEffect(savedSignal) {
+        if (savedSignal != 0L) {
+            viewModel.refresh()
+        }
+    }
 
     // An error while content is on screen is shown over it rather than
 
@@ -126,6 +146,16 @@ fun NotificationPrefsScreen(
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
                     }
                 },
+                actions = {
+                    if (state.tab == NotifTab.CATEGORIES) {
+                        MochiIconButton(onClick = onAddCategory) {
+                            Icon(
+                                Icons.Default.Add,
+                                contentDescription = stringResource(R.string.notifprefs_add_category),
+                            )
+                        }
+                    }
+                },
             )
         },
     ) { padding ->
@@ -155,13 +185,9 @@ fun NotificationPrefsScreen(
                     state.tab == NotifTab.CATEGORIES -> CategoriesList(
                         categories = state.categories,
                         available = state.available,
-                        onAdd = { creating = true },
-                        onEdit = { editing = it },
-                        onDelete = { deleting = it },
-                        onTest = { viewModel.testCategory(it) },
-                        onToggleDest = { cat, row, checked ->
-                            viewModel.toggleDestination(cat, row, checked)
-                        },
+                        onEdit = { category -> onEditCategory(category.id) },
+                        onDelete = { category -> deleting = category },
+                        onTest = { category -> viewModel.testCategory(category) },
                     )
                     else -> TopicsList(
                         topics = state.topics,
@@ -177,28 +203,6 @@ fun NotificationPrefsScreen(
         }
     }
 
-    if (creating) {
-        CategoryNameDialog(
-            initial = "",
-            title = stringResource(R.string.notifprefs_new_category),
-            onDismiss = { creating = false },
-            onSave = { name ->
-                viewModel.createCategory(name)
-                creating = false
-            },
-        )
-    }
-    editing?.let { cat ->
-        CategoryNameDialog(
-            initial = cat.label,
-            title = stringResource(R.string.notifprefs_edit_category),
-            onDismiss = { editing = null },
-            onSave = { name ->
-                viewModel.renameCategory(cat, name)
-                editing = null
-            },
-        )
-    }
     deleting?.let { cat ->
         val others = state.categories.filter { it.id != cat.id }
         DeleteCategoryDialog(
@@ -217,33 +221,23 @@ fun NotificationPrefsScreen(
 private fun CategoriesList(
     categories: List<NotifCategory>,
     available: DestinationsAvailable,
-    onAdd: () -> Unit,
     onEdit: (NotifCategory) -> Unit,
     onDelete: (NotifCategory) -> Unit,
     onTest: (NotifCategory) -> Unit,
-    onToggleDest: (NotifCategory, DestinationRow, Boolean) -> Unit,
 ) {
-    val visible = categories.filter { it.id != "0" }
+    val visible = categories.filter { category -> category.id != "0" }
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier.fillMaxSize(),
     ) {
-        item("add") {
-            MochiOutlinedButton(onClick = onAdd, modifier = Modifier.fillMaxWidth()) {
-                Icon(Icons.Default.Add, contentDescription = null)
-                Spacer(Modifier.size(8.dp))
-                Text(stringResource(R.string.notifprefs_add_category))
-            }
-        }
-        items(visible, key = { it.id }) { category ->
+        items(visible, key = { category -> category.id }) { category ->
             CategoryCard(
                 category = category,
                 available = available,
                 onEdit = { onEdit(category) },
                 onDelete = { onDelete(category) },
                 onTest = { onTest(category) },
-                onToggleDest = { row, checked -> onToggleDest(category, row, checked) },
             )
         }
     }
@@ -256,19 +250,39 @@ private fun CategoryCard(
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     onTest: () -> Unit,
-    onToggleDest: (DestinationRow, Boolean) -> Unit,
 ) {
+    var expanded by remember { mutableStateOf(false) }
+    val options = destinationOptions(available)
+    val checkedKeys = category.destinations.map { row -> row.type to row.target }.toSet()
+    val selected = options.filter { (row, _) -> (row.type to row.target) in checkedKeys }
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(12.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = category.label,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
+                Row(
                     modifier = Modifier.weight(1f),
-                )
-                MochiIconButton(onClick = onTest) {
-                    Icon(Icons.AutoMirrored.Filled.Send, contentDescription = stringResource(R.string.notifprefs_test))
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = category.label,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.SemiBold,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f, fill = false),
+                    )
+                    if (category.default == 1) {
+                        Spacer(Modifier.size(8.dp))
+                        DefaultBadge()
+                    }
+                }
+                MochiTextButton(onClick = onTest) {
+                    Icon(
+                        Icons.AutoMirrored.Filled.Send,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Spacer(Modifier.size(8.dp))
+                    Text(stringResource(R.string.notifprefs_test))
                 }
                 MochiIconButton(onClick = onEdit) {
                     Icon(Icons.Default.Edit, contentDescription = stringResource(R.string.notifprefs_edit))
@@ -277,80 +291,78 @@ private fun CategoryCard(
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.notifprefs_delete),
-                        tint = MaterialTheme.colorScheme.error,
                     )
                 }
             }
-            Spacer(Modifier.height(8.dp))
-            Text(
-                stringResource(R.string.notifprefs_destinations),
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            DestinationRows(
-                category = category,
-                available = available,
-                onToggle = onToggleDest,
-            )
+            Spacer(Modifier.height(4.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .then(
+                        if (selected.isEmpty()) {
+                            Modifier
+                        } else {
+                            Modifier.clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                            ) { expanded = !expanded }
+                        }
+                    )
+                    .padding(vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                if (selected.isEmpty()) {
+                    Text(
+                        text = stringResource(R.string.notifprefs_no_destinations),
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                } else {
+                    Text(
+                        text = stringResource(R.string.notifprefs_destinations) +
+                            " \u00b7 ${selected.size}/${options.size}",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.weight(1f),
+                    )
+                    Icon(
+                        imageVector = if (expanded) {
+                            Icons.Default.ExpandLess
+                        } else {
+                            Icons.Default.ExpandMore
+                        },
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+            if (expanded) {
+                for ((_, label) in selected) {
+                    Text(
+                        text = label,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 4.dp),
+                    )
+                }
+            }
         }
     }
 }
 
+/** Marks the category new topics are filed under. */
 @Composable
-private fun DestinationRows(
-    category: NotifCategory,
-    available: DestinationsAvailable,
-    onToggle: (DestinationRow, Boolean) -> Unit,
-) {
-    val checked = category.destinations.map { it.type to it.target }.toSet()
-
-    @Composable
-    fun destination(row: DestinationRow, label: String) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Checkbox(
-                checked = (row.type to row.target) in checked,
-                onCheckedChange = { onToggle(row, it) },
-            )
-            Text(label, style = MaterialTheme.typography.bodyMedium)
-        }
-    }
-
-    // Every destination is one row named for what it is: the browser's bell, a
-    // device's in-app list ("S24U app"), the push account registered from a
-    // device ("S24U push"), a push account bound to no device, or a feed. One
-    // flat list sorted by name, which also keeps a device's rows together.
-    val deviceFallback = stringResource(R.string.notifprefs_dest_device)
-    val bound = available.devices.map { it.id }.toSet()
-    val rows = buildList {
-        add(DestinationRow(type = "web", target = "") to stringResource(R.string.notifprefs_dest_web))
-        for (device in available.devices) {
-            val name = device.label.ifBlank { deviceFallback }
-            add(
-                DestinationRow(type = "device", target = device.id) to
-                    stringResource(R.string.notifprefs_device_app, name)
-            )
-            for (acc in available.accounts) {
-                if (acc.device == device.id) {
-                    add(
-                        DestinationRow(type = "account", target = acc.id) to
-                            stringResource(R.string.notifprefs_device_push, name)
-                    )
-                }
-            }
-        }
-        for (acc in available.accounts) {
-            if (acc.device.isNotBlank() && acc.device in bound) continue
-            val name = if (acc.label.isNotBlank()) acc.label else if (acc.identifier.isNotBlank()) acc.identifier else acc.type
-            // A push account bound to no device names its transport, so two
-            // that share a phone's name can still be told apart.
-            val push = acc.type == "browser" || acc.type == "unifiedpush" || acc.type == "fcm"
-            add(DestinationRow(type = "account", target = acc.id) to (if (push && name != acc.type) "$name · ${acc.type}" else name))
-        }
-        for (feed in available.feeds) {
-            add(DestinationRow(type = "rss", target = feed.id) to feed.name)
-        }
-    }.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.second })
-    for ((row, label) in rows) destination(row, label)
+private fun DefaultBadge() {
+    Text(
+        text = stringResource(MochiR.string.settings_theme_default),
+        style = MaterialTheme.typography.labelSmall,
+        color = MaterialTheme.colorScheme.onSecondaryContainer,
+        modifier = Modifier
+            .clip(RoundedCornerShape(4.dp))
+            .background(MaterialTheme.colorScheme.secondaryContainer)
+            .padding(horizontal = 6.dp, vertical = 2.dp),
+    )
 }
 
 @Composable
@@ -445,33 +457,6 @@ private fun TopicRow(
 }
 
 @Composable
-private fun CategoryNameDialog(
-    initial: String,
-    title: String,
-    onDismiss: () -> Unit,
-    onSave: (String) -> Unit,
-) {
-    var name by remember { mutableStateOf(initial) }
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = title,
-        content = {
-            MochiTextField(
-                value = name,
-                onValueChange = { name = it },
-                label = { Text(stringResource(R.string.notifprefs_name_label)) },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth(),
-            )
-        },
-        confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = { onSave(name) },
-        confirmEnabled = name.trim().isNotEmpty(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}
-
-@Composable
 private fun DeleteCategoryDialog(
     category: NotifCategory,
     others: List<NotifCategory>,
@@ -488,27 +473,28 @@ private fun DeleteCategoryDialog(
             Column {
                 Text(stringResource(R.string.notifprefs_reassign_label))
                 Spacer(Modifier.height(8.dp))
-                Box {
-                    MochiOutlinedButton(onClick = { menu = true }) {
-                        val cur = others.firstOrNull { it.id == target }
-                        Text(cur?.label ?: "")
-                    }
-                    MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                        for (c in others) {
-                            MochiDropdownMenuItem(
-                                text = { Text(c.label) },
-                                onClick = {
-                                    target = c.id
-                                    menu = false
-                                },
-                            )
-                        }
+                MochiDropdownField(
+                    value = others.firstOrNull { other -> other.id == target }?.label.orEmpty(),
+                    expanded = menu,
+                    onExpandedChange = { open -> menu = open },
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    for (other in others) {
+                        MochiDropdownMenuItem(
+                            text = { Text(other.label) },
+                            onClick = {
+                                target = other.id
+                                menu = false
+                            },
+                            selected = other.id == target,
+                        )
                     }
                 }
             }
         },
         confirmText = stringResource(R.string.notifprefs_delete),
         onConfirm = { onConfirm(target) },
+        destructive = true,
         dismissText = stringResource(MochiR.string.common_cancel),
     )
 }

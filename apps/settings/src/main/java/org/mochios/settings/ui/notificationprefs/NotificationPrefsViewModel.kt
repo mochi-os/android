@@ -7,7 +7,6 @@ package org.mochios.settings.ui.notificationprefs
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.gson.Gson
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -21,7 +20,6 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
-import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
@@ -43,7 +41,6 @@ data class NotificationPrefsUiState(
 @HiltViewModel
 class NotificationPrefsViewModel @Inject constructor(
     private val api: NotificationPrefsApi,
-    private val gson: Gson,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(NotificationPrefsUiState())
@@ -101,30 +98,8 @@ class NotificationPrefsViewModel @Inject constructor(
         }
     }
 
-    fun createCategory(label: String) = mutate {
-        api.createCategory(label = label.trim(), destinations = null, default = null).unwrapEmpty()
-    }
-
-    fun renameCategory(category: NotifCategory, label: String) = mutate {
-        api.updateCategory(id = category.id, label = label.trim()).unwrapEmpty()
-    }
-
     fun deleteCategory(id: String, reassignTo: String) = mutate {
         api.deleteCategory(id = id, reassign = reassignTo).unwrapEmpty()
-    }
-
-    fun toggleDestination(category: NotifCategory, row: DestinationRow, checked: Boolean) = mutate {
-        val current = category.destinations.toMutableList()
-        val matches: (DestinationRow) -> Boolean = { it.type == row.type && it.target == row.target }
-        if (checked) {
-            if (current.none(matches)) current.add(row)
-        } else {
-            current.removeAll(matches)
-        }
-        api.updateCategory(
-            id = category.id,
-            destinations = gson.toJson(current),
-        ).unwrapEmpty()
     }
 
     fun setTopicCategory(topic: NotifTopic, categoryId: String?) = mutate {

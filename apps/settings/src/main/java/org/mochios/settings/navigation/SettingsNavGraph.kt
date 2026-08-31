@@ -21,6 +21,7 @@ import org.mochios.settings.ui.domains.DomainsScreen
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.interests.InterestsScreen
 import org.mochios.settings.ui.login.LoginScreen
+import org.mochios.settings.ui.notificationprefs.CategoryEditScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
 import org.mochios.settings.ui.preferences.UserSettingsScreen
@@ -30,6 +31,8 @@ import org.mochios.settings.ui.systemsettings.SystemSettingsScreen
 import org.mochios.settings.ui.systemstatus.SystemStatusScreen
 import org.mochios.settings.ui.systemusers.SystemUsersScreen
 
+private const val KEY_CATEGORY_SAVED = "category_saved"
+
 object SettingsApp {
     const val HOME = "settings/home"
     const val ACCOUNT = "settings/account"
@@ -38,6 +41,8 @@ object SettingsApp {
     const val DISPLAY = "settings/display"
     const val NOTIFICATIONS = "settings/notifications"
     const val NOTIFICATION_PREFS = "settings/notification-prefs"
+    const val CATEGORY_NEW = "settings/notification-prefs/category/new"
+    const val CATEGORY_EDIT = "settings/notification-prefs/category/edit/{id}"
     const val SESSIONS = "settings/sessions"
     const val SYSTEM_SETTINGS = "settings/system/settings"
     const val SYSTEM_STATUS = "settings/system/status"
@@ -49,6 +54,8 @@ object SettingsApp {
     const val SYSTEM_DOCUMENTS = "settings/system/documents"
 
     fun document(kind: String) = "settings/document/$kind"
+
+    fun categoryEdit(id: String) = "settings/notification-prefs/category/edit/$id"
 }
 
 fun NavGraphBuilder.settingsNavGraph(
@@ -101,8 +108,31 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenLink = onOpenLink,
         )
     }
-    composable(SettingsApp.NOTIFICATION_PREFS) {
-        NotificationPrefsScreen(onBack = { navController.popBackStack() })
+    composable(SettingsApp.NOTIFICATION_PREFS) { entry ->
+        val savedSignal by entry.savedStateHandle
+            .getStateFlow(KEY_CATEGORY_SAVED, 0L)
+            .collectAsState()
+        NotificationPrefsScreen(
+            onBack = { navController.popBackStack() },
+            onAddCategory = { navController.navigate(SettingsApp.CATEGORY_NEW) },
+            onEditCategory = { id -> navController.navigate(SettingsApp.categoryEdit(id)) },
+            savedSignal = savedSignal,
+        )
+    }
+    composable(SettingsApp.CATEGORY_NEW) {
+        CategoryEditScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStackWithSavedCategory() },
+        )
+    }
+    composable(
+        SettingsApp.CATEGORY_EDIT,
+        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+    ) {
+        CategoryEditScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStackWithSavedCategory() },
+        )
     }
     composable(SettingsApp.SYSTEM_SETTINGS) {
         SystemSettingsScreen(onBack = { navController.popBackStack() })
@@ -134,4 +164,9 @@ fun NavGraphBuilder.settingsNavGraph(
     composable(SettingsApp.SYSTEM_DOCUMENTS) {
         SystemDocumentsScreen(onBack = { navController.popBackStack() })
     }
+}
+
+private fun NavController.popBackStackWithSavedCategory() {
+    previousBackStackEntry?.savedStateHandle?.set(KEY_CATEGORY_SAVED, System.currentTimeMillis())
+    popBackStack()
 }
