@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
@@ -33,6 +34,7 @@ class NotificationsUnreadStore @Inject constructor(
     private val repository: NotificationsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
+    private val authRepository: AuthRepository,
     @param:ApplicationContext private val context: Context,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -73,10 +75,18 @@ class NotificationsUnreadStore @Inject constructor(
         }
     }
 
-    private fun subscribeWebSocket() {
+    private suspend fun subscribeWebSocket() {
         val server = sessionManager.getServerUrlBlocking()
         if (server.isBlank() || subscriptionId != null) return
-        subscriptionId = webSocket.subscribe(server, "notifications") { event ->
+        // The socket must carry a notifications-app token: delivery is scoped
+        // by the SENDING app, so only a socket tagged with that app hears its
+        // events. Subscribing with no token left the handshake with nothing to
+        // authenticate as, and the badge never heard a single event. Fetched
+        // fresh so a stale saved token does not 401 the handshake.
+        val token = authRepository.fetchToken("notifications").getOrNull()
+            ?: sessionManager.getToken("notifications")
+            ?: return
+        subscriptionId = webSocket.subscribe(server, "notifications", token) { event ->
             when (event.type) {
                 "new" -> scope.launch { refresh() }
                 "read" -> {
