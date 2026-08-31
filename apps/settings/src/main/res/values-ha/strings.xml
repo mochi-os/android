@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Ganin ƙarshe %1$s</string>
     <string name="notifprefs_device_app">%1$s manhaja</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">An aika gwaji zuwa %1$d daga cikin %2$d wurare</string>
+    <string name="notifprefs_test_none">Ba a saita destinations ba</string>
 </resources>

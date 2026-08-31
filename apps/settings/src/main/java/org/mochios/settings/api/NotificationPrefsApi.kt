@@ -77,7 +77,12 @@ data class NotifTopic(
     val created: Long = 0,
 )
 
-data class TestResult(val sent: Int = 0, val web: Boolean = false)
+data class TestResult(
+    val sent: Int = 0,
+    val failed: Int = 0,
+    val total: Int = 0,
+    val web: Boolean = false,
+)
 
 interface NotificationPrefsApi {
     @GET("settings/-/notifications/categories")

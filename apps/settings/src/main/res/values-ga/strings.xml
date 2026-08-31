@@ -400,4 +400,6 @@
     <string name="accounts_device_seen">Feicthe go deireanach %1$s</string>
     <string name="notifprefs_device_app">%1$s aip</string>
     <string name="notifprefs_device_push">%1$s brú</string>
+    <string name="notifprefs_test_partial">Seoladh an tástáil chuig %1$d as %2$d sprioc</string>
+    <string name="notifprefs_test_none">Níl aon cheann scríbe cumraithe</string>
 </resources>

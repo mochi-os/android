@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Igcine ukubonwa %1$s</string>
     <string name="notifprefs_device_app">%1$s i-app</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">Ukuhlolwa kuthunyelwe ku-%1$d kwezingu-%2$d izindawo</string>
+    <string name="notifprefs_test_none">Aziyikho izindawo zokuya kuzo ezicushiwe</string>
 </resources>

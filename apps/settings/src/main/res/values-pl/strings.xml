@@ -398,4 +398,6 @@
     <string name="accounts_device_seen">Ostatnio widziany %1$s</string>
     <string name="notifprefs_device_app">%1$s aplikacja</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">Test wysłano do %1$d z %2$d miejsc docelowych</string>
+    <string name="notifprefs_test_none">Nie skonfigurowano miejsc docelowych</string>
 </resources>

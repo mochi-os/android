@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Cara dawî hat dîtin %1$s</string>
     <string name="notifprefs_device_app">%1$s sepan</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">Test ji %2$d armancan bo %1$d hat şandin</string>
+    <string name="notifprefs_test_none">Tu cîh nehatine mîhengkirin</string>
 </resources>

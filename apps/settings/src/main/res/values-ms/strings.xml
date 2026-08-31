@@ -393,4 +393,6 @@
     <string name="accounts_device_seen">Kali terakhir dilihat %1$s</string>
     <string name="notifprefs_device_app">%1$s aplikasi</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">Ujian dihantar ke %1$d daripada %2$d destinasi</string>
+    <string name="notifprefs_test_none">Tiada destinasi dikonfigurasikan</string>
 </resources>

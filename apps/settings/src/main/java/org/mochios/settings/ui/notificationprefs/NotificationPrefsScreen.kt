@@ -68,6 +68,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotifCategory
+import org.mochios.settings.api.TestResult
 import org.mochios.settings.api.NotifTopic
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -78,16 +79,24 @@ fun NotificationPrefsScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val scope = rememberCoroutineScope()
-    // pluralStringResource is @Composable, so the count is held in state and
+    // pluralStringResource is @Composable, so the result is held in state and
     // the sentence is built during composition rather than in the collector.
-    var sent by remember { mutableStateOf<Int?>(null) }
+    var tested by remember { mutableStateOf<TestResult?>(null) }
 
     androidx.compose.runtime.LaunchedEffect(Unit) {
         scope.launch {
-            viewModel.testSent.collect { sent = it }
+            viewModel.testSent.collect { tested = it }
         }
     }
-    val snack = sent?.let { pluralStringResource(R.plurals.notifprefs_test_sent, it, it) }
+    val snack = tested?.let { result ->
+        when {
+            result.total == 0 -> stringResource(R.string.notifprefs_test_none)
+            result.sent < result.total -> stringResource(
+                R.string.notifprefs_test_partial, result.sent, result.total
+            )
+            else -> pluralStringResource(R.plurals.notifprefs_test_sent, result.sent, result.sent)
+        }
+    }
 
     var creating by remember { mutableStateOf(false) }
     var editing by remember { mutableStateOf<NotifCategory?>(null) }
@@ -167,7 +176,7 @@ fun NotificationPrefsScreen(
                 }
             }
             if (snack != null) {
-                SnackBanner(snack) { sent = null }
+                SnackBanner(snack) { tested = null }
             }
         }
     }

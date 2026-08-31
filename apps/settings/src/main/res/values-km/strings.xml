@@ -392,4 +392,6 @@
     <string name="accounts_device_seen">ឃើញចុងក្រោយ %1$s</string>
     <string name="notifprefs_device_app">%1$s កម្មវិធី</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">បានផ្ញើការសាកល្បងទៅ %1$d ក្នុងចំណោម %2$d ទិសដៅ</string>
+    <string name="notifprefs_test_none">មិនមានទិសដៅដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
 </resources>

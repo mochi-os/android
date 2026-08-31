@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">לעצט געזען %1$s</string>
     <string name="notifprefs_device_app">%1$s אַפּ</string>
     <string name="notifprefs_device_push">%1$s פּוש</string>
+    <string name="notifprefs_test_partial">דער טעסט איז געשיקט געוואָרן צו %1$d פֿון %2$d דעסטינאַציעס</string>
+    <string name="notifprefs_test_none">קיין דעסטינאַציעס קאָנפֿיגורירט</string>
 </resources>

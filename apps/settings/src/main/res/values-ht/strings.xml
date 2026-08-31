@@ -393,4 +393,6 @@
     <string name="accounts_device_seen">Dènye fwa yo wè l %1$s</string>
     <string name="notifprefs_device_app">%1$s aplikasyon</string>
     <string name="notifprefs_device_push">%1$s push</string>
+    <string name="notifprefs_test_partial">Tès la voye bay %1$d sou %2$d destinasyon</string>
+    <string name="notifprefs_test_none">Pa gen destinasyon konfigire</string>
 </resources>

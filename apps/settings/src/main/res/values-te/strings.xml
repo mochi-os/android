@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">చివరిసారి కనిపించింది %1$s</string>
     <string name="notifprefs_device_app">%1$s యాప్</string>
     <string name="notifprefs_device_push">%1$s పుష్</string>
+    <string name="notifprefs_test_partial">%2$dలో %1$d గమ్యాలకు పరీక్ష పంపబడింది</string>
+    <string name="notifprefs_test_none">డెస్టినేషన్‌లు ఏవీ కాన్ఫిగర్ చేయబడలేదు</string>
 </resources>

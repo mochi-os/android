@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">අවසන් වරට දුටුවේ %1$s</string>
     <string name="notifprefs_device_app">%1$s යෙදුම</string>
     <string name="notifprefs_device_push">%1$s පුෂ්</string>
+    <string name="notifprefs_test_partial">ඉලක්ක %2$dන් %1$dකට පරීක්ෂණය යවන ලදී</string>
+    <string name="notifprefs_test_none">ගමනාන්ත සැකසී නැත</string>
 </resources>
