@@ -310,37 +310,29 @@ private fun DestinationRows(
         }
     }
 
-    @Composable
-    fun heading(label: String) {
-        Text(
-            label,
-            style = MaterialTheme.typography.labelLarge,
-            modifier = Modifier.padding(top = 8.dp),
-        )
-    }
-
-    // A destination is either a surface - where the notification is shown - or
-    // a push target. The browser and each device group their own: the browser
-    // has its bell, a phone has its list and the push account registered from
-    // it. Accounts bound to no device, and feeds, are listed on their own.
-    heading(stringResource(R.string.notifprefs_dest_web))
-    Column(modifier = Modifier.padding(start = 16.dp)) {
-        destination(DestinationRow(type = "web", target = ""), stringResource(R.string.notifprefs_dest_app))
-    }
-    val devices = available.devices.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.label })
-    val bound = devices.map { it.id }.toSet()
-    for (device in devices) {
-        heading(device.label.ifBlank { stringResource(R.string.notifprefs_dest_device) })
-        Column(modifier = Modifier.padding(start = 16.dp)) {
-            destination(DestinationRow(type = "device", target = device.id), stringResource(R.string.notifprefs_dest_app))
+    // Every destination is one row named for what it is: the browser's bell, a
+    // device's in-app list ("S24U app"), the push account registered from a
+    // device ("S24U push"), a push account bound to no device, or a feed. One
+    // flat list sorted by name, which also keeps a device's rows together.
+    val deviceFallback = stringResource(R.string.notifprefs_dest_device)
+    val bound = available.devices.map { it.id }.toSet()
+    val rows = buildList {
+        add(DestinationRow(type = "web", target = "") to stringResource(R.string.notifprefs_dest_web))
+        for (device in available.devices) {
+            val name = device.label.ifBlank { deviceFallback }
+            add(
+                DestinationRow(type = "device", target = device.id) to
+                    stringResource(R.string.notifprefs_device_app, name)
+            )
             for (acc in available.accounts) {
                 if (acc.device == device.id) {
-                    destination(DestinationRow(type = "account", target = acc.id), stringResource(R.string.notifprefs_dest_push))
+                    add(
+                        DestinationRow(type = "account", target = acc.id) to
+                            stringResource(R.string.notifprefs_device_push, name)
+                    )
                 }
             }
         }
-    }
-    val others = buildList {
         for (acc in available.accounts) {
             if (acc.device.isNotBlank() && acc.device in bound) continue
             val name = if (acc.label.isNotBlank()) acc.label else if (acc.identifier.isNotBlank()) acc.identifier else acc.type
@@ -353,11 +345,7 @@ private fun DestinationRows(
             add(DestinationRow(type = "rss", target = feed.id) to feed.name)
         }
     }.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.second })
-    if (others.isNotEmpty()) {
-        Column(modifier = Modifier.padding(top = 8.dp)) {
-            for ((row, label) in others) destination(row, label)
-        }
-    }
+    for ((row, label) in rows) destination(row, label)
 }
 
 @Composable

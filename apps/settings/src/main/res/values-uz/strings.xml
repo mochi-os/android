@@ -386,12 +386,12 @@
     <string name="accounts_test_failed">Sinov muvaffaqiyatsiz</string>
     <string name="accounts_test_sent">Sinov yuborildi</string>
     <string name="account_oauth_link_failed">Hisobni bogʻlab boʻlmadi</string>
-    <string name="notifprefs_dest_app">Ilovada</string>
-    <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Qurilma</string>
     <string name="accounts_devices">Qurilmalar</string>
     <string name="accounts_forget">Unutish</string>
     <string name="accounts_forget_title">Qurilma unutilsinmi?</string>
     <string name="accounts_forget_message">Bu \"%1$s\" qurilmasini unutadi va unga bildirishnomalarni to‘xtatadi.</string>
     <string name="accounts_device_seen">Oxirgi marta ko‘rilgan %1$s</string>
+    <string name="notifprefs_device_app">%1$s ilova</string>
+    <string name="notifprefs_device_push">%1$s push</string>
 </resources>

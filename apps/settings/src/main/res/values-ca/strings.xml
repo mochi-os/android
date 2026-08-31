@@ -387,12 +387,12 @@
     <string name="accounts_test_failed">La prova ha fallat</string>
     <string name="accounts_test_sent">Prova enviada</string>
     <string name="account_oauth_link_failed">No s\'ha pogut vincular el compte</string>
-    <string name="notifprefs_dest_app">A l\'aplicació</string>
-    <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Dispositiu</string>
     <string name="accounts_devices">Dispositius</string>
     <string name="accounts_forget">Oblida</string>
     <string name="accounts_forget_title">Voleu oblidar el dispositiu?</string>
     <string name="accounts_forget_message">Això oblidarà el dispositiu \"%1$s\" i hi aturarà les notificacions.</string>
     <string name="accounts_device_seen">Vist per última vegada %1$s</string>
+    <string name="notifprefs_device_app">%1$s aplicació</string>
+    <string name="notifprefs_device_push">%1$s push</string>
 </resources>

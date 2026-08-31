@@ -386,12 +386,12 @@
     <string name="accounts_test_failed">Probak huts egin du</string>
     <string name="accounts_test_sent">Proba bidali da</string>
     <string name="account_oauth_link_failed">Ezin izan da kontua estekatu</string>
-    <string name="notifprefs_dest_app">Aplikazioan</string>
-    <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Gailua</string>
     <string name="accounts_devices">Gailuak</string>
     <string name="accounts_forget">Ahaztu</string>
     <string name="accounts_forget_title">Gailua ahaztu?</string>
     <string name="accounts_forget_message">Honek \"%1$s\" gailua ahaztuko du eta jakinarazpenak bidaltzeari utziko dio.</string>
     <string name="accounts_device_seen">Azkenekoz ikusia %1$s</string>
+    <string name="notifprefs_device_app">%1$s aplikazioa</string>
+    <string name="notifprefs_device_push">%1$s push</string>
 </resources>

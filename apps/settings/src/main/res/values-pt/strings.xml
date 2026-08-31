@@ -387,12 +387,12 @@
     <string name="accounts_test_failed">Teste falhou</string>
     <string name="accounts_test_sent">Teste enviado</string>
     <string name="account_oauth_link_failed">Não foi possível associar a conta</string>
-    <string name="notifprefs_dest_app">Na aplicação</string>
-    <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Dispositivo</string>
     <string name="accounts_devices">Dispositivos</string>
     <string name="accounts_forget">Esquecer</string>
     <string name="accounts_forget_title">Esquecer o dispositivo?</string>
     <string name="accounts_forget_message">Isto irá esquecer o dispositivo \"%1$s\" e deixar de lhe enviar notificações.</string>
     <string name="accounts_device_seen">Visto pela última vez %1$s</string>
+    <string name="notifprefs_device_app">%1$s app</string>
+    <string name="notifprefs_device_push">%1$s push</string>
 </resources>

@@ -386,12 +386,12 @@
     <string name="accounts_test_failed">Test fehlgeschlagen</string>
     <string name="accounts_test_sent">Test gesendet</string>
     <string name="account_oauth_link_failed">Konto konnte nicht verknüpft werden</string>
-    <string name="notifprefs_dest_app">In der App</string>
-    <string name="notifprefs_dest_push">Push</string>
     <string name="notifprefs_dest_device">Gerät</string>
     <string name="accounts_devices">Geräte</string>
     <string name="accounts_forget">Vergessen</string>
     <string name="accounts_forget_title">Gerät vergessen?</string>
     <string name="accounts_forget_message">Dadurch wird das Gerät \"%1$s\" vergessen und es erhält keine Benachrichtigungen mehr.</string>
     <string name="accounts_device_seen">Zuletzt gesehen %1$s</string>
+    <string name="notifprefs_device_app">%1$s App</string>
+    <string name="notifprefs_device_push">%1$s Push</string>
 </resources>

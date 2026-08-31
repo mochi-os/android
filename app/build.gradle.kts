@@ -6,7 +6,7 @@
 // The one place the version is written. versionCode and versionName below both
 // read it, because when they were two literals the 0.124 bump moved only the
 // name and shipped a release carrying 0.123's code.
-val mochiVersion = "0.128"
+val mochiVersion = "0.129"
 
 // "major.minor" -> a monotonically rising integer, major * 10000 + minor.
 // Minor is bounded at 9999 so a major bump always outranks everything before it.
