@@ -93,6 +93,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ColorPicker
@@ -230,7 +231,9 @@ fun ProjectScreen(
             }
 
             projectId.isEmpty() -> {
-                ProjectDrawerPlaceholder(
+                DrawerPlaceholderScreen(
+                    title = stringResource(R.string.projects_list_title),
+                    message = stringResource(R.string.projects_list_empty),
                     onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 )
             }
@@ -251,33 +254,6 @@ fun ProjectScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ProjectDrawerPlaceholder(onOpenDrawer: () -> Unit) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.projects_list_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.projects_list_title))
-                    }
-                }
-            )
-        }
-    ) { padding ->
-        Box(
-            modifier = Modifier.fillMaxSize().padding(padding),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(R.string.projects_list_empty),
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 

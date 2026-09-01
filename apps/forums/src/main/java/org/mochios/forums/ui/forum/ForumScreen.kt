@@ -96,6 +96,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.RssRevokeDialog
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
@@ -248,7 +249,9 @@ fun ForumScreen(
         },
     ) {
         if (forumId.isEmpty()) {
-            ForumDrawerPlaceholder(
+            DrawerPlaceholderScreen(
+                title = stringResource(R.string.forums_list_title),
+                message = stringResource(R.string.forums_list_empty),
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
             )
         } else {
@@ -271,38 +274,6 @@ fun ForumScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ForumDrawerPlaceholder(onOpenDrawer: () -> Unit) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.forums_list_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onOpenDrawer) {
-                        Icon(
-                            Icons.Default.Menu,
-                            contentDescription = stringResource(R.string.forums_list_title)
-                        )
-                    }
-                }
-            )
-        }
-    ) { padding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(R.string.forums_list_empty),
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 

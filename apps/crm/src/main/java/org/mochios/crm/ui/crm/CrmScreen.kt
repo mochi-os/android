@@ -97,6 +97,7 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
@@ -230,7 +231,9 @@ fun CrmScreen(
             }
 
             crmId.isEmpty() -> {
-                CrmDrawerPlaceholder(
+                DrawerPlaceholderScreen(
+                    title = stringResource(R.string.crm_list_title),
+                    message = stringResource(R.string.crm_list_empty),
                     onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 )
             }
@@ -250,33 +253,6 @@ fun CrmScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun CrmDrawerPlaceholder(onOpenDrawer: () -> Unit) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.crm_list_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.crm_list_title))
-                    }
-                }
-            )
-        }
-    ) { padding ->
-        Box(
-            modifier = Modifier.fillMaxSize().padding(padding),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(R.string.crm_list_empty),
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 

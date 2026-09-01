@@ -98,6 +98,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.SystemNotifications
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
@@ -219,7 +220,9 @@ fun ChatScreen(
         },
     ) {
         if (chatId.isEmpty()) {
-            ChatDrawerPlaceholder(
+            DrawerPlaceholderScreen(
+                title = stringResource(R.string.chat_list_title),
+                message = stringResource(R.string.chat_list_empty),
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
             )
         } else {
@@ -235,33 +238,6 @@ fun ChatScreen(
 
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ChatDrawerPlaceholder(onOpenDrawer: () -> Unit) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.chat_list_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.chat_list_title))
-                    }
-                }
-            )
-        }
-    ) { padding ->
-        Box(
-            modifier = Modifier.fillMaxSize().padding(padding),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(R.string.chat_list_empty),
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
     }
 }
 
