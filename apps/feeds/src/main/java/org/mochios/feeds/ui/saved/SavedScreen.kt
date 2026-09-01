@@ -5,43 +5,13 @@
 
 package org.mochios.feeds.ui.saved
 
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.LocalOffer
-import androidx.compose.material.icons.outlined.LocalOffer
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -50,18 +20,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil3.compose.AsyncImage
-import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.HtmlContent
-import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.SavedListLabels
+import org.mochios.android.ui.components.SavedListScaffold
+import org.mochios.android.ui.components.SavedPostCard
+import org.mochios.android.ui.components.SavedPostFooter
 import org.mochios.feeds.R
-import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.model.SavedItem
-import org.mochios.android.R as MochiR
+import org.mochios.feeds.ui.component.PostTitle
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SavedScreen(
     onNavigateBack: () -> Unit,
@@ -69,84 +36,33 @@ fun SavedScreen(
     viewModel: SavedViewModel = hiltViewModel(),
 ) {
     val saved by viewModel.saved.collectAsState()
-    val snackbarHostState = remember { SnackbarHostState() }
-    var showClearConfirm by remember { mutableStateOf(false) }
 
-    val clearError = stringResource(R.string.feeds_saved_error_clear)
-    LaunchedEffect(Unit) {
-        viewModel.clearFailed.collect { snackbarHostState.showSnackbar(clearError) }
-    }
-
-    Scaffold(
-        snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.feeds_saved_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onNavigateBack) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back)
-                        )
-                    }
-                },
-                actions = {
-                    if (saved.isNotEmpty()) {
-                        MochiTextButton(onClick = { showClearConfirm = true }) {
-                            Text(stringResource(R.string.feeds_saved_clear_all))
-                        }
-                    }
-                },
-            )
-        },
-    ) { padding ->
-        if (saved.isEmpty()) {
-            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-                EmptyState(
-                    icon = Icons.Filled.Bookmark,
-                    title = stringResource(R.string.feeds_saved_empty_title),
-                    subtitle = stringResource(R.string.feeds_saved_empty_subtitle),
-                )
-            }
-        } else {
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(
-                    top = padding.calculateTopPadding() + 8.dp,
-                    bottom = padding.calculateBottomPadding() + 24.dp,
-                    start = 12.dp,
-                    end = 12.dp,
-                ),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                items(saved, key = { it.post.id }) { item ->
-                    SavedPostCard(
-                        item = item,
-                        onClick = { onOpenPost(item.post.feedId, item.post.id) },
-                        onUnsave = { viewModel.remove(item.post.id) },
-                    )
-                }
-            }
-        }
-    }
-
-    if (showClearConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showClearConfirm = false },
-            title = stringResource(R.string.feeds_saved_clear_confirm_title),
-            text = stringResource(R.string.feeds_saved_clear_confirm_body),
-            confirmText = stringResource(R.string.feeds_saved_clear_all),
-            onConfirm = {
-                showClearConfirm = false
-                viewModel.clearAll()
-            },
-            dismissText = stringResource(MochiR.string.common_cancel),
+    SavedListScaffold(
+        items = saved,
+        key = { item -> item.post.id },
+        labels = SavedListLabels(
+            title = stringResource(R.string.feeds_saved_title),
+            clearAll = stringResource(R.string.feeds_saved_clear_all),
+            emptyTitle = stringResource(R.string.feeds_saved_empty_title),
+            emptySubtitle = stringResource(R.string.feeds_saved_empty_subtitle),
+            clearConfirmTitle = stringResource(R.string.feeds_saved_clear_confirm_title),
+            clearConfirmBody = stringResource(R.string.feeds_saved_clear_confirm_body),
+            clearError = stringResource(R.string.feeds_saved_error_clear),
+        ),
+        clearFailed = viewModel.clearFailed,
+        onNavigateBack = onNavigateBack,
+        onClearAll = { viewModel.clearAll() },
+    ) { item ->
+        SavedPostCardContent(
+            item = item,
+            onClick = { onOpenPost(item.post.feedId, item.post.id) },
+            onUnsave = { viewModel.remove(item.post.id) },
         )
     }
 }
 
 @Composable
-private fun SavedPostCard(
+private fun SavedPostCardContent(
     item: SavedItem,
     onClick: () -> Unit,
     onUnsave: () -> Unit,
@@ -160,71 +76,48 @@ private fun SavedPostCard(
     val displayTitle = rawTitle.trim().takeIf { it.isNotEmpty() && post.body.startsWith(rawTitle) }
     val attachmentImageUrls = post.attachments
         .filter { attachment -> attachment.isImage }
-        .map { attachment -> attachment.url ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}" }
+        .map { attachment ->
+            attachment.url ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}"
+        }
     val heroUrl = attachmentImageUrls.firstOrNull()
         ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
     val previewBody = post.bodyHtml.ifBlank { post.body }
 
-    MochiCard(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
-        Column(modifier = Modifier.padding(12.dp)) {
-            if (displayTitle != null) {
-                PostTitle(
-                    title = displayTitle,
-                    fontSize = 20.sp,
-                    truncated = true,
-                )
-            }
-            if (heroUrl != null) {
-                AsyncImage(
-                    model = heroUrl,
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .padding(top = 8.dp)
-                        .fillMaxWidth()
-                        .height(180.dp)
-                        .clip(RoundedCornerShape(8.dp)),
-                )
-            }
-            if (previewBody.isNotBlank()) {
-                HtmlContent(
-                    html = previewBody,
-                    modifier = Modifier.padding(top = 8.dp),
-                    maxLines = 6,
-                )
-            }
-
-            // Tag count + a bookmark to remove from saved — the tag icon/count
-            // mirror the feed post's footer, minus reactions and comments.
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(top = 8.dp),
-            ) {
-                val hasTags = post.tags.isNotEmpty()
-                val tagColor = MaterialTheme.colorScheme.onSurfaceVariant
-                Icon(
-                    if (hasTags) Icons.Filled.LocalOffer else Icons.Outlined.LocalOffer,
-                    contentDescription = stringResource(R.string.feeds_tags),
-                    tint = tagColor,
-                    modifier = Modifier.size(18.dp),
-                )
-                if (hasTags) {
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Text(
-                        text = "${post.tags.size}",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = tagColor,
-                    )
-                }
-                Spacer(modifier = Modifier.width(12.dp))
-                MochiIconButton(onClick = onUnsave, modifier = Modifier.size(28.dp)) {
-                    Icon(
-                        Icons.Filled.Bookmark,
-                        contentDescription = stringResource(R.string.feeds_saved_remove),
-                        modifier = Modifier.size(18.dp),
-                    )
-                }
-            }
+    SavedPostCard(onClick = onClick) {
+        if (displayTitle != null) {
+            PostTitle(
+                title = displayTitle,
+                fontSize = 20.sp,
+                truncated = true,
+            )
         }
+        if (heroUrl != null) {
+            AsyncImage(
+                model = heroUrl,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .padding(top = 8.dp)
+                    .fillMaxWidth()
+                    .height(180.dp)
+                    .clip(RoundedCornerShape(8.dp)),
+            )
+        }
+        if (previewBody.isNotBlank()) {
+            HtmlContent(
+                html = previewBody,
+                modifier = Modifier.padding(top = 8.dp),
+                maxLines = 6,
+            )
+        }
+
+        // The tag icon and count mirror the feed post's footer, minus reactions
+        // and comments.
+        SavedPostFooter(
+            tagCount = post.tags.size,
+            tagsLabel = stringResource(R.string.feeds_tags),
+            unsaveLabel = stringResource(R.string.feeds_saved_remove),
+            onUnsave = onUnsave,
+        )
     }
 }
