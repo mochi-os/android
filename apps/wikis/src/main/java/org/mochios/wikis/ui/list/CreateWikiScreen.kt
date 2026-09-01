@@ -5,30 +5,11 @@
 
 package org.mochios.wikis.ui.list
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -36,19 +17,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.MochiButton
-import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.CreateEntityForm
+import org.mochios.android.ui.components.CreateEntityScaffold
+import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
-import org.mochios.android.R as MochiR
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateWikiScreen(
     onBack: () -> Unit,
@@ -69,68 +47,18 @@ fun CreateWikiScreen(
         }
     }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.wikis_create_title)) },
-                navigationIcon = {
-                    MochiIconButton(onClick = onBack, enabled = !uiState.isCreating) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back)
-                        )
-                    }
-                }
-            )
-        },
-        bottomBar = {
-            Surface(color = MaterialTheme.colorScheme.surface) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .imePadding()
-                        .navigationBarsPadding()
-                        .padding(horizontal = 16.dp, vertical = 12.dp)
-                ) {
-                    uiState.error?.let { error ->
-                        Text(
-                            text = error.userMessage(),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.error
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                    }
-                    MochiButton(
-                        onClick = {
-                            viewModel.createWiki(
-                                name.trim(),
-                                if (allowSearch) "public" else "private"
-                            )
-                        },
-                        enabled = name.trim().isNotEmpty() && !uiState.isCreating,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        if (uiState.isCreating) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(18.dp),
-                                strokeWidth = 2.dp,
-                                color = MaterialTheme.colorScheme.onPrimary
-                            )
-                        } else {
-                            Text(stringResource(R.string.wikis_create_submit))
-                        }
-                    }
-                }
-            }
+    CreateEntityScaffold(
+        title = stringResource(R.string.wikis_create_title),
+        submitLabel = stringResource(R.string.wikis_create_submit),
+        submitEnabled = name.trim().isNotEmpty() && !uiState.isCreating,
+        isBusy = uiState.isCreating,
+        error = uiState.error,
+        onBack = onBack,
+        onSubmit = {
+            viewModel.createWiki(name.trim(), if (allowSearch) "public" else "private")
         }
     ) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp, vertical = 16.dp)
-        ) {
+        CreateEntityForm(padding) {
             MochiTextField(
                 value = name,
                 onValueChange = { value -> name = value },
@@ -140,24 +68,13 @@ fun CreateWikiScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(modifier = Modifier.height(16.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stringResource(R.string.wikis_create_privacy_label),
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(end = 16.dp)
-                )
-                Switch(
-                    checked = allowSearch,
-                    onCheckedChange = { checked -> allowSearch = checked },
-                    enabled = !uiState.isCreating
-                )
-            }
+            LabeledSwitchRow(
+                label = stringResource(R.string.wikis_create_privacy_label),
+                checked = allowSearch,
+                onCheckedChange = { checked -> allowSearch = checked },
+                enabled = !uiState.isCreating,
+                labelStyle = MaterialTheme.typography.bodyMedium
+            )
         }
     }
 }

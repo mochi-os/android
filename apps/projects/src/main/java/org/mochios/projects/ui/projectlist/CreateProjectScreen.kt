@@ -20,8 +20,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -31,7 +29,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material.icons.outlined.Bolt
 import androidx.compose.material.icons.outlined.ConfirmationNumber
@@ -39,15 +36,9 @@ import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.GridView
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -64,17 +55,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.util.slugify
-import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
-import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.CreateEntityScaffold
+import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
-import org.mochios.android.R as MochiR
 
 // The two steps of the create flow.
 private const val STEP_DETAILS = 0
@@ -91,7 +80,6 @@ private fun prefixFromName(name: String): String = slugify(name, PREFIX_MAX)
  * destination so typed fields survive; a backup carries its own design and
  * skips the template step.
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateProjectScreen(
     onBack: () -> Unit,
@@ -165,84 +153,37 @@ fun CreateProjectScreen(
         step = STEP_DETAILS
     }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = {
-                    Text(
-                        stringResource(
-                            if (step == STEP_TEMPLATE) {
-                                R.string.projects_create_choose_template
-                            } else {
-                                R.string.projects_create_title
-                            }
-                        )
-                    )
-                },
-                navigationIcon = {
-                    MochiIconButton(onClick = goBack, enabled = !uiState.isCreating) {
-                        Icon(
-                            Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back)
-                        )
-                    }
-                }
-            )
-        },
-        bottomBar = {
-            Surface(color = MaterialTheme.colorScheme.surface) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .imePadding()
-                        .navigationBarsPadding()
-                        .padding(horizontal = 16.dp, vertical = 12.dp)
-                ) {
-                    uiState.error?.let { error ->
-                        Text(
-                            text = error.userMessage(),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.error
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                    }
-                    MochiButton(
-                        onClick = {
-                            if (goesToTemplate) {
-                                step = STEP_TEMPLATE
-                            } else {
-                                val privacy = if (allowSearch) "public" else "private"
-                                viewModel.createProject(
-                                    name,
-                                    prefix,
-                                    privacy,
-                                    if (usesTemplate) selectedTemplate else null,
-                                    backupJson
-                                )
-                            }
-                        },
-                        enabled = canContinue,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        if (uiState.isCreating) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(18.dp),
-                                strokeWidth = 2.dp,
-                                color = MaterialTheme.colorScheme.onPrimary
-                            )
-                        } else {
-                            Text(
-                                stringResource(
-                                    if (goesToTemplate) {
-                                        R.string.projects_create_next
-                                    } else {
-                                        R.string.projects_create_action
-                                    }
-                                )
-                            )
-                        }
-                    }
-                }
+    CreateEntityScaffold(
+        title = stringResource(
+            if (step == STEP_TEMPLATE) {
+                R.string.projects_create_choose_template
+            } else {
+                R.string.projects_create_title
+            }
+        ),
+        submitLabel = stringResource(
+            if (goesToTemplate) {
+                R.string.projects_create_next
+            } else {
+                R.string.projects_create_action
+            }
+        ),
+        submitEnabled = canContinue,
+        isBusy = uiState.isCreating,
+        error = uiState.error,
+        onBack = goBack,
+        onSubmit = {
+            if (goesToTemplate) {
+                step = STEP_TEMPLATE
+            } else {
+                val privacy = if (allowSearch) "public" else "private"
+                viewModel.createProject(
+                    name,
+                    prefix,
+                    privacy,
+                    if (usesTemplate) selectedTemplate else null,
+                    backupJson
+                )
             }
         }
     ) { padding ->
@@ -322,22 +263,11 @@ private fun DetailsStep(
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = stringResource(R.string.projects_create_allow_search),
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 16.dp)
-            )
-            Switch(
-                checked = allowSearch,
-                onCheckedChange = onAllowSearchChange
-            )
-        }
+        LabeledSwitchRow(
+            label = stringResource(R.string.projects_create_allow_search),
+            checked = allowSearch,
+            onCheckedChange = onAllowSearchChange
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
         Text(
