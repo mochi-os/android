@@ -7,23 +7,10 @@ package org.mochios.feeds.ui.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -31,18 +18,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.BannerSection
 import org.mochios.android.ui.components.DataChip
-import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiButton
-import org.mochios.android.ui.components.MochiButtonTone
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.DeleteSection
+import org.mochios.android.ui.components.IdentityRow
+import org.mochios.android.ui.components.InlineTextEditor
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.feeds.R
@@ -58,8 +41,6 @@ fun GeneralTab(
     // The banner arrives with the feed information load; no separate fetch.
     val banner = feedInfo?.banner.orEmpty()
     var bannerDraft by remember(banner) { mutableStateOf(banner) }
-    var showDeleteDialog by remember { mutableStateOf(false) }
-    val focusManager = LocalFocusManager.current
 
     Column(
         modifier = Modifier
@@ -79,87 +60,30 @@ fun GeneralTab(
             )
         }
 
-        // Banner
-        Section(
+        BannerSection(
             title = stringResource(R.string.feeds_banner),
             description = stringResource(R.string.feeds_banner_description),
-        ) {
-            Column(modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 8.dp)) {
-                MochiTextField(
-                    value = bannerDraft,
-                    onValueChange = { value -> bannerDraft = value },
-                    placeholder = { Text(stringResource(R.string.feeds_banner_hint)) },
-                    modifier = Modifier.fillMaxWidth(),
-                    minLines = 3,
-                    maxLines = 8
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    // Save only has something to do once the draft has moved off
-                    // what is stored.
-                    MochiButton(
-                        onClick = {
-                            viewModel.saveBanner(bannerDraft)
-                            focusManager.clearFocus()
-                        },
-                        enabled = bannerDraft != banner,
-                    ) {
-                        Text(stringResource(MochiR.string.common_save))
-                    }
-                    // Clear only empties the box — Save is what writes it, the
-                    // same as any other edit. Neutral rather than primary: it
-                    // undoes typing, it does not commit anything. Absent while
-                    // the box is empty: there is nothing to clear.
-                    if (bannerDraft.isNotEmpty()) {
-                        MochiOutlinedButton(
-                            onClick = {
-                                bannerDraft = ""
-                                focusManager.clearFocus()
-                            },
-                            tone = MochiButtonTone.Neutral,
-                        ) {
-                            Text(stringResource(R.string.feeds_clear))
-                        }
-                    }
-                }
-            }
-        }
-
-        // Delete feed
-        Section(
-            title = stringResource(R.string.feeds_delete_feed),
-            action = {
-                MochiOutlinedButton(
-                    onClick = { showDeleteDialog = true },
-                    tone = MochiButtonTone.Neutral,
-                ) {
-                    Text(stringResource(MochiR.string.common_delete))
-                }
-            },
-            content = {},
+            hint = stringResource(R.string.feeds_banner_hint),
+            clearLabel = stringResource(R.string.feeds_clear),
+            draft = bannerDraft,
+            stored = banner,
+            onDraftChange = { value -> bannerDraft = value },
+            onSave = { value -> viewModel.saveBanner(value) }
         )
-    }
 
-    if (showDeleteDialog) {
-        MochiAlertDialog(
-            onDismissRequest = { showDeleteDialog = false },
+        DeleteSection(
             title = stringResource(R.string.feeds_delete_feed),
-            text = stringResource(R.string.feeds_delete_feed_confirm),
-            confirmText = stringResource(MochiR.string.common_delete),
-            onConfirm = {
-                showDeleteDialog = false
-                viewModel.deleteFeed { onFeedDeleted() }
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
+            buttonLabel = stringResource(MochiR.string.common_delete),
+            confirmTitle = stringResource(R.string.feeds_delete_feed),
+            confirmMessage = stringResource(R.string.feeds_delete_feed_confirm),
+            confirmLabel = stringResource(MochiR.string.common_delete),
+            onDelete = { viewModel.deleteFeed { onFeedDeleted() } }
         )
     }
 }
 
 /**
- * Identity card shared by the owner Settings tab and the read-only subscriber
+ * Identity card shared by the owner General tab and the read-only non-manager
  * view.
  */
 @Composable
@@ -169,127 +93,32 @@ fun FeedIdentitySection(
     onRename: (String) -> Unit,
 ) {
     Section(title = stringResource(R.string.feeds_settings_section_identity)) {
-        IdentityFieldRow(label = stringResource(R.string.feeds_name)) {
+        IdentityRow(label = stringResource(R.string.feeds_name)) {
             if (editable) {
-                NameEditor(
-                    currentName = feed.name,
-                    onRename = onRename,
+                InlineTextEditor(
+                    value = feed.name,
+                    onSave = onRename,
+                    editLabel = stringResource(R.string.feeds_settings_name_edit_cd),
+                    saveLabel = stringResource(R.string.feeds_save_name),
+                    cancelLabel = stringResource(R.string.feeds_settings_name_cancel_cd),
+                    clearLabel = stringResource(R.string.feeds_clear),
                     modifier = Modifier.weight(1f),
                 )
             } else {
                 Text(feed.name)
             }
         }
-        IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_entity_id)) {
+        IdentityRow(label = stringResource(R.string.feeds_settings_field_entity_id)) {
             DataChip(value = feed.id, truncate = Truncate.MIDDLE)
         }
         if (feed.fingerprint.isNotBlank()) {
-            IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_fingerprint)) {
+            IdentityRow(label = stringResource(R.string.feeds_settings_field_fingerprint)) {
                 DataChip(value = feed.fingerprint, truncate = Truncate.MIDDLE)
             }
         }
         if (!feed.server.isNullOrBlank()) {
-            IdentityFieldRow(label = stringResource(R.string.feeds_settings_field_server)) {
+            IdentityRow(label = stringResource(R.string.feeds_settings_field_server)) {
                 DataChip(value = feed.server!!, truncate = Truncate.MIDDLE)
-            }
-        }
-    }
-}
-
-/**
- * Fixed-width label so values align in a column, matching account settings; the
- * shared [FieldRow] right-aligns instead.
- */
-@Composable
-private fun IdentityFieldRow(
-    label: String,
-    content: @Composable RowScope.() -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.width(120.dp),
-        )
-        content()
-    }
-}
-
-@Composable
-private fun NameEditor(
-    currentName: String,
-    onRename: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    var isEditing by remember { mutableStateOf(false) }
-    var editValue by remember(currentName) { mutableStateOf(currentName) }
-
-    if (isEditing) {
-        Row(
-            modifier = modifier,
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(4.dp),
-        ) {
-            MochiTextField(
-                value = editValue,
-                onValueChange = { value -> editValue = value },
-                singleLine = true,
-                trailingIcon = if (editValue.isNotEmpty()) {
-                    {
-                        MochiIconButton(onClick = { editValue = "" }) {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = stringResource(R.string.feeds_clear),
-                            )
-                        }
-                    }
-                } else {
-                    null
-                },
-                modifier = Modifier.weight(1f),
-            )
-            MochiIconButton(onClick = {
-                onRename(editValue.trim())
-                isEditing = false
-            }) {
-                Icon(
-                    Icons.Default.Check,
-                    contentDescription = stringResource(R.string.feeds_save_name),
-                )
-            }
-            MochiIconButton(onClick = {
-                editValue = currentName
-                isEditing = false
-            }) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.feeds_settings_name_cancel_cd),
-                )
-            }
-        }
-    } else {
-        Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
-            // fill = false keeps the pencil next to the name instead of pushed to
-            // the far end, while the weight still lets a long name wrap.
-            Text(currentName, modifier = Modifier.weight(1f, fill = false))
-            MochiIconButton(
-                onClick = {
-                    editValue = currentName
-                    isEditing = true
-                },
-                modifier = Modifier.size(30.dp),
-            ) {
-                Icon(
-                    Icons.Default.Edit,
-                    contentDescription = stringResource(R.string.feeds_settings_name_edit_cd),
-                    modifier = Modifier.size(16.dp),
-                )
             }
         }
     }
