@@ -5,8 +5,6 @@
 
 package org.mochios.forums.ui.settings
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,20 +19,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Group
-import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Public
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SegmentedButtonDefaults
-import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -45,30 +33,40 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.mochios.android.model.AccessRule
-import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiDropdownField
-import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.AccessCandidate
+import org.mochios.android.ui.components.AccessLabels
+import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
-import org.mochios.android.ui.components.mochiDialogCardColors
+import org.mochios.android.ui.components.toSubjectRule
 import org.mochios.forums.R
 import org.mochios.android.R as MochiR
 
-@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun accessLevelLabel(operation: String): String = when (operation) {
+    "view" -> stringResource(R.string.forums_access_level_view_full)
+    "vote" -> stringResource(R.string.forums_access_level_vote_full)
+    "comment" -> stringResource(R.string.forums_access_level_comment_full)
+    "post" -> stringResource(R.string.forums_access_level_post_full)
+    "moderate" -> stringResource(R.string.forums_access_level_moderate_full)
+    "none" -> stringResource(R.string.forums_access_level_none_full)
+    else -> operation
+}
+
+// The forum's levels come from `-/access`; this stands in only if that load
+// failed, so a dropdown is never empty. Highest-to-lowest, matching web's order.
+private val ACCESS_LEVEL_FALLBACK_KEYS = listOf("moderate", "post", "comment", "vote", "view")
+
 @Composable
 fun AccessTab(viewModel: ForumSettingsViewModel) {
     val uiState by viewModel.uiState.collectAsState()
-    var showAdd by remember { mutableStateOf(false) }
     var memberQuery by remember { mutableStateOf("") }
+    val context = LocalContext.current
 
     LaunchedEffect(Unit) {
         viewModel.loadAccess()
@@ -93,39 +91,39 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Section(
-            title = stringResource(R.string.forums_access_management),
-            headerAlignment = Alignment.CenterVertically,
-            action = {
-                // Outlined — the same shape as the delete action on the General
-                // tab, which tints itself error instead.
-                MochiOutlinedButton(onClick = { showAdd = true }) {
-                    // The shared "Add rule" label; the dialog keeps the longer
-                    // "Add access rule" as its title.
-                    Text(stringResource(MochiR.string.access_add_rule))
-                }
+        AccessRulesSection(
+            rules = uiState.accessRules.map { rule -> rule.toSubjectRule() },
+            levels = levels,
+            defaultLevel = "view",
+            levelLabel = { level -> accessLevelLabel(level) },
+            labels = AccessLabels(
+                sectionTitle = stringResource(R.string.forums_access_management),
+                empty = stringResource(R.string.forums_access_empty),
+                dialogTitle = stringResource(R.string.forums_access_add),
+                tabUsers = stringResource(R.string.forums_access_tab_users),
+                tabGroups = stringResource(R.string.forums_access_tab_groups),
+                tabOther = stringResource(R.string.forums_access_tab_other),
+                searchUsers = stringResource(R.string.forums_access_search_users),
+                selectGroup = stringResource(R.string.forums_access_select_group),
+                noGroups = stringResource(R.string.forums_access_no_groups),
+                selectRule = stringResource(R.string.forums_access_select_rule),
+                subjectAnyone = stringResource(R.string.forums_access_subject_anyone),
+                subjectAuthenticated = stringResource(R.string.forums_access_subject_authenticated),
+                anyoneDesc = stringResource(R.string.forums_access_anyone_desc),
+                authenticatedDesc = stringResource(R.string.forums_access_authenticated_desc),
+                selected = { name -> context.getString(R.string.forums_access_selected, name) }
+            ),
+            users = uiState.userSearchResults.map { user ->
+                AccessCandidate(user.id, user.name.ifBlank { user.id })
             },
-        ) {
-            if (uiState.accessRules.isEmpty()) {
-                Text(
-                    stringResource(R.string.forums_access_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(top = 8.dp),
-                )
-            } else {
-                // Owner always sits at the top; the rest keep their order.
-                val ordered = uiState.accessRules.sortedByDescending { rule -> rule.isOwner }
-                ordered.forEach { rule ->
-                    AccessRuleRow(
-                        rule = rule,
-                        levels = levels,
-                        onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
-                        onRevoke = { viewModel.revokeAccess(rule.subject) },
-                    )
-                }
-            }
-        }
+            groups = uiState.groups.map { group ->
+                AccessCandidate("@${group.id}", group.name, group.id)
+            },
+            onSearchUsers = { query -> viewModel.searchUsers(query) },
+            onLoadGroups = { viewModel.loadGroups() },
+            onSetAccess = { subject, level -> viewModel.setAccess(subject, level) },
+            onRevoke = { subject -> viewModel.revokeAccess(subject) }
+        )
 
         Section(title = stringResource(R.string.forums_tab_members)) {
             Column(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
@@ -178,388 +176,6 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    if (showAdd) {
-        AddAccessDialog(
-            viewModel = viewModel,
-            levels = levels,
-            onConfirm = { target, level ->
-                viewModel.setAccess(target, level)
-                showAdd = false
-            },
-            onDismiss = { showAdd = false },
-        )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AccessRuleRow(
-    rule: AccessRule,
-    levels: List<String>,
-    onLevelChange: (String) -> Unit,
-    onRevoke: () -> Unit,
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 12.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(
-                subjectIcon(rule),
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(24.dp),
-            )
-            Spacer(Modifier.width(12.dp))
-            Text(
-                text = accessSubjectLabel(rule),
-                modifier = Modifier.weight(1f),
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (rule.isOwner) {
-                Text(
-                    text = stringResource(MochiR.string.access_owner),
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(end = 12.dp),
-                )
-            } else {
-                MochiIconButton(onClick = onRevoke) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.access_revoke),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-        }
-
-        // Editable subjects get a full-width level dropdown on its own line,
-        // matching the member filter field rather than indenting under the name.
-        if (!rule.isOwner) {
-            var expanded by remember { mutableStateOf(false) }
-            MochiDropdownField(
-                value = accessLevelLabel(rule.operation),
-                expanded = expanded,
-                onExpandedChange = { expanded = it },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                    levels.forEach { level ->
-                        MochiDropdownMenuItem(
-                            text = { Text(accessLevelLabel(level)) },
-                            onClick = {
-                                expanded = false
-                                if (level != rule.operation) onLevelChange(level)
-                            },
-                        )
-                    }
-            }
-        }
-    }
-}
-
-/**
- * Leading icon for an access subject: globe for anyone, group for groups and
- * authenticated users, person otherwise.
- */
-private fun subjectIcon(rule: AccessRule): ImageVector = when {
-    rule.subject == "*" -> Icons.Default.Public
-    rule.subject == "+" -> Icons.Default.Group
-    rule.subject.startsWith("@") -> Icons.Default.Group
-    else -> Icons.Default.Person
-}
-
-/**
- * Display label for a subject, mapping the wildcard subjects to friendly names
- * and otherwise preferring the resolved name.
- */
-@Composable
-private fun accessSubjectLabel(rule: AccessRule): String = when (rule.subject) {
-    "*" -> stringResource(R.string.forums_access_subject_anyone)
-    "+" -> stringResource(R.string.forums_access_subject_authenticated)
-    else -> rule.name?.takeIf { name -> name.isNotBlank() } ?: rule.subject
-}
-
-// Grant-independent level label. Callers pass the rule's *effective* level
-// ("none" for a deny rule), so this maps each level — including "none" — to its
-// label, and the inline level-change dropdown can reuse it per option. Levels
-// are cumulative, so each label spells out everything the level allows.
-@Composable
-private fun accessLevelLabel(operation: String): String = when (operation) {
-    "view" -> stringResource(R.string.forums_access_level_view_full)
-    "vote" -> stringResource(R.string.forums_access_level_vote_full)
-    "comment" -> stringResource(R.string.forums_access_level_comment_full)
-    "post" -> stringResource(R.string.forums_access_level_post_full)
-    "moderate" -> stringResource(R.string.forums_access_level_moderate_full)
-    "none" -> stringResource(R.string.forums_access_level_none_full)
-    else -> operation
-}
-
-// The forum's levels come from `-/access`; this stands in only if that load
-// failed, so a dropdown is never empty. Highest-to-lowest, matching web's order.
-private val ACCESS_LEVEL_FALLBACK_KEYS = listOf("moderate", "post", "comment", "vote", "view")
-
-/**
- * Add-access dialog: pick a subject (User / Group / Other - the `*` and `+`
- * wildcards), then a level. Groups load on first switch into the Group segment.
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AddAccessDialog(
-    viewModel: ForumSettingsViewModel,
-    levels: List<String>,
-    onConfirm: (target: String, level: String) -> Unit,
-    onDismiss: () -> Unit,
-) {
-    val uiState by viewModel.uiState.collectAsState()
-    // 0 = User, 1 = Group, 2 = Other.
-    var tab by remember { mutableStateOf(0) }
-    var userQuery by remember { mutableStateOf("") }
-    var selectedSubject by remember { mutableStateOf("") }
-    var selectedName by remember { mutableStateOf("") }
-    var level by remember { mutableStateOf("view") }
-    var levelExpanded by remember { mutableStateOf(false) }
-
-    val authenticatedName = stringResource(R.string.forums_access_subject_authenticated)
-    val anyoneName = stringResource(R.string.forums_access_subject_anyone)
-
-    // Load groups on first switch into the Group segment.
-    LaunchedEffect(tab) {
-        if (tab == 1 && uiState.groups.isEmpty()) {
-            viewModel.loadGroups()
-        }
-    }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.forums_access_add),
-        content = {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .verticalScroll(rememberScrollState()),
-            ) {
-                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-                    SegmentedButton(
-                        selected = tab == 0,
-                        onClick = { tab = 0; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 0, count = 3),
-                        icon = { Icon(Icons.Outlined.Person, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.forums_access_tab_users)) },
-                    )
-                    SegmentedButton(
-                        selected = tab == 1,
-                        onClick = { tab = 1; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 1, count = 3),
-                        icon = { Icon(Icons.Default.Group, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.forums_access_tab_groups)) },
-                    )
-                    SegmentedButton(
-                        selected = tab == 2,
-                        onClick = { tab = 2; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 2, count = 3),
-                        icon = { Icon(Icons.Default.Public, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.forums_access_tab_other)) },
-                    )
-                }
-
-                Spacer(Modifier.height(16.dp))
-
-                when (tab) {
-                    0 -> {
-                        Text(
-                            text = stringResource(R.string.forums_access_search_users),
-                            style = MaterialTheme.typography.labelLarge,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        MochiTextField(
-                            value = userQuery,
-                            onValueChange = { value ->
-                                userQuery = value
-                                selectedSubject = ""
-                                selectedName = ""
-                                viewModel.searchUsers(value)
-                            },
-                            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                        if (uiState.userSearchResults.isNotEmpty()) {
-                            Spacer(Modifier.height(8.dp))
-                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                                uiState.userSearchResults.take(6).forEach { user ->
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Person,
-                                        title = user.name,
-                                        subtitle = null,
-                                        selected = selectedSubject == user.id,
-                                        onClick = {
-                                            selectedSubject = user.id
-                                            selectedName = user.name
-                                        },
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    1 -> {
-                        Text(
-                            text = stringResource(R.string.forums_access_select_group),
-                            style = MaterialTheme.typography.labelLarge,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        if (uiState.groups.isEmpty()) {
-                            Text(
-                                text = stringResource(R.string.forums_access_no_groups),
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(vertical = 8.dp),
-                            )
-                        } else {
-                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                                uiState.groups.forEach { group ->
-                                    // Groups are subjects prefixed with @.
-                                    val subject = "@${group.id}"
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Group,
-                                        title = group.name,
-                                        subtitle = group.id.toString(),
-                                        selected = selectedSubject == subject,
-                                        onClick = {
-                                            selectedSubject = subject
-                                            selectedName = group.name
-                                        },
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    else -> {
-                        Text(
-                            text = stringResource(R.string.forums_access_select_rule),
-                            style = MaterialTheme.typography.labelLarge,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                            SubjectOption(
-                                icon = Icons.Outlined.Group,
-                                title = authenticatedName,
-                                subtitle = stringResource(
-                                    R.string.forums_access_authenticated_desc
-                                ),
-                                selected = selectedSubject == "+",
-                                onClick = {
-                                    selectedSubject = "+"
-                                    selectedName = authenticatedName
-                                },
-                            )
-                            SubjectOption(
-                                icon = Icons.Outlined.Public,
-                                title = anyoneName,
-                                subtitle = stringResource(R.string.forums_access_anyone_desc),
-                                selected = selectedSubject == "*",
-                                onClick = {
-                                    selectedSubject = "*"
-                                    selectedName = anyoneName
-                                },
-                            )
-                        }
-                    }
-                }
-
-                // Step 2: level, shown once a subject is chosen.
-                if (selectedSubject.isNotBlank()) {
-                    Spacer(Modifier.height(16.dp))
-                    HorizontalDivider()
-                    Spacer(Modifier.height(12.dp))
-                    Text(
-                        text = stringResource(
-                            R.string.forums_access_selected,
-                            selectedName.ifBlank { selectedSubject },
-                        ),
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
-                    Spacer(Modifier.height(8.dp))
-                    MochiDropdownField(
-                        value = accessLevelLabel(level),
-                        expanded = levelExpanded,
-                        onExpandedChange = { levelExpanded = it },
-                        modifier = Modifier.fillMaxWidth(),
-                    ) {
-                            levels.forEach { code ->
-                                MochiDropdownMenuItem(
-                                    text = { Text(accessLevelLabel(code)) },
-                                    onClick = {
-                                        level = code
-                                        levelExpanded = false
-                                    },
-                                )
-                            }
-                    }
-                }
-            }
-        },
-        confirmText = stringResource(MochiR.string.common_add),
-        onConfirm = { onConfirm(selectedSubject, level) },
-        confirmEnabled = selectedSubject.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}
-
-/** A selectable subject row inside the add dialog's option list. */
-@Composable
-private fun SubjectOption(
-    icon: ImageVector,
-    title: String,
-    subtitle: String?,
-    selected: Boolean,
-    onClick: () -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .background(
-                if (selected) {
-                    MaterialTheme.colorScheme.surfaceVariant
-                } else {
-                    Color.Transparent
-                }
-            )
-            .padding(horizontal = 12.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            icon,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(20.dp),
-        )
-        Spacer(Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (subtitle != null) {
-                Text(
-                    text = subtitle,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
             }
         }
     }

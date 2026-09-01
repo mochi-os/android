@@ -5,8 +5,6 @@
 
 package org.mochios.crm.ui.settings
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,54 +18,33 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Group
-import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Public
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SegmentedButtonDefaults
-import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.mochios.android.model.AccessRule
-import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiDropdownField
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.AccessCandidate
+import org.mochios.android.ui.components.AccessLabels
+import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
-import org.mochios.android.ui.components.mochiDialogCardColors
+import org.mochios.android.ui.components.toSubjectRule
 import org.mochios.crm.R
-import org.mochios.android.R as MochiR
 
-private val ACCESS_LEVEL_KEYS = listOf("owner", "design", "write", "comment", "view", "none")
-
-// Levels offered when changing an existing rule's level inline, mirroring web's
-// CRM_ACCESS_LEVELS select (no "owner" — ownership isn't reassigned this way).
-private val ACCESS_LEVEL_CHANGE_KEYS = ACCESS_LEVEL_KEYS.filter { key -> key != "owner" }
+// Levels offered when changing a rule's level, mirroring web's CRM_ACCESS_LEVELS
+// select (no "owner" - ownership isn't reassigned this way).
+private val ACCESS_LEVEL_KEYS = listOf("design", "write", "comment", "view", "none")
 
 // Descriptive role label for a level, matching web's role select. Levels are
 // cumulative, so each label spells out everything the role allows.
@@ -82,33 +59,13 @@ private fun accessLevelLabel(value: String): String = when (value) {
     else -> value
 }
 
-/**
- * Display label for a subject, mapping the wildcard subjects to friendly names
- * and otherwise preferring the resolved name. Mirrors the projects Access tab.
- */
-@Composable
-private fun accessSubjectLabel(rule: AccessRule): String = when (rule.subject) {
-    "*" -> stringResource(R.string.crm_access_subject_anyone)
-    "+" -> stringResource(R.string.crm_access_subject_authenticated)
-    else -> rule.name?.takeIf { name -> name.isNotBlank() } ?: rule.subject
-}
-
-// Sort key placing the owner first, then authenticated users, then anyone, then
-// every other subject in its existing order.
-private fun subjectRank(rule: AccessRule): Int = when {
-    rule.isOwner -> 0
-    rule.subject == "+" -> 1
-    rule.subject == "*" -> 2
-    else -> 3
-}
-
 @Composable
 fun AccessTab(
     uiState: CrmSettingsUiState,
     viewModel: CrmSettingsViewModel
 ) {
-    var showAddDialog by remember { mutableStateOf(false) }
     var peopleQuery by remember { mutableStateOf("") }
+    val context = LocalContext.current
 
     val filteredPeople = if (peopleQuery.isBlank()) {
         uiState.people
@@ -123,35 +80,41 @@ fun AccessTab(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Section(
-            title = stringResource(R.string.crm_settings_section_access),
-            headerAlignment = Alignment.CenterVertically,
-            action = {
-                MochiOutlinedButton(onClick = { showAddDialog = true }) {
-                    Text(stringResource(MochiR.string.access_add_rule))
-                }
-            }
-        ) {
-            if (uiState.accessRules.isEmpty()) {
-                Text(
-                    stringResource(MochiR.string.access_no_rules),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(top = 8.dp)
-                )
-            } else {
-                // Owner, then authenticated users, then anyone, then the rest.
-                val ordered = uiState.accessRules.sortedBy { rule -> subjectRank(rule) }
-                ordered.forEach { rule ->
-                    AccessRuleRow(
-                        rule = rule,
-                        levels = ACCESS_LEVEL_CHANGE_KEYS,
-                        onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
-                        onRevoke = { viewModel.revokeAccess(rule.subject) }
-                    )
-                }
-            }
-        }
+        AccessRulesSection(
+            rules = uiState.accessRules.map { rule -> rule.toSubjectRule() },
+            levels = ACCESS_LEVEL_KEYS,
+            defaultLevel = "view",
+            levelLabel = { level -> accessLevelLabel(level) },
+            labels = AccessLabels(
+                sectionTitle = stringResource(R.string.crm_settings_section_access),
+                empty = stringResource(org.mochios.android.R.string.access_no_rules),
+                dialogTitle = stringResource(org.mochios.android.R.string.access_add_rule_title),
+                rowRoleLabel = stringResource(R.string.crm_access_select_role),
+                dialogRoleLabel = stringResource(R.string.crm_access_select_role),
+                tabUsers = stringResource(R.string.crm_access_tab_users),
+                tabGroups = stringResource(R.string.crm_access_tab_groups),
+                tabOther = stringResource(R.string.crm_access_tab_other),
+                searchUsers = stringResource(R.string.crm_access_search_users),
+                selectGroup = stringResource(R.string.crm_access_select_group),
+                noGroups = stringResource(R.string.crm_access_no_groups),
+                selectRule = stringResource(R.string.crm_access_select_rule),
+                subjectAnyone = stringResource(R.string.crm_access_subject_anyone),
+                subjectAuthenticated = stringResource(R.string.crm_access_subject_authenticated),
+                anyoneDesc = stringResource(R.string.crm_access_anyone_desc),
+                authenticatedDesc = stringResource(R.string.crm_access_authenticated_desc),
+                selected = { name -> context.getString(R.string.crm_access_selected, name) }
+            ),
+            users = uiState.userSearchResults.map { user ->
+                AccessCandidate(user.id, user.name.ifBlank { user.id })
+            },
+            groups = uiState.groups.map { group ->
+                AccessCandidate("@${group.id}", group.name, group.id)
+            },
+            onSearchUsers = { query -> viewModel.searchUsers(query) },
+            onLoadGroups = { viewModel.loadGroups() },
+            onSetAccess = { subject, level -> viewModel.setAccess(subject, level) },
+            onRevoke = { subject -> viewModel.revokeAccess(subject) }
+        )
 
         Section(title = stringResource(R.string.crm_settings_tab_people)) {
             Column(
@@ -199,354 +162,6 @@ fun AccessTab(
                         }
                     }
                 }
-            }
-        }
-    }
-
-    if (showAddDialog) {
-        AddAccessDialog(
-            viewModel = viewModel,
-            onConfirm = { subject, level ->
-                viewModel.setAccess(subject, level)
-                showAddDialog = false
-            },
-            onDismiss = { showAddDialog = false }
-        )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AccessRuleRow(
-    rule: AccessRule,
-    levels: List<String>,
-    onLevelChange: (String) -> Unit,
-    onRevoke: () -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 12.dp)
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(
-                subjectIcon(rule),
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(24.dp)
-            )
-            Spacer(Modifier.width(12.dp))
-            Text(
-                text = accessSubjectLabel(rule),
-                modifier = Modifier.weight(1f),
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            if (rule.isOwner) {
-                Text(
-                    text = stringResource(MochiR.string.access_owner),
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(end = 12.dp)
-                )
-            } else {
-                MochiIconButton(onClick = onRevoke) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.access_revoke),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-        }
-
-        if (!rule.isOwner) {
-            var expanded by remember { mutableStateOf(false) }
-            MochiDropdownField(
-                value = accessLevelLabel(rule.operation),
-                expanded = expanded,
-                onExpandedChange = { expanded = it },
-                label = stringResource(R.string.crm_access_select_role),
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                    levels.forEach { level ->
-                        MochiDropdownMenuItem(
-                            text = { Text(accessLevelLabel(level)) },
-                            onClick = {
-                                expanded = false
-                                if (level != rule.operation) onLevelChange(level)
-                            },
-                        )
-                    }
-            }
-        }
-    }
-}
-
-/**
- * Leading icon for an access subject: globe for anyone, group for groups and
- * authenticated users, person otherwise.
- */
-private fun subjectIcon(rule: AccessRule): ImageVector = when {
-    rule.subject == "*" -> Icons.Default.Public
-    rule.subject == "+" -> Icons.Default.Group
-    rule.subject.startsWith("@") -> Icons.Default.Group
-    else -> Icons.Default.Person
-}
-
-/**
- * Add-access dialog: pick a subject (user search, group, or the `*`/`+`
- * wildcards under Other), then a level.
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AddAccessDialog(
-    viewModel: CrmSettingsViewModel,
-    onConfirm: (target: String, level: String) -> Unit,
-    onDismiss: () -> Unit
-) {
-    val uiState by viewModel.uiState.collectAsState()
-    // 0 = User, 1 = Group, 2 = Other.
-    var tab by remember { mutableStateOf(0) }
-    var userQuery by remember { mutableStateOf("") }
-    var selectedSubject by remember { mutableStateOf("") }
-    var selectedName by remember { mutableStateOf("") }
-    var level by remember { mutableStateOf("view") }
-    var levelExpanded by remember { mutableStateOf(false) }
-
-    val authenticatedName = stringResource(R.string.crm_access_subject_authenticated)
-    val anyoneName = stringResource(R.string.crm_access_subject_anyone)
-
-    // Load groups on the first switch into the Group segment.
-    LaunchedEffect(tab) {
-        if (tab == 1 && uiState.groups.isEmpty()) {
-            viewModel.loadGroups()
-        }
-    }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(MochiR.string.access_add_rule_title),
-        content = {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .verticalScroll(rememberScrollState())
-            ) {
-                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-                    SegmentedButton(
-                        selected = tab == 0,
-                        onClick = { tab = 0; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 0, count = 3),
-                        icon = { Icon(Icons.Outlined.Person, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.crm_access_tab_users)) }
-                    )
-                    SegmentedButton(
-                        selected = tab == 1,
-                        onClick = { tab = 1; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 1, count = 3),
-                        icon = { Icon(Icons.Default.Group, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.crm_access_tab_groups)) }
-                    )
-                    SegmentedButton(
-                        selected = tab == 2,
-                        onClick = { tab = 2; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 2, count = 3),
-                        icon = { Icon(Icons.Default.Public, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.crm_access_tab_other)) }
-                    )
-                }
-
-                Spacer(Modifier.height(16.dp))
-
-                when (tab) {
-                    0 -> {
-                        Text(
-                            text = stringResource(R.string.crm_access_search_users),
-                            style = MaterialTheme.typography.labelLarge
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        MochiTextField(
-                            value = userQuery,
-                            onValueChange = { value ->
-                                userQuery = value
-                                selectedSubject = ""
-                                selectedName = ""
-                                viewModel.searchUsers(value)
-                            },
-                            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        if (uiState.userSearchResults.isNotEmpty()) {
-                            Spacer(Modifier.height(8.dp))
-                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                                uiState.userSearchResults.take(6).forEach { user ->
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Person,
-                                        title = user.name.ifBlank { user.id },
-                                        subtitle = null,
-                                        selected = selectedSubject == user.id,
-                                        onClick = {
-                                            selectedSubject = user.id
-                                            selectedName = user.name.ifBlank { user.id }
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    1 -> {
-                        Text(
-                            text = stringResource(R.string.crm_access_select_group),
-                            style = MaterialTheme.typography.labelLarge
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        if (uiState.groups.isEmpty()) {
-                            Text(
-                                text = stringResource(R.string.crm_access_no_groups),
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(vertical = 8.dp)
-                            )
-                        } else {
-                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                                uiState.groups.forEach { group ->
-                                    // Groups are subjects prefixed with @.
-                                    val subject = "@${group.id}"
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Group,
-                                        title = group.name,
-                                        subtitle = group.id,
-                                        selected = selectedSubject == subject,
-                                        onClick = {
-                                            selectedSubject = subject
-                                            selectedName = group.name
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    else -> {
-                        Text(
-                            text = stringResource(R.string.crm_access_select_rule),
-                            style = MaterialTheme.typography.labelLarge
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                            SubjectOption(
-                                icon = Icons.Outlined.Group,
-                                title = authenticatedName,
-                                subtitle = stringResource(R.string.crm_access_authenticated_desc),
-                                selected = selectedSubject == "+",
-                                onClick = {
-                                    selectedSubject = "+"
-                                    selectedName = authenticatedName
-                                }
-                            )
-                            SubjectOption(
-                                icon = Icons.Outlined.Public,
-                                title = anyoneName,
-                                subtitle = stringResource(R.string.crm_access_anyone_desc),
-                                selected = selectedSubject == "*",
-                                onClick = {
-                                    selectedSubject = "*"
-                                    selectedName = anyoneName
-                                }
-                            )
-                        }
-                    }
-                }
-
-                // Step 2: role, shown once a subject is chosen.
-                if (selectedSubject.isNotBlank()) {
-                    Spacer(Modifier.height(16.dp))
-                    HorizontalDivider()
-                    Spacer(Modifier.height(12.dp))
-                    Text(
-                        text = stringResource(
-                            R.string.crm_access_selected,
-                            selectedName.ifBlank { selectedSubject }
-                        ),
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                    Spacer(Modifier.height(8.dp))
-                    MochiDropdownField(
-                        value = accessLevelLabel(level),
-                        expanded = levelExpanded,
-                        onExpandedChange = { levelExpanded = it },
-                        label = stringResource(R.string.crm_access_select_role),
-                        modifier = Modifier.fillMaxWidth(),
-                    ) {
-                            ACCESS_LEVEL_CHANGE_KEYS.forEach { code ->
-                                MochiDropdownMenuItem(
-                                    text = { Text(accessLevelLabel(code)) },
-                                    onClick = {
-                                        level = code
-                                        levelExpanded = false
-                                    },
-                                )
-                            }
-                    }
-                }
-            }
-        },
-        confirmText = stringResource(MochiR.string.common_add),
-        onConfirm = { onConfirm(selectedSubject, level) },
-        confirmEnabled = selectedSubject.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}
-
-/** A selectable subject row inside the add dialog's option list. */
-@Composable
-private fun SubjectOption(
-    icon: ImageVector,
-    title: String,
-    subtitle: String?,
-    selected: Boolean,
-    onClick: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .background(
-                if (selected) {
-                    MaterialTheme.colorScheme.surfaceVariant
-                } else {
-                    Color.Transparent
-                }
-            )
-            .padding(horizontal = 12.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(
-            icon,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(20.dp)
-        )
-        Spacer(Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            if (subtitle != null) {
-                Text(
-                    text = subtitle,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
             }
         }
     }

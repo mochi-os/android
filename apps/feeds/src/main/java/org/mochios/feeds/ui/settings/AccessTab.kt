@@ -5,9 +5,6 @@
 
 package org.mochios.feeds.ui.settings
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,21 +18,10 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Group
-import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Public
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SegmentedButton
-import androidx.compose.material3.SegmentedButtonDefaults
-import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -46,27 +32,33 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.mochios.android.model.AccessRule
-import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiDropdownField
-import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.AccessCandidate
+import org.mochios.android.ui.components.AccessLabels
+import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
-import org.mochios.android.ui.components.mochiDialogCardColors
+import org.mochios.android.ui.components.toSubjectRule
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 
 // Levels offered when changing/granting a rule's level, mirroring web's
 // FEEDS_ACCESS_LEVELS select (highest grant first).
 private val ACCESS_LEVEL_CHANGE_KEYS = listOf("comment", "react", "view", "none")
+
+/** Hierarchical access-level label shown in the dropdowns. */
+@Composable
+private fun feedsAccessLevelLabel(level: String): String = when (level) {
+    "comment" -> stringResource(R.string.feeds_access_level_comment_full)
+    "react" -> stringResource(R.string.feeds_access_level_react_full)
+    "view" -> stringResource(R.string.feeds_access_level_view_full)
+    "none" -> stringResource(R.string.feeds_access_level_none_full)
+    else -> level.replaceFirstChar { char -> char.uppercase() }
+}
 
 /**
  * Access tab: access rules with inline level dropdowns, plus a Members section.
@@ -81,8 +73,10 @@ fun AccessTab(
     val isLoading by viewModel.isLoadingAccess.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
     val members by viewModel.members.collectAsState()
-    var showAddDialog by remember { mutableStateOf(false) }
+    val searchResults by viewModel.userSearchResults.collectAsState()
+    val groups by viewModel.groups.collectAsState()
     var memberQuery by remember { mutableStateOf("") }
+    val context = LocalContext.current
 
     // Members are managed here, so only load them for a viewer who can.
     LaunchedEffect(permissions.manage) {
@@ -105,51 +99,41 @@ fun AccessTab(
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
     ) {
-        Section(
-            title = stringResource(R.string.feeds_access_management),
-            headerAlignment = Alignment.CenterVertically,
-            action = {
-                // Outlined — the same shape as the delete action on the General
-                // tab, which tints itself error instead.
-                MochiOutlinedButton(onClick = { showAddDialog = true }) {
-                    Text(stringResource(MochiR.string.access_add_rule))
-                }
+        AccessRulesSection(
+            rules = accessRules.map { rule -> rule.toSubjectRule() },
+            levels = ACCESS_LEVEL_CHANGE_KEYS,
+            defaultLevel = "comment",
+            levelLabel = { level -> feedsAccessLevelLabel(level) },
+            labels = AccessLabels(
+                sectionTitle = stringResource(R.string.feeds_access_management),
+                empty = stringResource(MochiR.string.access_no_rules),
+                dialogTitle = stringResource(R.string.feeds_access_add_title),
+                dialogSubtitle = stringResource(R.string.feeds_access_add_subtitle),
+                tabUsers = stringResource(R.string.feeds_user),
+                tabGroups = stringResource(R.string.feeds_access_segment_group),
+                tabOther = stringResource(R.string.feeds_access_segment_other),
+                searchUsers = stringResource(R.string.feeds_access_search_users),
+                selectGroup = stringResource(R.string.feeds_access_select_group),
+                noGroups = stringResource(R.string.feeds_access_no_groups),
+                selectRule = stringResource(R.string.feeds_access_select_rule),
+                subjectAnyone = stringResource(R.string.feeds_access_subject_anyone),
+                subjectAuthenticated = stringResource(R.string.feeds_access_subject_authenticated),
+                anyoneDesc = stringResource(R.string.feeds_access_anyone_desc),
+                authenticatedDesc = stringResource(R.string.feeds_access_authenticated_desc),
+                selected = { name -> context.getString(R.string.feeds_access_selected, name) }
+            ),
+            users = searchResults.map { user ->
+                AccessCandidate(user.id, user.name.ifBlank { user.id })
             },
-        ) {
-            when {
-                isLoading && accessRules.isEmpty() -> {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 24.dp),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        CircularProgressIndicator()
-                    }
-                }
-
-                accessRules.isEmpty() -> {
-                    Text(
-                        text = stringResource(MochiR.string.access_no_rules),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.padding(vertical = 16.dp),
-                    )
-                }
-
-                else -> {
-                    // Owner always sits at the top; the rest keep their order.
-                    val ordered = accessRules.sortedByDescending { rule -> rule.isOwner }
-                    ordered.forEach { rule ->
-                        AccessRuleRow(
-                            rule = rule,
-                            onLevelChange = { level -> viewModel.setAccess(rule.subject, level) },
-                            onRevoke = { viewModel.revokeAccess(rule.subject) },
-                        )
-                    }
-                }
-            }
-        }
+            groups = groups.map { group ->
+                AccessCandidate("@${group.id}", group.name, group.id)
+            },
+            onSearchUsers = { query -> viewModel.searchUsers(query) },
+            onLoadGroups = { viewModel.loadGroups() },
+            onSetAccess = { subject, level -> viewModel.setAccess(subject, level) },
+            onRevoke = { subject -> viewModel.revokeAccess(subject) },
+            isLoading = isLoading
+        )
 
         if (permissions.manage) {
             Spacer(modifier = Modifier.height(16.dp))
@@ -210,367 +194,6 @@ fun AccessTab(
                         }
                     }
                 }
-            }
-        }
-    }
-
-    if (showAddDialog) {
-        AddAccessDialog(
-            viewModel = viewModel,
-            onDismiss = { showAddDialog = false },
-            onAdd = { subject, level ->
-                viewModel.setAccess(subject, level)
-                showAddDialog = false
-            },
-        )
-    }
-
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AccessRuleRow(
-    rule: AccessRule,
-    onLevelChange: (String) -> Unit,
-    onRevoke: () -> Unit,
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 12.dp),
-    ) {
-        // Subject line: icon + name, with the owner label or remove action
-        // trailing it.
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(
-                subjectIcon(rule),
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(24.dp),
-            )
-            Spacer(modifier = Modifier.width(12.dp))
-            Text(
-                text = accessSubjectLabel(rule),
-                modifier = Modifier.weight(1f),
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (rule.isOwner) {
-                Text(
-                    text = stringResource(MochiR.string.access_owner),
-                    style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(end = 12.dp),
-                )
-            } else {
-                MochiIconButton(onClick = onRevoke) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.access_revoke),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-        }
-
-        // Editable subjects get a full-width level dropdown on its own line,
-        // matching the member filter field rather than indenting under the name.
-        if (!rule.isOwner) {
-            var expanded by remember { mutableStateOf(false) }
-            MochiDropdownField(
-                value = feedsAccessLevelLabel(rule.operation),
-                expanded = expanded,
-                onExpandedChange = { expanded = it },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                    ACCESS_LEVEL_CHANGE_KEYS.forEach { level ->
-                        MochiDropdownMenuItem(
-                            text = { Text(feedsAccessLevelLabel(level)) },
-                            onClick = {
-                                expanded = false
-                                if (level != rule.operation) onLevelChange(level)
-                            },
-                        )
-                    }
-            }
-        }
-    }
-}
-
-/** Leading icon for an access subject: globe for anyone, group for groups and
- *  authenticated users, person otherwise. */
-private fun subjectIcon(rule: AccessRule): ImageVector = when {
-    rule.subject == "*" -> Icons.Default.Public
-    rule.subject == "+" -> Icons.Default.Group
-    rule.subject.startsWith("@") -> Icons.Default.Group
-    else -> Icons.Default.Person
-}
-
-/** Display label for a subject, mapping the wildcard subjects to friendly
- *  names and otherwise preferring the resolved name. */
-@Composable
-private fun accessSubjectLabel(rule: AccessRule): String = when (rule.subject) {
-    "*" -> stringResource(R.string.feeds_access_subject_anyone)
-    "+" -> stringResource(R.string.feeds_access_subject_authenticated)
-    else -> rule.name?.takeIf { it.isNotBlank() } ?: rule.subject
-}
-
-/** Hierarchical access-level label shown in the dropdowns. */
-@Composable
-private fun feedsAccessLevelLabel(level: String): String = when (level) {
-    "comment" -> stringResource(R.string.feeds_access_level_comment_full)
-    "react" -> stringResource(R.string.feeds_access_level_react_full)
-    "view" -> stringResource(R.string.feeds_access_level_view_full)
-    "none" -> stringResource(R.string.feeds_access_level_none_full)
-    else -> level.replaceFirstChar { char -> char.uppercase() }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AddAccessDialog(
-    viewModel: FeedSettingsViewModel,
-    onDismiss: () -> Unit,
-    onAdd: (subject: String, level: String) -> Unit,
-) {
-    // 0 = User, 1 = Group, 2 = Other.
-    var tab by remember { mutableStateOf(0) }
-    var userQuery by remember { mutableStateOf("") }
-    var selectedSubject by remember { mutableStateOf("") }
-    var selectedName by remember { mutableStateOf("") }
-    var level by remember { mutableStateOf("comment") }
-    var levelExpanded by remember { mutableStateOf(false) }
-    val searchResults by viewModel.userSearchResults.collectAsState()
-    val groups by viewModel.groups.collectAsState()
-
-    val authenticatedName = stringResource(R.string.feeds_access_subject_authenticated)
-    val anyoneName = stringResource(R.string.feeds_access_subject_anyone)
-
-    LaunchedEffect(tab) {
-        if (tab == 1 && groups.isEmpty()) {
-            viewModel.loadGroups()
-        }
-    }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.feeds_access_add_title),
-        subtitle = stringResource(R.string.feeds_access_add_subtitle),
-        content = {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .verticalScroll(rememberScrollState()),
-            ) {
-                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-                    SegmentedButton(
-                        selected = tab == 0,
-                        onClick = { tab = 0; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 0, count = 3),
-                        icon = { Icon(Icons.Default.Person, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.feeds_user)) },
-                    )
-                    SegmentedButton(
-                        selected = tab == 1,
-                        onClick = { tab = 1; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 1, count = 3),
-                        icon = { Icon(Icons.Default.Group, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.feeds_access_segment_group)) },
-                    )
-                    SegmentedButton(
-                        selected = tab == 2,
-                        onClick = { tab = 2; selectedSubject = ""; selectedName = "" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 2, count = 3),
-                        icon = { Icon(Icons.Default.Public, null, Modifier.size(18.dp)) },
-                        label = { Text(stringResource(R.string.feeds_access_segment_other)) },
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(16.dp))
-
-                when (tab) {
-                    0 -> {
-                        Text(
-                            text = stringResource(R.string.feeds_access_search_users),
-                            style = MaterialTheme.typography.labelLarge,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        MochiTextField(
-                            value = userQuery,
-                            onValueChange = { value ->
-                                userQuery = value
-                                selectedSubject = ""
-                                selectedName = ""
-                                viewModel.searchUsers(value)
-                            },
-                            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                        if (searchResults.isNotEmpty()) {
-                            Spacer(modifier = Modifier.height(8.dp))
-                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                                searchResults.take(6).forEach { user ->
-                                    val subject = user.id
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Person,
-                                        title = user.name,
-                                        subtitle = null,
-                                        selected = selectedSubject == subject,
-                                        onClick = {
-                                            selectedSubject = subject
-                                            selectedName = user.name
-                                        },
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    1 -> {
-                        Text(
-                            text = stringResource(R.string.feeds_access_select_group),
-                            style = MaterialTheme.typography.labelLarge,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        if (groups.isEmpty()) {
-                            Text(
-                                text = stringResource(R.string.feeds_access_no_groups),
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(vertical = 8.dp),
-                            )
-                        } else {
-                            MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                                groups.forEach { group ->
-                                    val subject = "@${group.id}"
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Group,
-                                        title = group.name,
-                                        subtitle = group.id.toString(),
-                                        selected = selectedSubject == subject,
-                                        onClick = {
-                                            selectedSubject = subject
-                                            selectedName = group.name
-                                        },
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    else -> {
-                        Text(
-                            text = stringResource(R.string.feeds_access_select_rule),
-                            style = MaterialTheme.typography.labelLarge,
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        MochiCard(modifier = Modifier.fillMaxWidth(), colors = mochiDialogCardColors()) {
-                            SubjectOption(
-                                icon = Icons.Outlined.Group,
-                                title = authenticatedName,
-                                subtitle = stringResource(R.string.feeds_access_authenticated_desc),
-                                selected = selectedSubject == "+",
-                                onClick = {
-                                    selectedSubject = "+"
-                                    selectedName = authenticatedName
-                                },
-                            )
-                            SubjectOption(
-                                icon = Icons.Outlined.Public,
-                                title = anyoneName,
-                                subtitle = stringResource(R.string.feeds_access_anyone_desc),
-                                selected = selectedSubject == "*",
-                                onClick = {
-                                    selectedSubject = "*"
-                                    selectedName = anyoneName
-                                },
-                            )
-                        }
-                    }
-                }
-
-                // Step 2: permission, shown once a subject is chosen.
-                if (selectedSubject.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    HorizontalDivider()
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(
-                        text = stringResource(R.string.feeds_access_selected, selectedName),
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    MochiDropdownField(
-                        value = feedsAccessLevelLabel(level),
-                        expanded = levelExpanded,
-                        onExpandedChange = { levelExpanded = it },
-                        modifier = Modifier.fillMaxWidth(),
-                    ) {
-                            ACCESS_LEVEL_CHANGE_KEYS.forEach { lvl ->
-                                MochiDropdownMenuItem(
-                                    text = { Text(feedsAccessLevelLabel(lvl)) },
-                                    onClick = {
-                                        level = lvl
-                                        levelExpanded = false
-                                    },
-                                )
-                            }
-                    }
-                }
-            }
-        },
-        confirmText = stringResource(MochiR.string.common_add),
-        onConfirm = { onAdd(selectedSubject, level) },
-        confirmEnabled = selectedSubject.isNotEmpty(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}
-
-/** A selectable subject row inside the add dialog's option list. */
-@Composable
-private fun SubjectOption(
-    icon: ImageVector,
-    title: String,
-    subtitle: String?,
-    selected: Boolean,
-    onClick: () -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .background(
-                if (selected) {
-                    MaterialTheme.colorScheme.surfaceVariant
-                } else {
-                    Color.Transparent
-                }
-            )
-            .padding(horizontal = 12.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            icon,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(20.dp),
-        )
-        Spacer(modifier = Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (subtitle != null) {
-                Text(
-                    text = subtitle,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
             }
         }
     }
