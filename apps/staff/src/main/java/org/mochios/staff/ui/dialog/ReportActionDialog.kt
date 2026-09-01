@@ -7,9 +7,7 @@ package org.mochios.staff.ui.dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -17,9 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,12 +25,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.LabeledSelectField
+import org.mochios.android.ui.components.MetaRow
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.format.formatFingerprint
@@ -73,9 +66,12 @@ fun ReportActionDialog(
                 MetadataCard(report = report)
 
                 if (!readOnly) {
-                    ActionDropdown(
-                        action = action,
-                        onActionChange = { action = it },
+                    LabeledSelectField(
+                        label = stringResource(R.string.staff_reports_action_label),
+                        placeholder = stringResource(R.string.staff_reports_action_placeholder),
+                        options = reportActionOptions(),
+                        selected = action,
+                        onSelect = { value -> action = value },
                     )
                     MochiTextField(
                         value = notes,
@@ -155,68 +151,6 @@ private fun MetadataCard(report: Report) {
                 text = report.details,
                 style = MaterialTheme.typography.bodySmall,
             )
-        }
-    }
-}
-
-@Composable
-private fun MetaRow(label: String, value: String) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Text(
-            text = value,
-            style = MaterialTheme.typography.bodySmall,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-        )
-    }
-}
-
-@Composable
-private fun ActionDropdown(
-    action: String,
-    onActionChange: (String) -> Unit,
-) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
-    val options = reportActionOptions()
-    val current = options.firstOrNull { it.first == action }?.second
-        ?: stringResource(R.string.staff_reports_action_placeholder)
-
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Text(
-            text = stringResource(R.string.staff_reports_action_label),
-            style = MaterialTheme.typography.labelMedium,
-        )
-        Box {
-            MochiOutlinedButton(
-                onClick = { expanded = true },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Text(text = current, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-            }
-            MochiDropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-            ) {
-                options.forEach { (value, label) ->
-                    MochiDropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            expanded = false
-                            onActionChange(value)
-                        },
-                        selected = action == value,
-                    )
-                }
-            }
         }
     }
 }

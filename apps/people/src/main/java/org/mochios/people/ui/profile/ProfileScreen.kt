@@ -94,6 +94,7 @@ import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.components.PeopleSidebarSection
@@ -873,25 +874,4 @@ private fun imageUrl(id: String, slot: String, version: String?): String? {
 private fun avatarPath(id: String, version: String?): String? {
     if (id.isBlank() || version.isNullOrBlank()) return null
     return "/people/$id/-/avatar?v=$version"
-}
-
-private fun parseHexColour(hex: String): Color? {
-    val s = hex.trim().removePrefix("#")
-    return try {
-        when (s.length) {
-            6 -> Color(
-                red = s.substring(0, 2).toInt(16) / 255f,
-                green = s.substring(2, 4).toInt(16) / 255f,
-                blue = s.substring(4, 6).toInt(16) / 255f,
-            )
-            3 -> Color(
-                red = (s[0].digitToInt(16) * 17) / 255f,
-                green = (s[1].digitToInt(16) * 17) / 255f,
-                blue = (s[2].digitToInt(16) * 17) / 255f,
-            )
-            else -> null
-        }
-    } catch (_: Exception) {
-        null
-    }
 }

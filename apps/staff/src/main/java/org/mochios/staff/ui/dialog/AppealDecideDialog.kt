@@ -7,7 +7,6 @@ package org.mochios.staff.ui.dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,9 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,10 +27,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.staff.model.Appeal
@@ -93,9 +87,12 @@ fun AppealDecideDialog(
                     )
                 }
 
-                DecisionDropdown(
-                    decision = decision,
-                    onDecisionChange = { decision = it },
+                LabeledSelectField(
+                    label = stringResource(R.string.staff_appeals_decision_label),
+                    placeholder = stringResource(R.string.staff_appeals_decision_placeholder),
+                    options = decisionOptions(),
+                    selected = decision,
+                    onSelect = { value -> decision = value },
                 )
 
                 MochiTextField(
@@ -125,48 +122,6 @@ fun AppealDecideDialog(
         onDismiss = onDismiss,
         dismissEnabled = !submitting,
     )
-}
-
-@Composable
-private fun DecisionDropdown(
-    decision: String,
-    onDecisionChange: (String) -> Unit,
-) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
-    val options = decisionOptions()
-    val current = options.firstOrNull { it.first == decision }?.second
-        ?: stringResource(R.string.staff_appeals_decision_placeholder)
-
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Text(
-            text = stringResource(R.string.staff_appeals_decision_label),
-            style = MaterialTheme.typography.labelMedium,
-        )
-        Box {
-            MochiOutlinedButton(
-                onClick = { expanded = true },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Text(text = current, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-            }
-            MochiDropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-            ) {
-                options.forEach { (value, label) ->
-                    MochiDropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            expanded = false
-                            onDecisionChange(value)
-                        },
-                        selected = decision == value,
-                    )
-                }
-            }
-        }
-    }
 }
 
 @Composable

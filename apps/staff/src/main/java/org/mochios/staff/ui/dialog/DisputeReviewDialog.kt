@@ -7,9 +7,7 @@ package org.mochios.staff.ui.dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -18,9 +16,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,13 +27,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.LabeledSelectField
+import org.mochios.android.ui.components.MetaRow
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.format.formatPrice
@@ -89,9 +82,14 @@ fun DisputeReviewDialog(
                 MetadataCard(dispute = dispute)
 
                 if (!readOnly) {
-                    ResolutionDropdown(
-                        resolution = resolution,
-                        onResolutionChange = { resolution = it },
+                    LabeledSelectField(
+                        label = stringResource(R.string.staff_disputes_resolution_label),
+                        placeholder = stringResource(
+                            R.string.staff_disputes_resolution_placeholder
+                        ),
+                        options = resolutionOptions(),
+                        selected = resolution,
+                        onSelect = { value -> resolution = value },
                     )
                     if (resolution == "resolved_buyer") {
                         // The full refund and placeholder reflect what's left to
@@ -277,68 +275,6 @@ private fun MetadataCard(dispute: Dispute) {
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-            }
-        }
-    }
-}
-
-@Composable
-private fun MetaRow(label: String, value: String) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Text(
-            text = value,
-            style = MaterialTheme.typography.bodySmall,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-        )
-    }
-}
-
-@Composable
-private fun ResolutionDropdown(
-    resolution: String,
-    onResolutionChange: (String) -> Unit,
-) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
-    val options = resolutionOptions()
-    val current = options.firstOrNull { it.first == resolution }?.second
-        ?: stringResource(R.string.staff_disputes_resolution_placeholder)
-
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Text(
-            text = stringResource(R.string.staff_disputes_resolution_label),
-            style = MaterialTheme.typography.labelMedium,
-        )
-        Box {
-            MochiOutlinedButton(
-                onClick = { expanded = true },
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Text(text = current, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-            }
-            MochiDropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-            ) {
-                options.forEach { (value, label) ->
-                    MochiDropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            expanded = false
-                            onResolutionChange(value)
-                        },
-                        selected = resolution == value,
-                    )
-                }
             }
         }
     }

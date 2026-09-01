@@ -23,7 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.BannerSection
 import org.mochios.android.ui.components.DataChip
-import org.mochios.android.ui.components.DeleteSection
+import org.mochios.android.ui.components.ConfirmActionSection
 import org.mochios.android.ui.components.IdentityRow
 import org.mochios.android.ui.components.InlineTextEditor
 import org.mochios.android.ui.components.Section
@@ -71,13 +71,13 @@ fun GeneralTab(
             onSave = { value -> viewModel.saveBanner(value) }
         )
 
-        DeleteSection(
+        ConfirmActionSection(
             title = stringResource(R.string.feeds_delete_feed),
             buttonLabel = stringResource(MochiR.string.common_delete),
             confirmTitle = stringResource(R.string.feeds_delete_feed),
             confirmMessage = stringResource(R.string.feeds_delete_feed_confirm),
             confirmLabel = stringResource(MochiR.string.common_delete),
-            onDelete = { viewModel.deleteFeed { onFeedDeleted() } }
+            onConfirm = { viewModel.deleteFeed { onFeedDeleted() } }
         )
     }
 }

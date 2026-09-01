@@ -5,14 +5,10 @@
 
 package org.mochios.crm.ui.settings
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.Settings
@@ -40,16 +36,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
-import org.mochios.android.ui.components.Section
+import org.mochios.android.ui.components.SubscriberSettings as SubscriberSettingsLayout
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.android.R as MochiR
@@ -165,47 +158,17 @@ fun CrmSettingsScreen(
         }
     }
 }
-
 @Composable
 private fun SubscriberSettings(
     crm: Crm,
     onUnsubscribe: () -> Unit
 ) {
-    var showConfirm by remember { mutableStateOf(false) }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        CrmIdentitySection(crm = crm)
-
-        Section(
-            title = stringResource(R.string.crm_settings_unsubscribe_section),
-            action = {
-                MochiOutlinedButton(onClick = { showConfirm = true }) {
-                    Text(stringResource(R.string.crm_settings_unsubscribe))
-                }
-            },
-            headerAlignment = Alignment.CenterVertically,
-            content = {}
-        )
-    }
-
-    if (showConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showConfirm = false },
-            title = stringResource(R.string.crm_settings_unsubscribe_title),
-            text = stringResource(R.string.crm_settings_unsubscribe_message),
-            confirmText = stringResource(R.string.crm_settings_unsubscribe),
-            onConfirm = {
-                showConfirm = false
-                onUnsubscribe()
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
-    }
+    SubscriberSettingsLayout(
+        unsubscribeTitle = stringResource(R.string.crm_settings_unsubscribe_section),
+        unsubscribeLabel = stringResource(R.string.crm_settings_unsubscribe),
+        confirmTitle = stringResource(R.string.crm_settings_unsubscribe_title),
+        confirmMessage = stringResource(R.string.crm_settings_unsubscribe_message),
+        onUnsubscribe = onUnsubscribe,
+        identity = { CrmIdentitySection(crm = crm) }
+    )
 }

@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
@@ -54,9 +53,8 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FilterDropdown
 import org.mochios.android.ui.components.InfiniteList
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
@@ -364,51 +362,6 @@ private fun FiltersRow(
             onSelect = onModerationChange,
             modifier = Modifier.weight(1f),
         )
-    }
-}
-
-@Composable
-private fun FilterDropdown(
-    label: String,
-    current: String?,
-    options: List<Pair<String, String>>,
-    anyLabel: String,
-    onSelect: (String?) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    var expanded by remember { mutableStateOf(false) }
-    val currentLabel = options.firstOrNull { it.first == current }?.second ?: anyLabel
-    Box(modifier = modifier) {
-        MochiOutlinedButton(
-            onClick = { expanded = true },
-            modifier = Modifier.fillMaxWidth(),
-        ) {
-            Text(text = "$label: $currentLabel", maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-        }
-        MochiDropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false },
-        ) {
-            MochiDropdownMenuItem(
-                text = { Text(anyLabel) },
-                onClick = {
-                    expanded = false
-                    onSelect(null)
-                },
-                selected = current == null,
-            )
-            options.forEach { (value, l) ->
-                MochiDropdownMenuItem(
-                    text = { Text(l) },
-                    onClick = {
-                        expanded = false
-                        onSelect(value)
-                    },
-                    selected = current == value,
-                )
-            }
-        }
     }
 }
 

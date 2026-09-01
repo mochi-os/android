@@ -62,6 +62,7 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
@@ -177,7 +178,7 @@ private fun PersonBody(
                 // Empty surface so the avatar sits at a consistent height even
                 // without a banner. Tint with the accent if there is one.
                 Surface(
-                    color = parseAccent(accent)?.copy(alpha = 0.12f)
+                    color = parseHexColour(accent)?.copy(alpha = 0.12f)
                         ?: MaterialTheme.colorScheme.surfaceVariant,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -211,7 +212,7 @@ private fun PersonBody(
                     text = info.name,
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = parseAccent(accent) ?: MaterialTheme.colorScheme.onSurface,
+                    color = parseHexColour(accent) ?: MaterialTheme.colorScheme.onSurface,
                 )
                 if (info.fingerprint.isNotBlank()) {
                     Spacer(Modifier.height(4.dp))
@@ -391,25 +392,4 @@ private fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): Stri
     if (info.banner.isBlank()) return null
     val id = info.id.ifBlank { return null }
     return "/people/$id/-/banner?v=${info.banner}"
-}
-
-private fun parseAccent(hex: String?): Color? {
-    val s = hex?.trim()?.removePrefix("#") ?: return null
-    return try {
-        when (s.length) {
-            6 -> Color(
-                red = s.substring(0, 2).toInt(16) / 255f,
-                green = s.substring(2, 4).toInt(16) / 255f,
-                blue = s.substring(4, 6).toInt(16) / 255f,
-            )
-            3 -> Color(
-                red = (s[0].digitToInt(16) * 17) / 255f,
-                green = (s[1].digitToInt(16) * 17) / 255f,
-                blue = (s[2].digitToInt(16) * 17) / 255f,
-            )
-            else -> null
-        }
-    } catch (_: Exception) {
-        null
-    }
 }

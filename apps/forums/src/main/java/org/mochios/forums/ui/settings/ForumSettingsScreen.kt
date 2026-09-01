@@ -5,13 +5,10 @@
 
 package org.mochios.forums.ui.settings
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.AutoAwesome
@@ -41,16 +38,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
-import org.mochios.android.ui.components.Section
+import org.mochios.android.ui.components.SubscriberSettings as SubscriberSettingsLayout
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.android.R as MochiR
@@ -65,53 +59,19 @@ private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     Access(R.string.forums_tab_access, Icons.Outlined.Shield),
     Ai(R.string.forums_tab_ai, Icons.Outlined.AutoAwesome),
 }
-
-/**
- * Read-only settings shown to a viewer who cannot manage the forum: the forum's
- * identity card and an unsubscribe action. Mirrors feeds' `SubscriberSettings`.
- */
 @Composable
 private fun SubscriberSettings(
     forum: Forum,
-    onUnsubscribe: () -> Unit,
+    onUnsubscribe: () -> Unit
 ) {
-    var showConfirm by remember { mutableStateOf(false) }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-    ) {
-        ForumIdentitySection(forum = forum, editable = false, onRename = {})
-
-        Section(
-            title = stringResource(R.string.forums_settings_unsubscribe_section),
-            action = {
-                MochiOutlinedButton(onClick = { showConfirm = true }) {
-                    Text(stringResource(R.string.forums_settings_unsubscribe))
-                }
-            },
-            headerAlignment = Alignment.CenterVertically,
-            content = {},
-        )
-    }
-
-    if (showConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showConfirm = false },
-            title = stringResource(R.string.forums_list_unsubscribe_title),
-            text = stringResource(R.string.forums_list_unsubscribe_message),
-            confirmText = stringResource(R.string.forums_settings_unsubscribe),
-            onConfirm = {
-                showConfirm = false
-                onUnsubscribe()
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
-    }
+    SubscriberSettingsLayout(
+        unsubscribeTitle = stringResource(R.string.forums_settings_unsubscribe_section),
+        unsubscribeLabel = stringResource(R.string.forums_settings_unsubscribe),
+        confirmTitle = stringResource(R.string.forums_list_unsubscribe_title),
+        confirmMessage = stringResource(R.string.forums_list_unsubscribe_message),
+        onUnsubscribe = onUnsubscribe,
+        identity = { ForumIdentitySection(forum = forum, editable = false, onRename = {}) }
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

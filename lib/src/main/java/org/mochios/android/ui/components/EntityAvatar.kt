@@ -150,8 +150,15 @@ private fun initialsOf(name: String): String {
     }
 }
 
-private fun parseHexColour(hex: String): Color? {
-    val s = hex.trim().removePrefix("#")
+/**
+ * A `#rgb` or `#rrggbb` string as a [Color], or null when it is neither - the
+ * shape servers send an accent colour in.
+ *
+ * @param hex Colour string, with or without the leading `#`.
+ * @return The parsed colour, or null if [hex] is null or malformed.
+ */
+fun parseHexColour(hex: String?): Color? {
+    val s = hex?.trim()?.removePrefix("#") ?: return null
     return try {
         when (s.length) {
             6 -> Color(

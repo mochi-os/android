@@ -10,11 +10,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
@@ -287,27 +290,28 @@ fun BannerSection(
 }
 
 /**
- * The section that ends a General tab: a heading whose only control deletes the
- * thing being configured, behind a confirmation.
+ * A settings section whose only control performs one irreversible action -
+ * deleting the thing being configured, or unsubscribing from it - behind a
+ * confirmation dialog.
  *
  * @param title Section heading.
- * @param buttonLabel Label of the delete button.
+ * @param buttonLabel Label of the section's button.
  * @param confirmTitle Title of the confirmation.
  * @param confirmMessage Body of the confirmation.
  * @param confirmLabel Label of the confirmation's destructive button.
- * @param onDelete Called once deletion is confirmed.
- * @param isDeleting Whether the delete is in flight; swaps the button for a
- *   spinner and refuses further presses.
+ * @param onConfirm Called once the action is confirmed.
+ * @param isBusy Whether the action is in flight; swaps the button for a spinner
+ *   and refuses further presses.
  */
 @Composable
-fun DeleteSection(
+fun ConfirmActionSection(
     title: String,
     buttonLabel: String,
     confirmTitle: String,
     confirmMessage: String,
     confirmLabel: String,
-    onDelete: () -> Unit,
-    isDeleting: Boolean = false
+    onConfirm: () -> Unit,
+    isBusy: Boolean = false
 ) {
     var showConfirm by remember { mutableStateOf(false) }
 
@@ -317,10 +321,10 @@ fun DeleteSection(
         action = {
             MochiOutlinedButton(
                 onClick = { showConfirm = true },
-                enabled = !isDeleting,
+                enabled = !isBusy,
                 tone = MochiButtonTone.Neutral
             ) {
-                if (isDeleting) {
+                if (isBusy) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(20.dp),
                         strokeWidth = 2.dp
@@ -341,10 +345,51 @@ fun DeleteSection(
             confirmText = confirmLabel,
             onConfirm = {
                 showConfirm = false
-                onDelete()
+                onConfirm()
             },
             destructive = true,
             dismissText = stringResource(R.string.common_cancel),
+        )
+    }
+}
+
+/**
+ * The settings screen a viewer sees when they follow something but cannot
+ * manage it: the read-only identity card, and a way out of the subscription.
+ *
+ * @param unsubscribeTitle Heading of the unsubscribe section.
+ * @param unsubscribeLabel Label of the unsubscribe button, reused as the
+ *   confirmation's destructive button.
+ * @param confirmTitle Title of the confirmation.
+ * @param confirmMessage Body of the confirmation.
+ * @param onUnsubscribe Called once unsubscribing is confirmed.
+ * @param identity The feature's read-only identity card.
+ */
+@Composable
+fun SubscriberSettings(
+    unsubscribeTitle: String,
+    unsubscribeLabel: String,
+    confirmTitle: String,
+    confirmMessage: String,
+    onUnsubscribe: () -> Unit,
+    identity: @Composable () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        identity()
+
+        ConfirmActionSection(
+            title = unsubscribeTitle,
+            buttonLabel = unsubscribeLabel,
+            confirmTitle = confirmTitle,
+            confirmMessage = confirmMessage,
+            confirmLabel = unsubscribeLabel,
+            onConfirm = onUnsubscribe
         )
     }
 }

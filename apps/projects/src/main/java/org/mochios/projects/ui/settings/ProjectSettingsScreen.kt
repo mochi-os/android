@@ -5,14 +5,10 @@
 
 package org.mochios.projects.ui.settings
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.Settings
@@ -40,16 +36,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
-import org.mochios.android.ui.components.Section
+import org.mochios.android.ui.components.SubscriberSettings as SubscriberSettingsLayout
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
 import org.mochios.android.R as MochiR
@@ -162,47 +155,17 @@ fun ProjectSettingsScreen(
         }
     }
 }
-
 @Composable
 private fun SubscriberSettings(
     project: Project,
     onUnsubscribe: () -> Unit
 ) {
-    var showConfirm by remember { mutableStateOf(false) }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        ProjectIdentitySection(project = project)
-
-        Section(
-            title = stringResource(R.string.projects_settings_unsubscribe_section),
-            action = {
-                MochiOutlinedButton(onClick = { showConfirm = true }) {
-                    Text(stringResource(R.string.projects_settings_unsubscribe))
-                }
-            },
-            headerAlignment = Alignment.CenterVertically,
-            content = {}
-        )
-    }
-
-    if (showConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showConfirm = false },
-            title = stringResource(R.string.projects_settings_unsubscribe_title),
-            text = stringResource(R.string.projects_settings_unsubscribe_message),
-            confirmText = stringResource(R.string.projects_settings_unsubscribe),
-            onConfirm = {
-                showConfirm = false
-                onUnsubscribe()
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
-    }
+    SubscriberSettingsLayout(
+        unsubscribeTitle = stringResource(R.string.projects_settings_unsubscribe_section),
+        unsubscribeLabel = stringResource(R.string.projects_settings_unsubscribe),
+        confirmTitle = stringResource(R.string.projects_settings_unsubscribe_title),
+        confirmMessage = stringResource(R.string.projects_settings_unsubscribe_message),
+        onUnsubscribe = onUnsubscribe,
+        identity = { ProjectIdentitySection(project = project) }
+    )
 }

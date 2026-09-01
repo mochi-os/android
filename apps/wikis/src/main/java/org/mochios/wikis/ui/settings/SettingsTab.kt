@@ -43,6 +43,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.DataChip
+import org.mochios.android.ui.components.IdentityRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
@@ -157,7 +158,7 @@ private fun IdentitySection(
     var editValue by remember(wiki.name) { mutableStateOf(wiki.name) }
 
     Section(title = stringResource(R.string.wikis_settings_section_identity)) {
-        IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_name)) {
+        IdentityRow(label = stringResource(R.string.wikis_settings_field_name)) {
             if (isEditing) {
                 Column(modifier = Modifier.weight(1f)) {
                     Row(
@@ -238,36 +239,14 @@ private fun IdentitySection(
                 }
             }
         }
-        IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_entity_id)) {
+        IdentityRow(label = stringResource(R.string.wikis_settings_field_entity_id)) {
             DataChip(value = wiki.id, truncate = Truncate.MIDDLE)
         }
         if (!fingerprint.isNullOrBlank()) {
-            IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_fingerprint)) {
+            IdentityRow(label = stringResource(R.string.wikis_settings_field_fingerprint)) {
                 DataChip(value = fingerprint, truncate = Truncate.MIDDLE)
             }
         }
-    }
-}
-
-/** Identity row with a fixed-width label so values line up in a column. */
-@Composable
-private fun IdentityFieldRow(
-    label: String,
-    content: @Composable RowScope.() -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.width(120.dp),
-        )
-        content()
     }
 }
 
@@ -289,7 +268,7 @@ private fun SubscriptionSection(
             }
         },
     ) {
-        IdentityFieldRow(label = stringResource(R.string.wikis_settings_field_source)) {
+        IdentityRow(label = stringResource(R.string.wikis_settings_field_source)) {
             MochiTextButton(onClick = onOpenSource) {
                 Text(
                     text = source,
