@@ -19,6 +19,12 @@ apk = app/build/outputs/apk/release/app-release.apk
 # this app's subdirectory for mochi.apk + versions.json.
 packages = ../../packages/android
 
+# Generation time stamped into the manifest, and the release key that signs it:
+# the same key the server manifests carry, so one pinned public key verifies
+# every channel.
+generated := $(shell date +%s)
+key = ../../core/local/update-signing.key
+
 .PHONY: all apk clean locales release
 
 all: apk
@@ -58,8 +64,11 @@ release: apk
 	cp $(apk) $(packages)/mochi-$(version).apk
 	ln -sfn mochi-$(version).apk $(packages)/mochi.apk
 	@sha=`sha256sum $(apk) | cut -d' ' -f1`; size=`wc -c < $(apk) | tr -d ' '`; \
-	  printf '{"tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
-	  '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
+	  printf '{"generated": %s, "platform": "android", "tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
+	  '$(generated)' '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
+	# Signed like the server manifests: a client can then refuse a manifest the
+	# package host did not get from a release. -rawin needs openssl 3.0+.
+	openssl pkeyutl -sign -rawin -inkey $(key) -in $(packages)/versions.json | base64 -w0 > $(packages)/versions.json.sig
 	# Two passes: rsync creates a symlink up front but transfers its target minutes
 	# later, so a single pass leaves the download URL pointing at nothing for the
 	# whole upload; the second repoints the link.
