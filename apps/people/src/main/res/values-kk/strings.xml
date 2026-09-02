@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Кейбір шақырулардан бас тарту мүмкін болмады</string>
     <string name="people_invitations_some_cancel_failed">Кейбір шақыруларды болдырмау мүмкін болмады</string>
     <string name="people_profile_too_long">Профиль тым ұзын</string>
+    <string name="people_invite_settings_load_failed">Шақыру саясатыңызды жүктеу сәтсіз аяқталды</string>
 </resources>

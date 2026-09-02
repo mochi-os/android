@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Ba\'zi takliflar rad etilmadi</string>
     <string name="people_invitations_some_cancel_failed">Ba\'zi takliflar bekor qilinmadi</string>
     <string name="people_profile_too_long">Profil juda uzun</string>
+    <string name="people_invite_settings_load_failed">Taklif siyosatingizni yuklab boʻlmadi</string>
 </resources>

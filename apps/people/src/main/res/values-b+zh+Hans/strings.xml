@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">部分邀请无法拒绝</string>
     <string name="people_invitations_some_cancel_failed">部分邀请无法取消</string>
     <string name="people_profile_too_long">个人资料过长</string>
+    <string name="people_invite_settings_load_failed">加载邀请策略失败</string>
 </resources>

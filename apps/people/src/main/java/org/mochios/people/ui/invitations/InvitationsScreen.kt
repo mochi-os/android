@@ -57,6 +57,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.DrawerTitle
@@ -266,6 +267,7 @@ fun InvitationsScreen(
     if (uiState.settingsDialogOpen) {
         InviteSettingsDialog(
             initial = uiState.policy,
+            loadError = uiState.policyError,
             isSaving = uiState.savingPolicy,
             onDismiss = { viewModel.closeSettings() },
             onSave = { viewModel.setPolicy(it) },
@@ -435,6 +437,7 @@ private fun InvitationsEmptyState(isSearching: Boolean) {
 @Composable
 private fun InviteSettingsDialog(
     initial: String,
+    loadError: MochiError?,
     isSaving: Boolean,
     onDismiss: () -> Unit,
     onSave: (String) -> Unit,
@@ -467,7 +470,20 @@ private fun InviteSettingsDialog(
         onDismissRequest = onDismiss,
         title = stringResource(R.string.people_invitations_incoming),
         content = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            if (loadError != null) {
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text(
+                        text = stringResource(R.string.people_invite_settings_load_failed),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                    Text(
+                        text = loadError.userMessage(),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                }
+            } else Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 for (option in options) {
                     Row(
                         modifier = Modifier
@@ -499,6 +515,7 @@ private fun InviteSettingsDialog(
         },
         confirmText = stringResource(R.string.people_common_save),
         onConfirm = { onSave(selected) },
+        confirmEnabled = loadError == null,
         confirmLoading = isSaving,
         dismissText = stringResource(R.string.people_common_cancel),
         dismissEnabled = !isSaving,

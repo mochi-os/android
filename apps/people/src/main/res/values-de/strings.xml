@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Einige Einladungen konnten nicht abgelehnt werden</string>
     <string name="people_invitations_some_cancel_failed">Einige Einladungen konnten nicht storniert werden</string>
     <string name="people_profile_too_long">Das Profil ist zu lang</string>
+    <string name="people_invite_settings_load_failed">Ihre Einladungsrichtlinie konnte nicht geladen werden</string>
 </resources>

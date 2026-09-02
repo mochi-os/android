@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">ചില ക്ഷണങ്ങൾ നിരസിക്കാനായില്ല</string>
     <string name="people_invitations_some_cancel_failed">ചില ക്ഷണങ്ങൾ റദ്ദാക്കാനായില്ല</string>
     <string name="people_profile_too_long">പ്രൊഫൈൽ വളരെ നീളമുള്ളതാണ്</string>
+    <string name="people_invite_settings_load_failed">നിങ്ങളുടെ ക്ഷണ നയം ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
 </resources>

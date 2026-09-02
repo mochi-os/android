@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Dažus ielūgumus neizdevās noraidīt</string>
     <string name="people_invitations_some_cancel_failed">Dažus ielūgumus neizdevās atcelt</string>
     <string name="people_profile_too_long">Profils ir pārāk garš</string>
+    <string name="people_invite_settings_load_failed">Neizdevās ielādēt jūsu ielūgumu politiku</string>
 </resources>

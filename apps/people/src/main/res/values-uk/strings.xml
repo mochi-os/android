@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Деякі запрошення не вдалося відхилити</string>
     <string name="people_invitations_some_cancel_failed">Деякі запрошення не вдалося скасувати</string>
     <string name="people_profile_too_long">Профіль задовгий</string>
+    <string name="people_invite_settings_load_failed">Не вдалося завантажити вашу політику запрошень</string>
 </resources>

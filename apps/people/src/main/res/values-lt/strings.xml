@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Kai kurių kvietimų nepavyko atmesti</string>
     <string name="people_invitations_some_cancel_failed">Kai kurių kvietimų nepavyko atšaukti</string>
     <string name="people_profile_too_long">Profilis per ilgas</string>
+    <string name="people_invite_settings_load_failed">Nepavyko įkelti jūsų kvietimų politikos</string>
 </resources>

@@ -42,6 +42,7 @@ data class InvitationsUiState(
     val sent: List<FriendInvite> = emptyList(),
     val searchQuery: String = "",
     val policy: String = "notify",
+    val policyError: MochiError? = null,
     val settingsDialogOpen: Boolean = false,
     val savingPolicy: Boolean = false,
     val batchInProgress: Boolean = false,
@@ -90,10 +91,12 @@ class InvitationsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val prefs = repository.getPreferences()
-                _uiState.value = _uiState.value.copy(policy = prefs.invitePolicy)
-            } catch (_: Exception) {
-                // Non-critical — leave default. The settings dialog will fall
-                // back to the displayed value when the user opens it.
+                _uiState.value = _uiState.value.copy(policy = prefs.invitePolicy, policyError = null)
+            } catch (e: Exception) {
+                // The dialog shows this and keeps Save disabled: the "notify"
+                // default would otherwise read as the saved setting, and
+                // saving it would overwrite whatever the user actually chose.
+                _uiState.value = _uiState.value.copy(policyError = e.toMochiError())
             }
         }
     }

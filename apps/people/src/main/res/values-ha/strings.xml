@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">An kasa ƙin wasu gayyace-gayyace</string>
     <string name="people_invitations_some_cancel_failed">An kasa soke wasu gayyace-gayyace</string>
     <string name="people_profile_too_long">Bayanin martaba ya yi tsawo sosai</string>
+    <string name="people_invite_settings_load_failed">An gaza loading manufar gayyatarka</string>
 </resources>

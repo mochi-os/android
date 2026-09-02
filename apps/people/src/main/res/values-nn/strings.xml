@@ -209,4 +209,5 @@
     <string name="people_invitations_some_cancel_failed">Nokre invitasjonar kunne ikkje avbrytast</string>
     <string name="people_invitations_some_decline_failed">Nokre invitasjonar kunne ikkje avvisast</string>
     <string name="people_profile_too_long">Profilen er for lang</string>
+    <string name="people_invite_settings_load_failed">Klarte ikkje lasta invitasjonsregelen din</string>
 </resources>

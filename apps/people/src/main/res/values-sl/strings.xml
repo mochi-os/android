@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Nekaterih povabil ni bilo mogoče zavrniti</string>
     <string name="people_invitations_some_cancel_failed">Nekaterih povabil ni bilo mogoče preklicati</string>
     <string name="people_profile_too_long">Profil je predolg</string>
+    <string name="people_invite_settings_load_failed">Nalaganje vašega pravilnika o povabilih ni uspelo</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Hin vexwendin nehatin redkirin</string>
     <string name="people_invitations_some_cancel_failed">Hin vexwendin nehatin betalkirin</string>
     <string name="people_profile_too_long">Profîl pir dirêj e</string>
+    <string name="people_invite_settings_load_failed">Barkirina polîtîkaya vexwendina te neserkeftî bû</string>
 </resources>

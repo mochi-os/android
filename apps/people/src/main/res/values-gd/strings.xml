@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Cha b\' urrainn cuid de na cuiridhean a dhiùltadh</string>
     <string name="people_invitations_some_cancel_failed">Cha b\' urrainn cuid de na cuiridhean a chur dheth</string>
     <string name="people_profile_too_long">Tha a\' phròifil ro fhada</string>
+    <string name="people_invite_settings_load_failed">Cha b\' urrainn poileasaidh nan cuiridhean agad a luchdadh</string>
 </resources>

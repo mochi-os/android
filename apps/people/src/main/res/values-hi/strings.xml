@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">कुछ आमंत्रण अस्वीकार नहीं किए जा सके</string>
     <string name="people_invitations_some_cancel_failed">कुछ आमंत्रण रद्द नहीं किए जा सके</string>
     <string name="people_profile_too_long">प्रोफ़ाइल बहुत लंबी है</string>
+    <string name="people_invite_settings_load_failed">आपकी निमंत्रण नीति लोड करने में विफल</string>
 </resources>

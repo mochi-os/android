@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">ზოგიერთი მოწვევის უარყოფა ვერ მოხერხდა</string>
     <string name="people_invitations_some_cancel_failed">ზოგიერთი მოწვევის გაუქმება ვერ მოხერხდა</string>
     <string name="people_profile_too_long">პროფილი ძალიან გრძელია</string>
+    <string name="people_invite_settings_load_failed">თქვენი მოწვევის პოლიტიკის ჩატვირთვა ვერ მოხერხდა</string>
 </resources>

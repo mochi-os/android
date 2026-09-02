@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Niektoré pozvánky nebolo možné odmietnuť</string>
     <string name="people_invitations_some_cancel_failed">Niektoré pozvánky nebolo možné zrušiť</string>
     <string name="people_profile_too_long">Profil je príliš dlhý</string>
+    <string name="people_invite_settings_load_failed">Nepodarilo sa načítať vaše pravidlá pozvánok</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">कुछ निमंत्रण अस्वीकार ना हो सकल</string>
     <string name="people_invitations_some_cancel_failed">कुछ निमंत्रण रद्द ना हो सकल</string>
     <string name="people_profile_too_long">प्रोफाइल बहुत लमहर बा</string>
+    <string name="people_invite_settings_load_failed">रउआ निमंत्रण नीति लोड करे में विफल</string>
 </resources>

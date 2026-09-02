@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">ځینې بلنې رد نشوې</string>
     <string name="people_invitations_some_cancel_failed">ځینې بلنې لغوه نشوې</string>
     <string name="people_profile_too_long">پروفایل ډېر اوږد دی</string>
+    <string name="people_invite_settings_load_failed">ستاسو د بلنې پالیسي د بار کولو پاتې راغلل</string>
 </resources>

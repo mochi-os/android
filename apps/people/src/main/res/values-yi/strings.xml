@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">עטלעכע פֿאַרבעטונגען האָבן זיך נישט געקענט אָפּזאָגן</string>
     <string name="people_invitations_some_cancel_failed">עטלעכע פֿאַרבעטונגען האָבן זיך נישט געקענט אַנולירן</string>
     <string name="people_profile_too_long">פּראָפֿיל איז צו לאַנג</string>
+    <string name="people_invite_settings_load_failed">ניט געלונגען צו לאָדן דײַן אײַנלאַדונג־פּאָליטיק</string>
 </resources>
