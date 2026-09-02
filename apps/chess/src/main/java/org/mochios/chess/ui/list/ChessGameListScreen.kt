@@ -197,7 +197,6 @@ fun ChessGameListScreen(
                         onOpenGame = { gameId ->
                             navController.navigate(ChessApp.gameDetail(gameId))
                         },
-                        onNewGame = { navController.navigate(ChessApp.NEW_GAME) },
                     )
                 }
             }
@@ -262,7 +261,6 @@ private fun GameCardGrid(
     activeGames: List<ChessSidebarGame>,
     completedGames: List<ChessSidebarGame>,
     onOpenGame: (String) -> Unit,
-    onNewGame: () -> Unit,
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -289,17 +287,6 @@ private fun GameCardGrid(
                     game = game,
                     onClick = { onOpenGame(game.id) },
                 )
-            }
-        }
-        item("new-game-footer") {
-            Spacer(modifier = Modifier.height(12.dp))
-            MochiButton(
-                onClick = onNewGame,
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Icon(Icons.Default.Add, contentDescription = null)
-                Spacer(modifier = Modifier.size(8.dp))
-                Text(stringResource(R.string.chess_new_game))
             }
         }
     }

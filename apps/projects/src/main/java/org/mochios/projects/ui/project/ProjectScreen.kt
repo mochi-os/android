@@ -739,9 +739,11 @@ private fun ProjectContent(
             }
         },
         floatingActionButton = {
-            // The board view creates objects from its own per-column plus
-            // buttons, so the FAB is only offered on the list views.
-            if (details != null && activeView?.viewtype != "board") {
+            // A board with columns offers a "+" per column, so the FAB stands
+            // down there. A column-less board draws no plus, so it keeps it.
+            val boardHasColumns = activeView?.viewtype == "board" &&
+                activeView.columns.isNotBlank()
+            if (details != null && !boardHasColumns) {
                 FloatingActionButton(onClick = { onCreateObject(null, emptyMap()) }) {
                     Icon(
                         Icons.Default.Add,

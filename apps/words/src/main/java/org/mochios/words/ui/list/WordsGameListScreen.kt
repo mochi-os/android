@@ -21,7 +21,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Logout
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
@@ -30,7 +29,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -152,11 +150,6 @@ fun WordsGameListScreen(
                         }
                     },
                 )
-            },
-            floatingActionButton = {
-                FloatingActionButton(onClick = onNewGame) {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.words_list_new))
-                }
             },
         ) { padding ->
             Box(modifier = Modifier.fillMaxSize().padding(padding)) {
