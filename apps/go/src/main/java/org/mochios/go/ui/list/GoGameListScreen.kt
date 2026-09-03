@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.GridOn
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
@@ -40,6 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -52,7 +52,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiButton
@@ -121,7 +120,6 @@ fun GoGameListScreen(
 
     MochiListDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.go_app_title)) },
         items = goDrawerItems(
             games = uiState.games,
             myIdentity = uiState.identity.orEmpty(),
@@ -235,7 +233,7 @@ private fun LoadingState() {
 @Composable
 private fun GamesEmptyPane(hasGames: Boolean, onNewGame: () -> Unit) {
     EmptyState(
-        icon = Icons.Default.GridOn,
+        icon = painterResource(R.mipmap.ic_go_foreground),
         title = if (hasGames) {
             stringResource(MochiR.string.game_select_title)
         } else {

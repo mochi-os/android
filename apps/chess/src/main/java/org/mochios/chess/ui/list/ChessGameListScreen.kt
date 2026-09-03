@@ -14,7 +14,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.SportsKabaddi
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.CircularProgressIndicator
@@ -41,6 +40,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -53,7 +53,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiButton
@@ -123,7 +122,6 @@ fun ChessGameListScreen(
 
     MochiListDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.chess_sidebar_header)) },
         items = chessDrawerItems(
             activeGames = uiState.activeSidebar,
             completedGames = uiState.completedSidebar,
@@ -241,7 +239,7 @@ private fun LoadingState() {
 @Composable
 private fun GamesEmptyPane(hasGames: Boolean, onNewGame: () -> Unit) {
     EmptyState(
-        icon = Icons.Default.SportsKabaddi,
+        icon = painterResource(R.mipmap.ic_chess_foreground),
         title = if (hasGames) {
             stringResource(MochiR.string.game_select_title)
         } else {

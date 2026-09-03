@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,6 +22,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -39,6 +42,63 @@ fun EmptyState(
     verticalArrangement: Arrangement.Vertical = Arrangement.Center,
     action: (@Composable () -> Unit)? = null
 ) {
+    EmptyStateLayout(
+        title = title,
+        subtitle = subtitle,
+        modifier = modifier,
+        verticalArrangement = verticalArrangement,
+        action = action
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = Modifier.size(48.dp),
+            tint = MaterialTheme.colorScheme.primary
+        )
+    }
+}
+
+/**
+ * [EmptyState] drawn from a raster [icon] rather than a vector — an app's own
+ * launcher glyph, say. The glyph is tinted like the vector variant, so a
+ * single-colour icon still follows the theme.
+ */
+@Composable
+fun EmptyState(
+    icon: Painter,
+    title: String,
+    subtitle: String? = null,
+    modifier: Modifier = Modifier,
+    verticalArrangement: Arrangement.Vertical = Arrangement.Center,
+    action: (@Composable () -> Unit)? = null
+) {
+    EmptyStateLayout(
+        title = title,
+        subtitle = subtitle,
+        modifier = modifier,
+        verticalArrangement = verticalArrangement,
+        action = action
+    ) {
+        // Wider than the 48dp vector: a launcher glyph is drawn inside its own
+        // adaptive-icon margin, so it reads smaller at the same size.
+        Image(
+            painter = icon,
+            contentDescription = null,
+            modifier = Modifier.size(72.dp),
+            colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary)
+        )
+    }
+}
+
+@Composable
+private fun EmptyStateLayout(
+    title: String,
+    subtitle: String?,
+    modifier: Modifier,
+    verticalArrangement: Arrangement.Vertical,
+    action: (@Composable () -> Unit)?,
+    badge: @Composable () -> Unit
+) {
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -53,12 +113,7 @@ fun EmptyState(
                 .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.12f)),
             contentAlignment = Alignment.Center
         ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                modifier = Modifier.size(48.dp),
-                tint = MaterialTheme.colorScheme.primary
-            )
+            badge()
         }
 
         Spacer(modifier = Modifier.height(16.dp))

@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Logout
-import androidx.compose.material.icons.filled.Abc
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
@@ -39,6 +38,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -49,7 +49,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LastViewedStore
@@ -104,7 +103,6 @@ fun WordsGameListScreen(
 
     MochiListDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.words_sidebar_header)) },
         items = wordsDrawerItems(
             games = uiState.games,
             myIdentity = uiState.myIdentity,
@@ -213,7 +211,7 @@ fun WordsGameListScreen(
 @Composable
 private fun GamesEmptyPane(hasGames: Boolean, onNewGame: () -> Unit) {
     EmptyState(
-        icon = Icons.Default.Abc,
+        icon = painterResource(R.mipmap.ic_words_foreground),
         title = if (hasGames) {
             stringResource(MochiR.string.game_select_title)
         } else {

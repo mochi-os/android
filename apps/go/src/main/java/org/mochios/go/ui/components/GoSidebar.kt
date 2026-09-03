@@ -28,26 +28,15 @@ fun goDrawerItems(games: List<Game>, myIdentity: String): List<DrawerItem> {
     }
 }
 
-@Composable
 private fun Game.toDrawerItem(myIdentity: String, section: String): DrawerItem {
     val opponentId = opponentId(myIdentity)
     return DrawerItem(
         id = id,
-        title = opponentName(myIdentity),
-        subtitle = stringResource(R.string.go_card_meta, boardSize, boardSize, statusLabel(status)),
+        title = "${opponentName(myIdentity)} ($boardSize×$boardSize)",
         // Blank opponent id means no avatar asset path; the row still gets a
         // seeded initials circle from the drawer's seed-without-icon branch.
         avatarUrl = if (opponentId.isNotBlank()) "/people/$opponentId/-/avatar" else null,
         seed = opponentId,
         section = section,
     )
-}
-
-@Composable
-private fun statusLabel(status: String): String = when (status) {
-    "active" -> stringResource(R.string.go_status_active)
-    "finished" -> stringResource(R.string.go_status_finished)
-    "draw" -> stringResource(R.string.go_status_draw)
-    "resigned" -> stringResource(R.string.go_status_resigned)
-    else -> status
 }

@@ -38,8 +38,7 @@ private fun GameListItem.toDrawerItem(myIdentity: String, section: String): Draw
     }
     return DrawerItem(
         id = fingerprint?.ifBlank { null } ?: id,
-        title = names,
-        subtitle = scores,
+        title = "$names ($scores)",
         section = section,
     )
 }
