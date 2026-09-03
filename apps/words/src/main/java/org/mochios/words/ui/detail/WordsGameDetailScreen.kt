@@ -63,6 +63,7 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
@@ -83,8 +84,9 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
-import org.mochios.android.ui.components.GameHeader
+import org.mochios.android.ui.components.GameStatusBar
 import org.mochios.android.ui.components.GameHeaderStat
+import org.mochios.android.ui.components.GameTopBarTitle
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
@@ -186,21 +188,67 @@ fun WordsGameDetailScreen(
         }
     }
 
+    val isActive = game?.status == "active"
+    val isMyTurn = isActive && game != null && game.current_turn == game.my_player_number
+    val header = game?.let { current -> buildHeaderModel(current, state.myIdentity) }
+    var showMobileChat by remember { mutableStateOf(false) }
+    var showDeleteDialog by remember { mutableStateOf(false) }
+    // The board pane keeps its own BoxWithConstraints for layout; the top bar
+    // needs the same answer a composition earlier, so it asks the window.
+    val twoPane = LocalConfiguration.current.screenWidthDp >= 600
+
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = stringResource(R.string.words_detail_title),
-                        style = MaterialTheme.typography.titleMedium,
-                    )
+                    if (header != null) {
+                        GameTopBarTitle(title = header.title)
+                    } else {
+                        Text(
+                            text = stringResource(R.string.words_detail_title),
+                            style = MaterialTheme.typography.titleMedium,
+                        )
+                    }
                 },
                 navigationIcon = {
                     MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
                             imageVector = Icons.Default.Menu,
                             contentDescription = stringResource(R.string.words_list_menu),
+                        )
+                    }
+                },
+                actions = {
+                    if (game != null) {
+                        if (!twoPane) {
+                            MochiIconButton(onClick = { showMobileChat = true }) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.Message,
+                                    contentDescription = stringResource(
+                                        R.string.words_detail_action_open_chat,
+                                    ),
+                                )
+                            }
+                        }
+                        WordsActionsMenu(
+                            isActive = isActive,
+                            isMyTurn = isMyTurn,
+                            exchangeMode = state.exchangeMode,
+                            hasPendingTiles = state.pendingPlacements.isNotEmpty(),
+                            rematching = state.isCreatingRematch,
+                            onShuffle = { viewModel.shuffleRack() },
+                            onPass = { viewModel.passTurn() },
+                            onToggleExchange = {
+                                if (state.exchangeMode) {
+                                    viewModel.cancelExchange()
+                                } else {
+                                    viewModel.enterExchangeMode()
+                                }
+                            },
+                            onResign = { viewModel.openResignDialog() },
+                            onRematch = { viewModel.rematch() },
+                            onDelete = { showDeleteDialog = true },
                         )
                     }
                 },
@@ -234,6 +282,11 @@ fun WordsGameDetailScreen(
                     state = state,
                     game = game,
                     viewModel = viewModel,
+                    header = header ?: buildHeaderModel(game, state.myIdentity),
+                    showMobileChat = showMobileChat,
+                    onDismissMobileChat = { showMobileChat = false },
+                    showDeleteDialog = showDeleteDialog,
+                    onDismissDeleteDialog = { showDeleteDialog = false },
                     onOpenNotifications = onOpenNotifications,
                 )
             }
@@ -309,6 +362,11 @@ private fun GameDetailContent(
     state: WordsGameDetailUiState,
     game: Game,
     viewModel: WordsGameViewModel,
+    header: WordsHeaderModel,
+    showMobileChat: Boolean,
+    onDismissMobileChat: () -> Unit,
+    showDeleteDialog: Boolean,
+    onDismissDeleteDialog: () -> Unit,
     @Suppress("UNUSED_PARAMETER") onOpenNotifications: () -> Unit,
 ) {
     val myIdentity = state.myIdentity
@@ -339,7 +397,6 @@ private fun GameDetailContent(
         !state.isSubmittingMove
     val canRecallMove = isMyTurn && state.pendingPlacements.isNotEmpty() && !state.isSubmittingMove
 
-    val header = buildHeaderModel(game, myIdentity)
 
     // Continuous drag-and-drop: board and rack report their bounds in root
     // coordinates, and release dispatches on whichever target rect holds the
@@ -414,8 +471,6 @@ private fun GameDetailContent(
             .onGloballyPositioned { overlayOrigin = it.boundsInRoot().topLeft },
     ) {
         val showChatInline = maxWidth >= 600.dp
-        var showMobileChat by remember { mutableStateOf(false) }
-        var showDeleteDialog by remember { mutableStateOf(false) }
 
         Row(modifier = Modifier.fillMaxSize()) {
             Column(
@@ -424,27 +479,23 @@ private fun GameDetailContent(
                     .fillMaxHeight()
                     .padding(horizontal = 4.dp),
             ) {
-                WordsGameHeader(
-                    header = header,
-                    game = game,
-                    isMyTurn = isMyTurn,
-                    pendingCount = state.pendingPlacements.size,
-                    exchangeMode = state.exchangeMode,
-                    isActive = isActive,
-                    isRematchInflight = state.isCreatingRematch,
-                    onShuffle = { viewModel.shuffleRack() },
-                    onPass = { viewModel.passTurn() },
-                    onToggleExchange = {
-                        if (state.exchangeMode) viewModel.cancelExchange()
-                        else viewModel.enterExchangeMode()
-                    },
-                    onResign = { viewModel.openResignDialog() },
-                    onRematch = { viewModel.rematch() },
-                    onDelete = { showDeleteDialog = true },
-                    onOpenChat = if (!showChatInline) {
-                        { showMobileChat = true }
-                    } else null,
-                )
+                GameStatusBar(
+                    status = header.status,
+                    myTurn = if (isActive) isMyTurn else null,
+                    // The pane is inset 4 dp here, so make up the rest of the
+                    // top bar's 16 dp gutter.
+                    modifier = Modifier.padding(horizontal = 4.dp),
+                ) {
+                    for (player in header.players) {
+                        GameHeaderStat(
+                            label = player.label,
+                            value = player.score.toString(),
+                            isHighlighted = player.isCurrentTurn,
+                            isMe = player.isMe,
+                        )
+                    }
+                    GameHeaderStat(label = header.tilesLeftLabel)
+                }
 
                 Box(
                     modifier = Modifier
@@ -454,6 +505,7 @@ private fun GameDetailContent(
                     contentAlignment = Alignment.Center,
                 ) {
                     WordsBoard(
+                        modifier = Modifier.widthIn(max = BOARD_MAX_WIDTH),
                         board = board,
                         pendingPlacements = state.pendingPlacements,
                         selectedRackIndex = state.selectedRackIndex,
@@ -644,7 +696,7 @@ private fun GameDetailContent(
         if (!showChatInline && showMobileChat) {
             val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
             MochiBottomSheet(
-                onDismissRequest = { showMobileChat = false },
+                onDismissRequest = onDismissMobileChat,
                 sheetState = sheetState,
             ) {
                 Box(
@@ -667,12 +719,12 @@ private fun GameDetailContent(
 
         if (showDeleteDialog) {
             MochiAlertDialog(
-                onDismissRequest = { showDeleteDialog = false },
+                onDismissRequest = onDismissDeleteDialog,
                 title = stringResource(R.string.words_detail_delete_title),
                 text = stringResource(R.string.words_detail_delete_message),
                 confirmText = stringResource(R.string.words_detail_delete_confirm),
                 onConfirm = {
-                    showDeleteDialog = false
+                    onDismissDeleteDialog()
                     viewModel.deleteGame()
                 },
                 destructive = true,
@@ -685,116 +737,103 @@ private fun GameDetailContent(
 private val GHOST_TILE_BG = Color(0xFFFBBF24)
 private val GHOST_TILE_BORDER = Color(0xFFD97706)
 
+/**
+ * Overflow menu for the detail top bar: the moves left open to the viewer,
+ * which depends on whose turn it is and whether the game is still running.
+ */
 @Composable
-private fun WordsGameHeader(
-    header: WordsHeaderModel,
-    @Suppress("UNUSED_PARAMETER") game: Game,
-    isMyTurn: Boolean,
-    pendingCount: Int,
-    exchangeMode: Boolean,
+private fun WordsActionsMenu(
     isActive: Boolean,
-    isRematchInflight: Boolean,
+    isMyTurn: Boolean,
+    exchangeMode: Boolean,
+    hasPendingTiles: Boolean,
+    rematching: Boolean,
     onShuffle: () -> Unit,
     onPass: () -> Unit,
     onToggleExchange: () -> Unit,
     onResign: () -> Unit,
     onRematch: () -> Unit,
     onDelete: () -> Unit,
-    onOpenChat: (() -> Unit)?,
 ) {
-    GameHeader(
-        title = header.title,
-        status = header.status,
-        myTurn = if (isActive) isMyTurn else null,
-        stats = {
-            for (player in header.players) {
-                GameHeaderStat(
-                    label = player.label,
-                    value = player.score.toString(),
-                    isHighlighted = player.isCurrentTurn,
-                    isMe = player.isMe,
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        MochiIconButton(onClick = { expanded = true }) {
+            Icon(
+                imageVector = Icons.Filled.MoreHoriz,
+                contentDescription = stringResource(R.string.words_detail_action_more),
+            )
+        }
+        MochiDropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+        ) {
+            if (isActive) {
+                if (isMyTurn && !exchangeMode) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.words_detail_action_shuffle)) },
+                        onClick = {
+                            expanded = false
+                            onShuffle()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.Shuffle, contentDescription = null) },
+                    )
+                }
+                if (isMyTurn && !hasPendingTiles) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.words_detail_action_pass)) },
+                        onClick = {
+                            expanded = false
+                            onPass()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
+                    )
+                }
+                if (isMyTurn) {
+                    MochiDropdownMenuItem(
+                        text = {
+                            val label = if (exchangeMode) {
+                                stringResource(R.string.words_detail_action_cancel_exchange)
+                            } else {
+                                stringResource(R.string.words_detail_action_exchange)
+                            }
+                            Text(label)
+                        },
+                        onClick = {
+                            expanded = false
+                            onToggleExchange()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.SwapHoriz, contentDescription = null) },
+                    )
+                }
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.words_detail_action_resign)) },
+                    onClick = {
+                        expanded = false
+                        onResign()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
+                )
+            } else {
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.words_detail_action_rematch)) },
+                    onClick = {
+                        expanded = false
+                        onRematch()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                    enabled = !rematching,
+                )
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.words_detail_action_delete)) },
+                    onClick = {
+                        expanded = false
+                        onDelete()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
             }
-            GameHeaderStat(
-                label = header.tilesLeftLabel,
-            )
-        },
-        actions = {
-            if (onOpenChat != null) {
-                MochiIconButton(onClick = onOpenChat) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.Message,
-                        contentDescription = stringResource(R.string.words_detail_action_open_chat),
-                        modifier = Modifier.size(20.dp),
-                    )
-                }
-            }
-            var menuOpen by remember { mutableStateOf(false) }
-            Box {
-                MochiIconButton(onClick = { menuOpen = true }) {
-                    Icon(
-                        imageVector = Icons.Filled.MoreHoriz,
-                        contentDescription = stringResource(R.string.words_detail_action_more),
-                        modifier = Modifier.size(20.dp),
-                    )
-                }
-                MochiDropdownMenu(
-                    expanded = menuOpen,
-                    onDismissRequest = { menuOpen = false },
-                ) {
-                    if (isActive) {
-                        if (isMyTurn && !exchangeMode) {
-                            MochiDropdownMenuItem(
-                                text = { Text(stringResource(R.string.words_detail_action_shuffle)) },
-                                onClick = { menuOpen = false; onShuffle() },
-                                leadingIcon = { Icon(Icons.Outlined.Shuffle, contentDescription = null) },
-                            )
-                        }
-                        if (isMyTurn && pendingCount == 0) {
-                            MochiDropdownMenuItem(
-                                text = { Text(stringResource(R.string.words_detail_action_pass)) },
-                                onClick = { menuOpen = false; onPass() },
-                                leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
-                            )
-                        }
-                        if (isMyTurn) {
-                            MochiDropdownMenuItem(
-                                text = {
-                                    val label = if (exchangeMode) {
-                                        stringResource(R.string.words_detail_action_cancel_exchange)
-                                    } else {
-                                        stringResource(R.string.words_detail_action_exchange)
-                                    }
-                                    Text(label)
-                                },
-                                onClick = { menuOpen = false; onToggleExchange() },
-                                leadingIcon = {
-                                    Icon(Icons.Outlined.SwapHoriz, contentDescription = null)
-                                },
-                            )
-                        }
-                        MochiDropdownMenuItem(
-                            text = { Text(stringResource(R.string.words_detail_action_resign)) },
-                            onClick = { menuOpen = false; onResign() },
-                            leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
-                        )
-                    } else {
-                        MochiDropdownMenuItem(
-                            text = { Text(stringResource(R.string.words_detail_action_rematch)) },
-                            onClick = { menuOpen = false; onRematch() },
-                            leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
-                            enabled = !isRematchInflight,
-                        )
-                        MochiDropdownMenuItem(
-                            text = { Text(stringResource(R.string.words_detail_action_delete)) },
-                            onClick = { menuOpen = false; onDelete() },
-                            leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                        )
-                    }
-                }
-            }
-        },
-    )
+        }
+    }
 }
 
 @Composable
@@ -1069,3 +1108,6 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         tilesLeftLabel = context.getString(R.string.words_detail_label_tiles_left, game.bag_count),
     )
 }
+
+/** Board width cap, matching chess and go so every board reads the same size. */
+private val BOARD_MAX_WIDTH = 560.dp

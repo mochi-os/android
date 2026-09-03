@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -56,6 +57,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -76,8 +78,9 @@ import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
-import org.mochios.android.ui.components.GameHeader
+import org.mochios.android.ui.components.GameStatusBar
 import org.mochios.android.ui.components.GameHeaderStat
+import org.mochios.android.ui.components.GameTopBarTitle
 import org.mochios.android.ui.components.GameHeaderStoneDot
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -163,16 +166,80 @@ fun ChessGameDetailScreen(
         }
     }
 
+    val game = state.game
+    val myIdentity = state.identity
+    val myColor = if (game?.white == myIdentity) 'w' else 'b'
+    // Derive turn / check from the FEN every render — chesslib is cheap
+    // and the FEN is the single source of truth.
+    val turnState = remember(game?.fen, myIdentity, game?.white) {
+        try {
+            val board = Board()
+            board.loadFromFen(game?.fen.orEmpty())
+            val mySide = if (myColor == 'w') Side.WHITE else Side.BLACK
+            (board.sideToMove == mySide) to board.isKingAttacked
+        } catch (_: Exception) {
+            false to false
+        }
+    }
+    val isMyTurn = turnState.first
+    val opponentName = game?.opponentName(myIdentity).orEmpty()
+    val opponentId = game?.opponentId(myIdentity).orEmpty()
+    val statusText = if (game != null) {
+        chessStatusText(game, myIdentity, isMyTurn, turnState.second)
+    } else {
+        ""
+    }
+    // The board pane keeps its own BoxWithConstraints for layout; the top bar
+    // needs the same answer a composition earlier, so it asks the window.
+    val twoPane = LocalConfiguration.current.screenWidthDp >= 600
+
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.chess_app_title)) },
+                title = {
+                    if (game != null) {
+                        GameTopBarTitle(
+                            title = opponentName,
+                            opponentFingerprint = opponentId.takeIf { it.isNotBlank() },
+                            opponentName = opponentName,
+                            avatarUrl = opponentId
+                                .takeIf { it.isNotBlank() }
+                                ?.let { id -> "/people/$id/-/avatar" },
+                        )
+                    } else {
+                        Text(stringResource(R.string.chess_app_title))
+                    }
+                },
                 navigationIcon = {
                     MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
                             imageVector = Icons.Default.Menu,
                             contentDescription = stringResource(R.string.chess_open_sidebar),
+                        )
+                    }
+                },
+                actions = {
+                    if (game != null) {
+                        if (!twoPane) {
+                            MochiIconButton(onClick = { showMobileChat = true }) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.Message,
+                                    contentDescription = stringResource(R.string.chess_open_chat),
+                                )
+                            }
+                        }
+                        GameActionsMenu(
+                            game = game,
+                            myIdentity = myIdentity,
+                            drawOffering = state.isDrawOffering,
+                            resigning = state.isResigning,
+                            rematching = state.isRematching,
+                            deleting = state.isDeleting,
+                            onOfferDraw = viewModel::offerDraw,
+                            onResign = { showResignDialog = true },
+                            onRematch = viewModel::rematch,
+                            onDelete = { showDeleteDialog = true },
                         )
                     }
                 },
@@ -188,32 +255,26 @@ fun ChessGameDetailScreen(
                 .padding(padding),
         ) {
             when {
-                state.isLoading && state.game == null -> LoadingState()
-                state.error != null && state.game == null -> ErrorState(
+                state.isLoading && game == null -> LoadingState()
+                state.error != null && game == null -> ErrorState(
                     message = state.error?.userMessage()
                         ?: stringResource(MochiR.string.error_unexpected),
                     onRetry = { viewModel.load() },
                 )
-                state.game == null -> EmptyState()
+                game == null -> EmptyState()
                 else -> {
-                    val game = state.game!!
-                    val myIdentity = state.identity
-                    val myColor = if (game.white == myIdentity) 'w' else 'b'
                     GameContent(
                         state = state,
                         game = game,
                         myIdentity = myIdentity,
                         myColor = myColor,
+                        isMyTurn = isMyTurn,
+                        statusText = statusText,
                         onMove = viewModel::submitMove,
-                        onOpenResign = { showResignDialog = true },
-                        onOpenDelete = { showDeleteDialog = true },
-                        onOfferDraw = viewModel::offerDraw,
                         onAcceptDraw = viewModel::acceptDraw,
                         onDeclineDraw = viewModel::declineDraw,
-                        onRematch = viewModel::rematch,
                         onSendChat = viewModel::sendChat,
                         onLoadMoreChat = viewModel::loadMoreOlder,
-                        onOpenMobileChat = { showMobileChat = true },
                         wsStatus = controller?.status?.collectAsState(initial = GameWsStatus.CONNECTING)?.value,
                     )
                 }
@@ -295,16 +356,13 @@ private fun GameContent(
     game: Game,
     myIdentity: String,
     myColor: Char,
+    isMyTurn: Boolean,
+    statusText: String,
     onMove: (String, String, String?) -> Unit,
-    onOpenResign: () -> Unit,
-    onOpenDelete: () -> Unit,
-    onOfferDraw: () -> Unit,
     onAcceptDraw: () -> Unit,
     onDeclineDraw: () -> Unit,
-    onRematch: () -> Unit,
     onSendChat: (String) -> Unit,
     onLoadMoreChat: () -> Unit,
-    onOpenMobileChat: () -> Unit,
     wsStatus: GameWsStatus?,
 ) {
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
@@ -322,14 +380,11 @@ private fun GameContent(
                         game = game,
                         myIdentity = myIdentity,
                         myColor = myColor,
+                        isMyTurn = isMyTurn,
+                        statusText = statusText,
                         onMove = onMove,
-                        onOpenResign = onOpenResign,
-                        onOpenDelete = onOpenDelete,
-                        onOfferDraw = onOfferDraw,
                         onAcceptDraw = onAcceptDraw,
                         onDeclineDraw = onDeclineDraw,
-                        onRematch = onRematch,
-                        onOpenMobileChat = null, // chat is visible; no toggle needed
                     )
                 }
                 Column(
@@ -354,20 +409,17 @@ private fun GameContent(
                 }
             }
         } else {
-            // Phone: board only; chat lives behind the chat icon in the header.
+            // Phone: board only; chat lives behind the top bar's chat icon.
             BoardPane(
                 state = state,
                 game = game,
                 myIdentity = myIdentity,
                 myColor = myColor,
+                isMyTurn = isMyTurn,
+                statusText = statusText,
                 onMove = onMove,
-                onOpenResign = onOpenResign,
-                onOpenDelete = onOpenDelete,
-                onOfferDraw = onOfferDraw,
                 onAcceptDraw = onAcceptDraw,
                 onDeclineDraw = onDeclineDraw,
-                onRematch = onRematch,
-                onOpenMobileChat = onOpenMobileChat,
             )
         }
     }
@@ -379,34 +431,13 @@ private fun BoardPane(
     game: Game,
     myIdentity: String,
     myColor: Char,
+    isMyTurn: Boolean,
+    statusText: String,
     onMove: (String, String, String?) -> Unit,
-    onOpenResign: () -> Unit,
-    onOpenDelete: () -> Unit,
-    onOfferDraw: () -> Unit,
     onAcceptDraw: () -> Unit,
     onDeclineDraw: () -> Unit,
-    onRematch: () -> Unit,
-    onOpenMobileChat: (() -> Unit)?,
 ) {
-    // Derive turn / check from the FEN every render — chesslib is cheap
-    // and the FEN is the single source of truth.
-    val turnState = remember(game.fen, myIdentity, game.white) {
-        try {
-            val board = Board()
-            board.loadFromFen(game.fen)
-            val mySide = if (myColor == 'w') Side.WHITE else Side.BLACK
-            val turn = board.sideToMove == mySide
-            val check = board.isKingAttacked
-            turn to check
-        } catch (_: Exception) {
-            false to false
-        }
-    }
-    val isMyTurn = turnState.first
-    val isCheck = turnState.second
-
     val opponentName = game.opponentName(myIdentity)
-    val statusText = chessStatusText(game, myIdentity, isMyTurn, isCheck)
 
     val capturedPair = remember(game.fen) { capturedPiecesFromFen(game.fen) }
     val (capturedByWhite, capturedByBlack) = capturedPair
@@ -414,85 +445,72 @@ private fun BoardPane(
     val capturedByOpponent = if (myColor == 'w') capturedByBlack else capturedByWhite
 
     Column(modifier = Modifier.fillMaxSize().padding(horizontal = 8.dp)) {
-        GameHeader(
-            title = opponentName,
+        GameStatusBar(
             status = statusText,
             myTurn = if (game.status == "active") isMyTurn else null,
-            opponentFingerprint = game.opponentId(myIdentity).takeIf { it.isNotBlank() },
+        ) {
+            GameHeaderStat(
+                label = if (myColor == 'w') stringResource(R.string.chess_side_white)
+                else stringResource(R.string.chess_side_black),
+                icon = {
+                    GameHeaderStoneDot(
+                        color = if (myColor == 'w') StoneColor.WHITE else StoneColor.BLACK,
+                    )
+                },
+            )
+        }
+
+        val banner = drawBanner(
+            game = game,
+            myIdentity = myIdentity,
             opponentName = opponentName,
-            stats = {
-                GameHeaderStat(
-                    label = if (myColor == 'w') stringResource(R.string.chess_side_white)
-                    else stringResource(R.string.chess_side_black),
-                    icon = {
-                        GameHeaderStoneDot(
-                            color = if (myColor == 'w') StoneColor.WHITE else StoneColor.BLACK,
-                        )
-                    },
+            onAccept = onAcceptDraw,
+            onDecline = onDeclineDraw,
+            acceptInFlight = state.isDrawAccepting,
+            declineInFlight = state.isDrawDeclining,
+        )
+        if (banner != null) {
+            banner()
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        // The strips belong to the board, so the three sit as one group under
+        // the status strip, capped and centred across the pane.
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f),
+            contentAlignment = Alignment.TopCenter,
+        ) {
+            Column(modifier = Modifier.widthIn(max = BOARD_MAX_WIDTH)) {
+                // Opponent captures (= pieces taken by the local player) above.
+                CapturedPiecesStrip(
+                    capturedByColor = myColor,
+                    pieces = capturedByMe,
                 )
-            },
-            actions = {
-                if (onOpenMobileChat != null) {
-                    MochiIconButton(onClick = onOpenMobileChat) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.Message,
-                            contentDescription = stringResource(R.string.chess_open_chat),
-                            modifier = Modifier.size(20.dp),
-                        )
-                    }
-                }
-                GameActionsMenu(
-                    game = game,
-                    myIdentity = myIdentity,
-                    drawOffering = state.isDrawOffering,
-                    resigning = state.isResigning,
-                    rematching = state.isRematching,
-                    deleting = state.isDeleting,
-                    onOfferDraw = onOfferDraw,
-                    onResign = onOpenResign,
-                    onRematch = onRematch,
-                    onDelete = onOpenDelete,
+                Spacer(modifier = Modifier.height(8.dp))
+
+                ChessBoard(
+                    fen = game.fen,
+                    myColor = myColor,
+                    isMyTurn = isMyTurn,
+                    gameStatus = game.status,
+                    onMove = onMove,
+                    lastMove = state.lastMove,
+                    modifier = Modifier.fillMaxWidth(),
                 )
-            },
-            banner = drawBanner(
-                game = game,
-                myIdentity = myIdentity,
-                opponentName = opponentName,
-                onAccept = onAcceptDraw,
-                onDecline = onDeclineDraw,
-                acceptInFlight = state.isDrawAccepting,
-                declineInFlight = state.isDrawDeclining,
-            ),
-        )
 
-        Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(8.dp))
 
-        // Opponent captures (= pieces taken by the local player) above.
-        CapturedPiecesStrip(
-            capturedByColor = myColor,
-            pieces = capturedByMe,
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-
-        ChessBoard(
-            fen = game.fen,
-            myColor = myColor,
-            isMyTurn = isMyTurn,
-            gameStatus = game.status,
-            onMove = onMove,
-            lastMove = state.lastMove,
-            modifier = Modifier.fillMaxWidth(),
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        // My captures (= pieces opponent has taken) below — symmetric with the
-        // top strip so the visual hierarchy stays consistent with the board's
-        // orientation.
-        CapturedPiecesStrip(
-            capturedByColor = if (myColor == 'w') 'b' else 'w',
-            pieces = capturedByOpponent,
-        )
+                // My captures (= pieces opponent has taken) below — symmetric
+                // with the top strip so the visual hierarchy stays consistent
+                // with the board's orientation.
+                CapturedPiecesStrip(
+                    capturedByColor = if (myColor == 'w') 'b' else 'w',
+                    pieces = capturedByOpponent,
+                )
+            }
+        }
     }
 }
 
@@ -847,3 +865,6 @@ private fun EmptyState() {
         )
     }
 }
+
+/** Board width cap, matching go and words so every board reads the same size. */
+private val BOARD_MAX_WIDTH = 560.dp

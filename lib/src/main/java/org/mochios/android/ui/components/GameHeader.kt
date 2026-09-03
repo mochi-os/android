@@ -9,18 +9,17 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,99 +38,102 @@ import androidx.compose.ui.unit.dp
 enum class StoneColor { WHITE, BLACK }
 
 /**
- * Game header strip: avatar, title, [stats] pills and [actions] on one row, a
- * muted [status] line beneath, and an optional [banner] for draw-offer prompts.
- * [myTurn] draws a coloured dot before the status; pass null once the game
- * ends.
+ * Game identity for a detail screen's top bar: the opponent's avatar and the
+ * game's title on one line. The status line lives in the content area, under
+ * the bar — see [GameStatusLine].
  */
 @Composable
-fun GameHeader(
+fun GameTopBarTitle(
     title: String,
-    status: String,
-    myTurn: Boolean? = null,
     opponentFingerprint: String? = null,
     opponentName: String? = null,
-    stats: @Composable RowScope.() -> Unit = {},
-    actions: @Composable RowScope.() -> Unit = {},
-    banner: (@Composable () -> Unit)? = null,
+    avatarUrl: String? = null,
     modifier: Modifier = Modifier,
 ) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 10.dp),
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            if (opponentFingerprint != null) {
-                EntityAvatar(
-                    name = opponentName ?: title,
-                    seed = opponentFingerprint,
-                    size = 28.dp,
-                )
-                Spacer(Modifier.width(8.dp))
-            }
-            Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
-                color = MaterialTheme.colorScheme.onSurface,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
+        if (opponentFingerprint != null) {
+            EntityAvatar(
+                name = opponentName ?: title,
+                src = avatarUrl,
+                seed = opponentFingerprint,
+                size = 32.dp,
             )
             Spacer(Modifier.width(8.dp))
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                content = stats,
-            )
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(2.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                content = actions,
-            )
         }
-
-        if (status.isNotEmpty()) {
-            Row(
-                modifier = Modifier.padding(top = 4.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                if (myTurn != null) {
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .clip(CircleShape)
-                            .background(
-                                if (myTurn) {
-                                    Color(0xFF10B981) // emerald-500
-                                } else {
-                                    MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.3f)
-                                }
-                            ),
-                    )
-                    Spacer(Modifier.width(6.dp))
-                }
-                Text(
-                    text = status,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-
-        if (banner != null) {
-            Spacer(Modifier.height(6.dp))
-            banner()
-        }
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
+            color = MaterialTheme.colorScheme.onSurface,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
     }
 }
 
 /**
- * Small rounded pill stat for [GameHeader]'s `stats` slot. [isHighlighted]
- * tints the side to move, [isMe] underlines the viewer's own, and [srLabel]
- * carries the meaning when the icon alone does.
+ * The strip under a detail screen's top bar: whose move it is on the left,
+ * the [stats] chips flush right on the same line. [myTurn] draws a coloured
+ * dot before the status; pass null once the game ends.
+ */
+@Composable
+fun GameStatusBar(
+    status: String,
+    myTurn: Boolean? = null,
+    modifier: Modifier = Modifier,
+    stats: @Composable RowScope.() -> Unit,
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            // 8 dp here plus the 8 dp its callers inset the pane by puts the
+            // status text and the last chip on the same 16 dp gutter as the
+            // top bar's hamburger and overflow glyphs.
+            .padding(horizontal = 8.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Row(
+            modifier = Modifier.weight(1f),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            if (myTurn != null) {
+                val dotColor = if (myTurn) {
+                    Color(0xFF10B981) // emerald-500
+                } else {
+                    MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.3f)
+                }
+                Box(
+                    modifier = Modifier
+                        .size(8.dp)
+                        .clip(CircleShape)
+                        .background(dotColor),
+                )
+                Spacer(Modifier.width(6.dp))
+            }
+            Text(
+                text = status,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+        Spacer(Modifier.width(8.dp))
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            content = stats,
+        )
+    }
+}
+
+/**
+ * One stat in [GameStatusBar], drawn as a Material assist chip so it stays
+ * legible at arm's length. [isHighlighted] tints the side to move, [isMe]
+ * underlines the viewer's own, and [srLabel] carries the meaning when the icon
+ * alone does. The chip is a readout, not a control: its click is a no-op.
  */
 @Composable
 fun RowScope.GameHeaderStat(
@@ -142,49 +144,55 @@ fun RowScope.GameHeaderStat(
     isHighlighted: Boolean = false,
     isMe: Boolean = false,
 ) {
-    val bg = if (isHighlighted) {
+    val container = if (isHighlighted) {
         MaterialTheme.colorScheme.primary.copy(alpha = 0.15f)
     } else {
         MaterialTheme.colorScheme.surfaceVariant
     }
-    val border = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f)
-    val base = Modifier
-        .clip(RoundedCornerShape(percent = 50))
-        .background(bg)
-        .border(width = 1.dp, color = border, shape = RoundedCornerShape(percent = 50))
-        .padding(horizontal = 8.dp, vertical = 3.dp)
-        .widthIn(max = 140.dp)
-    val withSemantics = if (srLabel != null) {
-        base.then(Modifier.semantics { contentDescription = srLabel })
+    val chipModifier = if (srLabel != null) {
+        Modifier.semantics { contentDescription = srLabel }
     } else {
-        base
+        Modifier
     }
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        modifier = withSemantics,
-    ) {
-        if (icon != null) icon()
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelSmall.copy(
-                fontWeight = FontWeight.Medium,
-                textDecoration = if (isMe) TextDecoration.Underline else TextDecoration.None,
-            ),
-            color = MaterialTheme.colorScheme.onSurface,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-        )
-        if (value != null) {
-            Text(
-                text = value,
-                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.SemiBold),
-                color = MaterialTheme.colorScheme.onSurface,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-    }
+    AssistChip(
+        onClick = {},
+        modifier = chipModifier,
+        colors = AssistChipDefaults.assistChipColors(
+            containerColor = container,
+            labelColor = MaterialTheme.colorScheme.onSurface,
+        ),
+        leadingIcon = icon,
+        label = {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                modifier = Modifier.widthIn(max = 160.dp),
+            ) {
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.labelLarge.copy(
+                        textDecoration = if (isMe) {
+                            TextDecoration.Underline
+                        } else {
+                            TextDecoration.None
+                        },
+                    ),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                if (value != null) {
+                    Text(
+                        text = value,
+                        style = MaterialTheme.typography.labelLarge.copy(
+                            fontWeight = FontWeight.SemiBold,
+                        ),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+            }
+        },
+    )
 }
 
 /**

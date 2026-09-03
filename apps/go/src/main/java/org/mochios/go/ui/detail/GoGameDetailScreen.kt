@@ -54,6 +54,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -68,8 +69,9 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
-import org.mochios.android.ui.components.GameHeader
+import org.mochios.android.ui.components.GameStatusBar
 import org.mochios.android.ui.components.GameHeaderStat
+import org.mochios.android.ui.components.GameTopBarTitle
 import org.mochios.android.ui.components.GameHeaderStoneDot
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -110,7 +112,6 @@ fun GoGameDetailScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
-    var menuOpen by remember { mutableStateOf(false) }
     var showPassDialog by remember { mutableStateOf(false) }
     var showResignDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
@@ -171,11 +172,47 @@ fun GoGameDetailScreen(
 
     val composer = remember { mutableStateOf("") }
 
+    val opponentName = game?.opponentName(state.myIdentity).orEmpty()
+    val opponentFingerprint = when {
+        game == null -> ""
+        game.identity == state.myIdentity -> game.opponent
+        else -> game.identity
+    }
+    val myColor: Stone = if (game?.black == state.myIdentity) Stone.BLACK else Stone.WHITE
+    val isActive = game?.status == "active"
+    val canPass = isActive && state.isMyTurn
+    val title = if (game != null && game.boardSize != 19) {
+        stringResource(R.string.go_detail_title_with_size, opponentName, game.boardSize)
+    } else {
+        opponentName
+    }
+    val statusLabel = if (game != null) {
+        goStatusText(game, state.myIdentity, state.isMyTurn, state.score)
+    } else {
+        ""
+    }
+    // The board pane keeps its own BoxWithConstraints for layout; the top bar
+    // needs the same answer a composition earlier, so it asks the window.
+    val twoPane = LocalConfiguration.current.screenWidthDp >= 600
+
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.go_app_title)) },
+                title = {
+                    if (game != null) {
+                        GameTopBarTitle(
+                            title = title,
+                            opponentFingerprint = opponentFingerprint.takeIf { it.isNotBlank() },
+                            opponentName = opponentName,
+                            avatarUrl = opponentFingerprint
+                                .takeIf { it.isNotBlank() }
+                                ?.let { id -> "/people/$id/-/avatar" },
+                        )
+                    } else {
+                        Text(stringResource(R.string.go_app_title))
+                    }
+                },
                 navigationIcon = {
                     MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
@@ -184,7 +221,34 @@ fun GoGameDetailScreen(
                         )
                     }
                 },
-                actions = { NotificationBell(onClick = onOpenNotifications) },
+                actions = {
+                    NotificationBell(onClick = onOpenNotifications)
+                    if (game != null) {
+                        if (!twoPane) {
+                            MochiIconButton(onClick = { showMobileChat = true }) {
+                                Icon(
+                                    imageVector = Icons.AutoMirrored.Filled.Message,
+                                    contentDescription = stringResource(
+                                        R.string.go_action_open_chat,
+                                    ),
+                                )
+                            }
+                        }
+                        GoActionsMenu(
+                            isActive = isActive,
+                            canPass = canPass,
+                            canOfferDraw = game.drawOffer != state.myIdentity,
+                            passing = state.isPassing,
+                            drawOffering = state.isDrawOffering,
+                            rematching = state.isCreatingRematch,
+                            onPass = { showPassDialog = true },
+                            onOfferDraw = { viewModel.offerDraw(errDrawOffer) },
+                            onResign = { showResignDialog = true },
+                            onRematch = { viewModel.rematch(errRematch) },
+                            onDelete = { showDeleteDialog = true },
+                        )
+                    }
+                },
             )
         },
     ) { padding ->
@@ -210,28 +274,6 @@ fun GoGameDetailScreen(
                 }
             }
             game != null -> {
-                val opponentName = game.opponentName(state.myIdentity)
-                val opponentFingerprint = if (game.identity == state.myIdentity) {
-                    game.opponent
-                } else {
-                    game.identity
-                }
-                val myColor: Stone =
-                    if (game.black == state.myIdentity) Stone.BLACK else Stone.WHITE
-                val isActive = game.status == "active"
-                val canPass = isActive && state.isMyTurn
-
-                val title = if (game.boardSize != 19) {
-                    stringResource(
-                        R.string.go_detail_title_with_size,
-                        opponentName,
-                        game.boardSize,
-                    )
-                } else {
-                    opponentName
-                }
-                val statusLabel = goStatusText(game, state.myIdentity, state.isMyTurn, state.score)
-
                 BoxWithConstraints(
                     modifier = Modifier
                         .fillMaxSize()
@@ -250,124 +292,48 @@ fun GoGameDetailScreen(
                                 .fillMaxHeight()
                                 .padding(horizontal = 8.dp),
                         ) {
-                            GameHeader(
-                                title = title,
+                            GameStatusBar(
                                 status = statusLabel,
                                 myTurn = if (isActive) state.isMyTurn else null,
-                                opponentFingerprint = opponentFingerprint
-                                    .takeIf { it.isNotBlank() },
-                                opponentName = opponentName,
-                                stats = {
-                                    val storeColor = if (myColor == Stone.BLACK) {
-                                        StoneColor.BLACK
+                            ) {
+                                val storeColor = if (myColor == Stone.BLACK) {
+                                    StoneColor.BLACK
+                                } else {
+                                    StoneColor.WHITE
+                                }
+                                GameHeaderStat(
+                                    icon = { GameHeaderStoneDot(storeColor) },
+                                    label = if (myColor == Stone.BLACK) {
+                                        stringResource(R.string.go_color_black)
                                     } else {
-                                        StoneColor.WHITE
-                                    }
+                                        stringResource(R.string.go_color_white)
+                                    },
+                                    isMe = true,
+                                )
+                                if (isActive) {
                                     GameHeaderStat(
-                                        icon = { GameHeaderStoneDot(storeColor) },
-                                        label = if (myColor == Stone.BLACK) {
-                                            stringResource(R.string.go_color_black)
-                                        } else {
-                                            stringResource(R.string.go_color_white)
-                                        },
-                                        isMe = true,
+                                        icon = { GameHeaderStoneDot(StoneColor.BLACK) },
+                                        label = game.capturesBlack.toString(),
+                                        srLabel = stringResource(R.string.go_captures_black_sr),
                                     )
-                                    if (isActive) {
-                                        GameHeaderStat(
-                                            icon = { GameHeaderStoneDot(StoneColor.BLACK) },
-                                            label = game.capturesBlack.toString(),
-                                            srLabel = stringResource(R.string.go_captures_black_sr),
-                                        )
-                                        GameHeaderStat(
-                                            icon = { GameHeaderStoneDot(StoneColor.WHITE) },
-                                            label = game.capturesWhite.toString(),
-                                            srLabel = stringResource(R.string.go_captures_white_sr),
-                                        )
-                                    }
-                                },
-                                actions = {
-                                    if (!isWide) {
-                                        MochiIconButton(onClick = { showMobileChat = true }) {
-                                            Icon(
-                                                imageVector = Icons.AutoMirrored.Filled.Message,
-                                                contentDescription = stringResource(R.string.go_action_open_chat),
-                                            )
-                                        }
-                                    }
-                                    Box {
-                                        MochiIconButton(onClick = { menuOpen = true }) {
-                                            Icon(
-                                                imageVector = Icons.Default.MoreHoriz,
-                                                contentDescription = stringResource(R.string.go_action_more),
-                                            )
-                                        }
-                                        MochiDropdownMenu(
-                                            expanded = menuOpen,
-                                            onDismissRequest = { menuOpen = false },
-                                        ) {
-                                            if (isActive) {
-                                                if (canPass) {
-                                                    MochiDropdownMenuItem(
-                                                        text = { Text(stringResource(R.string.go_action_pass)) },
-                                                        onClick = {
-                                                            menuOpen = false
-                                                            showPassDialog = true
-                                                        },
-                                                        leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
-                                                        enabled = !state.isPassing,
-                                                    )
-                                                }
-                                                if (game.drawOffer != state.myIdentity) {
-                                                    MochiDropdownMenuItem(
-                                                        text = { Text(stringResource(R.string.go_action_offer_draw)) },
-                                                        onClick = {
-                                                            menuOpen = false
-                                                            viewModel.offerDraw(errDrawOffer)
-                                                        },
-                                                        leadingIcon = { Icon(Icons.Outlined.Handshake, contentDescription = null) },
-                                                        enabled = !state.isDrawOffering,
-                                                    )
-                                                }
-                                                MochiDropdownMenuItem(
-                                                    text = { Text(stringResource(R.string.go_action_resign)) },
-                                                    onClick = {
-                                                        menuOpen = false
-                                                        showResignDialog = true
-                                                    },
-                                                    leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
-                                                )
-                                            } else {
-                                                MochiDropdownMenuItem(
-                                                    text = { Text(stringResource(R.string.go_action_rematch)) },
-                                                    onClick = {
-                                                        menuOpen = false
-                                                        viewModel.rematch(errRematch)
-                                                    },
-                                                    leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
-                                                    enabled = !state.isCreatingRematch,
-                                                )
-                                                MochiDropdownMenuItem(
-                                                    text = { Text(stringResource(R.string.go_action_delete)) },
-                                                    onClick = {
-                                                        menuOpen = false
-                                                        showDeleteDialog = true
-                                                    },
-                                                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                                                )
-                                            }
-                                        }
-                                    }
-                                },
-                                banner = drawOfferBanner(
-                                    game = game,
-                                    myIdentity = state.myIdentity,
-                                    opponentName = opponentName,
-                                    isAccepting = state.isDrawAccepting,
-                                    isDeclining = state.isDrawDeclining,
-                                    onAccept = { viewModel.acceptDraw(errDrawAccept) },
-                                    onDecline = { viewModel.declineDraw(errDrawDecline) },
-                                ),
+                                    GameHeaderStat(
+                                        icon = { GameHeaderStoneDot(StoneColor.WHITE) },
+                                        label = game.capturesWhite.toString(),
+                                        srLabel = stringResource(R.string.go_captures_white_sr),
+                                    )
+                                }
+                            }
+
+                            val banner = drawOfferBanner(
+                                game = game,
+                                myIdentity = state.myIdentity,
+                                opponentName = opponentName,
+                                isAccepting = state.isDrawAccepting,
+                                isDeclining = state.isDrawDeclining,
+                                onAccept = { viewModel.acceptDraw(errDrawAccept) },
+                                onDecline = { viewModel.declineDraw(errDrawDecline) },
                             )
+                            banner?.invoke()
 
                             // Board sits below the header. Cap the width so
                             // the board doesn't stretch past a comfortable
@@ -549,6 +515,90 @@ fun GoGameDetailScreen(
 /**
  * Status line for [GameHeader]; mirrors web's `useGoStatusText`.
  */
+/**
+ * Overflow menu for the detail top bar: the moves left open to the viewer,
+ * which depends on whose turn it is and whether the game is still running.
+ */
+@Composable
+private fun GoActionsMenu(
+    isActive: Boolean,
+    canPass: Boolean,
+    canOfferDraw: Boolean,
+    passing: Boolean,
+    drawOffering: Boolean,
+    rematching: Boolean,
+    onPass: () -> Unit,
+    onOfferDraw: () -> Unit,
+    onResign: () -> Unit,
+    onRematch: () -> Unit,
+    onDelete: () -> Unit,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    Box {
+        MochiIconButton(onClick = { expanded = true }) {
+            Icon(
+                imageVector = Icons.Default.MoreHoriz,
+                contentDescription = stringResource(R.string.go_action_more),
+            )
+        }
+        MochiDropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+        ) {
+            if (isActive) {
+                if (canPass) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.go_action_pass)) },
+                        onClick = {
+                            expanded = false
+                            onPass()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
+                        enabled = !passing,
+                    )
+                }
+                if (canOfferDraw) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.go_action_offer_draw)) },
+                        onClick = {
+                            expanded = false
+                            onOfferDraw()
+                        },
+                        leadingIcon = { Icon(Icons.Outlined.Handshake, contentDescription = null) },
+                        enabled = !drawOffering,
+                    )
+                }
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.go_action_resign)) },
+                    onClick = {
+                        expanded = false
+                        onResign()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
+                )
+            } else {
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.go_action_rematch)) },
+                    onClick = {
+                        expanded = false
+                        onRematch()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
+                    enabled = !rematching,
+                )
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.go_action_delete)) },
+                    onClick = {
+                        expanded = false
+                        onDelete()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                )
+            }
+        }
+    }
+}
+
 @Composable
 private fun goStatusText(
     game: Game,
