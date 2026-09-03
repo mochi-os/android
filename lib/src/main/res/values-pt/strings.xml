@@ -348,4 +348,7 @@
     <string name="rss_revoke_message">Tudo o que estiver subscrito a este feed deixará de o receber. Pode copiar um novo URL depois.</string>
     <string name="rss_revoked">Acesso RSS revogado</string>
     <string name="rss_revoke_failed">Falha ao revogar o acesso RSS</string>
+    <string name="game_empty_title">Ainda não há jogos</string>
+    <string name="game_select_title">Seleciona um jogo</string>
+    <string name="game_select_subtitle">Escolhe um jogo na barra lateral ou começa um novo.</string>
 </resources>

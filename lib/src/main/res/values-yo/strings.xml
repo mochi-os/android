@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Gbogbo ohun tí ó forúkọsílẹ̀ sí ìjẹun yìí yóò dáwọ́ gbígbà rẹ̀ dúró. O lè ṣe àdàkọ URL tuntun lẹ́yìn náà.</string>
     <string name="rss_revoked">Ìwọlé RSS ti fagilé</string>
     <string name="rss_revoke_failed">Ìkùnà láti fagilé ìwọlé RSS</string>
+    <string name="game_empty_title">Kò sí eré síbẹ̀</string>
+    <string name="game_select_title">Yan eré kan</string>
+    <string name="game_select_subtitle">Yan eré kan láti inú ọ̀pá ẹ̀gbẹ́ tàbí bẹ̀rẹ̀ eré tuntun.</string>
 </resources>

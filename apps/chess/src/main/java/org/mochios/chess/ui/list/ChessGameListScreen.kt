@@ -5,12 +5,9 @@
 
 package org.mochios.chess.ui.list
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -45,7 +42,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -58,6 +54,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
@@ -214,7 +211,8 @@ fun ChessGameListScreen(
                                 ?: stringResource(MochiR.string.error_unexpected),
                             onRetry = { viewModel.load() },
                         )
-                        else -> EmptyState(
+                        else -> GamesEmptyPane(
+                            hasGames = uiState.games.isNotEmpty(),
                             onNewGame = { navController.navigate(ChessApp.NEW_GAME) },
                         )
                     }
@@ -235,43 +233,28 @@ private fun LoadingState() {
 }
 
 
+/**
+ * The pane beside the drawer while no game is open: an invitation to pick one
+ * once there are games to pick, and the first-run prompt before that. Both
+ * offer the new-game action.
+ */
 @Composable
-private fun EmptyState(onNewGame: () -> Unit) {
-    // Mirrors the web `GameEmptyState` for the no-games-yet branch: large
-    // icon, primary "Start your first game" button. Sized for a fresh
-    // install — the user has no context yet, so this is the only CTA.
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-    ) {
-        Icon(
-            imageVector = Icons.Default.SportsKabaddi,
-            contentDescription = null,
-            modifier = Modifier.size(72.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        Text(
-            text = stringResource(R.string.chess_empty_title),
-            style = MaterialTheme.typography.titleLarge,
-            fontWeight = FontWeight.SemiBold,
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        Text(
-            text = stringResource(R.string.chess_empty_subtitle),
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Spacer(modifier = Modifier.height(24.dp))
-        MochiButton(
-            onClick = onNewGame,
-        ) {
-            Icon(Icons.Default.Add, contentDescription = null)
-            Spacer(modifier = Modifier.size(8.dp))
-            Text(stringResource(R.string.chess_empty_start_button))
-        }
-    }
+private fun GamesEmptyPane(hasGames: Boolean, onNewGame: () -> Unit) {
+    EmptyState(
+        icon = Icons.Default.SportsKabaddi,
+        title = if (hasGames) {
+            stringResource(MochiR.string.game_select_title)
+        } else {
+            stringResource(MochiR.string.game_empty_title)
+        },
+        subtitle = if (hasGames) stringResource(MochiR.string.game_select_subtitle) else null,
+        modifier = Modifier.padding(32.dp),
+        action = {
+            MochiButton(onClick = onNewGame) {
+                Icon(Icons.Default.Add, contentDescription = null)
+                Spacer(modifier = Modifier.size(8.dp))
+                Text(stringResource(R.string.chess_sidebar_new_game))
+            }
+        },
+    )
 }

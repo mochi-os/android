@@ -354,4 +354,7 @@
     <string name="rss_revoke_message">Kull ma huwa abbonat għal din il-feed se jieqaf jirċeviha. Wara tista\' tikkopja URL ġdid.</string>
     <string name="rss_revoked">L-aċċess RSS ġie rrevokat</string>
     <string name="rss_revoke_failed">Ma rnexxiex jiġi rrevokat l-aċċess RSS</string>
+    <string name="game_empty_title">L-ebda logħob s\'issa</string>
+    <string name="game_select_title">Agħżel logħba</string>
+    <string name="game_select_subtitle">Agħżel logħba mill-barra tal-ġenb jew ibda waħda ġdida.</string>
 </resources>

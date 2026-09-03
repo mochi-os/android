@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Alles, was diesen Feed abonniert hat, empfängt ihn nicht mehr. Danach können Sie eine neue URL kopieren.</string>
     <string name="rss_revoked">RSS-Zugriff widerrufen</string>
     <string name="rss_revoke_failed">RSS-Zugriff konnte nicht widerrufen werden</string>
+    <string name="game_empty_title">Noch keine Spiele</string>
+    <string name="game_select_title">Spiel auswählen</string>
+    <string name="game_select_subtitle">Wähle ein Spiel in der Seitenleiste oder starte ein neues.</string>
 </resources>

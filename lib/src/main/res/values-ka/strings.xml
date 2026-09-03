@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">ყველაფერი, რაც ამ არხზეა გამოწერილი, შეწყვეტს მის მიღებას. შემდეგ შეგიძლიათ დააკოპიროთ ახალი URL.</string>
     <string name="rss_revoked">RSS წვდომა გაუქმდა</string>
     <string name="rss_revoke_failed">RSS წვდომის გაუქმება ვერ მოხერხდა</string>
+    <string name="game_empty_title">თამაშები ჯერ არ არის</string>
+    <string name="game_select_title">აირჩიეთ თამაში</string>
+    <string name="game_select_subtitle">აირჩიეთ თამაში გვერდით პანელზე ან დაიწყეთ ახალი.</string>
 </resources>

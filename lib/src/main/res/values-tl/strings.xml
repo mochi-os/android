@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Titigil sa pagtanggap nito ang lahat ng naka-subscribe sa feed na ito. Maaari kang kumopya ng bagong URL pagkatapos.</string>
     <string name="rss_revoked">Nabawi ang RSS access</string>
     <string name="rss_revoke_failed">Nabigong bawiin ang RSS access</string>
+    <string name="game_empty_title">Wala pang laro</string>
+    <string name="game_select_title">Pumili ng laro</string>
+    <string name="game_select_subtitle">Pumili ng laro sa sidebar o magsimula ng bago.</string>
 </resources>

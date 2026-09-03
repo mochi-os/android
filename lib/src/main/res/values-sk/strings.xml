@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Všetko, čo je prihlásené na tento kanál, ho prestane dostávať. Potom môžete skopírovať novú adresu URL.</string>
     <string name="rss_revoked">Prístup RSS zrušený</string>
     <string name="rss_revoke_failed">Zrušenie prístupu RSS zlyhalo</string>
+    <string name="game_empty_title">Zatiaľ žiadne hry</string>
+    <string name="game_select_title">Vyberte hru</string>
+    <string name="game_select_subtitle">Vyberte hru na bočnom paneli alebo začnite novú.</string>
 </resources>

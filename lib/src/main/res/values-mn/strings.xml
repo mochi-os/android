@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Энэ хангамжид бүртгүүлсэн бүх зүйл хүлээн авахаа болино. Дараа нь та шинэ URL хуулж болно.</string>
     <string name="rss_revoked">RSS хандалтыг цуцаллаа</string>
     <string name="rss_revoke_failed">RSS хандалтыг цуцалж чадсангүй</string>
+    <string name="game_empty_title">Тоглоом алга</string>
+    <string name="game_select_title">Тоглоом сонгох</string>
+    <string name="game_select_subtitle">Хажуугийн самбараас тоглоом сонгох эсвэл шинийг эхлүүлнэ үү.</string>
 </resources>

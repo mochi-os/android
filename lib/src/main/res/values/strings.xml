@@ -357,6 +357,11 @@
     <string name="profile_privacy_private">Private</string>
     <string name="profile_fingerprint">Fingerprint</string>
 
+    <!-- Game apps: the pane beside the drawer, before a game is picked -->
+    <string name="game_empty_title">No games yet</string>
+    <string name="game_select_title">Select a game</string>
+    <string name="game_select_subtitle">Choose a game from the sidebar or start a new one.</string>
+
     <!-- Game chat panel -->
     <string name="game_chat_empty">No messages yet</string>
     <string name="game_chat_load_more">Load older messages</string>

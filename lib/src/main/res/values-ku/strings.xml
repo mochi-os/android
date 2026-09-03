@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Her tiştê ku li vê xwarinê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
     <string name="rss_revoked">Gihîştina RSS betal kirin</string>
     <string name="rss_revoke_failed">Betalkirina gihîştina RSS bi ser neket</string>
+    <string name="game_empty_title">Hêj tu lîstik tune</string>
+    <string name="game_select_title">Lîstikekê hilbijêre</string>
+    <string name="game_select_subtitle">Ji darikê kêlekê lîstikekê hilbijêre an jî ya nû dest pê bike.</string>
 </resources>

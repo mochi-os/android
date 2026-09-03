@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Mọi thứ đã đăng ký nguồn cấp này sẽ ngừng nhận. Bạn có thể sao chép URL mới sau đó.</string>
     <string name="rss_revoked">Đã thu hồi quyền truy cập RSS</string>
     <string name="rss_revoke_failed">Không thể thu hồi quyền truy cập RSS</string>
+    <string name="game_empty_title">Chưa có trò chơi</string>
+    <string name="game_select_title">Chọn một trò chơi</string>
+    <string name="game_select_subtitle">Chọn một trò chơi ở thanh bên hoặc bắt đầu trò chơi mới.</string>
 </resources>

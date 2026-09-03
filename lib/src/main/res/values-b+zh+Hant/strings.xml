@@ -346,4 +346,7 @@
     <string name="rss_revoke_message">訂閱此來源的一切都將停止接收。之後你可以複製新的網址。</string>
     <string name="rss_revoked">已撤銷 RSS 存取權限</string>
     <string name="rss_revoke_failed">撤銷 RSS 存取權限失敗</string>
+    <string name="game_empty_title">尚無遊戲</string>
+    <string name="game_select_title">選擇遊戲</string>
+    <string name="game_select_subtitle">從側邊欄選擇一局遊戲，或開始新遊戲。</string>
 </resources>

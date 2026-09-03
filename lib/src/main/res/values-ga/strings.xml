@@ -353,4 +353,7 @@
     <string name="rss_revoke_message">Stopfaidh aon rud atá liostáilte leis an bhfotha seo á fháil. Is féidir leat URL nua a chóipeáil ina dhiaidh sin.</string>
     <string name="rss_revoked">Rochtain RSS cúlghairthe</string>
     <string name="rss_revoke_failed">Theip ar rochtain RSS a chúlghairm</string>
+    <string name="game_empty_title">Níl aon chluiche fós</string>
+    <string name="game_select_title">Roghnaigh cluiche</string>
+    <string name="game_select_subtitle">Roghnaigh cluiche ón mbarra taoibh nó tosaigh ceann nua.</string>
 </resources>

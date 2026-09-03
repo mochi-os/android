@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">אַלץ וואָס איז אַבאָנירט אויף דעם פֿיד וועט אויפֿהערן עס צו באַקומען. איר קענט קאָפּירן אַ נייַעם URL דערנאָך.</string>
     <string name="rss_revoked">RSS צוטריט צוריקגערופֿן</string>
     <string name="rss_revoke_failed">דורכפֿאַל צו רופֿן צוריק RSS צוטריט</string>
+    <string name="game_empty_title">נאָך קיין שפּילן</string>
+    <string name="game_select_title">קלײַבט אױס אַ שפּיל</string>
+    <string name="game_select_subtitle">קלײַבט אױס אַ שפּיל פֿון זײַטבאַלקן אָדער הייבט אָן אַ נײַע.</string>
 </resources>

@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Gjithçka e abonuar në këtë prurje do të ndalojë ta marrë. Më pas mund të kopjoni një URL të ri.</string>
     <string name="rss_revoked">Aksesi RSS u anulua</string>
     <string name="rss_revoke_failed">Anulimi i aksesit RSS dështoi</string>
+    <string name="game_empty_title">Ende pa lojëra</string>
+    <string name="game_select_title">Zgjidh një lojë</string>
+    <string name="game_select_subtitle">Zgjidh një lojë nga shiriti anësor ose nis një të re.</string>
 </resources>

@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Chochote kilichojiandikisha kwenye mlisho huu kitaacha kuupokea. Unaweza kunakili URL mpya baadaye.</string>
     <string name="rss_revoked">Ufikiaji wa RSS umebatilishwa</string>
     <string name="rss_revoke_failed">Imeshindwa kubatilisha ufikiaji wa RSS</string>
+    <string name="game_empty_title">Hakuna michezo bado</string>
+    <string name="game_select_title">Chagua mchezo</string>
+    <string name="game_select_subtitle">Chagua mchezo kwenye upau wa kando au anza mpya.</string>
 </resources>

@@ -348,4 +348,7 @@
     <string name="rss_revoke_message">Bu tasmaga obuna boʻlgan hamma narsa uni olishni toʻxtatadi. Keyin yangi URL nusxalashingiz mumkin.</string>
     <string name="rss_revoked">RSS kirishi bekor qilindi</string>
     <string name="rss_revoke_failed">RSS kirishini bekor qilib bo\'lmadi</string>
+    <string name="game_empty_title">Hozircha oʻyinlar yoʻq</string>
+    <string name="game_select_title">Oʻyin tanlang</string>
+    <string name="game_select_subtitle">Yon paneldan oʻyin tanlang yoki yangisini boshlang.</string>
 </resources>

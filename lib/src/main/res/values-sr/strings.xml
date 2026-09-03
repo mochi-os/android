@@ -349,4 +349,7 @@
     <string name="rss_revoke_message">Све што је претплаћено на овај извор престаће да га прима. Затим можете копирати нови URL.</string>
     <string name="rss_revoked">RSS приступ опозван</string>
     <string name="rss_revoke_failed">Опозивање RSS приступа није успело</string>
+    <string name="game_empty_title">Још нема игара</string>
+    <string name="game_select_title">Изаберите игру</string>
+    <string name="game_select_subtitle">Изаберите игру са бочне траке или започните нову.</string>
 </resources>

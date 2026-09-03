@@ -346,4 +346,7 @@
     <string name="rss_revoke_message">អ្វីៗដែលបានជាវព័ត៌មាននេះនឹងឈប់ទទួលបាន។ បន្ទាប់មកអ្នកអាចចម្លង URL ថ្មី។</string>
     <string name="rss_revoked">បានដកហូតការចូលប្រើ RSS</string>
     <string name="rss_revoke_failed">បរាជ័យក្នុងការដកហូតការចូលប្រើ RSS</string>
+    <string name="game_empty_title">មិនទាន់មានហ្គេម</string>
+    <string name="game_select_title">ជ្រើសរើសហ្គេម</string>
+    <string name="game_select_subtitle">ជ្រើសរើសហ្គេមពីរបារចំហៀង ឬចាប់ផ្តើមហ្គេមថ្មី។</string>
 </resources>

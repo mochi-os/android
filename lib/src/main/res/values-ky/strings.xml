@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Бул тасмага жазылган нерселердин баары аны алууну токтотот. Андан кийин жаңы URL көчүрө аласыз.</string>
     <string name="rss_revoked">RSS мүмкүнчүлүгү кайтарылды</string>
     <string name="rss_revoke_failed">RSS мүмкүнчүлүгүн кайтарып алуу ишке ашкан жок</string>
+    <string name="game_empty_title">Оюндар азырынча жок</string>
+    <string name="game_select_title">Оюн тандаңыз</string>
+    <string name="game_select_subtitle">Каптал панелден оюн тандаңыз же жаңысын баштаңыз.</string>
 </resources>

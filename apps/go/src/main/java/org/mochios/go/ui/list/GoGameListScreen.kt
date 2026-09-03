@@ -6,12 +6,13 @@
 package org.mochios.go.ui.list
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.GridOn
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
@@ -52,10 +53,11 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.go.R
 import org.mochios.go.navigation.GoApp
@@ -203,7 +205,8 @@ fun GoGameListScreen(
                                 ?: stringResource(MochiR.string.error_unexpected),
                             onRetry = { viewModel.loadGames() },
                         )
-                        else -> EmptyState(
+                        else -> GamesEmptyPane(
+                            hasGames = uiState.games.isNotEmpty(),
                             onNewGame = { navController.navigate(GoApp.NEW_GAME) },
                         )
                     }
@@ -224,19 +227,28 @@ private fun LoadingState() {
 }
 
 
+/**
+ * The pane beside the drawer while no game is open: an invitation to pick one
+ * once there are games to pick, and the first-run prompt before that. Both
+ * offer the new-game action.
+ */
 @Composable
-private fun EmptyState(onNewGame: () -> Unit) {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(
-                text = stringResource(R.string.go_empty_active),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            Spacer(modifier = Modifier.height(12.dp))
-            MochiTextButton(onClick = onNewGame) {
+private fun GamesEmptyPane(hasGames: Boolean, onNewGame: () -> Unit) {
+    EmptyState(
+        icon = Icons.Default.GridOn,
+        title = if (hasGames) {
+            stringResource(MochiR.string.game_select_title)
+        } else {
+            stringResource(MochiR.string.game_empty_title)
+        },
+        subtitle = if (hasGames) stringResource(MochiR.string.game_select_subtitle) else null,
+        modifier = Modifier.padding(32.dp),
+        action = {
+            MochiButton(onClick = onNewGame) {
+                Icon(Icons.Default.Add, contentDescription = null)
+                Spacer(modifier = Modifier.size(8.dp))
                 Text(stringResource(R.string.go_sidebar_new_game))
             }
-        }
-    }
+        },
+    )
 }

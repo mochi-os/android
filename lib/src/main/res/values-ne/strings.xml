@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">यो फिड सदस्यता लिएका सबैले यो प्राप्त गर्न बन्द गर्नेछन्। त्यसपछि तपाईं नयाँ URL प्रतिलिपि गर्न सक्नुहुन्छ।</string>
     <string name="rss_revoked">RSS पहुँच रद्द गरियो</string>
     <string name="rss_revoke_failed">RSS पहुँच रद्द गर्न असफल</string>
+    <string name="game_empty_title">अहिलेसम्म कुनै खेल छैन</string>
+    <string name="game_select_title">खेल छान्नुहोस्</string>
+    <string name="game_select_subtitle">साइडबारबाट खेल छान्नुहोस् वा नयाँ खेल सुरु गर्नुहोस्।</string>
 </resources>

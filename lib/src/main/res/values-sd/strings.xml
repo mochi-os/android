@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">هن فيڊ جي رڪنيت وٺندڙ سڀ ڪجهه ان کي حاصل ڪرڻ بند ڪري ڇڏيندو. بعد ۾ توهان نئون URL ڪاپي ڪري سگهو ٿا.</string>
     <string name="rss_revoked">RSS رسائي واپس ورتي وئي</string>
     <string name="rss_revoke_failed">RSS رسائي واپس وٺڻ ۾ ناڪام</string>
+    <string name="game_empty_title">اڃا ڪا گيم نه آهي</string>
+    <string name="game_select_title">راند چونڊيو</string>
+    <string name="game_select_subtitle">پاسي واري پٽي مان راند چونڊيو يا نئين راند شروع ڪريو.</string>
 </resources>

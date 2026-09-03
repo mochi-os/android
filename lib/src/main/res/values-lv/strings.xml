@@ -349,4 +349,7 @@
     <string name="rss_revoke_message">Viss, kas ir abonējis šo plūsmu, pārstās to saņemt. Pēc tam varēsiet kopēt jaunu URL.</string>
     <string name="rss_revoked">RSS piekļuve atsaukta</string>
     <string name="rss_revoke_failed">Neizdevās atsaukt RSS piekļuvi</string>
+    <string name="game_empty_title">Vēl nav spēļu</string>
+    <string name="game_select_title">Izvēlieties spēli</string>
+    <string name="game_select_subtitle">Izvēlieties spēli sānjoslā vai sāciet jaunu.</string>
 </resources>

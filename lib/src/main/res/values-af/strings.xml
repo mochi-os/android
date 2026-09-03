@@ -349,4 +349,7 @@
     <string name="rss_revoke_message">Enigiets wat op hierdie voer ingeteken is, sal dit nie meer ontvang nie. Jy kan daarna \'n nuwe URL kopieer.</string>
     <string name="rss_revoked">RSS-toegang herroep</string>
     <string name="rss_revoke_failed">Kon nie RSS-toegang herroep nie</string>
+    <string name="game_empty_title">Nog geen speletjies nie</string>
+    <string name="game_select_title">Kies \'n spel</string>
+    <string name="game_select_subtitle">Kies \'n spel in die kantbalk of begin \'n nuwe een.</string>
 </resources>

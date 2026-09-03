@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Wszystko, co subskrybuje ten kanał, przestanie go otrzymywać. Potem możesz skopiować nowy adres URL.</string>
     <string name="rss_revoked">Dostęp RSS cofnięty</string>
     <string name="rss_revoke_failed">Nie udało się cofnąć dostępu RSS</string>
+    <string name="game_empty_title">Brak gier</string>
+    <string name="game_select_title">Wybierz grę</string>
+    <string name="game_select_subtitle">Wybierz grę na pasku bocznym lub rozpocznij nową.</string>
 </resources>

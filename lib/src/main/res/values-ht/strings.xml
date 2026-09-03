@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre.</string>
     <string name="rss_revoked">Aksè RSS revoke</string>
     <string name="rss_revoke_failed">Echwe pou revoke aksè RSS</string>
+    <string name="game_empty_title">Poko gen jwèt</string>
+    <string name="game_select_title">Chwazi yon jwèt</string>
+    <string name="game_select_subtitle">Chwazi yon jwèt nan ba sou kote a oswa kòmanse yon nouvo.</string>
 </resources>

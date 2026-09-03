@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Nantoni na ebhalisele olu suselo iya kuyeka ukulufumana. Ungakhuphela i-URL entsha emva koko.</string>
     <string name="rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
     <string name="rss_revoke_failed">Ayiphumelelanga ukurhoxisa ufikelelo lwe-RSS</string>
+    <string name="game_empty_title">Akukho midlalo okwangoku</string>
+    <string name="game_select_title">Khetha umdlalo</string>
+    <string name="game_select_subtitle">Khetha umdlalo kwibha esecaleni okanye uqale omtsha.</string>
 </resources>

@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Jario honetara harpidetutako guztiak jasotzeari utziko dio. Ondoren URL berri bat kopia dezakezu.</string>
     <string name="rss_revoked">RSS sarbidea ezeztatuta</string>
     <string name="rss_revoke_failed">Ezin izan da RSS sarbidea ezeztatu</string>
+    <string name="game_empty_title">Oraindik jokorik ez</string>
+    <string name="game_select_title">Hautatu joko bat</string>
+    <string name="game_select_subtitle">Aukeratu joko bat alboko barran edo hasi berri bat.</string>
 </resources>

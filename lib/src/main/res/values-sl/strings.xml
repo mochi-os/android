@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Vse, kar je naročeno na ta vir, ga ne bo več prejemalo. Nato lahko kopirate nov URL.</string>
     <string name="rss_revoked">Dostop RSS preklican</string>
     <string name="rss_revoke_failed">Preklic dostopa RSS ni uspel</string>
+    <string name="game_empty_title">Še ni iger</string>
+    <string name="game_select_title">Izberite igro</string>
+    <string name="game_select_subtitle">Izberite igro v stranski vrstici ali začnite novo.</string>
 </resources>

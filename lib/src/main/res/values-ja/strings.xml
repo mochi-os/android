@@ -346,4 +346,7 @@
     <string name="rss_revoke_message">このフィードを購読しているものはすべて受信しなくなります。あとで新しい URL をコピーできます。</string>
     <string name="rss_revoked">RSSアクセスを取り消しました</string>
     <string name="rss_revoke_failed">RSSアクセスの取り消しに失敗しました</string>
+    <string name="game_empty_title">まだゲームがありません</string>
+    <string name="game_select_title">ゲームを選択</string>
+    <string name="game_select_subtitle">サイドバーからゲームを選ぶか、新しいゲームを始めましょう。</string>
 </resources>

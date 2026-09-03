@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Todo lo suscrito a este canal dejará de recibirlo. Después puedes copiar una URL nueva.</string>
     <string name="rss_revoked">Acceso RSS revocado</string>
     <string name="rss_revoke_failed">No se pudo revocar el acceso RSS</string>
+    <string name="game_empty_title">Aún no hay partidas</string>
+    <string name="game_select_title">Selecciona una partida</string>
+    <string name="game_select_subtitle">Elige una partida en la barra lateral o empieza una nueva.</string>
 </resources>

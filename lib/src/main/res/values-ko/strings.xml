@@ -346,4 +346,7 @@
     <string name="rss_revoke_message">이 피드를 구독 중인 모든 것이 수신을 중단합니다. 이후에 새 URL을 복사할 수 있습니다.</string>
     <string name="rss_revoked">RSS 액세스가 취소되었습니다</string>
     <string name="rss_revoke_failed">RSS 액세스 취소에 실패했습니다</string>
+    <string name="game_empty_title">아직 게임이 없어요</string>
+    <string name="game_select_title">게임 선택</string>
+    <string name="game_select_subtitle">사이드바에서 게임을 선택하거나 새 게임을 시작하세요.</string>
 </resources>

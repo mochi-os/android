@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Ό,τι είναι εγγεγραμμένο σε αυτήν τη ροή θα σταματήσει να τη λαμβάνει. Μπορείτε να αντιγράψετε μια νέα διεύθυνση URL στη συνέχεια.</string>
     <string name="rss_revoked">Η πρόσβαση RSS ανακλήθηκε</string>
     <string name="rss_revoke_failed">Αποτυχία ανάκλησης πρόσβασης RSS</string>
+    <string name="game_empty_title">Δεν υπάρχουν ακόμη παιχνίδια</string>
+    <string name="game_select_title">Επιλέξτε παιχνίδι</string>
+    <string name="game_select_subtitle">Επιλέξτε παιχνίδι από την πλαϊνή μπάρα ή ξεκινήστε νέο.</string>
 </resources>

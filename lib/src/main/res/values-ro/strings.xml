@@ -349,4 +349,7 @@
     <string name="rss_revoke_message">Tot ce este abonat la acest flux va înceta să îl primească. Puteți copia un URL nou după aceea.</string>
     <string name="rss_revoked">Acces RSS revocat</string>
     <string name="rss_revoke_failed">Revocarea accesului RSS a eșuat</string>
+    <string name="game_empty_title">Încă niciun joc</string>
+    <string name="game_select_title">Selectează un joc</string>
+    <string name="game_select_subtitle">Alege un joc din bara laterală sau începe unul nou.</string>
 </resources>

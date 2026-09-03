@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Kay feed-ta suscribisqa tukuy imapas manaña chaskinqachu. Chaymanta musuq URL-ta copiayta atinki.</string>
     <string name="rss_revoked">RSS yaykuy chinkachisqa</string>
     <string name="rss_revoke_failed">Mana atikunchu RSS yaykuyta chinkachiy</string>
+    <string name="game_empty_title">Manaraq pukllaykuna</string>
+    <string name="game_select_title">Huk pukllayta akllay</string>
+    <string name="game_select_subtitle">Waqta barramanta pukllayta akllay utaq musuqta qallariy.</string>
 </resources>

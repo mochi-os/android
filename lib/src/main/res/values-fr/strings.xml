@@ -348,4 +348,7 @@
     <string name="rss_revoke_message">Tout ce qui est abonné à ce flux cessera de le recevoir. Vous pourrez copier une nouvelle URL ensuite.</string>
     <string name="rss_revoked">Accès RSS révoqué</string>
     <string name="rss_revoke_failed">Échec de la révocation de l\'accès RSS</string>
+    <string name="game_empty_title">Aucune partie pour le moment</string>
+    <string name="game_select_title">Sélectionnez une partie</string>
+    <string name="game_select_subtitle">Choisissez une partie dans la barre latérale ou lancez-en une nouvelle.</string>
 </resources>

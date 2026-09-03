@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Bu akışa abone olan her şey almayı durduracak. Sonrasında yeni bir URL kopyalayabilirsiniz.</string>
     <string name="rss_revoked">RSS erişimi iptal edildi</string>
     <string name="rss_revoke_failed">RSS erişimi iptal edilemedi</string>
+    <string name="game_empty_title">Henüz oyun yok</string>
+    <string name="game_select_title">Bir oyun seçin</string>
+    <string name="game_select_subtitle">Kenar çubuğundan bir oyun seçin veya yeni bir oyun başlatın.</string>
 </resources>

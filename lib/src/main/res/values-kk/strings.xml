@@ -348,4 +348,7 @@
     <string name="rss_revoke_message">Осы арнаға жазылған барлық нәрсе оны алуды тоқтатады. Содан кейін жаңа URL мекенжайын көшіре аласыз.</string>
     <string name="rss_revoked">RSS кіру құқығы қайтарылды</string>
     <string name="rss_revoke_failed">RSS кіру құқығын қайтарып алу сәтсіз аяқталды</string>
+    <string name="game_empty_title">Ойындар әлі жоқ</string>
+    <string name="game_select_title">Ойын таңдаңыз</string>
+    <string name="game_select_subtitle">Бүйір панелінен ойын таңдаңыз немесе жаңасын бастаңыз.</string>
 </resources>

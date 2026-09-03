@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Opa mba\'e osuscribíva ko feed-pe ndohupytyvéima. Upéi ikatu embokopia peteĩ URL pyahu.</string>
     <string name="rss_revoked">RSS jeike oñemboyke</string>
     <string name="rss_revoke_failed">Ndaikatúi omboyke RSS jeike</string>
+    <string name="game_empty_title">Ndaipóri ñembosarái gueteri</string>
+    <string name="game_select_title">Eiporavo peteĩ ñembosarái</string>
+    <string name="game_select_subtitle">Eiporavo peteĩ ñembosarái yke rendápe térã eñepyrũ peteĩ pyahu.</string>
 </resources>

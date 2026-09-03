@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Duk abin da ya biyan kuɗin wannan ciyarwar zai daina karɓarta. Za ka iya kwafi sabon URL bayan haka.</string>
     <string name="rss_revoked">An soke damar shiga RSS</string>
     <string name="rss_revoke_failed">An kasa soke damar shiga RSS</string>
+    <string name="game_empty_title">Babu wasanni tukuna</string>
+    <string name="game_select_title">Zaɓi wasa</string>
+    <string name="game_select_subtitle">Zaɓi wasa daga sandar gefe ko fara sabon wasa.</string>
 </resources>

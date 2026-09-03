@@ -346,4 +346,7 @@
     <string name="rss_revoke_message">ဤဖိဒ်ကို စာရင်းသွင်းထားသည့် အရာအားလုံး လက်ခံရရှိမှု ရပ်တန့်ပါမည်။ ထို့နောက် URL အသစ်ကို ကူးယူနိုင်ပါသည်။</string>
     <string name="rss_revoked">RSS အသုံးပြုခွင့် ရုပ်သိမ်းပြီး</string>
     <string name="rss_revoke_failed">RSS အသုံးပြုခွင့် ရုပ်သိမ်း၍ မရပါ</string>
+    <string name="game_empty_title">ဂိမ်းများ မရှိသေးပါ</string>
+    <string name="game_select_title">ဂိမ်းရွေးပါ</string>
+    <string name="game_select_subtitle">ဘေးဘားမှ ဂိမ်းတစ်ခုရွေးပါ သို့မဟုတ် ဂိမ်းအသစ်စတင်ပါ။</string>
 </resources>

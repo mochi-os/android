@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Всё, что подписано на эту ленту, перестанет её получать. После этого вы сможете скопировать новый URL.</string>
     <string name="rss_revoked">Доступ RSS отозван</string>
     <string name="rss_revoke_failed">Не удалось отозвать доступ RSS</string>
+    <string name="game_empty_title">Игр пока нет</string>
+    <string name="game_select_title">Выберите игру</string>
+    <string name="game_select_subtitle">Выберите игру на боковой панели или начните новую.</string>
 </resources>

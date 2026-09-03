@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">ಈ ಫೀಡ್‌ಗೆ ಚಂದಾದಾರರಾದ ಎಲ್ಲವೂ ಅದನ್ನು ಸ್ವೀಕರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ. ನಂತರ ನೀವು ಹೊಸ URL ಅನ್ನು ನಕಲಿಸಬಹುದು.</string>
     <string name="rss_revoked">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
     <string name="rss_revoke_failed">RSS ಪ್ರವೇಶವನ್ನು ಹಿಂಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
+    <string name="game_empty_title">ಇನ್ನೂ ಯಾವುದೇ ಆಟಗಳಿಲ್ಲ</string>
+    <string name="game_select_title">ಆಟವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="game_select_subtitle">ಸೈಡ್‌ಬಾರ್‌ನಿಂದ ಆಟವನ್ನು ಆರಿಸಿ ಅಥವಾ ಹೊಸ ಆಟ ಪ್ರಾರಂಭಿಸಿ.</string>
 </resources>

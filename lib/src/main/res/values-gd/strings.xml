@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Sguiridh rud sam bith a tha air fo-sgrìobhadh ris an inbhir seo ga fhaighinn. \'S urrainn dhut URL ùr a chopaigeadh às a dhèidh.</string>
     <string name="rss_revoked">Chaidh inntrigeadh RSS a chùl-ghairm</string>
     <string name="rss_revoke_failed">Cha b\' urrainn inntrigeadh RSS a chùl-ghairm</string>
+    <string name="game_empty_title">Chan eil geamannan ann fhathast</string>
+    <string name="game_select_title">Tagh geama</string>
+    <string name="game_select_subtitle">Tagh geama on bhàr-taoibh no tòisich fear ùr.</string>
 </resources>

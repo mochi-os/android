@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Sagala nu ngalanggan feed ieu bakal eureun narima. Anjeun bisa nyalin URL anyar sanggeusna.</string>
     <string name="rss_revoked">Aksés RSS dicabut</string>
     <string name="rss_revoke_failed">Gagal nyabut aksés RSS</string>
+    <string name="game_empty_title">Tacan aya game</string>
+    <string name="game_select_title">Pilih kaulinan</string>
+    <string name="game_select_subtitle">Pilih kaulinan tina bar gigir atawa mimitian nu anyar.</string>
 </resources>

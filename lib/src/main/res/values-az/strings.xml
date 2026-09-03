@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Bu lentə abunə olan hər şey onu almağı dayandıracaq. Sonra yeni URL kopyalaya bilərsiniz.</string>
     <string name="rss_revoked">RSS girişi ləğv edildi</string>
     <string name="rss_revoke_failed">RSS girişini ləğv etmək alınmadı</string>
+    <string name="game_empty_title">Hələ oyun yoxdur</string>
+    <string name="game_select_title">Oyun seçin</string>
+    <string name="game_select_subtitle">Yan paneldən oyun seçin və ya yeni oyun başladın.</string>
 </resources>

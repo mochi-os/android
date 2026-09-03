@@ -346,4 +346,7 @@
     <string name="rss_revoke_message">ทุกอย่างที่สมัครรับฟีดนี้จะหยุดรับ คุณสามารถคัดลอก URL ใหม่ได้ภายหลัง</string>
     <string name="rss_revoked">เพิกถอนการเข้าถึง RSS แล้ว</string>
     <string name="rss_revoke_failed">ไม่สามารถเพิกถอนการเข้าถึง RSS ได้</string>
+    <string name="game_empty_title">ยังไม่มีเกม</string>
+    <string name="game_select_title">เลือกเกม</string>
+    <string name="game_select_subtitle">เลือกเกมจากแถบด้านข้าง หรือเริ่มเกมใหม่</string>
 </resources>

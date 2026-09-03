@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">هر څه چې دې فیډ ته ګډون کړی، ترلاسه کول به ودروي. وروسته تاسو کولی شئ نوی URL کاپي کړئ.</string>
     <string name="rss_revoked">د RSS لاسرسی لغوه شو</string>
     <string name="rss_revoke_failed">د RSS لاسرسي لغوه کول ناکام شول</string>
+    <string name="game_empty_title">تر اوسه هیڅ لوبې نشته</string>
+    <string name="game_select_title">لوبه وټاکئ</string>
+    <string name="game_select_subtitle">له څنګ پټې څخه لوبه وټاکئ یا نوې لوبه پیل کړئ.</string>
 </resources>

@@ -355,4 +355,7 @@
     <string name="rss_revoke_message">سيتوقف أي شيء مشترك في هذه التغذية عن تلقيها. يمكنك نسخ عنوان URL جديد بعد ذلك.</string>
     <string name="rss_revoked">تم إلغاء وصول RSS</string>
     <string name="rss_revoke_failed">فشل إلغاء وصول RSS</string>
+    <string name="game_empty_title">لا توجد ألعاب بعد</string>
+    <string name="game_select_title">اختر لعبة</string>
+    <string name="game_select_subtitle">اختر لعبة من الشريط الجانبي أو ابدأ لعبة جديدة.</string>
 </resources>

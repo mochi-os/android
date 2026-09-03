@@ -349,4 +349,7 @@
     <string name="rss_revoke_message">Tot allò subscrit a aquest canal deixarà de rebre\'l. Després en podreu copiar un URL nou.</string>
     <string name="rss_revoked">Accés RSS revocat</string>
     <string name="rss_revoke_failed">No s\'ha pogut revocar l\'accés RSS</string>
+    <string name="game_empty_title">Encara no hi ha jocs</string>
+    <string name="game_select_title">Selecciona un joc</string>
+    <string name="game_select_subtitle">Tria un joc de la barra lateral o comença\'n un de nou.</string>
 </resources>

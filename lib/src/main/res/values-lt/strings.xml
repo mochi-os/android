@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Viskas, kas prenumeruoja šį srautą, nustos jį gauti. Vėliau galėsite nukopijuoti naują URL.</string>
     <string name="rss_revoked">RSS prieiga atšaukta</string>
     <string name="rss_revoke_failed">Nepavyko atšaukti RSS prieigos</string>
+    <string name="game_empty_title">Dar nėra games</string>
+    <string name="game_select_title">Pasirinkite žaidimą</string>
+    <string name="game_select_subtitle">Pasirinkite žaidimą šoninėje juostoje arba pradėkite naują.</string>
 </resources>

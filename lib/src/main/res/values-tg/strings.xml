@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Ҳама чизе, ки ба ин ҷараён обуна шудааст, гирифтани онро қатъ мекунад. Пас аз он шумо метавонед URL-и навро нусха бардоред.</string>
     <string name="rss_revoked">Дастрасии RSS бекор карда шуд</string>
     <string name="rss_revoke_failed">Бекор кардани дастрасии RSS ноком шуд</string>
+    <string name="game_empty_title">То ҳол ягон бозӣ нест</string>
+    <string name="game_select_title">Бозӣ интихоб кунед</string>
+    <string name="game_select_subtitle">Аз навори канорӣ бозӣ интихоб кунед ё бозии нав оғоз кунед.</string>
 </resources>

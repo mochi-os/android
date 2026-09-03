@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Сè што е претплатено на овој канал ќе престане да го прима. Потоа можете да копирате нов URL.</string>
     <string name="rss_revoked">RSS пристапот е отповикан</string>
     <string name="rss_revoke_failed">Неуспешно отповикување на RSS пристапот</string>
+    <string name="game_empty_title">Сè уште нема игри</string>
+    <string name="game_select_title">Изберете игра</string>
+    <string name="game_select_subtitle">Изберете игра од страничната лента или започнете нова.</string>
 </resources>

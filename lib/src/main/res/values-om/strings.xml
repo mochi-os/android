@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Wanti kamiyyuu nyaata kana ajaje fudhachuu ni dhaaba. Booda URL haaraa garagalchuu dandeessa.</string>
     <string name="rss_revoked">Argamni RSS haqameera</string>
     <string name="rss_revoke_failed">Argama RSS haquun hin milkoofne</string>
+    <string name="game_empty_title">Hanga ammaatti taphaaleen hin jiran</string>
+    <string name="game_select_title">Taphaa filadhu</string>
+    <string name="game_select_subtitle">Bar cinaacha irraa taphaa filadhu yookaan haaraa jalqabi.</string>
 </resources>

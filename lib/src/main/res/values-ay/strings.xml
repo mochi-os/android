@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Aka feed suscripción luriri taqi kunas janiw katuqxaniti. Ukat machaq URL copiaña atkasmawa.</string>
     <string name="rss_revoked">RSS mantaña jarq\'atawa</string>
     <string name="rss_revoke_failed">RSS mantaña jarq\'añax jan walikiti</string>
+    <string name="game_empty_title">Janira anatawinaka</string>
+    <string name="game_select_title">Mä anatawi ajlliña</string>
+    <string name="game_select_subtitle">Thiya chimpuna mä anatawi ajllim jan ukax machaq anatawi qalltam.</string>
 </resources>

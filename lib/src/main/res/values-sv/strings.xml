@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Allt som prenumererar på det här flödet slutar ta emot det. Du kan kopiera en ny webbadress efteråt.</string>
     <string name="rss_revoked">RSS-åtkomst återkallad</string>
     <string name="rss_revoke_failed">Det gick inte att återkalla RSS-åtkomst</string>
+    <string name="game_empty_title">Inga spel ännu</string>
+    <string name="game_select_title">Välj ett spel</string>
+    <string name="game_select_subtitle">Välj ett spel i sidofältet eller starta ett nytt.</string>
 </resources>

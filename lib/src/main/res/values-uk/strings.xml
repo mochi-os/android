@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Усе, що підписане на цей канал, перестане його отримувати. Після цього ви зможете скопіювати нову URL-адресу.</string>
     <string name="rss_revoked">Доступ RSS відкликано</string>
     <string name="rss_revoke_failed">Не вдалося відкликати доступ RSS</string>
+    <string name="game_empty_title">Ігор ще немає</string>
+    <string name="game_select_title">Виберіть гру</string>
+    <string name="game_select_subtitle">Виберіть гру на бічній панелі або почніть нову.</string>
 </resources>

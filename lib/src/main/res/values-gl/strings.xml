@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Todo o subscrito a esta fonte deixará de recibila. Despois podes copiar un URL novo.</string>
     <string name="rss_revoked">Acceso RSS revogado</string>
     <string name="rss_revoke_failed">Non se puido revogar o acceso RSS</string>
+    <string name="game_empty_title">Aínda non hai xogos</string>
+    <string name="game_select_title">Selecciona un xogo</string>
+    <string name="game_select_subtitle">Escolle un xogo na barra lateral ou comeza un novo.</string>
 </resources>

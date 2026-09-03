@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Minden, ami feliratkozott erre a hírcsatornára, nem kapja meg többé. Utána másolhat egy új URL-t.</string>
     <string name="rss_revoked">RSS-hozzáférés visszavonva</string>
     <string name="rss_revoke_failed">Az RSS-hozzáférés visszavonása sikertelen</string>
+    <string name="game_empty_title">Még nincsenek játékok</string>
+    <string name="game_select_title">Válassz játékot</string>
+    <string name="game_select_subtitle">Válassz játékot az oldalsávból, vagy kezdj újat.</string>
 </resources>

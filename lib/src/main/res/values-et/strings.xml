@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i.</string>
     <string name="rss_revoked">RSS-juurdepääs tühistatud</string>
     <string name="rss_revoke_failed">RSS-juurdepääsu tühistamine ebaõnnestus</string>
+    <string name="game_empty_title">Mänge veel pole</string>
+    <string name="game_select_title">Vali mäng</string>
+    <string name="game_select_subtitle">Vali külgribalt mäng või alusta uut.</string>
 </resources>

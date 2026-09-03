@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">මෙම සංග්‍රහයට දායක වූ සියල්ල එය ලැබීම නවත්වනු ඇත. පසුව ඔබට නව URL එකක් පිටපත් කළ හැකිය.</string>
     <string name="rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
     <string name="rss_revoke_failed">RSS ප්‍රවේශය අවලංගු කිරීමට අසමත් විය</string>
+    <string name="game_empty_title">තවම ක්‍රීඩා නැත</string>
+    <string name="game_select_title">ක්‍රීඩාවක් තෝරන්න</string>
+    <string name="game_select_subtitle">පැති තීරුවෙන් ක්‍රීඩාවක් තෝරන්න හෝ අලුත් එකක් අරඹන්න.</string>
 </resources>

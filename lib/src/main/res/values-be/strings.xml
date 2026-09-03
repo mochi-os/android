@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">Усё, што падпісана на гэтую стужку, перастане яе атрымліваць. Пасля вы можаце скапіяваць новы URL.</string>
     <string name="rss_revoked">Доступ RSS адкліканы</string>
     <string name="rss_revoke_failed">Не ўдалося адклікаць доступ RSS</string>
+    <string name="game_empty_title">Пакуль няма гульняў</string>
+    <string name="game_select_title">Выберыце гульню</string>
+    <string name="game_select_subtitle">Выберыце гульню на бакавой панэлі або пачніце новую.</string>
 </resources>

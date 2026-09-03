@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">هەر شتێک بەم لێدوانە بەشداری کردبێت وەرگرتنی ڕادەگرێت. دواتر دەتوانیت URLی نوێ لەبەربگریت.</string>
     <string name="rss_revoked">دەستپێگەیشتنی RSS ڕەتکرایەوە</string>
     <string name="rss_revoke_failed">ڕەتکردنەوەی دەستپێگەیشتنی RSS سەرکەوتوو نەبوو</string>
+    <string name="game_empty_title">هێشتا هیچ یارییەک نییە</string>
+    <string name="game_select_title">یارییەک هەڵبژێرە</string>
+    <string name="game_select_subtitle">لە لاتەنیشتەکەوە یارییەک هەڵبژێرە یان یارییەکی نوێ دەست پێ بکە.</string>
 </resources>

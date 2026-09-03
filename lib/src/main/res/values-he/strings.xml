@@ -351,4 +351,7 @@
     <string name="rss_revoke_message">כל מה שרשום להזנה הזו יפסיק לקבל אותה. אפשר להעתיק כתובת חדשה לאחר מכן.</string>
     <string name="rss_revoked">גישת RSS בוטלה</string>
     <string name="rss_revoke_failed">ביטול גישת RSS נכשל</string>
+    <string name="game_empty_title">עדיין אין משחקים</string>
+    <string name="game_select_title">בחר משחק</string>
+    <string name="game_select_subtitle">בחר משחק מסרגל הצד או התחל משחק חדש.</string>
 </resources>

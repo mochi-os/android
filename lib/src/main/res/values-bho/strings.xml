@@ -347,4 +347,7 @@
     <string name="rss_revoke_message">एह फीड के सब्सक्राइब कइल कवनो चीज़ ओकरा के मिलल बंद हो जाई। बाद में रउआ नया URL कॉपी कर सकीलें।</string>
     <string name="rss_revoked">RSS पहुँच रद्द भइल</string>
     <string name="rss_revoke_failed">RSS पहुँच रद्द करे में विफल</string>
+    <string name="game_empty_title">अबहीं तक कौनो खेल नइखे</string>
+    <string name="game_select_title">खेल चुनीं</string>
+    <string name="game_select_subtitle">साइडबार से खेल चुनीं भा नया खेल शुरू करीं।</string>
 </resources>
