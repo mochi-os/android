@@ -6,14 +6,15 @@
 package org.mochios.words.ui.detail.board
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.material.icons.Icons
@@ -29,9 +30,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.words.engine.DraftStatus
@@ -40,14 +41,69 @@ import org.mochios.words.engine.MoveDraft
 import org.mochios.words.engine.MoveError
 import org.mochios.words.ui.detail.ValidState
 
+/**
+ * What the pending tiles add up to, shown between the board and the rack: the
+ * words they spell with their scores, or why the move will not play.
+ *
+ * @param pendingPlacements how many tiles are on the board but not yet played.
+ * @param exchangeMode whether the rack is picking tiles to exchange.
+ * @param moveDraft the engine's reading of the placements.
+ * @param draftWords each word the placements form, with its score.
+ * @param wordValidationState per-word dictionary result, keyed by upper-case word.
+ * @param validationUnavailable whether the dictionary could not be reached.
+ */
 @Composable
-fun MoveComposer(
+fun MoveFeedback(
     pendingPlacements: Int,
     exchangeMode: Boolean,
-    exchangeSelected: Int,
     moveDraft: MoveDraft?,
     draftWords: List<Pair<String, Int>>,
     wordValidationState: Map<String, ValidState>,
+    validationUnavailable: Boolean = false,
+    modifier: Modifier = Modifier,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .heightIn(min = 36.dp)
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        if (!exchangeMode && pendingPlacements > 0) {
+            DraftFeedback(
+                moveDraft = moveDraft,
+                draftWords = draftWords,
+                wordValidationState = wordValidationState,
+                validationUnavailable = validationUnavailable,
+            )
+        }
+    }
+}
+
+/**
+ * The centred pair of buttons under the rack: recall and submit while a move is
+ * being composed, cancel and exchange while picking tiles to swap. Empty
+ * otherwise, keeping its height so the board does not resize mid-move.
+ *
+ * @param pendingPlacements how many tiles are on the board but not yet played.
+ * @param exchangeMode whether the rack is picking tiles to exchange.
+ * @param exchangeSelected how many rack tiles are queued for exchange.
+ * @param draftScore what the pending move would score.
+ * @param onRecall takes every pending tile back to the rack.
+ * @param onSubmit plays the pending move.
+ * @param onExchangeConfirm swaps the selected tiles.
+ * @param onExchangeCancel leaves exchange mode.
+ * @param canSubmit whether the move is playable and checked.
+ * @param canRecallMove whether there is anything to take back.
+ * @param isSubmitting whether a move is in flight.
+ * @param isExchanging whether an exchange is in flight.
+ */
+@Composable
+fun MoveActions(
+    pendingPlacements: Int,
+    exchangeMode: Boolean,
+    exchangeSelected: Int,
     draftScore: Int,
     onRecall: () -> Unit,
     onSubmit: () -> Unit,
@@ -57,46 +113,110 @@ fun MoveComposer(
     canRecallMove: Boolean,
     isSubmitting: Boolean,
     isExchanging: Boolean,
-    validationUnavailable: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .height(36.dp)
-            .padding(horizontal = 4.dp, vertical = 2.dp),
+            .heightIn(min = 56.dp)
+            .padding(horizontal = 8.dp, vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally),
     ) {
-        when {
-            exchangeMode -> ExchangeRow(
+        if (exchangeMode) {
+            ExchangeButtons(
                 exchangeSelected = exchangeSelected,
                 isExchanging = isExchanging,
                 onExchangeCancel = onExchangeCancel,
                 onExchangeConfirm = onExchangeConfirm,
             )
-            pendingPlacements > 0 -> ComposerRow(
-                moveDraft = moveDraft,
-                draftWords = draftWords,
-                wordValidationState = wordValidationState,
+        } else if (pendingPlacements > 0) {
+            MoveButtons(
                 draftScore = draftScore,
                 canRecallMove = canRecallMove,
                 canSubmit = canSubmit,
                 isSubmitting = isSubmitting,
-                validationUnavailable = validationUnavailable,
                 onRecall = onRecall,
                 onSubmit = onSubmit,
             )
-            else -> {
-                // Empty rest state — Spacer keeps the row's height stable.
-                Spacer(modifier = Modifier.fillMaxWidth())
-            }
         }
     }
 }
 
+/**
+ * A line of guidance above the rack: why the move will not play, or what the
+ * checker could not reach.
+ */
 @Composable
-private fun RowScope.ExchangeRow(
+private fun ComposerMessage(text: String, isError: Boolean = false) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.bodySmall,
+        color = if (isError) {
+            MaterialTheme.colorScheme.error
+        } else {
+            MaterialTheme.colorScheme.onSurfaceVariant
+        },
+        maxLines = 2,
+        overflow = TextOverflow.Ellipsis,
+        textAlign = TextAlign.Center,
+        modifier = Modifier.fillMaxWidth(),
+    )
+}
+
+/** The words the pending tiles spell, and anything wrong with them. */
+@Composable
+private fun ColumnScope.DraftFeedback(
+    moveDraft: MoveDraft?,
+    draftWords: List<Pair<String, Int>>,
+    wordValidationState: Map<String, ValidState>,
+    validationUnavailable: Boolean,
+) {
+    val invalidLocal = moveDraft != null && moveDraft.status == DraftStatus.INVALID_LOCAL
+    // The engine returns a reason, not prose — it has no string resources, and
+    // returning English here put untranslated text in front of every locale.
+    val invalidMsg = moveDraft?.error?.let { error -> stringResource(moveErrorLabel(error)) }
+
+    if (invalidLocal && !invalidMsg.isNullOrBlank()) {
+        ComposerMessage(text = invalidMsg, isError = true)
+        return
+    }
+
+    if (draftWords.isNotEmpty()) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .horizontalScroll(rememberScrollState()),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+        ) {
+            for ((word, score) in draftWords) {
+                WordChip(
+                    word = word,
+                    score = score,
+                    state = wordValidationState[word.uppercase()] ?: ValidState.UNKNOWN,
+                )
+            }
+        }
+    }
+
+    // Web shows both of these; Android tracked the state and rendered neither,
+    // so a player had no way to tell an unchecked word from a checked one or to
+    // know validation was offline.
+    val notice = when {
+        validationUnavailable -> stringResource(R.string.words_validation_offline)
+        draftWords.any { (word, _) ->
+            wordValidationState[word.uppercase()] == ValidState.INVALID
+        } -> stringResource(R.string.words_validation_unknown_words)
+        else -> null
+    }
+    if (notice != null) {
+        ComposerMessage(text = notice)
+    }
+}
+
+@Composable
+private fun RowScope.ExchangeButtons(
     exchangeSelected: Int,
     isExchanging: Boolean,
     onExchangeCancel: () -> Unit,
@@ -108,7 +228,6 @@ private fun RowScope.ExchangeRow(
     ) {
         Text(stringResource(R.string.words_detail_cancel))
     }
-    Spacer(modifier = Modifier.weight(1f, fill = true))
     MochiButton(
         onClick = onExchangeConfirm,
         enabled = exchangeSelected > 0 && !isExchanging,
@@ -131,97 +250,23 @@ private fun RowScope.ExchangeRow(
 }
 
 @Composable
-private fun RowScope.ComposerRow(
-    moveDraft: MoveDraft?,
-    draftWords: List<Pair<String, Int>>,
-    wordValidationState: Map<String, ValidState>,
+private fun RowScope.MoveButtons(
     draftScore: Int,
     canRecallMove: Boolean,
     canSubmit: Boolean,
     isSubmitting: Boolean,
-    validationUnavailable: Boolean,
     onRecall: () -> Unit,
     onSubmit: () -> Unit,
 ) {
     MochiOutlinedButton(
         onClick = onRecall,
         enabled = canRecallMove,
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 10.dp, vertical = 4.dp),
     ) {
         Text(stringResource(R.string.words_detail_recall))
     }
-
-    val invalidLocal = moveDraft != null &&
-        moveDraft.status == DraftStatus.INVALID_LOCAL
-    // The engine returns a reason, not prose — it has no string resources, and
-    // returning English here put untranslated text in front of every locale.
-    val invalidMsg = moveDraft?.error?.let { stringResource(moveErrorLabel(it)) }
-
-    Row(
-        modifier = Modifier
-            .weight(1f, fill = true)
-            .horizontalScroll(rememberScrollState()),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        when {
-            invalidLocal && !invalidMsg.isNullOrBlank() -> {
-                Text(
-                    text = invalidMsg,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.error,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-            // Web shows both of these; Android tracked the state and rendered
-            // neither, so a player had no way to tell an unchecked word from a
-            // checked one or to know validation was offline.
-            validationUnavailable -> {
-                Text(
-                    text = stringResource(R.string.words_validation_offline),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-            draftWords.isNotEmpty() -> {
-                for ((word, score) in draftWords) {
-                    WordChip(
-                        word = word,
-                        score = score,
-                        state = wordValidationState[word.uppercase()] ?: ValidState.UNKNOWN,
-                    )
-                }
-                if (draftWords.any { (word, _) ->
-                        wordValidationState[word.uppercase()] == ValidState.INVALID
-                    }
-                ) {
-                    Text(
-                        text = stringResource(R.string.words_validation_unknown_words),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                    )
-                }
-                Spacer(modifier = Modifier.width(4.dp))
-                Text(
-                    text = draftScore.toString(),
-                    style = MaterialTheme.typography.titleSmall.copy(
-                        fontWeight = FontWeight.Bold,
-                    ),
-                    color = MaterialTheme.colorScheme.onSurface,
-                )
-            }
-        }
-    }
-
     MochiButton(
         onClick = onSubmit,
         enabled = canSubmit,
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 12.dp, vertical = 4.dp),
     ) {
         if (isSubmitting) {
             CircularProgressIndicator(
@@ -231,7 +276,14 @@ private fun RowScope.ComposerRow(
             )
             Spacer(modifier = Modifier.size(6.dp))
         }
-        Text(stringResource(R.string.words_detail_submit))
+        // The score rides on the button so the reward sits on the action, not
+        // adrift at the end of a scrolling row where it was cut off.
+        val label = if (draftScore > 0) {
+            "${stringResource(R.string.words_detail_submit)} +$draftScore"
+        } else {
+            stringResource(R.string.words_detail_submit)
+        }
+        Text(label)
     }
 }
 
@@ -246,33 +298,32 @@ private fun WordChip(word: String, score: Int, state: ValidState) {
                 imageVector = Icons.Filled.CheckCircle,
                 contentDescription = null,
                 tint = Color(0xFF10B981),
-                modifier = Modifier.size(12.dp),
+                modifier = Modifier.size(16.dp),
             )
             ValidState.INVALID -> Icon(
                 imageVector = Icons.Filled.Cancel,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.error,
-                modifier = Modifier.size(12.dp),
+                modifier = Modifier.size(16.dp),
             )
             ValidState.CHECKING -> CircularProgressIndicator(
                 modifier = Modifier.size(10.dp),
                 strokeWidth = 1.dp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            ValidState.UNKNOWN -> Spacer(modifier = Modifier.size(12.dp))
+            ValidState.UNKNOWN -> Spacer(modifier = Modifier.size(16.dp))
         }
         Text(
             text = word.uppercase(),
-            style = MaterialTheme.typography.labelSmall.copy(
+            style = MaterialTheme.typography.labelLarge.copy(
                 fontWeight = FontWeight.SemiBold,
-                fontSize = 11.sp,
             ),
             color = if (state == ValidState.INVALID) MaterialTheme.colorScheme.error
             else MaterialTheme.colorScheme.onSurface,
         )
         Text(
             text = "+$score",
-            style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
+            style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }

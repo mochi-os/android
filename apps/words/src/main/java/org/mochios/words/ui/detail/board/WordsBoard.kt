@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
@@ -27,6 +28,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
@@ -88,10 +90,12 @@ fun WordsBoard(
 
         var coords by remember { mutableStateOf<LayoutCoordinates?>(null) }
 
+        val shape = RoundedCornerShape(BOARD_CORNER)
         Box(
             modifier = Modifier
                 .size(side)
-                .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f))
+                .shadow(elevation = 2.dp, shape = shape)
+                .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), shape)
                 .onGloballyPositioned { lc ->
                     coords = lc
                     val bounds = lc.boundsInRoot()
@@ -392,6 +396,7 @@ private fun premiumTextColor(t: PremiumType): Color = when (t) {
     else -> Color(0xFF888888)
 }
 
+private val BOARD_CORNER = 8.dp
 private val BOARD_BG = Color(0xFFF7F2E7)
 private val TILE_BG = Color(0xFFEFCB94)
 private val PENDING_BG = Color(0xFFFBBF24)

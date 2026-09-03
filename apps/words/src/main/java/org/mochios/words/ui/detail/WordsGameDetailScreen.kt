@@ -104,7 +104,8 @@ import org.mochios.words.engine.getLetterValue
 import org.mochios.words.engine.parseBoard
 import org.mochios.words.model.Game
 import org.mochios.words.model.GameMessage
-import org.mochios.words.ui.detail.board.MoveComposer
+import org.mochios.words.ui.detail.board.MoveActions
+import org.mochios.words.ui.detail.board.MoveFeedback
 import org.mochios.words.ui.detail.board.TileRack
 import org.mochios.words.ui.detail.board.WordsBoard
 import org.mochios.words.ui.router.WORDS_FEATURE
@@ -501,7 +502,7 @@ private fun GameDetailContent(
                     modifier = Modifier
                         .weight(1f, fill = true)
                         .fillMaxWidth()
-                        .padding(vertical = 4.dp),
+                        .padding(horizontal = 4.dp, vertical = 4.dp),
                     contentAlignment = Alignment.Center,
                 ) {
                     WordsBoard(
@@ -544,6 +545,15 @@ private fun GameDetailContent(
                         Column(
                             modifier = Modifier.widthIn(max = 576.dp),
                         ) {
+                            MoveFeedback(
+                                pendingPlacements = state.pendingPlacements.size,
+                                exchangeMode = state.exchangeMode,
+                                moveDraft = moveDraft,
+                                draftWords = draftWords,
+                                wordValidationState = state.wordValidationState,
+                                validationUnavailable = state.validationUnavailable,
+                            )
+
                             TileRack(
                                 tiles = state.rackTiles,
                                 selectedIndex = state.selectedRackIndex,
@@ -572,13 +582,10 @@ private fun GameDetailContent(
                                 dragPointer = dragPointer,
                             )
 
-                            MoveComposer(
+                            MoveActions(
                                 pendingPlacements = state.pendingPlacements.size,
                                 exchangeMode = state.exchangeMode,
                                 exchangeSelected = state.exchangeSelected.size,
-                                moveDraft = moveDraft,
-                                draftWords = draftWords,
-                                wordValidationState = state.wordValidationState,
                                 draftScore = draftScore,
                                 onRecall = { viewModel.recallPlacements() },
                                 onSubmit = { viewModel.submitMove() },
@@ -588,7 +595,6 @@ private fun GameDetailContent(
                                 canRecallMove = canRecallMove,
                                 isSubmitting = state.isSubmittingMove,
                                 isExchanging = state.isExchanging,
-                                validationUnavailable = state.validationUnavailable,
                             )
                         }
                     }
