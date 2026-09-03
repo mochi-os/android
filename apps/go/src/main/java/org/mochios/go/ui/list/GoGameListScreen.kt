@@ -5,25 +5,16 @@
 
 package org.mochios.go.ui.list
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -48,8 +39,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -62,27 +51,26 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
-import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.go.R
-import org.mochios.go.model.Game
 import org.mochios.go.navigation.GoApp
-import org.mochios.go.ui.components.GoSidebarFilter
-import org.mochios.go.ui.components.goDrawerFilter
+import org.mochios.go.ui.detail.GoGameDetailScreen
 import org.mochios.go.ui.components.goDrawerItems
 import org.mochios.android.R as MochiR
 
 /**
- * Go landing list; mirrors `GamesListPage` in
- * `apps/go/web/src/routes/_authenticated/index.tsx`.
+ * Go shell: the drawer holds every game, the pane beside it holds the
+ * selected one. An empty [gameId] — nothing picked, or no games to pick —
+ * leaves the empty state in that pane.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GoGameListScreen(
     navController: NavController,
+    gameId: String,
     onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
@@ -93,7 +81,6 @@ fun GoGameListScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     var showAbout by remember { mutableStateOf(false) }
-    var currentFilter by remember { mutableStateOf(GoSidebarFilter.ACTIVE) }
 
     // Reload when the screen returns to the foreground, most importantly after
     // starting a game on the new-game screen.
@@ -121,11 +108,30 @@ fun GoGameListScreen(
     MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.go_app_title)) },
-        items = goDrawerItems(),
-        selectedId = currentFilter.name,
+        items = goDrawerItems(
+            games = uiState.games,
+            myIdentity = uiState.identity.orEmpty(),
+        ),
+        selectedId = gameId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            currentFilter = goDrawerFilter(item.id)
+            if (item.id != gameId) {
+                navController.navigate(GoApp.gameDetail(item.id)) {
+                    // Swap the open game rather than stack another one, so
+                    // Back always lands on the empty pane, not on whichever
+                    // games were opened before it.
+                    popUpTo(GoApp.HOME)
+                    launchSingleTop = true
+                }
+            }
+        },
+        emptyState = {
+            Text(
+                text = stringResource(R.string.go_empty_active),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp),
+            )
         },
         actions = {
             DrawerActionRow(
@@ -146,65 +152,51 @@ fun GoGameListScreen(
             )
         },
     ) {
-        Scaffold(
-            snackbarHost = { SnackbarHost(snackbarHostState) },
-            topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.go_app_title)) },
-                    navigationIcon = {
-                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = stringResource(R.string.go_open_sidebar),
-                            )
-                        }
-                    },
-                    actions = {
-                        NotificationBell(onClick = onOpenNotifications)
-                    },
-                )
-            },
-        ) { padding ->
-            PullToRefreshBox(
-                isRefreshing = uiState.isRefreshing,
-                onRefresh = { viewModel.refresh() },
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding),
-            ) {
-                when {
-                    uiState.isLoading && uiState.games.isEmpty() -> LoadingState()
-                    uiState.error != null && uiState.games.isEmpty() -> ErrorState(
-                        message = uiState.error?.userMessage()
-                            ?: stringResource(MochiR.string.error_unexpected),
-                        onRetry = { viewModel.loadGames() },
+        if (gameId.isNotEmpty()) {
+            GoGameDetailScreen(
+                navController = navController,
+                onOpenNotifications = onOpenNotifications,
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+            )
+        } else {
+            Scaffold(
+                snackbarHost = { SnackbarHost(snackbarHostState) },
+                topBar = {
+                    TopAppBar(
+                        title = { Text(stringResource(R.string.go_app_title)) },
+                        navigationIcon = {
+                            MochiIconButton(
+                                onClick = { drawerScope.launch { drawerState.open() } },
+                            ) {
+                                Icon(
+                                    Icons.Default.Menu,
+                                    contentDescription = stringResource(R.string.go_open_sidebar),
+                                )
+                            }
+                        },
+                        actions = {
+                            NotificationBell(onClick = onOpenNotifications)
+                        },
                     )
-                    else -> {
-                        val (active, completed) = remember(uiState.games) {
-                            val a = uiState.games.filter { it.status == "active" }
-                            val c = uiState.games.filterNot { it.status == "active" }
-                            a to c
-                        }
-                        val visibleGames = when (currentFilter) {
-                            GoSidebarFilter.ACTIVE -> active
-                            GoSidebarFilter.COMPLETED -> completed
-                        }
-                        if (visibleGames.isEmpty()) {
-                            EmptyState(
-                                filter = currentFilter,
-                                onNewGame = { navController.navigate(GoApp.NEW_GAME) },
-                            )
-                        } else {
-                            GameList(
-                                games = visibleGames,
-                                myIdentity = uiState.identity.orEmpty(),
-                                onOpen = { game ->
-                                    navController.navigate(
-                                        GoApp.gameDetail(game.id),
-                                    )
-                                },
-                            )
-                        }
+                },
+            ) { padding ->
+                PullToRefreshBox(
+                    isRefreshing = uiState.isRefreshing,
+                    onRefresh = { viewModel.refresh() },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding),
+                ) {
+                    when {
+                        uiState.isLoading && uiState.games.isEmpty() -> LoadingState()
+                        uiState.error != null && uiState.games.isEmpty() -> ErrorState(
+                            message = uiState.error?.userMessage()
+                                ?: stringResource(MochiR.string.error_unexpected),
+                            onRetry = { viewModel.loadGames() },
+                        )
+                        else -> EmptyState(
+                            onNewGame = { navController.navigate(GoApp.NEW_GAME) },
+                        )
                     }
                 }
             }
@@ -224,90 +216,18 @@ private fun LoadingState() {
 
 
 @Composable
-private fun EmptyState(filter: GoSidebarFilter, onNewGame: () -> Unit) {
+private fun EmptyState(onNewGame: () -> Unit) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                text = when (filter) {
-                    GoSidebarFilter.ACTIVE -> stringResource(R.string.go_empty_active)
-                    GoSidebarFilter.COMPLETED -> stringResource(R.string.go_empty_completed)
-                },
+                text = stringResource(R.string.go_empty_active),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            if (filter == GoSidebarFilter.ACTIVE) {
-                Spacer(modifier = Modifier.height(12.dp))
-                MochiTextButton(onClick = onNewGame) {
-                    Text(stringResource(R.string.go_sidebar_new_game))
-                }
+            Spacer(modifier = Modifier.height(12.dp))
+            MochiTextButton(onClick = onNewGame) {
+                Text(stringResource(R.string.go_sidebar_new_game))
             }
         }
     }
-}
-
-@Composable
-private fun GameList(games: List<Game>, myIdentity: String, onOpen: (Game) -> Unit) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        items(games, key = { it.id }) { game ->
-            GameCard(game = game, myIdentity = myIdentity, onOpen = { onOpen(game) })
-        }
-    }
-}
-
-@Composable
-private fun GameCard(game: Game, myIdentity: String, onOpen: () -> Unit) {
-    MochiCard(
-        onClick = onOpen,
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
-        ),
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    // opponent_name holds the INVITEE's name on both peers, so
-                    // the raw field names the user back to themselves on any
-                    // game they did not create. The helper picks the other side.
-                    text = stringResource(R.string.go_card_vs, game.opponentName(myIdentity)),
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Text(
-                    text = stringResource(
-                        R.string.go_card_meta,
-                        game.boardSize,
-                        game.boardSize,
-                        statusLabel(game.status),
-                    ),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun statusLabel(status: String): String = when (status) {
-    "active" -> stringResource(R.string.go_status_active)
-    "finished" -> stringResource(R.string.go_status_finished)
-    "draw" -> stringResource(R.string.go_status_draw)
-    "resigned" -> stringResource(R.string.go_status_resigned)
-    else -> status
 }

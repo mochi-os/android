@@ -10,7 +10,6 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import org.mochios.chess.ui.detail.ChessGameDetailScreen
 import org.mochios.chess.ui.list.ChessGameListScreen
 import org.mochios.chess.ui.newgame.NewChessGameScreen
 
@@ -37,6 +36,7 @@ fun NavGraphBuilder.chessNavGraph(
     composable(ChessApp.HOME) {
         ChessGameListScreen(
             navController = navController,
+            gameId = "",
             onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
@@ -60,7 +60,13 @@ fun NavGraphBuilder.chessNavGraph(
     composable(
         route = ChessApp.GAME,
         arguments = listOf(navArgument("gameId") { type = NavType.StringType }),
-    ) {
-        ChessGameDetailScreen(navController = navController)
+    ) { backStackEntry ->
+        ChessGameListScreen(
+            navController = navController,
+            gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
+            onLogout = onLogout,
+            onOpenNotifications = onOpenNotifications,
+            onOpenLink = onOpenLink,
+        )
     }
 }

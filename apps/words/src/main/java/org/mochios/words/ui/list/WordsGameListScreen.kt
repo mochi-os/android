@@ -5,27 +5,18 @@
 
 package org.mochios.words.ui.list
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.Badge
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -46,8 +37,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
@@ -59,20 +48,24 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.words.R
-import org.mochios.words.model.GameListItem
-import org.mochios.words.model.getPlayerNames
-import org.mochios.words.model.playerScore
+import org.mochios.words.ui.detail.WordsGameDetailScreen
 import org.mochios.words.ui.components.wordsDrawerItems
 import org.mochios.android.R as MochiR
 
+/**
+ * Words shell: the drawer holds every game, the pane beside it holds the
+ * selected one. An empty [gameId] — nothing picked, or no games to pick —
+ * leaves the empty state in that pane.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WordsGameListScreen(
+    gameId: String,
     onGameClick: (String) -> Unit,
+    onGameClosed: () -> Unit,
     onNewGame: () -> Unit,
     onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
@@ -100,10 +93,10 @@ fun WordsGameListScreen(
             games = uiState.games,
             myIdentity = uiState.myIdentity,
         ),
-        selectedId = null,
+        selectedId = gameId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            onGameClick(item.id)
+            if (item.id != gameId) onGameClick(item.id)
         },
         actions = {
             DrawerActionRow(
@@ -140,61 +133,65 @@ fun WordsGameListScreen(
             )
         },
     ) {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.words_list_title)) },
-                    navigationIcon = {
-                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.words_list_menu))
-                        }
-                    },
-                )
-            },
-        ) { padding ->
-            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-                when {
-                    uiState.isLoading && uiState.games.isEmpty() -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            CircularProgressIndicator()
-                        }
-                    }
-                    uiState.error != null && uiState.games.isEmpty() -> {
-                        ErrorState(
-                            error = uiState.error!!,
-                            onRetry = viewModel::load,
-                        )
-                    }
-                    uiState.games.isEmpty() -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text(
-                                    text = stringResource(R.string.words_list_empty_title),
-                                    style = MaterialTheme.typography.titleMedium,
-                                )
-                                Spacer(modifier = Modifier.size(8.dp))
-                                Text(
-                                    text = stringResource(R.string.words_list_empty_subtitle),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+        if (gameId.isNotEmpty()) {
+            WordsGameDetailScreen(
+                gameId = gameId,
+                onBack = onGameClosed,
+                onOpenNotifications = onOpenNotifications,
+                onLogout = onLogout,
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+            )
+        } else {
+            Scaffold(
+                topBar = {
+                    TopAppBar(
+                        title = { Text(stringResource(R.string.words_list_title)) },
+                        navigationIcon = {
+                            MochiIconButton(
+                                onClick = { drawerScope.launch { drawerState.open() } },
+                            ) {
+                                Icon(
+                                    Icons.Default.Menu,
+                                    contentDescription = stringResource(R.string.words_list_menu),
                                 )
                             }
+                        },
+                    )
+                },
+            ) { padding ->
+                Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                    when {
+                        uiState.isLoading && uiState.games.isEmpty() -> {
+                            Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center,
+                            ) {
+                                CircularProgressIndicator()
+                            }
                         }
-                    }
-                    else -> {
-                        LazyColumn(
-                            modifier = Modifier.fillMaxSize(),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp),
-                        ) {
-                            items(uiState.games, key = { it.id }) { game ->
-                                GameListCard(
-                                    game = game,
-                                    myIdentity = uiState.myIdentity,
-                                    onClick = {
-                                        onGameClick(game.fingerprint?.ifBlank { null } ?: game.id)
-                                    },
-                                )
+                        uiState.error != null && uiState.games.isEmpty() -> {
+                            ErrorState(
+                                error = uiState.error!!,
+                                onRetry = viewModel::load,
+                            )
+                        }
+                        else -> {
+                            Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center,
+                            ) {
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Text(
+                                        text = stringResource(R.string.words_list_empty_title),
+                                        style = MaterialTheme.typography.titleMedium,
+                                    )
+                                    Spacer(modifier = Modifier.size(8.dp))
+                                    Text(
+                                        text = stringResource(R.string.words_list_empty_subtitle),
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
                             }
                         }
                     }
@@ -204,72 +201,5 @@ fun WordsGameListScreen(
     }
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
-    }
-}
-
-@Composable
-private fun GameListCard(
-    game: GameListItem,
-    myIdentity: String,
-    onClick: () -> Unit,
-) {
-    val names = getPlayerNames(game, myIdentity).ifBlank { "${game.player_count} players" }
-    val scores = buildString {
-        for (i in 1..game.player_count) {
-            if (i > 1) append(" · ")
-            append(playerScore(game, i))
-        }
-    }
-    val myTurn = game.status == "active" &&
-        game.my_player_number != 0 &&
-        game.current_turn == game.my_player_number
-    val statusLabel: String? = when (game.status) {
-        "finished" -> stringResource(R.string.words_list_status_finished)
-        "resigned" -> stringResource(R.string.words_list_status_resigned)
-        else -> null
-    }
-
-    MochiCard(
-        onClick = onClick,
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLow),
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = names,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Text(
-                    text = scores,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                if (statusLabel != null) {
-                    Text(
-                        text = statusLabel,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-            if (myTurn) {
-                Badge(containerColor = MaterialTheme.colorScheme.primary) {
-                    Text(
-                        text = stringResource(R.string.words_list_your_turn),
-                        modifier = Modifier.padding(horizontal = 4.dp),
-                    )
-                }
-            }
-        }
     }
 }

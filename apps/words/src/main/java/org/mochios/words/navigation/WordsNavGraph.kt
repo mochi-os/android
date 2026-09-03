@@ -11,7 +11,6 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
-import org.mochios.words.ui.detail.WordsGameDetailScreen
 import org.mochios.words.ui.list.WordsGameListScreen
 import org.mochios.words.ui.newgame.NewWordsGameScreen
 
@@ -33,9 +32,9 @@ fun NavGraphBuilder.wordsNavGraph(
 ) {
     composable(WordsApp.HOME) {
         WordsGameListScreen(
-            onGameClick = { gameId ->
-                navController.navigate(WordsApp.gameDetail(gameId))
-            },
+            gameId = "",
+            onGameClick = { gameId -> navController.navigate(WordsApp.gameDetail(gameId)) },
+            onGameClosed = { navController.popBackStack() },
             onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
             onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
@@ -68,12 +67,22 @@ fun NavGraphBuilder.wordsNavGraph(
             navDeepLink { uriPattern = "https://{host}/words/{gameId}" },
         ),
     ) { backStackEntry ->
-        val gameId = backStackEntry.arguments?.getString("gameId").orEmpty()
-        WordsGameDetailScreen(
-            gameId = gameId,
-            onBack = { navController.popBackStack() },
-            onOpenNotifications = onOpenNotifications,
+        WordsGameListScreen(
+            gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
+            onGameClick = { gameId ->
+                navController.navigate(WordsApp.gameDetail(gameId)) {
+                    // Swap the open game rather than stack another one, so
+                    // Back always lands on the empty pane, not on whichever
+                    // games were opened before it.
+                    popUpTo(WordsApp.HOME)
+                    launchSingleTop = true
+                }
+            },
+            onGameClosed = { navController.popBackStack() },
+            onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
             onLogout = onLogout,
+            onOpenNotifications = onOpenNotifications,
+            onOpenLink = onOpenLink,
         )
     }
 }

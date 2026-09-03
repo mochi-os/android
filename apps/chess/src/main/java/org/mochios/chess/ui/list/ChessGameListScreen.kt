@@ -8,17 +8,11 @@ package org.mochios.chess.ui.list
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
@@ -26,7 +20,6 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.SportsKabaddi
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -52,7 +45,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -65,27 +57,26 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
-import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
-import org.mochios.chess.ui.components.ChessSidebarGame
+import org.mochios.chess.ui.detail.ChessGameDetailScreen
 import org.mochios.chess.ui.components.chessDrawerItems
 import org.mochios.android.R as MochiR
 
 /**
- * Landing screen: drawer, pull-to-refresh Active / Completed cards, empty and
- * error states. Reloads on foreground so a game started on [ChessApp.NEW_GAME]
- * appears.
+ * Chess shell: the drawer holds every game, the pane beside it holds the
+ * selected one. An empty [gameId] — nothing picked, or no games to pick —
+ * leaves the empty state in that pane. Reloads on foreground so a game
+ * started on [ChessApp.NEW_GAME] appears in the drawer.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChessGameListScreen(
     navController: NavController,
+    gameId: String,
     @Suppress("UNUSED_PARAMETER") onLogout: () -> Unit,
     onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit,
@@ -96,6 +87,8 @@ fun ChessGameListScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     var showAbout by remember { mutableStateOf(false) }
+    val openSidebarLabel = stringResource(R.string.chess_open_sidebar)
+    val notificationsLabel = stringResource(MochiR.string.notifications_open)
 
     // Reload when the screen returns to the foreground, most importantly after
     // starting a game on the new-game screen.
@@ -126,10 +119,26 @@ fun ChessGameListScreen(
             activeGames = uiState.activeSidebar,
             completedGames = uiState.completedSidebar,
         ),
-        selectedId = null,
+        selectedId = gameId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            navController.navigate(ChessApp.gameDetail(item.id))
+            if (item.id != gameId) {
+                navController.navigate(ChessApp.gameDetail(item.id)) {
+                    // Swap the open game rather than stack another one, so
+                    // Back always lands on the empty pane, not on whichever
+                    // games were opened before it.
+                    popUpTo(ChessApp.HOME)
+                    launchSingleTop = true
+                }
+            }
+        },
+        emptyState = {
+            Text(
+                text = stringResource(R.string.chess_empty_title),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp),
+            )
         },
         actions = {
             DrawerActionRow(
@@ -150,54 +159,56 @@ fun ChessGameListScreen(
             )
         },
     ) {
-        Scaffold(
-            snackbarHost = { SnackbarHost(snackbarHostState) },
-            topBar = {
-                TopAppBar(
-                    title = { Text(stringResource(R.string.chess_app_title)) },
-                    navigationIcon = {
-                        MochiIconButton(onClick = { drawerScope.launch { drawerState.open() } }) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = stringResource(R.string.chess_open_sidebar),
-                            )
-                        }
-                    },
-                    actions = {
-                        MochiIconButton(onClick = onOpenNotifications) {
-                            Icon(
-                                Icons.Default.Notifications,
-                                contentDescription = stringResource(MochiR.string.notifications_open),
-                            )
-                        }
-                    },
-                )
-            },
-        ) { padding ->
-            PullToRefreshBox(
-                isRefreshing = uiState.isRefreshing,
-                onRefresh = { viewModel.refresh() },
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding),
-            ) {
-                when {
-                    uiState.isLoading && uiState.games.isEmpty() -> LoadingState()
-                    uiState.error != null && uiState.games.isEmpty() -> ErrorState(
-                        message = uiState.error?.userMessage()
-                            ?: stringResource(MochiR.string.error_unexpected),
-                        onRetry = { viewModel.load() },
-                    )
-                    uiState.games.isEmpty() -> EmptyState(
-                        onNewGame = { navController.navigate(ChessApp.NEW_GAME) },
-                    )
-                    else -> GameCardGrid(
-                        activeGames = uiState.activeSidebar,
-                        completedGames = uiState.completedSidebar,
-                        onOpenGame = { gameId ->
-                            navController.navigate(ChessApp.gameDetail(gameId))
+        if (gameId.isNotEmpty()) {
+            ChessGameDetailScreen(
+                navController = navController,
+                onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+            )
+        } else {
+            Scaffold(
+                snackbarHost = { SnackbarHost(snackbarHostState) },
+                topBar = {
+                    TopAppBar(
+                        title = { Text(stringResource(R.string.chess_app_title)) },
+                        navigationIcon = {
+                            MochiIconButton(
+                                onClick = { drawerScope.launch { drawerState.open() } },
+                            ) {
+                                Icon(
+                                    Icons.Default.Menu,
+                                    contentDescription = openSidebarLabel,
+                                )
+                            }
+                        },
+                        actions = {
+                            MochiIconButton(onClick = onOpenNotifications) {
+                                Icon(
+                                    Icons.Default.Notifications,
+                                    contentDescription = notificationsLabel,
+                                )
+                            }
                         },
                     )
+                },
+            ) { padding ->
+                PullToRefreshBox(
+                    isRefreshing = uiState.isRefreshing,
+                    onRefresh = { viewModel.refresh() },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding),
+                ) {
+                    when {
+                        uiState.isLoading && uiState.games.isEmpty() -> LoadingState()
+                        uiState.error != null && uiState.games.isEmpty() -> ErrorState(
+                            message = uiState.error?.userMessage()
+                                ?: stringResource(MochiR.string.error_unexpected),
+                            onRetry = { viewModel.load() },
+                        )
+                        else -> EmptyState(
+                            onNewGame = { navController.navigate(ChessApp.NEW_GAME) },
+                        )
+                    }
                 }
             }
         }
@@ -252,96 +263,6 @@ private fun EmptyState(onNewGame: () -> Unit) {
             Icon(Icons.Default.Add, contentDescription = null)
             Spacer(modifier = Modifier.size(8.dp))
             Text(stringResource(R.string.chess_empty_start_button))
-        }
-    }
-}
-
-@Composable
-private fun GameCardGrid(
-    activeGames: List<ChessSidebarGame>,
-    completedGames: List<ChessSidebarGame>,
-    onOpenGame: (String) -> Unit,
-) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        if (activeGames.isNotEmpty()) {
-            item("active-header") {
-                SectionHeader(stringResource(R.string.chess_section_active))
-            }
-            items(activeGames, key = { "active-${it.id}" }) { game ->
-                GameCard(
-                    game = game,
-                    onClick = { onOpenGame(game.id) },
-                )
-            }
-        }
-        if (completedGames.isNotEmpty()) {
-            item("completed-header") {
-                SectionHeader(stringResource(R.string.chess_section_completed))
-            }
-            items(completedGames, key = { "completed-${it.id}" }) { game ->
-                GameCard(
-                    game = game,
-                    onClick = { onOpenGame(game.id) },
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun SectionHeader(text: String) {
-    Text(
-        text = text,
-        style = MaterialTheme.typography.labelLarge,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        fontWeight = FontWeight.SemiBold,
-        modifier = Modifier.padding(start = 4.dp, top = 8.dp, bottom = 4.dp),
-    )
-}
-
-@Composable
-private fun GameCard(
-    game: ChessSidebarGame,
-    onClick: () -> Unit,
-) {
-    val avatarUrl = if (game.opponentId.isNotBlank()) {
-        "/people/${game.opponentId}/-/avatar"
-    } else null
-
-    MochiCard(
-        onClick = onClick,
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
-        ),
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            EntityAvatar(
-                name = game.opponentName,
-                src = avatarUrl,
-                seed = game.opponentId,
-                size = 40.dp,
-            )
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = game.opponentName,
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
         }
     }
 }

@@ -26,7 +26,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
@@ -113,6 +113,7 @@ fun WordsGameDetailScreen(
     onBack: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     @Suppress("UNUSED_PARAMETER") onLogout: () -> Unit = {},
+    onOpenDrawer: () -> Unit,
     viewModel: WordsGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -190,10 +191,10 @@ fun WordsGameDetailScreen(
                     )
                 },
                 navigationIcon = {
-                    MochiIconButton(onClick = onBack) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
+                            imageVector = Icons.Default.Menu,
+                            contentDescription = stringResource(R.string.words_list_menu),
                         )
                     }
                 },

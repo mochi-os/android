@@ -24,7 +24,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.MoreHoriz
@@ -107,6 +107,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun ChessGameDetailScreen(
     navController: NavController,
+    onOpenDrawer: () -> Unit,
     viewModel: ChessGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -161,10 +162,10 @@ fun ChessGameDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.chess_app_title)) },
                 navigationIcon = {
-                    MochiIconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
+                            imageVector = Icons.Default.Menu,
+                            contentDescription = stringResource(R.string.chess_open_sidebar),
                         )
                     }
                 },

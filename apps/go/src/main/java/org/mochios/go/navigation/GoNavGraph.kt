@@ -10,7 +10,6 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import org.mochios.go.ui.detail.GoGameDetailScreen
 import org.mochios.go.ui.list.GoGameListScreen
 import org.mochios.go.ui.newgame.NewGoGameScreen
 
@@ -38,6 +37,7 @@ fun NavGraphBuilder.goNavGraph(
     composable(GoApp.HOME) {
         GoGameListScreen(
             navController = navController,
+            gameId = "",
             onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
@@ -61,10 +61,13 @@ fun NavGraphBuilder.goNavGraph(
     composable(
         route = GoApp.GAME,
         arguments = listOf(navArgument("gameId") { type = NavType.StringType }),
-    ) {
-        GoGameDetailScreen(
+    ) { backStackEntry ->
+        GoGameListScreen(
             navController = navController,
+            gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
+            onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
+            onOpenLink = onOpenLink,
         )
     }
 }

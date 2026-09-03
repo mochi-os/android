@@ -23,7 +23,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
@@ -99,6 +99,7 @@ import org.mochios.android.R as MochiR
 fun GoGameDetailScreen(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
+    onOpenDrawer: () -> Unit,
     viewModel: GoGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -168,10 +169,10 @@ fun GoGameDetailScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.go_app_title)) },
                 navigationIcon = {
-                    MochiIconButton(onClick = { navController.popBackStack() }) {
+                    MochiIconButton(onClick = onOpenDrawer) {
                         Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(MochiR.string.common_back),
+                            imageVector = Icons.Default.Menu,
+                            contentDescription = stringResource(R.string.go_open_sidebar),
                         )
                     }
                 },

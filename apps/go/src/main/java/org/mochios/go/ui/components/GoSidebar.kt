@@ -5,29 +5,49 @@
 
 package org.mochios.go.ui.components
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.CheckCircle
-import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.go.R
+import org.mochios.go.model.Game
 
-enum class GoSidebarFilter { ACTIVE, COMPLETED }
+/**
+ * Drawer rows for the Go app: one per game, active games first, each headed
+ * by its section. [myIdentity] resolves the opponent, since `opponent_name`
+ * names the invitee on both peers.
+ */
+@Composable
+fun goDrawerItems(games: List<Game>, myIdentity: String): List<DrawerItem> {
+    val activeLabel = stringResource(R.string.go_sidebar_active)
+    val completedLabel = stringResource(R.string.go_sidebar_completed)
+    val active = games.filter { game -> game.status == "active" }
+    val completed = games.filterNot { game -> game.status == "active" }
+    return buildList {
+        for (game in active) add(game.toDrawerItem(myIdentity, activeLabel))
+        for (game in completed) add(game.toDrawerItem(myIdentity, completedLabel))
+    }
+}
 
 @Composable
-fun goDrawerItems(): List<DrawerItem> = listOf(
-    DrawerItem(
-        id = GoSidebarFilter.ACTIVE.name,
-        title = stringResource(R.string.go_sidebar_active),
-        icon = Icons.Outlined.PlayArrow,
-    ),
-    DrawerItem(
-        id = GoSidebarFilter.COMPLETED.name,
-        title = stringResource(R.string.go_sidebar_completed),
-        icon = Icons.Outlined.CheckCircle,
-    ),
-)
+private fun Game.toDrawerItem(myIdentity: String, section: String): DrawerItem {
+    val opponentId = opponentId(myIdentity)
+    return DrawerItem(
+        id = id,
+        title = opponentName(myIdentity),
+        subtitle = stringResource(R.string.go_card_meta, boardSize, boardSize, statusLabel(status)),
+        // Blank opponent id means no avatar asset path; the row still gets a
+        // seeded initials circle from the drawer's seed-without-icon branch.
+        avatarUrl = if (opponentId.isNotBlank()) "/people/$opponentId/-/avatar" else null,
+        seed = opponentId,
+        section = section,
+    )
+}
 
-/** Resolves a [goDrawerItems] row id back to its filter. */
-fun goDrawerFilter(itemId: String): GoSidebarFilter = GoSidebarFilter.valueOf(itemId)
+@Composable
+private fun statusLabel(status: String): String = when (status) {
+    "active" -> stringResource(R.string.go_status_active)
+    "finished" -> stringResource(R.string.go_status_finished)
+    "draw" -> stringResource(R.string.go_status_draw)
+    "resigned" -> stringResource(R.string.go_status_resigned)
+    else -> status
+}

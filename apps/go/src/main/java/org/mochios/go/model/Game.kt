@@ -44,4 +44,8 @@ data class Game(
     /** Returns the opponent's display name relative to [myIdentity]. */
     fun opponentName(myIdentity: String): String =
         if (identity == myIdentity) opponentName else identityName
+
+    /** Returns the opponent's entity id relative to [myIdentity]. */
+    fun opponentId(myIdentity: String): String =
+        if (identity == myIdentity) opponent else identity
 }
