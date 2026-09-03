@@ -184,8 +184,14 @@ fun ChessGameDetailScreen(
     val isMyTurn = turnState.first
     val opponentName = game?.opponentName(myIdentity).orEmpty()
     val opponentId = game?.opponentId(myIdentity).orEmpty()
+    // The server does not reliably record a winner on a resignation, and the
+    // status would then tell whoever did not resign that they had. The system
+    // row names the player who did, so it decides when it is loaded.
+    val resignedBy = state.messages.lastOrNull { message ->
+        message.type == "system" && message.event == "resign"
+    }?.member
     val statusText = if (game != null) {
-        chessStatusText(game, myIdentity, isMyTurn, turnState.second)
+        chessStatusText(game, myIdentity, isMyTurn, turnState.second, resignedBy)
     } else {
         ""
     }
@@ -597,6 +603,10 @@ private fun drawBanner(
     acceptInFlight: Boolean,
     declineInFlight: Boolean,
 ): (@Composable () -> Unit)? {
+    // The server leaves draw_offer set on a game that ended some other way,
+    // so a resignation would otherwise keep offering a draw nobody can take —
+    // Accept came back "Game is not active".
+    if (game.status != "active") return null
     val drawOffer = game.drawOffer ?: return null
     return {
         Surface(
@@ -815,6 +825,7 @@ private fun chessStatusText(
     myIdentity: String,
     isMyTurn: Boolean,
     isCheck: Boolean,
+    resignedBy: String?,
 ): String {
     val opponentName = game.opponentName(myIdentity)
     return when (game.status) {
@@ -825,10 +836,14 @@ private fun chessStatusText(
         }
         "stalemate" -> stringResource(R.string.chess_status_stalemate)
         "draw" -> stringResource(R.string.chess_status_draw)
-        "resigned" -> if (game.winner == myIdentity) {
-            stringResource(R.string.chess_status_resigned_opponent, opponentName)
-        } else {
-            stringResource(R.string.chess_status_resigned_you, opponentName)
+        "resigned" -> when {
+            resignedBy == myIdentity ->
+                stringResource(R.string.chess_status_resigned_you, opponentName)
+            !resignedBy.isNullOrBlank() ->
+                stringResource(R.string.chess_status_resigned_opponent, opponentName)
+            game.winner == myIdentity ->
+                stringResource(R.string.chess_status_resigned_opponent, opponentName)
+            else -> stringResource(R.string.chess_status_resigned_you, opponentName)
         }
         else -> {
             if (isCheck) {

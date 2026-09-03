@@ -186,8 +186,14 @@ fun GoGameDetailScreen(
     } else {
         opponentName
     }
+    // The server does not reliably record a winner on a resignation, and the
+    // status would then tell whoever did not resign that they had. The system
+    // row names the player who did, so it decides when it is loaded.
+    val resignedBy = state.messages.lastOrNull { message ->
+        message.type == "system" && message.event == "resign"
+    }?.member
     val statusLabel = if (game != null) {
-        goStatusText(game, state.myIdentity, state.isMyTurn, state.score)
+        goStatusText(game, state.myIdentity, state.isMyTurn, state.score, resignedBy)
     } else {
         ""
     }
@@ -605,6 +611,7 @@ private fun goStatusText(
     myIdentity: String,
     isMyTurn: Boolean,
     score: Score?,
+    resignedBy: String?,
 ): String {
     val opponentName = game.opponentName(myIdentity)
     return when (game.status) {
@@ -631,10 +638,14 @@ private fun goStatusText(
             else -> stringResource(R.string.go_status_game_over)
         }
         "draw" -> stringResource(R.string.go_status_draw_text)
-        "resigned" -> if (game.winner == myIdentity) {
-            stringResource(R.string.go_status_resigned_opponent, opponentName)
-        } else {
-            stringResource(R.string.go_status_resigned_self, opponentName)
+        "resigned" -> when {
+            resignedBy == myIdentity ->
+                stringResource(R.string.go_status_resigned_self, opponentName)
+            !resignedBy.isNullOrBlank() ->
+                stringResource(R.string.go_status_resigned_opponent, opponentName)
+            game.winner == myIdentity ->
+                stringResource(R.string.go_status_resigned_opponent, opponentName)
+            else -> stringResource(R.string.go_status_resigned_self, opponentName)
         }
         else -> if (isMyTurn) {
             stringResource(R.string.go_status_your_move)
@@ -768,6 +779,9 @@ private fun drawOfferBanner(
     onAccept: () -> Unit,
     onDecline: () -> Unit,
 ): (@Composable () -> Unit)? {
+    // The server leaves draw_offer set on a game that ended some other way,
+    // so a resignation would otherwise keep offering a draw nobody can take.
+    if (game.status != "active") return null
     val drawOffer = game.drawOffer ?: return null
     if (drawOffer.isBlank()) return null
     return {
