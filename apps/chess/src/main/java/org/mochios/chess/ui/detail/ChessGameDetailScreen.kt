@@ -56,6 +56,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -78,6 +79,7 @@ import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
@@ -97,6 +99,7 @@ import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.detail.board.CapturedPiecesStrip
 import org.mochios.chess.ui.detail.board.ChessBoard
 import org.mochios.chess.ui.detail.board.capturedPiecesFromFen
+import org.mochios.chess.ui.router.CHESS_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
@@ -111,6 +114,7 @@ fun ChessGameDetailScreen(
     viewModel: ChessGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
@@ -150,7 +154,10 @@ fun ChessGameDetailScreen(
                     }
                 }
                 is ChessGameEvent.NavigateUp -> {
-                    navController.popBackStack()
+                    LastViewedStore.clear(context, CHESS_FEATURE)
+                    navController.navigate(ChessApp.gameDetail(LastViewedStore.ALL)) {
+                        popUpTo(ChessApp.GAME) { inclusive = true }
+                    }
                 }
             }
         }

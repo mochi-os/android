@@ -43,6 +43,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -57,6 +58,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
@@ -64,13 +66,15 @@ import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.detail.ChessGameDetailScreen
 import org.mochios.chess.ui.components.chessDrawerItems
+import org.mochios.chess.ui.router.CHESS_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
  * Chess shell: the drawer holds every game, the pane beside it holds the
- * selected one. An empty [gameId] — nothing picked, or no games to pick —
- * leaves the empty state in that pane. Reloads on foreground so a game
- * started on [ChessApp.NEW_GAME] appears in the drawer.
+ * selected one. A [gameId] of [LastViewedStore.ALL] — or none at all — leaves
+ * the empty state in that pane. The open game is remembered, so the next
+ * launch reopens it. Reloads on foreground so a game started on
+ * [ChessApp.NEW_GAME] appears in the drawer.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -86,9 +90,17 @@ fun ChessGameListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val selectedGameId = gameId.takeUnless { id -> id == LastViewedStore.ALL }.orEmpty()
     var showAbout by remember { mutableStateOf(false) }
     val openSidebarLabel = stringResource(R.string.chess_open_sidebar)
     val notificationsLabel = stringResource(MochiR.string.notifications_open)
+
+    LaunchedEffect(selectedGameId) {
+        if (selectedGameId.isNotEmpty()) {
+            LastViewedStore.set(context, CHESS_FEATURE, selectedGameId)
+        }
+    }
 
     // Reload when the screen returns to the foreground, most importantly after
     // starting a game on the new-game screen.
@@ -119,15 +131,12 @@ fun ChessGameListScreen(
             activeGames = uiState.activeSidebar,
             completedGames = uiState.completedSidebar,
         ),
-        selectedId = gameId,
+        selectedId = selectedGameId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            if (item.id != gameId) {
+            if (item.id != selectedGameId) {
                 navController.navigate(ChessApp.gameDetail(item.id)) {
-                    // Swap the open game rather than stack another one, so
-                    // Back always lands on the empty pane, not on whichever
-                    // games were opened before it.
-                    popUpTo(ChessApp.HOME)
+                    popUpTo(ChessApp.GAME) { inclusive = true }
                     launchSingleTop = true
                 }
             }
@@ -159,7 +168,7 @@ fun ChessGameListScreen(
             )
         },
     ) {
-        if (gameId.isNotEmpty()) {
+        if (selectedGameId.isNotEmpty()) {
             ChessGameDetailScreen(
                 navController = navController,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },

@@ -28,6 +28,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -36,6 +37,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -48,17 +50,20 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.words.R
 import org.mochios.words.ui.detail.WordsGameDetailScreen
 import org.mochios.words.ui.components.wordsDrawerItems
+import org.mochios.words.ui.router.WORDS_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
  * Words shell: the drawer holds every game, the pane beside it holds the
- * selected one. An empty [gameId] — nothing picked, or no games to pick —
- * leaves the empty state in that pane.
+ * selected one. A [gameId] of [LastViewedStore.ALL] — or none at all — leaves
+ * the empty state in that pane. The open game is remembered, so the next
+ * launch reopens it.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -75,7 +80,15 @@ fun WordsGameListScreen(
     val uiState by viewModel.uiState.collectAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val selectedGameId = gameId.takeUnless { id -> id == LastViewedStore.ALL }.orEmpty()
     var showAbout by remember { mutableStateOf(false) }
+
+    LaunchedEffect(selectedGameId) {
+        if (selectedGameId.isNotEmpty()) {
+            LastViewedStore.set(context, WORDS_FEATURE, selectedGameId)
+        }
+    }
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -93,10 +106,10 @@ fun WordsGameListScreen(
             games = uiState.games,
             myIdentity = uiState.myIdentity,
         ),
-        selectedId = gameId,
+        selectedId = selectedGameId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
-            if (item.id != gameId) onGameClick(item.id)
+            if (item.id != selectedGameId) onGameClick(item.id)
         },
         actions = {
             DrawerActionRow(
@@ -133,9 +146,9 @@ fun WordsGameListScreen(
             )
         },
     ) {
-        if (gameId.isNotEmpty()) {
+        if (selectedGameId.isNotEmpty()) {
             WordsGameDetailScreen(
-                gameId = gameId,
+                gameId = selectedGameId,
                 onBack = onGameClosed,
                 onOpenNotifications = onOpenNotifications,
                 onLogout = onLogout,

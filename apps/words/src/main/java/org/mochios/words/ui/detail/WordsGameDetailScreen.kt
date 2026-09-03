@@ -85,6 +85,7 @@ import org.mochios.android.ui.components.GameChatMessage
 import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -104,6 +105,7 @@ import org.mochios.words.model.GameMessage
 import org.mochios.words.ui.detail.board.MoveComposer
 import org.mochios.words.ui.detail.board.TileRack
 import org.mochios.words.ui.detail.board.WordsBoard
+import org.mochios.words.ui.router.WORDS_FEATURE
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -117,6 +119,7 @@ fun WordsGameDetailScreen(
     viewModel: WordsGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
     val game = state.game
     val snackbar = remember { SnackbarHostState() }
 
@@ -177,7 +180,10 @@ fun WordsGameDetailScreen(
         }
     }
     LaunchedEffect(state.gameDeleted) {
-        if (state.gameDeleted) onBack()
+        if (state.gameDeleted) {
+            LastViewedStore.clear(context, WORDS_FEATURE)
+            onBack()
+        }
     }
 
     Scaffold(

@@ -12,9 +12,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.go.ui.list.GoGameListScreen
 import org.mochios.go.ui.newgame.NewGoGameScreen
+import org.mochios.go.ui.router.GoRouter
 
 object GoApp {
-    /** Landing screen — the active + completed games list. */
+    /** Launcher entry point — resolves the last-viewed game and steps aside. */
     const val HOME = "go"
     const val GAME = "go/{gameId}"
 
@@ -35,13 +36,11 @@ fun NavGraphBuilder.goNavGraph(
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(GoApp.HOME) {
-        GoGameListScreen(
-            navController = navController,
-            gameId = "",
-            onLogout = onLogout,
-            onOpenNotifications = onOpenNotifications,
-            onOpenLink = onOpenLink,
-        )
+        GoRouter(onResolve = { gameId ->
+            navController.navigate(GoApp.gameDetail(gameId)) {
+                popUpTo(GoApp.HOME) { inclusive = true }
+            }
+        })
     }
 
     composable(GoApp.NEW_GAME) {

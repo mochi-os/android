@@ -11,10 +11,13 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.words.ui.list.WordsGameListScreen
 import org.mochios.words.ui.newgame.NewWordsGameScreen
+import org.mochios.words.ui.router.WordsRouter
 
 object WordsApp {
+    /** Launcher entry point — resolves the last-viewed game and steps aside. */
     const val HOME = "words"
     const val GAME = "words/{gameId}"
 
@@ -31,15 +34,11 @@ fun NavGraphBuilder.wordsNavGraph(
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(WordsApp.HOME) {
-        WordsGameListScreen(
-            gameId = "",
-            onGameClick = { gameId -> navController.navigate(WordsApp.gameDetail(gameId)) },
-            onGameClosed = { navController.popBackStack() },
-            onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
-            onLogout = onLogout,
-            onOpenNotifications = onOpenNotifications,
-            onOpenLink = onOpenLink,
-        )
+        WordsRouter(onResolve = { gameId ->
+            navController.navigate(WordsApp.gameDetail(gameId)) {
+                popUpTo(WordsApp.HOME) { inclusive = true }
+            }
+        })
     }
 
     composable(WordsApp.NEW_GAME) {
@@ -71,14 +70,15 @@ fun NavGraphBuilder.wordsNavGraph(
             gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
             onGameClick = { gameId ->
                 navController.navigate(WordsApp.gameDetail(gameId)) {
-                    // Swap the open game rather than stack another one, so
-                    // Back always lands on the empty pane, not on whichever
-                    // games were opened before it.
-                    popUpTo(WordsApp.HOME)
+                    popUpTo(WordsApp.GAME) { inclusive = true }
                     launchSingleTop = true
                 }
             },
-            onGameClosed = { navController.popBackStack() },
+            onGameClosed = {
+                navController.navigate(WordsApp.gameDetail(LastViewedStore.ALL)) {
+                    popUpTo(WordsApp.GAME) { inclusive = true }
+                }
+            },
             onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
             onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,

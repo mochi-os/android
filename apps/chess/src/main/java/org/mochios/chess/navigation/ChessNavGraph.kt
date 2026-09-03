@@ -12,9 +12,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.chess.ui.list.ChessGameListScreen
 import org.mochios.chess.ui.newgame.NewChessGameScreen
+import org.mochios.chess.ui.router.ChessRouter
 
 object ChessApp {
-    /** Launcher entry point — the game list. */
+    /** Launcher entry point — resolves the last-viewed game and steps aside. */
     const val HOME = "chess"
 
     /** Entity-context route pattern for the per-game detail screen. */
@@ -34,13 +35,11 @@ fun NavGraphBuilder.chessNavGraph(
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(ChessApp.HOME) {
-        ChessGameListScreen(
-            navController = navController,
-            gameId = "",
-            onLogout = onLogout,
-            onOpenNotifications = onOpenNotifications,
-            onOpenLink = onOpenLink,
-        )
+        ChessRouter(onResolve = { gameId ->
+            navController.navigate(ChessApp.gameDetail(gameId)) {
+                popUpTo(ChessApp.HOME) { inclusive = true }
+            }
+        })
     }
 
     composable(ChessApp.NEW_GAME) {

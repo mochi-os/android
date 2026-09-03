@@ -54,6 +54,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -70,6 +71,7 @@ import org.mochios.android.ui.components.GameChatPanel
 import org.mochios.android.ui.components.GameHeader
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameHeaderStoneDot
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
@@ -87,6 +89,7 @@ import org.mochios.go.model.Game
 import org.mochios.go.model.GameMessage
 import org.mochios.go.navigation.GoApp
 import org.mochios.go.ui.detail.board.GoBoard
+import org.mochios.go.ui.router.GO_FEATURE
 import org.mochios.android.R as MochiR
 
 /**
@@ -103,6 +106,7 @@ fun GoGameDetailScreen(
     viewModel: GoGameViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
+    val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
@@ -137,8 +141,12 @@ fun GoGameDetailScreen(
                         // Rematch replaces the finished game in the back stack.
                         popUpTo(GoApp.HOME)
                     }
-                is GoGameDetailEvent.NavigateBack ->
-                    navController.popBackStack()
+                is GoGameDetailEvent.NavigateBack -> {
+                    LastViewedStore.clear(context, GO_FEATURE)
+                    navController.navigate(GoApp.gameDetail(LastViewedStore.ALL)) {
+                        popUpTo(GoApp.GAME) { inclusive = true }
+                    }
+                }
             }
         }
     }
