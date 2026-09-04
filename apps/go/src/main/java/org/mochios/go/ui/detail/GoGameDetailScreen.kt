@@ -60,6 +60,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -152,6 +155,21 @@ fun GoGameDetailScreen(
                 }
             }
         }
+    }
+
+    // Frames that land while the app is backgrounded are gone by the time it
+    // comes back — the socket reconnects but replays nothing — so refetch on
+    // resume rather than leaving the board on the position it had.
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                viewModel.loadGame()
+                viewModel.loadMessages()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
     // Open a fresh WebSocket once the game has loaded (we need the key).
