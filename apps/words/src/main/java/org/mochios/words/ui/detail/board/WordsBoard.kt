@@ -28,7 +28,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
@@ -94,8 +94,8 @@ fun WordsBoard(
         Box(
             modifier = Modifier
                 .size(side)
-                .shadow(elevation = 2.dp, shape = shape)
-                .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.6f), shape)
+                .clip(shape)
+                .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), shape)
                 .onGloballyPositioned { lc ->
                     coords = lc
                     val bounds = lc.boundsInRoot()
@@ -396,7 +396,8 @@ private fun premiumTextColor(t: PremiumType): Color = when (t) {
     else -> Color(0xFF888888)
 }
 
-private val BOARD_CORNER = 8.dp
+/** Board corner radius, matching the chess and go boards. */
+private val BOARD_CORNER = 6.dp
 private val BOARD_BG = Color(0xFFF7F2E7)
 private val TILE_BG = Color(0xFFEFCB94)
 private val PENDING_BG = Color(0xFFFBBF24)

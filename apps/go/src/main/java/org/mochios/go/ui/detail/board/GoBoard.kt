@@ -6,12 +6,16 @@
 package org.mochios.go.ui.detail.board
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -21,7 +25,6 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.drawText
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 import org.mochios.go.R
@@ -124,7 +127,7 @@ fun GoBoard(
         // outer stones don't bump against the edge. Cell pitch is "total
         // pixels minus padding on each side" divided by the number of
         // gaps (size - 1).
-        val padding = sidePx * 0.05f
+        val padding = sidePx * 0.07f
         val boardPx = sidePx - padding * 2
         val cellPx = boardPx / (size - 1).coerceAtLeast(1)
 
@@ -156,9 +159,16 @@ fun GoBoard(
             Modifier
         }
 
+        val shape = RoundedCornerShape(BOARD_CORNER)
         Canvas(
             modifier = Modifier
                 .matchParentSize()
+                .clip(shape)
+                .border(
+                    width = 1.dp,
+                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                    shape = shape,
+                )
                 .semantics { contentDescription = description }
                 .then(tapModifier)
         ) {
@@ -279,10 +289,13 @@ fun GoBoard(
                 }
             }
 
-            // Coordinates. The 5% padding above exists to leave room for these;
-            // until now nothing drew them. Letters along the top and bottom,
-            // numbers counting up from the bottom, as web does.
-            val labelStyle = TextStyle(color = GridLine, fontSize = (cellPx * 0.30f).toSp())
+            // Coordinates sit centred in the margin the padding leaves, the
+            // way the web board spaces them: letters above and below, numbers
+            // to either side, none of them touching the grid or the edge.
+            val labelPx = min(padding * 0.62f, cellPx * 0.5f)
+            val labelStyle = TextStyle(color = GridLine, fontSize = labelPx.toSp())
+            val topBand = padding / 2f
+            val bottomBand = padding + boardPx + padding / 2f
             for (i in 0 until size) {
                 val letter = COLUMN_LETTERS.getOrNull(i)?.toString() ?: continue
                 val number = (size - i).toString()
@@ -290,21 +303,31 @@ fun GoBoard(
                 val y = padding + i * cellPx
                 val column = textMeasurer.measure(letter, labelStyle)
                 val row = textMeasurer.measure(number, labelStyle)
-                // Top and bottom.
-                drawText(column, topLeft = Offset(x - column.size.width / 2f, padding * 0.05f))
                 drawText(
                     column,
                     topLeft = Offset(
                         x - column.size.width / 2f,
-                        padding + boardPx + padding * 0.05f - column.size.height * 0.1f,
+                        topBand - column.size.height / 2f,
                     ),
                 )
-                // Left and right.
-                drawText(row, topLeft = Offset(padding * 0.05f, y - row.size.height / 2f))
+                drawText(
+                    column,
+                    topLeft = Offset(
+                        x - column.size.width / 2f,
+                        bottomBand - column.size.height / 2f,
+                    ),
+                )
                 drawText(
                     row,
                     topLeft = Offset(
-                        padding + boardPx + padding * 0.10f,
+                        topBand - row.size.width / 2f,
+                        y - row.size.height / 2f,
+                    ),
+                )
+                drawText(
+                    row,
+                    topLeft = Offset(
+                        bottomBand - row.size.width / 2f,
                         y - row.size.height / 2f,
                     ),
                 )
@@ -312,3 +335,6 @@ fun GoBoard(
         }
     }
 }
+
+/** Board corner radius, matching the chess and words boards. */
+private val BOARD_CORNER = 6.dp
