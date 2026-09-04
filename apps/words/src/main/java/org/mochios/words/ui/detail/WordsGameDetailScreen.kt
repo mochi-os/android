@@ -118,6 +118,7 @@ import org.mochios.android.R as MochiR
 fun WordsGameDetailScreen(
     @Suppress("UNUSED_PARAMETER") gameId: String,
     onBack: () -> Unit,
+    onOpenGame: (String) -> Unit,
     onOpenNotifications: () -> Unit = {},
     @Suppress("UNUSED_PARAMETER") onLogout: () -> Unit = {},
     onOpenDrawer: () -> Unit,
@@ -176,12 +177,14 @@ fun WordsGameDetailScreen(
     }
 
     // ─── Rematch navigation ──────────────────────────────────────────
-    // When a rematch is created the view model surfaces the new game id;
-    // we navigate back and let the list/sidebar route to the new detail.
+    // The view model surfaces the new game's id; open it, the way chess and go
+    // do. Going back instead dropped the id and left the finished game on
+    // screen, with nothing pointing at the game just created.
     LaunchedEffect(state.createdRematchId) {
-        if (state.createdRematchId != null) {
+        val rematchId = state.createdRematchId
+        if (rematchId != null) {
             viewModel.consumeRematch()
-            onBack()
+            onOpenGame(rematchId)
         }
     }
     LaunchedEffect(state.gameDeleted) {

@@ -151,6 +151,7 @@ fun WordsGameListScreen(
             WordsGameDetailScreen(
                 gameId = selectedGameId,
                 onBack = onGameClosed,
+                onOpenGame = onGameClick,
                 onOpenNotifications = onOpenNotifications,
                 onLogout = onLogout,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
