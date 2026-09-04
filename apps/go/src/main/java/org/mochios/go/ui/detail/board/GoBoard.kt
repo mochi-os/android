@@ -97,6 +97,9 @@ fun GoBoard(
     val size = game?.size ?: boardSize
     val starPoints = STAR_POINTS[size] ?: emptyList()
     val isActive = gameStatus == "active"
+    // A resignation ends the game before anything is counted, so the board had
+    // no territory to show — it drew a marker on every empty point instead.
+    val isScored = gameStatus == "finished" || gameStatus == "draw"
     val canPlay = isActive && isMyTurn && game != null
 
     // The canvas carried no semantics at all, so the board was invisible to a
@@ -109,8 +112,8 @@ fun GoBoard(
     val textMeasurer = rememberTextMeasurer()
     // Territory is only meaningful once the game is scored, and only web showed
     // it — the engine has computed it all along with no reader.
-    val territory = remember(fen, isActive) {
-        if (isActive || game == null) null else runCatching { game.territory() }.getOrNull()
+    val territory = remember(fen, isScored) {
+        if (!isScored || game == null) null else runCatching { game.territory() }.getOrNull()
     }
 
     BoxWithConstraints(modifier = modifier.aspectRatio(1f)) {
