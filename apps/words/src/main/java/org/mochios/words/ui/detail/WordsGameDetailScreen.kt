@@ -13,7 +13,9 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -303,9 +305,11 @@ fun WordsGameDetailScreen(
 
     if (state.blankPromptOpen) {
         // Letter picker for a blank tile: 26 buttons in a 7-wide grid, narrower
-        // than the web's 9-wide so a phone screen still fits a row. The chosen
-        // letter is what the board shows; the rack tile stays '_' so the engine
-        // still scores the blank as zero.
+        // than the web's 9-wide so a phone screen still fits a row. The buttons
+        // share the dialog's width rather than taking a fixed 40 dp, which ran
+        // the last column off the edge. The chosen letter is what the board
+        // shows; the rack tile stays '_' so the engine still scores the blank
+        // as zero.
         MochiAlertDialog(
             onDismissRequest = { viewModel.cancelBlankPrompt() },
             title = stringResource(R.string.words_detail_blank_title),
@@ -332,7 +336,9 @@ fun WordsGameDetailScreen(
                             for (letter in row) {
                                 MochiOutlinedButton(
                                     onClick = { viewModel.selectBlankLetter(letter) },
-                                    modifier = Modifier.size(40.dp),
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .aspectRatio(1f),
                                     contentPadding = PaddingValues(0.dp),
                                 ) {
                                     Text(
@@ -342,6 +348,9 @@ fun WordsGameDetailScreen(
                                         ),
                                     )
                                 }
+                            }
+                            repeat(BLANK_GRID_COLUMNS - row.size) { _ ->
+                                Spacer(modifier = Modifier.weight(1f))
                             }
                         }
                     }
@@ -1129,3 +1138,6 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
 
 /** Board width cap, matching chess and go so every board reads the same size. */
 private val BOARD_MAX_WIDTH = 560.dp
+
+/** Letters per row in the blank-tile picker. */
+private const val BLANK_GRID_COLUMNS = 7
