@@ -9,6 +9,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
@@ -74,9 +76,11 @@ fun GameTopBarTitle(
 }
 
 /**
- * The strip under a detail screen's top bar: whose move it is on the left,
- * the [stats] chips flush right on the same line. [myTurn] draws a coloured
- * dot before the status; pass null once the game ends.
+ * The strip under a detail screen's top bar: the [stats] chips wrapping from
+ * the left, with whose move it is on the line below. A long player name or a
+ * four-player game used to squeeze both onto one line, leaving the status
+ * broken across two characters and the last chip cut to a dot. [myTurn] draws
+ * a coloured dot before the status; pass null once the game ends.
  */
 @Composable
 fun GameStatusBar(
@@ -85,17 +89,23 @@ fun GameStatusBar(
     modifier: Modifier = Modifier,
     stats: @Composable RowScope.() -> Unit,
 ) {
-    Row(
+    Column(
         modifier = modifier
             .fillMaxWidth()
             // 8 dp here plus the 8 dp its callers inset the pane by puts the
-            // status text and the last chip on the same 16 dp gutter as the
-            // top bar's hamburger and overflow glyphs.
+            // chips and the status on the same 16 dp gutter as the top bar's
+            // hamburger and overflow glyphs.
             .padding(horizontal = 8.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
+        verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
+        FlowRow(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+            content = stats,
+        )
         Row(
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             if (myTurn != null) {
@@ -120,12 +130,6 @@ fun GameStatusBar(
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        Spacer(Modifier.width(8.dp))
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            content = stats,
-        )
     }
 }
 
