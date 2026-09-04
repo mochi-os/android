@@ -140,7 +140,9 @@ fun GoGameDetailScreen(
                 is GoGameDetailEvent.OpenGame ->
                     navController.navigate(GoApp.gameDetail(event.gameId)) {
                         // Rematch replaces the finished game in the back stack.
-                        popUpTo(GoApp.HOME)
+                        // The router pops HOME on the way in, so popping to it
+                        // here matched nothing and stacked the new game on top.
+                        popUpTo(GoApp.GAME) { inclusive = true }
                     }
                 is GoGameDetailEvent.NavigateBack -> {
                     LastViewedStore.clear(context, GO_FEATURE)

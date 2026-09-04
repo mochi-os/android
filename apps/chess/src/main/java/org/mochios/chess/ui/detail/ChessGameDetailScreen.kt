@@ -150,9 +150,11 @@ fun ChessGameDetailScreen(
                 is ChessGameEvent.Toast -> snackbarHostState.showSnackbar(event.message)
                 is ChessGameEvent.OpenGame -> {
                     // Pop the current game and push the new one — same
-                    // shape as the web's `navigate({to: '/$gameId'})`.
+                    // shape as the web's `navigate({to: '/$gameId'})`. The
+                    // router pops HOME on the way in, so popping to it here
+                    // matched nothing and left the finished game underneath.
                     navController.navigate(ChessApp.gameDetail(event.gameId)) {
-                        popUpTo(ChessApp.HOME)
+                        popUpTo(ChessApp.GAME) { inclusive = true }
                         launchSingleTop = true
                     }
                 }
