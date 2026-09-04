@@ -80,6 +80,25 @@ fun getPlayerNames(game: GameListItem, myIdentity: String): String {
     return names.joinToString(", ")
 }
 
+/**
+ * Identity of the first player who is not the viewer, used for the avatar on a
+ * game row. Falls back to the player slot when the viewer's identity is not
+ * known yet; empty when the game has no other player.
+ *
+ * @param game the game to read.
+ * @param myIdentity the viewer's identity, empty when it has not loaded.
+ * @return the opponent's identity, or an empty string.
+ */
+fun getOpponentId(game: GameListItem, myIdentity: String): String {
+    for (slot in 1..game.player_count) {
+        val id = playerId(game, slot).orEmpty()
+        if (id.isEmpty()) continue
+        val isMe = if (myIdentity.isNotEmpty()) id == myIdentity else slot == game.my_player_number
+        if (!isMe) return id
+    }
+    return ""
+}
+
 private fun playerId(game: GameListItem, slot: Int): String? = when (slot) {
     1 -> game.player1
     2 -> game.player2

@@ -10,6 +10,7 @@ import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.words.R
 import org.mochios.words.model.GameListItem
+import org.mochios.words.model.getOpponentId
 import org.mochios.words.model.getPlayerNames
 import org.mochios.words.model.playerScore
 
@@ -36,9 +37,12 @@ private fun GameListItem.toDrawerItem(myIdentity: String, section: String): Draw
             append(playerScore(this@toDrawerItem, i))
         }
     }
+    val opponentId = getOpponentId(this, myIdentity)
     return DrawerItem(
         id = fingerprint?.ifBlank { null } ?: id,
         title = "$names ($scores)",
+        avatarUrl = if (opponentId.isNotEmpty()) "/people/$opponentId/-/avatar" else null,
+        seed = opponentId,
         section = section,
     )
 }

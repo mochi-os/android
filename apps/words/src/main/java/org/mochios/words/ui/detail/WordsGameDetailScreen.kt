@@ -204,7 +204,14 @@ fun WordsGameDetailScreen(
             TopAppBar(
                 title = {
                     if (header != null) {
-                        GameTopBarTitle(title = header.title)
+                        GameTopBarTitle(
+                            title = header.title,
+                            opponentFingerprint = header.opponentId.ifEmpty { null },
+                            opponentName = header.opponentName,
+                            avatarUrl = header.opponentId
+                                .ifEmpty { null }
+                                ?.let { id -> "/people/$id/-/avatar" },
+                        )
                     } else {
                         Text(
                             text = stringResource(R.string.words_detail_title),
@@ -1015,13 +1022,16 @@ data class WordsHeaderPlayer(
 
 /**
  * Full header model. Built by [buildHeaderModel] from a [Game] +
- * `myIdentity`; rendered by [WordsGameHeader].
+ * `myIdentity`; rendered by [WordsGameHeader]. [opponentId] and
+ * [opponentName] carry the first other player, for the top bar's avatar.
  */
 data class WordsHeaderModel(
     val title: String,
     val status: String,
     val players: List<WordsHeaderPlayer>,
     val tilesLeftLabel: String,
+    val opponentId: String,
+    val opponentName: String,
 )
 
 @Composable
@@ -1107,11 +1117,17 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         )
     }
 
+    val opponentSlot = (1..game.player_count).firstOrNull { num ->
+        !isMeForPlayer(num) && playerIdentity(num).isNotEmpty()
+    }
+
     return WordsHeaderModel(
         title = title,
         status = status,
         players = players,
         tilesLeftLabel = context.getString(R.string.words_detail_label_tiles_left, game.bag_count),
+        opponentId = opponentSlot?.let { num -> playerIdentity(num) }.orEmpty(),
+        opponentName = opponentSlot?.let { num -> playerName(num) }.orEmpty(),
     )
 }
 
