@@ -5,12 +5,9 @@
 
 package org.mochios.chess.ui.newgame
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,17 +15,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonAdd
-import androidx.compose.material.icons.filled.RadioButtonChecked
-import androidx.compose.material.icons.filled.RadioButtonUnchecked
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -39,23 +30,22 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.model.User
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
-import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.PersonPicker
 import org.mochios.chess.R
-import org.mochios.chess.model.NewGameFriend
 import org.mochios.android.R as MochiR
 
 /**
@@ -144,11 +134,26 @@ fun NewChessGameScreen(
                     onRetry = { viewModel.loadFriends() },
                 )
                 state.friends.isEmpty() -> NoFriendsBox(onAddFriends = onAddFriends)
-                else -> FriendsPicker(
-                    friends = state.friends,
-                    selectedId = state.selectedId,
-                    onSelect = viewModel::select,
-                )
+                else -> {
+                    val people = remember(state.friends) {
+                        state.friends.mapIndexed { index, friend ->
+                            User(id = index, name = friend.name, fingerprint = friend.id)
+                        }
+                    }
+                    PersonPicker(
+                        selectedId = state.selectedId.takeIf { id -> id.isNotBlank() },
+                        selectedName = state.friends
+                            .firstOrNull { friend -> friend.id == state.selectedId }
+                            ?.name,
+                        members = people,
+                        onSelect = { user -> viewModel.select(user.fingerprint.orEmpty()) },
+                        onClear = { viewModel.select("") },
+                        // Chess plays with the friends the server listed; there
+                        // is no directory lookup behind this picker.
+                        onSearch = { emptyList() },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
             }
         }
     }
@@ -203,83 +208,6 @@ private fun NoFriendsBox(onAddFriends: () -> Unit) {
                 Spacer(modifier = Modifier.size(8.dp))
                 Text(stringResource(R.string.chess_new_add_friends))
             }
-        }
-    }
-}
-
-@Composable
-private fun FriendsPicker(
-    friends: List<NewGameFriend>,
-    selectedId: String,
-    onSelect: (String) -> Unit,
-) {
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(vertical = 4.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        items(friends, key = { friend -> friend.id }) { friend ->
-            FriendRow(
-                friend = friend,
-                selected = friend.id == selectedId,
-                onClick = { onSelect(friend.id) },
-            )
-        }
-    }
-}
-
-@Composable
-private fun FriendRow(
-    friend: NewGameFriend,
-    selected: Boolean,
-    onClick: () -> Unit,
-) {
-    val borderColor = if (selected) {
-        MaterialTheme.colorScheme.primary
-    } else {
-        MaterialTheme.colorScheme.outlineVariant
-    }
-    MochiCard(
-        onClick = onClick,
-        shape = RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface,
-        ),
-        border = BorderStroke(1.dp, borderColor),
-        modifier = Modifier.fillMaxWidth(),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            Icon(
-                imageVector = if (selected) {
-                    Icons.Default.RadioButtonChecked
-                } else {
-                    Icons.Default.RadioButtonUnchecked
-                },
-                contentDescription = null,
-                tint = if (selected) {
-                    MaterialTheme.colorScheme.primary
-                } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant
-                },
-            )
-            Icon(
-                imageVector = Icons.Default.Person,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            Text(
-                text = friend.name,
-                style = MaterialTheme.typography.bodyMedium,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
         }
     }
 }

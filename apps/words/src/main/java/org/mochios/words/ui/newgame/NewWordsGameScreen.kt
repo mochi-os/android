@@ -6,7 +6,6 @@
 package org.mochios.words.ui.newgame
 
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,7 +27,6 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonAddAlt
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -42,6 +40,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -49,22 +48,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.model.User
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MultiPersonPicker
 import org.mochios.words.R
 import org.mochios.words.model.NewGameFriend
 import org.mochios.android.R as MochiR
 
-/**
- * Opponent selection is inlined because the lib's `PersonPicker` is
- * single-select.
- */
+/** Opponents a words game can hold besides the player: four seats, minus one. */
+private const val MAX_OPPONENTS = 3
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewWordsGameScreen(
@@ -86,7 +85,7 @@ fun NewWordsGameScreen(
     }
 
     val isCreating = uiState.isCreating
-    val canSubmit = selectedFriends.size in 1..3 && !isCreating
+    val canSubmit = selectedFriends.size in 1..MAX_OPPONENTS && !isCreating
 
     Scaffold(
         topBar = {
@@ -190,18 +189,26 @@ fun NewWordsGameScreen(
                 }
 
                 else -> {
-                    FriendsList(
-                        friends = uiState.friends,
+                    val people = remember(uiState.friends) {
+                        uiState.friends.mapIndexed { index, friend ->
+                            User(id = index, name = friend.name, fingerprint = friend.id)
+                        }
+                    }
+                    MultiPersonPicker(
                         selectedIds = selectedFriends,
-                        onToggle = { id ->
+                        members = people,
+                        onToggle = { user ->
+                            val id = user.fingerprint ?: return@MultiPersonPicker
                             selectedFriends = selectedFriends.toMutableSet().apply {
-                                if (contains(id)) {
-                                    remove(id)
-                                } else if (size < 3) {
-                                    add(id)
-                                }
+                                if (!remove(id)) add(id)
                             }
                         },
+                        onClear = { selectedFriends = emptySet() },
+                        // Words plays with friends the server already listed;
+                        // there is no directory lookup behind this picker.
+                        onSearch = { emptyList() },
+                        maxSelection = MAX_OPPONENTS,
+                        modifier = Modifier.fillMaxWidth(),
                     )
                 }
             }
@@ -236,49 +243,6 @@ fun NewWordsGameScreen(
                     label = stringResource(R.string.words_new_game_language_us),
                     selected = language == "en_US",
                     onClick = { language = "en_US" },
-                    modifier = Modifier.weight(1f),
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun FriendsList(
-    friends: List<NewGameFriend>,
-    selectedIds: Set<String>,
-    onToggle: (String) -> Unit,
-) {
-    // A plain Column, not a LazyColumn: the page already scrolls, and
-    // nesting a second vertical scroller inside it crashes.
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(8.dp))
-            .clip(RoundedCornerShape(8.dp))
-            .padding(vertical = 4.dp),
-    ) {
-        friends.forEach { friend ->
-            val selected = friend.id in selectedIds
-            val disabled = !selected && selectedIds.size >= 3
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable(enabled = !disabled) { onToggle(friend.id) }
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Checkbox(
-                    checked = selected,
-                    onCheckedChange = { if (!disabled) onToggle(friend.id) },
-                    enabled = !disabled,
-                )
-                Spacer(modifier = Modifier.size(4.dp))
-                Text(
-                    text = friend.name,
-                    style = MaterialTheme.typography.bodyLarge,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f),
                 )
             }

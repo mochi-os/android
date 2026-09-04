@@ -5,7 +5,6 @@
 
 package org.mochios.go.ui.newgame
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,7 +25,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -43,17 +41,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.model.User
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.PersonPicker
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.go.R
 import org.mochios.go.model.NewGameFriend
@@ -200,19 +198,26 @@ fun NewGoGameScreen(
                 }
 
                 else -> {
-                    // A plain Column, not a LazyColumn: the page already
-                    // scrolls, and nesting a second scroller in it crashes.
-                    Column(modifier = Modifier.fillMaxWidth()) {
-                        uiState.friends.forEach { friend ->
-                            FriendRow(
-                                friend = friend,
-                                selected = selectedOpponent?.id == friend.id,
-                                enabled = !isPending,
-                                onSelect = { selectedOpponent = friend },
-                            )
-                            HorizontalDivider()
+                    val people = remember(uiState.friends) {
+                        uiState.friends.mapIndexed { index, friend ->
+                            User(id = index, name = friend.name, fingerprint = friend.id)
                         }
                     }
+                    PersonPicker(
+                        selectedId = selectedOpponent?.id,
+                        selectedName = selectedOpponent?.name,
+                        members = people,
+                        onSelect = { user ->
+                            selectedOpponent = uiState.friends.firstOrNull { friend ->
+                                friend.id == user.fingerprint
+                            }
+                        },
+                        onClear = { selectedOpponent = null },
+                        // Go plays with the friends the server listed; there is
+                        // no directory lookup behind this picker.
+                        onSearch = { emptyList() },
+                        modifier = Modifier.fillMaxWidth(),
+                    )
                 }
             }
 
@@ -265,44 +270,6 @@ fun NewGoGameScreen(
                 modifier = Modifier.fillMaxWidth(),
             )
         }
-    }
-}
-
-@Composable
-private fun FriendRow(
-    friend: NewGameFriend,
-    selected: Boolean,
-    enabled: Boolean,
-    onSelect: () -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(enabled = enabled, onClick = onSelect)
-            .padding(horizontal = 4.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-        // Material 3 RadioButton would have implied "form" rules around
-        // a/b/c selection group sizing; sticking to a clickable Row keeps
-        // the look closer to the web dialog where the row itself is the
-        // hit target.
-        Text(
-            text = if (selected) "•" else " ",
-            style = MaterialTheme.typography.titleLarge,
-            color = if (selected) {
-                MaterialTheme.colorScheme.primary
-            } else {
-                MaterialTheme.colorScheme.onSurfaceVariant
-            },
-            modifier = Modifier.size(20.dp),
-        )
-        Text(
-            text = friend.name,
-            style = MaterialTheme.typography.bodyLarge,
-            fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
-            modifier = Modifier.weight(1f),
-        )
     }
 }
 

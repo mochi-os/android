@@ -34,12 +34,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -78,10 +80,111 @@ fun PersonPicker(
     onSearch: suspend (String) -> List<User>,
     modifier: Modifier = Modifier
 ) {
+    // Prefer the just-picked user's name so the box updates immediately, before
+    // the parent's resolver catches up; fall back to the resolved name, then id.
+    var lastSelected by remember { mutableStateOf<User?>(null) }
+    val hasSelection = !selectedId.isNullOrBlank()
+    val displayName = when {
+        !hasSelection -> null
+        lastSelected != null && lastSelected?.fingerprint == selectedId -> lastSelected?.name
+        !selectedName.isNullOrBlank() -> selectedName
+        else -> selectedId
+    }
+
+    PersonPickerField(
+        displayText = displayName,
+        avatarId = selectedId.takeIf { hasSelection },
+        selectedIds = setOfNotNull(selectedId?.takeIf { it.isNotBlank() }),
+        members = members,
+        onRowClick = { user ->
+            lastSelected = user
+            onSelect(user)
+        },
+        onClear = {
+            lastSelected = null
+            onClear()
+        },
+        onSearch = onSearch,
+        closeOnSelect = true,
+        showNoneRow = hasSelection,
+        modifier = modifier
+    )
+}
+
+/**
+ * Multi-select person field. The popup is the one [PersonPicker] opens, but a
+ * row toggles rather than picks, the list stays open, and the field lists every
+ * name chosen. [maxSelection] caps the set; rows beyond it stop responding.
+ *
+ * @param selectedIds fingerprints currently chosen.
+ * @param members the people to list before any directory search.
+ * @param onToggle add or remove the tapped person.
+ * @param onClear drop every selection.
+ * @param onSearch directory lookup for a query of two characters or more.
+ * @param maxSelection how many people may be chosen at once.
+ */
+@Composable
+fun MultiPersonPicker(
+    selectedIds: Set<String>,
+    members: List<User>,
+    onToggle: (User) -> Unit,
+    onClear: () -> Unit,
+    onSearch: suspend (String) -> List<User>,
+    modifier: Modifier = Modifier,
+    maxSelection: Int = Int.MAX_VALUE
+) {
+    // Names of people picked from the directory are not in [members], so keep
+    // what was tapped; the field would otherwise fall back to showing an id.
+    val picked = remember { mutableStateMapOf<String, String>() }
+    val names = selectedIds.mapNotNull { id ->
+        members.firstOrNull { member -> member.fingerprint == id }?.name ?: picked[id]
+    }
+
+    PersonPickerField(
+        displayText = names.joinToString(", ").takeIf { it.isNotEmpty() },
+        avatarId = selectedIds.singleOrNull(),
+        selectedIds = selectedIds,
+        members = members,
+        onRowClick = { user ->
+            val id = user.fingerprint
+            if (id != null) picked[id] = user.name
+            onToggle(user)
+        },
+        onClear = {
+            picked.clear()
+            onClear()
+        },
+        onSearch = onSearch,
+        closeOnSelect = false,
+        showNoneRow = false,
+        canSelect = { user ->
+            user.fingerprint in selectedIds || selectedIds.size < maxSelection
+        },
+        modifier = modifier
+    )
+}
+
+/**
+ * The field and its popup, shared by [PersonPicker] and [MultiPersonPicker].
+ * [closeOnSelect] is what separates picking from toggling.
+ */
+@Composable
+private fun PersonPickerField(
+    displayText: String?,
+    avatarId: String?,
+    selectedIds: Set<String>,
+    members: List<User>,
+    onRowClick: (User) -> Unit,
+    onClear: () -> Unit,
+    onSearch: suspend (String) -> List<User>,
+    closeOnSelect: Boolean,
+    showNoneRow: Boolean,
+    modifier: Modifier = Modifier,
+    canSelect: (User) -> Boolean = { true }
+) {
     var expanded by remember { mutableStateOf(false) }
     var query by remember { mutableStateOf("") }
     var directory by remember { mutableStateOf<List<User>>(emptyList()) }
-    var lastSelected by remember { mutableStateOf<User?>(null) }
     val scope = rememberCoroutineScope()
     var searchJob by remember { mutableStateOf<Job?>(null) }
     var anchorWidth by remember { mutableIntStateOf(0) }
@@ -104,15 +207,7 @@ fun PersonPicker(
         (availablePx.coerceAtLeast(0).toDp() - 16.dp).coerceAtLeast(0.dp)
     }
 
-    val hasSelection = !selectedId.isNullOrBlank()
-    // Prefer the just-picked user's name so the box updates immediately, before
-    // the parent's resolver catches up; fall back to the resolved name, then id.
-    val displayName = when {
-        !hasSelection -> null
-        lastSelected != null && lastSelected?.fingerprint == selectedId -> lastSelected?.name
-        !selectedName.isNullOrBlank() -> selectedName
-        else -> selectedId
-    }
+    val hasSelection = selectedIds.isNotEmpty()
 
     val memberMatches = if (query.isBlank()) {
         members
@@ -153,17 +248,17 @@ fun PersonPicker(
                 }
         ) {
             MochiTextField(
-                value = displayName.orEmpty(),
+                value = displayText.orEmpty(),
                 onValueChange = {},
                 readOnly = true,
                 singleLine = true,
                 placeholder = { Text(stringResource(R.string.person_picker_select)) },
-                leadingIcon = if (hasSelection) {
+                leadingIcon = if (avatarId != null) {
                     {
                         EntityAvatar(
-                            name = displayName.orEmpty(),
-                            src = personAvatarPath(selectedId),
-                            seed = selectedId,
+                            name = displayText.orEmpty(),
+                            src = personAvatarPath(avatarId),
+                            seed = avatarId,
                             size = 24.dp
                         )
                     }
@@ -175,10 +270,7 @@ fun PersonPicker(
                 trailingIcon = if (hasSelection) {
                     {
                         MochiIconButton(
-                            onClick = {
-                                lastSelected = null
-                                onClear()
-                            },
+                            onClick = onClear,
                             modifier = Modifier.size(24.dp)
                         ) {
                             Icon(
@@ -254,13 +346,18 @@ fun PersonPicker(
                                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
                             )
                         } else {
+                            val rowClick: (User) -> Unit = { user ->
+                                if (canSelect(user)) {
+                                    onRowClick(user)
+                                    if (closeOnSelect) expanded = false
+                                }
+                            }
                             LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
                                 // "None" clears the current pick; hidden while
                                 // searching so it doesn't sit among results.
-                                if (hasSelection && query.isBlank()) {
+                                if (showNoneRow && query.isBlank()) {
                                     item(key = "none") {
                                         NoneRow(onClick = {
-                                            lastSelected = null
                                             onClear()
                                             expanded = false
                                         })
@@ -277,12 +374,9 @@ fun PersonPicker(
                                     items(memberMatches, key = { user -> "m-${user.fingerprint}" }) { user ->
                                         PersonRow(
                                             user = user,
-                                            selected = user.fingerprint == selectedId,
-                                            onClick = {
-                                                lastSelected = user
-                                                onSelect(user)
-                                                expanded = false
-                                            }
+                                            selected = user.fingerprint in selectedIds,
+                                            enabled = canSelect(user),
+                                            onClick = { rowClick(user) }
                                         )
                                     }
                                 }
@@ -297,12 +391,9 @@ fun PersonPicker(
                                     items(directoryMatches, key = { user -> "d-${user.fingerprint}" }) { user ->
                                         PersonRow(
                                             user = user,
-                                            selected = user.fingerprint == selectedId,
-                                            onClick = {
-                                                lastSelected = user
-                                                onSelect(user)
-                                                expanded = false
-                                            }
+                                            selected = user.fingerprint in selectedIds,
+                                            enabled = canSelect(user),
+                                            onClick = { rowClick(user) }
                                         )
                                     }
                                 }
@@ -348,12 +439,14 @@ private fun NoneRow(onClick: () -> Unit) {
 private fun PersonRow(
     user: User,
     selected: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    enabled: Boolean = true
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
+            .alpha(if (enabled) 1f else 0.4f)
+            .clickable(enabled = enabled, onClick = onClick)
             .background(
                 if (selected) {
                     MaterialTheme.colorScheme.secondaryContainer
