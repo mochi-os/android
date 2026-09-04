@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">کچھ دعوتیں مسترد نہیں کی جا سکیں</string>
     <string name="people_invitations_some_cancel_failed">کچھ دعوتیں منسوخ نہیں کی جا سکیں</string>
     <string name="people_profile_too_long">پروفائل بہت لمبی ہے</string>
+    <string name="people_invite_settings_load_failed">آپ کی دعوت کی پالیسی لوڈ کرنے میں ناکامی</string>
 </resources>

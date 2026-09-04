@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Afeerraawwan tokko tokko diiduun hin danda\'amne</string>
     <string name="people_invitations_some_cancel_failed">Afeerraawwan tokko tokko haquun hin danda\'amne</string>
     <string name="people_profile_too_long">Piroofaayiliin baay\'ee dheeraadha</string>
+    <string name="people_invite_settings_load_failed">Imaammata affeerraa kee fe\'achuu hin dandeenye</string>
 </resources>

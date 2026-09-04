@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Baadhi ya mialiko haikuweza kukataliwa</string>
     <string name="people_invitations_some_cancel_failed">Baadhi ya mialiko haikuweza kughairiwa</string>
     <string name="people_profile_too_long">Wasifu ni mrefu mno</string>
+    <string name="people_invite_settings_load_failed">Imeshindwa kupakia sera yako ya mwaliko</string>
 </resources>

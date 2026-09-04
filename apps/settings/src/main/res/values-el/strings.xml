@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Τελευταία εμφάνιση %1$s</string>
     <string name="notifprefs_device_app">%1$s · εφαρμογή</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_test_partial">Το δοκιμαστικό στάλθηκε σε %1$d από %2$d προορισμούς</string>
+    <string name="notifprefs_test_none">Δεν έχουν διαμορφωθεί προορισμοί</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">አንዳንድ ግብዣዎች ሊከለከሉ አልቻሉም</string>
     <string name="people_invitations_some_cancel_failed">አንዳንድ ግብዣዎች ሊሰረዙ አልቻሉም</string>
     <string name="people_profile_too_long">መገለጫው በጣም ረጅም ነው</string>
+    <string name="people_invite_settings_load_failed">የግብዣ ፖሊሲዎን መጫን አልተሳካም</string>
 </resources>

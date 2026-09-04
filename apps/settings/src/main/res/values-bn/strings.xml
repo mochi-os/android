@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">সর্বশেষ দেখা %1$s</string>
     <string name="notifprefs_device_app">%1$s · অ্যাপ</string>
     <string name="notifprefs_device_push">%1$s · পুশ</string>
+    <string name="notifprefs_test_partial">%2$dটির মধ্যে %1$dটি গন্তব্যে পরীক্ষা পাঠানো হয়েছে</string>
+    <string name="notifprefs_test_none">কোনো গন্তব্য কনফিগার করা নেই</string>
 </resources>

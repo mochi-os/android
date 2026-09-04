@@ -24,6 +24,7 @@ import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
 import org.mochios.settings.api.NotificationPrefsApi
+import org.mochios.settings.api.TestResult
 import javax.inject.Inject
 
 enum class NotifTab { CATEGORIES, TOPICS }
@@ -51,8 +52,8 @@ class NotificationPrefsViewModel @Inject constructor(
     // The destination count, not a finished sentence. The wording lives in the
     // Compose layer, where a <plurals> resource can inflect it for the reader's
     // language; a String built here can only ever be English.
-    private val _testSent = MutableSharedFlow<Int>(extraBufferCapacity = 4)
-    val testSent: SharedFlow<Int> = _testSent.asSharedFlow()
+    private val _testSent = MutableSharedFlow<TestResult>(extraBufferCapacity = 4)
+    val testSent: SharedFlow<TestResult> = _testSent.asSharedFlow()
 
     init { refresh() }
 
@@ -117,7 +118,7 @@ class NotificationPrefsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val result = api.testCategory(id = category.id).unwrapRaw()
-                _testSent.emit(result.sent)
+                _testSent.emit(result)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Ορισμένες προσκλήσεις δεν ήταν δυνατό να απορριφθούν</string>
     <string name="people_invitations_some_cancel_failed">Ορισμένες προσκλήσεις δεν ήταν δυνατό να ακυρωθούν</string>
     <string name="people_profile_too_long">Το προφίλ είναι πολύ μεγάλο</string>
+    <string name="people_invite_settings_load_failed">Αποτυχία φόρτωσης της πολιτικής προσκλήσεών σας</string>
 </resources>

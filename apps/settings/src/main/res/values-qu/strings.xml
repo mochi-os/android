@@ -393,4 +393,6 @@
     <string name="accounts_device_seen">Qhipa kaq rikusqa %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_test_partial">Prueba apachisqa: %1$d/%2$d</string>
+    <string name="notifprefs_test_none">Mana destinokuna churasqa</string>
 </resources>

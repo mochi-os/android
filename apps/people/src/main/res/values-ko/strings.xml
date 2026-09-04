@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">일부 초대를 거절할 수 없습니다</string>
     <string name="people_invitations_some_cancel_failed">일부 초대를 취소할 수 없습니다</string>
     <string name="people_profile_too_long">프로필이 너무 깁니다</string>
+    <string name="people_invite_settings_load_failed">초대 정책 불러오기에 실패했어요</string>
 </resources>

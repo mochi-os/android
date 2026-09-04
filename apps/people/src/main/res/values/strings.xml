@@ -88,6 +88,7 @@
     <!-- Invite settings -->
     <string name="people_invite_settings">Invite settings</string>
     <string name="people_invite_settings_updated">Invite policy updated</string>
+    <string name="people_invite_settings_load_failed">Failed to load your invite policy</string>
     <string name="people_invite_settings_notify_me">Notify me</string>
     <string name="people_invite_settings_notify_description">Invites appear in invitations and you are sent a notification (default).</string>
     <string name="people_invite_settings_store_silently">Store silently</string>

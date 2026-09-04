@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Vissa inbjudningar kunde inte avböjas</string>
     <string name="people_invitations_some_cancel_failed">Vissa inbjudningar kunde inte avbrytas</string>
     <string name="people_profile_too_long">Profilen är för lång</string>
+    <string name="people_invite_settings_load_failed">Kunde inte läsa in din inbjudningspolicy</string>
 </resources>

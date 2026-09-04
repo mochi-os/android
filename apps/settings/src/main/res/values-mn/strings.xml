@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Сүүлд харагдсан %1$s</string>
     <string name="notifprefs_device_app">%1$s · апп</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
+    <string name="notifprefs_test_partial">Тестийг %2$d хүрэх газраас %1$d-д илгээлээ</string>
+    <string name="notifprefs_test_none">Очих газар тохируулаагүй</string>
 </resources>

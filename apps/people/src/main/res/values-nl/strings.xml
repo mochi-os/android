@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Sommige uitnodigingen konden niet worden geweigerd</string>
     <string name="people_invitations_some_cancel_failed">Sommige uitnodigingen konden niet worden geannuleerd</string>
     <string name="people_profile_too_long">Het profiel is te lang</string>
+    <string name="people_invite_settings_load_failed">Je uitnodigingsbeleid laden mislukt</string>
 </resources>

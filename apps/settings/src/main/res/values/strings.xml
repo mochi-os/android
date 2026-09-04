@@ -183,6 +183,8 @@
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test">Test</string>
+    <string name="notifprefs_test_none">No destinations configured</string>
+    <string name="notifprefs_test_partial">Test sent to %1$d of %2$d destinations</string>
     <string name="notifprefs_edit">Edit</string>
     <string name="notifprefs_delete">Delete</string>
     <string name="notifprefs_remove">Remove</string>
@@ -191,7 +193,6 @@
     <string name="notifprefs_unassigned">Unassigned</string>
     <string name="notifprefs_topics_empty">No topics yet</string>
     <string name="notifprefs_no_destinations">No destinations</string>
-    <string name="notifprefs_no_destinations_configured">No destinations configured</string>
 
     <!-- System status -->
     <string name="settings_home_system_status">Status</string>

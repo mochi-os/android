@@ -402,4 +402,6 @@
     <string name="accounts_device_seen">Gwelwyd ddiwethaf %1$s</string>
     <string name="notifprefs_device_app">%1$s · ap</string>
     <string name="notifprefs_device_push">%1$s · gwthio</string>
+    <string name="notifprefs_test_partial">Anfonwyd y prawf at %1$d o %2$d cyrchfan</string>
+    <string name="notifprefs_test_none">Dim cyrchfannau wedi\'u ffurfweddu</string>
 </resources>

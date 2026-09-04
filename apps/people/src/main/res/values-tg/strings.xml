@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Баъзе даъватҳоро рад кардан имконнопазир буд</string>
     <string name="people_invitations_some_cancel_failed">Баъзе даъватҳоро бекор кардан имконнопазир буд</string>
     <string name="people_profile_too_long">Профил хеле дароз аст</string>
+    <string name="people_invite_settings_load_failed">Боркунии сиёсати даъватномаҳои шумо ба анҷом нарасид</string>
 </resources>

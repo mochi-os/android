@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Sababaraha ondangan teu tiasa ditolak</string>
     <string name="people_invitations_some_cancel_failed">Sababaraha ondangan teu tiasa dibatalkeun</string>
     <string name="people_profile_too_long">Propil kapanjangan</string>
+    <string name="people_invite_settings_load_failed">Gagal mungkahan kawijakan ondangan anjeun</string>
 </resources>

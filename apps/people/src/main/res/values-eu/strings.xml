@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Gonbidapen batzuk ezin izan dira baztertu</string>
     <string name="people_invitations_some_cancel_failed">Gonbidapen batzuk ezin izan dira bertan behera utzi</string>
     <string name="people_profile_too_long">Profila luzeegia da</string>
+    <string name="people_invite_settings_load_failed">Ezin izan da zure gonbidapen-politika kargatu</string>
 </resources>

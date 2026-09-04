@@ -396,4 +396,6 @@
     <string name="accounts_device_seen">Văzut ultima dată %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicație</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_test_partial">Testul a fost trimis către %1$d din %2$d destinații</string>
+    <string name="notifprefs_test_none">Nicio destinație configurată</string>
 </resources>

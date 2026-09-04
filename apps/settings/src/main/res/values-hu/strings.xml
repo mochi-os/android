@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Utoljára látva %1$s</string>
     <string name="notifprefs_device_app">%1$s · alkalmazás</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_test_partial">Teszt elküldve %1$d/%2$d célra</string>
+    <string name="notifprefs_test_none">Nincsenek célok beállítva</string>
 </resources>

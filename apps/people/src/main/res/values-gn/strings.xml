@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Oĩ ñembyatyrã ndaikatúiva oñemboyke</string>
     <string name="people_invitations_some_cancel_failed">Oĩ ñembyatyrã ndaikatúiva ojejoko</string>
     <string name="people_profile_too_long">Perfil ipukueterei</string>
+    <string name="people_invite_settings_load_failed">Ndaikatúi oñembogue nde ñe\'ẽrenói política</string>
 </resources>

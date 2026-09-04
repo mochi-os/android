@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">ಕೊನೆಯದಾಗಿ ಕಂಡದ್ದು %1$s</string>
     <string name="notifprefs_device_app">%1$s · ಆ್ಯಪ್</string>
     <string name="notifprefs_device_push">%1$s · ಪುಶ್</string>
+    <string name="notifprefs_test_partial">%2$dರಲ್ಲಿ %1$d ಗಮ್ಯಸ್ಥಾನಗಳಿಗೆ ಪರೀಕ್ಷೆ ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <string name="notifprefs_test_none">ಯಾವುದೇ ಡೆಸ್ಟಿನೇಶನ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
 </resources>

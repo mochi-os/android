@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Mõnda kutset ei õnnestunud tagasi lükata</string>
     <string name="people_invitations_some_cancel_failed">Mõnda kutset ei õnnestunud tühistada</string>
     <string name="people_profile_too_long">Profiil on liiga pikk</string>
+    <string name="people_invite_settings_load_failed">Teie kutsereeglite laadimine ebaõnnestus</string>
 </resources>

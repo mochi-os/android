@@ -394,4 +394,6 @@
     <string name="accounts_device_seen">Azkenekoz ikusia %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikazioa</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_test_partial">Proba %2$d helburutik %1$d-era bidali da</string>
+    <string name="notifprefs_test_none">Ez da helbururik konfiguratu</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Bazı davetler reddedilemedi</string>
     <string name="people_invitations_some_cancel_failed">Bazı davetler iptal edilemedi</string>
     <string name="people_profile_too_long">Profil çok uzun</string>
+    <string name="people_invite_settings_load_failed">Davet ilkeniz yüklenemedi</string>
 </resources>

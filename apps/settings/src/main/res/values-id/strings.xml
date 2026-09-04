@@ -393,4 +393,6 @@
     <string name="accounts_device_seen">Terakhir terlihat %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikasi</string>
     <string name="notifprefs_device_push">%1$s · push</string>
+    <string name="notifprefs_test_partial">Pengujian dikirim ke %1$d dari %2$d tujuan</string>
+    <string name="notifprefs_test_none">Tidak ada tujuan yang dikonfigurasi</string>
 </resources>

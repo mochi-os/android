@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Nogle invitationer kunne ikke afvises</string>
     <string name="people_invitations_some_cancel_failed">Nogle invitationer kunne ikke annulleres</string>
     <string name="people_profile_too_long">Profilen er for lang</string>
+    <string name="people_invite_settings_load_failed">Kunne ikke indlæse din invitationspolitik</string>
 </resources>

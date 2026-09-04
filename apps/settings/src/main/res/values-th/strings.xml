@@ -393,4 +393,6 @@
     <string name="accounts_device_seen">เห็นล่าสุด %1$s</string>
     <string name="notifprefs_device_app">%1$s · แอป</string>
     <string name="notifprefs_device_push">%1$s · พุช</string>
+    <string name="notifprefs_test_partial">ส่งการทดสอบไปยัง %1$d จาก %2$d ปลายทาง</string>
+    <string name="notifprefs_test_none">ยังไม่ได้ตั้งค่าปลายทาง</string>
 </resources>

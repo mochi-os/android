@@ -398,4 +398,6 @@
     <string name="accounts_device_seen">Air fhaicinn mu dheireadh %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplacaid</string>
     <string name="notifprefs_device_push">%1$s · putadh</string>
+    <string name="notifprefs_test_partial">Chaidh an deuchainn a chur gu %1$d à %2$d cheann-uidhe</string>
+    <string name="notifprefs_test_none">Cha deach cinn-uidhe a chur air dòigh</string>
 </resources>

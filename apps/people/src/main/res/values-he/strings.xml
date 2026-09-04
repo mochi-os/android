@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">לא ניתן היה לדחות חלק מההזמנות</string>
     <string name="people_invitations_some_cancel_failed">לא ניתן היה לבטל חלק מההזמנות</string>
     <string name="people_profile_too_long">הפרופיל ארוך מדי</string>
+    <string name="people_invite_settings_load_failed">טעינת מדיניות ההזמנות שלך נכשלה</string>
 </resources>

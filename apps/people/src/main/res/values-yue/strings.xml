@@ -95,6 +95,7 @@
     <string name="people_invitations_cancelled_to">已取消對 %1$s 嘅邀請。</string>
     <string name="people_invite_settings">邀請設定</string>
     <string name="people_invite_settings_updated">已更新邀請政策</string>
+    <string name="people_invite_settings_load_failed">載入你嘅邀請政策失敗</string>
     <string name="people_invite_settings_notify_me">通知我</string>
     <string name="people_invite_settings_notify_description">邀請會喺邀請清單度顯示，並會向你發送通知（預設）。</string>
     <string name="people_invite_settings_store_silently">靜默儲存</string>

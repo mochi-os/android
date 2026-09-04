@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">Não foi possível recusar alguns convites</string>
     <string name="people_invitations_some_cancel_failed">Não foi possível cancelar alguns convites</string>
     <string name="people_profile_too_long">O perfil é demasiado longo</string>
+    <string name="people_invite_settings_load_failed">Falha ao carregar a sua política de convites</string>
 </resources>

@@ -209,4 +209,5 @@
     <string name="people_invitations_some_decline_failed">အချို့ဖိတ်ကြားချက်များကို ငြင်းပယ်၍မရပါ</string>
     <string name="people_invitations_some_cancel_failed">အချို့ဖိတ်ကြားချက်များကို ပယ်ဖျက်၍မရပါ</string>
     <string name="people_profile_too_long">ကိုယ်ရေးအချက်အလက် ရှည်လွန်းသည်</string>
+    <string name="people_invite_settings_load_failed">သင့်ဖိတ်ကြားမှု မူဝါဒ တင်၍ မရပါ</string>
 </resources>
