@@ -404,4 +404,6 @@
     <string name="notifprefs_device_push">%1$s · gwthio</string>
     <string name="notifprefs_test_partial">Anfonwyd y prawf at %1$d o %2$d cyrchfan</string>
     <string name="notifprefs_test_none">Dim cyrchfannau wedi\'u ffurfweddu</string>
+    <string name="notifprefs_transport_fcm">Gwthiad Android</string>
+    <string name="notifprefs_no_destinations">Dim cyrchfannau</string>
 </resources>

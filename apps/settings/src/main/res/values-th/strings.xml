@@ -395,4 +395,6 @@
     <string name="notifprefs_device_push">%1$s · พุช</string>
     <string name="notifprefs_test_partial">ส่งการทดสอบไปยัง %1$d จาก %2$d ปลายทาง</string>
     <string name="notifprefs_test_none">ยังไม่ได้ตั้งค่าปลายทาง</string>
+    <string name="notifprefs_transport_fcm">พุช Android</string>
+    <string name="notifprefs_no_destinations">ไม่มีปลายทาง</string>
 </resources>

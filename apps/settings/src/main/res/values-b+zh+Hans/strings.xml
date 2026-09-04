@@ -395,4 +395,6 @@
     <string name="notifprefs_device_push">%1$s · 推送</string>
     <string name="notifprefs_test_partial">测试已发送至 %2$d 个目标中的 %1$d 个</string>
     <string name="notifprefs_test_none">未配置目标</string>
+    <string name="notifprefs_transport_fcm">Android 推送</string>
+    <string name="notifprefs_no_destinations">没有目标</string>
 </resources>

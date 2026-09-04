@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · පුෂ්</string>
     <string name="notifprefs_test_partial">ඉලක්ක %2$dන් %1$dකට පරීක්ෂණය යවන ලදී</string>
     <string name="notifprefs_test_none">ගමනාන්ත සැකසී නැත</string>
+    <string name="notifprefs_transport_fcm">Android තල්ලුව</string>
+    <string name="notifprefs_no_destinations">ගමනාන්ත නැත</string>
 </resources>

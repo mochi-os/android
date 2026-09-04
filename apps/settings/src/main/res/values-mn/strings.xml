@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · пуш</string>
     <string name="notifprefs_test_partial">Тестийг %2$d хүрэх газраас %1$d-д илгээлээ</string>
     <string name="notifprefs_test_none">Очих газар тохируулаагүй</string>
+    <string name="notifprefs_transport_fcm">Android push мэдэгдэл</string>
+    <string name="notifprefs_no_destinations">Хүрэх газар алга</string>
 </resources>

@@ -395,4 +395,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Prueba apachisqa: %1$d/%2$d</string>
     <string name="notifprefs_test_none">Mana destinokuna churasqa</string>
+    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_no_destinations">Mana destinokuna</string>
 </resources>

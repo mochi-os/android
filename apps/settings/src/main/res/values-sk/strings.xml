@@ -400,4 +400,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Test odoslaný do %1$d z %2$d cieľov</string>
     <string name="notifprefs_test_none">Nie sú nakonfigurované žiadne cieľové miesta</string>
+    <string name="notifprefs_transport_fcm">Android push</string>
+    <string name="notifprefs_no_destinations">Žiadne ciele</string>
 </resources>

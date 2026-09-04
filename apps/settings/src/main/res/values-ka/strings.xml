@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">ტესტი გაიგზავნა %1$d დანიშნულებაზე %2$d-დან</string>
     <string name="notifprefs_test_none">დანიშნულებები არ არის კონფიგურირებული</string>
+    <string name="notifprefs_transport_fcm">Android push შეტყობინება</string>
+    <string name="notifprefs_no_destinations">დანიშნულების ადგილები არ არის</string>
 </resources>

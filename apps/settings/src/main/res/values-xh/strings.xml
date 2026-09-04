@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Uvavanyo luthunyelwe ku-%1$d kwi-%2$d</string>
     <string name="notifprefs_test_none">Akukho ndawo zibekiweyo</string>
+    <string name="notifprefs_transport_fcm">I-push ye-Android</string>
+    <string name="notifprefs_no_destinations">Akukho ndawo zokuya</string>
 </resources>

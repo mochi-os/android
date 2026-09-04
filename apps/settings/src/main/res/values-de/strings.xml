@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · Push</string>
     <string name="notifprefs_test_partial">Test an %1$d von %2$d Zielen gesendet</string>
     <string name="notifprefs_test_none">Keine Ziele konfiguriert</string>
+    <string name="notifprefs_transport_fcm">Android-Push</string>
+    <string name="notifprefs_no_destinations">Keine Ziele</string>
 </resources>

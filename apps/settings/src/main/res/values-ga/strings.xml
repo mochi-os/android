@@ -402,4 +402,6 @@
     <string name="notifprefs_device_push">%1$s · brú</string>
     <string name="notifprefs_test_partial">Seoladh an tástáil chuig %1$d as %2$d sprioc</string>
     <string name="notifprefs_test_none">Níl aon cheann scríbe cumraithe</string>
+    <string name="notifprefs_transport_fcm">Brú Android</string>
+    <string name="notifprefs_no_destinations">Gan cinn scríbe</string>
 </resources>

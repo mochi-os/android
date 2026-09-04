@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Тест %2$d багыттан %1$d-ине жөнөтүлдү</string>
     <string name="notifprefs_test_none">Багыттар конфигурацияланган эмес</string>
+    <string name="notifprefs_transport_fcm">Android push билдирүүсү</string>
+    <string name="notifprefs_no_destinations">Багыттар жок</string>
 </resources>

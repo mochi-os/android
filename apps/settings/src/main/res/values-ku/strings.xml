@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Test ji %2$d armancan bo %1$d hat şandin</string>
     <string name="notifprefs_test_none">Tu cîh nehatine mîhengkirin</string>
+    <string name="notifprefs_transport_fcm">Push a Android</string>
+    <string name="notifprefs_no_destinations">Armanc tune ne</string>
 </resources>

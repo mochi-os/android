@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Jaribio limetumwa kwa %1$d kati ya %2$d vituo</string>
     <string name="notifprefs_test_none">Hakuna marudio yaliyosanidiwa</string>
+    <string name="notifprefs_transport_fcm">Push ya Android</string>
+    <string name="notifprefs_no_destinations">Hakuna mahali pa kufikia</string>
 </resources>

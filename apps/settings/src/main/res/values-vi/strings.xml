@@ -395,4 +395,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Đã gửi thử nghiệm đến %1$d trong số %2$d đích</string>
     <string name="notifprefs_test_none">Chưa cấu hình điểm đến</string>
+    <string name="notifprefs_transport_fcm">Push Android</string>
+    <string name="notifprefs_no_destinations">Không có đích đến</string>
 </resources>

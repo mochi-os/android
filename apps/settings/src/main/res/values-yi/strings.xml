@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · פּוש</string>
     <string name="notifprefs_test_partial">דער טעסט איז געשיקט געוואָרן צו %1$d פֿון %2$d דעסטינאַציעס</string>
     <string name="notifprefs_test_none">קיין דעסטינאַציעס קאָנפֿיגורירט</string>
+    <string name="notifprefs_transport_fcm">Android פּוש</string>
+    <string name="notifprefs_no_destinations">קיין דעסטיניישאנס</string>
 </resources>

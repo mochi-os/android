@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Qormaanni bakka %2$d keessaa %1$dtti ergame</string>
     <string name="notifprefs_test_none">Galmi qindaa\'e hin jiru</string>
+    <string name="notifprefs_transport_fcm">Push Android</string>
+    <string name="notifprefs_no_destinations">Gahee hin jiru</string>
 </resources>

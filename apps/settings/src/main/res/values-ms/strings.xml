@@ -395,4 +395,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Ujian dihantar ke %1$d daripada %2$d destinasi</string>
     <string name="notifprefs_test_none">Tiada destinasi dikonfigurasikan</string>
+    <string name="notifprefs_transport_fcm">Push Android</string>
+    <string name="notifprefs_no_destinations">Tiada destinasi</string>
 </resources>

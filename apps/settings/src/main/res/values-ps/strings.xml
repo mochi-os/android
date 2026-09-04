@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · پوش</string>
     <string name="notifprefs_test_partial">ازموینه %2$d موخو څخه %1$d ته ولېږل شوه</string>
     <string name="notifprefs_test_none">هیڅ منزلونه نه دي تنظیم شوي</string>
+    <string name="notifprefs_transport_fcm">د Android پوش</string>
+    <string name="notifprefs_no_destinations">هیڅ منزلونه نشته</string>
 </resources>

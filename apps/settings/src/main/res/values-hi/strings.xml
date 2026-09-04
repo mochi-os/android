@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · पुश</string>
     <string name="notifprefs_test_partial">परीक्षण %2$d में से %1$d गंतव्यों पर भेजा गया</string>
     <string name="notifprefs_test_none">कोई गंतव्य कॉन्फ़िगर नहीं</string>
+    <string name="notifprefs_transport_fcm">Android पुश</string>
+    <string name="notifprefs_no_destinations">कोई गंतव्य नहीं</string>
 </resources>

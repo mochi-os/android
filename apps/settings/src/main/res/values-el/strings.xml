@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Το δοκιμαστικό στάλθηκε σε %1$d από %2$d προορισμούς</string>
     <string name="notifprefs_test_none">Δεν έχουν διαμορφωθεί προορισμοί</string>
+    <string name="notifprefs_transport_fcm">Push Android</string>
+    <string name="notifprefs_no_destinations">Δεν υπάρχουν προορισμοί</string>
 </resources>

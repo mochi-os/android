@@ -396,4 +396,6 @@
     <string name="notifprefs_device_push">%1$s · پوش</string>
     <string name="notifprefs_test_partial">تاقیکردنەوە نێردرا بۆ %1$d لە %2$d مەبەست</string>
     <string name="notifprefs_test_none">هیچ گەیشتنگایەک ڕێکنەخراوە</string>
+    <string name="notifprefs_transport_fcm">پاڵنانی Android</string>
+    <string name="notifprefs_no_destinations">هیچ ئامانجێک نییە</string>
 </resources>

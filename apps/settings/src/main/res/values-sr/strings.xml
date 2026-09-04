@@ -398,4 +398,6 @@
     <string name="notifprefs_device_push">%1$s · пуш</string>
     <string name="notifprefs_test_partial">Тест је послат на %1$d од %2$d одредишта</string>
     <string name="notifprefs_test_none">Нема конфигурисаних одредишта</string>
+    <string name="notifprefs_transport_fcm">Push за Android</string>
+    <string name="notifprefs_no_destinations">Нема одредишта</string>
 </resources>

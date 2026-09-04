@@ -397,4 +397,6 @@
     <string name="notifprefs_device_push">%1$s · push</string>
     <string name="notifprefs_test_partial">Teste enviado para %1$d de %2$d destinos</string>
     <string name="notifprefs_test_none">Sem destinos configurados</string>
+    <string name="notifprefs_transport_fcm">Push do Android</string>
+    <string name="notifprefs_no_destinations">Sem destinos</string>
 </resources>
