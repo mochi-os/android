@@ -146,10 +146,10 @@ data class ComposeBarAttachments(
  * Mentions: supply [onSearchMentions] and the field becomes a
  * [MentionTextField]; otherwise it is a plain [MochiTextField].
  *
- * @param showDivider draw a hairline along the bar's top edge, which separates
- *   it from whatever it sits under. Pass false inside a bottom sheet or the
- *   lightbox panel: those draw their own edge, and a second one reads as a
- *   seam.
+ * @param showDivider draw a hairline along the bar's top edge, separating it
+ *   from the list above. A list is enough on its own — an empty one still
+ *   wants the seam. Pass false only where the bar stands alone with nothing
+ *   above it, such as a sheet holding the composer and nothing else.
  * @param sendOnImeAction make the keyboard's action key send, and drop focus
  *   afterwards. Suits a single-line bar (the game chat pill); a multi-line
  *   comment field wants the return key to insert a newline instead.

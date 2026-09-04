@@ -629,7 +629,6 @@ private fun GameDetailContent(
                         onLoadMore = { viewModel.loadMoreMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                         composerWindowInsets = ComposeBarDefaults.WindowInsets,
-                        composerShowDivider = true,
                     )
                 }
             }
@@ -867,7 +866,6 @@ private fun GameChatColumn(
     // keyboard. The default suits the phone's sheet, which lifts its own
     // content; the tablet's side panel sits in the screen body and has to ask.
     composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
-    composerShowDivider: Boolean = false,
 ) {
     val chatMessages = remember(messages) {
         messages.map { msg ->
@@ -933,7 +931,6 @@ private fun GameChatColumn(
         }
         ComposeBar(
             value = chatDraft,
-            showDivider = composerShowDivider,
             onValueChange = { chatDraft = it },
             onSend = {
                 if (chatDraft.isNotBlank() && !isSending) {

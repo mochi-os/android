@@ -410,7 +410,6 @@ private fun GameContent(
                         onLoadMore = onLoadMoreChat,
                         modifier = Modifier.weight(1f),
                         composerWindowInsets = ComposeBarDefaults.WindowInsets,
-                        composerShowDivider = true,
                     )
                 }
             }
@@ -713,7 +712,6 @@ private fun ChatPanel(
     // keyboard. The default suits the phone's sheet, which lifts its own
     // content; the tablet's side panel sits in the screen body and has to ask.
     composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
-    composerShowDivider: Boolean = false,
 ) {
     var draft by rememberSaveable { mutableStateOf("") }
 
@@ -745,7 +743,6 @@ private fun ChatPanel(
         )
         ComposeBar(
             value = draft,
-            showDivider = composerShowDivider,
             onValueChange = { draft = it },
             onSend = {
                 val toSend = draft.trim()

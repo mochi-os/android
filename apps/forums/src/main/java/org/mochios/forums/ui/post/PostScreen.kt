@@ -1104,7 +1104,6 @@ private fun AttachmentComments(
         }
         if (canComment) {
             ComposeBar(
-                showDivider = false,
                 banner = replyTo?.let { replied ->
                     {
                         ReplyComposerBanner(

@@ -113,7 +113,6 @@ internal fun AttachmentComments(
         }
         if (canComment) {
             ComposeBar(
-                showDivider = false,
                 value = commentText,
                 onValueChange = { viewModel.setCommentText(it) },
                 onSend = { viewModel.sendComment(anchor = attachmentId) },
