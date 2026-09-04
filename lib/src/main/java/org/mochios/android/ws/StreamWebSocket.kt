@@ -35,6 +35,7 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
+import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
@@ -75,7 +76,9 @@ data class StreamWsEvent(
  */
 class StreamWebSocketController internal constructor(
     private val streamKey: String,
+    private val app: String,
     private val sessionManager: SessionManager,
+    private val authRepository: AuthRepository,
     private val client: OkHttpClient,
     private val gson: Gson,
 ) {
@@ -117,18 +120,32 @@ class StreamWebSocketController internal constructor(
     private fun connect() {
         if (closed) return
         _status.value = if (_retries.value > 0) StreamWsStatus.RECONNECTING else StreamWsStatus.CONNECTING
+        scope.launch { openSocket() }
+    }
 
-        // The subscription key rides in the query: it is the only place the
-        // server reads it from. No token or cookie - the key selects the
-        // stream.
+    /**
+     * The key selects the stream, but the server only sends on a stream the
+     * connection is authorised for: without the token it upgraded the socket
+     * and then delivered nothing, so every board sat on the position it
+     * loaded. The token goes in a header rather than the query the web uses,
+     * because the logging interceptor writes the URL to logcat.
+     */
+    private suspend fun openSocket() {
+        if (closed) return
         val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
         val wsBase = serverUrl
             .replace("https://", "wss://")
             .replace("http://", "ws://")
         val url = StringBuilder("$wsBase/_/websocket?key=$streamKey")
 
+        val token = sessionManager.getToken(app)
+            ?: authRepository.fetchToken(app).getOrNull()
         val requestBuilder = Request.Builder().url(url.toString())
+        if (token != null) {
+            requestBuilder.header("Authorization", "Bearer $token")
+        }
         val request = requestBuilder.build()
+        if (closed) return
 
         val listener = object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
@@ -160,6 +177,11 @@ class StreamWebSocketController internal constructor(
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 socketRef.compareAndSet(webSocket, null)
                 if (!closed) {
+                    // 401/403 means the minted token has expired; drop it so
+                    // the next attempt mints a fresh one.
+                    if (response?.code == 401 || response?.code == 403) {
+                        scope.launch { sessionManager.clearToken(app) }
+                    }
                     _status.value = StreamWsStatus.DISCONNECTED
                     scheduleReconnect()
                 }
@@ -216,14 +238,24 @@ class StreamWebSocketController internal constructor(
 
 class StreamWebSocket(
     private val sessionManager: SessionManager,
+    private val authRepository: AuthRepository,
     private val client: OkHttpClient,
     private val gson: Gson,
 ) {
-    /** Open a controller for the given stream key. Remember to [close]. */
-    fun open(streamKey: String): StreamWebSocketController {
+    /**
+     * Open a controller for the given stream key. Remember to [close].
+     *
+     * @param streamKey the key the server multiplexes the stream by: a game
+     *   record's key, "staff-events", "market-thread-<id>".
+     * @param app the app the key belongs to ("chess", "go", "words", "staff",
+     *   "market"), which names the token the connection authorises with.
+     */
+    fun open(streamKey: String, app: String): StreamWebSocketController {
         return StreamWebSocketController(
             streamKey = streamKey,
+            app = app,
             sessionManager = sessionManager,
+            authRepository = authRepository,
             // Layer a ping interval on top of the shared HTTP client so the
             // WS connection has its own keepalive — pings are pointless on
             // request/response HTTP. 5 minutes matches MochiWebSocket.
@@ -243,6 +275,7 @@ class StreamWebSocket(
 @InstallIn(SingletonComponent::class)
 interface StreamWebSocketEntryPoint {
     fun sessionManager(): SessionManager
+    fun authRepository(): AuthRepository
     fun okHttpClient(): OkHttpClient
     fun gson(): Gson
 }
@@ -254,9 +287,11 @@ interface StreamWebSocketEntryPoint {
  *
  * @param streamKey the key the server multiplexes the stream by: a game
  *   record's key, "staff-events", "market-thread-<id>".
+ * @param app the app the key belongs to ("chess", "go", "words", "staff",
+ *   "market"), which names the token the connection authorises with.
  */
 @Composable
-fun rememberStreamWebSocket(streamKey: String?): StreamWebSocketController? {
+fun rememberStreamWebSocket(streamKey: String?, app: String): StreamWebSocketController? {
     if (streamKey.isNullOrBlank()) return null
     val context = LocalContext.current
     val entryPoint = remember(context) {
@@ -265,14 +300,15 @@ fun rememberStreamWebSocket(streamKey: String?): StreamWebSocketController? {
             StreamWebSocketEntryPoint::class.java,
         )
     }
-    val controller = remember(streamKey) {
+    val controller = remember(streamKey, app) {
         StreamWebSocket(
             sessionManager = entryPoint.sessionManager(),
+            authRepository = entryPoint.authRepository(),
             client = entryPoint.okHttpClient(),
             gson = entryPoint.gson(),
-        ).open(streamKey)
+        ).open(streamKey, app)
     }
-    DisposableEffect(streamKey) {
+    DisposableEffect(streamKey, app) {
         onDispose { controller.close() }
     }
     return controller

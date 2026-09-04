@@ -148,6 +148,19 @@ class SessionManager @Inject constructor(
         return runBlocking { getToken(app) }
     }
 
+    /**
+     * Forget the cached JWT for [app] so the next caller mints a fresh one.
+     * Used when the server rejects the token as expired.
+     */
+    suspend fun clearToken(app: String) {
+        dataStore.edit { prefs ->
+            prefs.remove(stringPreferencesKey("$TOKEN_PREFIX$app"))
+            val names = prefs[KEY_TOKEN_NAMES]?.toMutableSet() ?: mutableSetOf()
+            names.remove(app)
+            prefs[KEY_TOKEN_NAMES] = names
+        }
+    }
+
     suspend fun saveToken(app: String, jwt: String) {
         dataStore.edit { prefs ->
             prefs[stringPreferencesKey("$TOKEN_PREFIX$app")] = jwt

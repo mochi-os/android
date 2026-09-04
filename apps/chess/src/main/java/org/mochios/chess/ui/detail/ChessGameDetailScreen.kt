@@ -129,7 +129,7 @@ fun ChessGameDetailScreen(
     // ---- WebSocket ----
 
     val wsKey = state.game?.key?.takeIf { it.isNotBlank() }
-    val controller = rememberStreamWebSocket(wsKey)
+    val controller = rememberStreamWebSocket(wsKey, app = "chess")
     LaunchedEffect(controller) {
         if (controller != null) {
             controller.events.collect { _: StreamWsEvent ->

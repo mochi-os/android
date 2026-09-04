@@ -16,7 +16,7 @@ import org.mochios.android.ws.rememberStreamWebSocket
  */
 @Composable
 fun rememberStaffEventsSubscription(eventsBus: StaffEventsBus) {
-    val controller = rememberStreamWebSocket("staff-events")
+    val controller = rememberStreamWebSocket("staff-events", app = "staff")
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
             val topic = event.raw["topic"] as? String ?: return@collect

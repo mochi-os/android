@@ -158,7 +158,7 @@ fun WordsGameDetailScreen(
     }
 
     // ─── WebSocket bridge ────────────────────────────────────────────
-    val controller = rememberStreamWebSocket(game?.key)
+    val controller = rememberStreamWebSocket(game?.key, app = "words")
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
             val msg = if (event.type == "message") {

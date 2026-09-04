@@ -156,7 +156,7 @@ fun GoGameDetailScreen(
 
     // Open a fresh WebSocket once the game has loaded (we need the key).
     val game = state.game
-    val controller = rememberStreamWebSocket(game?.key)
+    val controller = rememberStreamWebSocket(game?.key, app = "go")
     DisposableEffect(controller) {
         val job = controller?.let {
             scope.launch {

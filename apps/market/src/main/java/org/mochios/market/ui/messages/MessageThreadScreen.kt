@@ -82,6 +82,7 @@ fun MessageThreadScreen(
     val threadId = state.thread?.id?.takeIf { it.isNotEmpty() }
     val socket = rememberStreamWebSocket(
         streamKey = threadId?.let { "market-thread-$it" },
+        app = "market",
     )
     LaunchedEffect(socket, threadId) {
         socket?.events?.collectLatest { event ->
