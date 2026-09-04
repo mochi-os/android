@@ -484,15 +484,11 @@ private fun GameDetailContent(
             Column(
                 modifier = Modifier
                     .weight(1f, fill = true)
-                    .fillMaxHeight()
-                    .padding(horizontal = 4.dp),
+                    .fillMaxHeight(),
             ) {
                 GameStatusBar(
                     status = header.status,
                     myTurn = if (isActive) isMyTurn else null,
-                    // The pane is inset 4 dp here, so make up the rest of the
-                    // top bar's 16 dp gutter.
-                    modifier = Modifier.padding(horizontal = 4.dp),
                 ) {
                     for (player in header.players) {
                         GameHeaderStat(

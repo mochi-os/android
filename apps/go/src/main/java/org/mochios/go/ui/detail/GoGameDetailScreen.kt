@@ -295,8 +295,7 @@ fun GoGameDetailScreen(
                         Column(
                             modifier = Modifier
                                 .weight(1f)
-                                .fillMaxHeight()
-                                .padding(horizontal = 8.dp),
+                                .fillMaxHeight(),
                         ) {
                             GameStatusBar(
                                 status = statusLabel,
@@ -339,7 +338,11 @@ fun GoGameDetailScreen(
                                 onAccept = { viewModel.acceptDraw(errDrawAccept) },
                                 onDecline = { viewModel.declineDraw(errDrawDecline) },
                             )
-                            banner?.invoke()
+                            if (banner != null) {
+                                Box(modifier = Modifier.padding(horizontal = 8.dp)) {
+                                    banner()
+                                }
+                            }
 
                             // Board sits below the header. Cap the width so
                             // the board doesn't stretch past a comfortable
@@ -349,7 +352,7 @@ fun GoGameDetailScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .weight(1f)
-                                    .padding(top = 8.dp),
+                                    .padding(start = 8.dp, end = 8.dp, top = 8.dp),
                                 contentAlignment = Alignment.TopCenter,
                             ) {
                                 GoBoard(

@@ -6,11 +6,11 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
@@ -76,11 +77,12 @@ fun GameTopBarTitle(
 }
 
 /**
- * The strip under a detail screen's top bar: the [stats] chips wrapping from
- * the left, with whose move it is on the line below. A long player name or a
- * four-player game used to squeeze both onto one line, leaving the status
- * broken across two characters and the last chip cut to a dot. [myTurn] draws
- * a coloured dot before the status; pass null once the game ends.
+ * The strip under a detail screen's top bar: the [stats] chips on one line
+ * that scrolls sideways across the full width of the pane, with whose move it is on the line below. A long
+ * player name or a four-player game used to squeeze both onto one line,
+ * leaving the status broken across two characters and the last chip cut to a
+ * dot. [myTurn] draws a coloured dot before the status; pass null once the
+ * game ends.
  */
 @Composable
 fun GameStatusBar(
@@ -92,20 +94,25 @@ fun GameStatusBar(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            // 8 dp here plus the 8 dp its callers inset the pane by puts the
-            // chips and the status on the same 16 dp gutter as the top bar's
-            // hamburger and overflow glyphs.
-            .padding(horizontal = 8.dp, vertical = 8.dp),
+            .padding(vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
+        // The scroller spans the pane so the chips run to both edges; the
+        // gutter is padding on its content, which scrolls with it. It matches
+        // the top bar's 16 dp gutter at rest.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .horizontalScroll(rememberScrollState())
+                .padding(horizontal = STATUS_GUTTER),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp),
+            verticalAlignment = Alignment.CenterVertically,
             content = stats,
         )
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = STATUS_GUTTER),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             if (myTurn != null) {
@@ -225,3 +232,6 @@ fun GameHeaderStoneDot(color: StoneColor) {
             .border(width = 1.dp, color = ring, shape = CircleShape),
     )
 }
+
+/** Gutter on the status strip's content, matching the top bar's. */
+private val STATUS_GUTTER = 16.dp

@@ -450,7 +450,7 @@ private fun BoardPane(
     val capturedByMe = if (myColor == 'w') capturedByWhite else capturedByBlack
     val capturedByOpponent = if (myColor == 'w') capturedByBlack else capturedByWhite
 
-    Column(modifier = Modifier.fillMaxSize().padding(horizontal = 8.dp)) {
+    Column(modifier = Modifier.fillMaxSize()) {
         GameStatusBar(
             status = statusText,
             myTurn = if (game.status == "active") isMyTurn else null,
@@ -476,7 +476,9 @@ private fun BoardPane(
             declineInFlight = state.isDrawDeclining,
         )
         if (banner != null) {
-            banner()
+            Box(modifier = Modifier.padding(horizontal = 8.dp)) {
+                banner()
+            }
             Spacer(modifier = Modifier.height(8.dp))
         }
 
@@ -485,7 +487,8 @@ private fun BoardPane(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f),
+                .weight(1f)
+                .padding(horizontal = 8.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Column(modifier = Modifier.widthIn(max = BOARD_MAX_WIDTH)) {
