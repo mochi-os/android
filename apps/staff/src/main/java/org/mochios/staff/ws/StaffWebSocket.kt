@@ -7,7 +7,7 @@ package org.mochios.staff.ws
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import org.mochios.android.ws.rememberGameWebSocket
+import org.mochios.android.ws.rememberStreamWebSocket
 
 /**
  * Opens the `staff-events` WebSocket and republishes decoded `{topic, object}`
@@ -16,7 +16,7 @@ import org.mochios.android.ws.rememberGameWebSocket
  */
 @Composable
 fun rememberStaffEventsSubscription(eventsBus: StaffEventsBus) {
-    val controller = rememberGameWebSocket("staff-events")
+    val controller = rememberStreamWebSocket("staff-events")
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
             val topic = event.raw["topic"] as? String ?: return@collect

@@ -83,7 +83,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
-import org.mochios.android.ws.rememberGameWebSocket
+import org.mochios.android.ws.rememberStreamWebSocket
 import org.mochios.go.R
 import org.mochios.go.engine.Score
 import org.mochios.go.engine.Stone
@@ -156,7 +156,7 @@ fun GoGameDetailScreen(
 
     // Open a fresh WebSocket once the game has loaded (we need the key).
     val game = state.game
-    val controller = rememberGameWebSocket(game?.key)
+    val controller = rememberStreamWebSocket(game?.key)
     DisposableEffect(controller) {
         val job = controller?.let {
             scope.launch {

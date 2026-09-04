@@ -58,8 +58,8 @@ import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ws.GameWsEvent
-import org.mochios.android.ws.rememberGameWebSocket
+import org.mochios.android.ws.StreamWsEvent
+import org.mochios.android.ws.rememberStreamWebSocket
 import org.mochios.market.R
 import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
@@ -80,8 +80,8 @@ fun MessageThreadScreen(
     // Key on the resolved thread id from state, not the route arg, which is
     // "new" when opened from a listing.
     val threadId = state.thread?.id?.takeIf { it.isNotEmpty() }
-    val socket = rememberGameWebSocket(
-        gameKey = threadId?.let { "market-thread-$it" },
+    val socket = rememberStreamWebSocket(
+        streamKey = threadId?.let { "market-thread-$it" },
     )
     LaunchedEffect(socket, threadId) {
         socket?.events?.collectLatest { event ->
@@ -289,9 +289,9 @@ private fun Bubble(message: Message, isMine: Boolean) {
 }
 
 /**
- * [GameWsEvent] is the lib's generic keyed-topic event despite the name.
+ * [StreamWsEvent] is the lib's generic keyed-topic event despite the name.
  */
-private fun GameWsEvent.toMessage(threadId: String): Message? {
+private fun StreamWsEvent.toMessage(threadId: String): Message? {
     if (type != "message") return null
     val text = body?.takeIf { it.isNotBlank() } ?: return null
     val rawId = raw["id"] as? String ?: ""

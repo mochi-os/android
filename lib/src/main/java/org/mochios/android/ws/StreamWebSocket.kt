@@ -41,10 +41,10 @@ import java.util.concurrent.atomic.AtomicReference
 import kotlin.math.min
 
 /**
- * Connection status reported by [GameWebSocketController]. FAILED is unused:
+ * Connection status reported by [StreamWebSocketController]. FAILED is unused:
  * retries are unbounded.
  */
-enum class GameWsStatus {
+enum class StreamWsStatus {
     CONNECTING,
     CONNECTED,
     DISCONNECTED,
@@ -53,12 +53,12 @@ enum class GameWsStatus {
 }
 
 /**
- * A decoded `mochi.websocket.write` payload from chess.star / go.star /
- * words.star. [type] is "message", "move" or "system"; for a move [body] is
- * game-specific notation (SAN, coordinates, the placed word). [raw] carries
- * what the typed fields do not.
+ * A decoded `mochi.websocket.write` payload. The game apps send [type]
+ * "message", "move" or "system", and for a move [body] is that game's notation
+ * (SAN, coordinates, the placed word); other apps send their own shapes, which
+ * [raw] carries along with anything the typed fields miss.
  */
-data class GameWsEvent(
+data class StreamWsEvent(
     val type: String,
     val created: Long,
     val member: String?,
@@ -69,20 +69,20 @@ data class GameWsEvent(
 )
 
 /**
- * Controller for a single game's WebSocket, usually created by
- * [rememberGameWebSocket] and closed when the screen leaves the composition.
+ * Controller for a single stream's WebSocket, usually created by
+ * [rememberStreamWebSocket] and closed when the screen leaves the composition.
  * [events] and [status] tolerate multiple collectors.
  */
-class GameWebSocketController internal constructor(
-    private val gameKey: String,
+class StreamWebSocketController internal constructor(
+    private val streamKey: String,
     private val sessionManager: SessionManager,
     private val client: OkHttpClient,
     private val gson: Gson,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
-    private val _status = MutableStateFlow(GameWsStatus.CONNECTING)
-    val status: StateFlow<GameWsStatus> = _status.asStateFlow()
+    private val _status = MutableStateFlow(StreamWsStatus.CONNECTING)
+    val status: StateFlow<StreamWsStatus> = _status.asStateFlow()
 
     private val _retries = MutableStateFlow(0)
     val retries: StateFlow<Int> = _retries.asStateFlow()
@@ -91,11 +91,11 @@ class GameWebSocketController internal constructor(
     // stream (it's a snapshot, not a journal); buffer 64 covers the worst
     // common case where the UI thread is briefly slow to drain after a
     // burst of moves.
-    private val _events = MutableSharedFlow<GameWsEvent>(
+    private val _events = MutableSharedFlow<StreamWsEvent>(
         replay = 0,
         extraBufferCapacity = 64,
     )
-    val events: SharedFlow<GameWsEvent> = _events.asSharedFlow()
+    val events: SharedFlow<StreamWsEvent> = _events.asSharedFlow()
 
     private val socketRef = AtomicReference<WebSocket?>(null)
     @Volatile private var closed: Boolean = false
@@ -116,7 +116,7 @@ class GameWebSocketController internal constructor(
 
     private fun connect() {
         if (closed) return
-        _status.value = if (_retries.value > 0) GameWsStatus.RECONNECTING else GameWsStatus.CONNECTING
+        _status.value = if (_retries.value > 0) StreamWsStatus.RECONNECTING else StreamWsStatus.CONNECTING
 
         // The subscription key rides in the query: it is the only place the
         // server reads it from. No token or cookie - the key selects the
@@ -125,7 +125,7 @@ class GameWebSocketController internal constructor(
         val wsBase = serverUrl
             .replace("https://", "wss://")
             .replace("http://", "ws://")
-        val url = StringBuilder("$wsBase/_/websocket?key=$gameKey")
+        val url = StringBuilder("$wsBase/_/websocket?key=$streamKey")
 
         val requestBuilder = Request.Builder().url(url.toString())
         val request = requestBuilder.build()
@@ -133,7 +133,7 @@ class GameWebSocketController internal constructor(
         val listener = object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
                 _retries.value = 0
-                _status.value = GameWsStatus.CONNECTED
+                _status.value = StreamWsStatus.CONNECTED
             }
 
             override fun onMessage(webSocket: WebSocket, text: String) {
@@ -152,7 +152,7 @@ class GameWebSocketController internal constructor(
             override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
                 socketRef.compareAndSet(webSocket, null)
                 if (!closed) {
-                    _status.value = GameWsStatus.DISCONNECTED
+                    _status.value = StreamWsStatus.DISCONNECTED
                     scheduleReconnect()
                 }
             }
@@ -160,7 +160,7 @@ class GameWebSocketController internal constructor(
             override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
                 socketRef.compareAndSet(webSocket, null)
                 if (!closed) {
-                    _status.value = GameWsStatus.DISCONNECTED
+                    _status.value = StreamWsStatus.DISCONNECTED
                     scheduleReconnect()
                 }
             }
@@ -175,7 +175,7 @@ class GameWebSocketController internal constructor(
         reconnectJob?.cancel()
         // 1s → 2s → 4s → 8s → 16s → 30s (cap). Same shape as the spec asks
         // for. The base of MochiWebSocket uses a 5-minute cap; for an
-        // interactive game-detail screen 30s is plenty — beyond that the
+        // screen holding one stream open 30s is plenty — beyond that the
         // user will navigate away anyway.
         val attempt = (_retries.value + 1)
         _retries.value = attempt
@@ -186,7 +186,7 @@ class GameWebSocketController internal constructor(
         }
     }
 
-    private fun parseEvent(text: String): GameWsEvent? {
+    private fun parseEvent(text: String): StreamWsEvent? {
         return try {
             val mapType = object : TypeToken<Map<String, Any?>>() {}.type
             val raw: Map<String, Any?> = gson.fromJson(text, mapType) ?: return null
@@ -197,7 +197,7 @@ class GameWebSocketController internal constructor(
             val type = (raw["type"] as? String) ?: ""
             val created = (raw["created"] as? Number)?.toLong()
                 ?: (System.currentTimeMillis() / 1000L)
-            GameWsEvent(
+            StreamWsEvent(
                 type = type,
                 created = created,
                 member = raw["member"] as? String,
@@ -214,15 +214,15 @@ class GameWebSocketController internal constructor(
     }
 }
 
-class GameWebSocket(
+class StreamWebSocket(
     private val sessionManager: SessionManager,
     private val client: OkHttpClient,
     private val gson: Gson,
 ) {
-    /** Open a controller for the given game key. Remember to [close]. */
-    fun open(gameKey: String): GameWebSocketController {
-        return GameWebSocketController(
-            gameKey = gameKey,
+    /** Open a controller for the given stream key. Remember to [close]. */
+    fun open(streamKey: String): StreamWebSocketController {
+        return StreamWebSocketController(
+            streamKey = streamKey,
             sessionManager = sessionManager,
             // Layer a ping interval on top of the shared HTTP client so the
             // WS connection has its own keepalive — pings are pointless on
@@ -236,40 +236,43 @@ class GameWebSocket(
 }
 
 /**
- * Hilt entry point so [rememberGameWebSocket] can resolve singletons without a
+ * Hilt entry point so [rememberStreamWebSocket] can resolve singletons without a
  * ViewModel.
  */
 @EntryPoint
 @InstallIn(SingletonComponent::class)
-interface GameWebSocketEntryPoint {
+interface StreamWebSocketEntryPoint {
     fun sessionManager(): SessionManager
     fun okHttpClient(): OkHttpClient
     fun gson(): Gson
 }
 
 /**
- * Open a game-scoped WebSocket for as long as this composable is in the
- * composition. A null or blank `gameKey` returns null and opens nothing;
+ * Open a screen-scoped WebSocket for as long as this composable is in the
+ * composition. A null or blank `streamKey` returns null and opens nothing;
  * changing it closes the previous socket and opens a new one.
+ *
+ * @param streamKey the key the server multiplexes the stream by: a game
+ *   record's key, "staff-events", "market-thread-<id>".
  */
 @Composable
-fun rememberGameWebSocket(gameKey: String?): GameWebSocketController? {
-    if (gameKey.isNullOrBlank()) return null
+fun rememberStreamWebSocket(streamKey: String?): StreamWebSocketController? {
+    if (streamKey.isNullOrBlank()) return null
     val context = LocalContext.current
     val entryPoint = remember(context) {
         EntryPointAccessors.fromApplication(
             context.applicationContext,
-            GameWebSocketEntryPoint::class.java,
+            StreamWebSocketEntryPoint::class.java,
         )
     }
-    val controller = remember(gameKey) {
-        GameWebSocket(
+    val controller = remember(streamKey) {
+        StreamWebSocket(
             sessionManager = entryPoint.sessionManager(),
             client = entryPoint.okHttpClient(),
             gson = entryPoint.gson(),
-        ).open(gameKey)
+        ).open(streamKey)
     }
-    DisposableEffect(gameKey) {
+    DisposableEffect(streamKey) {
         onDispose { controller.close() }
     }
     return controller

@@ -92,9 +92,9 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.StoneColor
-import org.mochios.android.ws.GameWsEvent
-import org.mochios.android.ws.GameWsStatus
-import org.mochios.android.ws.rememberGameWebSocket
+import org.mochios.android.ws.StreamWsEvent
+import org.mochios.android.ws.StreamWsStatus
+import org.mochios.android.ws.rememberStreamWebSocket
 import org.mochios.chess.R
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
@@ -129,10 +129,10 @@ fun ChessGameDetailScreen(
     // ---- WebSocket ----
 
     val wsKey = state.game?.key?.takeIf { it.isNotBlank() }
-    val controller = rememberGameWebSocket(wsKey)
+    val controller = rememberStreamWebSocket(wsKey)
     LaunchedEffect(controller) {
         if (controller != null) {
-            controller.events.collect { _: GameWsEvent ->
+            controller.events.collect { _: StreamWsEvent ->
                 // Trade per-event surgery for a single refresh: chess
                 // events arrive at human pace (~1/min in an active game)
                 // so the round-trip overhead is negligible and we always
@@ -283,7 +283,7 @@ fun ChessGameDetailScreen(
                         onDeclineDraw = viewModel::declineDraw,
                         onSendChat = viewModel::sendChat,
                         onLoadMoreChat = viewModel::loadMoreOlder,
-                        wsStatus = controller?.status?.collectAsState(initial = GameWsStatus.CONNECTING)?.value,
+                        wsStatus = controller?.status?.collectAsState(initial = StreamWsStatus.CONNECTING)?.value,
                     )
                 }
             }
@@ -371,7 +371,7 @@ private fun GameContent(
     onDeclineDraw: () -> Unit,
     onSendChat: (String) -> Unit,
     onLoadMoreChat: () -> Unit,
-    wsStatus: GameWsStatus?,
+    wsStatus: StreamWsStatus?,
 ) {
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val twoPane = maxWidth >= 600.dp
@@ -674,7 +674,7 @@ private fun drawBanner(
 // ---------- Chat ----------
 
 @Composable
-private fun ChatHeader(wsStatus: GameWsStatus?) {
+private fun ChatHeader(wsStatus: StreamWsStatus?) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -686,14 +686,14 @@ private fun ChatHeader(wsStatus: GameWsStatus?) {
             style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
             modifier = Modifier.weight(1f),
         )
-        if (wsStatus != null && wsStatus != GameWsStatus.CONNECTED) {
+        if (wsStatus != null && wsStatus != StreamWsStatus.CONNECTED) {
             Text(
                 text = when (wsStatus) {
-                    GameWsStatus.CONNECTING -> stringResource(R.string.chess_ws_connecting)
-                    GameWsStatus.CONNECTED -> ""
-                    GameWsStatus.DISCONNECTED -> stringResource(R.string.chess_ws_disconnected)
-                    GameWsStatus.RECONNECTING -> stringResource(R.string.chess_ws_reconnecting)
-                    GameWsStatus.FAILED -> stringResource(R.string.chess_ws_failed)
+                    StreamWsStatus.CONNECTING -> stringResource(R.string.chess_ws_connecting)
+                    StreamWsStatus.CONNECTED -> ""
+                    StreamWsStatus.DISCONNECTED -> stringResource(R.string.chess_ws_disconnected)
+                    StreamWsStatus.RECONNECTING -> stringResource(R.string.chess_ws_reconnecting)
+                    StreamWsStatus.FAILED -> stringResource(R.string.chess_ws_failed)
                 },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

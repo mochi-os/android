@@ -96,7 +96,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ws.rememberGameWebSocket
+import org.mochios.android.ws.rememberStreamWebSocket
 import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
@@ -158,7 +158,7 @@ fun WordsGameDetailScreen(
     }
 
     // ─── WebSocket bridge ────────────────────────────────────────────
-    val controller = rememberGameWebSocket(game?.key)
+    val controller = rememberStreamWebSocket(game?.key)
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
             val msg = if (event.type == "message") {
