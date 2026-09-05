@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Jina la kuonyesha</string>
-    <string name="chat_auth_verification_failed">Uthibitishaji umeshindwa</string>
     <string name="chat_list_title">Magumzo</string>
     <string name="chat_list_search">Tafuta</string>
     <string name="chat_list_logout">Toka</string>
     <string name="chat_list_new">Mazungumzo mapya</string>
     <string name="chat_new_title">Mazungumzo mapya</string>
     <string name="chat_new_name">Jina la kikundi</string>
-    <string name="chat_new_friends">Marafiki</string>
     <string name="chat_message_placeholder">Ujumbe</string>
     <string name="chat_attachment_add">Ambatisha faili</string>
-    <string name="chat_message_attach">Ambatisha faili</string>
     <string name="chat_settings_title">Mipangilio ya gumzo</string>
     <string name="chat_settings_rename_label">Jina la gumzo</string>
     <string name="chat_settings_save">Hifadhi</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Tuma</string>
     <string name="chat_attachment_remove">Ondoa kiambatisho</string>
-    <string name="chat_message_remove_attachment">Ondoa kiambatisho</string>
-    <string name="chat_auth_login_failed">Kuingia kumeshindwa</string>
     <string name="chat_attachment_move_up">Sogeza juu</string>
     <string name="chat_attachment_move_down">Sogeza chini</string>
 
     <string name="notification_channel_chat">Arifa za gumzo</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Imeshindwa kuunda utambulisho</string>
-    <string name="chat_auth_mfa_unsupported">MFA bado haitumiki katika programu ya simu</string>
-    <string name="chat_auth_enter_code_sent">Ingiza msimbo uliotumwa kwa %1$s</string>
-    <string name="chat_auth_create_identity">Unda utambulisho wako</string>
     <string name="chat_list_empty">Bado hakuna gumzo</string>
     <string name="chat_new_existing_chat">Fungua gumzo lililopo</string>
     <string name="chat_new_start">Anza gumzo</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Bado hakuna ujumbe — salimia!</string>
     <string name="chat_messages_load_more">Pakia ujumbe wa zamani</string>
     <string name="chat_attachment_label">Faili</string>
-    <string name="chat_message_too_long">Ujumbe ni mrefu sana</string>
-    <string name="chat_message_empty">Ujumbe hauwezi kuwa tupu</string>
     <string name="chat_settings_rename">Badilisha jina la gumzo</string>
     <string name="chat_settings_add_member_empty">Hakuna marafiki wa kuongeza</string>
     <string name="chat_settings_remove_member_message">Mwondoe %1$s kwenye gumzo hili?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Ujumbe huu ulifutwa</string>
     <string name="chat_search_hint">Tafuta kwenye gumzo...</string>
-    <string name="chat_search_no_results">Hakuna matokeo</string>
     <string name="chat_message_forward">Sambaza</string>
     <string name="chat_forward_title">Sambaza kwa…</string>
     <string name="chat_forward_search">Tafuta gumzo…</string>
     <string name="chat_forward_empty">Hakuna gumzo la kusambaza</string>
     <string name="chat_forward_success">Imesambazwa</string>
-    <string name="chat_forward_failed">Imeshindwa kusambaza</string>
     <string name="chat_message_reply">Jibu</string>
     <string name="chat_message_select">Chagua</string>
     <string name="chat_reply_attachment">Kiambatisho</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Marafiki</string>
     <string name="chat_policy_title">Gumzo zinazoingia</string>
     <string name="chat_policy_friends">Marafiki pekee</string>
-    <string name="chat_policy_friends_description">Marafiki pekee ndio wanaweza kuanzisha gumzo nawe (chaguo-msingi).</string>
     <string name="chat_policy_anyone">Mtu yeyote</string>
-    <string name="chat_policy_anyone_description">Mtu yeyote anaweza kuanzisha gumzo nawe.</string>
     <string name="chat_new_search_placeholder">Tafuta watu</string>
     <string name="chat_new_no_matches">Hakuna watu wanaolingana</string>
     <string name="chat_new_no_friends">Tafuta watu wa kupiga nao gumzo</string>
     <string name="chat_pin">Bandika</string>
     <string name="chat_unpin">Bandua</string>
-    <string name="chat_pinned_label">Imebandikwa</string>
     <string name="chat_settings_general">Jumla</string>
     <string name="chat_settings_screen_title">Mipangilio ya %1$s</string>
     <string name="chat_mark_read">Weka alama kuwa imesomwa</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Inayolingana iliyotangulia</string>
     <string name="chat_settings_id">Kitambulisho cha gumzo</string>
     <string name="chat_message_edited">(imehaririwa)</string>
+    <string name="chat_new_fallback_name">Gumzo</string>
 </resources>

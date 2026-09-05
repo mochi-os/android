@@ -11,28 +11,17 @@
     <string name="chat_settings_members">成員</string>
     <string name="chat_attachment_add">附加檔案</string>
     <string name="chat_attachment_remove">移除附件</string>
-    <string name="chat_message_attach">附加檔案</string>
-    <string name="chat_message_remove_attachment">移除附件</string>
-    <string name="chat_auth_display_name">顯示名稱</string>
-    <string name="chat_auth_login_failed">登入失敗</string>
     <string name="chat_attachment_move_up">上移</string>
     <string name="chat_attachment_move_down">下移</string>
     <string name="chat_settings_add_member">加入成員</string>
     <string name="chat_members_empty">沒有成員</string>
 
     <string name="notification_channel_chat">傾偈通知</string>
-    <string name="chat_auth_brand">Mochi 傾偈</string>
-    <string name="chat_auth_verification_failed">驗證失敗</string>
-    <string name="chat_auth_create_identity_failed">建立身份失敗</string>
-    <string name="chat_auth_mfa_unsupported">手機應用程式暫時未支援 MFA</string>
-    <string name="chat_auth_enter_code_sent">請輸入發送到 %1$s 嘅驗證碼</string>
-    <string name="chat_auth_create_identity">建立你嘅身份</string>
     <string name="chat_list_title">傾偈</string>
     <string name="chat_list_new">新對話</string>
     <string name="chat_list_empty">未有任何對話</string>
     <string name="chat_new_title">新對話</string>
     <string name="chat_new_name">群組名稱</string>
-    <string name="chat_new_friends">朋友</string>
     <string name="chat_new_existing_chat">打開現有對話</string>
     <string name="chat_new_start">開始傾偈</string>
     <string name="chat_new_start_group">開始群組對話</string>
@@ -40,8 +29,6 @@
     <string name="chat_messages_empty">未有訊息 — 打個招呼啦!</string>
     <string name="chat_messages_load_more">載入舊訊息</string>
     <string name="chat_attachment_label">檔案</string>
-    <string name="chat_message_too_long">訊息太長</string>
-    <string name="chat_message_empty">訊息唔可以係空白</string>
     <string name="chat_settings_title">傾偈設定</string>
     <string name="chat_settings_rename">重新命名對話</string>
     <string name="chat_settings_rename_label">對話名稱</string>
@@ -70,15 +57,12 @@
     <string name="chat_forward_friends">朋友</string>
     <string name="chat_policy_title">收到嘅聊天</string>
     <string name="chat_policy_friends">只限好友</string>
-    <string name="chat_policy_friends_description">只有好友先可以同你開始傾偈（預設）。</string>
     <string name="chat_policy_anyone">任何人</string>
-    <string name="chat_policy_anyone_description">任何人都可以同你開始傾偈。</string>
     <string name="chat_new_search_placeholder">搜尋使用者</string>
     <string name="chat_new_no_matches">冇相符嘅使用者</string>
     <string name="chat_new_no_friends">搵人傾偈</string>
     <string name="chat_pin">置頂</string>
     <string name="chat_unpin">取消置頂</string>
-    <string name="chat_pinned_label">已置頂</string>
     <string name="chat_settings_general">一般</string>
     <string name="chat_settings_screen_title">%1$s 設定</string>
     <string name="chat_mark_read">標記為已讀</string>
@@ -87,7 +71,6 @@
     <string name="chat_search_prev">上一個相符項</string>
     <string name="chat_settings_id">傾偈 ID</string>
     <string name="chat_forward_empty">冇傾偈可以轉寄</string>
-    <string name="chat_forward_failed">轉寄失敗</string>
     <string name="chat_forward_search">搜尋傾偈…</string>
     <string name="chat_forward_subtitle">揀一個傾偈或者朋友，轉寄揀咗嘅訊息</string>
     <string name="chat_forward_success">已轉寄</string>
@@ -95,5 +78,5 @@
     <string name="chat_message_deleted">呢條訊息已經刪除</string>
     <string name="chat_message_forward">轉寄</string>
     <string name="chat_search_hint">喺傾偈度搜尋...</string>
-    <string name="chat_search_no_results">冇結果</string>
+    <string name="chat_new_fallback_name">聊天</string>
 </resources>

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">የማሳያ ስም</string>
-    <string name="chat_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
     <string name="chat_list_title">ውይይቶች</string>
     <string name="chat_list_search">ይፈልጉ</string>
     <string name="chat_list_logout">ውጣ</string>
     <string name="chat_list_new">አዲስ ውይይት</string>
     <string name="chat_new_title">አዲስ ውይይት</string>
     <string name="chat_new_name">የቡድን ስም</string>
-    <string name="chat_new_friends">ጓደኞች</string>
     <string name="chat_message_placeholder">መልዕክት</string>
     <string name="chat_attachment_add">ፋይሎችን አያይዝ</string>
-    <string name="chat_message_attach">ፋይሎችን አያይዝ</string>
     <string name="chat_settings_title">የውይይት ቅንብሮች</string>
     <string name="chat_settings_rename_label">የውይይት ስም</string>
     <string name="chat_settings_save">ያስቀምጡ</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">ላክ</string>
 
     <string name="notification_channel_chat">የውይይት ማሳወቂያዎች</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">መግባት አልተሳካም</string>
-    <string name="chat_auth_create_identity_failed">ማንነት መፍጠር አልተሳካም</string>
-    <string name="chat_auth_mfa_unsupported">MFA በሞባይል መተግበሪያ ላይ ገና አይደገፍም</string>
-    <string name="chat_auth_enter_code_sent">ወደ %1$s የተላከውን ኮድ ያስገቡ</string>
-    <string name="chat_auth_create_identity">ማንነትዎን ይፍጠሩ</string>
     <string name="chat_list_empty">እስካሁን ውይይቶች የሉም</string>
     <string name="chat_new_existing_chat">ነባር ውይይት ይክፈቱ</string>
     <string name="chat_new_start">ውይይት ይጀምሩ</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">ወደ ላይ ያንቀሳቅሱ</string>
     <string name="chat_attachment_move_down">ወደ ታች ያንቀሳቅሱ</string>
     <string name="chat_attachment_label">ፋይል</string>
-    <string name="chat_message_remove_attachment">አባሪውን ያስወግዱ</string>
-    <string name="chat_message_too_long">መልዕክቱ በጣም ረጅም ነው</string>
-    <string name="chat_message_empty">መልዕክት ባዶ ሊሆን አይችልም</string>
     <string name="chat_settings_rename">ውይይቱን ይሰይሙ</string>
     <string name="chat_settings_add_member_empty">የሚጨመር ጓደኛ የለም</string>
     <string name="chat_settings_remove_member_message">%1$s ከዚህ ውይይት ይወገድ?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">ይህ መልዕክት ተሰርዟል</string>
     <string name="chat_search_hint">በውይይቱ ውስጥ ፈልግ...</string>
-    <string name="chat_search_no_results">ውጤት የለም</string>
     <string name="chat_message_forward">አስተላልፍ</string>
     <string name="chat_forward_title">ወደ… አስተላልፍ</string>
     <string name="chat_forward_search">ውይይቶችን ፈልግ…</string>
     <string name="chat_forward_empty">የሚተላለፍበት ውይይት የለም</string>
     <string name="chat_forward_success">ተላልፏል</string>
-    <string name="chat_forward_failed">ማስተላለፍ አልተሳካም</string>
     <string name="chat_message_reply">መልስ ስጥ</string>
     <string name="chat_message_select">ምረጥ</string>
     <string name="chat_reply_attachment">አባሪ</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">ጓደኞች</string>
     <string name="chat_policy_title">ገቢ ቻቶች</string>
     <string name="chat_policy_friends">ጓደኞች ብቻ</string>
-    <string name="chat_policy_friends_description">ጓደኞች ብቻ ከእርስዎ ጋር ቻት መጀመር ይችላሉ (ነባሪ)።</string>
     <string name="chat_policy_anyone">ማንኛውም ሰው</string>
-    <string name="chat_policy_anyone_description">ማንኛውም ሰው ከእርስዎ ጋር ቻት መጀመር ይችላል።</string>
     <string name="chat_new_search_placeholder">ሰዎችን ይፈልጉ</string>
     <string name="chat_new_no_matches">ተዛማጅ ሰዎች የሉም</string>
     <string name="chat_new_no_friends">ለመወያየት ሰዎችን ይፈልጉ</string>
     <string name="chat_pin">ሰካ</string>
     <string name="chat_unpin">ሰክነት ያንሱ</string>
-    <string name="chat_pinned_label">ተሰክቷል</string>
     <string name="chat_settings_general">አጠቃላይ</string>
     <string name="chat_settings_screen_title">የ%1$s ቅንብሮች</string>
     <string name="chat_mark_read">እንደተነበበ ምልክት አድርግ</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">ቀዳሚ ተዛማጅ</string>
     <string name="chat_settings_id">የውይይት መታወቂያ</string>
     <string name="chat_message_edited">(ተሻሽሏል)</string>
+    <string name="chat_new_fallback_name">ውይይት</string>
 </resources>

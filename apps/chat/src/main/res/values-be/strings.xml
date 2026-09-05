@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Адлюстраванае імя</string>
-    <string name="chat_auth_verification_failed">Праверка не атрымалася</string>
     <string name="chat_list_title">Чаты</string>
     <string name="chat_list_search">Пошук</string>
     <string name="chat_list_logout">Выйсці</string>
     <string name="chat_list_new">Новы чат</string>
     <string name="chat_new_title">Новы чат</string>
     <string name="chat_new_name">Назва групы</string>
-    <string name="chat_new_friends">Сябры</string>
     <string name="chat_message_placeholder">Паведамленне</string>
     <string name="chat_attachment_add">Прымацаваць файлы</string>
-    <string name="chat_message_attach">Прымацаваць файлы</string>
     <string name="chat_settings_title">Налады чата</string>
     <string name="chat_settings_rename_label">Назва чата</string>
     <string name="chat_settings_save">Захаваць</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Адправіць</string>
 
     <string name="notification_channel_chat">Апавяшчэнні чата</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Не ўдалося ўвайсці</string>
-    <string name="chat_auth_create_identity_failed">Не ўдалося стварыць ідэнтычнасць</string>
-    <string name="chat_auth_mfa_unsupported">MFA пакуль не падтрымліваецца ў мабільным дадатку</string>
-    <string name="chat_auth_enter_code_sent">Увядзіце код, дасланы на %1$s</string>
-    <string name="chat_auth_create_identity">Стварыце сваю ідэнтычнасць</string>
     <string name="chat_list_empty">Чатаў пакуль няма</string>
     <string name="chat_new_existing_chat">Адкрыць існуючы чат</string>
     <string name="chat_new_start">Пачаць чат</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Перамясціць уверх</string>
     <string name="chat_attachment_move_down">Перамясціць уніз</string>
     <string name="chat_attachment_label">Файл</string>
-    <string name="chat_message_remove_attachment">Выдаліць укладанне</string>
-    <string name="chat_message_too_long">Паведамленне занадта доўгае</string>
-    <string name="chat_message_empty">Паведамленне не можа быць пустым</string>
     <string name="chat_settings_rename">Пераназваць чат</string>
     <string name="chat_settings_add_member_empty">Няма сяброў для дадання</string>
     <string name="chat_settings_remove_member_message">Выдаліць %1$s з гэтага чата?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Гэта паведамленне было выдалена</string>
     <string name="chat_search_hint">Пошук у чаце...</string>
-    <string name="chat_search_no_results">Нічога не знойдзена</string>
     <string name="chat_message_forward">Пераслаць</string>
     <string name="chat_forward_title">Пераслаць у…</string>
     <string name="chat_forward_search">Пошук чатаў…</string>
     <string name="chat_forward_empty">Няма чатаў для перасылкі</string>
     <string name="chat_forward_success">Пераслана</string>
-    <string name="chat_forward_failed">Не ўдалося пераслаць</string>
     <string name="chat_message_reply">Адказаць</string>
     <string name="chat_message_select">Выбраць</string>
     <string name="chat_reply_attachment">Укладанне</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Сябры</string>
     <string name="chat_policy_title">Уваходныя чаты</string>
     <string name="chat_policy_friends">Толькі сябры</string>
-    <string name="chat_policy_friends_description">Толькі сябры могуць пачаць чат з вамі (па змаўчанні).</string>
     <string name="chat_policy_anyone">Хто заўгодна</string>
-    <string name="chat_policy_anyone_description">Любы можа пачаць чат з вамі.</string>
     <string name="chat_new_search_placeholder">Пошук людзей</string>
     <string name="chat_new_no_matches">Няма адпаведных людзей</string>
     <string name="chat_new_no_friends">Знайдзіце людзей для чата</string>
     <string name="chat_pin">Замацаваць</string>
     <string name="chat_unpin">Адмацаваць</string>
-    <string name="chat_pinned_label">Замацавана</string>
     <string name="chat_settings_general">Агульныя</string>
     <string name="chat_settings_screen_title">Налады %1$s</string>
     <string name="chat_mark_read">Пазначыць як прачытанае</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Папярэдняе супадзенне</string>
     <string name="chat_settings_id">ID чата</string>
     <string name="chat_message_edited">(зменена)</string>
+    <string name="chat_new_fallback_name">Чат</string>
 </resources>

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Kuvatav nimi</string>
-    <string name="chat_auth_verification_failed">Kontrollimine ebaõnnestus</string>
     <string name="chat_list_title">Vestlused</string>
     <string name="chat_list_search">Otsi</string>
     <string name="chat_list_logout">Logi välja</string>
     <string name="chat_list_new">Uus vestlus</string>
     <string name="chat_new_title">Uus vestlus</string>
     <string name="chat_new_name">Grupi nimi</string>
-    <string name="chat_new_friends">Sõbrad</string>
     <string name="chat_message_placeholder">Sõnum</string>
     <string name="chat_attachment_add">Lisa failid</string>
-    <string name="chat_message_attach">Lisa failid</string>
     <string name="chat_settings_title">Vestluse seaded</string>
     <string name="chat_settings_rename_label">Vestluse nimi</string>
     <string name="chat_settings_save">Salvesta</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Saada</string>
 
     <string name="notification_channel_chat">Vestluse teavitused</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Sisselogimine ebaõnnestus</string>
-    <string name="chat_auth_create_identity_failed">Identiteedi loomine ebaõnnestus</string>
-    <string name="chat_auth_mfa_unsupported">MFA-d ei toetata mobiilirakenduses veel</string>
-    <string name="chat_auth_enter_code_sent">Sisesta kood, mis saadeti aadressile %1$s</string>
-    <string name="chat_auth_create_identity">Loo oma identiteet</string>
     <string name="chat_list_empty">Vestlusi veel pole</string>
     <string name="chat_new_existing_chat">Ava olemasolev vestlus</string>
     <string name="chat_new_start">Alusta vestlust</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Liiguta üles</string>
     <string name="chat_attachment_move_down">Liiguta alla</string>
     <string name="chat_attachment_label">Fail</string>
-    <string name="chat_message_remove_attachment">Eemalda manus</string>
-    <string name="chat_message_too_long">Sõnum on liiga pikk</string>
-    <string name="chat_message_empty">Sõnum ei saa olla tühi</string>
     <string name="chat_settings_rename">Nimeta vestlus ümber</string>
     <string name="chat_settings_add_member_empty">Pole sõpru, keda lisada</string>
     <string name="chat_settings_remove_member_message">Kas eemaldada %1$s sellest vestlusest?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">See sõnum on kustutatud</string>
     <string name="chat_search_hint">Otsi vestlusest...</string>
-    <string name="chat_search_no_results">Tulemusi pole</string>
     <string name="chat_message_forward">Edasta</string>
     <string name="chat_forward_title">Edasta…</string>
     <string name="chat_forward_search">Otsi vestlusi…</string>
     <string name="chat_forward_empty">Pole vestlusi, kuhu edastada</string>
     <string name="chat_forward_success">Edastatud</string>
-    <string name="chat_forward_failed">Edastamine ebaõnnestus</string>
     <string name="chat_message_reply">Vasta</string>
     <string name="chat_message_select">Vali</string>
     <string name="chat_reply_attachment">Manus</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Sõbrad</string>
     <string name="chat_policy_title">Sissetulevad vestlused</string>
     <string name="chat_policy_friends">Ainult sõbrad</string>
-    <string name="chat_policy_friends_description">Ainult sõbrad saavad sinuga vestlust alustada (vaikimisi).</string>
     <string name="chat_policy_anyone">Kõik</string>
-    <string name="chat_policy_anyone_description">Igaüks saab sinuga vestlust alustada.</string>
     <string name="chat_new_search_placeholder">Otsi inimesi</string>
     <string name="chat_new_no_matches">Sobivaid inimesi pole</string>
     <string name="chat_new_no_friends">Otsi inimesi, kellega vestelda</string>
     <string name="chat_pin">Kinnita</string>
     <string name="chat_unpin">Eemalda kinnitus</string>
-    <string name="chat_pinned_label">Kinnitatud</string>
     <string name="chat_settings_general">Üldine</string>
     <string name="chat_settings_screen_title">%1$s seaded</string>
     <string name="chat_mark_read">Märgi loetuks</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Eelmine vaste</string>
     <string name="chat_settings_id">Vestluse ID</string>
     <string name="chat_message_edited">(muudetud)</string>
+    <string name="chat_new_fallback_name">Vestlus</string>
 </resources>

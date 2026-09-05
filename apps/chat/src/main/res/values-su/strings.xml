@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Ngaran tampilan</string>
-    <string name="chat_auth_verification_failed">Verifikasi gagal</string>
     <string name="chat_list_title">Chat</string>
     <string name="chat_list_search">Paluruh</string>
     <string name="chat_list_logout">Kaluar</string>
     <string name="chat_list_new">Obrolan anyar</string>
     <string name="chat_new_title">Obrolan anyar</string>
     <string name="chat_new_name">Ngaran grup</string>
-    <string name="chat_new_friends">Babaturan</string>
     <string name="chat_message_placeholder">Pesen</string>
     <string name="chat_attachment_add">Lampirkeun file</string>
-    <string name="chat_message_attach">Lampirkeun file</string>
     <string name="chat_settings_title">Setélan chat</string>
     <string name="chat_settings_rename_label">Ngaran chat</string>
     <string name="chat_settings_save">Simpen</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Kirim</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">Login gagal</string>
     <string name="chat_attachment_move_up">Pindahkeun ka luhur</string>
     <string name="chat_attachment_move_down">Pindahkeun ka handap</string>
 
     <string name="notification_channel_chat">Béwara obrolan</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Gagal nyieun identitas</string>
-    <string name="chat_auth_mfa_unsupported">MFA tacan dirojong dina aplikasi mobile</string>
-    <string name="chat_auth_enter_code_sent">Lebetkeun kode anu dikintun ka %1$s</string>
-    <string name="chat_auth_create_identity">Jieun identitas anjeun</string>
     <string name="chat_list_empty">Tacan aya obrolan</string>
     <string name="chat_new_existing_chat">Buka obrolan anu tos aya</string>
     <string name="chat_new_start">Mimitian obrolan</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Tacan aya pesen — wilujeng sumping!</string>
     <string name="chat_messages_load_more">Muat pesen anu langkung lami</string>
     <string name="chat_attachment_label">Berkas</string>
-    <string name="chat_message_too_long">Pesen kalintang panjang</string>
-    <string name="chat_message_empty">Pesen teu kenging kosong</string>
     <string name="chat_settings_rename">Ganti ngaran obrolan</string>
     <string name="chat_settings_add_member_empty">Teu aya réréncangan pikeun ditambihkeun</string>
     <string name="chat_settings_remove_member_message">Cabut %1$s tina obrolan ieu?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Ieu pesen geus dihapus</string>
     <string name="chat_search_hint">Téangan dina obrolan...</string>
-    <string name="chat_search_no_results">Teu aya hasil</string>
     <string name="chat_message_forward">Teruskeun</string>
     <string name="chat_forward_title">Teruskeun ka…</string>
     <string name="chat_forward_search">Téangan obrolan…</string>
     <string name="chat_forward_empty">Teu aya obrolan pikeun neruskeun</string>
     <string name="chat_forward_success">Diteruskeun</string>
-    <string name="chat_forward_failed">Gagal neruskeun</string>
     <string name="chat_message_reply">Bales</string>
     <string name="chat_message_select">Pilih</string>
     <string name="chat_reply_attachment">Lampiran</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Babaturan</string>
     <string name="chat_policy_title">Obrolan asup</string>
     <string name="chat_policy_friends">Ngan babaturan</string>
-    <string name="chat_policy_friends_description">Ngan babaturan anu bisa ngamimitian obrolan sareng anjeun (standar).</string>
     <string name="chat_policy_anyone">Saha waé</string>
-    <string name="chat_policy_anyone_description">Saha waé bisa ngamimitian obrolan sareng anjeun.</string>
     <string name="chat_new_search_placeholder">Téangan jalma</string>
     <string name="chat_new_no_matches">Teu aya jalma anu cocog</string>
     <string name="chat_new_no_friends">Téangan jalma pikeun ngobrol</string>
     <string name="chat_pin">Semat</string>
     <string name="chat_unpin">Cabut pin</string>
-    <string name="chat_pinned_label">Dipin</string>
     <string name="chat_settings_general">Umum</string>
     <string name="chat_settings_screen_title">Setélan %1$s</string>
     <string name="chat_mark_read">Tandaan geus dibaca</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Cocok saméméhna</string>
     <string name="chat_settings_id">ID obrolan</string>
     <string name="chat_message_edited">(diédit)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

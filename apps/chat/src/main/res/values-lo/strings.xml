@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">ຊື່ສະແດງ</string>
-    <string name="chat_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
     <string name="chat_list_title">ແຊັດ</string>
     <string name="chat_list_search">ຄົ້ນຫາ</string>
     <string name="chat_list_logout">ອອກຈາກລະບົບ</string>
     <string name="chat_list_new">ສົນທະນາໃໝ່</string>
     <string name="chat_new_title">ສົນທະນາໃໝ່</string>
     <string name="chat_new_name">ຊື່ກຸ່ມ</string>
-    <string name="chat_new_friends">ໝູ່</string>
     <string name="chat_message_placeholder">ຂໍ້ຄວາມ</string>
     <string name="chat_attachment_add">ແນບໄຟລ໌</string>
-    <string name="chat_message_attach">ແນບໄຟລ໌</string>
     <string name="chat_settings_title">ການຕັ້ງຄ່າແຊັດ</string>
     <string name="chat_settings_rename_label">ຊື່ແຊັດ</string>
     <string name="chat_settings_save">ບັນທຶກ</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">ສົ່ງ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
     <string name="chat_attachment_move_up">ຍ້າຍຂຶ້ນ</string>
     <string name="chat_attachment_move_down">ຍ້າຍລົງ</string>
 
     <string name="notification_channel_chat">ການແຈ້ງເຕືອນການສົນທະນາ</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">ສ້າງຕົວຕົນບໍ່ສຳເລັດ</string>
-    <string name="chat_auth_mfa_unsupported">ຍັງບໍ່ຮອງຮັບ MFA ໃນແອັບມືຖື</string>
-    <string name="chat_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
-    <string name="chat_auth_create_identity">ສ້າງຕົວຕົນຂອງທ່ານ</string>
     <string name="chat_list_empty">ຍັງບໍ່ມີການສົນທະນາ</string>
     <string name="chat_new_existing_chat">ເປີດການສົນທະນາທີ່ມີຢູ່</string>
     <string name="chat_new_start">ເລີ່ມການສົນທະນາ</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">ຍັງບໍ່ມີຂໍ້ຄວາມ — ທັກທາຍກັນເລີຍ!</string>
     <string name="chat_messages_load_more">ໂຫຼດຂໍ້ຄວາມເກົ່າກວ່າ</string>
     <string name="chat_attachment_label">ໄຟລ໌</string>
-    <string name="chat_message_too_long">ຂໍ້ຄວາມຍາວເກີນໄປ</string>
-    <string name="chat_message_empty">ຂໍ້ຄວາມຫວ່າງເປົ່າບໍ່ໄດ້</string>
     <string name="chat_settings_rename">ປ່ຽນຊື່ການສົນທະນາ</string>
     <string name="chat_settings_add_member_empty">ບໍ່ມີໝູ່ໃຫ້ເພີ່ມ</string>
     <string name="chat_settings_remove_member_message">ລຶບ %1$s ອອກຈາກການສົນທະນານີ້ບໍ?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">ຂໍ້ຄວາມນີ້ຖືກລຶບແລ້ວ</string>
     <string name="chat_search_hint">ຊອກຫາໃນແຊັດ...</string>
-    <string name="chat_search_no_results">ບໍ່ມີຜົນການຊອກຫາ</string>
     <string name="chat_message_forward">ສົ່ງຕໍ່</string>
     <string name="chat_forward_title">ສົ່ງຕໍ່ຫາ…</string>
     <string name="chat_forward_search">ຊອກຫາແຊັດ…</string>
     <string name="chat_forward_empty">ບໍ່ມີແຊັດໃຫ້ສົ່ງຕໍ່</string>
     <string name="chat_forward_success">ສົ່ງຕໍ່ແລ້ວ</string>
-    <string name="chat_forward_failed">ສົ່ງຕໍ່ບໍ່ສຳເລັດ</string>
     <string name="chat_message_reply">ຕອບກັບ</string>
     <string name="chat_message_select">ເລືອກ</string>
     <string name="chat_reply_attachment">ໄຟລ໌ແນບ</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">ໝູ່</string>
     <string name="chat_policy_title">ແຊັດຂາເຂົ້າ</string>
     <string name="chat_policy_friends">ໝູ່ເທົ່ານັ້ນ</string>
-    <string name="chat_policy_friends_description">ມີພຽງໝູ່ເທົ່ານັ້ນທີ່ສາມາດເລີ່ມການສົນທະນາກັບທ່ານໄດ້ (ຄ່າເລີ່ມຕົ້ນ).</string>
     <string name="chat_policy_anyone">ໃຜກໍໄດ້</string>
-    <string name="chat_policy_anyone_description">ໃຜກໍໄດ້ສາມາດເລີ່ມການສົນທະນາກັບທ່ານໄດ້.</string>
     <string name="chat_new_search_placeholder">ຄົ້ນຫາຄົນ</string>
     <string name="chat_new_no_matches">ບໍ່ມີຄົນທີ່ກົງກັນ</string>
     <string name="chat_new_no_friends">ຄົ້ນຫາຄົນເພື່ອສົນທະນາ</string>
     <string name="chat_pin">ປັກໝຸດ</string>
     <string name="chat_unpin">ຖອດປັກ</string>
-    <string name="chat_pinned_label">ປັກໝຸດແລ້ວ</string>
     <string name="chat_settings_general">ທົ່ວໄປ</string>
     <string name="chat_settings_screen_title">ການຕັ້ງຄ່າ %1$s</string>
     <string name="chat_mark_read">ໝາຍວ່າອ່ານແລ້ວ</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">ຜົນທີ່ກົງກັນກ່ອນໜ້າ</string>
     <string name="chat_settings_id">ໄອດີການສົນທະນາ</string>
     <string name="chat_message_edited">(ແກ້ໄຂແລ້ວ)</string>
+    <string name="chat_new_fallback_name">ແຊັດ</string>
 </resources>

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Megjelenítendő név</string>
-    <string name="chat_auth_verification_failed">Az ellenőrzés sikertelen</string>
     <string name="chat_list_title">Chatek</string>
     <string name="chat_list_search">Keresés</string>
     <string name="chat_list_logout">Kijelentkezés</string>
     <string name="chat_list_new">Új csevegés</string>
     <string name="chat_new_title">Új csevegés</string>
     <string name="chat_new_name">Csoport neve</string>
-    <string name="chat_new_friends">Barátok</string>
     <string name="chat_message_placeholder">Üzenet</string>
     <string name="chat_attachment_add">Fájlok csatolása</string>
-    <string name="chat_message_attach">Fájlok csatolása</string>
     <string name="chat_settings_title">Chatbeállítások</string>
     <string name="chat_settings_rename_label">Chat neve</string>
     <string name="chat_settings_save">Mentés</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Küldés</string>
 
     <string name="notification_channel_chat">Csevegési értesítések</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">A bejelentkezés sikertelen</string>
-    <string name="chat_auth_create_identity_failed">Az identitás létrehozása sikertelen</string>
-    <string name="chat_auth_mfa_unsupported">Az MFA még nem támogatott a mobilalkalmazásban</string>
-    <string name="chat_auth_enter_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
-    <string name="chat_auth_create_identity">Hozza létre identitását</string>
     <string name="chat_list_empty">Még nincsenek csevegések</string>
     <string name="chat_new_existing_chat">Meglévő csevegés megnyitása</string>
     <string name="chat_new_start">Csevegés indítása</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Mozgatás felfelé</string>
     <string name="chat_attachment_move_down">Mozgatás lefelé</string>
     <string name="chat_attachment_label">Fájl</string>
-    <string name="chat_message_remove_attachment">Melléklet eltávolítása</string>
-    <string name="chat_message_too_long">Az üzenet túl hosszú</string>
-    <string name="chat_message_empty">Az üzenet nem lehet üres</string>
     <string name="chat_settings_rename">Csevegés átnevezése</string>
     <string name="chat_settings_add_member_empty">Nincs hozzáadható ismerős</string>
     <string name="chat_settings_remove_member_message">Eltávolítja %1$s felhasználót ebből a csevegésből?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Ez az üzenet törölve lett</string>
     <string name="chat_search_hint">Keresés a chatben...</string>
-    <string name="chat_search_no_results">Nincs találat</string>
     <string name="chat_message_forward">Továbbítás</string>
     <string name="chat_forward_title">Továbbítás ide…</string>
     <string name="chat_forward_search">Chatek keresése…</string>
     <string name="chat_forward_empty">Nincs chat, ahová továbbíthatnál</string>
     <string name="chat_forward_success">Továbbítva</string>
-    <string name="chat_forward_failed">Nem sikerült továbbítani</string>
     <string name="chat_message_reply">Válasz</string>
     <string name="chat_message_select">Kijelölés</string>
     <string name="chat_reply_attachment">Melléklet</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Barátok</string>
     <string name="chat_policy_title">Bejövő csevegések</string>
     <string name="chat_policy_friends">Csak barátok</string>
-    <string name="chat_policy_friends_description">Csak barátok indíthatnak csevegést veled (alapértelmezett).</string>
     <string name="chat_policy_anyone">Bárki</string>
-    <string name="chat_policy_anyone_description">Bárki indíthat csevegést veled.</string>
     <string name="chat_new_search_placeholder">Emberek keresése</string>
     <string name="chat_new_no_matches">Nincs egyező személy</string>
     <string name="chat_new_no_friends">Keress embereket a csevegéshez</string>
     <string name="chat_pin">Rögzítés</string>
     <string name="chat_unpin">Rögzítés feloldása</string>
-    <string name="chat_pinned_label">Rögzítve</string>
     <string name="chat_settings_general">Általános</string>
     <string name="chat_settings_screen_title">%1$s beállításai</string>
     <string name="chat_mark_read">Megjelölés olvasottként</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Előző találat</string>
     <string name="chat_settings_id">Csevegés azonosítója</string>
     <string name="chat_message_edited">(szerkesztve)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

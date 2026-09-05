@@ -175,8 +175,8 @@ fun NewChatScreen(
                                     friend = friend,
                                     selected = friend.id in uiState.selected,
                                     onToggle = {
-                                        if (friend.chatId.isNotBlank() && uiState.selected.isEmpty()) {
-                                            viewModel.openExistingChat(friend.chatId)
+                                        if (friend.chat.isNotBlank() && uiState.selected.isEmpty()) {
+                                            viewModel.openExistingChat(friend.chat)
                                         } else {
                                             viewModel.toggleSelect(friend.id)
                                         }
@@ -186,12 +186,13 @@ fun NewChatScreen(
                         }
                     }
 
+                    val fallbackName = stringResource(R.string.chat_new_fallback_name)
                     Row(
                         modifier = Modifier.fillMaxWidth().padding(16.dp),
                         horizontalArrangement = Arrangement.End
                     ) {
                         MochiButton(
-                            onClick = { viewModel.createChat(fallbackName = viewModel.selectedFallbackName()) },
+                            onClick = { viewModel.createChat(fallbackName = viewModel.selectedFallbackName(fallbackName)) },
                             enabled = canCreate && !uiState.isCreating
                         ) {
                             if (uiState.isCreating) {
@@ -240,7 +241,7 @@ private fun FriendRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            if (friend.chatId.isNotBlank() && !selected) {
+            if (friend.chat.isNotBlank() && !selected) {
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
                     text = stringResource(R.string.chat_new_existing_chat),

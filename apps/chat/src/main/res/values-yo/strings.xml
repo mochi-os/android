@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Orúkọ àfihàn</string>
-    <string name="chat_auth_verification_failed">Ìjẹ́rìísí kùnà</string>
     <string name="chat_list_title">Àwọn ìjíròrò</string>
     <string name="chat_list_search">Wá</string>
     <string name="chat_list_logout">Jáde</string>
     <string name="chat_list_new">Chat tuntun</string>
     <string name="chat_new_title">Chat tuntun</string>
     <string name="chat_new_name">Orúkọ àwùjọ</string>
-    <string name="chat_new_friends">Àwọn ọ̀rẹ́</string>
     <string name="chat_message_placeholder">Ìránṣẹ́</string>
     <string name="chat_attachment_add">So àwọn fáìlì pọ̀</string>
-    <string name="chat_message_attach">So àwọn fáìlì pọ̀</string>
     <string name="chat_settings_title">Ètò ìjíròrò</string>
     <string name="chat_settings_rename_label">Orúkọ ìjíròrò</string>
     <string name="chat_settings_save">Fi pamọ́</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Firanṣẹ</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">Iwọle kuna</string>
     <string name="chat_attachment_move_up">Gbe soke</string>
     <string name="chat_attachment_move_down">Gbe sokale</string>
 
     <string name="notification_channel_chat">Ìfitónilétí ìjíròrò</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Kò ṣeé ṣe láti ṣẹ̀dá ìdánimọ̀</string>
-    <string name="chat_auth_mfa_unsupported">A kò tíì ṣàtìlẹ́yìn MFA nínú ohun-èlò alágbèéká</string>
-    <string name="chat_auth_enter_code_sent">Tẹ kóòdù tí a fi ránṣẹ́ sí %1$s</string>
-    <string name="chat_auth_create_identity">Ṣẹ̀dá ìdánimọ̀ rẹ</string>
     <string name="chat_list_empty">Kò sí ìjíròrò kankan síbẹ̀</string>
     <string name="chat_new_existing_chat">Ṣí ìjíròrò tó wà</string>
     <string name="chat_new_start">Bẹ̀rẹ̀ ìjíròrò</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Kò sí ìránṣẹ́ kankan síbẹ̀ — kí wọn káàbọ̀!</string>
     <string name="chat_messages_load_more">Gbé àwọn ìránṣẹ́ àtijọ́ wọlé</string>
     <string name="chat_attachment_label">Fáìlì</string>
-    <string name="chat_message_too_long">Ìránṣẹ́ gùn jù</string>
-    <string name="chat_message_empty">Ìránṣẹ́ kò gbọdọ̀ ṣofo</string>
     <string name="chat_settings_rename">Tún ìjíròrò sọ lórúkọ</string>
     <string name="chat_settings_add_member_empty">Kò sí ọ̀rẹ́ láti fi kún</string>
     <string name="chat_settings_remove_member_message">Yọ %1$s kúrò nínú ìjíròrò yìí?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">A ti pa ìfiránṣẹ́ yìí rẹ́</string>
     <string name="chat_search_hint">Wá nínú ìfọ̀rọ̀wérọ̀...</string>
-    <string name="chat_search_no_results">Kò sí àbájáde</string>
     <string name="chat_message_forward">Fi ránṣẹ́ síwájú</string>
     <string name="chat_forward_title">Fi ránṣẹ́ síwájú sí…</string>
     <string name="chat_forward_search">Wá àwọn ìfọ̀rọ̀wérọ̀…</string>
     <string name="chat_forward_empty">Kò sí ìfọ̀rọ̀wérọ̀ láti fi ránṣẹ́ síwájú sí</string>
     <string name="chat_forward_success">A ti fi ránṣẹ́ síwájú</string>
-    <string name="chat_forward_failed">Kò lè fi ránṣẹ́ síwájú</string>
     <string name="chat_message_reply">Dáhùn</string>
     <string name="chat_message_select">Yàn</string>
     <string name="chat_reply_attachment">Fáìlì àsopọ̀</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Àwọn ọ̀rẹ́</string>
     <string name="chat_policy_title">Àwọn ìfọ̀rọ̀wérọ̀ tí ń wọlé</string>
     <string name="chat_policy_friends">Àwọn ọ̀rẹ́ nìkan</string>
-    <string name="chat_policy_friends_description">Àwọn ọ̀rẹ́ nìkan ni ó le bẹ̀rẹ̀ ìfọ̀rọ̀wérọ̀ pẹ̀lú rẹ (àbùdá).</string>
     <string name="chat_policy_anyone">Ẹnikẹ́ni</string>
-    <string name="chat_policy_anyone_description">Ẹnikẹ́ni le bẹ̀rẹ̀ ìfọ̀rọ̀wérọ̀ pẹ̀lú rẹ.</string>
     <string name="chat_new_search_placeholder">Wa awọn eniyan</string>
     <string name="chat_new_no_matches">Ko si eniyan ti o baamu</string>
     <string name="chat_new_no_friends">Wa awọn eniyan lati bá sọ̀rọ̀</string>
     <string name="chat_pin">Tẹ̀</string>
     <string name="chat_unpin">Yọ pin kúrò</string>
-    <string name="chat_pinned_label">Ti tẹ̀</string>
     <string name="chat_settings_general">Gbogbogbòò</string>
     <string name="chat_settings_screen_title">Àwọn ètò %1$s</string>
     <string name="chat_mark_read">Sàmì sí bí a ti kà</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Ìbáramu tó ṣáájú</string>
     <string name="chat_settings_id">ID ìfọ̀rọ̀wérọ̀</string>
     <string name="chat_message_edited">(a tunṣe)</string>
+    <string name="chat_new_fallback_name">Ìjíròrò</string>
 </resources>

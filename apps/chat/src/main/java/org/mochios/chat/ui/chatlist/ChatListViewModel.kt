@@ -17,7 +17,6 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
 import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
-import org.mochios.chat.model.chatKey
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -75,7 +74,7 @@ class ChatListViewModel @Inject constructor(
         // yet (updated=0) sink to the bottom in name order so they remain
         // reachable but don't outrank chats with real messages.
         return filtered.sortedWith(
-            compareByDescending<Chat> { chat -> chat.chatKey() in pinnedKeys }
+            compareByDescending<Chat> { chat -> chat.id in pinnedKeys }
                 .thenByDescending { chat -> chat.updated }
                 .thenBy(NaturalCompare) { chat -> chat.name }
         )
@@ -94,3 +93,9 @@ class ChatListViewModel @Inject constructor(
         }
     }
 }
+
+/**
+ * The unread badge for a drawer row. The open conversation is being read as
+ * it is shown, so its row carries none even before the list refetches.
+ */
+internal fun unreadBadge(chat: Chat, open: String): Int = if (chat.id == open) 0 else chat.unread

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Nome visualizzato</string>
-    <string name="chat_auth_verification_failed">Verifica non riuscita</string>
     <string name="chat_list_title">Chat</string>
     <string name="chat_list_search">Cerca</string>
     <string name="chat_list_logout">Esci</string>
     <string name="chat_list_new">Nuova chat</string>
     <string name="chat_new_title">Nuova chat</string>
     <string name="chat_new_name">Nome del gruppo</string>
-    <string name="chat_new_friends">Amici</string>
     <string name="chat_message_placeholder">Messaggio</string>
     <string name="chat_attachment_add">Allega file</string>
-    <string name="chat_message_attach">Allega file</string>
     <string name="chat_settings_title">Impostazioni della chat</string>
     <string name="chat_settings_rename_label">Nome della chat</string>
     <string name="chat_settings_save">Salva</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Invia</string>
     <string name="chat_attachment_remove">Rimuovi allegato</string>
-    <string name="chat_message_remove_attachment">Rimuovi allegato</string>
-    <string name="chat_auth_login_failed">Accesso non riuscito</string>
     <string name="chat_attachment_move_up">Sposta su</string>
     <string name="chat_attachment_move_down">Sposta giù</string>
 
     <string name="notification_channel_chat">Notifiche chat</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Creazione dell\'identità non riuscita</string>
-    <string name="chat_auth_mfa_unsupported">MFA non ancora supportata nell\'app mobile</string>
-    <string name="chat_auth_enter_code_sent">Inserisci il codice inviato a %1$s</string>
-    <string name="chat_auth_create_identity">Crea la tua identità</string>
     <string name="chat_list_empty">Ancora nessuna chat</string>
     <string name="chat_new_existing_chat">Apri chat esistente</string>
     <string name="chat_new_start">Avvia chat</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Ancora nessun messaggio — saluta!</string>
     <string name="chat_messages_load_more">Carica messaggi precedenti</string>
     <string name="chat_attachment_label">File</string>
-    <string name="chat_message_too_long">Messaggio troppo lungo</string>
-    <string name="chat_message_empty">Il messaggio non può essere vuoto</string>
     <string name="chat_settings_rename">Rinomina chat</string>
     <string name="chat_settings_add_member_empty">Nessun amico da aggiungere</string>
     <string name="chat_settings_remove_member_message">Rimuovere %1$s da questa chat?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Questo messaggio è stato eliminato</string>
     <string name="chat_search_hint">Cerca nella chat...</string>
-    <string name="chat_search_no_results">Nessun risultato</string>
     <string name="chat_message_forward">Inoltra</string>
     <string name="chat_forward_title">Inoltra a…</string>
     <string name="chat_forward_search">Cerca nelle chat…</string>
     <string name="chat_forward_empty">Nessuna chat a cui inoltrare</string>
     <string name="chat_forward_success">Inoltrato</string>
-    <string name="chat_forward_failed">Inoltro non riuscito</string>
     <string name="chat_message_reply">Rispondi</string>
     <string name="chat_message_select">Seleziona</string>
     <string name="chat_reply_attachment">Allegato</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Amici</string>
     <string name="chat_policy_title">Chat in arrivo</string>
     <string name="chat_policy_friends">Solo amici</string>
-    <string name="chat_policy_friends_description">Solo gli amici possono iniziare una chat con te (predefinito).</string>
     <string name="chat_policy_anyone">Chiunque</string>
-    <string name="chat_policy_anyone_description">Chiunque può iniziare una chat con te.</string>
     <string name="chat_new_search_placeholder">Cerca persone</string>
     <string name="chat_new_no_matches">Nessuna persona corrispondente</string>
     <string name="chat_new_no_friends">Cerca persone con cui chattare</string>
     <string name="chat_pin">Fissa</string>
     <string name="chat_unpin">Rimuovi dai fissati</string>
-    <string name="chat_pinned_label">Fissato</string>
     <string name="chat_settings_general">Generale</string>
     <string name="chat_settings_screen_title">Impostazioni di %1$s</string>
     <string name="chat_mark_read">Segna come letto</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Corrispondenza precedente</string>
     <string name="chat_settings_id">ID chat</string>
     <string name="chat_message_edited">(modificato)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

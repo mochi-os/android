@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">نام نمایشی</string>
-    <string name="chat_auth_verification_failed">تأیید ناموفق بود</string>
     <string name="chat_list_title">گفت‌وگوها</string>
     <string name="chat_list_search">جست‌وجو</string>
     <string name="chat_list_logout">خروج</string>
     <string name="chat_list_new">گفت‌وگوی جدید</string>
     <string name="chat_new_title">گفت‌وگوی جدید</string>
     <string name="chat_new_name">نام گروه</string>
-    <string name="chat_new_friends">دوستان</string>
     <string name="chat_message_placeholder">پیام</string>
     <string name="chat_attachment_add">پیوست فایل‌ها</string>
-    <string name="chat_message_attach">پیوست فایل‌ها</string>
     <string name="chat_settings_title">تنظیمات گفت‌وگو</string>
     <string name="chat_settings_rename_label">نام گفت‌وگو</string>
     <string name="chat_settings_save">ذخیره</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">ارسال</string>
 
     <string name="notification_channel_chat">اعلان‌های گفتگو</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">ورود ناموفق بود</string>
-    <string name="chat_auth_create_identity_failed">ایجاد هویت ناموفق بود</string>
-    <string name="chat_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
-    <string name="chat_auth_enter_code_sent">کدی که به %1$s ارسال شد را وارد کنید</string>
-    <string name="chat_auth_create_identity">هویت خود را ایجاد کنید</string>
     <string name="chat_list_empty">هنوز گفتگویی وجود ندارد</string>
     <string name="chat_new_existing_chat">باز کردن گفتگوی موجود</string>
     <string name="chat_new_start">شروع گفتگو</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">انتقال به بالا</string>
     <string name="chat_attachment_move_down">انتقال به پایین</string>
     <string name="chat_attachment_label">فایل</string>
-    <string name="chat_message_remove_attachment">حذف پیوست</string>
-    <string name="chat_message_too_long">پیام بسیار طولانی است</string>
-    <string name="chat_message_empty">پیام نمی‌تواند خالی باشد</string>
     <string name="chat_settings_rename">تغییر نام گفتگو</string>
     <string name="chat_settings_add_member_empty">دوستی برای افزودن وجود ندارد</string>
     <string name="chat_settings_remove_member_message">%1$s از این گفتگو حذف شود؟</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">این پیام حذف شد</string>
     <string name="chat_search_hint">جستجو در چت...</string>
-    <string name="chat_search_no_results">نتیجه‌ای یافت نشد</string>
     <string name="chat_message_forward">بازارسال</string>
     <string name="chat_forward_title">بازارسال به…</string>
     <string name="chat_forward_search">جستجوی چت‌ها…</string>
     <string name="chat_forward_empty">چتی برای بازارسال وجود ندارد</string>
     <string name="chat_forward_success">بازارسال شد</string>
-    <string name="chat_forward_failed">بازارسال ناموفق بود</string>
     <string name="chat_message_reply">پاسخ</string>
     <string name="chat_message_select">انتخاب</string>
     <string name="chat_reply_attachment">پیوست</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">دوستان</string>
     <string name="chat_policy_title">گفتگوهای ورودی</string>
     <string name="chat_policy_friends">فقط دوستان</string>
-    <string name="chat_policy_friends_description">فقط دوستان می‌توانند با شما گفتگو را آغاز کنند (پیش‌فرض).</string>
     <string name="chat_policy_anyone">هر کسی</string>
-    <string name="chat_policy_anyone_description">هر کسی می‌تواند با شما گفتگو را آغاز کند.</string>
     <string name="chat_new_search_placeholder">جستجوی افراد</string>
     <string name="chat_new_no_matches">فرد منطبقی یافت نشد</string>
     <string name="chat_new_no_friends">افرادی برای گفتگو پیدا کنید</string>
     <string name="chat_pin">سنجاق</string>
     <string name="chat_unpin">برداشتن سنجاق</string>
-    <string name="chat_pinned_label">سنجاق‌شده</string>
     <string name="chat_settings_general">عمومی</string>
     <string name="chat_settings_screen_title">تنظیمات %1$s</string>
     <string name="chat_mark_read">علامت‌گذاری به‌عنوان خوانده‌شده</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">مورد قبلی</string>
     <string name="chat_settings_id">شناسه گفتگو</string>
     <string name="chat_message_edited">(ویرایش‌شده)</string>
+    <string name="chat_new_fallback_name">گفت‌وگو</string>
 </resources>

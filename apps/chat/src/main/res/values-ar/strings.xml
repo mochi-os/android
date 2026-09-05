@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">الاسم المعروض</string>
-    <string name="chat_auth_verification_failed">فشل التحقق</string>
     <string name="chat_list_title">الدردشات</string>
     <string name="chat_list_search">بحث</string>
     <string name="chat_list_logout">تسجيل الخروج</string>
     <string name="chat_list_new">محادثة جديدة</string>
     <string name="chat_new_title">محادثة جديدة</string>
     <string name="chat_new_name">اسم المجموعة</string>
-    <string name="chat_new_friends">الأصدقاء</string>
     <string name="chat_message_placeholder">رسالة</string>
     <string name="chat_attachment_add">إرفاق ملفات</string>
-    <string name="chat_message_attach">إرفاق ملفات</string>
     <string name="chat_settings_title">إعدادات الدردشة</string>
     <string name="chat_settings_rename_label">اسم الدردشة</string>
     <string name="chat_settings_save">حفظ</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">إرسال</string>
 
     <string name="notification_channel_chat">إشعارات الدردشة</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">فشل تسجيل الدخول</string>
-    <string name="chat_auth_create_identity_failed">فشل إنشاء الهوية</string>
-    <string name="chat_auth_mfa_unsupported">المصادقة متعددة العوامل غير مدعومة بعد في تطبيق الجوال</string>
-    <string name="chat_auth_enter_code_sent">أدخل الرمز المرسل إلى %1$s</string>
-    <string name="chat_auth_create_identity">أنشئ هويتك</string>
     <string name="chat_list_empty">لا توجد دردشات بعد</string>
     <string name="chat_new_existing_chat">فتح دردشة موجودة</string>
     <string name="chat_new_start">بدء دردشة</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">نقل لأعلى</string>
     <string name="chat_attachment_move_down">نقل لأسفل</string>
     <string name="chat_attachment_label">ملف</string>
-    <string name="chat_message_remove_attachment">إزالة المرفق</string>
-    <string name="chat_message_too_long">الرسالة طويلة جدًا</string>
-    <string name="chat_message_empty">لا يمكن أن تكون الرسالة فارغة</string>
     <string name="chat_settings_rename">إعادة تسمية الدردشة</string>
     <string name="chat_settings_add_member_empty">لا يوجد أصدقاء لإضافتهم</string>
     <string name="chat_settings_remove_member_message">إزالة %1$s من هذه الدردشة؟</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">تم حذف هذه الرسالة</string>
     <string name="chat_search_hint">البحث في الدردشة...</string>
-    <string name="chat_search_no_results">لا توجد نتائج</string>
     <string name="chat_message_forward">إعادة توجيه</string>
     <string name="chat_forward_title">إعادة توجيه إلى…</string>
     <string name="chat_forward_search">البحث في الدردشات…</string>
     <string name="chat_forward_empty">لا توجد دردشات لإعادة التوجيه إليها</string>
     <string name="chat_forward_success">تمت إعادة التوجيه</string>
-    <string name="chat_forward_failed">تعذرت إعادة التوجيه</string>
     <string name="chat_message_reply">رد</string>
     <string name="chat_message_select">تحديد</string>
     <string name="chat_reply_attachment">مرفق</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">الأصدقاء</string>
     <string name="chat_policy_title">المحادثات الواردة</string>
     <string name="chat_policy_friends">الأصدقاء فقط</string>
-    <string name="chat_policy_friends_description">يمكن للأصدقاء فقط بدء محادثة معك (افتراضي).</string>
     <string name="chat_policy_anyone">أي شخص</string>
-    <string name="chat_policy_anyone_description">يمكن لأي شخص بدء محادثة معك.</string>
     <string name="chat_new_search_placeholder">البحث عن أشخاص</string>
     <string name="chat_new_no_matches">لا يوجد أشخاص مطابقون</string>
     <string name="chat_new_no_friends">ابحث عن أشخاص للدردشة معهم</string>
     <string name="chat_pin">تثبيت</string>
     <string name="chat_unpin">إلغاء التثبيت</string>
-    <string name="chat_pinned_label">مثبت</string>
     <string name="chat_settings_general">عام</string>
     <string name="chat_settings_screen_title">إعدادات %1$s</string>
     <string name="chat_mark_read">وضع علامة كمقروء</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">التطابق السابق</string>
     <string name="chat_settings_id">معرّف المحادثة</string>
     <string name="chat_message_edited">(تم التعديل)</string>
+    <string name="chat_new_fallback_name">الدردشة</string>
 </resources>

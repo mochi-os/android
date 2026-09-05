@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Hechauka téra</string>
-    <string name="chat_auth_verification_failed">Verificación ndoiporãi</string>
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Eheka</string>
     <string name="chat_list_logout">Esẽ</string>
     <string name="chat_list_new">Ñe\'ẽ pyahu</string>
     <string name="chat_new_title">Ñe\'ẽ pyahu</string>
     <string name="chat_new_name">Atypy téra</string>
-    <string name="chat_new_friends">Iru</string>
     <string name="chat_message_placeholder">Mensaje</string>
     <string name="chat_attachment_add">Embojuaju archivokuéra</string>
-    <string name="chat_message_attach">Embojuaju archivokuéra</string>
     <string name="chat_settings_title">Chat hekombo\'e</string>
     <string name="chat_settings_rename_label">Chat téra</string>
     <string name="chat_settings_save">Ñongatu</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Mondo</string>
 
     <string name="notification_channel_chat">Marandu ñomongeta</string>
-    <string name="chat_auth_brand">Mochi Ñomongeta</string>
-    <string name="chat_auth_login_failed">Ndaikatúi eike</string>
-    <string name="chat_auth_create_identity_failed">Ndaikatúi ojejapo teratee</string>
-    <string name="chat_auth_mfa_unsupported">MFA ndoikói gueteri tembiporu pumbyrýpe</string>
-    <string name="chat_auth_enter_code_sent">Emoinge papapy oñemondo\'akue %1$s-pe</string>
-    <string name="chat_auth_create_identity">Ejapo ne teratee</string>
     <string name="chat_list_empty">Ndaipóri gueteri ñomongeta</string>
     <string name="chat_new_existing_chat">Embojuruja ñomongeta oĩmava</string>
     <string name="chat_new_start">Eñepyrũ ñomongeta</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Emonge\'e yvate</string>
     <string name="chat_attachment_move_down">Emonge\'e yvy gotyo</string>
     <string name="chat_attachment_label">Marandurenda</string>
-    <string name="chat_message_remove_attachment">Eipe\'a jeitypa</string>
-    <string name="chat_message_too_long">Marandu puku eterei</string>
-    <string name="chat_message_empty">Marandu ndaikatúi opyta nandi</string>
     <string name="chat_settings_rename">Embohéra jey ñomongeta</string>
     <string name="chat_settings_add_member_empty">Ndaipóri angirũ embojuaju hagua</string>
     <string name="chat_settings_remove_member_message">¿Eipe\'áta %1$s-pe ko ñomongetágui?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Ko ñe\'ẽmondo oñemboguete</string>
     <string name="chat_search_hint">Eheka ñemongetápe...</string>
-    <string name="chat_search_no_results">Ndaipóri ojejuhúva</string>
     <string name="chat_message_forward">Embohasa</string>
     <string name="chat_forward_title">Embohasa…</string>
     <string name="chat_forward_search">Eheka ñemongeta…</string>
     <string name="chat_forward_empty">Ndaipóri ñemongeta embohasa haguã</string>
     <string name="chat_forward_success">Oñembohasa</string>
-    <string name="chat_forward_failed">Ndaikatúi oñembohasa</string>
     <string name="chat_message_reply">Embohovái</string>
     <string name="chat_message_select">Eiporavo</string>
     <string name="chat_reply_attachment">Marandurenda</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Iru</string>
     <string name="chat_policy_title">Ñomongeta oikéva</string>
     <string name="chat_policy_friends">Angirũnte</string>
-    <string name="chat_policy_friends_description">Angirũnte ikatu oñepyrũ ñomongeta nendive (tenondegua).</string>
     <string name="chat_policy_anyone">Oimeraẽva</string>
-    <string name="chat_policy_anyone_description">Oimeraẽva ikatu oñepyrũ peteĩ ñomongeta nendive.</string>
     <string name="chat_new_search_placeholder">Eheka tapicha</string>
     <string name="chat_new_no_matches">Ndaipóri tapicha ojoguáva</string>
     <string name="chat_new_no_friends">Eheka tapicha reñomongeta hag̃ua</string>
     <string name="chat_pin">Emohenda</string>
     <string name="chat_unpin">Embogue alfiler</string>
-    <string name="chat_pinned_label">Oñepin</string>
     <string name="chat_settings_general">Tekorapy</string>
     <string name="chat_settings_screen_title">%1$s ñemboheko</string>
     <string name="chat_mark_read">Emarka moñe\'ẽmbyréramo</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Ojoja ymaguare</string>
     <string name="chat_settings_id">Ñemongeta ID</string>
     <string name="chat_message_edited">(oñembojeguáva)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

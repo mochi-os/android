@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Εμφανιζόμενο όνομα</string>
-    <string name="chat_auth_verification_failed">Η επαλήθευση απέτυχε</string>
     <string name="chat_list_title">Συνομιλίες</string>
     <string name="chat_list_search">Αναζήτηση</string>
     <string name="chat_list_logout">Αποσύνδεση</string>
     <string name="chat_list_new">Νέα συνομιλία</string>
     <string name="chat_new_title">Νέα συνομιλία</string>
     <string name="chat_new_name">Όνομα ομάδας</string>
-    <string name="chat_new_friends">Φίλοι</string>
     <string name="chat_message_placeholder">Μήνυμα</string>
     <string name="chat_attachment_add">Επισύναψη αρχείων</string>
-    <string name="chat_message_attach">Επισύναψη αρχείων</string>
     <string name="chat_settings_title">Ρυθμίσεις συνομιλίας</string>
     <string name="chat_settings_rename_label">Όνομα συνομιλίας</string>
     <string name="chat_settings_save">Αποθήκευση</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Αποστολή</string>
 
     <string name="notification_channel_chat">Ειδοποιήσεις συνομιλίας</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Η σύνδεση απέτυχε</string>
-    <string name="chat_auth_create_identity_failed">Αποτυχία δημιουργίας ταυτότητας</string>
-    <string name="chat_auth_mfa_unsupported">Το MFA δεν υποστηρίζεται ακόμη στην εφαρμογή για κινητά</string>
-    <string name="chat_auth_enter_code_sent">Εισαγάγετε τον κωδικό που στάλθηκε στο %1$s</string>
-    <string name="chat_auth_create_identity">Δημιουργήστε την ταυτότητά σας</string>
     <string name="chat_list_empty">Δεν υπάρχουν ακόμη συνομιλίες</string>
     <string name="chat_new_existing_chat">Άνοιγμα υπάρχουσας συνομιλίας</string>
     <string name="chat_new_start">Έναρξη συνομιλίας</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Μετακίνηση πάνω</string>
     <string name="chat_attachment_move_down">Μετακίνηση κάτω</string>
     <string name="chat_attachment_label">Αρχείο</string>
-    <string name="chat_message_remove_attachment">Αφαίρεση συνημμένου</string>
-    <string name="chat_message_too_long">Το μήνυμα είναι πολύ μεγάλο</string>
-    <string name="chat_message_empty">Το μήνυμα δεν μπορεί να είναι κενό</string>
     <string name="chat_settings_rename">Μετονομασία συνομιλίας</string>
     <string name="chat_settings_add_member_empty">Δεν υπάρχουν φίλοι για προσθήκη</string>
     <string name="chat_settings_remove_member_message">Αφαίρεση του/της %1$s από αυτήν τη συνομιλία;</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Αυτό το μήνυμα διαγράφηκε</string>
     <string name="chat_search_hint">Αναζήτηση στη συνομιλία...</string>
-    <string name="chat_search_no_results">Κανένα αποτέλεσμα</string>
     <string name="chat_message_forward">Προώθηση</string>
     <string name="chat_forward_title">Προώθηση σε…</string>
     <string name="chat_forward_search">Αναζήτηση συνομιλιών…</string>
     <string name="chat_forward_empty">Δεν υπάρχουν συνομιλίες για προώθηση</string>
     <string name="chat_forward_success">Προωθήθηκε</string>
-    <string name="chat_forward_failed">Αποτυχία προώθησης</string>
     <string name="chat_message_reply">Απάντηση</string>
     <string name="chat_message_select">Επιλογή</string>
     <string name="chat_reply_attachment">Συνημμένο</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Φίλοι</string>
     <string name="chat_policy_title">Εισερχόμενες συνομιλίες</string>
     <string name="chat_policy_friends">Μόνο φίλοι</string>
-    <string name="chat_policy_friends_description">Μόνο φίλοι μπορούν να ξεκινήσουν συνομιλία μαζί σας (προεπιλογή).</string>
     <string name="chat_policy_anyone">Οποιοσδήποτε</string>
-    <string name="chat_policy_anyone_description">Οποιοσδήποτε μπορεί να ξεκινήσει συνομιλία μαζί σας.</string>
     <string name="chat_new_search_placeholder">Αναζήτηση ατόμων</string>
     <string name="chat_new_no_matches">Δεν βρέθηκαν άτομα</string>
     <string name="chat_new_no_friends">Αναζητήστε άτομα για συνομιλία</string>
     <string name="chat_pin">Καρφίτσωμα</string>
     <string name="chat_unpin">Ξεκαρφίτσωμα</string>
-    <string name="chat_pinned_label">Καρφιτσωμένο</string>
     <string name="chat_settings_general">Γενικά</string>
     <string name="chat_settings_screen_title">Ρυθμίσεις %1$s</string>
     <string name="chat_mark_read">Σήμανση ως αναγνωσμένο</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Προηγούμενη αντιστοίχιση</string>
     <string name="chat_settings_id">Αναγνωριστικό συνομιλίας</string>
     <string name="chat_message_edited">(επεξεργάστηκε)</string>
+    <string name="chat_new_fallback_name">Συνομιλία</string>
 </resources>

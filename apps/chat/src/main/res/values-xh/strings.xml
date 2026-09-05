@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Igama elibonisiweyo</string>
-    <string name="chat_auth_verification_failed">Uqinisekiso lusilele</string>
     <string name="chat_list_title">Iincoko</string>
     <string name="chat_list_search">Khangela</string>
     <string name="chat_list_logout">Phuma</string>
     <string name="chat_list_new">Incoko entsha</string>
     <string name="chat_new_title">Incoko entsha</string>
     <string name="chat_new_name">Igama leqela</string>
-    <string name="chat_new_friends">Abahlobo</string>
     <string name="chat_message_placeholder">Umyalezo</string>
     <string name="chat_attachment_add">Qhoboshela iifayile</string>
-    <string name="chat_message_attach">Qhoboshela iifayile</string>
     <string name="chat_settings_title">Iisetingi zencoko</string>
     <string name="chat_settings_rename_label">Igama lencoko</string>
     <string name="chat_settings_save">Gcina</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Thumela</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">Ungene engaphumelelanga</string>
     <string name="chat_attachment_move_up">Hambisa phezulu</string>
     <string name="chat_attachment_move_down">Hambisa ezantsi</string>
 
     <string name="notification_channel_chat">Izaziso zencoko</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Akuphumelelanga ukudala isazisi</string>
-    <string name="chat_auth_mfa_unsupported">I-MFA ayikaxhaswa kusetyenziso lwemfonomfono</string>
-    <string name="chat_auth_enter_code_sent">Faka ikhowudi ethunyelwe ku-%1$s</string>
-    <string name="chat_auth_create_identity">Dala isazisi sakho</string>
     <string name="chat_list_empty">Akukho ncoko okwangoku</string>
     <string name="chat_new_existing_chat">Vula incoko ekhoyo</string>
     <string name="chat_new_start">Qala incoko</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Akukho miyalezo okwangoku — yithi molo!</string>
     <string name="chat_messages_load_more">Layisha imiyalezo emidala</string>
     <string name="chat_attachment_label">Ifayile</string>
-    <string name="chat_message_too_long">Umyalezo mde kakhulu</string>
-    <string name="chat_message_empty">Umyalezo awunakuba ze</string>
     <string name="chat_settings_rename">Thiya kwakhona incoko</string>
     <string name="chat_settings_add_member_empty">Akukho bahlobo bokongezwa</string>
     <string name="chat_settings_remove_member_message">Susa u-%1$s kule ncoko?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Lo myalezo ucinyiwe</string>
     <string name="chat_search_hint">Khangela kwincoko...</string>
-    <string name="chat_search_no_results">Akukho ziphumo</string>
     <string name="chat_message_forward">Dlulisela</string>
     <string name="chat_forward_title">Dlulisela ku…</string>
     <string name="chat_forward_search">Khangela iincoko…</string>
     <string name="chat_forward_empty">Akukho ncoko zokudlulisela kuzo</string>
     <string name="chat_forward_success">Kudlulisiwe</string>
-    <string name="chat_forward_failed">Akukwazekanga ukudlulisela</string>
     <string name="chat_message_reply">Phendula</string>
     <string name="chat_message_select">Khetha</string>
     <string name="chat_reply_attachment">Isiqhoboshelo</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Abahlobo</string>
     <string name="chat_policy_title">Iincoko ezingenayo</string>
     <string name="chat_policy_friends">Abahlobo kuphela</string>
-    <string name="chat_policy_friends_description">Ngabahlobo kuphela abanganqala incoko nawe (okumiselweyo).</string>
     <string name="chat_policy_anyone">Nabani na</string>
-    <string name="chat_policy_anyone_description">Nabani na anganqala incoko nawe.</string>
     <string name="chat_new_search_placeholder">Khangela abantu</string>
     <string name="chat_new_no_matches">Akukho bantu bahambelanayo</string>
     <string name="chat_new_no_friends">Khangela abantu ozathetha nabo</string>
     <string name="chat_pin">Ncamathisa</string>
     <string name="chat_unpin">Susa kwiipini</string>
-    <string name="chat_pinned_label">Incamathiselwe</string>
     <string name="chat_settings_general">Ngokubanzi</string>
     <string name="chat_settings_screen_title">Izicwangciso ze-%1$s</string>
     <string name="chat_mark_read">Phawula njengefundiwe</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Ukungqamana kwangaphambili</string>
     <string name="chat_settings_id">I-ID yencoko</string>
     <string name="chat_message_edited">(kuhleliwe)</string>
+    <string name="chat_new_fallback_name">Incoko</string>
 </resources>

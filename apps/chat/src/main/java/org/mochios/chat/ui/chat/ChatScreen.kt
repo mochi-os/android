@@ -52,7 +52,9 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -128,7 +130,10 @@ import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.personAvatarUrl
 import org.mochios.chat.ui.chatlist.ChatListViewModel
+import org.mochios.chat.ui.chatlist.unreadBadge
+import org.mochios.chat.ui.policy.ChatPolicyDialog
 import org.mochios.chat.ui.router.CHAT_FEATURE
 
 /**
@@ -154,6 +159,7 @@ fun ChatScreen(
     val drawerScope = rememberCoroutineScope()
     val listUiState by listViewModel.uiState.collectAsState()
     var showAbout by remember { mutableStateOf(false) }
+    var showPolicy by remember { mutableStateOf(false) }
 
     // Persist last-viewed so the next cold start lands here. Empty id is
     // the "no chat selected" sentinel — don't write that or we'd wipe a
@@ -170,15 +176,15 @@ fun ChatScreen(
     val pinnedChats by listViewModel.pinned.collectAsState()
     val drawerItems = remember(listUiState.chats, pinnedChats) {
         listViewModel.filteredChats().map { chat ->
-            val key = chat.fingerprint.ifEmpty { chat.id }
             val isDirect = chat.members == 2 && chat.other.isNotBlank()
             DrawerItem(
-                id = key,
+                id = chat.id,
                 title = chat.name,
+                unread = unreadBadge(chat, chatId),
                 icon = if (chat.members > 2) Icons.Default.Groups else Icons.Default.ChatBubbleOutline,
-                trailingIcon = if (key in pinnedChats) Icons.Outlined.PushPin else null,
-                avatarUrl = if (isDirect) "/people/${chat.other}/-/avatar" else null,
-                seed = key,
+                trailingIcon = if (chat.id in pinnedChats) Icons.Outlined.PushPin else null,
+                avatarUrl = if (isDirect) personAvatarUrl(chat.other) else null,
+                seed = chat.id,
             )
         }
     }
@@ -199,6 +205,14 @@ fun ChatScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNewChat()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.chat_policy_title),
+                icon = Icons.Outlined.Tune,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    showPolicy = true
                 },
             )
             DrawerActionRow(
@@ -239,6 +253,9 @@ fun ChatScreen(
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
     }
+    if (showPolicy) {
+        ChatPolicyDialog(onDismiss = { showPolicy = false })
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -252,12 +269,6 @@ private fun ChatContent(
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    var draft by remember { mutableStateOf("") }
-    // Editing pre-fills the composer with the current body and clears it again
-    // on cancel, so a cancelled edit never leaks the old text into a new message.
-    LaunchedEffect(uiState.editing?.id) {
-        draft = uiState.editing?.body ?: ""
-    }
     val listState = rememberLazyListState()
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
@@ -294,27 +305,41 @@ private fun ChatContent(
         }
     }
 
-    LaunchedEffect(uiState.messages.size) {
+    // A failure over a loaded conversation: the page error would replace
+    // nothing on screen, so it is shown once as a toast instead.
+    LaunchedEffect(uiState.notice) {
+        val notice = uiState.notice ?: return@LaunchedEffect
+        Toast.makeText(context, notice.userMessage(), Toast.LENGTH_SHORT).show()
+        viewModel.clearNotice()
+    }
+
+    // The messages the list last showed, so a change can be told apart: a
+    // newer message follows to the bottom, paged-in history and deletions
+    // leave the reader where they are.
+    var shown by remember { mutableStateOf<List<ChatMessage>>(emptyList()) }
+    LaunchedEffect(uiState.messages) {
+        val follow = followsNewest(shown, uiState.messages)
+        shown = uiState.messages
         // Don't yank the list to the bottom while the user is navigating search
         // matches — the match-scroll effect below owns positioning then.
-        if (uiState.messages.isNotEmpty() && !uiState.searchOpen) {
+        if (follow && !uiState.searchOpen) {
             // The list holds the load-older row plus every date header, not just
             // the messages, so messages.size - 1 lands short by headers + 1 and
             // the newest message stays off screen — which is what opening a chat
             // does. lastLazyIndex counts the same items the list emits.
-            listState.animateScrollToItem(lastLazyIndex(grouped, uiState.hasMore))
+            listState.animateScrollToItem(lastLazyIndex(grouped, uiState.more))
         }
     }
 
     LaunchedEffect(activeMatchId, uiState.messages) {
         val id = activeMatchId ?: return@LaunchedEffect
-        val idx = messageLazyIndex(grouped, uiState.hasMore, id)
+        val idx = messageLazyIndex(grouped, uiState.more, id)
         when {
             idx >= 0 -> listState.animateScrollToItem(idx)
             // The match lives in older history that isn't loaded yet. Page back
             // one chunk; this effect re-runs as messages grow, so it keeps
             // paging until the match appears (or there's nothing older left).
-            uiState.hasMore && !uiState.isLoadingMore -> viewModel.loadMoreOlder()
+            uiState.more && !uiState.isLoadingMore -> viewModel.loadMoreOlder()
         }
     }
 
@@ -323,7 +348,7 @@ private fun ChatContent(
             val members = uiState.chat.members
             val isGroup = members.size > 2
             val peer = if (members.size == 2) members.firstOrNull { it.id != uiState.identity } else null
-            val peerAvatarUrl = peer?.let { "/people/${it.id}/-/avatar" }
+            val peerAvatarUrl = peer?.let { personAvatarUrl(it.id) }
             val youLabel = stringResource(R.string.chat_members_you)
             val membersSubtitle = remember(members, uiState.identity, youLabel) {
                 if (!isGroup) "" else {
@@ -384,7 +409,7 @@ private fun ChatContent(
                                 Spacer(Modifier.width(8.dp))
                             } else if (isGroup) {
                                 EntityIconCircle(
-                                    seed = uiState.chat.fingerprint.ifEmpty { uiState.chat.id },
+                                    seed = uiState.chat.id,
                                     icon = Icons.Default.Groups,
                                     size = 32.dp,
                                 )
@@ -464,7 +489,7 @@ private fun ChatContent(
                                     text = { Text(stringResource(MochiR.string.settings_title)) },
                                     onClick = {
                                         menuExpanded = false
-                                        onSettings(uiState.chat.fingerprint.ifEmpty { chatId })
+                                        onSettings(chatId)
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
@@ -564,7 +589,7 @@ private fun ChatContent(
                         contentPadding = PaddingValues(vertical = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
-                        if (uiState.hasMore) {
+                        if (uiState.more) {
                             item {
                                 Box(
                                     modifier = Modifier.fillMaxWidth().padding(8.dp),
@@ -598,7 +623,7 @@ private fun ChatContent(
                                             isSelected = entry.message.id in uiState.selectedIds,
                                             isSearchMatch = entry.message.id == activeMatchId,
                                             searchQuery = if (uiState.searchOpen) uiState.searchQuery else "",
-                                            replyToMessage = entry.message.replyTo?.let { rid ->
+                                            replyToMessage = entry.message.reply?.let { rid ->
                                                 uiState.messages.firstOrNull { it.id == rid }
                                             },
                                             onStartSelect = { viewModel.enterSelection(entry.message.id) },
@@ -618,15 +643,14 @@ private fun ChatContent(
             }
 
             ComposeBar(
-                value = draft,
-                onValueChange = { draft = it },
+                value = uiState.draft,
+                onValueChange = viewModel::setDraft,
                 onSend = {
                     if (uiState.editing != null) {
-                        viewModel.saveEdit(draft)
+                        viewModel.saveEdit()
                     } else {
-                        viewModel.sendMessage(draft)
+                        viewModel.sendMessage()
                     }
-                    draft = ""
                 },
                 placeholder = stringResource(R.string.chat_message_placeholder),
                 enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
@@ -694,14 +718,31 @@ private fun ChatContent(
             }
 
             if (showLeaveDialog) {
+                // Leaving keeps a read-only copy here unless the user also asks
+                // for it to go, which is the server's `delete` option.
+                var deleteLocally by remember { mutableStateOf(false) }
                 MochiAlertDialog(
                     onDismissRequest = { showLeaveDialog = false },
                     title = stringResource(R.string.chat_settings_leave_title),
-                    text = stringResource(R.string.chat_settings_leave_message),
+                    content = {
+                        Column {
+                            Text(stringResource(R.string.chat_settings_leave_message))
+                            Spacer(Modifier.height(8.dp))
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { deleteLocally = !deleteLocally },
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Checkbox(checked = deleteLocally, onCheckedChange = { deleteLocally = it })
+                                Text(stringResource(R.string.chat_settings_leave_and_delete))
+                            }
+                        }
+                    },
                     confirmText = stringResource(R.string.chat_settings_leave),
                     onConfirm = {
                         showLeaveDialog = false
-                        viewModel.leaveChat()
+                        viewModel.leaveChat(deleteLocally)
                     },
                     destructive = true,
                     dismissText = stringResource(MochiR.string.common_cancel),
@@ -755,10 +796,10 @@ private fun highlightQuery(text: String, query: String): AnnotatedString {
  */
 private fun messageLazyIndex(
     grouped: List<MessageListEntry>,
-    hasMore: Boolean,
+    more: Boolean,
     messageId: String,
 ): Int {
-    var index = if (hasMore) 1 else 0
+    var index = if (more) 1 else 0
     for (entry in grouped) {
         if (entry is MessageListEntry.MessageItem && entry.message.id == messageId) return index
         index++
@@ -781,8 +822,8 @@ private fun messageLazyIndex(
 internal fun canEditMessage(message: ChatMessage, isOwn: Boolean): Boolean =
     isOwn && !message.deleted && message.body.isNotBlank()
 
-internal fun lastLazyIndex(grouped: List<MessageListEntry>, hasMore: Boolean): Int {
-    val leading = if (hasMore) 1 else 0
+internal fun lastLazyIndex(grouped: List<MessageListEntry>, more: Boolean): Int {
+    val leading = if (more) 1 else 0
     return (leading + grouped.size - 1).coerceAtLeast(0)
 }
 
@@ -1026,10 +1067,10 @@ private fun MessageBubble(
                     // Single bar with pills + built-in add button, so the
                     // add/change/clear affordance is consistent with feeds.
                     ReactionBar(
-                        reactions = chatReactionCounts(message.reactionCounts, message.myReaction),
+                        reactions = chatReactionCounts(message.reactions, message.reaction),
                         onReact = onReact,
                         onRemoveReaction = { onReact("none") },
-                        currentReaction = message.myReaction?.let { key ->
+                        currentReaction = message.reaction?.let { key ->
                             ReactionType.fromString(key)
                         },
                         maxVisible = 3
@@ -1172,10 +1213,10 @@ private fun EditComposerPreview(onCancel: () -> Unit) {
 /**
  * Server `{reaction: count}` map to [ReactionBar] rows, most-reacted first.
  */
-private fun chatReactionCounts(counts: Map<String, Int>, myReaction: String?): List<ReactionCount> =
+private fun chatReactionCounts(counts: Map<String, Int>, mine: String?): List<ReactionCount> =
     counts.mapNotNull { (key, count) ->
         ReactionType.fromString(key)?.let { type ->
-            ReactionCount(type = type, count = count, isMine = key.equals(myReaction, ignoreCase = true))
+            ReactionCount(type = type, count = count, isMine = key.equals(mine, ignoreCase = true))
         }
     }.sortedByDescending { reaction -> reaction.count }
 

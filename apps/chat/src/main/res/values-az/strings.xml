@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Göstərilən ad</string>
-    <string name="chat_auth_verification_failed">Doğrulama uğursuz oldu</string>
     <string name="chat_list_title">Söhbətlər</string>
     <string name="chat_list_search">Axtar</string>
     <string name="chat_list_logout">Çıx</string>
     <string name="chat_list_new">Yeni söhbət</string>
     <string name="chat_new_title">Yeni söhbət</string>
     <string name="chat_new_name">Qrup adı</string>
-    <string name="chat_new_friends">Dostlar</string>
     <string name="chat_message_placeholder">Mesaj</string>
     <string name="chat_attachment_add">Faylları qoş</string>
-    <string name="chat_message_attach">Faylları qoş</string>
     <string name="chat_settings_title">Söhbət parametrləri</string>
     <string name="chat_settings_rename_label">Söhbət adı</string>
     <string name="chat_settings_save">Saxla</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Göndər</string>
 
     <string name="notification_channel_chat">Söhbət bildirişləri</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Giriş alınmadı</string>
-    <string name="chat_auth_create_identity_failed">Kimlik yaradıla bilmədi</string>
-    <string name="chat_auth_mfa_unsupported">MFA mobil tətbiqdə hələ dəstəklənmir</string>
-    <string name="chat_auth_enter_code_sent">%1$s ünvanına göndərilən kodu daxil edin</string>
-    <string name="chat_auth_create_identity">Kimliyinizi yaradın</string>
     <string name="chat_list_empty">Hələ söhbət yoxdur</string>
     <string name="chat_new_existing_chat">Mövcud söhbəti açın</string>
     <string name="chat_new_start">Söhbətə başlayın</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Yuxarı köçürün</string>
     <string name="chat_attachment_move_down">Aşağı köçürün</string>
     <string name="chat_attachment_label">Fayl</string>
-    <string name="chat_message_remove_attachment">Qoşmanı silin</string>
-    <string name="chat_message_too_long">Mesaj çox uzundur</string>
-    <string name="chat_message_empty">Mesaj boş ola bilməz</string>
     <string name="chat_settings_rename">Söhbəti adlandırın</string>
     <string name="chat_settings_add_member_empty">Əlavə ediləcək dost yoxdur</string>
     <string name="chat_settings_remove_member_message">%1$s bu söhbətdən silinsin?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Bu mesaj silindi</string>
     <string name="chat_search_hint">Söhbətdə axtar...</string>
-    <string name="chat_search_no_results">Nəticə yoxdur</string>
     <string name="chat_message_forward">Yönləndir</string>
     <string name="chat_forward_title">Yönləndir…</string>
     <string name="chat_forward_search">Söhbətləri axtar…</string>
     <string name="chat_forward_empty">Yönləndirmək üçün söhbət yoxdur</string>
     <string name="chat_forward_success">Yönləndirildi</string>
-    <string name="chat_forward_failed">Yönləndirmək mümkün olmadı</string>
     <string name="chat_message_reply">Cavabla</string>
     <string name="chat_message_select">Seç</string>
     <string name="chat_reply_attachment">Qoşma</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Dostlar</string>
     <string name="chat_policy_title">Gələn söhbətlər</string>
     <string name="chat_policy_friends">Yalnız dostlar</string>
-    <string name="chat_policy_friends_description">Sizinlə yalnız dostlar söhbətə başlaya bilər (defolt).</string>
     <string name="chat_policy_anyone">İstənilən şəxs</string>
-    <string name="chat_policy_anyone_description">İstənilən şəxs sizinlə söhbətə başlaya bilər.</string>
     <string name="chat_new_search_placeholder">İnsanları axtar</string>
     <string name="chat_new_no_matches">Uyğun insan yoxdur</string>
     <string name="chat_new_no_friends">Söhbət etmək üçün insanlar axtarın</string>
     <string name="chat_pin">Sancaqla</string>
     <string name="chat_unpin">Tanınmayan ödəniş</string>
-    <string name="chat_pinned_label">Sancaqlanıb</string>
     <string name="chat_settings_general">Ümumi</string>
     <string name="chat_settings_screen_title">%1$s parametrləri</string>
     <string name="chat_mark_read">Oxunmuş kimi işarələ</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Əvvəlki uyğunluq</string>
     <string name="chat_settings_id">Söhbət ID-si</string>
     <string name="chat_message_edited">(redaktə edildi)</string>
+    <string name="chat_new_fallback_name">Söhbət</string>
 </resources>

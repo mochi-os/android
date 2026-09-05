@@ -20,21 +20,22 @@ object ChatStatus {
 
 data class Chat(
     val id: String = "",
-    val fingerprint: String = "",
-    val identity: String = "",
     val key: String = "",
     val name: String = "",
     val updated: Long = 0,
     val members: Int = 0,
     val other: String = "",
+    /** Messages newer than this account's read watermark. */
+    val unread: Int = 0,
     val status: String = ChatStatus.ACTIVE
 )
 
 /**
- * Navigation key shared by drawer routing and pin storage: fingerprint, or id
- * when blank.
+ * A member's avatar through the chat app's own person-asset proxy, which can
+ * serve a member whose person entity lives on another server; the direct
+ * people route cannot.
  */
-fun Chat.chatKey(): String = fingerprint.ifEmpty { id }
+fun personAvatarUrl(person: String): String = "/chat/-/person/$person/asset/avatar"
 
 data class ChatMember(
     val id: String = "",
@@ -43,8 +44,6 @@ data class ChatMember(
 
 data class ChatDetail(
     val id: String = "",
-    val fingerprint: String = "",
-    val identity: String = "",
     val key: String = "",
     val name: String = "",
     val updated: Long = 0,
@@ -68,9 +67,12 @@ data class ChatMessage(
     val deleted: Boolean = false,
     /** Last-edit timestamp; 0 means never edited. Drives the "edited" marker. */
     val edited: Long = 0,
-    @SerializedName("reaction_counts") val reactionCounts: Map<String, Int> = emptyMap(),
-    @SerializedName("my_reaction") val myReaction: String? = null,
-    @SerializedName("reply_to") val replyTo: String? = null
+    /** Reaction counts by reaction. */
+    val reactions: Map<String, Int> = emptyMap(),
+    /** The viewer's own reaction, null when none. */
+    val reaction: String? = null,
+    /** The id of the message this one quotes, null when none. */
+    val reply: String? = null
 )
 
 /** A message hit from `:chat/-/search`. */
@@ -88,5 +90,6 @@ data class Friend(
     val identity: String = "",
     val name: String = "",
     @SerializedName("class") val klass: String = "",
-    val chatId: String = ""
+    /** The existing one-on-one chat with this person, empty when none. */
+    val chat: String = ""
 )

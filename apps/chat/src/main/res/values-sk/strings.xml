@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Zobrazované meno</string>
-    <string name="chat_auth_verification_failed">Overenie zlyhalo</string>
     <string name="chat_list_title">Chaty</string>
     <string name="chat_list_search">Hľadať</string>
     <string name="chat_list_logout">Odhlásiť sa</string>
     <string name="chat_list_new">Nový chat</string>
     <string name="chat_new_title">Nový chat</string>
     <string name="chat_new_name">Názov skupiny</string>
-    <string name="chat_new_friends">Priatelia</string>
     <string name="chat_message_placeholder">Správa</string>
     <string name="chat_attachment_add">Pripojiť súbory</string>
-    <string name="chat_message_attach">Pripojiť súbory</string>
     <string name="chat_settings_title">Nastavenia chatu</string>
     <string name="chat_settings_rename_label">Názov chatu</string>
     <string name="chat_settings_save">Uložiť</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Odoslať</string>
     <string name="chat_attachment_remove">Odstrániť prílohu</string>
-    <string name="chat_message_remove_attachment">Odstrániť prílohu</string>
-    <string name="chat_auth_login_failed">Prihlásenie zlyhalo</string>
     <string name="chat_attachment_move_up">Posunúť nahor</string>
     <string name="chat_attachment_move_down">Posunúť nadol</string>
 
     <string name="notification_channel_chat">Upozornenia chatu</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Vytvorenie identity zlyhalo</string>
-    <string name="chat_auth_mfa_unsupported">Viacfaktorové overenie zatiaľ nie je v mobilnej aplikácii podporované</string>
-    <string name="chat_auth_enter_code_sent">Zadajte kód odoslaný na %1$s</string>
-    <string name="chat_auth_create_identity">Vytvorte si identitu</string>
     <string name="chat_list_empty">Zatiaľ žiadne chaty</string>
     <string name="chat_new_existing_chat">Otvoriť existujúci chat</string>
     <string name="chat_new_start">Začať chat</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Zatiaľ žiadne správy — pozdravte sa!</string>
     <string name="chat_messages_load_more">Načítať staršie správy</string>
     <string name="chat_attachment_label">Súbor</string>
-    <string name="chat_message_too_long">Správa je príliš dlhá</string>
-    <string name="chat_message_empty">Správa nemôže byť prázdna</string>
     <string name="chat_settings_rename">Premenovať chat</string>
     <string name="chat_settings_add_member_empty">Žiadni priatelia na pridanie</string>
     <string name="chat_settings_remove_member_message">Odstrániť používateľa %1$s z tohto chatu?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Táto správa bola odstránená</string>
     <string name="chat_search_hint">Hľadať v chate...</string>
-    <string name="chat_search_no_results">Žiadne výsledky</string>
     <string name="chat_message_forward">Preposlať</string>
     <string name="chat_forward_title">Preposlať do…</string>
     <string name="chat_forward_search">Hľadať chaty…</string>
     <string name="chat_forward_empty">Žiadne chaty na preposlanie</string>
     <string name="chat_forward_success">Preposlané</string>
-    <string name="chat_forward_failed">Nepodarilo sa preposlať</string>
     <string name="chat_message_reply">Odpovedať</string>
     <string name="chat_message_select">Vybrať</string>
     <string name="chat_reply_attachment">Príloha</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Priatelia</string>
     <string name="chat_policy_title">Prichádzajúce chaty</string>
     <string name="chat_policy_friends">Iba priatelia</string>
-    <string name="chat_policy_friends_description">Chat s vami môžu začať iba priatelia (predvolené).</string>
     <string name="chat_policy_anyone">Ktokoľvek</string>
-    <string name="chat_policy_anyone_description">Chat s vami môže začať ktokoľvek.</string>
     <string name="chat_new_search_placeholder">Hľadať ľudí</string>
     <string name="chat_new_no_matches">Žiadni zodpovedajúci ľudia</string>
     <string name="chat_new_no_friends">Vyhľadajte ľudí na četovanie</string>
     <string name="chat_pin">Pripnúť</string>
     <string name="chat_unpin">Odopnúť</string>
-    <string name="chat_pinned_label">Pripnuté</string>
     <string name="chat_settings_general">Všeobecné</string>
     <string name="chat_settings_screen_title">Nastavenia %1$s</string>
     <string name="chat_mark_read">Označiť ako prečítané</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Predchádzajúca zhoda</string>
     <string name="chat_settings_id">ID četu</string>
     <string name="chat_message_edited">(upravené)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

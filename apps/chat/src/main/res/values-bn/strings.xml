@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">প্রদর্শনের নাম</string>
-    <string name="chat_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
     <string name="chat_list_title">চ্যাট</string>
     <string name="chat_list_search">অনুসন্ধান</string>
     <string name="chat_list_logout">লগ আউট করুন</string>
     <string name="chat_list_new">নতুন চ্যাট</string>
     <string name="chat_new_title">নতুন চ্যাট</string>
     <string name="chat_new_name">গ্রুপের নাম</string>
-    <string name="chat_new_friends">বন্ধুরা</string>
     <string name="chat_message_placeholder">বার্তা</string>
     <string name="chat_attachment_add">ফাইল সংযুক্ত করুন</string>
-    <string name="chat_message_attach">ফাইল সংযুক্ত করুন</string>
     <string name="chat_settings_title">চ্যাট সেটিংস</string>
     <string name="chat_settings_rename_label">চ্যাটের নাম</string>
     <string name="chat_settings_save">সংরক্ষণ করুন</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">পাঠান</string>
 
     <string name="notification_channel_chat">চ্যাট বিজ্ঞপ্তি</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">লগইন ব্যর্থ হয়েছে</string>
-    <string name="chat_auth_create_identity_failed">পরিচয় তৈরি করতে ব্যর্থ হয়েছে</string>
-    <string name="chat_auth_mfa_unsupported">মোবাইল অ্যাপে MFA এখনও সমর্থিত নয়</string>
-    <string name="chat_auth_enter_code_sent">%1$s-এ পাঠানো কোডটি লিখুন</string>
-    <string name="chat_auth_create_identity">আপনার পরিচয় তৈরি করুন</string>
     <string name="chat_list_empty">এখনও কোনো চ্যাট নেই</string>
     <string name="chat_new_existing_chat">বিদ্যমান চ্যাট খুলুন</string>
     <string name="chat_new_start">চ্যাট শুরু করুন</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">উপরে নিন</string>
     <string name="chat_attachment_move_down">নিচে নিন</string>
     <string name="chat_attachment_label">ফাইল</string>
-    <string name="chat_message_remove_attachment">সংযুক্তি সরান</string>
-    <string name="chat_message_too_long">বার্তা অত্যন্ত দীর্ঘ</string>
-    <string name="chat_message_empty">বার্তা খালি হতে পারে না</string>
     <string name="chat_settings_rename">চ্যাটের নাম পরিবর্তন করুন</string>
     <string name="chat_settings_add_member_empty">যোগ করার মতো কোনো বন্ধু নেই</string>
     <string name="chat_settings_remove_member_message">এই চ্যাট থেকে %1$s-কে সরাবেন?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">এই বার্তাটি মুছে ফেলা হয়েছে</string>
     <string name="chat_search_hint">চ্যাটে খুঁজুন...</string>
-    <string name="chat_search_no_results">কোনো ফলাফল নেই</string>
     <string name="chat_message_forward">ফরোয়ার্ড</string>
     <string name="chat_forward_title">ফরোয়ার্ড করুন…</string>
     <string name="chat_forward_search">চ্যাট খুঁজুন…</string>
     <string name="chat_forward_empty">ফরোয়ার্ড করার মতো কোনো চ্যাট নেই</string>
     <string name="chat_forward_success">ফরোয়ার্ড করা হয়েছে</string>
-    <string name="chat_forward_failed">ফরোয়ার্ড করা যায়নি</string>
     <string name="chat_message_reply">উত্তর দিন</string>
     <string name="chat_message_select">নির্বাচন করুন</string>
     <string name="chat_reply_attachment">সংযুক্তি</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">বন্ধুরা</string>
     <string name="chat_policy_title">আগত চ্যাট</string>
     <string name="chat_policy_friends">শুধুমাত্র বন্ধুরা</string>
-    <string name="chat_policy_friends_description">শুধুমাত্র বন্ধুরা আপনার সাথে চ্যাট শুরু করতে পারে (ডিফল্ট)।</string>
     <string name="chat_policy_anyone">যে কেউ</string>
-    <string name="chat_policy_anyone_description">যে কেউ আপনার সাথে চ্যাট শুরু করতে পারে।</string>
     <string name="chat_new_search_placeholder">মানুষ খুঁজুন</string>
     <string name="chat_new_no_matches">কোনো মিলে যাওয়া মানুষ নেই</string>
     <string name="chat_new_no_friends">চ্যাট করার জন্য মানুষ খুঁজুন</string>
     <string name="chat_pin">পিন করুন</string>
     <string name="chat_unpin">আনপিন করুন</string>
-    <string name="chat_pinned_label">পিন করা হয়েছে</string>
     <string name="chat_settings_general">সাধারণ</string>
     <string name="chat_settings_screen_title">%1$s সেটিংস</string>
     <string name="chat_mark_read">পঠিত হিসেবে চিহ্নিত করুন</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">পূর্ববর্তী মিল</string>
     <string name="chat_settings_id">চ্যাট আইডি</string>
     <string name="chat_message_edited">(সম্পাদিত)</string>
+    <string name="chat_new_fallback_name">চ্যাট</string>
 </resources>

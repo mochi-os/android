@@ -69,6 +69,7 @@ import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.personAvatarUrl
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -406,7 +407,7 @@ private fun AddMemberDialog(
                             ) {
                                 EntityAvatar(
                                     name = f.name,
-                                    src = "/people/${f.id}/-/avatar",
+                                    src = personAvatarUrl(f.id),
                                     seed = f.id,
                                     size = 24.dp,
                                 )
@@ -488,7 +489,7 @@ private fun MemberRow(
     ) {
         EntityAvatar(
             name = member.name,
-            src = "/people/${member.id}/-/avatar",
+            src = personAvatarUrl(member.id),
             seed = member.id,
             size = 32.dp,
         )

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">שם תצוגה</string>
-    <string name="chat_auth_verification_failed">האימות נכשל</string>
     <string name="chat_list_title">צ\'אטים</string>
     <string name="chat_list_search">חיפוש</string>
     <string name="chat_list_logout">התנתק</string>
     <string name="chat_list_new">צ\'אט חדש</string>
     <string name="chat_new_title">צ\'אט חדש</string>
     <string name="chat_new_name">שם הקבוצה</string>
-    <string name="chat_new_friends">חברים</string>
     <string name="chat_message_placeholder">הודעה</string>
     <string name="chat_attachment_add">צרף קבצים</string>
-    <string name="chat_message_attach">צרף קבצים</string>
     <string name="chat_settings_title">הגדרות צ\'אט</string>
     <string name="chat_settings_rename_label">שם צ\'אט</string>
     <string name="chat_settings_save">שמור</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">שלח</string>
 
     <string name="notification_channel_chat">התראות צ\'אט</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">ההתחברות נכשלה</string>
-    <string name="chat_auth_create_identity_failed">יצירת הזהות נכשלה</string>
-    <string name="chat_auth_mfa_unsupported">אימות רב-שלבי אינו נתמך עדיין באפליקציה לנייד</string>
-    <string name="chat_auth_enter_code_sent">הזינו את הקוד שנשלח אל %1$s</string>
-    <string name="chat_auth_create_identity">יצירת הזהות שלכם</string>
     <string name="chat_list_empty">אין צ\'אטים עדיין</string>
     <string name="chat_new_existing_chat">פתיחת צ\'אט קיים</string>
     <string name="chat_new_start">התחלת צ\'אט</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">הזזה למעלה</string>
     <string name="chat_attachment_move_down">הזזה למטה</string>
     <string name="chat_attachment_label">קובץ</string>
-    <string name="chat_message_remove_attachment">הסרת קובץ מצורף</string>
-    <string name="chat_message_too_long">ההודעה ארוכה מדי</string>
-    <string name="chat_message_empty">ההודעה לא יכולה להיות ריקה</string>
     <string name="chat_settings_rename">שינוי שם הצ\'אט</string>
     <string name="chat_settings_add_member_empty">אין חברים להוספה</string>
     <string name="chat_settings_remove_member_message">להסיר את %1$s מהצ\'אט הזה?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">ההודעה הזו נמחקה</string>
     <string name="chat_search_hint">חיפוש בצ\'אט...</string>
-    <string name="chat_search_no_results">אין תוצאות</string>
     <string name="chat_message_forward">העברה</string>
     <string name="chat_forward_title">העברה אל…</string>
     <string name="chat_forward_search">חיפוש בצ\'אטים…</string>
     <string name="chat_forward_empty">אין צ\'אטים להעברה</string>
     <string name="chat_forward_success">הועבר</string>
-    <string name="chat_forward_failed">ההעברה נכשלה</string>
     <string name="chat_message_reply">השב</string>
     <string name="chat_message_select">בחר</string>
     <string name="chat_reply_attachment">קובץ מצורף</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">חברים</string>
     <string name="chat_policy_title">צ\'אטים נכנסים</string>
     <string name="chat_policy_friends">חברים בלבד</string>
-    <string name="chat_policy_friends_description">רק חברים יכולים להתחיל צ\'אט איתך (ברירת מחדל).</string>
     <string name="chat_policy_anyone">כל אחד</string>
-    <string name="chat_policy_anyone_description">כל אחד יכול להתחיל צ\'אט איתך.</string>
     <string name="chat_new_search_placeholder">חיפוש אנשים</string>
     <string name="chat_new_no_matches">אין אנשים תואמים</string>
     <string name="chat_new_no_friends">חפש אנשים לשוחח איתם</string>
     <string name="chat_pin">הצמד</string>
     <string name="chat_unpin">בטל נעיצה</string>
-    <string name="chat_pinned_label">מוצמד</string>
     <string name="chat_settings_general">כללי</string>
     <string name="chat_settings_screen_title">הגדרות %1$s</string>
     <string name="chat_mark_read">סמן כנקרא</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">ההתאמה הקודמת</string>
     <string name="chat_settings_id">מזהה צ׳אט</string>
     <string name="chat_message_edited">(נערך)</string>
+    <string name="chat_new_fallback_name">צ\'אט</string>
 </resources>

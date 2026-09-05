@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Bistaratzeko izena</string>
-    <string name="chat_auth_verification_failed">Egiaztatzeak huts egin du</string>
     <string name="chat_list_title">Txatak</string>
     <string name="chat_list_search">Bilatu</string>
     <string name="chat_list_logout">Amaitu saioa</string>
     <string name="chat_list_new">Txat berria</string>
     <string name="chat_new_title">Txat berria</string>
     <string name="chat_new_name">Taldearen izena</string>
-    <string name="chat_new_friends">Lagunak</string>
     <string name="chat_message_placeholder">Mezua</string>
     <string name="chat_attachment_add">Erantsi fitxategiak</string>
-    <string name="chat_message_attach">Erantsi fitxategiak</string>
     <string name="chat_settings_title">Txat ezarpenak</string>
     <string name="chat_settings_rename_label">Txataren izena</string>
     <string name="chat_settings_save">Gorde</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Bidali</string>
 
     <string name="notification_channel_chat">Txat-jakinarazpenak</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Saio-hasierak huts egin du</string>
-    <string name="chat_auth_create_identity_failed">Ezin izan da identitatea sortu</string>
-    <string name="chat_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
-    <string name="chat_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
-    <string name="chat_auth_create_identity">Sortu zure identitatea</string>
     <string name="chat_list_empty">Oraindik ez dago txatik</string>
     <string name="chat_new_existing_chat">Ireki lehendik dagoen txata</string>
     <string name="chat_new_start">Hasi txata</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Eraman gora</string>
     <string name="chat_attachment_move_down">Eraman behera</string>
     <string name="chat_attachment_label">Fitxategia</string>
-    <string name="chat_message_remove_attachment">Kendu eranskina</string>
-    <string name="chat_message_too_long">Mezua luzeegia da</string>
-    <string name="chat_message_empty">Mezua ezin da hutsik egon</string>
     <string name="chat_settings_rename">Berrizendatu txata</string>
     <string name="chat_settings_add_member_empty">Ez dago gehitzeko lagunik</string>
     <string name="chat_settings_remove_member_message">Kendu %1$s txat honetatik?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Mezu hau ezabatu egin da</string>
     <string name="chat_search_hint">Bilatu txatean...</string>
-    <string name="chat_search_no_results">Emaitzarik ez</string>
     <string name="chat_message_forward">Birbidali</string>
     <string name="chat_forward_title">Birbidali hona…</string>
     <string name="chat_forward_search">Bilatu txatak…</string>
     <string name="chat_forward_empty">Ez dago txatik birbidaltzeko</string>
     <string name="chat_forward_success">Birbidalita</string>
-    <string name="chat_forward_failed">Ezin izan da birbidali</string>
     <string name="chat_message_reply">Erantzun</string>
     <string name="chat_message_select">Hautatu</string>
     <string name="chat_reply_attachment">Eranskina</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Lagunak</string>
     <string name="chat_policy_title">Sarrerako txatak</string>
     <string name="chat_policy_friends">Lagunak soilik</string>
-    <string name="chat_policy_friends_description">Lagunek soilik has dezakete txat bat zurekin (lehenetsia).</string>
     <string name="chat_policy_anyone">Edonor</string>
-    <string name="chat_policy_anyone_description">Edonork has dezake txat bat zurekin.</string>
     <string name="chat_new_search_placeholder">Bilatu pertsonak</string>
     <string name="chat_new_no_matches">Ez dago bat datorren pertsonarik</string>
     <string name="chat_new_no_friends">Bilatu pertsonak txateatzeko</string>
     <string name="chat_pin">Finkatu</string>
     <string name="chat_unpin">Desfinkatu</string>
-    <string name="chat_pinned_label">Finkatuta</string>
     <string name="chat_settings_general">Orokorra</string>
     <string name="chat_settings_screen_title">%1$s ezarpenak</string>
     <string name="chat_mark_read">Markatu irakurritako gisa</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Aurreko bat-etortzea</string>
     <string name="chat_settings_id">Txat IDa</string>
     <string name="chat_message_edited">(editatua)</string>
+    <string name="chat_new_fallback_name">Txata</string>
 </resources>
