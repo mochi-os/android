@@ -13,13 +13,17 @@ data class Crm(
     @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val name: String = "",
     val description: String = "",
-    val owner: Int = 0,
-    val ownername: String = "",
+    val owner: Owner? = null,
     val server: String? = null,
     val location: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""
+)
+
+data class Owner(
+    val local: Boolean = false,
+    val name: String = ""
 )
 
 data class CrmDetails(

@@ -131,7 +131,7 @@ data class ViewResponse(val view: ProjectView = ProjectView())
 data class RepositoryListResponse(val repositories: List<Repository> = emptyList())
 data class BranchListResponse(val branches: List<Branch> = emptyList())
 data class MergeCheckResponse(
-    @SerializedName("can_merge") val canMerge: Boolean = false,
+    @SerializedName("mergeable") val canMerge: Boolean = false,
     val conflicts: List<String> = emptyList(),
     val base: String = "",
     val ahead: Int = 0,
@@ -193,29 +193,29 @@ interface ProjectsApi {
     @GET("-/repositories")
     suspend fun getRepositories(): Response<ApiResponse<RepositoryListResponse>>
 
-    @GET("-/repositories/{repo}/branches")
-    suspend fun getBranches(@Path("repo") repo: String): Response<ApiResponse<BranchListResponse>>
+    @GET("-/repositories/{repository}/branches")
+    suspend fun getBranches(@Path("repository") repository: String): Response<ApiResponse<BranchListResponse>>
 
     @FormUrlEncoded
-    @POST("-/repositories/{repo}/merge/check")
+    @POST("-/repositories/{repository}/merge/check")
     suspend fun checkMerge(
-        @Path("repo") repo: String,
+        @Path("repository") repository: String,
         @Field("source") source: String,
         @Field("target") target: String
     ): Response<ApiResponse<MergeCheckResponse>>
 
     @FormUrlEncoded
-    @POST("-/repositories/{repo}/diff")
+    @POST("-/repositories/{repository}/diff")
     suspend fun getDiff(
-        @Path("repo") repo: String,
+        @Path("repository") repository: String,
         @Field("base") base: String,
         @Field("head") head: String
     ): Response<ApiResponse<String>>
 
     @FormUrlEncoded
-    @POST("-/repositories/{repo}/merge")
+    @POST("-/repositories/{repository}/merge")
     suspend fun merge(
-        @Path("repo") repo: String,
+        @Path("repository") repository: String,
         @Field("source") source: String,
         @Field("target") target: String,
         @Field("message") message: String,
@@ -231,7 +231,7 @@ interface ProjectsApi {
 
     // ---- Entity-level endpoints ----
 
-    @GET("{projectId}/-/info")
+    @GET("{projectId}/-/information")
     suspend fun getProjectInfo(@Path("projectId") projectId: String): Response<ApiResponse<ProjectInfoResponse>>
 
     @POST("{projectId}/-/share")
@@ -314,9 +314,8 @@ interface ProjectsApi {
         @Field("field") field: String?,
         @Field("value") value: String?,
         @Field("rank") rank: Int?,
-        @Field("row_field") rowField: String? = null,
-        @Field("row_value") rowValue: String? = null,
-        @Field("scope_parent") scopeParent: String? = null,
+        @Field("row") row: String? = null,
+        @Field("scope") scope: String? = null,
         @Field("promote") promote: String? = null
     ): Response<ApiResponse<SuccessResponse>>
 
@@ -499,7 +498,7 @@ interface ProjectsApi {
         @Path("projectId") projectId: String,
         @Field("data") data: String?,
         @Field("template") template: String?,
-        @Field("template_version") templateVersion: Int?
+        @Field("version") templateVersion: Int?
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Data: Export / Import ----

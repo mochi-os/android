@@ -382,7 +382,7 @@ private fun ProjectRow(
     var showMenu by remember { mutableStateOf(false) }
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val projectId = project.fingerprint.ifEmpty { project.id }
-    val canUnsubscribe = project.owner != 1
+    val canUnsubscribe = project.owner?.local != true
     val unsubscribeTitle = stringResource(R.string.projects_settings_unsubscribe_title)
     val unsubscribeMessage = stringResource(R.string.projects_settings_unsubscribe_message)
     val unsubscribeLabel = stringResource(R.string.projects_settings_unsubscribe)
@@ -693,7 +693,7 @@ private fun ProjectContent(
                                 }
                                 // Sharing a link is only offered on projects the
                                 // user owns; it's hidden on subscribed ones.
-                                if (details?.project?.owner == 1) {
+                                if (details?.project?.owner?.local == true) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.projects_link)) },
                                         onClick = {
@@ -714,7 +714,7 @@ private fun ProjectContent(
                                 // Reshaping the design is the owner's to do, so
                                 // it is offered on the same terms as the link
                                 // above rather than on every subscribed project.
-                                if (details?.project?.owner == 1) {
+                                if (details?.project?.owner?.local == true) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.projects_design)) },
                                         onClick = {

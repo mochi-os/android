@@ -74,7 +74,7 @@ data class ObjectListResponse(
  * `-/object` payload: the object's own columns, with its field values as a
  * sibling map the repository stitches back in - deserialising this straight
  * into a [CrmObject] matches nothing. `incoming`, `outgoing`, `watching` and
- * `comment_count` also ride here but are fetched separately.
+ * `comments.count` also ride here but are fetched separately.
  */
 data class ObjectResponse(
     val `object`: CrmObject = CrmObject(),
@@ -193,7 +193,7 @@ interface CrmsApi {
 
     // ---- Entity-level endpoints ----
 
-    @GET("{crmId}/-/info")
+    @GET("{crmId}/-/information")
     suspend fun getCrmInfo(@Path("crmId") crmId: String): Response<ApiResponse<CrmInfoResponse>>
 
     @POST("{crmId}/-/share")
@@ -272,9 +272,8 @@ interface CrmsApi {
         @Field("field") field: String?,
         @Field("value") value: String?,
         @Field("rank") rank: Int?,
-        @Field("row_field") rowField: String? = null,
-        @Field("row_value") rowValue: String? = null,
-        @Field("scope_parent") scopeParent: String? = null,
+        @Field("row") row: String? = null,
+        @Field("scope") scope: String? = null,
         @Field("promote") promote: String? = null
     ): Response<ApiResponse<SuccessResponse>>
 
@@ -408,7 +407,7 @@ interface CrmsApi {
         @Path("crmId") crmId: String,
         @Field("data") data: String?,
         @Field("template") template: String?,
-        @Field("template_version") templateVersion: Int?
+        @Field("version") templateVersion: Int?
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Data: Export / Import ----

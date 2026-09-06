@@ -270,7 +270,7 @@ private fun DiscoveredCrmCard(
             // renders a dangling middot. `location` is the host a directory entry
             // carries when it has no explicit `server`.
             val meta = listOfNotNull(
-                crm.ownername.takeIf { owner -> owner.isNotBlank() },
+                crm.owner?.name?.takeIf { owner -> owner.isNotBlank() },
                 (crm.server ?: crm.location)?.takeIf { host -> host.isNotBlank() }
             ).joinToString(" · ")
             if (meta.isNotEmpty()) {

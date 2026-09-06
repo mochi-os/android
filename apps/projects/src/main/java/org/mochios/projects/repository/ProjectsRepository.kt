@@ -234,7 +234,8 @@ class ProjectsRepository @Inject constructor(
         promote: Boolean = false
     ) {
         api.moveObject(
-            projectId, objectId, field, value, rank, rowField, rowValue,
+            projectId, objectId, field, value, rank,
+            rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
             scopeParent,
             if (promote) "true" else null
         ).unwrap()

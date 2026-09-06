@@ -15,13 +15,17 @@ data class Project(
     val description: String = "",
     val prefix: String = "",
     val counter: Int = 0,
-    val owner: Int = 0,
-    val ownername: String = "",
+    val owner: Owner? = null,
     val server: String? = null,
     val location: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""
+)
+
+data class Owner(
+    val local: Boolean = false,
+    val name: String = ""
 )
 
 data class ProjectDetails(
