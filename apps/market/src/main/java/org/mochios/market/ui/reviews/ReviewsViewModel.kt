@@ -84,15 +84,18 @@ class ReviewsViewModel @Inject constructor(
         viewModelScope.launch {
             updateTab(tab) { it.copy(isLoading = true) }
             try {
+                // The counter advances only once the page is in hand: bumping it
+                // first leaves a failed page permanently skipped, since the
+                // retry asks for the one after it.
                 val (page, next) = when (tab) {
                     ReviewsTab.RECEIVED -> {
+                        val r = repo.inboxReviews(page = receivedPage + 1, limit = PAGE_LIMIT)
                         receivedPage += 1
-                        val r = repo.inboxReviews(page = receivedPage, limit = PAGE_LIMIT)
                         Pair(r.reviews, r.total)
                     }
                     ReviewsTab.SENT -> {
+                        val r = repo.sentReviews(page = sentPage + 1, limit = PAGE_LIMIT)
                         sentPage += 1
-                        val r = repo.sentReviews(page = sentPage, limit = PAGE_LIMIT)
                         Pair(r.reviews, r.total)
                     }
                 }

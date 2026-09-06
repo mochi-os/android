@@ -54,12 +54,7 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.android.EntryPointAccessors
-import dagger.hilt.components.SingletonComponent
 import org.mochios.android.R as MochiR
-import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
@@ -179,10 +174,9 @@ private fun SummaryCard(
 ) {
     val format = LocalFormat.current
     val currency = subscription.currency ?: Currency.GBP
-    val context = LocalContext.current
-    val baseUrl = remember { baseUrlForContext(context) }
+    // Server-relative: RelativeAssetUrlMapper resolves it in the Coil pipeline.
     val thumbUrl = listing?.photo?.id?.takeIf { it.isNotBlank() }
-        ?.let { "$baseUrl/market/-/photo/$it" }
+        ?.let { "/market/-/photo/$it" }
 
     MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(modifier = Modifier.padding(16.dp)) {
@@ -456,15 +450,3 @@ private fun ListingThumbnail(thumbnailUrl: String?) {
     }
 }
 
-private fun baseUrlForContext(context: android.content.Context): String {
-    return EntryPointAccessors.fromApplication(
-        context.applicationContext,
-        SubscriptionDetailEntryPoint::class.java,
-    ).sessionManager().getServerUrlBlocking().trimEnd('/')
-}
-
-@EntryPoint
-@InstallIn(SingletonComponent::class)
-interface SubscriptionDetailEntryPoint {
-    fun sessionManager(): SessionManager
-}

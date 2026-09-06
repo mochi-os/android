@@ -7,6 +7,7 @@ package org.mochios.market.ui.editor
 
 import android.content.Context
 import android.net.Uri
+import androidx.annotation.StringRes
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -25,7 +26,10 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.market.R
+import org.mochios.market.lib.minorToMajorText
 import org.mochios.market.lib.toMinorUnits
+import org.mochios.market.model.AccountFees
 import org.mochios.market.model.Asset
 import org.mochios.market.model.Category
 import org.mochios.market.model.Condition
@@ -86,6 +90,8 @@ data class EditUiState(
     val photos: List<Photo> = emptyList(),
     val assets: List<Asset> = emptyList(),
     val zones: List<ShippingOption> = emptyList(),
+    /** Server fee terms; `minimums` gates publishing when known. */
+    val fees: AccountFees? = null,
     val categories: List<Category> = emptyList(),
     val saveStatus: SaveStatus = SaveStatus.IDLE,
     val publishStatus: SaveStatus = SaveStatus.IDLE,
@@ -99,7 +105,7 @@ data class EditUiState(
  * One-shot user-facing event for the screen to surface via the snackbar host.
  */
 sealed class EditListingEvent {
-    data class Toast(val message: String) : EditListingEvent()
+    data class Notice(@StringRes val message: Int) : EditListingEvent()
     data class Error(val error: MochiError) : EditListingEvent()
     /** Emit when the listing is deleted so the host can navigate back. */
     data object Deleted : EditListingEvent()
@@ -148,6 +154,9 @@ class EditListingViewModel @Inject constructor(
             try {
                 val categories = repository.listCategories()
                 val stripe = runCatching { repository.stripeStatus() }.getOrNull()
+                // The server's per-currency minimums gate publishing; the
+                // compiled-in table is only the fallback while they are unknown.
+                val fees = runCatching { repository.getFees() }.getOrNull()
                 if (isNew) {
                     _state.value = _state.value.copy(
                         isLoading = false,
@@ -155,6 +164,7 @@ class EditListingViewModel @Inject constructor(
                         listingId = "",
                         categories = categories,
                         stripeOnboarded = stripe?.chargesEnabled,
+                        fees = fees,
                     )
                 } else {
                     val detail = repository.getListing(initialId)
@@ -162,8 +172,11 @@ class EditListingViewModel @Inject constructor(
                     // whole set, so fetch it as the detail view does. Failing
                     // to load photos must not block editing the listing, so
                     // fall back to the cover alone.
+                    // The owner route: the public list answers 404 for a draft
+                    // or moderation-held listing, which hid every photo but the
+                    // cover from the seller who uploaded them.
                     val photos = runCatching {
-                        repository.listPhotos(initialId).sortedBy { it.rank }
+                        repository.listOwnedPhotos(initialId).sortedBy { it.rank }
                     }.getOrElse { listOfNotNull(detail.listing.photo) }
                     _state.value = fromListing(
                         detail.listing,
@@ -172,7 +185,7 @@ class EditListingViewModel @Inject constructor(
                         categories,
                         stripe?.chargesEnabled,
                         photos,
-                    )
+                    ).copy(fees = fees)
                 }
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
@@ -196,7 +209,7 @@ class EditListingViewModel @Inject constructor(
         val pricing = listing.pricing ?: PricingModel.FIXED
         val currency = listing.currency ?: Currency.GBP
         val majorFromMinor: (Long) -> String = { minor ->
-            if (minor == 0L) "" else minorToMajor(minor, currency)
+            if (minor == 0L) "" else minorToMajorText(minor, currency)
         }
         val tags = runCatching {
             gson.fromJson(listing.tags, Array<String>::class.java)?.toList() ?: emptyList()
@@ -441,7 +454,7 @@ class EditListingViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.appealListing(id, reason.trim())
-                _events.emit(EditListingEvent.Toast("Appeal submitted"))
+                _events.emit(EditListingEvent.Notice(R.string.market_appeal_dialog_success))
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             }
@@ -591,11 +604,16 @@ class EditListingViewModel @Inject constructor(
     // -------------------------------- Shipping zones
 
     fun saveZones(zones: List<ShippingOption>) {
-        val listingId = _state.value.listingId
         _state.value = _state.value.copy(zones = zones)
-        if (listingId.isEmpty()) return
         viewModelScope.launch {
             try {
+                // Zones live on the server against a listing row, so a zone
+                // added before the first autosave creates the row first; a
+                // draft with no title cannot be created yet and keeps the
+                // zones in state for the save that follows.
+                if (_state.value.listingId.isEmpty()) saveNow()
+                val listingId = _state.value.listingId
+                if (listingId.isEmpty()) return@launch
                 repository.setShipping(
                     listingId,
                     zones.map {
@@ -624,7 +642,9 @@ fun priceBelowStripeMinimum(state: EditUiState): Boolean {
     val text = if (state.pricing == PricingModel.AUCTION) state.reserveText else state.priceText
     val minor = toMinorUnits(text, state.currency)
     if (minor <= 0L) return false
-    val minimum = STRIPE_MINIMUMS[state.currency] ?: return false
+    val minimum = state.fees?.minimums?.get(state.currency.name.lowercase())
+        ?: STRIPE_MINIMUMS[state.currency]
+        ?: return false
     return minor < minimum
 }
 
@@ -660,19 +680,3 @@ private fun intervalWire(i: Interval): String = when (i) {
     Interval.YEARLY -> "yearly"
 }
 
-/** Convert a minor-unit amount back to a major-unit string for prefilled fields. */
-private fun minorToMajor(amount: Long, currency: Currency): String {
-    val decimals = when (currency) {
-        Currency.JPY -> 0
-        Currency.GBP, Currency.USD, Currency.EUR -> 2
-    }
-    if (decimals == 0) return amount.toString()
-    val factor = 10.0.let { pow ->
-        var r = 1.0
-        repeat(decimals) { r *= pow }
-        r
-    }
-    val major = amount / factor
-    return if (decimals == 0) major.toLong().toString()
-    else String.format("%.${decimals}f", major)
-}

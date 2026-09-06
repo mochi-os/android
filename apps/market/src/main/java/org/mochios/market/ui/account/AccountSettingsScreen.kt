@@ -215,15 +215,6 @@ fun AccountSettingsScreen(
                         )
                     }
 
-                    MochiOutlinedButton(
-                        onClick = {
-                            navController.navigate(MarketApp.NOTIFICATION_PREFERENCES)
-                        },
-                        modifier = Modifier.fillMaxWidth(),
-                    ) {
-                        Text(stringResource(R.string.market_notifications_title))
-                    }
-
                     MochiButton(
                         onClick = viewModel::save,
                         enabled = !state.isSaving,

@@ -7,11 +7,9 @@ package org.mochios.market.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -104,23 +102,5 @@ fun PriceDisplay(
                 )
             }
         }
-    }
-}
-
-/**
- * Small inline variant for use in lists and cards. Identical content,
- * smaller typography.
- */
-@Composable
-fun PriceDisplayInline(
-    listing: Listing,
-    modifier: Modifier = Modifier,
-    auction: Auction? = null,
-) {
-    Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        PriceDisplay(listing = listing, auction = auction, compact = true)
     }
 }

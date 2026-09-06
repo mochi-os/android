@@ -70,6 +70,7 @@ import org.mochios.market.ui.components.formatPercent
 @Composable
 fun SellerSettingsScreen(
     navController: NavController,
+    stripeReturn: StripeOauthReturn? = null,
     viewModel: SellerSettingsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -81,8 +82,15 @@ fun SellerSettingsScreen(
             when (event) {
                 is SellerSettingsEvent.Error ->
                     snackbarHostState.showSnackbar(event.error.userMessage())
+                is SellerSettingsEvent.Notice ->
+                    snackbarHostState.showSnackbar(context.getString(event.message))
             }
         }
+    }
+
+    // Stripe's OAuth return lands on this route; complete it once per state.
+    LaunchedEffect(stripeReturn) {
+        if (stripeReturn != null) viewModel.completeStripeOauth(stripeReturn)
     }
 
     val titleRes = if (state.isSeller) {

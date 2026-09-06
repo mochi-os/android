@@ -54,6 +54,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -69,6 +70,7 @@ import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingStatus
+import org.mochios.market.model.RemovalCheck
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.FeeDisclosure
 import org.mochios.market.ui.components.ListingCard
@@ -266,13 +268,43 @@ fun MyListingsScreen(
         }
     }
 
-    // Delete confirmation.
+    // Delete confirmation. A draft is simply deleted; for anything else the
+    // server says what removal cuts off (live bidders, subscribers) and the
+    // warning is tailored to it, as web does.
     deleteCandidate?.let { candidate ->
+        val draft = candidate.status == ListingStatus.DRAFT
+        var removal by remember(candidate.id) { mutableStateOf<RemovalCheck?>(null) }
+        LaunchedEffect(candidate.id) {
+            if (!draft) {
+                removal = runCatching { marketRepo.listingRemovalCheck(candidate.id) }.getOrNull()
+            }
+        }
+        val check = removal
+        val message = when {
+            draft -> stringResource(R.string.market_listings_delete_message)
+            check?.hasActiveAuction == true && check.activeBidders > 0 -> pluralStringResource(
+                R.plurals.market_listings_remove_message_bidders,
+                check.activeBidders.toInt(),
+                check.activeBidders.toInt(),
+            )
+            check?.hasActiveAuction == true ->
+                stringResource(R.string.market_listings_remove_message_auction)
+            check != null && check.activeSubscribers > 0 -> pluralStringResource(
+                R.plurals.market_listings_remove_message_subscribers,
+                check.activeSubscribers.toInt(),
+                check.activeSubscribers.toInt(),
+            )
+            else -> stringResource(R.string.market_listings_remove_message)
+        }
         MochiAlertDialog(
             onDismissRequest = { deleteCandidate = null },
-            title = stringResource(R.string.market_listings_delete_title),
-            text = stringResource(R.string.market_listings_delete_message),
-            confirmText = stringResource(R.string.market_listings_delete_confirm),
+            title = stringResource(
+                if (draft) R.string.market_listings_delete_title else R.string.market_listings_remove_title,
+            ),
+            text = message,
+            confirmText = stringResource(
+                if (draft) R.string.market_listings_delete_confirm else R.string.market_listings_remove_confirm,
+            ),
             onConfirm = {
                 viewModel.deleteListing(candidate, deleteFailedFallback)
                 deleteCandidate = null

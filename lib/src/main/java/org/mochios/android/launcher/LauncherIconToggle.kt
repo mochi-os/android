@@ -11,8 +11,8 @@ import android.content.pm.PackageManager
 import android.util.Log
 
 /**
- * Show or hide a launcher activity-alias at runtime. An alias gated on a
- * server-side capability check ships `android:enabled="false"` and is enabled
+ * Show or hide a launcher activity at runtime. One gated on a server-side
+ * capability check ships `android:enabled="false"` and is enabled
  * here once it passes. Android owns the state across reboots, so apps re-verify
  * on each boot.
  */
@@ -21,12 +21,12 @@ object LauncherIconToggle {
     private const val TAG = "LauncherIconToggle"
 
     /**
-     * [aliasClassName] is the simple class name (e.g. `"MochiStaffLauncher"`);
+     * [className] is the simple class name (e.g. `"MochiStaffLauncher"`);
      * the host's package prefix is added. No-ops when already in the target
      * state.
      */
-    fun setVisible(context: Context, aliasClassName: String, visible: Boolean) {
-        val component = ComponentName(context, "${context.packageName}.$aliasClassName")
+    fun setVisible(context: Context, className: String, visible: Boolean) {
+        val component = ComponentName(context, "${context.packageName}.$className")
         val pm = context.packageManager
         val targetState = if (visible) {
             PackageManager.COMPONENT_ENABLED_STATE_ENABLED
@@ -37,9 +37,9 @@ object LauncherIconToggle {
             pm.getComponentEnabledSetting(component)
         } catch (e: IllegalArgumentException) {
             // Component not declared in the manifest — caller passed a bogus
-            // alias name. Log and bail rather than fall through to a write
+            // class name. Log and bail rather than fall through to a write
             // that would also throw.
-            Log.w(TAG, "Unknown launcher alias: ${component.flattenToShortString()}", e)
+            Log.w(TAG, "Unknown launcher activity: ${component.flattenToShortString()}", e)
             return
         }
         // Treat DEFAULT (i.e. follow whatever android:enabled says in the

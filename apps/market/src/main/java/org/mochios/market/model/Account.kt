@@ -85,6 +85,8 @@ data class StripeStatus(
  */
 data class AccountFees(
     val platform: Double = 0.0,
+    /** Stripe's per-currency minimum charge in minor units, keyed by lowercase code. */
+    val minimums: Map<String, Long> = emptyMap(),
 )
 
 /**

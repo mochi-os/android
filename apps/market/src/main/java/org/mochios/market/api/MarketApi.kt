@@ -41,6 +41,7 @@ import org.mochios.market.model.ReviewsListResponse
 import org.mochios.market.model.SavedListResponse
 import org.mochios.market.model.SavedToggleResponse
 import org.mochios.market.model.SentReviewListResponse
+import org.mochios.market.model.StripeOauthCompletion
 import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
 import org.mochios.market.model.Subscription
@@ -116,41 +117,32 @@ interface MarketApi {
     @POST("-/accounts/stripe/onboarding")
     suspend fun startStripeOnboarding(
         @Field("return_url") returnUrl: String,
+        @Field("client_platform") clientPlatform: String? = null,
     ): Response<ApiResponse<StripeOnboardingResponse>>
+
+    /**
+     * Finish a Stripe Connect ceremony the browser handed to the app: the
+     * callback route sends an app-platform state to `mochi://market/stripe/oauth`
+     * with Stripe's raw parameters, and this completes it as the seller.
+     */
+    @FormUrlEncoded
+    @POST("-/accounts/stripe/oauth/complete")
+    suspend fun completeStripeOauth(
+        @Field("code") code: String? = null,
+        @Field("state") state: String? = null,
+        @Field("error") error: String? = null,
+        @Field("error_description") errorDescription: String? = null,
+    ): Response<ApiResponse<StripeOauthCompletion>>
 
     /** Current Stripe Connect charges/payouts capability flags. */
     @GET("-/accounts/stripe/status")
     suspend fun getStripeStatus(): Response<ApiResponse<StripeStatus>>
-
-    /**
-     * Stripe's OAuth landing page (HTML). A Custom Tab handles the round trip;
-     * Android never calls this directly.
-     */
-    @GET("-/stripe/oauth/callback")
-    suspend fun stripeOauthCallback(
-        @Query("code") code: String? = null,
-        @Query("state") state: String? = null,
-        @Query("error") error: String? = null,
-        @Query("error_description") errorDescription: String? = null,
-    ): Response<okhttp3.ResponseBody>
 
     // ---- Categories ----
 
     /** All marketplace categories (public). */
     @GET("-/categories/list")
     suspend fun listCategories(): Response<ApiResponse<List<Category>>>
-
-    // ---- Person assets (avatar/banner/favicon/style/information) ----
-
-    /**
-     * Person-entity asset stream (avatar, banner, favicon, style, information).
-     * Normally loaded as an image URL, so the body is returned raw.
-     */
-    @GET("-/user/{user}/asset/{asset}")
-    suspend fun getUserAsset(
-        @Path(value = "user", encoded = true) user: String,
-        @Path(value = "asset", encoded = true) asset: String,
-    ): Response<okhttp3.ResponseBody>
 
     // ---- Listings ----
 
@@ -258,6 +250,7 @@ interface MarketApi {
         @Query("pricing") pricing: String? = null,
         @Query("min") min: String? = null,
         @Query("max") max: String? = null,
+        @Query("currency") currency: String? = null,
         @Query("delivery") delivery: String? = null,
         @Query("location") location: String? = null,
         @Query("sort") sort: String? = null,
@@ -345,6 +338,15 @@ interface MarketApi {
     /** List all photos for a listing (public). */
     @GET("-/photos/list")
     suspend fun listPhotos(
+        @Query("listing") listing: String,
+    ): Response<ApiResponse<PhotosListResponse>>
+
+    /**
+     * The seller's own view of a listing's photos. The public route answers
+     * 404 for a draft or moderation-held listing, so the editor uses this.
+     */
+    @GET("-/photos/owned/list")
+    suspend fun listOwnedPhotos(
         @Query("listing") listing: String,
     ): Response<ApiResponse<PhotosListResponse>>
 

@@ -77,6 +77,7 @@ import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.disputeReasonLabel
 import org.mochios.market.ui.components.StatusBadge
 import org.mochios.market.ui.dialog.RequestRefundDialog
 
@@ -402,7 +403,7 @@ private fun PrimaryActionsCard(
 @Composable
 private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) {
     val isChargeback = dispute.opener == "stripe"
-    val reasonLabel = chargebackLabel(dispute.reason)
+    val reasonLabel = disputeReasonLabel(dispute.reason, dispute.opener)
     MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -424,7 +425,7 @@ private fun DisputeCard(dispute: Dispute, orderTotal: Long, currency: Currency) 
                 if (dispute.reason.isNotBlank()) {
                     SummaryRow(
                         label = stringResource(R.string.market_purchase_dispute_reason),
-                        value = dispute.reason,
+                        value = reasonLabel,
                     )
                 }
                 if (dispute.description.isNotBlank()) {
@@ -514,28 +515,6 @@ private fun AuditCollapsible(
             }
         }
     }
-}
-
-@Composable
-private fun chargebackLabel(reason: String): String {
-    val mapped = when (reason) {
-        "fraudulent" -> R.string.market_chargeback_reason_fraudulent
-        "duplicate" -> R.string.market_chargeback_reason_duplicate
-        "general" -> R.string.market_chargeback_reason_general
-        "subscription_canceled" -> R.string.market_chargeback_reason_subscription_canceled
-        "unrecognized" -> R.string.market_chargeback_reason_unrecognized
-        "product_not_received" -> R.string.market_chargeback_reason_product_not_received
-        "product_unacceptable" -> R.string.market_chargeback_reason_product_unacceptable
-        "credit_not_processed" -> R.string.market_chargeback_reason_credit_not_processed
-        "customer_initiated" -> R.string.market_chargeback_reason_customer_initiated
-        "debit_not_authorized" -> R.string.market_chargeback_reason_debit_not_authorized
-        "incorrect_account_details" -> R.string.market_chargeback_reason_incorrect_account_details
-        "insufficient_funds" -> R.string.market_chargeback_reason_insufficient_funds
-        "bank_cannot_process" -> R.string.market_chargeback_reason_bank_cannot_process
-        "check_returned" -> R.string.market_chargeback_reason_check_returned
-        else -> null
-    }
-    return if (mapped != null) stringResource(mapped) else reason.replace('_', ' ')
 }
 
 private fun openUrl(

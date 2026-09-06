@@ -11,8 +11,10 @@ import org.mochios.market.model.Listing
 
 /**
  * Filter axes on the browse screen. Values in [HomeUiState.filters] are the
- * search API's wire values; [PRICE_MIN] / [PRICE_MAX] hold whole-currency
- * amounts as typed ("5.00") - the server converts to minor units.
+ * search API's wire values; [PRICE_MIN] / [PRICE_MAX] hold major-unit amounts
+ * as typed ("5.00") and are converted to minor units of [CURRENCY] (lowercase
+ * ISO code, `usd` when unset) when the search is sent, since the server
+ * compares them against the minor-unit price column of that currency alone.
  */
 enum class Filter {
     CATEGORY,
@@ -22,8 +24,8 @@ enum class Filter {
     DELIVERY,
     PRICE_MIN,
     PRICE_MAX,
+    CURRENCY,
     SORT,
-    TAG,
 }
 
 /**

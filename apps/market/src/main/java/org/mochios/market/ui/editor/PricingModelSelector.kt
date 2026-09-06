@@ -50,6 +50,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Currency
@@ -354,10 +355,8 @@ private fun StartTimeField(
 
     // Empty when no start time (the field then reads as "start on publish",
     // explained by the help text below — matching web's empty datetime input).
-    val display = opensAt?.let {
-        java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault())
-            .format(java.util.Date(it * 1000L))
-    } ?: ""
+    val format = LocalFormat.current
+    val display = opensAt?.let { format.formatDateTime(it) } ?: ""
 
     Column(modifier = Modifier.fillMaxWidth()) {
         MochiTextField(

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Mochi" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!--
+      The bare MainActivity only forwards a launch to an app's own class and
+      finishes; with no window of its own there is nothing to draw in between.
+    -->
+    <style name="Theme.Mochi.Trampoline">
+        <item name="android:windowNoDisplay">true</item>
+    </style>
 </resources>

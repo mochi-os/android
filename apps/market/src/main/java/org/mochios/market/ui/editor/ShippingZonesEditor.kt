@@ -45,6 +45,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
+import org.mochios.market.lib.minorToMajorText
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Currency
 import org.mochios.market.model.ShippingOption
@@ -212,12 +213,7 @@ private fun ZoneDialog(
         mutableStateOf(initial?.region?.ifEmpty { REGION_CHOICES.first().wireCode }
             ?: REGION_CHOICES.first().wireCode)
     }
-    val initialPriceText = initial?.let {
-        val major = it.price.toDouble() / pow10(currencyDecimals(currency))
-        if (major == 0.0) "" else
-            if (currencyDecimals(currency) == 0) major.toLong().toString()
-            else String.format("%.${currencyDecimals(currency)}f", major)
-    } ?: ""
+    val initialPriceText = initial?.let { minorToMajorText(it.price, currency) } ?: ""
     var priceText by remember { mutableStateOf(initialPriceText) }
     var daysText by remember { mutableStateOf(initial?.days.orEmpty()) }
     var notesText by remember { mutableStateOf(initial?.notes.orEmpty()) }
@@ -306,13 +302,3 @@ private fun ZoneDialog(
     )
 }
 
-private fun currencyDecimals(c: Currency): Int = when (c) {
-    Currency.JPY -> 0
-    Currency.GBP, Currency.USD, Currency.EUR -> 2
-}
-
-private fun pow10(n: Int): Long {
-    var v = 1L
-    repeat(n) { v *= 10L }
-    return v
-}

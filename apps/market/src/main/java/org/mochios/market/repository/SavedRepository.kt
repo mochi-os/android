@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import org.mochios.android.api.unwrap
 import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Listing
 import javax.inject.Inject
@@ -52,10 +53,6 @@ class SavedRepository @Inject constructor(
         }
     }
 
-    /** True if the given listing id is in the saved set. */
-    fun isSaved(listingId: String): Boolean =
-        _saved.value.any { it.id.toString() == listingId }
-
     /**
      * Toggle saved state optimistically, reverting on failure; returns the new
      * state. Takes the full [Listing] because the server stores a snapshot.
@@ -67,7 +64,9 @@ class SavedRepository @Inject constructor(
         return if (previous.any { it.id == id }) {
             _saved.value = previous.filterNot { it.id == id }
             try {
-                api.removeSaved(idString)
+                // unwrap() turns a non-2xx answer into an exception, so a refused
+                // write reverts the mirror instead of reporting success.
+                api.removeSaved(idString).unwrap()
             } catch (e: Exception) {
                 _saved.value = previous
                 throw e
@@ -76,7 +75,7 @@ class SavedRepository @Inject constructor(
         } else {
             _saved.value = listOf(listing) + previous
             try {
-                api.addSaved(idString, gson.toJson(listing))
+                api.addSaved(idString, gson.toJson(listing)).unwrap()
             } catch (e: Exception) {
                 _saved.value = previous
                 throw e
@@ -90,7 +89,7 @@ class SavedRepository @Inject constructor(
         val previous = _saved.value
         _saved.value = emptyList()
         try {
-            api.clearSaved()
+            api.clearSaved().unwrap()
         } catch (e: Exception) {
             _saved.value = previous
             throw e

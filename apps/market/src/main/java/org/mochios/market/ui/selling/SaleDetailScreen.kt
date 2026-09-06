@@ -74,7 +74,10 @@ import org.mochios.market.model.OrderDetailResponse
 import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.buying.WriteReviewForm
 import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.RatingStars
+import org.mochios.market.ui.components.disputeReasonLabel
 import org.mochios.market.ui.components.StatusBadge
 import org.mochios.market.ui.dialog.DisputeResponseDialog
 import org.mochios.market.ui.dialog.IssueRefundDialog
@@ -115,6 +118,7 @@ fun SaleDetailScreen(
     val refundFailedFallback = stringResource(R.string.market_refund_dialog_failed)
     val disputeFailedFallback = stringResource(R.string.market_dispute_dialog_failed)
     val reviewFailedFallback = stringResource(R.string.market_sale_review_response_failed)
+    val reviewSubmitFailedFallback = stringResource(R.string.market_purchase_review_failed)
 
     Scaffold(
         topBar = {
@@ -153,6 +157,9 @@ fun SaleDetailScreen(
                     onOpenDispute = { disputeDialogOpen = true },
                     onRespondReview = { text ->
                         viewModel.respondToReview(text, reviewFailedFallback)
+                    },
+                    onSubmitReview = { rating, body ->
+                        viewModel.submitReview(rating, body, reviewSubmitFailedFallback)
                     },
                     onMessageBuyer = {
                         navController.navigate(
@@ -226,6 +233,7 @@ private fun SaleDetailBody(
     onOpenRefund: () -> Unit,
     onOpenDispute: () -> Unit,
     onRespondReview: (String) -> Unit,
+    onSubmitReview: (Int, String) -> Unit,
     onMessageBuyer: () -> Unit,
 ) {
     val order = detail.order
@@ -389,13 +397,25 @@ private fun SaleDetailBody(
         }
 
         // ---- Review section ----
-        detail.review?.let { review ->
+        // `peer_review` is the buyer's review of this seller, the one a
+        // response can be posted to; `review` is the seller's own review of
+        // the buyer, offered as a form while `can_review` and read-only after.
+        detail.peerReview?.let { review ->
             item("review") {
                 ReviewPanel(
                     review = review,
                     submitting = state.reviewResponseSubmitting,
                     errorMessage = state.reviewError,
                     onRespond = onRespondReview,
+                )
+            }
+        }
+        if (detail.canReview || detail.review != null) {
+            item("review-buyer") {
+                WriteReviewForm(
+                    submitting = state.reviewSubmitting,
+                    submitted = detail.review,
+                    onSubmit = onSubmitReview,
                 )
             }
         }
@@ -519,7 +539,7 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
                 Text(
                     text = stringResource(
                         R.string.market_sale_dispute_stripe_reason,
-                        dispute.reason,
+                        disputeReasonLabel(dispute.reason, dispute.opener),
                     ),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -529,7 +549,7 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
                 Text(
                     text = stringResource(
                         R.string.market_sale_dispute_evidence_due,
-                        dispute.evidenceDue.toString(),
+                        LocalFormat.current.formatDateTime(dispute.evidenceDue),
                     ),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.error,
@@ -577,9 +597,13 @@ private fun ReviewPanel(
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
-                text = stringResource(R.string.market_sale_section_review),
+                text = review.reviewerName?.takeIf { it.isNotBlank() }
+                    ?.let { stringResource(R.string.market_purchase_review_from, it) }
+                    ?: stringResource(R.string.market_sale_review_buyer),
                 style = MaterialTheme.typography.titleSmall,
             )
+            Spacer(modifier = Modifier.size(4.dp))
+            RatingStars(rating = review.rating.toFloat(), showCount = false)
             Spacer(modifier = Modifier.size(8.dp))
             Text(
                 text = review.text,

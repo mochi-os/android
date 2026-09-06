@@ -50,20 +50,20 @@ fun notificationIconFor(app: String?): Int = when (app?.lowercase()) {
 }
 
 /**
- * Activity-alias for a slug, so a notification's badge lands on that app's
+ * Launcher activity for a slug, so a notification's badge lands on that app's
  * launcher icon only; the implicit `mochi:` intent resolves to MainActivity and
  * badges every Mochi icon. Null for unknown apps.
  */
 fun launcherComponentFor(context: Context, app: String?): ComponentName? {
-    val name = LAUNCHER_ALIASES[app?.lowercase()] ?: return null
+    val name = LAUNCHER_ACTIVITIES[app?.lowercase()] ?: return null
     return ComponentName(context, "${context.packageName}.$name")
 }
 
 /**
- * Every activity-alias in the shell manifest, by slug. A missing entry silently
+ * Every launcher activity in the shell manifest, by slug. A missing entry silently
  * reverts that app to the badge-everything fallback.
  */
-internal val LAUNCHER_ALIASES = mapOf(
+internal val LAUNCHER_ACTIVITIES = mapOf(
     "feeds" to "MochiFeedsLauncher",
     "chat" to "MochiChatLauncher",
     "forums" to "MochiForumsLauncher",

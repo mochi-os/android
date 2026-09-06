@@ -285,6 +285,7 @@ class AccountSettingsViewModel @Inject constructor(
     }
 
     companion object {
-        const val BIOGRAPHY_LIMIT = 500
+        /** The server's `biography` cap (accounts/update rejects longer text). */
+        const val BIOGRAPHY_LIMIT = 5000
     }
 }

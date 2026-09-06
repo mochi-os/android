@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.checkout
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,6 +20,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.market.R
 import org.mochios.market.lib.cheapestMatchingZone
 import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.toMinorUnits
@@ -56,7 +58,10 @@ data class CheckoutUiState(
 sealed interface CheckoutEvent {
     data class OpenStripe(val url: String) : CheckoutEvent
     data class OrderComplete(val orderId: String) : CheckoutEvent
-    data class ShowError(val message: String) : CheckoutEvent
+    /** A failure the app itself detected, named by resource so it is translated. */
+    data class ShowError(@StringRes val message: Int) : CheckoutEvent
+    /** A failure carrying the server's own (already localised) message. */
+    data class ShowFailure(val message: String) : CheckoutEvent
 }
 
 @HiltViewModel
@@ -184,7 +189,7 @@ class CheckoutViewModel @Inject constructor(
                     if (r.checkoutUrl.isNotBlank()) {
                         _events.tryEmit(CheckoutEvent.OpenStripe(r.checkoutUrl))
                     } else {
-                        _events.tryEmit(CheckoutEvent.ShowError(SUBSCRIBE_FAILED))
+                        _events.tryEmit(CheckoutEvent.ShowError(R.string.market_checkout_subscription_start_failed))
                     }
                     return@launch
                 }
@@ -200,10 +205,10 @@ class CheckoutViewModel @Inject constructor(
                 } else if (response.order != null && response.order.id.isNotEmpty()) {
                     _events.tryEmit(CheckoutEvent.OrderComplete(response.order.id))
                 } else {
-                    _events.tryEmit(CheckoutEvent.ShowError(CHECKOUT_FAILED))
+                    _events.tryEmit(CheckoutEvent.ShowError(R.string.market_checkout_start_failed))
                 }
             } catch (e: Exception) {
-                _events.tryEmit(CheckoutEvent.ShowError(e.toMochiError().userMessage()))
+                _events.tryEmit(CheckoutEvent.ShowFailure(e.toMochiError().userMessage()))
             } finally {
                 _uiState.value = _uiState.value.copy(submitting = false)
             }
@@ -246,12 +251,6 @@ class CheckoutViewModel @Inject constructor(
     }
 
     companion object {
-        // Plain strings to avoid pulling Context into the VM. Screens
-        // override via stringResource when they intercept errors before
-        // they bubble.
-        private const val CHECKOUT_FAILED = "Could not start checkout"
-        private const val SUBSCRIBE_FAILED = "Could not start subscription"
-
         /**
          * Makes the Comptroller mint `mochi://` return URLs for Stripe
          * Checkout; https ones never route back to the app from a Custom Tab.

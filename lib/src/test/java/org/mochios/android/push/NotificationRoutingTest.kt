@@ -11,7 +11,7 @@ import org.junit.Test
 
 /**
  * Both transports resolve a channel through [notificationChannelFor]. These pin
- * the channel set against the launcher aliases: a channel with no alias badges
+ * the channel set against the launcher activities: a channel with none badges
  * every Mochi icon, and an app with no channel posts on Feeds.
  */
 class NotificationRoutingTest {
@@ -61,19 +61,19 @@ class NotificationRoutingTest {
     }
 
     /**
-     * A channel with no alias falls back to the implicit intent, badging every
+     * A channel with no launcher activity falls back to the implicit intent, badging every
      * Mochi icon.
      */
     @Test
-    fun `every channel has a launcher alias`() {
+    fun `every channel has a launcher activity`() {
         for (slug in NOTIFICATION_CHANNELS) {
-            assertTrue("no launcher alias for $slug", LAUNCHER_ALIASES.containsKey(slug))
+            assertTrue("no launcher activity for $slug", LAUNCHER_ACTIVITIES.containsKey(slug))
         }
     }
 
-    /** Settings has an alias and no channel — it never posts notifications. */
+    /** Settings has a launcher activity and no channel — it never posts notifications. */
     @Test
-    fun `aliases beyond the channel set are only settings`() {
-        assertEquals(setOf("settings"), LAUNCHER_ALIASES.keys - NOTIFICATION_CHANNELS)
+    fun `launcher activities beyond the channel set are only settings`() {
+        assertEquals(setOf("settings"), LAUNCHER_ACTIVITIES.keys - NOTIFICATION_CHANNELS)
     }
 }

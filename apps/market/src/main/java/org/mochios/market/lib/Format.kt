@@ -9,6 +9,7 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import org.mochios.android.format.currencyDecimals as libCurrencyDecimals
 import org.mochios.android.format.formatPrice as libFormatPrice
+import org.mochios.android.format.minorToMajorText as libMinorToMajorText
 import org.mochios.android.format.toMinorUnits as libToMinorUnits
 import org.mochios.android.model.PlaceData
 import org.mochios.market.model.Currency
@@ -34,6 +35,10 @@ fun formatPrice(
  */
 fun toMinorUnits(majorString: String, currency: Currency): Long =
     libToMinorUnits(majorString, currency.name)
+
+/** Minor units as editable major-unit text ("12.34"); the inverse of [toMinorUnits]. */
+fun minorToMajorText(amount: Long, currency: Currency): String =
+    libMinorToMajorText(amount, currency.name)
 
 /** First 9 chars of an entity ID — re-exported from lib for source-compat. */
 fun formatFingerprint(id: String): String =

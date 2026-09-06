@@ -12,9 +12,9 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import org.mochios.market.ui.account.AccountSettingsScreen
-import org.mochios.market.ui.account.NotificationPreferencesScreen
 import org.mochios.market.ui.account.PublicProfileScreen
 import org.mochios.market.ui.account.SellerSettingsScreen
+import org.mochios.market.ui.account.StripeOauthReturn
 import org.mochios.market.ui.browse.HomeScreen
 import org.mochios.market.ui.buying.MyBidsScreen
 import org.mochios.market.ui.buying.MyPurchasesScreen
@@ -41,8 +41,8 @@ import org.mochios.market.ui.selling.SaleDetailScreen
 object MarketApp {
     // ---- Class-level routes ----
     const val HOME = "market"
-    /** Pattern used when navigating to the browse screen pre-filtered by tag or category. */
-    const val HOME_PATTERN = "market?tag={tag}&category={category}"
+    /** Pattern used when navigating to the browse screen pre-filtered by category. */
+    const val HOME_PATTERN = "market?category={category}"
     const val LISTINGS = "market/listings"
     const val SALES = "market/sales"
     const val SUBSCRIBERS = "market/subscribers"
@@ -54,7 +54,13 @@ object MarketApp {
     const val REVIEWS = "market/reviews"
     const val ACCOUNT = "market/account"
     const val SELLER_SETTINGS = "market/account/seller"
-    const val NOTIFICATION_PREFERENCES = "market/account/notifications"
+    /**
+     * The seller settings route also receives Stripe's OAuth return: the
+     * callback hands an app-platform state to `mochi://market/stripe/oauth`,
+     * and MainActivity maps it here with Stripe's raw parameters.
+     */
+    const val SELLER_SETTINGS_PATTERN =
+        "market/account/seller?code={code}&state={state}&error={error}&error_description={error_description}"
 
     // ---- Detail route patterns ----
     const val LISTING_DETAIL = "market/listing/{id}"
@@ -82,8 +88,13 @@ object MarketApp {
     fun publicProfile(accountId: String) = "market/account/$accountId"
     fun subscriptionDetail(id: String) = "market/subscriptions/$id"
 
-    /** Browse pre-filtered by tag. */
-    fun homeWithTag(tag: String) = "market?tag=${Uri.encode(tag)}"
+    /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
+    fun sellerSettings(code: String?, state: String?, error: String?, errorDescription: String?): String {
+        val query = listOf("code" to code, "state" to state, "error" to error, "error_description" to errorDescription)
+            .filter { !it.second.isNullOrBlank() }
+            .joinToString("&") { (name, value) -> name + "=" + Uri.encode(value) }
+        return if (query.isEmpty()) SELLER_SETTINGS else "$SELLER_SETTINGS?$query"
+    }
 
     /** Browse pre-filtered by category id. */
     fun homeWithCategory(categoryId: String) = "market?category=${Uri.encode(categoryId)}"
@@ -98,11 +109,6 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     composable(
         route = MarketApp.HOME_PATTERN,
         arguments = listOf(
-            navArgument("tag") {
-                type = NavType.StringType
-                nullable = true
-                defaultValue = null
-            },
             navArgument("category") {
                 type = NavType.StringType
                 nullable = true
@@ -120,8 +126,21 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
     composable(MarketApp.MESSAGES) { MessagesInboxScreen(navController = navController) }
     composable(MarketApp.REVIEWS) { ReviewsScreen(navController = navController) }
     composable(MarketApp.ACCOUNT) { AccountSettingsScreen(navController = navController) }
-    composable(MarketApp.SELLER_SETTINGS) { SellerSettingsScreen(navController = navController) }
-    composable(MarketApp.NOTIFICATION_PREFERENCES) { NotificationPreferencesScreen(navController = navController) }
+    composable(
+        route = MarketApp.SELLER_SETTINGS_PATTERN,
+        arguments = listOf("code", "state", "error", "error_description").map { name ->
+            navArgument(name) {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            }
+        },
+    ) { entry ->
+        SellerSettingsScreen(
+            navController = navController,
+            stripeReturn = StripeOauthReturn.from(entry.arguments),
+        )
+    }
 
     // ---- Detail routes ----
     composable(MarketApp.CREATE_LISTING) { CreateListingScreen(navController = navController) }

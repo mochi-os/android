@@ -163,7 +163,11 @@ class MyListingsViewModel @Inject constructor(
     fun loadMore() {
         val current = _state.value
         if (current.isLoading || !current.hasMore) return
-        viewModelScope.launch {
+        // Tracked in loadJob so a status-tab switch cancels it: an untracked
+        // page fetch finishing after refresh() would merge the previous tab's
+        // rows on top of the new tab's list.
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             _state.value = current.copy(isLoading = true)
             try {
                 val response = repo.mineListings(
@@ -177,7 +181,7 @@ class MyListingsViewModel @Inject constructor(
                 // hasMore stays true, so the next attempt asks for the one
                 // after, and those listings are unreachable until a refresh.
                 page += 1
-                val merged = current.listings + response.listings
+                val merged = _state.value.listings + response.listings
                 _state.value = _state.value.copy(
                     listings = merged,
                     isLoading = false,

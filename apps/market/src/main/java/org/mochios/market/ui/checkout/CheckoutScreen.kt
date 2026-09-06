@@ -111,7 +111,8 @@ fun CheckoutScreen(
                         popUpTo(MarketApp.CHECKOUT) { inclusive = true }
                     }
                 }
-                is CheckoutEvent.ShowError -> snackbar.showSnackbar(event.message)
+                is CheckoutEvent.ShowError -> snackbar.showSnackbar(context.getString(event.message))
+                is CheckoutEvent.ShowFailure -> snackbar.showSnackbar(event.message)
             }
         }
     }
