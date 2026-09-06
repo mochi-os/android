@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -69,6 +70,7 @@ class ReportsViewModel @Inject constructor(
     val events: SharedFlow<ReportsEvent> = _events.asSharedFlow()
 
     private var loadJob: Job? = null
+    private var moreJob: Job? = null
 
     /**
      * Pages actually fetched. Deriving the next page from the row count breaks
@@ -83,7 +85,7 @@ class ReportsViewModel @Inject constructor(
         // mirrors web's `useStaffEvents()` invalidation for the reports queue.
         viewModelScope.launch {
             eventsBus.events
-                .filter { it is StaffEvent.NewReport }
+                .filter { it is StaffEvent.NewReport || it is StaffEvent.Unknown }
                 .collect { reload() }
         }
     }
@@ -104,9 +106,12 @@ class ReportsViewModel @Inject constructor(
 
     fun reload() {
         loadJob?.cancel()
+        // A load-more still in flight belongs to the filter being replaced;
+        // left running, it would splice that filter's rows into the new list.
+        moreJob?.cancel()
         loadJob = viewModelScope.launch {
             val s = _state.value
-            _state.value = s.copy(isLoading = true, error = null)
+            _state.value = s.copy(isLoading = true, isLoadingMore = false, error = null)
             try {
                 val r = repository.listReports(
                     type = s.type,
@@ -121,6 +126,7 @@ class ReportsViewModel @Inject constructor(
                     total = r.total,
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -133,7 +139,7 @@ class ReportsViewModel @Inject constructor(
         val s = _state.value
         if (s.isLoadingMore || s.isLoading || s.reports.size >= s.total) return
         val nextPage = pagesLoaded + 1
-        viewModelScope.launch {
+        moreJob = viewModelScope.launch {
             _state.value = s.copy(isLoadingMore = true)
             try {
                 val r = repository.listReports(
@@ -148,7 +154,8 @@ class ReportsViewModel @Inject constructor(
                     reports = _state.value.reports + r.reports,
                     total = r.total,
                 )
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(isLoadingMore = false)
             }
         }
@@ -188,6 +195,7 @@ class ReportsViewModel @Inject constructor(
                 )
                 _events.tryEmit(ReportsEvent.Toast(SUCCESS_TOAST))
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
                 _events.tryEmit(ReportsEvent.Toast(e.toMochiError().userMessage()))
             }

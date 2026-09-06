@@ -8,10 +8,10 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Row of the Comptroller `audit` table plus `actor_name`. `data` is a
- * per-action JSON string kept raw; `object` is the id of the row the entry
- * concerns (account ids as fingerprints); `action` is a dotted key such as
- * `order.shipped`.
+ * Row of the Comptroller `audit` table plus the resolved actor and, for an
+ * account or staff row, the resolved object. `data` is a per-action JSON
+ * string kept raw; `object` is the id of the row the entry concerns; `action`
+ * is a dotted key such as `order.shipped`.
  */
 data class AuditEntry(
     val id: String = "",
@@ -22,6 +22,9 @@ data class AuditEntry(
     val role: String = "",
     val actor: String = "",
     @SerializedName("actor_name") val actorName: String = "",
+    @SerializedName("actor_fingerprint") val actorFingerprint: String = "",
+    @SerializedName("object_name") val objectName: String = "",
+    @SerializedName("object_fingerprint") val objectFingerprint: String = "",
     val action: String = "",
     val data: String = "",
     val timestamp: Long = 0,

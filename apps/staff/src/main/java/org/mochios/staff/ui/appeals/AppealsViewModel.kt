@@ -8,6 +8,7 @@ package org.mochios.staff.ui.appeals
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -49,6 +50,8 @@ sealed class AppealsEvent {
     data class Toast(val message: String) : AppealsEvent()
 }
 
+private const val PAGE_SIZE = 20
+
 @HiltViewModel
 class AppealsViewModel @Inject constructor(
     private val repository: StaffRepository,
@@ -62,6 +65,14 @@ class AppealsViewModel @Inject constructor(
     val events: SharedFlow<AppealsEvent> = _events.asSharedFlow()
 
     private var loadJob: Job? = null
+    private var moreJob: Job? = null
+
+    /**
+     * Pages actually fetched. Deriving the next page from the row count breaks
+     * after an optimistic removal: the first page is refetched and appended as
+     * duplicates.
+     */
+    private var pagesLoaded = 0
 
     init {
         reload()
@@ -70,24 +81,29 @@ class AppealsViewModel @Inject constructor(
         // the moderation queue changes server-side.
         viewModelScope.launch {
             eventsBus.events
-                .filter { it is StaffEvent.ModerationUpdated }
+                .filter { it is StaffEvent.ModerationUpdated || it is StaffEvent.Unknown }
                 .collect { reload() }
         }
     }
 
     fun reload() {
         loadJob?.cancel()
+        // A load-more still in flight belongs to the list being replaced;
+        // left running, it would splice its rows into the new one.
+        moreJob?.cancel()
         loadJob = viewModelScope.launch {
             val s = _state.value
-            _state.value = s.copy(isLoading = true, error = null)
+            _state.value = s.copy(isLoading = true, isLoadingMore = false, error = null)
             try {
-                val r = repository.listAppeals()
+                val r = repository.listAppeals(page = 1, limit = PAGE_SIZE)
+                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     appeals = r.appeals,
                     total = r.total,
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -97,8 +113,24 @@ class AppealsViewModel @Inject constructor(
     }
 
     fun loadMore() {
-        // The /appeals/list endpoint doesn't paginate today; once a paginated
-        // server arrives, fan out the logic from [ReportsViewModel.loadMore].
+        val s = _state.value
+        if (s.isLoadingMore || s.isLoading || s.appeals.size >= s.total) return
+        val nextPage = pagesLoaded + 1
+        moreJob = viewModelScope.launch {
+            _state.value = s.copy(isLoadingMore = true)
+            try {
+                val r = repository.listAppeals(page = nextPage, limit = PAGE_SIZE)
+                pagesLoaded = nextPage
+                _state.value = _state.value.copy(
+                    isLoadingMore = false,
+                    appeals = _state.value.appeals + r.appeals,
+                    total = r.total,
+                )
+            } catch (e: Exception) {
+                if (e is CancellationException) throw e
+                _state.value = _state.value.copy(isLoadingMore = false)
+            }
+        }
     }
 
     fun openDecide(appeal: Appeal) {
@@ -134,6 +166,7 @@ class AppealsViewModel @Inject constructor(
                 )
                 _events.tryEmit(AppealsEvent.Decided(decision == "upheld"))
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
                 _events.tryEmit(AppealsEvent.Toast(e.toMochiError().userMessage()))
             }

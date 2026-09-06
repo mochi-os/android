@@ -5,8 +5,6 @@
 
 package org.mochios.staff.model
 
-import com.google.gson.annotations.SerializedName
-
 /**
  * `event_staff_me` response: `role` is "" for an authenticated non-staff
  * caller, and `id` is also "" with no identity. A blank role means not staff.
@@ -15,13 +13,3 @@ data class Me(
     val id: String = "",
     val role: String = "",
 )
-
-/**
- * Mirrors `VALID_STAFF_ROLES` in `apps/comptroller/starlark/comptroller.star`;
- * an unknown role is treated as non-staff.
- */
-enum class Role {
-    @SerializedName("admin") ADMIN,
-    @SerializedName("moderator") MODERATOR,
-    @SerializedName("support") SUPPORT,
-}

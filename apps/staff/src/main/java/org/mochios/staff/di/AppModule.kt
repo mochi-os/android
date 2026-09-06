@@ -6,7 +6,6 @@
 package org.mochios.staff.di
 
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,6 +38,7 @@ object AppModule {
     fun provideStaffRetrofit(
         okHttpClient: OkHttpClient,
         sessionManager: SessionManager,
+        gson: Gson,
     ): Retrofit {
         val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
         val client = okHttpClient.newBuilder()
@@ -55,7 +55,6 @@ object AppModule {
             })
             .addInterceptor(StaffAuthInterceptor())
             .build()
-        val gson: Gson = GsonBuilder().create()
         return Retrofit.Builder()
             .baseUrl("$serverUrl/staff/")
             .client(client)

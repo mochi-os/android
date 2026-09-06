@@ -38,4 +38,6 @@ dependencies {
 
     // DataStore for staff-local prefs (last-viewed filters, expanded rows, etc.).
     implementation(libs.datastore.preferences)
+
+    testImplementation(libs.junit)
 }

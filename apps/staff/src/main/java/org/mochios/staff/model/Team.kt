@@ -8,15 +8,17 @@ package org.mochios.staff.model
 import com.google.gson.annotations.SerializedName
 
 /**
- * Mirrors `StaffMember` in `apps/staff/web/src/types/team.ts`; `name` and
- * `addedby_name` are resolved server-side and null when the directory cannot
- * resolve the entity.
+ * Mirrors `StaffMember` in `apps/staff/web/src/types/team.ts`; the names and
+ * fingerprints are resolved server-side, the names null when the directory
+ * cannot resolve the entity.
  */
 data class StaffMember(
     val id: String = "",
     val name: String? = null,
+    val fingerprint: String = "",
     val role: String = "",
     val added: Long = 0,
     val addedby: String = "",
     @SerializedName("addedby_name") val addedbyName: String? = null,
+    @SerializedName("addedby_fingerprint") val addedbyFingerprint: String = "",
 )

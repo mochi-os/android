@@ -194,8 +194,7 @@ interface StaffApi {
 
     /**
      * Listings awaiting moderation; `status` and `moderation` take the wire
-     * strings in [ListingStatus] and [ModerationState], `query`
-     * substring-matches the title.
+     * strings, `query` substring-matches the title.
      */
     @GET("-/listings/pending")
     suspend fun listPendingListings(
@@ -246,7 +245,7 @@ interface StaffApi {
     suspend fun getModerationThresholds(): Response<ApiResponse<Thresholds>>
 
     @FormUrlEncoded
-    @POST("-/moderation/set_thresholds")
+    @POST("-/moderation/thresholds/set")
     suspend fun setModerationThresholds(
         @Field("low") low: Int? = null,
         @Field("high") high: Int? = null,
@@ -264,8 +263,7 @@ interface StaffApi {
     ): Response<ApiResponse<ReportsListResponse>>
 
     /**
-     * `action` is one of [ReportAction]'s wire values; the Comptroller
-     * validates it.
+     * `action` is a report action wire value; the Comptroller validates it.
      */
     @FormUrlEncoded
     @POST("-/reports/action")
@@ -304,14 +302,11 @@ interface StaffApi {
     @GET("-/metrics/overview")
     suspend fun getMetricsOverview(): Response<ApiResponse<MetricsOverview>>
 
-    /**
-     * The offset must be sent as `page` - staff.star forwards only `tab`,
-     * `page`, `limit`.
-     */
+    /** `page` is 1-based - staff.star forwards only `tab`, `page`, `limit`. */
     @GET("-/metrics/activity")
     suspend fun getMetricsActivity(
         @Query("tab") tab: String? = null,
-        @Query("page") skip: Int? = null,
+        @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
     ): Response<ApiResponse<ActivityData>>
 
@@ -357,9 +352,12 @@ interface StaffApi {
 
     // ---- Appeals ----
 
-    /** List pending listing appeals. */
+    /** List pending listing appeals; `page` is 1-based. */
     @GET("-/appeals/list")
-    suspend fun listAppeals(): Response<ApiResponse<AppealsListResponse>>
+    suspend fun listAppeals(
+        @Query("page") page: Int? = null,
+        @Query("limit") limit: Int? = null,
+    ): Response<ApiResponse<AppealsListResponse>>
 
     /**
      * `decision` is `upheld` or `denied`. The listing uid is sent as `id` -

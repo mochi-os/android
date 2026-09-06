@@ -61,6 +61,7 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.Account
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -278,7 +279,7 @@ private fun AccountRow(
                     VerifiedChip(level = account.verified)
                 }
                 Text(
-                    text = formatFingerprint(account.id),
+                    text = formatFingerprint(account.fingerprint),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -493,14 +494,4 @@ private fun ActiveFilterChips(
         }
     }
     FilterChipsRow(chips = chips)
-}
-
-/**
- * Slice a person fingerprint into the 9-char "xxx-xxx-xxx" display form,
- * mirroring `formatFingerprint` in `apps/staff/web/src/lib/format.ts`.
- */
-internal fun formatFingerprint(id: String): String {
-    val fp = id.take(9).padEnd(9, ' ').trimEnd()
-    if (fp.length < 9) return fp
-    return "${fp.substring(0, 3)}-${fp.substring(3, 6)}-${fp.substring(6, 9)}"
 }

@@ -58,6 +58,8 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.format.formatFingerprint
+import org.mochios.android.format.formatPrice
 import org.mochios.staff.R
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -65,8 +67,6 @@ import org.mochios.staff.ui.components.FilterChipsRow
 import org.mochios.staff.ui.components.ScoreColorChip
 import org.mochios.staff.ui.components.StaffStatusBadge
 import org.mochios.staff.ui.dialog.ListingActionDialog
-import java.text.NumberFormat
-import java.util.Locale
 
 /**
  * Staff listings moderation. Approve / Reject show only for `active` rows whose
@@ -266,7 +266,7 @@ private fun ListingRow(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text = listing.sellerName.ifBlank { formatFingerprint(listing.seller) },
+                text = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
@@ -295,7 +295,7 @@ private fun ListingRow(
         // Price + created.
         Row(verticalAlignment = Alignment.CenterVertically) {
             val priceText = if (listing.price > 0L) {
-                formatPriceMinor(listing.price, listing.currency)
+                formatPrice(listing.price, listing.currency)
             } else {
                 stringResource(R.string.staff_listings_price_placeholder)
             }
@@ -413,34 +413,5 @@ private fun ActiveFilterChips(
         }
     }
     FilterChipsRow(chips = chips)
-}
-
-/**
- * Slice a person fingerprint into the 9-char "xxx-xxx-xxx" display form,
- * mirroring `formatFingerprint` in `apps/staff/web/src/lib/format.ts`.
- */
-internal fun formatFingerprint(id: String): String {
-    val fp = id.take(9).padEnd(9, ' ').trimEnd()
-    if (fp.length < 9) return fp
-    return "${fp.substring(0, 3)}-${fp.substring(3, 6)}-${fp.substring(6, 9)}"
-}
-
-/**
- * Format a minor-unit price. The wire `currency` is the lowercase ISO 4217
- * code; unrecognised codes fall back to "<code> <amount>".
- */
-internal fun formatPriceMinor(amountMinor: Long, currency: String): String {
-    val iso = currency.uppercase(Locale.ROOT).ifBlank { "GBP" }
-    val decimals = if (iso == "JPY") 0 else 2
-    val major = amountMinor.toDouble() / Math.pow(10.0, decimals.toDouble())
-    return try {
-        val nf = NumberFormat.getCurrencyInstance(Locale.getDefault())
-        nf.currency = java.util.Currency.getInstance(iso)
-        nf.minimumFractionDigits = decimals
-        nf.maximumFractionDigits = decimals
-        nf.format(major)
-    } catch (_: Exception) {
-        "$iso ${"%.${decimals}f".format(Locale.ROOT, major)}"
-    }
 }
 

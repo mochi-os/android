@@ -110,7 +110,7 @@ fun DisputesScreen(
             // Stripe chargebacks must be answered on Stripe's portal — the
             // dialog renders metadata + history only. Already-resolved
             // disputes (`resolved_buyer` / `resolved_seller`) take the same
-            // path. See [DisputeStatus] for the canonical wire values.
+            // path.
             readOnly = dispute.opener == "stripe" || dispute.status.startsWith("resolved_"),
         )
     }
@@ -199,7 +199,7 @@ private fun DisputeRow(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text = dispute.sellerName.ifBlank { formatFingerprint(dispute.seller) },
+                text = dispute.sellerName.ifBlank { formatFingerprint(dispute.sellerFingerprint) },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
@@ -218,7 +218,7 @@ private fun DisputeRow(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text = dispute.buyerName.ifBlank { formatFingerprint(dispute.buyer) },
+                text = dispute.buyerName.ifBlank { formatFingerprint(dispute.buyerFingerprint) },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,

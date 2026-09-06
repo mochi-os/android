@@ -19,6 +19,7 @@ data class ModerationEntry(
     val score: Double = 0.0,
     val actor: String = "",
     @SerializedName("actor_name") val actorName: String = "",
+    @SerializedName("actor_fingerprint") val actorFingerprint: String = "",
     val reason: String = "",
     val created: Long = 0,
 )
@@ -40,5 +41,3 @@ data class Thresholds(
     val low: Int = 0,
     val high: Int = 0,
 )
-
-typealias ModerationThresholds = Thresholds

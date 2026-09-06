@@ -10,8 +10,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * Mirrors `PendingListing` in `apps/staff/web/src/types/listings.ts` (the
  * public `Listing` plus denormalised seller fields). `price` is in minor units;
- * `status` and `moderation` are free-form on the wire, known values in
- * [ListingStatus] and [ModerationState].
+ * `status` and `moderation` are free-form on the wire.
  */
 data class PendingListing(
     val id: String = "",
@@ -28,6 +27,7 @@ data class PendingListing(
     val score: Double = 0.0,
     val factors: String = "",
     @SerializedName("seller_name") val sellerName: String = "",
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
     @SerializedName("seller_rating") val sellerRating: Double = 0.0,
     @SerializedName("seller_onboarded") val sellerOnboarded: Int = 0,
     val created: Long = 0,
@@ -42,29 +42,3 @@ data class PendingListingsResponse(
     val listings: List<PendingListing> = emptyList(),
     val total: Long = 0,
 )
-
-/**
- * Known `status` values; free-form on the wire, tolerate others.
- */
-enum class ListingStatus {
-    @SerializedName("draft") DRAFT,
-    @SerializedName("active") ACTIVE,
-    @SerializedName("sold") SOLD,
-    @SerializedName("expired") EXPIRED,
-    @SerializedName("rejected") REJECTED,
-    @SerializedName("removed") REMOVED,
-}
-
-/**
- * Known `moderation` values; free-form on the wire, tolerate others.
- */
-enum class ModerationState {
-    @SerializedName("pending") PENDING,
-    @SerializedName("auto_approved") AUTO_APPROVED,
-    @SerializedName("approved") APPROVED,
-    @SerializedName("hold") HOLD,
-    @SerializedName("review") REVIEW,
-    @SerializedName("manual") MANUAL,
-    @SerializedName("rejected") REJECTED,
-    @SerializedName("appealed") APPEALED,
-}

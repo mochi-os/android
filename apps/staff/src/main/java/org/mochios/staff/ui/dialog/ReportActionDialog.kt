@@ -125,7 +125,7 @@ private fun MetadataCard(report: Report) {
         if (report.type == "listing" && report.listing != null) {
             MetaRow(
                 stringResource(R.string.staff_reports_meta_seller),
-                report.sellerName.ifBlank { formatFingerprint(report.listing.seller) },
+                report.sellerName.ifBlank { formatFingerprint(report.sellerFingerprint) },
             )
             MetaRow(
                 stringResource(R.string.staff_reports_meta_price),
@@ -134,7 +134,7 @@ private fun MetadataCard(report: Report) {
         }
         MetaRow(
             stringResource(R.string.staff_reports_meta_reporter),
-            report.reporterName.ifBlank { formatFingerprint(report.reporter) },
+            report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
         )
         MetaRow(
             stringResource(R.string.staff_reports_meta_reason),
@@ -168,7 +168,7 @@ private fun reportActionOptions(): List<Pair<String, String>> = listOf(
 private fun targetText(report: Report): String = when (report.type) {
     "listing" -> report.listing?.title
         ?: stringResource(R.string.staff_reports_listing_label, report.target)
-    else -> report.targetName.ifBlank { formatFingerprint(report.target) }
+    else -> report.targetName.ifBlank { formatFingerprint(report.targetFingerprint) }
 }
 
 @Composable

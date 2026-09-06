@@ -107,7 +107,7 @@ fun ReportsScreen(
             onDismiss = viewModel::dismissAction,
             onSubmit = { action, notes -> viewModel.actionReport(action, notes) },
             // Already-resolved reports (anything other than the canonical
-            // `pending` wire value — see [ReportStatus]) drop into the
+            // `pending` wire value) drop into the
             // metadata + history read-only view.
             readOnly = report.status != "pending",
         )
@@ -216,7 +216,7 @@ private fun ReportRow(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text = report.reporterName.ifBlank { formatFingerprint(report.reporter) },
+                text = report.reporterName.ifBlank { formatFingerprint(report.reporterFingerprint) },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
@@ -265,7 +265,7 @@ private fun ReportRow(
 private fun targetText(report: Report): String = when (report.type) {
     "listing" -> report.listing?.title
         ?: stringResource(R.string.staff_reports_listing_label, report.target)
-    else -> report.targetName.ifBlank { formatFingerprint(report.target) }
+    else -> report.targetName.ifBlank { formatFingerprint(report.targetFingerprint) }
 }
 
 @Composable

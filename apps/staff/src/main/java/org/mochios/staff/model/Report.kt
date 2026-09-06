@@ -9,8 +9,8 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * Mirrors `Report` in `apps/staff/web/src/types/reports.ts`. `target` is a
- * listing id when `type == "listing"`, else an account fingerprint; `listing`
- * is filled server-side for listing reports.
+ * listing id when `type == "listing"`, else an account id; `listing` and the
+ * names and fingerprints are filled server-side.
  */
 data class Report(
     val id: String = "",
@@ -18,6 +18,7 @@ data class Report(
     val type: String = "",
     val reporter: String = "",
     @SerializedName("reporter_name") val reporterName: String = "",
+    @SerializedName("reporter_fingerprint") val reporterFingerprint: String = "",
     val reason: String = "",
     val details: String = "",
     val status: String = "",
@@ -26,7 +27,9 @@ data class Report(
     val created: Long = 0,
     val listing: ReportListing? = null,
     @SerializedName("seller_name") val sellerName: String = "",
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
     @SerializedName("target_name") val targetName: String = "",
+    @SerializedName("target_fingerprint") val targetFingerprint: String = "",
 )
 
 /**
@@ -45,35 +48,3 @@ data class ReportsListResponse(
     val reports: List<Report> = emptyList(),
     val total: Long = 0,
 )
-
-/**
- * What kind of object a report targets.
- */
-enum class ReportType {
-    @SerializedName("listing") LISTING,
-    @SerializedName("user") USER,
-}
-
-/**
- * `reviewed` is a legacy value older Comptroller builds wrote; treat it as
- * `actioned`.
- */
-enum class ReportStatus {
-    @SerializedName("pending") PENDING,
-    @SerializedName("reviewed") REVIEWED,
-    @SerializedName("actioned") ACTIONED,
-    @SerializedName("dismissed") DISMISSED,
-}
-
-/**
- * Validated by `event_staff_reports_action`. `warn`/`remove` act on the
- * listing; `suspend`/`ban` act on the account (a listing target resolves to its
- * seller).
- */
-enum class ReportAction {
-    @SerializedName("dismiss") DISMISS,
-    @SerializedName("warn") WARN,
-    @SerializedName("remove") REMOVE,
-    @SerializedName("suspend") SUSPEND,
-    @SerializedName("ban") BAN,
-}

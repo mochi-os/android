@@ -61,6 +61,21 @@ class MoneyFormatTest {
         assertEquals(0L, toMinorUnits("abc", "usd"))
     }
 
+    // A fingerprint is a server-derived hash, shown as xxx-xxx-xxx like web.
+    // Anything shorter than nine characters is not one, so nothing is shown
+    // rather than a fabricated identifier.
+    @Test
+    fun fingerprintIsPunctuatedInThrees() {
+        assertEquals("abc-123-def", formatFingerprint("abc123def"))
+        assertEquals("abc-123-def", formatFingerprint("abc123defGHI"))
+    }
+
+    @Test
+    fun shortOrBlankFingerprintShowsNothing() {
+        assertEquals("", formatFingerprint(""))
+        assertEquals("", formatFingerprint("abc"))
+    }
+
     @Test
     fun majorTextRoundTripsInEveryLocale() {
         for (locale in listOf(Locale.US, Locale.GERMANY, Locale.FRANCE, Locale.JAPAN)) {

@@ -88,6 +88,12 @@ data class DashboardUiState(
 private const val PAGE_SIZE = 20
 
 /**
+ * The Comptroller paginates every list as 1-based `page` / `limit`; the
+ * dashboard tabs keep a row-count cursor, so convert at the call.
+ */
+internal fun pageFor(skip: Int, size: Int = PAGE_SIZE): Int = skip / size + 1
+
+/**
  * Backs [DashboardScreen]: one metrics overview plus a paginated activity feed
  * per tab. The `audit` tab has no slot on `metrics/activity` and falls back to
  * `audit/list`.
@@ -181,7 +187,7 @@ class DashboardViewModel @Inject constructor(
     }
 
     private suspend fun loadActivityPage(tab: String, skip: Int, replace: Boolean) {
-        val data = repository.getMetricsActivity(tab = tab, skip = skip, limit = PAGE_SIZE)
+        val data = repository.getMetricsActivity(tab = tab, page = pageFor(skip), limit = PAGE_SIZE)
         val s = _state.value
         val next = when (tab) {
             DashboardTab.ORDERS -> {
@@ -222,10 +228,7 @@ class DashboardViewModel @Inject constructor(
     }
 
     private suspend fun loadAuditPage(skip: Int, replace: Boolean) {
-        // Audit pagination is `page` / `limit` server-side; convert the
-        // common `skip` cursor into the equivalent page number.
-        val page = (skip / PAGE_SIZE) + 1
-        val r = repository.listAudit(page = page, limit = PAGE_SIZE)
+        val r = repository.listAudit(page = pageFor(skip), limit = PAGE_SIZE)
         val s = _state.value
         val merged = if (replace) r.audit else s.perTabAudit + r.audit
         _state.value = s.copy(

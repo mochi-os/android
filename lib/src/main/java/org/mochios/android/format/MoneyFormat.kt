@@ -89,9 +89,17 @@ fun minorToMajorText(amount: Long, currencyCode: String): String {
         (magnitude % factor).toString().padStart(decimals, '0')
 }
 
-/** First 9 chars of an entity ID — the standard Mochi fingerprint slice. */
-fun formatFingerprint(id: String): String =
-    if (id.length <= 9) id else id.substring(0, 9)
+/**
+ * Punctuate a server-supplied fingerprint as xxx-xxx-xxx, as web does. Never
+ * pass an entity id: a fingerprint is a hash of the id, not its first nine
+ * characters. Empty for a blank or short value, so a caller shows nothing
+ * rather than a fabricated identifier.
+ */
+fun formatFingerprint(fingerprint: String): String {
+    if (fingerprint.length < 9) return ""
+    val fp = fingerprint.substring(0, 9)
+    return "${fp.substring(0, 3)}-${fp.substring(3, 6)}-${fp.substring(6, 9)}"
+}
 
 private fun pow10(n: Int): Long {
     var v = 1L
