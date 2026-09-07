@@ -271,7 +271,7 @@ private fun DiscoveredProjectCard(
             // renders a dangling middot. `location` is the host a directory entry
             // carries when it has no explicit `server`.
             val meta = listOfNotNull(
-                project.ownername.takeIf { owner -> owner.isNotBlank() },
+                project.owner.name.takeIf { owner -> owner.isNotBlank() },
                 (project.server ?: project.location)?.takeIf { host -> host.isNotBlank() }
             ).joinToString(" · ")
             if (meta.isNotEmpty()) {

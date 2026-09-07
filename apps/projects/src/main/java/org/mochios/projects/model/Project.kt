@@ -15,13 +15,24 @@ data class Project(
     val description: String = "",
     val prefix: String = "",
     val counter: Int = 0,
-    val owner: Int = 0,
-    val ownername: String = "",
+    val owner: Owner = Owner(),
     val server: String? = null,
     val location: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""
+)
+
+/**
+ * Who a project belongs to.
+ *
+ * @property local Whether the signed-in user owns the project on this server.
+ * @property name Display name of the owner, empty on remote projects that did
+ *   not send one.
+ */
+data class Owner(
+    val local: Boolean = false,
+    val name: String = ""
 )
 
 data class ProjectDetails(

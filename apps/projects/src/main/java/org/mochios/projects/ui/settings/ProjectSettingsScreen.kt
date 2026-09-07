@@ -66,7 +66,7 @@ fun ProjectSettingsScreen(
     val selectedIndex = tabs.indexOf(selectedTab).coerceAtLeast(0)
     // The whole tabbed editor edits the project, so it is owner/manage-only;
     // everyone else gets the read-only identity view with an unsubscribe action.
-    val canManage = uiState.project?.owner == 1
+    val canManage = uiState.project?.owner?.local == true
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
 
