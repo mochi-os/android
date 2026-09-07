@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Proiektuaren datuak gordeta</string>
     <string name="projects_exporting">Esportazioa prestatzen…</string>
     <string name="projects_board_add_column">Gehitu zutabea</string>
+    <string name="projects_design_sample">Adibidea %1$d</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Idatha yeprojekthi igciniwe</string>
     <string name="projects_exporting">Ilungiselela ukuthunyelwa…</string>
     <string name="projects_board_add_column">Yongeza ikholamu</string>
+    <string name="projects_design_sample">Isampulu %1$d</string>
 </resources>

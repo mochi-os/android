@@ -19,7 +19,7 @@ data class AccessRule(
     val granter: String = "",
     val created: Long = 0,
     val name: String? = null,
-    @SerializedName("isOwner") val isOwner: Boolean = false
+    @SerializedName("owner") val isOwner: Boolean = false
 )
 
 enum class AccessLevel(val value: String) {

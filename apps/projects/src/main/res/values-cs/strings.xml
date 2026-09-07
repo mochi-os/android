@@ -378,4 +378,5 @@
     <string name="projects_export_saved">Data projektu uložena</string>
     <string name="projects_exporting">Připravuje se export…</string>
     <string name="projects_board_add_column">Přidat sloupec</string>
+    <string name="projects_design_sample">Ukázka %1$d</string>
 </resources>

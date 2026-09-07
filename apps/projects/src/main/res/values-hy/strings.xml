@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Նախագծի տվյալները պահպանվեցին</string>
     <string name="projects_exporting">Արտահանման նախապատրաստում…</string>
     <string name="projects_board_add_column">Ավելացնել սյունակ</string>
+    <string name="projects_design_sample">Նմուշ %1$d</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Dades del projecte desades</string>
     <string name="projects_exporting">S\'està preparant l\'exportació…</string>
     <string name="projects_board_add_column">Afegeix una columna</string>
+    <string name="projects_design_sample">Mostra %1$d</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">ಯೋಜನೆಯ ಡೇಟಾ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="projects_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="projects_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
+    <string name="projects_design_sample">ಮಾದರಿ %1$d</string>
 </resources>

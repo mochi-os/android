@@ -377,4 +377,5 @@
     <string name="projects_export_saved">የፕሮጀክት ውሂብ ተቀምጧል</string>
     <string name="projects_exporting">ወደ ውጪ መላክ በመዘጋጀት ላይ…</string>
     <string name="projects_board_add_column">ዓምድ ጨምር</string>
+    <string name="projects_design_sample">ናሙና %1$d</string>
 </resources>

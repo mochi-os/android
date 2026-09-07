@@ -83,7 +83,7 @@ class FindProjectsViewModel @Inject constructor(
                 val recommendations = repository.getRecommendations()
                 val query = _uiState.value.searchQuery.trim()
                 if (query.isNotBlank()) {
-                    val isUrl = query.startsWith("http://") || query.startsWith("https://")
+                    val isUrl = isProbeable(query)
                     val results = if (isUrl) listOf(repository.probe(query)) else repository.searchDirectory(query)
                     _uiState.value = _uiState.value.copy(
                         recommendations = recommendations,
@@ -132,7 +132,7 @@ class FindProjectsViewModel @Inject constructor(
     private suspend fun runSearch(query: String) {
         _uiState.value = _uiState.value.copy(isLoading = true, error = null, searchResults = emptyList())
         try {
-            val isUrl = query.startsWith("http://") || query.startsWith("https://")
+            val isUrl = isProbeable(query)
             val results = if (isUrl) listOf(repository.probe(query)) else repository.searchDirectory(query)
             _uiState.value = _uiState.value.copy(
                 searchResults = results,
@@ -157,7 +157,7 @@ class FindProjectsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingId = id)
             try {
-                val landingId = repository.subscribe(id, project.server ?: project.location)
+                val landingId = repository.subscribe(id, project.server ?: project.location, project.peer)
                 _uiState.value = _uiState.value.copy(
                     subscribingId = null,
                     subscribedIds = _uiState.value.subscribedIds + listOfNotNull(
@@ -183,3 +183,7 @@ class FindProjectsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(error = null)
     }
 }
+
+/** A web address or a `mochi://` share link is probed, not searched. */
+private fun isProbeable(query: String): Boolean =
+    query.startsWith("http://") || query.startsWith("https://") || query.startsWith("mochi://")

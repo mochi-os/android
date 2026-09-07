@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Projektdata sparad</string>
     <string name="projects_exporting">Förbereder export…</string>
     <string name="projects_board_add_column">Lägg till kolumn</string>
+    <string name="projects_design_sample">Exempel %1$d</string>
 </resources>

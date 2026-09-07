@@ -379,4 +379,5 @@
     <string name="projects_export_saved">Dáta projektu uložené</string>
     <string name="projects_exporting">Pripravuje sa export…</string>
     <string name="projects_board_add_column">Pridať stĺpec</string>
+    <string name="projects_design_sample">Ukážka %1$d</string>
 </resources>

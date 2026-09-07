@@ -377,4 +377,5 @@
     <string name="projects_export_saved">داده‌های پروژه ذخیره شد</string>
     <string name="projects_exporting">در حال آماده‌سازی خروجی…</string>
     <string name="projects_board_add_column">افزودن ستون</string>
+    <string name="projects_design_sample">نمونه %1$d</string>
 </resources>

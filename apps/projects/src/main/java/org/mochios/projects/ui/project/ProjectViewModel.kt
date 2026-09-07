@@ -154,6 +154,11 @@ class ProjectViewModel @Inject constructor(
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
 
+    // A mutation that fails after the project has loaded: uiState.error only
+    // renders while nothing is loaded, so these are toasted by the screen.
+    private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
+
     private var wsSubscriptionId: String? = null
 
     init {
@@ -268,12 +273,13 @@ class ProjectViewModel @Inject constructor(
     fun shareProject() {
         viewModelScope.launch {
             try {
-                val link = repository.getShareLink(projectId)
+                // share refuses a fingerprint; the route id may be one.
+                val link = repository.getShareLink(entityId())
                 if (link.isNotBlank()) {
                     _shareLink.emit(link)
                 }
-            } catch (_: Exception) {
-                // Best-effort: a failed share link simply does nothing.
+            } catch (e: Exception) {
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Layihə məlumatı saxlanıldı</string>
     <string name="projects_exporting">İxrac hazırlanır…</string>
     <string name="projects_board_add_column">Sütun əlavə et</string>
+    <string name="projects_design_sample">Nümunə %1$d</string>
 </resources>

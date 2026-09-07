@@ -13,7 +13,6 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.projects.model.Activity
 import org.mochios.projects.model.Branch
-import org.mochios.projects.model.DiffResult
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.Group
 import org.mochios.projects.model.Link
@@ -46,7 +45,6 @@ import retrofit2.http.Streaming
 
 // Response wrappers
 data class ProjectListResponse(val projects: List<Project> = emptyList())
-data class ProjectResponse(val project: Project = Project())
 
 // `-/create` answers with the new project's identity flat in `data`:
 // {"data": {"fingerprint": "…", "id": "…"}}, the way objects/create does.
@@ -81,9 +79,7 @@ data class ObjectCreateResponse(
     val readable: String = ""
 )
 data class CommentListResponse(val comments: List<Comment> = emptyList())
-data class CommentResponse(val comment: Comment = Comment(id = ""))
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
-data class AttachmentResponse(val attachment: Attachment = Attachment(id = ""))
 data class ActivityListResponse(val activities: List<Activity> = emptyList())
 data class LinkListResponse(val incoming: List<Link> = emptyList(), val outgoing: List<Link> = emptyList())
 data class WatcherListResponse(val watchers: List<Watcher> = emptyList(), val watching: Boolean = false)
@@ -98,8 +94,9 @@ data class AccessResponse(val rules: List<AccessRule> = emptyList())
 data class SetValueRequest(val value: String)
 
 // JSON body of `-/subscribe`. `server` is the home-server hint from the
-// directory hit; it is omitted from the payload when null.
-data class SubscribeRequest(val project: String, val server: String? = null)
+// directory hit and `peer` the pin from a `mochi://` share link; each is
+// omitted from the payload when null.
+data class SubscribeRequest(val project: String, val server: String? = null, val peer: String? = null)
 
 /**
  * The project `-/subscribe` joined. Route by [fingerprint]: the directory hit
@@ -115,6 +112,10 @@ data class SubscribeResponse(
 // JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
 // subscribe but ignored server-side — unsubscribe resolves the project locally.
 data class UnsubscribeRequest(val project: String, val server: String? = null)
+
+// JSON body of `classes/{class}/update`; a null field is left out, an empty
+// `title` clears the class's title field.
+data class UpdateClassRequest(val name: String? = null, val title: String? = null, val requests: String? = null)
 
 // Shareable project link returned by the `-/share` endpoint.
 data class ShareResponse(val link: String = "")
@@ -171,7 +172,9 @@ interface ProjectsApi {
 
     @FormUrlEncoded
     @POST("-/probe")
-    suspend fun probe(@Field("url") url: String): Response<ApiResponse<ProjectResponse>>
+    // The probed project comes flat in `data`, with `peer` (a share link) or
+    // `server` (a web address) beside its fields.
+    suspend fun probe(@Field("url") url: String): Response<ApiResponse<Project>>
 
     @POST("-/subscribe")
     suspend fun subscribe(
@@ -212,10 +215,13 @@ interface ProjectsApi {
         @Field("head") head: String
     ): Response<ApiResponse<String>>
 
+    // Class-level, so the project is named in the form: the server resolves
+    // it before it decides whether the merge runs locally or at the owner.
     @FormUrlEncoded
     @POST("-/repositories/{repository}/merge")
     suspend fun merge(
         @Path("repository") repository: String,
+        @Field("project") project: String,
         @Field("source") source: String,
         @Field("target") target: String,
         @Field("message") message: String,
@@ -377,7 +383,7 @@ interface ProjectsApi {
         @Part("content") content: RequestBody,
         @Part("parent") parent: RequestBody?,
         @Part files: List<MultipartBody.Part>
-    ): Response<ApiResponse<CommentResponse>>
+    ): Response<ApiResponse<Comment>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/objects/{objectId}/comments/{commentId}/update")
@@ -409,7 +415,7 @@ interface ProjectsApi {
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
         @Part file: MultipartBody.Part
-    ): Response<ApiResponse<AttachmentResponse>>
+    ): Response<ApiResponse<AttachmentListResponse>>
 
     @POST("{projectId}/-/objects/{objectId}/attachments/{attachmentId}/delete")
     suspend fun deleteAttachment(
@@ -517,11 +523,14 @@ interface ProjectsApi {
         @Path("projectId") projectId: String
     ): Response<ResponseBody>
 
+    // `design` asks the server to apply the design the file carries before
+    // its objects, so a whole backup restores in one upload.
     @Multipart
     @POST("{projectId}/-/data/import")
     suspend fun importData(
         @Path("projectId") projectId: String,
-        @Part file: MultipartBody.Part
+        @Part file: MultipartBody.Part,
+        @Part("design") design: RequestBody? = null
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Views ----
@@ -585,14 +594,13 @@ interface ProjectsApi {
         @Field("name") name: String
     ): Response<ApiResponse<ClassResponse>>
 
-    @FormUrlEncoded
+    // JSON, not a form: a form field sent empty reads as absent on the server,
+    // and clearing the title field back to the default needs "" to arrive.
     @POST("{projectId}/-/classes/{classId}/update")
     suspend fun updateClass(
         @Path("projectId") projectId: String,
         @Path("classId") classId: String,
-        @Field("name") name: String?,
-        @Field("title") title: String? = null,
-        @Field("requests") requests: String? = null
+        @Body body: UpdateClassRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/classes/{classId}/delete")
@@ -651,7 +659,6 @@ interface ProjectsApi {
         @Path("classId") classId: String,
         @Path("fieldId") fieldId: String,
         @Field("name") name: String?,
-        @Field("fieldtype") fieldtype: String?,
         @Field("flags") flags: String?,
         @Field("multi") multi: Boolean?,
         @Field("card") card: Boolean?,

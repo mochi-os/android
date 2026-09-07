@@ -18,6 +18,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import android.widget.Toast
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -25,6 +26,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -48,8 +50,10 @@ fun CreateCrmScreen(
     var name by remember { mutableStateOf("") }
     // The toggle reads "Allow anyone to search for CRM" — on means public.
     var allowSearch by remember { mutableStateOf(true) }
+    val context = LocalContext.current
     var backupJson by remember { mutableStateOf<String?>(null) }
     var backupName by remember { mutableStateOf<String?>(null) }
+    var backupArchive by remember { mutableStateOf<Uri?>(null) }
 
     // OpenDocument, not GetContent: exports are zipped now, and only this
     // contract takes more than one type, so both the zip and a bare .json
@@ -67,7 +71,17 @@ fun CreateCrmScreen(
         uiState.backupPrefill?.let { prefill ->
             backupJson = prefill.json
             backupName = prefill.fileName
+            backupArchive = prefill.archive
             prefill.name?.let { value -> name = value }
+        }
+    }
+
+    // An unreadable or non-JSON pick used to do nothing at all.
+    val importFailed = stringResource(R.string.crm_design_import_failed)
+    LaunchedEffect(uiState.backupReadFailed) {
+        if (uiState.backupReadFailed) {
+            Toast.makeText(context, importFailed, Toast.LENGTH_LONG).show()
+            viewModel.consumeBackupReadFailed()
         }
     }
 
@@ -87,7 +101,7 @@ fun CreateCrmScreen(
         onBack = onBack,
         onSubmit = {
             val privacy = if (allowSearch) "public" else "private"
-            viewModel.createCrm(name, privacy, backupJson)
+            viewModel.createCrm(name, privacy, backupJson, backupArchive)
         }
     ) { padding ->
         CreateEntityForm(padding) {

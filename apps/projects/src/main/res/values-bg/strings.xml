@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Данните за проекта са запазени</string>
     <string name="projects_exporting">Подготвяне на експорта…</string>
     <string name="projects_board_add_column">Добави колона</string>
+    <string name="projects_design_sample">Пример %1$d</string>
 </resources>

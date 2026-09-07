@@ -379,4 +379,5 @@
     <string name="projects_export_saved">Podatki projekta shranjeni</string>
     <string name="projects_exporting">Priprava izvoza…</string>
     <string name="projects_board_add_column">Dodaj stolpec</string>
+    <string name="projects_design_sample">Vzorec %1$d</string>
 </resources>

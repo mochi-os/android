@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Data projek disimpan</string>
     <string name="projects_exporting">Menyediakan eksport…</string>
     <string name="projects_board_add_column">Tambah lajur</string>
+    <string name="projects_design_sample">Contoh %1$d</string>
 </resources>

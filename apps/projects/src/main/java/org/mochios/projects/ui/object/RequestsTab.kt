@@ -79,7 +79,10 @@ fun RequestsTab(
     onViewDiff: (String, String, String, String) -> Unit
 ) {
     var showCreateDialog by remember { mutableStateOf(false) }
-    var selectedRequest by remember { mutableStateOf<MergeRequest?>(null) }
+    // Keyed by id, not by the row: the detail view then follows every
+    // refetch instead of showing the request as it was when tapped.
+    var selectedRequestId by remember { mutableStateOf<String?>(null) }
+    val selectedRequest = requests.firstOrNull { request -> request.id == selectedRequestId }
 
     Box(modifier = Modifier.fillMaxSize()) {
         if (requests.isEmpty() && selectedRequest == null) {
@@ -95,10 +98,10 @@ fun RequestsTab(
             }
         } else if (selectedRequest != null) {
             RequestDetailView(
-                request = selectedRequest!!,
+                request = selectedRequest,
                 projectId = projectId,
                 viewModel = viewModel,
-                onBack = { selectedRequest = null },
+                onBack = { selectedRequestId = null },
                 onViewDiff = onViewDiff
             )
         } else {
@@ -106,7 +109,7 @@ fun RequestsTab(
                 items(requests, key = { it.id }) { request ->
                     RequestItem(
                         request = request,
-                        onClick = { selectedRequest = request },
+                        onClick = { selectedRequestId = request.id },
                         onDelete = { viewModel.deleteRequest(request.id) }
                     )
                     HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))

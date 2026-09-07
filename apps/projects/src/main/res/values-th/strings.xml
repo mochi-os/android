@@ -377,4 +377,5 @@
     <string name="projects_export_saved">บันทึกข้อมูลโครงการแล้ว</string>
     <string name="projects_exporting">กำลังเตรียมการส่งออก…</string>
     <string name="projects_board_add_column">เพิ่มคอลัมน์</string>
+    <string name="projects_design_sample">ตัวอย่าง %1$d</string>
 </resources>

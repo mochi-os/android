@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Төслийн өгөгдөл хадгалагдлаа</string>
     <string name="projects_exporting">Экспортыг бэлтгэж байна…</string>
     <string name="projects_board_add_column">Багана нэмэх</string>
+    <string name="projects_design_sample">Жишээ %1$d</string>
 </resources>

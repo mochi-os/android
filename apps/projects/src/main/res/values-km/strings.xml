@@ -376,4 +376,5 @@
     <string name="projects_export_saved">បានរក្សាទុកទិន្នន័យគម្រោង</string>
     <string name="projects_exporting">កំពុងរៀបចំការនាំចេញ…</string>
     <string name="projects_board_add_column">បន្ថែមជួរឈរ</string>
+    <string name="projects_design_sample">គំរូ %1$d</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Долбоор маалыматы сакталды</string>
     <string name="projects_exporting">Экспорт даярдалууда…</string>
     <string name="projects_board_add_column">Тилке кошуу</string>
+    <string name="projects_design_sample">Үлгү %1$d</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Daneyên projeyê hatin tomarkirin</string>
     <string name="projects_exporting">Hinardekirin tê amadekirin…</string>
     <string name="projects_board_add_column">Stûn zêde bike</string>
+    <string name="projects_design_sample">Nimûne %1$d</string>
 </resources>

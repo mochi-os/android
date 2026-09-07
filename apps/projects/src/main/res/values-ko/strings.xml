@@ -377,4 +377,5 @@
     <string name="projects_export_saved">프로젝트 데이터가 저장됨</string>
     <string name="projects_exporting">내보내기 준비 중…</string>
     <string name="projects_board_add_column">컬럼 추가</string>
+    <string name="projects_design_sample">샘플 %1$d</string>
 </resources>

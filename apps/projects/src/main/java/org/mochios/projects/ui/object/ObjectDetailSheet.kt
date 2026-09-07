@@ -91,12 +91,8 @@ fun ObjectDetailSheet(
     // A failed auto-save is otherwise invisible — the field keeps showing
     // the edited value. Surface it so the user knows to retry.
     LaunchedEffect(Unit) {
-        viewModel.saveFailed.collect {
-            Toast.makeText(
-                context,
-                context.getString(MochiR.string.common_save_failed),
-                Toast.LENGTH_LONG,
-            ).show()
+        viewModel.saveFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
         }
     }
 

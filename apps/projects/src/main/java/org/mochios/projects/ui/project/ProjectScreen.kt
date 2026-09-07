@@ -125,6 +125,9 @@ import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
 import org.mochios.android.R as MochiR
 
+
+// The access levels that may change a project's design (web's canDesign).
+private val DESIGN_ACCESS = setOf("owner", "design")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProjectScreen(
@@ -511,6 +514,13 @@ private fun ProjectContent(
         }
     }
 
+    // A share the server refused: say why instead of doing nothing.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
+        }
+    }
+
     val exportSaved = stringResource(R.string.projects_export_saved)
     val exportFailed = stringResource(R.string.projects_export_failed)
     // The picker only reports where the file goes; the ViewModel writes it.
@@ -711,10 +721,10 @@ private fun ProjectContent(
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
-                                // Reshaping the design is the owner's to do, so
-                                // it is offered on the same terms as the link
-                                // above rather than on every subscribed project.
-                                if (details?.project?.owner?.local == true) {
+                                // Design changes forward to the owner, so the
+                                // editor is offered on the access level, as web
+                                // does - a subscriber granted design may reshape.
+                                if (details?.project?.access in DESIGN_ACCESS) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.projects_design)) },
                                         onClick = {

@@ -64,6 +64,10 @@ fun AttachmentsSection(
     val thumbnailUrlBuilder: (Attachment) -> String = { attachment ->
         "/projects/$projectId/-/attachments/${attachment.id}/thumbnail"
     }
+    // The lightbox shows the server's 1280px variant, not the original.
+    val previewUrlBuilder: (Attachment) -> String = { attachment ->
+        "/projects/$projectId/-/attachments/${attachment.id}/preview"
+    }
 
     // Newest first.
     val ordered = remember(attachments) { attachments.sortedByDescending { it.created } }
@@ -94,6 +98,7 @@ fun AttachmentsSection(
                 attachments = ordered,
                 urlBuilder = urlBuilder,
                 thumbnailUrlBuilder = thumbnailUrlBuilder,
+                previewUrlBuilder = previewUrlBuilder,
                 onDelete = { attachment -> pendingDelete = attachment },
                 modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
             )

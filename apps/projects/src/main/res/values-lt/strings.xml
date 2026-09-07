@@ -379,4 +379,5 @@
     <string name="projects_export_saved">Projekto duomenys išsaugoti</string>
     <string name="projects_exporting">Ruošiamas eksportas…</string>
     <string name="projects_board_add_column">Pridėti stulpelį</string>
+    <string name="projects_design_sample">Pavyzdys %1$d</string>
 </resources>

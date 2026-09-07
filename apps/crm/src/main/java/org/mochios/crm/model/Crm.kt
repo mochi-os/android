@@ -16,6 +16,8 @@ data class Crm(
     val owner: Owner? = null,
     val server: String? = null,
     val location: String? = null,
+    // The peer a `mochi://` share link named; subscribe pins it for the sync.
+    val peer: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""

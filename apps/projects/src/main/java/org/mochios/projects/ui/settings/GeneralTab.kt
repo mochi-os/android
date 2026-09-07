@@ -22,6 +22,7 @@ import org.mochios.android.ui.components.EditableIdentityRow
 import org.mochios.android.ui.components.IdentityRow
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
+import org.mochios.android.util.slugifyPartial
 import org.mochios.projects.R
 import org.mochios.projects.model.Project
 import org.mochios.android.R as MochiR
@@ -76,7 +77,7 @@ fun GeneralTab(
                 editLabel = editLabel,
                 allowBlank = false,
                 placeholder = notSet,
-                transform = { text -> text.uppercase() },
+                transform = { text -> slugifyPartial(text) },
                 onSave = { value ->
                     viewModel.updatePrefix(value)
                     viewModel.saveProject()

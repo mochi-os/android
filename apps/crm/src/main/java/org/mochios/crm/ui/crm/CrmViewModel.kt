@@ -34,6 +34,8 @@ import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.repository.CrmsRepository
+import org.mochios.crm.util.csvCell
+import org.mochios.crm.util.textCompare
 import java.io.File
 import java.time.LocalDate
 import javax.inject.Inject
@@ -91,6 +93,11 @@ class CrmViewModel @Inject constructor(
     /** Emits the CRM's share link once fetched, for the screen to share. */
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
+
+    // A mutation that fails after the CRM has loaded: uiState.error only
+    // renders while nothing is loaded, so these are toasted by the screen.
+    private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
     private var wsSubscriptionId: String? = null
 
@@ -235,12 +242,13 @@ class CrmViewModel @Inject constructor(
     fun shareCrm() {
         viewModelScope.launch {
             try {
-                val link = repository.getShareLink(crmId)
+                // share refuses a fingerprint; the route id may be one.
+                val link = repository.getShareLink(entityId())
                 if (link.isNotBlank()) {
                     _shareLink.emit(link)
                 }
-            } catch (_: Exception) {
-                // Best-effort: a failed share link simply does nothing.
+            } catch (e: Exception) {
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -441,7 +449,7 @@ class CrmViewModel @Inject constructor(
                 }
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -461,7 +469,7 @@ class CrmViewModel @Inject constructor(
                 repository.moveObject(crmId, objectId, field, value, rank, rowField, rowValue, scopeParent, promote)
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -580,7 +588,7 @@ class CrmViewModel @Inject constructor(
                 repository.updateObject(crmId, objectId, newParentId)
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -605,7 +613,7 @@ class CrmViewModel @Inject constructor(
                 repository.createOption(crmId, classId, fieldId, name, colour)
                 loadCrm()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -617,7 +625,7 @@ class CrmViewModel @Inject constructor(
                 repository.updateOption(crmId, classId, fieldId, optionId, name, null, null)
                 loadCrm()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -629,7 +637,7 @@ class CrmViewModel @Inject constructor(
                 repository.deleteOption(crmId, classId, fieldId, optionId)
                 loadCrm()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -644,7 +652,7 @@ class CrmViewModel @Inject constructor(
                 repository.reorderOptions(crmId, classId, fieldId, order.joinToString(","))
                 loadCrm()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -738,9 +746,9 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
-     * Sorts by the active sort field and direction, mirroring web
-     * board-container.tsx sortObjects: compare by field type, else
-     * case-insensitive text.
+     * Sorts by the active sort field and direction: numbers, dates and
+     * option ranks by type, everything else as text through the shared
+     * natural compare, so a view orders the same here as on web.
      */
     fun sortObjects(objects: List<CrmObject>): List<CrmObject> {
         val field = getActiveSortField()
@@ -801,7 +809,7 @@ class CrmViewModel @Inject constructor(
                         if (an != null && bn != null) {
                             an.compareTo(bn)
                         } else {
-                            av.compareTo(bv, ignoreCase = true)
+                            textCompare(av, bv)
                         }
                     }
                     "date" -> {
@@ -810,7 +818,7 @@ class CrmViewModel @Inject constructor(
                         if (ad != null && bd != null) {
                             ad.compareTo(bd)
                         } else {
-                            av.compareTo(bv, ignoreCase = true)
+                            textCompare(av, bv)
                         }
                     }
                     // Enumerated values are stored as opaque option ids, so
@@ -823,10 +831,10 @@ class CrmViewModel @Inject constructor(
                         if (ao != null && bo != null) {
                             ao.rank.compareTo(bo.rank)
                         } else {
-                            (ao?.name ?: av).compareTo(bo?.name ?: bv, ignoreCase = true)
+                            textCompare(ao?.name ?: av, bo?.name ?: bv)
                         }
                     }
-                    else -> av.compareTo(bv, ignoreCase = true)
+                    else -> textCompare(av, bv)
                 }
                 comparison * multiplier
             })
@@ -984,14 +992,6 @@ class CrmViewModel @Inject constructor(
                 else -> value
             }
         }
-    }
-
-    /** Quotes a cell when it holds a comma, a quote or a newline. */
-    private fun csvCell(value: String): String {
-        if (value.none { char -> char == ',' || char == '"' || char == '\n' || char == '\r' }) {
-            return value
-        }
-        return "\"${value.replace("\"", "\"\"")}\""
     }
 
     /**

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">A projekt adatai mentve</string>
     <string name="projects_exporting">Exportálás előkészítése…</string>
     <string name="projects_board_add_column">Oszlop hozzáadása</string>
+    <string name="projects_design_sample">Minta %1$d</string>
 </resources>

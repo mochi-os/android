@@ -35,7 +35,6 @@ import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
@@ -145,7 +144,6 @@ fun PropertiesTab(
                     people = uiState.people,
                     showLabel = false,
                     onValueChange = { viewModel.setValue(field.id, it) },
-                    onMultiValueChange = { viewModel.setMultiValue(field.id, it) },
                     onSearchUsers = { query -> viewModel.searchPeople(query) }
                 )
             }
@@ -352,11 +350,9 @@ internal fun FieldEditor(
      */
     showLabel: Boolean = true,
     onValueChange: (String) -> Unit,
-    onMultiValueChange: (List<String>) -> Unit,
     onSearchUsers: suspend (String) -> List<User>
 ) {
     val stringValue = value?.toString() ?: ""
-    val listValue = (value as? List<*>)?.mapNotNull { it?.toString() } ?: emptyList()
     // Effective read-only: field-readonly OR user lacks write access
     val readOnly = field.isReadonly || !canWrite
     val fieldLabel: (@Composable () -> Unit)? = if (showLabel) {
@@ -404,93 +400,48 @@ internal fun FieldEditor(
             }
 
             "enumerated" -> {
-                if (field.isMulti) {
-                    // Multi-select chips
-                    if (showLabel) {
-                        Text(
-                            text = field.name,
-                            style = MaterialTheme.typography.labelLarge,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                val selectedOption = options.find { it.id == stringValue }
+                if (readOnly) {
+                    ReadOnlyDisplay(labelOrNull(showLabel, field.name), selectedOption?.name.orEmpty())
+                } else {
+                    var expanded by remember { mutableStateOf(false) }
+                    ExposedDropdownMenuBox(
+                        expanded = expanded,
+                        onExpandedChange = { expanded = it }
+                    ) {
+                        MochiTextField(
+                            value = selectedOption?.name ?: "",
+                            onValueChange = {},
+                            readOnly = true,
+                            label = fieldLabel,
+                            placeholder = { Text(stringResource(R.string.crm_property_select)) },
+                            leadingIcon = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
+                                { OptionColourSwatch(selectedOption.colour) }
+                            } else {
+                                null
+                            },
+                            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+                            modifier = Modifier
+                                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                                .fillMaxWidth()
                         )
-                        Spacer(modifier = Modifier.height(4.dp))
-                    }
-                    if (readOnly) {
-                        val selectedNames = options
-                            .filter { it.id in listValue || it.id == stringValue }
-                            .sortedBy { it.rank }
-                            .joinToString(", ") { it.name }
-                        Text(
-                            text = if (selectedNames.isBlank()) "—" else selectedNames,
-                            style = MaterialTheme.typography.bodyLarge
-                        )
-                    } else {
-                        FlowRow(
-                            horizontalArrangement = Arrangement.spacedBy(6.dp),
-                            verticalArrangement = Arrangement.spacedBy(4.dp)
+                        ExposedDropdownMenu(
+                            expanded = expanded,
+                            onDismissRequest = { expanded = false }
                         ) {
                             options.sortedBy { it.rank }.forEach { option ->
-                                val isSelected = option.id in listValue || option.id == stringValue
-                                FilterChip(
-                                    selected = isSelected,
+                                MochiDropdownMenuItem(
+                                    text = { Text(option.name) },
                                     onClick = {
-                                        val current = listValue.toMutableList()
-                                        if (isSelected) {
-                                            current.remove(option.id)
-                                        } else {
-                                            current.add(option.id)
-                                        }
-                                        onMultiValueChange(current)
+                                        onValueChange(option.id)
+                                        expanded = false
                                     },
-                                    label = { Text(option.name) }
+                                    leadingIcon = if (option.colour.isNotBlank()) {
+                                        { OptionColourSwatch(option.colour) }
+                                    } else {
+                                        null
+                                    },
                                 )
-                            }
-                        }
-                    }
-                } else {
-                    // Single select dropdown
-                    val selectedOption = options.find { it.id == stringValue }
-                    if (readOnly) {
-                        ReadOnlyDisplay(labelOrNull(showLabel, field.name), selectedOption?.name.orEmpty())
-                    } else {
-                        var expanded by remember { mutableStateOf(false) }
-                        ExposedDropdownMenuBox(
-                            expanded = expanded,
-                            onExpandedChange = { expanded = it }
-                        ) {
-                            MochiTextField(
-                                value = selectedOption?.name ?: "",
-                                onValueChange = {},
-                                readOnly = true,
-                                label = fieldLabel,
-                                placeholder = { Text(stringResource(R.string.crm_property_select)) },
-                                leadingIcon = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
-                                    { OptionColourSwatch(selectedOption.colour) }
-                                } else {
-                                    null
-                                },
-                                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                                modifier = Modifier
-                                    .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-                                    .fillMaxWidth()
-                            )
-                            ExposedDropdownMenu(
-                                expanded = expanded,
-                                onDismissRequest = { expanded = false }
-                            ) {
-                                options.sortedBy { it.rank }.forEach { option ->
-                                    MochiDropdownMenuItem(
-                                        text = { Text(option.name) },
-                                        onClick = {
-                                            onValueChange(option.id)
-                                            expanded = false
-                                        },
-                                        leadingIcon = if (option.colour.isNotBlank()) {
-                                            { OptionColourSwatch(option.colour) }
-                                        } else {
-                                            null
-                                        },
-                                    )
-                                }
                             }
                         }
                     }

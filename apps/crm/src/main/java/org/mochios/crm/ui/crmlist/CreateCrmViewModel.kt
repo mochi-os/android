@@ -31,6 +31,8 @@ data class CreateCrmUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val backupPrefill: BackupPrefill? = null,
+    // The picked file could not be read as a backup; the screen says so once.
+    val backupReadFailed: Boolean = false,
     val createdCrmId: String? = null
 )
 
@@ -41,7 +43,10 @@ data class CreateCrmUiState(
 data class BackupPrefill(
     val json: String,
     val fileName: String,
-    val name: String?
+    val name: String?,
+    // The picked document when it is an archive: restored whole, so the
+    // attachments it carries survive.
+    val archive: Uri?
 )
 
 /** Drives the create-CRM screen: backup import and the create call. */
@@ -63,6 +68,7 @@ class CreateCrmViewModel @Inject constructor(
             val root = content
                 ?.let { text -> runCatching { JsonParser.parseString(text).asJsonObject }.getOrNull() }
             if (content == null || root == null) {
+                _uiState.value = _uiState.value.copy(backupReadFailed = true)
                 return@launch
             }
             val fileName = repository.fileName(uri)
@@ -73,10 +79,16 @@ class CreateCrmViewModel @Inject constructor(
                 backupPrefill = BackupPrefill(
                     json = content,
                     fileName = fileName,
-                    name = crm?.jsonString("name")
+                    name = crm?.jsonString("name"),
+                    archive = uri.takeIf { repository.isArchive(it) }
                 )
             )
         }
+    }
+
+    /** The screen has shown the unreadable-backup notice. */
+    fun consumeBackupReadFailed() {
+        _uiState.value = _uiState.value.copy(backupReadFailed = false)
     }
 
     /** Clears the pending-navigation id once the screen has opened the CRM. */
@@ -87,7 +99,7 @@ class CreateCrmViewModel @Inject constructor(
     /**
      * Creates a CRM, then restores [backupJson] into it when one was picked.
      */
-    fun createCrm(name: String, privacy: String, backupJson: String?) {
+    fun createCrm(name: String, privacy: String, backupJson: String?, backupArchive: Uri? = null) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true, error = null)
             val importing = !backupJson.isNullOrBlank()
@@ -99,7 +111,7 @@ class CreateCrmViewModel @Inject constructor(
                 )
                 val newCrmId = created.fingerprint.ifEmpty { created.id }
                 if (importing) {
-                    restoreBackup(created, backupJson)
+                    restoreBackup(created, backupJson, backupArchive)
                 }
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
@@ -121,9 +133,15 @@ class CreateCrmViewModel @Inject constructor(
      * Restores a backup into the new CRM: design, then objects. On failure the
      * CRM is deleted and the error rethrown.
      */
-    private suspend fun restoreBackup(created: Crm, backupJson: String) {
+    private suspend fun restoreBackup(created: Crm, backupJson: String, archive: Uri?) {
         val crmId = created.fingerprint.ifEmpty { created.id }
         try {
+            if (archive != null) {
+                // The archive carries design, objects and attachment bytes;
+                // one upload restores all three.
+                repository.importArchive(crmId, archive)
+                return
+            }
             val root = JsonParser.parseString(backupJson).asJsonObject
             val design = root.getAsJsonObject("design") ?: root
             repository.importDesign(

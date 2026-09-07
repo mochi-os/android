@@ -377,4 +377,5 @@
     <string name="projects_export_saved">திட்டத் தரவு சேமிக்கப்பட்டது</string>
     <string name="projects_exporting">ஏற்றுமதி தயாராகிறது…</string>
     <string name="projects_board_add_column">நெடுவரிசை சேர்</string>
+    <string name="projects_design_sample">மாதிரி %1$d</string>
 </resources>

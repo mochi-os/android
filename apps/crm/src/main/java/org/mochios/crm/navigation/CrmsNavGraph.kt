@@ -25,16 +25,16 @@ object CrmsApp {
     const val HOME = "crm/router"
     const val ROUTER = "crm/router"
     // Detail routes use a `crm/` discriminator after the feature prefix
-    // so they can't shadow the literal HOME / FIND_PROJECTS routes —
+    // so they can't shadow the literal HOME / FIND_CRMS routes —
     // `crm/list` would otherwise match `crm/{crmId}` with
     // crmId='list' and route to the detail screen rendering NotFoundState.
-    const val PROJECT = "crm/crm/{crmId}"
-    const val PROJECT_OBJECT = "crm/crm/{crmId}/object/{objectId}"
-    const val FIND_PROJECTS = "crm/discover"
+    const val CRM = "crm/crm/{crmId}"
+    const val CRM_OBJECT = "crm/crm/{crmId}/object/{objectId}"
+    const val FIND_CRMS = "crm/discover"
     const val CREATE_CRM = "crm/create"
-    const val PROJECT_SETTINGS = "crm/crm/{crmId}/settings"
-    const val PROJECT_DESIGN = "crm/crm/{crmId}/design"
-    // Deliberately not `crm/crm/{crmId}/object/create`, which the PROJECT_OBJECT
+    const val CRM_SETTINGS = "crm/crm/{crmId}/settings"
+    const val CRM_DESIGN = "crm/crm/{crmId}/design"
+    // Deliberately not `crm/crm/{crmId}/object/create`, which the CRM_OBJECT
     // pattern above also matches, with objectId='create'.
     const val CREATE_OBJECT = "crm/crm/{crmId}/create-object?field={field}&value={value}"
 
@@ -69,7 +69,7 @@ fun NavGraphBuilder.crmsNavGraph(
     }
 
     composable(
-        route = CrmsApp.PROJECT,
+        route = CrmsApp.CRM,
         arguments = listOf(navArgument("crmId") {
             type = NavType.StringType
             defaultValue = ""
@@ -81,17 +81,17 @@ fun NavGraphBuilder.crmsNavGraph(
             crmId = crmId,
             onSelectCrm = { id ->
                 navController.navigate(CrmsApp.crm(id)) {
-                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    popUpTo(CrmsApp.CRM) { inclusive = true }
                     launchSingleTop = true
                 }
             },
             onSelectAll = {
                 navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
-                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    popUpTo(CrmsApp.CRM) { inclusive = true }
                     launchSingleTop = true
                 }
             },
-            onFindCrms = { navController.navigate(CrmsApp.FIND_PROJECTS) },
+            onFindCrms = { navController.navigate(CrmsApp.FIND_CRMS) },
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
@@ -104,7 +104,7 @@ fun NavGraphBuilder.crmsNavGraph(
     }
 
     composable(
-        route = CrmsApp.PROJECT_OBJECT,
+        route = CrmsApp.CRM_OBJECT,
         arguments = listOf(
             navArgument("crmId") { type = NavType.StringType },
             navArgument("objectId") { type = NavType.StringType }
@@ -118,17 +118,17 @@ fun NavGraphBuilder.crmsNavGraph(
             crmId = crmId,
             onSelectCrm = { id ->
                 navController.navigate(CrmsApp.crm(id)) {
-                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    popUpTo(CrmsApp.CRM) { inclusive = true }
                     launchSingleTop = true
                 }
             },
             onSelectAll = {
                 navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
-                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    popUpTo(CrmsApp.CRM) { inclusive = true }
                     launchSingleTop = true
                 }
             },
-            onFindCrms = { navController.navigate(CrmsApp.FIND_PROJECTS) },
+            onFindCrms = { navController.navigate(CrmsApp.FIND_CRMS) },
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
@@ -140,14 +140,14 @@ fun NavGraphBuilder.crmsNavGraph(
         )
     }
 
-    composable(CrmsApp.FIND_PROJECTS) {
+    composable(CrmsApp.FIND_CRMS) {
         FindCrmsScreen(
             onBack = { navController.popBackStack() },
             // Navigate rather than pop: the existing CRM entry's view model
             // still holds the pre-subscribe list.
             onCrmSubscribed = { crmId ->
                 navController.navigate(CrmsApp.crm(crmId)) {
-                    popUpTo(CrmsApp.FIND_PROJECTS) { inclusive = true }
+                    popUpTo(CrmsApp.FIND_CRMS) { inclusive = true }
                 }
             },
         )
@@ -194,7 +194,7 @@ fun NavGraphBuilder.crmsNavGraph(
     }
 
     composable(
-        route = CrmsApp.PROJECT_SETTINGS,
+        route = CrmsApp.CRM_SETTINGS,
         arguments = listOf(navArgument("crmId") { type = NavType.StringType })
     ) {
         CrmSettingsScreen(
@@ -205,7 +205,7 @@ fun NavGraphBuilder.crmsNavGraph(
             // left sitting on the settings page of a deleted CRM.
             onCrmDeleted = {
                 navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
-                    popUpTo(CrmsApp.PROJECT) { inclusive = true }
+                    popUpTo(CrmsApp.CRM) { inclusive = true }
                     launchSingleTop = true
                 }
             },
@@ -213,7 +213,7 @@ fun NavGraphBuilder.crmsNavGraph(
     }
 
     composable(
-        route = CrmsApp.PROJECT_DESIGN,
+        route = CrmsApp.CRM_DESIGN,
         arguments = listOf(navArgument("crmId") { type = NavType.StringType })
     ) {
         DesignScreen(

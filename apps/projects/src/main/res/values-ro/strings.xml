@@ -378,4 +378,5 @@
     <string name="projects_export_saved">Datele proiectului au fost salvate</string>
     <string name="projects_exporting">Se pregătește exportul…</string>
     <string name="projects_board_add_column">Adaugă coloană</string>
+    <string name="projects_design_sample">Exemplu %1$d</string>
 </resources>

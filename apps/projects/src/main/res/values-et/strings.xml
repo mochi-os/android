@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Projekti andmed salvestatud</string>
     <string name="projects_exporting">Ekspordi ettevalmistamine…</string>
     <string name="projects_board_add_column">Lisa veerg</string>
+    <string name="projects_design_sample">Näidis %1$d</string>
 </resources>
