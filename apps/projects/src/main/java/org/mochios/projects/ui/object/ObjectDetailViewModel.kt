@@ -57,7 +57,8 @@ data class ObjectDetailUiState(
     val saveStatus: SaveStatus = SaveStatus.Idle,
     val access: String = "",
     val siblingObjects: List<ProjectObject> = emptyList(),
-    val people: List<org.mochios.projects.model.Person> = emptyList()
+    val people: List<org.mochios.projects.model.Person> = emptyList(),
+    val repositories: List<Repository> = emptyList()
 )
 
 @HiltViewModel
@@ -94,6 +95,9 @@ class ObjectDetailViewModel @Inject constructor(
     private var currentObjectId: String = ""
     /** The in-flight detail fetch, cancelled when the sheet switches object. */
     private var loadJob: Job? = null
+
+    /** The in-flight repository fetch, so [ensureRepositories] runs once. */
+    private var repositoriesJob: Job? = null
 
     private var wsSubscriptionId: String? = null
     private var wsSubscribedProjectId: String = ""
@@ -331,6 +335,9 @@ class ObjectDetailViewModel @Inject constructor(
             try {
                 val requests = repository.getRequests(currentProjectId, currentObjectId)
                 _uiState.value = _uiState.value.copy(requests = requests)
+                if (requests.isNotEmpty()) {
+                    ensureRepositories()
+                }
             } catch (_: Exception) { }
         }
     }
@@ -370,10 +377,21 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
-    suspend fun loadRepositories(): List<Repository> = try {
-        repository.getRepositories()
-    } catch (_: Exception) {
-        emptyList()
+    /**
+     * Fills [ObjectDetailUiState.repositories] once, so a request can name the
+     * repository it runs against instead of showing the bare id it stores.
+     * Safe to call on every open; a fetch already made is not repeated.
+     */
+    fun ensureRepositories() {
+        if (repositoriesJob != null || _uiState.value.repositories.isNotEmpty()) return
+        repositoriesJob = viewModelScope.launch {
+            try {
+                val repositories = repository.getRepositories()
+                _uiState.value = _uiState.value.copy(repositories = repositories)
+            } catch (_: Exception) {
+                repositoriesJob = null
+            }
+        }
     }
 
     suspend fun loadBranches(repo: String): List<Branch> = try {

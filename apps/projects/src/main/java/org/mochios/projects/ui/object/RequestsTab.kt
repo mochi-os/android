@@ -221,7 +221,11 @@ private fun RequestDetailView(
     val mergeCheck by viewModel.mergeCheck.collectAsState()
     val isCheckingMerge by viewModel.isCheckingMerge.collectAsState()
     val mergeSuccess by viewModel.mergeSuccess.collectAsState()
+    val uiState by viewModel.uiState.collectAsState()
     var showMergeDialog by remember { mutableStateOf(false) }
+    val repositoryName = uiState.repositories
+        .firstOrNull { repo -> repo.id == request.repository }?.name
+        ?: request.repository
 
     LaunchedEffect(request.id) {
         viewModel.clearMergeState()
@@ -277,7 +281,7 @@ private fun RequestDetailView(
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(modifier = Modifier.padding(12.dp)) {
-                Text(stringResource(R.string.projects_request_repository, request.repository), style = MaterialTheme.typography.bodySmall)
+                Text(stringResource(R.string.projects_request_repository, repositoryName), style = MaterialTheme.typography.bodySmall)
                 Text(stringResource(R.string.projects_request_source, request.source), style = MaterialTheme.typography.bodySmall)
                 Text(stringResource(R.string.projects_request_target, request.target), style = MaterialTheme.typography.bodySmall)
             }
@@ -460,13 +464,13 @@ private fun CreateRequestDialog(
     var selectedRepo by remember { mutableStateOf<Repository?>(null) }
     var selectedSource by remember { mutableStateOf<Branch?>(null) }
     var selectedTarget by remember { mutableStateOf<Branch?>(null) }
-    var repositories by remember { mutableStateOf<List<Repository>>(emptyList()) }
+    val uiState by viewModel.uiState.collectAsState()
+    val repositories = uiState.repositories
     var branches by remember { mutableStateOf<List<Branch>>(emptyList()) }
     var isLoadingBranches by remember { mutableStateOf(false) }
 
-    // Load repositories on open
     LaunchedEffect(Unit) {
-        repositories = viewModel.loadRepositories()
+        viewModel.ensureRepositories()
     }
 
     // Load branches when repo changes; reset both branch picks

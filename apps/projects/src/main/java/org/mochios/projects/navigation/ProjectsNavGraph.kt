@@ -45,8 +45,13 @@ object ProjectsApp {
     fun projectObject(projectId: String, objectId: String) = "projects/project/$projectId/object/$objectId"
     fun projectSettings(projectId: String) = "projects/project/$projectId/settings"
     fun projectDesign(projectId: String) = "projects/project/$projectId/design"
+    /**
+     * Diff-viewer route. Branch names carry slashes, so every argument is
+     * encoded; a raw one would add path segments and match no route.
+     */
     fun diffViewer(projectId: String, repo: String, source: String, target: String) =
-        "projects/project/$projectId/diff/$repo?source=$source&target=$target"
+        "projects/project/$projectId/diff/${Uri.encode(repo)}" +
+            "?source=${Uri.encode(source)}&target=${Uri.encode(target)}"
 
     /**
      * Create-object route; only the first [presetValues] entry survives, the
