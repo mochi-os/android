@@ -231,7 +231,7 @@ interface ProjectsApi {
 
     // ---- Entity-level endpoints ----
 
-    @GET("{projectId}/-/info")
+    @GET("{projectId}/-/information")
     suspend fun getProjectInfo(@Path("projectId") projectId: String): Response<ApiResponse<ProjectInfoResponse>>
 
     @POST("{projectId}/-/share")
