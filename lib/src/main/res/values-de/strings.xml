@@ -350,4 +350,8 @@
     <string name="game_empty_title">Noch keine Spiele</string>
     <string name="game_select_title">Spiel auswählen</string>
     <string name="game_select_subtitle">Wähle ein Spiel in der Seitenleiste oder starte ein neues.</string>
+    <string name="settings_card">Kartenstil</string>
+    <string name="settings_card_theme">Vom Theme</string>
+    <string name="settings_card_flat">Flach</string>
+    <string name="settings_card_raised">Erhöht</string>
 </resources>

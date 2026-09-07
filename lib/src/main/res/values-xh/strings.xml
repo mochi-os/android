@@ -350,4 +350,8 @@
     <string name="game_empty_title">Akukho midlalo okwangoku</string>
     <string name="game_select_title">Khetha umdlalo</string>
     <string name="game_select_subtitle">Khetha umdlalo kwibha esecaleni okanye uqale omtsha.</string>
+    <string name="settings_card">Isimbo sekhadi</string>
+    <string name="settings_card_theme">Kwitimu</string>
+    <string name="settings_card_flat">Isicaba</string>
+    <string name="settings_card_raised">Iphakanyisiwe</string>
 </resources>

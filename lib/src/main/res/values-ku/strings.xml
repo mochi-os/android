@@ -350,4 +350,8 @@
     <string name="game_empty_title">Hêj tu lîstik tune</string>
     <string name="game_select_title">Lîstikekê hilbijêre</string>
     <string name="game_select_subtitle">Ji darikê kêlekê lîstikekê hilbijêre an jî ya nû dest pê bike.</string>
+    <string name="settings_card">Şêwaza kartê</string>
+    <string name="settings_card_theme">Ji temayê</string>
+    <string name="settings_card_flat">Tasî</string>
+    <string name="settings_card_raised">Bilindkirî</string>
 </resources>

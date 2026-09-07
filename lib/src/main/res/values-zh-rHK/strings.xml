@@ -318,4 +318,8 @@
     <string name="rss_revoke_message">任何訂閱此資訊來源的程式將無法再接收更新。你之後可以複製新的網址。</string>
     <string name="rss_revoked">已撤銷 RSS 存取權</string>
     <string name="rss_revoke_failed">撤銷 RSS 存取權失敗</string>
+    <string name="settings_card">卡片樣式</string>
+    <string name="settings_card_theme">跟隨主題</string>
+    <string name="settings_card_flat">平面</string>
+    <string name="settings_card_raised">浮起</string>
 </resources>

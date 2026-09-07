@@ -350,4 +350,8 @@
     <string name="game_empty_title">تر اوسه هیڅ لوبې نشته</string>
     <string name="game_select_title">لوبه وټاکئ</string>
     <string name="game_select_subtitle">له څنګ پټې څخه لوبه وټاکئ یا نوې لوبه پیل کړئ.</string>
+    <string name="settings_card">د کارت بڼه</string>
+    <string name="settings_card_theme">د ښکارندوی څخه</string>
+    <string name="settings_card_flat">هوار</string>
+    <string name="settings_card_raised">پورته شوی</string>
 </resources>

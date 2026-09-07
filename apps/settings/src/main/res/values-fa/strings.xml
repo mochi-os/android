@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">تنظیمات اعلان</string>
     <string name="settings_home_accounts">حساب‌های متصل</string>
     <string name="settings_home_interests">علاقه‌مندی‌ها</string>
-    <string name="account_method_email">کد ایمیل</string>
-    <string name="account_method_passkey">پسکی</string>
-    <string name="account_method_totp">برنامهٔ احراز هویت</string>
     <string name="account_section_passkeys">پسکی‌ها</string>
     <string name="account_passkey_register">افزودن passkey</string>
     <string name="account_passkey_delete_title">حذف passkey؟</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">حذف مسیر</string>
     <string name="route_delete_title">حذف مسیر؟</string>
     <string name="route_path">مسیر</string>
-    <string name="route_target">هدف</string>
     <string name="route_method">روش</string>
     <string name="route_method_app">برنامه</string>
     <string name="route_method_entity">موجودیت</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">علاقه‌مندی‌ها</string>
     <string name="interests_summary_title">خلاصه</string>
     <string name="interests_remove">حذف علاقه</string>
-    <string name="interests_add">افزودن</string>
-    <string name="document_save">ذخیره</string>
-    <string name="document_saved">ذخیره شد</string>
     <string name="notifprefs_title">تنظیمات اعلان</string>
     <string name="notifprefs_tab_categories">دسته‌ها</string>
     <string name="notifprefs_tab_topics">موضوعات</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">بازنشانی</string>
     <string name="system_settings_reset_to_default">بازنشانی به پیش‌فرض</string>
     <string name="system_settings_reset_title">بازنشانی به پیش‌فرض؟</string>
-    <string name="system_settings_setting_updated">تنظیمات به‌روزرسانی شد</string>
-    <string name="system_settings_update_failed">به‌روزرسانی تنظیمات ناموفق بود</string>
     <string name="system_setting_apps_install_user">اجازه به کاربران برای نصب برنامه‌ها</string>
     <string name="system_setting_auth_email">ورود با کد ایمیل</string>
     <string name="system_setting_auth_passkey">ورود با passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">به‌روزرسانی وضعیت کاربر ناموفق بود</string>
     <string name="system_users_toast_revoke_failed">لغو جلسه ناموفق بود</string>
 
-    <string name="settings_app_label">تنظیمات Mochi</string>
     <string name="settings_home_sessions">نشست‌ها</string>
     <string name="settings_home_privacy">سیاست حریم خصوصی</string>
     <string name="settings_home_rules">قوانین</string>
     <string name="settings_home_terms">شرایط خدمات</string>
-    <string name="account_section_methods">روش‌های ورود</string>
     <string name="account_passkeys_empty">هیچ کلید عبوری ثبت نشده است.</string>
     <string name="account_passkey_register_title">افزودن کلید عبور</string>
     <string name="account_passkey_register_message">دستگاه شما از شما تأییدیه می‌خواهد. کلید عبور به این دستگاه گره خورده و برای ورودهای آینده استفاده می‌شود.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">تولید مجدد کدهای بازیابی؟</string>
     <string name="account_recovery_regen_message">کدهای موجود فوراً از کار می‌افتند. کدهای جدید را در مکانی امن ذخیره کنید.</string>
     <string name="account_recovery_codes_warning">این کدها را ذخیره کنید — هر کدام فقط یک بار قابل استفاده است. دوباره نمایش داده نخواهند شد.</string>
-    <string name="sessions_section_title">نشست‌های فعال</string>
     <string name="sessions_title">نشست‌ها</string>
     <string name="sessions_empty">هیچ نشست فعالی وجود ندارد.</string>
     <string name="sessions_revoke_message">دستگاهی که از این نشست استفاده می‌کند از سیستم خارج خواهد شد.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">تولید مجدد خلاصه</string>
     <string name="interests_summary_regenerating">در حال تولید مجدد…</string>
     <string name="interests_summary_empty">چند علاقه‌مندی اضافه کنید تا خلاصه‌ای از چیزهایی که دوست دارید تولید شود.</string>
-    <string name="interests_weight">وزن</string>
     <string name="interests_search_failed">جستجو ناموفق بود. دوباره امتحان کنید.</string>
     <string name="document_privacy_title">سیاست حریم خصوصی</string>
     <string name="document_rules_title">قوانین</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">نصب %1$s…</string>
     <string name="accounts_field_api_key">کلید API</string>
     <string name="accounts_field_url">آدرس سرور</string>
-    <string name="accounts_device_placeholder">حساب‌های push به طور خودکار توسط دستگاه افزوده می‌شوند.</string>
     <string name="accounts_set_default_ai">تنظیم به عنوان هوش مصنوعی پیش‌فرض</string>
     <string name="accounts_verify_code">کد</string>
     <string name="accounts_verify_resend">ارسال مجدد کد</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">نام</string>
     <string name="account_identity_fingerprint">اثر انگشت</string>
     <string name="account_identity_directory_toggle">اجازه دهید دیگران شما را در دایرکتوری پیدا کنند</string>
-    <string name="account_method_email_subtitle">دریافت کد تأیید از طریق ایمیل</string>
-    <string name="account_method_totp_subtitle">برای فعال‌سازی، در پایین یک احرازکننده تنظیم کنید</string>
-    <string name="account_method_passkey_subtitle">برای فعال‌سازی، در پایین یک کلید عبور ثبت کنید</string>
     <string name="domain_add">افزودن دامنه</string>
     <string name="domain_add_title">افزودن دامنه</string>
     <string name="domain_delegation_add">افزودن</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">هیچ مقصدی پیکربندی نشده است</string>
     <string name="notifprefs_transport_fcm">اعلان Android</string>
     <string name="notifprefs_no_destinations">هیچ مقصدی نیست</string>
+    <string name="account_data_generate">ایجاد عبارت عبور</string>
+    <string name="accounts_field_server">آدرس سرور</string>
+    <string name="accounts_field_token">توکن دسترسی</string>
+    <string name="accounts_field_topic">موضوع</string>
+    <string name="accounts_field_secret">راز امضا</string>
+    <string name="account_totp_open">باز کردن در برنامه احراز هویت</string>
 </resources>

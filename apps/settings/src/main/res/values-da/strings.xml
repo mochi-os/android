@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Notifikationsindstillinger</string>
     <string name="settings_home_accounts">Forbundne konti</string>
     <string name="settings_home_interests">Interesser</string>
-    <string name="account_method_email">E-mailkode</string>
-    <string name="account_method_passkey">Adgangsnøgle</string>
-    <string name="account_method_totp">Authenticator-app</string>
     <string name="account_section_passkeys">Adgangsnøgler</string>
     <string name="account_passkey_register">Tilføj passkey</string>
     <string name="account_passkey_delete_title">Slet passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Slet rute</string>
     <string name="route_delete_title">Slet rute?</string>
     <string name="route_path">Sti</string>
-    <string name="route_target">Mål</string>
     <string name="route_method">Metode</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entitet</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interesser</string>
     <string name="interests_summary_title">Resumé</string>
     <string name="interests_remove">Fjern interesse</string>
-    <string name="interests_add">Tilføj</string>
-    <string name="document_save">Gem</string>
-    <string name="document_saved">Gemt</string>
     <string name="notifprefs_title">Notifikationsindstillinger</string>
     <string name="notifprefs_tab_categories">Kategorier</string>
     <string name="notifprefs_tab_topics">Emner</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Nulstil</string>
     <string name="system_settings_reset_to_default">Nulstil til standard</string>
     <string name="system_settings_reset_title">Nulstil til standard?</string>
-    <string name="system_settings_setting_updated">Indstilling opdateret</string>
-    <string name="system_settings_update_failed">Kunne ikke opdatere indstilling</string>
     <string name="system_setting_apps_install_user">Tillad brugere at installere apps</string>
     <string name="system_setting_auth_email">Log ind med e-mailkode</string>
     <string name="system_setting_auth_passkey">Log ind med adgangsnøgle</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Kunne ikke opdatere brugerstatus</string>
     <string name="system_users_toast_revoke_failed">Kunne ikke tilbagekalde session</string>
 
-    <string name="settings_app_label">Mochi Indstillinger</string>
     <string name="settings_home_sessions">Sessioner</string>
     <string name="settings_home_privacy">Privatlivspolitik</string>
     <string name="settings_home_rules">Regler</string>
     <string name="settings_home_terms">Servicevilkår</string>
-    <string name="account_section_methods">Loginmetoder</string>
     <string name="account_passkeys_empty">Ingen adgangsnøgler registreret.</string>
     <string name="account_passkey_register_title">Tilføj adgangsnøgle</string>
     <string name="account_passkey_register_message">Din enhed beder dig om at bekræfte. Adgangsnøglen er bundet til denne enhed og bruges til fremtidige logins.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Generér gendannelseskoder igen?</string>
     <string name="account_recovery_regen_message">Eksisterende koder holder op med at virke med det samme. Gem de nye et sikkert sted.</string>
     <string name="account_recovery_codes_warning">Gem disse koder — hver kan kun bruges én gang. De vises ikke igen.</string>
-    <string name="sessions_section_title">Aktive sessioner</string>
     <string name="sessions_title">Sessioner</string>
     <string name="sessions_empty">Ingen aktive sessioner.</string>
     <string name="sessions_revoke_message">Enheden, der bruger denne session, vil blive logget ud.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Generér resumé igen</string>
     <string name="interests_summary_regenerating">Genererer…</string>
     <string name="interests_summary_empty">Tilføj interesser for at generere et resumé af, hvad du kan lide.</string>
-    <string name="interests_weight">Vægt</string>
     <string name="interests_search_failed">Søgningen mislykkedes. Prøv igen.</string>
     <string name="document_privacy_title">Privatlivspolitik</string>
     <string name="document_rules_title">Regler</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Installerer %1$s…</string>
     <string name="accounts_field_api_key">API-nøgle</string>
     <string name="accounts_field_url">Server-URL</string>
-    <string name="accounts_device_placeholder">Push-konti tilføjes automatisk af enheden.</string>
     <string name="accounts_set_default_ai">Indstil som standard-AI</string>
     <string name="accounts_verify_code">Kode</string>
     <string name="accounts_verify_resend">Send kode igen</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Navn</string>
     <string name="account_identity_fingerprint">Fingeraftryk</string>
     <string name="account_identity_directory_toggle">Tillad andre at finde dig i kataloget</string>
-    <string name="account_method_email_subtitle">Modtag en bekræftelseskode via e-mail</string>
-    <string name="account_method_totp_subtitle">Opsæt en godkender nedenfor for at aktivere</string>
-    <string name="account_method_passkey_subtitle">Registrer en adgangsnøgle nedenfor for at aktivere</string>
     <string name="domain_add">Tilføj domæne</string>
     <string name="domain_add_title">Tilføj domæne</string>
     <string name="domain_delegation_add">Tilføj</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Ingen destinationer konfigureret</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Ingen destinationer</string>
+    <string name="account_data_generate">Generer adgangssætning</string>
+    <string name="accounts_field_server">Server-URL</string>
+    <string name="accounts_field_token">Adgangstoken</string>
+    <string name="accounts_field_topic">Emne</string>
+    <string name="accounts_field_secret">Signeringshemmelighed</string>
+    <string name="account_totp_open">Åbn i godkendelsesapp</string>
 </resources>

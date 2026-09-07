@@ -65,6 +65,7 @@ import org.mochios.android.ui.components.SecretField
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.SystemSetting
+import org.mochios.settings.ui.login.StepUpHost
 
 // Mirrors apps/settings/web/src/features/system/settings.tsx. File upload
 // (pattern == "text") is not supported on Android; the row degrades to a
@@ -77,6 +78,7 @@ fun SystemSettingsScreen(
     viewModel: SystemSettingsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    StepUpHost(viewModel.stepUp)
     Scaffold(
         topBar = {
             TopAppBar(

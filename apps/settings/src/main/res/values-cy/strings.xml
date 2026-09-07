@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Dewisiadau hysbysiad</string>
     <string name="settings_home_accounts">Cyfrifon cysylltiedig</string>
     <string name="settings_home_interests">Diddordebau</string>
-    <string name="account_method_email">Cod e-bost</string>
-    <string name="account_method_passkey">Pasallwedd</string>
-    <string name="account_method_totp">App dilyswr</string>
     <string name="account_section_passkeys">Pasallweddi</string>
     <string name="account_passkey_register">Ychwanegu allwedd basg</string>
     <string name="account_passkey_delete_title">Dileu allwedd basg?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Dileu llwybr</string>
     <string name="route_delete_title">Dileu llwybr?</string>
     <string name="route_path">Llwybr</string>
-    <string name="route_target">Targed</string>
     <string name="route_method">Dull</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Endid</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Diddordebau</string>
     <string name="interests_summary_title">Crynodeb</string>
     <string name="interests_remove">Tynnu diddordeb</string>
-    <string name="interests_add">Ychwanegu</string>
-    <string name="document_save">Cadw</string>
-    <string name="document_saved">Wedi\'i gadw</string>
     <string name="notifprefs_title">Dewisiadau hysbysiad</string>
     <string name="notifprefs_tab_categories">Categorïau</string>
     <string name="notifprefs_tab_topics">Pynciau</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Ailosod</string>
     <string name="system_settings_reset_to_default">Ailosod i\'r diofyn</string>
     <string name="system_settings_reset_title">Ailosod i\'r diofyn?</string>
-    <string name="system_settings_setting_updated">Gosodiad wedi\'i ddiweddaru</string>
-    <string name="system_settings_update_failed">Methwyd diweddaru\'r gosodiad</string>
     <string name="system_setting_apps_install_user">Caniatáu i ddefnyddwyr osod apiau</string>
     <string name="system_setting_auth_email">Mewngofnodi gan ddefnyddio cod e-bost</string>
     <string name="system_setting_auth_passkey">Mewngofnodi gan ddefnyddio allwedd mynediad</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Methwyd diweddaru statws y defnyddiwr</string>
     <string name="system_users_toast_revoke_failed">Methwyd dirymu\'r sesiwn</string>
 
-    <string name="settings_app_label">Mochi Gosodiadau</string>
     <string name="settings_home_sessions">Sesiynau</string>
     <string name="settings_home_privacy">Polisi preifatrwydd</string>
     <string name="settings_home_rules">Rheolau</string>
     <string name="settings_home_terms">Telerau gwasanaeth</string>
-    <string name="account_section_methods">Dulliau mewngofnodi</string>
     <string name="account_passkeys_empty">Dim allweddi mynediad wedi\'u cofrestru.</string>
     <string name="account_passkey_register_title">Ychwanegu allwedd mynediad</string>
     <string name="account_passkey_register_message">Bydd eich dyfais yn gofyn i chi gadarnhau. Mae\'r allwedd mynediad wedi\'i chlymu i\'r ddyfais hon ac yn cael ei defnyddio ar gyfer mewngofnodi yn y dyfodol.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Ail-greu codau adfer?</string>
     <string name="account_recovery_regen_message">Bydd codau presennol yn peidio gweithio ar unwaith. Cadwch y rhai newydd mewn lle diogel.</string>
     <string name="account_recovery_codes_warning">Cadwch y codau hyn — gellir defnyddio pob un unwaith yn unig. Ni fyddant yn cael eu dangos eto.</string>
-    <string name="sessions_section_title">Sesiynau gweithredol</string>
     <string name="sessions_title">Sesiynau</string>
     <string name="sessions_empty">Dim sesiynau gweithredol.</string>
     <string name="sessions_revoke_message">Bydd y ddyfais sy\'n defnyddio\'r sesiwn hon yn cael ei hallgofnodi.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Ail-greu crynodeb</string>
     <string name="interests_summary_regenerating">Yn ail-greu…</string>
     <string name="interests_summary_empty">Ychwanegwch ddiddordebau i greu crynodeb o\'r hyn yr ydych yn ei hoffi.</string>
-    <string name="interests_weight">Pwysau</string>
     <string name="interests_search_failed">Methodd y chwiliad. Triwch eto.</string>
     <string name="document_privacy_title">Polisi preifatrwydd</string>
     <string name="document_rules_title">Rheolau</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Yn gosod %1$s…</string>
     <string name="accounts_field_api_key">Allwedd API</string>
     <string name="accounts_field_url">URL gweinydd</string>
-    <string name="accounts_device_placeholder">Mae cyfrifon push yn cael eu hychwanegu\'n awtomatig gan y ddyfais.</string>
     <string name="accounts_set_default_ai">Gosod fel AI rhagosodedig</string>
     <string name="accounts_verify_code">Cod</string>
     <string name="accounts_verify_resend">Ailanfon cod</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Enw</string>
     <string name="account_identity_fingerprint">Olion bysedd</string>
     <string name="account_identity_directory_toggle">Caniatáu i eraill ddod o hyd i chi yn y cyfeiriadur</string>
-    <string name="account_method_email_subtitle">Derbyn cod dilysu drwy e-bost</string>
-    <string name="account_method_totp_subtitle">Sefydlwch ddilyswr isod i\'w alluogi</string>
-    <string name="account_method_passkey_subtitle">Cofrestrwch allwedd mynediad isod i\'w alluogi</string>
     <string name="domain_add">Ychwanegu parth</string>
     <string name="domain_add_title">Ychwanegu parth</string>
     <string name="domain_delegation_add">Ychwanegu</string>
@@ -406,4 +389,10 @@
     <string name="notifprefs_test_none">Dim cyrchfannau wedi\'u ffurfweddu</string>
     <string name="notifprefs_transport_fcm">Gwthiad Android</string>
     <string name="notifprefs_no_destinations">Dim cyrchfannau</string>
+    <string name="account_data_generate">Cynhyrchu ymadrodd cyfrinachol</string>
+    <string name="accounts_field_server">URL gweinydd</string>
+    <string name="accounts_field_token">Tocyn mynediad</string>
+    <string name="accounts_field_topic">Pwnc</string>
+    <string name="accounts_field_secret">Cyfrinach lofnodi</string>
+    <string name="account_totp_open">Agor yn yr ap dilysu</string>
 </resources>

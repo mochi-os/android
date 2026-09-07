@@ -349,4 +349,8 @@
     <string name="game_empty_title">ยังไม่มีเกม</string>
     <string name="game_select_title">เลือกเกม</string>
     <string name="game_select_subtitle">เลือกเกมจากแถบด้านข้าง หรือเริ่มเกมใหม่</string>
+    <string name="settings_card">สไตล์การ์ด</string>
+    <string name="settings_card_theme">จากธีม</string>
+    <string name="settings_card_flat">แบน</string>
+    <string name="settings_card_raised">ยกขึ้น</string>
 </resources>

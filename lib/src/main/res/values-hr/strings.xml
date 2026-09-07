@@ -352,4 +352,8 @@
     <string name="game_empty_title">Još nema igara</string>
     <string name="game_select_title">Odaberite igru</string>
     <string name="game_select_subtitle">Odaberite igru s bočne trake ili započnite novu.</string>
+    <string name="settings_card">Stil kartice</string>
+    <string name="settings_card_theme">Iz teme</string>
+    <string name="settings_card_flat">Ravna</string>
+    <string name="settings_card_raised">Izdignuto</string>
 </resources>

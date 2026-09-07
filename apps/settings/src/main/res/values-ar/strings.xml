@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">تفضيلات الإشعارات</string>
     <string name="settings_home_accounts">الحسابات المتصلة</string>
     <string name="settings_home_interests">الاهتمامات</string>
-    <string name="account_method_email">رمز البريد الإلكتروني</string>
-    <string name="account_method_passkey">مفتاح المرور</string>
-    <string name="account_method_totp">تطبيق المصادقة</string>
     <string name="account_section_passkeys">مفاتيح المرور</string>
     <string name="account_passkey_register">إضافة مفتاح مرور</string>
     <string name="account_passkey_delete_title">حذف مفتاح المرور؟</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">حذف المسار</string>
     <string name="route_delete_title">حذف المسار؟</string>
     <string name="route_path">المسار</string>
-    <string name="route_target">الهدف</string>
     <string name="route_method">الطريقة</string>
     <string name="route_method_app">التطبيق</string>
     <string name="route_method_entity">الكيان</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">الاهتمامات</string>
     <string name="interests_summary_title">الملخص</string>
     <string name="interests_remove">إزالة الاهتمام</string>
-    <string name="interests_add">إضافة</string>
-    <string name="document_save">حفظ</string>
-    <string name="document_saved">تم الحفظ</string>
     <string name="notifprefs_title">تفضيلات الإشعارات</string>
     <string name="notifprefs_tab_categories">الفئات</string>
     <string name="notifprefs_tab_topics">المواضيع</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">إعادة تعيين</string>
     <string name="system_settings_reset_to_default">إعادة تعيين إلى الافتراضي</string>
     <string name="system_settings_reset_title">إعادة التعيين إلى الافتراضي؟</string>
-    <string name="system_settings_setting_updated">تم تحديث الإعداد</string>
-    <string name="system_settings_update_failed">فشل تحديث الإعداد</string>
     <string name="system_setting_apps_install_user">السماح للمستخدمين بتثبيت التطبيقات</string>
     <string name="system_setting_auth_email">تسجيل الدخول برمز البريد الإلكتروني</string>
     <string name="system_setting_auth_passkey">تسجيل الدخول بمفتاح المرور</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">فشل تحديث حالة المستخدم</string>
     <string name="system_users_toast_revoke_failed">فشل إلغاء الجلسة</string>
 
-    <string name="settings_app_label">إعدادات Mochi</string>
     <string name="settings_home_sessions">الجلسات</string>
     <string name="settings_home_privacy">سياسة الخصوصية</string>
     <string name="settings_home_rules">القواعد</string>
     <string name="settings_home_terms">شروط الخدمة</string>
-    <string name="account_section_methods">طرق تسجيل الدخول</string>
     <string name="account_passkeys_empty">لم يتم تسجيل أي مفاتيح مرور.</string>
     <string name="account_passkey_register_title">إضافة مفتاح مرور</string>
     <string name="account_passkey_register_message">سيطلب منك جهازك التأكيد. يرتبط مفتاح المرور بهذا الجهاز ويُستخدم لتسجيلات الدخول المستقبلية.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">إعادة إنشاء رموز الاسترداد؟</string>
     <string name="account_recovery_regen_message">ستتوقف الرموز الحالية فورًا. احفظ الرموز الجديدة في مكان آمن.</string>
     <string name="account_recovery_codes_warning">احفظ هذه الرموز — يمكن استخدام كل منها مرة واحدة فقط. لن تُعرض مرة أخرى.</string>
-    <string name="sessions_section_title">الجلسات النشطة</string>
     <string name="sessions_title">الجلسات</string>
     <string name="sessions_empty">لا توجد جلسات نشطة.</string>
     <string name="sessions_revoke_message">سيتم تسجيل خروج الجهاز الذي يستخدم هذه الجلسة.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">إعادة إنشاء الملخص</string>
     <string name="interests_summary_regenerating">جاري إعادة الإنشاء…</string>
     <string name="interests_summary_empty">أضف بعض الاهتمامات لإنشاء ملخص لما يعجبك.</string>
-    <string name="interests_weight">الوزن</string>
     <string name="interests_search_failed">فشل البحث. يرجى المحاولة مرة أخرى.</string>
     <string name="document_privacy_title">سياسة الخصوصية</string>
     <string name="document_rules_title">القواعد</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">جاري تثبيت %1$s…</string>
     <string name="accounts_field_api_key">مفتاح API</string>
     <string name="accounts_field_url">عنوان URL للخادم</string>
-    <string name="accounts_device_placeholder">تتم إضافة حسابات الإشعارات الفورية تلقائيًا بواسطة الجهاز.</string>
     <string name="accounts_set_default_ai">تعيين كذكاء اصطناعي افتراضي</string>
     <string name="accounts_verify_code">الرمز</string>
     <string name="accounts_verify_resend">إعادة إرسال الرمز</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">الاسم</string>
     <string name="account_identity_fingerprint">البصمة</string>
     <string name="account_identity_directory_toggle">السماح للآخرين بالعثور عليك في الدليل</string>
-    <string name="account_method_email_subtitle">استلام رمز التحقق عبر البريد الإلكتروني</string>
-    <string name="account_method_totp_subtitle">قم بإعداد تطبيق مصادقة أدناه للتفعيل</string>
-    <string name="account_method_passkey_subtitle">سجّل مفتاح مرور أدناه للتفعيل</string>
     <string name="domain_add">إضافة نطاق</string>
     <string name="domain_add_title">إضافة نطاق</string>
     <string name="domain_delegation_add">إضافة</string>
@@ -406,4 +389,10 @@
     <string name="notifprefs_test_none">لم يتم تكوين وجهات</string>
     <string name="notifprefs_transport_fcm">إشعار Android</string>
     <string name="notifprefs_no_destinations">لا توجد وجهات</string>
+    <string name="account_data_generate">إنشاء عبارة مرور</string>
+    <string name="accounts_field_server">عنوان URL للخادم</string>
+    <string name="accounts_field_token">رمز الوصول</string>
+    <string name="accounts_field_topic">الموضوع</string>
+    <string name="accounts_field_secret">سر التوقيع</string>
+    <string name="account_totp_open">فتح في تطبيق المصادقة</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Aviseringsinställningar</string>
     <string name="settings_home_accounts">Anslutna konton</string>
     <string name="settings_home_interests">Intressen</string>
-    <string name="account_method_email">E-postkod</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Autentiseringsapp</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Lägg till nyckel</string>
     <string name="account_passkey_delete_title">Ta bort nyckel?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Ta bort rutt</string>
     <string name="route_delete_title">Ta bort rutt?</string>
     <string name="route_path">Sökväg</string>
-    <string name="route_target">Mål</string>
     <string name="route_method">Metod</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entitet</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Intressen</string>
     <string name="interests_summary_title">Sammanfattning</string>
     <string name="interests_remove">Ta bort intresse</string>
-    <string name="interests_add">Lägg till</string>
-    <string name="document_save">Spara</string>
-    <string name="document_saved">Sparad</string>
     <string name="notifprefs_title">Aviseringsinställningar</string>
     <string name="notifprefs_tab_categories">Kategorier</string>
     <string name="notifprefs_tab_topics">Ämnen</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Återställ</string>
     <string name="system_settings_reset_to_default">Återställ till standard</string>
     <string name="system_settings_reset_title">Återställ till standard?</string>
-    <string name="system_settings_setting_updated">Inställning uppdaterad</string>
-    <string name="system_settings_update_failed">Kunde inte uppdatera inställning</string>
     <string name="system_setting_apps_install_user">Tillåt användare att installera appar</string>
     <string name="system_setting_auth_email">Logga in med e-postkod</string>
     <string name="system_setting_auth_passkey">Logga in med passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Kunde inte uppdatera användarstatus</string>
     <string name="system_users_toast_revoke_failed">Kunde inte återkalla session</string>
 
-    <string name="settings_app_label">Mochi Inställningar</string>
     <string name="settings_home_sessions">Sessioner</string>
     <string name="settings_home_privacy">Integritetspolicy</string>
     <string name="settings_home_rules">Regler</string>
     <string name="settings_home_terms">Användarvillkor</string>
-    <string name="account_section_methods">Inloggningsmetoder</string>
     <string name="account_passkeys_empty">Inga nycklar registrerade.</string>
     <string name="account_passkey_register_title">Lägg till nyckel</string>
     <string name="account_passkey_register_message">Din enhet ber dig bekräfta. Nyckeln är bunden till denna enhet och används för framtida inloggningar.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Återskapa återställningskoder?</string>
     <string name="account_recovery_regen_message">Befintliga koder slutar omedelbart fungera. Spara de nya på ett säkert ställe.</string>
     <string name="account_recovery_codes_warning">Spara dessa koder — varje kan bara användas en gång. De visas inte igen.</string>
-    <string name="sessions_section_title">Aktiva sessioner</string>
     <string name="sessions_title">Sessioner</string>
     <string name="sessions_empty">Inga aktiva sessioner.</string>
     <string name="sessions_revoke_message">Enheten som använder denna session loggas ut.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Återskapa sammanfattning</string>
     <string name="interests_summary_regenerating">Återskapar…</string>
     <string name="interests_summary_empty">Lägg till intressen för att skapa en sammanfattning av vad du gillar.</string>
-    <string name="interests_weight">Vikt</string>
     <string name="interests_search_failed">Sökningen misslyckades. Försök igen.</string>
     <string name="document_privacy_title">Integritetspolicy</string>
     <string name="document_rules_title">Regler</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Installerar %1$s…</string>
     <string name="accounts_field_api_key">API-nyckel</string>
     <string name="accounts_field_url">Server-URL</string>
-    <string name="accounts_device_placeholder">Push-konton läggs till automatiskt av enheten.</string>
     <string name="accounts_set_default_ai">Ange som standard-AI</string>
     <string name="accounts_verify_code">Kod</string>
     <string name="accounts_verify_resend">Skicka kod igen</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Namn</string>
     <string name="account_identity_fingerprint">Fingeravtryck</string>
     <string name="account_identity_directory_toggle">Tillåt andra att hitta dig i katalogen</string>
-    <string name="account_method_email_subtitle">Få en verifieringskod via e-post</string>
-    <string name="account_method_totp_subtitle">Konfigurera en autentiserare nedan för att aktivera</string>
-    <string name="account_method_passkey_subtitle">Registrera en nyckel nedan för att aktivera</string>
     <string name="domain_add">Lägg till domän</string>
     <string name="domain_add_title">Lägg till domän</string>
     <string name="domain_delegation_add">Lägg till</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Inga destinationer konfigurerade</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Inga destinationer</string>
+    <string name="account_data_generate">Skapa lösenfras</string>
+    <string name="accounts_field_server">Server-URL</string>
+    <string name="accounts_field_token">Åtkomsttoken</string>
+    <string name="accounts_field_topic">Ämne</string>
+    <string name="accounts_field_secret">Signeringshemlighet</string>
+    <string name="account_totp_open">Öppna i autentiseringsapp</string>
 </resources>

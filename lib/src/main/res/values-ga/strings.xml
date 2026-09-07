@@ -356,4 +356,8 @@
     <string name="game_empty_title">Níl aon chluiche fós</string>
     <string name="game_select_title">Roghnaigh cluiche</string>
     <string name="game_select_subtitle">Roghnaigh cluiche ón mbarra taoibh nó tosaigh ceann nua.</string>
+    <string name="settings_card">Stíl an chárta</string>
+    <string name="settings_card_theme">Ón téama</string>
+    <string name="settings_card_flat">Cothrom</string>
+    <string name="settings_card_raised">Ardaithe</string>
 </resources>

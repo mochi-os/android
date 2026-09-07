@@ -350,4 +350,8 @@
     <string name="game_empty_title">Все още няма игри</string>
     <string name="game_select_title">Изберете игра</string>
     <string name="game_select_subtitle">Изберете игра от страничната лента или започнете нова.</string>
+    <string name="settings_card">Стил на картата</string>
+    <string name="settings_card_theme">От темата</string>
+    <string name="settings_card_flat">Плоска</string>
+    <string name="settings_card_raised">Повдигнат</string>
 </resources>

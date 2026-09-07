@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">ចំណូលចិត្តការជូនដំណឹង</string>
     <string name="settings_home_accounts">គណនីដែលបានភ្ជាប់</string>
     <string name="settings_home_interests">ចំណាប់អារម្មណ៍</string>
-    <string name="account_method_email">កូដអ៊ីមែល</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">កម្មវិធី Authenticator</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">បន្ថែមកូនសោ</string>
     <string name="account_passkey_delete_title">លុបកូនសោ?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">លុបផ្លូវ</string>
     <string name="route_delete_title">លុបផ្លូវ?</string>
     <string name="route_path">ផ្លូវ</string>
-    <string name="route_target">គោលដៅ</string>
     <string name="route_method">វិធីសាស្ត្រ</string>
     <string name="route_method_app">កម្មវិធី</string>
     <string name="route_method_entity">អង្គភាព</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">ចំណាប់អារម្មណ៍</string>
     <string name="interests_summary_title">សង្ខេប</string>
     <string name="interests_remove">យកចំណាប់អារម្មណ៍ចេញ</string>
-    <string name="interests_add">បន្ថែម</string>
-    <string name="document_save">រក្សាទុក</string>
-    <string name="document_saved">បានរក្សាទុក</string>
     <string name="notifprefs_title">ចំណូលចិត្តការជូនដំណឹង</string>
     <string name="notifprefs_tab_categories">ប្រភេទ</string>
     <string name="notifprefs_tab_topics">ប្រធានបទ</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">កំណត់ឡើងវិញ</string>
     <string name="system_settings_reset_to_default">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="system_settings_reset_title">កំណត់ឡើងវិញទៅលំនាំដើម?</string>
-    <string name="system_settings_setting_updated">បានធ្វើបច្ចុប្បន្នភាពការកំណត់</string>
-    <string name="system_settings_update_failed">បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពការកំណត់</string>
     <string name="system_setting_apps_install_user">អនុញ្ញាតឱ្យអ្នកប្រើប្រាស់ដំឡើងកម្មវិធី</string>
     <string name="system_setting_auth_email">ចូលដោយប្រើកូដអ៊ីមែល</string>
     <string name="system_setting_auth_passkey">ចូលដោយប្រើសោចូល</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពស្ថានភាពអ្នកប្រើ</string>
     <string name="system_users_toast_revoke_failed">បរាជ័យក្នុងការដកហូតវគ្គ</string>
 
-    <string name="settings_app_label">Mochi ការកំណត់</string>
     <string name="settings_home_sessions">សម័យ</string>
     <string name="settings_home_privacy">គោលនយោបាយឯកជន</string>
     <string name="settings_home_rules">ច្បាប់</string>
     <string name="settings_home_terms">លក្ខខណ្ឌសេវាកម្ម</string>
-    <string name="account_section_methods">វិធីសាស្ត្រចូល</string>
     <string name="account_passkeys_empty">មិនមានសោចូលប្រើដែលបានចុះឈ្មោះទេ។</string>
     <string name="account_passkey_register_title">បន្ថែមសោចូលប្រើ</string>
     <string name="account_passkey_register_message">ឧបករណ៍របស់អ្នកនឹងសុំឱ្យអ្នកបញ្ជាក់។ សោចូលប្រើត្រូវបានភ្ជាប់ទៅឧបករណ៍នេះហើយប្រើសម្រាប់ការចូលនាពេលអនាគត។</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">បង្កើតកូដស្ដារឡើងវិញ?</string>
     <string name="account_recovery_regen_message">កូដដែលមានស្រាប់នឹងឈប់ដំណើរការភ្លាមៗ។ រក្សាទុកថ្មីៗនៅកន្លែងសុវត្ថិភាព។</string>
     <string name="account_recovery_codes_warning">រក្សាទុកកូដទាំងនេះ — ម្នាក់ៗអាចប្រើបានតែម្ដងប៉ុណ្ណោះ។ នឹងមិនបង្ហាញម្ដងទៀតទេ។</string>
-    <string name="sessions_section_title">វគ្គដែលដំណើរការ</string>
     <string name="sessions_title">សម័យ</string>
     <string name="sessions_empty">គ្មានវគ្គដែលដំណើរការទេ។</string>
     <string name="sessions_revoke_message">ឧបករណ៍ដែលប្រើវគ្គនេះនឹងចេញ។</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">បង្កើតសេចក្ដីសង្ខេបឡើងវិញ</string>
     <string name="interests_summary_regenerating">កំពុងបង្កើតឡើងវិញ…</string>
     <string name="interests_summary_empty">បន្ថែមចំណាប់អារម្មណ៍មួយចំនួនដើម្បីបង្កើតសេចក្ដីសង្ខេបនៃអ្វីដែលអ្នកចូលចិត្ត។</string>
-    <string name="interests_weight">ទម្ងន់</string>
     <string name="interests_search_failed">ការស្វែងរកបានបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។</string>
     <string name="document_privacy_title">គោលនយោបាយឯកជន</string>
     <string name="document_rules_title">ច្បាប់</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">កំពុងដំឡើង %1$s…</string>
     <string name="accounts_field_api_key">គន្លឹះ API</string>
     <string name="accounts_field_url">URL ម៉ាស៊ីនមេ</string>
-    <string name="accounts_device_placeholder">គណនី push ត្រូវបានបន្ថែមដោយឧបករណ៍ដោយស្វ័យប្រវត្តិ។</string>
     <string name="accounts_set_default_ai">កំណត់ជា AI លំនាំដើម</string>
     <string name="accounts_verify_code">លេខកូដ</string>
     <string name="accounts_verify_resend">ផ្ញើលេខកូដម្ដងទៀត</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">ឈ្មោះ</string>
     <string name="account_identity_fingerprint">ស្នាមម្រាមដៃ</string>
     <string name="account_identity_directory_toggle">អនុញ្ញាតឱ្យអ្នកដទៃរកអ្នកនៅក្នុងថត</string>
-    <string name="account_method_email_subtitle">ទទួលលេខកូដផ្ទៀងផ្ទាត់តាមអ៊ីមែល</string>
-    <string name="account_method_totp_subtitle">ដើម្បីបើក សូមរៀបចំកម្មវិធីផ្ទៀងផ្ទាត់ខាងក្រោម</string>
-    <string name="account_method_passkey_subtitle">ដើម្បីបើក សូមចុះឈ្មោះកូនសោចូលខាងក្រោម</string>
     <string name="domain_add">បន្ថែមដែន</string>
     <string name="domain_add_title">បន្ថែមដែន</string>
     <string name="domain_delegation_add">បន្ថែម</string>
@@ -396,4 +379,10 @@
     <string name="notifprefs_test_none">មិនមានទិសដៅដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
     <string name="notifprefs_transport_fcm">ការជូនដំណឹង Android</string>
     <string name="notifprefs_no_destinations">គ្មានគោលដៅ</string>
+    <string name="account_data_generate">បង្កើតឃ្លាសម្ងាត់</string>
+    <string name="accounts_field_server">URL ម៉ាស៊ីនមេ</string>
+    <string name="accounts_field_token">ថូខឹនចូលប្រើ</string>
+    <string name="accounts_field_topic">ប្រធានបទ</string>
+    <string name="accounts_field_secret">សម្ងាត់ហត្ថលេខា</string>
+    <string name="account_totp_open">បើកក្នុងកម្មវិធីផ្ទៀងផ្ទាត់</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">اطلاعن جون ترجيحون</string>
     <string name="settings_home_accounts">ڳنڍيل اڪائونٽ</string>
     <string name="settings_home_interests">دلچسپيون</string>
-    <string name="account_method_email">اي ميل ڪوڊ</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator ايپ</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">پاس ڪيءَ شامل ڪريو</string>
     <string name="account_passkey_delete_title">پاس ڪيءَ ختم ڪجي؟</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">رستو ختم ڪريو</string>
     <string name="route_delete_title">رستو ختم ڪجي؟</string>
     <string name="route_path">رستو</string>
-    <string name="route_target">ھدف</string>
     <string name="route_method">طريقو</string>
     <string name="route_method_app">ايپ</string>
     <string name="route_method_entity">اينٽٽي</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">دلچسپيون</string>
     <string name="interests_summary_title">خلاصو</string>
     <string name="interests_remove">دلچسپي هٽايو</string>
-    <string name="interests_add">شامل ڪريو</string>
-    <string name="document_save">محفوظ ڪريو</string>
-    <string name="document_saved">محفوظ ٿيو</string>
     <string name="notifprefs_title">اطلاعن جون ترجيحون</string>
     <string name="notifprefs_tab_categories">زمرا</string>
     <string name="notifprefs_tab_topics">موضوع</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">ري سيٽ</string>
     <string name="system_settings_reset_to_default">ڊفالٽ تي ري سيٽ ڪريو</string>
     <string name="system_settings_reset_title">ڊفالٽ تي ري سيٽ ڪجي؟</string>
-    <string name="system_settings_setting_updated">سيٽنگ تازي ڪئي وئي</string>
-    <string name="system_settings_update_failed">سيٽنگ اپڊيٽ ڪرڻ ۾ ناڪام</string>
     <string name="system_setting_apps_install_user">صارفن کي ايپس انسٽال ڪرڻ جي اجازت ڏيو</string>
     <string name="system_setting_auth_email">اي ميل ڪوڊ استعمال ڪندي لاگ ان</string>
     <string name="system_setting_auth_passkey">passkey استعمال ڪندي لاگ ان</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">صارف جي حالت اپڊيٽ ڪرڻ ۾ ناڪام</string>
     <string name="system_users_toast_revoke_failed">سيشن رد ڪرڻ ۾ ناڪام</string>
 
-    <string name="settings_app_label">Mochi ترتيبون</string>
     <string name="settings_home_sessions">سيشنون</string>
     <string name="settings_home_privacy">رازداري جي پاليسي</string>
     <string name="settings_home_rules">قاعدا</string>
     <string name="settings_home_terms">خدمت جون شرطون</string>
-    <string name="account_section_methods">لاگ ان ٿيڻ جا طريقا</string>
     <string name="account_passkeys_empty">ڪا به رجسٽر ٿيل پاسڪي نه آهي.</string>
     <string name="account_passkey_register_title">پاسڪي شامل ڪريو</string>
     <string name="account_passkey_register_message">اوهان جو ڊوائيس تصديق ڪرڻ لاء چوندو. پاسڪي هن ڊوائيس سان منسلڪ آهي ۽ مستقبل جي سائن ان لاء استعمال ٿيندي.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">بحالي جا ڪوڊ ٻيهر ٺاهجن؟</string>
     <string name="account_recovery_regen_message">موجوده ڪوڊ فوراً ڪم ڪرڻ بند ڪندا. نوان محفوظ هنڌ تي رکو.</string>
     <string name="account_recovery_codes_warning">اهي ڪوڊ محفوظ ڪريو — هر هڪ صرف هڪ دفعو استعمال ٿي سگهي ٿو. اهي وري نه ڏيکاريا ويندا.</string>
-    <string name="sessions_section_title">فعال سيشن</string>
     <string name="sessions_title">سيشنون</string>
     <string name="sessions_empty">ڪي به فعال سيشن نه آهن.</string>
     <string name="sessions_revoke_message">هي سيشن استعمال ڪندڙ ڊوائيس سائن آئوٽ ٿي ويندو.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">خلاصو ٻيهر ٺاهيو</string>
     <string name="interests_summary_regenerating">ٻيهر ٺاهي رهيو آهي…</string>
     <string name="interests_summary_empty">پنهنجي پسند جي شين جو خلاصو ٺاهڻ لاء ڪجهه دلچسپيون شامل ڪريو.</string>
-    <string name="interests_weight">وزن</string>
     <string name="interests_search_failed">ڳولا ناڪام ٿي. وري ڪوشش ڪريو.</string>
     <string name="document_privacy_title">رازداري جي پاليسي</string>
     <string name="document_rules_title">قاعدا</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s نصب ٿي رهيو آهي…</string>
     <string name="accounts_field_api_key">API ڪنجي</string>
     <string name="accounts_field_url">سرور URL</string>
-    <string name="accounts_device_placeholder">پش اڪائونٽ ڊوائيس طرفان خودڪار طور تي شامل ٿيندا آهن.</string>
     <string name="accounts_set_default_ai">ڊفالٽ AI طور سيٽ ڪريو</string>
     <string name="accounts_verify_code">ڪوڊ</string>
     <string name="accounts_verify_resend">ڪوڊ ٻيهر موڪليو</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">نالو</string>
     <string name="account_identity_fingerprint">فنگر پرنٽ</string>
     <string name="account_identity_directory_toggle">ٻين کي توهان کي ڊائريڪٽري ۾ ڳولڻ جي اجازت ڏيو</string>
-    <string name="account_method_email_subtitle">اي ميل ذريعي تصديق ڪوڊ حاصل ڪريو</string>
-    <string name="account_method_totp_subtitle">فعال ڪرڻ لاءِ، هيٺ تصديق ڪندڙ سيٽ ڪريو</string>
-    <string name="account_method_passkey_subtitle">فعال ڪرڻ لاءِ، هيٺ پاس ڪي رجسٽر ڪريو</string>
     <string name="domain_add">ڊومين شامل ڪريو</string>
     <string name="domain_add_title">ڊومين شامل ڪريو</string>
     <string name="domain_delegation_add">شامل ڪريو</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">ڪي منزلون ترتيب نه ڏنيون ويون</string>
     <string name="notifprefs_transport_fcm">Android پش</string>
     <string name="notifprefs_no_destinations">ڪا منزل ناهي</string>
+    <string name="account_data_generate">پاس فريز ٺاهيو</string>
+    <string name="accounts_field_server">سرور URL</string>
+    <string name="accounts_field_token">رسائي ٽوڪن</string>
+    <string name="accounts_field_topic">موضوع</string>
+    <string name="accounts_field_secret">دستخط راز</string>
+    <string name="account_totp_open">تصديق ڪندڙ ايپ ۾ کوليو</string>
 </resources>

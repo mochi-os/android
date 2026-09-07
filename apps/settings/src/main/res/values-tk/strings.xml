@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Habarnama saýlamalary</string>
     <string name="settings_home_accounts">Baglanan hasaplar</string>
     <string name="settings_home_interests">Gyzyklanmalar</string>
-    <string name="account_method_email">E-poçta kody</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Autentifikator programma</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Passkey goşmak</string>
     <string name="account_passkey_delete_title">Passkey pozmaly?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Ýoly pozmak</string>
     <string name="route_delete_title">Ýoly pozmaly?</string>
     <string name="route_path">Ýol</string>
-    <string name="route_target">Maksat</string>
     <string name="route_method">Usul</string>
     <string name="route_method_app">Programma</string>
     <string name="route_method_entity">Essas</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Gyzyklanmalar</string>
     <string name="interests_summary_title">Gysgaça</string>
     <string name="interests_remove">Gyzyklanmany aýyr</string>
-    <string name="interests_add">Goşmak</string>
-    <string name="document_save">Saklaýyş</string>
-    <string name="document_saved">Saklandy</string>
     <string name="notifprefs_title">Habarnama saýlamalary</string>
     <string name="notifprefs_tab_categories">Kategoriýalar</string>
     <string name="notifprefs_tab_topics">Mowzuklar</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Täzeden başlat</string>
     <string name="system_settings_reset_to_default">Deslapky baha gaýtar</string>
     <string name="system_settings_reset_title">Deslapky baha gaýtar?</string>
-    <string name="system_settings_setting_updated">Sazlama täzelendi</string>
-    <string name="system_settings_update_failed">Sazlama täzelenmedi</string>
     <string name="system_setting_apps_install_user">Ulanyjylara programma gurnamaga rugsat bermek</string>
     <string name="system_setting_auth_email">E-poçta kody bilen gir</string>
     <string name="system_setting_auth_passkey">Geçiş açary bilen gir</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Ulanyjynyň ýagdaýy täzelenmedi</string>
     <string name="system_users_toast_revoke_failed">Sessiýa ýatyrylmady</string>
 
-    <string name="settings_app_label">Mochi Sazlamalar</string>
     <string name="settings_home_sessions">Sessiýalar</string>
     <string name="settings_home_privacy">Şahsy maglumat syýasaty</string>
     <string name="settings_home_rules">Düzgünler</string>
     <string name="settings_home_terms">Hyzmat şertleri</string>
-    <string name="account_section_methods">Giriş usullary</string>
     <string name="account_passkeys_empty">Hasaba alynan passkeýler ýok.</string>
     <string name="account_passkey_register_title">Passkeý goş</string>
     <string name="account_passkey_register_message">Enjamyňyz tassyklamagy sorar. Passkeý bu enjam bilen baglanyşykly we geljekki girişler üçin ulanylar.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Dikeldiş kodlaryny täzeden döretmelimi?</string>
     <string name="account_recovery_regen_message">Häzirki kodlar derrew işlemegini bes eder. Täzelerini ygtybarly ýerde saklaň.</string>
     <string name="account_recovery_codes_warning">Bu kodlary saklaň — her birini diňe bir gezek ulanyp bolar. Olar gaýtadan görkezilmez.</string>
-    <string name="sessions_section_title">Işjeň sessiýalar</string>
     <string name="sessions_title">Sessiýalar</string>
     <string name="sessions_empty">Işjeň sessiýalar ýok.</string>
     <string name="sessions_revoke_message">Bu sessiýany ulanýan enjam çykyp gider.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Sözmüni täzeden döret</string>
     <string name="interests_summary_regenerating">Täzeden döredilýär…</string>
     <string name="interests_summary_empty">Halaýan zatlaryňyzyň jemini döretmek üçin käbir gyzyklanmalary goşuň.</string>
-    <string name="interests_weight">Agram</string>
     <string name="interests_search_failed">Gözleg şowsuz boldy. Täzeden synanyşyň.</string>
     <string name="document_privacy_title">Şahsy maglumat syýasaty</string>
     <string name="document_rules_title">Düzgünler</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s gurulýar…</string>
     <string name="accounts_field_api_key">API açar</string>
     <string name="accounts_field_url">Server URL</string>
-    <string name="accounts_device_placeholder">Push hasaplary enjam tarapyndan awtomatiki goşulýar.</string>
     <string name="accounts_set_default_ai">Adaty AI hökmünde belläň</string>
     <string name="accounts_verify_code">Kod</string>
     <string name="accounts_verify_resend">Kody täzeden ugrat</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">At</string>
     <string name="account_identity_fingerprint">Barmak yzy</string>
     <string name="account_identity_directory_toggle">Başgalaryň sizi katalogda tapmagyna rugsat bermek</string>
-    <string name="account_method_email_subtitle">Tassyklama kodyny e-poçta arkaly alyň</string>
-    <string name="account_method_totp_subtitle">Işjeňleşdirmek üçin aşakda autentifikator guruň</string>
-    <string name="account_method_passkey_subtitle">Işjeňleşdirmek üçin aşakda giriş açaryny hasaba alyň</string>
     <string name="domain_add">Domen goşmak</string>
     <string name="domain_add_title">Domen goşmak</string>
     <string name="domain_delegation_add">Goşmak</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Mejburyýet ýerleri düzülmedi</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Manzylsyz</string>
+    <string name="account_data_generate">Parol söz düzümini dörediň</string>
+    <string name="accounts_field_server">Server URL</string>
+    <string name="accounts_field_token">Giriş tokeni</string>
+    <string name="accounts_field_topic">Mowzuk</string>
+    <string name="accounts_field_secret">Gol çekiş syry</string>
+    <string name="account_totp_open">Autentifikator programmasynda aç</string>
 </resources>

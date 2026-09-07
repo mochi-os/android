@@ -354,4 +354,8 @@
     <string name="game_empty_title">Dar nėra games</string>
     <string name="game_select_title">Pasirinkite žaidimą</string>
     <string name="game_select_subtitle">Pasirinkite žaidimą šoninėje juostoje arba pradėkite naują.</string>
+    <string name="settings_card">Kortelės stilius</string>
+    <string name="settings_card_theme">Iš temos</string>
+    <string name="settings_card_flat">Plokščia</string>
+    <string name="settings_card_raised">Iškilus</string>
 </resources>

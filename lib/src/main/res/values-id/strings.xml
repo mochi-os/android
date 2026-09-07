@@ -350,4 +350,8 @@
     <string name="game_empty_title">Belum ada permainan</string>
     <string name="game_select_title">Pilih permainan</string>
     <string name="game_select_subtitle">Pilih permainan dari bilah sisi atau mulai yang baru.</string>
+    <string name="settings_card">Gaya kartu</string>
+    <string name="settings_card_theme">Dari tema</string>
+    <string name="settings_card_flat">Datar</string>
+    <string name="settings_card_raised">Terangkat</string>
 </resources>

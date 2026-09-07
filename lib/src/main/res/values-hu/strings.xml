@@ -350,4 +350,8 @@
     <string name="game_empty_title">Még nincsenek játékok</string>
     <string name="game_select_title">Válassz játékot</string>
     <string name="game_select_subtitle">Válassz játékot az oldalsávból, vagy kezdj újat.</string>
+    <string name="settings_card">Kártya stílusa</string>
+    <string name="settings_card_theme">Témából</string>
+    <string name="settings_card_flat">Lapos</string>
+    <string name="settings_card_raised">Kiemelt</string>
 </resources>

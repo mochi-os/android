@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Roghainnean brathan</string>
     <string name="settings_home_accounts">Cunntasan ceangailte</string>
     <string name="settings_home_interests">Ùidhean</string>
-    <string name="account_method_email">Còd puist-d</string>
-    <string name="account_method_passkey">Pasgair</string>
-    <string name="account_method_totp">Aplacaid dhearbhachaidh</string>
     <string name="account_section_passkeys">Pasgairean</string>
     <string name="account_passkey_register">Cuir iuchair-fhaclair ris</string>
     <string name="account_passkey_delete_title">Sguab às iuchair-fhaclair?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Sguab às slighe</string>
     <string name="route_delete_title">Sguab às slighe?</string>
     <string name="route_path">Slighe</string>
-    <string name="route_target">Targaid</string>
     <string name="route_method">Dòigh</string>
     <string name="route_method_app">Aplacaid</string>
     <string name="route_method_entity">Aonad</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Ùidhean</string>
     <string name="interests_summary_title">Geàrr-iomradh</string>
     <string name="interests_remove">Thoir an ùidh air falbh</string>
-    <string name="interests_add">Cuir ris</string>
-    <string name="document_save">Sàbhail</string>
-    <string name="document_saved">Air a shàbhaladh</string>
     <string name="notifprefs_title">Roghainnean brathan</string>
     <string name="notifprefs_tab_categories">Roinnean</string>
     <string name="notifprefs_tab_topics">Cuspairean</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Ath-shuidhich</string>
     <string name="system_settings_reset_to_default">Ath-shuidhich chun a\' bhun-tuiteamais</string>
     <string name="system_settings_reset_title">An ath-shuidhich chun a\' bhun-tuiteamais?</string>
-    <string name="system_settings_setting_updated">Roghainn air ùrachadh</string>
-    <string name="system_settings_update_failed">Cha b\' urrainn an roghainn ùrachadh</string>
     <string name="system_setting_apps_install_user">Ceadaich do chleachdaichean aplacaidean a stàladh</string>
     <string name="system_setting_auth_email">Clàradh le còd puist-d</string>
     <string name="system_setting_auth_passkey">Clàradh le iuchair</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Cha b\' urrainn cor a\' chleachdaiche ùrachadh</string>
     <string name="system_users_toast_revoke_failed">Cha b\' urrainn seisean a chùl-ghairm</string>
 
-    <string name="settings_app_label">Mochi Roghainnean</string>
     <string name="settings_home_sessions">Seiseanan</string>
     <string name="settings_home_privacy">Poileasaidh prìobhaideachd</string>
     <string name="settings_home_rules">Riaghailtean</string>
     <string name="settings_home_terms">Cumhachan seirbheis</string>
-    <string name="account_section_methods">Dòighean log a-steach</string>
     <string name="account_passkeys_empty">Chan eil iuchraichean inntrigidh clàraichte.</string>
     <string name="account_passkey_register_title">Cuir iuchair inntrigidh ris</string>
     <string name="account_passkey_register_message">Iarraidh an t-uidheam agad ort dearbhadh. Tha an iuchair inntrigidh ceangailte ris an uidheam seo agus thèid a cleachdadh airson logaidhean a-steach san àm ri teachd.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Ath-chruthaich còdan ath-bhuannachadh?</string>
     <string name="account_recovery_regen_message">Sguiridh còdan a tha ann a-nis a dh\'obair sa bhad. Sàbhail an fheadhainn ùra ann an àite tèarainte.</string>
     <string name="account_recovery_codes_warning">Sàbhail na còdan seo — chan urrainn dhut gach fear a chleachdadh ach aon turas. Cha nochdar iad a-rithist.</string>
-    <string name="sessions_section_title">Seasanan beò</string>
     <string name="sessions_title">Seiseanan</string>
     <string name="sessions_empty">Chan eil seasanan beò.</string>
     <string name="sessions_revoke_message">Thèid an t-uidheam a tha a\' cleachdadh an t-seasan seo a-mach.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Ath-chruthaich geàrr-chunntas</string>
     <string name="interests_summary_regenerating">A\' ath-chruthachadh…</string>
     <string name="interests_summary_empty">Cuir ris cuid de dh\'ùidhean gus geàrr-chunntas a chruthachadh den rud as toigh leat.</string>
-    <string name="interests_weight">Cuideam</string>
     <string name="interests_search_failed">Dh\'fhàillig an lorg. Feuch ris a-rithist.</string>
     <string name="document_privacy_title">Poileasaidh prìobhaideachd</string>
     <string name="document_rules_title">Riaghailtean</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">A\' stàladh %1$s…</string>
     <string name="accounts_field_api_key">Iuchair API</string>
     <string name="accounts_field_url">URL frithealaiche</string>
-    <string name="accounts_device_placeholder">Thèid cunntasan put a chur ris gu fèin-obrachail leis an uidheam.</string>
     <string name="accounts_set_default_ai">Suidhich mar IF bunaiteach</string>
     <string name="accounts_verify_code">Còd</string>
     <string name="accounts_verify_resend">Cuir an còd a-rithist</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ainm</string>
     <string name="account_identity_fingerprint">Meur-lorg</string>
     <string name="account_identity_directory_toggle">Ceadaich do chàch do lorg san eòlaire</string>
-    <string name="account_method_email_subtitle">Faigh còd dearbhaidh tro phost-d</string>
-    <string name="account_method_totp_subtitle">Suidhich dearbhadair gu h-ìosal gus a chur an comas</string>
-    <string name="account_method_passkey_subtitle">Clàraich iuchair-inntrigidh gu h-ìosal gus a chur an comas</string>
     <string name="domain_add">Cuir àrainn ris</string>
     <string name="domain_add_title">Cuir àrainn ris</string>
     <string name="domain_delegation_add">Cuir ris</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Cha deach cinn-uidhe a chur air dòigh</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Gun chinn-uidhe</string>
+    <string name="account_data_generate">Cruthaich abairt-fhaire</string>
+    <string name="accounts_field_server">URL frithealaiche</string>
+    <string name="accounts_field_token">Tòcan inntrigidh</string>
+    <string name="accounts_field_topic">Cuspair</string>
+    <string name="accounts_field_secret">Rùn soidhnidh</string>
+    <string name="account_totp_open">Fosgail san aplacaid dearbhaidh</string>
 </resources>

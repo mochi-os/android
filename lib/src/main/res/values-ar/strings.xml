@@ -358,4 +358,8 @@
     <string name="game_empty_title">لا توجد ألعاب بعد</string>
     <string name="game_select_title">اختر لعبة</string>
     <string name="game_select_subtitle">اختر لعبة من الشريط الجانبي أو ابدأ لعبة جديدة.</string>
+    <string name="settings_card">نمط البطاقة</string>
+    <string name="settings_card_theme">من السمة</string>
+    <string name="settings_card_flat">مسطح</string>
+    <string name="settings_card_raised">بارز</string>
 </resources>

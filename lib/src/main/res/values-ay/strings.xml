@@ -350,4 +350,8 @@
     <string name="game_empty_title">Janira anatawinaka</string>
     <string name="game_select_title">Mä anatawi ajlliña</string>
     <string name="game_select_subtitle">Thiya chimpuna mä anatawi ajllim jan ukax machaq anatawi qalltam.</string>
+    <string name="settings_card">Cartan saynata</string>
+    <string name="settings_card_theme">Temata</string>
+    <string name="settings_card_flat">Pallalla</string>
+    <string name="settings_card_raised">Aptata</string>
 </resources>

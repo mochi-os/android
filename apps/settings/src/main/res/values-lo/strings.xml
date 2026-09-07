@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">ການຕັ້ງຄ່າການແຈ້ງເຕືອນ</string>
     <string name="settings_home_accounts">ບັນຊີທີ່ເຊື່ອມຕໍ່</string>
     <string name="settings_home_interests">ຄວາມສົນໃຈ</string>
-    <string name="account_method_email">ລະຫັດອີເມວ</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">ແອັບ authenticator</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">ເພີ່ມ passkey</string>
     <string name="account_passkey_delete_title">ລົບ passkey ບໍ?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">ລົບເສັ້ນທາງ</string>
     <string name="route_delete_title">ລົບເສັ້ນທາງບໍ?</string>
     <string name="route_path">ເສັ້ນທາງ</string>
-    <string name="route_target">ເປົ້າໝາຍ</string>
     <string name="route_method">ວິທີ</string>
     <string name="route_method_app">ແອັບ</string>
     <string name="route_method_entity">ເອັນຕິຕີ້</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">ຄວາມສົນໃຈ</string>
     <string name="interests_summary_title">ສະຫຼຸບ</string>
     <string name="interests_remove">ລຶບຄວາມສົນໃຈ</string>
-    <string name="interests_add">ເພີ່ມ</string>
-    <string name="document_save">ບັນທຶກ</string>
-    <string name="document_saved">ບັນທຶກແລ້ວ</string>
     <string name="notifprefs_title">ການຕັ້ງຄ່າການແຈ້ງເຕືອນ</string>
     <string name="notifprefs_tab_categories">ໝວດໝູ່</string>
     <string name="notifprefs_tab_topics">ຫົວຂໍ້</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">ຣີເຊັດ</string>
     <string name="system_settings_reset_to_default">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
     <string name="system_settings_reset_title">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ?</string>
-    <string name="system_settings_setting_updated">ການຕັ້ງຄ່າຖືກອັບເດດແລ້ວ</string>
-    <string name="system_settings_update_failed">ອັບເດດການຕັ້ງຄ່າລົ້ມເຫຼວ</string>
     <string name="system_setting_apps_install_user">ອະນຸຍາດໃຫ້ຜູ້ໃຊ້ຕິດຕັ້ງແອັບ</string>
     <string name="system_setting_auth_email">ເຂົ້າສູ່ລະບົບໂດຍໃຊ້ລະຫັດອີເມວ</string>
     <string name="system_setting_auth_passkey">ເຂົ້າສູ່ລະບົບໂດຍໃຊ້ passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">ອັບເດດສະຖານະຜູ້ໃຊ້ລົ້ມເຫຼວ</string>
     <string name="system_users_toast_revoke_failed">ຖອນເຊດຊັນລົ້ມເຫຼວ</string>
 
-    <string name="settings_app_label">Mochi ການຕັ້ງຄ່າ</string>
     <string name="settings_home_sessions">ເຊດຊັນ</string>
     <string name="settings_home_privacy">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
     <string name="settings_home_rules">ກົດລະບຽບ</string>
     <string name="settings_home_terms">ເງື່ອນໄຂການບໍລິການ</string>
-    <string name="account_section_methods">ວິທີການເຂົ້າສູ່ລະບົບ</string>
     <string name="account_passkeys_empty">ບໍ່ມີ passkey ທີ່ລົງທະບຽນ.</string>
     <string name="account_passkey_register_title">ເພີ່ມ passkey</string>
     <string name="account_passkey_register_message">ອຸປະກອນຂອງທ່ານຈະຮ້ອງຂໍໃຫ້ຢືນຢັນ. Passkey ຖືກຜູກກັບອຸປະກອນນີ້ ແລະ ໃຊ້ສຳລັບການເຂົ້າສູ່ລະບົບໃນອະນາຄົດ.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">ສ້າງລະຫັດກູ້ຄືນໃໝ່?</string>
     <string name="account_recovery_regen_message">ລະຫັດທີ່ມີຢູ່ຈະຢຸດເຮັດວຽກທັນທີ. ບັນທຶກລະຫັດໃໝ່ໄວ້ໃນບ່ອນປອດໄພ.</string>
     <string name="account_recovery_codes_warning">ບັນທຶກລະຫັດເຫຼົ່ານີ້ — ແຕ່ລະອັນສາມາດໃຊ້ໄດ້ພຽງຄັ້ງດຽວ. ຈະບໍ່ສະແດງອີກ.</string>
-    <string name="sessions_section_title">ການກອງປະຊຸມທີ່ໃຊ້ງານ</string>
     <string name="sessions_title">ເຊດຊັນ</string>
     <string name="sessions_empty">ບໍ່ມີການກອງປະຊຸມທີ່ໃຊ້ງານ.</string>
     <string name="sessions_revoke_message">ອຸປະກອນທີ່ໃຊ້ການກອງປະຊຸມນີ້ຈະອອກຈາກລະບົບ.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">ສ້າງສະຫຼຸບໃໝ່</string>
     <string name="interests_summary_regenerating">ກໍາລັງສ້າງໃໝ່…</string>
     <string name="interests_summary_empty">ເພີ່ມຄວາມສົນໃຈບາງຢ່າງເພື່ອສ້າງສະຫຼຸບຂອງສິ່ງທີ່ທ່ານມັກ.</string>
-    <string name="interests_weight">ນໍ້າໜັກ</string>
     <string name="interests_search_failed">ການຄົ້ນຫາລົ້ມເຫລວ. ກະລຸນາລອງໃໝ່.</string>
     <string name="document_privacy_title">ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ</string>
     <string name="document_rules_title">ກົດລະບຽບ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">ກໍາລັງຕິດຕັ້ງ %1$s…</string>
     <string name="accounts_field_api_key">API key</string>
     <string name="accounts_field_url">URL ເຊີບເວີ</string>
-    <string name="accounts_device_placeholder">ບັນຊີ push ຖືກເພີ່ມໂດຍອັດຕະໂນມັດໂດຍອຸປະກອນ.</string>
     <string name="accounts_set_default_ai">ຕັ້ງເປັນ AI ເບື້ອງຕົ້ນ</string>
     <string name="accounts_verify_code">ລະຫັດ</string>
     <string name="accounts_verify_resend">ສົ່ງລະຫັດອີກຄັ້ງ</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">ຊື່</string>
     <string name="account_identity_fingerprint">ລາຍນິ້ວມື</string>
     <string name="account_identity_directory_toggle">ອະນຸຍາດໃຫ້ຄົນອື່ນຊອກຫາທ່ານໃນສາລະບານ</string>
-    <string name="account_method_email_subtitle">ຮັບລະຫັດຢືນຢັນທາງອີເມວ</string>
-    <string name="account_method_totp_subtitle">ເພື່ອເປີດໃຊ້ ຕັ້ງຄ່າຕົວພິສູດຢືນຢັນຂ້າງລຸ່ມ</string>
-    <string name="account_method_passkey_subtitle">ເພື່ອເປີດໃຊ້ ລົງທະບຽນກະແຈຜ່ານຂ້າງລຸ່ມ</string>
     <string name="domain_add">ເພີ່ມໂດເມນ</string>
     <string name="domain_add_title">ເພີ່ມໂດເມນ</string>
     <string name="domain_delegation_add">ເພີ່ມ</string>
@@ -396,4 +379,10 @@
     <string name="notifprefs_test_none">ບໍ່ມີປາຍທາງທີ່ຕັ້ງຄ່າໄວ້</string>
     <string name="notifprefs_transport_fcm">ການແຈ້ງເຕືອນ Android</string>
     <string name="notifprefs_no_destinations">ບໍ່ມີຈຸດໝາຍ</string>
+    <string name="account_data_generate">ສ້າງລະຫັດຜ່ານ</string>
+    <string name="accounts_field_server">URL ເຊີບເວີ</string>
+    <string name="accounts_field_token">ໂທເຄນເຂົ້າເຖິງ</string>
+    <string name="accounts_field_topic">ຫົວຂໍ້</string>
+    <string name="accounts_field_secret">ຄວາມລັບການເຊັນ</string>
+    <string name="account_totp_open">ເປີດໃນແອັບຢືນຢັນຕົວຕົນ</string>
 </resources>

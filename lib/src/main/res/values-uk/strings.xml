@@ -354,4 +354,8 @@
     <string name="game_empty_title">Ігор ще немає</string>
     <string name="game_select_title">Виберіть гру</string>
     <string name="game_select_subtitle">Виберіть гру на бічній панелі або почніть нову.</string>
+    <string name="settings_card">Стиль картки</string>
+    <string name="settings_card_theme">З теми</string>
+    <string name="settings_card_flat">Плаский</string>
+    <string name="settings_card_raised">Піднятий</string>
 </resources>

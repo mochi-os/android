@@ -79,6 +79,7 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemUser
 import org.mochios.settings.api.SystemUserSession
+import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -113,6 +114,7 @@ fun SystemUsersScreen(
     var sessionsTarget by remember { mutableStateOf<SystemUser?>(null) }
     var revokeAllConfirm by remember { mutableStateOf(false) }
 
+    StepUpHost(viewModel.stepUp)
     Scaffold(
         topBar = {
             TopAppBar(
@@ -179,7 +181,7 @@ fun SystemUsersScreen(
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
-                        items(state.users, key = { it.id }) { user ->
+                        items(state.users, key = { it.uid }) { user ->
                             UserCard(
                                 user = user,
                                 isSelf = user.username == state.currentUsername,
@@ -188,7 +190,7 @@ fun SystemUsersScreen(
                                 onToggleStatus = { viewModel.toggleStatus(user) {} },
                                 onSessions = {
                                     sessionsTarget = user
-                                    viewModel.loadSessions(user.id)
+                                    viewModel.loadSessions(user.uid)
                                 },
                             )
                         }
@@ -237,7 +239,7 @@ fun SystemUsersScreen(
             saving = state.mutating,
             onDismiss = { editTarget = null },
             onConfirm = { username, role ->
-                viewModel.update(user.id, username, role) { ok ->
+                viewModel.update(user.uid, username, role) { ok ->
                     if (ok) editTarget = null
                 }
             },
@@ -251,7 +253,7 @@ fun SystemUsersScreen(
             text = stringResource(R.string.system_users_delete_message, user.username),
             confirmText = stringResource(R.string.system_users_delete),
             onConfirm = {
-                viewModel.delete(user.id) { ok ->
+                viewModel.delete(user.uid) { ok ->
                     if (ok) deleteTarget = null
                 }
             },
@@ -264,9 +266,9 @@ fun SystemUsersScreen(
         SessionsDialog(
             user = user,
             sessions = state.sessions,
-            loading = state.sessionsLoadingFor == user.id,
+            loading = state.sessionsLoadingFor == user.uid,
             mutating = state.mutating,
-            onRevoke = { sid -> viewModel.revokeSession(user.id, sid) },
+            onRevoke = { sid -> viewModel.revokeSession(user.uid, sid) },
             onRevokeAll = { revokeAllConfirm = true },
             onClose = {
                 sessionsTarget = null
@@ -284,7 +286,7 @@ fun SystemUsersScreen(
             confirmText = stringResource(R.string.system_users_revoke_all),
             onConfirm = {
                 revokeAllConfirm = false
-                if (user != null) viewModel.revokeSession(user.id, null)
+                if (user != null) viewModel.revokeSession(user.uid, null)
             },
             confirmEnabled = !state.mutating,
             dismissText = stringResource(MochiR.string.common_cancel),

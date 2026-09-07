@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferans notifikasyon</string>
     <string name="settings_home_accounts">Kont konekte</string>
     <string name="settings_home_interests">Enterè</string>
-    <string name="account_method_email">Kòd imèl</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">App otantifikatè</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Ajoute passkey</string>
     <string name="account_passkey_delete_title">Efase passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Efase wout</string>
     <string name="route_delete_title">Efase wout?</string>
     <string name="route_path">Chemen</string>
-    <string name="route_target">Sib</string>
     <string name="route_method">Metòd</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Antite</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Enterè</string>
     <string name="interests_summary_title">Rezime</string>
     <string name="interests_remove">Retire enterè</string>
-    <string name="interests_add">Ajoute</string>
-    <string name="document_save">Sove</string>
-    <string name="document_saved">Sove</string>
     <string name="notifprefs_title">Preferans notifikasyon</string>
     <string name="notifprefs_tab_categories">Kategori</string>
     <string name="notifprefs_tab_topics">Sijè</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Reset</string>
     <string name="system_settings_reset_to_default">Reset nan default</string>
     <string name="system_settings_reset_title">Reset nan default?</string>
-    <string name="system_settings_setting_updated">Paramèt mete ajou</string>
-    <string name="system_settings_update_failed">Echwe pou mete ajou paramèt</string>
     <string name="system_setting_apps_install_user">Pèmèt itilizatè enstale app</string>
     <string name="system_setting_auth_email">Konekte ak kòd imèl</string>
     <string name="system_setting_auth_passkey">Konekte ak passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Echwe pou mete ajou estati itilizatè</string>
     <string name="system_users_toast_revoke_failed">Echwe pou revoke sesyon</string>
 
-    <string name="settings_app_label">Mochi Paramèt</string>
     <string name="settings_home_sessions">Sesyon yo</string>
     <string name="settings_home_privacy">Politik konfidansyalite</string>
     <string name="settings_home_rules">Règ</string>
     <string name="settings_home_terms">Kondisyon sèvis</string>
-    <string name="account_section_methods">Metòd koneksyon</string>
     <string name="account_passkeys_empty">Pa gen passkey ki anrejistre.</string>
     <string name="account_passkey_register_title">Ajoute passkey</string>
     <string name="account_passkey_register_message">Aparèy ou a ap mande w pou konfime. Passkey la mare ak aparèy sa a epi yo itilize pou koneksyon nan lavni.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Rejenere kòd rekiperasyon?</string>
     <string name="account_recovery_regen_message">Kòd ki egziste yo ap sispann travay imedyatman. Sove nouvo yo nan yon kote ki an sekirite.</string>
     <string name="account_recovery_codes_warning">Sove kòd sa yo — chak kapab itilize yon sèl fwa. Yo pap montre ankò.</string>
-    <string name="sessions_section_title">Sesyon aktif</string>
     <string name="sessions_title">Sesyon yo</string>
     <string name="sessions_empty">Pa gen sesyon aktif.</string>
     <string name="sessions_revoke_message">Aparèy ki ap itilize sesyon sa a ap deconnte.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Rejenere rezime</string>
     <string name="interests_summary_regenerating">Ap rejenere…</string>
     <string name="interests_summary_empty">Ajoute kèk enterè pou kreye yon rezime sa ou renmen yo.</string>
-    <string name="interests_weight">Pwa</string>
     <string name="interests_search_failed">Rechèch echwe. Tanpri eseye ankò.</string>
     <string name="document_privacy_title">Politik konfidansyalite</string>
     <string name="document_rules_title">Règ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Enstale %1$s…</string>
     <string name="accounts_field_api_key">Kle API</string>
     <string name="accounts_field_url">URL sèvè</string>
-    <string name="accounts_device_placeholder">Kont push yo ajoute otomatikman pa aparèy la.</string>
     <string name="accounts_set_default_ai">Mete kòm AI default</string>
     <string name="accounts_verify_code">Kòd</string>
     <string name="accounts_verify_resend">Voye kòd ankò</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Non</string>
     <string name="account_identity_fingerprint">Anprent dijital</string>
     <string name="account_identity_directory_toggle">Pèmèt lòt moun jwenn ou nan anyè</string>
-    <string name="account_method_email_subtitle">Resevwa yon kòd verifikasyon pa imèl</string>
-    <string name="account_method_totp_subtitle">Konfigire yon otantifikatè anba a pou aktive</string>
-    <string name="account_method_passkey_subtitle">Anrejistre yon kle aksè anba a pou aktive</string>
     <string name="domain_add">Ajoute domèn</string>
     <string name="domain_add_title">Ajoute domèn</string>
     <string name="domain_delegation_add">Ajoute</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">Pa gen destinasyon konfigire</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Pa gen destinasyon</string>
+    <string name="account_data_generate">Jenere fraz sekrè</string>
+    <string name="accounts_field_server">URL sèvè</string>
+    <string name="accounts_field_token">Jeton aksè</string>
+    <string name="accounts_field_topic">Sijè</string>
+    <string name="accounts_field_secret">Sekrè siyati</string>
+    <string name="account_totp_open">Louvri nan aplikasyon otantifikasyon an</string>
 </resources>

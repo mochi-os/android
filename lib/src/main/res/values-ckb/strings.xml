@@ -350,4 +350,8 @@
     <string name="game_empty_title">هێشتا هیچ یارییەک نییە</string>
     <string name="game_select_title">یارییەک هەڵبژێرە</string>
     <string name="game_select_subtitle">لە لاتەنیشتەکەوە یارییەک هەڵبژێرە یان یارییەکی نوێ دەست پێ بکە.</string>
+    <string name="settings_card">شێوازی کارت</string>
+    <string name="settings_card_theme">لە ڕووکارەوە</string>
+    <string name="settings_card_flat">تەخت</string>
+    <string name="settings_card_raised">بەرز</string>
 </resources>

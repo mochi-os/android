@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Параметры паведамленняў</string>
     <string name="settings_home_accounts">Падключаныя ўліковыя запісы</string>
     <string name="settings_home_interests">Інтарэсы</string>
-    <string name="account_method_email">Код па эл. пошце</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Дадатак аўтэнтыфікатара</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Дадаць ключ доступу</string>
     <string name="account_passkey_delete_title">Выдаліць ключ доступу?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Выдаліць маршрут</string>
     <string name="route_delete_title">Выдаліць маршрут?</string>
     <string name="route_path">Шлях</string>
-    <string name="route_target">Мэта</string>
     <string name="route_method">Метад</string>
     <string name="route_method_app">Дадатак</string>
     <string name="route_method_entity">Сутнасць</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Інтарэсы</string>
     <string name="interests_summary_title">Зводка</string>
     <string name="interests_remove">Выдаліць цікавасць</string>
-    <string name="interests_add">Дадаць</string>
-    <string name="document_save">Захаваць</string>
-    <string name="document_saved">Захавана</string>
     <string name="notifprefs_title">Параметры паведамленняў</string>
     <string name="notifprefs_tab_categories">Катэгорыі</string>
     <string name="notifprefs_tab_topics">Тэмы</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Скід</string>
     <string name="system_settings_reset_to_default">Скінуць да змаўчання</string>
     <string name="system_settings_reset_title">Скінуць да змаўчання?</string>
-    <string name="system_settings_setting_updated">Налада абноўлена</string>
-    <string name="system_settings_update_failed">Не ўдалося абнавіць наладу</string>
     <string name="system_setting_apps_install_user">Дазволіць карыстальнікам усталёўваць дадаткі</string>
     <string name="system_setting_auth_email">Уваход праз код па эл. пошце</string>
     <string name="system_setting_auth_passkey">Уваход праз passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Не ўдалося абнавіць статус карыстальніка</string>
     <string name="system_users_toast_revoke_failed">Не ўдалося адклікаць сесію</string>
 
-    <string name="settings_app_label">Mochi Налады</string>
     <string name="settings_home_sessions">Сеансы</string>
     <string name="settings_home_privacy">Палітыка прыватнасці</string>
     <string name="settings_home_rules">Правілы</string>
     <string name="settings_home_terms">Умовы выкарыстання</string>
-    <string name="account_section_methods">Спосабы ўваходу</string>
     <string name="account_passkeys_empty">Няма зарэгістраваных ключоў доступу.</string>
     <string name="account_passkey_register_title">Дадаць ключ доступу</string>
     <string name="account_passkey_register_message">Ваша прылада папросіць пацвердзіць. Ключ доступу прывязаны да гэтай прылады і выкарыстоўваецца для будучых уваходаў.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Перастварыць коды аднаўлення?</string>
     <string name="account_recovery_regen_message">Існуючыя коды адразу перастануць працаваць. Захавайце новыя ў бяспечным месцы.</string>
     <string name="account_recovery_codes_warning">Захавайце гэтыя коды — кожны можна выкарыстаць толькі адзін раз. Яны больш не будуць паказаны.</string>
-    <string name="sessions_section_title">Актыўныя сеансы</string>
     <string name="sessions_title">Сеансы</string>
     <string name="sessions_empty">Няма актыўных сеансаў.</string>
     <string name="sessions_revoke_message">Прылада, якая выкарыстоўвае гэты сеанс, будзе выйсці.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Перастварыць рэзюмэ</string>
     <string name="interests_summary_regenerating">Стварэнне…</string>
     <string name="interests_summary_empty">Дадайце некалькі цікавасцяў, каб згенераваць рэзюмэ таго, што вам падабаецца.</string>
-    <string name="interests_weight">Вага</string>
     <string name="interests_search_failed">Пошук не атрымаўся. Паспрабуйце яшчэ.</string>
     <string name="document_privacy_title">Палітыка прыватнасці</string>
     <string name="document_rules_title">Правілы</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Усталёўка %1$s…</string>
     <string name="accounts_field_api_key">Ключ API</string>
     <string name="accounts_field_url">URL сервера</string>
-    <string name="accounts_device_placeholder">Push уліковыя запісы дадаюцца аўтаматычна прыладай.</string>
     <string name="accounts_set_default_ai">Зрабіць ШІ па змаўчанні</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Адправіць код яшчэ раз</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Назва</string>
     <string name="account_identity_fingerprint">Адбітак пальца</string>
     <string name="account_identity_directory_toggle">Дазволіць іншым знаходзіць вас у каталозе</string>
-    <string name="account_method_email_subtitle">Атрымаць код пацверджання па электроннай пошце</string>
-    <string name="account_method_totp_subtitle">Каб уключыць, наладзьце аўтэнтыфікатар ніжэй</string>
-    <string name="account_method_passkey_subtitle">Каб уключыць, зарэгіструйце ключ доступу ніжэй</string>
     <string name="domain_add">Дадаць дамен</string>
     <string name="domain_add_title">Дадаць дамен</string>
     <string name="domain_delegation_add">Дадаць</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Прызначэнні не настроены</string>
     <string name="notifprefs_transport_fcm">Push для Android</string>
     <string name="notifprefs_no_destinations">Няма пунктаў прызначэння</string>
+    <string name="account_data_generate">Згенераваць кодавую фразу</string>
+    <string name="accounts_field_server">URL сервера</string>
+    <string name="accounts_field_token">Токен доступу</string>
+    <string name="accounts_field_topic">Тэма</string>
+    <string name="accounts_field_secret">Сакрэт подпісу</string>
+    <string name="account_totp_open">Адкрыць у праграме-аўтэнтыфікатары</string>
 </resources>

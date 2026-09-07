@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">اطلاعات کی ترجیحات</string>
     <string name="settings_home_accounts">کنیکٹ شدہ اکاؤنٹس</string>
     <string name="settings_home_interests">دلچسپیاں</string>
-    <string name="account_method_email">ای میل کوڈ</string>
-    <string name="account_method_passkey">passkey</string>
-    <string name="account_method_totp">Authenticator ایپ</string>
     <string name="account_section_passkeys">passkeys</string>
     <string name="account_passkey_register">Passkey شامل کریں</string>
     <string name="account_passkey_delete_title">Passkey حذف کریں؟</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">روٹ حذف کریں</string>
     <string name="route_delete_title">روٹ حذف کریں؟</string>
     <string name="route_path">path</string>
-    <string name="route_target">ٹارگٹ</string>
     <string name="route_method">طریقہ</string>
     <string name="route_method_app">ایپ</string>
     <string name="route_method_entity">اینٹٹی</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">دلچسپیاں</string>
     <string name="interests_summary_title">خلاصہ</string>
     <string name="interests_remove">دلچسپی ہٹائیں</string>
-    <string name="interests_add">شامل کریں</string>
-    <string name="document_save">محفوظ کریں</string>
-    <string name="document_saved">محفوظ ہو گیا</string>
     <string name="notifprefs_title">اطلاعات کی ترجیحات</string>
     <string name="notifprefs_tab_categories">زمرے</string>
     <string name="notifprefs_tab_topics">ٹاپکس</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">reset کریں</string>
     <string name="system_settings_reset_to_default">ڈیفالٹ پر reset کریں</string>
     <string name="system_settings_reset_title">ڈیفالٹ پر reset کریں؟</string>
-    <string name="system_settings_setting_updated">سیٹنگ اپ ڈیٹ ہو گئی</string>
-    <string name="system_settings_update_failed">ترتیب اپڈیٹ کرنے میں ناکامی</string>
     <string name="system_setting_apps_install_user">صارفین کو ایپس انسٹال کرنے کی اجازت دیں</string>
     <string name="system_setting_auth_email">ای میل کوڈ کے ذریعے لاگ ان کریں</string>
     <string name="system_setting_auth_passkey">passkey کے ذریعے لاگ ان کریں</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">صارف کا اسٹیٹس اپڈیٹ کرنے میں ناکامی</string>
     <string name="system_users_toast_revoke_failed">سیشن منسوخ کرنے میں ناکامی</string>
 
-    <string name="settings_app_label">Mochi ترتیبات</string>
     <string name="settings_home_sessions">سیشنز</string>
     <string name="settings_home_privacy">رازداری کی پالیسی</string>
     <string name="settings_home_rules">اصول</string>
     <string name="settings_home_terms">خدمات کی شرائط</string>
-    <string name="account_section_methods">لاگ ان کے طریقے</string>
     <string name="account_passkeys_empty">کوئی پاس کیز رجسٹرڈ نہیں ہیں۔</string>
     <string name="account_passkey_register_title">پاس کی شامل کریں</string>
     <string name="account_passkey_register_message">آپ کا آلہ تصدیق کرنے کو کہے گا۔ پاس کی اس آلے سے منسلک ہے اور مستقبل کے سائن انز کے لیے استعمال ہوگی۔</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">بازیابی کوڈز دوبارہ پیدا کریں؟</string>
     <string name="account_recovery_regen_message">موجودہ کوڈز فوری طور پر کام کرنا بند کر دیں گے۔ نئے کوڈز محفوظ جگہ پر محفوظ کریں۔</string>
     <string name="account_recovery_codes_warning">یہ کوڈز محفوظ کریں — ہر ایک صرف ایک بار استعمال ہو سکتا ہے۔ یہ دوبارہ نہیں دکھائے جائیں گے۔</string>
-    <string name="sessions_section_title">فعال سیشنز</string>
     <string name="sessions_title">سیشنز</string>
     <string name="sessions_empty">کوئی فعال سیشنز نہیں۔</string>
     <string name="sessions_revoke_message">اس سیشن کا استعمال کرنے والا آلہ سائن آؤٹ ہو جائے گا۔</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">خلاصہ دوبارہ پیدا کریں</string>
     <string name="interests_summary_regenerating">دوبارہ پیدا ہو رہا ہے…</string>
     <string name="interests_summary_empty">اپنی پسند کی چیزوں کا خلاصہ بنانے کے لیے کچھ دلچسپیاں شامل کریں۔</string>
-    <string name="interests_weight">وزن</string>
     <string name="interests_search_failed">تلاش ناکام۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="document_privacy_title">رازداری کی پالیسی</string>
     <string name="document_rules_title">اصول</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s نصب ہو رہا ہے…</string>
     <string name="accounts_field_api_key">API کلید</string>
     <string name="accounts_field_url">سرور URL</string>
-    <string name="accounts_device_placeholder">پش اکاؤنٹس آلے کے ذریعہ خود بخود شامل کیے جاتے ہیں۔</string>
     <string name="accounts_set_default_ai">ڈیفالٹ AI کے طور پر سیٹ کریں</string>
     <string name="accounts_verify_code">کوڈ</string>
     <string name="accounts_verify_resend">کوڈ دوبارہ بھیجیں</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">نام</string>
     <string name="account_identity_fingerprint">فنگر پرنٹ</string>
     <string name="account_identity_directory_toggle">دوسروں کو ڈائرکٹری میں آپ کو تلاش کرنے کی اجازت دیں</string>
-    <string name="account_method_email_subtitle">ای میل کے ذریعے تصدیقی کوڈ حاصل کریں</string>
-    <string name="account_method_totp_subtitle">فعال کرنے کے لیے، نیچے ایک تصدیق کنندہ ترتیب دیں</string>
-    <string name="account_method_passkey_subtitle">فعال کرنے کے لیے، نیچے ایک پاس کی رجسٹر کریں</string>
     <string name="domain_add">ڈومین شامل کریں</string>
     <string name="domain_add_title">ڈومین شامل کریں</string>
     <string name="domain_delegation_add">شامل کریں</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">کوئی destinations configure نہیں ہیں</string>
     <string name="notifprefs_transport_fcm">Android پش</string>
     <string name="notifprefs_no_destinations">کوئی منزل نہیں</string>
+    <string name="account_data_generate">پاس فریز بنائیں</string>
+    <string name="accounts_field_server">سرور URL</string>
+    <string name="accounts_field_token">رسائی ٹوکن</string>
+    <string name="accounts_field_topic">موضوع</string>
+    <string name="accounts_field_secret">دستخط کا راز</string>
+    <string name="account_totp_open">تصدیق کنندہ ایپ میں کھولیں</string>
 </resources>

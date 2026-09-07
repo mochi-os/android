@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Подешавања обавештења</string>
     <string name="settings_home_accounts">Повезани налози</string>
     <string name="settings_home_interests">Интересовања</string>
-    <string name="account_method_email">Код е-поште</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator апликација</string>
     <string name="account_section_passkeys">Passkey-еви</string>
     <string name="account_passkey_register">Додај passkey</string>
     <string name="account_passkey_delete_title">Обрисати passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Обриши руту</string>
     <string name="route_delete_title">Обрисати руту?</string>
     <string name="route_path">Путања</string>
-    <string name="route_target">Циљ</string>
     <string name="route_method">Метода</string>
     <string name="route_method_app">Апликација</string>
     <string name="route_method_entity">Ентитет</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Интересовања</string>
     <string name="interests_summary_title">Сажетак</string>
     <string name="interests_remove">Уклони интересовање</string>
-    <string name="interests_add">Додај</string>
-    <string name="document_save">Сачувај</string>
-    <string name="document_saved">Сачувано</string>
     <string name="notifprefs_title">Подешавања обавештења</string>
     <string name="notifprefs_tab_categories">Категорије</string>
     <string name="notifprefs_tab_topics">Теме</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Ресетуј</string>
     <string name="system_settings_reset_to_default">Ресетуј на подразумевано</string>
     <string name="system_settings_reset_title">Ресетовати на подразумевано?</string>
-    <string name="system_settings_setting_updated">Поставка ажурирана</string>
-    <string name="system_settings_update_failed">Ажурирање подешавања није успело</string>
     <string name="system_setting_apps_install_user">Дозволи корисницима да инсталирају апликације</string>
     <string name="system_setting_auth_email">Пријава помоћу кода е-поште</string>
     <string name="system_setting_auth_passkey">Пријава помоћу приступног кључа</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Ажурирање статуса корисника није успело</string>
     <string name="system_users_toast_revoke_failed">Опозивање сесије није успело</string>
 
-    <string name="settings_app_label">Mochi подешавања</string>
     <string name="settings_home_sessions">Сесије</string>
     <string name="settings_home_privacy">Политика приватности</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Услови коришћења</string>
-    <string name="account_section_methods">Начини пријаве</string>
     <string name="account_passkeys_empty">Нема регистрованих приступних кључева.</string>
     <string name="account_passkey_register_title">Додај приступни кључ</string>
     <string name="account_passkey_register_message">Ваш уређај ће вас замолити да потврдите. Приступни кључ је везан за овај уређај и користи се за будуће пријаве.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Регенерисати кодове за опоравак?</string>
     <string name="account_recovery_regen_message">Постојећи кодови одмах престају да раде. Сачувајте нове на безбедном месту.</string>
     <string name="account_recovery_codes_warning">Сачувајте ове кодове — сваки се може користити само једном. Неће бити поново приказани.</string>
-    <string name="sessions_section_title">Активне сесије</string>
     <string name="sessions_title">Сесије</string>
     <string name="sessions_empty">Нема активних сесија.</string>
     <string name="sessions_revoke_message">Уређај који користи ову сесију биће одјављен.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Регенериши резиме</string>
     <string name="interests_summary_regenerating">Регенерисање…</string>
     <string name="interests_summary_empty">Додајте нека интересовања да бисте генерисали резиме онога што волите.</string>
-    <string name="interests_weight">Тежина</string>
     <string name="interests_search_failed">Претрага није успела. Покушајте поново.</string>
     <string name="document_privacy_title">Политика приватности</string>
     <string name="document_rules_title">Правила</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Инсталирање %1$s…</string>
     <string name="accounts_field_api_key">API кључ</string>
     <string name="accounts_field_url">URL сервера</string>
-    <string name="accounts_device_placeholder">Push налози се аутоматски додају са уређаја.</string>
     <string name="accounts_set_default_ai">Постави као подразумевану VI</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Поново пошаљи код</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Име</string>
     <string name="account_identity_fingerprint">Отисак прста</string>
     <string name="account_identity_directory_toggle">Дозволи другима да вас пронађу у директоријуму</string>
-    <string name="account_method_email_subtitle">Примите код за потврду путем е-поште</string>
-    <string name="account_method_totp_subtitle">Да бисте омогућили, подесите аутентификатор испод</string>
-    <string name="account_method_passkey_subtitle">Да бисте омогућили, региструјте приступни кључ испод</string>
     <string name="domain_add">Додај домен</string>
     <string name="domain_add_title">Додај домен</string>
     <string name="domain_delegation_add">Додај</string>
@@ -400,4 +383,10 @@
     <string name="notifprefs_test_none">Нема конфигурисаних одредишта</string>
     <string name="notifprefs_transport_fcm">Push за Android</string>
     <string name="notifprefs_no_destinations">Нема одредишта</string>
+    <string name="account_data_generate">Генериши приступну фразу</string>
+    <string name="accounts_field_server">URL сервера</string>
+    <string name="accounts_field_token">Токен приступа</string>
+    <string name="accounts_field_topic">Тема</string>
+    <string name="accounts_field_secret">Тајна за потписивање</string>
+    <string name="account_totp_open">Отвори у апликацији за аутентификацију</string>
 </resources>

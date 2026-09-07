@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Bildirim tercihleri</string>
     <string name="settings_home_accounts">Bağlı hesaplar</string>
     <string name="settings_home_interests">İlgi alanları</string>
-    <string name="account_method_email">E-posta kodu</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator uygulaması</string>
     <string name="account_section_passkeys">Passkey\'ler</string>
     <string name="account_passkey_register">Passkey ekle</string>
     <string name="account_passkey_delete_title">Passkey silinsin mi?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Rotayı sil</string>
     <string name="route_delete_title">Rota silinsin mi?</string>
     <string name="route_path">Yol</string>
-    <string name="route_target">Hedef</string>
     <string name="route_method">Yöntem</string>
     <string name="route_method_app">Uygulama</string>
     <string name="route_method_entity">Varlık</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">İlgi alanları</string>
     <string name="interests_summary_title">Özet</string>
     <string name="interests_remove">İlgiyi kaldır</string>
-    <string name="interests_add">Ekle</string>
-    <string name="document_save">Kaydet</string>
-    <string name="document_saved">Kaydedildi</string>
     <string name="notifprefs_title">Bildirim tercihleri</string>
     <string name="notifprefs_tab_categories">Kategoriler</string>
     <string name="notifprefs_tab_topics">Konular</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Sıfırla</string>
     <string name="system_settings_reset_to_default">Varsayılana sıfırla</string>
     <string name="system_settings_reset_title">Varsayılana sıfırlansın mı?</string>
-    <string name="system_settings_setting_updated">Ayar güncellendi</string>
-    <string name="system_settings_update_failed">Ayar güncellenemedi</string>
     <string name="system_setting_apps_install_user">Kullanıcıların uygulama yüklemesine izin ver</string>
     <string name="system_setting_auth_email">E-posta koduyla oturum açın</string>
     <string name="system_setting_auth_passkey">Geçiş anahtarıyla oturum açın</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Kullanıcı durumu güncellenemedi</string>
     <string name="system_users_toast_revoke_failed">Oturum iptal edilemedi</string>
 
-    <string name="settings_app_label">Mochi Ayarlar</string>
     <string name="settings_home_sessions">Oturumlar</string>
     <string name="settings_home_privacy">Gizlilik politikası</string>
     <string name="settings_home_rules">Kurallar</string>
     <string name="settings_home_terms">Hizmet koşulları</string>
-    <string name="account_section_methods">Giriş yöntemleri</string>
     <string name="account_passkeys_empty">Kayıtlı geçiş anahtarı yok.</string>
     <string name="account_passkey_register_title">Geçiş anahtarı ekle</string>
     <string name="account_passkey_register_message">Cihazınız onaylamanızı isteyecek. Geçiş anahtarı bu cihaza bağlıdır ve gelecekteki girişlerde kullanılır.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Kurtarma kodları yeniden oluşturulsun mu?</string>
     <string name="account_recovery_regen_message">Mevcut kodlar hemen çalışmayı bırakır. Yenilerini güvenli bir yere kaydedin.</string>
     <string name="account_recovery_codes_warning">Bu kodları kaydedin — her biri yalnızca bir kez kullanılabilir. Tekrar gösterilmeyecekler.</string>
-    <string name="sessions_section_title">Aktif oturumlar</string>
     <string name="sessions_title">Oturumlar</string>
     <string name="sessions_empty">Aktif oturum yok.</string>
     <string name="sessions_revoke_message">Bu oturumu kullanan cihazın oturumu kapatılacak.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Özeti yeniden oluştur</string>
     <string name="interests_summary_regenerating">Yeniden oluşturuluyor…</string>
     <string name="interests_summary_empty">İlgilendiğiniz şeylerin özetini oluşturmak için bazı ilgi alanları ekleyin.</string>
-    <string name="interests_weight">Ağırlık</string>
     <string name="interests_search_failed">Arama başarısız oldu. Lütfen tekrar deneyin.</string>
     <string name="document_privacy_title">Gizlilik politikası</string>
     <string name="document_rules_title">Kurallar</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s yükleniyor…</string>
     <string name="accounts_field_api_key">API anahtarı</string>
     <string name="accounts_field_url">Sunucu URL\'si</string>
-    <string name="accounts_device_placeholder">Anlık bildirim hesapları cihaz tarafından otomatik olarak eklenir.</string>
     <string name="accounts_set_default_ai">Varsayılan YZ olarak ayarla</string>
     <string name="accounts_verify_code">Kod</string>
     <string name="accounts_verify_resend">Kodu yeniden gönder</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ad</string>
     <string name="account_identity_fingerprint">Parmak izi</string>
     <string name="account_identity_directory_toggle">Başkalarının sizi dizinde bulmasına izin ver</string>
-    <string name="account_method_email_subtitle">E-posta ile doğrulama kodu alın</string>
-    <string name="account_method_totp_subtitle">Etkinleştirmek için aşağıda bir kimlik doğrulayıcı ayarlayın</string>
-    <string name="account_method_passkey_subtitle">Etkinleştirmek için aşağıda bir geçiş anahtarı kaydedin</string>
     <string name="domain_add">Alan adı ekle</string>
     <string name="domain_add_title">Alan adı ekle</string>
     <string name="domain_delegation_add">Ekle</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Hedef yapılandırılmamış</string>
     <string name="notifprefs_transport_fcm">Android anlık bildirim</string>
     <string name="notifprefs_no_destinations">Hedef yok</string>
+    <string name="account_data_generate">Parola cümlesi oluştur</string>
+    <string name="accounts_field_server">Sunucu URL\'si</string>
+    <string name="accounts_field_token">Erişim belirteci</string>
+    <string name="accounts_field_topic">Konu</string>
+    <string name="accounts_field_secret">İmzalama sırrı</string>
+    <string name="account_totp_open">Kimlik doğrulayıcı uygulamasında aç</string>
 </resources>

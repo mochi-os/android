@@ -350,4 +350,8 @@
     <string name="game_empty_title">Heniz oýunlar ýok</string>
     <string name="game_select_title">Oýun saýlaň</string>
     <string name="game_select_subtitle">Gapdal panelden oýun saýlaň ýa-da täze oýun başlaň.</string>
+    <string name="settings_card">Kart stili</string>
+    <string name="settings_card_theme">Temadan</string>
+    <string name="settings_card_flat">Tekiz</string>
+    <string name="settings_card_raised">Galdyrylan</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Értesítési beállítások</string>
     <string name="settings_home_accounts">Csatlakoztatott fiókok</string>
     <string name="settings_home_interests">Érdeklődések</string>
-    <string name="account_method_email">E-mail kód</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Hitelesítő alkalmazás</string>
     <string name="account_section_passkeys">Passkey-ek</string>
     <string name="account_passkey_register">Belépési kulcs hozzáadása</string>
     <string name="account_passkey_delete_title">Törli a belépési kulcsot?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Útvonal törlése</string>
     <string name="route_delete_title">Törli az útvonalat?</string>
     <string name="route_path">Útvonal</string>
-    <string name="route_target">Cél</string>
     <string name="route_method">Módszer</string>
     <string name="route_method_app">Alkalmazás</string>
     <string name="route_method_entity">Entitás</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Érdeklődések</string>
     <string name="interests_summary_title">Összegzés</string>
     <string name="interests_remove">Érdeklődés eltávolítása</string>
-    <string name="interests_add">Hozzáadás</string>
-    <string name="document_save">Mentés</string>
-    <string name="document_saved">Mentve</string>
     <string name="notifprefs_title">Értesítési beállítások</string>
     <string name="notifprefs_tab_categories">Kategóriák</string>
     <string name="notifprefs_tab_topics">Témák</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Visszaállítás</string>
     <string name="system_settings_reset_to_default">Visszaállítás alapértelmezettre</string>
     <string name="system_settings_reset_title">Visszaállítja alapértelmezettre?</string>
-    <string name="system_settings_setting_updated">Beállítás frissítve</string>
-    <string name="system_settings_update_failed">Nem sikerült frissíteni a beállítást</string>
     <string name="system_setting_apps_install_user">A felhasználók telepíthetnek alkalmazásokat</string>
     <string name="system_setting_auth_email">Bejelentkezés e-mail kóddal</string>
     <string name="system_setting_auth_passkey">Bejelentkezés passkey-jel</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Nem sikerült frissíteni a felhasználó állapotát</string>
     <string name="system_users_toast_revoke_failed">Nem sikerült visszavonni a munkamenetet</string>
 
-    <string name="settings_app_label">Mochi Beállítások</string>
     <string name="settings_home_sessions">Munkamenetek</string>
     <string name="settings_home_privacy">Adatvédelmi szabályzat</string>
     <string name="settings_home_rules">Szabályok</string>
     <string name="settings_home_terms">Szolgáltatási feltételek</string>
-    <string name="account_section_methods">Bejelentkezési módok</string>
     <string name="account_passkeys_empty">Nincsenek regisztrált hozzáférési kulcsok.</string>
     <string name="account_passkey_register_title">Hozzáférési kulcs hozzáadása</string>
     <string name="account_passkey_register_message">Az eszköz megerősítést kér. A hozzáférési kulcs ehhez az eszközhöz van kötve, és a jövőbeli bejelentkezésekhez használható.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Újragenerálja a helyreállítási kódokat?</string>
     <string name="account_recovery_regen_message">A meglévő kódok azonnal megszűnnek működni. Mentse el az újakat biztonságos helyre.</string>
     <string name="account_recovery_codes_warning">Mentse el ezeket a kódokat — mindegyik csak egyszer használható. Nem jelennek meg újra.</string>
-    <string name="sessions_section_title">Aktív munkamenetek</string>
     <string name="sessions_title">Munkamenetek</string>
     <string name="sessions_empty">Nincsenek aktív munkamenetek.</string>
     <string name="sessions_revoke_message">Az ezt a munkamenetet használó eszközből kijelentkezik.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Összefoglaló újragenerálása</string>
     <string name="interests_summary_regenerating">Újragenerálás…</string>
     <string name="interests_summary_empty">Adjon hozzá érdeklődési köröket az érdeklődésének összefoglalójához.</string>
-    <string name="interests_weight">Súly</string>
     <string name="interests_search_failed">A keresés sikertelen. Próbálja újra.</string>
     <string name="document_privacy_title">Adatvédelmi szabályzat</string>
     <string name="document_rules_title">Szabályok</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s telepítése…</string>
     <string name="accounts_field_api_key">API-kulcs</string>
     <string name="accounts_field_url">Szerver URL</string>
-    <string name="accounts_device_placeholder">A push-fiókokat az eszköz automatikusan hozzáadja.</string>
     <string name="accounts_set_default_ai">Beállítás alapértelmezett MI-ként</string>
     <string name="accounts_verify_code">Kód</string>
     <string name="accounts_verify_resend">Kód újraküldése</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Név</string>
     <string name="account_identity_fingerprint">Ujjlenyomat</string>
     <string name="account_identity_directory_toggle">Mások megtalálhatnak a címtárban</string>
-    <string name="account_method_email_subtitle">Ellenőrző kód fogadása e-mailben</string>
-    <string name="account_method_totp_subtitle">Az engedélyezéshez állíts be hitelesítőt alább</string>
-    <string name="account_method_passkey_subtitle">Az engedélyezéshez regisztrálj hozzáférési kulcsot alább</string>
     <string name="domain_add">Tartomány hozzáadása</string>
     <string name="domain_add_title">Tartomány hozzáadása</string>
     <string name="domain_delegation_add">Hozzáadás</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Nincsenek célok beállítva</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Nincsenek célok</string>
+    <string name="account_data_generate">Jelmondat létrehozása</string>
+    <string name="accounts_field_server">Szerver URL</string>
+    <string name="accounts_field_token">Hozzáférési token</string>
+    <string name="accounts_field_topic">Téma</string>
+    <string name="accounts_field_secret">Aláírási titok</string>
+    <string name="account_totp_open">Megnyitás hitelesítő alkalmazásban</string>
 </resources>

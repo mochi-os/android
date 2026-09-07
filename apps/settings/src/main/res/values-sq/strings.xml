@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferencat e njoftimeve</string>
     <string name="settings_home_accounts">Llogaritë e lidhura</string>
     <string name="settings_home_interests">Interesat</string>
-    <string name="account_method_email">Kodi me email</string>
-    <string name="account_method_passkey">Kyç</string>
-    <string name="account_method_totp">Aplikacion autentikues</string>
     <string name="account_section_passkeys">Kyçet</string>
     <string name="account_passkey_register">Shto passkey</string>
     <string name="account_passkey_delete_title">Të fshihet passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Fshi rrugën</string>
     <string name="route_delete_title">Të fshihet rruga?</string>
     <string name="route_path">Shtegu</string>
-    <string name="route_target">Objektivi</string>
     <string name="route_method">Metoda</string>
     <string name="route_method_app">Aplikacioni</string>
     <string name="route_method_entity">Entiteti</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interesat</string>
     <string name="interests_summary_title">Përmbledhja</string>
     <string name="interests_remove">Hiq interesin</string>
-    <string name="interests_add">Shto</string>
-    <string name="document_save">Ruaj</string>
-    <string name="document_saved">I ruajtur</string>
     <string name="notifprefs_title">Preferencat e njoftimeve</string>
     <string name="notifprefs_tab_categories">Kategoritë</string>
     <string name="notifprefs_tab_topics">Temat</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Rivendos</string>
     <string name="system_settings_reset_to_default">Rivendos në parazgjedhje</string>
     <string name="system_settings_reset_title">Të rivendoset në parazgjedhje?</string>
-    <string name="system_settings_setting_updated">Cilësimi u përditësua</string>
-    <string name="system_settings_update_failed">Përditësimi i cilësimit dështoi</string>
     <string name="system_setting_apps_install_user">Lejo përdoruesit të instalojnë aplikacione</string>
     <string name="system_setting_auth_email">Kyçu duke përdorur kodin me email</string>
     <string name="system_setting_auth_passkey">Kyçu duke përdorur passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Përditësimi i statusit të përdoruesit dështoi</string>
     <string name="system_users_toast_revoke_failed">Revokimi i sesionit dështoi</string>
 
-    <string name="settings_app_label">Mochi Cilësimet</string>
     <string name="settings_home_sessions">Sesionet</string>
     <string name="settings_home_privacy">Politika e privatësisë</string>
     <string name="settings_home_rules">Rregullat</string>
     <string name="settings_home_terms">Kushtet e shërbimit</string>
-    <string name="account_section_methods">Metodat e hyrjes</string>
     <string name="account_passkeys_empty">Nuk ka çelësa kalimi të regjistruar.</string>
     <string name="account_passkey_register_title">Shto çelës kalimi</string>
     <string name="account_passkey_register_message">Pajisja juaj do t\'ju kërkojë të konfirmoni. Çelësi i kalimit është i lidhur me këtë pajisje dhe përdoret për hyrjet e ardhshme.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Rigjenerimi i kodeve të rikuperimit?</string>
     <string name="account_recovery_regen_message">Kodet ekzistuese do të ndalojnë së funksionuari menjëherë. Ruani të rejat në një vend të sigurt.</string>
     <string name="account_recovery_codes_warning">Ruani këto kode — secili mund të përdoret vetëm një herë. Nuk do të shfaqen sërish.</string>
-    <string name="sessions_section_title">Sesionet aktive</string>
     <string name="sessions_title">Sesionet</string>
     <string name="sessions_empty">Asnjë sesion aktiv.</string>
     <string name="sessions_revoke_message">Pajisja që përdor këtë sesion do të dalë.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Rigjenero përmbledhjen</string>
     <string name="interests_summary_regenerating">Rigjenerim…</string>
     <string name="interests_summary_empty">Shtoni disa interesa për të gjeneruar një përmbledhje të asaj që ju pëlqen.</string>
-    <string name="interests_weight">Pesha</string>
     <string name="interests_search_failed">Kërkimi dështoi. Ju lutem provoni përsëri.</string>
     <string name="document_privacy_title">Politika e privatësisë</string>
     <string name="document_rules_title">Rregullat</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Instalimi i %1$s…</string>
     <string name="accounts_field_api_key">Çelësi API</string>
     <string name="accounts_field_url">URL e serverit</string>
-    <string name="accounts_device_placeholder">Llogaritë push shtohen automatikisht nga pajisja.</string>
     <string name="accounts_set_default_ai">Caktoje si AI të paracaktuar</string>
     <string name="accounts_verify_code">Kodi</string>
     <string name="accounts_verify_resend">Ridërgo kodin</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Emri</string>
     <string name="account_identity_fingerprint">Gjurma</string>
     <string name="account_identity_directory_toggle">Lejo të tjerët të të gjejnë në direktori</string>
-    <string name="account_method_email_subtitle">Merr një kod verifikimi me email</string>
-    <string name="account_method_totp_subtitle">Për ta aktivizuar, konfiguro një vërtetues më poshtë</string>
-    <string name="account_method_passkey_subtitle">Për ta aktivizuar, regjistro një çelës hyrjeje më poshtë</string>
     <string name="domain_add">Shto domenin</string>
     <string name="domain_add_title">Shto domenin</string>
     <string name="domain_delegation_add">Shto</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Asnjë destinacion i konfiguruar</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Asnjë destinacion</string>
+    <string name="account_data_generate">Gjenero fjalëkalim</string>
+    <string name="accounts_field_server">URL e serverit</string>
+    <string name="accounts_field_token">Token aksesi</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Sekreti i nënshkrimit</string>
+    <string name="account_totp_open">Hap në aplikacionin e vërtetimit</string>
 </resources>

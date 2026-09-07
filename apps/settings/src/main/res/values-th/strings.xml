@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">ค่ากำหนดการแจ้งเตือน</string>
     <string name="settings_home_accounts">บัญชีที่เชื่อมต่อ</string>
     <string name="settings_home_interests">ความสนใจ</string>
-    <string name="account_method_email">รหัสอีเมล</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">แอป Authenticator</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">เพิ่ม Passkey</string>
     <string name="account_passkey_delete_title">ลบ Passkey หรือไม่?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">ลบเส้นทาง</string>
     <string name="route_delete_title">ลบเส้นทางหรือไม่?</string>
     <string name="route_path">Path</string>
-    <string name="route_target">เป้าหมาย</string>
     <string name="route_method">วิธี</string>
     <string name="route_method_app">แอป</string>
     <string name="route_method_entity">Entity</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">ความสนใจ</string>
     <string name="interests_summary_title">สรุป</string>
     <string name="interests_remove">ลบความสนใจ</string>
-    <string name="interests_add">เพิ่ม</string>
-    <string name="document_save">บันทึก</string>
-    <string name="document_saved">บันทึกแล้ว</string>
     <string name="notifprefs_title">ค่ากำหนดการแจ้งเตือน</string>
     <string name="notifprefs_tab_categories">หมวดหมู่</string>
     <string name="notifprefs_tab_topics">หัวข้อ</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">รีเซ็ต</string>
     <string name="system_settings_reset_to_default">รีเซ็ตเป็นค่าเริ่มต้น</string>
     <string name="system_settings_reset_title">รีเซ็ตเป็นค่าเริ่มต้น?</string>
-    <string name="system_settings_setting_updated">อัปเดตการตั้งค่าแล้ว</string>
-    <string name="system_settings_update_failed">ไม่สามารถอัปเดตการตั้งค่าได้</string>
     <string name="system_setting_apps_install_user">อนุญาตให้ผู้ใช้ติดตั้งแอป</string>
     <string name="system_setting_auth_email">เข้าสู่ระบบด้วยรหัสจากอีเมล</string>
     <string name="system_setting_auth_passkey">เข้าสู่ระบบด้วย passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">ไม่สามารถอัปเดตสถานะผู้ใช้ได้</string>
     <string name="system_users_toast_revoke_failed">ไม่สามารถเพิกถอน session ได้</string>
 
-    <string name="settings_app_label">Mochi การตั้งค่า</string>
     <string name="settings_home_sessions">เซสชัน</string>
     <string name="settings_home_privacy">นโยบายความเป็นส่วนตัว</string>
     <string name="settings_home_rules">กฎ</string>
     <string name="settings_home_terms">ข้อกำหนดในการให้บริการ</string>
-    <string name="account_section_methods">วิธีการเข้าสู่ระบบ</string>
     <string name="account_passkeys_empty">ไม่มีคีย์ผ่านที่ลงทะเบียน</string>
     <string name="account_passkey_register_title">เพิ่มคีย์ผ่าน</string>
     <string name="account_passkey_register_message">อุปกรณ์ของคุณจะขอให้คุณยืนยัน คีย์ผ่านจะผูกกับอุปกรณ์นี้และใช้สำหรับการเข้าสู่ระบบในอนาคต</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">สร้างรหัสกู้คืนใหม่?</string>
     <string name="account_recovery_regen_message">รหัสที่มีอยู่จะหยุดทำงานทันที บันทึกรหัสใหม่ในที่ที่ปลอดภัย</string>
     <string name="account_recovery_codes_warning">บันทึกรหัสเหล่านี้ — แต่ละรหัสใช้ได้เพียงครั้งเดียว จะไม่แสดงอีก</string>
-    <string name="sessions_section_title">เซสชันที่ใช้งานอยู่</string>
     <string name="sessions_title">เซสชัน</string>
     <string name="sessions_empty">ไม่มีเซสชันที่ใช้งานอยู่</string>
     <string name="sessions_revoke_message">อุปกรณ์ที่ใช้เซสชันนี้จะถูกออกจากระบบ</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">สร้างสรุปใหม่</string>
     <string name="interests_summary_regenerating">กำลังสร้างใหม่…</string>
     <string name="interests_summary_empty">เพิ่มความสนใจเพื่อสร้างสรุปสิ่งที่คุณชอบ</string>
-    <string name="interests_weight">น้ำหนัก</string>
     <string name="interests_search_failed">การค้นหาล้มเหลว โปรดลองอีกครั้ง</string>
     <string name="document_privacy_title">นโยบายความเป็นส่วนตัว</string>
     <string name="document_rules_title">กฎ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">กำลังติดตั้ง %1$s…</string>
     <string name="accounts_field_api_key">คีย์ API</string>
     <string name="accounts_field_url">URL เซิร์ฟเวอร์</string>
-    <string name="accounts_device_placeholder">บัญชีพุชจะถูกเพิ่มโดยอุปกรณ์โดยอัตโนมัติ</string>
     <string name="accounts_set_default_ai">ตั้งเป็น AI เริ่มต้น</string>
     <string name="accounts_verify_code">รหัส</string>
     <string name="accounts_verify_resend">ส่งรหัสอีกครั้ง</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">ชื่อ</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">อนุญาตให้ผู้อื่นค้นหาคุณในไดเรกทอรี</string>
-    <string name="account_method_email_subtitle">รับรหัสยืนยันทางอีเมล</string>
-    <string name="account_method_totp_subtitle">ตั้งค่าตัวรับรองความถูกต้องด้านล่างเพื่อเปิดใช้งาน</string>
-    <string name="account_method_passkey_subtitle">ลงทะเบียนพาสคีย์ด้านล่างเพื่อเปิดใช้งาน</string>
     <string name="domain_add">เพิ่มโดเมน</string>
     <string name="domain_add_title">เพิ่มโดเมน</string>
     <string name="domain_delegation_add">เพิ่ม</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">ยังไม่ได้ตั้งค่าปลายทาง</string>
     <string name="notifprefs_transport_fcm">พุช Android</string>
     <string name="notifprefs_no_destinations">ไม่มีปลายทาง</string>
+    <string name="account_data_generate">สร้างวลีรหัสผ่าน</string>
+    <string name="accounts_field_server">URL เซิร์ฟเวอร์</string>
+    <string name="accounts_field_token">โทเค็นการเข้าถึง</string>
+    <string name="accounts_field_topic">หัวข้อ</string>
+    <string name="accounts_field_secret">ความลับสำหรับลงนาม</string>
+    <string name="account_totp_open">เปิดในแอปยืนยันตัวตน</string>
 </resources>

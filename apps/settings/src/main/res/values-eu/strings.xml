@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Jakinarazpenen hobespenak</string>
     <string name="settings_home_accounts">Konektatutako kontuak</string>
     <string name="settings_home_interests">Interesak</string>
-    <string name="account_method_email">Posta elektronikoko kodea</string>
-    <string name="account_method_passkey">Passkey-a</string>
-    <string name="account_method_totp">Autentifikatzaile aplikazioa</string>
     <string name="account_section_passkeys">Passkey-ak</string>
     <string name="account_passkey_register">Gehitu pasakodea</string>
     <string name="account_passkey_delete_title">Ezabatu pasakodea?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Ezabatu bidea</string>
     <string name="route_delete_title">Ezabatu bidea?</string>
     <string name="route_path">Bidea</string>
-    <string name="route_target">Helburua</string>
     <string name="route_method">Metodoa</string>
     <string name="route_method_app">Aplikazioa</string>
     <string name="route_method_entity">Entitatea</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interesak</string>
     <string name="interests_summary_title">Laburpena</string>
     <string name="interests_remove">Kendu interesa</string>
-    <string name="interests_add">Gehitu</string>
-    <string name="document_save">Gorde</string>
-    <string name="document_saved">Gordeta</string>
     <string name="notifprefs_title">Jakinarazpenen hobespenak</string>
     <string name="notifprefs_tab_categories">Kategoriak</string>
     <string name="notifprefs_tab_topics">Gaiak</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Berrezarri</string>
     <string name="system_settings_reset_to_default">Berrezarri lehenetsira</string>
     <string name="system_settings_reset_title">Lehenetsira berrezarri?</string>
-    <string name="system_settings_setting_updated">Ezarpena eguneratu da</string>
-    <string name="system_settings_update_failed">Ezin izan da ezarpena eguneratu</string>
     <string name="system_setting_apps_install_user">Baimendu erabiltzaileei aplikazioak instalatzea</string>
     <string name="system_setting_auth_email">Hasi saioa posta-kodearekin</string>
     <string name="system_setting_auth_passkey">Hasi saioa pasakodearekin</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Ezin izan da erabiltzailearen egoera eguneratu</string>
     <string name="system_users_toast_revoke_failed">Ezin izan da saioa baliogabetu</string>
 
-    <string name="settings_app_label">Mochi Ezarpenak</string>
     <string name="settings_home_sessions">Saioak</string>
     <string name="settings_home_privacy">Pribatutasun-politika</string>
     <string name="settings_home_rules">Arauak</string>
     <string name="settings_home_terms">Zerbitzuaren baldintzak</string>
-    <string name="account_section_methods">Saio-hasteko metodoak</string>
     <string name="account_passkeys_empty">Ez dago erregistratutako gako-pasarik.</string>
     <string name="account_passkey_register_title">Gako-pasea gehitu</string>
     <string name="account_passkey_register_message">Zure gailuak baieztatzeko eskatuko dizu. Gako-pasea gailu honetara lotuta dago eta etorkizuneko saio-hasteetarako erabiliko da.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Sortu berriro berreskuratze-kodeak?</string>
     <string name="account_recovery_regen_message">Lehendik dauden kodeek berehala funtzionatzeari utziko diote. Gorde berriak leku seguruan.</string>
     <string name="account_recovery_codes_warning">Gorde kode hauek — bakoitza behin bakarrik erabil daiteke. Ez dira berriro erakutsiko.</string>
-    <string name="sessions_section_title">Saio aktiboak</string>
     <string name="sessions_title">Saioak</string>
     <string name="sessions_empty">Ez dago saio aktiborik.</string>
     <string name="sessions_revoke_message">Saio hau erabiltzen duen gailuak saioa amaituko du.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Berriro sortu laburpena</string>
     <string name="interests_summary_regenerating">Berriro sortzen…</string>
     <string name="interests_summary_empty">Gehitu interes batzuk gustuko dituzunaren laburpena sortzeko.</string>
-    <string name="interests_weight">Pisua</string>
     <string name="interests_search_failed">Bilaketa huts egin du. Saiatu berriro.</string>
     <string name="document_privacy_title">Pribatutasun-politika</string>
     <string name="document_rules_title">Arauak</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s instalatzen…</string>
     <string name="accounts_field_api_key">API gakoa</string>
     <string name="accounts_field_url">Zerbitzariaren URLa</string>
-    <string name="accounts_device_placeholder">Push kontuak automatikoki gehitzen ditu gailuak.</string>
     <string name="accounts_set_default_ai">Ezarri AA lehenetsi gisa</string>
     <string name="accounts_verify_code">Kodea</string>
     <string name="accounts_verify_resend">Bidali berriro kodea</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Izena</string>
     <string name="account_identity_fingerprint">Hatz-marka</string>
     <string name="account_identity_directory_toggle">Baimendu besteek zu direktorioan aurkitzea</string>
-    <string name="account_method_email_subtitle">Jaso egiaztapen-kodea posta elektronikoz</string>
-    <string name="account_method_totp_subtitle">Gaitzeko, konfiguratu autentifikatzaile bat behean</string>
-    <string name="account_method_passkey_subtitle">Gaitzeko, erregistratu sarbide-gako bat behean</string>
     <string name="domain_add">Gehitu domeinua</string>
     <string name="domain_add_title">Gehitu domeinua</string>
     <string name="domain_delegation_add">Gehitu</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Ez da helbururik konfiguratu</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Helmugarik ez</string>
+    <string name="account_data_generate">Sortu pasahitz-esaldia</string>
+    <string name="accounts_field_server">Zerbitzariaren URLa</string>
+    <string name="accounts_field_token">Sarbide-tokena</string>
+    <string name="accounts_field_topic">Gaia</string>
+    <string name="accounts_field_secret">Sinaduraren sekretua</string>
+    <string name="account_totp_open">Ireki autentifikazio-aplikazioan</string>
 </resources>

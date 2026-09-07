@@ -359,4 +359,8 @@
     <string name="game_empty_title">Dim gemau eto</string>
     <string name="game_select_title">Dewiswch gêm</string>
     <string name="game_select_subtitle">Dewiswch gêm o\'r bar ochr neu dechreuwch un newydd.</string>
+    <string name="settings_card">Arddull cerdyn</string>
+    <string name="settings_card_theme">O\'r thema</string>
+    <string name="settings_card_flat">Gwastad</string>
+    <string name="settings_card_raised">Wedi codi</string>
 </resources>

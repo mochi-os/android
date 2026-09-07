@@ -350,4 +350,8 @@
     <string name="game_empty_title">ಇನ್ನೂ ಯಾವುದೇ ಆಟಗಳಿಲ್ಲ</string>
     <string name="game_select_title">ಆಟವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="game_select_subtitle">ಸೈಡ್‌ಬಾರ್‌ನಿಂದ ಆಟವನ್ನು ಆರಿಸಿ ಅಥವಾ ಹೊಸ ಆಟ ಪ್ರಾರಂಭಿಸಿ.</string>
+    <string name="settings_card">ಕಾರ್ಡ್ ಶೈಲಿ</string>
+    <string name="settings_card_theme">ಥೀಮ್‌ನಿಂದ</string>
+    <string name="settings_card_flat">ಸಪಾಟು</string>
+    <string name="settings_card_raised">ಎತ್ತರಿಸಿದ</string>
 </resources>

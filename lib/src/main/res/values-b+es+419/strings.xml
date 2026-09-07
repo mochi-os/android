@@ -350,4 +350,8 @@
     <string name="game_empty_title">Aún no hay partidas</string>
     <string name="game_select_title">Selecciona una partida</string>
     <string name="game_select_subtitle">Elige una partida en la barra lateral o empieza una nueva.</string>
+    <string name="settings_card">Estilo de tarjeta</string>
+    <string name="settings_card_theme">Del tema</string>
+    <string name="settings_card_flat">Plana</string>
+    <string name="settings_card_raised">Elevada</string>
 </resources>

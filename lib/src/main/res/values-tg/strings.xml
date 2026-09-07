@@ -350,4 +350,8 @@
     <string name="game_empty_title">То ҳол ягон бозӣ нест</string>
     <string name="game_select_title">Бозӣ интихоб кунед</string>
     <string name="game_select_subtitle">Аз навори канорӣ бозӣ интихоб кунед ё бозии нав оғоз кунед.</string>
+    <string name="settings_card">Сабки корт</string>
+    <string name="settings_card_theme">Аз мавзӯъ</string>
+    <string name="settings_card_flat">Ҳамвор</string>
+    <string name="settings_card_raised">Бардошта</string>
 </resources>

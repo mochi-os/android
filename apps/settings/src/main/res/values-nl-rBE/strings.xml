@@ -7,9 +7,6 @@
     <string name="settings_home_display">Weergave</string>
     <string name="settings_home_accounts">Gekoppelde accounts</string>
     <string name="settings_home_interests">Interesses</string>
-    <string name="account_method_email">E-mailcode</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator-app</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Passkey toevoegen</string>
     <string name="account_passkey_delete_title">Passkey verwijderen?</string>
@@ -46,7 +43,6 @@
     <string name="route_delete">Route verwijderen</string>
     <string name="route_delete_title">Route verwijderen?</string>
     <string name="route_path">Pad</string>
-    <string name="route_target">Doel</string>
     <string name="route_method">Methode</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entiteit</string>
@@ -57,9 +53,6 @@
     <string name="interests_title">Interesses</string>
     <string name="interests_summary_title">Samenvatting</string>
     <string name="interests_remove">Interesse verwijderen</string>
-    <string name="interests_add">Toevoegen</string>
-    <string name="document_save">Opslaan</string>
-    <string name="document_saved">Opgeslagen</string>
     <string name="notifprefs_title">Meldingsvoorkeuren</string>
     <string name="notifprefs_tab_categories">Categorieën</string>
     <string name="notifprefs_tab_topics">Onderwerpen</string>
@@ -138,8 +131,6 @@
     <string name="system_settings_reset">Resetten</string>
     <string name="system_settings_reset_to_default">Terugzetten naar standaard</string>
     <string name="system_settings_reset_title">Terugzetten naar standaard?</string>
-    <string name="system_settings_setting_updated">Instelling bijgewerkt</string>
-    <string name="system_settings_update_failed">Instelling bijwerken mislukt</string>
     <string name="system_setting_apps_install_user">Gebruikers toestaan apps te installeren</string>
     <string name="system_setting_auth_email">Inloggen met e-mailcode</string>
     <string name="system_setting_auth_passkey">Inloggen met passkey</string>
@@ -210,12 +201,10 @@
     <string name="system_users_toast_status_failed">Gebruikersstatus bijwerken mislukt</string>
     <string name="system_users_toast_revoke_failed">Sessie intrekken mislukt</string>
 
-    <string name="settings_app_label">Mochi-instellingen</string>
     <string name="settings_home_notification_prefs">Meldingsvoorkeuren</string>
     <string name="settings_home_privacy">Privacybeleid</string>
     <string name="settings_home_rules">Regels</string>
     <string name="settings_home_terms">Servicevoorwaarden</string>
-    <string name="account_section_methods">Aanmeldmethoden</string>
     <string name="account_passkeys_empty">Geen passkeys geregistreerd.</string>
     <string name="account_passkey_register_title">Passkey toevoegen</string>
     <string name="account_passkey_register_message">Je toestel vraagt je om te bevestigen. De passkey is gebonden aan dit toestel en wordt gebruikt voor toekomstige aanmeldingen.</string>
@@ -234,7 +223,6 @@
     <string name="account_recovery_regen_title">Herstelcodes opnieuw genereren?</string>
     <string name="account_recovery_regen_message">Bestaande codes werken onmiddellijk niet meer. Bewaar de nieuwe op een veilige plaats.</string>
     <string name="account_recovery_codes_warning">Bewaar deze codes — elke code kan slechts één keer gebruikt worden. Ze worden niet opnieuw getoond.</string>
-    <string name="sessions_section_title">Actieve sessies</string>
     <string name="sessions_empty">Geen actieve sessies.</string>
     <string name="sessions_revoke_message">Het toestel dat deze sessie gebruikt, wordt afgemeld.</string>
     <string name="account_oauth_link_title">Een provider koppelen</string>
@@ -249,7 +237,6 @@
     <string name="interests_summary_regenerate">Samenvatting opnieuw genereren</string>
     <string name="interests_summary_regenerating">Bezig met opnieuw genereren…</string>
     <string name="interests_summary_empty">Voeg enkele interesses toe om een samenvatting te genereren van waar je in geïnteresseerd bent.</string>
-    <string name="interests_weight">Gewicht</string>
     <string name="interests_search_failed">Zoekopdracht mislukt. Probeer opnieuw.</string>
     <string name="document_privacy_title">Privacybeleid</string>
     <string name="document_rules_title">Regels</string>
@@ -259,7 +246,6 @@
     <string name="system_status_installing">Bezig met installeren van %1$s…</string>
     <string name="accounts_field_api_key">API-sleutel</string>
     <string name="accounts_field_url">Server-URL</string>
-    <string name="accounts_device_placeholder">Push-accounts worden automatisch toegevoegd door het toestel.</string>
     <string name="accounts_set_default_ai">Instellen als standaard-AI</string>
     <string name="accounts_verify_code">Code</string>
     <string name="accounts_verify_resend">Code opnieuw versturen</string>
@@ -287,9 +273,6 @@
     <string name="account_identity_username">Gebruikersnaam</string>
     <string name="account_identity_name">Naam</string>
     <string name="account_identity_directory_toggle">Anderen toestaan u te vinden in de directory</string>
-    <string name="account_method_email_subtitle">Ontvang een verificatiecode per e-mail</string>
-    <string name="account_method_totp_subtitle">Stel hieronder een authenticator in om in te schakelen</string>
-    <string name="account_method_passkey_subtitle">Registreer hieronder een passkey om in te schakelen</string>
     <string name="sessions_title">Sessies</string>
     <string name="settings_home_sessions">Sessies</string>
     <string name="domain_add">Domein toevoegen</string>
@@ -391,4 +374,5 @@
     <string name="notifprefs_test_none">Geen bestemmingen geconfigureerd</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Geen bestemmingen</string>
+    <string name="account_data_generate">Wachtwoordzin genereren</string>
 </resources>

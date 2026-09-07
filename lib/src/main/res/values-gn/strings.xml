@@ -350,4 +350,8 @@
     <string name="game_empty_title">Ndaipóri ñembosarái gueteri</string>
     <string name="game_select_title">Eiporavo peteĩ ñembosarái</string>
     <string name="game_select_subtitle">Eiporavo peteĩ ñembosarái yke rendápe térã eñepyrũ peteĩ pyahu.</string>
+    <string name="settings_card">Kuatia\'i ysaja</string>
+    <string name="settings_card_theme">Téma guive</string>
+    <string name="settings_card_flat">Ipe</string>
+    <string name="settings_card_raised">Yvate</string>
 </resources>

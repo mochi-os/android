@@ -351,4 +351,8 @@
     <string name="game_empty_title">Aucune partie pour le moment</string>
     <string name="game_select_title">Sélectionnez une partie</string>
     <string name="game_select_subtitle">Choisissez une partie dans la barre latérale ou lancez-en une nouvelle.</string>
+    <string name="settings_card">Style de carte</string>
+    <string name="settings_card_theme">Du thème</string>
+    <string name="settings_card_flat">Plat</string>
+    <string name="settings_card_raised">Surélevé</string>
 </resources>

@@ -351,4 +351,8 @@
     <string name="game_empty_title">Ancora nessuna partita</string>
     <string name="game_select_title">Seleziona una partita</string>
     <string name="game_select_subtitle">Scegli una partita dalla barra laterale o iniziane una nuova.</string>
+    <string name="settings_card">Stile della scheda</string>
+    <string name="settings_card_theme">Dal tema</string>
+    <string name="settings_card_flat">Piatta</string>
+    <string name="settings_card_raised">Rialzata</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Mapendeleo ya arifa</string>
     <string name="settings_home_accounts">Akaunti zilizounganishwa</string>
     <string name="settings_home_interests">Mivuto</string>
-    <string name="account_method_email">Msimbo wa barua pepe</string>
-    <string name="account_method_passkey">Pasiki</string>
-    <string name="account_method_totp">Programu ya mthibitishaji</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">Ongeza ufunguo wa kupita</string>
     <string name="account_passkey_delete_title">Futa ufunguo wa kupita?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Futa njia</string>
     <string name="route_delete_title">Futa njia?</string>
     <string name="route_path">Njia</string>
-    <string name="route_target">Lengo</string>
     <string name="route_method">Mbinu</string>
     <string name="route_method_app">Programu</string>
     <string name="route_method_entity">Kitengo</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Mivuto</string>
     <string name="interests_summary_title">Muhtasari</string>
     <string name="interests_remove">Ondoa shauku</string>
-    <string name="interests_add">Ongeza</string>
-    <string name="document_save">Hifadhi</string>
-    <string name="document_saved">Imehifadhiwa</string>
     <string name="notifprefs_title">Mapendeleo ya arifa</string>
     <string name="notifprefs_tab_categories">Kategoria</string>
     <string name="notifprefs_tab_topics">Mada</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Weka upya</string>
     <string name="system_settings_reset_to_default">Weka upya kwa chaguo-msingi</string>
     <string name="system_settings_reset_title">Weka upya kwa chaguo-msingi?</string>
-    <string name="system_settings_setting_updated">Mpangilio umesasishwa</string>
-    <string name="system_settings_update_failed">Imeshindwa kusasisha mpangilio</string>
     <string name="system_setting_apps_install_user">Ruhusu watumiaji kusakinisha programu</string>
     <string name="system_setting_auth_email">Ingia kwa kutumia msimbo wa barua pepe</string>
     <string name="system_setting_auth_passkey">Ingia kwa kutumia passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Imeshindwa kusasisha hali ya mtumiaji</string>
     <string name="system_users_toast_revoke_failed">Imeshindwa kufuta kipindi</string>
 
-    <string name="settings_app_label">Mochi Mipangilio</string>
     <string name="settings_home_sessions">Vipindi</string>
     <string name="settings_home_privacy">Sera ya faragha</string>
     <string name="settings_home_rules">Sheria</string>
     <string name="settings_home_terms">Masharti ya huduma</string>
-    <string name="account_section_methods">Mbinu za kuingia</string>
     <string name="account_passkeys_empty">Hakuna passkey zilizosajiliwa.</string>
     <string name="account_passkey_register_title">Ongeza passkey</string>
     <string name="account_passkey_register_message">Kifaa chako kitakuomba uthibitishe. Passkey imefungwa kwenye kifaa hiki na hutumika kwa kuingia kwa siku zijazo.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Zalisha tena misimbo ya kurejesha?</string>
     <string name="account_recovery_regen_message">Misimbo iliyopo itaacha kufanya kazi mara moja. Hifadhi mpya mahali salama.</string>
     <string name="account_recovery_codes_warning">Hifadhi misimbo hii — kila mmoja unaweza kutumika mara moja tu. Haitaonyeshwa tena.</string>
-    <string name="sessions_section_title">Vipindi vya kazi vilivyo hai</string>
     <string name="sessions_title">Vipindi</string>
     <string name="sessions_empty">Hakuna vipindi vya kazi vilivyo hai.</string>
     <string name="sessions_revoke_message">Kifaa kinachotumia kipindi hiki kitatoka.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Zalisha tena muhtasari</string>
     <string name="interests_summary_regenerating">Inazalisha tena…</string>
     <string name="interests_summary_empty">Ongeza baadhi ya maslahi ili kuzalisha muhtasari wa unachopenda.</string>
-    <string name="interests_weight">Uzito</string>
     <string name="interests_search_failed">Utafutaji umeshindwa. Tafadhali jaribu tena.</string>
     <string name="document_privacy_title">Sera ya faragha</string>
     <string name="document_rules_title">Sheria</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Inasakinisha %1$s…</string>
     <string name="accounts_field_api_key">Ufunguo wa API</string>
     <string name="accounts_field_url">URL ya seva</string>
-    <string name="accounts_device_placeholder">Akaunti za push huongezwa kiotomatiki na kifaa.</string>
     <string name="accounts_set_default_ai">Weka kama AI chaguomsingi</string>
     <string name="accounts_verify_code">Msimbo</string>
     <string name="accounts_verify_resend">Tuma upya msimbo</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Jina</string>
     <string name="account_identity_fingerprint">Alama ya kidole</string>
     <string name="account_identity_directory_toggle">Ruhusu wengine wakupate kwenye saraka</string>
-    <string name="account_method_email_subtitle">Pokea msimbo wa uthibitishaji kwa barua pepe</string>
-    <string name="account_method_totp_subtitle">Ili kuwasha, sanidi kithibitishaji hapa chini</string>
-    <string name="account_method_passkey_subtitle">Ili kuwasha, sajili ufunguo wa kuingia hapa chini</string>
     <string name="domain_add">Ongeza kikoa</string>
     <string name="domain_add_title">Ongeza kikoa</string>
     <string name="domain_delegation_add">Ongeza</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Hakuna marudio yaliyosanidiwa</string>
     <string name="notifprefs_transport_fcm">Push ya Android</string>
     <string name="notifprefs_no_destinations">Hakuna mahali pa kufikia</string>
+    <string name="account_data_generate">Tengeneza neno la siri</string>
+    <string name="accounts_field_server">URL ya seva</string>
+    <string name="accounts_field_token">Tokeni ya ufikiaji</string>
+    <string name="accounts_field_topic">Mada</string>
+    <string name="accounts_field_secret">Siri ya kutia saini</string>
+    <string name="account_totp_open">Fungua katika programu ya uthibitishaji</string>
 </resources>

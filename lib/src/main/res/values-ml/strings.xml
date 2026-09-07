@@ -350,4 +350,8 @@
     <string name="game_empty_title">ഗെയിമുകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="game_select_title">ഒരു ഗെയിം തിരഞ്ഞെടുക്കുക</string>
     <string name="game_select_subtitle">സൈഡ്‌ബാറിൽ നിന്ന് ഒരു ഗെയിം തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ പുതിയത് ആരംഭിക്കുക.</string>
+    <string name="settings_card">കാർഡ് ശൈലി</string>
+    <string name="settings_card_theme">തീമിൽ നിന്ന്</string>
+    <string name="settings_card_flat">പരന്നത്</string>
+    <string name="settings_card_raised">ഉയർന്നത്</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Préferènsi notifikasi</string>
     <string name="settings_home_accounts">Akun sing nyambung</string>
     <string name="settings_home_interests">Minat</string>
-    <string name="account_method_email">Kode email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">App authenticator</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">Tambah passkey</string>
     <string name="account_passkey_delete_title">Busak passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Busak rute</string>
     <string name="route_delete_title">Busak rute?</string>
     <string name="route_path">Path</string>
-    <string name="route_target">Target</string>
     <string name="route_method">Metode</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entitas</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Minat</string>
     <string name="interests_summary_title">Ringkesan</string>
     <string name="interests_remove">Cabut minat</string>
-    <string name="interests_add">Tambah</string>
-    <string name="document_save">Simpen</string>
-    <string name="document_saved">Disimpen</string>
     <string name="notifprefs_title">Préferènsi notifikasi</string>
     <string name="notifprefs_tab_categories">Kategori</string>
     <string name="notifprefs_tab_topics">Topik</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Reset</string>
     <string name="system_settings_reset_to_default">Reset menyang default</string>
     <string name="system_settings_reset_title">Reset menyang default?</string>
-    <string name="system_settings_setting_updated">Setelan dianyari</string>
-    <string name="system_settings_update_failed">Gagal nganyari setélan</string>
     <string name="system_setting_apps_install_user">Idini pangguna nginstal app</string>
     <string name="system_setting_auth_email">Login nganggo kode email</string>
     <string name="system_setting_auth_passkey">Login nganggo passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Gagal nganyari status pangguna</string>
     <string name="system_users_toast_revoke_failed">Gagal mbatalké sesi</string>
 
-    <string name="settings_app_label">Mochi Setelan</string>
     <string name="settings_home_sessions">Sesi</string>
     <string name="settings_home_privacy">Kabijakan privasi</string>
     <string name="settings_home_rules">Aturan</string>
     <string name="settings_home_terms">Sarat layanan</string>
-    <string name="account_section_methods">Cara mlebu</string>
     <string name="account_passkeys_empty">Ora ana passkey sing kadaftar.</string>
     <string name="account_passkey_register_title">Tambah passkey</string>
     <string name="account_passkey_register_message">Piranti sampeyan bakal njaluk konfirmasi. Passkey kaikat ing piranti iki lan digunakake kanggo mlebu mbesuk.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Gawe ulang kode pemulihan?</string>
     <string name="account_recovery_regen_message">Kode sing ana bakal langsung mandheg mlaku. Simpen sing anyar ing papan sing aman.</string>
     <string name="account_recovery_codes_warning">Simpen kode iki — saben mung bisa dianggo siji. Ora bakal ditampilake menèh.</string>
-    <string name="sessions_section_title">Sesi aktif</string>
     <string name="sessions_title">Sesi</string>
     <string name="sessions_empty">Ora ana sesi aktif.</string>
     <string name="sessions_revoke_message">Piranti sing nganggo sesi iki bakal metu.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Gawe ulang ringkesan</string>
     <string name="interests_summary_regenerating">Nggawe ulang…</string>
     <string name="interests_summary_empty">Tambahake sawetara minat kanggo gawe ringkesan apa sing disenengi.</string>
-    <string name="interests_weight">Bobot</string>
     <string name="interests_search_failed">Panelusuran gagal. Coba maneh.</string>
     <string name="document_privacy_title">Kabijakan privasi</string>
     <string name="document_rules_title">Aturan</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Nginstal %1$s…</string>
     <string name="accounts_field_api_key">Kunci API</string>
     <string name="accounts_field_url">URL server</string>
-    <string name="accounts_device_placeholder">Akun push ditambahake otomatis dening piranti.</string>
     <string name="accounts_set_default_ai">Setel minangka AI gawan</string>
     <string name="accounts_verify_code">Kode</string>
     <string name="accounts_verify_resend">Kirim ulang kode</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Jeneng</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Idini wong liya nemokaké sampéyan ing direktori</string>
-    <string name="account_method_email_subtitle">Nampa kode verifikasi liwat email</string>
-    <string name="account_method_totp_subtitle">Setel authenticator ing ngisor kanggo ngaktifake</string>
-    <string name="account_method_passkey_subtitle">Daftar passkey ing ngisor kanggo ngaktifake</string>
     <string name="domain_add">Tambah domain</string>
     <string name="domain_add_title">Tambah domain</string>
     <string name="domain_delegation_add">Tambah</string>
@@ -396,4 +379,10 @@
     <string name="notifprefs_test_none">Ora ana tujuan disetel</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Ora ana tujuan</string>
+    <string name="account_data_generate">Gawe frasa sandi</string>
+    <string name="accounts_field_server">URL server</string>
+    <string name="accounts_field_token">Token akses</string>
+    <string name="accounts_field_topic">Topik</string>
+    <string name="accounts_field_secret">Rahasia tandha tangan</string>
+    <string name="account_totp_open">Bukak ing aplikasi authenticator</string>
 </resources>

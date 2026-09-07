@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Танзимоти огоҳномаҳо</string>
     <string name="settings_home_accounts">Ҳисобҳои пайвастшуда</string>
     <string name="settings_home_interests">Шавқҳо</string>
-    <string name="account_method_email">Рамзи email</string>
-    <string name="account_method_passkey">Калиди дастрасӣ</string>
-    <string name="account_method_totp">Барномаи Authenticator</string>
     <string name="account_section_passkeys">Калидҳои дастрасӣ</string>
     <string name="account_passkey_register">Иловаи калиди гузар</string>
     <string name="account_passkey_delete_title">Калиди гузарро нест кунем?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Нест кардани роҳ</string>
     <string name="route_delete_title">Роҳро нест кунем?</string>
     <string name="route_path">Роҳ</string>
-    <string name="route_target">Ҳадаф</string>
     <string name="route_method">Усул</string>
     <string name="route_method_app">Барнома</string>
     <string name="route_method_entity">Объект</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Шавқҳо</string>
     <string name="interests_summary_title">Хулоса</string>
     <string name="interests_remove">Хориҷ кардани шавқу ҳавас</string>
-    <string name="interests_add">Илова кардан</string>
-    <string name="document_save">Захира</string>
-    <string name="document_saved">Захирашуда</string>
     <string name="notifprefs_title">Танзимоти огоҳномаҳо</string>
     <string name="notifprefs_tab_categories">Категорияҳо</string>
     <string name="notifprefs_tab_topics">Мавзӯот</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Барқарорсозӣ</string>
     <string name="system_settings_reset_to_default">Барқарорсозӣ ба нобаёнӣ</string>
     <string name="system_settings_reset_title">Барқарорсозӣ ба нобаёнӣ?</string>
-    <string name="system_settings_setting_updated">Танзим навсозӣ шуд</string>
-    <string name="system_settings_update_failed">Навсозии танзим ба анҷом нарасид</string>
     <string name="system_setting_apps_install_user">Иҷозати насби барномаҳо ба корбарон</string>
     <string name="system_setting_auth_email">Воридшавӣ бо рамзи email</string>
     <string name="system_setting_auth_passkey">Воридшавӣ бо passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Навсозии ҳолати корбар ба анҷом нарасид</string>
     <string name="system_users_toast_revoke_failed">Лағви ҷаласа ба анҷом нарасид</string>
 
-    <string name="settings_app_label">Mochi Танзимот</string>
     <string name="settings_home_sessions">Сессияҳо</string>
     <string name="settings_home_privacy">Сиёсати махфият</string>
     <string name="settings_home_rules">Қоидаҳо</string>
     <string name="settings_home_terms">Шартҳои хидмат</string>
-    <string name="account_section_methods">Усулҳои воридшавӣ</string>
     <string name="account_passkeys_empty">Калидҳои дастрасии сабтшуда нестанд.</string>
     <string name="account_passkey_register_title">Калиди дастрасӣ илова кунед</string>
     <string name="account_passkey_register_message">Дастгоҳи шумо тасдиқро дархост мекунад. Калиди дастрасӣ ба ин дастгоҳ алоқаманд аст ва барои воридшавиҳои оянда истифода мешавад.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Кодҳои барқарорсозиро аз нав эҷод кунед?</string>
     <string name="account_recovery_regen_message">Кодҳои мавҷуда фавран кор намекунанд. Нави онҳоро дар ҷои бехатар нигоҳ доред.</string>
     <string name="account_recovery_codes_warning">Ин кодҳоро нигоҳ доред — ҳар яке танҳо як бор истифода шуда метавонад. Онҳо боз нишон дода намешаванд.</string>
-    <string name="sessions_section_title">Сессияҳои фаъол</string>
     <string name="sessions_title">Сессияҳо</string>
     <string name="sessions_empty">Сессияҳои фаъол нестанд.</string>
     <string name="sessions_revoke_message">Дастгоҳе, ки ин сессияро истифода мекунад, баромад мекунад.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Хулосаро аз нав эҷод кунед</string>
     <string name="interests_summary_regenerating">Аз нав эҷод мешавад…</string>
     <string name="interests_summary_empty">Барои эҷоди хулосаи он чи ки шумо дӯст медоред, чанд шавқ илова кунед.</string>
-    <string name="interests_weight">Вазн</string>
     <string name="interests_search_failed">Ҷустуҷӯ ноком шуд. Лутфан боз кӯшиш кунед.</string>
     <string name="document_privacy_title">Сиёсати махфият</string>
     <string name="document_rules_title">Қоидаҳо</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s насб мешавад…</string>
     <string name="accounts_field_api_key">Калиди API</string>
     <string name="accounts_field_url">URL сервер</string>
-    <string name="accounts_device_placeholder">Ҳисобҳои push аз ҷониби дастгоҳ ба таври худкор илова мешаванд.</string>
     <string name="accounts_set_default_ai">Ҳамчун AI пешфарз танзим кунед</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Кодро дубора фиристед</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ном</string>
     <string name="account_identity_fingerprint">Нақши ангушт</string>
     <string name="account_identity_directory_toggle">Иҷозат диҳед, ки дигарон шуморо дар директория ёбанд</string>
-    <string name="account_method_email_subtitle">Рамзи тасдиқро тавассути почтаи электронӣ гиред</string>
-    <string name="account_method_totp_subtitle">Барои фаъол кардан, дар поён аутентификаторро танзим кунед</string>
-    <string name="account_method_passkey_subtitle">Барои фаъол кардан, дар поён калиди дастрасиро сабт кунед</string>
     <string name="domain_add">Иловаи домен</string>
     <string name="domain_add_title">Иловаи домен</string>
     <string name="domain_delegation_add">Илова кардан</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">Ягон ҷои таъинот танзим нашудааст</string>
     <string name="notifprefs_transport_fcm">Push барои Android</string>
     <string name="notifprefs_no_destinations">Бидуни таъинот</string>
+    <string name="account_data_generate">Ибораи рамзиро тавлид кунед</string>
+    <string name="accounts_field_server">URL сервер</string>
+    <string name="accounts_field_token">Токени дастрасӣ</string>
+    <string name="accounts_field_topic">Мавзӯъ</string>
+    <string name="accounts_field_secret">Сирри имзо</string>
+    <string name="account_totp_open">Дар барномаи аутентификатор кушодан</string>
 </resources>

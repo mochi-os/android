@@ -63,6 +63,7 @@ interface SystemSettingsApi {
     suspend fun set(
         @Field("name") name: String,
         @Field("value") value: String,
+        @Field("token") token: String,
     ): Response<Unit>
 }
 

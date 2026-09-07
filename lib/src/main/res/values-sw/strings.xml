@@ -350,4 +350,8 @@
     <string name="game_empty_title">Hakuna michezo bado</string>
     <string name="game_select_title">Chagua mchezo</string>
     <string name="game_select_subtitle">Chagua mchezo kwenye upau wa kando au anza mpya.</string>
+    <string name="settings_card">Mtindo wa kadi</string>
+    <string name="settings_card_theme">Kutoka mandhari</string>
+    <string name="settings_card_flat">Tambarare</string>
+    <string name="settings_card_raised">Iliyoinuliwa</string>
 </resources>

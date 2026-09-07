@@ -352,4 +352,8 @@
     <string name="game_empty_title">Још нема игара</string>
     <string name="game_select_title">Изаберите игру</string>
     <string name="game_select_subtitle">Изаберите игру са бочне траке или започните нову.</string>
+    <string name="settings_card">Стил картице</string>
+    <string name="settings_card_theme">Из теме</string>
+    <string name="settings_card_flat">Равно</string>
+    <string name="settings_card_raised">Издигнуто</string>
 </resources>

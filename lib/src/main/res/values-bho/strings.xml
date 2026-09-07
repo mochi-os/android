@@ -350,4 +350,8 @@
     <string name="game_empty_title">अबहीं तक कौनो खेल नइखे</string>
     <string name="game_select_title">खेल चुनीं</string>
     <string name="game_select_subtitle">साइडबार से खेल चुनीं भा नया खेल शुरू करीं।</string>
+    <string name="settings_card">कार्ड के शैली</string>
+    <string name="settings_card_theme">थीम से</string>
+    <string name="settings_card_flat">सपाट</string>
+    <string name="settings_card_raised">उठल</string>
 </resources>

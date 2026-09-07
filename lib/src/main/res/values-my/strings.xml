@@ -349,4 +349,8 @@
     <string name="game_empty_title">ဂိမ်းများ မရှိသေးပါ</string>
     <string name="game_select_title">ဂိမ်းရွေးပါ</string>
     <string name="game_select_subtitle">ဘေးဘားမှ ဂိမ်းတစ်ခုရွေးပါ သို့မဟုတ် ဂိမ်းအသစ်စတင်ပါ။</string>
+    <string name="settings_card">ကတ်ပုံစံ</string>
+    <string name="settings_card_theme">အပြင်အဆင်မှ</string>
+    <string name="settings_card_flat">ပြားသော</string>
+    <string name="settings_card_raised">ဖော့တက်</string>
 </resources>

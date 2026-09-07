@@ -352,4 +352,8 @@
     <string name="game_empty_title">Încă niciun joc</string>
     <string name="game_select_title">Selectează un joc</string>
     <string name="game_select_subtitle">Alege un joc din bara laterală sau începe unul nou.</string>
+    <string name="settings_card">Stilul cardului</string>
+    <string name="settings_card_theme">Din temă</string>
+    <string name="settings_card_flat">Plat</string>
+    <string name="settings_card_raised">Ridicat</string>
 </resources>

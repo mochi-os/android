@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">सूचना प्राथमिकताएं</string>
     <string name="settings_home_accounts">कनेक्टेड अकाउंट्स</string>
     <string name="settings_home_interests">रुचियाँ</string>
-    <string name="account_method_email">ईमेल कोड</string>
-    <string name="account_method_passkey">पासकी</string>
-    <string name="account_method_totp">ऑथेंटिकेटर ऐप</string>
     <string name="account_section_passkeys">पासकीज़</string>
     <string name="account_passkey_register">पासकी जोड़ें</string>
     <string name="account_passkey_delete_title">पासकी हटाएँ?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">रूट हटाएँ</string>
     <string name="route_delete_title">रूट हटाएँ?</string>
     <string name="route_path">पाथ</string>
-    <string name="route_target">टार्गेट</string>
     <string name="route_method">विधि</string>
     <string name="route_method_app">ऐप</string>
     <string name="route_method_entity">एंटिटी</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">रुचियाँ</string>
     <string name="interests_summary_title">सारांश</string>
     <string name="interests_remove">रुचि हटाएँ</string>
-    <string name="interests_add">जोड़ें</string>
-    <string name="document_save">सेव करें</string>
-    <string name="document_saved">सेव किया गया</string>
     <string name="notifprefs_title">सूचना प्राथमिकताएं</string>
     <string name="notifprefs_tab_categories">श्रेणियाँ</string>
     <string name="notifprefs_tab_topics">टॉपिक</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">रीसेट</string>
     <string name="system_settings_reset_to_default">डिफ़ॉल्ट पर रीसेट करें</string>
     <string name="system_settings_reset_title">डिफ़ॉल्ट पर रीसेट करें?</string>
-    <string name="system_settings_setting_updated">सेटिंग अपडेट की गई</string>
-    <string name="system_settings_update_failed">सेटिंग अपडेट करने में विफल</string>
     <string name="system_setting_apps_install_user">उपयोगकर्ताओं को ऐप्स इंस्टॉल करने की अनुमति दें</string>
     <string name="system_setting_auth_email">ईमेल कोड का उपयोग करके लॉगिन</string>
     <string name="system_setting_auth_passkey">पासकी का उपयोग करके लॉगिन</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">उपयोगकर्ता स्थिति अपडेट करने में विफल</string>
     <string name="system_users_toast_revoke_failed">सत्र रद्द करने में विफल</string>
 
-    <string name="settings_app_label">Mochi सेटिंग्स</string>
     <string name="settings_home_sessions">सत्र</string>
     <string name="settings_home_privacy">गोपनीयता नीति</string>
     <string name="settings_home_rules">नियम</string>
     <string name="settings_home_terms">सेवा की शर्तें</string>
-    <string name="account_section_methods">लॉगिन विधियां</string>
     <string name="account_passkeys_empty">कोई पासकी पंजीकृत नहीं है।</string>
     <string name="account_passkey_register_title">पासकी जोड़ें</string>
     <string name="account_passkey_register_message">आपका डिवाइस आपको पुष्टि करने के लिए कहेगा। पासकी इस डिवाइस से बंधी है और भविष्य के साइन-इन के लिए उपयोग की जाती है।</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">रिकवरी कोड पुनर्निर्मित करें?</string>
     <string name="account_recovery_regen_message">मौजूदा कोड तुरंत काम करना बंद कर देंगे। नए कोड को सुरक्षित स्थान पर सहेजें।</string>
     <string name="account_recovery_codes_warning">इन कोडों को सहेजें — प्रत्येक का केवल एक बार उपयोग किया जा सकता है। उन्हें फिर से नहीं दिखाया जाएगा।</string>
-    <string name="sessions_section_title">सक्रिय सत्र</string>
     <string name="sessions_title">सत्र</string>
     <string name="sessions_empty">कोई सक्रिय सत्र नहीं।</string>
     <string name="sessions_revoke_message">इस सत्र का उपयोग कर रहा डिवाइस साइन आउट हो जाएगा।</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">सारांश पुनर्निर्मित करें</string>
     <string name="interests_summary_regenerating">पुनर्निर्माण…</string>
     <string name="interests_summary_empty">आप जो पसंद करते हैं उसका सारांश उत्पन्न करने के लिए कुछ रुचियां जोड़ें।</string>
-    <string name="interests_weight">वज़न</string>
     <string name="interests_search_failed">खोज विफल। कृपया पुनः प्रयास करें।</string>
     <string name="document_privacy_title">गोपनीयता नीति</string>
     <string name="document_rules_title">नियम</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s स्थापित कर रहा है…</string>
     <string name="accounts_field_api_key">API कुंजी</string>
     <string name="accounts_field_url">सर्वर URL</string>
-    <string name="accounts_device_placeholder">पुश खाते डिवाइस द्वारा स्वचालित रूप से जोड़े जाते हैं।</string>
     <string name="accounts_set_default_ai">डिफ़ॉल्ट AI के रूप में सेट करें</string>
     <string name="accounts_verify_code">कोड</string>
     <string name="accounts_verify_resend">कोड पुनः भेजें</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">नाम</string>
     <string name="account_identity_fingerprint">फिंगरप्रिंट</string>
     <string name="account_identity_directory_toggle">दूसरों को डायरेक्टरी में आपको खोजने की अनुमति दें</string>
-    <string name="account_method_email_subtitle">ईमेल द्वारा सत्यापन कोड प्राप्त करें</string>
-    <string name="account_method_totp_subtitle">सक्षम करने के लिए नीचे प्रमाणक सेट करें</string>
-    <string name="account_method_passkey_subtitle">सक्षम करने के लिए नीचे पासकी पंजीकृत करें</string>
     <string name="domain_add">डोमेन जोड़ें</string>
     <string name="domain_add_title">डोमेन जोड़ें</string>
     <string name="domain_delegation_add">जोड़ें</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">कोई गंतव्य कॉन्फ़िगर नहीं</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
     <string name="notifprefs_no_destinations">कोई गंतव्य नहीं</string>
+    <string name="account_data_generate">पासफ़्रेज़ बनाएं</string>
+    <string name="accounts_field_server">सर्वर URL</string>
+    <string name="accounts_field_token">एक्सेस टोकन</string>
+    <string name="accounts_field_topic">विषय</string>
+    <string name="accounts_field_secret">हस्ताक्षर गुप्त कुंजी</string>
+    <string name="account_totp_open">प्रमाणक ऐप में खोलें</string>
 </resources>

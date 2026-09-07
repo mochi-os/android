@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferenzi tan-notifika</string>
     <string name="settings_home_accounts">Kontijiet konnessi</string>
     <string name="settings_home_interests">Interessi</string>
-    <string name="account_method_email">Kodiċi tal-email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">App tal-awtentikazzjoni</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Żid passkey</string>
     <string name="account_passkey_delete_title">Tħassar passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Ħassar rotta</string>
     <string name="route_delete_title">Tħassar rotta?</string>
     <string name="route_path">Path</string>
-    <string name="route_target">Mira</string>
     <string name="route_method">Metodu</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entità</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interessi</string>
     <string name="interests_summary_title">Sommarju</string>
     <string name="interests_remove">Neħħi interess</string>
-    <string name="interests_add">Żid</string>
-    <string name="document_save">Issejvja</string>
-    <string name="document_saved">Issejvjat</string>
     <string name="notifprefs_title">Preferenzi tan-notifika</string>
     <string name="notifprefs_tab_categories">Kategoriji</string>
     <string name="notifprefs_tab_topics">Suġġetti</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Reset</string>
     <string name="system_settings_reset_to_default">Irriżetta għal default</string>
     <string name="system_settings_reset_title">Tirriżetta għal default?</string>
-    <string name="system_settings_setting_updated">Issettjar aġġornat</string>
-    <string name="system_settings_update_failed">Ma rnexxiex jiġi aġġornat is-setting</string>
     <string name="system_setting_apps_install_user">Ippermetti utenti jinstallaw apps</string>
     <string name="system_setting_auth_email">Idħol billi tuża kodiċi tal-email</string>
     <string name="system_setting_auth_passkey">Idħol billi tuża passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Ma rnexxiex jiġi aġġornat l-istatus tal-utent</string>
     <string name="system_users_toast_revoke_failed">Ma rnexxiex tiġi rrevokata s-sessjoni</string>
 
-    <string name="settings_app_label">Mochi Settings</string>
     <string name="settings_home_sessions">Sessjonijiet</string>
     <string name="settings_home_privacy">Politika tal-privatezza</string>
     <string name="settings_home_rules">Regoli</string>
     <string name="settings_home_terms">Termini tas-servizz</string>
-    <string name="account_section_methods">Metodi tal-login</string>
     <string name="account_passkeys_empty">L-ebda passkey reġistrata.</string>
     <string name="account_passkey_register_title">Żid passkey</string>
     <string name="account_passkey_register_message">L-apparat tiegħek se jitolbok tikkonferma. Il-passkey hija marbuta ma\' dan l-apparat u tintuża għal sign-ins futuri.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Irriġenera kodiċijiet ta\' rkupru?</string>
     <string name="account_recovery_regen_message">Kodiċijiet eżistenti se jieqfu jaħdmu minnufih. Saħħan il-ġodda f\'post sigur.</string>
     <string name="account_recovery_codes_warning">Saħħan dawn il-kodiċijiet — kull wieħed jista\' jintuża darba biss. Ma jerġgħux jintwerew.</string>
-    <string name="sessions_section_title">Sessjonijiet attivi</string>
     <string name="sessions_title">Sessjonijiet</string>
     <string name="sessions_empty">L-ebda sessjoni attiva.</string>
     <string name="sessions_revoke_message">L-apparat li juża din is-sessjoni se joħroġ.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Irriġenera s-sommarju</string>
     <string name="interests_summary_regenerating">Tirriġenera…</string>
     <string name="interests_summary_empty">Żid xi interessi biex toħloq sommarju ta\' dak li tħobb.</string>
-    <string name="interests_weight">Piż</string>
     <string name="interests_search_failed">It-tfittxija falliet. Erġa\' pprova.</string>
     <string name="document_privacy_title">Politika tal-privatezza</string>
     <string name="document_rules_title">Regoli</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Tinstalla %1$s…</string>
     <string name="accounts_field_api_key">Ċavetta API</string>
     <string name="accounts_field_url">URL tas-server</string>
-    <string name="accounts_device_placeholder">Kontijiet push jiżdiedu awtomatikament mill-apparat.</string>
     <string name="accounts_set_default_ai">Issettja bħala AI default</string>
     <string name="accounts_verify_code">Kodiċi</string>
     <string name="accounts_verify_resend">Erġa\' ibgħat kodiċi</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Isem</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Ippermetti lil oħrajn isibuk fid-direttorju</string>
-    <string name="account_method_email_subtitle">Irċievi kodiċi ta\' verifika bl-email</string>
-    <string name="account_method_totp_subtitle">Biex tippermetti, twaqqaf awtentikatur hawn taħt</string>
-    <string name="account_method_passkey_subtitle">Biex tippermetti, irreġistra passkey hawn taħt</string>
     <string name="domain_add">Żid dominju</string>
     <string name="domain_add_title">Żid dominju</string>
     <string name="domain_delegation_add">Żid</string>
@@ -404,4 +387,10 @@
     <string name="notifprefs_test_none">L-ebda destinazzjonijiet ikkonfigurati</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">L-ebda destinazzjoni</string>
+    <string name="account_data_generate">Iġġenera frażi tal-password</string>
+    <string name="accounts_field_server">URL tas-server</string>
+    <string name="accounts_field_token">Token ta\' aċċess</string>
+    <string name="accounts_field_topic">Suġġett</string>
+    <string name="accounts_field_secret">Sigriet tal-iffirmar</string>
+    <string name="account_totp_open">Iftaħ fl-app tal-awtentikazzjoni</string>
 </resources>

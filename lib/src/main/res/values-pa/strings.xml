@@ -350,4 +350,8 @@
     <string name="game_empty_title">ਅਜੇ ਕੋਈ ਗੇਮ ਨਹੀਂ</string>
     <string name="game_select_title">ਗੇਮ ਚੁਣੋ</string>
     <string name="game_select_subtitle">ਸਾਈਡਬਾਰ ਤੋਂ ਗੇਮ ਚੁਣੋ ਜਾਂ ਨਵੀਂ ਗੇਮ ਸ਼ੁਰੂ ਕਰੋ।</string>
+    <string name="settings_card">ਕਾਰਡ ਸ਼ੈਲੀ</string>
+    <string name="settings_card_theme">ਥੀਮ ਤੋਂ</string>
+    <string name="settings_card_flat">ਸਮਤਲ</string>
+    <string name="settings_card_raised">ਉੱਚਾ</string>
 </resources>

@@ -349,4 +349,8 @@
     <string name="game_empty_title">ຍັງບໍ່ມີເກມ</string>
     <string name="game_select_title">ເລືອກເກມ</string>
     <string name="game_select_subtitle">ເລືອກເກມຈາກແຖບຂ້າງ ຫຼື ເລີ່ມເກມໃໝ່.</string>
+    <string name="settings_card">ຮູບແບບກາດ</string>
+    <string name="settings_card_theme">ຈາກຮູບແບບ</string>
+    <string name="settings_card_flat">ຮາບພຽງ</string>
+    <string name="settings_card_raised">ຍົກສູງ</string>
 </resources>

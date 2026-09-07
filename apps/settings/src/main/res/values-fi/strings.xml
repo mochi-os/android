@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Ilmoitusasetukset</string>
     <string name="settings_home_accounts">Yhdistetyt tilit</string>
     <string name="settings_home_interests">Kiinnostuksen kohteet</string>
-    <string name="account_method_email">Sähköpostikoodi</string>
-    <string name="account_method_passkey">Avainkoodi</string>
-    <string name="account_method_totp">Todennussovellus</string>
     <string name="account_section_passkeys">Avainkoodit</string>
     <string name="account_passkey_register">Lisää avain</string>
     <string name="account_passkey_delete_title">Poistetaanko avain?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Poista reitti</string>
     <string name="route_delete_title">Poistetaanko reitti?</string>
     <string name="route_path">Polku</string>
-    <string name="route_target">Kohde</string>
     <string name="route_method">Tapa</string>
     <string name="route_method_app">Sovellus</string>
     <string name="route_method_entity">Entiteetti</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Kiinnostuksen kohteet</string>
     <string name="interests_summary_title">Yhteenveto</string>
     <string name="interests_remove">Poista kiinnostus</string>
-    <string name="interests_add">Lisää</string>
-    <string name="document_save">Tallenna</string>
-    <string name="document_saved">Tallennettu</string>
     <string name="notifprefs_title">Ilmoitusasetukset</string>
     <string name="notifprefs_tab_categories">Kategoriat</string>
     <string name="notifprefs_tab_topics">Aiheet</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Nollaa</string>
     <string name="system_settings_reset_to_default">Palauta oletukseksi</string>
     <string name="system_settings_reset_title">Palautetaanko oletukseksi?</string>
-    <string name="system_settings_setting_updated">Asetus päivitetty</string>
-    <string name="system_settings_update_failed">Asetuksen päivitys epäonnistui</string>
     <string name="system_setting_apps_install_user">Salli käyttäjien asentaa sovelluksia</string>
     <string name="system_setting_auth_email">Kirjaudu sähköpostikoodilla</string>
     <string name="system_setting_auth_passkey">Kirjaudu avainkoodilla</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Käyttäjän tilan päivitys epäonnistui</string>
     <string name="system_users_toast_revoke_failed">Istunnon peruutus epäonnistui</string>
 
-    <string name="settings_app_label">Mochi Asetukset</string>
     <string name="settings_home_sessions">Istunnot</string>
     <string name="settings_home_privacy">Tietosuojakäytäntö</string>
     <string name="settings_home_rules">Säännöt</string>
     <string name="settings_home_terms">Käyttöehdot</string>
-    <string name="account_section_methods">Kirjautumistavat</string>
     <string name="account_passkeys_empty">Ei rekisteröityjä avainkoodeja.</string>
     <string name="account_passkey_register_title">Lisää avainkoodi</string>
     <string name="account_passkey_register_message">Laitteesi pyytää sinua vahvistamaan. Avainkoodi on sidottu tähän laitteeseen ja sitä käytetään tulevissa kirjautumisissa.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Luodaanko palautuskoodit uudelleen?</string>
     <string name="account_recovery_regen_message">Nykyiset koodit lakkaavat toimimasta välittömästi. Tallenna uudet turvalliseen paikkaan.</string>
     <string name="account_recovery_codes_warning">Tallenna nämä koodit — jokaista voi käyttää vain kerran. Niitä ei näytetä uudelleen.</string>
-    <string name="sessions_section_title">Aktiiviset istunnot</string>
     <string name="sessions_title">Istunnot</string>
     <string name="sessions_empty">Ei aktiivisia istuntoja.</string>
     <string name="sessions_revoke_message">Tätä istuntoa käyttävä laite kirjataan ulos.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Luo yhteenveto uudelleen</string>
     <string name="interests_summary_regenerating">Luodaan uudelleen…</string>
     <string name="interests_summary_empty">Lisää kiinnostuksen kohteita luodaksesi yhteenvedon siitä, mistä pidät.</string>
-    <string name="interests_weight">Paino</string>
     <string name="interests_search_failed">Haku epäonnistui. Yritä uudelleen.</string>
     <string name="document_privacy_title">Tietosuojakäytäntö</string>
     <string name="document_rules_title">Säännöt</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Asennetaan %1$s…</string>
     <string name="accounts_field_api_key">API-avain</string>
     <string name="accounts_field_url">Palvelimen URL</string>
-    <string name="accounts_device_placeholder">Push-tilit lisätään automaattisesti laitteen toimesta.</string>
     <string name="accounts_set_default_ai">Aseta oletustekoälyksi</string>
     <string name="accounts_verify_code">Koodi</string>
     <string name="accounts_verify_resend">Lähetä koodi uudelleen</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nimi</string>
     <string name="account_identity_fingerprint">Sormenjälki</string>
     <string name="account_identity_directory_toggle">Salli muiden löytää sinut hakemistosta</string>
-    <string name="account_method_email_subtitle">Vastaanota vahvistuskoodi sähköpostitse</string>
-    <string name="account_method_totp_subtitle">Ota käyttöön määrittämällä todennussovellus alla</string>
-    <string name="account_method_passkey_subtitle">Ota käyttöön rekisteröimällä avainkoodi alla</string>
     <string name="domain_add">Lisää verkkotunnus</string>
     <string name="domain_add_title">Lisää verkkotunnus</string>
     <string name="domain_delegation_add">Lisää</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Kohteita ei ole määritetty</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Ei kohteita</string>
+    <string name="account_data_generate">Luo tunnuslause</string>
+    <string name="accounts_field_server">Palvelimen URL</string>
+    <string name="accounts_field_token">Käyttöoikeustunnus</string>
+    <string name="accounts_field_topic">Aihe</string>
+    <string name="accounts_field_secret">Allekirjoitussalaisuus</string>
+    <string name="account_totp_open">Avaa todennussovelluksessa</string>
 </resources>

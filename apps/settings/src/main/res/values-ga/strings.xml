@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Sainroghanna fógraí</string>
     <string name="settings_home_accounts">Cuntais cheangailte</string>
     <string name="settings_home_interests">Suimeanna</string>
-    <string name="account_method_email">Cód ríomhphoist</string>
-    <string name="account_method_passkey">Pasluiche</string>
-    <string name="account_method_totp">Aip fhíordheimhnitheora</string>
     <string name="account_section_passkeys">Pasluichí</string>
     <string name="account_passkey_register">Cuir eochair phasála leis</string>
     <string name="account_passkey_delete_title">Scrios eochair phasála?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Scrios bealach</string>
     <string name="route_delete_title">Scrios bealach?</string>
     <string name="route_path">Cosán</string>
-    <string name="route_target">Sprioc</string>
     <string name="route_method">Modh</string>
     <string name="route_method_app">Aip</string>
     <string name="route_method_entity">Aonán</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Suimeanna</string>
     <string name="interests_summary_title">Achoimre</string>
     <string name="interests_remove">Bain spéis</string>
-    <string name="interests_add">Cuir leis</string>
-    <string name="document_save">Sábháil</string>
-    <string name="document_saved">Sábháilte</string>
     <string name="notifprefs_title">Sainroghanna fógraí</string>
     <string name="notifprefs_tab_categories">Catagóirí</string>
     <string name="notifprefs_tab_topics">Topaicí</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Athshocraigh</string>
     <string name="system_settings_reset_to_default">Athshocraigh chuig réamhshocrú</string>
     <string name="system_settings_reset_title">Athshocraigh chuig réamhshocrú?</string>
-    <string name="system_settings_setting_updated">Socrú nuashonraithe</string>
-    <string name="system_settings_update_failed">Theip ar nuashonrú socraithe</string>
     <string name="system_setting_apps_install_user">Ceadaigh d\'úsáideoirí aipeanna a shuiteáil</string>
     <string name="system_setting_auth_email">Logáil isteach ag baint úsáide as cód ríomhphoist</string>
     <string name="system_setting_auth_passkey">Logáil isteach ag baint úsáide as pasleathar</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Theip ar nuashonrú stádas úsáideora</string>
     <string name="system_users_toast_revoke_failed">Theip ar sheisiún a chúlghairm</string>
 
-    <string name="settings_app_label">Mochi Socruithe</string>
     <string name="settings_home_sessions">Seisiúin</string>
     <string name="settings_home_privacy">Polasaí príobháideachta</string>
     <string name="settings_home_rules">Rialacha</string>
     <string name="settings_home_terms">Téarmaí seirbhíse</string>
-    <string name="account_section_methods">Modhanna logála isteach</string>
     <string name="account_passkeys_empty">Níl aon eochair phasaí cláraithe.</string>
     <string name="account_passkey_register_title">Cuir eochair phasaí leis</string>
     <string name="account_passkey_register_message">Iarrfaidh do ghléas ort cinntiú. Tá an eochair phasaí ceangailte leis an ngléas seo agus úsáidte le haghaidh síniú isteach amach anseo.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Athgin cóid téarnaimh?</string>
     <string name="account_recovery_regen_message">Stopfaidh cóid atá ann ag obair láithreach. Sábháil iad nua áit shábháilte.</string>
     <string name="account_recovery_codes_warning">Sábháil na cóid seo — is féidir gach ceann a úsáid uair amháin. Ní thaispeánfar arís iad.</string>
-    <string name="sessions_section_title">Seisiúin ghníomhacha</string>
     <string name="sessions_title">Seisiúin</string>
     <string name="sessions_empty">Níl aon seisiún gníomhach.</string>
     <string name="sessions_revoke_message">Síneofar amach an gléas a úsáideann an seisiún seo.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Athgin achoimre</string>
     <string name="interests_summary_regenerating">Ag athghiniúint…</string>
     <string name="interests_summary_empty">Cuir roinnt spéiseanna leis chun achoimre a chruthú ar an méid is maith leat.</string>
-    <string name="interests_weight">Meáchan</string>
     <string name="interests_search_failed">Theip ar an gcuardach. Bain triail eile as.</string>
     <string name="document_privacy_title">Polasaí príobháideachta</string>
     <string name="document_rules_title">Rialacha</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Ag suiteáil %1$s…</string>
     <string name="accounts_field_api_key">Eochair API</string>
     <string name="accounts_field_url">URL an fhreastalaí</string>
-    <string name="accounts_device_placeholder">Cuirtear cuntais bhrú leis go huathoibríoch ag an ngléas.</string>
     <string name="accounts_set_default_ai">Socraigh mar AI réamhshocraithe</string>
     <string name="accounts_verify_code">Cód</string>
     <string name="accounts_verify_resend">Athsheol an cód</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ainm</string>
     <string name="account_identity_fingerprint">Méarlorg</string>
     <string name="account_identity_directory_toggle">Ceadaigh do dhaoine eile thú a aimsiú san eolaire</string>
-    <string name="account_method_email_subtitle">Faigh cód fíoraithe trí ríomhphost</string>
-    <string name="account_method_totp_subtitle">Socraigh fíordheimhneoir thíos chun é a chumasú</string>
-    <string name="account_method_passkey_subtitle">Cláraigh eochair rochtana thíos chun é a chumasú</string>
     <string name="domain_add">Cuir fearann leis</string>
     <string name="domain_add_title">Cuir fearann leis</string>
     <string name="domain_delegation_add">Cuir leis</string>
@@ -404,4 +387,10 @@
     <string name="notifprefs_test_none">Níl aon cheann scríbe cumraithe</string>
     <string name="notifprefs_transport_fcm">Brú Android</string>
     <string name="notifprefs_no_destinations">Gan cinn scríbe</string>
+    <string name="account_data_generate">Gin frása faire</string>
+    <string name="accounts_field_server">URL an fhreastalaí</string>
+    <string name="accounts_field_token">Ceadchomhartha rochtana</string>
+    <string name="accounts_field_topic">Ábhar</string>
+    <string name="accounts_field_secret">Rún sínithe</string>
+    <string name="account_totp_open">Oscail san aip fíordheimhnithe</string>
 </resources>

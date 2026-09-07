@@ -354,4 +354,8 @@
     <string name="game_empty_title">Brak gier</string>
     <string name="game_select_title">Wybierz grę</string>
     <string name="game_select_subtitle">Wybierz grę na pasku bocznym lub rozpocznij nową.</string>
+    <string name="settings_card">Styl karty</string>
+    <string name="settings_card_theme">Z motywu</string>
+    <string name="settings_card_flat">Płaska</string>
+    <string name="settings_card_raised">Uniesiony</string>
 </resources>

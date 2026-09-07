@@ -101,8 +101,7 @@ class ConnectedAccountsViewModel @Inject constructor(
     fun verify(id: String, code: String) {
         viewModelScope.launch {
             try {
-                val resp = api.verify(id = id, code = code).unwrapRaw()
-                val ok = resp["ok"] == true || resp["verified"] == true
+                val ok = api.verify(id = id, code = code).unwrapRaw()
                 _toasts.emit(
                     string(if (ok) R.string.accounts_verified else R.string.accounts_verify_invalid)
                 )

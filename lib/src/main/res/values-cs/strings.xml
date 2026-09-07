@@ -354,4 +354,8 @@
     <string name="game_empty_title">Zatím žádné hry</string>
     <string name="game_select_title">Vyberte hru</string>
     <string name="game_select_subtitle">Vyberte hru v postranním panelu nebo začněte novou.</string>
+    <string name="settings_card">Styl karty</string>
+    <string name="settings_card_theme">Z motivu</string>
+    <string name="settings_card_flat">Plochá</string>
+    <string name="settings_card_raised">Vyvýšený</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferensi notifikasi</string>
     <string name="settings_home_accounts">Akun yang terhubung</string>
     <string name="settings_home_interests">Minat</string>
-    <string name="account_method_email">Kode email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Aplikasi authenticator</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">Tambah passkey</string>
     <string name="account_passkey_delete_title">Hapus passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Hapus rute</string>
     <string name="route_delete_title">Hapus rute?</string>
     <string name="route_path">Path</string>
-    <string name="route_target">Target</string>
     <string name="route_method">Metode</string>
     <string name="route_method_app">Aplikasi</string>
     <string name="route_method_entity">Entitas</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Minat</string>
     <string name="interests_summary_title">Ringkasan</string>
     <string name="interests_remove">Hapus minat</string>
-    <string name="interests_add">Tambah</string>
-    <string name="document_save">Simpan</string>
-    <string name="document_saved">Tersimpan</string>
     <string name="notifprefs_title">Preferensi notifikasi</string>
     <string name="notifprefs_tab_categories">Kategori</string>
     <string name="notifprefs_tab_topics">Topik</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Reset</string>
     <string name="system_settings_reset_to_default">Reset ke default</string>
     <string name="system_settings_reset_title">Reset ke default?</string>
-    <string name="system_settings_setting_updated">Pengaturan diperbarui</string>
-    <string name="system_settings_update_failed">Gagal memperbarui pengaturan</string>
     <string name="system_setting_apps_install_user">Izinkan pengguna memasang aplikasi</string>
     <string name="system_setting_auth_email">Masuk menggunakan kode email</string>
     <string name="system_setting_auth_passkey">Masuk menggunakan passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Gagal memperbarui status pengguna</string>
     <string name="system_users_toast_revoke_failed">Gagal mencabut sesi</string>
 
-    <string name="settings_app_label">Pengaturan Mochi</string>
     <string name="settings_home_sessions">Sesi</string>
     <string name="settings_home_privacy">Kebijakan privasi</string>
     <string name="settings_home_rules">Aturan</string>
     <string name="settings_home_terms">Ketentuan layanan</string>
-    <string name="account_section_methods">Metode masuk</string>
     <string name="account_passkeys_empty">Tidak ada passkey yang terdaftar.</string>
     <string name="account_passkey_register_title">Tambahkan passkey</string>
     <string name="account_passkey_register_message">Perangkat Anda akan meminta konfirmasi. Passkey terikat ke perangkat ini dan digunakan untuk masuk di masa depan.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Buat ulang kode pemulihan?</string>
     <string name="account_recovery_regen_message">Kode yang ada berhenti bekerja segera. Simpan yang baru di tempat aman.</string>
     <string name="account_recovery_codes_warning">Simpan kode ini — masing-masing hanya dapat digunakan sekali. Mereka tidak akan ditampilkan lagi.</string>
-    <string name="sessions_section_title">Sesi aktif</string>
     <string name="sessions_title">Sesi</string>
     <string name="sessions_empty">Tidak ada sesi aktif.</string>
     <string name="sessions_revoke_message">Perangkat yang menggunakan sesi ini akan keluar.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Buat ulang ringkasan</string>
     <string name="interests_summary_regenerating">Membuat ulang…</string>
     <string name="interests_summary_empty">Tambahkan beberapa minat untuk membuat ringkasan tentang apa yang Anda sukai.</string>
-    <string name="interests_weight">Bobot</string>
     <string name="interests_search_failed">Pencarian gagal. Silakan coba lagi.</string>
     <string name="document_privacy_title">Kebijakan privasi</string>
     <string name="document_rules_title">Aturan</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Memasang %1$s…</string>
     <string name="accounts_field_api_key">Kunci API</string>
     <string name="accounts_field_url">URL server</string>
-    <string name="accounts_device_placeholder">Akun push ditambahkan secara otomatis oleh perangkat.</string>
     <string name="accounts_set_default_ai">Atur sebagai AI default</string>
     <string name="accounts_verify_code">Kode</string>
     <string name="accounts_verify_resend">Kirim ulang kode</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nama</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Izinkan orang lain menemukan Anda di direktori</string>
-    <string name="account_method_email_subtitle">Terima kode verifikasi melalui email</string>
-    <string name="account_method_totp_subtitle">Siapkan autentikator di bawah untuk mengaktifkan</string>
-    <string name="account_method_passkey_subtitle">Daftarkan kunci sandi di bawah untuk mengaktifkan</string>
     <string name="domain_add">Tambah domain</string>
     <string name="domain_add_title">Tambah domain</string>
     <string name="domain_delegation_add">Tambah</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">Tidak ada tujuan yang dikonfigurasi</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Tidak ada tujuan</string>
+    <string name="account_data_generate">Buat kata sandi</string>
+    <string name="accounts_field_server">URL server</string>
+    <string name="accounts_field_token">Token akses</string>
+    <string name="accounts_field_topic">Topik</string>
+    <string name="accounts_field_secret">Rahasia penandatanganan</string>
+    <string name="account_totp_open">Buka di aplikasi autentikator</string>
 </resources>

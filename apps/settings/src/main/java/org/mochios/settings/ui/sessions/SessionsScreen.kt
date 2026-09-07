@@ -104,13 +104,12 @@ fun SessionsScreen(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    // The ViewModel sorts by accessed descending, so the top
-                    // entry is the current session (web uses the same
-                    // heuristic).
-                    itemsIndexed(state.sessions) { index, session ->
+                    // The server marks the caller's own session; the list
+                    // order says nothing about which one that is.
+                    itemsIndexed(state.sessions) { _, session ->
                         SessionRow(
                             session = session,
-                            isCurrent = index == 0 && session.accessed > 0,
+                            isCurrent = session.current,
                             onRevoke = { viewModel.revoke(session.id) },
                         )
                     }

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Ծանուցումների կարգավորումներ</string>
     <string name="settings_home_accounts">Միացված հաշիվներ</string>
     <string name="settings_home_interests">Հետաքրքրություններ</string>
-    <string name="account_method_email">Էլ․ փոստի կոդ</string>
-    <string name="account_method_passkey">Անցաբանալի</string>
-    <string name="account_method_totp">Authenticator հավելված</string>
     <string name="account_section_passkeys">Անցաբանալիներ</string>
     <string name="account_passkey_register">Ավելացնել անցաբանալի</string>
     <string name="account_passkey_delete_title">Ջնջե՞լ անցաբառը։</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Ջնջել երթուղին</string>
     <string name="route_delete_title">Ջնջե՞լ երթուղին։</string>
     <string name="route_path">Ուղի</string>
-    <string name="route_target">Թիրախ</string>
     <string name="route_method">Եղանակ</string>
     <string name="route_method_app">Հավելված</string>
     <string name="route_method_entity">Էություն</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Հետաքրքրություններ</string>
     <string name="interests_summary_title">Ամփոփում</string>
     <string name="interests_remove">Հեռացնել հետաքրքրությունը</string>
-    <string name="interests_add">Ավելացնել</string>
-    <string name="document_save">Պահպանել</string>
-    <string name="document_saved">Պահպանված է</string>
     <string name="notifprefs_title">Ծանուցումների կարգավորումներ</string>
     <string name="notifprefs_tab_categories">Կատեգորիաներ</string>
     <string name="notifprefs_tab_topics">Թեմաներ</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Վերականգնել</string>
     <string name="system_settings_reset_to_default">Վերականգնել լռելյայնին</string>
     <string name="system_settings_reset_title">Վերականգնե՞լ լռելյայնին։</string>
-    <string name="system_settings_setting_updated">Կարգավորումը թարմացվեց</string>
-    <string name="system_settings_update_failed">Չհաջողվեց թարմացնել կարգավորումը</string>
     <string name="system_setting_apps_install_user">Թույլատրել օգտատերերին տեղադրել հավելվածներ</string>
     <string name="system_setting_auth_email">Մուտք գործել էլփոստի կոդով</string>
     <string name="system_setting_auth_passkey">Մուտք անցաբանալիով</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Չհաջողվեց թարմացնել օգտատիրոջ կարգավիճակը</string>
     <string name="system_users_toast_revoke_failed">Չհաջողվեց հետ կանչել նիստը</string>
 
-    <string name="settings_app_label">Mochi Կարգավորումներ</string>
     <string name="settings_home_sessions">Սեսիաներ</string>
     <string name="settings_home_privacy">Գաղտնիության քաղաքականություն</string>
     <string name="settings_home_rules">Կանոններ</string>
     <string name="settings_home_terms">Ծառայության պայմաններ</string>
-    <string name="account_section_methods">Մուտքի եղանակներ</string>
     <string name="account_passkeys_empty">Գրանցված անցումային բանալիներ չկան։</string>
     <string name="account_passkey_register_title">Ավելացնել անցումային բանալի</string>
     <string name="account_passkey_register_message">Ձեր սարքը կխնդրի հաստատել։ Անցումային բանալին կապված է այս սարքին և օգտագործվում է ապագա մուտքերի համար։</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Վերարտադրե՞լ վերականգնման կոդերը։</string>
     <string name="account_recovery_regen_message">Գոյություն ունեցող կոդերը անմիջապես կդադարեն աշխատել։ Պահպանեք նորերը անվտանգ վայրում։</string>
     <string name="account_recovery_codes_warning">Պահպանեք այս կոդերը — յուրաքանչյուրը կարող է օգտագործվել միայն մեկ անգամ։ Նրանք այլևս չեն ցուցադրվի։</string>
-    <string name="sessions_section_title">Ակտիվ նիստեր</string>
     <string name="sessions_title">Սեսիաներ</string>
     <string name="sessions_empty">Ակտիվ նիստեր չկան։</string>
     <string name="sessions_revoke_message">Այս նիստն օգտագործող սարքից կդուրս է գա։</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Վերարտադրել ամփոփումը</string>
     <string name="interests_summary_regenerating">Վերարտադրում է…</string>
     <string name="interests_summary_empty">Ավելացրեք մի քանի հետաքրքրություններ՝ ձեր սիրած բաների ամփոփումը ստեղծելու համար։</string>
-    <string name="interests_weight">Կշիռ</string>
     <string name="interests_search_failed">Որոնումը ձախողվեց։ Կրկին փորձեք։</string>
     <string name="document_privacy_title">Գաղտնիության քաղաքականություն</string>
     <string name="document_rules_title">Կանոններ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s-ը տեղադրվում է…</string>
     <string name="accounts_field_api_key">API բանալի</string>
     <string name="accounts_field_url">Սերվերի URL</string>
-    <string name="accounts_device_placeholder">Push հաշիվները ավտոմատ ավելացվում են սարքի կողմից։</string>
     <string name="accounts_set_default_ai">Սահմանել որպես լռելյայն ԱԲ</string>
     <string name="accounts_verify_code">Կոդ</string>
     <string name="accounts_verify_resend">Կրկին ուղարկել կոդը</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Անուն</string>
     <string name="account_identity_fingerprint">Մատնահետք</string>
     <string name="account_identity_directory_toggle">Թույլատրել ուրիշներին գտնել ձեզ գրացուցակում</string>
-    <string name="account_method_email_subtitle">Ստացեք հաստատման կոդ էլ. փոստով</string>
-    <string name="account_method_totp_subtitle">Միացնելու համար ստորև կարգավորեք նույնականացուցիչ</string>
-    <string name="account_method_passkey_subtitle">Միացնելու համար ստորև գրանցեք անցաբանալի</string>
     <string name="domain_add">Ավելացնել տիրույթ</string>
     <string name="domain_add_title">Ավելացնել տիրույթ</string>
     <string name="domain_delegation_add">Ավելացնել</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Կարգավորված ուղղություններ չկան</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Նպատակակետեր չկան</string>
+    <string name="account_data_generate">Ստեղծել գաղտնաբառ</string>
+    <string name="accounts_field_server">Սերվերի URL</string>
+    <string name="accounts_field_token">Մուտքի թոքեն</string>
+    <string name="accounts_field_topic">Թեմա</string>
+    <string name="accounts_field_secret">Ստորագրության գաղտնիք</string>
+    <string name="account_totp_open">Բացել նույնականացման հավելվածում</string>
 </resources>

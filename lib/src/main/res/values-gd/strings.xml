@@ -354,4 +354,8 @@
     <string name="game_empty_title">Chan eil geamannan ann fhathast</string>
     <string name="game_select_title">Tagh geama</string>
     <string name="game_select_subtitle">Tagh geama on bhàr-taoibh no tòisich fear ùr.</string>
+    <string name="settings_card">Stoidhle a\' chairt</string>
+    <string name="settings_card_theme">On ùrlar</string>
+    <string name="settings_card_flat">Còmhnard</string>
+    <string name="settings_card_raised">Togte</string>
 </resources>

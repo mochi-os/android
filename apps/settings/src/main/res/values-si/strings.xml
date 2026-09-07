@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">දැනුම්දීම් මනාප</string>
     <string name="settings_home_accounts">සම්බන්ධිත ගිණුම්</string>
     <string name="settings_home_interests">උනන්දු</string>
-    <string name="account_method_email">ඊමේල් කේතය</string>
-    <string name="account_method_passkey">ප්‍රවේශ යතුර</string>
-    <string name="account_method_totp">සත්‍යාපන යෙදුම</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">passkey එකක් එක් කරන්න</string>
     <string name="account_passkey_delete_title">passkey එක මකන්නද?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">මාර්ගය මකන්න</string>
     <string name="route_delete_title">මාර්ගය මකන්නද?</string>
     <string name="route_path">මාර්ගය</string>
-    <string name="route_target">ඉලක්කය</string>
     <string name="route_method">ක්‍රමය</string>
     <string name="route_method_app">යෙදුම</string>
     <string name="route_method_entity">ආයතනය</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">උනන්දු</string>
     <string name="interests_summary_title">සාරාංශය</string>
     <string name="interests_remove">උනන්දුව ඉවත් කරන්න</string>
-    <string name="interests_add">එක් කරන්න</string>
-    <string name="document_save">සුරකින්න</string>
-    <string name="document_saved">සුරකින ලදී</string>
     <string name="notifprefs_title">දැනුම්දීම් මනාප</string>
     <string name="notifprefs_tab_categories">ප්‍රවර්ග</string>
     <string name="notifprefs_tab_topics">මාතෘකා</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">reset</string>
     <string name="system_settings_reset_to_default">පෙරනිමියට reset කරන්න</string>
     <string name="system_settings_reset_title">පෙරනිමියට reset කරන්නද?</string>
-    <string name="system_settings_setting_updated">සැකසුම යාවත්කාලීන කරන ලදී</string>
-    <string name="system_settings_update_failed">සැකසුම යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="system_setting_apps_install_user">පරිශීලකයන්ට apps ස්ථාපනය කිරීමට අවසර දෙන්න</string>
     <string name="system_setting_auth_email">ඊමේල් කේතය භාවිත කර පිවිසෙන්න</string>
     <string name="system_setting_auth_passkey">passkey භාවිත කර පිවිසෙන්න</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">පරිශීලක තත්ත්වය යාවත්කාලීන කිරීමට අසමත් විය</string>
     <string name="system_users_toast_revoke_failed">සැසිය අවලංගු කිරීමට අසමත් විය</string>
 
-    <string name="settings_app_label">Mochi සැකසුම්</string>
     <string name="settings_home_sessions">සැසි</string>
     <string name="settings_home_privacy">පෞද්ගලිකත්ව ප්‍රතිපත්තිය</string>
     <string name="settings_home_rules">නීති</string>
     <string name="settings_home_terms">සේවා කොන්දේසි</string>
-    <string name="account_section_methods">ඇතුළු වීමේ ක්‍රම</string>
     <string name="account_passkeys_empty">ලියාපදිංචි පාස්කී නැත.</string>
     <string name="account_passkey_register_title">පාස්කී එක් කරන්න</string>
     <string name="account_passkey_register_message">ඔබේ උපාංගය තහවුරු කිරීමට ඉල්ලයි. පාස්කී මෙම උපාංගයට බැඳී ඇති අතර අනාගත ඇතුළු වීම් සඳහා භාවිතා වේ.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">ප්‍රකෘතිමත් කේත නැවත නිර්මාණය කරන්නද?</string>
     <string name="account_recovery_regen_message">පවතින කේත වහාම ක්‍රියා කිරීම නවත්වයි. නව ඒවා ආරක්ෂිත ස්ථානයක ගබඩා කරන්න.</string>
     <string name="account_recovery_codes_warning">මෙම කේත ගබඩා කරන්න — එක් එක් එක් වරක් පමණක් භාවිතා කළ හැක. ඒවා නැවත නොපෙන්වයි.</string>
-    <string name="sessions_section_title">සක්‍රීය සැසි</string>
     <string name="sessions_title">සැසි</string>
     <string name="sessions_empty">සක්‍රීය සැසි නැත.</string>
     <string name="sessions_revoke_message">මෙම සැසිය භාවිතා කරන උපාංගය බැහැර වේ.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">සාරාංශය නැවත නිර්මාණය කරන්න</string>
     <string name="interests_summary_regenerating">නැවත නිර්මාණය වෙමින්…</string>
     <string name="interests_summary_empty">ඔබ කැමති දේවල සාරාංශයක් නිර්මාණය කිරීමට රුචිකම් කිහිපයක් එක් කරන්න.</string>
-    <string name="interests_weight">බර</string>
     <string name="interests_search_failed">සෙවීම අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න.</string>
     <string name="document_privacy_title">පෞද්ගලිකත්ව ප්‍රතිපත්තිය</string>
     <string name="document_rules_title">නීති</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s ස්ථාපනය කරමින්…</string>
     <string name="accounts_field_api_key">API යතුර</string>
     <string name="accounts_field_url">සේවාදායක URL</string>
-    <string name="accounts_device_placeholder">Push ගිණුම් උපාංගය මගින් ස්වයංක්‍රීයව එකතු කෙරේ.</string>
     <string name="accounts_set_default_ai">පෙරනිමි AI ලෙස සකසන්න</string>
     <string name="accounts_verify_code">කේතය</string>
     <string name="accounts_verify_resend">කේතය නැවත යවන්න</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">නම</string>
     <string name="account_identity_fingerprint">ඇඟිලි සලකුණ</string>
     <string name="account_identity_directory_toggle">අන් අයට නාමාවලියෙන් ඔබව සොයා ගැනීමට අවසර දෙන්න</string>
-    <string name="account_method_email_subtitle">ඊමේල් මගින් සත්‍යාපන කේතය ලබා ගන්න</string>
-    <string name="account_method_totp_subtitle">සක්‍රිය කිරීමට පහත සත්‍යාපකයක් සකසන්න</string>
-    <string name="account_method_passkey_subtitle">සක්‍රිය කිරීමට පහත මුරයතුරක් ලියාපදිංචි කරන්න</string>
     <string name="domain_add">ඩොමේනයක් එක් කරන්න</string>
     <string name="domain_add_title">ඩොමේනයක් එක් කරන්න</string>
     <string name="domain_delegation_add">එක් කරන්න</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">ගමනාන්ත සැකසී නැත</string>
     <string name="notifprefs_transport_fcm">Android තල්ලුව</string>
     <string name="notifprefs_no_destinations">ගමනාන්ත නැත</string>
+    <string name="account_data_generate">රහස් ශ්‍රේණිය සාදන්න</string>
+    <string name="accounts_field_server">සේවාදායක URL</string>
+    <string name="accounts_field_token">ප්‍රවේශ ටෝකනය</string>
+    <string name="accounts_field_topic">මාතෘකාව</string>
+    <string name="accounts_field_secret">අත්සන් රහස</string>
+    <string name="account_totp_open">සත්‍යාපන යෙදුමේ විවෘත කරන්න</string>
 </resources>

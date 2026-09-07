@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Mga kagustuhan sa abiso</string>
     <string name="settings_home_accounts">Mga konektadong account</string>
     <string name="settings_home_interests">Mga interest</string>
-    <string name="account_method_email">Code sa email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">App ng authenticator</string>
     <string name="account_section_passkeys">Mga Passkey</string>
     <string name="account_passkey_register">Magdagdag ng passkey</string>
     <string name="account_passkey_delete_title">I-delete ang passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">I-delete ang route</string>
     <string name="route_delete_title">I-delete ang route?</string>
     <string name="route_path">Path</string>
-    <string name="route_target">Target</string>
     <string name="route_method">Paraan</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entity</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Mga interest</string>
     <string name="interests_summary_title">Buod</string>
     <string name="interests_remove">Alisin ang interes</string>
-    <string name="interests_add">Idagdag</string>
-    <string name="document_save">I-save</string>
-    <string name="document_saved">Na-save</string>
     <string name="notifprefs_title">Mga kagustuhan sa abiso</string>
     <string name="notifprefs_tab_categories">Mga category</string>
     <string name="notifprefs_tab_topics">Mga topic</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">I-reset</string>
     <string name="system_settings_reset_to_default">I-reset sa default</string>
     <string name="system_settings_reset_title">I-reset sa default?</string>
-    <string name="system_settings_setting_updated">Na-update ang setting</string>
-    <string name="system_settings_update_failed">Nabigong i-update ang setting</string>
     <string name="system_setting_apps_install_user">Payagan ang mga user na mag-install ng app</string>
     <string name="system_setting_auth_email">Mag-login gamit ang email code</string>
     <string name="system_setting_auth_passkey">Mag-login gamit ang passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Nabigong i-update ang user status</string>
     <string name="system_users_toast_revoke_failed">Nabigong i-revoke ang session</string>
 
-    <string name="settings_app_label">Mga Setting ng Mochi</string>
     <string name="settings_home_sessions">Mga session</string>
     <string name="settings_home_privacy">Patakaran sa privacy</string>
     <string name="settings_home_rules">Mga panuntunan</string>
     <string name="settings_home_terms">Mga tuntunin ng serbisyo</string>
-    <string name="account_section_methods">Mga paraan ng pag-log in</string>
     <string name="account_passkeys_empty">Walang mga rehistradong passkey.</string>
     <string name="account_passkey_register_title">Magdagdag ng passkey</string>
     <string name="account_passkey_register_message">Hihilingin ng iyong device na kumpirmahin. Ang passkey ay nakatali sa device na ito at ginagamit para sa hinaharap na mga pag-sign-in.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Bumuo muli ng mga recovery code?</string>
     <string name="account_recovery_regen_message">Ang mga umiiral na code ay agad na tumitigil sa paggana. I-save ang mga bago sa isang ligtas na lugar.</string>
     <string name="account_recovery_codes_warning">I-save ang mga code na ito — bawat isa ay maaari lamang gamitin nang isang beses. Hindi na sila ipapakita muli.</string>
-    <string name="sessions_section_title">Mga aktibong session</string>
     <string name="sessions_title">Mga session</string>
     <string name="sessions_empty">Walang mga aktibong session.</string>
     <string name="sessions_revoke_message">Ang device na gumagamit ng session na ito ay mag-sign out.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Bumuo muli ng buod</string>
     <string name="interests_summary_regenerating">Bumubuo muli…</string>
     <string name="interests_summary_empty">Magdagdag ng ilang interes upang makabuo ng buod ng iyong mga gusto.</string>
-    <string name="interests_weight">Bigat</string>
     <string name="interests_search_failed">Nabigo ang paghahanap. Mangyaring subukan ulit.</string>
     <string name="document_privacy_title">Patakaran sa privacy</string>
     <string name="document_rules_title">Mga panuntunan</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Ini-install %1$s…</string>
     <string name="accounts_field_api_key">API key</string>
     <string name="accounts_field_url">URL ng server</string>
-    <string name="accounts_device_placeholder">Ang mga push account ay awtomatikong idinadagdag ng device.</string>
     <string name="accounts_set_default_ai">Itakda bilang default na AI</string>
     <string name="accounts_verify_code">Code</string>
     <string name="accounts_verify_resend">Ipadala muli ang code</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Pangalan</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Payagan ang iba na hanapin ka sa directory</string>
-    <string name="account_method_email_subtitle">Tumanggap ng verification code sa pamamagitan ng email</string>
-    <string name="account_method_totp_subtitle">Para paganahin, mag-set up ng authenticator sa ibaba</string>
-    <string name="account_method_passkey_subtitle">Para paganahin, magrehistro ng passkey sa ibaba</string>
     <string name="domain_add">Magdagdag ng domain</string>
     <string name="domain_add_title">Magdagdag ng domain</string>
     <string name="domain_delegation_add">Idagdag</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Walang naka-configure na destination</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Walang destinasyon</string>
+    <string name="account_data_generate">Gumawa ng passphrase</string>
+    <string name="accounts_field_server">URL ng server</string>
+    <string name="accounts_field_token">Token sa pag-access</string>
+    <string name="accounts_field_topic">Paksa</string>
+    <string name="accounts_field_secret">Lihim sa paglagda</string>
+    <string name="account_totp_open">Buksan sa authenticator app</string>
 </resources>

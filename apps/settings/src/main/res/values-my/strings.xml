@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">အကြောင်းကြားချက် ဦးစားပေးချက်များ</string>
     <string name="settings_home_accounts">ချိတ်ဆက်ထားသော အကောင့်များ</string>
     <string name="settings_home_interests">စိတ်ဝင်စားမှုများ</string>
-    <string name="account_method_email">အီးမေးလ် ကုဒ်</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator အက်ပ်</string>
     <string name="account_section_passkeys">Passkey များ</string>
     <string name="account_passkey_register">passkey ထည့်မည်</string>
     <string name="account_passkey_delete_title">passkey ဖျက်မလား?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">လမ်းကြောင်း ဖျက်မည်</string>
     <string name="route_delete_title">လမ်းကြောင်း ဖျက်မလား?</string>
     <string name="route_path">လမ်းကြောင်း</string>
-    <string name="route_target">ဦးတည်ရာ</string>
     <string name="route_method">နည်းလမ်း</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">အကောင့်</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">စိတ်ဝင်စားမှုများ</string>
     <string name="interests_summary_title">အကျဉ်းချုပ်</string>
     <string name="interests_remove">စိတ်ဝင်စားမှု ဖယ်ရှား</string>
-    <string name="interests_add">ထည့်မည်</string>
-    <string name="document_save">သိမ်းမည်</string>
-    <string name="document_saved">သိမ်းပြီး</string>
     <string name="notifprefs_title">အကြောင်းကြားချက် ဦးစားပေးချက်များ</string>
     <string name="notifprefs_tab_categories">အမျိုးအစားများ</string>
     <string name="notifprefs_tab_topics">ခေါင်းစဉ်များ</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">ပြန်စတင်</string>
     <string name="system_settings_reset_to_default">ပုံသေသို့ ပြန်ထား</string>
     <string name="system_settings_reset_title">ပုံသေသို့ ပြန်ထားမလား?</string>
-    <string name="system_settings_setting_updated">ဆက်တင် အပ်ဒိတ်လုပ်ပြီး</string>
-    <string name="system_settings_update_failed">ဆက်တင် ပြင်ဆင်၍ မရပါ</string>
     <string name="system_setting_apps_install_user">သုံးစွဲသူများကို app များ ထည့်သွင်းခွင့်ပြုမည်</string>
     <string name="system_setting_auth_email">အီးမေးလ် ကုဒ်ဖြင့် ဝင်</string>
     <string name="system_setting_auth_passkey">ပတ်စကီးဖြင့် ဝင်</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">အသုံးပြုသူ အခြေအနေ ပြင်ဆင်၍ မရပါ</string>
     <string name="system_users_toast_revoke_failed">စက်ရှင် ရုပ်သိမ်း၍ မရပါ</string>
 
-    <string name="settings_app_label">Mochi ဆက်တင်များ</string>
     <string name="settings_home_sessions">စက်ရှင်များ</string>
     <string name="settings_home_privacy">ကိုယ်ရေးကိုယ်တာမူဝါဒ</string>
     <string name="settings_home_rules">စည်းမျဉ်းများ</string>
     <string name="settings_home_terms">ဝန်ဆောင်မှု စည်းမျဉ်းများ</string>
-    <string name="account_section_methods">ဝင်ရောက်နည်းများ</string>
     <string name="account_passkeys_empty">မှတ်ပုံတင်ထားသော passkey မရှိပါ။</string>
     <string name="account_passkey_register_title">Passkey ထည့်ပါ</string>
     <string name="account_passkey_register_message">သင့်စက်ပစ္စည်းမှ အတည်ပြုရန် တောင်းဆိုပါမည်။ Passkey သည် ဤစက်ပစ္စည်းနှင့် ချိတ်ဆက်ထားပြီး အနာဂတ်ဝင်ရောက်မှုများအတွက် အသုံးပြုပါမည်။</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">ပြန်လည်ရယူသည့် ကုဒ်များ ပြန်ထုတ်မလား?</string>
     <string name="account_recovery_regen_message">ရှိပြီးသား ကုဒ်များ ချက်ချင်း အလုပ်လုပ်တော့မည် မဟုတ်ပါ။ အသစ်များကို လုံခြုံသော နေရာတွင် သိမ်းပါ။</string>
     <string name="account_recovery_codes_warning">ဤကုဒ်များ သိမ်းပါ — တစ်ခုစီကို တစ်ကြိမ်သာ အသုံးပြုနိုင်ပါသည်။ ထပ်ပြ မပြပါ။</string>
-    <string name="sessions_section_title">လှုပ်ရှားနေသော အစည်းအဝေးများ</string>
     <string name="sessions_title">စက်ရှင်များ</string>
     <string name="sessions_empty">လှုပ်ရှားနေသော အစည်းအဝေး မရှိပါ။</string>
     <string name="sessions_revoke_message">ဤအစည်းအဝေး အသုံးပြုနေသော စက်ပစ္စည်းမှ ထွက်သွားပါမည်။</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">အကျဉ်းချုပ် ပြန်ထုတ်ပါ</string>
     <string name="interests_summary_regenerating">ပြန်ထုတ်နေသည်…</string>
     <string name="interests_summary_empty">သင်နှစ်သက်သည်များ၏ အကျဉ်းချုပ် ထုတ်ရန် စိတ်ဝင်စားမှု အချို့ ထည့်ပါ။</string>
-    <string name="interests_weight">အလေးချိန်</string>
     <string name="interests_search_failed">ရှာဖွေမှု မအောင်မြင်ပါ။ ထပ်မံ ကြိုးစားပါ။</string>
     <string name="document_privacy_title">ကိုယ်ရေးကိုယ်တာမူဝါဒ</string>
     <string name="document_rules_title">စည်းမျဉ်းများ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s ထည့်သွင်းနေသည်…</string>
     <string name="accounts_field_api_key">API key</string>
     <string name="accounts_field_url">ဆာဗာ URL</string>
-    <string name="accounts_device_placeholder">Push အကောင့်များကို စက်ပစ္စည်းမှ အလိုအလျောက် ထည့်သွင်းပါသည်။</string>
     <string name="accounts_set_default_ai">ပုံမှန် AI အဖြစ် သတ်မှတ်ပါ</string>
     <string name="accounts_verify_code">ကုဒ်</string>
     <string name="accounts_verify_resend">ကုဒ် ပြန်ပို့ပါ</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">အမည်</string>
     <string name="account_identity_fingerprint">လက်ဗွေ</string>
     <string name="account_identity_directory_toggle">directory တွင် သင့်ကို အခြားသူများ ရှာဖွေတွေ့ရှိရန် ခွင့်ပြုမည်</string>
-    <string name="account_method_email_subtitle">အတည်ပြုကုဒ်ကို အီးမေးလ်ဖြင့် လက်ခံပါ</string>
-    <string name="account_method_totp_subtitle">ဖွင့်ရန် အောက်တွင် authenticator ကို စနစ်ထည့်ပါ</string>
-    <string name="account_method_passkey_subtitle">ဖွင့်ရန် အောက်တွင် passkey ကို မှတ်ပုံတင်ပါ</string>
     <string name="domain_add">domain ထည့်မည်</string>
     <string name="domain_add_title">domain ထည့်မည်</string>
     <string name="domain_delegation_add">ထည့်မည်</string>
@@ -396,4 +379,10 @@
     <string name="notifprefs_test_none">destination များ မသတ်မှတ်ထားပါ</string>
     <string name="notifprefs_transport_fcm">Android push အကြောင်းကြားချက်</string>
     <string name="notifprefs_no_destinations">ဦးတည်ရာ မရှိပါ</string>
+    <string name="account_data_generate">Passphrase ဖန်တီးပါ</string>
+    <string name="accounts_field_server">ဆာဗာ URL</string>
+    <string name="accounts_field_token">ဝင်ရောက်ခွင့် တိုကင်</string>
+    <string name="accounts_field_topic">ခေါင်းစဉ်</string>
+    <string name="accounts_field_secret">လက်မှတ်လျှို့ဝှက်ချက်</string>
+    <string name="account_totp_open">အထောက်အထားစိစစ်ရေးအက်ပ်တွင် ဖွင့်ရန်</string>
 </resources>

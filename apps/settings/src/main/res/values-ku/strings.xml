@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Vebijarkên agahdariyê</string>
     <string name="settings_home_accounts">Hesabên girêdayî</string>
     <string name="settings_home_interests">Balkêşî</string>
-    <string name="account_method_email">Koda e-nameyê</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Sepana rastandinê</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">Passkey zêde bike</string>
     <string name="account_passkey_delete_title">Passkey jê bibe?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Rêgezê jê bibe</string>
     <string name="route_delete_title">Rêgezê jê bibe?</string>
     <string name="route_path">Rê</string>
-    <string name="route_target">Armanc</string>
     <string name="route_method">Rêbaz</string>
     <string name="route_method_app">Sepan</string>
     <string name="route_method_entity">Mîhengeh</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Balkêşî</string>
     <string name="interests_summary_title">Kurte</string>
     <string name="interests_remove">Balkêşiyê rake</string>
-    <string name="interests_add">Zêde bike</string>
-    <string name="document_save">Tomar bike</string>
-    <string name="document_saved">Hatiye tomarkirin</string>
     <string name="notifprefs_title">Vebijarkên agahdariyê</string>
     <string name="notifprefs_tab_categories">Kategorî</string>
     <string name="notifprefs_tab_topics">Mijar</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Bişkojka veguhastinê</string>
     <string name="system_settings_reset_to_default">Ber bi standard ve veguhêze</string>
     <string name="system_settings_reset_title">Ber bi standard ve veguhêze?</string>
-    <string name="system_settings_setting_updated">Mîheng hat nûkirin</string>
-    <string name="system_settings_update_failed">Rojanekirina mîhengê neserkeftî bû</string>
     <string name="system_setting_apps_install_user">Destûrê bide bikarhêneran ku sepanan saz bikin</string>
     <string name="system_setting_auth_email">Têketin bi karanîna koda e-nameyê</string>
     <string name="system_setting_auth_passkey">Têketin bi karanîna passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Rojanekirina rewşa bikarhêner neserkeftî bû</string>
     <string name="system_users_toast_revoke_failed">Betalkirina danîştinê neserkeftî bû</string>
 
-    <string name="settings_app_label">Mochi Mîheng</string>
     <string name="settings_home_sessions">Danîştin</string>
     <string name="settings_home_privacy">Polîtîkaya nepenîtiyê</string>
     <string name="settings_home_rules">Rêbaz</string>
     <string name="settings_home_terms">Mercên xizmetê</string>
-    <string name="account_section_methods">Rêbazên têketinê</string>
     <string name="account_passkeys_empty">Tu mifteyên gihîştinê tomarkirî nin.</string>
     <string name="account_passkey_register_title">Mifteya gihîştinê zêde bike</string>
     <string name="account_passkey_register_message">Cîhaza we dê ji we daxwaza pejirandinê bike. Mifteya gihîştinê bi vê cîhazê ve girêdayî ye û ji bo têketinên paşerojê tê bikar anîn.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Kodên vegerandinê ji nû ve çêbikin?</string>
     <string name="account_recovery_regen_message">Kodên heyî dê tavilê rawestin. Yên nû di cihek ewle de hilîne.</string>
     <string name="account_recovery_codes_warning">Van kodan hilîne — her yek tenê yek car dikare were bikar anîn. Ew dê dîsa neyên nîşan dan.</string>
-    <string name="sessions_section_title">Danîştinên çalak</string>
     <string name="sessions_title">Danîştin</string>
     <string name="sessions_empty">Tu danîştinên çalak nin.</string>
     <string name="sessions_revoke_message">Cîhaza ku vê danîştinê bikar tîne dê derkeve.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Kurtek ji nû ve biafirîne</string>
     <string name="interests_summary_regenerating">Ji nû ve diafirîne…</string>
     <string name="interests_summary_empty">Hin eleqeyan zêde bike ji bo afirandina kurteyek li ser tiştên ku tu jê hez dikî.</string>
-    <string name="interests_weight">Giranî</string>
     <string name="interests_search_failed">Lêgerîn têk çû. Ji kerema xwe dîsa biceribîne.</string>
     <string name="document_privacy_title">Polîtîkaya nepenîtiyê</string>
     <string name="document_rules_title">Rêbaz</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s saz dike…</string>
     <string name="accounts_field_api_key">Mifteya API</string>
     <string name="accounts_field_url">URLa pêşkêşkerê</string>
-    <string name="accounts_device_placeholder">Hesabên push ji aliyê cîhaza ve bi xweber tên zêdekirin.</string>
     <string name="accounts_set_default_ai">Wek AI ya pêşwext saz bike</string>
     <string name="accounts_verify_code">Kod</string>
     <string name="accounts_verify_resend">Kodê dîsa bişîne</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nav</string>
     <string name="account_identity_fingerprint">Tilîya destan</string>
     <string name="account_identity_directory_toggle">Destûrê bide ku yên din te di pelrêçê de bibînin</string>
-    <string name="account_method_email_subtitle">Koda verastkirinê bi e-nameyê bistîne</string>
-    <string name="account_method_totp_subtitle">Ji bo çalakkirinê, li jêr rastkerek saz bike</string>
-    <string name="account_method_passkey_subtitle">Ji bo çalakkirinê, li jêr mifteyek gihîştinê tomar bike</string>
     <string name="domain_add">Domain zêde bike</string>
     <string name="domain_add_title">Domain zêde bike</string>
     <string name="domain_delegation_add">Zêde bike</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Tu cîh nehatine mîhengkirin</string>
     <string name="notifprefs_transport_fcm">Push a Android</string>
     <string name="notifprefs_no_destinations">Armanc tune ne</string>
+    <string name="account_data_generate">Pêvajoyekê biafirîne</string>
+    <string name="accounts_field_server">URLa pêşkêşkerê</string>
+    <string name="accounts_field_token">Nîşana gihîştinê</string>
+    <string name="accounts_field_topic">Mijar</string>
+    <string name="accounts_field_secret">Veşariya îmzeyê</string>
+    <string name="account_totp_open">Di sepana rastandinê de veke</string>
 </resources>

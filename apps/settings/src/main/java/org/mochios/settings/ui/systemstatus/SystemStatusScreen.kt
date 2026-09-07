@@ -65,6 +65,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
+import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -75,6 +76,7 @@ fun SystemStatusScreen(
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
+    StepUpHost(viewModel.stepUp)
     Scaffold(
         topBar = {
             TopAppBar(

@@ -350,4 +350,8 @@
     <string name="game_empty_title">Тоглоом алга</string>
     <string name="game_select_title">Тоглоом сонгох</string>
     <string name="game_select_subtitle">Хажуугийн самбараас тоглоом сонгох эсвэл шинийг эхлүүлнэ үү.</string>
+    <string name="settings_card">Картын загвар</string>
+    <string name="settings_card_theme">Загвараас</string>
+    <string name="settings_card_flat">Хавтгай</string>
+    <string name="settings_card_raised">Өргөгдсөн</string>
 </resources>

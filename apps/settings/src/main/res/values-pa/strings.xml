@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">ਸੂਚਨਾ ਤਰਜੀਹਾਂ</string>
     <string name="settings_home_accounts">ਜੁੜੇ ਖਾਤੇ</string>
     <string name="settings_home_interests">ਦਿਲਚਸਪੀਆਂ</string>
-    <string name="account_method_email">ਈਮੇਲ ਕੋਡ</string>
-    <string name="account_method_passkey">ਪਾਸਕੀ</string>
-    <string name="account_method_totp">ਪ੍ਰਮਾਣਕ ਐਪ</string>
     <string name="account_section_passkeys">ਪਾਸਕੀਆਂ</string>
     <string name="account_passkey_register">ਪਾਸਕੀ ਜੋੜੋ</string>
     <string name="account_passkey_delete_title">ਪਾਸਕੀ ਮਿਟਾਉਣੀ ਹੈ?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">ਰੂਟ ਮਿਟਾਓ</string>
     <string name="route_delete_title">ਰੂਟ ਮਿਟਾਉਣਾ ਹੈ?</string>
     <string name="route_path">ਪਾਥ</string>
-    <string name="route_target">ਟੀਚਾ</string>
     <string name="route_method">ਤਰੀਕਾ</string>
     <string name="route_method_app">ਐਪ</string>
     <string name="route_method_entity">ਇਕਾਈ</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">ਦਿਲਚਸਪੀਆਂ</string>
     <string name="interests_summary_title">ਸਾਰ</string>
     <string name="interests_remove">ਦਿਲਚਸਪੀ ਹਟਾਓ</string>
-    <string name="interests_add">ਜੋੜੋ</string>
-    <string name="document_save">ਸੰਭਾਲੋ</string>
-    <string name="document_saved">ਸੰਭਾਲਿਆ ਗਿਆ</string>
     <string name="notifprefs_title">ਸੂਚਨਾ ਤਰਜੀਹਾਂ</string>
     <string name="notifprefs_tab_categories">ਸ਼੍ਰੇਣੀਆਂ</string>
     <string name="notifprefs_tab_topics">ਵਿਸ਼ੇ</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">ਰੀਸੈੱਟ</string>
     <string name="system_settings_reset_to_default">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="system_settings_reset_title">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੀਏ?</string>
-    <string name="system_settings_setting_updated">ਸੈਟਿੰਗ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="system_settings_update_failed">ਸੈਟਿੰਗ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="system_setting_apps_install_user">ਯੂਜ਼ਰਾਂ ਨੂੰ ਐਪਾਂ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="system_setting_auth_email">ਈਮੇਲ ਕੋਡ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗਇਨ ਕਰੋ</string>
     <string name="system_setting_auth_passkey">ਪਾਸਕੀ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਲੌਗਇਨ ਕਰੋ</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">ਯੂਜ਼ਰ ਸਟੇਟਸ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="system_users_toast_revoke_failed">ਸੈਸ਼ਨ ਰੱਦ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 
-    <string name="settings_app_label">Mochi ਸੈਟਿੰਗਾਂ</string>
     <string name="settings_home_sessions">ਸੈਸ਼ਨ</string>
     <string name="settings_home_privacy">ਗੋਪਨੀਯਤਾ ਨੀਤੀ</string>
     <string name="settings_home_rules">ਨਿਯਮ</string>
     <string name="settings_home_terms">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
-    <string name="account_section_methods">ਲੌਗਇਨ ਢੰਗ</string>
     <string name="account_passkeys_empty">ਕੋਈ ਪਾਸਕੀ ਰਜਿਸਟਰ ਨਹੀਂ ਹਨ।</string>
     <string name="account_passkey_register_title">ਪਾਸਕੀ ਜੋੜੋ</string>
     <string name="account_passkey_register_message">ਤੁਹਾਡਾ ਉਪਕਰਣ ਤੁਹਾਨੂੰ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਕਹੇਗਾ। ਪਾਸਕੀ ਇਸ ਉਪਕਰਣ ਨਾਲ ਜੁੜੀ ਹੈ ਅਤੇ ਭਵਿੱਖ ਦੇ ਸਾਈਨ-ਇਨ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਹੈ।</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">ਰਿਕਵਰੀ ਕੋਡ ਮੁੜ-ਤਿਆਰ ਕਰਨੇ?</string>
     <string name="account_recovery_regen_message">ਮੌਜੂਦਾ ਕੋਡ ਤੁਰੰਤ ਕੰਮ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਣਗੇ। ਨਵੇਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਥਾਂ \'ਤੇ ਸੰਭਾਲੋ।</string>
     <string name="account_recovery_codes_warning">ਇਹ ਕੋਡ ਸੰਭਾਲੋ — ਹਰੇਕ ਨੂੰ ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਏ ਜਾਣਗੇ।</string>
-    <string name="sessions_section_title">ਸਰਗਰਮ ਸੈਸ਼ਨ</string>
     <string name="sessions_title">ਸੈਸ਼ਨ</string>
     <string name="sessions_empty">ਕੋਈ ਸਰਗਰਮ ਸੈਸ਼ਨ ਨਹੀਂ।</string>
     <string name="sessions_revoke_message">ਇਸ ਸੈਸ਼ਨ ਨੂੰ ਵਰਤਣ ਵਾਲਾ ਉਪਕਰਣ ਸਾਈਨ ਆਊਟ ਹੋ ਜਾਵੇਗਾ।</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">ਸਾਰ ਮੁੜ ਤਿਆਰ ਕਰੋ</string>
     <string name="interests_summary_regenerating">ਮੁੜ ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="interests_summary_empty">ਆਪਣੀਆਂ ਪਸੰਦਾਂ ਦਾ ਸਾਰ ਤਿਆਰ ਕਰਨ ਲਈ ਕੁਝ ਦਿਲਚਸਪੀਆਂ ਸ਼ਾਮਲ ਕਰੋ।</string>
-    <string name="interests_weight">ਭਾਰ</string>
     <string name="interests_search_failed">ਖੋਜ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="document_privacy_title">ਗੋਪਨੀਯਤਾ ਨੀਤੀ</string>
     <string name="document_rules_title">ਨਿਯਮ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s ਸਥਾਪਿਤ ਕਰ ਰਿਹਾ ਹੈ…</string>
     <string name="accounts_field_api_key">API ਕੁੰਜੀ</string>
     <string name="accounts_field_url">ਸਰਵਰ URL</string>
-    <string name="accounts_device_placeholder">ਪੁਸ਼ ਖਾਤੇ ਉਪਕਰਣ ਦੁਆਰਾ ਆਟੋਮੈਟਿਕ ਜੋੜੇ ਜਾਂਦੇ ਹਨ।</string>
     <string name="accounts_set_default_ai">ਡਿਫੌਲਟ AI ਵਜੋਂ ਸੈਟ ਕਰੋ</string>
     <string name="accounts_verify_code">ਕੋਡ</string>
     <string name="accounts_verify_resend">ਕੋਡ ਦੁਬਾਰਾ ਭੇਜੋ</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">ਨਾਮ</string>
     <string name="account_identity_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
     <string name="account_identity_directory_toggle">ਦੂਜਿਆਂ ਨੂੰ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਤੁਹਾਨੂੰ ਲੱਭਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
-    <string name="account_method_email_subtitle">ਈਮੇਲ ਰਾਹੀਂ ਤਸਦੀਕ ਕੋਡ ਪ੍ਰਾਪਤ ਕਰੋ</string>
-    <string name="account_method_totp_subtitle">ਚਾਲੂ ਕਰਨ ਲਈ ਹੇਠਾਂ ਪ੍ਰਮਾਣਕ ਸੈੱਟ ਕਰੋ</string>
-    <string name="account_method_passkey_subtitle">ਚਾਲੂ ਕਰਨ ਲਈ ਹੇਠਾਂ ਪਾਸਕੀ ਰਜਿਸਟਰ ਕਰੋ</string>
     <string name="domain_add">ਡੋਮੇਨ ਜੋੜੋ</string>
     <string name="domain_add_title">ਡੋਮੇਨ ਜੋੜੋ</string>
     <string name="domain_delegation_add">ਜੋੜੋ</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">ਕੋਈ ਡੈਸਟੀਨੇਸ਼ਨ ਕੌਨਫਿਗਰ ਨਹੀਂ</string>
     <string name="notifprefs_transport_fcm">Android ਪੁਸ਼</string>
     <string name="notifprefs_no_destinations">ਕੋਈ ਮੰਜ਼ਿਲ ਨਹੀਂ</string>
+    <string name="account_data_generate">ਪਾਸਫ਼੍ਰੇਜ਼ ਬਣਾਓ</string>
+    <string name="accounts_field_server">ਸਰਵਰ URL</string>
+    <string name="accounts_field_token">ਪਹੁੰਚ ਟੋਕਨ</string>
+    <string name="accounts_field_topic">ਵਿਸ਼ਾ</string>
+    <string name="accounts_field_secret">ਦਸਤਖਤ ਗੁਪਤ</string>
+    <string name="account_totp_open">ਪ੍ਰਮਾਣਕ ਐਪ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
 </resources>

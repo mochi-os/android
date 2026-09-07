@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">העדפות התראות</string>
     <string name="settings_home_accounts">חשבונות מחוברים</string>
     <string name="settings_home_interests">תחומי עניין</string>
-    <string name="account_method_email">קוד אימייל</string>
-    <string name="account_method_passkey">מפתח גישה</string>
-    <string name="account_method_totp">אפליקציית אימות</string>
     <string name="account_section_passkeys">מפתחות גישה</string>
     <string name="account_passkey_register">הוסף Passkey</string>
     <string name="account_passkey_delete_title">למחוק Passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">מחק נתיב</string>
     <string name="route_delete_title">למחוק נתיב?</string>
     <string name="route_path">נתיב</string>
-    <string name="route_target">יעד</string>
     <string name="route_method">שיטה</string>
     <string name="route_method_app">אפליקציה</string>
     <string name="route_method_entity">ישות</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">תחומי עניין</string>
     <string name="interests_summary_title">סיכום</string>
     <string name="interests_remove">הסר עניין</string>
-    <string name="interests_add">הוספה</string>
-    <string name="document_save">שמור</string>
-    <string name="document_saved">נשמר</string>
     <string name="notifprefs_title">העדפות התראות</string>
     <string name="notifprefs_tab_categories">קטגוריות</string>
     <string name="notifprefs_tab_topics">נושאים</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">אפס</string>
     <string name="system_settings_reset_to_default">אפס לברירת מחדל</string>
     <string name="system_settings_reset_title">לאפס לברירת מחדל?</string>
-    <string name="system_settings_setting_updated">ההגדרה עודכנה</string>
-    <string name="system_settings_update_failed">עדכון ההגדרה נכשל</string>
     <string name="system_setting_apps_install_user">אפשר למשתמשים להתקין אפליקציות</string>
     <string name="system_setting_auth_email">התחברות באמצעות קוד באימייל</string>
     <string name="system_setting_auth_passkey">התחברות באמצעות מפתח גישה</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">עדכון סטטוס המשתמש נכשל</string>
     <string name="system_users_toast_revoke_failed">ביטול ההפעלה נכשל</string>
 
-    <string name="settings_app_label">Mochi הגדרות</string>
     <string name="settings_home_sessions">הפעלות</string>
     <string name="settings_home_privacy">מדיניות פרטיות</string>
     <string name="settings_home_rules">חוקים</string>
     <string name="settings_home_terms">תנאי שירות</string>
-    <string name="account_section_methods">שיטות התחברות</string>
     <string name="account_passkeys_empty">אין מפתחות גישה רשומים.</string>
     <string name="account_passkey_register_title">הוסף מפתח גישה</string>
     <string name="account_passkey_register_message">המכשיר שלך יבקש ממך לאשר. מפתח הגישה קשור למכשיר זה ומשמש לכניסות עתידיות.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">לייצר מחדש קודי שחזור?</string>
     <string name="account_recovery_regen_message">קודים קיימים יפסיקו לעבוד מיד. שמור את החדשים במקום בטוח.</string>
     <string name="account_recovery_codes_warning">שמור קודים אלה — כל אחד יכול לשמש פעם אחת בלבד. הם לא יוצגו שוב.</string>
-    <string name="sessions_section_title">הפעלות פעילות</string>
     <string name="sessions_title">הפעלות</string>
     <string name="sessions_empty">אין הפעלות פעילות.</string>
     <string name="sessions_revoke_message">המכשיר שמשתמש בהפעלה זו יתנתק.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">צור מחדש סיכום</string>
     <string name="interests_summary_regenerating">יוצר מחדש…</string>
     <string name="interests_summary_empty">הוסף תחומי עניין כדי לייצר סיכום של מה שאתה אוהב.</string>
-    <string name="interests_weight">משקל</string>
     <string name="interests_search_failed">החיפוש נכשל. נסה שוב.</string>
     <string name="document_privacy_title">מדיניות פרטיות</string>
     <string name="document_rules_title">חוקים</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">מתקין %1$s…</string>
     <string name="accounts_field_api_key">מפתח API</string>
     <string name="accounts_field_url">כתובת URL של השרת</string>
-    <string name="accounts_device_placeholder">חשבונות Push מתווספים אוטומטית על ידי המכשיר.</string>
     <string name="accounts_set_default_ai">קבע כברירת מחדל ל-AI</string>
     <string name="accounts_verify_code">קוד</string>
     <string name="accounts_verify_resend">שלח קוד שוב</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">שם</string>
     <string name="account_identity_fingerprint">טביעת אצבע</string>
     <string name="account_identity_directory_toggle">אפשר לאחרים למצוא אותך בספרייה</string>
-    <string name="account_method_email_subtitle">קבלת קוד אימות באימייל</string>
-    <string name="account_method_totp_subtitle">להפעלה, הגדירו מאמת למטה</string>
-    <string name="account_method_passkey_subtitle">להפעלה, רשמו מפתח גישה למטה</string>
     <string name="domain_add">הוסף דומיין</string>
     <string name="domain_add_title">הוסף דומיין</string>
     <string name="domain_delegation_add">הוספה</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">לא הוגדרו יעדים</string>
     <string name="notifprefs_transport_fcm">פוש ל-Android</string>
     <string name="notifprefs_no_destinations">אין יעדים</string>
+    <string name="account_data_generate">צור ביטוי סיסמה</string>
+    <string name="accounts_field_server">כתובת URL של השרת</string>
+    <string name="accounts_field_token">אסימון גישה</string>
+    <string name="accounts_field_topic">נושא</string>
+    <string name="accounts_field_secret">סוד חתימה</string>
+    <string name="account_totp_open">פתיחה באפליקציית האימות</string>
 </resources>

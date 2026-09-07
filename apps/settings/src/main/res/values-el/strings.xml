@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Προτιμήσεις ειδοποιήσεων</string>
     <string name="settings_home_accounts">Συνδεδεμένοι λογαριασμοί</string>
     <string name="settings_home_interests">Ενδιαφέροντα</string>
-    <string name="account_method_email">Κωδικός email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Εφαρμογή ελέγχου ταυτότητας</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Προσθήκη passkey</string>
     <string name="account_passkey_delete_title">Διαγραφή passkey;</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Διαγραφή διαδρομής</string>
     <string name="route_delete_title">Διαγραφή διαδρομής;</string>
     <string name="route_path">Διαδρομή</string>
-    <string name="route_target">Στόχος</string>
     <string name="route_method">Μέθοδος</string>
     <string name="route_method_app">Εφαρμογή</string>
     <string name="route_method_entity">Οντότητα</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Ενδιαφέροντα</string>
     <string name="interests_summary_title">Σύνοψη</string>
     <string name="interests_remove">Αφαίρεση ενδιαφέροντος</string>
-    <string name="interests_add">Προσθήκη</string>
-    <string name="document_save">Αποθήκευση</string>
-    <string name="document_saved">Αποθηκεύτηκε</string>
     <string name="notifprefs_title">Προτιμήσεις ειδοποιήσεων</string>
     <string name="notifprefs_tab_categories">Κατηγορίες</string>
     <string name="notifprefs_tab_topics">Θέματα</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Επαναφορά</string>
     <string name="system_settings_reset_to_default">Επαναφορά στις προεπιλογές</string>
     <string name="system_settings_reset_title">Επαναφορά στις προεπιλογές;</string>
-    <string name="system_settings_setting_updated">Η ρύθμιση ενημερώθηκε</string>
-    <string name="system_settings_update_failed">Αποτυχία ενημέρωσης ρύθμισης</string>
     <string name="system_setting_apps_install_user">Να επιτρέπεται στους χρήστες η εγκατάσταση εφαρμογών</string>
     <string name="system_setting_auth_email">Σύνδεση με κωδικό email</string>
     <string name="system_setting_auth_passkey">Σύνδεση με passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Αποτυχία ενημέρωσης κατάστασης χρήστη</string>
     <string name="system_users_toast_revoke_failed">Αποτυχία ανάκλησης συνεδρίας</string>
 
-    <string name="settings_app_label">Mochi Ρυθμίσεις</string>
     <string name="settings_home_sessions">Συνεδρίες</string>
     <string name="settings_home_privacy">Πολιτική απορρήτου</string>
     <string name="settings_home_rules">Κανόνες</string>
     <string name="settings_home_terms">Όροι υπηρεσίας</string>
-    <string name="account_section_methods">Μέθοδοι σύνδεσης</string>
     <string name="account_passkeys_empty">Δεν υπάρχουν εγγεγραμμένα κλειδιά πρόσβασης.</string>
     <string name="account_passkey_register_title">Προσθήκη κλειδιού πρόσβασης</string>
     <string name="account_passkey_register_message">Η συσκευή σας θα ζητήσει επιβεβαίωση. Το κλειδί πρόσβασης συνδέεται με αυτή τη συσκευή και χρησιμοποιείται για μελλοντικές συνδέσεις.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Αναδημιουργία κωδικών ανάκτησης;</string>
     <string name="account_recovery_regen_message">Οι υπάρχοντες κωδικοί παύουν να ισχύουν άμεσα. Αποθηκεύστε τους νέους σε ασφαλές μέρος.</string>
     <string name="account_recovery_codes_warning">Αποθηκεύστε αυτούς τους κωδικούς — κάθε ένας μπορεί να χρησιμοποιηθεί μόνο μία φορά. Δεν θα εμφανιστούν ξανά.</string>
-    <string name="sessions_section_title">Ενεργές συνεδρίες</string>
     <string name="sessions_title">Συνεδρίες</string>
     <string name="sessions_empty">Δεν υπάρχουν ενεργές συνεδρίες.</string>
     <string name="sessions_revoke_message">Η συσκευή που χρησιμοποιεί αυτή τη συνεδρία θα αποσυνδεθεί.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Αναδημιουργία περίληψης</string>
     <string name="interests_summary_regenerating">Αναδημιουργία…</string>
     <string name="interests_summary_empty">Προσθέστε μερικά ενδιαφέροντα για να δημιουργήσετε μια περίληψη όσων σας αρέσουν.</string>
-    <string name="interests_weight">Βάρος</string>
     <string name="interests_search_failed">Η αναζήτηση απέτυχε. Δοκιμάστε ξανά.</string>
     <string name="document_privacy_title">Πολιτική απορρήτου</string>
     <string name="document_rules_title">Κανόνες</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Εγκατάσταση %1$s…</string>
     <string name="accounts_field_api_key">Κλειδί API</string>
     <string name="accounts_field_url">URL διακομιστή</string>
-    <string name="accounts_device_placeholder">Οι λογαριασμοί push προστίθενται αυτόματα από τη συσκευή.</string>
     <string name="accounts_set_default_ai">Ορισμός ως προεπιλεγμένη ΤΝ</string>
     <string name="accounts_verify_code">Κωδικός</string>
     <string name="accounts_verify_resend">Επανάληψη αποστολής κωδικού</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Όνομα</string>
     <string name="account_identity_fingerprint">Αποτύπωμα</string>
     <string name="account_identity_directory_toggle">Να επιτρέπεται σε άλλους να σας βρίσκουν στον κατάλογο</string>
-    <string name="account_method_email_subtitle">Λάβετε κωδικό επαλήθευσης μέσω email</string>
-    <string name="account_method_totp_subtitle">Ρυθμίστε έναν έλεγχο ταυτότητας παρακάτω για ενεργοποίηση</string>
-    <string name="account_method_passkey_subtitle">Καταχωρίστε ένα κλειδί πρόσβασης παρακάτω για ενεργοποίηση</string>
     <string name="domain_add">Προσθήκη τομέα</string>
     <string name="domain_add_title">Προσθήκη τομέα</string>
     <string name="domain_delegation_add">Προσθήκη</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Δεν έχουν διαμορφωθεί προορισμοί</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Δεν υπάρχουν προορισμοί</string>
+    <string name="account_data_generate">Δημιουργία φράσης πρόσβασης</string>
+    <string name="accounts_field_server">URL διακομιστή</string>
+    <string name="accounts_field_token">Διακριτικό πρόσβασης</string>
+    <string name="accounts_field_topic">Θέμα</string>
+    <string name="accounts_field_secret">Μυστικό υπογραφής</string>
+    <string name="account_totp_open">Άνοιγμα στην εφαρμογή ελέγχου ταυτότητας</string>
 </resources>

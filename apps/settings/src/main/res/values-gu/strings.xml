@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">સૂચના પસંદગીઓ</string>
     <string name="settings_home_accounts">જોડાયેલા ખાતાઓ</string>
     <string name="settings_home_interests">રુચિઓ</string>
-    <string name="account_method_email">ઇમેઇલ કોડ</string>
-    <string name="account_method_passkey">પાસકી</string>
-    <string name="account_method_totp">Authenticator એપ્લિકેશન</string>
     <string name="account_section_passkeys">પાસકીઝ</string>
     <string name="account_passkey_register">પાસકી ઉમેરો</string>
     <string name="account_passkey_delete_title">પાસકી કાઢી નાખવી છે?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">રૂટ કાઢી નાખો</string>
     <string name="route_delete_title">રૂટ કાઢી નાખવો છે?</string>
     <string name="route_path">પાથ</string>
-    <string name="route_target">લક્ષ્ય</string>
     <string name="route_method">પદ્ધતિ</string>
     <string name="route_method_app">એપ્લિકેશન</string>
     <string name="route_method_entity">સંસ્થા</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">રુચિઓ</string>
     <string name="interests_summary_title">સારાંશ</string>
     <string name="interests_remove">રસ દૂર કરો</string>
-    <string name="interests_add">ઉમેરો</string>
-    <string name="document_save">સાચવો</string>
-    <string name="document_saved">સાચવ્યું</string>
     <string name="notifprefs_title">સૂચના પસંદગીઓ</string>
     <string name="notifprefs_tab_categories">શ્રેણીઓ</string>
     <string name="notifprefs_tab_topics">વિષયો</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">રીસેટ કરો</string>
     <string name="system_settings_reset_to_default">ડિફૉલ્ટ પર રીસેટ કરો</string>
     <string name="system_settings_reset_title">ડિફૉલ્ટ પર રીસેટ કરો?</string>
-    <string name="system_settings_setting_updated">સેટિંગ અપડેટ કરી</string>
-    <string name="system_settings_update_failed">સેટિંગ અપડેટ કરવામાં નિષ્ફળ</string>
     <string name="system_setting_apps_install_user">વપરાશકર્તાઓને એપ્લિકેશનો ઇન્સ્ટૉલ કરવાની મંજૂરી આપો</string>
     <string name="system_setting_auth_email">ઇમેઇલ કોડનો ઉપયોગ કરીને લૉગિન</string>
     <string name="system_setting_auth_passkey">પાસકીનો ઉપયોગ કરીને લૉગિન</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">યુઝર સ્ટેટસ અપડેટ કરવામાં નિષ્ફળ</string>
     <string name="system_users_toast_revoke_failed">સેશન રદ કરવામાં નિષ્ફળ</string>
 
-    <string name="settings_app_label">Mochi સેટિંગ્સ</string>
     <string name="settings_home_sessions">સત્રો</string>
     <string name="settings_home_privacy">ગોપનીયતા નીતિ</string>
     <string name="settings_home_rules">નિયમો</string>
     <string name="settings_home_terms">સેવાની શરતો</string>
-    <string name="account_section_methods">લોગિન પદ્ધતિઓ</string>
     <string name="account_passkeys_empty">કોઈ પાસકી નોંધાયેલ નથી.</string>
     <string name="account_passkey_register_title">પાસકી ઉમેરો</string>
     <string name="account_passkey_register_message">તમારું ઉપકરણ તમને ખાતરી કરવા માટે કહેશે. પાસકી આ ઉપકરણ સાથે જોડાયેલ છે અને ભવિષ્યના સાઇન-ઇન માટે વાપરવામાં આવશે.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">પુનઃપ્રાપ્તિ કોડ ફરીથી બનાવવા?</string>
     <string name="account_recovery_regen_message">વર્તમાન કોડ તરત જ કામ કરવાનું બંધ કરશે. નવા સુરક્ષિત જગ્યાએ સાચવો.</string>
     <string name="account_recovery_codes_warning">આ કોડ સાચવો — દરેકનો માત્ર એક જ વાર ઉપયોગ થઈ શકે છે. તેઓ ફરીથી દર્શાવવામાં આવશે નહીં.</string>
-    <string name="sessions_section_title">સક્રિય સત્રો</string>
     <string name="sessions_title">સત્રો</string>
     <string name="sessions_empty">કોઈ સક્રિય સત્રો નથી.</string>
     <string name="sessions_revoke_message">આ સત્રનો ઉપયોગ કરનાર ઉપકરણ સાઇન આઉટ થશે.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">સારાંશ ફરીથી બનાવો</string>
     <string name="interests_summary_regenerating">ફરીથી બનાવી રહ્યું છે…</string>
     <string name="interests_summary_empty">તમને ગમે છે તે વસ્તુઓનો સારાંશ બનાવવા માટે કેટલાક રસ ઉમેરો.</string>
-    <string name="interests_weight">વજન</string>
     <string name="interests_search_failed">શોધ નિષ્ફળ થઈ. કૃપા કરીને ફરીથી પ્રયાસ કરો.</string>
     <string name="document_privacy_title">ગોપનીયતા નીતિ</string>
     <string name="document_rules_title">નિયમો</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s ઇન્સ્ટોલ કરી રહ્યું છે…</string>
     <string name="accounts_field_api_key">API કી</string>
     <string name="accounts_field_url">સર્વર URL</string>
-    <string name="accounts_device_placeholder">પુશ ખાતાં ઉપકરણ દ્વારા આપમેળે ઉમેરવામાં આવે છે.</string>
     <string name="accounts_set_default_ai">ડિફોલ્ટ AI તરીકે સેટ કરો</string>
     <string name="accounts_verify_code">કોડ</string>
     <string name="accounts_verify_resend">કોડ ફરીથી મોકલો</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">નામ</string>
     <string name="account_identity_fingerprint">આંગળાની છાપ</string>
     <string name="account_identity_directory_toggle">બીજાને તમને ડિરેક્ટરીમાં શોધવાની મંજૂરી આપો</string>
-    <string name="account_method_email_subtitle">ઇમેઇલ દ્વારા ચકાસણી કોડ મેળવો</string>
-    <string name="account_method_totp_subtitle">સક્ષમ કરવા માટે નીચે ઑથેન્ટિકેટર સેટ કરો</string>
-    <string name="account_method_passkey_subtitle">સક્ષમ કરવા માટે નીચે પાસકી નોંધો</string>
     <string name="domain_add">ડોમેન ઉમેરો</string>
     <string name="domain_add_title">ડોમેન ઉમેરો</string>
     <string name="domain_delegation_add">ઉમેરો</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">કોઈ ડેસ્ટિનેશન્સ કન્ફિગર કર્યા નથી</string>
     <string name="notifprefs_transport_fcm">Android પુશ</string>
     <string name="notifprefs_no_destinations">કોઈ ગંતવ્ય નથી</string>
+    <string name="account_data_generate">પાસ-ફ્રેઝ બનાવો</string>
+    <string name="accounts_field_server">સર્વર URL</string>
+    <string name="accounts_field_token">ઍક્સેસ ટોકન</string>
+    <string name="accounts_field_topic">વિષય</string>
+    <string name="accounts_field_secret">સહી ગુપ્ત કી</string>
+    <string name="account_totp_open">ઓથેન્ટિકેટર ઍપમાં ખોલો</string>
 </resources>

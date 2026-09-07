@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">შეტყობინებების პარამეტრები</string>
     <string name="settings_home_accounts">დაკავშირებული ანგარიშები</string>
     <string name="settings_home_interests">ინტერესები</string>
-    <string name="account_method_email">ელფოსტის კოდი</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator აპი</string>
     <string name="account_section_passkeys">Passkey-ები</string>
     <string name="account_passkey_register">passkey-ის დამატება</string>
     <string name="account_passkey_delete_title">passkey-ის წაშლა?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">მარშრუტის წაშლა</string>
     <string name="route_delete_title">მარშრუტის წაშლა?</string>
     <string name="route_path">ბილიკი</string>
-    <string name="route_target">სამიზნე</string>
     <string name="route_method">მეთოდი</string>
     <string name="route_method_app">აპი</string>
     <string name="route_method_entity">ერთეული</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">ინტერესები</string>
     <string name="interests_summary_title">შემაჯამებელი</string>
     <string name="interests_remove">ინტერესის წაშლა</string>
-    <string name="interests_add">დამატება</string>
-    <string name="document_save">შენახვა</string>
-    <string name="document_saved">შენახული</string>
     <string name="notifprefs_title">შეტყობინებების პარამეტრები</string>
     <string name="notifprefs_tab_categories">კატეგორიები</string>
     <string name="notifprefs_tab_topics">ზედა დონე</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">გადაყენება</string>
     <string name="system_settings_reset_to_default">ნაგულისხმევზე გადაყენება</string>
     <string name="system_settings_reset_title">ნაგულისხმევზე გადაყენება?</string>
-    <string name="system_settings_setting_updated">პარამეტრი განახლდა</string>
-    <string name="system_settings_update_failed">პარამეტრის განახლება ვერ მოხერხდა</string>
     <string name="system_setting_apps_install_user">მომხმარებლებისთვის აპების ინსტალაციის დაშვება</string>
     <string name="system_setting_auth_email">შესვლა ელფოსტის კოდით</string>
     <string name="system_setting_auth_passkey">შესვლა passkey-ით</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">მომხმარებლის სტატუსის განახლება ვერ მოხერხდა</string>
     <string name="system_users_toast_revoke_failed">სესიის გაუქმება ვერ მოხერხდა</string>
 
-    <string name="settings_app_label">Mochi პარამეტრები</string>
     <string name="settings_home_sessions">სესიები</string>
     <string name="settings_home_privacy">კონფიდენციალურობის პოლიტიკა</string>
     <string name="settings_home_rules">წესები</string>
     <string name="settings_home_terms">მომსახურების პირობები</string>
-    <string name="account_section_methods">შესვლის მეთოდები</string>
     <string name="account_passkeys_empty">რეგისტრირებული საშვი არ არის.</string>
     <string name="account_passkey_register_title">საშვის დამატება</string>
     <string name="account_passkey_register_message">თქვენი მოწყობილობა მოგთხოვთ დადასტურებას. საშვი დაკავშირებულია ამ მოწყობილობასთან და გამოიყენება მომავალი შესვლებისთვის.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">აღდგენის კოდების ხელახლა შექმნა?</string>
     <string name="account_recovery_regen_message">არსებული კოდები მაშინვე შეწყვეტს მუშაობას. შეინახეთ ახლები უსაფრთხო ადგილას.</string>
     <string name="account_recovery_codes_warning">შეინახეთ ეს კოდები — თითოეული მხოლოდ ერთხელ შეიძლება გამოყენებული. ისინი აღარ გამოჩნდება.</string>
-    <string name="sessions_section_title">აქტიური სესიები</string>
     <string name="sessions_title">სესიები</string>
     <string name="sessions_empty">აქტიური სესიები არ არის.</string>
     <string name="sessions_revoke_message">ამ სესიის გამომყენებელი მოწყობილობიდან გამოვა.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">შემაჯამებლის ხელახლა შექმნა</string>
     <string name="interests_summary_regenerating">ხელახლა შექმნა…</string>
     <string name="interests_summary_empty">დაამატეთ რამდენიმე ინტერესი თქვენი მოწონებების შემაჯამებლის შესაქმნელად.</string>
-    <string name="interests_weight">წონა</string>
     <string name="interests_search_failed">ძიება ვერ მოხერხდა. გთხოვთ კიდევ სცადოთ.</string>
     <string name="document_privacy_title">კონფიდენციალურობის პოლიტიკა</string>
     <string name="document_rules_title">წესები</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s-ის ინსტალაცია…</string>
     <string name="accounts_field_api_key">API გასაღები</string>
     <string name="accounts_field_url">სერვერის URL</string>
-    <string name="accounts_device_placeholder">Push ანგარიშები მოწყობილობის მიერ ავტომატურად ემატება.</string>
     <string name="accounts_set_default_ai">ნაგულისხმევ AI-დ დაყენება</string>
     <string name="accounts_verify_code">კოდი</string>
     <string name="accounts_verify_resend">კოდის ხელახლა გაგზავნა</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">სახელი</string>
     <string name="account_identity_fingerprint">ანაბეჭდი</string>
     <string name="account_identity_directory_toggle">სხვების ნება, გიპოვონ კატალოგში</string>
-    <string name="account_method_email_subtitle">მიიღეთ დადასტურების კოდი ელფოსტით</string>
-    <string name="account_method_totp_subtitle">ჩასართავად დააყენეთ ავთენტიფიკატორი ქვემოთ</string>
-    <string name="account_method_passkey_subtitle">ჩასართავად დაარეგისტრირეთ წვდომის გასაღები ქვემოთ</string>
     <string name="domain_add">დომენის დამატება</string>
     <string name="domain_add_title">დომენის დამატება</string>
     <string name="domain_delegation_add">დამატება</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">დანიშნულებები არ არის კონფიგურირებული</string>
     <string name="notifprefs_transport_fcm">Android push შეტყობინება</string>
     <string name="notifprefs_no_destinations">დანიშნულების ადგილები არ არის</string>
+    <string name="account_data_generate">პაროლის ფრაზის გენერირება</string>
+    <string name="accounts_field_server">სერვერის URL</string>
+    <string name="accounts_field_token">წვდომის ტოკენი</string>
+    <string name="accounts_field_topic">თემა</string>
+    <string name="accounts_field_secret">ხელმოწერის საიდუმლო</string>
+    <string name="account_totp_open">ავთენტიფიკატორის აპში გახსნა</string>
 </resources>

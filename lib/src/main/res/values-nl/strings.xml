@@ -350,4 +350,8 @@
     <string name="game_empty_title">Nog geen spellen</string>
     <string name="game_select_title">Kies een spel</string>
     <string name="game_select_subtitle">Kies een spel in de zijbalk of begin een nieuw spel.</string>
+    <string name="settings_card">Kaartstijl</string>
+    <string name="settings_card_theme">Van thema</string>
+    <string name="settings_card_flat">Plat</string>
+    <string name="settings_card_raised">Verhoogd</string>
 </resources>

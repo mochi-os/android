@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Kennisgewing-voorkeure</string>
     <string name="settings_home_accounts">Verbinde rekeninge</string>
     <string name="settings_home_interests">Belange</string>
-    <string name="account_method_email">E-poskode</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Verifikasie-app</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Voeg sleutelpas by</string>
     <string name="account_passkey_delete_title">Verwyder sleutelpas?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Verwyder roete</string>
     <string name="route_delete_title">Verwyder roete?</string>
     <string name="route_path">Pad</string>
-    <string name="route_target">Teiken</string>
     <string name="route_method">Metode</string>
     <string name="route_method_app">Toepassing</string>
     <string name="route_method_entity">Entiteit</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Belange</string>
     <string name="interests_summary_title">Opsomming</string>
     <string name="interests_remove">Verwyder belangstelling</string>
-    <string name="interests_add">Voeg by</string>
-    <string name="document_save">Stoor</string>
-    <string name="document_saved">Gestoor</string>
     <string name="notifprefs_title">Kennisgewing-voorkeure</string>
     <string name="notifprefs_tab_categories">Kategorieë</string>
     <string name="notifprefs_tab_topics">Onderwerpe</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Stel terug</string>
     <string name="system_settings_reset_to_default">Stel terug na verstek</string>
     <string name="system_settings_reset_title">Stel terug na verstek?</string>
-    <string name="system_settings_setting_updated">Instelling opgedateer</string>
-    <string name="system_settings_update_failed">Kon nie instelling opdateer nie</string>
     <string name="system_setting_apps_install_user">Laat gebruikers toe om apps te installeer</string>
     <string name="system_setting_auth_email">Meld aan met e-poskode</string>
     <string name="system_setting_auth_passkey">Meld aan met passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Kon nie gebruikerstatus opdateer nie</string>
     <string name="system_users_toast_revoke_failed">Kon nie sessie herroep nie</string>
 
-    <string name="settings_app_label">Mochi Instellings</string>
     <string name="settings_home_sessions">Sessies</string>
     <string name="settings_home_privacy">Privaatheidsbeleid</string>
     <string name="settings_home_rules">Reëls</string>
     <string name="settings_home_terms">Diensbepalings</string>
-    <string name="account_section_methods">Aantekenmetodes</string>
     <string name="account_passkeys_empty">Geen toegangssleutels geregistreer nie.</string>
     <string name="account_passkey_register_title">Voeg toegangssleutel by</string>
     <string name="account_passkey_register_message">Jou toestel sal vra om te bevestig. Die toegangssleutel is aan hierdie toestel gekoppel en word gebruik vir toekomstige aanmeldings.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Hergenereer herstelkodes?</string>
     <string name="account_recovery_regen_message">Bestaande kodes hou onmiddellik op werk. Stoor die nuwes op \'n veilige plek.</string>
     <string name="account_recovery_codes_warning">Stoor hierdie kodes — elkeen kan slegs een keer gebruik word. Hulle sal nie weer gewys word nie.</string>
-    <string name="sessions_section_title">Aktiewe sessies</string>
     <string name="sessions_title">Sessies</string>
     <string name="sessions_empty">Geen aktiewe sessies nie.</string>
     <string name="sessions_revoke_message">Die toestel wat hierdie sessie gebruik sal afgeteken word.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Hergenereer opsomming</string>
     <string name="interests_summary_regenerating">Hergenereer…</string>
     <string name="interests_summary_empty">Voeg \'n paar belangstellings by om \'n opsomming te genereer van wat jy hou.</string>
-    <string name="interests_weight">Gewig</string>
     <string name="interests_search_failed">Soektog het misluk. Probeer asseblief weer.</string>
     <string name="document_privacy_title">Privaatheidsbeleid</string>
     <string name="document_rules_title">Reëls</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Installeer %1$s…</string>
     <string name="accounts_field_api_key">API-sleutel</string>
     <string name="accounts_field_url">Bediener-URL</string>
-    <string name="accounts_device_placeholder">Push-rekeninge word outomaties deur die toestel bygevoeg.</string>
     <string name="accounts_set_default_ai">Stel as verstek-KI</string>
     <string name="accounts_verify_code">Kode</string>
     <string name="accounts_verify_resend">Stuur kode weer</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Naam</string>
     <string name="account_identity_fingerprint">Vingerafdruk</string>
     <string name="account_identity_directory_toggle">Laat ander toe om jou in die gids te vind</string>
-    <string name="account_method_email_subtitle">Ontvang \'n verifikasiekode per e-pos</string>
-    <string name="account_method_totp_subtitle">Stel hieronder \'n verifikator op om te aktiveer</string>
-    <string name="account_method_passkey_subtitle">Registreer hieronder \'n toegangsleutel om te aktiveer</string>
     <string name="domain_add">Voeg domein by</string>
     <string name="domain_add_title">Voeg domein by</string>
     <string name="domain_delegation_add">Voeg by</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Geen bestemmings gekonfigureer nie</string>
     <string name="notifprefs_transport_fcm">Android-stoot</string>
     <string name="notifprefs_no_destinations">Geen bestemmings</string>
+    <string name="account_data_generate">Genereer wagfrase</string>
+    <string name="accounts_field_server">Bediener-URL</string>
+    <string name="accounts_field_token">Toegangstoken</string>
+    <string name="accounts_field_topic">Onderwerp</string>
+    <string name="accounts_field_secret">Ondertekeningsgeheim</string>
+    <string name="account_totp_open">Maak oop in verifikasie-app</string>
 </resources>

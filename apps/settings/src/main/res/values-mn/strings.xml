@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Мэдэгдлийн тохиргоо</string>
     <string name="settings_home_accounts">Холбогдсон бүртгэлүүд</string>
     <string name="settings_home_interests">Сонирхлууд</string>
-    <string name="account_method_email">Имэйл код</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator апп</string>
     <string name="account_section_passkeys">Passkey-ууд</string>
     <string name="account_passkey_register">Passkey нэмэх</string>
     <string name="account_passkey_delete_title">Passkey устгах уу?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Зам устгах</string>
     <string name="route_delete_title">Зам устгах уу?</string>
     <string name="route_path">Зам</string>
-    <string name="route_target">Зорилт</string>
     <string name="route_method">Арга</string>
     <string name="route_method_app">Апп</string>
     <string name="route_method_entity">Entity</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Сонирхлууд</string>
     <string name="interests_summary_title">Хураангуй</string>
     <string name="interests_remove">Сонирхол хасах</string>
-    <string name="interests_add">Нэмэх</string>
-    <string name="document_save">Хадгалах</string>
-    <string name="document_saved">Хадгалагдсан</string>
     <string name="notifprefs_title">Мэдэгдлийн тохиргоо</string>
     <string name="notifprefs_tab_categories">Ангилал</string>
     <string name="notifprefs_tab_topics">Сэдвүүд</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Шинэчлэх</string>
     <string name="system_settings_reset_to_default">Анхдагчид буцаах</string>
     <string name="system_settings_reset_title">Анхдагчид буцаах уу?</string>
-    <string name="system_settings_setting_updated">Тохиргоо шинэчлэгдсэн</string>
-    <string name="system_settings_update_failed">Тохиргоо шинэчилж чадсангүй</string>
     <string name="system_setting_apps_install_user">Хэрэглэгчдэд апп суулгахыг зөвшөөрөх</string>
     <string name="system_setting_auth_email">Имэйл код ашиглан нэвтрэх</string>
     <string name="system_setting_auth_passkey">Passkey ашиглан нэвтрэх</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Хэрэглэгчийн төлвийг шинэчилж чадсангүй</string>
     <string name="system_users_toast_revoke_failed">Сешн хүчингүй болгож чадсангүй</string>
 
-    <string name="settings_app_label">Mochi Тохиргоо</string>
     <string name="settings_home_sessions">Сешн</string>
     <string name="settings_home_privacy">Нууцлалын бодлого</string>
     <string name="settings_home_rules">Дүрэм</string>
     <string name="settings_home_terms">Үйлчилгээний нөхцөл</string>
-    <string name="account_section_methods">Нэвтрэх аргууд</string>
     <string name="account_passkeys_empty">Бүртгэгдсэн нэвтрэх түлхүүр байхгүй.</string>
     <string name="account_passkey_register_title">Нэвтрэх түлхүүр нэмэх</string>
     <string name="account_passkey_register_message">Таны төхөөрөмж баталгаажуулахыг хүсэх болно. Нэвтрэх түлхүүр энэ төхөөрөмжтэй холбогдсон бөгөөд ирээдүйн нэвтрэлтүүдэд ашиглагдана.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Сэргээх кодуудыг дахин үүсгэх үү?</string>
     <string name="account_recovery_regen_message">Одоо байгаа кодууд тэр даруй ажиллахаа болино. Шинээр гаргасан кодуудыг аюулгүй газар хадгална уу.</string>
     <string name="account_recovery_codes_warning">Эдгээр кодыг хадгалаарай — тус бүрийг зөвхөн нэг удаа ашиглаж болно. Тэдгээр дахин харагдахгүй.</string>
-    <string name="sessions_section_title">Идэвхтэй сесс</string>
     <string name="sessions_title">Сешн</string>
     <string name="sessions_empty">Идэвхтэй сесс байхгүй.</string>
     <string name="sessions_revoke_message">Энэ сессийг ашиглаж буй төхөөрөмж гарах болно.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Хураангуйг дахин үүсгэх</string>
     <string name="interests_summary_regenerating">Дахин үүсгэж байна…</string>
     <string name="interests_summary_empty">Дуртай зүйлийнхээ хураангуйг үүсгэхийн тулд зарим сонирхлуудыг нэмнэ үү.</string>
-    <string name="interests_weight">Жин</string>
     <string name="interests_search_failed">Хайлт амжилтгүй боллоо. Дахин оролдоно уу.</string>
     <string name="document_privacy_title">Нууцлалын бодлого</string>
     <string name="document_rules_title">Дүрэм</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s суулгаж байна…</string>
     <string name="accounts_field_api_key">API түлхүүр</string>
     <string name="accounts_field_url">Серверийн URL</string>
-    <string name="accounts_device_placeholder">Push бүртгэлийг төхөөрөмж автоматаар нэмдэг.</string>
     <string name="accounts_set_default_ai">Анхдагч AI болгож тохируулах</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Кодыг дахин илгээх</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Нэр</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Бусад хэрэглэгч таныг лавлахаас олох боломжтой</string>
-    <string name="account_method_email_subtitle">Баталгаажуулах кодыг имэйлээр авах</string>
-    <string name="account_method_totp_subtitle">Идэвхжүүлэхийн тулд доор баталгаажуулагч тохируулна уу</string>
-    <string name="account_method_passkey_subtitle">Идэвхжүүлэхийн тулд доор нэвтрэх түлхүүр бүртгүүлнэ үү</string>
     <string name="domain_add">Домэйн нэмэх</string>
     <string name="domain_add_title">Домэйн нэмэх</string>
     <string name="domain_delegation_add">Нэмэх</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Очих газар тохируулаагүй</string>
     <string name="notifprefs_transport_fcm">Android push мэдэгдэл</string>
     <string name="notifprefs_no_destinations">Хүрэх газар алга</string>
+    <string name="account_data_generate">Нууц үг үүсгэх</string>
+    <string name="accounts_field_server">Серверийн URL</string>
+    <string name="accounts_field_token">Хандах токен</string>
+    <string name="accounts_field_topic">Сэдэв</string>
+    <string name="accounts_field_secret">Гарын үсгийн нууц</string>
+    <string name="account_totp_open">Баталгаажуулагч аппад нээх</string>
 </resources>

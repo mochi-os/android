@@ -350,4 +350,8 @@
     <string name="game_empty_title">Ayikho imidlalo okwamanje</string>
     <string name="game_select_title">Khetha umdlalo</string>
     <string name="game_select_subtitle">Khetha umdlalo kubha eseceleni noma qala omusha.</string>
+    <string name="settings_card">Isitayela sekhadi</string>
+    <string name="settings_card_theme">Kusukela endikimbeni</string>
+    <string name="settings_card_flat">Isicaba</string>
+    <string name="settings_card_raised">Iphakanyisiwe</string>
 </resources>

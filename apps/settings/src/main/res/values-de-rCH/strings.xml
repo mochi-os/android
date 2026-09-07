@@ -7,13 +7,11 @@
     <string name="account_cancel">Abbrechen</string>
     <string name="account_save">Speichern</string>
     <string name="route_save">Speichern</string>
-    <string name="document_save">Speichern</string>
     <string name="system_documents_save">Speichern</string>
     <string name="system_settings_save">Speichern</string>
     <string name="notifprefs_edit">Bearbeiten</string>
     <string name="account_delete">Löschen</string>
     <string name="notifprefs_delete">Löschen</string>
-    <string name="interests_add">Hinzufügen</string>
     <string name="settings_home_logout">Abmelden</string>
     <string name="settings_home_title">Einstellungen</string>
     <string name="accounts_settings">Einstellungen</string>
@@ -26,7 +24,6 @@
     <string name="system_status_title">Status</string>
     <string name="system_users_col_status">Status</string>
 
-    <string name="settings_app_label">Mochi-Einstellungen</string>
     <string name="settings_home_display">Anzeige</string>
     <string name="settings_home_notification_prefs">Benachrichtigungseinstellungen</string>
     <string name="settings_home_accounts">Verbundene Konten</string>
@@ -34,10 +31,6 @@
     <string name="settings_home_privacy">Datenschutzerklärung</string>
     <string name="settings_home_rules">Regeln</string>
     <string name="settings_home_terms">Nutzungsbedingungen</string>
-    <string name="account_section_methods">Anmeldemethoden</string>
-    <string name="account_method_email">E-Mail-Code</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator-App</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkeys_empty">Keine Passkeys registriert.</string>
     <string name="account_passkey_register">Passkey hinzufügen</string>
@@ -66,7 +59,6 @@
     <string name="account_recovery_regen_message">Bestehende Codes funktionieren ab sofort nicht mehr. Bewahren Sie die neuen Codes an einem sicheren Ort auf.</string>
     <string name="account_recovery_codes_title">Wiederherstellungscodes</string>
     <string name="account_recovery_codes_warning">Speichern Sie diese Codes – jeder kann nur einmal verwendet werden. Sie werden nicht erneut angezeigt.</string>
-    <string name="sessions_section_title">Aktive Sitzungen</string>
     <string name="sessions_empty">Keine aktiven Sitzungen.</string>
     <string name="sessions_unknown_agent">Unbekanntes Gerät</string>
     <string name="sessions_revoke_title">Sitzung widerrufen?</string>
@@ -95,7 +87,6 @@
     <string name="route_delete_message">Das entfernt d\'Routä für dr Pfad \"%1$s\".</string>
     <string name="route_empty">Kei Routä konfiguriert.</string>
     <string name="route_path">Pfad</string>
-    <string name="route_target">Ziel</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entität</string>
     <string name="route_method_redirect">Wiiterleitig</string>
@@ -110,13 +101,11 @@
     <string name="interests_summary_regenerate">Zämmäfassig nöi generierä</string>
     <string name="interests_summary_regenerating">Wird neu generiert…</string>
     <string name="interests_summary_empty">Füeged Si Interèssä hinzue, zum e Zämmäfassig vo dèm z\'generierä, wo Si begeisteret.</string>
-    <string name="interests_weight">Gewicht</string>
     <string name="interests_remove">Interesse entfernen</string>
     <string name="interests_search_failed">Suche fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
     <string name="document_privacy_title">Datenschutzerklärung</string>
     <string name="document_rules_title">Regeln</string>
     <string name="document_terms_title">Nutzungsbedingungen</string>
-    <string name="document_saved">Gespeichert</string>
     <string name="notifprefs_title">Benachrichtigungen</string>
     <string name="notifprefs_tab_categories">Kategorien</string>
     <string name="notifprefs_tab_topics">Themen</string>
@@ -154,7 +143,6 @@
     <string name="accounts_field_api_key">API-Schlüssel</string>
     <string name="accounts_field_model">Modell</string>
     <string name="accounts_field_url">Server-URL</string>
-    <string name="accounts_device_placeholder">Push-Konten werden automatisch vom Gerät hinzugefügt.</string>
     <string name="accounts_status_pending">Ausstehend</string>
     <string name="accounts_status_verified">Verifiziert</string>
     <string name="accounts_status_connected">Verbunden</string>
@@ -199,8 +187,6 @@
     <string name="system_settings_reset_title">Auf Standard zurücksetzen?</string>
     <string name="system_settings_reset_message">Damit wird \"%1$s\" auf den Standardwert (%2$s) zurückgesetzt.</string>
     <string name="system_settings_reset_message_empty">Damit wird \"%1$s\" auf den Standardwert (leer) zurückgesetzt.</string>
-    <string name="system_settings_setting_updated">Einstellung aktualisiert</string>
-    <string name="system_settings_update_failed">Einstellung konnte nicht aktualisiert werden</string>
     <string name="system_setting_apps_install_user">Benutzern erlauben, Apps zu installieren</string>
     <string name="system_setting_auth_email">Anmeldung mit E-Mail-Code</string>
     <string name="system_setting_auth_passkey">Anmeldung mit Passkey</string>
@@ -283,9 +269,6 @@
     <string name="account_identity_identity">Identität</string>
     <string name="account_identity_name">Name</string>
     <string name="account_identity_username">Benutzername</string>
-    <string name="account_method_email_subtitle">Bestätigungscode per E-Mail erhalten</string>
-    <string name="account_method_passkey_subtitle">Registriere unten einen Passkey, um zu aktivieren</string>
-    <string name="account_method_totp_subtitle">Richte unten einen Authentifikator ein, um zu aktivieren</string>
     <string name="account_section_identity">Identität</string>
     <string name="account_section_oauth">Drittanbieter-Anmeldung</string>
     <string name="account_title">Konto</string>
@@ -367,4 +350,5 @@
     <string name="route_target_select">Auswählen</string>
     <string name="accounts_provider_url">Externe URL</string>
     <string name="accounts_provider_web">Mochi Web</string>
+    <string name="account_data_generate">Passphrase generieren</string>
 </resources>

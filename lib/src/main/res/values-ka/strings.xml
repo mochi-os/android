@@ -350,4 +350,8 @@
     <string name="game_empty_title">თამაშები ჯერ არ არის</string>
     <string name="game_select_title">აირჩიეთ თამაში</string>
     <string name="game_select_subtitle">აირჩიეთ თამაში გვერდით პანელზე ან დაიწყეთ ახალი.</string>
+    <string name="settings_card">ბარათის სტილი</string>
+    <string name="settings_card_theme">თემიდან</string>
+    <string name="settings_card_flat">ბრტყელი</string>
+    <string name="settings_card_raised">აწეული</string>
 </resources>

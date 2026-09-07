@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Filannoo beeksisaa</string>
     <string name="settings_home_accounts">Akkaawuntiilee walitti hidhaman</string>
     <string name="settings_home_interests">Fedhota</string>
-    <string name="account_method_email">Koodii imeelii</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Appii mirkaneessaa</string>
     <string name="account_section_passkeys">Passkey-wwan</string>
     <string name="account_passkey_register">Passkey dabali</string>
     <string name="account_passkey_delete_title">Passkey haqu?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Karaa haqi</string>
     <string name="route_delete_title">Karaa haqu?</string>
     <string name="route_path">Daandii</string>
-    <string name="route_target">Galma</string>
     <string name="route_method">Mala</string>
     <string name="route_method_app">Appii</string>
     <string name="route_method_entity">Iddoo</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Fedhota</string>
     <string name="interests_summary_title">Cuunfaa</string>
     <string name="interests_remove">Dantaa haqi</string>
-    <string name="interests_add">Dabali</string>
-    <string name="document_save">Olkaa\'i</string>
-    <string name="document_saved">Olkaa\'ame</string>
     <string name="notifprefs_title">Filannoo beeksisaa</string>
     <string name="notifprefs_tab_categories">Ramaddilee</string>
     <string name="notifprefs_tab_topics">Mata dureewwan</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Haaromsi</string>
     <string name="system_settings_reset_to_default">Gara durtiitti deebisi</string>
     <string name="system_settings_reset_title">Gara durtiitti deebisuuf?</string>
-    <string name="system_settings_setting_updated">Qindaa\'inni haaromfameera</string>
-    <string name="system_settings_update_failed">Filannoo toattaachuu hin dandeenye</string>
     <string name="system_setting_apps_install_user">Fayyadamtoonni appiilee fe\'achuu hayyami</string>
     <string name="system_setting_auth_email">Koodii imeelii fayyadamuun seeni</string>
     <string name="system_setting_auth_passkey">Passkey fayyadamuun seeni</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Haala fayyadamaa toattaachuu hin dandeenye</string>
     <string name="system_users_toast_revoke_failed">Sessenii haquu hin dandeenye</string>
 
-    <string name="settings_app_label">Mochi Qindaa\'ina</string>
     <string name="settings_home_sessions">Yeroowwan tajaajila</string>
     <string name="settings_home_privacy">Imaammata iccitii</string>
     <string name="settings_home_rules">Seerota</string>
     <string name="settings_home_terms">Haalota tajaajilaa</string>
-    <string name="account_section_methods">Mala seenuu</string>
     <string name="account_passkeys_empty">Furtuwwan seensaa galmaa\'an hin jiran.</string>
     <string name="account_passkey_register_title">Furtuu seensaa dabaluu</string>
     <string name="account_passkey_register_message">Meeshaan kee mirkanaa\'uu sii eera. Furtuun seensaa meeshaa kanaaf hidhamee jira fi seenuu boodaaf ittiin fayyadamuuf.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Lakkoofsa deebii irra deebi\'isuun?</string>
     <string name="account_recovery_regen_message">Lakkoofsonni jiran hatattamaan hojiidhaa dhaabbu. Haaroon iddoo nageenya qabuutti olkaa\'i.</string>
     <string name="account_recovery_codes_warning">Lakkoofsota kanneen olkaa\'i — tokko tokkoon yeroo tokko qofa itti fayyadamuu danda\'ama. Lammaffaa hin agarsiisaman.</string>
-    <string name="sessions_section_title">Marii dalagu</string>
     <string name="sessions_title">Yeroowwan tajaajila</string>
     <string name="sessions_empty">Mariin dalagu hin jiru.</string>
     <string name="sessions_revoke_message">Meeshaan marii kana fayyadamu ni ba\'a.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Gabaasa irra deebi\'i</string>
     <string name="interests_summary_regenerating">Irra deebi\'a jira…</string>
     <string name="interests_summary_empty">Waanota jaallattuu gabaasaa uumuuf hammoota muraasa dabali.</string>
-    <string name="interests_weight">Ulfaatina</string>
     <string name="interests_search_failed">Barbaaduun hin milkoofne. Ammas yaali.</string>
     <string name="document_privacy_title">Imaammata iccitii</string>
     <string name="document_rules_title">Seerota</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s sirnaaa…</string>
     <string name="accounts_field_api_key">Furtuu API</string>
     <string name="accounts_field_url">URL seerverii</string>
-    <string name="accounts_device_placeholder">Akkountoti push meeshaa irraa ofumaan dabalamu.</string>
     <string name="accounts_set_default_ai">AI durtii akka qabachiisuuf</string>
     <string name="accounts_verify_code">Lakkoofsa</string>
     <string name="accounts_verify_resend">Lakkoofsa irra deebi\'i ergi</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Maqaa</string>
     <string name="account_identity_fingerprint">Maxxansa quba</string>
     <string name="account_identity_directory_toggle">Warri kaan galmee keessa si argachuu hayyami</string>
-    <string name="account_method_email_subtitle">Koodii mirkaneessaa karaa imeelii argadhu</string>
-    <string name="account_method_totp_subtitle">Dandeessisuuf, gad mirkaneessaa qopheessi</string>
-    <string name="account_method_passkey_subtitle">Dandeessisuuf, gad furtuu seensaa galmeessi</string>
     <string name="domain_add">Damee dabali</string>
     <string name="domain_add_title">Damee dabali</string>
     <string name="domain_delegation_add">Dabali</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Galmi qindaa\'e hin jiru</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Gahee hin jiru</string>
+    <string name="account_data_generate">Jecha darbii uumi</string>
+    <string name="accounts_field_server">URL seerverii</string>
+    <string name="accounts_field_token">Toonkeenii seensaa</string>
+    <string name="accounts_field_topic">Mata duree</string>
+    <string name="accounts_field_secret">Iccitii mallattoo</string>
+    <string name="account_totp_open">Appii mirkaneessaa keessatti bani</string>
 </resources>

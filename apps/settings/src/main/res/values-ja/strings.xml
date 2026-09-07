@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">通知設定</string>
     <string name="settings_home_accounts">連携アカウント</string>
     <string name="settings_home_interests">興味</string>
-    <string name="account_method_email">メールコード</string>
-    <string name="account_method_passkey">パスキー</string>
-    <string name="account_method_totp">認証アプリ</string>
     <string name="account_section_passkeys">パスキー</string>
     <string name="account_passkey_register">パスキーを追加</string>
     <string name="account_passkey_delete_title">パスキーを削除しますか?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">ルートを削除</string>
     <string name="route_delete_title">ルートを削除しますか？</string>
     <string name="route_path">パス</string>
-    <string name="route_target">ターゲット</string>
     <string name="route_method">メソッド</string>
     <string name="route_method_app">外観</string>
     <string name="route_method_entity">エンティティ</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">興味</string>
     <string name="interests_summary_title">要約</string>
     <string name="interests_remove">関心を削除</string>
-    <string name="interests_add">追加</string>
-    <string name="document_save">保存</string>
-    <string name="document_saved">保存しました</string>
     <string name="notifprefs_title">通知設定</string>
     <string name="notifprefs_tab_categories">カテゴリ</string>
     <string name="notifprefs_tab_topics">トピック</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">リセット</string>
     <string name="system_settings_reset_to_default">デフォルトに戻す</string>
     <string name="system_settings_reset_title">デフォルトに戻しますか?</string>
-    <string name="system_settings_setting_updated">設定を更新しました</string>
-    <string name="system_settings_update_failed">設定の更新に失敗しました</string>
     <string name="system_setting_apps_install_user">ユーザーによるアプリのインストールを許可</string>
     <string name="system_setting_auth_email">メールコードでログイン</string>
     <string name="system_setting_auth_passkey">パスキーでログイン</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">ユーザーステータスの更新に失敗しました</string>
     <string name="system_users_toast_revoke_failed">セッションの無効化に失敗しました</string>
 
-    <string name="settings_app_label">Mochi 設定</string>
     <string name="settings_home_sessions">セッション</string>
     <string name="settings_home_privacy">プライバシーポリシー</string>
     <string name="settings_home_rules">ルール</string>
     <string name="settings_home_terms">利用規約</string>
-    <string name="account_section_methods">ログイン方法</string>
     <string name="account_passkeys_empty">登録されたパスキーはありません。</string>
     <string name="account_passkey_register_title">パスキーを追加</string>
     <string name="account_passkey_register_message">デバイスから確認を求められます。パスキーはこのデバイスに紐づけられ、今後のサインインに使用されます。</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">回復コードを再生成しますか？</string>
     <string name="account_recovery_regen_message">既存のコードはすぐに使えなくなります。新しいコードを安全な場所に保存してください。</string>
     <string name="account_recovery_codes_warning">これらのコードを保存してください。各コードは一度しか使用できません。再表示はされません。</string>
-    <string name="sessions_section_title">アクティブなセッション</string>
     <string name="sessions_title">セッション</string>
     <string name="sessions_empty">アクティブなセッションはありません。</string>
     <string name="sessions_revoke_message">このセッションを使用しているデバイスはサインアウトされます。</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">概要を再生成</string>
     <string name="interests_summary_regenerating">再生成中…</string>
     <string name="interests_summary_empty">興味を追加して、あなたが関心を持っていることの概要を生成してください。</string>
-    <string name="interests_weight">重み</string>
     <string name="interests_search_failed">検索に失敗しました。もう一度お試しください。</string>
     <string name="document_privacy_title">プライバシーポリシー</string>
     <string name="document_rules_title">ルール</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s をインストール中…</string>
     <string name="accounts_field_api_key">API キー</string>
     <string name="accounts_field_url">サーバー URL</string>
-    <string name="accounts_device_placeholder">プッシュアカウントはデバイスによって自動的に追加されます。</string>
     <string name="accounts_set_default_ai">既定の AI に設定</string>
     <string name="accounts_verify_code">コード</string>
     <string name="accounts_verify_resend">コードを再送信</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">名前</string>
     <string name="account_identity_fingerprint">フィンガープリント</string>
     <string name="account_identity_directory_toggle">ディレクトリで他のユーザーが自分を見つけられるようにする</string>
-    <string name="account_method_email_subtitle">確認コードをメールで受け取る</string>
-    <string name="account_method_totp_subtitle">有効にするには、下で認証アプリを設定してください</string>
-    <string name="account_method_passkey_subtitle">有効にするには、下でパスキーを登録してください</string>
     <string name="domain_add">ドメインを追加</string>
     <string name="domain_add_title">ドメインを追加</string>
     <string name="domain_delegation_add">追加</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">送信先が設定されていません</string>
     <string name="notifprefs_transport_fcm">Android プッシュ</string>
     <string name="notifprefs_no_destinations">送信先がありません</string>
+    <string name="account_data_generate">パスフレーズを生成</string>
+    <string name="accounts_field_server">サーバー URL</string>
+    <string name="accounts_field_token">アクセストークン</string>
+    <string name="accounts_field_topic">トピック</string>
+    <string name="accounts_field_secret">署名シークレット</string>
+    <string name="account_totp_open">認証アプリで開く</string>
 </resources>

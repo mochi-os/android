@@ -351,4 +351,8 @@
     <string name="game_empty_title">Ainda não há jogos</string>
     <string name="game_select_title">Seleciona um jogo</string>
     <string name="game_select_subtitle">Escolhe um jogo na barra lateral ou começa um novo.</string>
+    <string name="settings_card">Estilo do cartão</string>
+    <string name="settings_card_theme">Do tema</string>
+    <string name="settings_card_flat">Plano</string>
+    <string name="settings_card_raised">Elevado</string>
 </resources>
