@@ -13,13 +13,24 @@ data class Crm(
     @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val name: String = "",
     val description: String = "",
-    val owner: Int = 0,
-    val ownername: String = "",
+    val owner: Owner = Owner(),
     val server: String? = null,
     val location: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""
+)
+
+/**
+ * Who a CRM belongs to.
+ *
+ * @property local Whether the signed-in user owns the CRM on this server.
+ * @property name Display name of the owner, empty on remote CRMs that did not
+ *   send one.
+ */
+data class Owner(
+    val local: Boolean = false,
+    val name: String = ""
 )
 
 data class CrmDetails(

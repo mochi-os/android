@@ -379,7 +379,7 @@ private fun CrmRow(
     var showMenu by remember { mutableStateOf(false) }
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val crmId = crm.fingerprint.ifEmpty { crm.id }
-    val canUnsubscribe = crm.owner != 1
+    val canUnsubscribe = !crm.owner.local
     val unsubscribeTitle = stringResource(R.string.crm_settings_unsubscribe_title)
     val unsubscribeMessage = stringResource(R.string.crm_settings_unsubscribe_message)
     val unsubscribeLabel = stringResource(R.string.crm_settings_unsubscribe)
@@ -698,7 +698,7 @@ private fun CrmContent(
                                 }
                                 // Sharing a link is only offered on CRMs the user
                                 // owns; it's hidden on subscribed ones.
-                                if (details?.crm?.owner == 1) {
+                                if (details?.crm?.owner?.local == true) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_link)) },
                                         onClick = {
@@ -719,7 +719,7 @@ private fun CrmContent(
                                 // Reshaping the design is the owner's to do, so
                                 // it is offered on the same terms as the link
                                 // above rather than on every subscribed CRM.
-                                if (details?.crm?.owner == 1) {
+                                if (details?.crm?.owner?.local == true) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.crm_design)) },
                                         onClick = {

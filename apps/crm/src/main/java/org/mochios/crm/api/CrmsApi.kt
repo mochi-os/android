@@ -193,7 +193,7 @@ interface CrmsApi {
 
     // ---- Entity-level endpoints ----
 
-    @GET("{crmId}/-/info")
+    @GET("{crmId}/-/information")
     suspend fun getCrmInfo(@Path("crmId") crmId: String): Response<ApiResponse<CrmInfoResponse>>
 
     @POST("{crmId}/-/share")
