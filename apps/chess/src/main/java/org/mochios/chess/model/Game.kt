@@ -67,10 +67,10 @@ data class GameMessage(
 /** Cursor-paginated reply for `:game/-/messages`. */
 data class GetMessagesResponse(
     val messages: List<GameMessage> = emptyList(),
-    val hasMore: Boolean = false,
+    val more: Boolean = false,
     // "<created>:<id>", not a bare timestamp — created alone is not unique and
     // paginating on it drops every row sharing the page boundary's second.
-    val nextCursor: String? = null,
+    val cursor: String? = null,
 )
 
 /**

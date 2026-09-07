@@ -105,8 +105,8 @@ class ChessGameViewModel @Inject constructor(
                     game = view.game,
                     identity = view.identity,
                     messages = msgs.messages.sortedBy { it.created },
-                    hasMore = msgs.hasMore,
-                    nextCursor = msgs.nextCursor,
+                    hasMore = msgs.more,
+                    nextCursor = msgs.cursor,
                     lastMove = deriveLastMove(view.game.pgn),
                     isLoading = false,
                 )
@@ -165,8 +165,8 @@ class ChessGameViewModel @Inject constructor(
                         key = ::messageKey,
                         created = { row -> row.created },
                     ),
-                    hasMore = older.hasMore,
-                    nextCursor = older.nextCursor,
+                    hasMore = older.more,
+                    nextCursor = older.cursor,
                     isLoadingMore = false,
                 )
             } catch (e: Exception) {

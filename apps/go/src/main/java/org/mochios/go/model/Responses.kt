@@ -20,10 +20,10 @@ data class GameViewResponse(
 
 data class GetMessagesResponse(
     val messages: List<GameMessage> = emptyList(),
-    val hasMore: Boolean? = null,
+    val more: Boolean? = null,
     // "<created>:<id>", not a bare timestamp — created alone is not unique and
     // paginating on it drops every row sharing the page boundary's second.
-    val nextCursor: String? = null,
+    val cursor: String? = null,
 )
 
 data class CreateGameResponse(
