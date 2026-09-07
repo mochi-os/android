@@ -48,4 +48,12 @@ data class Game(
     /** Returns the opponent's entity id relative to [myIdentity]. */
     fun opponentId(myIdentity: String): String =
         if (identity == myIdentity) opponent else identity
+
+    /**
+     * Whether "Offer draw" applies: the game is live and no offer, ours or the
+     * opponent's, is pending. The server refuses an offer placed over the
+     * opponent's, and the accept/decline banner already answers that one.
+     */
+    val canOfferDraw: Boolean
+        get() = status == "active" && drawOffer.isNullOrEmpty()
 }

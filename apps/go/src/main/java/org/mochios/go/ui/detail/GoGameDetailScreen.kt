@@ -263,7 +263,7 @@ fun GoGameDetailScreen(
                         GoActionsMenu(
                             isActive = isActive,
                             canPass = canPass,
-                            canOfferDraw = game.drawOffer != state.myIdentity,
+                            canOfferDraw = game.canOfferDraw,
                             passing = state.isPassing,
                             drawOffering = state.isDrawOffering,
                             rematching = state.isCreatingRematch,
