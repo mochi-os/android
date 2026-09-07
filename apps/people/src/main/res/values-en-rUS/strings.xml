@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="people_invitations_cancelled">Invitation canceled</string>
     <string name="people_invitations_toast_cancelled">Canceled invitation to %1$s</string>
-    <string name="people_invitations_cancelled_to">Canceled invitation to %1$s.</string>
     <string name="people_profile_accent_invalid">Enter a valid hex color (e.g. #a78bfa)</string>
 </resources>

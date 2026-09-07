@@ -18,7 +18,7 @@ data class User(
     val location: String = "",
     val name: String = "",
     val updated: Long = 0,
-    val relationshipStatus: RelationshipStatus = RelationshipStatus.NONE
+    val relationship: RelationshipStatus = RelationshipStatus.NONE
 )
 
 /**

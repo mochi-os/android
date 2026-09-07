@@ -31,9 +31,6 @@ data class FriendsListResponse(
     val friends: List<Friend> = emptyList(),
     val received: List<FriendInvite> = emptyList(),
     val sent: List<FriendInvite> = emptyList(),
-    val total: Int? = null,
-    val page: Int? = null,
-    val limit: Int? = null,
 )
 
 data class SearchUsersResponse(val results: List<User> = emptyList())
@@ -55,7 +52,7 @@ data class WelcomeResponse(
 )
 
 data class PreferenceResponse(
-    @com.google.gson.annotations.SerializedName("invite_policy")
+    @com.google.gson.annotations.SerializedName("policy")
     val invitePolicy: String = "notify"
 )
 
@@ -109,7 +106,7 @@ interface PeopleApi {
     @FormUrlEncoded
     @POST("-/preferences/set")
     suspend fun setPreferences(
-        @Field("invite_policy") invitePolicy: String,
+        @Field("policy") invitePolicy: String,
     ): Response<ApiResponse<EmptyResponse>>
 
     // ---- Local users (group-membership picker) ----

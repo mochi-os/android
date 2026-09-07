@@ -128,9 +128,7 @@ fun NavGraphBuilder.peopleNavGraph(
 
     composable(PeopleApp.INVITATIONS) {
         InvitationsScreen(
-            onOpenPerson = { id -> navController.navigate(PeopleApp.personView(id)) },
             onSwitchSection = { navController.openPeopleSection(it) },
-            onOpenNotifications = onOpenNotifications,
         )
     }
 

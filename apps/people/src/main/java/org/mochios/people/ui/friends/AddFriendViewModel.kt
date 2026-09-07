@@ -150,7 +150,7 @@ class AddFriendViewModel @Inject constructor(
         val status = if (user.id in _uiState.value.invitedUserIds) {
             RelationshipStatus.INVITED
         } else {
-            user.relationshipStatus
+            user.relationship
         }
         if (status == RelationshipStatus.FRIEND ||
             status == RelationshipStatus.INVITED ||

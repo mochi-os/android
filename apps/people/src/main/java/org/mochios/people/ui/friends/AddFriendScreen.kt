@@ -244,7 +244,7 @@ private fun AddFriendRow(
     pending: Boolean,
     onSelect: () -> Unit,
 ) {
-    val effectiveStatus = if (invited) RelationshipStatus.INVITED else user.relationshipStatus
+    val effectiveStatus = if (invited) RelationshipStatus.INVITED else user.relationship
     val avatarUrl = "/people/${user.id}/-/avatar"
 
     Row(
@@ -475,7 +475,7 @@ private fun PreviewConfirmButton(
     val user = preview.targetUser
     val effectiveStatus = when {
         invited -> RelationshipStatus.INVITED
-        else -> user.relationshipStatus
+        else -> user.relationship
     }
     // Disabled while the details fetch is still in flight so the screen doesn't
     // fire an invite before the user has seen the profile.
