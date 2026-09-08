@@ -147,7 +147,7 @@ class ForumViewModel @Inject constructor(
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
         val serverUrl = sessionManager.getServerUrlBlocking()
-        subscriptionId = webSocket.subscribe(serverUrl, forumKey) { event ->
+        subscriptionId = webSocket.subscribe(serverUrl, forumKey, app = "forums") { event ->
             // New posts queue behind the pill so the list doesn't shift;
             // everything else mutates visible items, so refresh silently.
             if (event.type == "post/create") {

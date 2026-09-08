@@ -544,7 +544,7 @@ class ChatViewModel @Inject constructor(
         if (key.isEmpty() || subscriptionId != null) return
         viewModelScope.launch {
             val serverUrl = sessionManager.getServerUrlBlocking()
-            subscriptionId = webSocket.subscribe(serverUrl, key) { event ->
+            subscriptionId = webSocket.subscribe(serverUrl, key, app = "chat") { event ->
                 val ev = event.event
                 when {
                     ev == "rename" -> {

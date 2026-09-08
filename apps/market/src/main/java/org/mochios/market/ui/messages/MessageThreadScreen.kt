@@ -58,8 +58,8 @@ import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ws.StreamWsEvent
-import org.mochios.android.ws.rememberStreamWebSocket
+import org.mochios.android.websocket.StreamWsEvent
+import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.market.R
 import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice

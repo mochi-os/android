@@ -333,7 +333,7 @@ class PostDetailViewModel @Inject constructor(
     private fun subscribeToWebSocket() {
         if (feedId.isEmpty()) return
         val serverUrl = sessionManager.getServerUrlBlocking()
-        subscriptionId = webSocket.subscribe(serverUrl, feedId) { event ->
+        subscriptionId = webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
             if (event.post == postId) {
                 // Server event types are slash-namespaced (feeds.star commit
                 // hook + handlers); the old underscore names never matched.

@@ -86,7 +86,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
-import org.mochios.android.ws.rememberStreamWebSocket
+import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.go.R
 import org.mochios.go.engine.Score
 import org.mochios.go.engine.Stone

@@ -190,7 +190,11 @@ class FeedListViewModel @Inject constructor(
         val serverUrl = sessionManager.getServerUrlBlocking()
         for (feed in feedList) {
             if (feed.fingerprint.isNotEmpty()) {
-                val subId = webSocket.subscribe(serverUrl, feed.fingerprint) { event ->
+                val subId = webSocket.subscribe(
+                    serverUrl,
+                    feed.fingerprint,
+                    app = "feeds",
+                ) { event ->
                     // Server event types are slash-namespaced (feeds.star commit
                     // hook + handlers); the old underscore names never matched.
                     when (event.type) {

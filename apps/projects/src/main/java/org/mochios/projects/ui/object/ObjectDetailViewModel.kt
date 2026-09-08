@@ -160,7 +160,7 @@ class ObjectDetailViewModel @Inject constructor(
         wsSubscribedProjectId = projectId
         viewModelScope.launch {
             val url = sessionManager.getServerUrlBlocking()
-            wsSubscriptionId = webSocket.subscribe(url, projectId) { event ->
+            wsSubscriptionId = webSocket.subscribe(url, projectId, app = "projects") { event ->
                 handleWebSocketEvent(event)
             }
         }

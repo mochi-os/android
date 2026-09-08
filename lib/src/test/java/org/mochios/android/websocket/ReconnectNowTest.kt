@@ -32,13 +32,23 @@ class ReconnectNowTest {
         server = MockWebServer()
         repeat(8) { server.enqueue(MockResponse().setResponseCode(503)) }
         server.start()
-        socket = MochiWebSocket(OkHttpClient(), Gson())
+        socket = MochiWebSocket(OkHttpClient(), Gson(), NoSession)
     }
 
     @After
     fun stop() {
         socket.disconnectAll()
         server.shutdown()
+    }
+
+    /** The tests hand the socket its own token, so nothing needs minting. */
+    private object NoSession : SocketSession {
+        override suspend fun serverUrl(): String = ""
+
+        override suspend fun token(app: String): String? = null
+
+        override suspend fun invalidate(app: String) {
+        }
     }
 
     @Test
@@ -55,7 +65,7 @@ class ReconnectNowTest {
         socket.reconnectNow()
         val woken = server.takeRequest(500, TimeUnit.MILLISECONDS)
         assertNotNull("reconnectNow handshake arrived within 500ms", woken)
-        assertEquals("/_/websocket?key=fp", woken!!.path)
+        assertEquals("/_/websocket?key=fp&token=tok", woken!!.path)
     }
 
     @Test

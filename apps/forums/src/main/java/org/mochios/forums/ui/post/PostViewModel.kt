@@ -73,7 +73,11 @@ class PostViewModel @Inject constructor(
 
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
-        subscriptionId = webSocket.subscribe(sessionManager.getServerUrlBlocking(), forumKey) { _ ->
+        subscriptionId = webSocket.subscribe(
+            sessionManager.getServerUrlBlocking(),
+            forumKey,
+            app = "forums",
+        ) { _ ->
             viewModelScope.launch {
                 try {
                     val r = repository.viewPost(forumId, postId)

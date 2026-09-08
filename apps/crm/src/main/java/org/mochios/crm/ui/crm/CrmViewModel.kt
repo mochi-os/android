@@ -481,7 +481,7 @@ class CrmViewModel @Inject constructor(
             val serverUrl = sessionManager.serverUrl.let {
                 sessionManager.getServerUrlBlocking()
             }
-            wsSubscriptionId = webSocket.subscribe(serverUrl, crmId) { event ->
+            wsSubscriptionId = webSocket.subscribe(serverUrl, crmId, app = "crm") { event ->
                 handleWebSocketEvent(event)
             }
         }

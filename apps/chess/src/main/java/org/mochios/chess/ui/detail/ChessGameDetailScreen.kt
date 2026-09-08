@@ -96,9 +96,9 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.StoneColor
-import org.mochios.android.ws.StreamWsEvent
-import org.mochios.android.ws.StreamWsStatus
-import org.mochios.android.ws.rememberStreamWebSocket
+import org.mochios.android.websocket.StreamWsEvent
+import org.mochios.android.websocket.StreamWsStatus
+import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.chess.R
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage

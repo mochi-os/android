@@ -6,30 +6,28 @@
 package org.mochios.android.websocket
 
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
 import org.junit.Test
 
 /**
- * The subscription token must never appear in the handshake URL: OkHttp keeps
- * the application interceptors for a WebSocket call, so the logging interceptor
- * writes the URL, credential included, to logcat on release.
+ * The server authorises the upgrade from the token in the query string. A
+ * handshake that omits it connects and then delivers nothing, which is silent:
+ * the socket looks healthy and no event ever arrives.
  */
 class SocketUrlTest {
 
     @Test
-    fun `the handshake url carries only the subscription key`() {
+    fun `the handshake url carries the key and the token`() {
         assertEquals(
-            "wss://mochi-os.org/_/websocket?key=abc123def",
-            socketUrl("wss://mochi-os.org", "abc123def"),
+            "wss://mochi-os.org/_/websocket?key=abc123def&token=jwt.body.sig",
+            socketUrl("wss://mochi-os.org", "abc123def", "jwt.body.sig"),
         )
     }
 
     @Test
-    fun `no token appears in the url for any input`() {
-        for (base in listOf("wss://mochi-os.org", "ws://localhost:8081", "wss://self.hosted.example")) {
-            val url = socketUrl(base, "abc123def")
-            assertFalse("token must never be a query parameter: $url", url.contains("token"))
-            assertFalse(url.contains("Bearer"))
+    fun `a tokenless handshake carries only the key`() {
+        for (base in listOf("wss://mochi-os.org", "ws://localhost:8081")) {
+            assertEquals("$base/_/websocket?key=abc123def", socketUrl(base, "abc123def"))
+            assertEquals("$base/_/websocket?key=abc123def", socketUrl(base, "abc123def", ""))
         }
     }
 }

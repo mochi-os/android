@@ -154,7 +154,7 @@ class ObjectDetailViewModel @Inject constructor(
         wsSubscribedCrmId = crmId
         viewModelScope.launch {
             val url = sessionManager.getServerUrlBlocking()
-            wsSubscriptionId = webSocket.subscribe(url, crmId) { event ->
+            wsSubscriptionId = webSocket.subscribe(url, crmId, app = "crm") { event ->
                 handleWebSocketEvent(event)
             }
         }

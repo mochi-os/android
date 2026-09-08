@@ -192,7 +192,11 @@ class NotificationsViewModel @Inject constructor(
 
     private fun subscribeWebSocket() {
         if (serverUrl.isBlank()) return
-        subscriptionId = webSocket.subscribe(serverUrl, "notifications") { _ ->
+        subscriptionId = webSocket.subscribe(
+            serverUrl,
+            "notifications",
+            app = "notifications",
+        ) { _ ->
             viewModelScope.launch { load(initial = false) }
         }
     }

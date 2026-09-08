@@ -606,7 +606,11 @@ class ProjectViewModel @Inject constructor(
             val serverUrl = sessionManager.serverUrl.let {
                 sessionManager.getServerUrlBlocking()
             }
-            wsSubscriptionId = webSocket.subscribe(serverUrl, projectId) { event ->
+            wsSubscriptionId = webSocket.subscribe(
+                serverUrl,
+                projectId,
+                app = "projects",
+            ) { event ->
                 handleWebSocketEvent(event)
             }
         }

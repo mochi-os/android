@@ -7,7 +7,7 @@ package org.mochios.staff.ws
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import org.mochios.android.ws.rememberStreamWebSocket
+import org.mochios.android.websocket.rememberStreamWebSocket
 
 /**
  * Opens the `staff-events` WebSocket and republishes decoded `{topic, object}`

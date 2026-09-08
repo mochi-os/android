@@ -19,6 +19,7 @@ data class Project(
     val server: String? = null,
     val location: String? = null,
     val created: Long = 0,
+
     val updated: Long = 0,
     val access: String = ""
 )
