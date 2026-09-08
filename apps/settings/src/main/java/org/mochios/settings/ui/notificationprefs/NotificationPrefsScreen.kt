@@ -384,7 +384,7 @@ private fun TopicsList(
         return
     }
     val byApp = topics
-        .groupBy { topic -> topic.appName }
+        .groupBy { topic -> topic.app.name }
         .toSortedMap(String.CASE_INSENSITIVE_ORDER)
     var isFirstGroup = true
     LazyColumn(
@@ -412,7 +412,7 @@ private fun TopicsList(
             val sorted = appTopics.sortedWith(
                 compareBy(String.CASE_INSENSITIVE_ORDER) { topic -> topicTitle(topic) }
             )
-            items(sorted, key = { topic -> "${topic.app}/${topic.topic}/${topic.`object`}" }) { topic ->
+            items(sorted, key = { topic -> "${topic.app.id}/${topic.topic}/${topic.`object`}" }) { topic ->
                 TopicRow(
                     topic = topic,
                     categories = categories,

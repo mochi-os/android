@@ -31,7 +31,7 @@ class WebSocketEventTest {
 
     @Test
     fun `the annotated key is the only one that resolves`() {
-        // The drain response spells it subId, but PushService reads that path
+        // The drain response spells it subscription, but PushService reads that path
         // with raw JSON. Through Gson only the wire spelling counts, so this
         // pins which of the two envelopes this model is for.
         val camel = gson.fromJson("""{"subId":"s-7f3c"}""", WebSocketEvent::class.java)

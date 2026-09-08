@@ -29,9 +29,10 @@ data class WebSocketEvent(
     val body: String? = null,
     val created: Long? = null,
     // UnifiedPush distributor fields. `account` is the accounts.id the
-    // distributor acks the push_pending row with; subId is only the random
-    // subscription token. The live envelope spells it sub_id; the drain
-    // response spells it subId, but that path is read with raw JSON, not here.
+    // distributor acks the queued row with; subId is only the random
+    // subscription token. The live envelope spells it sub_id (core writes that
+    // one, in accounts.go); the drain response spells it subscription, but that
+    // path is read with raw JSON, not here.
     @SerializedName("sub_id") val subId: String? = null,
     val payload: String? = null,
     val account: String? = null,

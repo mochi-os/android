@@ -44,7 +44,7 @@ import javax.inject.Inject
 /**
  * Foreground service hosting the Mochi UnifiedPush distributor. Holds one
  * WebSocket subscription per Mochi identity on the `unifiedpush` channel and
- * broadcasts each incoming `{subId, payload}` as a MESSAGE intent to the
+ * broadcasts each incoming `{subscription, payload}` as a MESSAGE intent to the
  * registered app.
  */
 @AndroidEntryPoint
@@ -224,7 +224,7 @@ class PushService : Service() {
         val payload = event.payload ?: return
         dispatchPush(subId, payload)
         // Ack so the server drops the push_pending row. `account` identifies
-        // it; subId is only the subscription token. Without it the row waits
+        // it; the subscription id is only a routing token. Without it the row waits
         // for the TTL sweep.
         val account = event.account?.takeIf { it.isNotBlank() } ?: return
         val eventId = extractTag(payload) ?: return
@@ -287,14 +287,14 @@ class PushService : Service() {
                 val acks = org.json.JSONArray()
                 for (i in 0 until events.length()) {
                     val ev = events.getJSONObject(i)
-                    val subId = ev.optString("subId")
+                    val subId = ev.optString("subscription")
                     val payload = ev.optString("payload")
                     val account = ev.optString("account")
-                    val eventId = ev.optString("event_id")
+                    val eventId = ev.optString("event")
                     if (subId.isBlank() || payload.isBlank()) continue
                     dispatchPush(subId, payload)
                     if (account.isNotBlank() && eventId.isNotBlank()) {
-                        acks.put(JSONObject().put("account", account).put("event_id", eventId))
+                        acks.put(JSONObject().put("account", account).put("event", eventId))
                     }
                 }
                 if (acks.length() > 0) {
@@ -306,7 +306,7 @@ class PushService : Service() {
 
     private fun ackEvent(server: String, token: String, account: String, eventId: String) {
         val acks = org.json.JSONArray().put(
-            JSONObject().put("account", account).put("event_id", eventId)
+            JSONObject().put("account", account).put("event", eventId)
         )
         ackBatch(server, token, acks)
     }

@@ -65,10 +65,15 @@ data class DestinationsAvailable(
     val devices: List<DestinationDevice> = emptyList(),
 )
 
+/** The topic's source app, as the server now sub-namespaces it. */
+data class NotifTopicApp(
+    val id: String = "",
+    val name: String = "",
+)
+
 data class NotifTopic(
     // No id: topics are keyed by (app, topic, object) server-side.
-    val app: String = "",
-    @SerializedName("app_name") val appName: String = "",
+    val app: NotifTopicApp = NotifTopicApp(),
     val topic: String = "",
     val `object`: String = "",
     val name: String = "",

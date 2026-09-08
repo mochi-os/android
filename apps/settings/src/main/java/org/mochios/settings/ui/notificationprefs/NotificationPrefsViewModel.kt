@@ -106,12 +106,12 @@ class NotificationPrefsViewModel @Inject constructor(
     fun setTopicCategory(topic: NotifTopic, categoryId: String?) = mutate {
         val value = categoryId ?: ""
         api.setTopicCategory(
-            app = topic.app, topic = topic.topic, obj = topic.`object`, category = value,
+            app = topic.app.id, topic = topic.topic, obj = topic.`object`, category = value,
         ).unwrapEmpty()
     }
 
     fun removeTopic(topic: NotifTopic) = mutate {
-        api.deleteTopic(app = topic.app, topic = topic.topic, obj = topic.`object`).unwrapEmpty()
+        api.deleteTopic(app = topic.app.id, topic = topic.topic, obj = topic.`object`).unwrapEmpty()
     }
 
     fun testCategory(category: NotifCategory) {

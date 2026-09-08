@@ -181,7 +181,7 @@ object FcmRegistrar {
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
         val body = JSONObject()
             .put("token", token)
-            .put("install_id", installId)
+            .put("installation", installId)
             .put("label", label)
             .toString()
             .toRequestBody("application/json".toMediaType())
