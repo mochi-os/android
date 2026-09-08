@@ -39,6 +39,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -106,6 +108,9 @@ fun WikiListScreen(
     var rssSubmenuOpen by remember { mutableStateOf(false) }
 
     val rssCopiedMessage = stringResource(R.string.wikis_rss_copied)
+    val rssCopiedNewMessage = stringResource(R.string.wikis_rss_copied_new)
+    val rssExistsMessage = stringResource(R.string.wikis_rss_exists)
+    val rssReplaceLabel = stringResource(R.string.wikis_rss_replace)
     val rssFailedMessage = stringResource(R.string.wikis_rss_failed)
     val revokedMessage = stringResource(R.string.wikis_rss_revoked)
     val revokeFailedMessage = stringResource(R.string.wikis_access_revoke_failed)
@@ -192,18 +197,22 @@ fun WikiListScreen(
                                                 showOverflow = false
                                                 rssSubmenuOpen = false
                                                 drawerScope.launch {
-                                                    val result = viewModel.makeRssUrl(mode)
-                                                    result.fold(
-                                                        onSuccess = { url ->
+                                                    copyRss(
+                                                        mode = mode,
+                                                        regenerate = false,
+                                                        makeUrl = viewModel::makeRssUrl,
+                                                        copy = { url ->
                                                             clipboard.setClip(
                                                                 ClipData.newPlainText(clipboardLabel, url)
                                                                     .toClipEntry(),
                                                             )
-                                                            snackbarHostState.showSnackbar(rssCopiedMessage)
                                                         },
-                                                        onFailure = {
-                                                            snackbarHostState.showSnackbar(rssFailedMessage)
-                                                        },
+                                                        snackbar = snackbarHostState,
+                                                        copiedMessage = rssCopiedMessage,
+                                                        copiedNewMessage = rssCopiedNewMessage,
+                                                        existsMessage = rssExistsMessage,
+                                                        replaceLabel = rssReplaceLabel,
+                                                        failedMessage = rssFailedMessage,
                                                     )
                                                 }
                                             },
@@ -369,7 +378,10 @@ private fun WikiCard(
     onOpen: () -> Unit,
     onUnsubscribe: () -> Unit,
 ) {
-    val isSubscribed = wiki.source != null
+    // Owned wikis carry `source` as an empty string, never null (the column is
+    // `not null default ''`), so a null test marked every wiki subscribed and
+    // offered Unsubscribe on the user's own.
+    val isSubscribed = !wiki.source.isNullOrBlank()
     val wikiId = wiki.fingerprint ?: wiki.id
     var showMenu by remember { mutableStateOf(false) }
 
@@ -634,4 +646,56 @@ private fun SubscribableRow(
             }
         }
     }
+}
+
+/**
+ * Copy the all-wikis feed URL, asking first when one was already issued. The
+ * server keeps only the token's hash, so a replacement stops the URL already
+ * handed out from resolving - which makes it the user's decision, not a silent
+ * side effect of tapping Copy.
+ */
+private suspend fun copyRss(
+    mode: String,
+    regenerate: Boolean,
+    makeUrl: suspend (String, Boolean) -> Result<String?>,
+    copy: (String) -> Unit,
+    snackbar: SnackbarHostState,
+    copiedMessage: String,
+    copiedNewMessage: String,
+    existsMessage: String,
+    replaceLabel: String,
+    failedMessage: String,
+) {
+    val result = makeUrl(mode, regenerate)
+    result.fold(
+        onSuccess = { url ->
+            if (url == null) {
+                val chose = snackbar.showSnackbar(
+                    message = existsMessage,
+                    actionLabel = replaceLabel,
+                    duration = SnackbarDuration.Long,
+                )
+                if (chose == SnackbarResult.ActionPerformed) {
+                    copyRss(
+                        mode = mode,
+                        regenerate = true,
+                        makeUrl = makeUrl,
+                        copy = copy,
+                        snackbar = snackbar,
+                        copiedMessage = copiedMessage,
+                        copiedNewMessage = copiedNewMessage,
+                        existsMessage = existsMessage,
+                        replaceLabel = replaceLabel,
+                        failedMessage = failedMessage,
+                    )
+                }
+                return
+            }
+            copy(url)
+            snackbar.showSnackbar(if (regenerate) copiedNewMessage else copiedMessage)
+        },
+        onFailure = {
+            snackbar.showSnackbar(failedMessage)
+        },
+    )
 }

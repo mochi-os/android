@@ -6,13 +6,11 @@
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="wikis_pageview_version">v%1$d</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_load_more">載入更多</string>
     <string name="wikis_access_change_level">更改存取層級</string>
     <string name="wikis_access_subject_anyone">任何人</string>
@@ -24,12 +22,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d 則回覆</item>
         <item quantity="other">+%d 則更多回覆</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">已重新命名 %1$d 個頁面</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">已更新 %1$d 個連結</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d 個頁面</item>
@@ -67,4 +59,5 @@
     <string name="wikis_access_authenticated_desc">任何已登入的用戶</string>
     <string name="wikis_access_anyone_desc">包括匿名用戶</string>
     <string name="wikis_access_selected">已選擇:%1$s</string>
+    <string name="wikis_rss_replace">取代</string>
 </resources>

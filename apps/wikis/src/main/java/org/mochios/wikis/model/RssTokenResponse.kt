@@ -5,6 +5,13 @@
 
 package org.mochios.wikis.model
 
+/**
+ * Answer of `-/rss/token`. The server keeps only the token's hash, so a feed
+ * URL already handed out cannot be shown again: it answers [exists] instead,
+ * with [token] empty, and leaves it to the caller to decide whether to replace
+ * it. Re-issuing silently would break whatever reader is polling the old URL.
+ */
 data class RssTokenResponse(
     val token: String = "",
+    val exists: Boolean = false,
 )

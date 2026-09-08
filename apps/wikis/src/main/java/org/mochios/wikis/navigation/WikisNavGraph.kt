@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.navigation
 
+import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -36,24 +37,41 @@ object WikisApp {
     const val CREATE = "wikis/create"
 
     // ---- Builders for entity-context routes ----
-    fun wikiHome(wikiId: String) = "wikis/$wikiId"
-    fun pageView(wikiId: String, page: String) = "wikis/$wikiId/$page"
-    fun pageEdit(wikiId: String, page: String) = "wikis/$wikiId/$page/edit"
+    //
+    // Slugs and tags are percent-encoded. Nothing on the P2P event path holds a
+    // slug to the URL-safe set - `page/create` and the sync dump both accept a
+    // slug with `/`, `?` or `#` in it - and an unencoded one of those silently
+    // becomes extra path segments or a query string, so the route matches a
+    // different screen or none at all.
+    fun wikiHome(wikiId: String) = "wikis/${segment(wikiId)}"
+    fun pageView(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}"
+    fun pageEdit(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}/edit"
     fun newPage(wikiId: String, slug: String? = null) =
-        if (slug.isNullOrBlank()) "wikis/$wikiId/new" else "wikis/$wikiId/new?slug=$slug"
-    fun pageHistory(wikiId: String, page: String) = "wikis/$wikiId/$page/history"
+        if (slug.isNullOrBlank()) {
+            "wikis/${segment(wikiId)}/new"
+        } else {
+            "wikis/${segment(wikiId)}/new?slug=${segment(slug)}"
+        }
+    fun pageHistory(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}/history"
     fun pageRevision(wikiId: String, page: String, version: Int) =
-        "wikis/$wikiId/$page/history/$version"
-    fun comments(wikiId: String, page: String) = "wikis/$wikiId/$page/comments"
+        "wikis/${segment(wikiId)}/${segment(page)}/history/$version"
+    fun comments(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}/comments"
     fun settings(wikiId: String, tab: String = "settings") =
-        "wikis/$wikiId/settings?tab=$tab"
-    fun redirects(wikiId: String) = "wikis/$wikiId/redirects"
-    fun tags(wikiId: String) = "wikis/$wikiId/tags"
-    fun tagPages(wikiId: String, tag: String) = "wikis/$wikiId/tag/$tag"
+        "wikis/${segment(wikiId)}/settings?tab=${segment(tab)}"
+    fun redirects(wikiId: String) = "wikis/${segment(wikiId)}/redirects"
+    fun tags(wikiId: String) = "wikis/${segment(wikiId)}/tags"
+    fun tagPages(wikiId: String, tag: String) = "wikis/${segment(wikiId)}/tag/${segment(tag)}"
     fun search(wikiId: String, q: String? = null) =
-        if (q.isNullOrBlank()) "wikis/$wikiId/search" else "wikis/$wikiId/search?q=$q"
-    fun changes(wikiId: String) = "wikis/$wikiId/changes"
-    fun attachments(wikiId: String, page: String) = "wikis/$wikiId/$page/attachments"
+        if (q.isNullOrBlank()) {
+            "wikis/${segment(wikiId)}/search"
+        } else {
+            "wikis/${segment(wikiId)}/search?q=${segment(q)}"
+        }
+    fun changes(wikiId: String) = "wikis/${segment(wikiId)}/changes"
+    fun attachments(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}/attachments"
+
+    /** Percent-encode one route segment. `Uri.encode` leaves nothing reserved. */
+    private fun segment(value: String) = Uri.encode(value)
 
     // ---- Pattern constants for composable() route definitions ----
     const val WIKI_HOME = "wikis/{wikiId}"

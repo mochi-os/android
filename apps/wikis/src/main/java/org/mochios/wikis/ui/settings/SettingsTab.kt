@@ -104,9 +104,10 @@ fun SettingsTab(
                 fingerprint = parentState.fingerprint,
                 isRenaming = state.isRenaming,
                 nameError = state.nameError,
-                onRename = { newName ->
+                onRename = { newName, done ->
                     viewModel.rename(newName, wikiInfo.name) { saved ->
                         parentViewModel.setWikiName(saved)
+                        done()
                     }
                 },
                 onClearNameError = { viewModel.clearNameError() },
@@ -151,7 +152,8 @@ private fun IdentitySection(
     fingerprint: String?,
     isRenaming: Boolean,
     nameError: NameValidationError?,
-    onRename: (String) -> Unit,
+    /** Rename, then invoke the callback once the server has accepted it. */
+    onRename: (name: String, done: () -> Unit) -> Unit,
     onClearNameError: () -> Unit,
 ) {
     var isEditing by remember { mutableStateOf(false) }
@@ -177,12 +179,12 @@ private fun IdentitySection(
                         )
                         MochiIconButton(
                             onClick = {
-                                onRename(editValue)
-                                // Editor closes when rename succeeds — but
-                                // also close immediately on no-op (same name).
-                                if (editValue.trim() == wiki.name) {
-                                    isEditing = false
-                                }
+                                // Closed by the callback, which the view model
+                                // runs only once the server accepted the rename.
+                                // Nothing used to close it on the success path,
+                                // so a saved rename left the editor open over
+                                // the new name.
+                                onRename(editValue) { isEditing = false }
                             },
                             enabled = !isRenaming,
                         ) {

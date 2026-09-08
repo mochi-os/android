@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Jwenn wiki</string>
     <string name="wikis_sidebar_create">Kreye wiki</string>
     <string name="wikis_pageview_title_fallback">Paj</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Retounen</string>
     <string name="wikis_pageview_page_actions">Aksyon paj</string>
     <string name="wikis_pageview_toc">Sou paj sa a</string>
     <string name="wikis_pageview_not_found_title">Paj pa jwenn</string>
     <string name="wikis_pageview_create_this_page">Kreye paj sa a</string>
     <string name="wikis_pageview_rss_copied">URL RSS kopye nan clipboard</string>
-    <string name="wikis_pageview_rss_failed">Echwe pou jwenn token RSS</string>
     <string name="wikis_page_action_section_page">Paj</string>
     <string name="wikis_page_action_edit">Modifye</string>
     <string name="wikis_page_action_rename">Rebatize</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Kòmanse premye wiki w la</string>
     <string name="wikis_empty_subtitle">Chèche yon wiki pou abone, oswa kreye youn pou pibliye pwòp dokimantasyon ou.</string>
-    <string name="wikis_subscribed_badge">Abone</string>
     <string name="wikis_create_button">Kreye wiki</string>
     <string name="wikis_recommended_section">Wiki rekòmande</string>
     <string name="wikis_subscribe_button">Abone</string>
-    <string name="wikis_subscribed">Abone</string>
     <string name="wikis_unsubscribe_action">Dezabòne</string>
     <string name="wikis_unsubscribing">Ap dezabòne…</string>
     <string name="wikis_unsubscribe_confirm_title">Dezabòne</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Non</string>
     <string name="wikis_create_privacy_label">Pèmèt nenpòt moun chèche wiki</string>
     <string name="wikis_create_submit">Kreye</string>
-    <string name="wikis_create_cancel">Anile</string>
     <string name="wikis_comments_empty_title">Poko gen kòmantè</string>
     <string name="wikis_comments_empty_subtitle">Se ou ki premye komante sou paj sa a.</string>
-    <string name="wikis_comment_action_reply">Reponn</string>
     <string name="wikis_comment_replying_to">W ap reponn %1$s</string>
     <string name="wikis_comment_clear_reply">Anile repons</string>
-    <string name="wikis_comment_action_edit">Modifye</string>
     <string name="wikis_comment_action_delete">Efase</string>
     <string name="wikis_comment_action_save">Sove</string>
     <string name="wikis_comment_action_cancel">Anile</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Nouvo paj</string>
     <string name="wikis_editor_preview">Apèsi</string>
     <string name="wikis_editor_preview_untitled">San tit</string>
-    <string name="wikis_editor_edit">Modifye</string>
     <string name="wikis_editor_insert">Insè</string>
     <string name="wikis_editor_attachments">Atachman yo</string>
     <string name="wikis_editor_delete">Efase paj</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Ap telechaje…</string>
     <string name="wikis_attachments_upload_failed">Echwe pou telechaje fichye</string>
     <string name="wikis_attachments_search_clear">Efase rechèch</string>
-    <string name="wikis_attachments_filter">Filtre</string>
     <string name="wikis_attachments_filter_all">Tout fichye</string>
     <string name="wikis_attachments_filter_images">Imaj</string>
     <string name="wikis_attachments_filter_documents">Dokiman</string>
-    <string name="wikis_attachments_sort">Klase</string>
     <string name="wikis_attachments_sort_date">Dat</string>
     <string name="wikis_attachments_sort_name">Non</string>
     <string name="wikis_attachments_sort_size">Gwosè</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopye lyen entegre</string>
     <string name="wikis_attachments_embed_copied">Lyen entegre kopye</string>
     <string name="wikis_attachments_download">Telechaje</string>
-    <string name="wikis_attachments_copy_success">Lyen entegre kopye</string>
     <string name="wikis_attachments_delete">Efase</string>
     <string name="wikis_attachments_delete_confirm_title">Efase atachman</string>
     <string name="wikis_attachments_delete_success">Atachman efase</string>
     <string name="wikis_attachments_delete_failed">Echwe pou efase atachman</string>
-    <string name="wikis_attachments_open">Ouvri</string>
     <string name="wikis_attachments_empty_title">Poko gen atachman</string>
     <string name="wikis_attachments_no_results_title">Pa gen atachman ki koresponn ak rechèch ou</string>
     <string name="wikis_attachments_no_results_description">Eseye yon lòt tèm rechèch oswa filtè.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Aksyon sa pa ka anile. Sa pral efase wiki a ak tout kontni l yo pèmanan.</string>
     <string name="wikis_settings_delete_success">Wiki efase</string>
     <string name="wikis_settings_delete_failed">Echwe pou efase wiki</string>
-    <string name="wikis_access_add_action">Ajoute</string>
     <string name="wikis_access_add_subject_label">Itilizatè</string>
     <string name="wikis_access_level_edit">Modifye epi gade</string>
     <string name="wikis_access_level_view">Wè sèlman</string>
     <string name="wikis_access_level_none">Pa gen aksè</string>
-    <string name="wikis_access_owner_label">Pwopriyetè</string>
     <string name="wikis_access_tab_users">Itilizatè</string>
     <string name="wikis_access_tab_groups">Gwoup</string>
     <string name="wikis_access_tab_other">Lòt</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Echwe pou retire aksè</string>
     <string name="wikis_replicas_empty_title">Poko gen replika</string>
     <string name="wikis_replicas_empty_message">Lè lòt wikis replike wiki sa, yo pral parèt isit la.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Janmen</string>
     <string name="wikis_replicas_remove_confirm_title">Retire replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Retire</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Paj “%1$s” la poko egziste.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Lyen wiki a</string>
-    <string name="wikis_pageview_share_link_copied">Lyen paj la kopye nan tablo tanporè</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Lyen paj Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Lyen</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Chèche yon wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Èske ou sèten ou vle dezabòne nan %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Sèvè sa a pa aksesib. N ap eseye ankò…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Chèche pa non, ID, anprent oswa URL…</string>
     <string name="wikis_join_search_button">Chèche wiki yo…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Ekri yon repons…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Ekri kontni ou isit la ak Markdown…</string>
     <string name="wikis_insert_dialog_empty">Poko gen okenn atachman. Telechaje yon fichye pou kòmanse.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Etikèt la pa ka vid</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Nou pa t kapab kopye lyen entegrasyon an</string>
     <string name="wikis_attachments_delete_confirm_message">Efase “%1$s”? Sa a pa ka defèt.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Peze Telechaje pou ajoute fichye nan paj sa a.</string>
@@ -321,12 +296,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="other">+%d plis repons</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">Rebatize %1$d paj</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">mete ajou %1$d lyen</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="other">%d paj</item>
     </plurals>
@@ -348,4 +317,10 @@
     <string name="wikis_attachments_caption_save_failed">Nou pa t ka anrejistre lejand lan</string>
     <string name="wikis_attachments_upload_types">Fichye ki sipòte: imaj, PDF, DOC, DOCX, TXT, ak MD.</string>
     <string name="wikis_attachments_upload_limits">Gwo telechajman yo ka limite pa konfigirasyon sèvè ou oswa pwoksi ou a.</string>
+    <string name="wikis_rss_replace">Ranplase</string>
+    <string name="wikis_rss_copied_new">Nouvo URL RSS kopye nan clipboard</string>
+    <string name="wikis_rss_exists">URL fil sa a te deja bay e li pa ka montre ankò.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">Nap montre premye %1$d kòmantè yo.</item>
+    </plurals>
 </resources>

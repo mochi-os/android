@@ -35,6 +35,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -67,6 +69,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
+import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -109,6 +112,9 @@ fun PageViewScreen(
     val snackbar = remember { SnackbarHostState() }
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
+    val rssCopiedNewMsg = stringResource(R.string.wikis_rss_copied_new)
+    val rssExistsMsg = stringResource(R.string.wikis_rss_exists)
+    val rssReplaceLabel = stringResource(R.string.wikis_rss_replace)
     val deletedMsg = stringResource(R.string.wikis_delete_page_success)
     val rssRevokedMsg = stringResource(MochiR.string.rss_revoked)
     val shareSubject = state.page?.title ?: state.wiki?.name ?: ""
@@ -139,7 +145,19 @@ fun PageViewScreen(
                     clipboard.setClip(
                         ClipData.newPlainText(clipboardLabelRss, event.url).toClipEntry(),
                     )
-                    snackbar.showSnackbar(rssCopiedMsg)
+                    snackbar.showSnackbar(if (event.replaced) rssCopiedNewMsg else rssCopiedMsg)
+                }
+                is PageViewEvent.RssExists -> {
+                    // Replacing retires the URL already handed out, so it takes
+                    // a deliberate tap rather than happening silently.
+                    val chose = snackbar.showSnackbar(
+                        message = rssExistsMsg,
+                        actionLabel = rssReplaceLabel,
+                        duration = SnackbarDuration.Long,
+                    )
+                    if (chose == SnackbarResult.ActionPerformed) {
+                        viewModel.copyRssUrl(event.mode, regenerate = true)
+                    }
                 }
                 is PageViewEvent.ShareLink -> {
                     sharePageLink(
@@ -435,10 +453,12 @@ fun PageViewScreen(
                         unsubscribeDialogOpen = false
                         navController.popBackStack(WikisApp.HOME, inclusive = false)
                     } catch (e: Exception) {
-                        snackbar.showSnackbar(
-                            e.message?.takeIf { it.isNotBlank() }
-                                ?: context.getString(R.string.wikis_subscribe_failed)
-                        )
+                        // `e.message` is the raw exception text - an HTTP status
+                        // line or an OkHttp socket message, in English and often
+                        // meaningless. toMochiError().userMessage() is the
+                        // localised message the server sent, which every other
+                        // failure path in this app already shows.
+                        snackbar.showSnackbar(e.toMochiError().userMessage())
                     } finally {
                         isUnsubscribing = false
                     }

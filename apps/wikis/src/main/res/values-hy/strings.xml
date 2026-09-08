@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Գտնել wiki-ներ</string>
     <string name="wikis_sidebar_create">Ստեղծել wiki</string>
     <string name="wikis_pageview_title_fallback">Էջ</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Հետ</string>
     <string name="wikis_pageview_page_actions">Էջի գործողություններ</string>
     <string name="wikis_pageview_toc">Այս էջում</string>
     <string name="wikis_pageview_not_found_title">Էջը չի գտնվել</string>
     <string name="wikis_pageview_create_this_page">Ստեղծել այս էջը</string>
     <string name="wikis_pageview_rss_copied">RSS URL-ը պատճենվեց clipboard-ին</string>
-    <string name="wikis_pageview_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
     <string name="wikis_page_action_section_page">Էջ</string>
     <string name="wikis_page_action_edit">Խմբագրել</string>
     <string name="wikis_page_action_rename">Վերանվանել</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki-ներ</string>
     <string name="wikis_empty_title">Սկսեք ձեր առաջին wiki-ն</string>
     <string name="wikis_empty_subtitle">Որոնեք wiki՝ բաժանորդագրվելու համար, կամ ստեղծեք մեկը՝ ձեր սեփական փաստաթղթերը հրապարակելու համար։</string>
-    <string name="wikis_subscribed_badge">Բաժանորդագրված</string>
     <string name="wikis_create_button">Ստեղծել wiki</string>
     <string name="wikis_recommended_section">Առաջարկվող wiki-ներ</string>
     <string name="wikis_subscribe_button">Բաժանորդագրվել</string>
-    <string name="wikis_subscribed">Բաժանորդագրված</string>
     <string name="wikis_unsubscribe_action">Բաժանորդագրությունից հրաժարվել</string>
     <string name="wikis_unsubscribing">Հրաժարվում է բաժանորդագրությունից…</string>
     <string name="wikis_unsubscribe_confirm_title">Բաժանորդագրությունից հրաժարվել</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Անուն</string>
     <string name="wikis_create_privacy_label">Թույլատրել բոլորին որոնել wiki</string>
     <string name="wikis_create_submit">Ստեղծել</string>
-    <string name="wikis_create_cancel">Չեղարկել</string>
     <string name="wikis_comments_empty_title">Դեռ մեկնաբանություններ չկան</string>
     <string name="wikis_comments_empty_subtitle">Եղեք առաջինը՝ մեկնաբանեք այս էջը։</string>
-    <string name="wikis_comment_action_reply">Պատասխանել</string>
     <string name="wikis_comment_replying_to">Պատասխանում եք %1$s-ին</string>
     <string name="wikis_comment_clear_reply">Չեղարկել պատասխանը</string>
-    <string name="wikis_comment_action_edit">Խմբագրել</string>
     <string name="wikis_comment_action_delete">Ջնջել</string>
     <string name="wikis_comment_action_save">Պահպանել</string>
     <string name="wikis_comment_action_cancel">Չեղարկել</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Նոր էջ</string>
     <string name="wikis_editor_preview">Նախադիտում</string>
     <string name="wikis_editor_preview_untitled">Անվերնագիր</string>
-    <string name="wikis_editor_edit">Խմբագրել</string>
     <string name="wikis_editor_insert">Տեղադրել</string>
     <string name="wikis_editor_attachments">Կցորդներ</string>
     <string name="wikis_editor_delete">Ջնջել էջը</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Վերբեռնվում է…</string>
     <string name="wikis_attachments_upload_failed">Չհաջողվեց վերբեռնել ֆայլերը</string>
     <string name="wikis_attachments_search_clear">Մաքրել որոնումը</string>
-    <string name="wikis_attachments_filter">Զտել</string>
     <string name="wikis_attachments_filter_all">Բոլոր ֆայլերը</string>
     <string name="wikis_attachments_filter_images">Պատկերներ</string>
     <string name="wikis_attachments_filter_documents">Փաստաթղթեր</string>
-    <string name="wikis_attachments_sort">Տեսակավորել</string>
     <string name="wikis_attachments_sort_date">Ամսաթիվ</string>
     <string name="wikis_attachments_sort_name">Անուն</string>
     <string name="wikis_attachments_sort_size">Չափ</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Պատճենել ներդրման հղումը</string>
     <string name="wikis_attachments_embed_copied">Ներդրման հղումը պատճենվեց</string>
     <string name="wikis_attachments_download">Ներբեռնել</string>
-    <string name="wikis_attachments_copy_success">Ներդրման հղումը պատճենվեց</string>
     <string name="wikis_attachments_delete">Ջնջել</string>
     <string name="wikis_attachments_delete_confirm_title">Ջնջել կցորդը</string>
     <string name="wikis_attachments_delete_success">Կցորդը ջնջվեց</string>
     <string name="wikis_attachments_delete_failed">Չհաջողվեց ջնջել կցորդը</string>
-    <string name="wikis_attachments_open">Բացել</string>
     <string name="wikis_attachments_empty_title">Դեռ կցորդներ չկան</string>
     <string name="wikis_attachments_no_results_title">Կցորդներ, որոնք համապատասխանում են ձեր որոնմանը, չկան</string>
     <string name="wikis_attachments_no_results_description">Փորձեք այլ որոնման տերմին կամ զտիչ:</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Այս գործողությունը հնարավոր չէ չեղարկել: Սա մշտապես կջնջի wiki-ն և նրա ողջ բովանդակությունը:</string>
     <string name="wikis_settings_delete_success">Wiki-ն ջնջվեց</string>
     <string name="wikis_settings_delete_failed">Չհաջողվեց ջնջել wiki-ն</string>
-    <string name="wikis_access_add_action">Ավելացնել</string>
     <string name="wikis_access_add_subject_label">Օգտատեր</string>
     <string name="wikis_access_level_edit">Խմբագրել և դիտել</string>
     <string name="wikis_access_level_view">Միայն դիտել</string>
     <string name="wikis_access_level_none">Մուտք չկա</string>
-    <string name="wikis_access_owner_label">Սեփականատեր</string>
     <string name="wikis_access_tab_users">Օգտատերեր</string>
     <string name="wikis_access_tab_groups">Խմբեր</string>
     <string name="wikis_access_tab_other">Այլ</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Չհաջողվեց հեռացնել մուտքը</string>
     <string name="wikis_replicas_empty_title">Դեռ ռեպլիկաներ չկան</string>
     <string name="wikis_replicas_empty_message">Երբ այլ wiki-ները կրկնօրինակեն այս wiki-ն, դրանք կհայտնվեն այստեղ:</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Երբեք</string>
     <string name="wikis_replicas_remove_confirm_title">Հեռացնե՞լ ռեպլիկան։</string>
     <string name="wikis_replicas_remove_confirm_action">Հեռացնել</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Թարմացվեց %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” էջը դեռ գոյություն չունի։</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Վիքիի հղում</string>
-    <string name="wikis_pageview_share_link_copied">Էջի հղումը պատճենվեց սեղմատախտակին</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki էջի հղում</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Հղում</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Որոնել wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Վստա՞հ եք, որ ուզում եք չեղարկել %1$s-ի բաժանորդագրությունը։</string>
-    <string name="wikis_subscribe_failed_502">Այդ սերվերն անհասանելի է։ Կրկին փորձում ենք…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Որոնել ըստ անվան, ID-ի, մատնահետքի կամ URL-ի…</string>
     <string name="wikis_join_search_button">Որոնել wiki-ներ…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Գրեք պատասխան…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Գրեք ձեր բովանդակությունն այստեղ Markdown-ով…</string>
     <string name="wikis_insert_dialog_empty">Դեռ կցորդներ չկան։ Վերբեռնեք ֆայլ՝ սկսելու համար։</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Պիտակը չի կարող դատարկ լինել</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Չհաջողվեց պատճենել ներկառուցման հղումը</string>
     <string name="wikis_attachments_delete_confirm_message">Ջնջե՞լ «%1$s»-ը։ Սա անդառնալի է։</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Հպեք Վերբեռնել՝ այս էջին ֆայլեր ավելացնելու համար։</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d պատասխան</item>
         <item quantity="other">+%d ևս պատասխան</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Վերանվանվեց %1$d էջ</item>
-        <item quantity="other">Վերանվանվեցին %1$d էջ</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">թարմացվեց %1$d հղում</item>
-        <item quantity="other">թարմացվեցին %1$d հղում</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d էջ</item>
         <item quantity="other">%d էջ</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Չհաջողվեց պահպանել մակագրությունը</string>
     <string name="wikis_attachments_upload_types">Աջակցվող ֆայլեր՝ պատկերներ, PDF, DOC, DOCX, TXT և MD։</string>
     <string name="wikis_attachments_upload_limits">Մեծ վերբեռնումները կարող են սահմանափակվել ձեր սերվերի կամ վստահված սերվերի կարգավորմամբ։</string>
+    <string name="wikis_rss_replace">Փոխարինել</string>
+    <string name="wikis_rss_copied_new">Նոր RSS URL-ը պատճենվեց clipboard-ին</string>
+    <string name="wikis_rss_exists">Այս հոսքի URL-ն արդեն տրվել է և չի կարող կրկին ցուցադրվել։</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Ցուցադրվում է առաջին %1$d մեկնաբանությունը։</item>
+        <item quantity="other">Ցուցադրվում են առաջին %1$d մեկնաբանությունները։</item>
+    </plurals>
 </resources>

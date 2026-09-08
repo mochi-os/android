@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">وڪيز ڳوليو</string>
     <string name="wikis_sidebar_create">wiki ٺاهيو</string>
     <string name="wikis_pageview_title_fallback">صفحو</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">واپس</string>
     <string name="wikis_pageview_page_actions">صفحي جا ڪارناما</string>
     <string name="wikis_pageview_toc">هن صفحي تي</string>
     <string name="wikis_pageview_not_found_title">صفحو نه مليو</string>
     <string name="wikis_pageview_create_this_page">هي صفحو ٺاهيو</string>
     <string name="wikis_pageview_rss_copied">RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
-    <string name="wikis_pageview_rss_failed">RSS ٽوڪن حاصل ڪرڻ ۾ ناڪام</string>
     <string name="wikis_page_action_section_page">صفحو</string>
     <string name="wikis_page_action_edit">ترميم</string>
     <string name="wikis_page_action_rename">نالو تبديل ڪريو</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">پنهنجي پهرين wiki شروع ڪريو</string>
     <string name="wikis_empty_subtitle">سبسڪرائب ڪرڻ لاءِ wiki ڳوليو، يا پنهنجي دستاويزن کي شايع ڪرڻ لاءِ هڪ ٺاهيو.</string>
-    <string name="wikis_subscribed_badge">سبسڪرائبڊ</string>
     <string name="wikis_create_button">wiki ٺاهيو</string>
     <string name="wikis_recommended_section">تجويز ڪيل wikis</string>
     <string name="wikis_subscribe_button">سبسڪرائب ڪريو</string>
-    <string name="wikis_subscribed">سبسڪرائبڊ</string>
     <string name="wikis_unsubscribe_action">ان سبسڪرائب ڪريو</string>
     <string name="wikis_unsubscribing">ان سبسڪرائب ٿي رهيو آھي…</string>
     <string name="wikis_unsubscribe_confirm_title">ان سبسڪرائب ڪريو</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">نالو</string>
     <string name="wikis_create_privacy_label">ڪنهن کي به wiki ڳولڻ جي اجازت ڏيو</string>
     <string name="wikis_create_submit">ٺاهيو</string>
-    <string name="wikis_create_cancel">منسوخ ڪريو</string>
     <string name="wikis_comments_empty_title">اڃا ڪو تبصرو نه آهي</string>
     <string name="wikis_comments_empty_subtitle">هن صفحي تي پهريون تبصرو ڪندڙ ٿيو.</string>
-    <string name="wikis_comment_action_reply">جواب</string>
     <string name="wikis_comment_replying_to">%1$s کي جواب پيو ڏجي</string>
     <string name="wikis_comment_clear_reply">جواب منسوخ ڪريو</string>
-    <string name="wikis_comment_action_edit">ترميم</string>
     <string name="wikis_comment_action_delete">ختم ڪريو</string>
     <string name="wikis_comment_action_save">محفوظ ڪريو</string>
     <string name="wikis_comment_action_cancel">منسوخ ڪريو</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">نئون صفحو</string>
     <string name="wikis_editor_preview">پيش نظر</string>
     <string name="wikis_editor_preview_untitled">بي عنوان</string>
-    <string name="wikis_editor_edit">ترميم</string>
     <string name="wikis_editor_insert">داخل ڪريو</string>
     <string name="wikis_editor_attachments">ڳنڍيل فائلون</string>
     <string name="wikis_editor_delete">صفحو ختم ڪريو</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">اپ لوڊ ٿي رهيو آھي…</string>
     <string name="wikis_attachments_upload_failed">فائلون اپ لوڊ ڪرڻ ۾ ناڪام</string>
     <string name="wikis_attachments_search_clear">ڳولا صاف ڪريو</string>
-    <string name="wikis_attachments_filter">فلٽر</string>
     <string name="wikis_attachments_filter_all">سڀ فائلون</string>
     <string name="wikis_attachments_filter_images">تصويرون</string>
     <string name="wikis_attachments_filter_documents">دستاويز</string>
-    <string name="wikis_attachments_sort">ترتيب</string>
     <string name="wikis_attachments_sort_date">تاريخ</string>
     <string name="wikis_attachments_sort_name">نالو</string>
     <string name="wikis_attachments_sort_size">سائيز</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">embed لنڪ ڪاپي ڪريو</string>
     <string name="wikis_attachments_embed_copied">ايمبيڊ لنڪ نقل ٿي وئي</string>
     <string name="wikis_attachments_download">ڊائون لوڊ</string>
-    <string name="wikis_attachments_copy_success">ايمبيڊ لنڪ نقل ٿي وئي</string>
     <string name="wikis_attachments_delete">ختم ڪريو</string>
     <string name="wikis_attachments_delete_confirm_title">ڳنڍيل فائل ختم ڪريو</string>
     <string name="wikis_attachments_delete_success">ڳنڍيل فائل ختم ڪئي وئي</string>
     <string name="wikis_attachments_delete_failed">ضميمو ختم ڪرڻ ۾ ناڪام</string>
-    <string name="wikis_attachments_open">کوليو</string>
     <string name="wikis_attachments_empty_title">اڃا ڪو منسلڪ نه آهي</string>
     <string name="wikis_attachments_no_results_title">توهان جي ڳولا سان ڪو منسلڪ نه ملندو</string>
     <string name="wikis_attachments_no_results_description">ڪا ٻي ڳولا اصطلاح يا فلٽر آزمايو.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ھي عمل واپس نه ٿو ٿي سگھي. ھي wiki ۽ ان جا سڀ مواد مستقل طور تي حذف ٿي ويندا.</string>
     <string name="wikis_settings_delete_success">Wiki حذف ڪئي وئي</string>
     <string name="wikis_settings_delete_failed">وڪي ختم ڪرڻ ۾ ناڪام</string>
-    <string name="wikis_access_add_action">شامل ڪريو</string>
     <string name="wikis_access_add_subject_label">صارف</string>
     <string name="wikis_access_level_edit">ترميم ۽ ڏسو</string>
     <string name="wikis_access_level_view">صرف ڏسڻ</string>
     <string name="wikis_access_level_none">ڪو رسائي نه</string>
-    <string name="wikis_access_owner_label">مالڪ</string>
     <string name="wikis_access_tab_users">صارف</string>
     <string name="wikis_access_tab_groups">گروپ</string>
     <string name="wikis_access_tab_other">ٻيو</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">رسائي هٽائڻ ۾ ناڪام</string>
     <string name="wikis_replicas_empty_title">اڃا ڪي replicas نه آهن</string>
     <string name="wikis_replicas_empty_message">جڏھن ٻيون wikis ھن wiki کي نقل ڪن ٿيون، اھي ھتي ظاھر ٿينديون.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">ڪڏهن به نه</string>
     <string name="wikis_replicas_remove_confirm_title">replica هٽائجي؟</string>
     <string name="wikis_replicas_remove_confirm_action">هٽايو</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” صفحو اڃا موجود ناهي.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">وڪي جو لنڪ</string>
-    <string name="wikis_pageview_share_link_copied">صفحي جو لنڪ ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki صفحي جو لنڪ</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">لنڪ</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki ڳوليو…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ڇا اوھان کي پڪ آھي ته %1$s کان سبسڪرپشن ختم ڪرڻ چاھيو ٿا؟</string>
-    <string name="wikis_subscribe_failed_502">اھو سرور پھچ ۾ ناهي. ٻيهر ڪوشش ٿي رهي آھي…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">نالي، ID، فنگر پرنٽ يا URL ذريعي ڳوليو…</string>
     <string name="wikis_join_search_button">wiki ڳوليو…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">جواب لکو…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">پنھنجو مواد ھتي Markdown استعمال ڪري لکو…</string>
     <string name="wikis_insert_dialog_empty">اڃا ڪا منسلڪ فائل ناهي. شروع ڪرڻ لاءِ فائل اپلوڊ ڪريو.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">ٽيگ خالي نٿو ٿي سگهي</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">ايمبيڊ لنڪ ڪاپي ٿي نه سگهيو</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ڊاھجي؟ ھي واپس نٿو ٿي سگهي.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">ھن صفحي ۾ فائلون شامل ڪرڻ لاءِ اپلوڊ کي ڇُھو.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d جواب</item>
         <item quantity="other">+%d وڌيڪ جواب</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d صفحي جو نالو تبديل ٿيو</item>
-        <item quantity="other">%1$d صفحن جو نالو تبديل ٿيو</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d لنڪ اپڊيٽ ٿيو</item>
-        <item quantity="other">%1$d لنڪ اپڊيٽ ٿيا</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d صفحو</item>
         <item quantity="other">%d صفحا</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">ڪيپشن محفوظ نه ٿي سگهيو</string>
     <string name="wikis_attachments_upload_types">سهڪاري فائلون: تصويرون، PDF، DOC، DOCX، TXT، ۽ MD.</string>
     <string name="wikis_attachments_upload_limits">وڏين فائلن جو اپلوڊ توهان جي سرور يا پراڪسي ترتيب جي ڪري محدود ٿي سگهي ٿو.</string>
+    <string name="wikis_rss_replace">بدلايو</string>
+    <string name="wikis_rss_copied_new">نئون RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
+    <string name="wikis_rss_exists">هي فيڊ URL اڳ ۾ ئي جاري ٿي چڪو آهي ۽ ٻيهر نه ڏيکاري سگهجي.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">پهرين %1$d تبصرو ڏيکاريو پيو وڃي.</item>
+        <item quantity="other">پهريان %1$d تبصرا ڏيکاريا پيا وڃن.</item>
+    </plurals>
 </resources>

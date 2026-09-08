@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wikinak jikxataña</string>
     <string name="wikis_sidebar_create">Wiki luraña</string>
     <string name="wikis_pageview_title_fallback">Página</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki ID munaski</string>
-    <string name="wikis_pageview_back">Kutta</string>
     <string name="wikis_pageview_page_actions">Página lurawinak</string>
     <string name="wikis_pageview_toc">Aka página</string>
     <string name="wikis_pageview_not_found_title">Página jan jikxatasiti</string>
     <string name="wikis_pageview_create_this_page">Aka página luraña</string>
     <string name="wikis_pageview_rss_copied">RSS URL clipboard ukar copiata</string>
-    <string name="wikis_pageview_rss_failed">Janiw RSS token jikhxataña atinkti</string>
     <string name="wikis_page_action_section_page">Página</string>
     <string name="wikis_page_action_edit">Askichaña</string>
     <string name="wikis_page_action_rename">Suti machaqachama</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Ventanan duración</string>
     <string name="wikis_empty_title">Nayrïr wikim qalltaña</string>
     <string name="wikis_empty_subtitle">Wiki thaqhama suscribiñataki, jan ukax mä luraña pachpa documentación publicañataki.</string>
-    <string name="wikis_subscribed_badge">Suscribita</string>
     <string name="wikis_create_button">Wiki luraña</string>
     <string name="wikis_recommended_section">Recomendat wikinaka</string>
     <string name="wikis_subscribe_button">Suscribiña</string>
-    <string name="wikis_subscribed">Suscribita</string>
     <string name="wikis_unsubscribe_action">CRM ukatpach suscripción jaytaña?</string>
     <string name="wikis_unsubscribing">Inakacht\'awi apaqaña</string>
     <string name="wikis_unsubscribe_confirm_title">CRM ukatpach suscripción jaytaña?</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Suti</string>
     <string name="wikis_create_privacy_label">Khitirus wiki thaqaña iyawsaña</string>
     <string name="wikis_create_submit">Luraña</string>
-    <string name="wikis_create_cancel">Jaytaña</string>
     <string name="wikis_comments_empty_title">Janira comentarionaka</string>
     <string name="wikis_comments_empty_subtitle">Nayrïrjamaki aka paginan comentaña.</string>
-    <string name="wikis_comment_action_reply">Reply</string>
     <string name="wikis_comment_replying_to">%1$s tuqir kutiyaski</string>
     <string name="wikis_comment_clear_reply">Jaysawi jaytaña</string>
-    <string name="wikis_comment_action_edit">Askichaña</string>
     <string name="wikis_comment_action_delete">Chhaqtayaña</string>
     <string name="wikis_comment_action_save">Imaña</string>
     <string name="wikis_comment_action_cancel">Jaytaña</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Machaqa página</string>
     <string name="wikis_editor_preview">Nayrqat uñjawi</string>
     <string name="wikis_editor_preview_untitled">Jan sutini listing</string>
-    <string name="wikis_editor_edit">Askichaña</string>
     <string name="wikis_editor_insert">Uchantaña</string>
     <string name="wikis_editor_attachments">Apkatawinaka</string>
     <string name="wikis_editor_delete">Página chhaqtayaña</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Apayaskiwa…</string>
     <string name="wikis_attachments_upload_failed">Janiw archivonak apsuña atinkti</string>
     <string name="wikis_attachments_search_clear">Thaqaña q\'umachaña</string>
-    <string name="wikis_attachments_filter">Suk\'a</string>
     <string name="wikis_attachments_filter_all">Taqpach archivo</string>
     <string name="wikis_attachments_filter_images">Jamuqanaka</string>
     <string name="wikis_attachments_filter_documents">Documentonaka</string>
-    <string name="wikis_attachments_sort">Sumaña</string>
     <string name="wikis_attachments_sort_date">Uru</string>
     <string name="wikis_attachments_sort_name">Suti</string>
     <string name="wikis_attachments_sort_size">Tamaño</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed link copiaña</string>
     <string name="wikis_attachments_embed_copied">Embed enlace copiatawa</string>
     <string name="wikis_attachments_download">Apaqaña</string>
-    <string name="wikis_attachments_copy_success">Embed enlace copiatawa</string>
     <string name="wikis_attachments_delete">Chhaqtayaña</string>
     <string name="wikis_attachments_delete_confirm_title">Apkatawi chhaqtayaña</string>
     <string name="wikis_attachments_delete_success">Apkatawi chhaqtayata</string>
     <string name="wikis_attachments_delete_failed">Janiw archivo apxata chhaqtayaña atinkti</string>
-    <string name="wikis_attachments_open">Jist\'arma</string>
     <string name="wikis_attachments_empty_title">Janira attachmentanaka</string>
     <string name="wikis_attachments_no_results_title">Jan attachmentanak thaqhawi taypi</string>
     <string name="wikis_attachments_no_results_description">Yaqha tag yant\'am.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Aka appax janiw versión apnaqañ utjkiti</string>
     <string name="wikis_settings_delete_success">Wiki entidad ID</string>
     <string name="wikis_settings_delete_failed">Janiw wiki chhaqtayaña atinkti</string>
-    <string name="wikis_access_add_action">Yapxataña</string>
     <string name="wikis_access_add_subject_label">Apnaqiri banata</string>
     <string name="wikis_access_level_edit">Askichaña ukat uñjaña</string>
     <string name="wikis_access_level_view">Uñjañ opcionanaka</string>
     <string name="wikis_access_level_none">Jan mantañ</string>
-    <string name="wikis_access_owner_label">Dueño</string>
     <string name="wikis_access_tab_users">Apnaqirinaka</string>
     <string name="wikis_access_tab_groups">Gruponaka</string>
     <string name="wikis_access_tab_other">Yaqha</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Janiw acceso apsuña atinkti</string>
     <string name="wikis_replicas_empty_title">Janira replicanak</string>
     <string name="wikis_replicas_empty_message">Yaqha wikinakax aka wiki replicapxix ukax akanwa uñstani.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Janipuni</string>
     <string name="wikis_replicas_remove_confirm_title">¿Replica aparma?</string>
     <string name="wikis_replicas_remove_confirm_action">Aparma</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” laphix janïr utjkiti.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki chinu</string>
-    <string name="wikis_pageview_share_link_copied">Laphi chinux clipboard ukar qillqxatatawa</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki laphi chinu</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Enlace</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Mä wiki thaqaña…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">¿Chiqapuniti %1$s ukat mistuñ munta?</string>
-    <string name="wikis_subscribe_failed_502">Uka servidorax jan katuqkiti. Wasitat yant’asa…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Sutipata, ID, luk’ana señapata jan ukax URL thaqaña…</string>
     <string name="wikis_join_search_button">Wikinaka thaqaña…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Mä jaysäwi qillqaña…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Aka Markdown apnaqasa qillqatam qillqaña…</string>
     <string name="wikis_insert_dialog_empty">Janïr yapt’atanakas utjkiti. Mä archivo apayaña qalltañataki.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Ch’ukuñax jan ch’usäkiti</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Embed chinu jan qillqxatasa</string>
     <string name="wikis_attachments_delete_confirm_message">¿“%1$s” chhaqtayaña? Akax jan kutt’ayaskaspati.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Aka laphir archivonaka yapxattañataki Apayaña ukar limt’aña.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d kutsuwi</item>
         <item quantity="other">%d mayamp kutsuwinaka</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d janan sutip mayjt\'ayatawa</item>
-        <item quantity="other">%1$d jananakan sutip mayjt\'ayatawa</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d mayacht\'awi machaqachatawa</item>
-        <item quantity="other">%1$d mayacht\'awinaka machaqachatawa</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d post</item>
         <item quantity="other">%d posts</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Janiw qhanañchawi imañjamäkiti</string>
     <string name="wikis_attachments_upload_types">Yanapt\'ata archivonaka: imágenes, PDF, DOC, DOCX, TXT, ukat MD.</string>
     <string name="wikis_attachments_upload_limits">Jach\'a apkatawinakax servidor jan ukax proxy configuración ukampi limitatakiraki.</string>
+    <string name="wikis_rss_replace">Lantiri</string>
+    <string name="wikis_rss_copied_new">Machaq RSS URL clipboard ukar copiata</string>
+    <string name="wikis_rss_exists">Aka feed URL yaqha pachaw churatawa, janiw wasitat uñacht\'ayaskiti.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Nayrïr %1$d comentario uñachtʼayasa.</item>
+        <item quantity="other">Nayrïr %1$d comentarionaka uñachtʼayasa.</item>
+    </plurals>
 </resources>

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Buscar wikis</string>
     <string name="wikis_sidebar_create">Crear wiki</string>
     <string name="wikis_pageview_title_fallback">Página</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Atrás</string>
     <string name="wikis_pageview_page_actions">Acciones de la página</string>
     <string name="wikis_pageview_toc">En esta página</string>
     <string name="wikis_pageview_not_found_title">Página no encontrada</string>
     <string name="wikis_pageview_create_this_page">Crear esta página</string>
     <string name="wikis_pageview_rss_copied">URL del RSS copiada al portapapeles</string>
-    <string name="wikis_pageview_rss_failed">Error al obtener el token RSS</string>
     <string name="wikis_page_action_section_page">Página</string>
     <string name="wikis_page_action_edit">Editar</string>
     <string name="wikis_page_action_rename">Renombrar</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Crea tu primer wiki</string>
     <string name="wikis_empty_subtitle">Busca un wiki al que suscribirte, o crea uno para publicar tu propia documentación.</string>
-    <string name="wikis_subscribed_badge">Suscrito</string>
     <string name="wikis_create_button">Crear wiki</string>
     <string name="wikis_recommended_section">Wikis recomendados</string>
     <string name="wikis_subscribe_button">Suscribirse</string>
-    <string name="wikis_subscribed">Suscrito</string>
     <string name="wikis_unsubscribe_action">Cancelar suscripción</string>
     <string name="wikis_unsubscribing">Cancelando suscripción…</string>
     <string name="wikis_unsubscribe_confirm_title">Cancelar suscripción</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nombre</string>
     <string name="wikis_create_privacy_label">Permitir a cualquiera buscar el wiki</string>
     <string name="wikis_create_submit">Crear</string>
-    <string name="wikis_create_cancel">Cancelar</string>
     <string name="wikis_comments_empty_title">Aún no hay comentarios</string>
     <string name="wikis_comments_empty_subtitle">Sé el primero en comentar esta página.</string>
-    <string name="wikis_comment_action_reply">Responder</string>
     <string name="wikis_comment_replying_to">Respondiendo a %1$s</string>
     <string name="wikis_comment_clear_reply">Cancelar respuesta</string>
-    <string name="wikis_comment_action_edit">Editar</string>
     <string name="wikis_comment_action_delete">Eliminar</string>
     <string name="wikis_comment_action_save">Guardar</string>
     <string name="wikis_comment_action_cancel">Cancelar</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Nueva página</string>
     <string name="wikis_editor_preview">Vista previa</string>
     <string name="wikis_editor_preview_untitled">Sin título</string>
-    <string name="wikis_editor_edit">Editar</string>
     <string name="wikis_editor_insert">Insertar</string>
     <string name="wikis_editor_attachments">Adjuntos</string>
     <string name="wikis_editor_delete">Eliminar página</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Subiendo…</string>
     <string name="wikis_attachments_upload_failed">Error al subir los archivos</string>
     <string name="wikis_attachments_search_clear">Borrar búsqueda</string>
-    <string name="wikis_attachments_filter">Filtrar</string>
     <string name="wikis_attachments_filter_all">Todos los ficheros</string>
     <string name="wikis_attachments_filter_images">Imágenes</string>
     <string name="wikis_attachments_filter_documents">Documentos</string>
-    <string name="wikis_attachments_sort">Ordenar</string>
     <string name="wikis_attachments_sort_date">Fecha</string>
     <string name="wikis_attachments_sort_name">Nombre</string>
     <string name="wikis_attachments_sort_size">Tamaño</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Copiar enlace de inserción</string>
     <string name="wikis_attachments_embed_copied">Enlace de inserción copiado</string>
     <string name="wikis_attachments_download">Descargar</string>
-    <string name="wikis_attachments_copy_success">Enlace de inserción copiado</string>
     <string name="wikis_attachments_delete">Eliminar</string>
     <string name="wikis_attachments_delete_confirm_title">Eliminar adjunto</string>
     <string name="wikis_attachments_delete_success">Adjunto eliminado</string>
     <string name="wikis_attachments_delete_failed">Error al eliminar el adjunto</string>
-    <string name="wikis_attachments_open">Abrir</string>
     <string name="wikis_attachments_empty_title">Aún no hay adjuntos</string>
     <string name="wikis_attachments_no_results_title">Ningún adjunto coincide con tu búsqueda</string>
     <string name="wikis_attachments_no_results_description">Prueba con otro término de búsqueda o filtro.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Esta acción no se puede deshacer. Eliminará permanentemente el wiki y todo su contenido.</string>
     <string name="wikis_settings_delete_success">Wiki eliminado</string>
     <string name="wikis_settings_delete_failed">Error al eliminar el wiki</string>
-    <string name="wikis_access_add_action">Añadir</string>
     <string name="wikis_access_add_subject_label">Usuario</string>
     <string name="wikis_access_level_edit">Editar y ver</string>
     <string name="wikis_access_level_view">Solo lectura</string>
     <string name="wikis_access_level_none">Sin acceso</string>
-    <string name="wikis_access_owner_label">Propietario</string>
     <string name="wikis_access_tab_users">Usuarios</string>
     <string name="wikis_access_tab_groups">Grupos</string>
     <string name="wikis_access_tab_other">Otro</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Error al quitar el acceso</string>
     <string name="wikis_replicas_empty_title">Aún no hay réplicas</string>
     <string name="wikis_replicas_empty_message">Cuando otros wikis repliquen este wiki, aparecerán aquí.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Nunca</string>
     <string name="wikis_replicas_remove_confirm_title">¿Eliminar la réplica?</string>
     <string name="wikis_replicas_remove_confirm_action">Eliminar</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Actualizado %1$s</string>
     <string name="wikis_pageview_not_found_description">La página «%1$s» aún no existe.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Enlace del wiki</string>
-    <string name="wikis_pageview_share_link_copied">Enlace de la página copiado al portapapeles</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS del wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Enlace de la página del wiki</string>
-    <string name="wikis_pageview_loading">Cargando página…</string>
     <string name="wikis_page_action_share">Enlace</string>
     <string name="wikis_open_sidebar">Abrir barra lateral</string>
-    <string name="wikis_owned_badge">Propio</string>
     <string name="wikis_search_placeholder">Buscar un wiki…</string>
-    <string name="wikis_subscribing">Suscribiendo…</string>
     <string name="wikis_unsubscribe_confirm_message">¿Seguro que quieres cancelar la suscripción a %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Ese servidor no está disponible. Reintentando…</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Buscar por nombre, ID, huella o URL…</string>
     <string name="wikis_join_search_button">Buscar wikis…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Escribe una respuesta…</string>
     <string name="wikis_comment_form_send">Enviar</string>
     <string name="wikis_comment_form_remove_attachment">Quitar adjunto</string>
-    <string name="wikis_comment_collapse_toggle">Contraer hilo</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Escribe tu contenido aquí usando Markdown…</string>
     <string name="wikis_insert_dialog_empty">Aún no hay adjuntos. Sube un archivo para empezar.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Añadir etiqueta</string>
     <string name="wikis_tag_dialog_empty">La etiqueta no puede estar vacía</string>
     <string name="wikis_attachments_search_placeholder">Buscar adjuntos…</string>
-    <string name="wikis_attachments_copy_failed">No se pudo copiar el enlace de inserción</string>
     <string name="wikis_attachments_delete_confirm_message">¿Eliminar «%1$s»? Esta acción no se puede deshacer.</string>
     <string name="wikis_attachments_downloading">Descargando…</string>
     <string name="wikis_attachments_empty_description">Toca Subir para añadir archivos a esta página.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d respuesta</item>
         <item quantity="other">+%d respuestas más</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Se ha renombrado %1$d página</item>
-        <item quantity="other">Se han renombrado %1$d páginas</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">se ha actualizado %1$d enlace</item>
-        <item quantity="other">se han actualizado %1$d enlaces</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d página</item>
         <item quantity="other">%d páginas</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">No se pudo guardar la leyenda</string>
     <string name="wikis_attachments_upload_types">Archivos compatibles: imágenes, PDF, DOC, DOCX, TXT y MD.</string>
     <string name="wikis_attachments_upload_limits">Las subidas grandes pueden estar limitadas por la configuración de tu servidor o proxy.</string>
+    <string name="wikis_rss_replace">Reemplazar</string>
+    <string name="wikis_rss_copied_new">Nueva URL del RSS copiada al portapapeles</string>
+    <string name="wikis_rss_exists">Esta URL del canal ya se emitió y no se puede volver a mostrar.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Se muestra el primer %1$d comentario.</item>
+        <item quantity="other">Se muestran los primeros %1$d comentarios.</item>
+    </plurals>
 </resources>

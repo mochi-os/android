@@ -53,7 +53,6 @@ import org.mochios.wikis.ui.components.LocalWikiContext
 @Composable
 fun WikiCommentThread(
     comment: WikiComment,
-    slug: String,
     currentUserId: String?,
     isOwner: Boolean,
     onStartReply: (commentId: String, selectedText: String?) -> Unit,
@@ -194,9 +193,12 @@ fun WikiCommentThread(
 
                     Spacer(Modifier.height(2.dp))
 
-                    // Body — prefer server-rendered HTML, fall back to plain
-                    // text. Compose's Text preserves whitespace so newlines in
-                    // raw `body` render the same as web's `whitespace-pre-wrap`.
+                    // Body — rendered as markdown, which is what web does with
+                    // the same field. The code used to prefer a `markdown` field
+                    // and fall back to plain text, but the server has no such
+                    // column and never sends one, so every comment took the
+                    // fallback: formatting was lost, and with it the selection
+                    // capture the quote-reply below reads.
                     if (editing) {
                         MochiTextField(
                             value = editBody,
@@ -224,16 +226,11 @@ fun WikiCommentThread(
                                 Text(stringResource(R.string.wikis_comment_action_save))
                             }
                         }
-                    } else if (!comment.bodyMarkdown.isNullOrBlank()) {
+                    } else if (comment.body.isNotBlank()) {
                         HtmlContent(
-                            html = comment.bodyMarkdown,
+                            html = comment.body,
                             modifier = Modifier.fillMaxWidth(),
                             onTextViewReady = { tv -> bodyTextView = tv },
-                        )
-                    } else if (comment.body.isNotBlank()) {
-                        Text(
-                            text = comment.body,
-                            style = MaterialTheme.typography.bodyMedium,
                         )
                     }
 
@@ -279,7 +276,6 @@ fun WikiCommentThread(
                 comment.children.forEach { child ->
                     WikiCommentThread(
                         comment = child,
-                        slug = slug,
                         currentUserId = currentUserId,
                         isOwner = isOwner,
                         onStartReply = onStartReply,

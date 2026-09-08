@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Cerca wikis</string>
     <string name="wikis_sidebar_create">Crea una wiki</string>
     <string name="wikis_pageview_title_fallback">Pàgina</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Enrere</string>
     <string name="wikis_pageview_page_actions">Accions de la pàgina</string>
     <string name="wikis_pageview_toc">En aquesta pàgina</string>
     <string name="wikis_pageview_not_found_title">Pàgina no trobada</string>
     <string name="wikis_pageview_create_this_page">Crea aquesta pàgina</string>
     <string name="wikis_pageview_rss_copied">URL RSS copiat al porta-retalls</string>
-    <string name="wikis_pageview_rss_failed">No s\'ha pogut obtenir el testimoni RSS</string>
     <string name="wikis_page_action_section_page">Pàgina</string>
     <string name="wikis_page_action_edit">Edita</string>
     <string name="wikis_page_action_rename">Canvia el nom</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Comença la teva primera wiki</string>
     <string name="wikis_empty_subtitle">Cerca un wiki per subscriure-t\'hi, o crea\'n un per publicar la teva documentació.</string>
-    <string name="wikis_subscribed_badge">Subscrit</string>
     <string name="wikis_create_button">Crea una wiki</string>
     <string name="wikis_recommended_section">Wikis recomanats</string>
     <string name="wikis_subscribe_button">Subscriu-te</string>
-    <string name="wikis_subscribed">Subscrit</string>
     <string name="wikis_unsubscribe_action">Cancel·la la subscripció</string>
     <string name="wikis_unsubscribing">Cancel·lant la subscripció…</string>
     <string name="wikis_unsubscribe_confirm_title">Cancel·la la subscripció</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nom</string>
     <string name="wikis_create_privacy_label">Permet que qualsevol cerqui la wiki</string>
     <string name="wikis_create_submit">Crea</string>
-    <string name="wikis_create_cancel">Cancel·la</string>
     <string name="wikis_comments_empty_title">Encara no hi ha comentaris</string>
     <string name="wikis_comments_empty_subtitle">Sigues el primer a comentar aquesta pàgina.</string>
-    <string name="wikis_comment_action_reply">Respon</string>
     <string name="wikis_comment_replying_to">S\'està responent a %1$s</string>
     <string name="wikis_comment_clear_reply">Cancel·la la resposta</string>
-    <string name="wikis_comment_action_edit">Edita</string>
     <string name="wikis_comment_action_delete">Suprimeix</string>
     <string name="wikis_comment_action_save">Desa</string>
     <string name="wikis_comment_action_cancel">Cancel·la</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Pàgina nova</string>
     <string name="wikis_editor_preview">Vista prèvia</string>
     <string name="wikis_editor_preview_untitled">Sense títol</string>
-    <string name="wikis_editor_edit">Edita</string>
     <string name="wikis_editor_insert">Insereix</string>
     <string name="wikis_editor_attachments">Fitxers adjunts</string>
     <string name="wikis_editor_delete">Suprimeix la pàgina</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Pujant…</string>
     <string name="wikis_attachments_upload_failed">No s\'han pogut pujar els fitxers</string>
     <string name="wikis_attachments_search_clear">Esborra la cerca</string>
-    <string name="wikis_attachments_filter">Filtra</string>
     <string name="wikis_attachments_filter_all">Tots els fitxers</string>
     <string name="wikis_attachments_filter_images">Imatges</string>
     <string name="wikis_attachments_filter_documents">Documents</string>
-    <string name="wikis_attachments_sort">Ordena</string>
     <string name="wikis_attachments_sort_date">Data</string>
     <string name="wikis_attachments_sort_name">Nom</string>
     <string name="wikis_attachments_sort_size">Mida</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Copia l\'enllaç incrustat</string>
     <string name="wikis_attachments_embed_copied">Enllaç d\'incrustació copiat</string>
     <string name="wikis_attachments_download">Descarrega</string>
-    <string name="wikis_attachments_copy_success">Enllaç d\'incrustació copiat</string>
     <string name="wikis_attachments_delete">Suprimeix</string>
     <string name="wikis_attachments_delete_confirm_title">Suprimeix el fitxer adjunt</string>
     <string name="wikis_attachments_delete_success">Fitxer adjunt suprimit</string>
     <string name="wikis_attachments_delete_failed">No s\'ha pogut suprimir l\'adjunt</string>
-    <string name="wikis_attachments_open">Obert</string>
     <string name="wikis_attachments_empty_title">Encara no hi ha adjunts</string>
     <string name="wikis_attachments_no_results_title">Cap adjunt coincideix amb la cerca</string>
     <string name="wikis_attachments_no_results_description">Prova un terme de cerca o filtre diferent.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Aquesta acció no es pot desfer. S\'eliminarà permanentment la wiki i tot el seu contingut.</string>
     <string name="wikis_settings_delete_success">Wiki eliminada</string>
     <string name="wikis_settings_delete_failed">No s\'ha pogut suprimir el wiki</string>
-    <string name="wikis_access_add_action">Afegeix</string>
     <string name="wikis_access_add_subject_label">Usuari</string>
     <string name="wikis_access_level_edit">Edita i visualitza</string>
     <string name="wikis_access_level_view">Només visualització</string>
     <string name="wikis_access_level_none">Sense accés</string>
-    <string name="wikis_access_owner_label">Propietari</string>
     <string name="wikis_access_tab_users">Usuaris</string>
     <string name="wikis_access_tab_groups">Grups</string>
     <string name="wikis_access_tab_other">Altres</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">No s\'ha pogut retirar l\'accés</string>
     <string name="wikis_replicas_empty_title">Encara no hi ha rèpliques</string>
     <string name="wikis_replicas_empty_message">Quan altres wikis repliquin aquesta wiki, apareixeran aquí.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Mai</string>
     <string name="wikis_replicas_remove_confirm_title">Vols eliminar la rèplica?</string>
     <string name="wikis_replicas_remove_confirm_action">Elimina</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Actualitzat %1$s</string>
     <string name="wikis_pageview_not_found_description">La pàgina «%1$s» encara no existeix.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Enllaç del wiki</string>
-    <string name="wikis_pageview_share_link_copied">Enllaç de la pàgina copiat al porta-retalls</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS del wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Enllaç de la pàgina wiki</string>
-    <string name="wikis_pageview_loading">Carregant pàgina…</string>
     <string name="wikis_page_action_share">Enllaç</string>
     <string name="wikis_open_sidebar">Obre la barra lateral</string>
-    <string name="wikis_owned_badge">Propi</string>
     <string name="wikis_search_placeholder">Cerca un wiki…</string>
-    <string name="wikis_subscribing">Subscrivint…</string>
     <string name="wikis_unsubscribe_confirm_message">Segur que vols cancel·lar la subscripció a %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Aquest servidor no és accessible. Tornant a provar…</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Cerca per nom, ID, empremta o URL…</string>
     <string name="wikis_join_search_button">Cerca wikis…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Escriu una resposta…</string>
     <string name="wikis_comment_form_send">Envia</string>
     <string name="wikis_comment_form_remove_attachment">Elimina l\'adjunt</string>
-    <string name="wikis_comment_collapse_toggle">Plega fil</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Escriu el teu contingut aquí amb Markdown…</string>
     <string name="wikis_insert_dialog_empty">Encara no hi ha adjunts. Puja un fitxer per començar.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Afegeix etiqueta</string>
     <string name="wikis_tag_dialog_empty">L\'etiqueta no pot estar buida</string>
     <string name="wikis_attachments_search_placeholder">Cerca adjunts…</string>
-    <string name="wikis_attachments_copy_failed">No s\'ha pogut copiar l\'enllaç d\'incrustació</string>
     <string name="wikis_attachments_delete_confirm_message">Eliminar «%1$s»? Això no es pot desfer.</string>
     <string name="wikis_attachments_downloading">Descarregant…</string>
     <string name="wikis_attachments_empty_description">Toca Pujar per afegir fitxers a aquesta pàgina.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d resposta</item>
         <item quantity="other">+%d respostes més</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">S\'ha reanomenat %1$d pàgina</item>
-        <item quantity="other">S\'han reanomenat %1$d pàgines</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">s\'ha actualitzat %1$d enllaç</item>
-        <item quantity="other">s\'han actualitzat %1$d enllaços</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d pàgina</item>
         <item quantity="other">%d pàgines</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">No s\'ha pogut desar la llegenda</string>
     <string name="wikis_attachments_upload_types">Fitxers admesos: imatges, PDF, DOC, DOCX, TXT i MD.</string>
     <string name="wikis_attachments_upload_limits">Les pujades grans poden estar limitades per la configuració del servidor o del proxy.</string>
+    <string name="wikis_rss_replace">Substitueix</string>
+    <string name="wikis_rss_copied_new">Nou URL RSS copiat al porta-retalls</string>
+    <string name="wikis_rss_exists">Aquest URL de canal ja s\'ha emès i no es pot tornar a mostrar.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Es mostra el primer %1$d comentari.</item>
+        <item quantity="other">Es mostren els primers %1$d comentaris.</item>
+    </plurals>
 </resources>

@@ -5,14 +5,11 @@
     <string name="wikis_sidebar_find">Aurkitu wikiak</string>
     <string name="wikis_sidebar_create">Sortu wikia</string>
     <string name="wikis_pageview_title_fallback">Orria</string>
-    <string name="wikis_pageview_wiki_fallback">Wikia</string>
-    <string name="wikis_pageview_back">Atzera</string>
     <string name="wikis_pageview_page_actions">Orriaren ekintzak</string>
     <string name="wikis_pageview_toc">Orri honetan</string>
     <string name="wikis_pageview_not_found_title">Ez da orria aurkitu</string>
     <string name="wikis_pageview_create_this_page">Sortu orri hau</string>
     <string name="wikis_pageview_rss_copied">RSS URLa arbelera kopiatu da</string>
-    <string name="wikis_pageview_rss_failed">Ezin izan da RSS tokena lortu</string>
     <string name="wikis_page_action_section_page">Orria</string>
     <string name="wikis_page_action_edit">Editatu</string>
     <string name="wikis_page_action_rename">Aldatu izena</string>
@@ -28,11 +25,9 @@
     <string name="wikis_title">Wikiak</string>
     <string name="wikis_empty_title">Hasi zure lehen wikia</string>
     <string name="wikis_empty_subtitle">Bilatu wiki bat harpidetzeko, edo sortu bat zure dokumentazioa argitaratzeko.</string>
-    <string name="wikis_subscribed_badge">Harpidetuta</string>
     <string name="wikis_create_button">Sortu wikia</string>
     <string name="wikis_recommended_section">Gomendatutako wikiak</string>
     <string name="wikis_subscribe_button">Harpidetu</string>
-    <string name="wikis_subscribed">Harpidetuta</string>
     <string name="wikis_unsubscribe_action">Harpidetza kendu</string>
     <string name="wikis_unsubscribing">Harpidetza kentzen…</string>
     <string name="wikis_unsubscribe_confirm_title">Harpidetza kendu</string>
@@ -57,13 +52,10 @@
     <string name="wikis_create_name_label">Izena</string>
     <string name="wikis_create_privacy_label">Baimendu edonori wikia bilatzea</string>
     <string name="wikis_create_submit">Sortu</string>
-    <string name="wikis_create_cancel">Utzi</string>
     <string name="wikis_comments_empty_title">Oraindik iruzkinik ez</string>
     <string name="wikis_comments_empty_subtitle">Izan zaitez orri honetan iruzkin egiten lehena.</string>
-    <string name="wikis_comment_action_reply">Erantzun</string>
     <string name="wikis_comment_replying_to">%1$s(r)i erantzuten</string>
     <string name="wikis_comment_clear_reply">Utzi erantzuna</string>
-    <string name="wikis_comment_action_edit">Editatu</string>
     <string name="wikis_comment_action_delete">Ezabatu</string>
     <string name="wikis_comment_action_save">Gorde</string>
     <string name="wikis_comment_action_cancel">Utzi</string>
@@ -75,7 +67,6 @@
     <string name="wikis_editor_title_new">Orri berria</string>
     <string name="wikis_editor_preview">Aurrebista</string>
     <string name="wikis_editor_preview_untitled">Izengabea</string>
-    <string name="wikis_editor_edit">Editatu</string>
     <string name="wikis_editor_insert">Txertatu</string>
     <string name="wikis_editor_attachments">Eranskinak</string>
     <string name="wikis_editor_delete">Ezabatu orria</string>
@@ -155,11 +146,9 @@
     <string name="wikis_attachments_uploading">Igotzen…</string>
     <string name="wikis_attachments_upload_failed">Ezin izan dira fitxategiak igo</string>
     <string name="wikis_attachments_search_clear">Garbitu bilaketa</string>
-    <string name="wikis_attachments_filter">Iragazi</string>
     <string name="wikis_attachments_filter_all">Fitxategi guztiak</string>
     <string name="wikis_attachments_filter_images">Irudiak</string>
     <string name="wikis_attachments_filter_documents">Dokumentuak</string>
-    <string name="wikis_attachments_sort">Ordenatu</string>
     <string name="wikis_attachments_sort_date">Data</string>
     <string name="wikis_attachments_sort_name">Izena</string>
     <string name="wikis_attachments_sort_size">Tamaina</string>
@@ -168,12 +157,10 @@
     <string name="wikis_attachments_copy_embed">Kopiatu txertatze esteka</string>
     <string name="wikis_attachments_embed_copied">Txertatze-esteka kopiatuta</string>
     <string name="wikis_attachments_download">Deskargatu</string>
-    <string name="wikis_attachments_copy_success">Txertatze-esteka kopiatuta</string>
     <string name="wikis_attachments_delete">Ezabatu</string>
     <string name="wikis_attachments_delete_confirm_title">Ezabatu eranskina</string>
     <string name="wikis_attachments_delete_success">Eranskina ezabatuta</string>
     <string name="wikis_attachments_delete_failed">Ezin izan da eranskina ezabatu</string>
-    <string name="wikis_attachments_open">Ireki</string>
     <string name="wikis_attachments_empty_title">Oraindik eranskinik ez</string>
     <string name="wikis_attachments_no_results_title">Ez dago bilaketarekin bat datorren eranskinik</string>
     <string name="wikis_attachments_no_results_description">Saiatu beste bilaketa-termino edo iragazki batekin.</string>
@@ -207,12 +194,10 @@
     <string name="wikis_settings_delete_confirm_message">Ekintza hau ezin da desegin. Honek wikia eta bere eduki guztiak betiko ezabatuko ditu.</string>
     <string name="wikis_settings_delete_success">Wikia ezabatu da</string>
     <string name="wikis_settings_delete_failed">Ezin izan da wiki ezabatu</string>
-    <string name="wikis_access_add_action">Gehitu</string>
     <string name="wikis_access_add_subject_label">Erabiltzailea</string>
     <string name="wikis_access_level_edit">Editatu eta ikusi</string>
     <string name="wikis_access_level_view">Ikusi soilik</string>
     <string name="wikis_access_level_none">Sarbiderik ez</string>
-    <string name="wikis_access_owner_label">Jabea</string>
     <string name="wikis_access_tab_users">Erabiltzaileak</string>
     <string name="wikis_access_tab_groups">Taldeak</string>
     <string name="wikis_access_tab_other">Bestelakoa</string>
@@ -226,7 +211,6 @@
     <string name="wikis_access_revoke_failed">Ezin izan da sarbidea kendu</string>
     <string name="wikis_replicas_empty_title">Oraindik errepliketarik ez</string>
     <string name="wikis_replicas_empty_message">Beste wiki batzuek wiki hau erreplikatzen dutenean, hemen agertuko dira.</string>
-    <string name="wikis_replicas_col_id">IDa</string>
     <string name="wikis_replicas_never_synced">Inoiz ez</string>
     <string name="wikis_replicas_remove_confirm_title">Erreplika kendu?</string>
     <string name="wikis_replicas_remove_confirm_action">Kendu</string>
@@ -239,19 +223,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Eguneratua %1$s</string>
     <string name="wikis_pageview_not_found_description">«%1$s» orria ez da existitzen oraindik.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wikiaren esteka</string>
-    <string name="wikis_pageview_share_link_copied">Orrialdearen esteka arbelean kopiatua</string>
     <string name="wikis_pageview_clipboard_label_rss">Wikiaren RSS URLa</string>
-    <string name="wikis_pageview_clipboard_label_share">Wikiaren orrialdearen esteka</string>
-    <string name="wikis_pageview_loading">Orrialdea kargatzen…</string>
     <string name="wikis_page_action_share">Esteka</string>
     <string name="wikis_open_sidebar">Ireki alboko barra</string>
-    <string name="wikis_owned_badge">Norbera</string>
     <string name="wikis_search_placeholder">Bilatu wikia…</string>
-    <string name="wikis_subscribing">Harpidetzen…</string>
     <string name="wikis_unsubscribe_confirm_message">Ziur al zaude %1$s harpidetza utzi nahi duzula?</string>
-    <string name="wikis_subscribe_failed_502">Zerbitzaria ezin da iritsi. Berriro saiatzen…</string>
     <string name="wikis_clipboard_label_rss">Wikiaren RSS URLa</string>
     <string name="wikis_find_search_placeholder">Bilatu izenez, IDz, hatz-markaz edo URLz…</string>
     <string name="wikis_join_search_button">Bilatu wikiak…</string>
@@ -262,7 +239,6 @@
     <string name="wikis_comment_form_placeholder_reply">Idatzi erantzuna…</string>
     <string name="wikis_comment_form_send">Bidali</string>
     <string name="wikis_comment_form_remove_attachment">Kendu eranskina</string>
-    <string name="wikis_comment_collapse_toggle">Tolestu hari</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Idatzi zure edukia hemen Markdown erabiliz…</string>
     <string name="wikis_insert_dialog_empty">Eranskinik ez oraindik. Igo fitxategi bat hasteko.</string>
@@ -291,7 +267,6 @@
     <string name="wikis_tag_dialog_title">Gehitu etiketa</string>
     <string name="wikis_tag_dialog_empty">Etiketa ezin da hutsik egon</string>
     <string name="wikis_attachments_search_placeholder">Bilatu eranskinak…</string>
-    <string name="wikis_attachments_copy_failed">Esteka inkrustatua kopiatzeak huts egin du</string>
     <string name="wikis_attachments_delete_confirm_message">«%1$s» ezabatu? Hau ezin da desegin.</string>
     <string name="wikis_attachments_downloading">Deskargatzen…</string>
     <string name="wikis_attachments_empty_description">Sakatu Igo orri honetan fitxategiak gehitzeko.</string>
@@ -320,14 +295,6 @@
         <item quantity="one">%d erantzun</item>
         <item quantity="other">+%d erantzun gehiago</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d orri berrizendatu da</item>
-        <item quantity="other">%1$d orri berrizendatu dira</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d esteka eguneratu da</item>
-        <item quantity="other">%1$d esteka eguneratu dira</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d orri</item>
         <item quantity="other">%d orri</item>
@@ -355,4 +322,11 @@
     <string name="wikis_attachments_caption_save_failed">Ezin izan da epigrafea gorde</string>
     <string name="wikis_attachments_upload_types">Onartutako fitxategiak: irudiak, PDF, DOC, DOCX, TXT eta MD.</string>
     <string name="wikis_attachments_upload_limits">Igoera handiak zure zerbitzariaren edo proxyaren konfigurazioak muga ditzake.</string>
+    <string name="wikis_rss_replace">Ordeztu</string>
+    <string name="wikis_rss_copied_new">RSS URL berria arbelera kopiatu da</string>
+    <string name="wikis_rss_exists">Jario URL hau dagoeneko eman da eta ezin da berriro erakutsi.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Lehen %1$d iruzkina erakusten.</item>
+        <item quantity="other">Lehen %1$d iruzkinak erakusten.</item>
+    </plurals>
 </resources>

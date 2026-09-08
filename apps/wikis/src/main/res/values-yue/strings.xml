@@ -5,8 +5,6 @@
     <string name="wikis_settings_field_name">名稱</string>
     <string name="wikis_create_submit">建立</string>
     <string name="wikis_redirect_create_action">建立</string>
-    <string name="wikis_pageview_back">返回</string>
-    <string name="wikis_create_cancel">取消</string>
     <string name="wikis_comment_action_cancel">取消</string>
     <string name="wikis_delete_page_cancel">取消</string>
     <string name="wikis_rename_page_cancel">取消</string>
@@ -14,15 +12,12 @@
     <string name="wikis_comment_action_save">儲存</string>
     <string name="wikis_editor_save">儲存</string>
     <string name="wikis_page_action_edit">編輯</string>
-    <string name="wikis_comment_action_edit">編輯</string>
-    <string name="wikis_editor_edit">編輯</string>
     <string name="wikis_page_action_delete">刪除</string>
     <string name="wikis_comment_action_delete">刪除</string>
     <string name="wikis_delete_page_confirm">刪除</string>
     <string name="wikis_attachments_delete">刪除</string>
     <string name="wikis_redirects_add">加入</string>
     <string name="wikis_tag_dialog_add">加入</string>
-    <string name="wikis_access_add_action">加入</string>
     <string name="wikis_subscribe_button">訂閱</string>
     <string name="wikis_history_view_action">檢視</string>
     <string name="wikis_page_action_settings">設定</string>
@@ -36,7 +31,6 @@
     <string name="wikis_page_action_unsubscribe">取消訂閱</string>
     <string name="wikis_unsubscribe_action">取消訂閱</string>
     <string name="wikis_unsubscribe_confirm_title">取消訂閱</string>
-    <string name="wikis_attachments_open">開啟</string>
     <string name="wikis_access_add_subject_label">用戶</string>
 
     <string name="launcher_wikis">Mochi Wiki</string>
@@ -47,7 +41,6 @@
     <string name="wikis_sidebar_find">搵 wiki</string>
     <string name="wikis_sidebar_create">建立 wiki</string>
     <string name="wikis_pageview_title_fallback">頁面</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
     <string name="wikis_pageview_page_actions">頁面操作</string>
     <string name="wikis_pageview_toc">本頁目錄</string>
     <string name="wikis_pageview_toc_expand">顯示目錄</string>
@@ -57,14 +50,9 @@
     <string name="wikis_pageview_not_found_title">搵唔到頁面</string>
     <string name="wikis_pageview_not_found_description">頁面「%1$s」仲未存在。</string>
     <string name="wikis_pageview_create_this_page">建立呢個頁面</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki 連結</string>
     <string name="wikis_pageview_rss_copied">RSS 網址已複製到剪貼簿</string>
-    <string name="wikis_pageview_share_link_copied">頁面連結已複製到剪貼簿</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS 網址</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki 頁面連結</string>
-    <string name="wikis_pageview_rss_failed">無法取得 RSS 權杖</string>
-    <string name="wikis_pageview_loading">緊載入頁面…</string>
     <string name="wikis_page_action_section_page">頁面</string>
     <string name="wikis_page_action_rename">重新命名</string>
     <string name="wikis_page_action_history">歷史</string>
@@ -76,17 +64,12 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">開始你嘅第一個 wiki</string>
     <string name="wikis_empty_subtitle">搜尋 wiki 嚟訂閱,或者建立一個發佈你自己嘅文檔。</string>
-    <string name="wikis_owned_badge">擁有</string>
-    <string name="wikis_subscribed_badge">已訂閱</string>
     <string name="wikis_create_button">建立 wiki</string>
     <string name="wikis_search_placeholder">搜尋 wiki…</string>
     <string name="wikis_recommended_section">推薦 wiki</string>
-    <string name="wikis_subscribing">緊訂閱…</string>
-    <string name="wikis_subscribed">已訂閱</string>
     <string name="wikis_unsubscribing">緊取消訂閱…</string>
     <string name="wikis_unsubscribe_confirm_message">你確定要取消訂閱 %1$s 嗎?</string>
     <string name="wikis_unsubscribe_success">已取消訂閱</string>
-    <string name="wikis_subscribe_failed_502">嗰個伺服器無法連接。重試緊…</string>
     <string name="wikis_subscribe_failed">訂閱失敗</string>
     <string name="wikis_rss_menu">RSS feed</string>
     <string name="wikis_rss_changes">變更</string>
@@ -113,7 +96,6 @@
     <string name="wikis_comments_title_template">%1$s - 留言</string>
     <string name="wikis_comments_empty_title">重未有留言</string>
     <string name="wikis_comments_empty_subtitle">做第一個喺呢個頁面留言嘅人。</string>
-    <string name="wikis_comment_action_reply">回覆</string>
     <string name="wikis_comment_replying_to">回覆緊 %1$s</string>
     <string name="wikis_comment_clear_reply">取消回覆</string>
     <string name="wikis_comment_edited">(已編輯)</string>
@@ -124,7 +106,6 @@
     <string name="wikis_comment_form_attach">附加檔案</string>
     <string name="wikis_comment_form_remove_attachment">移除附件</string>
     <string name="wikis_comment_expand">(展開)</string>
-    <string name="wikis_comment_collapse_toggle">收埋討論串</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_title_new">建立新頁面</string>
     <string name="wikis_editor_preview">預覽</string>
@@ -225,11 +206,9 @@
     <string name="wikis_attachments_upload_failed">上載檔案失敗</string>
     <string name="wikis_attachments_search_placeholder">搜尋附件…</string>
     <string name="wikis_attachments_search_clear">清除搜尋</string>
-    <string name="wikis_attachments_filter">篩選</string>
     <string name="wikis_attachments_filter_all">所有檔案</string>
     <string name="wikis_attachments_filter_images">圖片</string>
     <string name="wikis_attachments_filter_documents">文件</string>
-    <string name="wikis_attachments_sort">排序</string>
     <string name="wikis_attachments_sort_date">日期</string>
     <string name="wikis_attachments_sort_size">大細</string>
     <string name="wikis_attachments_view_grid">格仔檢視</string>
@@ -237,8 +216,6 @@
     <string name="wikis_attachments_copy_embed">複製嵌入連結</string>
     <string name="wikis_attachments_embed_copied">已複製嵌入連結</string>
     <string name="wikis_attachments_download">下載</string>
-    <string name="wikis_attachments_copy_success">已複製嵌入連結</string>
-    <string name="wikis_attachments_copy_failed">複製嵌入連結失敗</string>
     <string name="wikis_attachments_delete_confirm_title">刪除附件</string>
     <string name="wikis_attachments_delete_confirm_message">刪除「%1$s」？呢個操作冇得還原。</string>
     <string name="wikis_attachments_delete_success">已刪除附件</string>
@@ -278,7 +255,6 @@
     <string name="wikis_settings_delete_success">已刪除 wiki</string>
     <string name="wikis_settings_delete_failed">刪除 wiki 失敗</string>
 
-    <string name="wikis_access_owner_label">擁有者</string>
     <string name="wikis_access_tab_users">用戶</string>
     <string name="wikis_replicas_never_synced">從未</string>
     <string name="wikis_access_tab_groups">群組</string>
@@ -299,7 +275,6 @@
     <string name="wikis_access_revoke_failed">移除權限失敗</string>
     <string name="wikis_replicas_empty_title">暫時冇副本</string>
     <string name="wikis_replicas_empty_message">當其他 wiki 複製呢個 wiki 嗰陣，佢哋會喺度顯示。</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_col_subscribed">訂閱：%1$s</string>
     <string name="wikis_replicas_col_synced">最後同步：%1$s</string>
     <string name="wikis_replicas_remove_confirm_title">移除副本？</string>
@@ -316,12 +291,6 @@
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="other">+%d 條回覆</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">改咗 %1$d 個頁面嘅名</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">更新咗 %1$d 條連結</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="other">%d 個頁面</item>
@@ -349,4 +318,10 @@
     <string name="wikis_attachments_caption_save_failed">無法儲存說明文字</string>
     <string name="wikis_attachments_upload_types">支援的檔案：圖片、PDF、DOC、DOCX、TXT 和 MD。</string>
     <string name="wikis_attachments_upload_limits">大型上傳可能受伺服器或代理設定的限制。</string>
+    <string name="wikis_rss_replace">取代</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">顯示緊頭 %1$d 個留言。</item>
+    </plurals>
+    <string name="wikis_rss_copied_new">已複製新嘅 RSS URL 去剪貼簿</string>
+    <string name="wikis_rss_exists">呢個訂閱 URL 已經發放咗，無法再顯示。</string>
 </resources>

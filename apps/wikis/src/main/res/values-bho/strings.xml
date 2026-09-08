@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">विकी खोजीं</string>
     <string name="wikis_sidebar_create">wiki बनाईं</string>
     <string name="wikis_pageview_title_fallback">पन्ना</string>
-    <string name="wikis_pageview_wiki_fallback">विकी</string>
-    <string name="wikis_pageview_back">वापस</string>
     <string name="wikis_pageview_page_actions">पन्ना क्रिया</string>
     <string name="wikis_pageview_toc">ए पन्ना पर</string>
     <string name="wikis_pageview_not_found_title">पन्ना ना मिलल</string>
     <string name="wikis_pageview_create_this_page">ई पन्ना बनाईं</string>
     <string name="wikis_pageview_rss_copied">RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
-    <string name="wikis_pageview_rss_failed">RSS टोकन पावे में विफल</string>
     <string name="wikis_page_action_section_page">पन्ना</string>
     <string name="wikis_page_action_edit">संपादित करीं</string>
     <string name="wikis_page_action_rename">नाम बदलीं</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">विकी सब</string>
     <string name="wikis_empty_title">अपना पहिला विकी शुरू करीं</string>
     <string name="wikis_empty_subtitle">सब्सक्राइब करे खातिर विकी खोजीं, भा अपन दस्तावेज प्रकाशित करे खातिर एक बनाईं।</string>
-    <string name="wikis_subscribed_badge">सदस्यता ले लिहल गइल</string>
     <string name="wikis_create_button">wiki बनाईं</string>
     <string name="wikis_recommended_section">सिफारिश कइल विकी</string>
     <string name="wikis_subscribe_button">सदस्यता लीं</string>
-    <string name="wikis_subscribed">सदस्यता ले लिहल गइल</string>
     <string name="wikis_unsubscribe_action">सदस्यता रद्द करीं</string>
     <string name="wikis_unsubscribing">सदस्यता रद्द हो रहल बा…</string>
     <string name="wikis_unsubscribe_confirm_title">सदस्यता रद्द करीं</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">नाम</string>
     <string name="wikis_create_privacy_label">केहू के wiki खोजे के अनुमति दीं</string>
     <string name="wikis_create_submit">बनाईं</string>
-    <string name="wikis_create_cancel">रद्द करीं</string>
     <string name="wikis_comments_empty_title">अबहीं तक कौनो टिप्पणी नइखे</string>
     <string name="wikis_comments_empty_subtitle">एह पन्ना प पहिला टिप्पणी करीं।</string>
-    <string name="wikis_comment_action_reply">जवाब</string>
     <string name="wikis_comment_replying_to">%1$s के जवाब देत बानी</string>
     <string name="wikis_comment_clear_reply">जवाब रद्द करीं</string>
-    <string name="wikis_comment_action_edit">संपादित करीं</string>
     <string name="wikis_comment_action_delete">मेटाईं</string>
     <string name="wikis_comment_action_save">सहेजीं</string>
     <string name="wikis_comment_action_cancel">रद्द करीं</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">नया पन्ना</string>
     <string name="wikis_editor_preview">पूर्वावलोकन</string>
     <string name="wikis_editor_preview_untitled">बेशीर्षक</string>
-    <string name="wikis_editor_edit">संपादित करीं</string>
     <string name="wikis_editor_insert">डालीं</string>
     <string name="wikis_editor_attachments">संलग्नक</string>
     <string name="wikis_editor_delete">पन्ना मेटाईं</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">अपलोड हो रहल बा…</string>
     <string name="wikis_attachments_upload_failed">फाइल अपलोड करे में विफल</string>
     <string name="wikis_attachments_search_clear">खोज साफ करीं</string>
-    <string name="wikis_attachments_filter">फिल्टर</string>
     <string name="wikis_attachments_filter_all">सब फाइल</string>
     <string name="wikis_attachments_filter_images">चित्र</string>
     <string name="wikis_attachments_filter_documents">दस्तावेज</string>
-    <string name="wikis_attachments_sort">क्रमबद्ध करीं</string>
     <string name="wikis_attachments_sort_date">तारीख</string>
     <string name="wikis_attachments_sort_name">नाम</string>
     <string name="wikis_attachments_sort_size">आकार</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed लिंक कॉपी करीं</string>
     <string name="wikis_attachments_embed_copied">एम्बेड लिंक कॉपी हो गइल</string>
     <string name="wikis_attachments_download">डाउनलोड</string>
-    <string name="wikis_attachments_copy_success">एम्बेड लिंक कॉपी हो गइल</string>
     <string name="wikis_attachments_delete">मेटाईं</string>
     <string name="wikis_attachments_delete_confirm_title">संलग्नक मेटाईं</string>
     <string name="wikis_attachments_delete_success">संलग्नक मेटा दिहल गइल</string>
     <string name="wikis_attachments_delete_failed">अटैचमेंट मेटावे में विफल</string>
-    <string name="wikis_attachments_open">खोलीं</string>
     <string name="wikis_attachments_empty_title">अबहीं तक कौनो अटैचमेंट नइखे</string>
     <string name="wikis_attachments_no_results_title">रउआ खोज से कौनो अटैचमेंट मेल ना खाइल</string>
     <string name="wikis_attachments_no_results_description">अलग खोज शब्द या फ़िल्टर आजमाईं।</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ई कार्य पूर्ववत ना कइल जा सकेला। ई विकी आ ओकर सब सामग्री के स्थायी रूप से हटा दी।</string>
     <string name="wikis_settings_delete_success">विकी हटावल गइल</string>
     <string name="wikis_settings_delete_failed">विकी मेटावे में विफल</string>
-    <string name="wikis_access_add_action">जोड़ीं</string>
     <string name="wikis_access_add_subject_label">उपयोगकर्ता</string>
     <string name="wikis_access_level_edit">संपादन आ देखीं</string>
     <string name="wikis_access_level_view">खाली देखीं</string>
     <string name="wikis_access_level_none">पहुँच नइखे</string>
-    <string name="wikis_access_owner_label">मालिक</string>
     <string name="wikis_access_tab_users">उपयोगकर्ता सब</string>
     <string name="wikis_access_tab_groups">समूह</string>
     <string name="wikis_access_tab_other">दोसर</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">पहुँच हटावे में विफल</string>
     <string name="wikis_replicas_empty_title">अबहीं तक कौनो प्रतिकृति नइखे</string>
     <string name="wikis_replicas_empty_message">जब अउरी विकी एह विकी के प्रतिकृति बनइहें, ऊ इहाँ देखाई।</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">कबो ना</string>
     <string name="wikis_replicas_remove_confirm_title">प्रतिकृति हटाईं?</string>
     <string name="wikis_replicas_remove_confirm_action">हटाईं</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” पन्ना अबले नइखे।</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">विकी लिंक</string>
-    <string name="wikis_pageview_share_link_copied">पन्ना के लिंक क्लिपबोर्ड पर कॉपी भइल</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki पन्ना के लिंक</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">लिंक</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">कवनो wiki खोजीं…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">का रउआ साँच में %1$s के सदस्यता छोड़े के चाहत बानी?</string>
-    <string name="wikis_subscribe_failed_502">ऊ सर्वर तक ना पहुँचल जा सकत। फेर कोशिश कइल जा रहल बा…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">नाम, ID, फिंगरप्रिंट भा URL से खोजीं…</string>
     <string name="wikis_join_search_button">wiki खोजीं…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">जवाब लिखीं…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">आपन सामग्री इहाँ Markdown से लिखीं…</string>
     <string name="wikis_insert_dialog_empty">अबले कवनो संलग्नक नइखे। शुरू करे खातिर फाइल अपलोड करीं।</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">टैग खाली ना हो सके</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">एम्बेड लिंक कॉपी ना हो सकल</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” मेटाईं? ई वापस ना हो सकेला।</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">एह पन्ना में फाइल जोड़े खातिर अपलोड दबाईं।</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d जवाब</item>
         <item quantity="other">+%d अउरी जवाब</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d पन्ना के नाम बदलल गइल</item>
-        <item quantity="other">%1$d पन्ना के नाम बदलल गइल</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d लिंक अपडेट भइल</item>
-        <item quantity="other">%1$d लिंक अपडेट भइल</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d पन्ना</item>
         <item quantity="other">%d पन्ना</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">कैप्शन सहेजल ना जा सकल</string>
     <string name="wikis_attachments_upload_types">समर्थित फ़ाइल: छवि, PDF, DOC, DOCX, TXT, आ MD।</string>
     <string name="wikis_attachments_upload_limits">बड़हन अपलोड राउर सर्वर भा प्रॉक्सी कॉन्फ़िगरेशन से सीमित हो सकेला।</string>
+    <string name="wikis_rss_replace">बदलीं</string>
+    <string name="wikis_rss_copied_new">नया RSS URL क्लिपबोर्ड पर कॉपी भइल</string>
+    <string name="wikis_rss_exists">ई फीड URL पहिले से जारी भइल बा आ फिर से ना देखावल जा सके।</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">पहिल %1$d टिप्पणी देखावल जा रहल बा।</item>
+        <item quantity="other">पहिल %1$d टिप्पणी देखावल जा रहल बाड़ी सन।</item>
+    </plurals>
 </resources>

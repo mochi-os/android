@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Пронађи викије</string>
     <string name="wikis_sidebar_create">Креирај wiki</string>
     <string name="wikis_pageview_title_fallback">Страница</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Назад</string>
     <string name="wikis_pageview_page_actions">Акције странице</string>
     <string name="wikis_pageview_toc">На овој страници</string>
     <string name="wikis_pageview_not_found_title">Страница није пронађена</string>
     <string name="wikis_pageview_create_this_page">Креирај ову страницу</string>
     <string name="wikis_pageview_rss_copied">RSS URL копиран у клипборд</string>
-    <string name="wikis_pageview_rss_failed">Преузимање RSS токена није успело</string>
     <string name="wikis_page_action_section_page">Страница</string>
     <string name="wikis_page_action_edit">Уреди</string>
     <string name="wikis_page_action_rename">Преименуј</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki-ји</string>
     <string name="wikis_empty_title">Започни први wiki</string>
     <string name="wikis_empty_subtitle">Претражи wiki за претплату или креирајте један за објављивање сопствене документације.</string>
-    <string name="wikis_subscribed_badge">Претплаћен</string>
     <string name="wikis_create_button">Креирај wiki</string>
     <string name="wikis_recommended_section">Препоручени wiki-ји</string>
     <string name="wikis_subscribe_button">Претплати се</string>
-    <string name="wikis_subscribed">Претплаћен</string>
     <string name="wikis_unsubscribe_action">Откажи претплату</string>
     <string name="wikis_unsubscribing">Отказивање претплате…</string>
     <string name="wikis_unsubscribe_confirm_title">Откажи претплату</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Име</string>
     <string name="wikis_create_privacy_label">Дозволи свима да претражују wiki</string>
     <string name="wikis_create_submit">Креирај</string>
-    <string name="wikis_create_cancel">Откажи</string>
     <string name="wikis_comments_empty_title">Још нема коментара</string>
     <string name="wikis_comments_empty_subtitle">Будите први који ће коментарисати ову страницу.</string>
-    <string name="wikis_comment_action_reply">Одговори</string>
     <string name="wikis_comment_replying_to">Одговор на %1$s</string>
     <string name="wikis_comment_clear_reply">Откажи одговор</string>
-    <string name="wikis_comment_action_edit">Уреди</string>
     <string name="wikis_comment_action_delete">Обриши</string>
     <string name="wikis_comment_action_save">Сачувај</string>
     <string name="wikis_comment_action_cancel">Откажи</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Нова страница</string>
     <string name="wikis_editor_preview">Преглед</string>
     <string name="wikis_editor_preview_untitled">Без наслова</string>
-    <string name="wikis_editor_edit">Уреди</string>
     <string name="wikis_editor_insert">Уметни</string>
     <string name="wikis_editor_attachments">Прилози</string>
     <string name="wikis_editor_delete">Обриши страницу</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Отпремање…</string>
     <string name="wikis_attachments_upload_failed">Отпремање датотека није успело</string>
     <string name="wikis_attachments_search_clear">Очисти претрагу</string>
-    <string name="wikis_attachments_filter">Филтер</string>
     <string name="wikis_attachments_filter_all">Све датотеке</string>
     <string name="wikis_attachments_filter_images">Слике</string>
     <string name="wikis_attachments_filter_documents">Документи</string>
-    <string name="wikis_attachments_sort">Сортирај</string>
     <string name="wikis_attachments_sort_date">Датум</string>
     <string name="wikis_attachments_sort_name">Име</string>
     <string name="wikis_attachments_sort_size">Величина</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Копирај везу за уметање</string>
     <string name="wikis_attachments_embed_copied">Веза за уграђивање копирана</string>
     <string name="wikis_attachments_download">Преузми</string>
-    <string name="wikis_attachments_copy_success">Веза за уграђивање копирана</string>
     <string name="wikis_attachments_delete">Обриши</string>
     <string name="wikis_attachments_delete_confirm_title">Обриши прилог</string>
     <string name="wikis_attachments_delete_success">Прилог обрисан</string>
     <string name="wikis_attachments_delete_failed">Брисање прилога није успело</string>
-    <string name="wikis_attachments_open">Отворено</string>
     <string name="wikis_attachments_empty_title">Још нема прилога</string>
     <string name="wikis_attachments_no_results_title">Нема прилога који одговарају вашој претрази</string>
     <string name="wikis_attachments_no_results_description">Покушај другу реч за претрагу или филтер.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Ова акција се не може опозвати. Ово ће трајно избрисати wiki и сав његов садржај.</string>
     <string name="wikis_settings_delete_success">Wiki обрисан</string>
     <string name="wikis_settings_delete_failed">Брисање викија није успело</string>
-    <string name="wikis_access_add_action">Додај</string>
     <string name="wikis_access_add_subject_label">Корисник</string>
     <string name="wikis_access_level_edit">Уреди и прегледај</string>
     <string name="wikis_access_level_view">Само приказ</string>
     <string name="wikis_access_level_none">Нема приступа</string>
-    <string name="wikis_access_owner_label">Власник</string>
     <string name="wikis_access_tab_users">Корисници</string>
     <string name="wikis_access_tab_groups">Групе</string>
     <string name="wikis_access_tab_other">Друго</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Уклањање приступа није успело</string>
     <string name="wikis_replicas_empty_title">Још нема реплика</string>
     <string name="wikis_replicas_empty_message">Када други wiki-ји реплицирају овај wiki, појавиће се овде.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Никад</string>
     <string name="wikis_replicas_remove_confirm_title">Уклонити реплику?</string>
     <string name="wikis_replicas_remove_confirm_action">Уклони</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страница „%1$s\" још не постоји.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Веза до викија</string>
-    <string name="wikis_pageview_share_link_copied">Веза странице копирана у међумеморију</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Веза wiki странице</string>
-    <string name="wikis_pageview_loading">Учитавање странице…</string>
     <string name="wikis_page_action_share">Веза</string>
     <string name="wikis_open_sidebar">Отвори бочну траку</string>
-    <string name="wikis_owned_badge">Власништво</string>
     <string name="wikis_search_placeholder">Претражи wiki…</string>
-    <string name="wikis_subscribing">Пријављивање…</string>
     <string name="wikis_unsubscribe_confirm_message">Сигурно желите да откажете претплату на %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Сервер није доступан. Покушавам поново…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Претражи по имену, ID, отиску или URL…</string>
     <string name="wikis_join_search_button">Претражи wikije…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Напишите одговор…</string>
     <string name="wikis_comment_form_send">Пошаљи</string>
     <string name="wikis_comment_form_remove_attachment">Уклони прилог</string>
-    <string name="wikis_comment_collapse_toggle">Сажми нит</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Напишите свој садржај овде помоћу Markdown…</string>
     <string name="wikis_insert_dialog_empty">Још нема прилога. Отпремите фајл за почетак.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Додај ознаку</string>
     <string name="wikis_tag_dialog_empty">Ознака не може бити празна</string>
     <string name="wikis_attachments_search_placeholder">Претражи прилоге…</string>
-    <string name="wikis_attachments_copy_failed">Копирање везе за уграђивање није успело</string>
     <string name="wikis_attachments_delete_confirm_message">Обрисати „%1$s\"? Ово се не може поништити.</string>
     <string name="wikis_attachments_downloading">Преузимање…</string>
     <string name="wikis_attachments_empty_description">Додирните Отпреми за додавање фајлова на ову страницу.</string>
@@ -324,16 +299,6 @@
         <item quantity="one">%d одговор</item>
         <item quantity="few">+%d додатних одговора</item>
         <item quantity="other">+%d додатних одговора</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Преименована %1$d страница</item>
-        <item quantity="few">Преименоване %1$d странице</item>
-        <item quantity="other">Преименовано %1$d страница</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">ажуриран %1$d линк</item>
-        <item quantity="few">ажурирана %1$d линка</item>
-        <item quantity="other">ажурирано %1$d линкова</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d страница</item>
@@ -368,4 +333,12 @@
     <string name="wikis_attachments_caption_save_failed">Натпис није могуће сачувати</string>
     <string name="wikis_attachments_upload_types">Подржане датотеке: слике, PDF, DOC, DOCX, TXT и MD.</string>
     <string name="wikis_attachments_upload_limits">Велика отпремања могу бити ограничена конфигурацијом вашег сервера или прокси сервера.</string>
+    <string name="wikis_rss_replace">Замени</string>
+    <string name="wikis_rss_copied_new">Нови RSS URL копиран у клипборд</string>
+    <string name="wikis_rss_exists">Овај URL канала је већ издат и не може се поново приказати.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Приказује се први %1$d коментар.</item>
+        <item quantity="few">Приказује се првих %1$d коментара.</item>
+        <item quantity="other">Приказује се првих %1$d коментара.</item>
+    </plurals>
 </resources>

@@ -5,14 +5,11 @@
     <string name="wikis_sidebar_find">Wiki\'s zoeken</string>
     <string name="wikis_sidebar_create">Wiki aanmaken</string>
     <string name="wikis_pageview_title_fallback">Pagina</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Terug</string>
     <string name="wikis_pageview_page_actions">Pagina-acties</string>
     <string name="wikis_pageview_toc">Op deze pagina</string>
     <string name="wikis_pageview_not_found_title">Pagina niet gevonden</string>
     <string name="wikis_pageview_create_this_page">Deze pagina aanmaken</string>
     <string name="wikis_pageview_rss_copied">RSS-URL gekopieerd naar klembord</string>
-    <string name="wikis_pageview_rss_failed">RSS-token ophalen mislukt</string>
     <string name="wikis_page_action_section_page">Pagina</string>
     <string name="wikis_page_action_edit">Bewerken</string>
     <string name="wikis_page_action_rename">Hernoemen</string>
@@ -27,11 +24,9 @@
     <string name="wikis_page_action_unsubscribe">Uitschrijven</string>
     <string name="wikis_empty_title">Start uw eerste wiki</string>
     <string name="wikis_empty_subtitle">Zoek een wiki om u op te abonneren, of maak er een om uw eigen documentatie te publiceren.</string>
-    <string name="wikis_subscribed_badge">Geabonneerd</string>
     <string name="wikis_create_button">Wiki aanmaken</string>
     <string name="wikis_recommended_section">Aanbevolen wiki\'s</string>
     <string name="wikis_subscribe_button">Abonneren</string>
-    <string name="wikis_subscribed">Geabonneerd</string>
     <string name="wikis_unsubscribe_action">Uitschrijven</string>
     <string name="wikis_unsubscribing">Uitschrijven…</string>
     <string name="wikis_unsubscribe_confirm_title">Uitschrijven</string>
@@ -56,13 +51,10 @@
     <string name="wikis_create_name_label">Naam</string>
     <string name="wikis_create_privacy_label">Iedereen toestaan om naar de wiki te zoeken</string>
     <string name="wikis_create_submit">Aanmaken</string>
-    <string name="wikis_create_cancel">Annuleren</string>
     <string name="wikis_comments_empty_title">Nog geen reacties</string>
     <string name="wikis_comments_empty_subtitle">Wees de eerste die op deze pagina reageert.</string>
-    <string name="wikis_comment_action_reply">Antwoord</string>
     <string name="wikis_comment_replying_to">Antwoorden op %1$s</string>
     <string name="wikis_comment_clear_reply">Antwoord annuleren</string>
-    <string name="wikis_comment_action_edit">Bewerken</string>
     <string name="wikis_comment_action_delete">Verwijderen</string>
     <string name="wikis_comment_action_save">Opslaan</string>
     <string name="wikis_comment_action_cancel">Annuleren</string>
@@ -74,7 +66,6 @@
     <string name="wikis_editor_title_new">Nieuwe pagina</string>
     <string name="wikis_editor_preview">Voorbeeld</string>
     <string name="wikis_editor_preview_untitled">Naamloos</string>
-    <string name="wikis_editor_edit">Bewerken</string>
     <string name="wikis_editor_insert">Invoegen</string>
     <string name="wikis_editor_attachments">Bijlagen</string>
     <string name="wikis_editor_delete">Pagina verwijderen</string>
@@ -154,11 +145,9 @@
     <string name="wikis_attachments_uploading">Opladen…</string>
     <string name="wikis_attachments_upload_failed">Bestanden uploaden mislukt</string>
     <string name="wikis_attachments_search_clear">Zoekopdracht wissen</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Alle bestanden</string>
     <string name="wikis_attachments_filter_images">Afbeeldingen</string>
     <string name="wikis_attachments_filter_documents">Documenten</string>
-    <string name="wikis_attachments_sort">Sorteren</string>
     <string name="wikis_attachments_sort_date">Datum</string>
     <string name="wikis_attachments_sort_name">Naam</string>
     <string name="wikis_attachments_sort_size">Grootte</string>
@@ -167,12 +156,10 @@
     <string name="wikis_attachments_copy_embed">Insluitlink kopiëren</string>
     <string name="wikis_attachments_embed_copied">Insluitlink gekopieerd</string>
     <string name="wikis_attachments_download">Downloaden</string>
-    <string name="wikis_attachments_copy_success">Insluitlink gekopieerd</string>
     <string name="wikis_attachments_delete">Verwijderen</string>
     <string name="wikis_attachments_delete_confirm_title">Bijlage verwijderen</string>
     <string name="wikis_attachments_delete_success">Bijlage verwijderd</string>
     <string name="wikis_attachments_delete_failed">Bijlage verwijderen mislukt</string>
-    <string name="wikis_attachments_open">Open</string>
     <string name="wikis_attachments_empty_title">Nog geen bijlagen</string>
     <string name="wikis_attachments_no_results_title">Geen bijlagen komen overeen met uw zoekopdracht</string>
     <string name="wikis_attachments_no_results_description">Probeer een andere zoekterm of filter.</string>
@@ -205,12 +192,10 @@
     <string name="wikis_settings_delete_confirm_message">Deze actie kan niet ongedaan gemaakt worden. Dit zal de wiki en alle inhoud permanent verwijderen.</string>
     <string name="wikis_settings_delete_success">Wiki verwijderd</string>
     <string name="wikis_settings_delete_failed">Wiki verwijderen mislukt</string>
-    <string name="wikis_access_add_action">Toevoegen</string>
     <string name="wikis_access_add_subject_label">Gebruiker</string>
     <string name="wikis_access_level_edit">Bewerken en bekijken</string>
     <string name="wikis_access_level_view">Alleen-lezen</string>
     <string name="wikis_access_level_none">Geen toegang</string>
-    <string name="wikis_access_owner_label">Eigenaar</string>
     <string name="wikis_access_tab_users">Gebruikers</string>
     <string name="wikis_access_tab_groups">Groepen</string>
     <string name="wikis_access_tab_other">Andere</string>
@@ -224,7 +209,6 @@
     <string name="wikis_access_revoke_failed">Toegang verwijderen mislukt</string>
     <string name="wikis_replicas_empty_title">Nog geen replica\'s</string>
     <string name="wikis_replicas_empty_message">Wanneer andere wikis deze wiki repliceren, zullen ze hier verschijnen.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Nooit</string>
     <string name="wikis_replicas_remove_confirm_title">Replica verwijderen?</string>
     <string name="wikis_replicas_remove_confirm_action">Verwijderen</string>
@@ -232,7 +216,6 @@
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="wikis_pageview_version">v%1$d</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_load_more">Meer laden</string>
@@ -248,4 +231,11 @@
     <string name="wikis_attachments_caption_save_failed">Bijschrift kan niet worden opgeslagen</string>
     <string name="wikis_attachments_upload_types">Ondersteunde bestanden: afbeeldingen, PDF, DOC, DOCX, TXT en MD.</string>
     <string name="wikis_attachments_upload_limits">Grote uploads kunnen worden beperkt door uw server- of proxyconfiguratie.</string>
+    <string name="wikis_rss_replace">Vervangen</string>
+    <string name="wikis_rss_copied_new">Nieuwe RSS-URL gekopieerd naar klembord</string>
+    <string name="wikis_rss_exists">Deze feed-URL is al uitgegeven en kan niet opnieuw worden getoond.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">De eerste %1$d reactie wordt getoond.</item>
+        <item quantity="other">De eerste %1$d reacties worden getoond.</item>
+    </plurals>
 </resources>

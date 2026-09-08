@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Vind wikis</string>
     <string name="wikis_sidebar_create">Skep wiki</string>
     <string name="wikis_pageview_title_fallback">Bladsy</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Terug</string>
     <string name="wikis_pageview_page_actions">Bladsy-aksies</string>
     <string name="wikis_pageview_toc">Op hierdie bladsy</string>
     <string name="wikis_pageview_not_found_title">Bladsy nie gevind nie</string>
     <string name="wikis_pageview_create_this_page">Skep hierdie bladsy</string>
     <string name="wikis_pageview_rss_copied">RSS-URL na knipbord gekopieer</string>
-    <string name="wikis_pageview_rss_failed">Kon nie RSS-token kry nie</string>
     <string name="wikis_page_action_section_page">Bladsy</string>
     <string name="wikis_page_action_edit">Wysig</string>
     <string name="wikis_page_action_rename">Hernoem</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki\'s</string>
     <string name="wikis_empty_title">Begin jou eerste wiki</string>
     <string name="wikis_empty_subtitle">Soek \'n wiki om in te teken, of skep een om jou eie dokumentasie te publiseer.</string>
-    <string name="wikis_subscribed_badge">Ingeteken</string>
     <string name="wikis_create_button">Skep wiki</string>
     <string name="wikis_recommended_section">Aanbevole wikis</string>
     <string name="wikis_subscribe_button">Teken in</string>
-    <string name="wikis_subscribed">Ingeteken</string>
     <string name="wikis_unsubscribe_action">Teken uit</string>
     <string name="wikis_unsubscribing">Besig om uit te teken…</string>
     <string name="wikis_unsubscribe_confirm_title">Teken uit</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Naam</string>
     <string name="wikis_create_privacy_label">Laat enigiemand toe om vir wiki te soek</string>
     <string name="wikis_create_submit">Skep</string>
-    <string name="wikis_create_cancel">Kanselleer</string>
     <string name="wikis_comments_empty_title">Nog geen kommentaar nie</string>
     <string name="wikis_comments_empty_subtitle">Wees die eerste om op hierdie bladsy kommentaar te lewer.</string>
-    <string name="wikis_comment_action_reply">Antwoord</string>
     <string name="wikis_comment_replying_to">Antwoord op %1$s</string>
     <string name="wikis_comment_clear_reply">Kanselleer antwoord</string>
-    <string name="wikis_comment_action_edit">Wysig</string>
     <string name="wikis_comment_action_delete">Verwyder</string>
     <string name="wikis_comment_action_save">Stoor</string>
     <string name="wikis_comment_action_cancel">Kanselleer</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Nuwe bladsy</string>
     <string name="wikis_editor_preview">Voorskou</string>
     <string name="wikis_editor_preview_untitled">Sonder titel</string>
-    <string name="wikis_editor_edit">Wysig</string>
     <string name="wikis_editor_insert">Voeg in</string>
     <string name="wikis_editor_attachments">Aanhangsels</string>
     <string name="wikis_editor_delete">Verwyder bladsy</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Laai op…</string>
     <string name="wikis_attachments_upload_failed">Kon nie lêers oplaai nie</string>
     <string name="wikis_attachments_search_clear">Maak soektog skoon</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Alle lêers</string>
     <string name="wikis_attachments_filter_images">Beelde</string>
     <string name="wikis_attachments_filter_documents">Dokumente</string>
-    <string name="wikis_attachments_sort">Sorteer</string>
     <string name="wikis_attachments_sort_date">Datum</string>
     <string name="wikis_attachments_sort_name">Naam</string>
     <string name="wikis_attachments_sort_size">Grootte</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopieer inbedskakel</string>
     <string name="wikis_attachments_embed_copied">Inbedskakel gekopieer</string>
     <string name="wikis_attachments_download">Laai af</string>
-    <string name="wikis_attachments_copy_success">Inbedskakel gekopieer</string>
     <string name="wikis_attachments_delete">Verwyder</string>
     <string name="wikis_attachments_delete_confirm_title">Verwyder aanhangsel</string>
     <string name="wikis_attachments_delete_success">Aanhangsel verwyder</string>
     <string name="wikis_attachments_delete_failed">Kon nie aanhangsel verwyder nie</string>
-    <string name="wikis_attachments_open">Oop</string>
     <string name="wikis_attachments_empty_title">Nog geen aanhangsels nie</string>
     <string name="wikis_attachments_no_results_title">Geen aanhegsels stem ooreen met jou soektog nie</string>
     <string name="wikis_attachments_no_results_description">Probeer \'n ander soekterm of filter.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Hierdie aksie kan nie ongedaan gemaak word nie. Dit sal die wiki en al sy inhoud permanent skrap.</string>
     <string name="wikis_settings_delete_success">Wiki geskrap</string>
     <string name="wikis_settings_delete_failed">Kon nie wiki verwyder nie</string>
-    <string name="wikis_access_add_action">Voeg by</string>
     <string name="wikis_access_add_subject_label">Gebruiker</string>
     <string name="wikis_access_level_edit">Wysig en bekyk</string>
     <string name="wikis_access_level_view">Slegs bekyk</string>
     <string name="wikis_access_level_none">Geen toegang</string>
-    <string name="wikis_access_owner_label">Eienaar</string>
     <string name="wikis_access_tab_users">Gebruikers</string>
     <string name="wikis_access_tab_groups">Groepe</string>
     <string name="wikis_access_tab_other">Ander</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Kon nie toegang verwyder nie</string>
     <string name="wikis_replicas_empty_title">Nog geen replikas nie</string>
     <string name="wikis_replicas_empty_message">Wanneer ander wiki\'s hierdie wiki repliseer, sal hulle hier verskyn.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Nooit</string>
     <string name="wikis_replicas_remove_confirm_title">Verwyder replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Verwyder</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Die bladsy “%1$s” bestaan nog nie.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki-skakel</string>
-    <string name="wikis_pageview_share_link_copied">Bladsyskakel na knipbord gekopieer</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki-bladsyskakel</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Skakel</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Soek ’n wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Is jy seker jy wil van %1$s uitteken?</string>
-    <string name="wikis_subscribe_failed_502">Daardie bediener is onbereikbaar. Probeer weer…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Soek op naam, ID, vingerafdruk of URL…</string>
     <string name="wikis_join_search_button">Soek wiki’s…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Skryf ’n antwoord…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skryf jou inhoud hier met Markdown…</string>
     <string name="wikis_insert_dialog_empty">Nog geen aanhegsels nie. Laai ’n lêer op om te begin.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Etiket kan nie leeg wees nie</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Kon nie insluitskakel kopieer nie</string>
     <string name="wikis_attachments_delete_confirm_message">Skrap “%1$s”? Dit kan nie ongedaan gemaak word nie.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Tik Laai op om lêers by hierdie bladsy te voeg.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d antwoord</item>
         <item quantity="other">+%d meer antwoorde</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d bladsy hernoem</item>
-        <item quantity="other">%1$d bladsye hernoem</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d skakel opgedateer</item>
-        <item quantity="other">%1$d skakels opgedateer</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d bladsy</item>
         <item quantity="other">%d bladsye</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Kon nie byskrif stoor nie</string>
     <string name="wikis_attachments_upload_types">Ondersteunde lêers: beelde, PDF, DOC, DOCX, TXT en MD.</string>
     <string name="wikis_attachments_upload_limits">Groot oplaaie kan deur jou bediener- of instaanbedienerkonfigurasie beperk word.</string>
+    <string name="wikis_rss_replace">Vervang</string>
+    <string name="wikis_rss_copied_new">Nuwe RSS-URL na knipbord gekopieer</string>
+    <string name="wikis_rss_exists">Hierdie voer-URL is reeds uitgereik en kan nie weer gewys word nie.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Wys die eerste %1$d opmerking.</item>
+        <item quantity="other">Wys die eerste %1$d opmerkings.</item>
+    </plurals>
 </resources>

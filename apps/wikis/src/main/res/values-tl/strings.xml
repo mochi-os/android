@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Maghanap ng mga wiki</string>
     <string name="wikis_sidebar_create">Gumawa ng wiki</string>
     <string name="wikis_pageview_title_fallback">Pahina</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Bumalik</string>
     <string name="wikis_pageview_page_actions">Mga aksyon ng pahina</string>
     <string name="wikis_pageview_toc">Sa pahinang ito</string>
     <string name="wikis_pageview_not_found_title">Hindi nahanap ang pahina</string>
     <string name="wikis_pageview_create_this_page">Gumawa ng page na ito</string>
     <string name="wikis_pageview_rss_copied">Nakopya ang RSS URL sa clipboard</string>
-    <string name="wikis_pageview_rss_failed">Nabigong makakuha ng RSS token</string>
     <string name="wikis_page_action_section_page">Pahina</string>
     <string name="wikis_page_action_edit">I-edit</string>
     <string name="wikis_page_action_rename">Palitan ang pangalan</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Mga wiki</string>
     <string name="wikis_empty_title">Simulan ang iyong unang wiki</string>
     <string name="wikis_empty_subtitle">Maghanap ng wiki na masu-subscribe, o gumawa ng isa para mag-publish ng sarili mong dokumentasyon.</string>
-    <string name="wikis_subscribed_badge">Naka-subscribe</string>
     <string name="wikis_create_button">Gumawa ng wiki</string>
     <string name="wikis_recommended_section">Mga inirerekomendang wiki</string>
     <string name="wikis_subscribe_button">Mag-subscribe</string>
-    <string name="wikis_subscribed">Naka-subscribe</string>
     <string name="wikis_unsubscribe_action">Mag-unsubscribe</string>
     <string name="wikis_unsubscribing">Nag-a-unsubscribe…</string>
     <string name="wikis_unsubscribe_confirm_title">Mag-unsubscribe</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Pangalan</string>
     <string name="wikis_create_privacy_label">Payagan ang sinuman na maghanap ng wiki</string>
     <string name="wikis_create_submit">Gumawa</string>
-    <string name="wikis_create_cancel">Kanselahin</string>
     <string name="wikis_comments_empty_title">Wala pang komento</string>
     <string name="wikis_comments_empty_subtitle">Ikaw ang unang magkomento sa page na ito.</string>
-    <string name="wikis_comment_action_reply">Tumugon</string>
     <string name="wikis_comment_replying_to">Tumutugon kay %1$s</string>
     <string name="wikis_comment_clear_reply">Kanselahin ang sagot</string>
-    <string name="wikis_comment_action_edit">I-edit</string>
     <string name="wikis_comment_action_delete">I-delete</string>
     <string name="wikis_comment_action_save">I-save</string>
     <string name="wikis_comment_action_cancel">Kanselahin</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Bagong pahina</string>
     <string name="wikis_editor_preview">Preview</string>
     <string name="wikis_editor_preview_untitled">Walang pamagat</string>
-    <string name="wikis_editor_edit">I-edit</string>
     <string name="wikis_editor_insert">I-insert</string>
     <string name="wikis_editor_attachments">Mga attachment</string>
     <string name="wikis_editor_delete">I-delete ang page</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Ina-upload…</string>
     <string name="wikis_attachments_upload_failed">Nabigong mag-upload ng mga file</string>
     <string name="wikis_attachments_search_clear">Burahin ang paghahanap</string>
-    <string name="wikis_attachments_filter">I-filter</string>
     <string name="wikis_attachments_filter_all">Lahat ng files</string>
     <string name="wikis_attachments_filter_images">Mga larawan</string>
     <string name="wikis_attachments_filter_documents">Mga dokumento</string>
-    <string name="wikis_attachments_sort">Ayusin</string>
     <string name="wikis_attachments_sort_date">Petsa</string>
     <string name="wikis_attachments_sort_name">Pangalan</string>
     <string name="wikis_attachments_sort_size">Sukat</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopyahin ang embed link</string>
     <string name="wikis_attachments_embed_copied">Nakopya ang embed link</string>
     <string name="wikis_attachments_download">I-download</string>
-    <string name="wikis_attachments_copy_success">Nakopya ang embed link</string>
     <string name="wikis_attachments_delete">I-delete</string>
     <string name="wikis_attachments_delete_confirm_title">I-delete ang attachment</string>
     <string name="wikis_attachments_delete_success">Na-delete ang attachment</string>
     <string name="wikis_attachments_delete_failed">Nabigong magdelete ng attachment</string>
-    <string name="wikis_attachments_open">Buksan</string>
     <string name="wikis_attachments_empty_title">Wala pang attachment</string>
     <string name="wikis_attachments_no_results_title">Walang nakahanap na attachment sa paghahanap mo</string>
     <string name="wikis_attachments_no_results_description">Subukan ang ibang search term o filter.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Hindi maaaring bawiin ang aksyong ito. Permanenteng tatanggalin nito ang wiki at lahat ng nilalaman nito.</string>
     <string name="wikis_settings_delete_success">Natanggal ang wiki</string>
     <string name="wikis_settings_delete_failed">Nabigong magdelete ng wiki</string>
-    <string name="wikis_access_add_action">Idagdag</string>
     <string name="wikis_access_add_subject_label">User</string>
     <string name="wikis_access_level_edit">I-edit at tingnan</string>
     <string name="wikis_access_level_view">Tingnan lamang</string>
     <string name="wikis_access_level_none">Walang access</string>
-    <string name="wikis_access_owner_label">May-ari</string>
     <string name="wikis_access_tab_users">Mga user</string>
     <string name="wikis_access_tab_groups">Mga group</string>
     <string name="wikis_access_tab_other">Iba pa</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Nabigong tanggalin ang access</string>
     <string name="wikis_replicas_empty_title">Wala pang replica</string>
     <string name="wikis_replicas_empty_message">Kapag nire-replicate ng ibang wiki ang wiki na ito, lalabas sila dito.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Hindi kailanman</string>
     <string name="wikis_replicas_remove_confirm_title">Alisin ang replica?</string>
     <string name="wikis_replicas_remove_confirm_action">Alisin</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Wala pa ang pahinang “%1$s”.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Link ng wiki</string>
-    <string name="wikis_pageview_share_link_copied">Nakopya ang link ng pahina sa clipboard</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Link ng pahina ng Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Maghanap ng wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Sigurado ka bang gusto mong mag-unsubscribe sa %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Hindi maabot ang server na iyon. Sinusubukang muli…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Maghanap ayon sa pangalan, ID, fingerprint, o URL…</string>
     <string name="wikis_join_search_button">Maghanap ng mga wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Sumulat ng tugon…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Isulat ang iyong nilalaman dito gamit ang Markdown…</string>
     <string name="wikis_insert_dialog_empty">Wala pang mga attachment. Mag-upload ng file para makapagsimula.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Hindi puwedeng walang laman ang tag</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Nabigong kopyahin ang embed link</string>
     <string name="wikis_attachments_delete_confirm_message">Tanggalin ang “%1$s”? Hindi ito maibabalik.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">I-tap ang Upload para magdagdag ng mga file sa pahinang ito.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d tugon</item>
         <item quantity="other">+%d pang tugon</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Pinalitan ang pangalan ng %1$d page</item>
-        <item quantity="other">Pinalitan ang pangalan ng %1$d na page</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">na-update ang %1$d link</item>
-        <item quantity="other">na-update ang %1$d na link</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d pahina</item>
         <item quantity="other">%d pahina</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Hindi na-save ang caption</string>
     <string name="wikis_attachments_upload_types">Mga sinusuportahang file: mga larawan, PDF, DOC, DOCX, TXT, at MD.</string>
     <string name="wikis_attachments_upload_limits">Ang malalaking pag-upload ay maaaring limitahan ng configuration ng iyong server o proxy.</string>
+    <string name="wikis_rss_replace">Palitan</string>
+    <string name="wikis_rss_copied_new">Nakopya ang bagong RSS URL sa clipboard</string>
+    <string name="wikis_rss_exists">Naibigay na ang feed URL na ito at hindi na ito maipapakita muli.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Ipinapakita ang unang %1$d komento.</item>
+        <item quantity="other">Ipinapakita ang unang %1$d komento.</item>
+    </plurals>
 </resources>

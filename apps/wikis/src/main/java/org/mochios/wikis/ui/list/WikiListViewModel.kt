@@ -292,12 +292,18 @@ class WikiListViewModel @Inject constructor(
 
     /**
      * Mint a class-level RSS token and build its feed URL. [mode] is "changes",
-     * "comments" or "all".
+     * "comments" or "all". A success carrying null means a URL was already
+     * issued: the server keeps only its hash and will not show it again, so the
+     * caller has to ask before replacing it with [regenerate].
      */
-    suspend fun makeRssUrl(mode: String): Result<String> {
+    suspend fun makeRssUrl(mode: String, regenerate: Boolean = false): Result<String?> {
         return try {
-            val token = repo.globalRssToken(mode)
-            Result.success("$serverUrl/wikis/-/rss?token=$token")
+            val answer = repo.globalRssToken(mode, regenerate)
+            if (answer.exists) {
+                Result.success(null)
+            } else {
+                Result.success("$serverUrl/wikis/-/rss?token=${answer.token}")
+            }
         } catch (e: Exception) {
             Result.failure(e)
         }

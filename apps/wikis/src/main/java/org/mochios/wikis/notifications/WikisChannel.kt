@@ -18,6 +18,8 @@ fun setupWikisNotificationChannel(context: Context) {
         WIKIS_NOTIFICATION_CHANNEL_ID,
         context.getString(R.string.wikis_channel_name),
         NotificationManager.IMPORTANCE_DEFAULT,
-    )
+    ).apply {
+        description = context.getString(R.string.wikis_channel_description)
+    }
     nm.createNotificationChannel(channel)
 }

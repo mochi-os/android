@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">געפֿינען וויקיס</string>
     <string name="wikis_sidebar_create">באַשאַפֿן וויקי</string>
     <string name="wikis_pageview_title_fallback">זײַטל</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">צוריק</string>
     <string name="wikis_pageview_page_actions">זײַטל אַקציעס</string>
     <string name="wikis_pageview_toc">אויף דעם זײַטל</string>
     <string name="wikis_pageview_not_found_title">זײַטל ניט געפֿונען</string>
     <string name="wikis_pageview_create_this_page">באַשאַפֿן דעם זײַטל</string>
     <string name="wikis_pageview_rss_copied">RSS URL קאָפּירט צו קלעמברעט</string>
-    <string name="wikis_pageview_rss_failed">ניט געלונגען צו באַקומען RSS־טאָקען</string>
     <string name="wikis_page_action_section_page">זײַטל</string>
     <string name="wikis_page_action_edit">רעדאַקטירן</string>
     <string name="wikis_page_action_rename">איבערטויפֿן</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">הייב אָן אײַער ערשטן Wiki</string>
     <string name="wikis_empty_subtitle">זוך נאָך אַ וויקי צו אַבאָנירן, אָדער באַשאַף איינעם צו פֿאַרעפֿנטלעכן אײַער אייגענע דאָקומענטאַציע.</string>
-    <string name="wikis_subscribed_badge">אַבאָנירט</string>
     <string name="wikis_create_button">באַשאַפֿן וויקי</string>
     <string name="wikis_recommended_section">רעקאָמענדירטע וויקיס</string>
     <string name="wikis_subscribe_button">אַבאָנירן</string>
-    <string name="wikis_subscribed">אַבאָנירט</string>
     <string name="wikis_unsubscribe_action">אַבאַבאָנירן</string>
     <string name="wikis_unsubscribing">אַבאַבאָנירן…</string>
     <string name="wikis_unsubscribe_confirm_title">אַבאַבאָנירן</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">נאָמען</string>
     <string name="wikis_create_privacy_label">דערלויבן עמעצן צו זוכן פֿאַר וויקי</string>
     <string name="wikis_create_submit">באַשאַפֿן</string>
-    <string name="wikis_create_cancel">אָפּזאָגן</string>
     <string name="wikis_comments_empty_title">נאָך קיין באַמערקונגען</string>
     <string name="wikis_comments_empty_subtitle">זײַט דער ערשטער צו קאָמענטירן אויף דעם זײַטל.</string>
-    <string name="wikis_comment_action_reply">ענטפֿער</string>
     <string name="wikis_comment_replying_to">ענטפֿערט אויף %1$s</string>
     <string name="wikis_comment_clear_reply">אָפּזאָגן ענטפֿער</string>
-    <string name="wikis_comment_action_edit">רעדאַקטירן</string>
     <string name="wikis_comment_action_delete">אויסמעקן</string>
     <string name="wikis_comment_action_save">היט אויף</string>
     <string name="wikis_comment_action_cancel">אָפּזאָגן</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">נײַע זײַטל</string>
     <string name="wikis_editor_preview">פֿאָרזע</string>
     <string name="wikis_editor_preview_untitled">אָן קעפּל</string>
-    <string name="wikis_editor_edit">רעדאַקטירן</string>
     <string name="wikis_editor_insert">אַרײַנשטעלן</string>
     <string name="wikis_editor_attachments">בײַלאַגעס</string>
     <string name="wikis_editor_delete">אויסמעקן זײַטל</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">אַרויפֿלאָדן…</string>
     <string name="wikis_attachments_upload_failed">ניט געלונגען אַרויפֿצולאָדן פֿײַלן</string>
     <string name="wikis_attachments_search_clear">רייניקן זוכן</string>
-    <string name="wikis_attachments_filter">פֿילטער</string>
     <string name="wikis_attachments_filter_all">אַלע פֿײַלן</string>
     <string name="wikis_attachments_filter_images">בילדער</string>
     <string name="wikis_attachments_filter_documents">דאָקומענטן</string>
-    <string name="wikis_attachments_sort">סאָרטיר</string>
     <string name="wikis_attachments_sort_date">דאַטע</string>
     <string name="wikis_attachments_sort_name">נאָמען</string>
     <string name="wikis_attachments_sort_size">גרייס</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">קאָפּירן embed לינק</string>
     <string name="wikis_attachments_embed_copied">אײַנגעבעטענער לינק קאָפּירט</string>
     <string name="wikis_attachments_download">אַראָפּלאָדן</string>
-    <string name="wikis_attachments_copy_success">אײַנגעבעטענער לינק קאָפּירט</string>
     <string name="wikis_attachments_delete">אויסמעקן</string>
     <string name="wikis_attachments_delete_confirm_title">אויסמעקן בײַלאַגע</string>
     <string name="wikis_attachments_delete_success">בײַלאַגע אויסגעמעקט</string>
     <string name="wikis_attachments_delete_failed">ניט געלונגען צו מעקן בײַלאַגע</string>
-    <string name="wikis_attachments_open">עפֿן</string>
     <string name="wikis_attachments_empty_title">נאָך קיין צוגעהעפֿטן</string>
     <string name="wikis_attachments_no_results_title">קיין צוגעהעפֿטן שטימען מיט אײַער זוך</string>
     <string name="wikis_attachments_no_results_description">פּרוּווט אַן אַנדער זוך־אויסדרוק אָדער פֿילטער.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">די אַקציע קאָן נישט ווערן צוריקגעקערט. דאָס וועט אויף שטענדיק אויסמעקן דעם Wiki און אַלע זײַנע אינהאַלטן.</string>
     <string name="wikis_settings_delete_success">Wiki אויסגעמעקט</string>
     <string name="wikis_settings_delete_failed">ניט געלונגען צו מעקן וויקי</string>
-    <string name="wikis_access_add_action">צולייגן</string>
     <string name="wikis_access_add_subject_label">באַניצער</string>
     <string name="wikis_access_level_edit">רעדאַקטירן און זען</string>
     <string name="wikis_access_level_view">בלויז זען</string>
     <string name="wikis_access_level_none">קיין צוטריט</string>
-    <string name="wikis_access_owner_label">אייגנטימער</string>
     <string name="wikis_access_tab_users">באַניצערס</string>
     <string name="wikis_access_tab_groups">גרופּעס</string>
     <string name="wikis_access_tab_other">אַנדער</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">ניט געלונגען צו אַראָפּנעמען צוטריט</string>
     <string name="wikis_replicas_empty_title">נאָך קיין רעפּליקעס</string>
     <string name="wikis_replicas_empty_message">ווען אַנדערע Wikis רעפּליצירן דעם Wiki, וועלן זיי דאָ אַרויסקומען.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">קיינמאָל</string>
     <string name="wikis_replicas_remove_confirm_title">אַראָפּנעמען רעפּליקע?</string>
     <string name="wikis_replicas_remove_confirm_action">אַראָפּנעמען</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">דער בלאַט „%1$s“ עקזיסטירט נאָך נישט.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">וויקי־לינק</string>
-    <string name="wikis_pageview_share_link_copied">בלאַט־לינק קאָפּירט צום קליפּברעט</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki־בלאַט־לינק</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">לינק</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">זוכט אַ wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">זענט איר זיכער אַז איר ווילט אָפּזאָגן דעם אַבאָנעמענט פֿון %1$s?</string>
-    <string name="wikis_subscribe_failed_502">יענער סערווער איז נישט צוטריטלעך. פּרוּווט נאָך אַ מאָל…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">זוכט לויט נאָמען, ID, פֿינגער־אָפּדרוק אָדער URL…</string>
     <string name="wikis_join_search_button">זוכט wikis…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">שרײַבט אַן ענטפֿער…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">שרײַבט אײַער אינהאַלט דאָ מיט Markdown…</string>
     <string name="wikis_insert_dialog_empty">נאָך קיין בײַלאַגעס. לאָדט אַרויף אַ טעקע צו אָנהייבן.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">טאַג קען נישט זײַן ליידיק</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">מען האָט נישט געקענט קאָפּירן דעם אײַנבעט־לינק</string>
     <string name="wikis_attachments_delete_confirm_message">אויסמעקן „%1$s“? דאָס קען מען נישט צוריקדרייען.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">טאַפּט אַרויפֿלאָדן צו צולייגן טעקעס צו דעם בלאַט.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d ענטפֿער</item>
         <item quantity="other">+%d מער ענטפֿערס</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">איבערגענומען %1$d זײַטל</item>
-        <item quantity="other">איבערגענומען %1$d זײַטלעך</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">באַנײַט %1$d לינק</item>
-        <item quantity="other">באַנײַט %1$d לינקס</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d זײַטל</item>
         <item quantity="other">%d זײַטלעך</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">מען האָט נישט געקענט אָפּהיטן די אונטערשריפֿט</string>
     <string name="wikis_attachments_upload_types">געשטיצטע טעקעס: בילדער, PDF, DOC, DOCX, TXT, און MD.</string>
     <string name="wikis_attachments_upload_limits">גרויסע אַרויפֿלאָדונגען קענען זײַן באַגרענעצט דורך אײַער סערווער- אָדער פּראָקסי־קאָנפֿיגוראַציע.</string>
+    <string name="wikis_rss_replace">פארטוישן</string>
+    <string name="wikis_rss_copied_new">נײַער RSS URL קאָפּירט צו קלעמברעט</string>
+    <string name="wikis_rss_exists">דער דאָזיקער פֿיד URL איז שוין אַרויסגעגעבן געוואָרן און מען קען עס נישט ווײַזן נאָך אַ מאָל.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">ווײַזט דעם ערשטן %1$d קאָמענטאַר.</item>
+        <item quantity="other">ווײַזט די ערשטע %1$d קאָמענטאַרן.</item>
+    </plurals>
 </resources>

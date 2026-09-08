@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wiki larni topish</string>
     <string name="wikis_sidebar_create">Wiki yaratish</string>
     <string name="wikis_pageview_title_fallback">Sahifa</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Orqaga</string>
     <string name="wikis_pageview_page_actions">Sahifa amallari</string>
     <string name="wikis_pageview_toc">Bu sahifada</string>
     <string name="wikis_pageview_not_found_title">Sahifa topilmadi</string>
     <string name="wikis_pageview_create_this_page">Bu sahifani yaratish</string>
     <string name="wikis_pageview_rss_copied">RSS URL klipboardga nusxalandi</string>
-    <string name="wikis_pageview_rss_failed">RSS tokenini olib boʻlmadi</string>
     <string name="wikis_page_action_section_page">Sahifa</string>
     <string name="wikis_page_action_edit">Tahrirlash</string>
     <string name="wikis_page_action_rename">Nomini oʻzgartirish</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikilar</string>
     <string name="wikis_empty_title">Birinchi wiki yarating</string>
     <string name="wikis_empty_subtitle">Obuna boʻlish uchun wiki qidiring yoki oʻz hujjatlaringizni nashr etish uchun yangisini yarating.</string>
-    <string name="wikis_subscribed_badge">Obuna boʻlingan</string>
     <string name="wikis_create_button">Wiki yaratish</string>
     <string name="wikis_recommended_section">Tavsiya etilgan wikilar</string>
     <string name="wikis_subscribe_button">Obuna boʻlish</string>
-    <string name="wikis_subscribed">Obuna boʻlingan</string>
     <string name="wikis_unsubscribe_action">Obunadan chiqish</string>
     <string name="wikis_unsubscribing">Obunadan chiqilmoqda…</string>
     <string name="wikis_unsubscribe_confirm_title">Obunadan chiqish</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nomi</string>
     <string name="wikis_create_privacy_label">Hammaga wikini qidirishga ruxsat berish</string>
     <string name="wikis_create_submit">Yaratish</string>
-    <string name="wikis_create_cancel">Bekor qilish</string>
     <string name="wikis_comments_empty_title">Hozircha izohlar yoʻq</string>
     <string name="wikis_comments_empty_subtitle">Bu sahifaga birinchi boʻlib izoh qoldiring.</string>
-    <string name="wikis_comment_action_reply">Javob</string>
     <string name="wikis_comment_replying_to">%1$s ga javob berilmoqda</string>
     <string name="wikis_comment_clear_reply">Javobni bekor qilish</string>
-    <string name="wikis_comment_action_edit">Tahrirlash</string>
     <string name="wikis_comment_action_delete">Oʻchirish</string>
     <string name="wikis_comment_action_save">Saqlash</string>
     <string name="wikis_comment_action_cancel">Bekor qilish</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Yangi sahifa</string>
     <string name="wikis_editor_preview">Oldindan koʻrish</string>
     <string name="wikis_editor_preview_untitled">Sarlavhasiz</string>
-    <string name="wikis_editor_edit">Tahrirlash</string>
     <string name="wikis_editor_insert">Kiritish</string>
     <string name="wikis_editor_attachments">Biriktirmalar</string>
     <string name="wikis_editor_delete">Sahifani oʻchirish</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Yuklanmoqda…</string>
     <string name="wikis_attachments_upload_failed">Fayllarni yuklab boʻlmadi</string>
     <string name="wikis_attachments_search_clear">Qidiruvni tozalash</string>
-    <string name="wikis_attachments_filter">Filtr</string>
     <string name="wikis_attachments_filter_all">Barcha fayllar</string>
     <string name="wikis_attachments_filter_images">Rasmlar</string>
     <string name="wikis_attachments_filter_documents">Hujjatlar</string>
-    <string name="wikis_attachments_sort">Saralash</string>
     <string name="wikis_attachments_sort_date">Sana</string>
     <string name="wikis_attachments_sort_name">Nomi</string>
     <string name="wikis_attachments_sort_size">Hajm</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed havolani nusxalash</string>
     <string name="wikis_attachments_embed_copied">Joylashtirish havolasi nusxalandi</string>
     <string name="wikis_attachments_download">Yuklab olish</string>
-    <string name="wikis_attachments_copy_success">Joylashtirish havolasi nusxalandi</string>
     <string name="wikis_attachments_delete">Oʻchirish</string>
     <string name="wikis_attachments_delete_confirm_title">Biriktirmani oʻchirish</string>
     <string name="wikis_attachments_delete_success">Biriktirma oʻchirildi</string>
     <string name="wikis_attachments_delete_failed">Ilovani oʻchirib boʻlmadi</string>
-    <string name="wikis_attachments_open">Ochiq</string>
     <string name="wikis_attachments_empty_title">Hozircha biriktirmalar yoʻq</string>
     <string name="wikis_attachments_no_results_title">Qidiruvingizga mos biriktirmalar yoʻq</string>
     <string name="wikis_attachments_no_results_description">Boshqa qidiruv soʻzini yoki filterni sinab koʻring.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Bu amalni bekor qilib boʻlmaydi. Bu wiki va uning barcha mazmunini doimiy ravishda oʻchiradi.</string>
     <string name="wikis_settings_delete_success">Wiki oʻchirildi</string>
     <string name="wikis_settings_delete_failed">Wiki ni oʻchirib boʻlmadi</string>
-    <string name="wikis_access_add_action">Qoʻshish</string>
     <string name="wikis_access_add_subject_label">Foydalanuvchi</string>
     <string name="wikis_access_level_edit">Tahrirlash va koʻrish</string>
     <string name="wikis_access_level_view">Faqat koʻrish</string>
     <string name="wikis_access_level_none">Ruxsat yoʻq</string>
-    <string name="wikis_access_owner_label">Egasi</string>
     <string name="wikis_access_tab_users">Foydalanuvchilar</string>
     <string name="wikis_access_tab_groups">Guruhlar</string>
     <string name="wikis_access_tab_other">Boshqa</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Kirishni olib tashlab boʻlmadi</string>
     <string name="wikis_replicas_empty_title">Hozircha replikalar yoʻq</string>
     <string name="wikis_replicas_empty_message">Boshqa wikilar ushbu wikini replikatsiya qilganda, ular bu yerda paydo boʻladi.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Hech qachon</string>
     <string name="wikis_replicas_remove_confirm_title">Replikani olib tashlasinmi?</string>
     <string name="wikis_replicas_remove_confirm_action">Olib tashlash</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” sahifasi hali mavjud emas.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki havolasi</string>
-    <string name="wikis_pageview_share_link_copied">Sahifa havolasi vaqtinchalik xotiraga nusxalandi</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki sahifa havolasi</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Havola</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki qidirish…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s obunasini bekor qilmoqchi ekaningizga ishonchingiz komilmi?</string>
-    <string name="wikis_subscribe_failed_502">Bu serverga ulanib bo‘lmadi. Qayta urinilmoqda…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Nom, ID, barmoq izi yoki URL bo‘yicha qidirish…</string>
     <string name="wikis_join_search_button">Wikilarni qidirish…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Javob yozing…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Mazmuningizni bu yerda Markdown yordamida yozing…</string>
     <string name="wikis_insert_dialog_empty">Hozircha ilovalar yo‘q. Boshlash uchun fayl yuklang.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Teg bo‘sh bo‘lishi mumkin emas</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Joylashtirish havolasidan nusxa olib bo‘lmadi</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” o‘chirilsinmi? Buni qaytarib bo‘lmaydi.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Ushbu sahifaga fayl qo‘shish uchun Yuklash tugmasini bosing.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d javob</item>
         <item quantity="other">+%d koʻproq javoblar</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d sahifa nomi oʻzgartirildi</item>
-        <item quantity="other">%1$d sahifa nomi oʻzgartirildi</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d havola yangilandi</item>
-        <item quantity="other">%1$d havola yangilandi</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d sahifa</item>
         <item quantity="other">%d sahifalar</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Izohni saqlab boʻlmadi</string>
     <string name="wikis_attachments_upload_types">Qo‘llab-quvvatlanadigan fayllar: tasvirlar, PDF, DOC, DOCX, TXT va MD.</string>
     <string name="wikis_attachments_upload_limits">Katta yuklamalar serveringiz yoki proksi sozlamalari bilan cheklangan bo‘lishi mumkin.</string>
+    <string name="wikis_rss_replace">Almashtirish</string>
+    <string name="wikis_rss_copied_new">Yangi RSS URL klipboardga nusxalandi</string>
+    <string name="wikis_rss_exists">Bu tasma URL manzili allaqachon berilgan va qayta ko‘rsatilmaydi.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Birinchi %1$d izoh ko\'rsatilmoqda.</item>
+        <item quantity="other">Birinchi %1$d izoh ko\'rsatilmoqda.</item>
+    </plurals>
 </resources>

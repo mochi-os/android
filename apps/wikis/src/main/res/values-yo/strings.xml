@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wa àwọn wiki</string>
     <string name="wikis_sidebar_create">Dá wiki</string>
     <string name="wikis_pageview_title_fallback">Ojú-ìwé</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Padà</string>
     <string name="wikis_pageview_page_actions">Àwọn iṣẹ́ ojú-ìwé</string>
     <string name="wikis_pageview_toc">Lórí ojú-ìwé yìí</string>
     <string name="wikis_pageview_not_found_title">A kò rí ojú-ìwé</string>
     <string name="wikis_pageview_create_this_page">Dá ojú ewé yìí</string>
     <string name="wikis_pageview_rss_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
-    <string name="wikis_pageview_rss_failed">Kò lè rí token RSS</string>
     <string name="wikis_page_action_section_page">Ojú-ìwé</string>
     <string name="wikis_page_action_edit">Ṣàtúnṣe</string>
     <string name="wikis_page_action_rename">Tún sọ orúkọ</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Àwọn Wiki</string>
     <string name="wikis_empty_title">Bẹ̀rẹ̀ wiki àkọ́kọ́ rẹ</string>
     <string name="wikis_empty_subtitle">Ṣawari fún wiki láti forúkọ sílẹ̀, tàbí dá tuntun láti gbé àwọn ìwé tirẹ jáde.</string>
-    <string name="wikis_subscribed_badge">Ti forúkọsílẹ̀</string>
     <string name="wikis_create_button">Dá wiki</string>
     <string name="wikis_recommended_section">Àwọn wiki tí a dábàá</string>
     <string name="wikis_subscribe_button">Forúkọsílẹ̀</string>
-    <string name="wikis_subscribed">Ti forúkọsílẹ̀</string>
     <string name="wikis_unsubscribe_action">Yọ ìforúkọsílẹ̀ kúrò</string>
     <string name="wikis_unsubscribing">Ń yọ ìforúkọsílẹ̀ kúrò…</string>
     <string name="wikis_unsubscribe_confirm_title">Yọ ìforúkọsílẹ̀ kúrò</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Orúkọ</string>
     <string name="wikis_create_privacy_label">Jẹ́ kí ẹnikẹ́ni wá wiki</string>
     <string name="wikis_create_submit">Dá</string>
-    <string name="wikis_create_cancel">Fagilé</string>
     <string name="wikis_comments_empty_title">Kò sí àlàyé síbẹ̀</string>
     <string name="wikis_comments_empty_subtitle">Jẹ́ ẹni àkọ́kọ́ tí yóò ṣàlàyé lórí ojú ewé yìí.</string>
-    <string name="wikis_comment_action_reply">Dáhùn</string>
     <string name="wikis_comment_replying_to">Ń dáhùn sí %1$s</string>
     <string name="wikis_comment_clear_reply">Fagilé ìdáhùn</string>
-    <string name="wikis_comment_action_edit">Ṣàtúnṣe</string>
     <string name="wikis_comment_action_delete">Pa rẹ́</string>
     <string name="wikis_comment_action_save">Fi pamọ́</string>
     <string name="wikis_comment_action_cancel">Fagilé</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Ojú-ìwé tuntun</string>
     <string name="wikis_editor_preview">Àkíyèsí ṣáájú</string>
     <string name="wikis_editor_preview_untitled">Aláìlórúkọ</string>
-    <string name="wikis_editor_edit">Ṣàtúnṣe</string>
     <string name="wikis_editor_insert">Fi sí</string>
     <string name="wikis_editor_attachments">Àwọn ìsomọ́</string>
     <string name="wikis_editor_delete">Pa ojú ewé rẹ́</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Ń gbé sókè…</string>
     <string name="wikis_attachments_upload_failed">Kò lè gbé àwọn fáìlì sókè</string>
     <string name="wikis_attachments_search_clear">Pa àwárí rẹ́</string>
-    <string name="wikis_attachments_filter">Yọ́</string>
     <string name="wikis_attachments_filter_all">Gbogbo àwọn fáìlì</string>
     <string name="wikis_attachments_filter_images">Àwọn àwòrán</string>
     <string name="wikis_attachments_filter_documents">Àwọn ìwé</string>
-    <string name="wikis_attachments_sort">Ṣètò</string>
     <string name="wikis_attachments_sort_date">Ọjọ́</string>
     <string name="wikis_attachments_sort_name">Orúkọ</string>
     <string name="wikis_attachments_sort_size">Ìwọ̀n</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Ṣe àdàkọ ọ̀nà embed</string>
     <string name="wikis_attachments_embed_copied">A ti dà ìjápọ̀ embed</string>
     <string name="wikis_attachments_download">Gbà sílẹ̀</string>
-    <string name="wikis_attachments_copy_success">A ti dà ìjápọ̀ embed</string>
     <string name="wikis_attachments_delete">Pa rẹ́</string>
     <string name="wikis_attachments_delete_confirm_title">Pa ìsomọ́ rẹ́</string>
     <string name="wikis_attachments_delete_success">A ti pa ìsomọ́ rẹ́</string>
     <string name="wikis_attachments_delete_failed">Kò lè pa àfikún rẹ́</string>
-    <string name="wikis_attachments_open">Ṣílẹ̀</string>
     <string name="wikis_attachments_empty_title">Kò sí àfikún síbẹ̀</string>
     <string name="wikis_attachments_no_results_title">Kò sí àwọn àfikún tó bá àwárí rẹ mu</string>
     <string name="wikis_attachments_no_results_description">Gbìyànjú ọ̀rọ̀ àwárí mìíràn tàbí àlẹ̀mọ́.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">A kò lè yí ìṣe yìí padà. Èyí yóò pa wiki àti gbogbo àkóónú rẹ̀ rẹ́ títí láé.</string>
     <string name="wikis_settings_delete_success">Wiki ti pa rẹ́</string>
     <string name="wikis_settings_delete_failed">Kò lè pa wiki rẹ́</string>
-    <string name="wikis_access_add_action">Fi kún</string>
     <string name="wikis_access_add_subject_label">User</string>
     <string name="wikis_access_level_edit">Tunṣe àti wò</string>
     <string name="wikis_access_level_view">Wíwò nìkan</string>
     <string name="wikis_access_level_none">Kò sí àyè</string>
-    <string name="wikis_access_owner_label">Onílé</string>
     <string name="wikis_access_tab_users">Àwọn user</string>
     <string name="wikis_access_tab_groups">Àwọn àwùjọ</string>
     <string name="wikis_access_tab_other">Mìíràn</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Kò lè mú àyè kúrò</string>
     <string name="wikis_replicas_empty_title">Kò sí replica síbẹ̀</string>
     <string name="wikis_replicas_empty_message">Nígbà tí àwọn wikis mìíràn bá ṣe ẹ̀dà wiki yìí, wọn yóò farahàn níbí.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Láéláé</string>
     <string name="wikis_replicas_remove_confirm_title">Yọ replica kúrò?</string>
     <string name="wikis_replicas_remove_confirm_action">Yọ kúrò</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Ojú-ìwé “%1$s” kò tíì sí.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Ọ̀nà wiki</string>
-    <string name="wikis_pageview_share_link_copied">A ti da ọ̀nà ojú-ìwé sí àwo ìdàkọ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Ọ̀nà ojú-ìwé Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Ọ̀nà àsopọ̀</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wá wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Ṣé ó dá ọ lójú pé o fẹ́ fagilé ìforúkọsílẹ̀ sí %1$s?</string>
-    <string name="wikis_subscribe_failed_502">A kò lè dé ọ̀dọ̀ olùpèsè yẹn. Ń gbìyànjú lẹ́ẹ̀kansí…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Wá nípa orúkọ, ID, àmì ìka tàbí URL…</string>
     <string name="wikis_join_search_button">Wá àwọn wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Kọ ìdáhùn…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Kọ àkóónú rẹ níbí pẹ̀lú Markdown…</string>
     <string name="wikis_insert_dialog_empty">Kò sí ohun ìfikún síbẹ̀. Gbé fáìlì kan sókè láti bẹ̀rẹ̀.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Àmì kò lè ṣófo</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Kò ṣeé da ọ̀nà ìfibọ̀ kọ</string>
     <string name="wikis_attachments_delete_confirm_message">Pa “%1$s” rẹ́? Èyí kò ṣeé yí padà.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Tẹ Gbé sókè láti fi àwọn fáìlì kún ojú-ìwé yìí.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">Ìdáhùn %d</item>
         <item quantity="other">+%d àwọn ìdáhùn síi</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Tún ojú-ìwé %1$d sọ lórúkọ</item>
-        <item quantity="other">Tún ojú-ìwé %1$d sọ lórúkọ</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">ṣe imudojúìwọ̀n link %1$d</item>
-        <item quantity="other">ṣe imudojúìwọ̀n link %1$d</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">Ojú-ìwé %d</item>
         <item quantity="other">Ojú-ìwé %d</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Kò ṣeé ṣe láti fi àlàyé pamọ́</string>
     <string name="wikis_attachments_upload_types">Àwọn fáìlì tí a ti ìlẹ̀kùn fún: àwòrán, PDF, DOC, DOCX, TXT, àti MD.</string>
     <string name="wikis_attachments_upload_limits">Àwọn ìgbéwọlé ńlá lè ní àkóónú nípasẹ̀ ìṣètò sáfà tàbí proxy rẹ.</string>
+    <string name="wikis_rss_replace">Rọ́pò</string>
+    <string name="wikis_rss_copied_new">A ti ṣàdàkọ URL RSS tuntun sí clipboard</string>
+    <string name="wikis_rss_exists">A ti gbé URL ìjẹun yìí jáde tẹ́lẹ̀, kò sì ṣeé fi hàn lẹ́ẹ̀kansí.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Ń fi àsọyé %1$d àkọ́kọ́ hàn.</item>
+        <item quantity="other">Ń fi àwọn àsọyé %1$d àkọ́kọ́ hàn.</item>
+    </plurals>
 </resources>

@@ -17,6 +17,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.wikis.api.WikisApi
+import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.AccessRule
 import org.mochios.wikis.model.Attachment
@@ -63,7 +64,6 @@ data class JoinWikiResult(
     val fingerprint: String,
     val home: String,
     val source: String? = null,
-    val message: String? = null,
 )
 
 /**
@@ -162,7 +162,6 @@ class WikisRepository @Inject constructor(
                 fingerprint = r.fingerprint,
                 home = r.home,
                 source = r.source,
-                message = r.message,
             )
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -190,9 +189,14 @@ class WikisRepository @Inject constructor(
         api.revokeRssToken(entity).unwrap()
     }
 
-    suspend fun globalRssToken(mode: String): String {
+    /**
+     * Mint the all-wikis feed token. The answer carries `exists` when one was
+     * already issued, in which case `token` is empty and the caller has to ask
+     * the user before replacing it - see [RssTokenResponse].
+     */
+    suspend fun globalRssToken(mode: String, regenerate: Boolean = false): RssTokenResponse {
         return try {
-            api.createRssToken("*", mode).unwrap().token
+            api.createRssToken("*", mode, if (regenerate) "1" else "0").unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -361,9 +365,13 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    suspend fun wikiRssToken(wiki: String, mode: String): String {
+    /**
+     * Mint this wiki's feed token. As with [globalRssToken] the answer may say
+     * `exists` instead of carrying a token.
+     */
+    suspend fun wikiRssToken(wiki: String, mode: String, regenerate: Boolean = false): RssTokenResponse {
         return try {
-            api.createRssToken(wiki, mode).unwrap().token
+            api.createRssToken(wiki, mode, if (regenerate) "1" else "0").unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

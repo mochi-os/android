@@ -18,13 +18,3 @@ data class SettingsResponse(
 data class SettingsSetResponse(
     val ok: Boolean = false,
 )
-
-data class SyncResponse(
-    val ok: Boolean = false,
-    val message: String = "",
-)
-
-data class SubscribeResponse(
-    val ok: Boolean = false,
-    val message: String = "",
-)

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Finna wiki</string>
     <string name="wikis_sidebar_create">Búa til wiki</string>
     <string name="wikis_pageview_title_fallback">Síða</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Til baka</string>
     <string name="wikis_pageview_page_actions">Síðuaðgerðir</string>
     <string name="wikis_pageview_toc">Á þessari síðu</string>
     <string name="wikis_pageview_not_found_title">Síða fannst ekki</string>
     <string name="wikis_pageview_create_this_page">Búa til þessa síðu</string>
     <string name="wikis_pageview_rss_copied">RSS-vefslóð afrituð á klippiborð</string>
-    <string name="wikis_pageview_rss_failed">Tókst ekki að fá RSS-tóka</string>
     <string name="wikis_page_action_section_page">Síða</string>
     <string name="wikis_page_action_edit">Breyta</string>
     <string name="wikis_page_action_rename">Endurnefna</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Hefjaðu fyrsta wiki-ið þitt</string>
     <string name="wikis_empty_subtitle">Leitaðu að wiki til að gerast áskrifandi, eða búðu til eitt til að birta eigin skjöl.</string>
-    <string name="wikis_subscribed_badge">Áskrift virk</string>
     <string name="wikis_create_button">Búa til wiki</string>
     <string name="wikis_recommended_section">Wiki sem mælt er með</string>
     <string name="wikis_subscribe_button">Gerast áskrifandi</string>
-    <string name="wikis_subscribed">Áskrift virk</string>
     <string name="wikis_unsubscribe_action">Afskrá áskrift</string>
     <string name="wikis_unsubscribing">Afskrái áskrift…</string>
     <string name="wikis_unsubscribe_confirm_title">Afskrá áskrift</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nafn</string>
     <string name="wikis_create_privacy_label">Leyfa öllum að leita að wikinu</string>
     <string name="wikis_create_submit">Búa til</string>
-    <string name="wikis_create_cancel">Hætta við</string>
     <string name="wikis_comments_empty_title">Engar athugasemdir ennþá</string>
     <string name="wikis_comments_empty_subtitle">Vertu fyrst/ur til að gera athugasemd við þessa síðu.</string>
-    <string name="wikis_comment_action_reply">Svara</string>
     <string name="wikis_comment_replying_to">Svar til %1$s</string>
     <string name="wikis_comment_clear_reply">Hætta við svar</string>
-    <string name="wikis_comment_action_edit">Breyta</string>
     <string name="wikis_comment_action_delete">Eyða</string>
     <string name="wikis_comment_action_save">Vista</string>
     <string name="wikis_comment_action_cancel">Hætta við</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Ný síða</string>
     <string name="wikis_editor_preview">Forskoðun</string>
     <string name="wikis_editor_preview_untitled">Án titils</string>
-    <string name="wikis_editor_edit">Breyta</string>
     <string name="wikis_editor_insert">Setja inn</string>
     <string name="wikis_editor_attachments">Viðhengi</string>
     <string name="wikis_editor_delete">Eyða síðu</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Hleður upp…</string>
     <string name="wikis_attachments_upload_failed">Tókst ekki að hlaða upp skrám</string>
     <string name="wikis_attachments_search_clear">Hreinsa leit</string>
-    <string name="wikis_attachments_filter">Sía</string>
     <string name="wikis_attachments_filter_all">Allar skrár</string>
     <string name="wikis_attachments_filter_images">Myndir</string>
     <string name="wikis_attachments_filter_documents">Skjöl</string>
-    <string name="wikis_attachments_sort">Raða</string>
     <string name="wikis_attachments_sort_date">Dagsetning</string>
     <string name="wikis_attachments_sort_name">Nafn</string>
     <string name="wikis_attachments_sort_size">Stærð</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Afrita ívefjartengil</string>
     <string name="wikis_attachments_embed_copied">Innfelldur tengill afritaður</string>
     <string name="wikis_attachments_download">Hlaða niður</string>
-    <string name="wikis_attachments_copy_success">Innfelldur tengill afritaður</string>
     <string name="wikis_attachments_delete">Eyða</string>
     <string name="wikis_attachments_delete_confirm_title">Eyða viðhengi</string>
     <string name="wikis_attachments_delete_success">Viðhengi eytt</string>
     <string name="wikis_attachments_delete_failed">Tókst ekki að eyða viðhengi</string>
-    <string name="wikis_attachments_open">Opna</string>
     <string name="wikis_attachments_empty_title">Engin viðhengi ennþá</string>
     <string name="wikis_attachments_no_results_title">Engar viðhengi samsvara leitinni þinni</string>
     <string name="wikis_attachments_no_results_description">Prófaðu aðra leitarforsögu eða síu.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Ekki er hægt að afturkalla þessa aðgerð. Þetta mun eyða wiki-inu og öllu efni þess til frambúðar.</string>
     <string name="wikis_settings_delete_success">Wiki eytt</string>
     <string name="wikis_settings_delete_failed">Tókst ekki að eyða wiki</string>
-    <string name="wikis_access_add_action">Bæta við</string>
     <string name="wikis_access_add_subject_label">Notandi</string>
     <string name="wikis_access_level_edit">Breyta og skoða</string>
     <string name="wikis_access_level_view">Aðeins skoða</string>
     <string name="wikis_access_level_none">Enginn aðgangur</string>
-    <string name="wikis_access_owner_label">Eigandi</string>
     <string name="wikis_access_tab_users">Notendur</string>
     <string name="wikis_access_tab_groups">Hópar</string>
     <string name="wikis_access_tab_other">Annað</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Tókst ekki að fjarlægja aðgang</string>
     <string name="wikis_replicas_empty_title">Engin afrit ennþá</string>
     <string name="wikis_replicas_empty_message">Þegar önnur wiki endurtaka þetta wiki birtast þau hér.</string>
-    <string name="wikis_replicas_col_id">Auðkenni</string>
     <string name="wikis_replicas_never_synced">Aldrei</string>
     <string name="wikis_replicas_remove_confirm_title">Fjarlægja afrit?</string>
     <string name="wikis_replicas_remove_confirm_action">Fjarlægja</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Síðan „%1$s“ er ekki til enn.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Tengill wiki</string>
-    <string name="wikis_pageview_share_link_copied">Tengill síðunnar afritaður á klippiborð</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Tengill Wiki-síðu</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Tengill</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Leita að wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Ertu viss um að þú viljir segja upp áskrift að %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Ekki næst í þennan netþjón. Reyni aftur…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Leita eftir nafni, auðkenni, fingrafari eða vefslóð…</string>
     <string name="wikis_join_search_button">Leita að wiki-um…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Skrifaðu svar…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skrifaðu efnið þitt hér með Markdown…</string>
     <string name="wikis_insert_dialog_empty">Engin viðhengi enn. Hlaðið upp skrá til að byrja.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Merki má ekki vera tómt</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Ekki tókst að afrita innfellingartengil</string>
     <string name="wikis_attachments_delete_confirm_message">Eyða „%1$s“? Þetta er ekki hægt að afturkalla.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Ýttu á Hlaða upp til að bæta skrám við þessa síðu.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d svar</item>
         <item quantity="other">+%d fleiri svör</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Endurnefndi %1$d síðu</item>
-        <item quantity="other">Endurnefndi %1$d síður</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">uppfærði %1$d tengil</item>
-        <item quantity="other">uppfærði %1$d tengla</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d síða</item>
         <item quantity="other">%d síður</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Ekki tókst að vista myndatextann</string>
     <string name="wikis_attachments_upload_types">Studdar skrár: myndir, PDF, DOC, DOCX, TXT og MD.</string>
     <string name="wikis_attachments_upload_limits">Stórar innhleðslur kunna að vera takmarkaðar af stillingum netþjóns eða staðgengils.</string>
+    <string name="wikis_rss_replace">Skipta út</string>
+    <string name="wikis_rss_copied_new">Ný RSS-vefslóð afrituð á klippiborð</string>
+    <string name="wikis_rss_exists">Þessi streymisslóð hefur þegar verið gefin út og ekki er hægt að sýna hana aftur.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Sýnir fyrstu %1$d athugasemd.</item>
+        <item quantity="other">Sýnir fyrstu %1$d athugasemdir.</item>
+    </plurals>
 </resources>

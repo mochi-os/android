@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Trova wiki</string>
     <string name="wikis_sidebar_create">Crea wiki</string>
     <string name="wikis_pageview_title_fallback">Pagina</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Indietro</string>
     <string name="wikis_pageview_page_actions">Azioni pagina</string>
     <string name="wikis_pageview_toc">In questa pagina</string>
     <string name="wikis_pageview_not_found_title">Pagina non trovata</string>
     <string name="wikis_pageview_create_this_page">Crea questa pagina</string>
     <string name="wikis_pageview_rss_copied">URL RSS copiato negli appunti</string>
-    <string name="wikis_pageview_rss_failed">Impossibile ottenere il token RSS</string>
     <string name="wikis_page_action_section_page">Pagina</string>
     <string name="wikis_page_action_edit">Modifica</string>
     <string name="wikis_page_action_rename">Rinomina</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Inizia il tuo primo wiki</string>
     <string name="wikis_empty_subtitle">Cerca un wiki a cui abbonarti o creane uno per pubblicare la tua documentazione.</string>
-    <string name="wikis_subscribed_badge">Iscritto</string>
     <string name="wikis_create_button">Crea wiki</string>
     <string name="wikis_recommended_section">Wiki consigliati</string>
     <string name="wikis_subscribe_button">Iscriviti</string>
-    <string name="wikis_subscribed">Iscritto</string>
     <string name="wikis_unsubscribe_action">Annulla iscrizione</string>
     <string name="wikis_unsubscribing">Annullamento iscrizione in corso…</string>
     <string name="wikis_unsubscribe_confirm_title">Annulla iscrizione</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nome</string>
     <string name="wikis_create_privacy_label">Consenti a chiunque di cercare il wiki</string>
     <string name="wikis_create_submit">Crea</string>
-    <string name="wikis_create_cancel">Annulla</string>
     <string name="wikis_comments_empty_title">Ancora nessun commento</string>
     <string name="wikis_comments_empty_subtitle">Sii il primo a commentare questa pagina.</string>
-    <string name="wikis_comment_action_reply">Rispondi</string>
     <string name="wikis_comment_replying_to">Risposta a %1$s</string>
     <string name="wikis_comment_clear_reply">Annulla risposta</string>
-    <string name="wikis_comment_action_edit">Modifica</string>
     <string name="wikis_comment_action_delete">Elimina</string>
     <string name="wikis_comment_action_save">Salva</string>
     <string name="wikis_comment_action_cancel">Annulla</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Nuova pagina</string>
     <string name="wikis_editor_preview">Anteprima</string>
     <string name="wikis_editor_preview_untitled">Senza titolo</string>
-    <string name="wikis_editor_edit">Modifica</string>
     <string name="wikis_editor_insert">Inserisci</string>
     <string name="wikis_editor_attachments">Allegati</string>
     <string name="wikis_editor_delete">Elimina pagina</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Caricamento…</string>
     <string name="wikis_attachments_upload_failed">Impossibile caricare i file</string>
     <string name="wikis_attachments_search_clear">Cancella ricerca</string>
-    <string name="wikis_attachments_filter">Filtro</string>
     <string name="wikis_attachments_filter_all">Tutti i file</string>
     <string name="wikis_attachments_filter_images">Immagini</string>
     <string name="wikis_attachments_filter_documents">Documenti</string>
-    <string name="wikis_attachments_sort">Ordina</string>
     <string name="wikis_attachments_sort_date">Data</string>
     <string name="wikis_attachments_sort_name">Nome</string>
     <string name="wikis_attachments_sort_size">Dimensione</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Copia link di incorporamento</string>
     <string name="wikis_attachments_embed_copied">Link di incorporamento copiato</string>
     <string name="wikis_attachments_download">Scarica</string>
-    <string name="wikis_attachments_copy_success">Link di incorporamento copiato</string>
     <string name="wikis_attachments_delete">Elimina</string>
     <string name="wikis_attachments_delete_confirm_title">Elimina allegato</string>
     <string name="wikis_attachments_delete_success">Allegato eliminato</string>
     <string name="wikis_attachments_delete_failed">Impossibile eliminare l\'allegato</string>
-    <string name="wikis_attachments_open">Apri</string>
     <string name="wikis_attachments_empty_title">Ancora nessun allegato</string>
     <string name="wikis_attachments_no_results_title">Nessun allegato corrisponde alla tua ricerca</string>
     <string name="wikis_attachments_no_results_description">Prova un altro termine di ricerca o filtro.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Questa azione non può essere annullata. Eliminerà definitivamente il wiki e tutti i suoi contenuti.</string>
     <string name="wikis_settings_delete_success">Wiki eliminato</string>
     <string name="wikis_settings_delete_failed">Impossibile eliminare il wiki</string>
-    <string name="wikis_access_add_action">Aggiungi</string>
     <string name="wikis_access_add_subject_label">Utente</string>
     <string name="wikis_access_level_edit">Modifica e visualizza</string>
     <string name="wikis_access_level_view">Solo visualizzazione</string>
     <string name="wikis_access_level_none">Nessun accesso</string>
-    <string name="wikis_access_owner_label">Proprietario</string>
     <string name="wikis_access_tab_users">Utenti</string>
     <string name="wikis_access_tab_groups">Gruppi</string>
     <string name="wikis_access_tab_other">Altro</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Impossibile rimuovere l\'accesso</string>
     <string name="wikis_replicas_empty_title">Ancora nessuna replica</string>
     <string name="wikis_replicas_empty_message">Quando altri wiki replicheranno questo wiki, appariranno qui.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Mai</string>
     <string name="wikis_replicas_remove_confirm_title">Rimuovere la replica?</string>
     <string name="wikis_replicas_remove_confirm_action">Rimuovi</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Aggiornato %1$s</string>
     <string name="wikis_pageview_not_found_description">La pagina «%1$s» non esiste ancora.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Link del wiki</string>
-    <string name="wikis_pageview_share_link_copied">Link della pagina copiato negli appunti</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS del wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Link della pagina wiki</string>
-    <string name="wikis_pageview_loading">Caricamento pagina…</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Apri barra laterale</string>
-    <string name="wikis_owned_badge">Posseduto</string>
     <string name="wikis_search_placeholder">Cerca un wiki…</string>
-    <string name="wikis_subscribing">Iscrizione in corso…</string>
     <string name="wikis_unsubscribe_confirm_message">Sei sicuro di voler annullare l\'iscrizione a %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Quel server non è raggiungibile. Nuovo tentativo…</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Cerca per nome, ID, fingerprint o URL…</string>
     <string name="wikis_join_search_button">Cerca wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Scrivi una risposta…</string>
     <string name="wikis_comment_form_send">Invia</string>
     <string name="wikis_comment_form_remove_attachment">Rimuovi allegato</string>
-    <string name="wikis_comment_collapse_toggle">Comprimi discussione</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Scrivi qui i tuoi contenuti usando Markdown…</string>
     <string name="wikis_insert_dialog_empty">Nessun allegato ancora. Carica un file per iniziare.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Aggiungi tag</string>
     <string name="wikis_tag_dialog_empty">Il tag non può essere vuoto</string>
     <string name="wikis_attachments_search_placeholder">Cerca allegati…</string>
-    <string name="wikis_attachments_copy_failed">Impossibile copiare il link di incorporamento</string>
     <string name="wikis_attachments_delete_confirm_message">Eliminare «%1$s»? Questa azione non può essere annullata.</string>
     <string name="wikis_attachments_downloading">Download in corso…</string>
     <string name="wikis_attachments_empty_description">Tocca Carica per aggiungere file a questa pagina.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d risposta</item>
         <item quantity="other">+%d altre risposte</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Rinominata %1$d pagina</item>
-        <item quantity="other">Rinominate %1$d pagine</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">aggiornato %1$d collegamento</item>
-        <item quantity="other">aggiornati %1$d collegamenti</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d pagina</item>
         <item quantity="other">%d pagine</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Impossibile salvare la didascalia</string>
     <string name="wikis_attachments_upload_types">File supportati: immagini, PDF, DOC, DOCX, TXT e MD.</string>
     <string name="wikis_attachments_upload_limits">I caricamenti di grandi dimensioni potrebbero essere limitati dalla configurazione del server o del proxy.</string>
+    <string name="wikis_rss_replace">Sostituisci</string>
+    <string name="wikis_rss_copied_new">Nuovo URL RSS copiato negli appunti</string>
+    <string name="wikis_rss_exists">Questo URL del feed è già stato emesso e non può essere mostrato di nuovo.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Viene mostrato il primo %1$d commento.</item>
+        <item quantity="other">Vengono mostrati i primi %1$d commenti.</item>
+    </plurals>
 </resources>

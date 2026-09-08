@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">വിക്കികൾ കണ്ടെത്തുക</string>
     <string name="wikis_sidebar_create">വിക്കി സൃഷ്ടിക്കുക</string>
     <string name="wikis_pageview_title_fallback">പേജ്</string>
-    <string name="wikis_pageview_wiki_fallback">വിക്കി</string>
-    <string name="wikis_pageview_back">തിരികെ</string>
     <string name="wikis_pageview_page_actions">പേജ് പ്രവർത്തനങ്ങൾ</string>
     <string name="wikis_pageview_toc">ഈ പേജിൽ</string>
     <string name="wikis_pageview_not_found_title">പേജ് കണ്ടെത്തിയില്ല</string>
     <string name="wikis_pageview_create_this_page">ഈ പേജ് സൃഷ്ടിക്കുക</string>
     <string name="wikis_pageview_rss_copied">RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
-    <string name="wikis_pageview_rss_failed">RSS ടോക്കൺ നേടുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_page_action_section_page">പേജ്</string>
     <string name="wikis_page_action_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="wikis_page_action_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">വിക്കികൾ</string>
     <string name="wikis_empty_title">നിങ്ങളുടെ ആദ്യ വിക്കി ആരംഭിക്കുക</string>
     <string name="wikis_empty_subtitle">സബ്‌സ്‌ക്രൈബ് ചെയ്യാൻ ഒരു വിക്കി തിരയുക, അല്ലെങ്കിൽ നിങ്ങളുടെ സ്വന്തം ഡോക്യുമെന്റേഷൻ പ്രസിദ്ധീകരിക്കാൻ ഒന്ന് സൃഷ്ടിക്കുക.</string>
-    <string name="wikis_subscribed_badge">സബ്സ്ക്രൈബ് ചെയ്തു</string>
     <string name="wikis_create_button">വിക്കി സൃഷ്ടിക്കുക</string>
     <string name="wikis_recommended_section">റിക്കവറി കോഡുകൾ</string>
     <string name="wikis_subscribe_button">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
-    <string name="wikis_subscribed">സബ്സ്ക്രൈബ് ചെയ്തു</string>
     <string name="wikis_unsubscribe_action">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="wikis_unsubscribing">അൺസബ്സ്ക്രൈബ് ചെയ്യുന്നു…</string>
     <string name="wikis_unsubscribe_confirm_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">പേര്</string>
     <string name="wikis_create_privacy_label">ആർക്കും വിക്കി തിരയാൻ അനുവദിക്കുക</string>
     <string name="wikis_create_submit">സൃഷ്ടിക്കുക</string>
-    <string name="wikis_create_cancel">റദ്ദാക്കുക</string>
     <string name="wikis_comments_empty_title">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_comments_empty_subtitle">ഈ പേജിൽ ആദ്യം അഭിപ്രായം പറയുന്നയാളാകുക.</string>
-    <string name="wikis_comment_action_reply">റിപ്പോർട്ട് ചെയ്യുക</string>
     <string name="wikis_comment_replying_to">%1$s നു മറുപടി നൽകുന്നു</string>
     <string name="wikis_comment_clear_reply">മറുപടി റദ്ദാക്കുക</string>
-    <string name="wikis_comment_action_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="wikis_comment_action_delete">ഇല്ലാതാക്കുക</string>
     <string name="wikis_comment_action_save">സേവ് ചെയ്യുക</string>
     <string name="wikis_comment_action_cancel">റദ്ദാക്കുക</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">പുതിയ പേജ്</string>
     <string name="wikis_editor_preview">സ്കോർ പ്രിവ്യൂ</string>
     <string name="wikis_editor_preview_untitled">ശീർഷകമില്ലാത്തത്</string>
-    <string name="wikis_editor_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="wikis_editor_insert">ചേർക്കുക</string>
     <string name="wikis_editor_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="wikis_editor_delete">പേജ് ഇല്ലാതാക്കുക</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">അപ്‌ലോഡ് ചെയ്യുന്നു…</string>
     <string name="wikis_attachments_upload_failed">ഫയലുകൾ അപ്‌ലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_attachments_search_clear">തിരയൽ മായ്ക്കുക</string>
-    <string name="wikis_attachments_filter">ഫിൽട്ടർ</string>
     <string name="wikis_attachments_filter_all">എല്ലാ ഫയലുകളും</string>
     <string name="wikis_attachments_filter_images">ചിത്രങ്ങൾ</string>
     <string name="wikis_attachments_filter_documents">ഡോക്യുമെന്റുകൾ</string>
-    <string name="wikis_attachments_sort">അടുക്കുക</string>
     <string name="wikis_attachments_sort_date">തീയതി</string>
     <string name="wikis_attachments_sort_name">പേര്</string>
     <string name="wikis_attachments_sort_size">വലുപ്പം</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">എംബെഡ് ലിങ്ക് പകർത്തുക</string>
     <string name="wikis_attachments_embed_copied">എംബഡ് ലിങ്ക് പകർത്തി</string>
     <string name="wikis_attachments_download">ഡൗൺലോഡ്</string>
-    <string name="wikis_attachments_copy_success">എംബഡ് ലിങ്ക് പകർത്തി</string>
     <string name="wikis_attachments_delete">ഇല്ലാതാക്കുക</string>
     <string name="wikis_attachments_delete_confirm_title">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കുക</string>
     <string name="wikis_attachments_delete_success">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കി</string>
     <string name="wikis_attachments_delete_failed">അറ്റാച്ച്മെന്റ് ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="wikis_attachments_open">തുറക്കുക</string>
     <string name="wikis_attachments_empty_title">അറ്റാച്ച്മെന്റുകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_attachments_no_results_title">നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന അറ്റാച്ച്‌മെന്റുകളൊന്നുമില്ല</string>
     <string name="wikis_attachments_no_results_description">മറ്റൊരു തിരയൽ പദമോ ഫിൽറ്ററോ പരീക്ഷിക്കുക.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല. ഇത് വിക്കിയും അതിന്റെ എല്ലാ ഉള്ളടക്കങ്ങളും സ്ഥിരമായി ഇല്ലാതാക്കും.</string>
     <string name="wikis_settings_delete_success">വിക്കി ഇല്ലാതാക്കി</string>
     <string name="wikis_settings_delete_failed">വിക്കി ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="wikis_access_add_action">ചേർക്കുക</string>
     <string name="wikis_access_add_subject_label">ഉപയോക്താവ്</string>
     <string name="wikis_access_level_edit">എഡിറ്റ് ചെയ്യുക, കാണുക</string>
     <string name="wikis_access_level_view">കാണുക മാത്രം</string>
     <string name="wikis_access_level_none">ആക്സസ് ഇല്ല</string>
-    <string name="wikis_access_owner_label">ഉടമ</string>
     <string name="wikis_access_tab_users">ഉപയോക്താക്കൾ</string>
     <string name="wikis_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
     <string name="wikis_access_tab_other">മറ്റുള്ളവ</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">ആക്സസ് നീക്കം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="wikis_replicas_empty_title">replicas-കളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="wikis_replicas_empty_message">മറ്റ് വിക്കികൾ ഈ വിക്കി പകർത്തുമ്പോൾ, അവ ഇവിടെ ദൃശ്യമാകും.</string>
-    <string name="wikis_replicas_col_id">ഐഡി</string>
     <string name="wikis_replicas_never_synced">ഒരിക്കലുമില്ല</string>
     <string name="wikis_replicas_remove_confirm_title">അവലോകനം നീക്കം ചെയ്യണോ?</string>
     <string name="wikis_replicas_remove_confirm_action">നീക്കം ചെയ്യുക</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” എന്ന പേജ് ഇതുവരെ നിലവിലില്ല.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">വിക്കി ലിങ്ക്</string>
-    <string name="wikis_pageview_share_link_copied">പേജ് ലിങ്ക് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki പേജ് ലിങ്ക്</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">ലിങ്ക്</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki തിരയുക…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s-ൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണമെന്ന് ഉറപ്പാണോ?</string>
-    <string name="wikis_subscribe_failed_502">ആ സെർവർ ലഭ്യമല്ല. വീണ്ടും ശ്രമിക്കുന്നു…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">പേര്, ID, ഫിംഗർപ്രിന്റ് അല്ലെങ്കിൽ URL ഉപയോഗിച്ച് തിരയുക…</string>
     <string name="wikis_join_search_button">wiki-കൾ തിരയുക…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">ഒരു മറുപടി എഴുതുക…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">നിങ്ങളുടെ ഉള്ളടക്കം ഇവിടെ Markdown ഉപയോഗിച്ച് എഴുതുക…</string>
     <string name="wikis_insert_dialog_empty">ഇതുവരെ അറ്റാച്ച്‌മെന്റുകളില്ല. ആരംഭിക്കാൻ ഒരു ഫയൽ അപ്‌ലോഡ് ചെയ്യുക.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">ടാഗ് ശൂന്യമാകാൻ പാടില്ല</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">എംബെഡ് ലിങ്ക് പകർത്താനായില്ല</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാനാവില്ല.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">ഈ പേജിലേക്ക് ഫയലുകൾ ചേർക്കാൻ അപ്‌ലോഡ് ടാപ്പ് ചെയ്യുക.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d മറുപടി</item>
         <item quantity="other">+%d കൂടുതൽ മറുപടികൾ</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d പേജിന്റെ പേര് മാറ്റി</item>
-        <item quantity="other">%1$d പേജുകളുടെ പേര് മാറ്റി</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d ലിങ്ക് അപ്ഡേറ്റ് ചെയ്തു</item>
-        <item quantity="other">%1$d ലിങ്കുകൾ അപ്ഡേറ്റ് ചെയ്തു</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d പേജ്</item>
         <item quantity="other">%d പേജുകൾ</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">അടിക്കുറിപ്പ് സംരക്ഷിക്കാനായില്ല</string>
     <string name="wikis_attachments_upload_types">പിന്തുണയ്ക്കുന്ന ഫയലുകൾ: ചിത്രങ്ങൾ, PDF, DOC, DOCX, TXT, എന്നിവയും MD യും.</string>
     <string name="wikis_attachments_upload_limits">വലിയ അപ്‌ലോഡുകൾ നിങ്ങളുടെ സെർവർ അല്ലെങ്കിൽ പ്രോക്സി കോൺഫിഗറേഷൻ പരിമിതപ്പെടുത്തിയേക്കാം.</string>
+    <string name="wikis_rss_replace">മാറ്റിസ്ഥാപിക്കുക</string>
+    <string name="wikis_rss_copied_new">പുതിയ RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
+    <string name="wikis_rss_exists">ഈ ഫീഡ് URL ഇതിനകം നൽകിയിട്ടുണ്ട്, വീണ്ടും കാണിക്കാൻ കഴിയില്ല.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">ആദ്യത്തെ %1$d അഭിപ്രായം കാണിക്കുന്നു.</item>
+        <item quantity="other">ആദ്യത്തെ %1$d അഭിപ്രായങ്ങൾ കാണിക്കുന്നു.</item>
+    </plurals>
 </resources>

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wikiləri tap</string>
     <string name="wikis_sidebar_create">Viki yarat</string>
     <string name="wikis_pageview_title_fallback">Səhifə</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki hərəkətləri</string>
-    <string name="wikis_pageview_back">Geri</string>
     <string name="wikis_pageview_page_actions">Səhifə əməliyyatları</string>
     <string name="wikis_pageview_toc">Bu səhifədə</string>
     <string name="wikis_pageview_not_found_title">Səhifə tapılmadı</string>
     <string name="wikis_pageview_create_this_page">Bu səhifəni yarat</string>
     <string name="wikis_pageview_rss_copied">RSS URL panelə kopyalandı</string>
-    <string name="wikis_pageview_rss_failed">RSS tokenini almaq alınmadı</string>
     <string name="wikis_page_action_section_page">Səhifə</string>
     <string name="wikis_page_action_edit">Redaktə et</string>
     <string name="wikis_page_action_rename">Adı dəyiş</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Qalib təklif</string>
     <string name="wikis_empty_title">İlk wiki-nizə başlayın</string>
     <string name="wikis_empty_subtitle">Abunə olmaq üçün wiki axtarın və ya öz sənədlərinizi dərc etmək üçün yaradın.</string>
-    <string name="wikis_subscribed_badge">Abunə oldun</string>
     <string name="wikis_create_button">Viki yarat</string>
     <string name="wikis_recommended_section">Tövsiyə olunan wiki-lər</string>
     <string name="wikis_subscribe_button">Abunə ol</string>
-    <string name="wikis_subscribed">Abunə oldun</string>
     <string name="wikis_unsubscribe_action">CRM-dən abunəlikdən çıx</string>
     <string name="wikis_unsubscribing">Hesabın dayandırmasını götür</string>
     <string name="wikis_unsubscribe_confirm_title">CRM-dən abunəlikdən çıx</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Ad</string>
     <string name="wikis_create_privacy_label">Hər kəsə viki axtarmağa icazə ver</string>
     <string name="wikis_create_submit">Yarat</string>
-    <string name="wikis_create_cancel">Ləğv et</string>
     <string name="wikis_comments_empty_title">Hələ şərh yoxdur</string>
     <string name="wikis_comments_empty_subtitle">Bu səhifəyə ilk şərh yazan siz olun.</string>
-    <string name="wikis_comment_action_reply">Cavabla</string>
     <string name="wikis_comment_replying_to">%1$s istifadəçisinə cavab verilir</string>
     <string name="wikis_comment_clear_reply">Cavabı ləğv et</string>
-    <string name="wikis_comment_action_edit">Redaktə et</string>
     <string name="wikis_comment_action_delete">Sil</string>
     <string name="wikis_comment_action_save">Saxla</string>
     <string name="wikis_comment_action_cancel">Ləğv et</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Yeni səhifə</string>
     <string name="wikis_editor_preview">Önbaxış</string>
     <string name="wikis_editor_preview_untitled">Təsdiqlənməyib</string>
-    <string name="wikis_editor_edit">Redaktə et</string>
     <string name="wikis_editor_insert">Daxil et</string>
     <string name="wikis_editor_attachments">Qoşmalar</string>
     <string name="wikis_editor_delete">Səhifəni sil</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Fərqli hesabdan istifadə et</string>
     <string name="wikis_attachments_upload_failed">Faylları yükləmək alınmadı</string>
     <string name="wikis_attachments_search_clear">Axtarışı təmizlə</string>
-    <string name="wikis_attachments_filter">Filtr</string>
     <string name="wikis_attachments_filter_all">Bütün fayllar</string>
     <string name="wikis_attachments_filter_images">Şəkillər</string>
     <string name="wikis_attachments_filter_documents">Sənədlər</string>
-    <string name="wikis_attachments_sort">Sırala</string>
     <string name="wikis_attachments_sort_date">Tarix</string>
     <string name="wikis_attachments_sort_name">Ad</string>
     <string name="wikis_attachments_sort_size">Ölçü</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed linkini kopyala</string>
     <string name="wikis_attachments_embed_copied">Yerləşdirmə linki kopyalandı</string>
     <string name="wikis_attachments_download">Yüklə</string>
-    <string name="wikis_attachments_copy_success">Yerləşdirmə linki kopyalandı</string>
     <string name="wikis_attachments_delete">Sil</string>
     <string name="wikis_attachments_delete_confirm_title">Qoşmanı sil</string>
     <string name="wikis_attachments_delete_success">Qoşma silindi</string>
     <string name="wikis_attachments_delete_failed">Əlavəni silmək alınmadı</string>
-    <string name="wikis_attachments_open">Aç</string>
     <string name="wikis_attachments_empty_title">Hələ əlavə yoxdur</string>
     <string name="wikis_attachments_no_results_title">Axtarışınıza uyğun əlavə yoxdur</string>
     <string name="wikis_attachments_no_results_description">Filtrləri tənzimləyin və ya təmizləyin</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Bu tətbiq yalnız Mochi heyəti üçündür.</string>
     <string name="wikis_settings_delete_success">Wiki adı tələb olunur</string>
     <string name="wikis_settings_delete_failed">Wikini silmək alınmadı</string>
-    <string name="wikis_access_add_action">Əlavə et</string>
     <string name="wikis_access_add_subject_label">İstifadəçi yaradıldı</string>
     <string name="wikis_access_level_edit">Redaktə et və bax</string>
     <string name="wikis_access_level_view">Yalnız baxış</string>
     <string name="wikis_access_level_none">Giriş yoxdur</string>
-    <string name="wikis_access_owner_label">Sahibi</string>
     <string name="wikis_access_tab_users">İstifadəçilər</string>
     <string name="wikis_access_tab_groups">Qruplar</string>
     <string name="wikis_access_tab_other">Digər</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Girişi silmək alınmadı</string>
     <string name="wikis_replicas_empty_title">Hələ replika yoxdur</string>
     <string name="wikis_replicas_empty_message">Digər vikilər bu vikini replikasiya etdikdə burada görünəcəklər.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Heç vaxt</string>
     <string name="wikis_replicas_remove_confirm_title">Replikanı silək?</string>
     <string name="wikis_replicas_remove_confirm_action">Sil</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” səhifəsi hələ mövcud deyil.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Viki keçidi</string>
-    <string name="wikis_pageview_share_link_copied">Səhifə keçidi mübadilə buferinə kopyalandı</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki səhifə keçidi</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Keçid</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki axtar…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s abunəliyindən çıxmaq istədiyinizə əminsiniz?</string>
-    <string name="wikis_subscribe_failed_502">Həmin server əlçatmazdır. Yenidən cəhd edilir…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Ad, ID, barmaq izi və ya URL üzrə axtar…</string>
     <string name="wikis_join_search_button">Wiki-ləri axtar…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Cavab yaz…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Məzmununuzu burada Markdown ilə yazın…</string>
     <string name="wikis_insert_dialog_empty">Hələ qoşma yoxdur. Başlamaq üçün fayl yükləyin.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Etiket boş ola bilməz</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Yerləşdirmə keçidi kopyalana bilmədi</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” silinsin? Bu geri qaytarıla bilməz.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Bu səhifəyə fayl əlavə etmək üçün Yüklə düyməsinə toxunun.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d cavab</item>
         <item quantity="other">+%d daha çox cavab</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d səhifənin adı dəyişdirildi</item>
-        <item quantity="other">%1$d səhifənin adı dəyişdirildi</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d keçid yeniləndi</item>
-        <item quantity="other">%1$d keçid yeniləndi</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d nəticə</item>
         <item quantity="other">%d nəticə</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">İzahı saxlamaq mümkün olmadı</string>
     <string name="wikis_attachments_upload_types">Dəstəklənən fayllar: şəkillər, PDF, DOC, DOCX, TXT və MD.</string>
     <string name="wikis_attachments_upload_limits">Böyük yükləmələr serveriniz və ya proksi konfiqurasiyanız tərəfindən məhdudlaşdırıla bilər.</string>
+    <string name="wikis_rss_replace">Əvəz et</string>
+    <string name="wikis_rss_copied_new">Yeni RSS URL panelə kopyalandı</string>
+    <string name="wikis_rss_exists">Bu lent URL-i artıq verilib və yenidən göstərilə bilməz.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">İlk %1$d şərh göstərilir.</item>
+        <item quantity="other">İlk %1$d şərh göstərilir.</item>
+    </plurals>
 </resources>

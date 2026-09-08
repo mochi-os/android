@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wikiyan bibîne</string>
     <string name="wikis_sidebar_create">Wiki çêbike</string>
     <string name="wikis_pageview_title_fallback">Rûpel</string>
-    <string name="wikis_pageview_wiki_fallback">Wîkî</string>
-    <string name="wikis_pageview_back">Vegere</string>
     <string name="wikis_pageview_page_actions">Çalakiyên rûpelê</string>
     <string name="wikis_pageview_toc">Li ser vê rûpelê</string>
     <string name="wikis_pageview_not_found_title">Rûpel nehat dîtin</string>
     <string name="wikis_pageview_create_this_page">Vê rûpelê çêbike</string>
     <string name="wikis_pageview_rss_copied">URL ya RSS hate kopîkirin</string>
-    <string name="wikis_pageview_rss_failed">Wergirtina tokena RSS neserkeftî bû</string>
     <string name="wikis_page_action_section_page">Rûpel</string>
     <string name="wikis_page_action_edit">Sererast bike</string>
     <string name="wikis_page_action_rename">Navê biguhere</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wîkî</string>
     <string name="wikis_empty_title">Wîkîya xwe ya yekem dest pê bike</string>
     <string name="wikis_empty_subtitle">Li wikiyek ji bo abonebûnê bigere, an yekê biafirîne ji bo weşandina belgeyên xwe.</string>
-    <string name="wikis_subscribed_badge">Abone</string>
     <string name="wikis_create_button">Wiki çêbike</string>
     <string name="wikis_recommended_section">Wikiyên pêşniyarkirî</string>
     <string name="wikis_subscribe_button">Abone bibe</string>
-    <string name="wikis_subscribed">Abone</string>
     <string name="wikis_unsubscribe_action">Abone yî nebe</string>
     <string name="wikis_unsubscribing">Abone yî nabe…</string>
     <string name="wikis_unsubscribe_confirm_title">Abone yî nebe</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nav</string>
     <string name="wikis_create_privacy_label">Destûr bide her kesî ku li wiki bigere</string>
     <string name="wikis_create_submit">Çêbike</string>
-    <string name="wikis_create_cancel">Betal bike</string>
     <string name="wikis_comments_empty_title">Hêj tu şîrove tune</string>
     <string name="wikis_comments_empty_subtitle">Yê yekem be ku li ser vê rûpelê şîroveyê bike.</string>
-    <string name="wikis_comment_action_reply">Bersiv</string>
     <string name="wikis_comment_replying_to">Bersiva %1$s tê dayîn</string>
     <string name="wikis_comment_clear_reply">Bersivê betal bike</string>
-    <string name="wikis_comment_action_edit">Sererast bike</string>
     <string name="wikis_comment_action_delete">Jê bibe</string>
     <string name="wikis_comment_action_save">Tomar bike</string>
     <string name="wikis_comment_action_cancel">Betal bike</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Rûpela nû</string>
     <string name="wikis_editor_preview">Pêşbînî</string>
     <string name="wikis_editor_preview_untitled">Bê sernav</string>
-    <string name="wikis_editor_edit">Sererast bike</string>
     <string name="wikis_editor_insert">Têxe</string>
     <string name="wikis_editor_attachments">Pêvek</string>
     <string name="wikis_editor_delete">Rûpelê jê bibe</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Tê barkirin…</string>
     <string name="wikis_attachments_upload_failed">Barkirina pelan neserkeftî bû</string>
     <string name="wikis_attachments_search_clear">Lêgerînê paqij bike</string>
-    <string name="wikis_attachments_filter">Parzûna</string>
     <string name="wikis_attachments_filter_all">Hemû pel</string>
     <string name="wikis_attachments_filter_images">Wêne</string>
     <string name="wikis_attachments_filter_documents">Belge</string>
-    <string name="wikis_attachments_sort">Rêz bike</string>
     <string name="wikis_attachments_sort_date">Dîrok</string>
     <string name="wikis_attachments_sort_name">Nav</string>
     <string name="wikis_attachments_sort_size">Mezinahî</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Girêdana embed kopî bike</string>
     <string name="wikis_attachments_embed_copied">Lînka veşartî hat kopîkirin</string>
     <string name="wikis_attachments_download">Daxe</string>
-    <string name="wikis_attachments_copy_success">Lînka veşartî hat kopîkirin</string>
     <string name="wikis_attachments_delete">Jê bibe</string>
     <string name="wikis_attachments_delete_confirm_title">Pêvekê jê bibe</string>
     <string name="wikis_attachments_delete_success">Pêvek hat jêbirin</string>
     <string name="wikis_attachments_delete_failed">Jêbirina pêvekê neserkeftî bû</string>
-    <string name="wikis_attachments_open">Veke</string>
     <string name="wikis_attachments_empty_title">Hêj tu pêvek tune</string>
     <string name="wikis_attachments_no_results_title">Tu pêvek bi lêgerîna te re li hev nakeve</string>
     <string name="wikis_attachments_no_results_description">Peyveke lêgerînê an parzûneke cuda biceribîne.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Ev çalakî nayê vegerandin. Ev dê wîkîyê û hemû naveroka wê herheyî jê bibe.</string>
     <string name="wikis_settings_delete_success">Wîkî hat jêbirin</string>
     <string name="wikis_settings_delete_failed">Jêbirina wikiyê neserkeftî bû</string>
-    <string name="wikis_access_add_action">Zêde bike</string>
     <string name="wikis_access_add_subject_label">Bikarhêner</string>
     <string name="wikis_access_level_edit">Sererastkirin û dîtin</string>
     <string name="wikis_access_level_view">Tenê dîtin</string>
     <string name="wikis_access_level_none">Bê destpêkirin</string>
-    <string name="wikis_access_owner_label">Xwedî</string>
     <string name="wikis_access_tab_users">Bikarhêner</string>
     <string name="wikis_access_tab_groups">Kom</string>
     <string name="wikis_access_tab_other">Yên din</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Rakirina destûrê neserkeftî bû</string>
     <string name="wikis_replicas_empty_title">Hêj tu replica tune</string>
     <string name="wikis_replicas_empty_message">Dema wîkîyên din vê wîkîyê dubare bikin, ew ê li vir xuya bibin.</string>
-    <string name="wikis_replicas_col_id">Nasname</string>
     <string name="wikis_replicas_never_synced">Tu car</string>
     <string name="wikis_replicas_remove_confirm_title">Replica rake?</string>
     <string name="wikis_replicas_remove_confirm_action">Rake</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Rûpela “%1$s” hîn tune ye.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Girêdana wîkî</string>
-    <string name="wikis_pageview_share_link_copied">Girêdana rûpelê li panoyê hate jibergirtin</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Girêdana rûpela Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Girêdan</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Li wiki bigere…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Tu bawer î ku dixwazî abonetiya %1$s betal bikî?</string>
-    <string name="wikis_subscribe_failed_502">Ew rajekar negihîştî ye. Ji nû ve tê ceribandin…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Bi nav, ID, şopa tiliyê an URL bigere…</string>
     <string name="wikis_join_search_button">Li wikiyan bigere…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Bersivekê binivîse…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Naveroka xwe li vir bi Markdown binivîse…</string>
     <string name="wikis_insert_dialog_empty">Hîn tu pêvek tune. Ji bo destpêkirinê pelekê bar bike.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Nîşan nikare vala be</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Jibergirtina girêdana bicihkirî bi ser neket</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” were jêbirin? Ev nayê vegerandin.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Ji bo lêzêdekirina pelan li vê rûpelê pêl Barkirinê bike.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d bersiv</item>
         <item quantity="other">+%d bersivên zêde</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Navê %1$d rûpel hat guhertin</item>
-        <item quantity="other">Navê %1$d rûpelan hat guhertin</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d girêdan hat nûkirin</item>
-        <item quantity="other">%1$d girêdan hatin nûkirin</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d rûpel</item>
         <item quantity="other">%d rûpel</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Binnivîs nehat tomarkirin</string>
     <string name="wikis_attachments_upload_types">Pelên piştgirîkirî: wêne, PDF, DOC, DOCX, TXT, û MD.</string>
     <string name="wikis_attachments_upload_limits">Barkirinên mezin dibe ku bi mîhengkirina rajekar an proksiya we sînordar bibin.</string>
+    <string name="wikis_rss_replace">Biguhêre</string>
+    <string name="wikis_rss_copied_new">URL ya nû ya RSS hate kopîkirin</string>
+    <string name="wikis_rss_exists">Ev URL ya xwarinê berê hate dayîn û careke din nayê nîşandan.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">%1$d şîroveya yekem tê nîşandan.</item>
+        <item quantity="other">%1$d şîroveyên yekem tên nîşandan.</item>
+    </plurals>
 </resources>

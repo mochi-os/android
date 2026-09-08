@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.model
 
-import com.google.gson.annotations.SerializedName
 
 data class WikiComment(
     val id: String = "",
@@ -15,8 +14,6 @@ data class WikiComment(
     val author: String = "",
     val name: String = "",
     val body: String = "",
-    @SerializedName("markdown")
-    val bodyMarkdown: String = "",
     val created: Long = 0,
     val edited: Long = 0,
     val children: List<WikiComment> = emptyList(),
@@ -26,6 +23,13 @@ data class WikiComment(
 data class CommentsResponse(
     val comments: List<WikiComment> = emptyList(),
     val count: Int = 0,
+    /** Total matching threads, which exceeds [comments] when [truncated]. */
+    val total: Int = 0,
+    /**
+     * The server capped the page (200 threads) and there are more. Web says so
+     * under the list; without it a page past the cap silently loses its tail.
+     */
+    val truncated: Boolean = false,
 )
 
 data class CommentCreateResponse(

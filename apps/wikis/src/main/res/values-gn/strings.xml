@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Eheka wikis</string>
     <string name="wikis_sidebar_create">Embojeguáva wiki</string>
     <string name="wikis_pageview_title_fallback">Kuatiarogue</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Tapykuépe</string>
     <string name="wikis_pageview_page_actions">Kuatiarogue tembiapo</string>
     <string name="wikis_pageview_toc">Ko kuatiaroguépe</string>
     <string name="wikis_pageview_not_found_title">Kuatiarogue ndojejuhúi</string>
     <string name="wikis_pageview_create_this_page">Embojeguáva ko kuatia</string>
     <string name="wikis_pageview_rss_copied">RSS URL oñekopia clipboard-pe</string>
-    <string name="wikis_pageview_rss_failed">Ndaikatúi oguenohẽ RSS token</string>
     <string name="wikis_page_action_section_page">Kuatiarogue</string>
     <string name="wikis_page_action_edit">Embojuruja</string>
     <string name="wikis_page_action_rename">Embohera jey</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Eñepyrũ ne wiki ypy</string>
     <string name="wikis_empty_subtitle">Eheka peteĩ wiki esuscribi haguã, térã emoheñói peteĩ emoherakuã haguã ne propia documentación.</string>
-    <string name="wikis_subscribed_badge">Mboatypyre</string>
     <string name="wikis_create_button">Embojeguáva wiki</string>
     <string name="wikis_recommended_section">Wikis ojeporavóva</string>
     <string name="wikis_subscribe_button">Eñemboaty</string>
-    <string name="wikis_subscribed">Mboatypyre</string>
     <string name="wikis_unsubscribe_action">Eñemboaty\'ỹ</string>
     <string name="wikis_unsubscribing">Eñemboaty\'ỹ hína…</string>
     <string name="wikis_unsubscribe_confirm_title">Eñemboaty\'ỹ</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Téra</string>
     <string name="wikis_create_privacy_label">Eipysyrõ opavavépe oheka wiki</string>
     <string name="wikis_create_submit">Embojeguáva</string>
-    <string name="wikis_create_cancel">Heja</string>
     <string name="wikis_comments_empty_title">Ndaipóri comentario gueteri</string>
     <string name="wikis_comments_empty_subtitle">Eñepyrũ rembojere ko kuatiagui.</string>
-    <string name="wikis_comment_action_reply">Embohovái</string>
     <string name="wikis_comment_replying_to">Embohovái %1$s-pe</string>
     <string name="wikis_comment_clear_reply">Heja mbohovái</string>
-    <string name="wikis_comment_action_edit">Embojuruja</string>
     <string name="wikis_comment_action_delete">Hundi</string>
     <string name="wikis_comment_action_save">Ñongatu</string>
     <string name="wikis_comment_action_cancel">Heja</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Kuatiarogue pyahu</string>
     <string name="wikis_editor_preview">Ehecha tenondete</string>
     <string name="wikis_editor_preview_untitled">Téra\'ỹva</string>
-    <string name="wikis_editor_edit">Embojuruja</string>
     <string name="wikis_editor_insert">Emoinge</string>
     <string name="wikis_editor_attachments">Archivokuéra</string>
     <string name="wikis_editor_delete">Hundi kuatia</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Ohupi hína…</string>
     <string name="wikis_attachments_upload_failed">Ndaikatúi oñemondo archivos</string>
     <string name="wikis_attachments_search_clear">Embopotĩ jeheka</string>
-    <string name="wikis_attachments_filter">Mboaty</string>
     <string name="wikis_attachments_filter_all">Opaite archivo</string>
     <string name="wikis_attachments_filter_images">Ta\'angakuéra</string>
     <string name="wikis_attachments_filter_documents">Documentos</string>
-    <string name="wikis_attachments_sort">Embojo\'a</string>
     <string name="wikis_attachments_sort_date">Ára</string>
     <string name="wikis_attachments_sort_name">Téra</string>
     <string name="wikis_attachments_sort_size">Tuichakue</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopia embed link</string>
     <string name="wikis_attachments_embed_copied">Oñemonguatia link incrustado</string>
     <string name="wikis_attachments_download">Emboguejy</string>
-    <string name="wikis_attachments_copy_success">Oñemonguatia link incrustado</string>
     <string name="wikis_attachments_delete">Hundi</string>
     <string name="wikis_attachments_delete_confirm_title">Hundi archivo</string>
     <string name="wikis_attachments_delete_success">Archivo oñehundíma</string>
     <string name="wikis_attachments_delete_failed">Ndaikatúi ojejuka archivo</string>
-    <string name="wikis_attachments_open">Eipe\'a</string>
     <string name="wikis_attachments_empty_title">Ndaipóri mba\'e ojuajúva gueteri</string>
     <string name="wikis_attachments_no_results_title">Ndaipóri mba\'e ojuajúva ne ñehekáre</string>
     <string name="wikis_attachments_no_results_description">Eha\'ã ambue jeheka térã filtro.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Ko tembiapo ndaikatúi oñembojevy. Kóva oguéta tapiarã ko wiki ha opa imba\'évape.</string>
     <string name="wikis_settings_delete_success">Wiki oñembogue</string>
     <string name="wikis_settings_delete_failed">Ndaikatúi ojejuka wiki</string>
-    <string name="wikis_access_add_action">Embojuaju</string>
     <string name="wikis_access_add_subject_label">Mboapurevahára</string>
     <string name="wikis_access_level_edit">Embojuruja ha ehecha</string>
     <string name="wikis_access_level_view">Ehecha mante</string>
     <string name="wikis_access_level_none">Ojeikese\'ỹ</string>
-    <string name="wikis_access_owner_label">Mburuvicha</string>
     <string name="wikis_access_tab_users">Mboapurevaharakuéra</string>
     <string name="wikis_access_tab_groups">Atypykuéra</string>
     <string name="wikis_access_tab_other">Ambue</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Ndaikatúi oñembogue acceso</string>
     <string name="wikis_replicas_empty_title">Ndaipóri replicas gueteri</string>
     <string name="wikis_replicas_empty_message">Ambue wikinguéra oñemboaty ko wiki-re, ohechaúkata kópe.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Araka\'eve</string>
     <string name="wikis_replicas_remove_confirm_title">Embogue replica?</string>
     <string name="wikis_replicas_remove_confirm_action">Embogue</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Kuatiarogue “%1$s” ndaipóri gueteri.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki juajuha</string>
-    <string name="wikis_pageview_share_link_copied">Kuatiarogue juajuha oñemonguatia clipboard-pe</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki kuatiarogue juajuha</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Juajuha</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Eheka peteĩ wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">¿Añetehápe reipota resẽ %1$s-gui?</string>
-    <string name="wikis_subscribe_failed_502">Pe servidor ndaikatúi jaike. Ojeha’ã jey…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Eheka téra, ID, kuã ra’anga térã URL rupive…</string>
     <string name="wikis_join_search_button">Eheka wikinguéra…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Ehai mbohovái…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Ehai ne tembiapo ko’ápe Markdown reheve…</string>
     <string name="wikis_insert_dialog_empty">Ndaipóri gueteri mba’e ojoajúva. Emondo peteĩ marandurenda eñepyrũ haguã.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Techaukaha ndaikatúi nandi</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Ndaikatúi oñemonguatia embed juajuha</string>
     <string name="wikis_attachments_delete_confirm_message">¿Emboguete “%1$s”? Kóva ndaikatúi ojejapo jey.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Eikutu Emondo emoĩ haguã marandurenda ko kuatiaroguépe.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d ñembohovái</item>
         <item quantity="other">+%d ñembohovái ambue</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Téra oñemoambue %1$d rogue</item>
-        <item quantity="other">Téra oñemoambue %1$d rogue</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d link oñembohekopyahu</item>
-        <item quantity="other">%1$d links oñembohekopyahu</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d rogue</item>
         <item quantity="other">%d rogue</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Ndaikatúi oñeñongatu ñemyesakã</string>
     <string name="wikis_attachments_upload_types">Marandurenda ojeguerekóva: ta\'anga, PDF, DOC, DOCX, TXT, ha MD.</string>
     <string name="wikis_attachments_upload_limits">Ne servidor térã proxy ñembosako\'i ikatu omomboriahu umi mba\'e tuicháva oñemoinge.</string>
+    <string name="wikis_rss_replace">Embyekovia</string>
+    <string name="wikis_rss_copied_new">RSS URL pyahu oñekopia clipboard-pe</string>
+    <string name="wikis_rss_exists">Ko feed URL oñeme\'ẽma ha ndaikatúi jahechauka jey.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Ojehechauka %1$d ñe\'ẽmbyry ypykue.</item>
+        <item quantity="other">Ojehechauka %1$d ñe\'ẽmbyry ypykue.</item>
+    </plurals>
 </resources>

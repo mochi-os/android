@@ -26,7 +26,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import dagger.hilt.android.EntryPointAccessors
@@ -150,25 +149,6 @@ fun RenamePageDialog(
         dismissText = stringResource(R.string.wikis_rename_page_cancel),
         dismissEnabled = !isSubmitting,
     )
-}
-
-@Composable
-fun rememberRenameSuccessMessage(renamedCount: Int, updatedLinks: Int): String {
-    val pages = pluralStringResource(
-        R.plurals.wikis_rename_page_renamed,
-        renamedCount,
-        renamedCount,
-    )
-    return if (updatedLinks > 0) {
-        val links = pluralStringResource(
-            R.plurals.wikis_rename_page_updated_links,
-            updatedLinks,
-            updatedLinks,
-        )
-        "$pages, $links"
-    } else {
-        pages
-    }
 }
 
 @EntryPoint

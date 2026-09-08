@@ -22,25 +22,6 @@ data class WikiPage(
     val tags: List<String> = emptyList(),
 )
 
-data class PageLinks(
-    val missing: List<String>? = null,
-)
-
-data class PageComments(
-    val count: Int? = null,
-)
-
-data class PageResponse(
-    val page: WikiPage = WikiPage(),
-    val links: PageLinks? = null,
-    val comments: PageComments? = null,
-)
-
-data class PageNotFoundResponse(
-    val error: String = "",
-    val page: String = "",
-)
-
 sealed class PageFetchResponse {
     data class Page(
         val page: WikiPage,

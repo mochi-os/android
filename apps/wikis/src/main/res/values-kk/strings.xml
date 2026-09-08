@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Уикилерді табу</string>
     <string name="wikis_sidebar_create">Wiki құру</string>
     <string name="wikis_pageview_title_fallback">Бет</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Артқа</string>
     <string name="wikis_pageview_page_actions">Бет әрекеттері</string>
     <string name="wikis_pageview_toc">Осы бетте</string>
     <string name="wikis_pageview_not_found_title">Бет табылмады</string>
     <string name="wikis_pageview_create_this_page">Бұл бетті құру</string>
     <string name="wikis_pageview_rss_copied">RSS URL алмасу буферіне көшірілді</string>
-    <string name="wikis_pageview_rss_failed">RSS токенін алу сәтсіз аяқталды</string>
     <string name="wikis_page_action_section_page">Бет</string>
     <string name="wikis_page_action_edit">Өңдеу</string>
     <string name="wikis_page_action_rename">Атын өзгерту</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki-лер</string>
     <string name="wikis_empty_title">Бірінші wiki бастаңыз</string>
     <string name="wikis_empty_subtitle">Жазылу үшін wiki-ні іздеңіз немесе өзіңіздің құжаттамаңызды жариялау үшін біреуін жасаңыз.</string>
-    <string name="wikis_subscribed_badge">Жазылған</string>
     <string name="wikis_create_button">Wiki құру</string>
     <string name="wikis_recommended_section">Ұсынылған wiki-лер</string>
     <string name="wikis_subscribe_button">Жазылу</string>
-    <string name="wikis_subscribed">Жазылған</string>
     <string name="wikis_unsubscribe_action">Жазылудан бас тарту</string>
     <string name="wikis_unsubscribing">Жазылудан бас тартылуда…</string>
     <string name="wikis_unsubscribe_confirm_title">Жазылудан бас тарту</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Аты</string>
     <string name="wikis_create_privacy_label">Кез келгенге wiki іздеуге рұқсат ету</string>
     <string name="wikis_create_submit">Құру</string>
-    <string name="wikis_create_cancel">Болдырмау</string>
     <string name="wikis_comments_empty_title">Әлі пікірлер жоқ</string>
     <string name="wikis_comments_empty_subtitle">Бұл бетке бірінші болып пікір қалдырыңыз.</string>
-    <string name="wikis_comment_action_reply">Жауап беру</string>
     <string name="wikis_comment_replying_to">%1$s пайдаланушысына жауап беру</string>
     <string name="wikis_comment_clear_reply">Жауаптан бас тарту</string>
-    <string name="wikis_comment_action_edit">Өңдеу</string>
     <string name="wikis_comment_action_delete">Жою</string>
     <string name="wikis_comment_action_save">Сақтау</string>
     <string name="wikis_comment_action_cancel">Болдырмау</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Жаңа бет</string>
     <string name="wikis_editor_preview">Алдын ала қарау</string>
     <string name="wikis_editor_preview_untitled">Атаусыз</string>
-    <string name="wikis_editor_edit">Өңдеу</string>
     <string name="wikis_editor_insert">Кірістіру</string>
     <string name="wikis_editor_attachments">Тіркемелер</string>
     <string name="wikis_editor_delete">Бетті жою</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Жүктеп салынуда…</string>
     <string name="wikis_attachments_upload_failed">Файлдарды жүктеп салу сәтсіз аяқталды</string>
     <string name="wikis_attachments_search_clear">Іздеуді тазалау</string>
-    <string name="wikis_attachments_filter">Сүзгі</string>
     <string name="wikis_attachments_filter_all">Барлық файлдар</string>
     <string name="wikis_attachments_filter_images">Суреттер</string>
     <string name="wikis_attachments_filter_documents">Құжаттар</string>
-    <string name="wikis_attachments_sort">Сұрыптау</string>
     <string name="wikis_attachments_sort_date">Күн</string>
     <string name="wikis_attachments_sort_name">Аты</string>
     <string name="wikis_attachments_sort_size">Өлшем</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Енгізу сілтемесін көшіру</string>
     <string name="wikis_attachments_embed_copied">Енгізу сілтемесі көшірілді</string>
     <string name="wikis_attachments_download">Жүктеп алу</string>
-    <string name="wikis_attachments_copy_success">Енгізу сілтемесі көшірілді</string>
     <string name="wikis_attachments_delete">Жою</string>
     <string name="wikis_attachments_delete_confirm_title">Тіркемені жою</string>
     <string name="wikis_attachments_delete_success">Тіркеме жойылды</string>
     <string name="wikis_attachments_delete_failed">Тіркемені жою сәтсіз аяқталды</string>
-    <string name="wikis_attachments_open">Ашу</string>
     <string name="wikis_attachments_empty_title">Тіркемелер әлі жоқ</string>
     <string name="wikis_attachments_no_results_title">Іздеуіңізге сәйкес тіркемелер жоқ</string>
     <string name="wikis_attachments_no_results_description">Басқа іздеу терминін немесе сүзгіні қолданып көріңіз.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Бұл әрекетті қайтаруға болмайды. Бұл wiki-ді және оның барлық мазмұнын біржола жояды.</string>
     <string name="wikis_settings_delete_success">Wiki жойылды</string>
     <string name="wikis_settings_delete_failed">Уики жою сәтсіз аяқталды</string>
-    <string name="wikis_access_add_action">Қосу</string>
     <string name="wikis_access_add_subject_label">Пайдаланушы</string>
     <string name="wikis_access_level_edit">Өңдеу және қарау</string>
     <string name="wikis_access_level_view">Тек көру</string>
     <string name="wikis_access_level_none">Қолжетімсіз</string>
-    <string name="wikis_access_owner_label">Иесі</string>
     <string name="wikis_access_tab_users">Пайдаланушылар</string>
     <string name="wikis_access_tab_groups">Топтар</string>
     <string name="wikis_access_tab_other">Басқа</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Кіруді жою сәтсіз аяқталды</string>
     <string name="wikis_replicas_empty_title">Реплика әлі жоқ</string>
     <string name="wikis_replicas_empty_message">Басқа wiki-лер бұл wiki-ді көшіргенде, олар осы жерде көрінеді.</string>
-    <string name="wikis_replicas_col_id">Идентификатор</string>
     <string name="wikis_replicas_never_synced">Ешқашан</string>
     <string name="wikis_replicas_remove_confirm_title">Реплика жою керек пе?</string>
     <string name="wikis_replicas_remove_confirm_action">Жою</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” беті әлі жоқ.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Уики сілтемесі</string>
-    <string name="wikis_pageview_share_link_copied">Бет сілтемесі алмасу буферіне көшірілді</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki бет сілтемесі</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Сілтеме</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki іздеу…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s жазылымынан бас тартқыңыз келетініне сенімдісіз бе?</string>
-    <string name="wikis_subscribe_failed_502">Ол сервер қолжетімсіз. Қайталап көру…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Аты, ID, саусақ ізі немесе URL бойынша іздеу…</string>
     <string name="wikis_join_search_button">Wiki іздеу…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Жауап жазыңыз…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Мазмұныңызды осында Markdown арқылы жазыңыз…</string>
     <string name="wikis_insert_dialog_empty">Әзірге тіркемелер жоқ. Бастау үшін файл жүктеңіз.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Тег бос болмауы керек</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Ендіру сілтемесін көшіру мүмкін болмады</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” жойылсын ба? Мұны қайтару мүмкін емес.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Осы бетке файл қосу үшін Жүктеу түймесін түртіңіз.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d жауап</item>
         <item quantity="other">+%d тағы жауап</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d беттің атауы өзгертілді</item>
-        <item quantity="other">%1$d беттің атауы өзгертілді</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d сілтеме жаңартылды</item>
-        <item quantity="other">%1$d сілтеме жаңартылды</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d бет</item>
         <item quantity="other">%d бет</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Түсіндірмені сақтау мүмкін болмады</string>
     <string name="wikis_attachments_upload_types">Қолдау көрсетілетін файлдар: суреттер, PDF, DOC, DOCX, TXT және MD.</string>
     <string name="wikis_attachments_upload_limits">Үлкен жүктеулер серверіңіздің немесе прокси конфигурациясымен шектелуі мүмкін.</string>
+    <string name="wikis_rss_replace">Алмастыру</string>
+    <string name="wikis_rss_copied_new">Жаңа RSS URL алмасу буферіне көшірілді</string>
+    <string name="wikis_rss_exists">Бұл арна URL мекенжайы бұрын берілген және қайта көрсетілмейді.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Алғашқы %1$d пікір көрсетілуде.</item>
+        <item quantity="other">Алғашқы %1$d пікір көрсетілуде.</item>
+    </plurals>
 </resources>

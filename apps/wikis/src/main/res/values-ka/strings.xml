@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">ვიკების ძიება</string>
     <string name="wikis_sidebar_create">wiki-ის შექმნა</string>
     <string name="wikis_pageview_title_fallback">გვერდი</string>
-    <string name="wikis_pageview_wiki_fallback">რატომ უნდა გადაიხედოს ეს ლისტინგი?</string>
-    <string name="wikis_pageview_back">უკან</string>
     <string name="wikis_pageview_page_actions">გვერდის მოქმედებები</string>
     <string name="wikis_pageview_toc">ამ გვერდზე</string>
     <string name="wikis_pageview_not_found_title">გვერდი ვერ მოიძებნა</string>
     <string name="wikis_pageview_create_this_page">ამ გვერდის შექმნა</string>
     <string name="wikis_pageview_rss_copied">RSS URL დაკოპირდა</string>
-    <string name="wikis_pageview_rss_failed">RSS ტოკენის მიღება ვერ მოხერხდა</string>
     <string name="wikis_page_action_section_page">გვერდი</string>
     <string name="wikis_page_action_edit">რედაქტირება</string>
     <string name="wikis_page_action_rename">სახელის შეცვლა</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">ვიკი სინქრონიზდა</string>
     <string name="wikis_empty_title">დაიწყეთ თქვენი პირველი ვიკი</string>
     <string name="wikis_empty_subtitle">მოძებნეთ ვიკი გამოსაწერად ან შექმენით ერთი თქვენი დოკუმენტაციის გამოსაქვეყნებლად.</string>
-    <string name="wikis_subscribed_badge">გამოწერილი</string>
     <string name="wikis_create_button">wiki-ის შექმნა</string>
     <string name="wikis_recommended_section">რეკომენდებული ვიკიები</string>
     <string name="wikis_subscribe_button">გამოწერა</string>
-    <string name="wikis_subscribed">გამოწერილი</string>
     <string name="wikis_unsubscribe_action">ამოუცნობი ანგარიში</string>
     <string name="wikis_unsubscribing">გამოწერის გაუქმება მიმდინარეობს...</string>
     <string name="wikis_unsubscribe_confirm_title">ამოუცნობი ანგარიში</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">სახელი</string>
     <string name="wikis_create_privacy_label">ნებისმიერს wiki-ის ძიების ნება დართე</string>
     <string name="wikis_create_submit">შექმნა</string>
-    <string name="wikis_create_cancel">გაუქმება</string>
     <string name="wikis_comments_empty_title">კომენტარები ჯერ არ არის</string>
     <string name="wikis_comments_empty_subtitle">იყავით პირველი ვინც დააკომენტარებს ამ გვერდს.</string>
-    <string name="wikis_comment_action_reply">პასუხი</string>
     <string name="wikis_comment_replying_to">პასუხი %1$s-ს</string>
     <string name="wikis_comment_clear_reply">პასუხის გაუქმება</string>
-    <string name="wikis_comment_action_edit">რედაქტირება</string>
     <string name="wikis_comment_action_delete">წაშლა</string>
     <string name="wikis_comment_action_save">შენახვა</string>
     <string name="wikis_comment_action_cancel">გაუქმება</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">ახალი გვერდი</string>
     <string name="wikis_editor_preview">გადახედვა</string>
     <string name="wikis_editor_preview_untitled">შეჩერება მოხსნილია</string>
-    <string name="wikis_editor_edit">რედაქტირება</string>
     <string name="wikis_editor_insert">ჩასმა</string>
     <string name="wikis_editor_attachments">დანართები</string>
     <string name="wikis_editor_delete">გვერდის წაშლა</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">იტვირთება...</string>
     <string name="wikis_attachments_upload_failed">ფაილების ატვირთვა ვერ მოხერხდა</string>
     <string name="wikis_attachments_search_clear">ძიების გასუფთავება</string>
-    <string name="wikis_attachments_filter">ფილტრი</string>
     <string name="wikis_attachments_filter_all">ყველა ფაილი</string>
     <string name="wikis_attachments_filter_images">სურათები</string>
     <string name="wikis_attachments_filter_documents">დოკუმენტები</string>
-    <string name="wikis_attachments_sort">დახარისხება</string>
     <string name="wikis_attachments_sort_date">თარიღი</string>
     <string name="wikis_attachments_sort_name">სახელი</string>
     <string name="wikis_attachments_sort_size">ზომა</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">embed ბმულის კოპირება</string>
     <string name="wikis_attachments_embed_copied">ჩასართავი ბმული დაკოპირდა</string>
     <string name="wikis_attachments_download">ჩამოტვირთვა</string>
-    <string name="wikis_attachments_copy_success">ჩასართავი ბმული დაკოპირდა</string>
     <string name="wikis_attachments_delete">წაშლა</string>
     <string name="wikis_attachments_delete_confirm_title">დანართის წაშლა</string>
     <string name="wikis_attachments_delete_success">დანართი წაშლილია</string>
     <string name="wikis_attachments_delete_failed">დანართის წაშლა ვერ მოხერხდა</string>
-    <string name="wikis_attachments_open">გახსნა</string>
     <string name="wikis_attachments_empty_title">დანართები ჯერ არ არის</string>
     <string name="wikis_attachments_no_results_title">თქვენი ძიების შესაბამისი დანართები არ არის</string>
     <string name="wikis_attachments_no_results_description">სცადეთ სხვა ძიების ტერმინი</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ეს მოქმედება ვერ გაუქმდება. ის სამუდამოდ წაშლის ვიკის და მთელ მის შინაარსს.</string>
     <string name="wikis_settings_delete_success">ვიკი შეიქმნა</string>
     <string name="wikis_settings_delete_failed">ვიკის წაშლა ვერ მოხერხდა</string>
-    <string name="wikis_access_add_action">დამატება</string>
     <string name="wikis_access_add_subject_label">მომხმარებელი</string>
     <string name="wikis_access_level_edit">რედაქტირება და ნახვა</string>
     <string name="wikis_access_level_view">ხედის კონტროლები</string>
     <string name="wikis_access_level_none">წვდომა არ არის</string>
-    <string name="wikis_access_owner_label">მფლობელი</string>
     <string name="wikis_access_tab_users">მომხმარებლის სახელი</string>
     <string name="wikis_access_tab_groups">ჯგუფები</string>
     <string name="wikis_access_tab_other">სხვა</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">წვდომის წაშლა ვერ მოხერხდა</string>
     <string name="wikis_replicas_empty_title">რეპლიკები ჯერ არ არის</string>
     <string name="wikis_replicas_empty_message">როცა სხვა ვიკები დაარეპლიცირებენ ამ ვიკის, ისინი აქ გამოჩნდებიან.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">არასოდეს</string>
     <string name="wikis_replicas_remove_confirm_title">რეპლიკის წაშლა?</string>
     <string name="wikis_replicas_remove_confirm_action">წაშლა</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">გვერდი „%1$s“ ჯერ არ არსებობს.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">ვიკის ბმული</string>
-    <string name="wikis_pageview_share_link_copied">გვერდის ბმული დაკოპირდა ბუფერში</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki გვერდის ბმული</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">ბმული</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki-ს ძებნა…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">დარწმუნებული ხართ, რომ გსურთ %1$s-ის გამოწერის გაუქმება?</string>
-    <string name="wikis_subscribe_failed_502">ეს სერვერი მიუწვდომელია. ხელახლა ცდა…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ძებნა სახელით, ID-ით, ანაბეჭდით ან URL-ით…</string>
     <string name="wikis_join_search_button">wiki-ების ძებნა…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">დაწერეთ პასუხი…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">დაწერეთ თქვენი შიგთავსი აქ Markdown-ით…</string>
     <string name="wikis_insert_dialog_empty">ჯერ არ არის დანართები. ატვირთეთ ფაილი დასაწყებად.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">ტეგი ცარიელი ვერ იქნება</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">ჩასამაგრებელი ბმულის კოპირება ვერ მოხერხდა</string>
     <string name="wikis_attachments_delete_confirm_message">წაიშალოს „%1$s“? ამის გაუქმება შეუძლებელია.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">შეეხეთ ატვირთვას ამ გვერდზე ფაილების დასამატებლად.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d პასუხი</item>
         <item quantity="other">%d პასუხი</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">გადაერქვა %1$d გვერდს</item>
-        <item quantity="other">გადაერქვა %1$d გვერდს</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">განახლდა %1$d ბმული</item>
-        <item quantity="other">განახლდა %1$d ბმული</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d ფაილი</item>
         <item quantity="other">%d ფაილი</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">წარწერის შენახვა ვერ მოხერხდა</string>
     <string name="wikis_attachments_upload_types">მხარდაჭერილი ფაილები: სურათები, PDF, DOC, DOCX, TXT და MD.</string>
     <string name="wikis_attachments_upload_limits">დიდი ატვირთვები შეიძლება შეიზღუდოს თქვენი სერვერის ან პროქსის კონფიგურაციით.</string>
+    <string name="wikis_rss_replace">ჩანაცვლება</string>
+    <string name="wikis_rss_copied_new">ახალი RSS URL დაკოპირდა</string>
+    <string name="wikis_rss_exists">ეს არხის URL უკვე გაცემულია და ხელახლა ვერ გამოჩნდება.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">ნაჩვენებია პირველი %1$d კომენტარი.</item>
+        <item quantity="other">ნაჩვენებია პირველი %1$d კომენტარი.</item>
+    </plurals>
 </resources>
