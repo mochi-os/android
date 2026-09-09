@@ -15,7 +15,6 @@ import com.google.gson.annotations.SerializedName
  */
 data class Game(
     val id: String = "",
-    val fingerprint: String? = null,
     val identity: String = "",
     @SerializedName("identity_name") val identityName: String = "",
     val opponent: String = "",
@@ -56,6 +55,21 @@ data class GameViewResponse(
 )
 
 /** A single chat / move / system message attached to a game. */
+/**
+ * Dedupe key for the merged message pages. Both merge sites take rows from
+ * `:game/-/messages`, so every one carries the server's id; keying on the
+ * content would collapse two identical messages sent in the same second.
+ */
+internal fun messageKey(message: GameMessage): String = message.id
+
+/**
+ * An opponent's avatar through the game's own user-asset proxy, which can
+ * serve a player whose person entity lives on another server; the direct
+ * people route cannot.
+ */
+fun opponentAvatarUrl(game: String, opponent: String): String =
+    "/chess/$game/-/user/$opponent/asset/avatar"
+
 data class GameMessage(
     val id: String = "",
     val game: String = "",

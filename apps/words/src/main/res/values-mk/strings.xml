@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Мени</string>
-    <string name="words_list_new">Нова игра</string>
     <string name="words_list_logout">Одјави се</string>
-    <string name="words_list_empty_title">Сè уште нема игри</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Завршено</string>
     <string name="words_sidebar_new_game">Нова игра</string>
     <string name="words_new_game_title">Нова игра</string>
@@ -30,7 +26,6 @@
     <string name="words_detail_action_rematch">Реванш</string>
     <string name="words_detail_action_delete">Избриши игра</string>
     <string name="words_detail_chat_title">Разговор</string>
-    <string name="words_detail_invalid_move">Невалиден потег</string>
     <string name="words_detail_recall">Повлечи</string>
     <string name="words_detail_submit">Поднеси</string>
     <string name="words_detail_cancel">Откажи</string>
@@ -38,19 +33,8 @@
     <string name="words_detail_blank_title">Избери буква</string>
     <string name="words_detail_resign_title">Да се откажете од играта?</string>
     <string name="words_detail_resign_message">Сигурен ли си дека сакаш да се повлечеш?</string>
-    <string name="words_detail_failed_move">Неуспешно поднесување на потег</string>
-    <string name="words_detail_failed_pass">Неуспешно пасување</string>
-    <string name="words_detail_failed_exchange">Неуспешна размена</string>
-    <string name="words_detail_failed_resign">Неуспешно поднесување оставка</string>
-    <string name="words_detail_failed_rematch">Неуспешно креирање на нов натпревар</string>
-    <string name="words_detail_failed_delete">Неуспешно бришење на игра</string>
-    <string name="words_detail_game_deleted">Играта е избришана</string>
     <string name="words_channel_name">Зборови известувања</string>
     <string name="words_channel_description">Известувања за потези, размени и резултати од партии.</string>
-    <string name="words_list_empty_subtitle">Допрете го копчето + за да ја започнете првата партија.</string>
-    <string name="words_list_status_finished">Завршена</string>
-    <string name="words_list_status_resigned">Предадена</string>
-    <string name="words_list_your_turn">Вашиот ред</string>
     <string name="words_sidebar_active">Активни партии</string>
     <string name="words_sidebar_empty">Сè уште нема партии.</string>
     <string name="words_new_game_choose_opponents">Изберете противници</string>
@@ -58,7 +42,6 @@
     <string name="words_new_game_player_count">%1$d играчи</string>
     <string name="words_new_game_no_friends_subtitle">Додадете пријатели во апликацијата Луѓе за да започнете да играте.</string>
     <string name="words_detail_title">Партија</string>
-    <string name="words_detail_coming_soon">Детали за партијата наскоро</string>
     <string name="words_detail_status_opponent_move">Ред на %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s победува</string>
     <string name="words_detail_player_fallback">Играч %1$d</string>

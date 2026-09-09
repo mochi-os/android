@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">သူငယ်ချင်းများ ထည့်မည်</string>
     <string name="chess_new_start_button">ဂိမ်း စတင်မည်</string>
     <string name="chess_new_creating">ဖန်တီးနေသည်…</string>
-    <string name="chess_new_failed">ဂိမ်း ဖန်တီး၍ မရပါ</string>
     <string name="chess_chat_title">စကားပြောခန်း</string>
     <string name="chess_open_chat">ချတ် panel ကို ဖွင့်</string>
     <string name="chess_open_actions">ဂိမ်း လုပ်ဆောင်ချက်များကို ဖွင့်</string>

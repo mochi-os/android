@@ -34,7 +34,6 @@
     <string name="go_game_deleted">गेम हटवला</string>
     <string name="go_new_game_add_friends">मित्र जोडा</string>
     <string name="go_new_game_board_size_label">बोर्डचा आकार</string>
-    <string name="go_new_game_cancel">रद्द करा</string>
     <string name="go_new_game_friend_label">विरोधक</string>
     <string name="go_new_game_komi_field_label">कोमी</string>
     <string name="go_new_game_komi_label">कोमी</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">गेमचा राजीनामा द्यायचा?</string>
     <string name="go_sidebar_completed">पूर्ण केले</string>
     <string name="go_sidebar_new_game">नवीन गेम</string>
-    <string name="go_status_active">सक्रिय</string>
     <string name="go_status_draw">ड्रॉ</string>
     <string name="go_status_draw_text">ड्रॉ</string>
     <string name="go_status_game_over">गेम संपला</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">अद्याप कोणतेही सक्रिय खेळ नाहीत.</string>
-    <string name="go_empty_completed">अद्याप कोणतेही पूर्ण झालेले खेळ नाहीत.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">नवीन Go खेळ</string>
     <string name="go_new_game_no_friends">खेळ सुरू करण्यापूर्वी तुम्हाला मित्र जोडावा लागेल.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">काळा प्रथम खेळतो याची भरपाई म्हणून पांढऱ्याच्या गुणांमध्ये जोडलेले गुण</string>
-    <string name="go_new_game_create_error">खेळ सुरू करण्यात अयशस्वी</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go बोर्ड</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d गो बोर्ड, काळा दगड ठेवण्याची तुमची पाळी</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d गो बोर्ड, पांढरा दगड ठेवण्याची तुमची पाळी</string>
+    <string name="go_status_scoring">मोजणी — गुणांवर सहमत व्हा किंवा खेळत राहा</string>
+    <string name="go_score_proposed">प्रस्तावित स्कोअर: काळा %1$s, पांढरा %2$s</string>
+    <string name="go_score_opponent_accepted">तुमचा प्रतिस्पर्धी हा स्कोअर स्वीकारतो: काळा %1$s, पांढरा %2$s</string>
+    <string name="go_score_waiting">स्कोअर स्वीकारला — %1$s ची वाट पाहत आहे</string>
+    <string name="go_score_accept">स्कोअर स्वीकारा</string>
+    <string name="go_score_resume">खेळ पुन्हा सुरू करा</string>
+    <string name="go_error_score_resume_failed">खेळ पुन्हा सुरू करण्यात अयशस्वी</string>
+    <string name="go_error_score_accept_failed">स्कोअर स्वीकारण्यात अयशस्वी</string>
 </resources>

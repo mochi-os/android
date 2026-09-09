@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Partida suprimida</string>
     <string name="go_new_game_add_friends">Afegeix amistats</string>
     <string name="go_new_game_board_size_label">Mida del tauler</string>
-    <string name="go_new_game_cancel">Cancel·la</string>
     <string name="go_new_game_friend_label">Adversari</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Vols abandonar la partida?</string>
     <string name="go_sidebar_completed">Completat</string>
     <string name="go_sidebar_new_game">Joc nou</string>
-    <string name="go_status_active">Actiu</string>
     <string name="go_status_draw">Taules</string>
     <string name="go_status_draw_text">Taules</string>
     <string name="go_status_game_over">Partida acabada</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Obre la barra lateral</string>
     <string name="go_sidebar_active">Partides actives</string>
     <string name="go_empty_active">Encara no hi ha partides actives.</string>
-    <string name="go_empty_completed">Encara no hi ha partides completades.</string>
-    <string name="go_status_finished">Acabada</string>
     <string name="go_status_resigned">Abandonada</string>
-    <string name="go_card_vs">contra %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nova partida de Go</string>
     <string name="go_new_game_no_friends">Necessites afegir un amic abans de poder començar una partida.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punts afegits a la puntuació del Blanc per compensar que el Negre comença primer</string>
-    <string name="go_new_game_create_error">No s\'ha pogut iniciar la partida</string>
 
     <string name="go_board_a11y">Tauler de Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Tauler de Go de %1$d×%1$d, et toca posar una pedra negra</string>
     <string name="go_board_a11y_turn_white">Tauler de Go de %1$d×%1$d, et toca posar una pedra blanca</string>
+    <string name="go_status_scoring">Recompte — acordeu la puntuació o continueu jugant</string>
+    <string name="go_score_proposed">Puntuació proposada: negres %1$s, blanques %2$s</string>
+    <string name="go_score_opponent_accepted">El teu adversari accepta aquesta puntuació: negres %1$s, blanques %2$s</string>
+    <string name="go_score_waiting">Puntuació acceptada — esperant %1$s</string>
+    <string name="go_score_accept">Accepta la puntuació</string>
+    <string name="go_score_resume">Reprèn la partida</string>
+    <string name="go_error_score_resume_failed">No s\'ha pogut reprendre la partida</string>
+    <string name="go_error_score_accept_failed">No s\'ha pogut acceptar la puntuació</string>
 </resources>

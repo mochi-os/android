@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Oyun silindi</string>
     <string name="go_new_game_add_friends">Dostlar əlavə et</string>
     <string name="go_new_game_board_size_label">Lövhə ölçüsü</string>
-    <string name="go_new_game_cancel">Ləğv et</string>
     <string name="go_new_game_friend_label">Rəqib</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Oyundan təslim olunsun?</string>
     <string name="go_sidebar_completed">Tamamlandı</string>
     <string name="go_sidebar_new_game">Yeni oyun</string>
-    <string name="go_status_active">Aktiv</string>
     <string name="go_status_draw">Çək</string>
     <string name="go_status_draw_text">Çək</string>
     <string name="go_status_game_over">Oyun bitdi</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Hələ aktiv oyun yoxdur.</string>
-    <string name="go_empty_completed">Hələ tamamlanmış oyun yoxdur.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Yeni Go oyunu</string>
     <string name="go_new_game_no_friends">Oyuna başlamazdan əvvəl dost əlavə etməlisiniz.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Qaranın birinci başlamasını kompensasiya etmək üçün Ağın hesabına əlavə edilən xallar</string>
-    <string name="go_new_game_create_error">Oyun başladıla bilmədi</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go lövhəsi, sizin gedişiniz. Naviqasiya üçün ox düymələrindən və ağ daş qoymaq üçün Enter və ya Space-dən istifadə edin.</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go lövhəsi, qara daş qoymaq növbəsi sizindir</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go lövhəsi, ağ daş qoymaq növbəsi sizindir</string>
+    <string name="go_status_scoring">Sayım — hesabla razılaşın və ya oyunu davam etdirin</string>
+    <string name="go_score_proposed">Təklif olunan xal: qara %1$s, ağ %2$s</string>
+    <string name="go_score_opponent_accepted">Rəqibiniz bu xalı qəbul edir: qara %1$s, ağ %2$s</string>
+    <string name="go_score_waiting">Xal qəbul edildi — %1$s gözlənilir</string>
+    <string name="go_score_accept">Xalı qəbul et</string>
+    <string name="go_score_resume">Oyunu davam etdir</string>
+    <string name="go_error_score_resume_failed">Oyunu davam etdirmək alınmadı</string>
+    <string name="go_error_score_accept_failed">Xal qəbul edilmədi</string>
 </resources>

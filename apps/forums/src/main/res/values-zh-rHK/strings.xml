@@ -278,4 +278,5 @@
     <plurals name="forums_new_posts">
         <item quantity="other">%d 則新貼文</item>
     </plurals>
+    <string name="forums_moderation_target_user">用戶</string>
 </resources>

@@ -23,7 +23,6 @@
     <string name="chess_new_add_friends">加入朋友</string>
     <string name="chess_new_start_button">開始對局</string>
     <string name="chess_new_creating">建立中…</string>
-    <string name="chess_new_failed">建立對局失敗</string>
     <string name="chess_detail_unavailable">對局無法使用</string>
     <string name="chess_chat_title">聊天</string>
     <string name="chess_open_chat">開啟聊天面板</string>

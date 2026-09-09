@@ -34,7 +34,6 @@
     <string name="go_game_deleted">遊戲已刪除</string>
     <string name="go_new_game_add_friends">新增好友</string>
     <string name="go_new_game_board_size_label">棋盤大小</string>
-    <string name="go_new_game_cancel">取消</string>
     <string name="go_new_game_friend_label">對手</string>
     <string name="go_new_game_komi_field_label">貼目</string>
     <string name="go_new_game_komi_label">貼目</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">認輸?</string>
     <string name="go_sidebar_completed">已完成</string>
     <string name="go_sidebar_new_game">新遊戲</string>
-    <string name="go_status_active">啟用中</string>
     <string name="go_status_draw">和局</string>
     <string name="go_status_draw_text">和局</string>
     <string name="go_status_game_over">遊戲結束</string>
@@ -63,7 +61,6 @@
     <string name="go_status_you_win">您贏了!</string>
     <string name="go_status_your_move">輪到您</string>
 
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
 
 </resources>

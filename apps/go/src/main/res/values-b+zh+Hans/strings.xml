@@ -34,7 +34,6 @@
     <string name="go_game_deleted">已删除游戏</string>
     <string name="go_new_game_add_friends">添加好友</string>
     <string name="go_new_game_board_size_label">棋盘大小</string>
-    <string name="go_new_game_cancel">取消</string>
     <string name="go_new_game_friend_label">对手</string>
     <string name="go_new_game_komi_field_label">贴目</string>
     <string name="go_new_game_komi_label">贴目</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">认输?</string>
     <string name="go_sidebar_completed">已完成</string>
     <string name="go_sidebar_new_game">新游戏</string>
-    <string name="go_status_active">活跃</string>
     <string name="go_status_draw">和棋</string>
     <string name="go_status_draw_text">和棋</string>
     <string name="go_status_game_over">游戏结束</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">打开侧边栏</string>
     <string name="go_sidebar_active">进行中的棋局</string>
     <string name="go_empty_active">暂无进行中的棋局。</string>
-    <string name="go_empty_completed">暂无完成的棋局。</string>
-    <string name="go_status_finished">已结束</string>
     <string name="go_status_resigned">已认输</string>
-    <string name="go_card_vs">对阵 %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">新围棋棋局</string>
     <string name="go_new_game_no_friends">您需要先添加朋友,然后才能开始棋局。</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">为补偿黑棋先行而加到白棋分数上的点数</string>
-    <string name="go_new_game_create_error">开始棋局失败</string>
 
     <string name="go_board_a11y">%1$d×%1$d 围棋棋盘</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d 围棋棋盘，轮到你落黑子</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d 围棋棋盘，轮到你落白子</string>
+    <string name="go_status_scoring">点目 — 就目数达成一致或继续对局</string>
+    <string name="go_score_proposed">提议得分：黑 %1$s，白 %2$s</string>
+    <string name="go_score_opponent_accepted">对手同意此得分：黑 %1$s，白 %2$s</string>
+    <string name="go_score_waiting">已接受得分 — 等待 %1$s</string>
+    <string name="go_score_accept">接受得分</string>
+    <string name="go_score_resume">恢复对局</string>
+    <string name="go_error_score_resume_failed">恢复对局失败</string>
+    <string name="go_error_score_accept_failed">接受得分失败</string>
 </resources>

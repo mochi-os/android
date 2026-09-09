@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">მეგობრების დამატება</string>
     <string name="chess_new_start_button">თამაშის დაწყება</string>
     <string name="chess_new_creating">იქმნება…</string>
-    <string name="chess_new_failed">თამაშის შექმნა ვერ მოხერხდა</string>
     <string name="chess_chat_title">ჩატი</string>
     <string name="chess_open_chat">ჩატის პანელის გახსნა</string>
     <string name="chess_open_actions">თამაშის მოქმედებების გახსნა</string>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Orð</string>
     <string name="words_list_title">Orð</string>
     <string name="words_list_menu">Valmynd</string>
-    <string name="words_list_new">Nýr leikur</string>
     <string name="words_list_logout">Skrá út</string>
-    <string name="words_list_empty_title">Engir leikir ennþá</string>
-    <string name="words_sidebar_header">Orð</string>
     <string name="words_sidebar_completed">Lokið</string>
     <string name="words_sidebar_new_game">Nýr leikur</string>
     <string name="words_new_game_title">Nýr leikur</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Endurleikur</string>
     <string name="words_detail_action_delete">Eyða leik</string>
     <string name="words_detail_chat_title">Spjall</string>
-    <string name="words_detail_invalid_move">Ógildur leikur</string>
     <string name="words_detail_recall">Innkalla</string>
     <string name="words_detail_submit">Senda</string>
     <string name="words_detail_cancel">Hætta við</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Veldu staf</string>
     <string name="words_detail_resign_title">Gefast upp í leik?</string>
     <string name="words_detail_resign_message">Ertu viss um að þú viljir gefast upp?</string>
-    <string name="words_detail_failed_move">Tókst ekki að senda leik</string>
-    <string name="words_detail_failed_pass">Tókst ekki að sleppa</string>
-    <string name="words_detail_failed_exchange">Tókst ekki að skipta</string>
-    <string name="words_detail_failed_resign">Tókst ekki að gefast upp</string>
-    <string name="words_detail_failed_rematch">Tókst ekki að búa til endurleik</string>
-    <string name="words_detail_failed_delete">Tókst ekki að eyða leik</string>
-    <string name="words_detail_game_deleted">Leik eytt</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Tilkynningar um Words-umferðir, skipti og úrslit leikja.</string>
-    <string name="words_list_empty_subtitle">Ýttu á +-hnappinn til að hefja fyrsta leikinn þinn.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Engir leikir enn.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Bættu við vinum í People-forritinu til að byrja að spila.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Leikjaupplýsingar koma bráðum</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

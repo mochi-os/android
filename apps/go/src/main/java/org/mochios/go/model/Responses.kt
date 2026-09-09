@@ -62,6 +62,10 @@ data class DrawOfferResponse(
     val success: Boolean = true,
 )
 
+data class ScoreResponse(
+    val success: Boolean = true,
+)
+
 data class MoveRequest(
     val fen: String,
     @SerializedName("previous_fen")
@@ -78,14 +82,15 @@ data class MoveRequest(
 )
 
 /**
- * Pass body; when the second consecutive pass ends the game the caller also
- * sends `status="finished"`, the winner and both scores.
+ * Pass body. The second consecutive pass sends `status="scoring"` and the
+ * counted score as a *proposal*: counting cannot tell a dead stone from a live
+ * one, so the rules settle a disagreement by resuming play. The result is
+ * declared only once both players accept, by the server.
  */
 data class PassRequest(
     val fen: String,
     val sgf: String = "",
     val status: String? = null,
-    val winner: String? = null,
     @SerializedName("score_black")
     val scoreBlack: Double? = null,
     @SerializedName("score_white")

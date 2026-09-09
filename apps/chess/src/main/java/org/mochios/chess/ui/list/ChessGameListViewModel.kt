@@ -38,17 +38,6 @@ data class ChessGameListUiState(
     val completedSidebar: List<ChessSidebarGame> = emptyList(),
 )
 
-/**
- * One-shot side effects (toasts, navigation) kept out of the UI state.
- */
-sealed class ChessGameListEvent {
-    /** Show a transient string (already localised) in a snackbar. */
-    data class Toast(val message: String) : ChessGameListEvent()
-
-    /** Navigate to a specific game (e.g. after Start Game returns). */
-    data class OpenGame(val gameId: String) : ChessGameListEvent()
-}
-
 @HiltViewModel
 class ChessGameListViewModel @Inject constructor(
     private val repo: ChessRepository,
@@ -57,9 +46,6 @@ class ChessGameListViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ChessGameListUiState())
     val uiState: StateFlow<ChessGameListUiState> = _uiState.asStateFlow()
-
-    private val _events = MutableSharedFlow<ChessGameListEvent>(extraBufferCapacity = 8)
-    val events: SharedFlow<ChessGameListEvent> = _events.asSharedFlow()
 
     init {
         viewModelScope.launch {
@@ -114,9 +100,8 @@ class ChessGameListViewModel @Inject constructor(
     }
 
     private fun Game.toSidebarRow(identity: String): ChessSidebarGame {
-        val routeId = fingerprint?.takeIf { it.isNotBlank() } ?: id
         return ChessSidebarGame(
-            id = routeId,
+            id = id,
             opponentId = opponentId(identity),
             opponentName = opponentName(identity),
             updated = updated,

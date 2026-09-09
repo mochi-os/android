@@ -99,8 +99,7 @@ object AttachmentOpener {
      */
     fun cacheBytes(context: Context, fileName: String, body: ResponseBody): File {
         val dir = File(context.cacheDir, CACHE_DIR).apply { mkdirs() }
-        val safe = fileName.replace(UNSAFE_FILENAME, "_").takeLast(120).ifBlank { "download" }
-        val target = File(dir, safe)
+        val target = File(dir, safeName(fileName))
         body.use { source ->
             target.outputStream().use { out -> source.byteStream().copyTo(out) }
         }
@@ -112,10 +111,21 @@ object AttachmentOpener {
      * hostile or absent type cannot become something the viewer will execute.
      */
     fun openCached(context: Context, fileName: String, mime: String?): OpenResult {
-        val file = File(File(context.cacheDir, CACHE_DIR), fileName)
+        // Sanitise exactly as cacheBytes did when it wrote the file, so the two
+        // agree on the on-disk name and a `../` cannot resolve outside the
+        // cache directory - FileProvider then throws rather than serving it.
+        val file = File(File(context.cacheDir, CACHE_DIR), safeName(fileName))
         if (!file.exists()) return OpenResult.FAILED
         return launch(context, file, coerceMimeType(mime.orEmpty()))
     }
+
+    /**
+     * The on-disk name for a caller-supplied one. Both the write ([cacheBytes])
+     * and the read ([openCached]) go through here: a name carrying `../` would
+     * otherwise resolve outside the cache directory the FileProvider serves.
+     */
+    internal fun safeName(fileName: String): String =
+        fileName.replace(UNSAFE_FILENAME, "_").takeLast(120).ifBlank { "download" }
 
     /** Hand [file] to a viewer through the FileProvider. */
     private fun launch(context: Context, file: File, mime: String): OpenResult {
@@ -136,6 +146,10 @@ object AttachmentOpener {
         } catch (e: ActivityNotFoundException) {
             Log.w(TAG, "No app can open ${file.name} ($mime)")
             OpenResult.NO_APP
+        } catch (e: IllegalArgumentException) {
+            // FileProvider refuses a path outside its configured roots.
+            Log.w(TAG, "Not servable through the FileProvider: ${file.name}")
+            OpenResult.FAILED
         }
     }
 

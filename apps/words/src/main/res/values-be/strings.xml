@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_app_title">Словы</string>
     <string name="words_list_title">Словы</string>
     <string name="words_list_menu">Меню</string>
-    <string name="words_list_new">Новая гульня</string>
     <string name="words_list_logout">Выйсці</string>
-    <string name="words_list_empty_title">Пакуль няма гульняў</string>
-    <string name="words_sidebar_header">Словы</string>
     <string name="words_sidebar_completed">Завершана</string>
     <string name="words_sidebar_new_game">Новая гульня</string>
     <string name="words_new_game_title">Новая гульня</string>
@@ -30,7 +26,6 @@
     <string name="words_detail_action_rematch">Reматч</string>
     <string name="words_detail_action_delete">Выдаліць гульню</string>
     <string name="words_detail_chat_title">Чат</string>
-    <string name="words_detail_invalid_move">Няправільны ход</string>
     <string name="words_detail_recall">Адклікаць</string>
     <string name="words_detail_submit">Адправіць</string>
     <string name="words_detail_cancel">Адмена</string>
@@ -38,19 +33,8 @@
     <string name="words_detail_blank_title">Выберыце літару</string>
     <string name="words_detail_resign_title">Здацца ў гульні?</string>
     <string name="words_detail_resign_message">Вы ўпэўнены, што хочаце здацца?</string>
-    <string name="words_detail_failed_move">Не ўдалося адправіць ход</string>
-    <string name="words_detail_failed_pass">Не ўдалося прапусціць</string>
-    <string name="words_detail_failed_exchange">Не ўдалося абмяняць</string>
-    <string name="words_detail_failed_resign">Не ўдалося здацца</string>
-    <string name="words_detail_failed_rematch">Не ўдалося стварыць перагульванне</string>
-    <string name="words_detail_failed_delete">Не ўдалося выдаліць гульню</string>
-    <string name="words_detail_game_deleted">Гульня выдалена</string>
     <string name="words_channel_name">Словы апавяшчэнні</string>
     <string name="words_channel_description">Апавяшчэнні аб хадах, абменах і выніках партый.</string>
-    <string name="words_list_empty_subtitle">Дакраніцеся да кнопкі +, каб пачаць сваю першую партыю.</string>
-    <string name="words_list_status_finished">Завершана</string>
-    <string name="words_list_status_resigned">Здаўся</string>
-    <string name="words_list_your_turn">Ваш ход</string>
     <string name="words_sidebar_active">Актыўныя партыі</string>
     <string name="words_sidebar_empty">Пакуль няма партый.</string>
     <string name="words_new_game_choose_opponents">Выберыце суперніка</string>
@@ -58,7 +42,6 @@
     <string name="words_new_game_player_count">%1$d гульцоў</string>
     <string name="words_new_game_no_friends_subtitle">Дадайце сяброў у праграме Людзі, каб пачаць гуляць.</string>
     <string name="words_detail_title">Партыя</string>
-    <string name="words_detail_coming_soon">Дэталі партыі неўзабаве</string>
     <string name="words_detail_status_opponent_move">Ход %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s выйграў</string>
     <string name="words_detail_player_fallback">Гулец %1$d</string>

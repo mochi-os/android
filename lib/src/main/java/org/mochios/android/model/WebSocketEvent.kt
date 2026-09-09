@@ -22,6 +22,9 @@ data class WebSocketEvent(
     val source: String? = null,
     val target: String? = null,
     val sender: String? = null,
+    // forums post/reject and comment/reject: the forum owner's
+    // machine-readable refusal code, mapped to a message for the author.
+    val reason: String? = null,
     // Chat fields
     val event: String? = null,
     val member: String? = null,

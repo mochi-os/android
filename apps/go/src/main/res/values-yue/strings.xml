@@ -34,7 +34,6 @@
     <string name="go_game_deleted">遊戲已刪除</string>
     <string name="go_new_game_add_friends">新增好友</string>
     <string name="go_new_game_board_size_label">棋盤大小</string>
-    <string name="go_new_game_cancel">取消</string>
     <string name="go_new_game_friend_label">對手</string>
     <string name="go_new_game_komi_field_label">貼目</string>
     <string name="go_new_game_komi_label">貼目</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">認輸?</string>
     <string name="go_sidebar_completed">已完成</string>
     <string name="go_sidebar_new_game">新遊戲</string>
-    <string name="go_status_active">啟用中</string>
     <string name="go_status_draw">和局</string>
     <string name="go_status_draw_text">和局</string>
     <string name="go_status_game_over">遊戲結束</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">No active games yet.</string>
-    <string name="go_empty_completed">No completed games yet.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">New Go game</string>
     <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
-    <string name="go_new_game_create_error">Failed to start game</string>
 
     <string name="go_board_a11y">%1$d×%1$d 圍棋棋盤</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d 圍棋棋盤，輪到你落黑子</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d 圍棋棋盤，輪到你落白子</string>
+    <string name="go_status_scoring">點目 — 就目數達成一致或繼續對局</string>
+    <string name="go_score_proposed">提議分數：黑 %1$s，白 %2$s</string>
+    <string name="go_score_opponent_accepted">對手同意此分數：黑 %1$s，白 %2$s</string>
+    <string name="go_score_waiting">已接受分數 — 等待 %1$s</string>
+    <string name="go_score_accept">接受分數</string>
+    <string name="go_score_resume">恢復對局</string>
+    <string name="go_error_score_accept_failed">接受分數失敗</string>
+    <string name="go_error_score_resume_failed">恢復對局失敗</string>
 </resources>

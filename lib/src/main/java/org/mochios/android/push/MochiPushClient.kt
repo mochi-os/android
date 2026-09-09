@@ -58,28 +58,6 @@ object MochiPushClient {
         Log.i(TAG, "Selected UnifiedPush distributor $chosen of ${available.size}")
         return true
     }
-
-    fun availableDistributors(context: Context): List<String> =
-        UnifiedPush.getDistributors(context)
-
-    /** Currently selected distributor, or null if none chosen yet. */
-    fun selectedDistributor(context: Context): String? =
-        UnifiedPush.getSavedDistributor(context)
-
-    /**
-     * Persist an explicit distributor choice (from a picker UI) and
-     * register all installed Mochi apps against it.
-     */
-    fun selectDistributor(context: Context, packageName: String, instances: List<String>) {
-        UnifiedPush.saveDistributor(context, packageName)
-        for (instance in instances) {
-            try {
-                UnifiedPush.register(context, instance)
-            } catch (e: Exception) {
-                Log.w(TAG, "registerApp($instance) failed: ${e.message}")
-            }
-        }
-    }
 }
 
 /**

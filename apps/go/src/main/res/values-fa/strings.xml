@@ -34,7 +34,6 @@
     <string name="go_game_deleted">بازی حذف شد</string>
     <string name="go_new_game_add_friends">افزودن دوستان</string>
     <string name="go_new_game_board_size_label">اندازهٔ تخته</string>
-    <string name="go_new_game_cancel">لغو</string>
     <string name="go_new_game_friend_label">حریف</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">بازی را تسلیم می‌شوید؟</string>
     <string name="go_sidebar_completed">تکمیل شد</string>
     <string name="go_sidebar_new_game">بازی جدید</string>
-    <string name="go_status_active">فعال</string>
     <string name="go_status_draw">تساوی</string>
     <string name="go_status_draw_text">تساوی</string>
     <string name="go_status_game_over">بازی تمام شد</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">باز کردن نوار کناری</string>
     <string name="go_sidebar_active">بازی‌های فعال</string>
     <string name="go_empty_active">هنوز بازی فعالی وجود ندارد.</string>
-    <string name="go_empty_completed">هنوز بازی تکمیل‌شده‌ای وجود ندارد.</string>
-    <string name="go_status_finished">پایان یافته</string>
     <string name="go_status_resigned">تسلیم شده</string>
-    <string name="go_card_vs">در برابر %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">بازی Go جدید</string>
     <string name="go_new_game_no_friends">قبل از شروع بازی باید یک دوست اضافه کنید.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">امتیازاتی که به امتیاز سفید اضافه می‌شود تا اولین حرکت سیاه را جبران کند</string>
-    <string name="go_new_game_create_error">شروع بازی شکست خورد</string>
 
     <string name="go_board_a11y">تخته Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">تخته گو %1$d×%1$d، نوبت شماست که سنگ سیاه بگذارید</string>
     <string name="go_board_a11y_turn_white">تخته گو %1$d×%1$d، نوبت شماست که سنگ سفید بگذارید</string>
+    <string name="go_status_scoring">شمارش — بر سر امتیاز توافق کنید یا به بازی ادامه دهید</string>
+    <string name="go_score_proposed">امتیاز پیشنهادی: سیاه %1$s، سفید %2$s</string>
+    <string name="go_score_opponent_accepted">حریف شما این امتیاز را می‌پذیرد: سیاه %1$s، سفید %2$s</string>
+    <string name="go_score_waiting">امتیاز پذیرفته شد — در انتظار %1$s</string>
+    <string name="go_score_accept">پذیرش امتیاز</string>
+    <string name="go_score_resume">از سرگیری بازی</string>
+    <string name="go_error_score_resume_failed">از سرگیری بازی ناموفق بود</string>
+    <string name="go_error_score_accept_failed">پذیرش امتیاز ناموفق بود</string>
 </resources>

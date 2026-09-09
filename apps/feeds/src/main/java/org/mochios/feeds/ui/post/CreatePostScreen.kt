@@ -29,6 +29,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
@@ -39,6 +40,7 @@ import androidx.compose.material.icons.filled.Flight
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.AssistChip
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -208,17 +210,23 @@ fun CreatePostScreen(
                 ) {
                     if (isPosting) {
                         CircularProgressIndicator(
-                            modifier = Modifier.size(18.dp),
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
                             strokeWidth = 2.dp,
                         )
                     } else {
-                        Text(
-                            stringResource(
-                                if (isEditing) R.string.feeds_save_label
-                                else R.string.feeds_post_action
-                            )
+                        Icon(
+                            if (isEditing) Icons.Default.Check else Icons.AutoMirrored.Filled.Send,
+                            contentDescription = null,
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
                         )
                     }
+                    Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(
+                        stringResource(
+                            if (isEditing) R.string.feeds_save_label
+                            else R.string.feeds_post_action
+                        )
+                    )
                 }
             }
         },

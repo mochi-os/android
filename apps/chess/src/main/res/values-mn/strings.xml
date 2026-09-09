@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Найзууд нэмэх</string>
     <string name="chess_new_start_button">Тоглоом эхлүүлэх</string>
     <string name="chess_new_creating">Үүсгэж байна…</string>
-    <string name="chess_new_failed">Тоглоом үүсгэж чадсангүй</string>
     <string name="chess_chat_title">Чат</string>
     <string name="chess_open_chat">Чатны самбар нээх</string>
     <string name="chess_open_actions">Тоглоомын үйлдлүүдийг нээх</string>

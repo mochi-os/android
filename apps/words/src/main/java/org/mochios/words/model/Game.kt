@@ -7,7 +7,6 @@ package org.mochios.words.model
 
 data class GameListItem(
     val id: String = "",
-    val fingerprint: String? = null,
     val language: String = "en_US",
     val player_count: Int = 2,
     val player1: String = "",
@@ -39,7 +38,6 @@ data class GameListItem(
  */
 data class Game(
     val id: String = "",
-    val fingerprint: String? = null,
     val language: String = "en_US",
     val player_count: Int = 2,
     val player1: String = "",
@@ -57,6 +55,12 @@ data class Game(
     val current_turn: Int = 1,
     val status: String = "active",
     val winner: String? = null,
+    // Identity of the last player to change the game. On a RESIGNED game that
+    // is the resigner: every play action refuses a game that is not active and
+    // a terminal status dominates the ordering tuple, so nothing writes after
+    // the resignation. It is what tells the resigner apart from the other
+    // players who simply did not win.
+    val writer: String? = null,
     val board: String = "",
     val my_rack: String = "",
     val my_player_number: Int = 0,
@@ -67,6 +71,44 @@ data class Game(
     val updated: Long = 0,
     val created: Long = 0,
 )
+
+/** Tiles the bag must still hold for `action_exchange` to accept a swap. */
+const val EXCHANGE_MINIMUM = 7
+
+/**
+ * Whether a swap would be accepted. The server refuses one once the bag is
+ * below [EXCHANGE_MINIMUM], so the control is not offered there.
+ */
+fun canExchange(game: Game): Boolean = game.bag_count >= EXCHANGE_MINIMUM
+
+/**
+ * Seat of the player who resigned, or null when the game names no writer or
+ * the writer holds no seat.
+ */
+fun resignerSlot(game: Game): Int? {
+    val writer = game.writer
+    if (writer.isNullOrEmpty()) return null
+    for (slot in 1..game.player_count) {
+        if (playerId(game, slot) == writer) return slot
+    }
+    return null
+}
+
+/**
+ * Whether the viewer is the player who resigned. With up to four seats a
+ * resignation leaves players who neither resigned nor won, so this has to be
+ * asked separately from "did I win" - they used to be told they had resigned.
+ *
+ * @param game the game to read.
+ * @param myIdentity the viewer's identity, empty when it has not loaded.
+ */
+fun isResigner(game: Game, myIdentity: String): Boolean {
+    val writer = game.writer
+    if (writer.isNullOrEmpty()) return false
+    if (myIdentity.isNotEmpty()) return writer == myIdentity
+    val slot = resignerSlot(game) ?: return false
+    return slot == game.my_player_number
+}
 
 fun getPlayerNames(game: GameListItem, myIdentity: String): String {
     val names = mutableListOf<String>()

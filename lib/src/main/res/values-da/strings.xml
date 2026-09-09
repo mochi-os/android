@@ -5,10 +5,7 @@
     <string name="auth_email">E-mail</string>
     <string name="auth_continue">Fortsæt</string>
     <string name="auth_verification_code">Verifikationskode</string>
-    <string name="auth_verify">Verificer</string>
-    <string name="auth_authenticator_app">Authenticator-app</string>
     <string name="auth_email_code">E-mailkode</string>
-    <string name="auth_authenticator_code">Authenticator-kode</string>
     <string name="auth_recovery_code">Gendannelseskode</string>
     <string name="auth_name">Navn</string>
     <string name="auth_create">Opret</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Kopier</string>
     <string name="common_copied">Kopieret til udklipsholder</string>
     <string name="comment_edited">(redigeret)</string>
-    <string name="comment_edit_placeholder">Redigér kommentar</string>
     <string name="comment_reply">Svar</string>
-    <string name="comment_reply_placeholder">Svar</string>
-    <string name="comment_send_reply">Send svar</string>
     <string name="person_picker_search">Søg efter brugere</string>
     <string name="place_picker_no_results">Ingen steder fundet</string>
-    <string name="discovery_results">Resultater</string>
     <string name="discovery_recommended">Anbefalet</string>
-    <string name="discovery_subscribed">Abonneret</string>
     <string name="access_add_rule">Tilføj regel</string>
     <string name="access_owner">Ejer</string>
     <string name="access_revoke">Tilbagekald</string>
-    <string name="access_level">Adgangsniveau</string>
     <string name="access_level_comment">Kommentar</string>
     <string name="access_level_view">Vis</string>
     <string name="access_level_none">Ingen</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">Synes godt om</string>
     <string name="reaction_dislike">Synes ikke om</string>
     <string name="reaction_laugh">Grin</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Markér alle læst</string>
     <string name="notifications_clear_all">Ryd alle</string>
-    <string name="notifications_loading">Indlæser…</string>
     <string name="settings_title">Indstillinger</string>
-    <string name="settings_open">Indstillinger</string>
     <string name="settings_appearance">Udseende</string>
     <string name="settings_appearance_light">Lys</string>
     <string name="settings_appearance_dark">Mørk</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Baggrund</string>
     <string name="settings_background_theme">Fra tema</string>
     <string name="settings_background_off">Ingen</string>
-    <string name="profile_title">Profil</string>
-    <string name="profile_open">Profil</string>
-    <string name="profile_display_name">Visningsnavn</string>
-    <string name="profile_save_name">Gem navn</string>
-    <string name="profile_privacy">Privatliv</string>
-    <string name="profile_privacy_public">Offentlig</string>
-    <string name="profile_privacy_private">Privat</string>
-    <string name="profile_fingerprint">Fingeraftryk</string>
     <string name="game_chat_empty">Ingen beskeder endnu</string>
     <string name="game_chat_input_placeholder">Skriv en besked…</string>
     <string name="game_chat_send">Send besked</string>
     <string name="game_chat_subject_you">Dig</string>
 
     <string name="common_not_saved">Ikke gemt</string>
-    <string name="common_save_failed">Dine ændringer kunne ikke gemmes.</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Kan ikke oprette forbindelse. Tjek din internetforbindelse, og prøv igen.</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">Ikke fundet</string>
     <string name="error_server">Serverfejl (%1$d). Prøv venligst igen senere.</string>
     <string name="error_unexpected">Der opstod en uventet fejl</string>
-    <string name="error_request_failed">Anmodning mislykkedes</string>
     <string name="error_enter_server_url">Indtast venligst en server-URL</string>
     <string name="error_enter_email">Indtast venligst din e-mail</string>
     <string name="error_enter_name">Indtast venligst et navn</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">Server-URL</string>
     <string name="auth_connect">Opret forbindelse</string>
     <string name="auth_sign_in">Log ind</string>
-    <string name="auth_sign_in_with_passkey">Log ind med adgangsnøgle</string>
-    <string name="auth_sign_in_with_email_code">Log ind med e-mailkode</string>
-    <string name="auth_use_recovery_code">Brug gendannelseskode</string>
-    <string name="auth_back_to_sign_in">Tilbage til login</string>
-    <string name="auth_send_code">Send kode</string>
     <string name="auth_check_email">Tjek din e-mail for en bekræftelseskode</string>
-    <string name="auth_six_digit_code">6-cifret kode</string>
     <string name="auth_mfa_title">Multifaktorgodkendelse</string>
     <string name="auth_mfa_subtitle">Fuldfør de resterende verifikationstrin</string>
     <string name="auth_recover_account">Gendan konto</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">Log ind på en anden måde</string>
     <string name="bootstrap_choose_account">Vælg en konto</string>
     <string name="bootstrap_sign_in_different_server">Log ind på en anden server</string>
-    <string name="common_or">eller</string>
-    <string name="common_change">Skift</string>
     <string name="common_retry">Prøv igen</string>
     <string name="common_more_options">Flere indstillinger</string>
     <string name="common_collapse">Skjul</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">Stednavn</string>
     <string name="place_origin">Oprindelse</string>
     <string name="place_destination">Destination</string>
-    <string name="discovery_search_placeholder">Søg i %1$ss</string>
-    <string name="discovery_no_results">Ingen %1$ss fundet</string>
     <string name="discovery_no_results_hint">Prøv at justere din søgning</string>
-    <string name="discovery_no_recommendations">Ingen anbefalinger</string>
-    <string name="discovery_search_hint">Prøv at søge efter en %1$s, du vil abonnere på</string>
     <string name="access_no_rules">Ingen adgangsregler</string>
-    <string name="access_no_rules_subtitle">Tilføj regler for at styre, hvem der har adgang til denne ressource</string>
     <string name="access_add_rule_title">Tilføj adgangsregel</string>
     <string name="access_level_manage">Administrer</string>
     <string name="access_level_react">Reager</string>
     <string name="notifications_clear">Ryd notifikationer</string>
-    <string name="banner_description">Markdown vist øverst i denne visning.</string>
-    <string name="banner_placeholder">Velkommen…</string>
-    <string name="banner_save">Gem banner</string>
-    <string name="banner_clear">Ryd banner</string>
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$du</string>
     <string name="format_time_months_short">%1$dmd</string>
-    <string name="format_time_years_short">%1$då</string>
     <string name="reaction_add">Tilføj reaktion</string>
     <string name="push_service_channel">Mochi push</string>
 
@@ -256,7 +216,6 @@
     <string name="about_check_download_failed">Download mislykkedes</string>
     <string name="notifications_clear_all_title">Ryd alle notifikationer?</string>
     <string name="notifications_clear_all_message">Dette fjerner alle notifikationer. De kan ikke gendannes.</string>
-    <string name="notifications_count_n">%1$d nye</string>
     <string name="settings_value_auto">Automatisk</string>
     <string name="settings_value_theme">Tema-standard</string>
     <string name="settings_radius">Hjørneradius</string>
@@ -264,14 +223,12 @@
     <string name="settings_timestamp_relative">Relativ</string>
     <string name="settings_timestamp_absolute">Absolut</string>
     <string name="settings_units_usa">US</string>
-    <string name="profile_privacy_description">Om andre kan finde dig i kataloget.</string>
     <string name="stepup_title">Bekræft, at det er dig</string>
     <string name="stepup_description">Dette er en sikkerhedsændring af din konto. Bekræft, at det er dig, for at fortsætte.</string>
     <string name="stepup_email_label">E-mailkode</string>
     <string name="stepup_email_placeholder">Indtast koden fra din e-mail</string>
     <string name="stepup_totp_label">Authenticator-kode</string>
     <string name="stepup_totp_placeholder">Indtast din autentificeringskode</string>
-    <string name="stepup_passkey_label">Adgangsnøgle</string>
     <string name="stepup_use_passkey">Brug din adgangsnøgle</string>
     <string name="stepup_send_email">Send e-mail</string>
     <string name="stepup_resend_email">Send e-mail igen</string>
@@ -300,7 +257,6 @@
     <string name="comment_anonymous">Anonym</string>
     <string name="tags_label">Tags</string>
     <string name="tags_add">Tilføj tag</string>
-    <string name="tags_label_field">Tagetiket</string>
     <string name="tags_interest_up">Vis mere som dette</string>
     <string name="tags_interest_down">Vis mindre som dette</string>
     <string name="tags_interest_clear">Stop med at vise</string>
@@ -312,10 +268,6 @@
     <string name="person_picker_directory">Katalog</string>
     <string name="person_picker_no_people">Ingen personer</string>
     <string name="person_picker_project_members">Projektmedlemmer</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d abonnent</item>
-        <item quantity="other">%1$d abonnenter</item>
-    </plurals>
     <string name="account_token_label">Mochi-session</string>
     <string name="attachment_caption">Billedtekst</string>
     <string name="attachment_caption_add">Tilføj billedtekst</string>
@@ -356,4 +308,8 @@
     <string name="settings_card_theme">Fra tema</string>
     <string name="settings_card_flat">Flad</string>
     <string name="settings_card_raised">Hævet</string>
+    <string name="error_server_https">Serveradressen skal begynde med https://</string>
+    <string name="device_name_fallback">Mobil enhed</string>
+    <string name="account_error_token_type">Ikke-understøttet tokentype</string>
+    <string name="account_error_caller">Kalderen har ikke tilladelse</string>
 </resources>

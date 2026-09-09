@@ -34,7 +34,6 @@
     <string name="go_game_deleted">បានលុបហ្គេម</string>
     <string name="go_new_game_add_friends">បន្ថែមមិត្តភក្តិ</string>
     <string name="go_new_game_board_size_label">ទំហំក្តារ</string>
-    <string name="go_new_game_cancel">បោះបង់</string>
     <string name="go_new_game_friend_label">គូប្រកួត</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">ចុះចាញ់ហ្គេម?</string>
     <string name="go_sidebar_completed">បានបញ្ចប់</string>
     <string name="go_sidebar_new_game">ហ្គេមថ្មី</string>
-    <string name="go_status_active">សកម្ម</string>
     <string name="go_status_draw">ស្មើ</string>
     <string name="go_status_draw_text">ស្មើ</string>
     <string name="go_status_game_over">ហ្គេមបញ្ចប់</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">មិនទាន់មានហ្គេមសកម្មទេ។</string>
-    <string name="go_empty_completed">មិនទាន់មានហ្គេមដែលបញ្ចប់ទេ។</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">ហ្គេម Go ថ្មី</string>
     <string name="go_new_game_no_friends">អ្នកត្រូវបន្ថែមមិត្តភក្តិមុនពេលអាចចាប់ផ្តើមហ្គេម។</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">ពិន្ទុដែលបន្ថែមទៅពិន្ទុរបស់ស ដើម្បីទូទាត់ការដែលខ្មៅដើរមុន</string>
-    <string name="go_new_game_create_error">មិនអាចចាប់ផ្តើមហ្គេមបានទេ</string>
 
     <string name="go_board_a11y">ក្តារ Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">ក្តារ Go %1$d×%1$d វេនរបស់អ្នកដាក់ត្បូងខ្មៅ</string>
     <string name="go_board_a11y_turn_white">ក្តារ Go %1$d×%1$d វេនរបស់អ្នកដាក់ត្បូងស</string>
+    <string name="go_status_scoring">កំពុងរាប់ — ព្រមព្រៀងលើពិន្ទុ ឬលេងបន្ត</string>
+    <string name="go_score_proposed">ពិន្ទុដែលបានស្នើ៖ ខ្មៅ %1$s ស %2$s</string>
+    <string name="go_score_opponent_accepted">គូប្រកួតរបស់អ្នកទទួលយកពិន្ទុនេះ៖ ខ្មៅ %1$s ស %2$s</string>
+    <string name="go_score_waiting">បានទទួលយកពិន្ទុ — កំពុងរង់ចាំ %1$s</string>
+    <string name="go_score_accept">ទទួលយកពិន្ទុ</string>
+    <string name="go_score_resume">បន្តលេង</string>
+    <string name="go_error_score_resume_failed">បរាជ័យក្នុងការបន្តលេង</string>
+    <string name="go_error_score_accept_failed">បរាជ័យក្នុងការទទួលយកពិន្ទុ</string>
 </resources>

@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">افزودن دوستان</string>
     <string name="chess_new_start_button">شروع بازی</string>
     <string name="chess_new_creating">در حال ساخت…</string>
-    <string name="chess_new_failed">ایجاد بازی ناموفق بود</string>
     <string name="chess_chat_title">گفت‌وگو</string>
     <string name="chess_open_chat">باز کردن پنل گفت‌وگو</string>
     <string name="chess_open_actions">باز کردن اقدامات بازی</string>

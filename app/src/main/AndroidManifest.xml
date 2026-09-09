@@ -13,10 +13,20 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
-        tools:ignore="QueryAllPackagesPermission"
-        xmlns:tools="http://schemas.android.com/tools" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!--
+      Package visibility, narrowed from QUERY_ALL_PACKAGES: the only thing this
+      app needs to see is the set of installed UnifiedPush distributors, which
+      MochiPushClient.ensureDistributor enumerates. QUERY_ALL_PACKAGES read the
+      whole installed-app list for that, and its other in-tree consumer (the
+      distributor election) no longer exists.
+    -->
+    <queries>
+        <intent>
+            <action android:name="org.unifiedpush.android.distributor.REGISTER" />
+        </intent>
+    </queries>
 
     <!--
       allowBackup="false": the session cookie, every per-app JWT, the OAuth

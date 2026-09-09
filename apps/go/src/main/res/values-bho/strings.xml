@@ -34,7 +34,6 @@
     <string name="go_game_deleted">खेल मेटा गइल</string>
     <string name="go_new_game_add_friends">दोस्तन के जोड़ीं</string>
     <string name="go_new_game_board_size_label">बोर्ड आकार</string>
-    <string name="go_new_game_cancel">रद्द करीं</string>
     <string name="go_new_game_friend_label">विरोधी</string>
     <string name="go_new_game_komi_field_label">कोमी</string>
     <string name="go_new_game_komi_label">कोमी</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">खेल में हार मानीं?</string>
     <string name="go_sidebar_completed">पूरा कइल गइल</string>
     <string name="go_sidebar_new_game">नया खेल</string>
-    <string name="go_status_active">सक्रिय</string>
     <string name="go_status_draw">ड्रॉ</string>
     <string name="go_status_draw_text">ड्रॉ</string>
     <string name="go_status_game_over">खेल खतम</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">अबले कवनो सक्रिय खेल नइखे।</string>
-    <string name="go_empty_completed">अबले कवनो पूरा भइल खेल नइखे।</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">नया Go खेल</string>
     <string name="go_new_game_no_friends">खेल शुरू करे से पहिले रउआ के एगो दोस्त जोड़े के पड़ी।</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">करिया पहिले चले के भरपाई खातिर उज्जर के स्कोर में जोड़ल अंक</string>
-    <string name="go_new_game_create_error">खेल शुरू ना हो सकल</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go बोर्ड</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d गो बोर्ड, करिया गोटी रखे के बारी रउआ के बा</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d गो बोर्ड, उजरा गोटी रखे के बारी रउआ के बा</string>
+    <string name="go_status_scoring">गिनती — स्कोर पर सहमत होईं भा खेलल जारी राखीं</string>
+    <string name="go_score_proposed">प्रस्तावित स्कोर: करिया %1$s, सफेद %2$s</string>
+    <string name="go_score_opponent_accepted">रउआ के विरोधी ई स्कोर मानत बाड़न: करिया %1$s, सफेद %2$s</string>
+    <string name="go_score_waiting">स्कोर मानल गइल — %1$s के इंतजार बा</string>
+    <string name="go_score_accept">स्कोर मान लीं</string>
+    <string name="go_score_resume">खेल फिर से शुरू करीं</string>
+    <string name="go_error_score_resume_failed">खेल फिर से शुरू करे में विफल</string>
+    <string name="go_error_score_accept_failed">स्कोर माने में विफल</string>
 </resources>

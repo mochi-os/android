@@ -27,7 +27,6 @@
     <string name="chess_new_add_friends">Add friends</string>
     <string name="chess_new_start_button">Start game</string>
     <string name="chess_new_creating">Creating…</string>
-    <string name="chess_new_failed">Failed to create game</string>
 
     <!-- Detail screen -->
     <string name="chess_detail_unavailable">Game unavailable</string>

@@ -50,11 +50,7 @@ class FeedListViewModel @Inject constructor(
 
     // Global RSS URL state — null when not yet generated, set once a token
     // has been minted for the chosen mode. Resetting (mode change) wipes it.
-    private val _globalRssUrl = MutableStateFlow<String?>(null)
-    val globalRssUrl: StateFlow<String?> = _globalRssUrl.asStateFlow()
 
-    private val _rssCopiedMessage = MutableStateFlow<String?>(null)
-    val rssCopiedMessage: StateFlow<String?> = _rssCopiedMessage.asStateFlow()
 
     private val subscriptionIds = mutableListOf<String>()
 
@@ -96,7 +92,7 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
-    fun loadFeeds() {
+    private fun loadFeeds() {
         viewModelScope.launch {
             _isLoading.value = true
             _error.value = null
@@ -129,58 +125,6 @@ class FeedListViewModel @Inject constructor(
                 _error.value = e.toMochiError()
             } finally {
                 _isRefreshing.value = false
-            }
-        }
-    }
-
-    fun generateGlobalRssUrl(mode: String) {
-        viewModelScope.launch {
-            try {
-                val token = repository.getRssToken("*", mode)
-                val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
-                _globalRssUrl.value = "$serverUrl/feeds/-/rss?token=$token"
-            } catch (e: Exception) {
-                _error.value = e.toMochiError()
-            }
-        }
-    }
-
-    fun clearGlobalRssUrl() {
-        _globalRssUrl.value = null
-    }
-
-    /**
-     * Clear the app-wide RSS token. Every URL already handed out stops working,
-     * and the next generate mints a fresh one - minting alone returns the
-     * existing token unchanged, so this is also the only way to rotate.
-     */
-    fun revokeGlobalRssToken(onDone: (Boolean) -> Unit) {
-        viewModelScope.launch {
-            try {
-                repository.revokeRssToken("*")
-                _globalRssUrl.value = null
-                onDone(true)
-            } catch (e: Exception) {
-                _error.value = e.toMochiError()
-                onDone(false)
-            }
-        }
-    }
-
-    fun setRssCopiedMessage(message: String) {
-        _rssCopiedMessage.value = message
-    }
-
-    fun clearRssCopiedMessage() {
-        _rssCopiedMessage.value = null
-    }
-
-    fun updateFeedUnreadCount(feedFingerprint: String, delta: Int) {
-        _feeds.value = _feeds.value.map { feed ->
-            if (feed.fingerprint == feedFingerprint) {
-                feed.copy(unread = maxOf(0, feed.unread + delta))
-            } else {
-                feed
             }
         }
     }

@@ -102,6 +102,7 @@ import org.mochios.android.ws.rememberStreamWebSocket
 import org.mochios.chess.R
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
+import org.mochios.chess.model.opponentAvatarUrl
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.detail.board.CapturedPiecesStrip
 import org.mochios.chess.ui.detail.board.ChessBoard
@@ -229,7 +230,7 @@ fun ChessGameDetailScreen(
                             opponentName = opponentName,
                             avatarUrl = opponentId
                                 .takeIf { it.isNotBlank() }
-                                ?.let { id -> "/people/$id/-/avatar" },
+                                ?.let { opponent -> opponentAvatarUrl(game.id, opponent) },
                         )
                     } else {
                         Text(stringResource(R.string.chess_app_title))

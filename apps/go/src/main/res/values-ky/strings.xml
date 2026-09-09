@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Оюн өчүрүлдү</string>
     <string name="go_new_game_add_friends">Достор кошуу</string>
     <string name="go_new_game_board_size_label">Тактайдын өлчөмү</string>
-    <string name="go_new_game_cancel">Жокко чыгаруу</string>
     <string name="go_new_game_friend_label">Каршылаш</string>
     <string name="go_new_game_komi_field_label">Коми</string>
     <string name="go_new_game_komi_label">Коми</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Оюндан баш тартасызбы?</string>
     <string name="go_sidebar_completed">Аяктады</string>
     <string name="go_sidebar_new_game">Жаңы оюн</string>
-    <string name="go_status_active">Активдүү</string>
     <string name="go_status_draw">Теңтайлаш</string>
     <string name="go_status_draw_text">Теңтайлаш</string>
     <string name="go_status_game_over">Оюн бүттү</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Азырынча активдүү оюндар жок.</string>
-    <string name="go_empty_completed">Азырынча аяктаган оюндар жок.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Жаңы Go оюну</string>
     <string name="go_new_game_no_friends">Оюнду баштоодон мурун дос кошуу керек.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Кара биринчи жүргөнүн ордуна толтуруу үчүн Актын упайына кошулган упайлар</string>
-    <string name="go_new_game_create_error">Оюнду баштоо мүмкүн болгон жок</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go тактайы</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d го тактасы, кара таш коюу кезегиңиз</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d го тактасы, ак таш коюу кезегиңиз</string>
+    <string name="go_status_scoring">Эсептөө — упайга макул болуңуз же оюнду улантыңыз</string>
+    <string name="go_score_proposed">Сунушталган упай: кара %1$s, ак %2$s</string>
+    <string name="go_score_opponent_accepted">Атаандашыңыз бул упайды кабыл алат: кара %1$s, ак %2$s</string>
+    <string name="go_score_waiting">Упай кабыл алынды — %1$s күтүлүүдө</string>
+    <string name="go_score_accept">Упайды кабыл алуу</string>
+    <string name="go_score_resume">Оюнду улантуу</string>
+    <string name="go_error_score_resume_failed">Оюнду улантуу ишке ашкан жок</string>
+    <string name="go_error_score_accept_failed">Упайды кабыл алуу ишке ашкан жок</string>
 </resources>

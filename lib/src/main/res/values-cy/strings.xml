@@ -5,10 +5,7 @@
     <string name="auth_email">E-bost</string>
     <string name="auth_continue">Parhau</string>
     <string name="auth_verification_code">Cod dilysu</string>
-    <string name="auth_verify">Dilysu</string>
-    <string name="auth_authenticator_app">App dilyswr</string>
     <string name="auth_email_code">Cod e-bost</string>
-    <string name="auth_authenticator_code">Cod dilyswr</string>
     <string name="auth_recovery_code">Cod adfer</string>
     <string name="auth_name">Enw</string>
     <string name="auth_create">Creu</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Copïo</string>
     <string name="common_copied">Wedi\'i gopïo i\'r clipfwrdd</string>
     <string name="comment_edited">(golygwyd)</string>
-    <string name="comment_edit_placeholder">Golygu sylw</string>
     <string name="comment_reply">Ymateb</string>
-    <string name="comment_reply_placeholder">Ymateb</string>
-    <string name="comment_send_reply">Anfon ateb</string>
     <string name="person_picker_search">Chwilio defnyddwyr</string>
     <string name="place_picker_no_results">Heb ddod o hyd i leoedd</string>
-    <string name="discovery_results">Canlyniadau</string>
     <string name="discovery_recommended">Argymhellir</string>
-    <string name="discovery_subscribed">Wedi tanysgrifio</string>
     <string name="access_add_rule">Ychwanegu rheol</string>
     <string name="access_owner">Perchennog</string>
     <string name="access_revoke">Dirymu</string>
-    <string name="access_level">Lefel mynediad</string>
     <string name="access_level_comment">Sylw</string>
     <string name="access_level_view">Gweld</string>
     <string name="access_level_none">Dim</string>
-    <string name="banner_label">Baner</string>
     <string name="reaction_like">Hoffi</string>
     <string name="reaction_dislike">Ddim yn hoffi</string>
     <string name="reaction_laugh">Chwerthin</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Popeth</string>
     <string name="notifications_mark_all_read">Marcio\'r cyfan wedi\'u darllen</string>
     <string name="notifications_clear_all">Clirio popeth</string>
-    <string name="notifications_loading">Yn llwytho…</string>
     <string name="settings_title">Gosodiadau</string>
-    <string name="settings_open">Gosodiadau</string>
     <string name="settings_appearance">Ymddangosiad</string>
     <string name="settings_appearance_light">Golau</string>
     <string name="settings_appearance_dark">Tywyll</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Cefndir</string>
     <string name="settings_background_theme">O\'r thema</string>
     <string name="settings_background_off">Dim</string>
-    <string name="profile_title">Proffil</string>
-    <string name="profile_open">Proffil</string>
-    <string name="profile_display_name">Enw arddangos</string>
-    <string name="profile_save_name">Cadw’r enw</string>
-    <string name="profile_privacy">Preifatrwydd</string>
-    <string name="profile_privacy_public">Cyhoeddus</string>
-    <string name="profile_privacy_private">Preifat</string>
-    <string name="profile_fingerprint">Olion bysedd</string>
     <string name="game_chat_empty">Dim negeseuon eto</string>
     <string name="game_chat_input_placeholder">Teipiwch neges…</string>
     <string name="game_chat_send">Anfon neges</string>
     <string name="game_chat_subject_you">Chi</string>
 
     <string name="common_not_saved">Heb ei gadw</string>
-    <string name="common_save_failed">Methwyd cadw eich newidiadau.</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Methwyd cysylltu. Gwiriwch eich cysylltiad rhyngrwyd a rhowch gynnig arall.</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">Heb ei ganfod</string>
     <string name="error_server">Gwall gweinydd (%1$d). Rhowch gynnig arall yn nes ymlaen.</string>
     <string name="error_unexpected">Digwyddodd gwall annisgwyl</string>
-    <string name="error_request_failed">Methodd y cais</string>
     <string name="error_enter_server_url">Rhowch URL gweinydd</string>
     <string name="error_enter_email">Rhowch eich e-bost</string>
     <string name="error_enter_name">Rhowch enw</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">URL y gweinydd</string>
     <string name="auth_connect">Cysylltu</string>
     <string name="auth_sign_in">Mewngofnodi</string>
-    <string name="auth_sign_in_with_passkey">Mewngofnodi gyda chyfriniad</string>
-    <string name="auth_sign_in_with_email_code">Mewngofnodi gyda chod e-bost</string>
-    <string name="auth_use_recovery_code">Defnyddio cod adfer</string>
-    <string name="auth_back_to_sign_in">Yn ôl i fewngofnodi</string>
-    <string name="auth_send_code">Anfon cod</string>
     <string name="auth_check_email">Gwiriwch eich e-bost am god dilysu</string>
-    <string name="auth_six_digit_code">Cod 6 digid</string>
     <string name="auth_mfa_title">Dilysu aml-ffactor</string>
     <string name="auth_mfa_subtitle">Cwblhewch y camau dilysu sy\'n weddill</string>
     <string name="auth_recover_account">Adfer cyfrif</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">Mewngofnodi\'n wahanol</string>
     <string name="bootstrap_choose_account">Dewiswch gyfrif</string>
     <string name="bootstrap_sign_in_different_server">Mewngofnodi i weinydd gwahanol</string>
-    <string name="common_or">neu</string>
-    <string name="common_change">Newid</string>
     <string name="common_retry">Ailgeisio</string>
     <string name="common_more_options">Rhagor o opsiynau</string>
     <string name="common_collapse">Crebachu</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">Enw\'r lle</string>
     <string name="place_origin">Tarddiad</string>
     <string name="place_destination">Cyrchfan</string>
-    <string name="discovery_search_placeholder">Chwilio %1$ss</string>
-    <string name="discovery_no_results">Heb ganfod %1$ss</string>
     <string name="discovery_no_results_hint">Ceisiwch addasu eich chwiliad</string>
-    <string name="discovery_no_recommendations">Dim argymhellion</string>
-    <string name="discovery_search_hint">Rhowch gynnig ar chwilio am %1$s i danysgrifio iddo</string>
     <string name="access_no_rules">Dim rheolau mynediad</string>
-    <string name="access_no_rules_subtitle">Ychwanegwch reolau i reoli pwy all gael mynediad at yr adnodd hwn</string>
     <string name="access_add_rule_title">Ychwanegu rheol mynediad</string>
     <string name="access_level_manage">Rheoli</string>
     <string name="access_level_react">Ymateb</string>
     <string name="notifications_clear">Clirio hysbysiadau</string>
-    <string name="banner_description">Markdown a ddangosir ar frig y golwg hwn.</string>
-    <string name="banner_placeholder">Croeso…</string>
-    <string name="banner_save">Cadw\'r faner</string>
-    <string name="banner_clear">Clirio\'r faner</string>
     <string name="entity_avatar_alt">Afatar ar gyfer %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmis</string>
-    <string name="format_time_years_short">%1$db</string>
     <string name="reaction_add">Ychwanegu ymateb</string>
     <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">Cadw Mochi wedi\'i gysylltu i dderbyn hysbysiadau</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">Methodd y lawrlwytho</string>
     <string name="notifications_clear_all_title">Clirio pob hysbysiad?</string>
     <string name="notifications_clear_all_message">Bydd hyn yn dileu pob hysbysiad. Ni ellir eu hadfer.</string>
-    <string name="notifications_count_n">%1$d newydd</string>
     <string name="settings_value_auto">Awtomatig</string>
     <string name="settings_value_theme">Diofyn y thema</string>
     <string name="settings_radius">Radiws cornel</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">Cymharol</string>
     <string name="settings_timestamp_absolute">Absoliwt</string>
     <string name="settings_units_usa">UDA</string>
-    <string name="profile_privacy_description">A all eraill ddod o hyd i chi yn y cyfeiriadur.</string>
     <string name="game_chat_load_more">Llwytho negeseuon hŷn</string>
     <string name="game_chat_move_played">Chwaraeodd %1$s %2$s</string>
     <string name="stepup_title">Cadarnhau mai chi sydd yna</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">Rhowch y cod o\'ch e-bost</string>
     <string name="stepup_totp_label">Cod dilyswr</string>
     <string name="stepup_totp_placeholder">Rhowch god eich ap dilysu</string>
-    <string name="stepup_passkey_label">Pasallwedd</string>
     <string name="stepup_use_passkey">Defnyddiwch eich allwedd mynediad</string>
     <string name="stepup_send_email">Anfon e-bost</string>
     <string name="stepup_resend_email">Ailanfon yr e-bost</string>
@@ -299,7 +256,6 @@
     <string name="comment_anonymous">Anhysbys</string>
     <string name="tags_label">Tagiau</string>
     <string name="tags_add">Ychwanegu tag</string>
-    <string name="tags_label_field">Label tag</string>
     <string name="tags_interest_up">Dangos mwy fel hyn</string>
     <string name="tags_interest_down">Dangos llai fel hyn</string>
     <string name="tags_interest_clear">Peidio â dangos</string>
@@ -311,14 +267,6 @@
     <string name="person_picker_directory">Cyfeiriadur</string>
     <string name="person_picker_no_people">Dim pobl</string>
     <string name="person_picker_project_members">Aelodau\'r prosiect</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="zero">%1$d tanysgrifiwr</item>
-        <item quantity="one">%1$d tanysgrifiwr</item>
-        <item quantity="two">%1$d danysgrifiwr</item>
-        <item quantity="few">%1$d thanysgrifiwr</item>
-        <item quantity="many">%1$d tanysgrifiwr</item>
-        <item quantity="other">%1$d tanysgrifiwr</item>
-    </plurals>
     <string name="account_token_label">Sesiwn Mochi</string>
     <string name="attachment_caption">Capsiwn</string>
     <string name="attachment_caption_add">Ychwanegu capsiwn</string>
@@ -363,4 +311,8 @@
     <string name="settings_card_theme">O\'r thema</string>
     <string name="settings_card_flat">Gwastad</string>
     <string name="settings_card_raised">Wedi codi</string>
+    <string name="error_server_https">Rhaid i gyfeiriad y gweinydd ddechrau gyda https://</string>
+    <string name="device_name_fallback">Dyfais symudol</string>
+    <string name="account_error_token_type">Math o docyn heb ei gefnogi</string>
+    <string name="account_error_caller">Ni chaniateir y galwr</string>
 </resources>

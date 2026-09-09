@@ -10,6 +10,7 @@ import dagger.Provides
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
 import org.mochios.android.auth.SessionManager
@@ -63,10 +64,13 @@ object AssetHttpModule {
                 val authed = if (token != null) {
                     val builder = request.newBuilder()
                         .header("Authorization", "Bearer $token")
-                    // Avatar endpoints authenticate via the `token` query param —
-                    // they redirect to a file URL that drops the Authorization
-                    // header — so pass the token there too.
-                    if (request.url.pathSegments.lastOrNull() == "avatar") {
+                    // The avatar action answers a redirect to a file URL, and
+                    // the browser drops the Authorization header across it, so
+                    // the token has to ride in the query string. Bounded to the
+                    // exact person-avatar route: matching any URL whose last
+                    // segment is "avatar" put the bearer token in the query of
+                    // whichever action an author-supplied image URL named.
+                    if (isPersonAvatar(request.url)) {
                         builder.url(
                             request.url.newBuilder()
                                 .setQueryParameter("token", token)
@@ -80,6 +84,19 @@ object AssetHttpModule {
                 chain.proceed(authed)
             }
             .build()
+}
+
+/**
+ * True only for `/people/<id>/-/avatar`, the one route whose redirect makes the
+ * `token` query parameter necessary. Anything else authenticates by header.
+ */
+internal fun isPersonAvatar(url: HttpUrl): Boolean {
+    val segments = url.pathSegments
+    return segments.size == 4 &&
+        segments[0] == "people" &&
+        segments[1].isNotEmpty() &&
+        segments[2] == "-" &&
+        segments[3] == "avatar"
 }
 
 /**

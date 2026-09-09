@@ -22,6 +22,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -34,10 +35,12 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.ApiClient
+import org.mochios.android.api.foreignClient
 import org.mochios.android.api.ApiException
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.TokenApi
 import org.mochios.android.auth.TokenRequest
+import org.mochios.android.util.isServerOrigin
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
@@ -53,9 +56,12 @@ class PushService : Service() {
     @Inject
     lateinit var webSocket: MochiWebSocket
     @Inject
-    lateinit var okHttpClient: OkHttpClient
-    @Inject
     lateinit var gson: Gson
+
+    // One client for every account's server. Never the injected shared one:
+    // that carries the bound-server retarget, so a drain or ack meant for
+    // account B's server would arrive at account A's holding B's bearer token.
+    private val client: OkHttpClient by lazy { foreignClient().build() }
 
     private val store by lazy { DistributorStore(applicationContext) }
 
@@ -99,6 +105,10 @@ class PushService : Service() {
     }
 
     override fun onDestroy() {
+        // First: an in-flight connectOne would otherwise finish after destroy
+        // and subscribe on a service that no longer owns the subscription, so
+        // nothing ever unsubscribes it.
+        scope.cancel()
         accountsJob?.cancel()
         for ((_, id) in subscriptions) {
             if (id != PENDING) webSocket.unsubscribe(id)
@@ -191,13 +201,16 @@ class PushService : Service() {
             .value(sessionCookie)
             .secure()
             .build()
-        // Build a one-shot client with just this cookie attached. We do
-        // not want to persist the session cookie into the shared
-        // OkHttpClient cookie jar, only use it to authenticate the mint.
-        val tempClient = okHttpClient.newBuilder()
+        // A one-shot client carrying just this cookie: the session must not
+        // reach the shared cookie jar, and the jar releases it only to this
+        // account's own origin. A redirect off that origin - or the
+        // bound-server retarget this client deliberately does not carry -
+        // would otherwise hand one server a working session for another.
+        val tempClient = client.newBuilder()
             .cookieJar(object : okhttp3.CookieJar {
                 override fun saveFromResponse(url: okhttp3.HttpUrl, cookies: List<Cookie>) {}
-                override fun loadForRequest(url: okhttp3.HttpUrl): List<Cookie> = listOf(cookie)
+                override fun loadForRequest(url: okhttp3.HttpUrl): List<Cookie> =
+                    if (isServerOrigin(url, server)) listOf(cookie) else emptyList()
             })
             .build()
         val tokenApi = ApiClient.createRetrofit(server, tempClient, gson)
@@ -233,11 +246,15 @@ class PushService : Service() {
 
     private fun dispatchPush(subId: String, payload: String) {
         val entry = store.bySubId(subId)
+        // Never log the subscription id: it is the unguessable segment of the
+        // push endpoint, so anything that reads logcat would learn the
+        // capability. DistributorStore and MochiPushReceiver hold the same
+        // line.
         if (entry == null) {
-            Log.w(TAG, "Received push for unknown subId=$subId; dropping")
+            Log.w(TAG, "Received push for an unknown subscription; dropping")
             return
         }
-        Log.i(TAG, "Dispatching push subId=$subId → ${entry.appPackage}")
+        Log.i(TAG, "Dispatching push to ${entry.appPackage}")
         // Our own action, not the connector's. The connector decrypts every
         // MESSAGE it receives and marks a payload that fails as undecrypted,
         // and this one is cleartext by design - the server sends it that way
@@ -275,7 +292,7 @@ class PushService : Service() {
             .post("".toRequestBody("application/x-www-form-urlencoded".toMediaType()))
             .build()
         runCatching {
-            okHttpClient.newCall(request).execute().use { resp ->
+            client.newCall(request).execute().use { resp ->
                 if (!resp.isSuccessful) {
                     Log.w(TAG, "/notifications/-/push/drain returned ${resp.code}")
                     return@use
@@ -322,7 +339,7 @@ class PushService : Service() {
             .post(form)
             .build()
         runCatching {
-            okHttpClient.newCall(request).execute().use { resp ->
+            client.newCall(request).execute().use { resp ->
                 if (!resp.isSuccessful) {
                     Log.w(TAG, "/notifications/-/push/ack returned ${resp.code}")
                 }

@@ -11,17 +11,17 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
+import org.mochios.android.api.WebSocketClient
 import org.mochios.android.model.WebSocketEvent
 import java.util.UUID
 import java.util.concurrent.ConcurrentHashMap
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.math.min
 
 @Singleton
 class MochiWebSocket @Inject constructor(
-    private val okHttpClient: OkHttpClient,
+    @param:WebSocketClient private val wsClient: OkHttpClient,
     private val gson: Gson
 ) {
     private val sockets = ConcurrentHashMap<String, WebSocket>()
@@ -37,15 +37,6 @@ class MochiWebSocket @Inject constructor(
     // newer generation stands down, so a foreground return does not race a
     // timer into opening a second socket for the same key.
     private val generation = ConcurrentHashMap<String, Int>()
-
-    // Derived client so the ping keepalive applies to WebSockets only, not the
-    // shared HTTP client. 5 minutes stays inside typical carrier-NAT idle
-    // timeouts (10-15 min) at negligible battery cost.
-    private val wsClient: OkHttpClient by lazy {
-        okHttpClient.newBuilder()
-            .pingInterval(5, TimeUnit.MINUTES)
-            .build()
-    }
 
     // All internal maps are keyed by a composite `serverUrl::fingerprint`
     // so two subscribe calls with the same fingerprint but different servers

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">வார்த்தைகள்</string>
     <string name="words_list_title">வார்த்தைகள்</string>
     <string name="words_list_menu">மெனு</string>
-    <string name="words_list_new">புதிய விளையாட்டு</string>
     <string name="words_list_logout">வெளியேறு</string>
-    <string name="words_list_empty_title">விளையாட்டுகள் இன்னும் இல்லை</string>
-    <string name="words_sidebar_header">வார்த்தைகள்</string>
     <string name="words_sidebar_completed">முடிந்தது</string>
     <string name="words_sidebar_new_game">புதிய விளையாட்டு</string>
     <string name="words_new_game_title">புதிய விளையாட்டு</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">மறுபோட்டி</string>
     <string name="words_detail_action_delete">விளையாட்டை நீக்கு</string>
     <string name="words_detail_chat_title">அரட்டை</string>
-    <string name="words_detail_invalid_move">தவறான நகர்வு</string>
     <string name="words_detail_recall">திரும்பப் பெறு</string>
     <string name="words_detail_submit">சமர்ப்பி</string>
     <string name="words_detail_cancel">ரத்துசெய்</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ஒரு எழுத்தைத் தேர்ந்தெடுக்கவும்</string>
     <string name="words_detail_resign_title">விளையாட்டிலிருந்து விலகவா?</string>
     <string name="words_detail_resign_message">நீங்கள் விட்டுக்கொடுக்க விரும்புகிறீர்களா?</string>
-    <string name="words_detail_failed_move">நகர்வைச் சமர்ப்பிக்க முடியவில்லை</string>
-    <string name="words_detail_failed_pass">தாண்ட முடியவில்லை</string>
-    <string name="words_detail_failed_exchange">மாற்ற முடியவில்லை</string>
-    <string name="words_detail_failed_resign">ராஜினாமா செய்ய முடியவில்லை</string>
-    <string name="words_detail_failed_rematch">மறுபோட்டியை உருவாக்க முடியவில்லை</string>
-    <string name="words_detail_failed_delete">ஆட்டத்தை நீக்க முடியவில்லை</string>
-    <string name="words_detail_game_deleted">ஆட்டம் நீக்கப்பட்டது</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words முறைகள், பரிமாற்றங்கள் மற்றும் ஆட்ட முடிவுகள் குறித்த அறிவிப்புகள்.</string>
-    <string name="words_list_empty_subtitle">உங்கள் முதல் ஆட்டத்தைத் தொடங்க + பொத்தானைத் தட்டவும்.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">இதுவரை ஆட்டங்கள் இல்லை.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">விளையாடத் தொடங்க People பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">ஆட்ட விவரங்கள் விரைவில்</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

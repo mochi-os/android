@@ -42,11 +42,8 @@ data class ForumSettingsUiState(
     /** Levels this forum offers, highest first; empty until access loads. */
     val accessLevels: List<String> = emptyList(),
     val members: List<ForumMember> = emptyList(),
-    val memberSearchResults: List<ForumMember> = emptyList(),
     val aiPrompts: AiPrompts? = null,
     val aiAccounts: List<org.mochios.android.model.Account> = emptyList(),
-    val rssToken: String = "",
-    val rssUrl: String = "",
     val userSearchResults: List<org.mochios.forums.model.User> = emptyList(),
     val groups: List<org.mochios.forums.model.Group> = emptyList(),
 )
@@ -64,7 +61,6 @@ class ForumSettingsViewModel @Inject constructor(
 
     /** In-flight searches, each cancelled by the next keystroke. */
     private var userSearchJob: Job? = null
-    private var memberSearchJob: Job? = null
 
     init {
         load()
@@ -246,19 +242,6 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
-    fun searchMembers(query: String) {
-        memberSearchJob?.cancel()
-        memberSearchJob = viewModelScope.launch {
-            delay(SEARCH_DEBOUNCE)
-            try {
-                val r = repository.searchMembers(forumId, query)
-                _uiState.value = _uiState.value.copy(memberSearchResults = r.members)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     fun removeMember(memberId: String) {
         viewModelScope.launch {
             try {
@@ -364,16 +347,5 @@ class ForumSettingsViewModel @Inject constructor(
 
     fun clearActionMessage() {
         _uiState.value = _uiState.value.copy(actionMessage = null)
-    }
-
-    fun loadRssToken() {
-        viewModelScope.launch {
-            try {
-                val r = repository.getRssToken(forumId, "posts")
-                _uiState.value = _uiState.value.copy(rssToken = r.token, rssUrl = r.url)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
     }
 }

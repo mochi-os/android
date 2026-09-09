@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">മെനു</string>
-    <string name="words_list_new">പുതിയ ഗെയിം</string>
     <string name="words_list_logout">ലോഗ് ഔട്ട്</string>
-    <string name="words_list_empty_title">ഗെയിമുകളൊന്നും ഇതുവരെ ഇല്ല</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">പൂർത്തിയായി</string>
     <string name="words_sidebar_new_game">പുതിയ ഗെയിം</string>
     <string name="words_new_game_title">പുതിയ ഗെയിം</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">നീക്കം ചെയ്യുക</string>
     <string name="words_detail_action_delete">ഗെയിം ഇല്ലാതാക്കുക</string>
     <string name="words_detail_chat_title">ചാറ്റ്</string>
-    <string name="words_detail_invalid_move">അസാധുവായ നീക്കം</string>
     <string name="words_detail_recall">രസീത് സ്ഥിരീകരിച്ചു</string>
     <string name="words_detail_submit">സമർപ്പിക്കുക</string>
     <string name="words_detail_cancel">റദ്ദാക്കുക</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ഒരു അക്ഷരം തിരഞ്ഞെടുക്കുക</string>
     <string name="words_detail_resign_title">പിന്മാറുന്നു...</string>
     <string name="words_detail_resign_message">നിങ്ങൾ തീർച്ചയായും രാജി വയ്ക്കാൻ ആഗ്രഹിക്കുന്നുവോ?</string>
-    <string name="words_detail_failed_move">നീക്കം സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="words_detail_failed_pass">പാസ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="words_detail_failed_exchange">കൈമാറ്റം ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="words_detail_failed_resign">രാജിവയ്ക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="words_detail_failed_rematch">റീമാച്ച് സൃഷ്ടിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="words_detail_failed_delete">ഗെയിം ഇല്ലാതാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="words_detail_game_deleted">ഗെയിം ഇല്ലാതാക്കി</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words ഊഴങ്ങൾ, കൈമാറ്റങ്ങൾ, ഗെയിം ഫലങ്ങൾ എന്നിവയെക്കുറിച്ചുള്ള അറിയിപ്പുകൾ.</string>
-    <string name="words_list_empty_subtitle">നിങ്ങളുടെ ആദ്യ ഗെയിം ആരംഭിക്കാൻ + ബട്ടൺ ടാപ്പ് ചെയ്യുക.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">ഇതുവരെ ഗെയിമുകളില്ല.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">കളിക്കാൻ തുടങ്ങാൻ People ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">ഗെയിം വിശദാംശങ്ങൾ ഉടൻ വരുന്നു</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

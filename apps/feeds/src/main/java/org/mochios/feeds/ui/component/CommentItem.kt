@@ -79,7 +79,7 @@ internal fun CommentItem(
                 ReactionBar(
                     reactions = toReactionCounts(comment.reactions, comment.myReaction),
                     onReact = onReact,
-                    onRemoveReaction = { onReact(comment.myReaction) },
+                    onRemoveReaction = { onReact("none") },
                     currentReaction = currentReactionType(comment.myReaction),
                 )
             },

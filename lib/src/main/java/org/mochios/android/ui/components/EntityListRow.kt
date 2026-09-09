@@ -128,13 +128,3 @@ fun EntityIconCircle(
         )
     }
 }
-
-/** Convenience divider for stacked rows. Indents past the avatar so it
- *  reads as a list separator rather than a section break. */
-@Composable
-fun EntityListDivider() {
-    HorizontalDivider(
-        modifier = Modifier.padding(start = 72.dp),
-        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
-    )
-}

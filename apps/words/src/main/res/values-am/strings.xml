@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">ቃላት</string>
     <string name="words_list_title">ቃላት</string>
     <string name="words_list_menu">ምናሌ</string>
-    <string name="words_list_new">አዲስ ጨዋታ</string>
     <string name="words_list_logout">ውጣ</string>
-    <string name="words_list_empty_title">እስካሁን ጨዋታዎች የሉም</string>
-    <string name="words_sidebar_header">ቃላት</string>
     <string name="words_sidebar_completed">ተጠናቅቋል</string>
     <string name="words_sidebar_new_game">አዲስ ጨዋታ</string>
     <string name="words_new_game_title">አዲስ ጨዋታ</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">እንደገና ተወዳደር</string>
     <string name="words_detail_action_delete">ጨዋታ ሰርዝ</string>
     <string name="words_detail_chat_title">ውይይት</string>
-    <string name="words_detail_invalid_move">ልክ ያልሆነ እንቅስቃሴ</string>
     <string name="words_detail_recall">አስታውስ</string>
     <string name="words_detail_submit">ያቅርቡ</string>
     <string name="words_detail_cancel">ይቅር</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ፊደል ምረጥ</string>
     <string name="words_detail_resign_title">ጨዋታ ይለቀቅ?</string>
     <string name="words_detail_resign_message">በእርግጥ መልቀቅ ይፈልጋሉ?</string>
-    <string name="words_detail_failed_move">እንቅስቃሴ ማቅረብ አልተሳካም</string>
-    <string name="words_detail_failed_pass">ማለፍ አልተሳካም</string>
-    <string name="words_detail_failed_exchange">መለዋወጥ አልተሳካም</string>
-    <string name="words_detail_failed_resign">መልቀቅ አልተሳካም</string>
-    <string name="words_detail_failed_rematch">እንደገና ጨዋታ መፍጠር አልተሳካም</string>
-    <string name="words_detail_failed_delete">ጨዋታ መሰረዝ አልተሳካም</string>
-    <string name="words_detail_game_deleted">ጨዋታ ተሰርዟል</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">ስለ Words ተራዎች፣ ልውውጦች እና የጨዋታ ውጤቶች ማሳወቂያዎች።</string>
-    <string name="words_list_empty_subtitle">የመጀመሪያ ጨዋታዎን ለመጀመር የ+ አዝራሩን ይንኩ።</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">እስካሁን ጨዋታዎች የሉም።</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">መጫወት ለመጀመር በPeople መተግበሪያ ውስጥ ጓደኞችን ያክሉ።</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">የጨዋታ ዝርዝር በቅርቡ ይመጣል</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

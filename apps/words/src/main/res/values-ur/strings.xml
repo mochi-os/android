@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">مینو</string>
-    <string name="words_list_new">نیا گیم</string>
     <string name="words_list_logout">لاگ آؤٹ</string>
-    <string name="words_list_empty_title">ابھی تک کوئی گیمز نہیں</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">مکمل</string>
     <string name="words_sidebar_new_game">نیا گیم</string>
     <string name="words_new_game_title">نیا گیم</string>
@@ -30,7 +26,6 @@
     <string name="words_detail_action_rematch">دوبارہ میچ</string>
     <string name="words_detail_action_delete">گیم حذف کریں</string>
     <string name="words_detail_chat_title">چیٹ</string>
-    <string name="words_detail_invalid_move">غلط چال</string>
     <string name="words_detail_recall">واپس بلائیں</string>
     <string name="words_detail_submit">جمع کریں</string>
     <string name="words_detail_cancel">منسوخ کریں</string>
@@ -38,19 +33,8 @@
     <string name="words_detail_blank_title">ایک حرف منتخب کریں</string>
     <string name="words_detail_resign_title">گیم سے resign کریں؟</string>
     <string name="words_detail_resign_message">کیا آپ واقعی ہار ماننا چاہتے ہیں؟</string>
-    <string name="words_detail_failed_move">چال جمع کرانے میں ناکامی</string>
-    <string name="words_detail_failed_pass">پاس کرنے میں ناکامی</string>
-    <string name="words_detail_failed_exchange">تبدیلی میں ناکامی</string>
-    <string name="words_detail_failed_resign">دستبرداری میں ناکامی</string>
-    <string name="words_detail_failed_rematch">ری میچ بنانے میں ناکامی</string>
-    <string name="words_detail_failed_delete">گیم حذف کرنے میں ناکامی</string>
-    <string name="words_detail_game_deleted">گیم حذف کر دی گئی</string>
     <string name="words_channel_name">الفاظ اطلاعات</string>
     <string name="words_channel_description">باریوں، تبادلوں، اور کھیل کے نتائج کے بارے میں اطلاعات۔</string>
-    <string name="words_list_empty_subtitle">اپنا پہلا کھیل شروع کرنے کے لیے + بٹن پر ٹیپ کریں۔</string>
-    <string name="words_list_status_finished">مکمل</string>
-    <string name="words_list_status_resigned">ہار مان لی</string>
-    <string name="words_list_your_turn">آپ کی باری</string>
     <string name="words_sidebar_active">فعال کھیل</string>
     <string name="words_sidebar_empty">ابھی کوئی کھیل نہیں۔</string>
     <string name="words_new_game_choose_opponents">حریف منتخب کریں</string>
@@ -58,7 +42,6 @@
     <string name="words_new_game_player_count">%1$d کھلاڑی</string>
     <string name="words_new_game_no_friends_subtitle">کھیلنا شروع کرنے کے لیے لوگ ایپ میں دوست شامل کریں۔</string>
     <string name="words_detail_title">کھیل</string>
-    <string name="words_detail_coming_soon">کھیل کی تفصیلات جلد آ رہی ہیں</string>
     <string name="words_detail_status_opponent_move">%1$s کی باری</string>
     <string name="words_detail_status_winner_wins">%1$s جیت گیا</string>
     <string name="words_detail_player_fallback">کھلاڑی %1$d</string>

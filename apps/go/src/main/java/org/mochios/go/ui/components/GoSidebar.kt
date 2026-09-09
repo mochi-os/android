@@ -35,7 +35,11 @@ private fun Game.toDrawerItem(myIdentity: String, section: String): DrawerItem {
         title = "${opponentName(myIdentity)} ($boardSize×$boardSize)",
         // Blank opponent id means no avatar asset path; the row still gets a
         // seeded initials circle from the drawer's seed-without-icon branch.
-        avatarUrl = if (opponentId.isNotBlank()) "/people/$opponentId/-/avatar" else null,
+        avatarUrl = if (opponentId.isNotBlank()) {
+            "/go/$id/-/user/$opponentId/asset/avatar"
+        } else {
+            null
+        },
         seed = opponentId,
         section = section,
     )

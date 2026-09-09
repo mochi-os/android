@@ -66,7 +66,6 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.webUri
 import org.mochios.market.R
-import org.mochios.market.lib.formatFingerprint
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Asset
 import org.mochios.market.model.Currency
@@ -225,7 +224,7 @@ private fun OrderSummaryCard(order: Order, listing: Listing) {
             )
             SummaryRow(
                 label = stringResource(R.string.market_purchase_seller),
-                value = order.sellerName?.takeIf { it.isNotBlank() } ?: formatFingerprint(order.seller),
+                value = order.sellerName?.takeIf { it.isNotBlank() } ?: order.sellerFingerprint.orEmpty(),
             )
             SummaryRow(
                 label = stringResource(R.string.market_purchase_delivery),
@@ -472,7 +471,7 @@ private fun PeerReviewCard(review: Review) {
             Text(
                 stringResource(
                     R.string.market_purchase_review_from,
-                    review.reviewerName ?: formatFingerprint(review.reviewer),
+                    review.reviewerName ?: review.reviewerFingerprint.orEmpty(),
                 ),
                 style = MaterialTheme.typography.titleSmall,
             )

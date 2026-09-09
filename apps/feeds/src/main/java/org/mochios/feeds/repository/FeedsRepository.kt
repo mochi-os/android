@@ -26,6 +26,7 @@ import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
+import org.mochios.feeds.api.PostDetailResponse
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.AddSourceRequest
@@ -68,6 +69,18 @@ data class PostDetailResult(
     val post: Post,
     val permissions: Permissions
 )
+
+/**
+ * The detail result behind a `-/:post` answer. A deleted or unknown post is
+ * answered with 200 and an empty `posts` list rather than a 404, so the
+ * not-found state has to be raised here — otherwise the screen shows the
+ * generic error-with-retry instead of "post not found".
+ */
+internal fun postDetail(response: PostDetailResponse): PostDetailResult =
+    PostDetailResult(
+        post = response.posts.firstOrNull() ?: throw MochiError.NotFoundError(),
+        permissions = response.permissions,
+    )
 
 data class ProbeResult(
     val feed: Feed?,
@@ -139,10 +152,6 @@ class FeedsRepository @Inject constructor(
         return cached.result
     }
 
-    fun invalidateCache(feedId: String) {
-        postCache.remove(feedId)
-        feedInfoCache.remove(feedId)
-    }
 
     // --- Class-level operations ---
 
@@ -579,8 +588,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun getPost(feedId: String, postId: String): PostDetailResult {
         return try {
-            val response = api.getPost(feedId, postId).unwrap()
-            PostDetailResult(post = response.posts.first(), permissions = response.permissions)
+            postDetail(api.getPost(feedId, postId).unwrap())
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -788,13 +796,6 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun removeTag(feedId: String, postId: String, id: String) {
-        try {
-            api.removeTag(feedId, postId, id).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
 
     suspend fun adjustInterest(feedId: String, qid: String?, label: String?, direction: String) {
         try {
@@ -879,13 +880,6 @@ class FeedsRepository @Inject constructor(
 
     // --- Banner ---
 
-    suspend fun getBanner(feedId: String): String {
-        return try {
-            api.getBanner(feedId).unwrap().banner
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
 
     suspend fun setBanner(feedId: String, banner: String) {
         try {

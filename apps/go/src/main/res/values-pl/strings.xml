@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Gra usunięta</string>
     <string name="go_new_game_add_friends">Dodaj znajomych</string>
     <string name="go_new_game_board_size_label">Rozmiar tablicy</string>
-    <string name="go_new_game_cancel">Anuluj</string>
     <string name="go_new_game_friend_label">Przeciwnik</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Poddać grę?</string>
     <string name="go_sidebar_completed">Zakończone</string>
     <string name="go_sidebar_new_game">Nowa gra</string>
-    <string name="go_status_active">Aktywne</string>
     <string name="go_status_draw">Remis</string>
     <string name="go_status_draw_text">Remis</string>
     <string name="go_status_game_over">Koniec gry</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Otwórz panel boczny</string>
     <string name="go_sidebar_active">Aktywne partie</string>
     <string name="go_empty_active">Brak aktywnych partii.</string>
-    <string name="go_empty_completed">Brak ukończonych partii.</string>
-    <string name="go_status_finished">Zakończona</string>
     <string name="go_status_resigned">Poddana</string>
-    <string name="go_card_vs">przeciwko %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nowa partia Go</string>
     <string name="go_new_game_no_friends">Musisz dodać znajomego, zanim rozpoczniesz partię.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punkty dodawane do wyniku Białego, aby zrekompensować, że Czarny rusza pierwszy</string>
-    <string name="go_new_game_create_error">Nie udało się rozpocząć partii</string>
 
     <string name="go_board_a11y">Plansza Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Plansza go %1$d×%1$d, twoja kolej postawić czarny kamień</string>
     <string name="go_board_a11y_turn_white">Plansza go %1$d×%1$d, twoja kolej postawić biały kamień</string>
+    <string name="go_status_scoring">Liczenie — uzgodnijcie wynik albo grajcie dalej</string>
+    <string name="go_score_proposed">Proponowany wynik: czarne %1$s, białe %2$s</string>
+    <string name="go_score_opponent_accepted">Twój przeciwnik akceptuje ten wynik: czarne %1$s, białe %2$s</string>
+    <string name="go_score_waiting">Wynik zaakceptowany — oczekiwanie na %1$s</string>
+    <string name="go_score_accept">Zaakceptuj wynik</string>
+    <string name="go_score_resume">Wznów grę</string>
+    <string name="go_error_score_resume_failed">Nie udało się wznowić gry</string>
+    <string name="go_error_score_accept_failed">Nie udało się zaakceptować wyniku</string>
 </resources>

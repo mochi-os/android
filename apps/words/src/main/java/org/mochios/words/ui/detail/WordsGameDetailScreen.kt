@@ -105,6 +105,9 @@ import org.mochios.words.engine.deriveMoveDraft
 import org.mochios.words.engine.getLetterValue
 import org.mochios.words.engine.parseBoard
 import org.mochios.words.model.Game
+import org.mochios.words.model.canExchange
+import org.mochios.words.model.isResigner
+import org.mochios.words.model.resignerSlot
 import org.mochios.words.model.GameMessage
 import org.mochios.words.ui.detail.board.MoveActions
 import org.mochios.words.ui.detail.board.MoveFeedback
@@ -213,9 +216,7 @@ fun WordsGameDetailScreen(
                             title = header.title,
                             opponentFingerprint = header.opponentId.ifEmpty { null },
                             opponentName = header.opponentName,
-                            avatarUrl = header.opponentId
-                                .ifEmpty { null }
-                                ?.let { id -> "/people/$id/-/avatar" },
+                            avatarUrl = header.avatarUrl,
                         )
                     } else {
                         Text(
@@ -247,6 +248,7 @@ fun WordsGameDetailScreen(
                         WordsActionsMenu(
                             isActive = isActive,
                             isMyTurn = isMyTurn,
+                            canExchange = game != null && canExchange(game),
                             exchangeMode = state.exchangeMode,
                             hasPendingTiles = state.pendingPlacements.isNotEmpty(),
                             rematching = state.isCreatingRematch,
@@ -511,6 +513,9 @@ private fun GameDetailContent(
                         )
                     }
                     GameHeaderStat(label = header.tilesLeftLabel)
+                    if (header.playersLabel != null) {
+                        GameHeaderStat(label = header.playersLabel)
+                    }
                 }
 
                 Box(
@@ -627,9 +632,11 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
+                        isError = state.messagesError,
                         hasMore = state.hasMoreMessages,
                         isLoadingMore = state.isLoadingMoreMessages,
                         onLoadMore = { viewModel.loadMoreMessages() },
+                        onRetry = { viewModel.loadMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                         composerWindowInsets = ComposeBarDefaults.WindowInsets,
                     )
@@ -728,9 +735,11 @@ private fun GameDetailContent(
                         messages = state.messages,
                         myIdentity = myIdentity,
                         isLoading = state.isLoadingMessages,
+                        isError = state.messagesError,
                         hasMore = state.hasMoreMessages,
                         isLoadingMore = state.isLoadingMoreMessages,
                         onLoadMore = { viewModel.loadMoreMessages() },
+                        onRetry = { viewModel.loadMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
                     )
                 }
@@ -765,6 +774,7 @@ private val GHOST_TILE_BORDER = Color(0xFFD97706)
 private fun WordsActionsMenu(
     isActive: Boolean,
     isMyTurn: Boolean,
+    canExchange: Boolean,
     exchangeMode: Boolean,
     hasPendingTiles: Boolean,
     rematching: Boolean,
@@ -808,7 +818,7 @@ private fun WordsActionsMenu(
                         leadingIcon = { Icon(Icons.Outlined.SkipNext, contentDescription = null) },
                     )
                 }
-                if (isMyTurn) {
+                if (isMyTurn && (canExchange || exchangeMode)) {
                     MochiDropdownMenuItem(
                         text = {
                             val label = if (exchangeMode) {
@@ -861,9 +871,11 @@ private fun GameChatColumn(
     messages: List<GameMessage>,
     myIdentity: String,
     isLoading: Boolean,
+    isError: Boolean,
     hasMore: Boolean,
     isLoadingMore: Boolean,
     onLoadMore: () -> Unit,
+    onRetry: () -> Unit,
     onSend: (String, (Boolean) -> Unit) -> Unit,
     // Which host is showing this column decides who lifts the composer for the
     // keyboard. The default suits the phone's sheet, which lifts its own
@@ -914,11 +926,11 @@ private fun GameChatColumn(
                 messages = chatMessages,
                 currentUserIdentity = myIdentity,
                 isLoading = isLoading,
-                isError = false,
+                isError = isError,
                 hasMore = hasMore,
                 isLoadingMore = isLoadingMore,
                 onLoadMore = onLoadMore,
-                onRetry = {},
+                onRetry = onRetry,
                 moveMessageRenderer = { msg, isSent ->
                     {
                         WordsMoveRow(msg = msg, isSent = isSent)
@@ -1035,8 +1047,11 @@ data class WordsHeaderModel(
     val status: String,
     val players: List<WordsHeaderPlayer>,
     val tilesLeftLabel: String,
+    /** "N players", shown only for a game with more than two seats. */
+    val playersLabel: String?,
     val opponentId: String,
     val opponentName: String,
+    val avatarUrl: String?,
 )
 
 @Composable
@@ -1071,10 +1086,9 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         else winner == playerIdentity(game.my_player_number)
     }
 
-    val titleBase = (1..game.player_count)
+    val title = (1..game.player_count)
         .filterNot { isMeForPlayer(it) }
         .joinToString(", ") { playerName(it) }
-    val title = if (game.player_count > 2) "$titleBase (${game.player_count}p)" else titleBase
 
     val status: String = when (game.status) {
         "active" -> {
@@ -1098,8 +1112,19 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
             }
         }
         else -> {
-            if (isMyWin) context.getString(R.string.words_detail_status_opponent_resigned)
-            else context.getString(R.string.words_detail_status_you_resigned)
+            // Three outcomes, not two: the resigner, the winner, and the
+            // players who did neither, who used to fall into the else and be
+            // told they had resigned - contradicting the "<name> resigned"
+            // line in the log beside it.
+            val resigner = resignerSlot(game)
+            when {
+                isResigner(game, myIdentity) ->
+                    context.getString(R.string.words_detail_status_you_resigned)
+                isMyWin -> context.getString(R.string.words_detail_status_opponent_resigned)
+                resigner != null ->
+                    context.getString(MochiR.string.game_system_resign, playerName(resigner))
+                else -> context.getString(R.string.words_detail_status_game_over)
+            }
         }
     }
 
@@ -1131,8 +1156,19 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         status = status,
         players = players,
         tilesLeftLabel = context.getString(R.string.words_detail_label_tiles_left, game.bag_count),
+        // A game always seats two to four, so the singular never arises and the
+        // plain string - which every catalogue already carries - is enough.
+        playersLabel = if (game.player_count > 2) {
+            context.getString(R.string.words_detail_player_count, game.player_count)
+        } else {
+            null
+        },
         opponentId = opponentSlot?.let { num -> playerIdentity(num) }.orEmpty(),
         opponentName = opponentSlot?.let { num -> playerName(num) }.orEmpty(),
+        avatarUrl = opponentSlot
+            ?.let { num -> playerIdentity(num) }
+            ?.takeIf { it.isNotEmpty() }
+            ?.let { identity -> "/words/${game.id}/-/user/$identity/asset/avatar" },
     )
 }
 

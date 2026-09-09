@@ -37,6 +37,9 @@ data class ForumDirectoryItem(
     val subtitle: String = "",
     val blurb: String = "",
     val server: String? = null,
+    /** A share-link probe answers the owner's peer; subscribe pins the same
+     *  one so the initial sync can route to a private forum. */
+    val peer: String? = null,
 )
 
 data class FindForumsUiState(
@@ -120,7 +123,10 @@ class FindForumsViewModel @Inject constructor(
     private fun looksLikeUrl(query: String): Boolean {
         val trimmed = query.trim()
         return trimmed.startsWith("http://", ignoreCase = true) ||
-            trimmed.startsWith("https://", ignoreCase = true)
+            trimmed.startsWith("https://", ignoreCase = true) ||
+            // A pasted share link. The server's probe resolves it and answers
+            // the peer it pinned, which subscribe then re-uses.
+            trimmed.startsWith("mochi://", ignoreCase = true)
     }
 
     private suspend fun search(query: String) {
@@ -161,6 +167,7 @@ class FindForumsViewModel @Inject constructor(
                     name = r.name,
                     subtitle = r.fingerprintHyphens.ifEmpty { r.fingerprint },
                     server = r.server.takeIf { server -> server.isNotBlank() },
+                    peer = r.peer.takeIf { peer -> peer.isNotBlank() },
                 ),
             )
         } catch (_: Exception) {
@@ -178,7 +185,7 @@ class FindForumsViewModel @Inject constructor(
         if (target.isBlank()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(subscribingKey = item.key, error = null)
-            val result = subscribeOrNull(target, item.server)
+            val result = subscribeOrNull(target, item.server, item.peer)
             val landingId = result.getOrElse { failure ->
                 _uiState.value = _uiState.value.copy(
                     subscribingKey = null,
@@ -197,8 +204,12 @@ class FindForumsViewModel @Inject constructor(
     }
 
     /** The joined forum's id on success, else the error that ended the attempt. */
-    private suspend fun subscribeOrNull(target: String, server: String?): Result<String> {
-        val first = runCatching { repository.subscribe(target, server) }
+    private suspend fun subscribeOrNull(
+        target: String,
+        server: String?,
+        peer: String? = null,
+    ): Result<String> {
+        val first = runCatching { repository.subscribe(target, server, peer) }
         first.getOrNull()?.let { landingId -> return Result.success(landingId) }
 
         val error = first.exceptionOrNull()!!.toMochiError()
@@ -208,7 +219,7 @@ class FindForumsViewModel @Inject constructor(
 
         // The home-server hint was unreachable; let the local server fall back to
         // general peer discovery.
-        return runCatching { repository.subscribe(target, null) }
+        return runCatching { repository.subscribe(target, null, peer) }
             .mapCatching { landingId -> landingId }
             .recoverCatching { retryError -> throw retryError.toMochiError() }
     }

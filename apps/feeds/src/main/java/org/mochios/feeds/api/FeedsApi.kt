@@ -489,14 +489,6 @@ interface FeedsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
-    @POST("{feedId}/-/{postId}/tags/remove")
-    suspend fun removeTag(
-        @Path("feedId") feedId: String,
-        @Path("postId") postId: String,
-        @Field("tag") id: String
-    ): Response<ApiResponse<SuccessResponse>>
-
-    @FormUrlEncoded
     @POST("{feedId}/-/tags/interest")
     suspend fun adjustInterest(
         @Path("feedId") feedId: String,
@@ -565,10 +557,6 @@ interface FeedsApi {
 
     // --- Banner ---
 
-    @GET("{feedId}/-/banner/get")
-    suspend fun getBanner(
-        @Path("feedId") feedId: String
-    ): Response<ApiResponse<BannerResponse>>
 
     @FormUrlEncoded
     @POST("{feedId}/-/banner/set")

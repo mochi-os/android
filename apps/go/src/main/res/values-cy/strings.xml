@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Gêm wedi\'i dileu</string>
     <string name="go_new_game_add_friends">Ychwanegu cyfeillion</string>
     <string name="go_new_game_board_size_label">Maint y bwrdd</string>
-    <string name="go_new_game_cancel">Canslo</string>
     <string name="go_new_game_friend_label">Gwrthwynebydd</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Ymddiswyddo o\'r gêm?</string>
     <string name="go_sidebar_completed">Wedi cwblhau</string>
     <string name="go_sidebar_new_game">Gêm newydd</string>
-    <string name="go_status_active">Gweithredol</string>
     <string name="go_status_draw">Cyfartal</string>
     <string name="go_status_draw_text">Cyfartal</string>
     <string name="go_status_game_over">Diwedd y gêm</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Dim gemau gweithredol eto.</string>
-    <string name="go_empty_completed">Dim gemau wedi’u cwblhau eto.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Gêm Go newydd</string>
     <string name="go_new_game_no_friends">Mae angen i chi ychwanegu ffrind cyn i chi allu dechrau gêm.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Pwyntiau a ychwanegwyd at sgôr Gwyn i wneud iawn am fod Du yn mynd gyntaf</string>
-    <string name="go_new_game_create_error">Methu dechrau’r gêm</string>
 
     <string name="go_board_a11y">Bwrdd Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Bwrdd Go %1$d×%1$d, eich tro i osod carreg ddu</string>
     <string name="go_board_a11y_turn_white">Bwrdd Go %1$d×%1$d, eich tro i osod carreg wen</string>
+    <string name="go_status_scoring">Cyfrif — cytunwch ar y sgôr neu daliwch ati i chwarae</string>
+    <string name="go_score_proposed">Sgôr arfaethedig: du %1$s, gwyn %2$s</string>
+    <string name="go_score_opponent_accepted">Mae eich gwrthwynebydd yn derbyn y sgôr hwn: du %1$s, gwyn %2$s</string>
+    <string name="go_score_waiting">Sgôr wedi\'i dderbyn — yn aros am %1$s</string>
+    <string name="go_score_accept">Derbyn y sgôr</string>
+    <string name="go_score_resume">Ailddechrau chwarae</string>
+    <string name="go_error_score_resume_failed">Methwyd ailddechrau\'r chwarae</string>
+    <string name="go_error_score_accept_failed">Methwyd derbyn y sgôr</string>
 </resources>

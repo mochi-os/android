@@ -5,10 +5,7 @@
     <string name="auth_email">ኢሜይል</string>
     <string name="auth_continue">ቀጥል</string>
     <string name="auth_verification_code">የማረጋገጫ ኮድ</string>
-    <string name="auth_verify">ያረጋግጡ</string>
-    <string name="auth_authenticator_app">የማረጋገጫ መተግበሪያ</string>
     <string name="auth_email_code">የኢሜይል ኮድ</string>
-    <string name="auth_authenticator_code">የማረጋገጫ ኮድ</string>
     <string name="auth_recovery_code">የመልሶ ማግኛ ኮድ</string>
     <string name="auth_name">ስም</string>
     <string name="auth_create">ፍጠር</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">ቅዳ</string>
     <string name="common_copied">ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
     <string name="comment_edited">(ተሻሽሏል)</string>
-    <string name="comment_edit_placeholder">አስተያየት አስተካክል</string>
     <string name="comment_reply">ምላሽ ስጥ</string>
-    <string name="comment_reply_placeholder">ምላሽ ስጥ</string>
-    <string name="comment_send_reply">ምላሽ ይላኩ</string>
     <string name="person_picker_search">ተጠቃሚዎችን ይፈልጉ</string>
     <string name="place_picker_no_results">ምንም ቦታዎች አልተገኙም</string>
-    <string name="discovery_results">ውጤቶች</string>
     <string name="discovery_recommended">የተመከረ</string>
-    <string name="discovery_subscribed">ተመዝግቧል</string>
     <string name="access_add_rule">ሕግ አክል</string>
     <string name="access_owner">ባለቤት</string>
     <string name="access_revoke">ይሻሩ</string>
-    <string name="access_level">የመዳረሻ ደረጃ</string>
     <string name="access_level_comment">አስተያየት</string>
     <string name="access_level_view">ይመልከቱ</string>
     <string name="access_level_none">ምንም</string>
-    <string name="banner_label">ሰንደቅ</string>
     <string name="reaction_like">ወደድኩት</string>
     <string name="reaction_dislike">አልወድም</string>
     <string name="reaction_laugh">ሳቅ</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">ሁሉም</string>
     <string name="notifications_mark_all_read">ሁሉንም እንደተነበበ ምልክት አድርግ</string>
     <string name="notifications_clear_all">ሁሉንም አጽዳ</string>
-    <string name="notifications_loading">በመጫን ላይ…</string>
     <string name="settings_title">ቅንብሮች</string>
-    <string name="settings_open">ቅንብሮች</string>
     <string name="settings_appearance">መልክ</string>
     <string name="settings_appearance_light">ብርሃን</string>
     <string name="settings_appearance_dark">ጨለማ</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">ዳራ</string>
     <string name="settings_background_theme">ከገጽታ</string>
     <string name="settings_background_off">ምንም</string>
-    <string name="profile_title">መገለጫ</string>
-    <string name="profile_open">መገለጫ</string>
-    <string name="profile_display_name">የማሳያ ስም</string>
-    <string name="profile_save_name">ስም አስቀምጥ</string>
-    <string name="profile_privacy">ግላዊነት</string>
-    <string name="profile_privacy_public">ሕዝባዊ</string>
-    <string name="profile_privacy_private">የግል</string>
-    <string name="profile_fingerprint">ጣት አሻራ</string>
     <string name="game_chat_empty">እስካሁን መልዕክቶች የሉም</string>
     <string name="game_chat_input_placeholder">መልዕክት ይተይቡ…</string>
     <string name="game_chat_send">መልዕክት ይላኩ</string>
     <string name="game_chat_subject_you">እርስዎ</string>
 
     <string name="common_not_saved">አልተቀመጠም</string>
-    <string name="common_save_failed">ለውጦችዎ ሊቀመጡ አልቻሉም።</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">መገናኘት አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">አልተገኘም</string>
     <string name="error_server">የአገልጋይ ስህተት (%1$d)። እባክዎ ቆይተው እንደገና ይሞክሩ።</string>
     <string name="error_unexpected">ያልተጠበቀ ስህተት ተከስቷል</string>
-    <string name="error_request_failed">ጥያቄው አልተሳካም</string>
     <string name="error_enter_server_url">እባክዎ የአገልጋይ URL ያስገቡ</string>
     <string name="error_enter_email">እባክዎ ኢሜይልዎን ያስገቡ</string>
     <string name="error_enter_name">እባክዎ ስም ያስገቡ</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">የአገልጋይ URL</string>
     <string name="auth_connect">ይገናኙ</string>
     <string name="auth_sign_in">ይግቡ</string>
-    <string name="auth_sign_in_with_passkey">በፓስኪ ይግቡ</string>
-    <string name="auth_sign_in_with_email_code">በኢሜይል ኮድ ይግቡ</string>
-    <string name="auth_use_recovery_code">የመልሶ ማግኛ ኮድ ይጠቀሙ</string>
-    <string name="auth_back_to_sign_in">ወደ መግቢያ ተመለስ</string>
-    <string name="auth_send_code">ኮድ ላክ</string>
     <string name="auth_check_email">የማረጋገጫ ኮድ ለማግኘት ኢሜይልዎን ይፈትሹ</string>
-    <string name="auth_six_digit_code">6-አሃዝ ኮድ</string>
     <string name="auth_mfa_title">ባለብዙ-ደረጃ ማረጋገጫ</string>
     <string name="auth_mfa_subtitle">ቀሪዎቹን የማረጋገጫ ደረጃዎች ያጠናቅቁ</string>
     <string name="auth_recover_account">መለያ መልሶ ማግኘት</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">በተለየ መንገድ ይግቡ</string>
     <string name="bootstrap_choose_account">መለያ ይምረጡ</string>
     <string name="bootstrap_sign_in_different_server">ወደ ሌላ አገልጋይ ይግቡ</string>
-    <string name="common_or">ወይም</string>
-    <string name="common_change">ለውጥ</string>
     <string name="common_retry">እንደገና ሞክር</string>
     <string name="common_more_options">ተጨማሪ አማራጮች</string>
     <string name="common_collapse">አሳጥር</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">የቦታ ስም</string>
     <string name="place_origin">መነሻ</string>
     <string name="place_destination">መድረሻ</string>
-    <string name="discovery_search_placeholder">%1$ssን ይፈልጉ</string>
-    <string name="discovery_no_results">ምንም %1$ss አልተገኘም</string>
     <string name="discovery_no_results_hint">ፍለጋዎን ማስተካከል ይሞክሩ</string>
-    <string name="discovery_no_recommendations">ምንም ምክሮች የሉም</string>
-    <string name="discovery_search_hint">ለመመዝገብ %1$s ለመፈለግ ይሞክሩ</string>
     <string name="access_no_rules">ምንም የመዳረሻ ደንቦች የሉም</string>
-    <string name="access_no_rules_subtitle">ይህን ሀብት ማን መድረስ እንደሚችል ለመቆጣጠር ደንቦችን ያክሉ</string>
     <string name="access_add_rule_title">የመዳረሻ ደንብ አክል</string>
     <string name="access_level_manage">ያስተዳድሩ</string>
     <string name="access_level_react">ምላሽ ይስጡ</string>
     <string name="notifications_clear">ማሳወቂያዎችን አጽዳ</string>
-    <string name="banner_description">በዚህ እይታ አናት ላይ የሚታይ ማርክዳውን።</string>
-    <string name="banner_placeholder">እንኳን ደህና መጡ…</string>
-    <string name="banner_save">ባነር አስቀምጥ</string>
-    <string name="banner_clear">ባነር አጽዳ</string>
     <string name="entity_avatar_alt">ለ%1$s አምሳያ</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$dቀ</string>
     <string name="format_time_weeks_short">%1$dሳ</string>
     <string name="format_time_months_short">%1$dወ</string>
-    <string name="format_time_years_short">%1$dዓ</string>
     <string name="reaction_add">ምላሽ አክል</string>
     <string name="push_service_channel">Mochi ግፋ</string>
     <string name="push_service_channel_description">ሞቺ ማሳወቂያዎችን ለመቀበል እንዲገናኝ ያደርጋል</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">ማውረድ አልተሳካም</string>
     <string name="notifications_clear_all_title">ሁሉንም ማሳወቂያዎች ይጥረጉ?</string>
     <string name="notifications_clear_all_message">ይህ ሁሉንም ማሳወቂያ ያስወግዳል። መልሰው ማግኘት አይቻልም።</string>
-    <string name="notifications_count_n">%1$d አዲስ</string>
     <string name="settings_value_auto">ራስ-ሰር</string>
     <string name="settings_value_theme">ነባሪ ገጽታ</string>
     <string name="settings_radius">የማዕዘን ራዲየስ</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">አንጻራዊ</string>
     <string name="settings_timestamp_absolute">ፍጹም</string>
     <string name="settings_units_usa">US</string>
-    <string name="profile_privacy_description">ሌሎች በማውጫው ውስጥ ሊያገኙዎት ይችሉ እንደሆነ።</string>
     <string name="game_chat_load_more">የቆዩ መልዕክቶችን ጫን</string>
     <string name="game_chat_move_played">%1$s %2$s ተጫውቷል</string>
     <string name="stepup_title">እርስዎ መሆንዎን ያረጋግጡ</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">ከኢሜይልዎ የመጣውን ኮድ ያስገቡ</string>
     <string name="stepup_totp_label">የማረጋገጫ ኮድ</string>
     <string name="stepup_totp_placeholder">የአረጋጋጭዎን ኮድ ያስገቡ</string>
-    <string name="stepup_passkey_label">የይለፍ ቁልፍ</string>
     <string name="stepup_use_passkey">የይለፍ ቁልፍዎን ይጠቀሙ</string>
     <string name="stepup_send_email">ኢሜይል ላክ</string>
     <string name="stepup_resend_email">ኢሜይል እንደገና ላክ</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">ስም የለሽ</string>
     <string name="tags_label">መለያዎች</string>
     <string name="tags_add">መለያ ጨምር</string>
-    <string name="tags_label_field">የመለያ ስም</string>
     <string name="tags_interest_up">ተመሳሳዮችን አሳይ</string>
     <string name="tags_interest_down">እንደዚህ ያሉ ጥቂቶችን አሳይ</string>
     <string name="tags_interest_clear">ማሳየት አቁም</string>
@@ -310,10 +266,6 @@
     <string name="person_picker_directory">ማውጫ</string>
     <string name="person_picker_no_people">ሰዎች የሉም</string>
     <string name="person_picker_project_members">የፕሮጀክት አባላት</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d ተመዝጋቢ</item>
-        <item quantity="other">%1$d ተመዝጋቢዎች</item>
-    </plurals>
     <string name="account_token_label">የMochi ክፍለ ጊዜ</string>
     <string name="attachment_caption">መግለጫ ጽሑፍ</string>
     <string name="attachment_caption_add">መግለጫ ጽሑፍ አክል</string>
@@ -354,4 +306,8 @@
     <string name="settings_card_theme">ከገጽታ</string>
     <string name="settings_card_flat">ጠፍጣፋ</string>
     <string name="settings_card_raised">ከፍ ያለ</string>
+    <string name="error_server_https">የአገልጋዩ አድራሻ በhttps:// መጀመር አለበት</string>
+    <string name="device_name_fallback">ተንቀሳቃሽ መሣሪያ</string>
+    <string name="account_error_token_type">ያልተደገፈ የቶከን ዓይነት</string>
+    <string name="account_error_caller">ጠሪው አይፈቀድም</string>
 </resources>

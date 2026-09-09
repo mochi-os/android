@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menu</string>
-    <string name="words_list_new">Musuq pukllay</string>
     <string name="words_list_logout">Lluqsiy</string>
-    <string name="words_list_empty_title">Manaraq pukllaykuna</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Tukusqa</string>
     <string name="words_sidebar_new_game">Musuq pukllay</string>
     <string name="words_new_game_title">Musuq pukllay</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Watiqmanta pukllay</string>
     <string name="words_detail_action_delete">Pukllay wischuy</string>
     <string name="words_detail_chat_title">Chat</string>
-    <string name="words_detail_invalid_move">Mana allin kuyuy</string>
     <string name="words_detail_recall">Recall</string>
     <string name="words_detail_submit">Apachiy</string>
     <string name="words_detail_cancel">Mana ruway</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Letra akllay</string>
     <string name="words_detail_resign_title">Pukllayta saqirakapuy?</string>
     <string name="words_detail_resign_message">Saqiyta munanki?</string>
-    <string name="words_detail_failed_move">Mana kuyuyta apachiyta atinchu</string>
-    <string name="words_detail_failed_pass">Mana pasayta atinchu</string>
-    <string name="words_detail_failed_exchange">Mana chaqnayta atinchu</string>
-    <string name="words_detail_failed_resign">Mana saqiyta atinchu</string>
-    <string name="words_detail_failed_rematch">Mana watiqmanta pukllayta paqarichiyta atinchu</string>
-    <string name="words_detail_failed_delete">Mana pukllayta pichayta atinchu</string>
-    <string name="words_detail_game_deleted">Pukllay pichasqa</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words mit\'akuna, chalaykuna, pukllay tukuykunamanta willakuykuna.</string>
-    <string name="words_list_empty_subtitle">Ñawpaq pukllayniykita qallarinaykipaq + ñit’anata ñit’iy.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Manaraq pukllaykuna kanchu.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Pukllayta qallarinaykipaq People app nisqapi masikunata yapay.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Pukllay willakuyqa ñallam hamunqa</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

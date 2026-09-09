@@ -49,7 +49,10 @@ class NewGoGameViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(friendsLoading = true, friendsError = null)
             try {
+                // The server orders friends by an intrinsic column, so the
+                // consumer sorts the names - case- and accent-insensitively.
                 val friends = repo.getNewGameFriends()
+                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
                 _uiState.value = _uiState.value.copy(
                     friends = friends,
                     friendsLoading = false,

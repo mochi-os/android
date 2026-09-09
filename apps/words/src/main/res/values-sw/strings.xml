@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_app_title">Maneno</string>
     <string name="words_list_title">Maneno</string>
     <string name="words_list_menu">Menyu</string>
-    <string name="words_list_new">Mchezo mpya</string>
     <string name="words_list_logout">Toka</string>
-    <string name="words_list_empty_title">Hakuna michezo bado</string>
-    <string name="words_sidebar_header">Maneno</string>
     <string name="words_sidebar_completed">Imekamilika</string>
     <string name="words_sidebar_new_game">Mchezo mpya</string>
     <string name="words_new_game_title">Mchezo mpya</string>
@@ -30,7 +26,6 @@
     <string name="words_detail_action_rematch">Mechi tena</string>
     <string name="words_detail_action_delete">Futa mchezo</string>
     <string name="words_detail_chat_title">Gumzo</string>
-    <string name="words_detail_invalid_move">Hatua batili</string>
     <string name="words_detail_recall">Kumbuka</string>
     <string name="words_detail_submit">Wasilisha</string>
     <string name="words_detail_cancel">Ghairi</string>
@@ -38,19 +33,8 @@
     <string name="words_detail_blank_title">Chagua herufi</string>
     <string name="words_detail_resign_title">Jiuzulu mchezo?</string>
     <string name="words_detail_resign_message">Una uhakika unataka kuachia?</string>
-    <string name="words_detail_failed_move">Imeshindwa kuwasilisha hatua</string>
-    <string name="words_detail_failed_pass">Imeshindwa kupita</string>
-    <string name="words_detail_failed_exchange">Imeshindwa kubadilisha</string>
-    <string name="words_detail_failed_resign">Imeshindwa kujiuzulu</string>
-    <string name="words_detail_failed_rematch">Imeshindwa kuunda mchezo upya</string>
-    <string name="words_detail_failed_delete">Imeshindwa kufuta mchezo</string>
-    <string name="words_detail_game_deleted">Mchezo umefutwa</string>
     <string name="words_channel_name">Arifa za Maneno</string>
     <string name="words_channel_description">Arifa kuhusu zamu, kubadilishana, na matokeo ya michezo.</string>
-    <string name="words_list_empty_subtitle">Gusa kitufe cha + ili kuanza mchezo wako wa kwanza.</string>
-    <string name="words_list_status_finished">Imekamilika</string>
-    <string name="words_list_status_resigned">Amejisalimisha</string>
-    <string name="words_list_your_turn">Zamu yako</string>
     <string name="words_sidebar_active">Michezo inayoendelea</string>
     <string name="words_sidebar_empty">Bado hakuna michezo.</string>
     <string name="words_new_game_choose_opponents">Chagua wapinzani</string>
@@ -58,7 +42,6 @@
     <string name="words_new_game_player_count">Wachezaji %1$d</string>
     <string name="words_new_game_no_friends_subtitle">Ongeza marafiki katika programu ya Watu ili kuanza kucheza.</string>
     <string name="words_detail_title">Mchezo</string>
-    <string name="words_detail_coming_soon">Maelezo ya mchezo hivi karibuni</string>
     <string name="words_detail_status_opponent_move">Zamu ya %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s anashinda</string>
     <string name="words_detail_player_fallback">Mchezaji %1$d</string>

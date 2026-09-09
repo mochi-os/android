@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Lisa sõpru</string>
     <string name="chess_new_start_button">Alusta mängu</string>
     <string name="chess_new_creating">Loomine…</string>
-    <string name="chess_new_failed">Mängu loomine ebaõnnestus</string>
     <string name="chess_chat_title">Vestlus</string>
     <string name="chess_open_chat">Ava vestluse paneel</string>
     <string name="chess_open_actions">Ava mängu tegevused</string>

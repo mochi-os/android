@@ -101,6 +101,9 @@ fun AccountMethodsScreen(
     onBeginPasskey: () -> Unit,
     onShowRecovery: () -> Unit,
     onBack: () -> Unit,
+    onUpdateMfaEmailCode: (String) -> Unit,
+    onUpdateMfaTotpCode: (String) -> Unit,
+    onCompleteMfa: () -> Unit,
     oauthScheme: String? = null,
     onStartOAuth: (String, String) -> Unit = { _, _ -> }
 ) {
@@ -111,7 +114,12 @@ fun AccountMethodsScreen(
                 style = MaterialTheme.typography.headlineMedium
             )
             Spacer(modifier = Modifier.height(32.dp))
-            MfaSection(uiState = uiState)
+            MfaSection(
+                uiState = uiState,
+                onUpdateEmailCode = onUpdateMfaEmailCode,
+                onUpdateTotpCode = onUpdateMfaTotpCode,
+                onComplete = onCompleteMfa,
+            )
         } else {
             AccountMethods(
                 uiState = uiState,
@@ -410,7 +418,12 @@ private fun AccountMethods(
 }
 
 @Composable
-private fun MfaSection(uiState: AuthUiState) {
+private fun MfaSection(
+    uiState: AuthUiState,
+    onUpdateEmailCode: (String) -> Unit,
+    onUpdateTotpCode: (String) -> Unit,
+    onComplete: () -> Unit,
+) {
     Text(
         text = stringResource(R.string.auth_mfa_title),
         style = MaterialTheme.typography.titleMedium
@@ -424,26 +437,44 @@ private fun MfaSection(uiState: AuthUiState) {
     Spacer(modifier = Modifier.height(16.dp))
 
     val remaining = uiState.mfaRemaining
-    if (remaining.contains("email")) {
+    val needsEmail = remaining.contains("email")
+    val needsTotp = remaining.contains("totp")
+
+    if (needsEmail) {
         MochiTextField(
             value = uiState.mfaEmailCode,
-            onValueChange = { /* handled through parent */ },
+            onValueChange = onUpdateEmailCode,
             label = { Text(stringResource(R.string.auth_email_code)) },
             singleLine = true,
+            enabled = !uiState.isLoading,
+            keyboardOptions = KeyboardOptions(
+                keyboardType = KeyboardType.Text,
+                imeAction = if (needsTotp) ImeAction.Next else ImeAction.Go
+            ),
+            keyboardActions = KeyboardActions(onGo = { onComplete() }),
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(12.dp))
     }
-    if (remaining.contains("totp")) {
-        MochiTextField(
+    if (needsTotp) {
+        // Same six-box entry the single-factor authenticator step uses.
+        CodeInputBoxes(
             value = uiState.mfaTotpCode,
-            onValueChange = { /* handled through parent */ },
-            label = { Text(stringResource(R.string.auth_authenticator_code)) },
-            singleLine = true,
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            onValueChange = onUpdateTotpCode,
+            enabled = !uiState.isLoading,
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(12.dp))
+    }
+    if (needsEmail || needsTotp) {
+        Spacer(modifier = Modifier.height(4.dp))
+        PrimaryButton(
+            text = stringResource(R.string.auth_continue),
+            isLoading = uiState.isLoading,
+            enabled = (!needsEmail || uiState.mfaEmailCode.isNotBlank()) &&
+                (!needsTotp || uiState.mfaTotpCode.length == 6),
+            onClick = onComplete
+        )
     }
 }
 

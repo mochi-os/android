@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Бозӣ ҳазф шуд</string>
     <string name="go_new_game_add_friends">Иловаи дӯстон</string>
     <string name="go_new_game_board_size_label">Андозаи тахта</string>
-    <string name="go_new_game_cancel">Бекор кардан</string>
     <string name="go_new_game_friend_label">Рақиб</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Аз бозӣ таслим шудан?</string>
     <string name="go_sidebar_completed">Анҷомшуда</string>
     <string name="go_sidebar_new_game">Бозии нав</string>
-    <string name="go_status_active">Фаъол</string>
     <string name="go_status_draw">Кашидан</string>
     <string name="go_status_draw_text">Кашидан</string>
     <string name="go_status_game_over">Бозӣ ба охир расид</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Ҳанӯз бозиҳои фаъол нест.</string>
-    <string name="go_empty_completed">Ҳанӯз бозиҳои анҷомёфта нест.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Бозии нави Go</string>
     <string name="go_new_game_no_friends">Пеш аз оғози бозӣ бояд дӯст илова кунед.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Холҳое, ки ба ҳисоби Сафед илова мешаванд, то оғози аввали Сиёҳро ҷуброн кунанд</string>
-    <string name="go_new_game_create_error">Оғози бозӣ ноком шуд</string>
 
     <string name="go_board_a11y">Тахтаи Go-и %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Тахтаи го %1$d×%1$d, навбати шумост, ки санги сиёҳ гузоред</string>
     <string name="go_board_a11y_turn_white">Тахтаи го %1$d×%1$d, навбати шумост, ки санги сафед гузоред</string>
+    <string name="go_status_scoring">Ҳисоб — дар бораи натиҷа розӣ шавед ё бозиро идома диҳед</string>
+    <string name="go_score_proposed">Натиҷаи пешниҳодшуда: сиёҳ %1$s, сафед %2$s</string>
+    <string name="go_score_opponent_accepted">Рақиби шумо ин натиҷаро қабул мекунад: сиёҳ %1$s, сафед %2$s</string>
+    <string name="go_score_waiting">Натиҷа қабул шуд — мунтазири %1$s</string>
+    <string name="go_score_accept">Натиҷаро қабул кардан</string>
+    <string name="go_score_resume">Бозиро идома додан</string>
+    <string name="go_error_score_resume_failed">Идома додани бозӣ ба анҷом нарасид</string>
+    <string name="go_error_score_accept_failed">Қабули натиҷа ба анҷом нарасид</string>
 </resources>

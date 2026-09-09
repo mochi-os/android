@@ -343,7 +343,6 @@ internal fun PostDetailContent(
                         feedId = viewModel.feedId,
                         onReact = { viewModel.reactToPost(it) },
                         onAddTag = onAddTag,
-                        onRemoveTag = { viewModel.removeTag(it) },
                         onAdjustInterest = { tag, direction ->
                             viewModel.adjustInterest(
                                 tag,
@@ -445,7 +444,6 @@ private fun PostContent(
     feedId: String,
     onReact: (String) -> Unit,
     onAddTag: (String) -> Unit,
-    onRemoveTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     showBody: Boolean = true,
     // The lightbox comments slot, per image attachment.

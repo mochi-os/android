@@ -24,6 +24,7 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
+import org.mochios.feeds.ui.component.applied
 
 @HiltViewModel
 class PostDetailViewModel @Inject constructor(
@@ -117,10 +118,7 @@ class PostDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reactToPost(feedId, postId, reaction)
-                _post.value = _post.value?.let { post ->
-                    val newReaction = if (post.myReaction == reaction) "" else reaction
-                    post.copy(myReaction = newReaction)
-                }
+                _post.value = _post.value?.copy(myReaction = applied(reaction))
             } catch (_: Exception) {
                 loadPost()
             }
@@ -244,18 +242,6 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
-    fun removeTag(id: String) {
-        viewModelScope.launch {
-            _actionError.value = null
-            try {
-                repository.removeTag(feedId, postId, id)
-                loadTags()
-                loadPost()
-            } catch (e: Exception) {
-                _actionError.value = e.toMochiError()
-            }
-        }
-    }
 
     fun adjustInterest(tag: Tag, direction: String) {
         viewModelScope.launch {

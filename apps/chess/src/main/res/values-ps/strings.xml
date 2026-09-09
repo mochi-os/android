@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">ملګري اضافه کړئ</string>
     <string name="chess_new_start_button">لوبه پیل کړئ</string>
     <string name="chess_new_creating">جوړیږي…</string>
-    <string name="chess_new_failed">د لوبې جوړولو پاتې راغلل</string>
     <string name="chess_chat_title">چټ</string>
     <string name="chess_open_chat">د چټ پینل خلاص کړئ</string>
     <string name="chess_open_actions">د لوبې کړنې خلاصې کړئ</string>

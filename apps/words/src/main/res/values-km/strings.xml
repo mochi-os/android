@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">ម៉ឺនុយ</string>
-    <string name="words_list_new">ហ្គេមថ្មី</string>
     <string name="words_list_logout">ចាកចេញ</string>
-    <string name="words_list_empty_title">មិនទាន់មានហ្គេម</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">បានបញ្ចប់</string>
     <string name="words_sidebar_new_game">ហ្គេមថ្មី</string>
     <string name="words_new_game_title">ហ្គេមថ្មី</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">ប្រកួតឡើងវិញ</string>
     <string name="words_detail_action_delete">លុបហ្គេម</string>
     <string name="words_detail_chat_title">ជជែក</string>
-    <string name="words_detail_invalid_move">ការផ្លាស់ទីមិនត្រឹមត្រូវ</string>
     <string name="words_detail_recall">ហៅមកវិញ</string>
     <string name="words_detail_submit">ដាក់ស្នើ</string>
     <string name="words_detail_cancel">បោះបង់</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ជ្រើសរើសអក្សរ</string>
     <string name="words_detail_resign_title">ចុះចាញ់ហ្គេម?</string>
     <string name="words_detail_resign_message">តើអ្នកប្រាកដថាចង់លាលែងពីតំណែងមែនទេ?</string>
-    <string name="words_detail_failed_move">បរាជ័យក្នុងការដាក់ស្នើការផ្លាស់ទី</string>
-    <string name="words_detail_failed_pass">បរាជ័យក្នុងការឆ្លងកាត់</string>
-    <string name="words_detail_failed_exchange">បរាជ័យក្នុងការប្ដូរ</string>
-    <string name="words_detail_failed_resign">បរាជ័យក្នុងការចុះចាញ់</string>
-    <string name="words_detail_failed_rematch">បរាជ័យក្នុងការបង្កើតការប្រកួតឡើងវិញ</string>
-    <string name="words_detail_failed_delete">បរាជ័យក្នុងការលុបហ្គេម</string>
-    <string name="words_detail_game_deleted">បានលុបហ្គេម</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">ការជូនដំណឹងអំពីវេន Words ការផ្លាស់ប្តូរ និងលទ្ធផលហ្គេម។</string>
-    <string name="words_list_empty_subtitle">ចុចប៊ូតុង + ដើម្បីចាប់ផ្តើមហ្គេមដំបូងរបស់អ្នក។</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">មិនទាន់មានហ្គេមទេ។</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">បន្ថែមមិត្តភក្តិក្នុងកម្មវិធី People ដើម្បីចាប់ផ្តើមលេង។</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">ព័ត៌មានលម្អិតហ្គេមនឹងមកឆាប់ៗ</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

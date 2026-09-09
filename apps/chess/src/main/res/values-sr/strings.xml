@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Додај пријатеље</string>
     <string name="chess_new_start_button">Започни игру</string>
     <string name="chess_new_creating">Креирање…</string>
-    <string name="chess_new_failed">Креирање игре није успело</string>
     <string name="chess_chat_title">Разговор</string>
     <string name="chess_open_chat">Отвори панел чета</string>
     <string name="chess_open_actions">Отвори акције игре</string>

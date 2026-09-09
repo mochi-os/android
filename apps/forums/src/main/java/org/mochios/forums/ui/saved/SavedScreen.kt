@@ -94,7 +94,7 @@ private fun SavedPostCardContent(
                 modifier = Modifier.padding(top = 2.dp),
             )
         }
-        val body = post.body.ifBlank { post.bodyMarkdown }
+        val body = post.bodyMarkdown.ifBlank { post.body }
         if (body.isNotBlank()) {
             HtmlContent(
                 html = body,

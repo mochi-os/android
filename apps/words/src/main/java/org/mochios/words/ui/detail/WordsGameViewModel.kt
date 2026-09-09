@@ -33,6 +33,7 @@ import org.mochios.words.engine.getUniqueDraftWords
 import org.mochios.words.engine.parseBoard
 import org.mochios.words.engine.serializeBoard
 import org.mochios.words.model.Game
+import org.mochios.words.model.canExchange
 import org.mochios.words.model.GameMessage
 import org.mochios.words.model.MoveRequest
 import org.mochios.words.repository.WordsRepository
@@ -59,6 +60,7 @@ data class WordsGameDetailUiState(
     val isLoading: Boolean = true,
     val isLoadingMessages: Boolean = false,
     val isLoadingMoreMessages: Boolean = false,
+    val messagesError: Boolean = false,
     val hasMoreMessages: Boolean = false,
     /** The server's own "<created>:<id>" cursor, not a derived timestamp. */
     val nextMessageCursor: String? = null,
@@ -105,6 +107,9 @@ class WordsGameViewModel @Inject constructor(
 
     private var validationJob: Job? = null
 
+    /** The in-flight game fetch; cancelled when a newer one starts. */
+    private var loadJob: Job? = null
+
     init {
         load()
         loadMessages()
@@ -113,7 +118,8 @@ class WordsGameViewModel @Inject constructor(
     // ─── Load / refresh ────────────────────────────────────────────────
 
     fun load() {
-        viewModelScope.launch {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, error = null) }
             try {
                 val response = repository.getGame(gameId)
@@ -138,10 +144,14 @@ class WordsGameViewModel @Inject constructor(
 
     /**
      * Refresh after a websocket event without discarding in-progress local
-     * state.
+     * state. Shares [loadJob] with [load]: several callers overlap (a frame
+     * per move in a four-seat game, plus every ON_RESUME), and cancelling the
+     * previous fetch keeps them ordered so a slower earlier response cannot
+     * put a stale board, rack or turn back.
      */
     fun refresh() {
-        viewModelScope.launch {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
             try {
                 val response = repository.getGame(gameId)
                 _uiState.update { state ->
@@ -180,7 +190,7 @@ class WordsGameViewModel @Inject constructor(
 
     fun loadMessages() {
         viewModelScope.launch {
-            _uiState.update { it.copy(isLoadingMessages = true) }
+            _uiState.update { it.copy(isLoadingMessages = true, messagesError = false) }
             try {
                 val response = repository.getMessages(gameId, before = null, limit = 100)
                 // Server returns newest-first; render oldest-first.
@@ -197,7 +207,7 @@ class WordsGameViewModel @Inject constructor(
                 throw e
             } catch (e: Exception) {
                 Log.d(TAG, "Message load failed", e)
-                _uiState.update { it.copy(isLoadingMessages = false) }
+                _uiState.update { it.copy(isLoadingMessages = false, messagesError = true) }
             }
         }
     }
@@ -207,7 +217,7 @@ class WordsGameViewModel @Inject constructor(
         if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
         val cursor = current.nextMessageCursor ?: return
         viewModelScope.launch {
-            _uiState.update { it.copy(isLoadingMoreMessages = true) }
+            _uiState.update { it.copy(isLoadingMoreMessages = true, messagesError = false) }
             try {
                 val response = repository.getMessages(gameId, before = cursor)
                 _uiState.update {
@@ -224,7 +234,7 @@ class WordsGameViewModel @Inject constructor(
                 throw e
             } catch (e: Exception) {
                 Log.d(TAG, "Older messages failed to load", e)
-                _uiState.update { it.copy(isLoadingMoreMessages = false) }
+                _uiState.update { it.copy(isLoadingMoreMessages = false, messagesError = true) }
             }
         }
     }
@@ -500,6 +510,8 @@ class WordsGameViewModel @Inject constructor(
     // ─── Exchange / pass / resign / rematch / delete ──────────────────
 
     fun enterExchangeMode() {
+        val game = _uiState.value.game
+        if (game == null || !canExchange(game)) return
         // Recall pending placements first so the rack is in a clean state.
         recallPlacements()
         _uiState.update {
@@ -565,7 +577,6 @@ class WordsGameViewModel @Inject constructor(
         val state = _uiState.value
         val game = state.game ?: return
         val board = parseBoard(game.board)
-        val fallback = "Invalid move"
         val draft = deriveMoveDraft(board, state.pendingPlacements)
         if (draft.status != DraftStatus.READY) return
         val result = draft.result ?: return

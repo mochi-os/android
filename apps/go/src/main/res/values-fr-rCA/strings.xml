@@ -4,10 +4,8 @@
     <string name="go_chat_title">Clavardage</string>
     <string name="go_delete_title">Supprimer la partie?</string>
 
-    <string name="go_new_game_cancel">Annuler</string>
     <string name="go_delete_confirm">Supprimer</string>
     <string name="go_open_sidebar">Ouvrir la barre latérale</string>
-    <string name="go_status_active">Actif</string>
 
     <string name="go_app_title">Go</string>
     <string name="go_channel_name">Notifications Go</string>
@@ -16,12 +14,8 @@
     <string name="go_sidebar_completed">Terminées</string>
     <string name="go_sidebar_new_game">Nouvelle partie</string>
     <string name="go_empty_active">Aucune partie en cours.</string>
-    <string name="go_empty_completed">Aucune partie terminée.</string>
-    <string name="go_status_finished">Terminée</string>
     <string name="go_status_draw">Partie nulle</string>
     <string name="go_status_resigned">Abandon</string>
-    <string name="go_card_vs">contre %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_color_black">Noir</string>
     <string name="go_color_white">Blanc</string>
@@ -78,6 +72,5 @@
     <string name="go_new_game_komi_range_error">Doit être entre 0 et 10</string>
     <string name="go_new_game_komi_hint">Points ajoutés au pointage des Blancs pour compenser le fait que les Noirs jouent en premier</string>
     <string name="go_new_game_start">Commencer la partie</string>
-    <string name="go_new_game_create_error">Échec du démarrage de la partie</string>
 
 </resources>

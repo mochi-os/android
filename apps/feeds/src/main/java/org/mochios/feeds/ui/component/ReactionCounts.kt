@@ -37,3 +37,11 @@ fun toReactionCounts(reactions: List<Reaction>, myReaction: String): List<Reacti
 fun currentReactionType(myReaction: String): ReactionType? =
     myReaction.takeIf { value -> value.isNotEmpty() }
         ?.let { value -> ReactionType.fromString(value) }
+
+/**
+ * What the server stores for a reaction request. `post/react` and
+ * `comment/react` are not toggles: any valid reaction replaces the viewer's,
+ * and "none" (or an empty value) removes it. Mirroring that here keeps the
+ * optimistic update honest.
+ */
+fun applied(reaction: String): String = if (reaction == "none") "" else reaction

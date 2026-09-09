@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">友だちを追加</string>
     <string name="chess_new_start_button">ゲームを開始</string>
     <string name="chess_new_creating">作成中…</string>
-    <string name="chess_new_failed">ゲームの作成に失敗しました</string>
     <string name="chess_chat_title">チャット</string>
     <string name="chess_open_chat">チャットパネルを開く</string>
     <string name="chess_open_actions">ゲーム操作を開く</string>

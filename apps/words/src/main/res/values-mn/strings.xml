@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Цэс</string>
-    <string name="words_list_new">Шинэ тоглоом</string>
     <string name="words_list_logout">Гарах</string>
-    <string name="words_list_empty_title">Тоглоом алга</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Гүйцэтгэсэн</string>
     <string name="words_sidebar_new_game">Шинэ тоглоом</string>
     <string name="words_new_game_title">Шинэ тоглоом</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Дахин тоглох</string>
     <string name="words_detail_action_delete">Тоглоом устгах</string>
     <string name="words_detail_chat_title">Чат</string>
-    <string name="words_detail_invalid_move">Нүүдэл хүчингүй</string>
     <string name="words_detail_recall">Эргэн санах</string>
     <string name="words_detail_submit">Илгээх</string>
     <string name="words_detail_cancel">Цуцлах</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Үсэг сонгох</string>
     <string name="words_detail_resign_title">Тоглоомоос тэрсэх үү?</string>
     <string name="words_detail_resign_message">Бууж өгөхдөө итгэлтэй байна уу?</string>
-    <string name="words_detail_failed_move">Нүүдэл илгээж чадсангүй</string>
-    <string name="words_detail_failed_pass">Алгасаж чадсангүй</string>
-    <string name="words_detail_failed_exchange">Солилцож чадсангүй</string>
-    <string name="words_detail_failed_resign">Бууж өгч чадсангүй</string>
-    <string name="words_detail_failed_rematch">Дахин тоглолт үүсгэж чадсангүй</string>
-    <string name="words_detail_failed_delete">Тоглоом устгаж чадсангүй</string>
-    <string name="words_detail_game_deleted">Тоглоом устгагдсан</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words ээлж, солилцоо болон тоглоомын үр дүнгийн мэдэгдэл.</string>
-    <string name="words_list_empty_subtitle">Анхны тоглоомоо эхлүүлэхийн тулд + товчийг дарна уу.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Одоогоор тоглоом байхгүй.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Тоглож эхлэхийн тулд People апп-д найзуудаа нэмнэ үү.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Тоглоомын дэлгэрэнгүй удахгүй</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

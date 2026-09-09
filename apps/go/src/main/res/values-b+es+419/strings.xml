@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Partida eliminada</string>
     <string name="go_new_game_add_friends">Añadir amigos</string>
     <string name="go_new_game_board_size_label">Tamaño del tablero</string>
-    <string name="go_new_game_cancel">Cancelar</string>
     <string name="go_new_game_friend_label">Oponente</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">¿Rendirse en la partida?</string>
     <string name="go_sidebar_completed">Completado</string>
     <string name="go_sidebar_new_game">Nueva partida</string>
-    <string name="go_status_active">Activo</string>
     <string name="go_status_draw">Tablas</string>
     <string name="go_status_draw_text">Tablas</string>
     <string name="go_status_game_over">Fin de la partida</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Aún no hay partidas activas.</string>
-    <string name="go_empty_completed">Aún no hay partidas terminadas.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nueva partida de Go</string>
     <string name="go_new_game_no_friends">Necesitas agregar un amigo antes de poder iniciar una partida.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Puntos añadidos al marcador de las blancas para compensar que las negras juegan primero</string>
-    <string name="go_new_game_create_error">No se pudo iniciar la partida</string>
 
     <string name="go_board_a11y">Tablero de Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Tablero de Go de %1$d×%1$d, tu turno para colocar una piedra negra</string>
     <string name="go_board_a11y_turn_white">Tablero de Go de %1$d×%1$d, tu turno para colocar una piedra blanca</string>
+    <string name="go_status_scoring">Conteo — acuerden el puntaje o sigan jugando</string>
+    <string name="go_score_proposed">Puntuación propuesta: negro %1$s, blanco %2$s</string>
+    <string name="go_score_opponent_accepted">Su adversario acepta esta puntuación: negro %1$s, blanco %2$s</string>
+    <string name="go_score_waiting">Puntuación aceptada — esperando a %1$s</string>
+    <string name="go_score_accept">Aceptar la puntuación</string>
+    <string name="go_score_resume">Reanudar el juego</string>
+    <string name="go_error_score_resume_failed">Error al reanudar el juego</string>
+    <string name="go_error_score_accept_failed">Error al aceptar la puntuación</string>
 </resources>

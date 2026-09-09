@@ -5,10 +5,7 @@
     <string name="auth_email">អ៊ីមែល</string>
     <string name="auth_continue">បន្ត</string>
     <string name="auth_verification_code">កូដផ្ទៀងផ្ទាត់</string>
-    <string name="auth_verify">ផ្ទៀងផ្ទាត់</string>
-    <string name="auth_authenticator_app">កម្មវិធី Authenticator</string>
     <string name="auth_email_code">កូដអ៊ីមែល</string>
-    <string name="auth_authenticator_code">កូដ Authenticator</string>
     <string name="auth_recovery_code">កូដស្តារ</string>
     <string name="auth_name">ឈ្មោះ</string>
     <string name="auth_create">បង្កើត</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">ចម្លង</string>
     <string name="common_copied">បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់</string>
     <string name="comment_edited">(បានកែ)</string>
-    <string name="comment_edit_placeholder">កែសម្រួលមតិយោបល់</string>
     <string name="comment_reply">ឆ្លើយតប</string>
-    <string name="comment_reply_placeholder">ឆ្លើយតប</string>
-    <string name="comment_send_reply">ផ្ញើការឆ្លើយតប</string>
     <string name="person_picker_search">ស្វែងរកអ្នកប្រើ</string>
     <string name="place_picker_no_results">រកមិនឃើញកន្លែង</string>
-    <string name="discovery_results">លទ្ធផល</string>
     <string name="discovery_recommended">បានណែនាំ</string>
-    <string name="discovery_subscribed">បានជាវ</string>
     <string name="access_add_rule">បន្ថែមច្បាប់</string>
     <string name="access_owner">ម្ចាស់</string>
     <string name="access_revoke">ដកសិទ្ធិ</string>
-    <string name="access_level">កម្រិតការចូលប្រើ</string>
     <string name="access_level_comment">មតិយោបល់</string>
     <string name="access_level_view">មើល</string>
     <string name="access_level_none">គ្មាន</string>
-    <string name="banner_label">បដា</string>
     <string name="reaction_like">ចូលចិត្ត</string>
     <string name="reaction_dislike">មិនចូលចិត្ត</string>
     <string name="reaction_laugh">សើច</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">ទាំងអស់</string>
     <string name="notifications_mark_all_read">សម្គាល់ទាំងអស់បានអាន</string>
     <string name="notifications_clear_all">សម្អាតទាំងអស់</string>
-    <string name="notifications_loading">កំពុងផ្ទុក…</string>
     <string name="settings_title">ការកំណត់</string>
-    <string name="settings_open">ការកំណត់</string>
     <string name="settings_appearance">រូបរាង</string>
     <string name="settings_appearance_light">ភ្លឺ</string>
     <string name="settings_appearance_dark">ងងឹត</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">ផ្ទៃខាងក្រោយ</string>
     <string name="settings_background_theme">ពីរូបរាង</string>
     <string name="settings_background_off">គ្មាន</string>
-    <string name="profile_title">ប្រវត្តិរូប</string>
-    <string name="profile_open">ប្រវត្តិរូប</string>
-    <string name="profile_display_name">ឈ្មោះបង្ហាញ</string>
-    <string name="profile_save_name">រក្សាទុកឈ្មោះ</string>
-    <string name="profile_privacy">ឯកជនភាព</string>
-    <string name="profile_privacy_public">សាធារណៈ</string>
-    <string name="profile_privacy_private">ឯកជន</string>
-    <string name="profile_fingerprint">ស្នាមម្រាមដៃ</string>
     <string name="game_chat_empty">មិនទាន់មានសារ</string>
     <string name="game_chat_input_placeholder">វាយសារ...</string>
     <string name="game_chat_send">ផ្ញើសារ</string>
     <string name="game_chat_subject_you">អ្នក</string>
 
     <string name="common_not_saved">មិនបានរក្សាទុក</string>
-    <string name="common_save_failed">មិនអាចរក្សាទុកការផ្លាស់ប្ដូររបស់អ្នកបានទេ។</string>
     <string name="app_brand">Mochi</string>
     <string name="auth_server_url">URL ម៉ាស៊ីនមេ</string>
     <string name="auth_link_rules">ច្បាប់</string>
@@ -150,20 +129,13 @@
     <string name="error_not_found">រកមិនឃើញ</string>
     <string name="error_server">កំហុសម៉ាស៊ីនមេ (%1$d)។ សូមព្យាយាមម្តងទៀតពេលក្រោយ។</string>
     <string name="error_unexpected">មានកំហុសដែលមិនបានរំពឹងទុកបានកើតឡើង</string>
-    <string name="error_request_failed">សំណើបានបរាជ័យ</string>
     <string name="error_enter_server_url">សូមបញ្ចូល URL ម៉ាស៊ីនមេ</string>
     <string name="error_enter_email">សូមបញ្ចូលអ៊ីមែលរបស់អ្នក</string>
     <string name="error_enter_name">សូមបញ្ចូលឈ្មោះ</string>
     <string name="auth_connect_to_server">ភ្ជាប់ទៅម៉ាស៊ីនមេរបស់អ្នក</string>
     <string name="auth_connect">ភ្ជាប់</string>
     <string name="auth_sign_in">ចូលប្រើ</string>
-    <string name="auth_sign_in_with_passkey">ចូលប្រើដោយប្រើ passkey</string>
-    <string name="auth_sign_in_with_email_code">ចូលប្រើដោយប្រើកូដអ៊ីមែល</string>
-    <string name="auth_use_recovery_code">ប្រើកូដសង្គ្រោះ</string>
-    <string name="auth_back_to_sign_in">ត្រឡប់ទៅការចូលប្រើ</string>
-    <string name="auth_send_code">ផ្ញើកូដ</string>
     <string name="auth_check_email">ពិនិត្យអ៊ីមែលរបស់អ្នកសម្រាប់កូដផ្ទៀងផ្ទាត់</string>
-    <string name="auth_six_digit_code">កូដ 6 ខ្ទង់</string>
     <string name="auth_mfa_title">ការផ្ទៀងផ្ទាត់ច្រើនកត្តា</string>
     <string name="auth_mfa_subtitle">បំពេញជំហានផ្ទៀងផ្ទាត់ដែលនៅសល់</string>
     <string name="auth_recover_account">សង្គ្រោះគណនី</string>
@@ -190,8 +162,6 @@
     <string name="bootstrap_sign_in_differently">ចូលប្រើដោយរបៀបផ្សេង</string>
     <string name="bootstrap_choose_account">ជ្រើសរើសគណនី</string>
     <string name="bootstrap_sign_in_different_server">ចូលប្រើម៉ាស៊ីនមេផ្សេង</string>
-    <string name="common_or">ឬ</string>
-    <string name="common_change">ផ្លាស់ប្តូរ</string>
     <string name="common_retry">ព្យាយាមម្តងទៀត</string>
     <string name="common_more_options">ជម្រើសច្រើនទៀត</string>
     <string name="common_collapse">បង្រួម</string>
@@ -200,21 +170,12 @@
     <string name="place_picker_name">ឈ្មោះទីកន្លែង</string>
     <string name="place_origin">ប្រភពដើម</string>
     <string name="place_destination">ទិសដៅ</string>
-    <string name="discovery_search_placeholder">ស្វែងរក %1$s</string>
-    <string name="discovery_no_results">រកមិនឃើញ %1$s ទេ</string>
     <string name="discovery_no_results_hint">សាកល្បងកែតម្រូវការស្វែងរករបស់អ្នក</string>
-    <string name="discovery_no_recommendations">គ្មានការណែនាំ</string>
-    <string name="discovery_search_hint">សាកល្បងស្វែងរក %1$s ដើម្បីជាវ</string>
     <string name="access_no_rules">គ្មានច្បាប់ចូលប្រើ</string>
-    <string name="access_no_rules_subtitle">បន្ថែមច្បាប់ដើម្បីគ្រប់គ្រងអ្នកដែលអាចចូលប្រើធនធាននេះ</string>
     <string name="access_add_rule_title">បន្ថែមច្បាប់ចូលប្រើ</string>
     <string name="access_level_manage">គ្រប់គ្រង</string>
     <string name="access_level_react">ប្រតិកម្ម</string>
     <string name="notifications_clear">សម្អាតការជូនដំណឹង</string>
-    <string name="banner_description">Markdown ដែលបង្ហាញនៅផ្នែកខាងលើនៃទិដ្ឋភាពនេះ។</string>
-    <string name="banner_placeholder">សូមស្វាគមន៍…</string>
-    <string name="banner_save">រក្សាទុកបដា</string>
-    <string name="banner_clear">សម្អាតបដា</string>
     <string name="entity_avatar_alt">រូបតំណាងសម្រាប់ %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">អម្បាញ់មិញ</string>
@@ -229,7 +190,6 @@
     <string name="format_time_days_short">%1$d ថ</string>
     <string name="format_time_weeks_short">%1$d ស</string>
     <string name="format_time_months_short">%1$d ខ</string>
-    <string name="format_time_years_short">%1$d ឆ</string>
     <string name="reaction_add">បន្ថែមប្រតិកម្ម</string>
     <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">រក្សា Mochi ឱ្យភ្ជាប់ ដើម្បីទទួលការជូនដំណឹង</string>
@@ -253,7 +213,6 @@
     <string name="about_check_download_failed">ការទាញយកបានបរាជ័យ</string>
     <string name="notifications_clear_all_title">សម្អាតការជូនដំណឹងទាំងអស់?</string>
     <string name="notifications_clear_all_message">សកម្មភាពនេះនឹងលុបការជូនដំណឹងទាំងអស់។ វាមិនអាចស្តារមកវិញបានទេ។</string>
-    <string name="notifications_count_n">ថ្មី %1$d</string>
     <string name="settings_value_auto">ស្វ័យប្រវត្តិ</string>
     <string name="settings_value_theme">តាមរូបរាង</string>
     <string name="settings_radius">កាំជ្រុង</string>
@@ -261,7 +220,6 @@
     <string name="settings_timestamp_relative">ដោយប្រៀបធៀប</string>
     <string name="settings_timestamp_absolute">ច្បាស់លាស់</string>
     <string name="settings_units_usa">សហរដ្ឋអាមេរិក</string>
-    <string name="profile_privacy_description">ថាតើអ្នកដទៃអាចស្វែងរកអ្នកនៅក្នុងថតបញ្ជីបានឬទេ។</string>
     <string name="game_chat_load_more">ផ្ទុកសារចាស់ៗ</string>
     <string name="stepup_title">បញ្ជាក់ថាជាអ្នក</string>
     <string name="stepup_description">នេះគឺជាការផ្លាស់ប្ដូរសុវត្ថិភាពចំពោះគណនីរបស់អ្នក។ ផ្ទៀងផ្ទាត់ថាជាអ្នកដើម្បីបន្ត។</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">បញ្ចូលកូដពីអ៊ីមែលរបស់អ្នក</string>
     <string name="stepup_totp_label">កូដ Authenticator</string>
     <string name="stepup_totp_placeholder">បញ្ចូលកូដ authenticator របស់អ្នក</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">ប្រើ passkey របស់អ្នក</string>
     <string name="stepup_send_email">ផ្ញើអ៊ីមែល</string>
     <string name="stepup_resend_email">ផ្ញើអ៊ីមែលឡើងវិញ</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">អនាមិក</string>
     <string name="tags_label">ស្លាក</string>
     <string name="tags_add">បន្ថែមស្លាក</string>
-    <string name="tags_label_field">ស្លាក</string>
     <string name="tags_interest_up">បង្ហាញច្រើនបែបនេះ</string>
     <string name="tags_interest_down">បង្ហាញតិចបែបនេះ</string>
     <string name="tags_interest_clear">ឈប់បង្ហាញ</string>
@@ -310,9 +266,6 @@
     <string name="person_picker_directory">បញ្ជីឈ្មោះ</string>
     <string name="person_picker_no_people">គ្មានមនុស្ស</string>
     <string name="person_picker_project_members">សមាជិកគម្រោង</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="other">អ្នកជាវ %1$d នាក់</item>
-    </plurals>
     <string name="account_token_label">វគ្គ Mochi</string>
     <string name="attachment_caption">ចំណងជើង</string>
     <string name="attachment_caption_add">បន្ថែមចំណងជើង</string>
@@ -353,4 +306,8 @@
     <string name="settings_card_theme">ពីរូបរាង</string>
     <string name="settings_card_flat">រាបស្មើ</string>
     <string name="settings_card_raised">លើកឡើង</string>
+    <string name="error_server_https">អាសយដ្ឋានម៉ាស៊ីនមេត្រូវចាប់ផ្ដើមដោយ https://</string>
+    <string name="device_name_fallback">ឧបករណ៍ចល័ត</string>
+    <string name="account_error_token_type">ប្រភេទថូខឹនមិនត្រូវបានគាំទ្រ</string>
+    <string name="account_error_caller">អ្នកហៅមិនត្រូវបានអនុញ្ញាត</string>
 </resources>

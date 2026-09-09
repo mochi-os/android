@@ -34,7 +34,6 @@
     <string name="go_game_deleted">ਗੇਮ ਮਿਟਾਈ ਗਈ</string>
     <string name="go_new_game_add_friends">ਦੋਸਤ ਜੋੜੋ</string>
     <string name="go_new_game_board_size_label">ਬੋਰਡ ਆਕਾਰ</string>
-    <string name="go_new_game_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="go_new_game_friend_label">ਵਿਰੋਧੀ</string>
     <string name="go_new_game_komi_field_label">ਕੋਮੀ</string>
     <string name="go_new_game_komi_label">ਕੋਮੀ</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">ਗੇਮ ਤੋਂ ਅਸਤੀਫ਼ਾ ਦੇਈਏ?</string>
     <string name="go_sidebar_completed">ਪੂਰਾ</string>
     <string name="go_sidebar_new_game">ਨਵੀਂ ਗੇਮ</string>
-    <string name="go_status_active">ਕਿਰਿਆਸ਼ੀਲ</string>
     <string name="go_status_draw">ਡ੍ਰਾਅ</string>
     <string name="go_status_draw_text">ਡ੍ਰਾਅ</string>
     <string name="go_status_game_over">ਗੇਮ ਖ਼ਤਮ</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">ਹਾਲੇ ਕੋਈ ਸਰਗਰਮ ਖੇਡ ਨਹੀਂ।</string>
-    <string name="go_empty_completed">ਹਾਲੇ ਕੋਈ ਪੂਰੀ ਹੋਈ ਖੇਡ ਨਹੀਂ।</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">ਨਵੀਂ Go ਖੇਡ</string>
     <string name="go_new_game_no_friends">ਖੇਡ ਸ਼ੁਰੂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ ਦੋਸਤ ਜੋੜਨਾ ਪਵੇਗਾ।</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">ਕਾਲੇ ਦੇ ਪਹਿਲਾਂ ਚੱਲਣ ਦੀ ਭਰਪਾਈ ਲਈ ਚਿੱਟੇ ਦੇ ਸਕੋਰ ਵਿੱਚ ਜੋੜੇ ਅੰਕ</string>
-    <string name="go_new_game_create_error">ਖੇਡ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go ਬੋਰਡ</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d ਗੋ ਬੋਰਡ, ਕਾਲਾ ਪੱਥਰ ਰੱਖਣ ਦੀ ਤੁਹਾਡੀ ਵਾਰੀ</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d ਗੋ ਬੋਰਡ, ਚਿੱਟਾ ਪੱਥਰ ਰੱਖਣ ਦੀ ਤੁਹਾਡੀ ਵਾਰੀ</string>
+    <string name="go_status_scoring">ਗਿਣਤੀ — ਸਕੋਰ \'ਤੇ ਸਹਿਮਤ ਹੋਵੋ ਜਾਂ ਖੇਡਦੇ ਰਹੋ</string>
+    <string name="go_score_proposed">ਪ੍ਰਸਤਾਵਿਤ ਸਕੋਰ: ਕਾਲਾ %1$s, ਚਿੱਟਾ %2$s</string>
+    <string name="go_score_opponent_accepted">ਤੁਹਾਡਾ ਵਿਰੋਧੀ ਇਹ ਸਕੋਰ ਮਨਜ਼ੂਰ ਕਰਦਾ ਹੈ: ਕਾਲਾ %1$s, ਚਿੱਟਾ %2$s</string>
+    <string name="go_score_waiting">ਸਕੋਰ ਮਨਜ਼ੂਰ ਹੋਇਆ — %1$s ਦੀ ਉਡੀਕ ਕਰ ਰਹੇ ਹਾਂ</string>
+    <string name="go_score_accept">ਸਕੋਰ ਸਵੀਕਾਰ ਕਰੋ</string>
+    <string name="go_score_resume">ਖੇਡ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="go_error_score_resume_failed">ਖੇਡ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="go_error_score_accept_failed">ਸਕੋਰ ਸਵੀਕਾਰ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
 </resources>

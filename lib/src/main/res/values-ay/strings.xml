@@ -5,10 +5,7 @@
     <string name="auth_email">Email</string>
     <string name="auth_continue">Sarantaña</string>
     <string name="auth_verification_code">Verificación código apayata</string>
-    <string name="auth_verify">Verificaña ukat habilitaña</string>
-    <string name="auth_authenticator_app">Authenticator app</string>
     <string name="auth_email_code">Email código</string>
-    <string name="auth_authenticator_code">Authenticator código</string>
     <string name="auth_recovery_code">Recovery código</string>
     <string name="auth_name">Suti</string>
     <string name="auth_create">Luraña</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Copiaña</string>
     <string name="common_copied">Clipboard-ru copiata</string>
     <string name="comment_edited">(askichata)</string>
-    <string name="comment_edit_placeholder">Comentario askichaña</string>
     <string name="comment_reply">Reply</string>
-    <string name="comment_reply_placeholder">Reply</string>
-    <string name="comment_send_reply">Kuts apayaña</string>
     <string name="person_picker_search">Usuarionak thaqhama</string>
     <string name="place_picker_no_results">Cheqanak jan jikxatasiti</string>
-    <string name="discovery_results">Resultadonaka</string>
     <string name="discovery_recommended">Recomendata</string>
-    <string name="discovery_subscribed">Suscribita</string>
     <string name="access_add_rule">Kamachi yapxata</string>
     <string name="access_owner">Dueño</string>
     <string name="access_revoke">Aparma</string>
-    <string name="access_level">Mantañ tama</string>
     <string name="access_level_comment">Comentaña</string>
     <string name="access_level_view">Taqi uñjaña</string>
     <string name="access_level_none">Janiwa</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">Munaña</string>
     <string name="reaction_dislike">Jan munaña</string>
     <string name="reaction_laugh">Larxata</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Taqpacha</string>
     <string name="notifications_mark_all_read">Taqpach ullt\'ata uñacht\'ayaña</string>
     <string name="notifications_clear_all">Taqpach q\'umachaña</string>
-    <string name="notifications_loading">Apaqaskiwa…</string>
     <string name="settings_title">Configuración</string>
-    <string name="settings_open">Configuración</string>
     <string name="settings_appearance">Uñnaqa</string>
     <string name="settings_appearance_light">Qhana</string>
     <string name="settings_appearance_dark">Ch\'amaka</string>
@@ -123,14 +111,6 @@
     <string name="settings_background">Qhipa</string>
     <string name="settings_background_theme">Temata</string>
     <string name="settings_background_off">Janiwa</string>
-    <string name="profile_title">Perfil</string>
-    <string name="profile_open">Perfil</string>
-    <string name="profile_display_name">Uñacht\'awi suti</string>
-    <string name="profile_save_name">Suti imaña</string>
-    <string name="profile_privacy">Imantawi</string>
-    <string name="profile_privacy_public">Public</string>
-    <string name="profile_privacy_private">Imantata</string>
-    <string name="profile_fingerprint">Fingerprint</string>
     <string name="game_chat_empty">Janira mensajenak</string>
     <string name="game_chat_input_placeholder">Mä mensaje qillqam…</string>
     <string name="game_chat_send">Mensaje apayaña</string>
@@ -143,7 +123,6 @@
     <string name="error_not_found">Janiw jikxatasiti</string>
     <string name="error_server">Servidor pantjasiwi (%1$d). Mä jukʼa pachatxa wasitat yant\'am.</string>
     <string name="error_unexpected">Mä jan suyt\'at pantjasiwi utjawayi</string>
-    <string name="error_request_failed">Mayisiwix jan phuqhasiti</string>
     <string name="error_enter_server_url">Mira, servidoran URL ukar mantayam</string>
     <string name="error_enter_email">Mira, korreom mantayam</string>
     <string name="error_enter_name">Mira, mä sutix mantayam</string>
@@ -151,13 +130,7 @@
     <string name="auth_server_url">Servidoran URL</string>
     <string name="auth_connect">Mayachthapiña</string>
     <string name="auth_sign_in">Mantaña</string>
-    <string name="auth_sign_in_with_passkey">Passkey ukamp mantam</string>
-    <string name="auth_sign_in_with_email_code">Korrew chimpump mantam</string>
-    <string name="auth_use_recovery_code">Recuperación chimpu apnaqam</string>
-    <string name="auth_back_to_sign_in">Mantañar kuttaña</string>
-    <string name="auth_send_code">Chimpu khitaña</string>
     <string name="auth_check_email">Verificación chimputakix korreom uñakipam</string>
-    <string name="auth_six_digit_code">6 jakhumpi chimpu</string>
     <string name="auth_mfa_title">Walja thakhinakamp uñt\'ayasiña</string>
     <string name="auth_mfa_subtitle">Yaqha uñt\'ayasiñ thakinak phuqham</string>
     <string name="auth_recover_account">Cuenta katuqaña</string>
@@ -185,10 +158,7 @@
     <string name="bootstrap_sign_in_differently">Mä yaqha tuqit mantam</string>
     <string name="bootstrap_choose_account">Mä cuenta ajllim</string>
     <string name="bootstrap_sign_in_different_server">Yaqha servidorar mantam</string>
-    <string name="common_or">jan ukax</string>
     <string name="common_not_saved">Janiw imatakiti</string>
-    <string name="common_save_failed">Mayjt\'ayatanakamax janiw imañjamäkiti.</string>
-    <string name="common_change">Mayjt\'ayaña</string>
     <string name="common_retry">Wasitat yant\'aña</string>
     <string name="common_more_options">Juk\'ampi ajlliñanaka</string>
     <string name="common_collapse">Llaphthapiña</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">Cheqan suti</string>
     <string name="place_origin">Qalltawi</string>
     <string name="place_destination">Puriña</string>
-    <string name="discovery_search_placeholder">%1$s thaqhaña</string>
-    <string name="discovery_no_results">Janiw %1$s jikxatasiti</string>
     <string name="discovery_no_results_hint">Thaqhañ criterionak yapxat\'am yant\'am</string>
-    <string name="discovery_no_recommendations">Janiw iwxanak utjkiti</string>
-    <string name="discovery_search_hint">Mä %1$s suscribiñatakix thaqham</string>
     <string name="access_no_rules">Janiw mantañ kamachinakax utjkiti</string>
-    <string name="access_no_rules_subtitle">Khitinakatix aka recursor mantañ atisp uk uñacht\'ayañatakix kamachinak yapxatam</string>
     <string name="access_add_rule_title">Mantañ kamachi yapxataña</string>
     <string name="access_level_manage">Apnaqaña</string>
     <string name="access_level_react">Reaccionaña</string>
     <string name="notifications_clear">Yatiyawinak picharaña</string>
-    <string name="banner_description">Aka uñakipäwin patxansa uñstayasi Markdown.</string>
-    <string name="banner_placeholder">Wali jutañamatakixa…</string>
-    <string name="banner_save">Banner imaña</string>
-    <string name="banner_clear">Banner picharaña</string>
     <string name="entity_avatar_alt">%1$s ukan avatarapa</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmo</string>
-    <string name="format_time_years_short">%1$dy</string>
     <string name="reaction_add">Reacción yapaña</string>
     <string name="push_service_channel">Mochi ch\'axwa</string>
     <string name="push_service_channel_description">Mochixa yatiyäwinaka katuqañataki mathapitäki</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">Apaqañax pantjasiwa</string>
     <string name="notifications_clear_all_title">¿Taqi yatiyäwinak picharaña?</string>
     <string name="notifications_clear_all_message">Akax taqi yatiyäwinakwa apsuni. Janiw kutt\'ayañ atipkiti.</string>
-    <string name="notifications_count_n">%1$d machaqa</string>
     <string name="settings_value_auto">Pachpa</string>
     <string name="settings_value_theme">Tema pachpa</string>
     <string name="settings_radius">K\'uchu muyu</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">Relativo</string>
     <string name="settings_timestamp_absolute">Absoluto</string>
     <string name="settings_units_usa">EE.UU.</string>
-    <string name="profile_privacy_description">Yaqhanakax direcciopanxa jumar jikxatasipchispati.</string>
     <string name="game_chat_load_more">Nayraqata yatiyäwinak apsuña</string>
     <string name="game_chat_move_played">%1$s anatayna %2$s</string>
     <string name="stepup_title">Jumäwa sañ yatiyma</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">Correo electrónico ukankir código uchma</string>
     <string name="stepup_totp_label">Authenticator código</string>
     <string name="stepup_totp_placeholder">Autenticador codigoma uchma</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">Passkey ukma apnaqama</string>
     <string name="stepup_send_email">Email apayaña</string>
     <string name="stepup_resend_email">Correo mayampi apaña</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">Jan sutini</string>
     <string name="tags_label">Chimpunaka</string>
     <string name="tags_add">Suti yapxataña</string>
-    <string name="tags_label_field">Sutich\'awi</string>
     <string name="tags_interest_up">Akham juk\'amp uñacht\'ayaña</string>
     <string name="tags_interest_down">Akham juk\'a uñacht\'ayaña</string>
     <string name="tags_interest_clear">Jan uñacht\'ayañxa</string>
@@ -310,10 +266,6 @@
     <string name="person_picker_directory">Directorio</string>
     <string name="person_picker_no_people">Janiw jaqinakax utjkiti</string>
     <string name="person_picker_project_members">Proyecto irnaqirinaka</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d qatiqiri</item>
-        <item quantity="other">%1$d qatiqirinaka</item>
-    </plurals>
     <string name="account_token_label">Mochi sesión</string>
     <string name="attachment_caption">Qhanañchawi</string>
     <string name="attachment_caption_add">Qhanañchawi yapaña</string>
@@ -354,4 +306,8 @@
     <string name="settings_card_theme">Temata</string>
     <string name="settings_card_flat">Pallalla</string>
     <string name="settings_card_raised">Aptata</string>
+    <string name="error_server_https">Servidor chiqaxa https:// ukampi qalltañapawa</string>
+    <string name="device_name_fallback">Apnaqaña uñacht\'awi</string>
+    <string name="account_error_token_type">Janiw uka token uñacht\'awix yanapkiti</string>
+    <string name="account_error_caller">Jawsirix janiw wakiskiti</string>
 </resources>

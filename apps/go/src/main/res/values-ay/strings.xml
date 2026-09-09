@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Anatawi chhaqtayatawa</string>
     <string name="go_new_game_add_friends">Masinaka yapxataña</string>
     <string name="go_new_game_board_size_label">Tabla jach\'awi</string>
-    <string name="go_new_game_cancel">Jaytaña</string>
     <string name="go_new_game_friend_label">Contrincante</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">¿Anatawi jaytayma?</string>
     <string name="go_sidebar_completed">Tukuyata</string>
     <string name="go_sidebar_new_game">Machaqa anatawi</string>
-    <string name="go_status_active">Lurkaski</string>
     <string name="go_status_draw">Sallqa</string>
     <string name="go_status_draw_text">Sallqa</string>
     <string name="go_status_game_over">Anatawi tukusi</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Janïr anatäwinakas utjkiti.</string>
-    <string name="go_empty_completed">Janïr tukuyat anatäwinakas utjkiti.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Machaq Go anatäwi</string>
     <string name="go_new_game_no_friends">Anatäw qalltañ nayrax mä masi yapxattaña wakisi.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Ch’iyar nayraqata anati ukat janq’u chanipar yapt’ata puntunaka</string>
-    <string name="go_new_game_create_error">Anatäwix jan qalltkiti</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go tablero, vueltamax. Flecha llaviminak apnaqam saraskañataki ukat Enter jan ukax Espacio mä ch\'iyar qala uchañataki.</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go pata, ch\'iyara qala uchañamawa</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go pata, janq\'u qala uchañamawa</string>
+    <string name="go_status_scoring">Jakhuña — jakhu tuqit amtasipxam jan ukax anatasipkakim</string>
+    <string name="go_score_proposed">Uñtat puntaje: ch\'iyara %1$s, janq\'u %2$s</string>
+    <string name="go_score_opponent_accepted">Jupax aka puntaje iyaw siwa: ch\'iyara %1$s, janq\'u %2$s</string>
+    <string name="go_score_waiting">Puntaje iyaw sisi — %1$s suyasin</string>
+    <string name="go_score_accept">Puntaje iyaw saña</string>
+    <string name="go_score_resume">Anataxa mayamp qalltaña</string>
+    <string name="go_error_score_resume_failed">Anataxa mayamp qalltaña janiw atkiti</string>
+    <string name="go_error_score_accept_failed">Puntaje iyaw saña janiw atkiti</string>
 </resources>

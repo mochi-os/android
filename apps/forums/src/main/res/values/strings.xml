@@ -63,6 +63,7 @@
     <string name="forums_sort_hot">Hot</string>
     <string name="forums_sort_top">Top</string>
     <string name="forums_sort_interests">Interests</string>
+    <string name="forums_sort_ai">AI</string>
 
     <!-- Post -->
     <string name="forums_post_title_field">Title</string>
@@ -85,6 +86,7 @@
     <string name="forums_post_locked">Locked</string>
     <string name="forums_post_pinned">Pinned</string>
     <string name="forums_post_removed">Removed</string>
+    <string name="forums_post_edited">%1$s (edited)</string>
     <string name="forums_post_pending">Pending</string>
     <string name="forums_post_vote_up">Upvote</string>
     <string name="forums_post_vote_down">Downvote</string>
@@ -204,6 +206,20 @@
     <string name="forums_moderation_pending_comments">Pending comments (%1$d)</string>
     <string name="forums_moderation_on_image">On image: %1$s</string>
     <string name="forums_moderation_reject">Reject</string>
+    <string name="forums_moderation_rejected">Rejected</string>
+    <string name="forums_reject_post_access">You don\'t have permission to post in this forum</string>
+    <string name="forums_reject_comment_access">You don\'t have permission to comment in this forum</string>
+    <string name="forums_reject_post_restricted">You are restricted from posting in this forum</string>
+    <string name="forums_reject_comment_restricted">You are restricted from commenting in this forum</string>
+    <string name="forums_reject_post_rate">You are posting too quickly — please wait and try again</string>
+    <string name="forums_reject_comment_rate">You are commenting too quickly — please wait and try again</string>
+    <string name="forums_reject_post_invalid">Post couldn\'t be saved — title or body is invalid</string>
+    <string name="forums_reject_comment_invalid">Comment couldn\'t be saved — it is invalid</string>
+    <string name="forums_reject_post_duplicate">This post was already submitted</string>
+    <string name="forums_reject_comment_duplicate">This comment was already submitted</string>
+    <string name="forums_reject_forum_missing">Forum is no longer available</string>
+    <string name="forums_reject_post_server">Post couldn\'t be saved on the forum server</string>
+    <string name="forums_reject_comment_server">Comment couldn\'t be saved on the forum server</string>
     <string name="forums_moderation_mute_title">Mute %1$s?</string>
     <string name="forums_moderation_mute_message">They stay in the forum but cannot post or comment until you remove the restriction.</string>
     <string name="forums_moderation_ban_title">Ban %1$s?</string>
@@ -330,4 +346,24 @@
         <item quantity="one">%d new post</item>
         <item quantity="other">%d new posts</item>
     </plurals>
+    <string name="forums_moderation_action_remove">Removed</string>
+    <string name="forums_moderation_action_restore">Restored</string>
+    <string name="forums_moderation_action_approve">Approved</string>
+    <string name="forums_moderation_action_lock">Locked</string>
+    <string name="forums_moderation_action_unlock">Unlocked</string>
+    <string name="forums_moderation_action_pin">Pinned</string>
+    <string name="forums_moderation_action_unpin">Unpinned</string>
+    <string name="forums_moderation_action_restrict">Restricted</string>
+    <string name="forums_moderation_action_unrestrict">Unrestricted</string>
+    <string name="forums_moderation_action_resolve">Resolved report</string>
+    <string name="forums_moderation_target_post">Post</string>
+    <string name="forums_moderation_target_comment">Comment</string>
+    <string name="forums_moderation_target_user">User</string>
+    <string name="forums_moderation_reason_spam">Spam</string>
+    <string name="forums_moderation_reason_harassment">Harassment</string>
+    <string name="forums_moderation_reason_hate">Hate speech</string>
+    <string name="forums_moderation_reason_violence">Violence</string>
+    <string name="forums_moderation_reason_misinformation">Misinformation</string>
+    <string name="forums_moderation_reason_offtopic">Off-topic</string>
+    <string name="forums_moderation_reason_other">Other</string>
 </resources>

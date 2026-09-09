@@ -290,4 +290,5 @@
     <string name="forums_saved_save">Enregistrer pour plus tard</string>
     <string name="forums_moderation_pending_posts">Publications en attente (%1$d)</string>
     <string name="forums_moderation_pending_comments">Commentaires en attente (%1$d)</string>
+    <string name="forums_moderation_reason_spam">Pourriel</string>
 </resources>

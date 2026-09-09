@@ -221,7 +221,7 @@ interface ProjectsApi {
     @POST("-/repositories/{repository}/merge")
     suspend fun merge(
         @Path("repository") repository: String,
-        @Field("project") project: String,
+        @Field("project") project: String, // contract-ok: read via resolve_project(a) helper
         @Field("source") source: String,
         @Field("target") target: String,
         @Field("message") message: String,

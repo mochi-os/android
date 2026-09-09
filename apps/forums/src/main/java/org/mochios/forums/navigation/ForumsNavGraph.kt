@@ -109,7 +109,10 @@ fun NavGraphBuilder.forumsNavGraph(
             navArgument("postId") { type = NavType.StringType }
         ),
         deepLinks = listOf(
-            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/-/{postId}" }
+            // What a web user shares is the SPA route, `/forums/<forum>/<post>`.
+            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/{postId}" },
+            // The `-/` form is what the RSS feed and the server's own links use.
+            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/-/{postId}" },
         )
     ) {
         PostScreen(

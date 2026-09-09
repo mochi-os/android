@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">친구 추가</string>
     <string name="chess_new_start_button">게임 시작</string>
     <string name="chess_new_creating">생성 중…</string>
-    <string name="chess_new_failed">게임 생성에 실패했어요</string>
     <string name="chess_chat_title">채팅</string>
     <string name="chess_open_chat">채팅 패널 열기</string>
     <string name="chess_open_actions">게임 작업 열기</string>

@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
@@ -77,7 +78,7 @@ import org.mochios.android.R as MochiR
 fun ChessGameListScreen(
     navController: NavController,
     gameId: String,
-    @Suppress("UNUSED_PARAMETER") onLogout: () -> Unit,
+    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit,
     viewModel: ChessGameListViewModel = hiltViewModel(),
@@ -107,17 +108,6 @@ fun ChessGameListScreen(
         }
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
-    }
-
-    LaunchedEffect(Unit) {
-        viewModel.events.collect { event ->
-            when (event) {
-                is ChessGameListEvent.Toast -> snackbarHostState.showSnackbar(event.message)
-                is ChessGameListEvent.OpenGame -> {
-                    navController.navigate(ChessApp.gameDetail(event.gameId))
-                }
-            }
-        }
     }
 
     MochiListDrawer(
@@ -151,6 +141,14 @@ fun ChessGameListScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(ChessApp.NEW_GAME)
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(MochiR.string.common_logout),
+                icon = Icons.AutoMirrored.Outlined.Logout,
+                onClick = {
+                    drawerScope.launch { drawerState.close() }
+                    onLogout()
                 },
             )
             DrawerActionRow(

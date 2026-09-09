@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Joc șters</string>
     <string name="go_new_game_add_friends">Adaugă prieteni</string>
     <string name="go_new_game_board_size_label">Dimensiunea tablei</string>
-    <string name="go_new_game_cancel">Anulează</string>
     <string name="go_new_game_friend_label">Adversar</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Abandonezi jocul?</string>
     <string name="go_sidebar_completed">Finalizat</string>
     <string name="go_sidebar_new_game">Joc nou</string>
-    <string name="go_status_active">Activ</string>
     <string name="go_status_draw">Remiză</string>
     <string name="go_status_draw_text">Remiză</string>
     <string name="go_status_game_over">Joc terminat</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Deschide bara laterală</string>
     <string name="go_sidebar_active">Partide active</string>
     <string name="go_empty_active">Încă nu există partide active.</string>
-    <string name="go_empty_completed">Încă nu există partide finalizate.</string>
-    <string name="go_status_finished">Finalizată</string>
     <string name="go_status_resigned">Abandonată</string>
-    <string name="go_card_vs">împotriva %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Partidă nouă de Go</string>
     <string name="go_new_game_no_friends">Trebuie să adăugați un prieten înainte de a începe o partidă.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Puncte adăugate scorului Albului pentru a compensa că Negrul mută primul</string>
-    <string name="go_new_game_create_error">Pornirea partidei a eșuat</string>
 
     <string name="go_board_a11y">Tablă Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Tablă de Go %1$d×%1$d, este rândul tău să pui o piatră neagră</string>
     <string name="go_board_a11y_turn_white">Tablă de Go %1$d×%1$d, este rândul tău să pui o piatră albă</string>
+    <string name="go_status_scoring">Numărare — puneți-vă de acord asupra scorului sau continuați partida</string>
+    <string name="go_score_proposed">Scor propus: negru %1$s, alb %2$s</string>
+    <string name="go_score_opponent_accepted">Adversarul tău acceptă acest scor: negru %1$s, alb %2$s</string>
+    <string name="go_score_waiting">Scor acceptat — se așteaptă %1$s</string>
+    <string name="go_score_accept">Acceptă scorul</string>
+    <string name="go_score_resume">Reia jocul</string>
+    <string name="go_error_score_resume_failed">Reluarea jocului a eșuat</string>
+    <string name="go_error_score_accept_failed">Acceptarea scorului a eșuat</string>
 </resources>

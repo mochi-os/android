@@ -45,6 +45,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.delay
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.Section
+import org.mochios.android.api.MochiError
 import org.mochios.forums.R
 import org.mochios.forums.model.ModerationSettings
 import org.mochios.forums.ui.moderation.ModerationViewModel
@@ -67,11 +68,21 @@ private val NUMBER_FIELD_HEIGHT = 44.dp
 @Composable
 fun ModerationTab(
     onMessage: (Int) -> Unit,
+    onError: (MochiError) -> Unit,
     viewModel: ModerationViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
     LaunchedEffect(Unit) { viewModel.loadSettings() }
+
+    // A refused save has to be said out loud: the toggles show the edit until
+    // the reload lands, so silence reads as "saved".
+    LaunchedEffect(uiState.error) {
+        uiState.error?.let { error ->
+            onError(error)
+            viewModel.clearError()
+        }
+    }
 
     LaunchedEffect(uiState.actionMessage) {
         uiState.actionMessage?.let { messageRes ->

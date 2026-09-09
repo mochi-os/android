@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">మెను</string>
-    <string name="words_list_new">కొత్త గేమ్</string>
     <string name="words_list_logout">లాగ్ అవుట్</string>
-    <string name="words_list_empty_title">ఇంకా గేమ్‌లు లేవు</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">పూర్తయింది</string>
     <string name="words_sidebar_new_game">కొత్త గేమ్</string>
     <string name="words_new_game_title">కొత్త గేమ్</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">రీమ్యాచ్</string>
     <string name="words_detail_action_delete">ఆటను తొలగించండి</string>
     <string name="words_detail_chat_title">చాట్</string>
-    <string name="words_detail_invalid_move">చెల్లని ఎత్తు</string>
     <string name="words_detail_recall">రీకాల్</string>
     <string name="words_detail_submit">సమర్పించండి</string>
     <string name="words_detail_cancel">రద్దు చేయండి</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ఒక అక్షరాన్ని ఎంచుకోండి</string>
     <string name="words_detail_resign_title">గేమ్‌ను రిజైన్ చేయాలా?</string>
     <string name="words_detail_resign_message">మీరు నిజంగా రాజీనామా చేయాలనుకుంటున్నారా?</string>
-    <string name="words_detail_failed_move">ఎత్తును సమర్పించడంలో విఫలమైంది</string>
-    <string name="words_detail_failed_pass">పాస్ చేయడంలో విఫలమైంది</string>
-    <string name="words_detail_failed_exchange">మార్చడంలో విఫలమైంది</string>
-    <string name="words_detail_failed_resign">రాజీనామా చేయడంలో విఫలమైంది</string>
-    <string name="words_detail_failed_rematch">రీమ్యాచ్‌ను సృష్టించడంలో విఫలమైంది</string>
-    <string name="words_detail_failed_delete">ఆటను తొలగించడంలో విఫలమైంది</string>
-    <string name="words_detail_game_deleted">ఆట తొలగించబడింది</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words వంతులు, మార్పిడులు మరియు గేమ్ ఫలితాల గురించి నోటిఫికేషన్‌లు.</string>
-    <string name="words_list_empty_subtitle">మీ మొదటి గేమ్ ప్రారంభించడానికి + బటన్‌ను నొక్కండి.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">ఇంకా గేమ్‌లు లేవు.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">ఆడటం ప్రారంభించడానికి People యాప్‌లో స్నేహితులను జోడించండి.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">గేమ్ వివరాలు త్వరలో</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

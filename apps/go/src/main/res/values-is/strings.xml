@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Leik eytt</string>
     <string name="go_new_game_add_friends">Bæta við vinum</string>
     <string name="go_new_game_board_size_label">Stærð borðs</string>
-    <string name="go_new_game_cancel">Hætta við</string>
     <string name="go_new_game_friend_label">Andstæðingur</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Gefast upp í leik?</string>
     <string name="go_sidebar_completed">Lokið</string>
     <string name="go_sidebar_new_game">Nýr leikur</string>
-    <string name="go_status_active">Virkur</string>
     <string name="go_status_draw">Jafntefli</string>
     <string name="go_status_draw_text">Jafntefli</string>
     <string name="go_status_game_over">Leik lokið</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Engir virkir leikir enn.</string>
-    <string name="go_empty_completed">Engir loknir leikir enn.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nýr Go-leikur</string>
     <string name="go_new_game_no_friends">Þú þarft að bæta við vini áður en þú getur hafið leik.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Stig sem bætast við stig Hvíts til að vega upp á móti því að Svartur byrjar</string>
-    <string name="go_new_game_create_error">Ekki tókst að hefja leikinn</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go-borð</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go-borð, komið að þér að leggja svartan stein</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go-borð, komið að þér að leggja hvítan stein</string>
+    <string name="go_status_scoring">Talning — komið ykkur saman um stigin eða haldið áfram</string>
+    <string name="go_score_proposed">Tillaga að stigum: svart %1$s, hvítt %2$s</string>
+    <string name="go_score_opponent_accepted">Andstæðingur þinn samþykkir þessi stig: svart %1$s, hvítt %2$s</string>
+    <string name="go_score_waiting">Stig samþykkt — beðið eftir %1$s</string>
+    <string name="go_score_accept">Samþykkja stig</string>
+    <string name="go_score_resume">Hefja leik að nýju</string>
+    <string name="go_error_score_resume_failed">Tókst ekki að hefja leikinn að nýju</string>
+    <string name="go_error_score_accept_failed">Tókst ekki að samþykkja stigin</string>
 </resources>

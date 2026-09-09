@@ -7,6 +7,7 @@ package org.mochios.android.update
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.os.Build
 import android.util.Log
 import androidx.work.Constraints
 import androidx.work.CoroutineWorker
@@ -17,6 +18,10 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import java.security.KeyFactory
+import java.security.Signature
+import java.security.spec.X509EncodedKeySpec
+import java.util.Base64
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -79,6 +84,12 @@ class UpdateChecker(
         private const val TRACK = "production"
         private const val BASE_URL = "https://packages.mochi-os.org/android"
         private const val VERSIONS_URL = "$BASE_URL/versions.json"
+        private const val SIGNATURE_URL = "$BASE_URL/versions.json.sig"
+        // The release-signing public key, ed25519, base64 of the 32 raw
+        // bytes. Same key as update_manifest_public_key in
+        // core/server/update.go - the server manifests use it too.
+        private const val MANIFEST_PUBLIC_KEY =
+            "e8W9tRQLNhmcqDAxIYSuKyXGPSThMC90FWSQMCktMAA="
 
         // Absolute ceiling on a download, whatever the manifest claims. The
         // APK is ~40 MB; this only bounds how much cache a compromised or
@@ -337,6 +348,75 @@ class UpdateChecker(
          * [Manifest.release], which refuses to stage rather than downloading
          * blind.
          */
+        /**
+         * Whether [body] carries a valid detached ed25519 signature from the
+         * release key. The manifest decides which version to fetch and which
+         * SHA-256 to accept, so unverified it rests on TLS alone: whoever
+         * serves the android subtree can freeze every client on an old release
+         * or send them after junk.
+         *
+         * Ed25519 reached java.security at API 33. Below that the platform has
+         * no provider and the check cannot run, so the manifest is taken as it
+         * was before this existed rather than stranding those devices with no
+         * updates at all - the package installer still enforces signing-key
+         * continuity and version-code monotonicity, so the worst an attacker
+         * gets there is the freeze, not arbitrary code.
+         */
+        private fun manifest_verified(body: String): Boolean {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                Log.i(TAG, "Manifest signature not checked: Ed25519 needs API 33")
+                return true
+            }
+            val encoded = try {
+                val req = Request.Builder().url(SIGNATURE_URL).get().build()
+                metaClient().newCall(req).execute().use { resp ->
+                    if (!resp.isSuccessful) null else resp.body?.string()?.trim()
+                }
+            } catch (_: Exception) {
+                null
+            }
+            if (encoded.isNullOrBlank()) {
+                Log.w(TAG, "Refusing the manifest: no signature at $SIGNATURE_URL")
+                return false
+            }
+            if (!signature_verified(body, encoded, MANIFEST_PUBLIC_KEY)) {
+                Log.w(TAG, "Refusing the manifest: signature does not verify")
+                return false
+            }
+            return true
+        }
+
+        /**
+         * Whether [encoded] (base64 of the 64 raw signature bytes) is a valid
+         * ed25519 signature over [body] by [publicKey] (base64 of the 32 raw
+         * key bytes). False for any malformed input, so a caller never has to
+         * tell "bad signature" from "bad encoding" - both mean do not trust it.
+         *
+         * Split out from [manifest_verified] because it is the half that is
+         * pure: no network, no Build gate, so a test can drive it.
+         */
+        internal fun signature_verified(
+            body: String,
+            encoded: String,
+            publicKey: String,
+        ): Boolean = try {
+            val signature = Base64.getDecoder().decode(encoded)
+            // X.509 SubjectPublicKeyInfo around the 32 raw key bytes, which is
+            // the only encoding KeyFactory takes; the prefix is the fixed
+            // ed25519 algorithm identifier.
+            val wrapped = byteArrayOf(
+                0x30, 0x2a, 0x30, 0x05, 0x06, 0x03, 0x2b, 0x65, 0x70, 0x03, 0x21, 0x00,
+            ) + Base64.getDecoder().decode(publicKey)
+            val public = KeyFactory.getInstance("Ed25519")
+                .generatePublic(X509EncodedKeySpec(wrapped))
+            val verifier = Signature.getInstance("Ed25519")
+            verifier.initVerify(public)
+            verifier.update(body.toByteArray(Charsets.UTF_8))
+            verifier.verify(signature)
+        } catch (_: Exception) {
+            false
+        }
+
         private fun fetchManifest(): Manifest? {
             val req = Request.Builder().url(VERSIONS_URL).get().build()
             metaClient().newCall(req).execute().use { resp ->
@@ -345,6 +425,7 @@ class UpdateChecker(
                     return null
                 }
                 val body = resp.body?.string().orEmpty()
+                if (!manifest_verified(body)) return null
                 val root = JSONObject(body)
                 val tracks = root.optJSONObject("tracks") ?: return null
                 val version = tracks.optString(TRACK).takeIf { it.isNotBlank() } ?: return null

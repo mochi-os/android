@@ -93,7 +93,7 @@ fun NewChessGameScreen(
                         Spacer(modifier = Modifier.height(8.dp))
                     }
                     MochiButton(
-                        onClick = { viewModel.create(onCreated = onCreated, onError = {}) },
+                        onClick = { viewModel.create(onCreated = onCreated) },
                         enabled = state.selectedId.isNotBlank() && !state.isCreating,
                         modifier = Modifier.fillMaxWidth(),
                     ) {

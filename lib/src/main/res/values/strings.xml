@@ -11,7 +11,6 @@
     <string name="error_not_found">Not found</string>
     <string name="error_server">Server error (%1$d). Please try again later.</string>
     <string name="error_unexpected">An unexpected error occurred</string>
-    <string name="error_request_failed">Request failed</string>
     <string name="error_enter_server_url">Please enter a server URL</string>
     <string name="error_enter_email">Please enter your email</string>
     <string name="error_enter_name">Please enter a name</string>
@@ -23,22 +22,13 @@
 
     <!-- Auth: login -->
     <string name="auth_sign_in">Sign in</string>
-    <string name="auth_sign_in_with_passkey">Sign in with passkey</string>
-    <string name="auth_sign_in_with_email_code">Sign in with email code</string>
-    <string name="auth_use_recovery_code">Use recovery code</string>
-    <string name="auth_back_to_sign_in">Back to sign in</string>
     <string name="auth_email">Email</string>
     <string name="auth_continue">Continue</string>
-    <string name="auth_send_code">Send code</string>
     <string name="auth_check_email">Check your email for a verification code</string>
     <string name="auth_verification_code">Verification code</string>
-    <string name="auth_verify">Verify</string>
-    <string name="auth_authenticator_app">Authenticator app</string>
-    <string name="auth_six_digit_code">6-digit code</string>
     <string name="auth_mfa_title">Multi-factor authentication</string>
     <string name="auth_mfa_subtitle">Complete the remaining verification steps</string>
     <string name="auth_email_code">Email code</string>
-    <string name="auth_authenticator_code">Authenticator code</string>
     <string name="auth_recovery_code">Recovery code</string>
     <string name="auth_recover_account">Recover account</string>
     <string name="auth_login_title">Log in to Mochi</string>
@@ -79,7 +69,6 @@
     <string name="bootstrap_sign_in_different_server">Sign in to a different server</string>
 
     <!-- Common UI vocabulary -->
-    <string name="common_or">or</string>
     <string name="common_back">Back</string>
     <string name="common_close">Close</string>
     <string name="common_cancel">Cancel</string>
@@ -88,11 +77,9 @@
     <string name="common_saving">Saving…</string>
     <string name="common_saved">Saved</string>
     <string name="common_not_saved">Not saved</string>
-    <string name="common_save_failed">Couldn\'t save your changes.</string>
     <string name="common_edit">Edit</string>
     <string name="common_delete">Delete</string>
     <string name="common_add">Add</string>
-    <string name="common_change">Change</string>
     <string name="common_retry">Retry</string>
     <string name="common_more_options">More options</string>
     <string name="common_notifications">Notifications</string>
@@ -118,16 +105,12 @@
     <string name="tags_label">Tags</string>
     <string name="tags_none">No tags</string>
     <string name="tags_add">Add tag</string>
-    <string name="tags_label_field">Tag label</string>
     <string name="tags_delete">Remove tag</string>
     <string name="tags_interest_up">Show more like this</string>
     <string name="tags_interest_down">Show less like this</string>
     <string name="tags_interest_clear">Stop showing</string>
     <string name="comment_edited">(edited)</string>
-    <string name="comment_edit_placeholder">Edit comment</string>
     <string name="comment_reply">Reply</string>
-    <string name="comment_reply_placeholder">Reply</string>
-    <string name="comment_send_reply">Send reply</string>
 
     <!-- People picker -->
     <string name="person_picker_search">Search users</string>
@@ -145,28 +128,16 @@
     <string name="place_destination">Destination</string>
 
     <!-- Entity discovery -->
-    <string name="discovery_search_placeholder">Search %1$ss</string>
-    <string name="discovery_results">Results</string>
     <string name="discovery_recommended">Recommended</string>
-    <string name="discovery_no_results">No %1$ss found</string>
     <string name="discovery_no_results_hint">Try adjusting your search terms</string>
-    <string name="discovery_no_recommendations">No recommendations</string>
-    <string name="discovery_search_hint">Try searching for a %1$s to subscribe to</string>
-    <string name="discovery_subscribed">Subscribed</string>
 
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d subscriber</item>
-        <item quantity="other">%1$d subscribers</item>
-    </plurals>
 
     <!-- Access control -->
     <string name="access_add_rule">Add rule</string>
     <string name="access_no_rules">No access rules</string>
-    <string name="access_no_rules_subtitle">Add rules to control who can access this resource</string>
     <string name="access_owner">Owner</string>
     <string name="access_revoke">Revoke</string>
     <string name="access_add_rule_title">Add access rule</string>
-    <string name="access_level">Access level</string>
     <string name="access_level_manage">Manage</string>
     <string name="access_level_comment">Comment</string>
     <string name="access_level_react">React</string>
@@ -177,11 +148,6 @@
     <string name="notifications_clear">Clear notifications</string>
 
     <!-- Banner editor -->
-    <string name="banner_label">Banner</string>
-    <string name="banner_description">Markdown shown at the top of this view.</string>
-    <string name="banner_placeholder">Welcome…</string>
-    <string name="banner_save">Save banner</string>
-    <string name="banner_clear">Clear banner</string>
 
     <!-- Entity avatar -->
     <string name="entity_avatar_alt">Avatar for %1$s</string>
@@ -220,7 +186,6 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmo</string>
-    <string name="format_time_years_short">%1$dy</string>
 
     <!-- Reactions -->
     <string name="reaction_add">Add reaction</string>
@@ -279,14 +244,11 @@
     <string name="notifications_clear_all">Clear all</string>
     <string name="notifications_clear_all_title">Clear all notifications?</string>
     <string name="notifications_clear_all_message">This will remove every notification. They can\'t be recovered.</string>
-    <string name="notifications_loading">Loading…</string>
-    <string name="notifications_count_n">%1$d new</string>
     <string name="notifications_change_category">Change notification category</string>
     <string name="notifications_category_unassigned">Unassigned</string>
 
     <!-- User settings -->
     <string name="settings_title">Settings</string>
-    <string name="settings_open">Settings</string>
     <string name="settings_value_auto">Automatic</string>
     <string name="settings_value_theme">Theme default</string>
     <string name="settings_appearance">Appearance</string>
@@ -347,15 +309,6 @@
     <string name="settings_background_off">None</string>
 
     <!-- Profile -->
-    <string name="profile_title">Profile</string>
-    <string name="profile_open">Profile</string>
-    <string name="profile_display_name">Display name</string>
-    <string name="profile_save_name">Save name</string>
-    <string name="profile_privacy">Privacy</string>
-    <string name="profile_privacy_description">Whether others can find you in the directory.</string>
-    <string name="profile_privacy_public">Public</string>
-    <string name="profile_privacy_private">Private</string>
-    <string name="profile_fingerprint">Fingerprint</string>
 
     <!-- Game apps: the pane beside the drawer, before a game is picked -->
     <string name="game_empty_title">No games yet</string>
@@ -382,7 +335,6 @@
     <string name="stepup_email_placeholder">Enter the code from your email</string>
     <string name="stepup_totp_label">Authenticator code</string>
     <string name="stepup_totp_placeholder">Enter your authenticator code</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">Use your passkey</string>
     <string name="stepup_send_email">Send email</string>
     <string name="stepup_resend_email">Resend email</string>
@@ -419,4 +371,8 @@
     <string name="settings_card_theme">From theme</string>
     <string name="settings_card_flat">Flat</string>
     <string name="settings_card_raised">Raised</string>
+    <string name="error_server_https">The server address must start with https://</string>
+    <string name="account_error_caller">Caller not allowed</string>
+    <string name="account_error_token_type">Unsupported token type</string>
+    <string name="device_name_fallback">Mobile device</string>
 </resources>

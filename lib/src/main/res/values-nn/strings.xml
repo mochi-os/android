@@ -5,10 +5,7 @@
     <string name="auth_email">E-post</string>
     <string name="auth_continue">Hald fram</string>
     <string name="auth_verification_code">Stadfestingskode</string>
-    <string name="auth_verify">Stadfest</string>
-    <string name="auth_authenticator_app">Autentiseringsapp</string>
     <string name="auth_email_code">E-postkode</string>
-    <string name="auth_authenticator_code">Autentiseringskode</string>
     <string name="auth_recovery_code">Gjenopprettingskode</string>
     <string name="auth_name">Namn</string>
     <string name="auth_create">Opprett</string>
@@ -34,22 +31,15 @@
     <string name="common_copy">Kopier</string>
     <string name="common_copied">Kopiert til utklippstavla</string>
     <string name="comment_edited">(redigert)</string>
-    <string name="comment_edit_placeholder">Rediger kommentar</string>
     <string name="comment_reply">Svar</string>
-    <string name="comment_reply_placeholder">Svar</string>
-    <string name="comment_send_reply">Send svar</string>
     <string name="person_picker_search">Søk i brukarar</string>
     <string name="place_picker_no_results">Ingen stader funne</string>
-    <string name="discovery_results">Resultat</string>
     <string name="discovery_recommended">Tilrådd</string>
-    <string name="discovery_subscribed">Abonnerer</string>
     <string name="access_owner">Eigar</string>
     <string name="access_revoke">Trekk tilbake</string>
-    <string name="access_level">Tilgangsnivå</string>
     <string name="access_level_comment">Kommenter</string>
     <string name="access_level_view">Vis</string>
     <string name="access_level_none">Ingen</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">Lik</string>
     <string name="reaction_dislike">Mislik</string>
     <string name="reaction_laugh">Le</string>
@@ -70,9 +60,7 @@
     <string name="notifications_tab_all">Alle</string>
     <string name="notifications_mark_all_read">Merk alle som lesne</string>
     <string name="notifications_clear_all">Tøm alle</string>
-    <string name="notifications_loading">Lastar…</string>
     <string name="settings_title">Innstillingar</string>
-    <string name="settings_open">Innstillingar</string>
     <string name="settings_appearance">Utsjånad</string>
     <string name="settings_appearance_light">Lyst</string>
     <string name="settings_appearance_dark">Mørk</string>
@@ -122,24 +110,15 @@
     <string name="settings_background">Bakgrunn</string>
     <string name="settings_background_theme">Frå tema</string>
     <string name="settings_background_off">Ingen</string>
-    <string name="profile_title">Profil</string>
-    <string name="profile_open">Profil</string>
-    <string name="profile_display_name">Visingsnamn</string>
-    <string name="profile_privacy">Privacy</string>
-    <string name="profile_privacy_public">Offentleg</string>
-    <string name="profile_privacy_private">Privat</string>
-    <string name="profile_fingerprint">Fingeravtrykk</string>
     <string name="game_chat_empty">Ingen meldingar enno</string>
     <string name="game_chat_input_placeholder">Skriv ei melding…</string>
     <string name="game_chat_send">Send melding</string>
     <string name="game_chat_subject_you">Du</string>
 
     <string name="common_not_saved">Ikkje lagra</string>
-    <string name="common_save_failed">Endringane dine kunne ikkje lagrast.</string>
     <string name="app_brand">Mochi</string>
     <string name="auth_server_url">Tenar-URL</string>
     <string name="auth_link_rules">Reglar</string>
-    <string name="profile_save_name">Lagre namn</string>
     <string name="game_chat_move_played">%1$s spelte %2$s</string>
 
     <string name="error_network">Kan ikkje kople til. Sjekk internett-tilkoplinga di og prøv igjen.</string>
@@ -147,20 +126,13 @@
     <string name="error_not_found">Ikkje funnen</string>
     <string name="error_server">Tenarfeil (%1$d). Prøv igjen seinare.</string>
     <string name="error_unexpected">Det oppstod ein uventa feil</string>
-    <string name="error_request_failed">Førespurnaden feila</string>
     <string name="error_enter_server_url">Skriv inn ei tenaradresse</string>
     <string name="error_enter_email">Skriv inn e-postadressa di</string>
     <string name="error_enter_name">Skriv inn eit namn</string>
     <string name="auth_connect_to_server">Kopla til tenaren din</string>
     <string name="auth_connect">Kopla til</string>
     <string name="auth_sign_in">Logg inn</string>
-    <string name="auth_sign_in_with_passkey">Logg inn med passnøkkel</string>
-    <string name="auth_sign_in_with_email_code">Logg inn med e-postkode</string>
-    <string name="auth_use_recovery_code">Bruk gjenopprettingskode</string>
-    <string name="auth_back_to_sign_in">Tilbake til innlogging</string>
-    <string name="auth_send_code">Send kode</string>
     <string name="auth_check_email">Sjekk e-posten din for ein stadfestingskode</string>
-    <string name="auth_six_digit_code">6-sifra kode</string>
     <string name="auth_mfa_title">Fleirfaktor-autentisering</string>
     <string name="auth_mfa_subtitle">Fullfør dei resterande stadfestingsstega</string>
     <string name="auth_recover_account">Gjenopprett konto</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">Logg inn på ein annan måte</string>
     <string name="bootstrap_choose_account">Vel ein konto</string>
     <string name="bootstrap_sign_in_different_server">Logg inn på ein annan tenar</string>
-    <string name="common_or">eller</string>
-    <string name="common_change">Endra</string>
     <string name="common_retry">Prøv igjen</string>
     <string name="common_more_options">Fleire val</string>
     <string name="common_collapse">Slå saman</string>
@@ -197,22 +167,13 @@
     <string name="place_picker_name">Stadnamn</string>
     <string name="place_origin">Opphav</string>
     <string name="place_destination">Mål</string>
-    <string name="discovery_search_placeholder">Søk i %1$ss</string>
-    <string name="discovery_no_results">Ingen %1$ss funne</string>
     <string name="discovery_no_results_hint">Prøv å justere søket</string>
-    <string name="discovery_no_recommendations">Ingen tilrådingar</string>
-    <string name="discovery_search_hint">Prøv å søkja etter ein %1$s å abonnera på</string>
     <string name="access_add_rule">Legg til regel</string>
     <string name="access_no_rules">Ingen tilgangsreglar</string>
-    <string name="access_no_rules_subtitle">Legg til reglar for å styra kven som har tilgang til denne ressursen</string>
     <string name="access_add_rule_title">Legg til tilgangsregel</string>
     <string name="access_level_manage">Administrer</string>
     <string name="access_level_react">Reager</string>
     <string name="notifications_clear">Tøm varsel</string>
-    <string name="banner_description">Markdown som blir vist øvst i denne visinga.</string>
-    <string name="banner_placeholder">Velkomen…</string>
-    <string name="banner_save">Lagra banner</string>
-    <string name="banner_clear">Tøm banner</string>
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -228,7 +189,6 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dv</string>
     <string name="format_time_months_short">%1$dmnd</string>
-    <string name="format_time_years_short">%1$då</string>
     <string name="reaction_add">Legg til reaksjon</string>
     <string name="push_service_channel">Mochi-varsel</string>
     <string name="push_service_channel_description">Held Mochi tilkopla for å ta imot varsel</string>
@@ -253,7 +213,6 @@
     <string name="about_check_download_failed">Nedlasting feila</string>
     <string name="notifications_clear_all_title">Fjerne alle varslingar?</string>
     <string name="notifications_clear_all_message">Dette fjernar alle varslingar. Dei kan ikkje gjenopprettast.</string>
-    <string name="notifications_count_n">%1$d nye</string>
     <string name="settings_value_auto">Automatisk</string>
     <string name="settings_value_theme">Tema-standard</string>
     <string name="settings_radius">Hjørneradius</string>
@@ -261,11 +220,9 @@
     <string name="settings_timestamp_relative">Relativ</string>
     <string name="settings_timestamp_absolute">Absolutt</string>
     <string name="settings_units_usa">USA</string>
-    <string name="profile_privacy_description">Om andre kan finne deg i katalogen.</string>
     <string name="game_chat_load_more">Last inn eldre meldingar</string>
     <string name="stepup_email_label">E-postkode</string>
     <string name="stepup_totp_label">Autentiseringskode</string>
-    <string name="stepup_passkey_label">Nykel</string>
     <string name="stepup_verify">Stadfest</string>
     <string name="reactivation_title">Kontoen din er planlagd sletta</string>
     <string name="reactivation_body">Kontoen din er planlagd sletta. Du kan avbryte og gjenopprette full tilgang no.</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">Anonym</string>
     <string name="tags_label">Etikettar</string>
     <string name="tags_add">Legg til etikett</string>
-    <string name="tags_label_field">Merkelapp</string>
     <string name="tags_interest_up">Vis meir av dette</string>
     <string name="tags_interest_down">Vis mindre av dette</string>
     <string name="tags_interest_clear">Slutt å visa</string>
@@ -310,10 +266,6 @@
     <string name="person_picker_directory">Katalog</string>
     <string name="person_picker_no_people">Ingen personar</string>
     <string name="person_picker_project_members">Prosjektmedlemmer</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d abonnent</item>
-        <item quantity="other">%1$d abonnentar</item>
-    </plurals>
     <string name="account_token_label">Mochi-økt</string>
     <string name="attachment_caption">Bilettekst</string>
     <string name="attachment_caption_add">Legg til bilettekst</string>
@@ -354,4 +306,8 @@
     <string name="settings_card_theme">Frå tema</string>
     <string name="settings_card_flat">Flat</string>
     <string name="settings_card_raised">Heva</string>
+    <string name="error_server_https">Serveradressa må byrja med https://</string>
+    <string name="device_name_fallback">Mobileining</string>
+    <string name="account_error_token_type">Tokentypen er ikkje støtta</string>
+    <string name="account_error_caller">Kallaren har ikkje løyve</string>
 </resources>

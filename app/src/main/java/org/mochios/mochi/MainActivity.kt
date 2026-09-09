@@ -32,6 +32,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.OAuthReturnKind
 import org.mochios.android.auth.oauthReturnKind
 import org.mochios.android.auth.shouldAcceptOAuthReturn
+import org.mochios.android.util.entityDeepLink
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.NonceStore
@@ -516,19 +517,18 @@ open class MainActivity : ComponentActivity() {
      * it the URI is a no-op.
      */
     private fun handleEntityIntent(intent: Intent, uri: Uri) {
-        val segments = uri.pathSegments
-        val entity = segments.firstOrNull() ?: return
-        val sub = segments.drop(1)
-        val app = intent.getStringExtra(EXTRA_APP_HINT)
-        if (app != null) {
-            val link = buildString {
-                append('/').append(app).append('/').append(entity)
-                for (s in sub) append('/').append(s)
-            }
-            PendingDeepLink.set(link)
-        } else {
-            Log.w(TAG, "Entity URI without app hint: $uri (directory lookup not yet implemented)")
+        // The activity is exported, so the app hint and every path segment ride
+        // in an intent any installed app can send; entityDeepLink refuses an
+        // unknown app and any segment that could smuggle a path or query of its
+        // own into the route.
+        val link = entityDeepLink(
+            intent.getStringExtra(EXTRA_APP_HINT), uri.pathSegments, MOCHI_APPS,
+        )
+        if (link == null) {
+            Log.w(TAG, "Entity URI refused: $uri")
+            return
         }
+        PendingDeepLink.set(link)
     }
 
     /**

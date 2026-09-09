@@ -34,7 +34,6 @@
     <string name="go_game_deleted">თამაში წაიშალა</string>
     <string name="go_new_game_add_friends">მეგობრების დამატება</string>
     <string name="go_new_game_board_size_label">დაფის ზომა</string>
-    <string name="go_new_game_cancel">გაუქმება</string>
     <string name="go_new_game_friend_label">მოწინააღმდეგე</string>
     <string name="go_new_game_komi_field_label">კომი</string>
     <string name="go_new_game_komi_label">კომი</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">თამაშის ჩაბარება?</string>
     <string name="go_sidebar_completed">დასრულდა</string>
     <string name="go_sidebar_new_game">ახალი თამაში</string>
-    <string name="go_status_active">აქტიური</string>
     <string name="go_status_draw">ფრე</string>
     <string name="go_status_draw_text">ფრე</string>
     <string name="go_status_game_over">თამაში დასრულდა</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">ჯერ არ არის აქტიური თამაშები.</string>
-    <string name="go_empty_completed">ჯერ არ არის დასრულებული თამაშები.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">ახალი Go თამაში</string>
     <string name="go_new_game_no_friends">თამაშის დაწყებამდე უნდა დაამატოთ მეგობარი.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">ქულები, რომლებიც ემატება თეთრის ანგარიშს შავის პირველად სვლის საკომპენსაციოდ</string>
-    <string name="go_new_game_create_error">თამაშის დაწყება ვერ მოხერხდა</string>
 
     <string name="go_board_a11y">%1$d×%1$d გოს დაფა</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go-ს დაფა, თქვენი რიგია შავი ქვის დადება</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go-ს დაფა, თქვენი რიგია თეთრი ქვის დადება</string>
+    <string name="go_status_scoring">დათვლა — შეთანხმდით ქულებზე ან განაგრძეთ თამაში</string>
+    <string name="go_score_proposed">შემოთავაზებული ქულა: შავი %1$s, თეთრი %2$s</string>
+    <string name="go_score_opponent_accepted">თქვენი მოწინააღმდეგე ეთანხმება ამ ქულას: შავი %1$s, თეთრი %2$s</string>
+    <string name="go_score_waiting">ქულა მიღებულია — ველოდები %1$s-ს</string>
+    <string name="go_score_accept">ქულის მიღება</string>
+    <string name="go_score_resume">თამაშის გაგრძელება</string>
+    <string name="go_error_score_resume_failed">თამაშის გაგრძელება ვერ მოხერხდა</string>
+    <string name="go_error_score_accept_failed">ქულის მიღება ვერ მოხერხდა</string>
 </resources>

@@ -12,15 +12,10 @@
 
     <!-- Empty / status states -->
     <string name="go_empty_active">No active games yet.</string>
-    <string name="go_empty_completed">No completed games yet.</string>
-    <string name="go_status_active">Active</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_draw">Draw</string>
     <string name="go_status_resigned">Resigned</string>
 
     <!-- Game card -->
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
 
     <!-- Game detail -->
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
@@ -84,9 +79,15 @@
     <string name="go_new_game_komi_range_error">Must be between 0 and 10</string>
     <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
     <string name="go_new_game_start">Start game</string>
-    <string name="go_new_game_cancel">Cancel</string>
-    <string name="go_new_game_create_error">Failed to start game</string>
     <string name="go_board_a11y">%1$d×%1$d Go board</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go board, your turn to place a black stone</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go board, your turn to place a white stone</string>
+    <string name="go_status_scoring">Counting — agree the score or play on</string>
+    <string name="go_score_proposed">Proposed score: black %1$s, white %2$s</string>
+    <string name="go_score_opponent_accepted">Your opponent accepts this score: black %1$s, white %2$s</string>
+    <string name="go_score_waiting">Score accepted — waiting for %1$s</string>
+    <string name="go_score_accept">Accept score</string>
+    <string name="go_score_resume">Resume play</string>
+    <string name="go_error_score_accept_failed">Failed to accept score</string>
+    <string name="go_error_score_resume_failed">Failed to resume play</string>
 </resources>

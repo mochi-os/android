@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Spiel gelöscht</string>
     <string name="go_new_game_add_friends">Freunde hinzufügen</string>
     <string name="go_new_game_board_size_label">Brettgröße</string>
-    <string name="go_new_game_cancel">Abbrechen</string>
     <string name="go_new_game_friend_label">Gegner</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Spiel aufgeben?</string>
     <string name="go_sidebar_completed">Abgeschlossen</string>
     <string name="go_sidebar_new_game">Neues Spiel</string>
-    <string name="go_status_active">Aktiv</string>
     <string name="go_status_draw">Unentschieden</string>
     <string name="go_status_draw_text">Unentschieden</string>
     <string name="go_status_game_over">Spiel beendet</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Seitenleiste öffnen</string>
     <string name="go_sidebar_active">Aktive Partien</string>
     <string name="go_empty_active">Noch keine aktiven Partien.</string>
-    <string name="go_empty_completed">Noch keine abgeschlossenen Partien.</string>
-    <string name="go_status_finished">Beendet</string>
     <string name="go_status_resigned">Aufgegeben</string>
-    <string name="go_card_vs">gegen %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Neue Go-Partie</string>
     <string name="go_new_game_no_friends">Du musst einen Freund hinzufügen, bevor du eine Partie starten kannst.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punkte, die Weiß zur Kompensation gutgeschrieben werden, weil Schwarz zuerst zieht</string>
-    <string name="go_new_game_create_error">Start der Partie fehlgeschlagen</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go-Brett</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go-Brett, Sie sind am Zug mit einem schwarzen Stein</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go-Brett, Sie sind am Zug mit einem weißen Stein</string>
+    <string name="go_status_scoring">Auszählen — einigt euch auf das Ergebnis oder spielt weiter</string>
+    <string name="go_score_proposed">Vorgeschlagene Punktzahl: Schwarz %1$s, Weiß %2$s</string>
+    <string name="go_score_opponent_accepted">Ihr Gegner nimmt diese Punktzahl an: Schwarz %1$s, Weiß %2$s</string>
+    <string name="go_score_waiting">Punktzahl angenommen — Warten auf %1$s</string>
+    <string name="go_score_accept">Punktzahl annehmen</string>
+    <string name="go_score_resume">Spiel fortsetzen</string>
+    <string name="go_error_score_resume_failed">Spiel konnte nicht fortgesetzt werden</string>
+    <string name="go_error_score_accept_failed">Punktzahl konnte nicht angenommen werden</string>
 </resources>

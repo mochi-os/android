@@ -241,14 +241,12 @@ class AuthRepository @Inject constructor(
         return AuthResult.Success
     }
 
-    private fun <T> extractSessionCookie(response: retrofit2.Response<T>) {
+    private suspend fun <T> extractSessionCookie(response: retrofit2.Response<T>) {
         val setCookie = response.headers().values("Set-Cookie")
         for (cookie in setCookie) {
             if (cookie.startsWith("session=")) {
                 val value = cookie.substringAfter("session=").substringBefore(";")
-                kotlinx.coroutines.runBlocking {
-                    sessionManager.saveSession(value)
-                }
+                sessionManager.saveSession(value)
                 break
             }
         }

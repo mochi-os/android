@@ -28,6 +28,7 @@ import org.mochios.android.util.mergeMessages
 import org.mochios.chess.engine.isDrawnPosition
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
+import org.mochios.chess.model.messageKey
 import org.mochios.chess.model.MoveRequest
 import org.mochios.chess.repository.ChessRepository
 import javax.inject.Inject
@@ -209,7 +210,6 @@ class ChessGameViewModel @Inject constructor(
                 val newPgn = appendMoveToPgn(game.pgn, san, board)
 
                 // Derive terminal-state hints from the post-move position.
-                val mySide = if (game.white == _uiState.value.identity) Side.WHITE else Side.BLACK
                 var status: String? = null
                 var winner: String? = null
                 if (board.isMated) {
@@ -402,10 +402,6 @@ class ChessGameViewModel @Inject constructor(
             null
         }
     }
-
-    /** Content key for chat dedupe; the websocket frame carries no id. */
-    private fun messageKey(message: GameMessage): String =
-        "${message.created}|${message.body}|${message.name}|${message.type}"
 
     private fun buildMoveText(from: String, to: String, promotion: String?): String {
         return if (promotion.isNullOrBlank()) "${from.lowercase()}${to.lowercase()}"
