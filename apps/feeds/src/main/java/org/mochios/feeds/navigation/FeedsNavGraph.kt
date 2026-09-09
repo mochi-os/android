@@ -68,10 +68,16 @@ fun NavGraphBuilder.feedsNavGraph(
     onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
 ) {
-    composable(FeedsApp.ROUTER) {
+    composable(FeedsApp.ROUTER) { entry ->
         FeedsRouter(onResolve = { feedId ->
-            navController.navigate(FeedsApp.feed(feedId)) {
-                popUpTo(FeedsApp.ROUTER) { inclusive = true }
+            // A deep link arriving on the same frame pops the router before it
+            // resolves; without this its late navigate pushes a second feed
+            // screen behind the one the link opened - two ViewModels, two
+            // websocket subscriptions and the feed loaded twice.
+            if (navController.currentBackStackEntry?.id == entry.id) {
+                navController.navigate(FeedsApp.feed(feedId)) {
+                    popUpTo(FeedsApp.ROUTER) { inclusive = true }
+                }
             }
         })
     }

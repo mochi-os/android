@@ -1800,54 +1800,18 @@ private fun PostCard(
                             onClick = { lightboxState = LightboxRequest(listOf(rssImageUrl), emptyList(), 0) },
                         )
                     }
-
-                    // Inline comments preview (top-level only, newest first).
-                    // Each is a single compact line — avatar, name, message text
-                    // (taking the free width), then the time — capped at 3.
-                    // Edit / delete / replies live on the post detail screen.
-                    if (post.comments.isNotEmpty()) {
-                        Spacer(modifier = Modifier.height(8.dp))
-                        val previewLimit = 3
-                        val previewed = post.comments.take(previewLimit)
-                        val remaining = post.comments.size - previewed.size
-                        val commentFeedId = post.feedFingerprint
-                            .ifEmpty { post.feed }
-                            .ifEmpty { fallbackFeedId }
-                        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                            for (comment in previewed) {
-                                // Tapping a comment opens the post (detail or the
-                                // source article) with its comments expanded — no
-                                // ripple, matching the title and body.
-                                CommentPreviewRow(
-                                    comment = comment,
-                                    commentFeedId = commentFeedId,
-                                    postId = post.id,
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .noRippleClickable(onViewComments),
-                                )
-                            }
-                            if (remaining > 0) {
-                                Text(
-                                    text = pluralStringResource(
-                                        R.plurals.feeds_view_more_comments,
-                                        remaining,
-                                        remaining
-                                    ),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.primary,
-                                    fontWeight = FontWeight.Medium,
-                                    // "N more comments" opens the post with its
-                                    // comments to read the whole thread (the comment
-                                    // icon is for composing, not viewing).
-                                    modifier = Modifier.clickable(onClick = onViewComments)
-                                )
-                            }
-                        }
-                    }
                 }
             }
         }
+
+        // Comments sit outside the page content, above the action bar, so a
+        // gallery post shows them too and the viewport-height column cannot
+        // clip them.
+        PostCommentsPreview(
+            post = post,
+            fallbackFeedId = fallbackFeedId,
+            onViewComments = onViewComments,
+        )
 
         // Bottom action bar: react, tag, comment, save. Lives outside the
         // flipping page content so it stays pinned at the screen bottom and
@@ -1913,6 +1877,67 @@ private fun PostCard(
             ) {
                 VideoPlayer(url = url, modifier = Modifier.fillMaxSize())
             }
+        }
+    }
+}
+
+/**
+ * Inline comments preview for a feed page: up to three top-level comments,
+ * newest first, each a single compact line, then a "N more comments" link.
+ * Editing, deleting and replies live on the post detail screen.
+ *
+ * @param post the post whose comments are previewed.
+ * @param fallbackFeedId feed to attribute the comments to when the post names
+ *   neither a fingerprint nor a feed.
+ * @param onViewComments opens the post with its comments expanded.
+ */
+@Composable
+private fun PostCommentsPreview(
+    post: Post,
+    fallbackFeedId: String,
+    onViewComments: () -> Unit,
+) {
+    if (post.comments.isEmpty()) return
+
+    val previewLimit = 3
+    val previewed = post.comments.take(previewLimit)
+    val remaining = post.comments.size - previewed.size
+    val commentFeedId = post.feedFingerprint
+        .ifEmpty { post.feed }
+        .ifEmpty { fallbackFeedId }
+
+    Column(
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 4.dp, top = 8.dp)
+    ) {
+        for (comment in previewed) {
+            // Tapping a comment opens the post (detail or the source article)
+            // with its comments expanded — no ripple, matching the title and body.
+            CommentPreviewRow(
+                comment = comment,
+                commentFeedId = commentFeedId,
+                postId = post.id,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .noRippleClickable(onViewComments),
+            )
+        }
+        if (remaining > 0) {
+            Text(
+                text = pluralStringResource(
+                    R.plurals.feeds_view_more_comments,
+                    remaining,
+                    remaining
+                ),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Medium,
+                // "N more comments" opens the post with its comments to read the
+                // whole thread (the comment icon is for composing, not viewing).
+                modifier = Modifier.clickable(onClick = onViewComments)
+            )
         }
     }
 }

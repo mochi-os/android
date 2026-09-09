@@ -590,6 +590,41 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    /**
+     * Whether [route] already has an entry on the back stack.
+     *
+     * @param route a destination's route pattern.
+     * @return true when the stack holds one.
+     */
+    private fun NavController.holds(route: String): Boolean =
+        currentBackStack.value.any { entry -> entry.destination.route == route }
+
+    /**
+     * Whether [route] is the screen already on top, arguments and all.
+     *
+     * @param route a filled route, as the navigate calls below build it.
+     * @return true when navigating there would re-open the current screen.
+     */
+    private fun NavController.isAt(route: String): Boolean {
+        val entry = currentBackStackEntry ?: return false
+        return entry.destination.hasRoute(route, entry.arguments)
+    }
+
+    /**
+     * Make [home] the parent of the destination a deep link is about to open:
+     * return to the copy already on the stack, dropping whatever sits above it,
+     * or push it when the app has not been opened yet. Stacking a second copy
+     * instead would leave the first one alive - its ViewModel, its websocket
+     * subscription and the refresh it runs on every event all still going.
+     */
+    private fun NavController.openAppHome(home: String) {
+        if (holds(home)) {
+            popBackStack(home, inclusive = false)
+        } else {
+            navigate(home) { launchSingleTop = true }
+        }
+    }
+
     private fun navigateToLink(navController: NavController, link: String) {
         // Split off an optional query string before path tokenisation so links
         // like "chat/new?friend=<id>" survive intact for the matcher below.
@@ -601,27 +636,44 @@ class MainActivity : ComponentActivity() {
         val id = parts.getOrNull(1)
         when (firstSegment) {
             "feeds" -> {
-                navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
-                if (id != null) navController.navigate(FeedsApp.feed(id)) { launchSingleTop = true }
+                // Feeds' HOME is the router, which resolves the last-viewed feed
+                // and pops itself; left under a deep-linked feed it traps Back in
+                // a resolve loop, so the feed replaces it rather than stacking on
+                // top of it.
+                if (id == null) {
+                    navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
+                } else if (!navController.isAt(FeedsApp.feed(id))) {
+                    val popTo = if (navController.holds(FeedsApp.ROUTER)) {
+                        FeedsApp.ROUTER
+                    } else {
+                        FeedsApp.FEED
+                    }
+                    navController.navigate(FeedsApp.feed(id)) {
+                        popUpTo(popTo) { inclusive = true }
+                        launchSingleTop = true
+                    }
+                }
             }
             "chat" -> {
                 if (id == "new") {
                     val friendId = parseQueryParam(query, "friend")
-                    navController.navigate(ChatApp.HOME) { launchSingleTop = true }
+                    navController.openAppHome(ChatApp.HOME)
                     navController.navigate(ChatApp.newChat(friendId.orEmpty())) {
                         launchSingleTop = true
                     }
                     return
                 }
-                navController.navigate(ChatApp.HOME) { launchSingleTop = true }
+                if (id != null && navController.isAt(ChatApp.chat(id))) return
+                navController.openAppHome(ChatApp.HOME)
                 if (id != null) navController.navigate(ChatApp.chat(id)) { launchSingleTop = true }
             }
             "forums" -> {
-                navController.navigate(ForumsApp.HOME) { launchSingleTop = true }
+                if (id != null && navController.isAt(ForumsApp.forum(id))) return
+                navController.openAppHome(ForumsApp.HOME)
                 if (id != null) navController.navigate(ForumsApp.forum(id)) { launchSingleTop = true }
             }
             "projects" -> {
-                navController.navigate(ProjectsApp.HOME) { launchSingleTop = true }
+                navController.openAppHome(ProjectsApp.HOME)
                 if (id != null) {
                     val objectId = parts.getOrNull(2)
                     if (objectId != null) {
@@ -632,7 +684,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             "crm" -> {
-                navController.navigate(CrmsApp.HOME) { launchSingleTop = true }
+                navController.openAppHome(CrmsApp.HOME)
                 if (id != null) {
                     val objectId = parts.getOrNull(2)
                     if (objectId != null) {
@@ -643,7 +695,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             "market" -> {
-                navController.navigate(MarketApp.HOME) { launchSingleTop = true }
+                navController.openAppHome(MarketApp.HOME)
                 when (id) {
                     "listing" -> parts.getOrNull(2)
                         ?.let { navController.navigate(MarketApp.listingDetail(it)) { launchSingleTop = true } }
@@ -663,7 +715,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             "wikis" -> {
-                navController.navigate(WikisApp.HOME) { launchSingleTop = true }
+                navController.openAppHome(WikisApp.HOME)
                 if (id != null) {
                     navController.navigate(WikisApp.wikiHome(id)) { launchSingleTop = true }
                     val page = parts.getOrNull(2)
@@ -677,7 +729,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             "people" -> {
-                navController.navigate(PeopleApp.HOME) { launchSingleTop = true }
+                navController.openAppHome(PeopleApp.HOME)
                 if (id == "invitations") {
                     navController.navigate(PeopleApp.INVITATIONS) { launchSingleTop = true }
                 }
@@ -690,19 +742,22 @@ class MainActivity : ComponentActivity() {
                 }
             }
             "chess" -> {
-                navController.navigate(ChessApp.HOME) { launchSingleTop = true }
+                if (id != null && navController.isAt(ChessApp.gameDetail(id))) return
+                navController.openAppHome(ChessApp.HOME)
                 if (id != null) navController.navigate(ChessApp.gameDetail(id)) { launchSingleTop = true }
             }
             "go" -> {
-                navController.navigate(GoApp.HOME) { launchSingleTop = true }
+                if (id != null && navController.isAt(GoApp.gameDetail(id))) return
+                navController.openAppHome(GoApp.HOME)
                 if (id != null) navController.navigate(GoApp.gameDetail(id)) { launchSingleTop = true }
             }
             "words" -> {
-                navController.navigate(WordsApp.HOME) { launchSingleTop = true }
+                if (id != null && navController.isAt(WordsApp.gameDetail(id))) return
+                navController.openAppHome(WordsApp.HOME)
                 if (id != null) navController.navigate(WordsApp.gameDetail(id)) { launchSingleTop = true }
             }
             "staff" -> {
-                navController.navigate(StaffApp.HOME) { launchSingleTop = true }
+                navController.openAppHome(StaffApp.HOME)
             }
         }
     }

@@ -192,6 +192,9 @@ class FeedViewModel @Inject constructor(
     private var markReadJob: Job? = null
     private val pendingReadIds = mutableSetOf<String>()
 
+    // Set by the first reloadOnForeground call; see the guard there.
+    private var foregroundReloadArmed = false
+
     // Upgraded hero image URLs per post id, resolved lazily as pages come
     // into view. "" = resolved, nothing better than the stored thumbnail.
     private val _postImages = MutableStateFlow<Map<String, String>>(emptyMap())
@@ -1027,6 +1030,14 @@ class FeedViewModel @Inject constructor(
     }
 
     fun reloadOnForeground() {
+        // The screen's first ON_RESUME lands right behind init's own load, so
+        // honouring it would fetch the feed twice - and the two are racing on
+        // different sorts, since the second reads _currentSort before the
+        // first has resolved the feed's stored one.
+        if (!foregroundReloadArmed) {
+            foregroundReloadArmed = true
+            return
+        }
         viewModelScope.launch {
             if (isAllFeeds) {
                 try {
