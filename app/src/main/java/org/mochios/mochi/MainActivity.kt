@@ -26,6 +26,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.auth.SessionManager
@@ -37,7 +38,6 @@ import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
-import org.mochios.android.push.PendingDeepLink
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.push.launcherComponentFor
@@ -93,6 +93,12 @@ open class MainActivity : ComponentActivity() {
     /** The app this instance hosts; null for one that only forwards. */
     private var app: String? = null
 
+    // A deep link waiting for this instance's NavHost: a tapped notification, a
+    // pinned shortcut, a checkout or Stripe return. Held per instance, not
+    // process-wide - with a task per app, a shared slot navigates every live
+    // Mochi task to the link, not just the one that received it.
+    private val pendingLink = MutableStateFlow<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val hosted = targetAppOf(componentName)
@@ -111,10 +117,11 @@ open class MainActivity : ComponentActivity() {
         handleMochiUri(intent)
         // Restore a deep link persisted across process death - the update
         // installer kills the process between a notification tap and the
-        // relaunch.
-        if (PendingDeepLink.link.value == null) {
+        // relaunch. One for another app stays on disk for that app's launch.
+        if (pendingLink.value == null) {
             lastActiveAppPrefs().getString(KEY_PENDING_DEEP_LINK, null)
-                ?.let { PendingDeepLink.set(it) }
+                ?.takeIf { link -> appForLink(link).let { it == null || it == hosted } }
+                ?.let { pendingLink.value = it }
         }
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
@@ -143,11 +150,11 @@ open class MainActivity : ComponentActivity() {
                         var showLogoutConfirm by remember { mutableStateOf(false) }
                         val requestLogout: () -> Unit = { showLogoutConfirm = true }
                         val navController = rememberNavController()
-                        val pendingLink by PendingDeepLink.link.collectAsState()
-                        LaunchedEffect(pendingLink) {
-                            val link = pendingLink ?: return@LaunchedEffect
-                            navigateToLink(navController, link)
-                            PendingDeepLink.consume()
+                        val link by pendingLink.collectAsState()
+                        LaunchedEffect(link) {
+                            val target = link ?: return@LaunchedEffect
+                            navigateToLink(navController, target)
+                            pendingLink.value = null
                             clearPersistedDeepLink()
                         }
                         val openNotifications: () -> Unit = {
@@ -284,9 +291,10 @@ open class MainActivity : ComponentActivity() {
             // Record what we're running now for the next cold start to compare against.
             if (current != null) prefs.edit().putString(KEY_LAST_SEEN_VERSION, current).apply()
             val upgraded = lastSeen != null && current != null && lastSeen != current
-            val saved = prefs.getString(KEY_LAST_ACTIVE_APP, null)
+            val saved = prefs.getString(KEY_PENDING_DEEP_LINK, null)?.let(::appForLink)
+                ?: prefs.getString(KEY_LAST_ACTIVE_APP, null)
             if (upgraded && saved != null) {
-                Log.i(TAG, "Upgrade relaunch ($lastSeen -> $current); restoring last-active=$saved over $hosted")
+                Log.i(TAG, "Upgrade relaunch ($lastSeen -> $current); restoring $saved over $hosted")
                 return saved
             }
             return hosted
@@ -314,6 +322,11 @@ open class MainActivity : ComponentActivity() {
             uri.authority == "market" -> return "market"
             else -> null
         } ?: return null
+        return appForLink(link)
+    }
+
+    /** The app a deep link path such as `/feeds/<id>` belongs to, when it has a launcher class. */
+    private fun appForLink(link: String): String? {
         val app = link.trimStart('/').substringBefore('/').substringBefore('?').lowercase()
         return app.takeIf { it.isNotEmpty() && launcherComponentFor(this, it) != null }
     }
@@ -429,7 +442,7 @@ open class MainActivity : ComponentActivity() {
                 return
             }
         }
-        PendingDeepLink.set(link)
+        pendingLink.value = link
     }
 
     /**
@@ -447,7 +460,7 @@ open class MainActivity : ComponentActivity() {
             error = uri.getQueryParameter("error"),
             errorDescription = uri.getQueryParameter("error_description"),
         )
-        PendingDeepLink.set("/market/account/seller?" + route.substringAfter('?', ""))
+        pendingLink.value = "/market/account/seller?" + route.substringAfter('?', "")
     }
 
     /**
@@ -528,7 +541,7 @@ open class MainActivity : ComponentActivity() {
             Log.w(TAG, "Entity URI refused: $uri")
             return
         }
-        PendingDeepLink.set(link)
+        pendingLink.value = link
     }
 
     /**
@@ -551,7 +564,7 @@ open class MainActivity : ComponentActivity() {
             Log.w(TAG, "Ignoring mochi:notification with no outstanding nonce")
             return
         }
-        PendingDeepLink.set(link)
+        pendingLink.value = link
         // Mirror to disk so the update-installer relaunch (or any other
         // process-death window between tap and consume) can restore it.
         // Cleared by the Compose LaunchedEffect after navigateToLink fires.
