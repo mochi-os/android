@@ -82,6 +82,7 @@ import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
@@ -94,6 +95,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun WikiListScreen(
     navController: NavController,
+    onOpenNotifications: () -> Unit = {},
     viewModel: WikiListViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -157,6 +159,7 @@ fun WikiListScreen(
                             }
                         },
                         actions = {
+                            NotificationBell(onClick = onOpenNotifications)
                             MochiIconButton(onClick = { viewModel.toggleSearch() }) {
                                 Icon(
                                     Icons.Default.Search,

@@ -93,7 +93,10 @@ object MarketApp {
  * Registers every market route; detail screens read their id from
  * SavedStateHandle in the ViewModel.
  */
-fun NavGraphBuilder.marketNavGraph(navController: NavController) {
+fun NavGraphBuilder.marketNavGraph(
+    navController: NavController,
+    onOpenNotifications: () -> Unit = {},
+) {
     // ---- Class-level routes ----
     composable(
         route = MarketApp.HOME_PATTERN,
@@ -109,7 +112,12 @@ fun NavGraphBuilder.marketNavGraph(navController: NavController) {
                 defaultValue = null
             },
         ),
-    ) { HomeScreen(navController = navController) }
+    ) {
+        HomeScreen(
+            navController = navController,
+            onOpenNotifications = onOpenNotifications,
+        )
+    }
     composable(MarketApp.LISTINGS) { MyListingsScreen(navController = navController) }
     composable(MarketApp.SALES) { MySalesScreen(navController = navController) }
     composable(MarketApp.SUBSCRIBERS) { MySubscribersScreen(navController = navController) }

@@ -70,6 +70,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.market.R
 import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
@@ -85,6 +86,7 @@ private const val SHOW_CATEGORY_BROWSER = false
 @Composable
 fun HomeScreen(
     navController: NavController,
+    onOpenNotifications: () -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -125,6 +127,7 @@ fun HomeScreen(
                     contentDescription = stringResource(R.string.market_filter_open),
                 )
             }
+            NotificationBell(onClick = onOpenNotifications)
         },
     ) { padding ->
         HomeContent(

@@ -55,6 +55,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.words.R
 import org.mochios.words.ui.detail.WordsGameDetailScreen
 import org.mochios.words.ui.components.wordsDrawerItems
@@ -170,6 +171,9 @@ fun WordsGameListScreen(
                                     contentDescription = stringResource(R.string.words_list_menu),
                                 )
                             }
+                        },
+                        actions = {
+                            NotificationBell(onClick = onOpenNotifications)
                         },
                     )
                 },

@@ -24,6 +24,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.staff.R
 import org.mochios.staff.ui.accounts.AccountsScreen
 import org.mochios.staff.ui.appeals.AppealsScreen
@@ -60,9 +61,17 @@ object StaffApp {
     const val TEAM_ADD = "staff/team/add"
 }
 
-fun NavGraphBuilder.staffNavGraph(navController: NavController) {
+fun NavGraphBuilder.staffNavGraph(
+    navController: NavController,
+    onOpenNotifications: () -> Unit = {},
+) {
     composable(StaffApp.HOME) {
-        StaffLayout(navController, StaffApp.HOME, R.string.staff_sidebar_dashboard) {
+        StaffLayout(
+            navController,
+            StaffApp.HOME,
+            R.string.staff_sidebar_dashboard,
+            topBarActions = { NotificationBell(onClick = onOpenNotifications) },
+        ) {
             DashboardScreen(navController = navController)
         }
     }

@@ -79,7 +79,7 @@ fun NavGraphBuilder.wikisNavGraph(
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(WikisApp.HOME) {
-        WikiListScreen(navController)
+        WikiListScreen(navController, onOpenNotifications = onOpenNotifications)
     }
 
     composable(WikisApp.FIND) {

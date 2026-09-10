@@ -97,6 +97,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
@@ -239,6 +240,7 @@ fun WordsGameDetailScreen(
                     }
                 },
                 actions = {
+                    NotificationBell(onClick = onOpenNotifications)
                     if (game != null) {
                         if (!twoPane) {
                             MochiIconButton(onClick = { showMobileChat = true }) {

@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.CircularProgressIndicator
@@ -58,6 +57,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.detail.ChessGameDetailScreen
@@ -90,7 +90,6 @@ fun ChessGameListScreen(
     val selectedGameId = gameId.takeUnless { id -> id == LastViewedStore.ALL }.orEmpty()
     var showAbout by remember { mutableStateOf(false) }
     val openSidebarLabel = stringResource(R.string.chess_open_sidebar)
-    val notificationsLabel = stringResource(MochiR.string.notifications_open)
 
     LaunchedEffect(selectedGameId) {
         if (selectedGameId.isNotEmpty()) {
@@ -167,6 +166,7 @@ fun ChessGameListScreen(
             ChessGameDetailScreen(
                 navController = navController,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
+                onOpenNotifications = onOpenNotifications,
             )
         } else {
             Scaffold(
@@ -185,12 +185,7 @@ fun ChessGameListScreen(
                             }
                         },
                         actions = {
-                            MochiIconButton(onClick = onOpenNotifications) {
-                                Icon(
-                                    Icons.Default.Notifications,
-                                    contentDescription = notificationsLabel,
-                                )
-                            }
+                            NotificationBell(onClick = onOpenNotifications)
                         },
                     )
                 },

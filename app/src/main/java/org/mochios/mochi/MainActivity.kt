@@ -267,8 +267,8 @@ class MainActivity : ComponentActivity() {
                                         onOpenNotifications = openNotifications,
                                         onOpenLink = { link -> navigateToLink(navController, link) },
                                     )
-                                    marketNavGraph(navController)
-                                    staffNavGraph(navController)
+                                    marketNavGraph(navController, onOpenNotifications = openNotifications)
+                                    staffNavGraph(navController, onOpenNotifications = openNotifications)
                                 }
                             }
                             if (backgroundedCover) {
