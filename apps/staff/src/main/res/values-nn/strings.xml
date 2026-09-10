@@ -41,7 +41,7 @@
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Avbryt</string>
     <string name="staff_appeals_decide">Bestem</string>
-    <string name="staff_appeals_decision_denied">Hald oversyn over kontaktar, relasjonar og samhandlingar med eit svært tilpassbart CRM.</string>
+    <string name="staff_appeals_decision_denied">Hald annonsen avvist</string>
     <string name="staff_appeals_decision_label">Avgjerd</string>
     <string name="staff_appeals_decision_placeholder">Vel avgjerd</string>
     <string name="staff_appeals_decision_upheld">Godkjenn oppføring</string>
