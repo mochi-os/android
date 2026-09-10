@@ -112,7 +112,7 @@ fun TreeView(
 
 /**
  * Turns a tree drop into a move or reparent. Sibling reorders pass
- * `scope_parent` so the server renumbers ranks within that subtree only.
+ * `scope` so the server renumbers ranks within that subtree only.
  */
 private fun handleTreeDrop(
     sourceId: String,
@@ -145,7 +145,7 @@ private fun handleTreeDrop(
                 viewModel.reparentObject(sourceId, newParent)
                 return
             }
-            // Same-parent reorder. The server reads an empty scope_parent as
+            // Same-parent reorder. The server reads an empty scope as
             // unset, so root-level siblings cannot be reordered by drag; the
             // Move dialog still works.
             if (newParent.isBlank()) return

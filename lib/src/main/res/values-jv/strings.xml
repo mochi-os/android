@@ -350,4 +350,8 @@
     <string name="game_empty_title">Durung ana game</string>
     <string name="game_select_title">Pilih game</string>
     <string name="game_select_subtitle">Pilih game saka bilah sisih utawa miwiti game anyar.</string>
+    <string name="settings_card">Gaya kertu</string>
+    <string name="settings_card_theme">Saka tema</string>
+    <string name="settings_card_flat">Rata</string>
+    <string name="settings_card_raised">Munggah</string>
 </resources>

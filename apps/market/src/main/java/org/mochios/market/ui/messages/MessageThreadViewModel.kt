@@ -127,15 +127,4 @@ class MessageThreadViewModel @Inject constructor(
             }
         }
     }
-
-    /**
-     * The socket echoes our own sends too, so dedup on id against what
-     * [sendMessage] appended.
-     */
-    fun ingestRemote(message: Message) {
-        val existing = _state.value.messages
-        if (existing.any { it.id == message.id && message.id.isNotEmpty() }) return
-        _state.value = _state.value.copy(messages = existing + message)
-        viewModelScope.launch { _events.send(MessageThreadEvent.Appended(message)) }
-    }
 }

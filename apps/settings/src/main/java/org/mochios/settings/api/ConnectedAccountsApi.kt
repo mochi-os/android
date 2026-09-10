@@ -95,7 +95,7 @@ interface ConnectedAccountsApi {
     suspend fun verify(
         @Field("id") id: String,
         @Field("code") code: String? = null,
-    ): Response<Map<String, Any?>>
+    ): Response<Boolean>
 
     @FormUrlEncoded
     @POST("settings/-/accounts/test")

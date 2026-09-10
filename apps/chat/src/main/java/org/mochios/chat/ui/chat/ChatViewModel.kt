@@ -40,14 +40,20 @@ data class ChatUiState(
     val chat: ChatDetail = ChatDetail(),
     val identity: String = "",
     val messages: List<ChatMessage> = emptyList(),
-    val hasMore: Boolean = false,
-    val nextCursor: Long? = null,
-    val nextCursorId: String? = null,
+    /** Whether older messages remain beyond the loaded scrollback. */
+    val more: Boolean = false,
+    /** The server's cursor for the next (older) page; null on the last. */
+    val cursor: String? = null,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
     val isSending: Boolean = false,
+    /** A failure with nothing loaded; the page shows it in place of the list. */
     val error: MochiError? = null,
+    /** A failure over a loaded conversation, shown once as a toast. */
+    val notice: MochiError? = null,
+    /** The composer text, held here so a failed send keeps it. */
+    val draft: String = "",
     val pendingAttachments: List<Uri> = emptyList(),
     val searchOpen: Boolean = false,
     val searchQuery: String = "",
@@ -115,17 +121,30 @@ class ChatViewModel @Inject constructor(
         _events.tryEmit(application.getString(R.string.chat_marked_read))
     }
 
+    /** The notice has been shown. */
+    fun clearNotice() {
+        _uiState.value = _uiState.value.copy(notice = null)
+    }
+
+    fun setDraft(text: String) {
+        _uiState.value = _uiState.value.copy(draft = text)
+    }
+
     /**
-     * Leave server-side (the chat stays locally as a read-only tombstone), then
-     * reload.
+     * Leave server-side. The chat stays locally as a read-only tombstone and
+     * is reloaded, unless [deleteLocally] also purges it from this device.
      */
-    fun leaveChat() {
+    fun leaveChat(deleteLocally: Boolean = false) {
         viewModelScope.launch {
             try {
-                repository.leaveChat(chatId)
-                load()
+                repository.leaveChat(chatId, deleteLocally)
+                if (deleteLocally) {
+                    _uiState.value = _uiState.value.copy(chatDeleted = true)
+                } else {
+                    load()
+                }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -140,7 +159,7 @@ class ChatViewModel @Inject constructor(
                 repository.deleteChat(chatId)
                 _uiState.value = _uiState.value.copy(chatDeleted = true)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -155,15 +174,14 @@ class ChatViewModel @Inject constructor(
                     chat = view.chat,
                     identity = view.identity,
                     messages = msgs.messages,
-                    hasMore = msgs.hasMore,
-                    nextCursor = msgs.nextCursor,
-                    nextCursorId = msgs.nextCursorId,
+                    more = msgs.more,
+                    cursor = msgs.cursor,
                     isLoading = false
                 )
                 subscribeWebSocket(view.chat.key)
                 markRead()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isLoading = false).failed(e.toMochiError())
             }
         }
     }
@@ -200,40 +218,37 @@ class ChatViewModel @Inject constructor(
                 val stitched = merged !== msgs.messages && held.isNotEmpty()
                 _uiState.value = _uiState.value.copy(
                     messages = merged,
-                    hasMore = if (stitched) _uiState.value.hasMore else msgs.hasMore,
-                    nextCursor = if (stitched) _uiState.value.nextCursor else msgs.nextCursor,
-                    nextCursorId = if (stitched) _uiState.value.nextCursorId else msgs.nextCursorId,
+                    more = if (stitched) _uiState.value.more else msgs.more,
+                    cursor = if (stitched) _uiState.value.cursor else msgs.cursor,
                     isRefreshing = false,
                     error = null
                 )
                 markRead()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isRefreshing = false).failed(e.toMochiError())
             }
         }
     }
 
     fun loadMoreOlder() {
-        val cursor = _uiState.value.nextCursor ?: return
-        val cursorId = _uiState.value.nextCursorId
+        val cursor = _uiState.value.cursor ?: return
         if (_uiState.value.isLoadingMore) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingMore = true)
             try {
-                val older = repository.getMessages(chatId, before = cursor, beforeId = cursorId, limit = MESSAGE_PAGE_SIZE)
+                val older = repository.getMessages(chatId, cursor = cursor, limit = MESSAGE_PAGE_SIZE)
                 // Defensive: the (created, id) keyset cursor returns no overlap,
                 // but dedupe by id anyway so the LazyColumn keys can never collide.
                 val merged = (older.messages + _uiState.value.messages)
                     .distinctBy { message -> message.id }
                 _uiState.value = _uiState.value.copy(
                     messages = merged,
-                    hasMore = older.hasMore,
-                    nextCursor = older.nextCursor,
-                    nextCursorId = older.nextCursorId,
+                    more = older.more,
+                    cursor = older.cursor,
                     isLoadingMore = false
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoadingMore = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isLoadingMore = false).failed(e.toMochiError())
             }
         }
     }
@@ -254,7 +269,7 @@ class ChatViewModel @Inject constructor(
                 )
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -268,14 +283,14 @@ class ChatViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     messages = _uiState.value.messages.map { m ->
                         if (m.id == messageId) {
-                            m.copy(reactionCounts = res.reactionCounts, myReaction = res.myReaction)
+                            m.copy(reactions = res.reactions, reaction = res.reaction)
                         } else {
                             m
                         }
                     }
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -316,7 +331,7 @@ class ChatViewModel @Inject constructor(
                     .map { result -> result.id }
                 _uiState.value = _uiState.value.copy(searchMatchIds = ids, searchMatchIndex = 0)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -347,13 +362,13 @@ class ChatViewModel @Inject constructor(
                 // (those with one already appear in the chats list) — matching
                 // web. Forwarding to a friend creates the chat server-side.
                 val friends = runCatching {
-                    repository.getNewChatData().friends.filter { it.chatId.isEmpty() }
+                    repository.getNewChatData().friends.filter { it.chat.isEmpty() }
                 }.getOrDefault(emptyList())
                 _uiState.value = _uiState.value.copy(
                     forwardChats = chats, forwardFriends = friends, forwardLoading = false,
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(forwardLoading = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(forwardLoading = false).failed(e.toMochiError())
             }
         }
     }
@@ -365,13 +380,13 @@ class ChatViewModel @Inject constructor(
         )
     }
 
-    /** Forward the messages currently open in the forward sheet to [toChatId]. */
-    fun forwardToChat(toChatId: String) {
+    /** Forward the messages currently open in the forward sheet to the chat [destination]. */
+    fun forwardToChat(destination: String) {
         val messageIds = _uiState.value.forwardMessageIds
         if (messageIds.isEmpty()) return
         viewModelScope.launch {
             try {
-                repository.forwardMessages(chatId, messageIds, toChatId)
+                repository.forwardMessages(chatId, messageIds, destination)
                 _uiState.value = _uiState.value.copy(
                     forwardMessageIds = emptyList(),
                     forwardChats = emptyList(),
@@ -381,7 +396,7 @@ class ChatViewModel @Inject constructor(
                 )
                 _events.emit(application.getString(R.string.chat_forward_success))
             } catch (e: Exception) {
-                _events.emit(application.getString(R.string.chat_forward_failed))
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -403,7 +418,7 @@ class ChatViewModel @Inject constructor(
                 )
                 _events.emit(application.getString(R.string.chat_forward_success))
             } catch (e: Exception) {
-                _events.emit(application.getString(R.string.chat_forward_failed))
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -427,11 +442,12 @@ class ChatViewModel @Inject constructor(
      * by the server anyway.
      */
     fun startEdit(message: ChatMessage) {
-        _uiState.value = _uiState.value.copy(editing = message, replyingTo = null)
+        _uiState.value = _uiState.value.copy(editing = message, replyingTo = null, draft = message.body)
     }
 
+    /** Clears the composer too, so the old text never leaks into a new message. */
     fun cancelEdit() {
-        _uiState.value = _uiState.value.copy(editing = null)
+        _uiState.value = _uiState.value.copy(editing = null, draft = "")
     }
 
     /**
@@ -439,9 +455,9 @@ class ChatViewModel @Inject constructor(
      * the other members; refresh so this client shows what they will see
      * rather than a locally-guessed row.
      */
-    fun saveEdit(body: String) {
+    fun saveEdit() {
         val message = _uiState.value.editing ?: return
-        val trimmed = body.trim()
+        val trimmed = _uiState.value.draft.trim()
         if (trimmed.isEmpty() || trimmed == message.body) {
             cancelEdit()
             return
@@ -449,10 +465,10 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.editMessage(chatId, message.id, trimmed)
-                _uiState.value = _uiState.value.copy(editing = null)
+                _uiState.value = _uiState.value.copy(editing = null, draft = "")
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -490,25 +506,26 @@ class ChatViewModel @Inject constructor(
         openForward(_uiState.value.selectedIds.toList())
     }
 
-    fun sendMessage(body: String) {
-        val trimmed = body.trim()
+    /** Send the composer draft. It is only cleared once the server accepted it. */
+    fun sendMessage() {
+        val trimmed = _uiState.value.draft.trim()
         val attachments = _uiState.value.pendingAttachments
         if (trimmed.isEmpty() && attachments.isEmpty()) return
-        val replyTo = _uiState.value.replyingTo?.id
+        val reply = _uiState.value.replyingTo?.id
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSending = true)
             try {
                 if (attachments.isEmpty()) {
-                    repository.sendMessage(chatId, trimmed, replyTo = replyTo)
+                    repository.sendMessage(chatId, trimmed, reply = reply)
                 } else {
                     repository.sendMessageFromUris(
-                        chatId, trimmed, attachments, application, replyTo = replyTo,
+                        chatId, trimmed, attachments, application, reply = reply,
                     )
                 }
-                _uiState.value = _uiState.value.copy(pendingAttachments = emptyList(), replyingTo = null)
+                _uiState.value = _uiState.value.afterSend(sent = true)
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.failed(e.toMochiError())
             } finally {
                 _uiState.value = _uiState.value.copy(isSending = false)
             }
@@ -610,4 +627,32 @@ class ChatViewModel @Inject constructor(
         /** Messages fetched per page on load, refresh, and load-more. */
         const val MESSAGE_PAGE_SIZE = 30
     }
+}
+
+/**
+ * Where a failure lands. With nothing loaded the page shows it in place of
+ * the list; once messages are on screen that branch never renders, so it
+ * becomes a one-shot notice instead.
+ */
+internal fun ChatUiState.failed(error: MochiError): ChatUiState =
+    if (messages.isEmpty()) copy(error = error) else copy(notice = error)
+
+/**
+ * The composer after a send attempt. Only a send the server accepted clears
+ * the draft, its attachments and the reply target; a failed one keeps them
+ * all, so the text is there to retry or copy out.
+ */
+internal fun ChatUiState.afterSend(sent: Boolean): ChatUiState =
+    if (sent) copy(draft = "", pendingAttachments = emptyList(), replyingTo = null) else this
+
+/**
+ * Whether the list should follow to the newest message. Only an append - a
+ * message arriving or being sent - moves the reader; paging older history in
+ * and deleting rows leave the reader where they are.
+ */
+internal fun followsNewest(shown: List<ChatMessage>, current: List<ChatMessage>): Boolean {
+    val newest = current.lastOrNull()?.id ?: return false
+    val previous = shown.lastOrNull()?.id ?: return true
+    if (newest == previous) return false
+    return current.any { message -> message.id == previous }
 }

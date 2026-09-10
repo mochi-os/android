@@ -147,7 +147,7 @@ fun BoardCard(
                     )
                     // rowField/rowValue carry the lane. Without them the server
                     // leaves the row value untouched (projects.star only writes
-                    // it under `if row_field:`), so a cross-lane drag was a
+                    // it under `if row_field:` on the decoded `row`), so a cross-lane drag was a
                     // no-op and the refresh put the card back where it started.
                     viewModel.moveObject(
                         objectId = sourceId,

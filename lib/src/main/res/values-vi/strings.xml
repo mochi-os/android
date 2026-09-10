@@ -350,4 +350,8 @@
     <string name="game_empty_title">Chưa có trò chơi</string>
     <string name="game_select_title">Chọn một trò chơi</string>
     <string name="game_select_subtitle">Chọn một trò chơi ở thanh bên hoặc bắt đầu trò chơi mới.</string>
+    <string name="settings_card">Kiểu thẻ</string>
+    <string name="settings_card_theme">Từ giao diện</string>
+    <string name="settings_card_flat">Phẳng</string>
+    <string name="settings_card_raised">Nổi lên</string>
 </resources>

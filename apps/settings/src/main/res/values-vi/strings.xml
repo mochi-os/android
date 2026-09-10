@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Tùy chọn thông báo</string>
     <string name="settings_home_accounts">Tài khoản đã kết nối</string>
     <string name="settings_home_interests">Sở thích</string>
-    <string name="account_method_email">Mã email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Ứng dụng xác thực</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">Thêm passkey</string>
     <string name="account_passkey_delete_title">Xóa passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Xóa tuyến</string>
     <string name="route_delete_title">Xóa tuyến?</string>
     <string name="route_path">Đường dẫn</string>
-    <string name="route_target">Mục tiêu</string>
     <string name="route_method">Phương thức</string>
     <string name="route_method_app">Ứng dụng</string>
     <string name="route_method_entity">Thực thể</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Sở thích</string>
     <string name="interests_summary_title">Tóm tắt</string>
     <string name="interests_remove">Xoá sở thích</string>
-    <string name="interests_add">Thêm</string>
-    <string name="document_save">Lưu</string>
-    <string name="document_saved">Đã lưu</string>
     <string name="notifprefs_title">Tùy chọn thông báo</string>
     <string name="notifprefs_tab_categories">Danh mục</string>
     <string name="notifprefs_tab_topics">Chủ đề</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Đặt lại</string>
     <string name="system_settings_reset_to_default">Đặt lại về mặc định</string>
     <string name="system_settings_reset_title">Đặt lại về mặc định?</string>
-    <string name="system_settings_setting_updated">Đã cập nhật cài đặt</string>
-    <string name="system_settings_update_failed">Không cập nhật cài đặt được</string>
     <string name="system_setting_apps_install_user">Cho phép người dùng cài đặt ứng dụng</string>
     <string name="system_setting_auth_email">Đăng nhập bằng mã email</string>
     <string name="system_setting_auth_passkey">Đăng nhập bằng passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Không cập nhật trạng thái người dùng được</string>
     <string name="system_users_toast_revoke_failed">Không thu hồi phiên được</string>
 
-    <string name="settings_app_label">Mochi Cài đặt</string>
     <string name="settings_home_sessions">Phiên đăng nhập</string>
     <string name="settings_home_privacy">Chính sách quyền riêng tư</string>
     <string name="settings_home_rules">Quy tắc</string>
     <string name="settings_home_terms">Điều khoản dịch vụ</string>
-    <string name="account_section_methods">Phương thức đăng nhập</string>
     <string name="account_passkeys_empty">Không có khóa truy cập nào được đăng ký.</string>
     <string name="account_passkey_register_title">Thêm khóa truy cập</string>
     <string name="account_passkey_register_message">Thiết bị của bạn sẽ yêu cầu bạn xác nhận. Khóa truy cập được gắn với thiết bị này và sử dụng cho các lần đăng nhập trong tương lai.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Tạo lại mã khôi phục?</string>
     <string name="account_recovery_regen_message">Các mã hiện tại sẽ ngừng hoạt động ngay lập tức. Lưu các mã mới ở nơi an toàn.</string>
     <string name="account_recovery_codes_warning">Lưu các mã này — mỗi mã chỉ có thể được sử dụng một lần. Chúng sẽ không được hiển thị lại.</string>
-    <string name="sessions_section_title">Phiên hoạt động</string>
     <string name="sessions_title">Phiên đăng nhập</string>
     <string name="sessions_empty">Không có phiên hoạt động nào.</string>
     <string name="sessions_revoke_message">Thiết bị đang sử dụng phiên này sẽ bị đăng xuất.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Tạo lại tóm tắt</string>
     <string name="interests_summary_regenerating">Đang tạo lại…</string>
     <string name="interests_summary_empty">Thêm một số sở thích để tạo bản tóm tắt về những gì bạn thích.</string>
-    <string name="interests_weight">Trọng số</string>
     <string name="interests_search_failed">Tìm kiếm thất bại. Vui lòng thử lại.</string>
     <string name="document_privacy_title">Chính sách quyền riêng tư</string>
     <string name="document_rules_title">Quy tắc</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Đang cài đặt %1$s…</string>
     <string name="accounts_field_api_key">Khóa API</string>
     <string name="accounts_field_url">URL máy chủ</string>
-    <string name="accounts_device_placeholder">Tài khoản đẩy được thiết bị thêm tự động.</string>
     <string name="accounts_set_default_ai">Đặt làm AI mặc định</string>
     <string name="accounts_verify_code">Mã</string>
     <string name="accounts_verify_resend">Gửi lại mã</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Tên</string>
     <string name="account_identity_fingerprint">Dấu vân tay</string>
     <string name="account_identity_directory_toggle">Cho phép người khác tìm bạn trong danh bạ</string>
-    <string name="account_method_email_subtitle">Nhận mã xác minh qua email</string>
-    <string name="account_method_totp_subtitle">Để bật, hãy thiết lập trình xác thực bên dưới</string>
-    <string name="account_method_passkey_subtitle">Để bật, hãy đăng ký khóa truy cập bên dưới</string>
     <string name="domain_add">Thêm tên miền</string>
     <string name="domain_add_title">Thêm tên miền</string>
     <string name="domain_delegation_add">Thêm</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">Chưa cấu hình điểm đến</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Không có đích đến</string>
+    <string name="account_data_generate">Tạo cụm mật khẩu</string>
+    <string name="accounts_field_server">URL máy chủ</string>
+    <string name="accounts_field_token">Mã thông báo truy cập</string>
+    <string name="accounts_field_topic">Chủ đề</string>
+    <string name="accounts_field_secret">Bí mật ký</string>
+    <string name="account_totp_open">Mở trong ứng dụng xác thực</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Marandu ñepyrũ</string>
     <string name="settings_home_accounts">Tetãyguakuéra oñembojuajúva</string>
     <string name="settings_home_interests">Oikotevevakuéra</string>
-    <string name="account_method_email">Código email</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Tekorosã app</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Embojuaju passkey</string>
     <string name="account_passkey_delete_title">Hundi passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Hundi tape</string>
     <string name="route_delete_title">Hundi tape?</string>
     <string name="route_path">Tape</string>
-    <string name="route_target">Apoukapy</string>
     <string name="route_method">Método</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entidad</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Oikotevevakuéra</string>
     <string name="interests_summary_title">Mombyky</string>
     <string name="interests_remove">Embogue ñembyeko\'ói</string>
-    <string name="interests_add">Embojuaju</string>
-    <string name="document_save">Ñongatu</string>
-    <string name="document_saved">Oñeñongatu</string>
     <string name="notifprefs_title">Marandu ñepyrũ</string>
     <string name="notifprefs_tab_categories">Categoríakuéra</string>
     <string name="notifprefs_tab_topics">Tema</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Embojevy</string>
     <string name="system_settings_reset_to_default">Embojevy ypy peguávape</string>
     <string name="system_settings_reset_title">Embojevy ypy peguávape?</string>
-    <string name="system_settings_setting_updated">Ñemoĩ ñembohekopyahu</string>
-    <string name="system_settings_update_failed">Ndaikatúi oñembohera\'ã pyahu configuración</string>
     <string name="system_setting_apps_install_user">Eipysyrõ puruhárape oinstalá hag̃ua app</string>
     <string name="system_setting_auth_email">Login email código ndive</string>
     <string name="system_setting_auth_passkey">Login passkey ndive</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Ndaikatúi oñembohera\'ã pyahu usuario tekoasa</string>
     <string name="system_users_toast_revoke_failed">Ndaikatúi oñembogue sesión</string>
 
-    <string name="settings_app_label">Mochi Mbohape</string>
     <string name="settings_home_sessions">Mba\'ehe\'õi</string>
     <string name="settings_home_privacy">Ñemoñe\'ẽ ñembyatyrã</string>
     <string name="settings_home_rules">Tekoita</string>
     <string name="settings_home_terms">Mba\'eapo rape</string>
-    <string name="account_section_methods">Ñepyrũ tape</string>
     <string name="account_passkeys_empty">Ndaipori passkey oñembyaty.</string>
     <string name="account_passkey_register_title">Passkey moĩve</string>
     <string name="account_passkey_register_message">Nde mba\'eveporã ojerure ojeporavove. Passkey oñembojoaju ko mba\'eveporãndive ha oñeñepyrũvo ohóma.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Embokue jey código jeguerojevy?</string>
     <string name="account_recovery_regen_message">Códigos oĩva ndoikóma síma. Eñongatu pyahúva tetã rosãvape.</string>
     <string name="account_recovery_codes_warning">Eñongatu ko\'ã código — peteĩchi peichagua oñeiporu peteĩ jevy. Ndoñeexhibíri jevy.</string>
-    <string name="sessions_section_title">Sesion oimbáva</string>
     <string name="sessions_title">Mba\'ehe\'õi</string>
     <string name="sessions_empty">Ndaipori sesion oimbáva.</string>
     <string name="sessions_revoke_message">Mba\'eveporã omba\'apóva ko sesionre osẽ.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Embokue jevy mombyky</string>
     <string name="interests_summary_regenerating">Embokue jevy…</string>
     <string name="interests_summary_empty">Embojoapy mba\'erehe gueko mombykyrã nde gustávagui.</string>
-    <string name="interests_weight">Tedyvy</string>
     <string name="interests_search_failed">Ñeheka osẽ vai. Eñeha\'ã jevy.</string>
     <string name="document_privacy_title">Ñemoñe\'ẽ ñembyatyrã</string>
     <string name="document_rules_title">Tekoita</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Oñembyaty %1$s…</string>
     <string name="accounts_field_api_key">API llave</string>
     <string name="accounts_field_url">Servidor URL</string>
-    <string name="accounts_device_placeholder">Push cuentas oñembojoapy ijeheguíva mba\'eveporãgua.</string>
     <string name="accounts_set_default_ai">AI ymaitéva ñembokue</string>
     <string name="accounts_verify_code">Código</string>
     <string name="accounts_verify_resend">Embou jey código</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Téra</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Eipysyrõ ambuekuéra ojuhu nde directorio-pe</string>
-    <string name="account_method_email_subtitle">Ehupyty verificación código email rupive</string>
-    <string name="account_method_totp_subtitle">Emyendy hag̃ua, embosako\'i peteĩ autenticador guýpe</string>
-    <string name="account_method_passkey_subtitle">Emyendy hag̃ua, emoĩ peteĩ passkey guýpe</string>
     <string name="domain_add">Embojuaju domain</string>
     <string name="domain_add_title">Embojuaju domain</string>
     <string name="domain_delegation_add">Embojuaju</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">Ndaipóri henda destino oñembosako\'íva</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Mba\'eve mboheve</string>
+    <string name="account_data_generate">Embosako\'i ñemi ñe\'ẽ</string>
+    <string name="accounts_field_server">Servidor URL</string>
+    <string name="accounts_field_token">Jeike token</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Firma ñemiguáva</string>
+    <string name="account_totp_open">Embojuruja aplicación autenticador-pe</string>
 </resources>

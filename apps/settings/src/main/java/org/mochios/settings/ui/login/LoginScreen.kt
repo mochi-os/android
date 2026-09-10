@@ -201,6 +201,7 @@ fun LoginScreen(
     totpSetup?.let { setup ->
         TotpSetupDialog(
             secret = setup.secret,
+            url = setup.url,
             onCancel = viewModel::cancelTotpSetup,
             onVerify = { code -> viewModel.verifyTotp(code) },
             onCopySecret = { clipboard.setClip(sensitiveClip("totp", setup.secret).toClipEntry()) },
@@ -488,6 +489,7 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
 @Composable
 private fun TotpSetupDialog(
     secret: String,
+    url: String,
     onCancel: () -> Unit,
     onVerify: (String) -> Unit,
     onCopySecret: () -> Unit,
@@ -517,6 +519,23 @@ private fun TotpSetupDialog(
                             contentDescription = stringResource(R.string.account_copy),
                             modifier = Modifier.size(18.dp),
                         )
+                    }
+                }
+                if (url.isNotBlank()) {
+                    // The otpauth URL enrols the secret in one tap. Nothing
+                    // can ask which apps handle the scheme, so a device
+                    // without one simply refuses the intent.
+                    val context = LocalContext.current
+                    MochiTextButton(onClick = {
+                        runCatching {
+                            context.startActivity(
+                                Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+                                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                },
+                            )
+                        }
+                    }) {
+                        Text(stringResource(R.string.account_totp_open))
                     }
                 }
                 Spacer(Modifier.height(8.dp))
@@ -651,7 +670,7 @@ private fun OAuthSection(
                 MochiAlertDialog(
                     onDismissRequest = { confirm = false },
                     title = stringResource(R.string.account_oauth_unlink_title),
-                    text = stringResource(R.string.account_oauth_unlink_message, id.provider),
+                    text = stringResource(R.string.account_oauth_unlink_message, oauthProviderLabel(id.provider)),
                     confirmText = stringResource(R.string.account_unlink),
                     onConfirm = {
                         confirm = false
@@ -669,8 +688,8 @@ private fun OAuthSection(
     if (available.isNotEmpty()) {
         var showLink by remember { mutableStateOf(false) }
         MochiOutlinedButton(onClick = { showLink = true }) {
-            Icon(Icons.Default.Add, contentDescription = null)
-            Spacer(Modifier.height(0.dp))
+            Icon(Icons.Default.Add, contentDescription = null, Modifier.size(ButtonDefaults.IconSize))
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(stringResource(R.string.account_oauth_link))
         }
         if (showLink) {

@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.toMochiError
+import org.mochios.android.format.toMinorUnits
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.model.Listing
 import org.mochios.market.repository.MarketRepository
@@ -78,7 +79,6 @@ class HomeViewModel @Inject constructor(
 
     private fun initialState(handle: SavedStateHandle): HomeUiState {
         val filters = mutableMapOf<Filter, String>()
-        handle.get<String>("tag")?.takeIf { it.isNotBlank() }?.let { filters[Filter.TAG] = it }
         handle.get<String>("category")?.takeIf { it.isNotBlank() }?.let {
             filters[Filter.CATEGORY] = it
         }
@@ -307,19 +307,22 @@ class HomeViewModel @Inject constructor(
         page: Int,
         limit: Int,
     ): Map<String, String?> {
-        // Tag filters are server-side wildcards on the `query` parameter — the
-        // server search index already matches tags against `query`, so falling
-        // through here keeps the wire shape minimal.
-        val tag = state.filters[Filter.TAG]?.takeIf { it.isNotBlank() }
-        val query = state.query.takeIf { it.isNotBlank() } ?: tag
+        // The server compares min/max against the minor-unit price column of
+        // one currency, so the typed major-unit bounds are converted here and
+        // scoped to the chosen currency, as web's applyPriceRange does.
+        val currency = state.filters[Filter.CURRENCY]?.takeIf { it.isNotBlank() } ?: DEFAULT_CURRENCY
+        val minimum = state.filters[Filter.PRICE_MIN]?.takeIf { it.isNotBlank() }
+        val maximum = state.filters[Filter.PRICE_MAX]?.takeIf { it.isNotBlank() }
+        val ranged = minimum != null || maximum != null
         return mapOf(
-            "query" to query,
+            "query" to state.query.takeIf { it.isNotBlank() },
             "category" to state.filters[Filter.CATEGORY],
             "type" to state.filters[Filter.TYPE],
             "condition" to state.filters[Filter.CONDITION],
             "pricing" to state.filters[Filter.PRICING],
-            "min" to state.filters[Filter.PRICE_MIN],
-            "max" to state.filters[Filter.PRICE_MAX],
+            "min" to minimum?.let { toMinorUnits(it, currency).toString() },
+            "max" to maximum?.let { toMinorUnits(it, currency).toString() },
+            "currency" to currency.takeIf { ranged },
             "delivery" to state.filters[Filter.DELIVERY],
             "sort" to state.filters[Filter.SORT],
             "page" to page.toString(),
@@ -329,5 +332,7 @@ class HomeViewModel @Inject constructor(
 
     companion object {
         private const val PAGE_LIMIT = 24
+        /** Web's default for an unscoped price range. */
+        const val DEFAULT_CURRENCY = "usd"
     }
 }

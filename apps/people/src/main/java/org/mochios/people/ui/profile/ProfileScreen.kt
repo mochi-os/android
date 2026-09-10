@@ -225,19 +225,19 @@ private fun Editor(
     val avatarPicker = rememberImagePicker(
         slot = ImageSlot.AVATAR,
         onPicked = viewModel::uploadAvatar,
-        onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_image_process_failed, "avatar")) } },
+        onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_image_process_failed, context.getString(R.string.people_profile_avatar))) } },
         onTooLarge = { showSizeWarning = context.getString(R.string.people_profile_file_too_large) },
     )
     val bannerPicker = rememberImagePicker(
         slot = ImageSlot.BANNER,
         onPicked = viewModel::uploadBanner,
-        onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_image_process_failed, "banner")) } },
+        onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_image_process_failed, context.getString(R.string.people_profile_banner))) } },
         onTooLarge = { showSizeWarning = context.getString(R.string.people_profile_file_too_large) },
     )
     val faviconPicker = rememberImagePicker(
         slot = ImageSlot.FAVICON,
         onPicked = viewModel::uploadFavicon,
-        onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_image_process_failed, "favicon")) } },
+        onError = { scope.launch { snackbar.showSnackbar(context.getString(R.string.people_profile_image_process_failed, context.getString(R.string.people_profile_favicon))) } },
         onTooLarge = { showSizeWarning = context.getString(R.string.people_profile_file_too_large) },
     )
 

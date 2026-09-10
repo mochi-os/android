@@ -377,4 +377,5 @@
     <string name="projects_export_saved">An adana bayanan aikin</string>
     <string name="projects_exporting">Ana shirya fitarwa…</string>
     <string name="projects_board_add_column">Ƙara column</string>
+    <string name="projects_design_sample">Samfuri %1$d</string>
 </resources>

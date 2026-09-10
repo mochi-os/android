@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">通知偏好</string>
     <string name="settings_home_accounts">已連結帳戶</string>
     <string name="settings_home_interests">興趣</string>
-    <string name="account_method_email">電子郵件代碼</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">驗證器應用程式</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">新增通行金鑰</string>
     <string name="account_passkey_delete_title">刪除通行金鑰?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">刪除路由</string>
     <string name="route_delete_title">刪除路由?</string>
     <string name="route_path">路徑</string>
-    <string name="route_target">目標</string>
     <string name="route_method">方法</string>
     <string name="route_method_app">應用程式</string>
     <string name="route_method_entity">實體</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">興趣</string>
     <string name="interests_summary_title">摘要</string>
     <string name="interests_remove">移除興趣</string>
-    <string name="interests_add">新增</string>
-    <string name="document_save">儲存</string>
-    <string name="document_saved">已儲存</string>
     <string name="notifprefs_title">通知偏好</string>
     <string name="notifprefs_tab_categories">類別</string>
     <string name="notifprefs_tab_topics">主題</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">重設</string>
     <string name="system_settings_reset_to_default">重設為預設值</string>
     <string name="system_settings_reset_title">重設為預設值?</string>
-    <string name="system_settings_setting_updated">設定已更新</string>
-    <string name="system_settings_update_failed">更新設定失敗</string>
     <string name="system_setting_apps_install_user">允許使用者安裝應用程式</string>
     <string name="system_setting_auth_email">使用電子郵件代碼登入</string>
     <string name="system_setting_auth_passkey">使用 Passkey 登入</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">更新使用者狀態失敗</string>
     <string name="system_users_toast_revoke_failed">撤銷工作階段失敗</string>
 
-    <string name="settings_app_label">Mochi 設定</string>
     <string name="settings_home_sessions">工作階段</string>
     <string name="settings_home_privacy">隱私權政策</string>
     <string name="settings_home_rules">規則</string>
     <string name="settings_home_terms">服務條款</string>
-    <string name="account_section_methods">登入方式</string>
     <string name="account_passkeys_empty">未註冊任何通行密鑰。</string>
     <string name="account_passkey_register_title">新增通行密鑰</string>
     <string name="account_passkey_register_message">您的裝置會提示您確認。通行密鑰會繫結到此裝置，用於日後登入。</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">重新產生復原代碼？</string>
     <string name="account_recovery_regen_message">現有的代碼會立即失效。請將新的代碼保存在安全的地方。</string>
     <string name="account_recovery_codes_warning">請保存這些代碼——每個只能使用一次。它們不會再次顯示。</string>
-    <string name="sessions_section_title">使用中的工作階段</string>
     <string name="sessions_title">工作階段</string>
     <string name="sessions_empty">沒有使用中的工作階段。</string>
     <string name="sessions_revoke_message">使用此工作階段的裝置將被登出。</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">重新產生摘要</string>
     <string name="interests_summary_regenerating">重新產生中…</string>
     <string name="interests_summary_empty">新增一些興趣以產生您喜好的摘要。</string>
-    <string name="interests_weight">權重</string>
     <string name="interests_search_failed">搜尋失敗，請再試一次。</string>
     <string name="document_privacy_title">隱私權政策</string>
     <string name="document_rules_title">規則</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">正在安裝 %1$s…</string>
     <string name="accounts_field_api_key">API 金鑰</string>
     <string name="accounts_field_url">伺服器 URL</string>
-    <string name="accounts_device_placeholder">推播帳號會由裝置自動新增。</string>
     <string name="accounts_set_default_ai">設為預設 AI</string>
     <string name="accounts_verify_code">代碼</string>
     <string name="accounts_verify_resend">重新傳送代碼</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">名稱</string>
     <string name="account_identity_fingerprint">指紋</string>
     <string name="account_identity_directory_toggle">允許其他人在目錄中找到您</string>
-    <string name="account_method_email_subtitle">透過電子郵件接收驗證碼</string>
-    <string name="account_method_totp_subtitle">在下方設定驗證器以啟用</string>
-    <string name="account_method_passkey_subtitle">在下方註冊通行金鑰以啟用</string>
     <string name="domain_add">新增網域</string>
     <string name="domain_add_title">新增網域</string>
     <string name="domain_delegation_add">新增</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">未設定目的地</string>
     <string name="notifprefs_transport_fcm">Android 推播</string>
     <string name="notifprefs_no_destinations">沒有目標</string>
+    <string name="account_data_generate">產生密語</string>
+    <string name="accounts_field_server">伺服器 URL</string>
+    <string name="accounts_field_token">存取權杖</string>
+    <string name="accounts_field_topic">主題</string>
+    <string name="accounts_field_secret">簽署密鑰</string>
+    <string name="account_totp_open">在驗證器應用程式中開啟</string>
 </resources>

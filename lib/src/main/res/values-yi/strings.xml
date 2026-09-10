@@ -350,4 +350,8 @@
     <string name="game_empty_title">נאָך קיין שפּילן</string>
     <string name="game_select_title">קלײַבט אױס אַ שפּיל</string>
     <string name="game_select_subtitle">קלײַבט אױס אַ שפּיל פֿון זײַטבאַלקן אָדער הייבט אָן אַ נײַע.</string>
+    <string name="settings_card">קאַרטל סטיל</string>
+    <string name="settings_card_theme">פֿון טעמע</string>
+    <string name="settings_card_flat">פלאַך</string>
+    <string name="settings_card_raised">אויפֿגעהויבן</string>
 </resources>

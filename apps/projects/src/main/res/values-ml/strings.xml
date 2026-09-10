@@ -379,4 +379,5 @@
     <string name="projects_export_saved">പ്രോജക്റ്റ് ഡാറ്റ സംരക്ഷിച്ചു</string>
     <string name="projects_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
     <string name="projects_board_add_column">കോളം ചേർക്കുക</string>
+    <string name="projects_design_sample">സാമ്പിൾ %1$d</string>
 </resources>

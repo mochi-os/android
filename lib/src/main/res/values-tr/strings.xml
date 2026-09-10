@@ -350,4 +350,8 @@
     <string name="game_empty_title">Henüz oyun yok</string>
     <string name="game_select_title">Bir oyun seçin</string>
     <string name="game_select_subtitle">Kenar çubuğundan bir oyun seçin veya yeni bir oyun başlatın.</string>
+    <string name="settings_card">Kart stili</string>
+    <string name="settings_card_theme">Temadan</string>
+    <string name="settings_card_flat">Düz</string>
+    <string name="settings_card_raised">Yükseltilmiş</string>
 </resources>

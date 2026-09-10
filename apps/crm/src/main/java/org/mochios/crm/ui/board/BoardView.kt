@@ -381,11 +381,6 @@ private fun BoardColumn(
                 modifier = Modifier.weight(1f)
             )
             Spacer(modifier = Modifier.width(8.dp))
-            val visibleCount = if (visibleIds == null) {
-                objects.size
-            } else {
-                objects.count { obj -> obj.id in visibleIds }
-            }
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
@@ -551,7 +546,7 @@ private fun BoardColumn(
                             columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
                             targetRowId = rowOption.id,
-                            onClick = { onObjectClick(obj.id) }
+                            onObjectClick = onObjectClick
                         )
                     }
                     item(key = "spacer_${rowOption.id}") {
@@ -594,7 +589,7 @@ private fun BoardColumn(
                             columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
                             targetRowId = "",
-                            onClick = { onObjectClick(obj.id) }
+                            onObjectClick = onObjectClick
                         )
                     }
                 }
@@ -639,7 +634,7 @@ private fun BoardColumn(
                             },
                             columnObjectsForDrop = sortedObjects,
                             targetColumnId = option.id,
-                            onClick = { onObjectClick(obj.id) }
+                            onObjectClick = onObjectClick
                         )
                     }
                 }

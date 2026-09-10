@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Жоба деректері сақталды</string>
     <string name="projects_exporting">Экспорт дайындалуда…</string>
     <string name="projects_board_add_column">Баған қосу</string>
+    <string name="projects_design_sample">Үлгі %1$d</string>
 </resources>

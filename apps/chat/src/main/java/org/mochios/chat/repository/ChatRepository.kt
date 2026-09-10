@@ -40,7 +40,7 @@ class ChatRepository @Inject constructor(
         api.getNewChatData().unwrap()
 
     suspend fun getChatPolicy(): String =
-        api.getPreferences().unwrap().chatPolicy
+        api.getPreferences().unwrap().policy
 
     suspend fun setChatPolicy(policy: String) {
         api.setPreferences(policy).unwrap()
@@ -55,20 +55,20 @@ class ChatRepository @Inject constructor(
     suspend fun viewChat(chatId: String): ChatViewResponse =
         api.viewChat(chatId).unwrap()
 
-    suspend fun getMessages(chatId: String, before: Long? = null, beforeId: String? = null, limit: Int? = null): MessageListResponse =
-        api.getMessages(chatId, before, beforeId, limit).unwrap()
+    suspend fun getMessages(chatId: String, cursor: String? = null, limit: Int? = null): MessageListResponse =
+        api.getMessages(chatId, cursor, limit).unwrap()
 
     suspend fun sendMessage(
         chatId: String,
         body: String,
         files: List<File> = emptyList(),
-        replyTo: String? = null,
+        reply: String? = null,
     ): String {
         if (files.isEmpty()) {
-            return api.sendMessage(chatId, body, replyTo).unwrap().id
+            return api.sendMessage(chatId, body, reply).unwrap().id
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
-        val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
+        val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
         val parts = fileStore.fileParts("files", files)
         return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
     }
@@ -78,13 +78,13 @@ class ChatRepository @Inject constructor(
         body: String,
         uris: List<android.net.Uri>,
         context: android.content.Context,
-        replyTo: String? = null,
+        reply: String? = null,
     ): String {
         if (uris.isEmpty()) {
-            return api.sendMessage(chatId, body, replyTo).unwrap().id
+            return api.sendMessage(chatId, body, reply).unwrap().id
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
-        val replyPart = replyTo?.toRequestBody("text/plain".toMediaTypeOrNull())
+        val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
         val files = fileStore.cacheFiles(uris)
         try {
             val parts = fileStore.fileParts("files", files)
@@ -116,7 +116,7 @@ class ChatRepository @Inject constructor(
         api.removeMember(chatId, member).unwrap()
     }
 
-    // message_ids goes over the wire as a JSON array string (server json.decodes it).
+    // messages goes over the wire as a JSON array string of ids (server json.decodes it).
     /**
      * Edit one of the caller's own messages. The server is the authority on
      * whether the caller may: it authorises on the author and refuses a
@@ -130,8 +130,8 @@ class ChatRepository @Inject constructor(
             body = body,
         ).unwrap().edited
 
-    suspend fun forwardMessages(chatId: String, messageIds: List<String>, toChat: String): ForwardResponse =
-        api.forwardMessages(chatId, Gson().toJson(messageIds), toChat).unwrap()
+    suspend fun forwardMessages(chatId: String, messageIds: List<String>, destination: String): ForwardResponse =
+        api.forwardMessages(chatId, Gson().toJson(messageIds), destination).unwrap()
 
     // Forward to a friend's 1-on-1 chat (server creates or reuses it atomically).
     suspend fun forwardToFriend(chatId: String, messageIds: List<String>, member: String): ForwardResponse =

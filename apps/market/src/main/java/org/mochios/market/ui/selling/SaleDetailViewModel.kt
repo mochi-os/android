@@ -35,6 +35,7 @@ data class SaleDetailUiState(
     val refundSubmitting: Boolean = false,
     val disputeSubmitting: Boolean = false,
     val reviewResponseSubmitting: Boolean = false,
+    val reviewSubmitting: Boolean = false,
 
     val shipError: String? = null,
     val refundError: String? = null,
@@ -185,15 +186,20 @@ class SaleDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Responds to the buyer's review of this seller (`peer_review`): the
+     * server lets only a review's subject respond, so the seller's own review
+     * of the buyer (`review`) can never take one.
+     */
     fun respondToReview(response: String, fallback: String) {
         viewModelScope.launch {
             val current = _state.value.order ?: return@launch
-            val review = current.review ?: return@launch
+            val review = current.peerReview ?: return@launch
             _state.value = _state.value.copy(reviewResponseSubmitting = true, reviewError = null)
             try {
                 val updated = repo.respondToReview(review.id, response)
                 _state.value = _state.value.copy(
-                    order = current.copy(review = updated),
+                    order = current.copy(peerReview = updated),
                     reviewResponseSubmitting = false,
                 )
             } catch (e: Exception) {
@@ -202,6 +208,24 @@ class SaleDetailViewModel @Inject constructor(
                     reviewResponseSubmitting = false,
                     reviewError = err.message() ?: fallback,
                 )
+            }
+        }
+    }
+
+    /** The seller's review of the buyer, offered while the order's `can_review` holds. */
+    fun submitReview(rating: Int, body: String, fallback: String) {
+        viewModelScope.launch {
+            val current = _state.value.order ?: return@launch
+            _state.value = _state.value.copy(reviewSubmitting = true)
+            try {
+                val review = repo.createReview(current.order.id, rating, body)
+                _state.value = _state.value.copy(
+                    order = current.copy(review = review, canReview = false),
+                    reviewSubmitting = false,
+                )
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(reviewSubmitting = false)
+                _events.emit(SaleDetailEvent.Toast(e.toMochiError().message() ?: fallback))
             }
         }
     }

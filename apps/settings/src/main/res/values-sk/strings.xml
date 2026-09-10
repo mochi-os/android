@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Nastavenia oznámení</string>
     <string name="settings_home_accounts">Pripojené účty</string>
     <string name="settings_home_interests">Záujmy</string>
-    <string name="account_method_email">E-mailový kód</string>
-    <string name="account_method_passkey">Prístupový kľúč</string>
-    <string name="account_method_totp">Autentifikačná aplikácia</string>
     <string name="account_section_passkeys">Prístupové kľúče</string>
     <string name="account_passkey_register">Pridať passkey</string>
     <string name="account_passkey_delete_title">Odstrániť passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Odstrániť cestu</string>
     <string name="route_delete_title">Odstrániť cestu?</string>
     <string name="route_path">Cesta</string>
-    <string name="route_target">Cieľ</string>
     <string name="route_method">Metóda</string>
     <string name="route_method_app">Aplikácia</string>
     <string name="route_method_entity">Entita</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Záujmy</string>
     <string name="interests_summary_title">Súhrn</string>
     <string name="interests_remove">Odstrániť záujem</string>
-    <string name="interests_add">Pridať</string>
-    <string name="document_save">Uložiť</string>
-    <string name="document_saved">Uložené</string>
     <string name="notifprefs_title">Nastavenia oznámení</string>
     <string name="notifprefs_tab_categories">Kategórie</string>
     <string name="notifprefs_tab_topics">Témy</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Obnoviť</string>
     <string name="system_settings_reset_to_default">Obnoviť na predvolené</string>
     <string name="system_settings_reset_title">Obnoviť na predvolené?</string>
-    <string name="system_settings_setting_updated">Nastavenie aktualizované</string>
-    <string name="system_settings_update_failed">Nepodarilo sa aktualizovať nastavenie</string>
     <string name="system_setting_apps_install_user">Povoliť používateľom inštalovať aplikácie</string>
     <string name="system_setting_auth_email">Prihlásenie pomocou e-mailového kódu</string>
     <string name="system_setting_auth_passkey">Prihlásenie pomocou prístupového kľúča</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Nepodarilo sa aktualizovať stav používateľa</string>
     <string name="system_users_toast_revoke_failed">Nepodarilo sa odvolať reláciu</string>
 
-    <string name="settings_app_label">Mochi Nastavenia</string>
     <string name="settings_home_sessions">Relácie</string>
     <string name="settings_home_privacy">Zásady ochrany osobných údajov</string>
     <string name="settings_home_rules">Pravidlá</string>
     <string name="settings_home_terms">Podmienky služby</string>
-    <string name="account_section_methods">Spôsoby prihlásenia</string>
     <string name="account_passkeys_empty">Žiadne registrované prístupové kľúče.</string>
     <string name="account_passkey_register_title">Pridať prístupový kľúč</string>
     <string name="account_passkey_register_message">Vaše zariadenie vás vyzve na potvrdenie. Prístupový kľúč je viazaný na toto zariadenie a slúži pre budúce prihlásenia.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Vygenerovať nové obnovovacie kódy?</string>
     <string name="account_recovery_regen_message">Existujúce kódy okamžite prestanú fungovať. Uložte nové na bezpečné miesto.</string>
     <string name="account_recovery_codes_warning">Uložte tieto kódy — každý sa dá použiť len raz. Nebudú zobrazené znova.</string>
-    <string name="sessions_section_title">Aktívne relácie</string>
     <string name="sessions_title">Relácie</string>
     <string name="sessions_empty">Žiadne aktívne relácie.</string>
     <string name="sessions_revoke_message">Zariadenie používajúce túto reláciu bude odhlásené.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Znova vygenerovať zhrnutie</string>
     <string name="interests_summary_regenerating">Znova generujem…</string>
     <string name="interests_summary_empty">Pridajte záujmy, aby sa vytvorilo zhrnutie toho, čo máte radi.</string>
-    <string name="interests_weight">Váha</string>
     <string name="interests_search_failed">Vyhľadávanie zlyhalo. Skúste to znova.</string>
     <string name="document_privacy_title">Zásady ochrany osobných údajov</string>
     <string name="document_rules_title">Pravidlá</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Inštalujem %1$s…</string>
     <string name="accounts_field_api_key">API kľúč</string>
     <string name="accounts_field_url">URL servera</string>
-    <string name="accounts_device_placeholder">Push účty sa pridávajú automaticky zariadením.</string>
     <string name="accounts_set_default_ai">Nastaviť ako predvolenú AI</string>
     <string name="accounts_verify_code">Kód</string>
     <string name="accounts_verify_resend">Odoslať kód znova</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Názov</string>
     <string name="account_identity_fingerprint">Odtlačok</string>
     <string name="account_identity_directory_toggle">Povoliť ostatným nájsť vás v adresári</string>
-    <string name="account_method_email_subtitle">Získajte overovací kód e-mailom</string>
-    <string name="account_method_totp_subtitle">Na povolenie nastavte autentifikátor nižšie</string>
-    <string name="account_method_passkey_subtitle">Na povolenie zaregistrujte prístupový kľúč nižšie</string>
     <string name="domain_add">Pridať doménu</string>
     <string name="domain_add_title">Pridať doménu</string>
     <string name="domain_delegation_add">Pridať</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Nie sú nakonfigurované žiadne cieľové miesta</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Žiadne ciele</string>
+    <string name="account_data_generate">Vygenerovať heslovú frázu</string>
+    <string name="accounts_field_server">URL servera</string>
+    <string name="accounts_field_token">Prístupový token</string>
+    <string name="accounts_field_topic">Téma</string>
+    <string name="accounts_field_secret">Tajný kľúč podpisu</string>
+    <string name="account_totp_open">Otvoriť v overovacej aplikácii</string>
 </resources>

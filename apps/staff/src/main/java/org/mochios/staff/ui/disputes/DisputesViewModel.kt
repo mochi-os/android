@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -78,6 +79,7 @@ class DisputesViewModel @Inject constructor(
     val events: SharedFlow<DisputesEvent> = _events.asSharedFlow()
 
     private var loadJob: Job? = null
+    private var moreJob: Job? = null
 
     /**
      * Pages actually fetched. Deriving the next page from the row count breaks
@@ -91,7 +93,7 @@ class DisputesViewModel @Inject constructor(
         // Refresh whenever a new dispute / chargeback lands on the server.
         viewModelScope.launch {
             eventsBus.events
-                .filter { it is StaffEvent.NewDispute }
+                .filter { it is StaffEvent.NewDispute || it is StaffEvent.Unknown }
                 .collect { reload() }
         }
     }
@@ -105,9 +107,12 @@ class DisputesViewModel @Inject constructor(
 
     fun reload() {
         loadJob?.cancel()
+        // A load-more still in flight belongs to the filter being replaced;
+        // left running, it would splice that filter's rows into the new list.
+        moreJob?.cancel()
         loadJob = viewModelScope.launch {
             val s = _state.value
-            _state.value = s.copy(isLoading = true, error = null)
+            _state.value = s.copy(isLoading = true, isLoadingMore = false, error = null)
             try {
                 val r = repository.listDisputes(
                     status = s.status,
@@ -121,6 +126,7 @@ class DisputesViewModel @Inject constructor(
                     total = r.total,
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
@@ -133,7 +139,7 @@ class DisputesViewModel @Inject constructor(
         val s = _state.value
         if (s.isLoadingMore || s.isLoading || s.disputes.size >= s.total) return
         val nextPage = pagesLoaded + 1
-        viewModelScope.launch {
+        moreJob = viewModelScope.launch {
             _state.value = s.copy(isLoadingMore = true)
             try {
                 val r = repository.listDisputes(
@@ -147,7 +153,8 @@ class DisputesViewModel @Inject constructor(
                     disputes = _state.value.disputes + r.disputes,
                     total = r.total,
                 )
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(isLoadingMore = false)
             }
         }
@@ -205,6 +212,7 @@ class DisputesViewModel @Inject constructor(
                 )
                 _events.tryEmit(DisputesEvent.Resolved)
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
                 _events.tryEmit(DisputesEvent.Toast(e.toMochiError().userMessage()))
             }

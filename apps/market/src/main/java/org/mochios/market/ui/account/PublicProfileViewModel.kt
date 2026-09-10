@@ -129,13 +129,15 @@ class PublicProfileViewModel @Inject constructor(
         if (current.isLoadingReviews || !current.hasMore) return
         viewModelScope.launch {
             _state.value = current.copy(isLoadingReviews = true)
-            reviewsPage += 1
             try {
+                // Advance the counter only once the page is in hand, so a
+                // failed request is retried rather than skipped.
                 val response = repo.accountReviews(
                     id = accountId,
-                    page = reviewsPage,
+                    page = reviewsPage + 1,
                     limit = PAGE_LIMIT,
                 )
+                reviewsPage += 1
                 val merged = current.reviews + response.reviews
                 _state.value = _state.value.copy(
                     reviews = merged,

@@ -351,4 +351,8 @@
     <string name="game_empty_title">Ойындар әлі жоқ</string>
     <string name="game_select_title">Ойын таңдаңыз</string>
     <string name="game_select_subtitle">Бүйір панелінен ойын таңдаңыз немесе жаңасын бастаңыз.</string>
+    <string name="settings_card">Карта мәнері</string>
+    <string name="settings_card_theme">Тақырыптан</string>
+    <string name="settings_card_flat">Жалпақ</string>
+    <string name="settings_card_raised">Көтерілген</string>
 </resources>

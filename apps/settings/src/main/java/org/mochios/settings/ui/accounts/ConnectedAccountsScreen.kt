@@ -75,6 +75,9 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.settings.api.ConnectedAccount
 import org.mochios.settings.api.Device
 import org.mochios.settings.api.Provider
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.ui.text.input.VisualTransformation
+import org.mochios.settings.api.ProviderField
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -409,20 +412,16 @@ private fun AddAccountDialog(
     onDismiss: () -> Unit,
     onSave: (String, Map<String, String>) -> Unit,
 ) {
-    // Visible types in the brief — others are added auto via push registration.
-    val visibleTypes = listOf("email", "openai", "claude", "mcp", "fcm", "unifiedpush", "pushbullet")
-    var selectedType by remember { mutableStateOf("email") }
-    var address by remember { mutableStateOf("") }
-    var apiKey by remember { mutableStateOf("") }
-    var model by remember { mutableStateOf("") }
-    var url by remember { mutableStateOf("") }
-
-    val canSave = when (selectedType) {
-        "email" -> address.trim().isNotEmpty()
-        "openai", "claude" -> apiKey.trim().isNotEmpty()
-        "mcp" -> url.trim().isNotEmpty()
-        else -> false
+    // Only form providers can be added here; browser-flow ones (push
+    // registrations) arrive through the device's own registration.
+    val formProviders = providers.filter { it.flow == "form" }
+    var selectedType by remember(formProviders) {
+        mutableStateOf(formProviders.firstOrNull()?.type ?: "")
     }
+    val provider = formProviders.firstOrNull { it.type == selectedType }
+    val values = remember(selectedType) { mutableStateMapOf<String, String>() }
+    val canSave = provider != null &&
+        provider.fields.all { !it.required || values[it.name].orEmpty().isNotBlank() }
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
@@ -430,58 +429,38 @@ private fun AddAccountDialog(
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(stringResource(R.string.accounts_type_label), style = MaterialTheme.typography.labelMedium)
-                for (t in visibleTypes) {
+                for (p in formProviders) {
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .selectable(selected = selectedType == t, onClick = { selectedType = t })
+                            .selectable(selected = selectedType == p.type, onClick = { selectedType = p.type })
                             .padding(vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        RadioButton(selected = selectedType == t, onClick = { selectedType = t })
-                        Text(providerTypeLabel(t))
+                        RadioButton(selected = selectedType == p.type, onClick = { selectedType = p.type })
+                        Text(providerTypeLabel(p.type))
                     }
                 }
                 Spacer(Modifier.height(8.dp))
-                when (selectedType) {
-                    "email" -> MochiTextField(
-                        value = address,
-                        onValueChange = { address = it },
-                        label = { Text(stringResource(R.string.accounts_field_email)) },
+                provider?.fields?.forEach { field ->
+                    // Credentials are masked and kept off the IME's
+                    // personalised-learning path.
+                    val secret = field.type == "password"
+                    MochiTextField(
+                        value = values[field.name].orEmpty(),
+                        onValueChange = { values[field.name] = it },
+                        label = { Text(fieldLabel(field)) },
                         singleLine = true,
+                        visualTransformation = if (secret) PasswordVisualTransformation() else VisualTransformation.None,
+                        keyboardOptions = KeyboardOptions(
+                            keyboardType = when (field.type) {
+                                "password" -> KeyboardType.Password
+                                "email" -> KeyboardType.Email
+                                "url" -> KeyboardType.Uri
+                                else -> KeyboardType.Text
+                            },
+                        ),
                         modifier = Modifier.fillMaxWidth(),
-                    )
-                    "openai", "claude" -> {
-                        MochiTextField(
-                            value = apiKey,
-                            onValueChange = { apiKey = it },
-                            label = { Text(stringResource(R.string.accounts_field_api_key)) },
-                            singleLine = true,
-                            // A live third-party bearer credential: mask it, and
-                            // keep it off the IME's personalised-learning path.
-                            visualTransformation = PasswordVisualTransformation(),
-                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                        MochiTextField(
-                            value = model,
-                            onValueChange = { model = it },
-                            label = { Text(stringResource(R.string.accounts_field_model)) },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                    }
-                    "mcp" -> MochiTextField(
-                        value = url,
-                        onValueChange = { url = it },
-                        label = { Text(stringResource(R.string.accounts_field_url)) },
-                        singleLine = true,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                    else -> Text(
-                        stringResource(R.string.accounts_device_placeholder),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
@@ -489,19 +468,31 @@ private fun AddAccountDialog(
         confirmText = stringResource(MochiR.string.common_save),
         onConfirm = {
             val fields = HashMap<String, String>()
-            when (selectedType) {
-                "email" -> fields["address"] = address.trim()
-                "openai", "claude" -> {
-                    fields["api_key"] = apiKey.trim()
-                    if (model.isNotBlank()) fields["model"] = model.trim()
-                }
-                "mcp" -> fields["url"] = url.trim()
+            provider?.fields?.forEach { field ->
+                val value = values[field.name].orEmpty().trim()
+                if (value.isNotEmpty()) fields[field.name] = value
             }
             onSave(selectedType, fields)
         },
         confirmEnabled = canSave,
         dismissText = stringResource(MochiR.string.common_cancel),
     )
+}
+
+/** The server names each field by a label key; these are the same words the
+ *  web form shows for them. */
+@Composable
+private fun fieldLabel(field: ProviderField): String = when (field.label) {
+    "accounts.field.address" -> stringResource(R.string.accounts_field_email)
+    "accounts.field.key" -> stringResource(R.string.accounts_field_api_key)
+    "accounts.field.model" -> stringResource(R.string.accounts_field_model)
+    "accounts.field.name" -> stringResource(R.string.accounts_field_name)
+    "accounts.field.url" -> stringResource(R.string.accounts_field_url)
+    "accounts.field.server" -> stringResource(R.string.accounts_field_server)
+    "accounts.field.token" -> stringResource(R.string.accounts_field_token)
+    "accounts.field.topic" -> stringResource(R.string.accounts_field_topic)
+    "accounts.field.secret" -> stringResource(R.string.accounts_field_secret)
+    else -> field.name
 }
 
 @Composable

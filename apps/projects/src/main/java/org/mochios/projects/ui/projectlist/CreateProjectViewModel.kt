@@ -34,6 +34,8 @@ data class CreateProjectUiState(
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val backupPrefill: BackupPrefill? = null,
+    // The picked file could not be read as a backup; the screen says so once.
+    val backupReadFailed: Boolean = false,
     val createdProjectId: String? = null
 )
 
@@ -45,7 +47,10 @@ data class BackupPrefill(
     val json: String,
     val fileName: String,
     val name: String?,
-    val prefix: String?
+    val prefix: String?,
+    // The picked document when it is an archive: restored whole, so the
+    // attachments it carries survive.
+    val archive: Uri?
 )
 
 /** Drives the create-project screen: templates, backup import, and the create call. */
@@ -82,6 +87,7 @@ class CreateProjectViewModel @Inject constructor(
             val root = content
                 ?.let { text -> runCatching { JsonParser.parseString(text).asJsonObject }.getOrNull() }
             if (content == null || root == null) {
+                _uiState.value = _uiState.value.copy(backupReadFailed = true)
                 return@launch
             }
             val fileName = repository.fileName(uri)
@@ -91,10 +97,16 @@ class CreateProjectViewModel @Inject constructor(
                     json = content,
                     fileName = fileName,
                     name = project?.jsonString("name"),
-                    prefix = project?.jsonString("prefix")
+                    prefix = project?.jsonString("prefix"),
+                    archive = uri.takeIf { repository.isArchive(it) }
                 )
             )
         }
+    }
+
+    /** The screen has shown the unreadable-backup notice. */
+    fun consumeBackupReadFailed() {
+        _uiState.value = _uiState.value.copy(backupReadFailed = false)
     }
 
     /** Clears the pending-navigation id once the screen has opened the project. */
@@ -108,7 +120,8 @@ class CreateProjectViewModel @Inject constructor(
         prefix: String,
         privacy: String,
         template: String?,
-        backupJson: String?
+        backupJson: String?,
+        backupArchive: Uri? = null
     ) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true, error = null)
@@ -123,7 +136,7 @@ class CreateProjectViewModel @Inject constructor(
                 )
                 val newProjectId = project.fingerprint.ifEmpty { project.id }
                 if (importing) {
-                    restoreBackup(project, backupJson)
+                    restoreBackup(project, backupJson, backupArchive)
                 }
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
@@ -141,9 +154,15 @@ class CreateProjectViewModel @Inject constructor(
         }
     }
 
-    private suspend fun restoreBackup(created: Project, backupJson: String) {
+    private suspend fun restoreBackup(created: Project, backupJson: String, archive: Uri?) {
         val projectId = created.fingerprint.ifEmpty { created.id }
         try {
+            if (archive != null) {
+                // The archive carries design, objects and attachment bytes;
+                // one upload restores all three.
+                repository.importArchive(projectId, archive)
+                return
+            }
             val root = JsonParser.parseString(backupJson).asJsonObject
             val design = root.getAsJsonObject("design") ?: root
             repository.importDesign(

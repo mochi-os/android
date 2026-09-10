@@ -98,7 +98,10 @@ interface SystemStatusApi {
 
     @FormUrlEncoded
     @POST("settings/-/system/update")
-    suspend fun installUpdate(@Field("install") install: String = "true"): Response<Unit>
+    suspend fun installUpdate(
+        @Field("token") token: String,
+        @Field("install") install: String = "true",
+    ): Response<Unit>
 }
 
 @Module

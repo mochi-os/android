@@ -19,6 +19,7 @@ import org.mochios.android.files.FileStore
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.api.SubscribeRequest
+import org.mochios.projects.api.UpdateClassRequest
 import org.mochios.projects.api.UnsubscribeRequest
 import org.mochios.projects.api.WarmExportResponse
 import org.mochios.projects.model.Activity
@@ -40,6 +41,7 @@ import org.mochios.projects.model.Template
 import org.mochios.projects.model.Watcher
 import java.io.File
 import javax.inject.Inject
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Singleton
 
 @Singleton
@@ -48,10 +50,11 @@ class ProjectsRepository @Inject constructor(
     fileStore: FileStore
 ) : FileRepository(fileStore) {
     // In-memory cache
-    private val projectInfoCache = mutableMapOf<String, Pair<ProjectDetails, Long>>()
-    private val objectsCache = mutableMapOf<String, Pair<List<ProjectObject>, Long>>()
+    // Concurrent: the view models fill and read these from parallel coroutines.
+    private val projectInfoCache = ConcurrentHashMap<String, Pair<ProjectDetails, Long>>()
+    private val objectsCache = ConcurrentHashMap<String, Pair<List<ProjectObject>, Long>>()
     // Watched object ids for the local user, keyed by project, from the last objects fetch.
-    private val watchedCache = mutableMapOf<String, List<String>>()
+    private val watchedCache = ConcurrentHashMap<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
 
     fun getCachedProjectInfo(projectId: String): ProjectDetails? {
@@ -101,14 +104,14 @@ class ProjectsRepository @Inject constructor(
         api.getRecommendations().unwrap().projects
 
     suspend fun probe(url: String): Project =
-        api.probe(url).unwrap().project
+        api.probe(url).unwrap()
 
     /**
      * Subscribes to [project]; returns the id to route to, preferring the
      * server's fingerprint over what was asked for.
      */
-    suspend fun subscribe(project: String, server: String? = null): String {
-        val response = api.subscribe(SubscribeRequest(project = project, server = server)).unwrap()
+    suspend fun subscribe(project: String, server: String? = null, peer: String? = null): String {
+        val response = api.subscribe(SubscribeRequest(project = project, server = server, peer = peer)).unwrap()
         return response.fingerprint.ifEmpty { response.id.ifEmpty { project } }
     }
 
@@ -142,8 +145,8 @@ class ProjectsRepository @Inject constructor(
     suspend fun getDiff(repo: String, base: String, head: String): String =
         api.getDiff(repo, base, head).unwrap()
 
-    suspend fun merge(repo: String, source: String, target: String, message: String, method: String? = null) {
-        api.merge(repo, source, target, message, method).unwrap()
+    suspend fun merge(project: String, repo: String, source: String, target: String, message: String, method: String? = null) {
+        api.merge(repo, project, source, target, message, method).unwrap()
     }
 
     suspend fun getDiffPreference(): String =
@@ -234,7 +237,8 @@ class ProjectsRepository @Inject constructor(
         promote: Boolean = false
     ) {
         api.moveObject(
-            projectId, objectId, field, value, rank, rowField, rowValue,
+            projectId, objectId, field, value, rank,
+            rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
             scopeParent,
             if (promote) "true" else null
         ).unwrap()
@@ -276,7 +280,7 @@ class ProjectsRepository @Inject constructor(
         // The server reads the multipart field "files" (attachment_save);
         // parts named anything else are silently dropped.
         val fileParts = fileStore.fileParts("files", files)
-        return api.createComment(projectId, objectId, contentBody, parentBody, fileParts).unwrap().comment
+        return api.createComment(projectId, objectId, contentBody, parentBody, fileParts).unwrap()
     }
 
     suspend fun updateComment(projectId: String, objectId: String, commentId: String, content: String) {
@@ -292,9 +296,9 @@ class ProjectsRepository @Inject constructor(
     suspend fun getAttachments(projectId: String, objectId: String): List<Attachment> =
         api.getAttachments(projectId, objectId).unwrap().attachments
 
-    suspend fun createAttachment(projectId: String, objectId: String, file: File): Attachment {
+    suspend fun createAttachment(projectId: String, objectId: String, file: File): List<Attachment> {
         val part = fileStore.filePart("files", file)
-        return api.createAttachment(projectId, objectId, part).unwrap().attachment
+        return api.createAttachment(projectId, objectId, part).unwrap().attachments
     }
 
     suspend fun deleteAttachment(projectId: String, objectId: String, attachmentId: String) {
@@ -398,6 +402,21 @@ class ProjectsRepository @Inject constructor(
         api.importData(projectId, part).unwrap()
     }
 
+    /**
+     * Restores a whole backup archive: the file goes up untouched, and the
+     * server applies the design it carries, then its objects and the
+     * attachment bytes. Unwrapping the zip here would drop the attachments.
+     */
+    suspend fun importArchive(projectId: String, uri: Uri) {
+        val file = stageFile(uri, "backup.zip") ?: throw IllegalStateException("cannot read backup")
+        try {
+            val part = fileStore.filePart("file", file, "application/zip")
+            api.importData(projectId, part, "1".toRequestBody("text/plain".toMediaTypeOrNull())).unwrap()
+        } finally {
+            discardStaged(listOf(file))
+        }
+    }
+
     // ---- Views ----
 
     suspend fun getViews(projectId: String): List<ProjectView> =
@@ -449,7 +468,7 @@ class ProjectsRepository @Inject constructor(
         api.createClass(projectId, name).unwrap().`class`
 
     suspend fun updateClass(projectId: String, classId: String, name: String? = null, title: String? = null, requests: String? = null) {
-        api.updateClass(projectId, classId, name, title, requests).unwrap()
+        api.updateClass(projectId, classId, UpdateClassRequest(name = name, title = title, requests = requests)).unwrap()
     }
 
     suspend fun deleteClass(projectId: String, classId: String) {
@@ -488,7 +507,6 @@ class ProjectsRepository @Inject constructor(
         classId: String,
         fieldId: String,
         name: String? = null,
-        fieldtype: String? = null,
         flags: String? = null,
         multi: Boolean? = null,
         card: Boolean? = null,
@@ -498,7 +516,7 @@ class ProjectsRepository @Inject constructor(
         minlength: Int? = null,
         maxlength: Int? = null
     ) {
-        api.updateField(projectId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows, pattern, minlength, maxlength).unwrap()
+        api.updateField(projectId, classId, fieldId, name, flags, multi, card, position, rows, pattern, minlength, maxlength).unwrap()
     }
 
     suspend fun deleteField(projectId: String, classId: String, fieldId: String) {

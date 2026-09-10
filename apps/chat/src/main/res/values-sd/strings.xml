@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">ڏيکاري وارو نالو</string>
-    <string name="chat_auth_verification_failed">تصديق ناڪام ٿي</string>
     <string name="chat_list_title">چيٽ</string>
     <string name="chat_list_search">ڳوليو</string>
     <string name="chat_list_logout">لاگ آئوٽ</string>
     <string name="chat_list_new">نئين چيٽ</string>
     <string name="chat_new_title">نئين چيٽ</string>
     <string name="chat_new_name">گروپ نالو</string>
-    <string name="chat_new_friends">دوست</string>
     <string name="chat_message_placeholder">پيغام</string>
     <string name="chat_attachment_add">فائلون ڳنڍيو</string>
-    <string name="chat_message_attach">فائلون ڳنڍيو</string>
     <string name="chat_settings_title">چيٽ سيٽنگون</string>
     <string name="chat_settings_rename_label">چيٽ جو نالو</string>
     <string name="chat_settings_save">محفوظ ڪريو</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">موڪليو</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">لاگ ان ناڪام</string>
     <string name="chat_attachment_move_up">مٿي منتقل ڪريو</string>
     <string name="chat_attachment_move_down">هيٺ منتقل ڪريو</string>
 
     <string name="notification_channel_chat">چيٽ جون اطلاعون</string>
-    <string name="chat_auth_brand">Mochi چيٽ</string>
-    <string name="chat_auth_create_identity_failed">سڃاڻپ ٺاهڻ ۾ ناڪامي</string>
-    <string name="chat_auth_mfa_unsupported">MFA اڃا موبائل ايپ ۾ سپورٽ ٿيل ناهي</string>
-    <string name="chat_auth_enter_code_sent">%1$s ڏانهن موڪليل ڪوڊ داخل ڪريو</string>
-    <string name="chat_auth_create_identity">پنهنجي سڃاڻپ ٺاهيو</string>
     <string name="chat_list_empty">اڃا تائين ڪابه چيٽ ناهي</string>
     <string name="chat_new_existing_chat">موجوده چيٽ کوليو</string>
     <string name="chat_new_start">چيٽ شروع ڪريو</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">اڃا تائين ڪوبه پيغام ناهي — سلام چئو!</string>
     <string name="chat_messages_load_more">پراڻا پيغام لوڊ ڪريو</string>
     <string name="chat_attachment_label">فائل</string>
-    <string name="chat_message_too_long">پيغام تمام ڊگهو آهي</string>
-    <string name="chat_message_empty">پيغام خالي نه ٿو ٿي سگهي</string>
     <string name="chat_settings_rename">چيٽ جو نالو تبديل ڪريو</string>
     <string name="chat_settings_add_member_empty">شامل ڪرڻ لاءِ ڪوبه دوست ناهي</string>
     <string name="chat_settings_remove_member_message">%1$s کي هن چيٽ مان هٽايو؟</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">هي پيغام ڊيليٽ ڪيو ويو</string>
     <string name="chat_search_hint">چيٽ ۾ ڳوليو...</string>
-    <string name="chat_search_no_results">ڪو نتيجو ناهي</string>
     <string name="chat_message_forward">اڳتي موڪليو</string>
     <string name="chat_forward_title">اڳتي موڪليو…</string>
     <string name="chat_forward_search">چيٽون ڳوليو…</string>
     <string name="chat_forward_empty">اڳتي موڪلڻ لاءِ ڪا چيٽ ناهي</string>
     <string name="chat_forward_success">اڳتي موڪليو ويو</string>
-    <string name="chat_forward_failed">اڳتي موڪلڻ ۾ ناڪامي</string>
     <string name="chat_message_reply">جواب ڏيو</string>
     <string name="chat_message_select">چونڊيو</string>
     <string name="chat_reply_attachment">ڳنڍيل فائل</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">دوست</string>
     <string name="chat_policy_title">ايندڙ چيٽ</string>
     <string name="chat_policy_friends">صرف دوست</string>
-    <string name="chat_policy_friends_description">صرف دوست توهان سان چيٽ شروع ڪري سگهن ٿا (ڊفالٽ).</string>
     <string name="chat_policy_anyone">ڪوبه</string>
-    <string name="chat_policy_anyone_description">ڪوبه توهان سان چيٽ شروع ڪري سگهي ٿو.</string>
     <string name="chat_new_search_placeholder">ماڻهو ڳوليو</string>
     <string name="chat_new_no_matches">ڪوبه ملندڙ ماڻهو ناهي</string>
     <string name="chat_new_no_friends">چيٽ ڪرڻ لاءِ ماڻهو ڳوليو</string>
     <string name="chat_pin">پن</string>
     <string name="chat_unpin">ان پن ڪريو</string>
-    <string name="chat_pinned_label">پن ٿيل</string>
     <string name="chat_settings_general">عام</string>
     <string name="chat_settings_screen_title">%1$s سيٽنگون</string>
     <string name="chat_mark_read">پڙهيل طور نشان لڳايو</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">پويون ميچ</string>
     <string name="chat_settings_id">چيٽ جي سڃاڻپ</string>
     <string name="chat_message_edited">(تبديل ٿيل)</string>
+    <string name="chat_new_fallback_name">چيٽ</string>
 </resources>

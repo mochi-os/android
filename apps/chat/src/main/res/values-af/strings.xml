@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Vertoonnaam</string>
-    <string name="chat_auth_verification_failed">Verifikasie het misluk</string>
     <string name="chat_list_title">Kletse</string>
     <string name="chat_list_search">Soek</string>
     <string name="chat_list_logout">Meld af</string>
     <string name="chat_list_new">Nuwe geselsie</string>
     <string name="chat_new_title">Nuwe geselsie</string>
     <string name="chat_new_name">Groepnaam</string>
-    <string name="chat_new_friends">Vriende</string>
     <string name="chat_message_placeholder">Boodskap</string>
     <string name="chat_attachment_add">Heg lêers aan</string>
-    <string name="chat_message_attach">Heg lêers aan</string>
     <string name="chat_settings_title">Kletsinstellings</string>
     <string name="chat_settings_rename_label">Kletsnaam</string>
     <string name="chat_settings_save">Stoor</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Stuur</string>
 
     <string name="notification_channel_chat">Klets-kennisgewings</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Aanmelding het misluk</string>
-    <string name="chat_auth_create_identity_failed">Kon nie identiteit skep nie</string>
-    <string name="chat_auth_mfa_unsupported">MFA word nog nie in die mobiele app ondersteun nie</string>
-    <string name="chat_auth_enter_code_sent">Voer die kode in wat na %1$s gestuur is</string>
-    <string name="chat_auth_create_identity">Skep jou identiteit</string>
     <string name="chat_list_empty">Nog geen kletse nie</string>
     <string name="chat_new_existing_chat">Open bestaande klets</string>
     <string name="chat_new_start">Begin klets</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Skuif op</string>
     <string name="chat_attachment_move_down">Skuif af</string>
     <string name="chat_attachment_label">Lêer</string>
-    <string name="chat_message_remove_attachment">Verwyder aanhangsel</string>
-    <string name="chat_message_too_long">Boodskap te lank</string>
-    <string name="chat_message_empty">Boodskap kan nie leeg wees nie</string>
     <string name="chat_settings_rename">Hernoem klets</string>
     <string name="chat_settings_add_member_empty">Geen vriende om by te voeg nie</string>
     <string name="chat_settings_remove_member_message">Verwyder %1$s uit hierdie klets?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Hierdie boodskap is uitgevee</string>
     <string name="chat_search_hint">Soek in gesprek...</string>
-    <string name="chat_search_no_results">Geen resultate nie</string>
     <string name="chat_message_forward">Stuur aan</string>
     <string name="chat_forward_title">Stuur aan na…</string>
     <string name="chat_forward_search">Soek gesprekke…</string>
     <string name="chat_forward_empty">Geen gesprekke om na aan te stuur nie</string>
     <string name="chat_forward_success">Aangestuur</string>
-    <string name="chat_forward_failed">Kon nie aanstuur nie</string>
     <string name="chat_message_reply">Antwoord</string>
     <string name="chat_message_select">Kies</string>
     <string name="chat_reply_attachment">Aanhangsel</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Vriende</string>
     <string name="chat_policy_title">Inkomende kletse</string>
     <string name="chat_policy_friends">Slegs vriende</string>
-    <string name="chat_policy_friends_description">Slegs vriende kan \'n klets met jou begin (verstek).</string>
     <string name="chat_policy_anyone">Enigiemand</string>
-    <string name="chat_policy_anyone_description">Enigiemand kan \'n klets met jou begin.</string>
     <string name="chat_new_search_placeholder">Soek mense</string>
     <string name="chat_new_no_matches">Geen passende mense</string>
     <string name="chat_new_no_friends">Soek mense om mee te klets</string>
     <string name="chat_pin">Speld vas</string>
     <string name="chat_unpin">Ontvasspeld</string>
-    <string name="chat_pinned_label">Vasgespeld</string>
     <string name="chat_settings_general">Algemeen</string>
     <string name="chat_settings_screen_title">%1$s-instellings</string>
     <string name="chat_mark_read">Merk as gelees</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Vorige passing</string>
     <string name="chat_settings_id">Gesels-ID</string>
     <string name="chat_message_edited">(gewysig)</string>
+    <string name="chat_new_fallback_name">Klets</string>
 </resources>

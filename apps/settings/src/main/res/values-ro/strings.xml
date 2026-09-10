@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferințe pentru notificări</string>
     <string name="settings_home_accounts">Conturi conectate</string>
     <string name="settings_home_interests">Interese</string>
-    <string name="account_method_email">Cod email</string>
-    <string name="account_method_passkey">Cheie de acces</string>
-    <string name="account_method_totp">Aplicație de autentificare</string>
     <string name="account_section_passkeys">Chei de acces</string>
     <string name="account_passkey_register">Adaugă passkey</string>
     <string name="account_passkey_delete_title">Ștergi passkey-ul?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Șterge ruta</string>
     <string name="route_delete_title">Ștergi ruta?</string>
     <string name="route_path">Cale</string>
-    <string name="route_target">Țintă</string>
     <string name="route_method">Metodă</string>
     <string name="route_method_app">Aplicație</string>
     <string name="route_method_entity">Entitate</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interese</string>
     <string name="interests_summary_title">Sumar</string>
     <string name="interests_remove">Elimină interesul</string>
-    <string name="interests_add">Adaugă</string>
-    <string name="document_save">Salvează</string>
-    <string name="document_saved">Salvat</string>
     <string name="notifprefs_title">Preferințe pentru notificări</string>
     <string name="notifprefs_tab_categories">Categorii</string>
     <string name="notifprefs_tab_topics">Subiecte</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Resetează</string>
     <string name="system_settings_reset_to_default">Resetează la implicit</string>
     <string name="system_settings_reset_title">Resetezi la implicit?</string>
-    <string name="system_settings_setting_updated">Setare actualizată</string>
-    <string name="system_settings_update_failed">Actualizarea setării a eșuat</string>
     <string name="system_setting_apps_install_user">Permite utilizatorilor să instaleze aplicații</string>
     <string name="system_setting_auth_email">Autentificare cu cod email</string>
     <string name="system_setting_auth_passkey">Autentificare cu passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Actualizarea stării utilizatorului a eșuat</string>
     <string name="system_users_toast_revoke_failed">Revocarea sesiunii a eșuat</string>
 
-    <string name="settings_app_label">Mochi Setări</string>
     <string name="settings_home_sessions">Sesiuni</string>
     <string name="settings_home_privacy">Politica de confidențialitate</string>
     <string name="settings_home_rules">Reguli</string>
     <string name="settings_home_terms">Termenii serviciului</string>
-    <string name="account_section_methods">Metode de conectare</string>
     <string name="account_passkeys_empty">Nu există chei de acces înregistrate.</string>
     <string name="account_passkey_register_title">Adăugare cheie de acces</string>
     <string name="account_passkey_register_message">Dispozitivul vă va solicita confirmarea. Cheia de acces este legată de acest dispozitiv și folosită pentru conectările viitoare.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Regenerare coduri de recuperare?</string>
     <string name="account_recovery_regen_message">Codurile existente vor înceta imediat să mai funcționeze. Salvați cele noi într-un loc sigur.</string>
     <string name="account_recovery_codes_warning">Salvați aceste coduri — fiecare poate fi folosit doar o dată. Nu vor mai fi afișate.</string>
-    <string name="sessions_section_title">Sesiuni active</string>
     <string name="sessions_title">Sesiuni</string>
     <string name="sessions_empty">Fără sesiuni active.</string>
     <string name="sessions_revoke_message">Dispozitivul care folosește această sesiune va fi deconectat.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Regenerează rezumatul</string>
     <string name="interests_summary_regenerating">Se regenerează…</string>
     <string name="interests_summary_empty">Adăugați câteva interese pentru a genera un rezumat al lucrurilor care vă plac.</string>
-    <string name="interests_weight">Pondere</string>
     <string name="interests_search_failed">Căutarea a eșuat. Încercați din nou.</string>
     <string name="document_privacy_title">Politica de confidențialitate</string>
     <string name="document_rules_title">Reguli</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Se instalează %1$s…</string>
     <string name="accounts_field_api_key">Cheie API</string>
     <string name="accounts_field_url">URL server</string>
-    <string name="accounts_device_placeholder">Conturile push sunt adăugate automat de dispozitiv.</string>
     <string name="accounts_set_default_ai">Setați ca IA implicită</string>
     <string name="accounts_verify_code">Cod</string>
     <string name="accounts_verify_resend">Retrimite codul</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nume</string>
     <string name="account_identity_fingerprint">Amprentă</string>
     <string name="account_identity_directory_toggle">Permite altora să te găsească în director</string>
-    <string name="account_method_email_subtitle">Primește un cod de verificare prin e-mail</string>
-    <string name="account_method_totp_subtitle">Pentru activare, configurează un autentificator mai jos</string>
-    <string name="account_method_passkey_subtitle">Pentru activare, înregistrează o cheie de acces mai jos</string>
     <string name="domain_add">Adaugă domeniu</string>
     <string name="domain_add_title">Adaugă domeniu</string>
     <string name="domain_delegation_add">Adaugă</string>
@@ -400,4 +383,10 @@
     <string name="notifprefs_test_none">Nicio destinație configurată</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Fără destinații</string>
+    <string name="account_data_generate">Generează fraza de acces</string>
+    <string name="accounts_field_server">URL server</string>
+    <string name="accounts_field_token">Token de acces</string>
+    <string name="accounts_field_topic">Subiect</string>
+    <string name="accounts_field_secret">Secret de semnare</string>
+    <string name="account_totp_open">Deschide în aplicația de autentificare</string>
 </resources>

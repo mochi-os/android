@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Àwọn ààyò ìfitónilétí</string>
     <string name="settings_home_accounts">Àwọn àkáǹtì tí a so pọ̀</string>
     <string name="settings_home_interests">Àwọn ìfẹ́</string>
-    <string name="account_method_email">Kóòdù ímẹ́ẹ̀lì</string>
-    <string name="account_method_passkey">Kọ́kọ́rọ́-ìwọlé</string>
-    <string name="account_method_totp">App olùfọwọ́sí</string>
     <string name="account_section_passkeys">Àwọn passkey</string>
     <string name="account_passkey_register">Fi passkey kún</string>
     <string name="account_passkey_delete_title">Pa passkey rẹ́?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Pa ọ̀nà rẹ́</string>
     <string name="route_delete_title">Pa ọ̀nà rẹ́?</string>
     <string name="route_path">Ọ̀nà</string>
-    <string name="route_target">Ibi àfojúsùn</string>
     <string name="route_method">Ọ̀nà</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Ẹ̀ka</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Àwọn ìfẹ́</string>
     <string name="interests_summary_title">Ìṣàkójọ</string>
     <string name="interests_remove">Yọ ìfẹ́ kúrò</string>
-    <string name="interests_add">Fi kún</string>
-    <string name="document_save">Fi pamọ́</string>
-    <string name="document_saved">Ti fi pamọ́</string>
     <string name="notifprefs_title">Àwọn ààyò ìfitónilétí</string>
     <string name="notifprefs_tab_categories">Àwọn ẹ̀ka</string>
     <string name="notifprefs_tab_topics">Àwọn kókó</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Pa padà</string>
     <string name="system_settings_reset_to_default">Pa padà sí àbùdá</string>
     <string name="system_settings_reset_title">Pa padà sí àbùdá?</string>
-    <string name="system_settings_setting_updated">Ìṣètò ti ṣe imudojúìwọ̀n</string>
-    <string name="system_settings_update_failed">Kò lè mú ètò dòde</string>
     <string name="system_setting_apps_install_user">Jẹ́ kí àwọn olùmúlò fi àwọn app sí ẹ̀rọ</string>
     <string name="system_setting_auth_email">Wọlé pẹ̀lú kóòdù ímeèlì</string>
     <string name="system_setting_auth_passkey">Wọlé pẹ̀lú passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Kò lè mú ipò oníṣe dòde</string>
     <string name="system_users_toast_revoke_failed">Kò lè gba session padà</string>
 
-    <string name="settings_app_label">Mochi Ètò</string>
     <string name="settings_home_sessions">Awọn igba</string>
     <string name="settings_home_privacy">Ìlànà àdáni</string>
     <string name="settings_home_rules">Àwọn òfin</string>
     <string name="settings_home_terms">Àwọn àdéhùn iṣẹ́</string>
-    <string name="account_section_methods">Àwọn ọ̀nà àkọsílẹ̀</string>
     <string name="account_passkeys_empty">Kò sí àwọn kọ́kọ́rọ́ àkọsílẹ̀.</string>
     <string name="account_passkey_register_title">Fi kọ́kọ́rọ́ kún</string>
     <string name="account_passkey_register_message">Ẹ̀rọ rẹ yóò béèrè fún ìjẹ́rìísí. A so kọ́kọ́rọ́ náà mọ́ ẹ̀rọ yìí àti pé a ó lò ó fún àwọn àkọsílẹ̀ ọjọ́ iwájú.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Ṣe àwọn kóòdù ìgbàpadà lẹ́ẹ̀kan sí?</string>
     <string name="account_recovery_regen_message">Àwọn kóòdù tí ó wà yóò dáwọ́ iṣẹ́ dúró lẹ́sẹ̀kẹ̀sẹ̀. Tọ́jú àwọn tuntun ní àyè ààbò.</string>
     <string name="account_recovery_codes_warning">Tọ́jú àwọn kóòdù wọ̀nyí — èyíkéyìí lè wà ní lò ní ẹ̀ẹ̀kan ṣoṣo. A kò ní fi wọ́n hàn mọ́.</string>
-    <string name="sessions_section_title">Àwọn ìpàdé tó nṣiṣẹ́</string>
     <string name="sessions_title">Awọn igba</string>
     <string name="sessions_empty">Kò sí àwọn ìpàdé tó nṣiṣẹ́.</string>
     <string name="sessions_revoke_message">Ẹ̀rọ tí ó nlò ìpàdé yìí yóò jáde.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Ṣe àkójọpọ̀ lẹ́ẹ̀kan sí</string>
     <string name="interests_summary_regenerating">Ń ṣe lẹ́ẹ̀kan sí…</string>
     <string name="interests_summary_empty">Fi àwọn ìfẹ́ kún láti ṣe àkójọpọ̀ ohun tí ó wù ọ́.</string>
-    <string name="interests_weight">Iwọ̀n</string>
     <string name="interests_search_failed">Ìwáàrá kuna. Jọ̀ọ́ tún gbiyànjú.</string>
     <string name="document_privacy_title">Ìlànà àdáni</string>
     <string name="document_rules_title">Àwọn òfin</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Ń fi %1$s sí ẹnu…</string>
     <string name="accounts_field_api_key">Kọ́kọ́rọ́ API</string>
     <string name="accounts_field_url">URL olùṣẹ́</string>
-    <string name="accounts_device_placeholder">A fi àwọn àkáǹtì púṣì kún àdáàdá nípasẹ̀ ẹ̀rọ.</string>
     <string name="accounts_set_default_ai">Tò gẹ́gẹ́ bí AI ìbẹ̀rẹ̀</string>
     <string name="accounts_verify_code">Kóòdù</string>
     <string name="accounts_verify_resend">Tún kóòdù rán</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Orúkọ</string>
     <string name="account_identity_fingerprint">Àmì-ìka</string>
     <string name="account_identity_directory_toggle">Jẹ́ kí àwọn ẹlòmíì rí ọ nínú ìwé-àṣẹ</string>
-    <string name="account_method_email_subtitle">Gba koodu ìjẹ́rìísí nípasẹ̀ ímeèlì</string>
-    <string name="account_method_totp_subtitle">Láti mú ṣiṣẹ́, ṣètò aṣèwádìí nísàlẹ̀</string>
-    <string name="account_method_passkey_subtitle">Láti mú ṣiṣẹ́, forúkọ kọkọrọ àbáwọlé nísàlẹ̀</string>
     <string name="domain_add">Fi domain kún</string>
     <string name="domain_add_title">Fi domain kún</string>
     <string name="domain_delegation_add">Fi kún</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">A kò ṣètò àwọn ibi-àfojúsùn kankan</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Kò sí àyè dèsìnò</string>
+    <string name="account_data_generate">Ṣẹda gbolohun ọrọ igbaniwọle</string>
+    <string name="accounts_field_server">URL olùṣẹ́</string>
+    <string name="accounts_field_token">Àmì ìwọlé</string>
+    <string name="accounts_field_topic">Àkòrí</string>
+    <string name="accounts_field_secret">Àṣírí ìfọwọ́sí</string>
+    <string name="account_totp_open">Ṣí nínú ohun èlò ìjẹ́rìísí</string>
 </resources>

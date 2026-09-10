@@ -350,4 +350,8 @@
     <string name="game_empty_title">Babu wasanni tukuna</string>
     <string name="game_select_title">Zaɓi wasa</string>
     <string name="game_select_subtitle">Zaɓi wasa daga sandar gefe ko fara sabon wasa.</string>
+    <string name="settings_card">Salon katin</string>
+    <string name="settings_card_theme">Daga jigo</string>
+    <string name="settings_card_flat">Lebur</string>
+    <string name="settings_card_raised">Ɗagaggu</string>
 </resources>

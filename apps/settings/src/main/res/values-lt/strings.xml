@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Pranešimų nuostatos</string>
     <string name="settings_home_accounts">Susietos paskyros</string>
     <string name="settings_home_interests">Pomėgiai</string>
-    <string name="account_method_email">El. pašto kodas</string>
-    <string name="account_method_passkey">Slaptaraktis</string>
-    <string name="account_method_totp">Autentifikatoriaus programėlė</string>
     <string name="account_section_passkeys">Slaptarakčiai</string>
     <string name="account_passkey_register">Pridėti slaptaraktį</string>
     <string name="account_passkey_delete_title">Ištrinti slaptaraktį?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Ištrinti maršrutą</string>
     <string name="route_delete_title">Ištrinti maršrutą?</string>
     <string name="route_path">Kelias</string>
-    <string name="route_target">Tikslas</string>
     <string name="route_method">Metodas</string>
     <string name="route_method_app">Programėlė</string>
     <string name="route_method_entity">Subjektas</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Pomėgiai</string>
     <string name="interests_summary_title">Santrauka</string>
     <string name="interests_remove">Šalinti susidomėjimą</string>
-    <string name="interests_add">Pridėti</string>
-    <string name="document_save">Išsaugoti</string>
-    <string name="document_saved">Išsaugota</string>
     <string name="notifprefs_title">Pranešimų nuostatos</string>
     <string name="notifprefs_tab_categories">Kategorijos</string>
     <string name="notifprefs_tab_topics">Temos</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Atstatyti</string>
     <string name="system_settings_reset_to_default">Atstatyti į numatytąjį</string>
     <string name="system_settings_reset_title">Atstatyti į numatytąjį?</string>
-    <string name="system_settings_setting_updated">Nustatymas atnaujintas</string>
-    <string name="system_settings_update_failed">Nepavyko atnaujinti nustatymo</string>
     <string name="system_setting_apps_install_user">Leisti vartotojams diegti programėles</string>
     <string name="system_setting_auth_email">Prisijunkite naudodami el. pašto kodą</string>
     <string name="system_setting_auth_passkey">Prisijunkite naudodami slaptaraktį</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Nepavyko atnaujinti naudotojo būsenos</string>
     <string name="system_users_toast_revoke_failed">Nepavyko atšaukti seanso</string>
 
-    <string name="settings_app_label">Mochi Nustatymai</string>
     <string name="settings_home_sessions">Seansai</string>
     <string name="settings_home_privacy">Privatumo politika</string>
     <string name="settings_home_rules">Taisyklės</string>
     <string name="settings_home_terms">Paslaugos sąlygos</string>
-    <string name="account_section_methods">Prisijungimo būdai</string>
     <string name="account_passkeys_empty">Nėra užregistruotų prieigos raktų.</string>
     <string name="account_passkey_register_title">Pridėti prieigos raktą</string>
     <string name="account_passkey_register_message">Jūsų įrenginys paprašys patvirtinti. Prieigos raktas susietas su šiuo įrenginiu ir naudojamas ateities prisijungimams.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Regeneruoti atkūrimo kodus?</string>
     <string name="account_recovery_regen_message">Esami kodai iškart nustos veikti. Saugokite naujus saugioje vietoje.</string>
     <string name="account_recovery_codes_warning">Išsaugokite šiuos kodus — kiekvienas gali būti naudojamas tik kartą. Jie nebus rodomi dar kartą.</string>
-    <string name="sessions_section_title">Aktyvūs seansai</string>
     <string name="sessions_title">Seansai</string>
     <string name="sessions_empty">Nėra aktyvių seansų.</string>
     <string name="sessions_revoke_message">Šį seansą naudojantis įrenginys bus atjungtas.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Regeneruoti santrauką</string>
     <string name="interests_summary_regenerating">Regeneruojama…</string>
     <string name="interests_summary_empty">Pridėkite kelias pomėgius, kad sugeneruotumėte to, kas jums patinka, santrauką.</string>
-    <string name="interests_weight">Svoris</string>
     <string name="interests_search_failed">Paieška nepavyko. Bandykite dar kartą.</string>
     <string name="document_privacy_title">Privatumo politika</string>
     <string name="document_rules_title">Taisyklės</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Diegiama %1$s…</string>
     <string name="accounts_field_api_key">API raktas</string>
     <string name="accounts_field_url">Serverio URL</string>
-    <string name="accounts_device_placeholder">Push paskyros įrenginio pridedamos automatiškai.</string>
     <string name="accounts_set_default_ai">Nustatyti kaip numatytąjį DI</string>
     <string name="accounts_verify_code">Kodas</string>
     <string name="accounts_verify_resend">Siųsti kodą iš naujo</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Pavadinimas</string>
     <string name="account_identity_fingerprint">Pirštų atspaudas</string>
     <string name="account_identity_directory_toggle">Leisti kitiems rasti jus kataloge</string>
-    <string name="account_method_email_subtitle">Gaukite patvirtinimo kodą el. paštu</string>
-    <string name="account_method_totp_subtitle">Norėdami įjungti, nustatykite autentifikatorių žemiau</string>
-    <string name="account_method_passkey_subtitle">Norėdami įjungti, užregistruokite slaptaraktį žemiau</string>
     <string name="domain_add">Pridėti domeną</string>
     <string name="domain_add_title">Pridėti domeną</string>
     <string name="domain_delegation_add">Pridėti</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Paskirties vietų nesukonfigūruota</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Tikslų nėra</string>
+    <string name="account_data_generate">Sugeneruoti slaptafrazę</string>
+    <string name="accounts_field_server">Serverio URL</string>
+    <string name="accounts_field_token">Prieigos raktas</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Pasirašymo paslaptis</string>
+    <string name="account_totp_open">Atidaryti autentifikavimo programoje</string>
 </resources>

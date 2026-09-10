@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Τα δεδομένα του έργου αποθηκεύτηκαν</string>
     <string name="projects_exporting">Προετοιμασία εξαγωγής…</string>
     <string name="projects_board_add_column">Προσθήκη στήλης</string>
+    <string name="projects_design_sample">Δείγμα %1$d</string>
 </resources>

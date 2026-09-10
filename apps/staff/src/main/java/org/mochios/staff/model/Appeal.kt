@@ -25,18 +25,10 @@ data class Appeal(
     val seller: String = "",
     @SerializedName("listing_moderation") val listingModeration: String = "",
     @SerializedName("seller_name") val sellerName: String = "",
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
 )
 
 data class AppealsListResponse(
     val appeals: List<Appeal> = emptyList(),
     val total: Long = 0,
 )
-
-/**
- * `upheld` re-activates the listing; `denied` keeps it rejected. Validated by
- * `event_staff_appeals_decide`.
- */
-enum class AppealDecision {
-    @SerializedName("upheld") UPHELD,
-    @SerializedName("denied") DENIED,
-}

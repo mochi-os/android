@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Data ya mradi imehifadhiwa</string>
     <string name="projects_exporting">Inaandaa uhamishaji…</string>
     <string name="projects_board_add_column">Ongeza safu</string>
+    <string name="projects_design_sample">Sampuli %1$d</string>
 </resources>

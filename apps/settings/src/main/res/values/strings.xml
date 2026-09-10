@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Settings app -->
-    <string name="settings_app_label">Mochi Settings</string>
     <string name="settings_home_title">Settings</string>
     <string name="settings_home_account">Account</string>
     <string name="settings_home_preferences">Preferences</string>
@@ -31,14 +30,7 @@
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_identity">Identity</string>
     <string name="account_identity_directory_toggle">Allow others to find you in directory</string>
-    <string name="account_method_passkey_subtitle">Register a passkey below to enable</string>
-    <string name="account_method_totp_subtitle">Set up an authenticator below to enable</string>
-    <string name="account_method_email_subtitle">Receive a verification code by email</string>
 
-    <string name="account_section_methods">Login methods</string>
-    <string name="account_method_email">Email code</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator app</string>
 
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkeys_empty">No passkeys registered.</string>
@@ -105,7 +97,6 @@
 
     <!-- Sessions -->
     <string name="sessions_title">Sessions</string>
-    <string name="sessions_section_title">Active sessions</string>
     <string name="sessions_empty">No active sessions.</string>
     <string name="sessions_unknown_agent">Unknown device</string>
     <string name="sessions_current">(current)</string>
@@ -133,7 +124,6 @@
     <string name="route_delete_message">This will remove the route for path "%1$s".</string>
     <string name="route_empty">No routes configured.</string>
     <string name="route_path">Path</string>
-    <string name="route_target">Target</string>
     <string name="route_target_app">App</string>
     <string name="route_target_entity">Entity</string>
     <string name="route_target_url">URL</string>
@@ -156,17 +146,13 @@
     <string name="interests_summary_regenerate">Regenerate summary</string>
     <string name="interests_summary_regenerating">Regenerating…</string>
     <string name="interests_summary_empty">Add some interests to generate a summary of what you\'re into.</string>
-    <string name="interests_weight">Weight</string>
     <string name="interests_remove">Remove interest</string>
-    <string name="interests_add">Add</string>
     <string name="interests_search_failed">Search failed. Please try again.</string>
 
     <!-- Documents (privacy / rules / terms) -->
     <string name="document_privacy_title">Privacy policy</string>
     <string name="document_rules_title">Rules</string>
     <string name="document_terms_title">Terms of service</string>
-    <string name="document_save">Save</string>
-    <string name="document_saved">Saved</string>
 
     <!-- Notification preferences -->
     <string name="notifprefs_title">Notification preferences</string>
@@ -244,7 +230,6 @@
     <string name="accounts_field_model">Model</string>
     <string name="accounts_field_url">Server URL</string>
     <string name="accounts_field_name">Name</string>
-    <string name="accounts_device_placeholder">Push accounts are added automatically by the device.</string>
     <string name="accounts_status_pending">Pending</string>
     <string name="accounts_status_verified">Verified</string>
     <string name="accounts_status_connected">Connected</string>
@@ -303,8 +288,6 @@
     <string name="system_settings_reset_title">Reset to default?</string>
     <string name="system_settings_reset_message">This will reset \"%1$s\" to its default value (%2$s).</string>
     <string name="system_settings_reset_message_empty">This will reset \"%1$s\" to its default (empty).</string>
-    <string name="system_settings_setting_updated">Setting updated</string>
-    <string name="system_settings_update_failed">Failed to update setting</string>
     <string name="system_setting_apps_install_user">Allow users to install apps</string>
     <string name="system_setting_auth_email">Login using email code</string>
     <string name="system_setting_auth_passkey">Login using passkey</string>
@@ -436,4 +419,10 @@
     <string name="accounts_verify_sent">Verification code sent</string>
     <string name="accounts_test_sent">Test sent</string>
     <string name="accounts_test_failed">Test failed</string>
+    <string name="account_totp_open">Open in authenticator app</string>
+    <string name="account_data_generate">Generate passphrase</string>
+    <string name="accounts_field_server">Server URL</string>
+    <string name="accounts_field_token">Access token</string>
+    <string name="accounts_field_topic">Topic</string>
+    <string name="accounts_field_secret">Signing secret</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Bildirishnoma sozlamalari</string>
     <string name="settings_home_accounts">Ulangan hisoblar</string>
     <string name="settings_home_interests">Qiziqishlar</string>
-    <string name="account_method_email">Email kodi</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Autentifikator ilova</string>
     <string name="account_section_passkeys">Passkey’lar</string>
     <string name="account_passkey_register">Passkey qoʻshish</string>
     <string name="account_passkey_delete_title">Passkey oʻchirilsinmi?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Marshrutni oʻchirish</string>
     <string name="route_delete_title">Marshrut oʻchirilsinmi?</string>
     <string name="route_path">Yoʻl</string>
-    <string name="route_target">Maqsad</string>
     <string name="route_method">Usul</string>
     <string name="route_method_app">Ilova</string>
     <string name="route_method_entity">Obyekt</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Qiziqishlar</string>
     <string name="interests_summary_title">Qisqacha</string>
     <string name="interests_remove">Qiziqishni olib tashlash</string>
-    <string name="interests_add">Qoʻshish</string>
-    <string name="document_save">Saqlash</string>
-    <string name="document_saved">Saqlandi</string>
     <string name="notifprefs_title">Bildirishnoma sozlamalari</string>
     <string name="notifprefs_tab_categories">Toifalar</string>
     <string name="notifprefs_tab_topics">Mavzular</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Tiklash</string>
     <string name="system_settings_reset_to_default">Standartga qaytarish</string>
     <string name="system_settings_reset_title">Standartga qaytarilsinmi?</string>
-    <string name="system_settings_setting_updated">Sozlama yangilandi</string>
-    <string name="system_settings_update_failed">Sozlamani yangilab boʻlmadi</string>
     <string name="system_setting_apps_install_user">Foydalanuvchilarga ilovalar oʻrnatishga ruxsat berish</string>
     <string name="system_setting_auth_email">Email kodi yordamida kirish</string>
     <string name="system_setting_auth_passkey">Passkey yordamida kirish</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Foydalanuvchi holatini yangilab boʻlmadi</string>
     <string name="system_users_toast_revoke_failed">Sessiyani bekor qilib boʻlmadi</string>
 
-    <string name="settings_app_label">Mochi Sozlamalar</string>
     <string name="settings_home_sessions">Seanslar</string>
     <string name="settings_home_privacy">Maxfiylik siyosati</string>
     <string name="settings_home_rules">Qoidalar</string>
     <string name="settings_home_terms">Xizmat shartlari</string>
-    <string name="account_section_methods">Kirish usullari</string>
     <string name="account_passkeys_empty">Roʻyxatdan oʻtgan kalitlar yoʻq.</string>
     <string name="account_passkey_register_title">Kalit qoʻshish</string>
     <string name="account_passkey_register_message">Qurilmangiz tasdiqlashni soʻraydi. Kalit ushbu qurilmaga bogʻlangan va keyingi kirishlar uchun ishlatiladi.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Tiklash kodlarini qayta yaratasizmi?</string>
     <string name="account_recovery_regen_message">Mavjud kodlar darhol ishlamay qoladi. Yangilarini xavfsiz joyga saqlang.</string>
     <string name="account_recovery_codes_warning">Bu kodlarni saqlang — har biri faqat bir marta ishlatilishi mumkin. Ular qaytadan koʻrsatilmaydi.</string>
-    <string name="sessions_section_title">Faol sessiyalar</string>
     <string name="sessions_title">Seanslar</string>
     <string name="sessions_empty">Faol sessiyalar yoʻq.</string>
     <string name="sessions_revoke_message">Bu sessiyani ishlatayotgan qurilmadan chiqiladi.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Xulosani qayta yaratish</string>
     <string name="interests_summary_regenerating">Qayta yaratilmoqda…</string>
     <string name="interests_summary_empty">Yoqtiradiganlaringiz xulosasini yaratish uchun bir nechta qiziqishlarni qoʻshing.</string>
-    <string name="interests_weight">Ogʻirlik</string>
     <string name="interests_search_failed">Qidiruv muvaffaqiyatsiz tugadi. Qaytadan urinib koʻring.</string>
     <string name="document_privacy_title">Maxfiylik siyosati</string>
     <string name="document_rules_title">Qoidalar</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s oʻrnatilmoqda…</string>
     <string name="accounts_field_api_key">API kaliti</string>
     <string name="accounts_field_url">Server URL</string>
-    <string name="accounts_device_placeholder">Push hisoblari qurilma tomonidan avtomatik qoʻshiladi.</string>
     <string name="accounts_set_default_ai">Standart AI sifatida belgilash</string>
     <string name="accounts_verify_code">Kod</string>
     <string name="accounts_verify_resend">Kodni qayta yuborish</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nomi</string>
     <string name="account_identity_fingerprint">Barmoq izi</string>
     <string name="account_identity_directory_toggle">Boshqalarga sizni katalogdan topishiga ruxsat berish</string>
-    <string name="account_method_email_subtitle">Tasdiqlash kodini e-pochta orqali oling</string>
-    <string name="account_method_totp_subtitle">Yoqish uchun quyida autentifikator sozlang</string>
-    <string name="account_method_passkey_subtitle">Yoqish uchun quyida kirish kalitini ro\'yxatdan o\'tkazing</string>
     <string name="domain_add">Domen qoʻshish</string>
     <string name="domain_add_title">Domen qoʻshish</string>
     <string name="domain_delegation_add">Qoʻshish</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Manzillar sozlanmagan</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Manzillar yo\'q</string>
+    <string name="account_data_generate">Parol iborasini yaratish</string>
+    <string name="accounts_field_server">Server URL</string>
+    <string name="accounts_field_token">Kirish tokeni</string>
+    <string name="accounts_field_topic">Mavzu</string>
+    <string name="accounts_field_secret">Imzo maxfiy kaliti</string>
+    <string name="account_totp_open">Autentifikator ilovasida ochish</string>
 </resources>

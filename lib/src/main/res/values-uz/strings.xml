@@ -351,4 +351,8 @@
     <string name="game_empty_title">Hozircha oʻyinlar yoʻq</string>
     <string name="game_select_title">Oʻyin tanlang</string>
     <string name="game_select_subtitle">Yon paneldan oʻyin tanlang yoki yangisini boshlang.</string>
+    <string name="settings_card">Karta uslubi</string>
+    <string name="settings_card_theme">Mavzudan</string>
+    <string name="settings_card_flat">Tekis</string>
+    <string name="settings_card_raised">Koʻtarilgan</string>
 </resources>

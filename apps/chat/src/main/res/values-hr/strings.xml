@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Ime za prikaz</string>
-    <string name="chat_auth_verification_failed">Provjera nije uspjela</string>
     <string name="chat_list_title">Razgovori</string>
     <string name="chat_list_search">Pretraži</string>
     <string name="chat_list_logout">Odjavi se</string>
     <string name="chat_list_new">Novi razgovor</string>
     <string name="chat_new_title">Novi razgovor</string>
     <string name="chat_new_name">Naziv grupe</string>
-    <string name="chat_new_friends">Prijatelji</string>
     <string name="chat_message_placeholder">Poruka</string>
     <string name="chat_attachment_add">Priloži datoteke</string>
-    <string name="chat_message_attach">Priloži datoteke</string>
     <string name="chat_settings_title">Postavke razgovora</string>
     <string name="chat_settings_rename_label">Naziv razgovora</string>
     <string name="chat_settings_save">Spremi</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Pošalji</string>
 
     <string name="notification_channel_chat">Obavijesti za chat</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Prijava nije uspjela</string>
-    <string name="chat_auth_create_identity_failed">Stvaranje identiteta nije uspjelo</string>
-    <string name="chat_auth_mfa_unsupported">MFA još nije podržan u mobilnoj aplikaciji</string>
-    <string name="chat_auth_enter_code_sent">Unesite kod poslan na %1$s</string>
-    <string name="chat_auth_create_identity">Stvorite svoj identitet</string>
     <string name="chat_list_empty">Još nema chatova</string>
     <string name="chat_new_existing_chat">Otvori postojeći chat</string>
     <string name="chat_new_start">Započni chat</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Pomakni gore</string>
     <string name="chat_attachment_move_down">Pomakni dolje</string>
     <string name="chat_attachment_label">Datoteka</string>
-    <string name="chat_message_remove_attachment">Ukloni privitak</string>
-    <string name="chat_message_too_long">Poruka je predugačka</string>
-    <string name="chat_message_empty">Poruka ne može biti prazna</string>
     <string name="chat_settings_rename">Preimenuj chat</string>
     <string name="chat_settings_add_member_empty">Nema prijatelja za dodavanje</string>
     <string name="chat_settings_remove_member_message">Ukloniti %1$s iz ovog chata?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Ova je poruka izbrisana</string>
     <string name="chat_search_hint">Pretraži u razgovoru...</string>
-    <string name="chat_search_no_results">Nema rezultata</string>
     <string name="chat_message_forward">Proslijedi</string>
     <string name="chat_forward_title">Proslijedi u…</string>
     <string name="chat_forward_search">Pretraži razgovore…</string>
     <string name="chat_forward_empty">Nema razgovora za prosljeđivanje</string>
     <string name="chat_forward_success">Proslijeđeno</string>
-    <string name="chat_forward_failed">Prosljeđivanje nije uspjelo</string>
     <string name="chat_message_reply">Odgovori</string>
     <string name="chat_message_select">Odaberi</string>
     <string name="chat_reply_attachment">Privitak</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Prijatelji</string>
     <string name="chat_policy_title">Dolazni razgovori</string>
     <string name="chat_policy_friends">Samo prijatelji</string>
-    <string name="chat_policy_friends_description">Samo prijatelji mogu započeti razgovor s vama (zadano).</string>
     <string name="chat_policy_anyone">Bilo tko</string>
-    <string name="chat_policy_anyone_description">Bilo tko može započeti razgovor s vama.</string>
     <string name="chat_new_search_placeholder">Pretraži ljude</string>
     <string name="chat_new_no_matches">Nema podudarnih ljudi</string>
     <string name="chat_new_no_friends">Potražite ljude za razgovor</string>
     <string name="chat_pin">Pričvrsti</string>
     <string name="chat_unpin">Otkvači</string>
-    <string name="chat_pinned_label">Pričvršćeno</string>
     <string name="chat_settings_general">Općenito</string>
     <string name="chat_settings_screen_title">Postavke – %1$s</string>
     <string name="chat_mark_read">Označi kao pročitano</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Prethodno podudaranje</string>
     <string name="chat_settings_id">ID razgovora</string>
     <string name="chat_message_edited">(uređeno)</string>
+    <string name="chat_new_fallback_name">Razgovor</string>
 </resources>

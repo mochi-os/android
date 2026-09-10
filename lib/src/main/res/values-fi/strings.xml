@@ -350,4 +350,8 @@
     <string name="game_empty_title">Ei vielä pelejä</string>
     <string name="game_select_title">Valitse peli</string>
     <string name="game_select_subtitle">Valitse peli sivupalkista tai aloita uusi.</string>
+    <string name="settings_card">Kortin tyyli</string>
+    <string name="settings_card_theme">Teemasta</string>
+    <string name="settings_card_flat">Litteä</string>
+    <string name="settings_card_raised">Korotettu</string>
 </resources>

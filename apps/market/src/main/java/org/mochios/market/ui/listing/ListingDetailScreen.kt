@@ -44,7 +44,6 @@ import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.BookmarkBorder
-import androidx.compose.material3.AssistChip
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -54,6 +53,7 @@ import androidx.compose.material3.OutlinedIconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -119,7 +119,6 @@ import org.mochios.market.model.Photo
 import org.mochios.market.model.PricingModel
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.repository.MarketRepository
 import org.mochios.market.ui.components.AuctionBidHistory
 import org.mochios.market.ui.components.AuditTimeline
 import org.mochios.market.ui.components.DigitalAssetsList
@@ -323,9 +322,6 @@ fun ListingDetailScreen(
                         onSellerTap = {
                             navController.navigate(MarketApp.publicProfile(seller.id))
                         },
-                        onTagTap = { tag ->
-                            navController.navigate(MarketApp.homeWithTag(tag))
-                        },
                         onToggleSave = { viewModel.toggleSave() },
                         onReport = { reportOpen = true },
                         onMessageSeller = {
@@ -388,11 +384,7 @@ fun ListingDetailScreen(
     if (lightboxOpen) {
         // Same photo list the carousel renders, reused for the lightbox.
         val urls = remember(state.listing, state.photos) {
-            buildPhotoUrls(
-                state.photos,
-                state.listing?.listing,
-                sessionManager.getServerUrlBlocking().trimEnd('/'),
-            )
+            buildPhotoUrls(state.photos, state.listing?.listing)
         }
         if (urls.isNotEmpty()) {
             LightboxScreen(
@@ -458,7 +450,6 @@ private fun ListingDetailContent(
     onToggleAudit: () -> Unit,
     onPhotoTap: (Int) -> Unit,
     onSellerTap: () -> Unit,
-    onTagTap: (String) -> Unit,
     onToggleSave: () -> Unit,
     onReport: () -> Unit,
     onMessageSeller: () -> Unit,
@@ -475,11 +466,10 @@ private fun ListingDetailContent(
     val parsedLocation = remember(listing.location) { parseLocation(listing.location) }
     val locationDisplay = locationName(parsedLocation)
     val format = LocalFormat.current
-    val context = LocalContext.current
     val photoUrls = remember(detail.listing.id, photos) {
-        // Full /-/photo/{id} URL list from the photos endpoint, falling back
-        // to the listing's embedded primary photo when that list is empty.
-        buildPhotoUrls(photos, detail.listing, baseUrlForContext(context))
+        // /-/photo/{id} paths from the photos endpoint, falling back to the
+        // listing's embedded primary photo when that list is empty.
+        buildPhotoUrls(photos, detail.listing)
     }
     val sellerStatus = seller.status.orEmpty().lowercase()
     val sellerSuspended = sellerStatus == "suspended" || sellerStatus == "banned"
@@ -538,7 +528,8 @@ private fun ListingDetailContent(
             )
         }
 
-        // Tags — chips only, no heading.
+        // Tags are inert badges, as on web: the search matches titles and
+        // descriptions only, so a tag tap has nothing real to open.
         if (tags.isNotEmpty()) {
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -546,10 +537,16 @@ private fun ListingDetailContent(
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 tags.forEach { tag ->
-                    AssistChip(
-                        onClick = { onTagTap(tag) },
-                        label = { Text(tag) },
-                    )
+                    Surface(
+                        shape = MaterialTheme.shapes.small,
+                        color = MaterialTheme.colorScheme.surfaceVariant,
+                    ) {
+                        Text(
+                            text = tag,
+                            style = MaterialTheme.typography.labelMedium,
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                        )
+                    }
                 }
             }
         }
@@ -1167,29 +1164,19 @@ private fun parseTags(json: String): List<String> {
     }
 }
 
-private fun buildPhotoUrls(
-    photos: List<Photo>,
-    listing: Listing?,
-    baseUrl: String,
-): List<String> {
+// Server-relative paths: the shared RelativeAssetUrlMapper resolves them
+// against the session server inside the Coil pipeline, as ListingCard does.
+private fun buildPhotoUrls(photos: List<Photo>, listing: Listing?): List<String> {
     val urls = photos.mapNotNull { photo ->
-        photo.id.takeIf { it.isNotBlank() }?.let { "$baseUrl/market/-/photo/$it" }
+        photo.id.takeIf { it.isNotBlank() }?.let { "/market/-/photo/$it" }
     }
     if (urls.isNotEmpty()) return urls
     val photoId = listing?.photo?.id?.takeIf { it.isNotBlank() } ?: return emptyList()
-    return listOf("$baseUrl/market/-/photo/$photoId")
-}
-
-private fun baseUrlForContext(context: android.content.Context): String {
-    return EntryPointAccessors.fromApplication(
-        context.applicationContext,
-        ListingDetailEntryPoint::class.java,
-    ).sessionManager().getServerUrlBlocking().trimEnd('/')
+    return listOf("/market/-/photo/$photoId")
 }
 
 @EntryPoint
 @InstallIn(SingletonComponent::class)
 interface ListingDetailEntryPoint {
     fun sessionManager(): SessionManager
-    fun marketRepository(): MarketRepository
 }

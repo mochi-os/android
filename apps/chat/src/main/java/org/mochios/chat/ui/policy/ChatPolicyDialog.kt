@@ -20,14 +20,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.chat.R
 import org.mochios.android.R as MochiR
 
-private data class PolicyOption(val value: String, val label: String, val description: String)
+private data class PolicyOption(val value: String, val label: String)
 
 @Composable
 fun ChatPolicyDialog(
@@ -44,16 +43,8 @@ fun ChatPolicyDialog(
     }
 
     val options = listOf(
-        PolicyOption(
-            value = "friends",
-            label = stringResource(R.string.chat_policy_friends),
-            description = stringResource(R.string.chat_policy_friends_description),
-        ),
-        PolicyOption(
-            value = "anyone",
-            label = stringResource(R.string.chat_policy_anyone),
-            description = stringResource(R.string.chat_policy_anyone_description),
-        ),
+        PolicyOption(value = "friends", label = stringResource(R.string.chat_policy_friends)),
+        PolicyOption(value = "anyone", label = stringResource(R.string.chat_policy_anyone)),
     )
 
     MochiAlertDialog(
@@ -67,7 +58,7 @@ fun ChatPolicyDialog(
                             .fillMaxWidth()
                             .clickable(enabled = !uiState.isLoading) { viewModel.select(option.value) }
                             .padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.Top,
+                        verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
                         RadioButton(
@@ -75,18 +66,11 @@ fun ChatPolicyDialog(
                             onClick = { viewModel.select(option.value) },
                             enabled = !uiState.isLoading,
                         )
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = option.label,
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Medium,
-                            )
-                            Text(
-                                text = option.description,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
+                        Text(
+                            text = option.label,
+                            style = MaterialTheme.typography.bodyMedium,
+                            modifier = Modifier.weight(1f),
+                        )
                     }
                 }
             }

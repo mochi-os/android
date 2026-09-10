@@ -46,6 +46,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.AuditEntry
 import org.mochios.staff.repository.StaffRepository
@@ -125,7 +126,7 @@ private fun AuditRow(entry: AuditEntry, isLast: Boolean) {
         entry.actor == "system" || entry.actor.isBlank() ->
             stringResource(R.string.staff_audit_actor_system)
         entry.actorName.isNotBlank() -> entry.actorName
-        else -> shortFingerprint(entry.actor)
+        else -> formatFingerprint(entry.actorFingerprint)
     }
 
     Row(
@@ -311,12 +312,6 @@ private fun auditDetail(entry: AuditEntry): String {
         if (action.isNotBlank()) parts.add(action)
     }
     return parts.joinToString(" · ")
-}
-
-private fun shortFingerprint(id: String): String {
-    val fp = id.take(9)
-    if (fp.length < 9) return fp
-    return "${fp.substring(0, 3)}-${fp.substring(3, 6)}-${fp.substring(6, 9)}"
 }
 
 // ---- Internal state + ViewModel for the embedded timeline ----

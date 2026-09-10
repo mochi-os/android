@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">ناوی پیشاندان</string>
-    <string name="chat_auth_verification_failed">پشتڕاستکردنەوە سەرکەوتوو نەبوو</string>
     <string name="chat_list_title">گفتوگۆکان</string>
     <string name="chat_list_search">گەڕان</string>
     <string name="chat_list_logout">دەرچوون</string>
     <string name="chat_list_new">گفتوگۆی نوێ</string>
     <string name="chat_new_title">گفتوگۆی نوێ</string>
     <string name="chat_new_name">ناوی گرووپ</string>
-    <string name="chat_new_friends">هاوڕێکان</string>
     <string name="chat_message_placeholder">پەیام</string>
     <string name="chat_attachment_add">هاوپێچکردنی پەڕگە</string>
-    <string name="chat_message_attach">هاوپێچکردنی پەڕگە</string>
     <string name="chat_settings_title">ڕێکخستنی گفتوگۆ</string>
     <string name="chat_settings_rename_label">ناوی گفتوگۆ</string>
     <string name="chat_settings_save">پاشەکەوتکردن</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">ناردن</string>
 
     <string name="notification_channel_chat">ئاگادارکردنەوەکانی گفتوگۆ</string>
-    <string name="chat_auth_brand">گفتوگۆی Mochi</string>
-    <string name="chat_auth_login_failed">چوونەژوورەوە سەرکەوتوو نەبوو</string>
-    <string name="chat_auth_create_identity_failed">دروستکردنی ناسنامە سەرکەوتوو نەبوو</string>
-    <string name="chat_auth_mfa_unsupported">MFA لە ئەپی مۆبایلدا هێشتا پشتگیری نەکراوە</string>
-    <string name="chat_auth_enter_code_sent">ئەو کۆدە بنووسە کە بۆ %1$s نێردراوە</string>
-    <string name="chat_auth_create_identity">ناسنامەکەت دروست بکە</string>
     <string name="chat_list_empty">هێشتا هیچ گفتوگۆیەک نییە</string>
     <string name="chat_new_existing_chat">کردنەوەی گفتوگۆی هەبوو</string>
     <string name="chat_new_start">دەستپێکردنی گفتوگۆ</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">گواستنەوە بۆ سەرەوە</string>
     <string name="chat_attachment_move_down">گواستنەوە بۆ خوارەوە</string>
     <string name="chat_attachment_label">پەڕگە</string>
-    <string name="chat_message_remove_attachment">لابردنی هاوپێچ</string>
-    <string name="chat_message_too_long">نامەکە زۆر درێژە</string>
-    <string name="chat_message_empty">نامەکە ناتوانێت بەتاڵ بێت</string>
     <string name="chat_settings_rename">ناولێنانەوەی گفتوگۆ</string>
     <string name="chat_settings_add_member_empty">هیچ هاوڕێیەک نییە بۆ زیادکردن</string>
     <string name="chat_settings_remove_member_message">%1$s لەم گفتوگۆیە لاببرێت؟</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">ئەم پەیامە سڕاوەتەوە</string>
     <string name="chat_search_hint">گەڕان لە چاتدا...</string>
-    <string name="chat_search_no_results">هیچ ئەنجامێک نییە</string>
     <string name="chat_message_forward">ناردنەوە</string>
     <string name="chat_forward_title">ناردنەوە بۆ…</string>
     <string name="chat_forward_search">گەڕان بە چاتەکاندا…</string>
     <string name="chat_forward_empty">هیچ چاتێک نییە بۆ ناردنەوە</string>
     <string name="chat_forward_success">نێردرایەوە</string>
-    <string name="chat_forward_failed">ناردنەوە سەرکەوتوو نەبوو</string>
     <string name="chat_message_reply">وەڵامدانەوە</string>
     <string name="chat_message_select">هەڵبژاردن</string>
     <string name="chat_reply_attachment">هاوپێچ</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">هاوڕێکان</string>
     <string name="chat_policy_title">چاتە هاتووەکان</string>
     <string name="chat_policy_friends">تەنها هاوڕێیان</string>
-    <string name="chat_policy_friends_description">تەنها هاوڕێیان دەتوانن چاتت لەگەڵ دەست پێبکەن (بنەڕەت).</string>
     <string name="chat_policy_anyone">هەر کەسێک</string>
-    <string name="chat_policy_anyone_description">هەر کەسێک دەتوانێت چاتێک لەگەڵت دەست پێبکات.</string>
     <string name="chat_new_search_placeholder">گەڕان بۆ کەسان</string>
     <string name="chat_new_no_matches">هیچ کەسێکی هاوتا نییە</string>
     <string name="chat_new_no_friends">بۆ چات کردن بەدوای کەساندا بگەڕێ</string>
     <string name="chat_pin">چەسپاندن</string>
     <string name="chat_unpin">لاسەنجاندن</string>
-    <string name="chat_pinned_label">چەسپێنراو</string>
     <string name="chat_settings_general">گشتی</string>
     <string name="chat_settings_screen_title">ڕێکخستنەکانی %1$s</string>
     <string name="chat_mark_read">وەک خوێندراوە نیشانە بکە</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">هاوتای پێشوو</string>
     <string name="chat_settings_id">ناسنامەی چات</string>
     <string name="chat_message_edited">(دەستکاریکراو)</string>
+    <string name="chat_new_fallback_name">گفتوگۆ</string>
 </resources>

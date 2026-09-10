@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">દર્શાવનાર નામ</string>
-    <string name="chat_auth_verification_failed">ચકાસણી નિષ્ફળ</string>
     <string name="chat_list_title">ચેટ્સ</string>
     <string name="chat_list_search">શોધો</string>
     <string name="chat_list_logout">લૉગ આઉટ કરો</string>
     <string name="chat_list_new">નવી ચેટ</string>
     <string name="chat_new_title">નવી ચેટ</string>
     <string name="chat_new_name">ગ્રુપનું નામ</string>
-    <string name="chat_new_friends">મિત્રો</string>
     <string name="chat_message_placeholder">સંદેશ</string>
     <string name="chat_attachment_add">ફાઇલો જોડો</string>
-    <string name="chat_message_attach">ફાઇલો જોડો</string>
     <string name="chat_settings_title">ચેટ સેટિંગ્સ</string>
     <string name="chat_settings_rename_label">ચેટનું નામ</string>
     <string name="chat_settings_save">સાચવો</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">મોકલો</string>
 
     <string name="notification_channel_chat">ચેટ સૂચનાઓ</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">લૉગિન નિષ્ફળ</string>
-    <string name="chat_auth_create_identity_failed">ઓળખ બનાવવામાં નિષ્ફળ</string>
-    <string name="chat_auth_mfa_unsupported">મોબાઇલ ઍપમાં MFA હજુ સમર્થિત નથી</string>
-    <string name="chat_auth_enter_code_sent">%1$s પર મોકલેલો કોડ દાખલ કરો</string>
-    <string name="chat_auth_create_identity">તમારી ઓળખ બનાવો</string>
     <string name="chat_list_empty">હજુ સુધી કોઈ ચેટ નથી</string>
     <string name="chat_new_existing_chat">હાલની ચેટ ખોલો</string>
     <string name="chat_new_start">ચેટ શરૂ કરો</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">ઉપર ખસેડો</string>
     <string name="chat_attachment_move_down">નીચે ખસેડો</string>
     <string name="chat_attachment_label">ફાઇલ</string>
-    <string name="chat_message_remove_attachment">જોડાણ દૂર કરો</string>
-    <string name="chat_message_too_long">સંદેશો ખૂબ લાંબો છે</string>
-    <string name="chat_message_empty">સંદેશો ખાલી હોઈ શકતો નથી</string>
     <string name="chat_settings_rename">ચેટનું નામ બદલો</string>
     <string name="chat_settings_add_member_empty">ઉમેરવા માટે કોઈ મિત્રો નથી</string>
     <string name="chat_settings_remove_member_message">%1$s ને આ ચેટમાંથી દૂર કરવા છે?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">આ સંદેશ કાઢી નાખવામાં આવ્યો</string>
     <string name="chat_search_hint">ચેટમાં શોધો...</string>
-    <string name="chat_search_no_results">કોઈ પરિણામ નથી</string>
     <string name="chat_message_forward">ફોરવર્ડ કરો</string>
     <string name="chat_forward_title">ફોરવર્ડ કરો…</string>
     <string name="chat_forward_search">ચેટ્સ શોધો…</string>
     <string name="chat_forward_empty">ફોરવર્ડ કરવા માટે કોઈ ચેટ નથી</string>
     <string name="chat_forward_success">ફોરવર્ડ થયું</string>
-    <string name="chat_forward_failed">ફોરવર્ડ કરવામાં નિષ્ફળ</string>
     <string name="chat_message_reply">જવાબ આપો</string>
     <string name="chat_message_select">પસંદ કરો</string>
     <string name="chat_reply_attachment">જોડાણ</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">મિત્રો</string>
     <string name="chat_policy_title">આવનારી ચેટ્સ</string>
     <string name="chat_policy_friends">ફક્ત મિત્રો</string>
-    <string name="chat_policy_friends_description">ફક્ત મિત્રો તમારી સાથે ચેટ શરૂ કરી શકે છે (ડિફૉલ્ટ).</string>
     <string name="chat_policy_anyone">કોઈપણ</string>
-    <string name="chat_policy_anyone_description">કોઈપણ તમારી સાથે ચેટ શરૂ કરી શકે છે.</string>
     <string name="chat_new_search_placeholder">લોકો શોધો</string>
     <string name="chat_new_no_matches">કોઈ મેળ ખાતા લોકો નથી</string>
     <string name="chat_new_no_friends">ચેટ કરવા માટે લોકો શોધો</string>
     <string name="chat_pin">પિન</string>
     <string name="chat_unpin">અનપિન કરો</string>
-    <string name="chat_pinned_label">પિન કરેલ</string>
     <string name="chat_settings_general">સામાન્ય</string>
     <string name="chat_settings_screen_title">%1$s સેટિંગ્સ</string>
     <string name="chat_mark_read">વાંચેલું તરીકે ચિહ્નિત કરો</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">પાછલી મેળ</string>
     <string name="chat_settings_id">ચેટ ID</string>
     <string name="chat_message_edited">(સંપાદિત)</string>
+    <string name="chat_new_fallback_name">ચેટ</string>
 </resources>

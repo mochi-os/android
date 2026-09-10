@@ -423,9 +423,7 @@ fun CreateObjectScreen(
                         }
 
                         // Dynamic fields for the selected class, including the
-                        // title field. Each editor writes into fieldValues;
-                        // multi-value fields are stored comma-joined, as the
-                        // value endpoint expects.
+                        // title field. Each editor writes into fieldValues.
                         classFields.forEach { field ->
                             FieldEditor(
                                 field = field,
@@ -434,9 +432,6 @@ fun CreateObjectScreen(
                                 canWrite = !uiState.isCreating,
                                 people = uiState.people,
                                 onValueChange = { value -> fieldValues[field.id] = value },
-                                onMultiValueChange = { values ->
-                                    fieldValues[field.id] = values.joinToString(",")
-                                },
                                 onSearchUsers = { query -> viewModel.searchPeople(query) }
                             )
                             Spacer(modifier = Modifier.height(12.dp))

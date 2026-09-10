@@ -99,8 +99,10 @@ class AddMemberViewModel @Inject constructor(
             delay(SEARCH_DEBOUNCE)
             _state.update { state -> state.copy(searchLoading = true, searchError = null) }
             try {
-                val users = runCatching { repository.searchLocalUsers(query) }
-                    .getOrDefault(emptyList<LocalUser>())
+                // The people search is the primary fetch: a failure reaches the
+                // catch below and the screen's error state. The groups merge
+                // stays best-effort.
+                val users = repository.searchLocalUsers(query)
                     .filter { user -> user.id !in excluded }
                     .map { user -> SearchResult(user.id, user.name, GroupMemberType.USER) }
 

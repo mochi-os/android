@@ -23,7 +23,7 @@ import javax.inject.Singleton
 // request is x-www-form-urlencoded.
 
 data class SystemUser(
-    @SerializedName("id") val id: Long = 0,
+    @SerializedName("uid") val uid: String = "",
     @SerializedName("username") val username: String = "",
     @SerializedName("role") val role: String = "user",
     @SerializedName("status") val status: String = "active",
@@ -75,31 +75,32 @@ interface SystemUsersApi {
     @FormUrlEncoded
     @POST("settings/-/system/users/update")
     suspend fun update(
-        @Field("uid") uid: Long,
+        @Field("uid") uid: String,
         @Field("username") username: String?,
         @Field("role") role: String?,
+        @Field("token") token: String,
     ): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/delete")
-    suspend fun delete(@Field("uid") uid: Long): Response<Map<String, Any>>
+    suspend fun delete(@Field("uid") uid: String, @Field("token") token: String): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/suspend")
-    suspend fun suspendUser(@Field("uid") uid: Long): Response<Map<String, Any>>
+    suspend fun suspendUser(@Field("uid") uid: String, @Field("token") token: String): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/activate")
-    suspend fun activate(@Field("uid") uid: Long): Response<Map<String, Any>>
+    suspend fun activate(@Field("uid") uid: String, @Field("token") token: String): Response<Map<String, Any>>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/sessions")
-    suspend fun sessions(@Field("uid") uid: Long): Response<SystemUserSessions>
+    suspend fun sessions(@Field("uid") uid: String): Response<SystemUserSessions>
 
     @FormUrlEncoded
     @POST("settings/-/system/users/sessions/revoke")
     suspend fun revokeSessions(
-        @Field("uid") uid: Long,
+        @Field("uid") uid: String,
         @Field("session") session: String?,
     ): Response<RevokeSessionsResponse>
 }

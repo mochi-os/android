@@ -350,4 +350,8 @@
     <string name="game_empty_title">هنوز بازی‌ای وجود ندارد</string>
     <string name="game_select_title">یک بازی انتخاب کنید</string>
     <string name="game_select_subtitle">از نوار کناری یک بازی انتخاب کنید یا بازی جدیدی شروع کنید.</string>
+    <string name="settings_card">سبک کارت</string>
+    <string name="settings_card_theme">از تم</string>
+    <string name="settings_card_flat">تخت</string>
+    <string name="settings_card_raised">برجسته</string>
 </resources>

@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Преференции за известувања</string>
     <string name="settings_home_accounts">Поврзани сметки</string>
     <string name="settings_home_interests">Интереси</string>
-    <string name="account_method_email">Код за е-пошта</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator апликација</string>
     <string name="account_section_passkeys">Passkey-и</string>
     <string name="account_passkey_register">Додај passkey</string>
     <string name="account_passkey_delete_title">Да се избрише passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Избриши рута</string>
     <string name="route_delete_title">Да се избрише рутата?</string>
     <string name="route_path">Патека</string>
-    <string name="route_target">Цел</string>
     <string name="route_method">Метод</string>
     <string name="route_method_app">Апликација</string>
     <string name="route_method_entity">Ентитет</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Интереси</string>
     <string name="interests_summary_title">Резиме</string>
     <string name="interests_remove">Отстрани интерес</string>
-    <string name="interests_add">Додај</string>
-    <string name="document_save">Зачувај</string>
-    <string name="document_saved">Зачувано</string>
     <string name="notifprefs_title">Преференции за известувања</string>
     <string name="notifprefs_tab_categories">Категории</string>
     <string name="notifprefs_tab_topics">Теми</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Ресетирај</string>
     <string name="system_settings_reset_to_default">Ресетирај на стандардно</string>
     <string name="system_settings_reset_title">Да ресетираме на стандардно?</string>
-    <string name="system_settings_setting_updated">Поставката е ажурирана</string>
-    <string name="system_settings_update_failed">Неуспешно ажурирање на поставка</string>
     <string name="system_setting_apps_install_user">Дозволи на корисниците да инсталираат апликации</string>
     <string name="system_setting_auth_email">Најава со код од е-пошта</string>
     <string name="system_setting_auth_passkey">Најава со passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Неуспешно ажурирање на статус на корисник</string>
     <string name="system_users_toast_revoke_failed">Неуспешно повлекување на сесија</string>
 
-    <string name="settings_app_label">Mochi Поставки</string>
     <string name="settings_home_sessions">Сесии</string>
     <string name="settings_home_privacy">Политика за приватност</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Услови за услуга</string>
-    <string name="account_section_methods">Методи за најава</string>
     <string name="account_passkeys_empty">Нема регистрирани пристапни клучеви.</string>
     <string name="account_passkey_register_title">Додај пристапен клуч</string>
     <string name="account_passkey_register_message">Уредот ќе побара да потврдите. Пристапниот клуч е поврзан со овој уред и се користи за идни најавувања.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Регенерирај кодови за обновување?</string>
     <string name="account_recovery_regen_message">Постоечките кодови веднаш ќе престанат да работат. Зачувајте ги новите на безбедно место.</string>
     <string name="account_recovery_codes_warning">Зачувајте ги овие кодови — секој може да се користи само еднаш. Нема да бидат прикажани повторно.</string>
-    <string name="sessions_section_title">Активни сесии</string>
     <string name="sessions_title">Сесии</string>
     <string name="sessions_empty">Нема активни сесии.</string>
     <string name="sessions_revoke_message">Уредот што ја користи оваа сесија ќе биде одјавен.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Регенерирај резиме</string>
     <string name="interests_summary_regenerating">Регенерира…</string>
     <string name="interests_summary_empty">Додадете интереси за да генерирате резиме на она што ви се допаѓа.</string>
-    <string name="interests_weight">Тежина</string>
     <string name="interests_search_failed">Пребарувањето не успеа. Обидете се повторно.</string>
     <string name="document_privacy_title">Политика за приватност</string>
     <string name="document_rules_title">Правила</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Инсталирам %1$s…</string>
     <string name="accounts_field_api_key">API клуч</string>
     <string name="accounts_field_url">URL на сервер</string>
-    <string name="accounts_device_placeholder">Push сметките се додаваат автоматски од уредот.</string>
     <string name="accounts_set_default_ai">Постави како стандардна AI</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Испрати го кодот повторно</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Име</string>
     <string name="account_identity_fingerprint">Отпечаток</string>
     <string name="account_identity_directory_toggle">Дозволи на другите да те најдат во директориумот</string>
-    <string name="account_method_email_subtitle">Примете код за потврда преку е-пошта</string>
-    <string name="account_method_totp_subtitle">За да овозможите, поставете автентикатор подолу</string>
-    <string name="account_method_passkey_subtitle">За да овозможите, регистрирајте пристапен клуч подолу</string>
     <string name="domain_add">Додај домен</string>
     <string name="domain_add_title">Додај домен</string>
     <string name="domain_delegation_add">Додај</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Не се конфигурирани одредишта</string>
     <string name="notifprefs_transport_fcm">Push за Android</string>
     <string name="notifprefs_no_destinations">Нема дестинации</string>
+    <string name="account_data_generate">Генерирај лозинка</string>
+    <string name="accounts_field_server">URL на сервер</string>
+    <string name="accounts_field_token">Токен за пристап</string>
+    <string name="accounts_field_topic">Тема</string>
+    <string name="accounts_field_secret">Тајна за потпишување</string>
+    <string name="account_totp_open">Отвори во апликацијата за автентикација</string>
 </resources>

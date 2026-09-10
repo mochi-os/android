@@ -352,4 +352,8 @@
     <string name="game_empty_title">Encara no hi ha jocs</string>
     <string name="game_select_title">Selecciona un joc</string>
     <string name="game_select_subtitle">Tria un joc de la barra lateral o comença\'n un de nou.</string>
+    <string name="settings_card">Estil de la targeta</string>
+    <string name="settings_card_theme">Del tema</string>
+    <string name="settings_card_flat">Plana</string>
+    <string name="settings_card_raised">Elevat</string>
 </resources>

@@ -27,7 +27,6 @@ import retrofit2.http.Query
 
 data class CreateChatResponse(
     val id: String = "",
-    val fingerprint: String = "",
     val name: String = "",
     val members: List<ChatMember> = emptyList()
 )
@@ -39,12 +38,9 @@ data class NewChatResponse(
 
 data class MessageListResponse(
     val messages: List<ChatMessage> = emptyList(),
-    val hasMore: Boolean = false,
-    // Keyset cursor for the next (older) page: the oldest message's timestamp
-    // plus its id. The id disambiguates messages sharing one whole-second
-    // nextCursor, which a timestamp-only cursor cannot.
-    val nextCursor: Long? = null,
-    val nextCursorId: String? = null
+    val more: Boolean = false,
+    /** The server's opaque keyset cursor for the next (older) page; null on the last. */
+    val cursor: String? = null
 )
 
 data class SendMessageResponse(val id: String = "")
@@ -66,12 +62,13 @@ data class EditMessageResponse(
 
 data class ForwardResponse(
     val forwarded: List<String> = emptyList(),
-    @SerializedName("to_chat") val toChat: String = ""
+    val destination: String = ""
 )
 
 data class ReactResponse(
-    @SerializedName("reaction_counts") val reactionCounts: Map<String, Int> = emptyMap(),
-    @SerializedName("my_reaction") val myReaction: String? = null
+    val reactions: Map<String, Int> = emptyMap(),
+    /** The caller's own reaction, null once cleared. */
+    val reaction: String? = null
 )
 
 data class DeleteMessagesResponse(val deleted: List<String> = emptyList())
@@ -83,9 +80,9 @@ data class SearchResponse(
     val results: List<ChatSearchResult> = emptyList()
 )
 
-// Whom may start a chat with this user (the chat_policy preference).
+// Whom may start a chat with this user (the policy preference).
 data class ChatPreferencesResponse(
-    @SerializedName("chat_policy") val chatPolicy: String = "friends"
+    val policy: String = "friends"
 )
 
 // A directory person for the new-chat picker (non-friends may be addressed
@@ -112,7 +109,7 @@ interface ChatApi {
     @FormUrlEncoded
     @POST("-/preferences/set")
     suspend fun setPreferences(
-        @Field("chat_policy") chatPolicy: String
+        @Field("policy") policy: String
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
@@ -134,8 +131,7 @@ interface ChatApi {
     @GET("{chatId}/-/messages")
     suspend fun getMessages(
         @Path("chatId") chatId: String,
-        @Query("before") before: Long? = null,
-        @Query("before_id") beforeId: String? = null,
+        @Query("cursor") cursor: String? = null,
         @Query("limit") limit: Int? = null
     ): Response<ApiResponse<MessageListResponse>>
 
@@ -144,7 +140,7 @@ interface ChatApi {
     suspend fun sendMessage(
         @Path("chatId") chatId: String,
         @Field("body") body: String,
-        @Field("reply_to") replyTo: String? = null
+        @Field("reply") reply: String? = null
     ): Response<ApiResponse<SendMessageResponse>>
 
     @Multipart
@@ -152,7 +148,7 @@ interface ChatApi {
     suspend fun sendMessageWithFiles(
         @Path("chatId") chatId: String,
         @Part("body") body: RequestBody,
-        @Part("reply_to") replyTo: RequestBody? = null,
+        @Part("reply") reply: RequestBody? = null,
         @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<SendMessageResponse>>
 
@@ -201,14 +197,14 @@ interface ChatApi {
         @Field("body") body: String,
     ): Response<ApiResponse<EditMessageResponse>>
 
-    // message_ids is a JSON-encoded array string (e.g. ["id1","id2"]), matching
-    // the web client's URLSearchParams({ message_ids: JSON.stringify(...) }).
+    // messages is a JSON-encoded array string of ids (e.g. ["id1","id2"]),
+    // matching the web client's URLSearchParams({ messages: JSON.stringify(...) }).
     @FormUrlEncoded
     @POST("{chatId}/-/messages/forward")
     suspend fun forwardMessages(
         @Path("chatId") chatId: String,
-        @Field("message_ids") messageIds: String,
-        @Field("to_chat") toChat: String
+        @Field("messages") messages: String,
+        @Field("destination") destination: String
     ): Response<ApiResponse<ForwardResponse>>
 
     // Forward to a friend: the server atomically reuses or creates the 1-on-1
@@ -220,7 +216,7 @@ interface ChatApi {
     suspend fun forwardToFriend(
         @Path("chatId") chatId: String,
         @Field("member") member: String,
-        @Field("message_ids") messageIds: String
+        @Field("messages") messages: String
     ): Response<ApiResponse<ForwardResponse>>
 
     @FormUrlEncoded
@@ -235,7 +231,7 @@ interface ChatApi {
     @POST("{chatId}/-/messages/delete")
     suspend fun deleteMessages(
         @Path("chatId") chatId: String,
-        @Field("message_ids") messageIds: String
+        @Field("messages") messages: String
     ): Response<ApiResponse<DeleteMessagesResponse>>
 
     @FormUrlEncoded

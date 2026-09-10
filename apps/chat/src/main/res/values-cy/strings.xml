@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Enw arddangos</string>
-    <string name="chat_auth_verification_failed">Dilysiad wedi methu</string>
     <string name="chat_list_title">Sgyrsiau</string>
     <string name="chat_list_search">Chwilio</string>
     <string name="chat_list_logout">Allgofnodi</string>
     <string name="chat_list_new">Sgwrs newydd</string>
     <string name="chat_new_title">Sgwrs newydd</string>
     <string name="chat_new_name">Enw\'r grŵp</string>
-    <string name="chat_new_friends">Ffrindiau</string>
     <string name="chat_message_placeholder">Neges</string>
     <string name="chat_attachment_add">Atodi ffeiliau</string>
-    <string name="chat_message_attach">Atodi ffeiliau</string>
     <string name="chat_settings_title">Gosodiadau sgwrs</string>
     <string name="chat_settings_rename_label">Enw\'r sgwrs</string>
     <string name="chat_settings_save">Cadw</string>
@@ -29,19 +25,12 @@
     <string name="chat_chat_not_found">Sgwrs heb ei chanfod</string>
 
     <string name="chat_message_send">Anfon</string>
-    <string name="chat_auth_login_failed">Methodd y mewngofnodi</string>
-    <string name="chat_auth_create_identity_failed">Methwyd â chreu hunaniaeth</string>
-    <string name="chat_auth_mfa_unsupported">Nid yw MFA yn cael ei gefnogi eto yn yr ap symudol</string>
-    <string name="chat_auth_enter_code_sent">Rhowch y cod a anfonwyd at %1$s</string>
-    <string name="chat_auth_create_identity">Creu eich hunaniaeth</string>
     <string name="chat_messages_load_more">Llwytho negeseuon hŷn</string>
     <string name="chat_attachment_remove">Tynnu atodiad</string>
     <string name="chat_attachment_move_up">Symud i fyny</string>
     <string name="chat_attachment_move_down">Symud i lawr</string>
-    <string name="chat_message_remove_attachment">Tynnu atodiad</string>
 
     <string name="notification_channel_chat">Hysbysiadau sgwrs</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
     <string name="chat_list_empty">Dim sgyrsiau eto</string>
     <string name="chat_new_existing_chat">Agor sgwrs sy\'n bodoli</string>
     <string name="chat_new_start">Dechrau sgwrs</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_loading">Wrthi\'n llwytho negeseuon…</string>
     <string name="chat_messages_empty">Dim negeseuon eto — dywedwch helo!</string>
     <string name="chat_attachment_label">Ffeil</string>
-    <string name="chat_message_too_long">Mae\'r neges yn rhy hir</string>
-    <string name="chat_message_empty">Ni all y neges fod yn wag</string>
     <string name="chat_settings_rename">Ailenwi\'r sgwrs</string>
     <string name="chat_settings_add_member_empty">Dim ffrindiau i\'w hychwanegu</string>
     <string name="chat_settings_remove_member_message">Tynnu %1$s o\'r sgwrs hon?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Cafodd y neges hon ei dileu</string>
     <string name="chat_search_hint">Chwilio yn y sgwrs...</string>
-    <string name="chat_search_no_results">Dim canlyniadau</string>
     <string name="chat_message_forward">Anfon ymlaen</string>
     <string name="chat_forward_title">Anfon ymlaen at…</string>
     <string name="chat_forward_search">Chwilio sgyrsiau…</string>
     <string name="chat_forward_empty">Dim sgyrsiau i anfon ymlaen atynt</string>
     <string name="chat_forward_success">Anfonwyd ymlaen</string>
-    <string name="chat_forward_failed">Methwyd anfon ymlaen</string>
 
     <string name="chat_message_reply">Ateb</string>
     <string name="chat_message_select">Dewis</string>
@@ -82,15 +67,12 @@
     <string name="chat_forward_friends">Ffrindiau</string>
     <string name="chat_policy_title">Sgyrsiau sy\'n dod i mewn</string>
     <string name="chat_policy_friends">Ffrindiau yn unig</string>
-    <string name="chat_policy_friends_description">Dim ond ffrindiau all ddechrau sgwrs gyda chi (rhagosodedig).</string>
     <string name="chat_policy_anyone">Unrhyw un</string>
-    <string name="chat_policy_anyone_description">Gall unrhyw un ddechrau sgwrs gyda chi.</string>
     <string name="chat_new_search_placeholder">Chwilio am bobl</string>
     <string name="chat_new_no_matches">Dim pobl gyfatebol</string>
     <string name="chat_new_no_friends">Chwiliwch am bobl i sgwrsio â nhw</string>
     <string name="chat_pin">Pinio</string>
     <string name="chat_unpin">Dadbinio</string>
-    <string name="chat_pinned_label">Wedi\'i binio</string>
     <string name="chat_settings_general">Cyffredinol</string>
     <string name="chat_settings_screen_title">Gosodiadau %1$s</string>
     <string name="chat_mark_read">Marcio fel wedi darllen</string>
@@ -99,4 +81,5 @@
     <string name="chat_search_prev">Cyfatebiaeth flaenorol</string>
     <string name="chat_settings_id">ID sgwrs</string>
     <string name="chat_message_edited">(golygwyd)</string>
+    <string name="chat_new_fallback_name">Sgwrs</string>
 </resources>

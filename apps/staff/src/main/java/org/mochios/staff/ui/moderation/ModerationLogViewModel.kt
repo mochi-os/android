@@ -56,7 +56,7 @@ class ModerationLogViewModel @Inject constructor(
         // signal that triggers the listings page's invalidation.
         viewModelScope.launch {
             eventsBus.events
-                .filter { it is StaffEvent.ModerationUpdated }
+                .filter { it is StaffEvent.ModerationUpdated || it is StaffEvent.Unknown }
                 .collect { reload() }
         }
     }

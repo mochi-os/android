@@ -354,4 +354,8 @@
     <string name="game_empty_title">עדיין אין משחקים</string>
     <string name="game_select_title">בחר משחק</string>
     <string name="game_select_subtitle">בחר משחק מסרגל הצד או התחל משחק חדש.</string>
+    <string name="settings_card">סגנון הכרטיס</string>
+    <string name="settings_card_theme">מערכת נושא</string>
+    <string name="settings_card_flat">שטוח</string>
+    <string name="settings_card_raised">מורם</string>
 </resources>

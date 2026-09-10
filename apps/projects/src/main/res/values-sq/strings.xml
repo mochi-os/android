@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Të dhënat e projektit u ruajtën</string>
     <string name="projects_exporting">Po përgatitet eksporti…</string>
     <string name="projects_board_add_column">Shto kolonë</string>
+    <string name="projects_design_sample">Shembull %1$d</string>
 </resources>

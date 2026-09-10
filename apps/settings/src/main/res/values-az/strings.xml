@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Bildiriş üstünlükləri</string>
     <string name="settings_home_accounts">Qoşulmuş hesablar</string>
     <string name="settings_home_interests">Maraqlar</string>
-    <string name="account_method_email">E-poçt kodu</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator tətbiqi</string>
     <string name="account_section_passkeys">Passkey-lər</string>
     <string name="account_passkey_register">Passkey əlavə et</string>
     <string name="account_passkey_delete_title">Passkey silinsin?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Marşrutu sil</string>
     <string name="route_delete_title">Marşrut silinsin?</string>
     <string name="route_path">Yol</string>
-    <string name="route_target">Hədəf</string>
     <string name="route_method">Metod</string>
     <string name="route_method_app">Tətbiq</string>
     <string name="route_method_entity">Qurum</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Maraqlar</string>
     <string name="interests_summary_title">Xülasə</string>
     <string name="interests_remove">Marağı sil</string>
-    <string name="interests_add">Əlavə et</string>
-    <string name="document_save">Saxla</string>
-    <string name="document_saved">Saxlanıldı</string>
     <string name="notifprefs_title">Bildiriş üstünlükləri</string>
     <string name="notifprefs_tab_categories">Kateqoriyalar</string>
     <string name="notifprefs_tab_topics">Cəmi sifarişlər</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Sıfırla</string>
     <string name="system_settings_reset_to_default">Standarta sıfırla</string>
     <string name="system_settings_reset_title">Standarta sıfırlansın?</string>
-    <string name="system_settings_setting_updated">Parametr yeniləndi</string>
-    <string name="system_settings_update_failed">Parametri yeniləmək alınmadı</string>
     <string name="system_setting_apps_install_user">İstifadəçilərə tətbiq quraşdırmağa icazə ver</string>
     <string name="system_setting_auth_email">E-poçt kodu istifadə edərək daxil ol</string>
     <string name="system_setting_auth_passkey">Passkey istifadə edərək daxil ol</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">İstifadəçi statusunu yeniləmək alınmadı</string>
     <string name="system_users_toast_revoke_failed">Sessiyanı ləğv etmək alınmadı</string>
 
-    <string name="settings_app_label">Mochi Parametrlər</string>
     <string name="settings_home_sessions">Sessiyalar</string>
     <string name="settings_home_privacy">Məxfilik siyasəti</string>
     <string name="settings_home_rules">Qaydalar</string>
     <string name="settings_home_terms">Xidmət şərtləri</string>
-    <string name="account_section_methods">Daxil olma üsulları</string>
     <string name="account_passkeys_empty">Qeydiyyatdan keçmiş giriş açarları yoxdur.</string>
     <string name="account_passkey_register_title">Giriş açarı əlavə et</string>
     <string name="account_passkey_register_message">Cihazınız təsdiq etməyi xahiş edəcək. Giriş açarı bu cihaza bağlıdır və gələcək girişlər üçün istifadə olunur.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Bərpa kodlarını yenidən yaradılsın?</string>
     <string name="account_recovery_regen_message">Mövcud kodlar dərhal işləməyəcək. Yenilərini təhlükəsiz yerdə saxlayın.</string>
     <string name="account_recovery_codes_warning">Bu kodları saxlayın — hər biri yalnız bir dəfə istifadə oluna bilər. Yenidən göstərilməyəcək.</string>
-    <string name="sessions_section_title">Aktiv sessiyalar</string>
     <string name="sessions_title">Sessiyalar</string>
     <string name="sessions_empty">Aktiv sessiya yoxdur.</string>
     <string name="sessions_revoke_message">Bu sessiyanı istifadə edən cihazdan çıxış ediləcək.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Xülasəni yenidən yarat</string>
     <string name="interests_summary_regenerating">Yenidən yaradılır…</string>
     <string name="interests_summary_empty">Sevdiklərinizin xülasəsini yaratmaq üçün bəzi maraqlar əlavə edin.</string>
-    <string name="interests_weight">Çəki</string>
     <string name="interests_search_failed">Axtarış uğursuz oldu. Yenidən cəhd edin.</string>
     <string name="document_privacy_title">Məxfilik siyasəti</string>
     <string name="document_rules_title">Qaydalar</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s quraşdırılır…</string>
     <string name="accounts_field_api_key">API açarı</string>
     <string name="accounts_field_url">Server URL</string>
-    <string name="accounts_device_placeholder">Push hesabları cihaz tərəfindən avtomatik əlavə edilir.</string>
     <string name="accounts_set_default_ai">Varsayılan AI kimi təyin et</string>
     <string name="accounts_verify_code">Kod</string>
     <string name="accounts_verify_resend">Kodu yenidən göndər</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ad</string>
     <string name="account_identity_fingerprint">Barmaq izi</string>
     <string name="account_identity_directory_toggle">Başqalarının sizi kataloqda tapmasına icazə ver</string>
-    <string name="account_method_email_subtitle">Təsdiq kodunu e-poçtla alın</string>
-    <string name="account_method_totp_subtitle">Aktivləşdirmək üçün aşağıda autentifikator qurun</string>
-    <string name="account_method_passkey_subtitle">Aktivləşdirmək üçün aşağıda giriş açarı qeydiyyatdan keçirin</string>
     <string name="domain_add">Domen əlavə et</string>
     <string name="domain_add_title">Domen əlavə et</string>
     <string name="domain_delegation_add">Əlavə et</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Konfiqurasiya edilmiş təyinat yoxdur</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Təyinat yoxdur</string>
+    <string name="account_data_generate">Gizli söz yarat</string>
+    <string name="accounts_field_server">Server URL</string>
+    <string name="accounts_field_token">Giriş tokeni</string>
+    <string name="accounts_field_topic">Mövzu</string>
+    <string name="accounts_field_secret">İmza sirri</string>
+    <string name="account_totp_open">Autentifikator tətbiqində aç</string>
 </resources>

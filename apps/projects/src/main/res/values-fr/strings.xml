@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Données du projet enregistrées</string>
     <string name="projects_exporting">Préparation de l\'export…</string>
     <string name="projects_board_add_column">Ajouter une colonne</string>
+    <string name="projects_design_sample">Exemple %1$d</string>
 </resources>

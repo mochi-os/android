@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">ھەڵبژاردنەکانی ئاگاداری</string>
     <string name="settings_home_accounts">هەژمارە پەیوەستکراوەکان</string>
     <string name="settings_home_interests">ئارەزووەکان</string>
-    <string name="account_method_email">کۆدی ئیمەیڵ</string>
-    <string name="account_method_passkey">پاسکی</string>
-    <string name="account_method_totp">ئەپی پشتڕاستکەرەوە</string>
     <string name="account_section_passkeys">پاسکییەکان</string>
     <string name="account_passkey_register">زیادکردنی passkey</string>
     <string name="account_passkey_delete_title">passkey بسڕەوە؟</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">سڕینەوەی ڕێچکە</string>
     <string name="route_delete_title">ڕێچکە بسڕەوە؟</string>
     <string name="route_path">ڕێگا</string>
-    <string name="route_target">ئامانج</string>
     <string name="route_method">ڕێگا</string>
     <string name="route_method_app">ئەپ</string>
     <string name="route_method_entity">ئەنتیتی</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">ئارەزووەکان</string>
     <string name="interests_summary_title">پوختە</string>
     <string name="interests_remove">لابردنی بەرژەوەندی</string>
-    <string name="interests_add">زیادکردن</string>
-    <string name="document_save">پاشەکەوتکردن</string>
-    <string name="document_saved">پاشەکەوت کرا</string>
     <string name="notifprefs_title">ھەڵبژاردنەکانی ئاگاداری</string>
     <string name="notifprefs_tab_categories">هاوپۆلەکان</string>
     <string name="notifprefs_tab_topics">بابەتەکان</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">ڕێکخستنەوە</string>
     <string name="system_settings_reset_to_default">گەڕاندنەوە بۆ بنەڕەت</string>
     <string name="system_settings_reset_title">بگەڕێیتەوە بۆ بنەڕەت؟</string>
-    <string name="system_settings_setting_updated">ڕێکخستن نوێکرایەوە</string>
-    <string name="system_settings_update_failed">نوێکردنەوەی ڕێکخستن سەرکەوتوو نەبوو</string>
     <string name="system_setting_apps_install_user">ڕێگە بدە بە بەکارهێنەران ئەپ دامەزرێنن</string>
     <string name="system_setting_auth_email">چوونەژوورەوە بە کۆدی ئیمەیڵ</string>
     <string name="system_setting_auth_passkey">چوونەژوورەوە بە Passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">نوێکردنەوەی دۆخی بەکارهێنەر سەرکەوتوو نەبوو</string>
     <string name="system_users_toast_revoke_failed">هەڵوەشاندنەوەی نشست سەرکەوتوو نەبوو</string>
 
-    <string name="settings_app_label">Mochi ڕێکخستنەکان</string>
     <string name="settings_home_sessions">دانیشتنەکان</string>
     <string name="settings_home_privacy">ڕێنماییەکانی پاراستنی نهێنی</string>
     <string name="settings_home_rules">یاساکان</string>
     <string name="settings_home_terms">مەرجەکانی خزمەتگوزاری</string>
-    <string name="account_section_methods">ڕێگاکانی چوونەژوورەوە</string>
     <string name="account_passkeys_empty">ھیچ کلیلێکی چوونەژوورەوە تۆمار نەکراوە.</string>
     <string name="account_passkey_register_title">کلیلی چوونەژوورەوە زیاد بکە</string>
     <string name="account_passkey_register_message">ئامێرەکەت داوای پشتڕاستکردنەوەت لێ دەکات. کلیلەکە بەم ئامێرە بەستراوەتەوە و بۆ چوونەژوورەوەی داھاتوو بەکاردێت.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">کۆدەکانی گەڕاندنەوە دوبارە دروست بکەینەوە؟</string>
     <string name="account_recovery_regen_message">کۆدە ھەنووکەیییەکان دەستبەجێ بەکار نایێن. کۆدە نوێیەکان لە شوێنێکی پارێزراو ھەڵبگرە.</string>
     <string name="account_recovery_codes_warning">ئەم کۆدانە ھەڵبگرە — ھەر یەکێکیان تەنھا یەک جار بەکاردێت. جارێکی تر پیشان نادرێنەوە.</string>
-    <string name="sessions_section_title">دانیشتنە چالاکەکان</string>
     <string name="sessions_title">دانیشتنەکان</string>
     <string name="sessions_empty">دانیشتنی چالاک نییە.</string>
     <string name="sessions_revoke_message">ئامێرەکە کە ئەم دانیشتنە بەکاردەھێنێت دەربەرکراو دەبێت.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">کورتە دوبارە دروست بکە</string>
     <string name="interests_summary_regenerating">دوبارە دروست دەکرێت…</string>
     <string name="interests_summary_empty">چەند ئارەزوویەک زیاد بکە بۆ دروستکردنی کورتەی ئەو شتانەی پێت خۆشە.</string>
-    <string name="interests_weight">کێش</string>
     <string name="interests_search_failed">گەڕان شکستی هێنا. تکایە دوبارە ھەوڵ بدە.</string>
     <string name="document_privacy_title">ڕێنماییەکانی پاراستنی نهێنی</string>
     <string name="document_rules_title">یاساکان</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s دادەمەزرێت…</string>
     <string name="accounts_field_api_key">کلیلی API</string>
     <string name="accounts_field_url">URLی سێرڤەر</string>
-    <string name="accounts_device_placeholder">ھەژمارەکانی push بە خۆکار لەلایەن ئامێرەوە زیاد دەکرێن.</string>
     <string name="accounts_set_default_ai">وەک AI ی بنەڕەتی دایبنێ</string>
     <string name="accounts_verify_code">کۆد</string>
     <string name="accounts_verify_resend">کۆد دوبارە بنێرە</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">ناو</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">ڕێگە بدە بە کەسانی تر تۆ بدۆزنەوە لە ڕێبەردا</string>
-    <string name="account_method_email_subtitle">کۆدی پشتڕاستکردنەوە بە ئیمەیڵ وەربگرە</string>
-    <string name="account_method_totp_subtitle">بۆ چالاککردن، لە خوارەوە ڕاستکەرەوەیەک دابنێ</string>
-    <string name="account_method_passkey_subtitle">بۆ چالاککردن، لە خوارەوە پاسکیەک تۆمار بکە</string>
     <string name="domain_add">زیادکردنی دۆمەین</string>
     <string name="domain_add_title">زیادکردنی دۆمەین</string>
     <string name="domain_delegation_add">زیادکردن</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">هیچ گەیشتنگایەک ڕێکنەخراوە</string>
     <string name="notifprefs_transport_fcm">پاڵنانی Android</string>
     <string name="notifprefs_no_destinations">هیچ ئامانجێک نییە</string>
+    <string name="account_data_generate">دەستەواژەی نهێنی درووست بکە</string>
+    <string name="accounts_field_server">URLی سێرڤەر</string>
+    <string name="accounts_field_token">تۆکنی دەستپێگەیشتن</string>
+    <string name="accounts_field_topic">بابەت</string>
+    <string name="accounts_field_secret">نهێنی واژۆ</string>
+    <string name="account_totp_open">لە ئەپی ڕەسەنێتی بکەرەوە</string>
 </resources>

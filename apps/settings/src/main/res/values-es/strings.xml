@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferencias de notificaciones</string>
     <string name="settings_home_accounts">Cuentas conectadas</string>
     <string name="settings_home_interests">Intereses</string>
-    <string name="account_method_email">Código por correo</string>
-    <string name="account_method_passkey">Clave de acceso</string>
-    <string name="account_method_totp">App autenticadora</string>
     <string name="account_section_passkeys">Claves de acceso</string>
     <string name="account_passkey_register">Añadir clave de acceso</string>
     <string name="account_passkey_delete_title">¿Eliminar clave de acceso?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Eliminar ruta</string>
     <string name="route_delete_title">¿Eliminar ruta?</string>
     <string name="route_path">Ruta</string>
-    <string name="route_target">Destino</string>
     <string name="route_method">Método</string>
     <string name="route_method_app">Aplicación</string>
     <string name="route_method_entity">Entidad</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Intereses</string>
     <string name="interests_summary_title">Resumen</string>
     <string name="interests_remove">Eliminar interés</string>
-    <string name="interests_add">Añadir</string>
-    <string name="document_save">Guardar</string>
-    <string name="document_saved">Guardado</string>
     <string name="notifprefs_title">Preferencias de notificaciones</string>
     <string name="notifprefs_tab_categories">Categorías</string>
     <string name="notifprefs_tab_topics">Temas</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Restablecer</string>
     <string name="system_settings_reset_to_default">Restablecer al valor predeterminado</string>
     <string name="system_settings_reset_title">¿Restablecer al valor predeterminado?</string>
-    <string name="system_settings_setting_updated">Ajuste actualizado</string>
-    <string name="system_settings_update_failed">Error al actualizar el ajuste</string>
     <string name="system_setting_apps_install_user">Permitir a los usuarios instalar apps</string>
     <string name="system_setting_auth_email">Iniciar sesión con código por correo electrónico</string>
     <string name="system_setting_auth_passkey">Iniciar sesión con clave de acceso</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Error al actualizar el estado del usuario</string>
     <string name="system_users_toast_revoke_failed">Error al revocar la sesión</string>
 
-    <string name="settings_app_label">Mochi Ajustes</string>
     <string name="settings_home_sessions">Sesiones</string>
     <string name="settings_home_privacy">Política de privacidad</string>
     <string name="settings_home_rules">Reglas</string>
     <string name="settings_home_terms">Términos del servicio</string>
-    <string name="account_section_methods">Métodos de inicio de sesión</string>
     <string name="account_passkeys_empty">No hay claves de acceso registradas.</string>
     <string name="account_passkey_register_title">Añadir clave de acceso</string>
     <string name="account_passkey_register_message">Tu dispositivo te pedirá confirmar. La clave de acceso se vincula a este dispositivo y se usa para futuros inicios de sesión.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">¿Regenerar los códigos de recuperación?</string>
     <string name="account_recovery_regen_message">Los códigos existentes dejarán de funcionar de inmediato. Guarda los nuevos en un lugar seguro.</string>
     <string name="account_recovery_codes_warning">Guarda estos códigos — cada uno solo se puede usar una vez. No se mostrarán de nuevo.</string>
-    <string name="sessions_section_title">Sesiones activas</string>
     <string name="sessions_title">Sesiones</string>
     <string name="sessions_empty">No hay sesiones activas.</string>
     <string name="sessions_revoke_message">El dispositivo que usa esta sesión se cerrará.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Regenerar resumen</string>
     <string name="interests_summary_regenerating">Regenerando…</string>
     <string name="interests_summary_empty">Añade algunos intereses para generar un resumen de lo que te gusta.</string>
-    <string name="interests_weight">Peso</string>
     <string name="interests_search_failed">La búsqueda falló. Por favor, vuelve a intentarlo.</string>
     <string name="document_privacy_title">Política de privacidad</string>
     <string name="document_rules_title">Reglas</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Instalando %1$s…</string>
     <string name="accounts_field_api_key">Clave API</string>
     <string name="accounts_field_url">URL del servidor</string>
-    <string name="accounts_device_placeholder">Las cuentas de push se añaden automáticamente desde el dispositivo.</string>
     <string name="accounts_set_default_ai">Establecer como IA predeterminada</string>
     <string name="accounts_verify_code">Código</string>
     <string name="accounts_verify_resend">Reenviar código</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nombre</string>
     <string name="account_identity_fingerprint">Huella</string>
     <string name="account_identity_directory_toggle">Permitir que otros te encuentren en el directorio</string>
-    <string name="account_method_email_subtitle">Recibe un código de verificación por correo electrónico</string>
-    <string name="account_method_totp_subtitle">Configura un autenticador a continuación para activarlo</string>
-    <string name="account_method_passkey_subtitle">Registra una clave de acceso a continuación para activarla</string>
     <string name="domain_add">Añadir dominio</string>
     <string name="domain_add_title">Añadir dominio</string>
     <string name="domain_delegation_add">Añadir</string>
@@ -399,4 +382,10 @@
     <string name="notifprefs_test_none">No hay destinos configurados</string>
     <string name="notifprefs_transport_fcm">Push de Android</string>
     <string name="notifprefs_no_destinations">Sin destinos</string>
+    <string name="account_data_generate">Generar frase de contraseña</string>
+    <string name="accounts_field_server">URL del servidor</string>
+    <string name="accounts_field_token">Token de acceso</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Secreto de firma</string>
+    <string name="account_totp_open">Abrir en la aplicación de autenticación</string>
 </resources>

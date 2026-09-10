@@ -350,4 +350,8 @@
     <string name="game_empty_title">अभी तक कोई गेम नहीं</string>
     <string name="game_select_title">गेम चुनें</string>
     <string name="game_select_subtitle">साइडबार से गेम चुनें या नया गेम शुरू करें।</string>
+    <string name="settings_card">कार्ड शैली</string>
+    <string name="settings_card_theme">थीम से</string>
+    <string name="settings_card_flat">सपाट</string>
+    <string name="settings_card_raised">उठा हुआ</string>
 </resources>

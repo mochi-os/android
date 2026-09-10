@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">सूचना पसंद</string>
     <string name="settings_home_accounts">जुड़ल खाता</string>
     <string name="settings_home_interests">रुचि</string>
-    <string name="account_method_email">ईमेल कोड</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator ऐप</string>
     <string name="account_section_passkeys">Passkey</string>
     <string name="account_passkey_register">Passkey जोड़ीं</string>
     <string name="account_passkey_delete_title">Passkey मेटाईं?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">रास्ता मेटाईं</string>
     <string name="route_delete_title">रास्ता मेटाईं?</string>
     <string name="route_path">पथ</string>
-    <string name="route_target">लक्ष्य</string>
     <string name="route_method">विधि</string>
     <string name="route_method_app">ऐप</string>
     <string name="route_method_entity">एंटिटी</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">रुचि</string>
     <string name="interests_summary_title">सारांश</string>
     <string name="interests_remove">रुचि हटाईं</string>
-    <string name="interests_add">जोड़ीं</string>
-    <string name="document_save">सहेजीं</string>
-    <string name="document_saved">सहेजल गइल</string>
     <string name="notifprefs_title">सूचना पसंद</string>
     <string name="notifprefs_tab_categories">श्रेणी</string>
     <string name="notifprefs_tab_topics">विषय सब</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">रीसेट करीं</string>
     <string name="system_settings_reset_to_default">डिफ़ॉल्ट पर रीसेट करीं</string>
     <string name="system_settings_reset_title">डिफ़ॉल्ट पर रीसेट करीं?</string>
-    <string name="system_settings_setting_updated">सेटिंग अपडेट भइल</string>
-    <string name="system_settings_update_failed">सेटिंग अपडेट करे में विफल</string>
     <string name="system_setting_apps_install_user">उपयोगकर्ता के ऐप स्थापित करे के अनुमति दीं</string>
     <string name="system_setting_auth_email">ईमेल कोड के इस्तेमाल से लॉगिन</string>
     <string name="system_setting_auth_passkey">पासकी के इस्तेमाल से लॉगिन</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">यूजर के स्थिति अपडेट करे में विफल</string>
     <string name="system_users_toast_revoke_failed">सत्र रद्द करे में विफल</string>
 
-    <string name="settings_app_label">Mochi सेटिंग</string>
     <string name="settings_home_sessions">सत्र</string>
     <string name="settings_home_privacy">गोपनीयता नीति</string>
     <string name="settings_home_rules">नियम</string>
     <string name="settings_home_terms">सेवा के शर्त</string>
-    <string name="account_section_methods">लॉगिन के तरीका</string>
     <string name="account_passkeys_empty">कौनो पासकी रजिस्टर नइखे।</string>
     <string name="account_passkey_register_title">पासकी जोड़ीं</string>
     <string name="account_passkey_register_message">राउर डिवाइस पुष्टि करे खातिर कहीं। पासकी एह डिवाइस से जुड़ल बा अउर भविष्य के साइन-इन खातिर इस्तेमाल होखी।</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">रिकवरी कोड फेर से बनाईं?</string>
     <string name="account_recovery_regen_message">मौजूदा कोड तुरंत काम करल बंद कर दीही। नया के सुरक्षित जगह राखीं।</string>
     <string name="account_recovery_codes_warning">एह कोड के सहेजीं — हर एक के एक्के बार इस्तेमाल हो सकेला। फेर ना देखावल जाई।</string>
-    <string name="sessions_section_title">सक्रिय सत्र</string>
     <string name="sessions_title">सत्र</string>
     <string name="sessions_empty">कौनो सक्रिय सत्र नइखे।</string>
     <string name="sessions_revoke_message">एह सत्र के इस्तेमाल करे वाला डिवाइस साइन आउट हो जाई।</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">सारांश फेर से बनाईं</string>
     <string name="interests_summary_regenerating">फेर से बनात बा…</string>
     <string name="interests_summary_empty">रउआ जे पसंद करीं ओकर सारांश बनावे खातिर कुछ रुचि जोड़ीं।</string>
-    <string name="interests_weight">वजन</string>
     <string name="interests_search_failed">खोज विफल। फेर से कोशिश करीं।</string>
     <string name="document_privacy_title">गोपनीयता नीति</string>
     <string name="document_rules_title">नियम</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s इंस्टॉल कइल जा रहल बा…</string>
     <string name="accounts_field_api_key">API कुंजी</string>
     <string name="accounts_field_url">सर्वर URL</string>
-    <string name="accounts_device_placeholder">पुश खाता डिवाइस से अपने आप जुड़ जाला।</string>
     <string name="accounts_set_default_ai">डिफ़ॉल्ट AI के रूप में सेट करीं</string>
     <string name="accounts_verify_code">कोड</string>
     <string name="accounts_verify_resend">कोड फेर भेजीं</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">नाम</string>
     <string name="account_identity_fingerprint">फिंगरप्रिंट</string>
     <string name="account_identity_directory_toggle">दोसरा के निर्देशिका में राउर खोज करे के अनुमति दीं</string>
-    <string name="account_method_email_subtitle">ईमेल से सत्यापन कोड पाईं</string>
-    <string name="account_method_totp_subtitle">चालू करे खातिर नीचे प्रमाणक सेट करीं</string>
-    <string name="account_method_passkey_subtitle">चालू करे खातिर नीचे पासकी रजिस्टर करीं</string>
     <string name="domain_add">डोमेन जोड़ीं</string>
     <string name="domain_add_title">डोमेन जोड़ीं</string>
     <string name="domain_delegation_add">जोड़ीं</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">कौनो गंतव्य सेट नइखे</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
     <string name="notifprefs_no_destinations">कवनो गंतव्य ना</string>
+    <string name="account_data_generate">पासफ्रेज बनाईं</string>
+    <string name="accounts_field_server">सर्वर URL</string>
+    <string name="accounts_field_token">पहुँच टोकन</string>
+    <string name="accounts_field_topic">विषय</string>
+    <string name="accounts_field_secret">हस्ताक्षर गुप्त कुंजी</string>
+    <string name="account_totp_open">ऑथेंटिकेटर ऐप में खोलीं</string>
 </resources>

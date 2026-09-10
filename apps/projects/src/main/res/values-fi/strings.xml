@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Projektin tiedot tallennettu</string>
     <string name="projects_exporting">Valmistellaan vientiä…</string>
     <string name="projects_board_add_column">Lisää sarake</string>
+    <string name="projects_design_sample">Esimerkki %1$d</string>
 </resources>

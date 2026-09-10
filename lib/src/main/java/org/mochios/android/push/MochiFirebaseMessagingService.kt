@@ -138,7 +138,7 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         // launch-ok: deepLink is the mochi: URI this file builds from the push payload's link
         val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-            // Pin the PendingIntent to the matching launcher alias so badge-
+            // Pin the PendingIntent to the matching launcher activity so badge-
             // capable launchers (Octopi etc.) attribute the unread dot to the
             // right Mochi-app icon. Without this every alias targeting
             // MainActivity shows the badge.

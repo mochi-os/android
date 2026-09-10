@@ -21,6 +21,7 @@ import org.mochios.android.files.SavedExport
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.Template
 import org.mochios.projects.repository.ProjectsRepository
+import org.mochios.projects.util.hierarchyParameter
 import javax.inject.Inject
 
 data class DesignUiState(
@@ -147,7 +148,7 @@ class DesignViewModel @Inject constructor(
     fun setHierarchy(classId: String, parents: List<String>) {
         viewModelScope.launch {
             try {
-                repository.setHierarchy(projectId, classId, parents.joinToString(","))
+                repository.setHierarchy(projectId, classId, hierarchyParameter(parents))
                 loadProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
@@ -172,7 +173,6 @@ class DesignViewModel @Inject constructor(
         classId: String,
         fieldId: String,
         name: String?,
-        fieldtype: String?,
         flags: String?,
         multi: Boolean?,
         card: Boolean?,
@@ -184,7 +184,7 @@ class DesignViewModel @Inject constructor(
     ) {
         viewModelScope.launch {
             try {
-                repository.updateField(projectId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows, pattern, minlength, maxlength)
+                repository.updateField(projectId, classId, fieldId, name, flags, multi, card, position, rows, pattern, minlength, maxlength)
                 loadProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

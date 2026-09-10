@@ -45,6 +45,7 @@ import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.model.ReviewsListResponse
 import org.mochios.market.model.ShippingOptionInput
+import org.mochios.market.model.StripeOauthCompletion
 import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
 import org.mochios.market.model.Subscription
@@ -118,9 +119,27 @@ class MarketRepository @Inject constructor(
         }
     }
 
+    /**
+     * `client_platform=android` makes the Comptroller mint an app-platform
+     * state, so Stripe's callback is handed to `mochi://market/stripe/oauth`
+     * for [completeStripeOauth] instead of a web session the browser lacks.
+     */
     suspend fun stripeOnboarding(returnUrl: String): StripeOnboardingResponse {
         return try {
-            api.startStripeOnboarding(returnUrl).unwrap()
+            api.startStripeOnboarding(returnUrl, clientPlatform = ANDROID_PLATFORM).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun completeStripeOauth(
+        code: String?,
+        state: String?,
+        error: String?,
+        errorDescription: String?,
+    ): StripeOauthCompletion {
+        return try {
+            api.completeStripeOauth(code, state, error, errorDescription).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -258,6 +277,7 @@ class MarketRepository @Inject constructor(
                 pricing = params["pricing"],
                 min = params["min"],
                 max = params["max"],
+                currency = params["currency"],
                 delivery = params["delivery"],
                 location = params["location"],
                 sort = params["sort"],
@@ -340,6 +360,14 @@ class MarketRepository @Inject constructor(
     suspend fun listPhotos(listing: String): List<Photo> {
         return try {
             api.listPhotos(listing.toString()).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun listOwnedPhotos(listing: String): List<Photo> {
+        return try {
+            api.listOwnedPhotos(listing.toString()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -818,4 +846,8 @@ class MarketRepository @Inject constructor(
 
     private fun multipart(field: String, file: File): MultipartBody.Part =
         fileStore.filePart(field, file)
+
+    companion object {
+        private const val ANDROID_PLATFORM = "android"
+    }
 }

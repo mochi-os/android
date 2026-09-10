@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Харагдах нэр</string>
-    <string name="chat_auth_verification_failed">Баталгаажуулалт амжилтгүй</string>
     <string name="chat_list_title">Чатууд</string>
     <string name="chat_list_search">Хайх</string>
     <string name="chat_list_logout">Гарах</string>
     <string name="chat_list_new">Шинэ чат</string>
     <string name="chat_new_title">Шинэ чат</string>
     <string name="chat_new_name">Бүлгийн нэр</string>
-    <string name="chat_new_friends">Найзууд</string>
     <string name="chat_message_placeholder">Мессеж</string>
     <string name="chat_attachment_add">Файл хавсаргах</string>
-    <string name="chat_message_attach">Файл хавсаргах</string>
     <string name="chat_settings_title">Чатын тохиргоо</string>
     <string name="chat_settings_rename_label">Чатын нэр</string>
     <string name="chat_settings_save">Хадгалах</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Илгээх</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">Нэвтрэх амжилтгүй</string>
     <string name="chat_attachment_move_up">Дээш зөөх</string>
     <string name="chat_attachment_move_down">Доош зөөх</string>
 
     <string name="notification_channel_chat">Чатын мэдэгдэл</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Хувийн мэдээлэл үүсгэж чадсангүй</string>
-    <string name="chat_auth_mfa_unsupported">MFA-г гар утасны аппад одоогоор дэмжихгүй</string>
-    <string name="chat_auth_enter_code_sent">%1$s руу илгээсэн кодыг оруулна уу</string>
-    <string name="chat_auth_create_identity">Хувийн мэдээллээ үүсгэх</string>
     <string name="chat_list_empty">Одоогоор чат алга</string>
     <string name="chat_new_existing_chat">Одоо байгаа чатыг нээх</string>
     <string name="chat_new_start">Чат эхлүүлэх</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Одоогоор мессеж алга — мэндчилнэ үү!</string>
     <string name="chat_messages_load_more">Хуучин мессежүүдийг ачаалах</string>
     <string name="chat_attachment_label">Файл</string>
-    <string name="chat_message_too_long">Мессеж хэт урт байна</string>
-    <string name="chat_message_empty">Мессеж хоосон байж болохгүй</string>
     <string name="chat_settings_rename">Чатын нэр өөрчлөх</string>
     <string name="chat_settings_add_member_empty">Нэмэх найз алга</string>
     <string name="chat_settings_remove_member_message">%1$s-г энэ чатаас хасах уу?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Энэ мессеж устгагдсан</string>
     <string name="chat_search_hint">Чатаас хайх...</string>
-    <string name="chat_search_no_results">Илэрц олдсонгүй</string>
     <string name="chat_message_forward">Дамжуулах</string>
     <string name="chat_forward_title">Дамжуулах…</string>
     <string name="chat_forward_search">Чат хайх…</string>
     <string name="chat_forward_empty">Дамжуулах чат алга</string>
     <string name="chat_forward_success">Дамжуулагдлаа</string>
-    <string name="chat_forward_failed">Дамжуулж чадсангүй</string>
     <string name="chat_message_reply">Хариулах</string>
     <string name="chat_message_select">Сонгох</string>
     <string name="chat_reply_attachment">Хавсралт</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Найзууд</string>
     <string name="chat_policy_title">Ирж буй чатууд</string>
     <string name="chat_policy_friends">Зөвхөн найзууд</string>
-    <string name="chat_policy_friends_description">Зөвхөн найзууд тантай чат эхлүүлж болно (өгөгдмөл).</string>
     <string name="chat_policy_anyone">Хэн ч</string>
-    <string name="chat_policy_anyone_description">Хэн ч тантай чат эхлүүлж болно.</string>
     <string name="chat_new_search_placeholder">Хүмүүсийг хайх</string>
     <string name="chat_new_no_matches">Тохирох хүн алга</string>
     <string name="chat_new_no_friends">Чатлах хүмүүсийг хайх</string>
     <string name="chat_pin">Бэхлэх</string>
     <string name="chat_unpin">Хадаас тайлах</string>
-    <string name="chat_pinned_label">Бэхлэгдсэн</string>
     <string name="chat_settings_general">Ерөнхий</string>
     <string name="chat_settings_screen_title">%1$s тохиргоо</string>
     <string name="chat_mark_read">Уншсан гэж тэмдэглэх</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Өмнөх тохирол</string>
     <string name="chat_settings_id">Чатны ID</string>
     <string name="chat_message_edited">(засварласан)</string>
+    <string name="chat_new_fallback_name">Чат</string>
 </resources>

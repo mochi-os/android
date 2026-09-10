@@ -30,6 +30,10 @@ import org.mochios.settings.ui.systemdocuments.SystemDocumentsScreen
 import org.mochios.settings.ui.systemsettings.SystemSettingsScreen
 import org.mochios.settings.ui.systemstatus.SystemStatusScreen
 import org.mochios.settings.ui.systemusers.SystemUsersScreen
+import androidx.compose.runtime.DisposableEffect
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 
 private const val KEY_CATEGORY_SAVED = "category_saved"
 
@@ -66,6 +70,14 @@ fun NavGraphBuilder.settingsNavGraph(
     composable(SettingsApp.HOME) {
         val homeViewModel: org.mochios.settings.ui.home.SettingsHomeViewModel = hiltViewModel()
         val homeState by homeViewModel.state.collectAsState()
+        val homeLifecycleOwner = LocalLifecycleOwner.current
+        DisposableEffect(homeLifecycleOwner) {
+            val observer = LifecycleEventObserver { _, event ->
+                if (event == Lifecycle.Event.ON_RESUME) homeViewModel.refresh()
+            }
+            homeLifecycleOwner.lifecycle.addObserver(observer)
+            onDispose { homeLifecycleOwner.lifecycle.removeObserver(observer) }
+        }
         SettingsHomeScreen(
             isAdmin = homeState.isAdmin,
             hasDomainAccess = homeState.hasDomainAccess,

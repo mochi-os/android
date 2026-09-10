@@ -350,4 +350,8 @@
     <string name="game_empty_title">Inga spel ännu</string>
     <string name="game_select_title">Välj ett spel</string>
     <string name="game_select_subtitle">Välj ett spel i sidofältet eller starta ett nytt.</string>
+    <string name="settings_card">Kortstil</string>
+    <string name="settings_card_theme">Från tema</string>
+    <string name="settings_card_flat">Platt</string>
+    <string name="settings_card_raised">Upphöjd</string>
 </resources>

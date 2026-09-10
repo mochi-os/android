@@ -350,4 +350,8 @@
     <string name="game_empty_title">ఇంకా గేమ్‌లు లేవు</string>
     <string name="game_select_title">గేమ్‌ను ఎంచుకోండి</string>
     <string name="game_select_subtitle">సైడ్‌బార్ నుండి గేమ్‌ను ఎంచుకోండి లేదా కొత్త గేమ్ ప్రారంభించండి.</string>
+    <string name="settings_card">కార్డ్ శైలి</string>
+    <string name="settings_card_theme">థీమ్ నుండి</string>
+    <string name="settings_card_flat">చదునైనది</string>
+    <string name="settings_card_raised">ఎత్తైనది</string>
 </resources>

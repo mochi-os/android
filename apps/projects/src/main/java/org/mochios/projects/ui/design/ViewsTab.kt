@@ -50,7 +50,10 @@ fun ViewsTab(
                 context.getString(R.string.projects_views_delete_message, viewName)
             },
             byField = { fieldName -> context.getString(R.string.projects_views_by, fieldName) },
-            sortedBy = { direction -> context.getString(R.string.projects_views_sorted, direction) },
+            sortedBy = { direction ->
+                val label = if (direction == "desc") R.string.projects_views_direction_desc else R.string.projects_views_direction_asc
+                context.getString(R.string.projects_views_sorted, context.getString(label))
+            },
             typeBoard = stringResource(R.string.projects_views_type_board),
             typeList = stringResource(R.string.projects_views_type_list),
             moveUp = stringResource(R.string.projects_views_move_up),

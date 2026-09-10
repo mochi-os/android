@@ -3,23 +3,13 @@
     <string name="notification_channel_crm">CRMs notifications</string>
 
     <!-- Auth -->
-    <string name="crm_auth_brand">Mochi CRMs</string>
-    <string name="crm_auth_display_name">Display name</string>
-    <string name="crm_auth_login_failed">Login failed</string>
-    <string name="crm_auth_verification_failed">Verification failed</string>
-    <string name="crm_auth_create_identity_failed">Failed to create identity</string>
-    <string name="crm_auth_mfa_unsupported">MFA not yet supported in mobile app</string>
-    <string name="crm_auth_enter_code_sent">Enter the code sent to %1$s</string>
-    <string name="crm_auth_create_identity">Create your identity</string>
 
     <!-- Crm list -->
     <string name="crm_list_title">CRMs</string>
     <string name="crm_all_crms">All CRMs</string>
     <string name="crm_list_search_placeholder">Search CRM</string>
-    <string name="crm_list_close_search">Close search</string>
     <string name="crm_list_search">Search</string>
     <string name="crm_list_find">Find CRM</string>
-    <string name="crm_list_more">More</string>
     <string name="crm_list_logout">Log out</string>
     <string name="crm_list_create">Create CRM</string>
     <string name="crm_list_no_matching">No matching CRM</string>
@@ -33,9 +23,6 @@
     <string name="crm_create_import_backup">Import from backup (optional)</string>
     <string name="crm_create_upload_json">Upload .zip or .json file</string>
     <string name="crm_create_description">Description</string>
-    <string name="crm_create_privacy">Privacy</string>
-    <string name="crm_create_private">Private</string>
-    <string name="crm_create_public">Public</string>
     <string name="crm_create_template">Template</string>
     <string name="crm_create_template_none">None</string>
     <string name="crm_create_action">Create</string>
@@ -46,7 +33,6 @@
     <string name="crm_find_recommended">Recommended</string>
     <string name="crm_find_search_hint">Search for CRM to subscribe to</string>
     <string name="crm_no_crms_found">No CRMs found</string>
-    <string name="crm_find_subscribe">Subscribe</string>
 
     <!-- Crm screen -->
     <string name="crm_loading">Loading…</string>
@@ -74,7 +60,6 @@
     <string name="crm_filter_clear_all">Clear all</string>
     <string name="crm_filter_all">All</string>
     <string name="crm_filter_other">Other</string>
-    <string name="crm_sort_label">Sort</string>
     <string name="crm_sort_field">Sort by</string>
     <string name="crm_sort_direction">Direction</string>
     <string name="crm_sort_direction_asc">Ascending</string>
@@ -86,10 +71,8 @@
     <!-- Create object -->
     <string name="crm_create_object_title">Create object</string>
     <string name="crm_create_object_type">Type</string>
-    <string name="crm_create_object_title_field">Title</string>
     <string name="crm_create_object_parent">Parent</string>
     <string name="crm_create_object_parent_none">(none)</string>
-    <string name="crm_add_child">Add child</string>
 
     <!-- Crm settings -->
     <string name="crm_settings_title">Settings</string>
@@ -102,11 +85,9 @@
     <string name="crm_views_move_down">Move down</string>
     <string name="crm_views_filter">Filter (stored, not yet applied)</string>
     <string name="crm_people_empty">No people have access yet</string>
-    <string name="crm_settings_save">Save changes</string>
     <string name="crm_settings_entity_id">Entity ID</string>
     <string name="crm_settings_fingerprint">Fingerprint</string>
     <string name="crm_settings_server">Server</string>
-    <string name="crm_settings_danger_zone">Danger zone</string>
     <string name="crm_settings_unsubscribe">Unsubscribe</string>
     <string name="crm_settings_delete_crm">Delete CRM</string>
     <string name="crm_settings_delete_confirm_title">Delete CRM</string>
@@ -123,10 +104,8 @@
     <string name="crm_people_search">Search people</string>
 
     <!-- Access -->
-    <string name="crm_access_user_fingerprint">User fingerprint</string>
     <string name="crm_access_tab_users">Users</string>
     <string name="crm_access_tab_groups">Groups</string>
-    <string name="crm_access_tab_manual">Manual</string>
     <string name="crm_access_tab_other">Other</string>
     <string name="crm_access_search_users">Search users</string>
     <string name="crm_access_no_groups">No groups available</string>
@@ -138,14 +117,7 @@
     <string name="crm_access_subject_authenticated">Authenticated users</string>
     <string name="crm_access_authenticated_desc">Anyone who is logged in</string>
     <string name="crm_access_anyone_desc">Including anonymous users</string>
-    <string name="crm_access_target">Target</string>
-    <string name="crm_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
     <string name="crm_access_level_owner">Owner</string>
-    <string name="crm_access_level_design">Design</string>
-    <string name="crm_access_level_write">Write</string>
-    <string name="crm_access_level_comment">Comment</string>
-    <string name="crm_access_level_view">View</string>
-    <string name="crm_access_level_none">None</string>
     <string name="crm_access_role_design">Design, create, edit, comment, and view</string>
     <string name="crm_access_role_write">Create, edit, comment, and view</string>
     <string name="crm_access_role_comment">Comment and view</string>
@@ -158,13 +130,6 @@
     <string name="crm_object_tab_properties">Properties</string>
     <string name="crm_object_tab_comments">Comments</string>
     <string name="crm_object_tab_activity">Activity</string>
-    <string name="crm_object_tab_requests">Requests</string>
-    <string name="crm_object_tab_attachments">Attachments</string>
-    <string name="crm_object_tab_links">Links</string>
-    <string name="crm_object_tab_watchers">Watchers</string>
-    <string name="crm_watchers_empty">No watchers yet</string>
-    <string name="crm_watchers_watch">Watch</string>
-    <string name="crm_watchers_unwatch">Stop watching</string>
     <string name="crm_object_delete_title">Delete object</string>
     <string name="crm_object_delete_message">Are you sure you want to delete this object? This action cannot be undone.</string>
 
@@ -201,7 +166,6 @@
     <string name="crm_comment_clear_reply">Clear reply</string>
     <string name="crm_comment_placeholder">Add a comment</string>
     <string name="crm_comment_send">Send</string>
-    <string name="crm_comment_save">Save</string>
     <string name="crm_comment_empty">No comments yet</string>
     <string name="crm_comment_attach">Attach files</string>
     <string name="crm_comment_remove_attachment">Remove attachment</string>
@@ -212,16 +176,12 @@
     <string name="crm_property_remove">Remove</string>
     <string name="crm_property_add_item">Add item</string>
     <string name="crm_property_required">%1$s is required</string>
-    <string name="crm_property_option_none">None</string>
     <string name="crm_property_select">Select …</string>
 
     <!-- Activity -->
     <string name="crm_activity_empty">No activity</string>
     <string name="crm_activity_created">created this object</string>
     <string name="crm_activity_deleted">deleted this object</string>
-    <string name="crm_activity_changed">changed %1$s: %2$s → %3$s</string>
-    <string name="crm_activity_set">set %1$s to %2$s</string>
-    <string name="crm_activity_cleared">cleared %1$s</string>
     <string name="crm_activity_updated">updated %1$s</string>
     <string name="crm_activity_made_change">made a change</string>
     <string name="crm_activity_attached">attached</string>
@@ -235,61 +195,12 @@
     <string name="crm_attachment_default_name">attachment</string>
     <string name="crm_attachment_delete_confirm_title">Delete attachment?</string>
     <string name="crm_attachment_delete_confirm_message">This attachment will be permanently deleted.</string>
-    <string name="crm_attachment_size_bytes">%1$d B</string>
-    <string name="crm_attachment_size_kb">%1$d KB</string>
-    <string name="crm_attachment_size_mb">%1$d MB</string>
-    <string name="crm_attachment_size_gb">%1$d GB</string>
 
     <!-- Requests -->
-    <string name="crm_request_empty">No merge requests</string>
-    <string name="crm_request_new">New merge request</string>
-    <string name="crm_request_more">More</string>
-    <string name="crm_request_status_draft">Draft</string>
-    <string name="crm_request_status_open">Open</string>
-    <string name="crm_request_status_merged">Merged</string>
-    <string name="crm_request_status_closed">Closed</string>
-    <string name="crm_request_back_to_list">Back to list</string>
-    <string name="crm_request_repository">Repository: %1$s</string>
-    <string name="crm_request_source">Source: %1$s</string>
-    <string name="crm_request_target">Target: %1$s</string>
-    <string name="crm_request_checking_merge">Checking merge status…</string>
-    <string name="crm_request_can_merge">Can be merged</string>
-    <string name="crm_request_cannot_merge">Cannot merge</string>
-    <string name="crm_request_ahead_behind">%1$d ahead, %2$d behind</string>
-    <plurals name="crm_request_conflicts">
-        <item quantity="one">%1$d conflicting file</item>
-        <item quantity="other">%1$d conflicting files</item>
-    </plurals>
-    <string name="crm_request_draft_notice">This is a draft. Mark as ready before merging.</string>
-    <string name="crm_request_view_diff">View diff</string>
-    <string name="crm_request_merge">Merge</string>
-    <string name="crm_request_mark_ready">Mark as ready</string>
-    <string name="crm_request_close">Close</string>
-    <string name="crm_request_merge_default_message">Merge %1$s into %2$s</string>
-    <string name="crm_request_merge_dialog_title">Merge</string>
-    <string name="crm_request_commit_message">Commit message</string>
-    <string name="crm_request_method">Method</string>
-    <string name="crm_request_method_merge">Merge</string>
-    <string name="crm_request_method_squash">Squash</string>
-    <string name="crm_request_method_rebase">Rebase</string>
-    <string name="crm_request_create_title">Create merge request</string>
-    <string name="crm_request_field_repository">Repository</string>
-    <string name="crm_request_field_source">Source branch</string>
-    <string name="crm_request_field_target">Target branch</string>
-    <string name="crm_request_field_title">Title</string>
-    <string name="crm_request_field_description">Description</string>
-    <string name="crm_request_field_draft">Draft</string>
-    <string name="crm_request_create_action">Create</string>
 
     <!-- Diff viewer -->
-    <string name="crm_diff_title">Diff: %1$s -&gt; %2$s</string>
-    <string name="crm_diff_unified">Unified</string>
-    <string name="crm_diff_split">Split</string>
-    <string name="crm_diff_empty">No diff available</string>
 
     <!-- Tree -->
-    <string name="crm_tree_collapse">Collapse</string>
-    <string name="crm_tree_expand">Expand</string>
     <string name="crm_tree_move">Move</string>
     <string name="crm_tree_move_to_parent">Move to parent</string>
     <string name="crm_tree_root_level">(Root level)</string>
@@ -301,7 +212,6 @@
     <string name="crm_board_unassigned">Unassigned</string>
     <string name="crm_board_new">New</string>
     <string name="crm_board_add_column">Add column</string>
-    <string name="crm_board_column_options">Column options</string>
     <string name="crm_board_rename">Rename</string>
     <string name="crm_board_rename_column">Rename column</string>
     <string name="crm_board_nested_count">+%1$d nested</string>
@@ -318,7 +228,6 @@
     <string name="crm_drag_card">Drag card</string>
     <string name="crm_drag_row">Drag row</string>
     <string name="crm_drag_column">Drag column</string>
-    <string name="crm_drag_hint">Long-press and drag to move</string>
 
 
     <!-- Design -->
@@ -352,8 +261,6 @@
     <string name="crm_class_title_field">Title field</string>
     <string name="crm_class_title_field_description">Which field to use as the display title for objects of this class.</string>
     <string name="crm_class_title_field_default">Default (readable)</string>
-    <string name="crm_class_merge_requests">Merge requests</string>
-    <string name="crm_class_merge_requests_description">Allow merge requests on objects of this class.</string>
     <string name="crm_class_parents">Parent classes</string>
     <string name="crm_class_fields">Fields</string>
     <string name="crm_class_add_field">Add field</string>
@@ -439,4 +346,5 @@
     <string name="crm_design_preview_no_options">No options on the columns field</string>
     <string name="crm_design_preview_empty">Nothing to show</string>
     <string name="crm_not_found">CRM not found</string>
+    <string name="crm_design_sample">Sample %1$d</string>
 </resources>

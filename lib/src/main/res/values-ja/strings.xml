@@ -349,4 +349,8 @@
     <string name="game_empty_title">まだゲームがありません</string>
     <string name="game_select_title">ゲームを選択</string>
     <string name="game_select_subtitle">サイドバーからゲームを選ぶか、新しいゲームを始めましょう。</string>
+    <string name="settings_card">カードのスタイル</string>
+    <string name="settings_card_theme">テーマから</string>
+    <string name="settings_card_flat">フラット</string>
+    <string name="settings_card_raised">浮き出し</string>
 </resources>

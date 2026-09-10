@@ -13,9 +13,11 @@ data class Crm(
     @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     val name: String = "",
     val description: String = "",
-    val owner: Owner = Owner(),
+    val owner: Owner? = null,
     val server: String? = null,
     val location: String? = null,
+    // The peer a `mochi://` share link named; subscribe pins it for the sync.
+    val peer: String? = null,
     val created: Long = 0,
     val updated: Long = 0,
     val access: String = ""

@@ -354,4 +354,8 @@
     <string name="game_empty_title">Игр пока нет</string>
     <string name="game_select_title">Выберите игру</string>
     <string name="game_select_subtitle">Выберите игру на боковой панели или начните новую.</string>
+    <string name="settings_card">Стиль карточки</string>
+    <string name="settings_card_theme">Из темы</string>
+    <string name="settings_card_flat">Плоская</string>
+    <string name="settings_card_raised">Приподнятый</string>
 </resources>

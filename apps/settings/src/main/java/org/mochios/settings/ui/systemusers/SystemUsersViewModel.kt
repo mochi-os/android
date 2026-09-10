@@ -24,6 +24,8 @@ import org.mochios.settings.api.SystemUser
 import org.mochios.settings.api.SystemUserSession
 import org.mochios.settings.api.SystemUsersApi
 import javax.inject.Inject
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 
 enum class SystemUsersSort { USERNAME, STATUS, LAST }
 
@@ -58,7 +60,7 @@ data class SystemUsersUiState(
     val sort: SystemUsersSort = SystemUsersSort.USERNAME,
     val order: SystemUsersOrder = SystemUsersOrder.ASC,
     val mutating: Boolean = false,
-    val sessionsLoadingFor: Long? = null,
+    val sessionsLoadingFor: String? = null,
     val sessions: List<SystemUserSession> = emptyList(),
     val sessionsRevokedCount: Int = 0,
     val currentUsername: String = "",
@@ -69,11 +71,20 @@ data class SystemUsersUiState(
 @HiltViewModel
 class SystemUsersViewModel @Inject constructor(
     private val api: SystemUsersApi,
+    stepUpClient: SettingsStepUpClient,
     private val authRepository: AuthRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SystemUsersUiState())
     val uiState: StateFlow<SystemUsersUiState> = _uiState.asStateFlow()
+
+    /** Step-up gate for the administrator mutations: a stolen session must
+     *  re-verify a login factor before it can change the server. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(error = e.toMochiError()) },
+    )
 
     private var searchJob: Job? = null
 
@@ -164,36 +175,42 @@ class SystemUsersViewModel @Inject constructor(
         ) { api.create(username, role).unwrapRaw() }
     }
 
-    fun update(id: Long, username: String?, role: String?, onDone: (Boolean) -> Unit) {
-        mutate(
-            success = SystemUsersToast.USER_UPDATED,
-            failure = SystemUsersToast.UPDATE_FAILED,
-            onDone = onDone,
-        ) { api.update(id, username, role).unwrapEmpty() }
+    fun update(uid: String, username: String?, role: String?, onDone: (Boolean) -> Unit) {
+        stepUp.request { token ->
+            mutate(
+                success = SystemUsersToast.USER_UPDATED,
+                failure = SystemUsersToast.UPDATE_FAILED,
+                onDone = onDone,
+            ) { api.update(uid, username, role, token).unwrapEmpty() }
+        }
     }
 
-    fun delete(id: Long, onDone: (Boolean) -> Unit) {
-        mutate(
-            success = SystemUsersToast.USER_DELETED,
-            failure = SystemUsersToast.DELETE_FAILED,
-            onDone = onDone,
-        ) { api.delete(id).unwrapRaw() }
+    fun delete(uid: String, onDone: (Boolean) -> Unit) {
+        stepUp.request { token ->
+            mutate(
+                success = SystemUsersToast.USER_DELETED,
+                failure = SystemUsersToast.DELETE_FAILED,
+                onDone = onDone,
+            ) { api.delete(uid, token).unwrapRaw() }
+        }
     }
 
     fun toggleStatus(user: SystemUser, onDone: (Boolean) -> Unit) {
         val suspended = user.status == "suspended"
         val ok = if (suspended) SystemUsersToast.SUSPENSION_REMOVED else SystemUsersToast.USER_SUSPENDED
-        mutate(
-            success = ok,
-            failure = SystemUsersToast.STATUS_FAILED,
-            onDone = onDone,
-        ) {
-            if (suspended) api.activate(user.id).unwrapRaw()
-            else api.suspendUser(user.id).unwrapRaw()
+        stepUp.request { token ->
+            mutate(
+                success = ok,
+                failure = SystemUsersToast.STATUS_FAILED,
+                onDone = onDone,
+            ) {
+                if (suspended) api.activate(user.uid, token).unwrapRaw()
+                else api.suspendUser(user.uid, token).unwrapRaw()
+            }
         }
     }
 
-    fun loadSessions(id: Long) {
+    fun loadSessions(id: String) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(sessionsLoadingFor = id, sessions = emptyList())
             try {
@@ -215,7 +232,7 @@ class SystemUsersViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(sessions = emptyList(), sessionsLoadingFor = null)
     }
 
-    fun revokeSession(userId: Long, sessionId: String?) {
+    fun revokeSession(userId: String, sessionId: String?) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(mutating = true)
             try {

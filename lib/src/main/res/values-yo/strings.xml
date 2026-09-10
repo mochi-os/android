@@ -350,4 +350,8 @@
     <string name="game_empty_title">Kò sí eré síbẹ̀</string>
     <string name="game_select_title">Yan eré kan</string>
     <string name="game_select_subtitle">Yan eré kan láti inú ọ̀pá ẹ̀gbẹ́ tàbí bẹ̀rẹ̀ eré tuntun.</string>
+    <string name="settings_card">Àṣà káàdì</string>
+    <string name="settings_card_theme">Lát\'ọ̀dọ̀ Theme</string>
+    <string name="settings_card_flat">Pẹ̀tẹ́lẹ̀</string>
+    <string name="settings_card_raised">Gbígbé sókè</string>
 </resources>

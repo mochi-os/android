@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">通知偏好</string>
     <string name="settings_home_accounts">已连接的账户</string>
     <string name="settings_home_interests">兴趣</string>
-    <string name="account_method_email">邮箱验证码</string>
-    <string name="account_method_passkey">通行密钥</string>
-    <string name="account_method_totp">身份验证器应用</string>
     <string name="account_section_passkeys">通行密钥</string>
     <string name="account_passkey_register">添加通行密钥</string>
     <string name="account_passkey_delete_title">删除通行密钥吗?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">删除路由</string>
     <string name="route_delete_title">删除路由吗?</string>
     <string name="route_path">路径</string>
-    <string name="route_target">目标</string>
     <string name="route_method">方式</string>
     <string name="route_method_app">应用</string>
     <string name="route_method_entity">实体</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">兴趣</string>
     <string name="interests_summary_title">摘要</string>
     <string name="interests_remove">移除兴趣</string>
-    <string name="interests_add">添加</string>
-    <string name="document_save">保存</string>
-    <string name="document_saved">已保存</string>
     <string name="notifprefs_title">通知偏好</string>
     <string name="notifprefs_tab_categories">分类</string>
     <string name="notifprefs_tab_topics">话题</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">重置</string>
     <string name="system_settings_reset_to_default">重置为默认</string>
     <string name="system_settings_reset_title">重置为默认?</string>
-    <string name="system_settings_setting_updated">设置已更新</string>
-    <string name="system_settings_update_failed">更新设置失败</string>
     <string name="system_setting_apps_install_user">允许用户安装应用</string>
     <string name="system_setting_auth_email">使用邮箱验证码登录</string>
     <string name="system_setting_auth_passkey">使用通行密钥登录</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">更新用户状态失败</string>
     <string name="system_users_toast_revoke_failed">撤销会话失败</string>
 
-    <string name="settings_app_label">Mochi 设置</string>
     <string name="settings_home_sessions">会话</string>
     <string name="settings_home_privacy">隐私政策</string>
     <string name="settings_home_rules">规则</string>
     <string name="settings_home_terms">服务条款</string>
-    <string name="account_section_methods">登录方式</string>
     <string name="account_passkeys_empty">未注册任何通行密钥。</string>
     <string name="account_passkey_register_title">添加通行密钥</string>
     <string name="account_passkey_register_message">您的设备将提示您确认。通行密钥与此设备绑定，用于将来的登录。</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">重新生成恢复代码？</string>
     <string name="account_recovery_regen_message">现有代码将立即停止工作。请将新代码保存在安全的地方。</string>
     <string name="account_recovery_codes_warning">请保存这些代码——每个代码只能使用一次。它们不会再次显示。</string>
-    <string name="sessions_section_title">活跃会话</string>
     <string name="sessions_title">会话</string>
     <string name="sessions_empty">无活跃会话。</string>
     <string name="sessions_revoke_message">使用此会话的设备将被注销。</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">重新生成摘要</string>
     <string name="interests_summary_regenerating">正在重新生成…</string>
     <string name="interests_summary_empty">添加一些兴趣以生成您喜好的摘要。</string>
-    <string name="interests_weight">权重</string>
     <string name="interests_search_failed">搜索失败。请再试一次。</string>
     <string name="document_privacy_title">隐私政策</string>
     <string name="document_rules_title">规则</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">正在安装 %1$s…</string>
     <string name="accounts_field_api_key">API 密钥</string>
     <string name="accounts_field_url">服务器 URL</string>
-    <string name="accounts_device_placeholder">推送账户由设备自动添加。</string>
     <string name="accounts_set_default_ai">设为默认 AI</string>
     <string name="accounts_verify_code">代码</string>
     <string name="accounts_verify_resend">重新发送代码</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">名称</string>
     <string name="account_identity_fingerprint">指纹</string>
     <string name="account_identity_directory_toggle">允许他人在目录中找到你</string>
-    <string name="account_method_email_subtitle">通过电子邮件接收验证码</string>
-    <string name="account_method_totp_subtitle">在下方设置身份验证器以启用</string>
-    <string name="account_method_passkey_subtitle">在下方注册通行密钥以启用</string>
     <string name="domain_add">添加域名</string>
     <string name="domain_add_title">添加域名</string>
     <string name="domain_delegation_add">添加</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">未配置目标</string>
     <string name="notifprefs_transport_fcm">Android 推送</string>
     <string name="notifprefs_no_destinations">没有目标</string>
+    <string name="account_data_generate">生成密码短语</string>
+    <string name="accounts_field_server">服务器 URL</string>
+    <string name="accounts_field_token">访问令牌</string>
+    <string name="accounts_field_topic">主题</string>
+    <string name="accounts_field_secret">签名密钥</string>
+    <string name="account_totp_open">在身份验证器应用中打开</string>
 </resources>

@@ -354,4 +354,8 @@
     <string name="game_empty_title">Še ni iger</string>
     <string name="game_select_title">Izberite igro</string>
     <string name="game_select_subtitle">Izberite igro v stranski vrstici ali začnite novo.</string>
+    <string name="settings_card">Slog kartice</string>
+    <string name="settings_card_theme">Iz teme</string>
+    <string name="settings_card_flat">Ploščato</string>
+    <string name="settings_card_raised">Dvignjeno</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">ਪ੍ਰੋਜੈਕਟ ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
     <string name="projects_exporting">ਐਕਸਪੋਰਟ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ…</string>
     <string name="projects_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>
+    <string name="projects_design_sample">ਨਮੂਨਾ %1$d</string>
 </resources>

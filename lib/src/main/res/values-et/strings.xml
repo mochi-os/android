@@ -350,4 +350,8 @@
     <string name="game_empty_title">Mänge veel pole</string>
     <string name="game_select_title">Vali mäng</string>
     <string name="game_select_subtitle">Vali külgribalt mäng või alusta uut.</string>
+    <string name="settings_card">Kaardi stiil</string>
+    <string name="settings_card_theme">Teemast</string>
+    <string name="settings_card_flat">Lame</string>
+    <string name="settings_card_raised">Kõrgendatud</string>
 </resources>

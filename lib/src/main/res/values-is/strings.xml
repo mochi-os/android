@@ -350,4 +350,8 @@
     <string name="game_empty_title">Engir leikir ennþá</string>
     <string name="game_select_title">Veldu leik</string>
     <string name="game_select_subtitle">Veldu leik á hliðarstikunni eða byrjaðu nýjan.</string>
+    <string name="settings_card">Stíll spjalds</string>
+    <string name="settings_card_theme">Frá þema</string>
+    <string name="settings_card_flat">Flatt</string>
+    <string name="settings_card_raised">Upphækkað</string>
 </resources>

@@ -35,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -86,8 +87,9 @@ fun DesignPreview(
         return
     }
 
+    val context = LocalContext.current
     val sampleObjects = remember(view, candidateClasses, project.options, project.fields) {
-        buildSampleObjects(project, candidateClasses, view)
+        buildSampleObjects(project, candidateClasses, view) { index -> context.getString(R.string.projects_design_sample, index) }
     }
 
     Column(modifier = modifier.fillMaxWidth()) {
@@ -502,7 +504,8 @@ private fun parsePreviewColor(hex: String): Color? {
 private fun buildSampleObjects(
     project: ProjectDetails,
     classes: List<ProjectClass>,
-    view: ProjectView
+    view: ProjectView,
+    sample: (Int) -> String
 ): List<ProjectObject> {
     val baseClass = classes.first()
     val classId = baseClass.id
@@ -528,7 +531,7 @@ private fun buildSampleObjects(
             it.fieldtype in setOf("text", "number", "enumerated")
     }
 
-    val sampleTitles = listOf("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
+    val sampleTitles = (1..5).map(sample)
     val count = sampleTitles.size
 
     val samples = sampleTitles.mapIndexed { index, name ->
@@ -553,7 +556,7 @@ private fun buildSampleObjects(
                     val opts = optionsForField(project, detailField.id)
                     if (opts.isNotEmpty()) opts[index % opts.size].id else ""
                 }
-                else -> "Sample ${index + 1}"
+                else -> sample(index + 1)
             }
             if ((v as? String).orEmpty().isNotBlank() || v !is String) {
                 values[detailField.id] = v

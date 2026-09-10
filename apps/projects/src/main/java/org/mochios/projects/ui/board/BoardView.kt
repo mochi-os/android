@@ -115,11 +115,8 @@ fun BoardView(
         map
     }
 
-    // Only show top-level objects (no parent in this set) that match the view's class filter
-    val filteredObjects = objects.filter { obj ->
-        (obj.parent.isBlank() || obj.parent !in objects.map { it.id }.toSet()) &&
-            (view.classes.isEmpty() || obj.objectClass in view.classes)
-    }
+    // Only the top-level objects that match the view's class filter.
+    val filteredObjects = remember(objects, view.classes) { topLevelObjects(objects, view) }
 
     if (columnOptions.isEmpty()) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

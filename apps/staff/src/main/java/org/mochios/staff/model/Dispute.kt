@@ -36,8 +36,10 @@ data class Dispute(
     val listing: String = "",
     val buyer: String = "",
     @SerializedName("buyer_name") val buyerName: String = "",
+    @SerializedName("buyer_fingerprint") val buyerFingerprint: String = "",
     val seller: String = "",
     @SerializedName("seller_name") val sellerName: String = "",
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
     val total: Long = 0,
     val currency: String = "",
     val title: String = "",
@@ -57,23 +59,3 @@ data class DisputesListResponse(
     val disputes: List<Dispute> = emptyList(),
     val total: Long = 0,
 )
-
-/**
- * Known `status` values, written by `event_staff_disputes_review`; free-form on
- * the wire.
- */
-enum class DisputeStatus {
-    @SerializedName("open") OPEN,
-    @SerializedName("responded") RESPONDED,
-    @SerializedName("resolved_buyer") RESOLVED_BUYER,
-    @SerializedName("resolved_seller") RESOLVED_SELLER,
-}
-
-/**
- * `resolved_buyer` refunds the buyer (partial via `amount`); `resolved_seller`
- * issues no refund.
- */
-enum class DisputeResolution {
-    @SerializedName("resolved_buyer") BUYER,
-    @SerializedName("resolved_seller") SELLER,
-}

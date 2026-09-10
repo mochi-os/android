@@ -22,7 +22,7 @@ import javax.inject.Inject
 data class SessionsUiState(
     val isLoading: Boolean = true,
     val error: MochiError? = null,
-    /** Sorted accessed-desc; index 0 is the current session. */
+    /** Sorted accessed-desc; the server flags the caller's own session. */
     val sessions: List<Session> = emptyList(),
 )
 

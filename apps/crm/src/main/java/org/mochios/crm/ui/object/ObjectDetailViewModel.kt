@@ -13,6 +13,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -74,9 +75,9 @@ class ObjectDetailViewModel @Inject constructor(
     private var activeSaves = 0
     private var savedResetJob: Job? = null
 
-    private val _saveFailed = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    private val _saveFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 1)
     /** Emits when an auto-save write fails — the screen shows a toast. */
-    val saveFailed: SharedFlow<Unit> = _saveFailed.asSharedFlow()
+    val saveFailed: SharedFlow<MochiError> = _saveFailed.asSharedFlow()
 
     private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
     /**
@@ -232,29 +233,21 @@ class ObjectDetailViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             obj = obj.copy(values = newValues)
         )
+        val crmId = currentCrmId
+        val objectId = currentObjectId
         scheduleSave("value_$fieldId") {
-            repository.setValue(currentCrmId, currentObjectId, fieldId, value)
-        }
-    }
-
-    fun setMultiValue(fieldId: String, values: List<String>) {
-        val obj = _uiState.value.obj ?: return
-        val newVals = obj.values.toMutableMap()
-        newVals[fieldId] = values
-        _uiState.value = _uiState.value.copy(
-            obj = obj.copy(values = newVals)
-        )
-        scheduleSave("value_$fieldId") {
-            repository.setValue(currentCrmId, currentObjectId, fieldId, values.joinToString(","))
+            repository.setValue(crmId, objectId, fieldId, value)
         }
     }
 
     // ---- Comments ----
 
     private fun loadComments() {
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val comments = repository.getComments(currentCrmId, currentObjectId)
+                val comments = repository.getComments(currentCrmId, objectId)
+                if (objectId != currentObjectId) return@launch
                 _uiState.value = _uiState.value.copy(comments = comments)
             } catch (_: Exception) { }
         }
@@ -303,9 +296,11 @@ class ObjectDetailViewModel @Inject constructor(
     // ---- Activity ----
 
     private fun loadActivity() {
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val activity = repository.getActivity(currentCrmId, currentObjectId)
+                val activity = repository.getActivity(currentCrmId, objectId)
+                if (objectId != currentObjectId) return@launch
                 _uiState.value = _uiState.value.copy(activity = activity)
             } catch (_: Exception) { }
         }
@@ -336,9 +331,11 @@ class ObjectDetailViewModel @Inject constructor(
     // ---- Attachments ----
 
     private fun loadAttachments() {
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val attachments = repository.getAttachments(currentCrmId, currentObjectId)
+                val attachments = repository.getAttachments(currentCrmId, objectId)
+                if (objectId != currentObjectId) return@launch
                 _uiState.value = _uiState.value.copy(attachments = attachments)
             } catch (_: Exception) { }
         }
@@ -373,9 +370,11 @@ class ObjectDetailViewModel @Inject constructor(
     // ---- Links ----
 
     private fun loadLinks() {
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val result = repository.getLinks(currentCrmId, currentObjectId)
+                val result = repository.getLinks(currentCrmId, objectId)
+                if (objectId != currentObjectId) return@launch
                 _uiState.value = _uiState.value.copy(
                     incomingLinks = result.incoming,
                     outgoingLinks = result.outgoing
@@ -462,17 +461,21 @@ class ObjectDetailViewModel @Inject constructor(
     fun updateParent(newParent: String) {
         val obj = _uiState.value.obj ?: return
         _uiState.value = _uiState.value.copy(obj = obj.copy(parent = newParent))
+        val crmId = currentCrmId
+        val objectId = currentObjectId
         scheduleSave("parent", delayMs = 0) {
-            repository.updateObject(currentCrmId, currentObjectId, parent = newParent)
+            repository.updateObject(crmId, objectId, parent = newParent)
         }
     }
 
     // ---- Watchers ----
 
     private fun loadWatchers() {
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val result = repository.getWatchers(currentCrmId, currentObjectId)
+                val result = repository.getWatchers(currentCrmId, objectId)
+                if (objectId != currentObjectId) return@launch
                 _uiState.value = _uiState.value.copy(
                     watchers = result.watchers,
                     isWatching = result.watching
@@ -504,23 +507,27 @@ class ObjectDetailViewModel @Inject constructor(
     // user navigating away before the debounce elapses.
     private fun scheduleSave(key: String, delayMs: Long = 500, save: suspend () -> Unit) {
         debounceJobs[key]?.cancel()
-        debounceJobs[key] = saveScope.launch {
+        val job = saveScope.launch {
             delay(delayMs)
             savedResetJob?.cancel()
             activeSaves++
             _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Saving)
-            val ok = try {
+            val failure = try {
                 save()
-                true
-            } catch (_: Exception) {
-                false
+                null
+            } catch (e: CancellationException) {
+                // A newer edit to the same key superseded this write: not a
+                // failure, and the newer job owns the status from here.
+                activeSaves--
+                throw e
+            } catch (e: Exception) {
+                e.toMochiError()
             }
             activeSaves--
-            debounceJobs.remove(key)
-            if (!ok) {
-                _saveFailed.tryEmit(Unit)
+            if (failure != null) {
+                _saveFailed.tryEmit(failure)
                 _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Error)
-            } else if (activeSaves == 0 && _uiState.value.saveStatus != SaveStatus.Error) {
+            } else if (activeSaves == 0) {
                 _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Saved)
                 savedResetJob = saveScope.launch {
                     delay(2000)
@@ -530,5 +537,9 @@ class ObjectDetailViewModel @Inject constructor(
                 }
             }
         }
+        debounceJobs[key] = job
+        // Only the job that owns the slot clears it: a superseded job finishing
+        // late must not drop its successor's entry.
+        job.invokeOnCompletion { if (debounceJobs[key] === job) debounceJobs.remove(key) }
     }
 }

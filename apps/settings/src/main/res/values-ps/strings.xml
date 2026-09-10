@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">د خبرتیا غوره توبونه</string>
     <string name="settings_home_accounts">وصل شوي حسابونه</string>
     <string name="settings_home_interests">علاقې</string>
-    <string name="account_method_email">د بریښنالیک کوډ</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">د Authenticator اپلیکیشن</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Passkey اضافه کړئ</string>
     <string name="account_passkey_delete_title">Passkey ړنګ کړئ؟</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">لاره ړنګه کړئ</string>
     <string name="route_delete_title">لاره ړنګه کړئ؟</string>
     <string name="route_path">لاره</string>
-    <string name="route_target">هدف</string>
     <string name="route_method">میتود</string>
     <string name="route_method_app">اپلیکیشن</string>
     <string name="route_method_entity">موجودیت</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">علاقې</string>
     <string name="interests_summary_title">لنډیز</string>
     <string name="interests_remove">علاقه لرې کړئ</string>
-    <string name="interests_add">اضافه کړئ</string>
-    <string name="document_save">خوندي کول</string>
-    <string name="document_saved">خوندي شو</string>
     <string name="notifprefs_title">د خبرتیا غوره توبونه</string>
     <string name="notifprefs_tab_categories">کټګورۍ</string>
     <string name="notifprefs_tab_topics">موضوعات</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">بیا تنظیم</string>
     <string name="system_settings_reset_to_default">ډیفالټ ته بیرته تنظیم کړئ</string>
     <string name="system_settings_reset_title">ډیفالټ ته بیرته تنظیم کړو؟</string>
-    <string name="system_settings_setting_updated">ترتیب نوی شو</string>
-    <string name="system_settings_update_failed">د تنظیمات تازه کولو پاتې راغلل</string>
     <string name="system_setting_apps_install_user">کاروونکو ته اجازه ورکړه چې اپلیکیشنونه نصب کړي</string>
     <string name="system_setting_auth_email">د بریښنالیک کوډ په کارولو سره لاګ ان</string>
     <string name="system_setting_auth_passkey">د passkey په کارولو سره لاګ ان</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">د کاروونکي حالت تازه کولو پاتې راغلل</string>
     <string name="system_users_toast_revoke_failed">د سیشن د لغوه کولو پاتې راغلل</string>
 
-    <string name="settings_app_label">Mochi تنظيمات</string>
     <string name="settings_home_sessions">ناستې</string>
     <string name="settings_home_privacy">د محرمیت تګلاره</string>
     <string name="settings_home_rules">قواعد</string>
     <string name="settings_home_terms">د خدمت شرایط</string>
-    <string name="account_section_methods">د ننوتلو میتودونه</string>
     <string name="account_passkeys_empty">کوم ثبت شوي کیلیګانې شتون نلري.</string>
     <string name="account_passkey_register_title">کیلي اضافه کړئ</string>
     <string name="account_passkey_register_message">ستاسو وسیله به ستاسو څخه د تایید غوښتنه وکړي. کیلي د دې وسیلې سره تړل شوې او د راتلونکو لاسلیکونو لپاره کارول کیږي.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">د بیارغونې کوډونه بیا جوړ کړئ؟</string>
     <string name="account_recovery_regen_message">موجوده کوډونه به سمدلاسه کار ودروي. نوي یې په خوندي ځای کې وساتئ.</string>
     <string name="account_recovery_codes_warning">دا کوډونه وساتئ — هر یو یوازې یوځل کارول کیدی شي. دوی به بیا ښکاره نشي.</string>
-    <string name="sessions_section_title">فعالې غونډې</string>
     <string name="sessions_title">ناستې</string>
     <string name="sessions_empty">هیڅ فعالې غونډې نشته.</string>
     <string name="sessions_revoke_message">هغه وسیله چې دا غونډه کاروي وتل به وکړي.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">لنډیز بیا جوړ کړئ</string>
     <string name="interests_summary_regenerating">بیا جوړیږي…</string>
     <string name="interests_summary_empty">د هغه څه چې تاسو یې خوښوئ د لنډیز جوړولو لپاره ځینې علاقې اضافه کړئ.</string>
-    <string name="interests_weight">وزن</string>
     <string name="interests_search_failed">لټون پاتې راغی. بیا هڅه وکړئ.</string>
     <string name="document_privacy_title">د محرمیت تګلاره</string>
     <string name="document_rules_title">قواعد</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s نصبیږي…</string>
     <string name="accounts_field_api_key">API کلید</string>
     <string name="accounts_field_url">د سرور URL</string>
-    <string name="accounts_device_placeholder">د پوش حسابونه د وسیلې لخوا په اتومات ډول اضافه کیږي.</string>
     <string name="accounts_set_default_ai">د ډیفالټ AI په توګه تنظیم کړئ</string>
     <string name="accounts_verify_code">کوډ</string>
     <string name="accounts_verify_resend">کوډ بیا واستوئ</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">نوم</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">نورو ته اجازه ورکړه چې تاسو په ډایرکټرۍ کې ومومي</string>
-    <string name="account_method_email_subtitle">د بریښنالیک له لارې د تایید کوډ ترلاسه کړئ</string>
-    <string name="account_method_totp_subtitle">د فعالولو لپاره، لاندې تصدیق کوونکی تنظیم کړئ</string>
-    <string name="account_method_passkey_subtitle">د فعالولو لپاره، لاندې د لاسرسي کیلي ثبت کړئ</string>
     <string name="domain_add">ډومین اضافه کړئ</string>
     <string name="domain_add_title">ډومین اضافه کړئ</string>
     <string name="domain_delegation_add">اضافه کړئ</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">هیڅ منزلونه نه دي تنظیم شوي</string>
     <string name="notifprefs_transport_fcm">د Android پوش</string>
     <string name="notifprefs_no_destinations">هیڅ منزلونه نشته</string>
+    <string name="account_data_generate">پاسفریز جوړ کړئ</string>
+    <string name="accounts_field_server">د سرور URL</string>
+    <string name="accounts_field_token">د لاسرسي ټوکن</string>
+    <string name="accounts_field_topic">موضوع</string>
+    <string name="accounts_field_secret">د لاسلیک راز</string>
+    <string name="account_totp_open">په تصدیق کوونکي اپ کې خلاص کړئ</string>
 </resources>

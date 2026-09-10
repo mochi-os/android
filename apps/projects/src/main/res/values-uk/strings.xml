@@ -379,4 +379,5 @@
     <string name="projects_export_saved">Дані проєкту збережено</string>
     <string name="projects_exporting">Підготовка експорту…</string>
     <string name="projects_board_add_column">Додати стовпець</string>
+    <string name="projects_design_sample">Зразок %1$d</string>
 </resources>

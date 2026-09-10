@@ -19,11 +19,11 @@ import org.mochios.android.ui.components.LastViewedStore
 fun CrmsRouter(onResolve: (crmId: String) -> Unit) {
     val context = LocalContext.current
     LaunchedEffect(Unit) {
-        onResolve(LastViewedStore.get(context, PROJECTS_FEATURE).orEmpty())
+        onResolve(LastViewedStore.get(context, CRM_FEATURE).orEmpty())
     }
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         CircularProgressIndicator()
     }
 }
 
-const val PROJECTS_FEATURE = "crm"
+const val CRM_FEATURE = "crm"

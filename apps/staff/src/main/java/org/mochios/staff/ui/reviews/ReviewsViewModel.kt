@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -71,6 +73,8 @@ class ReviewsViewModel @Inject constructor(
     val events = _events.receiveAsFlow()
 
     private var page: Int = 1
+    private var loadJob: Job? = null
+    private var moreJob: Job? = null
 
     init {
         loadFirstPage()
@@ -86,7 +90,7 @@ class ReviewsViewModel @Inject constructor(
     fun loadMore() {
         val s = _state.value
         if (s.isLoading || s.isLoadingMore || !s.hasMore) return
-        viewModelScope.launch {
+        moreJob = viewModelScope.launch {
             _state.value = s.copy(isLoadingMore = true)
             try {
                 val resp = repo.listReviews(
@@ -106,6 +110,7 @@ class ReviewsViewModel @Inject constructor(
                     isLoadingMore = false,
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(isLoadingMore = false)
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
             }
@@ -125,6 +130,7 @@ class ReviewsViewModel @Inject constructor(
                     ReviewsEvent.Toast(org.mochios.staff.R.string.staff_reviews_toast_updated),
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
             }
         }
@@ -153,6 +159,7 @@ class ReviewsViewModel @Inject constructor(
                     ReviewsEvent.Toast(org.mochios.staff.R.string.staff_reviews_toast_removed),
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(submitting = false)
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
             }
@@ -160,8 +167,12 @@ class ReviewsViewModel @Inject constructor(
     }
 
     private fun loadFirstPage() {
-        viewModelScope.launch {
-            _state.value = _state.value.copy(isLoading = true, error = null)
+        loadJob?.cancel()
+        // A load-more still in flight belongs to the filter being replaced;
+        // left running, it would splice that filter's rows into the new list.
+        moreJob?.cancel()
+        loadJob = viewModelScope.launch {
+            _state.value = _state.value.copy(isLoading = true, isLoadingMore = false, error = null)
             page = 1
             try {
                 val resp = repo.listReviews(
@@ -176,6 +187,7 @@ class ReviewsViewModel @Inject constructor(
                     isLoading = false,
                 )
             } catch (e: Exception) {
+                if (e is CancellationException) throw e
                 _state.value = _state.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),

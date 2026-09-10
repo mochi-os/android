@@ -33,7 +33,12 @@ class SettingsHomeViewModel @Inject constructor(
     private val _state = MutableStateFlow(SettingsHomeUiState())
     val state: StateFlow<SettingsHomeUiState> = _state.asStateFlow()
 
-    init {
+    init { refresh() }
+
+    /** Re-fetched on every return to the home screen: a fetch that failed at
+     *  start-up used to hide the System and Domains groups for the whole
+     *  session, with nothing to retry it. */
+    fun refresh() {
         viewModelScope.launch {
             runCatching {
                 val resp = domainsApi.getDomains()

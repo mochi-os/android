@@ -285,11 +285,13 @@ private fun OrderRow(order: ActivityOrder) {
         CellEntity(
             id = order.seller,
             name = order.sellerName,
+            fingerprint = order.sellerFingerprint,
             weight = 1.4f,
         )
         CellEntity(
             id = order.buyer,
             name = order.buyerName,
+            fingerprint = order.buyerFingerprint,
             weight = 1.4f,
         )
         CellText(
@@ -346,7 +348,7 @@ private fun ListingRow(listing: ActivityListing) {
     val format = LocalFormat.current
     TableRow {
         CellText(text = listing.title, weight = 2f)
-        CellEntity(id = listing.seller, name = listing.sellerName, weight = 1.4f)
+        CellEntity(id = listing.seller, name = listing.sellerName, fingerprint = listing.sellerFingerprint, weight = 1.4f)
         Box(
             modifier = Modifier
                 .weight(1f)
@@ -409,7 +411,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.signupsRows(
 private fun SignupRow(signup: ActivitySignup) {
     val format = LocalFormat.current
     TableRow {
-        CellText(text = signup.name.ifBlank { formatFingerprint(signup.id) }, weight = 2f)
+        CellText(text = signup.name.ifBlank { formatFingerprint(signup.fingerprint) }, weight = 2f)
         CellText(
             text = if (signup.seller != 0) {
                 stringResource(R.string.staff_dashboard_yes)
@@ -470,7 +472,7 @@ private fun ModerationRow(entry: ModerationEntry) {
             text = if (entry.actor == "system") {
                 stringResource(R.string.staff_dashboard_system)
             } else {
-                entry.actorName.ifBlank { formatFingerprint(entry.actor) }
+                entry.actorName.ifBlank { formatFingerprint(entry.actorFingerprint) }
             },
             weight = 1.2f,
         )
@@ -522,12 +524,17 @@ private fun androidx.compose.foundation.lazy.LazyListScope.auditRows(
 @Composable
 private fun AuditRow(entry: AuditEntry) {
     val format = LocalFormat.current
-    val obj = entry.`object`
-    val objectDisplay = "${entry.kind}/${if (obj.length > 12) formatFingerprint(obj) else obj}"
+    // An account or staff object is an entity: its name, else its fingerprint,
+    // never a slice of the id. Everything else is a row id.
+    val objectLabel = when (entry.kind) {
+        "account", "staff" -> entry.objectName.ifBlank { formatFingerprint(entry.objectFingerprint) }
+        else -> if (entry.`object`.all { it.isDigit() }) "#${entry.`object`}" else entry.`object`
+    }
+    val objectDisplay = "${entry.kind}/$objectLabel"
     val actorLabel = if (entry.actor == "system") {
         stringResource(R.string.staff_dashboard_system)
     } else {
-        entry.actorName.ifBlank { formatFingerprint(entry.actor) }
+        entry.actorName.ifBlank { formatFingerprint(entry.actorFingerprint) }
     }
     TableRow {
         CellText(text = entry.action, weight = 1.2f)
@@ -631,6 +638,7 @@ private fun androidx.compose.foundation.layout.RowScope.CellText(
 private fun androidx.compose.foundation.layout.RowScope.CellEntity(
     id: String,
     name: String,
+    fingerprint: String,
     weight: Float,
 ) {
     Row(
@@ -647,7 +655,7 @@ private fun androidx.compose.foundation.layout.RowScope.CellEntity(
             size = 20.dp,
         )
         Text(
-            text = name.ifBlank { formatFingerprint(id) },
+            text = name.ifBlank { formatFingerprint(fingerprint) },
             style = MaterialTheme.typography.bodySmall,
             maxLines = 1,
         )

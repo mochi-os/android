@@ -350,4 +350,8 @@
     <string name="game_empty_title">Wala pang laro</string>
     <string name="game_select_title">Pumili ng laro</string>
     <string name="game_select_subtitle">Pumili ng laro sa sidebar o magsimula ng bago.</string>
+    <string name="settings_card">Istilo ng card</string>
+    <string name="settings_card_theme">Mula sa tema</string>
+    <string name="settings_card_flat">Patag</string>
+    <string name="settings_card_raised">Nakaangat</string>
 </resources>

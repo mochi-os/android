@@ -339,4 +339,8 @@
     <string name="rss_revoke_message">Tudo que estiver inscrito neste feed deixará de recebê-lo. Você pode copiar uma nova URL depois.</string>
     <string name="rss_revoked">Acesso RSS revogado</string>
     <string name="rss_revoke_failed">Falha ao revogar o acesso RSS</string>
+    <string name="settings_card">Estilo do cartão</string>
+    <string name="settings_card_theme">Do tema</string>
+    <string name="settings_card_flat">Plano</string>
+    <string name="settings_card_raised">Elevado</string>
 </resources>

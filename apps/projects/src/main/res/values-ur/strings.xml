@@ -377,4 +377,5 @@
     <string name="projects_export_saved">پروجیکٹ ڈیٹا محفوظ ہو گیا</string>
     <string name="projects_exporting">ایکسپورٹ تیار کیا جا رہا ہے…</string>
     <string name="projects_board_add_column">کالم شامل کریں</string>
+    <string name="projects_design_sample">نمونہ %1$d</string>
 </resources>

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Tên hiển thị</string>
-    <string name="chat_auth_verification_failed">Xác minh thất bại</string>
     <string name="chat_list_title">Trò chuyện</string>
     <string name="chat_list_search">Tìm kiếm</string>
     <string name="chat_list_logout">Đăng xuất</string>
     <string name="chat_list_new">Trò chuyện mới</string>
     <string name="chat_new_title">Trò chuyện mới</string>
     <string name="chat_new_name">Tên nhóm</string>
-    <string name="chat_new_friends">Bạn bè</string>
     <string name="chat_message_placeholder">Tin nhắn</string>
     <string name="chat_attachment_add">Đính kèm tệp</string>
-    <string name="chat_message_attach">Đính kèm tệp</string>
     <string name="chat_settings_title">Cài đặt trò chuyện</string>
     <string name="chat_settings_rename_label">Tên cuộc trò chuyện</string>
     <string name="chat_settings_save">Lưu</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Gửi</string>
     <string name="chat_attachment_remove">Xóa tệp đính kèm</string>
-    <string name="chat_message_remove_attachment">Xóa tệp đính kèm</string>
-    <string name="chat_auth_login_failed">Đăng nhập thất bại</string>
     <string name="chat_attachment_move_up">Di chuyển lên</string>
     <string name="chat_attachment_move_down">Di chuyển xuống</string>
 
     <string name="notification_channel_chat">Thông báo trò chuyện</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">Không thể tạo danh tính</string>
-    <string name="chat_auth_mfa_unsupported">Ứng dụng di động chưa hỗ trợ MFA</string>
-    <string name="chat_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>
-    <string name="chat_auth_create_identity">Tạo danh tính của bạn</string>
     <string name="chat_list_empty">Chưa có cuộc trò chuyện nào</string>
     <string name="chat_new_existing_chat">Mở cuộc trò chuyện hiện có</string>
     <string name="chat_new_start">Bắt đầu trò chuyện</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Chưa có tin nhắn nào — hãy chào hỏi!</string>
     <string name="chat_messages_load_more">Tải tin nhắn cũ hơn</string>
     <string name="chat_attachment_label">Tệp</string>
-    <string name="chat_message_too_long">Tin nhắn quá dài</string>
-    <string name="chat_message_empty">Tin nhắn không được để trống</string>
     <string name="chat_settings_rename">Đổi tên cuộc trò chuyện</string>
     <string name="chat_settings_add_member_empty">Không có bạn bè nào để thêm</string>
     <string name="chat_settings_remove_member_message">Xóa %1$s khỏi cuộc trò chuyện này?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Tin nhắn này đã bị xóa</string>
     <string name="chat_search_hint">Tìm trong cuộc trò chuyện...</string>
-    <string name="chat_search_no_results">Không có kết quả</string>
     <string name="chat_message_forward">Chuyển tiếp</string>
     <string name="chat_forward_title">Chuyển tiếp đến…</string>
     <string name="chat_forward_search">Tìm kiếm cuộc trò chuyện…</string>
     <string name="chat_forward_empty">Không có cuộc trò chuyện nào để chuyển tiếp</string>
     <string name="chat_forward_success">Đã chuyển tiếp</string>
-    <string name="chat_forward_failed">Không thể chuyển tiếp</string>
 
     <string name="chat_message_reply">Trả lời</string>
     <string name="chat_message_select">Chọn</string>
@@ -82,15 +67,12 @@
     <string name="chat_forward_friends">Bạn bè</string>
     <string name="chat_policy_title">Chat đến</string>
     <string name="chat_policy_friends">Chỉ bạn bè</string>
-    <string name="chat_policy_friends_description">Chỉ bạn bè mới có thể bắt đầu chat với bạn (mặc định).</string>
     <string name="chat_policy_anyone">Bất kỳ ai</string>
-    <string name="chat_policy_anyone_description">Bất kỳ ai cũng có thể bắt đầu chat với bạn.</string>
     <string name="chat_new_search_placeholder">Tìm người</string>
     <string name="chat_new_no_matches">Không có người phù hợp</string>
     <string name="chat_new_no_friends">Tìm người để trò chuyện</string>
     <string name="chat_pin">Ghim</string>
     <string name="chat_unpin">Bỏ ghim</string>
-    <string name="chat_pinned_label">Đã ghim</string>
     <string name="chat_settings_general">Chung</string>
     <string name="chat_settings_screen_title">Cài đặt %1$s</string>
     <string name="chat_mark_read">Đánh dấu là đã đọc</string>
@@ -99,4 +81,5 @@
     <string name="chat_search_prev">Kết quả khớp trước</string>
     <string name="chat_settings_id">ID trò chuyện</string>
     <string name="chat_message_edited">(đã chỉnh sửa)</string>
+    <string name="chat_new_fallback_name">Trò chuyện</string>
 </resources>

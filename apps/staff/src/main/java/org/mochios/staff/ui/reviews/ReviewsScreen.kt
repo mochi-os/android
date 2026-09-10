@@ -64,6 +64,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.Review
 import org.mochios.staff.ui.components.FilterChipSpec
@@ -121,8 +122,8 @@ fun ReviewsScreen(
     // "reviewer → subject on listing" body string the web version composes.
     val pending = state.pendingRemove
     if (pending != null) {
-        val reviewerName = pending.reviewerName.orEmpty().ifBlank { fingerprint(pending.reviewer) }
-        val subjectName = pending.subjectName.orEmpty().ifBlank { fingerprint(pending.subject) }
+        val reviewerName = pending.reviewerName.orEmpty().ifBlank { formatFingerprint(pending.reviewerFingerprint.orEmpty()) }
+        val subjectName = pending.subjectName.orEmpty().ifBlank { formatFingerprint(pending.subjectFingerprint.orEmpty()) }
         val message = if (!pending.listingTitle.isNullOrBlank()) {
             stringResource(
                 R.string.staff_reviews_remove_desc_full,
@@ -270,8 +271,8 @@ private fun ReviewRow(
     onAskRemove: (Review) -> Unit,
 ) {
     val format = LocalFormat.current
-    val reviewerName = review.reviewerName.orEmpty().ifBlank { fingerprint(review.reviewer) }
-    val subjectName = review.subjectName.orEmpty().ifBlank { fingerprint(review.subject) }
+    val reviewerName = review.reviewerName.orEmpty().ifBlank { formatFingerprint(review.reviewerFingerprint.orEmpty()) }
+    val subjectName = review.subjectName.orEmpty().ifBlank { formatFingerprint(review.subjectFingerprint.orEmpty()) }
     val avatarUrl = review.reviewer.takeIf { reviewer -> reviewer.isNotBlank() }?.let { reviewer ->
         "/staff/-/user/$reviewer/asset/avatar"
     }
@@ -447,7 +448,3 @@ private fun ReviewerRoleChip(role: String) {
             .padding(horizontal = 8.dp, vertical = 2.dp),
     )
 }
-
-/** First 9 characters of an entity ID — the standard Mochi fingerprint slice. */
-private fun fingerprint(id: String): String =
-    if (id.length <= 9) id else id.substring(0, 9)

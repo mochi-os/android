@@ -332,7 +332,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
             flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
                     android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
-            // Pin the PendingIntent to the matching launcher alias so badge-
+            // Pin the PendingIntent to the matching launcher activity so badge-
             // capable launchers attribute the unread dot to the right Mochi-
             // app icon (every alias targets MainActivity, so without this the
             // badge stamps on every Mochi icon).

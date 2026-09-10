@@ -349,4 +349,8 @@
     <string name="game_empty_title">暂无游戏</string>
     <string name="game_select_title">选择游戏</string>
     <string name="game_select_subtitle">从侧边栏选择一局游戏，或开始新游戏。</string>
+    <string name="settings_card">卡片样式</string>
+    <string name="settings_card_theme">来自主题</string>
+    <string name="settings_card_flat">扁平</string>
+    <string name="settings_card_raised">凸起</string>
 </resources>

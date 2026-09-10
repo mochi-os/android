@@ -52,6 +52,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.ui.components.ScoreColorChip
@@ -173,7 +174,7 @@ private fun ModerationRow(
             val actorLabel = when {
                 entry.actor == "system" -> stringResource(R.string.staff_moderation_system)
                 entry.actorName.isNotBlank() -> entry.actorName
-                else -> formatFingerprintSafe(entry.actor)
+                else -> formatFingerprint(entry.actorFingerprint)
             }
             Text(
                 text = actorLabel,
@@ -200,13 +201,4 @@ private fun ModerationRow(
             )
         }
     }
-}
-
-/**
- * Slice a fingerprint into `xxx-xxx-xxx` form.
- */
-internal fun formatFingerprintSafe(id: String): String {
-    val fp = id.take(9)
-    if (fp.length < 9) return fp
-    return "${fp.substring(0, 3)}-${fp.substring(3, 6)}-${fp.substring(6, 9)}"
 }

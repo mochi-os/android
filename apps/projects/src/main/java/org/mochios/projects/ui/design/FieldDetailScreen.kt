@@ -58,8 +58,6 @@ import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
 import org.mochios.android.R as MochiR
 
-private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checklist")
-
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
     "text" -> stringResource(R.string.projects_field_type_text)
@@ -100,8 +98,6 @@ fun FieldDetailScreen(
     onBack: () -> Unit
 ) {
     var editName by remember(field.id) { mutableStateOf(field.name) }
-    var editFieldtype by remember(field.id) { mutableStateOf(field.fieldtype) }
-    var typeExpanded by remember { mutableStateOf(false) }
     var isRequired by remember(field.id) { mutableStateOf(field.isRequired) }
     var isReadonly by remember(field.id) { mutableStateOf(field.isReadonly) }
     var isSortable by remember(field.id) { mutableStateOf(field.isSortable) }
@@ -148,36 +144,16 @@ fun FieldDetailScreen(
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        // Type
-        ExposedDropdownMenuBox(
-            expanded = typeExpanded,
-            onExpandedChange = { typeExpanded = it }
-        ) {
-            MochiTextField(
-                value = fieldTypeLabel(editFieldtype),
-                onValueChange = {},
-                readOnly = true,
-                label = { Text(stringResource(R.string.projects_field_type)) },
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = typeExpanded) },
-                modifier = Modifier
-                    .menuAnchor(MenuAnchorType.PrimaryNotEditable)
-                    .fillMaxWidth()
-            )
-            ExposedDropdownMenu(
-                expanded = typeExpanded,
-                onDismissRequest = { typeExpanded = false }
-            ) {
-                FIELD_TYPE_KEYS.forEach { value ->
-                    MochiDropdownMenuItem(
-                        text = { Text(fieldTypeLabel(value)) },
-                        onClick = {
-                            editFieldtype = value
-                            typeExpanded = false
-                        },
-                    )
-                }
-            }
-        }
+        // Type: fixed once the field exists. The server never rereads it on
+        // update, so an editable picker here could only pretend.
+        MochiTextField(
+            value = fieldTypeLabel(field.fieldtype),
+            onValueChange = {},
+            readOnly = true,
+            enabled = false,
+            label = { Text(stringResource(R.string.projects_field_type)) },
+            modifier = Modifier.fillMaxWidth()
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
         HorizontalDivider()
@@ -193,7 +169,7 @@ fun FieldDetailScreen(
         FlagRow(stringResource(R.string.projects_field_filterable), isFilterable) { isFilterable = it }
         FlagRow(stringResource(R.string.projects_field_show_on_card), showOnCard) { showOnCard = it }
 
-        if (editFieldtype == "enumerated") {
+        if (field.fieldtype == "enumerated") {
             FlagRow(stringResource(R.string.projects_field_multi), isMulti) { isMulti = it }
         }
 
@@ -240,7 +216,7 @@ fun FieldDetailScreen(
         Text(stringResource(R.string.projects_field_validation), style = MaterialTheme.typography.titleSmall)
         Spacer(modifier = Modifier.height(8.dp))
 
-        if (editFieldtype == "text") {
+        if (field.fieldtype == "text") {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 MochiTextField(
                     value = editMinlength,
@@ -288,7 +264,6 @@ fun FieldDetailScreen(
 
         val rowsInt = editRows.toIntOrNull()
         val hasChanges = editName != field.name
-                || editFieldtype != field.fieldtype
                 || flagsString != field.flags.ifEmpty { null }
                 || isMulti != field.isMulti
                 || showOnCard != field.showOnCard
@@ -305,7 +280,6 @@ fun FieldDetailScreen(
                         classId = classId,
                         fieldId = field.id,
                         name = editName.takeIf { it != field.name },
-                        fieldtype = editFieldtype.takeIf { it != field.fieldtype },
                         flags = flagsString,
                         multi = isMulti.takeIf { it != field.isMulti },
                         card = showOnCard.takeIf { it != field.showOnCard },
@@ -323,7 +297,7 @@ fun FieldDetailScreen(
         }
 
         // Options section (only for enumerated fields)
-        if (field.fieldtype == "enumerated" || editFieldtype == "enumerated") {
+        if (field.fieldtype == "enumerated" || field.fieldtype == "enumerated") {
             Spacer(modifier = Modifier.height(16.dp))
             HorizontalDivider()
             Spacer(modifier = Modifier.height(16.dp))

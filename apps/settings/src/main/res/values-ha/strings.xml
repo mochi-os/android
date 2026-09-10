@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Saiyyun sanarwa</string>
     <string name="settings_home_accounts">Asusai da aka haɗa</string>
     <string name="settings_home_interests">Interests</string>
-    <string name="account_method_email">Lambar imel</string>
-    <string name="account_method_passkey">Maɓallin shiga</string>
-    <string name="account_method_totp">Manhajar tabbatarwa</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Ƙara passkey</string>
     <string name="account_passkey_delete_title">Goge passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Goge hanya</string>
     <string name="route_delete_title">Goge hanya?</string>
     <string name="route_path">Path</string>
-    <string name="route_target">Manufa</string>
     <string name="route_method">Hanya</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Hukuma</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interests</string>
     <string name="interests_summary_title">Taƙaitawa</string>
     <string name="interests_remove">Cire sha\'awa</string>
-    <string name="interests_add">Ƙara</string>
-    <string name="document_save">Adana</string>
-    <string name="document_saved">An adana</string>
     <string name="notifprefs_title">Saiyyun sanarwa</string>
     <string name="notifprefs_tab_categories">Rukuni</string>
     <string name="notifprefs_tab_topics">Batutuwa</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Saiti</string>
     <string name="system_settings_reset_to_default">Mayar zuwa asali</string>
     <string name="system_settings_reset_title">A mayar zuwa asali?</string>
-    <string name="system_settings_setting_updated">An sabunta saiti</string>
-    <string name="system_settings_update_failed">An gaza sabunta saiti</string>
     <string name="system_setting_apps_install_user">Ba masu amfani damar shigar da apps</string>
     <string name="system_setting_auth_email">Shiga ta amfani da lambar imel</string>
     <string name="system_setting_auth_passkey">Shiga ta amfani da passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">An gaza sabunta matsayin mai amfani</string>
     <string name="system_users_toast_revoke_failed">An gaza janye session</string>
 
-    <string name="settings_app_label">Mochi Saituna</string>
     <string name="settings_home_sessions">Zama-zaman</string>
     <string name="settings_home_privacy">Manufar sirri</string>
     <string name="settings_home_rules">Dokoki</string>
     <string name="settings_home_terms">Sharuɗɗan sabis</string>
-    <string name="account_section_methods">Hanyoyin shiga</string>
     <string name="account_passkeys_empty">Babu maɓallin shiga da aka rajista.</string>
     <string name="account_passkey_register_title">Ƙara maɓallin shiga</string>
     <string name="account_passkey_register_message">Na\'urar ka za ta tambaye ka ka tabbatar. Ana ɗaure maɓallin shiga ga wannan na\'urar kuma za a yi amfani da shi don shiga na gaba.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Sake ƙirƙira lambobin dawowa?</string>
     <string name="account_recovery_regen_message">Lambobin da ke akwai za su daina aiki nan da nan. Adana sababbi a wuri mai aminci.</string>
     <string name="account_recovery_codes_warning">Adana waɗannan lambobi — kowanne kawai za a iya amfani da shi sau ɗaya. Ba za a sake nuna su ba.</string>
-    <string name="sessions_section_title">Zaman da ke aiki</string>
     <string name="sessions_title">Zama-zaman</string>
     <string name="sessions_empty">Babu zaman da ke aiki.</string>
     <string name="sessions_revoke_message">Na\'urar da ke amfani da wannan zaman za ta fita.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Sake ƙirƙira taƙaitawa</string>
     <string name="interests_summary_regenerating">Ana sake ƙirƙira…</string>
     <string name="interests_summary_empty">Ƙara wasu sha\'awa don ƙirƙirar taƙaitawa game da abin da kake so.</string>
-    <string name="interests_weight">Nauyi</string>
     <string name="interests_search_failed">Bincike ya kasa. Da fatan a sake gwadawa.</string>
     <string name="document_privacy_title">Manufar sirri</string>
     <string name="document_rules_title">Dokoki</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Ana shigar da %1$s…</string>
     <string name="accounts_field_api_key">Maɓallin API</string>
     <string name="accounts_field_url">URL na uwar garken</string>
-    <string name="accounts_device_placeholder">Ana ƙara asusun turawa ta atomatik ta na\'urar.</string>
     <string name="accounts_set_default_ai">Saita a matsayin AI tsoho</string>
     <string name="accounts_verify_code">Lambar</string>
     <string name="accounts_verify_resend">Sake aika lambar</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Suna</string>
     <string name="account_identity_fingerprint">Sawun yatsa</string>
     <string name="account_identity_directory_toggle">Ba wasu damar nemo ka a directory</string>
-    <string name="account_method_email_subtitle">Karɓi lambar tabbatarwa ta imel</string>
-    <string name="account_method_totp_subtitle">Saita na\'urar tabbatarwa a ƙasa don kunnawa</string>
-    <string name="account_method_passkey_subtitle">Yi rajistar maɓallin shiga a ƙasa don kunnawa</string>
     <string name="domain_add">Ƙara domain</string>
     <string name="domain_add_title">Ƙara domain</string>
     <string name="domain_delegation_add">Ƙara</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Ba a saita destinations ba</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Babu wuraren ƙarshe</string>
+    <string name="account_data_generate">Ƙirƙiri kalmar sirri</string>
+    <string name="accounts_field_server">URL na uwar garken</string>
+    <string name="accounts_field_token">Alamar shiga</string>
+    <string name="accounts_field_topic">Batu</string>
+    <string name="accounts_field_secret">Sirrin sa hannu</string>
+    <string name="account_totp_open">Buɗe a manhajar tantancewa</string>
 </resources>

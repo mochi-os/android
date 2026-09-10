@@ -42,6 +42,10 @@ abstract class FileRepository(protected val fileStore: FileStore) {
     suspend fun readTextOrZippedFile(uri: Uri): String? =
         fileStore.readTextOrZipped(uri)
 
+    /** Whether a picked document is a zipped export rather than bare JSON. */
+    suspend fun isArchive(uri: Uri): Boolean =
+        fileStore.isZipped(uri)
+
     suspend fun saveTextFile(uri: Uri, text: String): Boolean =
         fileStore.writeText(uri, text)
 

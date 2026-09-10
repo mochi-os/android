@@ -21,7 +21,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Toggles the Mochi Staff launcher alias (declared `android:enabled="false"` in
+ * Toggles the Mochi Staff launcher activity (declared `android:enabled="false"` in
  * the host manifest) on the bound identity's staff role. Only a 401/403 or a
  * blank role disables it; network errors leave the current state untouched.
  */
@@ -86,7 +86,7 @@ class StaffAccessController @Inject constructor(
             disable()
         } else {
             Log.i(TAG, "getMe() returned role=${me.role} for ${me.id.take(8)}… — enabling staff launcher")
-            LauncherIconToggle.setVisible(context, ALIAS_CLASS_NAME, true)
+            LauncherIconToggle.setVisible(context, LAUNCHER_CLASS_NAME, true)
         }
     }
 
@@ -95,18 +95,18 @@ class StaffAccessController @Inject constructor(
      * hidden is a no-op (see [LauncherIconToggle.setVisible]).
      */
     internal fun disable() {
-        LauncherIconToggle.setVisible(context, ALIAS_CLASS_NAME, false)
+        LauncherIconToggle.setVisible(context, LAUNCHER_CLASS_NAME, false)
     }
 
     companion object {
         private const val TAG = "StaffAccess"
 
         /**
-         * Activity-alias name from
+         * Launcher activity class name from
          * `clients/android/app/src/main/AndroidManifest.xml`;
          * [LauncherIconToggle.setVisible] adds the package prefix.
          */
-        const val ALIAS_CLASS_NAME = "MochiStaffLauncher"
+        const val LAUNCHER_CLASS_NAME = "MochiStaffLauncher"
 
         // Back-channel for [StaffAuthInterceptor]: injecting this singleton
         // into the OkHttp client would make a Hilt provision cycle.

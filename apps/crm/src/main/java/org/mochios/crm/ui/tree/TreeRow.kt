@@ -64,6 +64,7 @@ import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.crm.R
+import org.mochios.crm.util.dateSeconds
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
@@ -317,7 +318,10 @@ fun TreeRow(
     }
 
     if (showReparentDialog && onReparent != null) {
-        val possibleParents = allObjects.filter { candidate -> candidate.id != obj.id }
+        // Neither the row itself nor anything under it: the server refuses the
+        // cycle, and it would only be refused after the pick.
+        val descendants = viewModel.collectDescendants(obj.id)
+        val possibleParents = allObjects.filter { candidate -> candidate.id != obj.id && candidate.id !in descendants }
         MochiAlertDialog(
             onDismissRequest = { showReparentDialog = false },
             title = stringResource(R.string.crm_tree_move_to_parent),
@@ -421,7 +425,7 @@ private fun MetaValue(
 
         "date" -> {
             val format = LocalFormat.current
-            val seconds = value.toLongOrNull() ?: value.toDoubleOrNull()?.toLong()
+            val seconds = dateSeconds(value)
             val label = seconds
                 ?.let { epoch -> format.formatDate(epoch) }
                 ?.takeIf { formatted -> formatted.isNotBlank() } ?: value

@@ -24,6 +24,7 @@ data class Session(
     val created: Long = 0,
     val accessed: Long = 0,
     val expires: Long = 0,
+    val current: Boolean = false,
 )
 
 data class SessionsResponse(val sessions: List<Session> = emptyList())

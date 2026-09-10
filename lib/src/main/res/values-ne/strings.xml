@@ -350,4 +350,8 @@
     <string name="game_empty_title">अहिलेसम्म कुनै खेल छैन</string>
     <string name="game_select_title">खेल छान्नुहोस्</string>
     <string name="game_select_subtitle">साइडबारबाट खेल छान्नुहोस् वा नयाँ खेल सुरु गर्नुहोस्।</string>
+    <string name="settings_card">कार्ड शैली</string>
+    <string name="settings_card_theme">थिमबाट</string>
+    <string name="settings_card_flat">सम्म</string>
+    <string name="settings_card_raised">उठाइएको</string>
 </resources>

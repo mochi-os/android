@@ -17,7 +17,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
-// Whom may start a chat with this user. Mirrors the web chat_policy setting.
+// Whom may start a chat with this user. Mirrors the web policy setting.
 data class ChatPolicyUiState(
     val policy: String = "friends",
     val loaded: String = "friends",

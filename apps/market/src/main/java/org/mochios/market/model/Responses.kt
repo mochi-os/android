@@ -17,11 +17,6 @@ import com.google.gson.annotations.SerializedName
 /** Acknowledgement-only payload for endpoints that just return `{ ok: true }`. */
 data class OkResponse(val ok: Boolean = true)
 
-/**
- * The `{ data: T }` envelope, for callers that unwrap by hand.
- */
-data class DataEnvelope<T>(val data: T? = null)
-
 // ---- Listings -----------------------------------------------------------
 
 /**
@@ -268,6 +263,9 @@ data class AuditListResponse(
  * window (not the sandboxed iframe) to this URL.
  */
 data class StripeOnboardingResponse(val url: String = "")
+
+/** Result of `-/accounts/stripe/oauth/complete`: whether the account is now linked. */
+data class StripeOauthCompletion(val connected: Boolean = false)
 
 // ---- Assets -------------------------------------------------------------
 

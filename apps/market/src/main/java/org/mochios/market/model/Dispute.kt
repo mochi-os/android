@@ -44,20 +44,6 @@ enum class DisputeReason {
 }
 
 /**
- * Known dispute statuses; the server's `status` is free-form, so callers must
- * tolerate unknown values.
- */
-enum class DisputeStatus {
-    @SerializedName("open") OPEN,
-    @SerializedName("responded") RESPONDED,
-    @SerializedName("resolved_refund") RESOLVED_REFUND,
-    @SerializedName("resolved_partial") RESOLVED_PARTIAL,
-    @SerializedName("resolved_seller") RESOLVED_SELLER,
-    @SerializedName("escalated") ESCALATED,
-    @SerializedName("cancelled") CANCELLED,
-}
-
-/**
  * Dispute evidence entry, drawn from the audit stream. File entries fill [name]
  * / [size] / [url] / [mime]; text notes use [body] only. [role] is `"buyer"`,
  * `"seller"` or `"staff"`.

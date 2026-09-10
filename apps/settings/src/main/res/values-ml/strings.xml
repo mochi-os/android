@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">അറിയിപ്പ് മുൻഗണനകൾ</string>
     <string name="settings_home_accounts">കണക്റ്റ് ചെയ്ത അക്കൗണ്ടുകൾ</string>
     <string name="settings_home_interests">താൽപ്പര്യങ്ങൾ</string>
-    <string name="account_method_email">ഇമെയിൽ കോഡ്</string>
-    <string name="account_method_passkey">പാസ്കീ</string>
-    <string name="account_method_totp">Authenticator ആപ്പ്</string>
     <string name="account_section_passkeys">പാസ്കീകൾ</string>
     <string name="account_passkey_register">പാസ്കീ ചേർക്കുക</string>
     <string name="account_passkey_delete_title">പാസ്കീ ഇല്ലാതാക്കണോ?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">റൂട്ട് ഇല്ലാതാക്കുക</string>
     <string name="route_delete_title">റൂട്ട് ഇല്ലാതാക്കണോ?</string>
     <string name="route_path">പാത്ത്</string>
-    <string name="route_target">ലക്ഷ്യം</string>
     <string name="route_method">രീതി</string>
     <string name="route_method_app">ആപ്പ്</string>
     <string name="route_method_entity">സ്ഥാപനം</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">താൽപ്പര്യങ്ങൾ</string>
     <string name="interests_summary_title">സംഗ്രഹം</string>
     <string name="interests_remove">item നീക്കം ചെയ്യുക</string>
-    <string name="interests_add">ചേർക്കുക</string>
-    <string name="document_save">സേവ് ചെയ്യുക</string>
-    <string name="document_saved">സേവ് ചെയ്തു</string>
     <string name="notifprefs_title">അറിയിപ്പ് മുൻഗണനകൾ</string>
     <string name="notifprefs_tab_categories">വിഭാഗങ്ങൾ</string>
     <string name="notifprefs_tab_topics">വിഷയങ്ങൾ</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">പുനഃസജ്ജമാക്കുക</string>
     <string name="system_settings_reset_to_default">ഡിഫോൾട്ടിലേക്ക് റീസെറ്റ് ചെയ്യണോ?</string>
     <string name="system_settings_reset_title">ഡിഫോൾട്ടുകളിലേക്ക് റീസെറ്റ് ചെയ്യുക</string>
-    <string name="system_settings_setting_updated">ക്രമീകരണം അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="system_settings_update_failed">ക്രമീകരണം പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="system_setting_apps_install_user">ഉപയോക്താക്കൾക്ക് ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ അനുവദിക്കുക</string>
     <string name="system_setting_auth_email">ഇമെയിൽ കോഡ് ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
     <string name="system_setting_auth_passkey">പാസ്കീ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യുക</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">ഉപയോക്തൃ സ്റ്റാറ്റസ് പുതുക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="system_users_toast_revoke_failed">സെഷൻ റദ്ദാക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
 
-    <string name="settings_app_label">Mochi ക്രമീകരണങ്ങൾ</string>
     <string name="settings_home_sessions">സെഷനുകൾ</string>
     <string name="settings_home_privacy">സ്വകാര്യതാ നയം</string>
     <string name="settings_home_rules">നിയമങ്ങൾ</string>
     <string name="settings_home_terms">സേവന നിബന്ധനകൾ</string>
-    <string name="account_section_methods">ലോഗിൻ രീതികൾ</string>
     <string name="account_passkeys_empty">പാസ്കീകൾ രജിസ്റ്റർ ചെയ്തിട്ടില്ല.</string>
     <string name="account_passkey_register_title">പാസ്കീ ചേർക്കുക</string>
     <string name="account_passkey_register_message">നിങ്ങളുടെ ഉപകരണം സ്ഥിരീകരിക്കാൻ ആവശ്യപ്പെടും. പാസ്കീ ഈ ഉപകരണവുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നു, ഭാവിയിലെ സൈൻ-ഇന്നുകൾക്കായി ഉപയോഗിക്കും.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">വീണ്ടെടുക്കൽ കോഡുകൾ വീണ്ടും ജനറേറ്റ് ചെയ്യണോ?</string>
     <string name="account_recovery_regen_message">നിലവിലുള്ള കോഡുകൾ ഉടനെ പ്രവർത്തിക്കാതാകും. പുതിയവ സുരക്ഷിതമായ ഇടത്ത് സൂക്ഷിക്കുക.</string>
     <string name="account_recovery_codes_warning">ഈ കോഡുകൾ സൂക്ഷിക്കുക — ഓരോന്നും ഒരിക്കൽ മാത്രമേ ഉപയോഗിക്കാനാകൂ. അവ വീണ്ടും കാണിക്കില്ല.</string>
-    <string name="sessions_section_title">സജീവ സെഷനുകൾ</string>
     <string name="sessions_title">സെഷനുകൾ</string>
     <string name="sessions_empty">സജീവ സെഷനുകൾ ഇല്ല.</string>
     <string name="sessions_revoke_message">ഈ സെഷൻ ഉപയോഗിക്കുന്ന ഉപകരണം സൈൻ ഔട്ട് ചെയ്യപ്പെടും.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">സംഗ്രഹം വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
     <string name="interests_summary_regenerating">വീണ്ടും ജനറേറ്റ് ചെയ്യുന്നു…</string>
     <string name="interests_summary_empty">നിങ്ങൾ ഇഷ്ടപ്പെടുന്ന കാര്യങ്ങളുടെ സംഗ്രഹം ജനറേറ്റ് ചെയ്യാൻ ചില താൽപ്പര്യങ്ങൾ ചേർക്കുക.</string>
-    <string name="interests_weight">ഭാരം</string>
     <string name="interests_search_failed">തിരയൽ പരാജയപ്പെട്ടു. വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="document_privacy_title">സ്വകാര്യതാ നയം</string>
     <string name="document_rules_title">നിയമങ്ങൾ</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s ഇൻസ്റ്റാൾ ചെയ്യുന്നു…</string>
     <string name="accounts_field_api_key">API കീ</string>
     <string name="accounts_field_url">സെർവർ URL</string>
-    <string name="accounts_device_placeholder">പുഷ് അക്കൗണ്ടുകൾ ഉപകരണം സ്വയം ചേർക്കും.</string>
     <string name="accounts_set_default_ai">സ്ഥിര AI ആയി സജ്ജമാക്കുക</string>
     <string name="accounts_verify_code">കോഡ്</string>
     <string name="accounts_verify_resend">കോഡ് വീണ്ടും അയക്കുക</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">പേര്</string>
     <string name="account_identity_fingerprint">വിരലടയാളം</string>
     <string name="account_identity_directory_toggle">ഡയറക്ടറിയിൽ മറ്റുള്ളവർക്ക് നിങ്ങളെ കണ്ടെത്താൻ അനുവദിക്കുക</string>
-    <string name="account_method_email_subtitle">ഇമെയിൽ വഴി പരിശോധനാ കോഡ് സ്വീകരിക്കുക</string>
-    <string name="account_method_totp_subtitle">പ്രവർത്തനക്ഷമമാക്കാൻ താഴെ ഒരു ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
-    <string name="account_method_passkey_subtitle">പ്രവർത്തനക്ഷമമാക്കാൻ താഴെ ഒരു പാസ്കീ രജിസ്റ്റർ ചെയ്യുക</string>
     <string name="domain_add">ഡൊമെയ്ൻ ചേർക്കുക</string>
     <string name="domain_add_title">ഡൊമെയ്ൻ ചേർക്കുക</string>
     <string name="domain_delegation_add">ചേർക്കുക</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">destinations-കൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
     <string name="notifprefs_transport_fcm">Android പുഷ്</string>
     <string name="notifprefs_no_destinations">ലക്ഷ്യസ്ഥാനങ്ങളില്ല</string>
+    <string name="account_data_generate">രഹസ്യ വാക്യം സൃഷ്ടിക്കുക</string>
+    <string name="accounts_field_server">സെർവർ URL</string>
+    <string name="accounts_field_token">ആക്‌സസ് ടോക്കൺ</string>
+    <string name="accounts_field_topic">വിഷയം</string>
+    <string name="accounts_field_secret">ഒപ്പ് രഹസ്യം</string>
+    <string name="account_totp_open">ഓതന്റിക്കേറ്റർ ആപ്പിൽ തുറക്കുക</string>
 </resources>

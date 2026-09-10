@@ -380,4 +380,5 @@
     <string name="projects_export_saved">Sábháladh sonraí an tionscadail</string>
     <string name="projects_exporting">Easpórtáil á hullmhú…</string>
     <string name="projects_board_add_column">Cuir colún leis</string>
+    <string name="projects_design_sample">Sampla %1$d</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Proje verileri kaydedildi</string>
     <string name="projects_exporting">Dışa aktarma hazırlanıyor…</string>
     <string name="projects_board_add_column">Sütun ekle</string>
+    <string name="projects_design_sample">Örnek %1$d</string>
 </resources>

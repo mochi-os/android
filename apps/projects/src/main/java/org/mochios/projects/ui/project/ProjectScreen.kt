@@ -125,6 +125,9 @@ import org.mochios.projects.ui.router.PROJECTS_FEATURE
 import org.mochios.projects.ui.tree.TreeView
 import org.mochios.android.R as MochiR
 
+
+// The access levels that may change a project's design (web's canDesign).
+private val DESIGN_ACCESS = setOf("owner", "design")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProjectScreen(
@@ -382,7 +385,7 @@ private fun ProjectRow(
     var showMenu by remember { mutableStateOf(false) }
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val projectId = project.fingerprint.ifEmpty { project.id }
-    val canUnsubscribe = !project.owner.local
+    val canUnsubscribe = project.owner?.local != true
     val unsubscribeTitle = stringResource(R.string.projects_settings_unsubscribe_title)
     val unsubscribeMessage = stringResource(R.string.projects_settings_unsubscribe_message)
     val unsubscribeLabel = stringResource(R.string.projects_settings_unsubscribe)
@@ -508,6 +511,13 @@ private fun ProjectContent(
     LaunchedEffect(viewModel) {
         viewModel.shareLink.collect { link ->
             shareProjectLink(context, link, shareTitle)
+        }
+    }
+
+    // A share the server refused: say why instead of doing nothing.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -711,10 +721,10 @@ private fun ProjectContent(
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
-                                // Reshaping the design is the owner's to do, so
-                                // it is offered on the same terms as the link
-                                // above rather than on every subscribed project.
-                                if (details?.project?.owner?.local == true) {
+                                // Design changes forward to the owner, so the
+                                // editor is offered on the access level, as web
+                                // does - a subscriber granted design may reshape.
+                                if (details?.project?.access in DESIGN_ACCESS) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.projects_design)) },
                                         onClick = {

@@ -21,6 +21,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -35,6 +36,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.format.formatPrice
+import org.mochios.android.format.toMinorUnits
 import org.mochios.staff.model.Dispute
 import org.mochios.staff.ui.components.StaffAuditTimeline
 import org.mochios.staff.ui.disputes.disputeReasonLabel
@@ -58,6 +60,8 @@ fun DisputeReviewDialog(
     var resolution by rememberSaveable(dispute.id) { mutableStateOf("") }
     var notes by rememberSaveable(dispute.id) { mutableStateOf("") }
     var refundInput by rememberSaveable(dispute.id) { mutableStateOf("") }
+    val refund = remember(refundInput, dispute.currency) { parseRefundInput(refundInput, dispute.currency) }
+    val refundInvalid = resolution == "resolved_buyer" && refund is RefundInput.Invalid
 
     // Stripe chargebacks keep their existing reason-bearing title;
     // already-resolved manual disputes fall through to the generic
@@ -111,6 +115,12 @@ fun DisputeReviewDialog(
                                 Text(formatPrice(remaining, dispute.currency))
                             },
                             singleLine = true,
+                            isError = refundInvalid,
+                            supportingText = if (refundInvalid) {
+                                { Text(stringResource(R.string.staff_disputes_refund_must_be_positive)) }
+                            } else {
+                                null
+                            },
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                             modifier = Modifier.fillMaxWidth(),
                         )
@@ -148,12 +158,10 @@ fun DisputeReviewDialog(
             else -> stringResource(R.string.staff_disputes_resolve)
         },
         onConfirm = {
-            val refund = if (resolution == "resolved_buyer" && refundInput.isNotBlank()) {
-                parseRefundMinor(refundInput, dispute.currency)
-            } else null
-            onSubmit(resolution, notes, refund)
+            val amount = if (resolution == "resolved_buyer") (refund as? RefundInput.Partial)?.minor else null
+            onSubmit(resolution, notes, amount)
         },
-        confirmEnabled = resolution.isNotBlank(),
+        confirmEnabled = resolution.isNotBlank() && !refundInvalid,
         confirmLoading = submitting,
         dismissText = if (readOnly) stringResource(R.string.staff_disputes_close)
             else stringResource(R.string.staff_disputes_cancel),
@@ -286,11 +294,20 @@ private fun resolutionOptions(): List<Pair<String, String>> = listOf(
     "resolved_seller" to stringResource(R.string.staff_disputes_resolution_seller),
 )
 
-internal fun parseRefundMinor(input: String, currency: String): Long? {
-    val trimmed = input.trim().replace(',', '.')
-    if (trimmed.isEmpty()) return null
-    val decimals = if (currency.equals("jpy", ignoreCase = true)) 0 else 2
-    val num = trimmed.toDoubleOrNull() ?: return null
-    val factor = if (decimals == 0) 1.0 else 100.0
-    return kotlin.math.round(num * factor).toLong()
+/**
+ * What the refund field holds: [Full] for a blank field, [Partial] for a
+ * positive amount in minor units, [Invalid] for anything else. Invalid must
+ * block submission: the view model and the server both read an absent amount
+ * as "refund everything still refundable".
+ */
+internal sealed interface RefundInput {
+    data object Full : RefundInput
+    data class Partial(val minor: Long) : RefundInput
+    data object Invalid : RefundInput
+}
+
+internal fun parseRefundInput(input: String, currency: String): RefundInput {
+    if (input.isBlank()) return RefundInput.Full
+    val minor = toMinorUnits(input, currency)
+    return if (minor > 0) RefundInput.Partial(minor) else RefundInput.Invalid
 }

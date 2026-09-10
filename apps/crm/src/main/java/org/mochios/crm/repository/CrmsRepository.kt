@@ -20,6 +20,7 @@ import org.mochios.crm.api.CreateObjectRequest
 import org.mochios.crm.api.CrmsApi
 import org.mochios.crm.api.SetValueRequest
 import org.mochios.crm.api.SubscribeRequest
+import org.mochios.crm.api.UpdateClassRequest
 import org.mochios.crm.api.UnsubscribeRequest
 import org.mochios.crm.api.WarmExportResponse
 import org.mochios.crm.model.Activity
@@ -37,6 +38,7 @@ import org.mochios.crm.model.Template
 import org.mochios.crm.model.Watcher
 import java.io.File
 import javax.inject.Inject
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Singleton
 
 @Singleton
@@ -45,10 +47,11 @@ class CrmsRepository @Inject constructor(
     fileStore: FileStore
 ) : FileRepository(fileStore) {
     // In-memory cache
-    private val crmInfoCache = mutableMapOf<String, Pair<CrmDetails, Long>>()
-    private val objectsCache = mutableMapOf<String, Pair<List<CrmObject>, Long>>()
+    // Concurrent: the view models fill and read these from parallel coroutines.
+    private val crmInfoCache = ConcurrentHashMap<String, Pair<CrmDetails, Long>>()
+    private val objectsCache = ConcurrentHashMap<String, Pair<List<CrmObject>, Long>>()
     // Watched object ids for the local user, keyed by crm, from the last objects fetch.
-    private val watchedCache = mutableMapOf<String, List<String>>()
+    private val watchedCache = ConcurrentHashMap<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
 
     fun getCachedCrmInfo(crmId: String): CrmDetails? {
@@ -97,14 +100,14 @@ class CrmsRepository @Inject constructor(
         api.getRecommendations().unwrap().crms
 
     suspend fun probe(url: String): Crm =
-        api.probe(url).unwrap().crm
+        api.probe(url).unwrap()
 
     /**
      * Subscribes to [crm]; returns the id to route to, preferring the
      * fingerprint the server reports.
      */
-    suspend fun subscribe(crm: String, server: String? = null): String {
-        val response = api.subscribe(SubscribeRequest(crm = crm, server = server)).unwrap()
+    suspend fun subscribe(crm: String, server: String? = null, peer: String? = null): String {
+        val response = api.subscribe(SubscribeRequest(crm = crm, server = server, peer = peer)).unwrap()
         return response.fingerprint.ifEmpty { response.id.ifEmpty { crm } }
     }
 
@@ -204,7 +207,8 @@ class CrmsRepository @Inject constructor(
         promote: Boolean = false
     ) {
         api.moveObject(
-            crmId, objectId, field, value, rank, rowField, rowValue,
+            crmId, objectId, field, value, rank,
+            rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
             scopeParent,
             if (promote) "true" else null
         ).unwrap()
@@ -242,7 +246,7 @@ class CrmsRepository @Inject constructor(
         // The server reads the multipart field "files" (attachment_save);
         // parts named anything else are silently dropped.
         val fileParts = fileStore.fileParts("files", files)
-        return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap().comment
+        return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap()
     }
 
     suspend fun updateComment(crmId: String, objectId: String, commentId: String, content: String) {
@@ -258,9 +262,9 @@ class CrmsRepository @Inject constructor(
     suspend fun getAttachments(crmId: String, objectId: String): List<Attachment> =
         api.getAttachments(crmId, objectId).unwrap().attachments
 
-    suspend fun createAttachment(crmId: String, objectId: String, file: File): Attachment {
+    suspend fun createAttachment(crmId: String, objectId: String, file: File): List<Attachment> {
         val part = fileStore.filePart("files", file)
-        return api.createAttachment(crmId, objectId, part).unwrap().attachment
+        return api.createAttachment(crmId, objectId, part).unwrap().attachments
     }
 
     suspend fun deleteAttachment(crmId: String, objectId: String, attachmentId: String) {
@@ -330,10 +334,22 @@ class CrmsRepository @Inject constructor(
         api.importData(crmId, part).unwrap()
     }
 
-    // ---- Views ----
+    /**
+     * Restores a whole backup archive: the file goes up untouched, and the
+     * server applies the design it carries, then its objects and the
+     * attachment bytes. Unwrapping the zip here would drop the attachments.
+     */
+    suspend fun importArchive(crmId: String, uri: Uri) {
+        val file = stageFile(uri, "backup.zip") ?: throw IllegalStateException("cannot read backup")
+        try {
+            val part = fileStore.filePart("file", file, "application/zip")
+            api.importData(crmId, part, "1".toRequestBody("text/plain".toMediaTypeOrNull())).unwrap()
+        } finally {
+            discardStaged(listOf(file))
+        }
+    }
 
-    suspend fun getViews(crmId: String): List<CrmView> =
-        api.getViews(crmId).unwrap().views
+    // ---- Views ----
 
     suspend fun createView(
         crmId: String,
@@ -346,7 +362,7 @@ class CrmsRepository @Inject constructor(
         direction: String? = null,
         classes: String? = null,
         border: String? = null
-    ): CrmView = api.createView(crmId, name, viewtype, columns, rows, filter, sort, direction, classes, border).unwrap().view
+    ): CrmView = api.createView(crmId, name, viewtype, columns, rows, filter, sort, direction, classes, border).unwrap()
 
     suspend fun reorderViews(crmId: String, order: String) {
         api.reorderViews(crmId, order).unwrap()
@@ -374,14 +390,11 @@ class CrmsRepository @Inject constructor(
 
     // ---- Classes ----
 
-    suspend fun getClasses(crmId: String): List<CrmClass> =
-        api.getClasses(crmId).unwrap().classes
-
     suspend fun createClass(crmId: String, name: String): CrmClass =
-        api.createClass(crmId, name).unwrap().`class`
+        api.createClass(crmId, name).unwrap()
 
     suspend fun updateClass(crmId: String, classId: String, name: String? = null, title: String? = null) {
-        api.updateClass(crmId, classId, name, title).unwrap()
+        api.updateClass(crmId, classId, UpdateClassRequest(name = name, title = title)).unwrap()
     }
 
     suspend fun deleteClass(crmId: String, classId: String) {
@@ -390,17 +403,11 @@ class CrmsRepository @Inject constructor(
 
     // ---- Hierarchy ----
 
-    suspend fun getHierarchy(crmId: String, classId: String): List<String> =
-        api.getHierarchy(crmId, classId).unwrap().parents
-
     suspend fun setHierarchy(crmId: String, classId: String, parents: String) {
         api.setHierarchy(crmId, classId, parents).unwrap()
     }
 
     // ---- Fields ----
-
-    suspend fun getFields(crmId: String, classId: String): List<CrmField> =
-        api.getFields(crmId, classId).unwrap().fields
 
     suspend fun createField(
         crmId: String,
@@ -409,7 +416,7 @@ class CrmsRepository @Inject constructor(
         fieldtype: String,
         flags: String? = null,
         multi: Boolean? = null
-    ): CrmField = api.createField(crmId, classId, name, fieldtype, flags, multi).unwrap().field
+    ): CrmField = api.createField(crmId, classId, name, fieldtype, flags, multi).unwrap()
 
     suspend fun reorderFields(crmId: String, classId: String, order: String) {
         api.reorderFields(crmId, classId, order).unwrap()
@@ -439,9 +446,6 @@ class CrmsRepository @Inject constructor(
 
     // ---- Options ----
 
-    suspend fun getOptions(crmId: String, classId: String, fieldId: String): List<FieldOption> =
-        api.getOptions(crmId, classId, fieldId).unwrap().options
-
     suspend fun createOption(
         crmId: String,
         classId: String,
@@ -449,7 +453,7 @@ class CrmsRepository @Inject constructor(
         name: String,
         colour: String? = null,
         icon: String? = null
-    ): FieldOption = api.createOption(crmId, classId, fieldId, name, colour, icon).unwrap().option
+    ): FieldOption = api.createOption(crmId, classId, fieldId, name, colour, icon).unwrap()
 
     suspend fun reorderOptions(crmId: String, classId: String, fieldId: String, order: String) {
         api.reorderOptions(crmId, classId, fieldId, order).unwrap()

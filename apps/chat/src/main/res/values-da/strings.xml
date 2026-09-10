@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Visningsnavn</string>
-    <string name="chat_auth_verification_failed">Verifikation mislykkedes</string>
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Søg</string>
     <string name="chat_list_logout">Log ud</string>
     <string name="chat_list_new">Ny chat</string>
     <string name="chat_new_title">Ny chat</string>
     <string name="chat_new_name">Gruppenavn</string>
-    <string name="chat_new_friends">Venner</string>
     <string name="chat_message_placeholder">Besked</string>
     <string name="chat_attachment_add">Vedhæft filer</string>
-    <string name="chat_message_attach">Vedhæft filer</string>
     <string name="chat_settings_title">Chatindstillinger</string>
     <string name="chat_settings_rename_label">Chatnavn</string>
     <string name="chat_settings_save">Gem</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Send</string>
 
     <string name="notification_channel_chat">Chatnotifikationer</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Login mislykkedes</string>
-    <string name="chat_auth_create_identity_failed">Kunne ikke oprette identitet</string>
-    <string name="chat_auth_mfa_unsupported">MFA understøttes endnu ikke i mobilappen</string>
-    <string name="chat_auth_enter_code_sent">Indtast koden sendt til %1$s</string>
-    <string name="chat_auth_create_identity">Opret din identitet</string>
     <string name="chat_list_empty">Ingen chats endnu</string>
     <string name="chat_new_existing_chat">Åbn eksisterende chat</string>
     <string name="chat_new_start">Start chat</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Flyt op</string>
     <string name="chat_attachment_move_down">Flyt ned</string>
     <string name="chat_attachment_label">Fil</string>
-    <string name="chat_message_remove_attachment">Fjern vedhæftning</string>
-    <string name="chat_message_too_long">Beskeden er for lang</string>
-    <string name="chat_message_empty">Beskeden må ikke være tom</string>
     <string name="chat_settings_rename">Omdøb chat</string>
     <string name="chat_settings_add_member_empty">Ingen venner at tilføje</string>
     <string name="chat_settings_remove_member_message">Fjern %1$s fra denne chat?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Denne besked blev slettet</string>
     <string name="chat_search_hint">Søg i chatten...</string>
-    <string name="chat_search_no_results">Ingen resultater</string>
     <string name="chat_message_forward">Videresend</string>
     <string name="chat_forward_title">Videresend til…</string>
     <string name="chat_forward_search">Søg i chats…</string>
     <string name="chat_forward_empty">Ingen chats at videresende til</string>
     <string name="chat_forward_success">Videresendt</string>
-    <string name="chat_forward_failed">Kunne ikke videresende</string>
     <string name="chat_message_reply">Svar</string>
     <string name="chat_message_select">Vælg</string>
     <string name="chat_reply_attachment">Vedhæftning</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Venner</string>
     <string name="chat_policy_title">Indgående chats</string>
     <string name="chat_policy_friends">Kun venner</string>
-    <string name="chat_policy_friends_description">Kun venner kan starte en chat med dig (standard).</string>
     <string name="chat_policy_anyone">Alle</string>
-    <string name="chat_policy_anyone_description">Alle kan starte en chat med dig.</string>
     <string name="chat_new_search_placeholder">Søg efter personer</string>
     <string name="chat_new_no_matches">Ingen matchende personer</string>
     <string name="chat_new_no_friends">Søg efter personer at chatte med</string>
     <string name="chat_pin">Fastgør</string>
     <string name="chat_unpin">Frigør</string>
-    <string name="chat_pinned_label">Fastgjort</string>
     <string name="chat_settings_general">Generelt</string>
     <string name="chat_settings_screen_title">Indstillinger for %1$s</string>
     <string name="chat_mark_read">Marker som læst</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Forrige match</string>
     <string name="chat_settings_id">Chat-ID</string>
     <string name="chat_message_edited">(redigeret)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

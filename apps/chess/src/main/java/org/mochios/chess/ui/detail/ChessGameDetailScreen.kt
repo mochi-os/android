@@ -583,7 +583,7 @@ private fun GameActionsMenu(
             onDismissRequest = { expanded = false },
         ) {
             if (game.status == "active") {
-                if (game.drawOffer != myIdentity) {
+                if (game.canOfferDraw) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.chess_offer_draw)) },
                         onClick = {

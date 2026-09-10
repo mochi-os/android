@@ -350,4 +350,8 @@
     <string name="game_empty_title">Oraindik jokorik ez</string>
     <string name="game_select_title">Hautatu joko bat</string>
     <string name="game_select_subtitle">Aukeratu joko bat alboko barran edo hasi berri bat.</string>
+    <string name="settings_card">Txartelaren estiloa</string>
+    <string name="settings_card_theme">Gaiatik</string>
+    <string name="settings_card_flat">Laua</string>
+    <string name="settings_card_raised">Goratua</string>
 </resources>

@@ -350,4 +350,8 @@
     <string name="game_empty_title">Ende pa lojëra</string>
     <string name="game_select_title">Zgjidh një lojë</string>
     <string name="game_select_subtitle">Zgjidh një lojë nga shiriti anësor ose nis një të re.</string>
+    <string name="settings_card">Stili i kartës</string>
+    <string name="settings_card_theme">Nga tema</string>
+    <string name="settings_card_flat">I sheshtë</string>
+    <string name="settings_card_raised">Ngritur</string>
 </resources>

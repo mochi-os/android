@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Параметри сповіщень</string>
     <string name="settings_home_accounts">Підключені облікові записи</string>
     <string name="settings_home_interests">Інтереси</string>
-    <string name="account_method_email">Код електронної пошти</string>
-    <string name="account_method_passkey">Ключ доступу</string>
-    <string name="account_method_totp">Застосунок-автентифікатор</string>
     <string name="account_section_passkeys">Ключі доступу</string>
     <string name="account_passkey_register">Додати ключ доступу</string>
     <string name="account_passkey_delete_title">Видалити ключ доступу?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Видалити маршрут</string>
     <string name="route_delete_title">Видалити маршрут?</string>
     <string name="route_path">Шлях</string>
-    <string name="route_target">Ціль</string>
     <string name="route_method">Метод</string>
     <string name="route_method_app">Застосунок</string>
     <string name="route_method_entity">Сутність</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Інтереси</string>
     <string name="interests_summary_title">Стислий виклад</string>
     <string name="interests_remove">Видалити інтерес</string>
-    <string name="interests_add">Додати</string>
-    <string name="document_save">Зберегти</string>
-    <string name="document_saved">Збережено</string>
     <string name="notifprefs_title">Параметри сповіщень</string>
     <string name="notifprefs_tab_categories">Категорії</string>
     <string name="notifprefs_tab_topics">Теми</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Скинути</string>
     <string name="system_settings_reset_to_default">Скинути до значення за замовчуванням</string>
     <string name="system_settings_reset_title">Скинути до значення за замовчуванням?</string>
-    <string name="system_settings_setting_updated">Налаштування оновлено</string>
-    <string name="system_settings_update_failed">Не вдалося оновити налаштування</string>
     <string name="system_setting_apps_install_user">Дозволити користувачам встановлювати застосунки</string>
     <string name="system_setting_auth_email">Вхід через код електронною поштою</string>
     <string name="system_setting_auth_passkey">Вхід за допомогою ключа доступу</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Не вдалося оновити статус користувача</string>
     <string name="system_users_toast_revoke_failed">Не вдалося відкликати сеанс</string>
 
-    <string name="settings_app_label">Налаштування Mochi</string>
     <string name="settings_home_sessions">Сеанси</string>
     <string name="settings_home_privacy">Політика конфіденційності</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Умови використання</string>
-    <string name="account_section_methods">Способи входу</string>
     <string name="account_passkeys_empty">Ключі доступу не зареєстровані.</string>
     <string name="account_passkey_register_title">Додати ключ доступу</string>
     <string name="account_passkey_register_message">Ваш пристрій попросить підтвердити. Ключ доступу пов\'язаний із цим пристроєм і використовуватиметься для майбутніх входів.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Перегенерувати коди відновлення?</string>
     <string name="account_recovery_regen_message">Поточні коди одразу перестануть працювати. Збережіть нові в надійному місці.</string>
     <string name="account_recovery_codes_warning">Збережіть ці коди — кожен можна використати лише раз. Їх більше не буде показано.</string>
-    <string name="sessions_section_title">Активні сеанси</string>
     <string name="sessions_title">Сеанси</string>
     <string name="sessions_empty">Немає активних сеансів.</string>
     <string name="sessions_revoke_message">Пристрій, що використовує цей сеанс, буде вийде із системи.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Перегенерувати резюме</string>
     <string name="interests_summary_regenerating">Перегенерація…</string>
     <string name="interests_summary_empty">Додайте кілька інтересів, щоб згенерувати резюме того, що вам подобається.</string>
-    <string name="interests_weight">Вага</string>
     <string name="interests_search_failed">Пошук не вдався. Спробуйте ще раз.</string>
     <string name="document_privacy_title">Політика конфіденційності</string>
     <string name="document_rules_title">Правила</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Встановлення %1$s…</string>
     <string name="accounts_field_api_key">Ключ API</string>
     <string name="accounts_field_url">URL сервера</string>
-    <string name="accounts_device_placeholder">Push-облікові записи додаються пристроєм автоматично.</string>
     <string name="accounts_set_default_ai">Встановити як ШІ за замовчуванням</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Надіслати код повторно</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ім\'я</string>
     <string name="account_identity_fingerprint">Відбиток</string>
     <string name="account_identity_directory_toggle">Дозволити іншим знаходити вас у каталозі</string>
-    <string name="account_method_email_subtitle">Отримати код підтвердження електронною поштою</string>
-    <string name="account_method_totp_subtitle">Щоб увімкнути, налаштуйте автентифікатор нижче</string>
-    <string name="account_method_passkey_subtitle">Щоб увімкнути, зареєструйте ключ доступу нижче</string>
     <string name="domain_add">Додати домен</string>
     <string name="domain_add_title">Додати домен</string>
     <string name="domain_delegation_add">Додати</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Призначення не налаштовано</string>
     <string name="notifprefs_transport_fcm">Push для Android</string>
     <string name="notifprefs_no_destinations">Немає призначень</string>
+    <string name="account_data_generate">Згенерувати парольну фразу</string>
+    <string name="accounts_field_server">URL сервера</string>
+    <string name="accounts_field_token">Токен доступу</string>
+    <string name="accounts_field_topic">Тема</string>
+    <string name="accounts_field_secret">Секрет підпису</string>
+    <string name="account_totp_open">Відкрити в застосунку-автентифікаторі</string>
 </resources>

@@ -350,4 +350,8 @@
     <string name="game_empty_title">Оюндар азырынча жок</string>
     <string name="game_select_title">Оюн тандаңыз</string>
     <string name="game_select_subtitle">Каптал панелден оюн тандаңыз же жаңысын баштаңыз.</string>
+    <string name="settings_card">Карта стили</string>
+    <string name="settings_card_theme">Темадан</string>
+    <string name="settings_card_flat">Жалпак</string>
+    <string name="settings_card_raised">Көтөрүлгөн</string>
 </resources>

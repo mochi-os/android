@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Yatiyäwi munañanaka</string>
     <string name="settings_home_accounts">Chinjat cuentanaka</string>
     <string name="settings_home_interests">Interesanaka</string>
-    <string name="account_method_email">Email código</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Autenticador app</string>
     <string name="account_section_passkeys">Passkeyanaka</string>
     <string name="account_passkey_register">Passkey yapxataña</string>
     <string name="account_passkey_delete_title">Passkey chhaqtayaña?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Thaki chhaqtayaña</string>
     <string name="route_delete_title">Thaki chhaqtayaña?</string>
     <string name="route_path">Thakhi</string>
-    <string name="route_target">Apayaña</string>
     <string name="route_method">Método</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entidad</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interesanaka</string>
     <string name="interests_summary_title">Tantachawi</string>
     <string name="interests_remove">Interés aparma</string>
-    <string name="interests_add">Yapxataña</string>
-    <string name="document_save">Imaña</string>
-    <string name="document_saved">Imaña</string>
     <string name="notifprefs_title">Yatiyäwi munañanaka</string>
     <string name="notifprefs_tab_categories">Kastanaka</string>
     <string name="notifprefs_tab_topics">Taqpach</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Kutintayama</string>
     <string name="system_settings_reset_to_default">Default ukar kutintayama</string>
     <string name="system_settings_reset_title">¿Default ukar kutintayama?</string>
-    <string name="system_settings_setting_updated">Configuración machaqachata</string>
-    <string name="system_settings_update_failed">Janiw configuración machaqachaña atinkti</string>
     <string name="system_setting_apps_install_user">Usuarionakar appnak instalañ iyawsaña</string>
     <string name="system_setting_auth_email">Email código ukamp mantaña</string>
     <string name="system_setting_auth_passkey">Passkey ukamp mantaña</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Janiw apnaqir estado machaqachaña atinkti</string>
     <string name="system_users_toast_revoke_failed">Janiw sesión apsuña atinkti</string>
 
-    <string name="settings_app_label">Mochi Aski lurawi</string>
     <string name="settings_home_sessions">Sesionanaka</string>
     <string name="settings_home_privacy">Imantasita kamachiwi</string>
     <string name="settings_home_rules">Kamachinaka</string>
     <string name="settings_home_terms">Yanapt\'awi arsuwinaka</string>
-    <string name="account_section_methods">Mantañ thakhinaka</string>
     <string name="account_passkeys_empty">Janiw passkeyanaka qillqantatachuksa.</string>
     <string name="account_passkey_register_title">Passkey yapxatasiña</string>
     <string name="account_passkey_register_message">Antaywaqamaxa siñani siwaqamaru. Passkeyax aka antaympiw chinjata, qhipa mantaña pachanakata apsutawa.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Recuperación codigonaka mä kutillarjama lurañ?</string>
     <string name="account_recovery_regen_message">Utjir codigonakax jan k\'arkach\'i irnaqaña apsuni. Machaqanakaxa wali aski cheqarux imatataxa.</string>
     <string name="account_recovery_codes_warning">Aka codigonaka imañ — sapamayax mayni apnaqata atinwa. Janiw mä kutilla uñacht\'ayatarakichuksa.</string>
-    <string name="sessions_section_title">Irnaqasiri sesionanaka</string>
     <string name="sessions_title">Sesionanaka</string>
     <string name="sessions_empty">Janiw irnaqasiri sesionansa kasarakichi.</string>
     <string name="sessions_revoke_message">Aka sesion apnaqir antayawax mistunini.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Ch\'umt\'awi mä kutillarjama lurañ</string>
     <string name="interests_summary_regenerating">Mä kutillarjam lurasiski…</string>
     <string name="interests_summary_empty">Munt\'añama amtañataki yaqha munañanaka yapxatama.</string>
-    <string name="interests_weight">Jathi</string>
     <string name="interests_search_failed">Thakhsuñ jan atxiti. Wasitat ukajamta.</string>
     <string name="document_privacy_title">Imantasita kamachiwi</string>
     <string name="document_rules_title">Kamachinaka</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s churaski…</string>
     <string name="accounts_field_api_key">API llawi</string>
     <string name="accounts_field_url">Servidor URL</string>
-    <string name="accounts_device_placeholder">Push cuentanakax antayata sapamä yapxatatawa.</string>
     <string name="accounts_set_default_ai">AI sapamä uñacht\'ayañ</string>
     <string name="accounts_verify_code">Codigo</string>
     <string name="accounts_verify_resend">Codigo mä kutillarja apañ</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Suti</string>
     <string name="account_identity_fingerprint">Fingerprint</string>
     <string name="account_identity_directory_toggle">Yaqha jaqinak directoriona jikxataña iyawsaña</string>
-    <string name="account_method_email_subtitle">Email tuqi verificación código katuqañma</string>
-    <string name="account_method_totp_subtitle">Wakichañataki, aynacha mä autenticador wakichama</string>
-    <string name="account_method_passkey_subtitle">Wakichañataki, aynacha mä passkey qillqantama</string>
     <string name="domain_add">Dominio yapxataña</string>
     <string name="domain_add_title">Dominio yapxataña</string>
     <string name="domain_delegation_add">Yapxataña</string>
@@ -397,4 +380,10 @@
     <string name="notifprefs_test_none">Jan destinonaka configuratati</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Janiwa kawkíri qhip</string>
+    <string name="account_data_generate">Contraseña parlana uñjataña</string>
+    <string name="accounts_field_server">Servidor URL</string>
+    <string name="accounts_field_token">Mantañataki token</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Firma imantata</string>
+    <string name="account_totp_open">Chiqanchiri aplicacionan jist\'araña</string>
 </resources>

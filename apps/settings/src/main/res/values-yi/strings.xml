@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">באשטעטיקונג בעטעלעכץ</string>
     <string name="settings_home_accounts">פֿאַרבונדענע קאָנטעס</string>
     <string name="settings_home_interests">אינטערעסן</string>
-    <string name="account_method_email">בליצפּאָסט־קאָד</string>
-    <string name="account_method_passkey">פּאַסקיי</string>
-    <string name="account_method_totp">Authenticator אַפּ</string>
     <string name="account_section_passkeys">פּאַסקייס</string>
     <string name="account_passkey_register">צולייגן passkey</string>
     <string name="account_passkey_delete_title">אויסמעקן passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">אויסמעקן וועג</string>
     <string name="route_delete_title">אויסמעקן וועג?</string>
     <string name="route_path">וועג</string>
-    <string name="route_target">ציל</string>
     <string name="route_method">מעטאָד</string>
     <string name="route_method_app">אַפּ</string>
     <string name="route_method_entity">ענטיטעט</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">אינטערעסן</string>
     <string name="interests_summary_title">סך־הכּל</string>
     <string name="interests_remove">אַראָפּנעמען אינטערעס</string>
-    <string name="interests_add">צולייגן</string>
-    <string name="document_save">היט אויף</string>
-    <string name="document_saved">אויפֿגעהיט</string>
     <string name="notifprefs_title">באשטעטיקונג בעטעלעכץ</string>
     <string name="notifprefs_tab_categories">קאַטעגאָריעס</string>
     <string name="notifprefs_tab_topics">טעמעס</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">צוריקזעצן</string>
     <string name="system_settings_reset_to_default">צוריקזעצן צו פֿאַרשטעלונג</string>
     <string name="system_settings_reset_title">צוריקזעצן צו פֿאַרשטעלונג?</string>
-    <string name="system_settings_setting_updated">אײַנשטעלונג באַנײַט</string>
-    <string name="system_settings_update_failed">ניט געלונגען צו דערהײַנטיקן הגדרה</string>
     <string name="system_setting_apps_install_user">דערלויבן באַניצער צו אינסטאַלירן אַפּן</string>
     <string name="system_setting_auth_email">אַרײַנקום מיט בליצפּאָסט־קאָד</string>
     <string name="system_setting_auth_passkey">אַרײַנקום מיט passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">ניט געלונגען צו דערהײַנטיקן באַניצער־סטאַטוס</string>
     <string name="system_users_toast_revoke_failed">ניט געלונגען צו אומקערן סעסיע</string>
 
-    <string name="settings_app_label">Mochi הגדרות</string>
     <string name="settings_home_sessions">סעסיעס</string>
     <string name="settings_home_privacy">פּריוואַטקייט פּאָליסי</string>
     <string name="settings_home_rules">כללים</string>
     <string name="settings_home_terms">דינסט באדינגונגען</string>
-    <string name="account_section_methods">לאָגין מעטאדן</string>
     <string name="account_passkeys_empty">קײנע פּאַסקיז רעגיסטרירט.</string>
     <string name="account_passkey_register_title">לייגן פּאַסקי</string>
     <string name="account_passkey_register_message">דיין מיטל וועט בעטן באַשטעטיקן. דער פּאַסקי איז געבונדן צו דעם מיטל און איז גענוצט פֿאַר צוקונפֿטיקע לאָגינס.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">רעגענערירן אױפֿשטעלן קאָדן?</string>
     <string name="account_recovery_regen_message">דאָרטיקע קאָדן וועלן זוכן אַרבעטן תיכף. שפּעיכלען די נײַע אין אַ זיכער אָרט.</string>
     <string name="account_recovery_codes_warning">שפּעיכלען די קאָדן — יעדן קען נאָר אײן מאָל גענוצט. זײ וועלן ניט ווידער געוויזן.</string>
-    <string name="sessions_section_title">אַקטיווע סעסיעס</string>
     <string name="sessions_title">סעסיעס</string>
     <string name="sessions_empty">קײנע אַקטיווע סעסיעס.</string>
     <string name="sessions_revoke_message">דער מיטל וואָס ניצט די סעסיע וועט אַרויסגיין.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">רעגענערירן צוזאמענפֿאַסונג</string>
     <string name="interests_summary_regenerating">רעגענערירט…</string>
     <string name="interests_summary_empty">לייגט עטלעכע אינטערעסן צו שאַפֿן אַ צוזאמענפֿאַסונג פֿון וואָס איר ליבט.</string>
-    <string name="interests_weight">וואָג</string>
     <string name="interests_search_failed">זוכן איז אומגעראָטן. אפשר ווידער פּרובירן.</string>
     <string name="document_privacy_title">פּריוואַטקייט פּאָליסי</string>
     <string name="document_rules_title">כללים</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">אינסטאַלירן %1$s…</string>
     <string name="accounts_field_api_key">API שליסל</string>
     <string name="accounts_field_url">סערווער URL</string>
-    <string name="accounts_device_placeholder">פּוש חשבון זענען צוגעלייגט אױטאָמאַטיש דורכן מיטל.</string>
     <string name="accounts_set_default_ai">קלייַב אַלס סטאַנדאַרט AI</string>
     <string name="accounts_verify_code">קאָד</string>
     <string name="accounts_verify_resend">שיק ווידער קאָד</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">נאָמען</string>
     <string name="account_identity_fingerprint">פֿינגער־אָפּדרוק</string>
     <string name="account_identity_directory_toggle">דערלויבן אַנדערע צו געפֿינען אײַך אין פֿירערשאַפֿט</string>
-    <string name="account_method_email_subtitle">באַקומען אַ באַשטעטיקונג קאָד דורך ע-פּאָסט</string>
-    <string name="account_method_totp_subtitle">צו ענייבאַלן, שטעלט אַ אַוטענטיקאַטאָר אונטן</string>
-    <string name="account_method_passkey_subtitle">צו ענייבאַלן, רעגיסטרירט אַ דורכגאַנג שליסל אונטן</string>
     <string name="domain_add">צולייגן דאָמיין</string>
     <string name="domain_add_title">צולייגן דאָמיין</string>
     <string name="domain_delegation_add">צולייגן</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">קיין דעסטינאַציעס קאָנפֿיגורירט</string>
     <string name="notifprefs_transport_fcm">Android פּוש</string>
     <string name="notifprefs_no_destinations">קיין דעסטיניישאנס</string>
+    <string name="account_data_generate">גענערירט פּאַסזאַץ</string>
+    <string name="accounts_field_server">סערווער URL</string>
+    <string name="accounts_field_token">צוטריט טאָקן</string>
+    <string name="accounts_field_topic">טעמע</string>
+    <string name="accounts_field_secret">אונטערשריפט סוד</string>
+    <string name="account_totp_open">עפֿענען אין דער אויטענטיקאַציע־אַפּ</string>
 </resources>

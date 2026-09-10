@@ -5,6 +5,8 @@
 
 package org.mochios.market.ui.account
 
+import android.os.Bundle
+import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,6 +18,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.market.R
 import org.mochios.market.model.Account
 import org.mochios.market.model.AccountFees
 import org.mochios.market.model.StripeStatus
@@ -44,6 +47,8 @@ data class SellerSettingsUiState(
  */
 sealed interface SellerSettingsEvent {
     data class Error(val error: MochiError) : SellerSettingsEvent
+    /** A completed action, named by resource so it is translated. */
+    data class Notice(@StringRes val message: Int) : SellerSettingsEvent
 }
 
 @HiltViewModel
@@ -139,6 +144,39 @@ class SellerSettingsViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Finish the Stripe Connect ceremony the browser handed back through
+     * `mochi://market/stripe/oauth`. The Comptroller answers a refused or
+     * replayed state with an error, which reaches the snackbar as usual; a
+     * completed exchange re-reads the account so the linked state shows.
+     */
+    fun completeStripeOauth(oauth: StripeOauthReturn) {
+        if (_state.value.connecting) return
+        viewModelScope.launch {
+            _state.value = _state.value.copy(connecting = true)
+            try {
+                val result = repo.completeStripeOauth(
+                    code = oauth.code,
+                    state = oauth.state,
+                    error = oauth.error,
+                    errorDescription = oauth.errorDescription,
+                )
+                _state.value = _state.value.copy(connecting = false)
+                if (result.connected) {
+                    _events.send(SellerSettingsEvent.Notice(R.string.market_account_stripe_connected))
+                    checkStatus()
+                } else {
+                    _events.send(
+                        SellerSettingsEvent.Error(MochiError.Local(R.string.market_account_stripe_connect_failed)),
+                    )
+                }
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(connecting = false)
+                _events.send(SellerSettingsEvent.Error(e.toMochiError()))
+            }
+        }
+    }
+
     fun checkStatus() {
         if (_state.value.checking) return
         viewModelScope.launch {
@@ -155,6 +193,29 @@ class SellerSettingsViewModel @Inject constructor(
                 _state.value = _state.value.copy(checking = false)
                 _events.send(SellerSettingsEvent.Error(e.toMochiError()))
             }
+        }
+    }
+}
+
+/**
+ * Stripe's raw OAuth return, as MainActivity hands it over from
+ * `mochi://market/stripe/oauth`; absent when the screen opened normally.
+ */
+data class StripeOauthReturn(
+    val code: String?,
+    val state: String?,
+    val error: String?,
+    val errorDescription: String?,
+) {
+    companion object {
+        fun from(arguments: Bundle?): StripeOauthReturn? {
+            val state = arguments?.getString("state")?.takeIf { it.isNotBlank() } ?: return null
+            return StripeOauthReturn(
+                code = arguments.getString("code"),
+                state = state,
+                error = arguments.getString("error"),
+                errorDescription = arguments.getString("error_description"),
+            )
         }
     }
 }

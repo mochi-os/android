@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Iinkethelo zezaziso</string>
     <string name="settings_home_accounts">Ii-akhawunti ezidibeneyo</string>
     <string name="settings_home_interests">Imidla</string>
-    <string name="account_method_email">Ikhowudi ye-imeyili</string>
-    <string name="account_method_passkey">Isitshixo sokungena</string>
-    <string name="account_method_totp">I-app yokuqinisekisa</string>
     <string name="account_section_passkeys">Ii-passkey</string>
     <string name="account_passkey_register">Yongeza i-passkey</string>
     <string name="account_passkey_delete_title">Cima i-passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Cima indlela</string>
     <string name="route_delete_title">Cima indlela?</string>
     <string name="route_path">Indlela</string>
-    <string name="route_target">Injongo</string>
     <string name="route_method">Indlela</string>
     <string name="route_method_app">I-app</string>
     <string name="route_method_entity">Iqumrhu</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Imidla</string>
     <string name="interests_summary_title">Isishwankathelo</string>
     <string name="interests_remove">Susa umnxili</string>
-    <string name="interests_add">Yongeza</string>
-    <string name="document_save">Gcina</string>
-    <string name="document_saved">Igciniwe</string>
     <string name="notifprefs_title">Iinkethelo zezaziso</string>
     <string name="notifprefs_tab_categories">Iindidi</string>
     <string name="notifprefs_tab_topics">Imixholo</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Buyisela</string>
     <string name="system_settings_reset_to_default">Buyisela kumiselweyo</string>
     <string name="system_settings_reset_title">Buyisela kumiselweyo?</string>
-    <string name="system_settings_setting_updated">Iseti ihlaziyiwe</string>
-    <string name="system_settings_update_failed">Ayiphumelelanga ukuhlaziya isetingi</string>
     <string name="system_setting_apps_install_user">Vumela abasebenzisi ukufaka ii-apps</string>
     <string name="system_setting_auth_email">Ngena usebenzisa ikhowudi ye-imeyile</string>
     <string name="system_setting_auth_passkey">Ngena usebenzisa i-passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Ayiphumelelanga ukuhlaziya isimo somsebenzisi</string>
     <string name="system_users_toast_revoke_failed">Ayiphumelelanga ukurhoxisa iseshini</string>
 
-    <string name="settings_app_label">Mochi Izicwangciso</string>
     <string name="settings_home_sessions">Iindibano</string>
     <string name="settings_home_privacy">Umgaqo-nkqubo wabucala</string>
     <string name="settings_home_rules">Imithetho</string>
     <string name="settings_home_terms">Imimiselo yenkonzo</string>
-    <string name="account_section_methods">Iindlela zokungena</string>
     <string name="account_passkeys_empty">Akukho passkey ebhalisiweyo.</string>
     <string name="account_passkey_register_title">Yongeza i-passkey</string>
     <string name="account_passkey_register_message">Isixhobo sakho siza kukucela ukuba uqinisekise. I-passkey iboshelelwe kwesi sixhobo kwaye isetyenziselwa ukungena okuzayo.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Yenza kwakhona iikhowudi zokubuyisela?</string>
     <string name="account_recovery_regen_message">Iikhowudi ezikhoyo ziya kuyeka ukusebenza ngokukhawuleza. Gcina ezintsha kwindawo ekhuselekileyo.</string>
     <string name="account_recovery_codes_warning">Gcina ezi khowudi — nganye ingasetyenziswa kanye kuphela. Aziyi kuphinda zibonakaliswe.</string>
-    <string name="sessions_section_title">Iiseshoni ezisebenzayo</string>
     <string name="sessions_title">Iindibano</string>
     <string name="sessions_empty">Akukho seshoni isebenzayo.</string>
     <string name="sessions_revoke_message">Isixhobo esisebenzisa le seshoni siya kuphuma.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Yenza kwakhona isishwankathelo</string>
     <string name="interests_summary_regenerating">Iyenza kwakhona…</string>
     <string name="interests_summary_empty">Yongeza eminye umdla ukuze yenze isishwankathelo sezinto ozithandayo.</string>
-    <string name="interests_weight">Ubunzima</string>
     <string name="interests_search_failed">Ukukhangela akuphumelelanga. Nceda uzame kwakhona.</string>
     <string name="document_privacy_title">Umgaqo-nkqubo wabucala</string>
     <string name="document_rules_title">Imithetho</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Ifaka %1$s…</string>
     <string name="accounts_field_api_key">Iqhosha le-API</string>
     <string name="accounts_field_url">I-URL yeseva</string>
-    <string name="accounts_device_placeholder">Ii-akhawunti ze-push zongezwa ngokuzenzekelayo sisixhobo.</string>
     <string name="accounts_set_default_ai">Misa njenge-AI ezenzekelayo</string>
     <string name="accounts_verify_code">Ikhowudi</string>
     <string name="accounts_verify_resend">Phinda uthumele ikhowudi</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Igama</string>
     <string name="account_identity_fingerprint">Uphawu lomnwe</string>
     <string name="account_identity_directory_toggle">Vumela abanye bakufumane kuvimba</string>
-    <string name="account_method_email_subtitle">Fumana ikhowudi yoqinisekiso nge-imeyile</string>
-    <string name="account_method_totp_subtitle">Ukuze uvule, seta isiqinisekisi apha ngezantsi</string>
-    <string name="account_method_passkey_subtitle">Ukuze uvule, bhalisa isitshixo sokufikelela apha ngezantsi</string>
     <string name="domain_add">Yongeza idomeyini</string>
     <string name="domain_add_title">Yongeza idomeyini</string>
     <string name="domain_delegation_add">Yongeza</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Akukho ndawo zibekiweyo</string>
     <string name="notifprefs_transport_fcm">I-push ye-Android</string>
     <string name="notifprefs_no_destinations">Akukho ndawo zokuya</string>
+    <string name="account_data_generate">Yenza igama-eligqithisiweyo</string>
+    <string name="accounts_field_server">I-URL yeseva</string>
+    <string name="accounts_field_token">Ithokheni yofikelelo</string>
+    <string name="accounts_field_topic">Umxholo</string>
+    <string name="accounts_field_secret">Imfihlo yokusayina</string>
+    <string name="account_totp_open">Vula kwi-app yokuqinisekisa</string>
 </resources>

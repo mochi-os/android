@@ -38,24 +38,44 @@
         android:theme="@style/Theme.Mochi">
 
         <!--
-          MainActivity has NO MAIN/LAUNCHER intent-filter — the per-app
-          activity-aliases below own those, so Android shows one launcher
-          entry per Mochi-app instead of a single 'Mochi' icon. MainActivity
-          still catches mochi://notification (tapped system notification)
-          and the upcoming mochi://oauth-return (task #133).
+          One activity class per launcher icon (Launchers.kt), each with its own
+          task affinity, so every Mochi app runs in a task of its own: a tap on
+          its icon resumes that task behind that task's snapshot, or starts a
+          fresh one behind the splash, and never shows another app's last frame.
+          An <activity-alias> cannot do this - taskAffinity is not an alias
+          attribute, an alias inherits its target's - so with aliases every icon
+          shared one task, whose snapshot was whichever app was used last.
+          singleTop keeps state across taps within a task.
         -->
         <!--
-          launchMode="singleTop" + per-alias taskAffinity = one task per
-          launcher icon. Tap Mochi Feeds → resume the feeds task (its cached
-          frame shows feeds). Tap Mochi Projects → resume the projects task
-          (its cached frame shows projects). With the previous singleTask
-          there was a single global MainActivity and a single task; the
-          alias's intent arrived after Android had already restored the
-          previous feature's cached frame, leaving the wrong app visible
-          for the time it took Compose to redraw. singleTop keeps state
-          across taps within a task while letting each affinity host its
-          own instance.
+          MainActivity itself has no launcher entry and never draws. It receives
+          every `mochi:` URI (mochi:oauth-return, the market checkout return,
+          pinned shortcuts, a notification for an app without a launcher entry)
+          and forwards the launch to the owning app's class, which handles the
+          URI once in its own task. windowNoDisplay and excludeFromRecents keep
+          the hand-off invisible; the blank affinity keeps it out of every
+          app's task.
         -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.Mochi.Trampoline">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--
+                  Single broad filter - claim all `mochi:` URIs. The
+                  client routes by slash count in MainActivity.
+                  See claude/plans/mochi-uri-scheme.md.
+                -->
+                <data android:scheme="mochi" />
+            </intent-filter>
+        </activity>
+
         <!--
           adjustResize is the other half of MainActivity's enableEdgeToEdge():
           with it the window reports the keyboard as an inset and the content
@@ -65,245 +85,249 @@
           the composer already applied - the composer then floats a keyboard's
           height above the keyboard.
         -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!--
-                  Single broad filter — claim all `mochi:` URIs. The
-                  client routes by slash count in MainActivity.
-                  See claude/plans/mochi-uri-scheme.md.
-                -->
-                <data android:scheme="mochi" />
-            </intent-filter>
-        </activity>
-
         <!--
-          Per-app activity-aliases. Each shows up as its own launcher icon
-          (Mochi Feeds / Mochi Chat / Mochi Forums / Mochi Projects). All
-          point at MainActivity; the alias's org.mochios.targetApp meta-data
-          tells MainActivity which Mochi-app's nav graph to start in.
-          Adaptive icons per app land in task #132.
+          The org.mochios.targetApp meta-data names the Mochi app each class
+          hosts; MainActivity reads it from its own component.
         -->
-        <activity-alias
+        <activity
             android:name=".MochiFeedsLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_feeds"
             android:icon="@mipmap/ic_feeds"
             android:roundIcon="@mipmap/ic_feeds_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.feeds"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiChatLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_chat"
             android:icon="@mipmap/ic_chat"
             android:roundIcon="@mipmap/ic_chat_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.chat"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="chat" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiForumsLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_forums"
             android:icon="@mipmap/ic_forums"
             android:roundIcon="@mipmap/ic_forums_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.forums"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="forums" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiProjectsLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_projects"
             android:icon="@mipmap/ic_projects"
             android:roundIcon="@mipmap/ic_projects_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.projects"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="projects" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiCrmLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_crm"
             android:icon="@mipmap/ic_crm"
             android:roundIcon="@mipmap/ic_crm_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.crm"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="crm" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiPeopleLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_people"
             android:icon="@mipmap/ic_people"
             android:roundIcon="@mipmap/ic_people_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.people"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="people" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiSettingsLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_settings"
             android:icon="@mipmap/ic_settings"
             android:roundIcon="@mipmap/ic_settings_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.settings"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="settings" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiWikisLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_wikis"
             android:icon="@mipmap/ic_wikis"
             android:roundIcon="@mipmap/ic_wikis_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.wikis"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiChessLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_chess"
             android:icon="@mipmap/ic_chess"
             android:roundIcon="@mipmap/ic_chess_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.chess"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="chess" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiGoLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_go"
             android:icon="@mipmap/ic_go"
             android:roundIcon="@mipmap/ic_go_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.go"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="go" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiWordsLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_words"
             android:icon="@mipmap/ic_words"
             android:roundIcon="@mipmap/ic_words_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.words"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="words" />
-        </activity-alias>
+        </activity>
 
-        <activity-alias
+        <activity
             android:name=".MochiMarketLauncher"
             android:enabled="true"
             android:exported="true"
             android:label="@string/launcher_market"
             android:icon="@mipmap/ic_market"
             android:roundIcon="@mipmap/ic_market_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.market"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="market" />
-        </activity-alias>
+        </activity>
 
         <!--
-          Staff (operator console) launcher. Hidden by default — only flipped
+          Staff (operator console) launcher. Hidden by default - only flipped
           to enabled at runtime by StaffAccessController once the bound
           identity passes a `staffApi.me()` check. Disappears again on
           sign-out, role revocation, or any 401/403 from a staff endpoint.
         -->
-        <activity-alias
+        <activity
             android:name=".MochiStaffLauncher"
             android:enabled="false"
             android:exported="true"
             android:label="@string/launcher_staff"
             android:icon="@mipmap/ic_staff"
             android:roundIcon="@mipmap/ic_staff_round"
+            android:launchMode="singleTop"
             android:taskAffinity="org.mochios.mochi.staff"
-            android:targetActivity=".MainActivity">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="staff" />
-        </activity-alias>
+        </activity>
 
         <!--
           UnifiedPush MessagingReceiver for the Android client. Catches

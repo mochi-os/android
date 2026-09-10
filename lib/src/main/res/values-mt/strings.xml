@@ -357,4 +357,8 @@
     <string name="game_empty_title">L-ebda logħob s\'issa</string>
     <string name="game_select_title">Agħżel logħba</string>
     <string name="game_select_subtitle">Agħżel logħba mill-barra tal-ġenb jew ibda waħda ġdida.</string>
+    <string name="settings_card">Stil tal-karta</string>
+    <string name="settings_card_theme">Mit-tema</string>
+    <string name="settings_card_flat">Ċatta</string>
+    <string name="settings_card_raised">Imqajjem</string>
 </resources>

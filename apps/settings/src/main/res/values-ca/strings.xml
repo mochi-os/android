@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Preferències de notificacions</string>
     <string name="settings_home_accounts">Comptes connectats</string>
     <string name="settings_home_interests">Interessos</string>
-    <string name="account_method_email">Codi per correu</string>
-    <string name="account_method_passkey">Clau d\'accés</string>
-    <string name="account_method_totp">Aplicació autenticadora</string>
     <string name="account_section_passkeys">Claus d\'accés</string>
     <string name="account_passkey_register">Afegeix una clau d\'accés</string>
     <string name="account_passkey_delete_title">Vols suprimir la clau d\'accés?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Suprimeix la ruta</string>
     <string name="route_delete_title">Vols suprimir la ruta?</string>
     <string name="route_path">Ruta</string>
-    <string name="route_target">Destinació</string>
     <string name="route_method">Mètode</string>
     <string name="route_method_app">Aplicació</string>
     <string name="route_method_entity">Entitat</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Interessos</string>
     <string name="interests_summary_title">Resum</string>
     <string name="interests_remove">Elimina l\'interès</string>
-    <string name="interests_add">Afegeix</string>
-    <string name="document_save">Desa</string>
-    <string name="document_saved">Desat</string>
     <string name="notifprefs_title">Preferències de notificacions</string>
     <string name="notifprefs_tab_categories">Categories</string>
     <string name="notifprefs_tab_topics">Temes</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Restableix</string>
     <string name="system_settings_reset_to_default">Restableix al valor per defecte</string>
     <string name="system_settings_reset_title">Vols restablir al valor per defecte?</string>
-    <string name="system_settings_setting_updated">Configuració actualitzada</string>
-    <string name="system_settings_update_failed">No s\'ha pogut actualitzar la configuració</string>
     <string name="system_setting_apps_install_user">Permet que els usuaris instal·lin aplicacions</string>
     <string name="system_setting_auth_email">Inicia la sessió amb un codi per correu</string>
     <string name="system_setting_auth_passkey">Inicia la sessió amb una clau d\'accés</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">No s\'ha pogut actualitzar l\'estat de l\'usuari</string>
     <string name="system_users_toast_revoke_failed">No s\'ha pogut revocar la sessió</string>
 
-    <string name="settings_app_label">Mochi Configuració</string>
     <string name="settings_home_sessions">Sessions</string>
     <string name="settings_home_privacy">Política de privacitat</string>
     <string name="settings_home_rules">Regles</string>
     <string name="settings_home_terms">Termes del servei</string>
-    <string name="account_section_methods">Mètodes d\'inici de sessió</string>
     <string name="account_passkeys_empty">No hi ha claus d\'accés registrades.</string>
     <string name="account_passkey_register_title">Afegir clau d\'accés</string>
     <string name="account_passkey_register_message">El vostre dispositiu us demanarà confirmar. La clau d\'accés està vinculada a aquest dispositiu i s\'utilitza per a futures sessions.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Regenerar els codis de recuperació?</string>
     <string name="account_recovery_regen_message">Els codis existents deixaran de funcionar immediatament. Deseu els nous en un lloc segur.</string>
     <string name="account_recovery_codes_warning">Deseu aquests codis — cadascun només es pot utilitzar una vegada. No es mostraran de nou.</string>
-    <string name="sessions_section_title">Sessions actives</string>
     <string name="sessions_title">Sessions</string>
     <string name="sessions_empty">No hi ha sessions actives.</string>
     <string name="sessions_revoke_message">El dispositiu que utilitza aquesta sessió tancarà la sessió.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Regenerar resum</string>
     <string name="interests_summary_regenerating">Regenerant…</string>
     <string name="interests_summary_empty">Afegiu alguns interessos per generar un resum d\'allò que us agrada.</string>
-    <string name="interests_weight">Pes</string>
     <string name="interests_search_failed">La cerca ha fallat. Si us plau, torneu-ho a provar.</string>
     <string name="document_privacy_title">Política de privacitat</string>
     <string name="document_rules_title">Regles</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Instal·lant %1$s…</string>
     <string name="accounts_field_api_key">Clau d\'API</string>
     <string name="accounts_field_url">URL del servidor</string>
-    <string name="accounts_device_placeholder">Els comptes push són afegits automàticament pel dispositiu.</string>
     <string name="accounts_set_default_ai">Establir com a IA predeterminada</string>
     <string name="accounts_verify_code">Codi</string>
     <string name="accounts_verify_resend">Tornar a enviar el codi</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nom</string>
     <string name="account_identity_fingerprint">Empremta</string>
     <string name="account_identity_directory_toggle">Permet que altres et trobin al directori</string>
-    <string name="account_method_email_subtitle">Rep un codi de verificació per correu electrònic</string>
-    <string name="account_method_totp_subtitle">Configura un autenticador a continuació per activar-ho</string>
-    <string name="account_method_passkey_subtitle">Registra una clau d\'accés a continuació per activar-ho</string>
     <string name="domain_add">Afegeix un domini</string>
     <string name="domain_add_title">Afegeix un domini</string>
     <string name="domain_delegation_add">Afegeix</string>
@@ -399,4 +382,10 @@
     <string name="notifprefs_test_none">Cap destinació configurada</string>
     <string name="notifprefs_transport_fcm">Push d\'Android</string>
     <string name="notifprefs_no_destinations">Sense destinacions</string>
+    <string name="account_data_generate">Generar contrasenya mestra</string>
+    <string name="accounts_field_server">URL del servidor</string>
+    <string name="accounts_field_token">Testimoni d\'accés</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Secret de signatura</string>
+    <string name="account_totp_open">Obre a l\'aplicació d\'autenticació</string>
 </resources>

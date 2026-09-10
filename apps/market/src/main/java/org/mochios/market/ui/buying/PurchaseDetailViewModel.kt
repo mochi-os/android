@@ -111,8 +111,11 @@ class PurchaseDetailViewModel @Inject constructor(
             try {
                 // Buyer-initiated dispute → server treats as refund request.
                 repository.disputeOrder(orderId, reason = reason, description = description)
-                // Reload so the dispute card appears.
+                // Reload so the dispute card appears. load() runs its own
+                // coroutine and never touches `submitting`, so release it here
+                // or every other action on the order stays disabled.
                 load()
+                _uiState.value = _uiState.value.copy(submitting = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(submitting = false)
                 _events.tryEmit(PurchaseDetailEvent.Toast(e.toMochiError().userMessage()))

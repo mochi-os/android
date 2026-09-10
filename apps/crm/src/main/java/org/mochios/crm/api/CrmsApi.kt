@@ -40,7 +40,6 @@ import retrofit2.http.Streaming
 
 // Response wrappers
 data class CrmListResponse(@SerializedName("crms") val crms: List<Crm> = emptyList())
-data class CrmResponse(val crm: Crm = Crm())
 
 // `-/create` answers with the new CRM's identity flat in `data`:
 // {"data": {"fingerprint": "…", "id": "…"}}, the way objects/create does.
@@ -74,33 +73,22 @@ data class ObjectListResponse(
  * `-/object` payload: the object's own columns, with its field values as a
  * sibling map the repository stitches back in - deserialising this straight
  * into a [CrmObject] matches nothing. `incoming`, `outgoing`, `watching` and
- * `comment_count` also ride here but are fetched separately.
+ * `comments.count` also ride here but are fetched separately.
  */
 data class ObjectResponse(
     val `object`: CrmObject = CrmObject(),
     val values: Map<String, Any?> = emptyMap(),
 )
 data class CommentListResponse(val comments: List<Comment> = emptyList())
-data class CommentResponse(val comment: Comment = Comment(id = ""))
 data class AttachmentListResponse(val attachments: List<Attachment> = emptyList())
-data class AttachmentResponse(val attachment: Attachment = Attachment(id = ""))
 data class ActivityListResponse(val activities: List<Activity> = emptyList())
 data class LinkListResponse(val incoming: List<Link> = emptyList(), val outgoing: List<Link> = emptyList())
 data class WatcherListResponse(val watchers: List<Watcher> = emptyList(), val watching: Boolean = false)
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
-data class ClassListResponse(val classes: List<CrmClass> = emptyList())
-data class ClassResponse(val `class`: CrmClass = CrmClass())
-data class FieldListResponse(val fields: List<CrmField> = emptyList())
-data class FieldResponse(val field: CrmField = CrmField())
-data class OptionListResponse(val options: List<FieldOption> = emptyList())
-data class OptionResponse(val option: FieldOption = FieldOption())
-data class ViewListResponse(val views: List<CrmView> = emptyList())
-data class ViewResponse(val view: CrmView = CrmView())
 data class SuccessResponse(val success: Boolean = false)
 data class UserSearchResponse(@SerializedName("results") val results: List<Person> = emptyList())
 data class GroupListResponse(val groups: List<Group> = emptyList())
-data class HierarchyResponse(val parents: List<String> = emptyList())
 data class PreferenceResponse(val preference: String = "")
 
 // JSON body of `-/objects/create`. `class` is a Kotlin keyword, so the field is
@@ -123,8 +111,9 @@ data class SetValueRequest(val value: String)
 
 // JSON body of `-/subscribe`. `crm` must be the full entity id — the server
 // rejects a fingerprint here. `server` is the home-server hint from the
-// directory hit and is omitted from the payload when null.
-data class SubscribeRequest(val crm: String, val server: String? = null)
+// directory hit and `peer` the pin from a `mochi://` share link; each is
+// omitted from the payload when null.
+data class SubscribeRequest(val crm: String, val server: String? = null, val peer: String? = null)
 
 /**
  * What `-/subscribe` joined. Route by [fingerprint] rather than the id asked
@@ -140,6 +129,10 @@ data class SubscribeResponse(
 // JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
 // subscribe but ignored server-side — unsubscribe resolves the CRM locally.
 data class UnsubscribeRequest(val crm: String, val server: String? = null)
+
+// JSON body of `classes/{class}/update`; a null field is left out, an empty
+// `title` clears the class's title field.
+data class UpdateClassRequest(val name: String? = null, val title: String? = null)
 
 // Shareable CRM link returned by the `-/share` endpoint.
 data class ShareResponse(val link: String = "")
@@ -172,7 +165,9 @@ interface CrmsApi {
 
     @FormUrlEncoded
     @POST("-/probe")
-    suspend fun probe(@Field("url") url: String): Response<ApiResponse<CrmResponse>>
+    // The probed CRM comes flat in `data`, with `peer` (a share link) or
+    // `server` (a web address) beside its fields.
+    suspend fun probe(@Field("url") url: String): Response<ApiResponse<Crm>>
 
     @POST("-/subscribe")
     suspend fun subscribe(
@@ -272,9 +267,8 @@ interface CrmsApi {
         @Field("field") field: String?,
         @Field("value") value: String?,
         @Field("rank") rank: Int?,
-        @Field("row_field") rowField: String? = null,
-        @Field("row_value") rowValue: String? = null,
-        @Field("scope_parent") scopeParent: String? = null,
+        @Field("row") row: String? = null,
+        @Field("scope") scope: String? = null,
         @Field("promote") promote: String? = null
     ): Response<ApiResponse<SuccessResponse>>
 
@@ -328,7 +322,7 @@ interface CrmsApi {
         @Part("content") content: RequestBody,
         @Part("parent") parent: RequestBody?,
         @Part files: List<MultipartBody.Part>
-    ): Response<ApiResponse<CommentResponse>>
+    ): Response<ApiResponse<Comment>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/objects/{objectId}/comments/{commentId}/update")
@@ -360,7 +354,7 @@ interface CrmsApi {
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
         @Part file: MultipartBody.Part
-    ): Response<ApiResponse<AttachmentResponse>>
+    ): Response<ApiResponse<AttachmentListResponse>>
 
     @POST("{crmId}/-/objects/{objectId}/attachments/{attachmentId}/delete")
     suspend fun deleteAttachment(
@@ -408,7 +402,7 @@ interface CrmsApi {
         @Path("crmId") crmId: String,
         @Field("data") data: String?,
         @Field("template") template: String?,
-        @Field("template_version") templateVersion: Int?
+        @Field("version") templateVersion: Int?
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Data: Export / Import ----
@@ -427,17 +421,17 @@ interface CrmsApi {
         @Path("crmId") crmId: String
     ): Response<ResponseBody>
 
+    // `design` asks the server to apply the design the file carries before
+    // its objects, so a whole backup restores in one upload.
     @Multipart
     @POST("{crmId}/-/data/import")
     suspend fun importData(
         @Path("crmId") crmId: String,
-        @Part file: MultipartBody.Part
+        @Part file: MultipartBody.Part,
+        @Part("design") design: RequestBody? = null
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Views ----
-
-    @GET("{crmId}/-/views")
-    suspend fun getViews(@Path("crmId") crmId: String): Response<ApiResponse<ViewListResponse>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/views/create")
@@ -452,7 +446,7 @@ interface CrmsApi {
         @Field("direction") direction: String?,
         @Field("classes") classes: String?,
         @Field("border") border: String?
-    ): Response<ApiResponse<ViewResponse>>
+    ): Response<ApiResponse<CrmView>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/views/reorder")
@@ -485,23 +479,20 @@ interface CrmsApi {
 
     // ---- Classes ----
 
-    @GET("{crmId}/-/classes")
-    suspend fun getClasses(@Path("crmId") crmId: String): Response<ApiResponse<ClassListResponse>>
-
     @FormUrlEncoded
     @POST("{crmId}/-/classes/create")
     suspend fun createClass(
         @Path("crmId") crmId: String,
         @Field("name") name: String
-    ): Response<ApiResponse<ClassResponse>>
+    ): Response<ApiResponse<CrmClass>>
 
-    @FormUrlEncoded
+    // JSON, not a form: a form field sent empty reads as absent on the server,
+    // and clearing the title field back to the default needs "" to arrive.
     @POST("{crmId}/-/classes/{classId}/update")
     suspend fun updateClass(
         @Path("crmId") crmId: String,
         @Path("classId") classId: String,
-        @Field("name") name: String?,
-        @Field("title") title: String? = null
+        @Body body: UpdateClassRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/classes/{classId}/delete")
@@ -511,12 +502,6 @@ interface CrmsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Hierarchy ----
-
-    @GET("{crmId}/-/classes/{classId}/hierarchy")
-    suspend fun getHierarchy(
-        @Path("crmId") crmId: String,
-        @Path("classId") classId: String
-    ): Response<ApiResponse<HierarchyResponse>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/hierarchy/set")
@@ -528,12 +513,6 @@ interface CrmsApi {
 
     // ---- Fields ----
 
-    @GET("{crmId}/-/classes/{classId}/fields")
-    suspend fun getFields(
-        @Path("crmId") crmId: String,
-        @Path("classId") classId: String
-    ): Response<ApiResponse<FieldListResponse>>
-
     @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/fields/create")
     suspend fun createField(
@@ -543,7 +522,7 @@ interface CrmsApi {
         @Field("fieldtype") fieldtype: String,
         @Field("flags") flags: String?,
         @Field("multi") multi: Boolean?
-    ): Response<ApiResponse<FieldResponse>>
+    ): Response<ApiResponse<CrmField>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/fields/reorder")
@@ -580,13 +559,6 @@ interface CrmsApi {
 
     // ---- Options ----
 
-    @GET("{crmId}/-/classes/{classId}/fields/{fieldId}/options")
-    suspend fun getOptions(
-        @Path("crmId") crmId: String,
-        @Path("classId") classId: String,
-        @Path("fieldId") fieldId: String
-    ): Response<ApiResponse<OptionListResponse>>
-
     @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/fields/{fieldId}/options/create")
     suspend fun createOption(
@@ -596,7 +568,7 @@ interface CrmsApi {
         @Field("name") name: String,
         @Field("colour") colour: String?,
         @Field("icon") icon: String? = null
-    ): Response<ApiResponse<OptionResponse>>
+    ): Response<ApiResponse<FieldOption>>
 
     @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/fields/{fieldId}/options/reorder")

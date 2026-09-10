@@ -74,6 +74,15 @@ class FileStore @Inject constructor(
         }
     }
 
+    /** True when the document at [uri] is a zip, judged on its leading bytes. */
+    suspend fun isZipped(uri: Uri): Boolean = withContext(Dispatchers.IO) {
+        try {
+            context.contentResolver.openInputStream(uri)?.use { input -> isZip(input.buffered()) } ?: false
+        } catch (_: Exception) {
+            false
+        }
+    }
+
     /**
      * Copies [source] into the document at [uri] as it arrives, so a
      * server-built export is never held in memory whole. Closing [source] is

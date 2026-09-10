@@ -53,6 +53,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.format.formatFingerprint
 import org.mochios.staff.R
 import org.mochios.staff.model.StaffMember
 import org.mochios.staff.ui.components.LocalStaffMe
@@ -159,7 +160,7 @@ private fun MemberRow(
     onAskRemove: (StaffMember) -> Unit,
 ) {
     val format = LocalFormat.current
-    val displayName = member.name?.takeIf { it.isNotBlank() } ?: fingerprint(member.id)
+    val displayName = member.name?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.fingerprint)
     val avatarUrl = "/staff/-/user/${member.id}/asset/avatar"
 
     Row(
@@ -229,7 +230,7 @@ private fun AddedByLine(member: StaffMember) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         } else {
-            val name = member.addedbyName?.takeIf { it.isNotBlank() } ?: fingerprint(member.addedby)
+            val name = member.addedbyName?.takeIf { it.isNotBlank() } ?: formatFingerprint(member.addedbyFingerprint)
             EntityAvatar(
                 name = name,
                 src = "/staff/-/user/${member.addedby}/asset/avatar",
@@ -288,7 +289,3 @@ internal fun roleLabel(role: String): String = when (role.lowercase()) {
     "support" -> stringResource(R.string.staff_team_role_support)
     else -> role
 }
-
-/** First 9 characters of an entity ID — the standard Mochi fingerprint slice. */
-internal fun fingerprint(id: String): String =
-    if (id.length <= 9) id else id.substring(0, 9)

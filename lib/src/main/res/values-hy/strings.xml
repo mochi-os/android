@@ -350,4 +350,8 @@
     <string name="game_empty_title">Դեռ խաղեր չկան</string>
     <string name="game_select_title">Ընտրեք խաղ</string>
     <string name="game_select_subtitle">Ընտրեք խաղ կողային վահանակից կամ սկսեք նորը։</string>
+    <string name="settings_card">Քարտի ոճ</string>
+    <string name="settings_card_theme">Թեմայից</string>
+    <string name="settings_card_flat">Հարթ</string>
+    <string name="settings_card_raised">Բարձրացված</string>
 </resources>

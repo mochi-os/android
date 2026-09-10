@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">പ്രദർശന നാമം</string>
-    <string name="chat_auth_verification_failed">സ്ഥിരീകരണം പരാജയപ്പെട്ടു</string>
     <string name="chat_list_title">ചാറ്റുകൾ</string>
     <string name="chat_list_search">തിരയുക</string>
     <string name="chat_list_logout">ലോഗ് ഔട്ട്</string>
     <string name="chat_list_new">പുതിയ ചാറ്റ്</string>
     <string name="chat_new_title">പുതിയ ചാറ്റ്</string>
     <string name="chat_new_name">ഗ്രൂപ്പ് നാമം</string>
-    <string name="chat_new_friends">സുഹൃത്തുക്കൾ</string>
     <string name="chat_message_placeholder">സന്ദേശം</string>
     <string name="chat_attachment_add">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
-    <string name="chat_message_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="chat_settings_title">ചാറ്റ് ക്രമീകരണങ്ങൾ</string>
     <string name="chat_settings_rename_label">ചാറ്റ് നാമം</string>
     <string name="chat_settings_save">സേവ് ചെയ്യുക</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">അയയ്ക്കുക</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">ലോഗിൻ പരാജയപ്പെട്ടു</string>
     <string name="chat_attachment_move_up">മുകളിലേക്ക് നീക്കുക</string>
     <string name="chat_attachment_move_down">താഴേക്ക് നീക്കുക</string>
 
     <string name="notification_channel_chat">ചാറ്റ് അറിയിപ്പുകൾ</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">ഐഡന്റിറ്റി സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല</string>
-    <string name="chat_auth_mfa_unsupported">മൊബൈൽ ആപ്പിൽ MFA ഇതുവരെ പിന്തുണയ്ക്കുന്നില്ല</string>
-    <string name="chat_auth_enter_code_sent">%1$s ലേക്ക് അയച്ച കോഡ് നൽകുക</string>
-    <string name="chat_auth_create_identity">നിങ്ങളുടെ ഐഡന്റിറ്റി സൃഷ്ടിക്കുക</string>
     <string name="chat_list_empty">ഇതുവരെ ചാറ്റുകൾ ഇല്ല</string>
     <string name="chat_new_existing_chat">നിലവിലുള്ള ചാറ്റ് തുറക്കുക</string>
     <string name="chat_new_start">ചാറ്റ് ആരംഭിക്കുക</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">ഇതുവരെ സന്ദേശങ്ങൾ ഇല്ല — ഹായ് പറയൂ!</string>
     <string name="chat_messages_load_more">പഴയ സന്ദേശങ്ങൾ ലോഡുചെയ്യുക</string>
     <string name="chat_attachment_label">ഫയൽ</string>
-    <string name="chat_message_too_long">സന്ദേശം വളരെ നീണ്ടതാണ്</string>
-    <string name="chat_message_empty">സന്ദേശം ശൂന്യമായിരിക്കരുത്</string>
     <string name="chat_settings_rename">ചാറ്റ് പുനർനാമകരണം ചെയ്യുക</string>
     <string name="chat_settings_add_member_empty">ചേർക്കാൻ സുഹൃത്തുക്കൾ ഇല്ല</string>
     <string name="chat_settings_remove_member_message">ഈ ചാറ്റിൽ നിന്ന് %1$s നെ നീക്കം ചെയ്യണോ?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">ഈ സന്ദേശം ഇല്ലാതാക്കി</string>
     <string name="chat_search_hint">ചാറ്റിൽ തിരയുക...</string>
-    <string name="chat_search_no_results">ഫലങ്ങളൊന്നുമില്ല</string>
     <string name="chat_message_forward">ഫോർവേഡ് ചെയ്യുക</string>
     <string name="chat_forward_title">ഇതിലേക്ക് ഫോർവേഡ് ചെയ്യുക…</string>
     <string name="chat_forward_search">ചാറ്റുകൾ തിരയുക…</string>
     <string name="chat_forward_empty">ഫോർവേഡ് ചെയ്യാൻ ചാറ്റുകളൊന്നുമില്ല</string>
     <string name="chat_forward_success">ഫോർവേഡ് ചെയ്തു</string>
-    <string name="chat_forward_failed">ഫോർവേഡ് ചെയ്യാനായില്ല</string>
     <string name="chat_message_reply">മറുപടി നൽകുക</string>
     <string name="chat_message_select">തിരഞ്ഞെടുക്കുക</string>
     <string name="chat_reply_attachment">അറ്റാച്ച്മെന്റ്</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">സുഹൃത്തുക്കൾ</string>
     <string name="chat_policy_title">ഇൻകമിംഗ് ചാറ്റുകൾ</string>
     <string name="chat_policy_friends">സുഹൃത്തുക്കൾ മാത്രം</string>
-    <string name="chat_policy_friends_description">സുഹൃത്തുക്കൾക്ക് മാത്രമേ നിങ്ങളുമായി ചാറ്റ് ആരംഭിക്കാൻ കഴിയൂ (ഡിഫോൾട്ട്).</string>
     <string name="chat_policy_anyone">ആർക്കും</string>
-    <string name="chat_policy_anyone_description">ആർക്കും നിങ്ങളുമായി ചാറ്റ് ആരംഭിക്കാം.</string>
     <string name="chat_new_search_placeholder">ആളുകളെ തിരയുക</string>
     <string name="chat_new_no_matches">പൊരുത്തപ്പെടുന്ന ആളുകളില്ല</string>
     <string name="chat_new_no_friends">ചാറ്റ് ചെയ്യാൻ ആളുകളെ തിരയുക</string>
     <string name="chat_pin">പിൻ ചെയ്യുക</string>
     <string name="chat_unpin">അൺപിൻ ചെയ്യുക</string>
-    <string name="chat_pinned_label">പിൻ ചെയ്തു</string>
     <string name="chat_settings_general">പൊതുവായവ</string>
     <string name="chat_settings_screen_title">%1$s ക്രമീകരണങ്ങൾ</string>
     <string name="chat_mark_read">വായിച്ചതായി അടയാളപ്പെടുത്തുക</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">മുൻ പൊരുത്തം</string>
     <string name="chat_settings_id">ചാറ്റ് ഐഡി</string>
     <string name="chat_message_edited">(എഡിറ്റ് ചെയ്തു)</string>
+    <string name="chat_new_fallback_name">ചാറ്റ്</string>
 </resources>

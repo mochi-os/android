@@ -350,4 +350,8 @@
     <string name="game_empty_title">விளையாட்டுகள் இன்னும் இல்லை</string>
     <string name="game_select_title">விளையாட்டைத் தேர்ந்தெடுக்கவும்</string>
     <string name="game_select_subtitle">பக்கப்பட்டியிலிருந்து விளையாட்டைத் தேர்ந்தெடுக்கவும் அல்லது புதிய விளையாட்டைத் தொடங்கவும்.</string>
+    <string name="settings_card">அட்டை பாணி</string>
+    <string name="settings_card_theme">தீமிலிருந்து</string>
+    <string name="settings_card_flat">தட்டையானது</string>
+    <string name="settings_card_raised">உயர்த்தப்பட்டது</string>
 </resources>

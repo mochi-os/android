@@ -29,8 +29,8 @@ class MessageListTest {
         val grouped = groupMessagesByDate(messages, utc)
         // One header plus two messages, and the load-older row above them.
         assertEquals(3, grouped.size)
-        assertEquals(3, lastLazyIndex(grouped, hasMore = true))
-        assertEquals(2, lastLazyIndex(grouped, hasMore = false))
+        assertEquals(3, lastLazyIndex(grouped, more = true))
+        assertEquals(2, lastLazyIndex(grouped, more = false))
     }
 
     /** The shipped bug: messages.size - 1 was short by headers + 1. */
@@ -38,14 +38,14 @@ class MessageListTest {
     fun `counting messages alone lands short of the newest row`() {
         val messages = listOf(message("a", lateEvening), message("b", lateEvening + 60))
         val grouped = groupMessagesByDate(messages, utc)
-        assertEquals(3, lastLazyIndex(grouped, hasMore = true))
+        assertEquals(3, lastLazyIndex(grouped, more = true))
         assertEquals(1, messages.size - 1)
     }
 
     @Test
     fun `an empty list has no last index to scroll to`() {
-        assertEquals(0, lastLazyIndex(emptyList(), hasMore = false))
-        assertEquals(0, lastLazyIndex(emptyList(), hasMore = true))
+        assertEquals(0, lastLazyIndex(emptyList(), more = false))
+        assertEquals(0, lastLazyIndex(emptyList(), more = true))
     }
 
     @Test

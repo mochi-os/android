@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Data proyék disimpen</string>
     <string name="projects_exporting">Nyiapkeun ékspor…</string>
     <string name="projects_board_add_column">Tambah kolom</string>
+    <string name="projects_design_sample">Conto %1$d</string>
 </resources>

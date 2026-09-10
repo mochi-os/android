@@ -26,7 +26,7 @@ data class NewChatUiState(
     val friends: List<Friend> = emptyList(),
     // Directory people matching the current query who aren't already friends.
     // Non-friends may be addressed; the sender-side probe at create decides
-    // whether their chat_policy allows it (mirrors the web picker).
+    // whether their policy allows it (mirrors the web picker).
     val directory: List<Friend> = emptyList(),
     val selected: Set<String> = emptySet(),
     val groupName: String = "",
@@ -69,9 +69,8 @@ class NewChatViewModel @Inject constructor(
                     ?.let { id -> friends.firstOrNull { it.id == id } }
                 if (target != null) {
                     try {
-                        val chatId = target.chatId.ifBlank {
-                            val response = repository.createChat(target.name, listOf(target.id))
-                            response.fingerprint.ifEmpty { response.id }
+                        val chatId = target.chat.ifBlank {
+                            repository.createChat(target.name, listOf(target.id)).id
                         }
                         _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId)
                     } catch (e: Exception) {
@@ -126,7 +125,7 @@ class NewChatViewModel @Inject constructor(
                 val friendIds = _uiState.value.friends.map { it.id }.toSet()
                 val results = repository.personSearch(trimmed)
                     .filter { it.id !in friendIds }
-                    .map { Friend(id = it.id, identity = it.id, name = it.name, chatId = "") }
+                    .map { Friend(id = it.id, identity = it.id, name = it.name, chat = "") }
                 _uiState.value = _uiState.value.copy(directory = results, isSearchingDirectory = false)
             } catch (e: Exception) {
                 // A failed directory search leaves the local matches; not fatal.
@@ -150,12 +149,9 @@ class NewChatViewModel @Inject constructor(
     private fun allPeople(): List<Friend> = _uiState.value.friends + _uiState.value.directory
 
     // Default chat name from the selected people (handles directory picks,
-    // which aren't in the friend list). Falls back to "Chat" when unresolved.
-    fun selectedFallbackName(): String {
-        val selected = _uiState.value.selected
-        val names = allPeople().filter { it.id in selected }.joinToString(", ") { it.name }
-        return names.ifBlank { "Chat" }
-    }
+    // which aren't in the friend list); [fallback] when none resolve.
+    fun selectedFallbackName(fallback: String): String =
+        fallbackChatName(allPeople(), _uiState.value.selected, fallback)
 
     fun createChat(fallbackName: String) {
         viewModelScope.launch {
@@ -167,7 +163,7 @@ class NewChatViewModel @Inject constructor(
                 val response = repository.createChat(chosenName, state.selected.toList())
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
-                    createdChatId = response.fingerprint.ifEmpty { response.id }
+                    createdChatId = response.id
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isCreating = false, error = e.toMochiError())
@@ -182,4 +178,15 @@ class NewChatViewModel @Inject constructor(
     fun openExistingChat(chatId: String) {
         _uiState.value = _uiState.value.copy(createdChatId = chatId)
     }
+}
+
+/**
+ * The default name for a new chat: the selected people's names, or the
+ * caller's translated [fallback] when none of them resolve. The name is
+ * stored server-side and shown to every member, so it is never an English
+ * literal.
+ */
+internal fun fallbackChatName(people: List<Friend>, selected: Set<String>, fallback: String): String {
+    val names = people.filter { it.id in selected }.joinToString(", ") { it.name }
+    return names.ifBlank { fallback }
 }

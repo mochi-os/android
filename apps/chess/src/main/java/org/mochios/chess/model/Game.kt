@@ -39,6 +39,14 @@ data class Game(
     /** Entity ID of the opponent, given the caller's identity. */
     fun opponentId(myIdentity: String): String =
         if (identity == myIdentity) opponent else identity
+
+    /**
+     * Whether "Offer draw" applies: the game is live and no offer, ours or the
+     * opponent's, is pending. The server refuses an offer placed over the
+     * opponent's, and the accept/decline banner already answers that one.
+     */
+    val canOfferDraw: Boolean
+        get() = status == "active" && drawOffer.isNullOrEmpty()
 }
 
 /** Server-facing reply for `:game/-/view` (single-game detail). */
@@ -67,10 +75,10 @@ data class GameMessage(
 /** Cursor-paginated reply for `:game/-/messages`. */
 data class GetMessagesResponse(
     val messages: List<GameMessage> = emptyList(),
-    val hasMore: Boolean = false,
+    val more: Boolean = false,
     // "<created>:<id>", not a bare timestamp — created alone is not unique and
     // paginating on it drops every row sharing the page boundary's second.
-    val nextCursor: String? = null,
+    val cursor: String? = null,
 )
 
 /**

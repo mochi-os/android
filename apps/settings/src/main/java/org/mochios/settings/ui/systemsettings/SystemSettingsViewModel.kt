@@ -18,6 +18,9 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.SystemSetting
 import org.mochios.settings.api.SystemSettingsApi
 import javax.inject.Inject
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
+import org.mochios.android.api.unwrapEmpty
 
 data class SystemSettingsUiState(
     val isLoading: Boolean = true,
@@ -29,10 +32,19 @@ data class SystemSettingsUiState(
 @HiltViewModel
 class SystemSettingsViewModel @Inject constructor(
     private val api: SystemSettingsApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SystemSettingsUiState())
     val uiState: StateFlow<SystemSettingsUiState> = _uiState.asStateFlow()
+
+    /** Step-up gate for the administrator mutations: a stolen session must
+     *  re-verify a login factor before it can change the server. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(error = e.toMochiError()) },
+    )
 
     init { refresh() }
 
@@ -52,11 +64,12 @@ class SystemSettingsViewModel @Inject constructor(
     }
 
     fun setValue(name: String, value: String) {
-        viewModelScope.launch {
+        stepUp.request { token ->
             _uiState.value = _uiState.value.copy(savingName = name, error = null)
             try {
-                val resp = api.set(name, value)
-                if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+                // unwrapEmpty carries the server's translated refusal into
+                // the error, where a bare status code told the user nothing.
+                api.set(name, value, token).unwrapEmpty()
                 // Apply locally for snappy UI; refresh to pick up any server-side
                 // normalisation (e.g. trimmed whitespace, default fallback).
                 _uiState.value = _uiState.value.copy(

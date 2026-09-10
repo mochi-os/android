@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Ainm taispeána</string>
-    <string name="chat_auth_verification_failed">Theip ar an bhfíorú</string>
     <string name="chat_list_title">Comhráite</string>
     <string name="chat_list_search">Cuardach</string>
     <string name="chat_list_logout">Logáil amach</string>
     <string name="chat_list_new">Comhrá nua</string>
     <string name="chat_new_title">Comhrá nua</string>
     <string name="chat_new_name">Ainm an ghrúpa</string>
-    <string name="chat_new_friends">Cairde</string>
     <string name="chat_message_placeholder">Teachtaireacht</string>
     <string name="chat_attachment_add">Ceangail comhaid</string>
-    <string name="chat_message_attach">Ceangail comhaid</string>
     <string name="chat_settings_title">Socruithe comhrá</string>
     <string name="chat_settings_rename_label">Ainm an chomhrá</string>
     <string name="chat_settings_save">Sábháil</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Seol</string>
 
     <string name="notification_channel_chat">Fógraí comhrá</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Theip ar logáil isteach</string>
-    <string name="chat_auth_create_identity_failed">Theip ar chéannacht a chruthú</string>
-    <string name="chat_auth_mfa_unsupported">Níl tacaíocht ag MFA san aip soghluaiste fós</string>
-    <string name="chat_auth_enter_code_sent">Cuir isteach an cód a seoladh chuig %1$s</string>
-    <string name="chat_auth_create_identity">Cruthaigh do chéannacht</string>
     <string name="chat_list_empty">Níl aon chomhrá ann go fóill</string>
     <string name="chat_new_existing_chat">Oscail comhrá atá ann</string>
     <string name="chat_new_start">Tosaigh comhrá</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Bog suas</string>
     <string name="chat_attachment_move_down">Bog síos</string>
     <string name="chat_attachment_label">Comhad</string>
-    <string name="chat_message_remove_attachment">Bain ceangaltán</string>
-    <string name="chat_message_too_long">Tá an teachtaireacht ró-fhada</string>
-    <string name="chat_message_empty">Ní féidir leis an teachtaireacht a bheith folamh</string>
     <string name="chat_settings_rename">Athainmnigh an comhrá</string>
     <string name="chat_settings_add_member_empty">Níl aon chairde le cur leis</string>
     <string name="chat_settings_remove_member_message">Bain %1$s den chomhrá seo?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Scriosadh an teachtaireacht seo</string>
     <string name="chat_search_hint">Cuardaigh sa chomhrá...</string>
-    <string name="chat_search_no_results">Gan torthaí</string>
     <string name="chat_message_forward">Cuir ar aghaidh</string>
     <string name="chat_forward_title">Cuir ar aghaidh chuig…</string>
     <string name="chat_forward_search">Cuardaigh comhráite…</string>
     <string name="chat_forward_empty">Níl aon chomhrá le cur ar aghaidh chuige</string>
     <string name="chat_forward_success">Curtha ar aghaidh</string>
-    <string name="chat_forward_failed">Theip ar chur ar aghaidh</string>
     <string name="chat_message_reply">Freagair</string>
     <string name="chat_message_select">Roghnaigh</string>
     <string name="chat_reply_attachment">Ceangaltán</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Cairde</string>
     <string name="chat_policy_title">Comhráite isteach</string>
     <string name="chat_policy_friends">Cairde amháin</string>
-    <string name="chat_policy_friends_description">Ní féidir ach le cairde comhrá a thosú leat (réamhshocrú).</string>
     <string name="chat_policy_anyone">Aon duine</string>
-    <string name="chat_policy_anyone_description">Is féidir le haon duine comhrá a thosú leat.</string>
     <string name="chat_new_search_placeholder">Cuardaigh daoine</string>
     <string name="chat_new_no_matches">Níl aon duine comhoiriúnach</string>
     <string name="chat_new_no_friends">Cuardaigh daoine le comhrá a dhéanamh</string>
     <string name="chat_pin">Pionnáil</string>
     <string name="chat_unpin">Díphionnáil</string>
-    <string name="chat_pinned_label">Pionnáilte</string>
     <string name="chat_settings_general">Ginearálta</string>
     <string name="chat_settings_screen_title">Socruithe %1$s</string>
     <string name="chat_mark_read">Marcáil mar léite</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">An mheaitseáil roimhe seo</string>
     <string name="chat_settings_id">Aitheantas comhrá</string>
     <string name="chat_message_edited">(curtha in eagar)</string>
+    <string name="chat_new_fallback_name">Comhrá</string>
 </resources>

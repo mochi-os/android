@@ -48,6 +48,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.model.Currency
 
 /**
  * Filters apply live as the user toggles them; Apply only dismisses, Clear
@@ -130,6 +131,11 @@ fun FilterSheet(
             )
 
             SectionLabel(stringResource(R.string.market_filter_price_range))
+            ChipRow(
+                value = state.filters[Filter.CURRENCY] ?: HomeViewModel.DEFAULT_CURRENCY,
+                options = Currency.entries.map { it.name.lowercase() to it.name },
+                onSelect = { onUpdate(Filter.CURRENCY, it) },
+            )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 MochiTextField(
                     value = state.filters[Filter.PRICE_MIN].orEmpty(),
@@ -148,12 +154,6 @@ fun FilterSheet(
                     modifier = Modifier.weight(1f),
                 )
             }
-            Text(
-                text = stringResource(R.string.market_filter_price_hint),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-
             SectionLabel(stringResource(R.string.market_filter_sort))
             SortDropdown(state = state, onUpdate = onUpdate)
 

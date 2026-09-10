@@ -122,7 +122,8 @@ import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
 import org.mochios.crm.ui.`object`.ObjectDetailSheet
 import org.mochios.crm.ui.crmlist.CrmListViewModel
-import org.mochios.crm.ui.router.PROJECTS_FEATURE
+import org.mochios.android.api.userMessage
+import org.mochios.crm.ui.router.CRM_FEATURE
 import org.mochios.crm.ui.tree.TreeView
 import org.mochios.android.R as MochiR
 
@@ -152,7 +153,7 @@ fun CrmScreen(
 
     LaunchedEffect(crmId) {
         if (crmId.isNotBlank()) {
-            LastViewedStore.set(context, PROJECTS_FEATURE, crmId)
+            LastViewedStore.set(context, CRM_FEATURE, crmId)
         }
     }
     VisibleEntityEffect("crm", crmId, socketKey = crmId)
@@ -379,7 +380,7 @@ private fun CrmRow(
     var showMenu by remember { mutableStateOf(false) }
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val crmId = crm.fingerprint.ifEmpty { crm.id }
-    val canUnsubscribe = !crm.owner.local
+    val canUnsubscribe = crm.owner?.local != true
     val unsubscribeTitle = stringResource(R.string.crm_settings_unsubscribe_title)
     val unsubscribeMessage = stringResource(R.string.crm_settings_unsubscribe_message)
     val unsubscribeLabel = stringResource(R.string.crm_settings_unsubscribe)
@@ -510,6 +511,14 @@ private fun CrmContent(
     LaunchedEffect(viewModel) {
         viewModel.shareLink.collect { link ->
             shareCrmLink(context, link, shareTitle)
+        }
+    }
+
+    // A drag, delete or column edit the server refused: the card snaps back,
+    // so say why.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
         }
     }
 

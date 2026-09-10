@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Qhaway suti</string>
-    <string name="chat_auth_verification_failed">Qhawariy mana atikurqanchu</string>
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Maskay</string>
     <string name="chat_list_logout">Lluqsiy</string>
     <string name="chat_list_new">Musuq chat</string>
     <string name="chat_new_title">Musuq chat</string>
     <string name="chat_new_name">Huñu suti</string>
-    <string name="chat_new_friends">Masikuna</string>
     <string name="chat_message_placeholder">Willakuy</string>
     <string name="chat_attachment_add">Archivos churay</string>
-    <string name="chat_message_attach">Archivos churay</string>
     <string name="chat_settings_title">Chat kamariykuna</string>
     <string name="chat_settings_rename_label">Chat suti</string>
     <string name="chat_settings_save">Waqaychay</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">Apachiy</string>
     <string name="chat_attachment_remove">Remove attachment</string>
-    <string name="chat_message_remove_attachment">Remove attachment</string>
-    <string name="chat_auth_login_failed">Mana yaykuyta atispachu</string>
     <string name="chat_attachment_move_up">Patamanta apay</string>
     <string name="chat_attachment_move_down">Uramanta apay</string>
 
     <string name="notification_channel_chat">Rimanakuy willaykuna</string>
-    <string name="chat_auth_brand">Mochi Rimanakuy</string>
-    <string name="chat_auth_create_identity_failed">Mana atikurqachu kikinkayta paqarichiyta</string>
-    <string name="chat_auth_mfa_unsupported">MFA manaraqmi mobile app nisqapi atikunchu</string>
-    <string name="chat_auth_enter_code_sent">%1$s nisqaman apachisqa kuditata churay</string>
-    <string name="chat_auth_create_identity">Kikinkaykita paqarichiy</string>
     <string name="chat_list_empty">Manaraqmi rimanakuykuna kanchu</string>
     <string name="chat_new_existing_chat">Kaq rimanakuyta kichay</string>
     <string name="chat_new_start">Rimanakuyta qallariy</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">Manaraqmi willaykuna kanchu — napaykuy!</string>
     <string name="chat_messages_load_more">Mawk\'a willaykunata chaskiy</string>
     <string name="chat_attachment_label">Kawsay</string>
-    <string name="chat_message_too_long">Willay nishu suni</string>
-    <string name="chat_message_empty">Willay mana ch\'usaqchu kanan</string>
     <string name="chat_settings_rename">Rimanakuyta sutichay</string>
     <string name="chat_settings_add_member_empty">Manaña masikuna yapanapaq kanchu</string>
     <string name="chat_settings_remove_member_message">¿%1$s runata kay rimanakuymanta hurquyta munankichu?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Kay willay pichasqam</string>
     <string name="chat_search_hint">Chatpi maskay...</string>
-    <string name="chat_search_no_results">Mana tarisqa kanchu</string>
     <string name="chat_message_forward">Reenviay</string>
     <string name="chat_forward_title">Mayman reenviay…</string>
     <string name="chat_forward_search">Chatkunata maskay…</string>
     <string name="chat_forward_empty">Reenvianapaq mana chat kanchu</string>
     <string name="chat_forward_success">Reenviasqa</string>
-    <string name="chat_forward_failed">Reenviay mana atikurqachu</string>
     <string name="chat_message_reply">Kutichiy</string>
     <string name="chat_message_select">Akllay</string>
     <string name="chat_reply_attachment">Kawsay</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Masikuna</string>
     <string name="chat_policy_title">Chayamuq rimanakuykuna</string>
     <string name="chat_policy_friends">Masikunallam</string>
-    <string name="chat_policy_friends_description">Masikunallam qamwan rimanakuyta qallariyta atinku (ñawpaq).</string>
     <string name="chat_policy_anyone">Pipas</string>
-    <string name="chat_policy_anyone_description">Pipas qamwan rimanakuyta qallariyta atin.</string>
     <string name="chat_new_search_placeholder">Runakunata maskay</string>
     <string name="chat_new_no_matches">Manam tupaq runakunachu</string>
     <string name="chat_new_no_friends">Rimanakunapaq runakunata maskay</string>
     <string name="chat_pin">Pinkay</string>
     <string name="chat_unpin">Mana takyachiy</string>
-    <string name="chat_pinned_label">Pinkasqa</string>
     <string name="chat_settings_general">Llapanpi</string>
     <string name="chat_settings_screen_title">%1$s allinkachaykuna</string>
     <string name="chat_mark_read">Ñawinchasqahina señalay</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Ñawpaq tupay</string>
     <string name="chat_settings_id">Rimanakuy ID</string>
     <string name="chat_message_edited">(hukchasqa)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

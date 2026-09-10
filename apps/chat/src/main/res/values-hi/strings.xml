@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">प्रदर्शन नाम</string>
-    <string name="chat_auth_verification_failed">वेरिफ़िकेशन विफल</string>
     <string name="chat_list_title">चैट्स</string>
     <string name="chat_list_search">खोजें</string>
     <string name="chat_list_logout">लॉग आउट</string>
     <string name="chat_list_new">नया चैट</string>
     <string name="chat_new_title">नया चैट</string>
     <string name="chat_new_name">ग्रुप नाम</string>
-    <string name="chat_new_friends">मित्र</string>
     <string name="chat_message_placeholder">संदेश</string>
     <string name="chat_attachment_add">फ़ाइलें अटैच करें</string>
-    <string name="chat_message_attach">फ़ाइलें अटैच करें</string>
     <string name="chat_settings_title">चैट सेटिंग्स</string>
     <string name="chat_settings_rename_label">चैट का नाम</string>
     <string name="chat_settings_save">सेव करें</string>
@@ -30,17 +26,10 @@
 
     <string name="chat_message_send">भेजें</string>
     <string name="chat_attachment_remove">अनुलग्नक हटाएं</string>
-    <string name="chat_message_remove_attachment">अनुलग्नक हटाएं</string>
-    <string name="chat_auth_login_failed">लॉगिन विफल</string>
     <string name="chat_attachment_move_up">ऊपर ले जाएं</string>
     <string name="chat_attachment_move_down">नीचे ले जाएं</string>
 
     <string name="notification_channel_chat">चैट सूचनाएँ</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_create_identity_failed">पहचान बनाने में विफल</string>
-    <string name="chat_auth_mfa_unsupported">मोबाइल ऐप में MFA अभी समर्थित नहीं है</string>
-    <string name="chat_auth_enter_code_sent">%1$s पर भेजा गया कोड दर्ज करें</string>
-    <string name="chat_auth_create_identity">अपनी पहचान बनाएँ</string>
     <string name="chat_list_empty">अभी कोई चैट नहीं</string>
     <string name="chat_new_existing_chat">मौजूदा चैट खोलें</string>
     <string name="chat_new_start">चैट शुरू करें</string>
@@ -49,8 +38,6 @@
     <string name="chat_messages_empty">अभी कोई संदेश नहीं — नमस्ते कहें!</string>
     <string name="chat_messages_load_more">पुराने संदेश लोड करें</string>
     <string name="chat_attachment_label">फ़ाइल</string>
-    <string name="chat_message_too_long">संदेश बहुत लंबा है</string>
-    <string name="chat_message_empty">संदेश खाली नहीं हो सकता</string>
     <string name="chat_settings_rename">चैट का नाम बदलें</string>
     <string name="chat_settings_add_member_empty">जोड़ने के लिए कोई मित्र नहीं</string>
     <string name="chat_settings_remove_member_message">%1$s को इस चैट से हटाएँ?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">यह मैसेज डिलीट कर दिया गया</string>
     <string name="chat_search_hint">चैट में खोजें...</string>
-    <string name="chat_search_no_results">कोई परिणाम नहीं</string>
     <string name="chat_message_forward">फ़ॉरवर्ड करें</string>
     <string name="chat_forward_title">फ़ॉरवर्ड करें…</string>
     <string name="chat_forward_search">चैट खोजें…</string>
     <string name="chat_forward_empty">फ़ॉरवर्ड करने के लिए कोई चैट नहीं</string>
     <string name="chat_forward_success">फ़ॉरवर्ड किया गया</string>
-    <string name="chat_forward_failed">फ़ॉरवर्ड नहीं किया जा सका</string>
     <string name="chat_message_reply">जवाब दें</string>
     <string name="chat_message_select">चुनें</string>
     <string name="chat_reply_attachment">अटैचमेंट</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">मित्र</string>
     <string name="chat_policy_title">आने वाली चैट</string>
     <string name="chat_policy_friends">केवल मित्र</string>
-    <string name="chat_policy_friends_description">केवल मित्र आपके साथ चैट शुरू कर सकते हैं (डिफ़ॉल्ट)।</string>
     <string name="chat_policy_anyone">कोई भी</string>
-    <string name="chat_policy_anyone_description">कोई भी आपके साथ चैट शुरू कर सकता है।</string>
     <string name="chat_new_search_placeholder">लोग खोजें</string>
     <string name="chat_new_no_matches">कोई मेल खाते लोग नहीं</string>
     <string name="chat_new_no_friends">चैट करने के लिए लोग खोजें</string>
     <string name="chat_pin">पिन</string>
     <string name="chat_unpin">अनपिन करें</string>
-    <string name="chat_pinned_label">पिन किया गया</string>
     <string name="chat_settings_general">सामान्य</string>
     <string name="chat_settings_screen_title">%1$s सेटिंग्स</string>
     <string name="chat_mark_read">पढ़ा हुआ चिह्नित करें</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">पिछला मिलान</string>
     <string name="chat_settings_id">चैट आईडी</string>
     <string name="chat_message_edited">(संपादित)</string>
+    <string name="chat_new_fallback_name">चैट</string>
 </resources>

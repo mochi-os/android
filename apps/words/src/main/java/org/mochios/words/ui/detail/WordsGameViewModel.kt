@@ -189,8 +189,8 @@ class WordsGameViewModel @Inject constructor(
                     it.copy(
                         messages = ordered,
                         isLoadingMessages = false,
-                        hasMoreMessages = response.hasMore == true,
-                        nextMessageCursor = response.nextCursor,
+                        hasMoreMessages = response.more == true,
+                        nextMessageCursor = response.cursor,
                     )
                 }
             } catch (e: CancellationException) {
@@ -216,8 +216,8 @@ class WordsGameViewModel @Inject constructor(
                         messages = (response.messages + it.messages)
                             .distinctBy { message -> message.id }
                             .sortedBy { message -> message.created },
-                        hasMoreMessages = response.hasMore == true,
-                        nextMessageCursor = response.nextCursor,
+                        hasMoreMessages = response.more == true,
+                        nextMessageCursor = response.cursor,
                     )
                 }
             } catch (e: CancellationException) {

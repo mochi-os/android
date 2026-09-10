@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Ցուցադրման անուն</string>
-    <string name="chat_auth_verification_failed">Ստուգումը ձախողվեց</string>
     <string name="chat_list_title">Զրույցներ</string>
     <string name="chat_list_search">Որոնել</string>
     <string name="chat_list_logout">Դուրս գալ</string>
     <string name="chat_list_new">Նոր զրույց</string>
     <string name="chat_new_title">Նոր զրույց</string>
     <string name="chat_new_name">Խմբի անուն</string>
-    <string name="chat_new_friends">Ընկերներ</string>
     <string name="chat_message_placeholder">Հաղորդագրություն</string>
     <string name="chat_attachment_add">Կցել պատասխանի ֆայլեր</string>
-    <string name="chat_message_attach">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_settings_title">Զրույցի կարգավորումներ</string>
     <string name="chat_settings_rename_label">Զրույցի անուն</string>
     <string name="chat_settings_save">Պահպանել</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Ուղարկել</string>
 
     <string name="notification_channel_chat">Զրույցի ծանուցումներ</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Մուտքը ձախողվեց</string>
-    <string name="chat_auth_create_identity_failed">Չհաջողվեց ստեղծել ինքնություն</string>
-    <string name="chat_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
-    <string name="chat_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
-    <string name="chat_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
     <string name="chat_list_empty">Դեռ զրույցներ չկան</string>
     <string name="chat_new_existing_chat">Բացել առկա զրույցը</string>
     <string name="chat_new_start">Սկսել զրույց</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Տեղափոխել վերև</string>
     <string name="chat_attachment_move_down">Տեղափոխել ներքև</string>
     <string name="chat_attachment_label">Ֆայլ</string>
-    <string name="chat_message_remove_attachment">Հեռացնել կցորդը</string>
-    <string name="chat_message_too_long">Հաղորդագրությունը չափազանց երկար է</string>
-    <string name="chat_message_empty">Հաղորդագրությունը չի կարող դատարկ լինել</string>
     <string name="chat_settings_rename">Վերանվանել զրույցը</string>
     <string name="chat_settings_add_member_empty">Չկան ընկերներ՝ ավելացնելու համար</string>
     <string name="chat_settings_remove_member_message">Հեռացնե՞լ %1$s-ին այս զրույցից:</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Այս հաղորդագրությունը ջնջվել է</string>
     <string name="chat_search_hint">Որոնել զրույցում...</string>
-    <string name="chat_search_no_results">Արդյունքներ չկան</string>
     <string name="chat_message_forward">Փոխանցել</string>
     <string name="chat_forward_title">Փոխանցել…</string>
     <string name="chat_forward_search">Որոնել զրույցներ…</string>
     <string name="chat_forward_empty">Փոխանցելու զրույցներ չկան</string>
     <string name="chat_forward_success">Փոխանցվեց</string>
-    <string name="chat_forward_failed">Չհաջողվեց փոխանցել</string>
     <string name="chat_message_reply">Պատասխանել</string>
     <string name="chat_message_select">Ընտրել</string>
     <string name="chat_reply_attachment">Կցորդ</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Ընկերներ</string>
     <string name="chat_policy_title">Մուտքային զրույցներ</string>
     <string name="chat_policy_friends">Միայն ընկերներ</string>
-    <string name="chat_policy_friends_description">Միայն ընկերները կարող են ձեզ հետ զրույց սկսել (կանխադրված)։</string>
     <string name="chat_policy_anyone">Ցանկացած ոք</string>
-    <string name="chat_policy_anyone_description">Ցանկացած ոք կարող է ձեզ հետ զրույց սկսել։</string>
     <string name="chat_new_search_placeholder">Փնտրել մարդկանց</string>
     <string name="chat_new_no_matches">Համընկնող մարդիկ չկան</string>
     <string name="chat_new_no_friends">Փնտրեք մարդկանց՝ զրուցելու համար</string>
     <string name="chat_pin">Ամրացնել</string>
     <string name="chat_unpin">Ապամրացնել</string>
-    <string name="chat_pinned_label">Ամրացված</string>
     <string name="chat_settings_general">Ընդհանուր</string>
     <string name="chat_settings_screen_title">%1$s կարգավորումներ</string>
     <string name="chat_mark_read">Նշել որպես կարդացած</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Նախորդ համընկնումը</string>
     <string name="chat_settings_id">Զրույցի ID</string>
     <string name="chat_message_edited">(խմբագրված)</string>
+    <string name="chat_new_fallback_name">Զրույց</string>
 </resources>

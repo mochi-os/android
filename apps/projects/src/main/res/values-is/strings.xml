@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Verkefnagögn vistuð</string>
     <string name="projects_exporting">Undirbý útflutning…</string>
     <string name="projects_board_add_column">Bæta við dálki</string>
+    <string name="projects_design_sample">Sýnishorn %1$d</string>
 </resources>

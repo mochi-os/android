@@ -352,4 +352,8 @@
     <string name="game_empty_title">Nog geen speletjies nie</string>
     <string name="game_select_title">Kies \'n spel</string>
     <string name="game_select_subtitle">Kies \'n spel in die kantbalk of begin \'n nuwe een.</string>
+    <string name="settings_card">Kaartstyl</string>
+    <string name="settings_card_theme">Vanaf tema</string>
+    <string name="settings_card_flat">Plat</string>
+    <string name="settings_card_raised">Verhoog</string>
 </resources>

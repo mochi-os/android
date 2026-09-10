@@ -64,6 +64,7 @@ private val DISPLAY_PREF_KEYS: List<String> = listOf(
     "theme",
     "density",
     "radius",
+    "card",
     "background",
     "font",
     "font_size",
@@ -106,6 +107,15 @@ private fun displaySchemaBottom(): List<PrefSpec> = listOf(
             "0.375rem" to stringResource(R.string.settings_radius_small),
             "0.75rem" to stringResource(R.string.settings_radius_medium),
             "1.75rem" to stringResource(R.string.settings_radius_large),
+        ),
+    ),
+    PrefSpec(
+        key = "card",
+        label = stringResource(R.string.settings_card),
+        options = listOf(
+            "theme" to stringResource(R.string.settings_card_theme),
+            "flat" to stringResource(R.string.settings_card_flat),
+            "raised" to stringResource(R.string.settings_card_raised),
         ),
     ),
     PrefSpec(

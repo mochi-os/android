@@ -117,17 +117,6 @@ class ChatSettingsViewModel @Inject constructor(
         }
     }
 
-    fun leave(deleteLocally: Boolean) {
-        viewModelScope.launch {
-            try {
-                repository.leaveChat(chatId, deleteLocally)
-                _uiState.value = _uiState.value.copy(leftOrDeleted = true)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     fun deleteLocally() {
         viewModelScope.launch {
             try {

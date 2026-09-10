@@ -354,4 +354,8 @@
     <string name="game_empty_title">Пакуль няма гульняў</string>
     <string name="game_select_title">Выберыце гульню</string>
     <string name="game_select_subtitle">Выберыце гульню на бакавой панэлі або пачніце новую.</string>
+    <string name="settings_card">Стыль карткі</string>
+    <string name="settings_card_theme">З тэмы</string>
+    <string name="settings_card_flat">Плоская</string>
+    <string name="settings_card_raised">Узняты</string>
 </resources>

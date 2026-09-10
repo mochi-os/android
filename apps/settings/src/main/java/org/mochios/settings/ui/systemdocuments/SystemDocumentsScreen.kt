@@ -64,6 +64,7 @@ import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.SystemDocument
 import java.util.Locale
+import org.mochios.settings.ui.login.StepUpHost
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -91,6 +92,7 @@ fun SystemDocumentsScreen(
         }
     }
 
+    StepUpHost(viewModel.stepUp)
     Scaffold(
         topBar = {
             TopAppBar(
@@ -119,6 +121,7 @@ fun SystemDocumentsScreen(
                     state = state,
                     onTabChange = viewModel::setTab,
                     onLanguageChange = viewModel::setLanguage,
+                    onOpen = viewModel::load,
                     onSave = viewModel::save,
                 )
             }
@@ -132,6 +135,7 @@ private fun Content(
     state: SystemDocumentsUiState,
     onTabChange: (DocumentKind) -> Unit,
     onLanguageChange: (String) -> Unit,
+    onOpen: (name: String, language: String) -> Unit,
     onSave: (name: String, language: String, body: String) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
@@ -190,10 +194,15 @@ private fun Content(
                 onChange = onLanguageChange,
             )
 
-            val document = state.documents.firstOrNull {
+            LaunchedEffect(state.tab, activeLanguage) {
+                if (activeLanguage != null) onOpen(state.tab.value, activeLanguage)
+            }
+            val document = state.current?.takeIf {
                 it.name == state.tab.value && it.language == activeLanguage
             }
-            if (document == null) {
+            if (document == null && state.loadingDocument) {
+                CircularProgressIndicator()
+            } else if (document == null) {
                 Text(
                     text = stringResource(R.string.system_documents_no_language),
                     style = MaterialTheme.typography.bodyMedium,

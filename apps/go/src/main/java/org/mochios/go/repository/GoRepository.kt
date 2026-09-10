@@ -38,7 +38,7 @@ class GoRepository @Inject constructor(
         api.viewGame(gameId).unwrap()
 
     /**
-     * Chat + move log. [before] is the previous response's `nextCursor`, a
+     * Chat + move log. [before] is the previous response's `cursor`, a
      * `"<created>:<id>"` pair - paging on `created` alone drops rows sharing
      * the boundary second. The server caps [limit] at 100.
      */

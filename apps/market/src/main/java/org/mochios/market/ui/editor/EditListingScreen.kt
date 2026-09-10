@@ -94,7 +94,7 @@ fun EditListingScreen(
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
-                is EditListingEvent.Toast -> snackbar.showSnackbar(event.message)
+                is EditListingEvent.Notice -> snackbar.showSnackbar(context.getString(event.message))
                 is EditListingEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
                 is EditListingEvent.Deleted -> navController.popBackStack()
                 is EditListingEvent.Published -> navController.popBackStack()

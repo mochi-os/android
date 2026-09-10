@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chat_auth_display_name">Nom d\'affichage</string>
-    <string name="chat_auth_verification_failed">Échec de la vérification</string>
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Rechercher</string>
     <string name="chat_list_logout">Se déconnecter</string>
     <string name="chat_list_new">Nouveau chat</string>
     <string name="chat_new_title">Nouveau chat</string>
     <string name="chat_new_name">Nom du groupe</string>
-    <string name="chat_new_friends">Amis</string>
     <string name="chat_message_placeholder">Message</string>
     <string name="chat_attachment_add">Joindre des fichiers</string>
-    <string name="chat_message_attach">Joindre des fichiers</string>
     <string name="chat_settings_title">Paramètres du chat</string>
     <string name="chat_settings_rename_label">Nom du chat</string>
     <string name="chat_settings_save">Enregistrer</string>
@@ -31,12 +27,6 @@
     <string name="chat_message_send">Envoyer</string>
 
     <string name="notification_channel_chat">Notifications de messagerie</string>
-    <string name="chat_auth_brand">Mochi Chat</string>
-    <string name="chat_auth_login_failed">Échec de la connexion</string>
-    <string name="chat_auth_create_identity_failed">Échec de la création de l\'identité</string>
-    <string name="chat_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
-    <string name="chat_auth_enter_code_sent">Saisissez le code envoyé à %1$s</string>
-    <string name="chat_auth_create_identity">Créez votre identité</string>
     <string name="chat_list_empty">Aucune conversation pour le moment</string>
     <string name="chat_new_existing_chat">Ouvrir la conversation existante</string>
     <string name="chat_new_start">Démarrer la conversation</string>
@@ -48,9 +38,6 @@
     <string name="chat_attachment_move_up">Déplacer vers le haut</string>
     <string name="chat_attachment_move_down">Déplacer vers le bas</string>
     <string name="chat_attachment_label">Fichier</string>
-    <string name="chat_message_remove_attachment">Supprimer la pièce jointe</string>
-    <string name="chat_message_too_long">Message trop long</string>
-    <string name="chat_message_empty">Le message ne peut pas être vide</string>
     <string name="chat_settings_rename">Renommer la conversation</string>
     <string name="chat_settings_add_member_empty">Aucun ami à ajouter</string>
     <string name="chat_settings_remove_member_message">Retirer %1$s de cette conversation ?</string>
@@ -61,13 +48,11 @@
 
     <string name="chat_message_deleted">Ce message a été supprimé</string>
     <string name="chat_search_hint">Rechercher dans la discussion...</string>
-    <string name="chat_search_no_results">Aucun résultat</string>
     <string name="chat_message_forward">Transférer</string>
     <string name="chat_forward_title">Transférer à…</string>
     <string name="chat_forward_search">Rechercher des discussions…</string>
     <string name="chat_forward_empty">Aucune discussion vers laquelle transférer</string>
     <string name="chat_forward_success">Transféré</string>
-    <string name="chat_forward_failed">Échec du transfert</string>
     <string name="chat_message_reply">Répondre</string>
     <string name="chat_message_select">Sélectionner</string>
     <string name="chat_reply_attachment">Pièce jointe</string>
@@ -81,15 +66,12 @@
     <string name="chat_forward_friends">Amis</string>
     <string name="chat_policy_title">Chats entrants</string>
     <string name="chat_policy_friends">Amis uniquement</string>
-    <string name="chat_policy_friends_description">Seuls les amis peuvent démarrer un chat avec vous (par défaut).</string>
     <string name="chat_policy_anyone">N\'importe qui</string>
-    <string name="chat_policy_anyone_description">N\'importe qui peut démarrer un chat avec vous.</string>
     <string name="chat_new_search_placeholder">Rechercher des personnes</string>
     <string name="chat_new_no_matches">Aucune personne correspondante</string>
     <string name="chat_new_no_friends">Recherchez des personnes avec qui discuter</string>
     <string name="chat_pin">Épingler</string>
     <string name="chat_unpin">Désépingler</string>
-    <string name="chat_pinned_label">Épinglé</string>
     <string name="chat_settings_general">Général</string>
     <string name="chat_settings_screen_title">Paramètres de %1$s</string>
     <string name="chat_mark_read">Marquer comme lu</string>
@@ -98,4 +80,5 @@
     <string name="chat_search_prev">Correspondance précédente</string>
     <string name="chat_settings_id">Identifiant de la discussion</string>
     <string name="chat_message_edited">(modifié)</string>
+    <string name="chat_new_fallback_name">Chat</string>
 </resources>

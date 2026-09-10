@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Хабарландыру параметрлері</string>
     <string name="settings_home_accounts">Қосылған тіркелгілер</string>
     <string name="settings_home_interests">Қызығушылықтар</string>
-    <string name="account_method_email">Электрондық пошта коды</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Authenticator қолданбасы</string>
     <string name="account_section_passkeys">Passkey-лер</string>
     <string name="account_passkey_register">Passkey қосу</string>
     <string name="account_passkey_delete_title">Passkey жою керек пе?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Жолды жою</string>
     <string name="route_delete_title">Жолды жою керек пе?</string>
     <string name="route_path">Жол</string>
-    <string name="route_target">Мақсат</string>
     <string name="route_method">Әдіс</string>
     <string name="route_method_app">Қолданба</string>
     <string name="route_method_entity">Нысан</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Қызығушылықтар</string>
     <string name="interests_summary_title">Қысқаша мазмұны</string>
     <string name="interests_remove">Қызығушылықты жою</string>
-    <string name="interests_add">Қосу</string>
-    <string name="document_save">Сақтау</string>
-    <string name="document_saved">Сақталды</string>
     <string name="notifprefs_title">Хабарландыру параметрлері</string>
     <string name="notifprefs_tab_categories">Санаттар</string>
     <string name="notifprefs_tab_topics">Тақырыптар</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Қайтару</string>
     <string name="system_settings_reset_to_default">Әдепкіге қайтару</string>
     <string name="system_settings_reset_title">Әдепкіге қайтару керек пе?</string>
-    <string name="system_settings_setting_updated">Параметр жаңартылды</string>
-    <string name="system_settings_update_failed">Параметрді жаңарту сәтсіз аяқталды</string>
     <string name="system_setting_apps_install_user">Пайдаланушыларға қолданбаларды орнатуға рұқсат ету</string>
     <string name="system_setting_auth_email">Электрондық пошта коды арқылы кіру</string>
     <string name="system_setting_auth_passkey">Кілт арқылы кіру</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Пайдаланушы күйін жаңарту сәтсіз аяқталды</string>
     <string name="system_users_toast_revoke_failed">Сеансты қайтарып алу сәтсіз аяқталды</string>
 
-    <string name="settings_app_label">Mochi Параметрлер</string>
     <string name="settings_home_sessions">Сессиялар</string>
     <string name="settings_home_privacy">Құпиялылық саясаты</string>
     <string name="settings_home_rules">Ережелер</string>
     <string name="settings_home_terms">Қызмет шарттары</string>
-    <string name="account_section_methods">Кіру әдістері</string>
     <string name="account_passkeys_empty">Тіркелген қол жеткізу кілттері жоқ.</string>
     <string name="account_passkey_register_title">Қол жеткізу кілтін қосу</string>
     <string name="account_passkey_register_message">Сіздің құрылғыңыз растауды сұрайды. Қол жеткізу кілті осы құрылғыға байланысты және болашақ кірулерде қолданылады.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Қалпына келтіру кодтарын қайта жасау керек пе?</string>
     <string name="account_recovery_regen_message">Бар кодтар бірден жұмыс істеуді тоқтатады. Жаңаларын қауіпсіз жерде сақтаңыз.</string>
     <string name="account_recovery_codes_warning">Бұл кодтарды сақтаңыз — әрқайсысын бір рет қана пайдалануға болады. Олар қайтадан көрсетілмейді.</string>
-    <string name="sessions_section_title">Белсенді сеанстар</string>
     <string name="sessions_title">Сессиялар</string>
     <string name="sessions_empty">Белсенді сеанстар жоқ.</string>
     <string name="sessions_revoke_message">Осы сеансты пайдаланушы құрылғыдан шығарылады.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Қорытындыны қайта жасау</string>
     <string name="interests_summary_regenerating">Қайта жасалуда…</string>
     <string name="interests_summary_empty">Сізге ұнайтын нәрсенің қорытындысын жасау үшін кейбір қызығушылықтарды қосыңыз.</string>
-    <string name="interests_weight">Салмақ</string>
     <string name="interests_search_failed">Іздеу сәтсіз аяқталды. Қайтадан көріңіз.</string>
     <string name="document_privacy_title">Құпиялылық саясаты</string>
     <string name="document_rules_title">Ережелер</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">%1$s орнатылуда…</string>
     <string name="accounts_field_api_key">API кілті</string>
     <string name="accounts_field_url">Сервер URL</string>
-    <string name="accounts_device_placeholder">Push тіркелгілері құрылғы арқылы автоматты түрде қосылады.</string>
     <string name="accounts_set_default_ai">Әдепкі AI ретінде орнату</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Кодты қайта жіберу</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Аты</string>
     <string name="account_identity_fingerprint">Саусақ ізі</string>
     <string name="account_identity_directory_toggle">Сізді каталогтан табуға басқаларға рұқсат ету</string>
-    <string name="account_method_email_subtitle">Растау кодын электрондық пошта арқылы алыңыз</string>
-    <string name="account_method_totp_subtitle">Қосу үшін төменде аутентификатор орнатыңыз</string>
-    <string name="account_method_passkey_subtitle">Қосу үшін төменде кіру кілтін тіркеңіз</string>
     <string name="domain_add">Домен қосу</string>
     <string name="domain_add_title">Домен қосу</string>
     <string name="domain_delegation_add">Қосу</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Бағыттар реттелмеген</string>
     <string name="notifprefs_transport_fcm">Android push хабарландыруы</string>
     <string name="notifprefs_no_destinations">Тағайындалған орындар жоқ</string>
+    <string name="account_data_generate">Кілт сөз тіркесін жасау</string>
+    <string name="accounts_field_server">Сервер URL</string>
+    <string name="accounts_field_token">Қатынау токені</string>
+    <string name="accounts_field_topic">Тақырып</string>
+    <string name="accounts_field_secret">Қолтаңба құпиясы</string>
+    <string name="account_totp_open">Аутентификатор қолданбасында ашу</string>
 </resources>

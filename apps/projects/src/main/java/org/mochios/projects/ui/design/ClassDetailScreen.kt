@@ -59,6 +59,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectField
+import org.mochios.projects.util.HIERARCHY_ROOT
 import org.mochios.android.R as MochiR
 
 private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checklist")
@@ -217,7 +218,8 @@ fun ClassDetailScreen(
                 checked = requestsEnabled,
                 onCheckedChange = { enabled ->
                     requestsEnabled = enabled
-                    viewModel.updateClass(cls.id, requests = if (enabled) "merge" else "")
+                    // "none" is the server's off sentinel; an empty value is "unchanged".
+                    viewModel.updateClass(cls.id, requests = if (enabled) "merge" else "none")
                 }
             )
         }
@@ -234,6 +236,20 @@ fun ClassDetailScreen(
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
+            // The top level is a parent choice like any other: with every chip
+            // off, no object of this class can be created anywhere.
+            FilterChip(
+                selected = HIERARCHY_ROOT in hierarchy,
+                onClick = {
+                    val newHierarchy = if (HIERARCHY_ROOT in hierarchy) {
+                        hierarchy - HIERARCHY_ROOT
+                    } else {
+                        hierarchy + HIERARCHY_ROOT
+                    }
+                    viewModel.setHierarchy(cls.id, newHierarchy)
+                },
+                label = { Text(stringResource(R.string.projects_tree_root_level)) }
+            )
             otherClasses.forEach { otherCls ->
                 FilterChip(
                     selected = otherCls.id in hierarchy,

@@ -349,4 +349,8 @@
     <string name="game_empty_title">아직 게임이 없어요</string>
     <string name="game_select_title">게임 선택</string>
     <string name="game_select_subtitle">사이드바에서 게임을 선택하거나 새 게임을 시작하세요.</string>
+    <string name="settings_card">카드 스타일</string>
+    <string name="settings_card_theme">테마에서</string>
+    <string name="settings_card_flat">평면</string>
+    <string name="settings_card_raised">돌출</string>
 </resources>

@@ -377,4 +377,5 @@
     <string name="projects_export_saved">Маълумоти лоиҳа нигоҳ дошта шуд</string>
     <string name="projects_exporting">Содирот омода мешавад…</string>
     <string name="projects_board_add_column">Иловаи сутун</string>
+    <string name="projects_design_sample">Намуна %1$d</string>
 </resources>

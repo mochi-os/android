@@ -99,9 +99,10 @@ fun MessageThreadScreen(
         app = "market",
     )
     LaunchedEffect(socket, threadId) {
+        // The server's push is only {"event": "message"} - a poke, not the
+        // message - so refetch (which also marks the thread read), as web does.
         socket?.events?.collectLatest { event ->
-            val message = event.toMessage(threadId ?: "") ?: return@collectLatest
-            viewModel.ingestRemote(message)
+            if (event.event == "message") viewModel.refresh()
         }
     }
 
@@ -301,24 +302,6 @@ private fun Bubble(message: Message, isMine: Boolean) {
             }
         }
     }
-}
-
-/**
- * [StreamWsEvent] is the lib's generic keyed-topic event despite the name.
- */
-private fun StreamWsEvent.toMessage(threadId: String): Message? {
-    if (type != "message") return null
-    val text = body?.takeIf { it.isNotBlank() } ?: return null
-    val rawId = raw["id"] as? String ?: ""
-    return Message(
-        id = rawId,
-        thread = threadId,
-        sender = member.orEmpty(),
-        senderName = name.orEmpty(),
-        body = text,
-        read = 0L,
-        created = created,
-    )
 }
 
 private fun priceLabel(price: Long, currency: Currency?): String {

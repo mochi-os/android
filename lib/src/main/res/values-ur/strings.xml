@@ -350,4 +350,8 @@
     <string name="game_empty_title">ابھی تک کوئی گیمز نہیں</string>
     <string name="game_select_title">گیم منتخب کریں</string>
     <string name="game_select_subtitle">سائیڈبار سے گیم منتخب کریں یا نیا گیم شروع کریں۔</string>
+    <string name="settings_card">کارڈ کا انداز</string>
+    <string name="settings_card_theme">تھیم سے</string>
+    <string name="settings_card_flat">ہموار</string>
+    <string name="settings_card_raised">ابھرا ہوا</string>
 </resources>

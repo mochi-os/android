@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Параметры уведомлений</string>
     <string name="settings_home_accounts">Подключённые аккаунты</string>
     <string name="settings_home_interests">Интересы</string>
-    <string name="account_method_email">Код по электронной почте</string>
-    <string name="account_method_passkey">Passkey</string>
-    <string name="account_method_totp">Приложение-аутентификатор</string>
     <string name="account_section_passkeys">Passkeys</string>
     <string name="account_passkey_register">Добавить passkey</string>
     <string name="account_passkey_delete_title">Удалить passkey?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Удалить маршрут</string>
     <string name="route_delete_title">Удалить маршрут?</string>
     <string name="route_path">Путь</string>
-    <string name="route_target">Цель</string>
     <string name="route_method">Метод</string>
     <string name="route_method_app">Приложение</string>
     <string name="route_method_entity">Сущность</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Интересы</string>
     <string name="interests_summary_title">Сводка</string>
     <string name="interests_remove">Удалить интерес</string>
-    <string name="interests_add">Добавить</string>
-    <string name="document_save">Сохранить</string>
-    <string name="document_saved">Сохранено</string>
     <string name="notifprefs_title">Параметры уведомлений</string>
     <string name="notifprefs_tab_categories">Категории</string>
     <string name="notifprefs_tab_topics">Темы</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Сбросить</string>
     <string name="system_settings_reset_to_default">Сбросить к значениям по умолчанию</string>
     <string name="system_settings_reset_title">Сбросить к значениям по умолчанию?</string>
-    <string name="system_settings_setting_updated">Настройка обновлена</string>
-    <string name="system_settings_update_failed">Не удалось обновить настройку</string>
     <string name="system_setting_apps_install_user">Разрешить пользователям устанавливать приложения</string>
     <string name="system_setting_auth_email">Вход с помощью кода по email</string>
     <string name="system_setting_auth_passkey">Вход с помощью passkey</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Не удалось обновить статус пользователя</string>
     <string name="system_users_toast_revoke_failed">Не удалось отозвать сеанс</string>
 
-    <string name="settings_app_label">Mochi Настройки</string>
     <string name="settings_home_sessions">Сессии</string>
     <string name="settings_home_privacy">Политика конфиденциальности</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Условия использования</string>
-    <string name="account_section_methods">Способы входа</string>
     <string name="account_passkeys_empty">Ключи доступа не зарегистрированы.</string>
     <string name="account_passkey_register_title">Добавить ключ доступа</string>
     <string name="account_passkey_register_message">Устройство попросит подтвердить. Ключ доступа привязан к этому устройству и будет использоваться для будущих входов.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Пересоздать коды восстановления?</string>
     <string name="account_recovery_regen_message">Существующие коды перестанут работать немедленно. Сохраните новые в надёжном месте.</string>
     <string name="account_recovery_codes_warning">Сохраните эти коды — каждый можно использовать только один раз. Они больше не будут показаны.</string>
-    <string name="sessions_section_title">Активные сеансы</string>
     <string name="sessions_title">Сессии</string>
     <string name="sessions_empty">Нет активных сеансов.</string>
     <string name="sessions_revoke_message">Устройство, использующее этот сеанс, будет выведено из системы.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Пересоздать резюме</string>
     <string name="interests_summary_regenerating">Пересоздание…</string>
     <string name="interests_summary_empty">Добавьте интересы, чтобы сгенерировать резюме того, что вас увлекает.</string>
-    <string name="interests_weight">Вес</string>
     <string name="interests_search_failed">Поиск не удался. Попробуйте ещё раз.</string>
     <string name="document_privacy_title">Политика конфиденциальности</string>
     <string name="document_rules_title">Правила</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Установка %1$s…</string>
     <string name="accounts_field_api_key">Ключ API</string>
     <string name="accounts_field_url">URL сервера</string>
-    <string name="accounts_device_placeholder">Push-аккаунты добавляются устройством автоматически.</string>
     <string name="accounts_set_default_ai">Сделать ИИ по умолчанию</string>
     <string name="accounts_verify_code">Код</string>
     <string name="accounts_verify_resend">Отправить код ещё раз</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Имя</string>
     <string name="account_identity_fingerprint">Отпечаток</string>
     <string name="account_identity_directory_toggle">Разрешить другим находить вас в каталоге</string>
-    <string name="account_method_email_subtitle">Получить код подтверждения по электронной почте</string>
-    <string name="account_method_totp_subtitle">Чтобы включить, настройте аутентификатор ниже</string>
-    <string name="account_method_passkey_subtitle">Чтобы включить, зарегистрируйте ключ доступа ниже</string>
     <string name="domain_add">Добавить домен</string>
     <string name="domain_add_title">Добавить домен</string>
     <string name="domain_delegation_add">Добавить</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Назначения не настроены</string>
     <string name="notifprefs_transport_fcm">Push для Android</string>
     <string name="notifprefs_no_destinations">Нет получателей</string>
+    <string name="account_data_generate">Сгенерировать кодовую фразу</string>
+    <string name="accounts_field_server">URL сервера</string>
+    <string name="accounts_field_token">Токен доступа</string>
+    <string name="accounts_field_topic">Тема</string>
+    <string name="accounts_field_secret">Секрет подписи</string>
+    <string name="account_totp_open">Открыть в приложении-аутентификаторе</string>
 </resources>

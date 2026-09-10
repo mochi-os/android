@@ -15,6 +15,7 @@ import com.google.gson.annotations.SerializedName
 data class Account(
     val id: String = "",
     val name: String = "",
+    @SerializedName("id_fingerprint") val fingerprint: String = "",
     val biography: String = "",
     val business: Int = 0,
     val company: String = "",
@@ -57,12 +58,3 @@ data class AccountSummary(
     val created: Long = 0,
     val updated: Long = 0,
 )
-
-/**
- * Known `status` values; the wire string is free-form, so tolerate others.
- */
-enum class AccountStatus {
-    @SerializedName("active") ACTIVE,
-    @SerializedName("suspended") SUSPENDED,
-    @SerializedName("banned") BANNED,
-}

@@ -350,4 +350,8 @@
     <string name="game_empty_title">এখনও কোনো গেম নেই</string>
     <string name="game_select_title">একটি গেম নির্বাচন করুন</string>
     <string name="game_select_subtitle">সাইডবার থেকে একটি গেম বেছে নিন বা নতুন গেম শুরু করুন।</string>
+    <string name="settings_card">কার্ডের শৈলী</string>
+    <string name="settings_card_theme">থিম থেকে</string>
+    <string name="settings_card_flat">সমতল</string>
+    <string name="settings_card_raised">উঁচু</string>
 </resources>

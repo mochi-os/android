@@ -175,8 +175,8 @@ class GoGameViewModel @Inject constructor(
                     it.copy(
                         isLoadingMessages = false,
                         messages = response.messages.sortedBy { message -> message.created },
-                        hasMoreMessages = response.hasMore == true,
-                        nextMessageCursor = response.nextCursor,
+                        hasMoreMessages = response.more == true,
+                        nextMessageCursor = response.cursor,
                     )
                 }
             } catch (e: Exception) {
@@ -207,8 +207,8 @@ class GoGameViewModel @Inject constructor(
                         isLoadingMoreMessages = false,
                         messages = (response.messages + it.messages)
                             .sortedBy { message -> message.created },
-                        hasMoreMessages = response.hasMore == true,
-                        nextMessageCursor = response.nextCursor,
+                        hasMoreMessages = response.more == true,
+                        nextMessageCursor = response.cursor,
                     )
                 }
             } catch (e: Exception) {

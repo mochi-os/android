@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Tilkynningarvalkostir</string>
     <string name="settings_home_accounts">Tengdir reikningar</string>
     <string name="settings_home_interests">Áhugaefni</string>
-    <string name="account_method_email">Tölvupóstkóði</string>
-    <string name="account_method_passkey">Aðgangslykill</string>
-    <string name="account_method_totp">Auðkennisforrit</string>
     <string name="account_section_passkeys">Aðgangslyklar</string>
     <string name="account_passkey_register">Bæta við aðgangslykli</string>
     <string name="account_passkey_delete_title">Eyða aðgangslykli?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Eyða slóð</string>
     <string name="route_delete_title">Eyða slóð?</string>
     <string name="route_path">Slóð</string>
-    <string name="route_target">Markmið</string>
     <string name="route_method">Aðferð</string>
     <string name="route_method_app">Forrit</string>
     <string name="route_method_entity">Eining</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Áhugaefni</string>
     <string name="interests_summary_title">Yfirlit</string>
     <string name="interests_remove">Fjarlægja áhuga</string>
-    <string name="interests_add">Bæta við</string>
-    <string name="document_save">Vista</string>
-    <string name="document_saved">Vistað</string>
     <string name="notifprefs_title">Tilkynningarvalkostir</string>
     <string name="notifprefs_tab_categories">Flokkar</string>
     <string name="notifprefs_tab_topics">Efni</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Endurstilla</string>
     <string name="system_settings_reset_to_default">Endurstilla á sjálfgefið</string>
     <string name="system_settings_reset_title">Endurstilla á sjálfgefið?</string>
-    <string name="system_settings_setting_updated">Stilling uppfærð</string>
-    <string name="system_settings_update_failed">Tókst ekki að uppfæra stillingu</string>
     <string name="system_setting_apps_install_user">Leyfa notendum að setja upp forrit</string>
     <string name="system_setting_auth_email">Skrá inn með tölvupóstkóða</string>
     <string name="system_setting_auth_passkey">Skrá inn með aðgangslykli</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Tókst ekki að uppfæra stöðu notanda</string>
     <string name="system_users_toast_revoke_failed">Tókst ekki að afturkalla setu</string>
 
-    <string name="settings_app_label">Mochi Stillingar</string>
     <string name="settings_home_sessions">Lotur</string>
     <string name="settings_home_privacy">Persónuverndarstefna</string>
     <string name="settings_home_rules">Reglur</string>
     <string name="settings_home_terms">Þjónustuskilmálar</string>
-    <string name="account_section_methods">Innskráningaraðferðir</string>
     <string name="account_passkeys_empty">Engir aðgangslyklar skráðir.</string>
     <string name="account_passkey_register_title">Bæta við aðgangslykli</string>
     <string name="account_passkey_register_message">Tækið þitt mun biðja þig um að staðfesta. Aðgangslykillinn er bundinn við þetta tæki og notaður fyrir framtíðar innskráningar.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Endurnýja endurheimtarkóða?</string>
     <string name="account_recovery_regen_message">Núverandi kóðar hætta strax að virka. Vista nýja á öruggum stað.</string>
     <string name="account_recovery_codes_warning">Vistaðu þessa kóða — hver er aðeins hægt að nota einu sinni. Þeir verða ekki sýndir aftur.</string>
-    <string name="sessions_section_title">Virkar setur</string>
     <string name="sessions_title">Lotur</string>
     <string name="sessions_empty">Engar virkar setur.</string>
     <string name="sessions_revoke_message">Tækið sem notar þessa setu verður skráð út.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Endurnýja samantekt</string>
     <string name="interests_summary_regenerating">Endurnýja…</string>
     <string name="interests_summary_empty">Bættu við áhugamálum til að búa til samantekt af því sem þér líkar.</string>
-    <string name="interests_weight">Þyngd</string>
     <string name="interests_search_failed">Leit mistókst. Reyndu aftur.</string>
     <string name="document_privacy_title">Persónuverndarstefna</string>
     <string name="document_rules_title">Reglur</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Set upp %1$s…</string>
     <string name="accounts_field_api_key">API-lykill</string>
     <string name="accounts_field_url">Þjóns-URL</string>
-    <string name="accounts_device_placeholder">Push-reikningar bætast sjálfkrafa við af tækinu.</string>
     <string name="accounts_set_default_ai">Setja sem sjálfgefið gervigreind</string>
     <string name="accounts_verify_code">Kóði</string>
     <string name="accounts_verify_resend">Senda kóða aftur</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nafn</string>
     <string name="account_identity_fingerprint">Fingrafar</string>
     <string name="account_identity_directory_toggle">Leyfa öðrum að finna þig í skrá</string>
-    <string name="account_method_email_subtitle">Fáðu staðfestingarkóða með tölvupósti</string>
-    <string name="account_method_totp_subtitle">Settu upp auðkenni hér að neðan til að virkja</string>
-    <string name="account_method_passkey_subtitle">Skráðu aðgangslykil hér að neðan til að virkja</string>
     <string name="domain_add">Bæta við léni</string>
     <string name="domain_add_title">Bæta við léni</string>
     <string name="domain_delegation_add">Bæta við</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Engir áfangastaðir stilltir</string>
     <string name="notifprefs_transport_fcm">Android-ýting</string>
     <string name="notifprefs_no_destinations">Engir áfangastaðir</string>
+    <string name="account_data_generate">Búa til lykilsetningu</string>
+    <string name="accounts_field_server">Þjóns-URL</string>
+    <string name="accounts_field_token">Aðgangstákn</string>
+    <string name="accounts_field_topic">Efni</string>
+    <string name="accounts_field_secret">Undirritunarleyndarmál</string>
+    <string name="account_totp_open">Opna í auðkenningarforriti</string>
 </resources>

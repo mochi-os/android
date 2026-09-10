@@ -350,4 +350,8 @@
     <string name="game_empty_title">እስካሁን ጨዋታዎች የሉም</string>
     <string name="game_select_title">ጨዋታ ይምረጡ</string>
     <string name="game_select_subtitle">ከጎን አሞሌው ጨዋታ ይምረጡ ወይም አዲስ ጨዋታ ይጀምሩ።</string>
+    <string name="settings_card">የካርድ ቅጥ</string>
+    <string name="settings_card_theme">ከገጽታ</string>
+    <string name="settings_card_flat">ጠፍጣፋ</string>
+    <string name="settings_card_raised">ከፍ ያለ</string>
 </resources>

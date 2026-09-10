@@ -349,4 +349,8 @@
     <string name="game_empty_title">未有對局</string>
     <string name="game_select_title">揀一局遊戲</string>
     <string name="game_select_subtitle">喺側邊欄揀一局遊戲，或者開新遊戲。</string>
+    <string name="settings_card">卡片樣式</string>
+    <string name="settings_card_theme">跟隨主題</string>
+    <string name="settings_card_flat">平面</string>
+    <string name="settings_card_raised">浮起</string>
 </resources>

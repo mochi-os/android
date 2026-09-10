@@ -40,8 +40,10 @@ data class ActivityOrder(
     val listing: String = "",
     val buyer: String = "",
     @SerializedName("buyer_name") val buyerName: String = "",
+    @SerializedName("buyer_fingerprint") val buyerFingerprint: String = "",
     val seller: String = "",
     @SerializedName("seller_name") val sellerName: String = "",
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
     val total: Long = 0,
     val currency: String = "",
     val status: String = "",
@@ -57,6 +59,7 @@ data class ActivityListing(
     val id: String = "",
     val seller: String = "",
     @SerializedName("seller_name") val sellerName: String = "",
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
     val title: String = "",
     val status: String = "",
     val moderation: String = "",
@@ -70,6 +73,7 @@ data class ActivityListing(
 data class ActivitySignup(
     val id: String = "",
     val name: String = "",
+    @SerializedName("id_fingerprint") val fingerprint: String = "",
     val seller: Int = 0,
     val created: Long = 0,
 )

@@ -9,4 +9,8 @@
     <string name="market_checkout_address_postcode">ZIP code</string>
     <string name="market_checkout_address_region">State</string>
     <string name="market_editor_zone_days_placeholder">e.g. 3-5 business days</string>
+    <string name="market_audit_order_cancelled">Canceled</string>
+    <string name="market_audit_subscription_cancelled">Canceled</string>
+    <string name="market_editor_zone_region">State</string>
+    <string name="market_shipping_region">State</string>
 </resources>

@@ -344,11 +344,11 @@ class StaffRepository @Inject constructor(
 
     suspend fun getMetricsActivity(
         tab: String? = null,
-        skip: Int? = null,
+        page: Int? = null,
         limit: Int? = null,
     ): ActivityData {
         return try {
-            api.getMetricsActivity(tab, skip, limit).unwrap()
+            api.getMetricsActivity(tab, page, limit).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -406,9 +406,9 @@ class StaffRepository @Inject constructor(
 
     // ---- Appeals ----
 
-    suspend fun listAppeals(): AppealsListResponse {
+    suspend fun listAppeals(page: Int? = null, limit: Int? = null): AppealsListResponse {
         return try {
-            api.listAppeals().unwrap()
+            api.listAppeals(page, limit).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

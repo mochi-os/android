@@ -23,6 +23,8 @@ import org.mochios.settings.api.SystemStatusApi
 import org.mochios.settings.api.SystemUpdateInfo
 import retrofit2.Response
 import javax.inject.Inject
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 
 data class SystemStatusUiState(
     val isLoading: Boolean = true,
@@ -42,10 +44,19 @@ data class SystemStatusUiState(
 @HiltViewModel
 class SystemStatusViewModel @Inject constructor(
     private val api: SystemStatusApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SystemStatusUiState())
     val uiState: StateFlow<SystemStatusUiState> = _uiState.asStateFlow()
+
+    /** Step-up gate for the administrator mutations: a stolen session must
+     *  re-verify a login factor before it can change the server. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(installError = e.toMochiError()) },
+    )
 
     init { refresh() }
 
@@ -89,10 +100,10 @@ class SystemStatusViewModel @Inject constructor(
     }
 
     fun installUpdate() {
-        viewModelScope.launch {
+        stepUp.request { token ->
             _uiState.value = _uiState.value.copy(isInstalling = true, installError = null)
             try {
-                api.installUpdate().unwrapEmpty()
+                api.installUpdate(token).unwrapEmpty()
                 // Re-fetch update info; pending field will surface "Installing X…".
                 val update = try {
                     api.getUpdate().bodyOrNull()

@@ -82,9 +82,7 @@ import org.mochios.android.R as MochiR
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InvitationsScreen(
-    @Suppress("unused") onOpenPerson: (id: String) -> Unit,
     onSwitchSection: (PeopleSidebarSection) -> Unit,
-    @Suppress("unused") onOpenNotifications: () -> Unit,
     viewModel: InvitationsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()

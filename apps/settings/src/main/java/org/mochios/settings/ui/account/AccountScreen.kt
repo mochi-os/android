@@ -70,6 +70,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.CompactTextField
 import org.mochios.settings.R
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.ui.text.input.VisualTransformation
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -168,6 +170,9 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
 
     if (showDialog) {
         var passphrase by remember { mutableStateOf("") }
+        // A generated phrase is shown in the clear: it is the one string the
+        // user must copy down before the bundle becomes unrecoverable.
+        var revealed by remember { mutableStateOf(false) }
         MochiAlertDialog(
             onDismissRequest = { showDialog = false },
             title = stringResource(R.string.account_data_dialog_title),
@@ -179,17 +184,22 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Spacer(Modifier.height(12.dp))
-                    MochiTextField(
-                        value = passphrase,
-                        onValueChange = { passphrase = it },
-                        singleLine = true,
-                        label = { Text(stringResource(R.string.account_data_passphrase)) },
-                        // Masked, and typed on a password keyboard so the IME
-                        // does not learn it or offer it back as a suggestion.
-                        visualTransformation = PasswordVisualTransformation(),
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                        modifier = Modifier.fillMaxWidth(),
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        MochiTextField(
+                            value = passphrase,
+                            onValueChange = { passphrase = it; revealed = false },
+                            singleLine = true,
+                            label = { Text(stringResource(R.string.account_data_passphrase)) },
+                            // Masked while typed, and on a password keyboard so
+                            // the IME does not learn it or offer it back.
+                            visualTransformation = if (revealed) VisualTransformation.None else PasswordVisualTransformation(),
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                            modifier = Modifier.weight(1f),
+                        )
+                        MochiIconButton(onClick = { passphrase = Passphrase.generate(); revealed = true }) {
+                            Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.account_data_generate))
+                        }
+                    }
                     Spacer(Modifier.height(8.dp))
                     Text(
                         text = stringResource(R.string.account_data_passphrase_hint),
@@ -204,7 +214,7 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
                 showDialog = false
                 onExport(pass)
             },
-            confirmEnabled = passphrase.trim().isNotEmpty(),
+            confirmEnabled = Passphrase.long(passphrase.trim()),
             dismissText = stringResource(R.string.account_cancel),
         )
     }

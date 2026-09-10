@@ -55,13 +55,6 @@ enum class ListingStatus {
     @SerializedName("removed") REMOVED,
 }
 
-enum class SortOrder {
-    @SerializedName("recent") RECENT,
-    @SerializedName("price_low") PRICE_LOW,
-    @SerializedName("price_high") PRICE_HIGH,
-    @SerializedName("rating") RATING,
-}
-
 enum class ReportReason {
     @SerializedName("prohibited") PROHIBITED,
     @SerializedName("counterfeit") COUNTERFEIT,

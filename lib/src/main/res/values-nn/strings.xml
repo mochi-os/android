@@ -350,4 +350,8 @@
     <string name="game_empty_title">Ingen spel enno</string>
     <string name="game_select_title">Vel eit spel</string>
     <string name="game_select_subtitle">Vel eit spel i sidefeltet, eller start eit nytt.</string>
+    <string name="settings_card">Kortstil</string>
+    <string name="settings_card_theme">Frå tema</string>
+    <string name="settings_card_flat">Flat</string>
+    <string name="settings_card_raised">Heva</string>
 </resources>

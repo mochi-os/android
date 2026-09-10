@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Paziņojumu iestatījumi</string>
     <string name="settings_home_accounts">Savienotie konti</string>
     <string name="settings_home_interests">Intereses</string>
-    <string name="account_method_email">E-pasta kods</string>
-    <string name="account_method_passkey">Piekļuves atslēga</string>
-    <string name="account_method_totp">Authenticator lietotne</string>
     <string name="account_section_passkeys">Piekļuves atslēgas</string>
     <string name="account_passkey_register">Pievienot piekļuves atslēgu</string>
     <string name="account_passkey_delete_title">Dzēst piekļuves atslēgu?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Dzēst maršrutu</string>
     <string name="route_delete_title">Dzēst maršrutu?</string>
     <string name="route_path">Ceļš</string>
-    <string name="route_target">Mērķis</string>
     <string name="route_method">Metode</string>
     <string name="route_method_app">Lietotne</string>
     <string name="route_method_entity">Entītija</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Intereses</string>
     <string name="interests_summary_title">Kopsavilkums</string>
     <string name="interests_remove">Noņemt interesi</string>
-    <string name="interests_add">Pievienot</string>
-    <string name="document_save">Saglabāt</string>
-    <string name="document_saved">Saglabāts</string>
     <string name="notifprefs_title">Paziņojumu iestatījumi</string>
     <string name="notifprefs_tab_categories">Kategorijas</string>
     <string name="notifprefs_tab_topics">Tēmas</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Atiestatīt</string>
     <string name="system_settings_reset_to_default">Atiestatīt uz noklusējumu</string>
     <string name="system_settings_reset_title">Atiestatīt uz noklusējumu?</string>
-    <string name="system_settings_setting_updated">Iestatījums atjaunināts</string>
-    <string name="system_settings_update_failed">Neizdevās atjaunināt iestatījumu</string>
     <string name="system_setting_apps_install_user">Ļaut lietotājiem instalēt lietotnes</string>
     <string name="system_setting_auth_email">Pierakstīšanās, izmantojot e-pasta kodu</string>
     <string name="system_setting_auth_passkey">Pierakstīšanās, izmantojot piekļuves atslēgu</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Neizdevās atjaunināt lietotāja statusu</string>
     <string name="system_users_toast_revoke_failed">Neizdevās atsaukt sesiju</string>
 
-    <string name="settings_app_label">Mochi Iestatījumi</string>
     <string name="settings_home_sessions">Sesijas</string>
     <string name="settings_home_privacy">Konfidencialitātes politika</string>
     <string name="settings_home_rules">Noteikumi</string>
     <string name="settings_home_terms">Pakalpojuma noteikumi</string>
-    <string name="account_section_methods">Pieteikšanās metodes</string>
     <string name="account_passkeys_empty">Nav reģistrētu piekļuves atslēgu.</string>
     <string name="account_passkey_register_title">Pievienot piekļuves atslēgu</string>
     <string name="account_passkey_register_message">Jūsu ierīce lūgs apstiprināt. Piekļuves atslēga ir saistīta ar šo ierīci un tiek izmantota turpmākai pieteikšanās.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Pārģenerēt atkopšanas kodus?</string>
     <string name="account_recovery_regen_message">Esošie kodi nekavējoties pārstāj darboties. Saglabājiet jaunos drošā vietā.</string>
     <string name="account_recovery_codes_warning">Saglabājiet šos kodus — katru var lietot tikai vienu reizi. Tie netiks rādīti vēlreiz.</string>
-    <string name="sessions_section_title">Aktīvās sesijas</string>
     <string name="sessions_title">Sesijas</string>
     <string name="sessions_empty">Nav aktīvu sesiju.</string>
     <string name="sessions_revoke_message">Ierīce, kas izmanto šo sesiju, tiks izrakstīta.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Pārģenerēt kopsavilkumu</string>
     <string name="interests_summary_regenerating">Pārģenerē…</string>
     <string name="interests_summary_empty">Pievienojiet dažas intereses, lai izveidotu kopsavilkumu par to, kas jums patīk.</string>
-    <string name="interests_weight">Svars</string>
     <string name="interests_search_failed">Meklēšana neizdevās. Mēģiniet vēlreiz.</string>
     <string name="document_privacy_title">Konfidencialitātes politika</string>
     <string name="document_rules_title">Noteikumi</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Instalē %1$s…</string>
     <string name="accounts_field_api_key">API atslēga</string>
     <string name="accounts_field_url">Servera URL</string>
-    <string name="accounts_device_placeholder">Push konti tiek pievienoti automātiski no ierīces.</string>
     <string name="accounts_set_default_ai">Iestatīt kā noklusējuma MI</string>
     <string name="accounts_verify_code">Kods</string>
     <string name="accounts_verify_resend">Nosūtīt kodu vēlreiz</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nosaukums</string>
     <string name="account_identity_fingerprint">Pirkstu nospiedums</string>
     <string name="account_identity_directory_toggle">Ļaut citiem atrast tevi direktorijā</string>
-    <string name="account_method_email_subtitle">Saņemiet verifikācijas kodu e-pastā</string>
-    <string name="account_method_totp_subtitle">Lai iespējotu, iestatiet autentifikatoru zemāk</string>
-    <string name="account_method_passkey_subtitle">Lai iespējotu, reģistrējiet piekļuves atslēgu zemāk</string>
     <string name="domain_add">Pievienot domēnu</string>
     <string name="domain_add_title">Pievienot domēnu</string>
     <string name="domain_delegation_add">Pievienot</string>
@@ -400,4 +383,10 @@
     <string name="notifprefs_test_none">Galamērķi nav konfigurēti</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Nav galamērķu</string>
+    <string name="account_data_generate">Ģenerēt ieejas frāzi</string>
+    <string name="accounts_field_server">Servera URL</string>
+    <string name="accounts_field_token">Piekļuves pilnvara</string>
+    <string name="accounts_field_topic">Tēma</string>
+    <string name="accounts_field_secret">Parakstīšanas noslēpums</string>
+    <string name="account_totp_open">Atvērt autentifikācijas lietotnē</string>
 </resources>

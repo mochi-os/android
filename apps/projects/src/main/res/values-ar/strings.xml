@@ -381,4 +381,5 @@
     <string name="projects_export_saved">تم حفظ بيانات المشروع</string>
     <string name="projects_exporting">جارٍ تحضير التصدير…</string>
     <string name="projects_board_add_column">إضافة عمود</string>
+    <string name="projects_design_sample">عينة %1$d</string>
 </resources>

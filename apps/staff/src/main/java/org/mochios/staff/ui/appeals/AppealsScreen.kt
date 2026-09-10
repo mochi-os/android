@@ -180,7 +180,7 @@ private fun AppealRow(
             )
             Spacer(Modifier.width(6.dp))
             Text(
-                text = appeal.sellerName.ifBlank { formatFingerprint(appeal.seller) },
+                text = appeal.sellerName.ifBlank { formatFingerprint(appeal.sellerFingerprint) },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,

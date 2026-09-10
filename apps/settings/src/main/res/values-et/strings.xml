@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Märguannete eelistused</string>
     <string name="settings_home_accounts">Ühendatud kontod</string>
     <string name="settings_home_interests">Huvid</string>
-    <string name="account_method_email">E-posti kood</string>
-    <string name="account_method_passkey">Pääsuvõti</string>
-    <string name="account_method_totp">Autentija rakendus</string>
     <string name="account_section_passkeys">Pääsuvõtmed</string>
     <string name="account_passkey_register">Lisa pääsuvõti</string>
     <string name="account_passkey_delete_title">Kustutada pääsuvõti?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Kustuta tee</string>
     <string name="route_delete_title">Kustutada tee?</string>
     <string name="route_path">Tee</string>
-    <string name="route_target">Siht</string>
     <string name="route_method">Meetod</string>
     <string name="route_method_app">Rakendus</string>
     <string name="route_method_entity">Olem</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Huvid</string>
     <string name="interests_summary_title">Kokkuvõte</string>
     <string name="interests_remove">Eemalda huvi</string>
-    <string name="interests_add">Lisa</string>
-    <string name="document_save">Salvesta</string>
-    <string name="document_saved">Salvestatud</string>
     <string name="notifprefs_title">Märguannete eelistused</string>
     <string name="notifprefs_tab_categories">Kategooriad</string>
     <string name="notifprefs_tab_topics">Teemad</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Lähtesta</string>
     <string name="system_settings_reset_to_default">Lähtesta vaikeväärtusele</string>
     <string name="system_settings_reset_title">Kas lähtestada vaikeväärtusele?</string>
-    <string name="system_settings_setting_updated">Säte uuendatud</string>
-    <string name="system_settings_update_failed">Seade värskendamine ebaõnnestus</string>
     <string name="system_setting_apps_install_user">Luba kasutajatel rakendusi paigaldada</string>
     <string name="system_setting_auth_email">Sisselogimine e-posti koodiga</string>
     <string name="system_setting_auth_passkey">Sisselogimine pääsuvõtmega</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Kasutaja oleku värskendamine ebaõnnestus</string>
     <string name="system_users_toast_revoke_failed">Seansi tühistamine ebaõnnestus</string>
 
-    <string name="settings_app_label">Mochi Seaded</string>
     <string name="settings_home_sessions">Seansid</string>
     <string name="settings_home_privacy">Privaatsuspoliitika</string>
     <string name="settings_home_rules">Reeglid</string>
     <string name="settings_home_terms">Teenusetingimused</string>
-    <string name="account_section_methods">Sisselogimise meetodid</string>
     <string name="account_passkeys_empty">Pääsuvõtmeid pole registreeritud.</string>
     <string name="account_passkey_register_title">Lisa pääsuvõti</string>
     <string name="account_passkey_register_message">Teie seade küsib kinnitust. Pääsuvõti on seotud selle seadmega ja seda kasutatakse tulevasteks sisselogimisteks.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Kas genereerida uuesti taastekoodid?</string>
     <string name="account_recovery_regen_message">Olemasolevad koodid lakkavad kohe töötamast. Salvesta uued ohutusse kohta.</string>
     <string name="account_recovery_codes_warning">Salvesta need koodid — iga saab kasutada ainult ühe korra. Neid ei näidata uuesti.</string>
-    <string name="sessions_section_title">Aktiivsed seansid</string>
     <string name="sessions_title">Seansid</string>
     <string name="sessions_empty">Aktiivseid seansse pole.</string>
     <string name="sessions_revoke_message">Seda seanssi kasutav seade logitakse välja.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Genereeri uuesti kokkuvõte</string>
     <string name="interests_summary_regenerating">Genereerin uuesti…</string>
     <string name="interests_summary_empty">Lisa mõned huvid, et genereerida kokkuvõte sellest, mida sulle meeldib.</string>
-    <string name="interests_weight">Kaal</string>
     <string name="interests_search_failed">Otsing ebaõnnestus. Proovi uuesti.</string>
     <string name="document_privacy_title">Privaatsuspoliitika</string>
     <string name="document_rules_title">Reeglid</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Installin %1$s…</string>
     <string name="accounts_field_api_key">API võti</string>
     <string name="accounts_field_url">Serveri URL</string>
-    <string name="accounts_device_placeholder">Push-kontod lisatakse automaatselt seadme poolt.</string>
     <string name="accounts_set_default_ai">Määra vaikimisi tehisintellektiks</string>
     <string name="accounts_verify_code">Kood</string>
     <string name="accounts_verify_resend">Saada kood uuesti</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Nimi</string>
     <string name="account_identity_fingerprint">Sõrmejälg</string>
     <string name="account_identity_directory_toggle">Luba teistel sind kataloogist leida</string>
-    <string name="account_method_email_subtitle">Saa kinnituskood e-posti teel</string>
-    <string name="account_method_totp_subtitle">Lubamiseks seadista allpool autentija</string>
-    <string name="account_method_passkey_subtitle">Lubamiseks registreeri allpool pääsuvõti</string>
     <string name="domain_add">Lisa domeen</string>
     <string name="domain_add_title">Lisa domeen</string>
     <string name="domain_delegation_add">Lisa</string>
@@ -398,4 +381,10 @@
     <string name="notifprefs_test_none">Sihtkohti pole seadistatud</string>
     <string name="notifprefs_transport_fcm">Androidi tõuketeade</string>
     <string name="notifprefs_no_destinations">Sihtkohti pole</string>
+    <string name="account_data_generate">Loo paroolifraas</string>
+    <string name="accounts_field_server">Serveri URL</string>
+    <string name="accounts_field_token">Juurdepääsutoken</string>
+    <string name="accounts_field_topic">Teema</string>
+    <string name="accounts_field_secret">Allkirjastamise saladus</string>
+    <string name="account_totp_open">Ava autentimisrakenduses</string>
 </resources>

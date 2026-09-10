@@ -350,4 +350,8 @@
     <string name="game_empty_title">තවම ක්‍රීඩා නැත</string>
     <string name="game_select_title">ක්‍රීඩාවක් තෝරන්න</string>
     <string name="game_select_subtitle">පැති තීරුවෙන් ක්‍රීඩාවක් තෝරන්න හෝ අලුත් එකක් අරඹන්න.</string>
+    <string name="settings_card">කාඩ්පත් මෝස්තරය</string>
+    <string name="settings_card_theme">තේමාවෙන්</string>
+    <string name="settings_card_flat">පැතලි</string>
+    <string name="settings_card_raised">උස්කළ</string>
 </resources>

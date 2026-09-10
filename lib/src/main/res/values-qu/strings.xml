@@ -350,4 +350,8 @@
     <string name="game_empty_title">Manaraq pukllaykuna</string>
     <string name="game_select_title">Huk pukllayta akllay</string>
     <string name="game_select_subtitle">Waqta barramanta pukllayta akllay utaq musuqta qallariy.</string>
+    <string name="settings_card">Karta rikch\'ay</string>
+    <string name="settings_card_theme">Temamanta</string>
+    <string name="settings_card_flat">Pampa</string>
+    <string name="settings_card_raised">Hoqarisqa</string>
 </resources>

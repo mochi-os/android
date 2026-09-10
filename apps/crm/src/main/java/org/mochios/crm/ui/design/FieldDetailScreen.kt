@@ -58,7 +58,7 @@ import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmField
 import org.mochios.android.R as MochiR
 
-private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checklist")
+private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checkbox", "checklist")
 
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
@@ -67,6 +67,7 @@ private fun fieldTypeLabel(type: String): String = when (type) {
     "enumerated" -> stringResource(R.string.crm_field_type_enumerated)
     "user" -> stringResource(R.string.crm_field_type_user)
     "date" -> stringResource(R.string.crm_field_type_date)
+    "checkbox" -> stringResource(R.string.crm_field_type_checkbox)
     "checklist" -> stringResource(R.string.crm_field_type_checklist)
     else -> type
 }
@@ -292,6 +293,7 @@ fun FieldDetailScreen(
                 || flagsString != field.flags.ifEmpty { null }
                 || isMulti != field.isMulti
                 || showOnCard != field.showOnCard
+                || editPosition != field.position
                 || (rowsInt ?: 0) != field.rows
                 || editPattern != field.pattern
                 || (editMinlength.toIntOrNull() ?: 0) != field.minlength

@@ -154,7 +154,7 @@ data class ModerationLogResponse(
  */
 data class ForumAccessEntry(
     val id: String = "",
-    val isOwner: Boolean = false,
+    @SerializedName("owner") val isOwner: Boolean = false,
     val level: String = "",
     val name: String = "",
 )

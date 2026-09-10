@@ -17,11 +17,12 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 import javax.inject.Singleton
 
-// Mirrors web's use-system-documents.ts. The admin screen lists every
-// (name x language) row with body + bundled default + last-edit timestamp,
-// and writes operator overrides through documentSet.
+// Mirrors web's use-system-documents.ts. The list carries only the
+// (name x language) pairs; get loads one document's body, bundled default
+// and last-edit timestamp, and set writes an operator override.
 
 data class SystemDocument(
     val name: String = "",
@@ -39,12 +40,19 @@ interface SystemDocumentsApi {
     @GET("settings/-/system/documents/list")
     suspend fun list(): Response<SystemDocumentsData>
 
+    @GET("settings/-/system/document/get")
+    suspend fun get(
+        @Query("name") name: String,
+        @Query("language") language: String,
+    ): Response<SystemDocument>
+
     @FormUrlEncoded
     @POST("settings/-/system/document/set")
     suspend fun set(
         @Field("name") name: String,
         @Field("language") language: String,
         @Field("body") body: String,
+        @Field("token") token: String,
     ): Response<Unit>
 }
 

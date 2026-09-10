@@ -19,6 +19,8 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.settings.api.SystemDocument
 import org.mochios.settings.api.SystemDocumentsApi
 import javax.inject.Inject
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 
 enum class DocumentKind(val value: String) {
     RULES("rules"),
@@ -36,6 +38,8 @@ data class SystemDocumentsUiState(
     val tab: DocumentKind = DocumentKind.RULES,
     val language: String? = null,
     val savingKey: String? = null,
+    val current: SystemDocument? = null,
+    val loadingDocument: Boolean = false,
     val error: MochiError? = null,
     val savedToast: Boolean = false,
     val saveError: MochiError? = null,
@@ -44,10 +48,19 @@ data class SystemDocumentsUiState(
 @HiltViewModel
 class SystemDocumentsViewModel @Inject constructor(
     private val api: SystemDocumentsApi,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SystemDocumentsUiState())
     val uiState: StateFlow<SystemDocumentsUiState> = _uiState.asStateFlow()
+
+    /** Step-up gate for the administrator mutations: a stolen session must
+     *  re-verify a login factor before it can change the server. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> _uiState.value = _uiState.value.copy(saveError = e.toMochiError()) },
+    )
 
     init { refresh() }
 
@@ -77,16 +90,34 @@ class SystemDocumentsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(language = language)
     }
 
+    /** Load one document's body and bundled default: the list carries
+     *  only the (name x language) pairs. */
+    fun load(name: String, language: String) {
+        val have = _uiState.value.current
+        if (have != null && have.name == name && have.language == language) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(loadingDocument = true, current = null)
+            try {
+                val document = api.get(name, language).unwrapRaw()
+                _uiState.value = _uiState.value.copy(loadingDocument = false, current = document)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(loadingDocument = false, error = e.toMochiError())
+            }
+        }
+    }
+
     fun save(name: String, language: String, body: String) {
         val key = "$name/$language"
-        _uiState.value = _uiState.value.copy(savingKey = key, saveError = null)
-        viewModelScope.launch {
+        stepUp.request { token ->
+            _uiState.value = _uiState.value.copy(savingKey = key, saveError = null)
             try {
-                api.set(name, language, body).unwrapEmpty()
+                api.set(name, language, body, token).unwrapEmpty()
                 val data = api.list().unwrapRaw()
+                val document = api.get(name, language).unwrapRaw()
                 _uiState.value = _uiState.value.copy(
                     savingKey = null,
                     documents = data.documents,
+                    current = document,
                     savedToast = true,
                 )
             } catch (e: Exception) {

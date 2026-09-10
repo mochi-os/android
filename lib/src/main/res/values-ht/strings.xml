@@ -350,4 +350,8 @@
     <string name="game_empty_title">Poko gen jwèt</string>
     <string name="game_select_title">Chwazi yon jwèt</string>
     <string name="game_select_subtitle">Chwazi yon jwèt nan ba sou kote a oswa kòmanse yon nouvo.</string>
+    <string name="settings_card">Stil kat la</string>
+    <string name="settings_card_theme">Soti nan tèm</string>
+    <string name="settings_card_flat">Plat</string>
+    <string name="settings_card_raised">Leve</string>
 </resources>

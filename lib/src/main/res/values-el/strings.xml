@@ -350,4 +350,8 @@
     <string name="game_empty_title">Δεν υπάρχουν ακόμη παιχνίδια</string>
     <string name="game_select_title">Επιλέξτε παιχνίδι</string>
     <string name="game_select_subtitle">Επιλέξτε παιχνίδι από την πλαϊνή μπάρα ή ξεκινήστε νέο.</string>
+    <string name="settings_card">Στυλ κάρτας</string>
+    <string name="settings_card_theme">Από το θέμα</string>
+    <string name="settings_card_flat">Επίπεδη</string>
+    <string name="settings_card_raised">Ανυψωμένη</string>
 </resources>

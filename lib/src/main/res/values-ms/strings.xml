@@ -350,4 +350,8 @@
     <string name="game_empty_title">Tiada permainan lagi</string>
     <string name="game_select_title">Pilih permainan</string>
     <string name="game_select_subtitle">Pilih permainan daripada bar sisi atau mulakan yang baharu.</string>
+    <string name="settings_card">Gaya kad</string>
+    <string name="settings_card_theme">Daripada tema</string>
+    <string name="settings_card_flat">Rata</string>
+    <string name="settings_card_raised">Timbul</string>
 </resources>

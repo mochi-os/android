@@ -93,7 +93,7 @@ fun BoardCard(
     targetColumnId: String = "",
     /** The lane this card sits in, sent as row_value so a drop changes lane. */
     targetRowId: String = "",
-    onClick: () -> Unit
+    onObjectClick: (String) -> Unit
 ) {
     var showMoveSheet by rememberSaveable(obj.id) { mutableStateOf(false) }
     var showOverflow by remember(obj.id) { mutableStateOf(false) }
@@ -148,7 +148,7 @@ fun BoardCard(
                     )
                     // rowField/rowValue carry the lane. Without them the server
                     // leaves the row value untouched (crm.star only writes it
-                    // under `if row_field:`), so a cross-lane drag was a no-op
+                    // under `if row_field:` on the decoded `row`), so a cross-lane drag was a no-op
                     // and the refresh put the card back where it started.
                     viewModel.moveObject(
                         objectId = sourceId,
@@ -199,7 +199,7 @@ fun BoardCard(
                 borderColor ?: MaterialTheme.colorScheme.outlineVariant,
                 MaterialTheme.shapes.small,
             )
-            .clickable(onClick = onClick),
+            .clickable { onObjectClick(obj.id) },
         shape = MaterialTheme.shapes.small,
         colors = CardDefaults.cardColors(
             containerColor = if (!isNested) MaterialTheme.colorScheme.surface
@@ -368,7 +368,7 @@ fun BoardCard(
                                     columnFieldId = columnFieldId,
                                     rowFieldId = rowFieldId,
                                     depth = depth + 1,
-                                    onClick = onClick
+                                    onObjectClick = onObjectClick
                                 )
                             }
                         }

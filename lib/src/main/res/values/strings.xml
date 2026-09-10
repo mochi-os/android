@@ -415,4 +415,8 @@
     <string name="rss_revoke_confirm">Revoke</string>
     <string name="rss_revoked">RSS access revoked</string>
     <string name="rss_revoke_failed">Failed to revoke RSS access</string>
+    <string name="settings_card">Card style</string>
+    <string name="settings_card_theme">From theme</string>
+    <string name="settings_card_flat">Flat</string>
+    <string name="settings_card_raised">Raised</string>
 </resources>

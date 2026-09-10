@@ -9,9 +9,6 @@
     <string name="settings_home_notification_prefs">Nastavitve obvestil</string>
     <string name="settings_home_accounts">Povezani računi</string>
     <string name="settings_home_interests">Zanimanja</string>
-    <string name="account_method_email">E-poštna koda</string>
-    <string name="account_method_passkey">Geslo-ključ</string>
-    <string name="account_method_totp">Aplikacija za avtentikacijo</string>
     <string name="account_section_passkeys">Geslo-ključi</string>
     <string name="account_passkey_register">Dodaj geslo</string>
     <string name="account_passkey_delete_title">Izbriši geslo?</string>
@@ -47,7 +44,6 @@
     <string name="route_delete">Izbriši pot</string>
     <string name="route_delete_title">Izbriši pot?</string>
     <string name="route_path">Pot</string>
-    <string name="route_target">Cilj</string>
     <string name="route_method">Metoda</string>
     <string name="route_method_app">Aplikacija</string>
     <string name="route_method_entity">Entiteta</string>
@@ -58,9 +54,6 @@
     <string name="interests_title">Zanimanja</string>
     <string name="interests_summary_title">Povzetek</string>
     <string name="interests_remove">Odstrani interes</string>
-    <string name="interests_add">Dodaj</string>
-    <string name="document_save">Shrani</string>
-    <string name="document_saved">Shranjeno</string>
     <string name="notifprefs_title">Nastavitve obvestil</string>
     <string name="notifprefs_tab_categories">Kategorije</string>
     <string name="notifprefs_tab_topics">Teme</string>
@@ -142,8 +135,6 @@
     <string name="system_settings_reset">Ponastavi</string>
     <string name="system_settings_reset_to_default">Ponastavi na privzeto</string>
     <string name="system_settings_reset_title">Ponastavi na privzeto?</string>
-    <string name="system_settings_setting_updated">Nastavitev posodobljena</string>
-    <string name="system_settings_update_failed">Neuspešna posodobitev nastavitve</string>
     <string name="system_setting_apps_install_user">Dovoli uporabnikom namestitev aplikacij</string>
     <string name="system_setting_auth_email">Prijava z e-poštno kodo</string>
     <string name="system_setting_auth_passkey">Prijava s ključem</string>
@@ -216,12 +207,10 @@
     <string name="system_users_toast_status_failed">Neuspešna posodobitev stanja uporabnika</string>
     <string name="system_users_toast_revoke_failed">Neuspešen preklic seje</string>
 
-    <string name="settings_app_label">Mochi Nastavitve</string>
     <string name="settings_home_sessions">Seje</string>
     <string name="settings_home_privacy">Pravilnik o zasebnosti</string>
     <string name="settings_home_rules">Pravila</string>
     <string name="settings_home_terms">Pogoji storitve</string>
-    <string name="account_section_methods">Načini prijave</string>
     <string name="account_passkeys_empty">Ni registriranih dostopnih ključev.</string>
     <string name="account_passkey_register_title">Dodaj dostopni ključ</string>
     <string name="account_passkey_register_message">Vaša naprava vas bo prosila za potrditev. Dostopni ključ je vezan na to napravo in se uporablja za prihodnje prijave.</string>
@@ -240,7 +229,6 @@
     <string name="account_recovery_regen_title">Znova ustvariti obnovitvene kode?</string>
     <string name="account_recovery_regen_message">Obstoječe kode bodo takoj prenehale delovati. Nove shranite na varno mesto.</string>
     <string name="account_recovery_codes_warning">Shranite te kode — vsako je mogoče uporabiti samo enkrat. Ne bodo prikazane znova.</string>
-    <string name="sessions_section_title">Aktivne seje</string>
     <string name="sessions_title">Seje</string>
     <string name="sessions_empty">Ni aktivnih sej.</string>
     <string name="sessions_revoke_message">Naprava, ki uporablja to sejo, bo odjavljena.</string>
@@ -257,7 +245,6 @@
     <string name="interests_summary_regenerate">Znova ustvari povzetek</string>
     <string name="interests_summary_regenerating">Znova ustvarjanje…</string>
     <string name="interests_summary_empty">Dodajte nekaj interesov, da ustvarite povzetek tega, kar imate radi.</string>
-    <string name="interests_weight">Teža</string>
     <string name="interests_search_failed">Iskanje ni uspelo. Poskusite znova.</string>
     <string name="document_privacy_title">Pravilnik o zasebnosti</string>
     <string name="document_rules_title">Pravila</string>
@@ -267,7 +254,6 @@
     <string name="system_status_installing">Nameščanje %1$s…</string>
     <string name="accounts_field_api_key">API ključ</string>
     <string name="accounts_field_url">URL strežnika</string>
-    <string name="accounts_device_placeholder">Push računi se samodejno dodajo z naprave.</string>
     <string name="accounts_set_default_ai">Nastavi kot privzeti UI</string>
     <string name="accounts_verify_code">Koda</string>
     <string name="accounts_verify_resend">Znova pošlji kodo</string>
@@ -294,9 +280,6 @@
     <string name="account_identity_name">Ime</string>
     <string name="account_identity_fingerprint">Prstni odtis</string>
     <string name="account_identity_directory_toggle">Dovoli drugim, da vas najdejo v imeniku</string>
-    <string name="account_method_email_subtitle">Prejmite potrditveno kodo po e-pošti</string>
-    <string name="account_method_totp_subtitle">Za omogočenje spodaj nastavite overitelja</string>
-    <string name="account_method_passkey_subtitle">Za omogočenje spodaj registrirajte ključ za dostop</string>
     <string name="domain_add">Dodaj domeno</string>
     <string name="domain_add_title">Dodaj domeno</string>
     <string name="domain_delegation_add">Dodaj</string>
@@ -402,4 +385,10 @@
     <string name="notifprefs_test_none">Ni nastavljenih ciljev</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Brez ciljev</string>
+    <string name="account_data_generate">Ustvari geslo</string>
+    <string name="accounts_field_server">URL strežnika</string>
+    <string name="accounts_field_token">Žeton za dostop</string>
+    <string name="accounts_field_topic">Tema</string>
+    <string name="accounts_field_secret">Skrivnost za podpisovanje</string>
+    <string name="account_totp_open">Odpri v aplikaciji za preverjanje pristnosti</string>
 </resources>

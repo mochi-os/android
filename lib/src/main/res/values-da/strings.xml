@@ -352,4 +352,8 @@
     <string name="game_empty_title">Ingen spil endnu</string>
     <string name="game_select_title">Vælg et spil</string>
     <string name="game_select_subtitle">Vælg et spil i sidepanelet, eller start et nyt.</string>
+    <string name="settings_card">Kortstil</string>
+    <string name="settings_card_theme">Fra tema</string>
+    <string name="settings_card_flat">Flad</string>
+    <string name="settings_card_raised">Hævet</string>
 </resources>

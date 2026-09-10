@@ -14,28 +14,13 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.lifecycleScope
-import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.togetherWith
-import androidx.compose.animation.core.snap
-import androidx.compose.animation.core.tween
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.withFrameNanos
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
@@ -54,6 +39,7 @@ import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PendingDeepLink
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
+import org.mochios.android.push.launcherComponentFor
 import org.mochios.android.ui.AppBootstrapHost
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.theme.MochiTheme
@@ -87,8 +73,15 @@ import org.mochios.settings.navigation.SettingsApp
 import org.mochios.settings.navigation.settingsNavGraph
 import javax.inject.Inject
 
+/**
+ * The shell activity. Every launcher icon is a subclass of this (Launchers.kt)
+ * whose manifest entry names the Mochi app it hosts and gives it a task of
+ * its own, and an instance renders that one app for its whole life. The bare
+ * MainActivity hosts nothing: it receives every `mochi:` URI and forwards the
+ * launch to the owning app's class - see [onCreate].
+ */
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+open class MainActivity : ComponentActivity() {
 
     @Inject lateinit var sessionManager: SessionManager
     @Inject lateinit var preferencesManager: PreferencesManager
@@ -96,14 +89,23 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var notificationsRepository: org.mochios.android.notifications.NotificationsRepository
     @Inject lateinit var webSocket: org.mochios.android.websocket.MochiWebSocket
 
-    // Alias / shortcut hint from the launching intent, updated on every
-    // onNewIntent. mutableStateOf rather than a Flow: the write is
-    // Snapshot-tracked, so the new feature recomposes in the same frame as
-    // onResume instead of a frame later.
-    private var targetApp by mutableStateOf<String?>(null)
+    /** The app this instance hosts; null for one that only forwards. */
+    private var app: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val hosted = targetAppOf(componentName)
+        val target = resolveStartTargetApp(intent, savedInstanceState, hosted)
+        // A launch for another app - a URI at the bare MainActivity, a
+        // shortcut's hint, the upgrade relaunch through the default launcher
+        // entry - is handed to that app's class, so it lands in that app's
+        // task rather than drawing here.
+        if (hosted == null || target != hosted) {
+            forward(target)
+            finish()
+            return
+        }
+        app = hosted
         enableEdgeToEdge()
         handleMochiUri(intent)
         // Restore a deep link persisted across process death - the update
@@ -113,7 +115,6 @@ class MainActivity : ComponentActivity() {
             lastActiveAppPrefs().getString(KEY_PENDING_DEEP_LINK, null)
                 ?.let { PendingDeepLink.set(it) }
         }
-        targetApp = resolveStartTargetApp(intent, savedInstanceState)
         setContent {
             val themeAnchors by sessionManager.themeAnchors.collectAsState(initial = null)
             val isAuthenticated by sessionManager.isAuthenticated.collectAsState(initial = false)
@@ -130,44 +131,8 @@ class MainActivity : ComponentActivity() {
                             Log.i(TAG, "PushTransport.configure returned")
                         }
                     }
-                    val startApp = targetApp
-                    // Cover the content with the theme background while
-                    // stopped, so a launcher-icon switch (singleTop reuse via
-                    // onNewIntent) never flashes the old app's last frame. Set
-                    // on ON_STOP, after the recents snapshot; lifted only once
-                    // the new app has painted.
-                    var backgroundedCover by remember { mutableStateOf(false) }
-                    // The feature on screen when we backgrounded — lets us tell a
-                    // same-app resume from a switch to a different app.
-                    var coveredFromApp by remember { mutableStateOf<String?>(null) }
-                    DisposableEffect(Unit) {
-                        val observer = LifecycleEventObserver { _, event ->
-                            when (event) {
-                                Lifecycle.Event.ON_STOP -> {
-                                    backgroundedCover = true
-                                    coveredFromApp = targetApp
-                                }
-                                // onNewIntent runs before onResume, so a switch
-                                // already reads targetApp != coveredFromApp
-                                // here; the effect below lifts its cover.
-                                Lifecycle.Event.ON_RESUME ->
-                                    if (targetApp == coveredFromApp) backgroundedCover = false
-                                else -> {}
-                            }
-                        }
-                        this@MainActivity.lifecycle.addObserver(observer)
-                        onDispose { this@MainActivity.lifecycle.removeObserver(observer) }
-                    }
-                    // On a switch, lift the cover only after the new app has
-                    // painted one frame.
-                    LaunchedEffect(startApp) {
-                        if (backgroundedCover && startApp != coveredFromApp) {
-                            withFrameNanos {}
-                            backgroundedCover = false
-                        }
-                    }
                     AppBootstrapHost(
-                        appName = startApp ?: "feeds",
+                        appName = hosted,
                         oauthScheme = "mochi",
                         onLocaleChangeRequested = { recreate() },
                         prefetchApps = MOCHI_APPS,
@@ -176,123 +141,95 @@ class MainActivity : ComponentActivity() {
                         // single confirmation dialog covers them all.
                         var showLogoutConfirm by remember { mutableStateOf(false) }
                         val requestLogout: () -> Unit = { showLogoutConfirm = true }
-                        // Alias switch: the Box paints the theme background
-                        // behind the swap so no frame shows the old app's
-                        // pixels; the 120ms fade covers the first draw.
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(MaterialTheme.colorScheme.background)
-                        ) {
-                            AnimatedContent(
-                                targetState = startApp,
-                                // Snap the outgoing app out rather than fading
-                                // it: a crossfade keeps the previous app's
-                                // content on screen for the whole fade.
-                                transitionSpec = {
-                                    fadeIn(animationSpec = tween(durationMillis = 120)) togetherWith
-                                        fadeOut(animationSpec = snap())
-                                },
-                                label = "alias-switch",
-                            ) { app ->
-                                val navController = rememberNavController()
-                                val pendingLink by PendingDeepLink.link.collectAsState()
-                                LaunchedEffect(pendingLink) {
-                                    val link = pendingLink ?: return@LaunchedEffect
-                                    navigateToLink(navController, link)
-                                    PendingDeepLink.consume()
-                                    clearPersistedDeepLink()
-                                }
-                                val openNotifications: () -> Unit = {
-                                    navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
-                                }
-                                NavHost(navController = navController, startDestination = startDestinationFor(app)) {
-                                    feedsNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                    )
-                                    chatNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                    )
-                                    forumsNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                    )
-                                    projectsNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                    )
-                                    crmsNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                    )
-                                    peopleNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                        onOpenLink = { link -> navigateToLink(navController, link) },
-                                    )
-                                    settingsNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenLink = { link -> navigateToLink(navController, link) },
-                                    )
-                                    wikisNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                        onOpenLink = { link -> navigateToLink(navController, link) },
-                                    )
-                                    chessNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                        onOpenLink = { link -> navigateToLink(navController, link) },
-                                    )
-                                    goNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                        onOpenLink = { link -> navigateToLink(navController, link) },
-                                    )
-                                    wordsNavGraph(
-                                        navController,
-                                        onLogout = requestLogout,
-                                        onOpenNotifications = openNotifications,
-                                        onOpenLink = { link -> navigateToLink(navController, link) },
-                                    )
-                                    marketNavGraph(navController, onOpenNotifications = openNotifications)
-                                    staffNavGraph(navController, onOpenNotifications = openNotifications)
-                                }
-                            }
-                            if (backgroundedCover) {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .background(MaterialTheme.colorScheme.background),
-                                )
-                            }
+                        val navController = rememberNavController()
+                        val pendingLink by PendingDeepLink.link.collectAsState()
+                        LaunchedEffect(pendingLink) {
+                            val link = pendingLink ?: return@LaunchedEffect
+                            navigateToLink(navController, link)
+                            PendingDeepLink.consume()
+                            clearPersistedDeepLink()
+                        }
+                        val openNotifications: () -> Unit = {
+                            navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
+                        }
+                        NavHost(navController = navController, startDestination = startDestinationFor(hosted)) {
+                            feedsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                            )
+                            chatNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                            )
+                            forumsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                            )
+                            projectsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                            )
+                            crmsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                            )
+                            peopleNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                            )
+                            settingsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                            )
+                            wikisNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                            )
+                            chessNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                            )
+                            goNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                            )
+                            wordsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                            )
+                            marketNavGraph(navController, onOpenNotifications = openNotifications)
+                            staffNavGraph(navController, onOpenNotifications = openNotifications)
+                        }
 
-                            if (showLogoutConfirm) {
-                                MochiAlertDialog(
-                                    onDismissRequest = { showLogoutConfirm = false },
-                                    title = stringResource(MochiR.string.common_logout),
-                                    text = stringResource(MochiR.string.common_logout_confirm_message),
-                                    confirmText = stringResource(MochiR.string.common_logout),
-                                    onConfirm = {
-                                        showLogoutConfirm = false
-                                        onLogout()
-                                    },
-                                    destructive = true,
-                                    dismissText = stringResource(MochiR.string.common_cancel),
-                                )
-                            }
+                        if (showLogoutConfirm) {
+                            MochiAlertDialog(
+                                onDismissRequest = { showLogoutConfirm = false },
+                                title = stringResource(MochiR.string.common_logout),
+                                text = stringResource(MochiR.string.common_logout_confirm_message),
+                                confirmText = stringResource(MochiR.string.common_logout),
+                                onConfirm = {
+                                    showLogoutConfirm = false
+                                    onLogout()
+                                },
+                                destructive = true,
+                                dismissText = stringResource(MochiR.string.common_cancel),
+                            )
                         }
                     }
                 }
@@ -303,55 +240,112 @@ class MainActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
+        // singleTop delivers only this class's own intents here, so the app
+        // never changes; the URI may carry a deep link or a return.
         handleMochiUri(intent)
-        val resolved = resolveTargetApp(intent)
-        if (resolved != null) targetApp = resolved
     }
 
     /**
-     * Alias meta-data first; shortcut intents target MainActivity itself (no
-     * meta-data), so fall back to [EXTRA_APP_HINT].
+     * The app a launcher class hosts, from the `org.mochios.targetApp`
+     * meta-data on its manifest entry; null for the bare MainActivity.
      */
-    private fun resolveTargetApp(intent: Intent?): String? =
-        resolveAliasTargetApp(intent?.component)
-            ?: intent?.getStringExtra(EXTRA_APP_HINT)
-
-    /**
-     * Cold-start target. After an in-place upgrade Android relaunches via the
-     * default LAUNCHER alias whatever feature was active, so when the running
-     * versionName differs from the last cold start's, prefer the feature saved
-     * by [onPause].
-     */
-    private fun resolveStartTargetApp(intent: Intent?, savedInstanceState: Bundle?): String? {
-        val resolved = resolveTargetApp(intent)
-        // Configuration changes / process death restores: trust the saved
-        // state (Compose will rehydrate), don't second-guess the alias.
-        if (savedInstanceState != null) return resolved
-        // Explicit shortcut hint: user picked a specific feature, honour it.
-        if (intent?.getStringExtra(EXTRA_APP_HINT) != null) return resolved
-        val current = try {
-            packageManager.getPackageInfo(packageName, 0).versionName
+    private fun targetAppOf(component: ComponentName?): String? {
+        component ?: return null
+        return try {
+            val info = packageManager.getActivityInfo(component, PackageManager.GET_META_DATA)
+            info.metaData?.getString(META_TARGET_APP)
         } catch (_: PackageManager.NameNotFoundException) {
             null
         }
+    }
+
+    /**
+     * Which app this launch is for. A shortcut's [EXTRA_APP_HINT] or a `mochi:`
+     * URI names it; otherwise the class's own app. After an in-place upgrade
+     * Android relaunches through the default launcher entry whatever was
+     * active, so when the running versionName differs from the last cold
+     * start's, a plain launch prefers the app saved by [onPause]. A launch
+     * naming no app goes to the last active one, then to the default.
+     */
+    private fun resolveStartTargetApp(intent: Intent?, savedInstanceState: Bundle?, hosted: String?): String {
+        // Configuration changes / process death restores: this class is
+        // already the right one, and Compose rehydrates.
+        if (savedInstanceState != null && hosted != null) return hosted
+        val hinted = intent?.getStringExtra(EXTRA_APP_HINT) ?: appForUri(intent)
         val prefs = lastActiveAppPrefs()
-        val lastSeen = prefs.getString(KEY_LAST_SEEN_VERSION, null)
-        // Record what we're running now for the next cold start to compare against.
-        if (current != null) prefs.edit().putString(KEY_LAST_SEEN_VERSION, current).apply()
-        val upgraded = lastSeen != null && current != null && lastSeen != current
-        if (!upgraded) return resolved
-        val saved = prefs.getString(KEY_LAST_ACTIVE_APP, null) ?: return resolved
-        Log.i(TAG, "Upgrade relaunch ($lastSeen -> $current); restoring last-active=$saved over alias=$resolved")
-        return saved
+        if (hinted == null && hosted != null) {
+            val current = try {
+                packageManager.getPackageInfo(packageName, 0).versionName
+            } catch (_: PackageManager.NameNotFoundException) {
+                null
+            }
+            val lastSeen = prefs.getString(KEY_LAST_SEEN_VERSION, null)
+            // Record what we're running now for the next cold start to compare against.
+            if (current != null) prefs.edit().putString(KEY_LAST_SEEN_VERSION, current).apply()
+            val upgraded = lastSeen != null && current != null && lastSeen != current
+            val saved = prefs.getString(KEY_LAST_ACTIVE_APP, null)
+            if (upgraded && saved != null) {
+                Log.i(TAG, "Upgrade relaunch ($lastSeen -> $current); restoring last-active=$saved over $hosted")
+                return saved
+            }
+            return hosted
+        }
+        return hinted ?: hosted ?: prefs.getString(KEY_LAST_ACTIVE_APP, null) ?: DEFAULT_APP
+    }
+
+    /**
+     * The app a `mochi:` URI belongs to, when the URI says: a notification's
+     * link starts with its app, and the market checkout return is the
+     * market's. OAuth returns and bare entity URIs name none. Only an app with
+     * a launcher class counts.
+     */
+    private fun appForUri(intent: Intent?): String? {
+        val uri = intent?.data ?: return null
+        if (uri.scheme != "mochi") return null
+        val link = when {
+            !uri.isHierarchical -> {
+                val ssp = uri.encodedSchemeSpecificPart ?: return null
+                val q = ssp.indexOf('?')
+                if ((if (q >= 0) ssp.substring(0, q) else ssp) != "notification") return null
+                parseOpaqueQuery(if (q >= 0) ssp.substring(q + 1) else "")["link"]
+            }
+            uri.authority == "notification" -> uri.getQueryParameter("link")
+            uri.authority == "market" -> return "market"
+            else -> null
+        } ?: return null
+        val app = link.trimStart('/').substringBefore('/').substringBefore('?').lowercase()
+        return app.takeIf { it.isNotEmpty() && launcherComponentFor(this, it) != null }
+    }
+
+    /**
+     * Hand this launch to [app]'s own class, so it lands in that app's task.
+     * The intent goes across whole - data, extras, flags - and the receiver
+     * handles its URI once. Flags that would give the receiver a throwaway
+     * task or history entry are dropped; a caller's launcher-style flags
+     * (clear top, clear task) are kept, as they were meant for the app.
+     */
+    private fun forward(app: String) {
+        val component = launcherComponentFor(this, app)
+            ?: launcherComponentFor(this, DEFAULT_APP)
+            ?: return
+        val forwarded = Intent(intent ?: Intent(Intent.ACTION_MAIN)).setComponent(component)
+        val dropped = Intent.FLAG_ACTIVITY_NO_HISTORY or
+            Intent.FLAG_ACTIVITY_MULTIPLE_TASK or
+            Intent.FLAG_ACTIVITY_NEW_DOCUMENT or
+            Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS or
+            Intent.FLAG_ACTIVITY_FORWARD_RESULT
+        forwarded.flags = (forwarded.flags and dropped.inv()) or Intent.FLAG_ACTIVITY_NEW_TASK
+        Log.i(TAG, "Forwarding ${intent?.data ?: intent?.action} to $app")
+        startActivity(forwarded)
     }
 
     override fun onPause() {
         super.onPause()
-        // Remember the active feature so the post-install relaunch can land
-        // the user back here. Saved on every pause so a notification deep
-        // link / OAuth return / install prompt that follows still preserves
-        // the right feature.
-        targetApp?.let {
+        // Remember the active app so the post-install relaunch, and a URI
+        // that names no app, can land the user back here. Saved on every
+        // pause so a notification deep link / OAuth return / install prompt
+        // that follows still preserves the right app.
+        app?.let {
             lastActiveAppPrefs().edit().putString(KEY_LAST_ACTIVE_APP, it).apply()
         }
     }
@@ -405,6 +399,8 @@ class MainActivity : ComponentActivity() {
             uri.authority in LEGACY_SYSTEM_INTENT_AUTHORITIES -> handleLegacySystemIntent(uri)
             uri.authority == "market" && uri.pathSegments.firstOrNull() == "checkout" ->
                 handleMarketCheckoutDeepLink(uri)
+            uri.authority == "market" && uri.pathSegments == listOf("stripe", "oauth") ->
+                handleMarketStripeOauthDeepLink(uri)
             else -> handleCrossPeerEntityIntent(intent, uri)
         }
     }
@@ -433,7 +429,24 @@ class MainActivity : ComponentActivity() {
             }
         }
         PendingDeepLink.set(link)
-        targetApp = "market"
+    }
+
+    /**
+     * Stripe Connect return (`mochi://market/stripe/oauth?code&state&error&
+     * error_description`): the market callback hands an app-platform state
+     * here with Stripe's raw parameters, and the seller settings screen
+     * completes the exchange as the signed-in seller. The state is opaque
+     * to the app, so it is only bounded, never interpreted.
+     */
+    private fun handleMarketStripeOauthDeepLink(uri: Uri) {
+        val state = uri.getQueryParameter("state")?.takeIf { it.length in 1..200 } ?: return
+        val route = MarketApp.sellerSettings(
+            code = uri.getQueryParameter("code"),
+            state = state,
+            error = uri.getQueryParameter("error"),
+            errorDescription = uri.getQueryParameter("error_description"),
+        )
+        PendingDeepLink.set("/market/account/seller?" + route.substringAfter('?', ""))
     }
 
     /**
@@ -712,6 +725,16 @@ class MainActivity : ComponentActivity() {
                     "subscriptions" -> navController.navigate(MarketApp.SUBSCRIPTIONS) {
                         launchSingleTop = true
                     }
+                    "account" -> if (parts.getOrNull(2) == "seller") {
+                        navController.navigate(
+                            MarketApp.sellerSettings(
+                                code = parseQueryParam(query, "code"),
+                                state = parseQueryParam(query, "state"),
+                                error = parseQueryParam(query, "error"),
+                                errorDescription = parseQueryParam(query, "error_description"),
+                            ),
+                        ) { launchSingleTop = true }
+                    }
                 }
             }
             "wikis" -> {
@@ -783,16 +806,6 @@ class MainActivity : ComponentActivity() {
         return null
     }
 
-    private fun resolveAliasTargetApp(component: ComponentName?): String? {
-        component ?: return null
-        return try {
-            val info = packageManager.getActivityInfo(component, PackageManager.GET_META_DATA)
-            info.metaData?.getString(META_TARGET_APP)
-        } catch (_: PackageManager.NameNotFoundException) {
-            null
-        }
-    }
-
     private fun startDestinationFor(targetApp: String?): String = when (targetApp) {
         "chat" -> ChatApp.HOME
         "forums" -> ForumsApp.HOME
@@ -813,10 +826,13 @@ class MainActivity : ComponentActivity() {
         private const val TAG = "MainActivity"
         private const val META_TARGET_APP = "org.mochios.targetApp"
 
+        /** The app a launch lands in when nothing names one. */
+        private const val DEFAULT_APP = "feeds"
+
         /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
         const val EXTRA_APP_HINT = "app"
 
-        /** SharedPreferences key holding the feature active at last onPause. */
+        /** SharedPreferences key holding the app active at last onPause. */
         private const val KEY_LAST_ACTIVE_APP = "last_active_app"
 
         /**
@@ -834,7 +850,7 @@ class MainActivity : ComponentActivity() {
         // Notifications / Settings / Profile routes moved into the Settings
         // app module (`apps/settings`). The bell in each feature's TopAppBar
         // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
-        // alias targets SettingsApp.HOME via `targetApp = "settings"`.
+        // class hosts SettingsApp.HOME.
 
         private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
 

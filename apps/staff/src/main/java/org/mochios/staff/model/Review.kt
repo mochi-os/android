@@ -17,8 +17,10 @@ data class Review(
     val order: String = "",
     val reviewer: String = "",
     @SerializedName("reviewer_name") val reviewerName: String? = null,
+    @SerializedName("reviewer_fingerprint") val reviewerFingerprint: String? = null,
     val subject: String = "",
     @SerializedName("subject_name") val subjectName: String? = null,
+    @SerializedName("subject_fingerprint") val subjectFingerprint: String? = null,
     val buyer: String? = null,
     @SerializedName("buyer_name") val buyerName: String? = null,
     val seller: String? = null,
@@ -38,18 +40,3 @@ data class ReviewsListResponse(
     val reviews: List<Review> = emptyList(),
     val total: Long = 0,
 )
-
-/**
- * Written by `event_staff_reviews_action`: `hide` -> `hidden`, `remove` ->
- * `removed`, `restore` -> `published`.
- */
-enum class ReviewStatus {
-    @SerializedName("published") PUBLISHED,
-    @SerializedName("hidden") HIDDEN,
-    @SerializedName("removed") REMOVED,
-}
-
-enum class ReviewAction {
-    @SerializedName("remove") REMOVE,
-    @SerializedName("restore") RESTORE,
-}
