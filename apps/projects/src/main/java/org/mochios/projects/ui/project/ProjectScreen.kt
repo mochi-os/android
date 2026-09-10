@@ -92,7 +92,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.push.SystemNotifications
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
@@ -153,9 +153,9 @@ fun ProjectScreen(
     LaunchedEffect(projectId) {
         if (projectId.isNotBlank()) {
             LastViewedStore.set(context, PROJECTS_FEATURE, projectId)
-            SystemNotifications.cancelFor(context, "projects", projectId)
         }
     }
+    VisibleEntityEffect("projects", projectId)
 
     val drawerItems = remember(listUiState.projects) {
         listViewModel.filteredProjects().map { project ->

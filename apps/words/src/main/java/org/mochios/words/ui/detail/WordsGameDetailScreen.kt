@@ -81,6 +81,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlin.math.roundToInt
 import org.mochios.android.api.userMessage
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
@@ -124,6 +125,11 @@ fun WordsGameDetailScreen(
     onOpenDrawer: () -> Unit,
     viewModel: WordsGameViewModel = hiltViewModel(),
 ) {
+    // Game notifications carry the game only in their link (`/words/<gameId>`);
+    // registering it here keeps a move or message about the game on screen out
+    // of the tray.
+    VisibleEntityEffect("words", viewModel.gameId)
+
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val game = state.game

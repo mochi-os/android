@@ -95,7 +95,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.push.SystemNotifications
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.RssRevokeDialog
 import org.mochios.android.ui.components.AboutDialog
@@ -176,9 +176,9 @@ fun ForumScreen(
     LaunchedEffect(forumId) {
         if (forumId.isNotBlank()) {
             LastViewedStore.set(context, FORUMS_FEATURE, forumId)
-            SystemNotifications.cancelFor(context, "forums", forumId)
         }
     }
+    VisibleEntityEffect("forums", forumId)
 
     val drawerItems = remember(listUiState.forums) {
         listUiState.forums.map { forum ->

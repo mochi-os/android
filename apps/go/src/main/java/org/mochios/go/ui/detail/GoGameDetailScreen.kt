@@ -67,6 +67,7 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
@@ -110,6 +111,11 @@ fun GoGameDetailScreen(
     onOpenDrawer: () -> Unit,
     viewModel: GoGameViewModel = hiltViewModel(),
 ) {
+    // Game notifications carry the game only in their link (`/go/<gameId>`);
+    // registering it here keeps a move or message about the game on screen out
+    // of the tray.
+    VisibleEntityEffect("go", viewModel.gameId)
+
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }

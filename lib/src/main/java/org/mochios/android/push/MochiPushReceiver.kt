@@ -293,6 +293,14 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         app: String,
         id: String,
     ) {
+        // See the FCM twin: what the socket already delivered to the open
+        // screen does not need a tray row, and a suppressed one must not spend
+        // a nonce.
+        if (VisibleEntity.covers(link)) {
+            Log.i(TAG, "Entity is on screen; not posting")
+            return
+        }
+
         val channelId = channelId(context, instance, app, link)
         val nonce = NonceStore(context).issue()
         val deepLink = deepLinkFor(context, instance, link, id, nonce)

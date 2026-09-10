@@ -83,6 +83,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -530,6 +531,10 @@ private fun PostSourceSheet(
     showDeleteCommentDialog: (String) -> Unit,
     onExpand: () -> Unit
 ) {
+    // A comment on the post being read arrives on the socket; the tray
+    // row for it would only repeat what is on screen.
+    VisibleEntityEffect("feeds", viewModel.feedId)
+
     val post by viewModel.post.collectAsState()
     val editingCommentId by viewModel.editingCommentId.collectAsState()
     val editCommentText by viewModel.editCommentText.collectAsState()

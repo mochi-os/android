@@ -97,7 +97,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
-import org.mochios.android.push.SystemNotifications
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
@@ -161,11 +161,12 @@ fun ChatScreen(
     LaunchedEffect(chatId) {
         if (chatId.isNotBlank()) {
             LastViewedStore.set(context, CHAT_FEATURE, chatId)
-            // The server's mark-read does not reach the status bar; clear this
-            // chat's tray notifications too.
-            SystemNotifications.cancelFor(context, "chat", chatId)
         }
     }
+    // Clears this chat's tray rows on every return and keeps a push about it
+    // from posting at all while the screen is up - the server's mark-read does
+    // not reach the status bar.
+    VisibleEntityEffect("chat", chatId)
 
     val pinnedChats by listViewModel.pinned.collectAsState()
     val drawerItems = remember(listUiState.chats, pinnedChats) {

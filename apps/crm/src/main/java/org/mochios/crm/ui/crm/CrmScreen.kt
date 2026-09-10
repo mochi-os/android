@@ -96,7 +96,7 @@ import org.mochios.android.files.MIME_CSV
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
-import org.mochios.android.push.SystemNotifications
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.ColorPicker
@@ -153,9 +153,9 @@ fun CrmScreen(
     LaunchedEffect(crmId) {
         if (crmId.isNotBlank()) {
             LastViewedStore.set(context, PROJECTS_FEATURE, crmId)
-            SystemNotifications.cancelFor(context, "crm", crmId)
         }
     }
+    VisibleEntityEffect("crm", crmId)
 
     val drawerItems = remember(listUiState.crm) {
         listViewModel.filteredCrm().map { crm ->

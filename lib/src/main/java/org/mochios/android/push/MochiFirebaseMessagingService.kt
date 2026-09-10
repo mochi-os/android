@@ -81,6 +81,14 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         app: String,
         id: String,
     ) {
+        // The socket has already put this in front of the user; a tray row
+        // would only repeat what they are reading. Checked before the nonce is
+        // issued, so a suppressed notification does not spend one.
+        if (VisibleEntity.covers(link)) {
+            Log.i(TAG, "Entity is on screen; not posting")
+            return
+        }
+
         val channelId = channelIdFor(app, link)
 
         // mochi:notification?link=<encoded>[&id=<encoded>]&nonce=<encoded>, the

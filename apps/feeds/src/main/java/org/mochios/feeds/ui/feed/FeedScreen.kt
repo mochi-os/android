@@ -125,7 +125,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
-import org.mochios.android.push.SystemNotifications
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentCaptionScrim
 import org.mochios.android.ui.components.ComposeBar
@@ -270,12 +270,12 @@ fun FeedScreen(
     LaunchedEffect(viewModel.feedId) {
         if (viewModel.feedId.isNotBlank()) {
             LastViewedStore.set(context, FEEDS_FEATURE, viewModel.feedId)
-            SystemNotifications.cancelFor(context, "feeds", viewModel.feedId)
             // Mark the feed's notifications read on the server so the bell
             // clears on web / other devices, not just the local tray.
             viewModel.clearNotifications()
         }
     }
+    VisibleEntityEffect("feeds", viewModel.feedId)
 
     val posts by viewModel.posts.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()

@@ -78,6 +78,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
 import org.mochios.android.model.Attachment
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
@@ -120,6 +121,10 @@ fun PostDetailScreen(
     onNavigateToSources: (feedId: String, sourceUrl: String) -> Unit,
     viewModel: PostDetailViewModel = hiltViewModel()
 ) {
+    // A comment on the post being read arrives on the socket; the tray
+    // row for it would only repeat what is on screen.
+    VisibleEntityEffect("feeds", viewModel.feedId)
+
     val post by viewModel.post.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
