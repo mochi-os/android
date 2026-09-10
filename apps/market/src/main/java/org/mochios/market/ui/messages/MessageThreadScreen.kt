@@ -54,6 +54,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
@@ -80,6 +81,19 @@ fun MessageThreadScreen(
     // Key on the resolved thread id from state, not the route arg, which is
     // "new" when opened from a listing.
     val threadId = state.thread?.id?.takeIf { it.isNotEmpty() }
+
+    // The route is market/messages/{listingId}/{threadId}: market puts a
+    // category where other apps put the entity, so the whole path is named or
+    // one thread would cover every message notification. A thread in front of
+    // the user is read, like a chat. Blank until the thread exists, which
+    // registers nothing.
+    VisibleEntityEffect(
+        "market",
+        threadId?.let { id -> "messages/${viewModel.listingId}/$id" }.orEmpty(),
+        socketKey = threadId?.let { id -> "market-thread-$id" }.orEmpty(),
+        marksRead = true,
+    )
+
     val socket = rememberStreamWebSocket(
         streamKey = threadId?.let { "market-thread-$it" },
         app = "market",

@@ -123,10 +123,6 @@ fun ChessGameDetailScreen(
     onOpenNotifications: () -> Unit = {},
     viewModel: ChessGameViewModel = hiltViewModel(),
 ) {
-    // Game notifications carry the game only in their link (`/chess/<gameId>`);
-    // registering it here keeps a move or message about the game on screen out
-    // of the tray.
-    VisibleEntityEffect("chess", viewModel.gameId)
 
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
@@ -154,6 +150,15 @@ fun ChessGameDetailScreen(
 
     val wsKey = state.game?.key?.takeIf { it.isNotBlank() }
     val controller = rememberStreamWebSocket(wsKey, app = "chess")
+
+    // The board's stream is what makes dropping the tray row honest, and it
+    // subscribes with the game record's key, not the id in the link.
+    VisibleEntityEffect(
+        "chess",
+        viewModel.gameId,
+        socketKey = wsKey.orEmpty(),
+        marksRead = true,
+    )
     LaunchedEffect(controller) {
         if (controller != null) {
             controller.events.collect { _: StreamWsEvent ->

@@ -163,11 +163,6 @@ fun ChatScreen(
             LastViewedStore.set(context, CHAT_FEATURE, chatId)
         }
     }
-    // Clears this chat's tray rows on every return and keeps a push about it
-    // from posting at all while the screen is up - the server's mark-read does
-    // not reach the status bar.
-    VisibleEntityEffect("chat", chatId)
-
     val pinnedChats by listViewModel.pinned.collectAsState()
     val drawerItems = remember(listUiState.chats, pinnedChats) {
         listViewModel.filteredChats().map { chat ->
@@ -253,6 +248,20 @@ private fun ChatContent(
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
+
+    // Clears this chat's tray rows on every return, and keeps a push about it
+    // from posting at all while the screen is up - the server's mark-read does
+    // not reach the status bar. A conversation you are looking at is read by
+    // looking at it, so the row retires on the server too. Only while the
+    // socket is up, and the ViewModel subscribes with the chat record's key
+    // rather than the route's id.
+    VisibleEntityEffect(
+        "chat",
+        chatId,
+        socketKey = uiState.chat.key,
+        marksRead = true,
+    )
+
     var draft by remember { mutableStateOf("") }
     // Editing pre-fills the composer with the current body and clears it again
     // on cancel, so a cancelled edit never leaks the old text into a new message.

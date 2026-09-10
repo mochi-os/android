@@ -111,10 +111,6 @@ fun GoGameDetailScreen(
     onOpenDrawer: () -> Unit,
     viewModel: GoGameViewModel = hiltViewModel(),
 ) {
-    // Game notifications carry the game only in their link (`/go/<gameId>`);
-    // registering it here keeps a move or message about the game on screen out
-    // of the tray.
-    VisibleEntityEffect("go", viewModel.gameId)
 
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
@@ -181,6 +177,15 @@ fun GoGameDetailScreen(
     // Open a fresh WebSocket once the game has loaded (we need the key).
     val game = state.game
     val controller = rememberStreamWebSocket(game?.key, app = "go")
+
+    // The board's stream is what makes dropping the tray row honest, and it
+    // subscribes with the game record's key, not the id in the link.
+    VisibleEntityEffect(
+        "go",
+        viewModel.gameId,
+        socketKey = game?.key.orEmpty(),
+        marksRead = true,
+    )
     DisposableEffect(controller) {
         val job = controller?.let {
             scope.launch {

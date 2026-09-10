@@ -126,10 +126,6 @@ fun WordsGameDetailScreen(
     onOpenDrawer: () -> Unit,
     viewModel: WordsGameViewModel = hiltViewModel(),
 ) {
-    // Game notifications carry the game only in their link (`/words/<gameId>`);
-    // registering it here keeps a move or message about the game on screen out
-    // of the tray.
-    VisibleEntityEffect("words", viewModel.gameId)
 
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
@@ -166,6 +162,15 @@ fun WordsGameDetailScreen(
 
     // ─── WebSocket bridge ────────────────────────────────────────────
     val controller = rememberStreamWebSocket(game?.key, app = "words")
+
+    // The board's stream is what makes dropping the tray row honest, and it
+    // subscribes with the game record's key, not the id in the link.
+    VisibleEntityEffect(
+        "words",
+        viewModel.gameId,
+        socketKey = game?.key.orEmpty(),
+        marksRead = true,
+    )
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
             val msg = if (event.type == "message") {

@@ -275,7 +275,7 @@ fun FeedScreen(
             viewModel.clearNotifications()
         }
     }
-    VisibleEntityEffect("feeds", viewModel.feedId)
+    VisibleEntityEffect("feeds", viewModel.feedId, socketKey = viewModel.feedId)
 
     val posts by viewModel.posts.collectAsState()
     val feedInfo by viewModel.feedInfo.collectAsState()

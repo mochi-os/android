@@ -178,7 +178,7 @@ fun ForumScreen(
             LastViewedStore.set(context, FORUMS_FEATURE, forumId)
         }
     }
-    VisibleEntityEffect("forums", forumId)
+    VisibleEntityEffect("forums", forumId, socketKey = forumId)
 
     val drawerItems = remember(listUiState.forums) {
         listUiState.forums.map { forum ->

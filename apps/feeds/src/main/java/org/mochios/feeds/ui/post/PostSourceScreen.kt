@@ -533,7 +533,7 @@ private fun PostSourceSheet(
 ) {
     // A comment on the post being read arrives on the socket; the tray
     // row for it would only repeat what is on screen.
-    VisibleEntityEffect("feeds", viewModel.feedId)
+    VisibleEntityEffect("feeds", viewModel.feedId, socketKey = viewModel.feedId)
 
     val post by viewModel.post.collectAsState()
     val editingCommentId by viewModel.editingCommentId.collectAsState()

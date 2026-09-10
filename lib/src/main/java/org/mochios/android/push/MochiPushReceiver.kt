@@ -296,8 +296,31 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         // See the FCM twin: what the socket already delivered to the open
         // screen does not need a tray row, and a suppressed one must not spend
         // a nonce.
-        if (VisibleEntity.covers(link)) {
+        // A screen only covers a push while the socket behind it is up: the
+        // tray row is dropped on the promise that the content arrives live.
+        val webSocket = EntryPointAccessors
+            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+            .webSocket()
+        val cover = VisibleEntity.coverFor(link) { key -> webSocket.isLive(key) }
+        if (cover != VisibleEntity.Cover.NONE) {
             Log.i(TAG, "Entity is on screen; not posting")
+            // Only a screen that is the entity itself, a chat or a game, can
+            // say the user has read this; a feed being open cannot.
+            if (cover == VisibleEntity.Cover.READ && id.isNotEmpty()) {
+                // Retire the row so the web bell and the user's other devices
+                // stop announcing what they have already read here. Best
+                // effort; the tray row is suppressed either way.
+                val repository = EntryPointAccessors
+                    .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+                    .notificationsRepository()
+                CoroutineScope(Dispatchers.IO).launch {
+                    try {
+                        repository.markRead(id)
+                    } catch (e: Exception) {
+                        Log.w(TAG, "markRead failed: ${e.message}")
+                    }
+                }
+            }
             return
         }
 

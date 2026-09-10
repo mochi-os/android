@@ -12,6 +12,7 @@ import okhttp3.OkHttpClient
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.notifications.NotificationsRepository
+import org.mochios.android.websocket.MochiWebSocket
 
 /**
  * Hilt entry point for the push package: its classes are framework-instantiated
@@ -27,4 +28,5 @@ interface PushEntryPoint {
     fun notificationsRepository(): NotificationsRepository
     fun pushAccountStore(): PushAccountStore
     fun deviceStore(): DeviceStore
+    fun webSocket(): MochiWebSocket
 }

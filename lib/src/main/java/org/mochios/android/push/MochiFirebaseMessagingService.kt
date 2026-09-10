@@ -14,19 +14,26 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
+import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.mochios.android.notifications.NotificationsRepository
 
 /**
  * Receives FCM messages and posts the system notification on the app's channel.
  * The server sends the UnifiedPush envelope in `message.data`: `{app, link,
  * title, body, tag, id}`, so both transports share [notificationChannelFor].
  */
+@AndroidEntryPoint
 class MochiFirebaseMessagingService : FirebaseMessagingService() {
+
+    @Inject
+    lateinit var notificationsRepository: NotificationsRepository
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -69,6 +76,21 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         }
     }
 
+    /**
+     * Retire a row the user has already read on screen, so the web bell and
+     * their other devices stop announcing it. Best effort: the tray row is
+     * suppressed either way.
+     */
+    private fun markRead(id: String) {
+        scope.launch {
+            try {
+                notificationsRepository.markRead(id)
+            } catch (e: Exception) {
+                Log.w(TAG, "markRead failed: ${e.message}")
+            }
+        }
+    }
+
     private fun channelIdFor(app: String, link: String): String =
         notificationChannelFor(app, link)
 
@@ -84,8 +106,19 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         // The socket has already put this in front of the user; a tray row
         // would only repeat what they are reading. Checked before the nonce is
         // issued, so a suppressed notification does not spend one.
-        if (VisibleEntity.covers(link)) {
+        // A screen only covers a push while the socket behind it is up: the
+        // tray row is dropped on the promise that the content arrives live.
+        val webSocket = EntryPointAccessors
+            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+            .webSocket()
+        val cover = VisibleEntity.coverFor(link) { key -> webSocket.isLive(key) }
+        if (cover != VisibleEntity.Cover.NONE) {
             Log.i(TAG, "Entity is on screen; not posting")
+            // Only a screen that is the entity itself, a chat or a game, can
+            // say the user has read this; a feed being open cannot.
+            if (cover == VisibleEntity.Cover.READ && id.isNotEmpty()) {
+                markRead(id)
+            }
             return
         }
 

@@ -245,6 +245,30 @@ class MochiWebSocket @Inject constructor(
         }
     }
 
+    /**
+     * Whether [fingerprint] has a connected socket with someone listening on
+     * it, on any server this process holds.
+     *
+     * The push receivers ask before dropping a notification: a screen being on
+     * display only justifies suppressing the tray row if the socket behind it
+     * is up, otherwise the user is told nothing at all and the content never
+     * arrives.
+     *
+     * @param fingerprint the key the screen subscribed with, which is not
+     *   always the entity in the notification's link - chat and the games
+     *   subscribe with a record key, market with `market-thread-<id>`.
+     */
+    fun isLive(fingerprint: String): Boolean {
+        if (fingerprint.isEmpty()) return false
+        for (key in sockets.keys) {
+            if (key.substringAfterLast("::") != fingerprint) continue
+            if (!hasSubscribers(key)) continue
+            if (statuses[key]?.value != StreamWsStatus.CONNECTED) continue
+            return true
+        }
+        return false
+    }
+
     private fun hasSubscribers(key: String): Boolean =
         subscribers[key]?.isNotEmpty() == true || streamSubscribers[key]?.isNotEmpty() == true
 

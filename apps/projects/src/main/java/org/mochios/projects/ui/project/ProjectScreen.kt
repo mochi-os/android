@@ -155,7 +155,7 @@ fun ProjectScreen(
             LastViewedStore.set(context, PROJECTS_FEATURE, projectId)
         }
     }
-    VisibleEntityEffect("projects", projectId)
+    VisibleEntityEffect("projects", projectId, socketKey = projectId)
 
     val drawerItems = remember(listUiState.projects) {
         listViewModel.filteredProjects().map { project ->

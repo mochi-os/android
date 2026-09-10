@@ -155,7 +155,7 @@ fun CrmScreen(
             LastViewedStore.set(context, PROJECTS_FEATURE, crmId)
         }
     }
-    VisibleEntityEffect("crm", crmId)
+    VisibleEntityEffect("crm", crmId, socketKey = crmId)
 
     val drawerItems = remember(listUiState.crm) {
         listViewModel.filteredCrm().map { crm ->
