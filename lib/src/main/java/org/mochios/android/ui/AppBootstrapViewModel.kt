@@ -260,7 +260,7 @@ class AppBootstrapViewModel @Inject constructor(
         // failures say nothing, so keep the session, run on the cached JWT and
         // re-mint in the background - clearing on any failure logs the user out
         // on every offline launch.
-        val result = authRepository.fetchToken(appName)
+        val result = authRepository.fetchToken(appName, fresh = true)
         val failure = result.exceptionOrNull()
         if (failure is ApiException && failure.code == 401) {
             sessionManager.clearAll()
@@ -345,7 +345,7 @@ class AppBootstrapViewModel @Inject constructor(
             var wait = 5_000L
             while (true) {
                 delay(wait)
-                val result = authRepository.fetchToken(app)
+                val result = authRepository.fetchToken(app, fresh = true)
                 if (result.isSuccess) return@launch
                 val failure = result.exceptionOrNull()
                 if (failure is ApiException && failure.code == 401) {

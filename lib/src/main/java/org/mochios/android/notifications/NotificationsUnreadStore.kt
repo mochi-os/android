@@ -84,8 +84,9 @@ class NotificationsUnreadStore @Inject constructor(
         // The socket must carry a notifications-app token: delivery is scoped
         // by the SENDING app, so only a socket tagged with that app hears its
         // events. Subscribing with no token left the handshake with nothing to
-        // authenticate as, and the badge never heard a single event. Fetched
-        // fresh so a stale saved token does not 401 the handshake.
+        // authenticate as, and the badge never heard a single event. The
+        // repository answers the cached token while it is fresh; a 401 on the
+        // handshake clears it in StreamWebSocket, so the next subscribe mints.
         val token = authRepository.fetchToken("notifications").getOrNull()
             ?: sessionManager.getToken("notifications")
             ?: return

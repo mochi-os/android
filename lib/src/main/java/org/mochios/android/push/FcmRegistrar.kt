@@ -31,6 +31,13 @@ object FcmRegistrar {
 
     private const val TAG = "MochiFcmRegistrar"
 
+    /**
+     * How a registration ended. FRESH and REFUSED made no request: the memo
+     * answered. FAILED is transient (Firebase, network, a 5xx) and carries no
+     * memo, so the next configure tries again.
+     */
+    enum class Outcome { REGISTERED, FRESH, REFUSED, FAILED }
+
     data class FirebaseConfig(
         val projectId: String,
         val applicationId: String,
@@ -43,19 +50,19 @@ object FcmRegistrar {
         client: OkHttpClient,
         server: String,
         config: FirebaseConfig,
-    ): Boolean {
+    ): Outcome {
         val firebaseApp = try {
             initIfNeeded(context, config)
         } catch (e: Exception) {
             Log.w(TAG, "Firebase init failed: ${e.message}")
-            return false
+            return Outcome.FAILED
         }
 
         val token = try {
             FirebaseMessaging.getInstance().awaitToken()
         } catch (e: Exception) {
             Log.w(TAG, "FCM token fetch failed: ${e.message}")
-            return false
+            return Outcome.FAILED
         }
 
         return register(context, client, server, token)
@@ -71,19 +78,36 @@ object FcmRegistrar {
         client: OkHttpClient,
         server: String,
         token: String,
-    ): Boolean {
+    ): Outcome {
         val installId = try {
             FirebaseInstallations.getInstance().awaitId()
         } catch (e: Exception) {
             Log.w(TAG, "Firebase Installations ID fetch failed: ${e.message}")
-            return false
+            return Outcome.FAILED
         }
 
         val deps = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
+        // The memo: an unchanged token was registered on an earlier resume, or
+        // was refused and re-posting it would only be refused again.
+        val credential = RegistrationMemo.fingerprint(token, installId)
+        val store = RegistrationStore(context)
+        val now = System.currentTimeMillis()
+        when (RegistrationMemo.judge(now, server, PushTransport.TRANSPORT_FCM, credential, store.last(), store.refusal())) {
+            RegistrationMemo.Verdict.FRESH -> {
+                Log.i(TAG, "FCM token already registered; not re-posting")
+                return Outcome.FRESH
+            }
+            RegistrationMemo.Verdict.REFUSED -> {
+                Log.i(TAG, "FCM registration was refused recently; not retrying")
+                return Outcome.REFUSED
+            }
+            RegistrationMemo.Verdict.REGISTER -> {}
+        }
+
         return try {
-            val accountId = postRegisterFcm(
+            val answer = postRegisterFcm(
                 deps.authRepository(),
                 client,
                 server,
@@ -92,18 +116,35 @@ object FcmRegistrar {
                 label = DeviceName.resolve(context),
                 device = deps.deviceStore().id(),
             )
-            // Keep the account id: sign-out hands it to
-            // `/notifications/-/accounts/remove` so the server stops pushing to
-            // this device. Keyed by identity, matching the UnifiedPush path.
-            val identity = deps.sessionManager().getBoundIdentity().orEmpty()
-            if (accountId != null && identity.isNotBlank()) {
-                deps.pushAccountStore().store(identity, accountId)
+            val registration = Registration(server, PushTransport.TRANSPORT_FCM, credential, now)
+            when {
+                answer.accepted -> {
+                    // Keep the account id: sign-out hands it to
+                    // `/notifications/-/accounts/remove` so the server stops pushing to
+                    // this device. Keyed by identity, matching the UnifiedPush path.
+                    val identity = deps.sessionManager().getBoundIdentity().orEmpty()
+                    if (answer.account != null && identity.isNotBlank()) {
+                        deps.pushAccountStore().store(identity, answer.account)
+                    }
+                    store.success(registration)
+                    Log.i(TAG, "Registered FCM token")
+                    Outcome.REGISTERED
+                }
+                answer.refused -> {
+                    // Ours to fix, not to retry: an invalid token, or a wire
+                    // format this build no longer shares with the server.
+                    store.refuse(registration)
+                    Log.w(TAG, "/notifications/-/push/register/fcm refused ${answer.code}; not retrying for a day")
+                    Outcome.REFUSED
+                }
+                else -> {
+                    Log.w(TAG, "/notifications/-/push/register/fcm returned ${answer.code}")
+                    Outcome.FAILED
+                }
             }
-            Log.i(TAG, "Registered FCM token")
-            true
         } catch (e: Exception) {
             Log.w(TAG, "Posting FCM token to server failed: ${e.message}")
-            false
+            Outcome.FAILED
         }
     }
 
@@ -166,7 +207,7 @@ object FcmRegistrar {
                 .addOnFailureListener { cont.resumeWithException(it) }
         }
 
-    /** Returns the server-side push account id, or null if the response omits it. */
+    /** The status the server answered, with the push account id when it accepted. */
     private suspend fun postRegisterFcm(
         authRepository: AuthRepository,
         client: OkHttpClient,
@@ -175,7 +216,7 @@ object FcmRegistrar {
         installId: String,
         label: String,
         device: String,
-    ): String? {
+    ): Answer {
         val appToken = authRepository.fetchToken("notifications").getOrNull()
             ?: error("Could not mint notifications app token")
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
@@ -194,9 +235,9 @@ object FcmRegistrar {
             .post(body)
             .build()
         client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) error("/notifications/-/push/register/fcm returned ${resp.code}")
+            if (!resp.isSuccessful) return Answer(resp.code, null)
             val raw = resp.body?.string().orEmpty()
-            return try {
+            val account = try {
                 JSONObject(raw).optJSONObject("data")
                     ?.optString("id")
                     ?.takeIf { id -> id.isNotBlank() }
@@ -204,6 +245,7 @@ object FcmRegistrar {
                 Log.w(TAG, "Could not parse /notifications/-/push/register/fcm response")
                 null
             }
+            return Answer(resp.code, account)
         }
     }
 }

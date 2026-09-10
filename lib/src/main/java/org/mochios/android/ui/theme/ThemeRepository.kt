@@ -5,9 +5,8 @@
 
 package org.mochios.android.ui.theme
 
+import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.auth.TokenApi
-import org.mochios.android.auth.TokenRequest
 import org.mochios.android.i18n.PreferencesApi
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -20,7 +19,7 @@ import javax.inject.Singleton
 @Singleton
 class ThemeRepository @Inject internal constructor(
     private val sessionManager: SessionManager,
-    private val tokenApi: TokenApi,
+    private val authRepository: AuthRepository,
     private val api: PreferencesApi,
 ) {
 
@@ -31,9 +30,7 @@ class ThemeRepository @Inject internal constructor(
     suspend fun fetchAndCacheTheme() {
         try {
             // Get a settings app token
-            val tokenResponse = tokenApi.fetchToken(TokenRequest("settings"))
-            val tokenBody = tokenResponse.body() ?: return
-            val jwt = tokenBody.token
+            val jwt = authRepository.fetchToken("settings").getOrNull() ?: return
 
             // Fetch preferences with the settings token
             val response = api.getPreferences("Bearer $jwt")

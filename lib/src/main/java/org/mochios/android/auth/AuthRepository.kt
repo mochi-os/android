@@ -133,7 +133,20 @@ class AuthRepository @Inject constructor(
         return mapVerifyResponse(data)
     }
 
-    suspend fun fetchToken(app: String): Result<String> {
+    /**
+     * The app's JWT: the cached one while it has more than [Token.MARGIN] of
+     * life left, otherwise a fresh mint. [fresh] forces the mint - the
+     * bootstrap uses the mint's 401 as its session-liveness probe. A cached
+     * token the server has since rejected is cleared by the 401 handling on
+     * the request that carried it, so the next call here mints.
+     */
+    suspend fun fetchToken(app: String, fresh: Boolean = false): Result<String> {
+        if (!fresh) {
+            val cached = sessionManager.getToken(app)
+            if (cached != null && Token.fresh(cached, System.currentTimeMillis())) {
+                return Result.success(cached)
+            }
+        }
         return runCatching {
             val response = tokenApi.fetchToken(TokenRequest(app)).unwrapRaw()
             sessionManager.saveToken(app, response.token)

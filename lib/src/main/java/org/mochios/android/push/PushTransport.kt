@@ -101,7 +101,7 @@ object PushTransport {
                 }
 
                 TRANSPORT_UNIFIEDPUSH -> {
-                    startUnifiedPush(context, sessionManager)
+                    startUnifiedPush(context, sessionManager, dropFcm = true)
                     Log.i(TAG, "fetchSetup failed; honouring cached UnifiedPush transport")
                 }
 
@@ -117,26 +117,36 @@ object PushTransport {
         if (transport == TRANSPORT_FCM) {
             val configJson = setup.optJSONObject("firebase_config")
             val firebaseConfig = configJson?.let(::parseFirebaseConfig)
-            if (firebaseConfig != null && FcmRegistrar.connect(
-                    context,
-                    client,
-                    server,
-                    firebaseConfig
-                )
-            ) {
-                recordTransport(context, server, TRANSPORT_FCM)
-                // No UnifiedPush distributor, and no status notification, while
-                // on FCM.
-                runCatching { PushService.stop(context) }
-                return
+            val outcome = if (firebaseConfig == null) FcmRegistrar.Outcome.FAILED
+            else FcmRegistrar.connect(context, client, server, firebaseConfig)
+            when (outcome) {
+                FcmRegistrar.Outcome.REGISTERED, FcmRegistrar.Outcome.FRESH -> {
+                    recordTransport(context, server, TRANSPORT_FCM)
+                    // No UnifiedPush distributor, and no status notification, while
+                    // on FCM.
+                    runCatching { PushService.stop(context) }
+                    return
+                }
+                FcmRegistrar.Outcome.REFUSED -> {
+                    // The server wants FCM but declined this registration. Keep
+                    // the Firebase token - deleting it would also kill whatever
+                    // registration the server still holds - and take UnifiedPush
+                    // so pushes keep arriving; the memo keeps this from repeating
+                    // on every resume.
+                    Log.w(TAG, "FCM registration refused; falling back to UnifiedPush, keeping the FCM token")
+                    startUnifiedPush(context, sessionManager, dropFcm = false)
+                    recordTransport(context, server, TRANSPORT_UNIFIEDPUSH)
+                    return
+                }
+                FcmRegistrar.Outcome.FAILED ->
+                    Log.w(TAG, "FCM advertised but failed to connect; falling back to UnifiedPush")
             }
-            Log.w(TAG, "FCM advertised but failed to connect; falling back to UnifiedPush")
         }
 
         // UnifiedPush path: server explicitly said unifiedpush, OR server
         // said FCM but we couldn't connect to Firebase. Either way the
         // server confirmed its preference, so this is a real fallback.
-        startUnifiedPush(context, sessionManager)
+        startUnifiedPush(context, sessionManager, dropFcm = true)
         recordTransport(context, server, TRANSPORT_UNIFIEDPUSH)
     }
 
@@ -152,11 +162,17 @@ object PushTransport {
                 .onFailure { Log.w(TAG, "PushService.stop failed: ${it.message}") }
             runCatching { FcmRegistrar.disconnect(context) }
                 .onFailure { Log.w(TAG, "FcmRegistrar.disconnect failed: ${it.message}") }
+            // The next sign-in registers afresh whatever the memo held.
+            RegistrationStore(context).clear()
         }
     }
 
-    private suspend fun startUnifiedPush(context: Context, sessionManager: SessionManager) {
-        runCatching { FcmRegistrar.disconnect(context) }
+    private suspend fun startUnifiedPush(
+        context: Context,
+        sessionManager: SessionManager,
+        dropFcm: Boolean,
+    ) {
+        if (dropFcm) runCatching { FcmRegistrar.disconnect(context) }
         PushService.start(context)
         // MochiPushClient.register needs a stable instance; with no bound
         // identity yet, skip it - PushService is running and the next bootstrap
