@@ -80,7 +80,7 @@
     <string name="crm_design_tab_classes">Դասեր</string>
     <string name="crm_design_tab_views">Դիտումներ</string>
     <string name="crm_design_import_dialog_title">Ներմուծել ձևավորումը</string>
-    <string name="crm_design_import_choose_template">Ընտրեք լռելյայն ընդարձակվածի, կոմպակտ միայն-պատկերակի կամ լրիվ դասավորության ռեժիմների միջև</string>
+    <string name="crm_design_import_choose_template">Ընտրեք ձևանմուշ</string>
     <string name="crm_design_replace_title">Փոխարինե՞լ ձևավորումը։</string>
     <string name="crm_design_replace">Փոխարինել</string>
     <string name="crm_classes_add">Ավելացնել դաս</string>
