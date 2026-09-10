@@ -13,6 +13,8 @@ import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -30,6 +32,13 @@ import kotlin.coroutines.resumeWithException
 object FcmRegistrar {
 
     private const val TAG = "MochiFcmRegistrar"
+
+    // Serialises register() and remembers the last "server|token" that the
+    // server accepted; see the comment there.
+    private val registerMutex = Mutex()
+
+    @Volatile
+    private var registered: String? = null
 
     data class FirebaseConfig(
         val projectId: String,
@@ -71,12 +80,20 @@ object FcmRegistrar {
         client: OkHttpClient,
         server: String,
         token: String,
-    ): Boolean {
+    ): Boolean = registerMutex.withLock {
+        // Asking Firebase for a token mints one on first run, which fires
+        // onNewToken - so configure() and onNewToken both register the same
+        // token within milliseconds of each other. Serialise them and skip the
+        // second: the first has already told the server what it needs to know.
+        if (registered == "$server|$token") {
+            Log.i(TAG, "FCM token already registered; skipping")
+            return@withLock true
+        }
         val installId = try {
             FirebaseInstallations.getInstance().awaitId()
         } catch (e: Exception) {
             Log.w(TAG, "Firebase Installations ID fetch failed: ${e.message}")
-            return false
+            return@withLock false
         }
 
         val deps = EntryPointAccessors
@@ -99,6 +116,7 @@ object FcmRegistrar {
             if (accountId != null && identity.isNotBlank()) {
                 deps.pushAccountStore().store(identity, accountId)
             }
+            registered = "$server|$token"
             Log.i(TAG, "Registered FCM token")
             true
         } catch (e: Exception) {
@@ -194,7 +212,12 @@ object FcmRegistrar {
             .post(body)
             .build()
         client.newCall(request).execute().use { resp ->
-            if (!resp.isSuccessful) error("/notifications/-/push/register/fcm returned ${resp.code}")
+            if (!resp.isSuccessful) {
+                error(
+                    "/notifications/-/push/register/fcm returned ${resp.code}: " +
+                        resp.body?.string().orEmpty()
+                )
+            }
             val raw = resp.body?.string().orEmpty()
             return try {
                 JSONObject(raw).optJSONObject("data")
