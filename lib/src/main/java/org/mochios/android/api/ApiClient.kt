@@ -200,7 +200,7 @@ object ApiClient {
             val loggingInterceptor = HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BASIC
             }
-            builder.addInterceptor(loggingInterceptor)
+            builder.addNetworkInterceptor(loggingInterceptor)
         }
 
         return builder.build()
