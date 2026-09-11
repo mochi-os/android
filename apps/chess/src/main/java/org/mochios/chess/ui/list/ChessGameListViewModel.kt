@@ -61,6 +61,8 @@ class ChessGameListViewModel @Inject constructor(
     private val _events = MutableSharedFlow<ChessGameListEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<ChessGameListEvent> = _events.asSharedFlow()
 
+    private var resumedBefore = false
+
     init {
         viewModelScope.launch {
             val identity = sessionManager.getBoundIdentity()
@@ -79,6 +81,19 @@ class ChessGameListViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
+    }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one - back from a game or
+     * from another app - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
     }
 
     fun refresh() {

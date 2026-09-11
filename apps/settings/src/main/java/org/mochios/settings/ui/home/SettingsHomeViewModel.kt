@@ -33,7 +33,22 @@ class SettingsHomeViewModel @Inject constructor(
     private val _state = MutableStateFlow(SettingsHomeUiState())
     val state: StateFlow<SettingsHomeUiState> = _state.asStateFlow()
 
+    private var resumedBefore = false
+
     init { refresh() }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already fetching, so only a later one - a return to the home
+     * screen - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
+    }
 
     /** Re-fetched on every return to the home screen: a fetch that failed at
      *  start-up used to hide the System and Domains groups for the whole

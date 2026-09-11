@@ -54,7 +54,8 @@ data class FeedInfoResult(
  */
 data class FeedsInfoResult(
     val feeds: List<Feed>,
-    val hasAi: Boolean
+    val hasAi: Boolean,
+    val sort: String = "",
 )
 
 data class PostListResult(
@@ -159,7 +160,8 @@ class FeedsRepository @Inject constructor(
             val response = api.getInfo().unwrap()
             FeedsInfoResult(
                 feeds = response.feeds,
-                hasAi = response.hasAi
+                hasAi = response.hasAi,
+                sort = response.settings.sort,
             )
         } catch (e: Exception) {
             throw e.toMochiError()

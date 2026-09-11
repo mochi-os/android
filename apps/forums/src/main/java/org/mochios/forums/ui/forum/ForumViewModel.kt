@@ -112,6 +112,8 @@ class ForumViewModel @Inject constructor(
     /** The pending or in-flight list refresh; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
 
+    private var resumedBefore = false
+
     init {
         load()
         loadTags()
@@ -221,8 +223,17 @@ class ForumViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one - back from settings, say -
+     * refreshes.
+     */
     fun reloadOnForeground() {
         if (isAll || forumId.isBlank()) return
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
         refreshLatest()
     }
 

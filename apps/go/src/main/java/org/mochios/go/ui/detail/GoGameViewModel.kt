@@ -105,6 +105,8 @@ class GoGameViewModel @Inject constructor(
     /** The pending or in-flight messages fetch; cancelled when a newer one starts. */
     private var messagesJob: Job? = null
 
+    private var resumedBefore = false
+
     private val _state = MutableStateFlow(GoGameDetailUiState(isLoading = true))
     val state: StateFlow<GoGameDetailUiState> = _state.asStateFlow()
 
@@ -121,6 +123,20 @@ class GoGameViewModel @Inject constructor(
     // ------------------------------------------------------------------
     // Loading
     // ------------------------------------------------------------------
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already fetching, so only a later one - a return after frames
+     * may have been missed - refetches.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refreshGame()
+        refreshMessages()
+    }
 
     /**
      * Fetch the game now, cancelling any pending fetch. For the first load and

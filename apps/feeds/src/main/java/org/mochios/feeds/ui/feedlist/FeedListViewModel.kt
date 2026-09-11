@@ -68,9 +68,10 @@ class FeedListViewModel @Inject constructor(
     /** The pending or in-flight feeds fetch; cancelled when a newer one starts. */
     private var feedsJob: Job? = null
 
+    private var resumedBefore = false
+
     init {
         loadFeeds()
-        loadGlobalSort()
         observeSubscriptionChanges()
     }
 
@@ -80,16 +81,6 @@ class FeedListViewModel @Inject constructor(
         viewModelScope.launch {
             repository.subscriptionChanges.collect {
                 loadFeeds()
-            }
-        }
-    }
-
-    private fun loadGlobalSort() {
-        viewModelScope.launch {
-            try {
-                _currentSort.value = repository.getGlobalSort()
-            } catch (_: Exception) {
-                // Non-critical — leave as default.
             }
         }
     }
@@ -117,6 +108,9 @@ class FeedListViewModel @Inject constructor(
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
                 _hasAi.value = info.hasAi
+                if (info.sort.isNotEmpty()) {
+                    _currentSort.value = info.sort
+                }
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
                 ensureActive()
@@ -125,6 +119,19 @@ class FeedListViewModel @Inject constructor(
                 _isLoading.value = false
             }
         }
+    }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one - back from a feed, with
+     * unread counts to update - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
     }
 
     fun refresh() {

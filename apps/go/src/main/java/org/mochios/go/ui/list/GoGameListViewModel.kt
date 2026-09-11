@@ -54,6 +54,8 @@ class GoGameListViewModel @Inject constructor(
     private val _events = MutableSharedFlow<GoGameListEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<GoGameListEvent> = _events.asSharedFlow()
 
+    private var resumedBefore = false
+
     init {
         loadGames()
     }
@@ -76,6 +78,19 @@ class GoGameListViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one - back from a game or
+     * from another app - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
     }
 
     fun refresh() {

@@ -96,6 +96,8 @@ class ChessGameViewModel @Inject constructor(
     /** The pending or in-flight refresh; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
 
+    private var resumedBefore = false
+
     init {
         load()
     }
@@ -124,6 +126,19 @@ class ChessGameViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * [load] from init is already fetching, so only a later one - a return
+     * after frames may have been missed - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
     }
 
     /**

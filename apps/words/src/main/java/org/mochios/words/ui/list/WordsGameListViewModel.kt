@@ -36,6 +36,8 @@ class WordsGameListViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(WordsGameListUiState())
     val uiState: StateFlow<WordsGameListUiState> = _uiState.asStateFlow()
 
+    private var resumedBefore = false
+
     init {
         load()
         captureIdentity()
@@ -51,6 +53,19 @@ class WordsGameListViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
+    }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one - back from a game or
+     * from another app - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
     }
 
     fun refresh() {

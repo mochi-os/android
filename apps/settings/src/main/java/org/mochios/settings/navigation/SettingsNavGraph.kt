@@ -73,7 +73,7 @@ fun NavGraphBuilder.settingsNavGraph(
         val homeLifecycleOwner = LocalLifecycleOwner.current
         DisposableEffect(homeLifecycleOwner) {
             val observer = LifecycleEventObserver { _, event ->
-                if (event == Lifecycle.Event.ON_RESUME) homeViewModel.refresh()
+                if (event == Lifecycle.Event.ON_RESUME) homeViewModel.onScreenResumed()
             }
             homeLifecycleOwner.lifecycle.addObserver(observer)
             onDispose { homeLifecycleOwner.lifecycle.removeObserver(observer) }

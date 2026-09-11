@@ -117,12 +117,27 @@ class WordsGameViewModel @Inject constructor(
     /** The pending or in-flight messages fetch; cancelled when a newer one starts. */
     private var messagesJob: Job? = null
 
+    private var resumedBefore = false
+
     init {
         load()
         loadMessages()
     }
 
     // ─── Load / refresh ────────────────────────────────────────────────
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one - a return after frames
+     * may have been missed - refreshes.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
+        refresh()
+    }
 
     /**
      * Fetch the game now and reset in-progress local state, cancelling any
