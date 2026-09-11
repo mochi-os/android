@@ -82,6 +82,23 @@ internal fun postDetail(response: PostDetailResponse): PostDetailResult =
         permissions = response.permissions,
     )
 
+/**
+ * A post edit's attachment order: one part per item, which every feeds server
+ * reads. An empty list - every attachment removed - is sent as "[]", since no
+ * parts at all would read as "leave the attachments alone"; a server from 6.129
+ * reads it as an empty order and an older one as an unknown id, and both then
+ * remove every attachment. A JSON array of ids would read as one unknown id to
+ * an older server and delete them all. Null sends no order, which leaves the
+ * post's attachments as they are.
+ */
+internal fun addEditOrder(builder: MultipartBody.Builder, order: List<String>?) {
+    when {
+        order == null -> {}
+        order.isEmpty() -> builder.addFormDataPart("order", "[]")
+        else -> order.forEach { builder.addFormDataPart("order", it) }
+    }
+}
+
 data class ProbeResult(
     val feed: Feed?,
     val type: String
@@ -521,7 +538,8 @@ class FeedsRepository @Inject constructor(
         feedId: String,
         postId: String,
         body: String,
-        order: List<String>,
+        // Null leaves the post's attachments untouched.
+        order: List<String>?,
         newFiles: List<Uri>,
         context: Context,
         // Caption edits keyed by attachment id or "new:N" placeholder.
@@ -552,9 +570,7 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("data", Gson().toJson(data))
             }
 
-            for (item in order) {
-                builder.addFormDataPart("order", item)
-            }
+            addEditOrder(builder, order)
 
             for (file in files) {
                 builder.addPart(fileStore.filePart("files", file))
