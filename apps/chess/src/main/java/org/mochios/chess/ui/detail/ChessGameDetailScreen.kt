@@ -641,7 +641,8 @@ private fun drawBanner(
     // so a resignation would otherwise keep offering a draw nobody can take —
     // Accept came back "Game is not active".
     if (game.status != "active") return null
-    val drawOffer = game.drawOffer ?: return null
+    val drawOffer = game.drawOffer
+    if (drawOffer.isNullOrEmpty()) return null
     return {
         Surface(
             shape = RoundedCornerShape(8.dp),
