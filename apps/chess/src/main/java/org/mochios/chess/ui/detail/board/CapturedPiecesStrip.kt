@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -41,6 +42,8 @@ private val CAPTURED_ORDER = listOf(
     PieceType.ROOK,
     PieceType.QUEEN,
 )
+
+private val STRIP_TEXT = Color(0xFF111827)
 
 private val STARTING_COUNTS: Map<PieceType, Int> = mapOf(
     PieceType.PAWN to 8,
@@ -100,7 +103,9 @@ fun capturedPiecesFromFen(fen: String): Pair<List<CapturedPiece>, List<CapturedP
 /**
  * Row of captured-piece glyphs with `×N` suffixes, in the colour of the pieces
  * taken (the opponent of [capturedByColor]). Renders a `--` placeholder when
- * empty so the strip's height never jumps.
+ * empty so the strip's height never jumps. The pieces sit on the board square
+ * colour they contrast with - white on the dark square, black on the light -
+ * since the glyphs carry no outline and a theme surface can match either.
  */
 @Composable
 fun CapturedPiecesStrip(
@@ -108,16 +113,16 @@ fun CapturedPiecesStrip(
     pieces: List<CapturedPiece>,
     modifier: Modifier = Modifier,
 ) {
-    // Border + subtle background mirror the web's bg-gradient styling.
     val border = MaterialTheme.colorScheme.outline.copy(alpha = 0.4f)
     val capturedPieceSide = if (capturedByColor == 'w') Side.BLACK else Side.WHITE
+    val background = if (capturedPieceSide == Side.WHITE) DARK_SQUARE else LIGHT_SQUARE
 
     Box(
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 32.dp)
             .clip(RoundedCornerShape(16.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f))
+            .background(background)
             .border(width = 1.dp, color = border, shape = RoundedCornerShape(16.dp))
             .padding(horizontal = 8.dp, vertical = 4.dp),
         contentAlignment = Alignment.Center,
@@ -126,7 +131,7 @@ fun CapturedPiecesStrip(
             Text(
                 text = "--",
                 style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
-                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
+                color = STRIP_TEXT.copy(alpha = 0.5f),
             )
         } else {
             Row(
@@ -162,7 +167,7 @@ private fun CapturedPieceCell(side: Side, entry: CapturedPiece) {
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Medium,
                 ),
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = STRIP_TEXT,
             )
         }
     }

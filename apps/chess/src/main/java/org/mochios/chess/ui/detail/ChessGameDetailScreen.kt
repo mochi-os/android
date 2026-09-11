@@ -519,7 +519,7 @@ private fun BoardPane(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
-                .padding(horizontal = 8.dp),
+                .padding(horizontal = 16.dp),
             contentAlignment = Alignment.TopCenter,
         ) {
             Column(modifier = Modifier.widthIn(max = BOARD_MAX_WIDTH)) {
@@ -528,7 +528,7 @@ private fun BoardPane(
                     capturedByColor = myColor,
                     pieces = capturedByMe,
                 )
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
                 ChessBoard(
                     fen = game.fen,
@@ -540,7 +540,7 @@ private fun BoardPane(
                     modifier = Modifier.fillMaxWidth(),
                 )
 
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
                 // My captures (= pieces opponent has taken) below — symmetric
                 // with the top strip so the visual hierarchy stays consistent

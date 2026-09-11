@@ -44,8 +44,8 @@ import org.mochios.chess.engine.loadPosition
 // Web tokens — `--chess-sq-light` / `--chess-sq-dark`. Inlined here because
 // the Android theme system doesn't carry app-specific tokens yet; matches the
 // values in `apps/chess/web/src/themes/chess.css`.
-private val LIGHT_SQUARE = Color(0xFFF0D9B5)
-private val DARK_SQUARE = Color(0xFFB58863)
+internal val LIGHT_SQUARE = Color(0xFFF0D9B5)
+internal val DARK_SQUARE = Color(0xFFB58863)
 private val LAST_MOVE_HIGHLIGHT = Color(0x55FACC15) // yellow-400 / 33%
 private val CHECK_HIGHLIGHT = Color(0xCCEF4444) // red-500 / 80%
 private val LEGAL_TARGET_DOT = Color(0x66059669) // emerald-600 / 40%
