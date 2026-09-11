@@ -14,6 +14,9 @@ import com.github.bhlangonijr.chesslib.Square
 import com.github.bhlangonijr.chesslib.move.Move
 import com.github.bhlangonijr.chesslib.move.MoveList
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -24,6 +27,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.mergeMessages
 import org.mochios.chess.engine.isDrawnPosition
 import org.mochios.chess.model.Game
@@ -89,6 +93,9 @@ class ChessGameViewModel @Inject constructor(
     private val _events = MutableSharedFlow<ChessGameEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<ChessGameEvent> = _events.asSharedFlow()
 
+    /** The pending or in-flight refresh; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
+
     init {
         load()
     }
@@ -119,8 +126,16 @@ class ChessGameViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Refetch the game and messages. Each call cancels the previous refresh
+     * and waits [REFRESH_DEBOUNCE] first, so a burst of websocket frames and
+     * action results - our own move's echo lands with the move's response -
+     * makes one fetch, and only the latest one updates the board.
+     */
     fun refresh() {
-        viewModelScope.launch {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val view = repo.getGame(gameId)
@@ -143,6 +158,7 @@ class ChessGameViewModel @Inject constructor(
                     error = null,
                 )
             } catch (e: Exception) {
+                ensureActive()
                 _uiState.value = _uiState.value.copy(
                     isRefreshing = false,
                     error = e.toMochiError(),
@@ -445,4 +461,3 @@ class ChessGameViewModel @Inject constructor(
         return existing + sep + prefix
     }
 }
-

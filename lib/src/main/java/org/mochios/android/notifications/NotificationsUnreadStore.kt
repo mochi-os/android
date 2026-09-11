@@ -11,7 +11,11 @@ import androidx.core.app.NotificationManagerCompat
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,6 +24,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -45,6 +50,9 @@ class NotificationsUnreadStore @Inject constructor(
     private var subscriptionId: String? = null
     private var connectionId: String? = null
     private var started = false
+
+    /** The pending or in-flight socket refresh; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
 
     fun ensureStarted() {
         if (started) return
@@ -74,7 +82,24 @@ class NotificationsUnreadStore @Inject constructor(
         try {
             _count.value = repository.count().count
         } catch (e: Exception) {
+            currentCoroutineContext().ensureActive()
             Log.w(TAG, "refresh failed: ${e.message}")
+        }
+    }
+
+    /**
+     * Refresh for a socket event. Each call cancels the previous one and waits
+     * [REFRESH_DEBOUNCE] first: one notification arrives as a burst of frames
+     * (`new`, then `clear_object` and `read` once it is marked), and only the
+     * latest fetches.
+     */
+    private fun refreshLatest() {
+        synchronized(this) {
+            refreshJob?.cancel()
+            refreshJob = scope.launch {
+                delay(REFRESH_DEBOUNCE)
+                refresh()
+            }
         }
     }
 
@@ -94,21 +119,21 @@ class NotificationsUnreadStore @Inject constructor(
         // MainActivity's onResume forces the reconnect on a foreground return,
         // which makes this the foreground refresh as well.
         connectionId = webSocket.subscribeConnected(server, "notifications") {
-            scope.launch { refresh() }
+            refreshLatest()
         }
         subscriptionId = webSocket.subscribe(server, "notifications", token) { event ->
             when (event.type) {
-                "new" -> scope.launch { refresh() }
+                "new" -> refreshLatest()
                 "read" -> {
-                    scope.launch { refresh() }
+                    refreshLatest()
                     cancelSystemNotification(event)
                 }
                 "clear_object" -> {
-                    scope.launch { refresh() }
+                    refreshLatest()
                     cancelSystemNotificationsForObject(event)
                 }
                 "read_all", "clear_all" -> {
-                    scope.launch { refresh() }
+                    refreshLatest()
                     cancelAllSystemNotifications()
                 }
             }

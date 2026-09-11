@@ -15,3 +15,11 @@ import kotlin.time.Duration.Companion.milliseconds
  * overwrites newer.
  */
 val SEARCH_DEBOUNCE: Duration = 300.milliseconds
+
+/**
+ * How long a refresh asked for by a socket frame or an action's result waits
+ * before fetching. Frames come in bursts - our own action's echo lands with the
+ * action's response - so cancel the previous refresh job and delay by this,
+ * and the burst makes one request.
+ */
+val REFRESH_DEBOUNCE: Duration = 200.milliseconds
