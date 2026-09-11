@@ -194,7 +194,7 @@ fun BoardCard(
             // Card has a default border); the border-field colour overrides the
             // default subtle outline when one is set.
             .border(
-                1.dp,
+                2.dp,
                 borderColor ?: MaterialTheme.colorScheme.outlineVariant,
                 MaterialTheme.shapes.small,
             )
