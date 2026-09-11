@@ -113,8 +113,6 @@ class PreferencesManager @Inject internal constructor(
             return
         }
         val body = resp.body() ?: return
-        val raw = body.preferences ?: return
-        rawPrefs = raw
         themes = (body.themes ?: emptyList()).mapNotNull { t ->
             val id = t.id ?: return@mapNotNull null
             val hue = t.hue?.toFloat() ?: return@mapNotNull null
@@ -124,6 +122,8 @@ class PreferencesManager @Inject internal constructor(
             ThemeInfo(id = id, label = label, hue = hue, chroma = chroma, hueBg = hueBg)
         }
         defaultThemeId = body.default_theme
+        val raw = body.preferences ?: return
+        rawPrefs = raw
         _preferences.value = resolveAuto(raw)
 
         // Mirror the server's language onto the boot-time store and apply it to

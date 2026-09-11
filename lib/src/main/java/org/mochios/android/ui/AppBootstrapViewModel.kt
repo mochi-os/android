@@ -297,10 +297,11 @@ class AppBootstrapViewModel @Inject constructor(
         // shares it.
         runCatching { publishAccount(identityInfo?.identity) }
 
-        // Theme + preferences are best-effort warm-ups.
+        // Theme + preferences are best-effort warm-ups. One preferences fetch
+        // serves both: the theme is resolved from what the refresh stored.
         if (!unreachable) {
-            runCatching { themeRepository.fetchAndCacheTheme() }
             runCatching { preferencesManager.refresh() }
+            runCatching { themeRepository.cacheActiveTheme() }
         }
 
         // Language is fetched only after a fresh authentication. Returning
