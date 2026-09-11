@@ -11,6 +11,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -18,6 +21,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -87,6 +91,9 @@ class PostDetailViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
 
+    /** The pending or in-flight post fetch; cancelled when a newer one starts. */
+    private var postJob: Job? = null
+
     init {
         loadPost()
         subscribeToWebSocket()
@@ -94,7 +101,8 @@ class PostDetailViewModel @Inject constructor(
     }
 
     fun loadPost() {
-        viewModelScope.launch {
+        postJob?.cancel()
+        postJob = viewModelScope.launch {
             _isLoading.value = true
             _error.value = null
             _isNotFound.value = false
@@ -104,12 +112,27 @@ class PostDetailViewModel @Inject constructor(
                 _permissions.value = result.permissions
                 loadTags()
             } catch (e: Exception) {
+                ensureActive()
                 val err = e.toMochiError()
                 _error.value = err
                 if (err is MochiError.NotFoundError) _isNotFound.value = true
             } finally {
                 _isLoading.value = false
             }
+        }
+    }
+
+    /**
+     * Refetch the post in the background, without the spinner: socket frames
+     * and our own actions. Cancels the pending fetch and waits
+     * [REFRESH_DEBOUNCE] first, so an action and its echo frame make one
+     * fetch.
+     */
+    private fun refreshPost() {
+        postJob?.cancel()
+        postJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshSilently()
         }
     }
 
@@ -122,7 +145,7 @@ class PostDetailViewModel @Inject constructor(
                     post.copy(myReaction = newReaction)
                 }
             } catch (_: Exception) {
-                loadPost()
+                refreshPost()
             }
         }
     }
@@ -167,7 +190,7 @@ class PostDetailViewModel @Inject constructor(
                 _commentText.value = ""
                 _commentAttachments.value = emptyList()
                 _replyingTo.value = null
-                loadPost()
+                refreshPost()
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
             } finally {
@@ -201,7 +224,7 @@ class PostDetailViewModel @Inject constructor(
                 repository.editComment(feedId, postId, commentId, body)
                 _editingCommentId.value = null
                 _editCommentText.value = ""
-                loadPost()
+                refreshPost()
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
             }
@@ -213,7 +236,7 @@ class PostDetailViewModel @Inject constructor(
             _actionError.value = null
             try {
                 repository.deleteComment(feedId, postId, commentId)
-                loadPost()
+                refreshPost()
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
             }
@@ -224,7 +247,7 @@ class PostDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reactToComment(feedId, postId, commentId, reaction)
-                loadPost()
+                refreshPost()
             } catch (_: Exception) {
                 // Silent failure for reactions
             }
@@ -237,7 +260,7 @@ class PostDetailViewModel @Inject constructor(
             try {
                 repository.addTag(feedId, postId, label, qid)
                 loadTags()
-                loadPost()
+                refreshPost()
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
             }
@@ -250,7 +273,7 @@ class PostDetailViewModel @Inject constructor(
             try {
                 repository.removeTag(feedId, postId, id)
                 loadTags()
-                loadPost()
+                refreshPost()
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
             }
@@ -341,7 +364,7 @@ class PostDetailViewModel @Inject constructor(
                     "comment/create", "comment/delete", "comment/edit",
                     "react/post", "react/comment", "post/edit",
                     "tag/add", "tag/remove" -> {
-                        viewModelScope.launch { refreshSilently() }
+                        refreshPost()
                     }
                 }
             }

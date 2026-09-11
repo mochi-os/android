@@ -9,6 +9,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -20,6 +23,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.api.ForumTagCount
@@ -105,6 +109,9 @@ class ForumViewModel @Inject constructor(
      *  [observeRefreshRequests]. Cleared as soon as the post lands in the list. */
     private var awaitingOwnPost = false
 
+    /** The pending or in-flight list refresh; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
+
     init {
         load()
         loadTags()
@@ -123,7 +130,7 @@ class ForumViewModel @Inject constructor(
             repository.postCreated.collect { postedForum ->
                 if (isAll || postedForum == forumId || postedForum == uiState.value.forum.id) {
                     awaitingOwnPost = true
-                    refreshSilently()
+                    refreshLatest()
                 }
             }
         }
@@ -155,13 +162,27 @@ class ForumViewModel @Inject constructor(
                 // tap. It arrives here when the create response beat the list
                 // query — pull it in rather than counting it.
                 if (awaitingOwnPost) {
-                    viewModelScope.launch { refreshSilently() }
+                    refreshLatest()
                 } else {
                     _newPostsCount.value += 1
                 }
             } else {
-                viewModelScope.launch { refreshSilently() }
+                refreshLatest()
             }
+        }
+    }
+
+    /**
+     * [refreshSilently] in the background after [REFRESH_DEBOUNCE], cancelling
+     * the pending refresh, so a burst of frames - our own post or vote's echo
+     * lands with its response - makes one fetch, and only the latest one
+     * updates the list.
+     */
+    private fun refreshLatest() {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshSilently()
         }
     }
 
@@ -194,12 +215,15 @@ class ForumViewModel @Inject constructor(
     /** Reveal the queued new posts: refresh the list and clear the pill. The
      *  screen also scrolls to the top when this is invoked. */
     fun showNewPosts() {
-        viewModelScope.launch { refreshSilently() }
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            refreshSilently()
+        }
     }
 
     fun reloadOnForeground() {
         if (isAll || forumId.isBlank()) return
-        viewModelScope.launch { refreshSilently() }
+        refreshLatest()
     }
 
     override fun onCleared() {
@@ -238,7 +262,8 @@ class ForumViewModel @Inject constructor(
             loadAll(_uiState.value.sort.ifEmpty { null }, refreshing = true)
             return
         }
-        viewModelScope.launch {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val r = repository.viewForum(forumId, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
@@ -253,6 +278,7 @@ class ForumViewModel @Inject constructor(
                     error = null
                 )
             } catch (e: Exception) {
+                ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
             }
         }
@@ -369,7 +395,11 @@ class ForumViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.votePost(targetForum, postId, vote)
-                refresh()
+                if (isAll) {
+                    refresh()
+                } else {
+                    refreshLatest()
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

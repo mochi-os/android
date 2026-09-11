@@ -25,6 +25,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.MentionSuggestion
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
@@ -190,6 +191,9 @@ class FeedViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
     private var markReadJob: Job? = null
+
+    /** The pending or in-flight socket refresh; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
     private val pendingReadIds = mutableSetOf<String>()
 
     // Set by the first reloadOnForeground call; see the guard there.
@@ -982,9 +986,22 @@ class FeedViewModel @Inject constructor(
                 "post/edit", "post/delete",
                 "comment/create", "comment/edit", "comment/delete",
                 "react/post", "react/comment", "tag/add", "tag/remove" -> {
-                    viewModelScope.launch { refreshSilently() }
+                    refreshLatest()
                 }
             }
+        }
+    }
+
+    /**
+     * [refreshSilently] for a socket frame. Cancels the pending refresh and
+     * waits [REFRESH_DEBOUNCE] first, so a burst of frames - a comment and its
+     * reactions, or our own action's echo - makes one fetch.
+     */
+    private fun refreshLatest() {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshSilently()
         }
     }
 
@@ -1011,7 +1028,10 @@ class FeedViewModel @Inject constructor(
     /** Reveal the queued new posts: refresh the list and clear the pill. The
      *  screen also scrolls the pager to the top when this is invoked. */
     fun showNewPosts() {
-        viewModelScope.launch { refreshSilently() }
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            refreshSilently()
+        }
     }
 
     /**

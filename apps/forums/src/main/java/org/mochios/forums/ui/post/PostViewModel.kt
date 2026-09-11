@@ -10,6 +10,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,6 +20,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumComment
@@ -63,6 +67,9 @@ class PostViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
 
+    /** The pending or in-flight [refresh]; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
+
     init {
         viewModelScope.launch {
             val id = sessionManager.getBoundIdentity().orEmpty()
@@ -78,16 +85,7 @@ class PostViewModel @Inject constructor(
             forumKey,
             app = "forums",
         ) { _ ->
-            viewModelScope.launch {
-                try {
-                    val r = repository.viewPost(forumId, postId)
-                    _uiState.value = _uiState.value.copy(
-                        forum = r.forum,
-                        post = r.post,
-                        comments = r.comments,
-                    )
-                } catch (_: Exception) {}
-            }
+            refresh()
         }
     }
 
@@ -117,8 +115,16 @@ class PostViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Refetch the post and its comments. Each call cancels the previous
+     * refresh and waits [REFRESH_DEBOUNCE] first, so a burst of forum frames -
+     * our own action's echo lands with the action's response - makes one
+     * fetch, and only the latest one updates the post.
+     */
     fun refresh() {
-        viewModelScope.launch {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val r = repository.viewPost(forumId, postId)
@@ -133,6 +139,7 @@ class PostViewModel @Inject constructor(
                     error = null
                 )
             } catch (e: Exception) {
+                ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
             }
         }

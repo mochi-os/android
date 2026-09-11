@@ -11,6 +11,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -20,6 +23,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.mergeMessage
 import org.mochios.go.engine.GoGame
 import org.mochios.go.engine.IllegalMoveException
@@ -98,6 +102,9 @@ class GoGameViewModel @Inject constructor(
     /** The in-flight game fetch; cancelled when a newer one starts. */
     private var loadJob: Job? = null
 
+    /** The pending or in-flight messages fetch; cancelled when a newer one starts. */
+    private var messagesJob: Job? = null
+
     private val _state = MutableStateFlow(GoGameDetailUiState(isLoading = true))
     val state: StateFlow<GoGameDetailUiState> = _state.asStateFlow()
 
@@ -116,76 +123,115 @@ class GoGameViewModel @Inject constructor(
     // ------------------------------------------------------------------
 
     /**
-     * Refetch the game. Several callers can overlap; cancelling the previous
-     * fetch keeps them ordered so a slower earlier response cannot put a stale
-     * position back on the board.
+     * Fetch the game now, cancelling any pending fetch. For the first load and
+     * a retry, where the user is waiting.
      */
     fun loadGame() {
         loadJob?.cancel()
         loadJob = viewModelScope.launch {
+            fetchGame()
+        }
+    }
+
+    /**
+     * Refetch the game in the background: socket frames, action results and a
+     * return to the screen. Cancels the previous fetch, so a slower earlier
+     * response cannot put a stale position back on the board, and waits
+     * [REFRESH_DEBOUNCE] first, so a request right behind - our own move's
+     * echo lands with the move's response - cancels this one before it is sent.
+     */
+    private fun refreshGame() {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            fetchGame()
+        }
+    }
+
+    private suspend fun fetchGame() {
+        _state.update {
+            it.copy(
+                isLoading = it.game == null,
+                isRefreshing = it.game != null,
+                error = null,
+            )
+        }
+        try {
+            val response = repository.getGame(gameId)
+            val game = response.game
+            val goGame = parseGame(game)
+            val myIdentity = response.identity.ifBlank { game.identity }
+            val myColor = colorFor(game, myIdentity)
+            val isMyTurn = game.status == "active" && goGame != null && goGame.turn == myColor
+            val score = if (game.status == "finished" && goGame != null) {
+                goGame.score(game.komi)
+            } else null
             _state.update {
                 it.copy(
-                    isLoading = it.game == null,
-                    isRefreshing = it.game != null,
+                    isLoading = false,
+                    isRefreshing = false,
+                    game = game,
+                    goGame = goGame,
+                    myIdentity = myIdentity,
+                    isMyTurn = isMyTurn,
+                    score = score,
                     error = null,
                 )
             }
-            try {
-                val response = repository.getGame(gameId)
-                val game = response.game
-                val goGame = parseGame(game)
-                val myIdentity = response.identity.ifBlank { game.identity }
-                val myColor = colorFor(game, myIdentity)
-                val isMyTurn = game.status == "active" && goGame != null && goGame.turn == myColor
-                val score = if (game.status == "finished" && goGame != null) {
-                    goGame.score(game.komi)
-                } else null
-                _state.update {
-                    it.copy(
-                        isLoading = false,
-                        isRefreshing = false,
-                        game = game,
-                        goGame = goGame,
-                        myIdentity = myIdentity,
-                        isMyTurn = isMyTurn,
-                        score = score,
-                        error = null,
-                    )
-                }
-            } catch (e: Exception) {
-                _state.update {
-                    it.copy(
-                        isLoading = false,
-                        isRefreshing = false,
-                        error = e.toMochiError(),
-                    )
-                }
+        } catch (e: Exception) {
+            currentCoroutineContext().ensureActive()
+            _state.update {
+                it.copy(
+                    isLoading = false,
+                    isRefreshing = false,
+                    error = e.toMochiError(),
+                )
             }
         }
     }
 
+    /** Fetch the first page of messages now, cancelling any pending fetch. */
     fun loadMessages() {
-        viewModelScope.launch {
-            _state.update { it.copy(isLoadingMessages = true, messagesError = null) }
-            try {
-                val response = repository.getMessages(gameId)
-                // The endpoint answers oldest-first; sort rather than trust it,
-                // as chess does.
-                _state.update {
-                    it.copy(
-                        isLoadingMessages = false,
-                        messages = response.messages.sortedBy { message -> message.created },
-                        hasMoreMessages = response.more == true,
-                        nextMessageCursor = response.cursor,
-                    )
-                }
-            } catch (e: Exception) {
-                _state.update {
-                    it.copy(
-                        isLoadingMessages = false,
-                        messagesError = e.toMochiError(),
-                    )
-                }
+        messagesJob?.cancel()
+        messagesJob = viewModelScope.launch {
+            fetchMessages()
+        }
+    }
+
+    /**
+     * Refetch the first page of messages in the background, after
+     * [REFRESH_DEBOUNCE], cancelling the previous fetch the way [refreshGame]
+     * does.
+     */
+    private fun refreshMessages() {
+        messagesJob?.cancel()
+        messagesJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            fetchMessages()
+        }
+    }
+
+    private suspend fun fetchMessages() {
+        _state.update { it.copy(isLoadingMessages = true, messagesError = null) }
+        try {
+            val response = repository.getMessages(gameId)
+            // The endpoint answers oldest-first; sort rather than trust it,
+            // as chess does.
+            _state.update {
+                it.copy(
+                    isLoadingMessages = false,
+                    messages = response.messages.sortedBy { message -> message.created },
+                    hasMoreMessages = response.more == true,
+                    nextMessageCursor = response.cursor,
+                )
+            }
+        } catch (e: Exception) {
+            currentCoroutineContext().ensureActive()
+            _state.update {
+                it.copy(
+                    isLoadingMessages = false,
+                    messagesError = e.toMochiError(),
+                )
             }
         }
     }
@@ -280,18 +326,18 @@ class GoGameViewModel @Inject constructor(
                 _state.update { it.copy(isMoving = false) }
                 // Re-fetch so server-side capture / ko bookkeeping replaces
                 // our optimistic state.
-                loadGame()
+                refreshGame()
                 // Refresh the log so our own move row appears at once. The
                 // server echoes our own frame too, so this races the echo; the
                 // content-keyed merge keeps the row from appearing twice.
-                loadMessages()
+                refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isMoving = false) }
                 _events.tryEmit(
                     GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedMoveMessage)),
                 )
                 // Roll back to the server's state on failure.
-                loadGame()
+                refreshGame()
             }
         }
     }
@@ -342,10 +388,10 @@ class GoGameViewModel @Inject constructor(
                     ),
                 )
                 _state.update { it.copy(isPassing = false) }
-                loadGame()
+                refreshGame()
                 // As in place(): our own frame is echoed back, so this races it
                 // and the content-keyed merge deduplicates the result.
-                loadMessages()
+                refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isPassing = false) }
                 _events.tryEmit(
@@ -367,7 +413,7 @@ class GoGameViewModel @Inject constructor(
                 // The websocket will deliver the new message back to us
                 // and the panel will append it. As a fallback for offline
                 // websockets, refresh the message list explicitly.
-                loadMessages()
+                refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isSendingMessage = false) }
                 _events.tryEmit(
@@ -384,8 +430,8 @@ class GoGameViewModel @Inject constructor(
             try {
                 repository.resign(gameId)
                 _state.update { it.copy(isResigning = false) }
-                loadGame()
-                loadMessages()
+                refreshGame()
+                refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isResigning = false) }
                 _events.tryEmit(
@@ -402,7 +448,7 @@ class GoGameViewModel @Inject constructor(
             try {
                 repository.drawOffer(gameId)
                 _state.update { it.copy(isDrawOffering = false) }
-                loadGame()
+                refreshGame()
             } catch (e: Exception) {
                 _state.update { it.copy(isDrawOffering = false) }
                 _events.tryEmit(
@@ -419,8 +465,8 @@ class GoGameViewModel @Inject constructor(
             try {
                 repository.drawAccept(gameId)
                 _state.update { it.copy(isDrawAccepting = false) }
-                loadGame()
-                loadMessages()
+                refreshGame()
+                refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isDrawAccepting = false) }
                 _events.tryEmit(
@@ -437,8 +483,8 @@ class GoGameViewModel @Inject constructor(
             try {
                 repository.drawDecline(gameId)
                 _state.update { it.copy(isDrawDeclining = false) }
-                loadGame()
-                loadMessages()
+                refreshGame()
+                refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isDrawDeclining = false) }
                 _events.tryEmit(
@@ -526,7 +572,7 @@ class GoGameViewModel @Inject constructor(
         // ignoring it left the board showing what the repair replaced, with
         // no pull-to-refresh on this screen to escape it.
         if (rawType == "move" || rawType == "system" || rawType == "state") {
-            loadGame()
+            refreshGame()
         }
     }
 

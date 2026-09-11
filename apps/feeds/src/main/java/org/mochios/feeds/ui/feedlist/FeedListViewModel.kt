@@ -8,6 +8,9 @@ package org.mochios.feeds.ui.feedlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -16,6 +19,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
@@ -58,6 +62,12 @@ class FeedListViewModel @Inject constructor(
 
     private val subscriptionIds = mutableListOf<String>()
 
+    /** The feed keys [subscriptionIds] cover, so an unchanged list keeps its sockets. */
+    private var subscribedKeys: Set<String> = emptySet()
+
+    /** The pending or in-flight feeds fetch; cancelled when a newer one starts. */
+    private var feedsJob: Job? = null
+
     init {
         loadFeeds()
         loadGlobalSort()
@@ -97,7 +107,8 @@ class FeedListViewModel @Inject constructor(
     }
 
     fun loadFeeds() {
-        viewModelScope.launch {
+        feedsJob?.cancel()
+        feedsJob = viewModelScope.launch {
             _isLoading.value = true
             _error.value = null
             try {
@@ -108,6 +119,7 @@ class FeedListViewModel @Inject constructor(
                 _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
+                ensureActive()
                 _error.value = e.toMochiError()
             } finally {
                 _isLoading.value = false
@@ -116,7 +128,8 @@ class FeedListViewModel @Inject constructor(
     }
 
     fun refresh() {
-        viewModelScope.launch {
+        feedsJob?.cancel()
+        feedsJob = viewModelScope.launch {
             _isRefreshing.value = true
             try {
                 val info = repository.getFeedsInfo()
@@ -126,6 +139,7 @@ class FeedListViewModel @Inject constructor(
                 _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
             } catch (e: Exception) {
+                ensureActive()
                 _error.value = e.toMochiError()
             } finally {
                 _isRefreshing.value = false
@@ -186,7 +200,14 @@ class FeedListViewModel @Inject constructor(
     }
 
     private fun subscribeToWebSockets(feedList: List<Feed>) {
+        val keys = feedList.map { feed -> feed.fingerprint }
+            .filter { key -> key.isNotEmpty() }
+            .toSet()
+        if (keys == subscribedKeys) {
+            return
+        }
         unsubscribeAll()
+        subscribedKeys = keys
         val serverUrl = sessionManager.getServerUrlBlocking()
         for (feed in feedList) {
             if (feed.fingerprint.isNotEmpty()) {
@@ -199,7 +220,7 @@ class FeedListViewModel @Inject constructor(
                     // hook + handlers); the old underscore names never matched.
                     when (event.type) {
                         "post/create", "post/delete", "feed/update" -> {
-                            viewModelScope.launch { refreshFeedSilently() }
+                            refreshSilently()
                         }
                     }
                 }
@@ -208,16 +229,27 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Refetch the feeds without a spinner. Each call cancels the pending fetch
+     * and waits [REFRESH_DEBOUNCE] first, so a burst of frames across the
+     * feeds makes one request.
+     */
     fun refreshSilently() {
-        viewModelScope.launch { refreshFeedSilently() }
+        feedsJob?.cancel()
+        feedsJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshFeedSilently()
+        }
     }
 
     private suspend fun refreshFeedSilently() {
         try {
             val info = repository.getFeedsInfo()
-            _feeds.value = info.feeds
+            val feedList = info.feeds
                 .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
+            _feeds.value = feedList
             _hasAi.value = info.hasAi
+            subscribeToWebSockets(feedList)
         } catch (_: Exception) {
             // Silent refresh failure
         }
@@ -226,6 +258,7 @@ class FeedListViewModel @Inject constructor(
     private fun unsubscribeAll() {
         subscriptionIds.forEach { webSocket.unsubscribe(it) }
         subscriptionIds.clear()
+        subscribedKeys = emptySet()
     }
 
     override fun onCleared() {

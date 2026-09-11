@@ -13,6 +13,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -23,6 +24,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.util.mergeNewest
 import org.mochios.android.websocket.MochiWebSocket
@@ -93,6 +95,9 @@ class ChatViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
     private var searchJob: Job? = null
+
+    /** The pending or in-flight [refresh]; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
 
     // One-shot toast messages (already localised) — e.g. forward success/failure.
     private val _events = MutableSharedFlow<String>(extraBufferCapacity = 4)
@@ -200,8 +205,16 @@ class ChatViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Refetch the newest page of messages and mark it read. Each call cancels
+     * the previous refresh and waits [REFRESH_DEBOUNCE] first, so a burst of
+     * frames - our own send's echo lands with the send's response - makes one
+     * fetch, and only the latest one updates the list.
+     */
     fun refresh() {
-        viewModelScope.launch {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
@@ -225,6 +238,7 @@ class ChatViewModel @Inject constructor(
                 )
                 markRead()
             } catch (e: Exception) {
+                ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false).failed(e.toMochiError())
             }
         }

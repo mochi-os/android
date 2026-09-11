@@ -10,6 +10,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -25,6 +27,7 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.lib.ActiveViewStore
 import org.mochios.crm.model.CrmClass
@@ -101,6 +104,12 @@ class CrmViewModel @Inject constructor(
 
     private var wsSubscriptionId: String? = null
 
+    /** The pending or in-flight objects refresh; cancelled when a newer one starts. */
+    private var objectsJob: Job? = null
+
+    /** The pending or in-flight crm refresh; cancelled when a newer one starts. */
+    private var crmJob: Job? = null
+
     init {
         loadCrm()
         subscribeWebSocket()
@@ -157,6 +166,19 @@ class CrmViewModel @Inject constructor(
                     error = e.toMochiError()
                 )
             }
+        }
+    }
+
+    /**
+     * [refreshSilently] in the background: structure frames and our own column
+     * edits. Cancels the pending refresh and waits [REFRESH_DEBOUNCE] first,
+     * so an edit and its echo frame make one round of calls.
+     */
+    private fun refreshCrm() {
+        crmJob?.cancel()
+        crmJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshSilently()
         }
     }
 
@@ -474,8 +496,15 @@ class CrmViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Reload the object list in the background. Cancels the pending reload
+     * and waits [REFRESH_DEBOUNCE] first, so one drag - its move response and
+     * the object/update and object/ranks frames it echoes - makes one fetch.
+     */
     private fun refreshObjects() {
-        viewModelScope.launch {
+        objectsJob?.cancel()
+        objectsJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
             try {
                 val objects = repository.getObjects(crmId)
                 val watched = repository.getWatched(crmId)
@@ -511,7 +540,7 @@ class CrmViewModel @Inject constructor(
             type == "crm/update" || type == "crm/resynced" ||
                 type == "hierarchy/set" ||
                 type.substringBefore("/") in setOf("class", "field", "option", "view") ->
-                loadCrm()
+                refreshCrm()
         }
     }
 
@@ -611,7 +640,7 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.createOption(crmId, classId, fieldId, name, colour)
-                loadCrm()
+                refreshCrm()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }
@@ -623,7 +652,7 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.updateOption(crmId, classId, fieldId, optionId, name, null, null)
-                loadCrm()
+                refreshCrm()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }
@@ -635,7 +664,7 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteOption(crmId, classId, fieldId, optionId)
-                loadCrm()
+                refreshCrm()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }
@@ -650,7 +679,7 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reorderOptions(crmId, classId, fieldId, order.joinToString(","))
-                loadCrm()
+                refreshCrm()
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }

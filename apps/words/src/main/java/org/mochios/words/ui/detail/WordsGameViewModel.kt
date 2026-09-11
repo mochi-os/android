@@ -14,7 +14,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,6 +25,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.mergeMessage
 import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
@@ -105,6 +108,15 @@ class WordsGameViewModel @Inject constructor(
 
     private var validationJob: Job? = null
 
+    /** The pending or in-flight game fetch; cancelled when a newer one starts. */
+    private var gameJob: Job? = null
+
+    /** Whether [gameJob] resets local state, which a refresh replacing it must keep. */
+    private var gameJobResets = false
+
+    /** The pending or in-flight messages fetch; cancelled when a newer one starts. */
+    private var messagesJob: Job? = null
+
     init {
         load()
         loadMessages()
@@ -112,93 +124,150 @@ class WordsGameViewModel @Inject constructor(
 
     // ─── Load / refresh ────────────────────────────────────────────────
 
+    /**
+     * Fetch the game now and reset in-progress local state, cancelling any
+     * pending fetch. For the first load and a retry, where the user is
+     * waiting.
+     */
     fun load() {
-        viewModelScope.launch {
-            _uiState.update { it.copy(isLoading = true, error = null) }
-            try {
-                val response = repository.getGame(gameId)
-                _uiState.update {
-                    it.copy(
-                        isLoading = false,
-                        game = response.game,
-                        myIdentity = response.identity,
-                        rackTiles = response.game.my_rack.toList(),
-                        pendingPlacements = emptyList(),
-                        selectedRackIndex = null,
-                        dragSource = null,
-                        exchangeMode = false,
-                        exchangeSelected = emptySet(),
-                    )
-                }
-            } catch (e: Exception) {
-                _uiState.update { it.copy(isLoading = false, error = e.toMochiError()) }
-            }
+        gameJob?.cancel()
+        gameJobResets = true
+        gameJob = viewModelScope.launch {
+            fetchAndReset()
+        }
+    }
+
+    /**
+     * [load] in the background, after one of our own actions: cancels the
+     * pending fetch and waits [REFRESH_DEBOUNCE] first, so the action's echo
+     * frame shares the fetch.
+     */
+    private fun refreshAndReset() {
+        gameJob?.cancel()
+        gameJobResets = true
+        gameJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            fetchAndReset()
         }
     }
 
     /**
      * Refresh after a websocket event without discarding in-progress local
-     * state.
+     * state. Cancels the previous fetch and waits [REFRESH_DEBOUNCE] first,
+     * so a burst of frames and action results makes one fetch; replacing a
+     * pending reset, it resets too so that reset still happens.
      */
     fun refresh() {
-        viewModelScope.launch {
-            try {
-                val response = repository.getGame(gameId)
-                _uiState.update { state ->
-                    // Placements pending: update only non-rack data so an
-                    // opponent's message cannot discard the user's in-progress
-                    // move.
-                    if (state.pendingPlacements.isEmpty() && !state.exchangeMode) {
-                        // Re-seed the rack only when the server's tiles differ
-                        // as a multiset: overwriting discards the user's
-                        // shuffle every refresh.
-                        val incoming = response.game.my_rack.toList()
-                        val same = incoming.sorted() == state.rackTiles.sorted()
-                        state.copy(
-                            game = response.game,
-                            myIdentity = response.identity,
-                            rackTiles = if (same) state.rackTiles else incoming,
-                            selectedRackIndex = if (same) state.selectedRackIndex else null,
-                        )
-                    } else {
-                        state.copy(
-                            game = response.game,
-                            myIdentity = response.identity,
-                        )
-                    }
-                }
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                // Deliberately not surfaced: the websocket will retry and the
-                // next user action refreshes again, so a toast here would fire
-                // on transient drops. Logged so it is not wholly invisible.
-                Log.d(TAG, "Background refresh failed", e)
-            }
+        if (gameJobResets && gameJob?.isActive == true) {
+            refreshAndReset()
+            return
+        }
+        gameJob?.cancel()
+        gameJobResets = false
+        gameJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            fetchKeepingLocalState()
         }
     }
 
-    fun loadMessages() {
-        viewModelScope.launch {
-            _uiState.update { it.copy(isLoadingMessages = true) }
-            try {
-                val response = repository.getMessages(gameId, before = null, limit = 100)
-                // Server returns newest-first; render oldest-first.
-                val ordered = response.messages.sortedBy { it.created }
-                _uiState.update {
-                    it.copy(
-                        messages = ordered,
-                        isLoadingMessages = false,
-                        hasMoreMessages = response.more == true,
-                        nextMessageCursor = response.cursor,
+    private suspend fun fetchAndReset() {
+        _uiState.update { it.copy(isLoading = true, error = null) }
+        try {
+            val response = repository.getGame(gameId)
+            _uiState.update {
+                it.copy(
+                    isLoading = false,
+                    game = response.game,
+                    myIdentity = response.identity,
+                    rackTiles = response.game.my_rack.toList(),
+                    pendingPlacements = emptyList(),
+                    selectedRackIndex = null,
+                    dragSource = null,
+                    exchangeMode = false,
+                    exchangeSelected = emptySet(),
+                )
+            }
+        } catch (e: Exception) {
+            currentCoroutineContext().ensureActive()
+            _uiState.update { it.copy(isLoading = false, error = e.toMochiError()) }
+        }
+    }
+
+    private suspend fun fetchKeepingLocalState() {
+        try {
+            val response = repository.getGame(gameId)
+            _uiState.update { state ->
+                // Placements pending: update only non-rack data so an
+                // opponent's message cannot discard the user's in-progress
+                // move.
+                if (state.pendingPlacements.isEmpty() && !state.exchangeMode) {
+                    // Re-seed the rack only when the server's tiles differ
+                    // as a multiset: overwriting discards the user's
+                    // shuffle every refresh.
+                    val incoming = response.game.my_rack.toList()
+                    val same = incoming.sorted() == state.rackTiles.sorted()
+                    state.copy(
+                        game = response.game,
+                        myIdentity = response.identity,
+                        rackTiles = if (same) state.rackTiles else incoming,
+                        selectedRackIndex = if (same) state.selectedRackIndex else null,
+                    )
+                } else {
+                    state.copy(
+                        game = response.game,
+                        myIdentity = response.identity,
                     )
                 }
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                Log.d(TAG, "Message load failed", e)
-                _uiState.update { it.copy(isLoadingMessages = false) }
             }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            // Deliberately not surfaced: the websocket will retry and the
+            // next user action refreshes again, so a toast here would fire
+            // on transient drops. Logged so it is not wholly invisible.
+            Log.d(TAG, "Background refresh failed", e)
+        }
+    }
+
+    /** Fetch the newest page of messages now, cancelling any pending fetch. */
+    fun loadMessages() {
+        messagesJob?.cancel()
+        messagesJob = viewModelScope.launch {
+            fetchMessages()
+        }
+    }
+
+    /**
+     * Refetch the newest page of messages in the background, after
+     * [REFRESH_DEBOUNCE], cancelling the previous fetch.
+     */
+    private fun refreshMessages() {
+        messagesJob?.cancel()
+        messagesJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            fetchMessages()
+        }
+    }
+
+    private suspend fun fetchMessages() {
+        _uiState.update { it.copy(isLoadingMessages = true) }
+        try {
+            val response = repository.getMessages(gameId, before = null, limit = 100)
+            // Server returns newest-first; render oldest-first.
+            val ordered = response.messages.sortedBy { it.created }
+            _uiState.update {
+                it.copy(
+                    messages = ordered,
+                    isLoadingMessages = false,
+                    hasMoreMessages = response.more == true,
+                    nextMessageCursor = response.cursor,
+                )
+            }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Log.d(TAG, "Message load failed", e)
+            _uiState.update { it.copy(isLoadingMessages = false) }
         }
     }
 
@@ -239,7 +308,7 @@ class WordsGameViewModel @Inject constructor(
                 // Refresh the game (board, rack, turn, scores) and message
                 // history — the move payload includes the post-move state.
                 refresh()
-                loadMessages()
+                refreshMessages()
             }
             "message" -> {
                 if (message != null) {
@@ -257,7 +326,7 @@ class WordsGameViewModel @Inject constructor(
                         )
                     }
                 } else {
-                    loadMessages()
+                    refreshMessages()
                 }
             }
         }
@@ -528,8 +597,8 @@ class WordsGameViewModel @Inject constructor(
             try {
                 repository.exchange(gameId, tiles)
                 _uiState.update { it.copy(isExchanging = false, exchangeMode = false, exchangeSelected = emptySet()) }
-                load()
-                loadMessages()
+                refreshAndReset()
+                refreshMessages()
             } catch (e: Exception) {
                 _uiState.update {
                     it.copy(
@@ -548,8 +617,8 @@ class WordsGameViewModel @Inject constructor(
             try {
                 repository.pass(gameId)
                 _uiState.update { it.copy(isPassing = false) }
-                load()
-                loadMessages()
+                refreshAndReset()
+                refreshMessages()
             } catch (e: Exception) {
                 _uiState.update {
                     it.copy(
@@ -587,8 +656,8 @@ class WordsGameViewModel @Inject constructor(
                         selectedRackIndex = null,
                     )
                 }
-                load()
-                loadMessages()
+                refreshAndReset()
+                refreshMessages()
             } catch (e: Exception) {
                 _uiState.update {
                     it.copy(
@@ -614,8 +683,8 @@ class WordsGameViewModel @Inject constructor(
             try {
                 repository.resign(gameId)
                 _uiState.update { it.copy(isResigning = false, showResignDialog = false) }
-                load()
-                loadMessages()
+                refreshAndReset()
+                refreshMessages()
             } catch (e: Exception) {
                 _uiState.update {
                     it.copy(
@@ -697,7 +766,7 @@ class WordsGameViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.sendMessage(gameId, trimmed)
-                loadMessages()
+                refreshMessages()
                 onFinished(true)
             } catch (e: Exception) {
                 onError(e.toMochiError())

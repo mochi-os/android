@@ -29,6 +29,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.ui.components.SaveStatus
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.Link
@@ -90,6 +91,9 @@ class ObjectDetailViewModel @Inject constructor(
     private var currentObjectId: String = ""
     /** The in-flight detail fetch, cancelled when the sheet switches object. */
     private var loadJob: Job? = null
+
+    /** Pending background refetches, one per slice of the object. */
+    private val refreshJobs = mutableMapOf<String, Job>()
 
     private var wsSubscriptionId: String? = null
     private var wsSubscribedCrmId: String = ""
@@ -161,6 +165,20 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Run [load] in the background after [REFRESH_DEBOUNCE], replacing any
+     * pending run for the same [slice]: one save sends values/update and
+     * object/update, and our own comment, link or attachment echoes back, so
+     * each burst makes one fetch per slice.
+     */
+    private fun refreshSlice(slice: String, load: () -> Unit) {
+        refreshJobs[slice]?.cancel()
+        refreshJobs[slice] = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            load()
+        }
+    }
+
     private fun handleWebSocketEvent(event: WebSocketEvent) {
         // Filter to events scoped to the object we're currently displaying.
         // Some server events use "object" for the affected object id (comment/*,
@@ -169,35 +187,35 @@ class ObjectDetailViewModel @Inject constructor(
         when (event.type) {
             "comment/create", "comment/update", "comment/delete" -> {
                 if (event.objectId == currentObjectId) {
-                    loadComments()
-                    loadActivity()
+                    refreshSlice("comments") { loadComments() }
+                    refreshSlice("activity") { loadActivity() }
                 }
             }
             "values/update" -> {
                 if (event.id == currentObjectId) {
-                    loadObjectOnly()
-                    loadActivity()
+                    refreshSlice("object") { loadObjectOnly() }
+                    refreshSlice("activity") { loadActivity() }
                 }
             }
             "object/update" -> {
                 if (event.id == currentObjectId) {
-                    loadObjectOnly()
-                    loadActivity()
+                    refreshSlice("object") { loadObjectOnly() }
+                    refreshSlice("activity") { loadActivity() }
                 }
             }
             "attachment/create", "attachment/add" -> {
                 if (event.objectId == currentObjectId) {
-                    loadAttachments()
+                    refreshSlice("attachments") { loadAttachments() }
                 }
             }
             "attachment/delete", "attachment/remove" -> {
                 // No object id on these events — refetch our slice unconditionally.
                 // The list endpoint is scoped to the current object so this is cheap.
-                loadAttachments()
+                refreshSlice("attachments") { loadAttachments() }
             }
             "link/create", "link/delete" -> {
                 if (event.source == currentObjectId || event.target == currentObjectId) {
-                    loadLinks()
+                    refreshSlice("links") { loadLinks() }
                 }
             }
         }
@@ -259,7 +277,7 @@ class ObjectDetailViewModel @Inject constructor(
             val files = repository.stageFiles(uris)
             try {
                 repository.createComment(currentCrmId, currentObjectId, content, parent, files)
-                loadComments()
+                refreshSlice("comments") { loadComments() }
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             } finally {
@@ -275,7 +293,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.updateComment(currentCrmId, currentObjectId, commentId, content)
-                loadComments()
+                refreshSlice("comments") { loadComments() }
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }
@@ -286,7 +304,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteComment(currentCrmId, currentObjectId, commentId)
-                loadComments()
+                refreshSlice("comments") { loadComments() }
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }
@@ -347,7 +365,7 @@ class ObjectDetailViewModel @Inject constructor(
             val file = repository.stageFile(uri) ?: return@launch
             try {
                 repository.createAttachment(currentCrmId, currentObjectId, file)
-                loadAttachments()
+                refreshSlice("attachments") { loadAttachments() }
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             } finally {
@@ -360,7 +378,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteAttachment(currentCrmId, currentObjectId, attachmentId)
-                loadAttachments()
+                refreshSlice("attachments") { loadAttachments() }
             } catch (e: Exception) {
                 _actionFailed.tryEmit(e.toMochiError())
             }
@@ -387,7 +405,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.createLink(currentCrmId, currentObjectId, target, linktype)
-                loadLinks()
+                refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -399,7 +417,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.createLink(currentCrmId, source, currentObjectId, linktype)
-                loadLinks()
+                refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -410,7 +428,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteLink(currentCrmId, currentObjectId, target, linktype)
-                loadLinks()
+                refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -422,7 +440,7 @@ class ObjectDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteLink(currentCrmId, source, currentObjectId, linktype)
-                loadLinks()
+                refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

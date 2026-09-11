@@ -10,6 +10,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -26,6 +28,7 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
@@ -161,6 +164,12 @@ class ProjectViewModel @Inject constructor(
 
     private var wsSubscriptionId: String? = null
 
+    /** The pending or in-flight objects refresh; cancelled when a newer one starts. */
+    private var objectsJob: Job? = null
+
+    /** The pending or in-flight project refresh; cancelled when a newer one starts. */
+    private var projectJob: Job? = null
+
     init {
         loadProject()
         subscribeWebSocket()
@@ -217,6 +226,19 @@ class ProjectViewModel @Inject constructor(
                     error = e.toMochiError()
                 )
             }
+        }
+    }
+
+    /**
+     * [refreshSilently] in the background: structure frames and our own column
+     * edits. Cancels the pending refresh and waits [REFRESH_DEBOUNCE] first,
+     * so an edit and its echo frame make one round of calls.
+     */
+    private fun refreshProject() {
+        projectJob?.cancel()
+        projectJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshSilently()
         }
     }
 
@@ -587,8 +609,17 @@ class ProjectViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Reload the object list in the background. Cancels the pending reload
+     * and waits [REFRESH_DEBOUNCE] first, so one drag - its move response and
+     * the object/update and object/ranks frames it echoes - makes one fetch.
+     */
     private fun refreshObjects() {
-        viewModelScope.launch { refreshObjectsNow() }
+        objectsJob?.cancel()
+        objectsJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            refreshObjectsNow()
+        }
     }
 
     /**
@@ -638,7 +669,7 @@ class ProjectViewModel @Inject constructor(
             type == "project/update" || type == "project/resynced" ||
                 type == "hierarchy/set" ||
                 type.substringBefore("/") in setOf("class", "field", "option", "view") ->
-                loadProject()
+                refreshProject()
         }
     }
 
@@ -716,7 +747,7 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.createOption(projectId, classId, fieldId, name, colour)
-                loadProject()
+                refreshProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -728,7 +759,7 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.updateOption(projectId, classId, fieldId, optionId, name, null, null)
-                loadProject()
+                refreshProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -740,7 +771,7 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteOption(projectId, classId, fieldId, optionId)
-                loadProject()
+                refreshProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -755,7 +786,7 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reorderOptions(projectId, classId, fieldId, order.joinToString(","))
-                loadProject()
+                refreshProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

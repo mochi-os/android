@@ -8,6 +8,10 @@ package org.mochios.settings.ui.notifications
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,6 +24,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationsRepository
 import org.mochios.android.notifications.NotificationsUnreadStore
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
@@ -66,6 +71,9 @@ class NotificationsViewModel @Inject constructor(
 
     private var subscriptionId: String? = null
 
+    /** The pending or in-flight list fetch; cancelled when a newer one starts. */
+    private var loadJob: Job? = null
+
     init {
         load(initial = true)
         subscribeWebSocket()
@@ -78,29 +86,48 @@ class NotificationsViewModel @Inject constructor(
     }
 
     private fun load(initial: Boolean) {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                isLoading = initial,
-                isRefreshing = !initial,
-                error = null,
-            )
-            try {
-                val resp = repository.list()
-                _uiState.value = _uiState.value.copy(
-                    items = resp.data.sortedByDescending { it.created },
-                    unreadCount = resp.count,
-                    isLoading = false,
-                    isRefreshing = false,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    isRefreshing = false,
-                    error = e.toMochiError(),
-                )
-            }
-            loadCategories()
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
+            fetch(initial)
         }
+    }
+
+    /**
+     * Refetch for a socket frame. Cancels the pending fetch and waits
+     * [REFRESH_DEBOUNCE] first, so a burst of frames - our own mark-read or
+     * clear echoes back as one - makes one round of calls.
+     */
+    private fun refreshLatest() {
+        loadJob?.cancel()
+        loadJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            fetch(initial = false)
+        }
+    }
+
+    private suspend fun fetch(initial: Boolean) {
+        _uiState.value = _uiState.value.copy(
+            isLoading = initial,
+            isRefreshing = !initial,
+            error = null,
+        )
+        try {
+            val resp = repository.list()
+            _uiState.value = _uiState.value.copy(
+                items = resp.data.sortedByDescending { it.created },
+                unreadCount = resp.count,
+                isLoading = false,
+                isRefreshing = false,
+            )
+        } catch (e: Exception) {
+            currentCoroutineContext().ensureActive()
+            _uiState.value = _uiState.value.copy(
+                isLoading = false,
+                isRefreshing = false,
+                error = e.toMochiError(),
+            )
+        }
+        loadCategories()
     }
 
     /**
@@ -113,6 +140,7 @@ class NotificationsViewModel @Inject constructor(
             val topics = prefs.getTopics().unwrapRaw()
             _uiState.value = _uiState.value.copy(categories = categories, topics = topics)
         } catch (_: Exception) {
+            currentCoroutineContext().ensureActive()
             _uiState.value = _uiState.value.copy(categories = emptyList(), topics = emptyList())
         }
     }
@@ -197,7 +225,7 @@ class NotificationsViewModel @Inject constructor(
             "notifications",
             app = "notifications",
         ) { _ ->
-            viewModelScope.launch { load(initial = false) }
+            refreshLatest()
         }
     }
 
