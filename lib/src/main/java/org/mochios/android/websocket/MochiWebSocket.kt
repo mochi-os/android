@@ -303,10 +303,11 @@ class MochiWebSocket @Inject constructor(
             .replace("http://", "ws://")
             .trimEnd('/')
         val storedToken = tokens[key]
-        // The upgrade reads the token from the query string; the Bearer header
-        // rides along for anything that prefers it.
+        // The token travels in the Bearer header only, which core reads first.
+        // A query string lands in every access log between here and there, and
+        // the token is good for a year.
         val request = Request.Builder()
-            .url(socketUrl(wsUrl, fingerprint, storedToken))
+            .url(socketUrl(wsUrl, fingerprint))
             .apply { if (storedToken != null) header("Authorization", "Bearer $storedToken") }
             .build()
 
@@ -548,11 +549,11 @@ class MochiWebSocket @Inject constructor(
 }
 
 /**
- * Handshake URL for a subscription. The server authorises the upgrade from
- * [token] in the query string, so a socket opened without one connects and
- * then hears nothing.
+ * Handshake URL for a subscription. It carries the key and no credential: the
+ * token goes in the `Authorization: Bearer` header, so a handshake sent without
+ * one connects and then hears nothing. Core also accepts `?token=` for browsers,
+ * which cannot set a header on a handshake; putting it back here would write the
+ * token into every access log on the way. See [SocketUrlTest].
  */
-internal fun socketUrl(wsBase: String, fingerprint: String, token: String? = null): String {
-    val url = "$wsBase/_/websocket?key=$fingerprint"
-    return if (token.isNullOrEmpty()) url else "$url&token=$token"
-}
+internal fun socketUrl(wsBase: String, fingerprint: String): String =
+    "$wsBase/_/websocket?key=$fingerprint"

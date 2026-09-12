@@ -18,8 +18,8 @@ import java.util.concurrent.TimeUnit
 
 /**
  * Whichever way a caller names its credential - an explicit token, or an app
- * the socket mints for - it must reach the handshake, in the query the server
- * authorises from and in the header for anything that prefers it.
+ * the socket mints for - it must reach the handshake in the Bearer header, and
+ * never in the query string.
  */
 class HandshakeAuthTest {
     private lateinit var server: MockWebServer
@@ -55,7 +55,7 @@ class HandshakeAuthTest {
         socket.subscribe(url(), "fp", app = "chat") {}
         val request = server.takeRequest(5, TimeUnit.SECONDS)
         assertNotNull("handshake arrived", request)
-        assertEquals("/_/websocket?key=fp&token=minted-chat", request!!.path)
+        assertEquals("/_/websocket?key=fp", request!!.path)
         assertEquals("Bearer minted-chat", request.getHeader("Authorization"))
     }
 
@@ -64,7 +64,7 @@ class HandshakeAuthTest {
         socket.subscribe(url(), "fp", token = "raw-token") {}
         val request = server.takeRequest(5, TimeUnit.SECONDS)
         assertNotNull(request)
-        assertEquals("/_/websocket?key=fp&token=raw-token", request!!.path)
+        assertEquals("/_/websocket?key=fp", request!!.path)
         assertEquals("Bearer raw-token", request.getHeader("Authorization"))
     }
 
@@ -73,7 +73,7 @@ class HandshakeAuthTest {
         socket.openStream("game-key", app = "chess")
         val request = server.takeRequest(5, TimeUnit.SECONDS)
         assertNotNull("stream handshake arrived", request)
-        assertEquals("/_/websocket?key=game-key&token=minted-chess", request!!.path)
+        assertEquals("/_/websocket?key=game-key", request!!.path)
         assertEquals("Bearer minted-chess", request.getHeader("Authorization"))
     }
 }

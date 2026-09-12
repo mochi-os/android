@@ -65,7 +65,7 @@ class ReconnectNowTest {
         socket.reconnectNow()
         val woken = server.takeRequest(500, TimeUnit.MILLISECONDS)
         assertNotNull("reconnectNow handshake arrived within 500ms", woken)
-        assertEquals("/_/websocket?key=fp&token=tok", woken!!.path)
+        assertEquals("/_/websocket?key=fp", woken!!.path)
     }
 
     @Test
