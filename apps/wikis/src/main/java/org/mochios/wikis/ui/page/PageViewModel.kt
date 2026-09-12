@@ -110,7 +110,7 @@ class PageViewModel @Inject constructor(
         if (subscription != null || fingerprint.isEmpty()) {
             return
         }
-        subscription = webSocket.subscribe(serverUrl, fingerprint) { event ->
+        subscription = webSocket.subscribe(serverUrl, fingerprint, app = "wikis") { event ->
             handle(event)
         }
     }

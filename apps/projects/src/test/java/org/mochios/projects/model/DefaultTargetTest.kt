@@ -10,14 +10,23 @@ import org.junit.Assert.assertNull
 import org.junit.Test
 
 /**
- * The new merge request's target used to be seeded from an `is_default` field
- * on each branch. The branch list carries no such field under any spelling, so
- * the seed was always null and the dialog opened with no target chosen. These
- * pin the name-based choice that replaced it.
+ * The new merge request's target is seeded from the branch the server flags as
+ * the repository's default, and from its name when an older repositories
+ * release flags none. These pin both halves, since a seed that silently
+ * resolves to null opens the dialog with no target chosen.
  */
 class DefaultTargetTest {
 
     private fun branches(vararg names: String) = names.map { name -> Branch(name = name) }
+
+    @Test
+    fun `the flagged branch wins, whatever it is called`() {
+        val branches = listOf(
+            Branch(name = "main"),
+            Branch(name = "release", isDefault = true),
+        )
+        assertEquals("release", branches.defaultTarget()?.name)
+    }
 
     @Test
     fun `main wins wherever it sits in the list`() {
