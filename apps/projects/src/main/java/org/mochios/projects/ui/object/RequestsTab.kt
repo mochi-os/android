@@ -65,6 +65,7 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Branch
+import org.mochios.projects.model.defaultTarget
 import org.mochios.projects.model.MergeCheck
 import org.mochios.projects.model.MergeRequest
 import org.mochios.projects.model.Repository
@@ -488,8 +489,9 @@ private fun CreateRequestDialog(
         isLoadingBranches = true
         branches = viewModel.loadBranches(repo.id)
         isLoadingBranches = false
-        // Default target to repository's default branch if available
-        selectedTarget = branches.firstOrNull { it.isDefault }
+        // Seed the target with the repository's likely default; see
+        // [defaultTarget].
+        selectedTarget = branches.defaultTarget()
     }
 
     MochiAlertDialog(
