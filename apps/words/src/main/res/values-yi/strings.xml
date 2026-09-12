@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">מעניו</string>
-    <string name="words_list_new">נײַ שפּיל</string>
     <string name="words_list_logout">אַרויסקומען</string>
-    <string name="words_list_empty_title">נאָך קיין שפּילן</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">פֿאַרענדיקט</string>
     <string name="words_sidebar_new_game">נײַ שפּיל</string>
     <string name="words_new_game_title">נײַ שפּיל</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">ווידערמאַטש</string>
     <string name="words_detail_action_delete">אויסמעקן שפּיל</string>
     <string name="words_detail_chat_title">שמועס</string>
-    <string name="words_detail_invalid_move">ניט גילטיקער גאַנג</string>
     <string name="words_detail_recall">צוריקרופֿן</string>
     <string name="words_detail_submit">אונטערגעב</string>
     <string name="words_detail_cancel">אָפּזאָגן</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">קלײַבט אַ אות</string>
     <string name="words_detail_resign_title">רעזיגנירן שפּיל?</string>
     <string name="words_detail_resign_message">זענט איר זיכער איר ווילט רעזיגנירן?</string>
-    <string name="words_detail_failed_move">ניט געלונגען אונטערצוגעבן גאַנג</string>
-    <string name="words_detail_failed_pass">ניט געלונגען צו פּאַסירן</string>
-    <string name="words_detail_failed_exchange">ניט געלונגען צו אויסטוישן</string>
-    <string name="words_detail_failed_resign">ניט געלונגען צו רעזיגנירן</string>
-    <string name="words_detail_failed_rematch">ניט געלונגען צו שאַפֿן רעמאַטש</string>
-    <string name="words_detail_failed_delete">ניט געלונגען צו מעקן שפּיל</string>
-    <string name="words_detail_game_deleted">שפּיל אויסגעמעקט</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">מעלדונגען וועגן Words־ריידן, אויסטוישן און שפּיל־רעזולטאַטן.</string>
-    <string name="words_list_empty_subtitle">טאַפּט דעם +־קנעפּל צו אָנהייבן אײַער ערשטע שפּיל.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">נאָך קיין שפּילן.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">לייגט צו פֿרײַנד אין דער People־אַפּ צו אָנהייבן שפּילן.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">שפּיל־פּרטים קומען באַלד</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

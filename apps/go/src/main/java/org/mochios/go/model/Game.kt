@@ -9,8 +9,8 @@ import com.google.gson.annotations.SerializedName
 
 /**
  * A Go game record, mirroring `Game` in `apps/go/web/src/api/types/games.ts`.
- * `status` is `active`, `finished`, `draw` or `resigned`; `winner` is the
- * winning identity id, null while active or on a draw.
+ * `status` is `active`, `scoring`, `finished`, `draw` or `resigned`; `winner`
+ * is the winning identity id, null while active or on a draw.
  */
 data class Game(
     val id: String = "",
@@ -28,6 +28,13 @@ data class Game(
     val winner: String? = null,
     @SerializedName("draw_offer")
     val drawOffer: String? = null,
+    // The scoring step after two passes. `scoring` holds the identity that has
+    // accepted the proposal below; the game ends when the other one does too.
+    val scoring: String? = null,
+    @SerializedName("score_black")
+    val scoreBlack: Double? = null,
+    @SerializedName("score_white")
+    val scoreWhite: Double? = null,
     val fen: String = "",
     @SerializedName("previous_fen")
     val previousFen: String? = null,

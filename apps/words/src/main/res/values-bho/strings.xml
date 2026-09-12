@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">मेनू</string>
-    <string name="words_list_new">नया खेल</string>
     <string name="words_list_logout">लॉग आउट</string>
-    <string name="words_list_empty_title">अबहीं तक कौनो खेल नइखे</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">पूरा कइल गइल</string>
     <string name="words_sidebar_new_game">नया खेल</string>
     <string name="words_new_game_title">नया खेल</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">फेर मैच</string>
     <string name="words_detail_action_delete">खेल मेटाईं</string>
     <string name="words_detail_chat_title">चैट</string>
-    <string name="words_detail_invalid_move">अमान्य चाल</string>
     <string name="words_detail_recall">वापस लीं</string>
     <string name="words_detail_submit">जमा करीं</string>
     <string name="words_detail_cancel">रद्द करीं</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">एगो अक्षर चुनीं</string>
     <string name="words_detail_resign_title">खेल में हार मानीं?</string>
     <string name="words_detail_resign_message">का रउआ इस्तीफा देवे चाहत बानी?</string>
-    <string name="words_detail_failed_move">चाल जमा करे में विफल</string>
-    <string name="words_detail_failed_pass">पास करे में विफल</string>
-    <string name="words_detail_failed_exchange">विनिमय करे में विफल</string>
-    <string name="words_detail_failed_resign">इस्तीफा देवे में विफल</string>
-    <string name="words_detail_failed_rematch">रीमैच बनावे में विफल</string>
-    <string name="words_detail_failed_delete">खेल मेटावे में विफल</string>
-    <string name="words_detail_game_deleted">खेल मेटा गइल</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words के बारी, अदला-बदली आ खेल के नतीजा के बारे में सूचना।</string>
-    <string name="words_list_empty_subtitle">आपन पहिला खेल शुरू करे खातिर + बटन दबाईं।</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">अबले कवनो खेल नइखे।</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">खेलल शुरू करे खातिर People ऐप में दोस्त जोड़ीं।</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">खेल के विस्तार जल्दिये आई</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

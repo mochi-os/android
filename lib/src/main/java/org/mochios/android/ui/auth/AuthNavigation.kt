@@ -132,6 +132,9 @@ fun AuthNavigation(
                 onBeginPasskey = viewModel::beginPasskeyAuth,
                 onShowRecovery = { navController.navigate("recovery") },
                 onBack = leaveAccount,
+                onUpdateMfaEmailCode = viewModel::updateMfaEmailCode,
+                onUpdateMfaTotpCode = viewModel::updateMfaTotpCode,
+                onCompleteMfa = viewModel::completeMfa,
                 oauthScheme = oauthScheme,
                 onStartOAuth = viewModel::startOAuth
             )

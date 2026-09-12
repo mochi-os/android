@@ -148,8 +148,8 @@ class ModerationViewModel @Inject constructor(
         loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
-    fun removePost(postId: String) = mutate {
-        repository.removePost(forumId, postId)
+    fun removePost(postId: String, reason: String) = mutate {
+        repository.removePost(forumId, postId, reason)
         loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
@@ -158,8 +158,8 @@ class ModerationViewModel @Inject constructor(
         loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
-    fun removeComment(postId: String, commentId: String) = mutate {
-        repository.removeComment(forumId, postId, commentId)
+    fun removeComment(postId: String, commentId: String, reason: String) = mutate {
+        repository.removeComment(forumId, postId, commentId, reason)
         loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
@@ -193,9 +193,22 @@ class ModerationViewModel @Inject constructor(
                     actionMessage = R.string.forums_moderation_settings_updated,
                 )
             } catch (e: Exception) {
+                // Re-read so the controls fall back to what the forum holds
+                // rather than standing on a value the server refused.
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                try {
+                    _uiState.value = _uiState.value.copy(
+                        settings = repository.moderationSettings(forumId),
+                    )
+                } catch (_: Exception) {
+                }
             }
         }
+    }
+
+    /** The error snackbar has been shown; don't repeat it on recomposition. */
+    fun clearError() {
+        _uiState.value = _uiState.value.copy(error = null)
     }
 
     fun clearActionMessage() {

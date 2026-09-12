@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">விக்கிகளைக் கண்டுபிடி</string>
     <string name="wikis_sidebar_create">Wiki உருவாக்கு</string>
     <string name="wikis_pageview_title_fallback">பக்கம்</string>
-    <string name="wikis_pageview_wiki_fallback">விக்கி</string>
-    <string name="wikis_pageview_back">பின்</string>
     <string name="wikis_pageview_page_actions">பக்கச் செயல்கள்</string>
     <string name="wikis_pageview_toc">இந்த பக்கத்தில்</string>
     <string name="wikis_pageview_not_found_title">பக்கம் கிடைக்கவில்லை</string>
     <string name="wikis_pageview_create_this_page">இந்த பக்கத்தை உருவாக்கு</string>
     <string name="wikis_pageview_rss_copied">RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது</string>
-    <string name="wikis_pageview_rss_failed">RSS டோக்கனைப் பெற முடியவில்லை</string>
     <string name="wikis_page_action_section_page">பக்கம்</string>
     <string name="wikis_page_action_edit">திருத்து</string>
     <string name="wikis_page_action_rename">பெயர் மாற்று</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki-கள்</string>
     <string name="wikis_empty_title">உங்கள் முதல் wiki-ஐ தொடங்குங்கள்</string>
     <string name="wikis_empty_subtitle">சந்தா செலுத்த ஒரு விக்கியைத் தேடுங்கள், அல்லது உங்கள் சொந்த ஆவணங்களை வெளியிட ஒன்றை உருவாக்குங்கள்.</string>
-    <string name="wikis_subscribed_badge">சந்தாதாரர் ஆனார்</string>
     <string name="wikis_create_button">Wiki உருவாக்கு</string>
     <string name="wikis_recommended_section">பரிந்துரைக்கப்பட்ட wikiக்கள்</string>
     <string name="wikis_subscribe_button">சந்தாதாராக</string>
-    <string name="wikis_subscribed">சந்தாதாரர் ஆனார்</string>
     <string name="wikis_unsubscribe_action">சந்தா நீக்கு</string>
     <string name="wikis_unsubscribing">சந்தா நீக்குகிறது…</string>
     <string name="wikis_unsubscribe_confirm_title">சந்தா நீக்கு</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">பெயர்</string>
     <string name="wikis_create_privacy_label">wiki-யை யாராவது தேட அனுமதி</string>
     <string name="wikis_create_submit">உருவாக்கு</string>
-    <string name="wikis_create_cancel">ரத்துசெய்</string>
     <string name="wikis_comments_empty_title">கருத்துகள் இன்னும் இல்லை</string>
     <string name="wikis_comments_empty_subtitle">இந்த பக்கத்தில் முதலில் கருத்து தெரிவியுங்கள்.</string>
-    <string name="wikis_comment_action_reply">பதில்</string>
     <string name="wikis_comment_replying_to">%1$s-க்கு பதிலளிக்கிறீர்கள்</string>
     <string name="wikis_comment_clear_reply">பதிலளிப்பை ரத்துசெய்</string>
-    <string name="wikis_comment_action_edit">திருத்து</string>
     <string name="wikis_comment_action_delete">நீக்கு</string>
     <string name="wikis_comment_action_save">சேமி</string>
     <string name="wikis_comment_action_cancel">ரத்துசெய்</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">புதிய பக்கம்</string>
     <string name="wikis_editor_preview">முன்னோட்டம்</string>
     <string name="wikis_editor_preview_untitled">தலைப்பிடாதது</string>
-    <string name="wikis_editor_edit">திருத்து</string>
     <string name="wikis_editor_insert">செருகு</string>
     <string name="wikis_editor_attachments">இணைப்புகள்</string>
     <string name="wikis_editor_delete">பக்கத்தை நீக்கு</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">பதிவேற்றுகிறது…</string>
     <string name="wikis_attachments_upload_failed">கோப்புகளைப் பதிவேற்ற முடியவில்லை</string>
     <string name="wikis_attachments_search_clear">தேடலை அழி</string>
-    <string name="wikis_attachments_filter">வடிகட்டி</string>
     <string name="wikis_attachments_filter_all">அனைத்து கோப்புகள்</string>
     <string name="wikis_attachments_filter_images">படங்கள்</string>
     <string name="wikis_attachments_filter_documents">ஆவணங்கள்</string>
-    <string name="wikis_attachments_sort">வரிசைப்படுத்து</string>
     <string name="wikis_attachments_sort_date">தேதி</string>
     <string name="wikis_attachments_sort_name">பெயர்</string>
     <string name="wikis_attachments_sort_size">அளவு</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed இணைப்பை நகலெடு</string>
     <string name="wikis_attachments_embed_copied">உட்பொதி இணைப்பு நகலெடுக்கப்பட்டது</string>
     <string name="wikis_attachments_download">பதிவிறக்கு</string>
-    <string name="wikis_attachments_copy_success">உட்பொதி இணைப்பு நகலெடுக்கப்பட்டது</string>
     <string name="wikis_attachments_delete">நீக்கு</string>
     <string name="wikis_attachments_delete_confirm_title">இணைப்பை நீக்கு</string>
     <string name="wikis_attachments_delete_success">இணைப்பு நீக்கப்பட்டது</string>
     <string name="wikis_attachments_delete_failed">இணைப்பை நீக்க முடியவில்லை</string>
-    <string name="wikis_attachments_open">திற</string>
     <string name="wikis_attachments_empty_title">இணைப்புகள் இன்னும் இல்லை</string>
     <string name="wikis_attachments_no_results_title">உங்கள் தேடலுக்கு பொருந்தும் இணைப்புகள் இல்லை</string>
     <string name="wikis_attachments_no_results_description">வேறு தேடல் சொல் அல்லது வடிகட்டியை முயற்சிக்கவும்.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">இந்த செயலை திரும்ப மாற்ற முடியாது. இது wiki மற்றும் அதன் அனைத்து உள்ளடக்கங்களையும் நிரந்தரமாக நீக்கும்.</string>
     <string name="wikis_settings_delete_success">Wiki நீக்கப்பட்டது</string>
     <string name="wikis_settings_delete_failed">விக்கியை நீக்க முடியவில்லை</string>
-    <string name="wikis_access_add_action">சேர்</string>
     <string name="wikis_access_add_subject_label">பயனர்</string>
     <string name="wikis_access_level_edit">திருத்து மற்றும் பார்</string>
     <string name="wikis_access_level_view">காட்சி மட்டும்</string>
     <string name="wikis_access_level_none">அணுகல் இல்லை</string>
-    <string name="wikis_access_owner_label">உரிமையாளர்</string>
     <string name="wikis_access_tab_users">பயனர்கள்</string>
     <string name="wikis_access_tab_groups">குழுக்கள்</string>
     <string name="wikis_access_tab_other">மற்றவை</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">அணுகலை நீக்க முடியவில்லை</string>
     <string name="wikis_replicas_empty_title">Replicaக்கள் இன்னும் இல்லை</string>
     <string name="wikis_replicas_empty_message">மற்ற wiki-கள் இந்த wiki-ஐ ரெப்ளிகேட் செய்யும்போது, அவை இங்கே தோன்றும்.</string>
-    <string name="wikis_replicas_col_id">ஐடி</string>
     <string name="wikis_replicas_never_synced">ஒருபோதும் இல்லை</string>
     <string name="wikis_replicas_remove_confirm_title">Replica-வை அகற்றவா?</string>
     <string name="wikis_replicas_remove_confirm_action">அகற்று</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” பக்கம் இதுவரை இல்லை.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">விக்கி இணைப்பு</string>
-    <string name="wikis_pageview_share_link_copied">பக்க இணைப்பு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki பக்க இணைப்பு</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">இணைப்பு</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki தேடு…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s இலிருந்து சந்தாவை நிறுத்த விரும்புகிறீர்களா?</string>
-    <string name="wikis_subscribe_failed_502">அந்த சேவையகத்தை அணுக முடியவில்லை. மீண்டும் முயற்சிக்கிறது…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">பெயர், ID, கைரேகை அல்லது URL மூலம் தேடு…</string>
     <string name="wikis_join_search_button">wiki-கள் தேடு…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">பதில் எழுது…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">உங்கள் உள்ளடக்கத்தை இங்கே Markdown பயன்படுத்தி எழுதவும்…</string>
     <string name="wikis_insert_dialog_empty">இதுவரை இணைப்புகள் இல்லை. தொடங்க ஒரு கோப்பைப் பதிவேற்றவும்.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">குறிச்சொல் காலியாக இருக்கக்கூடாது</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">உட்பொதிப்பு இணைப்பை நகலெடுக்க முடியவில்லை</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ஐ நீக்கவா? இதைச் செயல்தவிர்க்க முடியாது.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">இந்தப் பக்கத்தில் கோப்புகளைச் சேர்க்க பதிவேற்று என்பதைத் தட்டவும்.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d பதில்</item>
         <item quantity="other">+%d கூடுதல் பதில்கள்</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d பக்கம் மறுபெயரிடப்பட்டது</item>
-        <item quantity="other">%1$d பக்கங்கள் மறுபெயரிடப்பட்டன</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d இணைப்பு புதுப்பிக்கப்பட்டது</item>
-        <item quantity="other">%1$d இணைப்புகள் புதுப்பிக்கப்பட்டன</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d பக்கம்</item>
         <item quantity="other">%d பக்கங்கள்</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">படக்குறிப்பைச் சேமிக்க முடியவில்லை</string>
     <string name="wikis_attachments_upload_types">ஆதரிக்கப்படும் கோப்புகள்: படங்கள், PDF, DOC, DOCX, TXT, மற்றும் MD.</string>
     <string name="wikis_attachments_upload_limits">பெரிய பதிவேற்றங்கள் உங்கள் சேவையகம் அல்லது ப்ராக்ஸி அமைவால் வரம்பிடப்படலாம்.</string>
+    <string name="wikis_rss_replace">மாற்று</string>
+    <string name="wikis_rss_copied_new">புதிய RSS URL clipboard-க்கு நகலெடுக்கப்பட்டது</string>
+    <string name="wikis_rss_exists">இந்த ஊட்ட URL ஏற்கனவே வழங்கப்பட்டது, மீண்டும் காட்ட முடியாது.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">முதல் %1$d கருத்து காட்டப்படுகிறது.</item>
+        <item quantity="other">முதல் %1$d கருத்துகள் காட்டப்படுகின்றன.</item>
+    </plurals>
 </resources>

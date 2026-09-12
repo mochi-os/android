@@ -71,6 +71,9 @@ data class GoGameDetailUiState(
     val isSendingMessage: Boolean = false,
     /** True while the resign request is in flight. */
     val isResigning: Boolean = false,
+    /** True while a score accept / resume is in flight. */
+    val isScoreAccepting: Boolean = false,
+    val isScoreResuming: Boolean = false,
     /** True while a draw-offer / accept / decline is in flight. */
     val isDrawOffering: Boolean = false,
     val isDrawAccepting: Boolean = false,
@@ -374,20 +377,12 @@ class GoGameViewModel @Inject constructor(
         val sgfMove = "${if (playerColor == Stone.BLACK) "B" else "W"}[pass]"
         val newSgf = if (game.sgf.isBlank()) sgfMove else "${game.sgf};$sgfMove"
 
+        // Two passes put the game into scoring and send the count as a
+        // proposal. The result belongs to the server, once both players accept
+        // it: counting cannot tell a dead stone from a live one, so a player
+        // who disagrees resumes play and captures them instead. Declaring
+        // "finished" here would end a game the opponent never agreed was over.
         val scoreResult: Score? = if (isGameOver) newGame.score(game.komi) else null
-        // A tie scores with no winning colour, so it records status "draw" and
-        // no winner identity — both of which the server accepts. Resolving a
-        // tie to a colour would write a real player as the winner of a game
-        // nobody won, into the canonical row and the P2P snapshot.
-        val winnerColor: Stone? = scoreResult?.winner
-        val winner: String? = if (isGameOver && winnerColor != null) {
-            winnerIdentityFor(game, winnerColor)
-        } else null
-        val finalStatus: String? = when {
-            !isGameOver -> null
-            winnerColor == null -> "draw"
-            else -> "finished"
-        }
 
         _state.update { it.copy(isPassing = true) }
         viewModelScope.launch {
@@ -397,8 +392,7 @@ class GoGameViewModel @Inject constructor(
                     PassRequest(
                         fen = newGame.board,
                         sgf = newSgf,
-                        status = finalStatus,
-                        winner = winner,
+                        status = if (isGameOver) "scoring" else null,
                         scoreBlack = scoreResult?.black,
                         scoreWhite = scoreResult?.white,
                     ),
@@ -412,6 +406,49 @@ class GoGameViewModel @Inject constructor(
                 _state.update { it.copy(isPassing = false) }
                 _events.tryEmit(
                     GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedPassMessage)),
+                )
+            }
+        }
+    }
+
+    /**
+     * Accept the proposed score. The server ends the game once both players
+     * have; the first acceptance only records who agreed.
+     */
+    fun acceptScore(failedMessage: String) {
+        val game = _state.value.game ?: return
+        if (game.status != "scoring" || _state.value.isScoreAccepting) return
+        _state.update { it.copy(isScoreAccepting = true) }
+        viewModelScope.launch {
+            try {
+                repository.scoreAccept(gameId)
+                _state.update { it.copy(isScoreAccepting = false) }
+                loadGame()
+                loadMessages()
+            } catch (e: Exception) {
+                _state.update { it.copy(isScoreAccepting = false) }
+                _events.tryEmit(
+                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedMessage)),
+                )
+            }
+        }
+    }
+
+    /** Refuse the proposed score and play on, which is how the rules of Go settle a disagreement about which stones are dead. */
+    fun resumeScoring(failedMessage: String) {
+        val game = _state.value.game ?: return
+        if (game.status != "scoring" || _state.value.isScoreResuming) return
+        _state.update { it.copy(isScoreResuming = true) }
+        viewModelScope.launch {
+            try {
+                repository.scoreResume(gameId)
+                _state.update { it.copy(isScoreResuming = false) }
+                loadGame()
+                loadMessages()
+            } catch (e: Exception) {
+                _state.update { it.copy(isScoreResuming = false) }
+                _events.tryEmit(
+                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedMessage)),
                 )
             }
         }

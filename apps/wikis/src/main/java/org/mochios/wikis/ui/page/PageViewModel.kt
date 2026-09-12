@@ -19,6 +19,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.wikis.model.PageFetchResponse
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
@@ -27,8 +29,18 @@ import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
 
 sealed class PageViewEvent {
-    /** Copy this URL to the clipboard and show the "RSS URL copied" toast. */
-    data class CopyRssUrl(val url: String) : PageViewEvent()
+    /**
+     * Copy this URL to the clipboard and confirm it. [replaced] is true when
+     * the user asked for a new URL, retiring the one issued before.
+     */
+    data class CopyRssUrl(val url: String, val replaced: Boolean = false) : PageViewEvent()
+
+    /**
+     * A feed URL for this [mode] was already issued, and the server keeps only
+     * its hash, so it cannot be shown again. Offer to replace it - which stops
+     * the old URL resolving, so it is the user's call, not ours.
+     */
+    data class RssExists(val mode: String) : PageViewEvent()
 
     /** Hand this server-built link to the system share sheet. */
     data class ShareLink(val link: String) : PageViewEvent()
@@ -60,6 +72,7 @@ class PageViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: WikisRepository,
     private val sessionManager: SessionManager,
+    private val webSocket: MochiWebSocket,
 ) : ViewModel() {
 
     val wikiId: String = savedStateHandle.get<String>("wikiId").orEmpty()
@@ -74,9 +87,41 @@ class PageViewModel @Inject constructor(
     private val _events = MutableSharedFlow<PageViewEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<PageViewEvent> = _events.asSharedFlow()
 
+    private var subscription: String? = null
+
     init {
         loadInfo()
         loadPage()
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        subscription?.let { webSocket.unsubscribe(it) }
+    }
+
+    /**
+     * Watch the wiki for content that lands from P2P sync or a live broadcast.
+     * The server writes on the wiki's fingerprint, which is what the route
+     * usually carries; an entity-id deep link needs the resolved one from the
+     * info response, so this runs once the info is in. Idempotent - a reload
+     * of the info must not open a second socket.
+     */
+    private fun watch(fingerprint: String) {
+        if (subscription != null || fingerprint.isEmpty()) {
+            return
+        }
+        subscription = webSocket.subscribe(serverUrl, fingerprint) { event ->
+            handle(event)
+        }
+    }
+
+    private fun handle(event: WebSocketEvent) {
+        when (event.type) {
+            "wiki/update", "wiki/resynced" -> {
+                loadInfo()
+                loadPage()
+            }
+        }
     }
 
     fun loadInfo() {
@@ -87,6 +132,7 @@ class PageViewModel @Inject constructor(
                     wiki = response.wiki,
                     permissions = response.permissions ?: WikiPermissions(),
                 )
+                watch(response.wiki?.fingerprint ?: wikiId)
             } catch (e: Exception) {
                 // Don't surface as a hard error — the page-body load will
                 // surface the real error if there is one. Capture for
@@ -154,12 +200,16 @@ class PageViewModel @Inject constructor(
         repository.unsubscribeWiki(wikiId)
     }
 
-    fun copyRssUrl(mode: String) {
+    fun copyRssUrl(mode: String, regenerate: Boolean = false) {
         viewModelScope.launch {
             try {
-                val token = repository.wikiRssToken(wikiId, mode)
-                val url = "$serverUrl/wikis/$wikiId/-/rss?token=$token"
-                _events.emit(PageViewEvent.CopyRssUrl(url))
+                val answer = repository.wikiRssToken(wikiId, mode, regenerate)
+                if (answer.exists) {
+                    _events.emit(PageViewEvent.RssExists(mode))
+                    return@launch
+                }
+                val url = "$serverUrl/wikis/$wikiId/-/rss?token=${answer.token}"
+                _events.emit(PageViewEvent.CopyRssUrl(url, regenerate))
             } catch (e: Exception) {
                 _events.emit(PageViewEvent.ShowError(e.toMochiError()))
             }

@@ -5,10 +5,7 @@
     <string name="auth_email">အီးမေးလ်</string>
     <string name="auth_continue">ဆက်လက်လုပ်ဆောင်မည်</string>
     <string name="auth_verification_code">အတည်ပြု ကုဒ်</string>
-    <string name="auth_verify">အတည်ပြုမည်</string>
-    <string name="auth_authenticator_app">Authenticator app</string>
     <string name="auth_email_code">အီးမေးလ် ကုဒ်</string>
-    <string name="auth_authenticator_code">Authenticator ကုဒ်</string>
     <string name="auth_recovery_code">Recovery code</string>
     <string name="auth_name">အမည်</string>
     <string name="auth_create">ဖန်တီးမည်</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">ကူးမည်</string>
     <string name="common_copied">ကလစ်ဘုတ်သို့ ကူးပြီး</string>
     <string name="comment_edited">(တည်းဖြတ်ပြီး)</string>
-    <string name="comment_edit_placeholder">မှတ်ချက် တည်းဖြတ်</string>
     <string name="comment_reply">ပြန်ကြား</string>
-    <string name="comment_reply_placeholder">ပြန်ကြား</string>
-    <string name="comment_send_reply">ပြန်ဖြေမည်</string>
     <string name="person_picker_search">သုံးစွဲသူများ ရှာဖွေ</string>
     <string name="place_picker_no_results">နေရာများ မတွေ့ပါ</string>
-    <string name="discovery_results">ရလဒ်များ</string>
     <string name="discovery_recommended">အကြံပြုထား</string>
-    <string name="discovery_subscribed">Subscribe လုပ်ပြီး</string>
     <string name="access_add_rule">စည်းမျဉ်း ထည့်ပါ</string>
     <string name="access_owner">ပိုင်ရှင်</string>
     <string name="access_revoke">ရုပ်သိမ်း</string>
-    <string name="access_level">ဝင်ရောက်ခွင့်အဆင့်</string>
     <string name="access_level_comment">မှတ်ချက်</string>
     <string name="access_level_view">ကြည့်ရှုမည်</string>
     <string name="access_level_none">မရှိ</string>
-    <string name="banner_label">ပိုစတာ</string>
     <string name="reaction_like">နှစ်သက်</string>
     <string name="reaction_dislike">မကြိုက်ပါ</string>
     <string name="reaction_laugh">ရယ်</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">အားလုံး</string>
     <string name="notifications_mark_all_read">အားလုံး ဖတ်ပြီး မှတ်</string>
     <string name="notifications_clear_all">အားလုံး ရှင်းမည်</string>
-    <string name="notifications_loading">တင်နေသည်…</string>
     <string name="settings_title">ဆက်တင်များ</string>
-    <string name="settings_open">ဆက်တင်များ</string>
     <string name="settings_appearance">အသွင်အပြင်</string>
     <string name="settings_appearance_light">အလင်း</string>
     <string name="settings_appearance_dark">အမှောင်</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">နောက်ခံ</string>
     <string name="settings_background_theme">အပြင်အဆင်မှ</string>
     <string name="settings_background_off">မရှိ</string>
-    <string name="profile_title">ပရိုဖိုင်</string>
-    <string name="profile_open">ပရိုဖိုင်</string>
-    <string name="profile_display_name">ဖော်ပြချက် အမည်</string>
-    <string name="profile_save_name">အမည် သိမ်းပါ</string>
-    <string name="profile_privacy">ကိုယ်ရေးကိုယ်တာ</string>
-    <string name="profile_privacy_public">အများသုံး</string>
-    <string name="profile_privacy_private">သီးသန့်</string>
-    <string name="profile_fingerprint">လက်ဗွေ</string>
     <string name="game_chat_empty">မက်ဆေ့ချ်များ မရှိသေးပါ</string>
     <string name="game_chat_input_placeholder">မက်ဆေ့ ရိုက်ပါ…</string>
     <string name="game_chat_send">မက်ဆေ့ပို့မည်</string>
     <string name="game_chat_subject_you">သင်</string>
 
     <string name="common_not_saved">မသိမ်းဆည်းရသေးပါ</string>
-    <string name="common_save_failed">သင့်အပြောင်းအလဲများကို သိမ်းဆည်း၍မရပါ။</string>
     <string name="app_brand">Mochi</string>
     <string name="auth_server_url">ဆာဗာ URL</string>
     <string name="auth_link_rules">စည်းမျဉ်းများ</string>
@@ -150,20 +129,13 @@
     <string name="error_not_found">မတွေ့ပါ</string>
     <string name="error_server">ဆာဗာအမှား (%1$d)။ ခဏနောက်တွင် ထပ်စမ်းကြည့်ပါ။</string>
     <string name="error_unexpected">မမျှော်လင့်ထားသောအမှားတစ်ခုဖြစ်ပွားခဲ့သည်</string>
-    <string name="error_request_failed">တောင်းဆိုမှုမအောင်မြင်ပါ</string>
     <string name="error_enter_server_url">ဆာဗာ URL ကိုထည့်သွင်းပါ</string>
     <string name="error_enter_email">သင်၏အီးမေးလ်ကိုထည့်သွင်းပါ</string>
     <string name="error_enter_name">အမည်ကိုထည့်သွင်းပါ</string>
     <string name="auth_connect_to_server">သင်၏ဆာဗာသို့ချိတ်ဆက်ပါ</string>
     <string name="auth_connect">ချိတ်ဆက်ပါ</string>
     <string name="auth_sign_in">ဝင်ရောက်ပါ</string>
-    <string name="auth_sign_in_with_passkey">passkey ဖြင့်ဝင်ရောက်ပါ</string>
-    <string name="auth_sign_in_with_email_code">အီးမေးလ်ကုဒ်ဖြင့်ဝင်ရောက်ပါ</string>
-    <string name="auth_use_recovery_code">ပြန်လည်ရယူရေးကုဒ်ကိုသုံးပါ</string>
-    <string name="auth_back_to_sign_in">ဝင်ရောက်ခြင်းသို့ပြန်သွားပါ</string>
-    <string name="auth_send_code">ကုဒ်ပို့ပါ</string>
     <string name="auth_check_email">အတည်ပြုကုဒ်အတွက် သင်၏အီးမေးလ်ကိုစစ်ဆေးပါ</string>
-    <string name="auth_six_digit_code">ဂဏန်း ၆ လုံးကုဒ်</string>
     <string name="auth_mfa_title">Multi-factor အထောက်အထားစိစစ်ခြင်း</string>
     <string name="auth_mfa_subtitle">ကျန်ရှိနေသောအတည်ပြုခြင်းအဆင့်များကိုဖြည့်စွက်ပါ</string>
     <string name="auth_recover_account">အကောင့်ပြန်လည်ရယူပါ</string>
@@ -190,8 +162,6 @@
     <string name="bootstrap_sign_in_differently">အခြားနည်းဖြင့်ဝင်ရောက်ပါ</string>
     <string name="bootstrap_choose_account">အကောင့်တစ်ခုရွေးချယ်ပါ</string>
     <string name="bootstrap_sign_in_different_server">အခြားဆာဗာသို့ဝင်ရောက်ပါ</string>
-    <string name="common_or">သို့မဟုတ်</string>
-    <string name="common_change">ပြောင်းပါ</string>
     <string name="common_retry">ထပ်စမ်းပါ</string>
     <string name="common_more_options">ထပ်တိုးရွေးချယ်စရာများ</string>
     <string name="common_collapse">ခေါက်ပါ</string>
@@ -200,21 +170,12 @@
     <string name="place_picker_name">နေရာအမည်</string>
     <string name="place_origin">မူလနေရာ</string>
     <string name="place_destination">ဦးတည်ရာ</string>
-    <string name="discovery_search_placeholder">%1$s ရှာဖွေပါ</string>
-    <string name="discovery_no_results">%1$s မတွေ့ပါ</string>
     <string name="discovery_no_results_hint">သင်၏ ရှာဖွေမှုကို ပြင်ဆင်ကြည့်ပါ</string>
-    <string name="discovery_no_recommendations">အကြံပြုချက်များမရှိပါ</string>
-    <string name="discovery_search_hint">စာရင်းသွင်းရန် %1$s ကိုရှာဖွေကြည့်ပါ</string>
     <string name="access_no_rules">ဝင်ရောက်ခွင့်စည်းမျဉ်းများမရှိပါ</string>
-    <string name="access_no_rules_subtitle">ဤအရင်းအမြစ်ကိုမည်သူဝင်ရောက်နိုင်သည်ကိုထိန်းချုပ်ရန် စည်းမျဉ်းများထည့်ပါ</string>
     <string name="access_add_rule_title">ဝင်ရောက်ခွင့်စည်းမျဉ်းထည့်ပါ</string>
     <string name="access_level_manage">စီမံပါ</string>
     <string name="access_level_react">တုံ့ပြန်ပါ</string>
     <string name="notifications_clear">အကြောင်းကြားချက်များရှင်းပါ</string>
-    <string name="banner_description">ဤမြင်ကွင်း၏ထိပ်တွင်ဖော်ပြသော Markdown။</string>
-    <string name="banner_placeholder">ကြိုဆိုပါသည်…</string>
-    <string name="banner_save">ဘန်နာသိမ်းပါ</string>
-    <string name="banner_clear">ဘန်နာရှင်းပါ</string>
     <string name="entity_avatar_alt">%1$s အတွက် Avatar</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="format_time_just_now">ယခုလေးတင်</string>
@@ -229,7 +190,6 @@
     <string name="format_time_days_short">%1$dရက်</string>
     <string name="format_time_weeks_short">%1$dပတ်</string>
     <string name="format_time_months_short">%1$dလ</string>
-    <string name="format_time_years_short">%1$dနှစ်</string>
     <string name="reaction_add">တုံ့ပြန်မှုထည့်ပါ</string>
     <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">အကြောင်းကြားချက်များလက်ခံရန် Mochi ကိုဆက်သွယ်ထားသည်</string>
@@ -253,7 +213,6 @@
     <string name="about_check_download_failed">ဒေါင်းလုဒ်လုပ်ခြင်း မအောင်မြင်ပါ</string>
     <string name="notifications_clear_all_title">အကြောင်းကြားချက်အားလုံးကို ရှင်းလင်းမည်လား?</string>
     <string name="notifications_clear_all_message">ဤလုပ်ဆောင်ချက်သည် အကြောင်းကြားချက်တိုင်းကို ဖယ်ရှားမည်ဖြစ်သည်။ ၎င်းတို့ကို ပြန်လည်ရယူ၍မရပါ။</string>
-    <string name="notifications_count_n">အသစ် %1$d ခု</string>
     <string name="settings_value_auto">အလိုအလျောက်</string>
     <string name="settings_value_theme">အပြင်အဆင်၏ ပုံသေတန်ဖိုး</string>
     <string name="settings_radius">ထောင့်အကွေး</string>
@@ -261,7 +220,6 @@
     <string name="settings_timestamp_relative">ဆွေမျိုးတော်စပ်</string>
     <string name="settings_timestamp_absolute">တိကျသော</string>
     <string name="settings_units_usa">US</string>
-    <string name="profile_privacy_description">လမ်းညွှန်တွင် အခြားသူများက သင့်ကို ရှာဖွေနိုင်ခြင်း ရှိ၊ မရှိ။</string>
     <string name="game_chat_load_more">ပိုဟောင်းသော မက်ဆေ့ဂျ်များ ဖွင့်ပါ</string>
     <string name="stepup_title">သင်ဖြစ်ကြောင်း အတည်ပြုပါ</string>
     <string name="stepup_description">ဤသည်မှာ သင့်အကောင့်၏ လုံခြုံရေးပြောင်းလဲမှုဖြစ်သည်။ ဆက်လက်ဆောင်ရွက်ရန် သင်ဖြစ်ကြောင်း အတည်ပြုပါ။</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">သင့်အီးမေးလ်မှ ကုဒ်ကို ထည့်ပါ</string>
     <string name="stepup_totp_label">Authenticator ကုဒ်</string>
     <string name="stepup_totp_placeholder">သင့်အထောက်အထားစိစစ်ရေးကုဒ်ကို ထည့်ပါ</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">သင့်ပတ်စ်ကီးကို သုံးပါ</string>
     <string name="stepup_send_email">အီးမေးလ်ပို့ရန်</string>
     <string name="stepup_resend_email">အီးမေးလ်ပြန်ပို့ရန်</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">အမည်မသိ</string>
     <string name="tags_label">အညွှန်းများ</string>
     <string name="tags_add">အညွှန်း ထည့်ရန်</string>
-    <string name="tags_label_field">တဂ် အညွှန်း</string>
     <string name="tags_interest_up">ဤကဲ့သို့ ပိုပြပါ</string>
     <string name="tags_interest_down">ဤကဲ့သို့ လျှော့ပြပါ</string>
     <string name="tags_interest_clear">ပြသခြင်း ရပ်ပါ</string>
@@ -310,9 +266,6 @@
     <string name="person_picker_directory">လမ်းညွှန်</string>
     <string name="person_picker_no_people">လူမရှိပါ</string>
     <string name="person_picker_project_members">ပရောဂျက်အဖွဲ့ဝင်များ</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="other">စာဖတ်သူ %1$d ဦး</item>
-    </plurals>
     <string name="account_token_label">Mochi စက်ရှင်</string>
     <string name="attachment_caption">စာတန်း</string>
     <string name="attachment_caption_add">စာတန်းထည့်ရန်</string>
@@ -353,4 +306,8 @@
     <string name="settings_card_theme">အပြင်အဆင်မှ</string>
     <string name="settings_card_flat">ပြားသော</string>
     <string name="settings_card_raised">ဖော့တက်</string>
+    <string name="error_server_https">ဆာဗာလိပ်စာသည် https:// ဖြင့် စတင်ရမည်</string>
+    <string name="device_name_fallback">မိုဘိုင်းစက်ပစ္စည်း</string>
+    <string name="account_error_token_type">မပံ့ပိုးသော တိုကင်အမျိုးအစား</string>
+    <string name="account_error_caller">ခေါ်ဆိုသူကို ခွင့်မပြုပါ</string>
 </resources>

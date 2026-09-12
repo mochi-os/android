@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">ਮੇਨੂ</string>
-    <string name="words_list_new">ਨਵੀਂ ਗੇਮ</string>
     <string name="words_list_logout">ਲੌਗ ਆਊਟ</string>
-    <string name="words_list_empty_title">ਅਜੇ ਕੋਈ ਗੇਮ ਨਹੀਂ</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">ਪੂਰਾ</string>
     <string name="words_sidebar_new_game">ਨਵੀਂ ਗੇਮ</string>
     <string name="words_new_game_title">ਨਵੀਂ ਗੇਮ</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Rematch</string>
     <string name="words_detail_action_delete">ਖੇਡ ਮਿਟਾਓ</string>
     <string name="words_detail_chat_title">ਚੈਟ</string>
-    <string name="words_detail_invalid_move">ਅਯੋਗ ਚਾਲ</string>
     <string name="words_detail_recall">Recall</string>
     <string name="words_detail_submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
     <string name="words_detail_cancel">ਰੱਦ ਕਰੋ</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ਇੱਕ ਅੱਖਰ ਚੁਣੋ</string>
     <string name="words_detail_resign_title">ਗੇਮ ਤੋਂ ਅਸਤੀਫ਼ਾ ਦੇਈਏ?</string>
     <string name="words_detail_resign_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਹਾਰ ਮੰਨਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
-    <string name="words_detail_failed_move">ਚਾਲ ਜਮ੍ਹਾਂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="words_detail_failed_pass">ਪਾਸ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="words_detail_failed_exchange">ਅਦਲਾ-ਬਦਲੀ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="words_detail_failed_resign">ਅਸਤੀਫ਼ਾ ਦੇਣ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="words_detail_failed_rematch">ਰੀਮੈਚ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="words_detail_failed_delete">ਗੇਮ ਮਿਟਾਉਣ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="words_detail_game_deleted">ਗੇਮ ਮਿਟਾਈ ਗਈ</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words ਵਾਰੀਆਂ, ਅਦਲਾ-ਬਦਲੀ ਅਤੇ ਖੇਡ ਨਤੀਜਿਆਂ ਬਾਰੇ ਸੂਚਨਾਵਾਂ।</string>
-    <string name="words_list_empty_subtitle">ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰਨ ਲਈ + ਬਟਨ ਦਬਾਓ।</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">ਹਾਲੇ ਕੋਈ ਖੇਡ ਨਹੀਂ।</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ People ਐਪ ਵਿੱਚ ਦੋਸਤ ਜੋੜੋ।</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">ਖੇਡ ਦੇ ਵੇਰਵੇ ਜਲਦੀ ਆ ਰਹੇ ਹਨ</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

@@ -32,7 +32,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.automirrored.outlined.Reply
-import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
@@ -65,6 +64,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -143,6 +144,16 @@ fun PostScreen(
     var editingComment by remember { mutableStateOf<ForumComment?>(null) }
     var showReportPost by remember { mutableStateOf(false) }
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
+    val snackbar = remember { SnackbarHostState() }
+    val rejectContext = LocalContext.current
+
+    // The forum owner refused this author's submission and the local copy has
+    // gone with it; name the reason rather than letting it vanish.
+    LaunchedEffect(uiState.rejected) {
+        val rejected = uiState.rejected ?: return@LaunchedEffect
+        snackbar.showSnackbar(rejectContext.getString(rejected))
+        viewModel.clearRejected()
+    }
     var showPostMenu by remember { mutableStateOf(false) }
     val isPostAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank()
 
@@ -221,6 +232,7 @@ fun PostScreen(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = {
@@ -477,17 +489,13 @@ fun PostScreen(
     }
 
     editingComment?.let { c ->
-        val ctx = androidx.compose.ui.platform.LocalContext.current
         EditCommentDialog(
             comment = c,
-            onConfirm = { body, keptIds, newUris ->
-                viewModel.editCommentWithAttachments(
-                    c.id, body, keptIds, newUris, ctx
-                )
+            onConfirm = { body ->
+                viewModel.editComment(c.id, body)
                 editingComment = null
             },
             onDismiss = { editingComment = null },
-            resolveFileName = viewModel::fileName,
         )
     }
 
@@ -518,97 +526,26 @@ fun PostScreen(
 @Composable
 private fun EditCommentDialog(
     comment: ForumComment,
-    onConfirm: (body: String, keptAttachmentIds: List<String>, newUris: List<android.net.Uri>) -> Unit,
+    onConfirm: (body: String) -> Unit,
     onDismiss: () -> Unit,
-    resolveFileName: suspend (Uri) -> String,
 ) {
     var body by remember { mutableStateOf(comment.body) }
-    val keptIds = remember { androidx.compose.runtime.mutableStateListOf<String>().apply {
-        addAll(comment.attachments.map { it.id })
-    } }
-    val newUris = remember { androidx.compose.runtime.mutableStateListOf<android.net.Uri>() }
-
-    val filePickerLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
-        contract = androidx.activity.result.contract.ActivityResultContracts.GetMultipleContents(),
-    ) { uris -> newUris.addAll(uris) }
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
         title = stringResource(R.string.forums_comment_edit_title),
         content = {
-            Column {
-                MochiTextField(
-                    value = body,
-                    onValueChange = { body = it },
-                    label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
-                    minLines = 3,
-                    maxLines = 8,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                MochiIconButton(onClick = { filePickerLauncher.launch("*/*") }) {
-                    Icon(
-                        androidx.compose.material.icons.Icons.Default.MoreHoriz,
-                        contentDescription = null,
-                    )
-                    Text(stringResource(R.string.forums_comment_edit_attach))
-                }
-                if (comment.attachments.isNotEmpty() || newUris.isNotEmpty()) {
-                    androidx.compose.foundation.layout.FlowRow(
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalArrangement = Arrangement.spacedBy(4.dp),
-                    ) {
-                        comment.attachments.forEach { att ->
-                            val isKept = att.id in keptIds
-                            androidx.compose.material3.FilterChip(
-                                selected = isKept,
-                                onClick = {
-                                    if (isKept) keptIds.remove(att.id) else keptIds.add(att.id)
-                                },
-                                label = {
-                                    Text(
-                                        att.name.ifBlank { att.id }.takeLast(20),
-                                        style = MaterialTheme.typography.labelSmall,
-                                    )
-                                },
-                                trailingIcon = {
-                                    Icon(
-                                        androidx.compose.material.icons.Icons.Default.Close,
-                                        contentDescription = null,
-                                        modifier = Modifier.size(14.dp),
-                                    )
-                                },
-                            )
-                        }
-                        newUris.forEach { uri ->
-                            val label = rememberFileName(
-                                uri,
-                                stringResource(R.string.forums_comment_edit_attach),
-                                resolveFileName,
-                            )
-                            androidx.compose.material3.AssistChip(
-                                onClick = { newUris.remove(uri) },
-                                label = {
-                                    Text(
-                                        label,
-                                        style = MaterialTheme.typography.labelSmall,
-                                    )
-                                },
-                                trailingIcon = {
-                                    Icon(
-                                        androidx.compose.material.icons.Icons.Default.Close,
-                                        contentDescription = null,
-                                        modifier = Modifier.size(14.dp),
-                                    )
-                                },
-                            )
-                        }
-                    }
-                }
-            }
+            MochiTextField(
+                value = body,
+                onValueChange = { body = it },
+                label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
+                minLines = 3,
+                maxLines = 8,
+                modifier = Modifier.fillMaxWidth()
+            )
         },
         confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = { onConfirm(body, keptIds.toList(), newUris.toList()) },
+        onConfirm = { onConfirm(body) },
         confirmEnabled = body.isNotBlank(),
         dismissText = stringResource(MochiR.string.common_cancel),
     )
@@ -901,7 +838,11 @@ private fun PostHeader(
             // The fuller timestamp — absolute date/time or "5m ago" per the
             // user's preference — rather than the terse relative form.
             Text(
-                text = format.formatTimestamp(post.created),
+                text = if (post.edited > 0) {
+                    stringResource(R.string.forums_post_edited, format.formatTimestamp(post.created))
+                } else {
+                    format.formatTimestamp(post.created)
+                },
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
@@ -1187,6 +1128,7 @@ private fun CommentCard(
         anchorCaption = comment.attachmentCaption.orEmpty(),
         onOpenAnchor = anchor.takeIf { it.isNotEmpty() }?.let { { onOpenAttachment(it) } },
     ) {
+        PostBadges(status = comment.status)
         // Same reaction row as the post: like · dislike, filled for the viewer's
         // own vote, tappable only with vote rights.
         PostReaction(

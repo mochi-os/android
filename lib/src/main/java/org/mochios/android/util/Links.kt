@@ -26,3 +26,26 @@ fun isWebUrl(url: String): Boolean {
  * Every site that launches or downloads a peer's URL goes through here.
  */
 fun webUri(url: String): Uri? = if (isWebUrl(url)) Uri.parse(url) else null
+
+/** What a `mochi:/<entity>` path segment may contain. See [entityDeepLink]. */
+private val ROUTE_SEGMENT = Regex("[A-Za-z0-9._-]{1,128}")
+
+/**
+ * Build the in-app route for a `mochi:/<entity>[/<sub>...]` intent, or null
+ * when it cannot be trusted.
+ *
+ * The activity that receives these is exported, so [app] and every segment ride
+ * in an intent any installed app can send. [app] must name one of [apps] - the
+ * features this build hosts - and every segment must be a plain identifier, so
+ * a sender cannot smuggle its own path or query into the route.
+ */
+fun entityDeepLink(app: String?, segments: List<String>, apps: List<String>): String? {
+    if (app == null || app !in apps) return null
+    val entity = segments.firstOrNull() ?: return null
+    // `.` and `..` match the character class but are path traversal, not names.
+    if (segments.any { !it.matches(ROUTE_SEGMENT) || it == "." || it == ".." }) return null
+    return buildString {
+        append('/').append(app).append('/').append(entity)
+        for (s in segments.drop(1)) append('/').append(s)
+    }
+}

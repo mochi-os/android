@@ -178,8 +178,17 @@ class AuthViewModel @Inject constructor(
 
         // Parse before persisting: setServerUrl stores whatever it is given and
         // the request is retargeted from it, so an unparseable entry would
-        // validate against the previously pinned server.
-        if (url.toHttpUrlOrNull() == null) {
+        // validate against the previously pinned server. An http:// server is
+        // refused here rather than by the platform's cleartext policy at the
+        // first request, which surfaces as an opaque connection failure.
+        val parsed = url.toHttpUrlOrNull()
+        if (parsed != null && !parsed.isHttps) {
+            _uiState.value = _uiState.value.copy(
+                error = MochiError.Local(R.string.error_server_https)
+            )
+            return
+        }
+        if (parsed == null) {
             _uiState.value = _uiState.value.copy(
                 error = MochiError.Unknown(AppContext.get().getString(R.string.error_enter_server_url))
             )

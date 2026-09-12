@@ -13,7 +13,6 @@
     <string name="go_status_you_win">U wint!</string>
     <string name="go_status_your_move">Uw zet</string>
 
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
     <string name="go_chat_title">Chat</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
@@ -21,4 +20,12 @@
     <string name="go_new_game_komi_field_label">Komi</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go-bord</string>
+    <string name="go_status_scoring">Tellen — word het eens over de score of speel verder</string>
+    <string name="go_score_proposed">Voorgestelde score: zwart %1$s, wit %2$s</string>
+    <string name="go_score_opponent_accepted">Je tegenstander aanvaardt deze score: zwart %1$s, wit %2$s</string>
+    <string name="go_score_waiting">Score aanvaard — wachten op %1$s</string>
+    <string name="go_score_accept">Score aanvaarden</string>
+    <string name="go_score_resume">Spel hervatten</string>
+    <string name="go_error_score_resume_failed">Spel hervatten mislukt</string>
+    <string name="go_error_score_accept_failed">Score aanvaarden mislukt</string>
 </resources>

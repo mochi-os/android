@@ -5,10 +5,7 @@
     <string name="auth_email">Correu electrònic</string>
     <string name="auth_continue">Continua</string>
     <string name="auth_verification_code">Codi de verificació</string>
-    <string name="auth_verify">Verifica</string>
-    <string name="auth_authenticator_app">Aplicació autenticadora</string>
     <string name="auth_email_code">Codi per correu</string>
-    <string name="auth_authenticator_code">Codi de l\'autenticador</string>
     <string name="auth_recovery_code">Codi de recuperació</string>
     <string name="auth_name">Nom</string>
     <string name="auth_create">Crea</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Copia</string>
     <string name="common_copied">Copiat al porta-retalls</string>
     <string name="comment_edited">(editat)</string>
-    <string name="comment_edit_placeholder">Edita el comentari</string>
     <string name="comment_reply">Respon</string>
-    <string name="comment_reply_placeholder">Respon</string>
-    <string name="comment_send_reply">Envia resposta</string>
     <string name="person_picker_search">Cerca usuaris</string>
     <string name="place_picker_no_results">No s\'ha trobat cap lloc</string>
-    <string name="discovery_results">Resultats</string>
     <string name="discovery_recommended">Recomanat</string>
-    <string name="discovery_subscribed">Subscrit</string>
     <string name="access_add_rule">Afegeix una regla</string>
     <string name="access_owner">Propietari</string>
     <string name="access_revoke">Revoca</string>
-    <string name="access_level">Nivell d\'accés</string>
     <string name="access_level_comment">Comentari</string>
     <string name="access_level_view">Visualitza</string>
     <string name="access_level_none">Cap</string>
-    <string name="banner_label">Bàner</string>
     <string name="reaction_like">M\'agrada</string>
     <string name="reaction_dislike">No m\'agrada</string>
     <string name="reaction_laugh">Riure</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Totes</string>
     <string name="notifications_mark_all_read">Marca-ho tot com a llegit</string>
     <string name="notifications_clear_all">Esborra-ho tot</string>
-    <string name="notifications_loading">S\'està carregant…</string>
     <string name="settings_title">Configuració</string>
-    <string name="settings_open">Configuració</string>
     <string name="settings_appearance">Aparença</string>
     <string name="settings_appearance_light">Clar</string>
     <string name="settings_appearance_dark">Fosc</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Fons</string>
     <string name="settings_background_theme">Del tema</string>
     <string name="settings_background_off">Cap</string>
-    <string name="profile_title">Perfil</string>
-    <string name="profile_open">Perfil</string>
-    <string name="profile_display_name">Nom visible</string>
-    <string name="profile_save_name">Desa el nom</string>
-    <string name="profile_privacy">Privadesa</string>
-    <string name="profile_privacy_public">Públic</string>
-    <string name="profile_privacy_private">Privat</string>
-    <string name="profile_fingerprint">Empremta</string>
     <string name="game_chat_empty">Encara no hi ha missatges</string>
     <string name="game_chat_input_placeholder">Escriu un missatge…</string>
     <string name="game_chat_send">Envia missatge</string>
     <string name="game_chat_subject_you">Tu</string>
 
     <string name="common_not_saved">No s\'ha desat</string>
-    <string name="common_save_failed">No s\'han pogut desar els canvis.</string>
 
     <string name="push_service_channel_description">Manté Mochi connectat per rebre notificacions</string>
     <string name="push_service_group">Servei en segon pla</string>
@@ -161,7 +140,6 @@
     <string name="about_check_download_failed">La descàrrega ha fallat</string>
     <string name="notifications_clear_all_title">Voleu esborrar totes les notificacions?</string>
     <string name="notifications_clear_all_message">Això eliminarà totes les notificacions. No es podran recuperar.</string>
-    <string name="notifications_count_n">%1$d noves</string>
     <string name="settings_value_auto">Automàtic</string>
     <string name="settings_value_theme">Predeterminat del tema</string>
     <string name="settings_radius">Radi de les cantonades</string>
@@ -169,7 +147,6 @@
     <string name="settings_timestamp_relative">Relativa</string>
     <string name="settings_timestamp_absolute">Absoluta</string>
     <string name="settings_units_usa">EUA</string>
-    <string name="profile_privacy_description">Si els altres us poden trobar al directori.</string>
     <string name="game_chat_load_more">Carrega missatges anteriors</string>
     <string name="game_chat_move_played">%1$s ha jugat %2$s</string>
 
@@ -177,7 +154,6 @@
     <string name="auth_server_url">URL del servidor</string>
     <string name="auth_create_identity_title">Creeu la vostra identitat</string>
     <string name="auth_link_rules">Regles</string>
-    <string name="common_change">Canvia</string>
     <string name="common_retry">Torna-ho a provar</string>
     <string name="common_more_options">Més opcions</string>
     <string name="common_collapse">Replega</string>
@@ -185,7 +161,6 @@
     <string name="access_add_rule_title">Afegeix una regla d\'accés</string>
     <string name="access_level_manage">Gestiona</string>
     <string name="notifications_clear">Esborra les notificacions</string>
-    <string name="banner_save">Desa el bàner</string>
     <string name="lightbox_position">%1$d / %2$d</string>
     <string name="format_time_just_now">Ara mateix</string>
     <string name="format_time_minutes_ago">fa %1$dm</string>
@@ -199,27 +174,19 @@
     <string name="format_time_days_short">%1$dd</string>
     <string name="format_time_weeks_short">%1$dset</string>
     <string name="format_time_months_short">%1$dmes</string>
-    <string name="format_time_years_short">%1$da</string>
 
     <string name="error_network">No s\'ha pogut connectar. Comproveu la connexió a Internet i torneu-ho a provar.</string>
     <string name="error_authentication_required">Cal autenticació</string>
     <string name="error_not_found">No s\'ha trobat</string>
     <string name="error_server">Error del servidor (%1$d). Torneu-ho a provar més tard.</string>
     <string name="error_unexpected">S\'ha produït un error inesperat</string>
-    <string name="error_request_failed">La sol·licitud ha fallat</string>
     <string name="error_enter_server_url">Introduïu un URL de servidor</string>
     <string name="error_enter_email">Introduïu el vostre correu electrònic</string>
     <string name="error_enter_name">Introduïu un nom</string>
     <string name="auth_connect_to_server">Connecteu-vos al vostre servidor</string>
     <string name="auth_connect">Connecta</string>
     <string name="auth_sign_in">Inicia la sessió</string>
-    <string name="auth_sign_in_with_passkey">Inicia la sessió amb clau d\'accés</string>
-    <string name="auth_sign_in_with_email_code">Inicia la sessió amb codi per correu</string>
-    <string name="auth_use_recovery_code">Utilitza el codi de recuperació</string>
-    <string name="auth_back_to_sign_in">Torna a l\'inici de sessió</string>
-    <string name="auth_send_code">Envia el codi</string>
     <string name="auth_check_email">Comproveu el vostre correu per veure el codi de verificació</string>
-    <string name="auth_six_digit_code">Codi de 6 dígits</string>
     <string name="auth_mfa_title">Autenticació multifactor</string>
     <string name="auth_mfa_subtitle">Completeu els passos de verificació restants</string>
     <string name="auth_recover_account">Recupera el compte</string>
@@ -245,22 +212,13 @@
     <string name="bootstrap_sign_in_differently">Inicia la sessió d\'una altra manera</string>
     <string name="bootstrap_choose_account">Trieu un compte</string>
     <string name="bootstrap_sign_in_different_server">Inicieu la sessió en un altre servidor</string>
-    <string name="common_or">o</string>
     <string name="common_play_video">Reprodueix el vídeo</string>
     <string name="place_picker_name">Nom del lloc</string>
     <string name="place_origin">Origen</string>
     <string name="place_destination">Destinació</string>
-    <string name="discovery_search_placeholder">Cerca %1$ss</string>
-    <string name="discovery_no_results">No s\'ha trobat cap %1$s</string>
     <string name="discovery_no_results_hint">Prova d\'ajustar la cerca</string>
-    <string name="discovery_no_recommendations">Sense recomanacions</string>
-    <string name="discovery_search_hint">Proveu de cercar un %1$s al qual subscriure-us</string>
     <string name="access_no_rules">Sense regles d\'accés</string>
-    <string name="access_no_rules_subtitle">Afegiu regles per controlar qui pot accedir a aquest recurs</string>
     <string name="access_level_react">Reacciona</string>
-    <string name="banner_description">Markdown mostrat a la part superior d\'aquesta vista.</string>
-    <string name="banner_placeholder">Us donem la benvinguda…</string>
-    <string name="banner_clear">Esborra el bàner</string>
     <string name="entity_avatar_alt">Avatar de %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="reaction_add">Afegeix una reacció</string>
@@ -271,7 +229,6 @@
     <string name="stepup_email_placeholder">Introduïu el codi del vostre correu electrònic</string>
     <string name="stepup_totp_label">Codi de l\'autenticador</string>
     <string name="stepup_totp_placeholder">Introduïu el codi de l\'autenticador</string>
-    <string name="stepup_passkey_label">Clau d\'accés</string>
     <string name="stepup_use_passkey">Utilitzeu la vostra clau d\'accés</string>
     <string name="stepup_send_email">Envia el correu</string>
     <string name="stepup_resend_email">Torna a enviar el correu</string>
@@ -300,7 +257,6 @@
     <string name="comment_anonymous">Anònim</string>
     <string name="tags_label">Etiquetes</string>
     <string name="tags_add">Afegeix una etiqueta</string>
-    <string name="tags_label_field">Etiqueta</string>
     <string name="tags_interest_up">Mostra\'n més com aquesta</string>
     <string name="tags_interest_down">Mostra\'n menys com aquesta</string>
     <string name="tags_interest_clear">Deixa de mostrar</string>
@@ -312,10 +268,6 @@
     <string name="person_picker_directory">Directori</string>
     <string name="person_picker_no_people">No hi ha persones</string>
     <string name="person_picker_project_members">Membres del projecte</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d subscriptor</item>
-        <item quantity="other">%1$d subscriptors</item>
-    </plurals>
     <string name="account_token_label">Sessió de Mochi</string>
     <string name="attachment_caption">Llegenda</string>
     <string name="attachment_caption_add">Afegeix una llegenda</string>
@@ -356,4 +308,8 @@
     <string name="settings_card_theme">Del tema</string>
     <string name="settings_card_flat">Plana</string>
     <string name="settings_card_raised">Elevat</string>
+    <string name="error_server_https">L\'adreça del servidor ha de començar per https://</string>
+    <string name="device_name_fallback">Dispositiu mòbil</string>
+    <string name="account_error_token_type">Tipus de testimoni no admès</string>
+    <string name="account_error_caller">Qui truca no té permís</string>
 </resources>

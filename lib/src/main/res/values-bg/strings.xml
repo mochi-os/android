@@ -5,10 +5,7 @@
     <string name="auth_email">Имейл</string>
     <string name="auth_continue">Продължи</string>
     <string name="auth_verification_code">Код за потвърждение</string>
-    <string name="auth_verify">Потвърди</string>
-    <string name="auth_authenticator_app">Authenticator приложение</string>
     <string name="auth_email_code">Имейл код</string>
-    <string name="auth_authenticator_code">Код от authenticator</string>
     <string name="auth_recovery_code">Код за възстановяване</string>
     <string name="auth_name">Име</string>
     <string name="auth_create">Създай</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Копирай</string>
     <string name="common_copied">Копирано в клипборда</string>
     <string name="comment_edited">(редактирано)</string>
-    <string name="comment_edit_placeholder">Редактиране на коментар</string>
     <string name="comment_reply">Отговор</string>
-    <string name="comment_reply_placeholder">Отговор</string>
-    <string name="comment_send_reply">Изпрати отговор</string>
     <string name="person_picker_search">Търси потребители</string>
     <string name="place_picker_no_results">Не са намерени места</string>
-    <string name="discovery_results">Резултати</string>
     <string name="discovery_recommended">Препоръчано</string>
-    <string name="discovery_subscribed">Абониран</string>
     <string name="access_add_rule">Добави правило</string>
     <string name="access_owner">Собственик</string>
     <string name="access_revoke">Оттегли</string>
-    <string name="access_level">Ниво на достъп</string>
     <string name="access_level_comment">Коментар</string>
     <string name="access_level_view">Преглед</string>
     <string name="access_level_none">Няма</string>
-    <string name="banner_label">Банер</string>
     <string name="reaction_like">Харесвам</string>
     <string name="reaction_dislike">Не харесвам</string>
     <string name="reaction_laugh">Смях</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Всички</string>
     <string name="notifications_mark_all_read">Маркирай всички прочетени</string>
     <string name="notifications_clear_all">Изчисти всички</string>
-    <string name="notifications_loading">Зареждане…</string>
     <string name="settings_title">Настройки</string>
-    <string name="settings_open">Настройки</string>
     <string name="settings_appearance">Външен вид</string>
     <string name="settings_appearance_light">Светъл</string>
     <string name="settings_appearance_dark">Тъмно</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Фон</string>
     <string name="settings_background_theme">От темата</string>
     <string name="settings_background_off">Няма</string>
-    <string name="profile_title">Профил</string>
-    <string name="profile_open">Профил</string>
-    <string name="profile_display_name">Показвано име</string>
-    <string name="profile_save_name">Запази името</string>
-    <string name="profile_privacy">Поверителност</string>
-    <string name="profile_privacy_public">Публичен</string>
-    <string name="profile_privacy_private">Частен</string>
-    <string name="profile_fingerprint">Отпечатък</string>
     <string name="game_chat_empty">Все още няма съобщения</string>
     <string name="game_chat_input_placeholder">Въведете съобщение…</string>
     <string name="game_chat_send">Изпрати съобщение</string>
     <string name="game_chat_subject_you">Вие</string>
 
     <string name="common_not_saved">Не е запазено</string>
-    <string name="common_save_failed">Промените ви не можаха да бъдат запазени.</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Неуспешно свързване. Проверете интернет връзката си и опитайте отново.</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">Не е намерено</string>
     <string name="error_server">Грешка на сървъра (%1$d). Моля, опитайте отново по-късно.</string>
     <string name="error_unexpected">Възникна неочаквана грешка</string>
-    <string name="error_request_failed">Заявката е неуспешна</string>
     <string name="error_enter_server_url">Моля, въведете URL адрес на сървъра</string>
     <string name="error_enter_email">Моля, въведете имейл адреса си</string>
     <string name="error_enter_name">Моля, въведете име</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">URL адрес на сървъра</string>
     <string name="auth_connect">Свързване</string>
     <string name="auth_sign_in">Вход</string>
-    <string name="auth_sign_in_with_passkey">Вход с passkey</string>
-    <string name="auth_sign_in_with_email_code">Вход с код по имейл</string>
-    <string name="auth_use_recovery_code">Използване на код за възстановяване</string>
-    <string name="auth_back_to_sign_in">Обратно към входа</string>
-    <string name="auth_send_code">Изпращане на код</string>
     <string name="auth_check_email">Проверете имейла си за код за потвърждение</string>
-    <string name="auth_six_digit_code">6-цифрен код</string>
     <string name="auth_mfa_title">Многофакторно удостоверяване</string>
     <string name="auth_mfa_subtitle">Завършете останалите стъпки за потвърждение</string>
     <string name="auth_recover_account">Възстановяване на акаунт</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">Вход по друг начин</string>
     <string name="bootstrap_choose_account">Изберете акаунт</string>
     <string name="bootstrap_sign_in_different_server">Вход в друг сървър</string>
-    <string name="common_or">или</string>
-    <string name="common_change">Промяна</string>
     <string name="common_retry">Повторен опит</string>
     <string name="common_more_options">Още опции</string>
     <string name="common_collapse">Свиване</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">Име на място</string>
     <string name="place_origin">Начало</string>
     <string name="place_destination">Дестинация</string>
-    <string name="discovery_search_placeholder">Търсене на %1$s</string>
-    <string name="discovery_no_results">Не са намерени %1$s</string>
     <string name="discovery_no_results_hint">Опитайте да коригирате търсенето си</string>
-    <string name="discovery_no_recommendations">Няма препоръки</string>
-    <string name="discovery_search_hint">Опитайте да потърсите %1$s, за който да се абонирате</string>
     <string name="access_no_rules">Няма правила за достъп</string>
-    <string name="access_no_rules_subtitle">Добавете правила, за да контролирате кой има достъп до този ресурс</string>
     <string name="access_add_rule_title">Добавяне на правило за достъп</string>
     <string name="access_level_manage">Управление</string>
     <string name="access_level_react">Реакция</string>
     <string name="notifications_clear">Изчистване на известията</string>
-    <string name="banner_description">Markdown, показан в горната част на този изглед.</string>
-    <string name="banner_placeholder">Добре дошли…</string>
-    <string name="banner_save">Запазване на банера</string>
-    <string name="banner_clear">Изчистване на банера</string>
     <string name="entity_avatar_alt">Аватар на %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$d д</string>
     <string name="format_time_weeks_short">%1$d седм</string>
     <string name="format_time_months_short">%1$d мес</string>
-    <string name="format_time_years_short">%1$d г</string>
     <string name="reaction_add">Добавяне на реакция</string>
     <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">Поддържа Mochi свързан за получаване на известия</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">Изтеглянето е неуспешно</string>
     <string name="notifications_clear_all_title">Изчистване на всички известия?</string>
     <string name="notifications_clear_all_message">Това ще премахне всички известия. Не могат да бъдат възстановени.</string>
-    <string name="notifications_count_n">%1$d нови</string>
     <string name="settings_value_auto">Автоматично</string>
     <string name="settings_value_theme">По подразбиране за темата</string>
     <string name="settings_radius">Радиус на ъглите</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">Относително</string>
     <string name="settings_timestamp_absolute">Абсолютно</string>
     <string name="settings_units_usa">САЩ</string>
-    <string name="profile_privacy_description">Дали другите могат да ви намерят в указателя.</string>
     <string name="game_chat_load_more">Зареди по-стари съобщения</string>
     <string name="game_chat_move_played">%1$s изигра %2$s</string>
     <string name="stepup_title">Потвърдете, че сте вие</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">Въведете кода от имейла си</string>
     <string name="stepup_totp_label">Код от authenticator</string>
     <string name="stepup_totp_placeholder">Въведете кода от приложението за удостоверяване</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">Използвайте своя ключ за достъп</string>
     <string name="stepup_send_email">Изпрати имейл</string>
     <string name="stepup_resend_email">Изпрати имейла отново</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">Анонимен</string>
     <string name="tags_label">Етикети</string>
     <string name="tags_add">Добавяне на етикет</string>
-    <string name="tags_label_field">Етикет</string>
     <string name="tags_interest_up">Показвай повече такива</string>
     <string name="tags_interest_down">Показвай по-малко такива</string>
     <string name="tags_interest_clear">Спри показването</string>
@@ -310,10 +266,6 @@
     <string name="person_picker_directory">Указател</string>
     <string name="person_picker_no_people">Няма хора</string>
     <string name="person_picker_project_members">Членове на проекта</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d абонат</item>
-        <item quantity="other">%1$d абонати</item>
-    </plurals>
     <string name="account_token_label">Сесия в Mochi</string>
     <string name="attachment_caption">Надпис</string>
     <string name="attachment_caption_add">Добавяне на надпис</string>
@@ -354,4 +306,8 @@
     <string name="settings_card_theme">От темата</string>
     <string name="settings_card_flat">Плоска</string>
     <string name="settings_card_raised">Повдигнат</string>
+    <string name="error_server_https">Адресът на сървъра трябва да започва с https://</string>
+    <string name="device_name_fallback">Мобилно устройство</string>
+    <string name="account_error_token_type">Неподдържан тип токен</string>
+    <string name="account_error_caller">Извикващият няма право</string>
 </resources>

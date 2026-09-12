@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Atrast wiki</string>
     <string name="wikis_sidebar_create">Izveidot wiki</string>
     <string name="wikis_pageview_title_fallback">Lapa</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Atpakaļ</string>
     <string name="wikis_pageview_page_actions">Lapas darbības</string>
     <string name="wikis_pageview_toc">Šajā lapā</string>
     <string name="wikis_pageview_not_found_title">Lapa nav atrasta</string>
     <string name="wikis_pageview_create_this_page">Izveidot šo lapu</string>
     <string name="wikis_pageview_rss_copied">RSS URL nokopēts starpliktuvē</string>
-    <string name="wikis_pageview_rss_failed">Neizdevās iegūt RSS pilnvaru</string>
     <string name="wikis_page_action_section_page">Lapa</string>
     <string name="wikis_page_action_edit">Rediģēt</string>
     <string name="wikis_page_action_rename">Pārdēvēt</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Sāciet savu pirmo wiki</string>
     <string name="wikis_empty_subtitle">Meklējiet wiki, ko abonēt, vai izveidojiet savu, lai publicētu savu dokumentāciju.</string>
-    <string name="wikis_subscribed_badge">Abonēts</string>
     <string name="wikis_create_button">Izveidot wiki</string>
     <string name="wikis_recommended_section">Ieteiktās wiki</string>
     <string name="wikis_subscribe_button">Abonēt</string>
-    <string name="wikis_subscribed">Abonēts</string>
     <string name="wikis_unsubscribe_action">Atrakstīties</string>
     <string name="wikis_unsubscribing">Notiek atrakstīšanās…</string>
     <string name="wikis_unsubscribe_confirm_title">Atrakstīties</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nosaukums</string>
     <string name="wikis_create_privacy_label">Ļaut jebkuram meklēt wiki</string>
     <string name="wikis_create_submit">Izveidot</string>
-    <string name="wikis_create_cancel">Atcelt</string>
     <string name="wikis_comments_empty_title">Vēl nav komentāru</string>
     <string name="wikis_comments_empty_subtitle">Esi pirmais, kas komentē šo lapu.</string>
-    <string name="wikis_comment_action_reply">Atbildēt</string>
     <string name="wikis_comment_replying_to">Atbild %1$s</string>
     <string name="wikis_comment_clear_reply">Atcelt atbildi</string>
-    <string name="wikis_comment_action_edit">Rediģēt</string>
     <string name="wikis_comment_action_delete">Dzēst</string>
     <string name="wikis_comment_action_save">Saglabāt</string>
     <string name="wikis_comment_action_cancel">Atcelt</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Jauna lapa</string>
     <string name="wikis_editor_preview">Priekšskatījums</string>
     <string name="wikis_editor_preview_untitled">Bez nosaukuma</string>
-    <string name="wikis_editor_edit">Rediģēt</string>
     <string name="wikis_editor_insert">Ievietot</string>
     <string name="wikis_editor_attachments">Pielikumi</string>
     <string name="wikis_editor_delete">Dzēst lapu</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Notiek augšupielāde…</string>
     <string name="wikis_attachments_upload_failed">Neizdevās augšupielādēt failus</string>
     <string name="wikis_attachments_search_clear">Notīrīt meklēšanu</string>
-    <string name="wikis_attachments_filter">Filtrēt</string>
     <string name="wikis_attachments_filter_all">Visi faili</string>
     <string name="wikis_attachments_filter_images">Attēli</string>
     <string name="wikis_attachments_filter_documents">Dokumenti</string>
-    <string name="wikis_attachments_sort">Kārtot</string>
     <string name="wikis_attachments_sort_date">Datums</string>
     <string name="wikis_attachments_sort_name">Nosaukums</string>
     <string name="wikis_attachments_sort_size">Izmērs</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopēt iegultās saites</string>
     <string name="wikis_attachments_embed_copied">Iegultais saites kopēta</string>
     <string name="wikis_attachments_download">Lejupielādēt</string>
-    <string name="wikis_attachments_copy_success">Iegultais saites kopēta</string>
     <string name="wikis_attachments_delete">Dzēst</string>
     <string name="wikis_attachments_delete_confirm_title">Dzēst pielikumu</string>
     <string name="wikis_attachments_delete_success">Pielikums dzēsts</string>
     <string name="wikis_attachments_delete_failed">Neizdevās dzēst pielikumu</string>
-    <string name="wikis_attachments_open">Atvērt</string>
     <string name="wikis_attachments_empty_title">Vēl nav pielikumu</string>
     <string name="wikis_attachments_no_results_title">Meklējumam neatbilst neviens pielikums</string>
     <string name="wikis_attachments_no_results_description">Mēģiniet citu meklēšanas vārdu vai filtru.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Šo darbību nevar atsaukt. Tas neatgriezeniski izdzēsīs wiki un visu tā saturu.</string>
     <string name="wikis_settings_delete_success">Wiki izdzēsts</string>
     <string name="wikis_settings_delete_failed">Neizdevās dzēst wiki</string>
-    <string name="wikis_access_add_action">Pievienot</string>
     <string name="wikis_access_add_subject_label">Lietotājs</string>
     <string name="wikis_access_level_edit">Rediģēt un skatīt</string>
     <string name="wikis_access_level_view">Tikai skatīt</string>
     <string name="wikis_access_level_none">Nav piekļuves</string>
-    <string name="wikis_access_owner_label">Īpašnieks</string>
     <string name="wikis_access_tab_users">Lietotāji</string>
     <string name="wikis_access_tab_groups">Grupas</string>
     <string name="wikis_access_tab_other">Cits</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Neizdevās noņemt piekļuvi</string>
     <string name="wikis_replicas_empty_title">Vēl nav repliku</string>
     <string name="wikis_replicas_empty_message">Kad citi wiki replicē šo wiki, tie parādīsies šeit.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Nekad</string>
     <string name="wikis_replicas_remove_confirm_title">Noņemt repliku?</string>
     <string name="wikis_replicas_remove_confirm_action">Noņemt</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Atjaunināts %1$s</string>
     <string name="wikis_pageview_not_found_description">Lapa „%1$s\" vēl neeksistē.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki saite</string>
-    <string name="wikis_pageview_share_link_copied">Lapas saite kopēta starpliktuvē</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki lapas saite</string>
-    <string name="wikis_pageview_loading">Ielādē lapu…</string>
     <string name="wikis_page_action_share">Saite</string>
     <string name="wikis_open_sidebar">Atvērt sānu joslu</string>
-    <string name="wikis_owned_badge">Pieder</string>
     <string name="wikis_search_placeholder">Meklēt wiki…</string>
-    <string name="wikis_subscribing">Abonē…</string>
     <string name="wikis_unsubscribe_confirm_message">Vai tiešām vēlaties atteikties no %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Serveris nav pieejams. Mēģina vēlreiz…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Meklēt pēc nosaukuma, ID, pirkstu nospieduma vai URL…</string>
     <string name="wikis_join_search_button">Meklēt wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Rakstiet atbildi…</string>
     <string name="wikis_comment_form_send">Sūtīt</string>
     <string name="wikis_comment_form_remove_attachment">Noņemt pielikumu</string>
-    <string name="wikis_comment_collapse_toggle">Sakļaut sarunu</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Rakstiet savu saturu šeit, izmantojot Markdown…</string>
     <string name="wikis_insert_dialog_empty">Vēl nav pielikumu. Augšupielādējiet failu, lai sāktu.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Pievienot atzīmi</string>
     <string name="wikis_tag_dialog_empty">Atzīme nevar būt tukša</string>
     <string name="wikis_attachments_search_placeholder">Meklēt pielikumus…</string>
-    <string name="wikis_attachments_copy_failed">Iegultās saites kopēšana neizdevās</string>
     <string name="wikis_attachments_delete_confirm_message">Dzēst „%1$s\"? To nevar atsaukt.</string>
     <string name="wikis_attachments_downloading">Lejupielādē…</string>
     <string name="wikis_attachments_empty_description">Pieskarieties Augšupielādēt, lai pievienotu failus šai lapai.</string>
@@ -324,16 +299,6 @@
         <item quantity="zero">%d atbilžu</item>
         <item quantity="one">%d atbilde</item>
         <item quantity="other">+%d vēl atbildes</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="zero">Pārdēvētas %1$d lapas</item>
-        <item quantity="one">Pārdēvēta %1$d lapa</item>
-        <item quantity="other">Pārdēvētas %1$d lapas</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="zero">atjauninātas %1$d saites</item>
-        <item quantity="one">atjaunināta %1$d saite</item>
-        <item quantity="other">atjauninātas %1$d saites</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="zero">%d lapu</item>
@@ -368,4 +333,12 @@
     <string name="wikis_attachments_caption_save_failed">Neizdevās saglabāt parakstu</string>
     <string name="wikis_attachments_upload_types">Atbalstītie faili: attēli, PDF, DOC, DOCX, TXT un MD.</string>
     <string name="wikis_attachments_upload_limits">Lielas augšupielādes var ierobežot jūsu servera vai starpniekservera konfigurācija.</string>
+    <string name="wikis_rss_replace">Aizstāt</string>
+    <string name="wikis_rss_copied_new">Jaunais RSS URL nokopēts starpliktuvē</string>
+    <string name="wikis_rss_exists">Šis plūsmas URL jau ir izsniegts, un to nevar parādīt vēlreiz.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="zero">Tiek rādīti pirmie %1$d komentāri.</item>
+        <item quantity="one">Tiek rādīts pirmais %1$d komentārs.</item>
+        <item quantity="other">Tiek rādīti pirmie %1$d komentāri.</item>
+    </plurals>
 </resources>

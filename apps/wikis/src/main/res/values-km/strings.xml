@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">ស្វែងរកវិគី</string>
     <string name="wikis_sidebar_create">បង្កើតវិគី</string>
     <string name="wikis_pageview_title_fallback">ទំព័រ</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">ត្រឡប់</string>
     <string name="wikis_pageview_page_actions">សកម្មភាពទំព័រ</string>
     <string name="wikis_pageview_toc">នៅលើទំព័រនេះ</string>
     <string name="wikis_pageview_not_found_title">រកមិនឃើញទំព័រ</string>
     <string name="wikis_pageview_create_this_page">បង្កើតទំព័រនេះ</string>
     <string name="wikis_pageview_rss_copied">បានចម្លង RSS URL ទៅ clipboard</string>
-    <string name="wikis_pageview_rss_failed">បរាជ័យក្នុងការទទួលយកថូខឹន RSS</string>
     <string name="wikis_page_action_section_page">ទំព័រ</string>
     <string name="wikis_page_action_edit">កែសម្រួល</string>
     <string name="wikis_page_action_rename">ប្តូរឈ្មោះ</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">ចាប់ផ្តើម wiki ដំបូងរបស់អ្នក</string>
     <string name="wikis_empty_subtitle">ស្វែងរក wiki ដើម្បីជាវ ឬបង្កើតមួយដើម្បីផ្សព្វផ្សាយឯកសាររបស់អ្នក។</string>
-    <string name="wikis_subscribed_badge">បានជាវ</string>
     <string name="wikis_create_button">បង្កើតវិគី</string>
     <string name="wikis_recommended_section">Wiki ដែលបានណែនាំ</string>
     <string name="wikis_subscribe_button">ជាវ</string>
-    <string name="wikis_subscribed">បានជាវ</string>
     <string name="wikis_unsubscribe_action">ឈប់ជាវ</string>
     <string name="wikis_unsubscribing">កំពុងឈប់ជាវ...</string>
     <string name="wikis_unsubscribe_confirm_title">ឈប់ជាវ</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">ឈ្មោះ</string>
     <string name="wikis_create_privacy_label">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរកវិគី</string>
     <string name="wikis_create_submit">បង្កើត</string>
-    <string name="wikis_create_cancel">បោះបង់</string>
     <string name="wikis_comments_empty_title">មិនទាន់មានមតិយោបល់</string>
     <string name="wikis_comments_empty_subtitle">ក្លាយជាមនុស្សដំបូងដែលផ្តល់មតិយោបល់លើទំព័រនេះ។</string>
-    <string name="wikis_comment_action_reply">ឆ្លើយតប</string>
     <string name="wikis_comment_replying_to">កំពុងឆ្លើយតបទៅ %1$s</string>
     <string name="wikis_comment_clear_reply">បោះបង់ការឆ្លើយតប</string>
-    <string name="wikis_comment_action_edit">កែសម្រួល</string>
     <string name="wikis_comment_action_delete">លុប</string>
     <string name="wikis_comment_action_save">រក្សាទុក</string>
     <string name="wikis_comment_action_cancel">បោះបង់</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">ទំព័រថ្មី</string>
     <string name="wikis_editor_preview">មើលជាមុន</string>
     <string name="wikis_editor_preview_untitled">គ្មានចំណងជើង</string>
-    <string name="wikis_editor_edit">កែសម្រួល</string>
     <string name="wikis_editor_insert">បញ្ចូល</string>
     <string name="wikis_editor_attachments">ឯកសារភ្ជាប់</string>
     <string name="wikis_editor_delete">លុបទំព័រ</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">កំពុងបង្ហោះ...</string>
     <string name="wikis_attachments_upload_failed">បរាជ័យក្នុងការផ្ទុកឡើងឯកសារ</string>
     <string name="wikis_attachments_search_clear">សម្អាតការស្វែងរក</string>
-    <string name="wikis_attachments_filter">តម្រង</string>
     <string name="wikis_attachments_filter_all">ឯកសារទាំងអស់</string>
     <string name="wikis_attachments_filter_images">រូបភាព</string>
     <string name="wikis_attachments_filter_documents">ឯកសារ</string>
-    <string name="wikis_attachments_sort">តម្រៀប</string>
     <string name="wikis_attachments_sort_date">កាលបរិច្ឆេទ</string>
     <string name="wikis_attachments_sort_name">ឈ្មោះ</string>
     <string name="wikis_attachments_sort_size">ទំហំ</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">ចម្លងតំណបង្កប់</string>
     <string name="wikis_attachments_embed_copied">បានចម្លងតំណបង្កប់</string>
     <string name="wikis_attachments_download">ទាញយក</string>
-    <string name="wikis_attachments_copy_success">បានចម្លងតំណបង្កប់</string>
     <string name="wikis_attachments_delete">លុប</string>
     <string name="wikis_attachments_delete_confirm_title">លុបឯកសារភ្ជាប់</string>
     <string name="wikis_attachments_delete_success">បានលុបឯកសារភ្ជាប់</string>
     <string name="wikis_attachments_delete_failed">បរាជ័យក្នុងការលុបឯកសារភ្ជាប់</string>
-    <string name="wikis_attachments_open">បើក</string>
     <string name="wikis_attachments_empty_title">មិនទាន់មានឯកសារភ្ជាប់</string>
     <string name="wikis_attachments_no_results_title">គ្មានឯកសារភ្ជាប់ត្រូវនឹងការស្វែងរករបស់អ្នក</string>
     <string name="wikis_attachments_no_results_description">សាកល្បងពាក្យស្វែងរកឬតម្រងផ្សេង។</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">សកម្មភាពនេះមិនអាចមិនធ្វើវិញបានទេ។ វានឹងលុប wiki និងមាតិកាទាំងអស់របស់វាជាអចិន្ត្រៃយ៍។</string>
     <string name="wikis_settings_delete_success">បានលុប wiki</string>
     <string name="wikis_settings_delete_failed">បរាជ័យក្នុងការលុបវិគី</string>
-    <string name="wikis_access_add_action">បន្ថែម</string>
     <string name="wikis_access_add_subject_label">អ្នកប្រើប្រាស់</string>
     <string name="wikis_access_level_edit">កែសម្រួល និងមើល</string>
     <string name="wikis_access_level_view">មើលតែប៉ុណ្ណោះ</string>
     <string name="wikis_access_level_none">គ្មានសិទ្ធិចូលប្រើ</string>
-    <string name="wikis_access_owner_label">ម្ចាស់</string>
     <string name="wikis_access_tab_users">អ្នកប្រើប្រាស់</string>
     <string name="wikis_access_tab_groups">ក្រុម</string>
     <string name="wikis_access_tab_other">ផ្សេងទៀត</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">បរាជ័យក្នុងការដកការចូលដំណើរការ</string>
     <string name="wikis_replicas_empty_title">មិនទាន់មានច្បាប់ចម្លង</string>
     <string name="wikis_replicas_empty_message">នៅពេល wiki ផ្សេងទៀតចម្លង wiki នេះ ពួកវានឹងបង្ហាញនៅទីនេះ។</string>
-    <string name="wikis_replicas_col_id">លេខសម្គាល់</string>
     <string name="wikis_replicas_never_synced">មិនដែល</string>
     <string name="wikis_replicas_remove_confirm_title">យកច្បាប់ចម្លងចេញ?</string>
     <string name="wikis_replicas_remove_confirm_action">យកចេញ</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">ទំព័រ “%1$s” មិនទាន់មានទេ។</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">តំណវិគី</string>
-    <string name="wikis_pageview_share_link_copied">តំណទំព័របានចម្លងទៅឃ្លីបបត</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">តំណទំព័រ Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">តំណ</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">ស្វែងរក wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវ %1$s មែនទេ?</string>
-    <string name="wikis_subscribe_failed_502">មិនអាចទាក់ទងម៉ាស៊ីនមេនោះបានទេ។ កំពុងព្យាយាមម្តងទៀត…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ស្វែងរកតាមឈ្មោះ ID ស្នាមម្រាមដៃ ឬ URL…</string>
     <string name="wikis_join_search_button">ស្វែងរក wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">សរសេរការឆ្លើយតប…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">សរសេរមាតិការបស់អ្នកនៅទីនេះដោយប្រើ Markdown…</string>
     <string name="wikis_insert_dialog_empty">មិនទាន់មានឯកសារភ្ជាប់ទេ។ ផ្ទុកឯកសារឡើងដើម្បីចាប់ផ្តើម។</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">ស្លាកមិនអាចទទេបានទេ</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">មិនអាចចម្លងតំណបង្កប់បានទេ</string>
     <string name="wikis_attachments_delete_confirm_message">លុប “%1$s” ឬ? វាមិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">ចុច ផ្ទុកឡើង ដើម្បីបន្ថែមឯកសារទៅទំព័រនេះ។</string>
@@ -321,12 +296,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="other">+%d ការឆ្លើយតបបន្ថែម</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">បានប្តូរឈ្មោះ %1$d ទំព័រ</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">បានធ្វើបច្ចុប្បន្នភាព %1$d តំណ</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="other">%d ទំព័រ</item>
     </plurals>
@@ -348,4 +317,10 @@
     <string name="wikis_attachments_caption_save_failed">មិនអាចរក្សាទុកចំណងជើងបានទេ</string>
     <string name="wikis_attachments_upload_types">ឯកសារដែលគាំទ្រ៖ រូបភាព, PDF, DOC, DOCX, TXT និង MD។</string>
     <string name="wikis_attachments_upload_limits">ការផ្ទុកឡើងធំៗអាចត្រូវបានកំណត់ដោយការកំណត់រចនាសម្ព័ន្ធម៉ាស៊ីនមេ ឬប្រូកស៊ីរបស់អ្នក។</string>
+    <string name="wikis_rss_replace">ជំនួស</string>
+    <string name="wikis_rss_copied_new">បានចម្លង RSS URL ថ្មី ទៅ clipboard</string>
+    <string name="wikis_rss_exists">URL មតិព័ត៌មាននេះត្រូវបានចេញរួចហើយ ហើយមិនអាចបង្ហាញម្តងទៀតបានទេ។</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">កំពុងបង្ហាញមតិយោបល់ %1$d ដំបូង។</item>
+    </plurals>
 </resources>

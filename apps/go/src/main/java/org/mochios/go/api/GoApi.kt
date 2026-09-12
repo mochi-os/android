@@ -18,6 +18,7 @@ import org.mochios.go.model.MoveRequest
 import org.mochios.go.model.MoveResponse
 import org.mochios.go.model.PassRequest
 import org.mochios.go.model.ResignResponse
+import org.mochios.go.model.ScoreResponse
 import org.mochios.go.model.SendMessageRequest
 import org.mochios.go.model.SendMessageResponse
 import retrofit2.Response
@@ -70,6 +71,12 @@ interface GoApi {
         @Path("gameId") gameId: String,
         @Body body: PassRequest,
     ): Response<ApiResponse<MoveResponse>>
+
+    @POST("{gameId}/-/score-accept")
+    suspend fun scoreAccept(@Path("gameId") gameId: String): Response<ApiResponse<ScoreResponse>>
+
+    @POST("{gameId}/-/score-resume")
+    suspend fun scoreResume(@Path("gameId") gameId: String): Response<ApiResponse<ScoreResponse>>
 
     @POST("{gameId}/-/resign")
     suspend fun resign(@Path("gameId") gameId: String): Response<ApiResponse<ResignResponse>>

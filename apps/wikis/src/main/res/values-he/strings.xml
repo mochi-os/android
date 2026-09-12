@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">חפש ויקיים</string>
     <string name="wikis_sidebar_create">צור wiki</string>
     <string name="wikis_pageview_title_fallback">דף</string>
-    <string name="wikis_pageview_wiki_fallback">ויקי</string>
-    <string name="wikis_pageview_back">חזור</string>
     <string name="wikis_pageview_page_actions">פעולות דף</string>
     <string name="wikis_pageview_toc">בדף זה</string>
     <string name="wikis_pageview_not_found_title">הדף לא נמצא</string>
     <string name="wikis_pageview_create_this_page">צור דף זה</string>
     <string name="wikis_pageview_rss_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
-    <string name="wikis_pageview_rss_failed">קבלת טוקן RSS נכשלה</string>
     <string name="wikis_page_action_section_page">דף</string>
     <string name="wikis_page_action_edit">עריכה</string>
     <string name="wikis_page_action_rename">שנה שם</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">ויקים</string>
     <string name="wikis_empty_title">התחל את הוויקי הראשון שלך</string>
     <string name="wikis_empty_subtitle">חפש ויקי להירשם אליו, או צור ויקי כדי לפרסם תיעוד משלך.</string>
-    <string name="wikis_subscribed_badge">רשום</string>
     <string name="wikis_create_button">צור wiki</string>
     <string name="wikis_recommended_section">ויקיים מומלצים</string>
     <string name="wikis_subscribe_button">הירשם</string>
-    <string name="wikis_subscribed">רשום</string>
     <string name="wikis_unsubscribe_action">בטל הרשמה</string>
     <string name="wikis_unsubscribing">מבטל הרשמה…</string>
     <string name="wikis_unsubscribe_confirm_title">בטל הרשמה</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">שם</string>
     <string name="wikis_create_privacy_label">אפשר לכולם לחפש את ה-wiki</string>
     <string name="wikis_create_submit">צור</string>
-    <string name="wikis_create_cancel">ביטול</string>
     <string name="wikis_comments_empty_title">עדיין אין תגובות</string>
     <string name="wikis_comments_empty_subtitle">היה הראשון להגיב על דף זה.</string>
-    <string name="wikis_comment_action_reply">השב</string>
     <string name="wikis_comment_replying_to">בתגובה אל %1$s</string>
     <string name="wikis_comment_clear_reply">בטל תשובה</string>
-    <string name="wikis_comment_action_edit">עריכה</string>
     <string name="wikis_comment_action_delete">מחק</string>
     <string name="wikis_comment_action_save">שמור</string>
     <string name="wikis_comment_action_cancel">ביטול</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">דף חדש</string>
     <string name="wikis_editor_preview">תצוגה מקדימה</string>
     <string name="wikis_editor_preview_untitled">ללא כותרת</string>
-    <string name="wikis_editor_edit">עריכה</string>
     <string name="wikis_editor_insert">הוסף</string>
     <string name="wikis_editor_attachments">קבצים מצורפים</string>
     <string name="wikis_editor_delete">מחק דף</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">מעלה…</string>
     <string name="wikis_attachments_upload_failed">העלאת הקבצים נכשלה</string>
     <string name="wikis_attachments_search_clear">נקה חיפוש</string>
-    <string name="wikis_attachments_filter">סינון</string>
     <string name="wikis_attachments_filter_all">כל הקבצים</string>
     <string name="wikis_attachments_filter_images">תמונות</string>
     <string name="wikis_attachments_filter_documents">מסמכים</string>
-    <string name="wikis_attachments_sort">מיין</string>
     <string name="wikis_attachments_sort_date">תאריך</string>
     <string name="wikis_attachments_sort_name">שם</string>
     <string name="wikis_attachments_sort_size">גודל</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">העתק קישור הטמעה</string>
     <string name="wikis_attachments_embed_copied">קישור ההטמעה הועתק</string>
     <string name="wikis_attachments_download">הורדה</string>
-    <string name="wikis_attachments_copy_success">קישור ההטמעה הועתק</string>
     <string name="wikis_attachments_delete">מחק</string>
     <string name="wikis_attachments_delete_confirm_title">מחק קובץ מצורף</string>
     <string name="wikis_attachments_delete_success">הקובץ המצורף נמחק</string>
     <string name="wikis_attachments_delete_failed">מחיקת הקובץ המצורף נכשלה</string>
-    <string name="wikis_attachments_open">פתוח</string>
     <string name="wikis_attachments_empty_title">עדיין אין קבצים מצורפים</string>
     <string name="wikis_attachments_no_results_title">אין קבצים מצורפים התואמים לחיפוש</string>
     <string name="wikis_attachments_no_results_description">נסה מונח חיפוש או מסנן אחר.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">לא ניתן לבטל פעולה זו. פעולה זו תמחק לצמיתות את הוויקי ואת כל תוכנו.</string>
     <string name="wikis_settings_delete_success">הוויקי נמחק</string>
     <string name="wikis_settings_delete_failed">מחיקת הוויקי נכשלה</string>
-    <string name="wikis_access_add_action">הוספה</string>
     <string name="wikis_access_add_subject_label">משתמש</string>
     <string name="wikis_access_level_edit">עריכה וצפייה</string>
     <string name="wikis_access_level_view">תצוגה בלבד</string>
     <string name="wikis_access_level_none">אין גישה</string>
-    <string name="wikis_access_owner_label">בעלים</string>
     <string name="wikis_access_tab_users">משתמשים</string>
     <string name="wikis_access_tab_groups">קבוצות</string>
     <string name="wikis_access_tab_other">אחר</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">הסרת הגישה נכשלה</string>
     <string name="wikis_replicas_empty_title">עדיין אין רפליקות</string>
     <string name="wikis_replicas_empty_message">כאשר ויקים אחרים ישכפלו ויקי זה, הם יופיעו כאן.</string>
-    <string name="wikis_replicas_col_id">מזהה</string>
     <string name="wikis_replicas_never_synced">אף פעם</string>
     <string name="wikis_replicas_remove_confirm_title">להסיר רפליקה?</string>
     <string name="wikis_replicas_remove_confirm_action">הסר</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">עודכן %1$s</string>
     <string name="wikis_pageview_not_found_description">הדף „%1$s\" עדיין לא קיים.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">קישור לוויקי</string>
-    <string name="wikis_pageview_share_link_copied">קישור לדף הועתק ללוח</string>
     <string name="wikis_pageview_clipboard_label_rss">כתובת RSS של ויקי</string>
-    <string name="wikis_pageview_clipboard_label_share">קישור לדף ויקי</string>
-    <string name="wikis_pageview_loading">טוען דף…</string>
     <string name="wikis_page_action_share">קישור</string>
     <string name="wikis_open_sidebar">פתח סרגל צד</string>
-    <string name="wikis_owned_badge">בבעלותך</string>
     <string name="wikis_search_placeholder">חפש ויקי…</string>
-    <string name="wikis_subscribing">נרשם…</string>
     <string name="wikis_unsubscribe_confirm_message">האם אתה בטוח שברצונך לבטל את הרשמתך מ-%1$s?</string>
-    <string name="wikis_subscribe_failed_502">השרת אינו נגיש. מנסה שוב…</string>
     <string name="wikis_clipboard_label_rss">כתובת RSS של ויקי</string>
     <string name="wikis_find_search_placeholder">חיפוש לפי שם, מזהה, טביעת אצבע או URL…</string>
     <string name="wikis_join_search_button">חפש ויקי…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">כתוב תשובה…</string>
     <string name="wikis_comment_form_send">שלח</string>
     <string name="wikis_comment_form_remove_attachment">הסר קובץ מצורף</string>
-    <string name="wikis_comment_collapse_toggle">כווץ דיון</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">כתוב את התוכן שלך כאן באמצעות Markdown…</string>
     <string name="wikis_insert_dialog_empty">עדיין אין קבצים מצורפים. העלה קובץ כדי להתחיל.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">הוסף תג</string>
     <string name="wikis_tag_dialog_empty">התג אינו יכול להיות ריק</string>
     <string name="wikis_attachments_search_placeholder">חפש קבצים מצורפים…</string>
-    <string name="wikis_attachments_copy_failed">העתקת קישור ההטמעה נכשלה</string>
     <string name="wikis_attachments_delete_confirm_message">מחק „%1$s\"? לא ניתן לבטל זאת.</string>
     <string name="wikis_attachments_downloading">מוריד…</string>
     <string name="wikis_attachments_empty_description">הקש על העלה כדי להוסיף קבצים לדף זה.</string>
@@ -326,18 +301,6 @@
         <item quantity="two">+%d תגובות נוספות</item>
         <item quantity="many">+%d תגובות נוספות</item>
         <item quantity="other">+%d תגובות נוספות</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">שונה שם של דף אחד</item>
-        <item quantity="two">שונה שם של %1$d דפים</item>
-        <item quantity="many">שונה שם של %1$d דפים</item>
-        <item quantity="other">שונה שם של %1$d דפים</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">עודכן קישור אחד</item>
-        <item quantity="two">עודכנו %1$d קישורים</item>
-        <item quantity="many">עודכנו %1$d קישורים</item>
-        <item quantity="other">עודכנו %1$d קישורים</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">עמוד אחד</item>
@@ -378,4 +341,13 @@
     <string name="wikis_attachments_caption_save_failed">שמירת הכיתוב נכשלה</string>
     <string name="wikis_attachments_upload_types">קבצים נתמכים: תמונות, PDF, DOC, DOCX, TXT ו־MD.</string>
     <string name="wikis_attachments_upload_limits">העלאות גדולות עשויות להיות מוגבלות על ידי תצורת השרת או ה־proxy שלך.</string>
+    <string name="wikis_rss_replace">החלף</string>
+    <string name="wikis_rss_copied_new">כתובת ה-URL החדשה של RSS הועתקה ללוח</string>
+    <string name="wikis_rss_exists">כתובת הפיד הזו כבר הונפקה ולא ניתן להציג אותה שוב.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">מוצגת %1$d התגובה הראשונה.</item>
+        <item quantity="two">מוצגות %1$d התגובות הראשונות.</item>
+        <item quantity="many">מוצגות %1$d התגובות הראשונות.</item>
+        <item quantity="other">מוצגות %1$d התגובות הראשונות.</item>
+    </plurals>
 </resources>

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Εύρεση wiki</string>
     <string name="wikis_sidebar_create">Δημιουργία wiki</string>
     <string name="wikis_pageview_title_fallback">Σελίδα</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Πίσω</string>
     <string name="wikis_pageview_page_actions">Ενέργειες σελίδας</string>
     <string name="wikis_pageview_toc">Σε αυτή τη σελίδα</string>
     <string name="wikis_pageview_not_found_title">Η σελίδα δεν βρέθηκε</string>
     <string name="wikis_pageview_create_this_page">Δημιουργία αυτής της σελίδας</string>
     <string name="wikis_pageview_rss_copied">Το URL του RSS αντιγράφηκε στο πρόχειρο</string>
-    <string name="wikis_pageview_rss_failed">Αποτυχία λήψης διακριτικού RSS</string>
     <string name="wikis_page_action_section_page">Σελίδα</string>
     <string name="wikis_page_action_edit">Επεξεργασία</string>
     <string name="wikis_page_action_rename">Μετονομασία</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Ξεκινήστε το πρώτο σας wiki</string>
     <string name="wikis_empty_subtitle">Αναζητήστε ένα wiki για εγγραφή, ή δημιουργήστε ένα για να δημοσιεύσετε τη δική σας τεκμηρίωση.</string>
-    <string name="wikis_subscribed_badge">Εγγεγραμμένος</string>
     <string name="wikis_create_button">Δημιουργία wiki</string>
     <string name="wikis_recommended_section">Συνιστώμενα wikis</string>
     <string name="wikis_subscribe_button">Εγγραφή</string>
-    <string name="wikis_subscribed">Εγγεγραμμένος</string>
     <string name="wikis_unsubscribe_action">Διαγραφή εγγραφής</string>
     <string name="wikis_unsubscribing">Διαγραφή εγγραφής…</string>
     <string name="wikis_unsubscribe_confirm_title">Διαγραφή εγγραφής</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Όνομα</string>
     <string name="wikis_create_privacy_label">Να επιτρέπεται σε όλους η αναζήτηση wiki</string>
     <string name="wikis_create_submit">Δημιουργία</string>
-    <string name="wikis_create_cancel">Ακύρωση</string>
     <string name="wikis_comments_empty_title">Δεν υπάρχουν ακόμη σχόλια</string>
     <string name="wikis_comments_empty_subtitle">Γίνετε ο πρώτος που θα σχολιάσει αυτήν τη σελίδα.</string>
-    <string name="wikis_comment_action_reply">Απάντηση</string>
     <string name="wikis_comment_replying_to">Απάντηση σε %1$s</string>
     <string name="wikis_comment_clear_reply">Ακύρωση απάντησης</string>
-    <string name="wikis_comment_action_edit">Επεξεργασία</string>
     <string name="wikis_comment_action_delete">Διαγραφή</string>
     <string name="wikis_comment_action_save">Αποθήκευση</string>
     <string name="wikis_comment_action_cancel">Ακύρωση</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Νέα σελίδα</string>
     <string name="wikis_editor_preview">Προεπισκόπηση</string>
     <string name="wikis_editor_preview_untitled">Χωρίς τίτλο</string>
-    <string name="wikis_editor_edit">Επεξεργασία</string>
     <string name="wikis_editor_insert">Εισαγωγή</string>
     <string name="wikis_editor_attachments">Συνημμένα</string>
     <string name="wikis_editor_delete">Διαγραφή σελίδας</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Μεταφόρτωση…</string>
     <string name="wikis_attachments_upload_failed">Αποτυχία μεταφόρτωσης αρχείων</string>
     <string name="wikis_attachments_search_clear">Εκκαθάριση αναζήτησης</string>
-    <string name="wikis_attachments_filter">Φίλτρο</string>
     <string name="wikis_attachments_filter_all">Όλα τα αρχεία</string>
     <string name="wikis_attachments_filter_images">Εικόνες</string>
     <string name="wikis_attachments_filter_documents">Έγγραφα</string>
-    <string name="wikis_attachments_sort">Ταξινόμηση</string>
     <string name="wikis_attachments_sort_date">Ημερομηνία</string>
     <string name="wikis_attachments_sort_name">Όνομα</string>
     <string name="wikis_attachments_sort_size">Μέγεθος</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Αντιγραφή συνδέσμου ενσωμάτωσης</string>
     <string name="wikis_attachments_embed_copied">Ο σύνδεσμος ενσωμάτωσης αντιγράφηκε</string>
     <string name="wikis_attachments_download">Λήψη</string>
-    <string name="wikis_attachments_copy_success">Ο σύνδεσμος ενσωμάτωσης αντιγράφηκε</string>
     <string name="wikis_attachments_delete">Διαγραφή</string>
     <string name="wikis_attachments_delete_confirm_title">Διαγραφή συνημμένου</string>
     <string name="wikis_attachments_delete_success">Το συνημμένο διαγράφηκε</string>
     <string name="wikis_attachments_delete_failed">Αποτυχία διαγραφής συνημμένου</string>
-    <string name="wikis_attachments_open">Ανοιχτό</string>
     <string name="wikis_attachments_empty_title">Δεν υπάρχουν ακόμη συνημμένα</string>
     <string name="wikis_attachments_no_results_title">Κανένα συνημμένο δεν ταιριάζει με την αναζήτησή σας</string>
     <string name="wikis_attachments_no_results_description">Δοκιμάστε διαφορετικό όρο αναζήτησης ή φίλτρο.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Αυτή η ενέργεια δεν μπορεί να αναιρεθεί. Θα διαγράψει οριστικά το wiki και όλο το περιεχόμενό του.</string>
     <string name="wikis_settings_delete_success">Το wiki διαγράφηκε</string>
     <string name="wikis_settings_delete_failed">Αποτυχία διαγραφής wiki</string>
-    <string name="wikis_access_add_action">Προσθήκη</string>
     <string name="wikis_access_add_subject_label">Χρήστης</string>
     <string name="wikis_access_level_edit">Επεξεργασία και προβολή</string>
     <string name="wikis_access_level_view">Μόνο προβολή</string>
     <string name="wikis_access_level_none">Χωρίς πρόσβαση</string>
-    <string name="wikis_access_owner_label">Ιδιοκτήτης</string>
     <string name="wikis_access_tab_users">Χρήστες</string>
     <string name="wikis_access_tab_groups">Ομάδες</string>
     <string name="wikis_access_tab_other">Άλλο</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Αποτυχία αφαίρεσης πρόσβασης</string>
     <string name="wikis_replicas_empty_title">Δεν υπάρχουν ακόμη αντίγραφα</string>
     <string name="wikis_replicas_empty_message">Όταν άλλα wiki αντιγράφουν αυτό το wiki, θα εμφανίζονται εδώ.</string>
-    <string name="wikis_replicas_col_id">Αναγνωριστικό</string>
     <string name="wikis_replicas_never_synced">Ποτέ</string>
     <string name="wikis_replicas_remove_confirm_title">Αφαίρεση αντιγράφου;</string>
     <string name="wikis_replicas_remove_confirm_action">Αφαίρεση</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Ενημερώθηκε %1$s</string>
     <string name="wikis_pageview_not_found_description">Η σελίδα «%1$s» δεν υπάρχει ακόμη.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Σύνδεσμος wiki</string>
-    <string name="wikis_pageview_share_link_copied">Ο σύνδεσμος σελίδας αντιγράφηκε στο πρόχειρο</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS του wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Σύνδεσμος σελίδας wiki</string>
-    <string name="wikis_pageview_loading">Φόρτωση σελίδας…</string>
     <string name="wikis_page_action_share">Σύνδεσμος</string>
     <string name="wikis_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
-    <string name="wikis_owned_badge">Ιδιοκτησία</string>
     <string name="wikis_search_placeholder">Αναζήτηση για wiki…</string>
-    <string name="wikis_subscribing">Εγγραφή…</string>
     <string name="wikis_unsubscribe_confirm_message">Είστε βέβαιοι ότι θέλετε να καταργήσετε την εγγραφή σας από %1$s;</string>
-    <string name="wikis_subscribe_failed_502">Ο διακομιστής δεν είναι προσβάσιμος. Επαναπροσπάθεια…</string>
     <string name="wikis_clipboard_label_rss">URL RSS του wiki</string>
     <string name="wikis_find_search_placeholder">Αναζήτηση με όνομα, ID, αποτύπωμα ή URL…</string>
     <string name="wikis_join_search_button">Αναζήτηση για wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Γράψτε μια απάντηση…</string>
     <string name="wikis_comment_form_send">Αποστολή</string>
     <string name="wikis_comment_form_remove_attachment">Αφαίρεση συνημμένου</string>
-    <string name="wikis_comment_collapse_toggle">Σύμπτυξη συζήτησης</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Γράψτε το περιεχόμενό σας εδώ χρησιμοποιώντας Markdown…</string>
     <string name="wikis_insert_dialog_empty">Δεν υπάρχουν ακόμη συνημμένα. Ανεβάστε ένα αρχείο για να ξεκινήσετε.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Προσθήκη ετικέτας</string>
     <string name="wikis_tag_dialog_empty">Η ετικέτα δεν μπορεί να είναι κενή</string>
     <string name="wikis_attachments_search_placeholder">Αναζήτηση συνημμένων…</string>
-    <string name="wikis_attachments_copy_failed">Αποτυχία αντιγραφής συνδέσμου ενσωμάτωσης</string>
     <string name="wikis_attachments_delete_confirm_message">Διαγραφή «%1$s»; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="wikis_attachments_downloading">Λήψη…</string>
     <string name="wikis_attachments_empty_description">Πατήστε Μεταφόρτωση για να προσθέσετε αρχεία σε αυτή τη σελίδα.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d απάντηση</item>
         <item quantity="other">+%d ακόμα απαντήσεις</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Μετονομάστηκε %1$d σελίδα</item>
-        <item quantity="other">Μετονομάστηκαν %1$d σελίδες</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">ενημερώθηκε %1$d σύνδεσμος</item>
-        <item quantity="other">ενημερώθηκαν %1$d σύνδεσμοι</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d σελίδα</item>
         <item quantity="other">%d σελίδες</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Δεν ήταν δυνατή η αποθήκευση της λεζάντας</string>
     <string name="wikis_attachments_upload_types">Υποστηριζόμενα αρχεία: εικόνες, PDF, DOC, DOCX, TXT και MD.</string>
     <string name="wikis_attachments_upload_limits">Οι μεγάλες μεταφορτώσεις ενδέχεται να περιορίζονται από τη διαμόρφωση του διακομιστή ή του διαμεσολαβητή σας.</string>
+    <string name="wikis_rss_replace">Αντικατάσταση</string>
+    <string name="wikis_rss_copied_new">Το νέο URL του RSS αντιγράφηκε στο πρόχειρο</string>
+    <string name="wikis_rss_exists">Αυτό το URL ροής έχει ήδη εκδοθεί και δεν μπορεί να εμφανιστεί ξανά.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Εμφανίζεται το πρώτο %1$d σχόλιο.</item>
+        <item quantity="other">Εμφανίζονται τα πρώτα %1$d σχόλια.</item>
+    </plurals>
 </resources>

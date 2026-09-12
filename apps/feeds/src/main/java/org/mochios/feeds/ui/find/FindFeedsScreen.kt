@@ -25,8 +25,10 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -285,10 +287,19 @@ private fun FeedDiscoveryCard(
             enabled = !isSubscribing
         ) {
             if (isSubscribing) {
-                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                CircularProgressIndicator(
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                    strokeWidth = 2.dp,
+                )
             } else {
-                Text(stringResource(MochiR.string.common_subscribe))
+                Icon(
+                    Icons.Default.Add,
+                    contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                )
             }
+            Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+            Text(stringResource(MochiR.string.common_subscribe))
         }
     }
 }

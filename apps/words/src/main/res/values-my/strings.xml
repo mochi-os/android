@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">မီနူး</string>
-    <string name="words_list_new">ဂိမ်းအသစ်</string>
     <string name="words_list_logout">ထွက်</string>
-    <string name="words_list_empty_title">ဂိမ်းများ မရှိသေးပါ</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">ပြီးစီးပြီး</string>
     <string name="words_sidebar_new_game">ဂိမ်းအသစ်</string>
     <string name="words_new_game_title">ဂိမ်းအသစ်</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">ပြန်ကစား</string>
     <string name="words_detail_action_delete">ဂိမ်း ဖျက်မည်</string>
     <string name="words_detail_chat_title">စကားပြောခန်း</string>
-    <string name="words_detail_invalid_move">မမှန်ကန်သော ရွှေ့ခြင်း</string>
     <string name="words_detail_recall">ပြန်ခေါ်</string>
     <string name="words_detail_submit">တင်ပြမည်</string>
     <string name="words_detail_cancel">မလုပ်တော့ပါ</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">စာလုံး တစ်ခု ရွေးချယ်ပါ</string>
     <string name="words_detail_resign_title">ဂိမ်း ရှုံးကြောင်းပြောမလား?</string>
     <string name="words_detail_resign_message">လက်လျှော့မှာသေချာပါသလား?</string>
-    <string name="words_detail_failed_move">ရွှေ့ခြင်း တင်ပြ၍ မရပါ</string>
-    <string name="words_detail_failed_pass">ဖြတ်သန်း၍ မရပါ</string>
-    <string name="words_detail_failed_exchange">လဲလှယ်၍ မရပါ</string>
-    <string name="words_detail_failed_resign">ရှုံးရန် ထုတ်ပြန်၍ မရပါ</string>
-    <string name="words_detail_failed_rematch">ပြန်ပြိုင်ပွဲ ဖန်တီး၍ မရပါ</string>
-    <string name="words_detail_failed_delete">ဂိမ်း ဖျက်၍ မရပါ</string>
-    <string name="words_detail_game_deleted">ဂိမ်း ဖျက်ပြီးပါပြီ</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words အလှည့်များ၊ လဲလှယ်မှုများနှင့် ဂိမ်းရလဒ်များအကြောင်း အသိပေးချက်များ။</string>
-    <string name="words_list_empty_subtitle">သင့်ပထမဆုံးဂိမ်းစတင်ရန် + ခလုတ်ကို နှိပ်ပါ။</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">ဂိမ်းများ မရှိသေးပါ။</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">ကစားရန် People အက်ပ်တွင် သူငယ်ချင်းများ ထည့်ပါ။</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">ဂိမ်းအသေးစိတ် မကြာမီ ရောက်ရှိမည်</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

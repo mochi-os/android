@@ -40,7 +40,9 @@ import retrofit2.http.Query
 data class ForumListResponse(
     val forums: List<Forum> = emptyList(),
     val posts: List<Post> = emptyList(),
-    val settings: ForumSettings = ForumSettings()
+    val settings: ForumSettings = ForumSettings(),
+    /** The server has an AI account, so the "AI" sort is worth offering. */
+    val hasAi: Boolean = false,
 )
 
 data class ForumSettings(val sort: String = "")
@@ -51,6 +53,8 @@ data class ViewForumResponse(
     val member: Member = Member(),
     val can_manage: Boolean = false,
     val can_moderate: Boolean = false,
+    /** The server has an AI account, so the "AI" sort is worth offering. */
+    val hasAi: Boolean = false,
     val hasMore: Boolean = false,
     val nextCursor: Long? = null
 )
@@ -93,7 +97,10 @@ data class SubscribeResponse(
 /** JSON body of `-/subscribe`; [server] is the entity's home-server hint. */
 data class SubscribeRequest(
     val forum: String,
-    val server: String? = null
+    val server: String? = null,
+    /** From a `mochi://<peer>/<forum>` share link: the owner's peer, which the
+     *  initial sync is pinned to. */
+    val peer: String? = null,
 )
 
 /** JSON body of `-/unsubscribe`. */
@@ -184,7 +191,6 @@ data class BannerResponse(
 
 data class RssTokenResponse(
     val token: String = "",
-    val url: String = "",
 )
 
 /**
@@ -219,6 +225,8 @@ data class ProbeForumResponse(
     @SerializedName("fingerprint_hyphens") val fingerprintHyphens: String = "",
     @SerializedName("class") val klass: String = "",
     val server: String = "",
+    /** Only a share-link probe answers one; subscribe pins the same peer. */
+    val peer: String = "",
 )
 
 data class SortResponse(val sort: String = "")
@@ -232,9 +240,6 @@ interface ForumsApi {
 
     @GET("-/information")
     suspend fun getForumsInfo(): Response<ApiResponse<ForumListResponse>>
-
-    @GET("-/new")
-    suspend fun getNewForum(): Response<ApiResponse<Map<String, Any>>>
 
     // ---- Saved (read-later) — class-level, per-user list spanning all forums ----
 
@@ -327,9 +332,6 @@ interface ForumsApi {
 
     // ---- Posts ----
 
-    @GET("-/post/new")
-    suspend fun getNewPost(@Query("forum") forum: String): Response<ApiResponse<Map<String, Any>>>
-
     @Multipart
     @POST("-/post/create")
     suspend fun createPost(
@@ -406,10 +408,12 @@ interface ForumsApi {
         @Path("postId") postId: String,
     ): Response<ApiResponse<SuccessResponse>>
 
+    @FormUrlEncoded
     @POST("{forumId}/-/{postId}/remove")
     suspend fun removePost(
         @Path("forumId") forumId: String,
         @Path("postId") postId: String,
+        @Field("reason") reason: String,
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/{postId}/restore")
@@ -428,13 +432,6 @@ interface ForumsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Comments ----
-
-    @GET("{forumId}/-/{postId}/comment")
-    suspend fun getNewComment(
-        @Path("forumId") forumId: String,
-        @Path("postId") postId: String,
-        @Query("parent") parent: String? = null
-    ): Response<ApiResponse<Map<String, Any>>>
 
     @Multipart
     @POST("{forumId}/-/{postId}/create")
@@ -478,11 +475,13 @@ interface ForumsApi {
 
     // ---- Comment moderation ----
 
+    @FormUrlEncoded
     @POST("{forumId}/-/{postId}/{commentId}/remove")
     suspend fun removeComment(
         @Path("forumId") forumId: String,
         @Path("postId") postId: String,
         @Path("commentId") commentId: String,
+        @Field("reason") reason: String,
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/{postId}/{commentId}/restore")

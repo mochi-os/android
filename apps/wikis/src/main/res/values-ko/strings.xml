@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">위키 찾기</string>
     <string name="wikis_sidebar_create">위키 생성</string>
     <string name="wikis_pageview_title_fallback">페이지</string>
-    <string name="wikis_pageview_wiki_fallback">위키</string>
-    <string name="wikis_pageview_back">뒤로</string>
     <string name="wikis_pageview_page_actions">페이지 작업</string>
     <string name="wikis_pageview_toc">이 페이지에서</string>
     <string name="wikis_pageview_not_found_title">페이지를 찾을 수 없어요</string>
     <string name="wikis_pageview_create_this_page">이 페이지 생성</string>
     <string name="wikis_pageview_rss_copied">RSS URL이 클립보드에 복사되었어요</string>
-    <string name="wikis_pageview_rss_failed">RSS 토큰을 가져오지 못했어요</string>
     <string name="wikis_page_action_section_page">페이지</string>
     <string name="wikis_page_action_edit">편집</string>
     <string name="wikis_page_action_rename">이름 변경</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">위키</string>
     <string name="wikis_empty_title">첫 위키를 시작해 주세요</string>
     <string name="wikis_empty_subtitle">구독할 위키를 검색하거나, 자신의 문서를 게시할 위키를 만드세요.</string>
-    <string name="wikis_subscribed_badge">구독됨</string>
     <string name="wikis_create_button">위키 생성</string>
     <string name="wikis_recommended_section">추천 위키</string>
     <string name="wikis_subscribe_button">구독</string>
-    <string name="wikis_subscribed">구독됨</string>
     <string name="wikis_unsubscribe_action">구독 취소</string>
     <string name="wikis_unsubscribing">구독 취소 중…</string>
     <string name="wikis_unsubscribe_confirm_title">구독 취소</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">이름</string>
     <string name="wikis_create_privacy_label">누구나 위키를 검색할 수 있도록 허용</string>
     <string name="wikis_create_submit">생성</string>
-    <string name="wikis_create_cancel">취소</string>
     <string name="wikis_comments_empty_title">아직 댓글이 없어요</string>
     <string name="wikis_comments_empty_subtitle">이 페이지에 첫 번째 댓글을 남겨보세요.</string>
-    <string name="wikis_comment_action_reply">답글</string>
     <string name="wikis_comment_replying_to">%1$s님에게 답장</string>
     <string name="wikis_comment_clear_reply">답글 취소</string>
-    <string name="wikis_comment_action_edit">편집</string>
     <string name="wikis_comment_action_delete">삭제</string>
     <string name="wikis_comment_action_save">저장</string>
     <string name="wikis_comment_action_cancel">취소</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">새 페이지</string>
     <string name="wikis_editor_preview">미리보기</string>
     <string name="wikis_editor_preview_untitled">제목 없음</string>
-    <string name="wikis_editor_edit">편집</string>
     <string name="wikis_editor_insert">삽입</string>
     <string name="wikis_editor_attachments">첨부 파일</string>
     <string name="wikis_editor_delete">페이지 삭제</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">업로드 중…</string>
     <string name="wikis_attachments_upload_failed">파일 업로드에 실패했어요</string>
     <string name="wikis_attachments_search_clear">검색 지우기</string>
-    <string name="wikis_attachments_filter">필터</string>
     <string name="wikis_attachments_filter_all">모든 파일</string>
     <string name="wikis_attachments_filter_images">이미지</string>
     <string name="wikis_attachments_filter_documents">문서</string>
-    <string name="wikis_attachments_sort">정렬</string>
     <string name="wikis_attachments_sort_date">날짜</string>
     <string name="wikis_attachments_sort_name">이름</string>
     <string name="wikis_attachments_sort_size">크기</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">임베드 링크 복사</string>
     <string name="wikis_attachments_embed_copied">임베드 링크가 복사되었어요</string>
     <string name="wikis_attachments_download">다운로드</string>
-    <string name="wikis_attachments_copy_success">임베드 링크가 복사되었어요</string>
     <string name="wikis_attachments_delete">삭제</string>
     <string name="wikis_attachments_delete_confirm_title">첨부 파일 삭제</string>
     <string name="wikis_attachments_delete_success">첨부 파일이 삭제되었어요</string>
     <string name="wikis_attachments_delete_failed">첨부 파일 삭제에 실패했어요</string>
-    <string name="wikis_attachments_open">열기</string>
     <string name="wikis_attachments_empty_title">아직 첨부파일이 없어요</string>
     <string name="wikis_attachments_no_results_title">검색과 일치하는 첨부 파일이 없습니다</string>
     <string name="wikis_attachments_no_results_description">다른 검색어나 필터를 시도해 보세요.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">이 작업은 되돌릴 수 없어요. 위키와 모든 내용이 영구적으로 삭제돼요.</string>
     <string name="wikis_settings_delete_success">위키가 삭제되었어요</string>
     <string name="wikis_settings_delete_failed">위키 삭제에 실패했어요</string>
-    <string name="wikis_access_add_action">추가</string>
     <string name="wikis_access_add_subject_label">사용자</string>
     <string name="wikis_access_level_edit">편집 및 보기</string>
     <string name="wikis_access_level_view">보기 전용</string>
     <string name="wikis_access_level_none">접근 권한 없음</string>
-    <string name="wikis_access_owner_label">소유자</string>
     <string name="wikis_access_tab_users">사용자</string>
     <string name="wikis_access_tab_groups">그룹</string>
     <string name="wikis_access_tab_other">기타</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">접근 권한 제거에 실패했어요</string>
     <string name="wikis_replicas_empty_title">아직 복제본이 없어요</string>
     <string name="wikis_replicas_empty_message">다른 위키가 이 위키를 복제하면 여기에 표시돼요.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">안 함</string>
     <string name="wikis_replicas_remove_confirm_title">복제본을 제거할까요?</string>
     <string name="wikis_replicas_remove_confirm_action">제거</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">업데이트 %1$s</string>
     <string name="wikis_pageview_not_found_description">「%1$s」 페이지가 아직 존재하지 않습니다.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">위키 링크</string>
-    <string name="wikis_pageview_share_link_copied">페이지 링크가 클립보드에 복사되었습니다</string>
     <string name="wikis_pageview_clipboard_label_rss">위키 RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">위키 페이지 링크</string>
-    <string name="wikis_pageview_loading">페이지 로딩 중…</string>
     <string name="wikis_page_action_share">링크</string>
     <string name="wikis_open_sidebar">사이드바 열기</string>
-    <string name="wikis_owned_badge">소유</string>
     <string name="wikis_search_placeholder">위키 검색…</string>
-    <string name="wikis_subscribing">구독 중…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s 구독을 정말 취소하시겠습니까?</string>
-    <string name="wikis_subscribe_failed_502">해당 서버에 연결할 수 없습니다. 재시도 중…</string>
     <string name="wikis_clipboard_label_rss">위키 RSS URL</string>
     <string name="wikis_find_search_placeholder">이름, ID, 지문 또는 URL로 검색…</string>
     <string name="wikis_join_search_button">위키 검색…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">답글 작성…</string>
     <string name="wikis_comment_form_send">보내기</string>
     <string name="wikis_comment_form_remove_attachment">첨부 파일 제거</string>
-    <string name="wikis_comment_collapse_toggle">스레드 접기</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Markdown을 사용하여 여기에 내용을 작성하세요…</string>
     <string name="wikis_insert_dialog_empty">아직 첨부 파일이 없습니다. 파일을 업로드하여 시작하세요.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">태그 추가</string>
     <string name="wikis_tag_dialog_empty">태그는 비워둘 수 없습니다</string>
     <string name="wikis_attachments_search_placeholder">첨부 파일 검색…</string>
-    <string name="wikis_attachments_copy_failed">임베드 링크 복사 실패</string>
     <string name="wikis_attachments_delete_confirm_message">「%1$s」을(를) 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
     <string name="wikis_attachments_downloading">다운로드 중…</string>
     <string name="wikis_attachments_empty_description">이 페이지에 파일을 추가하려면 업로드를 탭하세요.</string>
@@ -322,12 +297,6 @@
         <item quantity="one">답글 %d개</item>
         <item quantity="other">답글 +%d개 더</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">페이지 %1$d개의 이름을 변경했어요</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">링크 %1$d개를 수정했어요</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">페이지 %d개</item>
         <item quantity="other">페이지 %d개</item>
@@ -355,4 +324,10 @@
     <string name="wikis_attachments_caption_save_failed">캡션을 저장하지 못했습니다</string>
     <string name="wikis_attachments_upload_types">지원되는 파일: 이미지, PDF, DOC, DOCX, TXT 및 MD.</string>
     <string name="wikis_attachments_upload_limits">대용량 업로드는 서버 또는 프록시 구성에 의해 제한될 수 있습니다.</string>
+    <string name="wikis_rss_replace">교체</string>
+    <string name="wikis_rss_copied_new">새 RSS URL이 클립보드에 복사되었어요</string>
+    <string name="wikis_rss_exists">이 피드 URL은 이미 발급되어 다시 표시할 수 없어요.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">처음 %1$d 개의 댓글을 표시하고 있습니다.</item>
+    </plurals>
 </resources>

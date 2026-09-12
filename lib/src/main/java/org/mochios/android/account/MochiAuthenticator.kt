@@ -48,7 +48,7 @@ class MochiAuthenticator(private val context: Context) :
             result.putInt(AccountManager.KEY_ERROR_CODE, AccountManager.ERROR_CODE_BAD_ARGUMENTS)
             result.putString(
                 AccountManager.KEY_ERROR_MESSAGE,
-                "Unsupported token type: $authTokenType",
+                context.getString(R.string.account_error_token_type),
             )
             return result
         }
@@ -60,7 +60,10 @@ class MochiAuthenticator(private val context: Context) :
             PackageManager.SIGNATURE_MATCH
         if (!match) {
             result.putInt(AccountManager.KEY_ERROR_CODE, AccountManager.ERROR_CODE_BAD_REQUEST)
-            result.putString(AccountManager.KEY_ERROR_MESSAGE, "Caller not permitted")
+            result.putString(
+                AccountManager.KEY_ERROR_MESSAGE,
+                context.getString(R.string.account_error_caller),
+            )
             return result
         }
         val am = AccountManager.get(context)

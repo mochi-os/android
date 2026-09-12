@@ -61,7 +61,11 @@ fun CommentForm(
 
     fun handleSubmit() {
         val trimmed = body.trim()
-        if (trimmed.isBlank() && files.isEmpty()) return
+        // The server requires a body: `comment/create` answers 400
+        // comment_body_is_required for an empty one, so an attachment-only
+        // comment cannot be posted. Refusing here keeps the picked files in the
+        // draft instead of clearing them for a comment that never went out.
+        if (trimmed.isBlank()) return
         val attachments = if (files.isNotEmpty()) files.toList() else null
         onSubmit(trimmed, attachments)
         body = ""

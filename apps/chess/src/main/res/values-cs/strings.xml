@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Přidat přátele</string>
     <string name="chess_new_start_button">Začít hru</string>
     <string name="chess_new_creating">Vytváření…</string>
-    <string name="chess_new_failed">Nepodařilo se vytvořit hru</string>
     <string name="chess_chat_title">Chat</string>
     <string name="chess_open_chat">Otevřít panel chatu</string>
     <string name="chess_open_actions">Otevřít akce hry</string>

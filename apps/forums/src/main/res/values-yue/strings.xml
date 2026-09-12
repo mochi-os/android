@@ -7,6 +7,19 @@
     <string name="forums_create_action">建立</string>
     <string name="forums_post_save">儲存</string>
     <string name="forums_comment_save">儲存</string>
+    <string name="forums_reject_post_access">你冇喺呢個論壇發文嘅權限</string>
+    <string name="forums_reject_comment_access">你冇喺呢個論壇留言嘅權限</string>
+    <string name="forums_reject_post_restricted">你被限制喺呢個論壇發文</string>
+    <string name="forums_reject_comment_restricted">你被限制喺呢個論壇留言</string>
+    <string name="forums_reject_post_rate">你發文太快 — 請等一陣再試</string>
+    <string name="forums_reject_comment_rate">你留言太快 — 請等一陣再試</string>
+    <string name="forums_reject_post_invalid">帖文儲存唔到 — 標題或內容無效</string>
+    <string name="forums_reject_comment_invalid">留言儲存唔到 — 內容無效</string>
+    <string name="forums_reject_post_duplicate">呢篇帖文已經提交咗</string>
+    <string name="forums_reject_comment_duplicate">呢個留言已經提交咗</string>
+    <string name="forums_reject_forum_missing">論壇已經唔再提供</string>
+    <string name="forums_reject_post_server">帖文喺論壇伺服器上儲存唔到</string>
+    <string name="forums_reject_comment_server">留言喺論壇伺服器上儲存唔到</string>
     <string name="forums_settings_save">儲存</string>
     <string name="forums_list_logout">登出</string>
     <string name="forums_find_subscribe">訂閱</string>
@@ -47,6 +60,7 @@
     <string name="forums_post_pending">待處理</string>
     <string name="forums_moderation_reports_pending">待處理</string>
     <string name="forums_sort_interests">興趣</string>
+    <string name="forums_sort_ai">AI</string>
     <string name="forums_post_attach">附加檔案</string>
     <string name="forums_post_approve">批准</string>
     <string name="forums_comment_approve">批准</string>
@@ -293,4 +307,26 @@
         <item quantity="other">%d 篇新帖</item>
     </plurals>
     <string name="forums_moderation_on_image">關於圖片：%1$s</string>
+    <string name="forums_moderation_rejected">已拒絕</string>
+    <string name="forums_post_edited">%1$s（已編輯）</string>
+    <string name="forums_moderation_action_remove">已移除</string>
+    <string name="forums_moderation_action_restore">已還原</string>
+    <string name="forums_moderation_action_approve">已核准</string>
+    <string name="forums_moderation_action_lock">已鎖定</string>
+    <string name="forums_moderation_action_unlock">已解鎖</string>
+    <string name="forums_moderation_action_pin">已釘選</string>
+    <string name="forums_moderation_action_unpin">已取消釘選</string>
+    <string name="forums_moderation_action_restrict">受限</string>
+    <string name="forums_moderation_action_unrestrict">已解除限制</string>
+    <string name="forums_moderation_action_resolve">已解決的檢舉</string>
+    <string name="forums_moderation_target_post">貼文</string>
+    <string name="forums_moderation_target_comment">留言</string>
+    <string name="forums_moderation_target_user">使用者</string>
+    <string name="forums_moderation_reason_spam">垃圾訊息</string>
+    <string name="forums_moderation_reason_harassment">騷擾</string>
+    <string name="forums_moderation_reason_hate">仇恨言論</string>
+    <string name="forums_moderation_reason_violence">暴力</string>
+    <string name="forums_moderation_reason_misinformation">錯誤資訊</string>
+    <string name="forums_moderation_reason_offtopic">離題</string>
+    <string name="forums_moderation_reason_other">其他</string>
 </resources>

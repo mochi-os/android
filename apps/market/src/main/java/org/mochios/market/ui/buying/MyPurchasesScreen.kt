@@ -47,7 +47,6 @@ import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.lib.formatFingerprint
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
@@ -196,7 +195,7 @@ private fun OrderRowCard(order: Order, onClick: (String) -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
             val sellerLabel = order.sellerName?.takeIf { it.isNotBlank() }
-                ?: formatFingerprint(order.seller)
+                ?: order.sellerFingerprint.orEmpty()
             Text(
                 "$sellerLabel · ${format.formatTimestamp(order.created)}",
                 style = MaterialTheme.typography.labelSmall,

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">مينيو</string>
-    <string name="words_list_new">نئين گيم</string>
     <string name="words_list_logout">لاگ آئوٽ</string>
-    <string name="words_list_empty_title">اڃا ڪا گيم نه آهي</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">مڪمل</string>
     <string name="words_sidebar_new_game">نئين گيم</string>
     <string name="words_new_game_title">نئين گيم</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">ٻيهر ميچ</string>
     <string name="words_detail_action_delete">راند ختم ڪريو</string>
     <string name="words_detail_chat_title">چيٽ</string>
-    <string name="words_detail_invalid_move">غلط حرڪت</string>
     <string name="words_detail_recall">واپس گهرايو</string>
     <string name="words_detail_submit">جمع ڪريو</string>
     <string name="words_detail_cancel">منسوخ ڪريو</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">اکر چونڊيو</string>
     <string name="words_detail_resign_title">گيم هار مڃجي؟</string>
     <string name="words_detail_resign_message">ڇا توهان پڪ سان دستبردار ٿيڻ چاهيو ٿا؟</string>
-    <string name="words_detail_failed_move">حرڪت جمع ڪرائڻ ۾ ناڪام</string>
-    <string name="words_detail_failed_pass">پاس ڪرڻ ۾ ناڪام</string>
-    <string name="words_detail_failed_exchange">تبادلو ڪرڻ ۾ ناڪام</string>
-    <string name="words_detail_failed_resign">استعفيٰ ڏيڻ ۾ ناڪام</string>
-    <string name="words_detail_failed_rematch">ريميچ ٺاهڻ ۾ ناڪام</string>
-    <string name="words_detail_failed_delete">راند ختم ڪرڻ ۾ ناڪام</string>
-    <string name="words_detail_game_deleted">راند ختم ٿي وئي</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words وارين، مٽاسٽا ۽ راند جي نتيجن بابت اطلاعون.</string>
-    <string name="words_list_empty_subtitle">پنھنجي پھرين راند شروع ڪرڻ لاءِ + بٽڻ کي ڇُھو.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">اڃا ڪا راند ناهي.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">راند شروع ڪرڻ لاءِ People ايپ ۾ دوست شامل ڪريو.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">راند جي تفصيل جلد اچي رهي آهي</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

@@ -521,14 +521,17 @@ private fun TotpSetupDialog(
                         )
                     }
                 }
-                if (url.isNotBlank()) {
+                if (url.startsWith("otpauth:")) {
                     // The otpauth URL enrols the secret in one tap. Nothing
                     // can ask which apps handle the scheme, so a device
-                    // without one simply refuses the intent.
+                    // without one simply refuses the intent. Only that scheme
+                    // is offered, so the server cannot hand the client an
+                    // arbitrary intent URI to fire.
                     val context = LocalContext.current
                     MochiTextButton(onClick = {
                         runCatching {
                             context.startActivity(
+                                // launch-ok: otpauth:// enrolment URI from the server, not a web URL
                                 Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
                                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 },

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">ค้นหาวิกิ</string>
     <string name="wikis_sidebar_create">สร้าง wiki</string>
     <string name="wikis_pageview_title_fallback">หน้า</string>
-    <string name="wikis_pageview_wiki_fallback">วิกิ</string>
-    <string name="wikis_pageview_back">ย้อนกลับ</string>
     <string name="wikis_pageview_page_actions">การดำเนินการของหน้า</string>
     <string name="wikis_pageview_toc">ในหน้านี้</string>
     <string name="wikis_pageview_not_found_title">ไม่พบหน้า</string>
     <string name="wikis_pageview_create_this_page">สร้างหน้านี้</string>
     <string name="wikis_pageview_rss_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
-    <string name="wikis_pageview_rss_failed">ไม่สามารถรับ RSS token ได้</string>
     <string name="wikis_page_action_section_page">หน้า</string>
     <string name="wikis_page_action_edit">แก้ไข</string>
     <string name="wikis_page_action_rename">เปลี่ยนชื่อ</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">วิกิ</string>
     <string name="wikis_empty_title">เริ่มวิกิแรกของคุณ</string>
     <string name="wikis_empty_subtitle">ค้นหาวิกิเพื่อสมัครสมาชิก หรือสร้างวิกิเพื่อเผยแพร่เอกสารของคุณเอง</string>
-    <string name="wikis_subscribed_badge">ติดตามแล้ว</string>
     <string name="wikis_create_button">สร้าง wiki</string>
     <string name="wikis_recommended_section">wiki ที่แนะนำ</string>
     <string name="wikis_subscribe_button">ติดตาม</string>
-    <string name="wikis_subscribed">ติดตามแล้ว</string>
     <string name="wikis_unsubscribe_action">ยกเลิกการติดตาม</string>
     <string name="wikis_unsubscribing">กำลังยกเลิกการติดตาม…</string>
     <string name="wikis_unsubscribe_confirm_title">ยกเลิกการติดตาม</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">ชื่อ</string>
     <string name="wikis_create_privacy_label">อนุญาตให้ใครก็ได้ค้นหา wiki</string>
     <string name="wikis_create_submit">สร้าง</string>
-    <string name="wikis_create_cancel">ยกเลิก</string>
     <string name="wikis_comments_empty_title">ยังไม่มีความคิดเห็น</string>
     <string name="wikis_comments_empty_subtitle">เป็นคนแรกที่แสดงความคิดเห็นในหน้านี้</string>
-    <string name="wikis_comment_action_reply">ตอบกลับ</string>
     <string name="wikis_comment_replying_to">กำลังตอบกลับ %1$s</string>
     <string name="wikis_comment_clear_reply">ยกเลิกการตอบกลับ</string>
-    <string name="wikis_comment_action_edit">แก้ไข</string>
     <string name="wikis_comment_action_delete">ลบ</string>
     <string name="wikis_comment_action_save">บันทึก</string>
     <string name="wikis_comment_action_cancel">ยกเลิก</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">หน้าใหม่</string>
     <string name="wikis_editor_preview">ดูตัวอย่าง</string>
     <string name="wikis_editor_preview_untitled">ไม่มีชื่อ</string>
-    <string name="wikis_editor_edit">แก้ไข</string>
     <string name="wikis_editor_insert">แทรก</string>
     <string name="wikis_editor_attachments">ไฟล์แนบ</string>
     <string name="wikis_editor_delete">ลบหน้า</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">กำลังอัปโหลด…</string>
     <string name="wikis_attachments_upload_failed">ไม่สามารถอัปโหลดไฟล์ได้</string>
     <string name="wikis_attachments_search_clear">ล้างการค้นหา</string>
-    <string name="wikis_attachments_filter">กรอง</string>
     <string name="wikis_attachments_filter_all">ไฟล์ทั้งหมด</string>
     <string name="wikis_attachments_filter_images">รูปภาพ</string>
     <string name="wikis_attachments_filter_documents">เอกสาร</string>
-    <string name="wikis_attachments_sort">เรียงลำดับ</string>
     <string name="wikis_attachments_sort_date">วันที่</string>
     <string name="wikis_attachments_sort_name">ชื่อ</string>
     <string name="wikis_attachments_sort_size">ขนาด</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">คัดลอกลิงก์ฝัง</string>
     <string name="wikis_attachments_embed_copied">คัดลอกลิงก์ฝังแล้ว</string>
     <string name="wikis_attachments_download">ดาวน์โหลด</string>
-    <string name="wikis_attachments_copy_success">คัดลอกลิงก์ฝังแล้ว</string>
     <string name="wikis_attachments_delete">ลบ</string>
     <string name="wikis_attachments_delete_confirm_title">ลบไฟล์แนบ</string>
     <string name="wikis_attachments_delete_success">ลบไฟล์แนบแล้ว</string>
     <string name="wikis_attachments_delete_failed">ไม่สามารถลบไฟล์แนบได้</string>
-    <string name="wikis_attachments_open">เปิด</string>
     <string name="wikis_attachments_empty_title">ยังไม่มีไฟล์แนบ</string>
     <string name="wikis_attachments_no_results_title">ไม่มีไฟล์แนบที่ตรงกับการค้นหา</string>
     <string name="wikis_attachments_no_results_description">ลองคำค้นหาหรือฟิลเตอร์อื่น</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ไม่สามารถย้อนกลับการกระทำนี้ได้ การกระทำนี้จะลบวิกิและเนื้อหาทั้งหมดอย่างถาวร</string>
     <string name="wikis_settings_delete_success">ลบวิกิแล้ว</string>
     <string name="wikis_settings_delete_failed">ไม่สามารถลบวิกิได้</string>
-    <string name="wikis_access_add_action">เพิ่ม</string>
     <string name="wikis_access_add_subject_label">ผู้ใช้</string>
     <string name="wikis_access_level_edit">แก้ไขและดู</string>
     <string name="wikis_access_level_view">ดูอย่างเดียว</string>
     <string name="wikis_access_level_none">ไม่มีสิทธิ์เข้าถึง</string>
-    <string name="wikis_access_owner_label">เจ้าของ</string>
     <string name="wikis_access_tab_users">ผู้ใช้</string>
     <string name="wikis_access_tab_groups">กลุ่ม</string>
     <string name="wikis_access_tab_other">อื่น ๆ</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">ไม่สามารถเอาการเข้าถึงออกได้</string>
     <string name="wikis_replicas_empty_title">ยังไม่มี replica</string>
     <string name="wikis_replicas_empty_message">เมื่อวิกิอื่นจำลองวิกินี้ พวกมันจะปรากฏที่นี่</string>
-    <string name="wikis_replicas_col_id">รหัส</string>
     <string name="wikis_replicas_never_synced">ไม่เลย</string>
     <string name="wikis_replicas_remove_confirm_title">ลบ replica?</string>
     <string name="wikis_replicas_remove_confirm_action">ลบ</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">อัปเดต %1$s</string>
     <string name="wikis_pageview_not_found_description">หน้า \"%1$s\" ยังไม่มี</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">ลิงก์วิกิ</string>
-    <string name="wikis_pageview_share_link_copied">คัดลอกลิงก์หน้าไปยังคลิปบอร์ดแล้ว</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ของวิกิ</string>
-    <string name="wikis_pageview_clipboard_label_share">ลิงก์หน้าวิกิ</string>
-    <string name="wikis_pageview_loading">กำลังโหลดหน้า…</string>
     <string name="wikis_page_action_share">ลิงก์</string>
     <string name="wikis_open_sidebar">เปิดแถบด้านข้าง</string>
-    <string name="wikis_owned_badge">เป็นเจ้าของ</string>
     <string name="wikis_search_placeholder">ค้นหาวิกิ…</string>
-    <string name="wikis_subscribing">กำลังสมัครสมาชิก…</string>
     <string name="wikis_unsubscribe_confirm_message">คุณแน่ใจหรือไม่ที่จะยกเลิกการสมัครสมาชิกจาก %1$s?</string>
-    <string name="wikis_subscribe_failed_502">เซิร์ฟเวอร์นั้นไม่สามารถเข้าถึงได้ กำลังลองใหม่…</string>
     <string name="wikis_clipboard_label_rss">URL RSS ของวิกิ</string>
     <string name="wikis_find_search_placeholder">ค้นหาตามชื่อ, ID, ลายนิ้วมือ หรือ URL…</string>
     <string name="wikis_join_search_button">ค้นหาวิกิ…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">เขียนคำตอบ…</string>
     <string name="wikis_comment_form_send">ส่ง</string>
     <string name="wikis_comment_form_remove_attachment">ลบไฟล์แนบ</string>
-    <string name="wikis_comment_collapse_toggle">ยุบกระทู้</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">เขียนเนื้อหาของคุณที่นี่โดยใช้ Markdown…</string>
     <string name="wikis_insert_dialog_empty">ยังไม่มีไฟล์แนบ อัปโหลดไฟล์เพื่อเริ่มต้น</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">เพิ่มแท็ก</string>
     <string name="wikis_tag_dialog_empty">แท็กไม่สามารถว่างเปล่าได้</string>
     <string name="wikis_attachments_search_placeholder">ค้นหาไฟล์แนบ…</string>
-    <string name="wikis_attachments_copy_failed">ไม่สามารถคัดลอกลิงก์ฝังตัว</string>
     <string name="wikis_attachments_delete_confirm_message">ลบ \"%1$s\"? ไม่สามารถยกเลิกได้</string>
     <string name="wikis_attachments_downloading">กำลังดาวน์โหลด…</string>
     <string name="wikis_attachments_empty_description">แตะอัปโหลดเพื่อเพิ่มไฟล์ไปยังหน้านี้</string>
@@ -322,12 +297,6 @@
         <item quantity="one">%d การตอบกลับ</item>
         <item quantity="other">+%d การตอบกลับเพิ่มเติม</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">เปลี่ยนชื่อ %1$d หน้า</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">อัปเดต %1$d ลิงก์</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d หน้า</item>
         <item quantity="other">%d หน้า</item>
@@ -355,4 +324,10 @@
     <string name="wikis_attachments_caption_save_failed">ไม่สามารถบันทึกคำบรรยายภาพได้</string>
     <string name="wikis_attachments_upload_types">ไฟล์ที่รองรับ: รูปภาพ, PDF, DOC, DOCX, TXT และ MD</string>
     <string name="wikis_attachments_upload_limits">การอัปโหลดขนาดใหญ่อาจถูกจำกัดโดยการกำหนดค่าเซิร์ฟเวอร์หรือพร็อกซีของคุณ</string>
+    <string name="wikis_rss_replace">แทนที่</string>
+    <string name="wikis_rss_copied_new">คัดลอก URL RSS ใหม่ ไปยังคลิปบอร์ดแล้ว</string>
+    <string name="wikis_rss_exists">URL ฟีดนี้ออกให้แล้ว และไม่สามารถแสดงอีกครั้งได้</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">กำลังแสดงความคิดเห็น %1$d รายการแรก</item>
+    </plurals>
 </resources>

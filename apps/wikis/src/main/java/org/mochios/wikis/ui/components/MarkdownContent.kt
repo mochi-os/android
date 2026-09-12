@@ -30,6 +30,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -119,17 +120,25 @@ fun MarkdownContent(
         onDispose { }
     }
 
-    // Pre-process the markdown source so Markwon sees absolute attachment
-    // URLs directly. This means ImagesPlugin can fetch them and any link
-    // through Markwon's LinkResolver gets the resolved href.
-    val rewritten = remember(content, wiki.baseURL) {
-        rewriteAttachmentUrls(content) { url -> wiki.resolveAttachmentUrl(url) }
-    }
-
     // Split into alternating prose / fenced-code segments so each code block
     // can carry a Compose header strip while the prose stays one Markwon
     // TextView.
-    val segments = remember(rewritten) { splitIntoSegments(rewritten) }
+    //
+    // The split runs BEFORE the attachment rewrite, and the rewrite is applied
+    // only to prose. Rewriting the whole document first turned link syntax
+    // inside a fenced block into a resolved absolute URL, so a page documenting
+    // its own markdown showed the reader something it had not written.
+    val segments = remember(content, wiki.baseURL) {
+        splitIntoSegments(content).map { seg ->
+            when (seg) {
+                is MarkdownSegment.Prose ->
+                    MarkdownSegment.Prose(
+                        rewriteAttachmentUrls(seg.markdown) { url -> wiki.resolveAttachmentUrl(url) },
+                    )
+                is MarkdownSegment.Code -> seg
+            }
+        }
+    }
 
     // Build the Markwon stack. Same plugins as `HtmlContent`, plus:
     //  - a link resolver that routes through Custom Tabs / lightbox /
@@ -313,6 +322,15 @@ private fun ProseSegment(
     // old fixed android.R.color.primary_text_light went black in dark mode.
     val textColor = MaterialTheme.colorScheme.onSurface.toArgb()
 
+    // The pre-draw listener is attached once, in `factory`, and reads the
+    // current values through these. `update` runs on every recomposition, so
+    // attaching there piled up a listener per recomposition, none of them ever
+    // removed, and every one of them re-ran the whole heading-offset walk on
+    // every layout pass.
+    val currentHeadingIds by rememberUpdatedState(headingIds)
+    val currentTopMeasured by rememberUpdatedState(onTopMeasured)
+    val currentOffsetsMeasured by rememberUpdatedState(onHeadingOffsetsMeasured)
+
     AndroidView(
         factory = { ctx ->
             ClickableLinkTextView(ctx).apply {
@@ -322,6 +340,30 @@ private fun ProseSegment(
                 movementMethod = TableAwareMovementMethod.create()
                 textSize = 16f
                 setTextColor(textColor)
+
+                // OnPreDraw fires on every layout pass, so heading offsets stay
+                // fresh through text-size, configuration and content changes.
+                viewTreeObserver.addOnPreDrawListener {
+                    currentTopMeasured(top)
+                    val layout = layout
+                    val body = text as? Spannable
+                    val ids = currentHeadingIds
+                    if (layout != null && body != null && ids.isNotEmpty()) {
+                        val perHeading = mutableMapOf<String, Int>()
+                        val spans = body.getSpans(0, body.length, HeadingSpan::class.java)
+                            .sortedBy { body.getSpanStart(it) }
+                        val limit = minOf(spans.size, ids.size)
+                        for (i in 0 until limit) {
+                            val start = body.getSpanStart(spans[i]).coerceAtLeast(0)
+                            val line = layout.getLineForOffset(start)
+                            perHeading[ids[i]] = layout.getLineTop(line)
+                        }
+                        if (perHeading.isNotEmpty()) {
+                            currentOffsetsMeasured(perHeading)
+                        }
+                    }
+                    true
+                }
             }
         },
         update = { textView ->
@@ -340,28 +382,6 @@ private fun ProseSegment(
                 onImageTap = onImageTap,
             )
 
-            // OnPreDraw fires on every layout pass, so heading offsets stay
-            // fresh through text-size, configuration and content changes.
-            textView.viewTreeObserver.addOnPreDrawListener {
-                onTopMeasured(textView.top)
-                val layout = textView.layout
-                val text = textView.text as? Spannable
-                if (layout != null && text != null && headingIds.isNotEmpty()) {
-                    val perHeading = mutableMapOf<String, Int>()
-                    val spans = text.getSpans(0, text.length, HeadingSpan::class.java)
-                        .sortedBy { text.getSpanStart(it) }
-                    val limit = minOf(spans.size, headingIds.size)
-                    for (i in 0 until limit) {
-                        val start = text.getSpanStart(spans[i]).coerceAtLeast(0)
-                        val line = layout.getLineForOffset(start)
-                        perHeading[headingIds[i]] = layout.getLineTop(line)
-                    }
-                    if (perHeading.isNotEmpty()) {
-                        onHeadingOffsetsMeasured(perHeading)
-                    }
-                }
-                true
-            }
         },
         modifier = Modifier.fillMaxWidth(),
     )
@@ -384,6 +404,10 @@ private fun CodeBlockSegment(
     // The block sits on surfaceVariant, so its code follows that role rather
     // than the fixed near-black it used to draw in.
     val textColor = MaterialTheme.colorScheme.onSurfaceVariant.toArgb()
+
+    // Attached once in `factory`; `update` runs per recomposition and would
+    // otherwise stack a listener each time with nothing ever removing them.
+    val currentTopMeasured by rememberUpdatedState(onTopMeasured)
 
     Surface(
         modifier = Modifier
@@ -417,16 +441,16 @@ private fun CodeBlockSegment(
                             movementMethod = LinkMovementMethod.getInstance()
                             textSize = 13f
                             setTextColor(textColor)
+                            viewTreeObserver.addOnPreDrawListener {
+                                currentTopMeasured(top)
+                                true
+                            }
                         }
                     },
                     update = { textView ->
                         textView.setTextColor(textColor)
                         textView.ellipsize = TextUtils.TruncateAt.END
                         markwon.setParsedMarkdown(textView, spanned)
-                        textView.viewTreeObserver.addOnPreDrawListener {
-                            onTopMeasured(textView.top)
-                            true
-                        }
                     },
                     modifier = Modifier.fillMaxWidth(),
                 )
@@ -679,14 +703,26 @@ private fun stripThumbnail(url: String): String =
  */
 internal fun rewriteAttachmentUrls(content: String, resolve: (String) -> String): String {
     val linkRe = Regex("(!?)\\[([^]]*)]\\(([^)\\s]+)(\\s+\"[^\"]*\")?\\)")
-    return linkRe.replace(content) { match ->
-        val bang = match.groupValues[1]
-        val alt = match.groupValues[2]
-        val url = match.groupValues[3]
-        val title = match.groupValues[4]
-        val resolved = resolve(url)
-        "$bang[$alt]($resolved$title)"
+    // Backtick spans are code, not links: `![a](b)` is meant to be read, not
+    // resolved. Split on them and rewrite only what falls outside.
+    val codeSpan = Regex("`+[^`]*`+")
+    val out = StringBuilder()
+    var cursor = 0
+    for (span in codeSpan.findAll(content)) {
+        out.append(linkRe.replace(content.substring(cursor, span.range.first)) { rewrite(it, resolve) })
+        out.append(span.value)
+        cursor = span.range.last + 1
     }
+    out.append(linkRe.replace(content.substring(cursor)) { rewrite(it, resolve) })
+    return out.toString()
+}
+
+private fun rewrite(match: MatchResult, resolve: (String) -> String): String {
+    val bang = match.groupValues[1]
+    val alt = match.groupValues[2]
+    val url = match.groupValues[3]
+    val title = match.groupValues[4]
+    return "$bang[$alt](${resolve(url)}$title)"
 }
 
 /** Is `href` a relative wiki-page link (i.e. not http/https/scheme/anchor-only)? */

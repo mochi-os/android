@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Tilføj venner</string>
     <string name="chess_new_start_button">Start spil</string>
     <string name="chess_new_creating">Opretter…</string>
-    <string name="chess_new_failed">Kunne ikke oprette spil</string>
     <string name="chess_chat_title">Chat</string>
     <string name="chess_open_chat">Åbn chatpanel</string>
     <string name="chess_open_actions">Åbn spilhandlinger</string>

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wikikunata tariy</string>
     <string name="wikis_sidebar_create">Wiki kamariy</string>
     <string name="wikis_pageview_title_fallback">Página</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Kutichiy</string>
     <string name="wikis_pageview_page_actions">Página ruwaykuna</string>
     <string name="wikis_pageview_toc">Kay páginapi</string>
     <string name="wikis_pageview_not_found_title">Página mana tarisqachu</string>
     <string name="wikis_pageview_create_this_page">Kay pagina kamariy</string>
     <string name="wikis_pageview_rss_copied">RSS URL clipboardman copiasqa</string>
-    <string name="wikis_pageview_rss_failed">Mana RSS tokenta chaskiyta atinchu</string>
     <string name="wikis_page_action_section_page">Página</string>
     <string name="wikis_page_action_edit">Hukchay</string>
     <string name="wikis_page_action_rename">Huk sutin churay</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikikuna</string>
     <string name="wikis_empty_title">Ñawpaq wikiykita qallariy</string>
     <string name="wikis_empty_subtitle">Wikipaq maskay suscribinapaq, utaq sapaykipa documentaciónniykita publishanapaq huk wikita kamariy.</string>
-    <string name="wikis_subscribed_badge">Suscribisqa</string>
     <string name="wikis_create_button">Wiki kamariy</string>
     <string name="wikis_recommended_section">Munasqa wikikuna</string>
     <string name="wikis_subscribe_button">Suscribiy</string>
-    <string name="wikis_subscribed">Suscribisqa</string>
     <string name="wikis_unsubscribe_action">Suscripcionta saqiy</string>
     <string name="wikis_unsubscribing">Suscripcionta saqichkan…</string>
     <string name="wikis_unsubscribe_confirm_title">Suscripcionta saqiy</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Sutin</string>
     <string name="wikis_create_privacy_label">Pillapas maskhayta atichun wiki-ta</string>
     <string name="wikis_create_submit">Kamariy</string>
-    <string name="wikis_create_cancel">Mana ruway</string>
     <string name="wikis_comments_empty_title">Manaraq comentariokuna</string>
     <string name="wikis_comments_empty_subtitle">Kay paginapi qallariq comentariohina kay.</string>
-    <string name="wikis_comment_action_reply">Kutichiy</string>
     <string name="wikis_comment_replying_to">%1$s runaman kutichichkan</string>
     <string name="wikis_comment_clear_reply">Kutichiy mana ruway</string>
-    <string name="wikis_comment_action_edit">Hukchay</string>
     <string name="wikis_comment_action_delete">Wischuy</string>
     <string name="wikis_comment_action_save">Waqaychay</string>
     <string name="wikis_comment_action_cancel">Mana ruway</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Musuq página</string>
     <string name="wikis_editor_preview">Ñawpaq qhaway</string>
     <string name="wikis_editor_preview_untitled">Mana sutinchayniyuq</string>
-    <string name="wikis_editor_edit">Hukchay</string>
     <string name="wikis_editor_insert">Churaykuy</string>
     <string name="wikis_editor_attachments">Yapasqakuna</string>
     <string name="wikis_editor_delete">Pagina wischuy</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Uploadchkan…</string>
     <string name="wikis_attachments_upload_failed">Mana archivokunata wichachiyta atinchu</string>
     <string name="wikis_attachments_search_clear">Maskhay pichay</string>
-    <string name="wikis_attachments_filter">Suysuy</string>
     <string name="wikis_attachments_filter_all">Llapan archivos</string>
     <string name="wikis_attachments_filter_images">Rikch\'akuna</string>
     <string name="wikis_attachments_filter_documents">Documentos</string>
-    <string name="wikis_attachments_sort">Allichay</string>
     <string name="wikis_attachments_sort_date">P\'unchaw</string>
     <string name="wikis_attachments_sort_name">Sutin</string>
     <string name="wikis_attachments_sort_size">Sayay</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed link copiay</string>
     <string name="wikis_attachments_embed_copied">Embed enlace copiasqa</string>
     <string name="wikis_attachments_download">Uray chaskiy</string>
-    <string name="wikis_attachments_copy_success">Embed enlace copiasqa</string>
     <string name="wikis_attachments_delete">Wischuy</string>
     <string name="wikis_attachments_delete_confirm_title">Yapasqa wischuy</string>
     <string name="wikis_attachments_delete_success">Yapasqa wischusqa</string>
     <string name="wikis_attachments_delete_failed">Mana adjuntota pichayta atinchu</string>
-    <string name="wikis_attachments_open">Kichay</string>
     <string name="wikis_attachments_empty_title">Manaraq attachmentkuna</string>
     <string name="wikis_attachments_no_results_title">Mana attachmentkuna maskasqaykiwan tupanchu</string>
     <string name="wikis_attachments_no_results_description">Huk maskay simita utaq filtrota ruway.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Kay rurayqa mana kutichiyta atikunchu. Kayqa wiñaypaq wikita lliw yachayninkunata qulluchinqa.</string>
     <string name="wikis_settings_delete_success">Wiki qulluchisqa</string>
     <string name="wikis_settings_delete_failed">Mana wikita pichayta atinchu</string>
-    <string name="wikis_access_add_action">Yapay</string>
     <string name="wikis_access_add_subject_label">Apaykachaq</string>
     <string name="wikis_access_level_edit">Hukchay hinaspa qhaway</string>
     <string name="wikis_access_level_view">Qhawayllapaq</string>
     <string name="wikis_access_level_none">Mana yaykuy</string>
-    <string name="wikis_access_owner_label">Apuq</string>
     <string name="wikis_access_tab_users">Apaykachaqkuna</string>
     <string name="wikis_access_tab_groups">Huñukuna</string>
     <string name="wikis_access_tab_other">Huk</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Mana yaykuyta pichayta atinchu</string>
     <string name="wikis_replicas_empty_title">Manaraq replicakuna</string>
     <string name="wikis_replicas_empty_message">Huk wikikuna kay wikita replicaspa, kaypi rikurinqaku.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Mana hayk\'aqpas</string>
     <string name="wikis_replicas_remove_confirm_title">Replicata qichuy?</string>
     <string name="wikis_replicas_remove_confirm_action">Qichuy</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” panqaqa manaraqmi kanchu.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki t’inki</string>
-    <string name="wikis_pageview_share_link_copied">Panqa t’inki clipboard nisqaman kikinchasqa</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki panqa t’inki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">T\'inki</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki maskay…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">¿Cheqaqchu %1$s nisqamanta lluqsiyta munanki?</string>
-    <string name="wikis_subscribe_failed_502">Chay servidorman mana chayay atikunchu. Yapamanta ruwachkan…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Sutinpi, ID, rukana unanchan icha URL maskay…</string>
     <string name="wikis_join_search_button">Wikikuna maskay…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Huk kutichiyta qillqay…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Qillqasqaykita kaypi Markdown nisqawan qillqay…</string>
     <string name="wikis_insert_dialog_empty">Manaraq k’askasqakuna kanchu. Qallarinaykipaq huk willañiqita apachiy.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Ch’usaq sutichay mana atikunchu</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Embed t’inkita kikinchay mana atikunchu</string>
     <string name="wikis_attachments_delete_confirm_message">¿“%1$s” qulluy? Kayqa mana kutichiy atinachu.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Kay panqaman willañiqikunata yapanaykipaq Apachiy ñit’iy.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d kutichiy</item>
         <item quantity="other">+%d aswan kutichiykuna</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d página kutimanta sutichasqa</item>
-        <item quantity="other">%1$d páginakuna kutimanta sutichasqa</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d link musuqchasqa</item>
-        <item quantity="other">%1$d linkkuna musuqchasqa</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d página</item>
         <item quantity="other">%d páginakuna</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Sut\'inchayta waqaychayta mana atikunchu</string>
     <string name="wikis_attachments_upload_types">Yanapasqa willañiqikuna: siq\'ikuna, PDF, DOC, DOCX, TXT, MD ima.</string>
     <string name="wikis_attachments_upload_limits">Hatun apaykachaykunaqa servidorniykipa utaq proxyniykipa allichaynin hark\'asqa kanman.</string>
+    <string name="wikis_rss_replace">Tikray</string>
+    <string name="wikis_rss_copied_new">Musuq RSS URL clipboardman copiasqa</string>
+    <string name="wikis_rss_exists">Kay feed URL ñam qusqa karqan, manam kutimanta rikuchiyta atinchu.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Ñawpaq %1$d rimanakuy rikuchisqa.</item>
+        <item quantity="other">Ñawpaq %1$d rimanakuykuna rikuchisqa.</item>
+    </plurals>
 </resources>

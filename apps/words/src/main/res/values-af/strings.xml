@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Kieslys</string>
-    <string name="words_list_new">Nuwe spel</string>
     <string name="words_list_logout">Meld af</string>
-    <string name="words_list_empty_title">Nog geen speletjies nie</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Voltooi</string>
     <string name="words_sidebar_new_game">Nuwe spel</string>
     <string name="words_new_game_title">Nuwe spel</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Hernuwe wedstryd</string>
     <string name="words_detail_action_delete">Verwyder speletjie</string>
     <string name="words_detail_chat_title">Klets</string>
-    <string name="words_detail_invalid_move">Ongeldige skuif</string>
     <string name="words_detail_recall">Herroep</string>
     <string name="words_detail_submit">Dien in</string>
     <string name="words_detail_cancel">Kanselleer</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Kies \'n letter</string>
     <string name="words_detail_resign_title">Bedank spel?</string>
     <string name="words_detail_resign_message">Is jy seker jy wil uittree?</string>
-    <string name="words_detail_failed_move">Kon nie skuif indien nie</string>
-    <string name="words_detail_failed_pass">Kon nie verbygaan nie</string>
-    <string name="words_detail_failed_exchange">Kon nie ruil nie</string>
-    <string name="words_detail_failed_resign">Kon nie bedank nie</string>
-    <string name="words_detail_failed_rematch">Kon nie herwedstryd skep nie</string>
-    <string name="words_detail_failed_delete">Kon nie spel verwyder nie</string>
-    <string name="words_detail_game_deleted">Spel verwyder</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Kennisgewings oor Words-beurte, uitruilings en speluitslae.</string>
-    <string name="words_list_empty_subtitle">Tik die +-knoppie om jou eerste speletjie te begin.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Nog geen speletjies nie.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Voeg vriende in die People-toepassing by om te begin speel.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Speletjiebesonderhede kom binnekort</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

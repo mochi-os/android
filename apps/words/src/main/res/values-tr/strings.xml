@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menü</string>
-    <string name="words_list_new">Yeni oyun</string>
     <string name="words_list_logout">Oturumu kapat</string>
-    <string name="words_list_empty_title">Henüz oyun yok</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Tamamlandı</string>
     <string name="words_sidebar_new_game">Yeni oyun</string>
     <string name="words_new_game_title">Yeni oyun</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Yeniden eşleş</string>
     <string name="words_detail_action_delete">Oyunu sil</string>
     <string name="words_detail_chat_title">Sohbet</string>
-    <string name="words_detail_invalid_move">Geçersiz hamle</string>
     <string name="words_detail_recall">Geri çağır</string>
     <string name="words_detail_submit">Gönder</string>
     <string name="words_detail_cancel">İptal</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Bir harf seçin</string>
     <string name="words_detail_resign_title">Oyundan çekilsin mi?</string>
     <string name="words_detail_resign_message">Çekilmek istediğinizden emin misiniz?</string>
-    <string name="words_detail_failed_move">Hamle gönderilemedi</string>
-    <string name="words_detail_failed_pass">Pas geçilemedi</string>
-    <string name="words_detail_failed_exchange">Değiştirilemedi</string>
-    <string name="words_detail_failed_resign">Çekilinemedi</string>
-    <string name="words_detail_failed_rematch">Rövanş oluşturulamadı</string>
-    <string name="words_detail_failed_delete">Oyun silinemedi</string>
-    <string name="words_detail_game_deleted">Oyun silindi</string>
 
     <string name="words_channel_name">Kelimeler bildirimleri</string>
     <string name="words_channel_description">Sıralar, değişimler ve oyun sonuçları hakkında bildirimler.</string>
-    <string name="words_list_empty_subtitle">İlk oyununuzu başlatmak için + düğmesine dokunun.</string>
-    <string name="words_list_status_finished">Bitti</string>
-    <string name="words_list_status_resigned">Çekildi</string>
-    <string name="words_list_your_turn">Sizin sıranız</string>
     <string name="words_sidebar_active">Aktif oyunlar</string>
     <string name="words_sidebar_empty">Henüz oyun yok.</string>
     <string name="words_new_game_choose_opponents">Rakipleri seç</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d oyuncu</string>
     <string name="words_new_game_no_friends_subtitle">Oynamaya başlamak için Kişiler uygulamasında arkadaş ekleyin.</string>
     <string name="words_detail_title">Oyun</string>
-    <string name="words_detail_coming_soon">Oyun ayrıntıları yakında</string>
     <string name="words_detail_status_opponent_move">%1$s\'in sırası</string>
     <string name="words_detail_status_winner_wins">%1$s kazanır</string>
     <string name="words_detail_player_fallback">Oyuncu %1$d</string>

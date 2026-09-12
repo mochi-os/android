@@ -19,6 +19,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
@@ -33,6 +35,11 @@ import javax.inject.Inject
 data class CommentsUiState(
     val isLoading: Boolean = true,
     val comments: List<WikiComment> = emptyList(),
+    /**
+     * The server capped the thread page and there are more. Shown as a note
+     * under the list, as web does; the app has no "load more" for comments.
+     */
+    val truncated: Boolean = false,
     val pageTitle: String = "",
     val wiki: WikiInfo? = null,
     val permissions: WikiPermissions = WikiPermissions(),
@@ -60,6 +67,7 @@ class CommentsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: WikisRepository,
     private val sessionManager: SessionManager,
+    private val webSocket: MochiWebSocket,
 ) : ViewModel() {
 
     val wikiId: String = savedStateHandle.get<String>("wikiId").orEmpty()
@@ -74,11 +82,39 @@ class CommentsViewModel @Inject constructor(
     private val _events = Channel<CommentsEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
 
+    private var subscription: String? = null
+
     init {
         loadIdentity()
         loadInfo()
         loadPage()
         loadComments()
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        subscription?.let { webSocket.unsubscribe(it) }
+    }
+
+    /**
+     * Watch the wiki so a comment written on another replica appears without
+     * leaving the screen. Keyed on the wiki's fingerprint, which is what the
+     * server writes on; an entity-id deep link only learns it from the info
+     * response, so this runs once that lands. Idempotent.
+     */
+    private fun watch(fingerprint: String) {
+        if (subscription != null || fingerprint.isEmpty()) {
+            return
+        }
+        subscription = webSocket.subscribe(serverUrl, fingerprint) { event ->
+            handle(event)
+        }
+    }
+
+    private fun handle(event: WebSocketEvent) {
+        when (event.type) {
+            "wiki/update", "wiki/resynced" -> loadComments()
+        }
     }
 
     private fun loadIdentity() {
@@ -98,6 +134,7 @@ class CommentsViewModel @Inject constructor(
                     wiki = response.wiki,
                     permissions = response.permissions ?: WikiPermissions(),
                 )
+                watch(response.wiki?.fingerprint ?: wikiId)
             } catch (e: Exception) {
                 // Non-fatal: the screen still renders, just without a fully
                 // populated WikiContextValue — the comment refresh below will
@@ -132,6 +169,7 @@ class CommentsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     comments = response.comments,
+                    truncated = response.truncated,
                     error = null,
                 )
             } catch (e: Exception) {

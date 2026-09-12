@@ -9,6 +9,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
 import org.json.JSONObject
+import org.mochios.android.auth.Keystore
+import org.mochios.android.auth.Sealed
 
 /**
  * Persistent registry of UnifiedPush subscriptions, keyed by the per-App token.
@@ -21,6 +23,11 @@ class DistributorStore(context: Context) {
     private val prefs: SharedPreferences =
         context.applicationContext.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE)
 
+    // The row carries the per-app token and the subscription id - the comment
+    // in put() calls both credentials - so it is wrapped with the same
+    // AndroidKeyStore key the session uses.
+    private val sealed = Sealed(Keystore(KEYSTORE_ALIAS))
+
     data class Entry(
         val token: String,
         val appPackage: String,
@@ -31,7 +38,7 @@ class DistributorStore(context: Context) {
     )
 
     fun put(entry: Entry) {
-        prefs.edit().putString(keyFor(entry.token), entryToJson(entry).toString()).apply()
+        prefs.edit().putString(keyFor(entry.token), sealed.seal(entryToJson(entry).toString())).apply()
         // Neither the token nor the subscription id is logged: the token is the
         // capability that authenticates the owning app to this distributor, and
         // the subscription id is the unguessable path segment of its push
@@ -43,7 +50,7 @@ class DistributorStore(context: Context) {
     fun count(): Int = prefs.all.keys.count { it.startsWith(KEY_PREFIX) }
 
     fun get(token: String): Entry? {
-        val json = prefs.getString(keyFor(token), null) ?: return null
+        val json = prefs.getString(keyFor(token), null)?.let { sealed.open(it) } ?: return null
         return runCatching { entryFromJson(JSONObject(json)) }.getOrNull()
     }
 
@@ -53,7 +60,8 @@ class DistributorStore(context: Context) {
         val out = mutableListOf<Entry>()
         for ((k, v) in prefs.all) {
             if (!k.startsWith(KEY_PREFIX) || v !is String) continue
-            runCatching { out += entryFromJson(JSONObject(v)) }
+            val json = sealed.open(v) ?: continue
+            runCatching { out += entryFromJson(JSONObject(json)) }
         }
         return out
     }
@@ -85,6 +93,9 @@ class DistributorStore(context: Context) {
 
     private companion object {
         const val PREF_FILE = "mochi_distributor"
+        // The same AndroidKeyStore key the session uses: one key, one
+        // lifetime, so a reset invalidates both together.
+        const val KEYSTORE_ALIAS = "mochi.credentials"
         const val KEY_PREFIX = "subscription:"
         const val TAG = "MochiDistributor"
     }

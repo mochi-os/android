@@ -34,6 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.ui.auth.AuthNavigation
 import org.mochios.android.ui.components.MochiButton
@@ -126,11 +127,9 @@ private fun ReactivationScreen(
                 text = stringResource(R.string.reactivation_title),
                 style = MaterialTheme.typography.titleLarge,
             )
+            val format = LocalFormat.current
             val body = if (purge > 0) {
-                val date = java.text.DateFormat
-                    .getDateInstance(java.text.DateFormat.LONG)
-                    .format(java.util.Date(purge * 1000))
-                stringResource(R.string.reactivation_body_dated, date)
+                stringResource(R.string.reactivation_body_dated, format.formatDate(purge))
             } else {
                 stringResource(R.string.reactivation_body)
             }

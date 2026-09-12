@@ -45,6 +45,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.SubscriberSettings as SubscriberSettingsLayout
+import org.mochios.android.api.MochiError
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.android.R as MochiR
@@ -94,6 +95,16 @@ fun ForumSettingsScreen(
     val selectedIndex = tabs.indexOf(selectedTab).coerceAtLeast(0)
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
+    // The moderation tab has its own ViewModel, so its refused saves reach the
+    // screen through here rather than through uiState.error.
+    var moderationError by remember { mutableStateOf<MochiError?>(null) }
+
+    LaunchedEffect(moderationError) {
+        moderationError?.let { error ->
+            snackbarHostState.showSnackbar(error.userMessage())
+            moderationError = null
+        }
+    }
 
     LaunchedEffect(uiState.deleted) {
         if (uiState.deleted) onForumDeleted()
@@ -185,6 +196,7 @@ fun ForumSettingsScreen(
                         SettingsTab.Access -> AccessTab(viewModel)
                         SettingsTab.Moderation -> ModerationTab(
                             onMessage = { messageRes -> viewModel.setActionMessage(messageRes) },
+                            onError = { error -> moderationError = error },
                         )
                         SettingsTab.Ai -> AiTab(viewModel)
                     }

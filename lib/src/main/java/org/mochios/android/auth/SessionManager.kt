@@ -56,11 +56,18 @@ class SessionManager @Inject constructor(
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
         private const val DEFAULT_SERVER_URL = "https://mochi-os.org"
+        private const val KEYSTORE_ALIAS = "mochi.credentials"
     }
 
     data class ThemeAnchors(val hue: Float, val chroma: Float, val hueBg: Float)
 
     private val dataStore = context.dataStore
+
+    // The bearer credentials below are wrapped with an AndroidKeyStore key, so
+    // a copy of this DataStore file is not a usable session. The layout is
+    // unchanged: only the values are wrapped, and a value written before this
+    // existed still reads (see Sealed.open).
+    private val sealed = Sealed(Keystore(KEYSTORE_ALIAS))
 
     val themeAnchors: Flow<ThemeAnchors?> = dataStore.data.map { prefs ->
         val hue = prefs[KEY_THEME_HUE]?.toFloatOrNull() ?: return@map null
@@ -86,7 +93,7 @@ class SessionManager @Inject constructor(
     }
 
     val currentToken: Flow<String?> = dataStore.data.map { prefs ->
-        prefs[KEY_SESSION_COOKIE]
+        prefs[KEY_SESSION_COOKIE]?.let { sealed.open(it) }
     }
 
     /**
@@ -120,7 +127,7 @@ class SessionManager @Inject constructor(
 
     suspend fun saveSession(cookie: String) {
         dataStore.edit { prefs ->
-            prefs[KEY_SESSION_COOKIE] = cookie
+            prefs[KEY_SESSION_COOKIE] = sealed.seal(cookie)
         }
     }
 
@@ -141,7 +148,7 @@ class SessionManager @Inject constructor(
 
     suspend fun getToken(app: String): String? {
         val prefs = dataStore.data.first()
-        return prefs[stringPreferencesKey("$TOKEN_PREFIX$app")]
+        return prefs[stringPreferencesKey("$TOKEN_PREFIX$app")]?.let { sealed.open(it) }
     }
 
     fun getTokenBlocking(app: String): String? {
@@ -163,7 +170,7 @@ class SessionManager @Inject constructor(
 
     suspend fun saveToken(app: String, jwt: String) {
         dataStore.edit { prefs ->
-            prefs[stringPreferencesKey("$TOKEN_PREFIX$app")] = jwt
+            prefs[stringPreferencesKey("$TOKEN_PREFIX$app")] = sealed.seal(jwt)
             val names = prefs[KEY_TOKEN_NAMES]?.toMutableSet() ?: mutableSetOf()
             names.add(app)
             prefs[KEY_TOKEN_NAMES] = names
@@ -182,27 +189,11 @@ class SessionManager @Inject constructor(
         // remove only the account this app was bound to.
         if (identity != null) MochiAccount.remove(context, identity)
     }
-
-    suspend fun adoptSharedSessionIfMissing(): MochiAccount.Snapshot? {
-        val prefs = dataStore.data.first()
-        if (prefs[KEY_SESSION_COOKIE] != null) return null
-        val boundServer = prefs[KEY_BOUND_SERVER]
-        val candidate = if (boundServer != null) {
-            MochiAccount.byServer(context, boundServer)
-        } else {
-            MochiAccount.first(context)
-        } ?: return null
-        setServerUrl(candidate.server)
-        saveSession(candidate.session)
-        setBoundAccount(candidate.identity, candidate.server)
-        return candidate
-    }
-
     /** Records an outstanding sign-in ceremony. The nonce is written in the same edit
      *  as the verifier, so a return can never see one without the other. */
     suspend fun saveOAuthVerifier(verifier: String, nonce: String? = null) {
         dataStore.edit { prefs ->
-            prefs[KEY_OAUTH_VERIFIER] = verifier
+            prefs[KEY_OAUTH_VERIFIER] = sealed.seal(verifier)
             if (nonce != null) prefs[KEY_OAUTH_NONCE] = nonce else prefs.remove(KEY_OAUTH_NONCE)
         }
     }
@@ -225,7 +216,7 @@ class SessionManager @Inject constructor(
 
     suspend fun consumeOAuthVerifier(): String? {
         val prefs = dataStore.data.first()
-        val verifier = prefs[KEY_OAUTH_VERIFIER]
+        val verifier = prefs[KEY_OAUTH_VERIFIER]?.let { sealed.open(it) }
         if (verifier != null) {
             // The nonce goes with it: it authenticates the return for THIS
             // ceremony, and one left behind would be checked against the next.
@@ -261,7 +252,7 @@ class SessionManager @Inject constructor(
 
     suspend fun saveOAuthLinkVerifier(verifier: String, nonce: String? = null) {
         dataStore.edit { prefs ->
-            prefs[KEY_OAUTH_LINK_VERIFIER] = verifier
+            prefs[KEY_OAUTH_LINK_VERIFIER] = sealed.seal(verifier)
             if (nonce != null) prefs[KEY_OAUTH_LINK_NONCE] = nonce else prefs.remove(KEY_OAUTH_LINK_NONCE)
         }
     }
@@ -276,7 +267,7 @@ class SessionManager @Inject constructor(
 
     suspend fun consumeOAuthLinkVerifier(): String? {
         val prefs = dataStore.data.first()
-        val verifier = prefs[KEY_OAUTH_LINK_VERIFIER]
+        val verifier = prefs[KEY_OAUTH_LINK_VERIFIER]?.let { sealed.open(it) }
         if (verifier != null) {
             dataStore.edit { p ->
                 p.remove(KEY_OAUTH_LINK_VERIFIER)
@@ -304,6 +295,17 @@ class SessionManager @Inject constructor(
         }
     }
 
+    /**
+     * The identity this device is signed in as, or null when unbound. Blocking
+     * for the framework-instantiated callers (broadcast receivers) that have no
+     * coroutine to read the flow from.
+     */
+    fun getBoundIdentityBlocking(): String? {
+        return runBlocking {
+            dataStore.data.first()[KEY_BOUND_IDENTITY]
+        }
+    }
+
     fun getServerUrlBlocking(): String {
         return runBlocking {
             dataStore.data.first()[KEY_SERVER_URL] ?: DEFAULT_SERVER_URL
@@ -312,7 +314,7 @@ class SessionManager @Inject constructor(
 
     private fun getSessionCookieBlocking(): String? {
         return runBlocking {
-            dataStore.data.first()[KEY_SESSION_COOKIE]
+            dataStore.data.first()[KEY_SESSION_COOKIE]?.let { sealed.open(it) }
         }
     }
 

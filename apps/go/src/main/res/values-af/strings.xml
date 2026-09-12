@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Spel verwyder</string>
     <string name="go_new_game_add_friends">Voeg vriende by</string>
     <string name="go_new_game_board_size_label">Bordgrootte</string>
-    <string name="go_new_game_cancel">Kanselleer</string>
     <string name="go_new_game_friend_label">Teenstander</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Bedank spel?</string>
     <string name="go_sidebar_completed">Voltooi</string>
     <string name="go_sidebar_new_game">Nuwe spel</string>
-    <string name="go_status_active">Aktief</string>
     <string name="go_status_draw">Gelykop</string>
     <string name="go_status_draw_text">Gelykop</string>
     <string name="go_status_game_over">Spel verby</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Nog geen aktiewe speletjies nie.</string>
-    <string name="go_empty_completed">Nog geen voltooide speletjies nie.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Nuwe Go-speletjie</string>
     <string name="go_new_game_no_friends">Jy moet ’n vriend byvoeg voordat jy ’n speletjie kan begin.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Punte by Wit se telling gevoeg om te vergoed dat Swart eerste speel</string>
-    <string name="go_new_game_create_error">Kon nie speletjie begin nie</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go-bord</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go-bord, jou beurt om \'n swart steen te plaas</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go-bord, jou beurt om \'n wit steen te plaas</string>
+    <string name="go_status_scoring">Tel — stem saam oor die telling of speel voort</string>
+    <string name="go_score_proposed">Voorgestelde telling: swart %1$s, wit %2$s</string>
+    <string name="go_score_opponent_accepted">Jou teenstander aanvaar hierdie telling: swart %1$s, wit %2$s</string>
+    <string name="go_score_waiting">Telling aanvaar — wag vir %1$s</string>
+    <string name="go_score_accept">Aanvaar telling</string>
+    <string name="go_score_resume">Hervat spel</string>
+    <string name="go_error_score_resume_failed">Kon nie spel hervat nie</string>
+    <string name="go_error_score_accept_failed">Kon nie telling aanvaar nie</string>
 </resources>

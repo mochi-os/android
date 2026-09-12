@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">நண்பர்கள் சேர்</string>
     <string name="chess_new_start_button">கேமை தொடங்கு</string>
     <string name="chess_new_creating">உருவாக்குகிறது…</string>
-    <string name="chess_new_failed">ஆட்டத்தை உருவாக்க முடியவில்லை</string>
     <string name="chess_chat_title">அரட்டை</string>
     <string name="chess_open_chat">அரட்டை பேனலைத் திறக்கவும்</string>
     <string name="chess_open_actions">விளையாட்டு செயல்களைத் திறக்கவும்</string>

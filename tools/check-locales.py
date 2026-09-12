@@ -60,6 +60,15 @@ def load_keys(directory: Path) -> set[str]:
     return set(KEY_RE.findall(read_catalogues(directory)))
 
 
+# A source string marked translatable="false" is deliberately English-only
+# (a brand, a protocol token), so no catalogue owes it a translation.
+UNTRANSLATABLE_RE = re.compile(r'<(?:string|plurals) name="([^"]+)"[^>]*translatable="false"')
+
+
+def untranslatable(directory: Path) -> set[str]:
+    return set(UNTRANSLATABLE_RE.findall(read_catalogues(directory)))
+
+
 # Region-qualified locales whose nearest localised catalogue is a script one
 # rather than a bare language one: there is no values-zh, so values-zh-rHK falls
 # through to values-b+zh+Hant. Cantonese is excluded on purpose - yue matches by
@@ -271,6 +280,7 @@ def check_module(module_dir: Path) -> list[tuple[str, set[str]]]:
     if not source:
         raise SystemExit(f"{module_dir}: no readable values/strings.xml - "
                          "a wrong path here would otherwise report ok")
+    source -= untranslatable(res / "values")
     present = {d.name for d in res.iterdir() if d.is_dir() and d.name.startswith("values")}
     problems = []
     for vd in sorted(res.iterdir()):

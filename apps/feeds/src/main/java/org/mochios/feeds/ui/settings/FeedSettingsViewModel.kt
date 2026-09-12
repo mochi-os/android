@@ -56,11 +56,7 @@ class FeedSettingsViewModel @Inject constructor(
     private val _feedName = MutableStateFlow("")
     val feedName: StateFlow<String> = _feedName.asStateFlow()
 
-    private val _rssToken = MutableStateFlow<String?>(null)
-    val rssToken: StateFlow<String?> = _rssToken.asStateFlow()
 
-    private val _rssMode = MutableStateFlow("posts")
-    val rssMode: StateFlow<String> = _rssMode.asStateFlow()
 
     // Sources tab
     private val _sources = MutableStateFlow<List<Source>>(emptyList())
@@ -216,22 +212,7 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun setRssMode(mode: String) {
-        _rssMode.value = mode
-        _rssToken.value = null
-    }
 
-    fun generateRssToken() {
-        viewModelScope.launch {
-            try {
-                val token = repository.getRssToken(feedId, _rssMode.value)
-                val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
-                _rssToken.value = "$serverUrl/feeds/$feedId/-/rss?token=$token"
-            } catch (e: Exception) {
-                _error.value = e.toMochiError()
-            }
-        }
-    }
 
     // --- Banner ---
 

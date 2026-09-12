@@ -34,7 +34,6 @@
     <string name="go_game_deleted">ක්‍රීඩාව මකන ලදී</string>
     <string name="go_new_game_add_friends">මිතුරන් එක් කරන්න</string>
     <string name="go_new_game_board_size_label">පුවරු ප්‍රමාණය</string>
-    <string name="go_new_game_cancel">අවලංගු කරන්න</string>
     <string name="go_new_game_friend_label">ප්‍රතිවාදී</string>
     <string name="go_new_game_komi_field_label">කෝමි</string>
     <string name="go_new_game_komi_label">කෝමි</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">ක්‍රීඩාවෙන් ඉල්ලා අස්වන්නද?</string>
     <string name="go_sidebar_completed">සම්පූර්ණයි</string>
     <string name="go_sidebar_new_game">නව ක්‍රීඩාවක්</string>
-    <string name="go_status_active">සක්‍රීය</string>
     <string name="go_status_draw">සමතය</string>
     <string name="go_status_draw_text">සමතය</string>
     <string name="go_status_game_over">ක්‍රීඩාව අවසන්</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">තවම ක්‍රියාකාරී ක්‍රීඩා නොමැත.</string>
-    <string name="go_empty_completed">තවම අවසන් වූ ක්‍රීඩා නොමැත.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">නව Go ක්‍රීඩාව</string>
     <string name="go_new_game_no_friends">ක්‍රීඩාවක් ආරම්භ කිරීමට පෙර ඔබට මිතුරෙකු එක් කළ යුතුය.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">කළු පළමුව යාම වන්දි කිරීමට සුදුගේ ලකුණුවලට එකතු කරන ලකුණු</string>
-    <string name="go_new_game_create_error">ක්‍රීඩාව ආරම්භ කිරීමට අසමත් විය</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go පුවරුව</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d ගෝ පුවරුව, කළු ගලක් තැබීමට ඔබේ වාරයයි</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d ගෝ පුවරුව, සුදු ගලක් තැබීමට ඔබේ වාරයයි</string>
+    <string name="go_status_scoring">ගණන් කිරීම — ලකුණු ගැන එකඟ වන්න හෝ දිගටම ක්‍රීඩා කරන්න</string>
+    <string name="go_score_proposed">යෝජිත ලකුණු: කළු %1$s, සුදු %2$s</string>
+    <string name="go_score_opponent_accepted">ඔබේ ප්‍රතිවාදියා මෙම ලකුණු පිළිගනී: කළු %1$s, සුදු %2$s</string>
+    <string name="go_score_waiting">ලකුණු පිළිගැනිණි — %1$s සඳහා බලා සිටිමින්</string>
+    <string name="go_score_accept">ලකුණු පිළිගන්න</string>
+    <string name="go_score_resume">ක්‍රීඩාව නැවත ආරම්භ කරන්න</string>
+    <string name="go_error_score_resume_failed">ක්‍රීඩාව නැවත ආරම්භ කිරීමට අසමත් විය</string>
+    <string name="go_error_score_accept_failed">ලකුණු පිළිගැනීමට අසමත් විය</string>
 </resources>

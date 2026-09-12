@@ -16,7 +16,13 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         // chesslib (com.github.bhlangonijr:chesslib) is published via JitPack.
-        maven { url = uri("https://jitpack.io") }
+        // Filtered to that one group: unfiltered, JitPack is consulted for
+        // every coordinate Maven Central misses, and it builds whatever a
+        // matching GitHub repository contains.
+        maven {
+            url = uri("https://jitpack.io")
+            content { includeGroup("com.github.bhlangonijr") }
+        }
     }
 }
 rootProject.name = "Mochi"

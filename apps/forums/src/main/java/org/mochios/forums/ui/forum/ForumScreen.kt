@@ -9,6 +9,8 @@ import android.content.ClipData
 import android.content.Intent
 import android.content.Context
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -49,6 +51,7 @@ import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
@@ -56,6 +59,7 @@ import androidx.compose.material.icons.outlined.Whatshot
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -144,6 +148,10 @@ private val SORT_OPTIONS = listOf(
     SortOption("hot", R.string.forums_sort_hot, Icons.Outlined.Whatshot),
     SortOption("top", R.string.forums_sort_top, Icons.Outlined.EmojiEvents),
 )
+
+/** The AI sort, offered only where the server has an AI account to run it. */
+private val AI_SORT =
+    SortOption("ai", R.string.forums_sort_ai, Icons.Outlined.AutoAwesome)
 
 /**
  * Forum detail screen inside a [MochiListDrawer]; an empty [forumId] opens
@@ -336,6 +344,8 @@ private fun ForumContent(
                 is ForumEvent.Unsubscribed -> onUnsubscribed()
                 is ForumEvent.RssRevoked -> snackbar.showSnackbar(rssRevokedMessage)
                 is ForumEvent.ShowError -> snackbar.showSnackbar(event.error.userMessage())
+                is ForumEvent.ShowMessage ->
+                    snackbar.showSnackbar(context.getString(event.message))
             }
         }
     }
@@ -403,7 +413,9 @@ private fun ForumContent(
                                     start = 16.dp, top = 8.dp, bottom = 4.dp
                                 ),
                             )
-                            SORT_OPTIONS.forEach { option ->
+                            val sorts =
+                                if (uiState.hasAi) listOf(AI_SORT) + SORT_OPTIONS else SORT_OPTIONS
+                            sorts.forEach { option ->
                                 MochiDropdownMenuItem(
                                     text = { Text(stringResource(option.labelRes)) },
                                     onClick = {
@@ -523,8 +535,28 @@ private fun ForumContent(
                 if (uiState.forum.banner.isNotBlank()) {
                     ForumBanner(
                         banner = uiState.forum.banner,
+                        bannerHtml = uiState.forum.bannerHtml,
                         forumId = uiState.forum.id,
                     )
+                }
+                // The forum's own tags, which the load already fetches. Tapping
+                // one narrows the list; tapping it again clears the filter.
+                if (!isAll && uiState.tags.isNotEmpty()) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState())
+                            .padding(horizontal = 16.dp, vertical = 4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        uiState.tags.forEach { tag ->
+                            FilterChip(
+                                selected = uiState.currentTag == tag.label,
+                                onClick = { viewModel.setTagFilter(tag.label) },
+                                label = { Text(tag.label) },
+                            )
+                        }
+                    }
                 }
                 when {
                     uiState.isLoading && uiState.posts.isEmpty() -> {
@@ -545,6 +577,21 @@ private fun ForumContent(
                             error = uiState.error!!,
                             onRetry = viewModel::load,
                         )
+                    }
+
+                    // A freshly subscribed forum has nothing yet because the
+                    // owner is still pushing its initial sync, not because it
+                    // is empty; `populated` is the server's own flag for that.
+                    uiState.posts.isEmpty() && uiState.forum.populated == 0 && !isAll -> {
+                        Box(
+                            Modifier.fillMaxSize().padding(top = 64.dp),
+                            contentAlignment = Alignment.TopCenter,
+                        ) {
+                            Text(
+                                stringResource(R.string.forums_loading),
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
                     }
 
                     uiState.posts.isEmpty() -> {
@@ -886,7 +933,7 @@ private fun bannerContentHash(content: String): String {
 }
 
 @Composable
-private fun ForumBanner(banner: String, forumId: String) {
+private fun ForumBanner(banner: String, bannerHtml: String, forumId: String) {
     val context = LocalContext.current
     val prefs = remember(context) {
         context.getSharedPreferences("forums_banner_dismissed", Context.MODE_PRIVATE)
@@ -909,7 +956,10 @@ private fun ForumBanner(banner: String, forumId: String) {
                 .padding(start = 12.dp, top = 8.dp, bottom = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            HtmlContent(html = banner, modifier = Modifier.weight(1f))
+            HtmlContent(
+                html = bannerHtml.ifBlank { banner },
+                modifier = Modifier.weight(1f),
+            )
             MochiIconButton(
                 onClick = {
                     prefs.edit { putString(prefKey, contentHash) }

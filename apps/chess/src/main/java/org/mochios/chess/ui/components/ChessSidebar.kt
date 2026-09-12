@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.chess.R
+import org.mochios.chess.model.opponentAvatarUrl
 
 /**
  * Drawer for the chess app: active and completed games (newest `updated`
@@ -32,15 +33,12 @@ private fun ChessSidebarGame.toDrawerItem(section: String) = DrawerItem(
     title = opponentName,
     // Blank opponent id means no avatar asset path; the row still gets a
     // seeded initials circle from the drawer's seed-without-icon branch.
-    avatarUrl = if (opponentId.isNotBlank()) "/people/$opponentId/-/avatar" else null,
+    avatarUrl = if (opponentId.isNotBlank()) opponentAvatarUrl(id, opponentId) else null,
     seed = opponentId,
     section = section,
 )
 
-/**
- * Flat sidebar row; [id] is the fingerprint when present, else the row id, and
- * is the route segment.
- */
+/** Flat sidebar row; [id] is the game's row id, and is the route segment. */
 data class ChessSidebarGame(
     val id: String,
     val opponentId: String,

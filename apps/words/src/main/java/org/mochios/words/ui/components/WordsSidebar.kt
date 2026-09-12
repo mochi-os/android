@@ -24,13 +24,30 @@ fun wordsDrawerItems(
     val active = games.filter { it.status == "active" }
     val completed = games.filter { it.status == "finished" || it.status == "resigned" }
     return buildList {
-        for (game in active) add(game.toDrawerItem(myIdentity, activeLabel))
-        for (game in completed) add(game.toDrawerItem(myIdentity, completedLabel))
+        for (game in active) {
+            add(game.toDrawerItem(myIdentity, activeLabel, game.playersLabel()))
+        }
+        for (game in completed) {
+            add(game.toDrawerItem(myIdentity, completedLabel, game.playersLabel()))
+        }
     }
 }
 
-private fun GameListItem.toDrawerItem(myIdentity: String, section: String): DrawerItem {
-    val names = getPlayerNames(this, myIdentity).ifBlank { "$player_count players" }
+/**
+ * "N players", for a game whose seats have no names yet. A game always seats
+ * two to four, so the singular form never arises and the plain string - which
+ * every catalogue already carries - is enough.
+ */
+@Composable
+private fun GameListItem.playersLabel(): String =
+    stringResource(R.string.words_detail_player_count, player_count)
+
+private fun GameListItem.toDrawerItem(
+    myIdentity: String,
+    section: String,
+    playersLabel: String,
+): DrawerItem {
+    val names = getPlayerNames(this, myIdentity).ifBlank { playersLabel }
     val scores = buildString {
         for (i in 1..player_count) {
             if (i > 1) append(" · ")
@@ -39,9 +56,15 @@ private fun GameListItem.toDrawerItem(myIdentity: String, section: String): Draw
     }
     val opponentId = getOpponentId(this, myIdentity)
     return DrawerItem(
-        id = fingerprint?.ifBlank { null } ?: id,
+        id = id,
         title = "$names ($scores)",
-        avatarUrl = if (opponentId.isNotEmpty()) "/people/$opponentId/-/avatar" else null,
+        // The game-bound proxy, as web uses: a cross-app request to the people
+        // app carries this app's token and is refused.
+        avatarUrl = if (opponentId.isNotEmpty()) {
+            "/words/$id/-/user/$opponentId/asset/avatar"
+        } else {
+            null
+        },
         seed = opponentId,
         section = section,
     )

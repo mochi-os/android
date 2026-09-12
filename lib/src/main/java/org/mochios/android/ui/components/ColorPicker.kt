@@ -90,7 +90,7 @@ fun ColorPicker(
 ) {
     // Seed HSV from the incoming hex, defaulting to a mid violet.
     val initial = remember {
-        parseHexColor(hex)?.let { colour -> rgbToHsv(colour) } ?: Triple(270f, 0.5f, 0.5f)
+        parseHexColour(hex)?.let { colour -> rgbToHsv(colour) } ?: Triple(270f, 0.5f, 0.5f)
     }
     var hue by remember { mutableFloatStateOf(initial.first) }
     var sat by remember { mutableFloatStateOf(initial.second) }
@@ -120,7 +120,7 @@ fun ColorPicker(
     LaunchedEffect(hex) {
         if (!hex.equals(hexText.trim(), ignoreCase = true)) {
             hexText = hex
-            parseHexColor(hex)?.let { colour ->
+            parseHexColour(hex)?.let { colour ->
                 val (h, s, v) = rgbToHsv(colour)
                 hue = h
                 sat = s
@@ -149,7 +149,7 @@ fun ColorPicker(
                         .size(PRESET_SIZE)
                         .clip(CircleShape)
                         .clickable {
-                            val colour = parseHexColor(preset) ?: return@clickable
+                            val colour = parseHexColour(preset) ?: return@clickable
                             val (h, s, v) = rgbToHsv(colour)
                             hue = h
                             sat = s
@@ -165,7 +165,7 @@ fun ColorPicker(
                         )
                         .padding(PRESET_RING_GAP)
                         .clip(CircleShape)
-                        .background(parseHexColor(preset) ?: Color.Gray),
+                        .background(parseHexColour(preset) ?: Color.Gray),
                 )
             }
         }
@@ -279,7 +279,7 @@ fun ColorPicker(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            val previewColour = parseHexColor(hexText.trim())
+            val previewColour = parseHexColour(hexText.trim())
             Box(
                 modifier = Modifier
                     .size(32.dp)
@@ -291,7 +291,7 @@ fun ColorPicker(
                 value = hexText,
                 onValueChange = { input ->
                     hexText = input
-                    val colour = parseHexColor(input.trim())
+                    val colour = parseHexColour(input.trim())
                     if (colour != null) {
                         val (h, s, v) = rgbToHsv(colour)
                         hue = h
@@ -306,31 +306,6 @@ fun ColorPicker(
             )
             trailing()
         }
-    }
-}
-
-/**
- * Parses a `#rgb` or `#rrggbb` colour, with or without the leading `#`; null
- * when the text is not a hex colour.
- */
-fun parseHexColor(hex: String): Color? {
-    val value = hex.trim().removePrefix("#")
-    return try {
-        when (value.length) {
-            6 -> Color(
-                red = value.substring(0, 2).toInt(16) / 255f,
-                green = value.substring(2, 4).toInt(16) / 255f,
-                blue = value.substring(4, 6).toInt(16) / 255f,
-            )
-            3 -> Color(
-                red = (value[0].digitToInt(16) * 17) / 255f,
-                green = (value[1].digitToInt(16) * 17) / 255f,
-                blue = (value[2].digitToInt(16) * 17) / 255f,
-            )
-            else -> null
-        }
-    } catch (_: Exception) {
-        null
     }
 }
 

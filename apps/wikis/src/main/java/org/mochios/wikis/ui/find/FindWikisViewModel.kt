@@ -22,6 +22,7 @@ import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
 import org.mochios.wikis.repository.WikisRepository
+import org.mochios.wikis.ui.list.isShareLink
 import javax.inject.Inject
 
 data class FindWikisUiState(
@@ -125,9 +126,16 @@ class FindWikisViewModel @Inject constructor(
         if (query.isBlank()) return
         _uiState.value = _uiState.value.copy(isSearching = true, error = null)
         try {
-            val r = repository.directorySearch(query)
+            // A pasted share link names a wiki on a server this instance may
+            // never have heard of, so the directory cannot answer it. Probe
+            // the peer the link names instead, as web's find page does.
+            val results = if (isShareLink(query)) {
+                listOf(repository.probeUrl(query))
+            } else {
+                repository.directorySearch(query).results
+            }
             _uiState.value = _uiState.value.copy(
-                results = r.results,
+                results = results,
                 isSearching = false,
             )
         } catch (e: Exception) {
@@ -142,6 +150,9 @@ class FindWikisViewModel @Inject constructor(
         subscribe(
             target = entry.id.ifEmpty { entry.fingerprint },
             server = entry.location.takeUnless { location -> location.isNullOrBlank() },
+            // A probed share link resolves to a peer the directory does not
+            // list; without it the join has no route to the wiki's server.
+            peer = entry.peer,
         )
     }
 
@@ -156,11 +167,11 @@ class FindWikisViewModel @Inject constructor(
         )
     }
 
-    private fun subscribe(target: String, server: String?) {
+    private fun subscribe(target: String, server: String?, peer: String? = null) {
         if (target.isBlank()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(pendingId = target)
-            val first = runCatching { repository.joinWiki(target, server) }
+            val first = runCatching { repository.joinWiki(target, server, peer) }
             val result = first.fold(
                 onSuccess = { it },
                 onFailure = { err ->
@@ -168,7 +179,7 @@ class FindWikisViewModel @Inject constructor(
                     // Retry without server hint on 502 (matches web).
                     if (server != null && mochiError is MochiError.ServerError && mochiError.code == 502) {
                         _events.send(FindEvent.SubscribeRetried(target))
-                        runCatching { repository.joinWiki(target, null) }.getOrElse { retryErr ->
+                        runCatching { repository.joinWiki(target, null, peer) }.getOrElse { retryErr ->
                             // The event carries the message; keeping it in the
                             // state too would snackbar it twice.
                             _uiState.value = _uiState.value.copy(pendingId = null)

@@ -5,10 +5,7 @@
     <string name="auth_email">Email</string>
     <string name="auth_continue">Tiếp tục</string>
     <string name="auth_verification_code">Mã xác minh</string>
-    <string name="auth_verify">Xác minh</string>
-    <string name="auth_authenticator_app">Ứng dụng xác thực</string>
     <string name="auth_email_code">Mã email</string>
-    <string name="auth_authenticator_code">Mã xác thực</string>
     <string name="auth_recovery_code">Mã khôi phục</string>
     <string name="auth_name">Tên</string>
     <string name="auth_create">Tạo</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Sao chép</string>
     <string name="common_copied">Đã sao chép vào bộ nhớ tạm</string>
     <string name="comment_edited">(đã chỉnh sửa)</string>
-    <string name="comment_edit_placeholder">Sửa bình luận</string>
     <string name="comment_reply">Trả lời</string>
-    <string name="comment_reply_placeholder">Trả lời</string>
-    <string name="comment_send_reply">Gửi trả lời</string>
     <string name="person_picker_search">Tìm kiếm người dùng</string>
     <string name="place_picker_no_results">Không tìm thấy địa điểm nào</string>
-    <string name="discovery_results">Kết quả</string>
     <string name="discovery_recommended">Được đề xuất</string>
-    <string name="discovery_subscribed">Đã đăng ký</string>
     <string name="access_add_rule">Thêm quy tắc</string>
     <string name="access_owner">Chủ sở hữu</string>
     <string name="access_revoke">Thu hồi</string>
-    <string name="access_level">Cấp độ truy cập</string>
     <string name="access_level_comment">Bình luận</string>
     <string name="access_level_view">Xem</string>
     <string name="access_level_none">Không có</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">Thích</string>
     <string name="reaction_dislike">Không thích</string>
     <string name="reaction_laugh">Cười</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Tất cả</string>
     <string name="notifications_mark_all_read">Đánh dấu tất cả đã đọc</string>
     <string name="notifications_clear_all">Xóa tất cả</string>
-    <string name="notifications_loading">Đang tải…</string>
     <string name="settings_title">Cài đặt</string>
-    <string name="settings_open">Cài đặt</string>
     <string name="settings_appearance">Giao diện</string>
     <string name="settings_appearance_light">Sáng</string>
     <string name="settings_appearance_dark">Tối</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Nền</string>
     <string name="settings_background_theme">Từ giao diện</string>
     <string name="settings_background_off">Không có</string>
-    <string name="profile_title">Hồ sơ</string>
-    <string name="profile_open">Hồ sơ</string>
-    <string name="profile_display_name">Tên hiển thị</string>
-    <string name="profile_save_name">Lưu tên</string>
-    <string name="profile_privacy">Quyền riêng tư</string>
-    <string name="profile_privacy_public">Công khai</string>
-    <string name="profile_privacy_private">Riêng tư</string>
-    <string name="profile_fingerprint">Dấu vân tay</string>
     <string name="game_chat_empty">Chưa có tin nhắn</string>
     <string name="game_chat_input_placeholder">Nhập tin nhắn…</string>
     <string name="game_chat_send">Gửi tin nhắn</string>
     <string name="game_chat_subject_you">Bạn</string>
 
     <string name="common_not_saved">Chưa lưu</string>
-    <string name="common_save_failed">Không thể lưu các thay đổi của bạn.</string>
     <string name="auth_server_url">URL máy chủ</string>
     <string name="auth_link_rules">Quy tắc</string>
     <string name="game_chat_move_played">%1$s đã đi %2$s</string>
@@ -148,20 +127,13 @@
     <string name="error_not_found">Không tìm thấy</string>
     <string name="error_server">Lỗi máy chủ (%1$d). Vui lòng thử lại sau.</string>
     <string name="error_unexpected">Đã xảy ra lỗi không mong muốn</string>
-    <string name="error_request_failed">Yêu cầu không thành công</string>
     <string name="error_enter_server_url">Vui lòng nhập URL máy chủ</string>
     <string name="error_enter_email">Vui lòng nhập email của bạn</string>
     <string name="error_enter_name">Vui lòng nhập tên</string>
     <string name="auth_connect_to_server">Kết nối với máy chủ của bạn</string>
     <string name="auth_connect">Kết nối</string>
     <string name="auth_sign_in">Đăng nhập</string>
-    <string name="auth_sign_in_with_passkey">Đăng nhập bằng passkey</string>
-    <string name="auth_sign_in_with_email_code">Đăng nhập bằng mã email</string>
-    <string name="auth_use_recovery_code">Dùng mã khôi phục</string>
-    <string name="auth_back_to_sign_in">Quay lại đăng nhập</string>
-    <string name="auth_send_code">Gửi mã</string>
     <string name="auth_check_email">Vui lòng kiểm tra email để lấy mã xác minh</string>
-    <string name="auth_six_digit_code">Mã 6 chữ số</string>
     <string name="auth_mfa_title">Xác thực đa yếu tố</string>
     <string name="auth_mfa_subtitle">Hoàn tất các bước xác minh còn lại</string>
     <string name="auth_recover_account">Khôi phục tài khoản</string>
@@ -188,8 +160,6 @@
     <string name="bootstrap_sign_in_differently">Đăng nhập theo cách khác</string>
     <string name="bootstrap_choose_account">Chọn một tài khoản</string>
     <string name="bootstrap_sign_in_different_server">Đăng nhập vào máy chủ khác</string>
-    <string name="common_or">hoặc</string>
-    <string name="common_change">Thay đổi</string>
     <string name="common_retry">Thử lại</string>
     <string name="common_more_options">Tùy chọn khác</string>
     <string name="common_collapse">Thu gọn</string>
@@ -198,21 +168,12 @@
     <string name="place_picker_name">Tên địa điểm</string>
     <string name="place_origin">Điểm xuất phát</string>
     <string name="place_destination">Điểm đến</string>
-    <string name="discovery_search_placeholder">Tìm kiếm %1$s</string>
-    <string name="discovery_no_results">Không tìm thấy %1$s nào</string>
     <string name="discovery_no_results_hint">Hãy thử điều chỉnh tìm kiếm</string>
-    <string name="discovery_no_recommendations">Không có đề xuất</string>
-    <string name="discovery_search_hint">Hãy thử tìm kiếm một %1$s để đăng ký</string>
     <string name="access_no_rules">Không có quy tắc truy cập</string>
-    <string name="access_no_rules_subtitle">Thêm quy tắc để kiểm soát ai có thể truy cập tài nguyên này</string>
     <string name="access_add_rule_title">Thêm quy tắc truy cập</string>
     <string name="access_level_manage">Quản lý</string>
     <string name="access_level_react">Phản ứng</string>
     <string name="notifications_clear">Xóa thông báo</string>
-    <string name="banner_description">Markdown hiển thị ở đầu chế độ xem này.</string>
-    <string name="banner_placeholder">Chào mừng…</string>
-    <string name="banner_save">Lưu biểu ngữ</string>
-    <string name="banner_clear">Xóa biểu ngữ</string>
     <string name="entity_avatar_alt">Ảnh đại diện của %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -228,7 +189,6 @@
     <string name="format_time_days_short">%1$d ngày</string>
     <string name="format_time_weeks_short">%1$d tuần</string>
     <string name="format_time_months_short">%1$d tháng</string>
-    <string name="format_time_years_short">%1$d năm</string>
     <string name="reaction_add">Thêm phản ứng</string>
     <string name="push_service_channel">Thông báo Mochi</string>
     <string name="push_service_channel_description">Giữ kết nối Mochi để nhận thông báo</string>
@@ -253,7 +213,6 @@
     <string name="about_check_download_failed">Tải xuống thất bại</string>
     <string name="notifications_clear_all_title">Xóa tất cả thông báo?</string>
     <string name="notifications_clear_all_message">Thao tác này sẽ xóa toàn bộ thông báo. Không thể khôi phục lại.</string>
-    <string name="notifications_count_n">%1$d mới</string>
     <string name="settings_value_auto">Tự động</string>
     <string name="settings_value_theme">Mặc định của giao diện</string>
     <string name="settings_radius">Bo góc</string>
@@ -261,7 +220,6 @@
     <string name="settings_timestamp_relative">Tương đối</string>
     <string name="settings_timestamp_absolute">Tuyệt đối</string>
     <string name="settings_units_usa">Mỹ</string>
-    <string name="profile_privacy_description">Liệu người khác có thể tìm thấy bạn trong danh bạ hay không.</string>
     <string name="game_chat_load_more">Tải tin nhắn cũ hơn</string>
     <string name="stepup_title">Xác nhận đó là bạn</string>
     <string name="stepup_description">Đây là một thay đổi bảo mật đối với tài khoản của bạn. Hãy xác minh đó là bạn để tiếp tục.</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">Nhập mã từ email của bạn</string>
     <string name="stepup_totp_label">Mã xác thực</string>
     <string name="stepup_totp_placeholder">Nhập mã từ ứng dụng xác thực của bạn</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">Dùng mã khóa của bạn</string>
     <string name="stepup_send_email">Gửi email</string>
     <string name="stepup_resend_email">Gửi lại email</string>
@@ -299,7 +256,6 @@
     <string name="comment_anonymous">Ẩn danh</string>
     <string name="tags_label">Các thẻ</string>
     <string name="tags_add">Thêm thẻ</string>
-    <string name="tags_label_field">Nhãn thẻ</string>
     <string name="tags_interest_up">Hiển thị thêm nội dung tương tự</string>
     <string name="tags_interest_down">Hiển thị ít nội dung tương tự</string>
     <string name="tags_interest_clear">Ngừng hiển thị</string>
@@ -311,9 +267,6 @@
     <string name="person_picker_directory">Danh bạ</string>
     <string name="person_picker_no_people">Không có người nào</string>
     <string name="person_picker_project_members">Thành viên dự án</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="other">%1$d người đăng ký</item>
-    </plurals>
     <string name="account_token_label">Phiên Mochi</string>
     <string name="attachment_caption">Chú thích</string>
     <string name="attachment_caption_add">Thêm chú thích</string>
@@ -354,4 +307,8 @@
     <string name="settings_card_theme">Từ giao diện</string>
     <string name="settings_card_flat">Phẳng</string>
     <string name="settings_card_raised">Nổi lên</string>
+    <string name="error_server_https">Địa chỉ máy chủ phải bắt đầu bằng https://</string>
+    <string name="device_name_fallback">Thiết bị di động</string>
+    <string name="account_error_token_type">Loại mã thông báo không được hỗ trợ</string>
+    <string name="account_error_caller">Bên gọi không được phép</string>
 </resources>

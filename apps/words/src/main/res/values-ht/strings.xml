@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Meni</string>
-    <string name="words_list_new">Nouvo jwèt</string>
     <string name="words_list_logout">Dekonekte</string>
-    <string name="words_list_empty_title">Poko gen jwèt</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Konplete</string>
     <string name="words_sidebar_new_game">Nouvo jwèt</string>
     <string name="words_new_game_title">Nouvo jwèt</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Rejwèt</string>
     <string name="words_detail_action_delete">Efase jwèt</string>
     <string name="words_detail_chat_title">Chat</string>
-    <string name="words_detail_invalid_move">Mouvman envalid</string>
     <string name="words_detail_recall">Sonje</string>
     <string name="words_detail_submit">Soumèt</string>
     <string name="words_detail_cancel">Anile</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Chwazi yon lèt</string>
     <string name="words_detail_resign_title">Demisyone jwèt?</string>
     <string name="words_detail_resign_message">Èske ou sèten ou vle bay vag?</string>
-    <string name="words_detail_failed_move">Echwe pou soumèt mouvman</string>
-    <string name="words_detail_failed_pass">Echwe pou pase</string>
-    <string name="words_detail_failed_exchange">Echwe pou echanje</string>
-    <string name="words_detail_failed_resign">Echwe pou demisyone</string>
-    <string name="words_detail_failed_rematch">Echwe pou kreye remach</string>
-    <string name="words_detail_failed_delete">Echwe pou efase jwèt</string>
-    <string name="words_detail_game_deleted">Jwèt efase</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Notifikasyon sou tou Words, echanj ak rezilta jwèt.</string>
-    <string name="words_list_empty_subtitle">Peze bouton + pou kòmanse premye jwèt ou.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Poko gen okenn jwèt.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Ajoute zanmi nan aplikasyon People pou kòmanse jwe.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Detay jwèt la ap vini byento</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

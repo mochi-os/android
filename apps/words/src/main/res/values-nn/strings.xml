@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Meny</string>
-    <string name="words_list_new">Nytt spel</string>
     <string name="words_list_logout">Logg ut</string>
-    <string name="words_list_empty_title">Ingen spel enno</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Fullført</string>
     <string name="words_sidebar_new_game">Nytt spel</string>
     <string name="words_new_game_title">Nytt spel</string>
@@ -30,7 +26,6 @@
     <string name="words_detail_action_rematch">Omkamp</string>
     <string name="words_detail_action_delete">Slett spel</string>
     <string name="words_detail_chat_title">Prat</string>
-    <string name="words_detail_invalid_move">Ugyldig trekk</string>
     <string name="words_detail_recall">Trekk tilbake</string>
     <string name="words_detail_submit">Send inn</string>
     <string name="words_detail_cancel">Avbryt</string>
@@ -38,19 +33,8 @@
     <string name="words_detail_blank_title">Vel ein bokstav</string>
     <string name="words_detail_resign_title">Gje opp spelet?</string>
     <string name="words_detail_resign_message">Er du sikker på at du vil gje opp?</string>
-    <string name="words_detail_failed_move">Klarte ikkje senda inn trekk</string>
-    <string name="words_detail_failed_pass">Klarte ikkje passa</string>
-    <string name="words_detail_failed_exchange">Klarte ikkje byta</string>
-    <string name="words_detail_failed_resign">Klarte ikkje gje opp</string>
-    <string name="words_detail_failed_rematch">Klarte ikkje oppretta omkamp</string>
-    <string name="words_detail_failed_delete">Klarte ikkje sletta spel</string>
-    <string name="words_detail_game_deleted">Spel sletta</string>
     <string name="words_channel_name">Ord-varsel</string>
     <string name="words_channel_description">Varsel om trekk, byter og partiresultat.</string>
-    <string name="words_list_empty_subtitle">Trykk på +-knappen for å starte ditt fyrste parti.</string>
-    <string name="words_list_status_finished">Ferdig</string>
-    <string name="words_list_status_resigned">Gitt opp</string>
-    <string name="words_list_your_turn">Din tur</string>
     <string name="words_sidebar_active">Aktive parti</string>
     <string name="words_sidebar_empty">Ingen parti enno.</string>
     <string name="words_new_game_choose_opponents">Vel motstandarar</string>
@@ -58,7 +42,6 @@
     <string name="words_new_game_player_count">%1$d spelarar</string>
     <string name="words_new_game_no_friends_subtitle">Legg til vener i Personar-appen for å byrje å spele.</string>
     <string name="words_detail_title">Parti</string>
-    <string name="words_detail_coming_soon">Partidetaljar kjem snart</string>
     <string name="words_detail_status_opponent_move">%1$s sin tur</string>
     <string name="words_detail_status_winner_wins">%1$s vinn</string>
     <string name="words_detail_player_fallback">Spelar %1$d</string>

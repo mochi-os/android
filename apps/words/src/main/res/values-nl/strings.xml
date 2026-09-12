@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Woorden</string>
     <string name="words_list_title">Woorden</string>
     <string name="words_list_menu">Menu</string>
-    <string name="words_list_new">Nieuw spel</string>
     <string name="words_list_logout">Uitloggen</string>
-    <string name="words_list_empty_title">Nog geen spellen</string>
-    <string name="words_sidebar_header">Woorden</string>
     <string name="words_sidebar_completed">Voltooid</string>
     <string name="words_sidebar_new_game">Nieuw spel</string>
     <string name="words_new_game_title">Nieuw spel</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Revanche</string>
     <string name="words_detail_action_delete">Game verwijderen</string>
     <string name="words_detail_chat_title">Chat</string>
-    <string name="words_detail_invalid_move">Ongeldige zet</string>
     <string name="words_detail_recall">Terugroepen</string>
     <string name="words_detail_submit">Verzenden</string>
     <string name="words_detail_cancel">Annuleren</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Kies een letter</string>
     <string name="words_detail_resign_title">Spel opgeven?</string>
     <string name="words_detail_resign_message">Weet je zeker dat je wilt opgeven?</string>
-    <string name="words_detail_failed_move">Zet indienen mislukt</string>
-    <string name="words_detail_failed_pass">Passen mislukt</string>
-    <string name="words_detail_failed_exchange">Omruilen mislukt</string>
-    <string name="words_detail_failed_resign">Opgeven mislukt</string>
-    <string name="words_detail_failed_rematch">Revanche aanmaken mislukt</string>
-    <string name="words_detail_failed_delete">Spel verwijderen mislukt</string>
-    <string name="words_detail_game_deleted">Spel verwijderd</string>
 
     <string name="words_channel_name">Woorden-meldingen</string>
     <string name="words_channel_description">Meldingen over beurten, ruilen en partijresultaten.</string>
-    <string name="words_list_empty_subtitle">Tik op de +-knop om je eerste partij te beginnen.</string>
-    <string name="words_list_status_finished">Beëindigd</string>
-    <string name="words_list_status_resigned">Opgegeven</string>
-    <string name="words_list_your_turn">Jouw beurt</string>
     <string name="words_sidebar_active">Actieve partijen</string>
     <string name="words_sidebar_empty">Nog geen partijen.</string>
     <string name="words_new_game_choose_opponents">Tegenstanders kiezen</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d spelers</string>
     <string name="words_new_game_no_friends_subtitle">Voeg vrienden toe in de Personen-app om te beginnen met spelen.</string>
     <string name="words_detail_title">Partij</string>
-    <string name="words_detail_coming_soon">Partijdetails komen binnenkort</string>
     <string name="words_detail_status_opponent_move">Beurt van %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s wint</string>
     <string name="words_detail_player_fallback">Speler %1$d</string>

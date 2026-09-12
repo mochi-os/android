@@ -5,10 +5,7 @@
     <string name="auth_email">بريد إلكتروني</string>
     <string name="auth_continue">متابعة</string>
     <string name="auth_verification_code">رمز التحقق</string>
-    <string name="auth_verify">تحقق</string>
-    <string name="auth_authenticator_app">تطبيق المصادقة</string>
     <string name="auth_email_code">رمز البريد الإلكتروني</string>
-    <string name="auth_authenticator_code">رمز المصادقة</string>
     <string name="auth_recovery_code">رمز الاسترداد</string>
     <string name="auth_name">الاسم</string>
     <string name="auth_create">إنشاء</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">نسخ</string>
     <string name="common_copied">تم النسخ إلى الحافظة</string>
     <string name="comment_edited">(تم التعديل)</string>
-    <string name="comment_edit_placeholder">تعديل التعليق</string>
     <string name="comment_reply">رد</string>
-    <string name="comment_reply_placeholder">رد</string>
-    <string name="comment_send_reply">إرسال رد</string>
     <string name="person_picker_search">البحث عن مستخدمين</string>
     <string name="place_picker_no_results">لم يتم العثور على أماكن</string>
-    <string name="discovery_results">النتائج</string>
     <string name="discovery_recommended">موصى به</string>
-    <string name="discovery_subscribed">مشترك</string>
     <string name="access_add_rule">إضافة قاعدة</string>
     <string name="access_owner">المالك</string>
     <string name="access_revoke">إلغاء</string>
-    <string name="access_level">مستوى الوصول</string>
     <string name="access_level_comment">تعليق</string>
     <string name="access_level_view">عرض</string>
     <string name="access_level_none">لا شيء</string>
-    <string name="banner_label">اللافتة</string>
     <string name="reaction_like">إعجاب</string>
     <string name="reaction_dislike">لا يعجبني</string>
     <string name="reaction_laugh">ضحك</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">الكل</string>
     <string name="notifications_mark_all_read">وضع علامة مقروء على الكل</string>
     <string name="notifications_clear_all">مسح الكل</string>
-    <string name="notifications_loading">جارٍ التحميل…</string>
     <string name="settings_title">الإعدادات</string>
-    <string name="settings_open">الإعدادات</string>
     <string name="settings_appearance">المظهر</string>
     <string name="settings_appearance_light">فاتح</string>
     <string name="settings_appearance_dark">داكن</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">الخلفية</string>
     <string name="settings_background_theme">من السمة</string>
     <string name="settings_background_off">لا شيء</string>
-    <string name="profile_title">الملف الشخصي</string>
-    <string name="profile_open">الملف الشخصي</string>
-    <string name="profile_display_name">الاسم المعروض</string>
-    <string name="profile_save_name">حفظ الاسم</string>
-    <string name="profile_privacy">الخصوصية</string>
-    <string name="profile_privacy_public">عام</string>
-    <string name="profile_privacy_private">خاص</string>
-    <string name="profile_fingerprint">البصمة</string>
     <string name="game_chat_empty">لا توجد رسائل بعد</string>
     <string name="game_chat_input_placeholder">اكتب رسالة…</string>
     <string name="game_chat_send">إرسال رسالة</string>
     <string name="game_chat_subject_you">أنت</string>
 
     <string name="common_not_saved">لم يُحفظ</string>
-    <string name="common_save_failed">تعذّر حفظ تغييراتك.</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">تعذر الاتصال. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">غير موجود</string>
     <string name="error_server">خطأ في الخادم (%1$d). يرجى المحاولة مرة أخرى لاحقًا.</string>
     <string name="error_unexpected">حدث خطأ غير متوقع</string>
-    <string name="error_request_failed">فشل الطلب</string>
     <string name="error_enter_server_url">يرجى إدخال عنوان URL للخادم</string>
     <string name="error_enter_email">يرجى إدخال بريدك الإلكتروني</string>
     <string name="error_enter_name">يرجى إدخال اسم</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">عنوان URL للخادم</string>
     <string name="auth_connect">اتصال</string>
     <string name="auth_sign_in">تسجيل الدخول</string>
-    <string name="auth_sign_in_with_passkey">تسجيل الدخول بمفتاح المرور</string>
-    <string name="auth_sign_in_with_email_code">تسجيل الدخول برمز البريد الإلكتروني</string>
-    <string name="auth_use_recovery_code">استخدام رمز الاسترداد</string>
-    <string name="auth_back_to_sign_in">العودة إلى تسجيل الدخول</string>
-    <string name="auth_send_code">إرسال الرمز</string>
     <string name="auth_check_email">تحقق من بريدك الإلكتروني للحصول على رمز التحقق</string>
-    <string name="auth_six_digit_code">رمز مكون من 6 أرقام</string>
     <string name="auth_mfa_title">المصادقة متعددة العوامل</string>
     <string name="auth_mfa_subtitle">أكمل خطوات التحقق المتبقية</string>
     <string name="auth_recover_account">استرداد الحساب</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">تسجيل الدخول بطريقة مختلفة</string>
     <string name="bootstrap_choose_account">اختر حسابًا</string>
     <string name="bootstrap_sign_in_different_server">تسجيل الدخول إلى خادم مختلف</string>
-    <string name="common_or">أو</string>
-    <string name="common_change">تغيير</string>
     <string name="common_retry">إعادة المحاولة</string>
     <string name="common_more_options">المزيد من الخيارات</string>
     <string name="common_collapse">طي</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">اسم المكان</string>
     <string name="place_origin">المنشأ</string>
     <string name="place_destination">الوجهة</string>
-    <string name="discovery_search_placeholder">البحث عن %1$s</string>
-    <string name="discovery_no_results">لم يتم العثور على %1$s</string>
     <string name="discovery_no_results_hint">حاول تعديل البحث</string>
-    <string name="discovery_no_recommendations">لا توجد توصيات</string>
-    <string name="discovery_search_hint">حاول البحث عن %1$s للاشتراك فيه</string>
     <string name="access_no_rules">لا توجد قواعد وصول</string>
-    <string name="access_no_rules_subtitle">أضف قواعد للتحكم في من يمكنه الوصول إلى هذا المورد</string>
     <string name="access_add_rule_title">إضافة قاعدة وصول</string>
     <string name="access_level_manage">إدارة</string>
     <string name="access_level_react">تفاعل</string>
     <string name="notifications_clear">مسح الإشعارات</string>
-    <string name="banner_description">Markdown يظهر في أعلى هذا العرض.</string>
-    <string name="banner_placeholder">مرحبًا…</string>
-    <string name="banner_save">حفظ اللافتة</string>
-    <string name="banner_clear">مسح اللافتة</string>
     <string name="entity_avatar_alt">صورة رمزية لـ %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$d ي</string>
     <string name="format_time_weeks_short">%1$d أ</string>
     <string name="format_time_months_short">%1$d ش</string>
-    <string name="format_time_years_short">%1$d سنة</string>
     <string name="reaction_add">إضافة تفاعل</string>
     <string name="push_service_channel">إشعارات Mochi</string>
     <string name="push_service_channel_description">يُبقي Mochi متصلاً لاستقبال الإشعارات</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">فشل التنزيل</string>
     <string name="notifications_clear_all_title">مسح جميع الإشعارات؟</string>
     <string name="notifications_clear_all_message">سيؤدي ذلك إلى إزالة كل الإشعارات. لا يمكن استعادتها.</string>
-    <string name="notifications_count_n">%1$d جديد</string>
     <string name="settings_value_auto">تلقائي</string>
     <string name="settings_value_theme">افتراضي السمة</string>
     <string name="settings_radius">نصف قطر الزوايا</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">نسبي</string>
     <string name="settings_timestamp_absolute">مطلق</string>
     <string name="settings_units_usa">الولايات المتحدة</string>
-    <string name="profile_privacy_description">ما إذا كان بإمكان الآخرين العثور عليك في الدليل.</string>
     <string name="game_chat_load_more">تحميل الرسائل الأقدم</string>
     <string name="game_chat_move_played">%1$s لعب %2$s</string>
     <string name="stepup_title">أكّد أنك أنت</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">أدخل الرمز من بريدك الإلكتروني</string>
     <string name="stepup_totp_label">رمز المصادقة</string>
     <string name="stepup_totp_placeholder">أدخل رمز تطبيق المصادقة</string>
-    <string name="stepup_passkey_label">مفتاح المرور</string>
     <string name="stepup_use_passkey">استخدم مفتاح المرور الخاص بك</string>
     <string name="stepup_send_email">إرسال بريد إلكتروني</string>
     <string name="stepup_resend_email">إعادة إرسال البريد الإلكتروني</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">مجهول</string>
     <string name="tags_label">الوسوم</string>
     <string name="tags_add">إضافة وسم</string>
-    <string name="tags_label_field">تسمية الوسم</string>
     <string name="tags_interest_up">أظهر المزيد مثل هذا</string>
     <string name="tags_interest_down">أظهر أقل مثل هذا</string>
     <string name="tags_interest_clear">إيقاف العرض</string>
@@ -310,14 +266,6 @@
     <string name="person_picker_directory">الدليل</string>
     <string name="person_picker_no_people">لا يوجد أشخاص</string>
     <string name="person_picker_project_members">أعضاء المشروع</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="zero">لا مشتركين</item>
-        <item quantity="one">مشترك واحد</item>
-        <item quantity="two">مشتركان</item>
-        <item quantity="few">%1$d مشتركين</item>
-        <item quantity="many">%1$d مشتركًا</item>
-        <item quantity="other">%1$d مشترك</item>
-    </plurals>
     <string name="account_token_label">جلسة Mochi</string>
     <string name="attachment_caption">التسمية التوضيحية</string>
     <string name="attachment_caption_add">إضافة تسمية توضيحية</string>
@@ -362,4 +310,8 @@
     <string name="settings_card_theme">من السمة</string>
     <string name="settings_card_flat">مسطح</string>
     <string name="settings_card_raised">بارز</string>
+    <string name="error_server_https">يجب أن يبدأ عنوان الخادم بـ https://</string>
+    <string name="device_name_fallback">جهاز محمول</string>
+    <string name="account_error_token_type">نوع رمز غير مدعوم</string>
+    <string name="account_error_caller">المتصل غير مسموح له</string>
 </resources>

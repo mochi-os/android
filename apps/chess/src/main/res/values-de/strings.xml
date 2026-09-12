@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Freunde hinzufügen</string>
     <string name="chess_new_start_button">Spiel starten</string>
     <string name="chess_new_creating">Wird erstellt …</string>
-    <string name="chess_new_failed">Spiel konnte nicht erstellt werden</string>
     <string name="chess_chat_title">Chat</string>
     <string name="chess_open_chat">Chat-Bereich öffnen</string>
     <string name="chess_open_actions">Spielaktionen öffnen</string>

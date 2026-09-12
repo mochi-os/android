@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.util.NaturalCompare
 import org.mochios.wikis.model.Tag
 import org.mochios.wikis.repository.WikisRepository
 import javax.inject.Inject
@@ -45,8 +44,11 @@ class TagsListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
+                // Server order is `count desc, tag asc` - most-used first, which
+                // is what web shows. Re-sorting by name threw that ranking away;
+                // the alphabetical default only applies where no other signal
+                // does, and a use count is one.
                 val tags = repository.getTags(wikiId)
-                    .sortedWith(compareBy(NaturalCompare) { it.tag })
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     tags = tags,

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Wikileri tap</string>
     <string name="wikis_sidebar_create">Wiki döretmek</string>
     <string name="wikis_pageview_title_fallback">Sahypa</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Yza</string>
     <string name="wikis_pageview_page_actions">Sahypa hereketleri</string>
     <string name="wikis_pageview_toc">Bu sahypada</string>
     <string name="wikis_pageview_not_found_title">Sahypa tapylmady</string>
     <string name="wikis_pageview_create_this_page">Bu sahypany döretmek</string>
     <string name="wikis_pageview_rss_copied">RSS URL bufer ýadyna göçürildi</string>
-    <string name="wikis_pageview_rss_failed">RSS tokeni alynmady</string>
     <string name="wikis_page_action_section_page">Sahypa</string>
     <string name="wikis_page_action_edit">Düzet</string>
     <string name="wikis_page_action_rename">Adyny üýtget</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikiler</string>
     <string name="wikis_empty_title">Birinji wikiňi başla</string>
     <string name="wikis_empty_subtitle">Abuna ýazmak üçin wiki gözle ýa-da öz dokumentasiýaňyzy çap etmek üçin biri dörediň.</string>
-    <string name="wikis_subscribed_badge">Abuna ýazyldy</string>
     <string name="wikis_create_button">Wiki döretmek</string>
     <string name="wikis_recommended_section">Maslahat berilýän wikiler</string>
     <string name="wikis_subscribe_button">Abuna ýaz</string>
-    <string name="wikis_subscribed">Abuna ýazyldy</string>
     <string name="wikis_unsubscribe_action">Abunadan çyk</string>
     <string name="wikis_unsubscribing">Abuna ýazylyşygy ýatyrylýar…</string>
     <string name="wikis_unsubscribe_confirm_title">Abunadan çyk</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">At</string>
     <string name="wikis_create_privacy_label">Islendik adamyň wiki gözlemegine rugsat bermek</string>
     <string name="wikis_create_submit">Döretmek</string>
-    <string name="wikis_create_cancel">Ýatyrmak</string>
     <string name="wikis_comments_empty_title">Heniz teswirler ýok</string>
     <string name="wikis_comments_empty_subtitle">Bu sahypa ilkinji teswir ýazyň.</string>
-    <string name="wikis_comment_action_reply">Jogap</string>
     <string name="wikis_comment_replying_to">%1$s habaryna jogap berilýär</string>
     <string name="wikis_comment_clear_reply">Jogaby ýatyrmak</string>
-    <string name="wikis_comment_action_edit">Düzet</string>
     <string name="wikis_comment_action_delete">Pozmak</string>
     <string name="wikis_comment_action_save">Saklaýyş</string>
     <string name="wikis_comment_action_cancel">Ýatyrmak</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Täze sahypa</string>
     <string name="wikis_editor_preview">Öňünden gör</string>
     <string name="wikis_editor_preview_untitled">Atsyz</string>
-    <string name="wikis_editor_edit">Düzet</string>
     <string name="wikis_editor_insert">Goş</string>
     <string name="wikis_editor_attachments">Goşundylar</string>
     <string name="wikis_editor_delete">Sahypany pozmak</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Ýüklenýär…</string>
     <string name="wikis_attachments_upload_failed">Faýllar ýüklenmedi</string>
     <string name="wikis_attachments_search_clear">Gözlegi arassalamak</string>
-    <string name="wikis_attachments_filter">Süzgüç</string>
     <string name="wikis_attachments_filter_all">Ähli faýllar</string>
     <string name="wikis_attachments_filter_images">Suratlar</string>
     <string name="wikis_attachments_filter_documents">Resminamalar</string>
-    <string name="wikis_attachments_sort">Tertiple</string>
     <string name="wikis_attachments_sort_date">Sene</string>
     <string name="wikis_attachments_sort_name">At</string>
     <string name="wikis_attachments_sort_size">Ululyk</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Embed baglanyşygyny nusgalamak</string>
     <string name="wikis_attachments_embed_copied">Goýma baglanyşygy göçürildi</string>
     <string name="wikis_attachments_download">Ýükläp al</string>
-    <string name="wikis_attachments_copy_success">Goýma baglanyşygy göçürildi</string>
     <string name="wikis_attachments_delete">Pozmak</string>
     <string name="wikis_attachments_delete_confirm_title">Goşundy pozmak</string>
     <string name="wikis_attachments_delete_success">Goşundy pozuldy</string>
     <string name="wikis_attachments_delete_failed">Goşundy pozulmady</string>
-    <string name="wikis_attachments_open">Aç</string>
     <string name="wikis_attachments_empty_title">Heniz goşundylar ýok</string>
     <string name="wikis_attachments_no_results_title">Gözlegiňize laýyk gelýän goşundylar ýok</string>
     <string name="wikis_attachments_no_results_description">Başga gözleg sözüni ýa-da filtrini synanyş.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Bu hereketi yza gaýtaryp bolmaz. Bu wiki we ähli mazmunyny hemişelik pozar.</string>
     <string name="wikis_settings_delete_success">Wiki pozuldy</string>
     <string name="wikis_settings_delete_failed">Wiki pozulmady</string>
-    <string name="wikis_access_add_action">Goşmak</string>
     <string name="wikis_access_add_subject_label">Ulanyjy</string>
     <string name="wikis_access_level_edit">Düzet we gör</string>
     <string name="wikis_access_level_view">Diňe görkez</string>
     <string name="wikis_access_level_none">Girip bolmaýar</string>
-    <string name="wikis_access_owner_label">Eýesi</string>
     <string name="wikis_access_tab_users">Ulanyjylar</string>
     <string name="wikis_access_tab_groups">Toparlar</string>
     <string name="wikis_access_tab_other">Beýleki</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Rugsat aýrylmady</string>
     <string name="wikis_replicas_empty_title">Heniz replikalar ýok</string>
     <string name="wikis_replicas_empty_message">Beýleki wikiler bu wikini köpelden mahaly, olar şu ýerde peýda bolarlar.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Hiç haçan</string>
     <string name="wikis_replicas_remove_confirm_title">Replikany aýyrmak?</string>
     <string name="wikis_replicas_remove_confirm_action">Aýyr</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” sahypasy entek ýok.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki salgysy</string>
-    <string name="wikis_pageview_share_link_copied">Sahypa salgysy alyş-çalyş bufferine göçürildi</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki sahypa salgysy</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Salgy</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Wiki gözle…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s abunasyny ýatyrmak isleýändigiňize ynamlymy?</string>
-    <string name="wikis_subscribe_failed_502">Ol serwer elýeterli däl. Gaýtadan synanyşylýar…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">At, ID, barmak yzy ýa-da URL boýunça gözle…</string>
     <string name="wikis_join_search_button">Wikileri gözle…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Jogap ýaz…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Mazmunyňyzy şu ýerde Markdown bilen ýazyň…</string>
     <string name="wikis_insert_dialog_empty">Entek goşundy ýok. Başlamak üçin faýl ýükläň.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Bellik boş bolup bilmez</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Ýerleşdirme salgysyny göçürmek başartmady</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” pozulsunmy? Muny yzyna gaýtaryp bolmaýar.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Bu sahypa faýl goşmak üçin Ýükle düwmesine basyň.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d jogap</item>
         <item quantity="other">+%d köp jogap</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$d sahypa täzeden atlandyryldy</item>
-        <item quantity="other">%1$d sahypa täzeden atlandyryldy</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d baglanyşyk täzelendi</item>
-        <item quantity="other">%1$d baglanyşyk täzelendi</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d sahypa</item>
         <item quantity="other">%d sahypa</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Düşündirişi ýatda saklap bolmady</string>
     <string name="wikis_attachments_upload_types">Goldanýan faýllar: suratlar, PDF, DOC, DOCX, TXT we MD.</string>
     <string name="wikis_attachments_upload_limits">Uly ýüklemeler serweriňiziň ýa-da proksi sazlamalaryňyz tarapyndan çäklendirilip bilner.</string>
+    <string name="wikis_rss_replace">Çalşyr</string>
+    <string name="wikis_rss_copied_new">Täze RSS URL bufer ýadyna göçürildi</string>
+    <string name="wikis_rss_exists">Bu akym URL-i eýýäm berildi we gaýtadan görkezip bolmaýar.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Ilkinji %1$d teswir görkezilýär.</item>
+        <item quantity="other">Ilkinji %1$d teswir görkezilýär.</item>
+    </plurals>
 </resources>

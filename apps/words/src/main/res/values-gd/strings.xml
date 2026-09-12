@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Clàr-taice</string>
-    <string name="words_list_new">Geama ùr</string>
     <string name="words_list_logout">Clàraich a-mach</string>
-    <string name="words_list_empty_title">Chan eil geamannan ann fhathast</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Crìochnaichte</string>
     <string name="words_sidebar_new_game">Geama ùr</string>
     <string name="words_new_game_title">Geama ùr</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Geama ùr</string>
     <string name="words_detail_action_delete">Sguab às geama</string>
     <string name="words_detail_chat_title">Còmhradh</string>
-    <string name="words_detail_invalid_move">Gluasad mì-dhligheach</string>
     <string name="words_detail_recall">Cuimhnich</string>
     <string name="words_detail_submit">Cuir a-steach</string>
     <string name="words_detail_cancel">Sguir dheth</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Tagh litir</string>
     <string name="words_detail_resign_title">An leig thu seachad an geama?</string>
     <string name="words_detail_resign_message">A bheil thu cinnteach gu bheil thu airson dreuchd a leigeil dhìot?</string>
-    <string name="words_detail_failed_move">Cha b\' urrainn an gluasad a chur a-steach</string>
-    <string name="words_detail_failed_pass">Cha b\' urrainn dol seachad</string>
-    <string name="words_detail_failed_exchange">Cha b\' urrainn iomlaid a dhèanamh</string>
-    <string name="words_detail_failed_resign">Cha b\' urrainn gèilleadh</string>
-    <string name="words_detail_failed_rematch">Cha b\' urrainn ath-mhaids a chruthachadh</string>
-    <string name="words_detail_failed_delete">Cha b\' urrainn geama a sguabadh às</string>
-    <string name="words_detail_game_deleted">Chaidh an geama a sguabadh às</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Brathan mu chuairtean Words, iomlaidean agus toraidhean gheamannan.</string>
-    <string name="words_list_empty_subtitle">Thoir gnogag air a’ phutan + gus a’ chiad gheama agad a thòiseachadh.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Chan eil geamannan ann fhathast.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Cuir caraidean ris san aplacaid People gus tòiseachadh a’ cluich.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Fiosrachadh a’ gheama a’ tighinn a dh’aithghearr</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

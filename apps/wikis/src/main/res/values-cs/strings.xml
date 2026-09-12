@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Najít wiki</string>
     <string name="wikis_sidebar_create">Vytvořit wiki</string>
     <string name="wikis_pageview_title_fallback">Stránka</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Zpět</string>
     <string name="wikis_pageview_page_actions">Akce stránky</string>
     <string name="wikis_pageview_toc">Na této stránce</string>
     <string name="wikis_pageview_not_found_title">Stránka nenalezena</string>
     <string name="wikis_pageview_create_this_page">Vytvořit tuto stránku</string>
     <string name="wikis_pageview_rss_copied">URL RSS zkopírována do schránky</string>
-    <string name="wikis_pageview_rss_failed">Nepodařilo se získat RSS token</string>
     <string name="wikis_page_action_section_page">Stránka</string>
     <string name="wikis_page_action_edit">Upravit</string>
     <string name="wikis_page_action_rename">Přejmenovat</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Začněte svou první wiki</string>
     <string name="wikis_empty_subtitle">Vyhledejte wiki k odběru, nebo vytvořte vlastní pro publikování vlastní dokumentace.</string>
-    <string name="wikis_subscribed_badge">Odebíráno</string>
     <string name="wikis_create_button">Vytvořit wiki</string>
     <string name="wikis_recommended_section">Doporučená wiki</string>
     <string name="wikis_subscribe_button">Odebírat</string>
-    <string name="wikis_subscribed">Odebíráno</string>
     <string name="wikis_unsubscribe_action">Zrušit odběr</string>
     <string name="wikis_unsubscribing">Ruší se odběr…</string>
     <string name="wikis_unsubscribe_confirm_title">Zrušit odběr</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Název</string>
     <string name="wikis_create_privacy_label">Povolit komukoli vyhledávat wiki</string>
     <string name="wikis_create_submit">Vytvořit</string>
-    <string name="wikis_create_cancel">Zrušit</string>
     <string name="wikis_comments_empty_title">Zatím žádné komentáře</string>
     <string name="wikis_comments_empty_subtitle">Buďte první, kdo okomentuje tuto stránku.</string>
-    <string name="wikis_comment_action_reply">Odpovědět</string>
     <string name="wikis_comment_replying_to">Odpověď uživateli %1$s</string>
     <string name="wikis_comment_clear_reply">Zrušit odpověď</string>
-    <string name="wikis_comment_action_edit">Upravit</string>
     <string name="wikis_comment_action_delete">Smazat</string>
     <string name="wikis_comment_action_save">Uložit</string>
     <string name="wikis_comment_action_cancel">Zrušit</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Nová stránka</string>
     <string name="wikis_editor_preview">Náhled</string>
     <string name="wikis_editor_preview_untitled">Bez názvu</string>
-    <string name="wikis_editor_edit">Upravit</string>
     <string name="wikis_editor_insert">Vložit</string>
     <string name="wikis_editor_attachments">Přílohy</string>
     <string name="wikis_editor_delete">Smazat stránku</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Nahrává se…</string>
     <string name="wikis_attachments_upload_failed">Nepodařilo se nahrát soubory</string>
     <string name="wikis_attachments_search_clear">Vymazat hledání</string>
-    <string name="wikis_attachments_filter">Filtr</string>
     <string name="wikis_attachments_filter_all">Všechny soubory</string>
     <string name="wikis_attachments_filter_images">Obrázky</string>
     <string name="wikis_attachments_filter_documents">Dokumenty</string>
-    <string name="wikis_attachments_sort">Třídit</string>
     <string name="wikis_attachments_sort_date">Datum</string>
     <string name="wikis_attachments_sort_name">Název</string>
     <string name="wikis_attachments_sort_size">Velikost</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopírovat embed odkaz</string>
     <string name="wikis_attachments_embed_copied">Odkaz pro vložení zkopírován</string>
     <string name="wikis_attachments_download">Stáhnout</string>
-    <string name="wikis_attachments_copy_success">Odkaz pro vložení zkopírován</string>
     <string name="wikis_attachments_delete">Smazat</string>
     <string name="wikis_attachments_delete_confirm_title">Smazat přílohu</string>
     <string name="wikis_attachments_delete_success">Příloha smazána</string>
     <string name="wikis_attachments_delete_failed">Nepodařilo se smazat přílohu</string>
-    <string name="wikis_attachments_open">Otevřít</string>
     <string name="wikis_attachments_empty_title">Zatím žádné přílohy</string>
     <string name="wikis_attachments_no_results_title">Žádné přílohy neodpovídají vyhledávání</string>
     <string name="wikis_attachments_no_results_description">Zkuste jiný vyhledávací výraz nebo filtr.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Tuto akci nelze vrátit zpět. Tímto trvale smažete wiki a veškerý její obsah.</string>
     <string name="wikis_settings_delete_success">Wiki smazána</string>
     <string name="wikis_settings_delete_failed">Nepodařilo se smazat wiki</string>
-    <string name="wikis_access_add_action">Přidat</string>
     <string name="wikis_access_add_subject_label">Uživatel</string>
     <string name="wikis_access_level_edit">Úpravy a zobrazení</string>
     <string name="wikis_access_level_view">Pouze pro čtení</string>
     <string name="wikis_access_level_none">Žádný přístup</string>
-    <string name="wikis_access_owner_label">Vlastník</string>
     <string name="wikis_access_tab_users">Uživatelé</string>
     <string name="wikis_access_tab_groups">Skupiny</string>
     <string name="wikis_access_tab_other">Ostatní</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Nepodařilo se odebrat přístup</string>
     <string name="wikis_replicas_empty_title">Zatím žádné repliky</string>
     <string name="wikis_replicas_empty_message">Když ostatní wiki replikují tuto wiki, zobrazí se zde.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Nikdy</string>
     <string name="wikis_replicas_remove_confirm_title">Odebrat repliku?</string>
     <string name="wikis_replicas_remove_confirm_action">Odebrat</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Aktualizováno %1$s</string>
     <string name="wikis_pageview_not_found_description">Stránka „%1$s\" zatím neexistuje.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Odkaz na wiki</string>
-    <string name="wikis_pageview_share_link_copied">Odkaz na stránku zkopírován do schránky</string>
     <string name="wikis_pageview_clipboard_label_rss">RSS URL wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Odkaz na wiki stránku</string>
-    <string name="wikis_pageview_loading">Načítání stránky…</string>
     <string name="wikis_page_action_share">Odkaz</string>
     <string name="wikis_open_sidebar">Otevřít boční panel</string>
-    <string name="wikis_owned_badge">Vlastní</string>
     <string name="wikis_search_placeholder">Hledat wiki…</string>
-    <string name="wikis_subscribing">Přihlašování k odběru…</string>
     <string name="wikis_unsubscribe_confirm_message">Opravdu chcete zrušit odběr %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Server není dostupný. Opakuji…</string>
     <string name="wikis_clipboard_label_rss">RSS URL wiki</string>
     <string name="wikis_find_search_placeholder">Hledat podle názvu, ID, otisku nebo URL…</string>
     <string name="wikis_join_search_button">Hledat wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Napište odpověď…</string>
     <string name="wikis_comment_form_send">Odeslat</string>
     <string name="wikis_comment_form_remove_attachment">Odstranit přílohu</string>
-    <string name="wikis_comment_collapse_toggle">Sbalit vlákno</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Napište svůj obsah zde pomocí Markdown…</string>
     <string name="wikis_insert_dialog_empty">Zatím žádné přílohy. Nahrajte soubor pro začátek.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Přidat značku</string>
     <string name="wikis_tag_dialog_empty">Značka nesmí být prázdná</string>
     <string name="wikis_attachments_search_placeholder">Hledat přílohy…</string>
-    <string name="wikis_attachments_copy_failed">Kopírování vloženého odkazu selhalo</string>
     <string name="wikis_attachments_delete_confirm_message">Smazat „%1$s\"? Akci nelze vrátit.</string>
     <string name="wikis_attachments_downloading">Stahování…</string>
     <string name="wikis_attachments_empty_description">Klepněte na Nahrát pro přidání souborů na tuto stránku.</string>
@@ -325,18 +300,6 @@
         <item quantity="one">%d odpověď</item>
         <item quantity="few">+%d dalších odpovědí</item>
         <item quantity="other">+%d dalších odpovědí</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Přejmenována %1$d stránka</item>
-        <item quantity="few">Přejmenovány %1$d stránky</item>
-        <item quantity="many">Přejmenovány %1$d stránky</item>
-        <item quantity="other">Přejmenováno %1$d stránek</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">aktualizován %1$d odkaz</item>
-        <item quantity="few">aktualizovány %1$d odkazy</item>
-        <item quantity="many">aktualizovány %1$d odkazy</item>
-        <item quantity="other">aktualizováno %1$d odkazů</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d stránka</item>
@@ -371,4 +334,13 @@
     <string name="wikis_attachments_caption_save_failed">Popisek se nepodařilo uložit</string>
     <string name="wikis_attachments_upload_types">Podporované soubory: obrázky, PDF, DOC, DOCX, TXT a MD.</string>
     <string name="wikis_attachments_upload_limits">Velká nahrávání mohou být omezena konfigurací vašeho serveru nebo proxy.</string>
+    <string name="wikis_rss_replace">Nahradit</string>
+    <string name="wikis_rss_copied_new">Nová URL RSS zkopírována do schránky</string>
+    <string name="wikis_rss_exists">Tato URL kanálu již byla vydána a nelze ji znovu zobrazit.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Zobrazuje se první %1$d komentář.</item>
+        <item quantity="few">Zobrazuje se prvních %1$d komentářů.</item>
+        <item quantity="many">Zobrazuje se prvních %1$d komentářů.</item>
+        <item quantity="other">Zobrazuje se prvních %1$d komentářů.</item>
+    </plurals>
 </resources>

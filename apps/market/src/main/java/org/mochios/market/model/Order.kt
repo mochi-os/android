@@ -49,6 +49,8 @@ data class Order(
     @SerializedName("listing_type") val listingType: String? = null,
     @SerializedName("seller_name") val sellerName: String? = null,
     @SerializedName("buyer_name") val buyerName: String? = null,
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String? = null,
+    @SerializedName("buyer_fingerprint") val buyerFingerprint: String? = null,
 )
 
 /**

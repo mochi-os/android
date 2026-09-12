@@ -49,7 +49,6 @@
     <string name="chess_new_title">Nouvelle partie</string>
     <string name="chess_new_pick_opponent">Choisir un adversaire</string>
     <string name="chess_new_no_friends_subtitle">Ajoutez des amis dans l\'application Contacts pour commencer à jouer</string>
-    <string name="chess_new_failed">Échec de la création de la partie</string>
     <string name="chess_detail_unavailable">Partie indisponible</string>
     <string name="chess_delete_message">Ceci retire la partie de votre liste.</string>
     <string name="chess_status_checkmate_you_win">Échec et mat — vous gagnez!</string>

@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">دۆزینەوەی wikiەکان</string>
     <string name="wikis_sidebar_create">دروستکردنی wiki</string>
     <string name="wikis_pageview_title_fallback">پەڕە</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">گەڕانەوە</string>
     <string name="wikis_pageview_page_actions">کردارەکانی پەڕە</string>
     <string name="wikis_pageview_toc">لەم پەڕەیەدا</string>
     <string name="wikis_pageview_not_found_title">پەڕە نەدۆزرایەوە</string>
     <string name="wikis_pageview_create_this_page">ئەم پەڕەیە دروست بکە</string>
     <string name="wikis_pageview_rss_copied">URLی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
-    <string name="wikis_pageview_rss_failed">وەرگرتنی Token ـی RSS سەرکەوتوو نەبوو</string>
     <string name="wikis_page_action_section_page">پەڕە</string>
     <string name="wikis_page_action_edit">دەستکاری</string>
     <string name="wikis_page_action_rename">ناوگۆڕکردن</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki-یەکان</string>
     <string name="wikis_empty_title">یەکەم Wiki-ی خۆت دەستپێبکە</string>
     <string name="wikis_empty_subtitle">گەڕان بۆ ویکییەک بۆ بەشداری، یان دروستکردنی یەکێک بۆ بڵاوکردنەوەی بەڵگەنامەکانی خۆت.</string>
-    <string name="wikis_subscribed_badge">بەشداربوو</string>
     <string name="wikis_create_button">دروستکردنی wiki</string>
     <string name="wikis_recommended_section">ویکییە پێشنیازکراوەکان</string>
     <string name="wikis_subscribe_button">بەشداربە</string>
-    <string name="wikis_subscribed">بەشداربوو</string>
     <string name="wikis_unsubscribe_action">بەشداری هەڵبوەشێنەوە</string>
     <string name="wikis_unsubscribing">هەڵوەشاندنەوەی بەشداری…</string>
     <string name="wikis_unsubscribe_confirm_title">بەشداری هەڵبوەشێنەوە</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">ناو</string>
     <string name="wikis_create_privacy_label">ڕێگە بدە بە هەرکەسێک بگەڕێت بۆ wiki</string>
     <string name="wikis_create_submit">دروستکردن</string>
-    <string name="wikis_create_cancel">هەڵوەشاندنەوە</string>
     <string name="wikis_comments_empty_title">هێشتا هیچ بۆچوونێک نییە</string>
     <string name="wikis_comments_empty_subtitle">یەکەم کەس بە لە لێدواندان لەسەر ئەم پەڕەیە.</string>
-    <string name="wikis_comment_action_reply">وەڵام</string>
     <string name="wikis_comment_replying_to">وەڵامدانەوەی %1$s</string>
     <string name="wikis_comment_clear_reply">هەڵوەشاندنەوەی وەڵام</string>
-    <string name="wikis_comment_action_edit">دەستکاری</string>
     <string name="wikis_comment_action_delete">سڕینەوە</string>
     <string name="wikis_comment_action_save">پاشەکەوتکردن</string>
     <string name="wikis_comment_action_cancel">هەڵوەشاندنەوە</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">پەڕەی نوێ</string>
     <string name="wikis_editor_preview">پێشبینین</string>
     <string name="wikis_editor_preview_untitled">بێ ناونیشان</string>
-    <string name="wikis_editor_edit">دەستکاری</string>
     <string name="wikis_editor_insert">تێخستن</string>
     <string name="wikis_editor_attachments">هاوپێچەکان</string>
     <string name="wikis_editor_delete">سڕینەوەی پەڕە</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">بارکردن…</string>
     <string name="wikis_attachments_upload_failed">بارکردنی فایلەکان سەرکەوتوو نەبوو</string>
     <string name="wikis_attachments_search_clear">پاککردنەوەی گەڕان</string>
-    <string name="wikis_attachments_filter">فلتەر</string>
     <string name="wikis_attachments_filter_all">هەموو پەڕگەکان</string>
     <string name="wikis_attachments_filter_images">وێنەکان</string>
     <string name="wikis_attachments_filter_documents">دۆکومێنتەکان</string>
-    <string name="wikis_attachments_sort">ڕیزکردن</string>
     <string name="wikis_attachments_sort_date">بەروار</string>
     <string name="wikis_attachments_sort_name">ناو</string>
     <string name="wikis_attachments_sort_size">قەبارە</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">کۆپیکردنی بەستەری Embed</string>
     <string name="wikis_attachments_embed_copied">بەستەری جێگیرکراو لەبەرگیرایەوە</string>
     <string name="wikis_attachments_download">داگرتن</string>
-    <string name="wikis_attachments_copy_success">بەستەری جێگیرکراو لەبەرگیرایەوە</string>
     <string name="wikis_attachments_delete">سڕینەوە</string>
     <string name="wikis_attachments_delete_confirm_title">سڕینەوەی هاوپێچ</string>
     <string name="wikis_attachments_delete_success">هاوپێچ سڕایەوە</string>
     <string name="wikis_attachments_delete_failed">سڕینەوەی هاوپێچ سەرکەوتوو نەبوو</string>
-    <string name="wikis_attachments_open">کردنەوە</string>
     <string name="wikis_attachments_empty_title">هێشتا هیچ هاوپێچێک نییە</string>
     <string name="wikis_attachments_no_results_title">هیچ هاوپێچێک لەگەڵ گەڕانەکەت یەکناگرێتەوە</string>
     <string name="wikis_attachments_no_results_description">وشەیەکی گەڕانی جیاواز یان پاڵاوتنێک هەوڵبدە.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ئەم کردارە ناتوانرێت بگەڕێنرێتەوە. ئەمە Wiki و هەموو ناوەڕۆکەکانی بە هەمیشەیی دەسڕێتەوە.</string>
     <string name="wikis_settings_delete_success">Wiki سڕایەوە</string>
     <string name="wikis_settings_delete_failed">سڕینەوەی wiki سەرکەوتوو نەبوو</string>
-    <string name="wikis_access_add_action">زیادکردن</string>
     <string name="wikis_access_add_subject_label">بەکارهێنەر</string>
     <string name="wikis_access_level_edit">دەستکاری و بینین</string>
     <string name="wikis_access_level_view">تەنها بینین</string>
     <string name="wikis_access_level_none">دەستڕاگەیشتن نییە</string>
-    <string name="wikis_access_owner_label">خاوەن</string>
     <string name="wikis_access_tab_users">بەکارهێنەران</string>
     <string name="wikis_access_tab_groups">گرووپەکان</string>
     <string name="wikis_access_tab_other">هیتر</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">لابردنی گەیشتن سەرکەوتوو نەبوو</string>
     <string name="wikis_replicas_empty_title">هێشتا هیچ کۆپیەک نییە</string>
     <string name="wikis_replicas_empty_message">کاتێک Wiki-ی ترەکان ئەم Wiki-یە لەبەر دەکەنەوە، لێرە دەردەکەون.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">هەرگیز</string>
     <string name="wikis_replicas_remove_confirm_title">کۆپیەکە لاببەیت؟</string>
     <string name="wikis_replicas_remove_confirm_action">لابردن</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">لاپەڕەی “%1$s” هێشتا بوونی نییە.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">بەستەری ویکی</string>
-    <string name="wikis_pageview_share_link_copied">بەستەری لاپەڕە لەبەرگیرایەوە</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">بەستەری لاپەڕەی Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">بەستەر</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">گەڕان بۆ wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">دڵنیایت دەتەوێت بەشداری %1$s هەڵبوەشێنیتەوە؟</string>
-    <string name="wikis_subscribe_failed_502">ئەو ڕاژەیە بەردەست نییە. دووبارە هەوڵ دەدرێتەوە…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">گەڕان بە ناو، ID، پەنجەمۆر یان URL…</string>
     <string name="wikis_join_search_button">گەڕان بۆ wiki-یەکان…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">وەڵامێک بنووسە…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ناوەڕۆکەکەت لێرە بە Markdown بنووسە…</string>
     <string name="wikis_insert_dialog_empty">هێشتا هیچ هاوپێچێک نییە. فایلێک بار بکە بۆ دەستپێکردن.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">تاگ ناتوانێت بەتاڵ بێت</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">لەبەرگرتنەوەی بەستەری جێگیرکردن سەرکەوتوو نەبوو</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” بسڕدرێتەوە؟ ئەمە ناگەڕێتەوە.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">کرتە لە بارکردن بکە بۆ زیادکردنی فایل بۆ ئەم لاپەڕەیە.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d وەڵام</item>
         <item quantity="other">+%d وەڵامی زیاتر</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">١ لاپەڕە ناوی گۆڕا</item>
-        <item quantity="other">%1$d لاپەڕە ناوی گۆڕا</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">١ بەستەر نوێکرایەوە</item>
-        <item quantity="other">%1$d بەستەر نوێکرانەوە</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d لاپەڕە</item>
         <item quantity="other">%d لاپەڕە</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">پاشەکەوتکردنی ژێرنووس سەرکەوتوو نەبوو</string>
     <string name="wikis_attachments_upload_types">فایلە پشتگیریکراوەکان: وێنە، PDF، DOC، DOCX، TXT، و MD.</string>
     <string name="wikis_attachments_upload_limits">بارکردنە گەورەکان لەوانەیە بەهۆی ڕێکخستنی ڕاژەکار یان پراکسییەکەتەوە سنووردار بکرێن.</string>
+    <string name="wikis_rss_replace">بیگۆڕە</string>
+    <string name="wikis_rss_copied_new">URLی نوێی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
+    <string name="wikis_rss_exists">ئەم URLـەی هەواڵنامە پێشتر دەرکراوە و ناتوانرێت دووبارە پیشان بدرێت.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">پیشاندانی یەکەم %1$d لێدوان.</item>
+        <item quantity="other">پیشاندانی یەکەم %1$d لێدوان.</item>
+    </plurals>
 </resources>

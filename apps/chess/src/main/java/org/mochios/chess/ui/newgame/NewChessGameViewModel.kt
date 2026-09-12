@@ -62,11 +62,8 @@ class NewChessGameViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(selectedId = id)
     }
 
-    /**
-     * [onCreated] receives the new game's id; [onError] an already-localised
-     * message.
-     */
-    fun create(onCreated: (String) -> Unit, onError: (String) -> Unit) {
+    /** [onCreated] receives the new game's id; a failure lands in [NewChessGameState.createError]. */
+    fun create(onCreated: (String) -> Unit) {
         val state = _uiState.value
         if (state.selectedId.isBlank() || state.isCreating) return
         viewModelScope.launch {
@@ -78,17 +75,7 @@ class NewChessGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 val err = e.toMochiError()
                 _uiState.value = _uiState.value.copy(isCreating = false, createError = err)
-                onError(messageOf(err))
             }
         }
-    }
-
-    private fun messageOf(err: MochiError): String = when (err) {
-        is MochiError.AuthError -> err.message.orEmpty()
-        is MochiError.ForbiddenError -> err.message.orEmpty()
-        is MochiError.NotFoundError -> err.message.orEmpty()
-        is MochiError.ServerError -> err.message.orEmpty()
-        is MochiError.Unknown -> err.message.orEmpty()
-        else -> ""
     }
 }

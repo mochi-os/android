@@ -26,6 +26,7 @@ import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
+import org.mochios.feeds.api.PostDetailResponse
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.AddSourceRequest
@@ -69,6 +70,35 @@ data class PostDetailResult(
     val post: Post,
     val permissions: Permissions
 )
+
+/**
+ * The detail result behind a `-/:post` answer. A deleted or unknown post is
+ * answered with 200 and an empty `posts` list rather than a 404, so the
+ * not-found state has to be raised here — otherwise the screen shows the
+ * generic error-with-retry instead of "post not found".
+ */
+internal fun postDetail(response: PostDetailResponse): PostDetailResult =
+    PostDetailResult(
+        post = response.posts.firstOrNull() ?: throw MochiError.NotFoundError(),
+        permissions = response.permissions,
+    )
+
+/**
+ * A post edit's attachment order: one part per item, which every feeds server
+ * reads. An empty list - every attachment removed - is sent as "[]", since no
+ * parts at all would read as "leave the attachments alone"; a server from 6.129
+ * reads it as an empty order and an older one as an unknown id, and both then
+ * remove every attachment. A JSON array of ids would read as one unknown id to
+ * an older server and delete them all. Null sends no order, which leaves the
+ * post's attachments as they are.
+ */
+internal fun addEditOrder(builder: MultipartBody.Builder, order: List<String>?) {
+    when {
+        order == null -> {}
+        order.isEmpty() -> builder.addFormDataPart("order", "[]")
+        else -> order.forEach { builder.addFormDataPart("order", it) }
+    }
+}
 
 data class ProbeResult(
     val feed: Feed?,
@@ -140,10 +170,6 @@ class FeedsRepository @Inject constructor(
         return cached.result
     }
 
-    fun invalidateCache(feedId: String) {
-        postCache.remove(feedId)
-        feedInfoCache.remove(feedId)
-    }
 
     // --- Class-level operations ---
 
@@ -514,7 +540,8 @@ class FeedsRepository @Inject constructor(
         feedId: String,
         postId: String,
         body: String,
-        order: List<String>,
+        // Null leaves the post's attachments untouched.
+        order: List<String>?,
         newFiles: List<Uri>,
         context: Context,
         // Caption edits keyed by attachment id or "new:N" placeholder.
@@ -545,9 +572,7 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("data", Gson().toJson(data))
             }
 
-            for (item in order) {
-                builder.addFormDataPart("order", item)
-            }
+            addEditOrder(builder, order)
 
             for (file in files) {
                 builder.addPart(fileStore.filePart("files", file))
@@ -581,8 +606,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun getPost(feedId: String, postId: String): PostDetailResult {
         return try {
-            val response = api.getPost(feedId, postId).unwrap()
-            PostDetailResult(post = response.posts.first(), permissions = response.permissions)
+            postDetail(api.getPost(feedId, postId).unwrap())
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -790,13 +814,6 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun removeTag(feedId: String, postId: String, id: String) {
-        try {
-            api.removeTag(feedId, postId, id).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
 
     suspend fun adjustInterest(feedId: String, qid: String?, label: String?, direction: String) {
         try {
@@ -881,13 +898,6 @@ class FeedsRepository @Inject constructor(
 
     // --- Banner ---
 
-    suspend fun getBanner(feedId: String): String {
-        return try {
-            api.getBanner(feedId).unwrap().banner
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
 
     suspend fun setBanner(feedId: String, banner: String) {
         try {

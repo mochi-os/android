@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.moderation
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,6 +23,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Group
@@ -36,6 +38,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MenuAnchorType
@@ -78,6 +81,10 @@ import org.mochios.forums.R
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationReport
 import org.mochios.forums.model.Restriction
+import org.mochios.forums.model.humanise
+import org.mochios.forums.model.moderationAction
+import org.mochios.forums.model.moderationReason
+import org.mochios.forums.model.moderationTarget
 import org.mochios.android.R as MochiR
 
 /** A moderation tab as rendered: its label, icon, and the state it selects. */
@@ -137,6 +144,18 @@ fun ForumModerationScreen(
                 },
             )
         },
+        floatingActionButton = {
+            if (uiState.selectedTab == ModerationTab.RESTRICTIONS) {
+                FloatingActionButton(onClick = { showAddRestriction = true }) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(
+                            R.string.forums_moderation_restriction_add,
+                        ),
+                    )
+                }
+            }
+        },
     ) { padding ->
         Column(modifier = Modifier.fillMaxSize().padding(padding)) {
             MochiTabRow(
@@ -185,8 +204,13 @@ private fun ModerationCard(content: @Composable ColumnScope.() -> Unit) {
 
 @Composable
 private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel) {
+    // The reason the server records against a rejection, in the moderator's
+    // language — the same wording web's queue sends.
+    val rejectedReason = stringResource(R.string.forums_moderation_rejected)
     val queue = uiState.queue ?: return
-    if (queue.counts.total == 0) {
+    // Reports live on their own tab, so they do not keep this one non-empty:
+    // counting them here left a forum with only reports showing a blank list.
+    if (queue.posts.isEmpty() && queue.comments.isEmpty()) {
         EmptyState(
             icon = Icons.Default.Schedule,
             title = stringResource(R.string.forums_moderation_queue_empty),
@@ -229,7 +253,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
                         QueueActions(
                             authorName = post.name,
                             onApprove = { viewModel.approvePost(post.id) },
-                            onReject = { viewModel.removePost(post.id) },
+                            onReject = { viewModel.removePost(post.id, rejectedReason) },
                             onMute = { viewModel.addRestriction(post.member, "muted", "") },
                             onBan = { viewModel.addRestriction(post.member, "banned", "") },
                         )
@@ -278,7 +302,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
                         QueueActions(
                             authorName = c.name,
                             onApprove = { viewModel.approveComment(c.post, c.id) },
-                            onReject = { viewModel.removeComment(c.post, c.id) },
+                            onReject = { viewModel.removeComment(c.post, c.id, rejectedReason) },
                             onMute = { viewModel.addRestriction(c.member, "muted", "") },
                             onBan = { viewModel.addRestriction(c.member, "banned", "") },
                         )
@@ -500,7 +524,7 @@ private fun ReportCard(
                     Spacer(Modifier.width(8.dp))
                 }
                 Text(
-                    text = report.type,
+                    text = moderationLabel(moderationTarget(report.type), report.type),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -561,7 +585,10 @@ private fun ReportCard(
             if (report.reason.isNotBlank()) {
                 Spacer(Modifier.height(6.dp))
                 Text(
-                    stringResource(R.string.forums_moderation_report_reason, report.reason),
+                    stringResource(
+                        R.string.forums_moderation_report_reason,
+                        moderationLabel(moderationReason(report.reason), report.reason),
+                    ),
                     style = MaterialTheme.typography.bodyMedium,
                 )
             }
@@ -609,6 +636,15 @@ private fun ReportCard(
 }
 
 /** A report's own status: still waiting on a moderator, or already dealt with. */
+/**
+ * [label] when the server's enum is one this build knows, and the humanised
+ * raw value when it is not - a value added server-side reads as a phrase
+ * rather than as `resolve_report`.
+ */
+@Composable
+private fun moderationLabel(@StringRes label: Int?, raw: String): String =
+    if (label != null) stringResource(label) else humanise(raw)
+
 @Composable
 private fun ReportStatusBadge(status: String) {
     val tone = if (status == "pending") StatusTone.Waiting else StatusTone.Positive
@@ -648,14 +684,14 @@ private fun LogTab(log: List<ModerationLogEntry>) {
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
-                                text = entry.action,
+                                text = moderationLabel(moderationAction(entry.action), entry.action),
                                 style = MaterialTheme.typography.titleSmall,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
                             Spacer(Modifier.width(6.dp))
                             Text(
-                                text = entry.type,
+                                text = moderationLabel(moderationTarget(entry.type), entry.type),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 maxLines = 1,
@@ -718,6 +754,7 @@ private fun RestrictionsTab(
                 items(restrictions, key = { it.user }) { r ->
                     RestrictionCard(
                         restriction = r,
+                        forumId = viewModel.forumId,
                         onRemove = { viewModel.removeRestriction(r.user) },
                     )
                 }
@@ -743,6 +780,7 @@ private fun RestrictionsTab(
 @Composable
 private fun RestrictionCard(
     restriction: Restriction,
+    forumId: String,
     onRemove: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -755,10 +793,10 @@ private fun RestrictionCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 EntityAvatar(
                     name = title,
-                    // The restricted user's own avatar, by entity id — there is
-                    // no post or comment here to hang a forum-scoped asset off.
-                    // Falls back to seeded initials when they have none.
-                    src = "/people/${restriction.user}/-/avatar",
+                    // Through the forum's own moderation proxy rather than
+                    // the people app: a cross-app request loses the session and
+                    // comes back anonymous. Seeded initials when they have none.
+                    src = "/forums/$forumId/-/moderation/${restriction.user}/asset/avatar",
                     seed = restriction.user,
                     size = 36.dp,
                 )

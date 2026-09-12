@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Dod o hyd i wicis</string>
     <string name="wikis_sidebar_create">Creu wici</string>
     <string name="wikis_pageview_title_fallback">Tudalen</string>
-    <string name="wikis_pageview_wiki_fallback">Wici</string>
-    <string name="wikis_pageview_back">Yn ôl</string>
     <string name="wikis_pageview_page_actions">Camau gweithredu tudalen</string>
     <string name="wikis_pageview_toc">Ar y dudalen hon</string>
     <string name="wikis_pageview_not_found_title">Heb ddod o hyd i\'r dudalen</string>
     <string name="wikis_pageview_create_this_page">Creu\'r dudalen hon</string>
     <string name="wikis_pageview_rss_copied">URL RSS wedi\'i gopïo i\'r clipfwrdd</string>
-    <string name="wikis_pageview_rss_failed">Methwyd cael tocyn RSS</string>
     <string name="wikis_page_action_section_page">Tudalen</string>
     <string name="wikis_page_action_edit">Golygu</string>
     <string name="wikis_page_action_rename">Ailenwi</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wicis</string>
     <string name="wikis_empty_title">Cychwyn eich wici cyntaf</string>
     <string name="wikis_empty_subtitle">Chwilio am wici i danysgrifio iddo, neu greu un i gyhoeddi eich dogfennaeth eich hun.</string>
-    <string name="wikis_subscribed_badge">Wedi tanysgrifio</string>
     <string name="wikis_create_button">Creu wici</string>
     <string name="wikis_recommended_section">Wicis a argymhellir</string>
     <string name="wikis_subscribe_button">Tanysgrifio</string>
-    <string name="wikis_subscribed">Wedi tanysgrifio</string>
     <string name="wikis_unsubscribe_action">Dad-danysgrifio</string>
     <string name="wikis_unsubscribing">Yn dad-danysgrifio…</string>
     <string name="wikis_unsubscribe_confirm_title">Dad-danysgrifio</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Enw</string>
     <string name="wikis_create_privacy_label">Caniatáu i unrhyw un chwilio am wici</string>
     <string name="wikis_create_submit">Creu</string>
-    <string name="wikis_create_cancel">Canslo</string>
     <string name="wikis_comments_empty_title">Dim sylwadau eto</string>
     <string name="wikis_comments_empty_subtitle">Byddwch y cyntaf i sylwi ar y dudalen hon.</string>
-    <string name="wikis_comment_action_reply">Ymateb</string>
     <string name="wikis_comment_replying_to">Ateb i %1$s</string>
     <string name="wikis_comment_clear_reply">Canslo ateb</string>
-    <string name="wikis_comment_action_edit">Golygu</string>
     <string name="wikis_comment_action_delete">Dileu</string>
     <string name="wikis_comment_action_save">Cadw</string>
     <string name="wikis_comment_action_cancel">Canslo</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Tudalen newydd</string>
     <string name="wikis_editor_preview">Rhagolwg</string>
     <string name="wikis_editor_preview_untitled">Heb deitl</string>
-    <string name="wikis_editor_edit">Golygu</string>
     <string name="wikis_editor_insert">Mewnosod</string>
     <string name="wikis_editor_attachments">Atodiadau</string>
     <string name="wikis_editor_delete">Dileu tudalen</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Yn llwytho i fyny…</string>
     <string name="wikis_attachments_upload_failed">Methwyd llwytho ffeiliau</string>
     <string name="wikis_attachments_search_clear">Clirio chwiliad</string>
-    <string name="wikis_attachments_filter">Hidlo</string>
     <string name="wikis_attachments_filter_all">Pob ffeil</string>
     <string name="wikis_attachments_filter_images">Delweddau</string>
     <string name="wikis_attachments_filter_documents">Dogfennau</string>
-    <string name="wikis_attachments_sort">Trefnu</string>
     <string name="wikis_attachments_sort_date">Dyddiad</string>
     <string name="wikis_attachments_sort_name">Enw</string>
     <string name="wikis_attachments_sort_size">Maint</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Copïo dolen mewnosod</string>
     <string name="wikis_attachments_embed_copied">Copïwyd y ddolen mewnosod</string>
     <string name="wikis_attachments_download">Lawrlwytho</string>
-    <string name="wikis_attachments_copy_success">Copïwyd y ddolen mewnosod</string>
     <string name="wikis_attachments_delete">Dileu</string>
     <string name="wikis_attachments_delete_confirm_title">Dileu atodiad</string>
     <string name="wikis_attachments_delete_success">Atodiad wedi\'i ddileu</string>
     <string name="wikis_attachments_delete_failed">Methwyd dileu\'r atodiad</string>
-    <string name="wikis_attachments_open">Agor</string>
     <string name="wikis_attachments_empty_title">Dim atodiadau eto</string>
     <string name="wikis_attachments_no_results_title">Dim atodiadau yn cyfateb i\'ch chwiliad</string>
     <string name="wikis_attachments_no_results_description">Rhowch gynnig ar derm chwilio neu hidlydd gwahanol.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Ni ellir dadwneud y weithred hon. Bydd hyn yn dileu\'r wici a\'i holl gynnwys yn barhaol.</string>
     <string name="wikis_settings_delete_success">Wici wedi\'i ddileu</string>
     <string name="wikis_settings_delete_failed">Methwyd dileu\'r wici</string>
-    <string name="wikis_access_add_action">Ychwanegu</string>
     <string name="wikis_access_add_subject_label">Defnyddiwr</string>
     <string name="wikis_access_level_edit">Golygu a gweld</string>
     <string name="wikis_access_level_view">Gweld yn unig</string>
     <string name="wikis_access_level_none">Dim mynediad</string>
-    <string name="wikis_access_owner_label">Perchennog</string>
     <string name="wikis_access_tab_users">Defnyddwyr</string>
     <string name="wikis_access_tab_groups">Grwpiau</string>
     <string name="wikis_access_tab_other">Arall</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Methwyd dileu mynediad</string>
     <string name="wikis_replicas_empty_title">Dim copïau eto</string>
     <string name="wikis_replicas_empty_message">Pan fydd wicis eraill yn ailadrodd yr wici hwn, byddant yn ymddangos yma.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Byth</string>
     <string name="wikis_replicas_remove_confirm_title">Tynnu copi?</string>
     <string name="wikis_replicas_remove_confirm_action">Tynnu</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Nid yw’r dudalen “%1$s” yn bodoli eto.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Dolen y wici</string>
-    <string name="wikis_pageview_share_link_copied">Copïwyd dolen y dudalen i’r clipfwrdd</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Dolen tudalen Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Dolen</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Chwilio am wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Ydych chi’n siŵr eich bod am ddad-danysgrifio o %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Ni ellir cyrraedd y gweinydd hwnnw. Yn ceisio eto…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Chwilio yn ôl enw, ID, olion bysedd neu URL…</string>
     <string name="wikis_join_search_button">Chwilio am wicis…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Ysgrifennu ateb…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Ysgrifennwch eich cynnwys yma gan ddefnyddio Markdown…</string>
     <string name="wikis_insert_dialog_empty">Dim atodiadau eto. Uwchlwythwch ffeil i ddechrau.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Ni all y tag fod yn wag</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Methu copïo’r ddolen fewnosod</string>
     <string name="wikis_attachments_delete_confirm_message">Dileu “%1$s”? Ni ellir dadwneud hyn.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Tapiwch Uwchlwytho i ychwanegu ffeiliau at y dudalen hon.</string>
@@ -330,22 +305,6 @@
         <item quantity="few">+%d ateb arall</item>
         <item quantity="many">+%d ateb arall</item>
         <item quantity="other">+%d ateb arall</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="zero">Ailenwyd %1$d tudalen</item>
-        <item quantity="one">Ailenwyd %1$d dudalen</item>
-        <item quantity="two">Ailenwyd %1$d dudalen</item>
-        <item quantity="few">Ailenwyd %1$d thudalen</item>
-        <item quantity="many">Ailenwyd %1$d thudalen</item>
-        <item quantity="other">Ailenwyd %1$d tudalen</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="zero">diweddarwyd %1$d dolen</item>
-        <item quantity="one">diweddarwyd %1$d ddolen</item>
-        <item quantity="two">diweddarwyd %1$d ddolen</item>
-        <item quantity="few">diweddarwyd %1$d dolen</item>
-        <item quantity="many">diweddarwyd %1$d dolen</item>
-        <item quantity="other">diweddarwyd %1$d dolen</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="zero">%d tudalen</item>
@@ -398,4 +357,15 @@
     <string name="wikis_attachments_caption_save_failed">Methwyd cadw\'r capsiwn</string>
     <string name="wikis_attachments_upload_types">Ffeiliau a gefnogir: delweddau, PDF, DOC, DOCX, TXT, ac MD.</string>
     <string name="wikis_attachments_upload_limits">Gall lanlwythiadau mawr gael eu cyfyngu gan ffurfweddiad eich gweinydd neu ddirprwy.</string>
+    <string name="wikis_rss_replace">Newid</string>
+    <string name="wikis_rss_copied_new">URL RSS newydd wedi\'i gopïo i\'r clipfwrdd</string>
+    <string name="wikis_rss_exists">Mae\'r URL porthiant hwn eisoes wedi\'i gyhoeddi ac ni ellir ei ddangos eto.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="zero">Yn dangos y %1$d sylw cyntaf.</item>
+        <item quantity="one">Yn dangos y %1$d sylw cyntaf.</item>
+        <item quantity="two">Yn dangos y %1$d sylw cyntaf.</item>
+        <item quantity="few">Yn dangos y %1$d sylw cyntaf.</item>
+        <item quantity="many">Yn dangos y %1$d sylw cyntaf.</item>
+        <item quantity="other">Yn dangos y %1$d sylw cyntaf.</item>
+    </plurals>
 </resources>

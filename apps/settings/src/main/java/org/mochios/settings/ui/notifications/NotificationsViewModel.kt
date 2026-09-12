@@ -49,7 +49,7 @@ data class NotificationsUiState(
      * row, so such a notification cannot be recategorised.
      */
     fun topicFor(notification: MochiNotification): NotifTopic? = topics.firstOrNull {
-        it.app == notification.app &&
+        it.app.id == notification.app &&
             it.topic == notification.topic &&
             it.`object` == notification.`object`
     }
@@ -159,7 +159,7 @@ class NotificationsViewModel @Inject constructor(
             )
             try {
                 prefs.setTopicCategory(
-                    app = topic.app,
+                    app = topic.app.id,
                     topic = topic.topic,
                     obj = topic.`object`,
                     category = categoryId ?: "",

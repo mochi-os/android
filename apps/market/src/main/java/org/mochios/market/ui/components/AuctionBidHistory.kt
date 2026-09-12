@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.market.R
-import org.mochios.market.lib.formatFingerprint
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
@@ -61,7 +60,11 @@ fun AuctionBidHistory(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Text(
-                    text = formatFingerprint(bid.bidder.orEmpty()),
+                    text = if (bid.mine == true) {
+                        stringResource(R.string.market_bid_dialog_amount_label)
+                    } else {
+                        ""
+                    },
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,

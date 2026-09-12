@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">ಪದಗಳು</string>
     <string name="words_list_title">ಪದಗಳು</string>
     <string name="words_list_menu">ಮೆನು</string>
-    <string name="words_list_new">ಹೊಸ ಆಟ</string>
     <string name="words_list_logout">ಲಾಗ್ ಔಟ್</string>
-    <string name="words_list_empty_title">ಇನ್ನೂ ಯಾವುದೇ ಆಟಗಳಿಲ್ಲ</string>
-    <string name="words_sidebar_header">ಪದಗಳು</string>
     <string name="words_sidebar_completed">ಪೂರ್ಣಗೊಂಡಿದೆ</string>
     <string name="words_sidebar_new_game">ಹೊಸ ಆಟ</string>
     <string name="words_new_game_title">ಹೊಸ ಆಟ</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">ಮರು-ಪಂದ್ಯ</string>
     <string name="words_detail_action_delete">ಆಟ ಅಳಿಸಿ</string>
     <string name="words_detail_chat_title">ಚಾಟ್</string>
-    <string name="words_detail_invalid_move">ಅಮಾನ್ಯ ಚಲನೆ</string>
     <string name="words_detail_recall">ಮರು ಕರೆ</string>
     <string name="words_detail_submit">ಸಲ್ಲಿಸಿ</string>
     <string name="words_detail_cancel">ರದ್ದುಮಾಡಿ</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">ಅಕ್ಷರವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="words_detail_resign_title">ಆಟಕ್ಕೆ ರಾಜೀನಾಮೆ ನೀಡಬೇಕೆ?</string>
     <string name="words_detail_resign_message">ನೀವು ಖಚಿತವಾಗಿ ರಾಜೀನಾಮೆ ನೀಡಲು ಬಯಸುತ್ತೀರಾ?</string>
-    <string name="words_detail_failed_move">ಚಲನೆ ಸಲ್ಲಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="words_detail_failed_pass">ಪಾಸ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="words_detail_failed_exchange">ವಿನಿಮಯ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="words_detail_failed_resign">ರಾಜೀನಾಮೆ ನೀಡಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="words_detail_failed_rematch">ಮರು-ಪಂದ್ಯ ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="words_detail_failed_delete">ಆಟ ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="words_detail_game_deleted">ಆಟ ಅಳಿಸಲಾಗಿದೆ</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words ಸರದಿಗಳು, ವಿನಿಮಯಗಳು ಮತ್ತು ಆಟದ ಫಲಿತಾಂಶಗಳ ಕುರಿತ ಅಧಿಸೂಚನೆಗಳು.</string>
-    <string name="words_list_empty_subtitle">ನಿಮ್ಮ ಮೊದಲ ಆಟ ಪ್ರಾರಂಭಿಸಲು + ಬಟನ್ ಒತ್ತಿ.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">ಇನ್ನೂ ಆಟಗಳಿಲ್ಲ.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">ಆಡಲು ಪ್ರಾರಂಭಿಸಲು People ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಸ್ನೇಹಿತರನ್ನು ಸೇರಿಸಿ.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">ಆಟದ ವಿವರಗಳು ಶೀಘ್ರದಲ್ಲೇ</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

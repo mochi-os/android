@@ -5,14 +5,11 @@
     <string name="wikis_sidebar_find">Finn wiki-ar</string>
     <string name="wikis_sidebar_create">Opprett wiki</string>
     <string name="wikis_pageview_title_fallback">Side</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Tilbake</string>
     <string name="wikis_pageview_page_actions">Sidehandlingar</string>
     <string name="wikis_pageview_toc">På denne sida</string>
     <string name="wikis_pageview_not_found_title">Side ikkje funne</string>
     <string name="wikis_pageview_create_this_page">Opprett denne sida</string>
     <string name="wikis_pageview_rss_copied">RSS-URL kopiert til utklippstavla</string>
-    <string name="wikis_pageview_rss_failed">Klarte ikkje henta RSS-token</string>
     <string name="wikis_page_action_section_page">Side</string>
     <string name="wikis_page_action_edit">Rediger</string>
     <string name="wikis_page_action_rename">Døyp om</string>
@@ -28,11 +25,9 @@
     <string name="wikis_title">Wikiar</string>
     <string name="wikis_empty_title">Start din første wiki</string>
     <string name="wikis_empty_subtitle">Søk etter ein wiki å abonnera på, eller opprett ein for å publisera di eiga dokumentasjon.</string>
-    <string name="wikis_subscribed_badge">Abonnerer</string>
     <string name="wikis_create_button">Opprett wiki</string>
     <string name="wikis_recommended_section">Tilrådde wikiar</string>
     <string name="wikis_subscribe_button">Abonner</string>
-    <string name="wikis_subscribed">Abonnerer</string>
     <string name="wikis_unsubscribe_action">Sei opp abonnement</string>
     <string name="wikis_unsubscribing">Seier opp abonnement…</string>
     <string name="wikis_unsubscribe_confirm_title">Sei opp abonnement</string>
@@ -57,13 +52,10 @@
     <string name="wikis_create_name_label">Namn</string>
     <string name="wikis_create_privacy_label">Tillat alle å søkje etter wiki</string>
     <string name="wikis_create_submit">Opprett</string>
-    <string name="wikis_create_cancel">Avbryt</string>
     <string name="wikis_comments_empty_title">Ingen kommentarar enno</string>
     <string name="wikis_comments_empty_subtitle">Ver den fyrste til å kommentere denne sida.</string>
-    <string name="wikis_comment_action_reply">Svar</string>
     <string name="wikis_comment_replying_to">Svarar %1$s</string>
     <string name="wikis_comment_clear_reply">Avbryt svar</string>
-    <string name="wikis_comment_action_edit">Rediger</string>
     <string name="wikis_comment_action_delete">Slett</string>
     <string name="wikis_comment_action_save">Lagre</string>
     <string name="wikis_comment_action_cancel">Avbryt</string>
@@ -75,7 +67,6 @@
     <string name="wikis_editor_title_new">Ny side</string>
     <string name="wikis_editor_preview">Førehandsvising</string>
     <string name="wikis_editor_preview_untitled">Utan tittel</string>
-    <string name="wikis_editor_edit">Rediger</string>
     <string name="wikis_editor_insert">Set inn</string>
     <string name="wikis_editor_attachments">Vedlegg</string>
     <string name="wikis_editor_delete">Slett side</string>
@@ -155,11 +146,9 @@
     <string name="wikis_attachments_uploading">Lastar opp…</string>
     <string name="wikis_attachments_upload_failed">Klarte ikkje lasta opp filer</string>
     <string name="wikis_attachments_search_clear">Tøm søk</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Alle filer</string>
     <string name="wikis_attachments_filter_images">Bilete</string>
     <string name="wikis_attachments_filter_documents">Dokument</string>
-    <string name="wikis_attachments_sort">Sorter</string>
     <string name="wikis_attachments_sort_date">Dato</string>
     <string name="wikis_attachments_sort_name">Namn</string>
     <string name="wikis_attachments_sort_size">Storleik</string>
@@ -168,12 +157,10 @@
     <string name="wikis_attachments_copy_embed">Kopier innebyggingslenkje</string>
     <string name="wikis_attachments_embed_copied">Innebyggingslenke kopiert</string>
     <string name="wikis_attachments_download">Last ned</string>
-    <string name="wikis_attachments_copy_success">Innebyggingslenke kopiert</string>
     <string name="wikis_attachments_delete">Slett</string>
     <string name="wikis_attachments_delete_confirm_title">Slett vedlegg</string>
     <string name="wikis_attachments_delete_success">Vedlegg sletta</string>
     <string name="wikis_attachments_delete_failed">Klarte ikkje sletta vedlegg</string>
-    <string name="wikis_attachments_open">Opna</string>
     <string name="wikis_attachments_empty_title">Ingen vedlegg enno</string>
     <string name="wikis_attachments_no_results_title">Ingen vedlegg samsvarar med søket ditt</string>
     <string name="wikis_attachments_no_results_description">Prøv eit anna søkjeord eller filter.</string>
@@ -207,12 +194,10 @@
     <string name="wikis_settings_delete_confirm_message">Denne handlinga kan ikkje gjerast om. Dette vil sletta wiki-en og alt innhald for godt.</string>
     <string name="wikis_settings_delete_success">Wiki sletta</string>
     <string name="wikis_settings_delete_failed">Klarte ikkje sletta wiki</string>
-    <string name="wikis_access_add_action">Legg til</string>
     <string name="wikis_access_add_subject_label">Brukar</string>
     <string name="wikis_access_level_edit">Rediger og vis</string>
     <string name="wikis_access_level_view">Berre lese</string>
     <string name="wikis_access_level_none">Ingen tilgang</string>
-    <string name="wikis_access_owner_label">Eigar</string>
     <string name="wikis_access_tab_users">Brukarar</string>
     <string name="wikis_access_tab_groups">Grupper</string>
     <string name="wikis_access_tab_other">Anna</string>
@@ -226,7 +211,6 @@
     <string name="wikis_access_revoke_failed">Klarte ikkje fjerna tilgang</string>
     <string name="wikis_replicas_empty_title">Ingen replikaer enno</string>
     <string name="wikis_replicas_empty_message">Når andre wikiar replikerer denne wikien, vil dei dukke opp her.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Aldri</string>
     <string name="wikis_replicas_remove_confirm_title">Fjern replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Fjern</string>
@@ -239,19 +223,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Oppdatert %1$s</string>
     <string name="wikis_pageview_not_found_description">Sida „%1$s\" finst ikkje enno.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki-lenkje</string>
-    <string name="wikis_pageview_share_link_copied">Lenkje til sida kopiert til utklippstavla</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Lenkje til wikiside</string>
-    <string name="wikis_pageview_loading">Lastar side…</string>
     <string name="wikis_page_action_share">Lenkje</string>
     <string name="wikis_open_sidebar">Opne sidefelt</string>
-    <string name="wikis_owned_badge">Eigd</string>
     <string name="wikis_search_placeholder">Søk etter wiki…</string>
-    <string name="wikis_subscribing">Abonnerer…</string>
     <string name="wikis_unsubscribe_confirm_message">Er du sikker på at du vil seie opp abonnementet på %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Den tenaren er ikkje tilgjengeleg. Prøver igjen…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Søk etter namn, ID, fingeravtrykk eller URL…</string>
     <string name="wikis_join_search_button">Søk etter wiki…</string>
@@ -262,7 +239,6 @@
     <string name="wikis_comment_form_placeholder_reply">Skriv eit svar…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Fjern vedlegg</string>
-    <string name="wikis_comment_collapse_toggle">Skjul tråd</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skriv innhaldet ditt her med Markdown…</string>
     <string name="wikis_insert_dialog_empty">Ingen vedlegg enno. Last opp ei fil for å kome i gang.</string>
@@ -291,7 +267,6 @@
     <string name="wikis_tag_dialog_title">Legg til etikett</string>
     <string name="wikis_tag_dialog_empty">Etikett kan ikkje vere tom</string>
     <string name="wikis_attachments_search_placeholder">Søk vedlegg…</string>
-    <string name="wikis_attachments_copy_failed">Kunne ikkje kopiere innebygd lenkje</string>
     <string name="wikis_attachments_delete_confirm_message">Slette „%1$s\"? Dette kan ikkje angrast.</string>
     <string name="wikis_attachments_downloading">Lastar ned…</string>
     <string name="wikis_attachments_empty_description">Trykk Last opp for å leggje til filer på denne sida.</string>
@@ -314,14 +289,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d svar</item>
         <item quantity="other">+%d fleire svar</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Omdøypte %1$d side</item>
-        <item quantity="other">Omdøypte %1$d sider</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">oppdatert %1$d lenkje</item>
-        <item quantity="other">oppdaterte %1$d lenkjer</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d side</item>
@@ -355,4 +322,11 @@
     <string name="wikis_attachments_caption_save_failed">Klarte ikkje lagre bileteksten</string>
     <string name="wikis_attachments_upload_types">Støtta filer: bilete, PDF, DOC, DOCX, TXT og MD.</string>
     <string name="wikis_attachments_upload_limits">Store opplastingar kan vere avgrensa av tenaren din eller proxy-oppsettet.</string>
+    <string name="wikis_rss_replace">Erstatt</string>
+    <string name="wikis_rss_copied_new">Ny RSS-URL kopiert til utklippstavla</string>
+    <string name="wikis_rss_exists">Denne straum-URL-en er allereie utferda og kan ikkje visast igjen.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Viser den første %1$d kommentaren.</item>
+        <item quantity="other">Viser dei første %1$d kommentarane.</item>
+    </plurals>
 </resources>

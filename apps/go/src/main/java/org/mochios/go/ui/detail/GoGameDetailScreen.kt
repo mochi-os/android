@@ -89,6 +89,7 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.go.R
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.go.engine.Score
 import org.mochios.go.engine.Stone
 import org.mochios.go.model.Game
@@ -130,6 +131,8 @@ fun GoGameDetailScreen(
     val errResign = stringResource(R.string.go_error_resign_failed)
     val errDrawOffer = stringResource(R.string.go_error_draw_offer_failed)
     val errDrawAccept = stringResource(R.string.go_error_draw_accept_failed)
+    val errScoreAccept = stringResource(R.string.go_error_score_accept_failed)
+    val errScoreResume = stringResource(R.string.go_error_score_resume_failed)
     val errDrawDecline = stringResource(R.string.go_error_draw_decline_failed)
     val errRematch = stringResource(R.string.go_error_rematch_failed)
     val errDelete = stringResource(R.string.go_error_delete_failed)
@@ -241,9 +244,12 @@ fun GoGameDetailScreen(
                             title = title,
                             opponentFingerprint = opponentFingerprint.takeIf { it.isNotBlank() },
                             opponentName = opponentName,
-                            avatarUrl = opponentFingerprint
+                            // The game's own proxy: a cross-app request to
+                            // the people app carries this app's token and is
+                            // refused, so it never resolved a picture.
+                            avatarUrl = game.opponentId(state.myIdentity)
                                 .takeIf { it.isNotBlank() }
-                                ?.let { id -> "/people/$id/-/avatar" },
+                                ?.let { id -> "/go/${game.id}/-/user/$id/asset/avatar" },
                         )
                     } else {
                         Text(stringResource(R.string.go_app_title))
@@ -356,6 +362,21 @@ fun GoGameDetailScreen(
                                         label = game.capturesWhite.toString(),
                                         srLabel = stringResource(R.string.go_captures_white_sr),
                                     )
+                                }
+                            }
+
+                            val scoring = scoringBanner(
+                                game = game,
+                                myIdentity = state.myIdentity,
+                                opponentName = opponentName,
+                                isAccepting = state.isScoreAccepting,
+                                isResuming = state.isScoreResuming,
+                                onAccept = { viewModel.acceptScore(errScoreAccept) },
+                                onResume = { viewModel.resumeScoring(errScoreResume) },
+                            )
+                            if (scoring != null) {
+                                Box(modifier = Modifier.padding(horizontal = 8.dp)) {
+                                    scoring()
                                 }
                             }
 
@@ -646,6 +667,7 @@ private fun goStatusText(
     resignedBy: String?,
 ): String {
     val opponentName = game.opponentName(myIdentity)
+    val format = LocalFormat.current
     return when (game.status) {
         "finished" -> when {
             score?.winner != null -> stringResource(
@@ -655,8 +677,8 @@ private fun goStatusText(
                 } else {
                     stringResource(R.string.go_color_white)
                 },
-                formatScore(score.black),
-                formatScore(score.white),
+                format.formatNumber(score.black),
+                format.formatNumber(score.white),
             )
             // A tie now records status "draw", but a peer on an older build —
             // or the web until its engine is fixed — still writes "finished"
@@ -670,6 +692,7 @@ private fun goStatusText(
             else -> stringResource(R.string.go_status_game_over)
         }
         "draw" -> stringResource(R.string.go_status_draw_text)
+        "scoring" -> stringResource(R.string.go_status_scoring)
         "resigned" -> when {
             resignedBy == myIdentity ->
                 stringResource(R.string.go_status_resigned_self, opponentName)
@@ -685,11 +708,6 @@ private fun goStatusText(
             stringResource(R.string.go_status_opponent_move, opponentName)
         }
     }
-}
-
-private fun formatScore(value: Double): String {
-    val whole = value.toLong()
-    return if (whole.toDouble() == value) whole.toString() else value.toString()
 }
 
 // ------------------------------------------------------------------
@@ -796,6 +814,87 @@ private fun DefaultSystemMessage(message: GameChatMessage) {
 // ------------------------------------------------------------------
 // Draw-offer banner
 // ------------------------------------------------------------------
+
+/**
+ * Banner while the game is being scored: a waiting note once I have accepted,
+ * otherwise the proposed score with Accept and Resume. Null unless the game is
+ * in `scoring`.
+ */
+@Composable
+private fun scoringBanner(
+    game: Game,
+    myIdentity: String,
+    opponentName: String,
+    isAccepting: Boolean,
+    isResuming: Boolean,
+    onAccept: () -> Unit,
+    onResume: () -> Unit,
+): (@Composable () -> Unit)? {
+    if (game.status != "scoring") return null
+    val format = LocalFormat.current
+    val black = format.formatNumber(game.scoreBlack ?: 0.0)
+    val white = format.formatNumber(game.scoreWhite ?: 0.0)
+    return {
+        if (game.scoring == myIdentity) {
+            Text(
+                text = stringResource(R.string.go_score_waiting, opponentName),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        } else {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    // The opponent having accepted already changes what this
+                    // player's own Accept does: it ends the game.
+                    text = if (game.scoring.isNullOrBlank()) {
+                        stringResource(R.string.go_score_proposed, black, white)
+                    } else {
+                        stringResource(R.string.go_score_opponent_accepted, black, white)
+                    },
+                    style = MaterialTheme.typography.bodySmall,
+                    fontWeight = FontWeight.Medium,
+                    modifier = Modifier.weight(1f),
+                )
+                MochiOutlinedButton(
+                    onClick = onResume,
+                    enabled = !isAccepting && !isResuming,
+                    shape = RoundedCornerShape(8.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                ) {
+                    if (isResuming) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(14.dp),
+                            strokeWidth = 1.5.dp,
+                        )
+                    } else {
+                        Text(stringResource(R.string.go_score_resume))
+                    }
+                }
+                MochiButton(
+                    onClick = onAccept,
+                    enabled = !isAccepting && !isResuming,
+                    shape = RoundedCornerShape(8.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                ) {
+                    if (isAccepting) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(14.dp),
+                            strokeWidth = 1.5.dp,
+                        )
+                    } else {
+                        Text(stringResource(R.string.go_score_accept))
+                    }
+                }
+            }
+        }
+    }
+}
 
 /**
  * Banner below the status line: a waiting note when I offered, Accept / Decline

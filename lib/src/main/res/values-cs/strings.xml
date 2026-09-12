@@ -5,10 +5,7 @@
     <string name="auth_email">E-mail</string>
     <string name="auth_continue">Pokračovat</string>
     <string name="auth_verification_code">Ověřovací kód</string>
-    <string name="auth_verify">Ověřit</string>
-    <string name="auth_authenticator_app">Autentizační aplikace</string>
     <string name="auth_email_code">E-mailový kód</string>
-    <string name="auth_authenticator_code">Autentizační kód</string>
     <string name="auth_recovery_code">Obnovovací kód</string>
     <string name="auth_name">Název</string>
     <string name="auth_create">Vytvořit</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Kopírovat</string>
     <string name="common_copied">Zkopírováno do schránky</string>
     <string name="comment_edited">(upraveno)</string>
-    <string name="comment_edit_placeholder">Upravit komentář</string>
     <string name="comment_reply">Odpovědět</string>
-    <string name="comment_reply_placeholder">Odpovědět</string>
-    <string name="comment_send_reply">Odeslat odpověď</string>
     <string name="person_picker_search">Hledat uživatele</string>
     <string name="place_picker_no_results">Žádná místa nenalezena</string>
-    <string name="discovery_results">Výsledky</string>
     <string name="discovery_recommended">Doporučené</string>
-    <string name="discovery_subscribed">Odebíráno</string>
     <string name="access_add_rule">Přidat pravidlo</string>
     <string name="access_owner">Vlastník</string>
     <string name="access_revoke">Odvolat</string>
-    <string name="access_level">Úroveň přístupu</string>
     <string name="access_level_comment">Komentář</string>
     <string name="access_level_view">Zobrazit</string>
     <string name="access_level_none">Žádné</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">Líbí se</string>
     <string name="reaction_dislike">Nelíbí se</string>
     <string name="reaction_laugh">Smích</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Vše</string>
     <string name="notifications_mark_all_read">Označit vše jako přečtené</string>
     <string name="notifications_clear_all">Vymazat vše</string>
-    <string name="notifications_loading">Načítám…</string>
     <string name="settings_title">Nastavení</string>
-    <string name="settings_open">Nastavení</string>
     <string name="settings_appearance">Vzhled</string>
     <string name="settings_appearance_light">Světlý</string>
     <string name="settings_appearance_dark">Tmavá</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Pozadí</string>
     <string name="settings_background_theme">Z motivu</string>
     <string name="settings_background_off">Žádné</string>
-    <string name="profile_title">Profil</string>
-    <string name="profile_open">Profil</string>
-    <string name="profile_display_name">Zobrazované jméno</string>
-    <string name="profile_save_name">Uložit název</string>
-    <string name="profile_privacy">Soukromí</string>
-    <string name="profile_privacy_public">Veřejné</string>
-    <string name="profile_privacy_private">Soukromé</string>
-    <string name="profile_fingerprint">Otisk</string>
     <string name="game_chat_empty">Zatím žádné zprávy</string>
     <string name="game_chat_input_placeholder">Napište zprávu…</string>
     <string name="game_chat_send">Odeslat zprávu</string>
     <string name="game_chat_subject_you">Vy</string>
 
     <string name="common_not_saved">Neuloženo</string>
-    <string name="common_save_failed">Vaše změny se nepodařilo uložit.</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Nelze se připojit. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">Nenalezeno</string>
     <string name="error_server">Chyba serveru (%1$d). Zkuste to prosím později.</string>
     <string name="error_unexpected">Došlo k neočekávané chybě</string>
-    <string name="error_request_failed">Požadavek selhal</string>
     <string name="error_enter_server_url">Zadejte prosím adresu URL serveru</string>
     <string name="error_enter_email">Zadejte prosím svůj e-mail</string>
     <string name="error_enter_name">Zadejte prosím jméno</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">Adresa URL serveru</string>
     <string name="auth_connect">Připojit</string>
     <string name="auth_sign_in">Přihlásit se</string>
-    <string name="auth_sign_in_with_passkey">Přihlásit se pomocí přístupového klíče</string>
-    <string name="auth_sign_in_with_email_code">Přihlásit se pomocí e-mailového kódu</string>
-    <string name="auth_use_recovery_code">Použít kód pro obnovení</string>
-    <string name="auth_back_to_sign_in">Zpět na přihlášení</string>
-    <string name="auth_send_code">Odeslat kód</string>
     <string name="auth_check_email">Zkontrolujte si e-mail s ověřovacím kódem</string>
-    <string name="auth_six_digit_code">Šestimístný kód</string>
     <string name="auth_mfa_title">Vícefaktorové ověření</string>
     <string name="auth_mfa_subtitle">Dokončete zbývající kroky ověření</string>
     <string name="auth_recover_account">Obnovit účet</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">Přihlásit se jinak</string>
     <string name="bootstrap_choose_account">Vyberte účet</string>
     <string name="bootstrap_sign_in_different_server">Přihlásit se k jinému serveru</string>
-    <string name="common_or">nebo</string>
-    <string name="common_change">Změnit</string>
     <string name="common_retry">Zkusit znovu</string>
     <string name="common_more_options">Další možnosti</string>
     <string name="common_collapse">Sbalit</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">Název místa</string>
     <string name="place_origin">Původ</string>
     <string name="place_destination">Cíl</string>
-    <string name="discovery_search_placeholder">Hledat %1$ss</string>
-    <string name="discovery_no_results">Žádné výsledky pro %1$ss</string>
     <string name="discovery_no_results_hint">Zkuste upravit hledaný výraz</string>
-    <string name="discovery_no_recommendations">Žádná doporučení</string>
-    <string name="discovery_search_hint">Zkuste hledat %1$s k odběru</string>
     <string name="access_no_rules">Žádná pravidla přístupu</string>
-    <string name="access_no_rules_subtitle">Přidejte pravidla pro řízení přístupu k tomuto zdroji</string>
     <string name="access_add_rule_title">Přidat pravidlo přístupu</string>
     <string name="access_level_manage">Spravovat</string>
     <string name="access_level_react">Reagovat</string>
     <string name="notifications_clear">Vymazat oznámení</string>
-    <string name="banner_description">Markdown zobrazený v horní části tohoto zobrazení.</string>
-    <string name="banner_placeholder">Vítejte…</string>
-    <string name="banner_save">Uložit banner</string>
-    <string name="banner_clear">Vymazat banner</string>
     <string name="entity_avatar_alt">Avatar uživatele %1$s</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$d d</string>
     <string name="format_time_weeks_short">%1$d týd</string>
     <string name="format_time_months_short">%1$d měs</string>
-    <string name="format_time_years_short">%1$d r</string>
     <string name="reaction_add">Přidat reakci</string>
     <string name="push_service_channel">Oznámení Mochi</string>
     <string name="push_service_channel_description">Udržuje Mochi připojené pro příjem oznámení</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">Stažení se nezdařilo</string>
     <string name="notifications_clear_all_title">Vymazat všechna oznámení?</string>
     <string name="notifications_clear_all_message">Tím se odstraní všechna oznámení. Nelze je obnovit.</string>
-    <string name="notifications_count_n">%1$d nových</string>
     <string name="settings_value_auto">Automaticky</string>
     <string name="settings_value_theme">Výchozí podle motivu</string>
     <string name="settings_radius">Zaoblení rohů</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">Relativní</string>
     <string name="settings_timestamp_absolute">Absolutní</string>
     <string name="settings_units_usa">USA</string>
-    <string name="profile_privacy_description">Zda vás ostatní mohou najít v adresáři.</string>
     <string name="game_chat_load_more">Načíst starší zprávy</string>
     <string name="game_chat_move_played">%1$s zahrál %2$s</string>
     <string name="stepup_title">Potvrďte, že jste to vy</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">Zadejte kód z vašeho e-mailu</string>
     <string name="stepup_totp_label">Autentizační kód</string>
     <string name="stepup_totp_placeholder">Zadejte kód z autentizační aplikace</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">Použijte svůj přístupový klíč</string>
     <string name="stepup_send_email">Odeslat e-mail</string>
     <string name="stepup_resend_email">Odeslat e-mail znovu</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">Anonymní</string>
     <string name="tags_label">Štítky</string>
     <string name="tags_add">Přidat štítek</string>
-    <string name="tags_label_field">Název štítku</string>
     <string name="tags_interest_up">Zobrazit více podobného</string>
     <string name="tags_interest_down">Zobrazit méně podobného</string>
     <string name="tags_interest_clear">Přestat zobrazovat</string>
@@ -310,12 +266,6 @@
     <string name="person_picker_directory">Adresář</string>
     <string name="person_picker_no_people">Žádné osoby</string>
     <string name="person_picker_project_members">Členové projektu</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d odběratel</item>
-        <item quantity="few">%1$d odběratelé</item>
-        <item quantity="many">%1$d odběratele</item>
-        <item quantity="other">%1$d odběratelů</item>
-    </plurals>
     <string name="account_token_label">Relace Mochi</string>
     <string name="attachment_caption">Popisek</string>
     <string name="attachment_caption_add">Přidat popisek</string>
@@ -358,4 +308,8 @@
     <string name="settings_card_theme">Z motivu</string>
     <string name="settings_card_flat">Plochá</string>
     <string name="settings_card_raised">Vyvýšený</string>
+    <string name="error_server_https">Adresa serveru musí začínat https://</string>
+    <string name="device_name_fallback">Mobilní zařízení</string>
+    <string name="account_error_token_type">Nepodporovaný typ tokenu</string>
+    <string name="account_error_caller">Volající nemá oprávnění</string>
 </resources>

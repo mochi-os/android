@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Το παιχνίδι διαγράφηκε</string>
     <string name="go_new_game_add_friends">Προσθήκη φίλων</string>
     <string name="go_new_game_board_size_label">Μέγεθος πίνακα</string>
-    <string name="go_new_game_cancel">Ακύρωση</string>
     <string name="go_new_game_friend_label">Αντίπαλος</string>
     <string name="go_new_game_komi_field_label">Κόμι</string>
     <string name="go_new_game_komi_label">Κόμι</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Παραίτηση από το παιχνίδι;</string>
     <string name="go_sidebar_completed">Ολοκληρώθηκε</string>
     <string name="go_sidebar_new_game">Νέο παιχνίδι</string>
-    <string name="go_status_active">Ενεργό</string>
     <string name="go_status_draw">Ισοπαλία</string>
     <string name="go_status_draw_text">Ισοπαλία</string>
     <string name="go_status_game_over">Τέλος παιχνιδιού</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
     <string name="go_sidebar_active">Ενεργές παρτίδες</string>
     <string name="go_empty_active">Δεν υπάρχουν ακόμη ενεργές παρτίδες.</string>
-    <string name="go_empty_completed">Δεν υπάρχουν ακόμη ολοκληρωμένες παρτίδες.</string>
-    <string name="go_status_finished">Ολοκληρώθηκε</string>
     <string name="go_status_resigned">Παραιτήθηκε</string>
-    <string name="go_card_vs">κατά %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Νέα παρτίδα Go</string>
     <string name="go_new_game_no_friends">Πρέπει να προσθέσετε έναν φίλο πριν μπορέσετε να ξεκινήσετε μια παρτίδα.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Πόντοι που προστίθενται στο σκορ του Λευκού για να αντισταθμίσουν ότι ο Μαύρος ξεκινάει πρώτος</string>
-    <string name="go_new_game_create_error">Η έναρξη της παρτίδας απέτυχε</string>
 
     <string name="go_board_a11y">Πίνακας Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Ταμπλό Go %1$d×%1$d, σειρά σας να τοποθετήσετε μαύρο πιόνι</string>
     <string name="go_board_a11y_turn_white">Ταμπλό Go %1$d×%1$d, σειρά σας να τοποθετήσετε λευκό πιόνι</string>
+    <string name="go_status_scoring">Καταμέτρηση — συμφωνήστε στο σκορ ή συνεχίστε το παιχνίδι</string>
+    <string name="go_score_proposed">Προτεινόμενη βαθμολογία: μαύρα %1$s, λευκά %2$s</string>
+    <string name="go_score_opponent_accepted">Ο αντίπαλός σας αποδέχεται αυτή τη βαθμολογία: μαύρα %1$s, λευκά %2$s</string>
+    <string name="go_score_waiting">Η βαθμολογία έγινε δεκτή — αναμονή για %1$s</string>
+    <string name="go_score_accept">Αποδοχή βαθμολογίας</string>
+    <string name="go_score_resume">Συνέχιση παιχνιδιού</string>
+    <string name="go_error_score_resume_failed">Αποτυχία συνέχισης του παιχνιδιού</string>
+    <string name="go_error_score_accept_failed">Αποτυχία αποδοχής της βαθμολογίας</string>
 </resources>

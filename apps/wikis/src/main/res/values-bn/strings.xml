@@ -5,14 +5,11 @@
     <string name="wikis_sidebar_find">উইকি খুঁজুন</string>
     <string name="wikis_sidebar_create">wiki তৈরি করুন</string>
     <string name="wikis_pageview_title_fallback">পৃষ্ঠা</string>
-    <string name="wikis_pageview_wiki_fallback">উইকি</string>
-    <string name="wikis_pageview_back">ফিরে যান</string>
     <string name="wikis_pageview_page_actions">পৃষ্ঠা অ্যাকশন</string>
     <string name="wikis_pageview_toc">এই পৃষ্ঠায়</string>
     <string name="wikis_pageview_not_found_title">পৃষ্ঠা পাওয়া যায়নি</string>
     <string name="wikis_pageview_create_this_page">এই পেজ তৈরি করুন</string>
     <string name="wikis_pageview_rss_copied">RSS URL ক্লিপবোর্ডে কপি করা হয়েছে</string>
-    <string name="wikis_pageview_rss_failed">RSS টোকেন পেতে ব্যর্থ</string>
     <string name="wikis_page_action_section_page">পৃষ্ঠা</string>
     <string name="wikis_page_action_edit">সম্পাদনা</string>
     <string name="wikis_page_action_rename">পুনঃনামকরণ করুন</string>
@@ -28,11 +25,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">আপনার প্রথম wiki শুরু করুন</string>
     <string name="wikis_empty_subtitle">সাবস্ক্রাইব করার জন্য একটি উইকি অনুসন্ধান করুন, অথবা আপনার নিজের ডকুমেন্টেশন প্রকাশ করার জন্য একটি তৈরি করুন।</string>
-    <string name="wikis_subscribed_badge">সাবস্ক্রাইব করা হয়েছে</string>
     <string name="wikis_create_button">wiki তৈরি করুন</string>
     <string name="wikis_recommended_section">সুপারিশকৃত উইকি</string>
     <string name="wikis_subscribe_button">সাবস্ক্রাইব করুন</string>
-    <string name="wikis_subscribed">সাবস্ক্রাইব করা হয়েছে</string>
     <string name="wikis_unsubscribe_action">আনসাবস্ক্রাইব করুন</string>
     <string name="wikis_unsubscribing">আনসাবস্ক্রাইব করা হচ্ছে…</string>
     <string name="wikis_unsubscribe_confirm_title">আনসাবস্ক্রাইব করুন</string>
@@ -57,13 +52,10 @@
     <string name="wikis_create_name_label">নাম</string>
     <string name="wikis_create_privacy_label">যেকেউ wiki খুঁজতে অনুমতি দিন</string>
     <string name="wikis_create_submit">তৈরি করুন</string>
-    <string name="wikis_create_cancel">বাতিল করুন</string>
     <string name="wikis_comments_empty_title">এখনও কোনো মন্তব্য নেই</string>
     <string name="wikis_comments_empty_subtitle">এই পেজে প্রথম মন্তব্য করুন।</string>
-    <string name="wikis_comment_action_reply">উত্তর দিন</string>
     <string name="wikis_comment_replying_to">%1$s-কে উত্তর দিচ্ছেন</string>
     <string name="wikis_comment_clear_reply">উত্তর বাতিল করুন</string>
-    <string name="wikis_comment_action_edit">সম্পাদনা</string>
     <string name="wikis_comment_action_delete">মুছুন</string>
     <string name="wikis_comment_action_save">সংরক্ষণ করুন</string>
     <string name="wikis_comment_action_cancel">বাতিল করুন</string>
@@ -75,7 +67,6 @@
     <string name="wikis_editor_title_new">নতুন পৃষ্ঠা</string>
     <string name="wikis_editor_preview">প্রিভিউ</string>
     <string name="wikis_editor_preview_untitled">শিরোনামহীন</string>
-    <string name="wikis_editor_edit">সম্পাদনা</string>
     <string name="wikis_editor_insert">সন্নিবেশ করুন</string>
     <string name="wikis_editor_attachments">অ্যাটাচমেন্ট</string>
     <string name="wikis_editor_delete">পেজ মুছুন</string>
@@ -155,11 +146,9 @@
     <string name="wikis_attachments_uploading">আপলোড করা হচ্ছে…</string>
     <string name="wikis_attachments_upload_failed">ফাইল আপলোড করতে ব্যর্থ</string>
     <string name="wikis_attachments_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
-    <string name="wikis_attachments_filter">ফিল্টার</string>
     <string name="wikis_attachments_filter_all">সব ফাইল</string>
     <string name="wikis_attachments_filter_images">ছবিসমূহ</string>
     <string name="wikis_attachments_filter_documents">নথিপত্র</string>
-    <string name="wikis_attachments_sort">সাজান</string>
     <string name="wikis_attachments_sort_date">তারিখ</string>
     <string name="wikis_attachments_sort_name">নাম</string>
     <string name="wikis_attachments_sort_size">আকার</string>
@@ -168,12 +157,10 @@
     <string name="wikis_attachments_copy_embed">এম্বেড লিঙ্ক কপি করুন</string>
     <string name="wikis_attachments_embed_copied">এমবেড লিঙ্ক কপি করা হয়েছে</string>
     <string name="wikis_attachments_download">ডাউনলোড</string>
-    <string name="wikis_attachments_copy_success">এমবেড লিঙ্ক কপি করা হয়েছে</string>
     <string name="wikis_attachments_delete">মুছুন</string>
     <string name="wikis_attachments_delete_confirm_title">অ্যাটাচমেন্ট মুছুন</string>
     <string name="wikis_attachments_delete_success">অ্যাটাচমেন্ট মুছে ফেলা হয়েছে</string>
     <string name="wikis_attachments_delete_failed">সংযুক্তি মুছতে ব্যর্থ</string>
-    <string name="wikis_attachments_open">খুলুন</string>
     <string name="wikis_attachments_empty_title">এখনও কোনো সংযুক্তি নেই</string>
     <string name="wikis_attachments_no_results_title">আপনার অনুসন্ধানের সাথে কোনো সংযুক্তি মিলছে না</string>
     <string name="wikis_attachments_no_results_description">একটি ভিন্ন অনুসন্ধান শব্দ বা ফিল্টার চেষ্টা করুন।</string>
@@ -207,12 +194,10 @@
     <string name="wikis_settings_delete_confirm_message">এই অ্যাকশন পূর্বাবস্থায় ফিরিয়ে আনা যাবে না। এটি স্থায়ীভাবে wiki এবং এর সমস্ত বিষয়বস্তু মুছে ফেলবে।</string>
     <string name="wikis_settings_delete_success">Wiki মুছে ফেলা হয়েছে</string>
     <string name="wikis_settings_delete_failed">উইকি মুছতে ব্যর্থ</string>
-    <string name="wikis_access_add_action">যোগ করুন</string>
     <string name="wikis_access_add_subject_label">ব্যবহারকারী</string>
     <string name="wikis_access_level_edit">সম্পাদনা ও দেখুন</string>
     <string name="wikis_access_level_view">শুধুমাত্র দেখুন</string>
     <string name="wikis_access_level_none">অ্যাক্সেস নেই</string>
-    <string name="wikis_access_owner_label">মালিক</string>
     <string name="wikis_access_tab_users">ব্যবহারকারী</string>
     <string name="wikis_access_tab_groups">গ্রুপসমূহ</string>
     <string name="wikis_access_tab_other">অন্যান্য</string>
@@ -226,7 +211,6 @@
     <string name="wikis_access_revoke_failed">অ্যাক্সেস সরাতে ব্যর্থ</string>
     <string name="wikis_replicas_empty_title">এখনও কোনো রেপ্লিকা নেই</string>
     <string name="wikis_replicas_empty_message">অন্যান্য wiki যখন এই wiki রেপ্লিকেট করে, তারা এখানে দেখা যাবে।</string>
-    <string name="wikis_replicas_col_id">আইডি</string>
     <string name="wikis_replicas_never_synced">কখনই না</string>
     <string name="wikis_replicas_remove_confirm_title">রেপ্লিকা সরাবেন?</string>
     <string name="wikis_replicas_remove_confirm_action">সরান</string>
@@ -239,19 +223,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">আপডেট হয়েছে %1$s</string>
     <string name="wikis_pageview_not_found_description">পৃষ্ঠা „%1$s\" এখনো নেই।</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">উইকি লিঙ্ক</string>
-    <string name="wikis_pageview_share_link_copied">পৃষ্ঠার লিঙ্ক ক্লিপবোর্ডে কপি করা হয়েছে</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki পৃষ্ঠার লিঙ্ক</string>
-    <string name="wikis_pageview_loading">পৃষ্ঠা লোড হচ্ছে…</string>
     <string name="wikis_page_action_share">লিঙ্ক</string>
     <string name="wikis_open_sidebar">সাইডবার খুলুন</string>
-    <string name="wikis_owned_badge">মালিকানা</string>
     <string name="wikis_search_placeholder">একটি wiki খুঁজুন…</string>
-    <string name="wikis_subscribing">সাবস্ক্রাইব হচ্ছে…</string>
     <string name="wikis_unsubscribe_confirm_message">আপনি কি নিশ্চিত যে %1$s থেকে সাবস্ক্রিপশন বাতিল করতে চান?</string>
-    <string name="wikis_subscribe_failed_502">সেই সার্ভারে পৌঁছানো যাচ্ছে না। আবার চেষ্টা করছে…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">নাম, আইডি, ফিঙ্গারপ্রিন্ট বা URL দিয়ে খুঁজুন…</string>
     <string name="wikis_join_search_button">wikis খুঁজুন…</string>
@@ -262,7 +239,6 @@
     <string name="wikis_comment_form_placeholder_reply">একটি উত্তর লিখুন…</string>
     <string name="wikis_comment_form_send">পাঠান</string>
     <string name="wikis_comment_form_remove_attachment">সংযুক্তি সরান</string>
-    <string name="wikis_comment_collapse_toggle">থ্রেড সংকুচিত করুন</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Markdown ব্যবহার করে এখানে আপনার বিষয়বস্তু লিখুন…</string>
     <string name="wikis_insert_dialog_empty">এখনো কোনো সংযুক্তি নেই। শুরু করতে একটি ফাইল আপলোড করুন।</string>
@@ -291,7 +267,6 @@
     <string name="wikis_tag_dialog_title">ট্যাগ যোগ করুন</string>
     <string name="wikis_tag_dialog_empty">ট্যাগ খালি হতে পারে না</string>
     <string name="wikis_attachments_search_placeholder">সংযুক্তি খুঁজুন…</string>
-    <string name="wikis_attachments_copy_failed">এমবেড লিঙ্ক কপি করা যায়নি</string>
     <string name="wikis_attachments_delete_confirm_message">„%1$s\" মুছে ফেলবেন? এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
     <string name="wikis_attachments_downloading">ডাউনলোড হচ্ছে…</string>
     <string name="wikis_attachments_empty_description">এই পৃষ্ঠায় ফাইল যোগ করতে আপলোডে টোকা দিন।</string>
@@ -320,14 +295,6 @@
         <item quantity="one">%d উত্তর</item>
         <item quantity="other">+%d আরো উত্তর</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">%1$dটি পৃষ্ঠার নাম পরিবর্তন করা হয়েছে</item>
-        <item quantity="other">%1$dটি পৃষ্ঠার নাম পরিবর্তন করা হয়েছে</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$dটি লিঙ্ক আপডেট হয়েছে</item>
-        <item quantity="other">%1$dটি লিঙ্ক আপডেট হয়েছে</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d পৃষ্ঠা</item>
         <item quantity="other">%d পৃষ্ঠা</item>
@@ -355,4 +322,11 @@
     <string name="wikis_attachments_caption_save_failed">ক্যাপশন সংরক্ষণ করা যায়নি</string>
     <string name="wikis_attachments_upload_types">সমর্থিত ফাইল: ছবি, PDF, DOC, DOCX, TXT, এবং MD।</string>
     <string name="wikis_attachments_upload_limits">বড় আপলোড আপনার সার্ভার বা প্রক্সি কনফিগারেশন দ্বারা সীমিত হতে পারে।</string>
+    <string name="wikis_rss_replace">প্রতিস্থাপন করুন</string>
+    <string name="wikis_rss_copied_new">নতুন RSS URL ক্লিপবোর্ডে কপি করা হয়েছে</string>
+    <string name="wikis_rss_exists">এই ফিড URL আগেই ইস্যু করা হয়েছে এবং আবার দেখানো যাবে না।</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">প্রথম %1$d মন্তব্য দেখানো হচ্ছে।</item>
+        <item quantity="other">প্রথম %1$d মন্তব্য দেখানো হচ্ছে।</item>
+    </plurals>
 </resources>

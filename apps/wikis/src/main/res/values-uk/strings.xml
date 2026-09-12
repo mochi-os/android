@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Знайти вікі</string>
     <string name="wikis_sidebar_create">Створити вікі</string>
     <string name="wikis_pageview_title_fallback">Сторінка</string>
-    <string name="wikis_pageview_wiki_fallback">Вікі</string>
-    <string name="wikis_pageview_back">Назад</string>
     <string name="wikis_pageview_page_actions">Дії сторінки</string>
     <string name="wikis_pageview_toc">На цій сторінці</string>
     <string name="wikis_pageview_not_found_title">Сторінку не знайдено</string>
     <string name="wikis_pageview_create_this_page">Створити цю сторінку</string>
     <string name="wikis_pageview_rss_copied">RSS URL скопійовано в буфер обміну</string>
-    <string name="wikis_pageview_rss_failed">Не вдалося отримати RSS-токен</string>
     <string name="wikis_page_action_section_page">Сторінка</string>
     <string name="wikis_page_action_edit">Редагувати</string>
     <string name="wikis_page_action_rename">Перейменувати</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Вікі</string>
     <string name="wikis_empty_title">Створіть свою першу вікі</string>
     <string name="wikis_empty_subtitle">Знайдіть вікі для підписки або створіть свою, щоб публікувати власну документацію.</string>
-    <string name="wikis_subscribed_badge">Підписано</string>
     <string name="wikis_create_button">Створити вікі</string>
     <string name="wikis_recommended_section">Рекомендовані вікі</string>
     <string name="wikis_subscribe_button">Підписатися</string>
-    <string name="wikis_subscribed">Підписано</string>
     <string name="wikis_unsubscribe_action">Відписатися</string>
     <string name="wikis_unsubscribing">Відписування…</string>
     <string name="wikis_unsubscribe_confirm_title">Відписатися</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Ім\'я</string>
     <string name="wikis_create_privacy_label">Дозволити всім шукати вікі</string>
     <string name="wikis_create_submit">Створити</string>
-    <string name="wikis_create_cancel">Скасувати</string>
     <string name="wikis_comments_empty_title">Коментарів ще немає</string>
     <string name="wikis_comments_empty_subtitle">Будьте першим, хто прокоментує цю сторінку.</string>
-    <string name="wikis_comment_action_reply">Відповісти</string>
     <string name="wikis_comment_replying_to">Відповідь для %1$s</string>
     <string name="wikis_comment_clear_reply">Скасувати відповідь</string>
-    <string name="wikis_comment_action_edit">Редагувати</string>
     <string name="wikis_comment_action_delete">Видалити</string>
     <string name="wikis_comment_action_save">Зберегти</string>
     <string name="wikis_comment_action_cancel">Скасувати</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Нова сторінка</string>
     <string name="wikis_editor_preview">Попередній перегляд</string>
     <string name="wikis_editor_preview_untitled">Без назви</string>
-    <string name="wikis_editor_edit">Редагувати</string>
     <string name="wikis_editor_insert">Вставити</string>
     <string name="wikis_editor_attachments">Вкладення</string>
     <string name="wikis_editor_delete">Видалити сторінку</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Завантаження…</string>
     <string name="wikis_attachments_upload_failed">Не вдалося завантажити файли</string>
     <string name="wikis_attachments_search_clear">Очистити пошук</string>
-    <string name="wikis_attachments_filter">Фільтр</string>
     <string name="wikis_attachments_filter_all">Усі файли</string>
     <string name="wikis_attachments_filter_images">Зображення</string>
     <string name="wikis_attachments_filter_documents">Документи</string>
-    <string name="wikis_attachments_sort">Сортувати</string>
     <string name="wikis_attachments_sort_date">Дата</string>
     <string name="wikis_attachments_sort_name">Ім\'я</string>
     <string name="wikis_attachments_sort_size">Розмір</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Копіювати посилання для вбудовування</string>
     <string name="wikis_attachments_embed_copied">Посилання для вбудовування скопійовано</string>
     <string name="wikis_attachments_download">Завантажити</string>
-    <string name="wikis_attachments_copy_success">Посилання для вбудовування скопійовано</string>
     <string name="wikis_attachments_delete">Видалити</string>
     <string name="wikis_attachments_delete_confirm_title">Видалити вкладення</string>
     <string name="wikis_attachments_delete_success">Вкладення видалено</string>
     <string name="wikis_attachments_delete_failed">Не вдалося видалити вкладення</string>
-    <string name="wikis_attachments_open">Відкрити</string>
     <string name="wikis_attachments_empty_title">Вкладень ще немає</string>
     <string name="wikis_attachments_no_results_title">Жодне вкладення не відповідає вашому запиту</string>
     <string name="wikis_attachments_no_results_description">Спробуйте інший пошуковий запит або фільтр.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Цю дію не можна скасувати. Вікі та весь її вміст буде остаточно видалено.</string>
     <string name="wikis_settings_delete_success">Вікі видалено</string>
     <string name="wikis_settings_delete_failed">Не вдалося видалити вікі</string>
-    <string name="wikis_access_add_action">Додати</string>
     <string name="wikis_access_add_subject_label">Користувач</string>
     <string name="wikis_access_level_edit">Редагування та перегляд</string>
     <string name="wikis_access_level_view">Лише перегляд</string>
     <string name="wikis_access_level_none">Немає доступу</string>
-    <string name="wikis_access_owner_label">Власник</string>
     <string name="wikis_access_tab_users">Користувачі</string>
     <string name="wikis_access_tab_groups">Групи</string>
     <string name="wikis_access_tab_other">Інше</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Не вдалося видалити доступ</string>
     <string name="wikis_replicas_empty_title">Реплік ще немає</string>
     <string name="wikis_replicas_empty_message">Коли інші вікі реплікуватимуть цю вікі, вони зʼявлятимуться тут.</string>
-    <string name="wikis_replicas_col_id">Ідентифікатор</string>
     <string name="wikis_replicas_never_synced">Ніколи</string>
     <string name="wikis_replicas_remove_confirm_title">Видалити репліку?</string>
     <string name="wikis_replicas_remove_confirm_action">Видалити</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Оновлено %1$s</string>
     <string name="wikis_pageview_not_found_description">Сторінка „%1$s\" ще не існує.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Посилання на вікі</string>
-    <string name="wikis_pageview_share_link_copied">Посилання на сторінку скопійовано до буфера обміну</string>
     <string name="wikis_pageview_clipboard_label_rss">RSS URL вікі</string>
-    <string name="wikis_pageview_clipboard_label_share">Посилання на сторінку вікі</string>
-    <string name="wikis_pageview_loading">Завантаження сторінки…</string>
     <string name="wikis_page_action_share">Посилання</string>
     <string name="wikis_open_sidebar">Відкрити бічну панель</string>
-    <string name="wikis_owned_badge">Власне</string>
     <string name="wikis_search_placeholder">Пошук вікі…</string>
-    <string name="wikis_subscribing">Підписка…</string>
     <string name="wikis_unsubscribe_confirm_message">Ви впевнені, що хочете відписатися від %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Цей сервер недоступний. Повторна спроба…</string>
     <string name="wikis_clipboard_label_rss">RSS URL вікі</string>
     <string name="wikis_find_search_placeholder">Пошук за іменем, ID, відбитком або URL…</string>
     <string name="wikis_join_search_button">Пошук вікі…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Напишіть відповідь…</string>
     <string name="wikis_comment_form_send">Надіслати</string>
     <string name="wikis_comment_form_remove_attachment">Видалити вкладення</string>
-    <string name="wikis_comment_collapse_toggle">Згорнути обговорення</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Напишіть свій вміст тут за допомогою Markdown…</string>
     <string name="wikis_insert_dialog_empty">Ще немає вкладень. Завантажте файл, щоб почати.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Додати тег</string>
     <string name="wikis_tag_dialog_empty">Тег не може бути порожнім</string>
     <string name="wikis_attachments_search_placeholder">Пошук вкладень…</string>
-    <string name="wikis_attachments_copy_failed">Не вдалося скопіювати посилання для вбудовування</string>
     <string name="wikis_attachments_delete_confirm_message">Видалити „%1$s\"? Цю дію не можна скасувати.</string>
     <string name="wikis_attachments_downloading">Завантаження…</string>
     <string name="wikis_attachments_empty_description">Торкніться Завантажити, щоб додати файли до цієї сторінки.</string>
@@ -326,18 +301,6 @@
         <item quantity="few">ще +%d відповідей</item>
         <item quantity="many">ще +%d відповідей</item>
         <item quantity="other">ще +%d відповідей</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Перейменовано %1$d сторінку</item>
-        <item quantity="few">Перейменовано %1$d сторінки</item>
-        <item quantity="many">Перейменовано %1$d сторінок</item>
-        <item quantity="other">Перейменовано %1$d сторінок</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">оновлено %1$d посилання</item>
-        <item quantity="few">оновлено %1$d посилання</item>
-        <item quantity="many">оновлено %1$d посилань</item>
-        <item quantity="other">оновлено %1$d посилань</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d сторінка</item>
@@ -378,4 +341,13 @@
     <string name="wikis_attachments_caption_save_failed">Не вдалося зберегти підпис</string>
     <string name="wikis_attachments_upload_types">Підтримувані файли: зображення, PDF, DOC, DOCX, TXT та MD.</string>
     <string name="wikis_attachments_upload_limits">Великі завантаження можуть бути обмежені налаштуваннями вашого сервера або проксі.</string>
+    <string name="wikis_rss_replace">Замінити</string>
+    <string name="wikis_rss_copied_new">Новий RSS URL скопійовано в буфер обміну</string>
+    <string name="wikis_rss_exists">Цей URL стрічки вже видано і не може бути показаний знову.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Показано перший %1$d коментар.</item>
+        <item quantity="few">Показано перші %1$d коментарів.</item>
+        <item quantity="many">Показано перші %1$d коментарів.</item>
+        <item quantity="other">Показано перші %1$d коментарів.</item>
+    </plurals>
 </resources>

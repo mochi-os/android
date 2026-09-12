@@ -1969,7 +1969,7 @@ private fun PostActionBar(
         ReactionBar(
             reactions = toReactionCounts(post.reactions, post.myReaction),
             onReact = onReact,
-            onRemoveReaction = { onReact(post.myReaction) },
+            onRemoveReaction = { onReact("none") },
             currentReaction = currentReactionType(post.myReaction),
         )
         // The reaction add button is a filled circle, so its padding sits inside

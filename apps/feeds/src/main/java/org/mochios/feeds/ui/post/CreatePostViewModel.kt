@@ -25,6 +25,15 @@ import org.mochios.feeds.model.Feed
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
 
+/**
+ * The attachment order an edit sends: the kept existing attachments in their
+ * original order, then "new:N" for each new file. Null until the post's
+ * attachments have loaded, so a save made before then cannot read as removing
+ * them all.
+ */
+internal fun editOrder(loaded: Boolean, existing: List<String>, removed: Set<String>, added: Int): List<String>? =
+    if (loaded) existing.filter { it !in removed } + List(added) { "new:$it" } else null
+
 @HiltViewModel
 class CreatePostViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -59,6 +68,8 @@ class CreatePostViewModel @Inject constructor(
     val existingAttachments: StateFlow<List<Attachment>> = _existingAttachments.asStateFlow()
 
     private val _removedExistingIds = MutableStateFlow<Set<String>>(emptySet())
+    // Whether the edited post's attachments have loaded.
+    private var loaded = false
     val removedExistingIds: StateFlow<Set<String>> = _removedExistingIds.asStateFlow()
 
     // Captions keyed by the new file's Uri and the saved attachment's id, so
@@ -128,6 +139,7 @@ class CreatePostViewModel @Inject constructor(
                 _existingCaptions.value = result.post.attachments
                     .filter { it.caption.isNotEmpty() }
                     .associate { it.id to it.caption }
+                loaded = true
                 // Load location data from post.data if present
                 result.post.data?.checkin?.let { _checkin.value = it }
                 result.post.data?.travelling?.origin?.let { _travellingOrigin.value = it }
@@ -240,12 +252,15 @@ class CreatePostViewModel @Inject constructor(
             try {
                 if (isEditing) {
                     val postId = editingPostId!!
-                    // Build the order list: kept existing attachments in original order, then "new:N" for each new file
                     val keptExisting = _existingAttachments.value
                         .filter { it.id !in _removedExistingIds.value }
                         .map { it.id }
-                    val newPlaceholders = _attachments.value.indices.map { "new:$it" }
-                    val order = keptExisting + newPlaceholders
+                    val order = editOrder(
+                        loaded,
+                        _existingAttachments.value.map { it.id },
+                        _removedExistingIds.value,
+                        _attachments.value.size
+                    )
                     val newFileUris = _attachments.value
                     // Caption edits keyed by order entry. Kept ids always
                     // appear, so clearing a caption reaches the server as an

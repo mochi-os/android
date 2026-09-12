@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Pukllay pichasqa</string>
     <string name="go_new_game_add_friends">Wawqikuna yapay</string>
     <string name="go_new_game_board_size_label">Tabla sayay</string>
-    <string name="go_new_game_cancel">Mana ruway</string>
     <string name="go_new_game_friend_label">Tinkuq</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Pukllayta saqirakapuy?</string>
     <string name="go_sidebar_completed">Tukusqa</string>
     <string name="go_sidebar_new_game">Musuq pukllay</string>
-    <string name="go_status_active">Kawsachkan</string>
     <string name="go_status_draw">Chiqansipaña</string>
     <string name="go_status_draw_text">Chiqansipaña</string>
     <string name="go_status_game_over">Pukllay tukurqun</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Manaraq kawsaq pukllaykuna kanchu.</string>
-    <string name="go_empty_completed">Manaraq tukusqa pukllaykuna kanchu.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Musuq Go pukllay</string>
     <string name="go_new_game_no_friends">Pukllayta qallarinaykipaq ñawpaqta huk masita yapananki.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Yana ñawpaqta puriptin, Yuraqpa yupaynin yapasqa puntukuna</string>
-    <string name="go_new_game_create_error">Pukllay qallariy mana atikunchu</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go board</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d Go pata, yana rumita churanaykipaq</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d Go pata, yuraq rumita churanaykipaq</string>
+    <string name="go_status_scoring">Yupay — puntajemanta huñunakuychik utaq pukllaspa kaychik</string>
+    <string name="go_score_proposed">Haywasqa puntaje: yana %1$s, yuraq %2$s</string>
+    <string name="go_score_opponent_accepted">Awqaykiqa kay puntajeta chaskin: yana %1$s, yuraq %2$s</string>
+    <string name="go_score_waiting">Puntaje chaskisqa — %1$s suyaspa</string>
+    <string name="go_score_accept">Puntajeta chaskiy</string>
+    <string name="go_score_resume">Pukllayta qatiy</string>
+    <string name="go_error_score_resume_failed">Pukllayta qatiyta mana atinchu</string>
+    <string name="go_error_score_accept_failed">Puntajeta chaskiyta mana atinchu</string>
 </resources>

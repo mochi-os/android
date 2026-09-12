@@ -14,7 +14,6 @@
     <string name="wikis_unsubscribe_confirm_title">Cancelá la suscripción</string>
     <string name="wikis_create_title">Creá una wiki</string>
     <string name="wikis_create_privacy_label">Permití que cualquiera busque la wiki</string>
-    <string name="wikis_comment_action_reply">Respondé</string>
     <string name="wikis_comment_replying_to">Respondiendo a %1$s</string>
     <string name="wikis_comment_clear_reply">Cancelá la respuesta</string>
     <string name="wikis_comment_action_delete">Eliminá</string>
@@ -50,21 +49,17 @@
     <string name="wikis_settings_section_delete">Eliminá la wiki</string>
     <string name="wikis_settings_delete_action">Eliminá la wiki</string>
     <string name="wikis_settings_delete_confirm_title">¿Estás absolutamente seguro?</string>
-    <string name="wikis_access_add_action">Agregá</string>
     <string name="wikis_access_level_edit">Editá y mirá</string>
     <string name="wikis_replicas_remove_confirm_title">¿Quitás la réplica?</string>
     <string name="wikis_replicas_remove_confirm_action">Quitá</string>
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="wikis_sidebar_header">Wikis</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
     <string name="wikis_pageview_version">v%1$d</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_join_id_hint">abc123…</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_load_more">Cargar más</string>
     <string name="wikis_access_change_level">Nivel de acceso</string>
     <string name="wikis_access_subject_anyone">Cualquiera</string>
@@ -77,4 +72,5 @@
     <string name="wikis_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
     <string name="wikis_access_anyone_desc">Incluidos los usuarios anónimos</string>
     <string name="wikis_access_selected">Seleccionado: %1$s</string>
+    <string name="wikis_rss_replace">Reemplazar</string>
 </resources>

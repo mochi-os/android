@@ -5,10 +5,7 @@
     <string name="auth_email">E-poçt</string>
     <string name="auth_continue">Davam et</string>
     <string name="auth_verification_code">Yoxlama uğursuz oldu</string>
-    <string name="auth_verify">DNS-i yoxla</string>
-    <string name="auth_authenticator_app">Authenticator tətbiqi</string>
     <string name="auth_email_code">E-poçt kodu</string>
-    <string name="auth_authenticator_code">Authenticator kodu</string>
     <string name="auth_recovery_code">Bərpa kodu</string>
     <string name="auth_name">Ad</string>
     <string name="auth_create">Yarat</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">Kopyala</string>
     <string name="common_copied">Mübadilə yaddaşına kopyalandı</string>
     <string name="comment_edited">(redaktə edildi)</string>
-    <string name="comment_edit_placeholder">Şərhi redaktə et</string>
     <string name="comment_reply">Cavabla</string>
-    <string name="comment_reply_placeholder">Cavabla</string>
-    <string name="comment_send_reply">Cavab göndər</string>
     <string name="person_picker_search">İstifadəçi axtar</string>
     <string name="place_picker_no_results">Yer tapılmadı</string>
-    <string name="discovery_results">Nəticələr</string>
     <string name="discovery_recommended">Tövsiyə olunur</string>
-    <string name="discovery_subscribed">Abunə oldun</string>
     <string name="access_add_rule">Qayda əlavə et</string>
     <string name="access_owner">Sahibi</string>
     <string name="access_revoke">Geri çağır</string>
-    <string name="access_level">Giriş səviyyəsi</string>
     <string name="access_level_comment">Şərh</string>
     <string name="access_level_view">Bütün bildirişlərə bax</string>
     <string name="access_level_none">Heç biri</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">Bəyən</string>
     <string name="reaction_dislike">Bəyənmirəm</string>
     <string name="reaction_laugh">Gül</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">Hamısı</string>
     <string name="notifications_mark_all_read">Hamısını oxunmuş işarələ</string>
     <string name="notifications_clear_all">Hamısını təmizlə</string>
-    <string name="notifications_loading">Yüklənir…</string>
     <string name="settings_title">Parametrlər</string>
-    <string name="settings_open">Parametrlər</string>
     <string name="settings_appearance">Görünüş</string>
     <string name="settings_appearance_light">İşıqlı</string>
     <string name="settings_appearance_dark">Tünd</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">Fon</string>
     <string name="settings_background_theme">Mövzudan</string>
     <string name="settings_background_off">Heç biri</string>
-    <string name="profile_title">Profil</string>
-    <string name="profile_open">Profil</string>
-    <string name="profile_display_name">Göstərilən ad</string>
-    <string name="profile_save_name">Adı saxla</string>
-    <string name="profile_privacy">Məxfilik</string>
-    <string name="profile_privacy_public">Açıq</string>
-    <string name="profile_privacy_private">Şəxsi</string>
-    <string name="profile_fingerprint">Barmaq izi</string>
     <string name="game_chat_empty">Hələ mesaj yoxdur</string>
     <string name="game_chat_input_placeholder">Axtarmaq üçün yazın...</string>
     <string name="game_chat_send">Mesaj göndər</string>
     <string name="game_chat_subject_you">Artıq söhbətiniz olanlar:</string>
 
     <string name="common_not_saved">Saxlanmadı</string>
-    <string name="common_save_failed">Dəyişiklikləriniz saxlanıla bilmədi.</string>
 
     <string name="app_brand">Mochi</string>
     <string name="error_network">Qoşulmaq mümkün olmadı. İnternet bağlantınızı yoxlayıb yenidən cəhd edin.</string>
@@ -145,7 +124,6 @@
     <string name="error_not_found">Tapılmadı</string>
     <string name="error_server">Server xətası (%1$d). Zəhmət olmasa daha sonra yenidən cəhd edin.</string>
     <string name="error_unexpected">Gözlənilməz xəta baş verdi</string>
-    <string name="error_request_failed">Sorğu uğursuz oldu</string>
     <string name="error_enter_server_url">Zəhmət olmasa server URL-ni daxil edin</string>
     <string name="error_enter_email">Zəhmət olmasa e-poçtunuzu daxil edin</string>
     <string name="error_enter_name">Zəhmət olmasa bir ad daxil edin</string>
@@ -153,13 +131,7 @@
     <string name="auth_server_url">Server URL</string>
     <string name="auth_connect">Qoşul</string>
     <string name="auth_sign_in">Daxil ol</string>
-    <string name="auth_sign_in_with_passkey">Passkey ilə daxil ol</string>
-    <string name="auth_sign_in_with_email_code">E-poçt kodu ilə daxil ol</string>
-    <string name="auth_use_recovery_code">Bərpa kodundan istifadə et</string>
-    <string name="auth_back_to_sign_in">Girişə qayıt</string>
-    <string name="auth_send_code">Kod göndər</string>
     <string name="auth_check_email">Doğrulama kodu üçün e-poçtunuzu yoxlayın</string>
-    <string name="auth_six_digit_code">6 rəqəmli kod</string>
     <string name="auth_mfa_title">Çoxfaktorlu kimlik doğrulaması</string>
     <string name="auth_mfa_subtitle">Qalan doğrulama addımlarını tamamlayın</string>
     <string name="auth_recover_account">Hesabı bərpa et</string>
@@ -187,8 +159,6 @@
     <string name="bootstrap_sign_in_differently">Başqa cür daxil ol</string>
     <string name="bootstrap_choose_account">Hesab seçin</string>
     <string name="bootstrap_sign_in_different_server">Başqa serverə daxil ol</string>
-    <string name="common_or">və ya</string>
-    <string name="common_change">Dəyiş</string>
     <string name="common_retry">Yenidən cəhd et</string>
     <string name="common_more_options">Daha çox seçim</string>
     <string name="common_collapse">Yığ</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">Yer adı</string>
     <string name="place_origin">Başlanğıc</string>
     <string name="place_destination">Təyinat</string>
-    <string name="discovery_search_placeholder">%1$s axtar</string>
-    <string name="discovery_no_results">%1$s tapılmadı</string>
     <string name="discovery_no_results_hint">Axtarış terminlərinizi tənzimləməyə cəhd edin</string>
-    <string name="discovery_no_recommendations">Tövsiyə yoxdur</string>
-    <string name="discovery_search_hint">Abunə olmaq üçün bir %1$s axtarmağa cəhd edin</string>
     <string name="access_no_rules">Giriş qaydaları yoxdur</string>
-    <string name="access_no_rules_subtitle">Bu resursa kimin giriş əldə edə biləcəyini idarə etmək üçün qaydalar əlavə edin</string>
     <string name="access_add_rule_title">Giriş qaydası əlavə et</string>
     <string name="access_level_manage">İdarə et</string>
     <string name="access_level_react">Reaksiya ver</string>
     <string name="notifications_clear">Bildirişləri təmizlə</string>
-    <string name="banner_description">Bu görünüşün yuxarısında göstərilən markdown.</string>
-    <string name="banner_placeholder">Xoş gəldiniz…</string>
-    <string name="banner_save">Banneri saxla</string>
-    <string name="banner_clear">Banneri təmizlə</string>
     <string name="entity_avatar_alt">%1$s üçün avatar</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$d gün</string>
     <string name="format_time_weeks_short">%1$d həftə</string>
     <string name="format_time_months_short">%1$d ay</string>
-    <string name="format_time_years_short">%1$d il</string>
     <string name="reaction_add">Reaksiya əlavə et</string>
     <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">Bildirişləri almaq üçün Mochi-ni qoşulu saxlayır</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">Yükləmə alınmadı</string>
     <string name="notifications_clear_all_title">Bütün bildirişlər silinsin?</string>
     <string name="notifications_clear_all_message">Bu, bütün bildirişləri siləcək. Onları bərpa etmək mümkün olmayacaq.</string>
-    <string name="notifications_count_n">%1$d yeni</string>
     <string name="settings_value_auto">Avtomatik</string>
     <string name="settings_value_theme">Mövzu üzrə standart</string>
     <string name="settings_radius">Künc radiusu</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">Nisbi</string>
     <string name="settings_timestamp_absolute">Mütləq</string>
     <string name="settings_units_usa">ABŞ</string>
-    <string name="profile_privacy_description">Başqalarının sizi kataloqda tapa bilməsi.</string>
     <string name="game_chat_load_more">Köhnə mesajları yüklə</string>
     <string name="game_chat_move_played">%1$s %2$s oynadı</string>
     <string name="stepup_title">Bunun siz olduğunuzu təsdiqləyin</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">E-poçtunuzdakı kodu daxil edin</string>
     <string name="stepup_totp_label">Authenticator kodu</string>
     <string name="stepup_totp_placeholder">Autentifikator kodunuzu daxil edin</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">Giriş açarınızdan istifadə edin</string>
     <string name="stepup_send_email">E-poçt göndər</string>
     <string name="stepup_resend_email">E-poçtu yenidən göndər</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">Anonim</string>
     <string name="tags_label">Etiketlər</string>
     <string name="tags_add">Etiket əlavə et</string>
-    <string name="tags_label_field">Etiket adı</string>
     <string name="tags_interest_up">Bu tip daha çox göstər</string>
     <string name="tags_interest_down">Bu tip daha az göstər</string>
     <string name="tags_interest_clear">Göstərməyi dayandır</string>
@@ -310,10 +266,6 @@
     <string name="person_picker_directory">Kataloq</string>
     <string name="person_picker_no_people">İnsan yoxdur</string>
     <string name="person_picker_project_members">Layihə üzvləri</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d abunəçi</item>
-        <item quantity="other">%1$d abunəçi</item>
-    </plurals>
     <string name="account_token_label">Mochi sessiyası</string>
     <string name="attachment_caption">İzah</string>
     <string name="attachment_caption_add">İzah əlavə et</string>
@@ -354,4 +306,8 @@
     <string name="settings_card_theme">Mövzudan</string>
     <string name="settings_card_flat">Düz</string>
     <string name="settings_card_raised">Qabarıq</string>
+    <string name="error_server_https">Server ünvanı https:// ilə başlamalıdır</string>
+    <string name="device_name_fallback">Mobil cihaz</string>
+    <string name="account_error_token_type">Dəstəklənməyən token növü</string>
+    <string name="account_error_caller">Çağırana icazə verilmir</string>
 </resources>

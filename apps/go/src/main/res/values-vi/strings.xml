@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Đã xoá trò chơi</string>
     <string name="go_new_game_add_friends">Thêm bạn</string>
     <string name="go_new_game_board_size_label">Kích thước bàn</string>
-    <string name="go_new_game_cancel">Hủy</string>
     <string name="go_new_game_friend_label">Đối thủ</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Đầu hàng trận đấu?</string>
     <string name="go_sidebar_completed">Hoàn tất</string>
     <string name="go_sidebar_new_game">Trò chơi mới</string>
-    <string name="go_status_active">Đang hoạt động</string>
     <string name="go_status_draw">Hoà</string>
     <string name="go_status_draw_text">Hoà</string>
     <string name="go_status_game_over">Hết trò chơi</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Mở thanh bên</string>
     <string name="go_sidebar_active">Ván cờ đang chơi</string>
     <string name="go_empty_active">Chưa có ván cờ đang chơi.</string>
-    <string name="go_empty_completed">Chưa có ván cờ hoàn thành.</string>
-    <string name="go_status_finished">Đã kết thúc</string>
     <string name="go_status_resigned">Đã đầu hàng</string>
-    <string name="go_card_vs">với %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Ván cờ vây mới</string>
     <string name="go_new_game_no_friends">Bạn cần thêm bạn bè trước khi có thể bắt đầu ván cờ.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Điểm cộng cho Trắng để bù đắp việc Đen đi trước</string>
-    <string name="go_new_game_create_error">Không thể bắt đầu ván cờ</string>
 
     <string name="go_board_a11y">Bàn cờ Vây %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Bàn cờ vây %1$d×%1$d, đến lượt bạn đặt quân đen</string>
     <string name="go_board_a11y_turn_white">Bàn cờ vây %1$d×%1$d, đến lượt bạn đặt quân trắng</string>
+    <string name="go_status_scoring">Đếm điểm — thống nhất tỉ số hoặc chơi tiếp</string>
+    <string name="go_score_proposed">Điểm số đề xuất: đen %1$s, trắng %2$s</string>
+    <string name="go_score_opponent_accepted">Đối thủ của bạn chấp nhận điểm số này: đen %1$s, trắng %2$s</string>
+    <string name="go_score_waiting">Đã chấp nhận điểm số — đang chờ %1$s</string>
+    <string name="go_score_accept">Chấp nhận điểm số</string>
+    <string name="go_score_resume">Tiếp tục ván đấu</string>
+    <string name="go_error_score_resume_failed">Không tiếp tục ván đấu được</string>
+    <string name="go_error_score_accept_failed">Không chấp nhận điểm số được</string>
 </resources>

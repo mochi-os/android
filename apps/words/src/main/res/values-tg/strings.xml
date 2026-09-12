@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Меню</string>
-    <string name="words_list_new">Бозии нав</string>
     <string name="words_list_logout">Баромадан</string>
-    <string name="words_list_empty_title">То ҳол ягон бозӣ нест</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Анҷомшуда</string>
     <string name="words_sidebar_new_game">Бозии нав</string>
     <string name="words_new_game_title">Бозии нав</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Бозиҳои такрорӣ</string>
     <string name="words_detail_action_delete">Нест кардани бозӣ</string>
     <string name="words_detail_chat_title">Чат</string>
-    <string name="words_detail_invalid_move">Ҳаракати нодуруст</string>
     <string name="words_detail_recall">Бозхон</string>
     <string name="words_detail_submit">Пешниҳод кардан</string>
     <string name="words_detail_cancel">Бекор кардан</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Ҳарф интихоб кунед</string>
     <string name="words_detail_resign_title">Аз бозӣ таслим шудан?</string>
     <string name="words_detail_resign_message">Шумо мутмаин ҳастед, ки мехоҳед таслим шавед?</string>
-    <string name="words_detail_failed_move">Пешниҳоди ҳаракат ба анҷом нарасид</string>
-    <string name="words_detail_failed_pass">Гузаштан ба анҷом нарасид</string>
-    <string name="words_detail_failed_exchange">Мубодила ба анҷом нарасид</string>
-    <string name="words_detail_failed_resign">Истеъфо ба анҷом нарасид</string>
-    <string name="words_detail_failed_rematch">Эҷоди бозии нав ба анҷом нарасид</string>
-    <string name="words_detail_failed_delete">Ҳазфи бозӣ ба анҷом нарасид</string>
-    <string name="words_detail_game_deleted">Бозӣ ҳазф шуд</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Огоҳиҳо дар бораи навбатҳои Words, мубодилаҳо ва натиҷаҳои бозӣ.</string>
-    <string name="words_list_empty_subtitle">Барои оғози бозии аввалини худ тугмаи + -ро пахш кунед.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Ҳанӯз бозиҳо нест.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Барои оғози бозӣ дар барномаи People дӯстон илова кунед.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Тафсилоти бозӣ ба зудӣ</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

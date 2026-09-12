@@ -32,11 +32,6 @@ class Format(val preferences: UserPreferences) {
         return formatDateInternal(date)
     }
 
-    /** Epoch seconds → user-format time (no date). */
-    fun formatTime(epochSeconds: Long): String {
-        if (epochSeconds <= 0) return ""
-        return formatTimeInternal(Date(epochToMillis(epochSeconds)))
-    }
 
     /** Epoch seconds → "$date $time" using both user formats. */
     fun formatDateTime(epochSeconds: Long): String {
@@ -75,10 +70,6 @@ class Format(val preferences: UserPreferences) {
         return "$numStr ${units[i]}"
     }
 
-    /** Currency: minor units → formatted price (e.g. 1500 + "£" → "£15.00"). */
-    fun formatCurrency(amountMinor: Long, symbol: String): String {
-        return symbol + formatNumberInternal(amountMinor / 100.0, 2)
-    }
 
     /**
      * The zone [formatDate] and [formatDateTime] render in. Anything bucketing

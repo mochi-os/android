@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Find wikier</string>
     <string name="wikis_sidebar_create">Opret wiki</string>
     <string name="wikis_pageview_title_fallback">Side</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Tilbage</string>
     <string name="wikis_pageview_page_actions">Sidehandlinger</string>
     <string name="wikis_pageview_toc">På denne side</string>
     <string name="wikis_pageview_not_found_title">Siden blev ikke fundet</string>
     <string name="wikis_pageview_create_this_page">Opret denne side</string>
     <string name="wikis_pageview_rss_copied">RSS-URL kopieret til udklipsholderen</string>
-    <string name="wikis_pageview_rss_failed">Kunne ikke hente RSS-token</string>
     <string name="wikis_page_action_section_page">Side</string>
     <string name="wikis_page_action_edit">Redigér</string>
     <string name="wikis_page_action_rename">Omdøb</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikier</string>
     <string name="wikis_empty_title">Start din første wiki</string>
     <string name="wikis_empty_subtitle">Søg efter en wiki at abonnere på, eller opret én til at udgive din egen dokumentation.</string>
-    <string name="wikis_subscribed_badge">Abonneret</string>
     <string name="wikis_create_button">Opret wiki</string>
     <string name="wikis_recommended_section">Anbefalede wikier</string>
     <string name="wikis_subscribe_button">Abonnér</string>
-    <string name="wikis_subscribed">Abonneret</string>
     <string name="wikis_unsubscribe_action">Afmeld</string>
     <string name="wikis_unsubscribing">Afmelder…</string>
     <string name="wikis_unsubscribe_confirm_title">Afmeld</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Navn</string>
     <string name="wikis_create_privacy_label">Tillad alle at søge efter wiki</string>
     <string name="wikis_create_submit">Opret</string>
-    <string name="wikis_create_cancel">Annuller</string>
     <string name="wikis_comments_empty_title">Ingen kommentarer endnu</string>
     <string name="wikis_comments_empty_subtitle">Vær den første til at kommentere på denne side.</string>
-    <string name="wikis_comment_action_reply">Svar</string>
     <string name="wikis_comment_replying_to">Svarer %1$s</string>
     <string name="wikis_comment_clear_reply">Annuller svar</string>
-    <string name="wikis_comment_action_edit">Redigér</string>
     <string name="wikis_comment_action_delete">Slet</string>
     <string name="wikis_comment_action_save">Gem</string>
     <string name="wikis_comment_action_cancel">Annuller</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Ny side</string>
     <string name="wikis_editor_preview">Forhåndsvisning</string>
     <string name="wikis_editor_preview_untitled">Uden titel</string>
-    <string name="wikis_editor_edit">Redigér</string>
     <string name="wikis_editor_insert">Indsæt</string>
     <string name="wikis_editor_attachments">Vedhæftninger</string>
     <string name="wikis_editor_delete">Slet side</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Uploader…</string>
     <string name="wikis_attachments_upload_failed">Kunne ikke uploade filer</string>
     <string name="wikis_attachments_search_clear">Ryd søgning</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Alle filer</string>
     <string name="wikis_attachments_filter_images">Billeder</string>
     <string name="wikis_attachments_filter_documents">Dokumenter</string>
-    <string name="wikis_attachments_sort">Sortér</string>
     <string name="wikis_attachments_sort_date">Dato</string>
     <string name="wikis_attachments_sort_name">Navn</string>
     <string name="wikis_attachments_sort_size">Størrelse</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopier indlejringslink</string>
     <string name="wikis_attachments_embed_copied">Indlejringslink kopieret</string>
     <string name="wikis_attachments_download">Hent</string>
-    <string name="wikis_attachments_copy_success">Indlejringslink kopieret</string>
     <string name="wikis_attachments_delete">Slet</string>
     <string name="wikis_attachments_delete_confirm_title">Slet vedhæftning</string>
     <string name="wikis_attachments_delete_success">Vedhæftning slettet</string>
     <string name="wikis_attachments_delete_failed">Kunne ikke slette vedhæftning</string>
-    <string name="wikis_attachments_open">Åbn</string>
     <string name="wikis_attachments_empty_title">Ingen vedhæftninger endnu</string>
     <string name="wikis_attachments_no_results_title">Ingen vedhæftede filer matcher din søgning</string>
     <string name="wikis_attachments_no_results_description">Prøv et andet søgeord eller filter.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Denne handling kan ikke fortrydes. Dette vil permanent slette wikien og alt dens indhold.</string>
     <string name="wikis_settings_delete_success">Wiki slettet</string>
     <string name="wikis_settings_delete_failed">Kunne ikke slette wiki</string>
-    <string name="wikis_access_add_action">Tilføj</string>
     <string name="wikis_access_add_subject_label">Bruger</string>
     <string name="wikis_access_level_edit">Rediger og se</string>
     <string name="wikis_access_level_view">Kun læseadgang</string>
     <string name="wikis_access_level_none">Ingen adgang</string>
-    <string name="wikis_access_owner_label">Ejer</string>
     <string name="wikis_access_tab_users">Brugere</string>
     <string name="wikis_access_tab_groups">Grupper</string>
     <string name="wikis_access_tab_other">Andet</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Kunne ikke fjerne adgang</string>
     <string name="wikis_replicas_empty_title">Ingen replikaer endnu</string>
     <string name="wikis_replicas_empty_message">Når andre wikier replikerer denne wiki, vil de blive vist her.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Aldrig</string>
     <string name="wikis_replicas_remove_confirm_title">Fjern replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Fjern</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Opdateret %1$s</string>
     <string name="wikis_pageview_not_found_description">Siden \"%1$s\" eksisterer ikke endnu.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki-link</string>
-    <string name="wikis_pageview_share_link_copied">Sidelink kopieret til udklipsholder</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wikisidelink</string>
-    <string name="wikis_pageview_loading">Indlæser side…</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Åbn sidebjælke</string>
-    <string name="wikis_owned_badge">Egen</string>
     <string name="wikis_search_placeholder">Søg efter en wiki…</string>
-    <string name="wikis_subscribing">Abonnerer…</string>
     <string name="wikis_unsubscribe_confirm_message">Er du sikker på, at du vil afmelde abonnementet på %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Den server er ikke tilgængelig. Prøver igen…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Søg efter navn, ID, fingeraftryk eller URL…</string>
     <string name="wikis_join_search_button">Søg efter wikis…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Skriv et svar…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Fjern vedhæftning</string>
-    <string name="wikis_comment_collapse_toggle">Skjul tråd</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skriv dit indhold her med Markdown…</string>
     <string name="wikis_insert_dialog_empty">Ingen vedhæftninger endnu. Upload en fil for at komme i gang.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Tilføj tag</string>
     <string name="wikis_tag_dialog_empty">Tag må ikke være tomt</string>
     <string name="wikis_attachments_search_placeholder">Søg vedhæftninger…</string>
-    <string name="wikis_attachments_copy_failed">Kunne ikke kopiere indlejringslink</string>
     <string name="wikis_attachments_delete_confirm_message">Slet \"%1$s\"? Dette kan ikke fortrydes.</string>
     <string name="wikis_attachments_downloading">Henter…</string>
     <string name="wikis_attachments_empty_description">Tryk på Upload for at tilføje filer til denne side.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d svar</item>
         <item quantity="other">+%d flere svar</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Omdøbte %1$d side</item>
-        <item quantity="other">Omdøbte %1$d sider</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">opdaterede %1$d link</item>
-        <item quantity="other">opdaterede %1$d links</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d side</item>
         <item quantity="other">%d sider</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Billedteksten kunne ikke gemmes</string>
     <string name="wikis_attachments_upload_types">Understøttede filer: billeder, PDF, DOC, DOCX, TXT og MD.</string>
     <string name="wikis_attachments_upload_limits">Store uploads kan være begrænset af din server- eller proxykonfiguration.</string>
+    <string name="wikis_rss_replace">Erstat</string>
+    <string name="wikis_rss_copied_new">Ny RSS-URL kopieret til udklipsholderen</string>
+    <string name="wikis_rss_exists">Denne feed-URL er allerede udstedt og kan ikke vises igen.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Viser den første %1$d kommentar.</item>
+        <item quantity="other">Viser de første %1$d kommentarer.</item>
+    </plurals>
 </resources>

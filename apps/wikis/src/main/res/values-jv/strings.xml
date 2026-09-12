@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Golèk wiki</string>
     <string name="wikis_sidebar_create">Gawé wiki</string>
     <string name="wikis_pageview_title_fallback">Kaca</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Bali</string>
     <string name="wikis_pageview_page_actions">Aksi kaca</string>
     <string name="wikis_pageview_toc">Ing kaca iki</string>
     <string name="wikis_pageview_not_found_title">Kaca ora ditemokaké</string>
     <string name="wikis_pageview_create_this_page">Gawé kaca iki</string>
     <string name="wikis_pageview_rss_copied">URL RSS disalin menyang clipboard</string>
-    <string name="wikis_pageview_rss_failed">Gagal njupuk token RSS</string>
     <string name="wikis_page_action_section_page">Kaca</string>
     <string name="wikis_page_action_edit">Owahi</string>
     <string name="wikis_page_action_rename">Owahi jeneng</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Miwiti wiki pisananmu</string>
     <string name="wikis_empty_subtitle">Goleki wiki kanggo dilangganan, utawa gawé siji kanggo nerbitaké dokumentasi dhéwé.</string>
-    <string name="wikis_subscribed_badge">Wis langganan</string>
     <string name="wikis_create_button">Gawé wiki</string>
     <string name="wikis_recommended_section">Wiki disaranaké</string>
     <string name="wikis_subscribe_button">Langganan</string>
-    <string name="wikis_subscribed">Wis langganan</string>
     <string name="wikis_unsubscribe_action">Mbatalaké langganan</string>
     <string name="wikis_unsubscribing">Lagi mbatalaké langganan…</string>
     <string name="wikis_unsubscribe_confirm_title">Mbatalaké langganan</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Jeneng</string>
     <string name="wikis_create_privacy_label">Idini sapa waé nggolèki wiki</string>
     <string name="wikis_create_submit">Gawé</string>
-    <string name="wikis_create_cancel">Batal</string>
     <string name="wikis_comments_empty_title">Durung ana komentar</string>
     <string name="wikis_comments_empty_subtitle">Dadi sing pertama mènèhi komentar ing kaca iki.</string>
-    <string name="wikis_comment_action_reply">Bales</string>
     <string name="wikis_comment_replying_to">Mbales %1$s</string>
     <string name="wikis_comment_clear_reply">Batal balesan</string>
-    <string name="wikis_comment_action_edit">Owahi</string>
     <string name="wikis_comment_action_delete">Busak</string>
     <string name="wikis_comment_action_save">Simpen</string>
     <string name="wikis_comment_action_cancel">Batal</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Kaca anyar</string>
     <string name="wikis_editor_preview">Pratampilan</string>
     <string name="wikis_editor_preview_untitled">Tanpa judul</string>
-    <string name="wikis_editor_edit">Owahi</string>
     <string name="wikis_editor_insert">Sisip</string>
     <string name="wikis_editor_attachments">Lampiran</string>
     <string name="wikis_editor_delete">Busak kaca</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Lagi ngunggah…</string>
     <string name="wikis_attachments_upload_failed">Gagal ngunggah file</string>
     <string name="wikis_attachments_search_clear">Resiki panggolékan</string>
-    <string name="wikis_attachments_filter">Saring</string>
     <string name="wikis_attachments_filter_all">Kabèh berkas</string>
     <string name="wikis_attachments_filter_images">Gambar</string>
     <string name="wikis_attachments_filter_documents">Dokumen</string>
-    <string name="wikis_attachments_sort">Urut</string>
     <string name="wikis_attachments_sort_date">Tanggal</string>
     <string name="wikis_attachments_sort_name">Jeneng</string>
     <string name="wikis_attachments_sort_size">Ukuran</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Salin link embed</string>
     <string name="wikis_attachments_embed_copied">Link embed wis disalin</string>
     <string name="wikis_attachments_download">Undhuh</string>
-    <string name="wikis_attachments_copy_success">Link embed wis disalin</string>
     <string name="wikis_attachments_delete">Busak</string>
     <string name="wikis_attachments_delete_confirm_title">Busak lampiran</string>
     <string name="wikis_attachments_delete_success">Lampiran dibusak</string>
     <string name="wikis_attachments_delete_failed">Gagal mbusak lampiran</string>
-    <string name="wikis_attachments_open">Bukak</string>
     <string name="wikis_attachments_empty_title">Durung ana lampiran</string>
     <string name="wikis_attachments_no_results_title">Ora ana lampiran cocog karo panggolèkanmu</string>
     <string name="wikis_attachments_no_results_description">Coba istilah penelusuran utawa saringan liyané.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Tindakan iki ora bisa dibatalaké. Iki bakal mbusak wiki lan kabeh isiné kanthi permanen.</string>
     <string name="wikis_settings_delete_success">Wiki dibusak</string>
     <string name="wikis_settings_delete_failed">Gagal mbusak wiki</string>
-    <string name="wikis_access_add_action">Tambah</string>
     <string name="wikis_access_add_subject_label">Panganggo</string>
     <string name="wikis_access_level_edit">Owahi lan deleng</string>
     <string name="wikis_access_level_view">Mung deleng</string>
     <string name="wikis_access_level_none">Ora ana akses</string>
-    <string name="wikis_access_owner_label">Sing duwé</string>
     <string name="wikis_access_tab_users">Panganggo</string>
     <string name="wikis_access_tab_groups">Grup</string>
     <string name="wikis_access_tab_other">Liyané</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Gagal mbusak akses</string>
     <string name="wikis_replicas_empty_title">Durung ana replika</string>
     <string name="wikis_replicas_empty_message">Yen wiki liya replikasi wiki iki, dheweke bakal katon ing kene.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Ora tau</string>
     <string name="wikis_replicas_remove_confirm_title">Cabut replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Cabut</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">Kaca “%1$s” durung ana.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Tautan wiki</string>
-    <string name="wikis_pageview_share_link_copied">Tautan kaca disalin menyang papan klip</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Tautan kaca Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">Tautan</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">Golek wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">Sampeyan yakin arep mbatalake langganan %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Server kasebut ora bisa digayuh. Nyoba maneh…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Golek miturut jeneng, ID, sidik jari, utawa URL…</string>
     <string name="wikis_join_search_button">Golek wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Tulis wangsulan…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Tulis isi sampeyan ing kene nganggo Markdown…</string>
     <string name="wikis_insert_dialog_empty">Durung ana lampiran. Unggah berkas kanggo miwiti.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">Tag ora bisa kosong</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">Gagal nyalin tautan sematan</string>
     <string name="wikis_attachments_delete_confirm_message">Busak “%1$s”? Iki ora bisa dibalèkake.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Tutul Unggah kanggo nambahake berkas ing kaca iki.</string>
@@ -321,12 +296,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="other">+%d balesan liyané</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">Diowahi jeneng %1$d halaman</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">dianyari %1$d tautan</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="other">%d halaman</item>
     </plurals>
@@ -348,4 +317,10 @@
     <string name="wikis_attachments_caption_save_failed">Ora bisa nyimpen katrangan</string>
     <string name="wikis_attachments_upload_types">File sing didhukung: gambar, PDF, DOC, DOCX, TXT, lan MD.</string>
     <string name="wikis_attachments_upload_limits">Unggahan gedhe bisa diwatesi dening konfigurasi server utawa proxy sampeyan.</string>
+    <string name="wikis_rss_replace">Ganti</string>
+    <string name="wikis_rss_copied_new">URL RSS anyar disalin menyang clipboard</string>
+    <string name="wikis_rss_exists">URL feed iki wis diterbitake lan ora bisa ditampilake maneh.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">Nampilake %1$d komentar kapisan.</item>
+    </plurals>
 </resources>

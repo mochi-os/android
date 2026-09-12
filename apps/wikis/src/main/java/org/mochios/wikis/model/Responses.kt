@@ -21,7 +21,6 @@ data class JoinWikiResponse(
     val fingerprint: String = "",
     val home: String = "home",
     val source: String? = null,
-    val message: String? = null,
 )
 
 /** Per-renamed-page entry in `PageRenameResponse.renamed[]`. */
@@ -46,6 +45,3 @@ data class ReplicasResponse(val replicas: List<Replica> = emptyList())
 
 /** Response from `GET {wiki}/-/users/search`. */
 data class UsersSearchResponse(val results: List<User> = emptyList())
-
-/** Response from `GET {wiki}/-/groups`. */
-typealias WikiGroupsResponse = GroupsResponse

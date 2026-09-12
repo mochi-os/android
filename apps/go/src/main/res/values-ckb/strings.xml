@@ -34,7 +34,6 @@
     <string name="go_game_deleted">یاری سڕایەوە</string>
     <string name="go_new_game_add_friends">زیادکردنی هاوڕێیان</string>
     <string name="go_new_game_board_size_label">قەبارەی تەختە</string>
-    <string name="go_new_game_cancel">هەڵوەشاندنەوە</string>
     <string name="go_new_game_friend_label">بەرامبەر</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">دەست لە یاری بکێشیتەوە؟</string>
     <string name="go_sidebar_completed">تەواوبوو</string>
     <string name="go_sidebar_new_game">یاری نوێ</string>
-    <string name="go_status_active">چالاک</string>
     <string name="go_status_draw">یەکسانی</string>
     <string name="go_status_draw_text">یەکسانی</string>
     <string name="go_status_game_over">یاری کۆتایی هات</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">هێشتا هیچ یارییەکی چالاک نییە.</string>
-    <string name="go_empty_completed">هێشتا هیچ یارییەکی تەواوکراو نییە.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">یاری نوێی Go</string>
     <string name="go_new_game_no_friends">پێویستە هاوڕێیەک زیاد بکەیت پێش ئەوەی یاری دەست پێ بکەیت.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">خاڵەکانی زیادکراو بۆ ئەنجامی سپی بۆ قەرەبووکردنەوەی ئەوەی ڕەش یەکەم دەیارییەت</string>
-    <string name="go_new_game_create_error">دەستپێکردنی یاری سەرکەوتوو نەبوو</string>
 
     <string name="go_board_a11y">تەختەی Go-ی %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">تەختەی گۆ %1$d×%1$d، نۆرەی تۆیە بەردێکی ڕەش دابنێیت</string>
     <string name="go_board_a11y_turn_white">تەختەی گۆ %1$d×%1$d، نۆرەی تۆیە بەردێکی سپی دابنێیت</string>
+    <string name="go_status_scoring">ژماردن — لەسەر ئەنجام ڕێک بکەون یان بەردەوام بن</string>
+    <string name="go_score_proposed">خاڵی پێشنیارکراو: ڕەش %1$s، سپی %2$s</string>
+    <string name="go_score_opponent_accepted">بەرامبەرەکەت ئەم خاڵە قبووڵ دەکات: ڕەش %1$s، سپی %2$s</string>
+    <string name="go_score_waiting">خاڵ قبووڵکرا — چاوەڕێی %1$s</string>
+    <string name="go_score_accept">خاڵ قبووڵ بکە</string>
+    <string name="go_score_resume">بەردەوامبوونی یاری</string>
+    <string name="go_error_score_resume_failed">بەردەوامبوونی یاری سەرکەوتوو نەبوو</string>
+    <string name="go_error_score_accept_failed">وەرگرتنی خاڵ سەرکەوتوو نەبوو</string>
 </resources>

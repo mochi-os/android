@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menú</string>
-    <string name="words_list_new">Nueva partida</string>
     <string name="words_list_logout">Cerrar sesión</string>
-    <string name="words_list_empty_title">Aún no hay partidas</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Completado</string>
     <string name="words_sidebar_new_game">Nueva partida</string>
     <string name="words_new_game_title">Nueva partida</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Revancha</string>
     <string name="words_detail_action_delete">Eliminar juego</string>
     <string name="words_detail_chat_title">Chat</string>
-    <string name="words_detail_invalid_move">Jugada no válida</string>
     <string name="words_detail_recall">Recuperar</string>
     <string name="words_detail_submit">Enviar</string>
     <string name="words_detail_cancel">Cancelar</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Elige una letra</string>
     <string name="words_detail_resign_title">¿Rendirse en la partida?</string>
     <string name="words_detail_resign_message">¿Seguro que querés rendirte?</string>
-    <string name="words_detail_failed_move">Error al enviar la jugada</string>
-    <string name="words_detail_failed_pass">Error al pasar</string>
-    <string name="words_detail_failed_exchange">Error al intercambiar</string>
-    <string name="words_detail_failed_resign">Error al rendirse</string>
-    <string name="words_detail_failed_rematch">Error al crear la revancha</string>
-    <string name="words_detail_failed_delete">Error al eliminar la partida</string>
-    <string name="words_detail_game_deleted">Partida eliminada</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Notificaciones sobre turnos de Words, cambios y resultados de partidas.</string>
-    <string name="words_list_empty_subtitle">Toca el botón + para iniciar tu primera partida.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Aún no hay partidas.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Agrega amigos en la aplicación People para empezar a jugar.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Detalles de la partida próximamente</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

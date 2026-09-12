@@ -34,7 +34,6 @@
     <string name="go_game_deleted">게임이 삭제되었어요</string>
     <string name="go_new_game_add_friends">친구 추가</string>
     <string name="go_new_game_board_size_label">보드 크기</string>
-    <string name="go_new_game_cancel">취소</string>
     <string name="go_new_game_friend_label">상대</string>
     <string name="go_new_game_komi_field_label">코미</string>
     <string name="go_new_game_komi_label">코미</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">게임을 기권할까요?</string>
     <string name="go_sidebar_completed">완료됨</string>
     <string name="go_sidebar_new_game">새 게임</string>
-    <string name="go_status_active">활성</string>
     <string name="go_status_draw">무승부</string>
     <string name="go_status_draw_text">무승부</string>
     <string name="go_status_game_over">게임 종료</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">사이드바 열기</string>
     <string name="go_sidebar_active">진행 중인 게임</string>
     <string name="go_empty_active">아직 진행 중인 게임이 없습니다.</string>
-    <string name="go_empty_completed">아직 완료된 게임이 없습니다.</string>
-    <string name="go_status_finished">종료됨</string>
     <string name="go_status_resigned">기권함</string>
-    <string name="go_card_vs">%1$s 대전</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">새 바둑 게임</string>
     <string name="go_new_game_no_friends">게임을 시작하려면 먼저 친구를 추가해야 합니다.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">흑이 먼저 두는 것을 보완하기 위해 백의 점수에 추가되는 점수</string>
-    <string name="go_new_game_create_error">게임 시작 실패</string>
 
     <string name="go_board_a11y">%1$d×%1$d 바둑판</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d 바둑판, 흑돌을 놓을 차례입니다</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d 바둑판, 백돌을 놓을 차례입니다</string>
+    <string name="go_status_scoring">계가 — 집을 합의하거나 대국을 계속하세요</string>
+    <string name="go_score_proposed">제안된 점수: 흑 %1$s, 백 %2$s</string>
+    <string name="go_score_opponent_accepted">상대가 이 점수에 동의합니다: 흑 %1$s, 백 %2$s</string>
+    <string name="go_score_waiting">점수 수락됨 — %1$s의 응답을 기다리는 중</string>
+    <string name="go_score_accept">점수 수락</string>
+    <string name="go_score_resume">대국 재개</string>
+    <string name="go_error_score_resume_failed">대국 재개에 실패했어요</string>
+    <string name="go_error_score_accept_failed">점수 수락에 실패했어요</string>
 </resources>

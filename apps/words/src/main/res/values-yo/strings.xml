@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Àwọn ọ̀rọ̀</string>
     <string name="words_list_title">Àwọn ọ̀rọ̀</string>
     <string name="words_list_menu">Ìtòlẹ́sẹẹsẹ</string>
-    <string name="words_list_new">Eré tuntun</string>
     <string name="words_list_logout">Jáde</string>
-    <string name="words_list_empty_title">Kò sí eré síbẹ̀</string>
-    <string name="words_sidebar_header">Àwọn ọ̀rọ̀</string>
     <string name="words_sidebar_completed">Tí a parí</string>
     <string name="words_sidebar_new_game">Eré tuntun</string>
     <string name="words_new_game_title">Eré tuntun</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Tún bá</string>
     <string name="words_detail_action_delete">Pa eré rẹ́</string>
     <string name="words_detail_chat_title">Ìjíròrò</string>
-    <string name="words_detail_invalid_move">Ìṣíkiri aláìdára</string>
     <string name="words_detail_recall">Rántí</string>
     <string name="words_detail_submit">Fi sí ilẹ̀</string>
     <string name="words_detail_cancel">Fagilé</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Yan lẹ́tà kan</string>
     <string name="words_detail_resign_title">Fi eré sílẹ̀?</string>
     <string name="words_detail_resign_message">Ṣé o dájú pé o fẹ́ jọ̀wọ́?</string>
-    <string name="words_detail_failed_move">Kò lè fi ìṣíkiri sílẹ̀</string>
-    <string name="words_detail_failed_pass">Kò lè kọjá</string>
-    <string name="words_detail_failed_exchange">Kò lè pààrọ̀</string>
-    <string name="words_detail_failed_resign">Kò lè jọ̀wọ́</string>
-    <string name="words_detail_failed_rematch">Kò lè dá ìbárapọ̀ tuntun</string>
-    <string name="words_detail_failed_delete">Kò lè pa eré rẹ́</string>
-    <string name="words_detail_game_deleted">A ti pa eré rẹ́</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Àwọn ìfitónilétí nípa àkókò Words, pàṣípàrọ̀ àti àbájáde eré.</string>
-    <string name="words_list_empty_subtitle">Tẹ bọ́tìnnì + láti bẹ̀rẹ̀ eré àkọ́kọ́ rẹ.</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">Kò sí eré síbẹ̀.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Fi àwọn ọ̀rẹ́ kún un nínú ohun èlò People láti bẹ̀rẹ̀ eré.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">Àwọn àlàyé eré ń bọ̀ láìpẹ́</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

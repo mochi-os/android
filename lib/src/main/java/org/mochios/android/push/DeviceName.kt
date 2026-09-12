@@ -8,6 +8,7 @@ package org.mochios.android.push
 import android.content.Context
 import android.os.Build
 import android.provider.Settings
+import org.mochios.android.R
 
 /**
  * Best-effort friendly device name, used as the push account's label on the
@@ -25,7 +26,8 @@ object DeviceName {
         val model = Build.MODEL.orEmpty()
 
         return when {
-            manufacturer.isBlank() && model.isBlank() -> "Mobile device"
+            manufacturer.isBlank() && model.isBlank() ->
+                context.getString(R.string.device_name_fallback)
             manufacturer.isBlank() -> model
             model.isBlank() -> manufacturer
             model.startsWith(manufacturer, ignoreCase = true) -> model.titleCase()

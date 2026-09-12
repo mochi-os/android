@@ -5,10 +5,7 @@
     <string name="auth_email">ईमेल</string>
     <string name="auth_continue">जारी रखीं</string>
     <string name="auth_verification_code">सत्यापन कोड</string>
-    <string name="auth_verify">सत्यापित करीं</string>
-    <string name="auth_authenticator_app">Authenticator ऐप</string>
     <string name="auth_email_code">ईमेल कोड</string>
-    <string name="auth_authenticator_code">Authenticator कोड</string>
     <string name="auth_recovery_code">रिकवरी कोड</string>
     <string name="auth_name">नाम</string>
     <string name="auth_create">बनाईं</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">कॉपी करीं</string>
     <string name="common_copied">क्लिपबोर्ड पर कॉपी कइल गइल</string>
     <string name="comment_edited">(संपादित)</string>
-    <string name="comment_edit_placeholder">टिप्पणी संपादित करीं</string>
     <string name="comment_reply">जवाब</string>
-    <string name="comment_reply_placeholder">जवाब</string>
-    <string name="comment_send_reply">जवाब भेजीं</string>
     <string name="person_picker_search">यूजर खोजीं</string>
     <string name="place_picker_no_results">कौनो जगह ना मिलल</string>
-    <string name="discovery_results">परिणाम</string>
     <string name="discovery_recommended">सिफारिश कइल</string>
-    <string name="discovery_subscribed">सदस्यता ले लिहल गइल</string>
     <string name="access_add_rule">नियम जोड़ीं</string>
     <string name="access_owner">मालिक</string>
     <string name="access_revoke">वापस लीं</string>
-    <string name="access_level">पहुंच स्तर</string>
     <string name="access_level_comment">टिप्पणी</string>
     <string name="access_level_view">देखीं</string>
     <string name="access_level_none">कुछुओ ना</string>
-    <string name="banner_label">Banner</string>
     <string name="reaction_like">पसंद</string>
     <string name="reaction_dislike">नापसंद</string>
     <string name="reaction_laugh">हँसी</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">सब</string>
     <string name="notifications_mark_all_read">सब पढ़ल चिह्नित करीं</string>
     <string name="notifications_clear_all">सब साफ करीं</string>
-    <string name="notifications_loading">लोड हो रहल बा…</string>
     <string name="settings_title">सेटिंग सब</string>
-    <string name="settings_open">सेटिंग सब</string>
     <string name="settings_appearance">रूप</string>
     <string name="settings_appearance_light">हल्का</string>
     <string name="settings_appearance_dark">गहिरा</string>
@@ -123,14 +111,6 @@
     <string name="settings_background">पृष्ठभूमि</string>
     <string name="settings_background_theme">थीम से</string>
     <string name="settings_background_off">कुछुओ ना</string>
-    <string name="profile_title">प्रोफाइल</string>
-    <string name="profile_open">प्रोफाइल</string>
-    <string name="profile_display_name">प्रदर्शन नाम</string>
-    <string name="profile_save_name">नाम सहेजीं</string>
-    <string name="profile_privacy">गोपनीयता</string>
-    <string name="profile_privacy_public">सार्वजनिक</string>
-    <string name="profile_privacy_private">निजी</string>
-    <string name="profile_fingerprint">फिंगरप्रिंट</string>
     <string name="game_chat_empty">अबहीं तक कौनो संदेश नइखे</string>
     <string name="game_chat_input_placeholder">एगो संदेश टाइप करीं…</string>
     <string name="game_chat_send">संदेश भेजीं</string>
@@ -143,7 +123,6 @@
     <string name="error_not_found">ना मिलल</string>
     <string name="error_server">सर्वर त्रुटि (%1$d)। कृपया बाद में फिर कोशिश करीं।</string>
     <string name="error_unexpected">एगो अप्रत्याशित त्रुटि भइल</string>
-    <string name="error_request_failed">अनुरोध विफल भइल</string>
     <string name="error_enter_server_url">कृपया सर्वर URL डालीं</string>
     <string name="error_enter_email">कृपया आपन ईमेल डालीं</string>
     <string name="error_enter_name">कृपया एगो नाम डालीं</string>
@@ -151,13 +130,7 @@
     <string name="auth_server_url">सर्वर URL</string>
     <string name="auth_connect">जुड़ीं</string>
     <string name="auth_sign_in">साइन इन करीं</string>
-    <string name="auth_sign_in_with_passkey">पासकी से साइन इन करीं</string>
-    <string name="auth_sign_in_with_email_code">ईमेल कोड से साइन इन करीं</string>
-    <string name="auth_use_recovery_code">रिकवरी कोड के उपयोग करीं</string>
-    <string name="auth_back_to_sign_in">साइन इन पर वापस जाईं</string>
-    <string name="auth_send_code">कोड भेजीं</string>
     <string name="auth_check_email">सत्यापन कोड खातिर आपन ईमेल देखीं</string>
-    <string name="auth_six_digit_code">6 अंक के कोड</string>
     <string name="auth_mfa_title">बहु-कारक प्रमाणीकरण</string>
     <string name="auth_mfa_subtitle">बाकी सत्यापन के चरण पूरा करीं</string>
     <string name="auth_recover_account">खाता रिकवर करीं</string>
@@ -185,10 +158,7 @@
     <string name="bootstrap_sign_in_differently">अलग तरीका से साइन इन करीं</string>
     <string name="bootstrap_choose_account">एगो खाता चुनीं</string>
     <string name="bootstrap_sign_in_different_server">अलग सर्वर पर साइन इन करीं</string>
-    <string name="common_or">या</string>
     <string name="common_not_saved">सहेजल ना गइल</string>
-    <string name="common_save_failed">आपन बदलाव सहेजल ना जा सकल।</string>
-    <string name="common_change">बदलीं</string>
     <string name="common_retry">फिर कोशिश करीं</string>
     <string name="common_more_options">अउरी विकल्प</string>
     <string name="common_collapse">समेटीं</string>
@@ -197,21 +167,12 @@
     <string name="place_picker_name">जगह के नाम</string>
     <string name="place_origin">मूल</string>
     <string name="place_destination">गंतव्य</string>
-    <string name="discovery_search_placeholder">%1$ss खोजीं</string>
-    <string name="discovery_no_results">कवनो %1$ss ना मिलल</string>
     <string name="discovery_no_results_hint">अपना खोज समायोजित करे के कोशिश करीं</string>
-    <string name="discovery_no_recommendations">कवनो सिफारिश ना</string>
-    <string name="discovery_search_hint">सब्सक्राइब करे खातिर एगो %1$s खोजे के कोशिश करीं</string>
     <string name="access_no_rules">कवनो पहुँच नियम ना</string>
-    <string name="access_no_rules_subtitle">ई संसाधन के के पहुँच पावी ओकर नियंत्रण खातिर नियम जोड़ीं</string>
     <string name="access_add_rule_title">पहुँच नियम जोड़ीं</string>
     <string name="access_level_manage">प्रबंधन</string>
     <string name="access_level_react">प्रतिक्रिया</string>
     <string name="notifications_clear">सूचना साफ करीं</string>
-    <string name="banner_description">एह दृश्य के सबसे ऊपर देखावल जाए वाला मार्कडाउन।</string>
-    <string name="banner_placeholder">स्वागत बा…</string>
-    <string name="banner_save">बैनर सहेजीं</string>
-    <string name="banner_clear">बैनर साफ करीं</string>
     <string name="entity_avatar_alt">%1$s खातिर अवतार</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -227,7 +188,6 @@
     <string name="format_time_days_short">%1$dदि</string>
     <string name="format_time_weeks_short">%1$dह</string>
     <string name="format_time_months_short">%1$dमा</string>
-    <string name="format_time_years_short">%1$dसा</string>
     <string name="reaction_add">प्रतिक्रिया जोड़ीं</string>
     <string name="push_service_channel">Mochi पुश</string>
     <string name="push_service_channel_description">सूचना पावे खातिर Mochi के जुड़ल राखेला</string>
@@ -252,7 +212,6 @@
     <string name="about_check_download_failed">डाउनलोड विफल भइल</string>
     <string name="notifications_clear_all_title">सब सूचना मिटाईं?</string>
     <string name="notifications_clear_all_message">एह से हर सूचना हट जाई। उनकर वापसी ना हो पाई।</string>
-    <string name="notifications_count_n">%1$d नया</string>
     <string name="settings_value_auto">स्वचालित</string>
     <string name="settings_value_theme">थीम के डिफ़ॉल्ट</string>
     <string name="settings_radius">कोना के त्रिज्या</string>
@@ -260,7 +219,6 @@
     <string name="settings_timestamp_relative">सापेक्ष</string>
     <string name="settings_timestamp_absolute">निरपेक्ष</string>
     <string name="settings_units_usa">अमेरिकी</string>
-    <string name="profile_privacy_description">का दोसरा लोग रउआ के निर्देशिका में खोज सके।</string>
     <string name="game_chat_load_more">पुरान संदेश लोड करीं</string>
     <string name="game_chat_move_played">%1$s %2$s खेलल</string>
     <string name="stepup_title">पुष्टि करीं कि ई रउआ बानी</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">आपन ईमेल से आइल कोड डालीं</string>
     <string name="stepup_totp_label">Authenticator कोड</string>
     <string name="stepup_totp_placeholder">आपन प्रमाणक कोड डालीं</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">आपन पासकी इस्तेमाल करीं</string>
     <string name="stepup_send_email">ईमेल भेजीं</string>
     <string name="stepup_resend_email">ईमेल फिर से भेजीं</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">अनाम</string>
     <string name="tags_label">टैग सब</string>
     <string name="tags_add">टैग जोड़ीं</string>
-    <string name="tags_label_field">टैग नाम</string>
     <string name="tags_interest_up">एकरा जइसन अउर देखाईं</string>
     <string name="tags_interest_down">एकरा जइसन कम देखाईं</string>
     <string name="tags_interest_clear">देखावल बंद करीं</string>
@@ -310,10 +266,6 @@
     <string name="person_picker_directory">निर्देशिका</string>
     <string name="person_picker_no_people">कोई लोग नइखे</string>
     <string name="person_picker_project_members">परियोजना के सदस्य</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="one">%1$d ग्राहक</item>
-        <item quantity="other">%1$d ग्राहक</item>
-    </plurals>
     <string name="account_token_label">Mochi सत्र</string>
     <string name="attachment_caption">कैप्शन</string>
     <string name="attachment_caption_add">कैप्शन जोड़ीं</string>
@@ -354,4 +306,8 @@
     <string name="settings_card_theme">थीम से</string>
     <string name="settings_card_flat">सपाट</string>
     <string name="settings_card_raised">उठल</string>
+    <string name="error_server_https">सर्वर के पता https:// से शुरू होखे के चाहीं</string>
+    <string name="device_name_fallback">मोबाइल डिवाइस</string>
+    <string name="account_error_token_type">असमर्थित टोकन प्रकार</string>
+    <string name="account_error_caller">कॉल करे वाला के अनुमति नइखे</string>
 </resources>

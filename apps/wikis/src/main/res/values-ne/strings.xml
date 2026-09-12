@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">विकीहरू खोज्नुहोस्</string>
     <string name="wikis_sidebar_create">wiki सिर्जना गर्नुहोस्</string>
     <string name="wikis_pageview_title_fallback">पृष्ठ</string>
-    <string name="wikis_pageview_wiki_fallback">विकि</string>
-    <string name="wikis_pageview_back">पछाडि</string>
     <string name="wikis_pageview_page_actions">पृष्ठ कार्यहरू</string>
     <string name="wikis_pageview_toc">यो पृष्ठमा</string>
     <string name="wikis_pageview_not_found_title">पृष्ठ भेटिएन</string>
     <string name="wikis_pageview_create_this_page">यो पृष्ठ सिर्जना गर्नुहोस्</string>
     <string name="wikis_pageview_rss_copied">RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
-    <string name="wikis_pageview_rss_failed">RSS टोकन प्राप्त गर्न असफल</string>
     <string name="wikis_page_action_section_page">पृष्ठ</string>
     <string name="wikis_page_action_edit">सम्पादन</string>
     <string name="wikis_page_action_rename">नाम परिवर्तन गर्नुहोस्</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">विकिहरू</string>
     <string name="wikis_empty_title">आफ्नो पहिलो विकि सुरु गर्नुहोस्</string>
     <string name="wikis_empty_subtitle">सदस्यता लिन विकि खोज्नुहोस्, वा आफ्नै कागजात प्रकाशित गर्न नयाँ सिर्जना गर्नुहोस्।</string>
-    <string name="wikis_subscribed_badge">सदस्यता लिइयो</string>
     <string name="wikis_create_button">wiki सिर्जना गर्नुहोस्</string>
     <string name="wikis_recommended_section">सिफारिस गरिएका विकीहरू</string>
     <string name="wikis_subscribe_button">सदस्यता लिनुहोस्</string>
-    <string name="wikis_subscribed">सदस्यता लिइयो</string>
     <string name="wikis_unsubscribe_action">सदस्यता हटाउनुहोस्</string>
     <string name="wikis_unsubscribing">सदस्यता हटाउँदै…</string>
     <string name="wikis_unsubscribe_confirm_title">सदस्यता हटाउनुहोस्</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">नाम</string>
     <string name="wikis_create_privacy_label">जोसुकैलाई wiki खोज्न अनुमति दिनुहोस्</string>
     <string name="wikis_create_submit">सिर्जना गर्नुहोस्</string>
-    <string name="wikis_create_cancel">रद्द गर्नुहोस्</string>
     <string name="wikis_comments_empty_title">अहिलेसम्म कुनै टिप्पणी छैन</string>
     <string name="wikis_comments_empty_subtitle">यो पृष्ठमा टिप्पणी गर्ने पहिलो व्यक्ति बन्नुहोस्।</string>
-    <string name="wikis_comment_action_reply">जवाफ दिनुहोस्</string>
     <string name="wikis_comment_replying_to">%1$s लाई जवाफ दिँदै</string>
     <string name="wikis_comment_clear_reply">जवाफ रद्द गर्नुहोस्</string>
-    <string name="wikis_comment_action_edit">सम्पादन</string>
     <string name="wikis_comment_action_delete">मेटाउनुहोस्</string>
     <string name="wikis_comment_action_save">सुरक्षित गर्नुहोस्</string>
     <string name="wikis_comment_action_cancel">रद्द गर्नुहोस्</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">नयाँ पृष्ठ</string>
     <string name="wikis_editor_preview">पूर्वावलोकन</string>
     <string name="wikis_editor_preview_untitled">शीर्षकविहीन</string>
-    <string name="wikis_editor_edit">सम्पादन</string>
     <string name="wikis_editor_insert">घुसाउनुहोस्</string>
     <string name="wikis_editor_attachments">एट्याचमेन्टहरू</string>
     <string name="wikis_editor_delete">पृष्ठ मेटाउनुहोस्</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">अपलोड गर्दै…</string>
     <string name="wikis_attachments_upload_failed">फाइलहरू अपलोड गर्न असफल</string>
     <string name="wikis_attachments_search_clear">खोजी खाली गर्नुहोस्</string>
-    <string name="wikis_attachments_filter">फिल्टर</string>
     <string name="wikis_attachments_filter_all">सबै फाइलहरू</string>
     <string name="wikis_attachments_filter_images">छविहरू</string>
     <string name="wikis_attachments_filter_documents">कागजातहरू</string>
-    <string name="wikis_attachments_sort">क्रमबद्ध गर्नुहोस्</string>
     <string name="wikis_attachments_sort_date">मिति</string>
     <string name="wikis_attachments_sort_name">नाम</string>
     <string name="wikis_attachments_sort_size">साइज</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">एम्बेड लिङ्क प्रतिलिपि गर्नुहोस्</string>
     <string name="wikis_attachments_embed_copied">इम्बेड लिङ्क प्रतिलिपि गरियो</string>
     <string name="wikis_attachments_download">डाउनलोड</string>
-    <string name="wikis_attachments_copy_success">इम्बेड लिङ्क प्रतिलिपि गरियो</string>
     <string name="wikis_attachments_delete">मेटाउनुहोस्</string>
     <string name="wikis_attachments_delete_confirm_title">एट्याचमेन्ट मेटाउनुहोस्</string>
     <string name="wikis_attachments_delete_success">एट्याचमेन्ट मेटाइयो</string>
     <string name="wikis_attachments_delete_failed">एट्याचमेन्ट मेटाउन असफल</string>
-    <string name="wikis_attachments_open">खोल्नुहोस्</string>
     <string name="wikis_attachments_empty_title">अहिलेसम्म कुनै एट्याचमेन्ट छैन</string>
     <string name="wikis_attachments_no_results_title">तपाईंको खोजसँग मेल खाने कुनै पनि संलग्नक छैनन्</string>
     <string name="wikis_attachments_no_results_description">फरक खोज शब्द वा फिल्टर प्रयास गर्नुहोस्।</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">यो कार्य फिर्ता गर्न सकिँदैन। यसले विकि र यसका सबै सामग्रीहरूलाई स्थायी रूपमा मेटाउनेछ।</string>
     <string name="wikis_settings_delete_success">विकि मेटाइयो</string>
     <string name="wikis_settings_delete_failed">विकी मेटाउन असफल</string>
-    <string name="wikis_access_add_action">थप्नुहोस्</string>
     <string name="wikis_access_add_subject_label">प्रयोगकर्ता</string>
     <string name="wikis_access_level_edit">सम्पादन र हेर्नुहोस्</string>
     <string name="wikis_access_level_view">मात्र हेर्नुहोस्</string>
     <string name="wikis_access_level_none">पहुँच छैन</string>
-    <string name="wikis_access_owner_label">मालिक</string>
     <string name="wikis_access_tab_users">प्रयोगकर्ताहरू</string>
     <string name="wikis_access_tab_groups">समूहहरू</string>
     <string name="wikis_access_tab_other">अन्य</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">पहुँच हटाउन असफल</string>
     <string name="wikis_replicas_empty_title">अहिलेसम्म कुनै रेप्लिका छैन</string>
     <string name="wikis_replicas_empty_message">जब अरू विकिहरूले यो विकिको प्रतिकृति बनाउँछन्, तिनीहरू यहाँ देखिनेछन्।</string>
-    <string name="wikis_replicas_col_id">आईडी</string>
     <string name="wikis_replicas_never_synced">कहिल्यै होइन</string>
     <string name="wikis_replicas_remove_confirm_title">रेप्लिका हटाउने?</string>
     <string name="wikis_replicas_remove_confirm_action">हटाउनुहोस्</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” पृष्ठ अहिलेसम्म अवस्थित छैन।</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">विकी लिङ्क</string>
-    <string name="wikis_pageview_share_link_copied">पृष्ठ लिङ्क क्लिपबोर्डमा प्रतिलिपि भयो</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki पृष्ठ लिङ्क</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">लिङ्क</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">wiki खोज्नुहोस्…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">के तपाईं %1$s बाट सदस्यता रद्द गर्न निश्चित हुनुहुन्छ?</string>
-    <string name="wikis_subscribe_failed_502">त्यो सर्भर पहुँचयोग्य छैन। पुनः प्रयास गर्दै…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">नाम, ID, फिंगरप्रिन्ट वा URL अनुसार खोज्नुहोस्…</string>
     <string name="wikis_join_search_button">wiki हरू खोज्नुहोस्…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">जवाफ लेख्नुहोस्…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">आफ्नो सामग्री यहाँ Markdown प्रयोग गरी लेख्नुहोस्…</string>
     <string name="wikis_insert_dialog_empty">अहिलेसम्म कुनै संलग्नक छैन। सुरु गर्न फाइल अपलोड गर्नुहोस्।</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">ट्याग खाली हुन सक्दैन</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">एम्बेड लिङ्क प्रतिलिपि गर्न असफल</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” मेट्ने? यो फिर्ता गर्न सकिँदैन।</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">यस पृष्ठमा फाइल थप्न अपलोड थिच्नुहोस्।</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d जवाफ</item>
         <item quantity="other">+%d थप जवाफहरू</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">१ पृष्ठको नाम परिवर्तन गरियो</item>
-        <item quantity="other">%1$d पृष्ठहरूको नाम परिवर्तन गरियो</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">१ लिङ्क अद्यावधिक गरियो</item>
-        <item quantity="other">%1$d लिङ्कहरू अद्यावधिक गरियो</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d पृष्ठ</item>
         <item quantity="other">%d पृष्ठहरू</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">क्याप्शन बचत गर्न सकिएन</string>
     <string name="wikis_attachments_upload_types">समर्थित फाइलहरू: छविहरू, PDF, DOC, DOCX, TXT, र MD।</string>
     <string name="wikis_attachments_upload_limits">ठूला अपलोडहरू तपाईंको सर्भर वा प्रोक्सी कन्फिगरेसनद्वारा सीमित हुन सक्छन्।</string>
+    <string name="wikis_rss_replace">बदल्नुहोस्</string>
+    <string name="wikis_rss_copied_new">नयाँ RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
+    <string name="wikis_rss_exists">यो फिड URL पहिले नै जारी गरिएको छ र फेरि देखाउन सकिँदैन।</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">पहिलो %1$d टिप्पणी देखाइँदै छ।</item>
+        <item quantity="other">पहिलो %1$d टिप्पणीहरू देखाइँदै छन्।</item>
+    </plurals>
 </resources>

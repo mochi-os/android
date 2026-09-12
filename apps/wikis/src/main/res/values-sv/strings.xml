@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Hitta wikis</string>
     <string name="wikis_sidebar_create">Skapa wiki</string>
     <string name="wikis_pageview_title_fallback">Sida</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Tillbaka</string>
     <string name="wikis_pageview_page_actions">Sidåtgärder</string>
     <string name="wikis_pageview_toc">På denna sida</string>
     <string name="wikis_pageview_not_found_title">Sidan hittades inte</string>
     <string name="wikis_pageview_create_this_page">Skapa denna sida</string>
     <string name="wikis_pageview_rss_copied">RSS-URL kopierad till urklipp</string>
-    <string name="wikis_pageview_rss_failed">Kunde inte hämta RSS-token</string>
     <string name="wikis_page_action_section_page">Sida</string>
     <string name="wikis_page_action_edit">Redigera</string>
     <string name="wikis_page_action_rename">Byt namn</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Starta din första wiki</string>
     <string name="wikis_empty_subtitle">Sök efter ett wiki att prenumerera på, eller skapa ett för att publicera din egen dokumentation.</string>
-    <string name="wikis_subscribed_badge">Prenumererad</string>
     <string name="wikis_create_button">Skapa wiki</string>
     <string name="wikis_recommended_section">Rekommenderade wikis</string>
     <string name="wikis_subscribe_button">Prenumerera</string>
-    <string name="wikis_subscribed">Prenumererad</string>
     <string name="wikis_unsubscribe_action">Avsluta prenumeration</string>
     <string name="wikis_unsubscribing">Avslutar prenumeration…</string>
     <string name="wikis_unsubscribe_confirm_title">Avsluta prenumeration</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Namn</string>
     <string name="wikis_create_privacy_label">Tillåt alla att söka efter wiki</string>
     <string name="wikis_create_submit">Skapa</string>
-    <string name="wikis_create_cancel">Avbryt</string>
     <string name="wikis_comments_empty_title">Inga kommentarer ännu</string>
     <string name="wikis_comments_empty_subtitle">Var först med att kommentera denna sida.</string>
-    <string name="wikis_comment_action_reply">Svara</string>
     <string name="wikis_comment_replying_to">Svarar %1$s</string>
     <string name="wikis_comment_clear_reply">Avbryt svar</string>
-    <string name="wikis_comment_action_edit">Redigera</string>
     <string name="wikis_comment_action_delete">Ta bort</string>
     <string name="wikis_comment_action_save">Spara</string>
     <string name="wikis_comment_action_cancel">Avbryt</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Ny sida</string>
     <string name="wikis_editor_preview">Förhandsgranska</string>
     <string name="wikis_editor_preview_untitled">Namnlös</string>
-    <string name="wikis_editor_edit">Redigera</string>
     <string name="wikis_editor_insert">Infoga</string>
     <string name="wikis_editor_attachments">Bilagor</string>
     <string name="wikis_editor_delete">Ta bort sida</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Laddar upp…</string>
     <string name="wikis_attachments_upload_failed">Kunde inte ladda upp filer</string>
     <string name="wikis_attachments_search_clear">Rensa sökning</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Alla filer</string>
     <string name="wikis_attachments_filter_images">Bilder</string>
     <string name="wikis_attachments_filter_documents">Dokument</string>
-    <string name="wikis_attachments_sort">Sortera</string>
     <string name="wikis_attachments_sort_date">Datum</string>
     <string name="wikis_attachments_sort_name">Namn</string>
     <string name="wikis_attachments_sort_size">Storlek</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopiera inbäddningslänk</string>
     <string name="wikis_attachments_embed_copied">Inbäddningslänk kopierad</string>
     <string name="wikis_attachments_download">Ladda ner</string>
-    <string name="wikis_attachments_copy_success">Inbäddningslänk kopierad</string>
     <string name="wikis_attachments_delete">Ta bort</string>
     <string name="wikis_attachments_delete_confirm_title">Ta bort bilaga</string>
     <string name="wikis_attachments_delete_success">Bilaga borttagen</string>
     <string name="wikis_attachments_delete_failed">Kunde inte radera bilaga</string>
-    <string name="wikis_attachments_open">Öppna</string>
     <string name="wikis_attachments_empty_title">Inga bilagor ännu</string>
     <string name="wikis_attachments_no_results_title">Inga bilagor matchar din sökning</string>
     <string name="wikis_attachments_no_results_description">Prova en annan sökterm eller ett annat filter.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Den här åtgärden kan inte ångras. Detta tar permanent bort wikin och allt dess innehåll.</string>
     <string name="wikis_settings_delete_success">Wiki borttagen</string>
     <string name="wikis_settings_delete_failed">Kunde inte radera wiki</string>
-    <string name="wikis_access_add_action">Lägg till</string>
     <string name="wikis_access_add_subject_label">Användare</string>
     <string name="wikis_access_level_edit">Redigera och visa</string>
     <string name="wikis_access_level_view">Endast visning</string>
     <string name="wikis_access_level_none">Ingen åtkomst</string>
-    <string name="wikis_access_owner_label">Ägare</string>
     <string name="wikis_access_tab_users">Användare</string>
     <string name="wikis_access_tab_groups">Grupper</string>
     <string name="wikis_access_tab_other">Övrigt</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Kunde inte ta bort åtkomst</string>
     <string name="wikis_replicas_empty_title">Inga repliker ännu</string>
     <string name="wikis_replicas_empty_message">När andra wikis replikerar den här wikin visas de här.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Aldrig</string>
     <string name="wikis_replicas_remove_confirm_title">Ta bort replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Ta bort</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Uppdaterad %1$s</string>
     <string name="wikis_pageview_not_found_description">Sidan \"%1$s\" finns inte än.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki-länk</string>
-    <string name="wikis_pageview_share_link_copied">Sidlänk kopierad till urklipp</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS-URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wikisidlänk</string>
-    <string name="wikis_pageview_loading">Laddar sida…</string>
     <string name="wikis_page_action_share">Länk</string>
     <string name="wikis_open_sidebar">Öppna sidofält</string>
-    <string name="wikis_owned_badge">Egen</string>
     <string name="wikis_search_placeholder">Sök efter en wiki…</string>
-    <string name="wikis_subscribing">Prenumererar…</string>
     <string name="wikis_unsubscribe_confirm_message">Är du säker på att du vill avsluta prenumerationen på %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Den servern är inte tillgänglig. Försöker igen…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS-URL</string>
     <string name="wikis_find_search_placeholder">Sök efter namn, ID, fingeravtryck eller URL…</string>
     <string name="wikis_join_search_button">Sök efter wikis…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Skriv ett svar…</string>
     <string name="wikis_comment_form_send">Skicka</string>
     <string name="wikis_comment_form_remove_attachment">Ta bort bilaga</string>
-    <string name="wikis_comment_collapse_toggle">Fäll ihop tråd</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skriv ditt innehåll här med Markdown…</string>
     <string name="wikis_insert_dialog_empty">Inga bilagor än. Ladda upp en fil för att komma igång.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Lägg till tagg</string>
     <string name="wikis_tag_dialog_empty">Tagg får inte vara tom</string>
     <string name="wikis_attachments_search_placeholder">Sök bilagor…</string>
-    <string name="wikis_attachments_copy_failed">Kunde inte kopiera inbäddningslänk</string>
     <string name="wikis_attachments_delete_confirm_message">Radera \"%1$s\"? Detta kan inte ångras.</string>
     <string name="wikis_attachments_downloading">Laddar ner…</string>
     <string name="wikis_attachments_empty_description">Tryck på Ladda upp för att lägga till filer på denna sida.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d svar</item>
         <item quantity="other">+%d fler svar</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Döpte om %1$d sida</item>
-        <item quantity="other">Döpte om %1$d sidor</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">uppdaterade %1$d länk</item>
-        <item quantity="other">uppdaterade %1$d länkar</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d sida</item>
         <item quantity="other">%d sidor</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Det gick inte att spara bildtexten</string>
     <string name="wikis_attachments_upload_types">Filer som stöds: bilder, PDF, DOC, DOCX, TXT och MD.</string>
     <string name="wikis_attachments_upload_limits">Stora uppladdningar kan begränsas av din server- eller proxykonfiguration.</string>
+    <string name="wikis_rss_replace">Ersätt</string>
+    <string name="wikis_rss_copied_new">Ny RSS-URL kopierad till urklipp</string>
+    <string name="wikis_rss_exists">Denna flödes-URL har redan utfärdats och kan inte visas igen.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Visar den första %1$d kommentaren.</item>
+        <item quantity="other">Visar de första %1$d kommentarerna.</item>
+    </plurals>
 </resources>

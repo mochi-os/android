@@ -117,17 +117,6 @@ object MochiAccount {
         }
     }
 
-    /** Wipe every Mochi account on the device. */
-    fun removeAll(context: Context) {
-        try {
-            val am = AccountManager.get(context)
-            for (a in am.getAccountsByType(TYPE)) {
-                am.removeAccountExplicitly(a)
-            }
-        } catch (_: SecurityException) {
-        }
-    }
-
     /**
      * Emits the account list on every AccountManager update. Does not emit on
      * collection, so a missing account at startup is not evidence of a logout -

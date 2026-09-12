@@ -438,13 +438,17 @@ interface WikisApi {
 
     /**
      * RSS token. Class-level: the `entity` field scopes it - `*` for the
-     * all-wikis feed, else a wiki id or fingerprint.
+     * all-wikis feed, else a wiki id or fingerprint. When a token was already
+     * minted for this entity and mode the server answers `exists` rather than
+     * re-showing it; pass [regenerate] as `"1"` to retire that one and mint a
+     * replacement, which stops the previously handed-out URL resolving.
      */
     @FormUrlEncoded
     @POST("-/rss/token")
     suspend fun createRssToken(
         @Field("entity") entity: String,
         @Field("mode") mode: String,
+        @Field("regenerate") regenerate: String,
     ): Response<ApiResponse<RssTokenResponse>>
 
     /**

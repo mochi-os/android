@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Tìm wiki</string>
     <string name="wikis_sidebar_create">Tạo wiki</string>
     <string name="wikis_pageview_title_fallback">Trang</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Quay lại</string>
     <string name="wikis_pageview_page_actions">Thao tác trang</string>
     <string name="wikis_pageview_toc">Trên trang này</string>
     <string name="wikis_pageview_not_found_title">Không tìm thấy trang</string>
     <string name="wikis_pageview_create_this_page">Tạo trang này</string>
     <string name="wikis_pageview_rss_copied">Đã sao chép URL RSS vào clipboard</string>
-    <string name="wikis_pageview_rss_failed">Không lấy token RSS được</string>
     <string name="wikis_page_action_section_page">Trang</string>
     <string name="wikis_page_action_edit">Sửa</string>
     <string name="wikis_page_action_rename">Đổi tên</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Bắt đầu wiki đầu tiên của bạn</string>
     <string name="wikis_empty_subtitle">Tìm wiki để đăng ký, hoặc tạo wiki để xuất bản tài liệu của riêng bạn.</string>
-    <string name="wikis_subscribed_badge">Đã đăng ký</string>
     <string name="wikis_create_button">Tạo wiki</string>
     <string name="wikis_recommended_section">Wiki được đề xuất</string>
     <string name="wikis_subscribe_button">Đăng ký</string>
-    <string name="wikis_subscribed">Đã đăng ký</string>
     <string name="wikis_unsubscribe_action">Hủy đăng ký</string>
     <string name="wikis_unsubscribing">Đang hủy đăng ký…</string>
     <string name="wikis_unsubscribe_confirm_title">Hủy đăng ký</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Tên</string>
     <string name="wikis_create_privacy_label">Cho phép mọi người tìm kiếm wiki</string>
     <string name="wikis_create_submit">Tạo</string>
-    <string name="wikis_create_cancel">Hủy</string>
     <string name="wikis_comments_empty_title">Chưa có bình luận</string>
     <string name="wikis_comments_empty_subtitle">Hãy là người đầu tiên bình luận trên trang này.</string>
-    <string name="wikis_comment_action_reply">Trả lời</string>
     <string name="wikis_comment_replying_to">Đang trả lời %1$s</string>
     <string name="wikis_comment_clear_reply">Hủy phản hồi</string>
-    <string name="wikis_comment_action_edit">Sửa</string>
     <string name="wikis_comment_action_delete">Xóa</string>
     <string name="wikis_comment_action_save">Lưu</string>
     <string name="wikis_comment_action_cancel">Hủy</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Trang mới</string>
     <string name="wikis_editor_preview">Xem trước</string>
     <string name="wikis_editor_preview_untitled">Không có tiêu đề</string>
-    <string name="wikis_editor_edit">Sửa</string>
     <string name="wikis_editor_insert">Chèn</string>
     <string name="wikis_editor_attachments">Tệp đính kèm</string>
     <string name="wikis_editor_delete">Xóa trang</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Đang tải lên…</string>
     <string name="wikis_attachments_upload_failed">Không tải tệp lên được</string>
     <string name="wikis_attachments_search_clear">Xóa tìm kiếm</string>
-    <string name="wikis_attachments_filter">Bộ lọc</string>
     <string name="wikis_attachments_filter_all">Tất cả tệp</string>
     <string name="wikis_attachments_filter_images">Hình ảnh</string>
     <string name="wikis_attachments_filter_documents">Tài liệu</string>
-    <string name="wikis_attachments_sort">Sắp xếp</string>
     <string name="wikis_attachments_sort_date">Ngày</string>
     <string name="wikis_attachments_sort_name">Tên</string>
     <string name="wikis_attachments_sort_size">Kích thước</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Sao chép liên kết nhúng</string>
     <string name="wikis_attachments_embed_copied">Đã sao chép liên kết nhúng</string>
     <string name="wikis_attachments_download">Tải xuống</string>
-    <string name="wikis_attachments_copy_success">Đã sao chép liên kết nhúng</string>
     <string name="wikis_attachments_delete">Xóa</string>
     <string name="wikis_attachments_delete_confirm_title">Xóa tệp đính kèm</string>
     <string name="wikis_attachments_delete_success">Đã xóa tệp đính kèm</string>
     <string name="wikis_attachments_delete_failed">Không xoá tệp đính kèm được</string>
-    <string name="wikis_attachments_open">Mở</string>
     <string name="wikis_attachments_empty_title">Chưa có tệp đính kèm</string>
     <string name="wikis_attachments_no_results_title">Không có tệp đính kèm nào khớp với tìm kiếm</string>
     <string name="wikis_attachments_no_results_description">Thử một từ khoá hoặc bộ lọc khác.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Hành động này không thể hoàn tác. Thao tác này sẽ xóa vĩnh viễn wiki và toàn bộ nội dung của nó.</string>
     <string name="wikis_settings_delete_success">Đã xóa wiki</string>
     <string name="wikis_settings_delete_failed">Không xoá wiki được</string>
-    <string name="wikis_access_add_action">Thêm</string>
     <string name="wikis_access_add_subject_label">Người dùng</string>
     <string name="wikis_access_level_edit">Chỉnh sửa và xem</string>
     <string name="wikis_access_level_view">Chỉ xem</string>
     <string name="wikis_access_level_none">Không có quyền truy cập</string>
-    <string name="wikis_access_owner_label">Chủ sở hữu</string>
     <string name="wikis_access_tab_users">Người dùng</string>
     <string name="wikis_access_tab_groups">Nhóm</string>
     <string name="wikis_access_tab_other">Khác</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Không xoá quyền truy cập được</string>
     <string name="wikis_replicas_empty_title">Chưa có bản sao</string>
     <string name="wikis_replicas_empty_message">Khi các wiki khác nhân bản wiki này, chúng sẽ xuất hiện ở đây.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Không bao giờ</string>
     <string name="wikis_replicas_remove_confirm_title">Xoá bản sao?</string>
     <string name="wikis_replicas_remove_confirm_action">Xoá</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Cập nhật %1$s</string>
     <string name="wikis_pageview_not_found_description">Trang \"%1$s\" chưa tồn tại.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Liên kết wiki</string>
-    <string name="wikis_pageview_share_link_copied">Đã sao chép liên kết trang vào bộ nhớ tạm</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS của wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Liên kết trang wiki</string>
-    <string name="wikis_pageview_loading">Đang tải trang…</string>
     <string name="wikis_page_action_share">Liên kết</string>
     <string name="wikis_open_sidebar">Mở thanh bên</string>
-    <string name="wikis_owned_badge">Sở hữu</string>
     <string name="wikis_search_placeholder">Tìm kiếm wiki…</string>
-    <string name="wikis_subscribing">Đang đăng ký…</string>
     <string name="wikis_unsubscribe_confirm_message">Bạn có chắc muốn hủy đăng ký %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Máy chủ đó không thể truy cập. Đang thử lại…</string>
     <string name="wikis_clipboard_label_rss">URL RSS của wiki</string>
     <string name="wikis_find_search_placeholder">Tìm theo tên, ID, dấu vân tay hoặc URL…</string>
     <string name="wikis_join_search_button">Tìm kiếm wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Viết phản hồi…</string>
     <string name="wikis_comment_form_send">Gửi</string>
     <string name="wikis_comment_form_remove_attachment">Xóa tệp đính kèm</string>
-    <string name="wikis_comment_collapse_toggle">Thu gọn chủ đề</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Viết nội dung của bạn ở đây bằng Markdown…</string>
     <string name="wikis_insert_dialog_empty">Chưa có tệp đính kèm. Tải lên tệp để bắt đầu.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Thêm thẻ</string>
     <string name="wikis_tag_dialog_empty">Thẻ không thể trống</string>
     <string name="wikis_attachments_search_placeholder">Tìm tệp đính kèm…</string>
-    <string name="wikis_attachments_copy_failed">Không thể sao chép liên kết nhúng</string>
     <string name="wikis_attachments_delete_confirm_message">Xóa \"%1$s\"? Không thể hoàn tác.</string>
     <string name="wikis_attachments_downloading">Đang tải xuống…</string>
     <string name="wikis_attachments_empty_description">Chạm vào Tải lên để thêm tệp vào trang này.</string>
@@ -322,12 +297,6 @@
         <item quantity="one">%d phản hồi</item>
         <item quantity="other">+%d phản hồi nữa</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">Đã đổi tên %1$d trang</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">đã cập nhật %1$d liên kết</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d trang</item>
         <item quantity="other">%d trang</item>
@@ -355,4 +324,10 @@
     <string name="wikis_attachments_caption_save_failed">Không thể lưu chú thích</string>
     <string name="wikis_attachments_upload_types">Tệp được hỗ trợ: hình ảnh, PDF, DOC, DOCX, TXT và MD.</string>
     <string name="wikis_attachments_upload_limits">Các tệp tải lên lớn có thể bị giới hạn bởi cấu hình máy chủ hoặc proxy của bạn.</string>
+    <string name="wikis_rss_replace">Thay thế</string>
+    <string name="wikis_rss_copied_new">Đã sao chép URL RSS mới vào clipboard</string>
+    <string name="wikis_rss_exists">URL nguồn cấp này đã được cấp và không thể hiển thị lại.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">Đang hiển thị %1$d bình luận đầu tiên.</item>
+    </plurals>
 </resources>

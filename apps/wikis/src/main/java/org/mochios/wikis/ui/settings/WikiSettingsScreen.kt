@@ -67,7 +67,10 @@ fun WikiSettingsScreen(
         }
     }
 
-    val isReplica = state.wiki?.source != null
+    // `source` is `not null default ''` server-side, so an owned wiki carries
+    // an empty string, not null - testing for null made every wiki a replica
+    // and hid the Replicas tab from the owners who need it.
+    val isReplica = !state.wiki?.source.isNullOrBlank()
 
     // Visible tabs. Replicas hidden for replica wikis (web does the same).
     val tabKeys = buildList {

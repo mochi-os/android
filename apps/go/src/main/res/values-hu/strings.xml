@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Játék törölve</string>
     <string name="go_new_game_add_friends">Barátok hozzáadása</string>
     <string name="go_new_game_board_size_label">Tábla mérete</string>
-    <string name="go_new_game_cancel">Mégse</string>
     <string name="go_new_game_friend_label">Ellenfél</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Feladja a játékot?</string>
     <string name="go_sidebar_completed">Teljesítve</string>
     <string name="go_sidebar_new_game">Új játék</string>
-    <string name="go_status_active">Aktív</string>
     <string name="go_status_draw">Döntetlen</string>
     <string name="go_status_draw_text">Döntetlen</string>
     <string name="go_status_game_over">Játék vége</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Oldalsáv megnyitása</string>
     <string name="go_sidebar_active">Aktív játszmák</string>
     <string name="go_empty_active">Még nincsenek aktív játszmák.</string>
-    <string name="go_empty_completed">Még nincsenek befejezett játszmák.</string>
-    <string name="go_status_finished">Befejeződött</string>
     <string name="go_status_resigned">Feladva</string>
-    <string name="go_card_vs">ellen: %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Új Go játszma</string>
     <string name="go_new_game_no_friends">Hozzá kell adnia egy barátot, mielőtt játszmát indíthatna.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Pontok hozzáadva a Fehér pontszámához kompenzációként, hogy a Fekete kezd</string>
-    <string name="go_new_game_create_error">A játszma indítása sikertelen</string>
 
     <string name="go_board_a11y">%1$d×%1$d-es Go-tábla</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d-es gótábla, ön következik fekete kővel</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d-es gótábla, ön következik fehér kővel</string>
+    <string name="go_status_scoring">Számolás — egyezzetek meg az eredményben vagy játsszatok tovább</string>
+    <string name="go_score_proposed">Javasolt pontszám: fekete %1$s, fehér %2$s</string>
+    <string name="go_score_opponent_accepted">Az ellenfeled elfogadja ezt a pontszámot: fekete %1$s, fehér %2$s</string>
+    <string name="go_score_waiting">Pontszám elfogadva — várakozás %1$s válaszára</string>
+    <string name="go_score_accept">Pontszám elfogadása</string>
+    <string name="go_score_resume">Játék folytatása</string>
+    <string name="go_error_score_resume_failed">Nem sikerült folytatni a játékot</string>
+    <string name="go_error_score_accept_failed">Nem sikerült elfogadni a pontszámot</string>
 </resources>

@@ -20,14 +20,15 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.MentionSuggestion
-import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -37,6 +38,7 @@ import org.mochios.feeds.repository.PostListResult
 import org.mochios.feeds.repository.SavedRepository
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
+import org.mochios.feeds.ui.component.applied
 
 private const val PREFS = "mochi_feeds"
 private const val KEY_UNREAD_ONLY = "unread_only"
@@ -100,13 +102,9 @@ class FeedViewModel @Inject constructor(
 
     /** Count of real-time new posts queued behind the "new posts" pill rather
      *  than injected into the pager while the user is reading. */
-    private val _newPostsCount = MutableStateFlow(0)
-    val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
+    private val newPosts = NewPosts()
+    val newPostsCount: StateFlow<Int> = newPosts.count
 
-    /** Post ids the pill has already counted, so repeated post/create events
-     *  for the same post count once. Concurrent set: written from the OkHttp
-     *  websocket thread, cleared from viewModelScope. */
-    private val pendingPosts = ConcurrentHashMap.newKeySet<String>()
 
     private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
@@ -122,8 +120,6 @@ class FeedViewModel @Inject constructor(
     private val _permissions = MutableStateFlow(Permissions())
     val permissions: StateFlow<Permissions> = _permissions.asStateFlow()
 
-    private val _tags = MutableStateFlow<List<Tag>>(emptyList())
-    val tags: StateFlow<List<Tag>> = _tags.asStateFlow()
 
     // One-shot interest-thumb feedback (boosted/reduced/removed, or the error).
     private val _interestFeedback = MutableSharedFlow<InterestFeedback>(extraBufferCapacity = 8)
@@ -142,8 +138,6 @@ class FeedViewModel @Inject constructor(
     // Spinner for the top-bar button, which refreshes only the post in view.
     // Kept separate from [isRefreshing] so it doesn't drive the pull-to-refresh
     // indicator.
-    private val _isPostRefreshing = MutableStateFlow(false)
-    val isPostRefreshing: StateFlow<Boolean> = _isPostRefreshing.asStateFlow()
 
     // Comment composer bottom-sheet target: non-null while the sheet is open.
     // A non-null [CommentTarget.parentId] means the sheet is composing a reply.
@@ -176,8 +170,9 @@ class FeedViewModel @Inject constructor(
     private val _currentSort = MutableStateFlow("interests")
     val currentSort: StateFlow<String> = _currentSort.asStateFlow()
 
+    // Always null: no tag-filter control is offered, and the repository
+    // reads below pass it through as "no filter".
     private val _currentTag = MutableStateFlow<String?>(null)
-    val currentTag: StateFlow<String?> = _currentTag.asStateFlow()
 
     private val _unreadOnly = MutableStateFlow(prefs.getBoolean(KEY_UNREAD_ONLY, false))
     val unreadOnly: StateFlow<Boolean> = _unreadOnly.asStateFlow()
@@ -189,15 +184,9 @@ class FeedViewModel @Inject constructor(
 
     val isAllFeeds: Boolean = feedId == "__all__"
 
-    private var subscriptionId: String? = null
+    private val subscriptions = mutableListOf<String>()
     private var markReadJob: Job? = null
-
-    /** The pending or in-flight socket refresh; cancelled when a newer one starts. */
-    private var refreshJob: Job? = null
-    private val pendingReadIds = mutableSetOf<String>()
-
-    // Set by the first reloadOnForeground call; see the guard there.
-    private var foregroundReloadArmed = false
+    private val pendingReads = PendingReads()
 
     // Upgraded hero image URLs per post id, resolved lazily as pages come
     // into view. "" = resolved, nothing better than the stored thumbnail.
@@ -340,7 +329,6 @@ class FeedViewModel @Inject constructor(
                 _isLoading.value = false
                 // Refresh in background
                 refreshSilently()
-                loadTags()
                 return@launch
             }
 
@@ -364,7 +352,6 @@ class FeedViewModel @Inject constructor(
                 _hasMore.value = result.hasMore
                 nextCursor = result.nextCursor
 
-                loadTags()
             } catch (e: Exception) {
                 val err = e.toMochiError()
                 _error.value = err
@@ -428,7 +415,11 @@ class FeedViewModel @Inject constructor(
     // One page for the current view. Pages by a `before` cursor (last post's
     // created; server filters `created < before`) or by `offset` for relevance
     // sorts.
-    private suspend fun fetchPosts(before: String? = null, offset: Long? = null): PostListResult {
+    private suspend fun fetchPosts(
+        before: String? = null,
+        offset: Long? = null,
+        forceRefresh: Boolean = false,
+    ): PostListResult {
         return if (isAllFeeds) {
             repository.getAllPosts(
                 before = before,
@@ -444,6 +435,7 @@ class FeedViewModel @Inject constructor(
                 sort = _currentSort.value,
                 tag = _currentTag.value,
                 unreadOnly = _unreadOnly.value,
+                forceRefresh = forceRefresh,
             )
         }
     }
@@ -470,12 +462,10 @@ class FeedViewModel @Inject constructor(
                     _hasMore.value = result.hasMore
                     nextCursor = result.nextCursor
 
-                    loadTags()
                 }
                 // The fresh list incorporates any queued posts — a pill left
                 // up would just re-show posts the user now has.
-                pendingPosts.clear()
-                _newPostsCount.value = 0
+                newPosts.clear()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -484,26 +474,6 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Re-fetch one post and patch it in place. [postFeedId] is the post's own
-     * feed - it differs per card in the all-feeds aggregate.
-     */
-    fun refreshPost(postFeedId: String, postId: String) {
-        viewModelScope.launch {
-            _isPostRefreshing.value = true
-            try {
-                val fresh = repository.getPost(postFeedId, postId).post
-                _posts.value = _posts.value.map { existing ->
-                    if (existing.id != postId) existing
-                    else mergeRefreshedPost(existing, fresh)
-                }
-            } catch (_: Exception) {
-                // Silent — best-effort single-post refresh.
-            } finally {
-                _isPostRefreshing.value = false
-            }
-        }
-    }
 
     /** Open the comment-composer sheet for [postId] (optionally replying to a
      *  comment). [postFeedId] is the post's own feed. */
@@ -519,12 +489,6 @@ class FeedViewModel @Inject constructor(
         _commentTarget.value = CommentTarget(postFeedId, postId, parentId, parentName, parentBody)
     }
 
-    /** Open the composer to edit an existing comment, prefilled with [body]. */
-    fun openCommentEditor(postFeedId: String, postId: String, commentId: String, body: String) {
-        _commentDraft.value = body
-        _commentAttachments.value = emptyList()
-        _commentTarget.value = CommentTarget(postFeedId, postId, editCommentId = commentId)
-    }
 
     fun closeCommentComposer() {
         _commentTarget.value = null
@@ -691,20 +655,7 @@ class FeedViewModel @Inject constructor(
         reloadPosts()
     }
 
-    fun setGlobalDefaultSort(sort: String) {
-        viewModelScope.launch {
-            try {
-                repository.setGlobalSort(sort)
-            } catch (_: Exception) {
-            }
-        }
-    }
 
-    fun setTagFilter(tag: String?) {
-        if (_currentTag.value == tag) return
-        _currentTag.value = tag
-        reloadPosts()
-    }
 
     fun setUnreadOnly(unreadOnly: Boolean) {
         if (_unreadOnly.value == unreadOnly) return
@@ -731,10 +682,7 @@ class FeedViewModel @Inject constructor(
                 repository.reactToPost(feed, postId, reaction)
                 // Optimistically update the post's reaction
                 _posts.value = _posts.value.map { post ->
-                    if (post.id == postId) {
-                        val newReaction = if (post.myReaction == reaction) "" else reaction
-                        post.copy(myReaction = newReaction)
-                    } else post
+                    if (post.id == postId) post.copy(myReaction = applied(reaction)) else post
                 }
             } catch (_: Exception) {
                 // Revert on failure by refreshing
@@ -804,7 +752,6 @@ class FeedViewModel @Inject constructor(
         _posts.value = _posts.value.map { post ->
             if (post.tags.any { it.qid == qid }) post.copy(tags = update(post.tags)) else post
         }
-        _tags.value = update(_tags.value)
     }
 
     /**
@@ -813,25 +760,23 @@ class FeedViewModel @Inject constructor(
      */
     fun onPostBottomViewed(postId: String) {
         if (_posts.value.find { it.id == postId }?.read != 0L) return
-        pendingReadIds.add(postId)
+        pendingReads.add(postId)
         if (markReadJob?.isActive == true) return
         markReadJob = viewModelScope.launch {
-            delay(200)
-            val idsToMark = pendingReadIds.toList()
-            pendingReadIds.clear()
-            if (idsToMark.isEmpty()) return@launch
-            try {
-                repository.markPostsRead(feedId, idsToMark)
-                _posts.value = _posts.value.map { post ->
-                    if (post.id in idsToMark && post.read == 0L) {
-                        post.copy(read = System.currentTimeMillis() / 1000)
-                    } else post
+            drainReads(pendingReads) { idsToMark ->
+                try {
+                    repository.markPostsRead(feedId, idsToMark)
+                    _posts.value = _posts.value.map { post ->
+                        if (post.id in idsToMark && post.read == 0L) {
+                            post.copy(read = System.currentTimeMillis() / 1000)
+                        } else post
+                    }
+                    _feedInfo.value = _feedInfo.value?.let { feed ->
+                        feed.copy(unread = maxOf(0, feed.unread - idsToMark.size))
+                    }
+                } catch (e: Exception) {
+                    android.util.Log.e("FeedViewModel", "markPostsRead failed for ${idsToMark.size} ids", e)
                 }
-                _feedInfo.value = _feedInfo.value?.let { feed ->
-                    feed.copy(unread = maxOf(0, feed.unread - idsToMark.size))
-                }
-            } catch (e: Exception) {
-                android.util.Log.e("FeedViewModel", "markPostsRead failed for ${idsToMark.size} ids", e)
             }
         }
     }
@@ -939,87 +884,64 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    fun adjustTagInterest(tag: Tag, direction: String) {
-        viewModelScope.launch {
-            try {
-                repository.adjustInterest(feedId, qid = tag.qid, label = tag.label, direction = direction)
-                _tags.value = repository.getTags(feedId)
-            } catch (_: Exception) {
-            }
-        }
-    }
 
-    private fun loadTags() {
-        if (isAllFeeds) return
-        viewModelScope.launch {
-            try {
-                _tags.value = repository.getTags(feedId)
-            } catch (_: Exception) {
-                // Tags are non-critical
-            }
-        }
-    }
 
     private fun subscribeToWebSocket() {
-        if (feedId.isEmpty() || isAllFeeds) return
         val serverUrl = sessionManager.getServerUrlBlocking()
-        subscriptionId = webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
-            // Server event types are slash-namespaced (feeds.star commit hook
-            // + handlers); the old underscore names never matched anything.
-            when (event.type) {
-                // New posts queue behind the "new posts" pill. RSS ingestion
-                // defers post/create until AI tagging completes, so the event
-                // can arrive for a post already loaded - count only posts
-                // genuinely absent, once each.
-                "post/create" -> {
-                    val postId = event.post
-                    if (postId.isNullOrEmpty()) {
-                        // Batch form (no post id; sent when AI tagging is off)
-                        // — nothing to reconcile against, count it.
-                        _newPostsCount.value += 1
-                    } else if (pendingPosts.add(postId) &&
-                        _posts.value.none { it.id == postId }
-                    ) {
-                        _newPostsCount.value += 1
-                    }
+        if (isAllFeeds) {
+            // The aggregate has no entity of its own, so it subscribes to
+            // every subscribed feed's channel — the same fan-out web's
+            // feeds-list page does. Without this the pill never appears and
+            // the timeline only moves on a manual refresh.
+            viewModelScope.launch {
+                val feeds = try {
+                    repository.listFeeds()
+                } catch (_: Exception) {
+                    return@launch
                 }
-                "post/edit", "post/delete",
-                "comment/create", "comment/edit", "comment/delete",
-                "react/post", "react/comment", "tag/add", "tag/remove" -> {
-                    refreshLatest()
+                for (feed in feeds) {
+                    val channel = feed.fingerprint.ifEmpty { feed.id }
+                    if (channel.isEmpty()) continue
+                    subscriptions.add(
+                        webSocket.subscribe(serverUrl, channel, app = "feeds") { event ->
+                            onFeedEvent(event)
+                        }
+                    )
                 }
             }
+            return
         }
+        if (feedId.isEmpty()) return
+        subscriptions.add(
+            webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
+                onFeedEvent(event)
+            }
+        )
     }
 
-    /**
-     * [refreshSilently] for a socket frame. Cancels the pending refresh and
-     * waits [REFRESH_DEBOUNCE] first, so a burst of frames - a comment and its
-     * reactions, or our own action's echo - makes one fetch.
-     */
-    private fun refreshLatest() {
-        refreshJob?.cancel()
-        refreshJob = viewModelScope.launch {
-            delay(REFRESH_DEBOUNCE)
-            refreshSilently()
+    private fun onFeedEvent(event: WebSocketEvent) {
+        // Server event types are slash-namespaced (feeds.star commit hook
+        // + handlers); the old underscore names never matched anything.
+        when (event.type) {
+            "post/create" -> newPosts.record(event.post) { id ->
+                _posts.value.any { it.id == id }
+            }
+            "post/edit", "post/delete",
+            "comment/create", "comment/edit", "comment/delete",
+            "react/post", "react/comment", "tag/add", "tag/remove" -> {
+                viewModelScope.launch { refreshSilently() }
+            }
         }
     }
 
     private suspend fun refreshSilently() {
         try {
-            val result = repository.getPosts(
-                feedId = feedId,
-                sort = _currentSort.value,
-                tag = _currentTag.value,
-                unreadOnly = _unreadOnly.value,
-                forceRefresh = true
-            )
+            val result = fetchPosts(forceRefresh = true)
             _posts.value = result.posts
             _hasMore.value = result.hasMore
             nextCursor = result.nextCursor
             // The fresh list incorporates any queued posts — clear the pill.
-            pendingPosts.clear()
-            _newPostsCount.value = 0
+            newPosts.clear()
         } catch (_: Exception) {
             // Silent failure
         }
@@ -1028,10 +950,7 @@ class FeedViewModel @Inject constructor(
     /** Reveal the queued new posts: refresh the list and clear the pill. The
      *  screen also scrolls the pager to the top when this is invoked. */
     fun showNewPosts() {
-        refreshJob?.cancel()
-        refreshJob = viewModelScope.launch {
-            refreshSilently()
-        }
+        viewModelScope.launch { refreshSilently() }
     }
 
     /**
@@ -1048,6 +967,9 @@ class FeedViewModel @Inject constructor(
             // Silent failure — keep showing the current info.
         }
     }
+
+    // Set by the first reloadOnForeground call; see the guard there.
+    private var foregroundReloadArmed = false
 
     fun reloadOnForeground() {
         // The screen's first ON_RESUME lands right behind init's own load, so
@@ -1074,6 +996,7 @@ class FeedViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         markReadJob?.cancel()
-        subscriptionId?.let { webSocket.unsubscribe(it) }
+        subscriptions.forEach { webSocket.unsubscribe(it) }
+        subscriptions.clear()
     }
 }

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menyja</string>
-    <string name="words_list_new">Lojë e re</string>
     <string name="words_list_logout">Dilni</string>
-    <string name="words_list_empty_title">Ende pa lojëra</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">I përfunduar</string>
     <string name="words_sidebar_new_game">Lojë e re</string>
     <string name="words_new_game_title">Lojë e re</string>
@@ -30,7 +26,6 @@
     <string name="words_detail_action_rematch">Përsërit ndeshjen</string>
     <string name="words_detail_action_delete">Fshi lojën</string>
     <string name="words_detail_chat_title">Bisedë</string>
-    <string name="words_detail_invalid_move">Lëvizje e pavlefshme</string>
     <string name="words_detail_recall">Tërhiq</string>
     <string name="words_detail_submit">Dërgo</string>
     <string name="words_detail_cancel">Anulo</string>
@@ -38,19 +33,8 @@
     <string name="words_detail_blank_title">Zgjidh një shkronjë</string>
     <string name="words_detail_resign_title">Të dorëzohesh nga loja?</string>
     <string name="words_detail_resign_message">Je i sigurt që do të dorëzohesh?</string>
-    <string name="words_detail_failed_move">Dorëzimi i lëvizjes dështoi</string>
-    <string name="words_detail_failed_pass">Kalimi dështoi</string>
-    <string name="words_detail_failed_exchange">Shkëmbimi dështoi</string>
-    <string name="words_detail_failed_resign">Dorëzimi dështoi</string>
-    <string name="words_detail_failed_rematch">Krijimi i ndeshjes së re dështoi</string>
-    <string name="words_detail_failed_delete">Fshirja e lojës dështoi</string>
-    <string name="words_detail_game_deleted">Loja u fshi</string>
     <string name="words_channel_name">Njoftime Fjalë</string>
     <string name="words_channel_description">Njoftime për radhët, shkëmbimet dhe rezultatet e ndeshjeve.</string>
-    <string name="words_list_empty_subtitle">Trokit butonin + për të filluar ndeshjen e parë.</string>
-    <string name="words_list_status_finished">E përfunduar</string>
-    <string name="words_list_status_resigned">U dorëzua</string>
-    <string name="words_list_your_turn">Radha jote</string>
     <string name="words_sidebar_active">Ndeshje aktive</string>
     <string name="words_sidebar_empty">Ende nuk ka ndeshje.</string>
     <string name="words_new_game_choose_opponents">Zgjidh kundërshtarë</string>
@@ -58,7 +42,6 @@
     <string name="words_new_game_player_count">%1$d lojtarë</string>
     <string name="words_new_game_no_friends_subtitle">Shto miq në aplikacionin Njerëzit për të filluar të luash.</string>
     <string name="words_detail_title">Ndeshje</string>
-    <string name="words_detail_coming_soon">Detajet e ndeshjes së shpejti</string>
     <string name="words_detail_status_opponent_move">Radha e %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s fiton</string>
     <string name="words_detail_player_fallback">Lojtar %1$d</string>

@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Base64
 import android.util.Log
+import dagger.hilt.android.EntryPointAccessors
 import org.mochios.android.account.MochiAccount
 import java.security.SecureRandom
 
@@ -54,9 +55,9 @@ class MochiDistributorReceiver : BroadcastReceiver() {
     }
 
     private fun handleRegister(context: Context, token: String, appPackage: String) {
-        val account = MochiAccount.first(context)
+        val account = boundAccount(context)
         if (account == null) {
-            Log.w(TAG, "REGISTER from $appPackage: no Mochi account; sending REGISTRATION_FAILED")
+            Log.w(TAG, "REGISTER from $appPackage: not signed in; sending REGISTRATION_FAILED")
             sendBroadcast(
                 context, appPackage, ACTION_REGISTRATION_FAILED,
                 Bundle1(EXTRA_TOKEN to token, EXTRA_REASON to "NETWORK"),
@@ -104,6 +105,21 @@ class MochiDistributorReceiver : BroadcastReceiver() {
             context, appPackage, ACTION_NEW_ENDPOINT,
             Bundle1(EXTRA_TOKEN to token, EXTRA_ENDPOINT to endpoint),
         )
+    }
+
+    /**
+     * The account this device is signed in as. Never `MochiAccount.first()`:
+     * AccountManager's list is device-wide, shared across every Mochi install,
+     * and in no particular order, so with two identities on two servers the
+     * endpoint would name the wrong server and that identity's pushes would be
+     * delivered nowhere. Null while unbound, which REGISTER refuses.
+     */
+    private fun boundAccount(context: Context): MochiAccount.Snapshot? {
+        val sessions = EntryPointAccessors
+            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
+            .sessionManager()
+        val identity = sessions.getBoundIdentityBlocking() ?: return null
+        return MochiAccount.byIdentity(context, identity)
     }
 
     private fun handleUnregister(context: Context, token: String, appPackage: String) {

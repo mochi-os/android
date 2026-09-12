@@ -40,10 +40,6 @@ fun toMinorUnits(majorString: String, currency: Currency): Long =
 fun minorToMajorText(amount: Long, currency: Currency): String =
     libMinorToMajorText(amount, currency.name)
 
-/** First 9 chars of an entity ID — re-exported from lib for source-compat. */
-fun formatFingerprint(id: String): String =
-    org.mochios.android.format.formatFingerprint(id)
-
 /**
  * Aggregate seller ratings (`Listing.seller_rating`, `Account.rating`,
  * `AccountSummary.rating`) arrive as integer hundredths (`500` = 5.00);

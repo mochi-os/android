@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Găsește wiki-uri</string>
     <string name="wikis_sidebar_create">Creează wiki</string>
     <string name="wikis_pageview_title_fallback">Pagină</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Înapoi</string>
     <string name="wikis_pageview_page_actions">Acțiuni pagină</string>
     <string name="wikis_pageview_toc">Pe această pagină</string>
     <string name="wikis_pageview_not_found_title">Pagina nu a fost găsită</string>
     <string name="wikis_pageview_create_this_page">Creează această pagină</string>
     <string name="wikis_pageview_rss_copied">URL RSS copiat în clipboard</string>
-    <string name="wikis_pageview_rss_failed">Obținerea tokenului RSS a eșuat</string>
     <string name="wikis_page_action_section_page">Pagină</string>
     <string name="wikis_page_action_edit">Editează</string>
     <string name="wikis_page_action_rename">Redenumește</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wiki-uri</string>
     <string name="wikis_empty_title">Începe primul tău wiki</string>
     <string name="wikis_empty_subtitle">Caută un wiki la care să te abonezi sau creează unul pentru a-ți publica propria documentație.</string>
-    <string name="wikis_subscribed_badge">Abonat</string>
     <string name="wikis_create_button">Creează wiki</string>
     <string name="wikis_recommended_section">Wiki-uri recomandate</string>
     <string name="wikis_subscribe_button">Abonează-te</string>
-    <string name="wikis_subscribed">Abonat</string>
     <string name="wikis_unsubscribe_action">Dezabonează-te</string>
     <string name="wikis_unsubscribing">Se dezabonează…</string>
     <string name="wikis_unsubscribe_confirm_title">Dezabonează-te</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nume</string>
     <string name="wikis_create_privacy_label">Permite oricui să caute wiki-ul</string>
     <string name="wikis_create_submit">Creează</string>
-    <string name="wikis_create_cancel">Anulează</string>
     <string name="wikis_comments_empty_title">Încă niciun comentariu</string>
     <string name="wikis_comments_empty_subtitle">Fii primul care comentează pe această pagină.</string>
-    <string name="wikis_comment_action_reply">Răspunde</string>
     <string name="wikis_comment_replying_to">Răspunzi lui %1$s</string>
     <string name="wikis_comment_clear_reply">Anulează răspunsul</string>
-    <string name="wikis_comment_action_edit">Editează</string>
     <string name="wikis_comment_action_delete">Șterge</string>
     <string name="wikis_comment_action_save">Salvează</string>
     <string name="wikis_comment_action_cancel">Anulează</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Pagină nouă</string>
     <string name="wikis_editor_preview">Previzualizare</string>
     <string name="wikis_editor_preview_untitled">Fără titlu</string>
-    <string name="wikis_editor_edit">Editează</string>
     <string name="wikis_editor_insert">Inserează</string>
     <string name="wikis_editor_attachments">Atașamente</string>
     <string name="wikis_editor_delete">Șterge pagina</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Se încarcă…</string>
     <string name="wikis_attachments_upload_failed">Încărcarea fișierelor a eșuat</string>
     <string name="wikis_attachments_search_clear">Golește căutarea</string>
-    <string name="wikis_attachments_filter">Filtrează</string>
     <string name="wikis_attachments_filter_all">Toate fișierele</string>
     <string name="wikis_attachments_filter_images">Imagini</string>
     <string name="wikis_attachments_filter_documents">Documente</string>
-    <string name="wikis_attachments_sort">Sortează</string>
     <string name="wikis_attachments_sort_date">Dată</string>
     <string name="wikis_attachments_sort_name">Nume</string>
     <string name="wikis_attachments_sort_size">Dimensiune</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Copiază linkul de încorporare</string>
     <string name="wikis_attachments_embed_copied">Link de încorporare copiat</string>
     <string name="wikis_attachments_download">Descarcă</string>
-    <string name="wikis_attachments_copy_success">Link de încorporare copiat</string>
     <string name="wikis_attachments_delete">Șterge</string>
     <string name="wikis_attachments_delete_confirm_title">Șterge atașamentul</string>
     <string name="wikis_attachments_delete_success">Atașament șters</string>
     <string name="wikis_attachments_delete_failed">Ștergerea atașamentului a eșuat</string>
-    <string name="wikis_attachments_open">Deschide</string>
     <string name="wikis_attachments_empty_title">Încă niciun atașament</string>
     <string name="wikis_attachments_no_results_title">Niciun atașament nu corespunde căutării</string>
     <string name="wikis_attachments_no_results_description">Încearcă un alt termen de căutare sau filtru.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Această acțiune nu poate fi anulată. Aceasta va șterge definitiv wiki-ul și tot conținutul său.</string>
     <string name="wikis_settings_delete_success">Wiki șters</string>
     <string name="wikis_settings_delete_failed">Ștergerea wiki-ului a eșuat</string>
-    <string name="wikis_access_add_action">Adaugă</string>
     <string name="wikis_access_add_subject_label">Utilizator</string>
     <string name="wikis_access_level_edit">Editează și vizualizează</string>
     <string name="wikis_access_level_view">Doar vizualizare</string>
     <string name="wikis_access_level_none">Fără acces</string>
-    <string name="wikis_access_owner_label">Proprietar</string>
     <string name="wikis_access_tab_users">Utilizatori</string>
     <string name="wikis_access_tab_groups">Grupuri</string>
     <string name="wikis_access_tab_other">Altele</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Eliminarea accesului a eșuat</string>
     <string name="wikis_replicas_empty_title">Încă nicio replică</string>
     <string name="wikis_replicas_empty_message">Când alte wiki-uri replică acest wiki, vor apărea aici.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Niciodată</string>
     <string name="wikis_replicas_remove_confirm_title">Elimini replica?</string>
     <string name="wikis_replicas_remove_confirm_action">Elimină</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Actualizat %1$s</string>
     <string name="wikis_pageview_not_found_description">Pagina „%1$s\" încă nu există.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Link-ul wiki</string>
-    <string name="wikis_pageview_share_link_copied">Link-ul paginii copiat în clipboard</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Link pagina wiki</string>
-    <string name="wikis_pageview_loading">Se încarcă pagina…</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Deschide bara laterală</string>
-    <string name="wikis_owned_badge">Propriu</string>
     <string name="wikis_search_placeholder">Caută un wiki…</string>
-    <string name="wikis_subscribing">Se abonează…</string>
     <string name="wikis_unsubscribe_confirm_message">Sigur doriți să dezabonați de la %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Serverul nu poate fi accesat. Se reîncearcă…</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_find_search_placeholder">Caută după nume, ID, amprentă sau URL…</string>
     <string name="wikis_join_search_button">Caută wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Scrie un răspuns…</string>
     <string name="wikis_comment_form_send">Trimite</string>
     <string name="wikis_comment_form_remove_attachment">Elimină atașamentul</string>
-    <string name="wikis_comment_collapse_toggle">Restrânge firul</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Scrie conținutul aici folosind Markdown…</string>
     <string name="wikis_insert_dialog_empty">Încă nu există atașamente. Încarcă un fișier pentru a începe.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Adaugă etichetă</string>
     <string name="wikis_tag_dialog_empty">Eticheta nu poate fi goală</string>
     <string name="wikis_attachments_search_placeholder">Caută atașamente…</string>
-    <string name="wikis_attachments_copy_failed">Copierea link-ului de încorporare a eșuat</string>
     <string name="wikis_attachments_delete_confirm_message">Ștergeți „%1$s\"? Aceasta nu poate fi anulată.</string>
     <string name="wikis_attachments_downloading">Se descarcă…</string>
     <string name="wikis_attachments_empty_description">Atingeți Încarcă pentru a adăuga fișiere pe această pagină.</string>
@@ -324,16 +299,6 @@
         <item quantity="one">%d răspuns</item>
         <item quantity="few">+%d răspunsuri în plus</item>
         <item quantity="other">+%d de răspunsuri în plus</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">S-a redenumit %1$d pagină</item>
-        <item quantity="few">S-au redenumit %1$d pagini</item>
-        <item quantity="other">S-au redenumit %1$d de pagini</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">s-a actualizat %1$d link</item>
-        <item quantity="few">s-au actualizat %1$d link-uri</item>
-        <item quantity="other">s-au actualizat %1$d de link-uri</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d pagină</item>
@@ -368,4 +333,12 @@
     <string name="wikis_attachments_caption_save_failed">Legenda nu a putut fi salvată</string>
     <string name="wikis_attachments_upload_types">Fișiere acceptate: imagini, PDF, DOC, DOCX, TXT și MD.</string>
     <string name="wikis_attachments_upload_limits">Încărcarea fișierelor mari poate fi limitată de configurația serverului sau a proxy-ului.</string>
+    <string name="wikis_rss_replace">Înlocuiește</string>
+    <string name="wikis_rss_copied_new">Noul URL RSS copiat în clipboard</string>
+    <string name="wikis_rss_exists">Acest URL de flux a fost deja emis și nu mai poate fi afișat.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Se afișează primul %1$d comentariu.</item>
+        <item quantity="few">Se afișează primele %1$d comentarii.</item>
+        <item quantity="other">Se afișează primele %1$d comentarii.</item>
+    </plurals>
 </resources>

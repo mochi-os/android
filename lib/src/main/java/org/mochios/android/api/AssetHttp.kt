@@ -12,6 +12,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.isServerOrigin
 import javax.inject.Qualifier
@@ -58,23 +59,32 @@ object AssetHttpModule {
                     )
                 }
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
-                val token = app?.let { sessionManager.getTokenBlocking(it) }
-                // Header only. Avatars used to repeat the token in a `token`
-                // query parameter, for a redirect to a file URL that would drop
-                // the Authorization header; core serves them 200 with no
-                // redirect now, so the copy in the URL only wrote a year-long
-                // credential into every access log on the way.
-                val authed = if (token != null) {
-                    request.newBuilder()
-                        .header("Authorization", "Bearer $token")
-                        .build()
-                } else {
-                    request
-                }
-                chain.proceed(authed)
+                chain.proceed(authorised(request, app?.let { sessionManager.getTokenBlocking(it) }))
             }
             .build()
 }
+
+/**
+ * [request] with [token] attached, or unchanged when there is no token.
+ *
+ * The credential goes in the `Authorization` header and nowhere else. Avatars
+ * used to repeat it in a `token` query parameter, for a redirect to a file URL
+ * that would drop the header; core answers them 200 with no redirect, so the
+ * copy in the URL only wrote a year-long credential into every access log
+ * between here and there. A URL this builds must stay loggable.
+ *
+ * @param request the asset request, already known to be on the bound server.
+ * @param token the app token for that asset's app, null when none is held.
+ * @return the request to send.
+ */
+internal fun authorised(request: Request, token: String?): Request =
+    if (token == null) {
+        request
+    } else {
+        request.newBuilder()
+            .header("Authorization", "Bearer $token")
+            .build()
+    }
 
 /**
  * Lets non-Hilt call sites (composables in the shared UI layer) reach the

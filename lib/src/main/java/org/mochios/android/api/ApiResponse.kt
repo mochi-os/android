@@ -58,16 +58,6 @@ fun Response<*>.unwrapEmpty() {
     if (!isSuccessful) throw errorForResponse(code(), errorBody()?.string())
 }
 
-fun HttpException.extractApiError(): ApiError {
-    val body = response()?.errorBody()?.string()?.trimStart()
-    if (body.isNullOrEmpty() || !body.startsWith("{")) return ApiError()
-    return try {
-        Gson().fromJson(body, ApiError::class.java) ?: ApiError()
-    } catch (e: com.google.gson.JsonSyntaxException) {
-        ApiError()
-    }
-}
-
 class ApiException(
     val code: Int,
     val apiError: ApiError

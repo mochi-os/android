@@ -24,6 +24,7 @@ data class Review(
     val status: String = "",
     val created: Long = 0,
     @SerializedName("reviewer_name") val reviewerName: String? = null,
+    @SerializedName("reviewer_fingerprint") val reviewerFingerprint: String? = null,
     @SerializedName("subject_name") val subjectName: String? = null,
     @SerializedName("listing_title") val listingTitle: String? = null,
 )

@@ -33,7 +33,6 @@
     <string name="go_game_deleted">Mchezo umefutwa</string>
     <string name="go_new_game_add_friends">Ongeza marafiki</string>
     <string name="go_new_game_board_size_label">Ukubwa wa ubao</string>
-    <string name="go_new_game_cancel">Ghairi</string>
     <string name="go_new_game_friend_label">Mpinzani</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -50,7 +49,6 @@
     <string name="go_resign_title">Jiuzulu mchezo?</string>
     <string name="go_sidebar_completed">Imekamilika</string>
     <string name="go_sidebar_new_game">Mchezo mpya</string>
-    <string name="go_status_active">Inayotumika</string>
     <string name="go_status_draw">Sare</string>
     <string name="go_status_draw_text">Sare</string>
     <string name="go_status_game_over">Mchezo umeisha</string>
@@ -66,17 +64,20 @@
     <string name="go_open_sidebar">Fungua upau wa pembeni</string>
     <string name="go_sidebar_active">Michezo inayoendelea</string>
     <string name="go_empty_active">Bado hakuna michezo inayoendelea.</string>
-    <string name="go_empty_completed">Bado hakuna michezo iliyokamilika.</string>
-    <string name="go_status_finished">Imekamilika</string>
     <string name="go_status_resigned">Amejisalimisha</string>
-    <string name="go_card_vs">dhidi ya %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Mchezo mpya wa Go</string>
     <string name="go_new_game_no_friends">Unahitaji kuongeza rafiki kabla ya kuanza mchezo.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Pointi zilizoongezwa kwenye alama ya Nyeupe kufidia Mweusi anayetangulia</string>
-    <string name="go_new_game_create_error">Imeshindwa kuanza mchezo</string>
     <string name="go_board_a11y">Ubao wa Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Ubao wa Go %1$d×%1$d, zamu yako kuweka jiwe jeusi</string>
     <string name="go_board_a11y_turn_white">Ubao wa Go %1$d×%1$d, zamu yako kuweka jiwe jeupe</string>
+    <string name="go_status_scoring">Kuhesabu — kubalianeni kuhusu alama au endeleeni kucheza</string>
+    <string name="go_score_proposed">Alama zilizopendekezwa: nyeusi %1$s, nyeupe %2$s</string>
+    <string name="go_score_opponent_accepted">Mpinzani wako anakubali alama hizi: nyeusi %1$s, nyeupe %2$s</string>
+    <string name="go_score_waiting">Alama zimekubaliwa — inasubiri %1$s</string>
+    <string name="go_score_accept">Kubali alama</string>
+    <string name="go_score_resume">Endelea na mchezo</string>
+    <string name="go_error_score_resume_failed">Imeshindwa kuendelea na mchezo</string>
+    <string name="go_error_score_accept_failed">Imeshindwa kukubali alama</string>
 </resources>

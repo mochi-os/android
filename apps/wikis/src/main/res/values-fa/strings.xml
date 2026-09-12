@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">یافتن ویکی‌ها</string>
     <string name="wikis_sidebar_create">ساخت ویکی</string>
     <string name="wikis_pageview_title_fallback">صفحه</string>
-    <string name="wikis_pageview_wiki_fallback">ویکی</string>
-    <string name="wikis_pageview_back">بازگشت</string>
     <string name="wikis_pageview_page_actions">اقدامات صفحه</string>
     <string name="wikis_pageview_toc">در این صفحه</string>
     <string name="wikis_pageview_not_found_title">صفحه یافت نشد</string>
     <string name="wikis_pageview_create_this_page">این صفحه را بسازید</string>
     <string name="wikis_pageview_rss_copied">URL RSS در کلیپ‌بورد کپی شد</string>
-    <string name="wikis_pageview_rss_failed">دریافت توکن RSS ناموفق بود</string>
     <string name="wikis_page_action_section_page">صفحه</string>
     <string name="wikis_page_action_edit">ویرایش</string>
     <string name="wikis_page_action_rename">تغییر نام</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">ویکی‌ها</string>
     <string name="wikis_empty_title">اولین ویکی خود را آغاز کنید</string>
     <string name="wikis_empty_subtitle">ویکی‌ای را برای اشتراک جست‌وجو کنید، یا یکی را برای انتشار مستندات خود ایجاد کنید.</string>
-    <string name="wikis_subscribed_badge">مشترک شد</string>
     <string name="wikis_create_button">ساخت ویکی</string>
     <string name="wikis_recommended_section">ویکی‌های توصیه‌شده</string>
     <string name="wikis_subscribe_button">اشتراک</string>
-    <string name="wikis_subscribed">مشترک شد</string>
     <string name="wikis_unsubscribe_action">لغو اشتراک</string>
     <string name="wikis_unsubscribing">در حال لغو اشتراک…</string>
     <string name="wikis_unsubscribe_confirm_title">لغو اشتراک</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">نام</string>
     <string name="wikis_create_privacy_label">همه بتوانند ویکی را جست‌وجو کنند</string>
     <string name="wikis_create_submit">ساختن</string>
-    <string name="wikis_create_cancel">لغو</string>
     <string name="wikis_comments_empty_title">هنوز نظری وجود ندارد</string>
     <string name="wikis_comments_empty_subtitle">اولین کسی باشید که در این صفحه نظر می‌دهد.</string>
-    <string name="wikis_comment_action_reply">پاسخ</string>
     <string name="wikis_comment_replying_to">در پاسخ به %1$s</string>
     <string name="wikis_comment_clear_reply">لغو پاسخ</string>
-    <string name="wikis_comment_action_edit">ویرایش</string>
     <string name="wikis_comment_action_delete">حذف</string>
     <string name="wikis_comment_action_save">ذخیره</string>
     <string name="wikis_comment_action_cancel">لغو</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">صفحه جدید</string>
     <string name="wikis_editor_preview">پیش‌نمایش</string>
     <string name="wikis_editor_preview_untitled">بدون عنوان</string>
-    <string name="wikis_editor_edit">ویرایش</string>
     <string name="wikis_editor_insert">درج</string>
     <string name="wikis_editor_attachments">پیوست‌ها</string>
     <string name="wikis_editor_delete">حذف صفحه</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">در حال بارگذاری…</string>
     <string name="wikis_attachments_upload_failed">بارگذاری فایل‌ها ناموفق بود</string>
     <string name="wikis_attachments_search_clear">پاک کردن جست‌وجو</string>
-    <string name="wikis_attachments_filter">فیلتر</string>
     <string name="wikis_attachments_filter_all">همهٔ فایل‌ها</string>
     <string name="wikis_attachments_filter_images">تصاویر</string>
     <string name="wikis_attachments_filter_documents">اسناد</string>
-    <string name="wikis_attachments_sort">مرتب‌سازی</string>
     <string name="wikis_attachments_sort_date">تاریخ</string>
     <string name="wikis_attachments_sort_name">نام</string>
     <string name="wikis_attachments_sort_size">اندازه</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">کپی پیوند جاسازی</string>
     <string name="wikis_attachments_embed_copied">لینک جاسازی کپی شد</string>
     <string name="wikis_attachments_download">دانلود</string>
-    <string name="wikis_attachments_copy_success">لینک جاسازی کپی شد</string>
     <string name="wikis_attachments_delete">حذف</string>
     <string name="wikis_attachments_delete_confirm_title">حذف پیوست</string>
     <string name="wikis_attachments_delete_success">پیوست حذف شد</string>
     <string name="wikis_attachments_delete_failed">حذف پیوست ناموفق بود</string>
-    <string name="wikis_attachments_open">باز کردن</string>
     <string name="wikis_attachments_empty_title">هنوز پیوستی وجود ندارد</string>
     <string name="wikis_attachments_no_results_title">هیچ پیوستی با جست‌وجوی شما مطابقت ندارد</string>
     <string name="wikis_attachments_no_results_description">عبارت جست‌وجو یا فیلتر دیگری را امتحان کنید.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">این عمل قابل بازگشت نیست. این کار ویکی و تمام محتوای آن را به‌طور دائمی حذف خواهد کرد.</string>
     <string name="wikis_settings_delete_success">ویکی حذف شد</string>
     <string name="wikis_settings_delete_failed">حذف ویکی ناموفق بود</string>
-    <string name="wikis_access_add_action">افزودن</string>
     <string name="wikis_access_add_subject_label">کاربر</string>
     <string name="wikis_access_level_edit">ویرایش و مشاهده</string>
     <string name="wikis_access_level_view">فقط نمایش</string>
     <string name="wikis_access_level_none">بدون دسترسی</string>
-    <string name="wikis_access_owner_label">مالک</string>
     <string name="wikis_access_tab_users">کاربران</string>
     <string name="wikis_access_tab_groups">گروه‌ها</string>
     <string name="wikis_access_tab_other">سایر</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">حذف دسترسی ناموفق بود</string>
     <string name="wikis_replicas_empty_title">هنوز نسخه تکثیرشده‌ای وجود ندارد</string>
     <string name="wikis_replicas_empty_message">وقتی ویکی‌های دیگر این ویکی را تکثیر کنند، در اینجا ظاهر می‌شوند.</string>
-    <string name="wikis_replicas_col_id">شناسه</string>
     <string name="wikis_replicas_never_synced">هرگز</string>
     <string name="wikis_replicas_remove_confirm_title">حذف نسخه تکثیر‌شده؟</string>
     <string name="wikis_replicas_remove_confirm_action">حذف</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">به‌روزرسانی شده %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحه «%1$s» هنوز وجود ندارد.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">لینک ویکی</string>
-    <string name="wikis_pageview_share_link_copied">لینک صفحه در کلیپ‌بورد کپی شد</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS ویکی</string>
-    <string name="wikis_pageview_clipboard_label_share">لینک صفحه ویکی</string>
-    <string name="wikis_pageview_loading">بارگذاری صفحه…</string>
     <string name="wikis_page_action_share">پیوند</string>
     <string name="wikis_open_sidebar">باز کردن نوار کناری</string>
-    <string name="wikis_owned_badge">متعلق به شما</string>
     <string name="wikis_search_placeholder">جستجوی ویکی…</string>
-    <string name="wikis_subscribing">در حال اشتراک…</string>
     <string name="wikis_unsubscribe_confirm_message">آیا مطمئنید که می‌خواهید اشتراک از %1$s را لغو کنید؟</string>
-    <string name="wikis_subscribe_failed_502">آن سرور قابل دسترسی نیست. تلاش مجدد…</string>
     <string name="wikis_clipboard_label_rss">URL RSS ویکی</string>
     <string name="wikis_find_search_placeholder">جستجو بر اساس نام، شناسه، اثر انگشت یا URL…</string>
     <string name="wikis_join_search_button">جستجوی ویکی‌ها…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">پاسخ بنویسید…</string>
     <string name="wikis_comment_form_send">ارسال</string>
     <string name="wikis_comment_form_remove_attachment">حذف پیوست</string>
-    <string name="wikis_comment_collapse_toggle">جمع کردن گفتگو</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">محتوای خود را اینجا با Markdown بنویسید…</string>
     <string name="wikis_insert_dialog_empty">هنوز پیوستی وجود ندارد. یک فایل آپلود کنید تا شروع کنید.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">افزودن تگ</string>
     <string name="wikis_tag_dialog_empty">تگ نمی‌تواند خالی باشد</string>
     <string name="wikis_attachments_search_placeholder">جستجوی پیوست‌ها…</string>
-    <string name="wikis_attachments_copy_failed">کپی لینک تعبیه شکست خورد</string>
     <string name="wikis_attachments_delete_confirm_message">«%1$s» را حذف کنم؟ این عمل قابل بازگشت نیست.</string>
     <string name="wikis_attachments_downloading">در حال دانلود…</string>
     <string name="wikis_attachments_empty_description">روی آپلود ضربه بزنید تا فایل به این صفحه اضافه کنید.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d پاسخ</item>
         <item quantity="other">+%d پاسخ دیگر</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">نام %1$d صفحه تغییر کرد</item>
-        <item quantity="other">نام %1$d صفحه تغییر کرد</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">%1$d پیوند به‌روزرسانی شد</item>
-        <item quantity="other">%1$d پیوند به‌روزرسانی شد</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d صفحه</item>
         <item quantity="other">%d صفحه</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">ذخیرهٔ شرح انجام نشد</string>
     <string name="wikis_attachments_upload_types">فایل‌های پشتیبانی‌شده: تصاویر، PDF، DOC، DOCX، TXT و MD.</string>
     <string name="wikis_attachments_upload_limits">بارگذاری‌های بزرگ ممکن است با پیکربندی سرور یا پروکسی شما محدود شوند.</string>
+    <string name="wikis_rss_replace">جایگزینی</string>
+    <string name="wikis_rss_copied_new">URL جدید RSS در کلیپ‌بورد کپی شد</string>
+    <string name="wikis_rss_exists">این نشانی خوراک قبلاً صادر شده و دوباره نمایش داده نمی‌شود.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">نمایش %1$d دیدگاه نخست.</item>
+        <item quantity="other">نمایش %1$d دیدگاه نخست.</item>
+    </plurals>
 </resources>

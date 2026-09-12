@@ -62,6 +62,11 @@ class ForumsRepository @Inject constructor(
     suspend fun listForums(sort: String? = null): ForumListResponse =
         api.listForums(sort).unwrap()
 
+    /** The forum roster plus the account's default sort, without the posts
+     *  `-/list` would carry. */
+    suspend fun forumsInformation(): ForumListResponse =
+        api.getForumsInfo().unwrap()
+
     suspend fun viewForum(forumId: String, before: Long? = null, sort: String? = null, tag: String? = null): ViewForumResponse =
         api.viewForum(forumId, before = before, sort = sort, tag = tag).unwrap()
 
@@ -91,8 +96,10 @@ class ForumsRepository @Inject constructor(
 
     /** Subscribe and return the fingerprint of the joined forum, when the server
      *  reports one — that is the id its screen should be opened with. */
-    suspend fun subscribe(forumId: String, server: String? = null): String {
-        val r = api.subscribe(forumId, SubscribeRequest(forum = forumId, server = server)).unwrap()
+    suspend fun subscribe(forumId: String, server: String? = null, peer: String? = null): String {
+        val r = api.subscribe(
+            forumId, SubscribeRequest(forum = forumId, server = server, peer = peer),
+        ).unwrap()
         return r.fingerprint.ifEmpty { r.id.ifEmpty { forumId } }
     }
 
@@ -139,8 +146,8 @@ class ForumsRepository @Inject constructor(
         api.approvePost(forumId, postId).unwrap()
     }
 
-    suspend fun removePost(forumId: String, postId: String) {
-        api.removePost(forumId, postId).unwrap()
+    suspend fun removePost(forumId: String, postId: String, reason: String = "") {
+        api.removePost(forumId, postId, reason).unwrap()
     }
 
     suspend fun restorePost(forumId: String, postId: String) {
@@ -151,8 +158,8 @@ class ForumsRepository @Inject constructor(
         api.reportPost(forumId, postId, reason, details).unwrap()
     }
 
-    suspend fun removeComment(forumId: String, postId: String, commentId: String) {
-        api.removeComment(forumId, postId, commentId).unwrap()
+    suspend fun removeComment(forumId: String, postId: String, commentId: String, reason: String = "") {
+        api.removeComment(forumId, postId, commentId, reason).unwrap()
     }
 
     suspend fun restoreComment(forumId: String, postId: String, commentId: String) {
@@ -312,36 +319,6 @@ class ForumsRepository @Inject constructor(
                 parent = parent?.toRequestBody(text),
                 attachment = if (parent == null) attachment?.takeIf { it.isNotEmpty() }?.toRequestBody(text) else null,
                 files = parts,
-            ).unwrap()
-        } finally {
-            fileStore.deleteAll(files)
-        }
-    }
-
-    suspend fun editCommentFromUris(
-        forumId: String,
-        postId: String,
-        commentId: String,
-        body: String,
-        keptAttachmentIds: List<String>?,
-        newFileUris: List<android.net.Uri>,
-        context: android.content.Context,
-    ) {
-        val files = fileStore.cacheFiles(newFileUris)
-        try {
-            val newParts = fileStore.fileParts("files", files)
-            val order: List<String>? = when {
-                keptAttachmentIds == null && files.isEmpty() -> null
-                else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
-            }
-            val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
-            api.editComment(
-                forumId = forumId,
-                postId = postId,
-                commentId = commentId,
-                body = body.toRequestBody(text),
-                order = orderJson,
-                files = newParts,
             ).unwrap()
         } finally {
             fileStore.deleteAll(files)

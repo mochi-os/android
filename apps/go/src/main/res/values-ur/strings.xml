@@ -33,7 +33,6 @@
     <string name="go_game_deleted">گیم حذف کر دی گئی</string>
     <string name="go_new_game_add_friends">دوست شامل کریں</string>
     <string name="go_new_game_board_size_label">بورڈ کا سائز</string>
-    <string name="go_new_game_cancel">منسوخ کریں</string>
     <string name="go_new_game_friend_label">حریف</string>
     <string name="go_new_game_komi_field_label">کومی</string>
     <string name="go_new_game_komi_label">کومی</string>
@@ -50,7 +49,6 @@
     <string name="go_resign_title">گیم سے resign کریں؟</string>
     <string name="go_sidebar_completed">مکمل</string>
     <string name="go_sidebar_new_game">نیا گیم</string>
-    <string name="go_status_active">فعال</string>
     <string name="go_status_draw">برابر</string>
     <string name="go_status_draw_text">برابر</string>
     <string name="go_status_game_over">گیم ختم</string>
@@ -66,17 +64,20 @@
     <string name="go_open_sidebar">سائیڈبار کھولیں</string>
     <string name="go_sidebar_active">فعال کھیل</string>
     <string name="go_empty_active">ابھی کوئی فعال کھیل نہیں۔</string>
-    <string name="go_empty_completed">ابھی کوئی مکمل کھیل نہیں۔</string>
-    <string name="go_status_finished">مکمل</string>
     <string name="go_status_resigned">ہار مان لی</string>
-    <string name="go_card_vs">بمقابلہ %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">نیا Go کھیل</string>
     <string name="go_new_game_no_friends">کھیل شروع کرنے سے پہلے آپ کو دوست شامل کرنا ہوگا۔</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">سیاہ کے پہلے چلنے کی تلافی کے لیے سفید کے اسکور میں شامل کردہ پوائنٹس</string>
-    <string name="go_new_game_create_error">کھیل شروع کرنے میں ناکام</string>
     <string name="go_board_a11y">%1$d×%1$d Go بورڈ</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d گو بورڈ، سیاہ مہرہ رکھنے کی آپ کی باری</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d گو بورڈ، سفید مہرہ رکھنے کی آپ کی باری</string>
+    <string name="go_status_scoring">گنتی — اسکور پر متفق ہوں یا کھیلتے رہیں</string>
+    <string name="go_score_proposed">تجویز کردہ اسکور: کالا %1$s، سفید %2$s</string>
+    <string name="go_score_opponent_accepted">آپ کا حریف یہ اسکور قبول کرتا ہے: کالا %1$s، سفید %2$s</string>
+    <string name="go_score_waiting">اسکور قبول ہوا — %1$s کا انتظار ہے</string>
+    <string name="go_score_accept">اسکور قبول کریں</string>
+    <string name="go_score_resume">کھیل دوبارہ شروع کریں</string>
+    <string name="go_error_score_resume_failed">کھیل دوبارہ شروع کرنے میں ناکامی</string>
+    <string name="go_error_score_accept_failed">اسکور قبول کرنے میں ناکامی</string>
 </resources>

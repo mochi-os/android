@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">البحث عن الويكيات</string>
     <string name="wikis_sidebar_create">إنشاء ويكي</string>
     <string name="wikis_pageview_title_fallback">الصفحة</string>
-    <string name="wikis_pageview_wiki_fallback">ويكي</string>
-    <string name="wikis_pageview_back">رجوع</string>
     <string name="wikis_pageview_page_actions">إجراءات الصفحة</string>
     <string name="wikis_pageview_toc">في هذه الصفحة</string>
     <string name="wikis_pageview_not_found_title">الصفحة غير موجودة</string>
     <string name="wikis_pageview_create_this_page">إنشاء هذه الصفحة</string>
     <string name="wikis_pageview_rss_copied">تم نسخ URL RSS إلى الحافظة</string>
-    <string name="wikis_pageview_rss_failed">فشل الحصول على رمز RSS</string>
     <string name="wikis_page_action_section_page">الصفحة</string>
     <string name="wikis_page_action_edit">تعديل</string>
     <string name="wikis_page_action_rename">إعادة تسمية</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">الويكي</string>
     <string name="wikis_empty_title">ابدأ ويكي الأول لك</string>
     <string name="wikis_empty_subtitle">ابحث عن ويكي للاشتراك فيه، أو أنشئ ويكي لنشر توثيقك الخاص.</string>
-    <string name="wikis_subscribed_badge">مشترك</string>
     <string name="wikis_create_button">إنشاء ويكي</string>
     <string name="wikis_recommended_section">ويكيات موصى بها</string>
     <string name="wikis_subscribe_button">اشتراك</string>
-    <string name="wikis_subscribed">مشترك</string>
     <string name="wikis_unsubscribe_action">إلغاء الاشتراك</string>
     <string name="wikis_unsubscribing">جاري إلغاء الاشتراك…</string>
     <string name="wikis_unsubscribe_confirm_title">إلغاء الاشتراك</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">الاسم</string>
     <string name="wikis_create_privacy_label">السماح لأي شخص بالبحث عن الويكي</string>
     <string name="wikis_create_submit">إنشاء</string>
-    <string name="wikis_create_cancel">إلغاء</string>
     <string name="wikis_comments_empty_title">لا توجد تعليقات بعد</string>
     <string name="wikis_comments_empty_subtitle">كن أول من يعلق على هذه الصفحة.</string>
-    <string name="wikis_comment_action_reply">رد</string>
     <string name="wikis_comment_replying_to">الرد على %1$s</string>
     <string name="wikis_comment_clear_reply">إلغاء الرد</string>
-    <string name="wikis_comment_action_edit">تعديل</string>
     <string name="wikis_comment_action_delete">حذف</string>
     <string name="wikis_comment_action_save">حفظ</string>
     <string name="wikis_comment_action_cancel">إلغاء</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">صفحة جديدة</string>
     <string name="wikis_editor_preview">معاينة</string>
     <string name="wikis_editor_preview_untitled">بدون عنوان</string>
-    <string name="wikis_editor_edit">تعديل</string>
     <string name="wikis_editor_insert">إدراج</string>
     <string name="wikis_editor_attachments">المرفقات</string>
     <string name="wikis_editor_delete">حذف الصفحة</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">جارٍ الرفع…</string>
     <string name="wikis_attachments_upload_failed">فشل رفع الملفات</string>
     <string name="wikis_attachments_search_clear">مسح البحث</string>
-    <string name="wikis_attachments_filter">تصفية</string>
     <string name="wikis_attachments_filter_all">جميع الملفات</string>
     <string name="wikis_attachments_filter_images">الصور</string>
     <string name="wikis_attachments_filter_documents">المستندات</string>
-    <string name="wikis_attachments_sort">ترتيب</string>
     <string name="wikis_attachments_sort_date">التاريخ</string>
     <string name="wikis_attachments_sort_name">الاسم</string>
     <string name="wikis_attachments_sort_size">الحجم</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">نسخ رابط التضمين</string>
     <string name="wikis_attachments_embed_copied">تم نسخ رابط التضمين</string>
     <string name="wikis_attachments_download">تنزيل</string>
-    <string name="wikis_attachments_copy_success">تم نسخ رابط التضمين</string>
     <string name="wikis_attachments_delete">حذف</string>
     <string name="wikis_attachments_delete_confirm_title">حذف المرفق</string>
     <string name="wikis_attachments_delete_success">تم حذف المرفق</string>
     <string name="wikis_attachments_delete_failed">فشل حذف المرفق</string>
-    <string name="wikis_attachments_open">مفتوح</string>
     <string name="wikis_attachments_empty_title">لا توجد مرفقات بعد</string>
     <string name="wikis_attachments_no_results_title">لا توجد مرفقات تطابق بحثك</string>
     <string name="wikis_attachments_no_results_description">جرّب مصطلح بحث أو مرشحًا مختلفًا.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف الويكي وكل محتوياته بشكل دائم.</string>
     <string name="wikis_settings_delete_success">تم حذف الويكي</string>
     <string name="wikis_settings_delete_failed">فشل حذف الويكي</string>
-    <string name="wikis_access_add_action">إضافة</string>
     <string name="wikis_access_add_subject_label">المستخدم</string>
     <string name="wikis_access_level_edit">التعديل والعرض</string>
     <string name="wikis_access_level_view">عرض فقط</string>
     <string name="wikis_access_level_none">لا يوجد وصول</string>
-    <string name="wikis_access_owner_label">المالك</string>
     <string name="wikis_access_tab_users">المستخدمون</string>
     <string name="wikis_access_tab_groups">المجموعات</string>
     <string name="wikis_access_tab_other">أخرى</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">فشل إزالة الوصول</string>
     <string name="wikis_replicas_empty_title">لا توجد نسخ متماثلة بعد</string>
     <string name="wikis_replicas_empty_message">عندما تكرر ويكي أخرى هذا الويكي، ستظهر هنا.</string>
-    <string name="wikis_replicas_col_id">المعرّف</string>
     <string name="wikis_replicas_never_synced">أبداً</string>
     <string name="wikis_replicas_remove_confirm_title">إزالة النسخة المتماثلة؟</string>
     <string name="wikis_replicas_remove_confirm_action">إزالة</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">إ%1$d</string>
     <string name="wikis_pageview_updated">تم التحديث %1$s</string>
     <string name="wikis_pageview_not_found_description">الصفحة «%1$s» غير موجودة بعد.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">رابط الويكي</string>
-    <string name="wikis_pageview_share_link_copied">تم نسخ رابط الصفحة إلى الحافظة</string>
     <string name="wikis_pageview_clipboard_label_rss">رابط RSS للويكي</string>
-    <string name="wikis_pageview_clipboard_label_share">رابط صفحة الويكي</string>
-    <string name="wikis_pageview_loading">جارٍ تحميل الصفحة…</string>
     <string name="wikis_page_action_share">رابط</string>
     <string name="wikis_open_sidebar">فتح الشريط الجانبي</string>
-    <string name="wikis_owned_badge">مملوك</string>
     <string name="wikis_search_placeholder">ابحث عن ويكي…</string>
-    <string name="wikis_subscribing">جارٍ الاشتراك…</string>
     <string name="wikis_unsubscribe_confirm_message">هل أنت متأكد من إلغاء الاشتراك من %1$s؟</string>
-    <string name="wikis_subscribe_failed_502">الخادم غير متاح. إعادة المحاولة…</string>
     <string name="wikis_clipboard_label_rss">رابط RSS للويكي</string>
     <string name="wikis_find_search_placeholder">البحث بالاسم أو المعرف أو البصمة أو الرابط…</string>
     <string name="wikis_join_search_button">البحث عن ويكي…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">اكتب رداً…</string>
     <string name="wikis_comment_form_send">إرسال</string>
     <string name="wikis_comment_form_remove_attachment">إزالة المرفق</string>
-    <string name="wikis_comment_collapse_toggle">طي المحادثة</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">اكتب محتواك هنا باستخدام Markdown…</string>
     <string name="wikis_insert_dialog_empty">لا توجد مرفقات بعد. ارفع ملفاً للبدء.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">إضافة وسم</string>
     <string name="wikis_tag_dialog_empty">لا يمكن أن يكون الوسم فارغاً</string>
     <string name="wikis_attachments_search_placeholder">البحث في المرفقات…</string>
-    <string name="wikis_attachments_copy_failed">فشل نسخ رابط التضمين</string>
     <string name="wikis_attachments_delete_confirm_message">حذف «%1$s»؟ لا يمكن التراجع عن هذا.</string>
     <string name="wikis_attachments_downloading">جارٍ التحميل…</string>
     <string name="wikis_attachments_empty_description">اضغط على رفع لإضافة ملفات إلى هذه الصفحة.</string>
@@ -330,22 +305,6 @@
         <item quantity="few">+%d ردود إضافية</item>
         <item quantity="many">+%d ردود إضافية</item>
         <item quantity="other">+%d ردود إضافية</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="zero">تمت إعادة تسمية %1$d صفحات</item>
-        <item quantity="one">تمت إعادة تسمية صفحة واحدة</item>
-        <item quantity="two">تمت إعادة تسمية %1$d صفحات</item>
-        <item quantity="few">تمت إعادة تسمية %1$d صفحات</item>
-        <item quantity="many">تمت إعادة تسمية %1$d صفحات</item>
-        <item quantity="other">تمت إعادة تسمية %1$d صفحات</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="zero">تم تحديث %1$d روابط</item>
-        <item quantity="one">تم تحديث رابط واحد</item>
-        <item quantity="two">تم تحديث %1$d روابط</item>
-        <item quantity="few">تم تحديث %1$d روابط</item>
-        <item quantity="many">تم تحديث %1$d روابط</item>
-        <item quantity="other">تم تحديث %1$d روابط</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="zero">%d صفحات</item>
@@ -398,4 +357,15 @@
     <string name="wikis_attachments_caption_save_failed">تعذّر حفظ التسمية التوضيحية</string>
     <string name="wikis_attachments_upload_types">الملفات المدعومة: الصور، PDF، DOC، DOCX، TXT، وMD.</string>
     <string name="wikis_attachments_upload_limits">قد تكون عمليات الرفع الكبيرة محدودة بإعدادات الخادم أو الوكيل لديك.</string>
+    <string name="wikis_rss_replace">استبدال</string>
+    <string name="wikis_rss_copied_new">تم نسخ URL RSS الجديد إلى الحافظة</string>
+    <string name="wikis_rss_exists">تم إصدار عنوان التغذية هذا مسبقاً ولا يمكن عرضه مرة أخرى.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="zero">عرض أول %1$d تعليقات.</item>
+        <item quantity="one">عرض أول %1$d تعليق.</item>
+        <item quantity="two">عرض أول %1$d تعليقات.</item>
+        <item quantity="few">عرض أول %1$d تعليقات.</item>
+        <item quantity="many">عرض أول %1$d تعليقات.</item>
+        <item quantity="other">عرض أول %1$d تعليقات.</item>
+    </plurals>
 </resources>

@@ -5,10 +5,7 @@
     <string name="auth_email">電子郵件</string>
     <string name="auth_continue">繼續</string>
     <string name="auth_verification_code">驗證碼</string>
-    <string name="auth_verify">驗證</string>
-    <string name="auth_authenticator_app">驗證器應用程式</string>
     <string name="auth_email_code">電子郵件代碼</string>
-    <string name="auth_authenticator_code">驗證器代碼</string>
     <string name="auth_recovery_code">復原代碼</string>
     <string name="auth_name">名稱</string>
     <string name="auth_create">建立</string>
@@ -34,23 +31,16 @@
     <string name="common_copy">複製</string>
     <string name="common_copied">已複製到剪貼簿</string>
     <string name="comment_edited">(已編輯)</string>
-    <string name="comment_edit_placeholder">編輯留言</string>
     <string name="comment_reply">回覆</string>
-    <string name="comment_reply_placeholder">回覆</string>
-    <string name="comment_send_reply">傳送回覆</string>
     <string name="person_picker_search">搜尋使用者</string>
     <string name="place_picker_no_results">找不到地點</string>
-    <string name="discovery_results">結果</string>
     <string name="discovery_recommended">推薦</string>
-    <string name="discovery_subscribed">已訂閱</string>
     <string name="access_add_rule">新增規則</string>
     <string name="access_owner">擁有者</string>
     <string name="access_revoke">撤銷</string>
-    <string name="access_level">存取層級</string>
     <string name="access_level_comment">留言</string>
     <string name="access_level_view">檢視</string>
     <string name="access_level_none">無</string>
-    <string name="banner_label">橫幅</string>
     <string name="reaction_like">喜歡</string>
     <string name="reaction_dislike">不喜歡</string>
     <string name="reaction_laugh">笑</string>
@@ -71,9 +61,7 @@
     <string name="notifications_tab_all">全部</string>
     <string name="notifications_mark_all_read">全部標為已讀</string>
     <string name="notifications_clear_all">全部清除</string>
-    <string name="notifications_loading">載入中…</string>
     <string name="settings_title">設定</string>
-    <string name="settings_open">設定</string>
     <string name="settings_appearance">外觀</string>
     <string name="settings_appearance_light">淺色</string>
     <string name="settings_appearance_dark">深色</string>
@@ -123,21 +111,12 @@
     <string name="settings_background">背景</string>
     <string name="settings_background_theme">來自主題</string>
     <string name="settings_background_off">無</string>
-    <string name="profile_title">個人檔案</string>
-    <string name="profile_open">個人檔案</string>
-    <string name="profile_display_name">顯示名稱</string>
-    <string name="profile_save_name">儲存名稱</string>
-    <string name="profile_privacy">隱私</string>
-    <string name="profile_privacy_public">公開</string>
-    <string name="profile_privacy_private">私人</string>
-    <string name="profile_fingerprint">指紋</string>
     <string name="game_chat_empty">尚無訊息</string>
     <string name="game_chat_input_placeholder">輸入訊息…</string>
     <string name="game_chat_send">傳送訊息</string>
     <string name="game_chat_subject_you">您</string>
 
     <string name="common_not_saved">未儲存</string>
-    <string name="common_save_failed">無法儲存您的變更。</string>
     <string name="auth_server_url">伺服器 URL</string>
     <string name="auth_link_rules">規則</string>
     <string name="game_chat_move_played">%1$s 走了 %2$s</string>
@@ -148,20 +127,13 @@
     <string name="error_not_found">找不到</string>
     <string name="error_server">伺服器錯誤 (%1$d)。請稍後再試。</string>
     <string name="error_unexpected">發生未預期的錯誤</string>
-    <string name="error_request_failed">請求失敗</string>
     <string name="error_enter_server_url">請輸入伺服器網址</string>
     <string name="error_enter_email">請輸入您的電子郵件</string>
     <string name="error_enter_name">請輸入名稱</string>
     <string name="auth_connect_to_server">連線至您的伺服器</string>
     <string name="auth_connect">連線</string>
     <string name="auth_sign_in">登入</string>
-    <string name="auth_sign_in_with_passkey">使用通行密鑰登入</string>
-    <string name="auth_sign_in_with_email_code">使用電子郵件驗證碼登入</string>
-    <string name="auth_use_recovery_code">使用復原代碼</string>
-    <string name="auth_back_to_sign_in">返回登入</string>
-    <string name="auth_send_code">傳送驗證碼</string>
     <string name="auth_check_email">請檢查您的電子郵件以取得驗證碼</string>
-    <string name="auth_six_digit_code">6 位數驗證碼</string>
     <string name="auth_mfa_title">多重要素驗證</string>
     <string name="auth_mfa_subtitle">完成其餘的驗證步驟</string>
     <string name="auth_recover_account">復原帳戶</string>
@@ -188,8 +160,6 @@
     <string name="bootstrap_sign_in_differently">改用其他方式登入</string>
     <string name="bootstrap_choose_account">選擇帳戶</string>
     <string name="bootstrap_sign_in_different_server">登入其他伺服器</string>
-    <string name="common_or">或</string>
-    <string name="common_change">變更</string>
     <string name="common_retry">重試</string>
     <string name="common_more_options">更多選項</string>
     <string name="common_collapse">收合</string>
@@ -198,21 +168,12 @@
     <string name="place_picker_name">地點名稱</string>
     <string name="place_origin">起點</string>
     <string name="place_destination">終點</string>
-    <string name="discovery_search_placeholder">搜尋 %1$s</string>
-    <string name="discovery_no_results">找不到 %1$s</string>
     <string name="discovery_no_results_hint">請嘗試調整您的搜尋</string>
-    <string name="discovery_no_recommendations">沒有推薦項目</string>
-    <string name="discovery_search_hint">嘗試搜尋要訂閱的 %1$s</string>
     <string name="access_no_rules">沒有存取規則</string>
-    <string name="access_no_rules_subtitle">新增規則以控制誰可以存取此資源</string>
     <string name="access_add_rule_title">新增存取規則</string>
     <string name="access_level_manage">管理</string>
     <string name="access_level_react">回應</string>
     <string name="notifications_clear">清除通知</string>
-    <string name="banner_description">顯示於此檢視畫面頂部的 Markdown。</string>
-    <string name="banner_placeholder">歡迎…</string>
-    <string name="banner_save">儲存橫幅</string>
-    <string name="banner_clear">清除橫幅</string>
     <string name="entity_avatar_alt">%1$s 的頭像</string>
     <string name="media_grid_more_count">+%1$d</string>
     <string name="lightbox_position">%1$d / %2$d</string>
@@ -228,7 +189,6 @@
     <string name="format_time_days_short">%1$d 天</string>
     <string name="format_time_weeks_short">%1$d 週</string>
     <string name="format_time_months_short">%1$d 個月</string>
-    <string name="format_time_years_short">%1$d 年</string>
     <string name="reaction_add">新增回應</string>
     <string name="push_service_channel">Mochi 推播</string>
     <string name="push_service_channel_description">讓 Mochi 保持連線以接收通知</string>
@@ -253,7 +213,6 @@
     <string name="about_check_download_failed">下載失敗</string>
     <string name="notifications_clear_all_title">清除所有通知?</string>
     <string name="notifications_clear_all_message">這將移除所有通知,且無法復原。</string>
-    <string name="notifications_count_n">%1$d 則新訊息</string>
     <string name="settings_value_auto">自動</string>
     <string name="settings_value_theme">佈景主題預設值</string>
     <string name="settings_radius">圓角半徑</string>
@@ -261,7 +220,6 @@
     <string name="settings_timestamp_relative">相對時間</string>
     <string name="settings_timestamp_absolute">絕對時間</string>
     <string name="settings_units_usa">美制</string>
-    <string name="profile_privacy_description">其他人是否可以在目錄中找到您。</string>
     <string name="game_chat_load_more">載入較舊的訊息</string>
     <string name="stepup_title">確認是您本人</string>
     <string name="stepup_description">這是對您帳戶的安全變更。請驗證您的身分以繼續。</string>
@@ -269,7 +227,6 @@
     <string name="stepup_email_placeholder">輸入電子郵件中的驗證碼</string>
     <string name="stepup_totp_label">驗證器代碼</string>
     <string name="stepup_totp_placeholder">請輸入您的驗證器代碼</string>
-    <string name="stepup_passkey_label">Passkey</string>
     <string name="stepup_use_passkey">使用您的通行金鑰</string>
     <string name="stepup_send_email">傳送郵件</string>
     <string name="stepup_resend_email">重新發送電郵</string>
@@ -298,7 +255,6 @@
     <string name="comment_anonymous">匿名</string>
     <string name="tags_label">標籤</string>
     <string name="tags_add">新增標籤</string>
-    <string name="tags_label_field">標籤名稱</string>
     <string name="tags_interest_up">多顯示類似內容</string>
     <string name="tags_interest_down">少顯示類似內容</string>
     <string name="tags_interest_clear">不再顯示</string>
@@ -310,9 +266,6 @@
     <string name="person_picker_directory">目錄</string>
     <string name="person_picker_no_people">沒有人員</string>
     <string name="person_picker_project_members">專案成員</string>
-    <plurals name="discovery_subscriber_count">
-        <item quantity="other">%1$d 位訂閱者</item>
-    </plurals>
     <string name="account_token_label">Mochi 工作階段</string>
     <string name="attachment_caption">說明文字</string>
     <string name="attachment_caption_add">新增說明文字</string>
@@ -353,4 +306,8 @@
     <string name="settings_card_theme">來自主題</string>
     <string name="settings_card_flat">扁平</string>
     <string name="settings_card_raised">凸起</string>
+    <string name="error_server_https">伺服器位址必須以 https:// 開頭</string>
+    <string name="device_name_fallback">行動裝置</string>
+    <string name="account_error_token_type">不支援的權杖類型</string>
+    <string name="account_error_caller">不允許此呼叫方</string>
 </resources>

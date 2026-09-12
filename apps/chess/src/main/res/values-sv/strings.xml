@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Lägg till vänner</string>
     <string name="chess_new_start_button">Starta spel</string>
     <string name="chess_new_creating">Skapar…</string>
-    <string name="chess_new_failed">Kunde inte skapa spel</string>
     <string name="chess_chat_title">Chatt</string>
     <string name="chess_open_chat">Öppna chattpanel</string>
     <string name="chess_open_actions">Öppna spelåtgärder</string>

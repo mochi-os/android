@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">शब्दहरू</string>
     <string name="words_list_title">शब्दहरू</string>
     <string name="words_list_menu">मेनु</string>
-    <string name="words_list_new">नयाँ खेल</string>
     <string name="words_list_logout">लग आउट</string>
-    <string name="words_list_empty_title">अहिलेसम्म कुनै खेल छैन</string>
-    <string name="words_sidebar_header">शब्दहरू</string>
     <string name="words_sidebar_completed">पूरा भयो</string>
     <string name="words_sidebar_new_game">नयाँ खेल</string>
     <string name="words_new_game_title">नयाँ खेल</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">पुन: खेल</string>
     <string name="words_detail_action_delete">खेल मेटाउनुहोस्</string>
     <string name="words_detail_chat_title">च्याट</string>
-    <string name="words_detail_invalid_move">अमान्य चाल</string>
     <string name="words_detail_recall">फिर्ता बोलाउनुहोस्</string>
     <string name="words_detail_submit">पेस गर्नुहोस्</string>
     <string name="words_detail_cancel">रद्द गर्नुहोस्</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">एक अक्षर छनोट गर्नुहोस्</string>
     <string name="words_detail_resign_title">खेल छोड्ने?</string>
     <string name="words_detail_resign_message">तपाईं पक्का हार मान्न चाहनुहुन्छ?</string>
-    <string name="words_detail_failed_move">चाल पेश गर्न असफल</string>
-    <string name="words_detail_failed_pass">पास गर्न असफल</string>
-    <string name="words_detail_failed_exchange">साट्न असफल</string>
-    <string name="words_detail_failed_resign">राजीनामा दिन असफल</string>
-    <string name="words_detail_failed_rematch">रिम्याच सिर्जना गर्न असफल</string>
-    <string name="words_detail_failed_delete">खेल मेटाउन असफल</string>
-    <string name="words_detail_game_deleted">खेल मेटाइयो</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words पालो, साटासाट र खेल नतिजाबारे सूचनाहरू।</string>
-    <string name="words_list_empty_subtitle">आफ्नो पहिलो खेल सुरु गर्न + बटन थिच्नुहोस्।</string>
-    <string name="words_list_status_finished">Finished</string>
-    <string name="words_list_status_resigned">Resigned</string>
-    <string name="words_list_your_turn">Your turn</string>
     <string name="words_sidebar_active">Active games</string>
     <string name="words_sidebar_empty">अहिलेसम्म कुनै खेल छैन।</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">खेल्न सुरु गर्न People एपमा साथीहरू थप्नुहोस्।</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_coming_soon">खेलको विवरण चाँडै आउँदैछ</string>
     <string name="words_detail_status_opponent_move">%1$s\'s move</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>

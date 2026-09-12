@@ -5,14 +5,11 @@
     <string name="wikis_sidebar_find">Najdi wikije</string>
     <string name="wikis_sidebar_create">Ustvari wiki</string>
     <string name="wikis_pageview_title_fallback">Stran</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Nazaj</string>
     <string name="wikis_pageview_page_actions">Dejanja strani</string>
     <string name="wikis_pageview_toc">Na tej strani</string>
     <string name="wikis_pageview_not_found_title">Strani ni mogoče najti</string>
     <string name="wikis_pageview_create_this_page">Ustvari to stran</string>
     <string name="wikis_pageview_rss_copied">RSS URL kopiran v odložišče</string>
-    <string name="wikis_pageview_rss_failed">Neuspešno pridobivanje RSS žetona</string>
     <string name="wikis_page_action_section_page">Stran</string>
     <string name="wikis_page_action_edit">Uredi</string>
     <string name="wikis_page_action_rename">Preimenuj</string>
@@ -28,11 +25,9 @@
     <string name="wikis_title">Wikiji</string>
     <string name="wikis_empty_title">Začni svoj prvi wiki</string>
     <string name="wikis_empty_subtitle">Iskanje wikija za naročnino ali ustvarite svojega za objavo lastne dokumentacije.</string>
-    <string name="wikis_subscribed_badge">Naročeno</string>
     <string name="wikis_create_button">Ustvari wiki</string>
     <string name="wikis_recommended_section">Priporočeni wikiji</string>
     <string name="wikis_subscribe_button">Naroči se</string>
-    <string name="wikis_subscribed">Naročeno</string>
     <string name="wikis_unsubscribe_action">Odjavi se</string>
     <string name="wikis_unsubscribing">Odjavljanje…</string>
     <string name="wikis_unsubscribe_confirm_title">Odjavi se</string>
@@ -57,13 +52,10 @@
     <string name="wikis_create_name_label">Ime</string>
     <string name="wikis_create_privacy_label">Dovoli vsem iskanje wikija</string>
     <string name="wikis_create_submit">Ustvari</string>
-    <string name="wikis_create_cancel">Prekliči</string>
     <string name="wikis_comments_empty_title">Še ni komentarjev</string>
     <string name="wikis_comments_empty_subtitle">Bodite prvi, ki komentirate to stran.</string>
-    <string name="wikis_comment_action_reply">Odgovori</string>
     <string name="wikis_comment_replying_to">Odgovor na %1$s</string>
     <string name="wikis_comment_clear_reply">Prekliči odgovor</string>
-    <string name="wikis_comment_action_edit">Uredi</string>
     <string name="wikis_comment_action_delete">Izbriši</string>
     <string name="wikis_comment_action_save">Shrani</string>
     <string name="wikis_comment_action_cancel">Prekliči</string>
@@ -75,7 +67,6 @@
     <string name="wikis_editor_title_new">Nova stran</string>
     <string name="wikis_editor_preview">Predogled</string>
     <string name="wikis_editor_preview_untitled">Brez naslova</string>
-    <string name="wikis_editor_edit">Uredi</string>
     <string name="wikis_editor_insert">Vstavi</string>
     <string name="wikis_editor_attachments">Priloge</string>
     <string name="wikis_editor_delete">Izbriši stran</string>
@@ -155,11 +146,9 @@
     <string name="wikis_attachments_uploading">Nalaganje…</string>
     <string name="wikis_attachments_upload_failed">Neuspešno nalaganje datotek</string>
     <string name="wikis_attachments_search_clear">Počisti iskanje</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Vse datoteke</string>
     <string name="wikis_attachments_filter_images">Slike</string>
     <string name="wikis_attachments_filter_documents">Dokumenti</string>
-    <string name="wikis_attachments_sort">Razvrsti</string>
     <string name="wikis_attachments_sort_date">Datum</string>
     <string name="wikis_attachments_sort_name">Ime</string>
     <string name="wikis_attachments_sort_size">Velikost</string>
@@ -168,12 +157,10 @@
     <string name="wikis_attachments_copy_embed">Kopiraj povezavo za vdelavo</string>
     <string name="wikis_attachments_embed_copied">Povezava za vdelavo kopirana</string>
     <string name="wikis_attachments_download">Prenesi</string>
-    <string name="wikis_attachments_copy_success">Povezava za vdelavo kopirana</string>
     <string name="wikis_attachments_delete">Izbriši</string>
     <string name="wikis_attachments_delete_confirm_title">Izbriši prilogo</string>
     <string name="wikis_attachments_delete_success">Priloga izbrisana</string>
     <string name="wikis_attachments_delete_failed">Neuspešno brisanje priponke</string>
-    <string name="wikis_attachments_open">Odpri</string>
     <string name="wikis_attachments_empty_title">Še ni priponk</string>
     <string name="wikis_attachments_no_results_title">Nobena priponka ne ustreza vašemu iskanju</string>
     <string name="wikis_attachments_no_results_description">Poskusi z drugačnim iskalnim izrazom ali filtrom.</string>
@@ -207,12 +194,10 @@
     <string name="wikis_settings_delete_confirm_message">Tega dejanja ni mogoče razveljaviti. To bo trajno izbrisalo wiki in vso njegovo vsebino.</string>
     <string name="wikis_settings_delete_success">Wiki izbrisan</string>
     <string name="wikis_settings_delete_failed">Neuspešno brisanje wikija</string>
-    <string name="wikis_access_add_action">Dodaj</string>
     <string name="wikis_access_add_subject_label">Uporabnik</string>
     <string name="wikis_access_level_edit">Urejanje in ogled</string>
     <string name="wikis_access_level_view">Samo za branje</string>
     <string name="wikis_access_level_none">Brez dostopa</string>
-    <string name="wikis_access_owner_label">Lastnik</string>
     <string name="wikis_access_tab_users">Uporabniki</string>
     <string name="wikis_access_tab_groups">Skupine</string>
     <string name="wikis_access_tab_other">Drugo</string>
@@ -226,7 +211,6 @@
     <string name="wikis_access_revoke_failed">Neuspešna odstranitev dostopa</string>
     <string name="wikis_replicas_empty_title">Še ni replik</string>
     <string name="wikis_replicas_empty_message">Ko drugi wikiji replicirajo ta wiki, se bodo prikazali tukaj.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Nikoli</string>
     <string name="wikis_replicas_remove_confirm_title">Odstrani repliko?</string>
     <string name="wikis_replicas_remove_confirm_action">Odstrani</string>
@@ -239,19 +223,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Posodobljeno %1$s</string>
     <string name="wikis_pageview_not_found_description">Stran „%1$s\" še ne obstaja.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Povezava wikija</string>
-    <string name="wikis_pageview_share_link_copied">Povezava strani kopirana v odložišče</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Povezava wiki strani</string>
-    <string name="wikis_pageview_loading">Nalaganje strani…</string>
     <string name="wikis_page_action_share">Povezava</string>
     <string name="wikis_open_sidebar">Odpri stransko vrstico</string>
-    <string name="wikis_owned_badge">V lasti</string>
     <string name="wikis_search_placeholder">Iskanje wiki…</string>
-    <string name="wikis_subscribing">Naročanje…</string>
     <string name="wikis_unsubscribe_confirm_message">Ali ste prepričani, da želite odjaviti naročnino na %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Strežnik ni dosegljiv. Ponoven poskus…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Išči po imenu, ID, prstnem odtisu ali URL…</string>
     <string name="wikis_join_search_button">Išči wikije…</string>
@@ -262,7 +239,6 @@
     <string name="wikis_comment_form_placeholder_reply">Napišite odgovor…</string>
     <string name="wikis_comment_form_send">Pošlji</string>
     <string name="wikis_comment_form_remove_attachment">Odstrani prilogo</string>
-    <string name="wikis_comment_collapse_toggle">Skrči nit</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Tukaj napišite svojo vsebino z Markdown…</string>
     <string name="wikis_insert_dialog_empty">Še ni prilog. Naložite datoteko za začetek.</string>
@@ -291,7 +267,6 @@
     <string name="wikis_tag_dialog_title">Dodaj oznako</string>
     <string name="wikis_tag_dialog_empty">Oznaka ne sme biti prazna</string>
     <string name="wikis_attachments_search_placeholder">Išči priloge…</string>
-    <string name="wikis_attachments_copy_failed">Kopiranje vdelane povezave ni uspelo</string>
     <string name="wikis_attachments_delete_confirm_message">Izbriši „%1$s\"? To ni mogoče razveljaviti.</string>
     <string name="wikis_attachments_downloading">Prenos…</string>
     <string name="wikis_attachments_empty_description">Tapnite Naloži, da dodate datoteke na to stran.</string>
@@ -323,18 +298,6 @@
         <item quantity="two">+%d več odgovorov</item>
         <item quantity="few">+%d več odgovorov</item>
         <item quantity="other">+%d več odgovorov</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Preimenovana %1$d stran</item>
-        <item quantity="two">Preimenovani %1$d strani</item>
-        <item quantity="few">Preimenovane %1$d strani</item>
-        <item quantity="other">Preimenovanih %1$d strani</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">posodobljena %1$d povezava</item>
-        <item quantity="two">posodobljeni %1$d povezavi</item>
-        <item quantity="few">posodobljene %1$d povezave</item>
-        <item quantity="other">posodobljenih %1$d povezav</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d stran</item>
@@ -375,4 +338,13 @@
     <string name="wikis_attachments_caption_save_failed">Napisa ni bilo mogoče shraniti</string>
     <string name="wikis_attachments_upload_types">Podprte datoteke: slike, PDF, DOC, DOCX, TXT in MD.</string>
     <string name="wikis_attachments_upload_limits">Velika nalaganja so lahko omejena s konfiguracijo vašega strežnika ali posredniškega strežnika.</string>
+    <string name="wikis_rss_replace">Zamenjaj</string>
+    <string name="wikis_rss_copied_new">Nov RSS URL kopiran v odložišče</string>
+    <string name="wikis_rss_exists">Ta URL vira je že bil izdan in ga ni mogoče znova prikazati.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Prikazan je prvi %1$d komentar.</item>
+        <item quantity="two">Prikazanih je prvih %1$d komentarjev.</item>
+        <item quantity="few">Prikazanih je prvih %1$d komentarjev.</item>
+        <item quantity="other">Prikazanih je prvih %1$d komentarjev.</item>
+    </plurals>
 </resources>

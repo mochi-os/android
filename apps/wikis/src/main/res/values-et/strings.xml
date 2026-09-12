@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">Otsi wikisid</string>
     <string name="wikis_sidebar_create">Loo wiki</string>
     <string name="wikis_pageview_title_fallback">Leht</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Tagasi</string>
     <string name="wikis_pageview_page_actions">Lehe tegevused</string>
     <string name="wikis_pageview_toc">Sellel lehel</string>
     <string name="wikis_pageview_not_found_title">Lehte ei leitud</string>
     <string name="wikis_pageview_create_this_page">Loo see leht</string>
     <string name="wikis_pageview_rss_copied">RSS URL kopeeritud lõikepuhvrisse</string>
-    <string name="wikis_pageview_rss_failed">RSS-tokeni hankimine ebaõnnestus</string>
     <string name="wikis_page_action_section_page">Leht</string>
     <string name="wikis_page_action_edit">Muuda</string>
     <string name="wikis_page_action_rename">Nimeta ümber</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikid</string>
     <string name="wikis_empty_title">Alusta oma esimest wikit</string>
     <string name="wikis_empty_subtitle">Otsi vikit, et tellida, või loo uus, et avaldada oma dokumentatsioon.</string>
-    <string name="wikis_subscribed_badge">Tellitud</string>
     <string name="wikis_create_button">Loo wiki</string>
     <string name="wikis_recommended_section">Soovitatud vikid</string>
     <string name="wikis_subscribe_button">Telli</string>
-    <string name="wikis_subscribed">Tellitud</string>
     <string name="wikis_unsubscribe_action">Tühista tellimus</string>
     <string name="wikis_unsubscribing">Tühistan tellimust…</string>
     <string name="wikis_unsubscribe_confirm_title">Tühista tellimus</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">Nimi</string>
     <string name="wikis_create_privacy_label">Luba kõigil otsida wikit</string>
     <string name="wikis_create_submit">Loo</string>
-    <string name="wikis_create_cancel">Tühista</string>
     <string name="wikis_comments_empty_title">Kommentaare veel pole</string>
     <string name="wikis_comments_empty_subtitle">Ole esimene, kes kommenteerib seda lehte.</string>
-    <string name="wikis_comment_action_reply">Vasta</string>
     <string name="wikis_comment_replying_to">Vastad kasutajale %1$s</string>
     <string name="wikis_comment_clear_reply">Tühista vastus</string>
-    <string name="wikis_comment_action_edit">Muuda</string>
     <string name="wikis_comment_action_delete">Kustuta</string>
     <string name="wikis_comment_action_save">Salvesta</string>
     <string name="wikis_comment_action_cancel">Tühista</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">Uus leht</string>
     <string name="wikis_editor_preview">Eelvaade</string>
     <string name="wikis_editor_preview_untitled">Pealkirjata</string>
-    <string name="wikis_editor_edit">Muuda</string>
     <string name="wikis_editor_insert">Lisa</string>
     <string name="wikis_editor_attachments">Manused</string>
     <string name="wikis_editor_delete">Kustuta leht</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">Laadin üles…</string>
     <string name="wikis_attachments_upload_failed">Failide üleslaadimine ebaõnnestus</string>
     <string name="wikis_attachments_search_clear">Tühjenda otsing</string>
-    <string name="wikis_attachments_filter">Filter</string>
     <string name="wikis_attachments_filter_all">Kõik failid</string>
     <string name="wikis_attachments_filter_images">Pildid</string>
     <string name="wikis_attachments_filter_documents">Dokumendid</string>
-    <string name="wikis_attachments_sort">Sorteeri</string>
     <string name="wikis_attachments_sort_date">Kuupäev</string>
     <string name="wikis_attachments_sort_name">Nimi</string>
     <string name="wikis_attachments_sort_size">Suurus</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">Kopeeri manustamise link</string>
     <string name="wikis_attachments_embed_copied">Manustamise link kopeeritud</string>
     <string name="wikis_attachments_download">Laadi alla</string>
-    <string name="wikis_attachments_copy_success">Manustamise link kopeeritud</string>
     <string name="wikis_attachments_delete">Kustuta</string>
     <string name="wikis_attachments_delete_confirm_title">Kustuta manus</string>
     <string name="wikis_attachments_delete_success">Manus kustutatud</string>
     <string name="wikis_attachments_delete_failed">Manuse kustutamine ebaõnnestus</string>
-    <string name="wikis_attachments_open">Avatud</string>
     <string name="wikis_attachments_empty_title">Manuseid veel pole</string>
     <string name="wikis_attachments_no_results_title">Otsingule vastavaid manuseid pole</string>
     <string name="wikis_attachments_no_results_description">Proovi teist otsingusõna või filtrit.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">Seda toimingut ei saa tagasi võtta. See kustutab wiki ja kogu selle sisu jäädavalt.</string>
     <string name="wikis_settings_delete_success">Wiki kustutatud</string>
     <string name="wikis_settings_delete_failed">Wiki kustutamine ebaõnnestus</string>
-    <string name="wikis_access_add_action">Lisa</string>
     <string name="wikis_access_add_subject_label">Kasutaja</string>
     <string name="wikis_access_level_edit">Muuda ja vaata</string>
     <string name="wikis_access_level_view">Ainult vaatamine</string>
     <string name="wikis_access_level_none">Juurdepääs puudub</string>
-    <string name="wikis_access_owner_label">Omanik</string>
     <string name="wikis_access_tab_users">Kasutajad</string>
     <string name="wikis_access_tab_groups">Grupid</string>
     <string name="wikis_access_tab_other">Muu</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">Pääsu eemaldamine ebaõnnestus</string>
     <string name="wikis_replicas_empty_title">Replikaid veel pole</string>
     <string name="wikis_replicas_empty_message">Kui teised wikid replikeerivad seda wikit, ilmuvad need siia.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Mitte kunagi</string>
     <string name="wikis_replicas_remove_confirm_title">Kas eemaldada replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Eemalda</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Uuendatud %1$s</string>
     <string name="wikis_pageview_not_found_description">Lehte „%1$s\" ei ole veel olemas.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Wiki link</string>
-    <string name="wikis_pageview_share_link_copied">Lehe link kopeeritud lõikepuhvrisse</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">Wiki lehe link</string>
-    <string name="wikis_pageview_loading">Lehte laadimine…</string>
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>
-    <string name="wikis_owned_badge">Omanik</string>
     <string name="wikis_search_placeholder">Otsi wikit…</string>
-    <string name="wikis_subscribing">Tellitakse…</string>
     <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimust %1$s tühistada?</string>
-    <string name="wikis_subscribe_failed_502">See server ei ole kättesaadav. Proovin uuesti…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Otsi nime, ID, sõrmejälje või URL järgi…</string>
     <string name="wikis_join_search_button">Otsi wikist…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">Kirjuta vastus…</string>
     <string name="wikis_comment_form_send">Saada</string>
     <string name="wikis_comment_form_remove_attachment">Eemalda manus</string>
-    <string name="wikis_comment_collapse_toggle">Sule lõng</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Kirjuta oma sisu siia Markdowniga…</string>
     <string name="wikis_insert_dialog_empty">Veel pole manuseid. Lae üles fail alustamiseks.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Lisa silt</string>
     <string name="wikis_tag_dialog_empty">Silt ei saa olla tühi</string>
     <string name="wikis_attachments_search_placeholder">Otsi manuseid…</string>
-    <string name="wikis_attachments_copy_failed">Sissemandiklingi kopeerimine ebaõnnestus</string>
     <string name="wikis_attachments_delete_confirm_message">Kustuta „%1$s\"? Seda ei saa tagasi võtta.</string>
     <string name="wikis_attachments_downloading">Allalaadimine…</string>
     <string name="wikis_attachments_empty_description">Toksake Lae üles, et lisada faile sellele lehele.</string>
@@ -323,14 +298,6 @@
         <item quantity="one">%d vastus</item>
         <item quantity="other">+%d veel vastust</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="one">Ümber nimetatud %1$d leht</item>
-        <item quantity="other">Ümber nimetatud %1$d lehte</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="one">uuendatud %1$d link</item>
-        <item quantity="other">uuendatud %1$d linki</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d leht</item>
         <item quantity="other">%d lehte</item>
@@ -358,4 +325,11 @@
     <string name="wikis_attachments_caption_save_failed">Pealdise salvestamine ebaõnnestus</string>
     <string name="wikis_attachments_upload_types">Toetatud failid: pildid, PDF, DOC, DOCX, TXT ja MD.</string>
     <string name="wikis_attachments_upload_limits">Suurte üleslaadimiste suurust võib piirata sinu serveri või puhverserveri seadistus.</string>
+    <string name="wikis_rss_replace">Asenda</string>
+    <string name="wikis_rss_copied_new">Uus RSS URL kopeeritud lõikepuhvrisse</string>
+    <string name="wikis_rss_exists">See voo URL on juba väljastatud ja seda ei saa uuesti kuvada.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="one">Kuvatakse esimene %1$d kommentaar.</item>
+        <item quantity="other">Kuvatakse esimesed %1$d kommentaari.</item>
+    </plurals>
 </resources>

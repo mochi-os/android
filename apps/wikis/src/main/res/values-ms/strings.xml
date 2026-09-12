@@ -5,14 +5,11 @@
     <string name="wikis_sidebar_find">Cari wiki</string>
     <string name="wikis_sidebar_create">Cipta wiki</string>
     <string name="wikis_pageview_title_fallback">Halaman</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">Kembali</string>
     <string name="wikis_pageview_page_actions">Tindakan halaman</string>
     <string name="wikis_pageview_toc">Di halaman ini</string>
     <string name="wikis_pageview_not_found_title">Halaman tidak dijumpai</string>
     <string name="wikis_pageview_create_this_page">Cipta halaman ini</string>
     <string name="wikis_pageview_rss_copied">URL RSS disalin ke papan keratan</string>
-    <string name="wikis_pageview_rss_failed">Gagal mendapatkan token RSS</string>
     <string name="wikis_page_action_section_page">Halaman</string>
     <string name="wikis_page_action_edit">Edit</string>
     <string name="wikis_page_action_rename">Namakan semula</string>
@@ -28,11 +25,9 @@
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">Mulakan wiki pertama anda</string>
     <string name="wikis_empty_subtitle">Cari wiki untuk dilanggani, atau buat satu untuk menerbitkan dokumentasi anda sendiri.</string>
-    <string name="wikis_subscribed_badge">Telah dilanggan</string>
     <string name="wikis_create_button">Cipta wiki</string>
     <string name="wikis_recommended_section">Wiki disyorkan</string>
     <string name="wikis_subscribe_button">Langgan</string>
-    <string name="wikis_subscribed">Telah dilanggan</string>
     <string name="wikis_unsubscribe_action">Berhenti melanggan</string>
     <string name="wikis_unsubscribing">Sedang berhenti melanggan…</string>
     <string name="wikis_unsubscribe_confirm_title">Berhenti melanggan</string>
@@ -57,13 +52,10 @@
     <string name="wikis_create_name_label">Nama</string>
     <string name="wikis_create_privacy_label">Benarkan sesiapa sahaja mencari wiki</string>
     <string name="wikis_create_submit">Cipta</string>
-    <string name="wikis_create_cancel">Batal</string>
     <string name="wikis_comments_empty_title">Tiada komen lagi</string>
     <string name="wikis_comments_empty_subtitle">Jadi yang pertama mengulas halaman ini.</string>
-    <string name="wikis_comment_action_reply">Balas</string>
     <string name="wikis_comment_replying_to">Membalas kepada %1$s</string>
     <string name="wikis_comment_clear_reply">Batal balasan</string>
-    <string name="wikis_comment_action_edit">Edit</string>
     <string name="wikis_comment_action_delete">Padam</string>
     <string name="wikis_comment_action_save">Simpan</string>
     <string name="wikis_comment_action_cancel">Batal</string>
@@ -75,7 +67,6 @@
     <string name="wikis_editor_title_new">Halaman baharu</string>
     <string name="wikis_editor_preview">Pratonton</string>
     <string name="wikis_editor_preview_untitled">Tiada tajuk</string>
-    <string name="wikis_editor_edit">Edit</string>
     <string name="wikis_editor_insert">Sisip</string>
     <string name="wikis_editor_attachments">Lampiran</string>
     <string name="wikis_editor_delete">Padam halaman</string>
@@ -155,11 +146,9 @@
     <string name="wikis_attachments_uploading">Memuat naik…</string>
     <string name="wikis_attachments_upload_failed">Gagal memuat naik fail</string>
     <string name="wikis_attachments_search_clear">Kosongkan carian</string>
-    <string name="wikis_attachments_filter">Tapis</string>
     <string name="wikis_attachments_filter_all">Semua fail</string>
     <string name="wikis_attachments_filter_images">Imej</string>
     <string name="wikis_attachments_filter_documents">Dokumen</string>
-    <string name="wikis_attachments_sort">Susun</string>
     <string name="wikis_attachments_sort_date">Tarikh</string>
     <string name="wikis_attachments_sort_name">Nama</string>
     <string name="wikis_attachments_sort_size">Saiz</string>
@@ -168,12 +157,10 @@
     <string name="wikis_attachments_copy_embed">Salin pautan benam</string>
     <string name="wikis_attachments_embed_copied">Pautan benam disalin</string>
     <string name="wikis_attachments_download">Muat turun</string>
-    <string name="wikis_attachments_copy_success">Pautan benam disalin</string>
     <string name="wikis_attachments_delete">Padam</string>
     <string name="wikis_attachments_delete_confirm_title">Padam lampiran</string>
     <string name="wikis_attachments_delete_success">Lampiran dipadam</string>
     <string name="wikis_attachments_delete_failed">Gagal memadam lampiran</string>
-    <string name="wikis_attachments_open">Buka</string>
     <string name="wikis_attachments_empty_title">Tiada lampiran lagi</string>
     <string name="wikis_attachments_no_results_title">Tiada lampiran sepadan dengan carian anda</string>
     <string name="wikis_attachments_no_results_description">Cuba terma carian atau penapis lain.</string>
@@ -207,12 +194,10 @@
     <string name="wikis_settings_delete_confirm_message">Tindakan ini tidak boleh dibatalkan. Ini akan memadam wiki dan semua kandungannya secara kekal.</string>
     <string name="wikis_settings_delete_success">Wiki dipadam</string>
     <string name="wikis_settings_delete_failed">Gagal memadam wiki</string>
-    <string name="wikis_access_add_action">Tambah</string>
     <string name="wikis_access_add_subject_label">Pengguna</string>
     <string name="wikis_access_level_edit">Sunting dan lihat</string>
     <string name="wikis_access_level_view">Lihat sahaja</string>
     <string name="wikis_access_level_none">Tiada akses</string>
-    <string name="wikis_access_owner_label">Pemilik</string>
     <string name="wikis_access_tab_users">Pengguna</string>
     <string name="wikis_access_tab_groups">Kumpulan</string>
     <string name="wikis_access_tab_other">Lain-lain</string>
@@ -226,7 +211,6 @@
     <string name="wikis_access_revoke_failed">Gagal mengalih keluar akses</string>
     <string name="wikis_replicas_empty_title">Tiada replika lagi</string>
     <string name="wikis_replicas_empty_message">Apabila wiki lain mereplikasi wiki ini, ia akan dipaparkan di sini.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">Tidak pernah</string>
     <string name="wikis_replicas_remove_confirm_title">Alih keluar replika?</string>
     <string name="wikis_replicas_remove_confirm_action">Alih keluar</string>
@@ -239,19 +223,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Dikemaskini %1$s</string>
     <string name="wikis_pageview_not_found_description">Halaman „%1$s\" belum wujud.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">Pautan wiki</string>
-    <string name="wikis_pageview_share_link_copied">Pautan halaman disalin ke papan keratan</string>
     <string name="wikis_pageview_clipboard_label_rss">URL RSS wiki</string>
-    <string name="wikis_pageview_clipboard_label_share">Pautan halaman wiki</string>
-    <string name="wikis_pageview_loading">Memuatkan halaman…</string>
     <string name="wikis_page_action_share">Pautan</string>
     <string name="wikis_open_sidebar">Buka bar sisi</string>
-    <string name="wikis_owned_badge">Milik</string>
     <string name="wikis_search_placeholder">Cari wiki…</string>
-    <string name="wikis_subscribing">Melanggan…</string>
     <string name="wikis_unsubscribe_confirm_message">Adakah anda pasti mahu berhenti melanggan %1$s?</string>
-    <string name="wikis_subscribe_failed_502">Pelayan tidak boleh dicapai. Mencuba semula…</string>
     <string name="wikis_clipboard_label_rss">URL RSS wiki</string>
     <string name="wikis_find_search_placeholder">Cari mengikut nama, ID, cap jari atau URL…</string>
     <string name="wikis_join_search_button">Cari wiki…</string>
@@ -262,7 +239,6 @@
     <string name="wikis_comment_form_placeholder_reply">Tulis jawapan…</string>
     <string name="wikis_comment_form_send">Hantar</string>
     <string name="wikis_comment_form_remove_attachment">Buang lampiran</string>
-    <string name="wikis_comment_collapse_toggle">Runtuhkan utas</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Tulis kandungan anda di sini menggunakan Markdown…</string>
     <string name="wikis_insert_dialog_empty">Tiada lampiran lagi. Muat naik fail untuk mula.</string>
@@ -291,7 +267,6 @@
     <string name="wikis_tag_dialog_title">Tambah tag</string>
     <string name="wikis_tag_dialog_empty">Tag tidak boleh kosong</string>
     <string name="wikis_attachments_search_placeholder">Cari lampiran…</string>
-    <string name="wikis_attachments_copy_failed">Gagal menyalin pautan benam</string>
     <string name="wikis_attachments_delete_confirm_message">Padam „%1$s\"? Ini tidak boleh dibatalkan.</string>
     <string name="wikis_attachments_downloading">Memuat turun…</string>
     <string name="wikis_attachments_empty_description">Ketik Muat Naik untuk menambah fail ke halaman ini.</string>
@@ -318,12 +293,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">%d balasan</item>
         <item quantity="other">+%d balasan lagi</item>
-    </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">Dinamakan semula %1$d halaman</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">dikemas kini %1$d pautan</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">%d halaman</item>
@@ -352,4 +321,10 @@
     <string name="wikis_attachments_caption_save_failed">Kapsyen tidak dapat disimpan</string>
     <string name="wikis_attachments_upload_types">Fail yang disokong: imej, PDF, DOC, DOCX, TXT, dan MD.</string>
     <string name="wikis_attachments_upload_limits">Muat naik besar mungkin dihadkan oleh konfigurasi pelayan atau proksi anda.</string>
+    <string name="wikis_rss_replace">Ganti</string>
+    <string name="wikis_rss_copied_new">URL RSS baharu disalin ke papan keratan</string>
+    <string name="wikis_rss_exists">URL suapan ini telah pun dikeluarkan dan tidak boleh ditunjukkan lagi.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">Memaparkan %1$d komen pertama.</item>
+    </plurals>
 </resources>

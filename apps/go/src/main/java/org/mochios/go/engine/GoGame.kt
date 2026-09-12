@@ -153,7 +153,8 @@ class GoGame private constructor(
 
     /**
      * True if placing a stone of the current turn at ([row], [col]) is
-     * legal. Implements bounds, occupancy, ko, and suicide checks.
+     * legal. Implements bounds, occupancy, ko, suicide and positional-superko
+     * checks.
      */
     fun isLegal(row: Int, col: Int): Boolean {
         // Out of bounds.
@@ -181,7 +182,16 @@ class GoGame private constructor(
 
         // Suicide check: placed stone's group must have at least one liberty.
         val placedGroup = findGroup(test, row, col)
-        return placedGroup.liberties.isNotEmpty()
+        if (placedGroup.liberties.isEmpty()) return false
+
+        // Positional superko: the resulting position must not repeat the one
+        // before this move. `previousGrid` is carried for exactly this, and
+        // was read by nothing, so a repeat-position cycle was legal here while
+        // the web engine and the server refused it.
+        val previous = previousGrid
+        if (previous != null && sameGrid(test, previous)) return false
+
+        return true
     }
 
     /**
@@ -299,6 +309,15 @@ class GoGame private constructor(
 
         private fun emptyGrid(size: Int): Array<CharArray> =
             Array(size) { CharArray(size) { EMPTY } }
+
+        /** Whether two grids hold the same stones, for the superko comparison. */
+        private fun sameGrid(a: Array<CharArray>, b: Array<CharArray>): Boolean {
+            if (a.size != b.size) return false
+            for (r in a.indices) {
+                if (!a[r].contentEquals(b[r])) return false
+            }
+            return true
+        }
 
         private fun cloneGrid(grid: Array<CharArray>): Array<CharArray> =
             Array(grid.size) { grid[it].copyOf() }

@@ -7,6 +7,7 @@ package org.mochios.android.ui.components
 
 import android.webkit.WebChromeClient
 import android.webkit.WebView
+import android.webkit.WebResourceRequest
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -73,7 +74,16 @@ fun VideoEmbed(
     AndroidView(
         factory = { context ->
             WebView(context).apply {
-                webViewClient = WebViewClient()
+                // The frame holds a third-party player, and a default client
+                // follows whatever it navigates to inside a 200 dp view with
+                // no address bar. Only the embed itself loads here; anything
+                // else is refused (the user can still open the link normally).
+                webViewClient = object : WebViewClient() {
+                    override fun shouldOverrideUrlLoading(
+                        view: WebView,
+                        request: WebResourceRequest,
+                    ): Boolean = true
+                }
                 webChromeClient = WebChromeClient()
                 settings.javaScriptEnabled = true
                 settings.domStorageEnabled = true

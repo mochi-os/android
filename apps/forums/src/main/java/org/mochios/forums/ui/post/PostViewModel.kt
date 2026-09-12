@@ -6,6 +6,7 @@
 package org.mochios.forums.ui.post
 
 import android.net.Uri
+import androidx.annotation.StringRes
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -25,6 +26,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
+import org.mochios.forums.model.rejectMessage
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
 
@@ -44,6 +46,8 @@ data class PostUiState(
     /** Bound identity for the current session — used to gate the Edit
      *  menu items on (author == me) || canModerate. */
     val identity: String = "",
+    /** Message resource for a rejection the forum owner has just pushed. */
+    @StringRes val rejected: Int? = null,
 )
 
 @HiltViewModel
@@ -84,14 +88,35 @@ class PostViewModel @Inject constructor(
             sessionManager.getServerUrlBlocking(),
             forumKey,
             app = "forums",
-        ) { _ ->
-            refresh()
+        ) { event ->
+            // A rejection deletes the author's optimistic copy, so a silent
+            // reload alone would make their comment vanish with no reason.
+            if (event.type == "post/reject" || event.type == "comment/reject") {
+                _uiState.value = _uiState.value.copy(
+                    rejected = rejectMessage(event.reason, event.type == "comment/reject"),
+                )
+            }
+            viewModelScope.launch {
+                try {
+                    val r = repository.viewPost(forumId, postId)
+                    _uiState.value = _uiState.value.copy(
+                        forum = r.forum,
+                        post = r.post,
+                        comments = r.comments,
+                    )
+                } catch (_: Exception) {}
+            }
         }
     }
 
     override fun onCleared() {
         super.onCleared()
         subscriptionId?.let { webSocket.unsubscribe(it) }
+    }
+
+    /** The rejection snackbar has been shown; don't repeat it. */
+    fun clearRejected() {
+        _uiState.value = _uiState.value.copy(rejected = null)
     }
 
     fun load() {
@@ -238,30 +263,16 @@ class PostViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Edit a comment's body. Body only, as on web: `action_comment_edit`
+     * applies attachment changes on the owner branch alone, and forwards
+     * `{id, body}` on the subscriber branch — sending files there confirms an
+     * edit the server discards.
+     */
     fun editComment(commentId: String, newBody: String) {
         viewModelScope.launch {
             try {
                 repository.editComment(forumId, postId, commentId, newBody)
-                refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun editCommentWithAttachments(
-        commentId: String,
-        newBody: String,
-        keptAttachmentIds: List<String>,
-        newFileUris: List<android.net.Uri>,
-        context: android.content.Context,
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.editCommentFromUris(
-                    forumId, postId, commentId,
-                    newBody, keptAttachmentIds, newFileUris, context
-                )
                 refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

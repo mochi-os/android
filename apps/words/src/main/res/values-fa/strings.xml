@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">منو</string>
-    <string name="words_list_new">بازی جدید</string>
     <string name="words_list_logout">خروج</string>
-    <string name="words_list_empty_title">هنوز بازی‌ای وجود ندارد</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">تکمیل شد</string>
     <string name="words_sidebar_new_game">بازی جدید</string>
     <string name="words_new_game_title">بازی جدید</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">بازی مجدد</string>
     <string name="words_detail_action_delete">حذف بازی</string>
     <string name="words_detail_chat_title">گفت‌وگو</string>
-    <string name="words_detail_invalid_move">حرکت نامعتبر</string>
     <string name="words_detail_recall">فراخوانی</string>
     <string name="words_detail_submit">ثبت</string>
     <string name="words_detail_cancel">لغو</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">یک حرف انتخاب کنید</string>
     <string name="words_detail_resign_title">بازی را تسلیم می‌شوید؟</string>
     <string name="words_detail_resign_message">آیا از تسلیم شدن مطمئن هستید؟</string>
-    <string name="words_detail_failed_move">ارسال حرکت ناموفق بود</string>
-    <string name="words_detail_failed_pass">پاس دادن ناموفق بود</string>
-    <string name="words_detail_failed_exchange">تعویض ناموفق بود</string>
-    <string name="words_detail_failed_resign">تسلیم شدن ناموفق بود</string>
-    <string name="words_detail_failed_rematch">ایجاد بازی مجدد ناموفق بود</string>
-    <string name="words_detail_failed_delete">حذف بازی ناموفق بود</string>
-    <string name="words_detail_game_deleted">بازی حذف شد</string>
 
     <string name="words_channel_name">اعلان‌های کلمات</string>
     <string name="words_channel_description">اعلان‌ها در مورد نوبت‌ها، تبادل‌ها و نتایج بازی‌ها.</string>
-    <string name="words_list_empty_subtitle">دکمه + را برای شروع اولین بازی خود لمس کنید.</string>
-    <string name="words_list_status_finished">پایان یافته</string>
-    <string name="words_list_status_resigned">تسلیم شده</string>
-    <string name="words_list_your_turn">نوبت شما</string>
     <string name="words_sidebar_active">بازی‌های فعال</string>
     <string name="words_sidebar_empty">هنوز بازی وجود ندارد.</string>
     <string name="words_new_game_choose_opponents">حریفان را انتخاب کنید</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d بازیکن</string>
     <string name="words_new_game_no_friends_subtitle">دوستان را در برنامه افراد اضافه کنید تا بازی را شروع کنید.</string>
     <string name="words_detail_title">بازی</string>
-    <string name="words_detail_coming_soon">جزئیات بازی به‌زودی</string>
     <string name="words_detail_status_opponent_move">نوبت %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s برنده شد</string>
     <string name="words_detail_player_fallback">بازیکن %1$d</string>

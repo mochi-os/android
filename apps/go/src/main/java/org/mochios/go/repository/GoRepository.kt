@@ -84,6 +84,14 @@ class GoRepository @Inject constructor(
     suspend fun pass(gameId: String, request: PassRequest): String =
         api.pass(gameId, request).unwrap().id
 
+    suspend fun scoreAccept(gameId: String) {
+        api.scoreAccept(gameId).unwrap()
+    }
+
+    suspend fun scoreResume(gameId: String) {
+        api.scoreResume(gameId).unwrap()
+    }
+
     suspend fun resign(gameId: String) {
         api.resign(gameId).unwrap()
     }

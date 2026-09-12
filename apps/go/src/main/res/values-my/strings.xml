@@ -34,7 +34,6 @@
     <string name="go_game_deleted">ဂိမ်း ဖျက်ပြီးပါပြီ</string>
     <string name="go_new_game_add_friends">သူငယ်ချင်းများ ထည့်မည်</string>
     <string name="go_new_game_board_size_label">ဘုတ်အရွယ်အစား</string>
-    <string name="go_new_game_cancel">မလုပ်တော့ပါ</string>
     <string name="go_new_game_friend_label">ပြိုင်ဘက်</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">ဂိမ်း ရှုံးကြောင်းပြောမလား?</string>
     <string name="go_sidebar_completed">ပြီးစီးပြီး</string>
     <string name="go_sidebar_new_game">ဂိမ်းအသစ်</string>
-    <string name="go_status_active">လက်ရှိ</string>
     <string name="go_status_draw">သရေ</string>
     <string name="go_status_draw_text">သရေ</string>
     <string name="go_status_game_over">ဂိမ်း ပြီးဆုံး</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">လက်ရှိကစားနေသော ဂိမ်းများ မရှိသေးပါ။</string>
-    <string name="go_empty_completed">ပြီးဆုံးသွားသော ဂိမ်းများ မရှိသေးပါ။</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Go ဂိမ်းအသစ်</string>
     <string name="go_new_game_no_friends">ဂိမ်းမစတင်မီ သူငယ်ချင်းတစ်ဦး ထည့်ရန် လိုအပ်သည်။</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">အနက်ရောင်က ဦးစွာစတင်သည်ကို ချိန်ခွင်လျှာညှိရန် အဖြူရောင်၏ရမှတ်တွင် ထည့်သွင်းသည့် အမှတ်များ</string>
-    <string name="go_new_game_create_error">ဂိမ်းစတင်၍ မရပါ</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go board</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d ဂိုဘုတ်၊ အနက်ကျောက်ချရန် သင့်အလှည့်</string>
     <string name="go_board_a11y_turn_white">%1$d×%1$d ဂိုဘုတ်၊ အဖြူကျောက်ချရန် သင့်အလှည့်</string>
+    <string name="go_status_scoring">ရေတွက်နေသည် — ရမှတ်ကို သဘောတူပါ သို့မဟုတ် ဆက်ကစားပါ</string>
+    <string name="go_score_proposed">အဆိုပြုရမှတ်− အနက် %1$s၊ အဖြူ %2$s</string>
+    <string name="go_score_opponent_accepted">သင့်ပြိုင်ဘက်သည် ဤရမှတ်ကို သဘောတူသည်− အနက် %1$s၊ အဖြူ %2$s</string>
+    <string name="go_score_waiting">ရမှတ်ကို လက်ခံပြီး — %1$s ကို စောင့်နေသည်</string>
+    <string name="go_score_accept">ရမှတ်ကို လက်ခံမည်</string>
+    <string name="go_score_resume">ကစားခြင်း ဆက်လုပ်မည်</string>
+    <string name="go_error_score_resume_failed">ကစားခြင်း ဆက်လုပ်၍ မရပါ</string>
+    <string name="go_error_score_accept_failed">ရမှတ်ကို လက်ခံ၍ မရပါ</string>
 </resources>

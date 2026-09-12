@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Chaidh an geama a sguabadh às</string>
     <string name="go_new_game_add_friends">Cuir caraidean ris</string>
     <string name="go_new_game_board_size_label">Meud bùird</string>
-    <string name="go_new_game_cancel">Sguir dheth</string>
     <string name="go_new_game_friend_label">Nàmhaid</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">An leig thu seachad an geama?</string>
     <string name="go_sidebar_completed">Crìochnaichte</string>
     <string name="go_sidebar_new_game">Geama ùr</string>
-    <string name="go_status_active">Gnìomhach</string>
     <string name="go_status_draw">Tarraing</string>
     <string name="go_status_draw_text">Tarraing</string>
     <string name="go_status_game_over">Tha an geama seachad</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Chan eil geamannan gnìomhach ann fhathast.</string>
-    <string name="go_empty_completed">Chan eil geamannan crìochnaichte ann fhathast.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Geama Go ùr</string>
     <string name="go_new_game_no_friends">Feumaidh tu caraid a chur ris mus urrainn dhut geama a thòiseachadh.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Puingean a chuirear ri sgòr a’ Gheal gus dìoladh a dhèanamh airson gu bheil an Dubh a’ cluich an toiseach</string>
-    <string name="go_new_game_create_error">Dh’fhàillig tòiseachadh a’ gheama</string>
 
     <string name="go_board_a11y">Bòrd Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Bòrd Go %1$d×%1$d, do chuairt-sa clach dhubh a chur</string>
     <string name="go_board_a11y_turn_white">Bòrd Go %1$d×%1$d, do chuairt-sa clach gheal a chur</string>
+    <string name="go_status_scoring">Cunntas — aontaich air an sgòr no cùm a\' cluich</string>
+    <string name="go_score_proposed">Sgòr air a mholadh: dubh %1$s, geal %2$s</string>
+    <string name="go_score_opponent_accepted">Tha do nàmhaid a\' gabhail ris an sgòr seo: dubh %1$s, geal %2$s</string>
+    <string name="go_score_waiting">Ghabhadh ris an sgòr — a\' feitheamh ri %1$s</string>
+    <string name="go_score_accept">Gabh ris an sgòr</string>
+    <string name="go_score_resume">Ath-thòisich an geama</string>
+    <string name="go_error_score_resume_failed">Cha b\' urrainn an geama ath-thòiseachadh</string>
+    <string name="go_error_score_accept_failed">Cha do ghabh ris an sgòr</string>
 </resources>

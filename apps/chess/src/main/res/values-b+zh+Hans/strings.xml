@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">添加好友</string>
     <string name="chess_new_start_button">开始游戏</string>
     <string name="chess_new_creating">创建中…</string>
-    <string name="chess_new_failed">创建游戏失败</string>
     <string name="chess_chat_title">聊天</string>
     <string name="chess_open_chat">打开聊天面板</string>
     <string name="chess_open_actions">打开游戏操作</string>

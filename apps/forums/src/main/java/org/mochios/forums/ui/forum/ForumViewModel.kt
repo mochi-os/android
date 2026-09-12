@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.forum
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -29,6 +30,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
+import org.mochios.forums.model.rejectMessage
 import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.SavedRepository
 import javax.inject.Inject
@@ -47,6 +49,8 @@ data class ForumUiState(
     val error: MochiError? = null,
     val tags: List<ForumTagCount> = emptyList(),
     val currentTag: String? = null,
+    /** The server has an AI account; the sort menu offers "AI" only then. */
+    val hasAi: Boolean = false,
 )
 
 /**
@@ -69,7 +73,13 @@ sealed class ForumEvent {
 
     /** Show a transient error snackbar. */
     data class ShowError(val error: MochiError) : ForumEvent()
+
+    /** Show a transient snackbar for an already-translated message. */
+    data class ShowMessage(@StringRes val message: Int) : ForumEvent()
 }
+
+/** What the server orders by when a request carries no sort. */
+private const val DEFAULT_SORT = "new"
 
 @HiltViewModel
 class ForumViewModel @Inject constructor(
@@ -169,6 +179,13 @@ class ForumViewModel @Inject constructor(
                     _newPostsCount.value += 1
                 }
             } else {
+                // A rejection deletes the author's optimistic copy on the
+                // subscriber's server, so a silent refresh would just make
+                // their post vanish. Name the owner's reason first.
+                if (event.type == "post/reject" || event.type == "comment/reject") {
+                    val message = rejectMessage(event.reason, event.type == "comment/reject")
+                    viewModelScope.launch { _events.emit(ForumEvent.ShowMessage(message)) }
+                }
                 refreshLatest()
             }
         }
@@ -186,6 +203,14 @@ class ForumViewModel @Inject constructor(
             delay(REFRESH_DEBOUNCE)
             refreshSilently()
         }
+    }
+
+    /** The account-wide default sort, or null when the account has none or the
+     *  lookup fails - a missing default is not worth failing the forum over. */
+    private suspend fun defaultSort(): String? = try {
+        repository.forumsInformation().settings.sort.ifEmpty { null }
+    } catch (_: Exception) {
+        null
     }
 
     /** Pull the latest list silently (no spinner) and clear the new-posts pill,
@@ -250,13 +275,28 @@ class ForumViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val r = repository.viewForum(forumId, sort = sort, tag = _uiState.value.currentTag)
+                var r = repository.viewForum(forumId, sort = sort, tag = _uiState.value.currentTag)
+                // The saved sort only comes back in the response, and the server
+                // orders by its own "new" default until it is asked for. Resolve
+                // it the way web does - this forum's override, then the account
+                // default - and re-read when the first fetch used another order,
+                // so the list matches the checkmark the menu will show.
+                var resolved = sort
+                if (resolved == null) {
+                    resolved = r.forum.sort.ifEmpty { defaultSort() }
+                    if (resolved != null && resolved != DEFAULT_SORT) {
+                        r = repository.viewForum(
+                            forumId, sort = resolved, tag = _uiState.value.currentTag,
+                        )
+                    }
+                }
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
                     posts = r.posts,
                     canManage = r.can_manage,
                     canModerate = r.can_moderate,
-                    sort = sort ?: r.forum.sort,
+                    hasAi = r.hasAi,
+                    sort = resolved ?: r.forum.sort,
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
                     isLoading = false
@@ -307,12 +347,20 @@ class ForumViewModel @Inject constructor(
             )
             try {
                 val r = repository.listForums(sort)
+                // The aggregate mixes every subscribed forum, and the rows
+                // carry only the forum id — the card's "which forum is this?"
+                // line needs the name, which the same response already lists.
+                val names = r.forums.associate { forum -> forum.id to forum.name }
                 _uiState.value = _uiState.value.copy(
                     forum = Forum(),
-                    posts = r.posts,
+                    posts = r.posts.map { post ->
+                        if (post.forumName.isNotBlank()) post
+                        else post.copy(forumName = names[post.forum].orEmpty())
+                    },
                     canManage = false,
                     canModerate = false,
                     sort = sort ?: r.settings.sort,
+                    hasAi = r.hasAi,
                     hasMore = false,
                     nextCursor = null,
                     tags = emptyList(),
@@ -431,8 +479,8 @@ class ForumViewModel @Inject constructor(
 
     /**
      * Mint an RSS token in [mode] (`"posts"` or `"all"`) and emit the URL for
-     * the clipboard; the aggregate tokenises the `*` entity. Older servers
-     * return only the token, so fall back to assembling the URL.
+     * the clipboard; the aggregate tokenises the `*` entity. `-/rss/token`
+     * answers the token alone, so the URL is assembled here.
      */
     fun copyRssUrl(mode: String) {
         if (forumId.isBlank()) return
@@ -440,11 +488,9 @@ class ForumViewModel @Inject constructor(
             try {
                 val entity = if (isAll) "*" else forumId
                 val response = repository.getRssToken(entity, mode)
-                val url = response.url.ifBlank {
-                    val serverUrl = sessionManager.getServerUrlBlocking()
-                    val path = if (isAll) "forums/-/rss" else "forums/$forumId/-/rss"
-                    "$serverUrl/$path?token=${response.token}"
-                }
+                val serverUrl = sessionManager.getServerUrlBlocking()
+                val path = if (isAll) "forums/-/rss" else "forums/$forumId/-/rss"
+                val url = "$serverUrl/$path?token=${response.token}"
                 _events.emit(ForumEvent.CopyRssUrl(url))
             } catch (e: Exception) {
                 _events.emit(ForumEvent.ShowError(e.toMochiError()))

@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Добавить друзей</string>
     <string name="chess_new_start_button">Начать игру</string>
     <string name="chess_new_creating">Создание…</string>
-    <string name="chess_new_failed">Не удалось создать игру</string>
     <string name="chess_chat_title">Чат</string>
     <string name="chess_open_chat">Открыть панель чата</string>
     <string name="chess_open_actions">Открыть действия игры</string>

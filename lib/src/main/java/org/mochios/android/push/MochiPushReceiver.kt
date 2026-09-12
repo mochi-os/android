@@ -91,7 +91,20 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                     "register: endpoint host=${endpointHost(endpoint.url)} server=$server " +
                         "local=${endpointToSend != endpoint.url}"
                 )
-                val accountId = postPushRegister(
+                // The distributor re-announces the endpoint on every register
+                // call, and PushTransport registers on every resume; post it only
+                // when the server has not already accepted or refused it.
+                val credential = RegistrationMemo.fingerprint(endpointToSend, keys.auth, keys.pubKey)
+                val store = RegistrationStore(context)
+                val now = System.currentTimeMillis()
+                val verdict = RegistrationMemo.judge(
+                    now, server, PushTransport.TRANSPORT_UNIFIEDPUSH, credential, store.last(), store.refusal()
+                )
+                if (verdict != RegistrationMemo.Verdict.REGISTER) {
+                    Log.i(TAG, "register: endpoint already ${verdict.name.lowercase()}; not re-posting")
+                    return@launch
+                }
+                val answer = postPushRegister(
                     deps.okHttpClient(),
                     deps.authRepository(),
                     server = server,
@@ -101,8 +114,17 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                     endpoint = endpointToSend,
                     device = deps.deviceStore().id(),
                 )
-                if (accountId != null) {
-                    deps.pushAccountStore().store(instance, accountId)
+                val registration = Registration(server, PushTransport.TRANSPORT_UNIFIEDPUSH, credential, now)
+                when {
+                    answer == null -> {}
+                    answer.accepted -> {
+                        store.success(registration)
+                        if (answer.account != null) deps.pushAccountStore().store(instance, answer.account)
+                    }
+                    answer.refused -> {
+                        store.refuse(registration)
+                        Log.w(TAG, "/notifications/-/push/register refused ${answer.code}; not retrying for a day")
+                    }
                 }
             } catch (e: Exception) {
                 Log.w(TAG, "Failed to register endpoint with Mochi server: ${e.message}")
@@ -232,7 +254,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         p256dh: String,
         endpoint: String,
         device: String,
-    ): String? {
+    ): Answer? {
         val token =
             authRepository.fetchToken("notifications").getOrNull() ?: return null
         val url = server.trimEnd('/') + "/notifications/-/push/register"
@@ -253,15 +275,16 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         client.newCall(request).execute().use { resp ->
             if (!resp.isSuccessful) {
                 Log.w(TAG, "/notifications/-/push/register returned ${resp.code}")
-                return null
+                return Answer(resp.code, null)
             }
             val body = resp.body?.string().orEmpty()
-            return try {
+            val account = try {
                 JSONObject(body).optJSONObject("data")?.optString("id")?.takeIf { it.isNotBlank() }
             } catch (_: Exception) {
                 Log.w(TAG, "Could not parse /notifications/-/push/register response")
                 null
             }
+            return Answer(resp.code, account)
         }
     }
 

@@ -34,7 +34,6 @@
     <string name="go_game_deleted">Игра обрисана</string>
     <string name="go_new_game_add_friends">Додај пријатеље</string>
     <string name="go_new_game_board_size_label">Величина табле</string>
-    <string name="go_new_game_cancel">Откажи</string>
     <string name="go_new_game_friend_label">Противник</string>
     <string name="go_new_game_komi_field_label">Коми</string>
     <string name="go_new_game_komi_label">Коми</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Предати игру?</string>
     <string name="go_sidebar_completed">Завршено</string>
     <string name="go_sidebar_new_game">Нова игра</string>
-    <string name="go_status_active">Активно</string>
     <string name="go_status_draw">Реми</string>
     <string name="go_status_draw_text">Реми</string>
     <string name="go_status_game_over">Крај игре</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Отвори бочну траку</string>
     <string name="go_sidebar_active">Активне партије</string>
     <string name="go_empty_active">Још нема активних партија.</string>
-    <string name="go_empty_completed">Још нема завршених партија.</string>
-    <string name="go_status_finished">Завршена</string>
     <string name="go_status_resigned">Предана</string>
-    <string name="go_card_vs">против %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Нова Go партија</string>
     <string name="go_new_game_no_friends">Морате додати пријатеља пре него што можете да покренете партију.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Бодови додати резултату Белог да би се компензовало то што Црни игра први</string>
-    <string name="go_new_game_create_error">Покретање партије није успело</string>
 
     <string name="go_board_a11y">%1$d×%1$d Go табла</string>
     <string name="go_board_a11y_turn_black">Го табла %1$d×%1$d, ваш је ред да поставите црни камен</string>
     <string name="go_board_a11y_turn_white">Го табла %1$d×%1$d, ваш је ред да поставите бели камен</string>
+    <string name="go_status_scoring">Бројање — сложите се око резултата или наставите игру</string>
+    <string name="go_score_proposed">Предложени резултат: црни %1$s, бели %2$s</string>
+    <string name="go_score_opponent_accepted">Ваш противник прихвата овај резултат: црни %1$s, бели %2$s</string>
+    <string name="go_score_waiting">Резултат је прихваћен — чека се %1$s</string>
+    <string name="go_score_accept">Прихвати резултат</string>
+    <string name="go_score_resume">Настави игру</string>
+    <string name="go_error_score_resume_failed">Настављање игре није успело</string>
+    <string name="go_error_score_accept_failed">Прихватање резултата није успело</string>
 </resources>

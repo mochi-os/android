@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_app_title">Words</string>
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Izvēlne</string>
-    <string name="words_list_new">Jauna spēle</string>
     <string name="words_list_logout">Izrakstīties</string>
-    <string name="words_list_empty_title">Vēl nav spēļu</string>
-    <string name="words_sidebar_header">Words</string>
     <string name="words_sidebar_completed">Pabeigts</string>
     <string name="words_sidebar_new_game">Jauna spēle</string>
     <string name="words_new_game_title">Jauna spēle</string>
@@ -31,7 +27,6 @@
     <string name="words_detail_action_rematch">Atkārtota spēle</string>
     <string name="words_detail_action_delete">Dzēst spēli</string>
     <string name="words_detail_chat_title">Saruna</string>
-    <string name="words_detail_invalid_move">Nederīgs gājiens</string>
     <string name="words_detail_recall">Atsaukt</string>
     <string name="words_detail_submit">Iesniegt</string>
     <string name="words_detail_cancel">Atcelt</string>
@@ -39,20 +34,9 @@
     <string name="words_detail_blank_title">Izvēlies burtu</string>
     <string name="words_detail_resign_title">Padoties spēlē?</string>
     <string name="words_detail_resign_message">Vai tiešām vēlies padoties?</string>
-    <string name="words_detail_failed_move">Neizdevās iesniegt gājienu</string>
-    <string name="words_detail_failed_pass">Neizdevās izlaist gājienu</string>
-    <string name="words_detail_failed_exchange">Neizdevās apmainīt</string>
-    <string name="words_detail_failed_resign">Neizdevās padoties</string>
-    <string name="words_detail_failed_rematch">Neizdevās izveidot atkārtotu spēli</string>
-    <string name="words_detail_failed_delete">Neizdevās dzēst spēli</string>
-    <string name="words_detail_game_deleted">Spēle dzēsta</string>
 
     <string name="words_channel_name">Vārdu paziņojumi</string>
     <string name="words_channel_description">Paziņojumi par gājieniem, apmaiņām un spēļu rezultātiem.</string>
-    <string name="words_list_empty_subtitle">Pieskarieties pogai +, lai sāktu savu pirmo spēli.</string>
-    <string name="words_list_status_finished">Pabeigta</string>
-    <string name="words_list_status_resigned">Padevās</string>
-    <string name="words_list_your_turn">Jūsu kārta</string>
     <string name="words_sidebar_active">Aktīvās spēles</string>
     <string name="words_sidebar_empty">Vēl nav spēļu.</string>
     <string name="words_new_game_choose_opponents">Izvēlieties pretiniekus</string>
@@ -60,7 +44,6 @@
     <string name="words_new_game_player_count">%1$d spēlētāji</string>
     <string name="words_new_game_no_friends_subtitle">Pievienojiet draugus lietotnē Cilvēki, lai sāktu spēlēt.</string>
     <string name="words_detail_title">Spēle</string>
-    <string name="words_detail_coming_soon">Spēles detaļas drīzumā</string>
     <string name="words_detail_status_opponent_move">%1$s kārta</string>
     <string name="words_detail_status_winner_wins">%1$s uzvar</string>
     <string name="words_detail_player_fallback">Spēlētājs %1$d</string>

@@ -6,6 +6,7 @@
 package org.mochios.android.ui
 
 import android.content.Context
+import android.os.Build
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -29,6 +30,7 @@ import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.notifications.NotificationsUnreadStore
+import org.mochios.android.push.MochiPushClient
 import org.mochios.android.push.PushService
 import org.mochios.android.push.PushTransport
 import org.mochios.android.ui.theme.ThemeRepository
@@ -198,6 +200,11 @@ class AppBootstrapViewModel @Inject constructor(
             // still mint a notifications token — once clearAll() runs the call
             // would 401 and the server would keep pushing to this device.
             PushService.removeAccount(context)
+            // Retire the UnifiedPush instance too: removeAccount drops the
+            // server-side push account, but without this the distributor keeps
+            // the local registration and its endpoint, and the next sign-in
+            // registers a second one.
+            MochiPushClient.unregister(context, context.packageName)
             // Clear the session before tearDown(): deleting the FCM token fires
             // onNewToken, which only skips re-registering while no session is
             // active.
@@ -253,7 +260,7 @@ class AppBootstrapViewModel @Inject constructor(
         // failures say nothing, so keep the session, run on the cached JWT and
         // re-mint in the background - clearing on any failure logs the user out
         // on every offline launch.
-        val result = authRepository.fetchToken(appName)
+        val result = authRepository.fetchToken(appName, fresh = true)
         val failure = result.exceptionOrNull()
         if (failure is ApiException && failure.code == 401) {
             sessionManager.clearAll()
@@ -297,6 +304,11 @@ class AppBootstrapViewModel @Inject constructor(
         // shares it.
         runCatching { publishAccount(identityInfo?.identity) }
 
+        // Read the language before the warm-up: preferencesManager.refresh()
+        // stores and applies the server's tag itself, so a comparison made
+        // after it always sees the new tag and can never detect a change.
+        val previousTag = LanguageStore.get(context)
+
         // Theme + preferences are best-effort warm-ups. One preferences fetch
         // serves both: the theme is resolved from what the refresh stored.
         if (!unreachable) {
@@ -304,18 +316,20 @@ class AppBootstrapViewModel @Inject constructor(
             runCatching { themeRepository.cacheActiveTheme() }
         }
 
-        // Language is fetched only after a fresh authentication. Returning
-        // users keep whatever locale they last set.
+        // The locale matters only after a fresh authentication; returning users
+        // keep whatever they last set. refresh() has already stored and applied
+        // the tag, so there is nothing left to fetch - only to decide whether
+        // the running Activity must be rebuilt to pick up the new resources.
+        // On API 33+ LocaleManager triggers that recreate itself; below it
+        // LocaleHelper only sets the default Locale, so we ask for it here.
         var recreate = false
         if (justAuthenticated) {
             justAuthenticated = false
-            runCatching {
-                val previousTag = LanguageStore.get(context)
-                val newTag = languageRepository.fetchAndStore()
-                if (newTag != null && newTag != previousTag) {
-                    LocaleHelper.apply(context, newTag)
-                    recreate = true
-                }
+            val newTag = LanguageStore.get(context)
+            if (newTag != null && newTag != previousTag &&
+                Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU
+            ) {
+                recreate = true
             }
         }
 
@@ -332,7 +346,7 @@ class AppBootstrapViewModel @Inject constructor(
             var wait = 5_000L
             while (true) {
                 delay(wait)
-                val result = authRepository.fetchToken(app)
+                val result = authRepository.fetchToken(app, fresh = true)
                 if (result.isSuccess) return@launch
                 val failure = result.exceptionOrNull()
                 if (failure is ApiException && failure.code == 401) {

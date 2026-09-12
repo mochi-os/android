@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.theme
 
+import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.PreferencesManager
 import javax.inject.Inject

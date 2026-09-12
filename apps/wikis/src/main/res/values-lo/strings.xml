@@ -6,14 +6,11 @@
     <string name="wikis_sidebar_find">ຄົ້ນຫາວິກິ</string>
     <string name="wikis_sidebar_create">ສ້າງ wiki</string>
     <string name="wikis_pageview_title_fallback">ໜ້າ</string>
-    <string name="wikis_pageview_wiki_fallback">Wiki</string>
-    <string name="wikis_pageview_back">ກັບຄືນ</string>
     <string name="wikis_pageview_page_actions">ການກະທຳໜ້າ</string>
     <string name="wikis_pageview_toc">ໃນໜ້ານີ້</string>
     <string name="wikis_pageview_not_found_title">ບໍ່ພົບໜ້າ</string>
     <string name="wikis_pageview_create_this_page">ສ້າງໜ້ານີ້</string>
     <string name="wikis_pageview_rss_copied">ຄັດລອກ RSS URL ໄປຄລິບບອດແລ້ວ</string>
-    <string name="wikis_pageview_rss_failed">ໄດ້ຮັບໂທເຄັນ RSS ລົ້ມເຫຼວ</string>
     <string name="wikis_page_action_section_page">ໜ້າ</string>
     <string name="wikis_page_action_edit">ແກ້ໄຂ</string>
     <string name="wikis_page_action_rename">ປ່ຽນຊື່</string>
@@ -29,11 +26,9 @@
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">ເລີ່ມ wiki ທຳອິດຂອງທ່ານ</string>
     <string name="wikis_empty_subtitle">ຄົ້ນຫາ wiki ເພື່ອສະໝັກ, ຫຼືສ້າງເພື່ອເຜີຍແຜ່ເອກະສານຂອງທ່ານເອງ.</string>
-    <string name="wikis_subscribed_badge">ສະໝັກສະມາຊິກແລ້ວ</string>
     <string name="wikis_create_button">ສ້າງ wiki</string>
     <string name="wikis_recommended_section">Wiki ທີ່ແນະນຳ</string>
     <string name="wikis_subscribe_button">ສະໝັກສະມາຊິກ</string>
-    <string name="wikis_subscribed">ສະໝັກສະມາຊິກແລ້ວ</string>
     <string name="wikis_unsubscribe_action">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="wikis_unsubscribing">ກຳລັງຍົກເລີກການສະໝັກສະມາຊິກ…</string>
     <string name="wikis_unsubscribe_confirm_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
@@ -58,13 +53,10 @@
     <string name="wikis_create_name_label">ຊື່</string>
     <string name="wikis_create_privacy_label">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາ wiki</string>
     <string name="wikis_create_submit">ສ້າງ</string>
-    <string name="wikis_create_cancel">ຍົກເລີກ</string>
     <string name="wikis_comments_empty_title">ຍັງບໍ່ມີຄຳເຫັນ</string>
     <string name="wikis_comments_empty_subtitle">ເປັນຄົນທຳອິດທີ່ໃຫ້ຄຳເຫັນໃນໜ້ານີ້.</string>
-    <string name="wikis_comment_action_reply">ຕອບ</string>
     <string name="wikis_comment_replying_to">ກຳລັງຕອບກັບ %1$s</string>
     <string name="wikis_comment_clear_reply">ຍົກເລີກການຕອບກັບ</string>
-    <string name="wikis_comment_action_edit">ແກ້ໄຂ</string>
     <string name="wikis_comment_action_delete">ລົບ</string>
     <string name="wikis_comment_action_save">ບັນທຶກ</string>
     <string name="wikis_comment_action_cancel">ຍົກເລີກ</string>
@@ -76,7 +68,6 @@
     <string name="wikis_editor_title_new">ໜ້າໃໝ່</string>
     <string name="wikis_editor_preview">ຕົວຢ່າງ</string>
     <string name="wikis_editor_preview_untitled">ບໍ່ມີຊື່</string>
-    <string name="wikis_editor_edit">ແກ້ໄຂ</string>
     <string name="wikis_editor_insert">ແຊກ</string>
     <string name="wikis_editor_attachments">ໄຟລ໌ແນບ</string>
     <string name="wikis_editor_delete">ລົບໜ້າ</string>
@@ -156,11 +147,9 @@
     <string name="wikis_attachments_uploading">ກຳລັງອັບໂຫຼດ…</string>
     <string name="wikis_attachments_upload_failed">ອັບໂຫຼດໄຟລ໌ລົ້ມເຫຼວ</string>
     <string name="wikis_attachments_search_clear">ລ້າງການຄົ້ນຫາ</string>
-    <string name="wikis_attachments_filter">ຕົວກອງ</string>
     <string name="wikis_attachments_filter_all">ໄຟລ໌ທັງໝົດ</string>
     <string name="wikis_attachments_filter_images">ຮູບພາບ</string>
     <string name="wikis_attachments_filter_documents">ເອກະສານ</string>
-    <string name="wikis_attachments_sort">ຈັດລຽງ</string>
     <string name="wikis_attachments_sort_date">ວັນທີ</string>
     <string name="wikis_attachments_sort_name">ຊື່</string>
     <string name="wikis_attachments_sort_size">ຂະໜາດ</string>
@@ -169,12 +158,10 @@
     <string name="wikis_attachments_copy_embed">ສຳເນົາລິ້ງຝັງ</string>
     <string name="wikis_attachments_embed_copied">ສຳເນົາລິ້ງຝັງແລ້ວ</string>
     <string name="wikis_attachments_download">ດາວໂຫຼດ</string>
-    <string name="wikis_attachments_copy_success">ສຳເນົາລິ້ງຝັງແລ້ວ</string>
     <string name="wikis_attachments_delete">ລົບ</string>
     <string name="wikis_attachments_delete_confirm_title">ລົບໄຟລ໌ແນບ</string>
     <string name="wikis_attachments_delete_success">ລົບໄຟລ໌ແນບແລ້ວ</string>
     <string name="wikis_attachments_delete_failed">ລຶບໄຟລ໌ແນບລົ້ມເຫຼວ</string>
-    <string name="wikis_attachments_open">ເປີດ</string>
     <string name="wikis_attachments_empty_title">ຍັງບໍ່ມີໄຟລ໌ແນບ</string>
     <string name="wikis_attachments_no_results_title">ບໍ່ມີໄຟລ໌ແນບທີ່ກົງກັບການຄົ້ນຫາຂອງທ່ານ</string>
     <string name="wikis_attachments_no_results_description">ລອງຄຳຄົ້ນຫາຫຼືຕົວກອງທີ່ແຕກຕ່າງກັນ.</string>
@@ -208,12 +195,10 @@
     <string name="wikis_settings_delete_confirm_message">ການກະທຳນີ້ຄືນບໍ່ໄດ້. ນີ້ຈະລົບ wiki ແລະເນື້ອຫາທັງໝົດແບບຖາວອນ.</string>
     <string name="wikis_settings_delete_success">Wiki ຖືກລົບ</string>
     <string name="wikis_settings_delete_failed">ລຶບວິກິລົ້ມເຫຼວ</string>
-    <string name="wikis_access_add_action">ເພີ່ມ</string>
     <string name="wikis_access_add_subject_label">ຜູ້ໃຊ້</string>
     <string name="wikis_access_level_edit">ແກ້ໄຂ ແລະ ເບິ່ງ</string>
     <string name="wikis_access_level_view">ເບິ່ງເທົ່ານັ້ນ</string>
     <string name="wikis_access_level_none">ບໍ່ມີການເຂົ້າເຖິງ</string>
-    <string name="wikis_access_owner_label">ເຈົ້າຂອງ</string>
     <string name="wikis_access_tab_users">ຜູ້ໃຊ້</string>
     <string name="wikis_access_tab_groups">ກຸ່ມ</string>
     <string name="wikis_access_tab_other">ອື່ນໆ</string>
@@ -227,7 +212,6 @@
     <string name="wikis_access_revoke_failed">ຍ້າຍສິດການເຂົ້າເຖິງລົ້ມເຫຼວ</string>
     <string name="wikis_replicas_empty_title">ຍັງບໍ່ມີ replica</string>
     <string name="wikis_replicas_empty_message">ເມື່ອ wikis ອື່ນສຳເນົາ wiki ນີ້, ພວກມັນຈະປະກົດຢູ່ທີ່ນີ້.</string>
-    <string name="wikis_replicas_col_id">ID</string>
     <string name="wikis_replicas_never_synced">ບໍ່ເຄີຍ</string>
     <string name="wikis_replicas_remove_confirm_title">ລຶບ replica?</string>
     <string name="wikis_replicas_remove_confirm_action">ລຶບອອກ</string>
@@ -241,19 +225,12 @@
     <string name="wikis_pageview_version">v%1$d</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_description">ໜ້າ “%1$s” ຍັງບໍ່ມີ.</string>
-    <string name="wikis_pageview_share_subject">%1$s</string>
     <string name="wikis_pageview_share_chooser">ລິ້ງວິກິ</string>
-    <string name="wikis_pageview_share_link_copied">ຄັດລອກລິ້ງໜ້າໄປຄລິບບອດແລ້ວ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
-    <string name="wikis_pageview_clipboard_label_share">ລິ້ງໜ້າ Wiki</string>
-    <string name="wikis_pageview_loading">Loading page…</string>
     <string name="wikis_page_action_share">ລິ້ງ</string>
     <string name="wikis_open_sidebar">Open sidebar</string>
-    <string name="wikis_owned_badge">Owned</string>
     <string name="wikis_search_placeholder">ຄົ້ນຫາ wiki…</string>
-    <string name="wikis_subscribing">Subscribing…</string>
     <string name="wikis_unsubscribe_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການຍົກເລີກການສະໝັກ %1$s?</string>
-    <string name="wikis_subscribe_failed_502">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີນັ້ນໄດ້. ກຳລັງລອງໃໝ່…</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື ຫຼື URL…</string>
     <string name="wikis_join_search_button">ຄົ້ນຫາ wiki…</string>
@@ -264,7 +241,6 @@
     <string name="wikis_comment_form_placeholder_reply">ຂຽນຄຳຕອບ…</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
-    <string name="wikis_comment_collapse_toggle">Collapse thread</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ຂຽນເນື້ອຫາຂອງທ່ານທີ່ນີ້ດ້ວຍ Markdown…</string>
     <string name="wikis_insert_dialog_empty">ຍັງບໍ່ມີໄຟລ໌ແນບ. ອັບໂຫຼດໄຟລ໌ເພື່ອເລີ່ມຕົ້ນ.</string>
@@ -293,7 +269,6 @@
     <string name="wikis_tag_dialog_title">Add tag</string>
     <string name="wikis_tag_dialog_empty">ແທັກຫວ່າງເປົ່າບໍ່ໄດ້</string>
     <string name="wikis_attachments_search_placeholder">Search attachments…</string>
-    <string name="wikis_attachments_copy_failed">ບໍ່ສາມາດຄັດລອກລິ້ງຝັງໄດ້</string>
     <string name="wikis_attachments_delete_confirm_message">ລຶບ “%1$s” ບໍ? ນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">ແຕະ ອັບໂຫຼດ ເພື່ອເພີ່ມໄຟລ໌ໃສ່ໜ້ານີ້.</string>
@@ -321,12 +296,6 @@
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="other">+%d ຕອບກັບເພີ່ມເຕີມ</item>
     </plurals>
-    <plurals name="wikis_rename_page_renamed">
-        <item quantity="other">ປ່ຽນຊື່ %1$d ໜ້າ</item>
-    </plurals>
-    <plurals name="wikis_rename_page_updated_links">
-        <item quantity="other">ອັບເດດ %1$d links</item>
-    </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="other">%d ໜ້າ</item>
     </plurals>
@@ -348,4 +317,10 @@
     <string name="wikis_attachments_caption_save_failed">ບໍ່ສາມາດບັນທຶກຄຳບັນຍາຍໄດ້</string>
     <string name="wikis_attachments_upload_types">ໄຟລ໌ທີ່ຮອງຮັບ: ຮູບພາບ, PDF, DOC, DOCX, TXT, ແລະ MD.</string>
     <string name="wikis_attachments_upload_limits">ການອັບໂຫຼດຂະໜາດໃຫຍ່ອາດຖືກຈຳກັດໂດຍການຕັ້ງຄ່າເຊີບເວີ ຫຼື ພຣັອກຊີຂອງທ່ານ.</string>
+    <string name="wikis_rss_replace">ແທນທີ່</string>
+    <string name="wikis_rss_copied_new">ຄັດລອກ RSS URL ໃໝ່ ໄປຄລິບບອດແລ້ວ</string>
+    <string name="wikis_rss_exists">URL ຟີດນີ້ຖືກອອກໃຫ້ແລ້ວ ແລະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
+    <plurals name="wikis_comments_truncated">
+        <item quantity="other">ກຳລັງສະແດງ %1$d ຄຳເຫັນທຳອິດ.</item>
+    </plurals>
 </resources>

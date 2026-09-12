@@ -34,7 +34,6 @@
     <string name="go_game_deleted">ลบเกมแล้ว</string>
     <string name="go_new_game_add_friends">เพิ่มเพื่อน</string>
     <string name="go_new_game_board_size_label">ขนาดกระดาน</string>
-    <string name="go_new_game_cancel">ยกเลิก</string>
     <string name="go_new_game_friend_label">คู่แข่ง</string>
     <string name="go_new_game_komi_field_label">โคมิ</string>
     <string name="go_new_game_komi_label">โคมิ</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">ยอมแพ้เกม?</string>
     <string name="go_sidebar_completed">เสร็จสมบูรณ์</string>
     <string name="go_sidebar_new_game">เกมใหม่</string>
-    <string name="go_status_active">ใช้งานอยู่</string>
     <string name="go_status_draw">เสมอ</string>
     <string name="go_status_draw_text">เสมอ</string>
     <string name="go_status_game_over">จบเกม</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">เปิดแถบด้านข้าง</string>
     <string name="go_sidebar_active">เกมที่กำลังเล่น</string>
     <string name="go_empty_active">ยังไม่มีเกมที่กำลังเล่น</string>
-    <string name="go_empty_completed">ยังไม่มีเกมที่จบแล้ว</string>
-    <string name="go_status_finished">จบแล้ว</string>
     <string name="go_status_resigned">ยอมแพ้</string>
-    <string name="go_card_vs">พบกับ %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">เกม Go ใหม่</string>
     <string name="go_new_game_no_friends">คุณต้องเพิ่มเพื่อนก่อนจึงจะเริ่มเกมได้</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">คะแนนที่เพิ่มให้ฝ่ายขาวเพื่อชดเชยที่ฝ่ายดำเดินก่อน</string>
-    <string name="go_new_game_create_error">ไม่สามารถเริ่มเกม</string>
 
     <string name="go_board_a11y">กระดาน Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">กระดานโกะ %1$d×%1$d ถึงตาคุณวางหมากดำ</string>
     <string name="go_board_a11y_turn_white">กระดานโกะ %1$d×%1$d ถึงตาคุณวางหมากขาว</string>
+    <string name="go_status_scoring">นับแต้ม — ตกลงคะแนนหรือเล่นต่อ</string>
+    <string name="go_score_proposed">คะแนนที่เสนอ: ดำ %1$s, ขาว %2$s</string>
+    <string name="go_score_opponent_accepted">คู่แข่งของคุณยอมรับคะแนนนี้: ดำ %1$s, ขาว %2$s</string>
+    <string name="go_score_waiting">ยอมรับคะแนนแล้ว — กำลังรอ %1$s</string>
+    <string name="go_score_accept">ยอมรับคะแนน</string>
+    <string name="go_score_resume">เล่นต่อ</string>
+    <string name="go_error_score_resume_failed">ไม่สามารถเล่นต่อได้</string>
+    <string name="go_error_score_accept_failed">ไม่สามารถยอมรับคะแนนได้</string>
 </resources>

@@ -17,7 +17,6 @@
     <string name="chess_new_add_friends">Bæta við vinum</string>
     <string name="chess_new_start_button">Hefja leik</string>
     <string name="chess_new_creating">Bý til…</string>
-    <string name="chess_new_failed">Tókst ekki að búa til leik</string>
     <string name="chess_chat_title">Spjall</string>
     <string name="chess_open_chat">Opna spjallspjald</string>
     <string name="chess_open_actions">Opna leikjaaðgerðir</string>

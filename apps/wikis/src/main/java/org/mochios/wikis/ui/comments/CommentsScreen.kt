@@ -40,6 +40,7 @@ import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -178,7 +179,7 @@ private fun CommentsBody(
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
 ) {
-    val isOwner = state.permissions.manage || state.permissions.delete
+    val isOwner = state.permissions.owner
 
     Column(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.weight(1f)) {
@@ -197,13 +198,29 @@ private fun CommentsBody(
                     items(state.comments, key = { it.id }) { comment ->
                         WikiCommentThread(
                             comment = comment,
-                            slug = state.pageTitle.ifBlank { comment.page },
                             currentUserId = state.currentUserId,
                             isOwner = isOwner,
                             onStartReply = onStartReply,
                             onEdit = onEdit,
                             onDelete = onDelete,
                         )
+                    }
+                    // The server caps a thread page at 200. Web prints the same
+                    // note; without it a page past the cap silently loses its
+                    // tail and the reader has no way to know.
+                    if (state.truncated) {
+                        item(key = "truncated") {
+                            Text(
+                                text = pluralStringResource(
+                                    R.plurals.wikis_comments_truncated,
+                                    state.comments.size,
+                                    state.comments.size,
+                                ),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(top = 8.dp),
+                            )
+                        }
                     }
                 }
             }
@@ -236,7 +253,7 @@ private fun CommentsBody(
                                     R.string.wikis_comment_replying_to,
                                     comment.name.ifBlank { comment.author },
                                 ),
-                                preview = comment.bodyMarkdown.ifBlank { comment.body },
+                                preview = comment.body,
                                 cancelLabel = stringResource(
                                     R.string.wikis_comment_clear_reply
                                 ),

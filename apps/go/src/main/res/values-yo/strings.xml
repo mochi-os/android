@@ -34,7 +34,6 @@
     <string name="go_game_deleted">A ti pa eré rẹ́</string>
     <string name="go_new_game_add_friends">Fi àwọn ọ̀rẹ́ kún</string>
     <string name="go_new_game_board_size_label">Ìwọ̀n pátákó</string>
-    <string name="go_new_game_cancel">Fagilé</string>
     <string name="go_new_game_friend_label">Alátakò</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_label">Komi</string>
@@ -51,7 +50,6 @@
     <string name="go_resign_title">Fi eré sílẹ̀?</string>
     <string name="go_sidebar_completed">Tí a parí</string>
     <string name="go_sidebar_new_game">Eré tuntun</string>
-    <string name="go_status_active">Ó ń ṣiṣẹ́</string>
     <string name="go_status_draw">Ìbárapọ̀</string>
     <string name="go_status_draw_text">Ìbárapọ̀</string>
     <string name="go_status_game_over">Eré ti parí</string>
@@ -68,18 +66,21 @@
     <string name="go_open_sidebar">Open sidebar</string>
     <string name="go_sidebar_active">Active games</string>
     <string name="go_empty_active">Kò sí eré tí ń lọ lọ́wọ́ síbẹ̀.</string>
-    <string name="go_empty_completed">Kò sí eré tí ó parí síbẹ̀.</string>
-    <string name="go_status_finished">Finished</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_card_vs">vs %1$s</string>
-    <string name="go_card_meta">%1$d×%2$d · %3$s</string>
     <string name="go_new_game_title">Eré Go tuntun</string>
     <string name="go_new_game_no_friends">O gbọ́dọ̀ fi ọ̀rẹ́ kún kí o tó lè bẹ̀rẹ̀ eré.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
     <string name="go_new_game_komi_hint">Àwọn àmì tí a fi kún àmì Funfun láti san ẹ̀san fún Dúdú tí ó ń lọ ní àkọ́kọ́</string>
-    <string name="go_new_game_create_error">Kò ṣeé bẹ̀rẹ̀ eré náà</string>
 
     <string name="go_board_a11y">Pátákó Go %1$d×%1$d</string>
     <string name="go_board_a11y_turn_black">Pátákó Go %1$d×%1$d, àkókò rẹ láti fi òkúta dúdú sí</string>
     <string name="go_board_a11y_turn_white">Pátákó Go %1$d×%1$d, àkókò rẹ láti fi òkúta funfun sí</string>
+    <string name="go_status_scoring">Kíka — ẹ fohùn ṣọ̀kan lórí àmì tàbí ẹ máa bá eré lọ</string>
+    <string name="go_score_proposed">Àmì tí a dábàá: dúdú %1$s, funfun %2$s</string>
+    <string name="go_score_opponent_accepted">Alátakò rẹ gba àmì yìí: dúdú %1$s, funfun %2$s</string>
+    <string name="go_score_waiting">A gba àmì — ń dúró de %1$s</string>
+    <string name="go_score_accept">Gba àmì náà</string>
+    <string name="go_score_resume">Tẹ̀síwájú eré náà</string>
+    <string name="go_error_score_resume_failed">Kò lè tẹ̀síwájú eré náà</string>
+    <string name="go_error_score_accept_failed">Kò lè gba àmì náà</string>
 </resources>
