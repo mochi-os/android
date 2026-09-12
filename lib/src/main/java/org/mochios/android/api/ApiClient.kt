@@ -48,6 +48,10 @@ annotation class InvalidationInterceptor
 @Retention(AnnotationRetention.BINARY)
 annotation class ServerInterceptor
 
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class WebSocketClient
+
 /**
  * Rewrite [url]'s origin to [serverUrl], leaving path, query and fragment
  * alone; returns [url] unchanged when already there or when [serverUrl] is
@@ -73,6 +77,29 @@ internal fun serverInterceptor(server: () -> String): Interceptor = Interceptor 
     val target = retargetToServer(request.url, server())
     chain.proceed(if (target == request.url) request else request.newBuilder().url(target).build())
 }
+
+/**
+ * A builder for talking to a server other than the bound one - another
+ * account's server, or a host that is not a Mochi server at all.
+ *
+ * Deliberately fresh rather than `okHttpClient.newBuilder()`: that copies the
+ * whole interceptor chain, and its outermost member rewrites every request's
+ * origin to the *bound* server. A call built that way for account B's server
+ * arrives at account A's instead, carrying B's credential - see
+ * [serverInterceptor]. It also carries no cookie jar, so a session for one
+ * origin cannot be replayed to another.
+ */
+internal fun foreignClient(): OkHttpClient.Builder = OkHttpClient.Builder()
+    .connectTimeout(30, TimeUnit.SECONDS)
+    .readTimeout(30, TimeUnit.SECONDS)
+    .writeTimeout(30, TimeUnit.SECONDS)
+    // The server content-negotiates: without this header it returns an HTML
+    // error page instead of {error, message} JSON.
+    .addInterceptor(Interceptor { chain ->
+        chain.proceed(
+            chain.request().newBuilder().header("Accept", "application/json").build()
+        )
+    })
 
 /**
  * The app's HTTP logger, built the same way everywhere it is installed.
@@ -225,6 +252,32 @@ object ApiClient {
 
         return builder.build()
     }
+
+    /**
+     * WebSockets get their own client. The keepalive ping is theirs alone, and
+     * more importantly [MochiWebSocket][org.mochios.android.websocket.MochiWebSocket]
+     * is handed an absolute server URL per subscription - the push distributor
+     * holds one per identity, on whichever server that identity lives - so the
+     * bound-server retarget in [provideOkHttpClient] would send one identity's
+     * bearer token to another identity's server. The cookie jar stays: app
+     * modules subscribe with no token and authenticate by session, and the jar
+     * only releases the session to its own origin.
+     */
+    @Provides
+    @Singleton
+    @WebSocketClient
+    fun provideWebSocketClient(sessionManager: SessionManager): OkHttpClient =
+        foreignClient()
+            .pingInterval(5, TimeUnit.MINUTES)
+            .cookieJar(sessionManager.cookieJar)
+            .apply {
+                // An application interceptor is the only logging hook a
+                // WebSocket call keeps; see [httpLogging].
+                if (BuildConfig.DEBUG) {
+                    addInterceptor(httpLogging())
+                }
+            }
+            .build()
 
     @Provides
     @Singleton
