@@ -24,6 +24,8 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
+import org.mochios.android.BuildConfig
+import org.mochios.android.api.httpLogging
 import org.mochios.android.model.WebSocketEvent
 import java.util.UUID
 import java.util.concurrent.ConcurrentHashMap
@@ -102,6 +104,13 @@ class MochiWebSocket @Inject constructor(
     private val wsClient: OkHttpClient by lazy {
         okHttpClient.newBuilder()
             .pingInterval(5, TimeUnit.MINUTES)
+            .apply {
+                // An application interceptor is the only logging hook a
+                // WebSocket call keeps; see [httpLogging].
+                if (BuildConfig.DEBUG) {
+                    addInterceptor(httpLogging())
+                }
+            }
             .build()
     }
 

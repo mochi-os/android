@@ -74,6 +74,29 @@ internal fun serverInterceptor(server: () -> String): Interceptor = Interceptor 
     chain.proceed(if (target == request.url) request else request.newBuilder().url(target).build())
 }
 
+/**
+ * The app's HTTP logger, built the same way everywhere it is installed.
+ *
+ * Install it on debug builds only: every level from BASIC up writes the full
+ * request URL to logcat, and HEADERS adds the `Authorization` bearer and the
+ * cookies with it.
+ *
+ * Where it goes matters as much as the level. OkHttp skips network
+ * interceptors on a WebSocket call, so a logger added with
+ * `addNetworkInterceptor` never sees a handshake - a client that opens
+ * WebSockets installs it with `addInterceptor` instead, last, so it still logs
+ * the request every interceptor above it has rewritten.
+ *
+ * @param level how much of each exchange to write; BASIC is the request and
+ *   response lines alone.
+ * @return a fresh interceptor, safe to share between clients.
+ */
+internal fun httpLogging(
+    level: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.BASIC,
+): HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
+    this.level = level
+}
+
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiClient {
@@ -193,14 +216,11 @@ object ApiClient {
             .addInterceptor(invalidationInterceptor)
             .cookieJar(sessionManager.cookieJar)
 
-        // Debug only: BASIC logs the full URL, including any credential in a
-        // query string, and OkHttp keeps application interceptors on WebSocket
-        // handshakes.
+        // At the network layer, so it logs what every interceptor above it
+        // left behind. This client opens no WebSockets; MochiWebSocket logs
+        // its handshakes on its own, for the reason [httpLogging] gives.
         if (BuildConfig.DEBUG) {
-            val loggingInterceptor = HttpLoggingInterceptor().apply {
-                level = HttpLoggingInterceptor.Level.BASIC
-            }
-            builder.addNetworkInterceptor(loggingInterceptor)
+            builder.addNetworkInterceptor(httpLogging())
         }
 
         return builder.build()
