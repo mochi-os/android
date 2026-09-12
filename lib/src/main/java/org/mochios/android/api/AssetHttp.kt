@@ -47,8 +47,7 @@ object AssetHttpModule {
             .addInterceptor { chain ->
                 val request = chain.request()
                 // Whole origin, not the host: a host-only match handed the app
-                // token
-                // to `http://host` and `host:8443`, and into the avatar query string.
+                // token to `http://host` and to `host:8443`.
                 if (!isServerOrigin(request.url, sessionManager.getServerUrlBlocking())) {
                     return@addInterceptor chain.proceed(
                         request.newBuilder()
@@ -60,20 +59,15 @@ object AssetHttpModule {
                 }
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
                 val token = app?.let { sessionManager.getTokenBlocking(it) }
+                // Header only. Avatars used to repeat the token in a `token`
+                // query parameter, for a redirect to a file URL that would drop
+                // the Authorization header; core serves them 200 with no
+                // redirect now, so the copy in the URL only wrote a year-long
+                // credential into every access log on the way.
                 val authed = if (token != null) {
-                    val builder = request.newBuilder()
+                    request.newBuilder()
                         .header("Authorization", "Bearer $token")
-                    // Avatar endpoints authenticate via the `token` query param —
-                    // they redirect to a file URL that drops the Authorization
-                    // header — so pass the token there too.
-                    if (request.url.pathSegments.lastOrNull() == "avatar") {
-                        builder.url(
-                            request.url.newBuilder()
-                                .setQueryParameter("token", token)
-                                .build()
-                        )
-                    }
-                    builder.build()
+                        .build()
                 } else {
                     request
                 }
