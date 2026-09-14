@@ -205,9 +205,9 @@ class AppBootstrapViewModel @Inject constructor(
             // the local registration and its endpoint, and the next sign-in
             // registers a second one.
             MochiPushClient.unregister(context, context.packageName)
-            // Clear the session before tearDown(): deleting the FCM token fires
-            // onNewToken, which only skips re-registering while no session is
-            // active.
+            // Clear the session before tearDown(): Firebase re-registers after
+            // unregister() and fires onRegistered, which only skips
+            // re-registering while no session is active.
             sessionManager.clearAll()
             PushTransport.tearDown(context)
         }

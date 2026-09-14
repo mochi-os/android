@@ -56,23 +56,24 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         postSystemNotification(applicationContext, title, body, link, tag, app, id)
     }
 
-    override fun onNewToken(token: String) {
-        Log.i(TAG, "FCM token refreshed")
+    override fun onRegistered(installationId: String) {
+        Log.i(TAG, "FCM installation registered")
         scope.launch {
             val deps = deps()
-            // deleteToken() during sign-out makes Firebase mint a fresh token
-            // and fire this callback. Registering it would re-subscribe the
-            // device we just signed out of, so skip when there's no session.
+            // Auto-init re-registers on the next start after a sign-out's
+            // unregister() and fires this callback. Registering it would
+            // re-subscribe the device we signed out of, so skip when there's
+            // no session.
             if (!deps.sessionManager().isAuthenticated.first()) {
-                Log.i(TAG, "No active session; skipping FCM token registration")
+                Log.i(TAG, "No active session; skipping FCM registration")
                 return@launch
             }
             val server = deps.sessionManager().getServerUrlBlocking()
             if (server.isBlank()) {
-                Log.w(TAG, "No server bound; skipping FCM token registration")
+                Log.w(TAG, "No server bound; skipping FCM registration")
                 return@launch
             }
-            FcmRegistrar.register(applicationContext, deps.okHttpClient(), server, token)
+            FcmRegistrar.register(applicationContext, deps.okHttpClient(), server, installationId)
         }
     }
 

@@ -448,8 +448,8 @@
         <!--
           FCM receiver. Only fires when the Mochi server admin has pasted
           their Firebase config into system settings AND the client has
-          successfully registered a token against it. When FCM is in use
-          the listening notification (PushService) is not started.
+          successfully registered its installation ID against it. When FCM is
+          in use the listening notification (PushService) is not started.
         -->
         <service
             android:name="org.mochios.android.push.MochiFirebaseMessagingService"
@@ -458,5 +458,14 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <!--
+          Register with FCM by Firebase Installation ID instead of the
+          deprecated registration token. With this set, getToken() and
+          deleteToken() throw; FcmRegistrar uses register() and unregister().
+        -->
+        <meta-data
+            android:name="firebase_messaging_installation_id_enabled"
+            android:value="true" />
     </application>
 </manifest>
