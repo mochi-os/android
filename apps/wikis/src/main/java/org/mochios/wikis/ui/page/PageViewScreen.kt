@@ -58,7 +58,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInParent
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.platform.LocalDensity
@@ -107,7 +107,7 @@ fun PageViewScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
     val snackbar = remember { SnackbarHostState() }
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
@@ -142,7 +142,7 @@ fun PageViewScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is PageViewEvent.CopyRssUrl -> {
-                    clipboard.setClip(
+                    clipboard.setClipEntry(
                         ClipData.newPlainText(clipboardLabelRss, event.url).toClipEntry(),
                     )
                     snackbar.showSnackbar(if (event.replaced) rssCopiedNewMsg else rssCopiedMsg)

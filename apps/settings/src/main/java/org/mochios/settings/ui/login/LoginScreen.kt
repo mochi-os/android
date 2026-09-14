@@ -45,11 +45,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
@@ -57,6 +58,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
@@ -101,7 +103,8 @@ fun LoginScreen(
     val launchUrl by viewModel.oauthLaunchUrl.collectAsState()
     val stepUpVisible by viewModel.stepUpVisible.collectAsState()
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
+    val clipboardScope = rememberCoroutineScope()
 
     LaunchedEffect(launchUrl) {
         val url = launchUrl ?: return@LaunchedEffect
@@ -204,13 +207,25 @@ fun LoginScreen(
             url = setup.url,
             onCancel = viewModel::cancelTotpSetup,
             onVerify = { code -> viewModel.verifyTotp(code) },
-            onCopySecret = { clipboard.setClip(sensitiveClip("totp", setup.secret).toClipEntry()) },
+            onCopySecret = {
+                clipboardScope.launch {
+                    clipboard.setClipEntry(
+                        sensitiveClip("totp", setup.secret).toClipEntry(),
+                    )
+                }
+            },
         )
     }
     recoveryCodes?.let { codes ->
         RecoveryCodesDialog(
             codes = codes,
-            onCopyAll = { clipboard.setClip(sensitiveClip("recovery codes", codes.joinToString("\n")).toClipEntry()) },
+            onCopyAll = {
+                clipboardScope.launch {
+                    clipboard.setClipEntry(
+                        sensitiveClip("recovery codes", codes.joinToString("\n")).toClipEntry(),
+                    )
+                }
+            },
             onDone = viewModel::acknowledgeRecoveryCodes,
         )
     }

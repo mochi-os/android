@@ -97,7 +97,7 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
@@ -195,7 +195,7 @@ fun FeedScreen(
     feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
@@ -217,7 +217,7 @@ fun FeedScreen(
         viewModel.actionEvents.collect { event ->
             when (event) {
                 is FeedActionEvent.RssUrlReady -> {
-                    clipboard.setClip(
+                    clipboard.setClipEntry(
                         ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
                     )
                     Toast.makeText(context, rssCopiedMessage, Toast.LENGTH_SHORT).show()

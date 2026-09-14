@@ -82,7 +82,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
@@ -297,7 +297,7 @@ private fun ForumContent(
     onUnsubscribed: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
     val uiState by viewModel.uiState.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
@@ -333,7 +333,7 @@ private fun ForumContent(
         viewModel.events.collect { event ->
             when (event) {
                 is ForumEvent.CopyRssUrl -> {
-                    clipboard.setClip(
+                    clipboard.setClipEntry(
                         ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
                     )
                     snackbar.showSnackbar(rssCopiedMessage)

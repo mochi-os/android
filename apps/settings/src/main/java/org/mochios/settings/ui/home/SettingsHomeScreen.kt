@@ -13,10 +13,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.AdminPanelSettings
-import androidx.compose.material.icons.filled.Article
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Devices
 import androidx.compose.material.icons.filled.Gavel
@@ -269,7 +269,9 @@ fun SettingsHomeScreen(
                 ListItem(
                     modifier = Modifier.clickable(onClick = onOpenSystemDocuments),
                     headlineContent = { Text(stringResource(R.string.settings_home_system_documents)) },
-                    leadingContent = { Icon(Icons.Default.Article, contentDescription = null) },
+                    leadingContent = {
+                        Icon(Icons.AutoMirrored.Filled.Article, contentDescription = null)
+                    },
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()

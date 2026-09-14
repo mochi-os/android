@@ -5,6 +5,7 @@
 
 package org.mochios.chat.ui.settings
 
+import android.content.ClipData
 import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -44,17 +45,19 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.DataChip
@@ -80,7 +83,8 @@ fun ChatSettingsScreen(
     viewModel: ChatSettingsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
+    val clipboardScope = rememberCoroutineScope()
     val context = LocalContext.current
     val copiedMessage = stringResource(MochiR.string.common_copied)
     var nameDraft by remember(uiState.chat.id) { mutableStateOf(uiState.chat.name) }
@@ -230,7 +234,11 @@ fun ChatSettingsScreen(
                                 DataChip(value = uiState.chat.id, truncate = Truncate.MIDDLE)
                                 MochiIconButton(
                                     onClick = {
-                                        clipboard.setText(AnnotatedString(uiState.chat.id))
+                                        clipboardScope.launch {
+                                            clipboard.setClipEntry(
+                                                ClipData.newPlainText("chat id", uiState.chat.id).toClipEntry(),
+                                            )
+                                        }
                                         Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT)
                                             .show()
                                     },

@@ -6,9 +6,9 @@
 package org.mochios.wikis.ui.components
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.DrawerState
 import androidx.compose.runtime.Composable
@@ -105,7 +105,7 @@ fun WikiDrawer(
             DrawerItem(
                 id = wiki.fingerprint ?: wiki.id,
                 title = wiki.name,
-                icon = Icons.Outlined.MenuBook,
+                icon = Icons.AutoMirrored.Outlined.MenuBook,
             )
         }
     }
@@ -117,7 +117,7 @@ fun WikiDrawer(
         allItem = DrawerItem(
             id = WikisApp.HOME,
             title = stringResource(R.string.wikis_sidebar_all),
-            icon = Icons.Outlined.MenuBook,
+            icon = Icons.AutoMirrored.Outlined.MenuBook,
         ),
         selectedId = selectedId,
         onItemClick = { item ->
