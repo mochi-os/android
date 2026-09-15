@@ -38,7 +38,7 @@ android {
     defaultConfig {
         applicationId = "org.mochios.mochi"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 37
         // Android's downgrade protection keys on versionCode alone, so it is
         // derived from versionName and must keep rising: "0.113" -> 113, "1.4"
         // -> 10004 across a major bump.
