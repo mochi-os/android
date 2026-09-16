@@ -57,6 +57,16 @@ import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
 import org.mochios.android.R as MochiR
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
+import org.mochios.android.ui.components.ErrorState
 
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
@@ -88,353 +98,392 @@ private fun parseColor(hex: String): Color {
     }
 }
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FieldDetailScreen(
-    classId: String,
-    field: ProjectField,
-    options: List<FieldOption>,
-    viewModel: DesignViewModel,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    viewModel: FieldDetailViewModel = hiltViewModel()
 ) {
-    var editName by remember(field.id) { mutableStateOf(field.name) }
-    var isRequired by remember(field.id) { mutableStateOf(field.isRequired) }
-    var isReadonly by remember(field.id) { mutableStateOf(field.isReadonly) }
-    var isSortable by remember(field.id) { mutableStateOf(field.isSortable) }
-    var isFilterable by remember(field.id) { mutableStateOf(field.isFilterable) }
-    var showOnCard by remember(field.id) { mutableStateOf(field.showOnCard) }
-    var isMulti by remember(field.id) { mutableStateOf(field.isMulti) }
-    var editRows by remember(field.id) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
-    var editPosition by remember(field.id) { mutableStateOf(field.position) }
-    var editPattern by remember(field.id) { mutableStateOf(field.pattern) }
-    var editMinlength by remember(field.id) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
-    var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
-    var showAddOptionDialog by remember { mutableStateOf(false) }
-    var editingOption by remember { mutableStateOf<FieldOption?>(null) }
-    var showDeleteConfirm by remember { mutableStateOf(false) }
+    val uiState by viewModel.uiState.collectAsState()
+    val projectDetails = uiState.projectDetails
+    val field = projectDetails?.fields?.get(viewModel.classId)
+        ?.find { candidate -> candidate.id == viewModel.fieldId }
+    val options = projectDetails?.options?.get(viewModel.classId)?.get(viewModel.fieldId)
+        ?: emptyList()
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp)
-    ) {
-        // Header
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            MochiIconButton(onClick = onBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
-            }
-            Text(
-                text = stringResource(R.string.projects_field_label, field.name),
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold
-            )
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        viewModel.loadProject()
+    }
+
+    LaunchedEffect(uiState.deleted) {
+        if (uiState.deleted) {
+            onBack()
         }
+    }
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Name
-        MochiTextField(
-            value = editName,
-            onValueChange = { editName = it },
-            label = { Text(stringResource(R.string.projects_field_name)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        // Type: fixed once the field exists. The server never rereads it on
-        // update, so an editable picker here could only pretend.
-        MochiTextField(
-            value = fieldTypeLabel(field.fieldtype),
-            onValueChange = {},
-            readOnly = true,
-            enabled = false,
-            label = { Text(stringResource(R.string.projects_field_type)) },
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Flags
-        Text(stringResource(R.string.projects_field_flags), style = MaterialTheme.typography.titleSmall)
-        Spacer(modifier = Modifier.height(8.dp))
-
-        FlagRow(stringResource(R.string.projects_field_required), isRequired) { isRequired = it }
-        FlagRow(stringResource(R.string.projects_field_readonly), isReadonly) { isReadonly = it }
-        FlagRow(stringResource(R.string.projects_field_sortable), isSortable) { isSortable = it }
-        FlagRow(stringResource(R.string.projects_field_filterable), isFilterable) { isFilterable = it }
-        FlagRow(stringResource(R.string.projects_field_show_on_card), showOnCard) { showOnCard = it }
-
-        if (field.fieldtype == "enumerated") {
-            FlagRow(stringResource(R.string.projects_field_multi), isMulti) { isMulti = it }
-        }
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        // Display position
-        var posExpanded by remember { mutableStateOf(false) }
-        Text(stringResource(R.string.projects_field_position), style = MaterialTheme.typography.labelMedium)
-        Spacer(modifier = Modifier.height(4.dp))
-        ExposedDropdownMenuBox(
-            expanded = posExpanded,
-            onExpandedChange = { posExpanded = it }
-        ) {
-            MochiTextField(
-                value = positionLabel(editPosition),
-                onValueChange = {},
-                readOnly = true,
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = posExpanded) },
-                modifier = Modifier
-                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                    .fillMaxWidth()
-            )
-            ExposedDropdownMenu(
-                expanded = posExpanded,
-                onDismissRequest = { posExpanded = false }
-            ) {
-                POSITION_KEYS.forEach { value ->
-                    MochiDropdownMenuItem(
-                        text = { Text(positionLabel(value)) },
-                        onClick = {
-                            editPosition = value
-                            posExpanded = false
-                        },
-                    )
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Validation
-        Text(stringResource(R.string.projects_field_validation), style = MaterialTheme.typography.titleSmall)
-        Spacer(modifier = Modifier.height(8.dp))
-
-        if (field.fieldtype == "text") {
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                MochiTextField(
-                    value = editMinlength,
-                    onValueChange = { editMinlength = it.filter { c -> c.isDigit() } },
-                    label = { Text(stringResource(R.string.projects_field_min_length)) },
-                    singleLine = true,
-                    modifier = Modifier.weight(1f)
-                )
-                MochiTextField(
-                    value = editMaxlength,
-                    onValueChange = { editMaxlength = it.filter { c -> c.isDigit() } },
-                    label = { Text(stringResource(R.string.projects_field_max_length)) },
-                    singleLine = true,
-                    modifier = Modifier.weight(1f)
-                )
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-            MochiTextField(
-                value = editPattern,
-                onValueChange = { editPattern = it },
-                label = { Text(stringResource(R.string.projects_field_pattern)) },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth()
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-        }
-
-        MochiTextField(
-            value = editRows,
-            onValueChange = { editRows = it.filter { c -> c.isDigit() } },
-            label = { Text(stringResource(R.string.projects_field_rows)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        // Save changes button
-        val flagsString = buildList {
-            if (isRequired) add("required")
-            if (isReadonly) add("readonly")
-            if (isSortable) add("sort")
-            if (isFilterable) add("filter")
-        }.joinToString(",").ifEmpty { null }
-
-        val rowsInt = editRows.toIntOrNull()
-        val hasChanges = editName != field.name
-                || flagsString != field.flags.ifEmpty { null }
-                || isMulti != field.isMulti
-                || showOnCard != field.showOnCard
-                || (rowsInt ?: 0) != field.rows
-                || editPosition != field.position
-                || editPattern != field.pattern
-                || (editMinlength.toIntOrNull() ?: 0) != field.minlength
-                || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
-
-        if (hasChanges) {
-            MochiTextButton(
-                onClick = {
-                    viewModel.updateField(
-                        classId = classId,
-                        fieldId = field.id,
-                        name = editName.takeIf { it != field.name },
-                        flags = flagsString,
-                        multi = isMulti.takeIf { it != field.isMulti },
-                        card = showOnCard.takeIf { it != field.showOnCard },
-                        position = editPosition.takeIf { it != field.position },
-                        rows = rowsInt?.takeIf { it != field.rows },
-                        pattern = editPattern.takeIf { it != field.pattern },
-                        minlength = (editMinlength.toIntOrNull() ?: 0).takeIf { it != field.minlength },
-                        maxlength = (editMaxlength.toIntOrNull() ?: 0).takeIf { it != field.maxlength }
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = if (field != null) {
+                            stringResource(R.string.projects_field_label, field.name)
+                        } else {
+                            stringResource(R.string.projects_design_title)
+                        }
                     )
                 },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(stringResource(R.string.projects_field_save))
-            }
+                navigationIcon = {
+                    MochiIconButton(onClick = onBack) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back)
+                        )
+                    }
+                }
+            )
         }
-
-        // Options section (only for enumerated fields)
-        if (field.fieldtype == "enumerated" || field.fieldtype == "enumerated") {
-            Spacer(modifier = Modifier.height(16.dp))
-            HorizontalDivider()
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+    ) { padding ->
+        if (field == null) {
+            Box(
+                modifier = Modifier.padding(padding).fillMaxSize(),
+                contentAlignment = Alignment.Center
             ) {
-                Text(stringResource(R.string.projects_field_options), style = MaterialTheme.typography.titleSmall)
-                MochiIconButton(onClick = { showAddOptionDialog = true }) {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_field_add_option))
+                val error = uiState.error
+                if (error != null) {
+                    ErrorState(error = error, onRetry = { viewModel.loadProject() })
+                } else {
+                    CircularProgressIndicator()
                 }
             }
+        } else {
+            var editName by remember(field.id) { mutableStateOf(field.name) }
+            var isRequired by remember(field.id) { mutableStateOf(field.isRequired) }
+            var isReadonly by remember(field.id) { mutableStateOf(field.isReadonly) }
+            var isSortable by remember(field.id) { mutableStateOf(field.isSortable) }
+            var isFilterable by remember(field.id) { mutableStateOf(field.isFilterable) }
+            var showOnCard by remember(field.id) { mutableStateOf(field.showOnCard) }
+            var isMulti by remember(field.id) { mutableStateOf(field.isMulti) }
+            var editRows by remember(field.id) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
+            var editPosition by remember(field.id) { mutableStateOf(field.position) }
+            var editPattern by remember(field.id) { mutableStateOf(field.pattern) }
+            var editMinlength by remember(field.id) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
+            var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
+            var showAddOptionDialog by remember { mutableStateOf(false) }
+            var editingOption by remember { mutableStateOf<FieldOption?>(null) }
+            var showDeleteConfirm by remember { mutableStateOf(false) }
 
-            options.sortedBy { it.rank }.forEach { option ->
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { editingOption = option }
-                        .padding(vertical = 12.dp, horizontal = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        Icons.Default.DragHandle,
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(20.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    if (option.colour.isNotBlank()) {
-                        Icon(
-                            Icons.Default.Circle,
-                            contentDescription = null,
-                            tint = parseColor(option.colour),
-                            modifier = Modifier.size(16.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                    }
-                    Text(
-                        text = option.name,
-                        style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier.weight(1f)
-                    )
-                    MochiIconButton(
-                        onClick = { editingOption = option },
-                        modifier = Modifier.size(32.dp)
-                    ) {
-                        Icon(
-                            Icons.Default.Edit,
-                            contentDescription = stringResource(MochiR.string.common_edit),
-                            modifier = Modifier.size(18.dp)
-                        )
-                    }
-                    MochiIconButton(
-                        onClick = { viewModel.deleteOption(classId, field.id, option.id) },
-                        modifier = Modifier.size(32.dp)
-                    ) {
-                        Icon(
-                            Icons.Default.Delete,
-                            contentDescription = stringResource(MochiR.string.common_delete),
-                            tint = MaterialTheme.colorScheme.error,
-                            modifier = Modifier.size(18.dp)
-                        )
-                    }
-                }
+            Column(
+                modifier = Modifier
+                    .padding(padding)
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .padding(16.dp)
+            ) {
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Name
+                MochiTextField(
+                    value = editName,
+                    onValueChange = { editName = it },
+                    label = { Text(stringResource(R.string.projects_field_name)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                // Type: fixed once the field exists. The server never rereads it on
+                // update, so an editable picker here could only pretend.
+                MochiTextField(
+                    value = fieldTypeLabel(field.fieldtype),
+                    onValueChange = {},
+                    readOnly = true,
+                    enabled = false,
+                    label = { Text(stringResource(R.string.projects_field_type)) },
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
                 HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Flags
+                Text(stringResource(R.string.projects_field_flags), style = MaterialTheme.typography.titleSmall)
+                Spacer(modifier = Modifier.height(8.dp))
+
+                FlagRow(stringResource(R.string.projects_field_required), isRequired) { isRequired = it }
+                FlagRow(stringResource(R.string.projects_field_readonly), isReadonly) { isReadonly = it }
+                FlagRow(stringResource(R.string.projects_field_sortable), isSortable) { isSortable = it }
+                FlagRow(stringResource(R.string.projects_field_filterable), isFilterable) { isFilterable = it }
+                FlagRow(stringResource(R.string.projects_field_show_on_card), showOnCard) { showOnCard = it }
+
+                if (field.fieldtype == "enumerated") {
+                    FlagRow(stringResource(R.string.projects_field_multi), isMulti) { isMulti = it }
+                }
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                // Display position
+                var posExpanded by remember { mutableStateOf(false) }
+                Text(stringResource(R.string.projects_field_position), style = MaterialTheme.typography.labelMedium)
+                Spacer(modifier = Modifier.height(4.dp))
+                ExposedDropdownMenuBox(
+                    expanded = posExpanded,
+                    onExpandedChange = { posExpanded = it }
+                ) {
+                    MochiTextField(
+                        value = positionLabel(editPosition),
+                        onValueChange = {},
+                        readOnly = true,
+                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = posExpanded) },
+                        modifier = Modifier
+                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+                            .fillMaxWidth()
+                    )
+                    ExposedDropdownMenu(
+                        expanded = posExpanded,
+                        onDismissRequest = { posExpanded = false }
+                    ) {
+                        POSITION_KEYS.forEach { value ->
+                            MochiDropdownMenuItem(
+                                text = { Text(positionLabel(value)) },
+                                onClick = {
+                                    editPosition = value
+                                    posExpanded = false
+                                },
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Validation
+                Text(stringResource(R.string.projects_field_validation), style = MaterialTheme.typography.titleSmall)
+                Spacer(modifier = Modifier.height(8.dp))
+
+                if (field.fieldtype == "text") {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        MochiTextField(
+                            value = editMinlength,
+                            onValueChange = { editMinlength = it.filter { c -> c.isDigit() } },
+                            label = { Text(stringResource(R.string.projects_field_min_length)) },
+                            singleLine = true,
+                            modifier = Modifier.weight(1f)
+                        )
+                        MochiTextField(
+                            value = editMaxlength,
+                            onValueChange = { editMaxlength = it.filter { c -> c.isDigit() } },
+                            label = { Text(stringResource(R.string.projects_field_max_length)) },
+                            singleLine = true,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    MochiTextField(
+                        value = editPattern,
+                        onValueChange = { editPattern = it },
+                        label = { Text(stringResource(R.string.projects_field_pattern)) },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+
+                MochiTextField(
+                    value = editRows,
+                    onValueChange = { editRows = it.filter { c -> c.isDigit() } },
+                    label = { Text(stringResource(R.string.projects_field_rows)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                // Save changes button
+                val flagsString = buildList {
+                    if (isRequired) add("required")
+                    if (isReadonly) add("readonly")
+                    if (isSortable) add("sort")
+                    if (isFilterable) add("filter")
+                }.joinToString(",").ifEmpty { null }
+
+                val rowsInt = editRows.toIntOrNull()
+                val hasChanges = editName != field.name
+                        || flagsString != field.flags.ifEmpty { null }
+                        || isMulti != field.isMulti
+                        || showOnCard != field.showOnCard
+                        || (rowsInt ?: 0) != field.rows
+                        || editPosition != field.position
+                        || editPattern != field.pattern
+                        || (editMinlength.toIntOrNull() ?: 0) != field.minlength
+                        || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
+
+                if (hasChanges) {
+                    MochiTextButton(
+                        onClick = {
+                            viewModel.updateField(
+                                name = editName.takeIf { it != field.name },
+                                flags = flagsString,
+                                multi = isMulti.takeIf { it != field.isMulti },
+                                card = showOnCard.takeIf { it != field.showOnCard },
+                                position = editPosition.takeIf { it != field.position },
+                                rows = rowsInt?.takeIf { it != field.rows },
+                                pattern = editPattern.takeIf { it != field.pattern },
+                                minlength = (editMinlength.toIntOrNull() ?: 0).takeIf { it != field.minlength },
+                                maxlength = (editMaxlength.toIntOrNull() ?: 0).takeIf { it != field.maxlength }
+                            )
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(stringResource(R.string.projects_field_save))
+                    }
+                }
+
+                // Options section (only for enumerated fields)
+                if (field.fieldtype == "enumerated" || field.fieldtype == "enumerated") {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    HorizontalDivider()
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(stringResource(R.string.projects_field_options), style = MaterialTheme.typography.titleSmall)
+                        MochiIconButton(onClick = { showAddOptionDialog = true }) {
+                            Icon(Icons.Default.Add, contentDescription = stringResource(R.string.projects_field_add_option))
+                        }
+                    }
+
+                    options.sortedBy { it.rank }.forEach { option ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { editingOption = option }
+                                .padding(vertical = 12.dp, horizontal = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                Icons.Default.DragHandle,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.size(20.dp)
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                            if (option.colour.isNotBlank()) {
+                                Icon(
+                                    Icons.Default.Circle,
+                                    contentDescription = null,
+                                    tint = parseColor(option.colour),
+                                    modifier = Modifier.size(16.dp)
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                            }
+                            Text(
+                                text = option.name,
+                                style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.weight(1f)
+                            )
+                            MochiIconButton(
+                                onClick = { editingOption = option },
+                                modifier = Modifier.size(32.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.Edit,
+                                    contentDescription = stringResource(MochiR.string.common_edit),
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                            MochiIconButton(
+                                onClick = { viewModel.deleteOption(option.id) },
+                                modifier = Modifier.size(32.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.Delete,
+                                    contentDescription = stringResource(MochiR.string.common_delete),
+                                    tint = MaterialTheme.colorScheme.error,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                        }
+                        HorizontalDivider()
+                    }
+
+                    if (options.isEmpty()) {
+                        Text(
+                            text = stringResource(R.string.projects_field_no_options),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(vertical = 12.dp)
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(32.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Delete field
+                MochiOutlinedButton(
+                    onClick = { showDeleteConfirm = true },
+                    tone = MochiButtonTone.Neutral,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(Icons.Default.Delete, contentDescription = null)
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(stringResource(R.string.projects_field_delete))
+                }
             }
 
-            if (options.isEmpty()) {
-                Text(
-                    text = stringResource(R.string.projects_field_no_options),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(vertical = 12.dp)
+            if (showAddOptionDialog) {
+                OptionDialog(
+                    title = stringResource(R.string.projects_option_add),
+                    initialName = "",
+                    initialColour = "",
+                    initialIcon = "",
+                    onDismiss = { showAddOptionDialog = false },
+                    onSave = { name, colour, icon ->
+                        viewModel.createOption(name, colour, icon)
+                        showAddOptionDialog = false
+                    }
+                )
+            }
+
+            editingOption?.let { option ->
+                OptionDialog(
+                    title = stringResource(R.string.projects_option_edit),
+                    initialName = option.name,
+                    initialColour = option.colour,
+                    initialIcon = option.icon,
+                    onDismiss = { editingOption = null },
+                    onSave = { name, colour, icon ->
+                        viewModel.updateOption(option.id, name, colour, icon)
+                        editingOption = null
+                    }
+                )
+            }
+
+            if (showDeleteConfirm) {
+                MochiAlertDialog(
+                    onDismissRequest = { showDeleteConfirm = false },
+                    title = stringResource(R.string.projects_field_delete_title),
+                    text = stringResource(R.string.projects_field_delete_message, field.name),
+                    confirmText = stringResource(MochiR.string.common_delete),
+                    onConfirm = {
+                        showDeleteConfirm = false
+                        viewModel.deleteField()
+                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
                 )
             }
         }
-
-        Spacer(modifier = Modifier.height(32.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Delete field
-        MochiOutlinedButton(
-            onClick = { showDeleteConfirm = true },
-            tone = MochiButtonTone.Neutral,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Icon(Icons.Default.Delete, contentDescription = null)
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(stringResource(R.string.projects_field_delete))
-        }
-    }
-
-    if (showAddOptionDialog) {
-        OptionDialog(
-            title = stringResource(R.string.projects_option_add),
-            initialName = "",
-            initialColour = "",
-            initialIcon = "",
-            onDismiss = { showAddOptionDialog = false },
-            onSave = { name, colour, icon ->
-                viewModel.createOption(classId, field.id, name, colour, icon)
-                showAddOptionDialog = false
-            }
-        )
-    }
-
-    editingOption?.let { option ->
-        OptionDialog(
-            title = stringResource(R.string.projects_option_edit),
-            initialName = option.name,
-            initialColour = option.colour,
-            initialIcon = option.icon,
-            onDismiss = { editingOption = null },
-            onSave = { name, colour, icon ->
-                viewModel.updateOption(classId, field.id, option.id, name, colour, icon)
-                editingOption = null
-            }
-        )
-    }
-
-    if (showDeleteConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showDeleteConfirm = false },
-            title = stringResource(R.string.projects_field_delete_title),
-            text = stringResource(R.string.projects_field_delete_message, field.name),
-            confirmText = stringResource(MochiR.string.common_delete),
-            onConfirm = {
-                showDeleteConfirm = false
-                viewModel.deleteField(classId, field.id)
-                onBack()
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
     }
 }
 

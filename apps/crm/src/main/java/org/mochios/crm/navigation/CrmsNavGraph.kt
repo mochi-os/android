@@ -13,7 +13,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.crm.ui.design.ClassDetailScreen
 import org.mochios.crm.ui.design.DesignScreen
+import org.mochios.crm.ui.design.FieldDetailScreen
 import org.mochios.crm.ui.find.FindCrmsScreen
 import org.mochios.crm.ui.crm.CreateObjectScreen
 import org.mochios.crm.ui.crm.CrmScreen
@@ -34,6 +36,8 @@ object CrmsApp {
     const val CREATE_CRM = "crm/create"
     const val CRM_SETTINGS = "crm/crm/{crmId}/settings"
     const val CRM_DESIGN = "crm/crm/{crmId}/design"
+    const val CRM_DESIGN_CLASS = "crm/crm/{crmId}/design/class/{classId}"
+    const val CRM_DESIGN_FIELD = "crm/crm/{crmId}/design/class/{classId}/field/{fieldId}"
     // Deliberately not `crm/crm/{crmId}/object/create`, which the CRM_OBJECT
     // pattern above also matches, with objectId='create'.
     const val CREATE_OBJECT = "crm/crm/{crmId}/create-object?field={field}&value={value}"
@@ -42,6 +46,10 @@ object CrmsApp {
     fun crmObject(crmId: String, objectId: String) = "crm/crm/$crmId/object/$objectId"
     fun crmSettings(crmId: String) = "crm/crm/$crmId/settings"
     fun crmDesign(crmId: String) = "crm/crm/$crmId/design"
+    fun crmDesignClass(crmId: String, classId: String) =
+        "crm/crm/$crmId/design/class/$classId"
+    fun crmDesignField(crmId: String, classId: String, fieldId: String) =
+        "crm/crm/$crmId/design/class/$classId/field/$fieldId"
 
     /**
      * Create-object route for [crmId], seeded with the one field value a board
@@ -215,8 +223,42 @@ fun NavGraphBuilder.crmsNavGraph(
     composable(
         route = CrmsApp.CRM_DESIGN,
         arguments = listOf(navArgument("crmId") { type = NavType.StringType })
-    ) {
+    ) { backStackEntry ->
+        val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
         DesignScreen(
+            onBack = { navController.popBackStack() },
+            onClassClick = { classId ->
+                navController.navigate(CrmsApp.crmDesignClass(crmId, classId))
+            },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_CLASS,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType }
+        )
+    ) { backStackEntry ->
+        val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
+        val classId = backStackEntry.arguments?.getString("classId").orEmpty()
+        ClassDetailScreen(
+            onBack = { navController.popBackStack() },
+            onFieldClick = { fieldId ->
+                navController.navigate(CrmsApp.crmDesignField(crmId, classId, fieldId))
+            },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_FIELD,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType },
+            navArgument("fieldId") { type = NavType.StringType }
+        )
+    ) {
+        FieldDetailScreen(
             onBack = { navController.popBackStack() },
         )
     }

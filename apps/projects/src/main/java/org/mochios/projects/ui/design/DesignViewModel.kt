@@ -29,8 +29,6 @@ data class DesignUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val selectedClassId: String? = null,
-    val selectedFieldId: String? = null,
     val isSaving: Boolean = false,
     // Design JSON fetched and waiting for the user to pick a destination.
     val pendingExport: PendingExport? = null,
@@ -97,165 +95,12 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    fun selectClass(classId: String?) {
-        _uiState.value = _uiState.value.copy(selectedClassId = classId, selectedFieldId = null)
-    }
-
-    fun selectField(fieldId: String?) {
-        _uiState.value = _uiState.value.copy(selectedFieldId = fieldId)
-    }
-
     // ---- Classes ----
 
     fun createClass(name: String) {
         viewModelScope.launch {
             try {
                 repository.createClass(projectId, name)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateClass(classId: String, name: String? = null, title: String? = null, requests: String? = null) {
-        viewModelScope.launch {
-            try {
-                repository.updateClass(projectId, classId, name, title, requests)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun deleteClass(classId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteClass(projectId, classId)
-                if (_uiState.value.selectedClassId == classId) {
-                    _uiState.value = _uiState.value.copy(selectedClassId = null)
-                }
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    // ---- Hierarchy ----
-
-    fun setHierarchy(classId: String, parents: List<String>) {
-        viewModelScope.launch {
-            try {
-                repository.setHierarchy(projectId, classId, hierarchyParameter(parents))
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    // ---- Fields ----
-
-    fun createField(classId: String, name: String, fieldtype: String, flags: String?, multi: Boolean?) {
-        viewModelScope.launch {
-            try {
-                repository.createField(projectId, classId, name, fieldtype, flags, multi)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateField(
-        classId: String,
-        fieldId: String,
-        name: String?,
-        flags: String?,
-        multi: Boolean?,
-        card: Boolean?,
-        position: String?,
-        rows: Int?,
-        pattern: String? = null,
-        minlength: Int? = null,
-        maxlength: Int? = null
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.updateField(projectId, classId, fieldId, name, flags, multi, card, position, rows, pattern, minlength, maxlength)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun deleteField(classId: String, fieldId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteField(projectId, classId, fieldId)
-                if (_uiState.value.selectedFieldId == fieldId) {
-                    _uiState.value = _uiState.value.copy(selectedFieldId = null)
-                }
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun reorderFields(classId: String, order: String) {
-        viewModelScope.launch {
-            try {
-                repository.reorderFields(projectId, classId, order)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    // ---- Options ----
-
-    fun createOption(classId: String, fieldId: String, name: String, colour: String?, icon: String? = null) {
-        viewModelScope.launch {
-            try {
-                repository.createOption(projectId, classId, fieldId, name, colour, icon)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateOption(classId: String, fieldId: String, optionId: String, name: String?, colour: String?, icon: String?) {
-        viewModelScope.launch {
-            try {
-                repository.updateOption(projectId, classId, fieldId, optionId, name, colour, icon)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun deleteOption(classId: String, fieldId: String, optionId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteOption(projectId, classId, fieldId, optionId)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun reorderOptions(classId: String, fieldId: String, order: String) {
-        viewModelScope.launch {
-            try {
-                repository.reorderOptions(projectId, classId, fieldId, order)
                 loadProject()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

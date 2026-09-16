@@ -59,6 +59,15 @@ import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmField
 import org.mochios.android.R as MochiR
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.LaunchedEffect
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
+import org.mochios.android.ui.components.ErrorState
 
 private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checkbox", "checklist")
 
@@ -74,274 +83,309 @@ private fun fieldTypeLabel(type: String): String = when (type) {
     else -> type
 }
 
+
 @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun ClassDetailScreen(
-    cls: CrmClass,
-    fields: List<CrmField>,
-    hierarchy: List<String>,
-    allClasses: List<CrmClass>,
-    viewModel: DesignViewModel,
     onBack: () -> Unit,
-    onFieldClick: (String) -> Unit
+    onFieldClick: (String) -> Unit,
+    viewModel: ClassDetailViewModel = hiltViewModel()
 ) {
-    var editName by remember { mutableStateOf(cls.name) }
-    var titleFieldId by remember { mutableStateOf(cls.title) }
-    var titleExpanded by remember { mutableStateOf(false) }
-    var showAddFieldDialog by remember { mutableStateOf(false) }
-    var showDeleteConfirm by remember { mutableStateOf(false) }
-
     val uiState by viewModel.uiState.collectAsState()
     val crmDetails = uiState.crmDetails
+    val classId = viewModel.classId
+    val cls = crmDetails?.classes?.find { candidate -> candidate.id == classId }
+    val fields = crmDetails?.fields?.get(classId) ?: emptyList()
+    val hierarchy = crmDetails?.hierarchy?.get(classId) ?: emptyList()
+    val allClasses = crmDetails?.classes ?: emptyList()
 
-    // Pick the first view that includes this class (or any view if none filter
-    // by class) so the preview shows how this class's objects would lay out.
-    val previewView = crmDetails?.views?.sortedBy { it.rank }?.firstOrNull { v ->
-        v.classes.isEmpty() || cls.id in v.classes
-    } ?: crmDetails?.views?.sortedBy { it.rank }?.firstOrNull()
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        viewModel.loadCrm()
+    }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp)
-    ) {
-        // Back button
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            MochiIconButton(onClick = onBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
-            }
-            Text(
-                text = stringResource(R.string.crm_class_label, cls.name),
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold
-            )
+    LaunchedEffect(uiState.deleted) {
+        if (uiState.deleted) {
+            onBack()
         }
+    }
 
-        if (crmDetails != null) {
-            Spacer(modifier = Modifier.height(8.dp))
-            DesignPreview(
-                crm = crmDetails,
-                view = previewView,
-                classFilter = cls
-            )
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Name
-        MochiTextField(
-            value = editName,
-            onValueChange = { editName = it },
-            label = { Text(stringResource(R.string.crm_class_name)) },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-        if (editName != cls.name && editName.isNotBlank()) {
-            MochiTextButton(onClick = {
-                viewModel.updateClass(cls.id, name = editName)
-            }) {
-                Text(stringResource(R.string.crm_class_save_name))
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Title field selector
-        Text(stringResource(R.string.crm_class_title_field), style = MaterialTheme.typography.titleSmall)
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            stringResource(R.string.crm_class_title_field_description),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        val defaultReadableLabel = stringResource(R.string.crm_class_title_field_default)
-        ExposedDropdownMenuBox(
-            expanded = titleExpanded,
-            onExpandedChange = { titleExpanded = it }
-        ) {
-            val titleFieldName = fields.find { it.id == titleFieldId }?.name ?: defaultReadableLabel
-            MochiTextField(
-                value = titleFieldName,
-                onValueChange = {},
-                readOnly = true,
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = titleExpanded) },
-                modifier = Modifier
-                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                    .fillMaxWidth()
-            )
-            ExposedDropdownMenu(
-                expanded = titleExpanded,
-                onDismissRequest = { titleExpanded = false }
-            ) {
-                MochiDropdownMenuItem(
-                    text = { Text(defaultReadableLabel) },
-                    onClick = {
-                        titleFieldId = ""
-                        titleExpanded = false
-                        viewModel.updateClass(cls.id, title = "")
-                    },
-                )
-                fields.forEach { field ->
-                    MochiDropdownMenuItem(
-                        text = { Text(field.name) },
-                        onClick = {
-                            titleFieldId = field.id
-                            titleExpanded = false
-                            viewModel.updateClass(cls.id, title = field.id)
-                        },
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = if (cls != null) {
+                            stringResource(R.string.crm_class_label, cls.name)
+                        } else {
+                            stringResource(R.string.crm_design_title)
+                        }
                     )
+                },
+                navigationIcon = {
+                    MochiIconButton(onClick = onBack) {
+                        Icon(
+                            Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(MochiR.string.common_back)
+                        )
+                    }
+                }
+            )
+        }
+    ) { padding ->
+        if (cls == null) {
+            Box(
+                modifier = Modifier.padding(padding).fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                val error = uiState.error
+                if (error != null) {
+                    ErrorState(error = error, onRetry = { viewModel.loadCrm() })
+                } else {
+                    CircularProgressIndicator()
                 }
             }
-        }
+        } else {
+            var editName by remember(cls.id) { mutableStateOf(cls.name) }
+            var titleFieldId by remember(cls.id) { mutableStateOf(cls.title) }
+            var titleExpanded by remember(cls.id) { mutableStateOf(false) }
+            var showAddFieldDialog by remember(cls.id) { mutableStateOf(false) }
+            var showDeleteConfirm by remember(cls.id) { mutableStateOf(false) }
 
-        Spacer(modifier = Modifier.height(16.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
+            val sortedViews = crmDetails.views.sortedBy { view -> view.rank }
+            val previewView = sortedViews.firstOrNull { view ->
+                view.classes.isEmpty() || cls.id in view.classes
+            } ?: sortedViews.firstOrNull()
 
-        // Hierarchy
-        Text(stringResource(R.string.crm_class_parents), style = MaterialTheme.typography.titleSmall)
-        Spacer(modifier = Modifier.height(8.dp))
-        val otherClasses = allClasses.filter { it.id != cls.id }
-        FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
-            otherClasses.forEach { otherCls ->
-                FilterChip(
-                    selected = otherCls.id in hierarchy,
-                    onClick = {
-                        val newHierarchy = if (otherCls.id in hierarchy) {
-                            hierarchy - otherCls.id
-                        } else {
-                            hierarchy + otherCls.id
-                        }
-                        viewModel.setHierarchy(cls.id, newHierarchy)
-                    },
-                    label = { Text(otherCls.name) }
-                )
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Fields
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(stringResource(R.string.crm_class_fields), style = MaterialTheme.typography.titleSmall)
-            MochiIconButton(onClick = { showAddFieldDialog = true }) {
-                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_class_add_field))
-            }
-        }
-
-        val sortedFields = fields.sortedBy { it.rank }
-        sortedFields.forEachIndexed { index, field ->
-            Row(
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onFieldClick(field.id) }
-                    .padding(vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically
+                    .padding(padding)
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .padding(16.dp)
             ) {
-                // Reorder buttons
-                if (sortedFields.size > 1) {
-                    Column {
-                        if (index > 0) {
-                            MochiIconButton(
+                Spacer(modifier = Modifier.height(8.dp))
+                DesignPreview(
+                    crm = crmDetails,
+                    view = previewView,
+                    classFilter = cls
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Name
+                MochiTextField(
+                    value = editName,
+                    onValueChange = { editName = it },
+                    label = { Text(stringResource(R.string.crm_class_name)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                if (editName != cls.name && editName.isNotBlank()) {
+                    MochiTextButton(onClick = {
+                        viewModel.updateClass(name = editName)
+                    }) {
+                        Text(stringResource(R.string.crm_class_save_name))
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Title field selector
+                Text(stringResource(R.string.crm_class_title_field), style = MaterialTheme.typography.titleSmall)
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    stringResource(R.string.crm_class_title_field_description),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                val defaultReadableLabel = stringResource(R.string.crm_class_title_field_default)
+                ExposedDropdownMenuBox(
+                    expanded = titleExpanded,
+                    onExpandedChange = { titleExpanded = it }
+                ) {
+                    val titleFieldName = fields.find { it.id == titleFieldId }?.name ?: defaultReadableLabel
+                    MochiTextField(
+                        value = titleFieldName,
+                        onValueChange = {},
+                        readOnly = true,
+                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = titleExpanded) },
+                        modifier = Modifier
+                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+                            .fillMaxWidth()
+                    )
+                    ExposedDropdownMenu(
+                        expanded = titleExpanded,
+                        onDismissRequest = { titleExpanded = false }
+                    ) {
+                        MochiDropdownMenuItem(
+                            text = { Text(defaultReadableLabel) },
+                            onClick = {
+                                titleFieldId = ""
+                                titleExpanded = false
+                                viewModel.updateClass(title = "")
+                            },
+                        )
+                        fields.forEach { field ->
+                            MochiDropdownMenuItem(
+                                text = { Text(field.name) },
                                 onClick = {
-                                    val newOrder = sortedFields.toMutableList()
-                                    newOrder.removeAt(index)
-                                    newOrder.add(index - 1, field)
-                                    viewModel.reorderFields(cls.id, newOrder.joinToString(",") { it.id })
+                                    titleFieldId = field.id
+                                    titleExpanded = false
+                                    viewModel.updateClass(title = field.id)
                                 },
-                                modifier = Modifier.size(24.dp)
-                            ) {
-                                Icon(Icons.Default.KeyboardArrowUp, contentDescription = stringResource(R.string.crm_class_move_up), modifier = Modifier.size(16.dp))
-                            }
-                        }
-                        if (index < sortedFields.lastIndex) {
-                            MochiIconButton(
-                                onClick = {
-                                    val newOrder = sortedFields.toMutableList()
-                                    newOrder.removeAt(index)
-                                    newOrder.add(index + 1, field)
-                                    viewModel.reorderFields(cls.id, newOrder.joinToString(",") { it.id })
-                                },
-                                modifier = Modifier.size(24.dp)
-                            ) {
-                                Icon(Icons.Default.KeyboardArrowDown, contentDescription = stringResource(R.string.crm_class_move_down), modifier = Modifier.size(16.dp))
-                            }
+                            )
                         }
                     }
-                    Spacer(modifier = Modifier.width(4.dp))
                 }
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = field.name,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium
-                    )
-                    Text(
-                        text = fieldTypeLabel(field.fieldtype),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+
+                Spacer(modifier = Modifier.height(16.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Hierarchy
+                Text(stringResource(R.string.crm_class_parents), style = MaterialTheme.typography.titleSmall)
+                Spacer(modifier = Modifier.height(8.dp))
+                val otherClasses = allClasses.filter { it.id != cls.id }
+                FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    otherClasses.forEach { otherCls ->
+                        FilterChip(
+                            selected = otherCls.id in hierarchy,
+                            onClick = {
+                                val newHierarchy = if (otherCls.id in hierarchy) {
+                                    hierarchy - otherCls.id
+                                } else {
+                                    hierarchy + otherCls.id
+                                }
+                                viewModel.setHierarchy(newHierarchy)
+                            },
+                            label = { Text(otherCls.name) }
+                        )
+                    }
                 }
-                Icon(
-                    Icons.Default.ChevronRight,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+
+                Spacer(modifier = Modifier.height(16.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Fields
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(stringResource(R.string.crm_class_fields), style = MaterialTheme.typography.titleSmall)
+                    MochiIconButton(onClick = { showAddFieldDialog = true }) {
+                        Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_class_add_field))
+                    }
+                }
+
+                val sortedFields = fields.sortedBy { it.rank }
+                sortedFields.forEachIndexed { index, field ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onFieldClick(field.id) }
+                            .padding(vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Reorder buttons
+                        if (sortedFields.size > 1) {
+                            Column {
+                                if (index > 0) {
+                                    MochiIconButton(
+                                        onClick = {
+                                            val newOrder = sortedFields.toMutableList()
+                                            newOrder.removeAt(index)
+                                            newOrder.add(index - 1, field)
+                                            viewModel.reorderFields(newOrder.joinToString(",") { it.id })
+                                        },
+                                        modifier = Modifier.size(24.dp)
+                                    ) {
+                                        Icon(Icons.Default.KeyboardArrowUp, contentDescription = stringResource(R.string.crm_class_move_up), modifier = Modifier.size(16.dp))
+                                    }
+                                }
+                                if (index < sortedFields.lastIndex) {
+                                    MochiIconButton(
+                                        onClick = {
+                                            val newOrder = sortedFields.toMutableList()
+                                            newOrder.removeAt(index)
+                                            newOrder.add(index + 1, field)
+                                            viewModel.reorderFields(newOrder.joinToString(",") { it.id })
+                                        },
+                                        modifier = Modifier.size(24.dp)
+                                    ) {
+                                        Icon(Icons.Default.KeyboardArrowDown, contentDescription = stringResource(R.string.crm_class_move_down), modifier = Modifier.size(16.dp))
+                                    }
+                                }
+                            }
+                            Spacer(modifier = Modifier.width(4.dp))
+                        }
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = field.name,
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Medium
+                            )
+                            Text(
+                                text = fieldTypeLabel(field.fieldtype),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Icon(
+                            Icons.Default.ChevronRight,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    HorizontalDivider()
+                }
+
+                Spacer(modifier = Modifier.height(32.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Delete class
+                MochiOutlinedButton(
+                    onClick = { showDeleteConfirm = true },
+                    tone = MochiButtonTone.Neutral,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(Icons.Default.Delete, contentDescription = null)
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(stringResource(R.string.crm_class_delete))
+                }
+            }
+
+            if (showAddFieldDialog) {
+                AddFieldDialog(
+                    onDismiss = { showAddFieldDialog = false },
+                    onAdd = { name, fieldtype, flags, multi ->
+                        viewModel.createField(name, fieldtype, flags, multi)
+                        showAddFieldDialog = false
+                    }
                 )
             }
-            HorizontalDivider()
-        }
 
-        Spacer(modifier = Modifier.height(32.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Delete class
-        MochiOutlinedButton(
-            onClick = { showDeleteConfirm = true },
-            tone = MochiButtonTone.Neutral,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Icon(Icons.Default.Delete, contentDescription = null)
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(stringResource(R.string.crm_class_delete))
-        }
-    }
-
-    if (showAddFieldDialog) {
-        AddFieldDialog(
-            onDismiss = { showAddFieldDialog = false },
-            onAdd = { name, fieldtype, flags, multi ->
-                viewModel.createField(cls.id, name, fieldtype, flags, multi)
-                showAddFieldDialog = false
+            if (showDeleteConfirm) {
+                MochiAlertDialog(
+                    onDismissRequest = { showDeleteConfirm = false },
+                    title = stringResource(R.string.crm_class_delete_title),
+                    text = stringResource(R.string.crm_class_delete_message, cls.name),
+                    confirmText = stringResource(MochiR.string.common_delete),
+                    onConfirm = {
+                        showDeleteConfirm = false
+                        viewModel.deleteClass()
+                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
+                )
             }
-        )
-    }
-
-    if (showDeleteConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showDeleteConfirm = false },
-            title = stringResource(R.string.crm_class_delete_title),
-            text = stringResource(R.string.crm_class_delete_message, cls.name),
-            confirmText = stringResource(MochiR.string.common_delete),
-            onConfirm = {
-                showDeleteConfirm = false
-                viewModel.deleteClass(cls.id)
-                onBack()
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
+        }
     }
 }
 
