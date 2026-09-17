@@ -332,4 +332,8 @@
     <string name="forums_moderation_reason_misinformation">Dezinformácie</string>
     <string name="forums_moderation_reason_offtopic">Mimo témy</string>
     <string name="forums_moderation_reason_other">Iné</string>
+    <string name="forums_block">Zablokovať</string>
+    <string name="forums_removed_from_forum">Boli ste odstránení z tohto fóra</string>
+    <string name="forums_forum_deleted">Toto fórum bolo odstránené</string>
+    <string name="forums_settings_member_blocked">Člen zablokovaný</string>
 </resources>

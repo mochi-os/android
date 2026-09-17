@@ -219,4 +219,8 @@
     <plurals name="feeds_memory_years_ago_today">
         <item quantity="other">%1$d 年前的今天</item>
     </plurals>
+    <string name="feeds_block">屏蔽</string>
+    <string name="feeds_removed_from_feed">你已被移出此信息流</string>
+    <string name="feeds_feed_deleted">此信息流已删除</string>
+    <string name="feeds_settings_member_blocked">已屏蔽成员</string>
 </resources>

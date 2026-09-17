@@ -565,6 +565,13 @@ private fun ForumContent(
                         }
                     }
 
+                    uiState.gone != null -> {
+                        NotFoundState(
+                            title = stringResource(uiState.gone!!),
+                            onBack = onOpenDrawer,
+                        )
+                    }
+
                     uiState.error is MochiError.NotFoundError && uiState.posts.isEmpty() -> {
                         NotFoundState(
                             title = stringResource(R.string.forums_forum_not_found),

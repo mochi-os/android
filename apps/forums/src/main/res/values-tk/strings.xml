@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Nädogry maglumat</string>
     <string name="forums_moderation_reason_offtopic">Mowzukdan daşary</string>
     <string name="forums_moderation_reason_other">Beýleki</string>
+    <string name="forums_block">Petiklemek</string>
+    <string name="forums_removed_from_forum">Bu forumdan aýryldyň</string>
+    <string name="forums_forum_deleted">Bu forum pozuldy</string>
+    <string name="forums_settings_member_blocked">Agza petiklendi</string>
 </resources>

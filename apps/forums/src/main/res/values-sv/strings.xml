@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Felaktig information</string>
     <string name="forums_moderation_reason_offtopic">Utanför ämnet</string>
     <string name="forums_moderation_reason_other">Övrigt</string>
+    <string name="forums_block">Blockera</string>
+    <string name="forums_removed_from_forum">Du togs bort från det här forumet</string>
+    <string name="forums_forum_deleted">Det här forumet har tagits bort</string>
+    <string name="forums_settings_member_blocked">Medlem blockerad</string>
 </resources>

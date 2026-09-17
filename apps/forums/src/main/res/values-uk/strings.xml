@@ -332,4 +332,8 @@
     <string name="forums_moderation_reason_misinformation">Дезінформація</string>
     <string name="forums_moderation_reason_offtopic">Поза темою</string>
     <string name="forums_moderation_reason_other">Інше</string>
+    <string name="forums_block">Заблокувати</string>
+    <string name="forums_removed_from_forum">Вас видалили з цього форуму</string>
+    <string name="forums_forum_deleted">Цей форум видалено</string>
+    <string name="forums_settings_member_blocked">Учасника заблоковано</string>
 </resources>

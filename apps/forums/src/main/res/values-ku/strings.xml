@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Agahiyên xelet</string>
     <string name="forums_moderation_reason_offtopic">Ji mijarê derketî</string>
     <string name="forums_moderation_reason_other">Yên din</string>
+    <string name="forums_block">Asteng bike</string>
+    <string name="forums_removed_from_forum">Tu ji vê forumê hatî rakirin</string>
+    <string name="forums_forum_deleted">Ev forum hat jêbirin</string>
+    <string name="forums_settings_member_blocked">Endam hat astengkirin</string>
 </resources>

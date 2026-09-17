@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">गलत जानकारी</string>
     <string name="forums_moderation_reason_offtopic">विषय बाहिर</string>
     <string name="forums_moderation_reason_other">अन्य</string>
+    <string name="forums_block">ब्लक गर्नुहोस्</string>
+    <string name="forums_removed_from_forum">तपाईंलाई यो फोरमबाट हटाइयो</string>
+    <string name="forums_forum_deleted">यो फोरम मेटाइयो</string>
+    <string name="forums_settings_member_blocked">सदस्य ब्लक गरियो</string>
 </resources>

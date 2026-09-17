@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">തെറ്റായ വിവരം</string>
     <string name="forums_moderation_reason_offtopic">വിഷയത്തിന് പുറത്ത്</string>
     <string name="forums_moderation_reason_other">മറ്റുള്ളവ</string>
+    <string name="forums_block">ബ്ലോക്ക് ചെയ്യുക</string>
+    <string name="forums_removed_from_forum">നിങ്ങളെ ഈ ഫോറത്തിൽ നിന്ന് നീക്കം ചെയ്തു</string>
+    <string name="forums_forum_deleted">ഈ ഫോറം ഇല്ലാതാക്കി</string>
+    <string name="forums_settings_member_blocked">അംഗത്തെ ബ്ലോക്ക് ചെയ്തു</string>
 </resources>

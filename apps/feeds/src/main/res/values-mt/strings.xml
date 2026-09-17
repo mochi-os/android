@@ -249,4 +249,8 @@
         <item quantity="many">%1$d snin ilu llum</item>
         <item quantity="other">%1$d snin ilu llum</item>
     </plurals>
+    <string name="feeds_block">Imblokka</string>
+    <string name="feeds_removed_from_feed">Int tneħħejt minn dan il-feed</string>
+    <string name="feeds_feed_deleted">Dan il-feed tħassar</string>
+    <string name="feeds_settings_member_blocked">Il-membru ġie mblukkat</string>
 </resources>

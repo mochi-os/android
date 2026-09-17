@@ -286,6 +286,7 @@ fun FeedScreen(
     val hasMore by viewModel.hasMore.collectAsState()
     val error by viewModel.error.collectAsState()
     val isNotFound by viewModel.isNotFound.collectAsState()
+    val gone by viewModel.gone.collectAsState()
     val currentSort by viewModel.currentSort.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
@@ -741,6 +742,13 @@ fun FeedScreen(
                             ) {
                                 CircularProgressIndicator()
                             }
+                        }
+
+                        gone != null -> {
+                            NotFoundState(
+                                title = stringResource(gone!!),
+                                onBack = { drawerScope.launch { drawerState.open() } },
+                            )
                         }
 
                         isNotFound && posts.isEmpty() -> {

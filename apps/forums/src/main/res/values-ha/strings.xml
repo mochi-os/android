@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Bayanin ƙarya</string>
     <string name="forums_moderation_reason_offtopic">Bayan batun</string>
     <string name="forums_moderation_reason_other">Sauran</string>
+    <string name="forums_block">Toshe</string>
+    <string name="forums_removed_from_forum">An cire ku daga wannan forum</string>
+    <string name="forums_forum_deleted">An share wannan forum</string>
+    <string name="forums_settings_member_blocked">An toshe memba</string>
 </resources>

@@ -228,4 +228,8 @@
         <item quantity="one">ئەمڕۆ %1$d ساڵ پێش ئێستا</item>
         <item quantity="other">ئەمڕۆ %1$d ساڵ پێش ئێستا</item>
     </plurals>
+    <string name="feeds_block">بلۆککردن</string>
+    <string name="feeds_removed_from_feed">تۆ لەم فیدە لابردرایت</string>
+    <string name="feeds_feed_deleted">ئەم فیدە سڕایەوە</string>
+    <string name="feeds_settings_member_blocked">ئەندام بلۆککرا</string>
 </resources>

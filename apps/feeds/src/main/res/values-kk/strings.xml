@@ -226,4 +226,8 @@
         <item quantity="one">бүгін %1$d жыл бұрын</item>
         <item quantity="other">бүгін %1$d жыл бұрын</item>
     </plurals>
+    <string name="feeds_block">Бұғаттау</string>
+    <string name="feeds_removed_from_feed">Сіз бұл таспадан шығарылдыңыз</string>
+    <string name="feeds_feed_deleted">Бұл таспа жойылды</string>
+    <string name="feeds_settings_member_blocked">Мүше бұғатталды</string>
 </resources>

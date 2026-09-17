@@ -223,4 +223,8 @@
         <item quantity="one">%1$d taun kepungkur dina iki</item>
         <item quantity="other">%1$d taun kepungkur dina iki</item>
     </plurals>
+    <string name="feeds_block">Blokir</string>
+    <string name="feeds_removed_from_feed">Sampeyan wis dicabut saka feed iki</string>
+    <string name="feeds_feed_deleted">Feed iki wis dibusak</string>
+    <string name="feeds_settings_member_blocked">Anggota diblokir</string>
 </resources>

@@ -226,4 +226,8 @@
         <item quantity="one">இன்று %1$d ஆண்டுக்கு முன்பு</item>
         <item quantity="other">இன்று %1$d ஆண்டுகளுக்கு முன்பு</item>
     </plurals>
+    <string name="feeds_block">தடு</string>
+    <string name="feeds_removed_from_feed">நீங்கள் இந்த ஊட்டத்திலிருந்து அகற்றப்பட்டீர்கள்</string>
+    <string name="feeds_feed_deleted">இந்த ஊட்டம் நீக்கப்பட்டது</string>
+    <string name="feeds_settings_member_blocked">உறுப்பினர் தடுக்கப்பட்டார்</string>
 </resources>

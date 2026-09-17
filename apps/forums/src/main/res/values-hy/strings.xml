@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Ապատեղեկատվություն</string>
     <string name="forums_moderation_reason_offtopic">Թեմայից դուրս</string>
     <string name="forums_moderation_reason_other">Այլ</string>
+    <string name="forums_block">Արգելափակել</string>
+    <string name="forums_removed_from_forum">Ձեզ հեռացրել են այս ֆորումից</string>
+    <string name="forums_forum_deleted">Այս ֆորումը ջնջվել է</string>
+    <string name="forums_settings_member_blocked">Անդամն արգելափակվեց</string>
 </resources>

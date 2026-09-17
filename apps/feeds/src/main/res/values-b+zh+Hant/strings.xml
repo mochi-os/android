@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">摘要</string>
-    <string name="feeds_find_feeds">尋找摘要</string>
+    <string name="feeds_title">訊息來源</string>
+    <string name="feeds_find_feeds">尋找訊息來源</string>
     <string name="feeds_create_feed">建立訊息來源</string>
     <string name="feeds_new_post">新貼文</string>
     <string name="feeds_all_feeds">所有訊息來源</string>
     <string name="feeds_name">名稱</string>
     <string name="feeds_create">建立</string>
-    <string name="feeds_no_feeds_found">找不到動態</string>
-    <string name="feeds_feed_title_default">摘要</string>
+    <string name="feeds_no_feeds_found">找不到訊息來源</string>
+    <string name="feeds_feed_title_default">訊息來源</string>
     <string name="feeds_mark_all_read">全部標為已讀</string>
     <string name="feeds_settings">設定</string>
     <string name="feeds_no_posts_yet">尚無貼文</string>
@@ -30,7 +30,7 @@
     <string name="feeds_edit_post">編輯貼文</string>
     <string name="feeds_save_label">儲存</string>
     <string name="feeds_post_action">貼文</string>
-    <string name="feeds_feed_label">摘要</string>
+    <string name="feeds_feed_label">訊息來源</string>
     <string name="feeds_add_files">新增檔案</string>
     <string name="feeds_restore">還原</string>
     <string name="feeds_check_in">簽入</string>
@@ -40,10 +40,10 @@
     <string name="feeds_tab_access">存取</string>
     <string name="feeds_tab_members">成員</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">摘要名稱</string>
+    <string name="feeds_feed_name">訊息來源名稱</string>
     <string name="feeds_save_name">儲存名稱</string>
     <string name="feeds_banner">橫幅</string>
-    <string name="feeds_banner_description">在您的動態頂部顯示的選用 Markdown 橫幅。</string>
+    <string name="feeds_banner_description">在您的訊息來源頂部顯示的選用 Markdown 橫幅。</string>
     <string name="feeds_clear">清除</string>
     <string name="feeds_delete_feed">刪除訊息來源</string>
     <string name="feeds_no_members">無成員</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">類型</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi 動態</string>
+    <string name="feeds_source_type_feed_posts">Mochi 訊息來源</string>
     <string name="feeds_source_type_feed_memories">回憶</string>
     <string name="feeds_remove_source">移除來源</string>
     <string name="feeds_suggested_credibility_accept">接受</string>
@@ -65,11 +65,11 @@
     <string name="feeds_ai_mode_off">已停用</string>
     <string name="feeds_ai_mode_tag">標籤</string>
     <string name="feeds_ai_mode_tag_deduplicate">標籤 + 去重</string>
-    <string name="feeds_feed_not_found">找不到摘要</string>
+    <string name="feeds_feed_not_found">找不到訊息來源</string>
     <string name="feeds_post_not_found">找不到貼文</string>
     <string name="feeds_post_select_feed">請選擇一個訊息來源</string>
     <string name="feeds_post_empty_content">請輸入文字或附上一個檔案</string>
-    <string name="feeds_settings_feed_renamed">摘要已重新命名</string>
+    <string name="feeds_settings_feed_renamed">訊息來源已重新命名</string>
     <string name="feeds_settings_banner_saved">橫幅已儲存</string>
     <string name="feeds_settings_source_added">來源已新增</string>
     <string name="feeds_settings_source_updated">來源已更新</string>
@@ -156,7 +156,7 @@
     <string name="feeds_access_subject_authenticated">已驗證使用者</string>
     <string name="feeds_markdown_supported">支援 Markdown</string>
     <string name="feeds_permission_deny">拒絕</string>
-    <string name="feeds_rss_feed">RSS 動態</string>
+    <string name="feeds_rss_feed">RSS 訊息來源</string>
     <string name="feeds_settings_field_entity_id">實體 ID</string>
     <string name="feeds_settings_field_fingerprint">指紋</string>
     <string name="feeds_settings_field_server">伺服器</string>
@@ -172,7 +172,7 @@
     <string name="feeds_post_content">貼文內容</string>
     <string name="feeds_enable_memories">啟用記憶</string>
     <string name="feeds_permission_request_title">權限請求</string>
-    <string name="feeds_unsubscribe_confirm">取消訂閱此摘要？</string>
+    <string name="feeds_unsubscribe_confirm">取消訂閱此訊息來源？</string>
     <string name="feeds_settings_title">%1$s 設定</string>
     <string name="feeds_source_transform_help">留空以停用。</string>
     <string name="feeds_settings_name_cancel_cd">取消編輯</string>
@@ -183,7 +183,7 @@
     <string name="feeds_create_first_post">建立第一則貼文</string>
     <string name="feeds_rss_mode_posts">貼文</string>
     <string name="feeds_source_last_checked">上次檢查 %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">取消訂閱摘要</string>
+    <string name="feeds_settings_unsubscribe_section">取消訂閱訊息來源</string>
     <string name="feeds_source_transform_hint">翻譯成英文,並以項目符號顯示。</string>
     <string name="feeds_source_url_hint_feed">源實體 ID 或指紋</string>
     <string name="feeds_source_credibility_label">可信度</string>
@@ -196,7 +196,7 @@
     <string name="feeds_source_polling_interval">每 %1$s 輪詢一次</string>
     <string name="feeds_access_level_react_full">點讚和查看</string>
     <string name="feeds_permission_allow">允許</string>
-    <string name="feeds_unsubscribe_confirm_message">你將不再收到此摘要的更新。你可以隨時重新訂閱。</string>
+    <string name="feeds_unsubscribe_confirm_message">你將不再收到此訊息來源的更新。你可以隨時重新訂閱。</string>
     <string name="feeds_access_select_rule">選擇存取規則</string>
     <string name="feeds_access_authenticated_desc">任何已登入的使用者</string>
     <string name="feeds_banner_hint">歡迎來到此論壇…</string>
@@ -219,4 +219,8 @@
     <plurals name="feeds_memory_years_ago_today">
         <item quantity="other">%1$d 年前的今天</item>
     </plurals>
+    <string name="feeds_block">封鎖</string>
+    <string name="feeds_removed_from_feed">你已被移出此訊息來源</string>
+    <string name="feeds_feed_deleted">此訊息來源已刪除</string>
+    <string name="feeds_settings_member_blocked">已封鎖成員</string>
 </resources>

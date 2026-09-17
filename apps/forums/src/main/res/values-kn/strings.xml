@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">ತಪ್ಪು ಮಾಹಿತಿ</string>
     <string name="forums_moderation_reason_offtopic">ವಿಷಯದಿಂದ ಹೊರಗೆ</string>
     <string name="forums_moderation_reason_other">ಇತರ</string>
+    <string name="forums_block">ನಿರ್ಬಂಧಿಸಿ</string>
+    <string name="forums_removed_from_forum">ನಿಮ್ಮನ್ನು ಈ ಫೋರಮ್‌ನಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
+    <string name="forums_forum_deleted">ಈ ಫೋರಮ್ ಅನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="forums_settings_member_blocked">ಸದಸ್ಯರನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ</string>
 </resources>

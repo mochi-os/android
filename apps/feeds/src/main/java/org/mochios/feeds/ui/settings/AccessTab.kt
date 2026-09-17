@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Block
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
@@ -187,6 +188,13 @@ fun AccessTab(
                                     Icon(
                                         Icons.Default.Close,
                                         contentDescription = stringResource(R.string.feeds_remove),
+                                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                                MochiIconButton(onClick = { viewModel.blockMember(member.id) }) {
+                                    Icon(
+                                        Icons.Default.Block,
+                                        contentDescription = stringResource(R.string.feeds_block),
                                         tint = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                 }

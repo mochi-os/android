@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">ভুল তথ্য</string>
     <string name="forums_moderation_reason_offtopic">বিষয় বহির্ভূত</string>
     <string name="forums_moderation_reason_other">অন্যান্য</string>
+    <string name="forums_block">ব্লক করুন</string>
+    <string name="forums_removed_from_forum">আপনাকে এই ফোরাম থেকে সরানো হয়েছে</string>
+    <string name="forums_forum_deleted">এই ফোরাম মুছে ফেলা হয়েছে</string>
+    <string name="forums_settings_member_blocked">সদস্যকে ব্লক করা হয়েছে</string>
 </resources>

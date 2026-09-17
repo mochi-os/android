@@ -405,8 +405,8 @@
     <string name="staff_team_role_admin">Sãmbyhyhára</string>
     <string name="staff_team_role_moderator">Moderador</string>
     <string name="staff_team_role_support">Pytyvõ</string>
-    <string name="staff_team_toast_add_failed">Ndaikatúi oñembojuaju member</string>
-    <string name="staff_team_toast_removed">Oñembogue member</string>
+    <string name="staff_team_toast_add_failed">Ndaikatúi oñembojuaju irũ</string>
+    <string name="staff_team_toast_removed">Oñembogue irũ</string>
     <string name="staff_team_toast_role_updated">Tembiapo oñembohekopyahu</string>
 
     <string name="staff_accounts_action_unban_title">Eipe\'a jeity</string>

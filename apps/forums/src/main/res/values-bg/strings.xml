@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Дезинформация</string>
     <string name="forums_moderation_reason_offtopic">Извън темата</string>
     <string name="forums_moderation_reason_other">Друго</string>
+    <string name="forums_block">Блокирай</string>
+    <string name="forums_removed_from_forum">Бяхте премахнати от този форум</string>
+    <string name="forums_forum_deleted">Този форум беше изтрит</string>
+    <string name="forums_settings_member_blocked">Членът е блокиран</string>
 </resources>

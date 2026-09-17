@@ -247,4 +247,8 @@
         <item quantity="many">%1$d mbliana ó shin inniu</item>
         <item quantity="other">%1$d bliain ó shin inniu</item>
     </plurals>
+    <string name="feeds_block">Bac</string>
+    <string name="feeds_removed_from_feed">Baineadh tú den fhotha seo</string>
+    <string name="feeds_feed_deleted">Scriosadh an fotha seo</string>
+    <string name="feeds_settings_member_blocked">Cuireadh bac ar an mball</string>
 </resources>

@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Desinformazioa</string>
     <string name="forums_moderation_reason_offtopic">Gaiz kanpokoa</string>
     <string name="forums_moderation_reason_other">Bestelakoa</string>
+    <string name="forums_block">Blokeatu</string>
+    <string name="forums_removed_from_forum">Foro honetatik kendu zaituzte</string>
+    <string name="forums_forum_deleted">Foro hau ezabatu da</string>
+    <string name="forums_settings_member_blocked">Kidea blokeatuta</string>
 </resources>

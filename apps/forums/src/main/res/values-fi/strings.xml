@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Disinformaatio</string>
     <string name="forums_moderation_reason_offtopic">Aiheen ulkopuolinen</string>
     <string name="forums_moderation_reason_other">Muu</string>
+    <string name="forums_block">Estä</string>
+    <string name="forums_removed_from_forum">Sinut poistettiin tästä foorumista</string>
+    <string name="forums_forum_deleted">Tämä foorumi poistettiin</string>
+    <string name="forums_settings_member_blocked">Jäsen estetty</string>
 </resources>

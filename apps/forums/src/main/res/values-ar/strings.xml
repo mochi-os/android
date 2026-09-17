@@ -334,4 +334,8 @@
     <string name="forums_moderation_reason_misinformation">معلومات مضللة</string>
     <string name="forums_moderation_reason_offtopic">خارج الموضوع</string>
     <string name="forums_moderation_reason_other">أخرى</string>
+    <string name="forums_block">حظر</string>
+    <string name="forums_removed_from_forum">تمت إزالتك من هذا المنتدى</string>
+    <string name="forums_forum_deleted">تم حذف هذا المنتدى</string>
+    <string name="forums_settings_member_blocked">تم حظر العضو</string>
 </resources>

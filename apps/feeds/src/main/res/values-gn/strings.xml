@@ -38,7 +38,7 @@
     <string name="feeds_tab_sources">Pyendarã</string>
     <string name="feeds_sources_title">Pyendarã</string>
     <string name="feeds_tab_access">Jeike</string>
-    <string name="feeds_tab_members">Memberskuera</string>
+    <string name="feeds_tab_members">Irũnguéra</string>
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Feed téra</string>
     <string name="feeds_save_name">Eñongatu téra</string>
@@ -77,7 +77,7 @@
     <string name="feeds_settings_source_polling">Oñemoporandu opaite mba’e…</string>
     <string name="feeds_settings_access_updated">Jeike oñembojeguáma</string>
     <string name="feeds_settings_access_revoked">Jeike oje’ói</string>
-    <string name="feeds_settings_member_removed">Oñembogue member</string>
+    <string name="feeds_settings_member_removed">Oñembogue irũ</string>
     <string name="feeds_settings_ai_mode_updated">AI mba’e oje’oguerá</string>
     <string name="feeds_settings_ai_account_updated">AI mba’e renohe oje’oguerá</string>
     <string name="feeds_settings_prompt_saved">Prompt oñeñongatu</string>
@@ -224,4 +224,8 @@
         <item quantity="one">%1$d ary ohóva ko ára</item>
         <item quantity="other">%1$d ary ohóva ko ára</item>
     </plurals>
+    <string name="feeds_block">Ejoko</string>
+    <string name="feeds_removed_from_feed">Nde oñemosẽ ko feed guive</string>
+    <string name="feeds_feed_deleted">Ko feed oñembogue</string>
+    <string name="feeds_settings_member_blocked">Irũ ojejoko</string>
 </resources>

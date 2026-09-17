@@ -226,4 +226,8 @@
         <item quantity="one">%1$d aasta tagasi täna</item>
         <item quantity="other">%1$d aastat tagasi täna</item>
     </plurals>
+    <string name="feeds_block">Blokeeri</string>
+    <string name="feeds_removed_from_feed">Sind eemaldati sellest voost</string>
+    <string name="feeds_feed_deleted">See voog kustutati</string>
+    <string name="feeds_settings_member_blocked">Liige blokeeritud</string>
 </resources>

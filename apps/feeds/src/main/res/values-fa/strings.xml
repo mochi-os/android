@@ -226,4 +226,8 @@
         <item quantity="one">امروز %1$d سال پیش</item>
         <item quantity="other">امروز %1$d سال پیش</item>
     </plurals>
+    <string name="feeds_block">مسدود کردن</string>
+    <string name="feeds_removed_from_feed">شما از این فید حذف شدید</string>
+    <string name="feeds_feed_deleted">این فید حذف شد</string>
+    <string name="feeds_settings_member_blocked">عضو مسدود شد</string>
 </resources>

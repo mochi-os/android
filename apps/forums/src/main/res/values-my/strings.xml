@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">မှားယွင်းသော သတင်းအချက်အလက်</string>
     <string name="forums_moderation_reason_offtopic">ခေါင်းစဉ်ပြင်ပ</string>
     <string name="forums_moderation_reason_other">အခြား</string>
+    <string name="forums_block">ပိတ်ဆို့မည်</string>
+    <string name="forums_removed_from_forum">သင်ကို ဤဖိုရမ်မှ ဖယ်ရှားလိုက်ပါပြီ</string>
+    <string name="forums_forum_deleted">ဤဖိုရမ်ကို ဖျက်လိုက်ပါပြီ</string>
+    <string name="forums_settings_member_blocked">အဖွဲ့ဝင် ပိတ်ဆို့ပြီးပါပြီ</string>
 </resources>

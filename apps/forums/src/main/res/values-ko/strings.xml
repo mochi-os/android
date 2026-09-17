@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">잘못된 정보</string>
     <string name="forums_moderation_reason_offtopic">주제와 무관</string>
     <string name="forums_moderation_reason_other">기타</string>
+    <string name="forums_block">차단</string>
+    <string name="forums_removed_from_forum">이 포럼에서 제거되었어요</string>
+    <string name="forums_forum_deleted">이 포럼이 삭제되었어요</string>
+    <string name="forums_settings_member_blocked">멤버를 차단했어요</string>
 </resources>

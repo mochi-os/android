@@ -204,7 +204,7 @@
     <plurals name="forums_new_posts">
         <item quantity="other">%d 則新貼文</item>
     </plurals>
-    <string name="forums_rss_feed">RSS 動態</string>
+    <string name="forums_rss_feed">RSS 訊息來源</string>
     <string name="forums_rss_mode_posts">貼文</string>
     <string name="forums_rss_mode_posts_comments">貼文和留言</string>
     <string name="forums_rss_copied">已複製 RSS URL 至剪貼簿</string>
@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">錯誤資訊</string>
     <string name="forums_moderation_reason_offtopic">離題</string>
     <string name="forums_moderation_reason_other">其他</string>
+    <string name="forums_block">封鎖</string>
+    <string name="forums_removed_from_forum">你已被移出此論壇</string>
+    <string name="forums_forum_deleted">此論壇已刪除</string>
+    <string name="forums_settings_member_blocked">已封鎖成員</string>
 </resources>

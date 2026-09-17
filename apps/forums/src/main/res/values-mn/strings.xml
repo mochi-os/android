@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Буруу мэдээлэл</string>
     <string name="forums_moderation_reason_offtopic">Сэдвийн гадуур</string>
     <string name="forums_moderation_reason_other">Бусад</string>
+    <string name="forums_block">Блоклох</string>
+    <string name="forums_removed_from_forum">Та энэ форумаас хасагдсан</string>
+    <string name="forums_forum_deleted">Энэ форум устгагдсан</string>
+    <string name="forums_settings_member_blocked">Гишүүн блоклогдсон</string>
 </resources>

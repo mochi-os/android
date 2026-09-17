@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Félretájékoztatás</string>
     <string name="forums_moderation_reason_offtopic">Témán kívüli</string>
     <string name="forums_moderation_reason_other">Egyéb</string>
+    <string name="forums_block">Blokkolás</string>
+    <string name="forums_removed_from_forum">Eltávolítottak erről a fórumról</string>
+    <string name="forums_forum_deleted">Ezt a fórumot törölték</string>
+    <string name="forums_settings_member_blocked">Tag blokkolva</string>
 </resources>

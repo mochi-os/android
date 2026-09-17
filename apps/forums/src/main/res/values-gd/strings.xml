@@ -332,4 +332,8 @@
     <string name="forums_moderation_reason_misinformation">Mì-fhiosrachadh</string>
     <string name="forums_moderation_reason_offtopic">Far-chuspair</string>
     <string name="forums_moderation_reason_other">Eile</string>
+    <string name="forums_block">Bac</string>
+    <string name="forums_removed_from_forum">Chaidh do thoirt air falbh bhon fhòram seo</string>
+    <string name="forums_forum_deleted">Chaidh am fòram seo a sguabadh às</string>
+    <string name="forums_settings_member_blocked">Chaidh am ball a bhacadh</string>
 </resources>

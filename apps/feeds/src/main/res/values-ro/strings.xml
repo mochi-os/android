@@ -233,4 +233,8 @@
         <item quantity="few">acum %1$d ani, astăzi</item>
         <item quantity="other">acum %1$d de ani, astăzi</item>
     </plurals>
+    <string name="feeds_block">Blochează</string>
+    <string name="feeds_removed_from_feed">Ai fost eliminat din acest flux</string>
+    <string name="feeds_feed_deleted">Acest flux a fost șters</string>
+    <string name="feeds_settings_member_blocked">Membru blocat</string>
 </resources>

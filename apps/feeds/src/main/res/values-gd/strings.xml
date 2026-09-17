@@ -242,4 +242,8 @@
         <item quantity="few">%1$d bliadhnaichean air ais an-diugh</item>
         <item quantity="other">%1$d bliadhna air ais an-diugh</item>
     </plurals>
+    <string name="feeds_block">Bac</string>
+    <string name="feeds_removed_from_feed">Chaidh do thoirt air falbh bhon inbhir seo</string>
+    <string name="feeds_feed_deleted">Chaidh an inbhir seo a sguabadh às</string>
+    <string name="feeds_settings_member_blocked">Chaidh am ball a bhacadh</string>
 </resources>

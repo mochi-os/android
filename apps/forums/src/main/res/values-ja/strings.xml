@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">誤情報</string>
     <string name="forums_moderation_reason_offtopic">トピック外</string>
     <string name="forums_moderation_reason_other">その他</string>
+    <string name="forums_block">ブロック</string>
+    <string name="forums_removed_from_forum">このフォーラムから削除されました</string>
+    <string name="forums_forum_deleted">このフォーラムは削除されました</string>
+    <string name="forums_settings_member_blocked">メンバーをブロックしました</string>
 </resources>

@@ -228,4 +228,8 @@
         <item quantity="one">fa %1$d any, avui</item>
         <item quantity="other">fa %1$d anys, avui</item>
     </plurals>
+    <string name="feeds_block">Bloqueja</string>
+    <string name="feeds_removed_from_feed">T\'han eliminat d\'aquesta font</string>
+    <string name="feeds_feed_deleted">Aquesta font s\'ha suprimit</string>
+    <string name="feeds_settings_member_blocked">Membre bloquejat</string>
 </resources>

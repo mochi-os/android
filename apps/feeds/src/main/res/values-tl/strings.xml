@@ -226,4 +226,8 @@
         <item quantity="one">%1$d taon na ang nakalipas ngayong araw</item>
         <item quantity="other">%1$d taon na ang nakalipas ngayong araw</item>
     </plurals>
+    <string name="feeds_block">I-block</string>
+    <string name="feeds_removed_from_feed">Tinanggal ka sa feed na ito</string>
+    <string name="feeds_feed_deleted">Na-delete ang feed na ito</string>
+    <string name="feeds_settings_member_blocked">Na-block ang member</string>
 </resources>

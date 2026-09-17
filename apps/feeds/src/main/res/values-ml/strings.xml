@@ -226,4 +226,8 @@
         <item quantity="one">ഇന്ന് %1$d വർഷം മുമ്പ്</item>
         <item quantity="other">ഇന്ന് %1$d വർഷം മുമ്പ്</item>
     </plurals>
+    <string name="feeds_block">ബ്ലോക്ക് ചെയ്യുക</string>
+    <string name="feeds_removed_from_feed">നിങ്ങളെ ഈ ഫീഡിൽ നിന്ന് നീക്കം ചെയ്തു</string>
+    <string name="feeds_feed_deleted">ഈ ഫീഡ് ഇല്ലാതാക്കി</string>
+    <string name="feeds_settings_member_blocked">അംഗത്തെ ബ്ലോക്ക് ചെയ്തു</string>
 </resources>

@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">錯誤資訊</string>
     <string name="forums_moderation_reason_offtopic">離題</string>
     <string name="forums_moderation_reason_other">其他</string>
+    <string name="forums_block">封鎖</string>
+    <string name="forums_forum_deleted">呢個討論區已經刪除</string>
+    <string name="forums_removed_from_forum">你已經被移除出呢個討論區</string>
+    <string name="forums_settings_member_blocked">已封鎖成員</string>
 </resources>

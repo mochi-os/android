@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">Thông tin sai lệch</string>
     <string name="forums_moderation_reason_offtopic">Ngoài chủ đề</string>
     <string name="forums_moderation_reason_other">Khác</string>
+    <string name="forums_block">Chặn</string>
+    <string name="forums_removed_from_forum">Bạn đã bị xóa khỏi diễn đàn này</string>
+    <string name="forums_forum_deleted">Diễn đàn này đã bị xóa</string>
+    <string name="forums_settings_member_blocked">Đã chặn thành viên</string>
 </resources>

@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Feilinformasjon</string>
     <string name="forums_moderation_reason_offtopic">Utenfor tema</string>
     <string name="forums_moderation_reason_other">Annet</string>
+    <string name="forums_block">Blokker</string>
+    <string name="forums_removed_from_forum">Du ble fjernet fra dette forumet</string>
+    <string name="forums_forum_deleted">Dette forumet ble slettet</string>
+    <string name="forums_settings_member_blocked">Medlem blokkert</string>
 </resources>

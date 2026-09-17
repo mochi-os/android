@@ -312,6 +312,7 @@
     <string name="forums_settings_access_updated">Access updated</string>
     <string name="forums_settings_access_revoked">Access revoked</string>
     <string name="forums_settings_member_removed">Member removed</string>
+    <string name="forums_settings_member_blocked">Member blocked</string>
     <string name="forums_settings_ai_updated">AI settings updated</string>
     <string name="forums_settings_prompt_saved">Prompt saved</string>
     <string name="forums_settings_section_identity">Identity</string>
@@ -332,6 +333,9 @@
     <string name="forums_settings_delete_title">Delete forum</string>
     <string name="forums_settings_delete_message">This will permanently delete the forum and all its posts. This cannot be undone.</string>
     <string name="forums_forum_not_found">Forum not found</string>
+    <string name="forums_removed_from_forum">You were removed from this forum</string>
+    <string name="forums_forum_deleted">This forum was deleted</string>
+    <string name="forums_block">Block</string>
     <string name="forums_post_not_found">Post not found</string>
     <string name="forums_saved_title">Saved</string>
     <string name="forums_saved_save">Save for later</string>

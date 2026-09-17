@@ -29,6 +29,7 @@ import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -166,6 +167,12 @@ class FeedViewModel @Inject constructor(
 
     private val _isNotFound = MutableStateFlow(false)
     val isNotFound: StateFlow<Boolean> = _isNotFound.asStateFlow()
+
+    // Set when the owner removes this user from the feed, or deletes it, while
+    // the screen is open: the message shown in place of the feed. The local
+    // copy is already gone, so a reload would only fail.
+    private val _gone = MutableStateFlow<Int?>(null)
+    val gone: StateFlow<Int?> = _gone.asStateFlow()
 
     private val _currentSort = MutableStateFlow("interests")
     val currentSort: StateFlow<String> = _currentSort.asStateFlow()
@@ -923,6 +930,8 @@ class FeedViewModel @Inject constructor(
         // Server event types are slash-namespaced (feeds.star commit hook
         // + handlers); the old underscore names never matched anything.
         when (event.type) {
+            "feed/removed" -> _gone.value = R.string.feeds_removed_from_feed
+            "feed/deleted" -> _gone.value = R.string.feeds_feed_deleted
             "post/create" -> newPosts.record(event.post) { id ->
                 _posts.value.any { it.id == id }
             }

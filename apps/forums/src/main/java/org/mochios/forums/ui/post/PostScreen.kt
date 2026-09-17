@@ -337,6 +337,12 @@ fun PostScreen(
                         CircularProgressIndicator()
                     }
                 }
+                uiState.gone != null -> {
+                    NotFoundState(
+                        title = stringResource(uiState.gone!!),
+                        onBack = onBack,
+                    )
+                }
                 uiState.error is MochiError.NotFoundError && uiState.post.id.isEmpty() -> {
                     NotFoundState(
                         title = stringResource(R.string.forums_post_not_found),

@@ -242,4 +242,8 @@
         <item quantity="many">%1$d гадоў таму сёння</item>
         <item quantity="other">%1$d года таму сёння</item>
     </plurals>
+    <string name="feeds_block">Заблакаваць</string>
+    <string name="feeds_removed_from_feed">Вас выдалілі з гэтай стужкі</string>
+    <string name="feeds_feed_deleted">Гэтая стужка была выдалена</string>
+    <string name="feeds_settings_member_blocked">Удзельнік заблакаваны</string>
 </resources>

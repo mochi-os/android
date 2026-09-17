@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Dezinformata</string>
     <string name="forums_moderation_reason_offtopic">Jashtë teme</string>
     <string name="forums_moderation_reason_other">Tjetër</string>
+    <string name="forums_block">Blloko</string>
+    <string name="forums_removed_from_forum">U hoqe nga ky forum</string>
+    <string name="forums_forum_deleted">Ky forum u fshi</string>
+    <string name="forums_settings_member_blocked">Anëtari u bllokua</string>
 </resources>

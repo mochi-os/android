@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">දායකත්වය ඉවත් කරන්න</string>
     <string name="wikis_unsubscribe_success">දායකත්වය ඉවත් කරන ලදී</string>
     <string name="wikis_subscribe_failed">දායක වීමට අසමත් විය</string>
-    <string name="wikis_rss_menu">RSS පෝෂණය</string>
+    <string name="wikis_rss_menu">RSS සංග්‍රහය</string>
     <string name="wikis_rss_changes">වෙනස්කම්</string>
     <string name="wikis_rss_comments">අදහස්</string>
     <string name="wikis_rss_both">වෙනස්කම් සහ අදහස්</string>

@@ -240,4 +240,8 @@
         <item quantity="many">%1$d lat temu, dziś</item>
         <item quantity="other">%1$d roku temu, dziś</item>
     </plurals>
+    <string name="feeds_block">Zablokuj</string>
+    <string name="feeds_removed_from_feed">Usunięto Cię z tego kanału</string>
+    <string name="feeds_feed_deleted">Ten kanał został usunięty</string>
+    <string name="feeds_settings_member_blocked">Zablokowano członka</string>
 </resources>

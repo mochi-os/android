@@ -226,4 +226,8 @@
         <item quantity="one">%1$d jaar gelede vandag</item>
         <item quantity="other">%1$d jaar gelede vandag</item>
     </plurals>
+    <string name="feeds_block">Blokkeer</string>
+    <string name="feeds_removed_from_feed">Jy is uit hierdie feed verwyder</string>
+    <string name="feeds_feed_deleted">Hierdie feed is verwyder</string>
+    <string name="feeds_settings_member_blocked">Lid geblokkeer</string>
 </resources>

@@ -233,4 +233,8 @@
         <item quantity="one">pirms %1$d gada šodien</item>
         <item quantity="other">pirms %1$d gadiem šodien</item>
     </plurals>
+    <string name="feeds_block">Bloķēt</string>
+    <string name="feeds_removed_from_feed">Jūs noņēma no šīs plūsmas</string>
+    <string name="feeds_feed_deleted">Šī plūsma tika dzēsta</string>
+    <string name="feeds_settings_member_blocked">Dalībnieks bloķēts</string>
 </resources>

@@ -254,4 +254,8 @@
         <item quantity="many">قبل %1$d عامًا في هذا اليوم</item>
         <item quantity="other">قبل %1$d عام في هذا اليوم</item>
     </plurals>
+    <string name="feeds_block">حظر</string>
+    <string name="feeds_removed_from_feed">تمت إزالتك من هذه التغذية</string>
+    <string name="feeds_feed_deleted">تم حذف هذه التغذية</string>
+    <string name="feeds_settings_member_blocked">تم حظر العضو</string>
 </resources>

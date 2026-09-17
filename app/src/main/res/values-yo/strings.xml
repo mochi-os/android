@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Àwọn ìjì</string>
+    <string name="launcher_feeds">Àwọn feed</string>
     <string name="launcher_chat">Ìjíròrò</string>
     <string name="launcher_forums">Àwọn forum</string>
     <string name="launcher_projects">Àwọn project</string>

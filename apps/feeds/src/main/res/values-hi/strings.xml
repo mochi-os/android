@@ -226,4 +226,8 @@
         <item quantity="one">आज से %1$d साल पहले</item>
         <item quantity="other">आज से %1$d साल पहले</item>
     </plurals>
+    <string name="feeds_block">ब्लॉक करें</string>
+    <string name="feeds_removed_from_feed">आपको इस फ़ीड से हटा दिया गया</string>
+    <string name="feeds_feed_deleted">यह फ़ीड हटा दिया गया</string>
+    <string name="feeds_settings_member_blocked">सदस्य ब्लॉक किया गया</string>
 </resources>

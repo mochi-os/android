@@ -226,4 +226,8 @@
         <item quantity="one">आजु से %1$d साल पहिले</item>
         <item quantity="other">आजु से %1$d साल पहिले</item>
     </plurals>
+    <string name="feeds_block">ब्लॉक करीं</string>
+    <string name="feeds_removed_from_feed">आप के ई फीड से हटा दिहल गइल</string>
+    <string name="feeds_feed_deleted">ई फीड मेटा गइल</string>
+    <string name="feeds_settings_member_blocked">सदस्य ब्लॉक हो गइल</string>
 </resources>

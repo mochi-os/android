@@ -332,4 +332,8 @@
     <string name="forums_moderation_reason_misinformation">Dezinformacja</string>
     <string name="forums_moderation_reason_offtopic">Nie na temat</string>
     <string name="forums_moderation_reason_other">Inne</string>
+    <string name="forums_block">Zablokuj</string>
+    <string name="forums_removed_from_forum">Usunięto Cię z tego forum</string>
+    <string name="forums_forum_deleted">To forum zostało usunięte</string>
+    <string name="forums_settings_member_blocked">Zablokowano członka</string>
 </resources>

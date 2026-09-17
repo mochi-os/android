@@ -509,6 +509,21 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
+    // The "No access" level offered on the row: a deny on every level, and the
+    // server drops the subscription with it.
+    fun blockMember(memberEntityId: String) {
+        viewModelScope.launch {
+            try {
+                repository.setAccess(accessFeedId(), memberEntityId, "none")
+                _actionMessage.value = R.string.feeds_settings_member_blocked
+                loadMembers()
+                loadAccessRules()
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            }
+        }
+    }
+
     // --- AI ---
 
     fun setAiMode(mode: String) {

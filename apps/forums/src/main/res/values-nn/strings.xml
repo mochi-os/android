@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Feilinformasjon</string>
     <string name="forums_moderation_reason_offtopic">Utanom emnet</string>
     <string name="forums_moderation_reason_other">Anna</string>
+    <string name="forums_block">Blokker</string>
+    <string name="forums_removed_from_forum">Du vart fjerna frå dette forumet</string>
+    <string name="forums_forum_deleted">Dette forumet vart sletta</string>
+    <string name="forums_settings_member_blocked">Medlem blokkert</string>
 </resources>
