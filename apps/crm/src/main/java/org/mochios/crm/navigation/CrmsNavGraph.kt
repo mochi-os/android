@@ -20,6 +20,7 @@ import org.mochios.crm.ui.design.CreateViewScreen
 import org.mochios.crm.ui.design.DesignScreen
 import org.mochios.crm.ui.design.EditViewScreen
 import org.mochios.crm.ui.design.FieldDetailScreen
+import org.mochios.crm.ui.design.OptionScreen
 import org.mochios.crm.ui.find.FindCrmsScreen
 import org.mochios.crm.ui.crm.CreateObjectScreen
 import org.mochios.crm.ui.crm.CrmScreen
@@ -45,6 +46,10 @@ object CrmsApp {
     const val CRM_DESIGN_VIEW = "crm/crm/{crmId}/design/view/{viewId}"
     const val CRM_DESIGN_CREATE_VIEW = "crm/crm/{crmId}/design/create-view"
     const val CRM_DESIGN_CREATE_FIELD = "crm/crm/{crmId}/design/class/{classId}/create-field"
+    const val CRM_DESIGN_OPTION =
+        "crm/crm/{crmId}/design/class/{classId}/field/{fieldId}/option?optionId={optionId}"
+    const val CRM_ADD_COLUMN =
+        "crm/crm/{crmId}/board/class/{classId}/field/{fieldId}/add-column"
     const val CRM_DESIGN_FIELD = "crm/crm/{crmId}/design/class/{classId}/field/{fieldId}"
     // Deliberately not `crm/crm/{crmId}/object/create`, which the CRM_OBJECT
     // pattern above also matches, with objectId='create'.
@@ -62,6 +67,10 @@ object CrmsApp {
     fun crmDesignCreateView(crmId: String) = "crm/crm/$crmId/design/create-view"
     fun crmDesignCreateField(crmId: String, classId: String) =
         "crm/crm/$crmId/design/class/$classId/create-field"
+    fun crmDesignOption(crmId: String, classId: String, fieldId: String, optionId: String = "") =
+        "crm/crm/$crmId/design/class/$classId/field/$fieldId/option?optionId=$optionId"
+    fun crmAddColumn(crmId: String, classId: String, fieldId: String) =
+        "crm/crm/$crmId/board/class/$classId/field/$fieldId/add-column"
     fun crmDesignField(crmId: String, classId: String, fieldId: String) =
         "crm/crm/$crmId/design/class/$classId/field/$fieldId"
 
@@ -117,6 +126,9 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
+            onAddColumn = { id, classId, fieldId ->
+                navController.navigate(CrmsApp.crmAddColumn(id, classId, fieldId))
+            },
             onCreateObject = { presetValues ->
                 navController.navigate(CrmsApp.createObject(crmId, presetValues))
             },
@@ -154,6 +166,9 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
             onSettings = { id -> navController.navigate(CrmsApp.crmSettings(id)) },
             onDesign = { id -> navController.navigate(CrmsApp.crmDesign(id)) },
+            onAddColumn = { id, classId, fieldId ->
+                navController.navigate(CrmsApp.crmAddColumn(id, classId, fieldId))
+            },
             onCreateObject = { presetValues ->
                 navController.navigate(CrmsApp.createObject(crmId, presetValues))
             },
@@ -279,9 +294,53 @@ fun NavGraphBuilder.crmsNavGraph(
             navArgument("classId") { type = NavType.StringType },
             navArgument("fieldId") { type = NavType.StringType }
         )
-    ) {
+    ) { backStackEntry ->
+        val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
+        val classId = backStackEntry.arguments?.getString("classId").orEmpty()
+        val fieldId = backStackEntry.arguments?.getString("fieldId").orEmpty()
         FieldDetailScreen(
             onBack = { navController.popBackStack() },
+            onAddOption = {
+                navController.navigate(CrmsApp.crmDesignOption(crmId, classId, fieldId))
+            },
+            onEditOption = { optionId ->
+                navController.navigate(
+                    CrmsApp.crmDesignOption(crmId, classId, fieldId, optionId)
+                )
+            },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_OPTION,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType },
+            navArgument("fieldId") { type = NavType.StringType },
+            navArgument("optionId") {
+                type = NavType.StringType
+                defaultValue = ""
+            }
+        )
+    ) {
+        OptionScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_ADD_COLUMN,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType },
+            navArgument("fieldId") { type = NavType.StringType }
+        )
+    ) {
+        OptionScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStack() },
+            isColumn = true,
         )
     }
 

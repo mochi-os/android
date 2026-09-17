@@ -19,14 +19,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.material.icons.Icons
@@ -73,6 +70,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -89,6 +87,8 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
@@ -96,7 +96,6 @@ import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
@@ -108,7 +107,6 @@ import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.NotFoundState
@@ -138,6 +136,7 @@ fun ProjectScreen(
     onCreateProject: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
+    onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit = { _, _ -> },
     onOpenNotifications: () -> Unit = {},
@@ -246,6 +245,7 @@ fun ProjectScreen(
                     onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                     onSettings = onSettings,
                     onDesign = onDesign,
+                    onAddColumn = onAddColumn,
                     onViewDiff = onViewDiff,
                     onCreateObject = onCreateObject,
                     onOpenNotifications = onOpenNotifications,
@@ -494,6 +494,7 @@ private fun ProjectContent(
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
+    onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit,
     onOpenNotifications: () -> Unit,
@@ -504,7 +505,14 @@ private fun ProjectContent(
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
-    var showAddColumn by remember { mutableStateOf(false) }
+    var columnPending by rememberSaveable { mutableStateOf(false) }
+
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        if (columnPending) {
+            columnPending = false
+            viewModel.refresh()
+        }
+    }
 
     val context = LocalContext.current
     val shareTitle = stringResource(R.string.projects_share_link_title)
@@ -697,7 +705,16 @@ private fun ProjectContent(
                                         text = { Text(stringResource(R.string.projects_board_add_column)) },
                                         onClick = {
                                             showOverflow = false
-                                            showAddColumn = true
+                                            val fieldId = activeView.columns
+                                            val classId = details?.fields?.entries
+                                                ?.firstOrNull { (_, fields) ->
+                                                    fields.any { field -> field.id == fieldId }
+                                                }
+                                                ?.key
+                                            if (classId != null) {
+                                                columnPending = true
+                                                onAddColumn(viewModel.projectId, classId, fieldId)
+                                            }
                                         },
                                         leadingIcon = { Icon(Icons.Outlined.ViewColumn, contentDescription = null) },
                                     )
@@ -835,19 +852,6 @@ private fun ProjectContent(
         }
     }
 
-    // Add-column dialog (board views). Creates a new option on the board's
-    // grouping field, mirroring web's overflow "Add column".
-    if (showAddColumn && activeView != null && activeView.columns.isNotBlank()) {
-        val columnFieldId = activeView.columns
-        AddColumnDialog(
-            onDismiss = { showAddColumn = false },
-            onAdd = { name, colour ->
-                viewModel.addColumnOption(columnFieldId, name, colour)
-                showAddColumn = false
-            }
-        )
-    }
-
     // Object detail sheet
     if (uiState.selectedObjectId != null && details != null) {
         ObjectDetailSheet(
@@ -906,51 +910,6 @@ private fun builtInSortOptions(): List<Pair<String, String>> = listOf(
     "created" to stringResource(R.string.projects_sort_created),
     "updated" to stringResource(R.string.projects_sort_updated)
 )
-
-// Add a new board column (= a new option on the board's grouping field).
-// Name + a colour, mirroring web's OptionDialog used for "Add column". Boards
-// render the option colour, not its icon, so no icon field here.
-@Composable
-private fun AddColumnDialog(
-    onDismiss: () -> Unit,
-    onAdd: (name: String, colour: String?) -> Unit,
-) {
-    var name by remember { mutableStateOf("") }
-    var colour by remember { mutableStateOf("#3b82f6") }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.projects_board_add_column),
-        content = {
-            // The picker is taller than the dialog on a short screen, so the
-            // body scrolls. Its saturation field consumes its own drags, so
-            // dragging inside it doesn't scroll the dialog out from under it.
-            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                MochiTextField(
-                    value = name,
-                    onValueChange = { value -> name = value },
-                    label = { Text(stringResource(R.string.projects_field_name)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(
-                    stringResource(R.string.projects_option_color),
-                    style = MaterialTheme.typography.labelMedium
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                ColorPicker(
-                    hex = colour,
-                    onHexChange = { hex -> colour = hex },
-                )
-            }
-        },
-        confirmText = stringResource(MochiR.string.common_add),
-        onConfirm = { onAdd(name.trim(), colour.ifBlank { null }) },
-        confirmEnabled = name.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}
 
 /** Opens the system share sheet with the project's [link]. */
 private fun shareProjectLink(context: Context, link: String, title: String) {

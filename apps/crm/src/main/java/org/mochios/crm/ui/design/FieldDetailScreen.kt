@@ -45,7 +45,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -54,7 +53,6 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
-import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmField
 import org.mochios.android.R as MochiR
 import androidx.compose.foundation.layout.Box
@@ -106,6 +104,8 @@ private fun parseColor(hex: String): Color {
 @Composable
 fun FieldDetailScreen(
     onBack: () -> Unit,
+    onAddOption: () -> Unit,
+    onEditOption: (String) -> Unit,
     viewModel: FieldDetailViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -175,8 +175,6 @@ fun FieldDetailScreen(
             var editPattern by remember(field.id) { mutableStateOf(field.pattern) }
             var editMinlength by remember(field.id) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
             var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
-            var showAddOptionDialog by remember { mutableStateOf(false) }
-            var editingOption by remember { mutableStateOf<FieldOption?>(null) }
             var showDeleteConfirm by remember { mutableStateOf(false) }
 
             Column(
@@ -383,7 +381,7 @@ fun FieldDetailScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(stringResource(R.string.crm_field_options), style = MaterialTheme.typography.titleSmall)
-                        MochiIconButton(onClick = { showAddOptionDialog = true }) {
+                        MochiIconButton(onClick = onAddOption) {
                             Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_field_add_option))
                         }
                     }
@@ -392,7 +390,7 @@ fun FieldDetailScreen(
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clickable { editingOption = option }
+                                .clickable { onEditOption(option.id) }
                                 .padding(vertical = 12.dp, horizontal = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
@@ -418,7 +416,7 @@ fun FieldDetailScreen(
                                 modifier = Modifier.weight(1f)
                             )
                             MochiIconButton(
-                                onClick = { editingOption = option },
+                                onClick = { onEditOption(option.id) },
                                 modifier = Modifier.size(32.dp)
                             ) {
                                 Icon(
@@ -468,34 +466,6 @@ fun FieldDetailScreen(
                 }
             }
 
-            if (showAddOptionDialog) {
-                OptionDialog(
-                    title = stringResource(R.string.crm_option_add),
-                    initialName = "",
-                    initialColour = "",
-                    initialIcon = "",
-                    onDismiss = { showAddOptionDialog = false },
-                    onSave = { name, colour, icon ->
-                        viewModel.createOption(name, colour, icon)
-                        showAddOptionDialog = false
-                    }
-                )
-            }
-
-            editingOption?.let { option ->
-                OptionDialog(
-                    title = stringResource(R.string.crm_option_edit),
-                    initialName = option.name,
-                    initialColour = option.colour,
-                    initialIcon = option.icon,
-                    onDismiss = { editingOption = null },
-                    onSave = { name, colour, icon ->
-                        viewModel.updateOption(option.id, name, colour, icon)
-                        editingOption = null
-                    }
-                )
-            }
-
             if (showDeleteConfirm) {
                 MochiAlertDialog(
                     onDismissRequest = { showDeleteConfirm = false },
@@ -531,61 +501,4 @@ private fun FlagRow(label: String, checked: Boolean, onCheckedChange: (Boolean) 
         Spacer(modifier = Modifier.width(12.dp))
         Text(label, style = MaterialTheme.typography.bodyMedium)
     }
-}
-
-@Composable
-private fun OptionDialog(
-    title: String,
-    initialName: String,
-    initialColour: String,
-    initialIcon: String = "",
-    onDismiss: () -> Unit,
-    onSave: (name: String, colour: String?, icon: String?) -> Unit,
-) {
-    var name by remember { mutableStateOf(initialName) }
-    var colour by remember { mutableStateOf(initialColour) }
-    var icon by remember { mutableStateOf(initialIcon) }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = title,
-        content = {
-            // The picker is taller than the dialog on a short screen, so the
-            // body scrolls. Its saturation field consumes its own drags, so
-            // dragging inside it doesn't scroll the dialog out from under it.
-            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                MochiTextField(
-                    value = name,
-                    onValueChange = { value -> name = value },
-                    label = { Text(stringResource(R.string.crm_field_name)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(
-                    stringResource(R.string.crm_option_color),
-                    style = MaterialTheme.typography.labelMedium
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                ColorPicker(
-                    hex = colour,
-                    onHexChange = { hex -> colour = hex },
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(stringResource(R.string.crm_option_icon), style = MaterialTheme.typography.labelMedium)
-                Spacer(modifier = Modifier.height(8.dp))
-                MochiTextField(
-                    value = icon,
-                    onValueChange = { icon = it },
-                    placeholder = { Text(stringResource(R.string.crm_option_icon_placeholder)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
-        },
-        confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = { onSave(name, colour.ifBlank { null }, icon.ifBlank { null }) },
-        confirmEnabled = name.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
 }

@@ -128,30 +128,6 @@ class FieldDetailViewModel @Inject constructor(
         }
     }
 
-    /** Adds an option to an enumerated field. */
-    fun createOption(name: String, colour: String?, icon: String? = null) {
-        viewModelScope.launch {
-            try {
-                repository.createOption(crmId, classId, fieldId, name, colour, icon)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    /** Renames or recolours an existing option. */
-    fun updateOption(optionId: String, name: String?, colour: String?, icon: String?) {
-        viewModelScope.launch {
-            try {
-                repository.updateOption(crmId, classId, fieldId, optionId, name, colour, icon)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     /** Removes an option from an enumerated field. */
     fun deleteOption(optionId: String) {
         viewModelScope.launch {
