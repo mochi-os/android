@@ -208,7 +208,7 @@ class PageViewModel @Inject constructor(
                     _events.emit(PageViewEvent.RssExists(mode))
                     return@launch
                 }
-                val url = "$serverUrl/wikis/$wikiId/-/rss?token=${answer.token}"
+                val url = "$serverUrl/wikis/$wikiId/rss?token=${answer.token}"
                 _events.emit(PageViewEvent.CopyRssUrl(url, regenerate))
             } catch (e: Exception) {
                 _events.emit(PageViewEvent.ShowError(e.toMochiError()))

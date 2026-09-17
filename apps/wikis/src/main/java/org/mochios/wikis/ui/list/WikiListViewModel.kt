@@ -302,7 +302,7 @@ class WikiListViewModel @Inject constructor(
             if (answer.exists) {
                 Result.success(null)
             } else {
-                Result.success("$serverUrl/wikis/-/rss?token=${answer.token}")
+                Result.success("$serverUrl/wikis/rss?token=${answer.token}")
             }
         } catch (e: Exception) {
             Result.failure(e)

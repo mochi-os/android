@@ -238,10 +238,10 @@ class FeedViewModel @Inject constructor(
             try {
                 val url = if (isAllFeeds) {
                     val token = repository.getRssToken("*", mode)
-                    "$serverUrl/feeds/-/rss?token=$token"
+                    "$serverUrl/feeds/rss?token=$token"
                 } else {
                     val token = repository.getRssToken(feedId, mode)
-                    "$serverUrl/feeds/$feedId/-/rss?token=$token"
+                    "$serverUrl/feeds/$feedId/rss?token=$token"
                 }
                 _actionEvents.emit(FeedActionEvent.RssUrlReady(url))
             } catch (e: Exception) {

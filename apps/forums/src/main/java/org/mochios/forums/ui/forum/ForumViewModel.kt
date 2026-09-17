@@ -505,7 +505,7 @@ class ForumViewModel @Inject constructor(
                 val entity = if (isAll) "*" else forumId
                 val response = repository.getRssToken(entity, mode)
                 val serverUrl = sessionManager.getServerUrlBlocking()
-                val path = if (isAll) "forums/-/rss" else "forums/$forumId/-/rss"
+                val path = if (isAll) "forums/rss" else "forums/$forumId/rss"
                 val url = "$serverUrl/$path?token=${response.token}"
                 _events.emit(ForumEvent.CopyRssUrl(url))
             } catch (e: Exception) {
