@@ -465,7 +465,7 @@ class ProjectsRepository @Inject constructor(
         api.getClasses(projectId).unwrap().classes
 
     suspend fun createClass(projectId: String, name: String): ProjectClass =
-        api.createClass(projectId, name).unwrap().`class`
+        api.createClass(projectId, name).unwrap()
 
     suspend fun updateClass(projectId: String, classId: String, name: String? = null, title: String? = null, requests: String? = null) {
         api.updateClass(projectId, classId, UpdateClassRequest(name = name, title = title, requests = requests)).unwrap()
