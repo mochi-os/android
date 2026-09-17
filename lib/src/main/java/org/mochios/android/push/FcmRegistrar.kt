@@ -13,6 +13,8 @@ import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -34,6 +36,8 @@ import kotlin.coroutines.resumeWithException
 object FcmRegistrar {
 
     private const val TAG = "MochiFcmRegistrar"
+
+    private val registerMutex = Mutex()
 
     /**
      * How a registration ended. FRESH and REFUSED made no request: the memo
@@ -79,8 +83,21 @@ object FcmRegistrar {
      * Register or refresh this installation with the server, resolving the
      * device name itself so [MochiFirebaseMessagingService.onRegistered] can
      * reuse it.
+     *
+     * Serialized: [connect] and [MochiFirebaseMessagingService.onRegistered]
+     * both land here for the same installation, and the one that waits reads
+     * the memo the other just wrote instead of posting a second time.
      */
     suspend fun register(
+        context: Context,
+        client: OkHttpClient,
+        server: String,
+        installationId: String,
+    ): Outcome = registerMutex.withLock {
+        registerLocked(context, client, server, installationId)
+    }
+
+    private suspend fun registerLocked(
         context: Context,
         client: OkHttpClient,
         server: String,
