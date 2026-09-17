@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Notoʻgʻri maʼlumot</string>
     <string name="forums_moderation_reason_offtopic">Mavzudan tashqari</string>
     <string name="forums_moderation_reason_other">Boshqa</string>
+    <string name="forums_block">Bloklash</string>
+    <string name="forums_removed_from_forum">Siz bu forumdan chiqarildingiz</string>
+    <string name="forums_forum_deleted">Bu forum oʻchirildi</string>
+    <string name="forums_settings_member_blocked">Aʼzo bloklandi</string>
 </resources>

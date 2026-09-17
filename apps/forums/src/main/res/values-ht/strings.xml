@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Move enfòmasyon</string>
     <string name="forums_moderation_reason_offtopic">Andeyò sijè a</string>
     <string name="forums_moderation_reason_other">Lòt</string>
+    <string name="forums_block">Bloke</string>
+    <string name="forums_removed_from_forum">Yo retire ou nan fowòm sa a</string>
+    <string name="forums_forum_deleted">Fowòm sa a te efase</string>
+    <string name="forums_settings_member_blocked">Manm bloke</string>
 </resources>

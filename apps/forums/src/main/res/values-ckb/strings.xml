@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">زانیاری هەڵە</string>
     <string name="forums_moderation_reason_offtopic">دەرەوەی بابەت</string>
     <string name="forums_moderation_reason_other">هیتر</string>
+    <string name="forums_block">بلۆککردن</string>
+    <string name="forums_removed_from_forum">تۆ لەم فۆڕەمە لابردرایت</string>
+    <string name="forums_forum_deleted">ئەم فۆڕەمە سڕایەوە</string>
+    <string name="forums_settings_member_blocked">ئەندام بلۆککرا</string>
 </resources>

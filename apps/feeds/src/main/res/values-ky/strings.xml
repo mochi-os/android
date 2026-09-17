@@ -226,4 +226,8 @@
         <item quantity="one">бүгүн %1$d жыл мурун</item>
         <item quantity="other">бүгүн %1$d жыл мурун</item>
     </plurals>
+    <string name="feeds_block">Бөгөттөө</string>
+    <string name="feeds_removed_from_feed">Сиз бул лентадан чыгарылдыңыз</string>
+    <string name="feeds_feed_deleted">Бул лента өчүрүлдү</string>
+    <string name="feeds_settings_member_blocked">Мүчө бөгөттөлдү</string>
 </resources>

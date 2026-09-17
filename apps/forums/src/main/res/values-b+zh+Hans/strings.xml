@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">错误信息</string>
     <string name="forums_moderation_reason_offtopic">离题</string>
     <string name="forums_moderation_reason_other">其他</string>
+    <string name="forums_block">屏蔽</string>
+    <string name="forums_removed_from_forum">你已被移出此论坛</string>
+    <string name="forums_forum_deleted">此论坛已删除</string>
+    <string name="forums_settings_member_blocked">已屏蔽成员</string>
 </resources>

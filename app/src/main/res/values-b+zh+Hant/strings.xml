@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">摘要</string>
+    <string name="launcher_feeds">訊息來源</string>
     <string name="launcher_chat">聊天</string>
     <string name="launcher_forums">論壇</string>
     <string name="launcher_projects">專案</string>

@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">פֿאַלשע אינפֿאָרמאַציע</string>
     <string name="forums_moderation_reason_offtopic">ניט-טעמע</string>
     <string name="forums_moderation_reason_other">אַנדער</string>
+    <string name="forums_block">בלאָקירן</string>
+    <string name="forums_removed_from_forum">איר זײַט אַרויסגענומען געוואָרן פֿון דעם פֿאָרום</string>
+    <string name="forums_forum_deleted">דער פֿאָרום איז אויסגעמעקט געוואָרן</string>
+    <string name="forums_settings_member_blocked">מיטגליד בלאָקירט</string>
 </resources>

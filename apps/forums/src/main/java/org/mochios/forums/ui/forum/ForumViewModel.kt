@@ -27,6 +27,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.forums.R
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
@@ -51,6 +52,9 @@ data class ForumUiState(
     val currentTag: String? = null,
     /** The server has an AI account; the sort menu offers "AI" only then. */
     val hasAi: Boolean = false,
+    /** Shown in place of the forum once its owner removed this user from it,
+     *  or deleted it, while the screen was open. The replica is already gone. */
+    @StringRes val gone: Int? = null,
 )
 
 /**
@@ -167,6 +171,18 @@ class ForumViewModel @Inject constructor(
         if (forumKey.isBlank() || subscriptionId != null) return
         val serverUrl = sessionManager.getServerUrlBlocking()
         subscriptionId = webSocket.subscribe(serverUrl, forumKey, app = "forums") { event ->
+            // The owner removed this user from the forum, or deleted it. The
+            // local replica is already purged, so a refresh would only fail.
+            if (event.type == "forum/removed" || event.type == "forum/deleted") {
+                _uiState.value = _uiState.value.copy(
+                    gone = if (event.type == "forum/removed") {
+                        R.string.forums_removed_from_forum
+                    } else {
+                        R.string.forums_forum_deleted
+                    },
+                )
+                return@subscribe
+            }
             // New posts queue behind the pill so the list doesn't shift;
             // everything else mutates visible items, so refresh silently.
             if (event.type == "post/create") {
@@ -489,7 +505,7 @@ class ForumViewModel @Inject constructor(
                 val entity = if (isAll) "*" else forumId
                 val response = repository.getRssToken(entity, mode)
                 val serverUrl = sessionManager.getServerUrlBlocking()
-                val path = if (isAll) "forums/-/rss" else "forums/$forumId/-/rss"
+                val path = if (isAll) "forums/rss" else "forums/$forumId/rss"
                 val url = "$serverUrl/$path?token=${response.token}"
                 _events.emit(ForumEvent.CopyRssUrl(url))
             } catch (e: Exception) {

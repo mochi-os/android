@@ -331,4 +331,8 @@
     <string name="forums_moderation_reason_misinformation">Dezinformacija</string>
     <string name="forums_moderation_reason_offtopic">Off-topic</string>
     <string name="forums_moderation_reason_other">Ostalo</string>
+    <string name="forums_block">Blokiraj</string>
+    <string name="forums_removed_from_forum">Uklonjeni ste iz ovog foruma</string>
+    <string name="forums_forum_deleted">Ovaj forum je izbrisan</string>
+    <string name="forums_settings_member_blocked">Član blokiran</string>
 </resources>

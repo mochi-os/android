@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Жалған ақпарат</string>
     <string name="forums_moderation_reason_offtopic">Тақырыптан тыс</string>
     <string name="forums_moderation_reason_other">Басқа</string>
+    <string name="forums_block">Бұғаттау</string>
+    <string name="forums_removed_from_forum">Сіз бұл форумнан шығарылдыңыз</string>
+    <string name="forums_forum_deleted">Бұл форум жойылды</string>
+    <string name="forums_settings_member_blocked">Мүше бұғатталды</string>
 </resources>

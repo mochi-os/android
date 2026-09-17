@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Yanlış məlumat</string>
     <string name="forums_moderation_reason_offtopic">Mövzudan kənar</string>
     <string name="forums_moderation_reason_other">Digər</string>
+    <string name="forums_block">Blokla</string>
+    <string name="forums_removed_from_forum">Siz bu forumdan çıxarıldınız</string>
+    <string name="forums_forum_deleted">Bu forum silindi</string>
+    <string name="forums_settings_member_blocked">Üzv bloklandı</string>
 </resources>

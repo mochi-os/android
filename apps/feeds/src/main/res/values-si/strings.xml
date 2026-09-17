@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">පෝෂණයන්</string>
-    <string name="feeds_find_feeds">පෝෂණ සොයන්න</string>
-    <string name="feeds_create_feed">පෝෂණයක් නිර්මාණය කරන්න</string>
+    <string name="feeds_title">සංග්‍රහ</string>
+    <string name="feeds_find_feeds">සංග්‍රහ සොයන්න</string>
+    <string name="feeds_create_feed">සංග්‍රහයක් නිර්මාණය කරන්න</string>
     <string name="feeds_new_post">නව පළ කිරීම</string>
-    <string name="feeds_all_feeds">සියලු පෝෂණ</string>
+    <string name="feeds_all_feeds">සියලු සංග්‍රහ</string>
     <string name="feeds_name">නම</string>
     <string name="feeds_create">නිර්මාණය කරන්න</string>
-    <string name="feeds_no_feeds_found">පෝෂණ හමු නොවීය</string>
-    <string name="feeds_feed_title_default">පෝෂණය</string>
+    <string name="feeds_no_feeds_found">සංග්‍රහ හමු නොවීය</string>
+    <string name="feeds_feed_title_default">සංග්‍රහය</string>
     <string name="feeds_mark_all_read">සියල්ල කියවූ ලෙස සලකුණු කරන්න</string>
     <string name="feeds_settings">සැකසුම්</string>
     <string name="feeds_no_posts_yet">තවම පළ කිරීම් නැත</string>
@@ -30,7 +30,7 @@
     <string name="feeds_edit_post">පළ කිරීම සංස්කරණය කරන්න</string>
     <string name="feeds_save_label">සුරකින්න</string>
     <string name="feeds_post_action">පළ කිරීම</string>
-    <string name="feeds_feed_label">පෝෂණය</string>
+    <string name="feeds_feed_label">සංග්‍රහය</string>
     <string name="feeds_add_files">ගොනු එක් කරන්න</string>
     <string name="feeds_restore">ප්‍රතිසාධනය කරන්න</string>
     <string name="feeds_check_in">පරීක්ෂා කරන්න</string>
@@ -40,12 +40,12 @@
     <string name="feeds_tab_access">ප්‍රවේශය</string>
     <string name="feeds_tab_members">සාමාජිකයින්</string>
     <string name="feeds_tab_ai">AI</string>
-    <string name="feeds_feed_name">පෝෂණ නාමය</string>
+    <string name="feeds_feed_name">සංග්‍රහ නාමය</string>
     <string name="feeds_save_name">නම සුරකින්න</string>
     <string name="feeds_banner">Banner</string>
-    <string name="feeds_banner_description">ඔබේ පෝෂණයේ ඉහළින් පෙන්වන විකල්ප markdown බැනරයක්.</string>
+    <string name="feeds_banner_description">ඔබේ සංග්‍රහයේ ඉහළින් පෙන්වන විකල්ප markdown බැනරයක්.</string>
     <string name="feeds_clear">හිස් කරන්න</string>
-    <string name="feeds_delete_feed">පෝෂණය මකන්න</string>
+    <string name="feeds_delete_feed">සංග්‍රහය මකන්න</string>
     <string name="feeds_no_members">සාමාජිකයින් නැත</string>
     <string name="feeds_user">පරිශීලකයා</string>
     <string name="feeds_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
@@ -55,7 +55,7 @@
     <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">වර්ගය</string>
     <string name="feeds_source_type_rss">RSS</string>
-    <string name="feeds_source_type_feed_posts">Mochi පෝෂණය</string>
+    <string name="feeds_source_type_feed_posts">Mochi සංග්‍රහය</string>
     <string name="feeds_source_type_feed_memories">මතකයන්</string>
     <string name="feeds_remove_source">මූලාශ්‍රය ඉවත් කරන්න</string>
     <string name="feeds_suggested_credibility_accept">පිළිගන්න</string>
@@ -65,11 +65,11 @@
     <string name="feeds_ai_mode_off">අක්‍රියයි</string>
     <string name="feeds_ai_mode_tag">ටැගය</string>
     <string name="feeds_ai_mode_tag_deduplicate">ටැග් + අනුපිටපත් ඉවත් කරන්න</string>
-    <string name="feeds_feed_not_found">පෝෂණය හමු නොවීය</string>
+    <string name="feeds_feed_not_found">සංග්‍රහය හමු නොවීය</string>
     <string name="feeds_post_not_found">පළ කිරීම හමු නොවීය</string>
     <string name="feeds_post_select_feed">උඪහ඾් ඇගඅ පෝෝවක් ඪවාගත්ති</string>
     <string name="feeds_post_empty_content">උඪහ඾් ඐ ද෈ බෛඩ ිෘර ඇගයි ෟලම් ගණවඹ ඇගඅඨ ඪන්ෝඪියය</string>
-    <string name="feeds_settings_feed_renamed">පෝෂණය නැවත නම් කරන ලදී</string>
+    <string name="feeds_settings_feed_renamed">සංග්‍රහය නැවත නම් කරන ලදී</string>
     <string name="feeds_settings_banner_saved">බ්‍යිනශව සහදො ගත්ති</string>
     <string name="feeds_settings_source_added">මූලාරම්භය එක් කරන ලදී</string>
     <string name="feeds_settings_source_updated">මූලාරම්භය යාවත්කාලීන කරන ලදී</string>
@@ -157,7 +157,7 @@
     <string name="feeds_access_subject_authenticated">සත්‍යාපිත පරිශීලකයින්</string>
     <string name="feeds_markdown_supported">Markdown සහාය දක්වයි</string>
     <string name="feeds_permission_deny">ප්‍රතික්ෂේප කරන්න</string>
-    <string name="feeds_rss_feed">RSS පෝෂණය</string>
+    <string name="feeds_rss_feed">RSS සංග්‍රහය</string>
     <string name="feeds_settings_field_entity_id">ආයතන හැඳුනුම</string>
     <string name="feeds_settings_field_fingerprint">ඇඟිලි සලකුණ</string>
     <string name="feeds_settings_field_server">සේවාදායකය</string>
@@ -169,7 +169,7 @@
     <string name="feeds_rss_mode_posts_comments">පළ කිරීම් සහ අදහස්</string>
     <string name="feeds_access_add_title">ප්‍රවේශය එක් කරන්න</string>
     <string name="feeds_permission_request_message">%1$s පහත අවසරය ඉල්ලා සිටී:</string>
-    <string name="feeds_allow_search">ෆීඩ් සෙවීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
+    <string name="feeds_allow_search">සංග්‍රහය සෙවීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
     <string name="feeds_post_content">පළ කිරීමේ අන්තර්ගතය</string>
     <string name="feeds_enable_memories">මතකයන් සක්‍රීය කරන්න</string>
     <string name="feeds_permission_request_title">අවසර ඉල්ලීම</string>
@@ -184,9 +184,9 @@
     <string name="feeds_create_first_post">පළමු පළ කිරීම නිර්මාණය කරන්න</string>
     <string name="feeds_rss_mode_posts">පළ කිරීම්</string>
     <string name="feeds_source_last_checked">අවසන් වරට පරීක්ෂා කළේ %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">පෝෂණයෙන් දායකත්වය ඉවත් කරන්න</string>
+    <string name="feeds_settings_unsubscribe_section">සංග්‍රහයෙන් දායකත්වය ඉවත් කරන්න</string>
     <string name="feeds_source_transform_hint">ඉංග්‍රීසියට පරිවර්තනය කර, බුලට් ලකුණු ලෙස පෙන්වන්න.</string>
-    <string name="feeds_source_url_hint_feed">ෆීඩ් සංස්ථා හැඳුනුම්පත හෝ ඇඟිලි සලකුණ</string>
+    <string name="feeds_source_url_hint_feed">සංග්‍රහ සංස්ථා හැඳුනුම්පත හෝ ඇඟිලි සලකුණ</string>
     <string name="feeds_source_credibility_label">විශ්වසනීයත්වය</string>
     <plurals name="feeds_source_interval_hours">
         <item quantity="one">පැය %1$dක්</item>
@@ -226,4 +226,8 @@
         <item quantity="one">අද %1$d වසරකට පෙර</item>
         <item quantity="other">අද %1$d වසරකට පෙර</item>
     </plurals>
+    <string name="feeds_block">අවහිර කරන්න</string>
+    <string name="feeds_removed_from_feed">ඔබව මෙම සංග්‍රහයෙන් ඉවත් කර ඇත</string>
+    <string name="feeds_feed_deleted">මෙම සංග්‍රහය මකා ඇත</string>
+    <string name="feeds_settings_member_blocked">සාමාජිකයා අවහිර කරන ලදී</string>
 </resources>

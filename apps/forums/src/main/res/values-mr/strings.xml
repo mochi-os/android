@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">चुकीची माहिती</string>
     <string name="forums_moderation_reason_offtopic">विषयाबाहेरील</string>
     <string name="forums_moderation_reason_other">इतर</string>
+    <string name="forums_block">ब्लॉक करा</string>
+    <string name="forums_removed_from_forum">तुम्हाला या फोरममधून काढले गेले</string>
+    <string name="forums_forum_deleted">हा फोरम हटवला गेला</string>
+    <string name="forums_settings_member_blocked">सदस्य ब्लॉक केला</string>
 </resources>

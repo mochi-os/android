@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Fehlinformation</string>
     <string name="forums_moderation_reason_offtopic">Nicht zum Thema</string>
     <string name="forums_moderation_reason_other">Sonstige</string>
+    <string name="forums_block">Blockieren</string>
+    <string name="forums_removed_from_forum">Sie wurden aus diesem Forum entfernt</string>
+    <string name="forums_forum_deleted">Dieses Forum wurde gelöscht</string>
+    <string name="forums_settings_member_blocked">Mitglied blockiert</string>
 </resources>

@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Rangar upplýsingar</string>
     <string name="forums_moderation_reason_offtopic">Utan efnis</string>
     <string name="forums_moderation_reason_other">Annað</string>
+    <string name="forums_block">Loka á</string>
+    <string name="forums_removed_from_forum">Þú varst fjarlægður af þessu spjallborði</string>
+    <string name="forums_forum_deleted">Þessu spjallborði var eytt</string>
+    <string name="forums_settings_member_blocked">Lokað á meðlim</string>
 </resources>

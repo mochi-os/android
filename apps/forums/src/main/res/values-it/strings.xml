@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Disinformazione</string>
     <string name="forums_moderation_reason_offtopic">Fuori tema</string>
     <string name="forums_moderation_reason_other">Altro</string>
+    <string name="forums_block">Blocca</string>
+    <string name="forums_removed_from_forum">Sei stato rimosso da questo forum</string>
+    <string name="forums_forum_deleted">Questo forum è stato eliminato</string>
+    <string name="forums_settings_member_blocked">Membro bloccato</string>
 </resources>

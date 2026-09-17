@@ -3,8 +3,8 @@
 
     <string name="forums_auth_display_name">Jina la kuonyesha</string>
     <string name="forums_auth_verification_failed">Uthibitishaji umeshindwa</string>
-    <string name="forums_list_title">Makongamano</string>
-    <string name="forums_list_find">Tafuta makongamano</string>
+    <string name="forums_list_title">Majukwaa</string>
+    <string name="forums_list_find">Tafuta majukwaa</string>
     <string name="forums_list_logout">Toka</string>
     <string name="forums_list_unsubscribe">Jiondoe</string>
     <string name="forums_list_unsubscribe_title">Jiondoe</string>
@@ -14,7 +14,7 @@
     <string name="forums_create_private">Ya faragha</string>
     <string name="forums_create_public">Ya umma</string>
     <string name="forums_create_action">Unda</string>
-    <string name="forums_find_title">Tafuta makongamano</string>
+    <string name="forums_find_title">Tafuta majukwaa</string>
     <string name="forums_find_recommended">Inapendekezwa</string>
     <string name="forums_find_subscribe">Jiunge</string>
     <string name="forums_find_no_results">Hakuna majukwaa yaliyopatikana</string>
@@ -118,7 +118,7 @@
     <string name="forums_settings_save">Hifadhi</string>
     <string name="forums_settings_delete">Futa jukwaa</string>
     <string name="forums_settings_delete_title">Futa jukwaa</string>
-    <string name="forums_forum_not_found">Kongamano halikupatikana</string>
+    <string name="forums_forum_not_found">Jukwaa halikupatikana</string>
     <string name="forums_post_not_found">Chapisho halikupatikana</string>
 
     <string name="forums_comment_send">Tuma</string>
@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Habari potofu</string>
     <string name="forums_moderation_reason_offtopic">Nje ya mada</string>
     <string name="forums_moderation_reason_other">Nyingine</string>
+    <string name="forums_block">Zuia</string>
+    <string name="forums_removed_from_forum">Umeondolewa kwenye jukwaa hili</string>
+    <string name="forums_forum_deleted">Jukwaa hili lilifutwa</string>
+    <string name="forums_settings_member_blocked">Mwanachama amezuiwa</string>
 </resources>

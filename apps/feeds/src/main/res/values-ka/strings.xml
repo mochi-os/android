@@ -226,4 +226,8 @@
         <item quantity="one">დღეს %1$d წლის წინ</item>
         <item quantity="other">დღეს %1$d წლის წინ</item>
     </plurals>
+    <string name="feeds_block">დაბლოკვა</string>
+    <string name="feeds_removed_from_feed">თქვენ ამოგშალეს ამ არხიდან</string>
+    <string name="feeds_feed_deleted">ეს არხი წაიშალა</string>
+    <string name="feeds_settings_member_blocked">წევრი დაიბლოკა</string>
 </resources>

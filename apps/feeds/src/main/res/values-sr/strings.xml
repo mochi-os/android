@@ -233,4 +233,8 @@
         <item quantity="few">пре %1$d године данас</item>
         <item quantity="other">пре %1$d година данас</item>
     </plurals>
+    <string name="feeds_block">Блокирај</string>
+    <string name="feeds_removed_from_feed">Уклоњени сте из овог фида</string>
+    <string name="feeds_feed_deleted">Овај фид је обрисан</string>
+    <string name="feeds_settings_member_blocked">Члан је блокиран</string>
 </resources>

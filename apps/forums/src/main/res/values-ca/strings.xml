@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Desinformació</string>
     <string name="forums_moderation_reason_offtopic">Fora de tema</string>
     <string name="forums_moderation_reason_other">Altres</string>
+    <string name="forums_block">Bloqueja</string>
+    <string name="forums_removed_from_forum">T\'han eliminat d\'aquest fòrum</string>
+    <string name="forums_forum_deleted">Aquest fòrum s\'ha suprimit</string>
+    <string name="forums_settings_member_blocked">Membre bloquejat</string>
 </resources>

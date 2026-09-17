@@ -240,4 +240,8 @@
         <item quantity="many">prieš %1$d metų šiandien</item>
         <item quantity="other">prieš %1$d metų šiandien</item>
     </plurals>
+    <string name="feeds_block">Blokuoti</string>
+    <string name="feeds_removed_from_feed">Buvote pašalinti iš šio srauto</string>
+    <string name="feeds_feed_deleted">Šis srautas buvo ištrintas</string>
+    <string name="feeds_settings_member_blocked">Narys užblokuotas</string>
 </resources>

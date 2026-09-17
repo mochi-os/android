@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Ìròyìn àìtọ́</string>
     <string name="forums_moderation_reason_offtopic">Ní òde ìjíròrò</string>
     <string name="forums_moderation_reason_other">Mìíràn</string>
+    <string name="forums_block">Dènà</string>
+    <string name="forums_removed_from_forum">A yọ ọ́ kúrò nínú forum yìí</string>
+    <string name="forums_forum_deleted">A pa forum yìí rẹ́</string>
+    <string name="forums_settings_member_blocked">A ti dènà ọmọ ẹgbẹ́</string>
 </resources>

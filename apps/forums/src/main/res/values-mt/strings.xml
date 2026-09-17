@@ -333,4 +333,8 @@
     <string name="forums_moderation_reason_misinformation">Diżinformazzjoni</string>
     <string name="forums_moderation_reason_offtopic">Off-topic</string>
     <string name="forums_moderation_reason_other">Oħra</string>
+    <string name="forums_block">Imblokka</string>
+    <string name="forums_removed_from_forum">Int tneħħejt minn dan il-forum</string>
+    <string name="forums_forum_deleted">Dan il-forum tħassar</string>
+    <string name="forums_settings_member_blocked">Il-membru ġie mblukkat</string>
 </resources>

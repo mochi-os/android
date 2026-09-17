@@ -240,4 +240,8 @@
         <item quantity="many">pred %1$d roka dnes</item>
         <item quantity="other">pred %1$d rokmi dnes</item>
     </plurals>
+    <string name="feeds_block">Zablokovať</string>
+    <string name="feeds_removed_from_feed">Boli ste odstránení z tohto kanála</string>
+    <string name="feeds_feed_deleted">Tento kanál bol odstránený</string>
+    <string name="feeds_settings_member_blocked">Člen zablokovaný</string>
 </resources>

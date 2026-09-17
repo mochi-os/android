@@ -226,4 +226,8 @@
         <item quantity="one">өнөөдөр %1$d жилийн өмнө</item>
         <item quantity="other">өнөөдөр %1$d жилийн өмнө</item>
     </plurals>
+    <string name="feeds_block">Блоклох</string>
+    <string name="feeds_removed_from_feed">Та энэ фийдээс хасагдсан</string>
+    <string name="feeds_feed_deleted">Энэ фийд устгагдсан</string>
+    <string name="feeds_settings_member_blocked">Гишүүн блоклогдсон</string>
 </resources>

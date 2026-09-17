@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Väärinformatsioon</string>
     <string name="forums_moderation_reason_offtopic">Teemaväline</string>
     <string name="forums_moderation_reason_other">Muu</string>
+    <string name="forums_block">Blokeeri</string>
+    <string name="forums_removed_from_forum">Sind eemaldati sellest foorumist</string>
+    <string name="forums_forum_deleted">See foorum kustutati</string>
+    <string name="forums_settings_member_blocked">Liige blokeeritud</string>
 </resources>

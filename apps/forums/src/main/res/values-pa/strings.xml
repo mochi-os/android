@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">ਗ਼ਲਤ ਜਾਣਕਾਰੀ</string>
     <string name="forums_moderation_reason_offtopic">ਵਿਸ਼ੇ ਤੋਂ ਬਾਹਰ</string>
     <string name="forums_moderation_reason_other">ਹੋਰ</string>
+    <string name="forums_block">ਬਲੌਕ ਕਰੋ</string>
+    <string name="forums_removed_from_forum">ਤੁਹਾਨੂੰ ਇਸ ਫੋਰਮ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ</string>
+    <string name="forums_forum_deleted">ਇਹ ਫੋਰਮ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ</string>
+    <string name="forums_settings_member_blocked">ਮੈਂਬਰ ਬਲੌਕ ਕੀਤਾ ਗਿਆ</string>
 </resources>

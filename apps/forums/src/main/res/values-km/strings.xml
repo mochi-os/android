@@ -329,4 +329,8 @@
     <string name="forums_moderation_reason_misinformation">ព័ត៌មានមិនពិត</string>
     <string name="forums_moderation_reason_offtopic">ក្រៅប្រធានបទ</string>
     <string name="forums_moderation_reason_other">ផ្សេងទៀត</string>
+    <string name="forums_block">រារាំង</string>
+    <string name="forums_removed_from_forum">អ្នកត្រូវបានដកចេញពីវេទិកានេះ</string>
+    <string name="forums_forum_deleted">វេទិកានេះត្រូវបានលុប</string>
+    <string name="forums_settings_member_blocked">បានរារាំងសមាជិក</string>
 </resources>

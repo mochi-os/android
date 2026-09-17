@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">የተሳሳተ መረጃ</string>
     <string name="forums_moderation_reason_offtopic">ከርዕሰ ጉዳዩ ውጭ</string>
     <string name="forums_moderation_reason_other">ሌላ</string>
+    <string name="forums_block">አግድ</string>
+    <string name="forums_removed_from_forum">ከዚህ ፎረም ተወግደዋል</string>
+    <string name="forums_forum_deleted">ይህ ፎረም ተሰርዟል</string>
+    <string name="forums_settings_member_blocked">አባል ታግዷል</string>
 </resources>

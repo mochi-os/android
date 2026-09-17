@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Inpormasi salah</string>
     <string name="forums_moderation_reason_offtopic">Lain topik</string>
     <string name="forums_moderation_reason_other">Séjén</string>
+    <string name="forums_block">Blokir</string>
+    <string name="forums_removed_from_forum">Anjeun dipiceun ti forum ieu</string>
+    <string name="forums_forum_deleted">Forum ieu dihapus</string>
+    <string name="forums_settings_member_blocked">Anggota diblokir</string>
 </resources>

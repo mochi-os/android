@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Παραπληροφόρηση</string>
     <string name="forums_moderation_reason_offtopic">Εκτός θέματος</string>
     <string name="forums_moderation_reason_other">Άλλο</string>
+    <string name="forums_block">Αποκλεισμός</string>
+    <string name="forums_removed_from_forum">Αφαιρεθήκατε από αυτό το φόρουμ</string>
+    <string name="forums_forum_deleted">Αυτό το φόρουμ διαγράφηκε</string>
+    <string name="forums_settings_member_blocked">Το μέλος αποκλείστηκε</string>
 </resources>

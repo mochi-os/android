@@ -331,4 +331,8 @@
     <string name="forums_moderation_reason_misinformation">Dezinformare</string>
     <string name="forums_moderation_reason_offtopic">În afara subiectului</string>
     <string name="forums_moderation_reason_other">Altele</string>
+    <string name="forums_block">Blochează</string>
+    <string name="forums_removed_from_forum">Ai fost eliminat din acest forum</string>
+    <string name="forums_forum_deleted">Acest forum a fost șters</string>
+    <string name="forums_settings_member_blocked">Membru blocat</string>
 </resources>

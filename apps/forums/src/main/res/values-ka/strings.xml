@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">დეზინფორმაცია</string>
     <string name="forums_moderation_reason_offtopic">თემის გარეთ</string>
     <string name="forums_moderation_reason_other">სხვა</string>
+    <string name="forums_block">დაბლოკვა</string>
+    <string name="forums_removed_from_forum">თქვენ ამოგშალეს ამ ფორუმიდან</string>
+    <string name="forums_forum_deleted">ეს ფორუმი წაიშალა</string>
+    <string name="forums_settings_member_blocked">წევრი დაიბლოკა</string>
 </resources>

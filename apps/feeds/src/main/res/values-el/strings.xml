@@ -226,4 +226,8 @@
         <item quantity="one">πριν από %1$d χρόνο σήμερα</item>
         <item quantity="other">πριν από %1$d χρόνια σήμερα</item>
     </plurals>
+    <string name="feeds_block">Αποκλεισμός</string>
+    <string name="feeds_removed_from_feed">Αφαιρεθήκατε από αυτή τη ροή</string>
+    <string name="feeds_feed_deleted">Αυτή η ροή διαγράφηκε</string>
+    <string name="feeds_settings_member_blocked">Το μέλος αποκλείστηκε</string>
 </resources>

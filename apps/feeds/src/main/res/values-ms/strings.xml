@@ -223,4 +223,8 @@
         <item quantity="one">%1$d tahun lalu pada hari ini</item>
         <item quantity="other">%1$d tahun lalu pada hari ini</item>
     </plurals>
+    <string name="feeds_block">Sekat</string>
+    <string name="feeds_removed_from_feed">Anda telah dikeluarkan daripada suapan ini</string>
+    <string name="feeds_feed_deleted">Suapan ini telah dipadam</string>
+    <string name="feeds_settings_member_blocked">Ahli disekat</string>
 </resources>

@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">తప్పుడు సమాచారం</string>
     <string name="forums_moderation_reason_offtopic">విషయం వెలుపల</string>
     <string name="forums_moderation_reason_other">ఇతర</string>
+    <string name="forums_block">బ్లాక్ చేయండి</string>
+    <string name="forums_removed_from_forum">మిమ్మల్ని ఈ ఫోరమ్ నుండి తీసివేశారు</string>
+    <string name="forums_forum_deleted">ఈ ఫోరమ్ తొలగించబడింది</string>
+    <string name="forums_settings_member_blocked">సభ్యుడు బ్లాక్ చేయబడ్డారు</string>
 </resources>

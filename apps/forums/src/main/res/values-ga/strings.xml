@@ -333,4 +333,8 @@
     <string name="forums_moderation_reason_misinformation">Mífhaisnéis</string>
     <string name="forums_moderation_reason_offtopic">As topaic</string>
     <string name="forums_moderation_reason_other">Eile</string>
+    <string name="forums_block">Bac</string>
+    <string name="forums_removed_from_forum">Baineadh tú den fhóram seo</string>
+    <string name="forums_forum_deleted">Scriosadh an fóram seo</string>
+    <string name="forums_settings_member_blocked">Cuireadh bac ar an mball</string>
 </resources>

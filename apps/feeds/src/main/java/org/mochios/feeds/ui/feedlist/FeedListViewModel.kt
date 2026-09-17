@@ -170,7 +170,8 @@ class FeedListViewModel @Inject constructor(
                     // Server event types are slash-namespaced (feeds.star commit
                     // hook + handlers); the old underscore names never matched.
                     when (event.type) {
-                        "post/create", "post/delete", "feed/update" -> {
+                        "post/create", "post/delete", "feed/update",
+                        "feed/removed", "feed/deleted" -> {
                             refreshSilently()
                         }
                     }

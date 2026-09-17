@@ -256,6 +256,23 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
+    // The "No access" level offered on the row: a deny on every level, and the
+    // server drops the membership with it.
+    fun blockMember(memberId: String) {
+        viewModelScope.launch {
+            try {
+                repository.setAccess(forumId, memberId, "none")
+                _uiState.value = _uiState.value.copy(
+                    actionMessage = R.string.forums_settings_member_blocked,
+                )
+                loadMembers()
+                loadAccess()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
     fun saveBanner(banner: String) {
         viewModelScope.launch {
             try {

@@ -334,4 +334,8 @@
     <string name="forums_moderation_reason_misinformation">Camwybodaeth</string>
     <string name="forums_moderation_reason_offtopic">Oddi ar bwnc</string>
     <string name="forums_moderation_reason_other">Arall</string>
+    <string name="forums_block">Blocio</string>
+    <string name="forums_removed_from_forum">Cawsoch eich tynnu o\'r fforwm hwn</string>
+    <string name="forums_forum_deleted">Dilëwyd y fforwm hwn</string>
+    <string name="forums_settings_member_blocked">Aelod wedi\'i flocio</string>
 </resources>

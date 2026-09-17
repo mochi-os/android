@@ -23,6 +23,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
@@ -48,6 +49,9 @@ data class PostUiState(
     val identity: String = "",
     /** Message resource for a rejection the forum owner has just pushed. */
     @StringRes val rejected: Int? = null,
+    /** Shown in place of the thread once the forum's owner removed this user
+     *  from it, or deleted it, while the screen was open. */
+    @StringRes val gone: Int? = null,
 )
 
 @HiltViewModel
@@ -89,6 +93,18 @@ class PostViewModel @Inject constructor(
             forumKey,
             app = "forums",
         ) { event ->
+            // The owner removed this user from the forum, or deleted it. The
+            // local replica is already purged, so a reload would only fail.
+            if (event.type == "forum/removed" || event.type == "forum/deleted") {
+                _uiState.value = _uiState.value.copy(
+                    gone = if (event.type == "forum/removed") {
+                        R.string.forums_removed_from_forum
+                    } else {
+                        R.string.forums_forum_deleted
+                    },
+                )
+                return@subscribe
+            }
             // A rejection deletes the author's optimistic copy, so a silent
             // reload alone would make their comment vanish with no reason.
             if (event.type == "post/reject" || event.type == "comment/reject") {

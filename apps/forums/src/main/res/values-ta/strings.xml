@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">தவறான தகவல்</string>
     <string name="forums_moderation_reason_offtopic">தலைப்புக்கு வெளியே</string>
     <string name="forums_moderation_reason_other">மற்றவை</string>
+    <string name="forums_block">தடு</string>
+    <string name="forums_removed_from_forum">நீங்கள் இந்த மன்றத்திலிருந்து அகற்றப்பட்டீர்கள்</string>
+    <string name="forums_forum_deleted">இந்த மன்றம் நீக்கப்பட்டது</string>
+    <string name="forums_settings_member_blocked">உறுப்பினர் தடுக்கப்பட்டார்</string>
 </resources>

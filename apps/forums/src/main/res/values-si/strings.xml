@@ -205,7 +205,7 @@
         <item quantity="one">%d නව පළ කිරීම</item>
         <item quantity="other">%d නව පළ කිරීම්</item>
     </plurals>
-    <string name="forums_rss_feed">RSS පෝෂණය</string>
+    <string name="forums_rss_feed">RSS සංග්‍රහය</string>
     <string name="forums_rss_mode_posts">පළ කිරීම්</string>
     <string name="forums_rss_mode_posts_comments">පළ කිරීම් සහ අදහස්</string>
     <string name="forums_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">වැරදි තොරතුරු</string>
     <string name="forums_moderation_reason_offtopic">මාතෘකාවෙන් බැහැර</string>
     <string name="forums_moderation_reason_other">වෙනත්</string>
+    <string name="forums_block">අවහිර කරන්න</string>
+    <string name="forums_removed_from_forum">ඔබව මෙම සංසදයෙන් ඉවත් කර ඇත</string>
+    <string name="forums_forum_deleted">මෙම සංසදය මකා ඇත</string>
+    <string name="forums_settings_member_blocked">සාමාජිකයා අවහිර කරන ලදී</string>
 </resources>

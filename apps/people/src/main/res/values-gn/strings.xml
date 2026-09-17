@@ -45,8 +45,8 @@
     <string name="people_group_description_optional">Ñemyesakã opcional</string>
     <string name="people_group_name_required">Téra oñeikotevẽ</string>
     <string name="people_group_actions">Atypy aksiones</string>
-    <string name="people_group_members">Memberskuera</string>
-    <string name="people_group_members_count">Members Papapy</string>
+    <string name="people_group_members">Irũnguéra</string>
+    <string name="people_group_members_count">Irũnguéra papapy</string>
     <string name="people_group_members_description">Mboapurevahárakuéra ha aty oguerekóva ko aty-pe</string>
     <string name="people_group_no_members">Ndaipóri miembros</string>
     <string name="people_group_delete">Hundi grupo</string>

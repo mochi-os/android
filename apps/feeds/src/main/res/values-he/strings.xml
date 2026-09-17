@@ -240,4 +240,8 @@
         <item quantity="many">לפני %1$d שנים, היום</item>
         <item quantity="other">לפני %1$d שנים, היום</item>
     </plurals>
+    <string name="feeds_block">חסום</string>
+    <string name="feeds_removed_from_feed">הוסרת מהפיד הזה</string>
+    <string name="feeds_feed_deleted">הפיד הזה נמחק</string>
+    <string name="feeds_settings_member_blocked">החבר נחסם</string>
 </resources>

@@ -332,4 +332,8 @@
     <string name="forums_moderation_reason_misinformation">מידע שגוי</string>
     <string name="forums_moderation_reason_offtopic">מחוץ לנושא</string>
     <string name="forums_moderation_reason_other">אחר</string>
+    <string name="forums_block">חסום</string>
+    <string name="forums_removed_from_forum">הוסרת מהפורום הזה</string>
+    <string name="forums_forum_deleted">הפורום הזה נמחק</string>
+    <string name="forums_settings_member_blocked">החבר נחסם</string>
 </resources>

@@ -224,4 +224,8 @@
         <item quantity="one">%1$d mara nayra jichhüru</item>
         <item quantity="other">%1$d maranaka nayra jichhüru</item>
     </plurals>
+    <string name="feeds_block">Jark\'ama</string>
+    <string name="feeds_removed_from_feed">Jumax aka feed ukata apsutawa</string>
+    <string name="feeds_feed_deleted">Aka feed chhaqtayatawa</string>
+    <string name="feeds_settings_member_blocked">Integrante jark\'atawa</string>
 </resources>

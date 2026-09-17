@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Odeeffannoo dogoggoraa</string>
     <string name="forums_moderation_reason_offtopic">Ala mata duree</string>
     <string name="forums_moderation_reason_other">Biraa</string>
+    <string name="forums_block">Ugguri</string>
+    <string name="forums_removed_from_forum">Ati foramii kana irraa haqamteetta</string>
+    <string name="forums_forum_deleted">Foramiin kun haqameera</string>
+    <string name="forums_settings_member_blocked">Miseensi uggurameera</string>
 </resources>

@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">غلط معلومات</string>
     <string name="forums_moderation_reason_offtopic">غير موضوع</string>
     <string name="forums_moderation_reason_other">ٻيو</string>
+    <string name="forums_block">بلاڪ ڪريو</string>
+    <string name="forums_removed_from_forum">توھان کي ھن فورم مان ھٽايو ويو</string>
+    <string name="forums_forum_deleted">هي فورم ختم ڪيو ويو</string>
+    <string name="forums_settings_member_blocked">ميمبر بلاڪ ڪيو ويو</string>
 </resources>

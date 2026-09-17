@@ -56,7 +56,7 @@
     <string name="forums_post_tag_label">Tag</string>
     <string name="forums_tab_general">Tekorapy</string>
     <string name="forums_tab_access">Jeike</string>
-    <string name="forums_tab_members">Memberskuera</string>
+    <string name="forums_tab_members">Irũnguéra</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Apoukapy</string>
@@ -238,7 +238,7 @@
     <string name="forums_settings_banner_saved">Banner ojeguereko</string>
     <string name="forums_settings_access_updated">Jeike oñembojeguáma</string>
     <string name="forums_settings_access_revoked">Jeike oje’ói</string>
-    <string name="forums_settings_member_removed">Oñembogue member</string>
+    <string name="forums_settings_member_removed">Oñembogue irũ</string>
     <string name="forums_settings_prompt_saved">Prompt oñeñongatu</string>
     <string name="forums_settings_section_identity">Identidad</string>
     <string name="forums_settings_field_name">Téra</string>
@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Mba\'evaikuaa</string>
     <string name="forums_moderation_reason_offtopic">Ndoikéi tópico-pe</string>
     <string name="forums_moderation_reason_other">Ambue</string>
+    <string name="forums_block">Ejoko</string>
+    <string name="forums_removed_from_forum">Nde oñemosẽ ko foro guive</string>
+    <string name="forums_forum_deleted">Ko foro oñembogue</string>
+    <string name="forums_settings_member_blocked">Irũ ojejoko</string>
 </resources>

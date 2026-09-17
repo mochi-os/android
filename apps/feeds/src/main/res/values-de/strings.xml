@@ -226,4 +226,8 @@
         <item quantity="one">heute vor %1$d Jahr</item>
         <item quantity="other">heute vor %1$d Jahren</item>
     </plurals>
+    <string name="feeds_block">Blockieren</string>
+    <string name="feeds_removed_from_feed">Sie wurden aus diesem Feed entfernt</string>
+    <string name="feeds_feed_deleted">Dieser Feed wurde gelöscht</string>
+    <string name="feeds_settings_member_blocked">Mitglied blockiert</string>
 </resources>

@@ -219,4 +219,8 @@
     <plurals name="feeds_memory_years_ago_today">
         <item quantity="other">%1$d년 전 오늘</item>
     </plurals>
+    <string name="feeds_block">차단</string>
+    <string name="feeds_removed_from_feed">이 피드에서 제거되었어요</string>
+    <string name="feeds_feed_deleted">이 피드가 삭제되었어요</string>
+    <string name="feeds_settings_member_blocked">멤버를 차단했어요</string>
 </resources>

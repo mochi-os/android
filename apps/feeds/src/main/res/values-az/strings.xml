@@ -228,4 +228,8 @@
         <item quantity="one">bu gün %1$d il əvvəl</item>
         <item quantity="other">bu gün %1$d il əvvəl</item>
     </plurals>
+    <string name="feeds_block">Blokla</string>
+    <string name="feeds_removed_from_feed">Siz bu lentdən çıxarıldınız</string>
+    <string name="feeds_feed_deleted">Bu lent silindi</string>
+    <string name="feeds_settings_member_blocked">Üzv bloklandı</string>
 </resources>

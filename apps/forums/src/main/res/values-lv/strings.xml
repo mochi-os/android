@@ -331,4 +331,8 @@
     <string name="forums_moderation_reason_misinformation">Maldinoša informācija</string>
     <string name="forums_moderation_reason_offtopic">Ārpus tēmas</string>
     <string name="forums_moderation_reason_other">Cits</string>
+    <string name="forums_block">Bloķēt</string>
+    <string name="forums_removed_from_forum">Jūs noņēma no šī foruma</string>
+    <string name="forums_forum_deleted">Šis forums tika dzēsts</string>
+    <string name="forums_settings_member_blocked">Dalībnieks bloķēts</string>
 </resources>

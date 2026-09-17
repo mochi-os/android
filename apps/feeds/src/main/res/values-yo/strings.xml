@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="feeds_title">Àwọn ìjì</string>
+    <string name="feeds_title">Àwọn feed</string>
     <string name="feeds_find_feeds">Wa àwọn feed</string>
     <string name="feeds_create_feed">Dá feed</string>
     <string name="feeds_new_post">Ìfìránṣẹ́ tuntun</string>
@@ -8,7 +8,7 @@
     <string name="feeds_name">Orúkọ</string>
     <string name="feeds_create">Dá</string>
     <string name="feeds_no_feeds_found">A kò rí feed kankan</string>
-    <string name="feeds_feed_title_default">Ìjì</string>
+    <string name="feeds_feed_title_default">Feed</string>
     <string name="feeds_mark_all_read">Sàmì sí gbogbo gẹ́gẹ́ bí kíkà</string>
     <string name="feeds_settings">Àwọn ìṣètò</string>
     <string name="feeds_no_posts_yet">Kò sí ìfìránṣẹ́ síbẹ̀</string>
@@ -30,7 +30,7 @@
     <string name="feeds_edit_post">Ṣàtúnṣe ìfìránṣẹ́</string>
     <string name="feeds_save_label">Fi pamọ́</string>
     <string name="feeds_post_action">Ìfìránṣẹ́</string>
-    <string name="feeds_feed_label">Ìjì</string>
+    <string name="feeds_feed_label">Feed</string>
     <string name="feeds_add_files">Fi àwọn fáìlì kún</string>
     <string name="feeds_restore">Mú padà</string>
     <string name="feeds_check_in">Ìforúkọsílẹ̀</string>
@@ -224,4 +224,8 @@
         <item quantity="one">ọdún %1$d sẹ́yìn lónìí</item>
         <item quantity="other">ọdún %1$d sẹ́yìn lónìí</item>
     </plurals>
+    <string name="feeds_block">Dènà</string>
+    <string name="feeds_removed_from_feed">A yọ ọ́ kúrò nínú feed yìí</string>
+    <string name="feeds_feed_deleted">A pa feed yìí rẹ́</string>
+    <string name="feeds_settings_member_blocked">A ti dènà ọmọ ẹgbẹ́</string>
 </resources>

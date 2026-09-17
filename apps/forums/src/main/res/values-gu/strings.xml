@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">ખોટી માહિતી</string>
     <string name="forums_moderation_reason_offtopic">વિષય બહાર</string>
     <string name="forums_moderation_reason_other">અન્ય</string>
+    <string name="forums_block">બ્લૉક કરો</string>
+    <string name="forums_removed_from_forum">તમને આ ફોરમમાંથી દૂર કરવામાં આવ્યા</string>
+    <string name="forums_forum_deleted">આ ફોરમ કાઢી નાખવામાં આવ્યું</string>
+    <string name="forums_settings_member_blocked">સભ્યને બ્લૉક કર્યા</string>
 </resources>

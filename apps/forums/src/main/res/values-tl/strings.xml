@@ -330,4 +330,8 @@
     <string name="forums_moderation_reason_misinformation">Maling impormasyon</string>
     <string name="forums_moderation_reason_offtopic">Off-topic</string>
     <string name="forums_moderation_reason_other">Iba pa</string>
+    <string name="forums_block">I-block</string>
+    <string name="forums_removed_from_forum">Tinanggal ka sa forum na ito</string>
+    <string name="forums_forum_deleted">Na-delete ang forum na ito</string>
+    <string name="forums_settings_member_blocked">Na-block ang member</string>
 </resources>
