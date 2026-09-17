@@ -25,81 +25,19 @@ fun ViewsTab(
     views: List<CrmView>,
     classes: List<CrmClass>,
     fields: Map<String, List<CrmField>>,
-    viewModel: DesignViewModel
+    viewModel: DesignViewModel,
+    onAddView: () -> Unit,
+    onEditView: (String) -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val crmDetails = uiState.crmDetails
-    val context = LocalContext.current
 
     ViewListTab(
         views = views.map { view -> view.toListItem() },
-        classes = classes.map { cls -> ClassListItem(cls.id, cls.name, cls.rank) },
-        fields = fields.mapValues { (_, classFields) ->
-            classFields.map { field ->
-                ViewFieldOption(field.id, field.name, field.fieldtype, field.isSortable)
-            }
-        },
-        labels = ViewListLabels(
-            addAction = stringResource(R.string.crm_views_add),
-            empty = stringResource(R.string.crm_views_empty),
-            emptySubtitle = stringResource(R.string.crm_views_empty_subtitle),
-            addDialogTitle = stringResource(R.string.crm_views_add_dialog_title),
-            editDialogTitle = stringResource(R.string.crm_views_edit_dialog_title),
-            deleteTitle = stringResource(R.string.crm_views_delete_title),
-            deleteMessage = { viewName ->
-                context.getString(R.string.crm_views_delete_message, viewName)
-            },
-            byField = { fieldName -> context.getString(R.string.crm_views_by, fieldName) },
-            sortedBy = { direction -> context.getString(R.string.crm_views_sorted, direction) },
-            typeBoard = stringResource(R.string.crm_views_type_board),
-            typeList = stringResource(R.string.crm_views_type_list),
-            moveUp = stringResource(R.string.crm_views_move_up),
-            moveDown = stringResource(R.string.crm_views_move_down),
-            nameLabel = stringResource(R.string.crm_class_name),
-            typeLabel = stringResource(R.string.crm_views_type),
-            columnsField = stringResource(R.string.crm_views_columns_field),
-            rowsField = stringResource(R.string.crm_views_rows_field),
-            borderField = stringResource(R.string.crm_views_border_field),
-            filter = stringResource(R.string.crm_views_filter),
-            sortBy = stringResource(R.string.crm_views_sort_by),
-            direction = stringResource(R.string.crm_views_direction),
-            directionAsc = stringResource(R.string.crm_views_direction_asc),
-            directionDesc = stringResource(R.string.crm_views_direction_desc),
-            filterClasses = stringResource(R.string.crm_views_filter_classes),
-            none = stringResource(R.string.crm_create_template_none)
-        ),
-        sortOptions = listOf(
-            "created" to stringResource(R.string.crm_views_sort_created),
-            "updated" to stringResource(R.string.crm_views_sort_updated),
-            "rank" to stringResource(R.string.crm_views_sort_rank)
-        ),
-        onCreateView = { draft ->
-            viewModel.createView(
-                name = draft.name,
-                viewtype = draft.viewtype,
-                columns = draft.columns,
-                rows = draft.rows,
-                filter = draft.filter,
-                sort = draft.sort,
-                direction = draft.direction,
-                classes = draft.classes,
-                border = draft.border
-            )
-        },
-        onUpdateView = { viewId, draft ->
-            viewModel.updateView(
-                viewId = viewId,
-                name = draft.name,
-                viewtype = draft.viewtype,
-                columns = draft.columns,
-                rows = draft.rows,
-                filter = draft.filter,
-                sort = draft.sort,
-                direction = draft.direction,
-                classes = draft.classes,
-                border = draft.border
-            )
-        },
+        fields = fields.toViewFieldOptions(),
+        labels = viewListLabels(),
+        onAddView = onAddView,
+        onEditView = onEditView,
         onDeleteView = { viewId -> viewModel.deleteView(viewId) },
         onReorderViews = { order -> viewModel.reorderViews(order) },
         preview = crmDetails?.let { details ->
@@ -114,7 +52,7 @@ fun ViewsTab(
     )
 }
 
-private fun CrmView.toListItem() = ViewListItem(
+internal fun CrmView.toListItem() = ViewListItem(
     id = id,
     name = name,
     viewtype = viewtype,
@@ -129,7 +67,7 @@ private fun CrmView.toListItem() = ViewListItem(
     border = border
 )
 
-private fun ViewListItem.toCrmView() = CrmView(
+internal fun ViewListItem.toCrmView() = CrmView(
     id = id,
     name = name,
     viewtype = viewtype,
@@ -142,4 +80,55 @@ private fun ViewListItem.toCrmView() = CrmView(
     classes = classes,
     rank = rank,
     border = border
+)
+
+internal fun List<CrmClass>.toClassListItems() =
+    map { cls -> ClassListItem(cls.id, cls.name, cls.rank) }
+
+internal fun Map<String, List<CrmField>>.toViewFieldOptions() =
+    mapValues { (_, classFields) ->
+        classFields.map { field ->
+            ViewFieldOption(field.id, field.name, field.fieldtype, field.isSortable)
+        }
+    }
+
+/** Wording for the shared view list and view form, in this feature's strings. */
+@Composable
+internal fun viewListLabels(): ViewListLabels {
+    val context = LocalContext.current
+    return ViewListLabels(
+        addAction = stringResource(R.string.crm_views_add),
+        empty = stringResource(R.string.crm_views_empty),
+        emptySubtitle = stringResource(R.string.crm_views_empty_subtitle),
+        deleteTitle = stringResource(R.string.crm_views_delete_title),
+        deleteMessage = { viewName ->
+            context.getString(R.string.crm_views_delete_message, viewName)
+        },
+        byField = { fieldName -> context.getString(R.string.crm_views_by, fieldName) },
+        sortedBy = { direction -> context.getString(R.string.crm_views_sorted, direction) },
+        typeBoard = stringResource(R.string.crm_views_type_board),
+        typeList = stringResource(R.string.crm_views_type_list),
+        moveUp = stringResource(R.string.crm_views_move_up),
+        moveDown = stringResource(R.string.crm_views_move_down),
+        nameLabel = stringResource(R.string.crm_class_name),
+        typeLabel = stringResource(R.string.crm_views_type),
+        columnsField = stringResource(R.string.crm_views_columns_field),
+        rowsField = stringResource(R.string.crm_views_rows_field),
+        borderField = stringResource(R.string.crm_views_border_field),
+        filter = stringResource(R.string.crm_views_filter),
+        sortBy = stringResource(R.string.crm_views_sort_by),
+        direction = stringResource(R.string.crm_views_direction),
+        directionAsc = stringResource(R.string.crm_views_direction_asc),
+        directionDesc = stringResource(R.string.crm_views_direction_desc),
+        filterClasses = stringResource(R.string.crm_views_filter_classes),
+        none = stringResource(R.string.crm_create_template_none)
+    )
+}
+
+/** Pseudo-fields a view can sort on besides its sortable fields. */
+@Composable
+internal fun viewSortOptions() = listOf(
+    "created" to stringResource(R.string.crm_views_sort_created),
+    "updated" to stringResource(R.string.crm_views_sort_updated),
+    "rank" to stringResource(R.string.crm_views_sort_rank)
 )

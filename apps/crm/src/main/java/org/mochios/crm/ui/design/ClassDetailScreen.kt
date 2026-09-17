@@ -27,7 +27,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -69,8 +68,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.ui.components.ErrorState
 
-private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checkbox", "checklist")
-
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
     "text" -> stringResource(R.string.crm_field_type_text)
@@ -88,6 +85,7 @@ private fun fieldTypeLabel(type: String): String = when (type) {
 @Composable
 fun ClassDetailScreen(
     onBack: () -> Unit,
+    onAddField: () -> Unit,
     onFieldClick: (String) -> Unit,
     viewModel: ClassDetailViewModel = hiltViewModel()
 ) {
@@ -148,7 +146,6 @@ fun ClassDetailScreen(
             var editName by remember(cls.id) { mutableStateOf(cls.name) }
             var titleFieldId by remember(cls.id) { mutableStateOf(cls.title) }
             var titleExpanded by remember(cls.id) { mutableStateOf(false) }
-            var showAddFieldDialog by remember(cls.id) { mutableStateOf(false) }
             var showDeleteConfirm by remember(cls.id) { mutableStateOf(false) }
 
             val sortedViews = crmDetails.views.sortedBy { view -> view.rank }
@@ -278,7 +275,7 @@ fun ClassDetailScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(stringResource(R.string.crm_class_fields), style = MaterialTheme.typography.titleSmall)
-                    MochiIconButton(onClick = { showAddFieldDialog = true }) {
+                    MochiIconButton(onClick = onAddField) {
                         Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_class_add_field))
                     }
                 }
@@ -361,16 +358,6 @@ fun ClassDetailScreen(
                 }
             }
 
-            if (showAddFieldDialog) {
-                AddFieldDialog(
-                    onDismiss = { showAddFieldDialog = false },
-                    onAdd = { name, fieldtype, flags, multi ->
-                        viewModel.createField(name, fieldtype, flags, multi)
-                        showAddFieldDialog = false
-                    }
-                )
-            }
-
             if (showDeleteConfirm) {
                 MochiAlertDialog(
                     onDismissRequest = { showDeleteConfirm = false },
@@ -387,101 +374,4 @@ fun ClassDetailScreen(
             }
         }
     }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun AddFieldDialog(
-    onDismiss: () -> Unit,
-    onAdd: (String, String, String?, Boolean?) -> Unit
-) {
-    var name by remember { mutableStateOf("") }
-    var fieldtype by remember { mutableStateOf("text") }
-    var typeExpanded by remember { mutableStateOf(false) }
-    var isRequired by remember { mutableStateOf(false) }
-    var isReadonly by remember { mutableStateOf(false) }
-    var isSortable by remember { mutableStateOf(false) }
-    var isFilterable by remember { mutableStateOf(false) }
-    var isMulti by remember { mutableStateOf(false) }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.crm_field_add_field_dialog_title),
-        content = {
-            Column {
-                MochiTextField(
-                    value = name,
-                    onValueChange = { name = it },
-                    label = { Text(stringResource(R.string.crm_field_name)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                ExposedDropdownMenuBox(
-                    expanded = typeExpanded,
-                    onExpandedChange = { typeExpanded = it }
-                ) {
-                    MochiTextField(
-                        value = fieldTypeLabel(fieldtype),
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text(stringResource(R.string.crm_field_type)) },
-                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = typeExpanded) },
-                        modifier = Modifier
-                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                            .fillMaxWidth()
-                    )
-                    ExposedDropdownMenu(
-                        expanded = typeExpanded,
-                        onDismissRequest = { typeExpanded = false }
-                    ) {
-                        FIELD_TYPE_KEYS.forEach { value ->
-                            MochiDropdownMenuItem(
-                                text = { Text(fieldTypeLabel(value)) },
-                                onClick = {
-                                    fieldtype = value
-                                    typeExpanded = false
-                                },
-                            )
-                        }
-                    }
-                }
-                Spacer(modifier = Modifier.height(8.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(checked = isRequired, onCheckedChange = { isRequired = it })
-                    Text(stringResource(R.string.crm_field_required))
-                }
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(checked = isReadonly, onCheckedChange = { isReadonly = it })
-                    Text(stringResource(R.string.crm_field_readonly))
-                }
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(checked = isSortable, onCheckedChange = { isSortable = it })
-                    Text(stringResource(R.string.crm_field_sortable))
-                }
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Checkbox(checked = isFilterable, onCheckedChange = { isFilterable = it })
-                    Text(stringResource(R.string.crm_field_filterable))
-                }
-                if (fieldtype == "enumerated") {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Checkbox(checked = isMulti, onCheckedChange = { isMulti = it })
-                        Text(stringResource(R.string.crm_field_multi))
-                    }
-                }
-            }
-        },
-        confirmText = stringResource(R.string.crm_classes_create),
-        onConfirm = {
-            val flags = buildList {
-                if (isRequired) add("required")
-                if (isReadonly) add("readonly")
-                if (isSortable) add("sort")
-                if (isFilterable) add("filter")
-            }.joinToString(",").ifEmpty { null }
-            onAdd(name, fieldtype, flags, if (fieldtype == "enumerated" && isMulti) true else null)
-        },
-        confirmEnabled = name.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
 }

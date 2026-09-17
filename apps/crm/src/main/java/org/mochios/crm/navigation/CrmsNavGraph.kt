@@ -14,7 +14,11 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.crm.ui.design.ClassDetailScreen
+import org.mochios.crm.ui.design.CreateClassScreen
+import org.mochios.crm.ui.design.CreateFieldScreen
+import org.mochios.crm.ui.design.CreateViewScreen
 import org.mochios.crm.ui.design.DesignScreen
+import org.mochios.crm.ui.design.EditViewScreen
 import org.mochios.crm.ui.design.FieldDetailScreen
 import org.mochios.crm.ui.find.FindCrmsScreen
 import org.mochios.crm.ui.crm.CreateObjectScreen
@@ -37,6 +41,10 @@ object CrmsApp {
     const val CRM_SETTINGS = "crm/crm/{crmId}/settings"
     const val CRM_DESIGN = "crm/crm/{crmId}/design"
     const val CRM_DESIGN_CLASS = "crm/crm/{crmId}/design/class/{classId}"
+    const val CRM_DESIGN_CREATE_CLASS = "crm/crm/{crmId}/design/create-class"
+    const val CRM_DESIGN_VIEW = "crm/crm/{crmId}/design/view/{viewId}"
+    const val CRM_DESIGN_CREATE_VIEW = "crm/crm/{crmId}/design/create-view"
+    const val CRM_DESIGN_CREATE_FIELD = "crm/crm/{crmId}/design/class/{classId}/create-field"
     const val CRM_DESIGN_FIELD = "crm/crm/{crmId}/design/class/{classId}/field/{fieldId}"
     // Deliberately not `crm/crm/{crmId}/object/create`, which the CRM_OBJECT
     // pattern above also matches, with objectId='create'.
@@ -48,6 +56,12 @@ object CrmsApp {
     fun crmDesign(crmId: String) = "crm/crm/$crmId/design"
     fun crmDesignClass(crmId: String, classId: String) =
         "crm/crm/$crmId/design/class/$classId"
+    fun crmDesignCreateClass(crmId: String) = "crm/crm/$crmId/design/create-class"
+    fun crmDesignView(crmId: String, viewId: String) =
+        "crm/crm/$crmId/design/view/$viewId"
+    fun crmDesignCreateView(crmId: String) = "crm/crm/$crmId/design/create-view"
+    fun crmDesignCreateField(crmId: String, classId: String) =
+        "crm/crm/$crmId/design/class/$classId/create-field"
     fun crmDesignField(crmId: String, classId: String, fieldId: String) =
         "crm/crm/$crmId/design/class/$classId/field/$fieldId"
 
@@ -227,6 +241,11 @@ fun NavGraphBuilder.crmsNavGraph(
         val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
         DesignScreen(
             onBack = { navController.popBackStack() },
+            onAddClass = { navController.navigate(CrmsApp.crmDesignCreateClass(crmId)) },
+            onAddView = { navController.navigate(CrmsApp.crmDesignCreateView(crmId)) },
+            onEditView = { viewId ->
+                navController.navigate(CrmsApp.crmDesignView(crmId, viewId))
+            },
             onClassClick = { classId ->
                 navController.navigate(CrmsApp.crmDesignClass(crmId, classId))
             },
@@ -244,6 +263,9 @@ fun NavGraphBuilder.crmsNavGraph(
         val classId = backStackEntry.arguments?.getString("classId").orEmpty()
         ClassDetailScreen(
             onBack = { navController.popBackStack() },
+            onAddField = {
+                navController.navigate(CrmsApp.crmDesignCreateField(crmId, classId))
+            },
             onFieldClick = { fieldId ->
                 navController.navigate(CrmsApp.crmDesignField(crmId, classId, fieldId))
             },
@@ -260,6 +282,61 @@ fun NavGraphBuilder.crmsNavGraph(
     ) {
         FieldDetailScreen(
             onBack = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_CREATE_CLASS,
+        arguments = listOf(navArgument("crmId") { type = NavType.StringType })
+    ) { backStackEntry ->
+        val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
+        CreateClassScreen(
+            onBack = { navController.popBackStack() },
+            onCreated = { classId ->
+                if (classId.isBlank()) {
+                    navController.popBackStack()
+                } else {
+                    navController.navigate(CrmsApp.crmDesignClass(crmId, classId)) {
+                        popUpTo(CrmsApp.CRM_DESIGN_CREATE_CLASS) { inclusive = true }
+                    }
+                }
+            },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_VIEW,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("viewId") { type = NavType.StringType }
+        )
+    ) {
+        EditViewScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_CREATE_VIEW,
+        arguments = listOf(navArgument("crmId") { type = NavType.StringType })
+    ) {
+        CreateViewScreen(
+            onBack = { navController.popBackStack() },
+            onCreated = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = CrmsApp.CRM_DESIGN_CREATE_FIELD,
+        arguments = listOf(
+            navArgument("crmId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType }
+        )
+    ) {
+        CreateFieldScreen(
+            onBack = { navController.popBackStack() },
+            onCreated = { navController.popBackStack() },
         )
     }
 

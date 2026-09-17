@@ -48,6 +48,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -79,6 +80,9 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 @Composable
 fun DesignScreen(
     onBack: () -> Unit,
+    onAddClass: () -> Unit,
+    onAddView: () -> Unit,
+    onEditView: (String) -> Unit,
     onClassClick: (String) -> Unit,
     viewModel: DesignViewModel = hiltViewModel()
 ) {
@@ -87,7 +91,7 @@ fun DesignScreen(
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
         viewModel.loadCrm()
     }
-    var selectedTab by remember { mutableIntStateOf(0) }
+    var selectedTab by rememberSaveable { mutableIntStateOf(0) }
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showImportDialog by remember { mutableStateOf(false) }
     var confirmTemplate by remember { mutableStateOf<Template?>(null) }
@@ -232,14 +236,16 @@ fun DesignScreen(
                     when (selectedTab) {
                         0 -> ClassesTab(
                             classes = details.classes,
-                            viewModel = viewModel,
+                            onAddClass = onAddClass,
                             onClassClick = onClassClick
                         )
                         1 -> ViewsTab(
                             views = details.views,
                             classes = details.classes,
                             fields = details.fields,
-                            viewModel = viewModel
+                            viewModel = viewModel,
+                            onAddView = onAddView,
+                            onEditView = onEditView
                         )
                     }
                 }

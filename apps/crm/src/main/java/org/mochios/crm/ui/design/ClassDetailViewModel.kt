@@ -115,18 +115,6 @@ class ClassDetailViewModel @Inject constructor(
         }
     }
 
-    /** Adds a field to the class. */
-    fun createField(name: String, fieldtype: String, flags: String?, multi: Boolean?) {
-        viewModelScope.launch {
-            try {
-                repository.createField(crmId, classId, name, fieldtype, flags, multi)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     /** Applies a new field order, as a comma-separated list of field ids. */
     fun reorderFields(order: String) {
         viewModelScope.launch {

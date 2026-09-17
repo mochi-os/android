@@ -95,63 +95,7 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    // ---- Classes ----
-
-    fun createClass(name: String) {
-        viewModelScope.launch {
-            try {
-                repository.createClass(projectId, name)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     // ---- Views ----
-
-    fun createView(
-        name: String,
-        viewtype: String,
-        columns: String?,
-        rows: String?,
-        filter: String?,
-        sort: String?,
-        direction: String?,
-        classes: String?,
-        border: String?
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.createView(projectId, name, viewtype, columns, rows, filter, sort, direction, classes, border)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateView(
-        viewId: String,
-        name: String?,
-        viewtype: String?,
-        columns: String?,
-        rows: String?,
-        filter: String?,
-        sort: String?,
-        direction: String?,
-        classes: String?,
-        border: String?
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.updateView(projectId, viewId, name, viewtype, columns, rows, filter, sort, direction, classes, border)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
 
     fun deleteView(viewId: String) {
         viewModelScope.launch {
