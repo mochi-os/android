@@ -5,22 +5,16 @@
 
 package org.mochios.projects.ui.design
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
-import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.FormLoadGate
 import org.mochios.android.ui.components.ViewForm
 import org.mochios.android.ui.components.rememberViewFormState
 import org.mochios.projects.R
@@ -67,38 +61,27 @@ fun EditViewScreen(
         onBack = onBack,
         onSubmit = { viewModel.updateView(formState.toDraft()) }
     ) { padding ->
-        if (details == null || view == null) {
-            Box(
-                modifier = Modifier
-                    .padding(padding)
-                    .fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                val loadError = uiState.loadError
-                if (loadError != null) {
-                    ErrorState(error = loadError, onRetry = { viewModel.loadDesign() })
-                } else {
-                    CircularProgressIndicator()
+        FormLoadGate(
+            padding = padding,
+            data = details?.takeIf { view != null },
+            loadError = uiState.loadError,
+            onRetry = { viewModel.loadDesign() }
+        ) { loaded ->
+            ViewForm(
+                state = formState,
+                classes = loaded.classes.toClassListItems(),
+                fields = loaded.fields.toViewFieldOptions(),
+                labels = viewListLabels(),
+                sortOptions = viewSortOptions(),
+                modifier = Modifier.fillMaxWidth(),
+                preview = { preview, previewModifier ->
+                    DesignPreview(
+                        project = loaded,
+                        view = preview?.toProjectView(),
+                        modifier = previewModifier
+                    )
                 }
-            }
-        } else {
-            CreateEntityForm(padding) {
-                ViewForm(
-                    state = formState,
-                    classes = details.classes.toClassListItems(),
-                    fields = details.fields.toViewFieldOptions(),
-                    labels = viewListLabels(),
-                    sortOptions = viewSortOptions(),
-                    modifier = Modifier.fillMaxWidth(),
-                    preview = { preview, modifier ->
-                        DesignPreview(
-                            project = details,
-                            view = preview?.toProjectView(),
-                            modifier = modifier
-                        )
-                    }
-                )
-            }
+            )
         }
     }
 }
