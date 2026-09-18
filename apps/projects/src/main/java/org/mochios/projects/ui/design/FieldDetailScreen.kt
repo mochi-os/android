@@ -23,6 +23,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
@@ -42,6 +43,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -53,6 +57,13 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.dnd.DragEdge
+import org.mochios.android.ui.components.dnd.DropOrientation
+import org.mochios.android.ui.components.dnd.draggableItem
+import org.mochios.android.ui.components.dnd.dropTarget
+import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.dnd.isTarget
+import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
@@ -174,6 +185,9 @@ fun FieldDetailScreen(
             var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
             var showDeleteConfirm by remember { mutableStateOf(false) }
             var deletingOption by remember(field.id) { mutableStateOf<FieldOption?>(null) }
+            // No "on" zone: an option row is only ever an insertion point, so the
+            // whole row splits at its midpoint into Top and Bottom.
+            val dragState = rememberDragState(onZoneFraction = 0f)
 
             Column(
                 modifier = Modifier
@@ -357,14 +371,49 @@ fun FieldDetailScreen(
                     }
 
                     val sortedOptions = options.sortedBy { option -> option.rank }
+                    val dragHint = stringResource(R.string.projects_drag_row)
+                    val insertionColour = MaterialTheme.colorScheme.primary
                     sortedOptions.forEachIndexed { index, option ->
+                        val isDropTarget = dragState.isTarget(option.id) &&
+                            dragState.draggingItemId != option.id
+                        val insertEdge = dragState.targetEdge
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
+                                .alpha(if (dragState.isDragging(option.id)) 0.4f else 1f)
+                                .dropTarget(
+                                    state = dragState,
+                                    itemId = option.id,
+                                    orientation = DropOrientation.Vertical,
+                                    acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
+                                    onDrop = { sourceId, edge ->
+                                        viewModel.reorderOptions(
+                                            sortedOptions.movedTo(sourceId, option.id, edge)
+                                        )
+                                    }
+                                )
+                                .drawBehind {
+                                    if (!isDropTarget) return@drawBehind
+                                    val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                                    drawLine(
+                                        color = insertionColour,
+                                        start = Offset(0f, y),
+                                        end = Offset(size.width, y),
+                                        strokeWidth = 2.dp.toPx()
+                                    )
+                                }
                                 .clickable { onEditOption(option.id) }
                                 .padding(vertical = 12.dp, horizontal = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
+                            Icon(
+                                Icons.Default.DragHandle,
+                                contentDescription = dragHint,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier
+                                    .size(24.dp)
+                                    .draggableItem(state = dragState, itemId = option.id)
+                            )
                             MochiIconButton(
                                 onClick = {
                                     viewModel.reorderOptions(sortedOptions.swapped(index, index - 1))
@@ -504,6 +553,23 @@ private fun FlagRow(label: String, checked: Boolean, onCheckedChange: (Boolean) 
         Spacer(modifier = Modifier.width(12.dp))
         Text(label, style = MaterialTheme.typography.bodyMedium)
     }
+}
+
+/**
+ * This list with [sourceId] lifted out and dropped against [targetId], as option
+ * ids. [edge] decides which side of the target it lands on.
+ */
+private fun List<FieldOption>.movedTo(
+    sourceId: String,
+    targetId: String,
+    edge: DragEdge,
+): List<String> {
+    val ids = map { option -> option.id }.toMutableList()
+    if (!ids.remove(sourceId)) return ids
+    val targetIndex = ids.indexOf(targetId)
+    if (targetIndex < 0) return ids
+    ids.add(if (edge == DragEdge.Bottom) targetIndex + 1 else targetIndex, sourceId)
+    return ids
 }
 
 /** This list with the entries at [from] and [to] swapped, as option ids. */
