@@ -54,6 +54,7 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmField
+import org.mochios.crm.model.FieldOption
 import org.mochios.android.R as MochiR
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.CircularProgressIndicator
@@ -176,6 +177,7 @@ fun FieldDetailScreen(
             var editMinlength by remember(field.id) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
             var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
             var showDeleteConfirm by remember { mutableStateOf(false) }
+            var deletingOption by remember(field.id) { mutableStateOf<FieldOption?>(null) }
 
             Column(
                 modifier = Modifier
@@ -426,13 +428,12 @@ fun FieldDetailScreen(
                                 )
                             }
                             MochiIconButton(
-                                onClick = { viewModel.deleteOption(option.id) },
+                                onClick = { deletingOption = option },
                                 modifier = Modifier.size(32.dp)
                             ) {
                                 Icon(
                                     Icons.Default.Delete,
                                     contentDescription = stringResource(MochiR.string.common_delete),
-                                    tint = MaterialTheme.colorScheme.error,
                                     modifier = Modifier.size(18.dp)
                                 )
                             }
@@ -475,6 +476,21 @@ fun FieldDetailScreen(
                     onConfirm = {
                         showDeleteConfirm = false
                         viewModel.deleteField()
+                    },
+                    destructive = true,
+                    dismissText = stringResource(MochiR.string.common_cancel),
+                )
+            }
+
+            deletingOption?.let { option ->
+                MochiAlertDialog(
+                    onDismissRequest = { deletingOption = null },
+                    title = stringResource(R.string.crm_option_delete_title),
+                    text = stringResource(R.string.crm_option_delete_message, option.name),
+                    confirmText = stringResource(MochiR.string.common_delete),
+                    onConfirm = {
+                        deletingOption = null
+                        viewModel.deleteOption(option.id)
                     },
                     destructive = true,
                     dismissText = stringResource(MochiR.string.common_cancel),

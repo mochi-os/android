@@ -312,6 +312,8 @@
     <string name="crm_option_add">Add option</string>
     <string name="crm_option_edit">Edit option</string>
     <string name="crm_option_color">Color</string>
+    <string name="crm_option_delete_title">Delete option</string>
+    <string name="crm_option_delete_message">Are you sure you want to delete the option \"%1$s\"?</string>
 
     <!-- Views -->
     <string name="crm_views_empty">No views defined</string>
