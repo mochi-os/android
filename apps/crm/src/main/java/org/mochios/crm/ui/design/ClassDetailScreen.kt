@@ -48,11 +48,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
@@ -178,10 +178,11 @@ fun ClassDetailScreen(
                     modifier = Modifier.fillMaxWidth()
                 )
                 if (editName != cls.name && editName.isNotBlank()) {
-                    MochiTextButton(onClick = {
+                    Spacer(modifier = Modifier.height(12.dp))
+                    MochiButton(onClick = {
                         viewModel.updateClass(name = editName)
                     }) {
-                        Text(stringResource(R.string.crm_class_save_name))
+                        Text(stringResource(MochiR.string.common_save))
                     }
                 }
 
@@ -236,9 +237,7 @@ fun ClassDetailScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
-                HorizontalDivider()
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
 
                 // Hierarchy
                 Text(stringResource(R.string.crm_class_parents), style = MaterialTheme.typography.titleSmall)
@@ -264,9 +263,7 @@ fun ClassDetailScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
-                HorizontalDivider()
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
 
                 // Fields
                 Row(
@@ -343,8 +340,6 @@ fun ClassDetailScreen(
                 }
 
                 Spacer(modifier = Modifier.height(32.dp))
-                HorizontalDivider()
-                Spacer(modifier = Modifier.height(16.dp))
 
                 // Delete class
                 MochiOutlinedButton(

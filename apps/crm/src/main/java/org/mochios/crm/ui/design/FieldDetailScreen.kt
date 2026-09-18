@@ -46,11 +46,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmField
@@ -230,9 +230,7 @@ fun FieldDetailScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
-                HorizontalDivider()
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
 
                 // Flags
                 Text(stringResource(R.string.crm_field_flags), style = MaterialTheme.typography.titleSmall)
@@ -283,9 +281,7 @@ fun FieldDetailScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
-                HorizontalDivider()
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(24.dp))
 
                 // Validation
                 Text(stringResource(R.string.crm_field_validation), style = MaterialTheme.typography.titleSmall)
@@ -327,9 +323,9 @@ fun FieldDetailScreen(
                     modifier = Modifier.fillMaxWidth()
                 )
 
-                Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-                // Save changes button
+                // Save button
                 val flagsString = buildList {
                     if (isRequired) add("required")
                     if (isReadonly) add("readonly")
@@ -350,7 +346,7 @@ fun FieldDetailScreen(
                         || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
 
                 if (hasChanges) {
-                    MochiTextButton(
+                    MochiButton(
                         onClick = {
                             viewModel.updateField(
                                 name = editName.takeIf { it != field.name },
@@ -367,15 +363,13 @@ fun FieldDetailScreen(
                         },
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(stringResource(R.string.crm_field_save))
+                        Text(stringResource(MochiR.string.common_save))
                     }
                 }
 
                 // Options section (only for enumerated fields)
                 if (field.fieldtype == "enumerated" || editFieldtype == "enumerated") {
-                    Spacer(modifier = Modifier.height(16.dp))
-                    HorizontalDivider()
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(24.dp))
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -452,8 +446,6 @@ fun FieldDetailScreen(
                 }
 
                 Spacer(modifier = Modifier.height(32.dp))
-                HorizontalDivider()
-                Spacer(modifier = Modifier.height(16.dp))
 
                 // Delete field
                 MochiOutlinedButton(
