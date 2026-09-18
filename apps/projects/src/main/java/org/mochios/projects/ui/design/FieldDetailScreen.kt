@@ -342,7 +342,7 @@ fun FieldDetailScreen(
                 }
 
                 // Options section (only for enumerated fields)
-                if (field.fieldtype == "enumerated" || field.fieldtype == "enumerated") {
+                if (field.fieldtype == "enumerated") {
                     Spacer(modifier = Modifier.height(24.dp))
 
                     Row(
