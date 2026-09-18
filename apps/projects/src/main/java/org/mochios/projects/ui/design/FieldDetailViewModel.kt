@@ -138,6 +138,22 @@ class FieldDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Persists a new display order for the field's options.
+     *
+     * @param order Every option id of this field, in the order to show them.
+     */
+    fun reorderOptions(order: List<String>) {
+        viewModelScope.launch {
+            try {
+                repository.reorderOptions(projectId, classId, fieldId, order.joinToString(","))
+                loadProject()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
     /** Drops the current error once it has been shown. */
     fun clearError() {
         _uiState.value = _uiState.value.copy(error = null)

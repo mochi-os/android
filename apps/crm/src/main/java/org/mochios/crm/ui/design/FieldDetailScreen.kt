@@ -23,8 +23,9 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -382,7 +383,8 @@ fun FieldDetailScreen(
                         }
                     }
 
-                    options.sortedBy { it.rank }.forEach { option ->
+                    val sortedOptions = options.sortedBy { option -> option.rank }
+                    sortedOptions.forEachIndexed { index, option ->
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -390,12 +392,32 @@ fun FieldDetailScreen(
                                 .padding(vertical = 12.dp, horizontal = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(
-                                Icons.Default.DragHandle,
-                                contentDescription = null,
-                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.size(20.dp)
-                            )
+                            MochiIconButton(
+                                onClick = {
+                                    viewModel.reorderOptions(sortedOptions.swapped(index, index - 1))
+                                },
+                                enabled = index > 0,
+                                modifier = Modifier.size(32.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.KeyboardArrowUp,
+                                    contentDescription = stringResource(R.string.crm_class_move_up),
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                            MochiIconButton(
+                                onClick = {
+                                    viewModel.reorderOptions(sortedOptions.swapped(index, index + 1))
+                                },
+                                enabled = index < sortedOptions.size - 1,
+                                modifier = Modifier.size(32.dp)
+                            ) {
+                                Icon(
+                                    Icons.Default.KeyboardArrowDown,
+                                    contentDescription = stringResource(R.string.crm_class_move_down),
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
                             Spacer(modifier = Modifier.width(8.dp))
                             if (option.colour.isNotBlank()) {
                                 Icon(
@@ -509,4 +531,13 @@ private fun FlagRow(label: String, checked: Boolean, onCheckedChange: (Boolean) 
         Spacer(modifier = Modifier.width(12.dp))
         Text(label, style = MaterialTheme.typography.bodyMedium)
     }
+}
+
+/** This list with the entries at [from] and [to] swapped, as option ids. */
+private fun List<FieldOption>.swapped(from: Int, to: Int): List<String> {
+    val reordered = toMutableList()
+    val moved = reordered[to]
+    reordered[to] = reordered[from]
+    reordered[from] = moved
+    return reordered.map { option -> option.id }
 }
