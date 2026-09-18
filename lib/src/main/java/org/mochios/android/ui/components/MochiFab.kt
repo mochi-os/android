@@ -38,12 +38,11 @@ fun MochiFab(
     interactionSource: MutableInteractionSource? = null,
     content: @Composable () -> Unit,
 ) {
-    val container = containerColor ?: fabContainerColor(tone)
     FloatingActionButton(
         onClick = onClick,
         modifier = modifier,
         shape = shape,
-        containerColor = container,
+        containerColor = containerColor ?: fabContainerColor(tone),
         contentColor = contentColor ?: fabContentColor(tone),
         elevation = elevation,
         interactionSource = interactionSource,

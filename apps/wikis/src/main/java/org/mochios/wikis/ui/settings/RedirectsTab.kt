@@ -44,7 +44,7 @@ fun RedirectsTab(
             MochiFab(onClick = { showAddDialog = true }) {
                 Icon(
                     Icons.Default.Add,
-                    contentDescription = stringResource(R.string.wikis_redirects_add),
+                    contentDescription = stringResource(R.string.wikis_redirect_create_title),
                 )
             }
         },
