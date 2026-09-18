@@ -14,8 +14,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.reorderedTo
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
 import org.mochios.crm.model.FieldOption
@@ -56,6 +59,8 @@ class DesignViewModel @Inject constructor(
     val crmId: String = savedStateHandle.get<String>("crmId") ?: ""
 
     private val _uiState = MutableStateFlow(DesignUiState())
+    // Serialises reorders so a second request cannot overtake the first.
+    private val reorderMutex = Mutex()
     val uiState: StateFlow<DesignUiState> = _uiState.asStateFlow()
 
     init {
@@ -112,14 +117,30 @@ class DesignViewModel @Inject constructor(
     }
 
     fun reorderViews(order: String) {
+        applyViewOrder(order.split(","))
         viewModelScope.launch {
-            try {
-                repository.reorderViews(crmId, order)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            reorderMutex.withLock {
+                try {
+                    repository.reorderViews(crmId, order)
+                    loadCrm()
+                } catch (e: Exception) {
+                    loadCrm()
+                    _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                }
             }
         }
+    }
+
+    /** Rewrites the design's views to [ids] locally, renumbering their ranks. */
+    private fun applyViewOrder(ids: List<String>) {
+        val state = _uiState.value
+        val details = state.crmDetails ?: return
+        val reordered = details.views.reorderedTo(
+            order = ids,
+            id = { view -> view.id },
+            withRank = { view, rank -> view.copy(rank = rank) }
+        )
+        _uiState.value = state.copy(crmDetails = details.copy(views = reordered))
     }
 
     // ---- Design Export / Import ----

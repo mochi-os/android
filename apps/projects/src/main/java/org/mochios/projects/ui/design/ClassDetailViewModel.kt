@@ -13,8 +13,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.reorderedTo
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.repository.ProjectsRepository
 import org.mochios.projects.util.hierarchyParameter
@@ -52,6 +55,8 @@ class ClassDetailViewModel @Inject constructor(
     val classId: String = savedStateHandle.get<String>("classId") ?: ""
 
     private val _uiState = MutableStateFlow(ClassDetailUiState(isLoading = true))
+    // Serialises reorders so a second request cannot overtake the first.
+    private val reorderMutex = Mutex()
     val uiState: StateFlow<ClassDetailUiState> = _uiState.asStateFlow()
 
     /**
@@ -118,14 +123,33 @@ class ClassDetailViewModel @Inject constructor(
 
     /** Applies a new field order, as a comma-separated list of field ids. */
     fun reorderFields(order: String) {
+        applyFieldOrder(order.split(","))
         viewModelScope.launch {
-            try {
-                repository.reorderFields(projectId, classId, order)
-                loadProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            reorderMutex.withLock {
+                try {
+                    repository.reorderFields(projectId, classId, order)
+                    loadProject()
+                } catch (e: Exception) {
+                    loadProject()
+                    _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                }
             }
         }
+    }
+
+    /** Rewrites this class's fields to [ids] locally, renumbering their ranks. */
+    private fun applyFieldOrder(ids: List<String>) {
+        val state = _uiState.value
+        val details = state.projectDetails ?: return
+        val current = details.fields[classId] ?: return
+        val reordered = current.reorderedTo(
+            order = ids,
+            id = { field -> field.id },
+            withRank = { field, rank -> field.copy(rank = rank) }
+        )
+        _uiState.value = state.copy(
+            projectDetails = details.copy(fields = details.fields + (classId to reordered))
+        )
     }
 
     /** Drops the current error once it has been shown. */

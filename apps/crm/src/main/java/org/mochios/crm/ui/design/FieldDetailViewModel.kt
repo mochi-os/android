@@ -13,8 +13,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.reorderedTo
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.repository.CrmsRepository
 import javax.inject.Inject
@@ -54,6 +57,8 @@ class FieldDetailViewModel @Inject constructor(
     val fieldId: String = savedStateHandle.get<String>("fieldId") ?: ""
 
     private val _uiState = MutableStateFlow(FieldDetailUiState(isLoading = true))
+    // Serialises reorders so a second request cannot overtake the first.
+    private val reorderMutex = Mutex()
     val uiState: StateFlow<FieldDetailUiState> = _uiState.asStateFlow()
 
     /** Fetches the design. Called on every resume, like the class screen. */
@@ -146,14 +151,36 @@ class FieldDetailViewModel @Inject constructor(
      * @param order Every option id of this field, in the order to show them.
      */
     fun reorderOptions(order: List<String>) {
+        applyOptionOrder(order)
         viewModelScope.launch {
-            try {
-                repository.reorderOptions(crmId, classId, fieldId, order.joinToString(","))
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            reorderMutex.withLock {
+                try {
+                    repository.reorderOptions(crmId, classId, fieldId, order.joinToString(","))
+                    loadCrm()
+                } catch (e: Exception) {
+                    loadCrm()
+                    _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                }
             }
         }
+    }
+
+    /** Rewrites this field's options to [ids] locally, renumbering their ranks. */
+    private fun applyOptionOrder(ids: List<String>) {
+        val state = _uiState.value
+        val details = state.crmDetails ?: return
+        val byField = details.options[classId] ?: return
+        val current = byField[fieldId] ?: return
+        val reordered = current.reorderedTo(
+            order = ids,
+            id = { option -> option.id },
+            withRank = { option, rank -> option.copy(rank = rank) }
+        )
+        _uiState.value = state.copy(
+            crmDetails = details.copy(
+                options = details.options + (classId to (byField + (fieldId to reordered)))
+            )
+        )
     }
 
     /** Drops the current error once it has been shown. */
