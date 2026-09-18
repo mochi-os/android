@@ -25,9 +25,8 @@ import androidx.compose.material.icons.automirrored.filled.FormatListBulleted
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -50,10 +49,22 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.components.dnd.DragEdge
+import org.mochios.android.ui.components.dnd.DragState
+import org.mochios.android.ui.components.dnd.DropOrientation
+import org.mochios.android.ui.components.dnd.draggableItem
+import org.mochios.android.ui.components.dnd.dropTarget
+import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.dnd.isTarget
+import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderedAgainst
 
 /**
  * A saved board or list view, as the design screens list and edit one.
@@ -141,8 +152,7 @@ data class ViewFieldOption(
  * @property sortedBy Row detail naming the sort order, given the direction.
  * @property typeBoard Label of the board view type.
  * @property typeList Label of the list view type.
- * @property moveUp Content description of the move-up button.
- * @property moveDown Content description of the move-down button.
+ * @property dragRow Content description of the drag handle.
  * @property nameLabel Label of the name field.
  * @property typeLabel Heading above the view type selector.
  * @property columnsField Label of the columns field picker.
@@ -166,8 +176,7 @@ data class ViewListLabels(
     val sortedBy: (direction: String) -> String,
     val typeBoard: String,
     val typeList: String,
-    val moveUp: String,
-    val moveDown: String,
+    val dragRow: String,
     val nameLabel: String,
     val typeLabel: String,
     val columnsField: String,
@@ -212,6 +221,9 @@ fun ViewListTab(
     preview: (@Composable (ViewListItem?, Modifier) -> Unit)? = null
 ) {
     var deletingView by remember { mutableStateOf<ViewListItem?>(null) }
+    // No "on" zone: a view row is only ever an insertion point, so the
+    // whole row splits at its midpoint into Top and Bottom.
+    val dragState = rememberDragState(onZoneFraction = 0f)
 
     val allFields = remember(fields) {
         fields.values.flatten().distinctBy { field -> field.id }
@@ -261,17 +273,21 @@ fun ViewListTab(
                     }
                 }
                 val sortedViews = views.sortedBy { view -> view.rank }
-                itemsIndexed(sortedViews, key = { _, view -> view.id }) { index, view ->
+                itemsIndexed(sortedViews, key = { _, view -> view.id }) { _, view ->
                     ViewRow(
                         view = view,
                         allFields = allFields,
                         labels = labels,
-                        canMoveUp = index > 0,
-                        canMoveDown = index < sortedViews.size - 1,
-                        onMoveUp = { onReorderViews(sortedViews.swapped(index, index - 1)) },
-                        onMoveDown = { onReorderViews(sortedViews.swapped(index, index + 1)) },
                         onEdit = { onEditView(view.id) },
-                        onDelete = { deletingView = view }
+                        onDelete = { deletingView = view },
+                        dragState = dragState,
+                        onDropView = { sourceId, edge ->
+                            onReorderViews(
+                                sortedViews.map { entry -> entry.id }
+                                    .reorderedAgainst(sourceId, view.id, edge)
+                                    .joinToString(",")
+                            )
+                        }
                     )
                     HorizontalDivider()
                 }
@@ -295,37 +311,54 @@ fun ViewListTab(
     }
 }
 
-/**
- * The list's ids with the entries at [from] and [to] exchanged, comma-joined
- * the way the reorder endpoint expects.
- */
-private fun List<ViewListItem>.swapped(from: Int, to: Int): String {
-    val reordered = toMutableList()
-    val moved = reordered[to]
-    reordered[to] = reordered[from]
-    reordered[from] = moved
-    return reordered.joinToString(",") { view -> view.id }
-}
 
 @Composable
 private fun ViewRow(
     view: ViewListItem,
     allFields: List<ViewFieldOption>,
     labels: ViewListLabels,
-    canMoveUp: Boolean = false,
-    canMoveDown: Boolean = false,
-    onMoveUp: () -> Unit = {},
-    onMoveDown: () -> Unit = {},
     onEdit: () -> Unit,
-    onDelete: () -> Unit
+    onDelete: () -> Unit,
+    dragState: DragState,
+    onDropView: (sourceId: String, edge: DragEdge) -> Unit
 ) {
+    val isDropTarget = dragState.isTarget(view.id) && dragState.draggingItemId != view.id
+    val insertEdge = dragState.targetEdge
+    val insertionColour = MaterialTheme.colorScheme.primary
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .alpha(if (dragState.isDragging(view.id)) 0.4f else 1f)
+            .dropTarget(
+                state = dragState,
+                itemId = view.id,
+                orientation = DropOrientation.Vertical,
+                acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
+                onDrop = onDropView
+            )
+            .drawBehind {
+                if (!isDropTarget) return@drawBehind
+                val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                drawLine(
+                    color = insertionColour,
+                    start = Offset(0f, y),
+                    end = Offset(size.width, y),
+                    strokeWidth = 2.dp.toPx()
+                )
+            }
             .clickable(onClick = onEdit)
             .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        Icon(
+            Icons.Default.DragHandle,
+            contentDescription = labels.dragRow,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier
+                .size(20.dp)
+                .draggableItem(state = dragState, itemId = view.id)
+        )
+        Spacer(modifier = Modifier.width(8.dp))
         Icon(
             imageVector = if (view.viewtype == "board") Icons.Default.Dashboard
             else Icons.AutoMirrored.Filled.FormatListBulleted,
@@ -354,24 +387,6 @@ private fun ViewRow(
                 text = details,
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        MochiIconButton(onClick = onMoveUp, enabled = canMoveUp, modifier = Modifier.size(32.dp)) {
-            Icon(
-                Icons.Default.KeyboardArrowUp,
-                contentDescription = labels.moveUp,
-                modifier = Modifier.size(18.dp),
-            )
-        }
-        MochiIconButton(
-            onClick = onMoveDown,
-            enabled = canMoveDown,
-            modifier = Modifier.size(32.dp)
-        ) {
-            Icon(
-                Icons.Default.KeyboardArrowDown,
-                contentDescription = labels.moveDown,
-                modifier = Modifier.size(18.dp),
             )
         }
         MochiIconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {

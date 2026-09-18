@@ -23,9 +23,8 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -42,6 +41,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -53,6 +55,14 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.dnd.DragEdge
+import org.mochios.android.ui.components.dnd.DropOrientation
+import org.mochios.android.ui.components.dnd.draggableItem
+import org.mochios.android.ui.components.dnd.dropTarget
+import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.dnd.isTarget
+import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderedAgainst
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.FieldOption
@@ -179,6 +189,9 @@ fun FieldDetailScreen(
             var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
             var showDeleteConfirm by remember { mutableStateOf(false) }
             var deletingOption by remember(field.id) { mutableStateOf<FieldOption?>(null) }
+            // No "on" zone: an option row is only ever an insertion point, so the
+            // whole row splits at its midpoint into Top and Bottom.
+            val dragState = rememberDragState(onZoneFraction = 0f)
 
             Column(
                 modifier = Modifier
@@ -384,40 +397,50 @@ fun FieldDetailScreen(
                     }
 
                     val sortedOptions = options.sortedBy { option -> option.rank }
-                    sortedOptions.forEachIndexed { index, option ->
+                    val dragHint = stringResource(R.string.crm_drag_row)
+                    val insertionColour = MaterialTheme.colorScheme.primary
+                    sortedOptions.forEach { option ->
+                        val isDropTarget = dragState.isTarget(option.id) &&
+                            dragState.draggingItemId != option.id
+                        val insertEdge = dragState.targetEdge
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
+                                .alpha(if (dragState.isDragging(option.id)) 0.4f else 1f)
+                                .dropTarget(
+                                    state = dragState,
+                                    itemId = option.id,
+                                    orientation = DropOrientation.Vertical,
+                                    acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
+                                    onDrop = { sourceId, edge ->
+                                        viewModel.reorderOptions(
+                                            sortedOptions.map { entry -> entry.id }
+                                                .reorderedAgainst(sourceId, option.id, edge)
+                                        )
+                                    }
+                                )
+                                .drawBehind {
+                                    if (!isDropTarget) return@drawBehind
+                                    val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                                    drawLine(
+                                        color = insertionColour,
+                                        start = Offset(0f, y),
+                                        end = Offset(size.width, y),
+                                        strokeWidth = 2.dp.toPx()
+                                    )
+                                }
                                 .clickable { onEditOption(option.id) }
                                 .padding(vertical = 12.dp, horizontal = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            MochiIconButton(
-                                onClick = {
-                                    viewModel.reorderOptions(sortedOptions.swapped(index, index - 1))
-                                },
-                                enabled = index > 0,
-                                modifier = Modifier.size(32.dp)
-                            ) {
-                                Icon(
-                                    Icons.Default.KeyboardArrowUp,
-                                    contentDescription = stringResource(R.string.crm_class_move_up),
-                                    modifier = Modifier.size(18.dp)
-                                )
-                            }
-                            MochiIconButton(
-                                onClick = {
-                                    viewModel.reorderOptions(sortedOptions.swapped(index, index + 1))
-                                },
-                                enabled = index < sortedOptions.size - 1,
-                                modifier = Modifier.size(32.dp)
-                            ) {
-                                Icon(
-                                    Icons.Default.KeyboardArrowDown,
-                                    contentDescription = stringResource(R.string.crm_class_move_down),
-                                    modifier = Modifier.size(18.dp)
-                                )
-                            }
+                            Icon(
+                                Icons.Default.DragHandle,
+                                contentDescription = dragHint,
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier
+                                    .size(24.dp)
+                                    .draggableItem(state = dragState, itemId = option.id)
+                            )
                             Spacer(modifier = Modifier.width(8.dp))
                             if (option.colour.isNotBlank()) {
                                 Icon(
@@ -533,11 +556,3 @@ private fun FlagRow(label: String, checked: Boolean, onCheckedChange: (Boolean) 
     }
 }
 
-/** This list with the entries at [from] and [to] swapped, as option ids. */
-private fun List<FieldOption>.swapped(from: Int, to: Int): List<String> {
-    val reordered = toMutableList()
-    val moved = reordered[to]
-    reordered[to] = reordered[from]
-    reordered[from] = moved
-    return reordered.map { option -> option.id }
-}

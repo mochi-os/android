@@ -25,8 +25,6 @@ import androidx.compose.material.icons.filled.Circle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -64,6 +62,7 @@ import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.dnd.isTarget
 import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderedAgainst
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectField
@@ -373,7 +372,7 @@ fun FieldDetailScreen(
                     val sortedOptions = options.sortedBy { option -> option.rank }
                     val dragHint = stringResource(R.string.projects_drag_row)
                     val insertionColour = MaterialTheme.colorScheme.primary
-                    sortedOptions.forEachIndexed { index, option ->
+                    sortedOptions.forEach { option ->
                         val isDropTarget = dragState.isTarget(option.id) &&
                             dragState.draggingItemId != option.id
                         val insertEdge = dragState.targetEdge
@@ -388,7 +387,8 @@ fun FieldDetailScreen(
                                     acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                                     onDrop = { sourceId, edge ->
                                         viewModel.reorderOptions(
-                                            sortedOptions.movedTo(sourceId, option.id, edge)
+                                            sortedOptions.map { entry -> entry.id }
+                                                .reorderedAgainst(sourceId, option.id, edge)
                                         )
                                     }
                                 )
@@ -414,32 +414,6 @@ fun FieldDetailScreen(
                                     .size(24.dp)
                                     .draggableItem(state = dragState, itemId = option.id)
                             )
-                            MochiIconButton(
-                                onClick = {
-                                    viewModel.reorderOptions(sortedOptions.swapped(index, index - 1))
-                                },
-                                enabled = index > 0,
-                                modifier = Modifier.size(32.dp)
-                            ) {
-                                Icon(
-                                    Icons.Default.KeyboardArrowUp,
-                                    contentDescription = stringResource(R.string.projects_class_move_up),
-                                    modifier = Modifier.size(18.dp)
-                                )
-                            }
-                            MochiIconButton(
-                                onClick = {
-                                    viewModel.reorderOptions(sortedOptions.swapped(index, index + 1))
-                                },
-                                enabled = index < sortedOptions.size - 1,
-                                modifier = Modifier.size(32.dp)
-                            ) {
-                                Icon(
-                                    Icons.Default.KeyboardArrowDown,
-                                    contentDescription = stringResource(R.string.projects_class_move_down),
-                                    modifier = Modifier.size(18.dp)
-                                )
-                            }
                             Spacer(modifier = Modifier.width(8.dp))
                             if (option.colour.isNotBlank()) {
                                 Icon(
@@ -555,28 +529,3 @@ private fun FlagRow(label: String, checked: Boolean, onCheckedChange: (Boolean) 
     }
 }
 
-/**
- * This list with [sourceId] lifted out and dropped against [targetId], as option
- * ids. [edge] decides which side of the target it lands on.
- */
-private fun List<FieldOption>.movedTo(
-    sourceId: String,
-    targetId: String,
-    edge: DragEdge,
-): List<String> {
-    val ids = map { option -> option.id }.toMutableList()
-    if (!ids.remove(sourceId)) return ids
-    val targetIndex = ids.indexOf(targetId)
-    if (targetIndex < 0) return ids
-    ids.add(if (edge == DragEdge.Bottom) targetIndex + 1 else targetIndex, sourceId)
-    return ids
-}
-
-/** This list with the entries at [from] and [to] swapped, as option ids. */
-private fun List<FieldOption>.swapped(from: Int, to: Int): List<String> {
-    val reordered = toMutableList()
-    val moved = reordered[to]
-    reordered[to] = reordered[from]
-    reordered[from] = moved
-    return reordered.map { option -> option.id }
-}

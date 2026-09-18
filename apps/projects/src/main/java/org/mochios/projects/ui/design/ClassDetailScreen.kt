@@ -24,8 +24,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
@@ -45,6 +44,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -55,6 +57,14 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.dnd.DragEdge
+import org.mochios.android.ui.components.dnd.DropOrientation
+import org.mochios.android.ui.components.dnd.draggableItem
+import org.mochios.android.ui.components.dnd.dropTarget
+import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.dnd.isTarget
+import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderedAgainst
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectField
@@ -149,6 +159,9 @@ fun ClassDetailScreen(
             var titleExpanded by remember(cls.id) { mutableStateOf(false) }
             var requestsEnabled by remember(cls.id) { mutableStateOf(cls.requests.isNotBlank()) }
             var showDeleteConfirm by remember(cls.id) { mutableStateOf(false) }
+            // No "on" zone: a field row is only ever an insertion point, so the
+            // whole row splits at its midpoint into Top and Bottom.
+            val dragState = rememberDragState(onZoneFraction = 0f)
 
             // Pick the first view that includes this class (or any view if none filter
             // by class) so the preview shows how this class's objects would lay out.
@@ -321,47 +334,53 @@ fun ClassDetailScreen(
                     }
                 }
 
-                val sortedFields = fields.sortedBy { it.rank }
-                sortedFields.forEachIndexed { index, field ->
+                val sortedFields = fields.sortedBy { entry -> entry.rank }
+                val dragHint = stringResource(R.string.projects_drag_row)
+                val insertionColour = MaterialTheme.colorScheme.primary
+                sortedFields.forEach { field ->
+                    val isDropTarget = dragState.isTarget(field.id) &&
+                        dragState.draggingItemId != field.id
+                    val insertEdge = dragState.targetEdge
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
+                            .alpha(if (dragState.isDragging(field.id)) 0.4f else 1f)
+                            .dropTarget(
+                                state = dragState,
+                                itemId = field.id,
+                                orientation = DropOrientation.Vertical,
+                                acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
+                                onDrop = { sourceId, edge ->
+                                    viewModel.reorderFields(
+                                        sortedFields.map { entry -> entry.id }
+                                            .reorderedAgainst(sourceId, field.id, edge)
+                                            .joinToString(",")
+                                    )
+                                }
+                            )
+                            .drawBehind {
+                                if (!isDropTarget) return@drawBehind
+                                val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                                drawLine(
+                                    color = insertionColour,
+                                    start = Offset(0f, y),
+                                    end = Offset(size.width, y),
+                                    strokeWidth = 2.dp.toPx()
+                                )
+                            }
                             .clickable { onFieldClick(field.id) }
                             .padding(vertical = 8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        // Reorder buttons
-                        if (sortedFields.size > 1) {
-                            Column {
-                                if (index > 0) {
-                                    MochiIconButton(
-                                        onClick = {
-                                            val newOrder = sortedFields.toMutableList()
-                                            newOrder.removeAt(index)
-                                            newOrder.add(index - 1, field)
-                                            viewModel.reorderFields(newOrder.joinToString(",") { it.id })
-                                        },
-                                        modifier = Modifier.size(24.dp)
-                                    ) {
-                                        Icon(Icons.Default.KeyboardArrowUp, contentDescription = stringResource(R.string.projects_class_move_up), modifier = Modifier.size(16.dp))
-                                    }
-                                }
-                                if (index < sortedFields.lastIndex) {
-                                    MochiIconButton(
-                                        onClick = {
-                                            val newOrder = sortedFields.toMutableList()
-                                            newOrder.removeAt(index)
-                                            newOrder.add(index + 1, field)
-                                            viewModel.reorderFields(newOrder.joinToString(",") { it.id })
-                                        },
-                                        modifier = Modifier.size(24.dp)
-                                    ) {
-                                        Icon(Icons.Default.KeyboardArrowDown, contentDescription = stringResource(R.string.projects_class_move_down), modifier = Modifier.size(16.dp))
-                                    }
-                                }
-                            }
-                            Spacer(modifier = Modifier.width(4.dp))
-                        }
+                        Icon(
+                            Icons.Default.DragHandle,
+                            contentDescription = dragHint,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier
+                                .size(20.dp)
+                                .draggableItem(state = dragState, itemId = field.id)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = field.name,
