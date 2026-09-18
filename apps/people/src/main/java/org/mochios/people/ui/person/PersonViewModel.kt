@@ -19,6 +19,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.people.api.ContactsListResponse
+import org.mochios.people.model.ContactProperty
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
@@ -26,7 +28,10 @@ import javax.inject.Inject
 sealed class FriendState {
     object Self : FriendState()
     object Friend : FriendState()
-    data class InvitedByThem(val inviteId: String) : FriendState()
+
+    /** A contact of the viewer's, but not a friend. */
+    object Contact : FriendState()
+    data class InvitedByThem(val person: String) : FriendState()
     object InvitedThem : FriendState()
     object NotFriend : FriendState()
 }
@@ -44,6 +49,30 @@ data class PersonViewUiState(
     val friendState: FriendState = FriendState.NotFriend,
     val error: MochiError? = null,
 )
+
+/**
+ * Where the viewer stands with a person, read off the contacts response: a
+ * friend, a contact who is not one, an invitation waiting either way, or a
+ * stranger. [me] is the viewer's own identity.
+ */
+fun friendState(
+    contacts: ContactsListResponse,
+    person: String,
+    me: String? = null,
+): FriendState {
+    if (person.isBlank()) return FriendState.NotFriend
+    if (me != null && me == person) return FriendState.Self
+    // A plain address-book entry carries no entity id, so matching on an empty
+    // person would claim the first one of those as this profile's contact.
+    val contact = contacts.contacts.firstOrNull { it.person == person }
+    if (contact != null && contact.friend) return FriendState.Friend
+    contacts.received.firstOrNull { it.id == person }?.let {
+        return FriendState.InvitedByThem(it.id)
+    }
+    contacts.sent.firstOrNull { it.id == person }?.let { return FriendState.InvitedThem }
+    if (contact != null) return FriendState.Contact
+    return FriendState.NotFriend
+}
 
 @HiltViewModel
 class PersonViewModel @Inject constructor(
@@ -87,26 +116,51 @@ class PersonViewModel @Inject constructor(
     private suspend fun resolveFriendState(personEntityId: String): FriendState {
         val me = sessionManager.getBoundIdentity()
         if (me != null && me == personEntityId) return FriendState.Self
-        val friends = repository.listFriends()
-        friends.friends.firstOrNull { it.id == personEntityId }?.let { return FriendState.Friend }
-        friends.received.firstOrNull { it.id == personEntityId }?.let {
-            return FriendState.InvitedByThem(it.id)
-        }
-        friends.sent.firstOrNull { it.id == personEntityId }?.let { return FriendState.InvitedThem }
-        return FriendState.NotFriend
+        return friendState(repository.listContacts(), personEntityId, me)
     }
 
-    fun addFriend() {
+    /** Saves the person as a contact, without inviting them. */
+    fun addContact() {
         val info = _uiState.value.info ?: return
         if (_uiState.value.friendState != FriendState.NotFriend) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isMutating = true, error = null)
             try {
-                repository.createFriend(info.id, info.name)
+                repository.createContact(
+                    properties = listOf(ContactProperty("FN", emptyMap(), info.name)),
+                    person = info.id,
+                )
                 val state = resolveFriendState(info.id)
                 _uiState.value = _uiState.value.copy(
                     isMutating = false,
                     friendState = state,
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    isMutating = false,
+                    error = e.toMochiError(),
+                )
+            }
+        }
+    }
+
+    /** Sends a friendship invitation to a person already in contacts or not. */
+    fun invite() {
+        val info = _uiState.value.info ?: return
+        val state = _uiState.value.friendState
+        if (state == FriendState.Friend || state == FriendState.InvitedThem ||
+            state == FriendState.Self
+        ) {
+            return
+        }
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isMutating = true, error = null)
+            try {
+                repository.inviteFriend(info.id, info.name)
+                val resolved = resolveFriendState(info.id)
+                _uiState.value = _uiState.value.copy(
+                    isMutating = false,
+                    friendState = resolved,
                 )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
@@ -124,7 +178,7 @@ class PersonViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isMutating = true, error = null)
             try {
-                repository.acceptInvite(state.inviteId)
+                repository.acceptInvite(state.person)
                 val resolved = resolveFriendState(info.id)
                 _uiState.value = _uiState.value.copy(
                     isMutating = false,
@@ -146,7 +200,7 @@ class PersonViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isMutating = true, error = null)
             try {
-                repository.ignoreInvite(state.inviteId)
+                repository.ignoreInvite(state.person)
                 val resolved = resolveFriendState(info.id)
                 _uiState.value = _uiState.value.copy(
                     isMutating = false,

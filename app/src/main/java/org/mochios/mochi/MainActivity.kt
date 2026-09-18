@@ -766,15 +766,26 @@ open class MainActivity : ComponentActivity() {
             }
             "people" -> {
                 navController.openAppHome(PeopleApp.HOME)
-                if (id == "invitations") {
-                    navController.navigate(PeopleApp.INVITATIONS) { launchSingleTop = true }
+                when {
+                    id == "invitations" ->
+                        navController.navigate(PeopleApp.INVITATIONS) { launchSingleTop = true }
+                    id == "contacts" -> parts.getOrNull(2)?.let { contact ->
+                        navController.navigate(PeopleApp.contactEdit(contact)) {
+                            launchSingleTop = true
+                        }
+                    }
+                    // Anything else with an id is a person entity: the profile
+                    // link the directory and other apps hand out, which used to
+                    // be swallowed here.
+                    id != null ->
+                        navController.navigate(PeopleApp.personView(id)) { launchSingleTop = true }
                 }
                 // "people?action=add" carries no id, so without this the link
                 // landed on the people home and stopped. Chess emits it to
-                // send a player with no opponents to the add-friend dialog.
+                // send a player with no opponents to the add-contact screen.
                 val action = parseQueryParam(query, "action")
                 if (id == null && !action.isNullOrBlank()) {
-                    navController.navigate(PeopleApp.friends(action)) { launchSingleTop = true }
+                    navController.navigate(PeopleApp.contacts(action)) { launchSingleTop = true }
                 }
             }
             "chess" -> {

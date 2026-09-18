@@ -53,8 +53,11 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
 import org.mochios.people.model.Group
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleAllContactsItem
 import org.mochios.people.ui.components.peopleDrawerItems
 import org.mochios.people.ui.components.peopleDrawerSection
+import org.mochios.people.ui.router.PeopleSection
+import org.mochios.people.ui.router.RememberPeopleSection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,15 +80,18 @@ fun GroupsScreen(
         }
     }
 
+    RememberPeopleSection(PeopleSection.GROUPS)
+
     MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
         items = peopleDrawerItems(),
+        allItem = peopleAllContactsItem(),
         selectedId = PeopleSidebarSection.GROUPS.name,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
             val section = peopleDrawerSection(item.id)
-            if (section != PeopleSidebarSection.GROUPS) onSwitchSection(section)
+            if (section != null && section != PeopleSidebarSection.GROUPS) onSwitchSection(section)
         },
     ) {
     Scaffold(

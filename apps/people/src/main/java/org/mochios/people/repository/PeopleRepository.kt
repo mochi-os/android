@@ -12,10 +12,15 @@ import okhttp3.MultipartBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
-import org.mochios.people.api.FriendsListResponse
+import org.mochios.people.api.ContactRequest
+import org.mochios.people.api.ContactUpdateRequest
+import org.mochios.people.api.ContactsListResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
 import org.mochios.people.api.WelcomeResponse
+import org.mochios.people.model.Book
+import org.mochios.people.model.Contact
+import org.mochios.people.model.ContactProperty
 import org.mochios.people.model.Group
 import org.mochios.people.model.GroupMember
 import org.mochios.people.model.GroupMemberType
@@ -40,29 +45,101 @@ class PeopleRepository @Inject constructor(
     private val _groupsChanged = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     val groupsChanged: SharedFlow<Unit> = _groupsChanged.asSharedFlow()
 
-    // ---- Friends + invites ----
+    /**
+     * Fires after any contact or address-book mutation, so a list screen whose
+     * ViewModel did not make the change still reloads.
+     */
+    private val _contactsChanged = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    val contactsChanged: SharedFlow<Unit> = _contactsChanged.asSharedFlow()
 
-    suspend fun listFriends(): FriendsListResponse =
-        api.listFriends().unwrap()
+    // ---- Contacts + invites ----
 
-    suspend fun searchFriends(query: String): List<User> =
-        api.searchFriends(query).unwrap().results
+    /** [book] limits the list to one address book; null lists them all. */
+    suspend fun listContacts(book: String? = null): ContactsListResponse =
+        api.listContacts(book).unwrap()
 
-    suspend fun createFriend(id: String, name: String) {
-        api.createFriend(id, name).unwrap()
+    suspend fun getContact(contact: String): Contact =
+        api.getContact(contact).unwrap().contact
+
+    suspend fun createContact(
+        properties: List<ContactProperty>,
+        person: String? = null,
+        book: String? = null,
+    ): Contact {
+        val contact = api.createContact(ContactRequest(properties, person, book)).unwrap().contact
+        _contactsChanged.tryEmit(Unit)
+        return contact
     }
 
-    suspend fun acceptInvite(id: String) {
-        api.acceptInvite(id).unwrap()
+    /**
+     * [properties] replaces every managed property of the card, so it carries
+     * the editor's whole set. A stale [etag] is refused with 412.
+     */
+    suspend fun updateContact(
+        contact: String,
+        etag: String? = null,
+        properties: List<ContactProperty>? = null,
+        book: String? = null,
+    ): Contact {
+        val updated = api.updateContact(
+            ContactUpdateRequest(contact, etag, properties, book),
+        ).unwrap().contact
+        _contactsChanged.tryEmit(Unit)
+        return updated
     }
 
-    suspend fun ignoreInvite(id: String) {
-        api.ignoreInvite(id).unwrap()
+    /** Deleting a friend's contact also ends the friendship. */
+    suspend fun deleteContact(contact: String) {
+        api.deleteContact(contact).unwrap()
+        _contactsChanged.tryEmit(Unit)
     }
 
-    /** Used for both "remove confirmed friend" and "cancel outgoing invite". */
-    suspend fun deleteFriend(id: String) {
-        api.deleteFriend(id).unwrap()
+    suspend fun searchDirectory(query: String): List<User> =
+        api.searchDirectory(query).unwrap().results
+
+    // ---- Address books ----
+
+    suspend fun listBooks(): List<Book> =
+        api.listBooks().unwrap().books
+
+    suspend fun createBook(name: String): Book {
+        val book = api.createBook(name).unwrap().book
+        _contactsChanged.tryEmit(Unit)
+        return book
+    }
+
+    suspend fun renameBook(book: String, name: String) {
+        api.renameBook(book, name).unwrap()
+        _contactsChanged.tryEmit(Unit)
+    }
+
+    /** Deletes the book and every contact in it. The default book is refused. */
+    suspend fun deleteBook(book: String) {
+        api.deleteBook(book).unwrap()
+        _contactsChanged.tryEmit(Unit)
+    }
+
+    // ---- Friendship ----
+
+    suspend fun inviteFriend(person: String, name: String) {
+        api.inviteFriend(person, name).unwrap()
+        _contactsChanged.tryEmit(Unit)
+    }
+
+    suspend fun acceptInvite(person: String) {
+        api.acceptInvite(person).unwrap()
+        _contactsChanged.tryEmit(Unit)
+    }
+
+    suspend fun ignoreInvite(person: String) {
+        api.ignoreInvite(person).unwrap()
+        _contactsChanged.tryEmit(Unit)
+    }
+
+    /** Ends the friendship and keeps the contact. */
+    suspend fun removeFriend(person: String) {
+        api.removeFriend(person).unwrap()
+        _contactsChanged.tryEmit(Unit)
     }
 
     // ---- Welcome state ----

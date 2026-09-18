@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="people_friends_title">Vrienden</string>
     <string name="people_invitations_title">Uitnodigingen</string>
     <string name="people_profile_title">Profiel</string>
     <string name="people_groups_title">Groepen</string>
     <string name="people_group_title">Groep</string>
     <string name="people_person_title">Persoon</string>
-    <string name="people_friends_empty">Geen vrienden gevonden</string>
-    <string name="people_friends_add_to_start">Voeg vrienden toe om te beginnen met verbinden</string>
     <string name="people_friends_search_placeholder">Zoeken…</string>
-    <string name="people_friends_remove">Vriend verwijderen</string>
     <string name="people_friends_no_people_found">Geen personen gevonden</string>
-    <string name="people_friends_try_different_search">Probeer een andere zoekterm</string>
     <string name="people_friends_try_adjusting">Probeer uw zoekopdracht aan te passen</string>
-    <string name="people_friends_already_friends">Al vrienden</string>
     <string name="people_friends_pending">In behandeling</string>
-    <string name="people_add_friend">Vriend toevoegen</string>
-    <string name="people_add_friend_search_hint">Zoek mensen en stuur een vriendschapsverzoek.</string>
-    <string name="people_add_friend_search_start">Begin te typen om naar gebruikers te zoeken</string>
-    <string name="people_add_friend_accept_invite">Uitnodiging aanvaarden</string>
     <string name="people_friends_received_tab">Ontvangen</string>
     <string name="people_friends_sent_tab">Verzonden</string>
     <string name="people_invitations_incoming">Inkomende uitnodigingen</string>
@@ -28,7 +18,6 @@
     <string name="people_invitations_accept">Accepteren</string>
     <string name="people_invitations_decline">Weigeren</string>
     <string name="people_invitations_toast_policy">Uitnodigingsbeleid bijgewerkt</string>
-    <string name="people_invitations_sent_toast">Uitnodiging verzonden</string>
     <string name="people_invite_settings">Uitnodigingsinstellingen</string>
     <string name="people_invite_settings_notify_me">Stuur me een melding</string>
     <string name="people_invite_settings_notify_description">Uitnodigingen verschijnen in uitnodigingen en u ontvangt een melding (standaard).</string>
@@ -82,9 +71,7 @@
     <string name="people_common_cancel">Annuleren</string>
     <string name="people_common_close">Sluiten</string>
     <string name="people_common_save">Opslaan</string>
-    <string name="people_common_send_invitation">Uitnodiging versturen</string>
     <string name="people_welcome_dismiss">Sluiten</string>
-    <string name="people_friends_message">Bericht</string>
     <string name="people_sidebar_header">Personen</string>
     <string name="people_open_sidebar">Navigatie openen</string>
     <string name="people_person_state_friend">Vrienden</string>
@@ -96,9 +83,6 @@
 
     <string name="notification_channel_people">Meldingen voor Mensen</string>
     <string name="people_friends_searching">Zoeken…</string>
-    <string name="people_friends_remove_confirm">Weet u zeker dat u %1$s uit uw vriendenlijst wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
-    <string name="people_friends_thats_you">Dat bent u</string>
-    <string name="people_add_friend_search_placeholder">Typ om te zoeken…</string>
     <string name="people_invitations_toast_accepted">Uitnodiging van %1$s aanvaard</string>
     <string name="people_invitations_toast_declined">Uitnodiging van %1$s geweigerd</string>
     <string name="people_invitations_toast_cancelled">Uitnodiging aan %1$s geannuleerd</string>
@@ -114,14 +98,10 @@
     <string name="people_profile_accent_none">Geen</string>
     <string name="people_profile_privacy_private_desc">Enkel wederzijdse vrienden kunnen uw profiel bekijken</string>
     <string name="people_welcome_title">Welkom bij Mensen</string>
-    <string name="people_welcome_body">Vind vrienden op Mochi en maak verbinding met hen. Tik op Vriend toevoegen om een uitnodiging te versturen.</string>
     <string name="people_person_banner_alt">Banner voor %1$s</string>
     <string name="people_person_private">Dit profiel is privé</string>
     <string name="people_person_state_invited">Uitgenodigd</string>
-    <string name="people_person_add_friend">Toevoegen als vriend</string>
 
-    <string name="people_friends_sort_name">Naam (A–Z)</string>
-    <string name="people_friends_sort_recent">Onlangs toegevoegd</string>
     <string name="people_invitations_accept_all">Alles aanvaarden</string>
     <string name="people_invitations_decline_all">Alles weigeren</string>
     <string name="people_invitations_cancel_all">Alles annuleren</string>
@@ -134,4 +114,34 @@
     <string name="people_invite_settings_load_failed">Je uitnodigingsbeleid laden mislukt</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
+    <string name="people_contacts_search_placeholder">Zoeken…</string>
+    <string name="people_contacts_invited">Uitgenodigd</string>
+    <string name="people_contacts_accept">Accepteren</string>
+    <string name="people_contacts_message">Bericht</string>
+    <string name="people_contacts_no_people_found">Geen personen gevonden</string>
+    <string name="people_contacts_try_adjusting">Probeer uw zoekopdracht aan te passen</string>
+    <string name="people_contact_section_address">Adres</string>
+    <string name="people_contact_section_detail">Details</string>
+    <string name="people_contact_name">Naam</string>
+    <string name="people_contact_email">E-mail</string>
+    <string name="people_contact_city">Stad</string>
+    <string name="people_contact_region">Regio</string>
+    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_country">Land</string>
+    <string name="people_contact_type">Type</string>
+    <string name="people_contact_type_other">Andere</string>
+    <string name="people_contact_remove">Verwijderen</string>
+    <string name="people_contact_pick_date_confirm">OK</string>
+    <string name="people_books_name">Naam</string>
+    <string name="people_books_rename">Hernoemen</string>
+    <string name="people_contacts_sort_name">Naam (A–Z)</string>
+    <string name="people_contacts_sort_recent">Onlangs toegevoegd</string>
+    <string name="people_contacts_thats_you">Dat ben jij</string>
+    <string name="people_contacts_try_different_search">Probeer een andere zoekterm</string>
+    <string name="people_contacts_unfriend">Vriend verwijderen</string>
+    <string name="people_add_contact_search_placeholder">Typ om te zoeken…</string>
+    <string name="people_add_contact_search_start">Begin te typen om naar gebruikers te zoeken</string>
+    <string name="people_contact_phone">Telefoon</string>
+    <string name="people_contact_title">Functie</string>
+    <string name="people_contacts_title">Contacten</string>
 </resources>

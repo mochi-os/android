@@ -72,7 +72,7 @@ class InvitationsViewModel @Inject constructor(
                 // Preserve server-order on invites (most-recent first) to
                 // match the web. Alphabetical sort would scramble the
                 // recency cue users expect on an invitations list.
-                val response = repository.listFriends()
+                val response = repository.listContacts()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     received = response.received,
@@ -146,9 +146,9 @@ class InvitationsViewModel @Inject constructor(
     fun cancel(invite: FriendInvite) {
         viewModelScope.launch {
             try {
-                // For sent invites the server's "delete friend" action also
-                // serves as cancel — same row, same id.
-                repository.deleteFriend(invite.id)
+                // Cancelling an invitation we sent is the same call that ends a
+                // friendship: the contact stays, the invite goes.
+                repository.removeFriend(invite.id)
                 _events.trySend(InvitationsEvent.Cancelled(invite.name))
                 refresh()
             } catch (e: Exception) {
@@ -189,7 +189,7 @@ class InvitationsViewModel @Inject constructor(
         if (list.isEmpty() || _uiState.value.batchInProgress) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(batchInProgress = true)
-            val allOk = attemptAll(list) { repository.deleteFriend(it.id) }
+            val allOk = attemptAll(list) { repository.removeFriend(it.id) }
             _events.trySend(InvitationsEvent.BatchCancelled(allOk))
             _uiState.value = _uiState.value.copy(batchInProgress = false)
             refresh()

@@ -3,44 +3,96 @@
     <!-- Notification channel -->
     <string name="notification_channel_people">People notifications</string>
 
-    <!-- Stub screen placeholders. These exist so the Phase A skeleton compiles
-         with concrete top-app-bar titles; the per-screen implementations
-         coming in Phase B replace these placeholders with the real titles
-         (e.g. people_friends_title). The "todo" suffix makes it obvious in
-         the running build that this is a placeholder. -->
-
     <!-- Section titles -->
-    <string name="people_friends_title">Friends</string>
+    <string name="people_contacts_title">Contacts</string>
     <string name="people_invitations_title">Invitations</string>
     <string name="people_profile_title">Profile</string>
     <string name="people_groups_title">Groups</string>
     <string name="people_group_title">Group</string>
     <string name="people_person_title">Person</string>
 
-    <!-- Friends list -->
-    <string name="people_friends_empty">No friends found</string>
-    <string name="people_friends_add_to_start">Add friends to start connecting</string>
-    <string name="people_friends_search_placeholder">Search…</string>
-    <string name="people_friends_sort_name">Name (A–Z)</string>
-    <string name="people_friends_sort_recent">Recently added</string>
-    <string name="people_friends_searching">Searching…</string>
-    <string name="people_friends_remove">Remove friend</string>
-    <string name="people_friends_remove_confirm">Are you sure you want to remove %1$s from your friends list? This action cannot be undone.</string>
-    <string name="people_friends_no_people_found">No people found</string>
-    <string name="people_friends_try_different_search">Try a different search term</string>
-    <string name="people_friends_try_adjusting">Try adjusting your search</string>
-    <string name="people_friends_already_friends">Already friends</string>
-    <string name="people_friends_thats_you">That\'s you</string>
-    <string name="people_friends_pending">Pending</string>
+    <!-- Contacts list -->
+    <string name="people_contacts_all">All contacts</string>
+    <string name="people_contacts_empty">No contacts found</string>
+    <string name="people_contacts_add_to_start">Add contacts to start connecting</string>
+    <string name="people_contacts_search_placeholder">Search…</string>
+    <string name="people_contacts_sort_name">Name (A–Z)</string>
+    <string name="people_contacts_sort_recent">Recently added</string>
+    <string name="people_contacts_actions">Contact actions</string>
+    <string name="people_contacts_friend">Friend</string>
+    <string name="people_contacts_invite">Invite</string>
+    <string name="people_contacts_invited">Invited</string>
+    <string name="people_contacts_accept">Accept</string>
+    <string name="people_contacts_message">Message</string>
+    <string name="people_contacts_unfriend">Remove friend</string>
+    <string name="people_contacts_unfriend_confirm">%1$s will no longer be your friend. The contact stays in your address book.</string>
+    <string name="people_contacts_delete">Delete contact</string>
+    <string name="people_contacts_delete_confirm">Delete %1$s from your contacts?</string>
+    <string name="people_contacts_delete_friend_confirm">Delete %1$s from your contacts? Your friendship ends as well.</string>
+    <string name="people_contacts_thats_you">That\'s you</string>
+    <string name="people_contacts_no_people_found">No people found</string>
+    <string name="people_contacts_try_different_search">Try a different search term</string>
+    <string name="people_contacts_try_adjusting">Try adjusting your search</string>
 
-    <!-- Add friend dialog -->
-    <string name="people_add_friend">Add friend</string>
-    <string name="people_add_friend_search_hint">Search for people and send a friend request.</string>
-    <string name="people_add_friend_search_placeholder">Type to search…</string>
-    <string name="people_add_friend_search_start">Start typing to search for users</string>
-    <string name="people_add_friend_accept_invite">Accept invite</string>
+    <!-- Contact editor -->
+    <string name="people_contact_new_title">New contact</string>
+    <string name="people_contact_edit_title">Edit contact</string>
+    <string name="people_contact_section_address">Address</string>
+    <string name="people_contact_section_detail">Details</string>
+    <string name="people_contact_name">Name</string>
+    <string name="people_contact_given">Given name</string>
+    <string name="people_contact_family">Family name</string>
+    <string name="people_contact_nickname">Nickname</string>
+    <string name="people_contact_email">Email</string>
+    <string name="people_contact_phone">Phone</string>
+    <string name="people_contact_add_email">Add email</string>
+    <string name="people_contact_add_phone">Add phone</string>
+    <string name="people_contact_add_address">Add address</string>
+    <string name="people_contact_street">Street</string>
+    <string name="people_contact_city">City</string>
+    <string name="people_contact_region">Region</string>
+    <string name="people_contact_postcode">Postcode</string>
+    <string name="people_contact_country">Country</string>
+    <string name="people_contact_birthday">Birthday</string>
+    <string name="people_contact_organisation">Organisation</string>
+    <string name="people_contact_title">Job title</string>
+    <string name="people_contact_url">Website</string>
+    <string name="people_contact_note">Note</string>
+    <string name="people_contact_book">Address book</string>
+    <string name="people_contact_type">Type</string>
+    <string name="people_contact_type_home">Home</string>
+    <string name="people_contact_type_work">Work</string>
+    <string name="people_contact_type_mobile">Mobile</string>
+    <string name="people_contact_type_other">Other</string>
+    <string name="people_contact_remove">Remove</string>
+    <string name="people_contact_pick_date">Pick a date</string>
+    <string name="people_contact_pick_date_confirm">OK</string>
+    <string name="people_contact_conflict">Contact changed</string>
+
+    <!-- Add contact -->
+    <string name="people_add_contact_title">Add contact</string>
+    <string name="people_add_contact_add">Add to contacts</string>
+    <string name="people_add_contact_in_contacts">In contacts</string>
+    <string name="people_add_contact_search_placeholder">Type to search…</string>
+    <string name="people_add_contact_search_start">Start typing to search for users</string>
+
+    <!-- Address books -->
+    <string name="people_books_create">Create address book</string>
+    <string name="people_books_name">Name</string>
+    <string name="people_books_rename">Rename</string>
+    <string name="people_books_delete">Delete address book</string>
+    <string name="people_books_actions">Address book actions</string>
+    <plurals name="people_books_delete_confirm">
+        <item quantity="one">Delete %1$s and its %2$d contact?</item>
+        <item quantity="other">Delete %1$s and its %2$d contacts?</item>
+    </plurals>
 
     <!-- Invitations -->
+    <string name="people_friends_searching">Searching…</string>
+    <string name="people_friends_pending">Pending</string>
+    <string name="people_friends_search_placeholder">Search…</string>
+    <string name="people_friends_no_people_found">No people found</string>
+    <string name="people_friends_try_adjusting">Try adjusting your search</string>
     <string name="people_friends_received_tab">Received</string>
     <string name="people_friends_sent_tab">Sent</string>
     <string name="people_invitations_accept_all">Accept all</string>
@@ -61,7 +113,6 @@
     <string name="people_invitations_toast_declined">Declined invitation from %1$s</string>
     <string name="people_invitations_toast_cancelled">Cancelled invitation to %1$s</string>
     <string name="people_invitations_toast_policy">Invite policy updated</string>
-    <string name="people_invitations_sent_toast">Invitation sent</string>
 
     <!-- Invite settings -->
     <string name="people_invite_settings">Invite settings</string>
@@ -141,17 +192,11 @@
     <string name="people_common_cancel">Cancel</string>
     <string name="people_common_close">Close</string>
     <string name="people_common_save">Save</string>
-    <string name="people_common_send_invitation">Send invitation</string>
-
-    <!-- Friend mutation toasts -->
 
     <!-- Welcome banner -->
     <string name="people_welcome_title">Welcome to People</string>
-    <string name="people_welcome_body">Find and connect with friends across Mochi. Tap Add friend to send an invitation.</string>
+    <string name="people_welcome_body">Find and connect with friends across Mochi. Tap Add contact to send an invitation.</string>
     <string name="people_welcome_dismiss">Dismiss</string>
-
-    <!-- Friends list extras -->
-    <string name="people_friends_message">Message</string>
 
     <!-- Sidebar / navigation drawer -->
     <string name="people_sidebar_header">People</string>
@@ -163,7 +208,7 @@
     <string name="people_person_state_friend">Friends</string>
     <string name="people_person_state_self">You</string>
     <string name="people_person_state_invited">Invited</string>
-    <string name="people_person_add_friend">Add as friend</string>
+    <string name="people_person_state_contact">In contacts</string>
     <string name="people_person_message">Message</string>
     <string name="people_person_accept">Accept</string>
     <string name="people_person_decline">Decline</string>

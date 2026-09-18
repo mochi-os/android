@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="people_friends_message">Message</string>
     <string name="people_person_message">Message</string>
 
     <string name="people_profile_name">Nom</string>
@@ -16,29 +15,16 @@
     <string name="people_member_type_user">Utilisateur</string>
 
     <string name="notification_channel_people">Notifications des personnes</string>
-    <string name="people_friends_title">Amis</string>
     <string name="people_invitations_title">Invitations</string>
     <string name="people_profile_title">Profil</string>
     <string name="people_groups_title">Groupes</string>
     <string name="people_group_title">Groupe</string>
     <string name="people_person_title">Personne</string>
-    <string name="people_friends_empty">Aucun ami trouvé</string>
-    <string name="people_friends_add_to_start">Ajoutez des amis pour commencer à vous connecter</string>
     <string name="people_friends_search_placeholder">Rechercher…</string>
     <string name="people_friends_searching">Recherche en cours…</string>
-    <string name="people_friends_remove">Retirer l\'ami</string>
-    <string name="people_friends_remove_confirm">Voulez-vous vraiment retirer %1$s de votre liste d\'amis? Cette action est irréversible.</string>
     <string name="people_friends_no_people_found">Aucune personne trouvée</string>
-    <string name="people_friends_try_different_search">Essayez un autre terme de recherche</string>
     <string name="people_friends_try_adjusting">Essayez d\'ajuster votre recherche</string>
-    <string name="people_friends_already_friends">Déjà amis</string>
-    <string name="people_friends_thats_you">C\'est vous</string>
     <string name="people_friends_pending">En attente</string>
-    <string name="people_add_friend">Ajouter un ami</string>
-    <string name="people_add_friend_search_hint">Recherchez des personnes et envoyez une demande d\'ami.</string>
-    <string name="people_add_friend_search_placeholder">Tapez pour rechercher…</string>
-    <string name="people_add_friend_search_start">Commencez à taper pour rechercher des utilisateurs</string>
-    <string name="people_add_friend_accept_invite">Accepter l\'invitation</string>
     <string name="people_friends_received_tab">Reçues</string>
     <string name="people_friends_sent_tab">Envoyées</string>
     <string name="people_invitations_incoming">Invitations entrantes</string>
@@ -50,7 +36,6 @@
     <string name="people_invitations_toast_declined">Invitation de %1$s refusée</string>
     <string name="people_invitations_toast_cancelled">Invitation à %1$s annulée</string>
     <string name="people_invitations_toast_policy">Politique d\'invitation mise à jour</string>
-    <string name="people_invitations_sent_toast">Invitation envoyée</string>
     <string name="people_invite_settings">Paramètres d\'invitation</string>
     <string name="people_invite_settings_notify_me">M\'aviser</string>
     <string name="people_invite_settings_notify_description">Les invitations apparaissent dans les invitations et une notification vous est envoyée (par défaut).</string>
@@ -106,9 +91,7 @@
     <string name="people_profile_accent_none">Aucun</string>
     <string name="people_profile_clear">Effacer</string>
     <string name="people_profile_privacy_private_desc">Seuls les amis mutuels peuvent consulter votre profil</string>
-    <string name="people_common_send_invitation">Envoyer l\'invitation</string>
     <string name="people_welcome_title">Bienvenue dans Personnes</string>
-    <string name="people_welcome_body">Trouvez vos amis et connectez-vous avec eux sur Mochi. Touchez Ajouter un ami pour envoyer une invitation.</string>
     <string name="people_welcome_dismiss">Ignorer</string>
     <string name="people_sidebar_header">Personnes</string>
     <string name="people_open_sidebar">Ouvrir la navigation</string>
@@ -116,8 +99,30 @@
     <string name="people_person_private">Ce profil est privé</string>
     <string name="people_person_state_friend">Amis</string>
     <string name="people_person_state_invited">Invité</string>
-    <string name="people_person_add_friend">Ajouter comme ami</string>
     <string name="people_person_accept">Accepter</string>
     <string name="people_person_decline">Refuser</string>
 
+    <string name="people_contacts_search_placeholder">Rechercher…</string>
+    <string name="people_contacts_invited">Invité</string>
+    <string name="people_contacts_accept">Accepter</string>
+    <string name="people_contacts_message">Message</string>
+    <string name="people_contacts_no_people_found">Aucune personne trouvée</string>
+    <string name="people_contacts_try_adjusting">Essayez d\'ajuster votre recherche</string>
+    <string name="people_contact_section_address">Adresse</string>
+    <string name="people_contact_section_detail">Détails</string>
+    <string name="people_contact_name">Nom</string>
+    <string name="people_contact_email">Courriel</string>
+    <string name="people_contact_city">Ville</string>
+    <string name="people_contact_region">Province</string>
+    <string name="people_contact_postcode">Code postal</string>
+    <string name="people_contact_country">Pays</string>
+    <string name="people_contact_type">Type</string>
+    <string name="people_contact_type_other">Autre</string>
+    <string name="people_contact_remove">Supprimer</string>
+    <string name="people_contact_pick_date_confirm">OK</string>
+    <string name="people_books_name">Nom</string>
+    <string name="people_books_rename">Renommer</string>
+    <string name="people_contacts_unfriend">Retirer l\'ami</string>
+    <string name="people_add_contact_search_placeholder">Tapez pour rechercher…</string>
+    <string name="people_add_contact_search_start">Commencez à taper pour rechercher des utilisateurs</string>
 </resources>

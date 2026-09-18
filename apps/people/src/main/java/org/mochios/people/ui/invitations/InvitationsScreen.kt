@@ -75,8 +75,11 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.ui.components.PeopleSidebarSection
+import org.mochios.people.ui.components.peopleAllContactsItem
 import org.mochios.people.ui.components.peopleDrawerItems
 import org.mochios.people.ui.components.peopleDrawerSection
+import org.mochios.people.ui.router.PeopleSection
+import org.mochios.people.ui.router.RememberPeopleSection
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -119,15 +122,18 @@ fun InvitationsScreen(
         }
     }
 
+    RememberPeopleSection(PeopleSection.INVITATIONS)
+
     MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
         items = peopleDrawerItems(),
+        allItem = peopleAllContactsItem(),
         selectedId = PeopleSidebarSection.INVITATIONS.name,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
             val section = peopleDrawerSection(item.id)
-            if (section != PeopleSidebarSection.INVITATIONS) onSwitchSection(section)
+            if (section != null && section != PeopleSidebarSection.INVITATIONS) onSwitchSection(section)
         },
     ) {
     Scaffold(

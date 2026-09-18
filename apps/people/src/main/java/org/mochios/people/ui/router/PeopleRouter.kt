@@ -19,10 +19,23 @@ import org.mochios.android.ui.components.LastViewedStore
 fun PeopleRouter(onResolve: (section: String) -> Unit) {
     val context = LocalContext.current
     LaunchedEffect(Unit) {
-        onResolve(LastViewedStore.get(context, PEOPLE_FEATURE).orEmpty())
+        onResolve(peopleSection(LastViewedStore.get(context, PEOPLE_FEATURE).orEmpty()))
     }
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         CircularProgressIndicator()
+    }
+}
+
+/**
+ * Records the section the user is looking at, so the next launch lands there.
+ * Called by each section screen rather than by the navigation graph, which has
+ * no context of its own.
+ */
+@Composable
+fun RememberPeopleSection(section: String) {
+    val context = LocalContext.current
+    LaunchedEffect(section) {
+        LastViewedStore.set(context, PEOPLE_FEATURE, section)
     }
 }
 
@@ -31,8 +44,19 @@ const val PEOPLE_FEATURE = "people"
 
 /** Section tokens written to [LastViewedStore]. */
 object PeopleSection {
-    const val FRIENDS = "friends"
+    const val CONTACTS = "contacts"
     const val INVITATIONS = "invitations"
     const val GROUPS = "groups"
     const val PROFILE = "profile"
+
+    /** What the module wrote for this section before contacts replaced friends. */
+    const val LEGACY_FRIENDS = "friends"
 }
+
+/**
+ * The section a stored token names. A token written before contacts replaced
+ * friends still resolves, so an upgrade lands where the user left off rather
+ * than on an unknown section.
+ */
+fun peopleSection(stored: String): String =
+    if (stored == PeopleSection.LEGACY_FRIENDS) PeopleSection.CONTACTS else stored

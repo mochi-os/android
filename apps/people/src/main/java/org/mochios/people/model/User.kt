@@ -18,7 +18,9 @@ data class User(
     val location: String = "",
     val name: String = "",
     val updated: Long = 0,
-    val relationship: RelationshipStatus = RelationshipStatus.NONE
+    val relationship: RelationshipStatus = RelationshipStatus.NONE,
+    /** Id of the caller's contact for this person, empty when there is none. */
+    val contact: String = ""
 )
 
 /**

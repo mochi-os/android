@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="people_friends_title">Amigos</string>
     <string name="people_invitations_title">Invitaciones</string>
     <string name="people_profile_title">Perfil</string>
     <string name="people_groups_title">Grupos</string>
     <string name="people_group_title">Grupo</string>
     <string name="people_person_title">Persona</string>
-    <string name="people_friends_empty">No se encontraron amigos</string>
-    <string name="people_friends_add_to_start">Agrega amigos para empezar a conectarte</string>
     <string name="people_friends_search_placeholder">Buscar…</string>
-    <string name="people_friends_remove">Eliminar amigo</string>
     <string name="people_friends_no_people_found">No se encontraron personas</string>
-    <string name="people_friends_try_different_search">Prueba con otro término de búsqueda</string>
     <string name="people_friends_try_adjusting">Intenta ajustar tu búsqueda</string>
-    <string name="people_friends_already_friends">Ya son amigos</string>
     <string name="people_friends_pending">Pendiente</string>
-    <string name="people_add_friend">Añadir amigo</string>
-    <string name="people_add_friend_search_hint">Busca personas y envía una solicitud de amistad.</string>
-    <string name="people_add_friend_search_start">Empieza a escribir para buscar usuarios</string>
-    <string name="people_add_friend_accept_invite">Aceptar invitación</string>
     <string name="people_friends_received_tab">Recibido</string>
     <string name="people_friends_sent_tab">Enviado</string>
     <string name="people_invitations_incoming">Invitaciones entrantes</string>
@@ -28,7 +18,6 @@
     <string name="people_invitations_accept">Aceptar</string>
     <string name="people_invitations_decline">Rechazar</string>
     <string name="people_invitations_toast_policy">Política de invitaciones actualizada</string>
-    <string name="people_invitations_sent_toast">Invitación enviada</string>
     <string name="people_invite_settings">Configuración de invitaciones</string>
     <string name="people_invite_settings_notify_me">Avisarme</string>
     <string name="people_invite_settings_notify_description">Las invitaciones aparecen en las invitaciones y se te envía una notificación (predeterminado).</string>
@@ -82,9 +71,7 @@
     <string name="people_common_cancel">Cancelar</string>
     <string name="people_common_close">Cerrar</string>
     <string name="people_common_save">Guardar</string>
-    <string name="people_common_send_invitation">Enviar invitación</string>
     <string name="people_welcome_dismiss">Descartar</string>
-    <string name="people_friends_message">Mensaje</string>
     <string name="people_sidebar_header">Personas</string>
     <string name="people_open_sidebar">Abrir navegación</string>
     <string name="people_person_state_friend">Amigos</string>
@@ -96,9 +83,6 @@
 
     <string name="notification_channel_people">Notificaciones de Personas</string>
     <string name="people_friends_searching">Buscando…</string>
-    <string name="people_friends_remove_confirm">¿Estás seguro de que quieres eliminar a %1$s de tu lista de amigos? Esta acción no se puede deshacer.</string>
-    <string name="people_friends_thats_you">Eres tú</string>
-    <string name="people_add_friend_search_placeholder">Escribe para buscar…</string>
     <string name="people_invitations_toast_accepted">Aceptaste la invitación de %1$s</string>
     <string name="people_invitations_toast_declined">Rechazaste la invitación de %1$s</string>
     <string name="people_invitations_toast_cancelled">Cancelaste la invitación a %1$s</string>
@@ -114,14 +98,10 @@
     <string name="people_profile_accent_none">Ninguno</string>
     <string name="people_profile_privacy_private_desc">Solo los amigos mutuos pueden ver tu perfil</string>
     <string name="people_welcome_title">Te damos la bienvenida a Personas</string>
-    <string name="people_welcome_body">Encuentra y conéctate con amigos en Mochi. Toca Agregar amigo para enviar una invitación.</string>
     <string name="people_person_banner_alt">Banner de %1$s</string>
     <string name="people_person_private">Este perfil es privado</string>
     <string name="people_person_state_invited">Invitado</string>
-    <string name="people_person_add_friend">Agregar como amigo</string>
 
-    <string name="people_friends_sort_name">Nombre (A–Z)</string>
-    <string name="people_friends_sort_recent">Agregado recientemente</string>
     <string name="people_invitations_accept_all">Aceptar todo</string>
     <string name="people_invitations_decline_all">Rechazar todo</string>
     <string name="people_invitations_cancel_all">Cancelar todo</string>
@@ -135,4 +115,34 @@
     <string name="people_invite_settings_load_failed">Error al cargar tu política de invitaciones</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
+    <string name="people_contacts_search_placeholder">Buscar…</string>
+    <string name="people_contacts_invited">Invitado</string>
+    <string name="people_contacts_accept">Aceptar</string>
+    <string name="people_contacts_message">Mensaje</string>
+    <string name="people_contacts_no_people_found">No se encontraron personas</string>
+    <string name="people_contacts_try_adjusting">Intenta ajustar tu búsqueda</string>
+    <string name="people_contact_section_address">Dirección</string>
+    <string name="people_contact_section_detail">Detalles</string>
+    <string name="people_contact_name">Nombre</string>
+    <string name="people_contact_email">Correo electrónico</string>
+    <string name="people_contact_city">Ciudad</string>
+    <string name="people_contact_region">Región</string>
+    <string name="people_contact_postcode">Código postal</string>
+    <string name="people_contact_country">País</string>
+    <string name="people_contact_type">Tipo</string>
+    <string name="people_contact_type_other">Otro</string>
+    <string name="people_contact_remove">Eliminar</string>
+    <string name="people_contact_pick_date_confirm">Aceptar</string>
+    <string name="people_books_name">Nombre</string>
+    <string name="people_books_rename">Renombrar</string>
+    <string name="people_contacts_sort_name">Nombre (A–Z)</string>
+    <string name="people_contacts_sort_recent">Agregado recientemente</string>
+    <string name="people_contacts_thats_you">Ese eres tú</string>
+    <string name="people_contacts_try_different_search">Prueba con otro término de búsqueda</string>
+    <string name="people_contacts_unfriend">Eliminar amigo</string>
+    <string name="people_add_contact_search_placeholder">Escribe para buscar…</string>
+    <string name="people_add_contact_search_start">Empieza a escribir para buscar usuarios</string>
+    <string name="people_contact_phone">Teléfono</string>
+    <string name="people_contact_title">Cargo</string>
+    <string name="people_contacts_title">Contactos</string>
 </resources>

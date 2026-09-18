@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="people_friends_message">Message</string>
     <string name="people_person_message">Message</string>
 
     <string name="people_profile_name">名稱</string>
@@ -33,27 +32,14 @@
     <string name="people_group_no_members">沒有成員</string>
 
     <string name="notification_channel_people">聯絡人通知</string>
-    <string name="people_friends_title">朋友</string>
     <string name="people_invitations_title">邀請</string>
     <string name="people_profile_title">個人檔案</string>
     <string name="people_group_title">群組</string>
     <string name="people_person_title">個人</string>
-    <string name="people_friends_empty">搵唔到朋友</string>
-    <string name="people_friends_add_to_start">加朋友開始聯繫</string>
     <string name="people_friends_search_placeholder">搜尋…</string>
     <string name="people_friends_searching">搜尋緊…</string>
-    <string name="people_friends_remove">移除朋友</string>
-    <string name="people_friends_remove_confirm">你確定要將 %1$s 由朋友清單移除？呢個操作冇得復原。</string>
     <string name="people_friends_no_people_found">搵唔到任何人</string>
-    <string name="people_friends_try_different_search">試吓用其他搜尋字詞</string>
     <string name="people_friends_try_adjusting">試吓調整搜尋條件</string>
-    <string name="people_friends_already_friends">已經係朋友</string>
-    <string name="people_friends_thats_you">係你自己</string>
-    <string name="people_add_friend">加朋友</string>
-    <string name="people_add_friend_search_hint">搜尋人並發送加朋友邀請。</string>
-    <string name="people_add_friend_search_placeholder">輸入以搜尋…</string>
-    <string name="people_add_friend_search_start">開始輸入以搜尋用戶</string>
-    <string name="people_add_friend_accept_invite">接受邀請</string>
     <string name="people_friends_received_tab">已收到</string>
     <string name="people_friends_sent_tab">已發送</string>
     <string name="people_invitations_incoming">收到嘅邀請</string>
@@ -63,7 +49,6 @@
     <string name="people_invitations_toast_declined">已拒絕 %1$s 嘅邀請</string>
     <string name="people_invitations_toast_cancelled">已取消對 %1$s 嘅邀請</string>
     <string name="people_invitations_toast_policy">已更新邀請政策</string>
-    <string name="people_invitations_sent_toast">已發送邀請</string>
     <string name="people_invite_settings">邀請設定</string>
     <string name="people_invite_settings_load_failed">載入你嘅邀請政策失敗</string>
     <string name="people_invite_settings_notify_me">通知我</string>
@@ -113,18 +98,13 @@
     <string name="people_profile_accent_invalid">請輸入有效嘅十六進制色碼（例如 #a78bfa）</string>
     <string name="people_profile_accent_none">無</string>
     <string name="people_profile_privacy_private_desc">只有互相加咗朋友先可以查看你嘅個人檔案</string>
-    <string name="people_common_send_invitation">發送邀請</string>
     <string name="people_welcome_title">歡迎使用 People</string>
-    <string name="people_welcome_body">喺 Mochi 上搵朋友同保持聯繫。㩒「新增朋友」嚟發送邀請。</string>
     <string name="people_open_sidebar">開啟導覽</string>
     <string name="people_person_banner_alt">%1$s 嘅橫額</string>
     <string name="people_person_private">呢個個人檔案係私人</string>
     <string name="people_person_state_friend">朋友</string>
     <string name="people_person_state_invited">已邀請</string>
-    <string name="people_person_add_friend">新增為朋友</string>
 
-    <string name="people_friends_sort_name">名稱（A–Z）</string>
-    <string name="people_friends_sort_recent">最近加入</string>
     <string name="people_invitations_accept_all">全部接受</string>
     <string name="people_invitations_all_accepted">所有邀請都接受咗</string>
     <string name="people_invitations_all_cancelled">所有邀請都取消咗</string>
@@ -135,4 +115,74 @@
     <string name="people_invitations_some_cancel_failed">有部分邀請取消唔到</string>
     <string name="people_invitations_some_decline_failed">有部分邀請拒絕唔到</string>
     <string name="people_profile_too_long">個人檔案太長</string>
+    <string name="people_contacts_search_placeholder">搜尋…</string>
+    <string name="people_contacts_invited">已邀請</string>
+    <string name="people_contacts_accept">接受</string>
+    <string name="people_contacts_message">訊息</string>
+    <string name="people_contacts_no_people_found">搵唔到任何人</string>
+    <string name="people_contacts_try_adjusting">試吓調整搜尋條件</string>
+    <string name="people_contact_section_address">地址</string>
+    <string name="people_contact_section_detail">詳情</string>
+    <string name="people_contact_name">名稱</string>
+    <string name="people_contact_email">電郵</string>
+    <string name="people_contact_city">城市</string>
+    <string name="people_contact_region">地區</string>
+    <string name="people_contact_postcode">郵遞區號</string>
+    <string name="people_contact_country">國家/地區</string>
+    <string name="people_contact_type">類型</string>
+    <string name="people_contact_type_home">住宅</string>
+    <string name="people_contact_type_other">其他</string>
+    <string name="people_contact_remove">移除</string>
+    <string name="people_contact_pick_date_confirm">確定</string>
+    <string name="people_books_name">名稱</string>
+    <string name="people_books_rename">重新命名</string>
+    <string name="people_contacts_unfriend">移除朋友</string>
+    <string name="people_add_contact_search_placeholder">輸入以搜尋…</string>
+    <string name="people_add_contact_search_start">開始輸入以搜尋用戶</string>
+    <string name="people_contacts_title">聯絡人</string>
+    <string name="people_contacts_all">所有聯絡人</string>
+    <string name="people_contacts_empty">搵唔到聯絡人</string>
+    <string name="people_contacts_add_to_start">加聯絡人開始聯繫</string>
+    <string name="people_contacts_actions">聯絡人操作</string>
+    <string name="people_contacts_friend">朋友</string>
+    <string name="people_contacts_invite">邀請</string>
+    <string name="people_contacts_unfriend_confirm">%1$s 唔會再係你嘅朋友。聯絡人仍然留喺你嘅通訊錄入面。</string>
+    <string name="people_contacts_delete">刪除聯絡人</string>
+    <string name="people_contacts_delete_confirm">要喺你嘅聯絡人度刪除 %1$s 嗎？</string>
+    <string name="people_contacts_delete_friend_confirm">要喺你嘅聯絡人度刪除 %1$s 嗎？你哋嘅朋友關係都會結束。</string>
+    <string name="people_contact_new_title">新聯絡人</string>
+    <string name="people_contact_edit_title">編輯聯絡人</string>
+    <string name="people_contact_given">名</string>
+    <string name="people_contact_family">姓</string>
+    <string name="people_contact_nickname">花名</string>
+    <string name="people_contact_add_email">加電郵</string>
+    <string name="people_contact_add_phone">加電話</string>
+    <string name="people_contact_add_address">加地址</string>
+    <string name="people_contact_street">街道</string>
+    <string name="people_contact_birthday">生日</string>
+    <string name="people_contact_organisation">機構</string>
+    <string name="people_contact_url">網站</string>
+    <string name="people_contact_note">備註</string>
+    <string name="people_contact_book">通訊錄</string>
+    <string name="people_contact_type_work">工作</string>
+    <string name="people_contact_type_mobile">手機</string>
+    <string name="people_contact_pick_date">揀日期</string>
+    <string name="people_contact_conflict">聯絡人已更改</string>
+    <string name="people_add_contact_title">加聯絡人</string>
+    <string name="people_add_contact_add">加入聯絡人</string>
+    <string name="people_add_contact_in_contacts">喺聯絡人中</string>
+    <string name="people_books_create">建立通訊錄</string>
+    <string name="people_books_delete">刪除通訊錄</string>
+    <string name="people_books_actions">通訊錄操作</string>
+    <plurals name="people_books_delete_confirm">
+        <item quantity="other">要刪除 %1$s 同埋入面嘅 %2$d 個聯絡人嗎？</item>
+    </plurals>
+    <string name="people_welcome_body">喺 Mochi 各處搵朋友並聯繫。㩒「加聯絡人」就可以發出邀請。</string>
+    <string name="people_person_state_contact">喺聯絡人中</string>
+    <string name="people_contacts_sort_name">名稱（A–Z）</string>
+    <string name="people_contacts_sort_recent">最近加入</string>
+    <string name="people_contacts_thats_you">呢個係你</string>
+    <string name="people_contacts_try_different_search">試下第個搜尋字詞</string>
+    <string name="people_contact_phone">電話</string>
+    <string name="people_contact_title">職銜</string>
 </resources>

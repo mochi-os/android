@@ -23,7 +23,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.ButtonDefaults
@@ -120,7 +122,8 @@ fun PersonViewScreen(
                     friendState = uiState.friendState,
                     isMutating = uiState.isMutating,
                     error = uiState.error,
-                    onAddFriend = viewModel::addFriend,
+                    onAddContact = viewModel::addContact,
+                    onInvite = viewModel::invite,
                     onAccept = viewModel::acceptInvite,
                     onDecline = viewModel::declineInvite,
                     onMessage = viewModel::message,
@@ -137,7 +140,8 @@ private fun PersonBody(
     friendState: FriendState,
     isMutating: Boolean,
     error: org.mochios.android.api.MochiError?,
-    onAddFriend: () -> Unit,
+    onAddContact: () -> Unit,
+    onInvite: () -> Unit,
     onAccept: () -> Unit,
     onDecline: () -> Unit,
     onMessage: () -> Unit,
@@ -252,7 +256,8 @@ private fun PersonBody(
         ActionRow(
             friendState = friendState,
             isMutating = isMutating,
-            onAddFriend = onAddFriend,
+            onAddContact = onAddContact,
+            onInvite = onInvite,
             onAccept = onAccept,
             onDecline = onDecline,
             onMessage = onMessage,
@@ -300,6 +305,10 @@ private fun FriendStatePill(state: FriendState) {
             onClick = {},
             label = { Text(stringResource(R.string.people_person_state_invited)) },
         )
+        FriendState.Contact -> AssistChip(
+            onClick = {},
+            label = { Text(stringResource(R.string.people_person_state_contact)) },
+        )
         is FriendState.InvitedByThem, FriendState.NotFriend -> Unit
     }
 }
@@ -308,7 +317,8 @@ private fun FriendStatePill(state: FriendState) {
 private fun ActionRow(
     friendState: FriendState,
     isMutating: Boolean,
-    onAddFriend: () -> Unit,
+    onAddContact: () -> Unit,
+    onInvite: () -> Unit,
     onAccept: () -> Unit,
     onDecline: () -> Unit,
     onMessage: () -> Unit,
@@ -355,27 +365,63 @@ private fun ActionRow(
                     Text(stringResource(R.string.people_person_message))
                 }
             }
-            FriendState.NotFriend -> {
+            FriendState.Contact -> {
                 MochiButton(
-                    onClick = onAddFriend,
+                    onClick = onInvite,
                     enabled = !isMutating,
                     modifier = Modifier.weight(1f),
                 ) {
                     if (isMutating) {
                         CircularProgressIndicator(
-                            modifier = Modifier.size(16.dp),
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
                             strokeWidth = 2.dp,
                             color = MaterialTheme.colorScheme.onPrimary,
                         )
                     } else {
-                        Text(stringResource(R.string.people_person_add_friend))
+                        Icon(
+                            Icons.AutoMirrored.Filled.Send,
+                            contentDescription = null,
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                        )
                     }
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.people_contacts_invite))
                 }
                 MochiOutlinedButton(
                     onClick = onMessage,
                     modifier = Modifier.weight(1f),
                 ) {
                     Text(stringResource(R.string.people_person_message))
+                }
+            }
+            FriendState.NotFriend -> {
+                MochiButton(
+                    onClick = onAddContact,
+                    enabled = !isMutating,
+                    modifier = Modifier.weight(1f),
+                ) {
+                    if (isMutating) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                            strokeWidth = 2.dp,
+                            color = MaterialTheme.colorScheme.onPrimary,
+                        )
+                    } else {
+                        Icon(
+                            Icons.Default.PersonAdd,
+                            contentDescription = null,
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                        )
+                    }
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.people_add_contact_add))
+                }
+                MochiOutlinedButton(
+                    onClick = onInvite,
+                    enabled = !isMutating,
+                    modifier = Modifier.weight(1f),
+                ) {
+                    Text(stringResource(R.string.people_contacts_invite))
                 }
             }
         }

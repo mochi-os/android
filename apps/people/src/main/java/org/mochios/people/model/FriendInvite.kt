@@ -6,7 +6,15 @@
 package org.mochios.people.model
 
 /**
- * Received and sent invites share [Friend]'s record; the list they arrive in
- * gives the direction.
+ * A friendship invitation waiting on one side or the other. [id] is the other
+ * person's entity id and [identity] the local identity the invite belongs to;
+ * [direction] is `from` for one received and `to` for one sent, which the list
+ * it arrives in also says.
  */
-typealias FriendInvite = Friend
+data class FriendInvite(
+    val identity: String = "",
+    val id: String = "",
+    val direction: String = "",
+    val name: String = "",
+    val updated: Long = 0,
+)
