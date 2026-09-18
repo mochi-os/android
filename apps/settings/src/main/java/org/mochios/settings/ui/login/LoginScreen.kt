@@ -431,7 +431,6 @@ private fun PasskeyRow(
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.account_delete),
-                        tint = MaterialTheme.colorScheme.error,
                     )
                 }
             }

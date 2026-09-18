@@ -1186,7 +1186,6 @@ private fun SelectionBar(
             Icon(
                 Icons.Outlined.Delete,
                 contentDescription = stringResource(MochiR.string.common_delete),
-                tint = MaterialTheme.colorScheme.error,
             )
         }
     }

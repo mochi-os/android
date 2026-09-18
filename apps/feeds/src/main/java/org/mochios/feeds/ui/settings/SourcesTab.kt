@@ -418,8 +418,7 @@ private fun SourceCard(
                 Icon(
                     Icons.Outlined.Delete,
                     contentDescription = stringResource(R.string.feeds_remove),
-                    modifier = Modifier.size(20.dp),
-                    tint = MaterialTheme.colorScheme.error
+                    modifier = Modifier.size(20.dp)
                 )
             }
         }

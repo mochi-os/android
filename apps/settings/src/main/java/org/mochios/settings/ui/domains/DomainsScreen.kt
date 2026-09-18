@@ -327,7 +327,6 @@ private fun DomainCard(
                             Icon(
                                 Icons.Default.Delete,
                                 contentDescription = null,
-                                tint = MaterialTheme.colorScheme.error,
                                 modifier = Modifier.size(16.dp),
                             )
                             Spacer(Modifier.width(4.dp))
@@ -345,6 +344,7 @@ private fun DomainCard(
             title = stringResource(R.string.domain_delete_title),
             text = stringResource(R.string.domain_delete_message, domain.domain),
             confirmText = stringResource(R.string.domain_delete),
+            destructive = true,
             onConfirm = {
                 showDeleteDomain = false
                 onDelete()
@@ -455,7 +455,6 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.route_delete),
-                tint = MaterialTheme.colorScheme.error,
             )
         }
     }
@@ -465,6 +464,7 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
             title = stringResource(R.string.route_delete_title),
             text = stringResource(R.string.route_delete_message, route.path.ifBlank { "/" }),
             confirmText = stringResource(R.string.route_delete),
+            destructive = true,
             onConfirm = {
                 confirm = false
                 onDelete()
@@ -497,7 +497,6 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.domain_delegation_delete),
-                tint = MaterialTheme.colorScheme.error,
             )
         }
     }
@@ -507,6 +506,7 @@ private fun DelegationRow(delegation: Delegation, onDelete: () -> Unit) {
             title = stringResource(R.string.domain_delegation_delete_title),
             text = stringResource(R.string.domain_delegation_delete_message, delegation.username),
             confirmText = stringResource(R.string.domain_delegation_delete),
+            destructive = true,
             onConfirm = {
                 confirm = false
                 onDelete()

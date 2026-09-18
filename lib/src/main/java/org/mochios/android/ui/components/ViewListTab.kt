@@ -385,7 +385,6 @@ private fun ViewRow(
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.common_delete),
-                tint = MaterialTheme.colorScheme.error,
                 modifier = Modifier.size(18.dp)
             )
         }
