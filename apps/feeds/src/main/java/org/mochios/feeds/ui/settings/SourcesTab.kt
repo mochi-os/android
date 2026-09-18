@@ -39,7 +39,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Slider
@@ -67,6 +66,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.mochiDialogCardColors
@@ -162,7 +162,7 @@ fun SourcesTab(
                 }
             }
         }
-        FloatingActionButton(
+        MochiFab(
             onClick = { showAddDialog = true },
             modifier = Modifier
                 .align(Alignment.BottomEnd)

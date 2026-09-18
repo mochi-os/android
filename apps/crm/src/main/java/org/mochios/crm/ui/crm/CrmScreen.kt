@@ -55,7 +55,6 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
@@ -97,24 +96,25 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.DrawerPlaceholderScreen
-import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.DrawerItem
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.NotificationBell
-import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiFab
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
@@ -787,7 +787,7 @@ private fun CrmContent(
             // as, so the form would open with its Create permanently disabled
             // and no way to tell why. Hidden rather than dead.
             if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
-                FloatingActionButton(onClick = { onCreateObject(emptyMap()) }) {
+                MochiFab(onClick = { onCreateObject(emptyMap()) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }
             }

@@ -53,7 +53,6 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
@@ -94,6 +93,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
@@ -772,7 +772,7 @@ private fun ProjectContent(
             val boardHasColumns = activeView?.viewtype == "board" &&
                 activeView.columns.isNotBlank()
             if (details != null && !boardHasColumns) {
-                FloatingActionButton(onClick = { onCreateObject(null, emptyMap()) }) {
+                MochiFab(onClick = { onCreateObject(null, emptyMap()) }) {
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.projects_create_object)

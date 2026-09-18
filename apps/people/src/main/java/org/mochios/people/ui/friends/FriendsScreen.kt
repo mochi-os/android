@@ -37,7 +37,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -71,10 +70,11 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiFab
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
@@ -185,7 +185,7 @@ fun FriendsScreen(
                 )
             },
             floatingActionButton = {
-                FloatingActionButton(onClick = onAddFriend) {
+                MochiFab(onClick = onAddFriend) {
                     Icon(
                         Icons.Default.PersonAdd,
                         contentDescription = stringResource(R.string.people_add_friend),
