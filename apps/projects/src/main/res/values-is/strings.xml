@@ -378,4 +378,6 @@
     <string name="projects_exporting">Undirbý útflutning…</string>
     <string name="projects_board_add_column">Bæta við dálki</string>
     <string name="projects_design_sample">Sýnishorn %1$d</string>
+    <string name="projects_option_delete_title">Eyða valkosti</string>
+    <string name="projects_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
 </resources>

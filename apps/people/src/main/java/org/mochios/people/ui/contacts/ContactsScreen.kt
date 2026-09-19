@@ -33,7 +33,7 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Sort
+import androidx.compose.material.icons.automirrored.filled.Sort
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Contacts
 import androidx.compose.material.icons.outlined.Info
@@ -44,7 +44,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -80,6 +79,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextButton
@@ -277,7 +277,7 @@ fun ContactsScreen(
                 )
             },
             floatingActionButton = {
-                FloatingActionButton(onClick = onAddContact) {
+                MochiFab(onClick = onAddContact) {
                     Icon(
                         Icons.Default.PersonAdd,
                         contentDescription = stringResource(R.string.people_add_contact_title),
@@ -319,7 +319,7 @@ fun ContactsScreen(
                             Box {
                                 MochiTextButton(onClick = { sortMenuOpen = true }) {
                                     Icon(
-                                        Icons.Default.Sort,
+                                        Icons.AutoMirrored.Filled.Sort,
                                         contentDescription = null,
                                         modifier = Modifier.size(18.dp),
                                     )

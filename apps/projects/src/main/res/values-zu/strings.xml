@@ -378,4 +378,6 @@
     <string name="projects_exporting">Ilungiselela okuthunyelwayo…</string>
     <string name="projects_board_add_column">Engeza ikholomu</string>
     <string name="projects_design_sample">Isampula %1$d</string>
+    <string name="projects_option_delete_title">Susa inketho</string>
+    <string name="projects_option_delete_message">Ingabe uqinisekile ukuthi ufuna ukususa inketho ethi \"%1$s\"?</string>
 </resources>

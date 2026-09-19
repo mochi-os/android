@@ -253,10 +253,10 @@
 
     <string name="system_users_sort_by">Sorteren op</string>
 
-    <string name="accounts_remove_message">Hiermee wordt het gekoppelde account \\"%1$s\\" verwijderd.</string>
+    <string name="accounts_remove_message">Hiermee wordt het gekoppelde account \"%1$s\" verwijderd.</string>
     <string name="system_documents_last_edited">Laatst bewerkt %1$s</string>
-    <string name="system_settings_reset_message">Hiermee wordt \\"%1$s\\" teruggezet naar de standaardwaarde (%2$s).</string>
-    <string name="system_settings_reset_message_empty">Hiermee wordt \\"%1$s\\" teruggezet naar de standaardwaarde (leeg).</string>
+    <string name="system_settings_reset_message">Hiermee wordt \"%1$s\" teruggezet naar de standaardwaarde (%2$s).</string>
+    <string name="system_settings_reset_message_empty">Hiermee wordt \"%1$s\" teruggezet naar de standaardwaarde (leeg).</string>
     <string name="settings_home_system_users">Gebruikers (server)</string>
     <string name="system_users_search_placeholder">Gebruikers zoeken…</string>
     <string name="system_users_last_login">Laatste aanmelding: %1$s</string>

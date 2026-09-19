@@ -377,4 +377,6 @@
     <string name="projects_exporting">Nyiapake ekspor…</string>
     <string name="projects_board_add_column">Tambah kolom</string>
     <string name="projects_design_sample">Conto %1$d</string>
+    <string name="projects_option_delete_title">Busak pilihan</string>
+    <string name="projects_option_delete_message">Apa sampeyan yakin arep mbusak pilihan \"%1$s\"?</string>
 </resources>

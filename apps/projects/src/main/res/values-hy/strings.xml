@@ -378,4 +378,6 @@
     <string name="projects_exporting">Արտահանման նախապատրաստում…</string>
     <string name="projects_board_add_column">Ավելացնել սյունակ</string>
     <string name="projects_design_sample">Նմուշ %1$d</string>
+    <string name="projects_option_delete_title">Ջնջել տարբերակը</string>
+    <string name="projects_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
 </resources>

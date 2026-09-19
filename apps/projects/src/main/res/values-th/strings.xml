@@ -378,4 +378,6 @@
     <string name="projects_exporting">กำลังเตรียมการส่งออก…</string>
     <string name="projects_board_add_column">เพิ่มคอลัมน์</string>
     <string name="projects_design_sample">ตัวอย่าง %1$d</string>
+    <string name="projects_option_delete_title">ลบตัวเลือก</string>
+    <string name="projects_option_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบตัวเลือก \"%1$s\"</string>
 </resources>

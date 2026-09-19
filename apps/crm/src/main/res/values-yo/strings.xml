@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Gbé fáìlì .zip tàbí .json sókè</string>
     <string name="crm_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>
     <string name="crm_design_sample">Àpẹẹrẹ %1$d</string>
+    <string name="crm_option_delete_title">Pa àṣàyàn rẹ́</string>
+    <string name="crm_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
 </resources>

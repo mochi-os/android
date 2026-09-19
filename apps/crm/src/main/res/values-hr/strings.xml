@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Otpremite .zip ili .json datoteku</string>
     <string name="crm_create_blocked_no_options">Nije moguće stvoriti: %1$s je obavezno, ali nema opcija za odabir. Dodajte opcije u Dizajnu.</string>
     <string name="crm_design_sample">Primjer %1$d</string>
+    <string name="crm_option_delete_title">Obriši opciju</string>
+    <string name="crm_option_delete_message">Jeste li sigurni da želite izbrisati opciju \"%1$s\"?</string>
 </resources>

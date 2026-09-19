@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip या .json फ़ाइल अपलोड करें</string>
     <string name="crm_create_blocked_no_options">बना नहीं सकते: %1$s आवश्यक है लेकिन इसमें चुनने के लिए कोई विकल्प नहीं है। डिज़ाइन में विकल्प जोड़ें।</string>
     <string name="crm_design_sample">नमूना %1$d</string>
+    <string name="crm_option_delete_title">विकल्प हटाएँ</string>
+    <string name="crm_option_delete_message">क्या आप वाकई विकल्प \"%1$s\" को हटाना चाहते हैं?</string>
 </resources>

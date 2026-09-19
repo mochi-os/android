@@ -183,7 +183,7 @@
     <string name="crm_class_add_field">Ajouter un champ</string>
     <string name="crm_class_delete">Supprimer la classe</string>
     <string name="crm_class_delete_title">Supprimer la classe</string>
-    <string name="crm_class_delete_message">Voulez-vous vraiment supprimer la classe \\"%1$s\\"? Tous les champs et leurs options seront également supprimés.</string>
+    <string name="crm_class_delete_message">Voulez-vous vraiment supprimer la classe \"%1$s\"? Tous les champs et leurs options seront également supprimés.</string>
     <string name="crm_field_type_enumerated">Énuméré</string>
     <string name="crm_field_type_checklist">Liste de vérification</string>
     <string name="crm_field_label">Champ : %1$s</string>

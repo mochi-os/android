@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">אַרויפֿלאָדן אַ .zip אָדער .json טעקע</string>
     <string name="crm_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
     <string name="crm_design_sample">מוסטער %1$d</string>
+    <string name="crm_option_delete_title">אויסמעקן אָפּציע</string>
+    <string name="crm_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
 </resources>

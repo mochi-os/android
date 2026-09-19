@@ -377,4 +377,6 @@
     <string name="projects_exporting">ກຳລັງກຽມການສົ່ງອອກ…</string>
     <string name="projects_board_add_column">ເພີ່ມຖັນ</string>
     <string name="projects_design_sample">ຕົວຢ່າງ %1$d</string>
+    <string name="projects_option_delete_title">ລົບຕົວເລືອກ</string>
+    <string name="projects_option_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຕົວເລືອກ \"%1$s\"?</string>
 </resources>

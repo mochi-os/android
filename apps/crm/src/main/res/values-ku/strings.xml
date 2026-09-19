@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Pelê .zip an .json bar bike</string>
     <string name="crm_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
     <string name="crm_design_sample">Nimûne %1$d</string>
+    <string name="crm_option_delete_title">Vebijêrkê jê bibe</string>
+    <string name="crm_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
 </resources>

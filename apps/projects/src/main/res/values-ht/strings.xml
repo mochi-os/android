@@ -377,4 +377,6 @@
     <string name="projects_exporting">Prepare ekspòtasyon an…</string>
     <string name="projects_board_add_column">Ajoute kolòn</string>
     <string name="projects_design_sample">Echantiyon %1$d</string>
+    <string name="projects_option_delete_title">Efase opsyon</string>
+    <string name="projects_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
 </resources>

@@ -378,4 +378,6 @@
     <string name="projects_exporting">Berei uitvoer voor…</string>
     <string name="projects_board_add_column">Voeg kolom by</string>
     <string name="projects_design_sample">Voorbeeld %1$d</string>
+    <string name="projects_option_delete_title">Verwyder opsie</string>
+    <string name="projects_option_delete_message">Is jy seker jy wil die opsie \"%1$s\" uitvee?</string>
 </resources>

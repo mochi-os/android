@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip හෝ .json ගොනුවක් උඩුගත කරන්න</string>
     <string name="crm_create_blocked_no_options">සෑදිය නොහැක: %1$s අවශ්‍ය නමුත් තෝරා ගැනීමට විකල්ප නොමැත. නිර්මාණයේ විකල්ප එක් කරන්න.</string>
     <string name="crm_design_sample">නියැදිය %1$d</string>
+    <string name="crm_option_delete_title">විකල්පය මකන්න</string>
+    <string name="crm_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
 </resources>

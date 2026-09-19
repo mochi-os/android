@@ -378,4 +378,6 @@
     <string name="projects_exporting">ஏற்றுமதி தயாராகிறது…</string>
     <string name="projects_board_add_column">நெடுவரிசை சேர்</string>
     <string name="projects_design_sample">மாதிரி %1$d</string>
+    <string name="projects_option_delete_title">விருப்பத்தை நீக்கு</string>
+    <string name="projects_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>
 </resources>

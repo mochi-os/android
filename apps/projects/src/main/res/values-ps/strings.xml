@@ -378,4 +378,6 @@
     <string name="projects_exporting">صادرول چمتو کیږي…</string>
     <string name="projects_board_add_column">کالم اضافه کړئ</string>
     <string name="projects_design_sample">نمونه %1$d</string>
+    <string name="projects_option_delete_title">اختیار ړنګ کړئ</string>
+    <string name="projects_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
 </resources>

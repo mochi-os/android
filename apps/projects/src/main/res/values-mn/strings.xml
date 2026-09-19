@@ -378,4 +378,6 @@
     <string name="projects_exporting">Экспортыг бэлтгэж байна…</string>
     <string name="projects_board_add_column">Багана нэмэх</string>
     <string name="projects_design_sample">Жишээ %1$d</string>
+    <string name="projects_option_delete_title">Сонголтыг устгах</string>
+    <string name="projects_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
 </resources>

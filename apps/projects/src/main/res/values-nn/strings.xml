@@ -378,4 +378,6 @@
     <string name="projects_exporting">Førebur eksport…</string>
     <string name="projects_board_add_column">Legg til kolonne</string>
     <string name="projects_design_sample">Døme %1$d</string>
+    <string name="projects_option_delete_title">Slett val</string>
+    <string name="projects_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>
 </resources>

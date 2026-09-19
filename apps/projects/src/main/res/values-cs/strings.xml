@@ -379,4 +379,6 @@
     <string name="projects_exporting">Připravuje se export…</string>
     <string name="projects_board_add_column">Přidat sloupec</string>
     <string name="projects_design_sample">Ukázka %1$d</string>
+    <string name="projects_option_delete_title">Smazat možnost</string>
+    <string name="projects_option_delete_message">Opravdu chcete smazat možnost \"%1$s\"?</string>
 </resources>

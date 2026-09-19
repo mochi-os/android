@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip 또는 .json 파일 업로드</string>
     <string name="crm_create_blocked_no_options">만들 수 없음: %1$s은(는) 필수이지만 선택할 옵션이 없습니다. 디자인에서 옵션을 추가하세요.</string>
     <string name="crm_design_sample">샘플 %1$d</string>
+    <string name="crm_option_delete_title">옵션 삭제</string>
+    <string name="crm_option_delete_message">옵션 \"%1$s\"을(를) 삭제하시겠습니까?</string>
 </resources>

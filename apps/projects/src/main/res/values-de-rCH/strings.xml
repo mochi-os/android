@@ -256,7 +256,7 @@
     <string name="projects_class_add_field">Feld hinzufügen</string>
     <string name="projects_class_delete">Klasse löschen</string>
     <string name="projects_class_delete_title">Klasse löschen</string>
-    <string name="projects_class_delete_message">Möchten Sie die Klasse \\"%1$s\\" wirklich löschen? Alle Felder und ihre Optionen werden ebenfalls gelöscht.</string>
+    <string name="projects_class_delete_message">Möchten Sie die Klasse \"%1$s\" wirklich löschen? Alle Felder und ihre Optionen werden ebenfalls gelöscht.</string>
     <string name="projects_field_type_enumerated">Aufzählung</string>
     <string name="projects_field_type_checklist">Checkliste</string>
     <string name="projects_field_label">Feld: %1$s</string>

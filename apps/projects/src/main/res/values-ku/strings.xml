@@ -378,4 +378,6 @@
     <string name="projects_exporting">Hinardekirin tê amadekirin…</string>
     <string name="projects_board_add_column">Stûn zêde bike</string>
     <string name="projects_design_sample">Nimûne %1$d</string>
+    <string name="projects_option_delete_title">Vebijêrkê jê bibe</string>
+    <string name="projects_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
 </resources>

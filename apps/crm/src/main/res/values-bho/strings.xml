@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip भा .json फाइल अपलोड करीं</string>
     <string name="crm_create_blocked_no_options">बनावल ना जा सकल: %1$s जरूरी बा बाकिर एकरा में चुने खातिर कवनो विकल्प नइखे। डिज़ाइन में विकल्प जोड़ीं।</string>
     <string name="crm_design_sample">नमूना %1$d</string>
+    <string name="crm_option_delete_title">विकल्प मेटाईं</string>
+    <string name="crm_option_delete_message">का रउआ सचमुच विकल्प \"%1$s\" के मिटावे के चाहत बानी?</string>
 </resources>

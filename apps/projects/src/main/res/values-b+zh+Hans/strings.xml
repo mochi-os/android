@@ -378,4 +378,6 @@
     <string name="projects_exporting">正在准备导出…</string>
     <string name="projects_board_add_column">添加列</string>
     <string name="projects_design_sample">示例 %1$d</string>
+    <string name="projects_option_delete_title">删除选项</string>
+    <string name="projects_option_delete_message">确定要删除选项 \"%1$s\" 吗?</string>
 </resources>

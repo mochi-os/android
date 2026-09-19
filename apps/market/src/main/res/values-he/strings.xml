@@ -91,7 +91,7 @@
     <string name="market_checkout_subscription_start_failed">לא ניתן היה להתחיל את המינוי</string>
     <string name="market_checkout_summary">סיכום הזמנה</string>
     <string name="market_checkout_title">תשלום</string>
-    <string name="market_checkout_total">סה\\"כ</string>
+    <string name="market_checkout_total">סה\"כ</string>
     <string name="market_checkout_winning_bid">הצעה זוכה</string>
     <string name="market_condition_new">חדש</string>
     <string name="market_condition_refurbished">משופץ</string>
@@ -260,7 +260,7 @@
     <string name="market_purchase_shipping_line">משלוח</string>
     <string name="market_purchase_summary">סיכום הזמנה</string>
     <string name="market_purchase_title">הזמנה</string>
-    <string name="market_purchase_total">סה\\"כ</string>
+    <string name="market_purchase_total">סה\"כ</string>
     <string name="market_purchase_track">מעקב אחר חבילה</string>
     <string name="market_purchases_complete_purchase">השלם רכישה</string>
     <string name="market_purchases_empty">אין רכישות</string>

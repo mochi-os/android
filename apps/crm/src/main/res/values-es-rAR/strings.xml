@@ -212,7 +212,7 @@
     <string name="crm_option_color">Color</string>
     <string name="crm_views_empty">No hay vistas definidas</string>
     <string name="crm_views_empty_subtitle">Creá una vista de tablero o de lista para agrupar objetos</string>
-    <string name="crm_views_delete_message">¿Estás seguro de que querés eliminar la vista \\"%1$s\\"?</string>
+    <string name="crm_views_delete_message">¿Estás seguro de que querés eliminar la vista \"%1$s\"?</string>
     <string name="crm_views_type_board">Tablero</string>
     <string name="crm_views_type_list">Lista</string>
     <string name="crm_views_columns_field">Campo de columnas</string>
@@ -243,4 +243,6 @@
     <string name="crm_class_save_name">Guardá el nombre</string>
     <string name="crm_create_import_backup">Importar desde copia de seguridad (opcional)</string>
     <string name="crm_create_allow_search">Permití que cualquiera busque el CRM</string>
+    <string name="crm_option_delete_title">Eliminá la opción</string>
+    <string name="crm_option_delete_message">¿Estás seguro de que querés eliminar la opción \"%1$s\"?</string>
 </resources>

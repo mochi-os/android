@@ -199,7 +199,7 @@
     <string name="crm_class_parents">ወላጅ ክፍሎች</string>
     <string name="crm_class_move_up">ወደ ላይ አንቀሳቅስ</string>
     <string name="crm_class_move_down">ወደ ታች አንቀሳቅስ</string>
-    <string name="crm_class_delete_message">ክፍሉን \\"%1$s\\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት? ሁሉም መስኮች እና አማራጮቻቸውም ይሰረዛሉ።</string>
+    <string name="crm_class_delete_message">ክፍሉን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት? ሁሉም መስኮች እና አማራጮቻቸውም ይሰረዛሉ።</string>
     <string name="crm_field_type_enumerated">የተዘረዘረ</string>
     <string name="crm_field_label">መስክ: %1$s</string>
     <string name="crm_field_readonly">ለንባብ ብቻ</string>
@@ -216,11 +216,11 @@
     <string name="crm_field_pattern">ስርዓተ-ጥለት (regex)</string>
     <string name="crm_field_rows">ረድፎች (የጽሑፍ ቦታ ቁመት)</string>
     <string name="crm_field_no_options">ምንም አማራጮች አልተገለጹም</string>
-    <string name="crm_field_delete_message">መስኩን \\"%1$s\\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት? ሁሉም አማራጮች እና እሴቶች ይጠፋሉ።</string>
+    <string name="crm_field_delete_message">መስኩን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት? ሁሉም አማራጮች እና እሴቶች ይጠፋሉ።</string>
     <string name="crm_option_color">ቀለም</string>
     <string name="crm_views_empty">ምንም እይታዎች አልተገለጹም</string>
     <string name="crm_views_empty_subtitle">ነገሮችን ለመቧደን ሰሌዳ ወይም ዝርዝር እይታ ይፍጠሩ</string>
-    <string name="crm_views_delete_message">እይታውን \\"%1$s\\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>
+    <string name="crm_views_delete_message">እይታውን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>
     <string name="crm_views_columns_field">የዓምዶች መስክ</string>
     <string name="crm_views_rows_field">የረድፎች መስክ (የመዋኛ መስመሮች)</string>
     <string name="crm_views_border_field">የጠርዝ ቀለም መስክ</string>
@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip ወይም .json ፋይል ይጫኑ</string>
     <string name="crm_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>
     <string name="crm_design_sample">ናሙና %1$d</string>
+    <string name="crm_option_delete_title">አማራጭ ሰርዝ</string>
+    <string name="crm_option_delete_message">አማራጩን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>
 </resources>

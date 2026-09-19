@@ -378,4 +378,6 @@
     <string name="projects_exporting">Esportazioa prestatzen…</string>
     <string name="projects_board_add_column">Gehitu zutabea</string>
     <string name="projects_design_sample">Adibidea %1$d</string>
+    <string name="projects_option_delete_title">Ezabatu aukera</string>
+    <string name="projects_option_delete_message">Ziur zaude \"%1$s\" aukera ezabatu nahi duzula?</string>
 </resources>

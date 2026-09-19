@@ -290,4 +290,6 @@
     <string name="crm_create_upload_json">.zip- oder .json-Datei hochladen</string>
     <string name="crm_create_blocked_no_options">Erstellen nicht möglich: %1$s ist erforderlich, hat aber keine Optionen zur Auswahl. Fügen Sie Optionen im Design hinzu.</string>
     <string name="crm_design_sample">Beispiel %1$d</string>
+    <string name="crm_option_delete_title">Option löschen</string>
+    <string name="crm_option_delete_message">Möchten Sie die Option \"%1$s\" wirklich löschen?</string>
 </resources>

@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Loda fayil ɗin .zip ko .json</string>
     <string name="crm_create_blocked_no_options">Ba a iya ƙirƙira ba: ana buƙatar %1$s amma ba shi da zaɓuɓɓuka. Ƙara zaɓuɓɓuka a Ƙira.</string>
     <string name="crm_design_sample">Samfuri %1$d</string>
+    <string name="crm_option_delete_title">Goge zaɓi</string>
+    <string name="crm_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>
 </resources>

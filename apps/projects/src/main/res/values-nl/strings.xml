@@ -378,4 +378,6 @@
     <string name="projects_exporting">Export voorbereiden…</string>
     <string name="projects_board_add_column">Kolom toevoegen</string>
     <string name="projects_design_sample">Voorbeeld %1$d</string>
+    <string name="projects_option_delete_title">Optie verwijderen</string>
+    <string name="projects_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
 </resources>

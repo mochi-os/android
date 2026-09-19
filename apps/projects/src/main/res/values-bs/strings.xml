@@ -379,4 +379,6 @@
     <string name="projects_exporting">Priprema izvoza…</string>
     <string name="projects_board_add_column">Dodaj kolonu</string>
     <string name="projects_design_sample">Primjer %1$d</string>
+    <string name="projects_option_delete_title">Obriši opciju</string>
+    <string name="projects_option_delete_message">Jeste li sigurni da želite obrisati opciju \"%1$s\"?</string>
 </resources>

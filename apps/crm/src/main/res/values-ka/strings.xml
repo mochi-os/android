@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">ატვირთეთ .zip ან .json ფაილი</string>
     <string name="crm_create_blocked_no_options">შექმნა შეუძლებელია: %1$s სავალდებულოა, მაგრამ არჩევანი არ აქვს. დაამატეთ ვარიანტები დიზაინში.</string>
     <string name="crm_design_sample">ნიმუში %1$d</string>
+    <string name="crm_option_delete_title">ვარიანტის წაშლა</string>
+    <string name="crm_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>
 </resources>

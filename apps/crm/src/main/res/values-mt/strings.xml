@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Tella\' fajl .zip jew .json</string>
     <string name="crm_create_blocked_no_options">Ma jistax jinħoloq: %1$s huwa meħtieġ imma m\'għandu ebda għażla. Żid għażliet fid-Disinn.</string>
     <string name="crm_design_sample">Kampjun %1$d</string>
+    <string name="crm_option_delete_title">Ħassar għażla</string>
+    <string name="crm_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
 </resources>

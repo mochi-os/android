@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Запампуйце файл .zip або .json</string>
     <string name="crm_create_blocked_no_options">Немагчыма стварыць: %1$s абавязковы, але не мае варыянтаў выбару. Дадайце варыянты ў Дызайне.</string>
     <string name="crm_design_sample">Узор %1$d</string>
+    <string name="crm_option_delete_title">Выдаліць опцыю</string>
+    <string name="crm_option_delete_message">Вы ўпэўнены, што хочаце выдаліць опцыю \"%1$s\"?</string>
 </resources>

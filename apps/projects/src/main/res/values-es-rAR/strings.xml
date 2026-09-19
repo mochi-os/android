@@ -357,4 +357,6 @@
     <string name="projects_settings_updated">Proyecto actualizado</string>
     <string name="projects_class_save_name">Guardá el nombre</string>
     <string name="projects_board_add_column">Agregá una columna</string>
+    <string name="projects_option_delete_title">Eliminá la opción</string>
+    <string name="projects_option_delete_message">¿Estás seguro de que querés eliminar la opción \"%1$s\"?</string>
 </resources>

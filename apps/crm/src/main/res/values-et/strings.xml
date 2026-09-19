@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Laadige üles .zip- või .json-fail</string>
     <string name="crm_create_blocked_no_options">Ei saa luua: %1$s on nõutav, kuid sellel pole valikuid. Lisage valikud Kujunduses.</string>
     <string name="crm_design_sample">Näidis %1$d</string>
+    <string name="crm_option_delete_title">Kustuta valik</string>
+    <string name="crm_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>
 </resources>

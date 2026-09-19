@@ -378,4 +378,6 @@
     <string name="projects_exporting">Eksport tayyorlanmoqda…</string>
     <string name="projects_board_add_column">Ustun qoʻshish</string>
     <string name="projects_design_sample">Namuna %1$d</string>
+    <string name="projects_option_delete_title">Variantni oʻchirish</string>
+    <string name="projects_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>
 </resources>

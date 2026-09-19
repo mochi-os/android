@@ -378,4 +378,6 @@
     <string name="projects_exporting">Menyediakan eksport…</string>
     <string name="projects_board_add_column">Tambah lajur</string>
     <string name="projects_design_sample">Contoh %1$d</string>
+    <string name="projects_option_delete_title">Padam pilihan</string>
+    <string name="projects_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
 </resources>

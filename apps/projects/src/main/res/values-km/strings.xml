@@ -377,4 +377,6 @@
     <string name="projects_exporting">កំពុងរៀបចំការនាំចេញ…</string>
     <string name="projects_board_add_column">បន្ថែមជួរឈរ</string>
     <string name="projects_design_sample">គំរូ %1$d</string>
+    <string name="projects_option_delete_title">លុបជម្រើស</string>
+    <string name="projects_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
 </resources>

@@ -378,4 +378,6 @@
     <string name="projects_exporting">නිර්යාතය සූදානම් කරමින්…</string>
     <string name="projects_board_add_column">තීරුවක් එක් කරන්න</string>
     <string name="projects_design_sample">නියැදිය %1$d</string>
+    <string name="projects_option_delete_title">විකල්පය මකන්න</string>
+    <string name="projects_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
 </resources>

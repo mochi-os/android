@@ -378,4 +378,6 @@
     <string name="projects_exporting">ايڪسپورٽ تيار ٿي رهيو آهي…</string>
     <string name="projects_board_add_column">ڪالم شامل ڪريو</string>
     <string name="projects_design_sample">نمونو %1$d</string>
+    <string name="projects_option_delete_title">اختيار ختم ڪريو</string>
+    <string name="projects_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
 </resources>

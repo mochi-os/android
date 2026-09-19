@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip эсвэл .json файл байршуулна уу</string>
     <string name="crm_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
     <string name="crm_design_sample">Жишээ %1$d</string>
+    <string name="crm_option_delete_title">Сонголтыг устгах</string>
+    <string name="crm_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
 </resources>

@@ -360,4 +360,6 @@
     <string name="projects_sort_filter_title">Sorteren en filteren</string>
     <string name="projects_create_prefix_hint">Gebruikt voor leesbare ID\'s zoals %1$s-1, %1$s-2</string>
     <string name="projects_board_add_column">Kolom toevoegen</string>
+    <string name="projects_option_delete_title">Optie verwijderen</string>
+    <string name="projects_option_delete_message">Weet u zeker dat u de optie \"%1$s\" wilt verwijderen?</string>
 </resources>

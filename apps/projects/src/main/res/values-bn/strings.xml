@@ -378,4 +378,6 @@
     <string name="projects_exporting">রপ্তানি প্রস্তুত করা হচ্ছে…</string>
     <string name="projects_board_add_column">কলাম যোগ করুন</string>
     <string name="projects_design_sample">নমুনা %1$d</string>
+    <string name="projects_option_delete_title">অপশন মুছুন</string>
+    <string name="projects_option_delete_message">আপনি কি নিশ্চিত যে আপনি \"%1$s\" অপশনটি মুছে ফেলতে চান?</string>
 </resources>

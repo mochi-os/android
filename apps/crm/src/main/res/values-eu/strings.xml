@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Igo .zip edo .json fitxategia</string>
     <string name="crm_create_blocked_no_options">Ezin da sortu: %1$s beharrezkoa da baina ez du aukerarik. Gehitu aukerak Diseinuan.</string>
     <string name="crm_design_sample">Adibidea %1$d</string>
+    <string name="crm_option_delete_title">Ezabatu aukera</string>
+    <string name="crm_option_delete_message">Ziur zaude \"%1$s\" aukera ezabatu nahi duzula?</string>
 </resources>

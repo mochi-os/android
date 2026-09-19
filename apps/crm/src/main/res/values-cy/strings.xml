@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Uwchlwythwch ffeil .zip neu .json</string>
     <string name="crm_create_blocked_no_options">Methu creu: mae %1$s yn ofynnol ond nid oes ganddo opsiynau i ddewis ohonynt. Ychwanegwch opsiynau yn y Cynllun.</string>
     <string name="crm_design_sample">Sampl %1$d</string>
+    <string name="crm_option_delete_title">Dileu opsiwn</string>
+    <string name="crm_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>
 </resources>

@@ -378,4 +378,6 @@
     <string name="projects_exporting">Apsuña wakichaña…</string>
     <string name="projects_board_add_column">Columna yapxataña</string>
     <string name="projects_design_sample">Uñacht\'äwi %1$d</string>
+    <string name="projects_option_delete_title">Opción chhaqtayaña</string>
+    <string name="projects_option_delete_message">¿\"%1$s\" opción chhaqtayañ muntati?</string>
 </resources>

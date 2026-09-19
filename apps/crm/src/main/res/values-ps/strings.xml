@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">د .zip یا .json فایل پورته کړئ</string>
     <string name="crm_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
     <string name="crm_design_sample">نمونه %1$d</string>
+    <string name="crm_option_delete_title">اختیار ړنګ کړئ</string>
+    <string name="crm_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
 </resources>

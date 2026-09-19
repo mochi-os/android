@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Luchdaich suas faidhle .zip no .json</string>
     <string name="crm_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>
     <string name="crm_design_sample">Sampall %1$d</string>
+    <string name="crm_option_delete_title">Sguab às roghainn</string>
+    <string name="crm_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>
 </resources>

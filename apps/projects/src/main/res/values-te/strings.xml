@@ -378,4 +378,6 @@
     <string name="projects_exporting">ఎగుమతిని సిద్ధం చేస్తోంది…</string>
     <string name="projects_board_add_column">కాలమ్‌ను జోడించండి</string>
     <string name="projects_design_sample">నమూనా %1$d</string>
+    <string name="projects_option_delete_title">ఎంపికను తొలగించండి</string>
+    <string name="projects_option_delete_message">మీరు \"%1$s\" ఎంపికను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
 </resources>

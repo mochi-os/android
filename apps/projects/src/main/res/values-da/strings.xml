@@ -378,4 +378,6 @@
     <string name="projects_exporting">Forbereder eksport…</string>
     <string name="projects_board_add_column">Tilføj kolonne</string>
     <string name="projects_design_sample">Eksempel %1$d</string>
+    <string name="projects_option_delete_title">Slet valgmulighed</string>
+    <string name="projects_option_delete_message">Er du sikker på, at du vil slette valgmuligheden \"%1$s\"?</string>
 </resources>

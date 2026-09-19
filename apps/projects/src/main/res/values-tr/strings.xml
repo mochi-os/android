@@ -378,4 +378,6 @@
     <string name="projects_exporting">Dışa aktarma hazırlanıyor…</string>
     <string name="projects_board_add_column">Sütun ekle</string>
     <string name="projects_design_sample">Örnek %1$d</string>
+    <string name="projects_option_delete_title">Seçeneği sil</string>
+    <string name="projects_option_delete_message">\"%1$s\" seçeneğini silmek istediğinizden emin misiniz?</string>
 </resources>

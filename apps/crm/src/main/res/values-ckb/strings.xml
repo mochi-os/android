@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">فایلی .zip یان .json بارکە</string>
     <string name="crm_create_blocked_no_options">ناتوانرێت دروست بکرێت: %1$s پێویستە بەڵام هیچ هەڵبژاردەیەکی نییە. لە دیزایندا هەڵبژاردە زیاد بکە.</string>
     <string name="crm_design_sample">نموونە %1$d</string>
+    <string name="crm_option_delete_title">سڕینەوەی هەڵبژاردە</string>
+    <string name="crm_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>
 </resources>

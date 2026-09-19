@@ -380,4 +380,6 @@
     <string name="projects_exporting">Подготовка экспорта…</string>
     <string name="projects_board_add_column">Добавить колонку</string>
     <string name="projects_design_sample">Образец %1$d</string>
+    <string name="projects_option_delete_title">Удалить вариант</string>
+    <string name="projects_option_delete_message">Вы уверены, что хотите удалить вариант \"%1$s\"?</string>
 </resources>

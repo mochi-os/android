@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">上傳 .zip 或 .json 檔案</string>
     <string name="crm_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
     <string name="crm_design_sample">範例 %1$d</string>
+    <string name="crm_option_delete_title">刪除選項</string>
+    <string name="crm_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
 </resources>

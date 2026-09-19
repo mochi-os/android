@@ -380,4 +380,6 @@
     <string name="projects_exporting">Priprava izvoza…</string>
     <string name="projects_board_add_column">Dodaj stolpec</string>
     <string name="projects_design_sample">Vzorec %1$d</string>
+    <string name="projects_option_delete_title">Izbriši možnost</string>
+    <string name="projects_option_delete_message">Ali ste prepričani, da želite izbrisati možnost \"%1$s\"?</string>
 </resources>

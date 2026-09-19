@@ -378,4 +378,6 @@
     <string name="projects_exporting">Po përgatitet eksporti…</string>
     <string name="projects_board_add_column">Shto kolonë</string>
     <string name="projects_design_sample">Shembull %1$d</string>
+    <string name="projects_option_delete_title">Fshi opsionin</string>
+    <string name="projects_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>
 </resources>

@@ -381,4 +381,6 @@
     <string name="projects_exporting">Easpórtáil á hullmhú…</string>
     <string name="projects_board_add_column">Cuir colún leis</string>
     <string name="projects_design_sample">Sampla %1$d</string>
+    <string name="projects_option_delete_title">Scrios rogha</string>
+    <string name="projects_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
 </resources>

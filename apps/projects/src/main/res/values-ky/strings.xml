@@ -378,4 +378,6 @@
     <string name="projects_exporting">Экспорт даярдалууда…</string>
     <string name="projects_board_add_column">Тилке кошуу</string>
     <string name="projects_design_sample">Үлгү %1$d</string>
+    <string name="projects_option_delete_title">Тандоону жок кылуу</string>
+    <string name="projects_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
 </resources>

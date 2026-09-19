@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">העלה קובץ .zip או .json</string>
     <string name="crm_create_blocked_no_options">לא ניתן ליצור: %1$s נדרש אך אין לו אפשרויות לבחירה. הוסף אפשרויות בעיצוב.</string>
     <string name="crm_design_sample">דוגמה %1$d</string>
+    <string name="crm_option_delete_title">מחק אפשרות</string>
+    <string name="crm_option_delete_message">האם אתה בטוח שברצונך למחוק את האפשרות \"%1$s\"?</string>
 </resources>

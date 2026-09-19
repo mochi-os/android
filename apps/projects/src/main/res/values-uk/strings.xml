@@ -380,4 +380,6 @@
     <string name="projects_exporting">Підготовка експорту…</string>
     <string name="projects_board_add_column">Додати стовпець</string>
     <string name="projects_design_sample">Зразок %1$d</string>
+    <string name="projects_option_delete_title">Видалити варіант</string>
+    <string name="projects_option_delete_message">Ви впевнені, що хочете видалити варіант \"%1$s\"?</string>
 </resources>

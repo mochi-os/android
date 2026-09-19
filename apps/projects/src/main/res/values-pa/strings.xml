@@ -378,4 +378,6 @@
     <string name="projects_exporting">ਐਕਸਪੋਰਟ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ…</string>
     <string name="projects_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>
     <string name="projects_design_sample">ਨਮੂਨਾ %1$d</string>
+    <string name="projects_option_delete_title">ਵਿਕਲਪ ਮਿਟਾਓ</string>
+    <string name="projects_option_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਵਿਕਲਪ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
 </resources>

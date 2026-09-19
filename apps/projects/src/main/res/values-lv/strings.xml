@@ -379,4 +379,6 @@
     <string name="projects_exporting">Sagatavo eksportu…</string>
     <string name="projects_board_add_column">Pievienot kolonnu</string>
     <string name="projects_design_sample">Paraugs %1$d</string>
+    <string name="projects_option_delete_title">Dzēst opciju</string>
+    <string name="projects_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>
 </resources>

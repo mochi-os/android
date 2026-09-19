@@ -378,4 +378,6 @@
     <string name="projects_exporting">正在準備匯出…</string>
     <string name="projects_board_add_column">新增欄位</string>
     <string name="projects_design_sample">範例 %1$d</string>
+    <string name="projects_option_delete_title">刪除選項</string>
+    <string name="projects_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
 </resources>

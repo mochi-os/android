@@ -380,4 +380,6 @@
     <string name="projects_exporting">Pripravuje sa export…</string>
     <string name="projects_board_add_column">Pridať stĺpec</string>
     <string name="projects_design_sample">Ukážka %1$d</string>
+    <string name="projects_option_delete_title">Odstrániť možnosť</string>
+    <string name="projects_option_delete_message">Naozaj chcete odstrániť možnosť \"%1$s\"?</string>
 </resources>

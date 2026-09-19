@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Emyenyhe .zip térãpa .json ñongatupyre</string>
     <string name="crm_create_blocked_no_options">Ndaikatúi ojejapo: %1$s tekotevẽ ha ndoguerekói mba\'eporavorã. Embojoapy poravorã Design-pe.</string>
     <string name="crm_design_sample">Techapyrã %1$d</string>
+    <string name="crm_option_delete_title">Hundi opción</string>
+    <string name="crm_option_delete_message">Añetépa reipota reipe\'a pe opción \"%1$s\"?</string>
 </resources>

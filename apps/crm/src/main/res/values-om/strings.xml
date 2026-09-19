@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Faayilii .zip yookaan .json ol kaa\'i</string>
     <string name="crm_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
     <string name="crm_design_sample">Fakkeenya %1$d</string>
+    <string name="crm_option_delete_title">Filannoo haqi</string>
+    <string name="crm_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
 </resources>

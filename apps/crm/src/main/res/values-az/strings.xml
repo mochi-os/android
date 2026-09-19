@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip və ya .json faylı yükləyin</string>
     <string name="crm_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
     <string name="crm_design_sample">Nümunə %1$d</string>
+    <string name="crm_option_delete_title">Variantı sil</string>
+    <string name="crm_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>
 </resources>

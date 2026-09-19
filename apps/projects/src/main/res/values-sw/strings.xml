@@ -378,4 +378,6 @@
     <string name="projects_exporting">Inaandaa uhamishaji…</string>
     <string name="projects_board_add_column">Ongeza safu</string>
     <string name="projects_design_sample">Sampuli %1$d</string>
+    <string name="projects_option_delete_title">Futa chaguo</string>
+    <string name="projects_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>
 </resources>

@@ -378,4 +378,6 @@
     <string name="projects_exporting">एक्सपोर्ट तइयार हो रहल बा…</string>
     <string name="projects_board_add_column">कॉलम जोड़ीं</string>
     <string name="projects_design_sample">नमूना %1$d</string>
+    <string name="projects_option_delete_title">विकल्प मेटाईं</string>
+    <string name="projects_option_delete_message">का रउआ सचमुच विकल्प \"%1$s\" के मिटावे के चाहत बानी?</string>
 </resources>

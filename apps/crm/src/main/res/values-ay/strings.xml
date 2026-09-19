@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip jan .json qillqata apsuña</string>
     <string name="crm_create_blocked_no_options">Jan luraña: %1$s wakisiwa ukampi janiw ajlliñanakapa utjkiti. Uñstawin ajlliñanaka uchaña.</string>
     <string name="crm_design_sample">Uñacht\'äwi %1$d</string>
+    <string name="crm_option_delete_title">Opción chhaqtayaña</string>
+    <string name="crm_option_delete_message">¿\"%1$s\" opción chhaqtayañ muntati?</string>
 </resources>

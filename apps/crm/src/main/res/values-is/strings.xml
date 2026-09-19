@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Hlaðið upp .zip- eða .json-skrá</string>
     <string name="crm_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
     <string name="crm_design_sample">Sýnishorn %1$d</string>
+    <string name="crm_option_delete_title">Eyða valkosti</string>
+    <string name="crm_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
 </resources>

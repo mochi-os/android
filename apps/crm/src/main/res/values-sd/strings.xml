@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip يا .json فائل اپلوڊ ڪريو</string>
     <string name="crm_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
     <string name="crm_design_sample">نمونو %1$d</string>
+    <string name="crm_option_delete_title">اختيار ختم ڪريو</string>
+    <string name="crm_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
 </resources>

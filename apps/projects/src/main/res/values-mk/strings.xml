@@ -378,4 +378,6 @@
     <string name="projects_exporting">Се подготвува извозот…</string>
     <string name="projects_board_add_column">Додај колона</string>
     <string name="projects_design_sample">Примерок %1$d</string>
+    <string name="projects_option_delete_title">Избриши опција</string>
+    <string name="projects_option_delete_message">Дали сте сигурни дека сакате да ја избришете опцијата \"%1$s\"?</string>
 </resources>

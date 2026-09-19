@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Upload een .zip- of .json-bestand</string>
     <string name="crm_create_blocked_no_options">Kan niet maken: %1$s is vereist maar heeft geen opties om uit te kiezen. Voeg opties toe in Ontwerp.</string>
     <string name="crm_design_sample">Voorbeeld %1$d</string>
+    <string name="crm_option_delete_title">Optie verwijderen</string>
+    <string name="crm_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
 </resources>

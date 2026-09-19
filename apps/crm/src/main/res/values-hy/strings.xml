@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Վերբեռնեք .zip կամ .json ֆայլ</string>
     <string name="crm_create_blocked_no_options">Հնարավոր չէ ստեղծել՝ %1$s-ը պարտադիր է, բայց ընտրելու տարբերակներ չունի. Ավելացրեք տարբերակներ Դիզայնում։</string>
     <string name="crm_design_sample">Նմուշ %1$d</string>
+    <string name="crm_option_delete_title">Ջնջել տարբերակը</string>
+    <string name="crm_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
 </resources>

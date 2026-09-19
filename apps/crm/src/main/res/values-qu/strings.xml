@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip utaq .json willañiqta apachiy</string>
     <string name="crm_create_blocked_no_options">Manam kamachiyta atinchu: %1$s necesitasqa ichaqa manam akllanan kanchu. Design nisqapi akllanakunata yapay.</string>
     <string name="crm_design_sample">Rikch\'ana %1$d</string>
+    <string name="crm_option_delete_title">Akllana wischuy</string>
+    <string name="crm_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata pichayta munanki?</string>
 </resources>

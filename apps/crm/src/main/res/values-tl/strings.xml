@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Mag-upload ng .zip o .json file</string>
     <string name="crm_create_blocked_no_options">Hindi makagawa: kailangan ang %1$s ngunit walang mapagpipiliang opsyon. Magdagdag ng opsyon sa Disenyo.</string>
     <string name="crm_design_sample">Halimbawa %1$d</string>
+    <string name="crm_option_delete_title">I-delete ang option</string>
+    <string name="crm_option_delete_message">Sigurado ka bang gusto mong tanggalin ang option na \"%1$s\"?</string>
 </resources>

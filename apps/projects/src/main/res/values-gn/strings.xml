@@ -378,4 +378,6 @@
     <string name="projects_exporting">Oñembosako\'i ñesẽ…</string>
     <string name="projects_board_add_column">Embojuaju columna</string>
     <string name="projects_design_sample">Techapyrã %1$d</string>
+    <string name="projects_option_delete_title">Hundi opción</string>
+    <string name="projects_option_delete_message">Añetépa reipota reipe\'a pe opción \"%1$s\"?</string>
 </resources>

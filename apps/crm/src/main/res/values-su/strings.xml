@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Unggah berkas .zip atawa .json</string>
     <string name="crm_create_blocked_no_options">Teu bisa nyieun: %1$s diperlukeun tapi teu boga pilihan. Tambahkeun pilihan dina Desain.</string>
     <string name="crm_design_sample">Conto %1$d</string>
+    <string name="crm_option_delete_title">Hapus pilihan</string>
+    <string name="crm_option_delete_message">Yakin hayang mupus pilihan \"%1$s\"?</string>
 </resources>

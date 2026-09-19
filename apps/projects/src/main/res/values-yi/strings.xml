@@ -280,7 +280,7 @@
     <string name="projects_class_title_field_default">פֿעליקייט (לייענעוודיק)</string>
     <string name="projects_class_merge_requests_description">דערלויבן צונויפֿגיס פֿאָדערונגען אויף אָביעקטן פֿון דעם קלאַס.</string>
     <string name="projects_class_parents">עלטערן קלאַסן</string>
-    <string name="projects_class_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם קלאַס \\"%1$s\\"? אַלע פֿעלדער און זייערע אָפּציעס וועלן אויך זײַן אויסגעמעקט.</string>
+    <string name="projects_class_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם קלאַס \"%1$s\"? אַלע פֿעלדער און זייערע אָפּציעס וועלן אויך זײַן אויסגעמעקט.</string>
     <string name="projects_field_type_enumerated">אויסגערעכנט</string>
     <string name="projects_field_label">פֿעלד: %1$s</string>
     <string name="projects_field_readonly">נאָר-לייענען</string>
@@ -296,11 +296,11 @@
     <string name="projects_field_pattern">מוסטער (regex)</string>
     <string name="projects_field_rows">רייען (טעקסטפֿעלד הייך)</string>
     <string name="projects_field_no_options">קיין אָפּציעס באַשטימט</string>
-    <string name="projects_field_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם פֿעלד \\"%1$s\\"? אַלע אָפּציעס און ווערטן וועלן זײַן פֿאַרלוירן.</string>
+    <string name="projects_field_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם פֿעלד \"%1$s\"? אַלע אָפּציעס און ווערטן וועלן זײַן פֿאַרלוירן.</string>
     <string name="projects_option_color">קאָליר</string>
     <string name="projects_views_empty">קיין קוקן באַשטימט</string>
     <string name="projects_views_empty_subtitle">שאַפֿן אַ ברעט אָדער ליסטע קוק צו גרופּירן אָביעקטן</string>
-    <string name="projects_views_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם קוק \\"%1$s\\"?</string>
+    <string name="projects_views_delete_message">זענט איר זיכער אַז איר ווילט אויסמעקן דעם קוק \"%1$s\"?</string>
     <string name="projects_views_columns_field">קאָלאָנעס פֿעלד</string>
     <string name="projects_views_rows_field">רייען פֿעלד (שווים-באַנען)</string>
     <string name="projects_views_border_field">ראַם קאָליר פֿעלד</string>
@@ -378,4 +378,6 @@
     <string name="projects_exporting">גרייטן דעם עקספּאָרט…</string>
     <string name="projects_board_add_column">צולייגן זײַל</string>
     <string name="projects_design_sample">מוסטער %1$d</string>
+    <string name="projects_option_delete_title">אויסמעקן אָפּציע</string>
+    <string name="projects_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
 </resources>

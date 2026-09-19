@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Įkelkite .zip arba .json failą</string>
     <string name="crm_create_blocked_no_options">Nepavyko sukurti: %1$s privalomas, bet neturi pasirinkimų. Pridėkite parinkčių Dizaine.</string>
     <string name="crm_design_sample">Pavyzdys %1$d</string>
+    <string name="crm_option_delete_title">Ištrinti parinktį</string>
+    <string name="crm_option_delete_message">Ar tikrai norite ištrinti parinktį \"%1$s\"?</string>
 </resources>

@@ -290,4 +290,6 @@
     <string name="crm_create_upload_json">Carrega un fitxer .zip o .json</string>
     <string name="crm_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
     <string name="crm_design_sample">Mostra %1$d</string>
+    <string name="crm_option_delete_title">Suprimeix l\'opció</string>
+    <string name="crm_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
 </resources>

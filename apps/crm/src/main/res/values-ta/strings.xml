@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip அல்லது .json கோப்பைப் பதிவேற்றவும்</string>
     <string name="crm_create_blocked_no_options">உருவாக்க முடியாது: %1$s தேவை ஆனால் தேர்ந்தெடுக்க விருப்பங்கள் இல்லை. வடிவமைப்பில் விருப்பங்களைச் சேர்க்கவும்.</string>
     <string name="crm_design_sample">மாதிரி %1$d</string>
+    <string name="crm_option_delete_title">விருப்பத்தை நீக்கு</string>
+    <string name="crm_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>
 </resources>

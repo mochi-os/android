@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip veya .json dosyası yükleyin</string>
     <string name="crm_create_blocked_no_options">Oluşturulamıyor: %1$s gerekli ancak seçenek yok. Tasarım bölümünde seçenek ekleyin.</string>
     <string name="crm_design_sample">Örnek %1$d</string>
+    <string name="crm_option_delete_title">Seçeneği sil</string>
+    <string name="crm_option_delete_message">\"%1$s\" seçeneğini silmek istediğinizden emin misiniz?</string>
 </resources>

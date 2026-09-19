@@ -379,4 +379,6 @@
     <string name="projects_exporting">Se pregătește exportul…</string>
     <string name="projects_board_add_column">Adaugă coloană</string>
     <string name="projects_design_sample">Exemplu %1$d</string>
+    <string name="projects_option_delete_title">Șterge opțiunea</string>
+    <string name="projects_option_delete_message">Sigur dorești să ștergi opțiunea \"%1$s\"?</string>
 </resources>

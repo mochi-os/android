@@ -378,4 +378,6 @@
     <string name="projects_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="projects_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
     <string name="projects_design_sample">ಮಾದರಿ %1$d</string>
+    <string name="projects_option_delete_title">ಆಯ್ಕೆ ಅಳಿಸಿ</string>
+    <string name="projects_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
 </resources>

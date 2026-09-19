@@ -362,4 +362,6 @@
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Usado para IDs legíveis como %1$s-1, %1$s-2</string>
     <string name="projects_board_add_column">Adicionar coluna</string>
+    <string name="projects_option_delete_title">Excluir opção</string>
+    <string name="projects_option_delete_message">Tem certeza de que deseja excluir a opção \"%1$s\"?</string>
 </resources>

@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Töltsön fel .zip vagy .json fájlt</string>
     <string name="crm_create_blocked_no_options">Nem hozható létre: a(z) %1$s kötelező, de nincsenek választható lehetőségei. Adjon hozzá lehetőségeket a Tervben.</string>
     <string name="crm_design_sample">Minta %1$d</string>
+    <string name="crm_option_delete_title">Beállítás törlése</string>
+    <string name="crm_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>
 </resources>

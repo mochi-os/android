@@ -378,4 +378,6 @@
     <string name="projects_exporting">Préparation de l\'export…</string>
     <string name="projects_board_add_column">Ajouter une colonne</string>
     <string name="projects_design_sample">Exemple %1$d</string>
+    <string name="projects_option_delete_title">Supprimer l\'option</string>
+    <string name="projects_option_delete_message">Êtes-vous sûr de vouloir supprimer l\'option \"%1$s\" ?</string>
 </resources>

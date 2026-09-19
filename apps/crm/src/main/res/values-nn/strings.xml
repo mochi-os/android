@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Last opp ei .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan ikkje opprette: %1$s er påkravd, men har ingen alternativ å velje mellom. Legg til alternativ i Design.</string>
     <string name="crm_design_sample">Døme %1$d</string>
+    <string name="crm_option_delete_title">Slett val</string>
+    <string name="crm_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>
 </resources>

@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Tải lên tệp .zip hoặc .json</string>
     <string name="crm_create_blocked_no_options">Không thể tạo: %1$s là bắt buộc nhưng không có tùy chọn nào để chọn. Thêm tùy chọn trong Thiết kế.</string>
     <string name="crm_design_sample">Mẫu %1$d</string>
+    <string name="crm_option_delete_title">Xóa tùy chọn</string>
+    <string name="crm_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>
 </resources>

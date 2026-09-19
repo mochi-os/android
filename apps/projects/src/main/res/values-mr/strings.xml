@@ -378,4 +378,6 @@
     <string name="projects_exporting">निर्यात तयार करत आहे…</string>
     <string name="projects_board_add_column">कॉलम जोडा</string>
     <string name="projects_design_sample">नमुना %1$d</string>
+    <string name="projects_option_delete_title">पर्याय हटवा</string>
+    <string name="projects_option_delete_message">तुम्हाला \"%1$s\" हा पर्याय हटवायचा आहे का?</string>
 </resources>

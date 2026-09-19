@@ -203,7 +203,7 @@
     <string name="crm_class_title_field_description">Quel champ utiliser comme titre d\'affichage pour les objets de cette classe.</string>
     <string name="crm_class_title_field_default">Par défaut (lisible)</string>
     <string name="crm_class_parents">Classes parentes</string>
-    <string name="crm_class_delete_message">Êtes-vous sûr de vouloir supprimer la classe \\"%1$s\\" ? Tous les champs et leurs options seront également supprimés.</string>
+    <string name="crm_class_delete_message">Êtes-vous sûr de vouloir supprimer la classe \"%1$s\" ? Tous les champs et leurs options seront également supprimés.</string>
     <string name="crm_field_type_enumerated">Énuméré</string>
     <string name="crm_field_label">Champ : %1$s</string>
     <string name="crm_field_readonly">Lecture seule</string>
@@ -219,11 +219,11 @@
     <string name="crm_field_pattern">Motif (regex)</string>
     <string name="crm_field_rows">Lignes (hauteur de la zone de texte)</string>
     <string name="crm_field_no_options">Aucune option définie</string>
-    <string name="crm_field_delete_message">Êtes-vous sûr de vouloir supprimer le champ \\"%1$s\\" ? Toutes les options et valeurs seront perdues.</string>
+    <string name="crm_field_delete_message">Êtes-vous sûr de vouloir supprimer le champ \"%1$s\" ? Toutes les options et valeurs seront perdues.</string>
     <string name="crm_option_color">Couleur</string>
     <string name="crm_views_empty">Aucune vue définie</string>
     <string name="crm_views_empty_subtitle">Créez une vue tableau ou liste pour regrouper les objets</string>
-    <string name="crm_views_delete_message">Êtes-vous sûr de vouloir supprimer la vue \\"%1$s\\" ?</string>
+    <string name="crm_views_delete_message">Êtes-vous sûr de vouloir supprimer la vue \"%1$s\" ?</string>
     <string name="crm_views_columns_field">Champ des colonnes</string>
     <string name="crm_views_rows_field">Champ des lignes (couloirs)</string>
     <string name="crm_views_border_field">Champ de couleur de bordure</string>
@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Téléversez un fichier .zip ou .json</string>
     <string name="crm_create_blocked_no_options">Impossible de créer : %1$s est obligatoire mais n\'a aucune option à choisir. Ajoutez des options dans Conception.</string>
     <string name="crm_design_sample">Exemple %1$d</string>
+    <string name="crm_option_delete_title">Supprimer l\'option</string>
+    <string name="crm_option_delete_message">Êtes-vous sûr de vouloir supprimer l\'option \"%1$s\" ?</string>
 </resources>

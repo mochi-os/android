@@ -199,7 +199,7 @@
     <string name="crm_class_parents">Ouerklasse</string>
     <string name="crm_class_move_up">Skuif op</string>
     <string name="crm_class_move_down">Skuif af</string>
-    <string name="crm_class_delete_message">Is jy seker jy wil die klas \\"%1$s\\" uitvee? Alle velde en hul opsies sal ook uitgevee word.</string>
+    <string name="crm_class_delete_message">Is jy seker jy wil die klas \"%1$s\" uitvee? Alle velde en hul opsies sal ook uitgevee word.</string>
     <string name="crm_field_type_enumerated">Genommer</string>
     <string name="crm_field_label">Veld: %1$s</string>
     <string name="crm_field_readonly">Leesalleen</string>
@@ -216,11 +216,11 @@
     <string name="crm_field_pattern">Patroon (regex)</string>
     <string name="crm_field_rows">Rye (teksarea-hoogte)</string>
     <string name="crm_field_no_options">Geen opsies gedefinieer nie</string>
-    <string name="crm_field_delete_message">Is jy seker jy wil die veld \\"%1$s\\" uitvee? Alle opsies en waardes sal verlore gaan.</string>
+    <string name="crm_field_delete_message">Is jy seker jy wil die veld \"%1$s\" uitvee? Alle opsies en waardes sal verlore gaan.</string>
     <string name="crm_option_color">Kleur</string>
     <string name="crm_views_empty">Geen aansigte gedefinieer nie</string>
     <string name="crm_views_empty_subtitle">Skep \'n bord- of lysaansig om objekte te groepeer</string>
-    <string name="crm_views_delete_message">Is jy seker jy wil die aansig \\"%1$s\\" uitvee?</string>
+    <string name="crm_views_delete_message">Is jy seker jy wil die aansig \"%1$s\" uitvee?</string>
     <string name="crm_views_columns_field">Kolomme-veld</string>
     <string name="crm_views_rows_field">Rye-veld (swembane)</string>
     <string name="crm_views_border_field">Randkleur-veld</string>
@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Laai \'n .zip- of .json-lêer op</string>
     <string name="crm_create_blocked_no_options">Kan nie skep nie: %1$s is verpligtend maar het geen opsies om uit te kies nie. Voeg opsies by in Ontwerp.</string>
     <string name="crm_design_sample">Voorbeeld %1$d</string>
+    <string name="crm_option_delete_title">Verwyder opsie</string>
+    <string name="crm_option_delete_message">Is jy seker jy wil die opsie \"%1$s\" uitvee?</string>
 </resources>

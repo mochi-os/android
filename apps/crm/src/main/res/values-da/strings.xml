@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Upload en .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>
     <string name="crm_design_sample">Eksempel %1$d</string>
+    <string name="crm_option_delete_title">Slet valgmulighed</string>
+    <string name="crm_option_delete_message">Er du sikker på, at du vil slette valgmuligheden \"%1$s\"?</string>
 </resources>

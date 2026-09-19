@@ -290,4 +290,6 @@
     <string name="crm_create_upload_json">Uaslódáil comhad .zip nó .json</string>
     <string name="crm_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>
     <string name="crm_design_sample">Sampla %1$d</string>
+    <string name="crm_option_delete_title">Scrios rogha</string>
+    <string name="crm_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
 </resources>

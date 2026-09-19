@@ -378,4 +378,6 @@
     <string name="projects_exporting">エクスポートを準備中…</string>
     <string name="projects_board_add_column">列を追加</string>
     <string name="projects_design_sample">サンプル %1$d</string>
+    <string name="projects_option_delete_title">オプションを削除</string>
+    <string name="projects_option_delete_message">オプション \"%1$s\" を削除してもよろしいですか?</string>
 </resources>

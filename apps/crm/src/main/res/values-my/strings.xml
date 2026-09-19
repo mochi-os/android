@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip သို့မဟုတ် .json ဖိုင် အပ်လုဒ်လုပ်ပါ</string>
     <string name="crm_create_blocked_no_options">ဖန်တီး၍မရပါ- %1$s လိုအပ်သော်လည်း ရွေးချယ်စရာ မရှိပါ။ ဒီဇိုင်းတွင် ရွေးချယ်စရာများ ထည့်ပါ။</string>
     <string name="crm_design_sample">နမူနာ %1$d</string>
+    <string name="crm_option_delete_title">ရွေးချယ်စရာ ဖျက်မည်</string>
+    <string name="crm_option_delete_message">ရွေးချယ်စရာ \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။</string>
 </resources>

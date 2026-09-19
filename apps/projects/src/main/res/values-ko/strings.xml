@@ -378,4 +378,6 @@
     <string name="projects_exporting">내보내기 준비 중…</string>
     <string name="projects_board_add_column">컬럼 추가</string>
     <string name="projects_design_sample">샘플 %1$d</string>
+    <string name="projects_option_delete_title">옵션 삭제</string>
+    <string name="projects_option_delete_message">옵션 \"%1$s\"을(를) 삭제하시겠습니까?</string>
 </resources>

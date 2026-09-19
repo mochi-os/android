@@ -380,4 +380,6 @@
     <string name="projects_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
     <string name="projects_board_add_column">കോളം ചേർക്കുക</string>
     <string name="projects_design_sample">സാമ്പിൾ %1$d</string>
+    <string name="projects_option_delete_title">ഓപ്ഷൻ ഇല്ലാതാക്കുക</string>
+    <string name="projects_option_delete_message">\"%1$s\" എന്ന ഓപ്ഷൻ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
 </resources>

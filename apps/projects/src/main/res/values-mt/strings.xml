@@ -381,4 +381,6 @@
     <string name="projects_exporting">Qed titħejja l-esportazzjoni…</string>
     <string name="projects_board_add_column">Żid kolonna</string>
     <string name="projects_design_sample">Kampjun %1$d</string>
+    <string name="projects_option_delete_title">Ħassar għażla</string>
+    <string name="projects_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
 </resources>

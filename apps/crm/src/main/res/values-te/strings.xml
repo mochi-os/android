@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">.zip లేదా .json ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
     <string name="crm_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>
     <string name="crm_design_sample">నమూనా %1$d</string>
+    <string name="crm_option_delete_title">ఎంపికను తొలగించండి</string>
+    <string name="crm_option_delete_message">మీరు \"%1$s\" ఎంపికను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
 </resources>

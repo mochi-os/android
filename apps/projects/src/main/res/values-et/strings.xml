@@ -378,4 +378,6 @@
     <string name="projects_exporting">Ekspordi ettevalmistamine…</string>
     <string name="projects_board_add_column">Lisa veerg</string>
     <string name="projects_design_sample">Näidis %1$d</string>
+    <string name="projects_option_delete_title">Kustuta valik</string>
+    <string name="projects_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>
 </resources>

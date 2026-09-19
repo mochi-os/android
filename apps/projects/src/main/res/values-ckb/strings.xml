@@ -380,4 +380,6 @@
     <string name="projects_exporting">هەناردە ئامادە دەکرێت…</string>
     <string name="projects_board_add_column">زیادکردنی ستوون</string>
     <string name="projects_design_sample">نموونە %1$d</string>
+    <string name="projects_option_delete_title">سڕینەوەی هەڵبژاردە</string>
+    <string name="projects_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>
 </resources>

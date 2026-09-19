@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Pakia faili ya .zip au .json</string>
     <string name="crm_create_blocked_no_options">Haiwezi kuunda: %1$s inahitajika lakini haina chaguo za kuchagua. Ongeza chaguo katika Muundo.</string>
     <string name="crm_design_sample">Sampuli %1$d</string>
+    <string name="crm_option_delete_title">Futa chaguo</string>
+    <string name="crm_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>
 </resources>

@@ -203,7 +203,7 @@
     <string name="crm_class_title_field_description">Ki chan pou itilize kòm tit afichaj pou objè nan klas sa a.</string>
     <string name="crm_class_title_field_default">Default (lizib)</string>
     <string name="crm_class_parents">Klas paran</string>
-    <string name="crm_class_delete_message">Èske ou sèten ou vle efase klas \\"%1$s\\"? Tout chan ak opsyon yo pral efase tou.</string>
+    <string name="crm_class_delete_message">Èske ou sèten ou vle efase klas \"%1$s\"? Tout chan ak opsyon yo pral efase tou.</string>
     <string name="crm_field_type_enumerated">Enumere</string>
     <string name="crm_field_label">Chan: %1$s</string>
     <string name="crm_field_readonly">Lekti sèlman</string>
@@ -219,11 +219,11 @@
     <string name="crm_field_pattern">Modèl (regex)</string>
     <string name="crm_field_rows">Ranje (wotè zòn tèks)</string>
     <string name="crm_field_no_options">Pa gen opsyon defini</string>
-    <string name="crm_field_delete_message">Èske ou sèten ou vle efase chan \\"%1$s\\"? Tout opsyon ak valè yo pral pèdi.</string>
+    <string name="crm_field_delete_message">Èske ou sèten ou vle efase chan \"%1$s\"? Tout opsyon ak valè yo pral pèdi.</string>
     <string name="crm_option_color">Koulè</string>
     <string name="crm_views_empty">Pa gen vi defini</string>
     <string name="crm_views_empty_subtitle">Kreye yon vi tablo oswa lis pou gwoupe objè</string>
-    <string name="crm_views_delete_message">Èske ou sèten ou vle efase vi \\"%1$s\\"?</string>
+    <string name="crm_views_delete_message">Èske ou sèten ou vle efase vi \"%1$s\"?</string>
     <string name="crm_views_columns_field">Chan kolòn</string>
     <string name="crm_views_rows_field">Chan ranje (kouloua)</string>
     <string name="crm_views_border_field">Chan koulè bòdi</string>
@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Telechaje yon fichye .zip oswa .json</string>
     <string name="crm_create_blocked_no_options">Pa ka kreye: %1$s obligatwa men li pa gen opsyon pou chwazi. Ajoute opsyon nan Konsèp.</string>
     <string name="crm_design_sample">Echantiyon %1$d</string>
+    <string name="crm_option_delete_title">Efase opsyon</string>
+    <string name="crm_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
 </resources>

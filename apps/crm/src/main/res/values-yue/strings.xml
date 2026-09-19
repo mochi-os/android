@@ -221,6 +221,8 @@
     <string name="crm_views_add_dialog_title">新增檢視</string>
     <string name="crm_views_edit_dialog_title">編輯檢視</string>
     <string name="crm_views_delete_title">刪除檢視</string>
+    <string name="crm_option_delete_title">刪除選項</string>
+    <string name="crm_option_delete_message">你確定要刪除選項「%1$s」嗎？</string>
     <string name="crm_views_delete_message">你確定要刪除檢視「%1$s」嗎？</string>
     <string name="crm_views_type_board">睇板</string>
     <string name="crm_views_type_list">清單</string>

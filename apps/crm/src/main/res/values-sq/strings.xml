@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Ngarko një skedar .zip ose .json</string>
     <string name="crm_create_blocked_no_options">Nuk mund të krijohet: %1$s kërkohet por nuk ka opsione për të zgjedhur. Shto opsione te Dizajni.</string>
     <string name="crm_design_sample">Shembull %1$d</string>
+    <string name="crm_option_delete_title">Fshi opsionin</string>
+    <string name="crm_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>
 </resources>

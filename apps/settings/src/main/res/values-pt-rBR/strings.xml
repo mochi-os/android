@@ -253,10 +253,10 @@
     <string name="accounts_verify_code">Código</string>
     <string name="accounts_verify_resend">Reenviar código</string>
     <string name="accounts_verify_hint">Insira o código enviado para %1$s.</string>
-    <string name="accounts_remove_message">Isto removerá a conta conectada \\"%1$s\\".</string>
+    <string name="accounts_remove_message">Isto removerá a conta conectada \"%1$s\".</string>
     <string name="system_documents_last_edited">Última edição %1$s</string>
-    <string name="system_settings_reset_message">Isto redefinirá \\"%1$s\\" para seu valor padrão (%2$s).</string>
-    <string name="system_settings_reset_message_empty">Isto redefinirá \\"%1$s\\" para o padrão (vazio).</string>
+    <string name="system_settings_reset_message">Isto redefinirá \"%1$s\" para seu valor padrão (%2$s).</string>
+    <string name="system_settings_reset_message_empty">Isto redefinirá \"%1$s\" para o padrão (vazio).</string>
     <string name="settings_home_system_users">Usuários (servidor)</string>
     <string name="system_users_search_placeholder">Buscar usuários…</string>
     <string name="system_users_sort_by">Ordenar por</string>

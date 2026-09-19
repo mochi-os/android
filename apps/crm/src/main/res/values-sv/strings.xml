@@ -288,4 +288,6 @@
     <string name="crm_create_upload_json">Ladda upp en .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan inte skapa: %1$s krävs men har inga alternativ att välja mellan. Lägg till alternativ i Design.</string>
     <string name="crm_design_sample">Exempel %1$d</string>
+    <string name="crm_option_delete_title">Ta bort alternativ</string>
+    <string name="crm_option_delete_message">Är du säker på att du vill radera alternativet \"%1$s\"?</string>
 </resources>
