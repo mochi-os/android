@@ -112,6 +112,8 @@ internal fun viewListLabels(): ViewListLabels {
         typeBoard = stringResource(R.string.projects_views_type_board),
         typeList = stringResource(R.string.projects_views_type_list),
         dragRow = stringResource(R.string.projects_drag_row),
+        moveUp = stringResource(R.string.projects_views_move_up),
+        moveDown = stringResource(R.string.projects_views_move_down),
         nameLabel = stringResource(R.string.projects_class_name),
         typeLabel = stringResource(R.string.projects_views_type),
         columnsField = stringResource(R.string.projects_views_columns_field),

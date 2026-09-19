@@ -63,6 +63,7 @@ import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.dnd.isTarget
 import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderActions
 import org.mochios.android.ui.components.dnd.reorderedAgainst
 
 /**
@@ -152,6 +153,8 @@ data class ViewFieldOption(
  * @property typeBoard Label of the board view type.
  * @property typeList Label of the list view type.
  * @property dragRow Content description of the drag handle.
+ * @property moveUp Label of the move-up accessibility action.
+ * @property moveDown Label of the move-down accessibility action.
  * @property nameLabel Label of the name field.
  * @property typeLabel Heading above the view type selector.
  * @property columnsField Label of the columns field picker.
@@ -176,6 +179,8 @@ data class ViewListLabels(
     val typeBoard: String,
     val typeList: String,
     val dragRow: String,
+    val moveUp: String,
+    val moveDown: String,
     val nameLabel: String,
     val typeLabel: String,
     val columnsField: String,
@@ -272,6 +277,7 @@ fun ViewListTab(
                     }
                 }
                 val sortedViews = views.sortedBy { view -> view.rank }
+                val viewIds = sortedViews.map { view -> view.id }
                 itemsIndexed(sortedViews, key = { _, view -> view.id }) { _, view ->
                     ViewRow(
                         view = view,
@@ -280,13 +286,8 @@ fun ViewListTab(
                         onEdit = { onEditView(view.id) },
                         onDelete = { deletingView = view },
                         dragState = dragState,
-                        onDropView = { sourceId, edge ->
-                            onReorderViews(
-                                sortedViews.map { entry -> entry.id }
-                                    .reorderedAgainst(sourceId, view.id, edge)
-                                    .joinToString(",")
-                            )
-                        }
+                        viewIds = viewIds,
+                        onReorder = { order -> onReorderViews(order.joinToString(",")) }
                     )
                     HorizontalDivider()
                 }
@@ -319,7 +320,8 @@ private fun ViewRow(
     onEdit: () -> Unit,
     onDelete: () -> Unit,
     dragState: DragState,
-    onDropView: (sourceId: String, edge: DragEdge) -> Unit
+    viewIds: List<String>,
+    onReorder: (List<String>) -> Unit
 ) {
     val isDropTarget = dragState.isTarget(view.id) && dragState.draggingItemId != view.id
     val insertEdge = dragState.targetEdge
@@ -333,7 +335,16 @@ private fun ViewRow(
                 itemId = view.id,
                 orientation = DropOrientation.Vertical,
                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
-                onDrop = onDropView
+                onDrop = { sourceId, edge ->
+                    onReorder(viewIds.reorderedAgainst(sourceId, view.id, edge))
+                }
+            )
+            .reorderActions(
+                ids = viewIds,
+                itemId = view.id,
+                moveUpLabel = labels.moveUp,
+                moveDownLabel = labels.moveDown,
+                onReorder = onReorder
             )
             .drawBehind {
                 if (!isDropTarget) return@drawBehind

@@ -5,6 +5,11 @@
 
 package org.mochios.android.ui.components.dnd
 
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.semantics
+
 /**
  * This list of ids with [sourceId] lifted out and dropped against [targetId].
  *
@@ -30,4 +35,45 @@ fun List<String>.reorderedAgainst(
     if (targetIndex < 0) return ids
     ids.add(if (edge == DragEdge.Bottom) targetIndex + 1 else targetIndex, sourceId)
     return ids
+}
+
+/**
+ * Offers "move up" and "move down" as accessibility actions on a
+ * drag-to-reorder row, so TalkBack and switch access users can reorder
+ * without dragging. The first row gets no move-up action and the last row no
+ * move-down action.
+ *
+ * @param ids Every row's id, in the order currently shown.
+ * @param itemId The id of the row this modifier is on.
+ * @param moveUpLabel Label of the move-up action.
+ * @param moveDownLabel Label of the move-down action.
+ * @param onReorder Receives the full new order of ids.
+ * @return This modifier with the actions attached.
+ */
+fun Modifier.reorderActions(
+    ids: List<String>,
+    itemId: String,
+    moveUpLabel: String,
+    moveDownLabel: String,
+    onReorder: (List<String>) -> Unit,
+): Modifier = semantics {
+    val index = ids.indexOf(itemId)
+    customActions = buildList {
+        if (index > 0) {
+            add(
+                CustomAccessibilityAction(moveUpLabel) {
+                    onReorder(ids.reorderedAgainst(itemId, ids[index - 1], DragEdge.Top))
+                    true
+                }
+            )
+        }
+        if (index >= 0 && index < ids.lastIndex) {
+            add(
+                CustomAccessibilityAction(moveDownLabel) {
+                    onReorder(ids.reorderedAgainst(itemId, ids[index + 1], DragEdge.Bottom))
+                    true
+                }
+            )
+        }
+    }
 }

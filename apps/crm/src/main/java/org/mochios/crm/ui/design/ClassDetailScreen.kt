@@ -63,6 +63,7 @@ import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.dnd.isTarget
 import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderActions
 import org.mochios.android.ui.components.dnd.reorderedAgainst
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
@@ -291,6 +292,9 @@ fun ClassDetailScreen(
                 }
 
                 val sortedFields = fields.sortedBy { entry -> entry.rank }
+                val fieldIds = sortedFields.map { entry -> entry.id }
+                val moveUpLabel = stringResource(R.string.crm_class_move_up)
+                val moveDownLabel = stringResource(R.string.crm_class_move_down)
                 val dragHint = stringResource(R.string.crm_drag_row)
                 val insertionColour = MaterialTheme.colorScheme.primary
                 sortedFields.forEach { field ->
@@ -308,10 +312,18 @@ fun ClassDetailScreen(
                                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                                 onDrop = { sourceId, edge ->
                                     viewModel.reorderFields(
-                                        sortedFields.map { entry -> entry.id }
-                                            .reorderedAgainst(sourceId, field.id, edge)
+                                        fieldIds.reorderedAgainst(sourceId, field.id, edge)
                                             .joinToString(",")
                                     )
+                                }
+                            )
+                            .reorderActions(
+                                ids = fieldIds,
+                                itemId = field.id,
+                                moveUpLabel = moveUpLabel,
+                                moveDownLabel = moveDownLabel,
+                                onReorder = { order ->
+                                    viewModel.reorderFields(order.joinToString(","))
                                 }
                             )
                             .drawBehind {

@@ -62,6 +62,7 @@ import org.mochios.android.ui.components.dnd.dropTarget
 import org.mochios.android.ui.components.dnd.isDragging
 import org.mochios.android.ui.components.dnd.isTarget
 import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderActions
 import org.mochios.android.ui.components.dnd.reorderedAgainst
 import org.mochios.projects.R
 import org.mochios.projects.model.FieldOption
@@ -370,6 +371,9 @@ fun FieldDetailScreen(
                     }
 
                     val sortedOptions = options.sortedBy { option -> option.rank }
+                    val optionIds = sortedOptions.map { entry -> entry.id }
+                    val moveUpLabel = stringResource(R.string.projects_class_move_up)
+                    val moveDownLabel = stringResource(R.string.projects_class_move_down)
                     val dragHint = stringResource(R.string.projects_drag_row)
                     val insertionColour = MaterialTheme.colorScheme.primary
                     sortedOptions.forEach { option ->
@@ -387,10 +391,16 @@ fun FieldDetailScreen(
                                     acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                                     onDrop = { sourceId, edge ->
                                         viewModel.reorderOptions(
-                                            sortedOptions.map { entry -> entry.id }
-                                                .reorderedAgainst(sourceId, option.id, edge)
+                                            optionIds.reorderedAgainst(sourceId, option.id, edge)
                                         )
                                     }
+                                )
+                                .reorderActions(
+                                    ids = optionIds,
+                                    itemId = option.id,
+                                    moveUpLabel = moveUpLabel,
+                                    moveDownLabel = moveDownLabel,
+                                    onReorder = { order -> viewModel.reorderOptions(order) }
                                 )
                                 .drawBehind {
                                     if (!isDropTarget) return@drawBehind

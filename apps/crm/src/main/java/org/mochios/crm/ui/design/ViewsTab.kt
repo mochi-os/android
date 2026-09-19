@@ -109,6 +109,8 @@ internal fun viewListLabels(): ViewListLabels {
         typeBoard = stringResource(R.string.crm_views_type_board),
         typeList = stringResource(R.string.crm_views_type_list),
         dragRow = stringResource(R.string.crm_drag_row),
+        moveUp = stringResource(R.string.crm_views_move_up),
+        moveDown = stringResource(R.string.crm_views_move_down),
         nameLabel = stringResource(R.string.crm_class_name),
         typeLabel = stringResource(R.string.crm_views_type),
         columnsField = stringResource(R.string.crm_views_columns_field),
