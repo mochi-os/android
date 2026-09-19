@@ -9,10 +9,10 @@ package org.mochios.android.util
  * This list rearranged to match [order], with every entry's rank rewritten to
  * its new index.
  *
- * Applied to a screen's own state the moment a reorder is sent, so a second
- * reorder issued before the server's reload lands composes on the new order
- * instead of the one the row captured. Entries missing from [order] keep their
- * relative position at the end.
+ * Applied to a screen's own state the moment a reorder is sent. The screen
+ * does not reload after a successful reorder, so this is the order it keeps
+ * showing, and the next reorder builds on it. Entries missing from [order]
+ * keep their relative position at the end.
  *
  * @param order The ids in the order to show them.
  * @param id Reads an entry's id.

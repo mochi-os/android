@@ -119,7 +119,6 @@ class DesignViewModel @Inject constructor(
             reorderMutex.withLock {
                 try {
                     repository.reorderViews(projectId, order)
-                    loadProject()
                 } catch (e: Exception) {
                     loadProject()
                     _uiState.value = _uiState.value.copy(error = e.toMochiError())
