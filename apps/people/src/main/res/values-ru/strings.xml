@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">В контактах</string>
     <string name="people_books_create">Создать адресную книгу</string>
     <string name="people_books_delete">Удалить адресную книгу</string>
-    <string name="people_books_actions">Действия с адресной книгой</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Удалить %1$s и %2$d контакт в ней?</item>
         <item quantity="few">Удалить %1$s и %2$d контакта в ней?</item>
@@ -188,4 +187,34 @@
     </plurals>
     <string name="people_welcome_body">Находите друзей по всему Mochi и общайтесь. Нажмите Добавить контакт, чтобы отправить приглашение.</string>
     <string name="people_person_state_contact">В контактах</string>
+    <string name="people_device_create">Создать</string>
+    <string name="people_device_server">Сервер</string>
+    <string name="people_device_username">Имя пользователя</string>
+    <string name="people_device_done">Готово</string>
+    <string name="people_device_list">Устройства</string>
+    <string name="people_device_used">Последнее использование %1$s</string>
+    <string name="people_device_never">Никогда</string>
+    <string name="people_sync_now">Синхронизировать сейчас</string>
+    <string name="people_device_title">Подключить устройство</string>
+    <string name="people_device_name">Название устройства</string>
+    <string name="people_device_address">URL адресной книги</string>
+    <string name="people_device_password">Пароль</string>
+    <string name="people_device_copy">Копировать %1$s</string>
+    <string name="people_device_warning">Сохраните этот пароль сейчас. Его нельзя будет показать снова.</string>
+    <string name="people_device_empty">Нет подключённых устройств.</string>
+    <string name="people_device_created">Создано %1$s</string>
+    <string name="people_device_delete">Удалить устройство</string>
+    <string name="people_device_delete_title">Удалить устройство?</string>
+    <string name="people_device_delete_message">Устройство больше не сможет синхронизировать контакты.</string>
+    <string name="people_device_deleted">Устройство удалено</string>
+    <string name="people_sync_title">Синхронизация с этим телефоном</string>
+    <string name="people_sync_confirm">Удаление контакта друга в приложении «Контакты» на этом телефоне также прекращает дружбу.</string>
+    <string name="people_sync_enable">Включить</string>
+    <string name="people_sync_running">Синхронизация…</string>
+    <string name="people_sync_time">Последняя синхронизация: %1$s</string>
+    <string name="people_sync_never">Ещё не синхронизировано</string>
+    <string name="people_sync_permission">Нужно разрешение на доступ к контактам</string>
+    <string name="people_sync_authorization">Войдите снова для синхронизации</string>
+    <string name="people_sync_transport">Не удалось связаться с сервером</string>
+    <string name="people_sync_refused">Не удалось синхронизировать контакт: %1$s</string>
 </resources>

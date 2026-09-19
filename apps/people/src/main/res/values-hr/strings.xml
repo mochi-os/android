@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">U kontaktima</string>
     <string name="people_books_create">Stvori adresar</string>
     <string name="people_books_delete">Izbriši adresar</string>
-    <string name="people_books_actions">Radnje adresara</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Izbrisati %1$s i njegov %2$d kontakt?</item>
         <item quantity="few">Izbrisati %1$s i njegova %2$d kontakta?</item>
@@ -187,4 +186,34 @@
     </plurals>
     <string name="people_welcome_body">Pronađite prijatelje diljem Mochija i povežite se. Dodirnite Dodaj kontakt da pošaljete pozivnicu.</string>
     <string name="people_person_state_contact">U kontaktima</string>
+    <string name="people_device_create">Stvori</string>
+    <string name="people_device_server">Poslužitelj</string>
+    <string name="people_device_username">Korisničko ime</string>
+    <string name="people_device_done">Gotovo</string>
+    <string name="people_device_list">Uređaji</string>
+    <string name="people_device_used">Zadnje korišteno %1$s</string>
+    <string name="people_device_never">Nikad</string>
+    <string name="people_sync_now">Sinkroniziraj sada</string>
+    <string name="people_device_title">Poveži uređaj</string>
+    <string name="people_device_name">Naziv uređaja</string>
+    <string name="people_device_address">URL adresara</string>
+    <string name="people_device_password">Lozinka</string>
+    <string name="people_device_copy">Kopiraj %1$s</string>
+    <string name="people_device_warning">Spremite ovu lozinku sada. Ne može se ponovno prikazati.</string>
+    <string name="people_device_empty">Nema povezanih uređaja.</string>
+    <string name="people_device_created">Stvoreno %1$s</string>
+    <string name="people_device_delete">Izbriši uređaj</string>
+    <string name="people_device_delete_title">Izbrisati uređaj?</string>
+    <string name="people_device_delete_message">Uređaj više neće moći sinkronizirati kontakte.</string>
+    <string name="people_device_deleted">Uređaj izbrisan</string>
+    <string name="people_sync_title">Sinkroniziraj s ovim telefonom</string>
+    <string name="people_sync_confirm">Brisanjem kontakta prijatelja u aplikaciji Kontakti na ovom telefonu prestaje i prijateljstvo.</string>
+    <string name="people_sync_enable">Uključi</string>
+    <string name="people_sync_running">Sinkronizacija…</string>
+    <string name="people_sync_time">Posljednja sinkronizacija: %1$s</string>
+    <string name="people_sync_never">Još nije sinkronizirano</string>
+    <string name="people_sync_permission">Potrebno je dopuštenje za kontakte</string>
+    <string name="people_sync_authorization">Ponovno se prijavite za sinkronizaciju</string>
+    <string name="people_sync_transport">Nije moguće doseći poslužitelj</string>
+    <string name="people_sync_refused">Nije moguće sinkronizirati kontakt: %1$s</string>
 </resources>

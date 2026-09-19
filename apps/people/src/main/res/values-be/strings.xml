@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">У кантактах</string>
     <string name="people_books_create">Стварыць адрасную кнігу</string>
     <string name="people_books_delete">Выдаліць адрасную кнігу</string>
-    <string name="people_books_actions">Дзеянні з адраснай кнігай</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Выдаліць %1$s і %2$d кантакт у ёй?</item>
         <item quantity="few">Выдаліць %1$s і %2$d кантакты ў ёй?</item>
@@ -188,4 +187,34 @@
     </plurals>
     <string name="people_welcome_body">Знаходзьце сяброў па ўсім Mochi і мейце зносіны. Націсніце Дадаць кантакт, каб адправіць запрашэнне.</string>
     <string name="people_person_state_contact">У кантактах</string>
+    <string name="people_device_create">Стварыць</string>
+    <string name="people_device_server">Сервер</string>
+    <string name="people_device_username">Імя карыстальніка</string>
+    <string name="people_device_done">Гатова</string>
+    <string name="people_device_list">Прылады</string>
+    <string name="people_device_used">Апошняе выкарыстанне %1$s</string>
+    <string name="people_device_never">Ніколі</string>
+    <string name="people_sync_now">Сінхранізаваць цяпер</string>
+    <string name="people_device_title">Падключыць прыладу</string>
+    <string name="people_device_name">Назва прылады</string>
+    <string name="people_device_address">URL адраснай кнігі</string>
+    <string name="people_device_password">Пароль</string>
+    <string name="people_device_copy">Капіраваць %1$s</string>
+    <string name="people_device_warning">Захавайце гэты пароль зараз. Яго нельга будзе паказаць зноў.</string>
+    <string name="people_device_empty">Няма падключаных прылад.</string>
+    <string name="people_device_created">Створана %1$s</string>
+    <string name="people_device_delete">Выдаліць прыладу</string>
+    <string name="people_device_delete_title">Выдаліць прыладу?</string>
+    <string name="people_device_delete_message">Прылада больш не зможа сінхранізаваць кантакты.</string>
+    <string name="people_device_deleted">Прылада выдалена</string>
+    <string name="people_sync_title">Сінхранізаваць з гэтым тэлефонам</string>
+    <string name="people_sync_confirm">Выдаленне кантакту сябра ў праграме «Кантакты» на гэтым тэлефоне таксама спыняе сяброўства.</string>
+    <string name="people_sync_enable">Уключыць</string>
+    <string name="people_sync_running">Сінхранізацыя…</string>
+    <string name="people_sync_time">Апошняя сінхранізацыя: %1$s</string>
+    <string name="people_sync_never">Яшчэ не сінхранізавана</string>
+    <string name="people_sync_permission">Патрэбны дазвол на доступ да кантактаў</string>
+    <string name="people_sync_authorization">Увайдзіце зноў, каб сінхранізаваць</string>
+    <string name="people_sync_transport">Не ўдалося звязацца з серверам</string>
+    <string name="people_sync_refused">Не ўдалося сінхранізаваць кантакт: %1$s</string>
 </resources>

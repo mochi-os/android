@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">Fil-kuntatti</string>
     <string name="people_books_create">Oħloq ktieb tal-indirizzi</string>
     <string name="people_books_delete">Ħassar il-ktieb tal-indirizzi</string>
-    <string name="people_books_actions">Azzjonijiet tal-ktieb tal-indirizzi</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Tħassar %1$s u l-%2$d kuntatt tiegħu?</item>
         <item quantity="two">Tħassar %1$s u ż-%2$d kuntatti tiegħu?</item>
@@ -189,4 +188,34 @@
     </plurals>
     <string name="people_welcome_body">Sib ħbieb madwar Mochi u ikkomunika magħhom. Agħfas Żid kuntatt biex tibgħat stedina.</string>
     <string name="people_person_state_contact">Fil-kuntatti</string>
+    <string name="people_device_create">Oħloq</string>
+    <string name="people_device_server">Server</string>
+    <string name="people_device_username">Isem tal-utent</string>
+    <string name="people_device_done">Lest</string>
+    <string name="people_device_list">Apparati</string>
+    <string name="people_device_used">L-aħħar uża %1$s</string>
+    <string name="people_device_never">Qatt</string>
+    <string name="people_sync_now">Sinkronizza issa</string>
+    <string name="people_device_title">Qabbad apparat</string>
+    <string name="people_device_name">Isem l-apparat</string>
+    <string name="people_device_address">URL tal-ktieb tal-indirizzi</string>
+    <string name="people_device_password">Password</string>
+    <string name="people_device_copy">Ikkupja %1$s</string>
+    <string name="people_device_warning">Issejvja din il-password issa. Ma tistax tintwera mill-ġdid.</string>
+    <string name="people_device_empty">L-ebda apparat mhu mqabbad.</string>
+    <string name="people_device_created">Maħluq %1$s</string>
+    <string name="people_device_delete">Ħassar l-apparat</string>
+    <string name="people_device_delete_title">Tħassar l-apparat?</string>
+    <string name="people_device_delete_message">L-apparat ma jkunx jista\' jissinkronizza l-kuntatti aktar.</string>
+    <string name="people_device_deleted">L-apparat tħassar</string>
+    <string name="people_sync_title">Issinkronizza ma\' dan it-telefon</string>
+    <string name="people_sync_confirm">Jekk tħassar il-kuntatt ta\' ħabib fl-app tal-Kuntatti ta\' dan it-telefon, tintemm ukoll il-ħbiberija.</string>
+    <string name="people_sync_enable">Ixgħel</string>
+    <string name="people_sync_running">Qed jissinkronizza…</string>
+    <string name="people_sync_time">L-aħħar sinkronizzazzjoni: %1$s</string>
+    <string name="people_sync_never">Għadu mhux sinkronizzat</string>
+    <string name="people_sync_permission">Meħtieġ permess għall-kuntatti</string>
+    <string name="people_sync_authorization">Idħol mill-ġdid biex tissinkronizza</string>
+    <string name="people_sync_transport">Ma rnexxiex jilħaq is-server</string>
+    <string name="people_sync_refused">Ma rnexxiex jissinkronizza kuntatt: %1$s</string>
 </resources>

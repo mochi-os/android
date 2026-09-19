@@ -14,6 +14,17 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--
+      Contacts sync. The two contacts permissions are dangerous and are
+      requested at runtime by the people app's "Sync to this phone" switch,
+      never at install; the sync-settings ones are normal and let the switch
+      schedule, cancel and observe the adapter.
+    -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
 
     <!--
       Package visibility, narrowed from QUERY_ALL_PACKAGES: the only thing this
@@ -433,6 +444,28 @@
             <meta-data
                 android:name="android.accounts.AccountAuthenticator"
                 android:resource="@xml/authenticator" />
+        </service>
+
+        <!--
+          Contacts sync adapter for the Mochi account: the phone's Contacts app
+          shows the people app's contacts and edits made there flow back
+          (lib/.../sync/ContactsSyncAdapter.kt). Bound by the system sync
+          manager, so it must be exported. @xml/contacts is the adapter
+          declaration for the contacts authority; @xml/structure tells the
+          Contacts app the account holds ordinary, editable contacts.
+        -->
+        <service
+            android:name="org.mochios.android.sync.ContactsSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/contacts" />
+            <meta-data
+                android:name="android.provider.CONTACTS_STRUCTURE"
+                android:resource="@xml/structure" />
         </service>
 
         <service

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Declares the contacts sync adapter for the Mochi account type. The account
+  type must match MochiAccount.TYPE. supportsUploading lets the phone's
+  Contacts app create and edit contacts under the account, which the adapter
+  then uploads; userVisible puts the Contacts toggle on the account's settings
+  page; isAlwaysSyncable is off because the people app's switch turns the
+  authority on, after the contacts permission has been granted.
+-->
+<sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentAuthority="com.android.contacts"
+    android:accountType="org.mochios.account"
+    android:userVisible="true"
+    android:supportsUploading="true"
+    android:allowParallelSyncs="false"
+    android:isAlwaysSyncable="false" />

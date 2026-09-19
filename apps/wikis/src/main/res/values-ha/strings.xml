@@ -182,7 +182,7 @@
     <string name="wikis_settings_name_save_failed">An gaza sake suna wiki</string>
     <string name="wikis_settings_section_subscription">Biyan kuɗi</string>
     <string name="wikis_settings_field_source">Tushe</string>
-    <string name="wikis_settings_action_sync">Sync yanzu</string>
+    <string name="wikis_settings_action_sync">Daidaita yanzu</string>
     <string name="wikis_settings_sync_success">An sync wiki</string>
     <string name="wikis_settings_sync_failed">An gaza sync wiki</string>
     <string name="wikis_settings_section_home">Shafin gida</string>

@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">ضمن جهات الاتصال</string>
     <string name="people_books_create">إنشاء دفتر عناوين</string>
     <string name="people_books_delete">حذف دفتر العناوين</string>
-    <string name="people_books_actions">إجراءات دفتر العناوين</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="zero">هل تريد حذف %1$s وجهات اتصاله البالغ عددها %2$d؟</item>
         <item quantity="one">هل تريد حذف %1$s وجهة الاتصال %2$d التي يحتويها؟</item>
@@ -190,4 +189,34 @@
     </plurals>
     <string name="people_welcome_body">اعثر على الأصدقاء عبر Mochi وتواصل معهم. اضغط على إضافة جهة اتصال لإرسال دعوة.</string>
     <string name="people_person_state_contact">ضمن جهات الاتصال</string>
+    <string name="people_device_create">إنشاء</string>
+    <string name="people_device_server">الخادم</string>
+    <string name="people_device_username">اسم المستخدم</string>
+    <string name="people_device_done">منتهٍ</string>
+    <string name="people_device_list">الأجهزة</string>
+    <string name="people_device_used">آخر استخدام %1$s</string>
+    <string name="people_device_never">أبداً</string>
+    <string name="people_sync_now">مزامنة الآن</string>
+    <string name="people_device_title">ربط جهاز</string>
+    <string name="people_device_name">اسم الجهاز</string>
+    <string name="people_device_address">عنوان URL لدفتر العناوين</string>
+    <string name="people_device_password">كلمة المرور</string>
+    <string name="people_device_copy">نسخ %1$s</string>
+    <string name="people_device_warning">احفظ كلمة المرور هذه الآن. لا يمكن عرضها مرة أخرى.</string>
+    <string name="people_device_empty">لا توجد أجهزة مرتبطة.</string>
+    <string name="people_device_created">تم الإنشاء %1$s</string>
+    <string name="people_device_delete">حذف الجهاز</string>
+    <string name="people_device_delete_title">حذف الجهاز؟</string>
+    <string name="people_device_delete_message">لن يتمكن الجهاز من مزامنة جهات الاتصال بعد الآن.</string>
+    <string name="people_device_deleted">تم حذف الجهاز</string>
+    <string name="people_sync_title">المزامنة مع هذا الهاتف</string>
+    <string name="people_sync_confirm">حذف جهة اتصال صديق في تطبيق جهات الاتصال على هذا الهاتف ينهي الصداقة أيضًا.</string>
+    <string name="people_sync_enable">تشغيل</string>
+    <string name="people_sync_running">جارٍ المزامنة…</string>
+    <string name="people_sync_time">آخر مزامنة %1$s</string>
+    <string name="people_sync_never">لم تتم المزامنة بعد</string>
+    <string name="people_sync_permission">يلزم إذن الوصول إلى جهات الاتصال</string>
+    <string name="people_sync_authorization">سجّل الدخول مرة أخرى للمزامنة</string>
+    <string name="people_sync_transport">تعذر الوصول إلى الخادم</string>
+    <string name="people_sync_refused">تعذرت مزامنة جهة اتصال: %1$s</string>
 </resources>

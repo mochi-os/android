@@ -124,4 +124,10 @@
     <string name="people_contacts_unfriend">Freund entfernen</string>
     <string name="people_add_contact_search_placeholder">Zum Suchen tippen…</string>
     <string name="people_add_contact_search_start">Beginnen Sie zu tippen, um nach Benutzern zu suchen</string>
+    <string name="people_device_create">Erstellen</string>
+    <string name="people_device_server">Server</string>
+    <string name="people_device_username">Benutzername</string>
+    <string name="people_device_done">Fertig</string>
+    <string name="people_device_used">Zuletzt verwendet %1$s</string>
+    <string name="people_device_never">Nie</string>
 </resources>

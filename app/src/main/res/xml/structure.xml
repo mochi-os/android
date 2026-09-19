@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The Contacts app's description of a Mochi contact: no custom data kinds, so
+  the standard ones apply, all of them editable. Without this file some
+  Contacts apps treat an external account as read-only.
+-->
+<ContactsAccountType xmlns:android="http://schemas.android.com/apk/res/android" />

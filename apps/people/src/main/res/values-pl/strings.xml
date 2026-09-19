@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">W kontaktach</string>
     <string name="people_books_create">Utwórz książkę adresową</string>
     <string name="people_books_delete">Usuń książkę adresową</string>
-    <string name="people_books_actions">Działania książki adresowej</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Usunąć %1$s i %2$d kontakt w niej?</item>
         <item quantity="few">Usunąć %1$s i %2$d kontakty w niej?</item>
@@ -188,4 +187,34 @@
     </plurals>
     <string name="people_welcome_body">Znajdź znajomych w całym Mochi i nawiąż kontakt. Dotknij Dodaj kontakt, aby wysłać zaproszenie.</string>
     <string name="people_person_state_contact">W kontaktach</string>
+    <string name="people_device_create">Utwórz</string>
+    <string name="people_device_server">Serwer</string>
+    <string name="people_device_username">Nazwa użytkownika</string>
+    <string name="people_device_done">Gotowe</string>
+    <string name="people_device_list">Urządzenia</string>
+    <string name="people_device_used">Ostatnio użyty %1$s</string>
+    <string name="people_device_never">Nigdy</string>
+    <string name="people_sync_now">Synchronizuj teraz</string>
+    <string name="people_device_title">Połącz urządzenie</string>
+    <string name="people_device_name">Nazwa urządzenia</string>
+    <string name="people_device_address">Adres URL książki adresowej</string>
+    <string name="people_device_password">Hasło</string>
+    <string name="people_device_copy">Kopiuj %1$s</string>
+    <string name="people_device_warning">Zapisz to hasło teraz. Nie będzie można go ponownie wyświetlić.</string>
+    <string name="people_device_empty">Brak połączonych urządzeń.</string>
+    <string name="people_device_created">Utworzono %1$s</string>
+    <string name="people_device_delete">Usuń urządzenie</string>
+    <string name="people_device_delete_title">Usunąć urządzenie?</string>
+    <string name="people_device_delete_message">Urządzenie nie będzie już mogło synchronizować kontaktów.</string>
+    <string name="people_device_deleted">Usunięto urządzenie</string>
+    <string name="people_sync_title">Synchronizuj z tym telefonem</string>
+    <string name="people_sync_confirm">Usunięcie kontaktu znajomego w aplikacji Kontakty na tym telefonie kończy również znajomość.</string>
+    <string name="people_sync_enable">Włącz</string>
+    <string name="people_sync_running">Synchronizowanie…</string>
+    <string name="people_sync_time">Ostatnia synchronizacja: %1$s</string>
+    <string name="people_sync_never">Jeszcze nie zsynchronizowano</string>
+    <string name="people_sync_permission">Wymagane uprawnienie do kontaktów</string>
+    <string name="people_sync_authorization">Zaloguj się ponownie, aby synchronizować</string>
+    <string name="people_sync_transport">Nie udało się połączyć z serwerem</string>
+    <string name="people_sync_refused">Nie udało się zsynchronizować kontaktu: %1$s</string>
 </resources>

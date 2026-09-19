@@ -12,6 +12,7 @@ import okhttp3.MultipartBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.sync.ContactProperty
 import org.mochios.people.api.ContactRequest
 import org.mochios.people.api.ContactUpdateRequest
 import org.mochios.people.api.ContactsListResponse
@@ -20,7 +21,7 @@ import org.mochios.people.api.PreferenceResponse
 import org.mochios.people.api.WelcomeResponse
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
-import org.mochios.people.model.ContactProperty
+import org.mochios.people.model.DeviceToken
 import org.mochios.people.model.Group
 import org.mochios.people.model.GroupMember
 import org.mochios.people.model.GroupMemberType
@@ -117,6 +118,19 @@ class PeopleRepository @Inject constructor(
     suspend fun deleteBook(book: String) {
         api.deleteBook(book).unwrap()
         _contactsChanged.tryEmit(Unit)
+    }
+
+    // ---- Device tokens ----
+
+    /** A new device's password. The server shows it this once. */
+    suspend fun createToken(name: String): String =
+        api.createToken(name).unwrap().token
+
+    suspend fun listTokens(): List<DeviceToken> =
+        api.listTokens().unwrap().tokens
+
+    suspend fun deleteToken(hash: String) {
+        api.deleteToken(hash).unwrap()
     }
 
     // ---- Friendship ----

@@ -41,6 +41,7 @@ import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.push.launcherComponentFor
+import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.AppBootstrapHost
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.theme.MochiTheme
@@ -389,6 +390,9 @@ open class MainActivity : ComponentActivity() {
         lifecycleScope.launch {
             if (sessionManager.isAuthenticated.first()) {
                 PushTransport.configure(applicationContext, sessionManager, okHttpClient)
+                // Contacts edited on the web since the phone was last open
+                // land before the user gets as far as the Contacts app.
+                ContactsSync.foreground(applicationContext, sessionManager.getBoundIdentity())
             }
         }
     }

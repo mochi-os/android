@@ -16,8 +16,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.sync.ContactProperty
 import org.mochios.android.util.SEARCH_DEBOUNCE
-import org.mochios.people.model.ContactProperty
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.RelationshipStatus
 import org.mochios.people.model.User

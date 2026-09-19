@@ -16,6 +16,7 @@ import org.mochios.people.ui.contacts.AddContactScreen
 import org.mochios.people.ui.contacts.ContactEditScreen
 import org.mochios.people.ui.contacts.ContactsScreen
 import org.mochios.people.ui.contacts.CreateBookScreen
+import org.mochios.people.ui.devices.ConnectDeviceScreen
 import org.mochios.people.ui.groups.AddMemberScreen
 import org.mochios.people.ui.groups.CreateGroupScreen
 import org.mochios.people.ui.groups.GroupDetailScreen
@@ -44,6 +45,7 @@ object PeopleApp {
     const val GROUP_CREATE = "people/groups/create"
     const val GROUP_ADD_MEMBER = "people/groups/{id}/add-member"
     const val PERSON_VIEW = "people/person/{id}"
+    const val DEVICES = "people/devices"
 
     fun groupDetail(id: String) = "people/groups/$id"
     fun groupAddMember(id: String) = "people/groups/$id/add-member"
@@ -124,6 +126,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.CONTACTS_ADD) },
+            onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
             initialAction = action.ifBlank { null },
         )
     }
@@ -148,7 +151,12 @@ fun NavGraphBuilder.peopleNavGraph(
             onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.CONTACTS_ADD) },
+            onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
         )
+    }
+
+    composable(PeopleApp.DEVICES) {
+        ConnectDeviceScreen(onBack = { navController.popBackStack() })
     }
 
     composable(PeopleApp.CONTACTS_ADD) {

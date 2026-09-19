@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">У контактима</string>
     <string name="people_books_create">Направи именик</string>
     <string name="people_books_delete">Обриши именик</string>
-    <string name="people_books_actions">Радње именика</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Обрисати %1$s и његов %2$d контакт?</item>
         <item quantity="few">Обрисати %1$s и његова %2$d контакта?</item>
@@ -187,4 +186,34 @@
     </plurals>
     <string name="people_welcome_body">Пронађите пријатеље широм Mochi-ја и повежите се. Додирните Додај контакт да пошаљете позивницу.</string>
     <string name="people_person_state_contact">У контактима</string>
+    <string name="people_device_create">Креирај</string>
+    <string name="people_device_server">Сервер</string>
+    <string name="people_device_username">Корисничко име</string>
+    <string name="people_device_done">Готово</string>
+    <string name="people_device_list">Уређаји</string>
+    <string name="people_device_used">Последње коришћено %1$s</string>
+    <string name="people_device_never">Никад</string>
+    <string name="people_sync_now">Синхронизуј сада</string>
+    <string name="people_device_title">Повежи уређај</string>
+    <string name="people_device_name">Назив уређаја</string>
+    <string name="people_device_address">URL адресара</string>
+    <string name="people_device_password">Лозинка</string>
+    <string name="people_device_copy">Копирај %1$s</string>
+    <string name="people_device_warning">Сачувајте ову лозинку сада. Не може се поново приказати.</string>
+    <string name="people_device_empty">Нема повезаних уређаја.</string>
+    <string name="people_device_created">Креирано %1$s</string>
+    <string name="people_device_delete">Обриши уређај</string>
+    <string name="people_device_delete_title">Обрисати уређај?</string>
+    <string name="people_device_delete_message">Уређај више неће моћи да синхронизује контакте.</string>
+    <string name="people_device_deleted">Уређај је обрисан</string>
+    <string name="people_sync_title">Синхронизуј са овим телефоном</string>
+    <string name="people_sync_confirm">Брисање контакта пријатеља у апликацији Контакти на овом телефону завршава и пријатељство.</string>
+    <string name="people_sync_enable">Укључи</string>
+    <string name="people_sync_running">Синхронизација…</string>
+    <string name="people_sync_time">Последња синхронизација: %1$s</string>
+    <string name="people_sync_never">Још није синхронизовано</string>
+    <string name="people_sync_permission">Потребна је дозвола за контакте</string>
+    <string name="people_sync_authorization">Пријавите се поново да бисте синхронизовали</string>
+    <string name="people_sync_transport">Није могуће доћи до сервера</string>
+    <string name="people_sync_refused">Није могуће синхронизовати контакт: %1$s</string>
 </resources>

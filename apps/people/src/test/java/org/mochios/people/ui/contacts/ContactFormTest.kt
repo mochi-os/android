@@ -8,7 +8,9 @@ package org.mochios.people.ui.contacts
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import org.mochios.people.model.ContactProperty
+import org.mochios.android.sync.ContactProperty
+import org.mochios.android.sync.joinComponents
+import org.mochios.android.sync.splitComponents
 
 /**
  * The card-to-form mapping and back. A submission replaces every managed

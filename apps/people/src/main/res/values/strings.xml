@@ -81,7 +81,6 @@
     <string name="people_books_name">Name</string>
     <string name="people_books_rename">Rename</string>
     <string name="people_books_delete">Delete address book</string>
-    <string name="people_books_actions">Address book actions</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Delete %1$s and its %2$d contact?</item>
         <item quantity="other">Delete %1$s and its %2$d contacts?</item>
@@ -213,4 +212,38 @@
     <string name="people_person_accept">Accept</string>
     <string name="people_person_decline">Decline</string>
     <string name="people_profile_too_long">Profile is too long</string>
+
+    <!-- Connect a device (CardDAV) -->
+    <string name="people_device_title">Connect a device</string>
+    <string name="people_device_name">Device name</string>
+    <string name="people_device_create">Create</string>
+    <string name="people_device_server">Server</string>
+    <string name="people_device_address">Address book URL</string>
+    <string name="people_device_username">Username</string>
+    <string name="people_device_password">Password</string>
+    <string name="people_device_copy">Copy %1$s</string>
+    <string name="people_device_warning">Save this password now. It cannot be shown again.</string>
+    <string name="people_device_done">Done</string>
+    <string name="people_device_list">Devices</string>
+    <string name="people_device_empty">No devices connected.</string>
+    <string name="people_device_created">Created %1$s</string>
+    <string name="people_device_used">Last used %1$s</string>
+    <string name="people_device_never">Never</string>
+    <string name="people_device_delete">Delete device</string>
+    <string name="people_device_delete_title">Delete device?</string>
+    <string name="people_device_delete_message">The device will no longer be able to sync contacts.</string>
+    <string name="people_device_deleted">Device deleted</string>
+
+    <!-- Sync to this phone (contacts sync adapter) -->
+    <string name="people_sync_title">Sync to this phone</string>
+    <string name="people_sync_confirm">Deleting a friend\'s contact in this phone\'s Contacts app also ends the friendship.</string>
+    <string name="people_sync_enable">Turn on</string>
+    <string name="people_sync_now">Sync now</string>
+    <string name="people_sync_running">Syncing…</string>
+    <string name="people_sync_time">Last synced %1$s</string>
+    <string name="people_sync_never">Not synced yet</string>
+    <string name="people_sync_permission">Contacts permission needed</string>
+    <string name="people_sync_authorization">Log in again to sync</string>
+    <string name="people_sync_transport">Could not reach the server</string>
+    <string name="people_sync_refused">Could not sync a contact: %1$s</string>
 </resources>

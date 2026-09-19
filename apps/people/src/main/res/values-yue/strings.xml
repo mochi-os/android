@@ -173,7 +173,6 @@
     <string name="people_add_contact_in_contacts">喺聯絡人中</string>
     <string name="people_books_create">建立通訊錄</string>
     <string name="people_books_delete">刪除通訊錄</string>
-    <string name="people_books_actions">通訊錄操作</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="other">要刪除 %1$s 同埋入面嘅 %2$d 個聯絡人嗎？</item>
     </plurals>
@@ -185,4 +184,34 @@
     <string name="people_contacts_try_different_search">試下第個搜尋字詞</string>
     <string name="people_contact_phone">電話</string>
     <string name="people_contact_title">職銜</string>
+    <string name="people_device_create">建立</string>
+    <string name="people_device_server">伺服器</string>
+    <string name="people_device_username">使用者名稱</string>
+    <string name="people_device_done">完成</string>
+    <string name="people_device_list">裝置</string>
+    <string name="people_device_used">上次使用 %1$s</string>
+    <string name="people_device_never">從未</string>
+    <string name="people_sync_now">即刻同步</string>
+    <string name="people_device_title">連接裝置</string>
+    <string name="people_device_name">裝置名稱</string>
+    <string name="people_device_address">通訊錄 URL</string>
+    <string name="people_device_password">密碼</string>
+    <string name="people_device_copy">複製%1$s</string>
+    <string name="people_device_warning">請即刻儲存呢個密碼，之後唔會再顯示。</string>
+    <string name="people_device_empty">未有已連接嘅裝置。</string>
+    <string name="people_device_created">喺 %1$s 建立</string>
+    <string name="people_device_delete">刪除裝置</string>
+    <string name="people_device_delete_title">要刪除呢部裝置嗎？</string>
+    <string name="people_device_delete_message">呢部裝置之後唔可以再同步聯絡人。</string>
+    <string name="people_device_deleted">已刪除裝置</string>
+    <string name="people_sync_title">同步到呢部手機</string>
+    <string name="people_sync_confirm">喺呢部手機嘅「聯絡人」應用程式刪除朋友嘅聯絡人，亦會結束你哋嘅朋友關係。</string>
+    <string name="people_sync_enable">開啟</string>
+    <string name="people_sync_running">同步緊…</string>
+    <string name="people_sync_time">上次同步 %1$s</string>
+    <string name="people_sync_never">未同步過</string>
+    <string name="people_sync_permission">需要聯絡人權限</string>
+    <string name="people_sync_authorization">請重新登入嚟同步</string>
+    <string name="people_sync_transport">連接唔到伺服器</string>
+    <string name="people_sync_refused">同步唔到一個聯絡人：%1$s</string>
 </resources>

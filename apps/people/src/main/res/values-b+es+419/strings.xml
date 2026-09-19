@@ -145,4 +145,24 @@
     <string name="people_contact_phone">Teléfono</string>
     <string name="people_contact_title">Cargo</string>
     <string name="people_contacts_title">Contactos</string>
+    <string name="people_device_create">Crear</string>
+    <string name="people_device_server">Servidor</string>
+    <string name="people_device_username">Nombre de usuario</string>
+    <string name="people_device_done">Hecho</string>
+    <string name="people_device_list">Dispositivos</string>
+    <string name="people_device_used">Último uso %1$s</string>
+    <string name="people_device_never">Nunca</string>
+    <string name="people_sync_now">Sincronizar ahora</string>
+    <string name="people_device_title">Conectar un dispositivo</string>
+    <string name="people_device_name">Nombre del dispositivo</string>
+    <string name="people_device_address">URL de la libreta de direcciones</string>
+    <string name="people_device_password">Contraseña</string>
+    <string name="people_device_copy">Copiar %1$s</string>
+    <string name="people_device_warning">Guarda esta contraseña ahora. No se podrá volver a mostrar.</string>
+    <string name="people_device_empty">No hay dispositivos conectados.</string>
+    <string name="people_device_created">Creado %1$s</string>
+    <string name="people_device_delete">Eliminar dispositivo</string>
+    <string name="people_device_delete_title">¿Eliminar el dispositivo?</string>
+    <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos.</string>
+    <string name="people_device_deleted">Dispositivo eliminado</string>
 </resources>

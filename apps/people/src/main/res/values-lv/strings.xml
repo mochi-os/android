@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">Kontaktos</string>
     <string name="people_books_create">Izveidot adrešu grāmatu</string>
     <string name="people_books_delete">Dzēst adrešu grāmatu</string>
-    <string name="people_books_actions">Adrešu grāmatas darbības</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="zero">Vai dzēst %1$s un tās %2$d kontaktus?</item>
         <item quantity="one">Vai dzēst %1$s un tās %2$d kontaktu?</item>
@@ -187,4 +186,34 @@
     </plurals>
     <string name="people_welcome_body">Atrodiet draugus visā Mochi un sazinieties. Pieskarieties Pievienot kontaktu, lai nosūtītu ielūgumu.</string>
     <string name="people_person_state_contact">Kontaktos</string>
+    <string name="people_device_create">Izveidot</string>
+    <string name="people_device_server">Serveris</string>
+    <string name="people_device_username">Lietotājvārds</string>
+    <string name="people_device_done">Pabeigts</string>
+    <string name="people_device_list">Ierīces</string>
+    <string name="people_device_used">Pēdējoreiz lietots %1$s</string>
+    <string name="people_device_never">Nekad</string>
+    <string name="people_sync_now">Sinhronizēt tagad</string>
+    <string name="people_device_title">Pievienot ierīci</string>
+    <string name="people_device_name">Ierīces nosaukums</string>
+    <string name="people_device_address">Adrešu grāmatas URL</string>
+    <string name="people_device_password">Parole</string>
+    <string name="people_device_copy">Kopēt %1$s</string>
+    <string name="people_device_warning">Saglabājiet šo paroli tagad. To vairs nevarēs parādīt.</string>
+    <string name="people_device_empty">Nav pievienotu ierīču.</string>
+    <string name="people_device_created">Izveidots %1$s</string>
+    <string name="people_device_delete">Dzēst ierīci</string>
+    <string name="people_device_delete_title">Dzēst ierīci?</string>
+    <string name="people_device_delete_message">Ierīce vairs nevarēs sinhronizēt kontaktus.</string>
+    <string name="people_device_deleted">Ierīce dzēsta</string>
+    <string name="people_sync_title">Sinhronizēt ar šo tālruni</string>
+    <string name="people_sync_confirm">Dzēšot drauga kontaktu šī tālruņa lietotnē Kontakti, beidzas arī draudzība.</string>
+    <string name="people_sync_enable">Ieslēgt</string>
+    <string name="people_sync_running">Notiek sinhronizācija…</string>
+    <string name="people_sync_time">Pēdējā sinhronizācija: %1$s</string>
+    <string name="people_sync_never">Vēl nav sinhronizēts</string>
+    <string name="people_sync_permission">Nepieciešama kontaktu atļauja</string>
+    <string name="people_sync_authorization">Piesakieties vēlreiz, lai sinhronizētu</string>
+    <string name="people_sync_transport">Neizdevās sasniegt serveri</string>
+    <string name="people_sync_refused">Neizdevās sinhronizēt kontaktu: %1$s</string>
 </resources>

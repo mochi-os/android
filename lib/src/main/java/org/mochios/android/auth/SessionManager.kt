@@ -13,16 +13,19 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.flow.combine
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.sync.ContactsSync
 import org.mochios.android.util.isServerOrigin
 import org.mochios.android.util.originOf
 import java.util.concurrent.ConcurrentHashMap
@@ -186,8 +189,14 @@ class SessionManager @Inject constructor(
         // request and the rolling Set-Cookie re-persists what was just cleared.
         cookieStore.clear()
         // Logout in this app shouldn't tear down OTHER apps' bindings —
-        // remove only the account this app was bound to.
-        if (identity != null) MochiAccount.remove(context, identity)
+        // remove only the account this app was bound to. Its synced contacts
+        // go first, while the account still names them.
+        if (identity != null) {
+            withContext(Dispatchers.IO) {
+                ContactsSync.account(context, identity)?.let { ContactsSync.disable(context, it, logout = true) }
+            }
+            MochiAccount.remove(context, identity)
+        }
     }
     /** Records an outstanding sign-in ceremony. The nonce is written in the same edit
      *  as the verifier, so a return can never see one without the other. */

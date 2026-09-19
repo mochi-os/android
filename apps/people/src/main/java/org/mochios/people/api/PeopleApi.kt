@@ -7,9 +7,10 @@ package org.mochios.people.api
 
 import okhttp3.MultipartBody
 import org.mochios.android.api.ApiResponse
+import org.mochios.android.sync.ContactProperty
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
-import org.mochios.people.model.ContactProperty
+import org.mochios.people.model.DeviceToken
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.model.Group
 import org.mochios.people.model.GroupMember
@@ -46,12 +47,16 @@ data class BookResponse(val book: Book = Book())
 /**
  * Body of `-/contacts/create`. [properties] is the whole managed set the
  * editor shows; [person] links the contact to a Mochi person and [book] picks
- * the address book, both defaulting server-side when null.
+ * the address book, both defaulting server-side when null. [slug] names the
+ * contact within its book: when the book already holds one of that name the
+ * server answers it instead of creating a second, so the sync adapter can
+ * send a create again after its answer was lost.
  */
 data class ContactRequest(
     val properties: List<ContactProperty>,
     val person: String? = null,
     val book: String? = null,
+    val slug: String? = null,
 )
 
 /**
@@ -66,6 +71,28 @@ data class ContactUpdateRequest(
     val properties: List<ContactProperty>? = null,
     val book: String? = null,
 )
+
+/**
+ * `-/contacts/changes`: [version] is the cursor to pass next time, [changed]
+ * the contacts to fetch and [deleted] the ones to drop. [reset] says
+ * [changed] lists every contact, so the caller drops whatever it lacks.
+ */
+data class ContactsChangesResponse(
+    val version: Long = 0,
+    val changed: List<String> = emptyList(),
+    val deleted: List<String> = emptyList(),
+    val reset: Boolean = false,
+)
+
+/** Body of `-/contacts/batch`: up to 500 contact ids. */
+data class ContactsBatchRequest(val contacts: List<String>)
+
+data class ContactsBatchResponse(val contacts: List<Contact> = emptyList())
+
+/** `-/token/create`: the device's password, returned this once. */
+data class TokenResponse(val token: String = "")
+
+data class TokensResponse(val tokens: List<DeviceToken> = emptyList())
 
 data class SearchUsersResponse(val results: List<User> = emptyList())
 
@@ -113,13 +140,42 @@ interface PeopleApi {
     @POST("-/contacts/update")
     suspend fun updateContact(@Body request: ContactUpdateRequest): Response<ApiResponse<ContactResponse>>
 
+    /** A stale [etag] is refused with 412; null deletes whatever the server holds. */
     @FormUrlEncoded
     @POST("-/contacts/delete")
-    suspend fun deleteContact(@Field("contact") contact: String): Response<ApiResponse<EmptyResponse>>
+    suspend fun deleteContact(
+        @Field("contact") contact: String,
+        @Field("etag") etag: String? = null,
+    ): Response<ApiResponse<EmptyResponse>>
 
     @FormUrlEncoded
     @POST("-/contacts/search")
     suspend fun searchDirectory(@Field("search") search: String): Response<ApiResponse<SearchUsersResponse>>
+
+    // ---- Contacts sync ----
+
+    /** What changed since the cursor [since], "0" for every contact. */
+    @FormUrlEncoded
+    @POST("-/contacts/changes")
+    suspend fun contactsChanges(@Field("since") since: String): Response<ApiResponse<ContactsChangesResponse>>
+
+    /** Several contacts in full; ids the server does not hold are left out. */
+    @POST("-/contacts/batch")
+    suspend fun contactsBatch(@Body request: ContactsBatchRequest): Response<ApiResponse<ContactsBatchResponse>>
+
+    // ---- Device tokens (the CardDAV password a device holds) ----
+
+    @FormUrlEncoded
+    @POST("-/token/create")
+    // contract-ok: the handler reads name through its token_name_input helper.
+    suspend fun createToken(@Field("name") name: String): Response<ApiResponse<TokenResponse>>
+
+    @POST("-/token/list")
+    suspend fun listTokens(): Response<ApiResponse<TokensResponse>>
+
+    @FormUrlEncoded
+    @POST("-/token/delete")
+    suspend fun deleteToken(@Field("hash") hash: String): Response<ApiResponse<EmptyResponse>>
 
     // ---- Address books ----
 

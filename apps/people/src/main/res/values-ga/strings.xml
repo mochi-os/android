@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">Sna teagmhálaithe</string>
     <string name="people_books_create">Cruthaigh leabhar seoltaí</string>
     <string name="people_books_delete">Scrios an leabhar seoltaí</string>
-    <string name="people_books_actions">Gníomhartha an leabhair sheoltaí</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Scrios %1$s agus an %2$d teagmhálaí atá ann?</item>
         <item quantity="two">Scrios %1$s agus an %2$d theagmhálaí atá ann?</item>
@@ -189,4 +188,34 @@
     </plurals>
     <string name="people_welcome_body">Aimsigh cairde ar fud Mochi agus ceangail leo. Tapáil Cuir teagmhálaí leis chun cuireadh a sheoladh.</string>
     <string name="people_person_state_contact">Sna teagmhálaithe</string>
+    <string name="people_device_create">Cruthaigh</string>
+    <string name="people_device_server">Freastalaí</string>
+    <string name="people_device_username">Ainm úsáideora</string>
+    <string name="people_device_done">Críochnaithe</string>
+    <string name="people_device_list">Gléasanna</string>
+    <string name="people_device_used">Úsáidte go deireanach %1$s</string>
+    <string name="people_device_never">Riamh</string>
+    <string name="people_sync_now">Sioncronaigh anois</string>
+    <string name="people_device_title">Ceangail gléas</string>
+    <string name="people_device_name">Ainm an ghléis</string>
+    <string name="people_device_address">URL an leabhair seoltaí</string>
+    <string name="people_device_password">Pasfhocal</string>
+    <string name="people_device_copy">Cóipeáil %1$s</string>
+    <string name="people_device_warning">Sábháil an pasfhocal seo anois. Ní féidir é a thaispeáint arís.</string>
+    <string name="people_device_empty">Níl aon ghléas ceangailte.</string>
+    <string name="people_device_created">Cruthaithe %1$s</string>
+    <string name="people_device_delete">Scrios an gléas</string>
+    <string name="people_device_delete_title">Scrios an gléas?</string>
+    <string name="people_device_delete_message">Ní bheidh an gléas in ann teagmhálaithe a shioncrónú a thuilleadh.</string>
+    <string name="people_device_deleted">Gléas scriosta</string>
+    <string name="people_sync_title">Sioncrónaigh leis an bhfón seo</string>
+    <string name="people_sync_confirm">Má scriosann tú teagmháil charad san aip Teagmhálacha ar an bhfón seo, cuirfear deireadh leis an gcairdeas freisin.</string>
+    <string name="people_sync_enable">Cas air</string>
+    <string name="people_sync_running">Á shioncrónú…</string>
+    <string name="people_sync_time">Sioncrónú deireanach: %1$s</string>
+    <string name="people_sync_never">Níor sioncrónaíodh fós</string>
+    <string name="people_sync_permission">Tá cead teagmhálacha ag teastáil</string>
+    <string name="people_sync_authorization">Logáil isteach arís chun sioncrónú</string>
+    <string name="people_sync_transport">Níorbh fhéidir teagmháil a dhéanamh leis an bhfreastalaí</string>
+    <string name="people_sync_refused">Níorbh fhéidir teagmháil a shioncrónú: %1$s</string>
 </resources>

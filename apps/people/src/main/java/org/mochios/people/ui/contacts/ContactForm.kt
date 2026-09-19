@@ -5,7 +5,9 @@
 
 package org.mochios.people.ui.contacts
 
-import org.mochios.people.model.ContactProperty
+import org.mochios.android.sync.ContactProperty
+import org.mochios.android.sync.joinComponents
+import org.mochios.android.sync.splitComponents
 
 /**
  * The editor's view of a contact's card, and the mapping between the two.
@@ -205,45 +207,3 @@ private fun parameters(type: String, others: Map<String, List<String>>) =
     if (type.isBlank()) others else others + ("TYPE" to listOf(type))
 
 private fun List<String>.component(index: Int) = getOrNull(index).orEmpty()
-
-/**
- * Split a structured vCard value on its unescaped `;` separators, undoing the
- * escapes each component carries.
- */
-internal fun splitComponents(value: String): List<String> {
-    val out = mutableListOf<String>()
-    val current = StringBuilder()
-    var escaped = false
-    for (character in value) {
-        when {
-            escaped -> {
-                current.append(if (character == 'n' || character == 'N') '\n' else character)
-                escaped = false
-            }
-            character == '\\' -> escaped = true
-            character == ';' -> {
-                out.add(current.toString())
-                current.setLength(0)
-            }
-            else -> current.append(character)
-        }
-    }
-    if (escaped) current.append('\\')
-    out.add(current.toString())
-    return out
-}
-
-/** Join components back into one structured value, escaping as vCard wants. */
-internal fun joinComponents(components: List<String>): String =
-    components.joinToString(";") { component ->
-        buildString {
-            for (character in component) {
-                when (character) {
-                    '\\' -> append("\\\\")
-                    ';' -> append("\\;")
-                    '\n' -> append("\\n")
-                    else -> append(character)
-                }
-            }
-        }
-    }

@@ -119,4 +119,9 @@
     <string name="people_contacts_unfriend">移除好友</string>
     <string name="people_add_contact_search_placeholder">輸入以搜尋…</string>
     <string name="people_add_contact_search_start">開始輸入以搜尋用戶</string>
+    <string name="people_device_create">建立</string>
+    <string name="people_device_server">伺服器</string>
+    <string name="people_device_username">使用者名稱</string>
+    <string name="people_device_done">完成</string>
+    <string name="people_device_used">上次使用 %1$s</string>
 </resources>

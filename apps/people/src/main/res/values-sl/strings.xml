@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">Med stiki</string>
     <string name="people_books_create">Ustvari imenik</string>
     <string name="people_books_delete">Izbriši imenik</string>
-    <string name="people_books_actions">Dejanja imenika</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Izbrišem %1$s in %2$d stik v njem?</item>
         <item quantity="two">Izbrišem %1$s in %2$d stika v njem?</item>
@@ -188,4 +187,34 @@
     </plurals>
     <string name="people_welcome_body">Poiščite prijatelje po vsem Mochi in se povežite. Za pošiljanje povabila se dotaknite Dodaj stik.</string>
     <string name="people_person_state_contact">Med stiki</string>
+    <string name="people_device_create">Ustvari</string>
+    <string name="people_device_server">Strežnik</string>
+    <string name="people_device_username">Uporabniško ime</string>
+    <string name="people_device_done">Končano</string>
+    <string name="people_device_list">Naprave</string>
+    <string name="people_device_used">Nazadnje uporabljeno %1$s</string>
+    <string name="people_device_never">Nikoli</string>
+    <string name="people_sync_now">Sinhroniziraj zdaj</string>
+    <string name="people_device_title">Poveži napravo</string>
+    <string name="people_device_name">Ime naprave</string>
+    <string name="people_device_address">URL imenika</string>
+    <string name="people_device_password">Geslo</string>
+    <string name="people_device_copy">Kopiraj %1$s</string>
+    <string name="people_device_warning">Shranite to geslo zdaj. Ne bo ga mogoče znova prikazati.</string>
+    <string name="people_device_empty">Ni povezanih naprav.</string>
+    <string name="people_device_created">Ustvarjeno %1$s</string>
+    <string name="people_device_delete">Izbriši napravo</string>
+    <string name="people_device_delete_title">Izbrišem napravo?</string>
+    <string name="people_device_delete_message">Naprava ne bo več mogla sinhronizirati stikov.</string>
+    <string name="people_device_deleted">Naprava je izbrisana</string>
+    <string name="people_sync_title">Sinhroniziraj s tem telefonom</string>
+    <string name="people_sync_confirm">Če v aplikaciji Stiki na tem telefonu izbrišete stik prijatelja, se konča tudi prijateljstvo.</string>
+    <string name="people_sync_enable">Vklopi</string>
+    <string name="people_sync_running">Sinhroniziranje…</string>
+    <string name="people_sync_time">Zadnja sinhronizacija: %1$s</string>
+    <string name="people_sync_never">Še ni sinhronizirano</string>
+    <string name="people_sync_permission">Potrebno je dovoljenje za stike</string>
+    <string name="people_sync_authorization">Za sinhronizacijo se znova prijavite</string>
+    <string name="people_sync_transport">Strežnika ni bilo mogoče doseči</string>
+    <string name="people_sync_refused">Stika ni bilo mogoče sinhronizirati: %1$s</string>
 </resources>

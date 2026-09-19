@@ -144,4 +144,24 @@
     <string name="people_contact_phone">Telefoon</string>
     <string name="people_contact_title">Functie</string>
     <string name="people_contacts_title">Contacten</string>
+    <string name="people_device_create">Aanmaken</string>
+    <string name="people_device_server">Server</string>
+    <string name="people_device_username">Gebruikersnaam</string>
+    <string name="people_device_done">Klaar</string>
+    <string name="people_device_list">Apparaten</string>
+    <string name="people_device_used">Laatst gebruikt %1$s</string>
+    <string name="people_device_never">Nooit</string>
+    <string name="people_sync_now">Nu synchroniseren</string>
+    <string name="people_device_title">Apparaat koppelen</string>
+    <string name="people_device_name">Apparaatnaam</string>
+    <string name="people_device_address">URL van het adresboek</string>
+    <string name="people_device_password">Wachtwoord</string>
+    <string name="people_device_copy">%1$s kopiëren</string>
+    <string name="people_device_warning">Bewaar dit wachtwoord nu. Het kan niet opnieuw worden getoond.</string>
+    <string name="people_device_empty">Geen apparaten gekoppeld.</string>
+    <string name="people_device_created">Aangemaakt %1$s</string>
+    <string name="people_device_delete">Apparaat verwijderen</string>
+    <string name="people_device_delete_title">Apparaat verwijderen?</string>
+    <string name="people_device_delete_message">Het apparaat kan dan geen contacten meer synchroniseren.</string>
+    <string name="people_device_deleted">Apparaat verwijderd</string>
 </resources>

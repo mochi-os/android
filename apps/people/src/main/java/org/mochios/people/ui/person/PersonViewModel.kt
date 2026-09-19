@@ -19,8 +19,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.sync.ContactProperty
 import org.mochios.people.api.ContactsListResponse
-import org.mochios.people.model.ContactProperty
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject

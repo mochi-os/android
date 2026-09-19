@@ -41,7 +41,9 @@ enum class Truncate { NONE, MIDDLE, END }
 /**
  * Monospace pill for a copyable identifier; tap or long-press copies. Middle
  * truncation matches web's rule - first 10 and last 10 characters once the
- * value exceeds 24 - and the clipboard always gets the full value.
+ * value exceeds 24 - and the clipboard always gets the full value. [wrap]
+ * breaks a value too long for one line over several, for one the user has to
+ * read in full, such as a password to type on another device.
  */
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)
 @Composable
@@ -50,6 +52,7 @@ fun DataChip(
     modifier: Modifier = Modifier,
     truncate: Truncate = Truncate.NONE,
     copyable: Boolean = true,
+    wrap: Boolean = false,
 ) {
     val clipboard = LocalClipboardManager.current
     val context = LocalContext.current
@@ -94,7 +97,7 @@ fun DataChip(
             fontFamily = FontFamily.Monospace,
             style = MaterialTheme.typography.bodySmall,
             color = LocalContentColor.current,
-            maxLines = 1,
+            maxLines = if (wrap) Int.MAX_VALUE else 1,
             // Truncate.END / NONE both rely on Text's ellipsis when the
             // Row's parent constrains the width. Truncate.MIDDLE already
             // produced its own ellipsis, so the visible string fits.

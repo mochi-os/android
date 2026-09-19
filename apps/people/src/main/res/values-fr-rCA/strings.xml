@@ -125,4 +125,11 @@
     <string name="people_contacts_unfriend">Retirer l\'ami</string>
     <string name="people_add_contact_search_placeholder">Tapez pour rechercher…</string>
     <string name="people_add_contact_search_start">Commencez à taper pour rechercher des utilisateurs</string>
+    <string name="people_device_create">Créer</string>
+    <string name="people_device_server">Serveur</string>
+    <string name="people_device_username">Nom d\'utilisateur</string>
+    <string name="people_device_done">Terminé</string>
+    <string name="people_device_used">Dernière utilisation %1$s</string>
+    <string name="people_device_never">Jamais</string>
+    <string name="people_sync_now">Synchroniser maintenant</string>
 </resources>

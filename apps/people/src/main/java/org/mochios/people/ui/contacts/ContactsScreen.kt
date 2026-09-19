@@ -94,6 +94,7 @@ import org.mochios.people.ui.components.peopleDrawerItems
 import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.people.ui.router.PeopleSection
 import org.mochios.people.ui.router.RememberPeopleSection
+import org.mochios.people.ui.sync.ContactsSyncRows
 import org.mochios.android.R as MochiR
 
 /**
@@ -114,13 +115,14 @@ fun ContactsScreen(
     onLogout: () -> Unit,
     onMessage: (String) -> Unit = {},
     onAddContact: () -> Unit = {},
+    onConnectDevice: () -> Unit = {},
     initialAction: String? = null,
     viewModel: ContactsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var showAbout by remember { mutableStateOf(false) }
-    var showBookMenu by remember { mutableStateOf(false) }
+    var showMenu by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     // The book this screen is showing, once the list has arrived.
@@ -187,6 +189,7 @@ fun ContactsScreen(
                     onCreateBook()
                 },
             )
+            ContactsSyncRows()
             DrawerActionRow(
                 title = stringResource(MochiR.string.common_logout),
                 icon = Icons.AutoMirrored.Outlined.Logout,
@@ -224,24 +227,30 @@ fun ContactsScreen(
                         }
                     },
                     actions = {
+                        MochiIconButton(onClick = onOpenNotifications) {
+                            Icon(
+                                Icons.Default.Notifications,
+                                contentDescription = stringResource(MochiR.string.common_notifications),
+                            )
+                        }
                         // The book's own actions belong to the screen showing
                         // it: the drawer's rows carry no menu of their own.
-                        if (book != null) {
-                            Box {
-                                MochiIconButton(onClick = { showBookMenu = true }) {
-                                    Icon(
-                                        Icons.Default.MoreVert,
-                                        contentDescription = stringResource(R.string.people_books_actions),
-                                    )
-                                }
-                                MochiDropdownMenu(
-                                    expanded = showBookMenu,
-                                    onDismissRequest = { showBookMenu = false },
-                                ) {
+                        Box {
+                            MochiIconButton(onClick = { showMenu = true }) {
+                                Icon(
+                                    Icons.Default.MoreVert,
+                                    contentDescription = stringResource(MochiR.string.common_more_options),
+                                )
+                            }
+                            MochiDropdownMenu(
+                                expanded = showMenu,
+                                onDismissRequest = { showMenu = false },
+                            ) {
+                                if (book != null) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.people_books_rename)) },
                                         onClick = {
-                                            showBookMenu = false
+                                            showMenu = false
                                             viewModel.requestRenameBook(book)
                                         },
                                     )
@@ -249,19 +258,20 @@ fun ContactsScreen(
                                         MochiDropdownMenuItem(
                                             text = { Text(stringResource(R.string.people_books_delete)) },
                                             onClick = {
-                                                showBookMenu = false
+                                                showMenu = false
                                                 viewModel.requestDeleteBook(book)
                                             },
                                         )
                                     }
                                 }
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.people_device_title)) },
+                                    onClick = {
+                                        showMenu = false
+                                        onConnectDevice()
+                                    },
+                                )
                             }
-                        }
-                        MochiIconButton(onClick = onOpenNotifications) {
-                            Icon(
-                                Icons.Default.Notifications,
-                                contentDescription = stringResource(MochiR.string.common_notifications),
-                            )
                         }
                     },
                 )

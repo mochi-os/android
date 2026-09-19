@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">San luchd-aithne</string>
     <string name="people_books_create">Cruthaich leabhar sheòlaidhean</string>
     <string name="people_books_delete">Sguab às an leabhar sheòlaidhean</string>
-    <string name="people_books_actions">Gnìomhan an leabhair sheòlaidhean</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Sguab às %1$s agus an %2$d neach-aithne ann?</item>
         <item quantity="two">Sguab às %1$s agus an %2$d neach-aithne ann?</item>
@@ -188,4 +187,34 @@
     </plurals>
     <string name="people_welcome_body">Lorg caraidean air feadh Mochi is ceangail riutha. Thoir gnogag air Cuir neach-aithne ris gus cuireadh a chur.</string>
     <string name="people_person_state_contact">San luchd-aithne</string>
+    <string name="people_device_create">Cruthaich</string>
+    <string name="people_device_server">Frithealaiche</string>
+    <string name="people_device_username">Ainm-cleachdaiche</string>
+    <string name="people_device_done">Deiseil</string>
+    <string name="people_device_list">Innealan</string>
+    <string name="people_device_used">Chleachdte mu dheireadh %1$s</string>
+    <string name="people_device_never">Chaoidh</string>
+    <string name="people_sync_now">Sioncronaich a-nis</string>
+    <string name="people_device_title">Ceangail inneal</string>
+    <string name="people_device_name">Ainm an inneil</string>
+    <string name="people_device_address">URL an leabhair-sheòlaidhean</string>
+    <string name="people_device_password">Facal-faire</string>
+    <string name="people_device_copy">Dèan lethbhreac de %1$s</string>
+    <string name="people_device_warning">Sàbhail am facal-faire seo an-dràsta. Chan urrainn dhuinn a shealltainn a-rithist.</string>
+    <string name="people_device_empty">Chan eil inneal sam bith ceangailte.</string>
+    <string name="people_device_created">Cruthaichte %1$s</string>
+    <string name="people_device_delete">Sguab às an t-inneal</string>
+    <string name="people_device_delete_title">A bheil thu airson an t-inneal a sguabadh às?</string>
+    <string name="people_device_delete_message">Chan urrainn dhan inneal luchd-aithne a shioncronachadh tuilleadh.</string>
+    <string name="people_device_deleted">Chaidh an t-inneal a sguabadh às</string>
+    <string name="people_sync_title">Sioncronaich ris an fhòn seo</string>
+    <string name="people_sync_confirm">Ma sguabas tu às neach-aithne caraid ann an aplacaid Luchd-aithne an fhòn seo, thig an càirdeas gu crìch cuideachd.</string>
+    <string name="people_sync_enable">Cuir air</string>
+    <string name="people_sync_running">A\' sioncronachadh…</string>
+    <string name="people_sync_time">Sioncronachadh mu dheireadh: %1$s</string>
+    <string name="people_sync_never">Cha deach a shioncronachadh fhathast</string>
+    <string name="people_sync_permission">Tha feum air cead airson an luchd-aithne</string>
+    <string name="people_sync_authorization">Clàraich a-steach a-rithist airson sioncronachadh</string>
+    <string name="people_sync_transport">Cha b\' urrainn ruigsinn air an fhrithealaiche</string>
+    <string name="people_sync_refused">Cha b\' urrainn dhuinn neach-aithne a shioncronachadh: %1$s</string>
 </resources>

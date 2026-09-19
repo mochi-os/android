@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">Yn y cysylltiadau</string>
     <string name="people_books_create">Creu llyfr cyfeiriadau</string>
     <string name="people_books_delete">Dileu\'r llyfr cyfeiriadau</string>
-    <string name="people_books_actions">Gweithredoedd llyfr cyfeiriadau</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="zero">Dileu %1$s a\'i %2$d cysylltiad?</item>
         <item quantity="one">Dileu %1$s a\'i %2$d cysylltiad?</item>
@@ -190,4 +189,34 @@
     </plurals>
     <string name="people_welcome_body">Dewch o hyd i ffrindiau ar draws Mochi a chysylltu â nhw. Tapiwch Ychwanegu cysylltiad i anfon gwahoddiad.</string>
     <string name="people_person_state_contact">Yn y cysylltiadau</string>
+    <string name="people_device_create">Creu</string>
+    <string name="people_device_server">Gweinydd</string>
+    <string name="people_device_username">Enw defnyddiwr</string>
+    <string name="people_device_done">Wedi gorffen</string>
+    <string name="people_device_list">Dyfeisiau</string>
+    <string name="people_device_used">Defnyddiwyd ddiwethaf %1$s</string>
+    <string name="people_device_never">Byth</string>
+    <string name="people_sync_now">Cysoni nawr</string>
+    <string name="people_device_title">Cysylltu dyfais</string>
+    <string name="people_device_name">Enw\'r ddyfais</string>
+    <string name="people_device_address">URL y llyfr cyfeiriadau</string>
+    <string name="people_device_password">Cyfrinair</string>
+    <string name="people_device_copy">Copïo %1$s</string>
+    <string name="people_device_warning">Cadwch y cyfrinair hwn nawr. Ni ellir ei ddangos eto.</string>
+    <string name="people_device_empty">Dim dyfeisiau wedi\'u cysylltu.</string>
+    <string name="people_device_created">Wedi\'i greu %1$s</string>
+    <string name="people_device_delete">Dileu dyfais</string>
+    <string name="people_device_delete_title">Dileu\'r ddyfais?</string>
+    <string name="people_device_delete_message">Ni fydd y ddyfais yn gallu cysoni cysylltiadau mwyach.</string>
+    <string name="people_device_deleted">Dyfais wedi\'i dileu</string>
+    <string name="people_sync_title">Cysoni i\'r ffôn hwn</string>
+    <string name="people_sync_confirm">Mae dileu cyswllt ffrind yn ap Cysylltiadau\'r ffôn hwn hefyd yn dod â\'r cyfeillgarwch i ben.</string>
+    <string name="people_sync_enable">Troi ymlaen</string>
+    <string name="people_sync_running">Yn cysoni…</string>
+    <string name="people_sync_time">Cysonwyd ddiwethaf %1$s</string>
+    <string name="people_sync_never">Heb gysoni eto</string>
+    <string name="people_sync_permission">Angen caniatâd cysylltiadau</string>
+    <string name="people_sync_authorization">Mewngofnodwch eto i gysoni</string>
+    <string name="people_sync_transport">Methu cyrraedd y gweinydd</string>
+    <string name="people_sync_refused">Methu cysoni cyswllt: %1$s</string>
 </resources>

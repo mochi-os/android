@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">V kontaktoch</string>
     <string name="people_books_create">Vytvoriť adresár</string>
     <string name="people_books_delete">Odstrániť adresár</string>
-    <string name="people_books_actions">Akcie adresára</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Odstrániť %1$s a jeho %2$d kontakt?</item>
         <item quantity="few">Odstrániť %1$s a jeho %2$d kontakty?</item>
@@ -187,4 +186,34 @@
     </plurals>
     <string name="people_welcome_body">Nájdite priateľov naprieč Mochi a spojte sa. Ťuknutím na Pridať kontakt odošlete pozvánku.</string>
     <string name="people_person_state_contact">V kontaktoch</string>
+    <string name="people_device_create">Vytvoriť</string>
+    <string name="people_device_server">Server</string>
+    <string name="people_device_username">Používateľské meno</string>
+    <string name="people_device_done">Hotovo</string>
+    <string name="people_device_list">Zariadenia</string>
+    <string name="people_device_used">Naposledy použité %1$s</string>
+    <string name="people_device_never">Nikdy</string>
+    <string name="people_sync_now">Synchronizovať teraz</string>
+    <string name="people_device_title">Pripojiť zariadenie</string>
+    <string name="people_device_name">Názov zariadenia</string>
+    <string name="people_device_address">URL adresára</string>
+    <string name="people_device_password">Heslo</string>
+    <string name="people_device_copy">Kopírovať %1$s</string>
+    <string name="people_device_warning">Uložte si toto heslo teraz. Už sa nedá znova zobraziť.</string>
+    <string name="people_device_empty">Žiadne pripojené zariadenia.</string>
+    <string name="people_device_created">Vytvorené %1$s</string>
+    <string name="people_device_delete">Odstrániť zariadenie</string>
+    <string name="people_device_delete_title">Odstrániť zariadenie?</string>
+    <string name="people_device_delete_message">Zariadenie už nebude môcť synchronizovať kontakty.</string>
+    <string name="people_device_deleted">Zariadenie bolo odstránené</string>
+    <string name="people_sync_title">Synchronizovať s týmto telefónom</string>
+    <string name="people_sync_confirm">Odstránením kontaktu priateľa v aplikácii Kontakty v tomto telefóne sa skončí aj priateľstvo.</string>
+    <string name="people_sync_enable">Zapnúť</string>
+    <string name="people_sync_running">Synchronizuje sa…</string>
+    <string name="people_sync_time">Posledná synchronizácia: %1$s</string>
+    <string name="people_sync_never">Zatiaľ nesynchronizované</string>
+    <string name="people_sync_permission">Vyžaduje sa povolenie pre kontakty</string>
+    <string name="people_sync_authorization">Na synchronizáciu sa znova prihláste</string>
+    <string name="people_sync_transport">Nepodarilo sa spojiť so serverom</string>
+    <string name="people_sync_refused">Kontakt sa nepodarilo synchronizovať: %1$s</string>
 </resources>

@@ -20,22 +20,26 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import org.mochios.android.R
+import org.mochios.android.util.sensitiveClip
 
 /**
  * Small icon button that copies [value] and shows a brief check-mark. Pass
  * [contentDescription] when a screen has several copy targets; it defaults to
- * the localised "Copy".
+ * the localised "Copy". A [sensitive] value — a token, a secret — goes to the
+ * clipboard as a clip Android 13+ keeps out of its preview overlay.
  */
 @Composable
 fun CopyButton(
     value: String,
     modifier: Modifier = Modifier,
     contentDescription: String? = null,
+    sensitive: Boolean = false,
 ) {
     val clipboard = LocalClipboardManager.current
     var copied by remember { mutableStateOf(false) }
@@ -53,7 +57,11 @@ fun CopyButton(
 
     MochiIconButton(
         onClick = {
-            clipboard.setText(AnnotatedString(value))
+            if (sensitive) {
+                clipboard.setClip(sensitiveClip(label, value).toClipEntry())
+            } else {
+                clipboard.setText(AnnotatedString(value))
+            }
             copied = true
         },
         modifier = modifier.size(28.dp),

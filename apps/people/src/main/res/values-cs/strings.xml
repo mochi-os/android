@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">V kontaktech</string>
     <string name="people_books_create">Vytvořit adresář</string>
     <string name="people_books_delete">Smazat adresář</string>
-    <string name="people_books_actions">Akce adresáře</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Smazat %1$s a jeho %2$d kontakt?</item>
         <item quantity="few">Smazat %1$s a jeho %2$d kontakty?</item>
@@ -187,4 +186,34 @@
     </plurals>
     <string name="people_welcome_body">Najděte přátele napříč Mochi a spojte se s nimi. Klepnutím na Přidat kontakt odešlete pozvánku.</string>
     <string name="people_person_state_contact">V kontaktech</string>
+    <string name="people_device_create">Vytvořit</string>
+    <string name="people_device_server">Server</string>
+    <string name="people_device_username">Uživatelské jméno</string>
+    <string name="people_device_done">Hotovo</string>
+    <string name="people_device_list">Zařízení</string>
+    <string name="people_device_used">Naposledy použito %1$s</string>
+    <string name="people_device_never">Nikdy</string>
+    <string name="people_sync_now">Synchronizovat nyní</string>
+    <string name="people_device_title">Připojit zařízení</string>
+    <string name="people_device_name">Název zařízení</string>
+    <string name="people_device_address">URL adresáře</string>
+    <string name="people_device_password">Heslo</string>
+    <string name="people_device_copy">Kopírovat %1$s</string>
+    <string name="people_device_warning">Uložte si toto heslo nyní. Znovu ho nelze zobrazit.</string>
+    <string name="people_device_empty">Žádná připojená zařízení.</string>
+    <string name="people_device_created">Vytvořeno %1$s</string>
+    <string name="people_device_delete">Smazat zařízení</string>
+    <string name="people_device_delete_title">Smazat zařízení?</string>
+    <string name="people_device_delete_message">Zařízení už nebude moci synchronizovat kontakty.</string>
+    <string name="people_device_deleted">Zařízení bylo smazáno</string>
+    <string name="people_sync_title">Synchronizovat s tímto telefonem</string>
+    <string name="people_sync_confirm">Smazáním kontaktu přítele v aplikaci Kontakty v tomto telefonu skončí i přátelství.</string>
+    <string name="people_sync_enable">Zapnout</string>
+    <string name="people_sync_running">Synchronizace…</string>
+    <string name="people_sync_time">Naposledy synchronizováno %1$s</string>
+    <string name="people_sync_never">Zatím nesynchronizováno</string>
+    <string name="people_sync_permission">Je potřeba oprávnění ke kontaktům</string>
+    <string name="people_sync_authorization">Pro synchronizaci se znovu přihlaste</string>
+    <string name="people_sync_transport">Nelze se spojit se serverem</string>
+    <string name="people_sync_refused">Kontakt nelze synchronizovat: %1$s</string>
 </resources>

@@ -121,4 +121,10 @@
     <string name="people_contacts_unfriend">Quitá al amigo</string>
     <string name="people_add_contact_search_placeholder">Escribí para buscar…</string>
     <string name="people_add_contact_search_start">Empezá a escribir para buscar usuarios</string>
+    <string name="people_device_create">Crear</string>
+    <string name="people_device_server">Servidor</string>
+    <string name="people_device_username">Nombre de usuario</string>
+    <string name="people_device_done">Listo</string>
+    <string name="people_device_used">Último uso %1$s</string>
+    <string name="people_device_never">Nunca</string>
 </resources>

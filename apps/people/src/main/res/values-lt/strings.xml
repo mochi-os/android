@@ -179,7 +179,6 @@
     <string name="people_add_contact_in_contacts">Kontaktuose</string>
     <string name="people_books_create">Sukurti adresų knygelę</string>
     <string name="people_books_delete">Ištrinti adresų knygelę</string>
-    <string name="people_books_actions">Adresų knygelės veiksmai</string>
     <plurals name="people_books_delete_confirm">
         <item quantity="one">Ištrinti %1$s ir jos %2$d kontaktą?</item>
         <item quantity="few">Ištrinti %1$s ir jos %2$d kontaktus?</item>
@@ -187,4 +186,34 @@
     </plurals>
     <string name="people_welcome_body">Raskite draugų visoje Mochi ir susisiekite. Palieskite Pridėti kontaktą, kad išsiųstumėte kvietimą.</string>
     <string name="people_person_state_contact">Kontaktuose</string>
+    <string name="people_device_create">Sukurti</string>
+    <string name="people_device_server">Serveris</string>
+    <string name="people_device_username">Vartotojo vardas</string>
+    <string name="people_device_done">Atlikta</string>
+    <string name="people_device_list">Įrenginiai</string>
+    <string name="people_device_used">Paskutinį kartą naudota %1$s</string>
+    <string name="people_device_never">Niekada</string>
+    <string name="people_sync_now">Sinchronizuoti dabar</string>
+    <string name="people_device_title">Prijungti įrenginį</string>
+    <string name="people_device_name">Įrenginio pavadinimas</string>
+    <string name="people_device_address">Adresų knygos URL</string>
+    <string name="people_device_password">Slaptažodis</string>
+    <string name="people_device_copy">Kopijuoti %1$s</string>
+    <string name="people_device_warning">Išsaugokite šį slaptažodį dabar. Jo nebus galima parodyti dar kartą.</string>
+    <string name="people_device_empty">Nėra prijungtų įrenginių.</string>
+    <string name="people_device_created">Sukurta %1$s</string>
+    <string name="people_device_delete">Ištrinti įrenginį</string>
+    <string name="people_device_delete_title">Ištrinti įrenginį?</string>
+    <string name="people_device_delete_message">Įrenginys nebegalės sinchronizuoti kontaktų.</string>
+    <string name="people_device_deleted">Įrenginys ištrintas</string>
+    <string name="people_sync_title">Sinchronizuoti su šiuo telefonu</string>
+    <string name="people_sync_confirm">Ištrynus draugo kontaktą šio telefono programoje „Kontaktai“, baigiasi ir draugystė.</string>
+    <string name="people_sync_enable">Įjungti</string>
+    <string name="people_sync_running">Sinchronizuojama…</string>
+    <string name="people_sync_time">Paskutinė sinchronizacija: %1$s</string>
+    <string name="people_sync_never">Dar nesinchronizuota</string>
+    <string name="people_sync_permission">Reikia leidimo pasiekti kontaktus</string>
+    <string name="people_sync_authorization">Prisijunkite iš naujo, kad galėtumėte sinchronizuoti</string>
+    <string name="people_sync_transport">Nepavyko pasiekti serverio</string>
+    <string name="people_sync_refused">Nepavyko sinchronizuoti kontakto: %1$s</string>
 </resources>
