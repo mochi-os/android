@@ -742,18 +742,6 @@ class ProjectViewModel @Inject constructor(
         return null
     }
 
-    fun addColumnOption(fieldId: String, name: String, colour: String? = null) {
-        val classId = findClassForField(fieldId) ?: return
-        viewModelScope.launch {
-            try {
-                repository.createOption(projectId, classId, fieldId, name, colour)
-                refreshProject()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     fun renameColumnOption(fieldId: String, optionId: String, name: String) {
         val classId = findClassForField(fieldId) ?: return
         viewModelScope.launch {

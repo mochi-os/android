@@ -22,13 +22,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material.icons.filled.LocalShipping
-import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
@@ -313,7 +313,11 @@ private fun TrackingCard(order: Order) {
                 }) {
                     Text(stringResource(R.string.market_purchase_track))
                     Spacer(Modifier.width(4.dp))
-                    Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.height(16.dp))
+                    Icon(
+                        Icons.AutoMirrored.Filled.OpenInNew,
+                        contentDescription = null,
+                        modifier = Modifier.height(16.dp),
+                    )
                 }
             }
         }

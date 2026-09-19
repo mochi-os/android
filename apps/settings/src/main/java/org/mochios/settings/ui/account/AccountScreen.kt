@@ -43,7 +43,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalClipboard
+import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.util.destination
 import org.mochios.android.util.webUri
@@ -57,7 +60,6 @@ import org.mochios.settings.ui.login.StepUpHost
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
@@ -289,7 +291,8 @@ private fun IdentitySection(
 ) {
     val id = state.identity
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
+    val clipboardScope = rememberCoroutineScope()
     var editingName by remember { mutableStateOf(false) }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -343,7 +346,13 @@ private fun IdentitySection(
                 modifier = Modifier.weight(1f),
             )
             MochiIconButton(
-                onClick = { clipboard.setClip(ClipData.newPlainText("fingerprint", id.fingerprint).toClipEntry()) },
+                onClick = {
+                    clipboardScope.launch {
+                        clipboard.setClipEntry(
+                            ClipData.newPlainText("fingerprint", id.fingerprint).toClipEntry(),
+                        )
+                    }
+                },
                 enabled = id.fingerprint.isNotBlank(),
                 modifier = Modifier.size(36.dp),
             ) {
@@ -357,7 +366,13 @@ private fun IdentitySection(
         IdentityFieldRow(label = stringResource(R.string.account_identity_identity)) {
             ValueChip(text = id.entity, monospace = true, modifier = Modifier.weight(1f))
             MochiIconButton(
-                onClick = { clipboard.setClip(ClipData.newPlainText("identity", id.entity).toClipEntry()) },
+                onClick = {
+                    clipboardScope.launch {
+                        clipboard.setClipEntry(
+                            ClipData.newPlainText("identity", id.entity).toClipEntry(),
+                        )
+                    }
+                },
                 enabled = id.entity.isNotBlank(),
                 modifier = Modifier.size(36.dp),
             ) {

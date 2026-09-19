@@ -8,10 +8,9 @@ package org.mochios.android.ui.components
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.TabRowDefaults
-import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -55,17 +54,17 @@ fun MochiTabRow(
     if (tabs.isEmpty()) {
         return
     }
-    // A selection outside the list would put the indicator off the end of
-    // tabPositions, so it is clamped rather than left to throw.
+    // A selection outside the list would put the indicator off the end of the
+    // row, so it is clamped rather than left to throw.
     val active = selectedIndex.coerceIn(0, tabs.lastIndex)
 
-    TabRow(
+    SecondaryTabRow(
         selectedTabIndex = active,
         modifier = modifier.fillMaxWidth(),
         containerColor = containerColor,
-        indicator = { tabPositions ->
+        indicator = {
             TabRowDefaults.SecondaryIndicator(
-                modifier = Modifier.tabIndicatorOffset(tabPositions[active]),
+                modifier = Modifier.tabIndicatorOffset(active, matchContentSize = false),
                 color = MaterialTheme.colorScheme.primary,
             )
         },

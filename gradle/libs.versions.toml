@@ -1,26 +1,27 @@
 [versions]
-agp = "9.3.1"
-kotlin = "2.2.10"
-ksp = "2.2.10-2.0.2"
-composeBom = "2026.08.00"
-hilt = "2.59.2"
-retrofit = "2.11.0"
-okhttp = "4.12.0"
-navigationCompose = "2.9.8"
-credentials = "1.3.0"
+agp = "9.4.0"
+kotlin = "2.4.20"
+ksp = "2.3.12"
+composeBom = "2026.09.00"
+hilt = "2.60.1"
+retrofit = "3.0.0"
+okhttp = "5.5.0"
+navigationCompose = "2.10.1"
+credentials = "1.6.0"
 markwon = "4.6.2"
-coil = "3.0.4"
-media3 = "1.5.0"
-coroutines = "1.9.0"
-lifecycle = "2.8.7"
+coil = "3.6.2"
+media3 = "1.11.1"
+coroutines = "1.11.0"
+lifecycle = "2.11.0"
 activityCompose = "1.13.0"
-coreKtx = "1.15.0"
-datastore = "1.1.1"
+coreKtx = "1.19.0"
+datastore = "1.2.1"
 hiltNavigationCompose = "1.4.0"
-osmdroid = "6.1.18"
-unifiedpush = "3.0.4"
-work = "2.10.0"
-firebaseMessaging = "24.1.0"
+chesslib = "1.3.7"
+osmdroid = "6.1.20"
+unifiedpush = "3.3.5"
+work = "2.11.2"
+firebaseMessaging = "25.1.3"
 
 [libraries]
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
@@ -39,7 +40,7 @@ navigation-compose = { group = "androidx.navigation", name = "navigation-compose
 datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
 credentials-play-services = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials" }
-browser = { group = "androidx.browser", name = "browser", version = "1.8.0" }
+browser = { group = "androidx.browser", name = "browser", version = "1.10.0" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
@@ -61,18 +62,18 @@ markwon-ext-tables = { group = "io.noties.markwon", name = "ext-tables", version
 markwon-ext-strikethrough = { group = "io.noties.markwon", name = "ext-strikethrough", version.ref = "markwon" }
 markwon-ext-tasklist = { group = "io.noties.markwon", name = "ext-tasklist", version.ref = "markwon" }
 markwon-linkify = { group = "io.noties.markwon", name = "linkify", version.ref = "markwon" }
-gson = { group = "com.google.code.gson", name = "gson", version = "2.11.0" }
+gson = { group = "com.google.code.gson", name = "gson", version = "2.14.0" }
+chesslib = { group = "com.github.bhlangonijr", name = "chesslib", version.ref = "chesslib" }
 osmdroid = { group = "org.osmdroid", name = "osmdroid-android", version.ref = "osmdroid" }
 unifiedpush-connector = { group = "org.unifiedpush.android", name = "connector", version.ref = "unifiedpush" }
 work-runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
-firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessaging" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 junit = { group = "junit", name = "junit", version = "4.13.2" }
 okhttp-mockwebserver = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "okhttp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

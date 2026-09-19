@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -21,6 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.ui.components.MochiFab
 import org.mochios.wikis.R
 import org.mochios.wikis.ui.redirects.RedirectsBody
 import org.mochios.wikis.ui.redirects.RedirectsViewModel
@@ -41,10 +41,10 @@ fun RedirectsTab(
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(onClick = { showAddDialog = true }) {
+            MochiFab(onClick = { showAddDialog = true }) {
                 Icon(
                     Icons.Default.Add,
-                    contentDescription = stringResource(R.string.wikis_redirects_add),
+                    contentDescription = stringResource(R.string.wikis_redirect_create_title),
                 )
             }
         },

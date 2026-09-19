@@ -56,7 +56,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -104,7 +104,7 @@ fun WikiListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
 
     var showOverflow by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }
@@ -205,7 +205,7 @@ fun WikiListScreen(
                                                         regenerate = false,
                                                         makeUrl = viewModel::makeRssUrl,
                                                         copy = { url ->
-                                                            clipboard.setClip(
+                                                            clipboard.setClipEntry(
                                                                 ClipData.newPlainText(clipboardLabel, url)
                                                                     .toClipEntry(),
                                                             )
@@ -661,7 +661,7 @@ private suspend fun copyRss(
     mode: String,
     regenerate: Boolean,
     makeUrl: suspend (String, Boolean) -> Result<String?>,
-    copy: (String) -> Unit,
+    copy: suspend (String) -> Unit,
     snackbar: SnackbarHostState,
     copiedMessage: String,
     copiedNewMessage: String,

@@ -85,7 +85,7 @@ dependencies {
     implementation(libs.osmdroid)
 
     api(libs.unifiedpush.connector)
-    implementation(libs.firebase.messaging)
+    api(libs.firebase.messaging)
 
     implementation(libs.work.runtime)
 

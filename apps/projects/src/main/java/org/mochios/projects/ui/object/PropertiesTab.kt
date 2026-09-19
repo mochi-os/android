@@ -10,6 +10,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -37,7 +38,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
@@ -313,7 +313,7 @@ private fun ParentPicker(
             singleLine = true,
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
             modifier = Modifier
-                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
                 .fillMaxWidth()
         )
         ExposedDropdownMenu(
@@ -451,7 +451,7 @@ internal fun FieldEditor(
                             },
                             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                             modifier = Modifier
-                                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
                                 .fillMaxWidth()
                         )
                         ExposedDropdownMenu(
@@ -819,8 +819,8 @@ private fun ChecklistEditor(
  *  DatePicker the right firstDayOfWeek. Beyond Sun/Mon/Sat there's no widely
  *  used locale with the required day, so we fall back to the device default. */
 private fun localeForWeekStart(weekStartsOn: Int): java.util.Locale = when (weekStartsOn) {
-    0 -> java.util.Locale.US               // Sunday
-    1 -> java.util.Locale("en", "GB")      // Monday
-    6 -> java.util.Locale("ar", "SA")      // Saturday
+    0 -> java.util.Locale.US  // Sunday
+    1 -> java.util.Locale.UK  // Monday
+    6 -> java.util.Locale.forLanguageTag("ar-SA")  // Saturday
     else -> java.util.Locale.getDefault()
 }

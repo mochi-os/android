@@ -23,12 +23,12 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.DriveFileMove
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.DriveFileMove
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -254,7 +254,12 @@ fun TreeRow(
                                     showContextMenu = false
                                     showReparentDialog = true
                                 },
-                                leadingIcon = { Icon(Icons.Outlined.DriveFileMove, contentDescription = null) },
+                                leadingIcon = {
+                                    Icon(
+                                        Icons.AutoMirrored.Outlined.DriveFileMove,
+                                        contentDescription = null,
+                                    )
+                                },
                             )
                         }
                         MochiDropdownMenuItem(

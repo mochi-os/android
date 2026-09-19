@@ -6,6 +6,7 @@
 package org.mochios.wikis.ui.attachments
 
 import android.app.DownloadManager
+import android.content.ClipData
 import android.content.Context
 import android.net.Uri
 import android.widget.Toast
@@ -81,11 +82,11 @@ import androidx.compose.ui.draganddrop.toAndroidDragEvent
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -840,12 +841,17 @@ private fun AttachmentGridCell(
     onRequestCaption: () -> Unit,
 ) {
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
+    val clipboardScope = rememberCoroutineScope()
     val format = LocalFormat.current
     val copiedMessage = stringResource(R.string.wikis_attachments_embed_copied)
     var menuOpen by remember { mutableStateOf(false) }
     val copyEmbed = {
-        clipboard.setText(AnnotatedString(buildMarkdown(attachment)))
+        clipboardScope.launch {
+            clipboard.setClipEntry(
+                ClipData.newPlainText("markdown", buildMarkdown(attachment)).toClipEntry(),
+            )
+        }
         Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
     }
 
@@ -942,14 +948,19 @@ private fun AttachmentListRow(
     onRequestCaption: () -> Unit,
 ) {
     val context = LocalContext.current
-    val clipboard = LocalClipboardManager.current
+    val clipboard = LocalClipboard.current
+    val clipboardScope = rememberCoroutineScope()
     val format = LocalFormat.current
     val createdLabel = if (attachment.created > 0) format.formatDate(attachment.created) else ""
     val sizeLabel = format.formatFileSize(attachment.size)
     val copiedMessage = stringResource(R.string.wikis_attachments_embed_copied)
     var menuOpen by remember { mutableStateOf(false) }
     val copyEmbed = {
-        clipboard.setText(AnnotatedString(buildMarkdown(attachment)))
+        clipboardScope.launch {
+            clipboard.setClipEntry(
+                ClipData.newPlainText("markdown", buildMarkdown(attachment)).toClipEntry(),
+            )
+        }
         Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
     }
 

@@ -14,8 +14,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.reorderedTo
 import org.mochios.android.files.PendingExport
 import org.mochios.android.files.SavedExport
 import org.mochios.crm.model.FieldOption
@@ -32,8 +35,6 @@ data class DesignUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    val selectedClassId: String? = null,
-    val selectedFieldId: String? = null,
     val isSaving: Boolean = false,
     // Design JSON fetched and waiting for the user to pick a destination.
     val pendingExport: PendingExport? = null,
@@ -58,6 +59,8 @@ class DesignViewModel @Inject constructor(
     val crmId: String = savedStateHandle.get<String>("crmId") ?: ""
 
     private val _uiState = MutableStateFlow(DesignUiState())
+    // Serialises reorders so a second request cannot overtake the first.
+    private val reorderMutex = Mutex()
     val uiState: StateFlow<DesignUiState> = _uiState.asStateFlow()
 
     init {
@@ -100,217 +103,7 @@ class DesignViewModel @Inject constructor(
         }
     }
 
-    fun selectClass(classId: String?) {
-        _uiState.value = _uiState.value.copy(selectedClassId = classId, selectedFieldId = null)
-    }
-
-    fun selectField(fieldId: String?) {
-        _uiState.value = _uiState.value.copy(selectedFieldId = fieldId)
-    }
-
-    // ---- Classes ----
-
-    fun createClass(name: String) {
-        viewModelScope.launch {
-            try {
-                repository.createClass(crmId, name)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateClass(classId: String, name: String? = null, title: String? = null) {
-        viewModelScope.launch {
-            try {
-                repository.updateClass(crmId, classId, name, title)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun deleteClass(classId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteClass(crmId, classId)
-                if (_uiState.value.selectedClassId == classId) {
-                    _uiState.value = _uiState.value.copy(selectedClassId = null)
-                }
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    // ---- Hierarchy ----
-
-    fun setHierarchy(classId: String, parents: List<String>) {
-        viewModelScope.launch {
-            try {
-                repository.setHierarchy(crmId, classId, parents.joinToString(","))
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    // ---- Fields ----
-
-    fun createField(classId: String, name: String, fieldtype: String, flags: String?, multi: Boolean?) {
-        viewModelScope.launch {
-            try {
-                repository.createField(crmId, classId, name, fieldtype, flags, multi)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateField(
-        classId: String,
-        fieldId: String,
-        name: String?,
-        fieldtype: String?,
-        flags: String?,
-        multi: Boolean?,
-        card: Boolean?,
-        position: String?,
-        rows: Int?,
-        pattern: String? = null,
-        minlength: Int? = null,
-        maxlength: Int? = null
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.updateField(crmId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows, pattern, minlength, maxlength)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun deleteField(classId: String, fieldId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteField(crmId, classId, fieldId)
-                if (_uiState.value.selectedFieldId == fieldId) {
-                    _uiState.value = _uiState.value.copy(selectedFieldId = null)
-                }
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun reorderFields(classId: String, order: String) {
-        viewModelScope.launch {
-            try {
-                repository.reorderFields(crmId, classId, order)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    // ---- Options ----
-
-    fun createOption(classId: String, fieldId: String, name: String, colour: String?, icon: String? = null) {
-        viewModelScope.launch {
-            try {
-                repository.createOption(crmId, classId, fieldId, name, colour, icon)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateOption(classId: String, fieldId: String, optionId: String, name: String?, colour: String?, icon: String?) {
-        viewModelScope.launch {
-            try {
-                repository.updateOption(crmId, classId, fieldId, optionId, name, colour, icon)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun deleteOption(classId: String, fieldId: String, optionId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteOption(crmId, classId, fieldId, optionId)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun reorderOptions(classId: String, fieldId: String, order: String) {
-        viewModelScope.launch {
-            try {
-                repository.reorderOptions(crmId, classId, fieldId, order)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
     // ---- Views ----
-
-    fun createView(
-        name: String,
-        viewtype: String,
-        columns: String?,
-        rows: String?,
-        filter: String?,
-        sort: String?,
-        direction: String?,
-        classes: String?,
-        border: String?
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.createView(crmId, name, viewtype, columns, rows, filter, sort, direction, classes, border)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun updateView(
-        viewId: String,
-        name: String?,
-        viewtype: String?,
-        columns: String?,
-        rows: String?,
-        filter: String?,
-        sort: String?,
-        direction: String?,
-        classes: String?,
-        border: String?
-    ) {
-        viewModelScope.launch {
-            try {
-                repository.updateView(crmId, viewId, name, viewtype, columns, rows, filter, sort, direction, classes, border)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
 
     fun deleteView(viewId: String) {
         viewModelScope.launch {
@@ -324,14 +117,29 @@ class DesignViewModel @Inject constructor(
     }
 
     fun reorderViews(order: String) {
+        applyViewOrder(order.split(","))
         viewModelScope.launch {
-            try {
-                repository.reorderViews(crmId, order)
-                loadCrm()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            reorderMutex.withLock {
+                try {
+                    repository.reorderViews(crmId, order)
+                } catch (e: Exception) {
+                    loadCrm()
+                    _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                }
             }
         }
+    }
+
+    /** Rewrites the design's views to [ids] locally, renumbering their ranks. */
+    private fun applyViewOrder(ids: List<String>) {
+        val state = _uiState.value
+        val details = state.crmDetails ?: return
+        val reordered = details.views.reorderedTo(
+            order = ids,
+            id = { view -> view.id },
+            withRank = { view, rank -> view.copy(rank = rank) }
+        )
+        _uiState.value = state.copy(crmDetails = details.copy(views = reordered))
     }
 
     // ---- Design Export / Import ----

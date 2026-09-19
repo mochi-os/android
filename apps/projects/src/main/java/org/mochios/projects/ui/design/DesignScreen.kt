@@ -47,6 +47,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -71,15 +72,25 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.projects.R
 import org.mochios.projects.model.Template
 import org.mochios.android.R as MochiR
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DesignScreen(
     onBack: () -> Unit,
+    onAddClass: () -> Unit,
+    onAddView: () -> Unit,
+    onEditView: (String) -> Unit,
+    onClassClick: (String) -> Unit,
     viewModel: DesignViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    var selectedTab by remember { mutableIntStateOf(0) }
+
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        viewModel.loadProject()
+    }
+    var selectedTab by rememberSaveable { mutableIntStateOf(0) }
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showImportDialog by remember { mutableStateOf(false) }
     var confirmTemplate by remember { mutableStateOf<Template?>(null) }
@@ -211,67 +222,30 @@ fun DesignScreen(
                 uiState.projectDetails != null -> {
                     val details = uiState.projectDetails!!
 
-                    // Show class detail or field detail if selected
-                    when {
-                        uiState.selectedFieldId != null && uiState.selectedClassId != null -> {
-                            val classId = uiState.selectedClassId!!
-                            val fieldId = uiState.selectedFieldId!!
-                            val field = details.fields[classId]?.find { it.id == fieldId }
-                            val options = details.options[classId]?.get(fieldId) ?: emptyList()
-                            if (field != null) {
-                                FieldDetailScreen(
-                                    classId = classId,
-                                    field = field,
-                                    options = options,
-                                    viewModel = viewModel,
-                                    onBack = { viewModel.selectField(null) }
-                                )
-                            }
-                        }
+                    val tabs = listOf(
+                        stringResource(R.string.projects_design_tab_classes),
+                        stringResource(R.string.projects_design_tab_views)
+                    )
+                    MochiTabRow(
+                        tabs = tabs.map { title -> MochiTab(title) },
+                        selectedIndex = selectedTab,
+                        onSelect = { index -> selectedTab = index },
+                    )
 
-                        uiState.selectedClassId != null -> {
-                            val classId = uiState.selectedClassId!!
-                            val cls = details.classes.find { it.id == classId }
-                            val fields = details.fields[classId] ?: emptyList()
-                            val hierarchy = details.hierarchy[classId] ?: emptyList()
-                            if (cls != null) {
-                                ClassDetailScreen(
-                                    cls = cls,
-                                    fields = fields,
-                                    hierarchy = hierarchy,
-                                    allClasses = details.classes,
-                                    viewModel = viewModel,
-                                    onBack = { viewModel.selectClass(null) },
-                                    onFieldClick = { viewModel.selectField(it) }
-                                )
-                            }
-                        }
-
-                        else -> {
-                            val tabs = listOf(
-                                stringResource(R.string.projects_design_tab_classes),
-                                stringResource(R.string.projects_design_tab_views)
-                            )
-                            MochiTabRow(
-                                tabs = tabs.map { title -> MochiTab(title) },
-                                selectedIndex = selectedTab,
-                                onSelect = { index -> selectedTab = index },
-                            )
-
-                            when (selectedTab) {
-                                0 -> ClassesTab(
-                                    classes = details.classes,
-                                    viewModel = viewModel,
-                                    onClassClick = { viewModel.selectClass(it) }
-                                )
-                                1 -> ViewsTab(
-                                    views = details.views,
-                                    classes = details.classes,
-                                    fields = details.fields,
-                                    viewModel = viewModel
-                                )
-                            }
-                        }
+                    when (selectedTab) {
+                        0 -> ClassesTab(
+                            classes = details.classes,
+                            onAddClass = onAddClass,
+                            onClassClick = onClassClick
+                        )
+                        1 -> ViewsTab(
+                            views = details.views,
+                            classes = details.classes,
+                            fields = details.fields,
+                            viewModel = viewModel,
+                            onAddView = onAddView,
+                            onEditView = onEditView
+                        )
                     }
                 }
             }

@@ -53,6 +53,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
@@ -278,11 +279,10 @@ private fun InterestRow(
                         .padding(horizontal = 8.dp, vertical = 2.dp),
                 )
                 Spacer(Modifier.width(8.dp))
-                MochiIconButton(onClick = onRemove) {
+                MochiIconButton(onClick = onRemove, tone = MochiButtonTone.Destructive) {
                     Icon(
                         Icons.Default.Delete,
                         contentDescription = stringResource(R.string.interests_remove),
-                        tint = MaterialTheme.colorScheme.error,
                     )
                 }
             }

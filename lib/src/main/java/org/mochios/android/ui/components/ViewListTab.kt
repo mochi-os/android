@@ -20,47 +20,57 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.FormatListBulleted
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.FormatListBulleted
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.components.dnd.DragEdge
+import org.mochios.android.ui.components.dnd.DragState
+import org.mochios.android.ui.components.dnd.DropOrientation
+import org.mochios.android.ui.components.dnd.draggableItem
+import org.mochios.android.ui.components.dnd.dropTarget
+import org.mochios.android.ui.components.dnd.isDragging
+import org.mochios.android.ui.components.dnd.isTarget
+import org.mochios.android.ui.components.dnd.rememberDragState
+import org.mochios.android.ui.components.dnd.reorderActions
+import org.mochios.android.ui.components.dnd.reorderedAgainst
 
 /**
  * A saved board or list view, as the design screens list and edit one.
  *
  * @property id Identifier of the view.
- * @property name Label shown on the row and in the edit dialog.
+ * @property name Label shown on the row and in the view form.
  * @property viewtype Either `board` or `list`.
  * @property filter Filter expression stored on the view.
  * @property columns Field id driving board columns.
@@ -88,10 +98,10 @@ data class ViewListItem(
 )
 
 /**
- * The edits a [ViewListTab] dialog collected, ready to send to a repository.
+ * The edits a [ViewForm] collected, ready to send to a repository.
  * Blank entries arrive as `null` so an unset field clears server-side.
  *
- * @property name Name typed into the dialog.
+ * @property name Name typed into the form.
  * @property viewtype Either `board` or `list`.
  * @property columns Field id driving board columns, or null.
  * @property rows Field id driving board swimlanes, or null.
@@ -136,16 +146,15 @@ data class ViewFieldOption(
  * @property addAction Content description of the add button.
  * @property empty Placeholder shown when there are no views.
  * @property emptySubtitle Second line of the empty placeholder.
- * @property addDialogTitle Title of the create dialog.
- * @property editDialogTitle Title of the edit dialog.
  * @property deleteTitle Title of the delete confirmation.
  * @property deleteMessage Body of the delete confirmation, given the view name.
  * @property byField Row detail naming the grouping field, given the field name.
  * @property sortedBy Row detail naming the sort order, given the direction.
  * @property typeBoard Label of the board view type.
  * @property typeList Label of the list view type.
- * @property moveUp Content description of the move-up button.
- * @property moveDown Content description of the move-down button.
+ * @property dragRow Content description of the drag handle.
+ * @property moveUp Label of the move-up accessibility action.
+ * @property moveDown Label of the move-down accessibility action.
  * @property nameLabel Label of the name field.
  * @property typeLabel Heading above the view type selector.
  * @property columnsField Label of the columns field picker.
@@ -163,14 +172,13 @@ data class ViewListLabels(
     val addAction: String,
     val empty: String,
     val emptySubtitle: String,
-    val addDialogTitle: String,
-    val editDialogTitle: String,
     val deleteTitle: String,
     val deleteMessage: (viewName: String) -> String,
     val byField: (fieldName: String) -> String,
     val sortedBy: (direction: String) -> String,
     val typeBoard: String,
     val typeList: String,
+    val dragRow: String,
     val moveUp: String,
     val moveDown: String,
     val nameLabel: String,
@@ -188,19 +196,18 @@ data class ViewListLabels(
 )
 
 /**
- * List of a CRM's or project's saved views with reorder, edit and delete, plus
- * the create and edit dialog, shared by the two design screens. Rows are sorted
+ * List of a CRM's or project's saved views with reorder, edit and delete,
+ * shared by the two design screens. Rows are sorted
  * by [ViewListItem.rank]; reordering reports the whole new order as a
  * comma-joined id list.
  *
  * @param views Views to list, in any order.
- * @param classes Classes offered as the dialog's class filter.
  * @param fields Every field of every class, keyed by class id.
  * @param labels Feature-specific wording.
  * @param sortOptions Pseudo-fields offered alongside the sortable fields, as
  *   id-to-label pairs — the two features offer different sets.
- * @param onCreateView Called with the dialog's edits when a view is added.
- * @param onUpdateView Called with a view's id and the dialog's edits on save.
+ * @param onAddView Called when the add button is tapped.
+ * @param onEditView Called with the id of a view to edit.
  * @param onDeleteView Called with a view's id once deletion is confirmed.
  * @param onReorderViews Called with the new order as comma-joined view ids.
  * @param preview Optional feature-rendered preview of a view, shown above the
@@ -209,30 +216,26 @@ data class ViewListLabels(
 @Composable
 fun ViewListTab(
     views: List<ViewListItem>,
-    classes: List<ClassListItem>,
     fields: Map<String, List<ViewFieldOption>>,
     labels: ViewListLabels,
-    sortOptions: List<Pair<String, String>>,
-    onCreateView: (ViewDraft) -> Unit,
-    onUpdateView: (String, ViewDraft) -> Unit,
+    onAddView: () -> Unit,
+    onEditView: (String) -> Unit,
     onDeleteView: (String) -> Unit,
     onReorderViews: (String) -> Unit,
     preview: (@Composable (ViewListItem?, Modifier) -> Unit)? = null
 ) {
-    var showAddDialog by remember { mutableStateOf(false) }
-    var editingView by remember { mutableStateOf<ViewListItem?>(null) }
     var deletingView by remember { mutableStateOf<ViewListItem?>(null) }
+    // No "on" zone: a view row is only ever an insertion point, so the
+    // whole row splits at its midpoint into Top and Bottom.
+    val dragState = rememberDragState(onZoneFraction = 0f)
 
     val allFields = remember(fields) {
         fields.values.flatten().distinctBy { field -> field.id }
     }
-    val enumeratedFields = remember(allFields) {
-        allFields.filter { field -> field.fieldtype == "enumerated" }
-    }
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(onClick = { showAddDialog = true }) {
+            MochiFab(onClick = onAddView) {
                 Icon(Icons.Default.Add, contentDescription = labels.addAction)
             }
         }
@@ -274,58 +277,22 @@ fun ViewListTab(
                     }
                 }
                 val sortedViews = views.sortedBy { view -> view.rank }
-                itemsIndexed(sortedViews, key = { _, view -> view.id }) { index, view ->
+                val viewIds = sortedViews.map { view -> view.id }
+                itemsIndexed(sortedViews, key = { _, view -> view.id }) { _, view ->
                     ViewRow(
                         view = view,
                         allFields = allFields,
                         labels = labels,
-                        canMoveUp = index > 0,
-                        canMoveDown = index < sortedViews.size - 1,
-                        onMoveUp = { onReorderViews(sortedViews.swapped(index, index - 1)) },
-                        onMoveDown = { onReorderViews(sortedViews.swapped(index, index + 1)) },
-                        onEdit = { editingView = view },
-                        onDelete = { deletingView = view }
+                        onEdit = { onEditView(view.id) },
+                        onDelete = { deletingView = view },
+                        dragState = dragState,
+                        viewIds = viewIds,
+                        onReorder = { order -> onReorderViews(order.joinToString(",")) }
                     )
                     HorizontalDivider()
                 }
             }
         }
-    }
-
-    if (showAddDialog) {
-        ViewDialog(
-            title = labels.addDialogTitle,
-            initialView = null,
-            classes = classes,
-            enumeratedFields = enumeratedFields,
-            allFields = allFields,
-            labels = labels,
-            sortOptions = sortOptions,
-            preview = preview,
-            onDismiss = { showAddDialog = false },
-            onSave = { draft ->
-                onCreateView(draft)
-                showAddDialog = false
-            }
-        )
-    }
-
-    editingView?.let { view ->
-        ViewDialog(
-            title = labels.editDialogTitle,
-            initialView = view,
-            classes = classes,
-            enumeratedFields = enumeratedFields,
-            allFields = allFields,
-            labels = labels,
-            sortOptions = sortOptions,
-            preview = preview,
-            onDismiss = { editingView = null },
-            onSave = { draft ->
-                onUpdateView(view.id, draft)
-                editingView = null
-            }
-        )
     }
 
     deletingView?.let { view ->
@@ -344,40 +311,67 @@ fun ViewListTab(
     }
 }
 
-/**
- * The list's ids with the entries at [from] and [to] exchanged, comma-joined
- * the way the reorder endpoint expects.
- */
-private fun List<ViewListItem>.swapped(from: Int, to: Int): String {
-    val reordered = toMutableList()
-    val moved = reordered[to]
-    reordered[to] = reordered[from]
-    reordered[from] = moved
-    return reordered.joinToString(",") { view -> view.id }
-}
 
 @Composable
 private fun ViewRow(
     view: ViewListItem,
     allFields: List<ViewFieldOption>,
     labels: ViewListLabels,
-    canMoveUp: Boolean = false,
-    canMoveDown: Boolean = false,
-    onMoveUp: () -> Unit = {},
-    onMoveDown: () -> Unit = {},
     onEdit: () -> Unit,
-    onDelete: () -> Unit
+    onDelete: () -> Unit,
+    dragState: DragState,
+    viewIds: List<String>,
+    onReorder: (List<String>) -> Unit
 ) {
+    val isDropTarget = dragState.isTarget(view.id) && dragState.draggingItemId != view.id
+    val insertEdge = dragState.targetEdge
+    val insertionColour = MaterialTheme.colorScheme.primary
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .alpha(if (dragState.isDragging(view.id)) 0.4f else 1f)
+            .dropTarget(
+                state = dragState,
+                itemId = view.id,
+                orientation = DropOrientation.Vertical,
+                acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
+                onDrop = { sourceId, edge ->
+                    onReorder(viewIds.reorderedAgainst(sourceId, view.id, edge))
+                }
+            )
+            .reorderActions(
+                ids = viewIds,
+                itemId = view.id,
+                moveUpLabel = labels.moveUp,
+                moveDownLabel = labels.moveDown,
+                onReorder = onReorder
+            )
+            .drawBehind {
+                if (!isDropTarget) return@drawBehind
+                val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                drawLine(
+                    color = insertionColour,
+                    start = Offset(0f, y),
+                    end = Offset(size.width, y),
+                    strokeWidth = 2.dp.toPx()
+                )
+            }
             .clickable(onClick = onEdit)
             .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
+            Icons.Default.DragHandle,
+            contentDescription = labels.dragRow,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier
+                .size(20.dp)
+                .draggableItem(state = dragState, itemId = view.id)
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Icon(
             imageVector = if (view.viewtype == "board") Icons.Default.Dashboard
-            else Icons.Default.FormatListBulleted,
+            else Icons.AutoMirrored.Filled.FormatListBulleted,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.primary,
             modifier = Modifier.size(24.dp)
@@ -405,24 +399,6 @@ private fun ViewRow(
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-        MochiIconButton(onClick = onMoveUp, enabled = canMoveUp, modifier = Modifier.size(32.dp)) {
-            Icon(
-                Icons.Default.KeyboardArrowUp,
-                contentDescription = labels.moveUp,
-                modifier = Modifier.size(18.dp),
-            )
-        }
-        MochiIconButton(
-            onClick = onMoveDown,
-            enabled = canMoveDown,
-            modifier = Modifier.size(32.dp)
-        ) {
-            Icon(
-                Icons.Default.KeyboardArrowDown,
-                contentDescription = labels.moveDown,
-                modifier = Modifier.size(18.dp),
-            )
-        }
         MochiIconButton(onClick = onEdit, modifier = Modifier.size(32.dp)) {
             Icon(
                 Icons.Default.Edit,
@@ -434,244 +410,286 @@ private fun ViewRow(
             Icon(
                 Icons.Default.Delete,
                 contentDescription = stringResource(R.string.common_delete),
-                tint = MaterialTheme.colorScheme.error,
                 modifier = Modifier.size(18.dp)
             )
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+/**
+ * Editable values of a view form, seeded from an existing view or the defaults
+ * for a new one. Hold it with [rememberViewFormState] so a create screen can
+ * read it from its submit button while [ViewForm] edits it.
+ *
+ * @param initialView View being edited, or null for a new view.
+ */
+@Stable
+class ViewFormState(private val initialView: ViewListItem?) {
+
+    /** Name typed into the form. */
+    var name by mutableStateOf(initialView?.name ?: "")
+
+    /** Either `board` or `list`. */
+    var viewtype by mutableStateOf(initialView?.viewtype ?: "board")
+
+    /** Field id driving board columns, blank for none. */
+    var columns by mutableStateOf(initialView?.columns ?: "")
+
+    /** Field id driving board swimlanes, blank for none. */
+    var rows by mutableStateOf(initialView?.rows ?: "")
+
+    /** Field id or pseudo-field to sort on, blank for none. */
+    var sort by mutableStateOf(initialView?.sort ?: "")
+
+    /** Either `asc` or `desc`. */
+    var direction by mutableStateOf(initialView?.direction ?: "asc")
+
+    /** Field id driving a card's border colour, blank for none. */
+    var border by mutableStateOf(initialView?.border ?: "")
+
+    /** Filter expression, blank for none. */
+    var filter by mutableStateOf(initialView?.filter ?: "")
+
+    /** Class ids the view is limited to. */
+    var classes by mutableStateOf(initialView?.classes?.toSet() ?: emptySet())
+
+    /** Whether the form holds enough to save. */
+    val canSave: Boolean
+        get() = name.isNotBlank()
+
+    /** The form's values as a [ViewDraft], with blank entries sent as null. */
+    fun toDraft() = ViewDraft(
+        name = name,
+        viewtype = viewtype,
+        columns = columns.ifBlank { null },
+        rows = rows.ifBlank { null },
+        filter = filter.ifBlank { null },
+        sort = sort.ifBlank { null },
+        direction = direction,
+        classes = classes.joinToString(",").ifBlank { null },
+        border = border.ifBlank { null }
+    )
+
+    /** The view as it would look saved, for the live preview. */
+    fun toPreview() = ViewListItem(
+        id = initialView?.id ?: "preview",
+        name = name.ifBlank { initialView?.name.orEmpty() },
+        viewtype = viewtype,
+        filter = initialView?.filter.orEmpty(),
+        columns = columns,
+        rows = rows,
+        fields = initialView?.fields.orEmpty(),
+        sort = sort,
+        direction = direction,
+        classes = classes.toList(),
+        rank = initialView?.rank ?: 0,
+        border = border
+    )
+}
+
+/**
+ * Remembers a [ViewFormState] for [initialView], reseeded when the view changes.
+ *
+ * @param initialView View being edited, or null for a new view.
+ * @return The remembered form state.
+ */
 @Composable
-private fun ViewDialog(
-    title: String,
-    initialView: ViewListItem?,
+fun rememberViewFormState(initialView: ViewListItem? = null): ViewFormState =
+    remember(initialView) { ViewFormState(initialView) }
+
+/**
+ * The fields of a view: name, type, board grouping, filter, sort and class
+ * limits, with an optional live preview on top. Does not scroll; the caller's
+ * container does.
+ *
+ * @param state Values the form edits.
+ * @param classes Classes offered as the class filter.
+ * @param fields Every field of every class, keyed by class id.
+ * @param labels Feature-specific wording.
+ * @param sortOptions Pseudo-fields offered alongside the sortable fields, as
+ *   id-to-label pairs.
+ * @param modifier Modifier applied to the form's column.
+ * @param preview Optional feature-rendered preview of the view being edited.
+ */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+fun ViewForm(
+    state: ViewFormState,
     classes: List<ClassListItem>,
-    enumeratedFields: List<ViewFieldOption>,
-    allFields: List<ViewFieldOption>,
+    fields: Map<String, List<ViewFieldOption>>,
     labels: ViewListLabels,
     sortOptions: List<Pair<String, String>>,
-    preview: (@Composable (ViewListItem?, Modifier) -> Unit)?,
-    onDismiss: () -> Unit,
-    onSave: (ViewDraft) -> Unit
+    modifier: Modifier = Modifier,
+    preview: (@Composable (ViewListItem?, Modifier) -> Unit)? = null
 ) {
-    var name by remember { mutableStateOf(initialView?.name ?: "") }
-    var viewtype by remember { mutableStateOf(initialView?.viewtype ?: "board") }
-    var columnsField by remember { mutableStateOf(initialView?.columns ?: "") }
-    var rowsField by remember { mutableStateOf(initialView?.rows ?: "") }
-    var sortField by remember { mutableStateOf(initialView?.sort ?: "") }
-    var direction by remember { mutableStateOf(initialView?.direction ?: "asc") }
-    var borderField by remember { mutableStateOf(initialView?.border ?: "") }
-    var filterField by remember { mutableStateOf(initialView?.filter ?: "") }
-    var selectedClasses by remember {
-        mutableStateOf(initialView?.classes?.toSet() ?: emptySet())
+    val allFields = remember(fields) {
+        fields.values.flatten().distinctBy { field -> field.id }
     }
-
+    val enumeratedFields = remember(allFields) {
+        allFields.filter { field -> field.fieldtype == "enumerated" }
+    }
     var columnsExpanded by remember { mutableStateOf(false) }
     var rowsExpanded by remember { mutableStateOf(false) }
     var sortExpanded by remember { mutableStateOf(false) }
     var borderExpanded by remember { mutableStateOf(false) }
 
-    val previewView = ViewListItem(
-        id = initialView?.id ?: "preview",
-        name = name.ifBlank { initialView?.name.orEmpty() },
-        viewtype = viewtype,
-        filter = initialView?.filter.orEmpty(),
-        columns = columnsField,
-        rows = rowsField,
-        fields = initialView?.fields.orEmpty(),
-        sort = sortField,
-        direction = direction,
-        classes = selectedClasses.toList(),
-        rank = initialView?.rank ?: 0,
-        border = borderField
-    )
+    Column(modifier = modifier) {
+        if (preview != null) {
+            preview(state.toPreview(), Modifier)
+            Spacer(modifier = Modifier.height(12.dp))
+        }
+        MochiTextField(
+            value = state.name,
+            onValueChange = { value -> state.name = value },
+            label = { Text(labels.nameLabel) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth()
+        )
 
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = title,
-        content = {
-            Column(
-                modifier = Modifier
-                    .padding(vertical = 4.dp)
-                    .verticalScroll(rememberScrollState())
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Text(labels.typeLabel, style = MaterialTheme.typography.labelMedium)
+        Spacer(modifier = Modifier.height(4.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            SegmentedButton(
+                selected = state.viewtype == "board",
+                onClick = { state.viewtype = "board" },
+                shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2),
+                icon = {
+                    Icon(
+                        Icons.Default.Dashboard,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
             ) {
-                if (preview != null) {
-                    preview(previewView, Modifier)
-                    Spacer(modifier = Modifier.height(12.dp))
-                }
-                MochiTextField(
-                    value = name,
-                    onValueChange = { value -> name = value },
-                    label = { Text(labels.nameLabel) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-
-                Spacer(modifier = Modifier.height(12.dp))
-
-                Text(labels.typeLabel, style = MaterialTheme.typography.labelMedium)
-                Spacer(modifier = Modifier.height(4.dp))
-                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-                    SegmentedButton(
-                        selected = viewtype == "board",
-                        onClick = { viewtype = "board" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2),
-                        icon = {
-                            Icon(
-                                Icons.Default.Dashboard,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp)
-                            )
-                        }
-                    ) {
-                        Text(labels.typeBoard)
-                    }
-                    SegmentedButton(
-                        selected = viewtype == "list",
-                        onClick = { viewtype = "list" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2),
-                        icon = {
-                            Icon(
-                                Icons.Default.FormatListBulleted,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp)
-                            )
-                        }
-                    ) {
-                        Text(labels.typeList)
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(12.dp))
-
-                if (viewtype == "board") {
-                    FieldDropdown(
-                        label = labels.columnsField,
-                        selectedId = columnsField,
-                        fields = enumeratedFields,
-                        noneLabel = labels.none,
-                        expanded = columnsExpanded,
-                        onExpandedChange = { expanded -> columnsExpanded = expanded },
-                        onSelect = { selected -> columnsField = selected }
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                    FieldDropdown(
-                        label = labels.rowsField,
-                        selectedId = rowsField,
-                        fields = enumeratedFields,
-                        noneLabel = labels.none,
-                        expanded = rowsExpanded,
-                        onExpandedChange = { expanded -> rowsExpanded = expanded },
-                        onSelect = { selected -> rowsField = selected },
-                        allowNone = true
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                    FieldDropdown(
-                        label = labels.borderField,
-                        selectedId = borderField,
-                        fields = enumeratedFields,
-                        noneLabel = labels.none,
-                        expanded = borderExpanded,
-                        onExpandedChange = { expanded -> borderExpanded = expanded },
-                        onSelect = { selected -> borderField = selected },
-                        allowNone = true
+                Text(labels.typeBoard)
+            }
+            SegmentedButton(
+                selected = state.viewtype == "list",
+                onClick = { state.viewtype = "list" },
+                shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2),
+                icon = {
+                    Icon(
+                        Icons.AutoMirrored.Filled.FormatListBulleted,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
                     )
                 }
+            ) {
+                Text(labels.typeList)
+            }
+        }
 
-                Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
-                MochiTextField(
-                    value = filterField,
-                    onValueChange = { value -> filterField = value },
-                    label = { Text(labels.filter) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
+        if (state.viewtype == "board") {
+            FieldDropdown(
+                label = labels.columnsField,
+                selectedId = state.columns,
+                fields = enumeratedFields,
+                noneLabel = labels.none,
+                expanded = columnsExpanded,
+                onExpandedChange = { expanded -> columnsExpanded = expanded },
+                onSelect = { selected -> state.columns = selected }
+            )
+            Spacer(modifier = Modifier.height(8.dp))
 
-                Spacer(modifier = Modifier.height(8.dp))
+            FieldDropdown(
+                label = labels.rowsField,
+                selectedId = state.rows,
+                fields = enumeratedFields,
+                noneLabel = labels.none,
+                expanded = rowsExpanded,
+                onExpandedChange = { expanded -> rowsExpanded = expanded },
+                onSelect = { selected -> state.rows = selected },
+                allowNone = true
+            )
+            Spacer(modifier = Modifier.height(8.dp))
 
-                FieldDropdown(
-                    label = labels.sortBy,
-                    selectedId = sortField,
-                    fields = allFields.filter { field ->
-                        field.isSortable || field.fieldtype in listOf("number", "date", "text")
-                    },
-                    noneLabel = labels.none,
-                    expanded = sortExpanded,
-                    onExpandedChange = { expanded -> sortExpanded = expanded },
-                    onSelect = { selected -> sortField = selected },
-                    allowNone = true,
-                    extraOptions = sortOptions
-                )
+            FieldDropdown(
+                label = labels.borderField,
+                selectedId = state.border,
+                fields = enumeratedFields,
+                noneLabel = labels.none,
+                expanded = borderExpanded,
+                onExpandedChange = { expanded -> borderExpanded = expanded },
+                onSelect = { selected -> state.border = selected },
+                allowNone = true
+            )
+        }
 
-                Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
-                Text(labels.direction, style = MaterialTheme.typography.labelMedium)
-                Spacer(modifier = Modifier.height(4.dp))
-                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
-                    SegmentedButton(
-                        selected = direction == "asc",
-                        onClick = { direction = "asc" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2)
-                    ) {
-                        Text(labels.directionAsc)
-                    }
-                    SegmentedButton(
-                        selected = direction == "desc",
-                        onClick = { direction = "desc" },
-                        shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2)
-                    ) {
-                        Text(labels.directionDesc)
-                    }
-                }
+        MochiTextField(
+            value = state.filter,
+            onValueChange = { value -> state.filter = value },
+            label = { Text(labels.filter) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth()
+        )
 
-                if (classes.size > 1) {
-                    Spacer(modifier = Modifier.height(12.dp))
-                    Text(labels.filterClasses, style = MaterialTheme.typography.labelMedium)
-                    Spacer(modifier = Modifier.height(4.dp))
-                    FlowRow(
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalArrangement = Arrangement.spacedBy(4.dp)
-                    ) {
-                        classes.forEach { cls ->
-                            FilterChip(
-                                selected = cls.id in selectedClasses,
-                                onClick = {
-                                    selectedClasses = if (cls.id in selectedClasses) {
-                                        selectedClasses - cls.id
-                                    } else {
-                                        selectedClasses + cls.id
-                                    }
-                                },
-                                label = { Text(cls.name) }
-                            )
-                        }
-                    }
+        Spacer(modifier = Modifier.height(8.dp))
+
+        FieldDropdown(
+            label = labels.sortBy,
+            selectedId = state.sort,
+            fields = allFields.filter { field ->
+                field.isSortable || field.fieldtype in listOf("number", "date", "text")
+            },
+            noneLabel = labels.none,
+            expanded = sortExpanded,
+            onExpandedChange = { expanded -> sortExpanded = expanded },
+            onSelect = { selected -> state.sort = selected },
+            allowNone = true,
+            extraOptions = sortOptions
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(labels.direction, style = MaterialTheme.typography.labelMedium)
+        Spacer(modifier = Modifier.height(4.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            SegmentedButton(
+                selected = state.direction == "asc",
+                onClick = { state.direction = "asc" },
+                shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2)
+            ) {
+                Text(labels.directionAsc)
+            }
+            SegmentedButton(
+                selected = state.direction == "desc",
+                onClick = { state.direction = "desc" },
+                shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2)
+            ) {
+                Text(labels.directionDesc)
+            }
+        }
+
+        if (classes.size > 1) {
+            Spacer(modifier = Modifier.height(12.dp))
+            Text(labels.filterClasses, style = MaterialTheme.typography.labelMedium)
+            Spacer(modifier = Modifier.height(4.dp))
+            FlowRow(
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                classes.forEach { cls ->
+                    FilterChip(
+                        selected = cls.id in state.classes,
+                        onClick = {
+                            state.classes = if (cls.id in state.classes) {
+                                state.classes - cls.id
+                            } else {
+                                state.classes + cls.id
+                            }
+                        },
+                        label = { Text(cls.name) }
+                    )
                 }
             }
-        },
-        confirmText = stringResource(R.string.common_save),
-        onConfirm = {
-            onSave(
-                ViewDraft(
-                    name = name,
-                    viewtype = viewtype,
-                    columns = columnsField.ifBlank { null },
-                    rows = rowsField.ifBlank { null },
-                    filter = filterField.ifBlank { null },
-                    sort = sortField.ifBlank { null },
-                    direction = direction,
-                    classes = selectedClasses.joinToString(",").ifBlank { null },
-                    border = borderField.ifBlank { null }
-                )
-            )
-        },
-        confirmEnabled = name.isNotBlank(),
-        dismissText = stringResource(R.string.common_cancel),
-    )
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -702,7 +720,7 @@ private fun FieldDropdown(
             label = { Text(label) },
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
             modifier = Modifier
-                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
                 .fillMaxWidth()
         )
         ExposedDropdownMenu(

@@ -16,19 +16,16 @@ import org.mochios.crm.model.CrmClass
 @Composable
 fun ClassesTab(
     classes: List<CrmClass>,
-    viewModel: DesignViewModel,
+    onAddClass: () -> Unit,
     onClassClick: (String) -> Unit
 ) {
     ClassListTab(
         classes = classes.map { cls -> ClassListItem(cls.id, cls.name, cls.rank) },
         labels = ClassListLabels(
             empty = stringResource(R.string.crm_classes_empty),
-            addAction = stringResource(R.string.crm_classes_add),
-            addDialogTitle = stringResource(R.string.crm_classes_add_dialog_title),
-            nameLabel = stringResource(R.string.crm_class_name),
-            createAction = stringResource(R.string.crm_classes_create)
+            addAction = stringResource(R.string.crm_classes_add)
         ),
-        onCreateClass = { name -> viewModel.createClass(name) },
+        onAddClass = onAddClass,
         onClassClick = onClassClick
     )
 }

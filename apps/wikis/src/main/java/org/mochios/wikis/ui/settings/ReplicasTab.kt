@@ -167,7 +167,6 @@ private fun ReplicaCard(
                 Icon(
                     Icons.Default.Close,
                     contentDescription = stringResource(R.string.wikis_replicas_remove_confirm_action),
-                    tint = MaterialTheme.colorScheme.error,
                 )
             }
         }

@@ -129,11 +129,11 @@ object PushTransport {
                 }
                 FcmRegistrar.Outcome.REFUSED -> {
                     // The server wants FCM but declined this registration. Keep
-                    // the Firebase token - deleting it would also kill whatever
-                    // registration the server still holds - and take UnifiedPush
-                    // so pushes keep arriving; the memo keeps this from repeating
-                    // on every resume.
-                    Log.w(TAG, "FCM registration refused; falling back to UnifiedPush, keeping the FCM token")
+                    // the Firebase registration - unregistering would also kill
+                    // whatever registration the server still holds - and take
+                    // UnifiedPush so pushes keep arriving; the memo keeps this
+                    // from repeating on every resume.
+                    Log.w(TAG, "FCM registration refused; falling back to UnifiedPush, keeping FCM registered")
                     startUnifiedPush(context, sessionManager, dropFcm = false)
                     recordTransport(context, server, TRANSPORT_UNIFIEDPUSH)
                     return
@@ -151,13 +151,14 @@ object PushTransport {
     }
 
     /**
-     * Tear down all push on sign-out: stops [PushService] and deletes the FCM
-     * token. Clear the session first - deleteToken() fires onNewToken, which
-     * only skips re-registering while no session is active.
+     * Tear down all push on sign-out: stops [PushService] and unregisters from
+     * FCM. Clear the session first - Firebase re-registers on the next start
+     * and fires onRegistered, which only skips re-registering while no session
+     * is active.
      */
     suspend fun tearDown(context: Context) = withContext(Dispatchers.IO) {
         configureMutex.withLock {
-            Log.i(TAG, "tearDown(): stopping push service and clearing FCM token")
+            Log.i(TAG, "tearDown(): stopping push service and unregistering FCM")
             runCatching { PushService.stop(context) }
                 .onFailure { Log.w(TAG, "PushService.stop failed: ${it.message}") }
             runCatching { FcmRegistrar.disconnect(context) }

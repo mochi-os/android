@@ -122,7 +122,6 @@ data class ShareResponse(val link: String = "")
 
 data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
 data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
-data class ClassResponse(val `class`: ProjectClass = ProjectClass())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
 data class FieldResponse(val field: ProjectField = ProjectField())
 data class OptionListResponse(val options: List<FieldOption> = emptyList())
@@ -592,7 +591,7 @@ interface ProjectsApi {
     suspend fun createClass(
         @Path("projectId") projectId: String,
         @Field("name") name: String
-    ): Response<ApiResponse<ClassResponse>>
+    ): Response<ApiResponse<ProjectClass>>
 
     // JSON, not a form: a form field sent empty reads as absent on the server,
     // and clearing the title field back to the default needs "" to arrive.

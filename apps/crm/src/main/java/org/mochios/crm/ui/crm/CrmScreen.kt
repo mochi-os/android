@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -28,9 +27,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.FormatListBulleted
 import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.FilterList
@@ -44,7 +42,6 @@ import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
-import androidx.compose.material.icons.outlined.FormatListBulleted
 import androidx.compose.material.icons.outlined.HomeMax
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
@@ -58,7 +55,6 @@ import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
@@ -74,6 +70,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -90,6 +87,8 @@ import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.files.MIME_CSV
@@ -97,26 +96,25 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.DrawerPlaceholderScreen
-import org.mochios.android.ui.components.MochiSearchTopBar
-import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
+import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.DrawerItem
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.ui.components.NotificationBell
-import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.ui.components.MochiFab
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.ui.components.NotFoundState
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.crm.R
 import org.mochios.crm.model.Crm
 import org.mochios.crm.ui.board.BoardView
@@ -137,6 +135,7 @@ fun CrmScreen(
     onCreateCrm: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
+    onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onCreateObject: (presetValues: Map<String, String>) -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     onLogout: () -> Unit,
@@ -244,6 +243,7 @@ fun CrmScreen(
                     onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                     onSettings = onSettings,
                     onDesign = onDesign,
+                    onAddColumn = onAddColumn,
                     onCreateObject = onCreateObject,
                     onOpenNotifications = onOpenNotifications,
                     initialObjectId = initialObjectId,
@@ -489,6 +489,7 @@ private fun CrmContent(
     onOpenDrawer: () -> Unit,
     onSettings: (String) -> Unit,
     onDesign: (String) -> Unit,
+    onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onCreateObject: (presetValues: Map<String, String>) -> Unit,
     onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
@@ -498,7 +499,14 @@ private fun CrmContent(
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
-    var showAddColumn by remember { mutableStateOf(false) }
+    var columnPending by rememberSaveable { mutableStateOf(false) }
+
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        if (columnPending) {
+            columnPending = false
+            viewModel.refresh()
+        }
+    }
 
     LaunchedEffect(initialObjectId) {
         if (initialObjectId != null) {
@@ -681,7 +689,8 @@ private fun CrmContent(
                                                     if (view.viewtype == "board") {
                                                         Icons.Outlined.Dashboard
                                                     } else {
-                                                        Icons.Outlined.FormatListBulleted
+                                                        Icons.AutoMirrored.Outlined
+                                                            .FormatListBulleted
                                                     },
                                                     contentDescription = null,
                                                 )
@@ -700,7 +709,16 @@ private fun CrmContent(
                                         text = { Text(stringResource(R.string.crm_board_add_column)) },
                                         onClick = {
                                             showOverflow = false
-                                            showAddColumn = true
+                                            val fieldId = activeView.columns
+                                            val classId = details?.fields?.entries
+                                                ?.firstOrNull { (_, fields) ->
+                                                    fields.any { field -> field.id == fieldId }
+                                                }
+                                                ?.key
+                                            if (classId != null) {
+                                                columnPending = true
+                                                onAddColumn(viewModel.crmId, classId, fieldId)
+                                            }
                                         },
                                         leadingIcon = { Icon(Icons.Outlined.ViewColumn, contentDescription = null) },
                                     )
@@ -769,7 +787,7 @@ private fun CrmContent(
             // as, so the form would open with its Create permanently disabled
             // and no way to tell why. Hidden rather than dead.
             if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
-                FloatingActionButton(onClick = { onCreateObject(emptyMap()) }) {
+                MochiFab(onClick = { onCreateObject(emptyMap()) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }
             }
@@ -858,19 +876,6 @@ private fun CrmContent(
         ExportProgressDialog()
     }
 
-    // Add-column dialog (board views). Creates a new option on the board's
-    // grouping field, mirroring web's overflow "Add column".
-    if (showAddColumn && activeView != null && activeView.columns.isNotBlank()) {
-        val columnFieldId = activeView.columns
-        AddColumnDialog(
-            onDismiss = { showAddColumn = false },
-            onAdd = { name, colour ->
-                viewModel.addColumnOption(columnFieldId, name, colour)
-                showAddColumn = false
-            }
-        )
-    }
-
     // Object detail sheet
     if (uiState.selectedObjectId != null && details != null) {
         ObjectDetailSheet(
@@ -956,47 +961,3 @@ private fun ExportProgressDialog() {
     }
 }
 
-// Add a new board column (= a new option on the board's grouping field).
-// Name + a colour, mirroring web's OptionDialog used for "Add column". Boards
-// render the option colour, not its icon, so no icon field here.
-@Composable
-private fun AddColumnDialog(
-    onDismiss: () -> Unit,
-    onAdd: (name: String, colour: String?) -> Unit,
-) {
-    var name by remember { mutableStateOf("") }
-    var colour by remember { mutableStateOf("#3b82f6") }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.crm_board_add_column),
-        content = {
-            // The picker is taller than the dialog on a short screen, so the
-            // body scrolls. Its saturation field consumes its own drags, so
-            // dragging inside it doesn't scroll the dialog out from under it.
-            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                MochiTextField(
-                    value = name,
-                    onValueChange = { value -> name = value },
-                    label = { Text(stringResource(R.string.crm_field_name)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(modifier = Modifier.height(16.dp))
-                Text(
-                    stringResource(R.string.crm_option_color),
-                    style = MaterialTheme.typography.labelMedium
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                ColorPicker(
-                    hex = colour,
-                    onHexChange = { hex -> colour = hex },
-                )
-            }
-        },
-        confirmText = stringResource(MochiR.string.common_add),
-        onConfirm = { onAdd(name.trim(), colour.ifBlank { null }) },
-        confirmEnabled = name.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}

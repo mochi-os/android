@@ -12,7 +12,14 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.projects.ui.design.ClassDetailScreen
+import org.mochios.projects.ui.design.CreateClassScreen
+import org.mochios.projects.ui.design.CreateFieldScreen
+import org.mochios.projects.ui.design.CreateViewScreen
 import org.mochios.projects.ui.design.DesignScreen
+import org.mochios.projects.ui.design.EditViewScreen
+import org.mochios.projects.ui.design.FieldDetailScreen
+import org.mochios.projects.ui.design.OptionScreen
 import org.mochios.projects.ui.find.FindProjectsScreen
 import org.mochios.projects.ui.`object`.DiffViewerScreen
 import org.mochios.android.ui.components.LastViewedStore
@@ -35,6 +42,19 @@ object ProjectsApp {
     const val CREATE_PROJECT = "projects/create"
     const val PROJECT_SETTINGS = "projects/project/{projectId}/settings"
     const val PROJECT_DESIGN = "projects/project/{projectId}/design"
+    const val PROJECT_DESIGN_CLASS = "projects/project/{projectId}/design/class/{classId}"
+    const val PROJECT_DESIGN_CREATE_CLASS = "projects/project/{projectId}/design/create-class"
+    const val PROJECT_DESIGN_VIEW = "projects/project/{projectId}/design/view/{viewId}"
+    const val PROJECT_DESIGN_CREATE_VIEW = "projects/project/{projectId}/design/create-view"
+    const val PROJECT_DESIGN_CREATE_FIELD =
+        "projects/project/{projectId}/design/class/{classId}/create-field"
+    const val PROJECT_DESIGN_OPTION =
+        "projects/project/{projectId}/design/class/{classId}/field/{fieldId}/option" +
+            "?optionId={optionId}"
+    const val PROJECT_ADD_COLUMN =
+        "projects/project/{projectId}/board/class/{classId}/field/{fieldId}/add-column"
+    const val PROJECT_DESIGN_FIELD =
+        "projects/project/{projectId}/design/class/{classId}/field/{fieldId}"
     const val DIFF_VIEWER = "projects/project/{projectId}/diff/{repo}?source={source}&target={target}"
     // Deliberately not `projects/project/{projectId}/object/create`, which the
     // PROJECT_OBJECT pattern above also matches, with objectId='create'.
@@ -45,6 +65,27 @@ object ProjectsApp {
     fun projectObject(projectId: String, objectId: String) = "projects/project/$projectId/object/$objectId"
     fun projectSettings(projectId: String) = "projects/project/$projectId/settings"
     fun projectDesign(projectId: String) = "projects/project/$projectId/design"
+    fun projectDesignClass(projectId: String, classId: String) =
+        "projects/project/$projectId/design/class/$classId"
+    fun projectDesignCreateClass(projectId: String) =
+        "projects/project/$projectId/design/create-class"
+    fun projectDesignView(projectId: String, viewId: String) =
+        "projects/project/$projectId/design/view/$viewId"
+    fun projectDesignCreateView(projectId: String) =
+        "projects/project/$projectId/design/create-view"
+    fun projectDesignCreateField(projectId: String, classId: String) =
+        "projects/project/$projectId/design/class/$classId/create-field"
+    fun projectDesignOption(
+        projectId: String,
+        classId: String,
+        fieldId: String,
+        optionId: String = ""
+    ) =
+        "projects/project/$projectId/design/class/$classId/field/$fieldId/option?optionId=$optionId"
+    fun projectAddColumn(projectId: String, classId: String, fieldId: String) =
+        "projects/project/$projectId/board/class/$classId/field/$fieldId/add-column"
+    fun projectDesignField(projectId: String, classId: String, fieldId: String) =
+        "projects/project/$projectId/design/class/$classId/field/$fieldId"
     /**
      * Diff-viewer route. Branch names carry slashes, so every argument is
      * encoded; a raw one would add path segments and match no route.
@@ -111,6 +152,9 @@ fun NavGraphBuilder.projectsNavGraph(
             onCreateProject = { navController.navigate(ProjectsApp.CREATE_PROJECT) },
             onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
             onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
+            onAddColumn = { id, classId, fieldId ->
+                navController.navigate(ProjectsApp.projectAddColumn(id, classId, fieldId))
+            },
             onViewDiff = { id, repo, source, target ->
                 navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
             },
@@ -153,6 +197,9 @@ fun NavGraphBuilder.projectsNavGraph(
             onCreateProject = { navController.navigate(ProjectsApp.CREATE_PROJECT) },
             onSettings = { id -> navController.navigate(ProjectsApp.projectSettings(id)) },
             onDesign = { id -> navController.navigate(ProjectsApp.projectDesign(id)) },
+            onAddColumn = { id, classId, fieldId ->
+                navController.navigate(ProjectsApp.projectAddColumn(id, classId, fieldId))
+            },
             onViewDiff = { id, repo, source, target ->
                 navController.navigate(ProjectsApp.diffViewer(id, repo, source, target))
             },
@@ -248,9 +295,156 @@ fun NavGraphBuilder.projectsNavGraph(
     composable(
         route = ProjectsApp.PROJECT_DESIGN,
         arguments = listOf(navArgument("projectId") { type = NavType.StringType })
-    ) {
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
         DesignScreen(
             onBack = { navController.popBackStack() },
+            onAddClass = {
+                navController.navigate(ProjectsApp.projectDesignCreateClass(projectId))
+            },
+            onAddView = {
+                navController.navigate(ProjectsApp.projectDesignCreateView(projectId))
+            },
+            onEditView = { viewId ->
+                navController.navigate(ProjectsApp.projectDesignView(projectId, viewId))
+            },
+            onClassClick = { classId ->
+                navController.navigate(ProjectsApp.projectDesignClass(projectId, classId))
+            },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_CLASS,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType }
+        )
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
+        val classId = backStackEntry.arguments?.getString("classId").orEmpty()
+        ClassDetailScreen(
+            onBack = { navController.popBackStack() },
+            onAddField = {
+                navController.navigate(ProjectsApp.projectDesignCreateField(projectId, classId))
+            },
+            onFieldClick = { fieldId ->
+                navController.navigate(
+                    ProjectsApp.projectDesignField(projectId, classId, fieldId)
+                )
+            },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_FIELD,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType },
+            navArgument("fieldId") { type = NavType.StringType }
+        )
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
+        val classId = backStackEntry.arguments?.getString("classId").orEmpty()
+        val fieldId = backStackEntry.arguments?.getString("fieldId").orEmpty()
+        FieldDetailScreen(
+            onBack = { navController.popBackStack() },
+            onAddOption = {
+                navController.navigate(ProjectsApp.projectDesignOption(projectId, classId, fieldId))
+            },
+            onEditOption = { optionId ->
+                navController.navigate(
+                    ProjectsApp.projectDesignOption(projectId, classId, fieldId, optionId)
+                )
+            },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_OPTION,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType },
+            navArgument("fieldId") { type = NavType.StringType },
+            navArgument("optionId") {
+                type = NavType.StringType
+                defaultValue = ""
+            }
+        )
+    ) {
+        OptionScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_ADD_COLUMN,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType },
+            navArgument("fieldId") { type = NavType.StringType }
+        )
+    ) {
+        OptionScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStack() },
+            isColumn = true,
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_CREATE_CLASS,
+        arguments = listOf(navArgument("projectId") { type = NavType.StringType })
+    ) { backStackEntry ->
+        val projectId = backStackEntry.arguments?.getString("projectId").orEmpty()
+        CreateClassScreen(
+            onBack = { navController.popBackStack() },
+            onCreated = { classId ->
+                if (classId.isBlank()) {
+                    navController.popBackStack()
+                } else {
+                    navController.navigate(ProjectsApp.projectDesignClass(projectId, classId)) {
+                        popUpTo(ProjectsApp.PROJECT_DESIGN_CREATE_CLASS) { inclusive = true }
+                    }
+                }
+            },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_VIEW,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("viewId") { type = NavType.StringType }
+        )
+    ) {
+        EditViewScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_CREATE_VIEW,
+        arguments = listOf(navArgument("projectId") { type = NavType.StringType })
+    ) {
+        CreateViewScreen(
+            onBack = { navController.popBackStack() },
+            onCreated = { navController.popBackStack() },
+        )
+    }
+
+    composable(
+        route = ProjectsApp.PROJECT_DESIGN_CREATE_FIELD,
+        arguments = listOf(
+            navArgument("projectId") { type = NavType.StringType },
+            navArgument("classId") { type = NavType.StringType }
+        )
+    ) {
+        CreateFieldScreen(
+            onBack = { navController.popBackStack() },
+            onCreated = { navController.popBackStack() },
         )
     }
 

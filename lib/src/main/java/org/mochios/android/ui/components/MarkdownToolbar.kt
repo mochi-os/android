@@ -15,10 +15,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.FormatListBulleted
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.FormatBold
 import androidx.compose.material.icons.filled.FormatItalic
-import androidx.compose.material.icons.filled.FormatListBulleted
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.Title
 import androidx.compose.material3.Icon
@@ -74,7 +74,7 @@ fun MarkdownToolbar(
         ToolButton(Icons.Filled.Code, R.string.format_code) {
             onBodyChange(body.wrappedIn("`"))
         }
-        ToolButton(Icons.Filled.FormatListBulleted, R.string.format_list) {
+        ToolButton(Icons.AutoMirrored.Filled.FormatListBulleted, R.string.format_list) {
             onBodyChange(body.linesPrefixed("- "))
         }
         actions()

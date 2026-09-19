@@ -25,85 +25,19 @@ fun ViewsTab(
     views: List<ProjectView>,
     classes: List<ProjectClass>,
     fields: Map<String, List<ProjectField>>,
-    viewModel: DesignViewModel
+    viewModel: DesignViewModel,
+    onAddView: () -> Unit,
+    onEditView: (String) -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val projectDetails = uiState.projectDetails
-    val context = LocalContext.current
 
     ViewListTab(
         views = views.map { view -> view.toListItem() },
-        classes = classes.map { cls -> ClassListItem(cls.id, cls.name, cls.rank) },
-        fields = fields.mapValues { (_, classFields) ->
-            classFields.map { field ->
-                ViewFieldOption(field.id, field.name, field.fieldtype, field.isSortable)
-            }
-        },
-        labels = ViewListLabels(
-            addAction = stringResource(R.string.projects_views_add),
-            empty = stringResource(R.string.projects_views_empty),
-            emptySubtitle = stringResource(R.string.projects_views_empty_subtitle),
-            addDialogTitle = stringResource(R.string.projects_views_add_dialog_title),
-            editDialogTitle = stringResource(R.string.projects_views_edit_dialog_title),
-            deleteTitle = stringResource(R.string.projects_views_delete_title),
-            deleteMessage = { viewName ->
-                context.getString(R.string.projects_views_delete_message, viewName)
-            },
-            byField = { fieldName -> context.getString(R.string.projects_views_by, fieldName) },
-            sortedBy = { direction ->
-                val label = if (direction == "desc") R.string.projects_views_direction_desc else R.string.projects_views_direction_asc
-                context.getString(R.string.projects_views_sorted, context.getString(label))
-            },
-            typeBoard = stringResource(R.string.projects_views_type_board),
-            typeList = stringResource(R.string.projects_views_type_list),
-            moveUp = stringResource(R.string.projects_views_move_up),
-            moveDown = stringResource(R.string.projects_views_move_down),
-            nameLabel = stringResource(R.string.projects_class_name),
-            typeLabel = stringResource(R.string.projects_views_type),
-            columnsField = stringResource(R.string.projects_views_columns_field),
-            rowsField = stringResource(R.string.projects_views_rows_field),
-            borderField = stringResource(R.string.projects_views_border_field),
-            filter = stringResource(R.string.projects_views_filter),
-            sortBy = stringResource(R.string.projects_views_sort_by),
-            direction = stringResource(R.string.projects_views_direction),
-            directionAsc = stringResource(R.string.projects_views_direction_asc),
-            directionDesc = stringResource(R.string.projects_views_direction_desc),
-            filterClasses = stringResource(R.string.projects_views_filter_classes),
-            none = stringResource(R.string.projects_create_template_none)
-        ),
-        sortOptions = listOf(
-            "number" to stringResource(R.string.projects_views_sort_number),
-            "created" to stringResource(R.string.projects_views_sort_created),
-            "updated" to stringResource(R.string.projects_views_sort_updated),
-            "rank" to stringResource(R.string.projects_views_sort_rank)
-        ),
-        onCreateView = { draft ->
-            viewModel.createView(
-                name = draft.name,
-                viewtype = draft.viewtype,
-                columns = draft.columns,
-                rows = draft.rows,
-                filter = draft.filter,
-                sort = draft.sort,
-                direction = draft.direction,
-                classes = draft.classes,
-                border = draft.border
-            )
-        },
-        onUpdateView = { viewId, draft ->
-            viewModel.updateView(
-                viewId = viewId,
-                name = draft.name,
-                viewtype = draft.viewtype,
-                columns = draft.columns,
-                rows = draft.rows,
-                filter = draft.filter,
-                sort = draft.sort,
-                direction = draft.direction,
-                classes = draft.classes,
-                border = draft.border
-            )
-        },
+        fields = fields.toViewFieldOptions(),
+        labels = viewListLabels(),
+        onAddView = onAddView,
+        onEditView = onEditView,
         onDeleteView = { viewId -> viewModel.deleteView(viewId) },
         onReorderViews = { order -> viewModel.reorderViews(order) },
         preview = projectDetails?.let { details ->
@@ -118,7 +52,7 @@ fun ViewsTab(
     )
 }
 
-private fun ProjectView.toListItem() = ViewListItem(
+internal fun ProjectView.toListItem() = ViewListItem(
     id = id,
     name = name,
     viewtype = viewtype,
@@ -133,7 +67,7 @@ private fun ProjectView.toListItem() = ViewListItem(
     border = border
 )
 
-private fun ViewListItem.toProjectView() = ProjectView(
+internal fun ViewListItem.toProjectView() = ProjectView(
     id = id,
     name = name,
     viewtype = viewtype,
@@ -146,4 +80,60 @@ private fun ViewListItem.toProjectView() = ProjectView(
     classes = classes,
     rank = rank,
     border = border
+)
+
+internal fun List<ProjectClass>.toClassListItems() =
+    map { cls -> ClassListItem(cls.id, cls.name, cls.rank) }
+
+internal fun Map<String, List<ProjectField>>.toViewFieldOptions() =
+    mapValues { (_, classFields) ->
+        classFields.map { field ->
+            ViewFieldOption(field.id, field.name, field.fieldtype, field.isSortable)
+        }
+    }
+
+/** Wording for the shared view list and view form, in this feature's strings. */
+@Composable
+internal fun viewListLabels(): ViewListLabels {
+    val context = LocalContext.current
+    return ViewListLabels(
+        addAction = stringResource(R.string.projects_views_add),
+        empty = stringResource(R.string.projects_views_empty),
+        emptySubtitle = stringResource(R.string.projects_views_empty_subtitle),
+        deleteTitle = stringResource(R.string.projects_views_delete_title),
+        deleteMessage = { viewName ->
+            context.getString(R.string.projects_views_delete_message, viewName)
+        },
+        byField = { fieldName -> context.getString(R.string.projects_views_by, fieldName) },
+        sortedBy = { direction ->
+            val label = if (direction == "desc") R.string.projects_views_direction_desc else R.string.projects_views_direction_asc
+            context.getString(R.string.projects_views_sorted, context.getString(label))
+        },
+        typeBoard = stringResource(R.string.projects_views_type_board),
+        typeList = stringResource(R.string.projects_views_type_list),
+        dragRow = stringResource(R.string.projects_drag_row),
+        moveUp = stringResource(R.string.projects_views_move_up),
+        moveDown = stringResource(R.string.projects_views_move_down),
+        nameLabel = stringResource(R.string.projects_class_name),
+        typeLabel = stringResource(R.string.projects_views_type),
+        columnsField = stringResource(R.string.projects_views_columns_field),
+        rowsField = stringResource(R.string.projects_views_rows_field),
+        borderField = stringResource(R.string.projects_views_border_field),
+        filter = stringResource(R.string.projects_views_filter),
+        sortBy = stringResource(R.string.projects_views_sort_by),
+        direction = stringResource(R.string.projects_views_direction),
+        directionAsc = stringResource(R.string.projects_views_direction_asc),
+        directionDesc = stringResource(R.string.projects_views_direction_desc),
+        filterClasses = stringResource(R.string.projects_views_filter_classes),
+        none = stringResource(R.string.projects_create_template_none)
+    )
+}
+
+/** Pseudo-fields a view can sort on besides its sortable fields. */
+@Composable
+internal fun viewSortOptions() = listOf(
+    "number" to stringResource(R.string.projects_views_sort_number),
+    "created" to stringResource(R.string.projects_views_sort_created),
+    "updated" to stringResource(R.string.projects_views_sort_updated),
+    "rank" to stringResource(R.string.projects_views_sort_rank)
 )

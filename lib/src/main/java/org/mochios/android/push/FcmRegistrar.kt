@@ -13,6 +13,8 @@ import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -26,10 +28,16 @@ import kotlin.coroutines.resumeWithException
  * Per-server Firebase initialization from the config `push/setup` returns. Uses
  * the default [FirebaseApp] because FirebaseMessaging only exposes
  * getInstance() against it; switching servers tears it down and re-initializes.
+ *
+ * Registers by Firebase Installation ID (FID), the replacement for FCM
+ * registration tokens. The manifest's `firebase_messaging_installation_id_enabled`
+ * flag turns this on, and with it set the token APIs throw.
  */
 object FcmRegistrar {
 
     private const val TAG = "MochiFcmRegistrar"
+
+    private val registerMutex = Mutex()
 
     /**
      * How a registration ended. FRESH and REFUSED made no request: the memo
@@ -58,45 +66,54 @@ object FcmRegistrar {
             return Outcome.FAILED
         }
 
-        val token = try {
-            FirebaseMessaging.getInstance().awaitToken()
+        // register() reuses the existing FID, so the ID read afterwards is the
+        // one FCM now delivers to.
+        val installationId = try {
+            FirebaseMessaging.getInstance().awaitRegister()
+            FirebaseInstallations.getInstance().awaitId()
         } catch (e: Exception) {
-            Log.w(TAG, "FCM token fetch failed: ${e.message}")
+            Log.w(TAG, "FCM registration failed: ${e.message}")
             return Outcome.FAILED
         }
 
-        return register(context, client, server, token)
+        return register(context, client, server, installationId)
     }
 
     /**
-     * Register or refresh an FCM token with the server, resolving the
-     * Installations ID and device name itself so
-     * [MochiFirebaseMessagingService.onNewToken] can reuse it.
+     * Register or refresh this installation with the server, resolving the
+     * device name itself so [MochiFirebaseMessagingService.onRegistered] can
+     * reuse it.
+     *
+     * Serialized: [connect] and [MochiFirebaseMessagingService.onRegistered]
+     * both land here for the same installation, and the one that waits reads
+     * the memo the other just wrote instead of posting a second time.
      */
     suspend fun register(
         context: Context,
         client: OkHttpClient,
         server: String,
-        token: String,
-    ): Outcome {
-        val installId = try {
-            FirebaseInstallations.getInstance().awaitId()
-        } catch (e: Exception) {
-            Log.w(TAG, "Firebase Installations ID fetch failed: ${e.message}")
-            return Outcome.FAILED
-        }
+        installationId: String,
+    ): Outcome = registerMutex.withLock {
+        registerLocked(context, client, server, installationId)
+    }
 
+    private suspend fun registerLocked(
+        context: Context,
+        client: OkHttpClient,
+        server: String,
+        installationId: String,
+    ): Outcome {
         val deps = EntryPointAccessors
             .fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
-        // The memo: an unchanged token was registered on an earlier resume, or
+        // The memo: an unchanged FID was registered on an earlier resume, or
         // was refused and re-posting it would only be refused again.
-        val credential = RegistrationMemo.fingerprint(token, installId)
+        val credential = RegistrationMemo.fingerprint(installationId)
         val store = RegistrationStore(context)
         val now = System.currentTimeMillis()
         when (RegistrationMemo.judge(now, server, PushTransport.TRANSPORT_FCM, credential, store.last(), store.refusal())) {
             RegistrationMemo.Verdict.FRESH -> {
-                Log.i(TAG, "FCM token already registered; not re-posting")
+                Log.i(TAG, "FCM installation already registered; not re-posting")
                 return Outcome.FRESH
             }
             RegistrationMemo.Verdict.REFUSED -> {
@@ -111,8 +128,7 @@ object FcmRegistrar {
                 deps.authRepository(),
                 client,
                 server,
-                token,
-                installId,
+                installationId,
                 label = DeviceName.resolve(context),
                 device = deps.deviceStore().id(),
             )
@@ -127,12 +143,12 @@ object FcmRegistrar {
                         deps.pushAccountStore().store(identity, answer.account)
                     }
                     store.success(registration)
-                    Log.i(TAG, "Registered FCM token")
+                    Log.i(TAG, "Registered FCM installation")
                     Outcome.REGISTERED
                 }
                 answer.refused -> {
-                    // Ours to fix, not to retry: an invalid token, or a wire
-                    // format this build no longer shares with the server.
+                    // Ours to fix, not to retry: an ID the server will not take,
+                    // or a wire format this build no longer shares with it.
                     store.refuse(registration)
                     Log.w(TAG, "/notifications/-/push/register/fcm refused ${answer.code}; not retrying for a day")
                     Outcome.REFUSED
@@ -143,14 +159,14 @@ object FcmRegistrar {
                 }
             }
         } catch (e: Exception) {
-            Log.w(TAG, "Posting FCM token to server failed: ${e.message}")
+            Log.w(TAG, "Posting FCM installation to server failed: ${e.message}")
             Outcome.FAILED
         }
     }
 
     /**
-     * Tear down on logout / server switch. The token stays deliverable on
-     * Google's side until deleted, so drop it and the FirebaseApp too.
+     * Tear down on logout / server switch. The installation stays deliverable
+     * on Google's side until unregistered, so drop it and the FirebaseApp too.
      */
     suspend fun disconnect(context: Context) {
         val app = try {
@@ -159,9 +175,9 @@ object FcmRegistrar {
             return
         }
         try {
-            FirebaseMessaging.getInstance().awaitDeleteToken()
+            FirebaseMessaging.getInstance().awaitUnregister()
         } catch (e: Exception) {
-            Log.w(TAG, "FCM token delete failed: ${e.message}")
+            Log.w(TAG, "FCM unregister failed: ${e.message}")
         }
         try {
             app.delete()
@@ -189,22 +205,22 @@ object FcmRegistrar {
         return FirebaseApp.initializeApp(context, options)
     }
 
-    private suspend fun FirebaseMessaging.awaitToken(): String =
+    private suspend fun FirebaseMessaging.awaitRegister(): Unit =
         suspendCancellableCoroutine { cont ->
-            token.addOnSuccessListener { cont.resume(it) }
-                .addOnFailureListener { cont.resumeWithException(it) }
+            register().addOnSuccessListener { cont.resume(Unit) }
+                .addOnFailureListener { error -> cont.resumeWithException(error) }
         }
 
-    private suspend fun FirebaseMessaging.awaitDeleteToken(): Unit =
+    private suspend fun FirebaseMessaging.awaitUnregister(): Unit =
         suspendCancellableCoroutine { cont ->
-            deleteToken().addOnSuccessListener { cont.resume(Unit) }
-                .addOnFailureListener { cont.resumeWithException(it) }
+            unregister().addOnSuccessListener { cont.resume(Unit) }
+                .addOnFailureListener { error -> cont.resumeWithException(error) }
         }
 
     private suspend fun FirebaseInstallations.awaitId(): String =
         suspendCancellableCoroutine { cont ->
-            id.addOnSuccessListener { cont.resume(it) }
-                .addOnFailureListener { cont.resumeWithException(it) }
+            id.addOnSuccessListener { fid -> cont.resume(fid) }
+                .addOnFailureListener { error -> cont.resumeWithException(error) }
         }
 
     /** The status the server answered, with the push account id when it accepted. */
@@ -212,17 +228,19 @@ object FcmRegistrar {
         authRepository: AuthRepository,
         client: OkHttpClient,
         server: String,
-        token: String,
-        installId: String,
+        installationId: String,
         label: String,
         device: String,
     ): Answer {
         val appToken = authRepository.fetchToken("notifications").getOrNull()
             ?: error("Could not mint notifications app token")
         val url = server.trimEnd('/') + "/notifications/-/push/register/fcm"
+        // The FID goes in `token` as well as `installation`: FCM's send API
+        // accepts an FID in its `token` field while it moves to `fid`, so a
+        // server that still sends by token keeps delivering.
         val body = JSONObject()
-            .put("token", token)
-            .put("installation", installId)
+            .put("token", installationId)
+            .put("installation", installationId)
             .put("label", label)
             .toString()
             .toRequestBody("application/json".toMediaType())
@@ -236,7 +254,7 @@ object FcmRegistrar {
             .build()
         client.newCall(request).execute().use { resp ->
             if (!resp.isSuccessful) return Answer(resp.code, null)
-            val raw = resp.body?.string().orEmpty()
+            val raw = resp.body.string()
             val account = try {
                 JSONObject(raw).optJSONObject("data")
                     ?.optString("id")
