@@ -56,7 +56,7 @@
     <string name="interests_remove">Marağı sil</string>
     <string name="notifprefs_title">Bildiriş üstünlükləri</string>
     <string name="notifprefs_tab_categories">Kateqoriyalar</string>
-    <string name="notifprefs_tab_topics">Cəmi sifarişlər</string>
+    <string name="notifprefs_tab_topics">Mövzular</string>
     <string name="notifprefs_add_category">Kateqoriya əlavə et</string>
     <string name="notifprefs_new_category">Yeni kateqoriya</string>
     <string name="notifprefs_edit_category">Kateqoriyanı redaktə et</string>
@@ -72,7 +72,7 @@
     <string name="notifprefs_topics_empty">Hələ mövzu yoxdur</string>
     <string name="settings_home_system_status">Status</string>
     <string name="system_status_title">Status</string>
-    <string name="system_status_version">Versiya idarəetməsi</string>
+    <string name="system_status_version">Versiya</string>
     <string name="system_status_started">Başladı</string>
     <string name="system_status_update">Hamısını yenilə</string>
     <string name="system_status_refresh">Yenilə</string>
@@ -90,7 +90,7 @@
     <string name="accounts_add">Hesab əlavə et</string>
     <string name="accounts_add_title">Hesab əlavə et</string>
     <string name="accounts_empty">Bağlı hesab yoxdur</string>
-    <string name="accounts_type_label">Mesaj yazın...</string>
+    <string name="accounts_type_label">Növ</string>
     <string name="accounts_field_email">E-poçt</string>
     <string name="accounts_field_model">Model</string>
     <string name="accounts_field_name">Ad</string>

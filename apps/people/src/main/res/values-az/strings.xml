@@ -75,7 +75,7 @@
     <string name="people_sidebar_header">İnsanlar</string>
     <string name="people_open_sidebar">Naviqasiyanı aç</string>
     <string name="people_person_state_friend">Dostlar</string>
-    <string name="people_person_state_self">Artıq söhbətiniz olanlar:</string>
+    <string name="people_person_state_self">Siz</string>
     <string name="people_person_message">Mesaj</string>
     <string name="people_person_accept">Qəbul et</string>
     <string name="people_person_decline">Rədd et</string>
@@ -129,7 +129,7 @@
     <string name="people_contact_region">Bölgə</string>
     <string name="people_contact_postcode">Poçt kodu</string>
     <string name="people_contact_country">Ölkə</string>
-    <string name="people_contact_type">Mesaj yazın...</string>
+    <string name="people_contact_type">Növ</string>
     <string name="people_contact_type_home">Ev</string>
     <string name="people_contact_type_other">Digər</string>
     <string name="people_contact_remove">Sil</string>

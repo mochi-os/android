@@ -25,9 +25,9 @@
     <string name="calendars_reminder_none">Janiwa</string>
     <string name="calendars_day_sunday">Domingo</string>
     <string name="calendars_day_monday">Lunes</string>
-    <string name="calendars_day_tuesday">Tipo</string>
-    <string name="calendars_day_wednesday">Semanax aka uru qalltani</string>
-    <string name="calendars_day_thursday">Pacha formato</string>
+    <string name="calendars_day_tuesday">Martes</string>
+    <string name="calendars_day_wednesday">Miércoles</string>
+    <string name="calendars_day_thursday">Jueves</string>
     <string name="calendars_day_friday">Viernes</string>
     <string name="calendars_day_saturday">Kharminthi</string>
     <string name="calendars_link_replace">Lantiri</string>

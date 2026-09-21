@@ -58,7 +58,7 @@
     <string name="people_profile_markdown_supported">Markdown wakisi</string>
     <string name="people_profile_preview">Nayrqat uñjawi</string>
     <string name="people_profile_upload_avatar">Archivo apayaña</string>
-    <string name="people_profile_upload">.json archivo apayaña</string>
+    <string name="people_profile_upload">Apkataña</string>
     <string name="people_profile_uploading">Apayaskiwa…</string>
     <string name="people_profile_change_banner">Banner mayjt\'ayaña</string>
     <string name="people_profile_no_banner">Jan banner wakichata</string>
@@ -75,7 +75,7 @@
     <string name="people_sidebar_header">Jaqinaka</string>
     <string name="people_open_sidebar">Navegación jist\'arma</string>
     <string name="people_person_state_friend">Masinaka</string>
-    <string name="people_person_state_self">Aka masimamp mä chat utjxiwa</string>
+    <string name="people_person_state_self">Juma</string>
     <string name="people_person_message">Mensaje</string>
     <string name="people_person_accept">Iyawsaña</string>
     <string name="people_person_decline">Jark\'aña</string>

@@ -141,9 +141,9 @@
     <string name="system_setting_auth_totp">אַרײַנקום מיט TOTP אויטענטיפֿיקאַטאָר־אַפּ</string>
     <string name="system_setting_auth_recovery">אַרײַנקום מיט צוריקגעווינס־קאָד</string>
     <string name="system_setting_auth_oauth">אַרײַנקום מיט OAuth 2.0</string>
-    <string name="system_setting_default_theme">פֿאַרשטאַנדלעך טעמע</string>
+    <string name="system_setting_default_theme">סטאַנדאַרד טעמע</string>
     <string name="system_setting_domains_verification">פֿאָדער דאָמיין באַשטעטיקונג</string>
-    <string name="system_setting_email_from">פֿאַרשטאַנדלעך פֿון אַדרעס פֿאַר סיסטעם emails</string>
+    <string name="system_setting_email_from">סטאַנדאַרד פֿון אַדרעס פֿאַר סיסטעם emails</string>
     <string name="system_setting_oauth_public_url">עפֿנטלעכער URL פֿאַר OAuth רעדירעקטס</string>
     <string name="system_setting_oauth_google_client_id">Google קליענט־ID</string>
     <string name="system_setting_oauth_google_client_secret">Google client סוד</string>

@@ -11,7 +11,7 @@
     <string name="calendars_edit">Redaktə et</string>
     <string name="calendars_previous">Əvvəlki</string>
     <string name="calendars_next">Növbəti</string>
-    <string name="calendars_view">Bütün bildirişlərə bax</string>
+    <string name="calendars_view">Bax</string>
     <string name="calendars_view_list">Siyahı</string>
     <string name="calendars_list_search">Axtar</string>
     <string name="calendars_event_untitled">Təsdiqlənməyib</string>
@@ -20,14 +20,14 @@
     <string name="calendars_event_description">Təsvir</string>
     <string name="calendars_repeat_never">Heç vaxt</string>
     <string name="calendars_repeat_monthly">Aylıq</string>
-    <string name="calendars_repeat_yearly">Bəli, məcbur et</string>
+    <string name="calendars_repeat_yearly">İllik</string>
     <string name="calendars_repeat_custom">Fərdi</string>
     <string name="calendars_reminder_none">Heç biri</string>
     <string name="calendars_day_sunday">Bazar</string>
     <string name="calendars_day_monday">Bazar ertəsi</string>
-    <string name="calendars_day_tuesday">Əmr yazın və ya axtarın...</string>
+    <string name="calendars_day_tuesday">Çərşənbə axşamı</string>
     <string name="calendars_day_wednesday">Çərşənbə</string>
-    <string name="calendars_day_thursday">Qalan vaxt</string>
+    <string name="calendars_day_thursday">Cümə axşamı</string>
     <string name="calendars_day_friday">Cümə</string>
     <string name="calendars_day_saturday">Şənbə</string>
     <string name="calendars_link_replace">Əvəz et</string>

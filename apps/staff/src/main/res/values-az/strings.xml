@@ -133,7 +133,7 @@
     <string name="staff_categories_add">Əlavə et</string>
     <string name="staff_categories_col_name">Ad</string>
     <string name="staff_categories_col_status">Status</string>
-    <string name="staff_categories_col_types">URL</string>
+    <string name="staff_categories_col_types">Növlər</string>
     <string name="staff_categories_create">Yarat</string>
     <string name="staff_categories_delete_confirm">Sil</string>
     <string name="staff_categories_delete_desc">%1$s silinsin? Bu əməliyyat geri qaytarıla bilməz.</string>
@@ -219,7 +219,7 @@
     <string name="staff_dashboard_tab_moderation">Moderasiya</string>
     <string name="staff_dashboard_tab_orders">Sifarişlər</string>
     <string name="staff_dashboard_tab_signups">Qeydiyyatlar</string>
-    <string name="staff_dashboard_yes">Siz</string>
+    <string name="staff_dashboard_yes">Bəli</string>
     <string name="staff_disputes_any_status">Bütün statuslar</string>
     <string name="staff_disputes_cancel">Ləğv et</string>
     <string name="staff_disputes_close">Bağla</string>
@@ -330,7 +330,7 @@
     <string name="staff_reports_dialog_title_view">Hesabat ver</string>
     <string name="staff_reports_empty">Hesabat yoxdur</string>
     <string name="staff_reports_filter_status_label">Status</string>
-    <string name="staff_reports_filter_type_label">Mesaj yazın...</string>
+    <string name="staff_reports_filter_type_label">Növ</string>
     <string name="staff_reports_listing_label">Elan #%1$s</string>
     <string name="staff_reports_meta_details">Şikayətçinin məlumatları</string>
     <string name="staff_reports_meta_price">Qiymət</string>
@@ -338,7 +338,7 @@
     <string name="staff_reports_meta_reporter">Hesabatçı</string>
     <string name="staff_reports_meta_seller">Satıcı</string>
     <string name="staff_reports_meta_target">Hədəf</string>
-    <string name="staff_reports_meta_type">Mesaj yazın...</string>
+    <string name="staff_reports_meta_type">Növ</string>
     <string name="staff_reports_notes_label">Qeydlər</string>
     <string name="staff_reports_reason_counterfeit">Saxta və ya oğurlanmış</string>
     <string name="staff_reports_reason_inappropriate">Uyğunsuz məzmun</string>

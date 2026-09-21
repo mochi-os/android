@@ -100,7 +100,7 @@
     <string name="forums_report_submit">Yatiyaña apayaña</string>
     <string name="forums_report_reason_spam">Spam</string>
     <string name="forums_report_reason_harassment">Jaqi t\'aqhisiyaña</string>
-    <string name="forums_report_reason_violence">Voto luraña ukat uñjaña</string>
+    <string name="forums_report_reason_violence">Violencia</string>
     <string name="forums_report_reason_misinformation">Llulla yatiyawi</string>
     <string name="forums_report_reason_offtopic">Jan tema</string>
     <string name="forums_report_reason_other">Yaqha</string>
@@ -234,7 +234,7 @@
     <string name="forums_moderation_reject">Rechazama</string>
     <string name="forums_moderation_report_by">%1$s tuqi</string>
     <string name="forums_moderation_restriction_state_banned">Jark\'ata</string>
-    <string name="forums_moderation_unit_days">predeterminada</string>
+    <string name="forums_moderation_unit_days">urunaka</string>
     <string name="forums_settings_banner_saved">Banner imata</string>
     <string name="forums_settings_access_updated">Mantañ machaqachata</string>
     <string name="forums_settings_access_revoked">Mantanas jark’aqata</string>
@@ -326,7 +326,7 @@
     <string name="forums_moderation_reason_spam">Spam</string>
     <string name="forums_moderation_reason_harassment">Jaqi t\'aqhisiyaña</string>
     <string name="forums_moderation_reason_hate">Uñisiñ aru</string>
-    <string name="forums_moderation_reason_violence">Voto luraña ukat uñjaña</string>
+    <string name="forums_moderation_reason_violence">Violencia</string>
     <string name="forums_moderation_reason_misinformation">Llulla yatiyawi</string>
     <string name="forums_moderation_reason_offtopic">Jan tema</string>
     <string name="forums_moderation_reason_other">Yaqha</string>

@@ -189,7 +189,7 @@
     <string name="system_users_revoke">Aparma</string>
     <string name="system_users_revoke_all">Taqi sesionanak aparma</string>
     <string name="system_users_unknown_browser">Janiw yatxatat dispositivo</string>
-    <string name="system_users_unknown">Janiw yatxatat browser</string>
+    <string name="system_users_unknown">Jan uñt\'ata</string>
     <string name="system_users_previous">Nayrïri</string>
     <string name="system_users_next">Arkiri</string>
     <string name="system_users_empty">Usuarionak jan jikxatasiti</string>
@@ -339,7 +339,7 @@
     <string name="system_status_reachability">Puriñjama</string>
     <string name="system_status_reachability_public">Taqiniru</string>
     <string name="system_status_reachability_private">Imantata</string>
-    <string name="system_status_reachability_unknown">Janiw yatxatat browser</string>
+    <string name="system_status_reachability_unknown">Jan uñt\'ata</string>
     <string name="system_status_relay">Relay tuqi</string>
     <string name="system_status_mesh">Difusión mesh</string>
     <string name="system_status_broadcast">Qhipa difusión</string>

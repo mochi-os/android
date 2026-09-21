@@ -107,7 +107,7 @@
     <string name="settings_display_reset_confirm_title">ריסעט דיספּלאַי?</string>
     <string name="settings_display_reset_confirm_message">דאָס וועט ריסעט די דיספּלאַי באַשטעטיקונגען צו זייער פעלער ווערט.</string>
     <string name="settings_theme_title">טעמע</string>
-    <string name="settings_theme_default">פֿאַרשטאַנדלעך</string>
+    <string name="settings_theme_default">סטאַנדאַרד</string>
     <string name="settings_background">הינטערגרונט</string>
     <string name="settings_background_theme">פֿון טעמע</string>
     <string name="settings_background_off">קיינס</string>

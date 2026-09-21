@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">Ventanan duración</string>
+    <string name="wikis_sidebar_header">Wikinaka</string>
     <string name="wikis_sidebar_all">Taqpach wiki</string>
     <string name="wikis_sidebar_find">Wikinak jikxataña</string>
     <string name="wikis_sidebar_create">Wiki luraña</string>
@@ -16,14 +16,14 @@
     <string name="wikis_page_action_rename">Suti machaqachama</string>
     <string name="wikis_page_action_history">Sarawi</string>
     <string name="wikis_page_action_delete">Chhaqtayaña</string>
-    <string name="wikis_page_action_section_wiki">Wiki ID munaski</string>
+    <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_page_action_search">Thaqhama</string>
     <string name="wikis_page_action_tags">Tags</string>
     <string name="wikis_page_action_recent_changes">Jichhüru mayjt\'awinaka</string>
     <string name="wikis_page_action_new_page">Machaqa página</string>
     <string name="wikis_page_action_settings">Configuración</string>
     <string name="wikis_page_action_unsubscribe">CRM ukatpach suscripción jaytaña?</string>
-    <string name="wikis_title">Ventanan duración</string>
+    <string name="wikis_title">Wikinaka</string>
     <string name="wikis_empty_title">Nayrïr wikim qalltaña</string>
     <string name="wikis_empty_subtitle">Wiki thaqhama suscribiñataki, jan ukax mä luraña pachpa documentación publicañataki.</string>
     <string name="wikis_create_button">Wiki luraña</string>

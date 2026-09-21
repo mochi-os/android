@@ -32,7 +32,7 @@
     <string name="projects_sort_number">Nömrə</string>
     <string name="projects_sort_created">Yaradıldı</string>
     <string name="projects_sort_updated">Yenilənir...</string>
-    <string name="projects_create_object_type">Mesaj yazın...</string>
+    <string name="projects_create_object_type">Növ</string>
     <string name="projects_create_object_title_field">Başlıq</string>
     <string name="projects_create_object_parent">Əsas</string>
     <string name="projects_settings_title">Parametrlər</string>
@@ -47,14 +47,14 @@
     <string name="projects_settings_unsubscribe_title">CRM-dən abunəlikdən çıx</string>
     <string name="projects_settings_unsubscribe_message">Bu layihədən abunəliyi ləğv etmək istədiyinizə əminsiniz?</string>
     <string name="projects_access_level_owner">Sahibi</string>
-    <string name="projects_object_watch">Yalnız izlənilən</string>
+    <string name="projects_object_watch">İzlə</string>
     <string name="projects_object_tab_properties">Xüsusiyyətlər</string>
     <string name="projects_object_tab_comments">Şərhlər</string>
     <string name="projects_object_tab_activity">Fəaliyyət</string>
     <string name="projects_object_tab_requests">Sorğular</string>
     <string name="projects_object_tab_attachments">Qoşmalar</string>
     <string name="projects_object_tab_links">Linklər</string>
-    <string name="projects_watchers_watch">Yalnız izlənilən</string>
+    <string name="projects_watchers_watch">İzlə</string>
     <string name="projects_watchers_unwatch">İzləməyi dayandır</string>
     <string name="projects_parent_label">Əsas</string>
     <string name="projects_parent_search_placeholder">Axtar</string>
@@ -67,7 +67,7 @@
     <string name="projects_links_type_blocked_by">Bloklayıcı</string>
     <string name="projects_links_type_duplicates">Dublikatlar</string>
     <string name="projects_links_no_matches">Uyğun obyekt yoxdur</string>
-    <string name="projects_field_yes">Siz</string>
+    <string name="projects_field_yes">Bəli</string>
     <string name="projects_field_no">Xeyr</string>
     <string name="projects_field_type_checkbox">İşarələmə qutusu</string>
     <string name="projects_comment_save">Saxla</string>
@@ -129,7 +129,7 @@
     <string name="projects_field_type_date">Tarix</string>
     <string name="projects_field_type_checklist">Yoxlama siyahısı</string>
     <string name="projects_field_name">Ad</string>
-    <string name="projects_field_type">Mesaj yazın...</string>
+    <string name="projects_field_type">Növ</string>
     <string name="projects_field_flags">Bayraqlar</string>
     <string name="projects_field_required">Tələb olunur</string>
     <string name="projects_field_position_default">Default</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_add_dialog_title">Görünüş əlavə et</string>
     <string name="projects_views_edit_dialog_title">Görünüşü redaktə et</string>
     <string name="projects_views_delete_title">Görünüşü sil</string>
-    <string name="projects_views_type">Mesaj yazın...</string>
+    <string name="projects_views_type">Növ</string>
     <string name="projects_views_type_board">Lövhə</string>
     <string name="projects_views_type_list">Siyahı</string>
     <string name="projects_views_direction">İstiqamət</string>

@@ -146,7 +146,7 @@
     <string name="market_editor_pricing_pwyw">ਜੋ ਤੁਸੀਂ ਚਾਹੋ ਉਹ ਅਦਾ ਕਰੋ</string>
     <string name="market_editor_pricing_subscription">ਗਾਹਕੀ</string>
     <string name="market_editor_publish">ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ</string>
-    <string name="market_editor_publish_success">ਵਰਜ਼ਨ ਜਾਣਕਾਰੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...</string>
+    <string name="market_editor_publish_success">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>
     <string name="market_editor_reserve">ਰਿਜ਼ਰਵ ਕੀਮਤ</string>
     <string name="market_editor_save">ਸੰਭਾਲੋ</string>
     <string name="market_editor_saved">ਸੰਭਾਲਿਆ ਗਿਆ</string>
@@ -665,7 +665,7 @@
     <string name="market_seller_check_status">ਸਥਿਤੀ ਚੈੱਕ ਕਰੋ</string>
     <string name="market_seller_checking">ਚੈੱਕ ਹੋ ਰਿਹਾ ਹੈ...</string>
     <string name="market_seller_connect_stripe">Stripe ਜੋੜੋ</string>
-    <string name="market_seller_connecting">ਲਾਗਇਨ ਕੀਤਾ</string>
+    <string name="market_seller_connecting">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="market_seller_fee_loading">Mochi ਵਿੱਚ ਲਾਗਇਨ ਕਰੋ</string>
     <string name="market_seller_fee_value">ਪ੍ਰਤੀ ਵਿਕਰੀ %1$s%%</string>
     <string name="market_seller_future_controls_body">ਹੋਰ ਵਿਕਰੇਤਾ ਖਾਤਾ ਨਿਯੰਤਰਣ ਉਪਲਬਧ ਹੋਣ \'ਤੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।</string>
@@ -742,9 +742,9 @@
     <string name="market_audit_listing_approved">ਸਟਾਫ ਦੁਆਰਾ ਮਨਜ਼ੂਰ</string>
     <string name="market_audit_listing_cleared">ਵਿਕਰੇਤਾ ਦੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="market_audit_listing_created">ਫ਼ੀਸ ਦੇ ਵੇਰਵੇ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
-    <string name="market_audit_listing_deleted">ਗਰੁੱਪ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="market_audit_listing_deleted">ਲਿਸਟਿੰਗ ਮਿਟਾਈ ਗਈ</string>
     <string name="market_audit_listing_expired">ਸਮਾਪਤ</string>
-    <string name="market_audit_listing_published">ਵਰਜ਼ਨ ਜਾਣਕਾਰੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...</string>
+    <string name="market_audit_listing_published">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>
     <string name="market_audit_listing_rejected">ਸਟਾਫ ਦੁਆਰਾ ਅਸਵੀਕਾਰ</string>
     <string name="market_audit_listing_relisted">ਮੁੜ-ਸੂਚੀਬੱਧ ਕੀਤਾ</string>
     <string name="market_audit_listing_removed">ਹਟਾਇਆ ਗਿਆ</string>

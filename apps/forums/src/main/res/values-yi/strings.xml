@@ -68,7 +68,7 @@
     <string name="forums_members_empty">קיין מיטגלידער</string>
     <string name="forums_banner_dismiss">אַראָפּזאָגן באַנער</string>
     <string name="forums_ai_mode_tag">טאַג</string>
-    <string name="forums_ai_account_default">פֿאַרשטאַנדלעך קאָנטע</string>
+    <string name="forums_ai_account_default">סטאַנדאַרד קאָנטע</string>
     <string name="forums_ai_prompt_reset">צוריקזעצן צו פֿאַרשטעלונג</string>
     <string name="forums_settings_unsubscribe">אַבאַבאָנירן</string>
     <string name="forums_moderation_title">מאָדעראַציע</string>
@@ -230,7 +230,7 @@
     <string name="forums_access_selected">אויסגעקליבן: %1$s</string>
     <string name="forums_clear">רייניקן</string>
     <string name="forums_ai_account_label">קאָנטע</string>
-    <string name="forums_ai_prompt_default">פֿאַרשטאַנדלעך</string>
+    <string name="forums_ai_prompt_default">סטאַנדאַרד</string>
     <string name="forums_moderation_reject">אָפּזאָגן</string>
     <string name="forums_moderation_report_by">פֿון %1$s</string>
     <string name="forums_moderation_restriction_state_banned">פֿאַרבאָטן</string>

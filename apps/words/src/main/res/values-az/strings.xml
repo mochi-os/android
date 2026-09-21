@@ -18,7 +18,7 @@
     <string name="words_detail_status_game_over">Oyun bitdi</string>
     <string name="words_detail_status_opponent_resigned">Rəqib təslim oldu — qalibsiniz!</string>
     <string name="words_detail_status_you_resigned">Bu söhbətdən silindiniz</string>
-    <string name="words_detail_label_you">Artıq söhbətiniz olanlar:</string>
+    <string name="words_detail_label_you">Siz</string>
     <string name="words_detail_action_shuffle">Rəfi qarışdır</string>
     <string name="words_detail_action_pass">Pas</string>
     <string name="words_detail_action_exchange">Plitələri mübadilə et</string>

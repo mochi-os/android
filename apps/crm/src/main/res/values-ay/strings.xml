@@ -54,7 +54,7 @@
     <string name="crm_links_type_blocked_by">Jark\'ataw</string>
     <string name="crm_links_type_duplicates">Paypachayatanaka</string>
     <string name="crm_links_no_matches">Jan jikxatat objectanaka</string>
-    <string name="crm_field_yes">Jisa, ch\'amañchaña</string>
+    <string name="crm_field_yes">Jisa</string>
     <string name="crm_field_no">Janiwa</string>
     <string name="crm_field_type_checkbox">Checkbox</string>
     <string name="crm_comment_empty">Janira comentarionaka</string>

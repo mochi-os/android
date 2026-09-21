@@ -61,7 +61,7 @@
     <string name="feeds_suggested_credibility_accept">אָננעמען</string>
     <string name="feeds_rss_url_copied">RSS URL קאָפּירט צו קלעמברעט</string>
     <string name="feeds_logout">אַרויסקומען</string>
-    <string name="feeds_ai_account_default">פֿאַרשטאַנדלעך קאָנטע</string>
+    <string name="feeds_ai_account_default">סטאַנדאַרד קאָנטע</string>
     <string name="feeds_ai_mode_off">אומדערלויבט</string>
     <string name="feeds_ai_mode_tag">טאַג</string>
     <string name="feeds_ai_mode_tag_deduplicate">טאַג + דעדופּליצירן</string>
@@ -205,7 +205,7 @@
     <string name="feeds_banner_hint">ברוכים הבאים צו דעם פֿאָרום…</string>
     <string name="feeds_banner_dismiss">אַראָפּזאָגן באַנער</string>
     <string name="feeds_members_search">פֿילטרירן מיטגלידער</string>
-    <string name="feeds_ai_prompt_default">פֿאַרשטאַנדלעך</string>
+    <string name="feeds_ai_prompt_default">סטאַנדאַרד</string>
     <string name="feeds_ai_prompt_custom">אָנגעפּאַסט</string>
     <string name="feeds_ai_prompt_variables">וואַריאַבלען: %1$s</string>
     <string name="feeds_link">לינק</string>

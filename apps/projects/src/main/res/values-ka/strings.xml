@@ -32,7 +32,7 @@
     <string name="projects_sort_number">ნომერი</string>
     <string name="projects_sort_created">შექმნილია</string>
     <string name="projects_sort_updated">განახლებულია</string>
-    <string name="projects_create_object_type">სამშაბათი</string>
+    <string name="projects_create_object_type">ტიპი</string>
     <string name="projects_create_object_title_field">სათაური</string>
     <string name="projects_create_object_parent">მშობელი</string>
     <string name="projects_settings_title">პარამეტრები</string>
@@ -47,14 +47,14 @@
     <string name="projects_settings_unsubscribe_title">ამოუცნობი ანგარიში</string>
     <string name="projects_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ პროექტიდან გამოწერის გაუქმება?</string>
     <string name="projects_access_level_owner">მფლობელი</string>
-    <string name="projects_object_watch">გაფრთხილება გამოიცა</string>
+    <string name="projects_object_watch">თვალყურის დევნება</string>
     <string name="projects_object_tab_properties">თვისებები</string>
     <string name="projects_object_tab_comments">კომენტარები</string>
     <string name="projects_object_tab_activity">აქტივობა</string>
     <string name="projects_object_tab_requests">მოთხოვნები</string>
     <string name="projects_object_tab_attachments">დანართები</string>
     <string name="projects_object_tab_links">ბმულები</string>
-    <string name="projects_watchers_watch">გაფრთხილება გამოიცა</string>
+    <string name="projects_watchers_watch">თვალყურის დევნება</string>
     <string name="projects_watchers_unwatch">ყურების შეწყვეტა</string>
     <string name="projects_parent_label">მშობელი</string>
     <string name="projects_parent_search_placeholder">ძიება</string>
@@ -129,7 +129,7 @@
     <string name="projects_field_type_date">თარიღი</string>
     <string name="projects_field_type_checklist">ჩამონათვალი</string>
     <string name="projects_field_name">სახელი</string>
-    <string name="projects_field_type">სამშაბათი</string>
+    <string name="projects_field_type">ტიპი</string>
     <string name="projects_field_flags">დროშები</string>
     <string name="projects_field_required">აუცილებელი</string>
     <string name="projects_field_position_default">ნაგულისხმევი</string>
@@ -146,7 +146,7 @@
     <string name="projects_views_add_dialog_title">ხედის დამატება</string>
     <string name="projects_views_edit_dialog_title">ხედის რედაქტირება</string>
     <string name="projects_views_delete_title">ხედის წაშლა</string>
-    <string name="projects_views_type">სამშაბათი</string>
+    <string name="projects_views_type">ტიპი</string>
     <string name="projects_views_type_board">დაფა</string>
     <string name="projects_views_type_list">სია</string>
     <string name="projects_views_direction">მიმართულება</string>

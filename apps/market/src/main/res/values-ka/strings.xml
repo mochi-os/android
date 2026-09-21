@@ -53,7 +53,7 @@
     <string name="market_bids_tab_all">ყველა</string>
     <string name="market_bids_tab_lost">დაკარგული</string>
     <string name="market_bids_tab_outbid">გადაჭარბებული ფსონი</string>
-    <string name="market_bids_tab_won">გამარჯვებული ფსონი</string>
+    <string name="market_bids_tab_won">მოგებული</string>
     <string name="market_bids_title">ფსონები</string>
     <string name="market_carousel_main">ფოტო %1$d / %2$d</string>
     <string name="market_channel_name">ბაზარი</string>
@@ -138,7 +138,7 @@
     <string name="market_editor_delete">განცხადების წაშლა</string>
     <string name="market_editor_description">აღწერა</string>
     <string name="market_editor_interval_monthly">ყოველთვიური</string>
-    <string name="market_editor_interval_yearly">X კლიენტის საიდუმლო</string>
+    <string name="market_editor_interval_yearly">ყოველწლიური</string>
     <string name="market_editor_photo_delete">ფოტოს წაშლა</string>
     <string name="market_editor_photo_uploading">იტვირთება...</string>
     <string name="market_editor_photos_add">ფოტოების დამატება</string>
@@ -213,7 +213,7 @@
     <string name="market_filter_sort_price_low">ფასი: დაბლიდან მაღლა</string>
     <string name="market_filter_sort_recent">ყველაზე ახალი</string>
     <string name="market_filter_title">ფილტრები</string>
-    <string name="market_filter_type">სამშაბათი</string>
+    <string name="market_filter_type">ტიპი</string>
     <string name="market_filter_type_digital">ციფრული</string>
     <string name="market_filter_type_physical">ფიზიკური</string>
     <string name="market_listing_detail_already_reported">გაცხადებული</string>

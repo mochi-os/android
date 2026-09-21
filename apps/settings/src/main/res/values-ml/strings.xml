@@ -75,7 +75,7 @@
     <string name="system_status_version">പതിപ്പ്</string>
     <string name="system_status_started">ആരംഭിച്ചു</string>
     <string name="system_status_update">അപ്ഡേറ്റ്</string>
-    <string name="system_status_refresh">റീഫണ്ട് തുക ഓർഡർ മൊത്തത്തെ കവിയുന്നു</string>
+    <string name="system_status_refresh">പുതുക്കുക</string>
     <string name="system_status_install_update">അപ്‌ഡേറ്റ് ഇൻസ്റ്റാൾ ചെയ്യുക</string>
     <string name="system_status_download_installer">ഇൻസ്റ്റാളർ ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org-ൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യുക</string>
@@ -338,8 +338,8 @@
     <string name="system_status_users">ഉപയോക്താക്കൾ</string>
     <string name="system_status_entities">എന്റിറ്റികൾ</string>
     <string name="system_status_reachability">എത്തിച്ചേരൽ</string>
-    <string name="system_status_reachability_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
-    <string name="system_status_reachability_private">തുടരുക</string>
+    <string name="system_status_reachability_public">പൊതു</string>
+    <string name="system_status_reachability_private">സ്വകാര്യം</string>
     <string name="system_status_reachability_unknown">അജ്ഞാതം</string>
     <string name="system_status_relay">റിലേ വഴി</string>
     <string name="system_status_mesh">ബ്രോഡ്കാസ്റ്റ് മെഷ്</string>

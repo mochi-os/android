@@ -39,7 +39,7 @@
     <string name="access_owner">Sahibi</string>
     <string name="access_revoke">Geri çağır</string>
     <string name="access_level_comment">Şərh</string>
-    <string name="access_level_view">Bütün bildirişlərə bax</string>
+    <string name="access_level_view">Bax</string>
     <string name="access_level_none">Heç biri</string>
     <string name="reaction_like">Bəyən</string>
     <string name="reaction_dislike">Bəyənmirəm</string>
@@ -87,9 +87,9 @@
     <string name="settings_time_format">Saat qurşağı</string>
     <string name="settings_week_start">Ağ</string>
     <string name="settings_week_monday">Bazar ertəsi</string>
-    <string name="settings_week_tuesday">Əmr yazın və ya axtarın...</string>
+    <string name="settings_week_tuesday">Çərşənbə axşamı</string>
     <string name="settings_week_wednesday">Çərşənbə</string>
-    <string name="settings_week_thursday">Qalan vaxt</string>
+    <string name="settings_week_thursday">Cümə axşamı</string>
     <string name="settings_week_friday">Cümə</string>
     <string name="settings_week_saturday">Şənbə</string>
     <string name="settings_week_sunday">Bazar</string>
@@ -106,7 +106,7 @@
     <string name="settings_display_reset">Standartlara sıfırla</string>
     <string name="settings_display_reset_confirm_title">Ekranı sıfırlayın?</string>
     <string name="settings_display_reset_confirm_message">Bu, ekran tənzimləmələrini defolt dəyərlərinə sıfırlayacaq.</string>
-    <string name="settings_theme_title">Mövzu yeniləndi</string>
+    <string name="settings_theme_title">Mövzu</string>
     <string name="settings_theme_default">Default</string>
     <string name="settings_background">Fon</string>
     <string name="settings_background_theme">Mövzudan</string>
@@ -114,7 +114,7 @@
     <string name="game_chat_empty">Hələ mesaj yoxdur</string>
     <string name="game_chat_input_placeholder">Axtarmaq üçün yazın...</string>
     <string name="game_chat_send">Mesaj göndər</string>
-    <string name="game_chat_subject_you">Artıq söhbətiniz olanlar:</string>
+    <string name="game_chat_subject_you">Siz</string>
 
     <string name="common_not_saved">Saxlanmadı</string>
 

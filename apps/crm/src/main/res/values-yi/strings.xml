@@ -102,7 +102,7 @@
     <string name="crm_field_type">טיפּ</string>
     <string name="crm_field_flags">פֿאָנען</string>
     <string name="crm_field_required">נייטיק</string>
-    <string name="crm_field_position_default">פֿאַרשטאַנדלעך</string>
+    <string name="crm_field_position_default">סטאַנדאַרד</string>
     <string name="crm_field_position_sidebar">זײַטנשטאַנג</string>
     <string name="crm_field_save">היט ענדערונגען</string>
     <string name="crm_field_options">אָפּציעס</string>

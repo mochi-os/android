@@ -145,7 +145,7 @@
     <string name="market_editor_pricing_fixed">നിശ്ചിത വില</string>
     <string name="market_editor_pricing_pwyw">നിങ്ങൾക്ക് താൽപ്പര്യമുള്ളത് നൽകുക</string>
     <string name="market_editor_pricing_subscription">സബ്സ്ക്രിപ്ഷൻ</string>
-    <string name="market_editor_publish">ലിസ്റ്റിങ് പ്രസിദ്ധീകരിക്കുക</string>
+    <string name="market_editor_publish">പ്രസിദ്ധീകരിക്കുക</string>
     <string name="market_editor_publish_success">ലിസ്റ്റിംഗ് പ്രസിദ്ധീകരിച്ചു</string>
     <string name="market_editor_reserve">റിസർവ് വില</string>
     <string name="market_editor_save">സേവ് ചെയ്യുക</string>
@@ -287,7 +287,7 @@
     <string name="market_purchase_continue_payment">പേയ്മെന്റ് തുടരുക</string>
     <string name="market_purchase_delivery">ഡെലിവറി</string>
     <string name="market_purchase_dispute_details">നിങ്ങളുടെ വിശദാംശങ്ങൾ</string>
-    <string name="market_purchase_dispute_reason">പഴയപടിയാക്കാനുള്ള കാരണം</string>
+    <string name="market_purchase_dispute_reason">കാരണം</string>
     <string name="market_purchase_dispute_resolution">ജീവനക്കാരുടെ പരിഹാരം</string>
     <string name="market_purchase_dispute_title">റീഫണ്ട് അഭ്യർത്ഥിച്ചു</string>
     <string name="market_purchase_download_failed">ഡൗൺലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
@@ -306,7 +306,7 @@
     <string name="market_purchase_review_failed">അവലോകനം സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_purchase_review_hidden">വിൽപ്പനക്കാരൻ നിങ്ങളെ അവലോകനം ചെയ്യുന്നതുവരെ, അല്ലെങ്കിൽ 14 ദിവസത്തിന് ശേഷം മറച്ചിരിക്കും.</string>
     <string name="market_purchase_review_prompt_body">ഭാവി വാങ്ങുന്നവരെ സഹായിക്കുക — ഈ ഓർഡർ എങ്ങനെയായിരുന്നുവെന്ന് പങ്കുവയ്ക്കുക.</string>
-    <string name="market_purchase_review_rating">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
+    <string name="market_purchase_review_rating">റേറ്റിംഗ്</string>
     <string name="market_purchase_review_section">ഒരു അവലോകനം ഇടുക</string>
     <string name="market_purchase_review_submit">അവലോകനം സമർപ്പിക്കുക</string>
     <string name="market_purchase_review_submitted">അവലോകനം സമർപ്പിച്ചു</string>
@@ -321,7 +321,7 @@
     <string name="market_purchases_empty">വാങ്ങലുകളൊന്നുമില്ല</string>
     <string name="market_purchases_order_label">ഓർഡർ #%1$s</string>
     <string name="market_purchases_title">വാങ്ങലുകൾ</string>
-    <string name="market_rating_label">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
+    <string name="market_rating_label">റേറ്റിംഗ്</string>
     <string name="market_rating_no_reviews">അവലോകനങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="market_rating_reviews">(%1$d അവലോകനം)</string>
     <string name="market_refund_amount_label">തുക</string>
@@ -332,12 +332,12 @@
     <string name="market_refund_dialog_failed">റീഫണ്ട് നൽകുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_refund_dialog_reason_duplicate">തനിപ്പകർപ്പ്</string>
     <string name="market_refund_dialog_reason_fraud">വഞ്ചനാപരമായത്</string>
-    <string name="market_refund_dialog_reason_label">പഴയപടിയാക്കാനുള്ള കാരണം</string>
+    <string name="market_refund_dialog_reason_label">കാരണം</string>
     <string name="market_refund_dialog_reason_other">മറ്റുള്ളവ</string>
     <string name="market_refund_dialog_submit">റീഫണ്ട് നൽകുക</string>
     <string name="market_refund_dialog_title">റീഫണ്ട് നൽകുക</string>
     <string name="market_refund_reason_damaged">കേടായത്</string>
-    <string name="market_refund_reason_label">പഴയപടിയാക്കാനുള്ള കാരണം</string>
+    <string name="market_refund_reason_label">കാരണം</string>
     <string name="market_refund_reason_not_as_described">വിവരിച്ചതുപോലെയല്ല</string>
     <string name="market_refund_reason_not_received">ലഭിച്ചില്ല</string>
     <string name="market_refund_reason_other">മറ്റുള്ളവ</string>
@@ -346,7 +346,7 @@
     <string name="market_refund_title">റീഫണ്ട് അഭ്യർത്ഥിക്കുക</string>
     <string name="market_report_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="market_report_dialog_failed">റിപ്പോർട്ട് സമർപ്പിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="market_report_dialog_reason_label">പഴയപടിയാക്കാനുള്ള കാരണം</string>
+    <string name="market_report_dialog_reason_label">കാരണം</string>
     <string name="market_report_dialog_submit">സമർപ്പിക്കുക</string>
     <string name="market_report_dialog_success">ഈ ലിസ്റ്റിങ് റിപ്പോർട്ട് ചെയ്യുക</string>
     <string name="market_report_dialog_title">റിപ്പോർട്ട് പരിഹരിച്ചു</string>

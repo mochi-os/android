@@ -11,8 +11,8 @@
     <string name="forums_create_title">ഫോറം സൃഷ്ടിക്കുക</string>
     <string name="forums_create_name">പേര്</string>
     <string name="forums_create_privacy">സ്വകാര്യതാ നയം</string>
-    <string name="forums_create_private">തുടരുക</string>
-    <string name="forums_create_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
+    <string name="forums_create_private">സ്വകാര്യം</string>
+    <string name="forums_create_public">പൊതു</string>
     <string name="forums_create_action">സൃഷ്ടിക്കുക</string>
     <string name="forums_find_title">ഫോറങ്ങൾ കണ്ടെത്തുക</string>
     <string name="forums_find_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
@@ -48,11 +48,11 @@
     <string name="forums_post_approve">അംഗീകരിക്കുക</string>
     <string name="forums_post_remove">നീക്കം ചെയ്യുക</string>
     <string name="forums_post_restore">പുനഃസ്ഥാപിക്കുക</string>
-    <string name="forums_post_report">റിപ്പോർട്ട് നടപടി സ്വീകരിച്ചു</string>
+    <string name="forums_post_report">റിപ്പോർട്ട് ചെയ്യുക</string>
     <string name="forums_comment_approve">അംഗീകരിക്കുക</string>
     <string name="forums_comment_remove">നീക്കം ചെയ്യുക</string>
     <string name="forums_comment_restore">പുനഃസ്ഥാപിക്കുക</string>
-    <string name="forums_comment_report">റിപ്പോർട്ട് നടപടി സ്വീകരിച്ചു</string>
+    <string name="forums_comment_report">റിപ്പോർട്ട് ചെയ്യുക</string>
     <string name="forums_post_tag_label">ടാഗ്</string>
     <string name="forums_tab_general">പൊതുവായവ</string>
     <string name="forums_tab_access">ആക്സസ്</string>
@@ -95,7 +95,7 @@
     <string name="forums_moderation_post_limit">പോസ്റ്റ് പരിധി</string>
     <string name="forums_moderation_comment_limit">അഭിപ്രായ പരിധി</string>
     <string name="forums_moderation_limit_window">വിൻഡോ ദൈർഘ്യം</string>
-    <string name="forums_report_reason">പഴയപടിയാക്കാനുള്ള കാരണം</string>
+    <string name="forums_report_reason">കാരണം</string>
     <string name="forums_report_details">വിശദാംശങ്ങൾ</string>
     <string name="forums_report_submit">റിപ്പോർട്ട് സമർപ്പിക്കുക</string>
     <string name="forums_report_reason_spam">സ്പാം</string>

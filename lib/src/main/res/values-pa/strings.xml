@@ -63,7 +63,7 @@
     <string name="notifications_clear_all">ਸਭ ਸਾਫ਼ ਕਰੋ</string>
     <string name="settings_title">ਸੈਟਿੰਗਾਂ</string>
     <string name="settings_appearance">ਦਿੱਖ</string>
-    <string name="settings_appearance_light">ਲਿਸਟਿੰਗ ਮਿਟਾਈ ਗਈ</string>
+    <string name="settings_appearance_light">ਲਾਈਟ</string>
     <string name="settings_appearance_dark">ਡਾਰਕ</string>
     <string name="settings_density">ਘਣਤਾ</string>
     <string name="settings_density_compact">ਸੰਖੇਪ</string>
@@ -82,7 +82,7 @@
     <string name="settings_font_size_normal">ਸਧਾਰਨ</string>
     <string name="settings_font_size_large">ਵੱਡਾ</string>
     <string name="settings_font_size_extra_large">ਵਾਧੂ ਵੱਡਾ</string>
-    <string name="settings_language">ਖਰੀਦਦਾਰ ਦਾ ਰੀਵਿਊ ਛੱਡੋ</string>
+    <string name="settings_language">ਭਾਸ਼ਾ</string>
     <string name="settings_date_format">ਮਿਤੀ ਫਾਰਮੈਟ</string>
     <string name="settings_time_format">ਸਮੇਂ ਦਾ ਫਾਰਮੈਟ</string>
     <string name="settings_week_start">ਹਫ਼ਤਾ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ</string>

@@ -21,7 +21,7 @@
     <string name="chat_settings_leave_title">Söhbətdən çıx</string>
     <string name="chat_settings_delete_title">Söhbəti sil</string>
     <string name="chat_members_empty">Üzv yoxdur</string>
-    <string name="chat_members_you">Artıq söhbətiniz olanlar:</string>
+    <string name="chat_members_you">Siz</string>
     <string name="chat_chat_not_found">Söhbət tapılmadı</string>
 
     <string name="chat_message_send">Göndər</string>

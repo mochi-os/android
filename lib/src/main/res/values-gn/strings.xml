@@ -87,11 +87,11 @@
     <string name="settings_time_format">Aravo formato</string>
     <string name="settings_week_start">Arange ojepyrũ</string>
     <string name="settings_week_monday">Arakõi</string>
-    <string name="settings_week_tuesday">Mokõiha</string>
-    <string name="settings_week_wednesday">Mba\'embohopapa</string>
-    <string name="settings_week_thursday">Yvateára</string>
-    <string name="settings_week_friday">Arapokõi</string>
-    <string name="settings_week_saturday">Saturday</string>
+    <string name="settings_week_tuesday">Araapy</string>
+    <string name="settings_week_wednesday">Ararundy</string>
+    <string name="settings_week_thursday">Arapo</string>
+    <string name="settings_week_friday">Arapoteĩ</string>
+    <string name="settings_week_saturday">Arapokõi</string>
     <string name="settings_week_sunday">Arateĩ</string>
     <string name="settings_number_format">Papapy formato</string>
     <string name="settings_units">Pe\'ãha</string>

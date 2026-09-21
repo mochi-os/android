@@ -20,7 +20,7 @@
     <string name="projects_find_title">ਪ੍ਰੋਜੈਕਟ ਲੱਭੋ</string>
     <string name="projects_find_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
     <string name="projects_find_subscribe">ਗਾਹਕ ਬਣੋ</string>
-    <string name="projects_loading">ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ (ਗ਼ਲਤੀਆਂ ਨਾਲ)</string>
+    <string name="projects_loading">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="projects_watched">watched</string>
     <string name="projects_create_object">ਆਬਜੈਕਟ ਬਣਾਓ</string>
     <string name="projects_search">ਖੋਜ</string>
@@ -148,7 +148,7 @@
     <string name="projects_views_delete_title">ਦ੍ਰਿਸ਼ ਮਿਟਾਓ</string>
     <string name="projects_views_type">ਕਿਸਮ</string>
     <string name="projects_views_type_board">ਬੋਰਡ</string>
-    <string name="projects_views_type_list">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>
+    <string name="projects_views_type_list">ਸੂਚੀ</string>
     <string name="projects_views_direction">ਦਿਸ਼ਾ</string>
     <string name="projects_views_sort_number">ਨੰਬਰ</string>
     <string name="projects_views_sort_created">ਬਣਾਇਆ ਗਿਆ</string>

@@ -60,7 +60,7 @@
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_target">Hədəf</string>
-    <string name="forums_access_level_view">Bütün bildirişlərə bax</string>
+    <string name="forums_access_level_view">Bax</string>
     <string name="forums_access_level_vote">Səs ver</string>
     <string name="forums_access_level_comment">Şərh</string>
     <string name="forums_access_level_post">Post</string>
@@ -83,7 +83,7 @@
     <string name="forums_moderation_report_dismiss">Rədd et</string>
     <string name="forums_moderation_restrictions_empty">Məhdudiyyət yoxdur</string>
     <string name="forums_moderation_restriction_remove">Sil</string>
-    <string name="forums_moderation_restriction_type">Mesaj yazın...</string>
+    <string name="forums_moderation_restriction_type">Növ</string>
     <string name="forums_moderation_restriction_type_muted">Sustur</string>
     <string name="forums_moderation_restriction_type_banned">Blokla</string>
     <string name="forums_moderation_section_premoderation">Ön-moderasiya</string>

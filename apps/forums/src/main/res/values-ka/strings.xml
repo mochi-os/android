@@ -83,7 +83,7 @@
     <string name="forums_moderation_report_dismiss">უარყოფა</string>
     <string name="forums_moderation_restrictions_empty">შეზღუდვები არ არის</string>
     <string name="forums_moderation_restriction_remove">წაშლა</string>
-    <string name="forums_moderation_restriction_type">სამშაბათი</string>
+    <string name="forums_moderation_restriction_type">ტიპი</string>
     <string name="forums_moderation_restriction_type_muted">ჩაჩუმება</string>
     <string name="forums_moderation_restriction_type_banned">Ban</string>
     <string name="forums_moderation_section_premoderation">წინასწარი მოდერაცია</string>
@@ -234,7 +234,7 @@
     <string name="forums_moderation_reject">უარყოფა</string>
     <string name="forums_moderation_report_by">%1$s-ის მიხედვით</string>
     <string name="forums_moderation_restriction_state_banned">დაბლოკილი</string>
-    <string name="forums_moderation_unit_days">MCP სერვერებთან დაკავშირება</string>
+    <string name="forums_moderation_unit_days">დღე</string>
     <string name="forums_settings_banner_saved">ბანერი შენახულია</string>
     <string name="forums_settings_access_updated">წვდომა განახლდა</string>
     <string name="forums_settings_access_revoked">წვდომა გაუქმდა</string>

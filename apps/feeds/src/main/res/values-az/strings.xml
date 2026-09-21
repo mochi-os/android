@@ -53,7 +53,7 @@
     <string name="feeds_no_sources">Mənbə yoxdur</string>
     <string name="feeds_edit_source">Mənbəni redaktə et</string>
     <string name="feeds_source_url">ABŞ dolları</string>
-    <string name="feeds_source_type">Mesaj yazın...</string>
+    <string name="feeds_source_type">Növ</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi lenti</string>
     <string name="feeds_source_type_feed_memories">Yaddaşlar</string>

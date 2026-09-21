@@ -166,7 +166,7 @@
     <string name="staff_config_group_stripe">Stripe</string>
     <string name="staff_config_save">Imaña</string>
     <string name="staff_config_saving">Imaski…</string>
-    <string name="staff_config_suffix_days">predeterminada</string>
+    <string name="staff_config_suffix_days">urunaka</string>
     <string name="staff_config_suffix_per100">/ 100</string>
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">Janiw imaña atinkti</string>
@@ -185,7 +185,7 @@
     <string name="staff_dashboard_col_seller">Aljiri</string>
     <string name="staff_dashboard_col_status">Estado</string>
     <string name="staff_dashboard_col_title">Suti campo</string>
-    <string name="staff_dashboard_col_total">Taqpach pidonaka</string>
+    <string name="staff_dashboard_col_total">Taqpacha</string>
     <string name="staff_dashboard_empty_audit">Jan audit qillqata</string>
     <string name="staff_dashboard_empty_listings">Jan jichhüru aljañanaka</string>
     <string name="staff_dashboard_empty_moderation">Jan jichhüru moderación</string>
@@ -208,7 +208,7 @@
     <string name="staff_dashboard_tab_moderation">Moderación</string>
     <string name="staff_dashboard_tab_orders">Ordenanaka</string>
     <string name="staff_dashboard_tab_signups">Inscripcionanaka</string>
-    <string name="staff_dashboard_yes">Jisa, ch\'amañchaña</string>
+    <string name="staff_dashboard_yes">Jisa</string>
     <string name="staff_disputes_any_status">Taqpach estado</string>
     <string name="staff_disputes_cancel">Jaytaña</string>
     <string name="staff_disputes_close">Jist\'antaña</string>
@@ -223,7 +223,7 @@
     <string name="staff_disputes_meta_refunded">Refundata</string>
     <string name="staff_disputes_meta_refunded_partial">Refundata (partial)</string>
     <string name="staff_disputes_meta_seller_no_response">Aljirix janïraw kuts sañaki.</string>
-    <string name="staff_disputes_meta_total">Taqpach pidonaka</string>
+    <string name="staff_disputes_meta_total">Taqpacha</string>
     <string name="staff_disputes_notes_label">Notanaka</string>
     <string name="staff_disputes_reason_damaged">Pakitata</string>
     <string name="staff_disputes_reason_not_as_described">Jan descritakaspas</string>

@@ -79,9 +79,9 @@
     <string name="staff_audit_action_listing_appeal_submitted">ਅਪੀਲ ਜਮ੍ਹਾਂ ਕੀਤੀ ਗਈ</string>
     <string name="staff_audit_action_listing_approved">ਸਟਾਫ ਦੁਆਰਾ ਮਨਜ਼ੂਰ</string>
     <string name="staff_audit_action_listing_created">ਫ਼ੀਸ ਦੇ ਵੇਰਵੇ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
-    <string name="staff_audit_action_listing_deleted">ਗਰੁੱਪ ਲੋਡ ਹੋ ਰਹੇ ਹਨ...</string>
+    <string name="staff_audit_action_listing_deleted">ਲਿਸਟਿੰਗ ਮਿਟਾਈ ਗਈ</string>
     <string name="staff_audit_action_listing_expired">ਸਮਾਪਤ</string>
-    <string name="staff_audit_action_listing_published">ਵਰਜ਼ਨ ਜਾਣਕਾਰੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...</string>
+    <string name="staff_audit_action_listing_published">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>
     <string name="staff_audit_action_listing_rejected">ਸਟਾਫ ਦੁਆਰਾ ਅਸਵੀਕਾਰ</string>
     <string name="staff_audit_action_listing_relisted">ਮੁੜ-ਸੂਚੀਬੱਧ ਕੀਤਾ</string>
     <string name="staff_audit_action_listing_removed">ਹਟਾਇਆ ਗਿਆ</string>

@@ -12,7 +12,7 @@
     <string name="crm_create_action">ਬਣਾਓ</string>
     <string name="crm_find_title">CRM ਲੱਭੋ</string>
     <string name="crm_find_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
-    <string name="crm_loading">ਲਾਗਆਊਟ ਕੀਤਾ ਗਿਆ (ਗ਼ਲਤੀਆਂ ਨਾਲ)</string>
+    <string name="crm_loading">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
     <string name="crm_watched">watched</string>
     <string name="crm_create_object">ਆਬਜੈਕਟ ਬਣਾਓ</string>
     <string name="crm_search">ਖੋਜ</string>
@@ -118,7 +118,7 @@
     <string name="crm_views_delete_title">ਦ੍ਰਿਸ਼ ਮਿਟਾਓ</string>
     <string name="crm_views_type">ਕਿਸਮ</string>
     <string name="crm_views_type_board">ਬੋਰਡ</string>
-    <string name="crm_views_type_list">ਲਿਸਟਿੰਗ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ ਗਈ</string>
+    <string name="crm_views_type_list">ਸੂਚੀ</string>
     <string name="crm_views_direction">ਦਿਸ਼ਾ</string>
     <string name="crm_views_sort_created">ਬਣਾਇਆ ਗਿਆ</string>
     <string name="crm_views_sort_updated">ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>

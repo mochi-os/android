@@ -113,7 +113,7 @@
     <string name="market_checkout_subscription_start_failed">Suscripción qallantañ jan atkiti</string>
     <string name="market_checkout_summary">Orden resumen</string>
     <string name="market_checkout_title">Checkout</string>
-    <string name="market_checkout_total">Taqpach pidonaka</string>
+    <string name="market_checkout_total">Taqpacha</string>
     <string name="market_checkout_winning_bid">Ganata</string>
     <string name="market_condition_new">Machaqa</string>
     <string name="market_condition_refurbished">Refurbished</string>
@@ -335,7 +335,7 @@
     <string name="market_purchase_shipping_line">Apayañ</string>
     <string name="market_purchase_summary">Orden resumen</string>
     <string name="market_purchase_title">Orden</string>
-    <string name="market_purchase_total">Taqpach pidonaka</string>
+    <string name="market_purchase_total">Taqpacha</string>
     <string name="market_purchase_track">Trackiyasa</string>
     <string name="market_purchases_complete_purchase">Alaña tukuyaña</string>
     <string name="market_purchases_empty">Jan alasiwinaka</string>

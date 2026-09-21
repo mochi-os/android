@@ -20,12 +20,12 @@
     <string name="calendars_event_description">აღწერა</string>
     <string name="calendars_repeat_never">არასოდეს</string>
     <string name="calendars_repeat_monthly">ყოველთვიური</string>
-    <string name="calendars_repeat_yearly">X კლიენტის საიდუმლო</string>
+    <string name="calendars_repeat_yearly">ყოველწლიური</string>
     <string name="calendars_repeat_custom">მორგებული</string>
     <string name="calendars_reminder_none">არცერთი</string>
     <string name="calendars_day_sunday">კვირა</string>
     <string name="calendars_day_monday">ორშაბათი</string>
-    <string name="calendars_day_tuesday">სცადეთ სხვა ძიების ტერმინები.</string>
+    <string name="calendars_day_tuesday">სამშაბათი</string>
     <string name="calendars_day_wednesday">ოთხშაბათი</string>
     <string name="calendars_day_thursday">ხუთშაბათი</string>
     <string name="calendars_day_friday">პარასკევი</string>

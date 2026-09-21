@@ -53,7 +53,7 @@
     <string name="feeds_no_sources">წყაროები არ არის</string>
     <string name="feeds_edit_source">წყაროს რედაქტირება</string>
     <string name="feeds_source_url">გაერთიანებული სამეფოს ფუნტი</string>
-    <string name="feeds_source_type">სამშაბათი</string>
+    <string name="feeds_source_type">ტიპი</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi არხი</string>
     <string name="feeds_source_type_feed_memories">მოგონებები</string>

@@ -58,7 +58,7 @@
     <string name="people_profile_markdown_supported">Markdown მხარდაჭერილია</string>
     <string name="people_profile_preview">გადახედვა</string>
     <string name="people_profile_upload_avatar">დასაწყებად ატვირთეთ ფაილი.</string>
-    <string name="people_profile_upload">განახლება მიმდინარეობს...</string>
+    <string name="people_profile_upload">ატვირთვა</string>
     <string name="people_profile_uploading">იტვირთება...</string>
     <string name="people_profile_change_banner">ბანერის შეცვლა</string>
     <string name="people_profile_no_banner">ბანერი არ არის დაყენებული</string>
@@ -129,7 +129,7 @@
     <string name="people_contact_region">რეგიონი</string>
     <string name="people_contact_postcode">საფოსტო კოდი</string>
     <string name="people_contact_country">ქვეყანა</string>
-    <string name="people_contact_type">სამშაბათი</string>
+    <string name="people_contact_type">ტიპი</string>
     <string name="people_contact_type_home">სახლი</string>
     <string name="people_contact_type_other">სხვა</string>
     <string name="people_contact_remove">წაშლა</string>

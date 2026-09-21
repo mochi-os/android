@@ -72,7 +72,7 @@
     <string name="notifprefs_topics_empty">თემები ჯერ არ არის</string>
     <string name="settings_home_system_status">სტატუსი</string>
     <string name="system_status_title">სტატუსი</string>
-    <string name="system_status_version">passkey-ით შემოწმება</string>
+    <string name="system_status_version">ვერსია</string>
     <string name="system_status_started">დაიწყო</string>
     <string name="system_status_update">გადაუმოწმებელი</string>
     <string name="system_status_refresh">განახლება</string>
@@ -90,7 +90,7 @@
     <string name="accounts_add">ანგარიშის დამატება</string>
     <string name="accounts_add_title">ანგარიშის დამატება</string>
     <string name="accounts_empty">დაკავშირებული ანგარიშები არ არის</string>
-    <string name="accounts_type_label">სამშაბათი</string>
+    <string name="accounts_type_label">ტიპი</string>
     <string name="accounts_field_email">ელფოსტა</string>
     <string name="accounts_field_model">მოდელი</string>
     <string name="accounts_field_name">სახელი</string>

@@ -133,7 +133,7 @@
     <string name="staff_categories_add">დამატება</string>
     <string name="staff_categories_col_name">სახელი</string>
     <string name="staff_categories_col_status">სტატუსი</string>
-    <string name="staff_categories_col_types">ჩაწერეთ თქვენი შეტყობინება…</string>
+    <string name="staff_categories_col_types">ტიპები</string>
     <string name="staff_categories_create">შექმნა</string>
     <string name="staff_categories_delete_confirm">წაშლა</string>
     <string name="staff_categories_delete_desc">გსურთ %1$s წაშლა? ამ მოქმედების გაუქმება შეუძლებელია.</string>
@@ -176,7 +176,7 @@
     <string name="staff_config_group_stripe">Stripe</string>
     <string name="staff_config_save">შენახვა</string>
     <string name="staff_config_saving">შენახვა…</string>
-    <string name="staff_config_suffix_days">MCP სერვერებთან დაკავშირება</string>
+    <string name="staff_config_suffix_days">დღე</string>
     <string name="staff_config_suffix_per100">/ 100</string>
     <string name="staff_config_suffix_percent">%</string>
     <string name="staff_config_toast_save_failed">შენახვა ვერ მოხერხდა</string>
@@ -322,14 +322,14 @@
     <string name="staff_reports_dialog_title_view">ანგარიში</string>
     <string name="staff_reports_empty">ანგარიშები არ არის</string>
     <string name="staff_reports_filter_status_label">სტატუსი</string>
-    <string name="staff_reports_filter_type_label">სამშაბათი</string>
+    <string name="staff_reports_filter_type_label">ტიპი</string>
     <string name="staff_reports_listing_label">განცხადება #%1$s</string>
     <string name="staff_reports_meta_price">ფასი</string>
     <string name="staff_reports_meta_reason">მიზეზი</string>
     <string name="staff_reports_meta_reporter">მოანგარიშე</string>
     <string name="staff_reports_meta_seller">გამყიდველი</string>
     <string name="staff_reports_meta_target">სამიზნე</string>
-    <string name="staff_reports_meta_type">სამშაბათი</string>
+    <string name="staff_reports_meta_type">ტიპი</string>
     <string name="staff_reports_notes_label">შენიშვნები</string>
     <string name="staff_reports_reason_counterfeit">ყალბი ან მოპარული</string>
     <string name="staff_reports_reason_inappropriate">შეუსაბამო შინაარსი</string>

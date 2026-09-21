@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wikis_sidebar_header">ვიკი სინქრონიზდა</string>
+    <string name="wikis_sidebar_header">ვიკები</string>
     <string name="wikis_sidebar_all">ყველა wiki</string>
     <string name="wikis_sidebar_find">ვიკების ძიება</string>
     <string name="wikis_sidebar_create">wiki-ის შექმნა</string>
@@ -16,14 +16,14 @@
     <string name="wikis_page_action_rename">სახელის შეცვლა</string>
     <string name="wikis_page_action_history">ისტორია</string>
     <string name="wikis_page_action_delete">წაშლა</string>
-    <string name="wikis_page_action_section_wiki">რატომ უნდა გადაიხედოს ეს ლისტინგი?</string>
+    <string name="wikis_page_action_section_wiki">ვიკი</string>
     <string name="wikis_page_action_search">ძიება</string>
     <string name="wikis_page_action_tags">ტეგები</string>
     <string name="wikis_page_action_recent_changes">ბოლო ცვლილებები</string>
     <string name="wikis_page_action_new_page">ახალი გვერდი</string>
     <string name="wikis_page_action_settings">პარამეტრები</string>
     <string name="wikis_page_action_unsubscribe">ამოუცნობი ანგარიში</string>
-    <string name="wikis_title">ვიკი სინქრონიზდა</string>
+    <string name="wikis_title">ვიკები</string>
     <string name="wikis_empty_title">დაიწყეთ თქვენი პირველი ვიკი</string>
     <string name="wikis_empty_subtitle">მოძებნეთ ვიკი გამოსაწერად ან შექმენით ერთი თქვენი დოკუმენტაციის გამოსაქვეყნებლად.</string>
     <string name="wikis_create_button">wiki-ის შექმნა</string>

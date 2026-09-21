@@ -25,7 +25,7 @@
     <string name="crm_sort_created">შექმნილია</string>
     <string name="crm_sort_updated">განახლებულია</string>
     <string name="crm_create_object_title">ობიექტის შექმნა</string>
-    <string name="crm_create_object_type">სამშაბათი</string>
+    <string name="crm_create_object_type">ტიპი</string>
     <string name="crm_create_object_parent">მშობელი</string>
     <string name="crm_settings_title">პარამეტრები</string>
     <string name="crm_settings_tab_general">ზოგადი</string>
@@ -39,7 +39,7 @@
     <string name="crm_settings_unsubscribe_title">ამოუცნობი ანგარიში</string>
     <string name="crm_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ CRM-დან გამოწერის გაუქმება?</string>
     <string name="crm_access_level_owner">მფლობელი</string>
-    <string name="crm_object_watch">გაფრთხილება გამოიცა</string>
+    <string name="crm_object_watch">თვალყურის დევნება</string>
     <string name="crm_object_tab_properties">თვისებები</string>
     <string name="crm_object_tab_comments">კომენტარები</string>
     <string name="crm_object_tab_activity">აქტივობა</string>
@@ -99,7 +99,7 @@
     <string name="crm_field_type_date">თარიღი</string>
     <string name="crm_field_type_checklist">ჩამონათვალი</string>
     <string name="crm_field_name">სახელი</string>
-    <string name="crm_field_type">სამშაბათი</string>
+    <string name="crm_field_type">ტიპი</string>
     <string name="crm_field_flags">დროშები</string>
     <string name="crm_field_required">აუცილებელი</string>
     <string name="crm_field_position_default">ნაგულისხმევი</string>
@@ -116,7 +116,7 @@
     <string name="crm_views_add_dialog_title">ხედის დამატება</string>
     <string name="crm_views_edit_dialog_title">ხედის რედაქტირება</string>
     <string name="crm_views_delete_title">ხედის წაშლა</string>
-    <string name="crm_views_type">სამშაბათი</string>
+    <string name="crm_views_type">ტიპი</string>
     <string name="crm_views_type_board">დაფა</string>
     <string name="crm_views_type_list">სია</string>
     <string name="crm_views_direction">მიმართულება</string>

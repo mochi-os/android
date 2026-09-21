@@ -13,8 +13,8 @@
     <string name="projects_create_description">വിവരണം</string>
     <string name="projects_create_prefix">പ്രിഫിക്സ്</string>
     <string name="projects_create_privacy">സ്വകാര്യതാ നയം</string>
-    <string name="projects_create_private">തുടരുക</string>
-    <string name="projects_create_public">OAuth redirects-കൾക്കായുള്ള പൊതു URL</string>
+    <string name="projects_create_private">സ്വകാര്യം</string>
+    <string name="projects_create_public">പൊതു</string>
     <string name="projects_create_template_none">ഒന്നുമില്ല</string>
     <string name="projects_create_action">സൃഷ്ടിക്കുക</string>
     <string name="projects_find_title">പ്രോജക്റ്റുകൾ കണ്ടെത്തുക</string>

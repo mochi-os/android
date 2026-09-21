@@ -87,14 +87,14 @@
     <string name="settings_time_format">Pacha qhipart\'i</string>
     <string name="settings_week_start">Semana qalltañ uru</string>
     <string name="settings_week_monday">Lunes</string>
-    <string name="settings_week_tuesday">Tipo</string>
-    <string name="settings_week_wednesday">Semanax aka uru qalltani</string>
-    <string name="settings_week_thursday">Pacha formato</string>
+    <string name="settings_week_tuesday">Martes</string>
+    <string name="settings_week_wednesday">Miércoles</string>
+    <string name="settings_week_thursday">Jueves</string>
     <string name="settings_week_friday">Viernes</string>
     <string name="settings_week_saturday">Kharminthi</string>
     <string name="settings_week_sunday">Domingo</string>
     <string name="settings_number_format">Jakhu formato</string>
-    <string name="settings_units">Janiw yatxatatakiti</string>
+    <string name="settings_units">Unidadanaka</string>
     <string name="settings_units_metric">Métrico</string>
     <string name="settings_units_imperial">Imperial</string>
     <string name="settings_time_zone">Pacha jakhuna</string>
@@ -106,7 +106,7 @@
     <string name="settings_display_reset">Defaultanakar kutintayama</string>
     <string name="settings_display_reset_confirm_title">Uñjañ tukuypiman kutiyañ?</string>
     <string name="settings_display_reset_confirm_message">Aka uñjañ chimpunakx tukuypiman kutiyaniwa.</string>
-    <string name="settings_theme_title">Tema Configuración</string>
+    <string name="settings_theme_title">Tema</string>
     <string name="settings_theme_default">Default</string>
     <string name="settings_background">Qhipa</string>
     <string name="settings_background_theme">Temata</string>
@@ -114,7 +114,7 @@
     <string name="game_chat_empty">Janira mensajenak</string>
     <string name="game_chat_input_placeholder">Mä mensaje qillqam…</string>
     <string name="game_chat_send">Mensaje apayaña</string>
-    <string name="game_chat_subject_you">Aka masimamp mä chat utjxiwa</string>
+    <string name="game_chat_subject_you">Juma</string>
 
 
     <string name="app_brand">Mochi</string>
@@ -230,7 +230,7 @@
     <string name="stepup_use_passkey">Passkey ukma apnaqama</string>
     <string name="stepup_send_email">Email apayaña</string>
     <string name="stepup_resend_email">Correo mayampi apaña</string>
-    <string name="stepup_verify">Verificaña ukat habilitaña</string>
+    <string name="stepup_verify">Verificaña</string>
     <string name="stepup_continue_with">%1$s ukampi sarantañani</string>
     <string name="stepup_error_start">Janiw wasita yatiyaña qalltañ atkchiti. Mira wasitat yant\'asma.</string>
     <string name="stepup_error_code">Uka codigox jan walikiti jan ukax tukutawa.</string>
