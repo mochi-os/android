@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Àwọn ìfitónilétí nípa ìgbésẹ̀ Go, ìkọjá, ìfilọ̀ àṣepé àti àbájáde eré.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
+    <string name="go_sidebar_active">Àwọn Eré Tó Ń Lọ</string>
     <string name="go_empty_active">Kò sí eré tí ń lọ lọ́wọ́ síbẹ̀.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Eré Go tuntun</string>

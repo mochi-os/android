@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">Otkaži pretplatu</string>
     <string name="wikis_unsubscribe_success">Pretplata otkazana</string>
     <string name="wikis_subscribe_failed">Pretplata nije uspjela</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">RSS kanal</string>
     <string name="wikis_rss_changes">Promjene</string>
     <string name="wikis_rss_comments">Komentari</string>
     <string name="wikis_rss_both">Promjene i komentari</string>

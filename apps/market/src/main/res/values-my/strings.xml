@@ -157,7 +157,7 @@
     <string name="market_editor_section_location">တည်နေရာ</string>
     <string name="market_editor_section_photos">ဓာတ်ပုံများ</string>
     <string name="market_editor_section_pricing">စျေးနှုန်း</string>
-    <string name="market_editor_section_tags">Tags</string>
+    <string name="market_editor_section_tags">တက်ဂ်များ</string>
     <string name="market_editor_shipping">ပို့ဆောင်ခြင်း</string>
     <string name="market_editor_stripe_banner_action">Stripe ချိတ်ဆက်မည်</string>
     <string name="market_editor_title">ခေါင်းစဉ်</string>
@@ -236,7 +236,7 @@
     <string name="market_listing_detail_share">ကြော်ငြာ မျှဝေ</string>
     <string name="market_listing_detail_shipping_heading">ပို့ဆောင်ခြင်း</string>
     <string name="market_listing_detail_subscribe">Subscribe လုပ်မည်</string>
-    <string name="market_listing_detail_tags_heading">Tags</string>
+    <string name="market_listing_detail_tags_heading">တက်ဂ်များ</string>
     <string name="market_listing_detail_title">စာရင်း</string>
     <string name="market_listing_detail_unsave">သိမ်းပြီး</string>
     <string name="market_listing_detail_verified">အတည်ပြုပြီး</string>

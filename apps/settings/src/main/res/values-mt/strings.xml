@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Preferenzi tan-notifika</string>
     <string name="settings_home_accounts">Kontijiet konnessi</string>
     <string name="settings_home_interests">Interessi</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Ċwievet tal-aċċess</string>
     <string name="account_passkey_register">Żid passkey</string>
     <string name="account_passkey_delete_title">Tħassar passkey?</string>
     <string name="account_section_totp">App tal-awtentikazzjoni</string>

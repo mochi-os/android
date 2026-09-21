@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">ค่ากำหนดการแจ้งเตือน</string>
     <string name="settings_home_accounts">บัญชีที่เชื่อมต่อ</string>
     <string name="settings_home_interests">ความสนใจ</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">พาสคีย์</string>
     <string name="account_passkey_register">เพิ่ม Passkey</string>
     <string name="account_passkey_delete_title">ลบ Passkey หรือไม่?</string>
     <string name="account_section_totp">แอป Authenticator</string>
@@ -314,7 +314,7 @@
     <string name="login_title">เข้าสู่ระบบ</string>
     <string name="login_section_methods">วิธีการเข้าสู่ระบบ</string>
     <string name="login_method_email">รหัสอีเมล</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">พาสคีย์</string>
     <string name="login_method_totp">แอป Authenticator</string>
     <string name="login_method_oauth">เข้าสู่ระบบด้วยบุคคลที่สาม</string>
     <string name="login_method_recovery">รหัสกู้คืน</string>
@@ -361,7 +361,7 @@
     <string name="accounts_provider_mcp">เซิร์ฟเวอร์ MCP</string>
     <string name="accounts_provider_unifiedpush">การแจ้งเตือนแบบพุช</string>
     <string name="accounts_provider_url">URL ภายนอก</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi เว็บ</string>
     <string name="accounts_verified">ยืนยันบัญชีแล้ว</string>
     <string name="accounts_verify_invalid">รหัสยืนยันไม่ถูกต้อง</string>
     <string name="accounts_verify_sent">ส่งรหัสยืนยันแล้ว</string>

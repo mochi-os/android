@@ -31,7 +31,7 @@
     <string name="common_copy">Copiaña</string>
     <string name="common_copied">Clipboard-ru copiata</string>
     <string name="comment_edited">(askichata)</string>
-    <string name="comment_reply">Reply</string>
+    <string name="comment_reply">Jaysaña</string>
     <string name="person_picker_search">Usuarionak thaqhama</string>
     <string name="place_picker_no_results">Cheqanak jan jikxatasiti</string>
     <string name="discovery_recommended">Recomendata</string>
@@ -137,7 +137,7 @@
     <string name="auth_login_title">Mochi ukar mantam</string>
     <string name="auth_next">Jutiri</string>
     <string name="auth_or_log_in_with">Jan ukax akampi mantam</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Mantañ llawi</string>
     <string name="auth_use_passkey">Mä passkey apnaqam</string>
     <string name="auth_email_me_a_code">Mä chimpu korrewar apayanita</string>
     <string name="auth_or_enter_authenticator_code">Jan ukax authenticator chimpu uchaña</string>

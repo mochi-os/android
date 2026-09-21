@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">ចំណូលចិត្តការជូនដំណឹង</string>
     <string name="settings_home_accounts">គណនីដែលបានភ្ជាប់</string>
     <string name="settings_home_interests">ចំណាប់អារម្មណ៍</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">កូនសោចូល</string>
     <string name="account_passkey_register">បន្ថែមកូនសោ</string>
     <string name="account_passkey_delete_title">លុបកូនសោ?</string>
     <string name="account_section_totp">កម្មវិធី Authenticator</string>
@@ -313,7 +313,7 @@
     <string name="login_title">ចូល</string>
     <string name="login_section_methods">វិធីសាស្ត្រចូល</string>
     <string name="login_method_email">កូដអ៊ីមែល</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">សោសម្ងាត់</string>
     <string name="login_method_totp">កម្មវិធី Authenticator</string>
     <string name="login_method_oauth">ការចូលពីភាគីទីបី</string>
     <string name="login_method_recovery">កូដស្តារ</string>

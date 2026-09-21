@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Sunan nunawa</string>
     <string name="projects_auth_verification_failed">Tabbatarwa ya gaza</string>
-    <string name="projects_list_title">Projects</string>
+    <string name="projects_list_title">Ayyuka</string>
     <string name="projects_list_close_search">Rufe bincike</string>
     <string name="projects_list_search">Bincika</string>
     <string name="projects_list_find">Nemo projects</string>

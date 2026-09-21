@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Preferências de notificação</string>
     <string name="settings_home_accounts">Contas ligadas</string>
     <string name="settings_home_interests">Interesses</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Chaves de acesso</string>
     <string name="account_passkey_register">Adicionar chave de acesso</string>
     <string name="account_passkey_delete_title">Eliminar chave de acesso?</string>
     <string name="account_section_totp">Aplicação autenticadora</string>
@@ -316,7 +316,7 @@
     <string name="login_title">Iniciar sessão</string>
     <string name="login_section_methods">Métodos de início de sessão</string>
     <string name="login_method_email">Código por email</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Chave de acesso</string>
     <string name="login_method_totp">Aplicação autenticadora</string>
     <string name="login_method_oauth">Início de sessão de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperação</string>

@@ -314,7 +314,7 @@
     <string name="login_title">Asup</string>
     <string name="login_section_methods">Cara asup</string>
     <string name="login_method_email">Kode surélék</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Konci akses</string>
     <string name="login_method_totp">Aplikasi authenticator</string>
     <string name="login_method_oauth">Asup pihak katilu</string>
     <string name="login_method_recovery">Kode pamulihan</string>

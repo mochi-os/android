@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">ਵਿਕੀ ਲਿੰਕ</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">ਲਿੰਕ</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
     <string name="wikis_search_placeholder">wiki ਖੋਜੋ…</string>
     <string name="wikis_unsubscribe_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ %1$s ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">ਟਿੱਪਣੀ ਲਿਖੋ…</string>
     <string name="wikis_comment_form_placeholder_reply">ਜਵਾਬ ਲਿਖੋ…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">ਭੇਜੋ</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">ਆਪਣੀ ਸਮੱਗਰੀ ਇੱਥੇ Markdown ਵਰਤ ਕੇ ਲਿਖੋ…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">ਇਸ ਪੰਨੇ ਵਿੱਚ ਫਾਈਲਾਂ ਜੋੜਨ ਲਈ ਅੱਪਲੋਡ ਦਬਾਓ।</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">ਨਾਮ ਸੰਭਾਲੋ</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>

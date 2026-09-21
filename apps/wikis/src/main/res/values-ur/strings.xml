@@ -33,7 +33,7 @@
     <string name="wikis_unsubscribe_confirm_title">ان سبسکرائب کریں</string>
     <string name="wikis_unsubscribe_success">ان سبسکرائب ہو گیا</string>
     <string name="wikis_subscribe_failed">سبسکرائب کرنے میں ناکامی</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">RSS فیڈ</string>
     <string name="wikis_rss_changes">تبدیلیاں</string>
     <string name="wikis_rss_comments">تبصرے</string>
     <string name="wikis_rss_both">تبدیلیاں اور تبصرے</string>

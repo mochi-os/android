@@ -314,7 +314,7 @@
     <string name="login_title">登入</string>
     <string name="login_section_methods">登入方式</string>
     <string name="login_method_email">電子郵件代碼</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">通行密鑰</string>
     <string name="login_method_totp">驗證器應用程式</string>
     <string name="login_method_oauth">第三方登入</string>
     <string name="login_method_recovery">復原代碼</string>
@@ -361,7 +361,7 @@
     <string name="accounts_provider_mcp">MCP 伺服器</string>
     <string name="accounts_provider_unifiedpush">推播通知</string>
     <string name="accounts_provider_url">外部網址</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi 網頁版</string>
     <string name="accounts_verified">帳戶已驗證</string>
     <string name="accounts_verify_invalid">無效的驗證碼</string>
     <string name="accounts_verify_sent">驗證碼已傳送</string>

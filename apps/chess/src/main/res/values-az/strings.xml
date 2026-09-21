@@ -46,7 +46,7 @@
     <string name="chess_status_resigned_you">Təslim oldunuz — %1$s qazandı</string>
     <string name="chess_status_resigned_opponent">%1$s təslim oldu — siz qazandınız!</string>
     <string name="chess_status_check_opponent_move">Şah — %1$s-ın gedişi</string>
-    <string name="chess_status_opponent_move">ayda %1$s</string>
+    <string name="chess_status_opponent_move">%1$s-in gedişi</string>
     <string name="chess_piece_king">Şah</string>
     <string name="chess_piece_queen">Vəzir</string>
     <string name="chess_piece_rook">Top</string>

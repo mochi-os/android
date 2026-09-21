@@ -16,7 +16,7 @@
     <string name="staff_accounts_empty">Walang nakitang account</string>
     <string name="staff_accounts_filter_seller_label">Nagbebenta</string>
     <string name="staff_accounts_filter_status_label">Status</string>
-    <string name="staff_accounts_history">History</string>
+    <string name="staff_accounts_history">Kasaysayan</string>
     <string name="staff_accounts_history_title">Kasaysayan ng account</string>
     <string name="staff_accounts_notes_label">Mga Tala</string>
     <string name="staff_accounts_reason_label">Dahilan</string>
@@ -127,7 +127,7 @@
     <string name="staff_audit_action_subscription_resumed">Ipinagpatuloy</string>
     <string name="staff_audit_actor_system">System</string>
     <string name="staff_audit_empty">Walang kasaysayan ng audit</string>
-    <string name="staff_audit_title">History</string>
+    <string name="staff_audit_title">Kasaysayan</string>
     <string name="staff_categories_action_delete">I-delete</string>
     <string name="staff_categories_action_edit">I-edit</string>
     <string name="staff_categories_add">Idagdag</string>

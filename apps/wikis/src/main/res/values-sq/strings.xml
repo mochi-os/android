@@ -33,7 +33,7 @@
     <string name="wikis_unsubscribe_confirm_title">Çabonohu</string>
     <string name="wikis_unsubscribe_success">Çabonuar</string>
     <string name="wikis_subscribe_failed">Abonimi dështoi</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">Prurje RSS</string>
     <string name="wikis_rss_changes">Ndryshimet</string>
     <string name="wikis_rss_comments">Komentet</string>
     <string name="wikis_rss_both">Ndryshimet dhe komentet</string>

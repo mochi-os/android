@@ -18,7 +18,7 @@
     <string name="wikis_page_action_delete">Chhaqtayaña</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_page_action_search">Thaqhama</string>
-    <string name="wikis_page_action_tags">Tags</string>
+    <string name="wikis_page_action_tags">Chimpunaka</string>
     <string name="wikis_page_action_recent_changes">Jichhüru mayjt\'awinaka</string>
     <string name="wikis_page_action_new_page">Machaqa página</string>
     <string name="wikis_page_action_settings">Configuración</string>
@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">CRM ukatpach suscripción jaytaña?</string>
     <string name="wikis_unsubscribe_success">Repositorio ukatpach suscripción jaytata</string>
     <string name="wikis_subscribe_failed">Janiw suscribiña atinkti</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">Canal RSS</string>
     <string name="wikis_rss_changes">Mayjt\'awinaka</string>
     <string name="wikis_rss_comments">Comentarionaka</string>
     <string name="wikis_rss_both">Mayjt\'awinaka ukat comentarionaka</string>
@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Wiki chinu</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Enlace</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="wikis_search_placeholder">Mä wiki thaqaña…</string>
     <string name="wikis_unsubscribe_confirm_message">¿Chiqapuniti %1$s ukat mistuñ munta?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,8 +239,8 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Mä arxat qillqam…</string>
     <string name="wikis_comment_form_placeholder_reply">Mä jaysäwi qillqaña…</string>
-    <string name="wikis_comment_form_send">Send</string>
-    <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
+    <string name="wikis_comment_form_send">Apayaña</string>
+    <string name="wikis_comment_form_remove_attachment">Yapxatata apsuña</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Aka Markdown apnaqasa qillqatam qillqaña…</string>
     <string name="wikis_insert_dialog_empty">Janïr yapt’atanakas utjkiti. Mä archivo apayaña qalltañataki.</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">¿“%1$s” chhaqtayaña? Akax jan kutt’ayaskaspati.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Aka laphir archivonaka yapxattañataki Apayaña ukar limt’aña.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Suti imaña</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Mantañ jan machaqachksna</string>

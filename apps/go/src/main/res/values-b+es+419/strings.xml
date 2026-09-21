@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Notificaciones sobre jugadas de Go, pases, ofertas de tablas y resultados de partidas.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Abrir barra lateral</string>
+    <string name="go_sidebar_active">Juegos activos</string>
     <string name="go_empty_active">Aún no hay partidas activas.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Nueva partida de Go</string>

@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Параметры паведамленняў</string>
     <string name="settings_home_accounts">Падключаныя ўліковыя запісы</string>
     <string name="settings_home_interests">Інтарэсы</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Ключы доступу</string>
     <string name="account_passkey_register">Дадаць ключ доступу</string>
     <string name="account_passkey_delete_title">Выдаліць ключ доступу?</string>
     <string name="account_section_totp">Дадатак аўтэнтыфікатара</string>
@@ -319,7 +319,7 @@
     <string name="login_title">Уваход</string>
     <string name="login_section_methods">Спосабы ўваходу</string>
     <string name="login_method_email">Код па эл. пошце</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Ключ доступу</string>
     <string name="login_method_totp">Дадатак аўтэнтыфікатара</string>
     <string name="login_method_oauth">Уваход праз іншыя сэрвісы</string>
     <string name="login_method_recovery">Коды аднаўлення</string>

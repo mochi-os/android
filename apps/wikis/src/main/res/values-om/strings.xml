@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">Galaa\'uu kaasi</string>
     <string name="wikis_unsubscribe_success">Galaa\'uun kaafameera</string>
     <string name="wikis_subscribe_failed">Galmaa\'uu hin dandeenye</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">Fiidii RSS</string>
     <string name="wikis_rss_changes">Jijjiiramoota</string>
     <string name="wikis_rss_comments">Yaadawwan</string>
     <string name="wikis_rss_both">Jijjiiramootaa fi yaadawwan</string>
@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Hidhaa wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Geessituu</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Saaree banuu</string>
     <string name="wikis_search_placeholder">Wiki barbaadi…</string>
     <string name="wikis_unsubscribe_confirm_message">Dhugumaan %1$s irraa galmee haquu barbaadduu?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Yaada barreessi…</string>
     <string name="wikis_comment_form_placeholder_reply">Deebii barreessi…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">Ergi</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Qabiyyee kee asitti Markdown fayyadamuun barreessi…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” haqi? Kun deebi\'uu hin danda\'u.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Fuula kanatti faayilii dabaluuf Ol kaa\'uu tuqi.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Maqaa kuusuu</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Argannoo haaromsuun hin milkoofne</string>

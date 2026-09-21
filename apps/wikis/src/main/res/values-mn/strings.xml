@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Викиийн холбоос</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Холбоос</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Хажуугийн самбарыг нээх</string>
     <string name="wikis_search_placeholder">wiki хайх…</string>
     <string name="wikis_unsubscribe_confirm_message">Та %1$s-ийн захиалгыг цуцлахдаа итгэлтэй байна уу?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Сэтгэгдэл бичих…</string>
     <string name="wikis_comment_form_placeholder_reply">Хариу бичих…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">Илгээх</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Агуулгаа энд Markdown ашиглан бичнэ үү…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s”-г устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Энэ хуудсанд файл нэмэхийн тулд Байршуулах товчийг дарна уу.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Нэрийг хадгалах</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Хандалтыг шинэчилж чадсангүй</string>

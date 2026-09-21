@@ -24,7 +24,7 @@
     <string name="feeds_comments">ຄຳເຫັນ</string>
     <string name="feeds_delete_post">ລົບໂພສ</string>
     <string name="feeds_delete_comment">ລົບຄຳເຫັນ</string>
-    <string name="feeds_tags">Tags</string>
+    <string name="feeds_tags">ແທັກ</string>
     <string name="feeds_remove">ລຶບອອກ</string>
     <string name="feeds_cancel_reply">ຍົກເລີກການຕອບກັບ</string>
     <string name="feeds_edit_post">ແກ້ໄຂໂພສ</string>
@@ -156,7 +156,7 @@
     <string name="feeds_access_subject_authenticated">ຜູ້ໃຊ້ທີ່ຢືນຢັນແລ້ວ</string>
     <string name="feeds_markdown_supported">ຮອງຮັບ markdown</string>
     <string name="feeds_permission_deny">ປະຕິເສດ</string>
-    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_rss_feed">ຟີດ RSS</string>
     <string name="feeds_settings_field_entity_id">ID ຂອງເອັນຕິຕີ້</string>
     <string name="feeds_settings_field_fingerprint">ລາຍນິ້ວມື</string>
     <string name="feeds_settings_field_server">ເຊີບເວີ</string>

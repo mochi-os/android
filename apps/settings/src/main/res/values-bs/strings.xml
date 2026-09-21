@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Postavke obavijesti</string>
     <string name="settings_home_accounts">Povezani računi</string>
     <string name="settings_home_interests">Interesi</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Pristupni ključevi</string>
     <string name="account_passkey_register">Dodaj passkey</string>
     <string name="account_passkey_delete_title">Obrisati passkey?</string>
     <string name="account_section_totp">Authenticator aplikacija</string>
@@ -317,7 +317,7 @@
     <string name="login_title">Prijava</string>
     <string name="login_section_methods">Načini prijave</string>
     <string name="login_method_email">Email kod</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Pristupni ključ</string>
     <string name="login_method_totp">Authenticator aplikacija</string>
     <string name="login_method_oauth">Prijava trećih strana</string>
     <string name="login_method_recovery">Kodovi za oporavak</string>

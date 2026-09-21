@@ -46,7 +46,7 @@
     <string name="chess_status_resigned_you">Kun yi murabus — %1$s ya yi nasara</string>
     <string name="chess_status_resigned_opponent">%1$s ya yi murabus — kun yi nasara!</string>
     <string name="chess_status_check_opponent_move">Check — motsin %1$s</string>
-    <string name="chess_status_opponent_move">Move na %1$s</string>
+    <string name="chess_status_opponent_move">Motsin %1$s</string>
     <string name="chess_piece_king">Sarki</string>
     <string name="chess_piece_queen">Sarauniya</string>
     <string name="chess_piece_rook">Hasumiya</string>

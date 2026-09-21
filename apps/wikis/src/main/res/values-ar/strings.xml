@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">إلغاء الاشتراك</string>
     <string name="wikis_unsubscribe_success">تم إلغاء الاشتراك</string>
     <string name="wikis_subscribe_failed">فشل الاشتراك</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">موجز RSS</string>
     <string name="wikis_rss_changes">التغييرات</string>
     <string name="wikis_rss_comments">التعليقات</string>
     <string name="wikis_rss_both">التغييرات والتعليقات</string>

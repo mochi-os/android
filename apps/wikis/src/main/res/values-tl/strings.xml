@@ -14,7 +14,7 @@
     <string name="wikis_page_action_section_page">Pahina</string>
     <string name="wikis_page_action_edit">I-edit</string>
     <string name="wikis_page_action_rename">Palitan ang pangalan</string>
-    <string name="wikis_page_action_history">History</string>
+    <string name="wikis_page_action_history">Kasaysayan</string>
     <string name="wikis_page_action_delete">I-delete</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_page_action_search">Maghanap</string>
@@ -34,7 +34,7 @@
     <string name="wikis_unsubscribe_confirm_title">Mag-unsubscribe</string>
     <string name="wikis_unsubscribe_success">Hindi na naka-subscribe</string>
     <string name="wikis_subscribe_failed">Nabigong mag-subscribe</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">Feed ng RSS</string>
     <string name="wikis_rss_changes">Mga pagbabago</string>
     <string name="wikis_rss_comments">Mga komento</string>
     <string name="wikis_rss_both">Mga pagbabago at komento</string>
@@ -107,7 +107,7 @@
     <string name="wikis_rename_page_new_required">Kailangan ang bagong URL</string>
     <string name="wikis_rename_page_must_differ">Ang bagong URL ay dapat iba sa kasalukuyang URL</string>
     <string name="wikis_rename_page_failed">Nabigong i-rename ang page</string>
-    <string name="wikis_history_title">History</string>
+    <string name="wikis_history_title">Kasaysayan</string>
     <string name="wikis_history_empty">Walang nakitang rebisyon</string>
     <string name="wikis_history_view_action">Tingnan</string>
     <string name="wikis_history_revert_action">I-revert sa bersyong ito</string>
@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Link ng wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Link</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Buksan ang sidebar</string>
     <string name="wikis_search_placeholder">Maghanap ng wiki…</string>
     <string name="wikis_unsubscribe_confirm_message">Sigurado ka bang gusto mong mag-unsubscribe sa %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Magsulat ng komento…</string>
     <string name="wikis_comment_form_placeholder_reply">Sumulat ng tugon…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">Ipadala</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Isulat ang iyong nilalaman dito gamit ang Markdown…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Tanggalin ang “%1$s”? Hindi ito maibabalik.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">I-tap ang Upload para magdagdag ng mga file sa pahinang ito.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">I-save ang pangalan</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Nabigong i-update ang access</string>

@@ -5,7 +5,7 @@
     <string name="auth_email">Email</string>
     <string name="auth_continue">Magpatuloy</string>
     <string name="auth_verification_code">Verification code</string>
-    <string name="auth_email_code">Email code</string>
+    <string name="auth_email_code">Code ng email</string>
     <string name="auth_recovery_code">Recovery code</string>
     <string name="auth_name">Pangalan</string>
     <string name="auth_create">Gumawa</string>
@@ -223,7 +223,7 @@
     <string name="game_chat_load_more">I-load ang mga mas lumang mensahe</string>
     <string name="stepup_title">Kumpirmahin na ikaw ito</string>
     <string name="stepup_description">Isa itong pagbabago sa seguridad ng iyong account. Patunayan na ikaw ito para magpatuloy.</string>
-    <string name="stepup_email_label">Email code</string>
+    <string name="stepup_email_label">Code ng email</string>
     <string name="stepup_email_placeholder">Ilagay ang code mula sa iyong email</string>
     <string name="stepup_totp_label">Code ng authenticator</string>
     <string name="stepup_totp_placeholder">Ilagay ang iyong authenticator code</string>

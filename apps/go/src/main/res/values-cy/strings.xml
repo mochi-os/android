@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Hysbysiadau am symudiadau Go, pasys, cynigion gêm gyfartal a chanlyniadau gemau.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Agor y bar ochr</string>
+    <string name="go_sidebar_active">Gemau gweithredol</string>
     <string name="go_empty_active">Dim gemau gweithredol eto.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Gêm Go newydd</string>

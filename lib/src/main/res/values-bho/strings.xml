@@ -137,7 +137,7 @@
     <string name="auth_login_title">Mochi में लॉग इन करीं</string>
     <string name="auth_next">अगिला</string>
     <string name="auth_or_log_in_with">या एह से लॉग इन करीं</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">पासकी</string>
     <string name="auth_use_passkey">पासकी के उपयोग करीं</string>
     <string name="auth_email_me_a_code">हमरा के ईमेल पर कोड भेजीं</string>
     <string name="auth_or_enter_authenticator_code">या authenticator कोड डालीं</string>

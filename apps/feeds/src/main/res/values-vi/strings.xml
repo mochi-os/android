@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Tên nguồn cấp</string>
     <string name="feeds_save_name">Lưu tên</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Biểu ngữ</string>
     <string name="feeds_banner_description">Banner markdown không bắt buộc hiển thị ở đầu feed của bạn.</string>
     <string name="feeds_clear">Xóa</string>
     <string name="feeds_delete_feed">Xóa feed</string>

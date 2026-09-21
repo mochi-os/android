@@ -5,7 +5,7 @@
     <string name="auth_email">Email</string>
     <string name="auth_continue">Ci gaba</string>
     <string name="auth_verification_code">Lambar tabbatarwa</string>
-    <string name="auth_email_code">Email code</string>
+    <string name="auth_email_code">Lambar imel</string>
     <string name="auth_recovery_code">Lambar dawowa</string>
     <string name="auth_name">Suna</string>
     <string name="auth_create">Ƙirƙira</string>
@@ -223,7 +223,7 @@
     <string name="settings_units_usa">Amurka</string>
     <string name="stepup_title">Tabbatar da cewa kai ne</string>
     <string name="stepup_description">Wannan canji ne na tsaro ga asusunka. Tabbatar da cewa kai ne don ci gaba.</string>
-    <string name="stepup_email_label">Email code</string>
+    <string name="stepup_email_label">Lambar imel</string>
     <string name="stepup_email_placeholder">Shigar da lambar daga imel ɗinka</string>
     <string name="stepup_totp_label">Code na authenticator</string>
     <string name="stepup_totp_placeholder">Shigar da lambar mai tantancewarka</string>

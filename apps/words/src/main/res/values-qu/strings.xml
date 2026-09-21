@@ -37,14 +37,14 @@
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Words mit\'akuna, chalaykuna, pukllay tukuykunamanta willakuykuna.</string>
-    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_active">Kawsachkan Pukllaykuna</string>
     <string name="words_sidebar_empty">Manaraq pukllaykuna kanchu.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Pukllayta qallarinaykipaq People app nisqapi masikunata yapay.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_opponent_move">%1$sq movimientonin</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
@@ -53,9 +53,9 @@
     <string name="words_detail_action_more">Game actions</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
-    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+    <string name="words_detail_chat_player_played">%1$s %2$sta pukllarqan</string>
 
-    <string name="words_detail_delete_title">Delete game?</string>
+    <string name="words_detail_delete_title">Pukllayta wischuy?</string>
     <string name="words_detail_delete_confirm">Wischuy</string>
     <string name="words_detail_delete_message">Kayqa pukllayta rimanakuywantin wiñaypaq wischun. Kayta mana kutichinachu.</string>
     <string name="words_detail_chat_passed">%1$s pasarqan</string>

@@ -174,7 +174,7 @@
     <string name="market_editor_section_location">Cheqa</string>
     <string name="market_editor_section_photos">Fotonaka</string>
     <string name="market_editor_section_pricing">Chanichañ</string>
-    <string name="market_editor_section_tags">Tags</string>
+    <string name="market_editor_section_tags">Chimpunaka</string>
     <string name="market_editor_shipping">Apayañ</string>
     <string name="market_editor_stripe_banner_action">Stripe chinjaña</string>
     <string name="market_editor_title">Suti campo</string>
@@ -254,7 +254,7 @@
     <string name="market_listing_detail_share">Anuncio uñacht\'ayaña</string>
     <string name="market_listing_detail_shipping_heading">Apayañ opcionanaka</string>
     <string name="market_listing_detail_subscribe">Suscribiña</string>
-    <string name="market_listing_detail_tags_heading">Tags</string>
+    <string name="market_listing_detail_tags_heading">Chimpunaka</string>
     <string name="market_listing_detail_title">Listado</string>
     <string name="market_listing_detail_unsave">Imaña</string>
     <string name="market_listing_detail_verified">Verificaña</string>

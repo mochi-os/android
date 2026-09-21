@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Wiki salgysy</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Salgy</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Gapdal paneli aç</string>
     <string name="wikis_search_placeholder">Wiki gözle…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s abunasyny ýatyrmak isleýändigiňize ynamlymy?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Teswir ýaz…</string>
     <string name="wikis_comment_form_placeholder_reply">Jogap ýaz…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">Iber</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Mazmunyňyzy şu ýerde Markdown bilen ýazyň…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” pozulsunmy? Muny yzyna gaýtaryp bolmaýar.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Bu sahypa faýl goşmak üçin Ýükle düwmesine basyň.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Ady ýatda sakla</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Elýeterliligi täzelemek başartmady</string>

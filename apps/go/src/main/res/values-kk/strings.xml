@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go жүрістері, пастар, тең түсу ұсыныстары және ойын нәтижелері туралы хабарламалар.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Бүйір тақтаны ашу</string>
+    <string name="go_sidebar_active">Белсенді ойындар</string>
     <string name="go_empty_active">Әзірге белсенді ойындар жоқ.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Жаңа Go ойыны</string>

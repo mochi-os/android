@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go ನಡೆಗಳು, ಪಾಸ್‌ಗಳು, ಡ್ರಾ ಆಫರ್‌ಗಳು ಮತ್ತು ಆಟದ ಫಲಿತಾಂಶಗಳ ಕುರಿತ ಅಧಿಸೂಚನೆಗಳು.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">ಸೈಡ್‌ಬಾರ್ ತೆರೆಯಿರಿ</string>
+    <string name="go_sidebar_active">ಸಕ್ರಿಯ ಆಟಗಳು</string>
     <string name="go_empty_active">ಇನ್ನೂ ಸಕ್ರಿಯ ಆಟಗಳಿಲ್ಲ.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">ಹೊಸ Go ಆಟ</string>

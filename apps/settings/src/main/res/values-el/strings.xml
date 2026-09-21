@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Προτιμήσεις ειδοποιήσεων</string>
     <string name="settings_home_accounts">Συνδεδεμένοι λογαριασμοί</string>
     <string name="settings_home_interests">Ενδιαφέροντα</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Κλειδιά πρόσβασης</string>
     <string name="account_passkey_register">Προσθήκη passkey</string>
     <string name="account_passkey_delete_title">Διαγραφή passkey;</string>
     <string name="account_section_totp">Εφαρμογή ελέγχου ταυτότητας</string>
@@ -315,7 +315,7 @@
     <string name="login_title">Σύνδεση</string>
     <string name="login_section_methods">Μέθοδοι σύνδεσης</string>
     <string name="login_method_email">Κωδικός email</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Κλειδί πρόσβασης</string>
     <string name="login_method_totp">Εφαρμογή ελέγχου ταυτότητας</string>
     <string name="login_method_oauth">Σύνδεση τρίτου παρόχου</string>
     <string name="login_method_recovery">Κωδικοί ανάκτησης</string>

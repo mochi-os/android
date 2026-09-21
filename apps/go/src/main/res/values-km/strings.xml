@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">ការជូនដំណឹងអំពីការផ្លាស់ទី Go ការរំលង ការស្នើស្មើ និងលទ្ធផលហ្គេម។</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">បើករបារចំហៀង</string>
+    <string name="go_sidebar_active">ហ្គេមសកម្ម</string>
     <string name="go_empty_active">មិនទាន់មានហ្គេមសកម្មទេ។</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">ហ្គេម Go ថ្មី</string>

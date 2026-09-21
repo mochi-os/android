@@ -53,7 +53,7 @@
     <string name="words_detail_action_more">Game actions</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
-    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+    <string name="words_detail_chat_player_played">%1$s-ը խաղաց %2$s</string>
 
     <string name="words_detail_delete_title">Ջնջե՞լ խաղը։</string>
     <string name="words_detail_delete_confirm">Ջնջել</string>

@@ -33,7 +33,7 @@
     <string name="wikis_unsubscribe_confirm_title">Откажи претплата</string>
     <string name="wikis_unsubscribe_success">Претплатата е откажана</string>
     <string name="wikis_subscribe_failed">Неуспешна претплата</string>
-    <string name="wikis_rss_menu">RSS feed</string>
+    <string name="wikis_rss_menu">RSS канал</string>
     <string name="wikis_rss_changes">Промени</string>
     <string name="wikis_rss_comments">Коментари</string>
     <string name="wikis_rss_both">Промени и коментари</string>

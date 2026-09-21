@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Brathan mu ghluasadan Go, pasan, tairgsean geama ionann agus toraidhean gheamannan.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Fosgail bàr-taoibh</string>
+    <string name="go_sidebar_active">Geamannan gnìomhach</string>
     <string name="go_empty_active">Chan eil geamannan gnìomhach ann fhathast.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Geama Go ùr</string>

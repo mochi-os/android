@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">ئاگادارکردنەوە دەربارەی جوڵەکانی Go، تێپەڕاندن، پێشنیاری یەکسانی و ئەنجامی یاری.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">کردنەوەی لاتەنیشت</string>
+    <string name="go_sidebar_active">یارییە چالاکەکان</string>
     <string name="go_empty_active">هێشتا هیچ یارییەکی چالاک نییە.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">یاری نوێی Go</string>

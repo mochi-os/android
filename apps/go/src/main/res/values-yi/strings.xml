@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">מעלדונגען וועגן Go־צוגן, פּאַסן, גלײַכשפּיל־פֿאָרשלאָגן און שפּיל־רעזולטאַטן.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">עפֿן זייַטל</string>
+    <string name="go_sidebar_active">אַקטיווע שפּילן</string>
     <string name="go_empty_active">נאָך קיין אַקטיווע שפּילן.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">נײַע Go־שפּיל</string>

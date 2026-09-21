@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Nastavení oznámení</string>
     <string name="settings_home_accounts">Připojené účty</string>
     <string name="settings_home_interests">Zájmy</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Přístupové klíče</string>
     <string name="account_passkey_register">Přidat passkey</string>
     <string name="account_passkey_delete_title">Smazat passkey?</string>
     <string name="account_section_totp">Autentizační aplikace</string>
@@ -318,7 +318,7 @@
     <string name="login_title">Přihlášení</string>
     <string name="login_section_methods">Způsoby přihlášení</string>
     <string name="login_method_email">E-mailový kód</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Přístupový klíč</string>
     <string name="login_method_totp">Autentizační aplikace</string>
     <string name="login_method_oauth">Přihlášení třetí strany</string>
     <string name="login_method_recovery">Obnovovací kódy</string>

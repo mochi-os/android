@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go நகர்வுகள், பாஸ்கள், சமநிலை வழங்கல்கள் மற்றும் ஆட்ட முடிவுகள் குறித்த அறிவிப்புகள்.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">பக்கப்பட்டியைத் திற</string>
+    <string name="go_sidebar_active">செயலில் உள்ள விளையாட்டுகள்</string>
     <string name="go_empty_active">இதுவரை செயலில் உள்ள ஆட்டங்கள் இல்லை.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">புதிய Go ஆட்டம்</string>

@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Tilkynningar um Go-leiki, pass, jafnteflisboð og úrslit leikja.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Opna hliðarstiku</string>
+    <string name="go_sidebar_active">Virkir leikir</string>
     <string name="go_empty_active">Engir virkir leikir enn.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Nýr Go-leikur</string>

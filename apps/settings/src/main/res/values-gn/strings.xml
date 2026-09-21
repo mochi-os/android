@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Marandu ñepyrũ</string>
     <string name="settings_home_accounts">Tetãyguakuéra oñembojuajúva</string>
     <string name="settings_home_interests">Oikotevevakuéra</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Jeike rape kuéra</string>
     <string name="account_passkey_register">Embojuaju passkey</string>
     <string name="account_passkey_delete_title">Hundi passkey?</string>
     <string name="account_section_totp">Tekorosã app</string>
@@ -314,7 +314,7 @@
     <string name="login_title">Login</string>
     <string name="login_section_methods">Mba\'éichapa ñañepyrũ haguã</string>
     <string name="login_method_email">Código email</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Jeike rape</string>
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Ñepyrũ ambue rupive</string>
     <string name="login_method_recovery">Recuperación papapykuéra</string>

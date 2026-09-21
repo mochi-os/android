@@ -53,7 +53,7 @@
     <string name="go_status_draw">ფრე</string>
     <string name="go_status_draw_text">ფრე</string>
     <string name="go_status_game_over">თამაში დასრულდა</string>
-    <string name="go_status_opponent_move">%1$s იმარჯვებს</string>
+    <string name="go_status_opponent_move">%1$s-ის სვლა</string>
     <string name="go_status_opponent_wins">%1$s თავი დანებდა — თქვენ იმარჯვებთ!</string>
     <string name="go_status_resigned_opponent">%1$s-მა შემოგთავაზათ ფრე</string>
     <string name="go_status_resigned_self">თქვენ დათმეთ — %1$s იგებს</string>
@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">შეტყობინებები Go-ს სვლების, გამოტოვებების, ფრედ შეთავაზებებისა და თამაშის შედეგების შესახებ.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">გვერდითი პანელის გახსნა</string>
+    <string name="go_sidebar_active">აქტიური თამაშები</string>
     <string name="go_empty_active">ჯერ არ არის აქტიური თამაშები.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">ახალი Go თამაში</string>

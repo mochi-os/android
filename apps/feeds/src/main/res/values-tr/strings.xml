@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Akış adı</string>
     <string name="feeds_save_name">Adı kaydet</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Afiş</string>
     <string name="feeds_banner_description">Akışınızın üstünde gösterilen isteğe bağlı markdown banner.</string>
     <string name="feeds_clear">Temizle</string>
     <string name="feeds_delete_feed">Feed\'i sil</string>

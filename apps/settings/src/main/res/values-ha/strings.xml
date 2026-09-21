@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Saiyyun sanarwa</string>
     <string name="settings_home_accounts">Asusai da aka haɗa</string>
     <string name="settings_home_interests">Interests</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Makullan shiga</string>
     <string name="account_passkey_register">Ƙara passkey</string>
     <string name="account_passkey_delete_title">Goge passkey?</string>
     <string name="account_section_totp">Manhajar tabbatarwa</string>
@@ -314,7 +314,7 @@
     </plurals>
     <string name="login_title">Shiga</string>
     <string name="login_section_methods">Hanyoyin shiga</string>
-    <string name="login_method_email">Email code</string>
+    <string name="login_method_email">Lambar imel</string>
     <string name="login_method_passkey">Maɓallin shiga</string>
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Shigar wani ɓangare na uku</string>

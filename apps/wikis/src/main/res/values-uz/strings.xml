@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Wiki havolasi</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Havola</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Yon panelni ochish</string>
     <string name="wikis_search_placeholder">Wiki qidirish…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s obunasini bekor qilmoqchi ekaningizga ishonchingiz komilmi?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Izoh yozing…</string>
     <string name="wikis_comment_form_placeholder_reply">Javob yozing…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">Yuborish</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Mazmuningizni bu yerda Markdown yordamida yozing…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” o‘chirilsinmi? Buni qaytarib bo‘lmaydi.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Ushbu sahifaga fayl qo‘shish uchun Yuklash tugmasini bosing.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Nomni saqlash</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Kirishni yangilab bo‘lmadi</string>

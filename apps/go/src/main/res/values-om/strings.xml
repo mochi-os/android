@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Beeksisa waa\'ee sochii Go, darbuu, dhiheessii walqixxee fi bu\'aa taphaa.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Saaree banuu</string>
+    <string name="go_sidebar_active">Taphoota Hojii Irra Jiran</string>
     <string name="go_empty_active">Amma taphni sochii jiru hin jiru.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Tapha Go haaraa</string>

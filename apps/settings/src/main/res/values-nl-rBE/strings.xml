@@ -7,7 +7,7 @@
     <string name="settings_home_display">Weergave</string>
     <string name="settings_home_accounts">Gekoppelde accounts</string>
     <string name="settings_home_interests">Interesses</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Toegangssleutels</string>
     <string name="account_passkey_register">Passkey toevoegen</string>
     <string name="account_passkey_delete_title">Passkey verwijderen?</string>
     <string name="account_section_totp">Authenticator-app</string>
@@ -310,7 +310,7 @@
     <string name="login_title">Inloggen</string>
     <string name="login_section_methods">Aanmeldmethoden</string>
     <string name="login_method_email">E-mailcode</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Toegangssleutel</string>
     <string name="login_method_totp">Authenticator-app</string>
     <string name="login_method_oauth">Inloggen via derden</string>
     <string name="login_method_recovery">Herstelcodes</string>

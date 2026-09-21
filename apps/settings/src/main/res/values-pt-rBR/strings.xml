@@ -7,7 +7,7 @@
     <string name="settings_home_display">Exibir</string>
     <string name="settings_home_accounts">Contas conectadas</string>
     <string name="settings_home_interests">Interesses</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Chaves de acesso</string>
     <string name="account_passkey_register">Adicionar passkey</string>
     <string name="account_passkey_delete_title">Excluir passkey?</string>
     <string name="account_section_totp">Aplicativo autenticador</string>
@@ -313,7 +313,7 @@
     <string name="login_title">Entrar</string>
     <string name="login_section_methods">Métodos de login</string>
     <string name="login_method_email">Código por e-mail</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Chave de acesso</string>
     <string name="login_method_totp">Aplicativo autenticador</string>
     <string name="login_method_oauth">Login de terceiros</string>
     <string name="login_method_recovery">Códigos de recuperação</string>

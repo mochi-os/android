@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Preferans notifikasyon</string>
     <string name="settings_home_accounts">Kont konekte</string>
     <string name="settings_home_interests">Enterè</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Paskey</string>
     <string name="account_passkey_register">Ajoute passkey</string>
     <string name="account_passkey_delete_title">Efase passkey?</string>
     <string name="account_section_totp">App otantifikatè</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Fini</string>
     <string name="account_delete">Efase</string>
     <string name="account_rename">Rebatize</string>
-    <string name="sessions_revoke">Revoke</string>
+    <string name="sessions_revoke">Anile</string>
     <string name="account_disable">Dezaktive</string>
     <string name="account_copy">Kopye</string>
     <string name="account_copy_all">Kopye tout</string>
@@ -186,7 +186,7 @@
     <string name="system_users_manage_sessions">Jere sesyon</string>
     <string name="system_users_sessions_description">Wè epi revoke sesyon aktif pou itilizatè sa.</string>
     <string name="system_users_sessions_empty">Itilizatè sa pa gen sesyon aktif.</string>
-    <string name="system_users_revoke">Revoke</string>
+    <string name="system_users_revoke">Anile</string>
     <string name="system_users_revoke_all">Revoke tout sesyon</string>
     <string name="system_users_unknown_browser">Navigatè enkoni</string>
     <string name="system_users_unknown">Enkoni</string>
@@ -314,7 +314,7 @@
     <string name="login_title">Login</string>
     <string name="login_section_methods">Metòd koneksyon</string>
     <string name="login_method_email">Kòd imèl</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Kle aksè</string>
     <string name="login_method_totp">App otantifikatè</string>
     <string name="login_method_oauth">Koneksyon twazyèm pati</string>
     <string name="login_method_recovery">Kòd rekiperasyon</string>

@@ -140,7 +140,7 @@
     <string name="auth_login_title">Logga in på Mochi</string>
     <string name="auth_next">Nästa</string>
     <string name="auth_or_log_in_with">Eller logga in med</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Nyckel</string>
     <string name="auth_use_passkey">Använd en nyckel</string>
     <string name="auth_email_me_a_code">Mejla mig en kod</string>
     <string name="auth_or_enter_authenticator_code">Eller ange autentiseringskod</string>

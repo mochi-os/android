@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Όνομα ροής</string>
     <string name="feeds_save_name">Αποθήκευση ονόματος</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Μπάνερ</string>
     <string name="feeds_banner_description">Προαιρετικό banner markdown που εμφανίζεται στην κορυφή της ροής σας.</string>
     <string name="feeds_clear">Εκκαθάριση</string>
     <string name="feeds_delete_feed">Διαγραφή ροής</string>

@@ -140,7 +140,7 @@
     <string name="auth_login_title">Đăng nhập vào Mochi</string>
     <string name="auth_next">Tiếp theo</string>
     <string name="auth_or_log_in_with">Hoặc đăng nhập bằng</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Mã khóa</string>
     <string name="auth_use_passkey">Dùng passkey</string>
     <string name="auth_email_me_a_code">Gửi mã cho tôi qua email</string>
     <string name="auth_or_enter_authenticator_code">Hoặc nhập mã xác thực</string>

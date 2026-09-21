@@ -102,7 +102,7 @@
     <string name="crm_field_type">Növ</string>
     <string name="crm_field_flags">Bayraqlar</string>
     <string name="crm_field_required">Tələb olunur</string>
-    <string name="crm_field_position_default">Default</string>
+    <string name="crm_field_position_default">Standart</string>
     <string name="crm_field_position_sidebar">Yan panel</string>
     <string name="crm_field_save">Dəyişiklikləri saxla</string>
     <string name="crm_field_options">Seçimlər</string>

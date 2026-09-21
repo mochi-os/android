@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">IA</string>
     <string name="feeds_feed_name">Nome da fonte</string>
     <string name="feeds_save_name">Gardar o nome</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Báner</string>
     <string name="feeds_banner_description">Banner opcional en markdown mostrado na parte superior do teu feed.</string>
     <string name="feeds_clear">Borrar</string>
     <string name="feeds_delete_feed">Eliminar feed</string>

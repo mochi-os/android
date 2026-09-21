@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Параметры уведомлений</string>
     <string name="settings_home_accounts">Подключённые аккаунты</string>
     <string name="settings_home_interests">Интересы</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Ключи доступа</string>
     <string name="account_passkey_register">Добавить passkey</string>
     <string name="account_passkey_delete_title">Удалить passkey?</string>
     <string name="account_section_totp">Приложение-аутентификатор</string>
@@ -319,7 +319,7 @@
     <string name="login_title">Вход</string>
     <string name="login_section_methods">Способы входа</string>
     <string name="login_method_email">Код по электронной почте</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Ключ доступа</string>
     <string name="login_method_totp">Приложение-аутентификатор</string>
     <string name="login_method_oauth">Сторонний вход</string>
     <string name="login_method_recovery">Коды восстановления</string>
@@ -366,7 +366,7 @@
     <string name="accounts_provider_mcp">MCP-сервер</string>
     <string name="accounts_provider_unifiedpush">Push-уведомление</string>
     <string name="accounts_provider_url">Внешний URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Аккаунт подтверждён</string>
     <string name="accounts_verify_invalid">Недопустимый код подтверждения</string>
     <string name="accounts_verify_sent">Код подтверждения отправлен</string>

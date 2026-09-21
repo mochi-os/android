@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Aviseringsinställningar</string>
     <string name="settings_home_accounts">Anslutna konton</string>
     <string name="settings_home_interests">Intressen</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Nycklar</string>
     <string name="account_passkey_register">Lägg till nyckel</string>
     <string name="account_passkey_delete_title">Ta bort nyckel?</string>
     <string name="account_section_totp">Autentiseringsapp</string>
@@ -315,7 +315,7 @@
     <string name="login_title">Logga in</string>
     <string name="login_section_methods">Inloggningsmetoder</string>
     <string name="login_method_email">E-postkod</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Nyckel</string>
     <string name="login_method_totp">Autentiseringsapp</string>
     <string name="login_method_oauth">Tredjepartsinloggning</string>
     <string name="login_method_recovery">Återställningskoder</string>

@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go ရွှေ့ကွက်များ၊ ကျော်ခြင်း၊ သရေကမ်းလှမ်းချက်နှင့် ဂိမ်းရလဒ်များအကြောင်း အသိပေးချက်များ။</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">ဘေးဘားကို ဖွင့်ပါ</string>
+    <string name="go_sidebar_active">လက်ရှိ ဂိမ်းများ</string>
     <string name="go_empty_active">လက်ရှိကစားနေသော ဂိမ်းများ မရှိသေးပါ။</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Go ဂိမ်းအသစ်</string>

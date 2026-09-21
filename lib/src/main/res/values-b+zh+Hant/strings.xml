@@ -140,7 +140,7 @@
     <string name="auth_login_title">登入 Mochi</string>
     <string name="auth_next">下一步</string>
     <string name="auth_or_log_in_with">或使用以下方式登入</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">通行密鑰</string>
     <string name="auth_use_passkey">使用通行金鑰</string>
     <string name="auth_email_me_a_code">以電子郵件寄送驗證碼給我</string>
     <string name="auth_or_enter_authenticator_code">或輸入驗證器代碼</string>

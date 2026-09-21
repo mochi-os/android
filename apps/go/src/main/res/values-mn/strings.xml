@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go нүүдэл, алгасалт, тэнцээ санал болон тоглоомын үр дүнгийн мэдэгдэл.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Хажуугийн самбарыг нээх</string>
+    <string name="go_sidebar_active">Идэвхтэй тоглоомууд</string>
     <string name="go_empty_active">Одоогоор идэвхтэй тоглоом байхгүй.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Шинэ Go тоглоом</string>

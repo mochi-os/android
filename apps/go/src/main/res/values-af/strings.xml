@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Kennisgewings oor Go-skuiwe, pasbeurte, gelykopaanbiedinge en speluitslae.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Open sybalk</string>
+    <string name="go_sidebar_active">Aktiewe speletjies</string>
     <string name="go_empty_active">Nog geen aktiewe speletjies nie.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Nuwe Go-speletjie</string>

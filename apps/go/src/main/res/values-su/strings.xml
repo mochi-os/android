@@ -7,7 +7,7 @@
     <string name="go_action_open_chat">Buka panel obrolan</string>
     <string name="go_action_pass">Lulus</string>
     <string name="go_action_rematch">Tanding deui</string>
-    <string name="go_action_resign">Resign</string>
+    <string name="go_action_resign">Nyerah</string>
     <string name="go_app_title">Go</string>
     <string name="go_captures_black_sr">Tangkapan hideung</string>
     <string name="go_captures_white_sr">Tangkapan bodas</string>
@@ -45,9 +45,9 @@
     <string name="go_pass_end_title">Tungtungan kaulinan?</string>
     <string name="go_pass_message">Liwat giliran anjeun jeung pasrahkeun ka lawan.</string>
     <string name="go_pass_title">Lewat giliran?</string>
-    <string name="go_resign_confirm">Resign</string>
+    <string name="go_resign_confirm">Nyerah</string>
     <string name="go_resign_message">Anjeun yakin hayang nyerah? %1$s bakal meunang kaulinan.</string>
-    <string name="go_resign_title">Resign game?</string>
+    <string name="go_resign_title">Nyerah tina kaulinan?</string>
     <string name="go_sidebar_completed">Réngsé</string>
     <string name="go_sidebar_new_game">Game anyar</string>
     <string name="go_status_draw">Seri</string>
@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Bewara ngeunaan léngkah Go, pas, tawaran seri, jeung hasil kaulinan.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Buka sidebar</string>
+    <string name="go_sidebar_active">Kaulinan Aktif</string>
     <string name="go_empty_active">Can aya kaulinan aktif.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Kaulinan Go anyar</string>

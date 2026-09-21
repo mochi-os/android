@@ -30,7 +30,7 @@
     <string name="crm_settings_title">Поставке</string>
     <string name="crm_settings_tab_general">Опште</string>
     <string name="crm_settings_tab_access">Приступ</string>
-    <string name="crm_settings_tab_people">People</string>
+    <string name="crm_settings_tab_people">Људи</string>
     <string name="crm_option_icon">Икона</string>
     <string name="crm_option_icon_placeholder">нпр. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">Откажи претплату</string>

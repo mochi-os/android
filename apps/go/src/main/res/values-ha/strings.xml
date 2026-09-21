@@ -53,7 +53,7 @@
     <string name="go_status_draw">Canjaras</string>
     <string name="go_status_draw_text">Canjaras</string>
     <string name="go_status_game_over">Wasan ya ƙare</string>
-    <string name="go_status_opponent_move">Move na %1$s</string>
+    <string name="go_status_opponent_move">Motsin %1$s</string>
     <string name="go_status_opponent_wins">%1$s ya yi nasara</string>
     <string name="go_status_resigned_opponent">%1$s ya yi murabus — kun yi nasara!</string>
     <string name="go_status_resigned_self">Kun yi murabus — %1$s ya yi nasara</string>
@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Sanarwa game da matakan Go, wucewa, tayin canjaras, da sakamakon wasanni.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Bude gefe</string>
+    <string name="go_sidebar_active">Wasannin da ke kan ci gaba</string>
     <string name="go_empty_active">Babu wasanni masu aiki tukuna.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Sabon wasan Go</string>

@@ -315,7 +315,7 @@
     <string name="login_title">Најава</string>
     <string name="login_section_methods">Методи за најавување</string>
     <string name="login_method_email">Код за е-пошта</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Криптографски клуч</string>
     <string name="login_method_totp">Authenticator апликација</string>
     <string name="login_method_oauth">Најава од трета страна</string>
     <string name="login_method_recovery">Кодови за обновување</string>
@@ -362,7 +362,7 @@
     <string name="accounts_provider_mcp">MCP сервер</string>
     <string name="accounts_provider_unifiedpush">Push известување</string>
     <string name="accounts_provider_url">Надворешен URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Сметката е верификувана</string>
     <string name="accounts_verify_invalid">Невалиден код за верификација</string>
     <string name="accounts_verify_sent">Кодот за потврда е испратен</string>

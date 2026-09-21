@@ -315,7 +315,7 @@
     <string name="login_title">Daxil ol</string>
     <string name="login_section_methods">Giriş üsulları</string>
     <string name="login_method_email">E-poçt kodu</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Giriş açarı</string>
     <string name="login_method_totp">Authenticator tətbiqi</string>
     <string name="login_method_oauth">Üçüncü tərəf girişi</string>
     <string name="login_method_recovery">Bərpa kodları</string>
@@ -362,7 +362,7 @@
     <string name="accounts_provider_mcp">MCP serveri</string>
     <string name="accounts_provider_unifiedpush">Push bildirişi</string>
     <string name="accounts_provider_url">Xarici URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi veb</string>
     <string name="accounts_verified">Hesab təsdiqləndi</string>
     <string name="accounts_verify_invalid">Etibarsız doğrulama kodu</string>
     <string name="accounts_verify_sent">Yoxlanıldı</string>

@@ -142,7 +142,7 @@
     <string name="auth_login_title">Wọlé sí Mochi</string>
     <string name="auth_next">Tó kàn</string>
     <string name="auth_or_log_in_with">Tàbí wọlé pẹ̀lú</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Kọ́kọ́rọ́-ìwọlé</string>
     <string name="auth_use_passkey">Lo passkey</string>
     <string name="auth_email_me_a_code">Fi kóòdù ránṣẹ́ sí mi nípasẹ̀ ímeèlì</string>
     <string name="auth_or_enter_authenticator_code">Tàbí tẹ kóòdù olùfọwọ́sí sí</string>

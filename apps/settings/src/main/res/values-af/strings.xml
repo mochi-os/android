@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Kennisgewing-voorkeure</string>
     <string name="settings_home_accounts">Verbinde rekeninge</string>
     <string name="settings_home_interests">Belange</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Wagwoordsleutels</string>
     <string name="account_passkey_register">Voeg sleutelpas by</string>
     <string name="account_passkey_delete_title">Verwyder sleutelpas?</string>
     <string name="account_section_totp">Verifikasie-app</string>
@@ -315,7 +315,7 @@
     <string name="login_title">Meld aan</string>
     <string name="login_section_methods">Aanmeldmetodes</string>
     <string name="login_method_email">E-poskode</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Toegangsleutel</string>
     <string name="login_method_totp">Verifikasie-app</string>
     <string name="login_method_oauth">Derde-party aanmelding</string>
     <string name="login_method_recovery">Herstelkodes</string>

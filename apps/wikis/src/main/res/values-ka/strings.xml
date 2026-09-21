@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">ვიკის ბმული</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">ბმული</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">გვერდითი პანელის გახსნა</string>
     <string name="wikis_search_placeholder">wiki-ს ძებნა…</string>
     <string name="wikis_unsubscribe_confirm_message">დარწმუნებული ხართ, რომ გსურთ %1$s-ის გამოწერის გაუქმება?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">დაწერეთ კომენტარი…</string>
     <string name="wikis_comment_form_placeholder_reply">დაწერეთ პასუხი…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">გაგზავნა</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">დაწერეთ თქვენი შიგთავსი აქ Markdown-ით…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">წაიშალოს „%1$s“? ამის გაუქმება შეუძლებელია.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">შეეხეთ ატვირთვას ამ გვერდზე ფაილების დასამატებლად.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">სახელის შენახვა</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">წვდომის განახლება ვერ მოხერხდა</string>

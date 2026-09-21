@@ -53,7 +53,7 @@
     <string name="go_status_draw">Çək</string>
     <string name="go_status_draw_text">Çək</string>
     <string name="go_status_game_over">Oyun bitdi</string>
-    <string name="go_status_opponent_move">ayda %1$s</string>
+    <string name="go_status_opponent_move">%1$s-in gedişi</string>
     <string name="go_status_opponent_wins">%1$s - Şərhlər</string>
     <string name="go_status_resigned_opponent">%1$s gedişi</string>
     <string name="go_status_resigned_self">Siz təslim oldunuz — %1$s qazanır</string>
@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go gedişləri, paslar, heç-heçə təklifləri və oyun nəticələri barədə bildirişlər.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Yan paneli aç</string>
+    <string name="go_sidebar_active">Aktiv oyunlar</string>
     <string name="go_empty_active">Hələ aktiv oyun yoxdur.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Yeni Go oyunu</string>

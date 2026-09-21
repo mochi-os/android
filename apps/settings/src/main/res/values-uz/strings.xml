@@ -315,7 +315,7 @@
     <string name="login_title">Kirish</string>
     <string name="login_section_methods">Kirish usullari</string>
     <string name="login_method_email">Email kodi</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Kirish kaliti</string>
     <string name="login_method_totp">Autentifikator ilova</string>
     <string name="login_method_oauth">Uchinchi tomon kirishi</string>
     <string name="login_method_recovery">Tiklash kodlari</string>
@@ -362,7 +362,7 @@
     <string name="accounts_provider_mcp">MCP serveri</string>
     <string name="accounts_provider_unifiedpush">Push bildirishnoma</string>
     <string name="accounts_provider_url">Tashqi URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi veb</string>
     <string name="accounts_verified">Hisob tasdiqlandi</string>
     <string name="accounts_verify_invalid">Notoʻgʻri tasdiqlash kodi</string>
     <string name="accounts_verify_sent">Tasdiqlash kodi yuborildi</string>

@@ -170,7 +170,7 @@
     <string name="market_editor_section_location">Wuri</string>
     <string name="market_editor_section_photos">Hotuna</string>
     <string name="market_editor_section_pricing">Farashin</string>
-    <string name="market_editor_section_tags">Tags</string>
+    <string name="market_editor_section_tags">Alamomi</string>
     <string name="market_editor_shipping">Aikawa</string>
     <string name="market_editor_stripe_banner_action">Haɗa Stripe</string>
     <string name="market_editor_title">Take</string>
@@ -249,7 +249,7 @@
     <string name="market_listing_detail_share">Raba talla</string>
     <string name="market_listing_detail_shipping_heading">Aikawa</string>
     <string name="market_listing_detail_subscribe">Yi subscribe</string>
-    <string name="market_listing_detail_tags_heading">Tags</string>
+    <string name="market_listing_detail_tags_heading">Alamomi</string>
     <string name="market_listing_detail_title">Tallace</string>
     <string name="market_listing_detail_unsave">An adana</string>
     <string name="market_listing_detail_verified">An tabbatar</string>

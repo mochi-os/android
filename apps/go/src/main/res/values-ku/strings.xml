@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Agahdarî derbarê tevgerên Go, derbaskirin, pêşniyarên wekhevî û encamên lîstikê.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Refê kêlekê veke</string>
+    <string name="go_sidebar_active">Lîstikên çalak</string>
     <string name="go_empty_active">Hîn tu lîstika çalak tune.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Lîstika Go ya nû</string>

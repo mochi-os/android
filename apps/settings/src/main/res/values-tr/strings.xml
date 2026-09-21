@@ -315,7 +315,7 @@
     <string name="login_title">Oturum aç</string>
     <string name="login_section_methods">Oturum açma yöntemleri</string>
     <string name="login_method_email">E-posta kodu</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Geçiş anahtarı</string>
     <string name="login_method_totp">Authenticator uygulaması</string>
     <string name="login_method_oauth">Üçüncü taraf girişi</string>
     <string name="login_method_recovery">Kurtarma kodları</string>

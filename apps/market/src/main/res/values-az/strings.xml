@@ -279,7 +279,7 @@
     <string name="market_filter_pricing_subscription">Abunə</string>
     <string name="market_filter_remove">Filteri sil</string>
     <string name="market_filter_sort">Sırala</string>
-    <string name="market_filter_sort_default">Default</string>
+    <string name="market_filter_sort_default">Standart</string>
     <string name="market_filter_sort_price_high">Qiymət: yüksəkdən aşağı</string>
     <string name="market_filter_sort_price_low">Qiymət: aşağıdan yüksəyə</string>
     <string name="market_filter_sort_rating">Ən yüksək reytinq</string>

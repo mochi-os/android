@@ -138,7 +138,7 @@
     <string name="auth_login_title">Prijavite se na Mochi</string>
     <string name="auth_next">Dalje</string>
     <string name="auth_or_log_in_with">Ili se prijavite pomoću</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Pristupni ključ</string>
     <string name="auth_use_passkey">Koristi pristupni ključ</string>
     <string name="auth_email_me_a_code">Pošalji mi kod na email</string>
     <string name="auth_or_enter_authenticator_code">Ili unesite authenticator kod</string>

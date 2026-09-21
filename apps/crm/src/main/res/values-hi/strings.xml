@@ -30,7 +30,7 @@
     <string name="crm_settings_title">सेटिंग्स</string>
     <string name="crm_settings_tab_general">सामान्य</string>
     <string name="crm_settings_tab_access">एक्सेस</string>
-    <string name="crm_settings_tab_people">People</string>
+    <string name="crm_settings_tab_people">लोग</string>
     <string name="crm_option_icon">आइकन</string>
     <string name="crm_option_icon_placeholder">उदा. Check, Star, Flag</string>
     <string name="crm_settings_unsubscribe">अनसब्सक्राइब करें</string>

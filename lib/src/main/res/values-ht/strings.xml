@@ -37,7 +37,7 @@
     <string name="discovery_recommended">Rekòmande</string>
     <string name="access_add_rule">Ajoute yon règ</string>
     <string name="access_owner">Pwopriyetè</string>
-    <string name="access_revoke">Revoke</string>
+    <string name="access_revoke">Anile</string>
     <string name="access_level_comment">Kòmantè</string>
     <string name="access_level_view">Wè</string>
     <string name="access_level_none">Okenn</string>
@@ -144,7 +144,7 @@
     <string name="auth_login_title">Konekte nan Mochi</string>
     <string name="auth_next">Pwochen</string>
     <string name="auth_or_log_in_with">Oswa konekte ak</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Kle aksè</string>
     <string name="auth_use_passkey">Sèvi ak yon passkey</string>
     <string name="auth_email_me_a_code">Voye yon kòd ban mwen pa imèl</string>
     <string name="auth_or_enter_authenticator_code">Oswa antre kòd otantifikatè a</string>
@@ -293,7 +293,7 @@
     <string name="format_code">Kòd</string>
     <string name="format_list">Lis ak pwen</string>
     <string name="common_preview">Apèsi</string>
-    <string name="rss_revoke_confirm">Revoke</string>
+    <string name="rss_revoke_confirm">Anile</string>
     <string name="rss_revoke">Revoke aksè</string>
     <string name="rss_revoke_title">Revoke aksè RSS la?</string>
     <string name="rss_revoke_message">Tout sa ki abòne nan fil sa a ap sispann resevwa l. Ou ka kopye yon nouvo URL apre.</string>

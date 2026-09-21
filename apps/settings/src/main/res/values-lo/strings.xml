@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">ການຕັ້ງຄ່າການແຈ້ງເຕືອນ</string>
     <string name="settings_home_accounts">ບັນຊີທີ່ເຊື່ອມຕໍ່</string>
     <string name="settings_home_interests">ຄວາມສົນໃຈ</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">ກະແຈຜ່ານ</string>
     <string name="account_passkey_register">ເພີ່ມ passkey</string>
     <string name="account_passkey_delete_title">ລົບ passkey ບໍ?</string>
     <string name="account_section_totp">ແອັບ authenticator</string>

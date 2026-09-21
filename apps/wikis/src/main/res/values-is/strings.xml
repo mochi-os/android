@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Tengill wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Tengill</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Opna hliðarstiku</string>
     <string name="wikis_search_placeholder">Leita að wiki…</string>
     <string name="wikis_unsubscribe_confirm_message">Ertu viss um að þú viljir segja upp áskrift að %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Skrifaðu athugasemd…</string>
     <string name="wikis_comment_form_placeholder_reply">Skrifaðu svar…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">Senda</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Skrifaðu efnið þitt hér með Markdown…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Eyða „%1$s“? Þetta er ekki hægt að afturkalla.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Ýttu á Hlaða upp til að bæta skrám við þessa síðu.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Vista nafn</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Ekki tókst að uppfæra aðgang</string>

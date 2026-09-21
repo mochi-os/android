@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">د Go حرکتونو، تېرېدنو، د مساوي وړاندیزونو او د لوبې پایلو په اړه خبرتیاوې.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">د څنګ بار خلاص کړئ</string>
+    <string name="go_sidebar_active">فعالې لوبې</string>
     <string name="go_empty_active">تر اوسه فعال لوبې نشته.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">نوې د Go لوبه</string>

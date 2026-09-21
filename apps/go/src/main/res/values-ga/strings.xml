@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Fógraí faoi bhogadh Go, pasanna, tairiscintí comhscóir agus torthaí cluichí.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Oscail barra taoibh</string>
+    <string name="go_sidebar_active">Cluichí Gníomhacha</string>
     <string name="go_empty_active">Níl aon chluiche gníomhach ann fós.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Cluiche Go nua</string>

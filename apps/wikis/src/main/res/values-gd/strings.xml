@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">Ceangal na wiki</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">Ceangal</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">Fosgail bàr-taoibh</string>
     <string name="wikis_search_placeholder">Lorg wiki…</string>
     <string name="wikis_unsubscribe_confirm_message">A bheil thu cinnteach gu bheil thu airson sgur de %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,8 +239,8 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">Sgrìobh beachd…</string>
     <string name="wikis_comment_form_placeholder_reply">Sgrìobh freagairt…</string>
-    <string name="wikis_comment_form_send">Send</string>
-    <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
+    <string name="wikis_comment_form_send">Cuir</string>
+    <string name="wikis_comment_form_remove_attachment">Thoir air falbh an ceanglachan</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">Sgrìobh an t-susbaint agad an seo le Markdown…</string>
     <string name="wikis_insert_dialog_empty">Chan eil ceanglachain ann fhathast. Luchdaich suas faidhle gus tòiseachadh.</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">Sguab às “%1$s”? Cha ghabh seo a neo-dhèanamh.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">Thoir gnogag air Luchdaich suas gus faidhlichean a chur ris an duilleag seo.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">Sàbhail an t-ainm</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">Dh’fhàillig ùrachadh an inntrigidh</string>

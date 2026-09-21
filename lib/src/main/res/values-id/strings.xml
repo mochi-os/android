@@ -140,7 +140,7 @@
     <string name="auth_login_title">Masuk ke Mochi</string>
     <string name="auth_next">Berikutnya</string>
     <string name="auth_or_log_in_with">Atau masuk dengan</string>
-    <string name="auth_passkey">Passkey</string>
+    <string name="auth_passkey">Kunci sandi</string>
     <string name="auth_use_passkey">Gunakan passkey</string>
     <string name="auth_email_me_a_code">Kirimi saya kode lewat email</string>
     <string name="auth_or_enter_authenticator_code">Atau masukkan kode autentikator</string>

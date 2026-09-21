@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">සංග්‍රහ නාමය</string>
     <string name="feeds_save_name">නම සුරකින්න</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">බැනරය</string>
     <string name="feeds_banner_description">ඔබේ සංග්‍රහයේ ඉහළින් පෙන්වන විකල්ප markdown බැනරයක්.</string>
     <string name="feeds_clear">හිස් කරන්න</string>
     <string name="feeds_delete_feed">සංග්‍රහය මකන්න</string>

@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Izaziso mayelana nokunyakaza kwe-Go, ukudlula, izindlela zokulingana nemiphumela yemidlalo.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">Vula ibha eseceleni</string>
+    <string name="go_sidebar_active">Imidlalo Esebenzayo</string>
     <string name="go_empty_active">Ayikho imidlalo esebenzayo okwamanje.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">Umdlalo omusha we-Go</string>

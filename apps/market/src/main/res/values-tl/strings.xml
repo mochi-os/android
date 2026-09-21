@@ -122,7 +122,7 @@
     <string name="market_dispute_dialog_title">Tumugon sa hindi pagkakaunawaan</string>
     <string name="market_editor_appeal_submit">Ipasa ang appeal</string>
     <string name="market_editor_asset_add">Magdagdag ng file</string>
-    <string name="market_editor_asset_external">External URL</string>
+    <string name="market_editor_asset_external">Panlabas na URL</string>
     <string name="market_editor_asset_external_filename">Filename</string>
     <string name="market_editor_back">Bumalik</string>
     <string name="market_editor_category">Category</string>

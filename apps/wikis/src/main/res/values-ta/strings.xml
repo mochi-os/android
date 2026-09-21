@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">விக்கி இணைப்பு</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">இணைப்பு</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">பக்கப்பட்டியைத் திற</string>
     <string name="wikis_search_placeholder">wiki தேடு…</string>
     <string name="wikis_unsubscribe_confirm_message">%1$s இலிருந்து சந்தாவை நிறுத்த விரும்புகிறீர்களா?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">கருத்து எழுது…</string>
     <string name="wikis_comment_form_placeholder_reply">பதில் எழுது…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">அனுப்பு</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">உங்கள் உள்ளடக்கத்தை இங்கே Markdown பயன்படுத்தி எழுதவும்…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ஐ நீக்கவா? இதைச் செயல்தவிர்க்க முடியாது.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">இந்தப் பக்கத்தில் கோப்புகளைச் சேர்க்க பதிவேற்று என்பதைத் தட்டவும்.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">பெயரைச் சேமி</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">அணுகலைப் புதுப்பிக்க முடியவில்லை</string>

@@ -37,14 +37,14 @@
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">د Words وارونو، تبادلو او د لوبې پایلو په اړه خبرتیاوې.</string>
-    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_active">فعالې لوبې</string>
     <string name="words_sidebar_empty">تر اوسه لوبې نشته.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">د لوبې پیل کولو لپاره په People اپ کې ملګري اضافه کړئ.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_opponent_move">د %1$s حرکت</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
@@ -53,9 +53,9 @@
     <string name="words_detail_action_more">Game actions</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
-    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+    <string name="words_detail_chat_player_played">%1$s %2$s ولوبید</string>
 
-    <string name="words_detail_delete_title">Delete game?</string>
+    <string name="words_detail_delete_title">لوبه ړنګه شي؟</string>
     <string name="words_detail_delete_confirm">ړنګ کړئ</string>
     <string name="words_detail_delete_message">دا به لوبه او د هغې چیټ د تل لپاره ړنګ کړي. دا کړنه بیرته نشي کیدی.</string>
     <string name="words_detail_chat_passed">%1$s تېر شو</string>

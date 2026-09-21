@@ -314,7 +314,7 @@
     </plurals>
     <string name="login_title">Mag-login</string>
     <string name="login_section_methods">Mga paraan ng pag-login</string>
-    <string name="login_method_email">Email code</string>
+    <string name="login_method_email">Code ng email</string>
     <string name="login_method_passkey">Passkey</string>
     <string name="login_method_totp">Authenticator app</string>
     <string name="login_method_oauth">Pag-login ng third-party</string>

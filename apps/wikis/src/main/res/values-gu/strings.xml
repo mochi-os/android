@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">વિકિ લિંક</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">લિંક</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">સાઇડબાર ખોલો</string>
     <string name="wikis_search_placeholder">wiki શોધો…</string>
     <string name="wikis_unsubscribe_confirm_message">શું તમે ખરેખર %1$s થી અનસબ્સ્ક્રાઇબ કરવા માંગો છો?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,8 +239,8 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">ટિપ્પણી લખો…</string>
     <string name="wikis_comment_form_placeholder_reply">જવાબ લખો…</string>
-    <string name="wikis_comment_form_send">Send</string>
-    <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
+    <string name="wikis_comment_form_send">મોકલો</string>
+    <string name="wikis_comment_form_remove_attachment">જોડાણ દૂર કરો</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">તમારી સામગ્રી અહીં Markdown વડે લખો…</string>
     <string name="wikis_insert_dialog_empty">હજી સુધી કોઈ જોડાણ નથી. શરૂ કરવા ફાઇલ અપલોડ કરો.</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” કાઢી નાખવું? આ પાછું લાવી શકાશે નહીં.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">આ પૃષ્ઠમાં ફાઇલો ઉમેરવા અપલોડ દબાવો.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">નામ સાચવો</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">ઍક્સેસ અપડેટ કરવામાં નિષ્ફળ</string>

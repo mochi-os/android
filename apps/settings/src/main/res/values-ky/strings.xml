@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Билдирүү жөндөөлөрү</string>
     <string name="settings_home_accounts">Байланышкан аккаунттар</string>
     <string name="settings_home_interests">Кызыкчылыктар</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">Кирүү ачкычтары</string>
     <string name="account_passkey_register">Passkey кошуу</string>
     <string name="account_passkey_delete_title">Passkey жок кылабызбы?</string>
     <string name="account_section_totp">Authenticator колдонмосу</string>
@@ -315,7 +315,7 @@
     <string name="login_title">Кирүү</string>
     <string name="login_section_methods">Кирүү ыкмалары</string>
     <string name="login_method_email">Электрондук почта коду</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">Мүмкүндүк ачкычы</string>
     <string name="login_method_totp">Authenticator колдонмосу</string>
     <string name="login_method_oauth">Үчүнчү жактын кирүүсү</string>
     <string name="login_method_recovery">Калыбына келтирүү коддору</string>
@@ -362,7 +362,7 @@
     <string name="accounts_provider_mcp">MCP сервери</string>
     <string name="accounts_provider_unifiedpush">Push билдирүүсү</string>
     <string name="accounts_provider_url">Тышкы URL</string>
-    <string name="accounts_provider_web">Mochi web</string>
+    <string name="accounts_provider_web">Mochi веб</string>
     <string name="accounts_verified">Аккаунт текшерилди</string>
     <string name="accounts_verify_invalid">Жараксыз текшерүү коду</string>
     <string name="accounts_verify_sent">Текшерүү коду жөнөтүлдү</string>

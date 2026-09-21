@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Nama feed</string>
     <string name="feeds_save_name">Simpan nama</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Spanduk</string>
     <string name="feeds_banner_description">Banner markdown opsional yang ditampilkan di bagian atas feed Anda.</string>
     <string name="feeds_clear">Bersihkan</string>
     <string name="feeds_delete_feed">Hapus feed</string>

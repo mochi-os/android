@@ -63,7 +63,7 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Ծանուցումներ Go-ի քայլերի, բացթողումների, ոչ-ոքիի առաջարկների և խաղի արդյունքների մասին։</string>
-    <string name="go_open_sidebar">Open sidebar</string>
+    <string name="go_open_sidebar">Բացել կողագոտին</string>
     <string name="go_sidebar_active">Ակտիվ խաղեր</string>
     <string name="go_empty_active">Դեռ ակտիվ խաղեր չկան։</string>
     <string name="go_status_resigned">Resigned</string>

@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">اطلاعن جون ترجيحون</string>
     <string name="settings_home_accounts">ڳنڍيل اڪائونٽ</string>
     <string name="settings_home_interests">دلچسپيون</string>
-    <string name="account_section_passkeys">Passkeys</string>
+    <string name="account_section_passkeys">پاسي ڪيز</string>
     <string name="account_passkey_register">پاس ڪيءَ شامل ڪريو</string>
     <string name="account_passkey_delete_title">پاس ڪيءَ ختم ڪجي؟</string>
     <string name="account_section_totp">Authenticator ايپ</string>
@@ -315,7 +315,7 @@
     <string name="login_title">لاگ ان</string>
     <string name="login_section_methods">لاگ ان جا طريقا</string>
     <string name="login_method_email">اي ميل ڪوڊ</string>
-    <string name="login_method_passkey">Passkey</string>
+    <string name="login_method_passkey">پاس ڪيئي</string>
     <string name="login_method_totp">Authenticator ايپ</string>
     <string name="login_method_oauth">ٽئين پارٽي لاگ ان</string>
     <string name="login_method_recovery">بحالي ڪوڊ</string>

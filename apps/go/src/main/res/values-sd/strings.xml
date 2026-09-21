@@ -63,8 +63,8 @@
 
     <string name="go_channel_name">Go notifications</string>
     <string name="go_channel_description">Go چالن، پاس، برابري جي آڇن ۽ راند جي نتيجن بابت اطلاعون.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
+    <string name="go_open_sidebar">سائڊبار کوليو</string>
+    <string name="go_sidebar_active">فعال رانديون</string>
     <string name="go_empty_active">اڃا ڪا فعال راند ناهي.</string>
     <string name="go_status_resigned">Resigned</string>
     <string name="go_new_game_title">نئين Go راند</string>

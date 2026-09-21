@@ -23,7 +23,7 @@
     <string name="words_detail_action_pass">Lulus</string>
     <string name="words_detail_action_exchange">Tukeur ubin</string>
     <string name="words_detail_action_cancel_exchange">Batalkeun bursa</string>
-    <string name="words_detail_action_resign">Resign</string>
+    <string name="words_detail_action_resign">Nyerah</string>
     <string name="words_detail_action_rematch">Tanding deui</string>
     <string name="words_detail_action_delete">Hapus kaulinan</string>
     <string name="words_detail_chat_title">Chat</string>
@@ -32,19 +32,19 @@
     <string name="words_detail_cancel">Batalkeun</string>
     <string name="words_detail_exchange">Tukeur</string>
     <string name="words_detail_blank_title">Pilih hurup</string>
-    <string name="words_detail_resign_title">Resign game?</string>
+    <string name="words_detail_resign_title">Nyerah tina kaulinan?</string>
     <string name="words_detail_resign_message">Anjeun yakin hayang nyerah?</string>
 
     <string name="words_channel_name">Words notifications</string>
     <string name="words_channel_description">Bewara ngeunaan giliran Words, tukeur, jeung hasil kaulinan.</string>
-    <string name="words_sidebar_active">Active games</string>
+    <string name="words_sidebar_active">Kaulinan Aktif</string>
     <string name="words_sidebar_empty">Can aya kaulinan.</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Tambahkeun babaturan dina aplikasi People pikeun ngamimitian maén.</string>
     <string name="words_detail_title">Game</string>
-    <string name="words_detail_status_opponent_move">%1$s\'s move</string>
+    <string name="words_detail_status_opponent_move">Lengkah %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
@@ -53,9 +53,9 @@
     <string name="words_detail_action_more">Game actions</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
-    <string name="words_detail_chat_player_played">%1$s played %2$s</string>
+    <string name="words_detail_chat_player_played">%1$s maén %2$s</string>
 
-    <string name="words_detail_delete_title">Delete game?</string>
+    <string name="words_detail_delete_title">Hapus kaulinan?</string>
     <string name="words_detail_delete_confirm">Hapus</string>
     <string name="words_detail_delete_message">Ieu bakal ngahapus kaulinan sareng obrolanana sacara permanén. Tindakan ieu teu tiasa dibatalkeun.</string>
     <string name="words_detail_chat_passed">%1$s ngaliwat</string>

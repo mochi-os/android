@@ -228,7 +228,7 @@
     <string name="wikis_pageview_share_chooser">د ویکي لینک</string>
     <string name="wikis_pageview_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_page_action_share">لینک</string>
-    <string name="wikis_open_sidebar">Open sidebar</string>
+    <string name="wikis_open_sidebar">د څنګ بار خلاص کړئ</string>
     <string name="wikis_search_placeholder">د wiki لټون…</string>
     <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s ګډون لغوه کړئ؟</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
@@ -239,7 +239,7 @@
     <string name="wikis_comments_title_template">%1$s - Comments</string>
     <string name="wikis_comment_form_placeholder_new">څرګندونه ولیکئ…</string>
     <string name="wikis_comment_form_placeholder_reply">ځواب ولیکئ…</string>
-    <string name="wikis_comment_form_send">Send</string>
+    <string name="wikis_comment_form_send">لیږل</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
     <string name="wikis_editor_content_placeholder">خپله منځپانګه دلته د Markdown په کارولو ولیکئ…</string>
@@ -272,7 +272,7 @@
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ړنګ کړئ؟ دا بیرته نه اخیستل کیږي.</string>
     <string name="wikis_attachments_downloading">Downloading…</string>
     <string name="wikis_attachments_empty_description">دې پاڼې ته د فایلونو اضافه کولو لپاره پورته کول ووهئ.</string>
-    <string name="wikis_settings_name_save_cd">Save name</string>
+    <string name="wikis_settings_name_save_cd">نوم وساتئ</string>
     <string name="wikis_settings_name_cancel_cd">Cancel edit</string>
     <string name="wikis_access_level_label">Permission</string>
     <string name="wikis_access_set_failed">لاسرسی تازه نه شو</string>

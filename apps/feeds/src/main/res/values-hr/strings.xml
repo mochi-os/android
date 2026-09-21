@@ -42,7 +42,7 @@
     <string name="feeds_tab_ai">AI</string>
     <string name="feeds_feed_name">Naziv feeda</string>
     <string name="feeds_save_name">Spremi naziv</string>
-    <string name="feeds_banner">Banner</string>
+    <string name="feeds_banner">Baner</string>
     <string name="feeds_banner_description">Neobavezni markdown banner prikazan na vrhu vašeg feeda.</string>
     <string name="feeds_clear">Očisti</string>
     <string name="feeds_delete_feed">Obriši feed</string>
@@ -158,7 +158,7 @@
     <string name="feeds_access_subject_authenticated">Autenticirani korisnici</string>
     <string name="feeds_markdown_supported">Markdown podržan</string>
     <string name="feeds_permission_deny">Odbij</string>
-    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_rss_feed">RSS kanal</string>
     <string name="feeds_settings_field_entity_id">ID entiteta</string>
     <string name="feeds_settings_field_fingerprint">Otisak</string>
     <string name="feeds_settings_field_server">Poslužitelj</string>
