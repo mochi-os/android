@@ -19,7 +19,7 @@ class NotificationRoutingTest {
     /** The slugs MochiApplication creates a channel for, in manifest order. */
     private val createdAtStartup = setOf(
         "feeds", "chat", "forums", "projects", "crm", "people",
-        "wikis", "chess", "go", "words", "market", "staff",
+        "wikis", "chess", "go", "words", "market", "staff", "calendars",
     )
 
     @Test

@@ -41,6 +41,7 @@ import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.push.launcherComponentFor
+import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.AppBootstrapHost
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -48,6 +49,8 @@ import org.mochios.android.ui.theme.MochiTheme
 import org.mochios.android.R as MochiR
 import org.mochios.android.update.UpdateInstaller
 import org.mochios.chat.navigation.ChatApp
+import org.mochios.calendars.navigation.CalendarsApp
+import org.mochios.calendars.navigation.calendarsNavGraph
 import org.mochios.chat.navigation.chatNavGraph
 import org.mochios.crm.navigation.CrmsApp
 import org.mochios.crm.navigation.crmsNavGraph
@@ -224,6 +227,11 @@ open class MainActivity : ComponentActivity() {
                             )
                             marketNavGraph(navController, onOpenNotifications = openNotifications)
                             staffNavGraph(navController, onOpenNotifications = openNotifications)
+                            calendarsNavGraph(
+                                navController,
+                                onLogout = requestLogout,
+                                onOpenNotifications = openNotifications,
+                            )
                         }
 
                         if (showLogoutConfirm) {
@@ -390,9 +398,12 @@ open class MainActivity : ComponentActivity() {
         lifecycleScope.launch {
             if (sessionManager.isAuthenticated.first()) {
                 PushTransport.configure(applicationContext, sessionManager, okHttpClient)
-                // Contacts edited on the web since the phone was last open
-                // land before the user gets as far as the Contacts app.
-                ContactsSync.foreground(applicationContext, sessionManager.getBoundIdentity())
+                // Contacts and events edited on the web since the phone was
+                // last open land before the user gets as far as the phone's
+                // own Contacts or Calendar app.
+                val bound = sessionManager.getBoundIdentity()
+                ContactsSync.foreground(applicationContext, bound)
+                CalendarsSync.foreground(applicationContext, bound)
             }
         }
     }
@@ -810,6 +821,15 @@ open class MainActivity : ComponentActivity() {
             "staff" -> {
                 navController.openAppHome(StaffApp.HOME)
             }
+            "calendars" -> {
+                navController.openAppHome(CalendarsApp.HOME)
+                // A reminder names the event it is for, and the second segment
+                // is the occurrence it names when the event repeats.
+                if (id != null && id != "views") {
+                    val occurrence = parts.getOrNull(2)?.toLongOrNull() ?: 0
+                    navController.navigate(CalendarsApp.event(id, occurrence)) { launchSingleTop = true }
+                }
+            }
         }
     }
 
@@ -847,6 +867,7 @@ open class MainActivity : ComponentActivity() {
         "words" -> WordsApp.HOME
         "market" -> MarketApp.HOME
         "staff" -> StaffApp.HOME
+        "calendars" -> CalendarsApp.HOME
         else -> FeedsApp.HOME
     }
 
@@ -886,6 +907,6 @@ open class MainActivity : ComponentActivity() {
          * Every bundled app; the bootstrap mints a JWT for each so
          * cross-feature navigation never hits "app token required".
          */
-        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "menu")
+        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "calendars", "menu")
     }
 }

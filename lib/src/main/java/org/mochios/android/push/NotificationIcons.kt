@@ -17,7 +17,7 @@ import org.mochios.android.R
  */
 internal val NOTIFICATION_CHANNELS = setOf(
     "feeds", "chat", "forums", "projects", "people", "crm",
-    "wikis", "chess", "go", "words", "market", "staff",
+    "wikis", "chess", "go", "words", "market", "staff", "calendars",
 )
 
 /** Channel used when the payload names an app we have no channel for. */
@@ -77,4 +77,5 @@ internal val LAUNCHER_ACTIVITIES = mapOf(
     "words" to "MochiWordsLauncher",
     "market" to "MochiMarketLauncher",
     "staff" to "MochiStaffLauncher",
+    "calendars" to "MochiCalendarsLauncher",
 )

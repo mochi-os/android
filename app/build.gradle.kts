@@ -105,6 +105,7 @@ dependencies {
     implementation(project(":apps:words"))
     implementation(project(":apps:market"))
     implementation(project(":apps:staff"))
+    implementation(project(":apps:calendars"))
 
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)

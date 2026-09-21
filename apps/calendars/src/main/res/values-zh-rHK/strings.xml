@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendars_previous">上一頁</string>
+    <string name="calendars_event_description">描述</string>
+</resources>

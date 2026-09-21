@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calendars_subscribe_submit">Suscribite</string>
+    <string name="calendars_rename">Renombrá</string>
+    <string name="calendars_delete">Eliminá</string>
+    <string name="calendars_list_search">Buscá</string>
+    <string name="calendars_permission_allow">Permití</string>
+    <string name="calendars_device_done">Listo</string>
+    <string name="calendars_device_delete">Eliminá</string>
+</resources>

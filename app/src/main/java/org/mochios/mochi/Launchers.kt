@@ -28,3 +28,4 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint class MochiWordsLauncher : MainActivity()
 @AndroidEntryPoint class MochiMarketLauncher : MainActivity()
 @AndroidEntryPoint class MochiStaffLauncher : MainActivity()
+@AndroidEntryPoint class MochiCalendarsLauncher : MainActivity()

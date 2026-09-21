@@ -25,6 +25,7 @@ import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.util.isServerOrigin
 import org.mochios.android.util.originOf
@@ -190,10 +191,11 @@ class SessionManager @Inject constructor(
         cookieStore.clear()
         // Logout in this app shouldn't tear down OTHER apps' bindings —
         // remove only the account this app was bound to. Its synced contacts
-        // go first, while the account still names them.
+        // and calendars go first, while the account still names them.
         if (identity != null) {
             withContext(Dispatchers.IO) {
                 ContactsSync.account(context, identity)?.let { ContactsSync.disable(context, it, logout = true) }
+                CalendarsSync.account(context, identity)?.let { CalendarsSync.disable(context, it, logout = true) }
             }
             MochiAccount.remove(context, identity)
         }

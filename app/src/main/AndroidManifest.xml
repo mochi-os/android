@@ -22,6 +22,12 @@
     -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!--
+      Calendar sync. Dangerous in the same way, and requested at runtime by the
+      calendars app's "Sync to this phone" switch, never at install.
+    -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.READ_SYNC_STATS" />
@@ -350,6 +356,24 @@
             <meta-data android:name="org.mochios.targetApp" android:value="staff" />
         </activity>
 
+        <activity
+            android:name=".MochiCalendarsLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/launcher_calendars"
+            android:icon="@mipmap/ic_calendars"
+            android:roundIcon="@mipmap/ic_calendars_round"
+            android:launchMode="singleTop"
+            android:taskAffinity="org.mochios.mochi.calendars"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
+        </activity>
+
         <!--
           UnifiedPush MessagingReceiver for the Android client. Catches
           MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts
@@ -466,6 +490,24 @@
             <meta-data
                 android:name="android.provider.CONTACTS_STRUCTURE"
                 android:resource="@xml/structure" />
+        </service>
+
+        <!--
+          Calendar sync adapter for the Mochi account: the phone's own calendar
+          shows the calendars app's events and edits made there flow back
+          (lib/.../sync/CalendarsSyncAdapter.kt). Bound by the system sync
+          manager, so it must be exported. @xml/calendars is the adapter
+          declaration for the calendar authority.
+        -->
+        <service
+            android:name="org.mochios.android.sync.CalendarsSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/calendars" />
         </service>
 
         <service

@@ -33,6 +33,38 @@ class Format(val preferences: UserPreferences) {
     }
 
 
+    /**
+     * Epoch seconds → user-format time of day, without seconds: what a
+     * calendar grid, an agenda row and a time picker show.
+     */
+    fun formatTime(epochSeconds: Long): String {
+        if (epochSeconds <= 0) return ""
+        val pattern = when (preferences.timeFormat) {
+            TimeFormat.H12 -> "h:mm a"
+            TimeFormat.H24 -> "HH:mm"
+        }
+        val formatter = SimpleDateFormat(pattern, Locale.getDefault())
+        formatter.timeZone = timeZone
+        return formatter.format(Date(epochToMillis(epochSeconds)))
+    }
+
+    /**
+     * The label on a time grid's hour row: "09:00", or "9 AM" where the user
+     * reads a twelve-hour clock. [hour] is 0 to 24.
+     */
+    fun formatHour(hour: Int): String {
+        val clamped = hour.coerceIn(0, 24) % 24
+        val pattern = when (preferences.timeFormat) {
+            TimeFormat.H12 -> "h a"
+            TimeFormat.H24 -> "HH:mm"
+        }
+        // Through the formatter rather than by hand, so the half-day marker is
+        // the locale's own word rather than an English literal.
+        val formatter = SimpleDateFormat(pattern, Locale.getDefault())
+        formatter.timeZone = TimeZone.getTimeZone("UTC")
+        return formatter.format(Date(clamped * 3_600_000L))
+    }
+
     /** Epoch seconds → "$date $time" using both user formats. */
     fun formatDateTime(epochSeconds: Long): String {
         if (epochSeconds <= 0) return ""

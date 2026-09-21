@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_channel_calendars">Calendars</string>
+
+    <!-- Drawer -->
+    <string name="calendars_drawer_title">Calendars</string>
+    <string name="calendars_drawer_open">Calendars</string>
+    <string name="calendars_calendar_menu">%1$s options</string>
+    <string name="calendars_only_this">Only this</string>
+    <string name="calendars_create">Create calendar</string>
+    <string name="calendars_create_submit">Create</string>
+    <string name="calendars_subscribe">Subscribe to calendar</string>
+    <string name="calendars_subscribe_submit">Subscribe</string>
+    <string name="calendars_subscribe_url">Address</string>
+    <string name="calendars_connect_device">Connect a device</string>
+    <string name="calendars_preferences">Preferences</string>
+    <string name="calendars_name">Name</string>
+    <string name="calendars_colour">Colour</string>
+    <string name="calendars_rename">Rename</string>
+    <string name="calendars_delete">Delete</string>
+    <string name="calendars_edit">Edit</string>
+    <string name="calendars_poll">Poll now</string>
+    <string name="calendars_poll_large">The calendar is too large</string>
+    <string name="calendars_poll_invalid">The address did not return a calendar</string>
+    <string name="calendars_poll_unreachable">The address could not be reached</string>
+    <string name="calendars_poll_status">The address answered %1$d</string>
+    <string name="calendars_delete_title">Delete %1$s?</string>
+    <string name="calendars_delete_message">Its events are deleted with it.</string>
+    <plurals name="calendars_polled">
+        <item quantity="one">%1$d event updated</item>
+        <item quantity="other">%1$d events updated</item>
+    </plurals>
+
+    <!-- Toolbar and views -->
+    <string name="calendars_today">Today</string>
+    <string name="calendars_previous">Previous</string>
+    <string name="calendars_next">Next</string>
+    <string name="calendars_view">View</string>
+    <string name="calendars_view_day">Day</string>
+    <string name="calendars_view_week">Week</string>
+    <string name="calendars_view_multiweek">Multiweek</string>
+    <string name="calendars_view_month">Month</string>
+    <string name="calendars_view_list">List</string>
+    <string name="calendars_workweek">Work week</string>
+    <string name="calendars_range">%1$s to %2$s</string>
+    <string name="calendars_truncated">Some events in this range are not shown.</string>
+    <string name="calendars_list_empty">No events</string>
+    <string name="calendars_list_search">Search</string>
+    <plurals name="calendars_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="calendars_more">
+        <item quantity="one">+%1$d more</item>
+        <item quantity="other">+%1$d more</item>
+    </plurals>
+
+    <!-- Events -->
+    <string name="calendars_event_new">New event</string>
+    <string name="calendars_event_edit">Edit event</string>
+    <string name="calendars_event_untitled">Untitled</string>
+    <string name="calendars_event_title">Title</string>
+    <string name="calendars_event_calendar">Calendar</string>
+    <string name="calendars_event_allday">All day</string>
+    <string name="calendars_event_start">Start</string>
+    <string name="calendars_event_finish">End</string>
+    <string name="calendars_event_timezone">Timezone</string>
+    <string name="calendars_event_location">Location</string>
+    <string name="calendars_event_repeat">Repeat</string>
+    <string name="calendars_event_reminder">Reminder</string>
+    <string name="calendars_event_description">Description</string>
+    <string name="calendars_event_recurring">Repeats</string>
+    <string name="calendars_event_delete_title">Delete %1$s?</string>
+    <string name="calendars_event_delete_message">This cannot be undone.</string>
+    <string name="calendars_scope_edit">Change this event or all events?</string>
+    <string name="calendars_scope_delete">Delete this event or all events?</string>
+    <string name="calendars_scope_one">This event</string>
+    <string name="calendars_scope_all">All events</string>
+
+    <!-- Repeat -->
+    <string name="calendars_repeat_never">Never</string>
+    <string name="calendars_repeat_daily">Daily</string>
+    <string name="calendars_repeat_weekly">Weekly</string>
+    <string name="calendars_repeat_monthly">Monthly</string>
+    <string name="calendars_repeat_yearly">Yearly</string>
+    <string name="calendars_repeat_custom">Custom</string>
+    <string name="calendars_repeat_interval">Every</string>
+    <string name="calendars_repeat_days">Days</string>
+    <string name="calendars_repeat_count">Occurrences</string>
+    <string name="calendars_repeat_forever">Forever</string>
+
+    <!-- Reminders -->
+    <string name="calendars_reminder_none">None</string>
+    <string name="calendars_reminder_time">At the time</string>
+    <string name="calendars_reminder_minutes">%1$d minutes before</string>
+    <string name="calendars_reminder_hour">1 hour before</string>
+    <string name="calendars_reminder_day">1 day before</string>
+
+    <!-- Preferences -->
+    <string name="calendars_hours_start">Working hours start</string>
+    <string name="calendars_hours_finish">Working hours end</string>
+    <string name="calendars_hours_invalid">Working hours must end after they start.</string>
+    <string name="calendars_work_days">Work days</string>
+    <string name="calendars_day_sunday">Sunday</string>
+    <string name="calendars_day_monday">Monday</string>
+    <string name="calendars_day_tuesday">Tuesday</string>
+    <string name="calendars_day_wednesday">Wednesday</string>
+    <string name="calendars_day_thursday">Thursday</string>
+    <string name="calendars_day_friday">Friday</string>
+    <string name="calendars_day_saturday">Saturday</string>
+    <string name="calendars_multiweek_weeks">Weeks shown</string>
+    <string name="calendars_multiweek_previous">Weeks before</string>
+    <string name="calendars_default_duration">Default event length</string>
+    <string name="calendars_default_reminder">Default reminder</string>
+
+    <!-- ICS link -->
+    <string name="calendars_link_title">Calendar link</string>
+    <string name="calendars_link_copy">Copy link</string>
+    <string name="calendars_link_once">Copy it now: it cannot be shown again.</string>
+    <string name="calendars_link_exists">A link already exists for this calendar.</string>
+    <string name="calendars_link_replace">Replace</string>
+    <string name="calendars_link_revoke">Revoke</string>
+
+    <!-- Subscribe permission -->
+    <string name="calendars_permission_title">Allow access?</string>
+    <string name="calendars_permission_message">%1$s is asking for:</string>
+    <string name="calendars_permission_allow">Allow</string>
+    <string name="calendars_permission_deny">Deny</string>
+
+    <!-- Sync to this phone -->
+    <string name="calendars_sync_title">Sync to this phone</string>
+    <string name="calendars_sync_now">Sync now</string>
+    <string name="calendars_sync_choose">Calendars to sync</string>
+    <string name="calendars_sync_running">Syncing…</string>
+    <string name="calendars_sync_never">Not synced yet</string>
+    <string name="calendars_sync_time">Last synced %1$s</string>
+    <string name="calendars_sync_permission">Calendar access is needed</string>
+    <string name="calendars_sync_authorization">Sign in again to keep syncing</string>
+    <string name="calendars_sync_transport">Could not reach the server</string>
+
+    <!-- Connect a device -->
+    <string name="calendars_device_title">Connect a device</string>
+    <string name="calendars_device_name">Device name</string>
+    <string name="calendars_device_create">Create</string>
+    <string name="calendars_device_server">Server</string>
+    <string name="calendars_device_address">Address</string>
+    <string name="calendars_device_username">Username</string>
+    <string name="calendars_device_password">Password</string>
+    <string name="calendars_device_copy">Copy %1$s</string>
+    <string name="calendars_device_warning">Copy the password now: it cannot be shown again.</string>
+    <string name="calendars_device_done">Done</string>
+    <string name="calendars_device_list">Connected devices</string>
+    <string name="calendars_device_empty">No devices connected</string>
+    <string name="calendars_device_created">Created %1$s</string>
+    <string name="calendars_device_used">last used %1$s</string>
+    <string name="calendars_device_never">never</string>
+    <string name="calendars_device_delete">Delete</string>
+    <string name="calendars_device_deleted">Device removed</string>
+    <string name="calendars_device_delete_title">Remove this device?</string>
+    <string name="calendars_device_delete_message">It will have to be set up again to sync.</string>
+</resources>
