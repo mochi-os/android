@@ -178,7 +178,7 @@
     </plurals>
     <string name="people_welcome_body">喺 Mochi 各處搵朋友並聯繫。㩒「加聯絡人」就可以發出邀請。</string>
     <string name="people_person_state_contact">喺聯絡人中</string>
-    <string name="people_contacts_sort_name">名稱（A–Z）</string>
+    <string name="people_contacts_sort_name">名稱</string>
     <string name="people_contacts_sort_recent">最近加入</string>
     <string name="people_contacts_thats_you">呢個係你</string>
     <string name="people_contacts_try_different_search">試下第個搜尋字詞</string>

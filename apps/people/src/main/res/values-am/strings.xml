@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">እሺ</string>
     <string name="people_books_name">ስም</string>
     <string name="people_books_rename">ስም ቀይር</string>
-    <string name="people_contacts_sort_name">ስም (ሀ–ፐ)</string>
+    <string name="people_contacts_sort_name">ስም</string>
     <string name="people_contacts_sort_recent">በቅርቡ የተጨመረ</string>
     <string name="people_contacts_thats_you">ያ እርስዎ ነዎት</string>
     <string name="people_contacts_try_different_search">የተለየ የፍለጋ ቃል ይሞክሩ</string>

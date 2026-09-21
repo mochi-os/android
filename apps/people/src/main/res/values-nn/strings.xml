@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Namn</string>
     <string name="people_books_rename">Døyp om</string>
-    <string name="people_contacts_sort_name">Namn (A–Å)</string>
+    <string name="people_contacts_sort_name">Namn</string>
     <string name="people_contacts_sort_recent">Nyleg lagt til</string>
     <string name="people_contacts_thats_you">Det er deg</string>
     <string name="people_contacts_try_different_search">Prøv eit anna søkjeord</string>

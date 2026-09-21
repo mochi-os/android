@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nimi</string>
     <string name="people_books_rename">Nimeta ümber</string>
-    <string name="people_contacts_sort_name">Nimi (A–Z)</string>
+    <string name="people_contacts_sort_name">Nimi</string>
     <string name="people_contacts_sort_recent">Hiljuti lisatud</string>
     <string name="people_contacts_thats_you">See oled sina</string>
     <string name="people_contacts_try_different_search">Proovi teist otsingusõna</string>

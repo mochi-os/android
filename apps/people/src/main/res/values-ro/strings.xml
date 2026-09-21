@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nume</string>
     <string name="people_books_rename">Redenumește</string>
-    <string name="people_contacts_sort_name">Nume (A–Z)</string>
+    <string name="people_contacts_sort_name">Nume</string>
     <string name="people_contacts_sort_recent">Adăugat recent</string>
     <string name="people_contacts_thats_you">Acela ești tu</string>
     <string name="people_contacts_try_different_search">Încearcă un alt termen de căutare</string>

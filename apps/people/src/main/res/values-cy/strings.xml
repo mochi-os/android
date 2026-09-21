@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">Iawn</string>
     <string name="people_books_name">Enw</string>
     <string name="people_books_rename">Ailenwi</string>
-    <string name="people_contacts_sort_name">Enw (A–Z)</string>
+    <string name="people_contacts_sort_name">Enw</string>
     <string name="people_contacts_sort_recent">Ychwanegwyd yn ddiweddar</string>
     <string name="people_contacts_thats_you">Chi yw hwnna</string>
     <string name="people_contacts_try_different_search">Rhowch gynnig ar derm chwilio gwahanol</string>

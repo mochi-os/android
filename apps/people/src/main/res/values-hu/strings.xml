@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Név</string>
     <string name="people_books_rename">Átnevezés</string>
-    <string name="people_contacts_sort_name">Név (A–Z)</string>
+    <string name="people_contacts_sort_name">Név</string>
     <string name="people_contacts_sort_recent">Nemrég hozzáadva</string>
     <string name="people_contacts_thats_you">Ez te vagy</string>
     <string name="people_contacts_try_different_search">Próbálj meg másik keresési kifejezést</string>

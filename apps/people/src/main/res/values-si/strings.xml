@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">හරි</string>
     <string name="people_books_name">නම</string>
     <string name="people_books_rename">නැවත නම් කරන්න</string>
-    <string name="people_contacts_sort_name">නම (A–Z)</string>
+    <string name="people_contacts_sort_name">නම</string>
     <string name="people_contacts_sort_recent">මෑතකදී එක් කළ</string>
     <string name="people_contacts_thats_you">එය ඔබයි</string>
     <string name="people_contacts_try_different_search">වෙනත් සෙවුම් වචනයක් උත්සාහ කරන්න</string>

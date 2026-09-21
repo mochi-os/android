@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">D\'acord</string>
     <string name="people_books_name">Nom</string>
     <string name="people_books_rename">Canvia el nom</string>
-    <string name="people_contacts_sort_name">Nom (A–Z)</string>
+    <string name="people_contacts_sort_name">Nom</string>
     <string name="people_contacts_sort_recent">Afegit recentment</string>
     <string name="people_contacts_thats_you">Ets tu</string>
     <string name="people_contacts_try_different_search">Prova un terme de cerca diferent</string>

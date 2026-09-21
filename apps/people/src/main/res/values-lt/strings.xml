@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">Gerai</string>
     <string name="people_books_name">Pavadinimas</string>
     <string name="people_books_rename">Pervadinti</string>
-    <string name="people_contacts_sort_name">Vardas (A–Z)</string>
+    <string name="people_contacts_sort_name">Pavadinimas</string>
     <string name="people_contacts_sort_recent">Neseniai pridėta</string>
     <string name="people_contacts_thats_you">Tai jūs</string>
     <string name="people_contacts_try_different_search">Pabandykite kitą paieškos terminą</string>

@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">ตกลง</string>
     <string name="people_books_name">ชื่อ</string>
     <string name="people_books_rename">เปลี่ยนชื่อ</string>
-    <string name="people_contacts_sort_name">ชื่อ (A–Z)</string>
+    <string name="people_contacts_sort_name">ชื่อ</string>
     <string name="people_contacts_sort_recent">เพิ่มเมื่อเร็ว ๆ นี้</string>
     <string name="people_contacts_thats_you">นั่นคือคุณ</string>
     <string name="people_contacts_try_different_search">ลองคำค้นหาอื่น</string>

@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Tên</string>
     <string name="people_books_rename">Đổi tên</string>
-    <string name="people_contacts_sort_name">Tên (A–Z)</string>
+    <string name="people_contacts_sort_name">Tên</string>
     <string name="people_contacts_sort_recent">Mới thêm gần đây</string>
     <string name="people_contacts_thats_you">Đó là bạn</string>
     <string name="people_contacts_try_different_search">Thử cụm từ tìm kiếm khác</string>

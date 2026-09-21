@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Pangalan</string>
     <string name="people_books_rename">Palitan ang pangalan</string>
-    <string name="people_contacts_sort_name">Pangalan (A–Z)</string>
+    <string name="people_contacts_sort_name">Pangalan</string>
     <string name="people_contacts_sort_recent">Kamakailang idinagdag</string>
     <string name="people_contacts_thats_you">Ikaw iyan</string>
     <string name="people_contacts_try_different_search">Subukan ang ibang termino sa paghahanap</string>

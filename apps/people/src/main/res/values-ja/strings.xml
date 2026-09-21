@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">名前</string>
     <string name="people_books_rename">名前を変更</string>
-    <string name="people_contacts_sort_name">名前 (A–Z)</string>
+    <string name="people_contacts_sort_name">名前</string>
     <string name="people_contacts_sort_recent">最近追加</string>
     <string name="people_contacts_thats_you">それはあなたです</string>
     <string name="people_contacts_try_different_search">別の検索語を試してください</string>

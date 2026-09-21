@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Název</string>
     <string name="people_books_rename">Přejmenovat</string>
-    <string name="people_contacts_sort_name">Název (A–Z)</string>
+    <string name="people_contacts_sort_name">Název</string>
     <string name="people_contacts_sort_recent">Nedávno přidáno</string>
     <string name="people_contacts_thats_you">To jste vy</string>
     <string name="people_contacts_try_different_search">Zkuste jiný vyhledávací výraz</string>

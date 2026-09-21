@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nimi</string>
     <string name="people_books_rename">Nimeä uudelleen</string>
-    <string name="people_contacts_sort_name">Nimi (A–Z)</string>
+    <string name="people_contacts_sort_name">Nimi</string>
     <string name="people_contacts_sort_recent">Äskettäin lisätty</string>
     <string name="people_contacts_thats_you">Se olet sinä</string>
     <string name="people_contacts_try_different_search">Kokeile toista hakusanaa</string>

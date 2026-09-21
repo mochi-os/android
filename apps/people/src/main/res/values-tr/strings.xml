@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">Tamam</string>
     <string name="people_books_name">Ad</string>
     <string name="people_books_rename">Yeniden adlandır</string>
-    <string name="people_contacts_sort_name">Ad (A–Z)</string>
+    <string name="people_contacts_sort_name">Ad</string>
     <string name="people_contacts_sort_recent">Yakın zamanda eklendi</string>
     <string name="people_contacts_thats_you">Bu sensin</string>
     <string name="people_contacts_try_different_search">Farklı bir arama terimi dene</string>

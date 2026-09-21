@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Ad</string>
     <string name="people_books_rename">Adı dəyiş</string>
-    <string name="people_contacts_sort_name">Ad (A–Z)</string>
+    <string name="people_contacts_sort_name">Ad</string>
     <string name="people_contacts_sort_recent">Yeni əlavə edilmiş</string>
     <string name="people_contacts_thats_you">Bu sizsiniz</string>
     <string name="people_contacts_try_different_search">Fərqli etiket sınayın.</string>

@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">確定</string>
     <string name="people_books_name">名稱</string>
     <string name="people_books_rename">重新命名</string>
-    <string name="people_contacts_sort_name">名稱 (A–Z)</string>
+    <string name="people_contacts_sort_name">名稱</string>
     <string name="people_contacts_sort_recent">最近新增</string>
     <string name="people_contacts_thats_you">那是您</string>
     <string name="people_contacts_try_different_search">嘗試其他搜尋字詞</string>

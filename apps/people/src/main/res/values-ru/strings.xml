@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">ОК</string>
     <string name="people_books_name">Название</string>
     <string name="people_books_rename">Переименовать</string>
-    <string name="people_contacts_sort_name">Имя (А–Я)</string>
+    <string name="people_contacts_sort_name">Имя</string>
     <string name="people_contacts_sort_recent">Недавно добавленные</string>
     <string name="people_contacts_thats_you">Это вы</string>
     <string name="people_contacts_try_different_search">Попробуйте другой поисковый запрос</string>

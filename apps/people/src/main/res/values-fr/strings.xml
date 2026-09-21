@@ -136,7 +136,7 @@
     <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nom</string>
     <string name="people_books_rename">Renommer</string>
-    <string name="people_contacts_sort_name">Nom (A–Z)</string>
+    <string name="people_contacts_sort_name">Nom</string>
     <string name="people_contacts_sort_recent">Ajouté récemment</string>
     <string name="people_contacts_thats_you">C\'est vous</string>
     <string name="people_contacts_try_different_search">Essayez un autre terme de recherche</string>
