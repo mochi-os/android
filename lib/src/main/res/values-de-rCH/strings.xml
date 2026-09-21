@@ -222,7 +222,6 @@
     <string name="reactivation_reactivate">Mein Konto reaktivieren</string>
     <string name="reactivation_sign_out">Schliessen fortsetzen und abmelden</string>
     <string name="common_play">Abspielen</string>
-    <string name="common_pause">Pause</string>
     <string name="common_opening_file">Datei wird geöffnet…</string>
     <string name="common_no_app_for_file">Keine App kann diese Datei öffnen</string>
     <string name="common_file_open_failed">Datei konnte nicht geöffnet werden</string>

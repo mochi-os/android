@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="projects_create_privacy">Privacy</string>
+    <string name="projects_create_privacy">隱私</string>
     <string name="projects_option_icon_placeholder">例如 Check, Star, Flag</string>
 
     <string name="projects_create_name">名稱</string>

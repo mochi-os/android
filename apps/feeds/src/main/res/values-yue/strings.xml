@@ -143,7 +143,7 @@
     <string name="feeds_access_subject_authenticated">已驗證用戶</string>
     <string name="feeds_markdown_supported">支援 Markdown</string>
     <string name="feeds_permission_deny">拒絕</string>
-    <string name="feeds_rss_feed">RSS feed</string>
+    <string name="feeds_rss_feed">RSS 訊息來源</string>
     <string name="feeds_settings_field_entity_id">實體 ID</string>
     <string name="feeds_settings_field_fingerprint">指紋</string>
     <string name="feeds_settings_name_edit_cd">編輯名稱</string>

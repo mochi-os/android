@@ -35,7 +35,7 @@
     <string name="words_detail_player_count">%1$d 個玩家</string>
     <string name="words_detail_label_tiles_left">仲有 %1$d 個字母</string>
     <string name="words_detail_action_shuffle">重排字母架</string>
-    <string name="words_detail_action_pass">Pass</string>
+    <string name="words_detail_action_pass">略過</string>
     <string name="words_detail_action_exchange">換字母</string>
     <string name="words_detail_action_cancel_exchange">取消換字母</string>
     <string name="words_detail_action_resign">認輸</string>

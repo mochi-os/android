@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="system_documents_tab_privacy">Privacy</string>
+    <string name="system_documents_tab_privacy">隱私</string>
 
     <string name="account_section_oauth">第三方登入</string>
     <string name="account_oauth_empty">未連結任何帳戶</string>
@@ -207,17 +207,17 @@
     <string name="system_setting_domains_verification">需要網域驗證</string>
     <string name="system_setting_email_from">系統電郵嘅預設寄件地址</string>
     <string name="system_setting_oauth_public_url">OAuth 重新導向嘅公開網址</string>
-    <string name="system_setting_oauth_google_client_id">Google client ID</string>
-    <string name="system_setting_oauth_google_client_secret">Google client secret</string>
-    <string name="system_setting_oauth_github_client_id">GitHub client ID</string>
-    <string name="system_setting_oauth_github_client_secret">GitHub client secret</string>
-    <string name="system_setting_oauth_microsoft_client_id">Microsoft client ID</string>
-    <string name="system_setting_oauth_microsoft_client_secret">Microsoft client secret</string>
-    <string name="system_setting_oauth_microsoft_tenant">Microsoft tenant</string>
-    <string name="system_setting_oauth_facebook_client_id">Facebook App ID</string>
-    <string name="system_setting_oauth_facebook_client_secret">Facebook App secret</string>
-    <string name="system_setting_oauth_x_client_id">X client ID</string>
-    <string name="system_setting_oauth_x_client_secret">X client secret</string>
+    <string name="system_setting_oauth_google_client_id">Google 用戶端 ID</string>
+    <string name="system_setting_oauth_google_client_secret">Google 用戶端密鑰</string>
+    <string name="system_setting_oauth_github_client_id">GitHub 用戶端 ID</string>
+    <string name="system_setting_oauth_github_client_secret">GitHub 用戶端密鑰</string>
+    <string name="system_setting_oauth_microsoft_client_id">Microsoft 用戶端 ID</string>
+    <string name="system_setting_oauth_microsoft_client_secret">Microsoft 用戶端密鑰</string>
+    <string name="system_setting_oauth_microsoft_tenant">Microsoft 租用戶</string>
+    <string name="system_setting_oauth_facebook_client_id">Facebook 應用程式 ID</string>
+    <string name="system_setting_oauth_facebook_client_secret">Facebook 應用程式密鑰</string>
+    <string name="system_setting_oauth_x_client_id">X 用戶端 ID</string>
+    <string name="system_setting_oauth_x_client_secret">X 用戶端密鑰</string>
     <string name="system_setting_fcm_firebase_config">Firebase google-services.json 檔案</string>
     <string name="system_setting_fcm_service_account">Firebase 私密金鑰檔案</string>
     <string name="system_setting_operator_name">營運者名稱</string>

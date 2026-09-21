@@ -62,15 +62,15 @@
     <string name="go_status_your_move">輪到您</string>
 
     <string name="go_channel_name">Go notifications</string>
-    <string name="go_channel_description">Notifications about Go moves, passes, draw offers, and game outcomes.</string>
-    <string name="go_open_sidebar">Open sidebar</string>
-    <string name="go_sidebar_active">Active games</string>
-    <string name="go_empty_active">No active games yet.</string>
+    <string name="go_channel_description">關於走棋、停一手、提議和棋局結果的通知。</string>
+    <string name="go_open_sidebar">開啟側邊欄</string>
+    <string name="go_sidebar_active">進行中的棋局</string>
+    <string name="go_empty_active">暫無進行中的棋局。</string>
     <string name="go_status_resigned">Resigned</string>
-    <string name="go_new_game_title">New Go game</string>
-    <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
+    <string name="go_new_game_title">新圍棋棋局</string>
+    <string name="go_new_game_no_friends">您需要先新增朋友,然後才能開始棋局。</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>
-    <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
+    <string name="go_new_game_komi_hint">為補償黑棋先行而加到白棋分數上的點數</string>
 
     <string name="go_board_a11y">%1$d×%1$d 圍棋棋盤</string>
     <string name="go_board_a11y_turn_black">%1$d×%1$d 圍棋棋盤，輪到你落黑子</string>

@@ -89,7 +89,6 @@
     <string name="forums_tag_clear">Filter zurücksetzen</string>
     <string name="forums_post_tag_add">Tag hinzufügen</string>
     <string name="forums_post_tag_remove">Tag entfernen</string>
-    <string name="forums_post_tag_label">Tag</string>
     <string name="forums_tab_general">Allgemein</string>
     <string name="forums_tab_access">Zugriff</string>
     <string name="forums_tab_members">Mitglieder</string>

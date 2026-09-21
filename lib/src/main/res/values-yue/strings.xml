@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="auth_privacy_label">Privacy</string>
-    <string name="auth_link_privacy">Privacy</string>
-    <string name="settings_radius_medium">Medium</string>
-    <string name="settings_font_serif">Serif</string>
+    <string name="auth_privacy_label">隱私</string>
+    <string name="auth_link_privacy">隱私</string>
+    <string name="settings_radius_medium">中</string>
+    <string name="settings_font_serif">襯線體</string>
     <string name="settings_font_size_normal">Normal</string>
 
     <string name="common_saving">儲存緊…</string>
