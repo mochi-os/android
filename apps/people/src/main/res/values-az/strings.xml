@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Sinxronlaşdırmaq üçün yenidən daxil olun</string>
     <string name="people_sync_transport">Serverə qoşulmaq mümkün olmadı</string>
     <string name="people_sync_refused">Kontakt sinxronlaşdırıla bilmədi: %1$s</string>
+    <string name="people_contact_friend">Mochi dostu</string>
 </resources>

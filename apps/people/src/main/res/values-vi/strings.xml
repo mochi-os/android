@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">Đăng nhập lại để đồng bộ</string>
     <string name="people_sync_transport">Không thể kết nối tới máy chủ</string>
     <string name="people_sync_refused">Không thể đồng bộ một liên hệ: %1$s</string>
+    <string name="people_contact_friend">Bạn bè Mochi</string>
 </resources>

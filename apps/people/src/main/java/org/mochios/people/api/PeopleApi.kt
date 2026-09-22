@@ -207,6 +207,8 @@ interface PeopleApi {
         // contract-ok: the handler reads person through its person_input helper.
         @Field("person") person: String,
         @Field("name") name: String,
+        /** An existing card to link to the person first, so it becomes the friend itself. */
+        @Field("contact") contact: String? = null,
     ): Response<ApiResponse<EmptyResponse>>
 
     @FormUrlEncoded

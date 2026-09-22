@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">同期するには再度ログインしてください</string>
     <string name="people_sync_transport">サーバーに接続できませんでした</string>
     <string name="people_sync_refused">連絡先を同期できませんでした：%1$s</string>
+    <string name="people_contact_friend">Mochi の友達</string>
 </resources>

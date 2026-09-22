@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">גייט ווידער אַרײַן כּדי צו סינכראָניזירן</string>
     <string name="people_sync_transport">האָט ניט געקענט דערגרייכן דעם סערווער</string>
     <string name="people_sync_refused">האָט ניט געקענט סינכראָניזירן אַ קאָנטאַקט: %1$s</string>
+    <string name="people_contact_friend">Mochi פֿרײַנד</string>
 </resources>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Meld je opnieuw aan om te synchroniseren</string>
     <string name="people_sync_transport">Kan de server niet bereiken</string>
     <string name="people_sync_refused">Kan een contact niet synchroniseren: %1$s</string>
+    <string name="people_contact_friend">Mochi-vriend</string>
 </resources>

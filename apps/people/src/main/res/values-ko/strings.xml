@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">동기화하려면 다시 로그인하세요</string>
     <string name="people_sync_transport">서버에 연결할 수 없습니다</string>
     <string name="people_sync_refused">연락처를 동기화할 수 없습니다: %1$s</string>
+    <string name="people_contact_friend">Mochi 친구</string>
 </resources>

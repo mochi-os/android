@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Ngena kwakhona ukuze ungqamanise</string>
     <string name="people_sync_transport">Akukwazekanga ukufikelela kwiseva</string>
     <string name="people_sync_refused">Akukwazekanga ukungqamanisa oqhagamshelwa omnye: %1$s</string>
+    <string name="people_contact_friend">Umhlobo we-Mochi</string>
 </resources>

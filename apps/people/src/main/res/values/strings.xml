@@ -20,6 +20,7 @@
     <string name="people_contacts_sort_recent">Recently added</string>
     <string name="people_contacts_actions">Contact actions</string>
     <string name="people_contacts_friend">Friend</string>
+    <string name="people_contact_friend">Mochi friend</string>
     <string name="people_contacts_invite">Invite</string>
     <string name="people_contacts_invited">Invited</string>
     <string name="people_contacts_accept">Accept</string>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Ji bo hevdemkirinê dîsa têkeve</string>
     <string name="people_sync_transport">Nekarî bigihîje serverê</string>
     <string name="people_sync_refused">Kontaktek nehat hevdemkirin: %1$s</string>
+    <string name="people_contact_friend">Hevalê Mochi</string>
 </resources>

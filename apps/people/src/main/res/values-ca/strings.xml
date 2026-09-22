@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Torneu a iniciar la sessió per sincronitzar</string>
     <string name="people_sync_transport">No s\'ha pogut connectar amb el servidor</string>
     <string name="people_sync_refused">No s\'ha pogut sincronitzar un contacte: %1$s</string>
+    <string name="people_contact_friend">Amic de Mochi</string>
 </resources>

@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">ចូលម្តងទៀតដើម្បីធ្វើសមកាលកម្ម</string>
     <string name="people_sync_transport">មិនអាចភ្ជាប់ទៅម៉ាស៊ីនមេបានទេ</string>
     <string name="people_sync_refused">មិនអាចធ្វើសមកាលកម្មទំនាក់ទំនងមួយបានទេ៖ %1$s</string>
+    <string name="people_contact_friend">មិត្ត Mochi</string>
 </resources>

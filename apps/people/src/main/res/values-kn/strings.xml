@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">ಸಿಂಕ್ ಮಾಡಲು ಮತ್ತೆ ಲಾಗಿನ್ ಮಾಡಿ</string>
     <string name="people_sync_transport">ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="people_sync_refused">ಸಂಪರ್ಕವನ್ನು ಸಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s</string>
+    <string name="people_contact_friend">Mochi ಸ್ನೇಹಿತ</string>
 </resources>

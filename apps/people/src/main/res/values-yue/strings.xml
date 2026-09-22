@@ -145,6 +145,7 @@
     <string name="people_contacts_add_to_start">加聯絡人開始聯繫</string>
     <string name="people_contacts_actions">聯絡人操作</string>
     <string name="people_contacts_friend">朋友</string>
+    <string name="people_contact_friend">Mochi 好友</string>
     <string name="people_contacts_invite">邀請</string>
     <string name="people_contacts_unfriend_confirm">%1$s 唔會再係你嘅朋友。聯絡人仍然留喺你嘅通訊錄入面。</string>
     <string name="people_contacts_delete">刪除聯絡人</string>

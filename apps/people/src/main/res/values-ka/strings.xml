@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">სინქრონიზაციისთვის ხელახლა შედით</string>
     <string name="people_sync_transport">სერვერთან დაკავშირება ვერ მოხერხდა</string>
     <string name="people_sync_refused">კონტაქტის სინქრონიზება ვერ მოხერხდა: %1$s</string>
+    <string name="people_contact_friend">Mochi მეგობარი</string>
 </resources>

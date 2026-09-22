@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Συνδεθείτε ξανά για συγχρονισμό</string>
     <string name="people_sync_transport">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή</string>
     <string name="people_sync_refused">Δεν ήταν δυνατός ο συγχρονισμός μιας επαφής: %1$s</string>
+    <string name="people_contact_friend">Φίλος στο Mochi</string>
 </resources>

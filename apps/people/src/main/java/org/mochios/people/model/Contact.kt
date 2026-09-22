@@ -32,3 +32,13 @@ data class Contact(
     val etag: String = "",
     val slug: String = "",
 )
+
+/** Where the friendship handshake stands for a contact, as the friend switch shows it. */
+enum class FriendState { NONE, INVITED, FRIEND }
+
+/** The handshake's state: a friend, an invitation sent and awaiting the other side, or neither. */
+fun Contact.friendState(sent: Set<String>): FriendState = when {
+    friend -> FriendState.FRIEND
+    person.isNotBlank() && person in sent -> FriendState.INVITED
+    else -> FriendState.NONE
+}

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">સિંક કરવા માટે ફરીથી લોગ ઇન કરો</string>
     <string name="people_sync_transport">સર્વર સુધી પહોંચી શકાયું નહીં</string>
     <string name="people_sync_refused">સંપર્ક સિંક કરી શકાયો નહીં: %1$s</string>
+    <string name="people_contact_friend">Mochi મિત્ર</string>
 </resources>

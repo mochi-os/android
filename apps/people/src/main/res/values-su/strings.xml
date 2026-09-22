@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">Lebet deui pikeun nyingkronkeun</string>
     <string name="people_sync_transport">Teu tiasa nyambung ka server</string>
     <string name="people_sync_refused">Teu tiasa nyingkronkeun hiji kontak: %1$s</string>
+    <string name="people_contact_friend">Réréncangan Mochi</string>
 </resources>

@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">請重新登入以同步</string>
     <string name="people_sync_transport">無法連線至伺服器</string>
     <string name="people_sync_refused">無法同步聯絡人：%1$s</string>
+    <string name="people_contact_friend">Mochi 好友</string>
 </resources>

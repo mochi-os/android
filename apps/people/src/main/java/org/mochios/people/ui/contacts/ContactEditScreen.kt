@@ -32,6 +32,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.Switch
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -64,6 +65,8 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.people.R
+import org.mochios.people.model.friendState
+import org.mochios.people.model.FriendState
 import org.mochios.android.R as MochiR
 
 /**
@@ -75,6 +78,8 @@ fun ContactEditScreen(
     onBack: () -> Unit,
     onSaved: () -> Unit,
     onDeleted: () -> Unit,
+    /** Opens the directory search to link this card to the person it finds. */
+    onFindPerson: (contact: String, name: String) -> Unit = { _, _ -> },
     viewModel: ContactEditViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -115,6 +120,28 @@ fun ContactEditScreen(
             onSave = { viewModel.save() },
             onRequestDelete = { viewModel.requestDelete() },
             onChange = viewModel::updateForm,
+            onFriendToggle = { on ->
+                val contact = uiState.contact ?: return@EditScaffold
+                when {
+                    on && contact.person.isBlank() -> onFindPerson(contact.id, contact.name)
+                    on -> viewModel.invite()
+                    contact.friend -> viewModel.requestUnfriend()
+                    else -> viewModel.cancelInvite()
+                }
+            },
+        )
+    }
+
+    if (uiState.unfriendRequested) {
+        val contact = uiState.contact
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.cancelUnfriend() },
+            title = stringResource(R.string.people_contacts_unfriend),
+            text = stringResource(R.string.people_contacts_unfriend_confirm, contact?.name.orEmpty()),
+            confirmText = stringResource(R.string.people_contacts_unfriend),
+            onConfirm = { viewModel.confirmUnfriend() },
+            destructive = true,
+            dismissText = stringResource(R.string.people_common_cancel),
         )
     }
 
@@ -148,6 +175,42 @@ fun ContactEditScreen(
     }
 }
 
+/**
+ * The friendship handshake as a switch: off for a plain contact, on once a
+ * friend, and on with "Invited" beneath it while the other side has not
+ * answered. It drives the handshake and never sets the flag by hand.
+ */
+@Composable
+private fun FriendSwitch(
+    state: FriendState,
+    enabled: Boolean,
+    onToggle: (Boolean) -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = stringResource(R.string.people_contact_friend),
+                style = MaterialTheme.typography.bodyLarge,
+            )
+            if (state == FriendState.INVITED) {
+                Text(
+                    text = stringResource(R.string.people_contacts_invited),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+        Switch(
+            checked = state != FriendState.NONE,
+            enabled = enabled,
+            onCheckedChange = onToggle,
+        )
+    }
+}
+
 @Composable
 private fun EditScaffold(
     state: ContactEditUiState,
@@ -155,6 +218,7 @@ private fun EditScaffold(
     onSave: () -> Unit,
     onRequestDelete: () -> Unit,
     onChange: (ContactForm) -> Unit,
+    onFriendToggle: (Boolean) -> Unit,
 ) {
     var menuOpen by remember { mutableStateOf(false) }
 
@@ -219,6 +283,14 @@ private fun EditScaffold(
                         color = MaterialTheme.colorScheme.error,
                     )
                     Spacer(modifier = Modifier.height(8.dp))
+                }
+                state.contact?.let { contact ->
+                    FriendSwitch(
+                        state = contact.friendState(state.sent),
+                        enabled = !state.isToggling,
+                        onToggle = onFriendToggle,
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
                 }
                 ContactFields(
                     form = state.form,

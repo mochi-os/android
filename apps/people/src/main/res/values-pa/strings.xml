@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">ਸਿੰਕ ਕਰਨ ਲਈ ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰੋ</string>
     <string name="people_sync_transport">ਸਰਵਰ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ</string>
     <string name="people_sync_refused">ਇੱਕ ਸੰਪਰਕ ਸਿੰਕ ਨਹੀਂ ਕਰ ਸਕੇ: %1$s</string>
+    <string name="people_contact_friend">Mochi ਦੋਸਤ</string>
 </resources>

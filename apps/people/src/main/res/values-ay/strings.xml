@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Sincronizañatakix wasitat mantam</string>
     <string name="people_sync_transport">Servidorar janiw puriñ atipkiti</string>
     <string name="people_sync_refused">Mä contacto janiw sincronizañ atipkiti: %1$s</string>
+    <string name="people_contact_friend">Mochi masi</string>
 </resources>

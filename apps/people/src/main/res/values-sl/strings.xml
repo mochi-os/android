@@ -217,4 +217,5 @@
     <string name="people_sync_authorization">Za sinhronizacijo se znova prijavite</string>
     <string name="people_sync_transport">Strežnika ni bilo mogoče doseči</string>
     <string name="people_sync_refused">Stika ni bilo mogoče sinhronizirati: %1$s</string>
+    <string name="people_contact_friend">Prijatelj v Mochi</string>
 </resources>

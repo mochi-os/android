@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Konekte ankò pou senkronize</string>
     <string name="people_sync_transport">Pa t kapab jwenn sèvè a</string>
     <string name="people_sync_refused">Pa t kapab senkronize yon kontak: %1$s</string>
+    <string name="people_contact_friend">Zanmi Mochi</string>
 </resources>

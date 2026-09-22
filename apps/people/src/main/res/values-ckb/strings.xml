@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">بۆ هاوکاتکردن دووبارە بچۆ ژوورەوە</string>
     <string name="people_sync_transport">نەتوانرا بگاتە سێرڤەر</string>
     <string name="people_sync_refused">نەتوانرا پەیوەندییەک هاوکات بکرێت: %1$s</string>
+    <string name="people_contact_friend">هاوڕێی Mochi</string>
 </resources>

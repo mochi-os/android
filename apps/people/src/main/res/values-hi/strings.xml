@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">सिंक करने के लिए फिर से लॉग इन करें</string>
     <string name="people_sync_transport">सर्वर तक नहीं पहुँच सके</string>
     <string name="people_sync_refused">एक संपर्क सिंक नहीं हो सका: %1$s</string>
+    <string name="people_contact_friend">Mochi मित्र</string>
 </resources>

@@ -135,8 +135,8 @@ class PeopleRepository @Inject constructor(
 
     // ---- Friendship ----
 
-    suspend fun inviteFriend(person: String, name: String) {
-        api.inviteFriend(person, name).unwrap()
+    suspend fun inviteFriend(person: String, name: String, contact: String? = null) {
+        api.inviteFriend(person, name, contact).unwrap()
         _contactsChanged.tryEmit(Unit)
     }
 

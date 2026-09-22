@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Walsimsiisuuf irra deebi\'ii seeni</string>
     <string name="people_sync_transport">Sarvarii bira gahuu hin dandeenye</string>
     <string name="people_sync_refused">Quunnamtii tokko walsimsiisuu hin dandeenye: %1$s</string>
+    <string name="people_contact_friend">Hiriyaa Mochi</string>
 </resources>

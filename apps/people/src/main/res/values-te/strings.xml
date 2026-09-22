@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">సింక్ చేయడానికి మళ్లీ లాగిన్ అవ్వండి</string>
     <string name="people_sync_transport">సర్వర్‌ను చేరుకోలేకపోయింది</string>
     <string name="people_sync_refused">ఒక కాంటాక్ట్‌ను సింక్ చేయలేకపోయింది: %1$s</string>
+    <string name="people_contact_friend">Mochi స్నేహితుడు</string>
 </resources>

@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Sinxronlash uchun qaytadan tizimga kiring</string>
     <string name="people_sync_transport">Serverga ulanib bo\'lmadi</string>
     <string name="people_sync_refused">Kontaktni sinxronlab bo\'lmadi: %1$s</string>
+    <string name="people_contact_friend">Mochi doʻsti</string>
 </resources>

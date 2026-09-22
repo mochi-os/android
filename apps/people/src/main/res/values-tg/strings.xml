@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Барои ҳамоҳангсозӣ бори дигар ворид шавед</string>
     <string name="people_sync_transport">Ба сервер пайваст шуда нашуд</string>
     <string name="people_sync_refused">Тамосро ҳамоҳанг карда нашуд: %1$s</string>
+    <string name="people_contact_friend">Дӯсти Mochi</string>
 </resources>

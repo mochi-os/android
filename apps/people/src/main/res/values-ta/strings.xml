@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">ஒத்திசைக்க மீண்டும் உள்நுழையவும்</string>
     <string name="people_sync_transport">சர்வரை அடைய முடியவில்லை</string>
     <string name="people_sync_refused">ஒரு தொடர்பை ஒத்திசைக்க முடியவில்லை: %1$s</string>
+    <string name="people_contact_friend">Mochi நண்பர்</string>
 </resources>

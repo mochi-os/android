@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">Mlebu maneh kanggo sinkronisasi</string>
     <string name="people_sync_transport">Ora bisa nyambung menyang server</string>
     <string name="people_sync_refused">Ora bisa nyinkronaké kontak: %1$s</string>
+    <string name="people_contact_friend">Kanca Mochi</string>
 </resources>

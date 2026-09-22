@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">সিঙ্ক করতে আবার লগ ইন করুন</string>
     <string name="people_sync_transport">সার্ভারে পৌঁছানো যায়নি</string>
     <string name="people_sync_refused">একটি পরিচিতি সিঙ্ক করা যায়নি: %1$s</string>
+    <string name="people_contact_friend">Mochi বন্ধু</string>
 </resources>

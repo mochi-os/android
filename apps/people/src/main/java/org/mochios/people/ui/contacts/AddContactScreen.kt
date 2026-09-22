@@ -42,6 +42,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -84,10 +85,15 @@ fun AddContactScreen(
     onBack: () -> Unit,
     onNewContact: () -> Unit,
     onContactsChanged: () -> Unit,
+    onLinked: () -> Unit = onContactsChanged,
     viewModel: AddContactViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val preview = uiState.preview
+
+    LaunchedEffect(uiState.linked) {
+        if (uiState.linked) onLinked()
+    }
 
     // Back steps out of the preview first, so a mistaken tap on a result costs
     // one press rather than the whole search.

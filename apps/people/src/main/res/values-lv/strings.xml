@@ -216,4 +216,5 @@
     <string name="people_sync_authorization">Piesakieties vēlreiz, lai sinhronizētu</string>
     <string name="people_sync_transport">Neizdevās sasniegt serveri</string>
     <string name="people_sync_refused">Neizdevās sinhronizēt kontaktu: %1$s</string>
+    <string name="people_contact_friend">Mochi draugs</string>
 </resources>

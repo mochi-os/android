@@ -216,4 +216,5 @@
     <string name="people_sync_authorization">יש להתחבר מחדש כדי לסנכרן</string>
     <string name="people_sync_transport">לא ניתן היה להגיע לשרת</string>
     <string name="people_sync_refused">לא ניתן היה לסנכרן איש קשר: %1$s</string>
+    <string name="people_contact_friend">חבר ב-Mochi</string>
 </resources>

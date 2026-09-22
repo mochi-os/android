@@ -217,4 +217,5 @@
     <string name="people_sync_authorization">Увійдіть знову, щоб синхронізувати</string>
     <string name="people_sync_transport">Не вдалося звʼязатися із сервером</string>
     <string name="people_sync_refused">Не вдалося синхронізувати контакт: %1$s</string>
+    <string name="people_contact_friend">Друг у Mochi</string>
 </resources>

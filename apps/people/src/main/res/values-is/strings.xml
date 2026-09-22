@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Skráðu þig aftur inn til að samstilla</string>
     <string name="people_sync_transport">Náðist ekki samband við þjóninn</string>
     <string name="people_sync_refused">Ekki tókst að samstilla tengilið: %1$s</string>
+    <string name="people_contact_friend">Mochi-vinur</string>
 </resources>

@@ -214,4 +214,5 @@
     <string name="people_sync_authorization">Log masuk semula untuk menyegerakkan</string>
     <string name="people_sync_transport">Tidak dapat menghubungi pelayan</string>
     <string name="people_sync_refused">Tidak dapat menyegerakkan kenalan: %1$s</string>
+    <string name="people_contact_friend">Rakan Mochi</string>
 </resources>

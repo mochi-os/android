@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">Logg inn på nytt for å synkronisera</string>
     <string name="people_sync_transport">Nådde ikkje tenaren</string>
     <string name="people_sync_refused">Kunne ikkje synkronisera ein kontakt: %1$s</string>
+    <string name="people_contact_friend">Mochi-ven</string>
 </resources>

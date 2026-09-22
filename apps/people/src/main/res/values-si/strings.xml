@@ -215,4 +215,5 @@
     <string name="people_sync_authorization">සමමුහුර්ත කිරීමට නැවත පුරන්න</string>
     <string name="people_sync_transport">සේවාදායකය වෙත ළඟා විය නොහැකි විය</string>
     <string name="people_sync_refused">සම්බන්ධතාවක් සමමුහුර්ත කළ නොහැකි විය: %1$s</string>
+    <string name="people_contact_friend">Mochi මිතුරා</string>
 </resources>
