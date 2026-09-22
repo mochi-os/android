@@ -15,6 +15,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -25,6 +31,9 @@ import androidx.compose.material.icons.filled.CalendarToday
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.Place
+import androidx.compose.material.icons.outlined.Phone
+import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
@@ -46,6 +55,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -63,7 +73,6 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.ui.components.Section
 import org.mochios.people.R
 import org.mochios.people.model.friendState
 import org.mochios.people.model.FriendState
@@ -284,33 +293,40 @@ private fun EditScaffold(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                 }
-                state.contact?.let { contact ->
-                    FriendSwitch(
-                        state = contact.friendState(state.sent),
-                        enabled = !state.isToggling,
-                        onToggle = onFriendToggle,
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
                 ContactFields(
                     form = state.form,
                     books = state.books,
                     onChange = onChange,
+                    action = state.contact?.let { contact ->
+                        @Composable {
+                            FriendSwitch(
+                                state = contact.friendState(state.sent),
+                                enabled = !state.isToggling,
+                                onToggle = onFriendToggle,
+                            )
+                        }
+                    },
                 )
             }
         }
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ContactFields(
     form: ContactForm,
     books: List<org.mochios.people.model.Book>,
     onChange: (ContactForm) -> Unit,
+    action: (@Composable () -> Unit)? = null,
 ) {
     val types = CONTACT_TYPES.map { type -> type to stringResource(typeLabel(type)) }
 
-    Section(title = stringResource(R.string.people_contact_name)) {
+    if (action != null) {
+        action()
+        Spacer(modifier = Modifier.height(8.dp))
+    }
+    Column {
         LabelledField(stringResource(R.string.people_contact_name)) {
             CompactTextField(
                 value = form.name,
@@ -341,11 +357,37 @@ private fun ContactFields(
         }
     }
 
+    // Emails, telephones and addresses share one block: a line of add
+    // buttons, then only the rows that exist, each marked by its kind's glyph.
     Spacer(modifier = Modifier.height(12.dp))
-
-    Section(title = stringResource(R.string.people_contact_email)) {
+    HorizontalDivider()
+    Spacer(modifier = Modifier.height(4.dp))
+    FlowRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.End,
+    ) {
+        MochiTextButton(
+            onClick = { onChange(form.copy(emails = form.emails + TypedEntry(type = TYPE_HOME))) },
+        ) {
+            Text(stringResource(R.string.people_contact_add_email))
+        }
+        MochiTextButton(
+            onClick = { onChange(form.copy(phones = form.phones + TypedEntry(type = TYPE_MOBILE))) },
+        ) {
+            Text(stringResource(R.string.people_contact_add_phone))
+        }
+        MochiTextButton(
+            onClick = {
+                onChange(form.copy(addresses = form.addresses + AddressEntry(type = TYPE_HOME)))
+            },
+        ) {
+            Text(stringResource(R.string.people_contact_add_address))
+        }
+    }
+    Column {
         form.emails.forEachIndexed { index, entry ->
             TypedEntryRow(
+                icon = Icons.Outlined.Email,
                 entry = entry,
                 types = types,
                 keyboardType = KeyboardType.Email,
@@ -358,18 +400,9 @@ private fun ContactFields(
                 },
             )
         }
-        MochiTextButton(
-            onClick = { onChange(form.copy(emails = form.emails + TypedEntry(type = TYPE_HOME))) },
-        ) {
-            Text(stringResource(R.string.people_contact_add_email))
-        }
-    }
-
-    Spacer(modifier = Modifier.height(12.dp))
-
-    Section(title = stringResource(R.string.people_contact_phone)) {
         form.phones.forEachIndexed { index, entry ->
             TypedEntryRow(
+                icon = Icons.Outlined.Phone,
                 entry = entry,
                 types = types,
                 keyboardType = KeyboardType.Phone,
@@ -382,18 +415,9 @@ private fun ContactFields(
                 },
             )
         }
-        MochiTextButton(
-            onClick = { onChange(form.copy(phones = form.phones + TypedEntry(type = TYPE_MOBILE))) },
-        ) {
-            Text(stringResource(R.string.people_contact_add_phone))
-        }
-    }
-
-    Spacer(modifier = Modifier.height(12.dp))
-
-    Section(title = stringResource(R.string.people_contact_section_address)) {
         form.addresses.forEachIndexed { index, address ->
             AddressRows(
+                icon = Icons.Outlined.Place,
                 address = address,
                 types = types,
                 onChange = { updated ->
@@ -404,18 +428,20 @@ private fun ContactFields(
                 },
             )
         }
-        MochiTextButton(
-            onClick = {
-                onChange(form.copy(addresses = form.addresses + AddressEntry(type = TYPE_HOME)))
-            },
-        ) {
-            Text(stringResource(R.string.people_contact_add_address))
-        }
     }
 
-    Spacer(modifier = Modifier.height(12.dp))
-
-    Section(title = stringResource(R.string.people_contact_section_detail)) {
+    SectionHeading(title = stringResource(R.string.people_contact_section_detail))
+    Column {
+        if (books.isNotEmpty()) {
+            LabeledSelectField(
+                label = stringResource(R.string.people_contact_book),
+                placeholder = stringResource(R.string.people_contact_book),
+                options = books.map { book -> book.id to book.name },
+                selected = form.book,
+                onSelect = { onChange(form.copy(book = it)) },
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
         LabelledField(stringResource(R.string.people_contact_birthday)) {
             BirthdayField(
                 value = form.birthday,
@@ -452,17 +478,48 @@ private fun ContactFields(
                 modifier = Modifier.fillMaxWidth(),
             )
         }
-        if (books.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(8.dp))
-            LabeledSelectField(
-                label = stringResource(R.string.people_contact_book),
-                placeholder = stringResource(R.string.people_contact_book),
-                options = books.map { book -> book.id to book.name },
-                selected = form.book,
-                onSelect = { onChange(form.copy(book = it)) },
-            )
-        }
     }
+}
+
+/**
+ * A section's heading line on the page: a rule above it, its title, and the
+ * section's action at the end. The first section has no rule.
+ */
+@Composable
+private fun SectionHeading(
+    title: String,
+    action: (@Composable () -> Unit)? = null,
+    divider: Boolean = true,
+) {
+    if (divider) {
+        Spacer(modifier = Modifier.height(12.dp))
+        HorizontalDivider()
+        Spacer(modifier = Modifier.height(4.dp))
+    }
+    Row(
+        modifier = Modifier.fillMaxWidth().heightIn(min = 40.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.weight(1f),
+        )
+        action?.invoke()
+    }
+}
+
+/** The glyph of a row's kind, since emails, telephones and addresses share one block. */
+@Composable
+private fun KindIcon(icon: ImageVector) {
+    Icon(
+        imageVector = icon,
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.size(20.dp),
+    )
+    Spacer(modifier = Modifier.width(8.dp))
 }
 
 /** A field with its name above it, the shape every row in the editor takes. */
@@ -481,6 +538,7 @@ private fun LabelledField(label: String, field: @Composable () -> Unit) {
 
 @Composable
 private fun TypedEntryRow(
+    icon: ImageVector,
     entry: TypedEntry,
     types: List<Pair<String, String>>,
     keyboardType: KeyboardType,
@@ -489,13 +547,16 @@ private fun TypedEntryRow(
     onRemove: () -> Unit,
 ) {
     Column(modifier = Modifier.padding(vertical = 6.dp)) {
-        CompactTextField(
-            value = entry.value,
-            onValueChange = { onChange(entry.copy(value = it)) },
-            placeholder = placeholder,
-            keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
-            modifier = Modifier.fillMaxWidth(),
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            KindIcon(icon)
+            CompactTextField(
+                value = entry.value,
+                onValueChange = { onChange(entry.copy(value = it)) },
+                placeholder = placeholder,
+                keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
+                modifier = Modifier.weight(1f),
+            )
+        }
         Spacer(modifier = Modifier.height(4.dp))
         Row(
             verticalAlignment = Alignment.Bottom,
@@ -522,18 +583,43 @@ private fun TypedEntryRow(
 
 @Composable
 private fun AddressRows(
+    icon: ImageVector,
     address: AddressEntry,
     types: List<Pair<String, String>>,
     onChange: (AddressEntry) -> Unit,
     onRemove: () -> Unit,
 ) {
     Column(modifier = Modifier.padding(vertical = 6.dp)) {
-        CompactTextField(
-            value = address.street,
-            onValueChange = { onChange(address.copy(street = it)) },
-            placeholder = stringResource(R.string.people_contact_street),
-            modifier = Modifier.fillMaxWidth(),
-        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            KindIcon(icon)
+            CompactTextField(
+                value = address.street,
+                onValueChange = { onChange(address.copy(street = it)) },
+                placeholder = stringResource(R.string.people_contact_street),
+                modifier = Modifier.weight(1f),
+            )
+        }
+        Spacer(modifier = Modifier.height(4.dp))
+        Row(
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Box(modifier = Modifier.weight(1f)) {
+                LabeledSelectField(
+                    label = stringResource(R.string.people_contact_type),
+                    placeholder = stringResource(R.string.people_contact_type),
+                    options = types,
+                    selected = address.type,
+                    onSelect = { onChange(address.copy(type = it)) },
+                )
+            }
+            MochiIconButton(onClick = onRemove) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.people_contact_remove),
+                )
+            }
+        }
         Spacer(modifier = Modifier.height(4.dp))
         CompactTextField(
             value = address.city,
@@ -562,27 +648,6 @@ private fun AddressRows(
             placeholder = stringResource(R.string.people_contact_country),
             modifier = Modifier.fillMaxWidth(),
         )
-        Spacer(modifier = Modifier.height(4.dp))
-        Row(
-            verticalAlignment = Alignment.Bottom,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Box(modifier = Modifier.weight(1f)) {
-                LabeledSelectField(
-                    label = stringResource(R.string.people_contact_type),
-                    placeholder = stringResource(R.string.people_contact_type),
-                    options = types,
-                    selected = address.type,
-                    onSelect = { onChange(address.copy(type = it)) },
-                )
-            }
-            MochiIconButton(onClick = onRemove) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.people_contact_remove),
-                )
-            }
-        }
     }
 }
 

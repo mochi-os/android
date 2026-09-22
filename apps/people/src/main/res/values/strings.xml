@@ -45,9 +45,9 @@
     <string name="people_contact_family">Family name</string>
     <string name="people_contact_nickname">Nickname</string>
     <string name="people_contact_email">Email</string>
-    <string name="people_contact_phone">Phone</string>
+    <string name="people_contact_phone">Telephone</string>
     <string name="people_contact_add_email">Add email</string>
-    <string name="people_contact_add_phone">Add phone</string>
+    <string name="people_contact_add_phone">Add telephone</string>
     <string name="people_contact_add_address">Add address</string>
     <string name="people_contact_street">Street</string>
     <string name="people_contact_city">City</string>
