@@ -139,19 +139,22 @@ fun TimeGrid(
 private fun DayHeading(day: LocalDate, today: LocalDate, width: androidx.compose.ui.unit.Dp, modifier: Modifier) {
     val current = day == today
     Column(
-        modifier = modifier.width(width).padding(vertical = 6.dp),
+        modifier = modifier
+            .width(width)
+            .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
+            .padding(vertical = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
             text = weekdayLabel(day),
             style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            color = if (current) MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.8f) else MaterialTheme.colorScheme.onSurfaceVariant,
         )
         Text(
             text = day.dayOfMonth.toString(),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
-            color = if (current) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+            color = if (current) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
         )
     }
 }

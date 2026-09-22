@@ -146,48 +146,53 @@ private fun Cell(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .clickable(onClick = onCreate)
-            .padding(2.dp),
-        verticalArrangement = Arrangement.spacedBy(1.dp),
+            .clickable(onClick = onCreate),
     ) {
+        // Today's number sits inside a band in the primary colour across the
+        // top of its cell; every other day's number sits on the cell itself.
         Box(
             modifier = Modifier
-                .clip(CircleShape)
-                .then(
-                    if (current) {
-                        Modifier.background(MaterialTheme.colorScheme.primary)
-                    } else {
-                        Modifier
+                .fillMaxWidth()
+                .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
+                .padding(2.dp),
+        ) {
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .clickable(onClick = onDay)
+                    .padding(horizontal = 5.dp, vertical = 1.dp),
+            ) {
+                Text(
+                    text = day.dayOfMonth.toString(),
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
+                    color = when {
+                        current -> MaterialTheme.colorScheme.onPrimary
+                        outside -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
+                        else -> MaterialTheme.colorScheme.onSurface
                     },
                 )
-                .clickable(onClick = onDay)
-                .padding(horizontal = 5.dp, vertical = 1.dp),
+            }
+        }
+        Column(
+            modifier = Modifier.padding(start = 2.dp, end = 2.dp, bottom = 2.dp),
+            verticalArrangement = Arrangement.spacedBy(1.dp),
         ) {
-            Text(
-                text = day.dayOfMonth.toString(),
-                style = MaterialTheme.typography.labelMedium,
-                fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
-                color = when {
-                    current -> MaterialTheme.colorScheme.onPrimary
-                    outside -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
-                    else -> MaterialTheme.colorScheme.onSurface
-                },
-            )
-        }
-        for (instance in instances.take(CHIPS)) {
-            Chip(instance, Modifier.fillMaxWidth().padding(top = 1.dp)) { onOpen(instance) }
-        }
-        if (instances.size > CHIPS) {
-            Text(
-                text = pluralStringResource(
-                    R.plurals.calendars_more,
-                    instances.size - CHIPS,
-                    instances.size - CHIPS,
-                ),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.clickable(onClick = onMore).padding(start = 3.dp),
-            )
+            for (instance in instances.take(CHIPS)) {
+                Chip(instance, Modifier.fillMaxWidth().padding(top = 1.dp)) { onOpen(instance) }
+            }
+            if (instances.size > CHIPS) {
+                Text(
+                    text = pluralStringResource(
+                        R.plurals.calendars_more,
+                        instances.size - CHIPS,
+                        instances.size - CHIPS,
+                    ),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.clickable(onClick = onMore).padding(start = 3.dp),
+                )
+            }
         }
     }
 }
@@ -208,6 +213,7 @@ fun AgendaList(
     onOpen: (Instance) -> Unit,
 ) {
     val format = LocalFormat.current
+    val today = LocalDate.now(viewModel.timezone())
     val listState = rememberLazyListState()
     val search = state.search.trim()
     val matched = remember(state.instances, state.hidden, search) {
@@ -260,11 +266,17 @@ fun AgendaList(
         }
         for ((day, occurrences) in grouped) {
             item(key = "day:$day") {
+                // Today's heading is a band in the primary colour, as every
+                // grid marks today; the other days' headings sit on the list.
+                val current = day == today
                 Text(
                     text = format.formatDate(day.atStartOfDay(viewModel.timezone()).toEpochSecond()),
                     style = MaterialTheme.typography.titleSmall,
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 4.dp),
+                    color = if (current) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.primary,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
+                        .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 4.dp),
                 )
             }
             items(occurrences, key = { "${day}-${it.event}-${it.start}" }) { instance ->
