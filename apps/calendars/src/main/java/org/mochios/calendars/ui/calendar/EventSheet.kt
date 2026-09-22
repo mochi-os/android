@@ -15,11 +15,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Repeat
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -31,7 +28,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiBottomSheet
-import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
@@ -39,8 +35,8 @@ import org.mochios.calendars.model.Instance
 /**
  * The summary of one occurrence, anchored to the bottom of the screen: what
  * it is called, when it is, where it is, which calendar it is in and the
- * first of its description, with Edit and Delete. A read-only calendar's
- * occurrence — a subscription, a birthday — offers neither.
+ * first of its description. Only a read-only occurrence - a subscription's
+ * or a birthday - lands here; a tap on an editable one opens the editor.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -48,8 +44,6 @@ fun EventSheet(
     instance: Instance,
     calendar: Calendar?,
     onDismiss: () -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
 ) {
     val format = LocalFormat.current
     MochiBottomSheet(onDismissRequest = onDismiss) {
@@ -110,28 +104,6 @@ fun EventSheet(
                     maxLines = 6,
                     overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                 )
-            }
-            if (!instance.readonly && !instance.birthday) {
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    MochiOutlinedButton(onClick = onEdit) {
-                        Icon(
-                            Icons.Outlined.Edit,
-                            contentDescription = null,
-                            modifier = Modifier.size(ButtonDefaults.IconSize),
-                        )
-                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                        Text(stringResource(R.string.calendars_edit))
-                    }
-                    MochiOutlinedButton(onClick = onDelete) {
-                        Icon(
-                            Icons.Outlined.Delete,
-                            contentDescription = null,
-                            modifier = Modifier.size(ButtonDefaults.IconSize),
-                        )
-                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                        Text(stringResource(R.string.calendars_delete))
-                    }
-                }
             }
         }
     }

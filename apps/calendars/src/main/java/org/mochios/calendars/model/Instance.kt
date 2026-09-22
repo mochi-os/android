@@ -36,6 +36,9 @@ data class Instance(
     /** A birthday occurrence is derived from a contact and has no event to open. */
     val birthday: Boolean get() = event.startsWith(BIRTHDAY)
 
+    /** Whether a tap opens the editor; a read-only occurrence opens the summary sheet instead. */
+    val editable: Boolean get() = !readonly && !birthday
+
     companion object {
         const val BIRTHDAY = "birthday-"
     }

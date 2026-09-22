@@ -82,11 +82,6 @@ data class LinkState(
 )
 
 /** Whether a delete takes one occurrence or the whole series. */
-enum class DeleteScope {
-    ONE,
-    ALL,
-}
-
 /** Something the screen has to say once rather than hold in its state. */
 sealed class CalendarEvent {
     data class Failed(val error: MochiError) : CalendarEvent()
@@ -388,15 +383,6 @@ class CalendarViewModel @Inject constructor(
      * The etag comes from the server rather than the occurrence, which does
      * not carry one.
      */
-    fun delete(instance: Instance, scope: DeleteScope) = act {
-        if (scope == DeleteScope.ONE && instance.recurring) {
-            repository.excludeOccurrence(instance.event, instance.start)
-        } else {
-            repository.deleteEvent(instance.event, repository.getEvent(instance.event).etag)
-        }
-        load(refreshing = true)
-    }
-
     fun rename(calendar: String, name: String) = act { repository.renameCalendar(calendar, name) }
 
     fun recolour(calendar: String, colour: String) = act { repository.recolourCalendar(calendar, colour) }

@@ -72,11 +72,9 @@ import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
 import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
-import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
-import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.router.CalendarsSection
 import java.time.LocalDate
 
@@ -108,8 +106,6 @@ fun CalendarScreen(
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
-    var removing by remember { mutableStateOf<Instance?>(null) }
-    var scoping by remember { mutableStateOf<Instance?>(null) }
     var preferences by remember { mutableStateOf(false) }
 
     DisposableRefresh(lifecycle) { viewModel.load(refreshing = true, reset = false) }
@@ -203,7 +199,18 @@ fun CalendarScreen(
                                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
                                 )
                             }
-                            View(uiState, viewModel, onOpen = { selected = it }, onNewEvent = onNewEvent)
+                            View(
+                                uiState,
+                                viewModel,
+                                onOpen = { instance ->
+                                    if (instance.editable) {
+                                        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+                                    } else {
+                                        selected = instance
+                                    }
+                                },
+                                onNewEvent = onNewEvent,
+                            )
                         }
                     }
                 }
@@ -216,40 +223,6 @@ fun CalendarScreen(
             instance = instance,
             calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
             onDismiss = { selected = null },
-            onEdit = {
-                selected = null
-                onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
-            },
-            onDelete = {
-                selected = null
-                if (instance.recurring) scoping = instance else removing = instance
-            },
-        )
-    }
-
-    scoping?.let { instance ->
-        ScopeDialog(
-            deleting = true,
-            onDismiss = { scoping = null },
-            onOne = {
-                scoping = null
-                viewModel.delete(instance, DeleteScope.ONE)
-            },
-            onAll = {
-                scoping = null
-                removing = instance
-            },
-        )
-    }
-    removing?.let { instance ->
-        DeleteEventDialog(
-            summary = instance.summary,
-            deleting = false,
-            onDismiss = { removing = null },
-            onConfirm = {
-                removing = null
-                viewModel.delete(instance, DeleteScope.ALL)
-            },
         )
     }
 

@@ -8,7 +8,6 @@
     <string name="calendars_name">이름</string>
     <string name="calendars_rename">이름 변경</string>
     <string name="calendars_delete">삭제</string>
-    <string name="calendars_edit">편집</string>
     <string name="calendars_previous">이전</string>
     <string name="calendars_next">다음</string>
     <string name="calendars_view">보기</string>

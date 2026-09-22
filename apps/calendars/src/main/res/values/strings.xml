@@ -18,7 +18,6 @@
     <string name="calendars_colour">Colour</string>
     <string name="calendars_rename">Rename</string>
     <string name="calendars_delete">Delete</string>
-    <string name="calendars_edit">Edit</string>
     <string name="calendars_poll">Poll now</string>
     <string name="calendars_poll_large">The calendar is too large</string>
     <string name="calendars_poll_invalid">The address did not return a calendar</string>
