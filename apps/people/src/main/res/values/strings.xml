@@ -41,8 +41,8 @@
     <string name="people_contact_section_address">Address</string>
     <string name="people_contact_section_detail">Details</string>
     <string name="people_contact_name">Name</string>
-    <string name="people_contact_given">Given name</string>
-    <string name="people_contact_family">Family name</string>
+    <string name="people_contact_given">Forename</string>
+    <string name="people_contact_family">Surname</string>
     <string name="people_contact_nickname">Nickname</string>
     <string name="people_contact_email">Email</string>
     <string name="people_contact_phone">Telephone</string>

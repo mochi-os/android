@@ -4,4 +4,6 @@
     <string name="people_profile_accent_invalid">Enter a valid hex color (e.g. #a78bfa)</string>
     <string name="people_contact_region">State</string>
     <string name="people_contact_postcode">ZIP code</string>
+    <string name="people_contact_given">First name</string>
+    <string name="people_contact_family">Last name</string>
 </resources>
