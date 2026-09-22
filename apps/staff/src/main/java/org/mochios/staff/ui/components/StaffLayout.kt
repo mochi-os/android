@@ -137,7 +137,12 @@ fun StaffLayout(
             selectedId = currentRoute,
             onItemClick = { item ->
                 drawerScope.launch { drawerState.close() }
-                if (item.id != currentRoute) navController.navigate(item.id)
+                if (item.id != currentRoute) {
+                    navController.navigate(item.id) {
+                        popUpTo(currentRoute) { inclusive = true }
+                        launchSingleTop = true
+                    }
+                }
             },
             actions = {
                 DrawerActionRow(
