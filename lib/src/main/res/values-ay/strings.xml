@@ -10,7 +10,7 @@
     <string name="auth_name">Suti</string>
     <string name="auth_create">Luraña</string>
     <string name="auth_privacy_label">Imantawi</string>
-    <string name="auth_privacy_public">Public</string>
+    <string name="auth_privacy_public">Taqiniru</string>
     <string name="auth_privacy_private">Imantata</string>
     <string name="auth_link_privacy">Imantawi</string>
     <string name="auth_use_different_account">Registrata passkey apnaqam mantañataki</string>
@@ -39,7 +39,7 @@
     <string name="access_owner">Dueño</string>
     <string name="access_revoke">Aparma</string>
     <string name="access_level_comment">Comentaña</string>
-    <string name="access_level_view">Taqi uñjaña</string>
+    <string name="access_level_view">Uñjaña</string>
     <string name="access_level_none">Janiwa</string>
     <string name="reaction_like">Munaña</string>
     <string name="reaction_dislike">Jan munaña</string>
@@ -79,7 +79,7 @@
     <string name="settings_font_dyslexia">Dislexia jaqinakataki</string>
     <string name="settings_font_size">Qillqa jach\'akama</string>
     <string name="settings_font_size_small">Jisk\'a</string>
-    <string name="settings_font_size_normal">Walja</string>
+    <string name="settings_font_size_normal">Normal</string>
     <string name="settings_font_size_large">Jach\'a</string>
     <string name="settings_font_size_extra_large">Sinti jach\'a</string>
     <string name="settings_language">Aru</string>
@@ -107,7 +107,7 @@
     <string name="settings_display_reset_confirm_title">Uñjañ tukuypiman kutiyañ?</string>
     <string name="settings_display_reset_confirm_message">Aka uñjañ chimpunakx tukuypiman kutiyaniwa.</string>
     <string name="settings_theme_title">Tema</string>
-    <string name="settings_theme_default">Default</string>
+    <string name="settings_theme_default">Nayrïri</string>
     <string name="settings_background">Qhipa</string>
     <string name="settings_background_theme">Temata</string>
     <string name="settings_background_off">Janiwa</string>
@@ -189,7 +189,7 @@
     <string name="format_time_weeks_short">%1$dw</string>
     <string name="format_time_months_short">%1$dmo</string>
     <string name="reaction_add">Reacción yapaña</string>
-    <string name="push_service_channel">Mochi ch\'axwa</string>
+    <string name="push_service_channel">Mochi push</string>
     <string name="push_service_channel_description">Mochixa yatiyäwinaka katuqañataki mathapitäki</string>
     <string name="push_service_group">Qhipa irnaqäwi</string>
     <string name="push_service_title">Mochixa yatiyäwinaka ist\'askiwa</string>
@@ -271,7 +271,7 @@
     <string name="attachment_caption_add">Qhanañchawi yapaña</string>
     <string name="attachment_caption_edit">Qhanañchawi askichaña</string>
     <string name="about_check_background">Qhipankañ sarantaña</string>
-    <string name="notifications_category_unassigned">Janiw permitidakit</string>
+    <string name="notifications_category_unassigned">Jan asignata</string>
     <string name="notifications_change_category">Yatiyaw categoría mayjt’aña</string>
     <string name="lightbox_comments_none">Aka jamuqat tuqit janïra arst\'äwinakax utjkiti.</string>
     <string name="lightbox_comments_only">Aka jamuqat tuqit arst\'äwinak sapaki uñachayaña</string>
@@ -284,7 +284,7 @@
     </plurals>
     <string name="lightbox_comments">Comentarionaka</string>
     <string name="common_attachment_unavailable">Chimpu jan jichhakama utjkiti</string>
-    <string name="common_unavailable">Banx apaqaña</string>
+    <string name="common_unavailable">Janiw utjkiti</string>
     <string name="common_not_found">Janiw jikxatasiti</string>
     <string name="format_bold">Thuru qillqa</string>
     <string name="format_italic">K\'umu qillqa</string>

@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">გვერდითი პანელის გახსნა</string>
     <string name="go_sidebar_active">აქტიური თამაშები</string>
     <string name="go_empty_active">ჯერ არ არის აქტიური თამაშები.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">დანებდა</string>
     <string name="go_new_game_title">ახალი Go თამაში</string>
     <string name="go_new_game_no_friends">თამაშის დაწყებამდე უნდა დაამატოთ მეგობარი.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

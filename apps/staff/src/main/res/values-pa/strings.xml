@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">ਸਟਾਫ਼</string>
+    <string name="launcher_staff">Mochi ਸਟਾਫ਼</string>
     <string name="staff_accounts_action_ban_title">ਖਾਤੇ ਉੱਤੇ ਪਾਬੰਦੀ ਲਾਓ</string>
     <string name="staff_accounts_action_suspend_title">ਖਾਤਾ ਮੁਅੱਤਲ ਕਰੋ</string>
     <string name="staff_accounts_action_unban_title">ਪਾਬੰਦੀ ਹਟਾਓ</string>
@@ -85,7 +85,7 @@
     <string name="staff_audit_action_listing_rejected">ਸਟਾਫ ਦੁਆਰਾ ਅਸਵੀਕਾਰ</string>
     <string name="staff_audit_action_listing_relisted">ਮੁੜ-ਸੂਚੀਬੱਧ ਕੀਤਾ</string>
     <string name="staff_audit_action_listing_removed">ਹਟਾਇਆ ਗਿਆ</string>
-    <string name="staff_audit_action_listing_updated">ਆਈਟਮ ਲੋਡ ਹੋ ਰਹੀ ਹੈ</string>
+    <string name="staff_audit_action_listing_updated">ਲਿਸਟਿੰਗ ਸੋਧੀ ਗਈ</string>
     <string name="staff_audit_action_listing_warning">ਚਿਤਾਵਨੀ ਜਾਰੀ ਕੀਤੀ ਗਈ</string>
     <string name="staff_audit_action_order_cancelled">ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
     <string name="staff_audit_action_order_chargeback">ਚਾਰਜਬੈਕ ਪ੍ਰਾਪਤ</string>
@@ -155,7 +155,7 @@
     <string name="staff_categories_type_digital">ਡਿਜੀਟਲ</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">ਭੌਤਿਕ</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">ਸਟਾਫ਼</string>
     <string name="staff_config_field_auto_approve">ਆਟੋ-ਮਨਜ਼ੂਰੀ ਦੀ ਸੀਮਾ</string>
     <string name="staff_config_field_hold">ਹੋਲਡ ਸੀਮਾ</string>
     <string name="staff_config_field_platform_fee">ਪਲੇਟਫਾਰਮ ਫੀਸ</string>
@@ -291,7 +291,7 @@
     <string name="staff_listings_submitting">ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="staff_moderation_empty">ਕੋਈ ਮਾਡਰੇਸ਼ਨ ਐਂਟਰੀ ਨਹੀਂ</string>
     <string name="staff_moderation_filter_clear">ਫਿਲਟਰ ਸਾਫ਼ ਕਰੋ</string>
-    <string name="staff_moderation_listing_filter_placeholder">ਹੋਰ ਲੋਡ ਕਰੋ</string>
+    <string name="staff_moderation_listing_filter_placeholder">ਲਿਸਟਿੰਗ ID</string>
     <string name="staff_moderation_system">ਸਿਸਟਮ</string>
     <string name="staff_moderation_unknown_listing">#%1$s</string>
     <string name="staff_reports_action">ਕਾਰਵਾਈ</string>

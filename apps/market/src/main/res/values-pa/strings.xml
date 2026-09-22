@@ -183,7 +183,7 @@
     <string name="market_editor_zone_worldwide">ਦੁਨੀਆ ਭਰ ਵਿੱਚ</string>
     <string name="market_empty_title">ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ</string>
     <string name="market_fee_preview_item">ਆਈਟਮ</string>
-    <string name="market_fee_preview_payout">ਤੁਹਾਡੀ payout</string>
+    <string name="market_fee_preview_payout">ਤੁਹਾਡਾ ਭੁਗਤਾਨ</string>
     <string name="market_filter_all">ਸਾਰੇ</string>
     <string name="market_filter_apply">ਲਾਗੂ ਕਰੋ</string>
     <string name="market_filter_category">ਸ਼੍ਰੇਣੀ</string>
@@ -265,8 +265,8 @@
     <string name="market_messages_send">ਭੇਜੋ</string>
     <string name="market_messages_thread_listing_chip">ਲਿਸਟਿੰਗ</string>
     <string name="market_messages_thread_title">ਗੱਲਬਾਤ</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">ਸਰਗਰਮ ਕਰੋ</string>
+    <string name="market_onboarding_activating">ਸਰਗਰਮ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_onboarding_body">ਖਰੀਦਣਾ ਅਤੇ ਵੇਚਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਆਪਣਾ ਖਾਤਾ ਸਰਗਰਮ ਕਰੋ।</string>
     <string name="market_onboarding_dismiss">ਖਾਰਜ ਕਰੋ</string>
     <string name="market_onboarding_title">Market ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ</string>
@@ -307,7 +307,7 @@
     <string name="market_purchase_review_hidden">ਵਿਕਰੇਤਾ ਦੁਆਰਾ ਤੁਹਾਡੀ ਸਮੀਖਿਆ ਕਰਨ ਤੱਕ, ਜਾਂ 14 ਦਿਨ ਬਾਅਦ ਤੱਕ ਲੁਕਿਆ ਹੋਇਆ।</string>
     <string name="market_purchase_review_prompt_body">ਭਵਿੱਖ ਦੇ ਖਰੀਦਦਾਰਾਂ ਦੀ ਮਦਦ ਕਰੋ — ਦੱਸੋ ਕਿ ਇਹ ਆਰਡਰ ਕਿਵੇਂ ਰਿਹਾ।</string>
     <string name="market_purchase_review_rating">ਰੇਟਿੰਗ</string>
-    <string name="market_purchase_review_section">ਹਲਕਾ ਜਾਂ ਗੂੜ੍ਹਾ ਮੋਡ</string>
+    <string name="market_purchase_review_section">ਰੀਵਿਊ ਦਿਓ</string>
     <string name="market_purchase_review_submit">ਸਮੀਖਿਆ ਜਮ੍ਹਾਂ ਕਰੋ</string>
     <string name="market_purchase_review_submitted">ਸਮੀਖਿਆ ਜਮ੍ਹਾਂ ਕੀਤੀ ਗਈ</string>
     <string name="market_purchase_review_your_review">ਤੁਹਾਡੀ ਸਮੀਖਿਆ</string>
@@ -435,7 +435,7 @@
     <string name="market_subscribers_load_failed">ਗਾਹਕ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_subscription_detail_billing_history">Billing history</string>
     <string name="market_subscription_detail_billing_history_empty">ਹਾਲੇ ਕੋਈ ਚਾਰਜ ਨਹੀਂ।</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
+    <string name="market_subscription_detail_billing_info">ਬਿਲਿੰਗ</string>
     <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
     <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
     <string name="market_subscription_detail_listing">ਲਿਸਟਿੰਗ</string>
@@ -471,7 +471,7 @@
     <string name="market_type_physical">ਭੌਤਿਕ</string>
     <string name="market_warnings_title">ਚੇਤਾਵਨੀਆਂ</string>
     <string name="market_sale_review_response_submitting">ਜਮ੍ਹਾਂ ਕਰ ਰਿਹਾ ਹੈ…</string>
-    <string name="market_checkout_subscribing">Subscribing…</string>
+    <string name="market_checkout_subscribing">ਸਬਸਕ੍ਰਾਈਬ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_filter_remove">ਫਿਲਟਰ ਹਟਾਓ</string>
     <string name="market_listings_action_appeal">ਹਟਾਉਣ ਦੀ ਅਪੀਲ</string>
     <string name="market_listings_share_chooser">ਇਸ਼ਤਿਹਾਰ ਸਾਂਝਾ ਕਰੋ</string>
@@ -748,7 +748,7 @@
     <string name="market_audit_listing_rejected">ਸਟਾਫ ਦੁਆਰਾ ਅਸਵੀਕਾਰ</string>
     <string name="market_audit_listing_relisted">ਮੁੜ-ਸੂਚੀਬੱਧ ਕੀਤਾ</string>
     <string name="market_audit_listing_removed">ਹਟਾਇਆ ਗਿਆ</string>
-    <string name="market_audit_listing_updated">ਆਈਟਮ ਲੋਡ ਹੋ ਰਹੀ ਹੈ</string>
+    <string name="market_audit_listing_updated">ਲਿਸਟਿੰਗ ਸੋਧੀ ਗਈ</string>
     <string name="market_audit_listing_warning">ਚਿਤਾਵਨੀ ਜਾਰੀ ਕੀਤੀ ਗਈ</string>
     <string name="market_audit_order_cancelled">ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
     <string name="market_audit_order_chargeback">ਚਾਰਜਬੈਕ ਪ੍ਰਾਪਤ</string>

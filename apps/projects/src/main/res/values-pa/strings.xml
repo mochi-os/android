@@ -21,7 +21,7 @@
     <string name="projects_find_recommended">ਸਿਫ਼ਾਰਸ਼ ਕੀਤੇ</string>
     <string name="projects_find_subscribe">ਗਾਹਕ ਬਣੋ</string>
     <string name="projects_loading">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
-    <string name="projects_watched">watched</string>
+    <string name="projects_watched">ਨਿਗਰਾਨੀ ਅਧੀਨ</string>
     <string name="projects_create_object">ਆਬਜੈਕਟ ਬਣਾਓ</string>
     <string name="projects_search">ਖੋਜ</string>
     <string name="projects_settings">ਸੈਟਿੰਗਾਂ</string>
@@ -87,7 +87,7 @@
     <string name="projects_request_method">ਤਰੀਕਾ</string>
     <string name="projects_request_method_merge">ਮਰਜ ਕਰੋ</string>
     <string name="projects_request_field_repository">ਰਿਪਾਜ਼ਟਰੀ</string>
-    <string name="projects_request_field_source">ਸਰੋਤ branch</string>
+    <string name="projects_request_field_source">ਸਰੋਤ ਬ੍ਰਾਂਚ</string>
     <string name="projects_request_field_title">ਸਿਰਲੇਖ</string>
     <string name="projects_request_field_description">ਵੇਰਵਾ</string>
     <string name="projects_request_field_draft">ਡਰਾਫਟ</string>
@@ -328,7 +328,7 @@
     <string name="projects_settings_section_access">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
     <string name="projects_people_search">ਲੋਕ ਖੋਜੋ</string>
     <string name="projects_settings_field_entity_id">ਇਕਾਈ ID</string>
-    <string name="projects_settings_field_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
+    <string name="projects_settings_field_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="projects_settings_field_server">ਸਰਵਰ</string>
     <string name="projects_access_subject_anyone">ਕੋਈ ਵੀ</string>
     <string name="projects_access_subject_authenticated">ਪ੍ਰਮਾਣਿਤ ਵਰਤੋਂਕਾਰ</string>

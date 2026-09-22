@@ -35,7 +35,7 @@
     <string name="chess_status_stalemate">Pat — heç-heçə</string>
     <string name="chess_status_draw">Heç-heçə</string>
     <string name="chess_status_check_your_move">Şah — sizin gediş</string>
-    <string name="chess_status_your_move">Sizin ödənişiniz</string>
+    <string name="chess_status_your_move">Sizin gedişiniz</string>
     <string name="chess_move_subject_you">Siz</string>
     <string name="chess_promotion_title">Yüksəlt:</string>
 
@@ -63,7 +63,7 @@
     <string name="chess_delete_title">Oyunu silmək?</string>
     <string name="chess_delete_message">Bu, oyunu siyahınızdan silir.</string>
     <string name="chess_ws_connecting">Bağlanır…</string>
-    <string name="chess_ws_disconnected">Offline</string>
+    <string name="chess_ws_disconnected">Oflayn</string>
     <string name="chess_ws_reconnecting">Yenidən qoşulur…</string>
     <string name="chess_ws_failed">Bağlantı alınmadı</string>
     <string name="chess_move_capture">%1$s %2$s götürdü</string>

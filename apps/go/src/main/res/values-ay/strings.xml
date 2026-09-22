@@ -58,7 +58,7 @@
     <string name="go_status_resigned_opponent">%1$s ganata</string>
     <string name="go_status_resigned_self">Jaytanikta — %1$s atipi</string>
     <string name="go_status_score">%1$s atipi — N:%2$s J:%3$s</string>
-    <string name="go_status_you_win">Aka subasta gantata</string>
+    <string name="go_status_you_win">Atipjtawa!</string>
     <string name="go_status_your_move">Jumankiwa</string>
 
     <string name="go_channel_name">Go notifications</string>
@@ -66,7 +66,7 @@
     <string name="go_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="go_sidebar_active">Anatawi Lurkaski</string>
     <string name="go_empty_active">Janïr anatäwinakas utjkiti.</string>
-    <string name="go_status_resigned">Resigned</string>
+    <string name="go_status_resigned">Jaytawayi</string>
     <string name="go_new_game_title">Machaq Go anatäwi</string>
     <string name="go_new_game_no_friends">Anatäw qalltañ nayrax mä masi yapxattaña wakisi.</string>
     <string name="go_new_game_board_size_value">%1$d×%2$d</string>

@@ -39,7 +39,7 @@
     <string name="access_owner">მფლობელი</string>
     <string name="access_revoke">გაუქმება</string>
     <string name="access_level_comment">კომენტარი</string>
-    <string name="access_level_view">ვიდეოს ესკიზი</string>
+    <string name="access_level_view">ნახვა</string>
     <string name="access_level_none">არცერთი</string>
     <string name="reaction_like">მოწონება</string>
     <string name="reaction_dislike">არ მომწონს</string>
@@ -62,7 +62,7 @@
     <string name="notifications_mark_all_read">ყველას წაკითხულად მონიშვნა</string>
     <string name="notifications_clear_all">ყველაფრის გასუფთავება</string>
     <string name="settings_title">პარამეტრები</string>
-    <string name="settings_appearance">გარემო</string>
+    <string name="settings_appearance">იერსახე</string>
     <string name="settings_appearance_light">ღია</string>
     <string name="settings_appearance_dark">ბნელი</string>
     <string name="settings_density">სიმკვრივე</string>
@@ -85,7 +85,7 @@
     <string name="settings_language">ენა</string>
     <string name="settings_date_format">თარიღის ფორმატი</string>
     <string name="settings_time_format">დროის ფორმატი</string>
-    <string name="settings_week_start">ოთხშაბათი</string>
+    <string name="settings_week_start">კვირა იწყება</string>
     <string name="settings_week_monday">ორშაბათი</string>
     <string name="settings_week_tuesday">სამშაბათი</string>
     <string name="settings_week_wednesday">ოთხშაბათი</string>
@@ -94,7 +94,7 @@
     <string name="settings_week_saturday">შაბათი</string>
     <string name="settings_week_sunday">კვირა</string>
     <string name="settings_number_format">ნომრის ფორმატი</string>
-    <string name="settings_units">შეერთებული შტატები</string>
+    <string name="settings_units">ერთეულები</string>
     <string name="settings_units_metric">მეტრიკული</string>
     <string name="settings_units_imperial">იმპერიული</string>
     <string name="settings_time_zone">დროის სარტყელი</string>
@@ -114,7 +114,7 @@
     <string name="game_chat_empty">შეტყობინებები ჯერ არ არის</string>
     <string name="game_chat_input_placeholder">ჩაწერეთ შეტყობინება...</string>
     <string name="game_chat_send">შეტყობინების გაგზავნა</string>
-    <string name="game_chat_subject_you">დიახ, ძალით</string>
+    <string name="game_chat_subject_you">თქვენ</string>
 
     <string name="common_not_saved">არ შენახულა</string>
     <string name="app_brand">Mochi</string>
@@ -230,7 +230,7 @@
     <string name="stepup_use_passkey">გამოიყენეთ თქვენი passkey</string>
     <string name="stepup_send_email">ელფოსტის გაგზავნა</string>
     <string name="stepup_resend_email">ელფოსტის ხელახლა გაგზავნა</string>
-    <string name="stepup_verify">შემოწმებული</string>
+    <string name="stepup_verify">შემოწმება</string>
     <string name="stepup_continue_with">გაგრძელება %1$s-ით</string>
     <string name="stepup_error_start">ხელახალი ავთენტიფიკაციის დაწყება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.</string>
     <string name="stepup_error_code">ეს კოდი არასწორია ან ვადაგასულია.</string>
@@ -284,7 +284,7 @@
     </plurals>
     <string name="lightbox_comments">კომენტარები</string>
     <string name="common_attachment_unavailable">დანართი დროებით მიუწვდომელია</string>
-    <string name="common_unavailable">არაავტორიზებული წვდომა</string>
+    <string name="common_unavailable">მიუწვდომელი</string>
     <string name="common_not_found">ვერ მოიძებნა</string>
     <string name="format_bold">მუქი</string>
     <string name="format_italic">დახრილი</string>

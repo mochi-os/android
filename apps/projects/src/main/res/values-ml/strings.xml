@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">പ്രദർശന നാമം</string>
     <string name="projects_auth_verification_failed">സ്ഥിരീകരണം പരാജയപ്പെട്ടു</string>
-    <string name="projects_list_title">prompt സേവ് ചെയ്തു</string>
+    <string name="projects_list_title">പ്രോജക്റ്റുകൾ</string>
     <string name="projects_list_close_search">തിരയൽ അടയ്ക്കുക</string>
     <string name="projects_list_search">തിരയുക</string>
     <string name="projects_list_find">പ്രോജക്റ്റുകൾ കണ്ടെത്തുക</string>
@@ -12,13 +12,13 @@
     <string name="projects_create_name">പേര്</string>
     <string name="projects_create_description">വിവരണം</string>
     <string name="projects_create_prefix">പ്രിഫിക്സ്</string>
-    <string name="projects_create_privacy">സ്വകാര്യതാ നയം</string>
+    <string name="projects_create_privacy">സ്വകാര്യത</string>
     <string name="projects_create_private">സ്വകാര്യം</string>
     <string name="projects_create_public">പൊതു</string>
     <string name="projects_create_template_none">ഒന്നുമില്ല</string>
     <string name="projects_create_action">സൃഷ്ടിക്കുക</string>
     <string name="projects_find_title">പ്രോജക്റ്റുകൾ കണ്ടെത്തുക</string>
-    <string name="projects_find_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
+    <string name="projects_find_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="projects_find_subscribe">സബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="projects_loading">ലോഡുചെയ്യുന്നു…</string>
     <string name="projects_watched">വാച്ച് ചെയ്തു</string>
@@ -34,7 +34,7 @@
     <string name="projects_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="projects_create_object_type">തരം</string>
     <string name="projects_create_object_title_field">തലക്കെട്ട്</string>
-    <string name="projects_create_object_parent">parent</string>
+    <string name="projects_create_object_parent">പാരന്റ്</string>
     <string name="projects_settings_title">ക്രമീകരണങ്ങൾ</string>
     <string name="projects_settings_tab_general">പൊതുവായവ</string>
     <string name="projects_settings_tab_access">ആക്സസ്</string>
@@ -56,7 +56,7 @@
     <string name="projects_object_tab_links">ലിങ്കുകൾ</string>
     <string name="projects_watchers_watch">നിരീക്ഷിക്കുക</string>
     <string name="projects_watchers_unwatch">നിരീക്ഷണം നിർത്തുക</string>
-    <string name="projects_parent_label">parent</string>
+    <string name="projects_parent_label">പാരന്റ്</string>
     <string name="projects_parent_search_placeholder">തിരയുക</string>
     <string name="projects_links_title">ലിങ്കുകൾ</string>
     <string name="projects_links_add">ലിങ്ക് ചേർക്കുക</string>
@@ -97,8 +97,8 @@
     <string name="projects_diff_empty">diff ലഭ്യമല്ല</string>
     <string name="projects_board_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
     <string name="projects_board_new">പുതിയത്</string>
-    <string name="projects_board_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
-    <string name="projects_board_rename_column">പേജ് പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="projects_board_rename">പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="projects_board_rename_column">കോളം പുനർനാമകരണം ചെയ്യുക</string>
     <string name="projects_move_position">സ്ഥാനം</string>
     <string name="projects_move_position_top">മുകളിൽ</string>
     <string name="projects_move_current">നിലവിലുള്ളത്</string>
@@ -131,7 +131,7 @@
     <string name="projects_field_name">പേര്</string>
     <string name="projects_field_type">തരം</string>
     <string name="projects_field_flags">ഫ്ലാഗുകൾ</string>
-    <string name="projects_field_required">Reserve പൂർത്തിയായില്ല</string>
+    <string name="projects_field_required">ആവശ്യമാണ്</string>
     <string name="projects_field_position_default">ഡിഫോൾട്ട്</string>
     <string name="projects_field_position_sidebar">സൈഡ്ബാർ</string>
     <string name="projects_field_save">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
@@ -153,7 +153,7 @@
     <string name="projects_views_sort_number">സംഖ്യ</string>
     <string name="projects_views_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="projects_views_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
-    <string name="projects_views_sort_rank">Rate Limiting</string>
+    <string name="projects_views_sort_rank">റാങ്ക്</string>
     <string name="projects_project_not_found">പ്രോജക്റ്റ് ലഭ്യമല്ല</string>
     <string name="projects_list_more">കൂടുതൽ</string>
     <string name="projects_more">കൂടുതൽ</string>

@@ -53,7 +53,7 @@
     <string name="people_profile_name_saved">ਨਾਮ ਸੇਵ ਹੋ ਗਿਆ</string>
     <string name="people_profile_edit_name">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="people_profile_identity">ਪਛਾਣ</string>
-    <string name="people_profile_accent">ਉਚਾਰ</string>
+    <string name="people_profile_accent">ਐਕਸੈਂਟ</string>
     <string name="people_profile_directory_listing">ਦੂਜਿਆਂ ਨੂੰ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਤੁਹਾਨੂੰ ਲੱਭਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="people_profile_markdown_supported">Markdown ਸਪੋਰਟਡ</string>
     <string name="people_profile_preview">ਪ੍ਰੀਵਿਊ</string>

@@ -84,8 +84,8 @@
     <string name="settings_font_size_extra_large">Çox böyük</string>
     <string name="settings_language">Dil</string>
     <string name="settings_date_format">Tarix formatı</string>
-    <string name="settings_time_format">Saat qurşağı</string>
-    <string name="settings_week_start">Ağ</string>
+    <string name="settings_time_format">Vaxt formatı</string>
+    <string name="settings_week_start">Həftə başlayır</string>
     <string name="settings_week_monday">Bazar ertəsi</string>
     <string name="settings_week_tuesday">Çərşənbə axşamı</string>
     <string name="settings_week_wednesday">Çərşənbə</string>
@@ -94,10 +94,10 @@
     <string name="settings_week_saturday">Şənbə</string>
     <string name="settings_week_sunday">Bazar</string>
     <string name="settings_number_format">Nömrə formatı</string>
-    <string name="settings_units">Naməlum brauzer</string>
+    <string name="settings_units">Vahidlər</string>
     <string name="settings_units_metric">Metrik</string>
     <string name="settings_units_imperial">İmperial</string>
-    <string name="settings_time_zone">Başlıq</string>
+    <string name="settings_time_zone">Saat qurşağı</string>
     <string name="settings_reset_to_defaults">Standartlara sıfırla</string>
     <string name="settings_reset_confirm_title">Üstünlüklər sıfırlansın?</string>
     <string name="settings_reset_confirm_message">Bu, bütün nizamlamaları standart dəyərlərinə sıfırlayacaq.</string>
@@ -230,7 +230,7 @@
     <string name="stepup_use_passkey">Giriş açarınızdan istifadə edin</string>
     <string name="stepup_send_email">E-poçt göndər</string>
     <string name="stepup_resend_email">E-poçtu yenidən göndər</string>
-    <string name="stepup_verify">DNS-i yoxla</string>
+    <string name="stepup_verify">Yoxla</string>
     <string name="stepup_continue_with">%1$s ilə davam edin</string>
     <string name="stepup_error_start">Yenidən autentifikasiyanı başlatmaq mümkün olmadı. Zəhmət olmasa yenidən cəhd edin.</string>
     <string name="stepup_error_code">Bu kod yanlışdır və ya vaxtı bitib.</string>
@@ -271,7 +271,7 @@
     <string name="attachment_caption_add">İzah əlavə et</string>
     <string name="attachment_caption_edit">İzahı redaktə et</string>
     <string name="about_check_background">Arxa fonda davam et</string>
-    <string name="notifications_category_unassigned">İcazəsiz giriş</string>
+    <string name="notifications_category_unassigned">Təyin edilməyib</string>
     <string name="notifications_change_category">Bildiriş kateqoriyasını dəyiş</string>
     <string name="lightbox_comments_none">Bu şəkilə hələ şərh yoxdur.</string>
     <string name="lightbox_comments_only">Yalnız bu şəklin şərhlərini göstər</string>
@@ -284,7 +284,7 @@
     </plurals>
     <string name="lightbox_comments">Şərhlər</string>
     <string name="common_attachment_unavailable">Qoşma müvəqqəti əlçatan deyil</string>
-    <string name="common_unavailable">Hesabın banını götür</string>
+    <string name="common_unavailable">Əlçatan deyil</string>
     <string name="common_not_found">Tapılmadı</string>
     <string name="format_bold">Qalın</string>
     <string name="format_italic">Kursiv</string>

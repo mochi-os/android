@@ -13,7 +13,7 @@
     <string name="crm_find_title">CRM-ების ძიება</string>
     <string name="crm_find_recommended">რეკომენდებული</string>
     <string name="crm_loading">იტვირთება…</string>
-    <string name="crm_watched">ყურება</string>
+    <string name="crm_watched">თვალყურის ქვეშ</string>
     <string name="crm_create_object">ობიექტის შექმნა</string>
     <string name="crm_search">ძიება</string>
     <string name="crm_settings">პარამეტრები</string>
@@ -21,7 +21,7 @@
     <string name="crm_design">დიზაინი</string>
     <string name="crm_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
     <string name="crm_sort_direction">მიმართულება</string>
-    <string name="crm_sort_rank">სახელმძღვანელო</string>
+    <string name="crm_sort_rank">ხელით</string>
     <string name="crm_sort_created">შექმნილია</string>
     <string name="crm_sort_updated">განახლებულია</string>
     <string name="crm_create_object_title">ობიექტის შექმნა</string>
@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">ხალხი</string>
     <string name="crm_option_icon">ხატულა</string>
     <string name="crm_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">ამოუცნობი ანგარიში</string>
-    <string name="crm_settings_delete_crm">პროექტის წაშლა</string>
+    <string name="crm_settings_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="crm_settings_delete_crm">CRM-ის წაშლა</string>
     <string name="crm_settings_delete_confirm_title">CRM-ის წაშლა</string>
-    <string name="crm_settings_unsubscribe_title">ამოუცნობი ანგარიში</string>
+    <string name="crm_settings_unsubscribe_title">გამოწერის გაუქმება</string>
     <string name="crm_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ CRM-დან გამოწერის გაუქმება?</string>
     <string name="crm_access_level_owner">მფლობელი</string>
     <string name="crm_object_watch">თვალყურის დევნება</string>
@@ -54,7 +54,7 @@
     <string name="crm_links_type_blocked_by">დაბლოკილია</string>
     <string name="crm_links_type_duplicates">დუბლიკატები</string>
     <string name="crm_links_no_matches">შესაბამისი ობიექტები არ არის</string>
-    <string name="crm_field_yes">წლიური</string>
+    <string name="crm_field_yes">დიახ</string>
     <string name="crm_field_no">არა</string>
     <string name="crm_field_type_checkbox">ფლაგი</string>
     <string name="crm_comment_empty">კომენტარები ჯერ არ არის</string>
@@ -67,7 +67,7 @@
     <string name="crm_board_rename">სახელის შეცვლა</string>
     <string name="crm_board_rename_column">სვეტის სახელის შეცვლა</string>
     <string name="crm_move_position">პოზიცია</string>
-    <string name="crm_move_position_top">ძალიან დიდი</string>
+    <string name="crm_move_position_top">ზედა</string>
     <string name="crm_move_current">მიმდინარე</string>
     <string name="crm_design_title">დიზაინი</string>
     <string name="crm_design_export">დიზაინის ექსპორტი</string>
@@ -123,7 +123,7 @@
     <string name="crm_views_sort_created">შექმნილია</string>
     <string name="crm_views_sort_updated">განახლებულია</string>
     <string name="crm_views_sort_rank">რანკი</string>
-    <string name="crm_not_found">პროექტი ვერ მოიძებნა</string>
+    <string name="crm_not_found">CRM ვერ მოიძებნა</string>
     <string name="crm_more">მეტი</string>
     <string name="crm_comment_send">გაგზავნა</string>
     <string name="crm_field_position_body">შინაარსი</string>
@@ -239,14 +239,14 @@
 
     <string name="crm_access_search_users">მომხმარებლების ძიება</string>
     <string name="crm_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
-    <string name="crm_access_tab_users">მომხმარებლის სახელი</string>
+    <string name="crm_access_tab_users">მომხმარებლები</string>
     <string name="crm_access_tab_groups">ჯგუფები</string>
     <string name="crm_attachment_remove">Remove attachment</string>
     <string name="crm_board_add_column">სვეტის დამატება</string>
     <string name="crm_settings_entity_id">ერთეულის ID</string>
     <string name="crm_settings_fingerprint">ანაბეჭდი</string>
     <string name="crm_settings_server">სერვერი</string>
-    <string name="crm_untitled">შეჩერება მოხსნილია</string>
+    <string name="crm_untitled">უსათაურო</string>
     <string name="crm_property_select">აირჩიეთ …</string>
     <string name="crm_filter">ფილტრი</string>
     <string name="crm_sort_filter_title">დალაგება და გაფილტვრა</string>
@@ -271,7 +271,7 @@
     <string name="crm_access_role_design">დიზაინი, შექმნა, რედაქტირება, კომენტირება და ნახვა</string>
     <string name="crm_access_role_write">შექმნა, რედაქტირება, კომენტირება და ნახვა</string>
     <string name="crm_access_role_comment">კომენტარი და ნახვა</string>
-    <string name="crm_access_role_view">ხედის კონტროლები</string>
+    <string name="crm_access_role_view">მხოლოდ ნახვა</string>
     <string name="crm_access_role_none">წვდომა არ არის</string>
     <string name="crm_all_crms">ყველა CRM</string>
     <string name="crm_settings_unsubscribe_section">CRM-ის გამოწერის გაუქმება</string>

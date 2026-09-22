@@ -106,7 +106,7 @@
     <string name="settings_display_reset">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
     <string name="settings_display_reset_confirm_title">ਡਿਸਪਲੇ ਰੀਸੈੱਟ ਕਰੀਏ?</string>
     <string name="settings_display_reset_confirm_message">ਇਹ ਡਿਸਪਲੇ ਸੈਟਿੰਗਾਂ ਨੂੰ ਉਹਨਾਂ ਦੇ ਡਿਫਾਲਟ ਮੁੱਲਾਂ ਤੇ ਰੀਸੈੱਟ ਕਰੇਗੀ।</string>
-    <string name="settings_theme_title">theme</string>
+    <string name="settings_theme_title">ਥੀਮ</string>
     <string name="settings_theme_default">ਡਿਫਾਲਟ</string>
     <string name="settings_background">ਪਿਛੋਕੜ</string>
     <string name="settings_background_theme">ਥੀਮ ਤੋਂ</string>
@@ -252,7 +252,7 @@
     <string name="common_file_open_failed">ਫਾਈਲ ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕੀ</string>
     <string name="reaction_remove">ਸਾਫ਼ ਕਰੋ</string>
     <string name="common_logout_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਲੌਗ ਆਊਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਆਪਣੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰਨਾ ਪਵੇਗਾ।</string>
-    <string name="comment_anonymous">ਅਣਜਾਣ</string>
+    <string name="comment_anonymous">ਅਗਿਆਤ</string>
     <string name="tags_label">ਟੈਗ</string>
     <string name="tags_add">ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="tags_interest_up">ਇਸ ਵਰਗਾ ਹੋਰ ਦਿਖਾਓ</string>

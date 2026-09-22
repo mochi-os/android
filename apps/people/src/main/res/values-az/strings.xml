@@ -44,7 +44,7 @@
     <string name="people_member_remove">Üzvü sil</string>
     <string name="people_member_remove_title">Üzvü Sil</string>
     <string name="people_member_search_hint">Əlavə etmək istədiyiniz şəxsləri tapmaq üçün ad daxil edin</string>
-    <string name="people_member_type_user">İstifadəçi yaradıldı</string>
+    <string name="people_member_type_user">İstifadəçi</string>
     <string name="people_member_type_group">Qrup</string>
     <string name="people_profile_save">Saxla</string>
     <string name="people_profile_saving">Saxlanılır…</string>
@@ -57,9 +57,9 @@
     <string name="people_profile_directory_listing">Başqalarının sizi kataloqda tapmasına icazə ver</string>
     <string name="people_profile_markdown_supported">Markdown dəstəklənir</string>
     <string name="people_profile_preview">Önbaxış</string>
-    <string name="people_profile_upload_avatar">Faylları yüklə</string>
+    <string name="people_profile_upload_avatar">Avatar yüklə</string>
     <string name="people_profile_upload">Yüklə</string>
-    <string name="people_profile_uploading">Fərqli hesabdan istifadə et</string>
+    <string name="people_profile_uploading">Yüklənir…</string>
     <string name="people_profile_change_banner">Banneri dəyişdir</string>
     <string name="people_profile_no_banner">Banner təyin edilməyib</string>
     <string name="people_profile_favicon">Favicon</string>

@@ -17,8 +17,8 @@
     <string name="account_totp_setup_title">ഓതന്റിക്കേറ്റർ സജ്ജമാക്കുക</string>
     <string name="account_totp_verify">സ്ഥിരീകരിക്കുക</string>
     <string name="account_totp_disable_title">ഓതന്റിക്കേറ്റർ പ്രവർത്തനരഹിതമാക്കണോ?</string>
-    <string name="account_section_recovery">Redirect</string>
-    <string name="account_recovery_codes_title">Redirect</string>
+    <string name="account_section_recovery">വീണ്ടെടുക്കൽ കോഡുകൾ</string>
+    <string name="account_recovery_codes_title">വീണ്ടെടുക്കൽ കോഡുകൾ</string>
     <string name="sessions_unknown_agent">അജ്ഞാത ഉപകരണം</string>
     <string name="sessions_revoke_title">സെഷൻ റദ്ദാക്കണോ?</string>
     <string name="account_section_oauth">മൂന്നാം കക്ഷി ലോഗിൻ</string>
@@ -28,7 +28,7 @@
     <string name="account_save">സേവ് ചെയ്യുക</string>
     <string name="account_done">പൂർത്തിയായി</string>
     <string name="account_delete">ഇല്ലാതാക്കുക</string>
-    <string name="account_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="account_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="sessions_revoke">റദ്ദാക്കുക</string>
     <string name="account_disable">പ്രവർത്തനരഹിതമാക്കുക</string>
     <string name="account_copy">പകർത്തുക</string>
@@ -46,8 +46,8 @@
     <string name="route_path">പാത്ത്</string>
     <string name="route_method">രീതി</string>
     <string name="route_method_app">ആപ്പ്</string>
-    <string name="route_method_entity">സ്ഥാപനം</string>
-    <string name="route_method_redirect">Redirect സൃഷ്ടിച്ചു</string>
+    <string name="route_method_entity">എന്റിറ്റി</string>
+    <string name="route_method_redirect">റീഡയറക്ട്</string>
     <string name="route_priority">മുൻഗണന</string>
     <string name="route_enabled">പ്രവർത്തനക്ഷമം</string>
     <string name="route_disabled">പ്രവർത്തനരഹിതം</string>
@@ -80,7 +80,7 @@
     <string name="system_status_download_installer">ഇൻസ്റ്റാളർ ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_download_from_packages">packages.mochi-os.org-ൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യുക</string>
     <string name="system_status_copy">പകർത്തുക</string>
-    <string name="system_status_peers">സമപ്രായക്കാർ</string>
+    <string name="system_status_peers">പിയറുകൾ</string>
     <string name="system_status_known">അറിയപ്പെടുന്നവ</string>
     <string name="system_status_peer_connected">കണക്റ്റ് ചെയ്തു</string>
     <string name="system_status_peer_disconnected">വിച്ഛേദിച്ചു</string>
@@ -107,7 +107,7 @@
     <string name="system_documents_description">നിങ്ങളുടെ ഉപയോക്താക്കൾക്ക് കാണിക്കുന്ന സെർവർ നിയമങ്ങൾ, നിബന്ധനകളും വ്യവസ്ഥകളും, സ്വകാര്യതാ അറിയിപ്പ്</string>
     <string name="system_documents_tab_rules">സെർവർ നിയമങ്ങൾ</string>
     <string name="system_documents_tab_terms">നിബന്ധനകളും വ്യവസ്ഥകളും</string>
-    <string name="system_documents_tab_privacy">സ്വകാര്യതാ നയം</string>
+    <string name="system_documents_tab_privacy">സ്വകാര്യത</string>
     <string name="system_documents_language">ഭാഷ</string>
     <string name="system_documents_no_language">ഈ ഭാഷയ്ക്ക് ഡോക്യുമെന്റ് ലഭ്യമല്ല.</string>
     <string name="system_documents_customised">ഇഷ്ടാനുസൃതമാക്കിയത്</string>
@@ -127,7 +127,7 @@
     <string name="system_settings_section_other">മറ്റ് സെറ്റിങ്ങുകൾ</string>
     <string name="system_settings_state_disabled">പ്രവർത്തനരഹിതം</string>
     <string name="system_settings_state_allowed">അനുവദിച്ചു</string>
-    <string name="system_settings_state_required">Reserve പൂർത്തിയായില്ല</string>
+    <string name="system_settings_state_required">ആവശ്യമാണ്</string>
     <string name="system_settings_empty">(ശൂന്യം)</string>
     <string name="system_settings_configured">ക്രമീകരിച്ചു</string>
     <string name="system_settings_save">സേവ് ചെയ്യുക</string>
@@ -190,7 +190,7 @@
     <string name="system_users_revoke_all">എല്ലാ സെഷനുകളും റദ്ദാക്കുക</string>
     <string name="system_users_unknown_browser">അജ്ഞാത ബ്രൗസർ</string>
     <string name="system_users_unknown">അജ്ഞാതം</string>
-    <string name="system_users_previous">മുമ്പത്തെ ചിത്രം</string>
+    <string name="system_users_previous">മുമ്പത്തേത്</string>
     <string name="system_users_next">അടുത്തത്</string>
     <string name="system_users_empty">ഉപയോക്താക്കളെ കണ്ടെത്തിയില്ല</string>
     <string name="system_users_empty_search">നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന ഉപയോക്താക്കളൊന്നുമില്ല</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ഈ ഡൊമൈനിലെ റൂട്ടുകൾ ഇനി കൈകാര്യം ചെയ്യില്ല.</string>
     <string name="domain_delegation_delete_title">പ്രതിനിധിയാക്കൽ ഇല്ലാതാക്കണോ?</string>
     <string name="domain_delegation_path">പാത്ത്</string>
-    <string name="domain_delegation_user">ഉപയോക്തൃ ID</string>
+    <string name="domain_delegation_user">ഉപയോക്താവ്</string>
     <string name="domain_delegations">പ്രതിനിധിയാക്കലുകൾ</string>
     <string name="domain_delegations_empty">പ്രതിനിധികൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
     <string name="domain_delete">ഡൊമെയ്ൻ ഇല്ലാതാക്കുക</string>
@@ -318,14 +318,14 @@
     <string name="login_method_passkey">പാസ്കീ</string>
     <string name="login_method_totp">Authenticator ആപ്പ്</string>
     <string name="login_method_oauth">തേർഡ്-പാർട്ടി ലോഗിൻ</string>
-    <string name="login_method_recovery">Redirect</string>
+    <string name="login_method_recovery">വീണ്ടെടുക്കൽ കോഡുകൾ</string>
     <string name="account_close_section">അക്കൗണ്ട് അടയ്ക്കുക</string>
     <string name="account_close_action">അക്കൗണ്ട് അടയ്ക്കുക</string>
     <string name="account_close_confirm_title">നിങ്ങളുടെ അക്കൗണ്ട് അടയ്ക്കണോ?</string>
     <string name="account_close_confirm_body">നിങ്ങളുടെ അക്കൗണ്ട് ഇല്ലാതാക്കാൻ ഷെഡ്യൂൾ ചെയ്യപ്പെടും, നിങ്ങൾ സൈൻ ഔട്ട് ചെയ്യപ്പെടും. ഇല്ലാതാക്കൽ തീയതിക്ക് മുമ്പ് എപ്പോൾ വേണമെങ്കിലും വീണ്ടും ലോഗിൻ ചെയ്ത് നിങ്ങൾക്ക് റദ്ദാക്കാം.</string>
     <string name="account_data_download">ഡൗൺലോഡ്</string>
     <string name="route_target_app">ആപ്പ്</string>
-    <string name="route_target_entity">സ്ഥാപനം</string>
+    <string name="route_target_entity">എന്റിറ്റി</string>
     <string name="route_target_url">URL</string>
     <string name="account_data_section">നിങ്ങളുടെ ഡേറ്റ</string>
     <string name="account_data_dialog_title">നിങ്ങളുടെ ഡേറ്റ ഡൗൺലോഡ് ചെയ്യുക</string>

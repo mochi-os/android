@@ -2,7 +2,7 @@
 <resources>
 
     <string name="people_invitations_title">ക്ഷണങ്ങൾ</string>
-    <string name="people_profile_title">പ്രൊഫൈൽ പ്രിവ്യൂ</string>
+    <string name="people_profile_title">പ്രൊഫൈൽ</string>
     <string name="people_groups_title">ഗ്രൂപ്പുകൾ</string>
     <string name="people_group_title">ഗ്രൂപ്പ്</string>
     <string name="people_person_title">വ്യക്തി</string>
@@ -23,7 +23,7 @@
     <string name="people_invite_settings_notify_description">ക്ഷണങ്ങൾ ക്ഷണങ്ങളിൽ പ്രത്യക്ഷപ്പെടുകയും നിങ്ങൾക്ക് ഒരു അറിയിപ്പ് അയയ്ക്കുകയും ചെയ്യും (ഡിഫോൾട്ട്).</string>
     <string name="people_invite_settings_store_silently">നിശബ്ദമായി സ്റ്റോർ ചെയ്യുക</string>
     <string name="people_invite_settings_silent_description">ക്ഷണങ്ങൾ ക്ഷണങ്ങളിൽ പ്രത്യക്ഷപ്പെടും. അറിയിപ്പൊന്നും അയയ്ക്കില്ല.</string>
-    <string name="people_invite_settings_reject_all">ലിസ്റ്റിങ് നിരസിക്കുക</string>
+    <string name="people_invite_settings_reject_all">എല്ലാം നിരസിക്കുക</string>
     <string name="people_invite_settings_reject_description">അജ്ഞാത അയച്ചവരിൽ നിന്നുള്ള ക്ഷണങ്ങൾ ഉപേക്ഷിക്കുന്നു. പരസ്പര ക്ഷണങ്ങൾ ഇപ്പോഴും കണക്റ്റ് ചെയ്യും.</string>
     <string name="people_invite_settings_accept_automatically">സ്വയമേവ സ്വീകരിക്കുക</string>
     <string name="people_invite_settings_accept_description">നിങ്ങളുടെ അനുമതിയില്ലാതെ എല്ലാ ക്ഷണങ്ങളും സ്വീകരിക്കും.</string>
@@ -41,8 +41,8 @@
     <string name="people_group_delete">ഗ്രൂപ്പ് ഇല്ലാതാക്കുക</string>
     <string name="people_member_add">അംഗത്തെ ചേർക്കുക</string>
     <string name="people_member_add_hint">ആരംഭിക്കാൻ ഉപയോക്താക്കളെയോ ഗ്രൂപ്പുകളെയോ ചേർക്കുക</string>
-    <string name="people_member_remove">അംഗത്തെ നീക്കം ചെയ്യണോ?</string>
-    <string name="people_member_remove_title">ആക്സസ് നിയമം നീക്കം ചെയ്യുക</string>
+    <string name="people_member_remove">അംഗത്തെ നീക്കം ചെയ്യുക</string>
+    <string name="people_member_remove_title">അംഗത്തെ നീക്കം ചെയ്യുക</string>
     <string name="people_member_search_hint">ചേർക്കാൻ ആഗ്രഹിക്കുന്ന ആളുകളെ കണ്ടെത്താൻ പേര് നൽകുക</string>
     <string name="people_member_type_user">ഉപയോക്താവ്</string>
     <string name="people_member_type_group">ഗ്രൂപ്പ്</string>
@@ -56,7 +56,7 @@
     <string name="people_profile_accent">ആക്സന്റ്</string>
     <string name="people_profile_directory_listing">ഡയറക്ടറിയിൽ മറ്റുള്ളവർക്ക് നിങ്ങളെ കണ്ടെത്താൻ അനുവദിക്കുക</string>
     <string name="people_profile_markdown_supported">Markdown സപ്പോർട്ടുണ്ട്</string>
-    <string name="people_profile_preview">സ്കോർ പ്രിവ്യൂ</string>
+    <string name="people_profile_preview">പ്രിവ്യൂ</string>
     <string name="people_profile_upload_avatar">അവതാർ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="people_profile_upload">അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="people_profile_uploading">അപ്‌ലോഡ് ചെയ്യുന്നു…</string>
@@ -126,7 +126,7 @@
     <string name="people_contact_name">പേര്</string>
     <string name="people_contact_email">ഇമെയിൽ</string>
     <string name="people_contact_city">നഗരം</string>
-    <string name="people_contact_region">പ്രാദേശികം</string>
+    <string name="people_contact_region">പ്രദേശം</string>
     <string name="people_contact_postcode">പോസ്റ്റ്കോഡ്</string>
     <string name="people_contact_country">രാജ്യം</string>
     <string name="people_contact_type">തരം</string>
@@ -135,7 +135,7 @@
     <string name="people_contact_remove">നീക്കം ചെയ്യുക</string>
     <string name="people_contact_pick_date_confirm">ശരി</string>
     <string name="people_books_name">പേര്</string>
-    <string name="people_books_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="people_books_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="people_contacts_sort_name">പേര്</string>
     <string name="people_contacts_sort_recent">അടുത്തിടെ ചേർത്തത്</string>
     <string name="people_contacts_thats_you">അത് നിങ്ങളാണ്</string>
@@ -144,7 +144,7 @@
     <string name="people_add_contact_search_placeholder">തിരയാൻ ടൈപ്പ് ചെയ്യുക…</string>
     <string name="people_add_contact_search_start">ഉപയോക്താക്കളെ തിരയാൻ ടൈപ്പ് ചെയ്യാൻ തുടങ്ങുക</string>
     <string name="people_contact_phone">ഫോൺ</string>
-    <string name="people_contact_title">ജോലി തലക്കെട്ട്</string>
+    <string name="people_contact_title">പദവി</string>
     <string name="people_contacts_title">കോൺടാക്റ്റുകൾ</string>
     <string name="people_contacts_all">എല്ലാ കോൺടാക്റ്റുകളും</string>
     <string name="people_contacts_empty">കോൺടാക്റ്റുകളൊന്നും കണ്ടെത്തിയില്ല</string>

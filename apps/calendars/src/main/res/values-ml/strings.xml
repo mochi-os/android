@@ -6,10 +6,10 @@
     <string name="calendars_connect_device">ഒരു ഡിവൈസ് ബന്ധിപ്പിക്കുക</string>
     <string name="calendars_preferences">മുൻഗണനകൾ</string>
     <string name="calendars_name">പേര്</string>
-    <string name="calendars_rename">കോളം പുനർനാമകരണം ചെയ്യുക</string>
+    <string name="calendars_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="calendars_delete">ഇല്ലാതാക്കുക</string>
     <string name="calendars_edit">എഡിറ്റ് ചെയ്യുക</string>
-    <string name="calendars_previous">മുമ്പത്തെ ചിത്രം</string>
+    <string name="calendars_previous">മുമ്പത്തേത്</string>
     <string name="calendars_next">അടുത്തത്</string>
     <string name="calendars_view">കാണുക</string>
     <string name="calendars_view_list">ലിസ്റ്റ്</string>

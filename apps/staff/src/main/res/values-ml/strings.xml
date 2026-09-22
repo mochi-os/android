@@ -83,7 +83,7 @@
     <string name="staff_audit_action_listing_expired">കാലഹരണപ്പെട്ടു</string>
     <string name="staff_audit_action_listing_published">ലിസ്റ്റിംഗ് പ്രസിദ്ധീകരിച്ചു</string>
     <string name="staff_audit_action_listing_rejected">ആപേക്ഷികം (5m, 3h, 2d)</string>
-    <string name="staff_audit_action_listing_relisted">വീണ്ടും ലിസ്റ്റ് ചെയ്യുന്നു...</string>
+    <string name="staff_audit_action_listing_relisted">വീണ്ടും ലിസ്റ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_listing_removed">നീക്കംചെയ്തു</string>
     <string name="staff_audit_action_listing_updated">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്തു</string>
     <string name="staff_audit_action_listing_warning">മുന്നറിയിപ്പ് നൽകി</string>
@@ -95,10 +95,10 @@
     <string name="staff_audit_action_order_created">ഓർഡർ നൽകി</string>
     <string name="staff_audit_action_order_paid">പേയ്മെന്റ് ലഭിച്ചു</string>
     <string name="staff_audit_action_order_payment_failed">പേയ്മെന്റ് പരാജയപ്പെട്ടു</string>
-    <string name="staff_audit_action_order_refunded">റീഫണ്ട് നൽകി (ഭാഗികം)</string>
+    <string name="staff_audit_action_order_refunded">റീഫണ്ട് ചെയ്തു</string>
     <string name="staff_audit_action_order_shipped">ഷിപ്പ് ചെയ്തു</string>
     <string name="staff_audit_action_report_actioned">റിപ്പോർട്ട് ചരിത്രം</string>
-    <string name="staff_audit_action_report_created">റിപ്പോർട്ടർ</string>
+    <string name="staff_audit_action_report_created">റിപ്പോർട്ട് ചെയ്തു</string>
     <string name="staff_audit_action_review_created">അവലോകനം സമർപ്പിച്ചു</string>
     <string name="staff_audit_action_review_hide">അവലോകനം മറച്ചു</string>
     <string name="staff_audit_action_review_remove">അവലോകനം നീക്കി</string>
@@ -117,7 +117,7 @@
     <string name="staff_audit_action_subscription_created">സബ്സ്ക്രിപ്ഷൻ സൃഷ്ടിച്ചു</string>
     <string name="staff_audit_action_subscription_past_due">പേയ്മെന്റ് കാലാവധി കഴിഞ്ഞു</string>
     <string name="staff_audit_action_subscription_paused">താൽക്കാലികമായി നിർത്തി</string>
-    <string name="staff_audit_action_subscription_reactivated">വായിച്ച് എഴുതുക</string>
+    <string name="staff_audit_action_subscription_reactivated">വീണ്ടും സജീവമാക്കി</string>
     <string name="staff_audit_action_subscription_resumed">പുനരാരംഭിച്ചു</string>
     <string name="staff_audit_actor_system">സിസ്റ്റം</string>
     <string name="staff_audit_empty">ഓഡിറ്റ് ചരിത്രമില്ല</string>
@@ -139,7 +139,7 @@
     <string name="staff_categories_dialog_edit_title">വിഭാഗം എഡിറ്റ് ചെയ്യുക</string>
     <string name="staff_categories_dialog_icon">ഐക്കൺ</string>
     <string name="staff_categories_dialog_name">പേര്</string>
-    <string name="staff_categories_dialog_parent">parent</string>
+    <string name="staff_categories_dialog_parent">പാരന്റ്</string>
     <string name="staff_categories_dialog_parent_none">ഒന്നുമില്ല</string>
     <string name="staff_categories_dialog_physical">ഫിസിക്കൽ</string>
     <string name="staff_categories_dialog_position">സ്ഥാനം</string>
@@ -223,7 +223,7 @@
     <string name="staff_disputes_meta_evidence_due">തെളിവ് സമർപ്പിക്കേണ്ടത്</string>
     <string name="staff_disputes_meta_listing">ലിസ്റ്റിംഗ്</string>
     <string name="staff_disputes_meta_reason">കാരണം</string>
-    <string name="staff_disputes_meta_refunded">റീഫണ്ട് നൽകി (ഭാഗികം)</string>
+    <string name="staff_disputes_meta_refunded">റീഫണ്ട് ചെയ്തു</string>
     <string name="staff_disputes_meta_refunded_partial">വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
     <string name="staff_disputes_meta_seller_no_response">വിൽപ്പനക്കാരൻ ഇതുവരെ പ്രതികരിച്ചിട്ടില്ല.</string>
     <string name="staff_disputes_meta_total">ആകെ</string>
@@ -235,14 +235,14 @@
     <string name="staff_disputes_reason_unauthorised">അനുവദിച്ചിട്ടില്ല</string>
     <string name="staff_disputes_refund_must_be_positive">റീഫണ്ട് അംഗീകരിച്ചു</string>
     <string name="staff_disputes_resolution_buyer">വിൽക്കുന്നയാൾക്കായി പരിഹരിക്കുക</string>
-    <string name="staff_disputes_resolution_label">പരിഹരിക്കുക</string>
+    <string name="staff_disputes_resolution_label">പരിഹാരം</string>
     <string name="staff_disputes_resolution_placeholder">പരിഹാരം തിരഞ്ഞെടുക്കുക</string>
     <string name="staff_disputes_resolution_seller">merge ചെയ്യുന്നതിന് മുമ്പ് ഈ conflicts മാനുവലായി പരിഹരിക്കുക.</string>
     <string name="staff_disputes_resolve">പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolved_toast">തർക്കം പരിഹരിച്ചു</string>
     <string name="staff_disputes_resolving">പരിഹരിക്കുന്നു…</string>
     <string name="staff_disputes_review">അവലോകനം</string>
-    <string name="staff_disputes_status_escalated">വർദ്ധിപ്പിച്ചത്</string>
+    <string name="staff_disputes_status_escalated">എസ്കലേറ്റ് ചെയ്തു</string>
     <string name="staff_disputes_status_open">തുറക്കുക</string>
     <string name="staff_disputes_status_resolved_buyer">പരിഹരിച്ചു (വാങ്ങുന്നയാൾ)</string>
     <string name="staff_disputes_status_resolved_seller">പരിഹരിച്ചു (വിൽപ്പനക്കാരൻ)</string>
@@ -257,8 +257,8 @@
     <string name="staff_filter_label_status">സ്ഥിതി</string>
     <string name="staff_filter_label_type">തരം</string>
     <string name="staff_listings_action_approve_title">ലിസ്റ്റിംഗ് അംഗീകരിക്കുക</string>
-    <string name="staff_listings_action_reject_title">നിരസിച്ചു</string>
-    <string name="staff_listings_action_remove_title">അംഗത്തെ നീക്കം ചെയ്യുക</string>
+    <string name="staff_listings_action_reject_title">ലിസ്റ്റിംഗ് നിരസിക്കുക</string>
+    <string name="staff_listings_action_remove_title">ലിസ്റ്റിംഗ് നീക്കം ചെയ്യുക</string>
     <string name="staff_listings_any_moderation">ഏതെങ്കിലും മോഡറേഷൻ</string>
     <string name="staff_listings_any_status">ഏതെങ്കിലും സ്റ്റാറ്റസ്</string>
     <string name="staff_listings_approve">അംഗീകരിക്കുക</string>
@@ -270,13 +270,13 @@
     <string name="staff_listings_moderation_auto_approved">സ്വയം-അംഗീകരിച്ചു</string>
     <string name="staff_listings_moderation_hold">ഹോൾഡ്</string>
     <string name="staff_listings_moderation_manual">മാനുവൽ</string>
-    <string name="staff_listings_moderation_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
+    <string name="staff_listings_moderation_rejected">നിരസിച്ചു</string>
     <string name="staff_listings_moderation_review">അവലോകനം</string>
     <string name="staff_listings_moderation_soft_approved">സോഫ്റ്റ്-അംഗീകരിച്ചു</string>
     <string name="staff_listings_notes_label">കുറിപ്പുകൾ</string>
     <string name="staff_listings_price_placeholder">—</string>
     <string name="staff_listings_reason_label">കാരണം</string>
-    <string name="staff_listings_reject">എല്ലാം നിരസിക്കുക</string>
+    <string name="staff_listings_reject">നിരസിക്കുക</string>
     <string name="staff_listings_rejected_toast">ലിസ്റ്റിംഗ് നിരസിച്ചു</string>
     <string name="staff_listings_remove">നീക്കം ചെയ്യുക</string>
     <string name="staff_listings_removed_toast">ലിസ്റ്റിംഗ് നീക്കം ചെയ്തു</string>
@@ -285,7 +285,7 @@
     <string name="staff_listings_status_active">സജീവം</string>
     <string name="staff_listings_status_draft">ഡ്രാഫ്റ്റ്</string>
     <string name="staff_listings_status_expired">കാലഹരണപ്പെട്ടു</string>
-    <string name="staff_listings_status_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
+    <string name="staff_listings_status_rejected">നിരസിച്ചു</string>
     <string name="staff_listings_status_removed">നീക്കംചെയ്തു</string>
     <string name="staff_listings_status_sold">വിറ്റു</string>
     <string name="staff_listings_submitting">സമർപ്പിക്കുന്നു…</string>
@@ -312,7 +312,7 @@
     <string name="staff_reports_empty">റിപ്പോർട്ടുകളൊന്നുമില്ല</string>
     <string name="staff_reports_filter_status_label">സ്റ്റാറ്റസ്</string>
     <string name="staff_reports_filter_type_label">തരം</string>
-    <string name="staff_reports_meta_price">വില പരിധി</string>
+    <string name="staff_reports_meta_price">വില</string>
     <string name="staff_reports_meta_reason">കാരണം</string>
     <string name="staff_reports_meta_reporter">റിപ്പോർട്ട് ചെയ്തയാൾ</string>
     <string name="staff_reports_meta_seller">വിൽപ്പനക്കാരൻ</string>
@@ -342,7 +342,7 @@
     <string name="staff_reviews_filter_removed">നീക്കംചെയ്തു</string>
     <string name="staff_reviews_overflow_actions">പ്രവർത്തനങ്ങൾ</string>
     <string name="staff_reviews_remove_confirm">നീക്കം ചെയ്യുക</string>
-    <string name="staff_reviews_remove_title">ഉറവിടം നീക്കം ചെയ്യണോ?</string>
+    <string name="staff_reviews_remove_title">അവലോകനം നീക്കം ചെയ്യണോ?</string>
     <string name="staff_reviews_role_buyer">വാങ്ങുന്നയാൾ</string>
     <string name="staff_reviews_role_seller">വിൽപ്പനക്കാരൻ</string>
     <string name="staff_reviews_toast_removed">അവലോകനം നീക്കി</string>
@@ -359,7 +359,7 @@
     <string name="staff_sidebar_market">മാർക്കറ്റ്</string>
     <string name="staff_sidebar_moderation">മോഡറേഷൻ ലോഗ്</string>
     <string name="staff_sidebar_overview">അവലോകനം</string>
-    <string name="staff_sidebar_reports">റിപ്പോസിറ്ററികൾ</string>
+    <string name="staff_sidebar_reports">റിപ്പോർട്ടുകൾ</string>
     <string name="staff_sidebar_reviews">അവലോകനങ്ങൾ</string>
     <string name="staff_sidebar_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="staff_sidebar_team">ടീം</string>
@@ -372,7 +372,7 @@
     <string name="staff_status_banned">വിലക്കി</string>
     <string name="staff_status_dismissed">ഒഴിവാക്കി</string>
     <string name="staff_status_draft">ഡ്രാഫ്റ്റ്</string>
-    <string name="staff_status_escalated">വർദ്ധിപ്പിച്ചത്</string>
+    <string name="staff_status_escalated">എസ്കലേറ്റ് ചെയ്തു</string>
     <string name="staff_status_expired">കാലഹരണപ്പെട്ടു</string>
     <string name="staff_status_hidden">മറച്ചത്</string>
     <string name="staff_status_hold">ഹോൾഡ്</string>
@@ -381,7 +381,7 @@
     <string name="staff_status_open">തുറക്കുക</string>
     <string name="staff_status_pending">തീർപ്പുകൽപ്പിക്കാത്തത്</string>
     <string name="staff_status_published">പ്രസിദ്ധീകരിച്ചു</string>
-    <string name="staff_status_rejected">സ്റ്റാഫ് നിരസിച്ചു</string>
+    <string name="staff_status_rejected">നിരസിച്ചു</string>
     <string name="staff_status_removed">നീക്കംചെയ്തു</string>
     <string name="staff_status_resolved_buyer">പരിഹരിച്ചു (വാങ്ങുന്നയാൾ)</string>
     <string name="staff_status_resolved_seller">പരിഹരിച്ചു (വിൽപ്പനക്കാരൻ)</string>

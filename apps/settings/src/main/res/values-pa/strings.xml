@@ -22,7 +22,7 @@
     <string name="sessions_unknown_agent">ਅਣਜਾਣ ਡਿਵਾਈਸ</string>
     <string name="sessions_revoke_title">ਸੈਸ਼ਨ ਰੱਦ ਕਰੋ?</string>
     <string name="account_section_oauth">ਤੀਜੀ-ਧਿਰ ਲੌਗਇਨ</string>
-    <string name="account_oauth_link">ਲਿਸਟਿੰਗ ਇਤਿਹਾਸ</string>
+    <string name="account_oauth_link">ਖਾਤਾ ਲਿੰਕ ਕਰੋ</string>
     <string name="account_unlink">ਅਨਲਿੰਕ ਕਰੋ</string>
     <string name="account_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="account_save">ਸੰਭਾਲੋ</string>
@@ -278,7 +278,7 @@
     <string name="account_identity_identity">ਪਛਾਣ</string>
     <string name="account_identity_username">ਉਪਭੋਗਤਾ ਨਾਮ</string>
     <string name="account_identity_name">ਨਾਮ</string>
-    <string name="account_identity_fingerprint">ਉਂਗਲੀ ਦਾ ਨਿਸ਼ਾਨ</string>
+    <string name="account_identity_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="account_identity_directory_toggle">ਦੂਜਿਆਂ ਨੂੰ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਤੁਹਾਨੂੰ ਲੱਭਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="domain_add">ਡੋਮੇਨ ਜੋੜੋ</string>
     <string name="domain_add_title">ਡੋਮੇਨ ਜੋੜੋ</string>
@@ -288,7 +288,7 @@
     <string name="domain_delegation_delete_message">%1$s ਹੁਣ ਇਸ ਡੋਮੇਨ \'ਤੇ ਰੂਟ ਪ੍ਰਬੰਧਿਤ ਨਹੀਂ ਕਰੇਗਾ।</string>
     <string name="domain_delegation_delete_title">ਡੈਲੀਗੇਸ਼ਨ ਮਿਟਾਉਣੀ ਹੈ?</string>
     <string name="domain_delegation_path">ਪਾਥ</string>
-    <string name="domain_delegation_user">ਉਪਭੋਗਤਾ ID</string>
+    <string name="domain_delegation_user">ਉਪਭੋਗਤਾ</string>
     <string name="domain_delegations">ਡੈਲੀਗੇਸ਼ਨਾਂ</string>
     <string name="domain_delegations_empty">ਕੋਈ ਡੈਲੀਗੇਸ਼ਨ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
     <string name="domain_delete">ਡੋਮੇਨ ਮਿਟਾਓ</string>

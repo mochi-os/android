@@ -9,10 +9,10 @@
     <string name="auth_recovery_code">റിക്കവറി കോഡ്</string>
     <string name="auth_name">പേര്</string>
     <string name="auth_create">സൃഷ്ടിക്കുക</string>
-    <string name="auth_privacy_label">സ്വകാര്യതാ നയം</string>
+    <string name="auth_privacy_label">സ്വകാര്യത</string>
     <string name="auth_privacy_public">പൊതു</string>
     <string name="auth_privacy_private">സ്വകാര്യം</string>
-    <string name="auth_link_privacy">സ്വകാര്യതാ നയം</string>
+    <string name="auth_link_privacy">സ്വകാര്യത</string>
     <string name="auth_use_different_account">മറ്റൊരു അക്കൗണ്ട് ഉപയോഗിക്കുക</string>
     <string name="auth_error_suspended_title">അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്തു</string>
     <string name="common_back">തിരികെ</string>
@@ -31,10 +31,10 @@
     <string name="common_copy">പകർത്തുക</string>
     <string name="common_copied">ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="comment_edited">(എഡിറ്റ് ചെയ്തു)</string>
-    <string name="comment_reply">റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="comment_reply">മറുപടി</string>
     <string name="person_picker_search">ഉപയോക്താക്കളെ തിരയുക</string>
     <string name="place_picker_no_results">സ്ഥലങ്ങളൊന്നും കണ്ടെത്തിയില്ല</string>
-    <string name="discovery_recommended">ശുപാർശ ചെയ്യുന്ന CRM-കൾ</string>
+    <string name="discovery_recommended">ശുപാർശ ചെയ്തത്</string>
     <string name="access_add_rule">നിയമം ചേർക്കുക</string>
     <string name="access_owner">ഉടമ</string>
     <string name="access_revoke">റദ്ദാക്കുക</string>
@@ -292,7 +292,7 @@
     <string name="format_heading">തലക്കെട്ട്</string>
     <string name="format_code">കോഡ്</string>
     <string name="format_list">ബുള്ളറ്റ് ലിസ്റ്റ്</string>
-    <string name="common_preview">സ്കോർ പ്രിവ്യൂ</string>
+    <string name="common_preview">പ്രിവ്യൂ</string>
     <string name="rss_revoke_confirm">റദ്ദാക്കുക</string>
     <string name="rss_revoke">ആക്‌സസ് പിൻവലിക്കുക</string>
     <string name="rss_revoke_title">RSS ആക്‌സസ് റദ്ദാക്കണോ?</string>

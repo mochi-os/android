@@ -69,14 +69,14 @@
     <string name="market_bids_tab_all">Hamısı</string>
     <string name="market_bids_tab_lost">Uduzdu</string>
     <string name="market_bids_tab_outbid">Üstün təklif verildi</string>
-    <string name="market_bids_tab_won">Words</string>
+    <string name="market_bids_tab_won">Qazanılan</string>
     <string name="market_bids_title">Təkliflər</string>
     <string name="market_bids_your_bid">Sizin təklifiniz: %1$s</string>
     <string name="market_carousel_main">Foto %1$d / %2$d</string>
     <string name="market_carousel_thumbnail">Eskiz %1$d</string>
     <string name="market_channel_name">Market</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank emal edə bilmədi</string>
-    <string name="market_chargeback_reason_check_returned">Yoxlama qaytarıldı</string>
+    <string name="market_chargeback_reason_check_returned">Çek qaytarıldı</string>
     <string name="market_chargeback_reason_credit_not_processed">Kredit emal edilmədi</string>
     <string name="market_chargeback_reason_customer_initiated">Müştəri tərəfindən başladıldı</string>
     <string name="market_chargeback_reason_debit_not_authorized">Debet icazələndirilmədi</string>
@@ -128,8 +128,8 @@
     <string name="market_checkout_subscribing">Abunə olunur…</string>
     <string name="market_checkout_subscription_start_failed">Abunəliyə başlamaq mümkün olmadı</string>
     <string name="market_checkout_summary">Sifariş xülasəsi</string>
-    <string name="market_checkout_title">Checkout</string>
-    <string name="market_checkout_total">İz</string>
+    <string name="market_checkout_title">Ödənişə keç</string>
+    <string name="market_checkout_total">Cəmi</string>
     <string name="market_checkout_winning_bid">Qalib təklif</string>
     <string name="market_condition_new">Yeni</string>
     <string name="market_condition_refurbished">Yenilənmiş</string>
@@ -143,7 +143,7 @@
     <string name="market_dispute_dialog_evidence_section_title">Təqdim olunan sübut</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s tərəfindən təqdim edildi</string>
     <string name="market_dispute_dialog_failed">Cavab göndərmək alınmadı</string>
-    <string name="market_dispute_dialog_response_label">Alıcı haqqında rəyiniz</string>
+    <string name="market_dispute_dialog_response_label">Cavabınız</string>
     <string name="market_dispute_dialog_submit">Təqdim et</string>
     <string name="market_dispute_dialog_submitting">Göndərilir…</string>
     <string name="market_dispute_dialog_title">Mübahisəyə cavab ver</string>
@@ -181,7 +181,7 @@
     <string name="market_editor_interval_yearly">İllik</string>
     <string name="market_editor_photo_delete">Fotonu sil</string>
     <string name="market_editor_photo_upload_failed">Foto yüklənə bilmədi</string>
-    <string name="market_editor_photo_uploading">Fərqli hesabdan istifadə et</string>
+    <string name="market_editor_photo_uploading">Yüklənir…</string>
     <string name="market_editor_photos_add">Foto əlavə et</string>
     <string name="market_editor_photos_empty">Hələ foto yoxdur</string>
     <string name="market_editor_pickup">Yerli götürmə</string>
@@ -232,7 +232,7 @@
     <string name="market_editor_zone_country_it">İtaliya</string>
     <string name="market_editor_zone_country_jp">Yaponiya</string>
     <string name="market_editor_zone_country_nl">Niderland</string>
-    <string name="market_editor_zone_country_us">Naməlum</string>
+    <string name="market_editor_zone_country_us">Birləşmiş Ştatlar</string>
     <string name="market_editor_zone_days">Çatdırılma proqnozu</string>
     <string name="market_editor_zone_days_placeholder">məs. 3-5 iş günü</string>
     <string name="market_editor_zone_delete">Zonanı sil</string>
@@ -311,7 +311,7 @@
     <string name="market_listing_detail_relist">Yenidən sat</string>
     <string name="market_listing_detail_relist_failed">Yenidən siyahıya alına bilmədi</string>
     <string name="market_listing_detail_relist_in_progress">Yenidən siyahıya alınır</string>
-    <string name="market_listing_detail_report">Elanı hesabat ver</string>
+    <string name="market_listing_detail_report">Elanı şikayət et</string>
     <string name="market_listing_detail_sales_count">%1$d satış</string>
     <string name="market_listing_detail_save">Saxla</string>
     <string name="market_listing_detail_seller_banned_banner">Bu satıcı qadağan edilib. Yeni sifariş vermək olmur.</string>
@@ -324,7 +324,7 @@
     <string name="market_listing_detail_tags_heading">Etiketlər</string>
     <string name="market_listing_detail_title">Elan</string>
     <string name="market_listing_detail_unsave">Saxlanıldı</string>
-    <string name="market_listing_detail_verified">Yoxla və aktivləşdir</string>
+    <string name="market_listing_detail_verified">Təsdiqlənib</string>
     <string name="market_listing_no_photo">Foto yoxdur</string>
     <string name="market_listing_photo">Elanın fotosu</string>
     <string name="market_listing_save">Elanı saxla</string>
@@ -365,8 +365,8 @@
     <string name="market_messages_thread_listing_chip">Elan</string>
     <string name="market_messages_thread_title">Söhbət</string>
     <string name="market_messages_unread_badge">%1$d oxunmamış</string>
-    <string name="market_onboarding_activate">Activate</string>
-    <string name="market_onboarding_activating">Activating…</string>
+    <string name="market_onboarding_activate">Aktivləşdir</string>
+    <string name="market_onboarding_activating">Aktivləşdirilir…</string>
     <string name="market_onboarding_body">Almağa və satmağa başlamaq üçün hesabınızı aktivləşdirin.</string>
     <string name="market_onboarding_dismiss">Rədd et</string>
     <string name="market_onboarding_title">Market-ə xoş gəlmisiniz</string>
@@ -388,7 +388,7 @@
     <string name="market_profile_stars_value">%1$d ulduz</string>
     <string name="market_profile_status_banned">Bloklandı</string>
     <string name="market_profile_status_suspended">Dayandırıldı</string>
-    <string name="market_profile_verified">Yoxla və aktivləşdir</string>
+    <string name="market_profile_verified">Təsdiqlənib</string>
     <string name="market_purchase_audit_section">Fəaliyyət</string>
     <string name="market_purchase_confirm_delivery">Qəbul olunduğunu təsdiqlə</string>
     <string name="market_purchase_confirm_done">Qəbz təsdiqləndi</string>
@@ -397,7 +397,7 @@
     <string name="market_purchase_delivery">Çatdırılma</string>
     <string name="market_purchase_dispute_chargeback">Geri çağırma %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankınız bu sifarişə geri çağırma verib. Stripe satıcı ilə mübahisəni idarə edir; nəticə qərar verildikdə burada görünəcək.</string>
-    <string name="market_purchase_dispute_details">Sizin gedişiniz</string>
+    <string name="market_purchase_dispute_details">Məlumatlarınız</string>
     <string name="market_purchase_dispute_reason">Səbəb</string>
     <string name="market_purchase_dispute_resolution">Heyət həlli</string>
     <string name="market_purchase_dispute_response">Satıcının cavabı</string>
@@ -430,8 +430,8 @@
     <string name="market_purchase_shipping_line">Çatdırılma</string>
     <string name="market_purchase_summary">Sifariş xülasəsi</string>
     <string name="market_purchase_title">Sifariş</string>
-    <string name="market_purchase_total">İz</string>
-    <string name="market_purchase_track">İzləmə URL-i</string>
+    <string name="market_purchase_total">Cəmi</string>
+    <string name="market_purchase_track">Bağlamanı izlə</string>
     <string name="market_purchases_auction_label">Auksion №%1$s</string>
     <string name="market_purchases_complete_purchase">Alışı tamamla</string>
     <string name="market_purchases_empty">Alış yoxdur</string>
@@ -467,7 +467,7 @@
     <string name="market_refund_reason_not_as_described">Təsvir edildiyi kimi deyil</string>
     <string name="market_refund_reason_not_received">Alınmadı</string>
     <string name="market_refund_reason_other">Digər</string>
-    <string name="market_refund_reason_unauthorised">Əlçatan deyil</string>
+    <string name="market_refund_reason_unauthorised">İcazəsiz</string>
     <string name="market_refund_submit">Geri qaytarma tələb et</string>
     <string name="market_refund_title">Geri qaytarma tələb et</string>
     <string name="market_report_dialog_cancel">Ləğv et</string>
@@ -477,7 +477,7 @@
     <string name="market_report_dialog_submit">Təqdim et</string>
     <string name="market_report_dialog_submitting">Göndərilir</string>
     <string name="market_report_dialog_success">Hesabat təqdim edildi</string>
-    <string name="market_report_dialog_title">Elanı hesabat ver</string>
+    <string name="market_report_dialog_title">Elanı şikayət et</string>
     <string name="market_report_reason_counterfeit">Saxta</string>
     <string name="market_report_reason_inappropriate">Uyğunsuz məzmun</string>
     <string name="market_report_reason_misleading">Yanıltıcı təsvir</string>
@@ -521,9 +521,9 @@
     <string name="market_sale_refund_action">Geri ödəniş et</string>
     <string name="market_sale_review_buyer">Alıcının rəyi</string>
     <string name="market_sale_review_no_response_yet">Bir dəfə cavab verə bilərsiniz. Cavablar publikdir.</string>
-    <string name="market_sale_review_response_existing">Alıcı haqqında rəyiniz</string>
+    <string name="market_sale_review_response_existing">Cavabınız</string>
     <string name="market_sale_review_response_failed">Cavab göndərmək alınmadı</string>
-    <string name="market_sale_review_response_label">Alıcı haqqında rəyiniz</string>
+    <string name="market_sale_review_response_label">Cavabınız</string>
     <string name="market_sale_review_response_submit">Cavabı təqdim et</string>
     <string name="market_sale_review_response_submitting">Göndərilir…</string>
     <string name="market_sale_section_audit">Fəaliyyət</string>
@@ -603,7 +603,7 @@
     <string name="market_subscribers_title">Mənim abunəçilərim</string>
     <string name="market_subscription_detail_billing_history">Billing history</string>
     <string name="market_subscription_detail_billing_history_empty">Hələ heç bir ödəniş yoxdur.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
+    <string name="market_subscription_detail_billing_info">Ödəniş</string>
     <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
     <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
     <string name="market_subscription_detail_listing">Elan</string>
@@ -724,8 +724,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe qoşuldu</string>
     <string name="market_audit_account_stripe_restricted">Stripe məhdudlaşdırıldı</string>
     <string name="market_audit_account_suspended">Satıcı kimi dayandırıldı</string>
-    <string name="market_audit_account_unbanned">Birləşdirilmiş</string>
-    <string name="market_audit_account_unsuspended">Başlıqsız elan</string>
+    <string name="market_audit_account_unbanned">Banı götürüldü</string>
+    <string name="market_audit_account_unsuspended">Dayandırma götürüldü</string>
     <string name="market_audit_auction_bid_placed">Təklif verildi</string>
     <string name="market_audit_auction_created">Auksion yaradıldı</string>
     <string name="market_audit_auction_ended_sold">Auksion satıldı</string>
@@ -748,7 +748,7 @@
     <string name="market_audit_listing_relisted">Yenidən satışa çıxarıldı</string>
     <string name="market_audit_listing_removed">Silindi</string>
     <string name="market_audit_listing_updated">Elan redaktə edildi</string>
-    <string name="market_audit_listing_warning">İzlənildi</string>
+    <string name="market_audit_listing_warning">Xəbərdarlıq verildi</string>
     <string name="market_audit_order_cancelled">Ləğv edildi</string>
     <string name="market_audit_order_chargeback">Chargeback alındı</string>
     <string name="market_audit_order_chargeback_lost">Chargeback saxlanıldı</string>

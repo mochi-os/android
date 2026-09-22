@@ -57,7 +57,7 @@
     <string name="people_profile_directory_listing">სხვების ნება, გიპოვონ კატალოგში</string>
     <string name="people_profile_markdown_supported">Markdown მხარდაჭერილია</string>
     <string name="people_profile_preview">გადახედვა</string>
-    <string name="people_profile_upload_avatar">დასაწყებად ატვირთეთ ფაილი.</string>
+    <string name="people_profile_upload_avatar">ავატარის ატვირთვა</string>
     <string name="people_profile_upload">ატვირთვა</string>
     <string name="people_profile_uploading">იტვირთება...</string>
     <string name="people_profile_change_banner">ბანერის შეცვლა</string>
@@ -75,7 +75,7 @@
     <string name="people_sidebar_header">ხალხი</string>
     <string name="people_open_sidebar">ნავიგაციის გახსნა</string>
     <string name="people_person_state_friend">მეგობრები</string>
-    <string name="people_person_state_self">დიახ, ძალით</string>
+    <string name="people_person_state_self">თქვენ</string>
     <string name="people_person_message">შეტყობინება</string>
     <string name="people_person_accept">მიღება</string>
     <string name="people_person_decline">უარის თქმა</string>

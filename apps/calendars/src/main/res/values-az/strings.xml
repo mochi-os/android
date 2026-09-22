@@ -14,7 +14,7 @@
     <string name="calendars_view">Bax</string>
     <string name="calendars_view_list">Siyahı</string>
     <string name="calendars_list_search">Axtar</string>
-    <string name="calendars_event_untitled">Təsdiqlənməyib</string>
+    <string name="calendars_event_untitled">Başlıqsız</string>
     <string name="calendars_event_title">Başlıq</string>
     <string name="calendars_event_location">Yer</string>
     <string name="calendars_event_description">Təsvir</string>

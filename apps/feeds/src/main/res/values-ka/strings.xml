@@ -16,7 +16,7 @@
     <string name="feeds_sort_interests">ინტერესები</string>
     <string name="feeds_sort_new">ახალი</string>
     <string name="feeds_sort_hot">ცხელი</string>
-    <string name="feeds_sort_top">ძალიან დიდი</string>
+    <string name="feeds_sort_top">ზედა</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">პოსტი</string>
     <string name="feeds_image_preview">გადახედვა</string>
@@ -52,7 +52,7 @@
     <string name="feeds_add_source">წყაროს დამატება</string>
     <string name="feeds_no_sources">წყაროები არ არის</string>
     <string name="feeds_edit_source">წყაროს რედაქტირება</string>
-    <string name="feeds_source_url">გაერთიანებული სამეფოს ფუნტი</string>
+    <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">ტიპი</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi არხი</string>
@@ -147,7 +147,7 @@
     <string name="feeds_all_caught_up">ყველაფერი ნანახი</string>
     <string name="feeds_view_all_posts">ყველა შეტყობინების ნახვა</string>
     <string name="feeds_access_level_none_full">წვდომა არ არის</string>
-    <string name="feeds_access_level_view_full">ხედის კონტროლები</string>
+    <string name="feeds_access_level_view_full">მხოლოდ ნახვა</string>
     <string name="feeds_access_search_users">მომხმარებლების ძიება</string>
     <string name="feeds_access_segment_group">ჯგუფი</string>
     <string name="feeds_access_segment_other">სხვა</string>
@@ -163,8 +163,8 @@
     <string name="feeds_settings_field_server">სერვერი</string>
     <string name="feeds_settings_name_edit_cd">სახელის რედაქტირება</string>
     <string name="feeds_settings_section_identity">ვინაობა</string>
-    <string name="feeds_unsubscribe">ამოუცნობი ანგარიში</string>
-    <string name="feeds_unsubscribed">გავაუქმოთ რეპოზიტორის გამოწერა?</string>
+    <string name="feeds_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="feeds_unsubscribed">გამოწერა გაუქმებულია</string>
     <string name="feeds_access_level_comment_full">კომენტარი, რეაქცია და ნახვა</string>
     <string name="feeds_rss_mode_posts_comments">პოსტები და კომენტარები</string>
     <string name="feeds_access_add_title">წვდომის დამატება</string>

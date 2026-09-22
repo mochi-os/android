@@ -17,8 +17,8 @@
     <string name="chat_settings_add_member_search">ਦੋਸਤ ਖੋਜੋ</string>
     <string name="chat_settings_remove_member">ਹਟਾਓ</string>
     <string name="chat_settings_remove_member_title">ਮੈਂਬਰ ਹਟਾਓ</string>
-    <string name="chat_settings_leave">ਸੂਚੀ</string>
-    <string name="chat_settings_leave_title">ਸੂਚੀ</string>
+    <string name="chat_settings_leave">ਚੈਟ ਛੱਡੋ</string>
+    <string name="chat_settings_leave_title">ਚੈਟ ਛੱਡੋ</string>
     <string name="chat_settings_delete_title">ਚੈਟ ਮਿਟਾਓ</string>
     <string name="chat_members_empty">ਕੋਈ ਮੈਂਬਰ ਨਹੀਂ</string>
     <string name="chat_members_you">ਤੁਸੀਂ</string>

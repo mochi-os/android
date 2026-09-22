@@ -11,10 +11,10 @@
     <string name="calendars_edit">რედაქტირება</string>
     <string name="calendars_previous">წინა</string>
     <string name="calendars_next">შემდეგი</string>
-    <string name="calendars_view">ვიდეოს ესკიზი</string>
+    <string name="calendars_view">ნახვა</string>
     <string name="calendars_view_list">სია</string>
     <string name="calendars_list_search">ძიება</string>
-    <string name="calendars_event_untitled">შეჩერება მოხსნილია</string>
+    <string name="calendars_event_untitled">უსათაურო</string>
     <string name="calendars_event_title">სათაური</string>
     <string name="calendars_event_location">მდებარეობა</string>
     <string name="calendars_event_description">აღწერა</string>

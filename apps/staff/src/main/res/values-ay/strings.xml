@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="app_name">Irnaqirinaka</string>
+    <string name="launcher_staff">Mochi irnaqirinaka</string>
     <string name="staff_accounts_action_ban_title">Cuenta jark\'aña</string>
     <string name="staff_accounts_action_suspend_title">Cuenta inakacht\'aña</string>
     <string name="staff_accounts_any_seller">Taqpach</string>
@@ -28,10 +28,10 @@
     <string name="staff_accounts_submitting">Apayasiwa…</string>
     <string name="staff_accounts_suspend">Inakacht\'aña</string>
     <string name="staff_accounts_suspended_toast">Cuenta jark\'ata</string>
-    <string name="staff_accounts_unban">Cuenta banx apaqaña</string>
+    <string name="staff_accounts_unban">Banx apaqaña</string>
     <string name="staff_accounts_unbanned_toast">Cuenta jan jark\'ata</string>
-    <string name="staff_accounts_unnamed">Jaytaña</string>
-    <string name="staff_accounts_unsuspend">Cuenta inakacht\'awi apaqaña</string>
+    <string name="staff_accounts_unnamed">Jan sutini</string>
+    <string name="staff_accounts_unsuspend">Inakacht\'awi apaqaña</string>
     <string name="staff_accounts_unsuspended_toast">Cuenta jan jark\'ata</string>
     <string name="staff_accounts_verification_level">L%1$d</string>
     <string name="staff_appeals_cancel">Jaytaña</string>
@@ -56,8 +56,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">Stripe wakicht\'ata</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe restringida</string>
     <string name="staff_audit_action_account_suspended">Aljirjama inakacht\'ata</string>
-    <string name="staff_audit_action_account_unbanned">Manqhana</string>
-    <string name="staff_audit_action_account_unsuspended">Jan sutini</string>
+    <string name="staff_audit_action_account_unbanned">Banx apaqata</string>
+    <string name="staff_audit_action_account_unsuspended">Inakacht\'awi apaqata</string>
     <string name="staff_audit_action_auction_bid_placed">Bid uchata</string>
     <string name="staff_audit_action_auction_created">Auction lurata</string>
     <string name="staff_audit_action_auction_ended_sold">Auction aljata</string>
@@ -84,7 +84,7 @@
     <string name="staff_audit_action_listing_relisted">Mayamp aljañar uchata</string>
     <string name="staff_audit_action_listing_removed">Aparata</string>
     <string name="staff_audit_action_listing_updated">Listado askichatawa</string>
-    <string name="staff_audit_action_listing_warning">Uñch\'ukiña</string>
+    <string name="staff_audit_action_listing_warning">Advertencia churata</string>
     <string name="staff_audit_action_order_cancelled">Jaytata</string>
     <string name="staff_audit_action_order_chargeback">Chargeback katuqata</string>
     <string name="staff_audit_action_order_chargeback_lost">Chargeback iyawsata</string>
@@ -124,7 +124,7 @@
     <string name="staff_categories_add">Yapxataña</string>
     <string name="staff_categories_col_name">Suti</string>
     <string name="staff_categories_col_status">Estado</string>
-    <string name="staff_categories_col_types">UK pound</string>
+    <string name="staff_categories_col_types">Tiponaka</string>
     <string name="staff_categories_create">Luraña</string>
     <string name="staff_categories_delete_confirm">Chhaqtayaña</string>
     <string name="staff_categories_delete_title">Kasta chhaqtayaña</string>
@@ -152,7 +152,7 @@
     <string name="staff_categories_type_digital">Digital</string>
     <string name="staff_categories_type_none">—</string>
     <string name="staff_categories_type_physical">Físico</string>
-    <string name="staff_channel_name">Staff</string>
+    <string name="staff_channel_name">Irnaqirinaka</string>
     <string name="staff_config_field_auto_approve">Auto-iyaws threshold</string>
     <string name="staff_config_field_hold">Katuña umbral</string>
     <string name="staff_config_field_platform_fee">Plataforma comisión</string>
@@ -179,12 +179,12 @@
     <string name="staff_dashboard_col_listing">Listado</string>
     <string name="staff_dashboard_col_moderation">Moderación</string>
     <string name="staff_dashboard_col_name">Suti</string>
-    <string name="staff_dashboard_col_object">Object</string>
+    <string name="staff_dashboard_col_object">Objeto</string>
     <string name="staff_dashboard_col_reason">Layku</string>
-    <string name="staff_dashboard_col_score">Score</string>
+    <string name="staff_dashboard_col_score">Puntaje</string>
     <string name="staff_dashboard_col_seller">Aljiri</string>
     <string name="staff_dashboard_col_status">Estado</string>
-    <string name="staff_dashboard_col_title">Suti campo</string>
+    <string name="staff_dashboard_col_title">Título</string>
     <string name="staff_dashboard_col_total">Taqpacha</string>
     <string name="staff_dashboard_empty_audit">Jan audit qillqata</string>
     <string name="staff_dashboard_empty_listings">Jan jichhüru aljañanaka</string>
@@ -198,12 +198,12 @@
     <string name="staff_dashboard_kpi_revenue">Ingreso</string>
     <string name="staff_dashboard_kpi_revenue_placeholder">—</string>
     <string name="staff_dashboard_kpi_sellers">Aljirinaka</string>
-    <string name="staff_dashboard_kpi_total_orders">Track</string>
+    <string name="staff_dashboard_kpi_total_orders">Taqpach pidonaka</string>
     <string name="staff_dashboard_listing_fallback">#%1$s</string>
     <string name="staff_dashboard_no">Janiwa</string>
     <string name="staff_dashboard_open_sidebar">Lado paneluxa jist\'arasiña</string>
     <string name="staff_dashboard_system">Sistema</string>
-    <string name="staff_dashboard_tab_audit">Audit</string>
+    <string name="staff_dashboard_tab_audit">Auditoría</string>
     <string name="staff_dashboard_tab_listings">Listadonaka</string>
     <string name="staff_dashboard_tab_moderation">Moderación</string>
     <string name="staff_dashboard_tab_orders">Ordenanaka</string>
@@ -229,7 +229,7 @@
     <string name="staff_disputes_reason_not_as_described">Jan descritakaspas</string>
     <string name="staff_disputes_reason_not_received">Jan katuqata</string>
     <string name="staff_disputes_reason_other">Yaqha</string>
-    <string name="staff_disputes_reason_unauthorised">Janiw permitidakit Mantawi</string>
+    <string name="staff_disputes_reason_unauthorised">Janiw permitidakit</string>
     <string name="staff_disputes_refund_must_be_positive">Refund jakhu cero juk\'ampi</string>
     <string name="staff_disputes_resolution_buyer">Alasirit resolvama</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
@@ -244,7 +244,7 @@
     <string name="staff_disputes_status_resolved_seller">Resolvata (alxiri)</string>
     <string name="staff_disputes_status_responded">Aytata</string>
     <string name="staff_disputes_status_reviewing">Reviewaski</string>
-    <string name="staff_disputes_view">Taqi uñjaña</string>
+    <string name="staff_disputes_view">Uñjaña</string>
     <string name="staff_filter_chip_remove">Filtruxa apsuña</string>
     <string name="staff_filter_chip_template">%1$s: %2$s</string>
     <string name="staff_filter_label_moderation">Moderación</string>
@@ -311,7 +311,7 @@
     <string name="staff_reports_meta_reason">Layku</string>
     <string name="staff_reports_meta_reporter">Reportador</string>
     <string name="staff_reports_meta_seller">Aljiri</string>
-    <string name="staff_reports_meta_target">Apayaña</string>
+    <string name="staff_reports_meta_target">Objetivo</string>
     <string name="staff_reports_meta_type">Kasta</string>
     <string name="staff_reports_notes_label">Notanaka</string>
     <string name="staff_reports_reason_counterfeit">K\'arichata jan ukax luntatata</string>
@@ -327,8 +327,8 @@
     <string name="staff_reports_submit">Apayaña</string>
     <string name="staff_reports_submitting">Apayasiwa…</string>
     <string name="staff_reports_type_listing">Listado</string>
-    <string name="staff_reports_type_user">Apnaqiri banata</string>
-    <string name="staff_reports_view">Taqi uñjaña</string>
+    <string name="staff_reports_type_user">Apnaqiri</string>
+    <string name="staff_reports_view">Uñjaña</string>
     <string name="staff_reviews_action_remove">Aparma</string>
     <string name="staff_reviews_action_restore">Kutiyama</string>
     <string name="staff_reviews_empty">Jan reviewanak</string>
@@ -347,7 +347,7 @@
     <string name="staff_sidebar_appeals">Apelacionanaka</string>
     <string name="staff_sidebar_categories">Kastanaka</string>
     <string name="staff_sidebar_config">Configuración</string>
-    <string name="staff_sidebar_dashboard">Dashboard</string>
+    <string name="staff_sidebar_dashboard">Panel</string>
     <string name="staff_sidebar_disputes">Disputanaka</string>
     <string name="staff_sidebar_listings">Listadonaka</string>
     <string name="staff_sidebar_management">Apnaqaña</string>
@@ -407,7 +407,7 @@
     <string name="staff_team_role_support">Yanapaña</string>
     <string name="staff_team_toast_add_failed">Janiw integrante yapxataña atinkti</string>
     <string name="staff_team_toast_removed">Integrante apsutawa</string>
-    <string name="staff_team_toast_role_updated">Yänakapax askichaña</string>
+    <string name="staff_team_toast_role_updated">Rol machaqachata</string>
 
     <string name="staff_accounts_action_unban_title">Jark\'aqäwi apaqaña</string>
     <string name="staff_accounts_action_unsuspend_title">Sayt\'ayäwi apaqaña</string>

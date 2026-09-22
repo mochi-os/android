@@ -16,7 +16,7 @@
     <string name="feeds_sort_interests">Interesanaka</string>
     <string name="feeds_sort_new">Machaqa</string>
     <string name="feeds_sort_hot">Junt\'u</string>
-    <string name="feeds_sort_top">Patxa nivel</string>
+    <string name="feeds_sort_top">Patxa</string>
     <string name="feeds_sort_ai">AI</string>
     <string name="feeds_post_default_author">Qillqata</string>
     <string name="feeds_image_preview">Nayrqat uñjawi</string>
@@ -47,12 +47,12 @@
     <string name="feeds_clear">Q\'umachaña</string>
     <string name="feeds_delete_feed">Feed chhaqtayaña</string>
     <string name="feeds_no_members">Jan miembronaka</string>
-    <string name="feeds_user">Apnaqiri banata</string>
+    <string name="feeds_user">Apnaqiri</string>
     <string name="feeds_access_no_groups">Jan tamanak utjki</string>
     <string name="feeds_add_source">Vertiente yapxataña</string>
     <string name="feeds_no_sources">Jan fuentenaka</string>
     <string name="feeds_edit_source">Fuente askichaña</string>
-    <string name="feeds_source_url">Ukar redirigita URL</string>
+    <string name="feeds_source_url">URL</string>
     <string name="feeds_source_type">Kasta</string>
     <string name="feeds_source_type_rss">RSS</string>
     <string name="feeds_source_type_feed_posts">Mochi feed</string>
@@ -63,7 +63,7 @@
     <string name="feeds_logout">Mistuña</string>
     <string name="feeds_ai_account_default">Default cuenta</string>
     <string name="feeds_ai_mode_off">Jark\'ata</string>
-    <string name="feeds_ai_mode_tag">Tag</string>
+    <string name="feeds_ai_mode_tag">Etiqueta</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + deduplicate</string>
     <string name="feeds_feed_not_found">Janiw feed jikxatkti</string>
     <string name="feeds_post_not_found">Qillqata jan jikxatasiti</string>
@@ -145,9 +145,9 @@
     </plurals>
     <string name="feeds_caught_up">Taqpacha uñjtawa</string>
     <string name="feeds_all_caught_up">Taqpach katjata</string>
-    <string name="feeds_view_all_posts">Item detalles uñjaña ukat editaña</string>
+    <string name="feeds_view_all_posts">Taqi postnaka uñjaña</string>
     <string name="feeds_access_level_none_full">Jan mantañ</string>
-    <string name="feeds_access_level_view_full">Uñjañ opcionanaka</string>
+    <string name="feeds_access_level_view_full">Uñjañaki</string>
     <string name="feeds_access_search_users">Usuarionak thaqhama</string>
     <string name="feeds_access_segment_group">Grupo</string>
     <string name="feeds_access_segment_other">Yaqha</string>
@@ -159,12 +159,12 @@
     <string name="feeds_permission_deny">Jark\'aña</string>
     <string name="feeds_rss_feed">Canal RSS</string>
     <string name="feeds_settings_field_entity_id">Entidad ID</string>
-    <string name="feeds_settings_field_fingerprint">Fingerprint</string>
+    <string name="feeds_settings_field_fingerprint">Luk\'ana unancha</string>
     <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Suti askichaña</string>
     <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_unsubscribe">CRM ukatpach suscripción jaytaña?</string>
-    <string name="feeds_unsubscribed">Repositorio ukatpach suscripción jaytata</string>
+    <string name="feeds_unsubscribe">Suscripción jaytaña</string>
+    <string name="feeds_unsubscribed">Suscripción jaytata</string>
     <string name="feeds_access_level_comment_full">Comentaña, reaccionaña, ukat uñakipaña</string>
     <string name="feeds_rss_mode_posts_comments">Qillqatanak comentarionakampi</string>
     <string name="feeds_access_add_title">Mantañ yapxataña</string>
@@ -203,7 +203,7 @@
     <string name="feeds_banner_hint">Aka foror suma jutawa…</string>
     <string name="feeds_banner_dismiss">Banner apaqaña</string>
     <string name="feeds_members_search">Uskutanak chhijllaña</string>
-    <string name="feeds_ai_prompt_default">Default</string>
+    <string name="feeds_ai_prompt_default">Nayrïri</string>
     <string name="feeds_ai_prompt_custom">Sapa</string>
     <string name="feeds_ai_prompt_variables">Variablenaka: %1$s</string>
     <string name="feeds_link">Enlace</string>

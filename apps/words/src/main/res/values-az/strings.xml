@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Şərh yazın...</string>
+    <string name="words_list_title">Sözlər</string>
     <string name="words_list_menu">Menyu</string>
     <string name="words_list_logout">Çıx</string>
     <string name="words_sidebar_completed">Tamamlandı</string>
@@ -13,11 +13,11 @@
     <string name="words_new_game_start">Oyuna başla</string>
     <string name="words_new_game_no_friends_title">Hələ dost yoxdur</string>
     <string name="words_new_game_add_friends">Dostlar əlavə et</string>
-    <string name="words_detail_status_your_move">Sizin ödənişiniz</string>
+    <string name="words_detail_status_your_move">Sizin gedişiniz</string>
     <string name="words_detail_status_you_win">Siz qazandınız!</string>
     <string name="words_detail_status_game_over">Oyun bitdi</string>
     <string name="words_detail_status_opponent_resigned">Rəqib təslim oldu — qalibsiniz!</string>
-    <string name="words_detail_status_you_resigned">Bu söhbətdən silindiniz</string>
+    <string name="words_detail_status_you_resigned">Təslim oldunuz</string>
     <string name="words_detail_label_you">Siz</string>
     <string name="words_detail_action_shuffle">Rəfi qarışdır</string>
     <string name="words_detail_action_pass">Pas</string>
@@ -43,14 +43,14 @@
     <string name="words_new_game_opponents_hint">(1-3)</string>
     <string name="words_new_game_player_count">%1$d players</string>
     <string name="words_new_game_no_friends_subtitle">Oynamağa başlamaq üçün People tətbiqində dostlar əlavə edin.</string>
-    <string name="words_detail_title">Game</string>
+    <string name="words_detail_title">Oyun</string>
     <string name="words_detail_status_opponent_move">%1$s-in gedişi</string>
     <string name="words_detail_status_winner_wins">%1$s wins</string>
     <string name="words_detail_player_fallback">Player %1$d</string>
     <string name="words_detail_player_count">%1$d players</string>
     <string name="words_detail_label_tiles_left">%1$d tiles left</string>
-    <string name="words_detail_action_open_chat">Open chat</string>
-    <string name="words_detail_action_more">Game actions</string>
+    <string name="words_detail_action_open_chat">Söhbəti aç</string>
+    <string name="words_detail_action_more">Oyun əməliyyatları</string>
     <string name="words_detail_exchange_count">Exchange (%1$d)</string>
     <string name="words_detail_chat_you_played">You played %1$s</string>
     <string name="words_detail_chat_player_played">%1$s played %2$s</string>
