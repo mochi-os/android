@@ -382,4 +382,5 @@
     <string name="projects_design_sample">Узор %1$d</string>
     <string name="projects_option_delete_title">Выдаліць опцыю</string>
     <string name="projects_option_delete_message">Вы ўпэўнены, што хочаце выдаліць опцыю \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Пакуль нельга стварыць тыпы элементаў. Спачатку стварыце патрэбныя бацькоўскія элементы.</string>
 </resources>

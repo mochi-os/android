@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Үлгі %1$d</string>
     <string name="projects_option_delete_title">Опцияны жою</string>
     <string name="projects_option_delete_message">\"%1$s\" опциясын жойғыңыз келетініне сенімдісіз бе?</string>
+    <string name="projects_create_object_no_types">Әлі бірде-бір элемент түрі жасалмайды. Алдымен қажетті ата-аналық элементтерді жасаңыз.</string>
 </resources>

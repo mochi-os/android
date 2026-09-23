@@ -379,4 +379,5 @@
     <string name="projects_design_sample">နမူနာ %1$d</string>
     <string name="projects_option_delete_title">ရွေးချယ်စရာ ဖျက်မည်</string>
     <string name="projects_option_delete_message">ရွေးချယ်စရာ \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။</string>
+    <string name="projects_create_object_no_types">item အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော parent item များကို ဦးစွာဖန်တီးပါ။</string>
 </resources>

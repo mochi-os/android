@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Namuna %1$d</string>
     <string name="projects_option_delete_title">Variantni oʻchirish</string>
     <string name="projects_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>
+    <string name="projects_create_object_no_types">Hozircha hech qanday element turi yaratib boʻlmaydi. Avval kerakli ota elementlarni yarating.</string>
 </resources>

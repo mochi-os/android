@@ -69,6 +69,9 @@ import org.mochios.projects.model.Person
 import org.mochios.projects.model.ProjectField
 import org.mochios.projects.ui.board.parseColor
 import org.mochios.projects.ui.project.ProjectViewModel
+import org.mochios.projects.util.HIERARCHY_ROOT
+import org.mochios.projects.util.parentAllowed
+import org.mochios.projects.util.parentTargets
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -236,7 +239,10 @@ fun TreeRow(
                         expanded = showContextMenu,
                         onDismissRequest = { showContextMenu = false }
                     ) {
-                        if (onReparent != null) {
+                        val hierarchy = projectDetails?.hierarchy.orEmpty()
+                        val movable = parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT) ||
+                            parentTargets(obj, uiState.objects, hierarchy).isNotEmpty()
+                        if (onReparent != null && movable) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.projects_tree_move)) },
                                 onClick = {
@@ -311,27 +317,33 @@ fun TreeRow(
     }
 
     if (showReparentDialog && onReparent != null) {
-        val allObjects = uiState.objects
-        val possibleParents = allObjects.filter { it.id != obj.id }
+        // Only what the server takes: a parent of a class the hierarchy
+        // allows, never the row itself or anything under it, and the top
+        // level only for a class that may sit there.
+        val hierarchy = projectDetails?.hierarchy.orEmpty()
+        val rootAllowed = parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT)
+        val possibleParents = parentTargets(obj, uiState.objects, hierarchy)
         MochiAlertDialog(
             onDismissRequest = { showReparentDialog = false },
             title = stringResource(R.string.projects_tree_move_to_parent),
             content = {
                 LazyColumn {
-                    item {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    onReparent("")
-                                    showReparentDialog = false
-                                }
-                                .padding(vertical = 10.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(stringResource(R.string.projects_tree_root_level), style = MaterialTheme.typography.bodyMedium)
+                    if (rootAllowed) {
+                        item {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        onReparent("")
+                                        showReparentDialog = false
+                                    }
+                                    .padding(vertical = 10.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(stringResource(R.string.projects_tree_root_level), style = MaterialTheme.typography.bodyMedium)
+                            }
+                            HorizontalDivider()
                         }
-                        HorizontalDivider()
                     }
                     items(possibleParents) { parent ->
                         Row(

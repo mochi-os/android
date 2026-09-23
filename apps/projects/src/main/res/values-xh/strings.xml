@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Isampulu %1$d</string>
     <string name="projects_option_delete_title">Cima ukhetho</string>
     <string name="projects_option_delete_message">Uqinisekile ukuba ufuna ukucima ukhetho \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Akukho ntlobo zezinto ezinokwenziwa okwangoku. Yenza izinto zomzali ezifunekayo kuqala.</string>
 </resources>

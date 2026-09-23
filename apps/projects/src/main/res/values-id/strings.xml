@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Contoh %1$d</string>
     <string name="projects_option_delete_title">Hapus opsi</string>
     <string name="projects_option_delete_message">Apakah Anda yakin ingin menghapus opsi \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Belum ada jenis item yang dapat dibuat. Buat item induk yang diperlukan terlebih dahulu.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">サンプル %1$d</string>
     <string name="projects_option_delete_title">オプションを削除</string>
     <string name="projects_option_delete_message">オプション \"%1$s\" を削除してもよろしいですか?</string>
+    <string name="projects_create_object_no_types">まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。</string>
 </resources>

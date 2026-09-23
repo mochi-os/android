@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Δείγμα %1$d</string>
     <string name="projects_option_delete_title">Διαγραφή επιλογής</string>
     <string name="projects_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>
+    <string name="projects_create_object_no_types">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>
 </resources>

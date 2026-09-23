@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Примерок %1$d</string>
     <string name="projects_option_delete_title">Избриши опција</string>
     <string name="projects_option_delete_message">Дали сте сигурни дека сакате да ја избришете опцијата \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Сè уште не може да се креираат типови ставки. Прво креирајте ги потребните родителски ставки.</string>
 </resources>

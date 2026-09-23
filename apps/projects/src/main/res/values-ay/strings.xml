@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Uñacht\'äwi %1$d</string>
     <string name="projects_option_delete_title">Opción chhaqtayaña</string>
     <string name="projects_option_delete_message">¿\"%1$s\" opción chhaqtayañ muntati?</string>
+    <string name="projects_create_object_no_types">Janiraw item tipo lurañ atititi. Nayraqat parent itemanak munaski lurma.</string>
 </resources>

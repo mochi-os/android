@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Mostra %1$d</string>
     <string name="projects_option_delete_title">Suprimeix l\'opció</string>
     <string name="projects_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
 </resources>

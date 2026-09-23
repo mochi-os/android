@@ -380,4 +380,5 @@
     <string name="projects_design_sample">範例 %1$d</string>
     <string name="projects_option_delete_title">刪除選項</string>
     <string name="projects_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
+    <string name="projects_create_object_no_types">尚無法建立任何項目類型。請先建立所需的父項目。</string>
 </resources>

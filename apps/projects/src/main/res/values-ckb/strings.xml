@@ -382,4 +382,5 @@
     <string name="projects_design_sample">نموونە %1$d</string>
     <string name="projects_option_delete_title">سڕینەوەی هەڵبژاردە</string>
     <string name="projects_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>
+    <string name="projects_create_object_no_types">هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە.</string>
 </resources>

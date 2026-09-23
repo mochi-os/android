@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Mẫu %1$d</string>
     <string name="projects_option_delete_title">Xóa tùy chọn</string>
     <string name="projects_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>
+    <string name="projects_create_object_no_types">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>
 </resources>

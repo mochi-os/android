@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Rikch\'ana %1$d</string>
     <string name="projects_option_delete_title">Akllana wischuy</string>
     <string name="projects_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata pichayta munanki?</string>
+    <string name="projects_create_object_no_types">Manaraq item niraqkuna ruwakuyta atin. Ñawpaqta munasqa parent itemkunata ruway.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Beispiel %1$d</string>
     <string name="projects_option_delete_title">Option löschen</string>
     <string name="projects_option_delete_message">Möchten Sie die Option \"%1$s\" wirklich löschen?</string>
+    <string name="projects_create_object_no_types">Es können noch keine Elementtypen erstellt werden. Erstellen Sie zunächst die erforderlichen übergeordneten Elemente.</string>
 </resources>

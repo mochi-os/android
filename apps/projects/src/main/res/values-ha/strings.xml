@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Samfuri %1$d</string>
     <string name="projects_option_delete_title">Goge zaɓi</string>
     <string name="projects_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
 </resources>

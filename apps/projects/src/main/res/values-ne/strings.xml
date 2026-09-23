@@ -380,4 +380,5 @@
     <string name="projects_design_sample">नमूना %1$d</string>
     <string name="projects_option_delete_title">विकल्प मेटाउनुहोस्</string>
     <string name="projects_option_delete_message">के तपाईं \"%1$s\" विकल्प मेटाउन निश्चित हुनुहुन्छ?</string>
+    <string name="projects_create_object_no_types">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
 </resources>

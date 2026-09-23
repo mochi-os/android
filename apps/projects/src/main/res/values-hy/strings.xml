@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Նմուշ %1$d</string>
     <string name="projects_option_delete_title">Ջնջել տարբերակը</string>
     <string name="projects_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
+    <string name="projects_create_object_no_types">Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։</string>
 </resources>

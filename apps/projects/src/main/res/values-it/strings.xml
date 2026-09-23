@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Esempio %1$d</string>
     <string name="projects_option_delete_title">Elimina opzione</string>
     <string name="projects_option_delete_message">Vuoi davvero eliminare l\'opzione \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Nessun tipo di elemento può essere creato per ora. Crea prima gli elementi padre richiesti.</string>
 </resources>

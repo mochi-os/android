@@ -380,4 +380,5 @@
     <string name="projects_design_sample">ตัวอย่าง %1$d</string>
     <string name="projects_option_delete_title">ลบตัวเลือก</string>
     <string name="projects_option_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบตัวเลือก \"%1$s\"</string>
+    <string name="projects_create_object_no_types">ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน</string>
 </resources>

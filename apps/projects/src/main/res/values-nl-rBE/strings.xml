@@ -362,4 +362,5 @@
     <string name="projects_board_add_column">Kolom toevoegen</string>
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet u zeker dat u de optie \"%1$s\" wilt verwijderen?</string>
+    <string name="projects_create_object_no_types">Er kunnen nog geen itemtypes aangemaakt worden. Maak eerst de vereiste bovenliggende items aan.</string>
 </resources>

@@ -382,4 +382,5 @@
     <string name="projects_design_sample">Vzorec %1$d</string>
     <string name="projects_option_delete_title">Izbriši možnost</string>
     <string name="projects_option_delete_message">Ali ste prepričani, da želite izbrisati možnost \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
 </resources>

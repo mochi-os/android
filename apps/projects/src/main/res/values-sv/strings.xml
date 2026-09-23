@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Exempel %1$d</string>
     <string name="projects_option_delete_title">Ta bort alternativ</string>
     <string name="projects_option_delete_message">Är du säker på att du vill radera alternativet \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Inga objekttyper kan skapas ännu. Skapa de obligatoriska överordnade objekten först.</string>
 </resources>

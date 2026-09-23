@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Techapyrã %1$d</string>
     <string name="projects_option_delete_title">Hundi opción</string>
     <string name="projects_option_delete_message">Añetépa reipota reipe\'a pe opción \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Ndaikatúi oñemoheñói item peteĩchagua. Emoheñói raẽ peteĩchagua oñeikotevẽva.</string>
 </resources>

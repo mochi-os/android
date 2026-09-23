@@ -379,4 +379,5 @@
     <string name="projects_design_sample">គំរូ %1$d</string>
     <string name="projects_option_delete_title">លុបជម្រើស</string>
     <string name="projects_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
+    <string name="projects_create_object_no_types">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
 </resources>

@@ -381,4 +381,5 @@
     <string name="projects_design_sample">Exemplu %1$d</string>
     <string name="projects_option_delete_title">Șterge opțiunea</string>
     <string name="projects_option_delete_message">Sigur dorești să ștergi opțiunea \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Încă nu pot fi create tipuri de elemente. Creează mai întâi elementele părinte necesare.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Døme %1$d</string>
     <string name="projects_option_delete_title">Slett val</string>
     <string name="projects_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Ingen elementtypar kan opprettast enno. Opprett dei påkravde overordna elementa først.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">示例 %1$d</string>
     <string name="projects_option_delete_title">删除选项</string>
     <string name="projects_option_delete_message">确定要删除选项 \"%1$s\" 吗?</string>
+    <string name="projects_create_object_no_types">尚无可创建的条目类型。请先创建所需的父级条目。</string>
 </resources>

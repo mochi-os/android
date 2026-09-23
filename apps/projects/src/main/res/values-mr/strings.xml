@@ -380,4 +380,5 @@
     <string name="projects_design_sample">नमुना %1$d</string>
     <string name="projects_option_delete_title">पर्याय हटवा</string>
     <string name="projects_option_delete_message">तुम्हाला \"%1$s\" हा पर्याय हटवायचा आहे का?</string>
+    <string name="projects_create_object_no_types">अद्याप कोणतेही आयटम प्रकार तयार करता येणार नाहीत. आधी आवश्यक पॅरेंट आयटम्स तयार करा.</string>
 </resources>

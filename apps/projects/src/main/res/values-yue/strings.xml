@@ -380,4 +380,5 @@
     <string name="projects_exporting">正在準備匯出…</string>
     <string name="projects_board_add_column">新增欄位</string>
     <string name="projects_design_sample">範例 %1$d</string>
+    <string name="projects_create_object_no_types">暫時未可以建立任何項目類型。請先建立所需嘅父項目。</string>
 </resources>

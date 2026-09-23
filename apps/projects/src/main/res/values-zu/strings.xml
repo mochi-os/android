@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Isampula %1$d</string>
     <string name="projects_option_delete_title">Susa inketho</string>
     <string name="projects_option_delete_message">Ingabe uqinisekile ukuthi ufuna ukususa inketho ethi \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">ናሙና %1$d</string>
     <string name="projects_option_delete_title">አማራጭ ሰርዝ</string>
     <string name="projects_option_delete_message">አማራጩን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>
+    <string name="projects_create_object_no_types">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
 </resources>

@@ -382,4 +382,5 @@
     <string name="projects_design_sample">Pavyzdys %1$d</string>
     <string name="projects_option_delete_title">Ištrinti parinktį</string>
     <string name="projects_option_delete_message">Ar tikrai norite ištrinti parinktį \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus.</string>
 </resources>

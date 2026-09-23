@@ -381,4 +381,5 @@
     <string name="projects_design_sample">Ukázka %1$d</string>
     <string name="projects_option_delete_title">Smazat možnost</string>
     <string name="projects_option_delete_message">Opravdu chcete smazat možnost \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">নমুনা %1$d</string>
     <string name="projects_option_delete_title">অপশন মুছুন</string>
     <string name="projects_option_delete_message">আপনি কি নিশ্চিত যে আপনি \"%1$s\" অপশনটি মুছে ফেলতে চান?</string>
+    <string name="projects_create_object_no_types">এখনও কোনো আইটেম টাইপ তৈরি করা যাবে না। প্রথমে প্রয়োজনীয় প্যারেন্ট আইটেম তৈরি করুন।</string>
 </resources>

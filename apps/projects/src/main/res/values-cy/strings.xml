@@ -384,4 +384,5 @@
     <string name="projects_design_sample">Sampl %1$d</string>
     <string name="projects_option_delete_title">Dileu opsiwn</string>
     <string name="projects_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf.</string>
 </resources>

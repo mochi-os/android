@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Àpẹẹrẹ %1$d</string>
     <string name="projects_option_delete_title">Pa àṣàyàn rẹ́</string>
     <string name="projects_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
+    <string name="projects_create_object_no_types">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
 </resources>

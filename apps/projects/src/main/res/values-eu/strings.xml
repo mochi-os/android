@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Adibidea %1$d</string>
     <string name="projects_option_delete_title">Ezabatu aukera</string>
     <string name="projects_option_delete_message">Ziur zaude \"%1$s\" aukera ezabatu nahi duzula?</string>
+    <string name="projects_create_object_no_types">Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak.</string>
 </resources>

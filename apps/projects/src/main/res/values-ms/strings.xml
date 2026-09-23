@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Contoh %1$d</string>
     <string name="projects_option_delete_title">Padam pilihan</string>
     <string name="projects_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>
 </resources>

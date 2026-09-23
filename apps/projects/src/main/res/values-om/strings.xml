@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Fakkeenya %1$d</string>
     <string name="projects_option_delete_title">Filannoo haqi</string>
     <string name="projects_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
+    <string name="projects_create_object_no_types">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
 </resources>

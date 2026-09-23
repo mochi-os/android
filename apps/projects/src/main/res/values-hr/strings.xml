@@ -381,4 +381,5 @@
     <string name="projects_design_sample">Primjer %1$d</string>
     <string name="projects_option_delete_title">Obriši opciju</string>
     <string name="projects_option_delete_message">Jeste li sigurni da želite izbrisati opciju \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Još se ne mogu kreirati nikakvi tipovi stavki. Prvo kreirajte potrebne nadređene stavke.</string>
 </resources>

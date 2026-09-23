@@ -380,4 +380,5 @@
     <string name="projects_design_sample">샘플 %1$d</string>
     <string name="projects_option_delete_title">옵션 삭제</string>
     <string name="projects_option_delete_message">옵션 \"%1$s\"을(를) 삭제하시겠습니까?</string>
+    <string name="projects_create_object_no_types">아직 항목 유형을 만들 수 없어요. 먼저 필요한 상위 항목을 만들어 주세요.</string>
 </resources>

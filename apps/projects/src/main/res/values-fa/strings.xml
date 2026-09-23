@@ -380,4 +380,5 @@
     <string name="projects_design_sample">نمونه %1$d</string>
     <string name="projects_option_delete_title">حذف گزینه</string>
     <string name="projects_option_delete_message">آیا مطمئن هستید که می‌خواهید گزینهٔ \"%1$s\" را حذف کنید؟</string>
+    <string name="projects_create_object_no_types">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>
 </resources>

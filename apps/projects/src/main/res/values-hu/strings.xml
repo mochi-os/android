@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Minta %1$d</string>
     <string name="projects_option_delete_title">Beállítás törlése</string>
     <string name="projects_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>
+    <string name="projects_create_object_no_types">Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket.</string>
 </resources>

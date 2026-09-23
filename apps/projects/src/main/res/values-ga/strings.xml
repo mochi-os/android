@@ -383,4 +383,5 @@
     <string name="projects_design_sample">Sampla %1$d</string>
     <string name="projects_option_delete_title">Scrios rogha</string>
     <string name="projects_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
+    <string name="projects_create_object_no_types">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
 </resources>

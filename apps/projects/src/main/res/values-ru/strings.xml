@@ -382,4 +382,5 @@
     <string name="projects_design_sample">Образец %1$d</string>
     <string name="projects_option_delete_title">Удалить вариант</string>
     <string name="projects_option_delete_message">Вы уверены, что хотите удалить вариант \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Пока нельзя создать типы элементов. Сначала создайте необходимые родительские элементы.</string>
 </resources>

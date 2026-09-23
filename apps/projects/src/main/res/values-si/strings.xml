@@ -380,4 +380,5 @@
     <string name="projects_design_sample">නියැදිය %1$d</string>
     <string name="projects_option_delete_title">විකල්පය මකන්න</string>
     <string name="projects_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
+    <string name="projects_create_object_no_types">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">மாதிரி %1$d</string>
     <string name="projects_option_delete_title">விருப்பத்தை நீக்கு</string>
     <string name="projects_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>
+    <string name="projects_create_object_no_types">உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்.</string>
 </resources>

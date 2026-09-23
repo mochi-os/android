@@ -88,6 +88,7 @@
     <string name="projects_create_object_title_field">Title</string>
     <string name="projects_create_object_parent">Parent</string>
     <string name="projects_create_object_parent_none">(none)</string>
+    <string name="projects_create_object_no_types">No item types can be created yet. Create the required parent items first.</string>
     <string name="projects_add_child">Add child</string>
 
     <!-- Project settings -->

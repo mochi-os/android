@@ -379,4 +379,5 @@
     <string name="projects_design_sample">Conto %1$d</string>
     <string name="projects_option_delete_title">Busak pilihan</string>
     <string name="projects_option_delete_message">Apa sampeyan yakin arep mbusak pilihan \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Durung ana jenis item sing bisa digawé. Gawé item induk sing dibutuhaké luwih dhisik.</string>
 </resources>

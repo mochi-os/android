@@ -380,4 +380,5 @@
     <string name="projects_design_sample">نمونو %1$d</string>
     <string name="projects_option_delete_title">اختيار ختم ڪريو</string>
     <string name="projects_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
+    <string name="projects_create_object_no_types">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
 </resources>

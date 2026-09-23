@@ -382,4 +382,5 @@
     <string name="projects_design_sample">Sampall %1$d</string>
     <string name="projects_option_delete_title">Sguab às roghainn</string>
     <string name="projects_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>
+    <string name="projects_create_object_no_types">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
 </resources>

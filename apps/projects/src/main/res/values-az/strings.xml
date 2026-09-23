@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Nümunə %1$d</string>
     <string name="projects_option_delete_title">Variantı sil</string>
     <string name="projects_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>
+    <string name="projects_create_object_no_types">Hələ heç bir element növü yaradıla bilməz. Əvvəlcə tələb olunan əsas elementləri yaradın.</string>
 </resources>

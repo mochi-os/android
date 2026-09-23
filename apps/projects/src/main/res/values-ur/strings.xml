@@ -380,4 +380,5 @@
     <string name="projects_design_sample">نمونہ %1$d</string>
     <string name="projects_option_delete_title">آپشن حذف کریں</string>
     <string name="projects_option_delete_message">کیا آپ واقعی آپشن \"%1$s\" کو حذف کرنا چاہتے ہیں؟</string>
+    <string name="projects_create_object_no_types">ابھی کوئی item types نہیں بنائے جا سکتے۔ پہلے درکار parent items بنائیں۔</string>
 </resources>

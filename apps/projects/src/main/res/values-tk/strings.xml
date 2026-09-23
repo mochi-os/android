@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Nusga %1$d</string>
     <string name="projects_option_delete_title">Wariant pozmak</string>
     <string name="projects_option_delete_message">\"%1$s\" wariantyny pozmak isleýändigiňize ynanýarsyňyzmy?</string>
+    <string name="projects_create_object_no_types">Heniz hiç bir element görnüşi döredilip bilinmez. Ilki bilen zerur ene-atalar elementlerini dörediň.</string>
 </resources>

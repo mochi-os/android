@@ -383,4 +383,5 @@
     <string name="projects_design_sample">Kampjun %1$d</string>
     <string name="projects_option_delete_title">Ħassar għażla</string>
     <string name="projects_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">L-ebda tipi ta\' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel.</string>
 </resources>

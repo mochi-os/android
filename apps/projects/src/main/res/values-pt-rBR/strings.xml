@@ -364,4 +364,5 @@
     <string name="projects_board_add_column">Adicionar coluna</string>
     <string name="projects_option_delete_title">Excluir opção</string>
     <string name="projects_option_delete_message">Tem certeza de que deseja excluir a opção \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Nenhum tipo de item pode ser criado ainda. Crie primeiro os itens pais obrigatórios.</string>
 </resources>

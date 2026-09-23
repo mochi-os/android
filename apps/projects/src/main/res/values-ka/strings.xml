@@ -380,4 +380,5 @@
     <string name="projects_design_sample">ნიმუში %1$d</string>
     <string name="projects_option_delete_title">ვარიანტის წაშლა</string>
     <string name="projects_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>
+    <string name="projects_create_object_no_types">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
 </resources>

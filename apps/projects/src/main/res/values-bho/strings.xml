@@ -380,4 +380,5 @@
     <string name="projects_design_sample">नमूना %1$d</string>
     <string name="projects_option_delete_title">विकल्प मेटाईं</string>
     <string name="projects_option_delete_message">का रउआ सचमुच विकल्प \"%1$s\" के मिटावे के चाहत बानी?</string>
+    <string name="projects_create_object_no_types">अबहीं कौनो आइटम प्रकार ना बन सके। पहिले जरूरी मूल आइटम बनाईं।</string>
 </resources>

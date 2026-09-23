@@ -71,6 +71,9 @@ import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.Person
 import org.mochios.crm.ui.board.parseColor
 import org.mochios.crm.ui.crm.CrmViewModel
+import org.mochios.crm.util.HIERARCHY_ROOT
+import org.mochios.crm.util.parentAllowed
+import org.mochios.crm.util.parentTargets
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -247,7 +250,10 @@ fun TreeRow(
                         expanded = showContextMenu,
                         onDismissRequest = { showContextMenu = false }
                     ) {
-                        if (onReparent != null) {
+                        val hierarchy = crmDetails?.hierarchy.orEmpty()
+                        val movable = parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT) ||
+                            parentTargets(obj, allObjects, hierarchy).isNotEmpty()
+                        if (onReparent != null && movable) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.crm_tree_move)) },
                                 onClick = {
@@ -323,32 +329,36 @@ fun TreeRow(
     }
 
     if (showReparentDialog && onReparent != null) {
-        // Neither the row itself nor anything under it: the server refuses the
-        // cycle, and it would only be refused after the pick.
-        val descendants = viewModel.collectDescendants(obj.id)
-        val possibleParents = allObjects.filter { candidate -> candidate.id != obj.id && candidate.id !in descendants }
+        // Only what the server takes: a parent of a class the hierarchy
+        // allows, never the row itself or anything under it, and the top
+        // level only for a class that may sit there.
+        val hierarchy = crmDetails?.hierarchy.orEmpty()
+        val rootAllowed = parentAllowed(hierarchy, obj.objectClass, HIERARCHY_ROOT)
+        val possibleParents = parentTargets(obj, allObjects, hierarchy)
         MochiAlertDialog(
             onDismissRequest = { showReparentDialog = false },
             title = stringResource(R.string.crm_tree_move_to_parent),
             content = {
                 LazyColumn {
-                    item {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    onReparent("")
-                                    showReparentDialog = false
-                                }
-                                .padding(vertical = 10.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(
-                                text = stringResource(R.string.crm_tree_root_level),
-                                style = MaterialTheme.typography.bodyMedium
-                            )
+                    if (rootAllowed) {
+                        item {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        onReparent("")
+                                        showReparentDialog = false
+                                    }
+                                    .padding(vertical = 10.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = stringResource(R.string.crm_tree_root_level),
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                            }
+                            HorizontalDivider()
                         }
-                        HorizontalDivider()
                     }
                     items(possibleParents) { parent ->
                         val parentTitleField = crmDetails?.classes

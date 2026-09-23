@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Voorbeeld %1$d</string>
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
+    <string name="projects_create_object_no_types">Er kunnen nog geen itemtypen worden aangemaakt. Maak eerst de vereiste bovenliggende items aan.</string>
 </resources>

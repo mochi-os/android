@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Жишээ %1$d</string>
     <string name="projects_option_delete_title">Сонголтыг устгах</string>
     <string name="projects_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
+    <string name="projects_create_object_no_types">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
 </resources>

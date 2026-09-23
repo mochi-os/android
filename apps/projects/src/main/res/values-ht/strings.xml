@@ -379,4 +379,5 @@
     <string name="projects_design_sample">Echantiyon %1$d</string>
     <string name="projects_option_delete_title">Efase opsyon</string>
     <string name="projects_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>
 </resources>

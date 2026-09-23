@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Sýnishorn %1$d</string>
     <string name="projects_option_delete_title">Eyða valkosti</string>
     <string name="projects_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
 </resources>

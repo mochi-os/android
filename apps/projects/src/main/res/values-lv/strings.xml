@@ -381,4 +381,5 @@
     <string name="projects_design_sample">Paraugs %1$d</string>
     <string name="projects_option_delete_title">Dzēst opciju</string>
     <string name="projects_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>
 </resources>

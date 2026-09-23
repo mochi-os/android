@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Conto %1$d</string>
     <string name="projects_option_delete_title">Hapus pilihan</string>
     <string name="projects_option_delete_message">Yakin hayang mupus pilihan \"%1$s\"?</string>
+    <string name="projects_create_object_no_types">Teu aya jenis item nu bisa dijieun. Jieun heula item kolot nu diperlukeun.</string>
 </resources>

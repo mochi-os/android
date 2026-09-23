@@ -49,6 +49,10 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
+import org.mochios.projects.util.creatableClasses
+import org.mochios.projects.util.defaultParent
+import org.mochios.projects.util.initialClass
+import org.mochios.projects.util.parentRequired
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -67,6 +71,12 @@ fun CreateObjectScreen(
     val activeView = uiState.activeView
     val presetParent = viewModel.presetParent
 
+    // A class that needs a parent is only offered once one exists to put it
+    // under; the server refuses it anywhere else.
+    val creatable = remember(classes, hierarchy, objects) {
+        creatableClasses(classes, hierarchy, objects)
+    }
+
     var title by remember { mutableStateOf("") }
 
     LaunchedEffect(uiState.createdObjectId) {
@@ -79,18 +89,13 @@ fun CreateObjectScreen(
     val presetParentObj = remember(presetParent, objects) {
         presetParent?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
     }
-    val initialClassId = remember(presetParentObj, activeView, classes, hierarchy) {
-        when {
-            // If pre-selected from "Add child", pick a class that permits the
-            // parent's class as a parent (first match).
-            presetParentObj != null -> {
-                classes.firstOrNull { cls ->
-                    (hierarchy[cls.id] ?: emptyList()).contains(presetParentObj.objectClass)
-                }?.id ?: classes.firstOrNull()?.id.orEmpty()
-            }
-            activeView != null && activeView.classes.isNotEmpty() -> activeView.classes.first()
-            else -> classes.firstOrNull()?.id.orEmpty()
-        }
+    val initialClassId = remember(presetParentObj, activeView, creatable, hierarchy) {
+        initialClass(
+            creatable,
+            hierarchy,
+            presetParentObj?.objectClass,
+            activeView?.classes.orEmpty(),
+        )
     }
 
     // Held rather than derived, because the type picker below writes to it. The
@@ -125,11 +130,24 @@ fun CreateObjectScreen(
     // The parent that opened the form, once the objects it belongs to are in.
     // Changing class clears it, since the new class may not take it.
     LaunchedEffect(initialClassId) {
-        selectedParentId = presetParent.takeIf { presetParentObj != null }
+        selectedParentId = presetParent.takeIf {
+            presetParentObj != null &&
+                presetParentObj.objectClass in hierarchy[initialClassId].orEmpty()
+        }
+    }
+
+    // A class that cannot sit at the top level offers no "(none)", so until
+    // the user picks a parent it has one picked for it.
+    val required = parentRequired(hierarchy, selectedClassId)
+    val parentId = selectedParentId ?: if (required) {
+        defaultParent(parentCandidates, viewModel.presetValues)?.id
+    } else {
+        null
     }
 
     val canCreate = details != null && title.isNotBlank() &&
-        selectedClassId.isNotBlank() && !uiState.isCreating
+        selectedClassId.isNotBlank() && (!required || parentId != null) &&
+        !uiState.isCreating
 
     Scaffold(
         topBar = {
@@ -192,7 +210,7 @@ fun CreateObjectScreen(
                                 viewModel.createObject(
                                     classId = selectedClassId,
                                     title = title,
-                                    parent = selectedParentId,
+                                    parent = parentId,
                                     initialValues = initialValues,
                                 )
                             },
@@ -235,6 +253,15 @@ fun CreateObjectScreen(
                             .verticalScroll(rememberScrollState())
                             .padding(horizontal = 16.dp, vertical = 16.dp)
                     ) {
+                        if (creatable.isEmpty()) {
+                            Text(
+                                text = stringResource(R.string.projects_create_object_no_types),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
+
                         MochiTextField(
                             value = title,
                             onValueChange = { value -> title = value },
@@ -250,14 +277,14 @@ fun CreateObjectScreen(
                             modifier = Modifier.fillMaxWidth()
                         )
 
-                        if (classes.size > 1) {
+                        if (creatable.size > 1) {
                             Spacer(modifier = Modifier.height(16.dp))
                             ExposedDropdownMenuBox(
                                 expanded = classExpanded,
                                 onExpandedChange = { expanded -> classExpanded = expanded }
                             ) {
                                 MochiTextField(
-                                    value = classes.find { cls -> cls.id == selectedClassId }
+                                    value = creatable.find { cls -> cls.id == selectedClassId }
                                         ?.name
                                         .orEmpty(),
                                     onValueChange = {},
@@ -281,7 +308,7 @@ fun CreateObjectScreen(
                                     expanded = classExpanded,
                                     onDismissRequest = { classExpanded = false }
                                 ) {
-                                    classes.forEach { cls ->
+                                    creatable.forEach { cls ->
                                         MochiDropdownMenuItem(
                                             text = { Text(cls.name) },
                                             onClick = {
@@ -299,11 +326,11 @@ fun CreateObjectScreen(
 
                         // Parent picker — only shown when the selected class has
                         // allowed parent classes per project.hierarchy. "None"
-                        // is always an option so root-level objects can still be
-                        // created from the form.
+                        // is offered only to a class that may sit at the top
+                        // level.
                         if (parentCandidates.isNotEmpty()) {
                             Spacer(modifier = Modifier.height(16.dp))
-                            val selectedParentLabel = selectedParentId?.let { id ->
+                            val selectedParentLabel = parentId?.let { id ->
                                 objects.firstOrNull { obj -> obj.id == id }
                                     ?.let { obj -> obj.readable.ifBlank { obj.id } }
                                     ?: id
@@ -339,15 +366,17 @@ fun CreateObjectScreen(
                                     expanded = parentExpanded,
                                     onDismissRequest = { parentExpanded = false }
                                 ) {
-                                    MochiDropdownMenuItem(
-                                        text = { Text(stringResource(
-                                                    R.string.projects_create_object_parent_none
-                                                )) },
-                                        onClick = {
-                                            selectedParentId = null
-                                            parentExpanded = false
-                                        },
-                                    )
+                                    if (!required) {
+                                        MochiDropdownMenuItem(
+                                            text = { Text(stringResource(
+                                                        R.string.projects_create_object_parent_none
+                                                    )) },
+                                            onClick = {
+                                                selectedParentId = null
+                                                parentExpanded = false
+                                            },
+                                        )
+                                    }
                                     parentCandidates.forEach { candidate ->
                                         MochiDropdownMenuItem(
                                             text = { Text(candidate.readable.ifBlank { candidate.id }) },

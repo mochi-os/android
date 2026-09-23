@@ -380,4 +380,5 @@
     <string name="projects_design_sample">નમૂનો %1$d</string>
     <string name="projects_option_delete_title">વિકલ્પ કાઢી નાખો</string>
     <string name="projects_option_delete_message">શું તમે ખરેખર \"%1$s\" વિકલ્પને કાઢી નાખવા માગો છો?</string>
+    <string name="projects_create_object_no_types">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
 </resources>

@@ -380,4 +380,5 @@
     <string name="projects_design_sample">نمونه %1$d</string>
     <string name="projects_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="projects_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
+    <string name="projects_create_object_no_types">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
 </resources>

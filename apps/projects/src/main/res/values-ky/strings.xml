@@ -380,4 +380,5 @@
     <string name="projects_design_sample">Үлгү %1$d</string>
     <string name="projects_option_delete_title">Тандоону жок кылуу</string>
     <string name="projects_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
+    <string name="projects_create_object_no_types">Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз.</string>
 </resources>
