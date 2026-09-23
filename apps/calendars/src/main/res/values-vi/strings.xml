@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Lịch</string>
     <string name="calendars_event_allday">Cả ngày</string>
     <string name="calendars_event_finish">Kết thúc</string>
-    <string name="calendars_event_timezone">Múi giờ</string>
     <string name="calendars_event_repeat">Lặp lại</string>
     <string name="calendars_event_reminder">Nhắc nhở</string>
     <string name="calendars_event_recurring">Có lặp lại</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d phút</item>
     </plurals>
+    <string name="calendars_preferences_zones">Hiển thị sự kiện theo múi giờ riêng của chúng</string>
+    <string name="calendars_event_backwards">Kết thúc trước khi bắt đầu</string>
+    <string name="calendars_event_zone_start">Múi giờ bắt đầu</string>
+    <string name="calendars_event_zone_finish">Múi giờ kết thúc</string>
+    <string name="calendars_event_timezone">Múi giờ</string>
 </resources>

@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Calendario</string>
     <string name="calendars_event_allday">Taqi uru</string>
     <string name="calendars_event_finish">Tukuyawi</string>
-    <string name="calendars_event_timezone">Pacha jakhuna</string>
     <string name="calendars_event_repeat">Kutiptaña</string>
     <string name="calendars_event_reminder">Amtayiri</string>
     <string name="calendars_event_recurring">Kutiptiwa</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minuto</item>
         <item quantity="other">%1$d minuto</item>
     </plurals>
+    <string name="calendars_preferences_zones">Luräwinaka jupanakan pacha chiqapana uñachayaña</string>
+    <string name="calendars_event_backwards">Janïr qalltkipan tukusi</string>
+    <string name="calendars_event_zone_start">Qalltañ pacha chiqa</string>
+    <string name="calendars_event_zone_finish">Tukuyañ pacha chiqa</string>
+    <string name="calendars_event_timezone">Pacha jakhuna</string>
 </resources>

@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">ڪئلينڊر</string>
     <string name="calendars_event_allday">سڄو ڏينهن</string>
     <string name="calendars_event_finish">خاتمو</string>
-    <string name="calendars_event_timezone">وقت جو زون</string>
     <string name="calendars_event_repeat">ورجاءُ</string>
     <string name="calendars_event_reminder">يادگيري</string>
     <string name="calendars_event_recurring">ورجائي ٿو</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d منٽ</item>
         <item quantity="other">%1$d منٽ</item>
     </plurals>
+    <string name="calendars_preferences_zones">واقعن کي انهن جي پنهنجي ٽائيم زون ۾ ڏيکاريو</string>
+    <string name="calendars_event_backwards">شروع ٿيڻ کان اڳ ختم ٿئي ٿو</string>
+    <string name="calendars_event_zone_start">شروعات جو ٽائيم زون</string>
+    <string name="calendars_event_zone_finish">پڄاڻي جو ٽائيم زون</string>
+    <string name="calendars_event_timezone">وقت جو زون</string>
 </resources>

@@ -88,7 +88,6 @@
     <string name="calendars_event_calendar">Каляндар</string>
     <string name="calendars_event_allday">Увесь дзень</string>
     <string name="calendars_event_finish">Канец</string>
-    <string name="calendars_event_timezone">Часавы пояс</string>
     <string name="calendars_event_repeat">Паўтор</string>
     <string name="calendars_event_reminder">Напамін</string>
     <string name="calendars_event_recurring">Паўтараецца</string>
@@ -143,4 +142,9 @@
         <item quantity="many">%1$d хвілін</item>
         <item quantity="other">%1$d хвіліны</item>
     </plurals>
+    <string name="calendars_preferences_zones">Паказваць падзеі ў іх уласным часавым поясе</string>
+    <string name="calendars_event_backwards">Заканчваецца раней, чым пачынаецца</string>
+    <string name="calendars_event_zone_start">Часавы пояс пачатку</string>
+    <string name="calendars_event_zone_finish">Часавы пояс заканчэння</string>
+    <string name="calendars_event_timezone">Часавы пояс</string>
 </resources>

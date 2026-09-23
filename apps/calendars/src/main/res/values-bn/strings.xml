@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">ক্যালেন্ডার</string>
     <string name="calendars_event_allday">সারাদিন</string>
     <string name="calendars_event_finish">শেষ</string>
-    <string name="calendars_event_timezone">সময় অঞ্চল</string>
     <string name="calendars_event_repeat">পুনরাবৃত্তি</string>
     <string name="calendars_event_reminder">অনুস্মারক</string>
     <string name="calendars_event_recurring">পুনরাবৃত্ত হয়</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d মিনিট</item>
         <item quantity="other">%1$d মিনিট</item>
     </plurals>
+    <string name="calendars_preferences_zones">ইভেন্টগুলি তাদের নিজস্ব সময় অঞ্চলে দেখান</string>
+    <string name="calendars_event_backwards">শুরুর আগেই শেষ হয়</string>
+    <string name="calendars_event_zone_start">শুরুর সময় অঞ্চল</string>
+    <string name="calendars_event_zone_finish">শেষের সময় অঞ্চল</string>
+    <string name="calendars_event_timezone">সময় অঞ্চল</string>
 </resources>

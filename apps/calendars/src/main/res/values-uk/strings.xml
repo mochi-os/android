@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Календар</string>
     <string name="calendars_event_allday">Цілий день</string>
     <string name="calendars_event_finish">Кінець</string>
-    <string name="calendars_event_timezone">Часовий пояс</string>
     <string name="calendars_event_repeat">Повторення</string>
     <string name="calendars_event_reminder">Нагадування</string>
     <string name="calendars_event_recurring">Повторюється</string>
@@ -143,4 +142,9 @@
         <item quantity="many">%1$d хвилин</item>
         <item quantity="other">%1$d хвилини</item>
     </plurals>
+    <string name="calendars_preferences_zones">Показувати події в їхньому власному часовому поясі</string>
+    <string name="calendars_event_backwards">Закінчується раніше, ніж починається</string>
+    <string name="calendars_event_zone_start">Часовий пояс початку</string>
+    <string name="calendars_event_zone_finish">Часовий пояс завершення</string>
+    <string name="calendars_event_timezone">Часовий пояс</string>
 </resources>

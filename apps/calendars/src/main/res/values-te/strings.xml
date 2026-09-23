@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">క్యాలెండర్</string>
     <string name="calendars_event_allday">రోజంతా</string>
     <string name="calendars_event_finish">ముగింపు</string>
-    <string name="calendars_event_timezone">టైమ్ జోన్</string>
     <string name="calendars_event_repeat">పునరావృతం</string>
     <string name="calendars_event_reminder">రిమైండర్</string>
     <string name="calendars_event_recurring">పునరావృతమవుతుంది</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d నిమిషం</item>
         <item quantity="other">%1$d నిమిషాలు</item>
     </plurals>
+    <string name="calendars_preferences_zones">ఈవెంట్‌లను వాటి స్వంత టైమ్ జోన్‌లో చూపించు</string>
+    <string name="calendars_event_backwards">ప్రారంభానికి ముందే ముగుస్తుంది</string>
+    <string name="calendars_event_zone_start">ప్రారంభ టైమ్ జోన్</string>
+    <string name="calendars_event_zone_finish">ముగింపు టైమ్ జోన్</string>
+    <string name="calendars_event_timezone">టైమ్ జోన్</string>
 </resources>

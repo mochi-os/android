@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Egutegia</string>
     <string name="calendars_event_allday">Egun osoa</string>
     <string name="calendars_event_finish">Amaiera</string>
-    <string name="calendars_event_timezone">Ordu-zona</string>
     <string name="calendars_event_repeat">Errepikapena</string>
     <string name="calendars_event_reminder">Oroigarria</string>
     <string name="calendars_event_recurring">Errepikatzen da</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minutu</item>
         <item quantity="other">%1$d minutu</item>
     </plurals>
+    <string name="calendars_preferences_zones">Erakutsi gertaerak beren ordu-zonan</string>
+    <string name="calendars_event_backwards">Hasi baino lehen amaitzen da</string>
+    <string name="calendars_event_zone_start">Hasierako ordu-zona</string>
+    <string name="calendars_event_zone_finish">Amaierako ordu-zona</string>
+    <string name="calendars_event_timezone">Ordu-zona</string>
 </resources>

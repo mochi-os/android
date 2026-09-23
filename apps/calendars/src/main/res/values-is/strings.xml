@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Dagatal</string>
     <string name="calendars_event_allday">Allan daginn</string>
     <string name="calendars_event_finish">Lok</string>
-    <string name="calendars_event_timezone">Tímabelti</string>
     <string name="calendars_event_repeat">Endurtekning</string>
     <string name="calendars_event_reminder">Áminning</string>
     <string name="calendars_event_recurring">Endurtekur sig</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d mínúta</item>
         <item quantity="other">%1$d mínútur</item>
     </plurals>
+    <string name="calendars_preferences_zones">Sýna viðburði á þeirra eigin tímabelti</string>
+    <string name="calendars_event_backwards">Lýkur áður en hann hefst</string>
+    <string name="calendars_event_zone_start">Tímabelti upphafs</string>
+    <string name="calendars_event_zone_finish">Tímabelti loka</string>
+    <string name="calendars_event_timezone">Tímabelti</string>
 </resources>

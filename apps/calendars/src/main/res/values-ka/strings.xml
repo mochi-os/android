@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">კალენდარი</string>
     <string name="calendars_event_allday">მთელი დღე</string>
     <string name="calendars_event_finish">დასასრული</string>
-    <string name="calendars_event_timezone">დროის სარტყელი</string>
     <string name="calendars_event_repeat">გამეორება</string>
     <string name="calendars_event_reminder">შეხსენება</string>
     <string name="calendars_event_recurring">მეორდება</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d წუთი</item>
         <item quantity="other">%1$d წუთი</item>
     </plurals>
+    <string name="calendars_preferences_zones">მოვლენების ჩვენება საკუთარ დროის სარტყელში</string>
+    <string name="calendars_event_backwards">სრულდება დაწყებამდე</string>
+    <string name="calendars_event_zone_start">დაწყების დროის სარტყელი</string>
+    <string name="calendars_event_zone_finish">დასრულების დროის სარტყელი</string>
+    <string name="calendars_event_timezone">დროის სარტყელი</string>
 </resources>

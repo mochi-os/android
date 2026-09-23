@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">Kalender</string>
     <string name="calendars_event_allday">Sepanjang hari</string>
     <string name="calendars_event_finish">Selesai</string>
-    <string name="calendars_event_timezone">Zona waktu</string>
     <string name="calendars_event_repeat">Pengulangan</string>
     <string name="calendars_event_reminder">Pengingat</string>
     <string name="calendars_event_recurring">Berulang</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d menit</item>
     </plurals>
+    <string name="calendars_preferences_zones">Tampilkan acara dalam zona waktunya sendiri</string>
+    <string name="calendars_event_backwards">Berakhir sebelum dimulai</string>
+    <string name="calendars_event_zone_start">Zona waktu mulai</string>
+    <string name="calendars_event_zone_finish">Zona waktu selesai</string>
+    <string name="calendars_event_timezone">Zona waktu</string>
 </resources>

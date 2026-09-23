@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Календар</string>
     <string name="calendars_event_allday">Цял ден</string>
     <string name="calendars_event_finish">Край</string>
-    <string name="calendars_event_timezone">Часова зона</string>
     <string name="calendars_event_repeat">Повторение</string>
     <string name="calendars_event_reminder">Напомняне</string>
     <string name="calendars_event_recurring">Повтаря се</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d минута</item>
         <item quantity="other">%1$d минути</item>
     </plurals>
+    <string name="calendars_preferences_zones">Показвай събитията в собствената им часова зона</string>
+    <string name="calendars_event_backwards">Свършва преди да е започнало</string>
+    <string name="calendars_event_zone_start">Часова зона на началото</string>
+    <string name="calendars_event_zone_finish">Часова зона на края</string>
+    <string name="calendars_event_timezone">Часова зона</string>
 </resources>

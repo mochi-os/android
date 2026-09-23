@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">കലണ്ടർ</string>
     <string name="calendars_event_allday">ദിവസം മുഴുവൻ</string>
     <string name="calendars_event_finish">അവസാനം</string>
-    <string name="calendars_event_timezone">സമയ മേഖല</string>
     <string name="calendars_event_repeat">ആവർത്തനം</string>
     <string name="calendars_event_reminder">ഓർമ്മപ്പെടുത്തൽ</string>
     <string name="calendars_event_recurring">ആവർത്തിക്കുന്നു</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d മിനിറ്റ്</item>
         <item quantity="other">%1$d മിനിറ്റ്</item>
     </plurals>
+    <string name="calendars_preferences_zones">ഇവന്റുകൾ അവയുടെ സ്വന്തം സമയമേഖലയിൽ കാണിക്കുക</string>
+    <string name="calendars_event_backwards">തുടങ്ങുന്നതിനു മുമ്പ് അവസാനിക്കുന്നു</string>
+    <string name="calendars_event_zone_start">ആരംഭ സമയമേഖല</string>
+    <string name="calendars_event_zone_finish">അവസാന സമയമേഖല</string>
+    <string name="calendars_event_timezone">സമയ മേഖല</string>
 </resources>

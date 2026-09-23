@@ -84,7 +84,6 @@
     <string name="calendars_event_allday">Heile dagen</string>
     <string name="calendars_event_start">Start</string>
     <string name="calendars_event_finish">Slutt</string>
-    <string name="calendars_event_timezone">Tidssone</string>
     <string name="calendars_event_repeat">Gjentaking</string>
     <string name="calendars_event_reminder">Påminning</string>
     <string name="calendars_event_recurring">Gjentek seg</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minutt</item>
         <item quantity="other">%1$d minutt</item>
     </plurals>
+    <string name="calendars_preferences_zones">Vis hendingar i deira eiga tidssone</string>
+    <string name="calendars_event_backwards">Sluttar før ho byrjar</string>
+    <string name="calendars_event_zone_start">Tidssone for start</string>
+    <string name="calendars_event_zone_finish">Tidssone for slutt</string>
+    <string name="calendars_event_timezone">Tidssone</string>
 </resources>

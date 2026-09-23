@@ -19,11 +19,15 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.History
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -77,7 +81,7 @@ fun TimeGrid(
     val columns = LocalConfiguration.current.screenWidthDp.dp - GUTTER
     val width = columns / days.size.coerceAtLeast(1)
 
-    val byDay = remember(state.instances, state.hidden, days) {
+    val byDay = remember(state.instances, state.hidden, days, state.preferences.zones) {
         days.associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
     }
 
@@ -204,7 +208,7 @@ private fun DayColumn(
     val shading = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
     val line = MaterialTheme.colorScheme.error
     val working = state.preferences.days.contains(day.dayOfWeek.value % 7)
-    val layout = remember(instances, day) { lay(instances, viewModel, day) }
+    val layout = remember(instances, day, state.preferences.zones) { lay(instances, viewModel, day) }
 
     Box(modifier = Modifier.width(width).height(HOUR * 24)) {
         Column(modifier = Modifier.fillMaxSize()) {
@@ -230,7 +234,7 @@ private fun DayColumn(
                     .height((HOUR * placed.height).coerceAtLeast(18.dp))
                     .padding(end = 2.dp),
             ) {
-                Block(placed.instance) { onOpen(placed.instance) }
+                Block(placed.instance, placed.backwards, viewModel.zones()) { onOpen(placed.instance) }
             }
         }
         if (day == today) {
@@ -254,47 +258,42 @@ private data class Placed(
     val height: Float,
     val column: Int,
     val columns: Int,
+    /** The end reads before the start by the clock, across zones. */
+    val backwards: Boolean,
 )
 
 /**
  * Lays a day's timed occurrences out, giving overlapping ones a share of the
- * width each. Occurrences are taken in start order and put in the first
- * column whose last occurrence has finished; a run that overlaps is then as
- * wide as the columns it needed.
+ * width each. Each is cut to the day by [CalendarViewModel.cut]; the cuts
+ * are taken in start order and put in the first column whose last occurrence
+ * has finished, and a run that overlaps is then as wide as the columns it
+ * needed.
  */
 private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: LocalDate): List<Placed> {
     if (instances.isEmpty()) return emptyList()
-    val zone = viewModel.timezone()
-    val midnight = day.atStartOfDay(zone).toEpochSecond()
-    val ends = midnight + 86_400
-    data class Cut(val instance: Instance, val from: Float, val to: Float)
-
     val cuts = instances
-        .map { instance ->
-            val from = ((instance.start.coerceAtLeast(midnight) - midnight) / 3600f).coerceIn(0f, 24f)
-            val raw = if (instance.finish > instance.start) instance.finish else instance.start + 1800
-            val to = ((raw.coerceAtMost(ends) - midnight) / 3600f).coerceIn(0f, 24f)
-            Cut(instance, from, maxOf(to, from + 0.25f))
-        }
-        .sortedBy { it.from }
+        .mapNotNull { instance -> viewModel.cut(instance, day)?.let { instance to it } }
+        .sortedBy { it.second.from }
 
     val out = mutableListOf<Placed>()
-    var group = mutableListOf<Cut>()
+    var group = mutableListOf<Pair<Instance, Cut>>()
     var columns = mutableListOf<Float>()
     var assigned = mutableListOf<Int>()
 
     fun flush() {
         if (group.isEmpty()) return
         val total = columns.size
-        for ((index, cut) in group.withIndex()) {
-            out.add(Placed(cut.instance, cut.from, cut.to - cut.from, assigned[index], total))
+        for ((index, placed) in group.withIndex()) {
+            val (instance, cut) = placed
+            out.add(Placed(instance, cut.from, cut.to - cut.from, assigned[index], total, cut.backwards))
         }
         group = mutableListOf()
         columns = mutableListOf()
         assigned = mutableListOf()
     }
 
-    for (cut in cuts) {
+    for (placed in cuts) {
+        val cut = placed.second
         if (columns.isNotEmpty() && columns.all { it <= cut.from }) flush()
         var column = columns.indexOfFirst { it <= cut.from }
         if (column < 0) {
@@ -303,16 +302,21 @@ private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: Lo
         } else {
             columns[column] = cut.to
         }
-        group.add(cut)
+        group.add(placed)
         assigned.add(column)
     }
     flush()
     return out
 }
 
-/** A timed occurrence's block: the calendar's colour, faded, with a solid leading edge. */
+/**
+ * A timed occurrence's block: the calendar's colour, faded, with a solid
+ * leading edge. Its clock reads in the start's own zone when [zones] is on.
+ * A [backwards] block stands in for an occurrence whose end reads before its
+ * start, and says so with a glyph.
+ */
 @Composable
-fun Block(instance: Instance, onClick: () -> Unit) {
+fun Block(instance: Instance, backwards: Boolean = false, zones: Boolean = false, onClick: () -> Unit) {
     val format = LocalFormat.current
     val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
     Row(
@@ -323,7 +327,7 @@ fun Block(instance: Instance, onClick: () -> Unit) {
             .clickable(onClick = onClick),
     ) {
         Box(modifier = Modifier.width(3.dp).fillMaxSize().background(colour))
-        Column(modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)) {
+        Column(modifier = Modifier.weight(1f).padding(horizontal = 4.dp, vertical = 2.dp)) {
             Text(
                 text = instance.summary.ifBlank { stringResource(R.string.calendars_event_untitled) },
                 style = MaterialTheme.typography.labelMedium,
@@ -331,10 +335,18 @@ fun Block(instance: Instance, onClick: () -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
             Text(
-                text = format.formatTime(instance.start),
+                text = format.formatTime(instance.start, clockZone(instance.zone?.start, zones)),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
+            )
+        }
+        if (backwards) {
+            Icon(
+                Icons.Outlined.History,
+                contentDescription = stringResource(R.string.calendars_event_backwards),
+                modifier = Modifier.padding(top = 2.dp, end = 3.dp).size(12.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
     }

@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Օրացույց</string>
     <string name="calendars_event_allday">Ամբողջ օրը</string>
     <string name="calendars_event_finish">Ավարտ</string>
-    <string name="calendars_event_timezone">Ժամային գոտի</string>
     <string name="calendars_event_repeat">Կրկնություն</string>
     <string name="calendars_event_reminder">Հիշեցում</string>
     <string name="calendars_event_recurring">Կրկնվում է</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d րոպե</item>
         <item quantity="other">%1$d րոպե</item>
     </plurals>
+    <string name="calendars_preferences_zones">Ցուցադրել իրադարձությունները իրենց ժամային գոտում</string>
+    <string name="calendars_event_backwards">Ավարտվում է նախքան սկսվելը</string>
+    <string name="calendars_event_zone_start">Սկզբի ժամային գոտի</string>
+    <string name="calendars_event_zone_finish">Ավարտի ժամային գոտի</string>
+    <string name="calendars_event_timezone">Ժամային գոտի</string>
 </resources>

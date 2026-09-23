@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Calendrier</string>
     <string name="calendars_event_allday">Toute la journée</string>
     <string name="calendars_event_finish">Fin</string>
-    <string name="calendars_event_timezone">Fuseau horaire</string>
     <string name="calendars_event_repeat">Répétition</string>
     <string name="calendars_event_reminder">Rappel</string>
     <string name="calendars_event_recurring">Se répète</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minute</item>
         <item quantity="other">%1$d minutes</item>
     </plurals>
+    <string name="calendars_preferences_zones">Afficher les événements dans leur propre fuseau horaire</string>
+    <string name="calendars_event_backwards">Se termine avant de commencer</string>
+    <string name="calendars_event_zone_start">Fuseau horaire de début</string>
+    <string name="calendars_event_zone_finish">Fuseau horaire de fin</string>
+    <string name="calendars_event_timezone">Fuseau horaire</string>
 </resources>

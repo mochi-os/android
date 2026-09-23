@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">कैलेंडर</string>
     <string name="calendars_event_allday">पूरा दिन</string>
     <string name="calendars_event_finish">अंत</string>
-    <string name="calendars_event_timezone">समय क्षेत्र</string>
     <string name="calendars_event_repeat">दोहराव</string>
     <string name="calendars_event_reminder">रिमाइंडर</string>
     <string name="calendars_event_recurring">दोहरावेला</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d मिनट</item>
         <item quantity="other">%1$d मिनट</item>
     </plurals>
+    <string name="calendars_preferences_zones">घटना सभ के उनकर आपन समय क्षेत्र में देखाईं</string>
+    <string name="calendars_event_backwards">शुरू होखे से पहिले खतम हो जाला</string>
+    <string name="calendars_event_zone_start">शुरू के समय क्षेत्र</string>
+    <string name="calendars_event_zone_finish">अंत के समय क्षेत्र</string>
+    <string name="calendars_event_timezone">समय क्षेत्र</string>
 </resources>

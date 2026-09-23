@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">カレンダー</string>
     <string name="calendars_event_allday">終日</string>
     <string name="calendars_event_finish">終了</string>
-    <string name="calendars_event_timezone">タイムゾーン</string>
     <string name="calendars_event_repeat">繰り返し</string>
     <string name="calendars_event_reminder">リマインダー</string>
     <string name="calendars_event_recurring">繰り返しあり</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d 分</item>
     </plurals>
+    <string name="calendars_preferences_zones">予定をそれぞれのタイムゾーンで表示</string>
+    <string name="calendars_event_backwards">開始より前に終了</string>
+    <string name="calendars_event_zone_start">開始のタイムゾーン</string>
+    <string name="calendars_event_zone_finish">終了のタイムゾーン</string>
+    <string name="calendars_event_timezone">タイムゾーン</string>
 </resources>

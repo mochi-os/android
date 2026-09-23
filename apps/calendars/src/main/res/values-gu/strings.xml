@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">કૅલેન્ડર</string>
     <string name="calendars_event_allday">આખો દિવસ</string>
     <string name="calendars_event_finish">સમાપ્તિ</string>
-    <string name="calendars_event_timezone">સમય ઝોન</string>
     <string name="calendars_event_repeat">પુનરાવર્તન</string>
     <string name="calendars_event_reminder">રિમાઇન્ડર</string>
     <string name="calendars_event_recurring">પુનરાવર્તિત થાય છે</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d મિનિટ</item>
         <item quantity="other">%1$d મિનિટ</item>
     </plurals>
+    <string name="calendars_preferences_zones">ઇવેન્ટ્સને તેમના પોતાના સમય ઝોનમાં બતાવો</string>
+    <string name="calendars_event_backwards">શરૂ થાય તે પહેલાં સમાપ્ત થાય છે</string>
+    <string name="calendars_event_zone_start">શરૂઆતનો સમય ઝોન</string>
+    <string name="calendars_event_zone_finish">અંતનો સમય ઝોન</string>
+    <string name="calendars_event_timezone">સમય ઝોન</string>
 </resources>

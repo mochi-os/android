@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">நாட்காட்டி</string>
     <string name="calendars_event_allday">நாள் முழுவதும்</string>
     <string name="calendars_event_finish">முடிவு</string>
-    <string name="calendars_event_timezone">நேர மண்டலம்</string>
     <string name="calendars_event_repeat">மீண்டும் நிகழ்வது</string>
     <string name="calendars_event_reminder">நினைவூட்டல்</string>
     <string name="calendars_event_recurring">மீண்டும் நிகழ்கிறது</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d நிமிடம்</item>
         <item quantity="other">%1$d நிமிடங்கள்</item>
     </plurals>
+    <string name="calendars_preferences_zones">நிகழ்வுகளை அவற்றின் சொந்த நேர மண்டலத்தில் காட்டு</string>
+    <string name="calendars_event_backwards">தொடங்குவதற்கு முன்பே முடிகிறது</string>
+    <string name="calendars_event_zone_start">தொடக்க நேர மண்டலம்</string>
+    <string name="calendars_event_zone_finish">முடிவு நேர மண்டலம்</string>
+    <string name="calendars_event_timezone">நேர மண்டலம்</string>
 </resources>

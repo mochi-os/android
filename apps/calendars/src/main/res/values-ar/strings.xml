@@ -92,7 +92,6 @@
     <string name="calendars_event_calendar">التقويم</string>
     <string name="calendars_event_allday">طوال اليوم</string>
     <string name="calendars_event_finish">النهاية</string>
-    <string name="calendars_event_timezone">المنطقة الزمنية</string>
     <string name="calendars_event_repeat">التكرار</string>
     <string name="calendars_event_reminder">التذكير</string>
     <string name="calendars_event_recurring">يتكرر</string>
@@ -149,4 +148,9 @@
         <item quantity="many">%1$d دقيقة</item>
         <item quantity="other">%1$d دقيقة</item>
     </plurals>
+    <string name="calendars_preferences_zones">إظهار الأحداث بمنطقتها الزمنية</string>
+    <string name="calendars_event_backwards">ينتهي قبل أن يبدأ</string>
+    <string name="calendars_event_zone_start">المنطقة الزمنية للبداية</string>
+    <string name="calendars_event_zone_finish">المنطقة الزمنية للنهاية</string>
+    <string name="calendars_event_timezone">المنطقة الزمنية</string>
 </resources>

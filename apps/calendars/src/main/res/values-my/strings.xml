@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">ပြက္ခဒိန်</string>
     <string name="calendars_event_allday">တစ်နေကုန်</string>
     <string name="calendars_event_finish">ပြီးဆုံး</string>
-    <string name="calendars_event_timezone">အချိန်ဇုန်</string>
     <string name="calendars_event_repeat">ထပ်ခါထပ်ခါ</string>
     <string name="calendars_event_reminder">သတိပေးချက်</string>
     <string name="calendars_event_recurring">ထပ်ခါထပ်ခါ ဖြစ်သည်</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d မိနစ်</item>
     </plurals>
+    <string name="calendars_preferences_zones">ပွဲများကို ၎င်းတို့၏ကိုယ်ပိုင်အချိန်ဇုန်ဖြင့် ပြရန်</string>
+    <string name="calendars_event_backwards">မစတင်မီ ပြီးဆုံးသည်</string>
+    <string name="calendars_event_zone_start">စတင်ချိန် အချိန်ဇုန်</string>
+    <string name="calendars_event_zone_finish">ပြီးဆုံးချိန် အချိန်ဇုန်</string>
+    <string name="calendars_event_timezone">အချိန်ဇုန်</string>
 </resources>

@@ -84,7 +84,6 @@
     <string name="calendars_event_allday">Ganztägig</string>
     <string name="calendars_event_start">Beginn</string>
     <string name="calendars_event_finish">Ende</string>
-    <string name="calendars_event_timezone">Zeitzone</string>
     <string name="calendars_event_repeat">Wiederholung</string>
     <string name="calendars_event_reminder">Erinnerung</string>
     <string name="calendars_event_recurring">Wiederholt sich</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d Minute</item>
         <item quantity="other">%1$d Minuten</item>
     </plurals>
+    <string name="calendars_preferences_zones">Termine in ihrer eigenen Zeitzone anzeigen</string>
+    <string name="calendars_event_backwards">Endet vor dem Beginn</string>
+    <string name="calendars_event_zone_start">Zeitzone des Beginns</string>
+    <string name="calendars_event_zone_finish">Zeitzone des Endes</string>
+    <string name="calendars_event_timezone">Zeitzone</string>
 </resources>

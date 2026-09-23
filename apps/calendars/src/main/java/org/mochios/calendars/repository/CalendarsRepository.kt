@@ -161,14 +161,20 @@ class CalendarsRepository @Inject constructor(
 
     /**
      * Every occurrence between [start] and [finish], epoch seconds, in the
-     * calendars named; an empty [calendars] means all of them. The second of
-     * the pair says the range held more than the server will list.
+     * calendars named; an empty [calendars] means all of them. [timezone] is
+     * the IANA zone the phone draws in, so the server reads floating times
+     * and day boundaries the way the views do. The second of the pair says
+     * the range held more than the server will list.
      */
-    suspend fun listEvents(start: Long, finish: Long, calendars: List<String>): Pair<List<Instance>, Boolean> =
-        call {
-            val body = api.listEvents(start, finish, calendars.joinToString(",")).unwrap()
-            body.instances to body.truncated
-        }
+    suspend fun listEvents(
+        start: Long,
+        finish: Long,
+        calendars: List<String>,
+        timezone: String,
+    ): Pair<List<Instance>, Boolean> = call {
+        val body = api.listEvents(start, finish, calendars.joinToString(","), timezone).unwrap()
+        body.instances to body.truncated
+    }
 
     /**
      * Where the named calendars' events begin and end; an empty [calendars]

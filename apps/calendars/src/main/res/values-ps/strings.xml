@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">کالنډر</string>
     <string name="calendars_event_allday">ټوله ورځ</string>
     <string name="calendars_event_finish">پای</string>
-    <string name="calendars_event_timezone">د وخت سیمه</string>
     <string name="calendars_event_repeat">تکرار</string>
     <string name="calendars_event_reminder">یادونه</string>
     <string name="calendars_event_recurring">تکرارېږي</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d دقیقه</item>
         <item quantity="other">%1$d دقیقې</item>
     </plurals>
+    <string name="calendars_preferences_zones">پېښې د خپلې وخت سیمې له مخې وښایاست</string>
+    <string name="calendars_event_backwards">له پیل مخکې پای ته رسېږي</string>
+    <string name="calendars_event_zone_start">د پیل وخت سیمه</string>
+    <string name="calendars_event_zone_finish">د پای وخت سیمه</string>
+    <string name="calendars_event_timezone">د وخت زون</string>
 </resources>

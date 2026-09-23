@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">تقویم</string>
     <string name="calendars_event_allday">تمام‌روز</string>
     <string name="calendars_event_finish">پایان</string>
-    <string name="calendars_event_timezone">منطقه زمانی</string>
     <string name="calendars_event_repeat">تکرار</string>
     <string name="calendars_event_reminder">یادآور</string>
     <string name="calendars_event_recurring">تکرار می‌شود</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d دقیقه</item>
         <item quantity="other">%1$d دقیقه</item>
     </plurals>
+    <string name="calendars_preferences_zones">نمایش رویدادها در منطقهٔ زمانی خودشان</string>
+    <string name="calendars_event_backwards">پیش از شروع پایان می‌یابد</string>
+    <string name="calendars_event_zone_start">منطقهٔ زمانی شروع</string>
+    <string name="calendars_event_zone_finish">منطقهٔ زمانی پایان</string>
+    <string name="calendars_event_timezone">منطقه زمانی</string>
 </resources>

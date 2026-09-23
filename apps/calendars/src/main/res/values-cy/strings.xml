@@ -92,7 +92,6 @@
     <string name="calendars_event_calendar">Calendr</string>
     <string name="calendars_event_allday">Trwy\'r dydd</string>
     <string name="calendars_event_finish">Diwedd</string>
-    <string name="calendars_event_timezone">Parth amser</string>
     <string name="calendars_event_repeat">Ailadrodd</string>
     <string name="calendars_event_reminder">Nodyn atgoffa</string>
     <string name="calendars_event_recurring">Yn ailadrodd</string>
@@ -149,4 +148,9 @@
         <item quantity="many">%1$d munud</item>
         <item quantity="other">%1$d munud</item>
     </plurals>
+    <string name="calendars_preferences_zones">Dangos digwyddiadau yn eu cylchfa amser eu hunain</string>
+    <string name="calendars_event_backwards">Yn gorffen cyn iddo ddechrau</string>
+    <string name="calendars_event_zone_start">Cylchfa amser dechrau</string>
+    <string name="calendars_event_zone_finish">Cylchfa amser gorffen</string>
+    <string name="calendars_event_timezone">Cylchfa amser</string>
 </resources>

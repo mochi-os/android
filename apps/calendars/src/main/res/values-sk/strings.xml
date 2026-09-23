@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalendár</string>
     <string name="calendars_event_allday">Celý deň</string>
     <string name="calendars_event_finish">Koniec</string>
-    <string name="calendars_event_timezone">Časové pásmo</string>
     <string name="calendars_event_repeat">Opakovanie</string>
     <string name="calendars_event_reminder">Pripomenutie</string>
     <string name="calendars_event_recurring">Opakuje sa</string>
@@ -140,4 +139,9 @@
         <item quantity="few">%1$d minúty</item>
         <item quantity="other">%1$d minút</item>
     </plurals>
+    <string name="calendars_preferences_zones">Zobrazovať udalosti v ich vlastnom časovom pásme</string>
+    <string name="calendars_event_backwards">Končí skôr, ako začne</string>
+    <string name="calendars_event_zone_start">Časové pásmo začiatku</string>
+    <string name="calendars_event_zone_finish">Časové pásmo konca</string>
+    <string name="calendars_event_timezone">Časové pásmo</string>
 </resources>

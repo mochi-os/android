@@ -84,7 +84,6 @@
     <string name="calendars_event_allday">Hele dagen</string>
     <string name="calendars_event_start">Start</string>
     <string name="calendars_event_finish">Slut</string>
-    <string name="calendars_event_timezone">Tidszone</string>
     <string name="calendars_event_repeat">Gentagelse</string>
     <string name="calendars_event_reminder">Påmindelse</string>
     <string name="calendars_event_recurring">Gentages</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minutter</item>
     </plurals>
+    <string name="calendars_preferences_zones">Vis begivenheder i deres egen tidszone</string>
+    <string name="calendars_event_backwards">Slutter før den begynder</string>
+    <string name="calendars_event_zone_start">Starttidszone</string>
+    <string name="calendars_event_zone_finish">Sluttidszone</string>
+    <string name="calendars_event_timezone">Tidszone</string>
 </resources>

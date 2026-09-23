@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Kalender</string>
     <string name="calendars_event_allday">Heeldag</string>
     <string name="calendars_event_finish">Einde</string>
-    <string name="calendars_event_timezone">Tydsone</string>
     <string name="calendars_event_repeat">Herhaal</string>
     <string name="calendars_event_reminder">Herinnering</string>
     <string name="calendars_event_recurring">Herhaal</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minuut</item>
         <item quantity="other">%1$d minute</item>
     </plurals>
+    <string name="calendars_preferences_zones">Wys gebeure in hul eie tydsone</string>
+    <string name="calendars_event_backwards">Eindig voor dit begin</string>
+    <string name="calendars_event_zone_start">Begintydsone</string>
+    <string name="calendars_event_zone_finish">Eindtydsone</string>
+    <string name="calendars_event_timezone">Tydsone</string>
 </resources>

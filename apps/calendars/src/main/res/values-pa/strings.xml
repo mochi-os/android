@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">ਕੈਲੰਡਰ</string>
     <string name="calendars_event_allday">ਸਾਰਾ ਦਿਨ</string>
     <string name="calendars_event_finish">ਸਮਾਪਤੀ</string>
-    <string name="calendars_event_timezone">ਸਮਾਂ ਖੇਤਰ</string>
     <string name="calendars_event_repeat">ਦੁਹਰਾਓ</string>
     <string name="calendars_event_reminder">ਯਾਦ-ਦਹਾਨੀ</string>
     <string name="calendars_event_recurring">ਦੁਹਰਾਉਂਦਾ ਹੈ</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d ਮਿੰਟ</item>
         <item quantity="other">%1$d ਮਿੰਟ</item>
     </plurals>
+    <string name="calendars_preferences_zones">ਇਵੈਂਟਾਂ ਨੂੰ ਉਹਨਾਂ ਦੇ ਆਪਣੇ ਸਮਾਂ ਖੇਤਰ ਵਿੱਚ ਦਿਖਾਓ</string>
+    <string name="calendars_event_backwards">ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਖ਼ਤਮ ਹੋ ਜਾਂਦਾ ਹੈ</string>
+    <string name="calendars_event_zone_start">ਸ਼ੁਰੂਆਤ ਦਾ ਸਮਾਂ ਖੇਤਰ</string>
+    <string name="calendars_event_zone_finish">ਸਮਾਪਤੀ ਦਾ ਸਮਾਂ ਖੇਤਰ</string>
+    <string name="calendars_event_timezone">ਟਾਈਮ ਜ਼ੋਨ</string>
 </resources>

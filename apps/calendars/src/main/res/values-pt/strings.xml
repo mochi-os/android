@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Calendário</string>
     <string name="calendars_event_allday">Todo o dia</string>
     <string name="calendars_event_finish">Fim</string>
-    <string name="calendars_event_timezone">Fuso horário</string>
     <string name="calendars_event_repeat">Repetição</string>
     <string name="calendars_event_reminder">Lembrete</string>
     <string name="calendars_event_recurring">Repete-se</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minutos</item>
         <item quantity="other">%1$d minutos</item>
     </plurals>
+    <string name="calendars_preferences_zones">Mostrar os eventos no seu próprio fuso horário</string>
+    <string name="calendars_event_backwards">Termina antes de começar</string>
+    <string name="calendars_event_zone_start">Fuso horário de início</string>
+    <string name="calendars_event_zone_finish">Fuso horário de fim</string>
+    <string name="calendars_event_timezone">Fuso horário</string>
 </resources>

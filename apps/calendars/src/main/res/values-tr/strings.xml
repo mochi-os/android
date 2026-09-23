@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Takvim</string>
     <string name="calendars_event_allday">Tüm gün</string>
     <string name="calendars_event_finish">Bitiş</string>
-    <string name="calendars_event_timezone">Saat dilimi</string>
     <string name="calendars_event_repeat">Yineleme</string>
     <string name="calendars_event_reminder">Hatırlatıcı</string>
     <string name="calendars_event_recurring">Yineleniyor</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d dakika</item>
         <item quantity="other">%1$d dakika</item>
     </plurals>
+    <string name="calendars_preferences_zones">Etkinlikleri kendi saat dilimlerinde göster</string>
+    <string name="calendars_event_backwards">Başlamadan önce bitiyor</string>
+    <string name="calendars_event_zone_start">Başlangıç saat dilimi</string>
+    <string name="calendars_event_zone_finish">Bitiş saat dilimi</string>
+    <string name="calendars_event_timezone">Saat dilimi</string>
 </resources>

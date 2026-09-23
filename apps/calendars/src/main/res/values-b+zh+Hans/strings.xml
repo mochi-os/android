@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">日历</string>
     <string name="calendars_event_allday">全天</string>
     <string name="calendars_event_finish">结束</string>
-    <string name="calendars_event_timezone">时区</string>
     <string name="calendars_event_repeat">重复</string>
     <string name="calendars_event_reminder">提醒</string>
     <string name="calendars_event_recurring">重复进行</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d 分钟</item>
     </plurals>
+    <string name="calendars_preferences_zones">按事件自身的时区显示</string>
+    <string name="calendars_event_backwards">结束早于开始</string>
+    <string name="calendars_event_zone_start">开始时区</string>
+    <string name="calendars_event_zone_finish">结束时区</string>
+    <string name="calendars_event_timezone">时区</string>
 </resources>

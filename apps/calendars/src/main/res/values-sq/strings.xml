@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalendari</string>
     <string name="calendars_event_allday">Gjithë ditën</string>
     <string name="calendars_event_finish">Mbarimi</string>
-    <string name="calendars_event_timezone">Brezi orar</string>
     <string name="calendars_event_repeat">Përsëritja</string>
     <string name="calendars_event_reminder">Kujtesë</string>
     <string name="calendars_event_recurring">Përsëritet</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minutë</item>
         <item quantity="other">%1$d minuta</item>
     </plurals>
+    <string name="calendars_preferences_zones">Shfaq ngjarjet në zonën e tyre kohore</string>
+    <string name="calendars_event_backwards">Mbaron para se të fillojë</string>
+    <string name="calendars_event_zone_start">Zona kohore e fillimit</string>
+    <string name="calendars_event_zone_finish">Zona kohore e mbarimit</string>
+    <string name="calendars_event_timezone">Zona kohore</string>
 </resources>

@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">캘린더</string>
     <string name="calendars_event_allday">종일</string>
     <string name="calendars_event_finish">종료</string>
-    <string name="calendars_event_timezone">시간대</string>
     <string name="calendars_event_repeat">반복</string>
     <string name="calendars_event_reminder">알림</string>
     <string name="calendars_event_recurring">반복됨</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d분</item>
     </plurals>
+    <string name="calendars_preferences_zones">일정을 각자의 시간대로 표시</string>
+    <string name="calendars_event_backwards">시작하기 전에 종료됨</string>
+    <string name="calendars_event_zone_start">시작 시간대</string>
+    <string name="calendars_event_zone_finish">종료 시간대</string>
+    <string name="calendars_event_timezone">시간대</string>
 </resources>

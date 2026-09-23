@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">ಕ್ಯಾಲೆಂಡರ್</string>
     <string name="calendars_event_allday">ಇಡೀ ದಿನ</string>
     <string name="calendars_event_finish">ಅಂತ್ಯ</string>
-    <string name="calendars_event_timezone">ಸಮಯ ವಲಯ</string>
     <string name="calendars_event_repeat">ಪುನರಾವರ್ತನೆ</string>
     <string name="calendars_event_reminder">ಜ್ಞಾಪನೆ</string>
     <string name="calendars_event_recurring">ಪುನರಾವರ್ತಿಸುತ್ತದೆ</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d ನಿಮಿಷ</item>
         <item quantity="other">%1$d ನಿಮಿಷಗಳು</item>
     </plurals>
+    <string name="calendars_preferences_zones">ಈವೆಂಟ್‌ಗಳನ್ನು ಅವುಗಳ ಸ್ವಂತ ಸಮಯ ವಲಯದಲ್ಲಿ ತೋರಿಸಿ</string>
+    <string name="calendars_event_backwards">ಆರಂಭವಾಗುವ ಮೊದಲೇ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ</string>
+    <string name="calendars_event_zone_start">ಆರಂಭದ ಸಮಯ ವಲಯ</string>
+    <string name="calendars_event_zone_finish">ಅಂತ್ಯದ ಸಮಯ ವಲಯ</string>
+    <string name="calendars_event_timezone">ಸಮಯ ವಲಯ</string>
 </resources>

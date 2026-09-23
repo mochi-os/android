@@ -9,6 +9,9 @@ import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
+import org.mochios.calendars.model.Zone
+import java.time.Instant
+import java.time.ZoneId
 
 /** Whether an edit or a delete touches one occurrence or the whole series. */
 enum class Scope {
@@ -19,7 +22,9 @@ enum class Scope {
 /**
  * What the editor's fields say, as far as building an event's tree needs it.
  * [start] and [finish] are epoch seconds and [reminder] minutes before the
- * start, -1 for none.
+ * start, -1 for none. [zone] is the zone each end is written in: a flight is
+ * 10:00 Europe/London to 13:00 America/New_York, though most events have the
+ * same zone at both ends.
  *
  * [occurrence] is the occurrence the user opened, epoch seconds, 0 when the
  * event does not repeat; [series] is the master's own start. The form shows
@@ -31,7 +36,7 @@ data class EventForm(
     val start: Long = 0,
     val finish: Long = 0,
     val allday: Boolean = false,
-    val timezone: String = CalendarsMapping.UTC,
+    val zone: Zone = Zone(),
     val location: String = "",
     val description: String = "",
     val recurrence: Recurrence = Recurrence(),
@@ -39,6 +44,48 @@ data class EventForm(
     val occurrence: Long = 0,
     val series: Long = 0,
 )
+
+/**
+ * The zones a component was written in, which the editor opens it in:
+ * `DTSTART`'s `TZID` for the start and `DTEND`'s for the finish. A `DTEND`
+ * without one follows the start, and no `TZID` at all - UTC or floating -
+ * means the [user]'s own zone.
+ */
+fun written(component: EventComponent, user: String): Zone {
+    val start = component.property("DTSTART")?.parameter("TZID")?.takeIf { it.isNotBlank() } ?: user
+    val finish = component.property("DTEND")?.parameter("TZID")?.takeIf { it.isNotBlank() } ?: start
+    return Zone(start, finish)
+}
+
+/**
+ * Whether either end reads in another zone than the [user]'s own, which is
+ * when the editor shows the zones without being asked. A blank end reads in
+ * the user's zone.
+ */
+fun foreign(zone: Zone, user: String): Boolean =
+    zone.start.ifBlank { user } != user || zone.finish.ifBlank { user } != user
+
+/**
+ * The pair after the start zone is set to [start]: the finish zone follows
+ * while the two are still equal, and stops once it has been set apart.
+ */
+fun follow(zone: Zone, start: String): Zone =
+    Zone(start, if (zone.finish == zone.start) start else zone.finish)
+
+/**
+ * The instant that reads on the clock in [to] as [instant] does in [from],
+ * for a time the user typed in one zone and then moved to another: 10:00
+ * London becomes 10:00 New York, five hours later. A zone the platform does
+ * not know is read as the device's.
+ */
+fun moved(instant: Long, from: String, to: String): Long {
+    if (from == to) return instant
+    val local = Instant.ofEpochSecond(instant).atZone(zoneOf(from)).toLocalDateTime()
+    return local.atZone(zoneOf(to)).toEpochSecond()
+}
+
+private fun zoneOf(name: String): ZoneId =
+    runCatching { ZoneId.of(name) }.getOrDefault(ZoneId.systemDefault())
 
 /** The properties the editor owns; every other one is carried through. */
 private val MANAGED = setOf(
@@ -102,7 +149,8 @@ private fun matches(override: EventComponent, occurrence: Long): Boolean =
  * [recurrence] says whether this component owns the series' `RRULE`;
  * [occurrence] is non-zero for an override, whose `RECURRENCE-ID` it is.
  * [start] is the component's own start: the occurrence's for an override and
- * the master's for the series.
+ * the master's for the series. Each end is stamped in its own zone, so
+ * `DTSTART` and `DTEND` may carry different `TZID`s.
  */
 private fun component(
     form: EventForm,
@@ -111,13 +159,14 @@ private fun component(
     occurrence: Long,
     start: Long,
 ): EventComponent {
-    val zone = form.timezone.ifBlank { CalendarsMapping.UTC }
+    val zone = form.zone.start.ifBlank { CalendarsMapping.UTC }
+    val ends = form.zone.finish.ifBlank { zone }
     val finish = start + (form.finish - form.start)
     val properties = mutableListOf<EventProperty>()
     carried?.properties?.filterNot { it.name.uppercase() in MANAGED }?.let(properties::addAll)
     properties.add(property("SUMMARY", form.title.trim()))
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
-    properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, zone, form.allday))
+    properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
     if (form.description.isNotBlank()) properties.add(property("DESCRIPTION", form.description.trim()))
     if (recurrence) {

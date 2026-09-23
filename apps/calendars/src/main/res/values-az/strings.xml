@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Təqvim</string>
     <string name="calendars_event_allday">Bütün gün</string>
     <string name="calendars_event_finish">Son</string>
-    <string name="calendars_event_timezone">Saat qurşağı</string>
     <string name="calendars_event_repeat">Təkrar</string>
     <string name="calendars_event_reminder">Xatırlatma</string>
     <string name="calendars_event_recurring">Təkrarlanır</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d dəqiqə</item>
         <item quantity="other">%1$d dəqiqə</item>
     </plurals>
+    <string name="calendars_preferences_zones">Tədbirləri öz saat qurşağında göstər</string>
+    <string name="calendars_event_backwards">Başlamazdan əvvəl bitir</string>
+    <string name="calendars_event_zone_start">Başlanğıc saat qurşağı</string>
+    <string name="calendars_event_zone_finish">Bitmə saat qurşağı</string>
+    <string name="calendars_event_timezone">Saat qurşağı</string>
 </resources>

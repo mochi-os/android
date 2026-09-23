@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalenda</string>
     <string name="calendars_event_allday">Siku nzima</string>
     <string name="calendars_event_finish">Mwisho</string>
-    <string name="calendars_event_timezone">Saa za eneo</string>
     <string name="calendars_event_repeat">Kurudia</string>
     <string name="calendars_event_reminder">Kikumbusho</string>
     <string name="calendars_event_recurring">Hujirudia</string>
@@ -137,4 +136,9 @@
         <item quantity="one">Dakika %1$d</item>
         <item quantity="other">Dakika %1$d</item>
     </plurals>
+    <string name="calendars_preferences_zones">Onyesha matukio katika saa za eneo lao</string>
+    <string name="calendars_event_backwards">Inaisha kabla ya kuanza</string>
+    <string name="calendars_event_zone_start">Saa za eneo la kuanza</string>
+    <string name="calendars_event_zone_finish">Saa za eneo la kumaliza</string>
+    <string name="calendars_event_timezone">Saa za eneo</string>
 </resources>

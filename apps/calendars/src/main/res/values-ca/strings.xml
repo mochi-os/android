@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Calendari</string>
     <string name="calendars_event_allday">Tot el dia</string>
     <string name="calendars_event_finish">Fi</string>
-    <string name="calendars_event_timezone">Fus horari</string>
     <string name="calendars_event_repeat">Repetició</string>
     <string name="calendars_event_reminder">Recordatori</string>
     <string name="calendars_event_recurring">Es repeteix</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minuts</item>
     </plurals>
+    <string name="calendars_preferences_zones">Mostra els esdeveniments en la seva pròpia zona horària</string>
+    <string name="calendars_event_backwards">Acaba abans de començar</string>
+    <string name="calendars_event_zone_start">Zona horària d\'inici</string>
+    <string name="calendars_event_zone_finish">Zona horària de fi</string>
+    <string name="calendars_event_timezone">Zona horària</string>
 </resources>

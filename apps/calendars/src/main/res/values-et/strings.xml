@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Kalender</string>
     <string name="calendars_event_allday">Kogu päev</string>
     <string name="calendars_event_finish">Lõpp</string>
-    <string name="calendars_event_timezone">Ajavöönd</string>
     <string name="calendars_event_repeat">Kordus</string>
     <string name="calendars_event_reminder">Meeldetuletus</string>
     <string name="calendars_event_recurring">Kordub</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minutit</item>
     </plurals>
+    <string name="calendars_preferences_zones">Näita sündmusi nende endi ajavööndis</string>
+    <string name="calendars_event_backwards">Lõpeb enne algust</string>
+    <string name="calendars_event_zone_start">Alguse ajavöönd</string>
+    <string name="calendars_event_zone_finish">Lõpu ajavöönd</string>
+    <string name="calendars_event_timezone">Ajavöönd</string>
 </resources>

@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalendar</string>
     <string name="calendars_event_allday">Ähli gün</string>
     <string name="calendars_event_finish">Soňy</string>
-    <string name="calendars_event_timezone">Wagt zolagy</string>
     <string name="calendars_event_repeat">Gaýtalanma</string>
     <string name="calendars_event_reminder">Ýatlatma</string>
     <string name="calendars_event_recurring">Gaýtalanýar</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minut</item>
     </plurals>
+    <string name="calendars_preferences_zones">Wakalary öz wagt zolagynda görkez</string>
+    <string name="calendars_event_backwards">Başlamanka tamamlanýar</string>
+    <string name="calendars_event_zone_start">Başlangyç wagt zolagy</string>
+    <string name="calendars_event_zone_finish">Soňky wagt zolagy</string>
+    <string name="calendars_event_timezone">Wagt zonasy</string>
 </resources>

@@ -86,7 +86,6 @@
     <string name="calendars_event_calendar">יומן</string>
     <string name="calendars_event_allday">כל היום</string>
     <string name="calendars_event_finish">סיום</string>
-    <string name="calendars_event_timezone">אזור זמן</string>
     <string name="calendars_event_repeat">חזרה</string>
     <string name="calendars_event_reminder">תזכורת</string>
     <string name="calendars_event_recurring">חוזר</string>
@@ -140,4 +139,9 @@
         <item quantity="two">%1$d דקות</item>
         <item quantity="other">%1$d דקות</item>
     </plurals>
+    <string name="calendars_preferences_zones">הצג אירועים באזור הזמן שלהם</string>
+    <string name="calendars_event_backwards">מסתיים לפני שהתחיל</string>
+    <string name="calendars_event_zone_start">אזור זמן של ההתחלה</string>
+    <string name="calendars_event_zone_finish">אזור זמן של הסיום</string>
+    <string name="calendars_event_timezone">אזור זמן</string>
 </resources>

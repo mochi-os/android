@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kàlẹ́ńdà</string>
     <string name="calendars_event_allday">Gbogbo ọjọ́</string>
     <string name="calendars_event_finish">Ìparí</string>
-    <string name="calendars_event_timezone">Àgbègbè àkókò</string>
     <string name="calendars_event_repeat">Àtúnṣíṣe</string>
     <string name="calendars_event_reminder">Ìránnilétí</string>
     <string name="calendars_event_recurring">Ó ń tún ṣẹlẹ̀</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">Ìṣẹ́jú %1$d</item>
     </plurals>
+    <string name="calendars_preferences_zones">Fi àwọn ìṣẹ̀lẹ̀ hàn ní agbègbè àkókò tiwọn</string>
+    <string name="calendars_event_backwards">Ó parí kí ó tó bẹ̀rẹ̀</string>
+    <string name="calendars_event_zone_start">Agbègbè àkókò ìbẹ̀rẹ̀</string>
+    <string name="calendars_event_zone_finish">Agbègbè àkókò ìparí</string>
+    <string name="calendars_event_timezone">Agbègbè àkókò</string>
 </resources>

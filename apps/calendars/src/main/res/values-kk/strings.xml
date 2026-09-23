@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Күнтізбе</string>
     <string name="calendars_event_allday">Күні бойы</string>
     <string name="calendars_event_finish">Аяқталуы</string>
-    <string name="calendars_event_timezone">Сағат белдеуі</string>
     <string name="calendars_event_repeat">Қайталау</string>
     <string name="calendars_event_reminder">Еске салғыш</string>
     <string name="calendars_event_recurring">Қайталанады</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d минут</item>
         <item quantity="other">%1$d минут</item>
     </plurals>
+    <string name="calendars_preferences_zones">Оқиғаларды өз уақыт белдеуінде көрсету</string>
+    <string name="calendars_event_backwards">Басталмай тұрып аяқталады</string>
+    <string name="calendars_event_zone_start">Басталу уақыт белдеуі</string>
+    <string name="calendars_event_zone_finish">Аяқталу уақыт белдеуі</string>
+    <string name="calendars_event_timezone">Сағат белдеуі</string>
 </resources>

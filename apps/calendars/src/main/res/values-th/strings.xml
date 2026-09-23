@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">ปฏิทิน</string>
     <string name="calendars_event_allday">ทั้งวัน</string>
     <string name="calendars_event_finish">สิ้นสุด</string>
-    <string name="calendars_event_timezone">เขตเวลา</string>
     <string name="calendars_event_repeat">ทำซ้ำ</string>
     <string name="calendars_event_reminder">การเตือน</string>
     <string name="calendars_event_recurring">เกิดซ้ำ</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d นาที</item>
     </plurals>
+    <string name="calendars_preferences_zones">แสดงกิจกรรมตามเขตเวลาของกิจกรรมเอง</string>
+    <string name="calendars_event_backwards">สิ้นสุดก่อนเริ่มต้น</string>
+    <string name="calendars_event_zone_start">เขตเวลาเริ่มต้น</string>
+    <string name="calendars_event_zone_finish">เขตเวลาสิ้นสุด</string>
+    <string name="calendars_event_timezone">เขตเวลา</string>
 </resources>

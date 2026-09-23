@@ -76,7 +76,6 @@
     <string name="calendars_event_allday">Cały dzień</string>
     <string name="calendars_event_start">Początek</string>
     <string name="calendars_event_finish">Koniec</string>
-    <string name="calendars_event_timezone">Strefa czasowa</string>
     <string name="calendars_event_repeat">Powtarzanie</string>
     <string name="calendars_event_reminder">Przypomnienie</string>
     <string name="calendars_event_recurring">Powtarza się</string>
@@ -143,4 +142,9 @@
         <item quantity="many">%1$d minut</item>
         <item quantity="other">%1$d minuty</item>
     </plurals>
+    <string name="calendars_preferences_zones">Pokazuj wydarzenia w ich własnej strefie czasowej</string>
+    <string name="calendars_event_backwards">Kończy się, zanim się zacznie</string>
+    <string name="calendars_event_zone_start">Strefa czasowa początku</string>
+    <string name="calendars_event_zone_finish">Strefa czasowa końca</string>
+    <string name="calendars_event_timezone">Strefa czasowa</string>
 </resources>

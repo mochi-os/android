@@ -163,6 +163,7 @@ fun PreferencesDialog(
     var previous by rememberSaveable { mutableIntStateOf(preferences.multiweek.previous) }
     var duration by rememberSaveable { mutableIntStateOf(preferences.duration) }
     var reminder by rememberSaveable { mutableIntStateOf(preferences.reminder) }
+    var zones by rememberSaveable { mutableStateOf(preferences.zones) }
 
     val hours = (0..23).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
     val ends = (1..24).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
@@ -189,6 +190,7 @@ fun PreferencesDialog(
                     duration = duration,
                     reminder = reminder,
                     view = preferences.view,
+                    zones = zones,
                 ),
             )
         },
@@ -265,6 +267,11 @@ fun PreferencesDialog(
                     options = reminderOptions(),
                     selected = reminder.toString(),
                     onSelect = { reminder = it.toIntOrNull() ?: reminder },
+                )
+                LabeledSwitchRow(
+                    label = stringResource(R.string.calendars_preferences_zones),
+                    checked = zones,
+                    onCheckedChange = { zones = it },
                 )
             }
         },

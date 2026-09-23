@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Kaalaandarii</string>
     <string name="calendars_event_allday">Guyyaa guutuu</string>
     <string name="calendars_event_finish">Xumura</string>
-    <string name="calendars_event_timezone">Naannoo yeroo</string>
     <string name="calendars_event_repeat">Irra deebi\'uu</string>
     <string name="calendars_event_reminder">Yaadachiisa</string>
     <string name="calendars_event_recurring">Ni irra deebi\'a</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d daqiiqaa</item>
         <item quantity="other">%1$d daqiiqaa</item>
     </plurals>
+    <string name="calendars_preferences_zones">Taateewwan naannoo yeroo isaanii keessatti agarsiisi</string>
+    <string name="calendars_event_backwards">Osoo hin jalqabin xumurama</string>
+    <string name="calendars_event_zone_start">Naannoo yeroo jalqabaa</string>
+    <string name="calendars_event_zone_finish">Naannoo yeroo xumuraa</string>
+    <string name="calendars_event_timezone">Naannoo yeroo</string>
 </resources>

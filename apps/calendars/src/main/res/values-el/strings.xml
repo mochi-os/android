@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Ημερολόγιο</string>
     <string name="calendars_event_allday">Ολοήμερο</string>
     <string name="calendars_event_finish">Λήξη</string>
-    <string name="calendars_event_timezone">Ζώνη ώρας</string>
     <string name="calendars_event_repeat">Επανάληψη</string>
     <string name="calendars_event_reminder">Υπενθύμιση</string>
     <string name="calendars_event_recurring">Επαναλαμβάνεται</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d λεπτό</item>
         <item quantity="other">%1$d λεπτά</item>
     </plurals>
+    <string name="calendars_preferences_zones">Εμφάνιση συμβάντων στη δική τους ζώνη ώρας</string>
+    <string name="calendars_event_backwards">Λήγει πριν αρχίσει</string>
+    <string name="calendars_event_zone_start">Ζώνη ώρας έναρξης</string>
+    <string name="calendars_event_zone_finish">Ζώνη ώρας λήξης</string>
+    <string name="calendars_event_timezone">Ζώνη ώρας</string>
 </resources>

@@ -112,6 +112,9 @@ class CalendarViewModel @Inject constructor(
     /** The first day of a week for this user: 0 Sunday, 1 Monday, 6 Saturday. */
     private val weekStart: Int get() = preferencesManager.preferences.value.weekStartsOn
 
+    /** Whether the views show each event at its own wall-clock time, in its own zones. */
+    private val zones: Boolean get() = _uiState.value.preferences.zones
+
     /** True until the user has picked a view on this device. */
     private var untouched = LastViewedStore.get(context, CALENDARS_FEATURE).isNullOrBlank()
 
@@ -176,7 +179,11 @@ class CalendarViewModel @Inject constructor(
                     pages(state, reset)
                 } else {
                     val (start, finish) = range(state)
-                    val (instances, truncated) = repository.listEvents(start, finish, emptyList())
+                    // With events shown in their own zones, a day's
+                    // occurrences can begin or end up to a day away by the
+                    // user's clock, so the range reaches a day each side.
+                    val margin = if (state.preferences.zones) 86_400L else 0L
+                    val (instances, truncated) = repository.listEvents(start - margin, finish + margin, emptyList(), zone.id)
                     _uiState.value = _uiState.value.copy(
                         instances = ordered(instances),
                         truncated = truncated,
@@ -209,7 +216,7 @@ class CalendarViewModel @Inject constructor(
         var truncated = false
         for (index in first..last) {
             val span = page(state.anchor, index, zone)
-            val (instances, cut) = repository.listEvents(span.start, span.finish, emptyList())
+            val (instances, cut) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
             gathered.addAll(instances)
             truncated = truncated || cut
         }
@@ -254,7 +261,7 @@ class CalendarViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(paging = true)
             try {
                 val span = page(state.anchor, index, zone)
-                val (instances, truncated) = repository.listEvents(span.start, span.finish, emptyList())
+                val (instances, truncated) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
                 val current = _uiState.value
                 _uiState.value = current.copy(
                     // Merged rather than appended: a multi-day occurrence
@@ -382,6 +389,7 @@ class CalendarViewModel @Inject constructor(
                 multiweek = value.multiweek,
                 duration = value.duration,
                 reminder = value.reminder,
+                zones = value.zones,
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
@@ -505,25 +513,25 @@ class CalendarViewModel @Inject constructor(
         else -> listOf(week(state.anchor))
     }
 
-    /** The day an occurrence belongs to, in the user's zone. */
+    /**
+     * The day an occurrence belongs to: an all-day one's own date, a timed
+     * one's start day in the user's zone, or in its own zone when the views
+     * show events in theirs.
+     */
     fun day(instance: Instance): LocalDate = when {
         instance.date != null -> runCatching { LocalDate.parse(instance.date) }
-            .getOrElse { java.time.Instant.ofEpochSecond(instance.start).atZone(zone).toLocalDate() }
-        else -> java.time.Instant.ofEpochSecond(instance.start).atZone(zone).toLocalDate()
+            .getOrElse { days(instance, zone, zones).first }
+        else -> days(instance, zone, zones).first
     }
 
     /** The last day an occurrence covers, for a chip stretched across days. */
     fun finish(instance: Instance): LocalDate {
         if (instance.date != null) return last(day(instance), instance.start, instance.finish)
-        val ends = java.time.Instant.ofEpochSecond(maxOf(instance.finish, instance.start)).atZone(zone)
-        // A range that ends exactly at midnight belongs to the day before.
-        val date = ends.toLocalDate()
-        return if (ends.toLocalTime() == java.time.LocalTime.MIDNIGHT && date.isAfter(day(instance))) {
-            date.minusDays(1)
-        } else {
-            date
-        }
+        return days(instance, zone, zones).second
     }
+
+    /** The block a timed occurrence puts on [day], null when it does not touch the day. */
+    fun cut(instance: Instance, day: LocalDate): Cut? = cut(instance, day, zone, zones)
 
     /** Whether an occurrence touches [day], a multi-day one on every day it spans. */
     fun covers(instance: Instance, day: LocalDate): Boolean {
@@ -541,6 +549,9 @@ class CalendarViewModel @Inject constructor(
 
     /** The zone the screen draws in, for the views' own arithmetic. */
     fun timezone(): ZoneId = zone
+
+    /** Whether the views show each event in its own zones, for their clock text. */
+    fun zones(): Boolean = zones
 
     /** The first day of the week, for the views' column headers. */
     fun start(): Int = weekStart

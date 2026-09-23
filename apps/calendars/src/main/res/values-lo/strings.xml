@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">ປະຕິທິນ</string>
     <string name="calendars_event_allday">ຕະຫຼອດມື້</string>
     <string name="calendars_event_finish">ສິ້ນສຸດ</string>
-    <string name="calendars_event_timezone">ເຂດເວລາ</string>
     <string name="calendars_event_repeat">ການເຮັດຊ້ຳ</string>
     <string name="calendars_event_reminder">ການແຈ້ງເຕືອນ</string>
     <string name="calendars_event_recurring">ເຮັດຊ້ຳ</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d ນາທີ</item>
     </plurals>
+    <string name="calendars_preferences_zones">ສະແດງເຫດການໃນເຂດເວລາຂອງມັນເອງ</string>
+    <string name="calendars_event_backwards">ສິ້ນສຸດກ່ອນເລີ່ມຕົ້ນ</string>
+    <string name="calendars_event_zone_start">ເຂດເວລາເລີ່ມຕົ້ນ</string>
+    <string name="calendars_event_zone_finish">ເຂດເວລາສິ້ນສຸດ</string>
+    <string name="calendars_event_timezone">ເຂດເວລາ</string>
 </resources>

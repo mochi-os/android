@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">የቀን መቁጠሪያ</string>
     <string name="calendars_event_allday">ሙሉ ቀን</string>
     <string name="calendars_event_finish">መጨረሻ</string>
-    <string name="calendars_event_timezone">የሰዓት ክልል</string>
     <string name="calendars_event_repeat">ድግግሞሽ</string>
     <string name="calendars_event_reminder">አስታዋሽ</string>
     <string name="calendars_event_recurring">ይደገማል</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d ደቂቃ</item>
         <item quantity="other">%1$d ደቂቃዎች</item>
     </plurals>
+    <string name="calendars_preferences_zones">ክስተቶችን በራሳቸው የሰዓት ሰቅ አሳይ</string>
+    <string name="calendars_event_backwards">ከመጀመሩ በፊት ያበቃል</string>
+    <string name="calendars_event_zone_start">የመጀመሪያ የሰዓት ሰቅ</string>
+    <string name="calendars_event_zone_finish">የመጨረሻ የሰዓት ሰቅ</string>
+    <string name="calendars_event_timezone">የሰዓት ክልል</string>
 </resources>

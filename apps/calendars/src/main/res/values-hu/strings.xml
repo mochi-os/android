@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Naptár</string>
     <string name="calendars_event_allday">Egész nap</string>
     <string name="calendars_event_finish">Befejezés</string>
-    <string name="calendars_event_timezone">Időzóna</string>
     <string name="calendars_event_repeat">Ismétlés</string>
     <string name="calendars_event_reminder">Emlékeztető</string>
     <string name="calendars_event_recurring">Ismétlődik</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d perc</item>
         <item quantity="other">%1$d perc</item>
     </plurals>
+    <string name="calendars_preferences_zones">Események megjelenítése a saját időzónájukban</string>
+    <string name="calendars_event_backwards">Előbb ér véget, mint elkezdődik</string>
+    <string name="calendars_event_zone_start">Kezdés időzónája</string>
+    <string name="calendars_event_zone_finish">Befejezés időzónája</string>
+    <string name="calendars_event_timezone">Időzóna</string>
 </resources>

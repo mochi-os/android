@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">کیلنڈر</string>
     <string name="calendars_event_allday">پورا دن</string>
     <string name="calendars_event_finish">اختتام</string>
-    <string name="calendars_event_timezone">ٹائم زون</string>
     <string name="calendars_event_repeat">دہرائیں</string>
     <string name="calendars_event_reminder">یاد دہانی</string>
     <string name="calendars_event_recurring">دہرایا جاتا ہے</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d منٹ</item>
         <item quantity="other">%1$d منٹ</item>
     </plurals>
+    <string name="calendars_preferences_zones">ایونٹس کو ان کے اپنے ٹائم زون میں دکھائیں</string>
+    <string name="calendars_event_backwards">شروع ہونے سے پہلے ختم ہو جاتا ہے</string>
+    <string name="calendars_event_zone_start">آغاز کا ٹائم زون</string>
+    <string name="calendars_event_zone_finish">اختتام کا ٹائم زون</string>
+    <string name="calendars_event_timezone">ٹائم زون</string>
 </resources>

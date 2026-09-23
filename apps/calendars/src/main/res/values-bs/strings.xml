@@ -86,7 +86,6 @@
     <string name="calendars_event_calendar">Kalendar</string>
     <string name="calendars_event_allday">Cijeli dan</string>
     <string name="calendars_event_finish">Kraj</string>
-    <string name="calendars_event_timezone">Vremenska zona</string>
     <string name="calendars_event_repeat">Ponavljanje</string>
     <string name="calendars_event_reminder">Podsjetnik</string>
     <string name="calendars_event_recurring">Ponavlja se</string>
@@ -140,4 +139,9 @@
         <item quantity="few">%1$d minute</item>
         <item quantity="other">%1$d minuta</item>
     </plurals>
+    <string name="calendars_preferences_zones">Prikaži događaje u njihovoj vremenskoj zoni</string>
+    <string name="calendars_event_backwards">Završava prije nego što počne</string>
+    <string name="calendars_event_zone_start">Vremenska zona početka</string>
+    <string name="calendars_event_zone_finish">Vremenska zona kraja</string>
+    <string name="calendars_event_timezone">Vremenska zona</string>
 </resources>

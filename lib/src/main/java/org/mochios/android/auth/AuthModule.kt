@@ -27,4 +27,10 @@ object AuthModule {
     fun provideTokenApi(retrofit: Retrofit): TokenApi {
         return retrofit.create(TokenApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideShellApi(retrofit: Retrofit): ShellApi {
+        return retrofit.create(ShellApi::class.java)
+    }
 }

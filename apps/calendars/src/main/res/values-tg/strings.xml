@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Тақвим</string>
     <string name="calendars_event_allday">Тамоми рӯз</string>
     <string name="calendars_event_finish">Анҷом</string>
-    <string name="calendars_event_timezone">Минтақаи вақт</string>
     <string name="calendars_event_repeat">Такрор</string>
     <string name="calendars_event_reminder">Ёдоварӣ</string>
     <string name="calendars_event_recurring">Такрор мешавад</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d дақиқа</item>
         <item quantity="other">%1$d дақиқа</item>
     </plurals>
+    <string name="calendars_preferences_zones">Рӯйдодҳоро дар минтақаи вақти худашон нишон додан</string>
+    <string name="calendars_event_backwards">Пеш аз оғоз ба анҷом мерасад</string>
+    <string name="calendars_event_zone_start">Минтақаи вақти оғоз</string>
+    <string name="calendars_event_zone_finish">Минтақаи вақти анҷом</string>
+    <string name="calendars_event_timezone">Минтақаи вақт</string>
 </resources>

@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">ڕۆژژمێر</string>
     <string name="calendars_event_allday">هەموو ڕۆژ</string>
     <string name="calendars_event_finish">کۆتایی</string>
-    <string name="calendars_event_timezone">هەرێمی کات</string>
     <string name="calendars_event_repeat">دووبارەکردنەوە</string>
     <string name="calendars_event_reminder">بیرخەرەوە</string>
     <string name="calendars_event_recurring">دووبارە دەبێتەوە</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d خولەک</item>
         <item quantity="other">%1$d خولەک</item>
     </plurals>
+    <string name="calendars_preferences_zones">ڕووداوەکان لە ناوچەی کاتی خۆیاندا پیشان بدە</string>
+    <string name="calendars_event_backwards">پێش دەستپێکردن کۆتایی دێت</string>
+    <string name="calendars_event_zone_start">ناوچەی کاتی دەستپێک</string>
+    <string name="calendars_event_zone_finish">ناوچەی کاتی کۆتایی</string>
+    <string name="calendars_event_timezone">هەرێمی کات</string>
 </resources>

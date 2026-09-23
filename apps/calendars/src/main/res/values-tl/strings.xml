@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalendaryo</string>
     <string name="calendars_event_allday">Buong araw</string>
     <string name="calendars_event_finish">Katapusan</string>
-    <string name="calendars_event_timezone">Time zone</string>
     <string name="calendars_event_repeat">Pag-ulit</string>
     <string name="calendars_event_reminder">Paalala</string>
     <string name="calendars_event_recurring">Umuulit</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minuto</item>
         <item quantity="other">%1$d minuto</item>
     </plurals>
+    <string name="calendars_preferences_zones">Ipakita ang mga kaganapan sa sarili nilang time zone</string>
+    <string name="calendars_event_backwards">Nagtatapos bago magsimula</string>
+    <string name="calendars_event_zone_start">Time zone ng simula</string>
+    <string name="calendars_event_zone_finish">Time zone ng wakas</string>
+    <string name="calendars_event_timezone">Time zone</string>
 </resources>

@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalender</string>
     <string name="calendars_event_allday">Heldag</string>
     <string name="calendars_event_finish">Slut</string>
-    <string name="calendars_event_timezone">Tidszon</string>
     <string name="calendars_event_repeat">Upprepning</string>
     <string name="calendars_event_reminder">Påminnelse</string>
     <string name="calendars_event_recurring">Upprepas</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minut</item>
         <item quantity="other">%1$d minuter</item>
     </plurals>
+    <string name="calendars_preferences_zones">Visa händelser i deras egen tidszon</string>
+    <string name="calendars_event_backwards">Slutar innan den börjar</string>
+    <string name="calendars_event_zone_start">Tidszon för start</string>
+    <string name="calendars_event_zone_finish">Tidszon för slut</string>
+    <string name="calendars_event_timezone">Tidszon</string>
 </resources>

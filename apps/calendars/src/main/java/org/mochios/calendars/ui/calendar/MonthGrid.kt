@@ -70,7 +70,7 @@ fun MonthGrid(
 ) {
     val today = LocalDate.now(viewModel.timezone())
     var listing by remember { mutableStateOf<LocalDate?>(null) }
-    val byDay = remember(state.instances, state.hidden, weeks) {
+    val byDay = remember(state.instances, state.hidden, weeks, state.preferences.zones) {
         weeks.flatMap { week -> (0 until 7).map { week.plusDays(it.toLong()) } }
             .associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
     }
@@ -223,7 +223,9 @@ fun AgendaList(
                     .any { it.contains(search, ignoreCase = true) }
         }
     }
-    val grouped = remember(matched) { matched.groupBy { viewModel.day(it) }.toSortedMap() }
+    val grouped = remember(matched, state.preferences.zones) {
+        matched.groupBy { viewModel.day(it) }.toSortedMap()
+    }
 
     // The foot coming into view asks for the next page; reaching the top
     // under the reader's own finger asks for the one before. The gesture is
@@ -300,10 +302,15 @@ private fun Paging() {
     }
 }
 
-/** One agenda row: time or "All day", the calendar's colour, title and place. */
+/**
+ * One agenda row: time or "All day", the calendar's colour, title and place.
+ * The clock reads in each end's own zone when the views show events in
+ * theirs.
+ */
 @Composable
 fun AgendaRow(instance: Instance, viewModel: CalendarViewModel, onClick: () -> Unit) {
     val format = LocalFormat.current
+    val zones = viewModel.zones()
     val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
     Row(
         modifier = Modifier
@@ -326,13 +333,13 @@ fun AgendaRow(instance: Instance, viewModel: CalendarViewModel, onClick: () -> U
                 text = if (instance.allday) {
                     stringResource(R.string.calendars_event_allday)
                 } else {
-                    format.formatTime(instance.start)
+                    format.formatTime(instance.start, clockZone(instance.zone?.start, zones))
                 },
                 style = MaterialTheme.typography.labelMedium,
             )
             if (!instance.allday && instance.finish > instance.start) {
                 Text(
-                    text = format.formatTime(instance.finish),
+                    text = format.formatTime(instance.finish, clockZone(instance.zone?.finish, zones)),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Kalandriye</string>
     <string name="calendars_event_allday">Tout jounen</string>
     <string name="calendars_event_finish">Fen</string>
-    <string name="calendars_event_timezone">Zòn lè</string>
     <string name="calendars_event_repeat">Repetisyon</string>
     <string name="calendars_event_reminder">Rapèl</string>
     <string name="calendars_event_recurring">Li repete</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minit</item>
         <item quantity="other">%1$d minit</item>
     </plurals>
+    <string name="calendars_preferences_zones">Montre evènman yo nan pwòp zòn lè yo</string>
+    <string name="calendars_event_backwards">Li fini anvan li kòmanse</string>
+    <string name="calendars_event_zone_start">Zòn lè kòmansman</string>
+    <string name="calendars_event_zone_finish">Zòn lè fen</string>
+    <string name="calendars_event_timezone">Zòn lè</string>
 </resources>

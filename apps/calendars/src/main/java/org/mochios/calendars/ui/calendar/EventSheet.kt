@@ -40,6 +40,7 @@ import org.mochios.android.util.flightLink
 import org.mochios.android.util.flightNumber
 import org.mochios.android.util.isHtml
 import org.mochios.android.util.webUri
+import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
@@ -49,15 +50,42 @@ import org.mochios.calendars.model.Instance
  * it is called, when it is, where it is, which calendar it is in and the
  * first of its description. Only a read-only occurrence - a subscription's
  * or a birthday - lands here; a tap on an editable one opens the editor.
+ *
+ * A timed occurrence written in another zone than the user's names the
+ * zones: with [zones] on, the span reads each end in its own zone with the
+ * zone's city after it; with it off, the span stays in the user's zone and a
+ * second line beneath reads the ends in their own.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventSheet(
     instance: Instance,
     calendar: Calendar?,
+    zones: Boolean = false,
     onDismiss: () -> Unit,
 ) {
     val format = LocalFormat.current
+    val user = format.preferences.timezone
+    val startZone = instance.zone?.start?.takeIf { it.isNotBlank() }
+    val finishZone = instance.zone?.finish?.takeIf { it.isNotBlank() }
+    val foreign = !instance.allday &&
+        ((startZone != null && startZone != user) || (finishZone != null && finishZone != user))
+
+    // The span read in a pair of zones, the user's own when none is given;
+    // with cities, each end names the city of its zone: "10:00 London –
+    // 13:00 New York".
+    fun describe(start: String?, finish: String?, cities: Boolean): String {
+        fun label(zone: String?) = if (cities) " " + zoneCity(zone ?: user) else ""
+        return format.formatDateTime(instance.start, start) + label(start) +
+            " – " + format.formatTime(instance.finish, finish) + label(finish)
+    }
+    val span = when {
+        instance.allday -> stringResource(R.string.calendars_event_allday) + " · " + format.formatDate(instance.start)
+        zones && foreign -> describe(startZone, finishZone, cities = true)
+        else -> describe(null, null, cities = false)
+    }
+    val own = if (foreign && !zones) describe(startZone, finishZone, cities = true) else null
+
     MochiBottomSheet(onDismissRequest = onDismiss) {
         Column(
             modifier = Modifier
@@ -81,13 +109,16 @@ fun EventSheet(
                 }
             }
             Text(
-                text = if (instance.allday) {
-                    stringResource(R.string.calendars_event_allday) + " · " + format.formatDate(instance.start)
-                } else {
-                    format.formatDateTime(instance.start) + " – " + format.formatTime(instance.finish)
-                },
+                text = span,
                 style = MaterialTheme.typography.bodyMedium,
             )
+            if (own != null) {
+                Text(
+                    text = own,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
             if (instance.location.isNotBlank()) {
                 // A flight number opens on the user's flight tracker; anything
                 // else is handed to whichever map app the phone has.

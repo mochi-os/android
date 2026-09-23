@@ -82,7 +82,6 @@
     <string name="calendars_event_calendar">ប្រតិទិន</string>
     <string name="calendars_event_allday">ពេញមួយថ្ងៃ</string>
     <string name="calendars_event_finish">ចុងបញ្ចប់</string>
-    <string name="calendars_event_timezone">តំបន់ម៉ោង</string>
     <string name="calendars_event_repeat">ធ្វើម្តងទៀត</string>
     <string name="calendars_event_reminder">ការរំលឹក</string>
     <string name="calendars_event_recurring">ធ្វើឡើងវិញ</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d នាទី</item>
     </plurals>
+    <string name="calendars_preferences_zones">បង្ហាញព្រឹត្តិការណ៍តាមល្វែងម៉ោងរបស់វា</string>
+    <string name="calendars_event_backwards">បញ្ចប់មុនពេលចាប់ផ្ដើម</string>
+    <string name="calendars_event_zone_start">ល្វែងម៉ោងចាប់ផ្ដើម</string>
+    <string name="calendars_event_zone_finish">ល្វែងម៉ោងបញ្ចប់</string>
+    <string name="calendars_event_timezone">តំបន់ម៉ោង</string>
 </resources>

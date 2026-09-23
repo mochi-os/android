@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalendaryu</string>
     <string name="calendars_event_allday">Tukuy p\'unchaw</string>
     <string name="calendars_event_finish">Tukukuy</string>
-    <string name="calendars_event_timezone">Pacha suyu</string>
     <string name="calendars_event_repeat">Kutipay</string>
     <string name="calendars_event_reminder">Yuyarichiy</string>
     <string name="calendars_event_recurring">Kutipakun</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minutu</item>
         <item quantity="other">%1$d minutu</item>
     </plurals>
+    <string name="calendars_preferences_zones">Ruraykunata kikin pacha suyunpi rikuchiy</string>
+    <string name="calendars_event_backwards">Manaraq qallarichkaptin tukun</string>
+    <string name="calendars_event_zone_start">Qallariy pacha suyu</string>
+    <string name="calendars_event_zone_finish">Tukukuy pacha suyu</string>
+    <string name="calendars_event_timezone">Pacha zona</string>
 </resources>

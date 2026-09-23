@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Salname</string>
     <string name="calendars_event_allday">Tevahiya rojê</string>
     <string name="calendars_event_finish">Dawî</string>
-    <string name="calendars_event_timezone">Herêma demê</string>
     <string name="calendars_event_repeat">Dubarekirin</string>
     <string name="calendars_event_reminder">Bîranîn</string>
     <string name="calendars_event_recurring">Dubare dibe</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d xulek</item>
         <item quantity="other">%1$d xulek</item>
     </plurals>
+    <string name="calendars_preferences_zones">Bûyeran di herêma demê ya wan de nîşan bide</string>
+    <string name="calendars_event_backwards">Berî ku dest pê bike diqede</string>
+    <string name="calendars_event_zone_start">Herêma demê ya destpêkê</string>
+    <string name="calendars_event_zone_finish">Herêma demê ya dawiyê</string>
+    <string name="calendars_event_timezone">Cona demê</string>
 </resources>

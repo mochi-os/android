@@ -12,6 +12,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.auth.ShellApi
+import org.mochios.android.auth.shellRequest
 import java.time.DayOfWeek
 import java.time.temporal.WeekFields
 import java.util.Locale
@@ -39,6 +41,7 @@ class PreferencesManager @Inject internal constructor(
     private val sessionManager: SessionManager,
     private val api: PreferencesApi,
     private val authRepository: AuthRepository,
+    private val shellApi: ShellApi,
 ) {
 
     private val _preferences = MutableStateFlow(resolveAuto(emptyMap()))
@@ -104,6 +107,10 @@ class PreferencesManager @Inject internal constructor(
             ?: authRepository.fetchToken("settings").getOrNull()
 
     suspend fun refresh() {
+        // Report the device's zone first, so a preference set to "auto" means
+        // this device's zone on the server as well as here. Failure is fine:
+        // the server then keeps whatever it last heard.
+        runCatching { shellApi.boot(shellRequest()) }
         val token = sessionManager.getToken("settings")
             ?: authRepository.fetchToken("settings").getOrNull()
             ?: return

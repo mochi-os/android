@@ -90,7 +90,6 @@
     <string name="calendars_event_calendar">Kalendarju</string>
     <string name="calendars_event_allday">Il-ġurnata kollha</string>
     <string name="calendars_event_finish">Tmiem</string>
-    <string name="calendars_event_timezone">Żona ta\' ħin</string>
     <string name="calendars_event_repeat">Repetizzjoni</string>
     <string name="calendars_event_reminder">Tfakkira</string>
     <string name="calendars_event_recurring">Jirrepeti</string>
@@ -146,4 +145,9 @@
         <item quantity="many">%1$d minuta</item>
         <item quantity="other">%1$d minuta</item>
     </plurals>
+    <string name="calendars_preferences_zones">Uri l-avvenimenti fiż-żona tal-ħin tagħhom stess</string>
+    <string name="calendars_event_backwards">Jispiċċa qabel ma jibda</string>
+    <string name="calendars_event_zone_start">Żona tal-ħin tal-bidu</string>
+    <string name="calendars_event_zone_finish">Żona tal-ħin tat-tmiem</string>
+    <string name="calendars_event_timezone">Żona ta\' ħin</string>
 </resources>

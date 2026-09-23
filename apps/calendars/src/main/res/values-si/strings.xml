@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">දින දර්ශනය</string>
     <string name="calendars_event_allday">මුළු දිනයම</string>
     <string name="calendars_event_finish">අවසානය</string>
-    <string name="calendars_event_timezone">වේලා කලාපය</string>
     <string name="calendars_event_repeat">පුනරාවර්තනය</string>
     <string name="calendars_event_reminder">මතක් කිරීම</string>
     <string name="calendars_event_recurring">පුනරාවර්තනය වේ</string>
@@ -137,4 +136,9 @@
         <item quantity="one">මිනිත්තු %1$dක්</item>
         <item quantity="other">මිනිත්තු %1$dක්</item>
     </plurals>
+    <string name="calendars_preferences_zones">සිදුවීම් ඒවායේම වේලා කලාපයෙන් පෙන්වන්න</string>
+    <string name="calendars_event_backwards">ආරම්භ වීමට පෙර අවසන් වේ</string>
+    <string name="calendars_event_zone_start">ආරම්භක වේලා කලාපය</string>
+    <string name="calendars_event_zone_finish">අවසාන වේලා කලාපය</string>
+    <string name="calendars_event_timezone">කාල කලාපය</string>
 </resources>

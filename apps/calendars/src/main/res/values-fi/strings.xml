@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Kalenteri</string>
     <string name="calendars_event_allday">Koko päivä</string>
     <string name="calendars_event_finish">Loppu</string>
-    <string name="calendars_event_timezone">Aikavyöhyke</string>
     <string name="calendars_event_repeat">Toisto</string>
     <string name="calendars_event_reminder">Muistutus</string>
     <string name="calendars_event_recurring">Toistuu</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d minuutti</item>
         <item quantity="other">%1$d minuuttia</item>
     </plurals>
+    <string name="calendars_preferences_zones">Näytä tapahtumat niiden omalla aikavyöhykkeellä</string>
+    <string name="calendars_event_backwards">Päättyy ennen alkamistaan</string>
+    <string name="calendars_event_zone_start">Alkamisajan aikavyöhyke</string>
+    <string name="calendars_event_zone_finish">Päättymisajan aikavyöhyke</string>
+    <string name="calendars_event_timezone">Aikavyöhyke</string>
 </resources>

@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Arapapaha</string>
     <string name="calendars_event_allday">Ára pukukue</string>
     <string name="calendars_event_finish">Paha</string>
-    <string name="calendars_event_timezone">Aravo zona</string>
     <string name="calendars_event_repeat">Jey jey</string>
     <string name="calendars_event_reminder">Mandu\'ara</string>
     <string name="calendars_event_recurring">Oiko jey</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d aravo\'i</item>
         <item quantity="other">%1$d aravo\'i</item>
     </plurals>
+    <string name="calendars_preferences_zones">Ehechauka tembiapokuéra ijaravo rendápe</string>
+    <string name="calendars_event_backwards">Opa oñepyrũ mboyve</string>
+    <string name="calendars_event_zone_start">Ñepyrũ aravo renda</string>
+    <string name="calendars_event_zone_finish">Paha aravo renda</string>
+    <string name="calendars_event_timezone">Aravo zona</string>
 </resources>

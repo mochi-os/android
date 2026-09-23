@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Ikhalenda</string>
     <string name="calendars_event_allday">Imini yonke</string>
     <string name="calendars_event_finish">Isiphelo</string>
-    <string name="calendars_event_timezone">Ummandla wexesha</string>
     <string name="calendars_event_repeat">Phinda</string>
     <string name="calendars_event_reminder">Isikhumbuzi</string>
     <string name="calendars_event_recurring">Iyaphindaphinda</string>
@@ -137,4 +136,9 @@
         <item quantity="one">Umzuzu ongu-%1$d</item>
         <item quantity="other">Imizuzu engu-%1$d</item>
     </plurals>
+    <string name="calendars_preferences_zones">Bonisa iziganeko kummandla wexesha wazo</string>
+    <string name="calendars_event_backwards">Iphela ingekaqali</string>
+    <string name="calendars_event_zone_start">Ummandla wexesha lokuqala</string>
+    <string name="calendars_event_zone_finish">Ummandla wexesha lokuphela</string>
+    <string name="calendars_event_timezone">Ummandla wexesha</string>
 </resources>

@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalénder</string>
     <string name="calendars_event_allday">Sadinten pinuh</string>
     <string name="calendars_event_finish">Réngsé</string>
-    <string name="calendars_event_timezone">Zona waktu</string>
     <string name="calendars_event_repeat">Ngulang</string>
     <string name="calendars_event_reminder">Pangéling</string>
     <string name="calendars_event_recurring">Diulang</string>
@@ -134,4 +133,9 @@
     <plurals name="calendars_minutes">
         <item quantity="other">%1$d menit</item>
     </plurals>
+    <string name="calendars_preferences_zones">Tampilkeun acara dina zona waktuna sorangan</string>
+    <string name="calendars_event_backwards">Réngsé saméméh dimimitian</string>
+    <string name="calendars_event_zone_start">Zona waktu mimiti</string>
+    <string name="calendars_event_zone_finish">Zona waktu réngsé</string>
+    <string name="calendars_event_timezone">Zona waktos</string>
 </resources>

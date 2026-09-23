@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">कॅलेंडर</string>
     <string name="calendars_event_allday">संपूर्ण दिवस</string>
     <string name="calendars_event_finish">समाप्ती</string>
-    <string name="calendars_event_timezone">टाइम झोन</string>
     <string name="calendars_event_repeat">पुनरावृत्ती</string>
     <string name="calendars_event_reminder">स्मरणपत्र</string>
     <string name="calendars_event_recurring">पुनरावृत्ती होते</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d मिनिट</item>
         <item quantity="other">%1$d मिनिटे</item>
     </plurals>
+    <string name="calendars_preferences_zones">इव्हेंट त्यांच्या स्वतःच्या टाइम झोनमध्ये दाखवा</string>
+    <string name="calendars_event_backwards">सुरू होण्यापूर्वीच संपतो</string>
+    <string name="calendars_event_zone_start">सुरुवातीचा टाइम झोन</string>
+    <string name="calendars_event_zone_finish">समाप्तीचा टाइम झोन</string>
+    <string name="calendars_event_timezone">टाइम झोन</string>
 </resources>

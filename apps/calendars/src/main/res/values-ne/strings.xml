@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">क्यालेन्डर</string>
     <string name="calendars_event_allday">दिनभरि</string>
     <string name="calendars_event_finish">अन्त्य</string>
-    <string name="calendars_event_timezone">समय क्षेत्र</string>
     <string name="calendars_event_repeat">दोहोर्‍याउने</string>
     <string name="calendars_event_reminder">सम्झना</string>
     <string name="calendars_event_recurring">दोहोरिन्छ</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d मिनेट</item>
         <item quantity="other">%1$d मिनेट</item>
     </plurals>
+    <string name="calendars_preferences_zones">कार्यक्रमहरू तिनीहरूको आफ्नै समय क्षेत्रमा देखाउनुहोस्</string>
+    <string name="calendars_event_backwards">सुरु हुनुअघि नै सकिन्छ</string>
+    <string name="calendars_event_zone_start">सुरुको समय क्षेत्र</string>
+    <string name="calendars_event_zone_finish">अन्त्यको समय क्षेत्र</string>
+    <string name="calendars_event_timezone">टाइम जोन</string>
 </resources>

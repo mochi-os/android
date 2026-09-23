@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Kalendar</string>
     <string name="calendars_event_allday">Kun boʻyi</string>
     <string name="calendars_event_finish">Tugash</string>
-    <string name="calendars_event_timezone">Vaqt mintaqasi</string>
     <string name="calendars_event_repeat">Takrorlanish</string>
     <string name="calendars_event_reminder">Eslatma</string>
     <string name="calendars_event_recurring">Takrorlanadi</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d daqiqa</item>
         <item quantity="other">%1$d daqiqa</item>
     </plurals>
+    <string name="calendars_preferences_zones">Tadbirlarni oʻz vaqt mintaqasida koʻrsatish</string>
+    <string name="calendars_event_backwards">Boshlanishidan oldin tugaydi</string>
+    <string name="calendars_event_zone_start">Boshlanish vaqt mintaqasi</string>
+    <string name="calendars_event_zone_finish">Tugash vaqt mintaqasi</string>
+    <string name="calendars_event_timezone">Vaqt mintaqasi</string>
 </resources>

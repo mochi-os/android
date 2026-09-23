@@ -90,7 +90,6 @@
     <string name="calendars_event_calendar">Féilire</string>
     <string name="calendars_event_allday">Lá iomlán</string>
     <string name="calendars_event_finish">Deireadh</string>
-    <string name="calendars_event_timezone">Crios ama</string>
     <string name="calendars_event_repeat">Athdhéanamh</string>
     <string name="calendars_event_reminder">Meabhrúchán</string>
     <string name="calendars_event_recurring">Athdhéantar é</string>
@@ -146,4 +145,9 @@
         <item quantity="many">%1$d nóiméad</item>
         <item quantity="other">%1$d nóiméad</item>
     </plurals>
+    <string name="calendars_preferences_zones">Taispeáin imeachtaí ina gcrios ama féin</string>
+    <string name="calendars_event_backwards">Críochnaíonn sé sula dtosaíonn sé</string>
+    <string name="calendars_event_zone_start">Crios ama tosaithe</string>
+    <string name="calendars_event_zone_finish">Crios ama críochnaithe</string>
+    <string name="calendars_event_timezone">Crios ama</string>
 </resources>

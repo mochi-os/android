@@ -88,7 +88,6 @@
     <string name="calendars_event_calendar">Mìosachan</string>
     <string name="calendars_event_allday">Fad an latha</string>
     <string name="calendars_event_finish">Deireadh</string>
-    <string name="calendars_event_timezone">Roinn-tìde</string>
     <string name="calendars_event_repeat">Ath-aithris</string>
     <string name="calendars_event_reminder">Cuimhneachan</string>
     <string name="calendars_event_recurring">Ag ath-aithris</string>
@@ -143,4 +142,9 @@
         <item quantity="few">%1$d mionaidean</item>
         <item quantity="other">%1$d mionaid</item>
     </plurals>
+    <string name="calendars_preferences_zones">Seall tachartasan san roinn-tìde aca fhèin</string>
+    <string name="calendars_event_backwards">Thig e gu crìch mus tòisich e</string>
+    <string name="calendars_event_zone_start">Roinn-tìde toisich</string>
+    <string name="calendars_event_zone_finish">Roinn-tìde crìche</string>
+    <string name="calendars_event_timezone">Roinn-tìde</string>
 </resources>

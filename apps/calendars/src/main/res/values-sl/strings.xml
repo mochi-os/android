@@ -76,7 +76,6 @@
     <string name="calendars_event_calendar">Koledar</string>
     <string name="calendars_event_allday">Ves dan</string>
     <string name="calendars_event_finish">Konec</string>
-    <string name="calendars_event_timezone">Časovni pas</string>
     <string name="calendars_event_repeat">Ponavljanje</string>
     <string name="calendars_event_reminder">Opomnik</string>
     <string name="calendars_event_recurring">Se ponavlja</string>
@@ -143,4 +142,9 @@
         <item quantity="few">%1$d minute</item>
         <item quantity="other">%1$d minut</item>
     </plurals>
+    <string name="calendars_preferences_zones">Prikaži dogodke v njihovem lastnem časovnem pasu</string>
+    <string name="calendars_event_backwards">Konča se, preden se začne</string>
+    <string name="calendars_event_zone_start">Časovni pas začetka</string>
+    <string name="calendars_event_zone_finish">Časovni pas konca</string>
+    <string name="calendars_event_timezone">Časovni pas</string>
 </resources>

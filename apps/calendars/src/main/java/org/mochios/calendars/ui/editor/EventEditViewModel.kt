@@ -23,6 +23,7 @@ import org.mochios.android.sync.EventComponent
 import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Event
+import org.mochios.calendars.model.Zone
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
@@ -32,7 +33,10 @@ import javax.inject.Inject
 /**
  * The event editor. [event] is null for a new event. [occurrence] is the
  * occurrence the user opened, epoch seconds, which "This event" detaches; it
- * is 0 for a new event or one that does not repeat.
+ * is 0 for a new event or one that does not repeat. [zone] is the zone each
+ * end is typed and written in, the user's own for a new event; [revealed]
+ * says the user asked to see the zones in this edit, which otherwise show
+ * only when an end reads in another zone than their own.
  */
 data class EditorUiState(
     val event: String? = null,
@@ -43,7 +47,8 @@ data class EditorUiState(
     val allday: Boolean = false,
     val start: Long = 0,
     val finish: Long = 0,
-    val timezone: String = "",
+    val zone: Zone = Zone(),
+    val revealed: Boolean = false,
     val location: String = "",
     val description: String = "",
     val recurrence: Recurrence = Recurrence(),
@@ -66,9 +71,6 @@ data class EditorUiState(
     val saved: Boolean = false,
     val deleted: Boolean = false,
 ) {
-    /** Whether the timezone field is worth showing: only when it is not the user's own. */
-    fun foreign(zone: String): Boolean = timezone.isNotBlank() && timezone != zone
-
     val writable: Boolean get() = calendars.firstOrNull { it.id == calendar }?.readonly != true
 }
 
@@ -127,7 +129,7 @@ class EventEditViewModel @Inject constructor(
                         ?: calendars.firstOrNull()?.id.orEmpty(),
                     start = begins,
                     finish = begins + length,
-                    timezone = zone,
+                    zone = Zone(zone, zone),
                     reminder = preferences?.reminder ?: 15,
                     isLoading = false,
                 )
@@ -170,7 +172,7 @@ class EventEditViewModel @Inject constructor(
             allday = allday,
             start = begins,
             finish = ends,
-            timezone = starts?.let { CalendarsMapping.zone(it) } ?: zone,
+            zone = written(shown, zone),
             location = shown.value("LOCATION"),
             description = shown.value("DESCRIPTION"),
             recurrence = recurrence(master?.value("RRULE")),
@@ -212,6 +214,22 @@ class EventEditViewModel @Inject constructor(
     }
 
     fun finish(value: Long) = edit { copy(finish = maxOf(value, start)) }
+
+    /**
+     * The zones the ends read in. A time typed is in its own zone, so an end
+     * whose zone changes keeps its clock reading and its instant moves; the
+     * finish may not then precede the start.
+     */
+    fun zone(value: Zone) = edit {
+        val begins = moved(start, zone.start, value.start)
+        val ends = moved(finish, zone.finish, value.finish)
+        copy(zone = value, start = begins, finish = maxOf(ends, begins))
+    }
+
+    /** Shows the zones for the rest of this edit; not an edit in itself. */
+    fun reveal() {
+        _uiState.value = _uiState.value.copy(revealed = true)
+    }
 
     private inline fun edit(change: EditorUiState.() -> EditorUiState) {
         _uiState.value = _uiState.value.change().copy(changed = true, error = null)
@@ -336,7 +354,7 @@ class EventEditViewModel @Inject constructor(
         start = state.start,
         finish = state.finish,
         allday = state.allday,
-        timezone = state.timezone.ifBlank { zone },
+        zone = Zone(state.zone.start.ifBlank { zone }, state.zone.finish.ifBlank { zone }),
         location = state.location,
         description = state.description,
         recurrence = state.recurrence,

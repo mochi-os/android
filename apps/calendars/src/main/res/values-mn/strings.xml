@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Хуанли</string>
     <string name="calendars_event_allday">Өдөржин</string>
     <string name="calendars_event_finish">Төгсгөл</string>
-    <string name="calendars_event_timezone">Цагийн бүс</string>
     <string name="calendars_event_repeat">Давтах</string>
     <string name="calendars_event_reminder">Сануулга</string>
     <string name="calendars_event_recurring">Давтагдана</string>
@@ -137,4 +136,9 @@
         <item quantity="one">%1$d минут</item>
         <item quantity="other">%1$d минут</item>
     </plurals>
+    <string name="calendars_preferences_zones">Үйл явдлыг өөрийнх нь цагийн бүсээр харуулах</string>
+    <string name="calendars_event_backwards">Эхлэхээс өмнө дуусна</string>
+    <string name="calendars_event_zone_start">Эхлэх цагийн бүс</string>
+    <string name="calendars_event_zone_finish">Дуусах цагийн бүс</string>
+    <string name="calendars_event_timezone">Цагийн бүс</string>
 </resources>

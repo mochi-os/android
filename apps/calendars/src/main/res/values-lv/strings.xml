@@ -86,7 +86,6 @@
     <string name="calendars_event_calendar">Kalendārs</string>
     <string name="calendars_event_allday">Visu dienu</string>
     <string name="calendars_event_finish">Beigas</string>
-    <string name="calendars_event_timezone">Laika josla</string>
     <string name="calendars_event_repeat">Atkārtošana</string>
     <string name="calendars_event_reminder">Atgādinājums</string>
     <string name="calendars_event_recurring">Atkārtojas</string>
@@ -140,4 +139,9 @@
         <item quantity="one">%1$d minūte</item>
         <item quantity="other">%1$d minūtes</item>
     </plurals>
+    <string name="calendars_preferences_zones">Rādīt notikumus to pašu laika joslā</string>
+    <string name="calendars_event_backwards">Beidzas, pirms sākas</string>
+    <string name="calendars_event_zone_start">Sākuma laika josla</string>
+    <string name="calendars_event_zone_finish">Beigu laika josla</string>
+    <string name="calendars_event_timezone">Laika josla</string>
 </resources>

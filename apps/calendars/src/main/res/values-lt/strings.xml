@@ -86,7 +86,6 @@
     <string name="calendars_event_calendar">Kalendorius</string>
     <string name="calendars_event_allday">Visą dieną</string>
     <string name="calendars_event_finish">Pabaiga</string>
-    <string name="calendars_event_timezone">Laiko juosta</string>
     <string name="calendars_event_repeat">Kartojimas</string>
     <string name="calendars_event_reminder">Priminimas</string>
     <string name="calendars_event_recurring">Kartojasi</string>
@@ -140,4 +139,9 @@
         <item quantity="few">%1$d minutės</item>
         <item quantity="other">%1$d minučių</item>
     </plurals>
+    <string name="calendars_preferences_zones">Rodyti įvykius jų pačių laiko juostoje</string>
+    <string name="calendars_event_backwards">Baigiasi anksčiau nei prasideda</string>
+    <string name="calendars_event_zone_start">Pradžios laiko juosta</string>
+    <string name="calendars_event_zone_finish">Pabaigos laiko juosta</string>
+    <string name="calendars_event_timezone">Laiko juosta</string>
 </resources>

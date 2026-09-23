@@ -222,6 +222,7 @@ fun CalendarScreen(
         EventSheet(
             instance = instance,
             calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
+            zones = uiState.preferences.zones,
             onDismiss = { selected = null },
         )
     }

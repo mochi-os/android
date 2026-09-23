@@ -83,6 +83,7 @@ data class PreferencesRequest(
     val duration: Int? = null,
     val reminder: Int? = null,
     val view: String? = null,
+    val zones: Boolean? = null,
 )
 
 /**
@@ -155,6 +156,7 @@ interface CalendarsApi {
         // contract-ok: the handler reads start and finish through range_input.
         @Query("finish") finish: Long,
         @Query("calendars") calendars: String,
+        @Query("timezone") timezone: String,
     ): Response<ApiResponse<InstancesResponse>>
 
     @GET("-/events/bounds")

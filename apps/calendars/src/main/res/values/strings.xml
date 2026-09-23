@@ -63,7 +63,10 @@
     <string name="calendars_event_allday">All day</string>
     <string name="calendars_event_start">Start</string>
     <string name="calendars_event_finish">End</string>
-    <string name="calendars_event_timezone">Timezone</string>
+    <string name="calendars_event_timezone">Time zone</string>
+    <string name="calendars_event_zone_start">Start time zone</string>
+    <string name="calendars_event_zone_finish">End time zone</string>
+    <string name="calendars_event_backwards">Ends before it starts</string>
     <string name="calendars_event_location">Location</string>
     <string name="calendars_event_repeat">Repeat</string>
     <string name="calendars_event_reminder">Reminder</string>
@@ -111,6 +114,7 @@
     <string name="calendars_multiweek_previous">Weeks before</string>
     <string name="calendars_default_duration">Default event length</string>
     <string name="calendars_default_reminder">Default reminder</string>
+    <string name="calendars_preferences_zones">Show events in their own time zone</string>
 
     <!-- ICS link -->
     <string name="calendars_link_title">Calendar link</string>

@@ -84,7 +84,6 @@
     <string name="calendars_event_calendar">Kalanda</string>
     <string name="calendars_event_allday">Duk rana</string>
     <string name="calendars_event_finish">Ƙarshe</string>
-    <string name="calendars_event_timezone">Yankin lokaci</string>
     <string name="calendars_event_repeat">Maimaitawa</string>
     <string name="calendars_event_reminder">Tunatarwa</string>
     <string name="calendars_event_recurring">Yana maimaituwa</string>
@@ -137,4 +136,9 @@
         <item quantity="one">Minti %1$d</item>
         <item quantity="other">Minti %1$d</item>
     </plurals>
+    <string name="calendars_preferences_zones">Nuna abubuwan da suka faru a yankin lokacinsu</string>
+    <string name="calendars_event_backwards">Yana ƙarewa kafin ya fara</string>
+    <string name="calendars_event_zone_start">Yankin lokacin farawa</string>
+    <string name="calendars_event_zone_finish">Yankin lokacin ƙarewa</string>
+    <string name="calendars_event_timezone">Yankin lokaci</string>
 </resources>
