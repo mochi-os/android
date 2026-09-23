@@ -181,7 +181,8 @@ class PreferencesManager @Inject internal constructor(
             density = Density.fromString(raw["density"]),
             radius = Radius.fromString(raw["radius"]),
             font = FontPref.fromString(raw["font"]),
-            fontSize = FontSizePref.fromString(raw["font_size"])
+            fontSize = FontSizePref.fromString(raw["font_size"]),
+            flights = Flights.fromString(raw["flights"]),
         )
     }
 
