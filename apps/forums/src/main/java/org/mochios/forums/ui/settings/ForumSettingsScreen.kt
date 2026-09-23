@@ -36,7 +36,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
@@ -94,7 +94,7 @@ fun ForumSettingsScreen(
     val selectedTab = tabs.firstOrNull { it.name == selectedTabKey } ?: SettingsTab.General
     val selectedIndex = tabs.indexOf(selectedTab).coerceAtLeast(0)
     val snackbarHostState = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources = LocalResources.current
     // The moderation tab has its own ViewModel, so its refused saves reach the
     // screen through here rather than through uiState.error.
     var moderationError by remember { mutableStateOf<MochiError?>(null) }
@@ -128,7 +128,7 @@ fun ForumSettingsScreen(
     // snackbar, mirroring feed settings.
     LaunchedEffect(uiState.actionMessage) {
         uiState.actionMessage?.let { messageRes ->
-            snackbarHostState.showSnackbar(context.getString(messageRes))
+            snackbarHostState.showSnackbar(resources.getString(messageRes))
             viewModel.clearActionMessage()
         }
     }

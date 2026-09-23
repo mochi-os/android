@@ -35,7 +35,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
@@ -79,7 +79,7 @@ fun FeedSettingsScreen(
 
     val snackbarHostState = remember { SnackbarHostState() }
 
-    val context = LocalContext.current
+    val resources = LocalResources.current
     LaunchedEffect(error) {
         error?.let {
             snackbarHostState.showSnackbar(it.userMessage())
@@ -89,7 +89,7 @@ fun FeedSettingsScreen(
 
     LaunchedEffect(actionMessage) {
         actionMessage?.let {
-            snackbarHostState.showSnackbar(context.getString(it))
+            snackbarHostState.showSnackbar(resources.getString(it))
             viewModel.clearActionMessage()
         }
     }

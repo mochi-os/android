@@ -82,7 +82,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -145,13 +145,13 @@ fun PostScreen(
     var showReportPost by remember { mutableStateOf(false) }
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
     val snackbar = remember { SnackbarHostState() }
-    val rejectContext = LocalContext.current
+    val resources = LocalResources.current
 
     // The forum owner refused this author's submission and the local copy has
     // gone with it; name the reason rather than letting it vanish.
     LaunchedEffect(uiState.rejected) {
         val rejected = uiState.rejected ?: return@LaunchedEffect
-        snackbar.showSnackbar(rejectContext.getString(rejected))
+        snackbar.showSnackbar(resources.getString(rejected))
         viewModel.clearRejected()
     }
     var showPostMenu by remember { mutableStateOf(false) }

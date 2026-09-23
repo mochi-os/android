@@ -46,6 +46,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -75,6 +76,7 @@ fun SellerSettingsScreen(
 ) {
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
+    val resources = LocalResources.current
     val snackbarHostState = remember { SnackbarHostState() }
 
     LaunchedEffect(Unit) {
@@ -83,7 +85,7 @@ fun SellerSettingsScreen(
                 is SellerSettingsEvent.Error ->
                     snackbarHostState.showSnackbar(event.error.userMessage())
                 is SellerSettingsEvent.Notice ->
-                    snackbarHostState.showSnackbar(context.getString(event.message))
+                    snackbarHostState.showSnackbar(resources.getString(event.message))
             }
         }
     }

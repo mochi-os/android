@@ -154,9 +154,9 @@ private fun methodStateOptions(opts: List<String>?): Set<String>? {
 
 @Composable
 private fun settingLabel(setting: SystemSetting): String {
-    val ctx = androidx.compose.ui.platform.LocalContext.current
+    val resources = androidx.compose.ui.platform.LocalResources.current
     val explicit = SETTING_LABEL_RESOURCES[setting.name]
-    if (explicit != null) return ctx.getString(explicit)
+    if (explicit != null) return resources.getString(explicit)
     return setting.name
         .split('_')
         .joinToString(" ") { word ->
@@ -214,10 +214,10 @@ private fun SystemSettingsContent(
 ) {
     // Resolve labels once so we can sort by user-visible name (matching the
     // web naturalCompare order).
-    val ctx = androidx.compose.ui.platform.LocalContext.current
-    val displayName = remember(state.settings) {
+    val resources = androidx.compose.ui.platform.LocalResources.current
+    val displayName = remember(state.settings, resources) {
         state.settings.associateBy({ it.name }) { setting ->
-            SETTING_LABEL_RESOURCES[setting.name]?.let { ctx.getString(it) }
+            SETTING_LABEL_RESOURCES[setting.name]?.let { resources.getString(it) }
                 ?: setting.name.split('_').joinToString(" ") { w ->
                     if (w.isEmpty()) w else w[0].uppercaseChar() + w.substring(1)
                 }

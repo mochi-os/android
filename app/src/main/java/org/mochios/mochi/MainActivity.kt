@@ -22,6 +22,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
@@ -637,8 +638,7 @@ open class MainActivity : ComponentActivity() {
      * @param route a destination's route pattern.
      * @return true when the stack holds one.
      */
-    private fun NavController.holds(route: String): Boolean =
-        currentBackStack.value.any { entry -> entry.destination.route == route }
+    private fun NavController.holds(route: String): Boolean = topmost(route) != null
 
     /**
      * Whether [route] is the screen already on top, arguments and all.
@@ -648,8 +648,24 @@ open class MainActivity : ComponentActivity() {
      */
     private fun NavController.isAt(route: String): Boolean {
         val entry = currentBackStackEntry ?: return false
-        return entry.destination.hasRoute(route, entry.arguments)
+        return topmost(route) === entry
     }
+
+    /**
+     * The entry nearest the top of the back stack that [route] matches, by the
+     * same destination-and-arguments test popBackStack(route) uses. The public
+     * way to ask: the back stack itself and that test are internal to the
+     * navigation library.
+     *
+     * @param route a route pattern or a filled route.
+     * @return the entry, or null when none on the stack matches.
+     */
+    private fun NavController.topmost(route: String): NavBackStackEntry? =
+        try {
+            getBackStackEntry(route)
+        } catch (_: IllegalArgumentException) {
+            null
+        }
 
     /**
      * Make [home] the parent of the destination a deep link is about to open:

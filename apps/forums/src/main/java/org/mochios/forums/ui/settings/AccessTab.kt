@@ -34,7 +34,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -67,7 +67,7 @@ private val ACCESS_LEVEL_FALLBACK_KEYS = listOf("moderate", "post", "comment", "
 fun AccessTab(viewModel: ForumSettingsViewModel) {
     val uiState by viewModel.uiState.collectAsState()
     var memberQuery by remember { mutableStateOf("") }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     LaunchedEffect(Unit) {
         viewModel.loadAccess()
@@ -112,7 +112,7 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
                 subjectAuthenticated = stringResource(R.string.forums_access_subject_authenticated),
                 anyoneDesc = stringResource(R.string.forums_access_anyone_desc),
                 authenticatedDesc = stringResource(R.string.forums_access_authenticated_desc),
-                selected = { name -> context.getString(R.string.forums_access_selected, name) }
+                selected = { name -> resources.getString(R.string.forums_access_selected, name) }
             ),
             users = uiState.userSearchResults.map { user ->
                 AccessCandidate(user.id, user.name.ifBlank { user.id })

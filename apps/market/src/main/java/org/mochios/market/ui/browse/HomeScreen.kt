@@ -57,6 +57,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -93,9 +94,10 @@ fun HomeScreen(
 
     // Confirm each save/unsave with a short toast.
     val context = LocalContext.current
+    val resources = LocalResources.current
     LaunchedEffect(Unit) {
         viewModel.saveEvents.collect { saved ->
-            val message = context.getString(
+            val message = resources.getString(
                 if (saved) R.string.market_listing_save
                 else R.string.market_listing_unsave,
             )

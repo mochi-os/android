@@ -60,6 +60,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
@@ -107,6 +108,7 @@ fun PageViewScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val resources = LocalResources.current
     val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
     val snackbar = remember { SnackbarHostState() }
@@ -448,7 +450,7 @@ fun PageViewScreen(
                     try {
                         viewModel.unsubscribe()
                         snackbar.showSnackbar(
-                            context.getString(R.string.wikis_unsubscribe_success)
+                            resources.getString(R.string.wikis_unsubscribe_success)
                         )
                         unsubscribeDialogOpen = false
                         navController.popBackStack(WikisApp.HOME, inclusive = false)
@@ -509,7 +511,7 @@ fun PageViewScreen(
             // use the fully localized success string so non-English users don't
             // get an English toast.
             scope.launch {
-                snackbar.showSnackbar(context.getString(R.string.wikis_rename_page_success))
+                snackbar.showSnackbar(resources.getString(R.string.wikis_rename_page_success))
             }
             navController.navigate(WikisApp.pageView(viewModel.wikiId, newSlug)) {
                 popUpTo(WikisApp.wikiHome(viewModel.wikiId)) { inclusive = false }

@@ -72,6 +72,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -177,11 +178,12 @@ fun ListingDetailScreen(
 
     val snackbarHostState = remember { SnackbarHostState() }
     val snackbarContext = LocalContext.current
+    val resources = LocalResources.current
     // Surface the view model's one-shot bid / report messages (e.g. instant
     // buy-it-now win, immediate proxy outbid) via the scaffold snackbar.
     LaunchedEffect(viewModel) {
         viewModel.snackbar.collect { message ->
-            val text = snackbarContext.getString(
+            val text = resources.getString(
                 message.messageRes,
                 *message.args.toTypedArray(),
             )
@@ -211,7 +213,7 @@ fun ListingDetailScreen(
                     )
                     if (outcome != AttachmentOpener.OpenResult.OPENED) {
                         snackbarHostState.showSnackbar(
-                            snackbarContext.getString(
+                            resources.getString(
                                 if (outcome == AttachmentOpener.OpenResult.NO_APP) {
                                     R.string.market_asset_no_app
                                 } else {

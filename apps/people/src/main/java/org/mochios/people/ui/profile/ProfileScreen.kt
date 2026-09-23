@@ -71,6 +71,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
@@ -116,6 +117,7 @@ fun ProfileScreen(
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
+    val resources = LocalResources.current
     var showPreview by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
@@ -125,7 +127,7 @@ fun ProfileScreen(
         val err = state.error ?: return@LaunchedEffect
         if (state.info != null) {
             val msg = err.message?.takeUnless { it.isBlank() }
-                ?: context.getString(R.string.people_profile_save_failed)
+                ?: resources.getString(R.string.people_profile_save_failed)
             scope.launch { snackbar.showSnackbar(msg) }
             viewModel.clearError()
         }

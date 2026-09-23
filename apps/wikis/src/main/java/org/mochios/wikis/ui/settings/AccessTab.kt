@@ -19,7 +19,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -54,7 +54,7 @@ fun AccessTab(
     viewModel: AccessTabViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     // Relay tab snackbars through the host view model so the parent
     // Scaffold's SnackbarHost surfaces them.
@@ -107,7 +107,7 @@ fun AccessTab(
                 subjectAuthenticated = stringResource(R.string.wikis_access_subject_authenticated),
                 anyoneDesc = stringResource(R.string.wikis_access_anyone_desc),
                 authenticatedDesc = stringResource(R.string.wikis_access_authenticated_desc),
-                selected = { name -> context.getString(R.string.wikis_access_selected, name) }
+                selected = { name -> resources.getString(R.string.wikis_access_selected, name) }
             ),
             // The fingerprint is the subject the server knows a person by,
             // where one is resolved.

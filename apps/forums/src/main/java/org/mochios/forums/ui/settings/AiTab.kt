@@ -16,7 +16,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Account
@@ -70,7 +70,7 @@ private fun AiSettingsContent(
 ) {
     val mode = settings.mode
     val account = settings.account
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     val modeOff = stringResource(R.string.forums_ai_mode_off)
     val modes = listOf(
@@ -112,7 +112,7 @@ private fun AiSettingsContent(
                         defaultLabel = promptDefault,
                         customLabel = promptCustom,
                         variablesLabel = { names ->
-                            context.getString(R.string.forums_ai_prompt_variables, names)
+                            resources.getString(R.string.forums_ai_prompt_variables, names)
                         },
                         onSaveCustom = { text -> onSetPrompt(type, text) },
                         onResetDefault = { onSetPrompt(type, "") },

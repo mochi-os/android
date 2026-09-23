@@ -33,7 +33,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -77,7 +77,7 @@ fun AccessTab(
     val searchResults by viewModel.userSearchResults.collectAsState()
     val groups by viewModel.groups.collectAsState()
     var memberQuery by remember { mutableStateOf("") }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     // Members are managed here, so only load them for a viewer who can.
     LaunchedEffect(permissions.manage) {
@@ -121,7 +121,7 @@ fun AccessTab(
                 subjectAuthenticated = stringResource(R.string.feeds_access_subject_authenticated),
                 anyoneDesc = stringResource(R.string.feeds_access_anyone_desc),
                 authenticatedDesc = stringResource(R.string.feeds_access_authenticated_desc),
-                selected = { name -> context.getString(R.string.feeds_access_selected, name) }
+                selected = { name -> resources.getString(R.string.feeds_access_selected, name) }
             ),
             users = searchResults.map { user ->
                 AccessCandidate(user.id, user.name.ifBlank { user.id })

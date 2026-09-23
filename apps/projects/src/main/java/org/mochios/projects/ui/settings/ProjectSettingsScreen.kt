@@ -34,7 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
@@ -68,13 +68,13 @@ fun ProjectSettingsScreen(
     // everyone else gets the read-only identity view with an unsubscribe action.
     val canManage = uiState.project?.owner?.local == true
     val snackbarHostState = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources = LocalResources.current
 
     // Confirm successful edits (field save, access change, revoke) via the
     // snackbar, mirroring the forum settings screen.
     LaunchedEffect(uiState.actionMessage) {
         uiState.actionMessage?.let { messageRes ->
-            snackbarHostState.showSnackbar(context.getString(messageRes))
+            snackbarHostState.showSnackbar(resources.getString(messageRes))
             viewModel.clearActionMessage()
         }
     }

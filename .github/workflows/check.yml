@@ -25,3 +25,9 @@ jobs:
       # each module's preBuild, so a catalogue gap fails here as it does locally.
       - name: Compile and test
         run: ./gradlew --console=plain compileDebugKotlin testDebugUnitTest
+
+      # Every module's lint, so a new error fails here rather than piling up
+      # unseen. --continue reports every failing module, not just the first;
+      # lint.xml holds the project's exceptions.
+      - name: Lint
+        run: ./gradlew --console=plain --continue lintDebug

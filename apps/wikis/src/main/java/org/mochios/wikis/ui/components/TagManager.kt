@@ -36,7 +36,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
@@ -79,7 +79,7 @@ fun TagManager(
     viewModel: TagManagerViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
+    val resources = LocalResources.current
     val scope = rememberCoroutineScope()
     var addDialogOpen by remember { mutableStateOf(false) }
     var pendingRemoval by remember { mutableStateOf<String?>(null) }
@@ -88,7 +88,7 @@ fun TagManager(
     if (snackbarHostState != null) {
         LaunchedEffect(snackbarHostState) {
             viewModel.snackbar.collect { msg ->
-                val text = context.getString(msg.messageRes, *msg.args.toTypedArray())
+                val text = resources.getString(msg.messageRes, *msg.args.toTypedArray())
                 scope.launch { snackbarHostState.showSnackbar(text) }
             }
         }
