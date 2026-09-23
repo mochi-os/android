@@ -514,6 +514,7 @@ class CalendarViewModel @Inject constructor(
 
     /** The last day an occurrence covers, for a chip stretched across days. */
     fun finish(instance: Instance): LocalDate {
+        if (instance.date != null) return last(day(instance), instance.start, instance.finish)
         val ends = java.time.Instant.ofEpochSecond(maxOf(instance.finish, instance.start)).atZone(zone)
         // A range that ends exactly at midnight belongs to the day before.
         val date = ends.toLocalDate()
@@ -556,3 +557,12 @@ fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (vie
     CalendarsSection.WEEK, CalendarsSection.MULTIWEEK -> anchor.plusWeeks(direction.toLong())
     else -> anchor.plusMonths(direction.toLong())
 }
+
+/**
+ * The last day an all-day occurrence covers: its date plus its whole days less
+ * one. By the date and the day count rather than the finish instant, so a
+ * device in another zone than the server expanded in does not draw it a day
+ * out.
+ */
+fun last(date: LocalDate, start: Long, finish: Long): LocalDate =
+    date.plusDays(maxOf(1L, Math.round((finish - start) / 86400.0)) - 1)

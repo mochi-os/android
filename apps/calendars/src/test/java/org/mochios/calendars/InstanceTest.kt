@@ -4,10 +4,13 @@
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 package org.mochios.calendars
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.ui.calendar.last
+import java.time.LocalDate
 
 /**
  * A tap opens the editor for what can be edited and the summary sheet for
@@ -28,5 +31,13 @@ class InstanceTest {
     @Test
     fun aBirthdayIsNotEvenWhenNotMarkedReadOnly() {
         assertFalse(Instance(event = Instance.BIRTHDAY + "contact", readonly = false).editable)
+    }
+
+    /** An all-day occurrence ends on its own date, however the zones differ. */
+    @Test
+    fun anAllDayOccurrenceEndsOnItsDate() {
+        val midnight = 1790035200L // 2026-09-22T00:00Z, as a server expanding in UTC sends it
+        assertEquals(LocalDate.of(2026, 9, 22), last(LocalDate.of(2026, 9, 22), midnight, midnight + 86400))
+        assertEquals(LocalDate.of(2026, 9, 23), last(LocalDate.of(2026, 9, 22), midnight, midnight + 2 * 86400))
     }
 }
