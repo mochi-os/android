@@ -138,26 +138,32 @@ fun TimeGrid(
 @Composable
 private fun DayHeading(day: LocalDate, today: LocalDate, width: androidx.compose.ui.unit.Dp, modifier: Modifier) {
     val current = day == today
-    Column(
+    val locale = LocalConfiguration.current.locales[0]
+    val pattern = remember(locale) { android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEd") }
+    Box(
         modifier = modifier
             .width(width)
             .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
-            .padding(vertical = 6.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
+            .padding(vertical = 4.dp),
+        contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = weekdayLabel(day),
-            style = MaterialTheme.typography.labelSmall,
-            color = if (current) MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.8f) else MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Text(
-            text = day.dayOfMonth.toString(),
-            style = MaterialTheme.typography.titleMedium,
+            text = heading(day, pattern, locale),
+            style = MaterialTheme.typography.titleSmall,
             fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
             color = if (current) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
         )
     }
 }
+
+/**
+ * A column header's weekday and day on one line, in the order the locale's
+ * own pattern gives: "Tue 22" in British English, "22 Tue" in American,
+ * "mar. 22" in French. [pattern] is the platform's best fit for a weekday
+ * and a day, which the caller asks for once per locale.
+ */
+fun heading(day: LocalDate, pattern: String, locale: java.util.Locale): String =
+    java.time.format.DateTimeFormatter.ofPattern(pattern, locale).format(day)
 
 /** The band above the grid, holding the all-day and multi-day occurrences. */
 @Composable
