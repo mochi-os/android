@@ -34,9 +34,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import java.net.URLEncoder
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.util.flightLink
 import org.mochios.android.util.flightNumber
+import org.mochios.android.util.isHtml
 import org.mochios.android.util.webUri
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
@@ -132,12 +134,19 @@ fun EventSheet(
                 )
             }
             if (instance.description.isNotBlank()) {
-                Text(
-                    text = instance.description,
-                    style = MaterialTheme.typography.bodyMedium,
-                    maxLines = 6,
-                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                )
+                if (isHtml(instance.description)) {
+                    // A subscription's description may be HTML, as Google's
+                    // are: rendered, so its breaks and emphasis show rather
+                    // than their tags.
+                    HtmlContent(html = instance.description, maxLines = 6)
+                } else {
+                    Text(
+                        text = instance.description,
+                        style = MaterialTheme.typography.bodyMedium,
+                        maxLines = 6,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                    )
+                }
             }
         }
     }
