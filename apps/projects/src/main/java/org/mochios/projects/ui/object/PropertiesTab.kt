@@ -70,6 +70,7 @@ import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.ProjectField
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.util.HIERARCHY_ROOT
+import org.mochios.projects.util.objectTitle
 import org.mochios.projects.util.parentAllowed
 import org.mochios.android.R as MochiR
 
@@ -271,15 +272,6 @@ private fun collectDescendants(objects: List<ProjectObject>, rootId: String): Se
     return result
 }
 
-private fun objectDisplayTitle(obj: ProjectObject, projectDetails: ProjectDetails): String {
-    val cls = projectDetails.classes.find { it.id == obj.objectClass }
-    val titleField = cls?.title.orEmpty()
-    val titleVal = if (titleField.isNotBlank()) obj.values[titleField]?.toString().orEmpty() else ""
-    if (titleVal.isNotBlank()) return titleVal
-    val prefix = projectDetails.project.prefix
-    return if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}"
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ParentPicker(
@@ -291,7 +283,8 @@ private fun ParentPicker(
     onSelect: (String) -> Unit
 ) {
     val noParentLabel = stringResource(R.string.projects_parent_none)
-    val displayText = currentParent?.let { objectDisplayTitle(it, projectDetails) } ?: noParentLabel
+    val prefix = projectDetails.project.prefix
+    val displayText = currentParent?.let { objectTitle(it, projectDetails.classes, prefix) } ?: noParentLabel
 
     // The label lives in the enclosing PropertyRow, so nothing here repeats it.
     if (!canWrite) {
@@ -357,7 +350,7 @@ private fun ParentPicker(
             }
             val q = query.trim().lowercase()
             parentOptions
-                .map { it to objectDisplayTitle(it, projectDetails) }
+                .map { it to objectTitle(it, projectDetails.classes, prefix) }
                 .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
                 .forEach { (parentObj, title) ->
                     MochiDropdownMenuItem(

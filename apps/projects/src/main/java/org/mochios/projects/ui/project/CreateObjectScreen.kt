@@ -49,9 +49,11 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
+import org.mochios.android.util.NaturalCompare
 import org.mochios.projects.util.creatableClasses
 import org.mochios.projects.util.defaultParent
 import org.mochios.projects.util.initialClass
+import org.mochios.projects.util.objectTitle
 import org.mochios.projects.util.parentRequired
 import org.mochios.android.R as MochiR
 
@@ -66,6 +68,7 @@ fun CreateObjectScreen(
     val details = uiState.details
 
     val classes = details?.classes.orEmpty()
+    val prefix = details?.project?.prefix.orEmpty()
     val hierarchy = details?.hierarchy.orEmpty()
     val objects = uiState.objects
     val activeView = uiState.activeView
@@ -113,15 +116,13 @@ fun CreateObjectScreen(
     // classes (hierarchy[selectedClassId]) intersected with the project's
     // existing objects.
     val allowedParentClasses = hierarchy[selectedClassId] ?: emptyList()
-    val parentCandidates = remember(objects, allowedParentClasses) {
+    val parentCandidates = remember(objects, allowedParentClasses, classes, prefix) {
         if (allowedParentClasses.isEmpty()) {
             emptyList()
         } else {
-            // The dropdown shows readable ids (PREFIX-number); ordering by the
-            // number gives their natural order, which a lexical sort would not
-            // (PROJ-10 would sort before PROJ-2).
+            // Named and ordered as the web dialog names and orders them.
             objects.filter { obj -> obj.objectClass in allowedParentClasses }
-                .sortedBy { obj -> obj.number }
+                .sortedWith(compareBy(NaturalCompare) { obj -> objectTitle(obj, classes, prefix) })
         }
     }
     var selectedParentId by remember { mutableStateOf<String?>(null) }
@@ -330,11 +331,10 @@ fun CreateObjectScreen(
                         // level.
                         if (parentCandidates.isNotEmpty()) {
                             Spacer(modifier = Modifier.height(16.dp))
-                            val selectedParentLabel = parentId?.let { id ->
-                                objects.firstOrNull { obj -> obj.id == id }
-                                    ?.let { obj -> obj.readable.ifBlank { obj.id } }
-                                    ?: id
-                            } ?: stringResource(R.string.projects_create_object_parent_none)
+                            val selectedParentLabel = parentId
+                                ?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
+                                ?.let { obj -> objectTitle(obj, classes, prefix) }
+                                ?: stringResource(R.string.projects_create_object_parent_none)
                             ExposedDropdownMenuBox(
                                 expanded = parentExpanded,
                                 onExpandedChange = { expanded -> parentExpanded = expanded }
@@ -379,7 +379,7 @@ fun CreateObjectScreen(
                                     }
                                     parentCandidates.forEach { candidate ->
                                         MochiDropdownMenuItem(
-                                            text = { Text(candidate.readable.ifBlank { candidate.id }) },
+                                            text = { Text(objectTitle(candidate, classes, prefix)) },
                                             onClick = {
                                                 selectedParentId = candidate.id
                                                 parentExpanded = false
