@@ -503,7 +503,7 @@ private fun BoardColumn(
                             columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
                             targetRowId = rowOption.id,
-                            onClick = { onObjectClick(obj.id) }
+                            onOpen = onObjectClick
                         )
                     }
                     item(key = "spacer_${rowOption.id}") {
@@ -544,7 +544,7 @@ private fun BoardColumn(
                             columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
                             targetRowId = "",
-                            onClick = { onObjectClick(obj.id) }
+                            onOpen = onObjectClick
                         )
                     }
                 }
@@ -587,7 +587,7 @@ private fun BoardColumn(
                             },
                             columnObjectsForDrop = sortedObjects,
                             targetColumnId = option.id,
-                            onClick = { onObjectClick(obj.id) }
+                            onOpen = onObjectClick
                         )
                     }
                 }
