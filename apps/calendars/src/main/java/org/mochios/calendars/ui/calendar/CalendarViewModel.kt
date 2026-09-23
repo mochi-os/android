@@ -302,9 +302,9 @@ class CalendarViewModel @Inject constructor(
         load()
     }
 
-    fun previous() = anchor(step(-1))
+    fun previous() = anchor(step(_uiState.value.view, _uiState.value.anchor, -1))
 
-    fun next() = anchor(step(1))
+    fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
 
     fun workweek(value: Boolean) {
         _uiState.value = _uiState.value.copy(workweek = value)
@@ -312,21 +312,6 @@ class CalendarViewModel @Inject constructor(
 
     fun search(value: String) {
         _uiState.value = _uiState.value.copy(search = value)
-    }
-
-    /** The anchor one step forward or back, by the current view's own unit. */
-    private fun step(direction: Int): LocalDate {
-        val state = _uiState.value
-        val anchor = state.anchor
-        return when (state.view) {
-            CalendarsSection.DAY -> anchor.plusDays(direction.toLong())
-            CalendarsSection.WEEK -> anchor.plusWeeks(direction.toLong())
-            CalendarsSection.MULTIWEEK -> anchor.plusWeeks((direction * state.preferences.multiweek.weeks).toLong())
-            CalendarsSection.MONTH -> anchor.plusMonths(direction.toLong())
-            // The list view pages as the reader scrolls, so its arrows move a
-            // month at a time rather than by a range it no longer has.
-            else -> anchor.plusMonths(direction.toLong())
-        }
     }
 
     // ---- the drawer ----
@@ -558,4 +543,16 @@ class CalendarViewModel @Inject constructor(
 
     /** The first day of the week, for the views' column headers. */
     fun start(): Int = weekStart
+}
+
+/**
+ * The anchor one step forward (1) or back (-1) by the view's own unit. The
+ * multiweek view steps a week at a time, so its span slides a row rather than
+ * jumping its length; the list view pages as the reader scrolls, so its arrows
+ * move a month at a time rather than by a range it no longer has.
+ */
+fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (view) {
+    CalendarsSection.DAY -> anchor.plusDays(direction.toLong())
+    CalendarsSection.WEEK, CalendarsSection.MULTIWEEK -> anchor.plusWeeks(direction.toLong())
+    else -> anchor.plusMonths(direction.toLong())
 }
