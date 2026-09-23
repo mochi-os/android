@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">ستاف</string>
     <string name="staff_accounts_action_ban_title">بلۆککردنی هەژمار</string>
     <string name="staff_accounts_action_suspend_title">هەژمار ڕابگرە</string>
     <string name="staff_accounts_action_unban_title">لابردنی قەدەغەکردن</string>

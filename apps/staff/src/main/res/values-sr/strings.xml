@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Особље</string>
     <string name="staff_accounts_action_ban_title">Забрани налог</string>
     <string name="staff_accounts_action_suspend_title">Суспендуј налог</string>
     <string name="staff_accounts_action_unban_title">Уклони забрану</string>

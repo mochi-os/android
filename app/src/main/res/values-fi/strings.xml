@@ -13,9 +13,9 @@
     <string name="launcher_chess">Shakki</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Sanat</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Tori</string>
     <string name="launcher_calendars">Kalenterit</string>
-    <string name="launcher_staff">Mochi Henkilökunta</string>
+    <string name="launcher_staff">Henkilökunta</string>
 
 
     <string name="app_name">Mochi</string>

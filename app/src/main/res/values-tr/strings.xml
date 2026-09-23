@@ -13,9 +13,9 @@
     <string name="launcher_chess">Satranç</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Kelimeler</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Pazar</string>
     <string name="launcher_calendars">Takvimler</string>
-    <string name="launcher_staff">Mochi Ekip</string>
+    <string name="launcher_staff">Ekip</string>
 
 
     <string name="app_name">Mochi</string>

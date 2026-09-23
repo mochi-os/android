@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Persunal</string>
     <string name="staff_accounts_action_ban_title">Ipprojbixxi l-kont</string>
     <string name="staff_accounts_action_suspend_title">Issospendi kont</string>
     <string name="staff_accounts_action_unban_title">Neħħi l-projbizzjoni</string>

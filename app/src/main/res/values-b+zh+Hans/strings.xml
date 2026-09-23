@@ -13,9 +13,9 @@
     <string name="launcher_chess">国际象棋</string>
     <string name="launcher_go">围棋</string>
     <string name="launcher_words">词语</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">市场</string>
     <string name="launcher_calendars">日历</string>
-    <string name="launcher_staff">Mochi 员工</string>
+    <string name="launcher_staff">员工</string>
 
 
     <string name="app_name">Mochi</string>

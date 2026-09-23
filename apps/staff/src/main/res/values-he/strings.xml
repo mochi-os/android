@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">צוות</string>
     <string name="staff_accounts_action_ban_title">חסום חשבון</string>
     <string name="staff_accounts_action_suspend_title">השעה חשבון</string>
     <string name="staff_accounts_action_unban_title">ביטול חסימה</string>

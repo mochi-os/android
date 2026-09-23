@@ -13,8 +13,8 @@
     <string name="launcher_chess">Xadrez</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Palavras</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_staff">Mochi Equipe</string>
+    <string name="launcher_market">Mercado</string>
+    <string name="launcher_staff">Equipe</string>
 
 
     <string name="app_name">Mochi</string>

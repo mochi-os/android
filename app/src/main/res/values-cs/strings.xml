@@ -13,9 +13,9 @@
     <string name="launcher_chess">Šachy</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Slova</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Tržiště</string>
     <string name="launcher_calendars">Kalendáře</string>
-    <string name="launcher_staff">Mochi Personál</string>
+    <string name="launcher_staff">Personál</string>
 
 
     <string name="app_name">Mochi</string>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">কর্মী</string>
     <string name="staff_accounts_action_ban_title">অ্যাকাউন্ট নিষিদ্ধ করুন</string>
     <string name="staff_accounts_action_suspend_title">অ্যাকাউন্ট স্থগিত করুন</string>
     <string name="staff_accounts_action_unban_title">নিষেধাজ্ঞা তুলে নিন</string>

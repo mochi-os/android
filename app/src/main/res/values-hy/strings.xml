@@ -13,9 +13,9 @@
     <string name="launcher_chess">Chess</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Words</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Շուկա</string>
     <string name="launcher_calendars">Օրացույցներ</string>
-    <string name="launcher_staff">Mochi Անձնակազմ</string>
+    <string name="launcher_staff">Անձնակազմ</string>
 
 
     <string name="app_name">Mochi</string>

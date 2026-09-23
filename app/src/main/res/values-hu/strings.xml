@@ -13,9 +13,9 @@
     <string name="launcher_chess">Sakk</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Szavak</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Piactér</string>
     <string name="launcher_calendars">Naptárak</string>
-    <string name="launcher_staff">Mochi Munkatársak</string>
+    <string name="launcher_staff">Munkatársak</string>
 
 
     <string name="app_name">Mochi</string>

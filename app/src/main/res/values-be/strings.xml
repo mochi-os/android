@@ -11,9 +11,9 @@
     <string name="launcher_chess">Шахматы</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Словы</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Рынак</string>
     <string name="launcher_calendars">Календары</string>
-    <string name="launcher_staff">Mochi Персанал</string>
+    <string name="launcher_staff">Персанал</string>
 
     <string name="app_name">Mochi</string>
 

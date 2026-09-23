@@ -13,9 +13,9 @@
     <string name="launcher_chess">Šachmatai</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Žodžiai</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Parduotuvė</string>
     <string name="launcher_calendars">Kalendoriai</string>
-    <string name="launcher_staff">Mochi Personalas</string>
+    <string name="launcher_staff">Personalas</string>
 
 
     <string name="app_name">Mochi</string>

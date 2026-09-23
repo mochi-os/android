@@ -11,9 +11,9 @@
     <string name="launcher_chess">দাবা</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">শব্দ</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">মার্কেট</string>
     <string name="launcher_calendars">ক্যালেন্ডারগুলি</string>
-    <string name="launcher_staff">Mochi কর্মী</string>
+    <string name="launcher_staff">কর্মী</string>
 
     <string name="app_name">Mochi</string>
 

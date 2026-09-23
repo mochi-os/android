@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">პერსონალი</string>
     <string name="staff_accounts_action_ban_title">ანგარიშის Ban</string>
     <string name="staff_accounts_action_suspend_title">ანგარიშის შეჩერება</string>
     <string name="staff_accounts_action_unban_title">აკრძალვის მოხსნა</string>

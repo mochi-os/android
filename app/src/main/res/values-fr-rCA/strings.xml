@@ -15,7 +15,7 @@
     <string name="launcher_chess">Échecs</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Mots</string>
-    <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_market">Marché</string>
+    <string name="launcher_staff">Personnel</string>
 
 </resources>

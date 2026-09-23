@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Staff</string>
-    <string name="launcher_staff">Mochi Staff</string>
+    <string name="launcher_staff">Қызметкерлер</string>
     <string name="staff_accounts_action_ban_title">Тіркелгіге тыйым салу</string>
     <string name="staff_accounts_action_suspend_title">Есептік жазбаны тоқтату</string>
     <string name="staff_accounts_action_unban_title">Бұғаттан шығару</string>

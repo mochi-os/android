@@ -13,9 +13,9 @@
     <string name="launcher_chess">Schaken</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Woorden</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Marktplaats</string>
     <string name="launcher_calendars">Agenda\'s</string>
-    <string name="launcher_staff">Mochi Personeel</string>
+    <string name="launcher_staff">Personeel</string>
 
 
     <string name="app_name">Mochi</string>

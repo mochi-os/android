@@ -13,9 +13,9 @@
     <string name="launcher_chess">Šahs</string>
     <string name="launcher_go">Go</string>
     <string name="launcher_words">Vārdi</string>
-    <string name="launcher_market">Mochi Market</string>
+    <string name="launcher_market">Tirgus</string>
     <string name="launcher_calendars">Kalendāri</string>
-    <string name="launcher_staff">Mochi Personāls</string>
+    <string name="launcher_staff">Personāls</string>
 
 
     <string name="app_name">Mochi</string>
