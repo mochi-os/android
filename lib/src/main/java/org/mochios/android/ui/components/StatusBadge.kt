@@ -12,6 +12,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -45,20 +49,33 @@ data class StatusTone(val background: Color, val foreground: Color) {
     }
 }
 
+/**
+ * The icon a [StatusBadge] of this tone shows when its caller names none, so
+ * every app's badge for the same kind of state carries the same glyph.
+ */
+val StatusTone.defaultIcon: ImageVector?
+    get() = when (this) {
+        StatusTone.Positive -> Icons.Outlined.CheckCircle
+        StatusTone.Waiting -> Icons.Outlined.Schedule
+        StatusTone.Negative -> Icons.Outlined.Block
+        else -> null
+    }
+
 /** How much room a [StatusBadge] takes: [Compact] in a list, [Regular] on a detail. */
 enum class StatusBadgeSize { Compact, Regular }
 
 /**
- * Pill-shaped status badge with an optional leading icon, sampled from the
- * market listing chips. The tones are fixed light-theme values, not theme
- * roles: a status colour carries meaning a server-driven scheme would override.
+ * Pill-shaped status badge with a leading icon, sampled from the market listing
+ * chips; the icon defaults to the tone's [defaultIcon] and `null` drops it.
+ * The tones are fixed light-theme values, not theme roles: a status colour
+ * carries meaning a server-driven scheme would override.
  */
 @Composable
 fun StatusBadge(
     label: String,
     tone: StatusTone,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: ImageVector? = tone.defaultIcon,
     size: StatusBadgeSize = StatusBadgeSize.Compact,
 ) {
     val compact = size == StatusBadgeSize.Compact

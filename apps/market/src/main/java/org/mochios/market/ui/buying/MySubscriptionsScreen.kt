@@ -55,13 +55,13 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.model.SubscriptionStatus
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.StatusBadge
 
 @Composable
 fun MySubscriptionsScreen(
@@ -193,7 +193,7 @@ private fun SubscriptionRow(
                 )
             }
         }
-        StatusBadge(status = sub.status?.name?.lowercase() ?: "")
+        MarketStatusBadge(status = sub.status?.name?.lowercase() ?: "")
         Box {
             var menu by remember { mutableStateOf(false) }
             MochiIconButton(onClick = { menu = true }, enabled = !mutating) {

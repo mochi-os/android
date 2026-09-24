@@ -64,6 +64,9 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusBadgeSize
+import org.mochios.android.ui.components.StatusTone
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
@@ -288,29 +291,17 @@ private fun PersonBody(
 
 @Composable
 private fun FriendStatePill(state: FriendState) {
-    when (state) {
-        FriendState.Friend -> AssistChip(
-            onClick = {},
-            label = { Text(stringResource(R.string.people_person_state_friend)) },
-            colors = AssistChipDefaults.assistChipColors(
-                containerColor = MaterialTheme.colorScheme.secondaryContainer,
-                labelColor = MaterialTheme.colorScheme.onSecondaryContainer,
-            ),
-        )
-        FriendState.Self -> AssistChip(
-            onClick = {},
-            label = { Text(stringResource(R.string.people_person_state_self)) },
-        )
-        FriendState.InvitedThem -> AssistChip(
-            onClick = {},
-            label = { Text(stringResource(R.string.people_person_state_invited)) },
-        )
-        FriendState.Contact -> AssistChip(
-            onClick = {},
-            label = { Text(stringResource(R.string.people_person_state_contact)) },
-        )
-        is FriendState.InvitedByThem, FriendState.NotFriend -> Unit
+    val (label, tone) = when (state) {
+        FriendState.Friend ->
+            stringResource(R.string.people_person_state_friend) to StatusTone.Positive
+        FriendState.Self -> stringResource(R.string.people_person_state_self) to StatusTone.Neutral
+        FriendState.InvitedThem ->
+            stringResource(R.string.people_person_state_invited) to StatusTone.Waiting
+        FriendState.Contact ->
+            stringResource(R.string.people_person_state_contact) to StatusTone.Neutral
+        is FriendState.InvitedByThem, FriendState.NotFriend -> return
     }
+    StatusBadge(label = label, tone = tone, size = StatusBadgeSize.Regular)
 }
 
 @Composable

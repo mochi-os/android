@@ -99,6 +99,9 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusBadgeSize
+import org.mochios.android.ui.components.StatusTone
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.webUri
 import org.mochios.market.R
@@ -122,6 +125,7 @@ import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuctionBidHistory
 import org.mochios.market.ui.components.AuditTimeline
 import org.mochios.market.ui.components.DigitalAssetsList
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.PhotoCarousel
 import org.mochios.market.ui.components.PriceDisplay
 import org.mochios.market.ui.components.PricingFill
@@ -133,7 +137,6 @@ import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.VerifiedGreen
 import org.mochios.market.ui.components.SellerReviewsSection
 import org.mochios.market.ui.components.ShippingOptionsTable
-import org.mochios.market.ui.components.knownStatusLabel
 import org.mochios.market.ui.components.WarningsSection
 import org.mochios.market.ui.dialog.PlaceBidDialog
 import org.mochios.market.ui.dialog.ReportListingDialog
@@ -957,29 +960,7 @@ private fun DeliveryMethodChips(listing: Listing) {
 
 @Composable
 private fun StatusChip(status: String) {
-    val key = status.trim().lowercase()
-    val (fill, text) = statusChipColors(key)
-    DetailBadgeChip(
-        label = knownStatusLabel(key) ?: key,
-        containerColor = fill,
-        contentColor = text,
-        borderColor = MaterialTheme.colorScheme.outlineVariant,
-    )
-}
-
-/** Semantic (light fill, dark text) pair for a status chip: green / red / amber / grey. */
-private fun statusChipColors(key: String): Pair<Color, Color> = when (key) {
-    "active", "paid", "shipped", "delivered", "completed" ->
-        Color(0xFFE2FBE8) to Color(0xFF2B6536)
-
-    "disputed", "cancelled", "past_due" ->
-        Color(0xFFFBE2E2) to Color(0xFF7A2B2B)
-
-    "pending", "paused", "refunded" ->
-        Color(0xFFFBF3E2) to Color(0xFF7A5A2B)
-
-    else ->
-        Color(0xFFEDEDED) to Color(0xFF555555)
+    MarketStatusBadge(status = status, size = StatusBadgeSize.Regular)
 }
 
 /** Condition chip — ListingCard colours at the shared [DetailBadgeChip] size. */
@@ -1089,14 +1070,10 @@ private fun SellerStatusBanner(status: String) {
 
 @Composable
 private fun AppealPendingPill() {
-    Text(
-        text = stringResource(R.string.market_listing_detail_appeal_pending),
-        style = MaterialTheme.typography.labelSmall,
-        color = MaterialTheme.colorScheme.onTertiaryContainer,
-        modifier = Modifier
-            .clip(RoundedCornerShape(999.dp))
-            .background(MaterialTheme.colorScheme.tertiaryContainer)
-            .padding(horizontal = 10.dp, vertical = 4.dp),
+    StatusBadge(
+        label = stringResource(R.string.market_listing_detail_appeal_pending),
+        tone = StatusTone.Waiting,
+        size = StatusBadgeSize.Regular,
     )
 }
 

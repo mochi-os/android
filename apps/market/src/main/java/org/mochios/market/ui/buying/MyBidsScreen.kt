@@ -53,11 +53,11 @@ import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.StatusBadge
 
 @Composable
 fun MyBidsScreen(
@@ -179,7 +179,7 @@ private fun BidRow(
             }
         }
         Column(horizontalAlignment = Alignment.End) {
-            StatusBadge(status = bid.status?.name?.lowercase() ?: "")
+            MarketStatusBadge(status = bid.status?.name?.lowercase() ?: "")
             if (bid.status == org.mochios.market.model.BidStatus.WON && bid.listing != null) {
                 Spacer(Modifier.height(6.dp))
                 MochiButton(onClick = { onCompletePurchase(bid.listing) }) {

@@ -76,9 +76,9 @@ import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.buying.WriteReviewForm
 import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.disputeReasonLabel
-import org.mochios.market.ui.components.StatusBadge
 import org.mochios.market.ui.dialog.DisputeResponseDialog
 import org.mochios.market.ui.dialog.IssueRefundDialog
 import org.mochios.market.ui.dialog.ShipOrderDialog
@@ -275,7 +275,7 @@ private fun SaleDetailBody(
                             overflow = TextOverflow.Ellipsis,
                         )
                         Spacer(modifier = Modifier.size(4.dp))
-                        order.status?.let { StatusBadge(status = it.name.lowercase()) }
+                        order.status?.let { MarketStatusBadge(status = it.name.lowercase()) }
                         Spacer(modifier = Modifier.size(4.dp))
                         Text(
                             text = stringResource(R.string.market_sale_buyer_label) + ": " +
@@ -532,7 +532,7 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.weight(1f),
                 )
-                StatusBadge(status = dispute.status)
+                MarketStatusBadge(status = dispute.status)
             }
             Spacer(modifier = Modifier.size(4.dp))
             if (dispute.opener == "stripe" && dispute.reason.isNotBlank()) {

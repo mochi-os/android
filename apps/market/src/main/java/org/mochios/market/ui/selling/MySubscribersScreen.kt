@@ -43,12 +43,12 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.StatusBadge
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -156,7 +156,7 @@ private fun SubscriberRow(subscription: Subscription, onClickBuyer: () -> Unit) 
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             subscription.status?.let {
-                StatusBadge(status = it.name.lowercase())
+                MarketStatusBadge(status = it.name.lowercase())
             }
             if (subscription.cancelled > 0L) {
                 Text(
