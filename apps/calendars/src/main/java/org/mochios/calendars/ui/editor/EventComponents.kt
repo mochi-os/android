@@ -9,6 +9,7 @@ import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
+import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import java.time.Instant
 import java.time.ZoneId
@@ -198,6 +199,57 @@ fun instant(form: EventForm, user: String): Long {
     if (!form.allday) return form.start
     val day = Instant.ofEpochSecond(form.start).atZone(ZoneOffset.UTC).toLocalDate()
     return day.atStartOfDay(zoneOf(user)).toEpochSecond()
+}
+
+/**
+ * The form a copy of a stored event opens on, as a new event of its own.
+ * With [Scope.ONE] it is the occurrence at [occurrence] alone: its own
+ * override, or the master moved onto it, with the repeat cleared, and an
+ * override without a reminder of its own sounding the master's, as the
+ * editor shows it. With any other scope it is the master, its repeat kept
+ * as written. Null when the event has no master to copy.
+ */
+fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: String): EventForm? {
+    val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
+    val master = events.firstOrNull { !it.exception() } ?: return null
+    val whole = draft(master, user)
+    if (scope != Scope.ONE || occurrence == 0L) return whole
+    val override = events.firstOrNull { it.exception() && matches(it, occurrence) }
+    val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
+    return own.copy(
+        recurrence = Recurrence(),
+        reminder = if (own.reminder >= 0) own.reminder else whole.reminder,
+    )
+}
+
+/**
+ * The form a copy of an occurrence with no stored event to load opens on -
+ * a subscription's or a birthday - built from the occurrence as listed: one
+ * event of its title, span, zones, location and description, with the
+ * [reminder] a new event gets. An all-day occurrence holds its dates as the
+ * editor does, from the UTC midnight of its first day, and keeps its whole
+ * days; a timed one keeps its ends, each read in the zone it was written
+ * in, the [user]'s own where it names none.
+ */
+fun copied(instance: Instance, user: String, reminder: Int): EventForm {
+    val start = if (instance.allday) instance.occurrence else instance.start
+    val length = if (instance.allday) {
+        maxOf(1L, Math.round((instance.finish - instance.start) / 86_400.0)) * 86_400
+    } else {
+        (instance.finish - instance.start).coerceAtLeast(0)
+    }
+    val begins = instance.zone?.start?.takeIf { it.isNotBlank() } ?: user
+    val ends = instance.zone?.finish?.takeIf { it.isNotBlank() } ?: begins
+    return EventForm(
+        title = instance.summary,
+        start = start,
+        finish = start + length,
+        allday = instance.allday,
+        zone = Zone(begins, ends),
+        location = instance.location,
+        description = instance.description,
+        reminder = reminder,
+    )
 }
 
 /**

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Deze afspraak is ergens anders gewijzigd.</string>
     <string name="calendars_undo">Ongedaan maken</string>
     <string name="calendars_event_resize">Eindtijd wijzigen</string>
+    <string name="calendars_event_copy">Kopiëren</string>
+    <string name="calendars_event_copied">Afspraak gekopieerd</string>
+    <string name="calendars_scope_copy">Deze afspraak kopiëren</string>
+    <string name="calendars_editor_copy_title">Afspraak kopiëren</string>
 </resources>

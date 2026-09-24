@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Den här händelsen ändrades någon annanstans.</string>
     <string name="calendars_undo">Ångra</string>
     <string name="calendars_event_resize">Ändra sluttid</string>
+    <string name="calendars_event_copy">Kopiera</string>
+    <string name="calendars_event_copied">Händelse kopierad</string>
+    <string name="calendars_scope_copy">Kopiera denna händelse</string>
+    <string name="calendars_editor_copy_title">Kopiera händelse</string>
 </resources>

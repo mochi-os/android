@@ -149,4 +149,8 @@
     <string name="calendars_event_changed">Táto udalosť bola zmenená inde.</string>
     <string name="calendars_undo">Späť</string>
     <string name="calendars_event_resize">Zmeniť čas ukončenia</string>
+    <string name="calendars_event_copy">Kopírovať</string>
+    <string name="calendars_event_copied">Udalosť bola skopírovaná</string>
+    <string name="calendars_scope_copy">Kopírovať túto udalosť</string>
+    <string name="calendars_editor_copy_title">Kopírovať udalosť</string>
 </resources>

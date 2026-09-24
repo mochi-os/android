@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Kjo ngjarje ndryshoi diku tjetër.</string>
     <string name="calendars_undo">Zhbëj</string>
     <string name="calendars_event_resize">Ndrysho orën e përfundimit</string>
+    <string name="calendars_event_copy">Kopjo</string>
+    <string name="calendars_event_copied">Ngjarja u kopjua</string>
+    <string name="calendars_scope_copy">Kopjo këtë ngjarje</string>
+    <string name="calendars_editor_copy_title">Kopjo ngjarjen</string>
 </resources>

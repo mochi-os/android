@@ -149,4 +149,8 @@
     <string name="calendars_event_changed">Ovaj je događaj promijenjen na drugom mjestu.</string>
     <string name="calendars_undo">Poništi</string>
     <string name="calendars_event_resize">Promijeni vrijeme završetka</string>
+    <string name="calendars_event_copy">Kopiraj</string>
+    <string name="calendars_event_copied">Događaj kopiran</string>
+    <string name="calendars_scope_copy">Kopiraj ovaj događaj</string>
+    <string name="calendars_editor_copy_title">Kopiraj događaj</string>
 </resources>

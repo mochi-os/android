@@ -149,4 +149,8 @@
     <string name="calendars_event_changed">אירוע זה שונה במקום אחר.</string>
     <string name="calendars_undo">בטל</string>
     <string name="calendars_event_resize">שינוי שעת הסיום</string>
+    <string name="calendars_event_copy">העתק</string>
+    <string name="calendars_event_copied">האירוע הועתק</string>
+    <string name="calendars_scope_copy">העתק אירוע זה</string>
+    <string name="calendars_editor_copy_title">העתקת אירוע</string>
 </resources>

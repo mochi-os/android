@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">ഈ ഇവന്റ് മറ്റൊരിടത്ത് മാറിയിട്ടുണ്ട്.</string>
     <string name="calendars_undo">പഴയപടിയാക്കുക</string>
     <string name="calendars_event_resize">അവസാനിക്കുന്ന സമയം മാറ്റുക</string>
+    <string name="calendars_event_copy">പകർത്തുക</string>
+    <string name="calendars_event_copied">ഇവന്റ് പകർത്തി</string>
+    <string name="calendars_scope_copy">ഈ ഇവന്റ് പകർത്തുക</string>
+    <string name="calendars_editor_copy_title">ഇവന്റ് പകർത്തുക</string>
 </resources>

@@ -152,4 +152,8 @@
     <string name="calendars_event_changed">Это событие было изменено в другом месте.</string>
     <string name="calendars_undo">Отменить</string>
     <string name="calendars_event_resize">Изменить время окончания</string>
+    <string name="calendars_event_copy">Копировать</string>
+    <string name="calendars_event_copied">Событие скопировано</string>
+    <string name="calendars_scope_copy">Копировать это событие</string>
+    <string name="calendars_editor_copy_title">Копировать событие</string>
 </resources>

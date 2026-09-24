@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Bu tadbir boshqa joyda oʻzgartirildi.</string>
     <string name="calendars_undo">Bekor qilish</string>
     <string name="calendars_event_resize">Tugash vaqtini oʻzgartirish</string>
+    <string name="calendars_event_copy">Nusxalash</string>
+    <string name="calendars_event_copied">Tadbir nusxalandi</string>
+    <string name="calendars_scope_copy">Bu tadbirni nusxalash</string>
+    <string name="calendars_editor_copy_title">Tadbirni nusxalash</string>
 </resources>

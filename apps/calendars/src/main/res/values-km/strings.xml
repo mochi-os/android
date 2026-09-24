@@ -143,4 +143,8 @@
     <string name="calendars_event_changed">ព្រឹត្តិការណ៍នេះត្រូវបានផ្លាស់ប្តូរនៅកន្លែងផ្សេង។</string>
     <string name="calendars_undo">មិនធ្វើវិញ</string>
     <string name="calendars_event_resize">ប្ដូរម៉ោងបញ្ចប់</string>
+    <string name="calendars_event_copy">ចម្លង</string>
+    <string name="calendars_event_copied">បានចម្លងព្រឹត្តិការណ៍</string>
+    <string name="calendars_scope_copy">ចម្លងព្រឹត្តិការណ៍នេះ</string>
+    <string name="calendars_editor_copy_title">ចម្លងព្រឹត្តិការណ៍</string>
 </resources>

@@ -155,4 +155,8 @@
     <string name="calendars_event_changed">Dan l-avveniment inbidel band\'oħra.</string>
     <string name="calendars_undo">Annulla</string>
     <string name="calendars_event_resize">Ibdel il-ħin tat-tmiem</string>
+    <string name="calendars_event_copy">Ikkupja</string>
+    <string name="calendars_event_copied">L-avveniment ġie kkupjat</string>
+    <string name="calendars_scope_copy">Ikkupja dan l-avveniment</string>
+    <string name="calendars_editor_copy_title">Ikkupja l-avveniment</string>
 </resources>

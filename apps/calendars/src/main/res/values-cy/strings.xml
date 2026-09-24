@@ -158,4 +158,8 @@
     <string name="calendars_event_changed">Mae\'r digwyddiad hwn wedi newid rywle arall.</string>
     <string name="calendars_undo">Dadwneud</string>
     <string name="calendars_event_resize">Newid amser gorffen</string>
+    <string name="calendars_event_copy">Copïo</string>
+    <string name="calendars_event_copied">Digwyddiad wedi\'i gopïo</string>
+    <string name="calendars_scope_copy">Copïo y digwyddiad hwn</string>
+    <string name="calendars_editor_copy_title">Copïo digwyddiad</string>
 </resources>

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">ეს ღონისძიება სხვაგან შეიცვალა.</string>
     <string name="calendars_undo">დაბრუნება</string>
     <string name="calendars_event_resize">დასრულების დროის შეცვლა</string>
+    <string name="calendars_event_copy">კოპირება</string>
+    <string name="calendars_event_copied">ღონისძიება დაკოპირდა</string>
+    <string name="calendars_scope_copy">ამ ღონისძიების კოპირება</string>
+    <string name="calendars_editor_copy_title">ღონისძიების კოპირება</string>
 </resources>

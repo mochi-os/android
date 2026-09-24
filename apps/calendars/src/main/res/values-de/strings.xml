@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Dieser Termin wurde anderswo geändert.</string>
     <string name="calendars_undo">Rückgängig</string>
     <string name="calendars_event_resize">Endzeit ändern</string>
+    <string name="calendars_event_copy">Kopieren</string>
+    <string name="calendars_event_copied">Termin kopiert</string>
+    <string name="calendars_scope_copy">Diesen Termin kopieren</string>
+    <string name="calendars_editor_copy_title">Termin kopieren</string>
 </resources>

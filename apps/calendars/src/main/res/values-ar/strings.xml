@@ -158,4 +158,8 @@
     <string name="calendars_event_changed">تغيّر هذا الحدث في مكان آخر.</string>
     <string name="calendars_undo">تراجع</string>
     <string name="calendars_event_resize">تغيير وقت الانتهاء</string>
+    <string name="calendars_event_copy">نسخ</string>
+    <string name="calendars_event_copied">تم نسخ الحدث</string>
+    <string name="calendars_scope_copy">نسخ هذا الحدث</string>
+    <string name="calendars_editor_copy_title">نسخ الحدث</string>
 </resources>

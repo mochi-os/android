@@ -143,4 +143,8 @@
     <string name="calendars_event_changed">이 일정이 다른 곳에서 변경되었어요.</string>
     <string name="calendars_undo">실행 취소</string>
     <string name="calendars_event_resize">종료 시간 변경</string>
+    <string name="calendars_event_copy">복사</string>
+    <string name="calendars_event_copied">일정이 복사되었어요</string>
+    <string name="calendars_scope_copy">이 일정 복사</string>
+    <string name="calendars_editor_copy_title">일정 복사</string>
 </resources>

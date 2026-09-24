@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Taateen kun bakka biraatti jijjiirame.</string>
     <string name="calendars_undo">Duubatti deebisi</string>
     <string name="calendars_event_resize">Yeroo xumuraa jijjiiri</string>
+    <string name="calendars_event_copy">Garagalchi</string>
+    <string name="calendars_event_copied">Taateen garagalfame</string>
+    <string name="calendars_scope_copy">Taatee kana garagalchi</string>
+    <string name="calendars_editor_copy_title">Taatee garagalchi</string>
 </resources>

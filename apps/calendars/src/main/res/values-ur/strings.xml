@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">یہ ایونٹ کہیں اور تبدیل ہو گیا ہے۔</string>
     <string name="calendars_undo">واپس کریں</string>
     <string name="calendars_event_resize">اختتامی وقت تبدیل کریں</string>
+    <string name="calendars_event_copy">کاپی کریں</string>
+    <string name="calendars_event_copied">ایونٹ کاپی ہو گیا</string>
+    <string name="calendars_scope_copy">یہ ایونٹ کاپی کریں</string>
+    <string name="calendars_editor_copy_title">ایونٹ کاپی کریں</string>
 </resources>

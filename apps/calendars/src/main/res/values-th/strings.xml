@@ -143,4 +143,8 @@
     <string name="calendars_event_changed">กิจกรรมนี้ถูกเปลี่ยนแปลงจากที่อื่น</string>
     <string name="calendars_undo">เลิกทำ</string>
     <string name="calendars_event_resize">เปลี่ยนเวลาสิ้นสุด</string>
+    <string name="calendars_event_copy">คัดลอก</string>
+    <string name="calendars_event_copied">คัดลอกกิจกรรมแล้ว</string>
+    <string name="calendars_scope_copy">คัดลอกกิจกรรมนี้</string>
+    <string name="calendars_editor_copy_title">คัดลอกกิจกรรม</string>
 </resources>

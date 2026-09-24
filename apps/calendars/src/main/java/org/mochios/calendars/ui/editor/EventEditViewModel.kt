@@ -23,6 +23,7 @@ import org.mochios.android.sync.EventComponent
 import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Event
+import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
@@ -33,18 +34,22 @@ import java.time.ZoneOffset
 import javax.inject.Inject
 
 /**
- * The event editor. [event] is null for a new event. [occurrence] is the
- * occurrence the user opened, which "This event" detaches, as the event's
- * tree names it: a timed occurrence's own start, epoch seconds, and the UTC
- * midnight of an all-day one's date; [moment] is the same occurrence's start
- * as the server listed it, which a series cut there is told. Both are 0 for
- * a new event or one that does not repeat. [zone] is the zone each end is
- * typed and written in, the user's own for a new event; [revealed] says the
- * user asked to see the zones in this edit, which otherwise show only when
- * an end reads in another zone than their own.
+ * The event editor. [event] is null for a new event, a copy of another
+ * included: [copying] says the form was filled from an original, and saving
+ * still creates. [occurrence] is the occurrence the user opened, which "This
+ * event" detaches, as the event's tree names it: a timed occurrence's own
+ * start, epoch seconds, and the UTC midnight of an all-day one's date;
+ * [moment] is the same occurrence's start as the server listed it, which a
+ * series cut there is told. Both are 0 for a new event or one that does not
+ * repeat. [zone] is the zone each end is typed and written in, the user's
+ * own for a new event; [revealed] says the user asked to see the zones in
+ * this edit, which otherwise show only when an end reads in another zone
+ * than their own. [copy] is a copy the user asked for, with how far it
+ * reaches, which the screen opens the editor on.
  */
 data class EditorUiState(
     val event: String? = null,
+    val copying: Boolean = false,
     val occurrence: Long = 0,
     val moment: Long = 0,
     val calendars: List<Calendar> = emptyList(),
@@ -68,6 +73,7 @@ data class EditorUiState(
      */
     val series: Long = 0,
     val prompt: Prompt? = null,
+    val copy: Scope? = null,
     val isLoading: Boolean = true,
     val isSaving: Boolean = false,
     val isDeleting: Boolean = false,
@@ -84,6 +90,7 @@ data class EditorUiState(
 enum class Prompt {
     SAVE,
     DELETE,
+    COPY,
 }
 
 @HiltViewModel
@@ -109,30 +116,42 @@ class EventEditViewModel @Inject constructor(
         val event = handle.get<String>("event")?.takeIf { it.isNotBlank() && it != "new" }
         val occurrence = handle.get<String>("occurrence")?.toLongOrNull() ?: 0
         val start = handle.get<String>("start")?.toLongOrNull() ?: 0
-        load(event, occurrence, start)
+        when (handle.get<String>("source")) {
+            "event" -> copy(
+                handle.get<String>("copy").orEmpty(),
+                occurrence,
+                Scope.entries.firstOrNull { it.name.equals(handle.get<String>("scope"), ignoreCase = true) } ?: Scope.ALL,
+            )
+            "occurrence" -> {
+                val zones = handle.get<String>("zones").orEmpty().split(",")
+                copy(
+                    Instance(
+                        summary = handle.get<String>("summary").orEmpty(),
+                        location = handle.get<String>("location").orEmpty(),
+                        description = handle.get<String>("description").orEmpty(),
+                        start = start,
+                        finish = handle.get<String>("finish")?.toLongOrNull() ?: 0,
+                        allday = handle.get<String>("allday") == "1",
+                        date = handle.get<String>("date")?.takeIf { it.isNotBlank() },
+                        zone = Zone(zones.getOrElse(0) { "" }, zones.getOrElse(1) { "" }),
+                    ),
+                )
+            }
+            else -> load(event, occurrence, start)
+        }
     }
 
     private fun load(event: String?, occurrence: Long, start: Long) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
-            val calendars = try {
-                repository.listCalendars()
-                    .filterNot { it.readonly }
-                    .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
-                return@launch
-            }
+            val calendars = calendars() ?: return@launch
             if (event == null) {
                 val preferences = runCatching { repository.getPreferences() }.getOrNull()
                 val begins = if (start > 0) start else nextHour()
                 val length = 60L * (preferences?.duration ?: 60)
                 _uiState.value = EditorUiState(
                     calendars = calendars,
-                    calendar = VisibilityStore.recent(context)
-                        ?.takeIf { recent -> calendars.any { it.id == recent } }
-                        ?: calendars.firstOrNull { it.default }?.id
-                        ?: calendars.firstOrNull()?.id.orEmpty(),
+                    calendar = preferred(calendars),
                     start = begins,
                     finish = begins + length,
                     zone = Zone(zone, zone),
@@ -148,6 +167,76 @@ class EventEditViewModel @Inject constructor(
             }
         }
     }
+
+    /**
+     * A copy of the stored [event], opened as a new event whose form is the
+     * original's: the occurrence at [occurrence] alone, or the whole series,
+     * as [scope] says. It lands in the original's calendar when that can be
+     * written to, else where a new event would.
+     */
+    private fun copy(event: String, occurrence: Long, scope: Scope) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            val calendars = calendars() ?: return@launch
+            try {
+                val loaded = repository.getEvent(event)
+                val form = copied(loaded.components, occurrence, scope, zone) ?: EventForm()
+                open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars))
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * A copy of an occurrence with no stored event to load - a subscription's
+     * or a birthday - opened as a new event from the occurrence as listed,
+     * with the reminder a new event gets.
+     */
+    private fun copy(instance: Instance) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            val calendars = calendars() ?: return@launch
+            val preferences = runCatching { repository.getPreferences() }.getOrNull()
+            open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars))
+        }
+    }
+
+    /** The editor on a copy's [form], in [calendar]: a new event, so saving creates. */
+    private fun open(form: EventForm, calendars: List<Calendar>, calendar: String) {
+        _uiState.value = EditorUiState(
+            copying = true,
+            calendars = calendars,
+            calendar = calendar,
+            title = form.title,
+            allday = form.allday,
+            start = form.start,
+            finish = form.finish,
+            zone = form.zone,
+            location = form.location,
+            description = form.description,
+            recurrence = form.recurrence,
+            reminder = form.reminder,
+            isLoading = false,
+        )
+    }
+
+    /** The calendars the editor offers, the default first; null once a failure to list them is shown. */
+    private suspend fun calendars(): List<Calendar>? = try {
+        repository.listCalendars()
+            .filterNot { it.readonly }
+            .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
+    } catch (e: Exception) {
+        _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+        null
+    }
+
+    /** The calendar a new event lands in: the one last written to, else the default, else the first. */
+    private fun preferred(calendars: List<Calendar>): String =
+        VisibilityStore.recent(context)
+            ?.takeIf { recent -> calendars.any { it.id == recent } }
+            ?: calendars.firstOrNull { it.default }?.id
+            ?: calendars.firstOrNull()?.id.orEmpty()
 
     /** The form for a loaded event, showing the occurrence the user opened. */
     private fun fill(loaded: Event, moment: Long, calendars: List<Calendar>) {
@@ -271,12 +360,32 @@ class EventEditViewModel @Inject constructor(
         when (prompt) {
             Prompt.SAVE -> commit(scope)
             Prompt.DELETE -> erase(scope)
+            Prompt.COPY -> _uiState.value = _uiState.value.copy(copy = scope)
             null -> Unit
         }
     }
 
     fun dismiss() {
         _uiState.value = _uiState.value.copy(prompt = null, confirming = false)
+    }
+
+    /**
+     * Asks for a copy of the open event. A recurring one asks first whether
+     * the copy is of the one occurrence or the whole series.
+     */
+    fun copy() {
+        val state = _uiState.value
+        if (state.event == null) return
+        if (state.recurring && state.occurrence > 0) {
+            _uiState.value = state.copy(prompt = Prompt.COPY)
+        } else {
+            _uiState.value = state.copy(copy = Scope.ALL)
+        }
+    }
+
+    /** The screen has opened the editor on the copy asked for. */
+    fun routed() {
+        _uiState.value = _uiState.value.copy(copy = null)
     }
 
     fun confirm() {

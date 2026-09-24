@@ -143,4 +143,8 @@
     <string name="calendars_event_changed">此活動已在其他地方變更。</string>
     <string name="calendars_undo">復原</string>
     <string name="calendars_event_resize">變更結束時間</string>
+    <string name="calendars_event_copy">複製</string>
+    <string name="calendars_event_copied">已複製活動</string>
+    <string name="calendars_scope_copy">複製此活動</string>
+    <string name="calendars_editor_copy_title">複製活動</string>
 </resources>

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Aka lurawix yaqha chiqan turkatawa.</string>
     <string name="calendars_undo">Kutikipaña</string>
     <string name="calendars_event_resize">Tukuyaña pacha mayjt\'ayaña</string>
+    <string name="calendars_event_copy">Copiaña</string>
+    <string name="calendars_event_copied">Lurawi copiatawa</string>
+    <string name="calendars_scope_copy">Aka lurawi copiaña</string>
+    <string name="calendars_editor_copy_title">Lurawi copiaña</string>
 </resources>

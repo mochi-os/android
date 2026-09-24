@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Hierdie gebeurtenis het elders verander.</string>
     <string name="calendars_undo">Ontdoen</string>
     <string name="calendars_event_resize">Verander eindtyd</string>
+    <string name="calendars_event_copy">Kopieer</string>
+    <string name="calendars_event_copied">Gebeurtenis gekopieer</string>
+    <string name="calendars_scope_copy">Kopieer hierdie gebeurtenis</string>
+    <string name="calendars_editor_copy_title">Kopieer gebeurtenis</string>
 </resources>

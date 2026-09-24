@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">دا پیښه په بل ځای کې بدله شوه.</string>
     <string name="calendars_undo">بېرته راګرځول</string>
     <string name="calendars_event_resize">د پای وخت بدل کړئ</string>
+    <string name="calendars_event_copy">کاپي کړئ</string>
+    <string name="calendars_event_copied">پیښه کاپي شوه</string>
+    <string name="calendars_scope_copy">دا پیښه کاپي کړئ</string>
+    <string name="calendars_editor_copy_title">پیښه کاپي کړئ</string>
 </resources>

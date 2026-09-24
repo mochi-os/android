@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Denne begivenhed er blevet ændret et andet sted.</string>
     <string name="calendars_undo">Fortryd</string>
     <string name="calendars_event_resize">Skift sluttidspunkt</string>
+    <string name="calendars_event_copy">Kopier</string>
+    <string name="calendars_event_copied">Begivenhed kopieret</string>
+    <string name="calendars_scope_copy">Kopier denne begivenhed</string>
+    <string name="calendars_editor_copy_title">Kopier begivenhed</string>
 </resources>

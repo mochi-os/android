@@ -152,4 +152,8 @@
     <string name="calendars_event_changed">To wydarzenie zostało zmienione w innym miejscu.</string>
     <string name="calendars_undo">Cofnij</string>
     <string name="calendars_event_resize">Zmień godzinę zakończenia</string>
+    <string name="calendars_event_copy">Kopiuj</string>
+    <string name="calendars_event_copied">Skopiowano wydarzenie</string>
+    <string name="calendars_scope_copy">Kopiuj to wydarzenie</string>
+    <string name="calendars_editor_copy_title">Kopiuj wydarzenie</string>
 </resources>

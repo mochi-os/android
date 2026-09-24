@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Tukio hili limebadilishwa mahali pengine.</string>
     <string name="calendars_undo">Tendua</string>
     <string name="calendars_event_resize">Badilisha muda wa kumaliza</string>
+    <string name="calendars_event_copy">Nakili</string>
+    <string name="calendars_event_copied">Tukio limenakiliwa</string>
+    <string name="calendars_scope_copy">Nakili tukio hili</string>
+    <string name="calendars_editor_copy_title">Nakili tukio</string>
 </resources>

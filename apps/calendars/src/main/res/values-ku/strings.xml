@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Ev bûyer li cihekî din hate guhertin.</string>
     <string name="calendars_undo">Vegerîne</string>
     <string name="calendars_event_resize">Dema dawîbûnê biguherîne</string>
+    <string name="calendars_event_copy">Kopî bike</string>
+    <string name="calendars_event_copied">Bûyer hate kopîkirin</string>
+    <string name="calendars_scope_copy">Vê bûyerê kopî bike</string>
+    <string name="calendars_editor_copy_title">Bûyerê kopî bike</string>
 </resources>

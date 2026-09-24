@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">See sündmus muutus mujal.</string>
     <string name="calendars_undo">Võta tagasi</string>
     <string name="calendars_event_resize">Muuda lõpuaega</string>
+    <string name="calendars_event_copy">Kopeeri</string>
+    <string name="calendars_event_copied">Sündmus kopeeritud</string>
+    <string name="calendars_scope_copy">Kopeeri see sündmus</string>
+    <string name="calendars_editor_copy_title">Kopeeri sündmus</string>
 </resources>

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Այս միջոցառումը փոփոխվել է այլ տեղում։</string>
     <string name="calendars_undo">Հետարկել</string>
     <string name="calendars_event_resize">Փոխել ավարտի ժամը</string>
+    <string name="calendars_event_copy">Պատճենել</string>
+    <string name="calendars_event_copied">Միջոցառումը պատճենվեց</string>
+    <string name="calendars_scope_copy">Պատճենել այս միջոցառումը</string>
+    <string name="calendars_editor_copy_title">Պատճենել միջոցառումը</string>
 </resources>

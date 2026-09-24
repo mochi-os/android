@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Ин рӯйдод дар ҷойи дигар тағйир дода шуд.</string>
     <string name="calendars_undo">Бекор кардан</string>
     <string name="calendars_event_resize">Тағйир додани вақти анҷом</string>
+    <string name="calendars_event_copy">Нусхабардорӣ</string>
+    <string name="calendars_event_copied">Рӯйдод нусхабардорӣ шуд</string>
+    <string name="calendars_scope_copy">Нусхабардории ин рӯйдод</string>
+    <string name="calendars_editor_copy_title">Нусхабардории рӯйдод</string>
 </resources>

@@ -57,6 +57,9 @@
     <!-- Events -->
     <string name="calendars_event_new">New event</string>
     <string name="calendars_event_edit">Edit event</string>
+    <string name="calendars_editor_copy_title">Copy event</string>
+    <string name="calendars_event_copy">Copy</string>
+    <string name="calendars_event_copied">Event copied</string>
     <string name="calendars_event_untitled">Untitled</string>
     <string name="calendars_event_title">Title</string>
     <string name="calendars_event_calendar">Calendar</string>
@@ -76,6 +79,7 @@
     <string name="calendars_event_delete_message">This cannot be undone.</string>
     <string name="calendars_scope_edit">Change this event or all events?</string>
     <string name="calendars_scope_delete">Delete this event or all events?</string>
+    <string name="calendars_scope_copy">Copy this event</string>
     <string name="calendars_scope_one">This event</string>
     <string name="calendars_scope_following">This and following</string>
     <string name="calendars_scope_all">All events</string>

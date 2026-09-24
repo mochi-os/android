@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Denne hendelsen ble endret et annet sted.</string>
     <string name="calendars_undo">Angre</string>
     <string name="calendars_event_resize">Endre sluttid</string>
+    <string name="calendars_event_copy">Kopier</string>
+    <string name="calendars_event_copied">Hendelse kopiert</string>
+    <string name="calendars_scope_copy">Kopier denne hendelsen</string>
+    <string name="calendars_editor_copy_title">Kopier hendelse</string>
 </resources>

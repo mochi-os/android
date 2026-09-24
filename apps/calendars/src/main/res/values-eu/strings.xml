@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Gertaera hau beste nonbait aldatu da.</string>
     <string name="calendars_undo">Desegin</string>
     <string name="calendars_event_resize">Aldatu amaiera-ordua</string>
+    <string name="calendars_event_copy">Kopiatu</string>
+    <string name="calendars_event_copied">Gertaera kopiatu da</string>
+    <string name="calendars_scope_copy">Kopiatu gertaera hau</string>
+    <string name="calendars_editor_copy_title">Kopiatu gertaera</string>
 </resources>

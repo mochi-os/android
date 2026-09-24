@@ -143,4 +143,8 @@
     <string name="calendars_event_changed">Acara ieu robah di tempat séjén.</string>
     <string name="calendars_undo">Bolaykeun</string>
     <string name="calendars_event_resize">Robah waktu réngsé</string>
+    <string name="calendars_event_copy">Salin</string>
+    <string name="calendars_event_copied">Acara disalin</string>
+    <string name="calendars_scope_copy">Salin acara ieu</string>
+    <string name="calendars_editor_copy_title">Salin acara</string>
 </resources>

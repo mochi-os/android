@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Бұл іс-шара басқа жерде өзгертілді.</string>
     <string name="calendars_undo">Болдырмау</string>
     <string name="calendars_event_resize">Аяқталу уақытын өзгерту</string>
+    <string name="calendars_event_copy">Көшіру</string>
+    <string name="calendars_event_copied">Іс-шара көшірілді</string>
+    <string name="calendars_scope_copy">Бұл іс-шараны көшіру</string>
+    <string name="calendars_editor_copy_title">Іс-шараны көшіру</string>
 </resources>

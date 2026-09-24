@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Ez az esemény máshol megváltozott.</string>
     <string name="calendars_undo">Visszavonás</string>
     <string name="calendars_event_resize">Befejezés időpontjának módosítása</string>
+    <string name="calendars_event_copy">Másolás</string>
+    <string name="calendars_event_copied">Esemény másolva</string>
+    <string name="calendars_scope_copy">Ezen esemény másolása</string>
+    <string name="calendars_editor_copy_title">Esemény másolása</string>
 </resources>

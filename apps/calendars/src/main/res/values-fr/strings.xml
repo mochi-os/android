@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Cet événement a été modifié ailleurs.</string>
     <string name="calendars_undo">Annuler</string>
     <string name="calendars_event_resize">Modifier l\'heure de fin</string>
+    <string name="calendars_event_copy">Copier</string>
+    <string name="calendars_event_copied">Événement copié</string>
+    <string name="calendars_scope_copy">Copier cet événement</string>
+    <string name="calendars_editor_copy_title">Copier l\'événement</string>
 </resources>

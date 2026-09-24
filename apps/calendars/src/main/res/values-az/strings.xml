@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Bu tədbir başqa yerdə dəyişdirilib.</string>
     <string name="calendars_undo">Geri qaytar</string>
     <string name="calendars_event_resize">Bitmə vaxtını dəyişin</string>
+    <string name="calendars_event_copy">Kopyala</string>
+    <string name="calendars_event_copied">Tədbir kopyalandı</string>
+    <string name="calendars_scope_copy">Bu tədbiri kopyala</string>
+    <string name="calendars_editor_copy_title">Tədbiri kopyala</string>
 </resources>

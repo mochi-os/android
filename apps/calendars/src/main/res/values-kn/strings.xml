@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">ಈ ಈವೆಂಟ್ ಬೇರೆ ಕಡೆ ಬದಲಾಗಿದೆ.</string>
     <string name="calendars_undo">ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="calendars_event_resize">ಮುಕ್ತಾಯ ಸಮಯ ಬದಲಾಯಿಸಿ</string>
+    <string name="calendars_event_copy">ನಕಲಿಸಿ</string>
+    <string name="calendars_event_copied">ಈವೆಂಟ್ ಅನ್ನು ನಕಲಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_scope_copy">ಈ ಈವೆಂಟ್ ಅನ್ನು ನಕಲಿಸಿ</string>
+    <string name="calendars_editor_copy_title">ಈವೆಂಟ್ ನಕಲಿಸಿ</string>
 </resources>

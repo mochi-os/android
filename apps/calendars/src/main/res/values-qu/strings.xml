@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Kay ruwana huk lawpi hukchasqa karqan.</string>
     <string name="calendars_undo">Kutichiy</string>
     <string name="calendars_event_resize">Tukuy pachata tikray</string>
+    <string name="calendars_event_copy">Copiay</string>
+    <string name="calendars_event_copied">Ruwana copiasqa</string>
+    <string name="calendars_scope_copy">Kay ruwanata copiay</string>
+    <string name="calendars_editor_copy_title">Ruwanata copiay</string>
 </resources>

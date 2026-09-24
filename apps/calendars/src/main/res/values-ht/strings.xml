@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Evènman sa a chanje yon lòt kote.</string>
     <string name="calendars_undo">Anile</string>
     <string name="calendars_event_resize">Chanje lè fen an</string>
+    <string name="calendars_event_copy">Kopye</string>
+    <string name="calendars_event_copied">Evènman kopye</string>
+    <string name="calendars_scope_copy">Kopye evènman sa a</string>
+    <string name="calendars_editor_copy_title">Kopye evènman</string>
 </resources>

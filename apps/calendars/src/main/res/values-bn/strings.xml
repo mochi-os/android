@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">এই ইভেন্টটি অন্য কোথাও পরিবর্তিত হয়েছে।</string>
     <string name="calendars_undo">পূর্বাবস্থায় ফেরান</string>
     <string name="calendars_event_resize">শেষের সময় পরিবর্তন করুন</string>
+    <string name="calendars_event_copy">কপি করুন</string>
+    <string name="calendars_event_copied">ইভেন্ট কপি করা হয়েছে</string>
+    <string name="calendars_scope_copy">এই ইভেন্টটি কপি করুন</string>
+    <string name="calendars_editor_copy_title">ইভেন্ট কপি করুন</string>
 </resources>

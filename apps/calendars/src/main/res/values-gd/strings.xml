@@ -152,4 +152,8 @@
     <string name="calendars_event_changed">Dh\'atharraich an tachartas seo àiteigin eile.</string>
     <string name="calendars_undo">Neo-dhèan</string>
     <string name="calendars_event_resize">Atharraich an t-àm crìochnachaidh</string>
+    <string name="calendars_event_copy">Dèan lethbhreac</string>
+    <string name="calendars_event_copied">Chaidh lethbhreac a dhèanamh dhen tachartas</string>
+    <string name="calendars_scope_copy">Dèan lethbhreac dhen tachartas seo</string>
+    <string name="calendars_editor_copy_title">Dèan lethbhreac dhen tachartas</string>
 </resources>

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Bu çäre başga ýerde üýtgedildi.</string>
     <string name="calendars_undo">Yzyna gaýtar</string>
     <string name="calendars_event_resize">Gutarýan wagtyny üýtget</string>
+    <string name="calendars_event_copy">Nusgalamak</string>
+    <string name="calendars_event_copied">Çäre nusgalandy</string>
+    <string name="calendars_scope_copy">Şu çäräni nusgala</string>
+    <string name="calendars_editor_copy_title">Çäräni nusgala</string>
 </resources>

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Nabago ang kaganapang ito sa ibang lugar.</string>
     <string name="calendars_undo">I-undo</string>
     <string name="calendars_event_resize">Baguhin ang oras ng pagtatapos</string>
+    <string name="calendars_event_copy">Kopyahin</string>
+    <string name="calendars_event_copied">Nakopya ang kaganapan</string>
+    <string name="calendars_scope_copy">Kopyahin ang kaganapang ito</string>
+    <string name="calendars_editor_copy_title">Kopyahin ang kaganapan</string>
 </resources>

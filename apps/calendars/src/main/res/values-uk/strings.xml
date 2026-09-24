@@ -152,4 +152,8 @@
     <string name="calendars_event_changed">Цю подію змінено в іншому місці.</string>
     <string name="calendars_undo">Скасувати</string>
     <string name="calendars_event_resize">Змінити час завершення</string>
+    <string name="calendars_event_copy">Копіювати</string>
+    <string name="calendars_event_copied">Подію скопійовано</string>
+    <string name="calendars_scope_copy">Копіювати цю подію</string>
+    <string name="calendars_editor_copy_title">Копіювати подію</string>
 </resources>

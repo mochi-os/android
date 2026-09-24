@@ -296,30 +296,34 @@ fun reminderOptions(): List<Pair<String, String>> = listOf(
  * "This event", "This and following" or "All events" for a recurring
  * occurrence. An override changes or removes the one occurrence; the series
  * cut at it changes or removes it and every one after it; the whole series
- * changes or removes every one of them.
+ * changes or removes every one of them. A copy, [copying], is of the one
+ * occurrence or of the whole series, and asks without the middle choice,
+ * which [following] leaves out.
  */
 @Composable
 fun ScopeDialog(
     deleting: Boolean,
+    copying: Boolean = false,
+    following: Boolean = true,
     onDismiss: () -> Unit,
     onOne: () -> Unit,
-    onFollowing: () -> Unit,
+    onFollowing: () -> Unit = {},
     onAll: () -> Unit,
 ) {
     val tone = if (deleting) MochiButtonTone.Destructive else MochiButtonTone.Primary
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = if (deleting) {
-            stringResource(R.string.calendars_scope_delete)
-        } else {
-            stringResource(R.string.calendars_scope_edit)
+        title = when {
+            deleting -> stringResource(R.string.calendars_scope_delete)
+            copying -> stringResource(R.string.calendars_scope_copy)
+            else -> stringResource(R.string.calendars_scope_edit)
         },
         dismissText = stringResource(MochiR.string.common_cancel),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                for ((label, choose) in listOf(
+                for ((label, choose) in listOfNotNull(
                     R.string.calendars_scope_one to onOne,
-                    R.string.calendars_scope_following to onFollowing,
+                    (R.string.calendars_scope_following to onFollowing).takeIf { following },
                     R.string.calendars_scope_all to onAll,
                 )) {
                     MochiOutlinedButton(onClick = choose, tone = tone, modifier = Modifier.fillMaxWidth()) {

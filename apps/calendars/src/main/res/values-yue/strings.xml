@@ -143,4 +143,8 @@
     <string name="calendars_event_moved">已移動活動</string>
     <string name="calendars_event_changed">呢個活動喺其他地方改咗。</string>
     <string name="calendars_undo">復原</string>
+    <string name="calendars_event_copy">複製</string>
+    <string name="calendars_editor_copy_title">複製活動</string>
+    <string name="calendars_event_copied">已複製活動</string>
+    <string name="calendars_scope_copy">複製呢個活動</string>
 </resources>

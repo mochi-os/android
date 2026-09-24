@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Tämä tapahtuma muuttui muualla.</string>
     <string name="calendars_undo">Kumoa</string>
     <string name="calendars_event_resize">Muuta päättymisaikaa</string>
+    <string name="calendars_event_copy">Kopioi</string>
+    <string name="calendars_event_copied">Tapahtuma kopioitu</string>
+    <string name="calendars_scope_copy">Kopioi tämä tapahtuma</string>
+    <string name="calendars_editor_copy_title">Kopioi tapahtuma</string>
 </resources>

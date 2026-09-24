@@ -19,9 +19,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Flight
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Repeat
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -36,6 +38,7 @@ import java.net.URLEncoder
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.util.flightLink
 import org.mochios.android.util.flightNumber
 import org.mochios.android.util.isHtml
@@ -48,8 +51,10 @@ import org.mochios.calendars.model.Instance
 /**
  * The summary of one occurrence, anchored to the bottom of the screen: what
  * it is called, when it is, where it is, which calendar it is in and the
- * first of its description. Only a read-only occurrence - a subscription's
- * or a birthday - lands here; a tap on an editable one opens the editor.
+ * first of its description, with "Copy" beneath, which [onCopy] answers.
+ * Only a read-only occurrence - a subscription's or a birthday - lands here;
+ * a tap on an editable one opens the editor. A copy is what a read-only
+ * occurrence is for, into a calendar of the user's own.
  *
  * A timed occurrence written in another zone than the user's names the
  * zones: with [zones] on, the span reads each end in its own zone with the
@@ -63,6 +68,7 @@ fun EventSheet(
     calendar: Calendar?,
     zones: Boolean = false,
     onDismiss: () -> Unit,
+    onCopy: () -> Unit,
 ) {
     val format = LocalFormat.current
     val user = format.preferences.timezone
@@ -178,6 +184,15 @@ fun EventSheet(
                         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                     )
                 }
+            }
+            MochiOutlinedButton(onClick = onCopy, modifier = Modifier.fillMaxWidth()) {
+                Icon(
+                    Icons.Outlined.ContentCopy,
+                    contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                )
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(R.string.calendars_event_copy))
             }
         }
     }

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">ਇਹ ਇਵੈਂਟ ਕਿਤੇ ਹੋਰ ਬਦਲ ਗਿਆ ਹੈ।</string>
     <string name="calendars_undo">ਵਾਪਸ ਕਰੋ</string>
     <string name="calendars_event_resize">ਸਮਾਪਤੀ ਸਮਾਂ ਬਦਲੋ</string>
+    <string name="calendars_event_copy">ਕਾਪੀ ਕਰੋ</string>
+    <string name="calendars_event_copied">ਇਵੈਂਟ ਕਾਪੀ ਕੀਤਾ ਗਿਆ</string>
+    <string name="calendars_scope_copy">ਇਹ ਇਵੈਂਟ ਕਾਪੀ ਕਰੋ</string>
+    <string name="calendars_editor_copy_title">ਇਵੈਂਟ ਕਾਪੀ ਕਰੋ</string>
 </resources>

@@ -149,4 +149,8 @@
     <string name="calendars_event_changed">Šis įvykis buvo pakeistas kitur.</string>
     <string name="calendars_undo">Anuliuoti</string>
     <string name="calendars_event_resize">Keisti pabaigos laiką</string>
+    <string name="calendars_event_copy">Kopijuoti</string>
+    <string name="calendars_event_copied">Įvykis nukopijuotas</string>
+    <string name="calendars_scope_copy">Kopijuoti šį įvykį</string>
+    <string name="calendars_editor_copy_title">Kopijuoti įvykį</string>
 </resources>

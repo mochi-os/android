@@ -143,4 +143,8 @@
     <string name="calendars_event_changed">Sự kiện này đã thay đổi ở nơi khác.</string>
     <string name="calendars_undo">Hoàn tác</string>
     <string name="calendars_event_resize">Thay đổi giờ kết thúc</string>
+    <string name="calendars_event_copy">Sao chép</string>
+    <string name="calendars_event_copied">Đã sao chép sự kiện</string>
+    <string name="calendars_scope_copy">Sao chép sự kiện này</string>
+    <string name="calendars_editor_copy_title">Sao chép sự kiện</string>
 </resources>

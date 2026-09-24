@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Lo mcimbi ushintshe kwenye indawo.</string>
     <string name="calendars_undo">Hlehlisa</string>
     <string name="calendars_event_resize">Shintsha isikhathi sokuphela</string>
+    <string name="calendars_event_copy">Kopisha</string>
+    <string name="calendars_event_copied">Umcimbi ukopishiwe</string>
+    <string name="calendars_scope_copy">Kopisha lo mcimbi</string>
+    <string name="calendars_editor_copy_title">Kopisha umcimbi</string>
 </resources>

@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">An canza wannan taron a wani wuri.</string>
     <string name="calendars_undo">Gyara baya</string>
     <string name="calendars_event_resize">Canja lokacin ƙarewa</string>
+    <string name="calendars_event_copy">Kwafi</string>
+    <string name="calendars_event_copied">An kwafi taron</string>
+    <string name="calendars_scope_copy">Kwafi wannan taron</string>
+    <string name="calendars_editor_copy_title">Kwafi taron</string>
 </resources>

@@ -86,7 +86,11 @@ import java.time.LocalDate
  * The calendars app's one screen: the drawer of calendars, the toolbar that
  * moves the range, the view itself and the "New event" button. Every view
  * renders from the same occurrence list, so switching between them is a
- * redraw and not a fetch of a different shape.
+ * redraw and not a fetch of a different shape. [onCopyEvent] opens the
+ * editor on a copy of a stored event's occurrence, with how far the copy
+ * reaches; [onCopyOccurrence] on a copy of one the editor cannot load, a
+ * subscription's or a birthday. [copied] says a copy was just saved, which
+ * the screen reports once and [onCopiedShown] clears.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -96,6 +100,10 @@ fun CalendarScreen(
     onConnectDevice: () -> Unit,
     onNewEvent: (Long) -> Unit,
     onEditEvent: (String, Long) -> Unit,
+    onCopyEvent: (String, Long, Scope) -> Unit,
+    onCopyOccurrence: (Instance) -> Unit,
+    copied: Boolean = false,
+    onCopiedShown: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -106,6 +114,7 @@ fun CalendarScreen(
     val resources = LocalResources.current
 
     var selected by remember { mutableStateOf<Instance?>(null) }
+    var copying by remember { mutableStateOf<Instance?>(null) }
     var moving by remember { mutableStateOf<Move?>(null) }
     var renaming by remember { mutableStateOf<Calendar?>(null) }
     var colouring by remember { mutableStateOf<Calendar?>(null) }
@@ -140,6 +149,15 @@ fun CalendarScreen(
                     CalendarEvent.Changed -> snackbar.showSnackbar(resources.getString(R.string.calendars_event_changed))
                 }
             }
+        }
+    }
+
+    LaunchedEffect(copied) {
+        // Said from the screen's own scope: the flag clears at once, and the
+        // message outlives this effect.
+        if (copied) {
+            onCopiedShown()
+            scope.launch { snackbar.showSnackbar(resources.getString(R.string.calendars_event_copied)) }
         }
     }
 
@@ -270,12 +288,40 @@ fun CalendarScreen(
         )
     }
 
+    // A copy of a repeating stored event asks how far it reaches; one of an
+    // event that does not repeat, or of an occurrence with no stored event
+    // to load, is a single event and opens at once.
+    copying?.let { instance ->
+        ScopeDialog(
+            deleting = false,
+            copying = true,
+            following = false,
+            onDismiss = { copying = null },
+            onOne = {
+                copying = null
+                onCopyEvent(instance.event, instance.occurrence, Scope.ONE)
+            },
+            onAll = {
+                copying = null
+                onCopyEvent(instance.event, instance.occurrence, Scope.ALL)
+            },
+        )
+    }
+
     selected?.let { instance ->
         EventSheet(
             instance = instance,
             calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
             zones = uiState.preferences.zones,
             onDismiss = { selected = null },
+            onCopy = {
+                selected = null
+                when {
+                    !instance.editable -> onCopyOccurrence(instance)
+                    instance.recurring -> copying = instance
+                    else -> onCopyEvent(instance.event, 0, Scope.ALL)
+                }
+            },
         )
     }
 

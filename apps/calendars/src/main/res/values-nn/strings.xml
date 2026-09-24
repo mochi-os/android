@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Denne hendinga er endra ein annan stad.</string>
     <string name="calendars_undo">Angre</string>
     <string name="calendars_event_resize">Endre sluttid</string>
+    <string name="calendars_event_copy">Kopier</string>
+    <string name="calendars_event_copied">Hending kopiert</string>
+    <string name="calendars_scope_copy">Kopier denne hendinga</string>
+    <string name="calendars_editor_copy_title">Kopier hending</string>
 </resources>

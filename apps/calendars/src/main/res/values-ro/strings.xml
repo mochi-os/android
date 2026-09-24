@@ -149,4 +149,8 @@
     <string name="calendars_event_changed">Acest eveniment a fost modificat în altă parte.</string>
     <string name="calendars_undo">Anulează</string>
     <string name="calendars_event_resize">Modifică ora de încheiere</string>
+    <string name="calendars_event_copy">Copiază</string>
+    <string name="calendars_event_copied">Eveniment copiat</string>
+    <string name="calendars_scope_copy">Copiază acest eveniment</string>
+    <string name="calendars_editor_copy_title">Copiază evenimentul</string>
 </resources>

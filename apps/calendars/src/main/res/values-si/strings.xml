@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">මෙම සිදුවීම වෙනත් තැනක වෙනස් වී ඇත.</string>
     <string name="calendars_undo">අහෝසි කරන්න</string>
     <string name="calendars_event_resize">අවසන් වේලාව වෙනස් කරන්න</string>
+    <string name="calendars_event_copy">පිටපත් කරන්න</string>
+    <string name="calendars_event_copied">සිදුවීම පිටපත් කරන ලදී</string>
+    <string name="calendars_scope_copy">මෙම සිදුවීම පිටපත් කරන්න</string>
+    <string name="calendars_editor_copy_title">සිදුවීම පිටපත් කරන්න</string>
 </resources>

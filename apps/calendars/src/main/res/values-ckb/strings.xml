@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">ئەم ڕووداوە لە شوێنێکی تردا گۆڕدراوە.</string>
     <string name="calendars_undo">گەڕاندنەوە</string>
     <string name="calendars_event_resize">گۆڕینی کاتی کۆتایی</string>
+    <string name="calendars_event_copy">کۆپیکردن</string>
+    <string name="calendars_event_copied">ڕووداو کۆپیکرا</string>
+    <string name="calendars_scope_copy">کۆپیکردنی ئەم ڕووداوە</string>
+    <string name="calendars_editor_copy_title">کۆپیکردنی ڕووداو</string>
 </resources>

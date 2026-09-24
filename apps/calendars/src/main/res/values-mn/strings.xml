@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Энэ үйл явдал өөр газар өөрчлөгдсөн.</string>
     <string name="calendars_undo">Буцаах</string>
     <string name="calendars_event_resize">Дуусах цагийг өөрчлөх</string>
+    <string name="calendars_event_copy">Хуулах</string>
+    <string name="calendars_event_copied">Үйл явдал хуулагдлаа</string>
+    <string name="calendars_scope_copy">Энэ үйл явдлыг хуулах</string>
+    <string name="calendars_editor_copy_title">Үйл явдлыг хуулах</string>
 </resources>

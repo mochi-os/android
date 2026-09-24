@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Овој настан е променет на друго место.</string>
     <string name="calendars_undo">Поништи</string>
     <string name="calendars_event_resize">Промени го времето на завршување</string>
+    <string name="calendars_event_copy">Копирај</string>
+    <string name="calendars_event_copied">Настанот е копиран</string>
+    <string name="calendars_scope_copy">Копирај го овој настан</string>
+    <string name="calendars_editor_copy_title">Копирај настан</string>
 </resources>

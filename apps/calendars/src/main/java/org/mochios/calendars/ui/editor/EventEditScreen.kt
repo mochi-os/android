@@ -25,6 +25,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Search
@@ -80,22 +81,36 @@ import org.mochios.android.R as MochiR
 /**
  * The event editor: Title, Calendar, All day, Start and its zone, End and its
  * zone, Location, Repeat, Reminder, Description, in that order. A recurring
- * event asks whether a save or a delete is for the one occurrence or the
- * whole series.
+ * event asks whether a save, a delete or a copy is for the one occurrence or
+ * the whole series. [onCopy] opens the editor on a copy of the open event,
+ * with the occurrence and the scope the user chose; [onCopied] is a saved
+ * copy, which [onSaved] is not told of.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventEditScreen(
     onBack: () -> Unit,
     onSaved: () -> Unit,
+    onCopied: () -> Unit,
     onDeleted: () -> Unit,
+    onCopy: (String, Long, Scope) -> Unit,
     viewModel: EventEditViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbar = remember { SnackbarHostState() }
 
-    LaunchedEffect(uiState.saved) { if (uiState.saved) onSaved() }
+    LaunchedEffect(uiState.saved) {
+        if (uiState.saved) {
+            if (uiState.copying) onCopied() else onSaved()
+        }
+    }
     LaunchedEffect(uiState.deleted) { if (uiState.deleted) onDeleted() }
+    LaunchedEffect(uiState.copy) {
+        val scope = uiState.copy ?: return@LaunchedEffect
+        val event = uiState.event ?: return@LaunchedEffect
+        viewModel.routed()
+        onCopy(event, uiState.occurrence, scope)
+    }
     LaunchedEffect(uiState.error) {
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
     }
@@ -105,10 +120,10 @@ fun EventEditScreen(
             TopAppBar(
                 title = {
                     Text(
-                        if (uiState.event == null) {
-                            stringResource(R.string.calendars_event_new)
-                        } else {
-                            stringResource(R.string.calendars_event_edit)
+                        when {
+                            uiState.copying -> stringResource(R.string.calendars_editor_copy_title)
+                            uiState.event == null -> stringResource(R.string.calendars_event_new)
+                            else -> stringResource(R.string.calendars_event_edit)
                         },
                     )
                 },
@@ -122,6 +137,12 @@ fun EventEditScreen(
                 },
                 actions = {
                     if (uiState.event != null) {
+                        MochiIconButton(onClick = viewModel::copy, enabled = !uiState.isLoading) {
+                            Icon(
+                                Icons.Outlined.ContentCopy,
+                                contentDescription = stringResource(R.string.calendars_event_copy),
+                            )
+                        }
                         MochiIconButton(onClick = viewModel::confirm, enabled = uiState.writable) {
                             Icon(
                                 Icons.Outlined.Delete,
@@ -270,8 +291,12 @@ fun EventEditScreen(
     }
 
     if (uiState.prompt != null) {
+        // A copy is of the one occurrence or of the whole series; there is
+        // no series to cut.
         ScopeDialog(
             deleting = uiState.prompt == Prompt.DELETE,
+            copying = uiState.prompt == Prompt.COPY,
+            following = uiState.prompt != Prompt.COPY,
             onDismiss = viewModel::dismiss,
             onOne = { viewModel.scope(Scope.ONE) },
             onFollowing = { viewModel.scope(Scope.FOLLOWING) },

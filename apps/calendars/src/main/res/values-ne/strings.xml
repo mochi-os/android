@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">यो कार्यक्रम अन्यत्र परिवर्तन भएको छ।</string>
     <string name="calendars_undo">पूर्ववत गर्नुहोस्</string>
     <string name="calendars_event_resize">अन्त्य समय परिवर्तन गर्नुहोस्</string>
+    <string name="calendars_event_copy">प्रतिलिपि</string>
+    <string name="calendars_event_copied">कार्यक्रम प्रतिलिपि गरियो</string>
+    <string name="calendars_scope_copy">यो कार्यक्रम प्रतिलिपि गर्नुहोस्</string>
+    <string name="calendars_editor_copy_title">कार्यक्रम प्रतिलिपि गर्नुहोस्</string>
 </resources>

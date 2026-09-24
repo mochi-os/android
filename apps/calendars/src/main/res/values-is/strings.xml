@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Þessum viðburði var breytt annars staðar.</string>
     <string name="calendars_undo">Afturkalla</string>
     <string name="calendars_event_resize">Breyta lokatíma</string>
+    <string name="calendars_event_copy">Afrita</string>
+    <string name="calendars_event_copied">Viðburður afritaður</string>
+    <string name="calendars_scope_copy">Afrita þennan viðburð</string>
+    <string name="calendars_editor_copy_title">Afrita viðburð</string>
 </resources>

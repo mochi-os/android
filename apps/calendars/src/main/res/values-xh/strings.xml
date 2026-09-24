@@ -146,4 +146,8 @@
     <string name="calendars_event_changed">Lo msitho utshintshiwe kwenye indawo.</string>
     <string name="calendars_undo">Buyisela umva</string>
     <string name="calendars_event_resize">Tshintsha ixesha lokuphela</string>
+    <string name="calendars_event_copy">Kotshela</string>
+    <string name="calendars_event_copied">Umsitho ukotshelwe</string>
+    <string name="calendars_scope_copy">Kotshela lo msitho</string>
+    <string name="calendars_editor_copy_title">Kotshela umsitho</string>
 </resources>
