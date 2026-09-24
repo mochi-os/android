@@ -12,7 +12,7 @@
     <string name="calendars_subscribe">Subscribe to calendar</string>
     <string name="calendars_subscribe_submit">Subscribe</string>
     <string name="calendars_subscribe_url">Address</string>
-    <string name="calendars_connect_device">Connect a device</string>
+    <string name="calendars_connect_device">Connect device</string>
     <string name="calendars_preferences">Preferences</string>
     <string name="calendars_name">Name</string>
     <string name="calendars_colour">Colour</string>
@@ -177,8 +177,8 @@
     <string name="calendars_sync_authorization">Sign in again to keep syncing</string>
     <string name="calendars_sync_transport">Could not reach the server</string>
 
-    <!-- Connect a device -->
-    <string name="calendars_device_title">Connect a device</string>
+    <!-- Connect device -->
+    <string name="calendars_device_title">Connect device</string>
     <string name="calendars_device_name">Device name</string>
     <string name="calendars_device_create">Create</string>
     <string name="calendars_device_server">Server</string>

@@ -472,7 +472,7 @@ private fun View(
     }
 }
 
-/** Today, previous, next, the range's title, and the view switcher. */
+/** Previous, today, next, the range's title, and the view switcher. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun Toolbar(
@@ -496,14 +496,14 @@ private fun Toolbar(
             }
         },
         actions = {
-            MochiIconButton(onClick = onToday) {
-                Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
-            }
             MochiIconButton(onClick = onPrevious) {
                 Icon(
                     Icons.Default.ChevronLeft,
                     contentDescription = stringResource(R.string.calendars_previous),
                 )
+            }
+            MochiIconButton(onClick = onToday) {
+                Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
             }
             MochiIconButton(onClick = onNext) {
                 Icon(Icons.Default.ChevronRight, contentDescription = stringResource(R.string.calendars_next))

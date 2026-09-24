@@ -214,8 +214,8 @@
     <string name="people_person_decline">Decline</string>
     <string name="people_profile_too_long">Profile is too long</string>
 
-    <!-- Connect a device (CardDAV) -->
-    <string name="people_device_title">Connect a device</string>
+    <!-- Connect device (CardDAV) -->
+    <string name="people_device_title">Connect device</string>
     <string name="people_device_name">Device name</string>
     <string name="people_device_create">Create</string>
     <string name="people_device_server">Server</string>

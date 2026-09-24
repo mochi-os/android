@@ -80,7 +80,7 @@ enum class CalendarAction {
  * The calendars app's drawer. There is no "All calendars" row: the view is
  * always the overlay of the checked calendars, so each row is a checkbox in
  * the calendar's own colour rather than a link. Each row carries an overflow
- * menu; beneath them sit Create, Subscribe, Preferences, Connect a device
+ * menu; beneath them sit Create, Subscribe, Connect device, Preferences
  * and the phone-sync switch.
  */
 @Composable
@@ -132,19 +132,19 @@ fun CalendarDrawer(
                             },
                         )
                         DrawerActionRow(
-                            title = stringResource(R.string.calendars_preferences),
-                            icon = Icons.Outlined.Settings,
-                            onClick = {
-                                scope.launch { drawerState.close() }
-                                onPreferences()
-                            },
-                        )
-                        DrawerActionRow(
                             title = stringResource(R.string.calendars_connect_device),
                             icon = Icons.Outlined.Smartphone,
                             onClick = {
                                 scope.launch { drawerState.close() }
                                 onConnectDevice()
+                            },
+                        )
+                        DrawerActionRow(
+                            title = stringResource(R.string.calendars_preferences),
+                            icon = Icons.Outlined.Settings,
+                            onClick = {
+                                scope.launch { drawerState.close() }
+                                onPreferences()
                             },
                         )
                         CalendarsSyncRows()
