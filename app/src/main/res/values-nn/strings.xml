@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">Straumar</string>
-    <string name="launcher_chat">Prat</string>
-    <string name="launcher_forums">Forum</string>
-    <string name="launcher_projects">Prosjekt</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Personar</string>
-    <string name="launcher_settings">Innstillingar</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Sjakk</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Ord</string>
+    <string name="launcher_feeds">Mochi Straumar</string>
+    <string name="launcher_chat">Mochi Prat</string>
+    <string name="launcher_forums">Mochi Forum</string>
+    <string name="launcher_projects">Mochi Prosjekt</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Personar</string>
+    <string name="launcher_settings">Mochi Innstillingar</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Sjakk</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Ord</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Kalendrar</string>
+    <string name="launcher_calendars">Mochi Kalendrar</string>
     <string name="launcher_staff">Mochi Personale</string>
 
     <string name="app_name">Mochi</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Woorde</string>
     <string name="words_list_menu">Kieslys</string>
     <string name="words_list_logout">Meld af</string>
     <string name="words_sidebar_completed">Voltooi</string>

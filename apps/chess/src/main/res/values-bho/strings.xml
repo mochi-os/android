@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">शतरंज</string>
+    <string name="chess_sidebar_header">शतरंज</string>
     <string name="chess_sidebar_active">सक्रिय खेल</string>
     <string name="chess_sidebar_completed">पूरा कइल गइल</string>
     <string name="chess_sidebar_new_game">नया खेल</string>

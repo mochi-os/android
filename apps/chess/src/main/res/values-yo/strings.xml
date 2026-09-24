@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">Ṣẹ́ẹ̀sì</string>
+    <string name="chess_sidebar_header">Ṣẹ́ẹ̀sì</string>
     <string name="chess_sidebar_active">Àwọn Eré Tó Ń Lọ</string>
     <string name="chess_sidebar_completed">Tí a parí</string>
     <string name="chess_sidebar_new_game">Eré tuntun</string>

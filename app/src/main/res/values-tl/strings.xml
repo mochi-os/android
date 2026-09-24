@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mga feed</string>
-    <string name="launcher_chat">Chat</string>
-    <string name="launcher_forums">Mga forum</string>
-    <string name="launcher_projects">Mga Proyekto</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Mga Tao</string>
-    <string name="launcher_settings">Mga setting</string>
+    <string name="launcher_feeds">Mochi Mga feed</string>
+    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_forums">Mochi Mga forum</string>
+    <string name="launcher_projects">Mochi Mga Proyekto</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Mga Tao</string>
+    <string name="launcher_settings">Mochi Mga setting</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Ahedres</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Mga salita</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mga kalendaryo</string>
+    <string name="launcher_calendars">Mochi Mga kalendaryo</string>
     <string name="launcher_staff">Mochi Kawani</string>
 
 

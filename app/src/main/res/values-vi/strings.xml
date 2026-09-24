@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Nguồn cấp</string>
-    <string name="launcher_chat">Trò chuyện</string>
-    <string name="launcher_forums">Diễn đàn</string>
-    <string name="launcher_projects">Dự án</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Mọi người</string>
-    <string name="launcher_settings">Cài đặt</string>
+    <string name="launcher_feeds">Mochi Nguồn cấp</string>
+    <string name="launcher_chat">Mochi Trò chuyện</string>
+    <string name="launcher_forums">Mochi Diễn đàn</string>
+    <string name="launcher_projects">Mochi Dự án</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Mọi người</string>
+    <string name="launcher_settings">Mochi Cài đặt</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Cờ vua</string>
-    <string name="launcher_go">Cờ vây</string>
-    <string name="launcher_words">Từ</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Cờ vua</string>
+    <string name="launcher_go">Mochi Cờ vây</string>
+    <string name="launcher_words">Mochi Từ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Lịch</string>
+    <string name="launcher_calendars">Mochi Lịch</string>
     <string name="launcher_staff">Mochi Nhân viên</string>
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">పదాలు</string>
     <string name="words_list_menu">మెను</string>
     <string name="words_list_logout">లాగ్ అవుట్</string>
     <string name="words_sidebar_completed">పూర్తయింది</string>

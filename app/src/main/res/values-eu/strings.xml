@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">Jarioak</string>
-    <string name="launcher_chat">Txata</string>
-    <string name="launcher_forums">Foroak</string>
-    <string name="launcher_projects">Proiektuak</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Jendea</string>
-    <string name="launcher_settings">Ezarpenak</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Xakea</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Hitzak</string>
+    <string name="launcher_feeds">Mochi Jarioak</string>
+    <string name="launcher_chat">Mochi Txata</string>
+    <string name="launcher_forums">Mochi Foroak</string>
+    <string name="launcher_projects">Mochi Proiektuak</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Jendea</string>
+    <string name="launcher_settings">Mochi Ezarpenak</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Xakea</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Hitzak</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Egutegiak</string>
+    <string name="launcher_calendars">Mochi Egutegiak</string>
     <string name="launcher_staff">Mochi Langileak</string>
 
     <string name="app_name">Mochi</string>

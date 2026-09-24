@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Fothaí</string>
-    <string name="launcher_chat">Comhrá</string>
-    <string name="launcher_forums">Fóraim</string>
-    <string name="launcher_projects">Tionscadail</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Daoine</string>
-    <string name="launcher_settings">Socruithe</string>
+    <string name="launcher_feeds">Mochi Fothaí</string>
+    <string name="launcher_chat">Mochi Comhrá</string>
+    <string name="launcher_forums">Mochi Fóraim</string>
+    <string name="launcher_projects">Mochi Tionscadail</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Daoine</string>
+    <string name="launcher_settings">Mochi Socruithe</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Ficheall</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Focail</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Féilirí</string>
+    <string name="launcher_calendars">Mochi Féilirí</string>
     <string name="launcher_staff">Mochi Foireann</string>
 
 

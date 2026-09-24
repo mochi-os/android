@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">信息流</string>
-    <string name="launcher_chat">聊天</string>
-    <string name="launcher_forums">论坛</string>
-    <string name="launcher_projects">项目</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">人员</string>
-    <string name="launcher_settings">设置</string>
+    <string name="launcher_feeds">Mochi 信息流</string>
+    <string name="launcher_chat">Mochi 聊天</string>
+    <string name="launcher_forums">Mochi 论坛</string>
+    <string name="launcher_projects">Mochi 项目</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi 人员</string>
+    <string name="launcher_settings">Mochi 设置</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">国际象棋</string>
-    <string name="launcher_go">围棋</string>
-    <string name="launcher_words">词语</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi 国际象棋</string>
+    <string name="launcher_go">Mochi 围棋</string>
+    <string name="launcher_words">Mochi 词语</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">日历</string>
+    <string name="launcher_calendars">Mochi 日历</string>
     <string name="launcher_staff">Mochi 员工</string>
 
 

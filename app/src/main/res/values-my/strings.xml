@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">ဖိဒ်များ</string>
-    <string name="launcher_chat">စကားပြောခန်း</string>
-    <string name="launcher_forums">ဖိုရမ်များ</string>
-    <string name="launcher_projects">ပရောဂျက်များ</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">လူများ</string>
-    <string name="launcher_settings">ဆက်တင်များ</string>
+    <string name="launcher_feeds">Mochi ဖိဒ်များ</string>
+    <string name="launcher_chat">Mochi စကားပြောခန်း</string>
+    <string name="launcher_forums">Mochi ဖိုရမ်များ</string>
+    <string name="launcher_projects">Mochi ပရောဂျက်များ</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi လူများ</string>
+    <string name="launcher_settings">Mochi ဆက်တင်များ</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi ဆက်စ်</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi စကားလုံးများ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">ပြက္ခဒိန်များ</string>
+    <string name="launcher_calendars">Mochi ပြက္ခဒိန်များ</string>
     <string name="launcher_staff">Mochi ဝန်ထမ်းများ</string>
 
 

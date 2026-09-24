@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Žodžiai</string>
     <string name="words_list_menu">Meniu</string>
     <string name="words_list_logout">Atsijungti</string>
     <string name="words_sidebar_completed">Baigta</string>

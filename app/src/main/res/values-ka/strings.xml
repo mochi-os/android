@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">არხები</string>
-    <string name="launcher_chat">ჩატი</string>
-    <string name="launcher_forums">ფორუმები</string>
-    <string name="launcher_projects">პროექტები</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">ხალხი</string>
-    <string name="launcher_settings">პარამეტრები</string>
+    <string name="launcher_feeds">Mochi არხები</string>
+    <string name="launcher_chat">Mochi ჩატი</string>
+    <string name="launcher_forums">Mochi ფორუმები</string>
+    <string name="launcher_projects">Mochi პროექტები</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi ხალხი</string>
+    <string name="launcher_settings">Mochi პარამეტრები</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi ჭადრაკი</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi სიტყვები</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">კალენდრები</string>
+    <string name="launcher_calendars">Mochi კალენდრები</string>
     <string name="launcher_staff">Mochi პერსონალი</string>
 
 

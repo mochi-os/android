@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Vārdi</string>
     <string name="words_list_menu">Izvēlne</string>
     <string name="words_list_logout">Izrakstīties</string>
     <string name="words_sidebar_completed">Pabeigts</string>

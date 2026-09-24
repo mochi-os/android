@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">Feed-ови</string>
-    <string name="launcher_chat">Разговор</string>
-    <string name="launcher_forums">Форуми</string>
-    <string name="launcher_projects">Проекти</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Луѓе</string>
-    <string name="launcher_settings">Поставки</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Шах</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Зборови</string>
+    <string name="launcher_feeds">Mochi Feed-ови</string>
+    <string name="launcher_chat">Mochi Разговор</string>
+    <string name="launcher_forums">Mochi Форуми</string>
+    <string name="launcher_projects">Mochi Проекти</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Луѓе</string>
+    <string name="launcher_settings">Mochi Поставки</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Шах</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Зборови</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Календари</string>
+    <string name="launcher_calendars">Mochi Календари</string>
     <string name="launcher_staff">Mochi Персонал</string>
 
     <string name="app_name">Mochi</string>

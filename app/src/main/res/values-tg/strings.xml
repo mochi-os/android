@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Фидҳо</string>
-    <string name="launcher_chat">Чат</string>
-    <string name="launcher_forums">Форумҳо</string>
-    <string name="launcher_projects">Лоиҳаҳо</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Шахсон</string>
-    <string name="launcher_settings">Танзимот</string>
+    <string name="launcher_feeds">Mochi Фидҳо</string>
+    <string name="launcher_chat">Mochi Чат</string>
+    <string name="launcher_forums">Mochi Форумҳо</string>
+    <string name="launcher_projects">Mochi Лоиҳаҳо</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Шахсон</string>
+    <string name="launcher_settings">Mochi Танзимот</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Шоҳмот</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Калимаҳо</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Тақвимҳо</string>
+    <string name="launcher_calendars">Mochi Тақвимҳо</string>
     <string name="launcher_staff">Mochi Кормандон</string>
 
 

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">ഫീഡുകൾ</string>
-    <string name="launcher_chat">ചാറ്റ്</string>
-    <string name="launcher_forums">ഫോറങ്ങൾ</string>
-    <string name="launcher_projects">prompt സേവ് ചെയ്തു</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">ആളുകൾ</string>
-    <string name="launcher_settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="launcher_feeds">Mochi ഫീഡുകൾ</string>
+    <string name="launcher_chat">Mochi ചാറ്റ്</string>
+    <string name="launcher_forums">Mochi ഫോറങ്ങൾ</string>
+    <string name="launcher_projects">Mochi പ്രോജക്റ്റുകൾ</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi ആളുകൾ</string>
+    <string name="launcher_settings">Mochi ക്രമീകരണങ്ങൾ</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi ചെസ്സ്</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi വാക്കുകൾ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">കലണ്ടറുകൾ</string>
+    <string name="launcher_calendars">Mochi കലണ്ടറുകൾ</string>
     <string name="launcher_staff">Mochi ജീവനക്കാർ</string>
 
 

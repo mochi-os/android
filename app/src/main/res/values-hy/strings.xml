@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Հոսքեր</string>
-    <string name="launcher_chat">Զրույցի ID</string>
-    <string name="launcher_forums">Ֆորումներ</string>
-    <string name="launcher_projects">Նախագծեր</string>
-    <string name="launcher_crm">CRM-ը ստեղծված է</string>
-    <string name="launcher_people">Մարդիկ</string>
-    <string name="launcher_settings">Կարգավորումներ</string>
+    <string name="launcher_feeds">Mochi Հոսքեր</string>
+    <string name="launcher_chat">Mochi Զրույց</string>
+    <string name="launcher_forums">Mochi Ֆորումներ</string>
+    <string name="launcher_projects">Mochi Նախագծեր</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Մարդիկ</string>
+    <string name="launcher_settings">Mochi Կարգավորումներ</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Շախմատ</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Բառեր</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Օրացույցներ</string>
+    <string name="launcher_calendars">Mochi Օրացույցներ</string>
     <string name="launcher_staff">Mochi Անձնակազմ</string>
 
 

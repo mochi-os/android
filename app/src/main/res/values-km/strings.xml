@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">ព័ត៌មានបង្ហាញ</string>
-    <string name="launcher_chat">ជជែក</string>
-    <string name="launcher_forums">វេទិកា</string>
-    <string name="launcher_projects">គម្រោង</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">មនុស្ស</string>
-    <string name="launcher_settings">ការកំណត់</string>
+    <string name="launcher_feeds">Mochi ព័ត៌មានបង្ហាញ</string>
+    <string name="launcher_chat">Mochi ជជែក</string>
+    <string name="launcher_forums">Mochi វេទិកា</string>
+    <string name="launcher_projects">Mochi គម្រោង</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi មនុស្ស</string>
+    <string name="launcher_settings">Mochi ការកំណត់</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi អុកអន្តរជាតិ</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi ពាក្យ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">ប្រតិទិន</string>
+    <string name="launcher_calendars">Mochi ប្រតិទិន</string>
     <string name="launcher_staff">Mochi បុគ្គលិក</string>
 
 

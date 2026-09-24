@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">So‘zlar</string>
     <string name="words_list_menu">Menyu</string>
     <string name="words_list_logout">Chiqish</string>
     <string name="words_sidebar_completed">Yakunlandi</string>

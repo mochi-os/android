@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">فیڈز</string>
-    <string name="launcher_chat">چیٹ</string>
-    <string name="launcher_forums">فورمز</string>
-    <string name="launcher_projects">projects</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">لوگ</string>
-    <string name="launcher_settings">سیٹنگز</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">شطرنج</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">الفاظ</string>
+    <string name="launcher_feeds">Mochi فیڈز</string>
+    <string name="launcher_chat">Mochi چیٹ</string>
+    <string name="launcher_forums">Mochi فورمز</string>
+    <string name="launcher_projects">Mochi پروجیکٹس</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi لوگ</string>
+    <string name="launcher_settings">Mochi سیٹنگز</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi شطرنج</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi الفاظ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">کیلنڈرز</string>
+    <string name="launcher_calendars">Mochi کیلنڈرز</string>
     <string name="launcher_staff">Mochi عملہ</string>
 
     <string name="app_name">Mochi</string>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">פֿידן</string>
-    <string name="launcher_chat">שמועס</string>
-    <string name="launcher_forums">פֿאָרומס</string>
-    <string name="launcher_projects">פּראָיעקטן</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">מענטשן</string>
-    <string name="launcher_settings">אײַנשטעלונגען</string>
+    <string name="launcher_feeds">Mochi פֿידן</string>
+    <string name="launcher_chat">Mochi שמועס</string>
+    <string name="launcher_forums">Mochi פֿאָרומס</string>
+    <string name="launcher_projects">Mochi פּראָיעקטן</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi מענטשן</string>
+    <string name="launcher_settings">Mochi אײַנשטעלונגען</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi שאַך</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi ווערטער</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">קאַלענדאַרן</string>
+    <string name="launcher_calendars">Mochi קאַלענדאַרן</string>
     <string name="launcher_staff">Mochi שטאַב</string>
 
 

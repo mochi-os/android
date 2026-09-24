@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Fluxuri</string>
-    <string name="launcher_chat">Chat</string>
-    <string name="launcher_forums">Forumuri</string>
-    <string name="launcher_projects">Proiecte</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Persoane</string>
-    <string name="launcher_settings">Setări</string>
+    <string name="launcher_feeds">Mochi Fluxuri</string>
+    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_forums">Mochi Forumuri</string>
+    <string name="launcher_projects">Mochi Proiecte</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Persoane</string>
+    <string name="launcher_settings">Mochi Setări</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Șah</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Cuvinte</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Șah</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Cuvinte</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Calendare</string>
+    <string name="launcher_calendars">Mochi Calendare</string>
     <string name="launcher_staff">Mochi Personal</string>
 
 

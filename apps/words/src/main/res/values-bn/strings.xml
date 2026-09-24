@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">শব্দ</string>
     <string name="words_list_menu">মেনু</string>
     <string name="words_list_logout">লগ আউট করুন</string>
     <string name="words_sidebar_completed">সম্পন্ন</string>

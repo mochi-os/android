@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">ฟีด</string>
-    <string name="launcher_chat">แชท</string>
-    <string name="launcher_forums">ฟอรัม</string>
-    <string name="launcher_projects">โปรเจกต์</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">ผู้คน</string>
-    <string name="launcher_settings">การตั้งค่า</string>
+    <string name="launcher_feeds">Mochi ฟีด</string>
+    <string name="launcher_chat">Mochi แชท</string>
+    <string name="launcher_forums">Mochi ฟอรัม</string>
+    <string name="launcher_projects">Mochi โปรเจกต์</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi ผู้คน</string>
+    <string name="launcher_settings">Mochi การตั้งค่า</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">หมากรุก</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi หมากรุก</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi คำศัพท์</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">ปฏิทิน</string>
+    <string name="launcher_calendars">Mochi ปฏิทิน</string>
     <string name="launcher_staff">Mochi พนักงาน</string>
 
 

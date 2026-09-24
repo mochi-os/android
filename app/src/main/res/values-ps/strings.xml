@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">فیډونه</string>
-    <string name="launcher_chat">چټ</string>
-    <string name="launcher_forums">فورمونه</string>
-    <string name="launcher_projects">پروژې</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">خلک</string>
-    <string name="launcher_settings">ترتیبات</string>
+    <string name="launcher_feeds">Mochi فیډونه</string>
+    <string name="launcher_chat">Mochi چټ</string>
+    <string name="launcher_forums">Mochi فورمونه</string>
+    <string name="launcher_projects">Mochi پروژې</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi خلک</string>
+    <string name="launcher_settings">Mochi ترتیبات</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi شطرنج</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi کلمې</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">کالنډرونه</string>
+    <string name="launcher_calendars">Mochi کالنډرونه</string>
     <string name="launcher_staff">Mochi کارکوونکي</string>
 
 

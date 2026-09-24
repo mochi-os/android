@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Inbhirean</string>
-    <string name="launcher_chat">Còmhradh</string>
-    <string name="launcher_forums">Fòraman</string>
-    <string name="launcher_projects">Pròiseactan</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Daoine</string>
-    <string name="launcher_settings">Roghainnean</string>
+    <string name="launcher_feeds">Mochi Inbhirean</string>
+    <string name="launcher_chat">Mochi Còmhradh</string>
+    <string name="launcher_forums">Mochi Fòraman</string>
+    <string name="launcher_projects">Mochi Pròiseactan</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Daoine</string>
+    <string name="launcher_settings">Mochi Roghainnean</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Tàileasg</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Faclan</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Mìosachain</string>
+    <string name="launcher_calendars">Mochi Mìosachain</string>
     <string name="launcher_staff">Mochi Luchd-obrach</string>
 
 

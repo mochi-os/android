@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">لفظ</string>
     <string name="words_list_menu">مينيو</string>
     <string name="words_list_logout">لاگ آئوٽ</string>
     <string name="words_sidebar_completed">مڪمل</string>

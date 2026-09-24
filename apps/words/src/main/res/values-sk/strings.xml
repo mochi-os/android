@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Slová</string>
     <string name="words_list_menu">Menu</string>
     <string name="words_list_logout">Odhlásiť sa</string>
     <string name="words_sidebar_completed">Dokončené</string>

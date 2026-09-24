@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">ফিডসমূহ</string>
-    <string name="launcher_chat">চ্যাট</string>
-    <string name="launcher_forums">ফোরামসমূহ</string>
-    <string name="launcher_projects">প্রকল্প</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">ব্যক্তিরা</string>
-    <string name="launcher_settings">সেটিংস</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">দাবা</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">শব্দ</string>
+    <string name="launcher_feeds">Mochi ফিডসমূহ</string>
+    <string name="launcher_chat">Mochi চ্যাট</string>
+    <string name="launcher_forums">Mochi ফোরামসমূহ</string>
+    <string name="launcher_projects">Mochi প্রকল্প</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi ব্যক্তিরা</string>
+    <string name="launcher_settings">Mochi সেটিংস</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi দাবা</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi শব্দ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">ক্যালেন্ডারগুলি</string>
+    <string name="launcher_calendars">Mochi ক্যালেন্ডারগুলি</string>
     <string name="launcher_staff">Mochi কর্মী</string>
 
     <string name="app_name">Mochi</string>

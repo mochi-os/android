@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Lentlər</string>
-    <string name="launcher_chat">Söhbət</string>
-    <string name="launcher_forums">Forumlar</string>
-    <string name="launcher_projects">Layihələr</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">İnsanlar</string>
-    <string name="launcher_settings">Parametrlər</string>
+    <string name="launcher_feeds">Mochi Lentlər</string>
+    <string name="launcher_chat">Mochi Söhbət</string>
+    <string name="launcher_forums">Mochi Forumlar</string>
+    <string name="launcher_projects">Mochi Layihələr</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi İnsanlar</string>
+    <string name="launcher_settings">Mochi Parametrlər</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Şahmat</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Sözlər</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Təqvimlər</string>
+    <string name="launcher_calendars">Mochi Təqvimlər</string>
     <string name="launcher_staff">Mochi Heyət</string>
 
 

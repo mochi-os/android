@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">වචන</string>
     <string name="words_list_menu">මෙනුව</string>
     <string name="words_list_logout">ඉවත් වන්න</string>
     <string name="words_sidebar_completed">සම්පූර්ණයි</string>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">Mlisho</string>
-    <string name="launcher_chat">Gumzo</string>
-    <string name="launcher_forums">Majukwaa</string>
-    <string name="launcher_projects">Miradi</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Watu</string>
-    <string name="launcher_settings">Mipangilio</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Maneno</string>
+    <string name="launcher_feeds">Mochi Mlisho</string>
+    <string name="launcher_chat">Mochi Gumzo</string>
+    <string name="launcher_forums">Mochi Majukwaa</string>
+    <string name="launcher_projects">Mochi Miradi</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Watu</string>
+    <string name="launcher_settings">Mochi Mipangilio</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Sataranji</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Maneno</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Kalenda</string>
+    <string name="launcher_calendars">Mochi Kalenda</string>
     <string name="launcher_staff">Mochi Wafanyakazi</string>
 
     <string name="app_name">Mochi</string>

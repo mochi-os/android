@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">Үгс</string>
     <string name="words_list_menu">Цэс</string>
     <string name="words_list_logout">Гарах</string>
     <string name="words_sidebar_completed">Гүйцэтгэсэн</string>

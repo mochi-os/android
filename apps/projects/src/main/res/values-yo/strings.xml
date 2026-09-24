@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">Orúkọ àfihàn</string>
     <string name="projects_auth_verification_failed">Ìjẹ́rìísí kùnà</string>
-    <string name="projects_list_title">Àwọn project</string>
+    <string name="projects_list_title">Àwọn iṣẹ́ àkànṣe</string>
     <string name="projects_list_close_search">Ti àwárí</string>
     <string name="projects_list_search">Wá</string>
     <string name="projects_list_find">Wa àwọn iṣẹ́</string>
@@ -132,7 +132,7 @@
     <string name="projects_field_flags">Àwọn àsíá</string>
     <string name="projects_field_required">Pọn dandan</string>
     <string name="projects_field_position_default">Àìpé</string>
-    <string name="projects_field_position_sidebar">Sidebar</string>
+    <string name="projects_field_position_sidebar">Ọ̀pá ẹ̀gbẹ́</string>
     <string name="projects_field_save">Fi àwọn àyípadà pamọ́</string>
     <string name="projects_field_options">Àwọn àṣàyàn</string>
     <string name="projects_field_add_option">Fi àṣàyàn kún</string>
@@ -153,7 +153,7 @@
     <string name="projects_views_sort_created">Tí a dá</string>
     <string name="projects_views_sort_updated">Ti ṣe imudojúìwọ̀n</string>
     <string name="projects_views_sort_rank">Ipò</string>
-    <string name="projects_project_not_found">A kò rí project</string>
+    <string name="projects_project_not_found">A kò rí iṣẹ́ àkànṣe</string>
     <string name="projects_list_more">Diẹ sii</string>
     <string name="projects_more">Diẹ sii</string>
     <string name="projects_request_more">Diẹ sii</string>
@@ -354,7 +354,7 @@
     <string name="projects_create_import_backup">Gbé wọlé láti backup (àṣàyàn)</string>
     <string name="projects_create_upload_json">Gbé fáìlì .json jáde</string>
     <string name="projects_settings_not_set">A kò ṣètò</string>
-    <string name="projects_settings_updated">A ti dojú project ìwọ́n</string>
+    <string name="projects_settings_updated">A ti ṣe imudojúìwọ̀n iṣẹ́ àkànṣe</string>
     <string name="projects_property_select">Yan …</string>
     <string name="projects_activity_attached">so mọ́</string>
     <string name="projects_activity_commented">sọ àsọyé</string>

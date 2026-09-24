@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Feed</string>
-    <string name="launcher_chat">Chat</string>
-    <string name="launcher_forums">Forum</string>
-    <string name="launcher_projects">Proje</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Kes</string>
-    <string name="launcher_settings">Mîheng</string>
+    <string name="launcher_feeds">Mochi Feed</string>
+    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_forums">Mochi Forum</string>
+    <string name="launcher_projects">Mochi Proje</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Kes</string>
+    <string name="launcher_settings">Mochi Mîheng</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Şetrenc</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Peyv</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Salname</string>
+    <string name="launcher_calendars">Mochi Salname</string>
     <string name="launcher_staff">Mochi Karmend</string>
 
 

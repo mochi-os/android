@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_feeds">Suapan</string>
-    <string name="launcher_chat">Sembang</string>
-    <string name="launcher_forums">Forum</string>
-    <string name="launcher_projects">Projek</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Orang</string>
-    <string name="launcher_settings">Tetapan</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Catur</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Kata</string>
+    <string name="launcher_feeds">Mochi Suapan</string>
+    <string name="launcher_chat">Mochi Sembang</string>
+    <string name="launcher_forums">Mochi Forum</string>
+    <string name="launcher_projects">Mochi Projek</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Orang</string>
+    <string name="launcher_settings">Mochi Tetapan</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Catur</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Kata</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Kalendar</string>
+    <string name="launcher_calendars">Mochi Kalendar</string>
     <string name="launcher_staff">Mochi Kakitangan</string>
 
     <string name="app_name">Mochi</string>

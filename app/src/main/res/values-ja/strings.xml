@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">フィード</string>
-    <string name="launcher_chat">チャット</string>
-    <string name="launcher_forums">フォーラム</string>
-    <string name="launcher_projects">プロジェクト</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">ピープル</string>
-    <string name="launcher_settings">設定</string>
+    <string name="launcher_feeds">Mochi フィード</string>
+    <string name="launcher_chat">Mochi チャット</string>
+    <string name="launcher_forums">Mochi フォーラム</string>
+    <string name="launcher_projects">Mochi プロジェクト</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi ピープル</string>
+    <string name="launcher_settings">Mochi 設定</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">チェス</string>
-    <string name="launcher_go">囲碁</string>
-    <string name="launcher_words">ワード</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi チェス</string>
+    <string name="launcher_go">Mochi 囲碁</string>
+    <string name="launcher_words">Mochi ワード</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">カレンダー</string>
+    <string name="launcher_calendars">Mochi カレンダー</string>
     <string name="launcher_staff">Mochi スタッフ</string>
 
 

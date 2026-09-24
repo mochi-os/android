@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Tasmalar</string>
-    <string name="launcher_chat">Suhbat</string>
-    <string name="launcher_forums">Forumlar</string>
-    <string name="launcher_projects">Loyihalar</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Odamlar</string>
-    <string name="launcher_settings">Sozlamalar</string>
+    <string name="launcher_feeds">Mochi Tasmalar</string>
+    <string name="launcher_chat">Mochi Suhbat</string>
+    <string name="launcher_forums">Mochi Forumlar</string>
+    <string name="launcher_projects">Mochi Loyihalar</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Odamlar</string>
+    <string name="launcher_settings">Mochi Sozlamalar</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Shaxmat</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi So‘zlar</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Kalendarlar</string>
+    <string name="launcher_calendars">Mochi Kalendarlar</string>
     <string name="launcher_staff">Mochi Xodimlar</string>
 
 

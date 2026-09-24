@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">فيڊز</string>
-    <string name="launcher_chat">چيٽ</string>
-    <string name="launcher_forums">فورمَ</string>
-    <string name="launcher_projects">پروجيڪٽ</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">ماڻهو</string>
-    <string name="launcher_settings">سيٽنگون</string>
+    <string name="launcher_feeds">Mochi فيڊز</string>
+    <string name="launcher_chat">Mochi چيٽ</string>
+    <string name="launcher_forums">Mochi فورمَ</string>
+    <string name="launcher_projects">Mochi پروجيڪٽ</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi ماڻهو</string>
+    <string name="launcher_settings">Mochi سيٽنگون</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi شطرنج</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi لفظ</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">ڪئلينڊر</string>
+    <string name="launcher_calendars">Mochi ڪئلينڊر</string>
     <string name="launcher_staff">Mochi عملو</string>
 
 

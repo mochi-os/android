@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="launcher_settings">設定</string>
-    <string name="launcher_people">用戶</string>
-    <string name="launcher_chat">聊天</string>
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">國際象棋</string>
-    <string name="launcher_go">圍棋</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_settings">Mochi 設定</string>
+    <string name="launcher_people">Mochi 用戶</string>
+    <string name="launcher_chat">Mochi 聊天</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi 國際象棋</string>
+    <string name="launcher_go">Mochi 圍棋</string>
 
     <string name="app_name">Mochi</string>
-    <string name="launcher_feeds">動態</string>
-    <string name="launcher_forums">討論區</string>
-    <string name="launcher_projects">專案</string>
-    <string name="launcher_crm">客戶關係管理</string>
+    <string name="launcher_feeds">Mochi 動態</string>
+    <string name="launcher_forums">Mochi 討論區</string>
+    <string name="launcher_projects">Mochi 專案</string>
+    <string name="launcher_crm">Mochi 客戶關係管理</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_staff">Mochi Staff</string>
 
 </resources>

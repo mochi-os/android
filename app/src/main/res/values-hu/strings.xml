@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Hírcsatornák</string>
-    <string name="launcher_chat">Chat</string>
-    <string name="launcher_forums">Fórumok</string>
-    <string name="launcher_projects">Projektek</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Személyek</string>
-    <string name="launcher_settings">Beállítások</string>
+    <string name="launcher_feeds">Mochi Hírcsatornák</string>
+    <string name="launcher_chat">Mochi Chat</string>
+    <string name="launcher_forums">Mochi Fórumok</string>
+    <string name="launcher_projects">Mochi Projektek</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Személyek</string>
+    <string name="launcher_settings">Mochi Beállítások</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Sakk</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Szavak</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Sakk</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Szavak</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Naptárak</string>
+    <string name="launcher_calendars">Mochi Naptárak</string>
     <string name="launcher_staff">Mochi Munkatársak</string>
 
 

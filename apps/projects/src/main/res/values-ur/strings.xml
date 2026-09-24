@@ -2,7 +2,7 @@
 <resources>
     <string name="projects_auth_display_name">ڈسپلے نام</string>
     <string name="projects_auth_verification_failed">تصدیق ناکام</string>
-    <string name="projects_list_title">projects</string>
+    <string name="projects_list_title">پروجیکٹس</string>
     <string name="projects_list_close_search">تلاش بند کریں</string>
     <string name="projects_list_search">تلاش کریں</string>
     <string name="projects_list_find">پروجیکٹس تلاش کریں</string>
@@ -153,7 +153,7 @@
     <string name="projects_views_sort_created">بنایا گیا</string>
     <string name="projects_views_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="projects_views_sort_rank">رینک</string>
-    <string name="projects_project_not_found">project نہیں ملا</string>
+    <string name="projects_project_not_found">پروجیکٹ نہیں ملا</string>
     <string name="projects_list_more">مزید</string>
     <string name="projects_more">مزید</string>
     <string name="projects_request_more">مزید</string>
@@ -354,7 +354,7 @@
     <string name="projects_create_import_backup">بیک اپ سے درآمد کریں (اختیاری)</string>
     <string name="projects_create_upload_json">.json فائل اپ لوڈ کریں</string>
     <string name="projects_settings_not_set">سیٹ نہیں ہے</string>
-    <string name="projects_settings_updated">project اپ ڈیٹ ہو گیا</string>
+    <string name="projects_settings_updated">پروجیکٹ اپ ڈیٹ ہو گیا</string>
     <string name="projects_property_select">منتخب کریں …</string>
     <string name="projects_activity_attached">منسلک کیا</string>
     <string name="projects_activity_commented">تبصرہ کیا</string>

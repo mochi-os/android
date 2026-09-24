@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Vood</string>
-    <string name="launcher_chat">Vestlus</string>
-    <string name="launcher_forums">Foorumid</string>
-    <string name="launcher_projects">Projektid</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Inimesed</string>
-    <string name="launcher_settings">Seaded</string>
+    <string name="launcher_feeds">Mochi Vood</string>
+    <string name="launcher_chat">Mochi Vestlus</string>
+    <string name="launcher_forums">Mochi Foorumid</string>
+    <string name="launcher_projects">Mochi Projektid</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Inimesed</string>
+    <string name="launcher_settings">Mochi Seaded</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Male</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Sõnad</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Male</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Sõnad</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Kalendrid</string>
+    <string name="launcher_calendars">Mochi Kalendrid</string>
     <string name="launcher_staff">Mochi Personal</string>
 
 

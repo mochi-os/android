@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Iifidi</string>
-    <string name="launcher_chat">Incoko</string>
-    <string name="launcher_forums">Iiforamu</string>
-    <string name="launcher_projects">Iiprojekthi</string>
-    <string name="launcher_crm">I-CRM</string>
-    <string name="launcher_people">Abantu</string>
-    <string name="launcher_settings">Iisetingi</string>
+    <string name="launcher_feeds">Mochi Iifidi</string>
+    <string name="launcher_chat">Mochi Incoko</string>
+    <string name="launcher_forums">Mochi Iiforamu</string>
+    <string name="launcher_projects">Mochi Iiprojekthi</string>
+    <string name="launcher_crm">Mochi I-CRM</string>
+    <string name="launcher_people">Mochi Abantu</string>
+    <string name="launcher_settings">Mochi Iisetingi</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Chess</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Words</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Itshesi</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Amagama</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Iikhalenda</string>
+    <string name="launcher_calendars">Mochi Iikhalenda</string>
     <string name="launcher_staff">Mochi Abasebenzi</string>
 
 

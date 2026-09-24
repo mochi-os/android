@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">Shahu</string>
+    <string name="chess_sidebar_header">Shahu</string>
     <string name="chess_sidebar_active">Lojëra aktive</string>
     <string name="chess_sidebar_completed">I përfunduar</string>
     <string name="chess_sidebar_new_game">Lojë e re</string>

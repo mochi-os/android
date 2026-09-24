@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">פידים</string>
-    <string name="launcher_chat">צ\'אט</string>
-    <string name="launcher_forums">פורומים</string>
-    <string name="launcher_projects">פרויקטים</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">אנשים</string>
-    <string name="launcher_settings">הגדרות</string>
+    <string name="launcher_feeds">Mochi פידים</string>
+    <string name="launcher_chat">Mochi צ\'אט</string>
+    <string name="launcher_forums">Mochi פורומים</string>
+    <string name="launcher_projects">Mochi פרויקטים</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi אנשים</string>
+    <string name="launcher_settings">Mochi הגדרות</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">שחמט</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">מילים</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi שחמט</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi מילים</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">יומנים</string>
+    <string name="launcher_calendars">Mochi יומנים</string>
     <string name="launcher_staff">Mochi צוות</string>
 
 

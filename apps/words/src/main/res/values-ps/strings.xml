@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_title">Words</string>
+    <string name="words_list_title">کلمې</string>
     <string name="words_list_menu">مینو</string>
     <string name="words_list_logout">لاګ آوټ</string>
     <string name="words_sidebar_completed">بشپړ شو</string>

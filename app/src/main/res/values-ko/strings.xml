@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">피드</string>
-    <string name="launcher_chat">채팅</string>
-    <string name="launcher_forums">포럼</string>
-    <string name="launcher_projects">프로젝트</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">사람</string>
-    <string name="launcher_settings">설정</string>
+    <string name="launcher_feeds">Mochi 피드</string>
+    <string name="launcher_chat">Mochi 채팅</string>
+    <string name="launcher_forums">Mochi 포럼</string>
+    <string name="launcher_projects">Mochi 프로젝트</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi 사람</string>
+    <string name="launcher_settings">Mochi 설정</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">체스</string>
-    <string name="launcher_go">바둑</string>
-    <string name="launcher_words">워드</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi 체스</string>
+    <string name="launcher_go">Mochi 바둑</string>
+    <string name="launcher_words">Mochi 워드</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">캘린더</string>
+    <string name="launcher_calendars">Mochi 캘린더</string>
     <string name="launcher_staff">Mochi 스태프</string>
 
 

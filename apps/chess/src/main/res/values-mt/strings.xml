@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="chess_app_title">Chess</string>
-    <string name="chess_sidebar_header">Chess</string>
+    <string name="chess_app_title">Ċess</string>
+    <string name="chess_sidebar_header">Ċess</string>
     <string name="chess_sidebar_active">Logħob attiv</string>
     <string name="chess_sidebar_completed">Lest</string>
     <string name="chess_sidebar_new_game">Logħba ġdida</string>

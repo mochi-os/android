@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Plūsmas</string>
-    <string name="launcher_chat">Saruna</string>
-    <string name="launcher_forums">Forumi</string>
-    <string name="launcher_projects">Projekti</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">Cilvēki</string>
-    <string name="launcher_settings">Iestatījumi</string>
+    <string name="launcher_feeds">Mochi Plūsmas</string>
+    <string name="launcher_chat">Mochi Saruna</string>
+    <string name="launcher_forums">Mochi Forumi</string>
+    <string name="launcher_projects">Mochi Projekti</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi Cilvēki</string>
+    <string name="launcher_settings">Mochi Iestatījumi</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">Šahs</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">Vārdi</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi Šahs</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi Vārdi</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">Kalendāri</string>
+    <string name="launcher_calendars">Mochi Kalendāri</string>
     <string name="launcher_staff">Mochi Personāls</string>
 
 

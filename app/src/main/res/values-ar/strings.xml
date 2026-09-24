@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">التغذيات</string>
-    <string name="launcher_chat">الدردشة</string>
-    <string name="launcher_forums">المنتديات</string>
-    <string name="launcher_projects">المشاريع</string>
-    <string name="launcher_crm">CRM</string>
-    <string name="launcher_people">الأشخاص</string>
-    <string name="launcher_settings">الإعدادات</string>
+    <string name="launcher_feeds">Mochi التغذيات</string>
+    <string name="launcher_chat">Mochi الدردشة</string>
+    <string name="launcher_forums">Mochi المنتديات</string>
+    <string name="launcher_projects">Mochi المشاريع</string>
+    <string name="launcher_crm">Mochi CRM</string>
+    <string name="launcher_people">Mochi الأشخاص</string>
+    <string name="launcher_settings">Mochi الإعدادات</string>
 
-    <string name="launcher_wikis">Wikis</string>
-    <string name="launcher_chess">الشطرنج</string>
-    <string name="launcher_go">Go</string>
-    <string name="launcher_words">الكلمات</string>
+    <string name="launcher_wikis">Mochi Wikis</string>
+    <string name="launcher_chess">Mochi الشطرنج</string>
+    <string name="launcher_go">Mochi Go</string>
+    <string name="launcher_words">Mochi الكلمات</string>
     <string name="launcher_market">Mochi Market</string>
-    <string name="launcher_calendars">التقويمات</string>
+    <string name="launcher_calendars">Mochi التقويمات</string>
     <string name="launcher_staff">Mochi الطاقم</string>
 
 
