@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Yaratildi</string>
     <string name="projects_sort_updated">Yangilangan</string>
     <string name="projects_create_object_type">Tur</string>
-    <string name="projects_create_object_title_field">Sarlavha</string>
     <string name="projects_create_object_parent">Ota</string>
     <string name="projects_settings_title">Sozlamalar</string>
     <string name="projects_settings_tab_general">Umumiy</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Variantni oʻchirish</string>
     <string name="projects_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>
     <string name="projects_create_object_no_types">Hozircha hech qanday element turi yaratib boʻlmaydi. Avval kerakli ota elementlarni yarating.</string>
+    <string name="projects_create_blocked_no_options">Yaratib bo\'lmaydi: %1$s talab qilinadi, lekin tanlash uchun variantlari yo\'q. Dizaynda variantlar qo\'shing.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

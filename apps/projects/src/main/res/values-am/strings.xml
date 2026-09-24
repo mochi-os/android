@@ -33,7 +33,6 @@
     <string name="projects_sort_created">ተፈጥሯል</string>
     <string name="projects_sort_updated">ተዘምኗል</string>
     <string name="projects_create_object_type">አይነት</string>
-    <string name="projects_create_object_title_field">ርዕስ</string>
     <string name="projects_create_object_parent">ወላጅ</string>
     <string name="projects_settings_title">ቅንብሮች</string>
     <string name="projects_settings_tab_general">አጠቃላይ</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">አማራጭ ሰርዝ</string>
     <string name="projects_option_delete_message">አማራጩን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>
     <string name="projects_create_object_no_types">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
+    <string name="projects_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>
+    <string name="projects_attachment_remove">አባሪውን ያስወግዱ</string>
 </resources>

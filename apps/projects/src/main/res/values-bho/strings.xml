@@ -33,7 +33,6 @@
     <string name="projects_sort_created">बनावल गइल</string>
     <string name="projects_sort_updated">अपडेट भइल</string>
     <string name="projects_create_object_type">प्रकार</string>
-    <string name="projects_create_object_title_field">शीर्षक</string>
     <string name="projects_create_object_parent">मूल</string>
     <string name="projects_settings_title">सेटिंग सब</string>
     <string name="projects_settings_tab_general">सामान्य</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">विकल्प मेटाईं</string>
     <string name="projects_option_delete_message">का रउआ सचमुच विकल्प \"%1$s\" के मिटावे के चाहत बानी?</string>
     <string name="projects_create_object_no_types">अबहीं कौनो आइटम प्रकार ना बन सके। पहिले जरूरी मूल आइटम बनाईं।</string>
+    <string name="projects_create_blocked_no_options">बनावल ना जा सकल: %1$s जरूरी बा बाकिर एकरा में चुने खातिर कवनो विकल्प नइखे। डिज़ाइन में विकल्प जोड़ीं।</string>
+    <string name="projects_attachment_remove">अटैचमेंट हटाईं</string>
 </resources>

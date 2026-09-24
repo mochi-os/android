@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Oñembojeguáma</string>
     <string name="projects_sort_updated">Hekopyahúpyre</string>
     <string name="projects_create_object_type">Mba\'éichagua</string>
-    <string name="projects_create_object_title_field">Téra</string>
     <string name="projects_create_object_parent">Sy/ru</string>
     <string name="projects_settings_title">Ñemboheko</string>
     <string name="projects_settings_tab_general">Tekorapy</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Hundi opción</string>
     <string name="projects_option_delete_message">Añetépa reipota reipe\'a pe opción \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ndaikatúi oñemoheñói item peteĩchagua. Emoheñói raẽ peteĩchagua oñeikotevẽva.</string>
+    <string name="projects_create_blocked_no_options">Ndaikatúi ojejapo: %1$s tekotevẽ ha ndoguerekói mba\'eporavorã. Embojoapy poravorã Design-pe.</string>
+    <string name="projects_attachment_remove">Eipe\'a jeitypa</string>
 </resources>

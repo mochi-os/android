@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Түзүлдү</string>
     <string name="projects_sort_updated">Жаңыланды</string>
     <string name="projects_create_object_type">Тип</string>
-    <string name="projects_create_object_title_field">Аталышы</string>
     <string name="projects_create_object_parent">Ата-эне</string>
     <string name="projects_settings_title">Жөндөөлөр</string>
     <string name="projects_settings_tab_general">Жалпы</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Тандоону жок кылуу</string>
     <string name="projects_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
     <string name="projects_create_object_no_types">Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз.</string>
+    <string name="projects_create_blocked_no_options">Түзүү мүмкүн эмес: %1$s милдеттүү, бирок тандоо варианттары жок. Дизайнда варианттарды кошуңуз.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Döredildi</string>
     <string name="projects_sort_updated">Täzelendi</string>
     <string name="projects_create_object_type">Görnüş</string>
-    <string name="projects_create_object_title_field">At</string>
     <string name="projects_create_object_parent">Ene-ata</string>
     <string name="projects_settings_title">Sazlamalar</string>
     <string name="projects_settings_tab_general">Umumy</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Wariant pozmak</string>
     <string name="projects_option_delete_message">\"%1$s\" wariantyny pozmak isleýändigiňize ynanýarsyňyzmy?</string>
     <string name="projects_create_object_no_types">Heniz hiç bir element görnüşi döredilip bilinmez. Ilki bilen zerur ene-atalar elementlerini dörediň.</string>
+    <string name="projects_create_blocked_no_options">Döredip bolmady: %1$s hökmany, ýöne saýlamak üçin warianty ýok. Dizaýnda wariant goşuň.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

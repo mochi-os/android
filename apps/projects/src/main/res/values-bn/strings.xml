@@ -33,7 +33,6 @@
     <string name="projects_sort_created">তৈরি হয়েছে</string>
     <string name="projects_sort_updated">আপডেট হয়েছে</string>
     <string name="projects_create_object_type">ধরন</string>
-    <string name="projects_create_object_title_field">শিরোনাম</string>
     <string name="projects_create_object_parent">প্যারেন্ট</string>
     <string name="projects_settings_title">সেটিংস</string>
     <string name="projects_settings_tab_general">সাধারণ</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">অপশন মুছুন</string>
     <string name="projects_option_delete_message">আপনি কি নিশ্চিত যে আপনি \"%1$s\" অপশনটি মুছে ফেলতে চান?</string>
     <string name="projects_create_object_no_types">এখনও কোনো আইটেম টাইপ তৈরি করা যাবে না। প্রথমে প্রয়োজনীয় প্যারেন্ট আইটেম তৈরি করুন।</string>
+    <string name="projects_create_blocked_no_options">তৈরি করা যায়নি: %1$s আবশ্যক কিন্তু বেছে নেওয়ার মতো কোনো বিকল্প নেই। ডিজাইনে বিকল্প যোগ করুন।</string>
+    <string name="projects_attachment_remove">সংযুক্তি সরান</string>
 </resources>

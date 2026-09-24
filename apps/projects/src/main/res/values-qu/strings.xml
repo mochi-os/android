@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Kamarisqa</string>
     <string name="projects_sort_updated">Musuqchasqa</string>
     <string name="projects_create_object_type">Layan</string>
-    <string name="projects_create_object_title_field">Sutinchay</string>
     <string name="projects_create_object_parent">Yaya</string>
     <string name="projects_settings_title">Wakichiykuna</string>
     <string name="projects_settings_tab_general">Llapanpi</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Akllana wischuy</string>
     <string name="projects_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata pichayta munanki?</string>
     <string name="projects_create_object_no_types">Manaraq item niraqkuna ruwakuyta atin. Ñawpaqta munasqa parent itemkunata ruway.</string>
+    <string name="projects_create_blocked_no_options">Manam kamachiyta atinchu: %1$s necesitasqa ichaqa manam akllanan kanchu. Design nisqapi akllanakunata yapay.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

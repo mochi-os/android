@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Cruthaithe</string>
     <string name="projects_sort_updated">Nuashonraithe</string>
     <string name="projects_create_object_type">Cineál</string>
-    <string name="projects_create_object_title_field">Teideal</string>
     <string name="projects_create_object_parent">Tuismitheoir</string>
     <string name="projects_settings_title">Socruithe</string>
     <string name="projects_settings_tab_general">Ginearálta</string>
@@ -384,4 +383,6 @@
     <string name="projects_option_delete_title">Scrios rogha</string>
     <string name="projects_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
     <string name="projects_create_object_no_types">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
+    <string name="projects_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>
+    <string name="projects_attachment_remove">Bain ceangaltán</string>
 </resources>

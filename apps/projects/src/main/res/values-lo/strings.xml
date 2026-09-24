@@ -33,7 +33,6 @@
     <string name="projects_sort_created">ສ້າງແລ້ວ</string>
     <string name="projects_sort_updated">ອັບເດດແລ້ວ</string>
     <string name="projects_create_object_type">ປະເພດ</string>
-    <string name="projects_create_object_title_field">ຊື່ເລື່ອງ</string>
     <string name="projects_create_object_parent">ແມ່</string>
     <string name="projects_settings_title">ການຕັ້ງຄ່າ</string>
     <string name="projects_settings_tab_general">ທົ່ວໄປ</string>
@@ -380,4 +379,6 @@
     <string name="projects_option_delete_title">ລົບຕົວເລືອກ</string>
     <string name="projects_option_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຕົວເລືອກ \"%1$s\"?</string>
     <string name="projects_create_object_no_types">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
+    <string name="projects_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

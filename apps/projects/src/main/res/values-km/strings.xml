@@ -33,7 +33,6 @@
     <string name="projects_sort_created">បានបង្កើត</string>
     <string name="projects_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
     <string name="projects_create_object_type">ប្រភេទ</string>
-    <string name="projects_create_object_title_field">ចំណងជើង</string>
     <string name="projects_create_object_parent">មេ</string>
     <string name="projects_settings_title">ការកំណត់</string>
     <string name="projects_settings_tab_general">ទូទៅ</string>
@@ -380,4 +379,6 @@
     <string name="projects_option_delete_title">លុបជម្រើស</string>
     <string name="projects_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
     <string name="projects_create_object_no_types">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
+    <string name="projects_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

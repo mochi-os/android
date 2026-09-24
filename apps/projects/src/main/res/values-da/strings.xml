@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Oprettet</string>
     <string name="projects_sort_updated">Opdateret</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Titel</string>
     <string name="projects_create_object_parent">Overordnet</string>
     <string name="projects_settings_title">Indstillinger</string>
     <string name="projects_settings_tab_general">Generelt</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Slet valgmulighed</string>
     <string name="projects_option_delete_message">Er du sikker på, at du vil slette valgmuligheden \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ingen emnetyper kan oprettes endnu. Opret først de nødvendige overordnede emner.</string>
+    <string name="projects_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>
+    <string name="projects_attachment_remove">Fjern vedhæftning</string>
 </resources>

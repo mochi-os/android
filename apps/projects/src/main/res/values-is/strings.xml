@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Búið til</string>
     <string name="projects_sort_updated">Uppfært</string>
     <string name="projects_create_object_type">Tegund</string>
-    <string name="projects_create_object_title_field">Titill</string>
     <string name="projects_create_object_parent">Foreldri</string>
     <string name="projects_settings_title">Stillingar</string>
     <string name="projects_settings_tab_general">Almennt</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Eyða valkosti</string>
     <string name="projects_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
+    <string name="projects_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Dijieun</string>
     <string name="projects_sort_updated">Diapdet</string>
     <string name="projects_create_object_type">Tipe</string>
-    <string name="projects_create_object_title_field">Judul</string>
     <string name="projects_create_object_parent">Kolot</string>
     <string name="projects_settings_title">Setélan</string>
     <string name="projects_settings_tab_general">Umum</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Hapus pilihan</string>
     <string name="projects_option_delete_message">Yakin hayang mupus pilihan \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Teu aya jenis item nu bisa dijieun. Jieun heula item kolot nu diperlukeun.</string>
+    <string name="projects_create_blocked_no_options">Teu bisa nyieun: %1$s diperlukeun tapi teu boga pilihan. Tambahkeun pilihan dina Desain.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

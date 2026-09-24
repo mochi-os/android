@@ -33,7 +33,6 @@
     <string name="projects_sort_created">ٺاهيو ويو</string>
     <string name="projects_sort_updated">اپڊيٽ ٿيو</string>
     <string name="projects_create_object_type">قسم</string>
-    <string name="projects_create_object_title_field">عنوان</string>
     <string name="projects_create_object_parent">والدين</string>
     <string name="projects_settings_title">سيٽنگون</string>
     <string name="projects_settings_tab_general">عام</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">اختيار ختم ڪريو</string>
     <string name="projects_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
     <string name="projects_create_object_no_types">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
+    <string name="projects_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

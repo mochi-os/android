@@ -33,7 +33,6 @@
     <string name="projects_sort_created">ರಚಿಸಲಾಗಿದೆ</string>
     <string name="projects_sort_updated">ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="projects_create_object_type">ಪ್ರಕಾರ</string>
-    <string name="projects_create_object_title_field">ಶೀರ್ಷಿಕೆ</string>
     <string name="projects_create_object_parent">ಪೋಷಕ</string>
     <string name="projects_settings_title">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="projects_settings_tab_general">ಸಾಮಾನ್ಯ</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">ಆಯ್ಕೆ ಅಳಿಸಿ</string>
     <string name="projects_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
     <string name="projects_create_object_no_types">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>
+    <string name="projects_create_blocked_no_options">ರಚಿಸಲಾಗುವುದಿಲ್ಲ: %1$s ಅಗತ್ಯವಿದೆ ಆದರೆ ಆಯ್ಕೆ ಮಾಡಲು ಯಾವುದೇ ಆಯ್ಕೆಗಳಿಲ್ಲ. ವಿನ್ಯಾಸದಲ್ಲಿ ಆಯ್ಕೆಗಳನ್ನು ಸೇರಿಸಿ.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

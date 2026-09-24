@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Maħluq</string>
     <string name="projects_sort_updated">Aġġornat</string>
     <string name="projects_create_object_type">Tip</string>
-    <string name="projects_create_object_title_field">Titlu</string>
     <string name="projects_create_object_parent">Ġenitur</string>
     <string name="projects_settings_title">Settings</string>
     <string name="projects_settings_tab_general">Ġenerali</string>
@@ -384,4 +383,6 @@
     <string name="projects_option_delete_title">Ħassar għażla</string>
     <string name="projects_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
     <string name="projects_create_object_no_types">L-ebda tipi ta\' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel.</string>
+    <string name="projects_create_blocked_no_options">Ma jistax jinħoloq: %1$s huwa meħtieġ imma m\'għandu ebda għażla. Żid għażliet fid-Disinn.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

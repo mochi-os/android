@@ -33,7 +33,6 @@
     <string name="projects_sort_created">已建立</string>
     <string name="projects_sort_updated">已更新</string>
     <string name="projects_create_object_type">類型</string>
-    <string name="projects_create_object_title_field">標題</string>
     <string name="projects_create_object_parent">父項</string>
     <string name="projects_settings_title">設定</string>
     <string name="projects_settings_tab_general">一般</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">刪除選項</string>
     <string name="projects_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
     <string name="projects_create_object_no_types">尚無法建立任何項目類型。請先建立所需的父項目。</string>
+    <string name="projects_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
+    <string name="projects_attachment_remove">移除附件</string>
 </resources>

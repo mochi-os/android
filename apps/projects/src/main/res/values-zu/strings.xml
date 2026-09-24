@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Kudaliwe</string>
     <string name="projects_sort_updated">Kubuyekeziwe</string>
     <string name="projects_create_object_type">Uhlobo</string>
-    <string name="projects_create_object_title_field">Isihloko</string>
     <string name="projects_create_object_parent">Umzali</string>
     <string name="projects_settings_title">Izilungiselelo</string>
     <string name="projects_settings_tab_general">Okujwayelekile</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Susa inketho</string>
     <string name="projects_option_delete_message">Ingabe uqinisekile ukuthi ufuna ukususa inketho ethi \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>
+    <string name="projects_create_blocked_no_options">Ayikwazi ukudala: %1$s iyadingeka kodwa ayinazo izinketho. Engeza izinketho kuMklamo.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

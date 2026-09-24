@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Oppretta</string>
     <string name="projects_sort_updated">Oppdatert</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Tittel</string>
     <string name="projects_create_object_parent">Forelder</string>
     <string name="projects_settings_title">Innstillingar</string>
     <string name="projects_settings_tab_general">Generelt</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Slett val</string>
     <string name="projects_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ingen elementtypar kan opprettast enno. Opprett dei påkravde overordna elementa først.</string>
+    <string name="projects_create_blocked_no_options">Kan ikkje opprette: %1$s er påkravd, men har ingen alternativ å velje mellom. Legg til alternativ i Design.</string>
+    <string name="projects_attachment_remove">Fjern vedlegg</string>
 </resources>

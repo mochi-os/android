@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Tí a dá</string>
     <string name="projects_sort_updated">Ti ṣe imudojúìwọ̀n</string>
     <string name="projects_create_object_type">Irú</string>
-    <string name="projects_create_object_title_field">Àkọlé</string>
     <string name="projects_create_object_parent">Òbí</string>
     <string name="projects_settings_title">Àwọn ìṣètò</string>
     <string name="projects_settings_tab_general">Gbogbogbòò</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Pa àṣàyàn rẹ́</string>
     <string name="projects_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
     <string name="projects_create_object_no_types">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
+    <string name="projects_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

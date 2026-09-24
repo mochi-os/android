@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Создадено</string>
     <string name="projects_sort_updated">Ажурирано</string>
     <string name="projects_create_object_type">Тип</string>
-    <string name="projects_create_object_title_field">Наслов</string>
     <string name="projects_create_object_parent">Родител</string>
     <string name="projects_settings_title">Поставки</string>
     <string name="projects_settings_tab_general">Општо</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Избриши опција</string>
     <string name="projects_option_delete_message">Дали сте сигурни дека сакате да ја избришете опцијата \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Сè уште не може да се креираат типови ставки. Прво креирајте ги потребните родителски ставки.</string>
+    <string name="projects_create_blocked_no_options">Не може да се создаде: %1$s е задолжително, но нема опции за избор. Додајте опции во Дизајн.</string>
+    <string name="projects_attachment_remove">Отстрани прилог</string>
 </resources>

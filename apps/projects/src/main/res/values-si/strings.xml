@@ -33,7 +33,6 @@
     <string name="projects_sort_created">නිර්මාණය කරන ලදී</string>
     <string name="projects_sort_updated">යාවත්කාලීන කරන ලදී</string>
     <string name="projects_create_object_type">වර්ගය</string>
-    <string name="projects_create_object_title_field">මාතෘකාව</string>
     <string name="projects_create_object_parent">මව්</string>
     <string name="projects_settings_title">සැකසුම්</string>
     <string name="projects_settings_tab_general">සාමාන්‍ය</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">විකල්පය මකන්න</string>
     <string name="projects_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
     <string name="projects_create_object_no_types">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
+    <string name="projects_create_blocked_no_options">සෑදිය නොහැක: %1$s අවශ්‍ය නමුත් තෝරා ගැනීමට විකල්ප නොමැත. නිර්මාණයේ විකල්ප එක් කරන්න.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

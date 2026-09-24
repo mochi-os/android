@@ -33,7 +33,6 @@
     <string name="projects_sort_created">สร้างแล้ว</string>
     <string name="projects_sort_updated">อัปเดตแล้ว</string>
     <string name="projects_create_object_type">ประเภท</string>
-    <string name="projects_create_object_title_field">ชื่อ</string>
     <string name="projects_create_object_parent">แม่</string>
     <string name="projects_settings_title">การตั้งค่า</string>
     <string name="projects_settings_tab_general">ทั่วไป</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">ลบตัวเลือก</string>
     <string name="projects_option_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบตัวเลือก \"%1$s\"</string>
     <string name="projects_create_object_no_types">ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน</string>
+    <string name="projects_create_blocked_no_options">สร้างไม่ได้: %1$s จำเป็นแต่ไม่มีตัวเลือกให้เลือก เพิ่มตัวเลือกในการออกแบบ</string>
+    <string name="projects_attachment_remove">ลบไฟล์แนบ</string>
 </resources>

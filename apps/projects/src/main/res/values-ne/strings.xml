@@ -33,7 +33,6 @@
     <string name="projects_sort_created">सिर्जना गरियो</string>
     <string name="projects_sort_updated">अद्यावधिक गरियो</string>
     <string name="projects_create_object_type">प्रकार</string>
-    <string name="projects_create_object_title_field">शीर्षक</string>
     <string name="projects_create_object_parent">अभिभावक</string>
     <string name="projects_settings_title">सेटिङहरू</string>
     <string name="projects_settings_tab_general">सामान्य</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">विकल्प मेटाउनुहोस्</string>
     <string name="projects_option_delete_message">के तपाईं \"%1$s\" विकल्प मेटाउन निश्चित हुनुहुन्छ?</string>
     <string name="projects_create_object_no_types">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
+    <string name="projects_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

@@ -33,7 +33,6 @@
     <string name="projects_sort_created">دروستکرا</string>
     <string name="projects_sort_updated">نوێکرایەوە</string>
     <string name="projects_create_object_type">جۆر</string>
-    <string name="projects_create_object_title_field">ناونیشان</string>
     <string name="projects_create_object_parent">باوان</string>
     <string name="projects_settings_title">ڕێکخستنەکان</string>
     <string name="projects_settings_tab_general">گشتی</string>
@@ -383,4 +382,6 @@
     <string name="projects_option_delete_title">سڕینەوەی هەڵبژاردە</string>
     <string name="projects_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>
     <string name="projects_create_object_no_types">هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە.</string>
+    <string name="projects_create_blocked_no_options">ناتوانرێت دروست بکرێت: %1$s پێویستە بەڵام هیچ هەڵبژاردەیەکی نییە. لە دیزایندا هەڵبژاردە زیاد بکە.</string>
+    <string name="projects_attachment_remove">لابردنی هاوپێچ</string>
 </resources>

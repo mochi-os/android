@@ -33,7 +33,6 @@
     <string name="projects_sort_created">तयार केले</string>
     <string name="projects_sort_updated">अपडेट केले</string>
     <string name="projects_create_object_type">प्रकार</string>
-    <string name="projects_create_object_title_field">शीर्षक</string>
     <string name="projects_create_object_parent">पॅरेंट</string>
     <string name="projects_settings_title">सेटिंग्ज</string>
     <string name="projects_settings_tab_general">सामान्य</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">पर्याय हटवा</string>
     <string name="projects_option_delete_message">तुम्हाला \"%1$s\" हा पर्याय हटवायचा आहे का?</string>
     <string name="projects_create_object_no_types">अद्याप कोणतेही आयटम प्रकार तयार करता येणार नाहीत. आधी आवश्यक पॅरेंट आयटम्स तयार करा.</string>
+    <string name="projects_create_blocked_no_options">तयार करता येत नाही: %1$s आवश्यक आहे पण निवडण्यासाठी पर्याय नाहीत. डिझाइनमध्ये पर्याय जोडा.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

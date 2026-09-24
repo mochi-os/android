@@ -33,7 +33,6 @@
     <string name="projects_sort_created">생성됨</string>
     <string name="projects_sort_updated">업데이트됨</string>
     <string name="projects_create_object_type">유형</string>
-    <string name="projects_create_object_title_field">제목</string>
     <string name="projects_create_object_parent">상위</string>
     <string name="projects_settings_title">설정</string>
     <string name="projects_settings_tab_general">일반</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">옵션 삭제</string>
     <string name="projects_option_delete_message">옵션 \"%1$s\"을(를) 삭제하시겠습니까?</string>
     <string name="projects_create_object_no_types">아직 항목 유형을 만들 수 없어요. 먼저 필요한 상위 항목을 만들어 주세요.</string>
+    <string name="projects_create_blocked_no_options">만들 수 없음: %1$s은(는) 필수이지만 선택할 옵션이 없습니다. 디자인에서 옵션을 추가하세요.</string>
+    <string name="projects_attachment_remove">첨부 파일 제거</string>
 </resources>

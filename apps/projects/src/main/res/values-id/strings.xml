@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Dibuat</string>
     <string name="projects_sort_updated">Diperbarui</string>
     <string name="projects_create_object_type">Tipe</string>
-    <string name="projects_create_object_title_field">Judul</string>
     <string name="projects_create_object_parent">Induk</string>
     <string name="projects_settings_title">Pengaturan</string>
     <string name="projects_settings_tab_general">Umum</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Hapus opsi</string>
     <string name="projects_option_delete_message">Apakah Anda yakin ingin menghapus opsi \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Belum ada jenis item yang dapat dibuat. Buat item induk yang diperlukan terlebih dahulu.</string>
+    <string name="projects_create_blocked_no_options">Tidak dapat membuat: %1$s wajib diisi tetapi tidak memiliki pilihan. Tambahkan pilihan di Desain.</string>
+    <string name="projects_attachment_remove">Hapus lampiran</string>
 </resources>

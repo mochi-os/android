@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Yenziwe</string>
     <string name="projects_sort_updated">Kuhlaziyiwe</string>
     <string name="projects_create_object_type">Uhlobo</string>
-    <string name="projects_create_object_title_field">Isihloko</string>
     <string name="projects_create_object_parent">Umzali</string>
     <string name="projects_settings_title">Iisetingi</string>
     <string name="projects_settings_tab_general">Ngokubanzi</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Cima ukhetho</string>
     <string name="projects_option_delete_message">Uqinisekile ukuba ufuna ukucima ukhetho \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Akukho ntlobo zezinto ezinokwenziwa okwangoku. Yenza izinto zomzali ezifunekayo kuqala.</string>
+    <string name="projects_create_blocked_no_options">Ayikwazi ukwenza: %1$s iyafuneka kodwa ayinakho ukhetho. Yongeza ukhetho kuYilo.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Uumame</string>
     <string name="projects_sort_updated">Haaromfameera</string>
     <string name="projects_create_object_type">Akaakuu</string>
-    <string name="projects_create_object_title_field">Mata duree</string>
     <string name="projects_create_object_parent">Maatii</string>
     <string name="projects_settings_title">Qindaa\'inoota</string>
     <string name="projects_settings_tab_general">Waliigalaa</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Filannoo haqi</string>
     <string name="projects_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
     <string name="projects_create_object_no_types">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
+    <string name="projects_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

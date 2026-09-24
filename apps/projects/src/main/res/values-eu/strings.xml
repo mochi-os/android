@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Sortua</string>
     <string name="projects_sort_updated">Eguneratuta</string>
     <string name="projects_create_object_type">Mota</string>
-    <string name="projects_create_object_title_field">Izenburua</string>
     <string name="projects_create_object_parent">Gurasoa</string>
     <string name="projects_settings_title">Ezarpenak</string>
     <string name="projects_settings_tab_general">Orokorra</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Ezabatu aukera</string>
     <string name="projects_option_delete_message">Ziur zaude \"%1$s\" aukera ezabatu nahi duzula?</string>
     <string name="projects_create_object_no_types">Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak.</string>
+    <string name="projects_create_blocked_no_options">Ezin da sortu: %1$s beharrezkoa da baina ez du aukerarik. Gehitu aukerak Diseinuan.</string>
+    <string name="projects_attachment_remove">Kendu eranskina</string>
 </resources>

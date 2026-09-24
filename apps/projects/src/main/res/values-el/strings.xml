@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Δημιουργήθηκε</string>
     <string name="projects_sort_updated">Ενημερώθηκε</string>
     <string name="projects_create_object_type">Τύπος</string>
-    <string name="projects_create_object_title_field">Τίτλος</string>
     <string name="projects_create_object_parent">Γονικό</string>
     <string name="projects_settings_title">Ρυθμίσεις</string>
     <string name="projects_settings_tab_general">Γενικά</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Διαγραφή επιλογής</string>
     <string name="projects_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>
     <string name="projects_create_object_no_types">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>
+    <string name="projects_create_blocked_no_options">Δεν είναι δυνατή η δημιουργία: το %1$s απαιτείται αλλά δεν έχει επιλογές. Προσθέστε επιλογές στη Σχεδίαση.</string>
+    <string name="projects_attachment_remove">Αφαίρεση συνημμένου</string>
 </resources>

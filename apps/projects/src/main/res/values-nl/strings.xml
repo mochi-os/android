@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Aangemaakt</string>
     <string name="projects_sort_updated">Bijgewerkt</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Titel</string>
     <string name="projects_create_object_parent">Bovenliggend</string>
     <string name="projects_settings_title">Instellingen</string>
     <string name="projects_settings_tab_general">Algemeen</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
     <string name="projects_create_object_no_types">Er kunnen nog geen itemtypen worden aangemaakt. Maak eerst de vereiste bovenliggende items aan.</string>
+    <string name="projects_create_blocked_no_options">Kan niet maken: %1$s is vereist maar heeft geen opties om uit te kiezen. Voeg opties toe in Ontwerp.</string>
+    <string name="projects_attachment_remove">Bijlage verwijderen</string>
 </resources>

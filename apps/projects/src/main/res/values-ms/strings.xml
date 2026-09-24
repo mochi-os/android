@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Dicipta</string>
     <string name="projects_sort_updated">Dikemas kini</string>
     <string name="projects_create_object_type">Jenis</string>
-    <string name="projects_create_object_title_field">Tajuk</string>
     <string name="projects_create_object_parent">Induk</string>
     <string name="projects_settings_title">Tetapan</string>
     <string name="projects_settings_tab_general">Umum</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Padam pilihan</string>
     <string name="projects_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>
+    <string name="projects_create_blocked_no_options">Tidak boleh dicipta: %1$s diperlukan tetapi tiada pilihan. Tambah pilihan dalam Reka bentuk.</string>
+    <string name="projects_attachment_remove">Buang lampiran</string>
 </resources>

@@ -33,7 +33,6 @@
     <string name="projects_sort_created">ساخته شد</string>
     <string name="projects_sort_updated">به‌روزرسانی شد</string>
     <string name="projects_create_object_type">نوع</string>
-    <string name="projects_create_object_title_field">عنوان</string>
     <string name="projects_create_object_parent">والد</string>
     <string name="projects_settings_title">تنظیمات</string>
     <string name="projects_settings_tab_general">عمومی</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">حذف گزینه</string>
     <string name="projects_option_delete_message">آیا مطمئن هستید که می‌خواهید گزینهٔ \"%1$s\" را حذف کنید؟</string>
     <string name="projects_create_object_no_types">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>
+    <string name="projects_create_blocked_no_options">امکان ایجاد نیست: %1$s الزامی است اما گزینه‌ای برای انتخاب ندارد. در طرح گزینه اضافه کنید.</string>
+    <string name="projects_attachment_remove">حذف پیوست</string>
 </resources>

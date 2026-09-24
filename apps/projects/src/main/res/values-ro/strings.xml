@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Creat</string>
     <string name="projects_sort_updated">Actualizat</string>
     <string name="projects_create_object_type">Tip</string>
-    <string name="projects_create_object_title_field">Titlu</string>
     <string name="projects_create_object_parent">Părinte</string>
     <string name="projects_settings_title">Setări</string>
     <string name="projects_settings_tab_general">General</string>
@@ -382,4 +381,6 @@
     <string name="projects_option_delete_title">Șterge opțiunea</string>
     <string name="projects_option_delete_message">Sigur dorești să ștergi opțiunea \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Încă nu pot fi create tipuri de elemente. Creează mai întâi elementele părinte necesare.</string>
+    <string name="projects_create_blocked_no_options">Nu se poate crea: %1$s este obligatoriu, dar nu are opțiuni de ales. Adaugă opțiuni în Design.</string>
+    <string name="projects_attachment_remove">Elimină atașamentul</string>
 </resources>

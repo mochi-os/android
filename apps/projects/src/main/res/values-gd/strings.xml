@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Cruthaichte</string>
     <string name="projects_sort_updated">Ùraichte</string>
     <string name="projects_create_object_type">Seòrsa</string>
-    <string name="projects_create_object_title_field">Tiotal</string>
     <string name="projects_create_object_parent">Pàrant</string>
     <string name="projects_settings_title">Roghainnean</string>
     <string name="projects_settings_tab_general">Coitcheann</string>
@@ -383,4 +382,6 @@
     <string name="projects_option_delete_title">Sguab às roghainn</string>
     <string name="projects_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>
     <string name="projects_create_object_no_types">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
+    <string name="projects_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>
+    <string name="projects_attachment_remove">Thoir air falbh an ceanglachan</string>
 </resources>

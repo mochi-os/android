@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Oluşturuldu</string>
     <string name="projects_sort_updated">Güncellendi</string>
     <string name="projects_create_object_type">Tür</string>
-    <string name="projects_create_object_title_field">Başlık</string>
     <string name="projects_create_object_parent">Üst</string>
     <string name="projects_settings_title">Ayarlar</string>
     <string name="projects_settings_tab_general">Genel</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Seçeneği sil</string>
     <string name="projects_option_delete_message">\"%1$s\" seçeneğini silmek istediğinizden emin misiniz?</string>
     <string name="projects_create_object_no_types">Henüz oluşturulabilecek öge türü yok. Önce gerekli üst ögeleri oluşturun.</string>
+    <string name="projects_create_blocked_no_options">Oluşturulamıyor: %1$s gerekli ancak seçenek yok. Tasarım bölümünde seçenek ekleyin.</string>
+    <string name="projects_attachment_remove">Eki kaldır</string>
 </resources>

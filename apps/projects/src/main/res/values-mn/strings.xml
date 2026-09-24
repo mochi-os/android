@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Үүсгэгдсэн</string>
     <string name="projects_sort_updated">Шинэчлэгдсэн</string>
     <string name="projects_create_object_type">Төрөл</string>
-    <string name="projects_create_object_title_field">Гарчиг</string>
     <string name="projects_create_object_parent">Эх</string>
     <string name="projects_settings_title">Тохиргоо</string>
     <string name="projects_settings_tab_general">Ерөнхий</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Сонголтыг устгах</string>
     <string name="projects_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
     <string name="projects_create_object_no_types">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
+    <string name="projects_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

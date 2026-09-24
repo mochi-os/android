@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Geskep</string>
     <string name="projects_sort_updated">Opgedateer</string>
     <string name="projects_create_object_type">Tipe</string>
-    <string name="projects_create_object_title_field">Titel</string>
     <string name="projects_create_object_parent">Ouer</string>
     <string name="projects_settings_title">Instellings</string>
     <string name="projects_settings_tab_general">Algemeen</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Verwyder opsie</string>
     <string name="projects_option_delete_message">Is jy seker jy wil die opsie \"%1$s\" uitvee?</string>
     <string name="projects_create_object_no_types">Geen itemtipes kan nog geskep word nie. Skep eers die vereiste ouer-items.</string>
+    <string name="projects_create_blocked_no_options">Kan nie skep nie: %1$s is verpligtend maar het geen opsies om uit te kies nie. Voeg opsies by in Ontwerp.</string>
+    <string name="projects_attachment_remove">Verwyder aanhangsel</string>
 </resources>

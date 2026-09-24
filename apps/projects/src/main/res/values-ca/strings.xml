@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Creat</string>
     <string name="projects_sort_updated">Actualitzat</string>
     <string name="projects_create_object_type">Tipus</string>
-    <string name="projects_create_object_title_field">Títol</string>
     <string name="projects_create_object_parent">Pare</string>
     <string name="projects_settings_title">Configuració</string>
     <string name="projects_settings_tab_general">General</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Suprimeix l\'opció</string>
     <string name="projects_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
+    <string name="projects_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
+    <string name="projects_attachment_remove">Elimina l\'adjunt</string>
 </resources>

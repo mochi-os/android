@@ -33,7 +33,6 @@
     <string name="projects_sort_created">بنایا گیا</string>
     <string name="projects_sort_updated">اپ ڈیٹ ہو گیا</string>
     <string name="projects_create_object_type">قسم</string>
-    <string name="projects_create_object_title_field">عنوان</string>
     <string name="projects_create_object_parent">parent</string>
     <string name="projects_settings_title">سیٹنگز</string>
     <string name="projects_settings_tab_general">عمومی</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">آپشن حذف کریں</string>
     <string name="projects_option_delete_message">کیا آپ واقعی آپشن \"%1$s\" کو حذف کرنا چاہتے ہیں؟</string>
     <string name="projects_create_object_no_types">ابھی کوئی item types نہیں بنائے جا سکتے۔ پہلے درکار parent items بنائیں۔</string>
+    <string name="projects_create_blocked_no_options">بنایا نہیں جا سکتا: %1$s درکار ہے مگر اس میں منتخب کرنے کے لیے کوئی اختیار نہیں۔ ڈیزائن میں اختیارات شامل کریں۔</string>
+    <string name="projects_attachment_remove">اٹیچمنٹ ہٹائیں</string>
 </resources>

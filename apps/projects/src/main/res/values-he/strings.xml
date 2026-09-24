@@ -33,7 +33,6 @@
     <string name="projects_sort_created">נוצר</string>
     <string name="projects_sort_updated">עודכן</string>
     <string name="projects_create_object_type">סוג</string>
-    <string name="projects_create_object_title_field">כותרת</string>
     <string name="projects_create_object_parent">אב</string>
     <string name="projects_settings_title">הגדרות</string>
     <string name="projects_settings_tab_general">כללי</string>
@@ -383,4 +382,6 @@
     <string name="projects_option_delete_title">מחק אפשרות</string>
     <string name="projects_option_delete_message">האם אתה בטוח שברצונך למחוק את האפשרות \"%1$s\"?</string>
     <string name="projects_create_object_no_types">עדיין לא ניתן ליצור סוגי פריטים. צור תחילה את פריטי האב הנדרשים.</string>
+    <string name="projects_create_blocked_no_options">לא ניתן ליצור: %1$s נדרש אך אין לו אפשרויות לבחירה. הוסף אפשרויות בעיצוב.</string>
+    <string name="projects_attachment_remove">הסרת קובץ מצורף</string>
 </resources>

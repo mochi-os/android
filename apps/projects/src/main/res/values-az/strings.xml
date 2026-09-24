@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Yaradıldı</string>
     <string name="projects_sort_updated">Yeniləndi</string>
     <string name="projects_create_object_type">Növ</string>
-    <string name="projects_create_object_title_field">Başlıq</string>
     <string name="projects_create_object_parent">Əsas</string>
     <string name="projects_settings_title">Parametrlər</string>
     <string name="projects_settings_tab_general">Ümumi</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Variantı sil</string>
     <string name="projects_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>
     <string name="projects_create_object_no_types">Hələ heç bir element növü yaradıla bilməz. Əvvəlcə tələb olunan əsas elementləri yaradın.</string>
+    <string name="projects_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
+    <string name="projects_attachment_remove">Qoşmanı silin</string>
 </resources>

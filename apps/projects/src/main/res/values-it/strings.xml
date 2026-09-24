@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Creato</string>
     <string name="projects_sort_updated">Aggiornato</string>
     <string name="projects_create_object_type">Tipo</string>
-    <string name="projects_create_object_title_field">Titolo</string>
     <string name="projects_create_object_parent">Padre</string>
     <string name="projects_settings_title">Impostazioni</string>
     <string name="projects_settings_tab_general">Generale</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Elimina opzione</string>
     <string name="projects_option_delete_message">Vuoi davvero eliminare l\'opzione \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nessun tipo di elemento può essere creato per ora. Crea prima gli elementi padre richiesti.</string>
+    <string name="projects_create_blocked_no_options">Impossibile creare: %1$s è obbligatorio ma non ha opzioni tra cui scegliere. Aggiungi opzioni in Progettazione.</string>
+    <string name="projects_attachment_remove">Rimuovi allegato</string>
 </resources>

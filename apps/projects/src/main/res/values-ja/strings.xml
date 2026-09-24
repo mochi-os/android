@@ -33,7 +33,6 @@
     <string name="projects_sort_created">作成日</string>
     <string name="projects_sort_updated">更新日</string>
     <string name="projects_create_object_type">タイプ</string>
-    <string name="projects_create_object_title_field">タイトル</string>
     <string name="projects_create_object_parent">親</string>
     <string name="projects_settings_title">設定</string>
     <string name="projects_settings_tab_general">一般</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">オプションを削除</string>
     <string name="projects_option_delete_message">オプション \"%1$s\" を削除してもよろしいですか?</string>
     <string name="projects_create_object_no_types">まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。</string>
+    <string name="projects_create_blocked_no_options">作成できません: %1$s は必須ですが、選択肢がありません。デザインで選択肢を追加してください。</string>
+    <string name="projects_attachment_remove">添付を削除</string>
 </resources>

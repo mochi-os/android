@@ -33,7 +33,6 @@
     <string name="projects_sort_created">באַשאַפֿן</string>
     <string name="projects_sort_updated">באַנײַט</string>
     <string name="projects_create_object_type">טיפּ</string>
-    <string name="projects_create_object_title_field">קעפּל</string>
     <string name="projects_create_object_parent">עלטער</string>
     <string name="projects_settings_title">אײַנשטעלונגען</string>
     <string name="projects_settings_tab_general">אַלגעמיין</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">אויסמעקן אָפּציע</string>
     <string name="projects_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
     <string name="projects_create_object_no_types">קיין עלעמענט טיפּן קענען נאָך ניט זײַן באַשאַפֿן. באַשאַף די נייטיקע עלטערן עלעמענטן ערשט.</string>
+    <string name="projects_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

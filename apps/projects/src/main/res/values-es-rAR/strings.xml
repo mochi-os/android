@@ -59,7 +59,6 @@
     <string name="projects_create_object_type">Tipo</string>
     <string name="projects_field_type">Tipo</string>
     <string name="projects_views_type">Tipo</string>
-    <string name="projects_create_object_title_field">Título</string>
     <string name="projects_request_field_title">Título</string>
     <string name="projects_request_status_open">Abrir</string>
     <string name="projects_board_new">Nuevo</string>
@@ -359,4 +358,5 @@
     <string name="projects_board_add_column">Agregá una columna</string>
     <string name="projects_option_delete_title">Eliminá la opción</string>
     <string name="projects_option_delete_message">¿Estás seguro de que querés eliminar la opción \"%1$s\"?</string>
+    <string name="projects_attachment_remove">Quitar adjunto</string>
 </resources>

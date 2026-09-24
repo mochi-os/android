@@ -33,7 +33,6 @@
     <string name="projects_sort_created">جوړ شو</string>
     <string name="projects_sort_updated">نوی شو</string>
     <string name="projects_create_object_type">ډول</string>
-    <string name="projects_create_object_title_field">سرلیک</string>
     <string name="projects_create_object_parent">مور</string>
     <string name="projects_settings_title">ترتیبات</string>
     <string name="projects_settings_tab_general">عمومي</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="projects_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
     <string name="projects_create_object_no_types">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
+    <string name="projects_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

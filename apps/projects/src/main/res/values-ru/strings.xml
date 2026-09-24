@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Создано</string>
     <string name="projects_sort_updated">Обновлено</string>
     <string name="projects_create_object_type">Тип</string>
-    <string name="projects_create_object_title_field">Заголовок</string>
     <string name="projects_create_object_parent">Родитель</string>
     <string name="projects_settings_title">Настройки</string>
     <string name="projects_settings_tab_general">Общие</string>
@@ -383,4 +382,6 @@
     <string name="projects_option_delete_title">Удалить вариант</string>
     <string name="projects_option_delete_message">Вы уверены, что хотите удалить вариант \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Пока нельзя создать типы элементов. Сначала создайте необходимые родительские элементы.</string>
+    <string name="projects_create_blocked_no_options">Не удалось создать: %1$s обязателен, но не имеет вариантов для выбора. Добавьте варианты в Дизайне.</string>
+    <string name="projects_attachment_remove">Удалить вложение</string>
 </resources>

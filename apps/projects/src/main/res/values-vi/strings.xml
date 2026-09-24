@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Đã tạo</string>
     <string name="projects_sort_updated">Đã cập nhật</string>
     <string name="projects_create_object_type">Loại</string>
-    <string name="projects_create_object_title_field">Tiêu đề</string>
     <string name="projects_create_object_parent">Cha</string>
     <string name="projects_settings_title">Cài đặt</string>
     <string name="projects_settings_tab_general">Chung</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Xóa tùy chọn</string>
     <string name="projects_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>
     <string name="projects_create_object_no_types">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>
+    <string name="projects_create_blocked_no_options">Không thể tạo: %1$s là bắt buộc nhưng không có tùy chọn nào để chọn. Thêm tùy chọn trong Thiết kế.</string>
+    <string name="projects_attachment_remove">Xóa tệp đính kèm</string>
 </resources>

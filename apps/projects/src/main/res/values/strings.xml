@@ -85,10 +85,10 @@
     <!-- Create object -->
     <string name="projects_create_object_title">New</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Title</string>
     <string name="projects_create_object_parent">Parent</string>
     <string name="projects_create_object_parent_none">(none)</string>
     <string name="projects_create_object_no_types">No item types can be created yet. Create the required parent items first.</string>
+    <string name="projects_create_blocked_no_options">Can\'t create: %1$s is required but has no options to choose from. Add options in Design.</string>
     <string name="projects_add_child">Add child</string>
 
     <!-- Project settings -->
@@ -222,6 +222,7 @@
     <string name="projects_attachments">Attachments</string>
     <string name="projects_attachment_empty">No attachments</string>
     <string name="projects_attachment_add">Add attachment</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
     <string name="projects_attachment_default_name">attachment</string>
     <string name="projects_attachment_delete_confirm_title">Delete attachment?</string>
     <string name="projects_attachment_delete_confirm_message">This attachment will be permanently deleted.</string>

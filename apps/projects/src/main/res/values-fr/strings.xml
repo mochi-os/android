@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Créé</string>
     <string name="projects_sort_updated">Mis à jour</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Titre</string>
     <string name="projects_create_object_parent">Parent</string>
     <string name="projects_settings_title">Paramètres</string>
     <string name="projects_settings_tab_general">Général</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Supprimer l\'option</string>
     <string name="projects_option_delete_message">Êtes-vous sûr de vouloir supprimer l\'option \"%1$s\" ?</string>
     <string name="projects_create_object_no_types">Aucun type d\'élément ne peut encore être créé. Créez d\'abord les éléments parents requis.</string>
+    <string name="projects_create_blocked_no_options">Impossible de créer : %1$s est obligatoire mais n\'a aucune option à choisir. Ajoutez des options dans Conception.</string>
+    <string name="projects_attachment_remove">Supprimer la pièce jointe</string>
 </resources>

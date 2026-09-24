@@ -33,7 +33,6 @@
     <string name="projects_sort_created">બનાવ્યું</string>
     <string name="projects_sort_updated">અપડેટ કર્યું</string>
     <string name="projects_create_object_type">પ્રકાર</string>
-    <string name="projects_create_object_title_field">શીર્ષક</string>
     <string name="projects_create_object_parent">પેરન્ટ</string>
     <string name="projects_settings_title">સેટિંગ્સ</string>
     <string name="projects_settings_tab_general">સામાન્ય</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">વિકલ્પ કાઢી નાખો</string>
     <string name="projects_option_delete_message">શું તમે ખરેખર \"%1$s\" વિકલ્પને કાઢી નાખવા માગો છો?</string>
     <string name="projects_create_object_no_types">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
+    <string name="projects_create_blocked_no_options">બનાવી શકાતું નથી: %1$s જરૂરી છે પણ પસંદ કરવા માટે કોઈ વિકલ્પ નથી. ડિઝાઇનમાં વિકલ્પો ઉમેરો.</string>
+    <string name="projects_attachment_remove">જોડાણ દૂર કરો</string>
 </resources>

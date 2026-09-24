@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Luotu</string>
     <string name="projects_sort_updated">Päivitetty</string>
     <string name="projects_create_object_type">Tyyppi</string>
-    <string name="projects_create_object_title_field">Otsikko</string>
     <string name="projects_create_object_parent">Yläkohde</string>
     <string name="projects_settings_title">Asetukset</string>
     <string name="projects_settings_tab_general">Yleiset</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Poista vaihtoehto</string>
     <string name="projects_option_delete_message">Haluatko varmasti poistaa vaihtoehdon \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Mitään kohdetyyppiä ei voi vielä luoda. Luo ensin vaaditut yläkohteet.</string>
+    <string name="projects_create_blocked_no_options">Ei voi luoda: %1$s on pakollinen, mutta sillä ei ole valittavia vaihtoehtoja. Lisää vaihtoehtoja Suunnittelussa.</string>
+    <string name="projects_attachment_remove">Poista liite</string>
 </resources>

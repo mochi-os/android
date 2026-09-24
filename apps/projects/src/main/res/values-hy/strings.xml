@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Ստեղծված</string>
     <string name="projects_sort_updated">Թարմացված</string>
     <string name="projects_create_object_type">Տեսակ</string>
-    <string name="projects_create_object_title_field">Վերնագիր</string>
     <string name="projects_create_object_parent">Ծնող</string>
     <string name="projects_settings_title">Կարգավորումներ</string>
     <string name="projects_settings_tab_general">Ընդհանուր</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Ջնջել տարբերակը</string>
     <string name="projects_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
     <string name="projects_create_object_no_types">Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։</string>
+    <string name="projects_create_blocked_no_options">Հնարավոր չէ ստեղծել՝ %1$s-ը պարտադիր է, բայց ընտրելու տարբերակներ չունի. Ավելացրեք տարբերակներ Դիզայնում։</string>
+    <string name="projects_attachment_remove">Հեռացնել կցորդը</string>
 </resources>

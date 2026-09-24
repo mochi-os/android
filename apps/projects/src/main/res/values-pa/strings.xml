@@ -33,7 +33,6 @@
     <string name="projects_sort_created">ਬਣਾਇਆ ਗਿਆ</string>
     <string name="projects_sort_updated">ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="projects_create_object_type">ਕਿਸਮ</string>
-    <string name="projects_create_object_title_field">ਸਿਰਲੇਖ</string>
     <string name="projects_create_object_parent">ਪੇਰੈਂਟ</string>
     <string name="projects_settings_title">ਸੈਟਿੰਗਾਂ</string>
     <string name="projects_settings_tab_general">ਆਮ</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">ਵਿਕਲਪ ਮਿਟਾਓ</string>
     <string name="projects_option_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਵਿਕਲਪ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="projects_create_object_no_types">ਅਜੇ ਕੋਈ ਆਈਟਮ ਕਿਸਮ ਨਹੀਂ ਬਣਾਈ ਜਾ ਸਕਦੀ। ਪਹਿਲਾਂ ਜ਼ਰੂਰੀ ਪੇਰੈਂਟ ਆਈਟਮਾਂ ਬਣਾਓ।</string>
+    <string name="projects_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

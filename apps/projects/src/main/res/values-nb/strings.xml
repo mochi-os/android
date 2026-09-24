@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Opprettet</string>
     <string name="projects_sort_updated">Oppdatert</string>
     <string name="projects_create_object_type">Type</string>
-    <string name="projects_create_object_title_field">Tittel</string>
     <string name="projects_create_object_parent">Overordnet</string>
     <string name="projects_settings_title">Innstillinger</string>
     <string name="projects_settings_tab_general">Generelt</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Slett alternativ</string>
     <string name="projects_option_delete_message">Er du sikker på at du vil slette alternativet \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ingen elementtyper kan opprettes ennå. Opprett de nødvendige overordnede elementene først.</string>
+    <string name="projects_create_blocked_no_options">Kan ikke opprette: %1$s er påkrevd, men har ingen alternativer å velge mellom. Legg til alternativer i Design.</string>
+    <string name="projects_attachment_remove">Fjern vedlegg</string>
 </resources>

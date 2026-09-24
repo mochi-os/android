@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Nagawa</string>
     <string name="projects_sort_updated">Na-update</string>
     <string name="projects_create_object_type">Uri</string>
-    <string name="projects_create_object_title_field">Pamagat</string>
     <string name="projects_create_object_parent">Magulang</string>
     <string name="projects_settings_title">Mga setting</string>
     <string name="projects_settings_tab_general">General</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">I-delete ang option</string>
     <string name="projects_option_delete_message">Sigurado ka bang gusto mong tanggalin ang option na \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Wala pang uri ng item na magagawa. Gumawa muna ng kinakailangang parent item.</string>
+    <string name="projects_create_blocked_no_options">Hindi makagawa: kailangan ang %1$s ngunit walang mapagpipiliang opsyon. Magdagdag ng opsyon sa Disenyo.</string>
+    <string name="projects_attachment_remove">Remove attachment</string>
 </resources>

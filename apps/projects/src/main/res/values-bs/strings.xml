@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Kreirano</string>
     <string name="projects_sort_updated">Ažurirano</string>
     <string name="projects_create_object_type">Tip</string>
-    <string name="projects_create_object_title_field">Naslov</string>
     <string name="projects_create_object_parent">Nadređeni</string>
     <string name="projects_settings_title">Postavke</string>
     <string name="projects_settings_tab_general">Općenito</string>
@@ -382,4 +381,6 @@
     <string name="projects_option_delete_title">Obriši opciju</string>
     <string name="projects_option_delete_message">Jeste li sigurni da želite obrisati opciju \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nijedan tip stavke se još ne može kreirati. Prvo kreirajte potrebne nadređene stavke.</string>
+    <string name="projects_create_blocked_no_options">Nije moguće kreirati: %1$s je obavezno, ali nema opcija za odabir. Dodajte opcije u Dizajnu.</string>
+    <string name="projects_attachment_remove">Ukloni prilog</string>
 </resources>

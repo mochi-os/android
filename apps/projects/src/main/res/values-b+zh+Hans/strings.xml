@@ -33,7 +33,6 @@
     <string name="projects_sort_created">已创建</string>
     <string name="projects_sort_updated">已更新</string>
     <string name="projects_create_object_type">类型</string>
-    <string name="projects_create_object_title_field">标题</string>
     <string name="projects_create_object_parent">父级</string>
     <string name="projects_settings_title">设置</string>
     <string name="projects_settings_tab_general">常规</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">删除选项</string>
     <string name="projects_option_delete_message">确定要删除选项 \"%1$s\" 吗?</string>
     <string name="projects_create_object_no_types">尚无可创建的条目类型。请先创建所需的父级条目。</string>
+    <string name="projects_create_blocked_no_options">无法创建：%1$s 为必填项，但没有可选选项。请在设计中添加选项。</string>
+    <string name="projects_attachment_remove">移除附件</string>
 </resources>

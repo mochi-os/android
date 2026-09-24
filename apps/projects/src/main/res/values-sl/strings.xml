@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Ustvarjeno</string>
     <string name="projects_sort_updated">Posodobljeno</string>
     <string name="projects_create_object_type">Vrsta</string>
-    <string name="projects_create_object_title_field">Naslov</string>
     <string name="projects_create_object_parent">Nadrejeno</string>
     <string name="projects_settings_title">Nastavitve</string>
     <string name="projects_settings_tab_general">Splošno</string>
@@ -383,4 +382,6 @@
     <string name="projects_option_delete_title">Izbriši možnost</string>
     <string name="projects_option_delete_message">Ali ste prepričani, da želite izbrisati možnost \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
+    <string name="projects_create_blocked_no_options">Ni mogoče ustvariti: %1$s je obvezno, vendar nima možnosti za izbiro. Dodajte možnosti v Oblikovanju.</string>
+    <string name="projects_attachment_remove">Odstrani prilogo</string>
 </resources>

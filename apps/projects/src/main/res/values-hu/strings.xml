@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Létrehozva</string>
     <string name="projects_sort_updated">Frissítve</string>
     <string name="projects_create_object_type">Típus</string>
-    <string name="projects_create_object_title_field">Cím</string>
     <string name="projects_create_object_parent">Szülő</string>
     <string name="projects_settings_title">Beállítások</string>
     <string name="projects_settings_tab_general">Általános</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Beállítás törlése</string>
     <string name="projects_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>
     <string name="projects_create_object_no_types">Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket.</string>
+    <string name="projects_create_blocked_no_options">Nem hozható létre: a(z) %1$s kötelező, de nincsenek választható lehetőségei. Adjon hozzá lehetőségeket a Tervben.</string>
+    <string name="projects_attachment_remove">Melléklet eltávolítása</string>
 </resources>

@@ -31,7 +31,6 @@
     <string name="projects_create_object_type">類型</string>
     <string name="projects_field_type">類型</string>
     <string name="projects_views_type">類型</string>
-    <string name="projects_create_object_title_field">標題</string>
     <string name="projects_request_field_title">標題</string>
     <string name="projects_settings_unsubscribe">取消訂閱</string>
     <string name="projects_settings_unsubscribe_title">取消訂閱</string>
@@ -381,4 +380,6 @@
     <string name="projects_board_add_column">新增欄位</string>
     <string name="projects_design_sample">範例 %1$d</string>
     <string name="projects_create_object_no_types">暫時未可以建立任何項目類型。請先建立所需嘅父項目。</string>
+    <string name="projects_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
+    <string name="projects_attachment_remove">移除附件</string>
 </resources>

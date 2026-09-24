@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Loodud</string>
     <string name="projects_sort_updated">Uuendatud</string>
     <string name="projects_create_object_type">Tüüp</string>
-    <string name="projects_create_object_title_field">Pealkiri</string>
     <string name="projects_create_object_parent">Vanem</string>
     <string name="projects_settings_title">Seaded</string>
     <string name="projects_settings_tab_general">Üldine</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Kustuta valik</string>
     <string name="projects_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>
+    <string name="projects_create_blocked_no_options">Ei saa luua: %1$s on nõutav, kuid sellel pole valikuid. Lisage valikud Kujunduses.</string>
+    <string name="projects_attachment_remove">Eemalda manus</string>
 </resources>

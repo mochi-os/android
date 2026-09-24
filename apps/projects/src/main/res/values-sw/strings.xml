@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Imeundwa</string>
     <string name="projects_sort_updated">Imesasishwa</string>
     <string name="projects_create_object_type">Aina</string>
-    <string name="projects_create_object_title_field">Kichwa</string>
     <string name="projects_create_object_parent">Mzazi</string>
     <string name="projects_settings_title">Mipangilio</string>
     <string name="projects_settings_tab_general">Jumla</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Futa chaguo</string>
     <string name="projects_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Hakuna aina za vipengele zinazoweza kuundwa bado. Unda vipengele vya mzazi vinavyohitajika kwanza.</string>
+    <string name="projects_create_blocked_no_options">Haiwezi kuunda: %1$s inahitajika lakini haina chaguo za kuchagua. Ongeza chaguo katika Muundo.</string>
+    <string name="projects_attachment_remove">Ondoa kiambatisho</string>
 </resources>

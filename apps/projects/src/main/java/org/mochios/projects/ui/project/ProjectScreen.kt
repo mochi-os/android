@@ -505,13 +505,21 @@ private fun ProjectContent(
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
-    var columnPending by rememberSaveable { mutableStateOf(false) }
+    // Set before leaving for a screen that changes the project - a new column,
+    // a new object - so the return refreshes; the creator's own socket hears
+    // no event for what it created itself.
+    var refreshPending by rememberSaveable { mutableStateOf(false) }
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
-        if (columnPending) {
-            columnPending = false
+        if (refreshPending) {
+            refreshPending = false
             viewModel.refresh()
         }
+    }
+
+    val createObject: (String?, Map<String, String>) -> Unit = { parent, presetValues ->
+        refreshPending = true
+        onCreateObject(parent, presetValues)
     }
 
     val context = LocalContext.current
@@ -712,7 +720,7 @@ private fun ProjectContent(
                                                 }
                                                 ?.key
                                             if (classId != null) {
-                                                columnPending = true
+                                                refreshPending = true
                                                 onAddColumn(viewModel.projectId, classId, fieldId)
                                             }
                                         },
@@ -772,7 +780,7 @@ private fun ProjectContent(
             val boardHasColumns = activeView?.viewtype == "board" &&
                 activeView.columns.isNotBlank()
             if (details != null && !boardHasColumns) {
-                MochiFab(onClick = { onCreateObject(null, emptyMap()) }) {
+                MochiFab(onClick = { createObject(null, emptyMap()) }) {
                     Icon(
                         Icons.Default.Add,
                         contentDescription = stringResource(R.string.projects_create_object)
@@ -833,7 +841,7 @@ private fun ProjectContent(
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
                                     onCreateObject = { initialValues ->
-                                        onCreateObject(null, initialValues)
+                                        createObject(null, initialValues)
                                     }
                                 )
                             }
@@ -871,7 +879,7 @@ private fun ProjectContent(
                 // pre-selected. The form reads project.hierarchy and seeds the
                 // class to one that permits this parent.
                 viewModel.selectObject(null)
-                onCreateObject(parentId, emptyMap())
+                createObject(parentId, emptyMap())
             },
         )
     }

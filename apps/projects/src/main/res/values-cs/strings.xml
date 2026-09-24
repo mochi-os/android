@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Vytvořeno</string>
     <string name="projects_sort_updated">Aktualizováno</string>
     <string name="projects_create_object_type">Typ</string>
-    <string name="projects_create_object_title_field">Název</string>
     <string name="projects_create_object_parent">Rodič</string>
     <string name="projects_settings_title">Nastavení</string>
     <string name="projects_settings_tab_general">Obecné</string>
@@ -382,4 +381,6 @@
     <string name="projects_option_delete_title">Smazat možnost</string>
     <string name="projects_option_delete_message">Opravdu chcete smazat možnost \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>
+    <string name="projects_create_blocked_no_options">Nelze vytvořit: %1$s je povinné, ale nemá žádné možnosti k výběru. Přidejte možnosti v Návrhu.</string>
+    <string name="projects_attachment_remove">Odebrat přílohu</string>
 </resources>

@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Създадено</string>
     <string name="projects_sort_updated">Обновено</string>
     <string name="projects_create_object_type">Тип</string>
-    <string name="projects_create_object_title_field">Заглавие</string>
     <string name="projects_create_object_parent">Родител</string>
     <string name="projects_settings_title">Настройки</string>
     <string name="projects_settings_tab_general">Общи</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Изтрий опцията</string>
     <string name="projects_option_delete_message">Сигурни ли сте, че искате да изтриете опцията \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи.</string>
+    <string name="projects_create_blocked_no_options">Не може да се създаде: %1$s е задължително, но няма опции за избор. Добавете опции в Дизайн.</string>
+    <string name="projects_attachment_remove">Премахване на прикачения файл</string>
 </resources>

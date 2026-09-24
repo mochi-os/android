@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Wedi\'i greu</string>
     <string name="projects_sort_updated">Wedi\'i ddiweddaru</string>
     <string name="projects_create_object_type">Math</string>
-    <string name="projects_create_object_title_field">Teitl</string>
     <string name="projects_create_object_parent">Rhiant</string>
     <string name="projects_settings_title">Gosodiadau</string>
     <string name="projects_settings_tab_general">Cyffredinol</string>
@@ -385,4 +384,6 @@
     <string name="projects_option_delete_title">Dileu opsiwn</string>
     <string name="projects_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf.</string>
+    <string name="projects_create_blocked_no_options">Methu creu: mae %1$s yn ofynnol ond nid oes ganddo opsiynau i ddewis ohonynt. Ychwanegwch opsiynau yn y Cynllun.</string>
+    <string name="projects_attachment_remove">Tynnu atodiad</string>
 </resources>

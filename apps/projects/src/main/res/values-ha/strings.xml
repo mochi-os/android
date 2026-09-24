@@ -33,7 +33,6 @@
     <string name="projects_sort_created">An ƙirƙira</string>
     <string name="projects_sort_updated">An sabunta</string>
     <string name="projects_create_object_type">Nau\'i</string>
-    <string name="projects_create_object_title_field">Take</string>
     <string name="projects_create_object_parent">Iyaye</string>
     <string name="projects_settings_title">Saitunan</string>
     <string name="projects_settings_tab_general">General</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Goge zaɓi</string>
     <string name="projects_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
+    <string name="projects_create_blocked_no_options">Ba a iya ƙirƙira ba: ana buƙatar %1$s amma ba shi da zaɓuɓɓuka. Ƙara zaɓuɓɓuka a Ƙira.</string>
+    <string name="projects_attachment_remove">Cire haɗe</string>
 </resources>

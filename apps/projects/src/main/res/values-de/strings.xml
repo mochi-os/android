@@ -33,7 +33,6 @@
     <string name="projects_sort_created">Erstellt</string>
     <string name="projects_sort_updated">Aktualisiert</string>
     <string name="projects_create_object_type">Typ</string>
-    <string name="projects_create_object_title_field">Titel</string>
     <string name="projects_create_object_parent">Übergeordnet</string>
     <string name="projects_settings_title">Einstellungen</string>
     <string name="projects_settings_tab_general">Allgemein</string>
@@ -381,4 +380,6 @@
     <string name="projects_option_delete_title">Option löschen</string>
     <string name="projects_option_delete_message">Möchten Sie die Option \"%1$s\" wirklich löschen?</string>
     <string name="projects_create_object_no_types">Es können noch keine Elementtypen erstellt werden. Erstellen Sie zunächst die erforderlichen übergeordneten Elemente.</string>
+    <string name="projects_create_blocked_no_options">Erstellen nicht möglich: %1$s ist erforderlich, hat aber keine Optionen zur Auswahl. Fügen Sie Optionen im Design hinzu.</string>
+    <string name="projects_attachment_remove">Anhang entfernen</string>
 </resources>
