@@ -8,14 +8,20 @@ package org.mochios.staff.ui.dashboard
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -39,22 +45,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.format.formatFingerprint
+import org.mochios.android.format.formatPrice
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.staff.R
-import org.mochios.android.format.formatFingerprint
-import org.mochios.android.format.formatPrice
 import org.mochios.staff.model.ActivityListing
 import org.mochios.staff.model.ActivityOrder
 import org.mochios.staff.model.ActivitySignup
 import org.mochios.staff.model.AuditEntry
-import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.ui.components.KpiCard
 import org.mochios.staff.ui.components.ScoreColorChip
@@ -230,7 +237,7 @@ private fun ActivityTabs(current: String, onSelect: (String) -> Unit) {
     )
 }
 
-private fun androidx.compose.foundation.lazy.LazyListScope.renderTabRows(state: DashboardUiState) {
+private fun LazyListScope.renderTabRows(state: DashboardUiState) {
     when (state.currentTab) {
         DashboardTab.ORDERS -> ordersRows(state.perTabOrders, state.isLoading(DashboardTab.ORDERS))
         DashboardTab.LISTINGS -> listingsRows(state.perTabListings, state.isLoading(DashboardTab.LISTINGS))
@@ -242,311 +249,216 @@ private fun androidx.compose.foundation.lazy.LazyListScope.renderTabRows(state: 
 
 // ---- Orders ----
 
-private fun androidx.compose.foundation.lazy.LazyListScope.ordersRows(
-    items: List<ActivityOrder>,
-    isLoading: Boolean,
-) {
+private fun LazyListScope.ordersRows(items: List<ActivityOrder>, isLoading: Boolean) {
     if (items.isEmpty() && !isLoading) {
         item("orders-empty") {
             EmptyRow(labelRes = R.string.staff_dashboard_empty_orders)
         }
         return
     }
-    item("orders-head") {
-        OrdersHeader()
-    }
-    items(items, key = { "order-${it.id}" }) { order ->
-        OrderRow(order = order)
+    items(items, key = { order -> "order-${order.id}" }) { order ->
+        OrderCard(order = order)
     }
 }
 
 @Composable
-private fun OrdersHeader() {
-    TableHeader(
-        listOf(
-            stringResource(R.string.staff_dashboard_col_title) to 2f,
-            stringResource(R.string.staff_dashboard_col_seller) to 1.4f,
-            stringResource(R.string.staff_dashboard_col_buyer) to 1.4f,
-            stringResource(R.string.staff_dashboard_col_total) to 1f,
-            stringResource(R.string.staff_dashboard_col_status) to 1f,
-            stringResource(R.string.staff_dashboard_col_date) to 1f,
-        ),
-    )
-}
-
-@Composable
-private fun OrderRow(order: ActivityOrder) {
+private fun OrderCard(order: ActivityOrder) {
     val format = LocalFormat.current
-    TableRow {
-        CellText(
-            text = order.title.ifBlank { stringResource(R.string.staff_dashboard_order_fallback, order.id) },
-            weight = 2f,
-        )
-        CellEntity(
-            id = order.seller,
-            name = order.sellerName,
-            fingerprint = order.sellerFingerprint,
-            weight = 1.4f,
-        )
-        CellEntity(
-            id = order.buyer,
-            name = order.buyerName,
-            fingerprint = order.buyerFingerprint,
-            weight = 1.4f,
-        )
-        CellText(
-            text = formatPrice(order.total, order.currency),
-            weight = 1f,
-        )
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .padding(horizontal = 4.dp),
-            contentAlignment = Alignment.CenterStart,
+    ActivityCard {
+        CardTitleRow(
+            title = order.title.ifBlank { stringResource(R.string.staff_dashboard_order_fallback, order.id) },
         ) {
             StaffStatusBadge(status = order.status)
         }
-        CellText(
-            text = format.formatTimestamp(order.created),
-            weight = 1f,
-            muted = true,
+        Spacer(Modifier.height(8.dp))
+        LabeledEntity(
+            label = stringResource(R.string.staff_dashboard_col_seller),
+            id = order.seller,
+            name = order.sellerName,
+            fingerprint = order.sellerFingerprint,
         )
+        Spacer(Modifier.height(4.dp))
+        LabeledEntity(
+            label = stringResource(R.string.staff_dashboard_col_buyer),
+            id = order.buyer,
+            name = order.buyerName,
+            fingerprint = order.buyerFingerprint,
+        )
+        Spacer(Modifier.height(8.dp))
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = formatPrice(order.total, order.currency),
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier.weight(1f),
+            )
+            TimeText(text = format.formatTimestamp(order.created))
+        }
     }
 }
 
 // ---- Listings ----
 
-private fun androidx.compose.foundation.lazy.LazyListScope.listingsRows(
-    items: List<ActivityListing>,
-    isLoading: Boolean,
-) {
+private fun LazyListScope.listingsRows(items: List<ActivityListing>, isLoading: Boolean) {
     if (items.isEmpty() && !isLoading) {
         item("listings-empty") {
             EmptyRow(labelRes = R.string.staff_dashboard_empty_listings)
         }
         return
     }
-    item("listings-head") {
-        TableHeader(
-            listOf(
-                stringResource(R.string.staff_dashboard_col_title) to 2f,
-                stringResource(R.string.staff_dashboard_col_seller) to 1.4f,
-                stringResource(R.string.staff_dashboard_col_status) to 1f,
-                stringResource(R.string.staff_dashboard_col_moderation) to 1f,
-                stringResource(R.string.staff_dashboard_col_score) to 0.8f,
-                stringResource(R.string.staff_dashboard_col_date) to 1f,
-            ),
-        )
-    }
-    items(items, key = { "listing-${it.id}" }) { l ->
-        ListingRow(listing = l)
+    items(items, key = { listing -> "listing-${listing.id}" }) { listing ->
+        ListingCard(listing = listing)
     }
 }
 
 @Composable
-private fun ListingRow(listing: ActivityListing) {
+private fun ListingCard(listing: ActivityListing) {
     val format = LocalFormat.current
-    TableRow {
-        CellText(text = listing.title, weight = 2f)
-        CellEntity(id = listing.seller, name = listing.sellerName, fingerprint = listing.sellerFingerprint, weight = 1.4f)
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .padding(horizontal = 4.dp),
-            contentAlignment = Alignment.CenterStart,
-        ) {
-            StaffStatusBadge(status = listing.status)
-        }
-        Box(
-            modifier = Modifier
-                .weight(1f)
-                .padding(horizontal = 4.dp),
-            contentAlignment = Alignment.CenterStart,
-        ) {
-            StaffStatusBadge(status = listing.moderation)
-        }
-        Box(
-            modifier = Modifier
-                .weight(0.8f)
-                .padding(horizontal = 4.dp),
-            contentAlignment = Alignment.CenterStart,
-        ) {
+    ActivityCard {
+        CardTitleRow(title = listing.title) {
             ScoreColorChip(score = listing.score.toInt())
         }
-        CellText(
-            text = format.formatTimestamp(listing.created),
-            weight = 1f,
-            muted = true,
+        Spacer(Modifier.height(8.dp))
+        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            StaffStatusBadge(status = listing.status)
+            StaffStatusBadge(status = listing.moderation)
+        }
+        Spacer(Modifier.height(8.dp))
+        Byline(
+            id = listing.seller,
+            name = listing.sellerName.ifBlank { formatFingerprint(listing.sellerFingerprint) },
+            time = format.formatTimestamp(listing.created),
         )
     }
 }
 
 // ---- Signups ----
 
-private fun androidx.compose.foundation.lazy.LazyListScope.signupsRows(
-    items: List<ActivitySignup>,
-    isLoading: Boolean,
-) {
+private fun LazyListScope.signupsRows(items: List<ActivitySignup>, isLoading: Boolean) {
     if (items.isEmpty() && !isLoading) {
         item("signups-empty") {
             EmptyRow(labelRes = R.string.staff_dashboard_empty_signups)
         }
         return
     }
-    item("signups-head") {
-        TableHeader(
-            listOf(
-                stringResource(R.string.staff_dashboard_col_name) to 2f,
-                stringResource(R.string.staff_dashboard_col_seller) to 1f,
-                stringResource(R.string.staff_dashboard_col_date) to 1f,
-            ),
-        )
-    }
-    items(items, key = { "signup-${it.id}" }) { s ->
-        SignupRow(signup = s)
+    items(items, key = { signup -> "signup-${signup.id}" }) { signup ->
+        SignupCard(signup = signup)
     }
 }
 
 @Composable
-private fun SignupRow(signup: ActivitySignup) {
+private fun SignupCard(signup: ActivitySignup) {
     val format = LocalFormat.current
-    TableRow {
-        CellText(text = signup.name.ifBlank { formatFingerprint(signup.fingerprint) }, weight = 2f)
-        CellText(
-            text = if (signup.seller != 0) {
-                stringResource(R.string.staff_dashboard_yes)
-            } else {
-                stringResource(R.string.staff_dashboard_no)
-            },
-            weight = 1f,
-        )
-        CellText(
-            text = format.formatTimestamp(signup.created),
-            weight = 1f,
-            muted = true,
-        )
+    val name = signup.name.ifBlank { formatFingerprint(signup.fingerprint) }
+    ActivityCard {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            EntityAvatar(
+                name = name,
+                src = if (signup.id.isNotBlank()) "/people/${signup.id}/-/avatar" else null,
+                seed = signup.id.ifBlank { name },
+                size = 40.dp,
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = name,
+                    style = MaterialTheme.typography.titleMedium,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                TimeText(text = format.formatTimestamp(signup.created))
+            }
+            if (signup.seller != 0) {
+                LabelChip(text = stringResource(R.string.staff_dashboard_col_seller))
+            }
+        }
     }
 }
 
 // ---- Moderation ----
 
-private fun androidx.compose.foundation.lazy.LazyListScope.moderationRows(
-    items: List<ModerationEntry>,
-    isLoading: Boolean,
-) {
+private fun LazyListScope.moderationRows(items: List<ModerationEntry>, isLoading: Boolean) {
     if (items.isEmpty() && !isLoading) {
         item("moderation-empty") {
             EmptyRow(labelRes = R.string.staff_dashboard_empty_moderation)
         }
         return
     }
-    item("moderation-head") {
-        TableHeader(
-            listOf(
-                stringResource(R.string.staff_dashboard_col_listing) to 2f,
-                stringResource(R.string.staff_dashboard_col_action) to 1f,
-                stringResource(R.string.staff_dashboard_col_actor) to 1.2f,
-                stringResource(R.string.staff_dashboard_col_score) to 0.8f,
-                stringResource(R.string.staff_dashboard_col_reason) to 1.4f,
-                stringResource(R.string.staff_dashboard_col_date) to 1f,
-            ),
-        )
-    }
-    items(items, key = { "moderation-${it.id}" }) { e ->
-        ModerationRow(entry = e)
+    items(items, key = { entry -> "moderation-${entry.id}" }) { entry ->
+        ModerationCard(entry = entry)
     }
 }
 
 @Composable
-private fun ModerationRow(entry: ModerationEntry) {
+private fun ModerationCard(entry: ModerationEntry) {
     val format = LocalFormat.current
-    TableRow {
-        CellText(
-            text = entry.listingTitle.ifBlank {
+    ActivityCard {
+        CardTitleRow(
+            title = entry.listingTitle.ifBlank {
                 stringResource(R.string.staff_dashboard_listing_fallback, entry.listing)
             },
-            weight = 2f,
-        )
-        CellText(text = entry.action, weight = 1f)
-        CellText(
-            text = if (entry.actor == "system") {
-                stringResource(R.string.staff_dashboard_system)
-            } else {
-                entry.actorName.ifBlank { formatFingerprint(entry.actorFingerprint) }
-            },
-            weight = 1.2f,
-        )
-        Box(
-            modifier = Modifier
-                .weight(0.8f)
-                .padding(horizontal = 4.dp),
-            contentAlignment = Alignment.CenterStart,
         ) {
             ScoreColorChip(score = entry.score.toInt())
         }
-        CellText(text = entry.reason, weight = 1.4f)
-        CellText(
-            text = format.formatTimestamp(entry.created),
-            weight = 1f,
-            muted = true,
+        Spacer(Modifier.height(8.dp))
+        StaffStatusBadge(status = entry.action)
+        if (entry.reason.isNotBlank()) {
+            Spacer(Modifier.height(8.dp))
+            LabeledText(label = stringResource(R.string.staff_dashboard_col_reason), text = entry.reason)
+        }
+        Spacer(Modifier.height(8.dp))
+        Byline(
+            id = if (entry.actor == "system") "" else entry.actor,
+            name = actorLabel(entry.actor, entry.actorName, entry.actorFingerprint),
+            time = format.formatTimestamp(entry.created),
         )
     }
 }
 
 // ---- Audit ----
 
-private fun androidx.compose.foundation.lazy.LazyListScope.auditRows(
-    items: List<AuditEntry>,
-    isLoading: Boolean,
-) {
+private fun LazyListScope.auditRows(items: List<AuditEntry>, isLoading: Boolean) {
     if (items.isEmpty() && !isLoading) {
         item("audit-empty") {
             EmptyRow(labelRes = R.string.staff_dashboard_empty_audit)
         }
         return
     }
-    item("audit-head") {
-        TableHeader(
-            listOf(
-                stringResource(R.string.staff_dashboard_col_action) to 1.2f,
-                stringResource(R.string.staff_dashboard_col_object) to 1.4f,
-                stringResource(R.string.staff_dashboard_col_actor) to 1.2f,
-                stringResource(R.string.staff_dashboard_col_detail) to 2f,
-                stringResource(R.string.staff_dashboard_col_date) to 1f,
-            ),
-        )
-    }
-    items(items, key = { "audit-${it.id}" }) { e ->
-        AuditRow(entry = e)
+    items(items, key = { entry -> "audit-${entry.id}" }) { entry ->
+        AuditCard(entry = entry)
     }
 }
 
 @Composable
-private fun AuditRow(entry: AuditEntry) {
+private fun AuditCard(entry: AuditEntry) {
     val format = LocalFormat.current
-    // An account or staff object is an entity: its name, else its fingerprint,
-    // never a slice of the id. Everything else is a row id.
     val objectLabel = when (entry.kind) {
         "account", "staff" -> entry.objectName.ifBlank { formatFingerprint(entry.objectFingerprint) }
-        else -> if (entry.`object`.all { it.isDigit() }) "#${entry.`object`}" else entry.`object`
+        else -> if (entry.`object`.all { char -> char.isDigit() }) "#${entry.`object`}" else entry.`object`
     }
-    val objectDisplay = "${entry.kind}/$objectLabel"
-    val actorLabel = if (entry.actor == "system") {
-        stringResource(R.string.staff_dashboard_system)
-    } else {
-        entry.actorName.ifBlank { formatFingerprint(entry.actorFingerprint) }
-    }
-    TableRow {
-        CellText(text = entry.action, weight = 1.2f)
-        CellText(text = objectDisplay, weight = 1.4f)
-        CellText(text = actorLabel, weight = 1.2f)
-        CellText(text = parseAuditDetail(entry.action, entry.data), weight = 2f, muted = true)
-        CellText(text = format.formatTimestamp(entry.timestamp), weight = 1f, muted = true)
+    val detail = parseAuditDetail(entry.action, entry.data)
+    ActivityCard {
+        CardTitleRow(title = entry.action)
+        Spacer(Modifier.height(8.dp))
+        LabeledText(
+            label = stringResource(R.string.staff_dashboard_col_object),
+            text = "${entry.kind}/$objectLabel",
+        )
+        if (detail.isNotBlank()) {
+            Spacer(Modifier.height(4.dp))
+            LabeledText(label = stringResource(R.string.staff_dashboard_col_detail), text = detail)
+        }
+        Spacer(Modifier.height(8.dp))
+        Byline(
+            id = if (entry.actor == "system") "" else entry.actor,
+            name = actorLabel(entry.actor, entry.actorName, entry.actorFingerprint),
+            time = format.formatTimestamp(entry.timestamp),
+        )
     }
 }
 
 /**
- * Compact summary of an [AuditEntry.data] blob for the dashboard table; full
+ * Compact summary of an [AuditEntry.data] blob for the dashboard card; full
  * labelling lives on the audit screen. `data` is a flat object, so regexes
  * suffice.
  */
@@ -570,97 +482,140 @@ private fun parseAuditDetail(@Suppress("UNUSED_PARAMETER") action: String, data:
     return out.joinToString(" · ")
 }
 
-// ---- Shared table primitives ----
+// ---- Shared card primitives ----
 
 @Composable
-private fun TableHeader(columns: List<Pair<String, Float>>) {
-    Surface(
-        color = MaterialTheme.colorScheme.surface,
+private fun ActivityCard(content: @Composable ColumnScope.() -> Unit) {
+    MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 4.dp),
+            .padding(horizontal = 16.dp),
+        shape = MaterialTheme.shapes.medium,
     ) {
-        Row(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
-            for ((label, weight) in columns) {
-                Text(
-                    text = label,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier
-                        .weight(weight)
-                        .padding(horizontal = 4.dp),
-                )
-            }
-        }
+        Column(modifier = Modifier.padding(16.dp), content = content)
     }
 }
 
 @Composable
-private fun TableRow(content: @Composable androidx.compose.foundation.layout.RowScope.() -> Unit) {
-    Surface(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp),
-    ) {
+private fun CardTitleRow(title: String, trailing: @Composable RowScope.() -> Unit = {}) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleMedium,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f),
+        )
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp),
+            modifier = Modifier.padding(start = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically,
-            content = content,
+            content = trailing,
         )
     }
 }
 
 @Composable
-private fun androidx.compose.foundation.layout.RowScope.CellText(
-    text: String,
-    weight: Float,
-    muted: Boolean = false,
-) {
+private fun LabeledEntity(label: String, id: String, name: String, fingerprint: String) {
+    val display = name.ifBlank { formatFingerprint(fingerprint) }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        FieldLabel(text = label)
+        EntityAvatar(
+            name = display,
+            src = if (id.isNotBlank()) "/people/$id/-/avatar" else null,
+            seed = id.ifBlank { display },
+            size = 20.dp,
+        )
+        Spacer(Modifier.width(6.dp))
+        Text(
+            text = display,
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+@Composable
+private fun LabeledText(label: String, text: String) {
+    Row {
+        FieldLabel(text = label)
+        Text(
+            text = text,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 3,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+@Composable
+private fun FieldLabel(text: String) {
     Text(
         text = text,
-        style = MaterialTheme.typography.bodySmall,
-        color = if (muted) {
-            MaterialTheme.colorScheme.onSurfaceVariant
-        } else {
-            MaterialTheme.colorScheme.onSurface
-        },
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
         maxLines = 1,
         modifier = Modifier
-            .weight(weight)
-            .padding(horizontal = 4.dp),
+            .width(64.dp)
+            .padding(top = 2.dp),
     )
 }
 
 @Composable
-private fun androidx.compose.foundation.layout.RowScope.CellEntity(
-    id: String,
-    name: String,
-    fingerprint: String,
-    weight: Float,
-) {
-    Row(
-        modifier = Modifier
-            .weight(weight)
-            .padding(horizontal = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
+private fun Byline(id: String, name: String, time: String) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
         EntityAvatar(
-            name = name.ifBlank { id },
+            name = name,
             src = if (id.isNotBlank()) "/people/$id/-/avatar" else null,
             seed = id.ifBlank { name },
             size = 20.dp,
         )
+        Spacer(Modifier.width(6.dp))
         Text(
-            text = name.ifBlank { formatFingerprint(fingerprint) },
+            text = name,
             style = MaterialTheme.typography.bodySmall,
             maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f),
+        )
+        TimeText(text = time)
+    }
+}
+
+@Composable
+private fun TimeText(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        maxLines = 1,
+    )
+}
+
+@Composable
+private fun LabelChip(text: String) {
+    Surface(
+        color = MaterialTheme.colorScheme.secondaryContainer,
+        contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+        shape = MaterialTheme.shapes.small,
+    ) {
+        Text(
+            text = text,
+            style = MaterialTheme.typography.labelMedium,
+            modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
         )
     }
 }
+
+@Composable
+private fun actorLabel(actor: String, name: String, fingerprint: String): String =
+    if (actor == "system") {
+        stringResource(R.string.staff_dashboard_system)
+    } else {
+        name.ifBlank { formatFingerprint(fingerprint) }
+    }
 
 @Composable
 private fun EmptyRow(labelRes: Int) {
