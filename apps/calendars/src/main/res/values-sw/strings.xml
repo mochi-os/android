@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Tukio limenakiliwa</string>
     <string name="calendars_scope_copy">Nakili tukio hili</string>
     <string name="calendars_editor_copy_title">Nakili tukio</string>
+    <string name="calendars_title_required">Kichwa kinahitajika</string>
 </resources>

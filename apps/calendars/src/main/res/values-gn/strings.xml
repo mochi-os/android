@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Evento oñekopia</string>
     <string name="calendars_scope_copy">Ekopia ko evento</string>
     <string name="calendars_editor_copy_title">Ekopia evento</string>
+    <string name="calendars_title_required">Téra tekotevẽ</string>
 </resources>

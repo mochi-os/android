@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ایونٹ کاپی ہو گیا</string>
     <string name="calendars_scope_copy">یہ ایونٹ کاپی کریں</string>
     <string name="calendars_editor_copy_title">ایونٹ کاپی کریں</string>
+    <string name="calendars_title_required">عنوان درکار ہے</string>
 </resources>

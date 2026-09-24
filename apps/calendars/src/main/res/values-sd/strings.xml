@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">واقعو ڪاپي ٿيو</string>
     <string name="calendars_scope_copy">هي واقعو ڪاپي ڪريو</string>
     <string name="calendars_editor_copy_title">واقعو ڪاپي ڪريو</string>
+    <string name="calendars_title_required">عنوان گھربل آھي</string>
 </resources>

@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Händelse kopierad</string>
     <string name="calendars_scope_copy">Kopiera denna händelse</string>
     <string name="calendars_editor_copy_title">Kopiera händelse</string>
+    <string name="calendars_title_required">Titel krävs</string>
 </resources>

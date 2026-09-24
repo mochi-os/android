@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Umsitho ukotshelwe</string>
     <string name="calendars_scope_copy">Kotshela lo msitho</string>
     <string name="calendars_editor_copy_title">Kotshela umsitho</string>
+    <string name="calendars_title_required">Isihloko siyafuneka</string>
 </resources>

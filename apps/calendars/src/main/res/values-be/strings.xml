@@ -156,4 +156,5 @@
     <string name="calendars_event_copied">Падзея скапіравана</string>
     <string name="calendars_scope_copy">Скапіраваць гэтую падзею</string>
     <string name="calendars_editor_copy_title">Скапіраваць падзею</string>
+    <string name="calendars_title_required">Назва абавязковая</string>
 </resources>

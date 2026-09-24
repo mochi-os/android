@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Nakopya ang kaganapan</string>
     <string name="calendars_scope_copy">Kopyahin ang kaganapang ito</string>
     <string name="calendars_editor_copy_title">Kopyahin ang kaganapan</string>
+    <string name="calendars_title_required">Kailangan ng pamagat</string>
 </resources>

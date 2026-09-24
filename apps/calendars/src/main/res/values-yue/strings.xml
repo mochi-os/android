@@ -147,4 +147,5 @@
     <string name="calendars_editor_copy_title">複製活動</string>
     <string name="calendars_event_copied">已複製活動</string>
     <string name="calendars_scope_copy">複製呢個活動</string>
+    <string name="calendars_title_required">必須輸入標題</string>
 </resources>

@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ఈవెంట్ కాపీ చేయబడింది</string>
     <string name="calendars_scope_copy">ఈ ఈవెంట్‌ను కాపీ చేయండి</string>
     <string name="calendars_editor_copy_title">ఈవెంట్‌ను కాపీ చేయండి</string>
+    <string name="calendars_title_required">శీర్షిక అవసరం</string>
 </resources>

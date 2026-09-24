@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ღონისძიება დაკოპირდა</string>
     <string name="calendars_scope_copy">ამ ღონისძიების კოპირება</string>
     <string name="calendars_editor_copy_title">ღონისძიების კოპირება</string>
+    <string name="calendars_title_required">სათაური სავალდებულოა</string>
 </resources>

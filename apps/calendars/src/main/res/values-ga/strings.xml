@@ -159,4 +159,5 @@
     <string name="calendars_event_copied">Imeacht cóipeáilte</string>
     <string name="calendars_scope_copy">Cóipeáil an t-imeacht seo</string>
     <string name="calendars_editor_copy_title">Cóipeáil imeacht</string>
+    <string name="calendars_title_required">Teideal de dhíth</string>
 </resources>

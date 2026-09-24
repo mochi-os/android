@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ಈವೆಂಟ್ ಅನ್ನು ನಕಲಿಸಲಾಗಿದೆ</string>
     <string name="calendars_scope_copy">ಈ ಈವೆಂಟ್ ಅನ್ನು ನಕಲಿಸಿ</string>
     <string name="calendars_editor_copy_title">ಈವೆಂಟ್ ನಕಲಿಸಿ</string>
+    <string name="calendars_title_required">ಶೀರ್ಷಿಕೆ ಅಗತ್ಯವಿದೆ</string>
 </resources>

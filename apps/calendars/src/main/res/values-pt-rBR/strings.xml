@@ -17,4 +17,5 @@
     <string name="calendars_event_changed">Este evento foi alterado em outro lugar.</string>
     <string name="calendars_undo">Desfazer</string>
     <string name="calendars_event_resize">Alterar o horário de término</string>
+    <string name="calendars_title_required">O título é obrigatório</string>
 </resources>

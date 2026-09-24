@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Рӯйдод нусхабардорӣ шуд</string>
     <string name="calendars_scope_copy">Нусхабардории ин рӯйдод</string>
     <string name="calendars_editor_copy_title">Нусхабардории рӯйдод</string>
+    <string name="calendars_title_required">Сарлавҳа талаб карда мешавад</string>
 </resources>

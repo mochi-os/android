@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Үйл явдал хуулагдлаа</string>
     <string name="calendars_scope_copy">Энэ үйл явдлыг хуулах</string>
     <string name="calendars_editor_copy_title">Үйл явдлыг хуулах</string>
+    <string name="calendars_title_required">Гарчиг шаардлагатай</string>
 </resources>

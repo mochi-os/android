@@ -98,7 +98,7 @@ fun CalendarScreen(
     onCreateCalendar: () -> Unit,
     onSubscribe: () -> Unit,
     onConnectDevice: () -> Unit,
-    onNewEvent: (Long) -> Unit,
+    onNewEvent: (Long, Boolean?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
     onCopyOccurrence: (Instance) -> Unit,
@@ -205,7 +205,7 @@ fun CalendarScreen(
             },
             snackbarHost = { SnackbarHost(snackbar) },
             floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(0) }) {
+                MochiFab(onClick = { onNewEvent(0, null) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
                 }
             },
@@ -404,13 +404,14 @@ private fun View(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
-    onNewEvent: (Long) -> Unit,
+    onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
 ) {
     // A tap on a cell names a day and, in a time grid, an hour; the editor
     // wants the moment, measured in the user's own zone rather than the
-    // device's.
+    // device's. A cell is a timed event, and says so, which the editor's
+    // memory of the last new event does not override.
     val moment = { day: LocalDate, hour: Int ->
         day.atStartOfDay(viewModel.timezone()).plusHours(hour.toLong()).toEpochSecond()
     }
@@ -420,7 +421,7 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day, hour -> onNewEvent(moment(day, hour)) },
+            onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
             onMove = onMove,
         )
         CalendarsSection.WEEK -> {
@@ -432,7 +433,7 @@ private fun View(
                 state = state,
                 viewModel = viewModel,
                 onOpen = onOpen,
-                onCreate = { day, hour -> onNewEvent(moment(day, hour)) },
+                onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
                 onMove = onMove,
             )
         }
@@ -442,7 +443,7 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9)) },
+            onCreate = { day -> onNewEvent(moment(day, 9), null) },
             onMove = onMoveDay,
         )
         CalendarsSection.MONTH -> MonthGrid(
@@ -451,7 +452,7 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(moment(day, 9)) },
+            onCreate = { day -> onNewEvent(moment(day, 9), null) },
             onMove = onMoveDay,
         )
         // The list view opens on the anchor day and pages on as the reader

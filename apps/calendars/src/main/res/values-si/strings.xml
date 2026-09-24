@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">සිදුවීම පිටපත් කරන ලදී</string>
     <string name="calendars_scope_copy">මෙම සිදුවීම පිටපත් කරන්න</string>
     <string name="calendars_editor_copy_title">සිදුවීම පිටපත් කරන්න</string>
+    <string name="calendars_title_required">මාතෘකාව අවශ්‍යයි</string>
 </resources>

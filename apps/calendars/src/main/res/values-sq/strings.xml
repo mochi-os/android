@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Ngjarja u kopjua</string>
     <string name="calendars_scope_copy">Kopjo këtë ngjarje</string>
     <string name="calendars_editor_copy_title">Kopjo ngjarjen</string>
+    <string name="calendars_title_required">Titulli kërkohet</string>
 </resources>

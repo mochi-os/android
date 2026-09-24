@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Begivenhed kopieret</string>
     <string name="calendars_scope_copy">Kopier denne begivenhed</string>
     <string name="calendars_editor_copy_title">Kopier begivenhed</string>
+    <string name="calendars_title_required">Titel er påkrævet</string>
 </resources>

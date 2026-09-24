@@ -153,4 +153,5 @@
     <string name="calendars_event_copied">Udalosť bola skopírovaná</string>
     <string name="calendars_scope_copy">Kopírovať túto udalosť</string>
     <string name="calendars_editor_copy_title">Kopírovať udalosť</string>
+    <string name="calendars_title_required">Názov je povinný</string>
 </resources>

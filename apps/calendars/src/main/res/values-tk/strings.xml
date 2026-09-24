@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Çäre nusgalandy</string>
     <string name="calendars_scope_copy">Şu çäräni nusgala</string>
     <string name="calendars_editor_copy_title">Çäräni nusgala</string>
+    <string name="calendars_title_required">At gerekli</string>
 </resources>

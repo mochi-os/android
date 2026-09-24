@@ -175,6 +175,12 @@ fun EventEditScreen(
                 label = { Text(stringResource(R.string.calendars_event_title)) },
                 singleLine = true,
                 enabled = !uiState.isSaving,
+                isError = uiState.untitled,
+                supportingText = if (uiState.untitled) {
+                    { Text(stringResource(R.string.calendars_title_required)) }
+                } else {
+                    null
+                },
                 modifier = Modifier.fillMaxWidth(),
             )
             LabeledSelectField(
@@ -267,7 +273,7 @@ fun EventEditScreen(
             )
             MochiButton(
                 onClick = viewModel::save,
-                enabled = uiState.title.isNotBlank() && !uiState.isSaving && uiState.writable,
+                enabled = !uiState.isSaving && uiState.writable,
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 if (uiState.isSaving) {

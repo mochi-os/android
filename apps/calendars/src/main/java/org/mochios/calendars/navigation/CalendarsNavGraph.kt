@@ -44,8 +44,14 @@ object CalendarsApp {
     /** The flag the calendar screen's back-stack entry carries once a copy is saved. */
     const val COPIED = "copied"
 
-    /** A new event, optionally starting at a moment the user picked out of a grid. */
-    fun newEvent(start: Long = 0): String = "calendars/events/new?start=$start"
+    /**
+     * A new event, optionally starting at a moment the user picked out of a
+     * grid. [allday] is what the tap chose, timed or all day, and null when
+     * nothing did - the screen's own "new event" action - which lets the
+     * editor start as the last new event was.
+     */
+    fun newEvent(start: Long = 0, allday: Boolean? = null): String =
+        "calendars/events/new?start=$start" + (allday?.let { "&allday=${if (it) 1 else 0}" } ?: "")
 
     /**
      * An event's editor. [occurrence] is the occurrence the user opened, epoch
@@ -98,7 +104,7 @@ fun NavGraphBuilder.calendarsNavGraph(
             onCreateCalendar = { navController.navigate(CalendarsApp.CREATE) },
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
             onConnectDevice = { navController.navigate(CalendarsApp.DEVICES) },
-            onNewEvent = { start -> navController.navigate(CalendarsApp.newEvent(start)) },
+            onNewEvent = { start, allday -> navController.navigate(CalendarsApp.newEvent(start, allday)) },
             onEditEvent = { event, occurrence -> navController.navigate(CalendarsApp.event(event, occurrence)) },
             onCopyEvent = { event, occurrence, scope ->
                 navController.navigate(CalendarsApp.copyEvent(event, occurrence, scope))

@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Το συμβάν αντιγράφηκε</string>
     <string name="calendars_scope_copy">Αντιγραφή αυτού του συμβάντος</string>
     <string name="calendars_editor_copy_title">Αντιγραφή συμβάντος</string>
+    <string name="calendars_title_required">Ο τίτλος είναι υποχρεωτικός</string>
 </resources>

@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Настанот е копиран</string>
     <string name="calendars_scope_copy">Копирај го овој настан</string>
     <string name="calendars_editor_copy_title">Копирај настан</string>
+    <string name="calendars_title_required">Насловот е задолжителен</string>
 </resources>

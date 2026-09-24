@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Միջոցառումը պատճենվեց</string>
     <string name="calendars_scope_copy">Պատճենել այս միջոցառումը</string>
     <string name="calendars_editor_copy_title">Պատճենել միջոցառումը</string>
+    <string name="calendars_title_required">Վերնագիրը պարտադիր է</string>
 </resources>

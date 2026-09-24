@@ -147,4 +147,5 @@
     <string name="calendars_event_copied">Đã sao chép sự kiện</string>
     <string name="calendars_scope_copy">Sao chép sự kiện này</string>
     <string name="calendars_editor_copy_title">Sao chép sự kiện</string>
+    <string name="calendars_title_required">Tiêu đề là bắt buộc</string>
 </resources>

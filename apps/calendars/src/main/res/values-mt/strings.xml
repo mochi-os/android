@@ -159,4 +159,5 @@
     <string name="calendars_event_copied">L-avveniment ġie kkupjat</string>
     <string name="calendars_scope_copy">Ikkupja dan l-avveniment</string>
     <string name="calendars_editor_copy_title">Ikkupja l-avveniment</string>
+    <string name="calendars_title_required">Titlu mitlub</string>
 </resources>

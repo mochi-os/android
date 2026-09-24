@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ഇവന്റ് പകർത്തി</string>
     <string name="calendars_scope_copy">ഈ ഇവന്റ് പകർത്തുക</string>
     <string name="calendars_editor_copy_title">ഇവന്റ് പകർത്തുക</string>
+    <string name="calendars_title_required">തലക്കെട്ട് ആവശ്യമാണ്</string>
 </resources>

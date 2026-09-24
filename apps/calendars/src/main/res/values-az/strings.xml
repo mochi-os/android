@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Tədbir kopyalandı</string>
     <string name="calendars_scope_copy">Bu tədbiri kopyala</string>
     <string name="calendars_editor_copy_title">Tədbiri kopyala</string>
+    <string name="calendars_title_required">Yan paneli açıb-bağla</string>
 </resources>

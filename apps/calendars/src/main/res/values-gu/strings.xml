@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ઇવેન્ટ કૉપિ થયું</string>
     <string name="calendars_scope_copy">આ ઇવેન્ટ કૉપિ કરો</string>
     <string name="calendars_editor_copy_title">ઇવેન્ટ કૉપિ કરો</string>
+    <string name="calendars_title_required">શીર્ષક આવશ્યક છે</string>
 </resources>

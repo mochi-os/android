@@ -153,4 +153,5 @@
     <string name="calendars_event_copied">Notikums nokopēts</string>
     <string name="calendars_scope_copy">Kopēt šo notikumu</string>
     <string name="calendars_editor_copy_title">Kopēt notikumu</string>
+    <string name="calendars_title_required">Virsraksts ir obligāts</string>
 </resources>

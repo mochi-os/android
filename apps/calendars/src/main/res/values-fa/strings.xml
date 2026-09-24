@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">رویداد کپی شد</string>
     <string name="calendars_scope_copy">کپی این رویداد</string>
     <string name="calendars_editor_copy_title">کپی رویداد</string>
+    <string name="calendars_title_required">عنوان الزامی است</string>
 </resources>

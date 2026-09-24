@@ -11,6 +11,7 @@ import org.mochios.android.sync.EventProperty
 import org.mochios.android.sync.property
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
+import org.mochios.calendars.storage.Memory
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZoneOffset
@@ -75,8 +76,35 @@ fun foreign(zone: Zone, user: String): Boolean =
  * The pair after the start zone is set to [start]: the finish zone follows
  * while the two are still equal, and stops once it has been set apart.
  */
+/**
+ * The end no earlier than the start as instants: [ends] as it is when it
+ * already follows [begins], else moved on by as many whole days as it takes.
+ */
+fun following(begins: Long, ends: Long): Long {
+    if (ends >= begins) return ends
+    val days = ((begins - ends + 86_399) / 86_400).coerceAtLeast(1)
+    return ends + days * 86_400
+}
+
 fun follow(zone: Zone, start: String): Zone =
     Zone(start, if (zone.finish == zone.start) start else zone.finish)
+
+/**
+ * What a blank new form starts with, from the [memory] of the last new event
+ * saved on this device. The zones are the memory's, the [user]'s own where
+ * it holds none or an end is blank. All-day is what the route says when it
+ * says anything - [allday] set - since a tap on an hour of the time grid has
+ * already chosen timed; a tap on a day cell of the month views, which names a
+ * [start] without saying, and the screen's own "new event" action both take
+ * the memory's, as a day says which day and not which kind.
+ */
+fun remembered(memory: Memory?, user: String, start: Long, allday: Boolean?): Memory = Memory(
+    allday = allday ?: memory?.allday ?: false,
+    zone = Zone(
+        memory?.zone?.start?.ifBlank { user } ?: user,
+        memory?.zone?.finish?.ifBlank { user } ?: user,
+    ),
+)
 
 /**
  * The instant that reads on the clock in [to] as [instant] does in [from],

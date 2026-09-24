@@ -5,4 +5,5 @@
     <string name="calendars_event_moved">Afspraak verplaatst</string>
     <string name="calendars_event_changed">Deze afspraak is elders gewijzigd.</string>
     <string name="calendars_undo">Ongedaan maken</string>
+    <string name="calendars_title_required">Titel is verplicht</string>
 </resources>

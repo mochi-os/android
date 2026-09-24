@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Evènman kopye</string>
     <string name="calendars_scope_copy">Kopye evènman sa a</string>
     <string name="calendars_editor_copy_title">Kopye evènman</string>
+    <string name="calendars_title_required">Tit obligatwa</string>
 </resources>

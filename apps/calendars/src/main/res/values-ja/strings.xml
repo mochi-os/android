@@ -147,4 +147,5 @@
     <string name="calendars_event_copied">予定をコピーしました</string>
     <string name="calendars_scope_copy">この予定をコピー</string>
     <string name="calendars_editor_copy_title">予定をコピー</string>
+    <string name="calendars_title_required">タイトルが必要です</string>
 </resources>

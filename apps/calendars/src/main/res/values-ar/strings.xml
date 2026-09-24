@@ -162,4 +162,5 @@
     <string name="calendars_event_copied">تم نسخ الحدث</string>
     <string name="calendars_scope_copy">نسخ هذا الحدث</string>
     <string name="calendars_editor_copy_title">نسخ الحدث</string>
+    <string name="calendars_title_required">العنوان مطلوب</string>
 </resources>

@@ -162,4 +162,5 @@
     <string name="calendars_event_copied">Digwyddiad wedi\'i gopïo</string>
     <string name="calendars_scope_copy">Copïo y digwyddiad hwn</string>
     <string name="calendars_editor_copy_title">Copïo digwyddiad</string>
+    <string name="calendars_title_required">Mae angen teitl</string>
 </resources>

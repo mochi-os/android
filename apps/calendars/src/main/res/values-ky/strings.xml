@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Иш-чара көчүрүлдү</string>
     <string name="calendars_scope_copy">Бул иш-чараны көчүрүү</string>
     <string name="calendars_editor_copy_title">Иш-чараны көчүрүү</string>
+    <string name="calendars_title_required">Аталышы талап кылынат</string>
 </resources>

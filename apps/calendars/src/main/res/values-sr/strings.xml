@@ -153,4 +153,5 @@
     <string name="calendars_event_copied">Догађај је копиран</string>
     <string name="calendars_scope_copy">Копирај овај догађај</string>
     <string name="calendars_editor_copy_title">Копирај догађај</string>
+    <string name="calendars_title_required">Наслов је обавезан</string>
 </resources>

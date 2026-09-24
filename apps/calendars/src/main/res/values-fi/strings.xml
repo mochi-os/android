@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Tapahtuma kopioitu</string>
     <string name="calendars_scope_copy">Kopioi tämä tapahtuma</string>
     <string name="calendars_editor_copy_title">Kopioi tapahtuma</string>
+    <string name="calendars_title_required">Otsikko on pakollinen</string>
 </resources>

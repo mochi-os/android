@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">ইভেন্ট কপি করা হয়েছে</string>
     <string name="calendars_scope_copy">এই ইভেন্টটি কপি করুন</string>
     <string name="calendars_editor_copy_title">ইভেন্ট কপি করুন</string>
+    <string name="calendars_title_required">শিরোনাম প্রয়োজন</string>
 </resources>

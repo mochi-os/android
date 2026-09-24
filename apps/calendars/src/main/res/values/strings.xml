@@ -62,6 +62,7 @@
     <string name="calendars_event_copied">Event copied</string>
     <string name="calendars_event_untitled">Untitled</string>
     <string name="calendars_event_title">Title</string>
+    <string name="calendars_title_required">Title is required</string>
     <string name="calendars_event_calendar">Calendar</string>
     <string name="calendars_event_allday">All day</string>
     <string name="calendars_event_start">Start</string>

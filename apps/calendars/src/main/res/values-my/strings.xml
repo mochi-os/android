@@ -147,4 +147,5 @@
     <string name="calendars_event_copied">အစီအစဉ် ကူးပြီးပါပြီ</string>
     <string name="calendars_scope_copy">ဤအစီအစဉ်ကို ကူးမည်</string>
     <string name="calendars_editor_copy_title">အစီအစဉ်ကို ကူးမည်</string>
+    <string name="calendars_title_required">ခေါင်းစဉ် လိုအပ်သည်</string>
 </resources>

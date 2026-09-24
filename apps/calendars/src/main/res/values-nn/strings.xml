@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Hending kopiert</string>
     <string name="calendars_scope_copy">Kopier denne hendinga</string>
     <string name="calendars_editor_copy_title">Kopier hending</string>
+    <string name="calendars_title_required">Tittel er påkravd</string>
 </resources>

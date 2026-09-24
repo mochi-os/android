@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">நிகழ்வு நகலெடுக்கப்பட்டது</string>
     <string name="calendars_scope_copy">இந்த நிகழ்வை நகலெடு</string>
     <string name="calendars_editor_copy_title">நிகழ்வை நகலெடு</string>
+    <string name="calendars_title_required">தலைப்பு தேவை</string>
 </resources>

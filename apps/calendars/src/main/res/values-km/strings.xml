@@ -147,4 +147,5 @@
     <string name="calendars_event_copied">បានចម្លងព្រឹត្តិការណ៍</string>
     <string name="calendars_scope_copy">ចម្លងព្រឹត្តិការណ៍នេះ</string>
     <string name="calendars_editor_copy_title">ចម្លងព្រឹត្តិការណ៍</string>
+    <string name="calendars_title_required">ចំណងជើងត្រូវបានទាមទារ</string>
 </resources>

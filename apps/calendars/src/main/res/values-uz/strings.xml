@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Tadbir nusxalandi</string>
     <string name="calendars_scope_copy">Bu tadbirni nusxalash</string>
     <string name="calendars_editor_copy_title">Tadbirni nusxalash</string>
+    <string name="calendars_title_required">Sarlavha talab qilinadi</string>
 </resources>

@@ -153,4 +153,5 @@
     <string name="calendars_event_copied">האירוע הועתק</string>
     <string name="calendars_scope_copy">העתק אירוע זה</string>
     <string name="calendars_editor_copy_title">העתקת אירוע</string>
+    <string name="calendars_title_required">נדרשת כותרת</string>
 </resources>

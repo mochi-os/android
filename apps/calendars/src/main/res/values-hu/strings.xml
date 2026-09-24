@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Esemény másolva</string>
     <string name="calendars_scope_copy">Ezen esemény másolása</string>
     <string name="calendars_editor_copy_title">Esemény másolása</string>
+    <string name="calendars_title_required">A cím megadása kötelező</string>
 </resources>

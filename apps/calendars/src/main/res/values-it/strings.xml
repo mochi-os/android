@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Evento copiato</string>
     <string name="calendars_scope_copy">Copia questo evento</string>
     <string name="calendars_editor_copy_title">Copia evento</string>
+    <string name="calendars_title_required">Il titolo è obbligatorio</string>
 </resources>

@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Etkinlik kopyalandı</string>
     <string name="calendars_scope_copy">Bu etkinliği kopyala</string>
     <string name="calendars_editor_copy_title">Etkinliği kopyala</string>
+    <string name="calendars_title_required">Başlık gerekli</string>
 </resources>

@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Gertaera kopiatu da</string>
     <string name="calendars_scope_copy">Kopiatu gertaera hau</string>
     <string name="calendars_editor_copy_title">Kopiatu gertaera</string>
+    <string name="calendars_title_required">Izenburua beharrezkoa da</string>
 </resources>

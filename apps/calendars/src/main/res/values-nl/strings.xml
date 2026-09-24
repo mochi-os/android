@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Afspraak gekopieerd</string>
     <string name="calendars_scope_copy">Deze afspraak kopiëren</string>
     <string name="calendars_editor_copy_title">Afspraak kopiëren</string>
+    <string name="calendars_title_required">Titel is verplicht</string>
 </resources>

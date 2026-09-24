@@ -150,4 +150,5 @@
     <string name="calendars_event_copied">Sündmus kopeeritud</string>
     <string name="calendars_scope_copy">Kopeeri see sündmus</string>
     <string name="calendars_editor_copy_title">Kopeeri sündmus</string>
+    <string name="calendars_title_required">Pealkiri on nõutav</string>
 </resources>
