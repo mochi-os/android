@@ -210,7 +210,7 @@ class EventEditViewModel @Inject constructor(
 
     fun reminder(value: Int) = edit { copy(reminder = value) }
 
-    fun recurrence(value: Recurrence) = edit { copy(recurrence = value) }
+    fun recurrence(value: Recurrence) = edit { copy(recurrence = recurrence.revised(value)) }
 
     fun allday(value: Boolean) = edit {
         // An all-day event runs to the end of its last day; a timed one keeps

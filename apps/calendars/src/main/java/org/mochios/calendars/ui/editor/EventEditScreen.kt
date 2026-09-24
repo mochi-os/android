@@ -518,7 +518,15 @@ private fun RepeatField(recurrence: Recurrence, onChange: (Recurrence) -> Unit) 
                 onChange(recurrence.copy(frequency = frequency))
             },
         )
-        if (recurrence.frequency == Frequency.CUSTOM) {
+        if (recurrence.frequency == Frequency.CUSTOM && !recurrence.expressible) {
+            // A rule the settings cannot express is kept as written; choosing
+            // a repeat replaces it.
+            Text(
+                text = recurrence.rule.orEmpty(),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        } else if (recurrence.frequency == Frequency.CUSTOM) {
             LabeledSelectField(
                 label = stringResource(R.string.calendars_repeat_interval),
                 placeholder = "",
