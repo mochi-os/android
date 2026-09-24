@@ -73,9 +73,15 @@ fun foreign(zone: Zone, user: String): Boolean =
     zone.start.ifBlank { user } != user || zone.finish.ifBlank { user } != user
 
 /**
- * The pair after the start zone is set to [start]: the finish zone follows
- * while the two are still equal, and stops once it has been set apart.
+ * The zone a moment of the form is shown and picked in. An all-day day is
+ * held as its UTC midnight and is a date, not a moment, so it reads in UTC
+ * whatever the user's zone; read in a zone west of UTC it would show the
+ * day before. A timed end reads in its own [zone], the device's own where
+ * that names no zone it knows.
  */
+fun shownIn(allday: Boolean, zone: String): ZoneId =
+    if (allday) ZoneOffset.UTC else runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault())
+
 /**
  * The end no earlier than the start as instants: [ends] as it is when it
  * already follows [begins], else moved on by as many whole days as it takes.
@@ -86,6 +92,10 @@ fun following(begins: Long, ends: Long): Long {
     return ends + days * 86_400
 }
 
+/**
+ * The pair after the start zone is set to [start]: the finish zone follows
+ * while the two are still equal, and stops once it has been set apart.
+ */
 fun follow(zone: Zone, start: String): Zone =
     Zone(start, if (zone.finish == zone.start) start else zone.finish)
 

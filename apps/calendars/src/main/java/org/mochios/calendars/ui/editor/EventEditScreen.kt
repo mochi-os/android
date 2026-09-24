@@ -338,7 +338,8 @@ private fun MomentField(
     val format = LocalFormat.current
     var picking by remember { mutableStateOf(false) }
     var timing by remember { mutableStateOf(false) }
-    val id = remember(zone) { runCatching { ZoneId.of(zone) }.getOrDefault(ZoneId.systemDefault()) }
+    // An all-day day is a date held at its UTC midnight, so it is read in UTC.
+    val id = remember(zone, allday) { shownIn(allday, zone) }
     val local = remember(moment, id) { Instant.ofEpochSecond(moment).atZone(id) }
 
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
