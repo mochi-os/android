@@ -70,7 +70,8 @@ data class DeviceToken(
 data class TokensResponse(val tokens: List<DeviceToken> = emptyList())
 
 /** The body of `-/token/create`: the credential, shown once. */
-data class TokenResponse(val token: String = "")
+/** `-/token/create`: the device's password, shown this once, and the username to enter beside it. */
+data class TokenResponse(val token: String = "", val username: String = "")
 
 /** The body of `-/token/delete`. */
 data class TokenDeleteResponse(val ok: Boolean = false)

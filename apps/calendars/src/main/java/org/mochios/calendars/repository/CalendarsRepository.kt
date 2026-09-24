@@ -29,6 +29,7 @@ import org.mochios.calendars.model.AccountsResponse
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.CalendarAccount
 import org.mochios.calendars.model.DeviceToken
+import org.mochios.calendars.model.TokenResponse
 import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
@@ -354,7 +355,7 @@ class CalendarsRepository @Inject constructor(
         call { api.revokeLink(calendar).unwrap() }
     }
 
-    suspend fun createToken(name: String): String = call { api.createToken(name).unwrap().token }
+    suspend fun createToken(name: String): TokenResponse = call { api.createToken(name).unwrap() }
 
     suspend fun listTokens(): List<DeviceToken> = call { api.listTokens().unwrap().tokens }
 

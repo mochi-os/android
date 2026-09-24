@@ -44,7 +44,7 @@
     <string name="calendars_device_create">Embojeguáva</string>
     <string name="calendars_device_server">Mohendaha</string>
     <string name="calendars_device_address">Dirección</string>
-    <string name="calendars_device_username">Téra puruharakuéra</string>
+    <string name="calendars_device_username">Puruhára réra</string>
     <string name="calendars_device_password">Ñe\'ẽñemi</string>
     <string name="calendars_device_copy">Kopia %1$s</string>
     <string name="calendars_device_done">Apopyre</string>
@@ -160,7 +160,7 @@
     <string name="calendars_poll_conflict">Peteĩ mba\'e oikóva iñambue mokõive hendápe</string>
     <string name="calendars_poll_missing">Arapapaha ndaipóri véima imohendahápe</string>
     <string name="calendars_poll_unauthorised">Arapapaha mohendaha nomoneĩri cuenta credencial</string>
-    <string name="calendars_subscribe_username">Téra puruharakuéra</string>
+    <string name="calendars_subscribe_username">Puruhára réra</string>
     <string name="calendars_subscribe_password">Ñe\'ẽñemi</string>
     <string name="calendars_subscribe_connect">Embojoaju</string>
     <string name="calendars_subscribe_server">Ambue Mochi térã CalDAV servidor</string>

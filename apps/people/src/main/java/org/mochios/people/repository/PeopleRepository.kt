@@ -21,6 +21,7 @@ import org.mochios.people.api.PreferenceResponse
 import org.mochios.people.api.WelcomeResponse
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
+import org.mochios.people.api.TokenResponse
 import org.mochios.people.model.DeviceToken
 import org.mochios.people.model.Group
 import org.mochios.people.model.GroupMember
@@ -123,8 +124,8 @@ class PeopleRepository @Inject constructor(
     // ---- Device tokens ----
 
     /** A new device's password. The server shows it this once. */
-    suspend fun createToken(name: String): String =
-        api.createToken(name).unwrap().token
+    suspend fun createToken(name: String): TokenResponse =
+        api.createToken(name).unwrap()
 
     suspend fun listTokens(): List<DeviceToken> =
         api.listTokens().unwrap().tokens

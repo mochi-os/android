@@ -68,13 +68,6 @@ import org.mochios.people.model.DeviceToken
 import org.mochios.android.R as MochiR
 
 /**
- * The CardDAV client's username. The server authenticates on the password
- * alone and ignores it, and the client knows no email address to offer
- * instead, so this is the literal the web dialog shows.
- */
-private const val USERNAME = "mochi"
-
-/**
  * Connect a device: name it, create its password, and copy the server,
  * address-book URL, username and password into the device's contacts
  * account. The password is shown once, here; below it every connected
@@ -136,6 +129,7 @@ fun ConnectDeviceScreen(
                     CredentialsSection(
                         server = uiState.server,
                         address = uiState.address,
+                        username = uiState.username,
                         token = token,
                         onDone = viewModel::done,
                     )
@@ -239,6 +233,7 @@ private fun CreateSection(
 private fun CredentialsSection(
     server: String,
     address: String,
+    username: String,
     token: String,
     onDone: () -> Unit,
 ) {
@@ -250,7 +245,7 @@ private fun CredentialsSection(
         ) {
             CredentialRow(stringResource(R.string.people_device_server), server)
             CredentialRow(stringResource(R.string.people_device_address), address)
-            CredentialRow(stringResource(R.string.people_device_username), USERNAME)
+            CredentialRow(stringResource(R.string.people_device_username), username)
             CredentialRow(stringResource(R.string.people_device_password), token, sensitive = true)
             Text(
                 text = stringResource(R.string.people_device_warning),

@@ -28,7 +28,7 @@
     <string name="projects_design">ออกแบบ</string>
     <string name="projects_sort_label">เรียงลำดับ</string>
     <string name="projects_sort_direction">ทิศทาง</string>
-    <string name="projects_sort_rank">คู่มือ</string>
+    <string name="projects_sort_rank">ด้วยตนเอง</string>
     <string name="projects_sort_number">ตัวเลข</string>
     <string name="projects_sort_created">สร้างแล้ว</string>
     <string name="projects_sort_updated">อัปเดตแล้ว</string>
