@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">İzah əlavə et</string>
     <string name="attachment_caption_edit">İzahı redaktə et</string>
     <string name="about_check_background">Arxa fonda davam et</string>
+    <string name="update_install">Quraşdır</string>
+    <string name="update_available">Yeniləmə mövcuddur</string>
+    <string name="update_later">Sonra</string>
     <string name="notifications_category_unassigned">Təyin edilməyib</string>
     <string name="notifications_change_category">Bildiriş kateqoriyasını dəyiş</string>
     <string name="lightbox_comments_none">Bu şəkilə hələ şərh yoxdur.</string>

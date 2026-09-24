@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Düşündiriş goşmak</string>
     <string name="attachment_caption_edit">Düşündirişi üýtgetmek</string>
     <string name="about_check_background">Arkaplanda dowam etmek</string>
+    <string name="update_install">Gurnaýyş</string>
+    <string name="update_available">Täzelenme elýeterli</string>
+    <string name="update_later">Soňrak</string>
     <string name="notifications_category_unassigned">Bellenilmedik</string>
     <string name="notifications_change_category">Bildiriş kategoriýasyny üýtget</string>
     <string name="lightbox_comments_none">Bu surata entek teswir ýok.</string>

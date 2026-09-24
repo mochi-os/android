@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">کیپشن شامل کریں</string>
     <string name="attachment_caption_edit">کیپشن میں ترمیم کریں</string>
     <string name="about_check_background">پس منظر میں جاری رکھیں</string>
+    <string name="update_install">انسٹال کریں</string>
+    <string name="update_available">اپ ڈیٹ دستیاب ہے</string>
+    <string name="update_later">بعد میں</string>
     <string name="notifications_category_unassigned">غیر تفویض شدہ</string>
     <string name="notifications_change_category">اطلاع کا زمرہ تبدیل کریں</string>
     <string name="lightbox_comments_none">اس تصویر پر ابھی کوئی تبصرہ نہیں۔</string>

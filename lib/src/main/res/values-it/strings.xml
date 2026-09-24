@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Aggiungi didascalia</string>
     <string name="attachment_caption_edit">Modifica didascalia</string>
     <string name="about_check_background">Continua in background</string>
+    <string name="update_install">Installa</string>
+    <string name="update_available">Aggiornamento disponibile</string>
+    <string name="update_later">Più tardi</string>
     <string name="notifications_category_unassigned">Non assegnato</string>
     <string name="notifications_change_category">Modifica categoria di notifica</string>
     <string name="lightbox_comments_none">Ancora nessun commento su questa immagine.</string>

@@ -104,6 +104,9 @@ open class MainActivity : ComponentActivity() {
     // Mochi task to the link, not just the one that received it.
     private val pendingLink = MutableStateFlow<String?>(null)
 
+    /** A staged update to offer, set on every resume; null once answered. */
+    private val pendingUpdate = MutableStateFlow<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val hosted = targetAppOf(componentName)
@@ -136,6 +139,27 @@ open class MainActivity : ComponentActivity() {
                 FormatProvider(manager = preferencesManager) {
                     RequestNotificationPermission()
                     OemBackgroundHintDialog()
+                    // A staged update is offered here, never handed to the
+                    // installer unasked: on a Samsung with Auto Blocker on
+                    // the installer is refused, so it has to be the user's
+                    // move. "Later" and a tap outside decline this version.
+                    val update by pendingUpdate.collectAsState()
+                    update?.let { version ->
+                        MochiAlertDialog(
+                            onDismissRequest = {
+                                UpdateInstaller.decline(this@MainActivity, version)
+                                pendingUpdate.value = null
+                            },
+                            title = stringResource(MochiR.string.update_available),
+                            text = stringResource(MochiR.string.about_version, version),
+                            confirmText = stringResource(MochiR.string.update_install),
+                            onConfirm = {
+                                pendingUpdate.value = null
+                                UpdateInstaller.install(this@MainActivity, version)
+                            },
+                            dismissText = stringResource(MochiR.string.update_later),
+                        )
+                    }
                     LaunchedEffect(isAuthenticated) {
                         Log.i(TAG, "LaunchedEffect(isAuthenticated)=$isAuthenticated")
                         if (isAuthenticated) {
@@ -384,10 +408,9 @@ open class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         // When the daily worker has staged a newer APK in cacheDir/updates/,
-        // hand it off to the system installer now. Android shows its own
-        // confirmation dialog; we can't suppress that, but pre-downloading
-        // means the user never sees the browser/file-picker chain.
-        UpdateInstaller.promptIfPending(this)
+        // offer it; the dialog in setContent hands it to the system installer
+        // only on the user's say-so.
+        pendingUpdate.value = UpdateInstaller.pending(this)
 
         // A socket dropped in the background otherwise waits out its backoff
         // timer.

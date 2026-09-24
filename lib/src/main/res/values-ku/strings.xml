@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Binnivîsê zêde bike</string>
     <string name="attachment_caption_edit">Binnivîsê biguherîne</string>
     <string name="about_check_background">Di paşxaneyê de berdewam bike</string>
+    <string name="update_install">Sazke</string>
+    <string name="update_available">Nûvekirin heye</string>
+    <string name="update_later">Paşê</string>
     <string name="notifications_category_unassigned">Nehatiye diyarkirin</string>
     <string name="notifications_change_category">Kategorîya agahdariyê biguherîne</string>
     <string name="lightbox_comments_none">Hîn şîrove li ser vê wêneyê tune ne.</string>

@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">क्याप्शन थप्नुहोस्</string>
     <string name="attachment_caption_edit">क्याप्शन सम्पादन गर्नुहोस्</string>
     <string name="about_check_background">पृष्ठभूमिमा जारी राख्नुहोस्</string>
+    <string name="update_install">स्थापना गर्नुहोस्</string>
+    <string name="update_available">अपडेट उपलब्ध छ</string>
+    <string name="update_later">पछि</string>
     <string name="notifications_category_unassigned">नतोकिएको</string>
     <string name="notifications_change_category">सूचना वर्ग परिवर्तन गर्नुहोस्</string>
     <string name="lightbox_comments_none">यस तस्बिरमा अहिलेसम्म कुनै टिप्पणी छैन।</string>

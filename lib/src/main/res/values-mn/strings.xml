@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Тайлбар нэмэх</string>
     <string name="attachment_caption_edit">Тайлбар засах</string>
     <string name="about_check_background">Дэвсгэрт үргэлжлүүлэх</string>
+    <string name="update_install">Суулгах</string>
+    <string name="update_available">Шинэчлэлт бэлэн байна</string>
+    <string name="update_later">Дараа</string>
     <string name="notifications_category_unassigned">Хариуцсан хүн оноогоогүй</string>
     <string name="notifications_change_category">Мэдэгдлийн ангилал өөрчлөх</string>
     <string name="lightbox_comments_none">Энэ зурагт одоогоор сэтгэгдэл алга.</string>

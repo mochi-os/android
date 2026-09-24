@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Magdagdag ng caption</string>
     <string name="attachment_caption_edit">I-edit ang caption</string>
     <string name="about_check_background">Magpatuloy sa background</string>
+    <string name="update_install">I-install</string>
+    <string name="update_available">May available na update</string>
+    <string name="update_later">Mamaya</string>
     <string name="notifications_category_unassigned">Walang nakatalaga</string>
     <string name="notifications_change_category">Baguhin ang category ng notification</string>
     <string name="lightbox_comments_none">Wala pang komento sa larawang ito.</string>

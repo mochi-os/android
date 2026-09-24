@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Embojoapy ñemyesakã</string>
     <string name="attachment_caption_edit">Emboheko ñemyesakã</string>
     <string name="about_check_background">Tenonde hapykuépe</string>
+    <string name="update_install">Embojuaju</string>
+    <string name="update_available">Oĩ ñembopyahu</string>
+    <string name="update_later">Upéi</string>
     <string name="notifications_category_unassigned">Mavevenoĩva</string>
     <string name="notifications_change_category">Emoambue ñehenói categoría</string>
     <string name="lightbox_comments_none">Ne\'ĩra gueteri temiandu ko ta\'angáre.</string>

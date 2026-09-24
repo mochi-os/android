@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Ajoute lejand</string>
     <string name="attachment_caption_edit">Modifye lejand</string>
     <string name="about_check_background">Kontinye an aryè plan</string>
+    <string name="update_install">Enstale</string>
+    <string name="update_available">Gen yon mizajou disponib</string>
+    <string name="update_later">Pita</string>
     <string name="notifications_category_unassigned">Pa asiyen</string>
     <string name="notifications_change_category">Chanje kategori notifikasyon</string>
     <string name="lightbox_comments_none">Poko gen kòmantè sou imaj sa a.</string>

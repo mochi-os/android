@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">క్యాప్షన్ జోడించండి</string>
     <string name="attachment_caption_edit">క్యాప్షన్ సవరించండి</string>
     <string name="about_check_background">నేపథ్యంలో కొనసాగించండి</string>
+    <string name="update_install">ఇన్‌స్టాల్</string>
+    <string name="update_available">అప్‌డేట్ అందుబాటులో ఉంది</string>
+    <string name="update_later">తర్వాత</string>
     <string name="notifications_category_unassigned">కేటాయించబడలేదు</string>
     <string name="notifications_change_category">నోటిఫికేషన్ విభాగాన్ని మార్చండి</string>
     <string name="lightbox_comments_none">ఈ చిత్రంపై ఇంకా వ్యాఖ్యలు లేవు.</string>

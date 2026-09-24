@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Προσθήκη λεζάντας</string>
     <string name="attachment_caption_edit">Επεξεργασία λεζάντας</string>
     <string name="about_check_background">Συνέχεια στο παρασκήνιο</string>
+    <string name="update_install">Εγκατάσταση</string>
+    <string name="update_available">Διαθέσιμη ενημέρωση</string>
+    <string name="update_later">Αργότερα</string>
     <string name="notifications_category_unassigned">Χωρίς ανάθεση</string>
     <string name="notifications_change_category">Αλλαγή κατηγορίας ειδοποίησης</string>
     <string name="lightbox_comments_none">Δεν υπάρχουν ακόμη σχόλια σε αυτή την εικόνα.</string>

@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Qhanañchawi yapaña</string>
     <string name="attachment_caption_edit">Qhanañchawi askichaña</string>
     <string name="about_check_background">Qhipankañ sarantaña</string>
+    <string name="update_install">Instalaña</string>
+    <string name="update_available">Machaqaña utji</string>
+    <string name="update_later">Qhiparu</string>
     <string name="notifications_category_unassigned">Jan asignata</string>
     <string name="notifications_change_category">Yatiyaw categoría mayjt’aña</string>
     <string name="lightbox_comments_none">Aka jamuqat tuqit janïra arst\'äwinakax utjkiti.</string>

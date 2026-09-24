@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">წარწერის დამატება</string>
     <string name="attachment_caption_edit">წარწერის რედაქტირება</string>
     <string name="about_check_background">გაგრძელება ფონურ რეჟიმში</string>
+    <string name="update_install">დაყენება</string>
+    <string name="update_available">ხელმისაწვდომია განახლება</string>
+    <string name="update_later">მოგვიანებით</string>
     <string name="notifications_category_unassigned">მიუნიჭებელი</string>
     <string name="notifications_change_category">შეტყობინების კატეგორიის შეცვლა</string>
     <string name="lightbox_comments_none">ამ სურათზე კომენტარები ჯერ არ არის.</string>

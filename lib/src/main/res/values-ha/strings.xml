@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Ƙara bayanin hoto</string>
     <string name="attachment_caption_edit">Gyara bayanin hoto</string>
     <string name="about_check_background">Ci gaba a bayan fage</string>
+    <string name="update_install">Shigar da</string>
+    <string name="update_available">Akwai sabuntawa</string>
+    <string name="update_later">Daga baya</string>
     <string name="notifications_category_unassigned">Ba a sanya wa kowa</string>
     <string name="notifications_change_category">Canja category na sanarwa</string>
     <string name="lightbox_comments_none">Babu sharhi kan wannan hoton tukuna.</string>

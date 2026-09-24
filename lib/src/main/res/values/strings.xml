@@ -231,6 +231,9 @@
     <string name="about_check_network_error">Couldn\'t reach update server</string>
     <string name="about_check_download_failed">Download failed</string>
     <string name="about_check_background">Continue in background</string>
+    <string name="update_available">Update available</string>
+    <string name="update_install">Install</string>
+    <string name="update_later">Later</string>
 
     <!-- Notifications inbox + bell -->
     <string name="notifications_open">Notifications</string>

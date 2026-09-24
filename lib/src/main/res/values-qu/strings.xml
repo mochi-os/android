@@ -271,6 +271,9 @@
     <string name="attachment_caption_add">Sut\'inchayta yapay</string>
     <string name="attachment_caption_edit">Sut\'inchayta allinchay</string>
     <string name="about_check_background">Qhipanchaypi qatiy</string>
+    <string name="update_install">Sipiy</string>
+    <string name="update_available">Musuqyachiy kachkan</string>
+    <string name="update_later">Qhipaman</string>
     <string name="notifications_category_unassigned">Mana akllasqa</string>
     <string name="notifications_change_category">Notificacion categoríata hukchay</string>
     <string name="lightbox_comments_none">Kay siq\'imanta manaraq ima rimaykunapas kanchu.</string>

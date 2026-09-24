@@ -272,6 +272,9 @@
     <string name="attachment_caption_add">Thêm chú thích</string>
     <string name="attachment_caption_edit">Sửa chú thích</string>
     <string name="about_check_background">Tiếp tục chạy nền</string>
+    <string name="update_install">Cài đặt</string>
+    <string name="update_available">Có bản cập nhật</string>
+    <string name="update_later">Để sau</string>
     <string name="notifications_category_unassigned">Chưa phân công</string>
     <string name="notifications_change_category">Đổi danh mục thông báo</string>
     <string name="lightbox_comments_none">Chưa có bình luận nào về hình ảnh này.</string>
