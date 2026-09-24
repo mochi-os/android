@@ -153,7 +153,7 @@
     <string name="calendars_title_required">ርዕስ ያስፈልጋል</string>
     <string name="calendars_link_submit">ያገናኙ</string>
     <string name="calendars_link_sync">አሁን ያመሳስሉ</string>
-    <string name="calendars_link_grant">በድር መተግበሪያው ውስጥ የቀን መቁጠሪያ መዳረሻን ይፍቀዱ</string>
+    <string name="calendars_link_grant">የቀን መቁጠሪያ መዳረሻ ይፍቀዱ</string>
     <string name="calendars_link_linked">ተገናኝቷል</string>
     <string name="calendars_link_marker">የተገናኘ የቀን መቁጠሪያ</string>
     <string name="calendars_link_remote_empty">ምንም የቀን መቁጠሪያዎች የሉም</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">የGoogle መለያዎች በዚህ ሰርቨር ላይ አልተነቁም። በቅንብሮች፣ የስርዓት ቅንብሮች ውስጥ ያንቁዋቸው።</string>
-    <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም። በድር መተግበሪያው ውስጥ ያገናኙት።</string>
+    <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም።</string>
+    <string name="calendars_subscribe_google_connect_action">Google አገናኝ</string>
+    <string name="calendars_grant_failed">የቀን መቁጠሪያ መዳረሻ አልተፈቀደም</string>
 </resources>

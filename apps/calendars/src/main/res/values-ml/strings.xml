@@ -153,7 +153,7 @@
     <string name="calendars_title_required">തലക്കെട്ട് ആവശ്യമാണ്</string>
     <string name="calendars_link_submit">ലിങ്ക് ചെയ്യുക</string>
     <string name="calendars_link_sync">ഇപ്പോൾ സിങ്ക് ചെയ്യുക</string>
-    <string name="calendars_link_grant">വെബ് ആപ്പിൽ കലണ്ടർ ആക്സസ് അനുവദിക്കുക</string>
+    <string name="calendars_link_grant">കലണ്ടർ ആക്സസ് അനുവദിക്കുക</string>
     <string name="calendars_link_linked">ലിങ്ക് ചെയ്തു</string>
     <string name="calendars_link_marker">ലിങ്ക് ചെയ്ത കലണ്ടർ</string>
     <string name="calendars_link_remote_empty">കലണ്ടറുകളൊന്നുമില്ല</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ഈ സെർവറിൽ Google അക്കൗണ്ടുകൾ പ്രവർത്തനക്ഷമമാക്കിയിട്ടില്ല. ക്രമീകരണങ്ങൾ, സിസ്റ്റം ക്രമീകരണങ്ങൾ എന്നതിൽ അവ പ്രവർത്തനക്ഷമമാക്കുക.</string>
-    <string name="calendars_subscribe_google_connect">നിങ്ങൾ Google അക്കൗണ്ട് കണക്റ്റ് ചെയ്തിട്ടില്ല. വെബ് ആപ്പിൽ ഇത് കണക്റ്റ് ചെയ്യുക.</string>
+    <string name="calendars_subscribe_google_connect">നിങ്ങൾ Google അക്കൗണ്ട് കണക്റ്റ് ചെയ്തിട്ടില്ല.</string>
+    <string name="calendars_subscribe_google_connect_action">Google കണക്റ്റ് ചെയ്യുക</string>
+    <string name="calendars_grant_failed">കലണ്ടർ ആക്സസ് നൽകിയിട്ടില്ല</string>
 </resources>

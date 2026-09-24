@@ -150,7 +150,7 @@
     <string name="calendars_title_required">ခေါင်းစဉ် လိုအပ်သည်</string>
     <string name="calendars_link_submit">ချိတ်ဆက်</string>
     <string name="calendars_link_sync">ယခု ထပ်တူပြုမည်</string>
-    <string name="calendars_link_grant">ဝဘ်အက်ပ်တွင် ပြက္ခဒိန် အသုံးပြုခွင့် ပေးပါ</string>
+    <string name="calendars_link_grant">ပြက္ခဒိန် ဝင်ရောက်ခွင့် ခွင့်ပြုမည်</string>
     <string name="calendars_link_linked">ချိတ်ဆက်ပြီး</string>
     <string name="calendars_link_marker">ချိတ်ဆက်ထားသော ပြက္ခဒိန်</string>
     <string name="calendars_link_remote_empty">ပြက္ခဒိန်များ မရှိပါ</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ဤဆာဗာတွင် Google အကောင့်များကို ဖွင့်ထားခြင်း မရှိပါ။ ၎င်းတို့ကို ဆက်တင်များ၊ စနစ် ဆက်တင်များ တွင် ဖွင့်ပါ။</string>
-    <string name="calendars_subscribe_google_connect">သင် Google အကောင့် ချိတ်ဆက်ထားခြင်း မရှိပါ။ ၎င်းကို ဝဘ်အက်ပ်တွင် ချိတ်ဆက်ပါ။</string>
+    <string name="calendars_subscribe_google_connect">သင် Google အကောင့် ချိတ်ဆက်ထားခြင်း မရှိပါ။</string>
+    <string name="calendars_subscribe_google_connect_action">Google ချိတ်ဆက်မည်</string>
+    <string name="calendars_grant_failed">ပြက္ခဒိန် ဝင်ရောက်ခွင့် မရရှိပါ</string>
 </resources>

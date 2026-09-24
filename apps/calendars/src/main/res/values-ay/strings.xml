@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Kupi Panel Cambiaña</string>
     <string name="calendars_link_submit">Chinuña</string>
     <string name="calendars_link_sync">Jichha sincronizaña</string>
-    <string name="calendars_link_grant">Web aplicación ukan calendarior mantañ iyawsaña</string>
+    <string name="calendars_link_grant">Calendario mantañ iyawsaña</string>
     <string name="calendars_link_linked">Chinuta</string>
     <string name="calendars_link_marker">Chinuta calendario</string>
     <string name="calendars_link_remote_empty">Janiw calendarionakax utjkiti</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google cuentanakax janiw aka servidoran yatichatäkiti. Configuración, Sistema configuración ukan yatichma.</string>
-    <string name="calendars_subscribe_google_connect">Janiw mä Google cuenta chinjatäkiti. Web aplicación ukan chinjma.</string>
+    <string name="calendars_subscribe_google_connect">Janiw mä Google cuenta chinjatäkiti.</string>
+    <string name="calendars_subscribe_google_connect_action">Google chikacht’aña</string>
+    <string name="calendars_grant_failed">Calendario mantañax janiw iyawsatäkiti</string>
 </resources>

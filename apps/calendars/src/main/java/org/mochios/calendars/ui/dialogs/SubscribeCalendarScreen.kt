@@ -35,6 +35,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import android.content.Intent
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -56,7 +57,12 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.api.MochiError
+import org.mochios.android.auth.AuthRepository
+import org.mochios.android.auth.OAuthPkce
+import org.mochios.android.auth.SessionManager
+import org.mochios.android.util.webUri
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ColorPicker
@@ -156,11 +162,29 @@ data class SubscribeUiState(
     val error: MochiError? = null,
     val permission: PendingPermission? = null,
     val finished: String? = null,
+    /** A consent to open in the system browser, once. */
+    val launch: String? = null,
 )
+
+/** What the Google step shows. */
+enum class GoogleStep { MISSING, CONNECT, LIST }
+
+/**
+ * The Google step: the user's Google accounts when there are any; else an
+ * offer to connect one, which the consent does; else, when the server holds
+ * no Google client so no consent can be asked for, where the client goes.
+ */
+fun googleStep(accounts: List<CalendarAccount>, providers: List<String>): GoogleStep = when {
+    accounts.isNotEmpty() -> GoogleStep.LIST
+    providers.isEmpty() -> GoogleStep.MISSING
+    else -> GoogleStep.CONNECT
+}
 
 @HiltViewModel
 class SubscribeCalendarViewModel @Inject constructor(
     private val repository: CalendarsRepository,
+    private val sessionManager: SessionManager,
+    private val authRepository: AuthRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SubscribeUiState())
@@ -170,6 +194,74 @@ class SubscribeCalendarViewModel @Inject constructor(
         // Read at once: the kinds on offer depend on what the server can
         // grant and what the user already holds.
         accounts()
+        // A consent that came back while this screen was away is waiting
+        // here, as the sign-in link's is for the login screen.
+        viewModelScope.launch {
+            sessionManager.oauthGrantReturn.collect { (code, error) ->
+                if (error != null) {
+                    sessionManager.clearOAuthGrantReturn()
+                    sessionManager.consumeOAuthGrantVerifier()
+                    _uiState.value = _uiState.value.copy(isBusy = false, error = MochiError.Local(R.string.calendars_grant_failed))
+                } else if (code != null) {
+                    sessionManager.clearOAuthGrantReturn()
+                    completeGrant(code)
+                }
+            }
+        }
+    }
+
+    /**
+     * Asks Google for calendar access on [account], or on whichever account
+     * the user picks when none is named. The consent runs in the system
+     * browser: the verifier is held for the exchange, where the server lands
+     * the grant against it and this app's token.
+     */
+    fun grant(account: CalendarAccount?) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isBusy = true, error = null)
+            try {
+                val verifier = OAuthPkce.generateVerifier()
+                val challenge = OAuthPkce.challengeFor(verifier)
+                val begun = repository.grant(account?.id.orEmpty(), if (account == null) CalendarAccount.TYPE_GOOGLE else "", challenge)
+                // Recorded only once the server has answered, and in one
+                // write with the nonce: a verifier left behind by a failed
+                // begin is what an injected return needs.
+                sessionManager.saveOAuthGrantVerifier(verifier, begun.nonce)
+                _uiState.value = _uiState.value.copy(isBusy = false, launch = begun.url)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isBusy = false, error = e.toMochiError())
+            }
+        }
+    }
+
+    fun consumeLaunch() {
+        _uiState.value = _uiState.value.copy(launch = null)
+    }
+
+    /** The consent came back: land the grant, then open the account's calendars. */
+    private fun completeGrant(code: String) {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isBusy = true, error = null)
+            try {
+                val verifier = sessionManager.consumeOAuthGrantVerifier()
+                val token = sessionManager.getToken("calendars")
+                if (verifier == null || token == null) {
+                    _uiState.value = _uiState.value.copy(isBusy = false, error = MochiError.Local(R.string.calendars_grant_failed))
+                    return@launch
+                }
+                val landed = authRepository.exchangeOAuthGrant(code, verifier, token)
+                val answer = repository.listAccounts()
+                _uiState.value = _uiState.value.copy(
+                    isBusy = false,
+                    accounts = answer.accounts,
+                    administrator = answer.administrator,
+                    providers = answer.providers,
+                )
+                answer.accounts.firstOrNull { it.id == landed.account }?.let { open(it) }
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isBusy = false, error = e.toMochiError())
+            }
+        }
     }
 
     /** Stage one: what the user is adding decides what stage two asks for. */
@@ -567,27 +659,41 @@ private fun Credential(
     viewModel: SubscribeCalendarViewModel,
 ) {
     when (uiState.kind) {
-        SubscribeKind.GOOGLE -> GoogleAccounts(uiState, padding, viewModel::open, viewModel::accounts)
+        SubscribeKind.GOOGLE -> GoogleAccounts(uiState, padding, viewModel)
         SubscribeKind.APPLE, SubscribeKind.SERVER -> AccountForm(uiState, padding, viewModel)
         else -> Unit
     }
 }
 
 /**
- * The Google accounts already connected. Google's own consent can only be
- * asked for in the web app, so an account linked for sign-in alone is shown
- * with a line saying where to grant it rather than failing on the tap, and a
- * user with no Google account at all reads the same line.
+ * The Google accounts already connected. One without calendar access, and a
+ * user with no Google account at all, are offered Google's consent, which
+ * opens in the system browser and comes back on the app's deep link.
  */
 @Composable
 private fun GoogleAccounts(
     uiState: SubscribeUiState,
     padding: PaddingValues,
-    onOpen: (CalendarAccount) -> Unit,
-    onRetry: () -> Unit,
+    viewModel: SubscribeCalendarViewModel,
 ) {
     val accounts = matching(uiState.accounts, SubscribeKind.GOOGLE)
     val error = uiState.error
+    val context = LocalContext.current
+    LaunchedEffect(uiState.launch) {
+        val url = uiState.launch ?: return@LaunchedEffect
+        // The consent URL is the server's answer, and ACTION_VIEW dispatches
+        // on the scheme, so only a web scheme may leave the app.
+        webUri(url)?.let { target ->
+            runCatching {
+                context.startActivity(
+                    Intent(Intent.ACTION_VIEW, target).apply {
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    },
+                )
+            }
+        }
+        viewModel.consumeLaunch()
+    }
     LazyColumn(
         modifier = Modifier.fillMaxSize().padding(padding),
         contentPadding = PaddingValues(16.dp),
@@ -596,23 +702,37 @@ private fun GoogleAccounts(
         when {
             uiState.isLoading && uiState.accounts.isEmpty() -> item("loading") { Loading() }
             error != null && uiState.accounts.isEmpty() -> item("error") {
-                InlineErrorState(error = error, onRetry = onRetry)
+                InlineErrorState(error = error, onRetry = viewModel::accounts)
             }
-            // No Google client is entered on this server, so no user can
-            // connect one: an administrator is told where the client is
-            // entered, anyone else who can enter it. An account granted
-            // elsewhere still works.
-            // Only an administrator reaches this without a client on the server.
-            uiState.providers.isEmpty() && accounts.isEmpty() -> item("missing") {
-                Note(stringResource(R.string.calendars_subscribe_google_enable))
-            }
-            // The server can grant one; the user has yet to connect theirs,
-            // which the consent on the web does.
-            accounts.isEmpty() -> item("empty") {
-                Note(stringResource(R.string.calendars_subscribe_google_connect))
-            }
-            else -> items(accounts, key = { it.id }) { account ->
-                AccountRow(account = account, onOpen = { onOpen(account) })
+            else -> when (googleStep(accounts, uiState.providers)) {
+                // No Google client is entered on this server, so no consent
+                // can be asked for. Only an administrator reaches this.
+                GoogleStep.MISSING -> item("missing") {
+                    Note(stringResource(R.string.calendars_subscribe_google_enable))
+                }
+                // The server can grant one; the consent connects the account
+                // the user picks at Google.
+                GoogleStep.CONNECT -> item("empty") {
+                    Column {
+                        Note(stringResource(R.string.calendars_subscribe_google_connect))
+                        Spacer(Modifier.height(12.dp))
+                        MochiButton(
+                            onClick = { viewModel.grant(null) },
+                            enabled = !uiState.isBusy,
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            Text(stringResource(R.string.calendars_subscribe_google_connect_action))
+                        }
+                    }
+                }
+                GoogleStep.LIST -> items(accounts, key = { it.id }) { account ->
+                    AccountRow(
+                        account = account,
+                        onOpen = { viewModel.open(account) },
+                        onGrant = { viewModel.grant(account) },
+                        busy = uiState.isBusy,
+                    )
+                }
             }
         }
     }
@@ -737,7 +857,12 @@ private fun AccountForm(
  * as. An account without calendar access yet is shown but cannot be opened.
  */
 @Composable
-private fun AccountRow(account: CalendarAccount, onOpen: () -> Unit) {
+private fun AccountRow(
+    account: CalendarAccount,
+    onOpen: () -> Unit,
+    onGrant: (() -> Unit)? = null,
+    busy: Boolean = false,
+) {
     val allowed = account.calendars
     MochiCard(
         onClick = onOpen,
@@ -765,12 +890,11 @@ private fun AccountRow(account: CalendarAccount, onOpen: () -> Unit) {
                     overflow = TextOverflow.Ellipsis,
                 )
             }
-            if (!allowed) {
-                Text(
-                    text = stringResource(R.string.calendars_link_grant),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+            if (!allowed && onGrant != null) {
+                Spacer(Modifier.height(8.dp))
+                MochiButton(onClick = onGrant, enabled = !busy) {
+                    Text(stringResource(R.string.calendars_link_grant))
+                }
             }
         }
     }

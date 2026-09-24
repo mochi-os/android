@@ -156,7 +156,7 @@
     <string name="calendars_title_required">Titlul este obligatoriu</string>
     <string name="calendars_link_submit">Conectează</string>
     <string name="calendars_link_sync">Sincronizează acum</string>
-    <string name="calendars_link_grant">Permite accesul la calendar în aplicația web</string>
+    <string name="calendars_link_grant">Permite accesul la calendar</string>
     <string name="calendars_link_linked">Conectat</string>
     <string name="calendars_link_marker">Calendar conectat</string>
     <string name="calendars_link_remote_empty">Niciun calendar</string>
@@ -175,5 +175,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Conturile Google nu sunt activate pe acest server. Activează-le în Setări, Setări de sistem.</string>
-    <string name="calendars_subscribe_google_connect">Nu ai conectat niciun cont Google. Conectează-l în aplicația web.</string>
+    <string name="calendars_subscribe_google_connect">Nu ai conectat niciun cont Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Conectare Google</string>
+    <string name="calendars_grant_failed">Accesul la calendar nu a fost acordat</string>
 </resources>

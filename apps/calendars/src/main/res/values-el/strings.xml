@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Ο τίτλος είναι υποχρεωτικός</string>
     <string name="calendars_link_submit">Σύνδεση</string>
     <string name="calendars_link_sync">Συγχρονισμός τώρα</string>
-    <string name="calendars_link_grant">Επιτρέψτε την πρόσβαση στο ημερολόγιο από την εφαρμογή ιστού</string>
+    <string name="calendars_link_grant">Να επιτραπεί η πρόσβαση στο ημερολόγιο</string>
     <string name="calendars_link_linked">Συνδεδεμένο</string>
     <string name="calendars_link_marker">Συνδεδεμένο ημερολόγιο</string>
     <string name="calendars_link_remote_empty">Δεν υπάρχουν ημερολόγια</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Οι λογαριασμοί Google δεν έχουν ενεργοποιηθεί σε αυτόν τον διακομιστή. Ενεργοποιήστε τους από Ρυθμίσεις, Ρυθμίσεις συστήματος.</string>
-    <string name="calendars_subscribe_google_connect">Δεν έχετε συνδέσει λογαριασμό Google. Συνδέστε τον από την εφαρμογή ιστού.</string>
+    <string name="calendars_subscribe_google_connect">Δεν έχετε συνδέσει λογαριασμό Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Σύνδεση με Google</string>
+    <string name="calendars_grant_failed">Δεν δόθηκε πρόσβαση στο ημερολόγιο</string>
 </resources>

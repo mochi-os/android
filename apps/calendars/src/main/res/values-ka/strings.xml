@@ -153,7 +153,7 @@
     <string name="calendars_title_required">სათაური სავალდებულოა</string>
     <string name="calendars_link_submit">დაკავშირება</string>
     <string name="calendars_link_sync">ახლავე სინქრონიზება</string>
-    <string name="calendars_link_grant">დაუშვით კალენდართან წვდომა ვებაპლიკაციაში</string>
+    <string name="calendars_link_grant">კალენდართან წვდომის ნებართვა</string>
     <string name="calendars_link_linked">დაკავშირებული</string>
     <string name="calendars_link_marker">დაკავშირებული კალენდარი</string>
     <string name="calendars_link_remote_empty">კალენდრები არ არის</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-ის ანგარიშები ამ სერვერზე ჩართული არ არის. ჩართეთ ისინი პარამეტრები, სისტემის პარამეტრები განყოფილებაში.</string>
-    <string name="calendars_subscribe_google_connect">თქვენ არ დაგიკავშირებიათ Google-ის ანგარიში. დააკავშირეთ ის ვებაპლიკაციაში.</string>
+    <string name="calendars_subscribe_google_connect">თქვენ არ დაგიკავშირებიათ Google-ის ანგარიში.</string>
+    <string name="calendars_subscribe_google_connect_action">Google-თან დაკავშირება</string>
+    <string name="calendars_grant_failed">კალენდართან წვდომა არ გაიცა</string>
 </resources>

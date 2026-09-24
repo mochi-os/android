@@ -153,7 +153,7 @@
     <string name="calendars_title_required">शीर्षक आवश्यक छ</string>
     <string name="calendars_link_submit">लिङ्क गर्नुहोस्</string>
     <string name="calendars_link_sync">अहिले सिङ्क गर्नुहोस्</string>
-    <string name="calendars_link_grant">वेब एपमा क्यालेन्डर पहुँच अनुमति दिनुहोस्</string>
+    <string name="calendars_link_grant">क्यालेन्डर पहुँच अनुमति दिनुहोस्</string>
     <string name="calendars_link_linked">लिङ्क गरिएको</string>
     <string name="calendars_link_marker">लिङ्क गरिएको क्यालेन्डर</string>
     <string name="calendars_link_remote_empty">कुनै क्यालेन्डर छैन</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">यो सर्भरमा Google खाताहरू सक्षम गरिएका छैनन्। तिनीहरूलाई सेटिङहरू, प्रणाली सेटिङहरू मा सक्षम गर्नुहोस्।</string>
-    <string name="calendars_subscribe_google_connect">तपाईंले कुनै Google खाता जडान गर्नुभएको छैन। यसलाई वेब एपमा जडान गर्नुहोस्।</string>
+    <string name="calendars_subscribe_google_connect">तपाईंले कुनै Google खाता जडान गर्नुभएको छैन।</string>
+    <string name="calendars_subscribe_google_connect_action">Google जडान गर्नुहोस्</string>
+    <string name="calendars_grant_failed">क्यालेन्डर पहुँच दिइएन</string>
 </resources>

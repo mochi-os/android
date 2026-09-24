@@ -156,7 +156,7 @@
     <string name="calendars_title_required">נדרשת כותרת</string>
     <string name="calendars_link_submit">קשר</string>
     <string name="calendars_link_sync">סנכרן עכשיו</string>
-    <string name="calendars_link_grant">אפשר גישה ליומן באפליקציית הווב</string>
+    <string name="calendars_link_grant">אפשר גישה ליומן</string>
     <string name="calendars_link_linked">מקושר</string>
     <string name="calendars_link_marker">יומן מקושר</string>
     <string name="calendars_link_remote_empty">אין יומנים</string>
@@ -175,5 +175,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">חשבונות Google לא הופעלו בשרת הזה. הפעל אותם תחת הגדרות, הגדרות מערכת.</string>
-    <string name="calendars_subscribe_google_connect">לא חיברת חשבון Google. חבר אותו באפליקציית הווב.</string>
+    <string name="calendars_subscribe_google_connect">לא חיברת חשבון Google.</string>
+    <string name="calendars_subscribe_google_connect_action">התחבר ל-Google</string>
+    <string name="calendars_grant_failed">הגישה ליומן לא ניתנה</string>
 </resources>

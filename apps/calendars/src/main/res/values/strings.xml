@@ -150,7 +150,8 @@
     <string name="calendars_subscribe_password">Password</string>
     <string name="calendars_subscribe_connect">Connect</string>
     <string name="calendars_subscribe_google_enable">Google accounts have not been enabled on this server. Enable them under Settings, System settings.</string>
-    <string name="calendars_subscribe_google_connect">You haven\'t connected a Google account. Connect it in the web app.</string>
+    <string name="calendars_subscribe_google_connect">You haven\'t connected a Google account.</string>
+    <string name="calendars_subscribe_google_connect_action">Connect Google</string>
 
     <!-- Linked calendars -->
     <string name="calendars_link_submit">Link</string>
@@ -158,7 +159,8 @@
     <string name="calendars_link_marker">Linked calendar</string>
     <string name="calendars_link_linked">Linked</string>
     <string name="calendars_link_remote_empty">No calendars</string>
-    <string name="calendars_link_grant">Allow calendar access in the web app</string>
+    <string name="calendars_link_grant">Allow calendar access</string>
+    <string name="calendars_grant_failed">Calendar access was not granted</string>
 
     <!-- Subscribe permission -->
     <string name="calendars_permission_title">Allow access?</string>

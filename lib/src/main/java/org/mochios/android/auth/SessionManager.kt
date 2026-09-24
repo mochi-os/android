@@ -56,6 +56,10 @@ class SessionManager @Inject constructor(
         private val KEY_OAUTH_LINK_NONCE = stringPreferencesKey("oauth_link_nonce")
         private val KEY_OAUTH_LINK_RETURN_CODE = stringPreferencesKey("oauth_link_return_code")
         private val KEY_OAUTH_LINK_RETURN_ERROR = stringPreferencesKey("oauth_link_return_error")
+        private val KEY_OAUTH_GRANT_VERIFIER = stringPreferencesKey("oauth_grant_verifier")
+        private val KEY_OAUTH_GRANT_NONCE = stringPreferencesKey("oauth_grant_nonce")
+        private val KEY_OAUTH_GRANT_RETURN_CODE = stringPreferencesKey("oauth_grant_return_code")
+        private val KEY_OAUTH_GRANT_RETURN_ERROR = stringPreferencesKey("oauth_grant_return_error")
         private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
@@ -303,6 +307,56 @@ class SessionManager @Inject constructor(
         dataStore.edit { prefs ->
             prefs.remove(KEY_OAUTH_LINK_RETURN_CODE)
             prefs.remove(KEY_OAUTH_LINK_RETURN_ERROR)
+        }
+    }
+
+    // OAuth GRANT ceremony: a capability granted to a connected account, such
+    // as calendar access on a Google account. The same shape as the link: the
+    // server lands the grant only at the exchange, against this verifier plus
+    // the app's Bearer.
+
+    suspend fun saveOAuthGrantVerifier(verifier: String, nonce: String? = null) {
+        dataStore.edit { prefs ->
+            prefs[KEY_OAUTH_GRANT_VERIFIER] = sealed.seal(verifier)
+            if (nonce != null) prefs[KEY_OAUTH_GRANT_NONCE] = nonce else prefs.remove(KEY_OAUTH_GRANT_NONCE)
+        }
+    }
+
+    suspend fun oauthGrantCeremony(): OAuthCeremony {
+        val prefs = dataStore.data.first()
+        return OAuthCeremony(
+            hasVerifier = !prefs[KEY_OAUTH_GRANT_VERIFIER].isNullOrBlank(),
+            nonce = prefs[KEY_OAUTH_GRANT_NONCE],
+        )
+    }
+
+    suspend fun consumeOAuthGrantVerifier(): String? {
+        val prefs = dataStore.data.first()
+        val verifier = prefs[KEY_OAUTH_GRANT_VERIFIER]?.let { sealed.open(it) }
+        if (verifier != null) {
+            dataStore.edit { p ->
+                p.remove(KEY_OAUTH_GRANT_VERIFIER)
+                p.remove(KEY_OAUTH_GRANT_NONCE)
+            }
+        }
+        return verifier
+    }
+
+    val oauthGrantReturn: Flow<Pair<String?, String?>> = dataStore.data.map { prefs ->
+        prefs[KEY_OAUTH_GRANT_RETURN_CODE] to prefs[KEY_OAUTH_GRANT_RETURN_ERROR]
+    }
+
+    suspend fun setOAuthGrantReturn(code: String?, error: String?) {
+        dataStore.edit { prefs ->
+            if (code != null) prefs[KEY_OAUTH_GRANT_RETURN_CODE] = code else prefs.remove(KEY_OAUTH_GRANT_RETURN_CODE)
+            if (error != null) prefs[KEY_OAUTH_GRANT_RETURN_ERROR] = error else prefs.remove(KEY_OAUTH_GRANT_RETURN_ERROR)
+        }
+    }
+
+    suspend fun clearOAuthGrantReturn() {
+        dataStore.edit { prefs ->
+            prefs.remove(KEY_OAUTH_GRANT_RETURN_CODE)
+            prefs.remove(KEY_OAUTH_GRANT_RETURN_ERROR)
         }
     }
 

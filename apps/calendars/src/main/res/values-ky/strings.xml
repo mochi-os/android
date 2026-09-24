@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Аталышы талап кылынат</string>
     <string name="calendars_link_submit">Байланыштыруу</string>
     <string name="calendars_link_sync">Азыр синхрондоштуруу</string>
-    <string name="calendars_link_grant">Веб колдонмодо календарга кирүүгө уруксат бериңиз</string>
+    <string name="calendars_link_grant">Календарга жетүүгө уруксат берүү</string>
     <string name="calendars_link_linked">Байланышкан</string>
     <string name="calendars_link_marker">Байланышкан календар</string>
     <string name="calendars_link_remote_empty">Календарлар жок</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Бул серверде Google аккаунттары иштетилген эмес. Аларды Жөндөөлөр, Системалык жөндөөлөр бөлүмүнөн иштетиңиз.</string>
-    <string name="calendars_subscribe_google_connect">Сиз Google аккаунтун туташтырган жоксуз. Аны веб колдонмодо туташтырыңыз.</string>
+    <string name="calendars_subscribe_google_connect">Сиз Google аккаунтун туташтырган жоксуз.</string>
+    <string name="calendars_subscribe_google_connect_action">Google\'га туташуу</string>
+    <string name="calendars_grant_failed">Календарга жетүү берилген жок</string>
 </resources>

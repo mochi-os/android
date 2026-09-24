@@ -150,7 +150,7 @@
     <string name="calendars_title_required">제목은 필수예요</string>
     <string name="calendars_link_submit">연결</string>
     <string name="calendars_link_sync">지금 동기화</string>
-    <string name="calendars_link_grant">웹 앱에서 캘린더 접근을 허용해 주세요</string>
+    <string name="calendars_link_grant">캘린더 액세스 허용</string>
     <string name="calendars_link_linked">연결됨</string>
     <string name="calendars_link_marker">연결된 캘린더</string>
     <string name="calendars_link_remote_empty">캘린더가 없어요</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">이 서버에서는 Google 계정이 활성화되어 있지 않아요. 설정, 시스템 설정에서 활성화하세요.</string>
-    <string name="calendars_subscribe_google_connect">Google 계정을 연결하지 않았어요. 웹 앱에서 연결하세요.</string>
+    <string name="calendars_subscribe_google_connect">Google 계정을 연결하지 않았어요.</string>
+    <string name="calendars_subscribe_google_connect_action">Google 연결</string>
+    <string name="calendars_grant_failed">캘린더 액세스가 허용되지 않았어요</string>
 </resources>

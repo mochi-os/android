@@ -20,6 +20,7 @@ import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.PreferencesResponse
+import org.mochios.calendars.model.GrantResponse
 import org.mochios.calendars.model.RemoteResponse
 import org.mochios.calendars.model.SplitResponse
 import org.mochios.calendars.model.TokenDeleteResponse
@@ -182,6 +183,17 @@ interface CalendarsApi {
     suspend fun remoteCalendars(
         @Field("account") account: String,
     ): Response<ApiResponse<RemoteResponse>>
+
+    @FormUrlEncoded
+    @POST("-/calendars/grant")
+    suspend fun grant(
+        @Field("account") account: String,
+        @Field("provider") provider: String,
+        @Field("target") target: String,
+        @Field("mode") mode: String,
+        @Field("scheme") scheme: String,
+        @Field("challenge") challenge: String,
+    ): Response<ApiResponse<GrantResponse>>
 
     @FormUrlEncoded
     @POST("-/calendars/link")

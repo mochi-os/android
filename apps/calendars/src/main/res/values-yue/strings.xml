@@ -150,7 +150,8 @@
     <string name="calendars_title_required">必須輸入標題</string>
     <string name="calendars_link_submit">連結</string>
     <string name="calendars_link_sync">即刻同步</string>
-    <string name="calendars_link_grant">喺網頁應用程式度允許日曆存取</string>
+    <string name="calendars_link_grant">允許日曆存取</string>
+    <string name="calendars_grant_failed">未有授予日曆存取權</string>
     <string name="calendars_link_linked">已連結</string>
     <string name="calendars_link_marker">已連結日曆</string>
     <string name="calendars_link_remote_empty">冇日曆</string>
@@ -169,5 +170,6 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">呢個伺服器仲未啟用 Google 帳戶。請喺 設定、系統設定 度啟用。</string>
-    <string name="calendars_subscribe_google_connect">你仲未連接 Google 帳戶。請喺網頁應用程式度連接。</string>
+    <string name="calendars_subscribe_google_connect">你仲未連接 Google 帳戶。</string>
+    <string name="calendars_subscribe_google_connect_action">連接 Google</string>
 </resources>

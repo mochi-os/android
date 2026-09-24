@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Titill er nauðsynlegur</string>
     <string name="calendars_link_submit">Tengja</string>
     <string name="calendars_link_sync">Samstilla núna</string>
-    <string name="calendars_link_grant">Leyfðu aðgang að dagatali í vefforritinu</string>
+    <string name="calendars_link_grant">Leyfa dagatalsaðgang</string>
     <string name="calendars_link_linked">Tengt</string>
     <string name="calendars_link_marker">Tengt dagatal</string>
     <string name="calendars_link_remote_empty">Engin dagatöl</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-reikningar hafa ekki verið virkjaðir á þessum þjóni. Virkjaðu þá undir Stillingar, Kerfisstillingar.</string>
-    <string name="calendars_subscribe_google_connect">Þú hefur ekki tengt Google-reikning. Tengdu hann í vefforritinu.</string>
+    <string name="calendars_subscribe_google_connect">Þú hefur ekki tengt Google-reikning.</string>
+    <string name="calendars_subscribe_google_connect_action">Tengja Google</string>
+    <string name="calendars_grant_failed">Dagatalsaðgangur var ekki veittur</string>
 </resources>

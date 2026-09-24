@@ -150,7 +150,7 @@
     <string name="calendars_title_required">Judul kudu diisi</string>
     <string name="calendars_link_submit">Tautaké</string>
     <string name="calendars_link_sync">Sinkronisasi saiki</string>
-    <string name="calendars_link_grant">Idini akses kalender ing aplikasi web</string>
+    <string name="calendars_link_grant">Ijinke akses kalender</string>
     <string name="calendars_link_linked">Kasambung</string>
     <string name="calendars_link_marker">Kalender kasambung</string>
     <string name="calendars_link_remote_empty">Ora ana kalender</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akun Google durung diaktifaké ing server iki. Aktifaké ing Setelan, Setelan sistem.</string>
-    <string name="calendars_subscribe_google_connect">Sampeyan durung nyambungaké akun Google. Sambungaké ing aplikasi web.</string>
+    <string name="calendars_subscribe_google_connect">Sampeyan durung nyambungaké akun Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Sambungake Google</string>
+    <string name="calendars_grant_failed">Akses kalender ora diwenehake</string>
 </resources>

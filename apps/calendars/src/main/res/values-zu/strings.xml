@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Isihloko siyadingeka</string>
     <string name="calendars_link_submit">Xhuma</string>
     <string name="calendars_link_sync">Vumelanisa manje</string>
-    <string name="calendars_link_grant">Vumela ukufinyelela kwekhalenda kuhlelo lokusebenza lewebhu</string>
+    <string name="calendars_link_grant">Vumela ukufinyelela kwekhalenda</string>
     <string name="calendars_link_linked">Ixhunyiwe</string>
     <string name="calendars_link_marker">Ikhalenda exhunyiwe</string>
     <string name="calendars_link_remote_empty">Awekho amakhalenda</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Ama-akhawunti e-Google awavuliwe kule seva. Wavule ku-Izilungiselelo, Izilungiselelo zesistimu.</string>
-    <string name="calendars_subscribe_google_connect">Awukaxhumi i-akhawunti ye-Google. Yixhume kuhlelo lokusebenza lewebhu.</string>
+    <string name="calendars_subscribe_google_connect">Awukaxhumi i-akhawunti ye-Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Xhuma i-Google</string>
+    <string name="calendars_grant_failed">Ukufinyelela kwekhalenda akunikeziwe</string>
 </resources>

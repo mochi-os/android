@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Sarlavha talab qilinadi</string>
     <string name="calendars_link_submit">Bogʻlash</string>
     <string name="calendars_link_sync">Hozir sinxronlash</string>
-    <string name="calendars_link_grant">Veb ilovada kalendarga kirishga ruxsat bering</string>
+    <string name="calendars_link_grant">Kalendarga kirishga ruxsat berish</string>
     <string name="calendars_link_linked">Bogʻlangan</string>
     <string name="calendars_link_marker">Bogʻlangan kalendar</string>
     <string name="calendars_link_remote_empty">Kalendarlar yoʻq</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu serverda Google hisoblari yoqilmagan. Ularni Sozlamalar, Tizim sozlamalari boʻlimida yoqing.</string>
-    <string name="calendars_subscribe_google_connect">Siz Google hisobini ulamagansiz. Uni veb ilovada ulang.</string>
+    <string name="calendars_subscribe_google_connect">Siz Google hisobini ulamagansiz.</string>
+    <string name="calendars_subscribe_google_connect_action">Google\'ni ulash</string>
+    <string name="calendars_grant_failed">Kalendarga kirish berilmadi</string>
 </resources>

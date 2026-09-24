@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Sernav pêwîst e</string>
     <string name="calendars_link_submit">Girê bide</string>
     <string name="calendars_link_sync">Niha hev demîne bike</string>
-    <string name="calendars_link_grant">Di sepana webê de destûrê bide gihîştina salnameyê</string>
+    <string name="calendars_link_grant">Destûrê bide gihîştina salnameyê</string>
     <string name="calendars_link_linked">Girêdayî</string>
     <string name="calendars_link_marker">Salnameya girêdayî</string>
     <string name="calendars_link_remote_empty">Tu salname tune</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Hesabên Google li ser vê serverê nehatine çalakkirin. Wan di Mîheng, Mîhengên pergalê de çalak bike.</string>
-    <string name="calendars_subscribe_google_connect">Te tu hesabê Google girênedaye. Wê di sepana webê de girê bide.</string>
+    <string name="calendars_subscribe_google_connect">Te tu hesabê Google girênedaye.</string>
+    <string name="calendars_subscribe_google_connect_action">Google girêde</string>
+    <string name="calendars_grant_failed">Gihîştina salnameyê nehat dayîn</string>
 </resources>

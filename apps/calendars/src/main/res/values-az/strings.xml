@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Yan paneli açıb-bağla</string>
     <string name="calendars_link_submit">Əlaqələndir</string>
     <string name="calendars_link_sync">İndi sinxronlaşdır</string>
-    <string name="calendars_link_grant">Veb tətbiqdə təqvimə girişə icazə verin</string>
+    <string name="calendars_link_grant">Təqvimə girişə icazə ver</string>
     <string name="calendars_link_linked">Əlaqələndirilib</string>
     <string name="calendars_link_marker">Əlaqələndirilmiş təqvim</string>
     <string name="calendars_link_remote_empty">Təqvim yoxdur</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Bu serverdə Google hesabları aktivləşdirilməyib. Onları Parametrlər, Sistem parametrləri bölməsində aktivləşdirin.</string>
-    <string name="calendars_subscribe_google_connect">Google hesabı qoşmamısınız. Onu veb tətbiqdə qoşun.</string>
+    <string name="calendars_subscribe_google_connect">Google hesabı qoşmamısınız.</string>
+    <string name="calendars_subscribe_google_connect_action">Google-a qoşul</string>
+    <string name="calendars_grant_failed">Təqvimə giriş verilmədi</string>
 </resources>

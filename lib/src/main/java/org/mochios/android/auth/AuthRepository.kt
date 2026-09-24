@@ -224,6 +224,17 @@ class AuthRepository @Inject constructor(
     }
 
     /**
+     * Complete a grant ceremony: the verifier proves the app instance, the
+     * Bearer the user. Returns the capability landed and its account.
+     */
+    suspend fun exchangeOAuthGrant(code: String, verifier: String, bearerToken: String): OAuthGrantResponse {
+        return authApi.oauthExchangeGrant(
+            "Bearer $bearerToken",
+            OAuthExchangeRequest(code = code, verifier = verifier)
+        ).unwrapRaw()
+    }
+
+    /**
      * Complete a link ceremony: the verifier proves the app instance, the
      * Bearer the user. Returns the provider linked.
      */

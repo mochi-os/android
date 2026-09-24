@@ -162,7 +162,7 @@
     <string name="calendars_title_required">Teideal de dhíth</string>
     <string name="calendars_link_submit">Nasc</string>
     <string name="calendars_link_sync">Sioncronaigh anois</string>
-    <string name="calendars_link_grant">Ceadaigh rochtain ar an bhféilire san aip gréasáin</string>
+    <string name="calendars_link_grant">Ceadaigh rochtain ar an bhféilire</string>
     <string name="calendars_link_linked">Nasctha</string>
     <string name="calendars_link_marker">Féilire nasctha</string>
     <string name="calendars_link_remote_empty">Níl aon fhéilire ann</string>
@@ -181,5 +181,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Níl cuntais Google cumasaithe ar an bhfreastalaí seo. Cumasaigh iad faoi Socruithe, Socruithe an chórais.</string>
-    <string name="calendars_subscribe_google_connect">Níl cuntas Google ceangailte agat. Ceangail é san aip gréasáin.</string>
+    <string name="calendars_subscribe_google_connect">Níl cuntas Google ceangailte agat.</string>
+    <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
+    <string name="calendars_grant_failed">Níor tugadh rochtain ar an bhféilire</string>
 </resources>

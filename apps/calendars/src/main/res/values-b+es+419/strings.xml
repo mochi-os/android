@@ -10,4 +10,8 @@
     <string name="calendars_scope_copy">Copiar este evento</string>
     <string name="calendars_editor_copy_title">Copiar evento</string>
     <string name="calendars_title_required">El título es obligatorio</string>
+    <string name="calendars_link_grant">Permitir el acceso al calendario</string>
+    <string name="calendars_subscribe_google_connect">No ha conectado ninguna cuenta de Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Conectar Google</string>
+    <string name="calendars_grant_failed">No se concedió el acceso al calendario</string>
 </resources>

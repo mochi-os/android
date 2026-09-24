@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Titel is verplicht</string>
     <string name="calendars_link_submit">Koppelen</string>
     <string name="calendars_link_sync">Nu synchroniseren</string>
-    <string name="calendars_link_grant">Sta agendatoegang toe in de webapp</string>
+    <string name="calendars_link_grant">Agendatoegang toestaan</string>
     <string name="calendars_link_linked">Gekoppeld</string>
     <string name="calendars_link_marker">Gekoppelde agenda</string>
     <string name="calendars_link_remote_empty">Geen agenda\'s</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-accounts zijn niet ingeschakeld op deze server. Schakel ze in onder Instellingen, Systeeminstellingen.</string>
-    <string name="calendars_subscribe_google_connect">Je hebt geen Google-account verbonden. Verbind het in de webapp.</string>
+    <string name="calendars_subscribe_google_connect">Je hebt geen Google-account verbonden.</string>
+    <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
+    <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
 </resources>

@@ -153,7 +153,7 @@
     <string name="calendars_title_required">At gerekli</string>
     <string name="calendars_link_submit">Baglanyşdyr</string>
     <string name="calendars_link_sync">Indi sinhronlaşdyr</string>
-    <string name="calendars_link_grant">Web programmasynda kalendara girmäge rugsat ber</string>
+    <string name="calendars_link_grant">Senenama elýeterliligine rugsat ber</string>
     <string name="calendars_link_linked">Baglanyşdyryldy</string>
     <string name="calendars_link_marker">Baglanyşdyrylan kalendar</string>
     <string name="calendars_link_remote_empty">Kalendarlar ýok</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google hasaplary bu serwerde işjeňleşdirilmedi. Olary Sazlamalar, Ulgam sazlamalary bölüminde işjeňleşdiriň.</string>
-    <string name="calendars_subscribe_google_connect">Google hasaby baglanyşdyrmadyňyz. Ony web programmasynda baglaň.</string>
+    <string name="calendars_subscribe_google_connect">Google hasaby baglanyşdyrmadyňyz.</string>
+    <string name="calendars_subscribe_google_connect_action">Google birikdir</string>
+    <string name="calendars_grant_failed">Senenama elýeterliligi berilmedi</string>
 </resources>

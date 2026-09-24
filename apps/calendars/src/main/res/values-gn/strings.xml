@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Téra tekotevẽ</string>
     <string name="calendars_link_submit">Embojuaju</string>
     <string name="calendars_link_sync">Embojoja ko\'ág̃a</string>
-    <string name="calendars_link_grant">Emoneĩ jeike arapapahápe web aplicación-pe</string>
+    <string name="calendars_link_grant">Emoneĩ jeike arapapahápe</string>
     <string name="calendars_link_linked">Ojuaju</string>
     <string name="calendars_link_marker">Arapapaha ojuajúva</string>
     <string name="calendars_link_remote_empty">Ndaipóri arapapaha</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google cuentakuéra ndoñemyendýi ko mohendahápe. Emyendy Ñemboheko, Sistema ñemboheko-pe.</string>
-    <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google cuenta. Embojuaju web aplicación-pe.</string>
+    <string name="calendars_subscribe_google_connect">Ndembojuajúi peteĩ Google cuenta.</string>
+    <string name="calendars_subscribe_google_connect_action">Embojoaju Google</string>
+    <string name="calendars_grant_failed">Ndoje\'ẽi jeike arapapahápe</string>
 </resources>

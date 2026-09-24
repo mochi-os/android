@@ -153,7 +153,7 @@
     <string name="calendars_title_required">शीर्षक चाहीं</string>
     <string name="calendars_link_submit">जोड़ीं</string>
     <string name="calendars_link_sync">अब सिंक करीं</string>
-    <string name="calendars_link_grant">वेब ऐप में कैलेंडर के पहुंच के अनुमति दीं</string>
+    <string name="calendars_link_grant">कैलेंडर के पहुँच के अनुमति दीं</string>
     <string name="calendars_link_linked">जुड़ल</string>
     <string name="calendars_link_marker">जुड़ल कैलेंडर</string>
     <string name="calendars_link_remote_empty">कौनो कैलेंडर नइखे</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">एह सर्वर पर Google खाता चालू नइखे कइल गइल। एकरा के सेटिंग सब, सिस्टम सेटिंग सब में चालू करीं।</string>
-    <string name="calendars_subscribe_google_connect">रउआ कौनो Google खाता ना जोड़ले बानी। एकरा के वेब ऐप में जोड़ीं।</string>
+    <string name="calendars_subscribe_google_connect">रउआ कौनो Google खाता ना जोड़ले बानी।</string>
+    <string name="calendars_subscribe_google_connect_action">Google से जुड़ीं</string>
+    <string name="calendars_grant_failed">कैलेंडर के पहुँच ना मिलल</string>
 </resources>

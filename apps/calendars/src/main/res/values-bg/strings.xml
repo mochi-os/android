@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Заглавието е задължително</string>
     <string name="calendars_link_submit">Свържи</string>
     <string name="calendars_link_sync">Синхронизирай сега</string>
-    <string name="calendars_link_grant">Разрешете достъп до календара в уеб приложението</string>
+    <string name="calendars_link_grant">Разреши достъп до календара</string>
     <string name="calendars_link_linked">Свързан</string>
     <string name="calendars_link_marker">Свързан календар</string>
     <string name="calendars_link_remote_empty">Няма календари</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Акаунтите в Google не са активирани на този сървър. Активирайте ги от Настройки, Системни настройки.</string>
-    <string name="calendars_subscribe_google_connect">Не сте свързали акаунт в Google. Свържете го в уеб приложението.</string>
+    <string name="calendars_subscribe_google_connect">Не сте свързали акаунт в Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Свързване с Google</string>
+    <string name="calendars_grant_failed">Достъпът до календара не беше разрешен</string>
 </resources>

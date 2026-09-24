@@ -150,7 +150,7 @@
     <string name="calendars_title_required">Tiêu đề là bắt buộc</string>
     <string name="calendars_link_submit">Liên kết</string>
     <string name="calendars_link_sync">Đồng bộ ngay</string>
-    <string name="calendars_link_grant">Cho phép truy cập lịch trong ứng dụng web</string>
+    <string name="calendars_link_grant">Cho phép truy cập lịch</string>
     <string name="calendars_link_linked">Đã liên kết</string>
     <string name="calendars_link_marker">Lịch đã liên kết</string>
     <string name="calendars_link_remote_empty">Không có lịch</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Tài khoản Google chưa được bật trên máy chủ này. Hãy bật trong Cài đặt, Cài đặt hệ thống.</string>
-    <string name="calendars_subscribe_google_connect">Bạn chưa kết nối tài khoản Google nào. Hãy kết nối trong ứng dụng web.</string>
+    <string name="calendars_subscribe_google_connect">Bạn chưa kết nối tài khoản Google nào.</string>
+    <string name="calendars_subscribe_google_connect_action">Kết nối Google</string>
+    <string name="calendars_grant_failed">Quyền truy cập lịch chưa được cấp</string>
 </resources>

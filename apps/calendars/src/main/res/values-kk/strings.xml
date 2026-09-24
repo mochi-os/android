@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Тақырып міндетті</string>
     <string name="calendars_link_submit">Байланыстыру</string>
     <string name="calendars_link_sync">Қазір синхрондау</string>
-    <string name="calendars_link_grant">Веб қолданбада күнтізбеге қатынасуға рұқсат беріңіз</string>
+    <string name="calendars_link_grant">Күнтізбеге қол жеткізуге рұқсат беру</string>
     <string name="calendars_link_linked">Байланысқан</string>
     <string name="calendars_link_marker">Байланысқан күнтізбе</string>
     <string name="calendars_link_remote_empty">Күнтізбелер жоқ</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Бұл серверде Google тіркелгілері қосылмаған. Оларды Параметрлер, Жүйе параметрлері бөлімінде қосыңыз.</string>
-    <string name="calendars_subscribe_google_connect">Сіз Google тіркелгісін қоспағансыз. Оны веб қолданбада қосыңыз.</string>
+    <string name="calendars_subscribe_google_connect">Сіз Google тіркелгісін қоспағансыз.</string>
+    <string name="calendars_subscribe_google_connect_action">Google-ға қосылу</string>
+    <string name="calendars_grant_failed">Күнтізбеге қол жеткізу берілмеді</string>
 </resources>

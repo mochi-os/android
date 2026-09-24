@@ -518,6 +518,7 @@ open class MainActivity : ComponentActivity() {
             else -> when (oauthReturnKind(name)) {
                 OAuthReturnKind.LOGIN -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
                 OAuthReturnKind.LINK -> applyOAuthLinkReturn(params["code"], params["error"], params["nonce"])
+                OAuthReturnKind.GRANT -> applyOAuthGrantReturn(params["code"], params["error"], params["nonce"])
                 null -> Log.w(TAG, "Unknown system intent in $uri")
             }
         }
@@ -554,6 +555,11 @@ open class MainActivity : ComponentActivity() {
                     uri.getQueryParameter("nonce"),
                 )
                 OAuthReturnKind.LINK -> applyOAuthLinkReturn(
+                    uri.getQueryParameter("code"),
+                    uri.getQueryParameter("error"),
+                    uri.getQueryParameter("nonce"),
+                )
+                OAuthReturnKind.GRANT -> applyOAuthGrantReturn(
                     uri.getQueryParameter("code"),
                     uri.getQueryParameter("error"),
                     uri.getQueryParameter("nonce"),
@@ -652,6 +658,21 @@ open class MainActivity : ComponentActivity() {
                 return@launch
             }
             sessionManager.setOAuthLinkReturn(code, error)
+        }
+    }
+
+    /**
+     * GRANT ceremony return, a capability granted to a connected account,
+     * gated against the grant ceremony the same way.
+     */
+    private fun applyOAuthGrantReturn(code: String?, error: String?, nonce: String?) {
+        lifecycleScope.launch {
+            val ceremony = sessionManager.oauthGrantCeremony()
+            if (!shouldAcceptOAuthReturn(ceremony.hasVerifier, ceremony.nonce, nonce, code, error)) {
+                Log.w(TAG, "Ignoring mochi:oauth-grant-return that matches no outstanding ceremony")
+                return@launch
+            }
+            sessionManager.setOAuthGrantReturn(code, error)
         }
     }
 
@@ -940,7 +961,7 @@ open class MainActivity : ComponentActivity() {
         // navigates to SettingsApp.NOTIFICATIONS; the Mochi Settings launcher
         // class hosts SettingsApp.HOME.
 
-        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return")
+        private val LEGACY_SYSTEM_INTENT_AUTHORITIES = setOf("notification", "oauth-return", "oauth-link-return", "oauth-grant-return")
 
         /**
          * Every bundled app; the bootstrap mints a JWT for each so

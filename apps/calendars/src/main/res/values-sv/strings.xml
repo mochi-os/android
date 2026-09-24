@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Titel krävs</string>
     <string name="calendars_link_submit">Länka</string>
     <string name="calendars_link_sync">Synkronisera nu</string>
-    <string name="calendars_link_grant">Tillåt kalenderåtkomst i webbappen</string>
+    <string name="calendars_link_grant">Tillåt kalenderåtkomst</string>
     <string name="calendars_link_linked">Länkad</string>
     <string name="calendars_link_marker">Länkad kalender</string>
     <string name="calendars_link_remote_empty">Inga kalendrar</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-konton är inte aktiverade på den här servern. Aktivera dem under Inställningar, Systeminställningar.</string>
-    <string name="calendars_subscribe_google_connect">Du har inte anslutit något Google-konto. Anslut det i webbappen.</string>
+    <string name="calendars_subscribe_google_connect">Du har inte anslutit något Google-konto.</string>
+    <string name="calendars_subscribe_google_connect_action">Anslut Google</string>
+    <string name="calendars_grant_failed">Kalenderåtkomst beviljades inte</string>
 </resources>

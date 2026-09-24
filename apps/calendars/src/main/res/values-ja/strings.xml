@@ -150,7 +150,7 @@
     <string name="calendars_title_required">タイトルが必要です</string>
     <string name="calendars_link_submit">リンク</string>
     <string name="calendars_link_sync">今すぐ同期</string>
-    <string name="calendars_link_grant">ウェブアプリでカレンダーへのアクセスを許可してください</string>
+    <string name="calendars_link_grant">カレンダーへのアクセスを許可</string>
     <string name="calendars_link_linked">リンク済み</string>
     <string name="calendars_link_marker">リンク済みカレンダー</string>
     <string name="calendars_link_remote_empty">カレンダーがありません</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">このサーバーでは Google アカウントが有効になっていません。設定、システム設定 で有効にしてください。</string>
-    <string name="calendars_subscribe_google_connect">Google アカウントが接続されていません。ウェブアプリで接続してください。</string>
+    <string name="calendars_subscribe_google_connect">Google アカウントが接続されていません。</string>
+    <string name="calendars_subscribe_google_connect_action">Google に接続</string>
+    <string name="calendars_grant_failed">カレンダーへのアクセスが許可されませんでした</string>
 </resources>

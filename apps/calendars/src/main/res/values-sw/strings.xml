@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Kichwa kinahitajika</string>
     <string name="calendars_link_submit">Unganisha</string>
     <string name="calendars_link_sync">Sawazisha sasa</string>
-    <string name="calendars_link_grant">Ruhusu ufikiaji wa kalenda katika programu ya wavuti</string>
+    <string name="calendars_link_grant">Ruhusu ufikiaji wa kalenda</string>
     <string name="calendars_link_linked">Imeunganishwa</string>
     <string name="calendars_link_marker">Kalenda iliyounganishwa</string>
     <string name="calendars_link_remote_empty">Hakuna kalenda</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akaunti za Google hazijawashwa kwenye seva hii. Ziwashe katika Mipangilio, Mipangilio ya mfumo.</string>
-    <string name="calendars_subscribe_google_connect">Hujaunganisha akaunti ya Google. Iunganishe katika programu ya wavuti.</string>
+    <string name="calendars_subscribe_google_connect">Hujaunganisha akaunti ya Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Unganisha Google</string>
+    <string name="calendars_grant_failed">Ufikiaji wa kalenda haukutolewa</string>
 </resources>

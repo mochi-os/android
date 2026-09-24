@@ -162,7 +162,7 @@
     <string name="calendars_title_required">Titlu mitlub</string>
     <string name="calendars_link_submit">Orbot</string>
     <string name="calendars_link_sync">Sinkronizza issa</string>
-    <string name="calendars_link_grant">Ippermetti l-aċċess għall-kalendarju fl-app tal-web</string>
+    <string name="calendars_link_grant">Ippermetti l-aċċess għall-kalendarju</string>
     <string name="calendars_link_linked">Marbut</string>
     <string name="calendars_link_marker">Kalendarju marbut</string>
     <string name="calendars_link_remote_empty">L-ebda kalendarji</string>
@@ -181,5 +181,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Il-kontijiet ta\' Google mhumiex attivati fuq dan is-server. Attivahom taħt Settings, Settings tas-sistema.</string>
-    <string name="calendars_subscribe_google_connect">Ma qabbadtx kont ta\' Google. Qabbadhu fl-app tal-web.</string>
+    <string name="calendars_subscribe_google_connect">Ma qabbadtx kont ta\' Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Qabbad Google</string>
+    <string name="calendars_grant_failed">L-aċċess għall-kalendarju ma ngħatax</string>
 </resources>

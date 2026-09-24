@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Izenburua beharrezkoa da</string>
     <string name="calendars_link_submit">Lotu</string>
     <string name="calendars_link_sync">Sinkronizatu orain</string>
-    <string name="calendars_link_grant">Baimendu egutegirako sarbidea web aplikazioan</string>
+    <string name="calendars_link_grant">Baimendu egutegirako sarbidea</string>
     <string name="calendars_link_linked">Lotuta</string>
     <string name="calendars_link_marker">Lotutako egutegia</string>
     <string name="calendars_link_remote_empty">Ez dago egutegirik</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google kontuak ez daude gaituta zerbitzari honetan. Gaitu itzazu Ezarpenak, Sistemako ezarpenak atalean.</string>
-    <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu. Konektatu web aplikazioan.</string>
+    <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu.</string>
+    <string name="calendars_subscribe_google_connect_action">Konektatu Google</string>
+    <string name="calendars_grant_failed">Ez da egutegirako sarbidea eman</string>
 </resources>

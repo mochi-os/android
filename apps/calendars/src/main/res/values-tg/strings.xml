@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Сарлавҳа талаб карда мешавад</string>
     <string name="calendars_link_submit">Пайваст кардан</string>
     <string name="calendars_link_sync">Ҳозир ҳамоҳанг кардан</string>
-    <string name="calendars_link_grant">Дар барномаи веб дастрасии тақвимро иҷозат диҳед</string>
+    <string name="calendars_link_grant">Иҷозати дастрасӣ ба тақвим</string>
     <string name="calendars_link_linked">Пайвастшуда</string>
     <string name="calendars_link_marker">Тақвими пайвастшуда</string>
     <string name="calendars_link_remote_empty">Тақвимҳо нестанд</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Ҳисобҳои Google дар ин сервер фаъол карда нашудаанд. Онҳоро дар Танзимот, Танзимоти система фаъол кунед.</string>
-    <string name="calendars_subscribe_google_connect">Шумо ҳисоби Google-ро пайваст накардаед. Онро дар барномаи веб пайваст кунед.</string>
+    <string name="calendars_subscribe_google_connect">Шумо ҳисоби Google-ро пайваст накардаед.</string>
+    <string name="calendars_subscribe_google_connect_action">Пайвасти Google</string>
+    <string name="calendars_grant_failed">Дастрасӣ ба тақвим дода нашуд</string>
 </resources>

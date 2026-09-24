@@ -153,7 +153,7 @@
     <string name="calendars_title_required">මාතෘකාව අවශ්‍යයි</string>
     <string name="calendars_link_submit">සම්බන්ධ කරන්න</string>
     <string name="calendars_link_sync">දැන් සමමුහුර්ත කරන්න</string>
-    <string name="calendars_link_grant">වෙබ් යෙදුමේ දින දර්ශනයට ප්‍රවේශය ලබා දෙන්න</string>
+    <string name="calendars_link_grant">දින දර්ශන ප්‍රවේශයට ඉඩ දෙන්න</string>
     <string name="calendars_link_linked">සම්බන්ධිතයි</string>
     <string name="calendars_link_marker">සම්බන්ධිත දින දර්ශනය</string>
     <string name="calendars_link_remote_empty">දින දර්ශන නැත</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">මෙම සේවාදායකයේ Google ගිණුම් සක්‍රිය කර නැත. ඒවා සැකසුම්, පද්ධති සැකසුම් තුළ සක්‍රිය කරන්න.</string>
-    <string name="calendars_subscribe_google_connect">ඔබ Google ගිණුමක් සම්බන්ධ කර නැත. එය වෙබ් යෙදුමේ සම්බන්ධ කරන්න.</string>
+    <string name="calendars_subscribe_google_connect">ඔබ Google ගිණුමක් සම්බන්ධ කර නැත.</string>
+    <string name="calendars_subscribe_google_connect_action">Google සම්බන්ධ කරන්න</string>
+    <string name="calendars_grant_failed">දින දර්ශන ප්‍රවේශය ලබා දී නැත</string>
 </resources>

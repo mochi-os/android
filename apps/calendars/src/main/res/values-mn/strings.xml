@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Гарчиг шаардлагатай</string>
     <string name="calendars_link_submit">Холбох</string>
     <string name="calendars_link_sync">Одоо синк хийх</string>
-    <string name="calendars_link_grant">Вэб аппад хуанлийн хандалтыг зөвшөөрнө үү</string>
+    <string name="calendars_link_grant">Хуанлийн хандалтыг зөвшөөрөх</string>
     <string name="calendars_link_linked">Холбосон</string>
     <string name="calendars_link_marker">Холбосон хуанли</string>
     <string name="calendars_link_remote_empty">Хуанли байхгүй</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна. Тэдгээрийг Тохиргоо, Системийн тохиргоо хэсэгт идэвхжүүлнэ үү.</string>
-    <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна. Үүнийг вэб аппад холбоно уу.</string>
+    <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна.</string>
+    <string name="calendars_subscribe_google_connect_action">Google-т холбогдох</string>
+    <string name="calendars_grant_failed">Хуанлийн хандалт олгогдсонгүй</string>
 </resources>

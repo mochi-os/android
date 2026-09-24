@@ -153,7 +153,7 @@
     <string name="calendars_title_required">தலைப்பு தேவை</string>
     <string name="calendars_link_submit">இணை</string>
     <string name="calendars_link_sync">இப்போது ஒத்திசை</string>
-    <string name="calendars_link_grant">வலை செயலியில் நாட்காட்டி அணுகலை அனுமதிக்கவும்</string>
+    <string name="calendars_link_grant">நாட்காட்டி அணுகலை அனுமதி</string>
     <string name="calendars_link_linked">இணைக்கப்பட்டது</string>
     <string name="calendars_link_marker">இணைக்கப்பட்ட நாட்காட்டி</string>
     <string name="calendars_link_remote_empty">நாட்காட்டிகள் இல்லை</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">இந்த சர்வரில் Google கணக்குகள் இயக்கப்படவில்லை. அவற்றை அமைப்புகள், சிஸ்டம் அமைப்புகள் இல் இயக்கவும்.</string>
-    <string name="calendars_subscribe_google_connect">நீங்கள் Google கணக்கை இணைக்கவில்லை. அதை வலை செயலியில் இணைக்கவும்.</string>
+    <string name="calendars_subscribe_google_connect">நீங்கள் Google கணக்கை இணைக்கவில்லை.</string>
+    <string name="calendars_subscribe_google_connect_action">Google உடன் இணை</string>
+    <string name="calendars_grant_failed">நாட்காட்டி அணுகல் வழங்கப்படவில்லை</string>
 </resources>

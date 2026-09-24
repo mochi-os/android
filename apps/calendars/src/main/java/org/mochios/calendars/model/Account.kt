@@ -11,7 +11,7 @@ package org.mochios.calendars.model
  * [label] what the user called it and [identifier] the address it signs in
  * as. [granted] holds the capabilities the account carries now: a Google
  * account linked for sign-in alone holds `login` and cannot be linked until
- * calendar access is granted, which only the web app can ask for.
+ * calendar access is granted, a consent the wizard asks Google for.
  */
 data class CalendarAccount(
     val id: String = "",
@@ -61,3 +61,14 @@ data class RemoteCalendar(
 
 /** The body of `-/calendars/remote`. */
 data class RemoteResponse(val calendars: List<RemoteCalendar> = emptyList())
+
+/**
+ * What `-/calendars/grant` answers a native app: the provider's consent to
+ * open in the system browser, and the nonce the return carries so the app
+ * can tell its own return from an injected one (null against an older
+ * server).
+ */
+data class GrantResponse(
+    val url: String = "",
+    val nonce: String? = null,
+)

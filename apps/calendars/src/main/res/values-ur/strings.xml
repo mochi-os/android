@@ -153,7 +153,7 @@
     <string name="calendars_title_required">عنوان درکار ہے</string>
     <string name="calendars_link_submit">لنک کریں</string>
     <string name="calendars_link_sync">ابھی سنک کریں</string>
-    <string name="calendars_link_grant">ویب ایپ میں کیلنڈر تک رسائی کی اجازت دیں</string>
+    <string name="calendars_link_grant">کیلنڈر تک رسائی کی اجازت دیں</string>
     <string name="calendars_link_linked">لنک شدہ</string>
     <string name="calendars_link_marker">لنک شدہ کیلنڈر</string>
     <string name="calendars_link_remote_empty">کوئی کیلنڈر نہیں</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">اس سرور پر Google اکاؤنٹس فعال نہیں کیے گئے۔ انہیں سیٹنگز، سسٹم سیٹنگز میں فعال کریں۔</string>
-    <string name="calendars_subscribe_google_connect">آپ نے کوئی Google اکاؤنٹ کنیکٹ نہیں کیا۔ اسے ویب ایپ میں کنیکٹ کریں۔</string>
+    <string name="calendars_subscribe_google_connect">آپ نے کوئی Google اکاؤنٹ کنیکٹ نہیں کیا۔</string>
+    <string name="calendars_subscribe_google_connect_action">Google سے جڑیں</string>
+    <string name="calendars_grant_failed">کیلنڈر تک رسائی نہیں دی گئی</string>
 </resources>

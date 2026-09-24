@@ -153,7 +153,7 @@
     <string name="calendars_title_required">A cím megadása kötelező</string>
     <string name="calendars_link_submit">Összekapcsolás</string>
     <string name="calendars_link_sync">Szinkronizálás most</string>
-    <string name="calendars_link_grant">Engedélyezze a naptárhozzáférést a webalkalmazásban</string>
+    <string name="calendars_link_grant">Naptár-hozzáférés engedélyezése</string>
     <string name="calendars_link_linked">Összekapcsolva</string>
     <string name="calendars_link_marker">Összekapcsolt naptár</string>
     <string name="calendars_link_remote_empty">Nincsenek naptárak</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">A Google-fiókok nincsenek engedélyezve ezen a kiszolgálón. Engedélyezd őket a Beállítások, Rendszerbeállítások alatt.</string>
-    <string name="calendars_subscribe_google_connect">Nem csatlakoztattál Google-fiókot. Csatlakoztasd a webalkalmazásban.</string>
+    <string name="calendars_subscribe_google_connect">Nem csatlakoztattál Google-fiókot.</string>
+    <string name="calendars_subscribe_google_connect_action">Google csatlakoztatása</string>
+    <string name="calendars_grant_failed">A naptár-hozzáférést nem adták meg</string>
 </resources>

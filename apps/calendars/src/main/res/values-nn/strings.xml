@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Tittel er påkravd</string>
     <string name="calendars_link_submit">Kople til</string>
     <string name="calendars_link_sync">Synkroniser no</string>
-    <string name="calendars_link_grant">Tillat kalendertilgang i nettappen</string>
+    <string name="calendars_link_grant">Tillat kalendertilgang</string>
     <string name="calendars_link_linked">Tilkopla</string>
     <string name="calendars_link_marker">Tilkopla kalender</string>
     <string name="calendars_link_remote_empty">Ingen kalendrar</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-kontoar er ikkje aktiverte på denne tenaren. Aktiver dei under Innstillingar, Systeminnstillingar.</string>
-    <string name="calendars_subscribe_google_connect">Du har ikkje kopla til ein Google-konto. Kople den til i nettappen.</string>
+    <string name="calendars_subscribe_google_connect">Du har ikkje kopla til ein Google-konto.</string>
+    <string name="calendars_subscribe_google_connect_action">Kople til Google</string>
+    <string name="calendars_grant_failed">Kalendertilgang vart ikkje gjeven</string>
 </resources>

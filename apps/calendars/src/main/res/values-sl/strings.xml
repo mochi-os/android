@@ -159,7 +159,7 @@
     <string name="calendars_title_required">Naslov je obvezen</string>
     <string name="calendars_link_submit">Poveži</string>
     <string name="calendars_link_sync">Sinhroniziraj zdaj</string>
-    <string name="calendars_link_grant">Dovolite dostop do koledarja v spletni aplikaciji</string>
+    <string name="calendars_link_grant">Dovoli dostop do koledarja</string>
     <string name="calendars_link_linked">Povezano</string>
     <string name="calendars_link_marker">Povezan koledar</string>
     <string name="calendars_link_remote_empty">Ni koledarjev</string>
@@ -178,5 +178,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Računi Google na tem strežniku niso omogočeni. Omogočite jih v Nastavitve, Sistemske nastavitve.</string>
-    <string name="calendars_subscribe_google_connect">Niste povezali računa Google. Povežite ga v spletni aplikaciji.</string>
+    <string name="calendars_subscribe_google_connect">Niste povezali računa Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Poveži Google</string>
+    <string name="calendars_grant_failed">Dostop do koledarja ni bil odobren</string>
 </resources>

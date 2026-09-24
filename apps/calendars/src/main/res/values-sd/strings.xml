@@ -153,7 +153,7 @@
     <string name="calendars_title_required">عنوان گھربل آھي</string>
     <string name="calendars_link_submit">ڳنڍيو</string>
     <string name="calendars_link_sync">هاڻي سنڪ ڪريو</string>
-    <string name="calendars_link_grant">ويب ايپ ۾ ڪئلينڊر تائين رسائي جي اجازت ڏيو</string>
+    <string name="calendars_link_grant">ڪئلينڊر رسائي جي اجازت ڏيو</string>
     <string name="calendars_link_linked">ڳنڍيل</string>
     <string name="calendars_link_marker">ڳنڍيل ڪئلينڊر</string>
     <string name="calendars_link_remote_empty">ڪو ڪئلينڊر نه آهي</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">هن سرور تي Google اڪائونٽ فعال نه ڪيا ويا آهن. انهن کي سيٽنگون، سسٽم سيٽنگون ۾ فعال ڪريو.</string>
-    <string name="calendars_subscribe_google_connect">توهان ڪوبه Google اڪائونٽ نه ڳنڍيو آهي. ان کي ويب ايپ ۾ ڳنڍيو.</string>
+    <string name="calendars_subscribe_google_connect">توهان ڪوبه Google اڪائونٽ نه ڳنڍيو آهي.</string>
+    <string name="calendars_subscribe_google_connect_action">Google ڳنڍيو</string>
+    <string name="calendars_grant_failed">ڪئلينڊر رسائي نه ڏني وئي</string>
 </resources>

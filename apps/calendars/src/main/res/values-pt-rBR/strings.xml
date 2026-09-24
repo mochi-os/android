@@ -21,5 +21,8 @@
     <string name="calendars_subscribe_password">Senha</string>
     <string name="calendars_subscribe_connect">Conectar</string>
     <string name="calendars_subscribe_google_enable">As contas do Google não estão ativadas neste servidor. Ative-as em Configurações, Configurações do sistema.</string>
-    <string name="calendars_subscribe_google_connect">Você não conectou nenhuma conta do Google. Conecte-a no aplicativo web.</string>
+    <string name="calendars_subscribe_google_connect">Você não conectou nenhuma conta do Google.</string>
+    <string name="calendars_link_grant">Permitir o acesso ao calendário</string>
+    <string name="calendars_subscribe_google_connect_action">Conectar o Google</string>
+    <string name="calendars_grant_failed">O acesso ao calendário não foi concedido</string>
 </resources>

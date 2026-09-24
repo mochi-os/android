@@ -150,7 +150,7 @@
     <string name="calendars_title_required">ต้องระบุชื่อ</string>
     <string name="calendars_link_submit">เชื่อมโยง</string>
     <string name="calendars_link_sync">ซิงค์เดี๋ยวนี้</string>
-    <string name="calendars_link_grant">อนุญาตการเข้าถึงปฏิทินในเว็บแอป</string>
+    <string name="calendars_link_grant">อนุญาตการเข้าถึงปฏิทิน</string>
     <string name="calendars_link_linked">เชื่อมโยงแล้ว</string>
     <string name="calendars_link_marker">ปฏิทินที่เชื่อมโยง</string>
     <string name="calendars_link_remote_empty">ไม่มีปฏิทิน</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">ยังไม่ได้เปิดใช้งานบัญชี Google บนเซิร์ฟเวอร์นี้ เปิดใช้งานได้ที่ การตั้งค่า, การตั้งค่าระบบ</string>
-    <string name="calendars_subscribe_google_connect">คุณยังไม่ได้เชื่อมต่อบัญชี Google เชื่อมต่อในเว็บแอป</string>
+    <string name="calendars_subscribe_google_connect">คุณยังไม่ได้เชื่อมต่อบัญชี Google</string>
+    <string name="calendars_subscribe_google_connect_action">เชื่อมต่อ Google</string>
+    <string name="calendars_grant_failed">ไม่ได้รับอนุญาตให้เข้าถึงปฏิทิน</string>
 </resources>

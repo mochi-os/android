@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Le titre est obligatoire</string>
     <string name="calendars_link_submit">Associer</string>
     <string name="calendars_link_sync">Synchroniser maintenant</string>
-    <string name="calendars_link_grant">Autorisez l\'accès au calendrier dans l\'application web</string>
+    <string name="calendars_link_grant">Autoriser l\'accès au calendrier</string>
     <string name="calendars_link_linked">Associé</string>
     <string name="calendars_link_marker">Calendrier associé</string>
     <string name="calendars_link_remote_empty">Aucun calendrier</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Les comptes Google ne sont pas activés sur ce serveur. Activez-les dans Paramètres, Paramètres système.</string>
-    <string name="calendars_subscribe_google_connect">Vous n\'avez pas connecté de compte Google. Connectez-le dans l\'application web.</string>
+    <string name="calendars_subscribe_google_connect">Vous n\'avez pas connecté de compte Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Connecter Google</string>
+    <string name="calendars_grant_failed">L\'accès au calendrier n\'a pas été accordé</string>
 </resources>

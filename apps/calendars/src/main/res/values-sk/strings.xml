@@ -156,7 +156,7 @@
     <string name="calendars_title_required">Názov je povinný</string>
     <string name="calendars_link_submit">Prepojiť</string>
     <string name="calendars_link_sync">Synchronizovať teraz</string>
-    <string name="calendars_link_grant">Povoľte prístup ku kalendáru vo webovej aplikácii</string>
+    <string name="calendars_link_grant">Povoliť prístup ku kalendáru</string>
     <string name="calendars_link_linked">Prepojené</string>
     <string name="calendars_link_marker">Prepojený kalendár</string>
     <string name="calendars_link_remote_empty">Žiadne kalendáre</string>
@@ -175,5 +175,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Účty Google nie sú na tomto serveri povolené. Povoľte ich v Nastavenia, Systémové nastavenia.</string>
-    <string name="calendars_subscribe_google_connect">Nepripojili ste žiadny účet Google. Pripojte ho vo webovej aplikácii.</string>
+    <string name="calendars_subscribe_google_connect">Nepripojili ste žiadny účet Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Pripojiť Google</string>
+    <string name="calendars_grant_failed">Prístup ku kalendáru nebol udelený</string>
 </resources>

@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Kailangan ng pamagat</string>
     <string name="calendars_link_submit">I-link</string>
     <string name="calendars_link_sync">Mag-sync ngayon</string>
-    <string name="calendars_link_grant">Payagan ang access sa kalendaryo sa web app</string>
+    <string name="calendars_link_grant">Payagan ang access sa kalendaryo</string>
     <string name="calendars_link_linked">Naka-link</string>
     <string name="calendars_link_marker">Naka-link na kalendaryo</string>
     <string name="calendars_link_remote_empty">Walang kalendaryo</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Hindi pinagana ang mga Google account sa server na ito. Paganahin ang mga ito sa Mga setting, Mga system setting.</string>
-    <string name="calendars_subscribe_google_connect">Wala kang nakakonektang Google account. Ikonekta ito sa web app.</string>
+    <string name="calendars_subscribe_google_connect">Wala kang nakakonektang Google account.</string>
+    <string name="calendars_subscribe_google_connect_action">Ikonekta ang Google</string>
+    <string name="calendars_grant_failed">Hindi ibinigay ang access sa kalendaryo</string>
 </resources>

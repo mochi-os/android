@@ -150,7 +150,7 @@
     <string name="calendars_title_required">Judul wajib diisi</string>
     <string name="calendars_link_submit">Tautkan</string>
     <string name="calendars_link_sync">Sinkronkan sekarang</string>
-    <string name="calendars_link_grant">Izinkan akses kalender di aplikasi web</string>
+    <string name="calendars_link_grant">Izinkan akses kalender</string>
     <string name="calendars_link_linked">Tertaut</string>
     <string name="calendars_link_marker">Kalender tertaut</string>
     <string name="calendars_link_remote_empty">Tidak ada kalender</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Akun Google belum diaktifkan di server ini. Aktifkan di Pengaturan, Pengaturan sistem.</string>
-    <string name="calendars_subscribe_google_connect">Anda belum menghubungkan akun Google. Hubungkan di aplikasi web.</string>
+    <string name="calendars_subscribe_google_connect">Anda belum menghubungkan akun Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Sambungkan Google</string>
+    <string name="calendars_grant_failed">Akses kalender tidak diberikan</string>
 </resources>

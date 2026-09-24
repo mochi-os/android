@@ -153,7 +153,7 @@
     <string name="calendars_title_required">শিরোনাম প্রয়োজন</string>
     <string name="calendars_link_submit">সংযুক্ত করুন</string>
     <string name="calendars_link_sync">এখন সিঙ্ক করুন</string>
-    <string name="calendars_link_grant">ওয়েব অ্যাপে ক্যালেন্ডারের অ্যাক্সেস অনুমোদন করুন</string>
+    <string name="calendars_link_grant">ক্যালেন্ডার অ্যাক্সেসের অনুমতি দিন</string>
     <string name="calendars_link_linked">সংযুক্ত</string>
     <string name="calendars_link_marker">সংযুক্ত ক্যালেন্ডার</string>
     <string name="calendars_link_remote_empty">কোনো ক্যালেন্ডার নেই</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">এই সার্ভারে Google অ্যাকাউন্ট সক্রিয় করা হয়নি। সেটিংস, সিস্টেম সেটিংস-এ গিয়ে সেগুলি সক্রিয় করুন।</string>
-    <string name="calendars_subscribe_google_connect">আপনি কোনো Google অ্যাকাউন্ট সংযুক্ত করেননি। ওয়েব অ্যাপে এটি সংযুক্ত করুন।</string>
+    <string name="calendars_subscribe_google_connect">আপনি কোনো Google অ্যাকাউন্ট সংযুক্ত করেননি।</string>
+    <string name="calendars_subscribe_google_connect_action">Google সংযোগ করুন</string>
+    <string name="calendars_grant_failed">ক্যালেন্ডার অ্যাক্সেস দেওয়া হয়নি</string>
 </resources>

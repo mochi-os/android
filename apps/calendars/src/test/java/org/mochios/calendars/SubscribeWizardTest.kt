@@ -10,9 +10,11 @@ import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.calendars.model.CalendarAccount
+import org.mochios.calendars.ui.dialogs.GoogleStep
 import org.mochios.calendars.ui.dialogs.SubscribeKind
 import org.mochios.calendars.ui.dialogs.SubscribeStage
 import org.mochios.calendars.ui.dialogs.accountType
+import org.mochios.calendars.ui.dialogs.googleStep
 import org.mochios.calendars.ui.dialogs.kindsOffered
 import org.mochios.calendars.ui.dialogs.kindsSorted
 import org.mochios.calendars.ui.dialogs.matching
@@ -97,5 +99,16 @@ class SubscribeWizardTest {
         assertEquals(SubscribeStage.CREDENTIAL, previous(SubscribeStage.CALENDAR))
         assertEquals(SubscribeStage.KIND, previous(SubscribeStage.CREDENTIAL))
         assertNull(previous(SubscribeStage.KIND))
+    }
+
+    /** The Google step offers the consent wherever one can come of it. */
+    @Test
+    fun `the google step lists accounts, else offers the consent, else names the missing client`() {
+        val granted = CalendarAccount(id = "g1", type = "google", granted = listOf("login", "calendar"))
+        assertEquals(GoogleStep.LIST, googleStep(listOf(granted), listOf("google")))
+        // An account held from elsewhere lists even when this server cannot grant one.
+        assertEquals(GoogleStep.LIST, googleStep(listOf(granted), emptyList()))
+        assertEquals(GoogleStep.CONNECT, googleStep(emptyList(), listOf("google")))
+        assertEquals(GoogleStep.MISSING, googleStep(emptyList(), emptyList()))
     }
 }

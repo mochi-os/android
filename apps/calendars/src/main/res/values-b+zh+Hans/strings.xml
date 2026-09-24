@@ -150,7 +150,7 @@
     <string name="calendars_title_required">标题为必填项</string>
     <string name="calendars_link_submit">关联</string>
     <string name="calendars_link_sync">立即同步</string>
-    <string name="calendars_link_grant">请在网页应用中允许日历访问</string>
+    <string name="calendars_link_grant">允许访问日历</string>
     <string name="calendars_link_linked">已关联</string>
     <string name="calendars_link_marker">已关联日历</string>
     <string name="calendars_link_remote_empty">没有日历</string>
@@ -169,5 +169,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">此服务器尚未启用 Google 账户。请在 设置、系统设置 中启用。</string>
-    <string name="calendars_subscribe_google_connect">您尚未连接 Google 账户。请在网页应用中连接。</string>
+    <string name="calendars_subscribe_google_connect">您尚未连接 Google 账户。</string>
+    <string name="calendars_subscribe_google_connect_action">连接 Google</string>
+    <string name="calendars_grant_failed">未授予日历访问权限</string>
 </resources>

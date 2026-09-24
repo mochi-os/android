@@ -156,7 +156,7 @@
     <string name="calendars_title_required">Virsraksts ir obligāts</string>
     <string name="calendars_link_submit">Saistīt</string>
     <string name="calendars_link_sync">Sinhronizēt tagad</string>
-    <string name="calendars_link_grant">Atļaujiet piekļuvi kalendāram tīmekļa lietotnē</string>
+    <string name="calendars_link_grant">Atļaut piekļuvi kalendāram</string>
     <string name="calendars_link_linked">Saistīts</string>
     <string name="calendars_link_marker">Saistīts kalendārs</string>
     <string name="calendars_link_remote_empty">Nav kalendāru</string>
@@ -175,5 +175,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google konti šajā serverī nav iespējoti. Iespējo tos sadaļā Iestatījumi, Sistēmas iestatījumi.</string>
-    <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu. Savieno to tīmekļa lietotnē.</string>
+    <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu.</string>
+    <string name="calendars_subscribe_google_connect_action">Savienot Google</string>
+    <string name="calendars_grant_failed">Piekļuve kalendāram netika piešķirta</string>
 </resources>

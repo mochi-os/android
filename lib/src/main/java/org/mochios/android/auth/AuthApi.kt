@@ -105,6 +105,12 @@ data class OAuthLinkResponse(
     val linked: String = ""
 )
 
+/** What a grant exchange lands: the capability, on the account it names. */
+data class OAuthGrantResponse(
+    val granted: String = "",
+    val account: String = ""
+)
+
 // Request bodies
 data class EmailRequest(val email: String)
 data class CodeRequest(val code: String)
@@ -189,6 +195,17 @@ interface AuthApi {
         @retrofit2.http.Header("Authorization") authorization: String,
         @Body body: OAuthExchangeRequest
     ): Response<OAuthLinkResponse>
+
+    /**
+     * Exchange for a GRANT ceremony, a capability granted to a connected
+     * account. The Bearer is required: the server lands the grant only for the
+     * user it names.
+     */
+    @POST("_/auth/oauth/exchange")
+    suspend fun oauthExchangeGrant(
+        @retrofit2.http.Header("Authorization") authorization: String,
+        @Body body: OAuthExchangeRequest
+    ): Response<OAuthGrantResponse>
 
     /** Cancel a pending self-service closure, reactivating the account. */
     @POST("_/auth/close/cancel")

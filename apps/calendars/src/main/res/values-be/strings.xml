@@ -159,7 +159,7 @@
     <string name="calendars_title_required">Назва абавязковая</string>
     <string name="calendars_link_submit">Звязаць</string>
     <string name="calendars_link_sync">Сінхранізаваць цяпер</string>
-    <string name="calendars_link_grant">Дазвольце доступ да календара ў вэб-праграме</string>
+    <string name="calendars_link_grant">Дазволіць доступ да календара</string>
     <string name="calendars_link_linked">Звязаны</string>
     <string name="calendars_link_marker">Звязаны каляндар</string>
     <string name="calendars_link_remote_empty">Няма календароў</string>
@@ -178,5 +178,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Уліковыя запісы Google не ўключаны на гэтым серверы. Уключыце іх у Налады, Сістэмныя налады.</string>
-    <string name="calendars_subscribe_google_connect">Вы не падключылі ўліковы запіс Google. Падключыце яго ў вэб-праграме.</string>
+    <string name="calendars_subscribe_google_connect">Вы не падключылі ўліковы запіс Google.</string>
+    <string name="calendars_subscribe_google_connect_action">Злучыць Google</string>
+    <string name="calendars_grant_failed">Доступ да календара не быў нададзены</string>
 </resources>

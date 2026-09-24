@@ -153,7 +153,7 @@
     <string name="calendars_title_required">Titel word vereis</string>
     <string name="calendars_link_submit">Koppel</string>
     <string name="calendars_link_sync">Sinkroniseer nou</string>
-    <string name="calendars_link_grant">Laat kalendertoegang in die webtoepassing toe</string>
+    <string name="calendars_link_grant">Laat kalendertoegang toe</string>
     <string name="calendars_link_linked">Gekoppel</string>
     <string name="calendars_link_marker">Gekoppelde kalender</string>
     <string name="calendars_link_remote_empty">Geen kalenders nie</string>
@@ -172,5 +172,7 @@
     <string name="calendars_subscribe_google">Google Calendar</string>
     <string name="calendars_subscribe_server_example">https://example.com/calendars/caldav/</string>
     <string name="calendars_subscribe_google_enable">Google-rekeninge is nie op hierdie bediener geaktiveer nie. Aktiveer hulle onder Instellings, Stelselinstellings.</string>
-    <string name="calendars_subscribe_google_connect">Jy het nog nie \'n Google-rekening verbind nie. Verbind dit in die webtoepassing.</string>
+    <string name="calendars_subscribe_google_connect">Jy het nog nie \'n Google-rekening verbind nie.</string>
+    <string name="calendars_subscribe_google_connect_action">Verbind Google</string>
+    <string name="calendars_grant_failed">Kalendertoegang is nie toegestaan nie</string>
 </resources>

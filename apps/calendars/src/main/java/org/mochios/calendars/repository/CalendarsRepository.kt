@@ -33,6 +33,7 @@ import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.GrantResponse
 import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
 import org.mochios.calendars.ui.editor.excluded
@@ -176,6 +177,17 @@ class CalendarsRepository @Inject constructor(
     /** The calendars an account's server offers, to link one of. */
     suspend fun remoteCalendars(account: String): List<RemoteCalendar> = call {
         api.remoteCalendars(account).unwrap().calendars
+    }
+
+    /**
+     * Starts the provider's consent that grants calendar access to [account],
+     * or, with none, to whichever account of [provider] the user picks. The
+     * consent opens in the system browser and returns on the app's deep link,
+     * bound by [challenge], the app's PKCE challenge; the grant lands at the
+     * exchange with the verifier.
+     */
+    suspend fun grant(account: String, provider: String, challenge: String): GrantResponse = call {
+        api.grant(account, provider, "/calendars/", "mobile", "mochi", challenge).unwrap()
     }
 
     /**
