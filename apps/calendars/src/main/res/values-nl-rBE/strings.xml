@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calendars_view">Weergeven</string>
+    <string name="calendars_scope_following">Deze en volgende</string>
+    <string name="calendars_event_moved">Afspraak verplaatst</string>
+    <string name="calendars_event_changed">Deze afspraak is elders gewijzigd.</string>
+    <string name="calendars_undo">Ongedaan maken</string>
 </resources>

@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Begintydsone</string>
     <string name="calendars_event_zone_finish">Eindtydsone</string>
     <string name="calendars_event_timezone">Tydsone</string>
+    <string name="calendars_scope_following">Hierdie en volgende</string>
+    <string name="calendars_event_moved">Gebeurtenis geskuif</string>
+    <string name="calendars_event_changed">Hierdie gebeurtenis het elders verander.</string>
+    <string name="calendars_undo">Ontdoen</string>
+    <string name="calendars_event_resize">Verander eindtyd</string>
 </resources>

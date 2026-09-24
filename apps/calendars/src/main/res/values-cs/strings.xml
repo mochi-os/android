@@ -144,4 +144,9 @@
     <string name="calendars_event_zone_start">Časové pásmo začátku</string>
     <string name="calendars_event_zone_finish">Časové pásmo konce</string>
     <string name="calendars_event_timezone">Časové pásmo</string>
+    <string name="calendars_scope_following">Tato a následující</string>
+    <string name="calendars_event_moved">Událost přesunuta</string>
+    <string name="calendars_event_changed">Tato událost byla změněna jinde.</string>
+    <string name="calendars_undo">Zpět</string>
+    <string name="calendars_event_resize">Změnit čas konce</string>
 </resources>

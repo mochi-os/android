@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">Zona wektu wiwitan</string>
     <string name="calendars_event_zone_finish">Zona wektu pungkasan</string>
     <string name="calendars_event_timezone">Zona wektu</string>
+    <string name="calendars_scope_following">Iki lan sabanjure</string>
+    <string name="calendars_event_moved">Acara dipindhah</string>
+    <string name="calendars_event_changed">Acara iki wis diowahi ing papan liya.</string>
+    <string name="calendars_undo">Batalake</string>
+    <string name="calendars_event_resize">Ganti wektu rampung</string>
 </resources>

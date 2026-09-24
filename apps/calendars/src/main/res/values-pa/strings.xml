@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">ਸ਼ੁਰੂਆਤ ਦਾ ਸਮਾਂ ਖੇਤਰ</string>
     <string name="calendars_event_zone_finish">ਸਮਾਪਤੀ ਦਾ ਸਮਾਂ ਖੇਤਰ</string>
     <string name="calendars_event_timezone">ਟਾਈਮ ਜ਼ੋਨ</string>
+    <string name="calendars_scope_following">ਇਹ ਅਤੇ ਅਗਲੇ</string>
+    <string name="calendars_event_moved">ਇਵੈਂਟ ਲਿਜਾਇਆ ਗਿਆ</string>
+    <string name="calendars_event_changed">ਇਹ ਇਵੈਂਟ ਕਿਤੇ ਹੋਰ ਬਦਲ ਗਿਆ ਹੈ।</string>
+    <string name="calendars_undo">ਵਾਪਸ ਕਰੋ</string>
+    <string name="calendars_event_resize">ਸਮਾਪਤੀ ਸਮਾਂ ਬਦਲੋ</string>
 </resources>

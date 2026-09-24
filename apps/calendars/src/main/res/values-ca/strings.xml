@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Zona horària d\'inici</string>
     <string name="calendars_event_zone_finish">Zona horària de fi</string>
     <string name="calendars_event_timezone">Zona horària</string>
+    <string name="calendars_scope_following">Aquest i els següents</string>
+    <string name="calendars_event_moved">S\'ha mogut l\'esdeveniment</string>
+    <string name="calendars_event_changed">Aquest esdeveniment ha canviat en un altre lloc.</string>
+    <string name="calendars_undo">Desfés</string>
+    <string name="calendars_event_resize">Canvia l\'hora de finalització</string>
 </resources>

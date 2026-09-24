@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calendars_event_start">Iniciar</string>
+    <string name="calendars_scope_following">Este y los siguientes</string>
+    <string name="calendars_event_moved">Evento movido</string>
+    <string name="calendars_event_changed">Este evento cambió en otro lugar.</string>
+    <string name="calendars_undo">Deshacer</string>
 </resources>

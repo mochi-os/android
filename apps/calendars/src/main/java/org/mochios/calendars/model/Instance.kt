@@ -5,6 +5,9 @@
 
 package org.mochios.calendars.model
 
+import java.time.LocalDate
+import java.time.ZoneOffset
+
 /**
  * One occurrence of an event inside a range, as `-/events` returns it. The
  * server expands recurrences itself, so every view renders from this shape.
@@ -40,6 +43,17 @@ data class Instance(
 
     /** Whether a tap opens the editor; a read-only occurrence opens the summary sheet instead. */
     val editable: Boolean get() = !readonly && !birthday
+
+    /**
+     * The start an override of this occurrence is matched by, which is how
+     * the event's tree names it: a timed occurrence's own instant, and the
+     * UTC midnight of an all-day one's date, which is what its `DATE` value
+     * reads as. [start] itself is the user's midnight for an all-day one.
+     */
+    val occurrence: Long
+        get() = date?.let { value ->
+            runCatching { LocalDate.parse(value).atStartOfDay(ZoneOffset.UTC).toEpochSecond() }.getOrNull()
+        } ?: start
 
     companion object {
         const val BIRTHDAY = "birthday-"

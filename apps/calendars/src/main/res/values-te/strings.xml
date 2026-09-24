@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">ప్రారంభ టైమ్ జోన్</string>
     <string name="calendars_event_zone_finish">ముగింపు టైమ్ జోన్</string>
     <string name="calendars_event_timezone">టైమ్ జోన్</string>
+    <string name="calendars_scope_following">ఇది మరియు తర్వాతివి</string>
+    <string name="calendars_event_moved">ఈవెంట్ తరలించబడింది</string>
+    <string name="calendars_event_changed">ఈ ఈవెంట్ మరెక్కడో మార్చబడింది.</string>
+    <string name="calendars_undo">రద్దు చేయండి</string>
+    <string name="calendars_event_resize">ముగింపు సమయాన్ని మార్చండి</string>
 </resources>

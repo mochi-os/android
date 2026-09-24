@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Hasierako ordu-zona</string>
     <string name="calendars_event_zone_finish">Amaierako ordu-zona</string>
     <string name="calendars_event_timezone">Ordu-zona</string>
+    <string name="calendars_scope_following">Hau eta hurrengoak</string>
+    <string name="calendars_event_moved">Gertaera lekuz aldatu da</string>
+    <string name="calendars_event_changed">Gertaera hau beste nonbait aldatu da.</string>
+    <string name="calendars_undo">Desegin</string>
+    <string name="calendars_event_resize">Aldatu amaiera-ordua</string>
 </resources>

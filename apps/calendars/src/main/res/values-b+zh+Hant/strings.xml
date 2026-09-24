@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">開始時區</string>
     <string name="calendars_event_zone_finish">結束時區</string>
     <string name="calendars_event_timezone">時區</string>
+    <string name="calendars_scope_following">此活動及後續活動</string>
+    <string name="calendars_event_moved">已移動活動</string>
+    <string name="calendars_event_changed">此活動已在其他地方變更。</string>
+    <string name="calendars_undo">復原</string>
+    <string name="calendars_event_resize">變更結束時間</string>
 </resources>

@@ -144,4 +144,9 @@
     <string name="calendars_event_zone_start">Pradžios laiko juosta</string>
     <string name="calendars_event_zone_finish">Pabaigos laiko juosta</string>
     <string name="calendars_event_timezone">Laiko juosta</string>
+    <string name="calendars_scope_following">Šis ir vėlesni</string>
+    <string name="calendars_event_moved">Įvykis perkeltas</string>
+    <string name="calendars_event_changed">Šis įvykis buvo pakeistas kitur.</string>
+    <string name="calendars_undo">Anuliuoti</string>
+    <string name="calendars_event_resize">Keisti pabaigos laiką</string>
 </resources>

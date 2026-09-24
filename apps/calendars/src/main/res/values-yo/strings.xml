@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">Agbègbè àkókò ìbẹ̀rẹ̀</string>
     <string name="calendars_event_zone_finish">Agbègbè àkókò ìparí</string>
     <string name="calendars_event_timezone">Agbègbè àkókò</string>
+    <string name="calendars_scope_following">Èyí àti àwọn tó tẹ̀lé e</string>
+    <string name="calendars_event_moved">A ti kó ìṣẹ̀lẹ̀ náà</string>
+    <string name="calendars_event_changed">Ìṣẹ̀lẹ̀ yìí yípadà níbòmíràn.</string>
+    <string name="calendars_undo">Dá padà</string>
+    <string name="calendars_event_resize">Yí àkókò ìparí padà</string>
 </resources>

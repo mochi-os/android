@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Boshlanish vaqt mintaqasi</string>
     <string name="calendars_event_zone_finish">Tugash vaqt mintaqasi</string>
     <string name="calendars_event_timezone">Vaqt mintaqasi</string>
+    <string name="calendars_scope_following">Bu va keyingilari</string>
+    <string name="calendars_event_moved">Tadbir koʻchirildi</string>
+    <string name="calendars_event_changed">Bu tadbir boshqa joyda oʻzgartirildi.</string>
+    <string name="calendars_undo">Bekor qilish</string>
+    <string name="calendars_event_resize">Tugash vaqtini oʻzgartirish</string>
 </resources>

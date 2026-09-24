@@ -153,4 +153,9 @@
     <string name="calendars_event_zone_start">Cylchfa amser dechrau</string>
     <string name="calendars_event_zone_finish">Cylchfa amser gorffen</string>
     <string name="calendars_event_timezone">Cylchfa amser</string>
+    <string name="calendars_scope_following">Hwn a\'r rhai canlynol</string>
+    <string name="calendars_event_moved">Digwyddiad wedi\'i symud</string>
+    <string name="calendars_event_changed">Mae\'r digwyddiad hwn wedi newid rywle arall.</string>
+    <string name="calendars_undo">Dadwneud</string>
+    <string name="calendars_event_resize">Newid amser gorffen</string>
 </resources>

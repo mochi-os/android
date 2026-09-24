@@ -47,6 +47,13 @@ data class EventResponse(val event: Event = Event())
 data class EventsResponse(val events: List<Event> = emptyList())
 
 /**
+ * The body of `-/events/split`: [event] is the old event, now ending before
+ * the occurrence the series was cut at, and [following] the new one that
+ * goes on from there.
+ */
+data class SplitResponse(val event: Event = Event(), val following: Event = Event())
+
+/**
  * The body of `-/events/changes`. [reset] means the phone should list
  * everything again: [changed] is then every event the server holds.
  */

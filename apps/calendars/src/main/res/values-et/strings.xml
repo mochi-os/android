@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Alguse ajavöönd</string>
     <string name="calendars_event_zone_finish">Lõpu ajavöönd</string>
     <string name="calendars_event_timezone">Ajavöönd</string>
+    <string name="calendars_scope_following">See ja järgmised</string>
+    <string name="calendars_event_moved">Sündmus teisaldatud</string>
+    <string name="calendars_event_changed">See sündmus muutus mujal.</string>
+    <string name="calendars_undo">Võta tagasi</string>
+    <string name="calendars_event_resize">Muuda lõpuaega</string>
 </resources>

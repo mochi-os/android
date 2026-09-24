@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">ល្វែងម៉ោងចាប់ផ្ដើម</string>
     <string name="calendars_event_zone_finish">ល្វែងម៉ោងបញ្ចប់</string>
     <string name="calendars_event_timezone">តំបន់ម៉ោង</string>
+    <string name="calendars_scope_following">នេះ និងបន្តបន្ទាប់</string>
+    <string name="calendars_event_moved">បានផ្លាស់ទីព្រឹត្តិការណ៍</string>
+    <string name="calendars_event_changed">ព្រឹត្តិការណ៍នេះត្រូវបានផ្លាស់ប្តូរនៅកន្លែងផ្សេង។</string>
+    <string name="calendars_undo">មិនធ្វើវិញ</string>
+    <string name="calendars_event_resize">ប្ដូរម៉ោងបញ្ចប់</string>
 </resources>

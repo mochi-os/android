@@ -147,4 +147,9 @@
     <string name="calendars_event_zone_start">Strefa czasowa początku</string>
     <string name="calendars_event_zone_finish">Strefa czasowa końca</string>
     <string name="calendars_event_timezone">Strefa czasowa</string>
+    <string name="calendars_scope_following">To i następne</string>
+    <string name="calendars_event_moved">Przeniesiono wydarzenie</string>
+    <string name="calendars_event_changed">To wydarzenie zostało zmienione w innym miejscu.</string>
+    <string name="calendars_undo">Cofnij</string>
+    <string name="calendars_event_resize">Zmień godzinę zakończenia</string>
 </resources>

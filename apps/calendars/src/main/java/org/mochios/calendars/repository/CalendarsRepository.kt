@@ -20,6 +20,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.EventCreateRequest
+import org.mochios.calendars.api.EventSplitRequest
 import org.mochios.calendars.api.EventUpdateRequest
 import org.mochios.calendars.api.EventsBatchRequest
 import org.mochios.calendars.api.MenuApi
@@ -32,6 +33,7 @@ import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.ui.calendar.Bounds
 import org.mochios.calendars.ui.editor.excluded
+import org.mochios.calendars.ui.editor.truncated
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -206,6 +208,26 @@ class CalendarsRepository @Inject constructor(
         api.updateEvent(EventUpdateRequest(event, etag, calendar, components)).unwrap().event
     }.also { _eventsChanged.tryEmit(Unit) }
 
+    /**
+     * Cuts a series in two at the occurrence starting at [start], epoch
+     * seconds as the server listed it: the event is rewritten as
+     * [components], ending before that occurrence, and a new event is
+     * created from [following], in [calendar] when given. Both halves go in
+     * one call, so the series is never left with both or neither. Answers
+     * the old event and the new one.
+     */
+    suspend fun splitEvent(
+        event: String,
+        etag: String?,
+        start: Long,
+        components: List<EventComponent>,
+        following: List<EventComponent>,
+        calendar: String? = null,
+    ): Pair<Event, Event> = call {
+        val body = api.splitEvent(EventSplitRequest(event, etag, start, components, following, calendar)).unwrap()
+        body.event to body.following
+    }.also { _eventsChanged.tryEmit(Unit) }
+
     suspend fun deleteEvent(event: String, etag: String) {
         call { api.deleteEvent(event, etag).unwrap() }
         _eventsChanged.tryEmit(Unit)
@@ -225,6 +247,30 @@ class CalendarsRepository @Inject constructor(
         } catch (_: EventChangedException) {
             val fresh = getEvent(event)
             updateEvent(event, fresh.etag, null, excluded(fresh.components, occurrence))
+        }
+    }
+
+    /**
+     * Removes one occurrence of a recurring event and every one after it:
+     * the series is cut to end just before it. [occurrence] is the start an
+     * override of it is matched by. The series' first occurrence has nothing
+     * before it, so removing from there deletes the event. A 412 means the
+     * server moved on, so the event is read again and the cut applied to
+     * that copy.
+     */
+    suspend fun truncateEvent(event: String, occurrence: Long) {
+        suspend fun cut(current: Event) {
+            val components = truncated(current.components, occurrence)
+            if (components == null) {
+                deleteEvent(event, current.etag)
+            } else {
+                updateEvent(event, current.etag, null, components)
+            }
+        }
+        try {
+            cut(getEvent(event))
+        } catch (_: EventChangedException) {
+            cut(getEvent(event))
         }
     }
 

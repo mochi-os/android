@@ -144,4 +144,9 @@
     <string name="calendars_event_zone_start">Časové pásmo začiatku</string>
     <string name="calendars_event_zone_finish">Časové pásmo konca</string>
     <string name="calendars_event_timezone">Časové pásmo</string>
+    <string name="calendars_scope_following">Táto a nasledujúce</string>
+    <string name="calendars_event_moved">Udalosť bola presunutá</string>
+    <string name="calendars_event_changed">Táto udalosť bola zmenená inde.</string>
+    <string name="calendars_undo">Späť</string>
+    <string name="calendars_event_resize">Zmeniť čas ukončenia</string>
 </resources>

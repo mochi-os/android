@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">सुरुको समय क्षेत्र</string>
     <string name="calendars_event_zone_finish">अन्त्यको समय क्षेत्र</string>
     <string name="calendars_event_timezone">टाइम जोन</string>
+    <string name="calendars_scope_following">यो र पछिका</string>
+    <string name="calendars_event_moved">कार्यक्रम सारियो</string>
+    <string name="calendars_event_changed">यो कार्यक्रम अन्यत्र परिवर्तन भएको छ।</string>
+    <string name="calendars_undo">पूर्ववत गर्नुहोस्</string>
+    <string name="calendars_event_resize">अन्त्य समय परिवर्तन गर्नुहोस्</string>
 </resources>

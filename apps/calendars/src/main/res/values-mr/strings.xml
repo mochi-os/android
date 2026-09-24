@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">सुरुवातीचा टाइम झोन</string>
     <string name="calendars_event_zone_finish">समाप्तीचा टाइम झोन</string>
     <string name="calendars_event_timezone">टाइम झोन</string>
+    <string name="calendars_scope_following">हा आणि पुढील</string>
+    <string name="calendars_event_moved">कार्यक्रम हलवला</string>
+    <string name="calendars_event_changed">हा कार्यक्रम इतरत्र बदलला आहे.</string>
+    <string name="calendars_undo">पूर्ववत करा</string>
+    <string name="calendars_event_resize">समाप्तीची वेळ बदला</string>
 </resources>

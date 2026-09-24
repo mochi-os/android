@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Басталу уақыт белдеуі</string>
     <string name="calendars_event_zone_finish">Аяқталу уақыт белдеуі</string>
     <string name="calendars_event_timezone">Сағат белдеуі</string>
+    <string name="calendars_scope_following">Бұл және келесілері</string>
+    <string name="calendars_event_moved">Іс-шара жылжытылды</string>
+    <string name="calendars_event_changed">Бұл іс-шара басқа жерде өзгертілді.</string>
+    <string name="calendars_undo">Болдырмау</string>
+    <string name="calendars_event_resize">Аяқталу уақытын өзгерту</string>
 </resources>

@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Tidssone for start</string>
     <string name="calendars_event_zone_finish">Tidssone for slutt</string>
     <string name="calendars_event_timezone">Tidssone</string>
+    <string name="calendars_scope_following">Denne og følgende</string>
+    <string name="calendars_event_moved">Hendelse flyttet</string>
+    <string name="calendars_event_changed">Denne hendelsen ble endret et annet sted.</string>
+    <string name="calendars_undo">Angre</string>
+    <string name="calendars_event_resize">Endre sluttid</string>
 </resources>

@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">شروعات جو ٽائيم زون</string>
     <string name="calendars_event_zone_finish">پڄاڻي جو ٽائيم زون</string>
     <string name="calendars_event_timezone">وقت جو زون</string>
+    <string name="calendars_scope_following">هي ۽ ايندڙ</string>
+    <string name="calendars_event_moved">واقعو منتقل ٿيو</string>
+    <string name="calendars_event_changed">هي واقعو ٻئي هنڌ تبديل ٿيو آهي.</string>
+    <string name="calendars_undo">واپس ڪريو</string>
+    <string name="calendars_event_resize">پڄاڻي جو وقت تبديل ڪريو</string>
 </resources>

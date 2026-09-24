@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">ආරම්භක වේලා කලාපය</string>
     <string name="calendars_event_zone_finish">අවසාන වේලා කලාපය</string>
     <string name="calendars_event_timezone">කාල කලාපය</string>
+    <string name="calendars_scope_following">මෙය සහ ඉදිරි ඒවා</string>
+    <string name="calendars_event_moved">සිදුවීම ගෙන යන ලදී</string>
+    <string name="calendars_event_changed">මෙම සිදුවීම වෙනත් තැනක වෙනස් වී ඇත.</string>
+    <string name="calendars_undo">අහෝසි කරන්න</string>
+    <string name="calendars_event_resize">අවසන් වේලාව වෙනස් කරන්න</string>
 </resources>

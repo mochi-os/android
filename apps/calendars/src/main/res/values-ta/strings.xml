@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">தொடக்க நேர மண்டலம்</string>
     <string name="calendars_event_zone_finish">முடிவு நேர மண்டலம்</string>
     <string name="calendars_event_timezone">நேர மண்டலம்</string>
+    <string name="calendars_scope_following">இதுவும் இதற்குப் பின்வருபவையும்</string>
+    <string name="calendars_event_moved">நிகழ்வு நகர்த்தப்பட்டது</string>
+    <string name="calendars_event_changed">இந்த நிகழ்வு வேறு இடத்தில் மாற்றப்பட்டது.</string>
+    <string name="calendars_undo">செயல்தவிர்</string>
+    <string name="calendars_event_resize">முடிவு நேரத்தை மாற்று</string>
 </resources>

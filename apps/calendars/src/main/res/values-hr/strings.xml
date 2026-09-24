@@ -144,4 +144,9 @@
     <string name="calendars_event_zone_start">Vremenska zona početka</string>
     <string name="calendars_event_zone_finish">Vremenska zona završetka</string>
     <string name="calendars_event_timezone">Vremenska zona</string>
+    <string name="calendars_scope_following">Ovaj i sljedeći</string>
+    <string name="calendars_event_moved">Događaj premješten</string>
+    <string name="calendars_event_changed">Ovaj je događaj promijenjen na drugom mjestu.</string>
+    <string name="calendars_undo">Poništi</string>
+    <string name="calendars_event_resize">Promijeni vrijeme završetka</string>
 </resources>

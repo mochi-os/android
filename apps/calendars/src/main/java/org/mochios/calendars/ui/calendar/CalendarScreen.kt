@@ -30,8 +30,10 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -75,6 +77,8 @@ import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
+import org.mochios.calendars.ui.dialogs.ScopeDialog
+import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
 import java.time.LocalDate
 
@@ -102,6 +106,7 @@ fun CalendarScreen(
     val resources = LocalResources.current
 
     var selected by remember { mutableStateOf<Instance?>(null) }
+    var moving by remember { mutableStateOf<Move?>(null) }
     var renaming by remember { mutableStateOf<Calendar?>(null) }
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
@@ -111,17 +116,39 @@ fun CalendarScreen(
     DisposableRefresh(lifecycle) { viewModel.load(refreshing = true, reset = false) }
 
     LaunchedEffect(Unit) {
+        // Each message on its own, so a move's "Undo" waiting to be tapped
+        // does not hold up the next.
         viewModel.events.collect { event ->
-            when (event) {
-                is CalendarEvent.Failed -> snackbar.showSnackbar(event.error.userMessage())
-                is CalendarEvent.Polled -> snackbar.showSnackbar(
-                    resources.getQuantityString(
-                        R.plurals.calendars_polled,
-                        event.changed,
-                        event.changed,
-                    ),
-                )
+            scope.launch {
+                when (event) {
+                    is CalendarEvent.Failed -> snackbar.showSnackbar(event.error.userMessage())
+                    is CalendarEvent.Polled -> snackbar.showSnackbar(
+                        resources.getQuantityString(
+                            R.plurals.calendars_polled,
+                            event.changed,
+                            event.changed,
+                        ),
+                    )
+                    CalendarEvent.Moved -> {
+                        val chosen = snackbar.showSnackbar(
+                            message = resources.getString(R.string.calendars_event_moved),
+                            actionLabel = resources.getString(R.string.calendars_undo),
+                            duration = SnackbarDuration.Long,
+                        )
+                        if (chosen == SnackbarResult.ActionPerformed) viewModel.undo()
+                    }
+                    CalendarEvent.Changed -> snackbar.showSnackbar(resources.getString(R.string.calendars_event_changed))
+                }
             }
+        }
+    }
+
+    // A drag on a repeating occurrence has to say which occurrences it moved.
+    fun request(instance: Instance, run: (Scope) -> Unit) {
+        if (instance.recurring) {
+            moving = Move(instance, run)
+        } else {
+            run(Scope.ALL)
         }
     }
 
@@ -210,12 +237,37 @@ fun CalendarScreen(
                                     }
                                 },
                                 onNewEvent = onNewEvent,
+                                onMove = { instance, start, finish ->
+                                    request(instance) { scope -> viewModel.move(instance, start, finish, scope) }
+                                },
+                                onMoveDay = { instance, day ->
+                                    request(instance) { scope -> viewModel.move(instance, day, scope) }
+                                },
                             )
                         }
                     }
                 }
             }
         }
+    }
+
+    moving?.let { move ->
+        ScopeDialog(
+            deleting = false,
+            onDismiss = { moving = null },
+            onOne = {
+                moving = null
+                move.run(Scope.ONE)
+            },
+            onFollowing = {
+                moving = null
+                move.run(Scope.FOLLOWING)
+            },
+            onAll = {
+                moving = null
+                move.run(Scope.ALL)
+            },
+        )
     }
 
     selected?.let { instance ->
@@ -292,13 +344,23 @@ fun CalendarScreen(
     }
 }
 
-/** The view the state names, drawn from the same occurrence list. */
+/** A dragged repeating occurrence, waiting for the user to say which occurrences move. */
+private class Move(val instance: Instance, val run: (Scope) -> Unit)
+
+/**
+ * The view the state names, drawn from the same occurrence list. [onMove]
+ * is a block dragged or resized in a time grid, with the occurrence's new
+ * ends; [onMoveDay] a chip dropped on a day in a month grid, with the
+ * occurrence's new first day.
+ */
 @Composable
 private fun View(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
     onNewEvent: (Long) -> Unit,
+    onMove: (Instance, Long, Long) -> Unit,
+    onMoveDay: (Instance, LocalDate) -> Unit,
 ) {
     // A tap on a cell names a day and, in a time grid, an hour; the editor
     // wants the moment, measured in the user's own zone rather than the
@@ -313,6 +375,7 @@ private fun View(
             viewModel = viewModel,
             onOpen = onOpen,
             onCreate = { day, hour -> onNewEvent(moment(day, hour)) },
+            onMove = onMove,
         )
         CalendarsSection.WEEK -> {
             val week = viewModel.week(state.anchor)
@@ -324,6 +387,7 @@ private fun View(
                 viewModel = viewModel,
                 onOpen = onOpen,
                 onCreate = { day, hour -> onNewEvent(moment(day, hour)) },
+                onMove = onMove,
             )
         }
         CalendarsSection.MULTIWEEK -> MonthGrid(
@@ -333,6 +397,7 @@ private fun View(
             viewModel = viewModel,
             onOpen = onOpen,
             onCreate = { day -> onNewEvent(moment(day, 9)) },
+            onMove = onMoveDay,
         )
         CalendarsSection.MONTH -> MonthGrid(
             weeks = viewModel.weeks(state),
@@ -341,6 +406,7 @@ private fun View(
             viewModel = viewModel,
             onOpen = onOpen,
             onCreate = { day -> onNewEvent(moment(day, 9)) },
+            onMove = onMoveDay,
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick — only something to search.

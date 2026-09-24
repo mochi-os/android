@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Qallariy pacha suyu</string>
     <string name="calendars_event_zone_finish">Tukukuy pacha suyu</string>
     <string name="calendars_event_timezone">Pacha zona</string>
+    <string name="calendars_scope_following">Kay hinaspa qatiqkuna</string>
+    <string name="calendars_event_moved">Ruwana astasqa</string>
+    <string name="calendars_event_changed">Kay ruwana huk lawpi hukchasqa karqan.</string>
+    <string name="calendars_undo">Kutichiy</string>
+    <string name="calendars_event_resize">Tukuy pachata tikray</string>
 </resources>

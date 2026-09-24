@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">დაწყების დროის სარტყელი</string>
     <string name="calendars_event_zone_finish">დასრულების დროის სარტყელი</string>
     <string name="calendars_event_timezone">დროის სარტყელი</string>
+    <string name="calendars_scope_following">ეს და შემდეგი</string>
+    <string name="calendars_event_moved">ღონისძიება გადატანილია</string>
+    <string name="calendars_event_changed">ეს ღონისძიება სხვაგან შეიცვალა.</string>
+    <string name="calendars_undo">დაბრუნება</string>
+    <string name="calendars_event_resize">დასრულების დროის შეცვლა</string>
 </resources>

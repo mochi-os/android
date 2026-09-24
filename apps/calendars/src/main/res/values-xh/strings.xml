@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Ummandla wexesha lokuqala</string>
     <string name="calendars_event_zone_finish">Ummandla wexesha lokuphela</string>
     <string name="calendars_event_timezone">Ummandla wexesha</string>
+    <string name="calendars_scope_following">Lo nezilandelayo</string>
+    <string name="calendars_event_moved">Umsitho ushenxisiwe</string>
+    <string name="calendars_event_changed">Lo msitho utshintshiwe kwenye indawo.</string>
+    <string name="calendars_undo">Buyisela umva</string>
+    <string name="calendars_event_resize">Tshintsha ixesha lokuphela</string>
 </resources>

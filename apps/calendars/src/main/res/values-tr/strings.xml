@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Başlangıç saat dilimi</string>
     <string name="calendars_event_zone_finish">Bitiş saat dilimi</string>
     <string name="calendars_event_timezone">Saat dilimi</string>
+    <string name="calendars_scope_following">Bu ve sonrakiler</string>
+    <string name="calendars_event_moved">Etkinlik taşındı</string>
+    <string name="calendars_event_changed">Bu etkinlik başka bir yerde değişti.</string>
+    <string name="calendars_undo">Geri al</string>
+    <string name="calendars_event_resize">Bitiş saatini değiştir</string>
 </resources>

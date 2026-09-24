@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">ആരംഭ സമയമേഖല</string>
     <string name="calendars_event_zone_finish">അവസാന സമയമേഖല</string>
     <string name="calendars_event_timezone">സമയ മേഖല</string>
+    <string name="calendars_scope_following">ഇതും തുടർന്നുള്ളവയും</string>
+    <string name="calendars_event_moved">ഇവന്റ് നീക്കി</string>
+    <string name="calendars_event_changed">ഈ ഇവന്റ് മറ്റൊരിടത്ത് മാറിയിട്ടുണ്ട്.</string>
+    <string name="calendars_undo">പഴയപടിയാക്കുക</string>
+    <string name="calendars_event_resize">അവസാനിക്കുന്ന സമയം മാറ്റുക</string>
 </resources>

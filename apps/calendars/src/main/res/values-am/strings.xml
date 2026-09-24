@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">የመጀመሪያ የሰዓት ሰቅ</string>
     <string name="calendars_event_zone_finish">የመጨረሻ የሰዓት ሰቅ</string>
     <string name="calendars_event_timezone">የሰዓት ክልል</string>
+    <string name="calendars_scope_following">ይህ እና ቀጣዮቹ</string>
+    <string name="calendars_event_moved">ክስተት ተንቀሳቅሷል</string>
+    <string name="calendars_event_changed">ይህ ክስተት በሌላ ቦታ ተቀይሯል።</string>
+    <string name="calendars_undo">ቀልብስ</string>
+    <string name="calendars_event_resize">የማብቂያ ሰዓት ይቀይሩ</string>
 </resources>

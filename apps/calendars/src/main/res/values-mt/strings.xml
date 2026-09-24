@@ -150,4 +150,9 @@
     <string name="calendars_event_zone_start">Żona tal-ħin tal-bidu</string>
     <string name="calendars_event_zone_finish">Żona tal-ħin tat-tmiem</string>
     <string name="calendars_event_timezone">Żona ta\' ħin</string>
+    <string name="calendars_scope_following">Dan u dawk ta’ wara</string>
+    <string name="calendars_event_moved">L-avveniment ġie mċaqlaq</string>
+    <string name="calendars_event_changed">Dan l-avveniment inbidel band\'oħra.</string>
+    <string name="calendars_undo">Annulla</string>
+    <string name="calendars_event_resize">Ibdel il-ħin tat-tmiem</string>
 </resources>

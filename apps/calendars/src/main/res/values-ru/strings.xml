@@ -147,4 +147,9 @@
     <string name="calendars_event_zone_start">Часовой пояс начала</string>
     <string name="calendars_event_zone_finish">Часовой пояс окончания</string>
     <string name="calendars_event_timezone">Часовой пояс</string>
+    <string name="calendars_scope_following">Это и последующие</string>
+    <string name="calendars_event_moved">Событие перемещено</string>
+    <string name="calendars_event_changed">Это событие было изменено в другом месте.</string>
+    <string name="calendars_undo">Отменить</string>
+    <string name="calendars_event_resize">Изменить время окончания</string>
 </resources>

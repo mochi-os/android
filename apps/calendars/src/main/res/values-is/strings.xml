@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Tímabelti upphafs</string>
     <string name="calendars_event_zone_finish">Tímabelti loka</string>
     <string name="calendars_event_timezone">Tímabelti</string>
+    <string name="calendars_scope_following">Þessi og þeir sem á eftir koma</string>
+    <string name="calendars_event_moved">Viðburður færður</string>
+    <string name="calendars_event_changed">Þessum viðburði var breytt annars staðar.</string>
+    <string name="calendars_undo">Afturkalla</string>
+    <string name="calendars_event_resize">Breyta lokatíma</string>
 </resources>

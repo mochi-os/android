@@ -12,4 +12,9 @@
     <string name="calendars_sync_title">Sincronizar com este celular</string>
     <string name="calendars_preferences_zones">Mostrar os eventos no próprio fuso horário</string>
     <string name="calendars_event_zone_finish">Fuso horário de término</string>
+    <string name="calendars_scope_following">Este e os seguintes</string>
+    <string name="calendars_event_moved">Evento movido</string>
+    <string name="calendars_event_changed">Este evento foi alterado em outro lugar.</string>
+    <string name="calendars_undo">Desfazer</string>
+    <string name="calendars_event_resize">Alterar o horário de término</string>
 </resources>

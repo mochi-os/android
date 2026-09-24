@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Zona kohore e fillimit</string>
     <string name="calendars_event_zone_finish">Zona kohore e mbarimit</string>
     <string name="calendars_event_timezone">Zona kohore</string>
+    <string name="calendars_scope_following">Kjo dhe ato në vijim</string>
+    <string name="calendars_event_moved">Ngjarja u zhvendos</string>
+    <string name="calendars_event_changed">Kjo ngjarje ndryshoi diku tjetër.</string>
+    <string name="calendars_undo">Zhbëj</string>
+    <string name="calendars_event_resize">Ndrysho orën e përfundimit</string>
 </resources>

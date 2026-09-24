@@ -23,6 +23,15 @@ class ZonesTest {
     }
 
     @Test
+    fun `a sea zone reads as its offset from UTC, the sign the right way round`() {
+        assertEquals("UTC+8", zoneCity("Etc/GMT-8"))
+        assertEquals("UTC-10", zoneCity("Etc/GMT+10"))
+        assertEquals("UTC", zoneCity("Etc/GMT"))
+        assertEquals("UTC+1", zoneCity("Etc/GMT-1"))
+        assertEquals("UTC", zoneCity("Etc/GMT+0"))
+    }
+
+    @Test
     fun `a zone with no slash is its own label`() {
         assertEquals("UTC", zoneCity("UTC"))
     }

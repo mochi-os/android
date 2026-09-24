@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Zòn lè kòmansman</string>
     <string name="calendars_event_zone_finish">Zòn lè fen</string>
     <string name="calendars_event_timezone">Zòn lè</string>
+    <string name="calendars_scope_following">Sa a ak sa k ap vini yo</string>
+    <string name="calendars_event_moved">Evènman deplase</string>
+    <string name="calendars_event_changed">Evènman sa a chanje yon lòt kote.</string>
+    <string name="calendars_undo">Anile</string>
+    <string name="calendars_event_resize">Chanje lè fen an</string>
 </resources>

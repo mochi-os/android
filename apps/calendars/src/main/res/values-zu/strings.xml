@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Indawo yesikhathi sokuqala</string>
     <string name="calendars_event_zone_finish">Indawo yesikhathi sokuphela</string>
     <string name="calendars_event_timezone">Izoni yesikhathi</string>
+    <string name="calendars_scope_following">Lo nalandelayo</string>
+    <string name="calendars_event_moved">Umcimbi uhanjisiwe</string>
+    <string name="calendars_event_changed">Lo mcimbi ushintshe kwenye indawo.</string>
+    <string name="calendars_undo">Hlehlisa</string>
+    <string name="calendars_event_resize">Shintsha isikhathi sokuphela</string>
 </resources>

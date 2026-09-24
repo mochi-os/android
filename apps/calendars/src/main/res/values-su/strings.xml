@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">Zona waktu mimiti</string>
     <string name="calendars_event_zone_finish">Zona waktu réngsé</string>
     <string name="calendars_event_timezone">Zona waktos</string>
+    <string name="calendars_scope_following">Ieu jeung saterusna</string>
+    <string name="calendars_event_moved">Acara dipindahkeun</string>
+    <string name="calendars_event_changed">Acara ieu robah di tempat séjén.</string>
+    <string name="calendars_undo">Bolaykeun</string>
+    <string name="calendars_event_resize">Robah waktu réngsé</string>
 </resources>

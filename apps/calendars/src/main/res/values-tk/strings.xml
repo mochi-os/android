@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Başlangyç wagt zolagy</string>
     <string name="calendars_event_zone_finish">Soňky wagt zolagy</string>
     <string name="calendars_event_timezone">Wagt zonasy</string>
+    <string name="calendars_scope_following">Şu we indikiler</string>
+    <string name="calendars_event_moved">Çäre geçirildi</string>
+    <string name="calendars_event_changed">Bu çäre başga ýerde üýtgedildi.</string>
+    <string name="calendars_undo">Yzyna gaýtar</string>
+    <string name="calendars_event_resize">Gutarýan wagtyny üýtget</string>
 </resources>

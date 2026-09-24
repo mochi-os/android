@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Սկզբի ժամային գոտի</string>
     <string name="calendars_event_zone_finish">Ավարտի ժամային գոտի</string>
     <string name="calendars_event_timezone">Ժամային գոտի</string>
+    <string name="calendars_scope_following">Այս և հաջորդները</string>
+    <string name="calendars_event_moved">Միջոցառումը տեղափոխվեց</string>
+    <string name="calendars_event_changed">Այս միջոցառումը փոփոխվել է այլ տեղում։</string>
+    <string name="calendars_undo">Հետարկել</string>
+    <string name="calendars_event_resize">Փոխել ավարտի ժամը</string>
 </resources>

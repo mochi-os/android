@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Эхлэх цагийн бүс</string>
     <string name="calendars_event_zone_finish">Дуусах цагийн бүс</string>
     <string name="calendars_event_timezone">Цагийн бүс</string>
+    <string name="calendars_scope_following">Энэ болон дараагийнх</string>
+    <string name="calendars_event_moved">Үйл явдал зөөгдлөө</string>
+    <string name="calendars_event_changed">Энэ үйл явдал өөр газар өөрчлөгдсөн.</string>
+    <string name="calendars_undo">Буцаах</string>
+    <string name="calendars_event_resize">Дуусах цагийг өөрчлөх</string>
 </resources>

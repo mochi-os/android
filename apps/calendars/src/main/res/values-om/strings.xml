@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Naannoo yeroo jalqabaa</string>
     <string name="calendars_event_zone_finish">Naannoo yeroo xumuraa</string>
     <string name="calendars_event_timezone">Naannoo yeroo</string>
+    <string name="calendars_scope_following">Kana fi kanneen itti aanan</string>
+    <string name="calendars_event_moved">Taateen sochoofame</string>
+    <string name="calendars_event_changed">Taateen kun bakka biraatti jijjiirame.</string>
+    <string name="calendars_undo">Duubatti deebisi</string>
+    <string name="calendars_event_resize">Yeroo xumuraa jijjiiri</string>
 </resources>

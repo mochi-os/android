@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Fuso horario de inicio</string>
     <string name="calendars_event_zone_finish">Fuso horario de fin</string>
     <string name="calendars_event_timezone">Fuso horario</string>
+    <string name="calendars_scope_following">Este e os seguintes</string>
+    <string name="calendars_event_moved">Evento movido</string>
+    <string name="calendars_event_changed">Este evento cambiou noutro lugar.</string>
+    <string name="calendars_undo">Desfacer</string>
+    <string name="calendars_event_resize">Cambiar a hora de finalización</string>
 </resources>

@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Herêma demê ya destpêkê</string>
     <string name="calendars_event_zone_finish">Herêma demê ya dawiyê</string>
     <string name="calendars_event_timezone">Cona demê</string>
+    <string name="calendars_scope_following">Ev û yên piştî wê</string>
+    <string name="calendars_event_moved">Bûyer hate veguhastin</string>
+    <string name="calendars_event_changed">Ev bûyer li cihekî din hate guhertin.</string>
+    <string name="calendars_undo">Vegerîne</string>
+    <string name="calendars_event_resize">Dema dawîbûnê biguherîne</string>
 </resources>

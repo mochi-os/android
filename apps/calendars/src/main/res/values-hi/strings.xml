@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">आरंभ का समय क्षेत्र</string>
     <string name="calendars_event_zone_finish">समाप्ति का समय क्षेत्र</string>
     <string name="calendars_event_timezone">टाइम ज़ोन</string>
+    <string name="calendars_scope_following">यह और आगे के</string>
+    <string name="calendars_event_moved">इवेंट ले जाया गया</string>
+    <string name="calendars_event_changed">यह इवेंट कहीं और बदल गया है।</string>
+    <string name="calendars_undo">पूर्ववत करें</string>
+    <string name="calendars_event_resize">समाप्ति समय बदलें</string>
 </resources>

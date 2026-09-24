@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Yankin lokacin farawa</string>
     <string name="calendars_event_zone_finish">Yankin lokacin ƙarewa</string>
     <string name="calendars_event_timezone">Yankin lokaci</string>
+    <string name="calendars_scope_following">Wannan da na gaba</string>
+    <string name="calendars_event_moved">An matsar da taron</string>
+    <string name="calendars_event_changed">An canza wannan taron a wani wuri.</string>
+    <string name="calendars_undo">Gyara baya</string>
+    <string name="calendars_event_resize">Canja lokacin ƙarewa</string>
 </resources>

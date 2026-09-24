@@ -77,7 +77,12 @@
     <string name="calendars_scope_edit">Change this event or all events?</string>
     <string name="calendars_scope_delete">Delete this event or all events?</string>
     <string name="calendars_scope_one">This event</string>
+    <string name="calendars_scope_following">This and following</string>
     <string name="calendars_scope_all">All events</string>
+    <string name="calendars_event_resize">Change end time</string>
+    <string name="calendars_event_moved">Event moved</string>
+    <string name="calendars_event_changed">This event changed somewhere else.</string>
+    <string name="calendars_undo">Undo</string>
 
     <!-- Repeat -->
     <string name="calendars_repeat_never">Never</string>

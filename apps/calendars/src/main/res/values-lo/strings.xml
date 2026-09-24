@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">ເຂດເວລາເລີ່ມຕົ້ນ</string>
     <string name="calendars_event_zone_finish">ເຂດເວລາສິ້ນສຸດ</string>
     <string name="calendars_event_timezone">ເຂດເວລາ</string>
+    <string name="calendars_scope_following">ອັນນີ້ ແລະ ອັນຕໍ່ໄປ</string>
+    <string name="calendars_event_moved">ຍ້າຍເຫດການແລ້ວ</string>
+    <string name="calendars_event_changed">ເຫດການນີ້ຖືກປ່ຽນແປງຢູ່ບ່ອນອື່ນ</string>
+    <string name="calendars_undo">ຍົກເລີກ</string>
+    <string name="calendars_event_resize">ປ່ຽນເວລາສິ້ນສຸດ</string>
 </resources>

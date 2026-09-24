@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Qalltañ pacha chiqa</string>
     <string name="calendars_event_zone_finish">Tukuyañ pacha chiqa</string>
     <string name="calendars_event_timezone">Pacha jakhuna</string>
+    <string name="calendars_scope_following">Akata ukat jutirinaka</string>
+    <string name="calendars_event_moved">Lurawi unuqtayatawa</string>
+    <string name="calendars_event_changed">Aka lurawix yaqha chiqan turkatawa.</string>
+    <string name="calendars_undo">Kutikipaña</string>
+    <string name="calendars_event_resize">Tukuyaña pacha mayjt\'ayaña</string>
 </resources>

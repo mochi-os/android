@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">શરૂઆતનો સમય ઝોન</string>
     <string name="calendars_event_zone_finish">અંતનો સમય ઝોન</string>
     <string name="calendars_event_timezone">સમય ઝોન</string>
+    <string name="calendars_scope_following">આ અને પછીના</string>
+    <string name="calendars_event_moved">ઇવેન્ટ ખસેડાયું</string>
+    <string name="calendars_event_changed">આ ઇવેન્ટ બીજે ક્યાંક બદલાયું છે.</string>
+    <string name="calendars_undo">પૂર્વવત્ કરો</string>
+    <string name="calendars_event_resize">સમાપ્તિ સમય બદલો</string>
 </resources>

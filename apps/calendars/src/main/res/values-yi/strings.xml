@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">צײַט־זאָנע פֿון אָנהייב</string>
     <string name="calendars_event_zone_finish">צײַט־זאָנע פֿון סוף</string>
     <string name="calendars_event_timezone">צײַט־זאָנע</string>
+    <string name="calendars_scope_following">די און די קומענדיקע</string>
+    <string name="calendars_event_moved">געשעעניש פֿאַררוקט</string>
+    <string name="calendars_event_changed">די געשעעניש איז געביטן געוואָרן ערגעץ אַנדערש.</string>
+    <string name="calendars_undo">אָפּטאָן</string>
+    <string name="calendars_event_resize">ענדערן די סוף־צײַט</string>
 </resources>

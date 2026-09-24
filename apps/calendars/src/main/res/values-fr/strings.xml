@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Fuseau horaire de début</string>
     <string name="calendars_event_zone_finish">Fuseau horaire de fin</string>
     <string name="calendars_event_timezone">Fuseau horaire</string>
+    <string name="calendars_scope_following">Celui-ci et les suivants</string>
+    <string name="calendars_event_moved">Événement déplacé</string>
+    <string name="calendars_event_changed">Cet événement a été modifié ailleurs.</string>
+    <string name="calendars_undo">Annuler</string>
+    <string name="calendars_event_resize">Modifier l\'heure de fin</string>
 </resources>

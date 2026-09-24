@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">เขตเวลาเริ่มต้น</string>
     <string name="calendars_event_zone_finish">เขตเวลาสิ้นสุด</string>
     <string name="calendars_event_timezone">เขตเวลา</string>
+    <string name="calendars_scope_following">กิจกรรมนี้และกิจกรรมถัดไป</string>
+    <string name="calendars_event_moved">ย้ายกิจกรรมแล้ว</string>
+    <string name="calendars_event_changed">กิจกรรมนี้ถูกเปลี่ยนแปลงจากที่อื่น</string>
+    <string name="calendars_undo">เลิกทำ</string>
+    <string name="calendars_event_resize">เปลี่ยนเวลาสิ้นสุด</string>
 </resources>

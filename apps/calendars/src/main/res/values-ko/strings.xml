@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">시작 시간대</string>
     <string name="calendars_event_zone_finish">종료 시간대</string>
     <string name="calendars_event_timezone">시간대</string>
+    <string name="calendars_scope_following">이 일정 및 이후 일정</string>
+    <string name="calendars_event_moved">일정이 이동되었어요</string>
+    <string name="calendars_event_changed">이 일정이 다른 곳에서 변경되었어요.</string>
+    <string name="calendars_undo">실행 취소</string>
+    <string name="calendars_event_resize">종료 시간 변경</string>
 </resources>

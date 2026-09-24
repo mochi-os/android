@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Zona horaria de inicio</string>
     <string name="calendars_event_zone_finish">Zona horaria de fin</string>
     <string name="calendars_event_timezone">Zona horaria</string>
+    <string name="calendars_scope_following">Este y los siguientes</string>
+    <string name="calendars_event_moved">Evento movido</string>
+    <string name="calendars_event_changed">Este evento cambió en otro sitio.</string>
+    <string name="calendars_undo">Deshacer</string>
+    <string name="calendars_event_resize">Cambiar la hora de finalización</string>
 </resources>

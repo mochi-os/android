@@ -150,4 +150,9 @@
     <string name="calendars_event_zone_start">Crios ama tosaithe</string>
     <string name="calendars_event_zone_finish">Crios ama críochnaithe</string>
     <string name="calendars_event_timezone">Crios ama</string>
+    <string name="calendars_scope_following">An ceann seo agus na cinn ina dhiaidh</string>
+    <string name="calendars_event_moved">Imeacht bogtha</string>
+    <string name="calendars_event_changed">Athraíodh an t-imeacht seo áit éigin eile.</string>
+    <string name="calendars_undo">Cealaigh</string>
+    <string name="calendars_event_resize">Athraigh an t-am críochnaithe</string>
 </resources>

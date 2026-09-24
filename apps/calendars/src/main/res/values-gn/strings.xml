@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Ñepyrũ aravo renda</string>
     <string name="calendars_event_zone_finish">Paha aravo renda</string>
     <string name="calendars_event_timezone">Aravo zona</string>
+    <string name="calendars_scope_following">Kóva ha upe rire oúva</string>
+    <string name="calendars_event_moved">Evento oñemongu\'e</string>
+    <string name="calendars_event_changed">Ko evento oñemoambue ambue hendápe.</string>
+    <string name="calendars_undo">Ejevy</string>
+    <string name="calendars_event_resize">Opa aravo moambue</string>
 </resources>

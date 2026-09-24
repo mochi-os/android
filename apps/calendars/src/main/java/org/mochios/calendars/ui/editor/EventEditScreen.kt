@@ -274,6 +274,7 @@ fun EventEditScreen(
             deleting = uiState.prompt == Prompt.DELETE,
             onDismiss = viewModel::dismiss,
             onOne = { viewModel.scope(Scope.ONE) },
+            onFollowing = { viewModel.scope(Scope.FOLLOWING) },
             onAll = { viewModel.scope(Scope.ALL) },
         )
     }
@@ -472,7 +473,8 @@ private fun ZoneDialog(
                 LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 360.dp)) {
                     items(shown, key = { it }) { zone ->
                         Text(
-                            text = zone,
+                            // A sea zone is its offset from UTC, which is its whole name.
+                            text = if (zone.startsWith("Etc/GMT")) zoneCity(zone) else zone,
                             style = MaterialTheme.typography.bodyMedium,
                             color = if (zone == selected) {
                                 MaterialTheme.colorScheme.primary

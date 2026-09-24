@@ -8,12 +8,14 @@ package org.mochios.calendars.ui.calendar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -21,6 +23,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
@@ -30,24 +33,48 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.LayoutCoordinates
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInRoot
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import java.time.LocalDate
+import java.time.temporal.ChronoUnit
+import kotlin.math.roundToInt
 
 /** How many chips a cell shows before it collapses the rest into "+N more". */
 private const val CHIPS = 3
+
+/**
+ * A chip lifted by a long press: which occurrence, the day of the cell it
+ * was lifted from, where in the chip the finger took it, and the chip's
+ * width in pixels, which the chip carried under the finger keeps.
+ */
+private data class Hold(val instance: Instance, val day: LocalDate, val grab: Offset, val width: Float)
 
 /**
  * The month and multiweek views: [weeks] rows of seven days, each cell
@@ -56,7 +83,10 @@ private const val CHIPS = 3
  * reads the same.
  *
  * A tap on a chip opens its summary, a tap on empty cell space starts an
- * event on that day, and the day number opens the day view.
+ * event on that day, and the day number opens the day view. A long press
+ * lifts a chip, which then follows the finger from cell to cell; letting go
+ * on another day asks [onMove] to move the occurrence so that its first day
+ * moves by as many days.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,6 +97,7 @@ fun MonthGrid(
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
     onCreate: (LocalDate) -> Unit,
+    onMove: (Instance, LocalDate) -> Unit,
 ) {
     val today = LocalDate.now(viewModel.timezone())
     var listing by remember { mutableStateOf<LocalDate?>(null) }
@@ -75,38 +106,81 @@ fun MonthGrid(
             .associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Row(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
-            for (offset in 0 until 7) {
-                Text(
-                    text = weekdayLabel(weeks.first().plusDays(offset.toLong())),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f),
-                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                )
-            }
-        }
-        HorizontalDivider()
-        for (week in weeks) {
-            Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
+    // The lifted chip, the finger and every cell's bounds, all in the root's
+    // coordinates; the grid's own origin turns the finger into where the
+    // carried chip is drawn.
+    var lift by remember { mutableStateOf<Hold?>(null) }
+    var finger by remember { mutableStateOf(Offset.Zero) }
+    var origin by remember { mutableStateOf(Offset.Zero) }
+    val cells = remember { mutableStateMapOf<LocalDate, Rect>() }
+    fun under(): LocalDate? = cells.entries.firstOrNull { it.value.contains(finger) }?.key
+    val target = if (lift != null) under() else null
+    val density = LocalDensity.current
+
+    Box(modifier = Modifier.fillMaxSize().onGloballyPositioned { origin = it.positionInRoot() }) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                 for (offset in 0 until 7) {
-                    val day = week.plusDays(offset.toLong())
-                    val occurrences = byDay[day].orEmpty()
-                    Cell(
-                        day = day,
-                        today = today,
-                        outside = month != null && day.monthValue != month,
-                        instances = occurrences,
+                    Text(
+                        text = weekdayLabel(weeks.first().plusDays(offset.toLong())),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.weight(1f),
-                        onDay = { viewModel.open(day) },
-                        onCreate = { onCreate(day) },
-                        onOpen = onOpen,
-                        onMore = { listing = day },
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     )
                 }
             }
             HorizontalDivider()
+            for (week in weeks) {
+                Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                    for (offset in 0 until 7) {
+                        val day = week.plusDays(offset.toLong())
+                        val occurrences = byDay[day].orEmpty()
+                        Cell(
+                            day = day,
+                            today = today,
+                            outside = month != null && day.monthValue != month,
+                            instances = occurrences,
+                            lifted = lift?.instance,
+                            targeted = target == day && lift?.day != day,
+                            modifier = Modifier.weight(1f),
+                            onDay = { viewModel.open(day) },
+                            onCreate = { onCreate(day) },
+                            onOpen = onOpen,
+                            onMore = { listing = day },
+                            onPlaced = { cells[day] = it },
+                            onLift = { instance, grab, width -> lift = Hold(instance, day, grab, width) },
+                            onDrag = { finger = it },
+                            onDrop = {
+                                val lifted = lift
+                                lift = null
+                                val dropped = under()
+                                if (lifted != null && dropped != null && dropped != lifted.day) {
+                                    val shift = ChronoUnit.DAYS.between(lifted.day, dropped)
+                                    onMove(lifted.instance, viewModel.day(lifted.instance).plusDays(shift))
+                                }
+                            },
+                            onCancel = { lift = null },
+                        )
+                    }
+                }
+                HorizontalDivider()
+            }
+        }
+        lift?.let { lifted ->
+            Box(
+                modifier = Modifier
+                    .offset {
+                        IntOffset(
+                            (finger.x - origin.x - lifted.grab.x).roundToInt(),
+                            (finger.y - origin.y - lifted.grab.y).roundToInt(),
+                        )
+                    }
+                    .width(with(density) { lifted.width.toDp() })
+                    .zIndex(1f),
+            ) {
+                Chip(lifted.instance, Modifier.fillMaxWidth().shadow(6.dp, RoundedCornerShape(4.dp))) {}
+            }
         }
     }
 
@@ -136,16 +210,29 @@ private fun Cell(
     today: LocalDate,
     outside: Boolean,
     instances: List<Instance>,
+    lifted: Instance?,
+    targeted: Boolean,
     modifier: Modifier,
     onDay: () -> Unit,
     onCreate: () -> Unit,
     onOpen: (Instance) -> Unit,
     onMore: () -> Unit,
+    onPlaced: (Rect) -> Unit,
+    onLift: (Instance, Offset, Float) -> Unit,
+    onDrag: (Offset) -> Unit,
+    onDrop: () -> Unit,
+    onCancel: () -> Unit,
 ) {
     val current = day == today
+    val tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
     Column(
         modifier = modifier
             .fillMaxSize()
+            .onGloballyPositioned {
+                val at = it.positionInRoot()
+                onPlaced(Rect(at.x, at.y, at.x + it.size.width, at.y + it.size.height))
+            }
+            .then(if (targeted) Modifier.background(tint) else Modifier)
             .clickable(onClick = onCreate),
     ) {
         // Today's number sits inside a band in the primary colour across the
@@ -179,7 +266,12 @@ private fun Cell(
             verticalArrangement = Arrangement.spacedBy(1.dp),
         ) {
             for (instance in instances.take(CHIPS)) {
-                Chip(instance, Modifier.fillMaxWidth().padding(top = 1.dp)) { onOpen(instance) }
+                val own = lifted != null && lifted.event == instance.event && lifted.start == instance.start
+                Chip(
+                    instance,
+                    Modifier.fillMaxWidth().padding(top = 1.dp).alpha(if (own) 0.4f else 1f),
+                    lift = Modifier.lift(instance, onLift, onDrag, onDrop, onCancel),
+                ) { onOpen(instance) }
             }
             if (instances.size > CHIPS) {
                 Text(
@@ -195,6 +287,46 @@ private fun Cell(
             }
         }
     }
+}
+
+/**
+ * A long press lifts the chip, with where in it the finger is and its
+ * width; the finger is then reported in the root's coordinates. The lift
+ * and the drag consume their events, so the chip's tap and the cell's do
+ * not also run. A read-only occurrence, and a birthday, cannot be lifted.
+ */
+@Composable
+private fun Modifier.lift(
+    instance: Instance,
+    onLift: (Instance, Offset, Float) -> Unit,
+    onDrag: (Offset) -> Unit,
+    onDrop: () -> Unit,
+    onCancel: () -> Unit,
+): Modifier {
+    if (!instance.editable) return this
+    val haptic = LocalHapticFeedback.current
+    var coordinates by remember { mutableStateOf<LayoutCoordinates?>(null) }
+    val lift by rememberUpdatedState(onLift)
+    val drag by rememberUpdatedState(onDrag)
+    val drop by rememberUpdatedState(onDrop)
+    val cancel by rememberUpdatedState(onCancel)
+    return this
+        .onGloballyPositioned { coordinates = it }
+        .pointerInput(instance.event, instance.start) {
+            detectDragGesturesAfterLongPress(
+                onDragStart = { position ->
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    lift(instance, position, size.width.toFloat())
+                    drag(coordinates?.localToRoot(position) ?: position)
+                },
+                onDrag = { change, _ ->
+                    change.consume()
+                    drag(coordinates?.localToRoot(change.position) ?: change.position)
+                },
+                onDragEnd = { drop() },
+                onDragCancel = { cancel() },
+            )
+        }
 }
 
 /**

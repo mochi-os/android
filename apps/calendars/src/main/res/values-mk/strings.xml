@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Временска зона на почетокот</string>
     <string name="calendars_event_zone_finish">Временска зона на крајот</string>
     <string name="calendars_event_timezone">Временска зона</string>
+    <string name="calendars_scope_following">Овој и следните</string>
+    <string name="calendars_event_moved">Настанот е преместен</string>
+    <string name="calendars_event_changed">Овој настан е променет на друго место.</string>
+    <string name="calendars_undo">Поништи</string>
+    <string name="calendars_event_resize">Промени го времето на завршување</string>
 </resources>

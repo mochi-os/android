@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Başlanğıc saat qurşağı</string>
     <string name="calendars_event_zone_finish">Bitmə saat qurşağı</string>
     <string name="calendars_event_timezone">Saat qurşağı</string>
+    <string name="calendars_scope_following">Bu və sonrakılar</string>
+    <string name="calendars_event_moved">Tədbir köçürüldü</string>
+    <string name="calendars_event_changed">Bu tədbir başqa yerdə dəyişdirilib.</string>
+    <string name="calendars_undo">Geri qaytar</string>
+    <string name="calendars_event_resize">Bitmə vaxtını dəyişin</string>
 </resources>

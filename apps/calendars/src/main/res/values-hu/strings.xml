@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Kezdés időzónája</string>
     <string name="calendars_event_zone_finish">Befejezés időzónája</string>
     <string name="calendars_event_timezone">Időzóna</string>
+    <string name="calendars_scope_following">Ez és a következők</string>
+    <string name="calendars_event_moved">Esemény áthelyezve</string>
+    <string name="calendars_event_changed">Ez az esemény máshol megváltozott.</string>
+    <string name="calendars_undo">Visszavonás</string>
+    <string name="calendars_event_resize">Befejezés időpontjának módosítása</string>
 </resources>

@@ -153,4 +153,9 @@
     <string name="calendars_event_zone_start">المنطقة الزمنية للبداية</string>
     <string name="calendars_event_zone_finish">المنطقة الزمنية للنهاية</string>
     <string name="calendars_event_timezone">المنطقة الزمنية</string>
+    <string name="calendars_scope_following">هذا والأحداث التالية</string>
+    <string name="calendars_event_moved">تم نقل الحدث</string>
+    <string name="calendars_event_changed">تغيّر هذا الحدث في مكان آخر.</string>
+    <string name="calendars_undo">تراجع</string>
+    <string name="calendars_event_resize">تغيير وقت الانتهاء</string>
 </resources>

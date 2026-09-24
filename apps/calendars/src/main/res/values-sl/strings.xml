@@ -147,4 +147,9 @@
     <string name="calendars_event_zone_start">Časovni pas začetka</string>
     <string name="calendars_event_zone_finish">Časovni pas konca</string>
     <string name="calendars_event_timezone">Časovni pas</string>
+    <string name="calendars_scope_following">Ta in naslednji</string>
+    <string name="calendars_event_moved">Dogodek premaknjen</string>
+    <string name="calendars_event_changed">Ta dogodek se je spremenil drugje.</string>
+    <string name="calendars_undo">Razveljavi</string>
+    <string name="calendars_event_resize">Spremeni čas konca</string>
 </resources>

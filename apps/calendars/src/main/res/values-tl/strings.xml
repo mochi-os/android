@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Time zone ng simula</string>
     <string name="calendars_event_zone_finish">Time zone ng wakas</string>
     <string name="calendars_event_timezone">Time zone</string>
+    <string name="calendars_scope_following">Ito at ang mga susunod</string>
+    <string name="calendars_event_moved">Nailipat ang kaganapan</string>
+    <string name="calendars_event_changed">Nabago ang kaganapang ito sa ibang lugar.</string>
+    <string name="calendars_undo">I-undo</string>
+    <string name="calendars_event_resize">Baguhin ang oras ng pagtatapos</string>
 </resources>

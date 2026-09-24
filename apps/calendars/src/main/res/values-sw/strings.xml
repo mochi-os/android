@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Saa za eneo la kuanza</string>
     <string name="calendars_event_zone_finish">Saa za eneo la kumaliza</string>
     <string name="calendars_event_timezone">Saa za eneo</string>
+    <string name="calendars_scope_following">Hili na yanayofuata</string>
+    <string name="calendars_event_moved">Tukio limehamishwa</string>
+    <string name="calendars_event_changed">Tukio hili limebadilishwa mahali pengine.</string>
+    <string name="calendars_undo">Tendua</string>
+    <string name="calendars_event_resize">Badilisha muda wa kumaliza</string>
 </resources>

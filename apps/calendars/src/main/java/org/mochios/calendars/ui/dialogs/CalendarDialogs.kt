@@ -31,6 +31,8 @@ import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiButtonTone
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
@@ -291,17 +293,20 @@ fun reminderOptions(): List<Pair<String, String>> = listOf(
 )
 
 /**
- * "This event" or "All events" for a recurring occurrence. An override
- * changes or removes the one occurrence; the whole series changes or removes
- * every one of them.
+ * "This event", "This and following" or "All events" for a recurring
+ * occurrence. An override changes or removes the one occurrence; the series
+ * cut at it changes or removes it and every one after it; the whole series
+ * changes or removes every one of them.
  */
 @Composable
 fun ScopeDialog(
     deleting: Boolean,
     onDismiss: () -> Unit,
     onOne: () -> Unit,
+    onFollowing: () -> Unit,
     onAll: () -> Unit,
 ) {
+    val tone = if (deleting) MochiButtonTone.Destructive else MochiButtonTone.Primary
     MochiAlertDialog(
         onDismissRequest = onDismiss,
         title = if (deleting) {
@@ -309,11 +314,20 @@ fun ScopeDialog(
         } else {
             stringResource(R.string.calendars_scope_edit)
         },
-        confirmText = stringResource(R.string.calendars_scope_one),
-        onConfirm = onOne,
-        destructive = deleting,
-        dismissText = stringResource(R.string.calendars_scope_all),
-        onDismiss = onAll,
+        dismissText = stringResource(MochiR.string.common_cancel),
+        content = {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                for ((label, choose) in listOf(
+                    R.string.calendars_scope_one to onOne,
+                    R.string.calendars_scope_following to onFollowing,
+                    R.string.calendars_scope_all to onAll,
+                )) {
+                    MochiOutlinedButton(onClick = choose, tone = tone, modifier = Modifier.fillMaxWidth()) {
+                        Text(stringResource(label))
+                    }
+                }
+            }
+        },
     )
 }
 

@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Zeitzone des Beginns</string>
     <string name="calendars_event_zone_finish">Zeitzone des Endes</string>
     <string name="calendars_event_timezone">Zeitzone</string>
+    <string name="calendars_scope_following">Diesen und folgende</string>
+    <string name="calendars_event_moved">Termin verschoben</string>
+    <string name="calendars_event_changed">Dieser Termin wurde anderswo geändert.</string>
+    <string name="calendars_undo">Rückgängig</string>
+    <string name="calendars_event_resize">Endzeit ändern</string>
 </resources>

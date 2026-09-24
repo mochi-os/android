@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">منطقهٔ زمانی شروع</string>
     <string name="calendars_event_zone_finish">منطقهٔ زمانی پایان</string>
     <string name="calendars_event_timezone">منطقه زمانی</string>
+    <string name="calendars_scope_following">این و بعدی‌ها</string>
+    <string name="calendars_event_moved">رویداد جابه‌جا شد</string>
+    <string name="calendars_event_changed">این رویداد در جای دیگری تغییر کرده است.</string>
+    <string name="calendars_undo">واگرد</string>
+    <string name="calendars_event_resize">تغییر زمان پایان</string>
 </resources>

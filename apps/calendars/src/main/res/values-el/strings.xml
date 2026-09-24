@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Ζώνη ώρας έναρξης</string>
     <string name="calendars_event_zone_finish">Ζώνη ώρας λήξης</string>
     <string name="calendars_event_timezone">Ζώνη ώρας</string>
+    <string name="calendars_scope_following">Αυτό και τα επόμενα</string>
+    <string name="calendars_event_moved">Το συμβάν μετακινήθηκε</string>
+    <string name="calendars_event_changed">Αυτό το συμβάν άλλαξε κάπου αλλού.</string>
+    <string name="calendars_undo">Αναίρεση</string>
+    <string name="calendars_event_resize">Αλλαγή ώρας λήξης</string>
 </resources>

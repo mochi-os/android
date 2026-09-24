@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Tijdzone van het begin</string>
     <string name="calendars_event_zone_finish">Tijdzone van het einde</string>
     <string name="calendars_event_timezone">Tijdzone</string>
+    <string name="calendars_scope_following">Deze en volgende</string>
+    <string name="calendars_event_moved">Afspraak verplaatst</string>
+    <string name="calendars_event_changed">Deze afspraak is ergens anders gewijzigd.</string>
+    <string name="calendars_undo">Ongedaan maken</string>
+    <string name="calendars_event_resize">Eindtijd wijzigen</string>
 </resources>

@@ -138,4 +138,9 @@
     <string name="calendars_event_zone_start">စတင်ချိန် အချိန်ဇုန်</string>
     <string name="calendars_event_zone_finish">ပြီးဆုံးချိန် အချိန်ဇုန်</string>
     <string name="calendars_event_timezone">အချိန်ဇုန်</string>
+    <string name="calendars_scope_following">ဤအစီအစဉ်နှင့် နောက်ပိုင်းများ</string>
+    <string name="calendars_event_moved">အစီအစဉ် ရွှေ့ပြီးပါပြီ</string>
+    <string name="calendars_event_changed">ဤအစီအစဉ်ကို အခြားနေရာတွင် ပြောင်းလဲထားသည်။</string>
+    <string name="calendars_undo">ပြန်ဖျက်မည်</string>
+    <string name="calendars_event_resize">ပြီးဆုံးချိန် ပြောင်းရန်</string>
 </resources>

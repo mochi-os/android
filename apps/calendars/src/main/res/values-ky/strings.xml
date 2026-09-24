@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">Башталуу убакыт алкагы</string>
     <string name="calendars_event_zone_finish">Аяктоо убакыт алкагы</string>
     <string name="calendars_event_timezone">Убакыт алкагы</string>
+    <string name="calendars_scope_following">Бул жана кийинкилер</string>
+    <string name="calendars_event_moved">Иш-чара жылдырылды</string>
+    <string name="calendars_event_changed">Бул иш-чара башка жерде өзгөртүлдү.</string>
+    <string name="calendars_undo">Жокко чыгаруу</string>
+    <string name="calendars_event_resize">Аяктоо убактысын өзгөртүү</string>
 </resources>

@@ -29,12 +29,22 @@ import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.repository.CalendarsRepository
+import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
+import org.mochios.calendars.ui.editor.EventForm
+import org.mochios.calendars.ui.editor.Scope
+import org.mochios.calendars.ui.editor.advanced
+import org.mochios.calendars.ui.editor.components
+import org.mochios.calendars.ui.editor.draft
+import org.mochios.calendars.ui.editor.instant
+import org.mochios.calendars.ui.editor.matches
+import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
 /**
@@ -81,11 +91,16 @@ data class LinkState(
     val busy: Boolean = false,
 )
 
-/** Whether a delete takes one occurrence or the whole series. */
 /** Something the screen has to say once rather than hold in its state. */
 sealed class CalendarEvent {
     data class Failed(val error: MochiError) : CalendarEvent()
     data class Polled(val changed: Int) : CalendarEvent()
+
+    /** An occurrence was moved, and [CalendarViewModel.undo] puts it back. */
+    data object Moved : CalendarEvent()
+
+    /** The event changed elsewhere since it was read, so nothing was written. */
+    data object Changed : CalendarEvent()
 }
 
 @HiltViewModel
@@ -394,6 +409,109 @@ class CalendarViewModel @Inject constructor(
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
         load(refreshing = true)
+    }
+
+    // ---- moving an occurrence ----
+
+    /** How to put the last move back, until another move replaces it. */
+    private var undo: (suspend () -> Unit)? = null
+
+    /**
+     * A block dragged or resized in the day and week views: the occurrence
+     * now runs from [start] to [finish], epoch seconds. The stored event
+     * moves by as far as the occurrence did, so a whole series shifts
+     * rather than jumping onto the occurrence, and takes the new length.
+     */
+    fun move(instance: Instance, start: Long, finish: Long, scope: Scope) = rewrite(instance, scope) { form ->
+        val begins = instant(form, zone.id) + (start - instance.start)
+        form.copy(allday = false, start = begins, finish = begins + (finish - start))
+    }
+
+    /**
+     * A chip dragged onto another day in the month and multiweek views: the
+     * occurrence's first day is now [day], and the stored event moves by as
+     * many days, each end keeping its clock reading.
+     */
+    fun move(instance: Instance, day: LocalDate, scope: Scope) = rewrite(instance, scope) { form ->
+        advanced(form, ChronoUnit.DAYS.between(day(instance), day))
+    }
+
+    /**
+     * Rewrites the stored event for a drag. The event is read first: a move
+     * rewrites the same component the editor would, so a series keeps its
+     * rule and an override keeps being an override. The draft a [change]
+     * starts from is the whole series' master, one occurrence's own override
+     * or, failing one, the master moved onto the occurrence, so a change by
+     * a day or an hour lands where the occurrence is rather than where the
+     * series began. Every write says what it did, with a way back.
+     */
+    private fun rewrite(instance: Instance, scope: Scope, change: (EventForm) -> EventForm) {
+        viewModelScope.launch {
+            try {
+                val event = repository.getEvent(instance.event)
+                val master = event.master() ?: return@launch
+                val user = zone.id
+                val key = instance.occurrence
+                val restore: suspend (String) -> Unit = { etag ->
+                    repository.updateEvent(event.id, etag, null, event.components)
+                }
+
+                // This occurrence and the ones after it: the series is cut
+                // there. The first occurrence has nothing before it, so that
+                // is the whole series.
+                var chosen = scope
+                if (chosen == Scope.FOLLOWING && event.recurring) {
+                    val halves = split(event.components, change(draft(master, user, key)), key, user)
+                    if (halves != null) {
+                        val (kept, following) = repository.splitEvent(
+                            event.id,
+                            event.etag,
+                            instance.start,
+                            halves.first,
+                            halves.second,
+                        )
+                        undo = {
+                            repository.deleteEvent(following.id, following.etag)
+                            restore(kept.etag)
+                        }
+                        _events.tryEmit(CalendarEvent.Moved)
+                        return@launch
+                    }
+                    chosen = Scope.ALL
+                }
+
+                val override = event.overrides().firstOrNull { matches(it, key) }
+                val base = when {
+                    chosen == Scope.ALL || !event.recurring -> draft(master, user)
+                    override != null -> draft(override, user)
+                    else -> draft(master, user, key)
+                }
+                val form = change(base).copy(occurrence = if (chosen == Scope.ONE) key else 0)
+                val components = components(form, event.components, if (event.recurring) chosen else Scope.ALL, user)
+                val written = repository.updateEvent(event.id, event.etag, null, components)
+                undo = { restore(written.etag) }
+                _events.tryEmit(CalendarEvent.Moved)
+            } catch (_: EventChangedException) {
+                _events.tryEmit(CalendarEvent.Changed)
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Puts the last move back: a split's new event goes, and the old one is restored. */
+    fun undo() {
+        val restore = undo ?: return
+        undo = null
+        viewModelScope.launch {
+            try {
+                restore()
+            } catch (_: EventChangedException) {
+                _events.tryEmit(CalendarEvent.Changed)
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
     }
 
     /** One call whose only outcome that matters is whether it failed. */

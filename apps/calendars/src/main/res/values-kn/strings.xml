@@ -141,4 +141,9 @@
     <string name="calendars_event_zone_start">ಆರಂಭದ ಸಮಯ ವಲಯ</string>
     <string name="calendars_event_zone_finish">ಅಂತ್ಯದ ಸಮಯ ವಲಯ</string>
     <string name="calendars_event_timezone">ಸಮಯ ವಲಯ</string>
+    <string name="calendars_scope_following">ಇದು ಮತ್ತು ಮುಂದಿನವು</string>
+    <string name="calendars_event_moved">ಈವೆಂಟ್ ಅನ್ನು ಸರಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_event_changed">ಈ ಈವೆಂಟ್ ಬೇರೆ ಕಡೆ ಬದಲಾಗಿದೆ.</string>
+    <string name="calendars_undo">ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="calendars_event_resize">ಮುಕ್ತಾಯ ಸಮಯ ಬದಲಾಯಿಸಿ</string>
 </resources>

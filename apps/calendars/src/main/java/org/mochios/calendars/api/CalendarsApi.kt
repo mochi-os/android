@@ -18,6 +18,7 @@ import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.PreferencesResponse
+import org.mochios.calendars.model.SplitResponse
 import org.mochios.calendars.model.TokenDeleteResponse
 import org.mochios.calendars.model.TokenResponse
 import org.mochios.calendars.model.TokensResponse
@@ -70,6 +71,23 @@ data class EventUpdateRequest(
     val etag: String? = null,
     val calendar: String? = null,
     val components: List<EventComponent>? = null,
+)
+
+/**
+ * Body of `-/events/split`: a series cut in two at the occurrence starting
+ * at [start], epoch seconds as the server listed it. [components] is the
+ * old event's whole tree, ending before that occurrence, and [following]
+ * the new event's, going on from it; the server writes the new event first
+ * and shortens a `COUNT` itself. [etag] is the copy the caller read, refused
+ * with 412 when stale. [calendar] puts the new event in another calendar.
+ */
+data class EventSplitRequest(
+    val event: String,
+    val etag: String? = null,
+    val start: Long,
+    val components: List<EventComponent>,
+    val following: List<EventComponent>,
+    val calendar: String? = null,
 )
 
 /**
@@ -178,6 +196,9 @@ interface CalendarsApi {
 
     @POST("-/events/update")
     suspend fun updateEvent(@Body request: EventUpdateRequest): Response<ApiResponse<EventResponse>>
+
+    @POST("-/events/split")
+    suspend fun splitEvent(@Body request: EventSplitRequest): Response<ApiResponse<SplitResponse>>
 
     @FormUrlEncoded
     @POST("-/events/delete")
